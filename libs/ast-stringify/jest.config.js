@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'rejour-move-abstract',
+  displayName: 'ast-stringify',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -11,9 +11,9 @@ module.exports = {
   transform: {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
-  // transformIgnorePatterns: [],
+  transformIgnorePatterns: [],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/rejour-move-abstract',
+  coverageDirectory: '../../coverage/libs/ast-stringify',
   extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: {
     '^(\\.{1,2}/.*)\\.js$': '$1',

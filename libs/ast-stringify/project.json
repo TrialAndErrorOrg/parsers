@@ -1,0 +1,34 @@
+{
+  "root": "libs/ast-stringify",
+  "sourceRoot": "libs/ast-stringify/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ast-stringify/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ast-stringify"],
+      "options": {
+        "jestConfig": "libs/ast-stringify/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ast-stringify",
+        "tsConfig": "libs/ast-stringify/tsconfig.lib.json",
+        "packageJson": "libs/ast-stringify/package.json",
+        "main": "libs/ast-stringify/src/index.ts",
+        "assets": ["libs/ast-stringify/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

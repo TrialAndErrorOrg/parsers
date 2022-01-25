@@ -1,12 +1,12 @@
-import { Data } from 'unist'
+import { Data } from 'libs/rejour-parse/node_modules/@types/unist'
 import {
   ElementChildMap as XastElementChildMap,
   Attributes as XastAttributes,
   Root as XastRoot,
   Element as XastElement,
   RootChildMap as XastRootChildMap,
-} from 'xast'
-import { Parent as UnistParent } from 'unist'
+} from 'libs/rejour-parse/node_modules/@types/xast'
+import { Parent as UnistParent } from 'libs/rejour-parse/node_modules/@types/unist'
 
 export interface JASTData extends Data {
   name: string

@@ -11,9 +11,20 @@ export function rejourParse() {
     // Assume options.
     // const settings = /** @type {Options} */ (this.data('settings'))
 
-    const rawTree = fromXml(doc)
+    console.log('before fromxml')
+    console.log(doc)
+    const rawTreeify = (doc: string) => {
+      try {
+        return fromXml(doc)
+      } catch (e) {
+        console.error(e)
+        throw e
+      }
+    }
+    const rawTree = rawTreeify(doc)
+    console.log('after fromxml')
     const filteredTree = filter(rawTree, (node: any) => {
-      return !(node.type === 'text' && node.value.replace(/\n +/, '') === '')
+      return !(node.type === 'text' && node.value.replace(/[\n ]+/, '') === '')
     })
     const tree = map(filteredTree!, (node: Node) => {
       if (node.type !== 'element') return node

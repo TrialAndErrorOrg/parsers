@@ -39,13 +39,17 @@ export default function rejourMoveAbstract() {
     if (!abstractNode) return
 
     const abstractPs = abstractNode.children.slice(1)
+    const abstract: Element = {
+      type: 'element',
+      tagName: 'abstract',
+      properties: {},
+      children: abstractPs,
+    }
     visit(
       tree,
       (node) => (node as Element).tagName === 'article-meta',
       (articleMetaDataNode) => {
-        const kids = (articleMetaDataNode as Element).children
-
-        ;(articleMetaDataNode as Element).children = [...kids, ...abstractPs]
+        ;(articleMetaDataNode as Element).children.push(abstract)
       }
     )
   }

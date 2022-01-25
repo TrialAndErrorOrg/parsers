@@ -1,4 +1,15 @@
 {
   "name": "@jote/rejour-move-abstract",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "dependencies": {
+    "unified": "^10.1.1",
+    "unist-util-filter": "^4.0.0",
+    "unist-util-remove": "^3.1.0",
+    "unist-util-visit": "^4.1.0",
+    "vfile-reporter": "^7.0.3"
+  },
+  "devDependencies": {
+    "jest-esm-transformer": "^1.0.0",
+    "unist-util-map": "^3.0.0"
+  }
 }

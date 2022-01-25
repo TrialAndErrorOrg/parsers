@@ -20,11 +20,11 @@
     "noImplicitThis": false,
     "baseUrl": ".",
     "paths": {
+      "@jote/ast-stringify": ["libs/ast-stringify/src/index.ts"],
       "@jote/docx-jats": ["libs/docx-jats/src/index.ts"],
       "@jote/docx-parse": ["libs/docx-parse/src/index.ts"],
       "@jote/docx-unist": ["libs/docx-unist/src/index.ts"],
       "@jote/docx-util-to-docast": ["libs/docx-util-to-docast/src/index.ts"],
-      "@jote/json-stringifier": ["libs/json-stringifier/src/index.ts"],
       "@jote/rejour": ["libs/rejour/src/index.ts"],
       "@jote/rejour-move-abstract": ["libs/rejour-move-abstract/src/index.ts"],
       "@jote/rejour-parse": ["libs/rejour-parse/src/index.ts"],

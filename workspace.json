@@ -4,6 +4,7 @@
     "ast-stringify": "libs/ast-stringify",
     "jote": "apps/jote",
     "rejour": "libs/rejour",
+    "rejour-meta": "libs/rejour-meta",
     "rejour-move-abstract": "libs/rejour-move-abstract",
     "rejour-parse": "libs/rejour-parse",
     "rejour-stringify": "libs/rejour-stringify",

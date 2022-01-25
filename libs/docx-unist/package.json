@@ -1,8 +1,0 @@
-{
-  "name": "@jote/docx-unist",
-  "version": "0.0.1",
-  "dependencies": {
-    "@types/yauzl": "^2.9.2",
-    "yauzl": "^2.10.0"
-  }
-}

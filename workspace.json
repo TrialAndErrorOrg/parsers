@@ -2,9 +2,6 @@
   "version": 2,
   "projects": {
     "ast-stringify": "libs/ast-stringify",
-    "docx-jats": "libs/docx-jats",
-    "docx-unist": "libs/docx-unist",
-    "docx-util-to-docast": "libs/docx-util-to-docast",
     "jote": "apps/jote",
     "rejour": "libs/rejour",
     "rejour-move-abstract": "libs/rejour-move-abstract",

@@ -9,7 +9,6 @@ module.exports = {
   },
   testEnvironment: 'node',
   transform: {
-    'node_modules\\/.+\\.js$': 'jest-esm-transformer',
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
   transformIgnorePatterns: [],

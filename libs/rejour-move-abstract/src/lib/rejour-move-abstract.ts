@@ -1,6 +1,7 @@
 import { remove } from 'unist-util-remove'
 import { visit } from 'unist-util-visit'
 import { Element, Root } from '@jote/rejour'
+import { filter } from 'unist-util-filter'
 
 const containsAbstract = (node: Element) => {
   let containsAbstract = false
@@ -38,12 +39,15 @@ export default function rejourMoveAbstract() {
 
     if (!abstractNode) return
 
-    const abstractPs = abstractNode.children.slice(1)
+    const abstractPs = filter(
+      abstractNode,
+      (node) => node.type !== 'element' || (node as Element).tagName !== 'title'
+    )
     const abstract: Element = {
       type: 'element',
       tagName: 'abstract',
       properties: {},
-      children: abstractPs,
+      children: abstractPs!.children || [],
     }
     visit(
       tree,

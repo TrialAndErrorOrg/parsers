@@ -1,19 +1,22 @@
 import { fromXml } from 'xast-util-from-xml'
 
 import { ParserFunction } from 'unified'
-import { Root, Node } from 'xast'
+import { Root as xastRoot, Node } from 'xast'
+import { Root, Element } from '@jote/rejour'
 import { filter } from 'unist-util-filter'
 import { map } from 'unist-util-map'
-import { Element } from 'xast-util-from-xml/lib'
+import { Element as xastElement } from 'xast-util-from-xml/lib'
 
-export function rejourParse() {
+export interface Settings {
+  removeWhiteSpace?: boolean
+}
+
+export function rejourParse(settings: Settings = {}) {
   const parser: ParserFunction<Root> = (doc) => {
     // Assume options.
     // const settings = /** @type {Options} */ (this.data('settings'))
 
-    console.log('before fromxml')
-    console.log(doc)
-    const rawTreeify = (doc: string) => {
+    const treeify = (doc: string) => {
       try {
         return fromXml(doc)
       } catch (e) {
@@ -21,21 +24,31 @@ export function rejourParse() {
         throw e
       }
     }
-    const rawTree = rawTreeify(doc)
-    console.log('after fromxml')
-    const filteredTree = filter(rawTree, (node: any) => {
-      return !(node.type === 'text' && node.value.replace(/[\n ]+/, '') === '')
-    })
-    const tree = map(filteredTree!, (node: Node) => {
+    let tree = treeify(doc)
+
+    tree = settings.removeWhiteSpace
+      ? filter(tree, (node: any) => {
+          return !(
+            node.type === 'text' && node.value.replace(/[\n ]+/, '') === ''
+          )
+        })!
+      : tree
+
+    // map
+    // attributes --> properties
+    // name --> tagName
+    // to be more in line with hast, which makes plugins easier to port
+    //@ts-expect-error: TODO:somehow types don't align, fix
+    tree = map(tree!, (node) => {
       if (node.type !== 'element') return node
-      const element = node as Element
+      const element = node as xastElement
 
       return {
         type: 'element',
         tagName: element.name,
         properties: element.attributes,
         children: element.children,
-        position: element.position,
+        ...(element.position ? { position: element.position } : {}),
       }
     })
 

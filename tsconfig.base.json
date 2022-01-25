@@ -28,7 +28,9 @@
       "@jote/rejour": ["libs/rejour/src/index.ts"],
       "@jote/rejour-move-abstract": ["libs/rejour-move-abstract/src/index.ts"],
       "@jote/rejour-parse": ["libs/rejour-parse/src/index.ts"],
-      "@jote/utils": ["libs/utils/src/index.ts"]
+      "@jote/utils": ["libs/utils/src/index.ts"],
+      "jast-stringify": ["libs/jast-stringify/src/index.ts"],
+      "rejour-stringify": ["libs/rejour-stringify/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

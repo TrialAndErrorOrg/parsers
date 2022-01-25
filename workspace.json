@@ -9,6 +9,7 @@
     "rejour": "libs/rejour",
     "rejour-move-abstract": "libs/rejour-move-abstract",
     "rejour-parse": "libs/rejour-parse",
+    "rejour-stringify": "libs/rejour-stringify",
     "utils": "libs/utils"
   }
 }

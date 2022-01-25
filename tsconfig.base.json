@@ -2,19 +2,34 @@
   "compileOnSave": false,
   "compilerOptions": {
     "rootDir": ".",
+    "esModuleInterop": true,
+    "strict": true,
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "importHelpers": true,
-    "target": "es2015",
+    "target": "es2020",
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
+    "noImplicitThis": false,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@jote/docx-jats": ["libs/docx-jats/src/index.ts"],
+      "@jote/docx-parse": ["libs/docx-parse/src/index.ts"],
+      "@jote/docx-unist": ["libs/docx-unist/src/index.ts"],
+      "@jote/docx-util-to-docast": ["libs/docx-util-to-docast/src/index.ts"],
+      "@jote/json-stringifier": ["libs/json-stringifier/src/index.ts"],
+      "@jote/rejour": ["libs/rejour/src/index.ts"],
+      "@jote/rejour-move-abstract": ["libs/rejour-move-abstract/src/index.ts"],
+      "@jote/rejour-parse": ["libs/rejour-parse/src/index.ts"],
+      "@jote/utils": ["libs/utils/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

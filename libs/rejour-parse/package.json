@@ -1,0 +1,11 @@
+{
+  "name": "@jote/rejour-parse",
+  "version": "0.0.1",
+  "dependencies": {
+    "unified": "^10.1.1",
+    "unist-util-filter": "^4.0.0",
+    "unist-util-map": "^3.0.0",
+    "xast-util-from-xml": "^2.0.1"
+  },
+  "type": "module"
+}

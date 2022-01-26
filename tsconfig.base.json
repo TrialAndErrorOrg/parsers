@@ -28,6 +28,7 @@
       "@jote/utils": ["libs/utils/src/index.ts"],
       "jast-stringify": ["libs/jast-stringify/src/index.ts"],
       "rejour-meta": ["libs/rejour-meta/src/index.ts"],
+      "rejour-relatex": ["libs/rejour-relatex/src/index.ts"],
       "rejour-stringify": ["libs/rejour-stringify/src/index.ts"],
       "relatex": ["libs/relatex/src/index.ts"]
     }

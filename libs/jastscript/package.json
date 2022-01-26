@@ -1,0 +1,7 @@
+{
+  "name": "jastscript",
+  "version": "0.0.1",
+  "dependencies": {
+    "hastscript": "^7.0.2"
+  }
+}

@@ -2,6 +2,8 @@
   "version": 2,
   "projects": {
     "ast-stringify": "libs/ast-stringify",
+    "jast-util-to-ltast": "libs/jast-util-to-ltast",
+    "jastscript": "libs/jastscript",
     "jote": "apps/jote",
     "rejour": "libs/rejour",
     "rejour-meta": "libs/rejour-meta",

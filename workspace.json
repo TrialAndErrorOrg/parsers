@@ -8,6 +8,7 @@
     "rejour-move-abstract": "libs/rejour-move-abstract",
     "rejour-parse": "libs/rejour-parse",
     "rejour-stringify": "libs/rejour-stringify",
+    "relatex": "libs/relatex",
     "utils": "libs/utils"
   }
 }

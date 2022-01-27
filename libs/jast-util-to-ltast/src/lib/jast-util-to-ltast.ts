@@ -1,11 +1,11 @@
-// //import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
-import { convert } from 'unist-util-is'
-// import { visit } from 'unist-util-visit'
 import { one } from './one'
 import { handlers } from './handlers/index'
 import { own } from './util/own'
 
-import { J, LtastNode, LtastRoot, Node, Properties } from './types'
+import { J, LtastNode, LtastRoot, Node, Options, Properties } from './types'
+import { convert } from 'unist-util-is'
+//import { visit } from 'unist-util-visit'
+//import {BuildVisitor} from 'unist-util-visit/complex-types'
 
 export { one } from './one'
 export { all } from './all'
@@ -13,20 +13,24 @@ export { handlers as defaultHandlers }
 
 const block = convert(['heading', 'paragraph', 'root'])
 
-/**
- * @param {Node} tree
- * @param {Options} [options]
- */
-export function toLtast(tree: Node, options: Options = {}) {
+export function toLtast(
+  tree: Node,
+  options: Options = {
+    newLines: false,
+    checked: '[x]',
+    unchecked: '[ ]',
+    quotes: ['"'],
+  }
+) {
   const byId: { [s: string]: Element } = {}
-  let mdast: LtastNode | LtastRoot
+  let ltast: LtastNode | LtastRoot
 
   const j: J = Object.assign(
     (
       node: Node,
       type: string,
-      props: Properties | string | Array<Node>,
-      children: string | Array<Node>
+      props?: Properties | string | Array<Node>,
+      children?: string | Array<Node>
     ) => {
       let properties: Properties | undefined
 
@@ -37,14 +41,14 @@ export function toLtast(tree: Node, options: Options = {}) {
         properties = props
       }
 
-      // @ts-expect-error Assume valid `type` and `children`/`value`.
+      //// @ts-expect-error Assume valid `type` and `children`/`value`.
       const result: Node = { type, ...properties }
 
       if (typeof children === 'string') {
-        // @ts-expect-error: Looks like a literal.
+        //// @ts-expect-error: Looks like a literal.
         result.value = children
       } else if (children) {
-        // @ts-expect-error: Looks like a parent.
+        //// @ts-expect-error: Looks like a parent.
         result.children = children
       }
 
@@ -72,33 +76,33 @@ export function toLtast(tree: Node, options: Options = {}) {
     }
   )
 
-  visit(tree, 'element', (node) => {
-    const id =
-      node.properties &&
-      'id' in node.properties &&
-      String(node.properties.id).toUpperCase()
+  // visit(tree, 'element', (node) => {
+  //   const id =
+  //     node.properties &&
+  //     'id' in node.properties &&
+  //     String(node.properties.id).toUpperCase()
 
-    if (id && !own.call(byId, id)) {
-      byId[id] = node
-    }
-  })
+  //   if (id && !own.call(byId, id)) {
+  //     byId[id] = node
+  //   }
+  // })
 
   // @ts-expect-error: does return a transformer, that does accept any node.
-  rehypeMinifyWhitespace({ newlines: options.newlines === true })(tree)
+  //rehypeMinifyWhitespace({ newlines: options.newlines === true })(tree)
 
   const result = one(h, tree, undefined)
 
   if (!result) {
-    mdast = { type: 'root', children: [] }
+    ltast = { type: 'root', children: [] }
   } else if (Array.isArray(result)) {
-    mdast = { type: 'root', children: result }
+    ltast = { type: 'root', children: result }
   } else {
-    mdast = result
+    ltast = result
   }
 
-  visit(mdast, 'text', ontext)
+  // visit(mdast, 'text', ontext)
 
-  return mdast
+  return ltast
 
   /**
    * Collapse text nodes, and fix whitespace.
@@ -107,9 +111,9 @@ export function toLtast(tree: Node, options: Options = {}) {
    * ignored.
    * So clean up.
    *
-   * @type {import('unist-util-visit/complex-types').BuildVisitor<MdastRoot, 'text'>}
+   //* {import('unist-util-visit/complex-types').BuildVisitor<LtastRoot, 'text'>}
    */
-  function ontext(node, index, parent) {
+  function ontext(node: any, index: any, parent: any) {
     /* c8 ignore next 3 */
     if (index === null || !parent) {
       return

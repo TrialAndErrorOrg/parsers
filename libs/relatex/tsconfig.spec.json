@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.json",
-  "composite": "true",
   "compilerOptions": {
+    "declaration": true,
     "outDir": "../../dist/out-tsc",
     "types": ["jest", "node"]
   },

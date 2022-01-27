@@ -31,7 +31,7 @@ export function all(j: J, parent: Node): Array<LtastNode> {
   }
 
   while (++index < length) {
-    // @ts-expect-error assume `parent` is a parent.
+    //// @ts-expect-error assume `parent` is a parent.
     const result = one(j, nodes[index], parent)
 
     if (Array.isArray(result)) {

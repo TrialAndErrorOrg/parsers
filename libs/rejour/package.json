@@ -1,5 +1,4 @@
 {
-  "name": "@jote/rejour",
-  "type": "module",
+  "name": "rejour",
   "version": "0.0.1"
 }

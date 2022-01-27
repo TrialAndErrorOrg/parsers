@@ -1,6 +1,6 @@
 import { unified } from 'unified'
-import { rejourParse, Settings } from '@jote/rejour-parse'
-import { astStringify } from '@jote/ast-stringify'
+import { rejourParse, Settings } from 'rejour-parse'
+import { astStringify } from 'ast-stringify'
 import rejourMoveAbstract from './rejour-move-abstract'
 import { rejourStringify } from 'rejour-stringify'
 import { map } from 'unist-util-map'

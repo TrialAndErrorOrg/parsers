@@ -1,6 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
+    "declaration": true,
     "outDir": "../../dist/out-tsc",
     "types": ["jest", "node"]
   },
@@ -12,8 +13,6 @@
     "**/*.test.js",
     "**/*.spec.js",
     "**/*.test.jsx",
-    "**/*.spec.jsx",
-    "**/*.d.ts",
-    "src/lib/rejour.d.ts"
+    "**/*.spec.jsx"
   ]
 }

@@ -1,8 +1,8 @@
 import { fromXml } from 'xast-util-from-xml'
 
 import { ParserFunction } from 'unified'
-import { Root as xastRoot, Node } from 'xast'
-import { Root, Element } from '@jote/rejour'
+//import { Root as xastRoot, Node } from 'xast'
+import { Root, Element } from 'rejour'
 import { filter } from 'unist-util-filter'
 import { map } from 'unist-util-map'
 import { Element as xastElement } from 'xast-util-from-xml/lib'

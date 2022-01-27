@@ -1,7 +1,8 @@
 {
-  "name": "@jote/rejour-move-abstract",
+  "name": "rejour-move-abstract",
   "version": "0.0.1",
   "dependencies": {
+    "unist-util-filter": "^4.0.0",
     "unist-util-visit": "^4.1.0"
   }
 }

@@ -12581,4 +12581,5 @@ export interface document extends BaseType {
   /** Year */
   year: YearType
 }
+
 export var document: document

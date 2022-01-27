@@ -1,6 +1,6 @@
-import { Parent } from '@jote/rejour'
+import { Parent } from 'rejour'
 import { all } from './all'
-import { Handle, J, LtastNode, Node } from './types'
+import { Handle, J, LtastNode, Node, Element } from './types'
 import { own } from './util/own'
 import { wrapText } from './util/wrap-text'
 
@@ -31,9 +31,9 @@ export function one(
 }
 
 function unknown(j: J, node: Node) {
-  // @ts-expect-error: Looks like a literal.
+  //// @ts-expect-error: Looks like a literal.
   if (typeof node.value === 'string') {
-    // @ts-expect-error: Looks like a literal.
+    //// @ts-expect-error: Looks like a literal.
     return j(node, 'text', wrapText(j, node.value))
   }
 

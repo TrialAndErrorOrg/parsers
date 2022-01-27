@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'rejour-move-abstract',
+  displayName: 'rejour',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -13,7 +13,7 @@ module.exports = {
   },
   transformIgnorePatterns: [],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/rejour-move-abstract',
+  coverageDirectory: '../../coverage/libs/rejour',
   extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: {
     '^(\\.{1,2}/.*)\\.js$': '$1',

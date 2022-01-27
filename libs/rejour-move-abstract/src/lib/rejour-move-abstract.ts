@@ -1,6 +1,6 @@
 import { remove } from 'unist-util-remove'
 import { visit } from 'unist-util-visit'
-import { Element, Root } from '@jote/rejour'
+import { Element, Root } from 'rejour'
 import { filter } from 'unist-util-filter'
 
 const containsAbstract = (node: Element) => {

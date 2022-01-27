@@ -1,19 +1,20 @@
 import { Node as UnistNode, Parent as UnistParent } from 'unist'
 
 import {
-  Parent as LtastParent,
-  Node as LtastNode,
+  Parents as LtastParent,
+  Nodes as LtastNode,
   Literal as LtastLiteral,
   Root as LtastRoot,
 } from 'relatex'
 
 import {
   Properties,
-  Node,
+  //Node,
   Parent,
   Element as JastElement,
   Root as JastRoot,
-} from '@jote/rejour'
+  Content,
+} from 'rejour'
 
 /**
  *  {import('mdast').Parent} MdastParent
@@ -36,15 +37,18 @@ import {
  *
  *  {Record<string, unknown>} Properties
  *
- *  Options
- * @property {Object.<string, Handle>} [handlers]
- * @property {boolean} [document]
- * @property {boolean} [newlines=false]
- * @property {string} [checked='[x]']
- * @property {string} [unchecked='[ ]']
- * @property {Array.<string>} [quotes=['"']]
  *
  */
+
+export type Node = Content | Root
+export interface Options {
+  handlers?: { [handle: string]: Handle }
+  document?: boolaen
+  newLines: boolean
+  checked: string
+  unchecked: string
+  quotes: Array<string>
+}
 
 export type Handle = (
   j: J,
@@ -92,5 +96,4 @@ export {
   LtastRoot,
   Properties,
   Text,
-  Node,
 }

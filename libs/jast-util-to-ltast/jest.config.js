@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'rejour-relatex',
+  displayName: 'jast-util-to-ltast',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {

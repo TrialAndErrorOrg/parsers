@@ -52,3 +52,6 @@ export interface RootChildMap {
 // }
 
 export interface Properties extends XastAttributes {}
+
+export { UnistNode as Node }
+export { UnistParent as Parent }

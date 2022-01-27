@@ -1,11 +1,11 @@
 {
   "name": "jote",
-  "version": "0.0.0",
-  "license": "MIT",
+  "version": "0.0.1",
+  "license": "GPLv3.0 and later",
   "scripts": {
     "start": "nx serve",
-    "build": "nx build",
-    "test": "nx test"
+    "build": "nx run-many --target=build --all",
+    "test": "nx run-many --target=test --all"
   },
   "private": true,
   "dependencies": {
@@ -39,6 +39,7 @@
     "@types/node": "16.11.7",
     "@typescript-eslint/eslint-plugin": "~5.3.0",
     "@typescript-eslint/parser": "~5.3.0",
+    "@typescript/analyze-trace": "^0.6.0",
     "eslint": "8.2.0",
     "eslint-config-prettier": "8.1.0",
     "jest": "27.2.3",

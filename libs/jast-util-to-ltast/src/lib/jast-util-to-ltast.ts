@@ -90,7 +90,7 @@ export function toLtast(
   // @ts-expect-error: does return a transformer, that does accept any node.
   //rehypeMinifyWhitespace({ newlines: options.newlines === true })(tree)
 
-  const result = one(h, tree, undefined)
+  const result = one(j, tree, undefined)
 
   if (!result) {
     ltast = { type: 'root', children: [] }

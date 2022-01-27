@@ -11,39 +11,18 @@ import {
   Properties,
   //Node,
   Parent,
-  Element as JastElement,
-  Root as JastRoot,
+  Element,
+  Text,
+  Root,
   Content,
 } from 'rejour'
-
 /**
- *  {import('mdast').Parent} MdastParent
- *  {import('mdast').ListContent} MdastListContent
- *  {import('mdast').PhrasingContent} MdastPhrasingContent
- *  {import('mdast').DefinitionContent} MdastDefinitionContent
- *  {import('mdast').BlockContent} MdastBlockContent
- *  {import('mdast').TableContent} MdastTableContent
- *  {import('mdast').RowContent} MdastRowContent
- *
- *  {import('hast').Parent} Parent
- *  {import('hast').Root} Root
- *  {import('hast').Element} Element
- *  {import('hast').Text} Text
- *  {import('hast').Comment} Comment
- *  {Element['children'][number]} ElementChild
- *  {Parent['children'][number]} Child
- *  {Child|Root} Node
- *
- *
- *  {Record<string, unknown>} Properties
- *
- *
+ * jast Node
  */
-
 export type Node = Content | Root
 export interface Options {
   handlers?: { [handle: string]: Handle }
-  document?: boolaen
+  document?: boolean
   newLines: boolean
   checked: string
   unchecked: string

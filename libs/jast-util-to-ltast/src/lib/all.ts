@@ -1,10 +1,15 @@
 import { one } from './one.js'
 import { J, LtastNode, Node, Parent, Handle } from './types.js'
 
+/**
+ * Convert all nodes in tree using j
+ * @param j jast constructor function
+ * @param parent
+ * @returns
+ */
 export function all(j: J, parent: Node): Array<LtastNode> {
   //// @ts-expect-error Assume `parent` is a parent.
   const nodes: Array<Node> = parent.children || []
-  /** @type {Array.<LtastNode>} */
   const values: Array<LtastNode> = []
   let index = -1
   let length = nodes.length

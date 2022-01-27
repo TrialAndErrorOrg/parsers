@@ -12,7 +12,7 @@ export function one(
   let fn: Handle | undefined
 
   if (node.type === 'element') {
-    if (node.properties && node.properties.dataMdast === 'ignore') {
+    if (node.properties && node.properties.dataLtast === 'ignore') {
       return
     }
 

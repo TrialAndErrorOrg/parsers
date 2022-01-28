@@ -5,6 +5,7 @@
     "jast-util-to-ltast": "libs/jast-util-to-ltast",
     "jastscript": "libs/jastscript",
     "jote": "apps/jote",
+    "ltast-util-to-latex": "libs/ltast-util-to-latex",
     "rejour": "libs/rejour",
     "rejour-meta": "libs/rejour-meta",
     "rejour-move-abstract": "libs/rejour-move-abstract",
@@ -12,6 +13,7 @@
     "rejour-relatex": "libs/rejour-relatex",
     "rejour-stringify": "libs/rejour-stringify",
     "relatex": "libs/relatex",
+    "relatex-stringify": "libs/relatex-stringify",
     "utils": "libs/utils"
   }
 }

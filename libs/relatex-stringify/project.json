@@ -1,0 +1,34 @@
+{
+  "root": "libs/relatex-stringify",
+  "sourceRoot": "libs/relatex-stringify/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/relatex-stringify/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/relatex-stringify"],
+      "options": {
+        "jestConfig": "libs/relatex-stringify/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/relatex-stringify",
+        "tsConfig": "libs/relatex-stringify/tsconfig.lib.json",
+        "packageJson": "libs/relatex-stringify/package.json",
+        "main": "libs/relatex-stringify/src/index.ts",
+        "assets": ["libs/relatex-stringify/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

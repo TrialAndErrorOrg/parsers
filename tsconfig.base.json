@@ -20,19 +20,21 @@
     "noImplicitThis": false,
     "baseUrl": ".",
     "paths": {
+      "@jote/utils": ["libs/utils/src/index.ts"],
       "ast-stringify": ["libs/ast-stringify/src/index.ts"],
       "docx-parse": ["libs/docx-parse/src/index.ts"],
-      "rejour": ["libs/rejour/src/index.ts"],
-      "rejour-move-abstract": ["libs/rejour-move-abstract/src/index.ts"],
-      "rejour-parse": ["libs/rejour-parse/src/index.ts"],
-      "@jote/utils": ["libs/utils/src/index.ts"],
       "jast-stringify": ["libs/jast-stringify/src/index.ts"],
       "jast-util-to-ltast": ["libs/jast-util-to-ltast/src/index.ts"],
       "jastscript": ["libs/jastscript/src/index.ts"],
+      "ltast-util-to-latex": ["libs/ltast-util-to-latex/src/index.ts"],
+      "rejour": ["libs/rejour/src/index.ts"],
       "rejour-meta": ["libs/rejour-meta/src/index.ts"],
+      "rejour-move-abstract": ["libs/rejour-move-abstract/src/index.ts"],
+      "rejour-parse": ["libs/rejour-parse/src/index.ts"],
       "rejour-relatex": ["libs/rejour-relatex/src/index.ts"],
       "rejour-stringify": ["libs/rejour-stringify/src/index.ts"],
-      "relatex": ["libs/relatex/src/index.ts"]
+      "relatex": ["libs/relatex/src/index.ts"],
+      "relatex-stringify": ["libs/relatex-stringify/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

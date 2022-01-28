@@ -1,6 +1,6 @@
 import { Parent } from 'rejour'
 import { all } from './all'
-import { Handle, J, LtastNode, Node, Element } from './types'
+import { Handle, J, LtastContent, Node, Element } from './types'
 import { own } from './util/own'
 import { wrapText } from './util/wrap-text'
 
@@ -8,7 +8,7 @@ export function one(
   j: J,
   node: Node,
   parent: Parent
-): LtastNode | Array<LtastNode> | void {
+): LtastContent | Array<LtastContent> | void {
   let fn: Handle | undefined
 
   if (node.type === 'element') {
@@ -31,9 +31,9 @@ export function one(
 }
 
 function unknown(j: J, node: Node) {
-  //// @ts-expect-error: Looks like a literal.
+  // @ts-expect-error: Looks like a literal.
   if (typeof node.value === 'string') {
-    //// @ts-expect-error: Looks like a literal.
+    // @ts-expect-error: Looks like a literal.
     return j(node, 'text', wrapText(j, node.value))
   }
 

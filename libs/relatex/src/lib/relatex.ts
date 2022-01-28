@@ -13,7 +13,13 @@ export type LtastContent =
   | CommandContent
   | ParagraphContent
 
-export type TopLevelDocumentContent = MathContent | Command
+export type TopLevelDocumentContent =
+  | Environment
+  | ParagraphContent
+  | MathContainer
+  | Command
+  | Comment
+
 export type PreambleContent = Command | Comment
 
 export type AlignmentContent = MathEnvironmentAligned | TabularContent
@@ -38,7 +44,7 @@ export type ParagraphContent = Text | InlineMath | Command | Comment
 export type NeedsEscape = '&'
 export interface Root extends Parent {
   type: 'root'
-  children: TopLevelDocumentContent[] | (Preamble | DocumentEnvironment)[]
+  // children: LtastContent[] //TopLevelDocumentContent[] | (Preamble | DocumentEnvironment)[]
 }
 export interface Preamble extends Parent {
   type: 'preamble'

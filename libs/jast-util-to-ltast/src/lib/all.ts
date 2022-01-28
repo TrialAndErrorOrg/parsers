@@ -1,5 +1,5 @@
 import { one } from './one.js'
-import { J, LtastNode, Node, Parent, Handle } from './types.js'
+import { J, LtastContent, Node, Parent, Handle } from './types.js'
 
 /**
  * Convert all nodes in tree using j
@@ -7,10 +7,10 @@ import { J, LtastNode, Node, Parent, Handle } from './types.js'
  * @param parent
  * @returns
  */
-export function all(j: J, parent: Node): Array<LtastNode> {
-  //// @ts-expect-error Assume `parent` is a parent.
+export function all(j: J, parent: Node): Array<LtastContent> {
+  // @ts-expect-error Assume `parent` is a parent.
   const nodes: Array<Node> = parent.children || []
-  const values: Array<LtastNode> = []
+  const values: Array<LtastContent> = []
   let index = -1
   let length = nodes.length
   let child = nodes[index + 1]
@@ -36,7 +36,7 @@ export function all(j: J, parent: Node): Array<LtastNode> {
   }
 
   while (++index < length) {
-    //// @ts-expect-error assume `parent` is a parent.
+    // @ts-expect-error assume `parent` is a parent.
     const result = one(j, nodes[index], parent)
 
     if (Array.isArray(result)) {

@@ -1,8 +1,8 @@
 import { Node as UnistNode, Parent as UnistParent } from 'unist'
 
 import {
-  Parents as LtastParent,
-  Nodes as LtastNode,
+  Parent as LtastParent,
+  LtastContent,
   Literal as LtastLiteral,
   Root as LtastRoot,
 } from 'relatex'
@@ -16,6 +16,7 @@ import {
   Root,
   Content,
 } from 'rejour'
+
 /**
  * jast Node
  */
@@ -33,10 +34,10 @@ export type Handle = (
   j: J,
   node: any,
   parent?: Parent
-) => LtastNode | Array<LtastNode> | void
+) => LtastContent | Array<LtastContent> | void
 
 export interface Context {
-  nodeById: {
+  nodeById?: {
     [id: string]: Element
   }
   baseFound: boolean
@@ -55,13 +56,23 @@ export type JWithProps = (
   node: Node,
   type: string,
   props?: Properties,
-  children?: string | Array<LtastNode>
-) => LtastNode
+  children?: string | Array<LtastContent>
+) => LtastContent
+
 export type JWithoutProps = (
   node: Node,
   type: string,
-  children?: string | Array<LtastNode>
-) => LtastNode
+  children?: string | Array<LtastContent>
+) => LtastContent
+
+export type JWithPropsSpecific<TNode extends LtastContent = LtastContent> = (
+  node: Node,
+  type: Pick<TNode, 'type'>,
+  props?: Properties,
+  //@ts-expect-error yeah i know butttt
+  // TODO: Make this not error
+  children?: Pick<TNode, 'children'>
+) => TNode
 
 export type J = JWithProps & JWithoutProps & Context
 
@@ -70,7 +81,7 @@ export {
   Root,
   Element,
   LtastLiteral,
-  LtastNode,
+  LtastContent,
   LtastParent,
   LtastRoot,
   Properties,

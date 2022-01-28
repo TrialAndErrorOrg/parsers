@@ -2,7 +2,17 @@ import { one } from './one'
 import { handlers } from './handlers/index'
 import { own } from './util/own'
 
-import { J, LtastNode, LtastRoot, Node, Options, Properties } from './types'
+import {
+  Context,
+  J,
+  JWithoutProps,
+  JWithProps,
+  LtastContent,
+  LtastRoot,
+  Node,
+  Options,
+  Properties,
+} from './types'
 import { convert } from 'unist-util-is'
 //import { visit } from 'unist-util-visit'
 //import {BuildVisitor} from 'unist-util-visit/complex-types'
@@ -22,15 +32,16 @@ export function toLtast(
     quotes: ['"'],
   }
 ) {
-  const byId: { [s: string]: Element } = {}
-  let ltast: LtastNode | LtastRoot
+  // const byId: { [s: string]: Element } = {}
+  let ltast: LtastContent | LtastRoot
 
-  const j: J = Object.assign(
+  // TODO: fix this type error
+  const j: J = Object.assign<JWithProps & JWithoutProps, Context>(
     (
       node: Node,
       type: string,
-      props?: Properties | string | Array<Node>,
-      children?: string | Array<Node>
+      props?: Properties | string | Array<LtastContent>,
+      children?: string | Array<LtastContent>
     ) => {
       let properties: Properties | undefined
 
@@ -41,14 +52,14 @@ export function toLtast(
         properties = props
       }
 
-      //// @ts-expect-error Assume valid `type` and `children`/`value`.
+      // @ts-expect-error Assume valid `type` and `children`/`value`.
       const result: Node = { type, ...properties }
 
       if (typeof children === 'string') {
-        //// @ts-expect-error: Looks like a literal.
+        // @ts-expect-error: Looks like a literal.
         result.value = children
       } else if (children) {
-        //// @ts-expect-error: Looks like a parent.
+        // @ts-expect-error: Looks like a parent.
         result.children = children
       }
 
@@ -59,7 +70,7 @@ export function toLtast(
       return result
     },
     {
-      nodeById: byId,
+      //  nodeById: byId,
       baseFound: false,
       inTable: false,
       wrapText: true,

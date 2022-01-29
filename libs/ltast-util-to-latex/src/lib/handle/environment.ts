@@ -39,7 +39,7 @@ export const environment: BasicHandle = (
     contents.args
   )}
 
-      ${toLatex(node.children)}
+      ${toLatex(contents.children)}
 
   \\end{${node.name}}`
 }

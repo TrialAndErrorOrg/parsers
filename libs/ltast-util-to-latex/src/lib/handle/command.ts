@@ -1,11 +1,34 @@
-import { Command, LtastContent } from 'relatex'
+import {
+  Command,
+  CommandArg,
+  CommandArgOpt,
+  isOptionalCommandArg,
+  LtastContent,
+} from 'relatex'
 import { toLatex } from '../ltast-util-to-latex'
 import { BasicHandle, Options } from '../types'
 import { commandArg } from './command-arg'
 
+interface CommandChildren {
+  optargs: CommandArgOpt[]
+  args: CommandArg[]
+}
 export const command: BasicHandle = (
   node: Command,
   options?: Options
 ): string => {
-  return `\\${node.name}${toLatex(node.children)}`
+  const contents = node.children.reduce(
+    (acc: CommandChildren, child: CommandArg) => {
+      if (isOptionalCommandArg(child)) {
+        acc.optargs.push(child)
+        return acc
+      }
+
+      acc.args.push(child)
+      return acc
+    },
+    { optargs: [], args: [] }
+  )
+
+  return `\\${node.name}${toLatex(contents.optargs)}${toLatex(contents.args)}`
 }

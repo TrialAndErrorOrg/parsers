@@ -4,6 +4,25 @@ import {
   Parent as UnistParent,
 } from 'unist'
 
+export function isKnownNode(node: UnistNode): node is LtastContent {
+  return [
+    'root',
+    'document',
+    'preamble',
+    'environment',
+    'paragraph',
+    'comment',
+    'command',
+    'commandArg',
+    'mathContainer',
+    'alignmentTab',
+    'math',
+    'break',
+    'listItem',
+    'text',
+  ].includes(node.type)
+}
+
 export type LtastContent =
   | TopLevelDocumentContent
   | PreambleContent
@@ -37,7 +56,7 @@ export type MathContent =
   | MathEnvironmentAligned
   | Script
 
-export type CommandContent = Command | Text
+export type CommandContent = Command | Text | Comment
 
 export type ParagraphContent = Text | InlineMath | Command | Comment
 
@@ -162,7 +181,7 @@ export interface Comment extends UnistLiteral {
 
 export interface Text extends UnistLiteral {
   type: 'text'
-  value: 'string'
+  value: string
 }
 
 export interface Linebreak extends UnistNode {

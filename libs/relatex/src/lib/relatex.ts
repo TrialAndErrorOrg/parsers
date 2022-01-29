@@ -66,10 +66,10 @@ export interface Parent extends UnistParent {
   children: LtastContent[]
 }
 
-export interface Group<Children extends LtastContent = LtastContent>
+export interface Group<Child extends LtastContent = LtastContent>
   extends Parent {
-  type: 'group'
-  children: Children[]
+  type: Pick<Child, 'type'> extends string ? Pick<Child, 'type'> : string
+  children: Child[]
 }
 export interface Command extends Parent {
   type: 'command'
@@ -77,8 +77,17 @@ export interface Command extends Parent {
   children: CommandArg[]
 }
 export interface CommandArg extends Group<CommandContent> {
+  type: 'commandArg'
   optional?: boolean
 }
+export const isCommandArg = (node: LtastContent): node is CommandArg =>
+  node.type === 'commandArg'
+export interface CommandArgOpt extends CommandArg {
+  optional: true
+}
+export const isOptionalCommandArg = (
+  node: LtastContent
+): node is CommandArgOpt => isCommandArg(node) && !!node.optional
 
 export interface Environment<TNode extends LtastContent = LtastContent>
   extends Parent {
@@ -111,6 +120,7 @@ export interface MathEnvironmentAligned extends MathEnvironment {
 }
 export interface MathContainer extends Parent {
   type: 'mathContainer'
+  name?: string
   children: MathContent[]
 }
 export interface InlineMath extends MathContainer {
@@ -140,7 +150,7 @@ export interface Paragraph extends Parent {
   type: 'paragraph'
   children: ParagraphContent[]
 }
-export interface SoftBreak extends UnistLiteral {
+export interface Softbreak extends UnistLiteral {
   type: 'break'
   value: '\\n'
 }
@@ -187,6 +197,14 @@ export interface Table extends Environment {
 export interface Tabular extends Environment<TabularContent> {
   name: 'tabular'
   package?: 'plain' | 'tabularx' | 'tabulary' | 'tabu'
+}
+
+export interface List extends Environment<ListItem> {
+  name: 'itemize' | 'enumerate'
+}
+export interface ListItem extends Parent {
+  type: 'listItem'
+  children: ParagraphContent[]
 }
 
 export { UnistNode as Node, UnistLiteral as Literal }

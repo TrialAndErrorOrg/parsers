@@ -7,15 +7,17 @@ import { environment } from './environment'
 import { group } from './group'
 import { inlineMath } from './inline-math'
 import { text } from './text'
+import { document } from './document'
 
 export const handle = {
   alignmentTab,
   command,
   commandArg,
-  inlineMath,
   comment,
+  document,
   displayMath,
-  group,
   environment,
+  group,
+  inlineMath,
   text,
 }

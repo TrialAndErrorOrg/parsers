@@ -1,9 +1,12 @@
-import { Root, LtastContent } from 'relatex'
-type Node = Root | LtastContent
+import { handle } from './handle'
+import { zwitch } from 'zwitch'
+import { configure } from './configure'
+import { Options, Context, Node, Handle, Join, Unsafe } from './types'
 
-export interface Options {
-  extensions?: any
-}
-export function toLatex(tree: Node, options?: Options): string {
-  return 'ltast-util-to-latex'
+export function toLatex(node: Node | Node[], options: Options = {}): string {
+  const result = Array.isArray(node)
+    ? node.map((node) => toLatex(node, options)).join('')
+    : // @ts-expect-error it's fineeee
+      handle[node.type](node)
+  return result
 }

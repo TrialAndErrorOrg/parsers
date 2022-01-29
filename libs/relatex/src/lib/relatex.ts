@@ -152,6 +152,7 @@ export interface Comment extends UnistLiteral {
 
 export interface Text extends UnistLiteral {
   type: 'text'
+  value: 'string'
 }
 
 export interface Linebreak extends UnistNode {

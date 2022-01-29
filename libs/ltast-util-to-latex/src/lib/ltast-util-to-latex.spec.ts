@@ -1,7 +1,7 @@
-import { ltastUtilToLatex } from './ltast-util-to-latex'
+import { toLatex } from './ltast-util-to-latex'
 
 describe('ltastUtilToLatex', () => {
   it('should work', () => {
-    expect(ltastUtilToLatex()).toEqual('ltast-util-to-latex')
+    expect(toLatex()).toEqual('ltast-util-to-latex')
   })
 })

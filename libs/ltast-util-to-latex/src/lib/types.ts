@@ -64,6 +64,7 @@ export interface Unsafe {
   _compiled?: RegExp
 }
 export interface Options {
+  wrapDocument?: boolean
   parbreak?: 'par' | 'newline'
   emph?: 'textit' | 'emph'
   inlineMathDelimiter?: 'parenthesis' | 'dollar'

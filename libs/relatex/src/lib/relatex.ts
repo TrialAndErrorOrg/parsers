@@ -48,11 +48,11 @@ export interface Root extends Parent {
 }
 export interface Preamble extends Parent {
   type: 'preamble'
-  content: PreambleContent[]
+  children: PreambleContent[]
 }
 export interface DocumentEnvironment extends Parent {
   type: 'document'
-  content: TopLevelDocumentContent[]
+  children: TopLevelDocumentContent[]
 }
 
 // export interface NodeMap<TNode extends UtensilNode = UtensilNode>
@@ -80,7 +80,7 @@ export interface CommandArg extends Group<CommandContent> {
   optional?: boolean
 }
 
-export interface Environment<TNode extends UnistNode = UnistNode>
+export interface Environment<TNode extends LtastContent = LtastContent>
   extends Parent {
   type: 'environment'
   name: string

@@ -1,793 +1,781 @@
 import * as Primitive from './xml-primitives'
-
 // Source files:
 // http://localhost:3001/jats.xsd
 
-interface BaseType {
+interface Base {
+  type: string
+
   _exists: boolean
   _namespace: string
 }
-interface _AbbrevJournaltitleType extends BaseType {
-  abbrevType?: string
-  id?: string
-  specificUse?: string
-}
-interface AbbrevJournaltitleType extends _AbbrevJournaltitleType {
-  constructor: { new (): AbbrevJournaltitleType }
-}
-
-interface _AbbrevType extends BaseType {
-  alt?: string
-  contentType?: string
-  hreflang?: string
-  id?: string
-  specificUse?: string
-  /** Definition List: Definition */
-  def?: DefType[]
-}
-interface AbbrevType extends _AbbrevType {
-  constructor: { new (): AbbrevType }
+interface AbbrevJournaltitle extends Base {
+  type: 'abbrevJournaltitle'
+  properties: {
+    abbrevType?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _AbstractType extends BaseType {
-  abstractType?: string
-  id?: string
-  specificUse?: string
-  /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+interface Abbrev extends Base {
+  type: 'abbrev'
+  properties: {
+    alt?: string
+    contentType?: string
+    hreflang?: string
+    id?: string
+    specificUse?: string
+  } /** Definition List: Definition */
+  def?: Def[]
+}
+
+interface Abstract extends Base {
+  type: 'abstract'
+  properties: {
+    abstractType?: string
+    id?: string
+    specificUse?: string
+  } /** Label of a Figure, Reference, Etc. */
+  label?: Label
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Paragraph */
-  p?: PType[]
+  p?: P[]
   /** Section */
-  sec?: SecType[]
+  sec?: Sec[]
   /** Title */
-  title?: TitleType
-}
-interface AbstractType extends _AbstractType {
-  constructor: { new (): AbstractType }
+  title?: Title
 }
 
-interface _AccessDateType extends BaseType {
-  calendar?: string
-  contentType?: string
-  id?: string
-  iso8601Date?: string
-  specificUse?: string
-}
-interface AccessDateType extends _AccessDateType {
-  constructor: { new (): AccessDateType }
+interface AccessDate extends Base {
+  type: 'accessDate'
+  properties: {
+    calendar?: string
+    contentType?: string
+    id?: string
+    iso8601Date?: string
+    specificUse?: string
+  }
 }
 
-interface _AckType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Abstract */
-  abstract?: AbstractType[]
+interface Ack extends Base {
+  type: 'ack'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Abstract */
+  abstract?: Abstract[]
   /** Keyword Group */
-  kwdGroup?: KwdGroupType[]
+  kwdGroup?: KwdGroup[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Paragraph */
-  p?: PType[]
+  p?: P[]
   /** Reference List (Bibliographic Reference List) */
-  refList?: RefListType[]
+  refList?: RefList[]
   /** Section */
-  sec?: SecType[]
-  subjGroup?: SubjGroupType[]
+  sec?: Sec[]
+  subjGroup?: SubjGroup[]
   /** Title */
-  title?: TitleType
-}
-interface AckType extends _AckType {
-  constructor: { new (): AckType }
+  title?: Title
 }
 
-interface _AddressType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Address Line */
-  addrLine?: AddrLineType[]
+interface Address extends Base {
+  type: 'address'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Address Line */
+  addrLine?: AddrLine[]
   /** City: in an Address */
-  city?: CityType[]
+  city?: City[]
   /** Country: in an Address */
-  country?: CountryType[]
+  country?: Country[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fax Number: in an Address */
-  fax?: FaxType[]
+  fax?: Fax[]
   /** Institution Name: in an Address */
-  institution?: InstitutionType[]
+  institution?: Institution[]
   /** Institution Wrapper */
-  institutionWrap?: InstitutionWrapType[]
+  institutionWrap?: InstitutionWrap[]
   /** Phone Number: in an Address */
-  phone?: PhoneType[]
+  phone?: Phone[]
   /** Postal Code: in an Address */
-  postalCode?: PostalCodeType[]
+  postalCode?: PostalCode[]
   /** State or Province: in an Address */
-  state?: StateType[]
+  state?: State[]
   /** Uri */
-  uri?: UriType[]
-}
-interface AddressType extends _AddressType {
-  constructor: { new (): AddressType }
+  uri?: Uri[]
 }
 
-interface _AddrLineType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface AddrLine extends Base {
+  type: 'addrLine'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** City: in an Address */
-  city?: CityType[]
+  city?: City[]
   /** Country: in an Address */
-  country?: CountryType[]
+  country?: Country[]
   /** Fax Number: in an Address */
-  fax?: FaxType[]
+  fax?: Fax[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Institution Name: in an Address */
-  institution?: InstitutionType[]
+  institution?: Institution[]
   /** Institution Wrapper */
-  institutionWrap?: InstitutionWrapType[]
+  institutionWrap?: InstitutionWrap[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Phone Number: in an Address */
-  phone?: PhoneType[]
+  phone?: Phone[]
   /** Postal Code: in an Address */
-  postalCode?: PostalCodeType[]
+  postalCode?: PostalCode[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** State or Province: in an Address */
-  state?: StateType[]
+  state?: State[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface AddrLineType extends _AddrLineType {
-  constructor: { new (): AddrLineType }
+  underline?: Underline[]
 }
 
-interface _AffAlternativesType extends BaseType {
-  id?: string
-  /** Affiliation */
-  aff: AffType[]
-}
-interface AffAlternativesType extends _AffAlternativesType {
-  constructor: { new (): AffAlternativesType }
+interface AffAlternatives extends Base {
+  type: 'affAlternatives'
+  properties: {
+    id?: string
+  } /** Affiliation */
+  aff: Aff[]
 }
 
-interface _AffType extends BaseType {
-  contentType?: string
-  id?: string
-  rid?: string
-  specificUse?: string
-  /** Address Line */
-  addrLine?: AddrLineType[]
+interface Aff extends Base {
+  type: 'aff'
+  properties: {
+    contentType?: string
+    id?: string
+    rid?: string
+    specificUse?: string
+  } /** Address Line */
+  addrLine?: AddrLine[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Line Break */
-  break?: BreakType[]
+  break?: Break[]
   /** City: in an Address */
-  city?: CityType[]
+  city?: City[]
   /** Country: in an Address */
-  country?: CountryType[]
+  country?: Country[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fax Number: in an Address */
-  fax?: FaxType[]
+  fax?: Fax[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Institution Name: in an Address */
-  institution?: InstitutionType[]
+  institution?: Institution[]
   /** Institution Wrapper */
-  institutionWrap?: InstitutionWrapType[]
+  institutionWrap?: InstitutionWrap[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType[]
+  label?: Label[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Phone Number: in an Address */
-  phone?: PhoneType[]
+  phone?: Phone[]
   /** Postal Code: in an Address */
-  postalCode?: PostalCodeType[]
+  postalCode?: PostalCode[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** State or Province: in an Address */
-  state?: StateType[]
+  state?: State[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface AffType extends _AffType {
-  constructor: { new (): AffType }
+  xref?: Xref[]
 }
 
-interface _AlternativesType extends BaseType {
-  id?: string
-  /** Array (Simple Tabular Array) */
-  array: ArrayType[]
+interface Alternatives extends Base {
+  type: 'alternatives'
+  properties: {
+    id?: string
+  } /** Array (Simple Tabular Array) */
+  array: Array[]
   /** Chemical Structure (Display) */
-  chemStruct: ChemStructType[]
+  chemStruct: ChemStruct[]
   /** Code Text */
-  code: CodeType[]
+  code: Code[]
   /** Graphic */
-  graphic: GraphicType[]
+  graphic: Graphic[]
   /** Inline Graphic */
-  inlineGraphic: InlineGraphicType[]
+  inlineGraphic: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia: InlineMediaType[]
+  inlineMedia: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial: InlineSupplementarymaterial[]
   /** Media Object */
-  media: MediaType[]
+  media: Media[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Preformatted Text */
-  preformat: PreformatType[]
+  preformat: Preformat[]
   /** Private Character (Custom or Unicode) */
-  privateChar: PrivateCharType[]
+  privateChar: PrivateChar[]
   /** Supplementary Material */
-  supplementaryMaterial: SupplementaryMaterialType[]
+  supplementaryMaterial: SupplementaryMaterial[]
   /** Table: Table Element .............................. */
-  table: TableType[]
+  table: Table[]
   /** Tex Math Equation */
-  texMath: TexMathType[]
+  texMath: TexMath[]
   /** Textual Form */
-  textualForm: TextualFormType[]
-}
-interface AlternativesType extends _AlternativesType {
-  constructor: { new (): AlternativesType }
+  textualForm: TextualForm[]
 }
 
-interface _AltTextType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface AltTextType extends _AltTextType {
-  constructor: { new (): AltTextType }
+interface AltText extends Base {
+  type: 'altText'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _AltTitleType extends BaseType {
-  altTitletype?: string
-  id?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface AltTitle extends Base {
+  type: 'altTitle'
+  properties: {
+    altTitletype?: string
+    id?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Line Break */
-  break?: BreakType[]
+  break?: Break[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface AltTitleType extends _AltTitleType {
-  constructor: { new (): AltTitleType }
+  xref?: Xref[]
 }
 
-interface _AnnotationType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Paragraph */
-  p: PType[]
-}
-interface AnnotationType extends _AnnotationType {
-  constructor: { new (): AnnotationType }
-}
-
-interface _AnonymousType extends BaseType {
-  id?: string
-  specificUse?: string
-}
-interface AnonymousType extends _AnonymousType {
-  constructor: { new (): AnonymousType }
+interface Annotation extends Base {
+  type: 'annotation'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Paragraph */
+  p: P[]
 }
 
-interface _AnswerSetType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Alternate Title */
-  altTitle?: AltTitleType[]
+interface Anonymous extends Base {
+  type: 'anonymous'
+  properties: {
+    id?: string
+    specificUse?: string
+  }
+}
+
+interface AnswerSet extends Base {
+  type: 'answerSet'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Alternate Title */
+  altTitle?: AltTitle[]
   /** Answer Elements */
-  answer: AnswerType[]
+  answer: Answer[]
   /** Explanation */
-  explanation: ExplanationType[]
+  explanation: Explanation[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Paragraph */
-  p: PType[]
+  p: P[]
   /** Article Subtitle */
-  subtitle?: SubtitleType[]
+  subtitle?: Subtitle[]
   /** Title */
-  title?: TitleType
-}
-interface AnswerSetType extends _AnswerSetType {
-  constructor: { new (): AnswerSetType }
+  title?: Title
 }
 
-interface _AnswerType extends BaseType {
-  contentType?: string
-  id?: string
-  pointerToquestion: string
-  specificUse?: string
-  /** Address/Contact Information */
-  address: AddressType[]
+interface Answer extends Base {
+  type: 'answer'
+  properties: {
+    contentType?: string
+    id?: string
+    pointerToquestion: string
+    specificUse?: string
+  } /** Address/Contact Information */
+  address: Address[]
   /** Alternate Title */
-  altTitle?: AltTitleType[]
+  altTitle?: AltTitle[]
   /** Alternatives For Processing */
-  alternatives: AlternativesType[]
+  alternatives: Alternatives[]
   /** Answer Elements */
-  answer: AnswerType[]
+  answer: Answer[]
   /** Answer Set */
-  answerSet: AnswerSetType[]
+  answerSet: AnswerSet[]
   /** Array (Simple Tabular Array) */
-  array: ArrayType[]
+  array: Array[]
   /** Block-Level Alternatives For Processing */
-  blockAlternatives: BlockAlternativesType[]
+  blockAlternatives: BlockAlternatives[]
   /** Boxed Text */
-  boxedText: BoxedTextType[]
+  boxedText: BoxedText[]
   /** Chemical Structure Wrapper */
-  chemStructwrap: ChemStructwrapType[]
+  chemStructwrap: ChemStructwrap[]
   /** Code Text */
-  code: CodeType[]
+  code: Code[]
   /** Definition List */
-  defList: DefListType[]
+  defList: DefList[]
   /** Formula, Display */
-  dispFormula: DispFormulaType[]
+  dispFormula: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup: DispFormulagroupType[]
+  dispFormulagroup: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote: DispQuoteType[]
+  dispQuote: DispQuote[]
   /** Explanation */
-  explanation?: ExplanationType[]
+  explanation?: Explanation[]
   /** Figure */
-  fig: FigType[]
+  fig: Fig[]
   /** Figure Group */
-  figGroup: FigGroupType[]
+  figGroup: FigGroup[]
   /** Footnote Group */
-  fnGroup?: FnGroupType[]
+  fnGroup?: FnGroup[]
   /** Glossary Elements */
-  glossary?: GlossaryType[]
+  glossary?: Glossary[]
   /** Graphic */
-  graphic: GraphicType[]
+  graphic: Graphic[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** List */
-  list: ListType[]
+  list: List[]
   /** Media Object */
-  media: MediaType[]
+  media: Media[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Paragraph */
-  p: PType[]
+  p: P[]
   /** Preformatted Text */
-  preformat: PreformatType[]
+  preformat: Preformat[]
   /** Question */
-  question: QuestionType[]
+  question: Question[]
   /** Question Wrap */
-  questionWrap: QuestionWrapType[]
+  questionWrap: QuestionWrap[]
   /** Question Wrap Group */
-  questionWrapgroup: QuestionWrapgroupType[]
+  questionWrapgroup: QuestionWrapgroup[]
   /** Reference List (Bibliographic Reference List) */
-  refList?: RefListType[]
+  refList?: RefList[]
   /** Related Article Information */
-  relatedArticle: RelatedArticleType[]
+  relatedArticle: RelatedArticle[]
   /** Related Object Information */
-  relatedObject: RelatedObjectType[]
+  relatedObject: RelatedObject[]
   /** Section */
-  sec: SecType[]
+  sec: Sec[]
   /** Speech */
-  speech: SpeechType[]
+  speech: Speech[]
   /** Statement, Formal */
-  statement: StatementType[]
+  statement: Statement[]
   /** Article Subtitle */
-  subtitle?: SubtitleType[]
+  subtitle?: Subtitle[]
   /** Supplementary Material */
-  supplementaryMaterial: SupplementaryMaterialType[]
+  supplementaryMaterial: SupplementaryMaterial[]
   /** Table Wrapper */
-  tableWrap: TableWrapType[]
+  tableWrap: TableWrap[]
   /** Table Wrapper Group */
-  tableWrapgroup: TableWrapgroupType[]
+  tableWrapgroup: TableWrapgroup[]
   /** Tex Math Equation */
-  texMath: TexMathType[]
+  texMath: TexMath[]
   /** Title */
-  title?: TitleType
+  title?: Title
   /** Verse Form For Poetry */
-  verseGroup: VerseGroupType[]
-}
-interface AnswerType extends _AnswerType {
-  constructor: { new (): AnswerType }
+  verseGroup: VerseGroup[]
 }
 
-interface _AppGroupType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Abstract */
-  abstract?: AbstractType[]
+interface AppGroup extends Base {
+  type: 'appGroup'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Abstract */
+  abstract?: Abstract[]
   /** Address/Contact Information */
-  address?: AddressType[]
+  address?: Address[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Answer Elements */
-  answer?: AnswerType[]
+  answer?: Answer[]
   /** Answer Set */
-  answerSet?: AnswerSetType[]
+  answerSet?: AnswerSet[]
   /** Appendix */
-  app?: AppType[]
+  app?: App[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Block-Level Alternatives For Processing */
-  blockAlternatives?: BlockAlternativesType[]
+  blockAlternatives?: BlockAlternatives[]
   /** Boxed Text */
-  boxedText?: BoxedTextType[]
+  boxedText?: BoxedText[]
   /** Chemical Structure Wrapper */
-  chemStructwrap?: ChemStructwrapType[]
+  chemStructwrap?: ChemStructwrap[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote?: DispQuoteType[]
+  dispQuote?: DispQuote[]
   /** Explanation */
-  explanation?: ExplanationType[]
+  explanation?: Explanation[]
   /** Figure */
-  fig?: FigType[]
+  fig?: Fig[]
   /** Figure Group */
-  figGroup?: FigGroupType[]
+  figGroup?: FigGroup[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Keyword Group */
-  kwdGroup?: KwdGroupType[]
+  kwdGroup?: KwdGroup[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** List */
-  list?: ListType[]
+  list?: List[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Paragraph */
-  p?: PType[]
+  p?: P[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Question */
-  question?: QuestionType[]
+  question?: Question[]
   /** Question Wrap */
-  questionWrap?: QuestionWrapType[]
+  questionWrap?: QuestionWrap[]
   /** Question Wrap Group */
-  questionWrapgroup?: QuestionWrapgroupType[]
+  questionWrapgroup?: QuestionWrapgroup[]
   /** Reference List (Bibliographic Reference List) */
-  refList?: RefListType[]
+  refList?: RefList[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Speech */
-  speech?: SpeechType[]
+  speech?: Speech[]
   /** Statement, Formal */
-  statement?: StatementType[]
-  subjGroup?: SubjGroupType[]
+  statement?: Statement[]
+  subjGroup?: SubjGroup[]
   /** Supplementary Material */
-  supplementaryMaterial?: SupplementaryMaterialType[]
+  supplementaryMaterial?: SupplementaryMaterial[]
   /** Table Wrapper */
-  tableWrap?: TableWrapType[]
+  tableWrap?: TableWrap[]
   /** Table Wrapper Group */
-  tableWrapgroup?: TableWrapgroupType[]
+  tableWrapgroup?: TableWrapgroup[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Title */
-  title?: TitleType
+  title?: Title
   /** Verse Form For Poetry */
-  verseGroup?: VerseGroupType[]
-}
-interface AppGroupType extends _AppGroupType {
-  constructor: { new (): AppGroupType }
+  verseGroup?: VerseGroup[]
 }
 
-interface _AppType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Address/Contact Information */
-  address?: AddressType[]
+interface App extends Base {
+  type: 'app'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Address/Contact Information */
+  address?: Address[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Answer Elements */
-  answer?: AnswerType[]
+  answer?: Answer[]
   /** Answer Set */
-  answerSet?: AnswerSetType[]
+  answerSet?: AnswerSet[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Block-Level Alternatives For Processing */
-  blockAlternatives?: BlockAlternativesType[]
+  blockAlternatives?: BlockAlternatives[]
   /** Boxed Text */
-  boxedText?: BoxedTextType[]
+  boxedText?: BoxedText[]
   /** Chemical Structure Wrapper */
-  chemStructwrap?: ChemStructwrapType[]
+  chemStructwrap?: ChemStructwrap[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote?: DispQuoteType[]
+  dispQuote?: DispQuote[]
   /** Explanation */
-  explanation?: ExplanationType[]
+  explanation?: Explanation[]
   /** Figure */
-  fig?: FigType[]
+  fig?: Fig[]
   /** Figure Group */
-  figGroup?: FigGroupType[]
+  figGroup?: FigGroup[]
   /** Footnote Group */
-  fnGroup?: FnGroupType[]
+  fnGroup?: FnGroup[]
   /** Glossary Elements */
-  glossary?: GlossaryType[]
+  glossary?: Glossary[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Label of a Figure, Reference, Etc. */
-  label: LabelType
+  label: Label
   /** List */
-  list?: ListType[]
+  list?: List[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Paragraph */
-  p?: PType[]
+  p?: P[]
   /** Permissions */
-  permissions?: PermissionsType
+  permissions?: Permissions
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Question */
-  question?: QuestionType[]
+  question?: Question[]
   /** Question Wrap */
-  questionWrap?: QuestionWrapType[]
+  questionWrap?: QuestionWrap[]
   /** Question Wrap Group */
-  questionWrapgroup?: QuestionWrapgroupType[]
+  questionWrapgroup?: QuestionWrapgroup[]
   /** Reference List (Bibliographic Reference List) */
-  refList?: RefListType[]
+  refList?: RefList[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Section */
-  sec?: SecType[]
+  sec?: Sec[]
   /** Section Metadata */
-  secMeta?: SecMetaType
+  secMeta?: SecMeta
   /** Speech */
-  speech?: SpeechType[]
+  speech?: Speech[]
   /** Statement, Formal */
-  statement?: StatementType[]
+  statement?: Statement[]
   /** Supplementary Material */
-  supplementaryMaterial?: SupplementaryMaterialType[]
+  supplementaryMaterial?: SupplementaryMaterial[]
   /** Table Wrapper */
-  tableWrap?: TableWrapType[]
+  tableWrap?: TableWrap[]
   /** Table Wrapper Group */
-  tableWrapgroup?: TableWrapgroupType[]
+  tableWrapgroup?: TableWrapgroup[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Title */
-  title: TitleType[]
+  title: Title[]
   /** Verse Form For Poetry */
-  verseGroup?: VerseGroupType[]
-}
-interface AppType extends _AppType {
-  constructor: { new (): AppType }
+  verseGroup?: VerseGroup[]
 }
 
-interface _ArrayType extends BaseType {
-  contentType?: string
-  id?: string
-  orientation?: ArrayTypeOrientationType
-  specificUse?: string
+interface Array extends Base {
+  type: 'array'
+  properties: {
+    contentType?: string
+    id?: string
+
+    specificUse?: string
+  }
+  orientation?: ArrayTypeOrientation
   /** Alternate Title Text For a Figure, Etc. */
-  altText?: AltTextType[]
+  altText?: AltText[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Attribution */
-  attrib?: AttribType[]
+  attrib?: Attrib[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Long Description */
-  longDesc?: LongDescType[]
+  longDesc?: LongDesc[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Permissions */
-  permissions?: PermissionsType[]
-  tbody: TbodyType
+  permissions?: Permissions[]
+  tbody: Tbody
   /** Uri */
-  uri?: UriType[]
-}
-interface ArrayType extends _ArrayType {
-  constructor: { new (): ArrayType }
+  uri?: Uri[]
 }
 
-type ArrayTypeOrientationType = 'landscape' | 'portrait'
-interface _ArrayTypeOrientationType extends Primitive._string {
-  content: ArrayTypeOrientationType
+type ArrayTypeOrientation = 'landscape' | 'portrait'
+interface _ArrayTypeOrientation extends Primitive._string {
+  content: ArrayTypeOrientation
 }
 
-interface _ArticleCategoriesType extends BaseType {
-  id?: string
-  /** Series Text: Header Text to Describe */
-  seriesText?: SeriesTextType[]
+interface ArticleCategories extends Base {
+  type: 'articleCategories'
+  properties: {
+    id?: string
+  } /** Series Text: Header Text to Describe */
+  seriesText?: SeriesText[]
   /** Series Title */
-  seriesTitle?: SeriesTitleType[]
-  subjGroup?: SubjGroupType[]
-}
-interface ArticleCategoriesType extends _ArticleCategoriesType {
-  constructor: { new (): ArticleCategoriesType }
+  seriesTitle?: SeriesTitle[]
+  subjGroup?: SubjGroup[]
 }
 
-interface _ArticleIdType extends BaseType {
-  assigningAuthority?: string
-  customType?: string
-  id?: string
-  pubIdtype?: ArticleIdTypePubIdtypeType
-  specificUse?: string
-}
-interface ArticleIdType extends _ArticleIdType {
-  constructor: { new (): ArticleIdType }
+interface ArticleId extends Base {
+  type: 'articleId'
+  properties: {
+    assigningAuthority?: string
+    customType?: string
+    id?: string
+
+    specificUse?: string
+  }
+  pubIdtype?: ArticleIdTypePubIdtype
 }
 
-type ArticleIdTypePubIdtypeType =
+type ArticleIdTypePubIdtype =
   | 'accession'
   | 'archive'
   | 'ark'
@@ -811,215 +799,213 @@ type ArticleIdTypePubIdtypeType =
   | 'sici'
   | 'std-designation'
   | 'zbl'
-interface _ArticleIdTypePubIdtypeType extends Primitive._string {
-  content: ArticleIdTypePubIdtypeType
+interface _ArticleIdTypePubIdtype extends Primitive._string {
+  content: ArticleIdTypePubIdtype
 }
 
-interface _ArticleMetaType extends BaseType {
-  id?: string
-  /** Abstract */
-  abstract?: AbstractType[]
+interface ArticleMeta extends Base {
+  type: 'articleMeta'
+  properties: {
+    id?: string
+  } /** Abstract */
+  abstract?: Abstract[]
   /** Affiliation */
-  aff?: AffType[]
+  aff?: Aff[]
   /** Affiliation Alternatives */
-  affAlternatives?: AffAlternativesType[]
+  affAlternatives?: AffAlternatives[]
   /** Article Grouping Data */
-  articleCategories?: ArticleCategoriesType
+  articleCategories?: ArticleCategories
   /** Article Identifier */
-  articleId?: ArticleIdType[]
+  articleId?: ArticleId[]
   /** Article Version */
-  articleVersion?: ArticleVersionType
+  articleVersion?: ArticleVersion
   /** Article Version Alternatives */
-  articleVersionalternatives?: ArticleVersionalternativesType
+  articleVersionalternatives?: ArticleVersionalternatives
   /** Author Note Group */
-  authorNotes?: AuthorNotesType
+  authorNotes?: AuthorNotes
   /** Conference Information */
-  conference?: ConferenceType[]
+  conference?: Conference[]
   /** Contributor Group */
-  contribGroup?: ContribGroupType[]
+  contribGroup?: ContribGroup[]
   /** Counts */
-  counts?: CountsType
+  counts?: Counts
   /** Custom Metadata Group */
-  customMetagroup?: CustomMetagroupType
+  customMetagroup?: CustomMetagroup
   /** Electronic Location Identifier */
-  elocationId?: ElocationIdType
+  elocationId?: ElocationId
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** First Page */
-  fpage?: FpageType
+  fpage?: Fpage
   /** Funding Group */
-  fundingGroup?: FundingGroupType[]
+  fundingGroup?: FundingGroup[]
   /** History: Document History */
-  history?: HistoryType
+  history?: History
   /** Isbn */
-  isbn?: IsbnType[]
+  isbn?: Isbn[]
   /** Issue Number */
-  issue?: IssueType[]
+  issue?: Issue[]
   /** Issue Identifier */
-  issueId?: IssueIdType[]
+  issueId?: IssueId[]
   /** Issue Part */
-  issuePart?: IssuePartType
+  issuePart?: IssuePart
   /** Issue Title */
-  issueSponsor?: IssueSponsorType[]
+  issueSponsor?: IssueSponsor[]
   /** Issue Title */
-  issueTitle?: IssueTitleType[]
+  issueTitle?: IssueTitle[]
   /** Issue Title Group */
-  issueTitlegroup?: IssueTitlegroupType[]
+  issueTitlegroup?: IssueTitlegroup[]
   /** Keyword Group */
-  kwdGroup?: KwdGroupType[]
+  kwdGroup?: KwdGroup[]
   /** Last Page */
-  lpage?: LpageType
+  lpage?: Lpage
   /** Page Ranges */
-  pageRange?: PageRangeType
+  pageRange?: PageRange
   /** Permissions */
-  permissions?: PermissionsType
+  permissions?: Permissions
   /** Product Information */
-  product?: ProductType[]
+  product?: Product[]
   /** Publication Date */
-  pubDate: PubDateType[]
+  pubDate: PubDate[]
   /** Date Not Available Flag */
-  pubDatenotavailable?: PubDatenotavailableType
+  pubDatenotavailable?: PubDatenotavailable
   /** Publication History */
-  pubHistory?: PubHistoryType
+  pubHistory?: PubHistory
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Uri For This Same Article Online */
-  selfUri?: SelfUriType[]
+  selfUri?: SelfUri[]
   /** Supplement */
-  supplement?: SupplementType
+  supplement?: Supplement
   /** Supplementary Material */
-  supplementaryMaterial?: SupplementaryMaterialType[]
+  supplementaryMaterial?: SupplementaryMaterial[]
   /** Support Group */
-  supportGroup?: SupportGroupType[]
+  supportGroup?: SupportGroup[]
   /** Title Group */
-  titleGroup: TitleGroupType
+  titleGroup: TitleGroup
   /** Translated Abstract */
-  transAbstract?: TransAbstractType[]
+  transAbstract?: TransAbstract[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** Volume Number */
-  volume?: VolumeType[]
+  volume?: Volume[]
   /** Volume Identifier */
-  volumeId?: VolumeIdType[]
+  volumeId?: VolumeId[]
   /** Translated Title Group */
-  volumeIssuegroup?: VolumeIssuegroupType[]
+  volumeIssuegroup?: VolumeIssuegroup[]
   /** Volume Series */
-  volumeSeries?: VolumeSeriesType
-}
-interface ArticleMetaType extends _ArticleMetaType {
-  constructor: { new (): ArticleMetaType }
+  volumeSeries?: VolumeSeries
 }
 
-interface _ArticleTitleType extends BaseType {
-  id?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface ArticleTitle extends Base {
+  type: 'articleTitle'
+  properties: {
+    id?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Line Break */
-  break?: BreakType[]
+  break?: Break[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface ArticleTitleType extends _ArticleTitleType {
-  constructor: { new (): ArticleTitleType }
+  xref?: Xref[]
 }
 
-interface _ArticleType extends BaseType {
-  articleType?: string
-  dtdVersion?: ArticleTypeDtdVersionType
-  id?: string
-  specificUse?: string
-  /** Back Matter */
-  back?: BackType
+interface Article extends Base {
+  type: 'article'
+  properties: {
+    articleType?: string
+
+    id?: string
+    specificUse?: string
+  }
+  dtdVersion?: ArticleTypeDtdVersion /** Back Matter */
+  back?: Back
   /** Body of the Article */
-  body?: BodyType
+  body?: Body
   /** Floats Group */
-  floatsGroup?: FloatsGroupType
+  floatsGroup?: FloatsGroup
   /** Front Matter */
-  front: FrontType
+  front: Front
   /** Processing Metadata Model */
-  processingMeta?: ProcessingMetaType
+  processingMeta?: ProcessingMeta
   /** Response */
-  response?: ResponseType[]
+  response?: Response[]
   /** Sub-Article */
-  subArticle?: SubArticleType[]
-}
-interface ArticleType extends _ArticleType {
-  constructor: { new (): ArticleType }
+  subArticle?: SubArticle[]
 }
 
-type ArticleTypeDtdVersionType =
+type ArticleTypeDtdVersion =
   | '0.4'
   | '1.0'
   | '1.1'
@@ -1033,3091 +1019,3045 @@ type ArticleTypeDtdVersionType =
   | '1.3d1'
   | '1.3d2'
   | '3.0'
-interface _ArticleTypeDtdVersionType extends Primitive._string {
-  content: ArticleTypeDtdVersionType
+interface _ArticleTypeDtdVersion extends Primitive._string {
+  content: ArticleTypeDtdVersion
 }
 
-interface _ArticleVersionalternativesType extends BaseType {
-  id?: string
-  /** Article Version */
-  articleVersion: ArticleVersionType[]
-}
-interface ArticleVersionalternativesType
-  extends _ArticleVersionalternativesType {
-  constructor: { new (): ArticleVersionalternativesType }
+interface ArticleVersionalternatives extends Base {
+  type: 'articleVersionalternatives'
+  properties: {
+    id?: string
+  } /** Article Version */
+  articleVersion: ArticleVersion[]
 }
 
-interface _ArticleVersionType extends BaseType {
-  articleVersiontype?: string
-  assigningAuthority?: string
-  contentType?: string
-  designator?: string
-  hreflang?: string
-  id?: string
-  iso8601Date?: string
-  specificUse?: string
-  vocab?: string
-  vocabIdentifier?: string
-  vocabTerm?: string
-  vocabTermidentifier?: string
-}
-interface ArticleVersionType extends _ArticleVersionType {
-  constructor: { new (): ArticleVersionType }
+interface ArticleVersion extends Base {
+  type: 'articleVersion'
+  properties: {
+    articleVersiontype?: string
+    assigningAuthority?: string
+    contentType?: string
+    designator?: string
+    hreflang?: string
+    id?: string
+    iso8601Date?: string
+    specificUse?: string
+    vocab?: string
+    vocabIdentifier?: string
+    vocabTerm?: string
+    vocabTermidentifier?: string
+  }
 }
 
-interface _AttribType extends BaseType {
-  id?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface Attrib extends Base {
+  type: 'attrib'
+  properties: {
+    id?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface AttribType extends _AttribType {
-  constructor: { new (): AttribType }
+  xref?: Xref[]
 }
 
-interface _AuthorCommentType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Paragraph */
-  p: PType[]
+interface AuthorComment extends Base {
+  type: 'authorComment'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Paragraph */
+  p: P[]
   /** Title */
-  title?: TitleType
-}
-interface AuthorCommentType extends _AuthorCommentType {
-  constructor: { new (): AuthorCommentType }
+  title?: Title
 }
 
-interface _AuthorNotesType extends BaseType {
-  id?: string
-  rid?: string
-  specificUse?: string
-  /** Correspondence Information */
-  corresp: CorrespType[]
+interface AuthorNotes extends Base {
+  type: 'authorNotes'
+  properties: {
+    id?: string
+    rid?: string
+    specificUse?: string
+  } /** Correspondence Information */
+  corresp: Corresp[]
   /** Footnote */
-  fn: FnType[]
+  fn: Fn[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** Paragraph */
-  p: PType[]
+  p: P[]
   /** Title */
-  title?: TitleType
-}
-interface AuthorNotesType extends _AuthorNotesType {
-  constructor: { new (): AuthorNotesType }
+  title?: Title
 }
 
-interface _AwardDescType extends BaseType {
-  hreflang?: string
-  id?: string
-}
-interface AwardDescType extends _AwardDescType {
-  constructor: { new (): AwardDescType }
+interface AwardDesc extends Base {
+  type: 'awardDesc'
+  properties: {
+    hreflang?: string
+    id?: string
+  }
 }
 
-interface _AwardGroupType extends BaseType {
-  awardType?: string
-  hreflang?: string
-  id?: string
-  rid?: string
-  specificUse?: string
-  /** Award Description */
-  awardDesc?: AwardDescType
+interface AwardGroup extends Base {
+  type: 'awardGroup'
+  properties: {
+    awardType?: string
+    hreflang?: string
+    id?: string
+    rid?: string
+    specificUse?: string
+  } /** Award Description */
+  awardDesc?: AwardDesc
   /** Award Identifier */
-  awardId?: AwardIdType[]
+  awardId?: AwardId[]
   /** Award Name */
-  awardName?: AwardNameType
+  awardName?: AwardName
   /** Funding Source */
-  fundingSource?: FundingSourceType[]
+  fundingSource?: FundingSource[]
   /** Principal Award Recipient */
-  principalAwardrecipient?: PrincipalAwardrecipientType[]
+  principalAwardrecipient?: PrincipalAwardrecipient[]
   /** Principal Investigator Recipient */
-  principalInvestigator?: PrincipalInvestigatorType[]
+  principalInvestigator?: PrincipalInvestigator[]
   /** Support Source */
-  supportSource?: SupportSourceType[]
-}
-interface AwardGroupType extends _AwardGroupType {
-  constructor: { new (): AwardGroupType }
+  supportSource?: SupportSource[]
 }
 
-interface _AwardIdType extends BaseType {
-  assigningAuthority?: string
-  awardIdtype?: string
-  awardType?: string
-  hreflang?: string
-  id?: string
-  rid?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface AwardId extends Base {
+  type: 'awardId'
+  properties: {
+    assigningAuthority?: string
+    awardIdtype?: string
+    awardType?: string
+    hreflang?: string
+    id?: string
+    rid?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface AwardIdType extends _AwardIdType {
-  constructor: { new (): AwardIdType }
+  underline?: Underline[]
 }
 
-interface _AwardNameType extends BaseType {
-  hreflang?: string
-  id?: string
-}
-interface AwardNameType extends _AwardNameType {
-  constructor: { new (): AwardNameType }
+interface AwardName extends Base {
+  type: 'awardName'
+  properties: {
+    hreflang?: string
+    id?: string
+  }
 }
 
-interface _BackType extends BaseType {
-  id?: string
-  /** Acknowledgments */
-  ack?: AckType[]
+interface Back extends Base {
+  type: 'back'
+  properties: {
+    id?: string
+  } /** Acknowledgments */
+  ack?: Ack[]
   /** Appendix Group */
-  appGroup?: AppGroupType[]
+  appGroup?: AppGroup[]
   /** Biography */
-  bio?: BioType[]
+  bio?: Bio[]
   /** Footnote Group */
-  fnGroup?: FnGroupType[]
+  fnGroup?: FnGroup[]
   /** Glossary Elements */
-  glossary?: GlossaryType[]
+  glossary?: Glossary[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** Notes */
-  notes?: NotesType[]
+  notes?: Notes[]
   /** Reference List (Bibliographic Reference List) */
-  refList?: RefListType[]
+  refList?: RefList[]
   /** Section */
-  sec?: SecType[]
+  sec?: Sec[]
   /** Title */
-  title?: TitleType[]
-}
-interface BackType extends _BackType {
-  constructor: { new (): BackType }
+  title?: Title[]
 }
 
-interface _BioType extends BaseType {
-  contentType?: string
-  hreflang?: string
-  id?: string
-  rid?: string
-  specificUse?: string
-  /** Address/Contact Information */
-  address?: AddressType[]
+interface Bio extends Base {
+  type: 'bio'
+  properties: {
+    contentType?: string
+    hreflang?: string
+    id?: string
+    rid?: string
+    specificUse?: string
+  } /** Address/Contact Information */
+  address?: Address[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Answer Elements */
-  answer?: AnswerType[]
+  answer?: Answer[]
   /** Answer Set */
-  answerSet?: AnswerSetType[]
+  answerSet?: AnswerSet[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Block-Level Alternatives For Processing */
-  blockAlternatives?: BlockAlternativesType[]
+  blockAlternatives?: BlockAlternatives[]
   /** Boxed Text */
-  boxedText?: BoxedTextType[]
+  boxedText?: BoxedText[]
   /** Chemical Structure Wrapper */
-  chemStructwrap?: ChemStructwrapType[]
+  chemStructwrap?: ChemStructwrap[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote?: DispQuoteType[]
+  dispQuote?: DispQuote[]
   /** Explanation */
-  explanation?: ExplanationType[]
+  explanation?: Explanation[]
   /** Figure */
-  fig?: FigType[]
+  fig?: Fig[]
   /** Figure Group */
-  figGroup?: FigGroupType[]
+  figGroup?: FigGroup[]
   /** Footnote Group */
-  fnGroup?: FnGroupType[]
+  fnGroup?: FnGroup[]
   /** Glossary Elements */
-  glossary?: GlossaryType[]
+  glossary?: Glossary[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** List */
-  list?: ListType[]
+  list?: List[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Paragraph */
-  p?: PType[]
+  p?: P[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Question */
-  question?: QuestionType[]
+  question?: Question[]
   /** Question Wrap */
-  questionWrap?: QuestionWrapType[]
+  questionWrap?: QuestionWrap[]
   /** Question Wrap Group */
-  questionWrapgroup?: QuestionWrapgroupType[]
+  questionWrapgroup?: QuestionWrapgroup[]
   /** Reference List (Bibliographic Reference List) */
-  refList?: RefListType[]
+  refList?: RefList[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Section */
-  sec?: SecType[]
+  sec?: Sec[]
   /** Section Metadata */
-  secMeta?: SecMetaType
+  secMeta?: SecMeta
   /** Speech */
-  speech?: SpeechType[]
+  speech?: Speech[]
   /** Statement, Formal */
-  statement?: StatementType[]
+  statement?: Statement[]
   /** Supplementary Material */
-  supplementaryMaterial?: SupplementaryMaterialType[]
+  supplementaryMaterial?: SupplementaryMaterial[]
   /** Table Wrapper */
-  tableWrap?: TableWrapType[]
+  tableWrap?: TableWrap[]
   /** Table Wrapper Group */
-  tableWrapgroup?: TableWrapgroupType[]
+  tableWrapgroup?: TableWrapgroup[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Title */
-  title?: TitleType
+  title?: Title
   /** Verse Form For Poetry */
-  verseGroup?: VerseGroupType[]
-}
-interface BioType extends _BioType {
-  constructor: { new (): BioType }
+  verseGroup?: VerseGroup[]
 }
 
-interface _BlockAlternativesType extends BaseType {
-  id?: string
-  /** Boxed Text */
-  boxedText: BoxedTextType[]
+interface BlockAlternatives extends Base {
+  type: 'blockAlternatives'
+  properties: {
+    id?: string
+  } /** Boxed Text */
+  boxedText: BoxedText[]
   /** Figure */
-  fig: FigType[]
+  fig: Fig[]
   /** Figure Group */
-  figGroup: FigGroupType[]
+  figGroup: FigGroup[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Table Wrapper */
-  tableWrap: TableWrapType[]
+  tableWrap: TableWrap[]
   /** Table Wrapper Group */
-  tableWrapgroup: TableWrapgroupType[]
-}
-interface BlockAlternativesType extends _BlockAlternativesType {
-  constructor: { new (): BlockAlternativesType }
+  tableWrapgroup: TableWrapgroup[]
 }
 
-interface _BodyType extends BaseType {
-  id?: string
-  specificUse?: string
-  /** Address/Contact Information */
-  address?: AddressType[]
+interface Body extends Base {
+  type: 'body'
+  properties: {
+    id?: string
+    specificUse?: string
+  } /** Address/Contact Information */
+  address?: Address[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Answer Elements */
-  answer?: AnswerType[]
+  answer?: Answer[]
   /** Answer Set */
-  answerSet?: AnswerSetType[]
+  answerSet?: AnswerSet[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Block-Level Alternatives For Processing */
-  blockAlternatives?: BlockAlternativesType[]
+  blockAlternatives?: BlockAlternatives[]
   /** Boxed Text */
-  boxedText?: BoxedTextType[]
+  boxedText?: BoxedText[]
   /** Chemical Structure Wrapper */
-  chemStructwrap?: ChemStructwrapType[]
+  chemStructwrap?: ChemStructwrap[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote?: DispQuoteType[]
+  dispQuote?: DispQuote[]
   /** Explanation */
-  explanation?: ExplanationType[]
+  explanation?: Explanation[]
   /** Figure */
-  fig?: FigType[]
+  fig?: Fig[]
   /** Figure Group */
-  figGroup?: FigGroupType[]
+  figGroup?: FigGroup[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** List */
-  list?: ListType[]
+  list?: List[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Paragraph */
-  p?: PType[]
+  p?: P[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Question */
-  question?: QuestionType[]
+  question?: Question[]
   /** Question Wrap */
-  questionWrap?: QuestionWrapType[]
+  questionWrap?: QuestionWrap[]
   /** Question Wrap Group */
-  questionWrapgroup?: QuestionWrapgroupType[]
+  questionWrapgroup?: QuestionWrapgroup[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Section */
-  sec?: SecType[]
+  sec?: Sec[]
   /** Signature Block */
-  sigBlock?: SigBlockType
+  sigBlock?: SigBlock
   /** Speech */
-  speech?: SpeechType[]
+  speech?: Speech[]
   /** Statement, Formal */
-  statement?: StatementType[]
+  statement?: Statement[]
   /** Supplementary Material */
-  supplementaryMaterial?: SupplementaryMaterialType[]
+  supplementaryMaterial?: SupplementaryMaterial[]
   /** Table Wrapper */
-  tableWrap?: TableWrapType[]
+  tableWrap?: TableWrap[]
   /** Table Wrapper Group */
-  tableWrapgroup?: TableWrapgroupType[]
+  tableWrapgroup?: TableWrapgroup[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Verse Form For Poetry */
-  verseGroup?: VerseGroupType[]
-}
-interface BodyType extends _BodyType {
-  constructor: { new (): BodyType }
+  verseGroup?: VerseGroup[]
 }
 
-interface _BoldType extends BaseType {
-  id?: string
-  specificUse?: string
-  toggle?: BoldTypeToggleType
+interface Bold extends Base {
+  type: 'bold'
+  properties: {
+    id?: string
+    specificUse?: string
+  }
+  toggle?: BoldTypeToggle
   /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface BoldType extends _BoldType {
-  constructor: { new (): BoldType }
+  xref?: Xref[]
 }
 
-type BoldTypeToggleType = 'no' | 'yes'
-interface _BoldTypeToggleType extends Primitive._string {
-  content: BoldTypeToggleType
+type BoldTypeToggle = 'no' | 'yes'
+interface _BoldTypeToggle extends Primitive._string {
+  content: BoldTypeToggle
 }
 
-interface _BoxedTextType extends BaseType {
-  contentType?: string
-  id?: string
-  orientation?: BoxedTextTypeOrientationType
-  position?: BoxedTextTypePositionType
-  specificUse?: string
+interface BoxedText extends Base {
+  type: 'boxedText'
+  properties: {
+    contentType?: string
+    id?: string
+
+    specificUse?: string
+  }
+  orientation?: BoxedTextTypeOrientation
+  position?: BoxedTextTypePosition
+
   /** Address/Contact Information */
-  address?: AddressType[]
+  address?: Address[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Answer Elements */
-  answer?: AnswerType[]
+  answer?: Answer[]
   /** Answer Set */
-  answerSet?: AnswerSetType[]
+  answerSet?: AnswerSet[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Attribution */
-  attrib?: AttribType[]
+  attrib?: Attrib[]
   /** Block-Level Alternatives For Processing */
-  blockAlternatives?: BlockAlternativesType[]
+  blockAlternatives?: BlockAlternatives[]
   /** Boxed Text */
-  boxedText?: BoxedTextType[]
+  boxedText?: BoxedText[]
   /** Caption of a Figure, Table, Etc. */
-  caption?: CaptionType
+  caption?: Caption
   /** Chemical Structure Wrapper */
-  chemStructwrap?: ChemStructwrapType[]
+  chemStructwrap?: ChemStructwrap[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote?: DispQuoteType[]
+  dispQuote?: DispQuote[]
   /** Explanation */
-  explanation?: ExplanationType[]
+  explanation?: Explanation[]
   /** Figure */
-  fig?: FigType[]
+  fig?: Fig[]
   /** Figure Group */
-  figGroup?: FigGroupType[]
+  figGroup?: FigGroup[]
   /** Footnote Group */
-  fnGroup?: FnGroupType[]
+  fnGroup?: FnGroup[]
   /** Glossary Elements */
-  glossary?: GlossaryType[]
+  glossary?: Glossary[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** List */
-  list?: ListType[]
+  list?: List[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Paragraph */
-  p?: PType[]
+  p?: P[]
   /** Permissions */
-  permissions?: PermissionsType[]
+  permissions?: Permissions[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Question */
-  question?: QuestionType[]
+  question?: Question[]
   /** Question Wrap */
-  questionWrap?: QuestionWrapType[]
+  questionWrap?: QuestionWrap[]
   /** Question Wrap Group */
-  questionWrapgroup?: QuestionWrapgroupType[]
+  questionWrapgroup?: QuestionWrapgroup[]
   /** Reference List (Bibliographic Reference List) */
-  refList?: RefListType[]
+  refList?: RefList[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Section */
-  sec?: SecType[]
+  sec?: Sec[]
   /** Section Metadata */
-  secMeta?: SecMetaType
+  secMeta?: SecMeta
   /** Speech */
-  speech?: SpeechType[]
+  speech?: Speech[]
   /** Statement, Formal */
-  statement?: StatementType[]
+  statement?: Statement[]
   /** Supplementary Material */
-  supplementaryMaterial?: SupplementaryMaterialType[]
+  supplementaryMaterial?: SupplementaryMaterial[]
   /** Table Wrapper */
-  tableWrap?: TableWrapType[]
+  tableWrap?: TableWrap[]
   /** Table Wrapper Group */
-  tableWrapgroup?: TableWrapgroupType[]
+  tableWrapgroup?: TableWrapgroup[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Verse Form For Poetry */
-  verseGroup?: VerseGroupType[]
-}
-interface BoxedTextType extends _BoxedTextType {
-  constructor: { new (): BoxedTextType }
+  verseGroup?: VerseGroup[]
 }
 
-type BoxedTextTypeOrientationType = 'landscape' | 'portrait'
-interface _BoxedTextTypeOrientationType extends Primitive._string {
-  content: BoxedTextTypeOrientationType
+type BoxedTextTypeOrientation = 'landscape' | 'portrait'
+interface _BoxedTextTypeOrientation extends Primitive._string {
+  content: BoxedTextTypeOrientation
 }
 
-type BoxedTextTypePositionType = 'anchor' | 'background' | 'float' | 'margin'
-interface _BoxedTextTypePositionType extends Primitive._string {
-  content: BoxedTextTypePositionType
+type BoxedTextTypePosition = 'anchor' | 'background' | 'float' | 'margin'
+interface _BoxedTextTypePosition extends Primitive._string {
+  content: BoxedTextTypePosition
 }
 
-interface _BreakType extends BaseType {
-  id?: string
-}
-interface BreakType extends _BreakType {
-  constructor: { new (): BreakType }
+interface Break extends Base {
+  type: 'break'
+  properties: {
+    id?: string
+  }
 }
 
-interface _CaptionType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  style?: string
-  /** Paragraph */
-  p?: PType[]
+interface Caption extends Base {
+  type: 'caption'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+    style?: string
+  } /** Paragraph */
+  p?: P[]
   /** Title */
-  title?: TitleType
-}
-interface CaptionType extends _CaptionType {
-  constructor: { new (): CaptionType }
+  title?: Title
 }
 
-interface _ChapterTitleType extends BaseType {
-  id?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface ChapterTitle extends Base {
+  type: 'chapterTitle'
+  properties: {
+    id?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface ChapterTitleType extends _ChapterTitleType {
-  constructor: { new (): ChapterTitleType }
+  xref?: Xref[]
 }
 
-interface _ChemStructType extends BaseType {
-  contentType?: string
-  hreflang?: string
-  id?: string
-  specificUse?: string
-  /** Alternate Title Text For a Figure, Etc. */
-  altText?: AltTextType[]
+interface ChemStruct extends Base {
+  type: 'chemStruct'
+  properties: {
+    contentType?: string
+    hreflang?: string
+    id?: string
+    specificUse?: string
+  } /** Alternate Title Text For a Figure, Etc. */
+  altText?: AltText[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Line Break */
-  break?: BreakType[]
+  break?: Break[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType[]
+  label?: Label[]
   /** List */
-  list?: ListType[]
+  list?: List[]
   /** Long Description */
-  longDesc?: LongDescType[]
+  longDesc?: LongDesc[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface ChemStructType extends _ChemStructType {
-  constructor: { new (): ChemStructType }
+  xref?: Xref[]
 }
 
-interface _ChemStructwrapType extends BaseType {
-  contentType?: string
-  id?: string
-  orientation?: ChemStructwrapTypeOrientationType
-  position?: ChemStructwrapTypePositionType
-  specificUse?: string
+interface ChemStructwrap extends Base {
+  type: 'chemStructwrap'
+  properties: {
+    contentType?: string
+    id?: string
+
+    specificUse?: string
+  }
+  orientation?: ChemStructwrapTypeOrientation
+  position?: ChemStructwrapTypePosition
   /** Abstract */
-  abstract?: AbstractType[]
+  abstract?: Abstract[]
   /** Alternate Title Text For a Figure, Etc. */
-  altText?: AltTextType[]
+  altText?: AltText[]
   /** Alternatives For Processing */
-  alternatives: AlternativesType[]
+  alternatives: Alternatives[]
   /** Attribution */
-  attrib?: AttribType[]
+  attrib?: Attrib[]
   /** Caption of a Figure, Table, Etc. */
-  caption?: CaptionType
+  caption?: Caption
   /** Chemical Structure (Display) */
-  chemStruct: ChemStructType[]
+  chemStruct: ChemStruct[]
   /** Code Text */
-  code: CodeType[]
+  code: Code[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Graphic */
-  graphic: GraphicType[]
+  graphic: Graphic[]
   /** Keyword Group */
-  kwdGroup?: KwdGroupType[]
+  kwdGroup?: KwdGroup[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** Long Description */
-  longDesc?: LongDescType[]
+  longDesc?: LongDesc[]
   /** Media Object */
-  media: MediaType[]
+  media: Media[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Permissions */
-  permissions?: PermissionsType[]
+  permissions?: Permissions[]
   /** Preformatted Text */
-  preformat: PreformatType[]
-  subjGroup?: SubjGroupType[]
+  preformat: Preformat[]
+  subjGroup?: SubjGroup[]
   /** Textual Form */
-  textualForm: TextualFormType[]
+  textualForm: TextualForm[]
   /** Uri */
-  uri?: UriType[]
-}
-interface ChemStructwrapType extends _ChemStructwrapType {
-  constructor: { new (): ChemStructwrapType }
+  uri?: Uri[]
 }
 
-type ChemStructwrapTypeOrientationType = 'landscape' | 'portrait'
-interface _ChemStructwrapTypeOrientationType extends Primitive._string {
-  content: ChemStructwrapTypeOrientationType
+type ChemStructwrapTypeOrientation = 'landscape' | 'portrait'
+interface _ChemStructwrapTypeOrientation extends Primitive._string {
+  content: ChemStructwrapTypeOrientation
 }
 
-type ChemStructwrapTypePositionType =
-  | 'anchor'
-  | 'background'
-  | 'float'
-  | 'margin'
-interface _ChemStructwrapTypePositionType extends Primitive._string {
-  content: ChemStructwrapTypePositionType
+type ChemStructwrapTypePosition = 'anchor' | 'background' | 'float' | 'margin'
+interface _ChemStructwrapTypePosition extends Primitive._string {
+  content: ChemStructwrapTypePosition
 }
 
-interface _CitationAlternativesType extends BaseType {
-  id?: string
-  /** Element Citation */
-  elementCitation: ElementCitationType[]
+interface CitationAlternatives extends Base {
+  type: 'citationAlternatives'
+  properties: {
+    id?: string
+  } /** Element Citation */
+  elementCitation: ElementCitation[]
   /** Mixed Citation */
-  mixedCitation: MixedCitationType[]
+  mixedCitation: MixedCitation[]
   /** Nlm Citation Model */
-  nlmCitation: NlmCitationType[]
+  nlmCitation: NlmCitation[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
-}
-interface CitationAlternativesType extends _CitationAlternativesType {
-  constructor: { new (): CitationAlternativesType }
+  objectId?: ObjectId[]
 }
 
-interface _CityType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface CityType extends _CityType {
-  constructor: { new (): CityType }
+interface City extends Base {
+  type: 'city'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _CodeType extends BaseType {
-  codeType?: string
-  codeVersion?: string
-  executable?: CodeTypeExecutableType
-  id?: string
-  language?: string
-  languageVersion?: string
-  orientation?: CodeTypeOrientationType
-  platforms?: string
-  position?: CodeTypePositionType
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface Code extends Base {
+  type: 'code'
+  properties: {
+    codeType?: string
+    codeVersion?: string
+    platforms?: string
+
+    specificUse?: string
+
+    id?: string
+    language?: string
+    languageVersion?: string
+  }
+  executable?: CodeTypeExecutable
+  orientation?: CodeTypeOrientation
+
+  position?: CodeTypePosition /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface CodeType extends _CodeType {
-  constructor: { new (): CodeType }
+  xref?: Xref[]
 }
 
-type CodeTypeExecutableType = 'no' | 'yes'
-interface _CodeTypeExecutableType extends Primitive._string {
-  content: CodeTypeExecutableType
+type CodeTypeExecutable = 'no' | 'yes'
+interface _CodeTypeExecutable extends Primitive._string {
+  content: CodeTypeExecutable
 }
 
-type CodeTypeOrientationType = 'landscape' | 'portrait'
-interface _CodeTypeOrientationType extends Primitive._string {
-  content: CodeTypeOrientationType
+type CodeTypeOrientation = 'landscape' | 'portrait'
+interface _CodeTypeOrientation extends Primitive._string {
+  content: CodeTypeOrientation
 }
 
-type CodeTypePositionType = 'anchor' | 'background' | 'float' | 'margin'
-interface _CodeTypePositionType extends Primitive._string {
-  content: CodeTypePositionType
+type CodeTypePosition = 'anchor' | 'background' | 'float' | 'margin'
+interface _CodeTypePosition extends Primitive._string {
+  content: CodeTypePosition
 }
 
-interface _ColgroupType extends BaseType {
-  align?: ColgroupTypeAlignType
-  char?: string
-  charoff?: string
-  contentType?: string
-  id?: string
-  span?: string
-  style?: string
-  valign?: ColgroupTypeValignType
-  width?: string
-  col?: ColType[]
-}
-interface ColgroupType extends _ColgroupType {
-  constructor: { new (): ColgroupType }
+interface Colgroup extends Base {
+  type: 'colgroup'
+  align?: ColgroupTypeAlign
+  properties: {
+    char?: string
+    charoff?: string
+    contentType?: string
+    id?: string
+    span?: string
+    style?: string
+
+    width?: string
+  }
+  valign?: ColgroupTypeValign
+  col?: Col[]
 }
 
-type ColgroupTypeAlignType = 'center' | 'char' | 'justify' | 'left' | 'right'
-interface _ColgroupTypeAlignType extends Primitive._string {
-  content: ColgroupTypeAlignType
+type ColgroupTypeAlign = 'center' | 'char' | 'justify' | 'left' | 'right'
+interface _ColgroupTypeAlign extends Primitive._string {
+  content: ColgroupTypeAlign
 }
 
-type ColgroupTypeValignType = 'baseline' | 'bottom' | 'middle' | 'top'
-interface _ColgroupTypeValignType extends Primitive._string {
-  content: ColgroupTypeValignType
+type ColgroupTypeValign = 'baseline' | 'bottom' | 'middle' | 'top'
+interface _ColgroupTypeValign extends Primitive._string {
+  content: ColgroupTypeValign
 }
 
-interface _CollabAlternativesType extends BaseType {
-  id?: string
-  /** Collaborative (Group) Author */
-  collab: CollabType[]
-}
-interface CollabAlternativesType extends _CollabAlternativesType {
-  constructor: { new (): CollabAlternativesType }
+interface CollabAlternatives extends Base {
+  type: 'collabAlternatives'
+  properties: {
+    id?: string
+  } /** Collaborative (Group) Author */
+  collab: Collab[]
 }
 
-interface _CollabType extends BaseType {
-  collabType?: string
-  hreflang?: string
-  id?: string
-  specificUse?: string
-  symbol?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface Collab extends Base {
+  type: 'collab'
+  properties: {
+    collabType?: string
+    hreflang?: string
+    id?: string
+    specificUse?: string
+    symbol?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Address Line */
-  addrLine?: AddrLineType[]
+  addrLine?: AddrLine[]
   /** Address/Contact Information */
-  address?: AddressType[]
+  address?: Address[]
   /** Affiliation */
-  aff?: AffType[]
+  aff?: Aff[]
   /** Affiliation Alternatives */
-  affAlternatives?: AffAlternativesType[]
+  affAlternatives?: AffAlternatives[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Author Comment */
-  authorComment?: AuthorCommentType[]
+  authorComment?: AuthorComment[]
   /** Biography */
-  bio?: BioType[]
+  bio?: Bio[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** City: in an Address */
-  city?: CityType[]
+  city?: City[]
   /** Contributor Group */
-  contribGroup?: ContribGroupType[]
+  contribGroup?: ContribGroup[]
   /** Country: in an Address */
-  country?: CountryType[]
+  country?: Country[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fax Number: in an Address */
-  fax?: FaxType[]
+  fax?: Fax[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Institution Name: in an Address */
-  institution?: InstitutionType[]
+  institution?: Institution[]
   /** Institution Wrapper */
-  institutionWrap?: InstitutionWrapType[]
+  institutionWrap?: InstitutionWrap[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** On Behalf of */
-  onBehalfof?: OnBehalfofType[]
+  onBehalfof?: OnBehalfof[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Phone Number: in an Address */
-  phone?: PhoneType[]
+  phone?: Phone[]
   /** Postal Code: in an Address */
-  postalCode?: PostalCodeType[]
+  postalCode?: PostalCode[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Role or Function Title of Contributor */
-  role?: RoleType[]
+  role?: Role[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** State or Province: in an Address */
-  state?: StateType[]
+  state?: State[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface CollabType extends _CollabType {
-  constructor: { new (): CollabType }
+  xref?: Xref[]
 }
 
-interface _ColType extends BaseType {
-  align?: ColTypeAlignType
-  char?: string
-  charoff?: string
-  contentType?: string
-  id?: string
-  span?: string
-  style?: string
-  valign?: ColTypeValignType
-  width?: string
-}
-interface ColType extends _ColType {
-  constructor: { new (): ColType }
+interface Col extends Base {
+  type: 'col'
+  align?: ColTypeAlign
+  properties: {
+    char?: string
+    charoff?: string
+    contentType?: string
+    id?: string
+    span?: string
+    style?: string
+
+    width?: string
+  }
+  valign?: ColTypeValign
 }
 
-type ColTypeAlignType = 'center' | 'char' | 'justify' | 'left' | 'right'
-interface _ColTypeAlignType extends Primitive._string {
-  content: ColTypeAlignType
+type ColTypeAlign = 'center' | 'char' | 'justify' | 'left' | 'right'
+interface _ColTypeAlign extends Primitive._string {
+  content: ColTypeAlign
 }
 
-type ColTypeValignType = 'baseline' | 'bottom' | 'middle' | 'top'
-interface _ColTypeValignType extends Primitive._string {
-  content: ColTypeValignType
+type ColTypeValign = 'baseline' | 'bottom' | 'middle' | 'top'
+interface _ColTypeValign extends Primitive._string {
+  content: ColTypeValign
 }
 
-interface _CommentType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface Comment extends Base {
+  type: 'comment'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface CommentType extends _CommentType {
-  constructor: { new (): CommentType }
+  xref?: Xref[]
 }
 
-interface _CompoundKwdpartType extends BaseType {
-  contentType?: string
-  id?: string
-  /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+interface CompoundKwdpart extends Base {
+  type: 'compoundKwdpart'
+  properties: {
+    contentType?: string
+    id?: string
+  } /** Alternatives For Processing */
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface CompoundKwdpartType extends _CompoundKwdpartType {
-  constructor: { new (): CompoundKwdpartType }
+  xref?: Xref[]
 }
 
-interface _CompoundKwdType extends BaseType {
-  assigningAuthority?: string
-  contentType?: string
-  id?: string
-  vocab?: string
-  vocabIdentifier?: string
-  vocabTerm?: string
-  vocabTermidentifier?: string
-  /** Compound Keyword Part */
-  compoundKwdpart: CompoundKwdpartType[]
-}
-interface CompoundKwdType extends _CompoundKwdType {
-  constructor: { new (): CompoundKwdType }
+interface CompoundKwd extends Base {
+  type: 'compoundKwd'
+  properties: {
+    assigningAuthority?: string
+    contentType?: string
+    id?: string
+    vocab?: string
+    vocabIdentifier?: string
+    vocabTerm?: string
+    vocabTermidentifier?: string
+  } /** Compound Keyword Part */
+  compoundKwdpart: CompoundKwdpart[]
 }
 
-interface _CompoundSubjectpartType extends BaseType {
-  contentType?: string
-  id?: string
-  /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+interface CompoundSubjectpart extends Base {
+  type: 'compoundSubjectpart'
+  properties: {
+    contentType?: string
+    id?: string
+  } /** Alternatives For Processing */
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface CompoundSubjectpartType extends _CompoundSubjectpartType {
-  constructor: { new (): CompoundSubjectpartType }
+  underline?: Underline[]
 }
 
-interface _CompoundSubjectType extends BaseType {
-  assigningAuthority?: string
-  contentType?: string
-  id?: string
-  vocab?: string
-  vocabIdentifier?: string
-  vocabTerm?: string
-  vocabTermidentifier?: string
-  /** Compound Subject Part Name */
-  compoundSubjectpart: CompoundSubjectpartType[]
-}
-interface CompoundSubjectType extends _CompoundSubjectType {
-  constructor: { new (): CompoundSubjectType }
-}
-
-interface _ConfAcronymType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface ConfAcronymType extends _ConfAcronymType {
-  constructor: { new (): ConfAcronymType }
+interface CompoundSubject extends Base {
+  type: 'compoundSubject'
+  properties: {
+    assigningAuthority?: string
+    contentType?: string
+    id?: string
+    vocab?: string
+    vocabIdentifier?: string
+    vocabTerm?: string
+    vocabTermidentifier?: string
+  } /** Compound Subject Part Name */
+  compoundSubjectpart: CompoundSubjectpart[]
 }
 
-interface _ConfDateType extends BaseType {
-  calendar?: string
-  contentType?: string
-  id?: string
-  iso8601Date?: string
-  specificUse?: string
-}
-interface ConfDateType extends _ConfDateType {
-  constructor: { new (): ConfDateType }
+interface ConfAcronym extends Base {
+  type: 'confAcronym'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _ConferenceType extends BaseType {
-  contentType?: string
-  hreflang?: string
-  id?: string
-  specificUse?: string
-  /** Conference Acronym */
-  confAcronym: ConfAcronymType[]
+interface ConfDate extends Base {
+  type: 'confDate'
+  properties: {
+    calendar?: string
+    contentType?: string
+    id?: string
+    iso8601Date?: string
+    specificUse?: string
+  }
+}
+
+interface Conference extends Base {
+  type: 'conference'
+  properties: {
+    contentType?: string
+    hreflang?: string
+    id?: string
+    specificUse?: string
+  } /** Conference Acronym */
+  confAcronym: ConfAcronym[]
   /** Conference Date */
-  confDate: ConfDateType
+  confDate: ConfDate
   /** Conference Location */
-  confLoc?: ConfLocType
+  confLoc?: ConfLoc
   /** Conference Name */
-  confName: ConfNameType[]
+  confName: ConfName[]
   /** Conference Number */
-  confNum?: ConfNumType
+  confNum?: ConfNum
   /** Conference Sponsor */
-  confSponsor?: ConfSponsorType[]
+  confSponsor?: ConfSponsor[]
   /** Conference Theme */
-  confTheme?: ConfThemeType
-}
-interface ConferenceType extends _ConferenceType {
-  constructor: { new (): ConferenceType }
+  confTheme?: ConfTheme
 }
 
-interface _ConfLocType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Address Line */
-  addrLine?: AddrLineType[]
+interface ConfLoc extends Base {
+  type: 'confLoc'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Address Line */
+  addrLine?: AddrLine[]
   /** City: in an Address */
-  city?: CityType[]
+  city?: City[]
   /** Country: in an Address */
-  country?: CountryType[]
+  country?: Country[]
   /** Fax Number: in an Address */
-  fax?: FaxType[]
+  fax?: Fax[]
   /** Institution Name: in an Address */
-  institution?: InstitutionType[]
+  institution?: Institution[]
   /** Institution Wrapper */
-  institutionWrap?: InstitutionWrapType[]
+  institutionWrap?: InstitutionWrap[]
   /** Phone Number: in an Address */
-  phone?: PhoneType[]
+  phone?: Phone[]
   /** Postal Code: in an Address */
-  postalCode?: PostalCodeType[]
+  postalCode?: PostalCode[]
   /** State or Province: in an Address */
-  state?: StateType[]
-}
-interface ConfLocType extends _ConfLocType {
-  constructor: { new (): ConfLocType }
+  state?: State[]
 }
 
-interface _ConfNameType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface ConfNameType extends _ConfNameType {
-  constructor: { new (): ConfNameType }
-}
-
-interface _ConfNumType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface ConfNumType extends _ConfNumType {
-  constructor: { new (): ConfNumType }
+interface ConfName extends Base {
+  type: 'confName'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _ConfSponsorType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Institution Name: in an Address */
-  institution?: InstitutionType[]
+interface ConfNum extends Base {
+  type: 'confNum'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
+}
+
+interface ConfSponsor extends Base {
+  type: 'confSponsor'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Institution Name: in an Address */
+  institution?: Institution[]
   /** Institution Wrapper */
-  institutionWrap?: InstitutionWrapType[]
-}
-interface ConfSponsorType extends _ConfSponsorType {
-  constructor: { new (): ConfSponsorType }
+  institutionWrap?: InstitutionWrap[]
 }
 
-interface _ConfThemeType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface ConfTheme extends Base {
+  type: 'confTheme'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface ConfThemeType extends _ConfThemeType {
-  constructor: { new (): ConfThemeType }
+  underline?: Underline[]
 }
 
-interface _ContribGroupType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Address/Contact Information */
-  address?: AddressType[]
+interface ContribGroup extends Base {
+  type: 'contribGroup'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Address/Contact Information */
+  address?: Address[]
   /** Affiliation */
-  aff?: AffType[]
+  aff?: Aff[]
   /** Affiliation Alternatives */
-  affAlternatives?: AffAlternativesType[]
+  affAlternatives?: AffAlternatives[]
   /** Author Comment */
-  authorComment?: AuthorCommentType[]
+  authorComment?: AuthorComment[]
   /** Biography */
-  bio?: BioType[]
+  bio?: Bio[]
   /** Contributor */
-  contrib: ContribType[]
+  contrib: Contrib[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** On Behalf of */
-  onBehalfof?: OnBehalfofType[]
+  onBehalfof?: OnBehalfof[]
   /** Role or Function Title of Contributor */
-  role?: RoleType[]
+  role?: Role[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface ContribGroupType extends _ContribGroupType {
-  constructor: { new (): ContribGroupType }
+  xref?: Xref[]
 }
 
-interface _ContribIdType extends BaseType {
-  assigningAuthority?: string
-  authenticated?: ContribIdTypeAuthenticatedType
-  contentType?: string
-  contribIdtype?: string
-  id?: string
-  specificUse?: string
-}
-interface ContribIdType extends _ContribIdType {
-  constructor: { new (): ContribIdType }
+interface ContribId extends Base {
+  type: 'contribId'
+  properties: {
+    assigningAuthority?: string
+
+    contentType?: string
+    contribIdtype?: string
+    id?: string
+    specificUse?: string
+  }
+  authenticated?: ContribIdTypeAuthenticated
 }
 
-type ContribIdTypeAuthenticatedType = 'false' | 'true'
-interface _ContribIdTypeAuthenticatedType extends Primitive._string {
-  content: ContribIdTypeAuthenticatedType
+type ContribIdTypeAuthenticated = 'false' | 'true'
+interface _ContribIdTypeAuthenticated extends Primitive._string {
+  content: ContribIdTypeAuthenticated
 }
 
-interface _ContribType extends BaseType {
-  contribType?: string
-  corresp?: ContribTypeCorrespType
-  deceased?: ContribTypeDeceasedType
-  equalContrib?: ContribTypeEqualContribType
-  hreflang?: string
-  id?: string
-  rid?: string
-  specificUse?: string
+interface Contrib extends Base {
+  type: 'contrib'
+  properties: {
+    contribType?: string
+
+    hreflang?: string
+    id?: string
+    rid?: string
+    specificUse?: string
+  }
+  corresp?: ContribTypeCorresp
+  deceased?: ContribTypeDeceased
+  equalContrib?: ContribTypeEqualContrib
   /** Address/Contact Information */
-  address?: AddressType[]
+  address?: Address[]
   /** Affiliation */
-  aff?: AffType[]
+  aff?: Aff[]
   /** Affiliation Alternatives */
-  affAlternatives?: AffAlternativesType[]
+  affAlternatives?: AffAlternatives[]
   /** Anonymous */
-  anonymous?: AnonymousType[]
+  anonymous?: Anonymous[]
   /** Author Comment */
-  authorComment?: AuthorCommentType[]
+  authorComment?: AuthorComment[]
   /** Biography */
-  bio?: BioType[]
+  bio?: Bio[]
   /** Collaborative (Group) Author */
-  collab?: CollabType[]
+  collab?: Collab[]
   /** Collaboration Alternatives */
-  collabAlternatives?: CollabAlternativesType[]
+  collabAlternatives?: CollabAlternatives[]
   /** Contributor Identifier */
-  contribId?: ContribIdType[]
+  contribId?: ContribId[]
   /** Degree(s) */
-  degrees?: DegreesType[]
+  degrees?: Degrees[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Name of Person (Structured) */
-  name?: NameType[]
+  name?: Name[]
   /** Name Alternatives */
-  nameAlternatives?: NameAlternativesType[]
+  nameAlternatives?: NameAlternatives[]
   /** On Behalf of */
-  onBehalfof?: OnBehalfofType[]
+  onBehalfof?: OnBehalfof[]
   /** Role or Function Title of Contributor */
-  role?: RoleType[]
+  role?: Role[]
   /** Name of Person (Unstructured) */
-  stringName?: StringNameType[]
+  stringName?: StringName[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface ContribType extends _ContribType {
-  constructor: { new (): ContribType }
+  xref?: Xref[]
 }
 
-type ContribTypeCorrespType = 'no' | 'yes'
-interface _ContribTypeCorrespType extends Primitive._string {
-  content: ContribTypeCorrespType
+type ContribTypeCorresp = 'no' | 'yes'
+interface _ContribTypeCorresp extends Primitive._string {
+  content: ContribTypeCorresp
 }
 
-type ContribTypeDeceasedType = 'no' | 'yes'
-interface _ContribTypeDeceasedType extends Primitive._string {
-  content: ContribTypeDeceasedType
+type ContribTypeDeceased = 'no' | 'yes'
+interface _ContribTypeDeceased extends Primitive._string {
+  content: ContribTypeDeceased
 }
 
-type ContribTypeEqualContribType = 'no' | 'yes'
-interface _ContribTypeEqualContribType extends Primitive._string {
-  content: ContribTypeEqualContribType
+type ContribTypeEqualContrib = 'no' | 'yes'
+interface _ContribTypeEqualContrib extends Primitive._string {
+  content: ContribTypeEqualContrib
 }
 
-interface _ContributedResourcegroupType extends BaseType {
-  id?: string
-  resourceType?: string
-  specificUse?: string
-  /** Award Group */
-  awardGroup?: AwardGroupType[]
+interface ContributedResourcegroup extends Base {
+  type: 'contributedResourcegroup'
+  properties: {
+    id?: string
+    resourceType?: string
+    specificUse?: string
+  } /** Award Group */
+  awardGroup?: AwardGroup[]
   /** Resource Group */
-  resourceGroup?: ResourceGroupType[]
+  resourceGroup?: ResourceGroup[]
   /** Support Description */
-  supportDescription?: SupportDescriptionType[]
-}
-interface ContributedResourcegroupType extends _ContributedResourcegroupType {
-  constructor: { new (): ContributedResourcegroupType }
+  supportDescription?: SupportDescription[]
 }
 
-interface _CopyrightHolderType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Institution Name: in an Address */
-  institution?: InstitutionType[]
+interface CopyrightHolder extends Base {
+  type: 'copyrightHolder'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Institution Name: in an Address */
+  institution?: Institution[]
   /** Institution Wrapper */
-  institutionWrap?: InstitutionWrapType[]
+  institutionWrap?: InstitutionWrap[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
-}
-interface CopyrightHolderType extends _CopyrightHolderType {
-  constructor: { new (): CopyrightHolderType }
+  sup?: Sup[]
 }
 
-interface _CopyrightStatementType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Bold */
-  bold?: BoldType[]
+interface CopyrightStatement extends Base {
+  type: 'copyrightStatement'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Bold */
+  bold?: Bold[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
-}
-interface CopyrightStatementType extends _CopyrightStatementType {
-  constructor: { new (): CopyrightStatementType }
+  uri?: Uri[]
 }
 
-interface _CopyrightYearType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface CopyrightYearType extends _CopyrightYearType {
-  constructor: { new (): CopyrightYearType }
+interface CopyrightYear extends Base {
+  type: 'copyrightYear'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _CorrespType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Address Line */
-  addrLine?: AddrLineType[]
+interface Corresp extends Base {
+  type: 'corresp'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Address Line */
+  addrLine?: AddrLine[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** City: in an Address */
-  city?: CityType[]
+  city?: City[]
   /** Country: in an Address */
-  country?: CountryType[]
+  country?: Country[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fax Number: in an Address */
-  fax?: FaxType[]
+  fax?: Fax[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Institution Name: in an Address */
-  institution?: InstitutionType[]
+  institution?: Institution[]
   /** Institution Wrapper */
-  institutionWrap?: InstitutionWrapType[]
+  institutionWrap?: InstitutionWrap[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType[]
+  label?: Label[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Phone Number: in an Address */
-  phone?: PhoneType[]
+  phone?: Phone[]
   /** Postal Code: in an Address */
-  postalCode?: PostalCodeType[]
+  postalCode?: PostalCode[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** State or Province: in an Address */
-  state?: StateType[]
+  state?: State[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
-}
-interface CorrespType extends _CorrespType {
-  constructor: { new (): CorrespType }
+  uri?: Uri[]
 }
 
-interface _CountryType extends BaseType {
-  contentType?: string
-  country?: string
-  id?: string
-  specificUse?: string
-}
-interface CountryType extends _CountryType {
-  constructor: { new (): CountryType }
+interface Country extends Base {
+  type: 'country'
+  properties: {
+    contentType?: string
+    country?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _CountsType extends BaseType {
-  id?: string
-  /** Count */
-  count?: CountType[]
+interface Counts extends Base {
+  type: 'counts'
+  properties: {
+    id?: string
+  } /** Count */
+  count?: Count[]
   /** Equation Count */
-  equationCount?: EquationCountType
+  equationCount?: EquationCount
   /** Figure Count */
-  figCount?: FigCountType
+  figCount?: FigCount
   /** Page Count */
-  pageCount?: PageCountType
+  pageCount?: PageCount
   /** Reference Count */
-  refCount?: RefCountType
+  refCount?: RefCount
   /** Table Count */
-  tableCount?: TableCountType
+  tableCount?: TableCount
   /** Word Count */
-  wordCount?: WordCountType
-}
-interface CountsType extends _CountsType {
-  constructor: { new (): CountsType }
+  wordCount?: WordCount
 }
 
-interface _CountType extends BaseType {
-  count: string
-  countType: string
-  id?: string
-}
-interface CountType extends _CountType {
-  constructor: { new (): CountType }
-}
-
-interface _CustomMetagroupType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Custom Metadata */
-  customMeta: CustomMetaType[]
-}
-interface CustomMetagroupType extends _CustomMetagroupType {
-  constructor: { new (): CustomMetagroupType }
+interface Count extends Base {
+  type: 'count'
+  properties: {
+    count: string
+    countType: string
+    id?: string
+  }
 }
 
-interface _CustomMetaType extends BaseType {
-  assigningAuthority?: string
-  hreflang?: string
-  id?: string
-  specificUse?: string
-  vocab?: string
-  vocabIdentifier?: string
-  vocabTerm?: string
-  vocabTermidentifier?: string
-  /** Metadata Data Name For Custom Metadata */
-  metaName: MetaNameType
+interface CustomMetagroup extends Base {
+  type: 'customMetagroup'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Custom Metadata */
+  customMeta: CustomMeta[]
+}
+
+interface CustomMeta extends Base {
+  type: 'customMeta'
+  properties: {
+    assigningAuthority?: string
+    hreflang?: string
+    id?: string
+    specificUse?: string
+    vocab?: string
+    vocabIdentifier?: string
+    vocabTerm?: string
+    vocabTermidentifier?: string
+  } /** Metadata Data Name For Custom Metadata */
+  metaName: MetaName
   /** Metadata Data Value For Custom Metadata */
-  metaValue: MetaValueType
-}
-interface CustomMetaType extends _CustomMetaType {
-  constructor: { new (): CustomMetaType }
+  metaValue: MetaValue
 }
 
-interface _DataTitleType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Bold */
-  bold?: BoldType[]
+interface DataTitle extends Base {
+  type: 'dataTitle'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Bold */
+  bold?: Bold[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
-}
-interface DataTitleType extends _DataTitleType {
-  constructor: { new (): DataTitleType }
+  uri?: Uri[]
 }
 
-interface _DateIncitationType extends BaseType {
-  calendar?: string
-  contentType?: string
-  id?: string
-  iso8601Date?: string
-  specificUse?: string
-  /** Day */
-  day?: DayType[]
+interface DateIncitation extends Base {
+  type: 'dateIncitation'
+  properties: {
+    calendar?: string
+    contentType?: string
+    id?: string
+    iso8601Date?: string
+    specificUse?: string
+  } /** Day */
+  day?: Day[]
   /** Era */
-  era?: EraType[]
+  era?: Era[]
   /** Month */
-  month?: MonthType[]
+  month?: Month[]
   /** Season */
-  season?: SeasonType[]
+  season?: Season[]
   /** Year */
-  year?: YearType[]
-}
-interface DateIncitationType extends _DateIncitationType {
-  constructor: { new (): DateIncitationType }
+  year?: Year[]
 }
 
-interface _DateType extends BaseType {
-  calendar?: string
-  dateType?: string
-  id?: string
-  iso8601Date?: string
-  publicationFormat?: string
-  specificUse?: string
-  /** Day */
-  day?: DayType
+interface Date extends Base {
+  type: 'date'
+  properties: {
+    calendar?: string
+    dateType?: string
+    id?: string
+    iso8601Date?: string
+    publicationFormat?: string
+    specificUse?: string
+  } /** Day */
+  day?: Day
   /** Era */
-  era?: EraType
+  era?: Era
   /** Month */
-  month?: MonthType
+  month?: Month
   /** Season */
-  season?: SeasonType
+  season?: Season
   /** Year */
-  year: YearType
-}
-interface DateType extends _DateType {
-  constructor: { new (): DateType }
+  year: Year
 }
 
-interface _DayType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface DayType extends _DayType {
-  constructor: { new (): DayType }
+interface Day extends Base {
+  type: 'day'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _DefHeadType extends BaseType {
-  id?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface DefHead extends Base {
+  type: 'defHead'
+  properties: {
+    id?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface DefHeadType extends _DefHeadType {
-  constructor: { new (): DefHeadType }
+  xref?: Xref[]
 }
 
-interface _DefItemType extends BaseType {
-  id?: string
-  specificUse?: string
-  /** Definition List: Definition */
-  def?: DefType[]
+interface DefItem extends Base {
+  type: 'defItem'
+  properties: {
+    id?: string
+    specificUse?: string
+  } /** Definition List: Definition */
+  def?: Def[]
   /** Definition List: Term */
-  term: TermType
-}
-interface DefItemType extends _DefItemType {
-  constructor: { new (): DefItemType }
+  term: Term
 }
 
-interface _DefListType extends BaseType {
-  continuedFrom?: string
-  id?: string
-  listContent?: string
-  listType?: string
-  prefixWord?: string
-  specificUse?: string
-  /** Definition List: Definition Head */
-  defHead?: DefHeadType
+interface DefList extends Base {
+  type: 'defList'
+  properties: {
+    continuedFrom?: string
+    id?: string
+    listContent?: string
+    listType?: string
+    prefixWord?: string
+    specificUse?: string
+  } /** Definition List: Definition Head */
+  defHead?: DefHead
   /** Definition List: Definition Item */
-  defItem?: DefItemType[]
+  defItem?: DefItem[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** Definition List: Term Head */
-  termHead?: TermHeadType
+  termHead?: TermHead
   /** Title */
-  title?: TitleType
-}
-interface DefListType extends _DefListType {
-  constructor: { new (): DefListType }
+  title?: Title
 }
 
-interface _DefType extends BaseType {
-  id?: string
-  rid?: string
-  specificUse?: string
-  /** Paragraph */
-  p: PType[]
-}
-interface DefType extends _DefType {
-  constructor: { new (): DefType }
-}
-
-interface _DegreesType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface DegreesType extends _DegreesType {
-  constructor: { new (): DegreesType }
+interface Def extends Base {
+  type: 'def'
+  properties: {
+    id?: string
+    rid?: string
+    specificUse?: string
+  } /** Paragraph */
+  p: P[]
 }
 
-interface _DispFormulagroupType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Abstract */
-  abstract?: AbstractType[]
+interface Degrees extends Base {
+  type: 'degrees'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
+}
+
+interface DispFormulagroup extends Base {
+  type: 'dispFormulagroup'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Abstract */
+  abstract?: Abstract[]
   /** Alternate Title Text For a Figure, Etc. */
-  altText?: AltTextType[]
+  altText?: AltText[]
   /** Caption of a Figure, Table, Etc. */
-  caption?: CaptionType
+  caption?: Caption
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Keyword Group */
-  kwdGroup?: KwdGroupType[]
+  kwdGroup?: KwdGroup[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** Long Description */
-  longDesc?: LongDescType[]
+  longDesc?: LongDesc[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
-  subjGroup?: SubjGroupType[]
+  objectId?: ObjectId[]
+  subjGroup?: SubjGroup[]
   /** Uri */
-  uri?: UriType[]
-}
-interface DispFormulagroupType extends _DispFormulagroupType {
-  constructor: { new (): DispFormulagroupType }
+  uri?: Uri[]
 }
 
-interface _DispFormulaType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Abstract */
-  abstract?: AbstractType[]
+interface DispFormula extends Base {
+  type: 'dispFormula'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Abstract */
+  abstract?: Abstract[]
   /** Alternate Title Text For a Figure, Etc. */
-  altText?: AltTextType[]
+  altText?: AltText[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Line Break */
-  break?: BreakType[]
+  break?: Break[]
   /** Caption of a Figure, Table, Etc. */
-  caption?: CaptionType[]
+  caption?: Caption[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Keyword Group */
-  kwdGroup?: KwdGroupType[]
+  kwdGroup?: KwdGroup[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType[]
+  label?: Label[]
   /** Long Description */
-  longDesc?: LongDescType[]
+  longDesc?: LongDesc[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
-  subjGroup?: SubjGroupType[]
+  sub?: Sub[]
+  subjGroup?: SubjGroup[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
-}
-interface DispFormulaType extends _DispFormulaType {
-  constructor: { new (): DispFormulaType }
+  uri?: Uri[]
 }
 
-interface _DispQuoteType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Address/Contact Information */
-  address?: AddressType[]
+interface DispQuote extends Base {
+  type: 'dispQuote'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Address/Contact Information */
+  address?: Address[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Answer Elements */
-  answer?: AnswerType[]
+  answer?: Answer[]
   /** Answer Set */
-  answerSet?: AnswerSetType[]
+  answerSet?: AnswerSet[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Attribution */
-  attrib?: AttribType[]
+  attrib?: Attrib[]
   /** Block-Level Alternatives For Processing */
-  blockAlternatives?: BlockAlternativesType[]
+  blockAlternatives?: BlockAlternatives[]
   /** Boxed Text */
-  boxedText?: BoxedTextType[]
+  boxedText?: BoxedText[]
   /** Chemical Structure Wrapper */
-  chemStructwrap?: ChemStructwrapType[]
+  chemStructwrap?: ChemStructwrap[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote?: DispQuoteType[]
+  dispQuote?: DispQuote[]
   /** Explanation */
-  explanation?: ExplanationType[]
+  explanation?: Explanation[]
   /** Figure */
-  fig?: FigType[]
+  fig?: Fig[]
   /** Figure Group */
-  figGroup?: FigGroupType[]
+  figGroup?: FigGroup[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** List */
-  list?: ListType[]
+  list?: List[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Paragraph */
-  p?: PType[]
+  p?: P[]
   /** Permissions */
-  permissions?: PermissionsType[]
+  permissions?: Permissions[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Question */
-  question?: QuestionType[]
+  question?: Question[]
   /** Question Wrap */
-  questionWrap?: QuestionWrapType[]
+  questionWrap?: QuestionWrap[]
   /** Question Wrap Group */
-  questionWrapgroup?: QuestionWrapgroupType[]
+  questionWrapgroup?: QuestionWrapgroup[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Speech */
-  speech?: SpeechType[]
+  speech?: Speech[]
   /** Statement, Formal */
-  statement?: StatementType[]
+  statement?: Statement[]
   /** Supplementary Material */
-  supplementaryMaterial?: SupplementaryMaterialType[]
+  supplementaryMaterial?: SupplementaryMaterial[]
   /** Table Wrapper */
-  tableWrap?: TableWrapType[]
+  tableWrap?: TableWrap[]
   /** Table Wrapper Group */
-  tableWrapgroup?: TableWrapgroupType[]
+  tableWrapgroup?: TableWrapgroup[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Title */
-  title?: TitleType
+  title?: Title
   /** Verse Form For Poetry */
-  verseGroup?: VerseGroupType[]
-}
-interface DispQuoteType extends _DispQuoteType {
-  constructor: { new (): DispQuoteType }
+  verseGroup?: VerseGroup[]
 }
 
-interface _EditionType extends BaseType {
-  contentType?: string
-  designator?: string
-  id?: string
-  specificUse?: string
-  /** Subscript */
-  sub?: SubType[]
+interface Edition extends Base {
+  type: 'edition'
+  properties: {
+    contentType?: string
+    designator?: string
+    id?: string
+    specificUse?: string
+  } /** Subscript */
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
-}
-interface EditionType extends _EditionType {
-  constructor: { new (): EditionType }
+  sup?: Sup[]
 }
 
-interface _ElementCitationType extends BaseType {
-  hreflang?: string
-  id?: string
-  publicationFormat?: string
-  publicationType?: string
-  publisherType?: string
-  specificUse?: string
-  useType?: string
-  /** Abbreviation or Acronym */
-  abbrev: AbbrevType[]
+interface ElementCitation extends Base {
+  type: 'elementCitation'
+  properties: {
+    hreflang?: string
+    id?: string
+    publicationFormat?: string
+    publicationType?: string
+    publisherType?: string
+    specificUse?: string
+    useType?: string
+  } /** Abbreviation or Acronym */
+  abbrev: Abbrev[]
   /** Alternatives For Processing */
-  alternatives: AlternativesType[]
+  alternatives: Alternatives[]
   /** Annotation in a Citation */
-  annotation: AnnotationType[]
+  annotation: Annotation[]
   /** Article Title */
-  articleTitle: ArticleTitleType[]
+  articleTitle: ArticleTitle[]
   /** Bold */
-  bold: BoldType[]
+  bold: Bold[]
   /** Chapter Title in a Citation */
-  chapterTitle: ChapterTitleType[]
+  chapterTitle: ChapterTitle[]
   /** Chemical Structure (Display) */
-  chemStruct: ChemStructType[]
+  chemStruct: ChemStruct[]
   /** Collaborative (Group) Author */
-  collab: CollabType[]
+  collab: Collab[]
   /** Collaboration Alternatives */
-  collabAlternatives: CollabAlternativesType[]
+  collabAlternatives: CollabAlternatives[]
   /** Comment in a Citation */
-  comment: CommentType[]
+  comment: Comment[]
   /** Conference Acronym */
-  confAcronym: ConfAcronymType[]
+  confAcronym: ConfAcronym[]
   /** Conference Date */
-  confDate: ConfDateType[]
+  confDate: ConfDate[]
   /** Conference Location */
-  confLoc: ConfLocType[]
+  confLoc: ConfLoc[]
   /** Conference Name */
-  confName: ConfNameType[]
+  confName: ConfName[]
   /** Conference Sponsor */
-  confSponsor: ConfSponsorType[]
+  confSponsor: ConfSponsor[]
   /** Data Title in a Citation */
-  dataTitle: DataTitleType[]
+  dataTitle: DataTitle[]
   /** Date */
-  date: DateType[]
+  date: Date[]
   /** Date Inside Citation */
-  dateIncitation: DateIncitationType[]
+  dateIncitation: DateIncitation[]
   /** Day */
-  day: DayType[]
+  day: Day[]
   /** Edition Statement, Cited */
-  edition: EditionType[]
+  edition: Edition[]
   /** Electronic Location Identifier */
-  elocationId: ElocationIdType[]
+  elocationId: ElocationId[]
   /** Email Address */
-  email: EmailType[]
+  email: Email[]
   /** Et Al */
-  etal: EtalType[]
+  etal: Etal[]
   /** External Link */
-  extLink: ExtLinkType[]
+  extLink: ExtLink[]
   /** Fixed Case */
-  fixedCase: FixedCaseType[]
+  fixedCase: FixedCase[]
   /** First Page */
-  fpage: FpageType[]
+  fpage: Fpage[]
   /** Government Report, Cited */
-  gov: GovType[]
+  gov: Gov[]
   /** Index Term */
-  indexTerm: IndexTermType[]
+  indexTerm: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend: IndexTermrangeendType[]
+  indexTermrangeend: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula: InlineFormulaType[]
+  inlineFormula: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic: InlineGraphicType[]
+  inlineGraphic: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia: InlineMediaType[]
+  inlineMedia: InlineMedia[]
   /** Institution Name: in an Address */
-  institution: InstitutionType[]
+  institution: Institution[]
   /** Institution Wrapper */
-  institutionWrap: InstitutionWrapType[]
+  institutionWrap: InstitutionWrap[]
   /** Isbn */
-  isbn: IsbnType[]
+  isbn: Isbn[]
   /** Issn */
-  issn: IssnType[]
+  issn: Issn[]
   /** Issn Linking */
-  issnL: IssnLType[]
+  issnL: IssnL[]
   /** Issue Number */
-  issue: IssueType[]
+  issue: Issue[]
   /** Issue Identifier */
-  issueId: IssueIdType[]
+  issueId: IssueId[]
   /** Issue Part */
-  issuePart: IssuePartType[]
+  issuePart: IssuePart[]
   /** Issue Title */
-  issueTitle: IssueTitleType[]
+  issueTitle: IssueTitle[]
   /** Italic */
-  italic: ItalicType[]
+  italic: Italic[]
   /** Label of a Figure, Reference, Etc. */
-  label: LabelType[]
+  label: Label[]
   /** Last Page */
-  lpage: LpageType[]
+  lpage: Lpage[]
   /** Milestone End */
-  milestoneEnd: MilestoneEndType[]
+  milestoneEnd: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart: MilestoneStartType[]
+  milestoneStart: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace: MonospaceType[]
+  monospace: Monospace[]
   /** Month */
-  month: MonthType[]
+  month: Month[]
   /** Name of Person (Structured) */
-  name: NameType[]
+  name: Name[]
   /** Name Alternatives */
-  nameAlternatives: NameAlternativesType[]
+  nameAlternatives: NameAlternatives[]
   /** Named Special (Subject) Content */
-  namedContent: NamedContentType[]
+  namedContent: NamedContent[]
   /** Object Identifier */
-  objectId: ObjectIdType[]
+  objectId: ObjectId[]
   /** Overline */
-  overline: OverlineType[]
+  overline: Overline[]
   /** Page Ranges */
-  pageRange: PageRangeType[]
+  pageRange: PageRange[]
   /** Part Title in a Citation */
-  partTitle: PartTitleType[]
+  partTitle: PartTitle[]
   /** Patent Number, Cited */
-  patent: PatentType[]
+  patent: Patent[]
   /** Person Group For a Cited Publication */
-  personGroup: PersonGroupType[]
+  personGroup: PersonGroup[]
   /** Private Character (Custom or Unicode) */
-  privateChar: PrivateCharType[]
+  privateChar: PrivateChar[]
   /** Publication Identifier For a Cited Publication */
-  pubId: PubIdType[]
+  pubId: PubId[]
   /** Publisher's Location */
-  publisherLoc: PublisherLocType[]
+  publisherLoc: PublisherLoc[]
   /** Publisher's Name */
-  publisherName: PublisherNameType[]
+  publisherName: PublisherName[]
   /** Role or Function Title of Contributor */
-  role: RoleType[]
+  role: Role[]
   /** Roman */
-  roman: RomanType[]
+  roman: Roman[]
   /** Ruby Wrapper */
-  ruby: RubyType[]
+  ruby: Ruby[]
   /** Sans Serif */
-  sansSerif: SansSerifType[]
+  sansSerif: SansSerif[]
   /** Small Caps */
-  sc: ScType[]
+  sc: Sc[]
   /** Season */
-  season: SeasonType[]
+  season: Season[]
   /** Series */
-  series: SeriesType[]
+  series: Series[]
   /** Size */
-  size: SizeType[]
+  size: Size[]
   /** Source */
-  source: SourceType[]
+  source: Source[]
   /** Standard, Cited */
-  std: StdType[]
+  std: Std[]
   /** Strike Through */
-  strike: StrikeType[]
+  strike: Strike[]
   /** Date As a String */
-  stringDate: StringDateType[]
+  stringDate: StringDate[]
   /** Name of Person (Unstructured) */
-  stringName: StringNameType[]
+  stringName: StringName[]
   /** Styled Special (Subject) Content */
-  styledContent: StyledContentType[]
+  styledContent: StyledContent[]
   /** Subscript */
-  sub: SubType[]
+  sub: Sub[]
   /** Superscript */
-  sup: SupType[]
+  sup: Sup[]
   /** Supplement */
-  supplement: SupplementType[]
+  supplement: Supplement[]
   /** Translated Source */
-  transSource: TransSourceType[]
+  transSource: TransSource[]
   /** Translated Title */
-  transTitle: TransTitleType[]
+  transTitle: TransTitle[]
   /** Underline */
-  underline: UnderlineType[]
+  underline: Underline[]
   /** Uri */
-  uri: UriType[]
+  uri: Uri[]
   /** Version Statement, Cited */
-  version: VersionType[]
+  version: Version[]
   /** Volume Number */
-  volume: VolumeType[]
+  volume: Volume[]
   /** Volume Identifier */
-  volumeId: VolumeIdType[]
+  volumeId: VolumeId[]
   /** Volume Series */
-  volumeSeries: VolumeSeriesType[]
+  volumeSeries: VolumeSeries[]
   /** Year */
-  year: YearType[]
-}
-interface ElementCitationType extends _ElementCitationType {
-  constructor: { new (): ElementCitationType }
+  year: Year[]
 }
 
-interface _ElocationIdType extends BaseType {
-  contentType?: string
-  id?: string
-  seq?: string
-  specificUse?: string
-}
-interface ElocationIdType extends _ElocationIdType {
-  constructor: { new (): ElocationIdType }
-}
-
-interface _EmailType extends BaseType {
-  contentType?: string
-  hreflang?: string
-  id?: string
-  specificUse?: string
-}
-interface EmailType extends _EmailType {
-  constructor: { new (): EmailType }
+interface ElocationId extends Base {
+  type: 'elocationId'
+  properties: {
+    contentType?: string
+    id?: string
+    seq?: string
+    specificUse?: string
+  }
 }
 
-interface _EquationCountType extends BaseType {
-  count: string
-  id?: string
-}
-interface EquationCountType extends _EquationCountType {
-  constructor: { new (): EquationCountType }
-}
-
-interface _EraType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface EraType extends _EraType {
-  constructor: { new (): EraType }
+interface Email extends Base {
+  type: 'email'
+  properties: {
+    contentType?: string
+    hreflang?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _EtalType extends BaseType {
-  id?: string
-  specificUse?: string
-}
-interface EtalType extends _EtalType {
-  constructor: { new (): EtalType }
+interface EquationCount extends Base {
+  type: 'equationCount'
+  properties: {
+    count: string
+    id?: string
+  }
 }
 
-interface _EventDescType extends BaseType {
-  id?: string
-  specificUse?: string
-  /** Article Identifier */
-  articleId?: ArticleIdType[]
+interface Era extends Base {
+  type: 'era'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
+}
+
+interface Etal extends Base {
+  type: 'etal'
+  properties: {
+    id?: string
+    specificUse?: string
+  }
+}
+
+interface EventDesc extends Base {
+  type: 'eventDesc'
+  properties: {
+    id?: string
+    specificUse?: string
+  } /** Article Identifier */
+  articleId?: ArticleId[]
   /** Article Version */
-  articleVersion?: ArticleVersionType[]
+  articleVersion?: ArticleVersion[]
   /** Article Version Alternatives */
-  articleVersionalternatives?: ArticleVersionalternativesType[]
+  articleVersionalternatives?: ArticleVersionalternatives[]
   /** Date */
-  date?: DateType[]
+  date?: Date[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Isbn */
-  isbn?: IsbnType[]
+  isbn?: Isbn[]
   /** Issn */
-  issn?: IssnType[]
+  issn?: Issn[]
   /** Issn Linking */
-  issnL?: IssnLType[]
+  issnL?: IssnL[]
   /** Publication Date */
-  pubDate?: PubDateType[]
+  pubDate?: PubDate[]
   /** Date Not Available Flag */
-  pubDatenotavailable?: PubDatenotavailableType[]
+  pubDatenotavailable?: PubDatenotavailable[]
   /** Date As a String */
-  stringDate?: StringDateType[]
+  stringDate?: StringDate[]
   /** Uri */
-  uri?: UriType[]
-}
-interface EventDescType extends _EventDescType {
-  constructor: { new (): EventDescType }
+  uri?: Uri[]
 }
 
-interface _EventType extends BaseType {
-  eventType?: string
-  id?: string
-  specificUse?: string
-  /** Article Identifier */
-  articleId?: ArticleIdType[]
+interface Event extends Base {
+  type: 'event'
+  properties: {
+    eventType?: string
+    id?: string
+    specificUse?: string
+  } /** Article Identifier */
+  articleId?: ArticleId[]
   /** Article Version */
-  articleVersion?: ArticleVersionType
+  articleVersion?: ArticleVersion
   /** Article Version Alternatives */
-  articleVersionalternatives?: ArticleVersionalternativesType
+  articleVersionalternatives?: ArticleVersionalternatives
   /** Date */
-  date?: DateType[]
+  date?: Date[]
   /** Event Description */
-  eventDesc?: EventDescType
+  eventDesc?: EventDesc
   /** Isbn */
-  isbn?: IsbnType[]
+  isbn?: Isbn[]
   /** Issn */
-  issn?: IssnType[]
+  issn?: Issn[]
   /** Issn Linking */
-  issnL?: IssnLType
+  issnL?: IssnL
   /** Notes */
-  notes?: NotesType[]
+  notes?: Notes[]
   /** Permissions */
-  permissions?: PermissionsType
+  permissions?: Permissions
   /** Publication Date */
-  pubDate?: PubDateType[]
+  pubDate?: PubDate[]
   /** Date Not Available Flag */
-  pubDatenotavailable?: PubDatenotavailableType
+  pubDatenotavailable?: PubDatenotavailable
   /** Uri For This Same Article Online */
-  selfUri?: SelfUriType[]
-}
-interface EventType extends _EventType {
-  constructor: { new (): EventType }
+  selfUri?: SelfUri[]
 }
 
-interface _ExplanationType extends BaseType {
-  contentType?: string
-  id?: string
-  pointerToexplained: string
-  specificUse?: string
-  /** Address/Contact Information */
-  address: AddressType[]
+interface Explanation extends Base {
+  type: 'explanation'
+  properties: {
+    contentType?: string
+    id?: string
+    pointerToexplained: string
+    specificUse?: string
+  } /** Address/Contact Information */
+  address: Address[]
   /** Alternate Title */
-  altTitle?: AltTitleType[]
+  altTitle?: AltTitle[]
   /** Alternatives For Processing */
-  alternatives: AlternativesType[]
+  alternatives: Alternatives[]
   /** Answer Elements */
-  answer: AnswerType[]
+  answer: Answer[]
   /** Answer Set */
-  answerSet: AnswerSetType[]
+  answerSet: AnswerSet[]
   /** Array (Simple Tabular Array) */
-  array: ArrayType[]
+  array: Array[]
   /** Block-Level Alternatives For Processing */
-  blockAlternatives: BlockAlternativesType[]
+  blockAlternatives: BlockAlternatives[]
   /** Boxed Text */
-  boxedText: BoxedTextType[]
+  boxedText: BoxedText[]
   /** Chemical Structure Wrapper */
-  chemStructwrap: ChemStructwrapType[]
+  chemStructwrap: ChemStructwrap[]
   /** Code Text */
-  code: CodeType[]
+  code: Code[]
   /** Definition List */
-  defList: DefListType[]
+  defList: DefList[]
   /** Formula, Display */
-  dispFormula: DispFormulaType[]
+  dispFormula: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup: DispFormulagroupType[]
+  dispFormulagroup: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote: DispQuoteType[]
+  dispQuote: DispQuote[]
   /** Figure */
-  fig: FigType[]
+  fig: Fig[]
   /** Figure Group */
-  figGroup: FigGroupType[]
+  figGroup: FigGroup[]
   /** Footnote Group */
-  fnGroup?: FnGroupType[]
+  fnGroup?: FnGroup[]
   /** Glossary Elements */
-  glossary?: GlossaryType[]
+  glossary?: Glossary[]
   /** Graphic */
-  graphic: GraphicType[]
+  graphic: Graphic[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** List */
-  list: ListType[]
+  list: List[]
   /** Media Object */
-  media: MediaType[]
+  media: Media[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Paragraph */
-  p: PType[]
+  p: P[]
   /** Preformatted Text */
-  preformat: PreformatType[]
+  preformat: Preformat[]
   /** Question */
-  question: QuestionType[]
+  question: Question[]
   /** Question Wrap */
-  questionWrap: QuestionWrapType[]
+  questionWrap: QuestionWrap[]
   /** Question Wrap Group */
-  questionWrapgroup: QuestionWrapgroupType[]
+  questionWrapgroup: QuestionWrapgroup[]
   /** Reference List (Bibliographic Reference List) */
-  refList?: RefListType[]
+  refList?: RefList[]
   /** Related Article Information */
-  relatedArticle: RelatedArticleType[]
+  relatedArticle: RelatedArticle[]
   /** Related Object Information */
-  relatedObject: RelatedObjectType[]
+  relatedObject: RelatedObject[]
   /** Section */
-  sec: SecType[]
+  sec: Sec[]
   /** Speech */
-  speech: SpeechType[]
+  speech: Speech[]
   /** Statement, Formal */
-  statement: StatementType[]
+  statement: Statement[]
   /** Article Subtitle */
-  subtitle?: SubtitleType[]
+  subtitle?: Subtitle[]
   /** Supplementary Material */
-  supplementaryMaterial: SupplementaryMaterialType[]
+  supplementaryMaterial: SupplementaryMaterial[]
   /** Table Wrapper */
-  tableWrap: TableWrapType[]
+  tableWrap: TableWrap[]
   /** Table Wrapper Group */
-  tableWrapgroup: TableWrapgroupType[]
+  tableWrapgroup: TableWrapgroup[]
   /** Tex Math Equation */
-  texMath: TexMathType[]
+  texMath: TexMath[]
   /** Title */
-  title?: TitleType
+  title?: Title
   /** Verse Form For Poetry */
-  verseGroup: VerseGroupType[]
-}
-interface ExplanationType extends _ExplanationType {
-  constructor: { new (): ExplanationType }
+  verseGroup: VerseGroup[]
 }
 
-interface _ExtendedByType extends BaseType {
-  assigningAuthority?: string
-  designator?: string
-  hreflang?: string
-  id?: string
-  vocab?: string
-  vocabIdentifier?: string
-  vocabTerm?: string
-  vocabTermidentifier?: string
-}
-interface ExtendedByType extends _ExtendedByType {
-  constructor: { new (): ExtendedByType }
+interface ExtendedBy extends Base {
+  type: 'extendedBy'
+  properties: {
+    assigningAuthority?: string
+    designator?: string
+    hreflang?: string
+    id?: string
+    vocab?: string
+    vocabIdentifier?: string
+    vocabTerm?: string
+    vocabTermidentifier?: string
+  }
 }
 
-interface _ExtLinkType extends BaseType {
-  assigningAuthority?: string
-  extLinktype?: string
-  hreflang?: string
-  id?: string
-  specificUse?: string
-  /** Bold */
-  bold?: BoldType[]
+interface ExtLink extends Base {
+  type: 'extLink'
+  properties: {
+    assigningAuthority?: string
+    extLinktype?: string
+    hreflang?: string
+    id?: string
+    specificUse?: string
+  } /** Bold */
+  bold?: Bold[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface ExtLinkType extends _ExtLinkType {
-  constructor: { new (): ExtLinkType }
+  underline?: Underline[]
 }
 
-interface _FaxType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface FaxType extends _FaxType {
-  constructor: { new (): FaxType }
-}
-
-interface _FigCountType extends BaseType {
-  count: string
-  id?: string
-}
-interface FigCountType extends _FigCountType {
-  constructor: { new (): FigCountType }
+interface Fax extends Base {
+  type: 'fax'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _FigGroupType extends BaseType {
-  contentType?: string
-  id?: string
-  orientation?: FigGroupTypeOrientationType
-  position?: FigGroupTypePositionType
-  specificUse?: string
+interface FigCount extends Base {
+  type: 'figCount'
+  properties: {
+    count: string
+    id?: string
+  }
+}
+
+interface FigGroup extends Base {
+  type: 'figGroup'
+  properties: {
+    contentType?: string
+    id?: string
+
+    specificUse?: string
+  }
+  orientation?: FigGroupTypeOrientation
+  position?: FigGroupTypePosition
   /** Abstract */
-  abstract?: AbstractType[]
+  abstract?: Abstract[]
   /** Alternate Title Text For a Figure, Etc. */
-  altText?: AltTextType[]
+  altText?: AltText[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Block-Level Alternatives For Processing */
-  blockAlternatives?: BlockAlternativesType[]
+  blockAlternatives?: BlockAlternatives[]
   /** Caption of a Figure, Table, Etc. */
-  caption?: CaptionType[]
+  caption?: Caption[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Figure */
-  fig?: FigType[]
+  fig?: Fig[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Keyword Group */
-  kwdGroup?: KwdGroupType[]
+  kwdGroup?: KwdGroup[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType[]
+  label?: Label[]
   /** Long Description */
-  longDesc?: LongDescType[]
+  longDesc?: LongDesc[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
-  subjGroup?: SubjGroupType[]
+  objectId?: ObjectId[]
+  subjGroup?: SubjGroup[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface FigGroupType extends _FigGroupType {
-  constructor: { new (): FigGroupType }
+  xref?: Xref[]
 }
 
-type FigGroupTypeOrientationType = 'landscape' | 'portrait'
-interface _FigGroupTypeOrientationType extends Primitive._string {
-  content: FigGroupTypeOrientationType
+type FigGroupTypeOrientation = 'landscape' | 'portrait'
+interface _FigGroupTypeOrientation extends Primitive._string {
+  content: FigGroupTypeOrientation
 }
 
-type FigGroupTypePositionType = 'anchor' | 'background' | 'float' | 'margin'
-interface _FigGroupTypePositionType extends Primitive._string {
-  content: FigGroupTypePositionType
+type FigGroupTypePosition = 'anchor' | 'background' | 'float' | 'margin'
+interface _FigGroupTypePosition extends Primitive._string {
+  content: FigGroupTypePosition
 }
 
-interface _FigType extends BaseType {
-  figType?: string
-  id?: string
-  orientation?: FigTypeOrientationType
-  position?: FigTypePositionType
-  specificUse?: string
+interface Fig extends Base {
+  type: 'fig'
+  properties: {
+    figType?: string
+    id?: string
+
+    specificUse?: string
+  }
+  orientation?: FigTypeOrientation
+  position?: FigTypePosition
   /** Abstract */
-  abstract?: AbstractType[]
+  abstract?: Abstract[]
   /** Alternate Title Text For a Figure, Etc. */
-  altText?: AltTextType[]
+  altText?: AltText[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Attribution */
-  attrib?: AttribType[]
+  attrib?: Attrib[]
   /** Caption of a Figure, Table, Etc. */
-  caption?: CaptionType[]
+  caption?: Caption[]
   /** Chemical Structure Wrapper */
-  chemStructwrap?: ChemStructwrapType[]
+  chemStructwrap?: ChemStructwrap[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote?: DispQuoteType[]
+  dispQuote?: DispQuote[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Keyword Group */
-  kwdGroup?: KwdGroupType[]
+  kwdGroup?: KwdGroup[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType[]
+  label?: Label[]
   /** List */
-  list?: ListType[]
+  list?: List[]
   /** Long Description */
-  longDesc?: LongDescType[]
+  longDesc?: LongDesc[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Paragraph */
-  p?: PType[]
+  p?: P[]
   /** Permissions */
-  permissions?: PermissionsType[]
+  permissions?: Permissions[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Speech */
-  speech?: SpeechType[]
+  speech?: Speech[]
   /** Statement, Formal */
-  statement?: StatementType[]
-  subjGroup?: SubjGroupType[]
+  statement?: Statement[]
+  subjGroup?: SubjGroup[]
   /** Table Wrapper */
-  tableWrap?: TableWrapType[]
+  tableWrap?: TableWrap[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** Verse Form For Poetry */
-  verseGroup?: VerseGroupType[]
+  verseGroup?: VerseGroup[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface FigType extends _FigType {
-  constructor: { new (): FigType }
+  xref?: Xref[]
 }
 
-type FigTypeOrientationType = 'landscape' | 'portrait'
-interface _FigTypeOrientationType extends Primitive._string {
-  content: FigTypeOrientationType
+type FigTypeOrientation = 'landscape' | 'portrait'
+interface _FigTypeOrientation extends Primitive._string {
+  content: FigTypeOrientation
 }
 
-type FigTypePositionType = 'anchor' | 'background' | 'float' | 'margin'
-interface _FigTypePositionType extends Primitive._string {
-  content: FigTypePositionType
+type FigTypePosition = 'anchor' | 'background' | 'float' | 'margin'
+interface _FigTypePosition extends Primitive._string {
+  content: FigTypePosition
 }
 
-interface _FixedCaseType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface FixedCase extends Base {
+  type: 'fixedCase'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface FixedCaseType extends _FixedCaseType {
-  constructor: { new (): FixedCaseType }
+  xref?: Xref[]
 }
 
-interface _FloatsGroupType extends BaseType {
-  id?: string
-  /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+interface FloatsGroup extends Base {
+  type: 'floatsGroup'
+  properties: {
+    id?: string
+  } /** Alternatives For Processing */
+  alternatives?: Alternatives[]
   /** Block-Level Alternatives For Processing */
-  blockAlternatives?: BlockAlternativesType[]
+  blockAlternatives?: BlockAlternatives[]
   /** Boxed Text */
-  boxedText?: BoxedTextType[]
+  boxedText?: BoxedText[]
   /** Chemical Structure Wrapper */
-  chemStructwrap?: ChemStructwrapType[]
+  chemStructwrap?: ChemStructwrap[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Figure */
-  fig?: FigType[]
+  fig?: Fig[]
   /** Figure Group */
-  figGroup?: FigGroupType[]
+  figGroup?: FigGroup[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Supplementary Material */
-  supplementaryMaterial?: SupplementaryMaterialType[]
+  supplementaryMaterial?: SupplementaryMaterial[]
   /** Table Wrapper */
-  tableWrap?: TableWrapType[]
+  tableWrap?: TableWrap[]
   /** Table Wrapper Group */
-  tableWrapgroup?: TableWrapgroupType[]
-}
-interface FloatsGroupType extends _FloatsGroupType {
-  constructor: { new (): FloatsGroupType }
+  tableWrapgroup?: TableWrapgroup[]
 }
 
-interface _FnGroupType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Footnote */
-  fn: FnType[]
+interface FnGroup extends Base {
+  type: 'fnGroup'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Footnote */
+  fn: Fn[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** Title */
-  title?: TitleType
-}
-interface FnGroupType extends _FnGroupType {
-  constructor: { new (): FnGroupType }
+  title?: Title
 }
 
-interface _FnType extends BaseType {
-  customType?: string
-  fnType?: FnTypeFnTypeType
-  id?: string
-  specificUse?: string
-  symbol?: string
-  /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+interface Fn extends Base {
+  type: 'fn'
+  properties: {
+    customType?: string
+
+    id?: string
+    specificUse?: string
+    symbol?: string
+  }
+  fnType?: FnTypeFnType /** Label of a Figure, Reference, Etc. */
+  label?: Label
   /** Paragraph */
-  p: PType[]
-}
-interface FnType extends _FnType {
-  constructor: { new (): FnType }
+  p: P[]
 }
 
-type FnTypeFnTypeType =
+type FnTypeFnType =
   | 'abbr'
   | 'coi-statement'
   | 'com'
@@ -4140,2547 +4080,2511 @@ type FnTypeFnTypeType =
   | 'study-group-members'
   | 'supplementary-material'
   | 'supported-by'
-interface _FnTypeFnTypeType extends Primitive._string {
-  content: FnTypeFnTypeType
+interface _FnTypeFnType extends Primitive._string {
+  content: FnTypeFnType
 }
 
-interface _FpageType extends BaseType {
-  contentType?: string
-  id?: string
-  seq?: string
-  specificUse?: string
-}
-interface FpageType extends _FpageType {
-  constructor: { new (): FpageType }
+interface Fpage extends Base {
+  type: 'fpage'
+  properties: {
+    contentType?: string
+    id?: string
+    seq?: string
+    specificUse?: string
+  }
 }
 
-interface _FrontStubType extends BaseType {
-  id?: string
-  /** Abstract */
-  abstract?: AbstractType[]
+interface FrontStub extends Base {
+  type: 'frontStub'
+  properties: {
+    id?: string
+  } /** Abstract */
+  abstract?: Abstract[]
   /** Affiliation */
-  aff?: AffType[]
+  aff?: Aff[]
   /** Affiliation Alternatives */
-  affAlternatives?: AffAlternativesType[]
+  affAlternatives?: AffAlternatives[]
   /** Article Grouping Data */
-  articleCategories?: ArticleCategoriesType
+  articleCategories?: ArticleCategories
   /** Article Identifier */
-  articleId?: ArticleIdType[]
+  articleId?: ArticleId[]
   /** Article Version */
-  articleVersion?: ArticleVersionType
+  articleVersion?: ArticleVersion
   /** Article Version Alternatives */
-  articleVersionalternatives?: ArticleVersionalternativesType
+  articleVersionalternatives?: ArticleVersionalternatives
   /** Author Note Group */
-  authorNotes?: AuthorNotesType
+  authorNotes?: AuthorNotes
   /** Conference Information */
-  conference?: ConferenceType[]
+  conference?: Conference[]
   /** Contributor Group */
-  contribGroup?: ContribGroupType[]
+  contribGroup?: ContribGroup[]
   /** Counts */
-  counts?: CountsType
+  counts?: Counts
   /** Custom Metadata Group */
-  customMetagroup?: CustomMetagroupType
+  customMetagroup?: CustomMetagroup
   /** Electronic Location Identifier */
-  elocationId?: ElocationIdType
+  elocationId?: ElocationId
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** First Page */
-  fpage?: FpageType
+  fpage?: Fpage
   /** Funding Group */
-  fundingGroup?: FundingGroupType[]
+  fundingGroup?: FundingGroup[]
   /** History: Document History */
-  history?: HistoryType
+  history?: History
   /** Isbn */
-  isbn?: IsbnType[]
+  isbn?: Isbn[]
   /** Issue Number */
-  issue?: IssueType[]
+  issue?: Issue[]
   /** Issue Identifier */
-  issueId?: IssueIdType[]
+  issueId?: IssueId[]
   /** Issue Part */
-  issuePart?: IssuePartType
+  issuePart?: IssuePart
   /** Issue Title */
-  issueSponsor?: IssueSponsorType[]
+  issueSponsor?: IssueSponsor[]
   /** Issue Title */
-  issueTitle?: IssueTitleType[]
+  issueTitle?: IssueTitle[]
   /** Issue Title Group */
-  issueTitlegroup?: IssueTitlegroupType[]
+  issueTitlegroup?: IssueTitlegroup[]
   /** Keyword Group */
-  kwdGroup?: KwdGroupType[]
+  kwdGroup?: KwdGroup[]
   /** Last Page */
-  lpage?: LpageType
+  lpage?: Lpage
   /** Page Ranges */
-  pageRange?: PageRangeType
+  pageRange?: PageRange
   /** Permissions */
-  permissions?: PermissionsType
+  permissions?: Permissions
   /** Product Information */
-  product?: ProductType[]
+  product?: Product[]
   /** Publication Date */
-  pubDate?: PubDateType[]
+  pubDate?: PubDate[]
   /** Date Not Available Flag */
-  pubDatenotavailable?: PubDatenotavailableType
+  pubDatenotavailable?: PubDatenotavailable
   /** Publication History */
-  pubHistory?: PubHistoryType
+  pubHistory?: PubHistory
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Uri For This Same Article Online */
-  selfUri?: SelfUriType[]
+  selfUri?: SelfUri[]
   /** Supplement */
-  supplement?: SupplementType
+  supplement?: Supplement
   /** Supplementary Material */
-  supplementaryMaterial?: SupplementaryMaterialType[]
+  supplementaryMaterial?: SupplementaryMaterial[]
   /** Support Group */
-  supportGroup?: SupportGroupType[]
+  supportGroup?: SupportGroup[]
   /** Title Group */
-  titleGroup?: TitleGroupType
+  titleGroup?: TitleGroup
   /** Translated Abstract */
-  transAbstract?: TransAbstractType[]
+  transAbstract?: TransAbstract[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** Volume Number */
-  volume?: VolumeType[]
+  volume?: Volume[]
   /** Volume Identifier */
-  volumeId?: VolumeIdType[]
+  volumeId?: VolumeId[]
   /** Translated Title Group */
-  volumeIssuegroup?: VolumeIssuegroupType[]
+  volumeIssuegroup?: VolumeIssuegroup[]
   /** Volume Series */
-  volumeSeries?: VolumeSeriesType
-}
-interface FrontStubType extends _FrontStubType {
-  constructor: { new (): FrontStubType }
+  volumeSeries?: VolumeSeries
 }
 
-interface _FrontType extends BaseType {
-  id?: string
-  /** Article Metadata */
-  articleMeta: ArticleMetaType
+interface Front extends Base {
+  type: 'front'
+  properties: {
+    id?: string
+  } /** Article Metadata */
+  articleMeta: ArticleMeta
   /** Journal Metadata */
-  journalMeta: JournalMetaType
+  journalMeta: JournalMeta
   /** Notes */
-  notes?: NotesType
-}
-interface FrontType extends _FrontType {
-  constructor: { new (): FrontType }
+  notes?: Notes
 }
 
-interface _FundingGroupType extends BaseType {
-  id?: string
-  specificUse?: string
-  /** Award Group */
-  awardGroup?: AwardGroupType[]
+interface FundingGroup extends Base {
+  type: 'fundingGroup'
+  properties: {
+    id?: string
+    specificUse?: string
+  } /** Award Group */
+  awardGroup?: AwardGroup[]
   /** Funding Statement */
-  fundingStatement?: FundingStatementType[]
+  fundingStatement?: FundingStatement[]
   /** Open Access */
-  openAccess?: OpenAccessType[]
-}
-interface FundingGroupType extends _FundingGroupType {
-  constructor: { new (): FundingGroupType }
+  openAccess?: OpenAccess[]
 }
 
-interface _FundingSourceType extends BaseType {
-  country?: string
-  hreflang?: string
-  id?: string
-  rid?: string
-  sourceType?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface FundingSource extends Base {
+  type: 'fundingSource'
+  properties: {
+    country?: string
+    hreflang?: string
+    id?: string
+    rid?: string
+    sourceType?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Institution Name: in an Address */
-  institution?: InstitutionType[]
+  institution?: Institution[]
   /** Institution Wrapper */
-  institutionWrap?: InstitutionWrapType[]
+  institutionWrap?: InstitutionWrap[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface FundingSourceType extends _FundingSourceType {
-  constructor: { new (): FundingSourceType }
+  underline?: Underline[]
 }
 
-interface _FundingStatementType extends BaseType {
-  id?: string
-  rid?: string
-  specificUse?: string
-  /** Bold */
-  bold?: BoldType[]
+interface FundingStatement extends Base {
+  type: 'fundingStatement'
+  properties: {
+    id?: string
+    rid?: string
+    specificUse?: string
+  } /** Bold */
+  bold?: Bold[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
-}
-interface FundingStatementType extends _FundingStatementType {
-  constructor: { new (): FundingStatementType }
+  uri?: Uri[]
 }
 
-interface _GivenNamesType extends BaseType {
-  id?: string
-  initials?: string
-}
-interface GivenNamesType extends _GivenNamesType {
-  constructor: { new (): GivenNamesType }
+interface GivenNames extends Base {
+  type: 'givenNames'
+  properties: {
+    id?: string
+    initials?: string
+  }
 }
 
-interface _GlossaryType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Address/Contact Information */
-  address?: AddressType[]
+interface Glossary extends Base {
+  type: 'glossary'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Address/Contact Information */
+  address?: Address[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Answer Elements */
-  answer?: AnswerType[]
+  answer?: Answer[]
   /** Answer Set */
-  answerSet?: AnswerSetType[]
+  answerSet?: AnswerSet[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Block-Level Alternatives For Processing */
-  blockAlternatives?: BlockAlternativesType[]
+  blockAlternatives?: BlockAlternatives[]
   /** Boxed Text */
-  boxedText?: BoxedTextType[]
+  boxedText?: BoxedText[]
   /** Chemical Structure Wrapper */
-  chemStructwrap?: ChemStructwrapType[]
+  chemStructwrap?: ChemStructwrap[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote?: DispQuoteType[]
+  dispQuote?: DispQuote[]
   /** Explanation */
-  explanation?: ExplanationType[]
+  explanation?: Explanation[]
   /** Figure */
-  fig?: FigType[]
+  fig?: Fig[]
   /** Figure Group */
-  figGroup?: FigGroupType[]
+  figGroup?: FigGroup[]
   /** Glossary Elements */
-  glossary?: GlossaryType[]
+  glossary?: Glossary[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** List */
-  list?: ListType[]
+  list?: List[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Paragraph */
-  p?: PType[]
+  p?: P[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Question */
-  question?: QuestionType[]
+  question?: Question[]
   /** Question Wrap */
-  questionWrap?: QuestionWrapType[]
+  questionWrap?: QuestionWrap[]
   /** Question Wrap Group */
-  questionWrapgroup?: QuestionWrapgroupType[]
+  questionWrapgroup?: QuestionWrapgroup[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Speech */
-  speech?: SpeechType[]
+  speech?: Speech[]
   /** Statement, Formal */
-  statement?: StatementType[]
+  statement?: Statement[]
   /** Supplementary Material */
-  supplementaryMaterial?: SupplementaryMaterialType[]
+  supplementaryMaterial?: SupplementaryMaterial[]
   /** Table Wrapper */
-  tableWrap?: TableWrapType[]
+  tableWrap?: TableWrap[]
   /** Table Wrapper Group */
-  tableWrapgroup?: TableWrapgroupType[]
+  tableWrapgroup?: TableWrapgroup[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Title */
-  title?: TitleType
+  title?: Title
   /** Verse Form For Poetry */
-  verseGroup?: VerseGroupType[]
-}
-interface GlossaryType extends _GlossaryType {
-  constructor: { new (): GlossaryType }
+  verseGroup?: VerseGroup[]
 }
 
-interface _GlyphDataType extends BaseType {
-  fontchar?: string
-  fontname?: string
-  format?: string
-  id?: string
-  resolution?: string
-  xSize?: string
-  ySize?: string
-}
-interface GlyphDataType extends _GlyphDataType {
-  constructor: { new (): GlyphDataType }
-}
-
-interface _GlyphRefType extends BaseType {
-  glyphData?: string
-  id?: string
-}
-interface GlyphRefType extends _GlyphRefType {
-  constructor: { new (): GlyphRefType }
+interface GlyphData extends Base {
+  type: 'glyphData'
+  properties: {
+    fontchar?: string
+    fontname?: string
+    format?: string
+    id?: string
+    resolution?: string
+    xSize?: string
+    ySize?: string
+  }
 }
 
-interface _GovType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Bold */
-  bold?: BoldType[]
+interface GlyphRef extends Base {
+  type: 'glyphRef'
+  properties: {
+    glyphData?: string
+    id?: string
+  }
+}
+
+interface Gov extends Base {
+  type: 'gov'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Bold */
+  bold?: Bold[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface GovType extends _GovType {
-  constructor: { new (): GovType }
+  underline?: Underline[]
 }
 
-interface _GraphicType extends BaseType {
-  contentType?: string
-  hreflang?: string
-  id?: string
-  mimeSubtype?: string
-  mimetype?: string
-  orientation?: GraphicTypeOrientationType
-  position?: GraphicTypePositionType
-  specificUse?: string
+interface Graphic extends Base {
+  type: 'graphic'
+  properties: {
+    contentType?: string
+    hreflang?: string
+    id?: string
+    mimeSubtype?: string
+    mimetype?: string
+
+    specificUse?: string
+  }
+  orientation?: GraphicTypeOrientation
+  position?: GraphicTypePosition
   /** Abstract */
-  abstract?: AbstractType[]
+  abstract?: Abstract[]
   /** Alternate Title Text For a Figure, Etc. */
-  altText?: AltTextType[]
+  altText?: AltText[]
   /** Attribution */
-  attrib?: AttribType[]
+  attrib?: Attrib[]
   /** Caption of a Figure, Table, Etc. */
-  caption?: CaptionType[]
+  caption?: Caption[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Keyword Group */
-  kwdGroup?: KwdGroupType[]
+  kwdGroup?: KwdGroup[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType[]
+  label?: Label[]
   /** Long Description */
-  longDesc?: LongDescType[]
+  longDesc?: LongDesc[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Permissions */
-  permissions?: PermissionsType[]
-  subjGroup?: SubjGroupType[]
+  permissions?: Permissions[]
+  subjGroup?: SubjGroup[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface GraphicType extends _GraphicType {
-  constructor: { new (): GraphicType }
+  xref?: Xref[]
 }
 
-type GraphicTypeOrientationType = 'landscape' | 'portrait'
-interface _GraphicTypeOrientationType extends Primitive._string {
-  content: GraphicTypeOrientationType
+type GraphicTypeOrientation = 'landscape' | 'portrait'
+interface _GraphicTypeOrientation extends Primitive._string {
+  content: GraphicTypeOrientation
 }
 
-type GraphicTypePositionType = 'anchor' | 'background' | 'float' | 'margin'
-interface _GraphicTypePositionType extends Primitive._string {
-  content: GraphicTypePositionType
+type GraphicTypePosition = 'anchor' | 'background' | 'float' | 'margin'
+interface _GraphicTypePosition extends Primitive._string {
+  content: GraphicTypePosition
 }
 
-interface _HistoryType extends BaseType {
-  id?: string
-  /** Date */
-  date: DateType[]
-}
-interface HistoryType extends _HistoryType {
-  constructor: { new (): HistoryType }
-}
-
-interface _HrType extends BaseType {
-  id?: string
-}
-interface HrType extends _HrType {
-  constructor: { new (): HrType }
+interface History extends Base {
+  type: 'history'
+  properties: {
+    id?: string
+  } /** Date */
+  date: Date[]
 }
 
-interface _IndexTermrangeendType extends BaseType {
-  id?: string
-  rid: string
-}
-interface IndexTermrangeendType extends _IndexTermrangeendType {
-  constructor: { new (): IndexTermrangeendType }
+interface Hr extends Base {
+  type: 'hr'
+  properties: {
+    id?: string
+  }
 }
 
-interface _IndexTermType extends BaseType {
-  contentType?: string
-  id?: string
-  indexType?: string
-  specificUse?: string
-  vocab?: string
-  vocabIdentifier?: string
-  vocabTerm?: string
-  vocabTermidentifier?: string
-  /** Index Term */
-  indexTerm: IndexTermType
+interface IndexTermrangeend extends Base {
+  type: 'indexTermrangeend'
+  properties: {
+    id?: string
+    rid: string
+  }
+}
+
+interface IndexTerm extends Base {
+  type: 'indexTerm'
+  properties: {
+    contentType?: string
+    id?: string
+    indexType?: string
+    specificUse?: string
+    vocab?: string
+    vocabIdentifier?: string
+    vocabTerm?: string
+    vocabTermidentifier?: string
+  } /** Index Term */
+  indexTerm: IndexTerm
   /** See */
-  see?: SeeType[]
+  see?: See[]
   /** See-Also Term */
-  seeAlso?: SeeAlsoType[]
+  seeAlso?: SeeAlso[]
   /** Definition List: Term */
-  term: TermType
-}
-interface IndexTermType extends _IndexTermType {
-  constructor: { new (): IndexTermType }
+  term: Term
 }
 
-interface _InlineFormulaType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Alternate Title Text For a Figure, Etc. */
-  altText?: AltTextType[]
+interface InlineFormula extends Base {
+  type: 'inlineFormula'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Alternate Title Text For a Figure, Etc. */
+  altText?: AltText[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Long Description */
-  longDesc?: LongDescType[]
+  longDesc?: LongDesc[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface InlineFormulaType extends _InlineFormulaType {
-  constructor: { new (): InlineFormulaType }
+  underline?: Underline[]
 }
 
-interface _InlineGraphicType extends BaseType {
-  baselineShift?: string
-  contentType?: string
-  hreflang?: string
-  id?: string
-  mimeSubtype?: string
-  mimetype?: string
-  specificUse?: string
-  /** Alternate Title Text For a Figure, Etc. */
-  altText?: AltTextType[]
+interface InlineGraphic extends Base {
+  type: 'inlineGraphic'
+  properties: {
+    baselineShift?: string
+    contentType?: string
+    hreflang?: string
+    id?: string
+    mimeSubtype?: string
+    mimetype?: string
+    specificUse?: string
+  } /** Alternate Title Text For a Figure, Etc. */
+  altText?: AltText[]
   /** Long Description */
-  longDesc?: LongDescType[]
-}
-interface InlineGraphicType extends _InlineGraphicType {
-  constructor: { new (): InlineGraphicType }
+  longDesc?: LongDesc[]
 }
 
-interface _InlineMediaType extends BaseType {
-  contentType?: string
-  hreflang?: string
-  id?: string
-  mimeSubtype?: string
-  mimetype?: string
-  specificUse?: string
-  vocab?: string
-  vocabIdentifier?: string
-  vocabTerm?: string
-  vocabTermidentifier?: string
-  /** Alternate Title Text For a Figure, Etc. */
-  altText?: AltTextType[]
+interface InlineMedia extends Base {
+  type: 'inlineMedia'
+  properties: {
+    contentType?: string
+    hreflang?: string
+    id?: string
+    mimeSubtype?: string
+    mimetype?: string
+    specificUse?: string
+    vocab?: string
+    vocabIdentifier?: string
+    vocabTerm?: string
+    vocabTermidentifier?: string
+  } /** Alternate Title Text For a Figure, Etc. */
+  altText?: AltText[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Long Description */
-  longDesc?: LongDescType[]
+  longDesc?: LongDesc[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
-}
-interface InlineMediaType extends _InlineMediaType {
-  constructor: { new (): InlineMediaType }
+  uri?: Uri[]
 }
 
-interface _InlineSupplementarymaterialType extends BaseType {
-  contentType?: string
-  hreflang?: string
-  id?: string
-  mimeSubtype?: string
-  mimetype?: string
-  specificUse?: string
-  /** Alternate Title Text For a Figure, Etc. */
-  altText?: AltTextType[]
+interface InlineSupplementarymaterial extends Base {
+  type: 'inlineSupplementarymaterial'
+  properties: {
+    contentType?: string
+    hreflang?: string
+    id?: string
+    mimeSubtype?: string
+    mimetype?: string
+    specificUse?: string
+  } /** Alternate Title Text For a Figure, Etc. */
+  altText?: AltText[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Long Description */
-  longDesc?: LongDescType[]
+  longDesc?: LongDesc[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
-}
-interface InlineSupplementarymaterialType
-  extends _InlineSupplementarymaterialType {
-  constructor: { new (): InlineSupplementarymaterialType }
+  uri?: Uri[]
 }
 
-interface _InstitutionIdType extends BaseType {
-  assigningAuthority?: string
-  contentType?: string
-  id?: string
-  institutionIdtype?: string
-  specificUse?: string
-  vocab?: string
-  vocabIdentifier?: string
-}
-interface InstitutionIdType extends _InstitutionIdType {
-  constructor: { new (): InstitutionIdType }
+interface InstitutionId extends Base {
+  type: 'institutionId'
+  properties: {
+    assigningAuthority?: string
+    contentType?: string
+    id?: string
+    institutionIdtype?: string
+    specificUse?: string
+    vocab?: string
+    vocabIdentifier?: string
+  }
 }
 
-interface _InstitutionType extends BaseType {
-  contentType?: string
-  hreflang?: string
-  id?: string
-  specificUse?: string
-  /** Subscript */
-  sub?: SubType[]
+interface Institution extends Base {
+  type: 'institution'
+  properties: {
+    contentType?: string
+    hreflang?: string
+    id?: string
+    specificUse?: string
+  } /** Subscript */
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
-}
-interface InstitutionType extends _InstitutionType {
-  constructor: { new (): InstitutionType }
+  sup?: Sup[]
 }
 
-interface _InstitutionWrapType extends BaseType {
-  id?: string
-  /** Institution Name: in an Address */
-  institution?: InstitutionType[]
+interface InstitutionWrap extends Base {
+  type: 'institutionWrap'
+  properties: {
+    id?: string
+  } /** Institution Name: in an Address */
+  institution?: Institution[]
   /** Institution Identifier */
-  institutionId?: InstitutionIdType[]
-}
-interface InstitutionWrapType extends _InstitutionWrapType {
-  constructor: { new (): InstitutionWrapType }
+  institutionId?: InstitutionId[]
 }
 
-interface _IsbnType extends BaseType {
-  assigningAuthority?: string
-  contentType?: string
-  id?: string
-  publicationFormat?: string
-  specificUse?: string
-}
-interface IsbnType extends _IsbnType {
-  constructor: { new (): IsbnType }
-}
-
-interface _IssnLType extends BaseType {
-  assigningAuthority?: string
-  id?: string
-  specificUse?: string
-}
-interface IssnLType extends _IssnLType {
-  constructor: { new (): IssnLType }
+interface Isbn extends Base {
+  type: 'isbn'
+  properties: {
+    assigningAuthority?: string
+    contentType?: string
+    id?: string
+    publicationFormat?: string
+    specificUse?: string
+  }
 }
 
-interface _IssnType extends BaseType {
-  assigningAuthority?: string
-  contentType?: string
-  id?: string
-  pubType?: string
-  publicationFormat?: string
-  specificUse?: string
-}
-interface IssnType extends _IssnType {
-  constructor: { new (): IssnType }
+interface IssnL extends Base {
+  type: 'issnL'
+  properties: {
+    assigningAuthority?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _IssueIdType extends BaseType {
-  assigningAuthority?: string
-  contentType?: string
-  hreflang?: string
-  id?: string
-  pubIdtype?: string
-  specificUse?: string
-}
-interface IssueIdType extends _IssueIdType {
-  constructor: { new (): IssueIdType }
-}
-
-interface _IssuePartType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface IssuePartType extends _IssuePartType {
-  constructor: { new (): IssuePartType }
+interface Issn extends Base {
+  type: 'issn'
+  properties: {
+    assigningAuthority?: string
+    contentType?: string
+    id?: string
+    pubType?: string
+    publicationFormat?: string
+    specificUse?: string
+  }
 }
 
-interface _IssueSponsorType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface IssueSponsorType extends _IssueSponsorType {
-  constructor: { new (): IssueSponsorType }
-}
-
-interface _IssueSubtitleType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface IssueSubtitleType extends _IssueSubtitleType {
-  constructor: { new (): IssueSubtitleType }
+interface IssueId extends Base {
+  type: 'issueId'
+  properties: {
+    assigningAuthority?: string
+    contentType?: string
+    hreflang?: string
+    id?: string
+    pubIdtype?: string
+    specificUse?: string
+  }
 }
 
-interface _IssueTitlegroupType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Issue Subtitle */
-  issueSubtitle?: IssueSubtitleType[]
+interface IssuePart extends Base {
+  type: 'issuePart'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
+}
+
+interface IssueSponsor extends Base {
+  type: 'issueSponsor'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
+}
+
+interface IssueSubtitle extends Base {
+  type: 'issueSubtitle'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
+}
+
+interface IssueTitlegroup extends Base {
+  type: 'issueTitlegroup'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Issue Subtitle */
+  issueSubtitle?: IssueSubtitle[]
   /** Issue Title */
-  issueTitle: IssueTitleType
+  issueTitle: IssueTitle
   /** Translated Title Group */
-  transTitlegroup?: TransTitlegroupType[]
-}
-interface IssueTitlegroupType extends _IssueTitlegroupType {
-  constructor: { new (): IssueTitlegroupType }
+  transTitlegroup?: TransTitlegroup[]
 }
 
-interface _IssueTitleType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface IssueTitleType extends _IssueTitleType {
-  constructor: { new (): IssueTitleType }
-}
-
-interface _IssueType extends BaseType {
-  contentType?: string
-  id?: string
-  seq?: string
-  specificUse?: string
-}
-interface IssueType extends _IssueType {
-  constructor: { new (): IssueType }
+interface IssueTitle extends Base {
+  type: 'issueTitle'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _ItalicType extends BaseType {
-  id?: string
-  specificUse?: string
-  toggle?: ItalicTypeToggleType
+interface Issue extends Base {
+  type: 'issue'
+  properties: {
+    contentType?: string
+    id?: string
+    seq?: string
+    specificUse?: string
+  }
+}
+
+interface Italic extends Base {
+  type: 'italic'
+  properties: {
+    id?: string
+    specificUse?: string
+  }
+  toggle?: ItalicTypeToggle
   /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface ItalicType extends _ItalicType {
-  constructor: { new (): ItalicType }
+  xref?: Xref[]
 }
 
-type ItalicTypeToggleType = 'no' | 'yes'
-interface _ItalicTypeToggleType extends Primitive._string {
-  content: ItalicTypeToggleType
+type ItalicTypeToggle = 'no' | 'yes'
+interface _ItalicTypeToggle extends Primitive._string {
+  content: ItalicTypeToggle
 }
 
-interface _JournalIdType extends BaseType {
-  assigningAuthority?: string
-  id?: string
-  journalIdtype?: string
-  specificUse?: string
-}
-interface JournalIdType extends _JournalIdType {
-  constructor: { new (): JournalIdType }
+interface JournalId extends Base {
+  type: 'journalId'
+  properties: {
+    assigningAuthority?: string
+    id?: string
+    journalIdtype?: string
+    specificUse?: string
+  }
 }
 
-interface _JournalMetaType extends BaseType {
-  id?: string
-  /** Affiliation */
-  aff?: AffType[]
+interface JournalMeta extends Base {
+  type: 'journalMeta'
+  properties: {
+    id?: string
+  } /** Affiliation */
+  aff?: Aff[]
   /** Affiliation Alternatives */
-  affAlternatives?: AffAlternativesType[]
+  affAlternatives?: AffAlternatives[]
   /** Contributor Group */
-  contribGroup?: ContribGroupType[]
+  contribGroup?: ContribGroup[]
   /** Isbn */
-  isbn?: IsbnType[]
+  isbn?: Isbn[]
   /** Issn */
-  issn: IssnType[]
+  issn: Issn[]
   /** Issn Linking */
-  issnL?: IssnLType
+  issnL?: IssnL
   /** Journal Identifier */
-  journalId: JournalIdType[]
+  journalId: JournalId[]
   /** Journal Title Group */
-  journalTitlegroup?: JournalTitlegroupType[]
+  journalTitlegroup?: JournalTitlegroup[]
   /** Notes */
-  notes?: NotesType[]
+  notes?: Notes[]
   /** Publisher */
-  publisher?: PublisherType
+  publisher?: Publisher
   /** Uri For This Same Article Online */
-  selfUri?: SelfUriType[]
-}
-interface JournalMetaType extends _JournalMetaType {
-  constructor: { new (): JournalMetaType }
+  selfUri?: SelfUri[]
 }
 
-interface _JournalSubtitleType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface JournalSubtitleType extends _JournalSubtitleType {
-  constructor: { new (): JournalSubtitleType }
+interface JournalSubtitle extends Base {
+  type: 'journalSubtitle'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _JournalTitlegroupType extends BaseType {
-  contentType?: string
-  id?: string
-  /** Abbreviated Journal Title */
-  abbrevJournaltitle?: AbbrevJournaltitleType[]
+interface JournalTitlegroup extends Base {
+  type: 'journalTitlegroup'
+  properties: {
+    contentType?: string
+    id?: string
+  } /** Abbreviated Journal Title */
+  abbrevJournaltitle?: AbbrevJournaltitle[]
   /** Journal Subtitle */
-  journalSubtitle?: JournalSubtitleType[]
+  journalSubtitle?: JournalSubtitle[]
   /** Journal Title (Full) */
-  journalTitle?: JournalTitleType[]
+  journalTitle?: JournalTitle[]
   /** Translated Title Group */
-  transTitlegroup?: TransTitlegroupType[]
-}
-interface JournalTitlegroupType extends _JournalTitlegroupType {
-  constructor: { new (): JournalTitlegroupType }
+  transTitlegroup?: TransTitlegroup[]
 }
 
-interface _JournalTitleType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface JournalTitleType extends _JournalTitleType {
-  constructor: { new (): JournalTitleType }
+interface JournalTitle extends Base {
+  type: 'journalTitle'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _KwdGroupType extends BaseType {
-  assigningAuthority?: string
-  id?: string
-  kwdGrouptype?: string
-  specificUse?: string
-  vocab?: string
-  vocabIdentifier?: string
-  /** Compound Keyword */
-  compoundKwd: CompoundKwdType[]
+interface KwdGroup extends Base {
+  type: 'kwdGroup'
+  properties: {
+    assigningAuthority?: string
+    id?: string
+    kwdGrouptype?: string
+    specificUse?: string
+    vocab?: string
+    vocabIdentifier?: string
+  } /** Compound Keyword */
+  compoundKwd: CompoundKwd[]
   /** Keyword */
-  kwd: KwdType[]
+  kwd: Kwd[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** Nested Keyword */
-  nestedKwd: NestedKwdType[]
+  nestedKwd: NestedKwd[]
   /** Title */
-  title?: TitleType
-}
-interface KwdGroupType extends _KwdGroupType {
-  constructor: { new (): KwdGroupType }
+  title?: Title
 }
 
-interface _KwdType extends BaseType {
-  assigningAuthority?: string
-  contentType?: string
-  id?: string
-  vocab?: string
-  vocabIdentifier?: string
-  vocabTerm?: string
-  vocabTermidentifier?: string
-  /** Bold */
-  bold?: BoldType[]
+interface Kwd extends Base {
+  type: 'kwd'
+  properties: {
+    assigningAuthority?: string
+    contentType?: string
+    id?: string
+    vocab?: string
+    vocabIdentifier?: string
+    vocabTerm?: string
+    vocabTermidentifier?: string
+  } /** Bold */
+  bold?: Bold[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface KwdType extends _KwdType {
-  constructor: { new (): KwdType }
+  underline?: Underline[]
 }
 
-interface _LabelType extends BaseType {
-  alt?: string
-  id?: string
-  /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+interface Label extends Base {
+  type: 'label'
+  properties: {
+    alt?: string
+    id?: string
+  } /** Alternatives For Processing */
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface LabelType extends _LabelType {
-  constructor: { new (): LabelType }
+  underline?: Underline[]
 }
 
-interface _LicensePType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface LicenseP extends Base {
+  type: 'licenseP'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Address/Contact Information */
-  address?: AddressType[]
+  address?: Address[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Answer Elements */
-  answer?: AnswerType[]
+  answer?: Answer[]
   /** Answer Set */
-  answerSet?: AnswerSetType[]
+  answerSet?: AnswerSet[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Award Identifier */
-  awardId?: AwardIdType[]
+  awardId?: AwardId[]
   /** Block-Level Alternatives For Processing */
-  blockAlternatives?: BlockAlternativesType[]
+  blockAlternatives?: BlockAlternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Boxed Text */
-  boxedText?: BoxedTextType[]
+  boxedText?: BoxedText[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Chemical Structure Wrapper */
-  chemStructwrap?: ChemStructwrapType[]
+  chemStructwrap?: ChemStructwrap[]
   /** Citation Alternatives */
-  citationAlternatives?: CitationAlternativesType[]
+  citationAlternatives?: CitationAlternatives[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote?: DispQuoteType[]
+  dispQuote?: DispQuote[]
   /** Element Citation */
-  elementCitation?: ElementCitationType[]
+  elementCitation?: ElementCitation[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** Explanation */
-  explanation?: ExplanationType[]
+  explanation?: Explanation[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Figure */
-  fig?: FigType[]
+  fig?: Fig[]
   /** Figure Group */
-  figGroup?: FigGroupType[]
+  figGroup?: FigGroup[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Funding Source */
-  fundingSource?: FundingSourceType[]
+  fundingSource?: FundingSource[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** List */
-  list?: ListType[]
+  list?: List[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Mixed Citation */
-  mixedCitation?: MixedCitationType[]
+  mixedCitation?: MixedCitation[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Nlm Citation Model */
-  nlmCitation?: NlmCitationType[]
+  nlmCitation?: NlmCitation[]
   /** Open Access */
-  openAccess?: OpenAccessType[]
+  openAccess?: OpenAccess[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Price */
-  price?: PriceType[]
+  price?: Price[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Question */
-  question?: QuestionType[]
+  question?: Question[]
   /** Question Wrap */
-  questionWrap?: QuestionWrapType[]
+  questionWrap?: QuestionWrap[]
   /** Question Wrap Group */
-  questionWrapgroup?: QuestionWrapgroupType[]
+  questionWrapgroup?: QuestionWrapgroup[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Speech */
-  speech?: SpeechType[]
+  speech?: Speech[]
   /** Statement, Formal */
-  statement?: StatementType[]
+  statement?: Statement[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Supplementary Material */
-  supplementaryMaterial?: SupplementaryMaterialType[]
+  supplementaryMaterial?: SupplementaryMaterial[]
   /** Table Wrapper */
-  tableWrap?: TableWrapType[]
+  tableWrap?: TableWrap[]
   /** Table Wrapper Group */
-  tableWrapgroup?: TableWrapgroupType[]
+  tableWrapgroup?: TableWrapgroup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** Verse Form For Poetry */
-  verseGroup?: VerseGroupType[]
+  verseGroup?: VerseGroup[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface LicensePType extends _LicensePType {
-  constructor: { new (): LicensePType }
+  xref?: Xref[]
 }
 
-interface _LicenseType extends BaseType {
-  hreflang?: string
-  id?: string
-  licenseType?: string
-  specificUse?: string
-  /** License Paragraph */
-  licenseP: LicensePType[]
-}
-interface LicenseType extends _LicenseType {
-  constructor: { new (): LicenseType }
+interface License extends Base {
+  type: 'license'
+  properties: {
+    hreflang?: string
+    id?: string
+    licenseType?: string
+    specificUse?: string
+  } /** License Paragraph */
+  licenseP: LicenseP[]
 }
 
-interface _ListItemType extends BaseType {
-  id?: string
-  specificUse?: string
-  /** Definition List */
-  defList: DefListType[]
+interface ListItem extends Base {
+  type: 'listItem'
+  properties: {
+    id?: string
+    specificUse?: string
+  } /** Definition List */
+  defList: DefList[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** List */
-  list: ListType[]
+  list: List[]
   /** Paragraph */
-  p: PType[]
+  p: P[]
   /** Title */
-  title?: TitleType
-}
-interface ListItemType extends _ListItemType {
-  constructor: { new (): ListItemType }
+  title?: Title
 }
 
-interface _ListType extends BaseType {
-  continuedFrom?: string
-  id?: string
-  listContent?: string
-  listType?: string
-  prefixWord?: string
-  specificUse?: string
-  /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+interface List extends Base {
+  type: 'list'
+  properties: {
+    continuedFrom?: string
+    id?: string
+    listContent?: string
+    listType?: string
+    prefixWord?: string
+    specificUse?: string
+  } /** Label of a Figure, Reference, Etc. */
+  label?: Label
   /** List Item */
-  listItem: ListItemType[]
+  listItem: ListItem[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Title */
-  title?: TitleType
-}
-interface ListType extends _ListType {
-  constructor: { new (): ListType }
+  title?: Title
 }
 
-interface _LongDescType extends BaseType {
-  contentType?: string
-  hreflang?: string
-  id?: string
-  specificUse?: string
-}
-interface LongDescType extends _LongDescType {
-  constructor: { new (): LongDescType }
-}
-
-interface _LpageType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface LpageType extends _LpageType {
-  constructor: { new (): LpageType }
+interface LongDesc extends Base {
+  type: 'longDesc'
+  properties: {
+    contentType?: string
+    hreflang?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _MediaType extends BaseType {
-  contentType?: string
-  hreflang?: string
-  id?: string
-  mimeSubtype?: string
-  mimetype?: string
-  orientation?: MediaTypeOrientationType
-  position?: MediaTypePositionType
-  specificUse?: string
+interface Lpage extends Base {
+  type: 'lpage'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
+}
+
+interface Media extends Base {
+  type: 'media'
+  properties: {
+    contentType?: string
+    hreflang?: string
+    id?: string
+    mimeSubtype?: string
+    mimetype?: string
+
+    specificUse?: string
+  }
+  orientation?: MediaTypeOrientation
+  position?: MediaTypePosition
   /** Abstract */
-  abstract?: AbstractType[]
+  abstract?: Abstract[]
   /** Alternate Title Text For a Figure, Etc. */
-  altText?: AltTextType[]
+  altText?: AltText[]
   /** Attribution */
-  attrib?: AttribType[]
+  attrib?: Attrib[]
   /** Caption of a Figure, Table, Etc. */
-  caption?: CaptionType[]
+  caption?: Caption[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Keyword Group */
-  kwdGroup?: KwdGroupType[]
+  kwdGroup?: KwdGroup[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType[]
+  label?: Label[]
   /** Long Description */
-  longDesc?: LongDescType[]
+  longDesc?: LongDesc[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Permissions */
-  permissions?: PermissionsType[]
-  subjGroup?: SubjGroupType[]
+  permissions?: Permissions[]
+  subjGroup?: SubjGroup[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface MediaType extends _MediaType {
-  constructor: { new (): MediaType }
+  xref?: Xref[]
 }
 
-type MediaTypeOrientationType = 'landscape' | 'portrait'
-interface _MediaTypeOrientationType extends Primitive._string {
-  content: MediaTypeOrientationType
+type MediaTypeOrientation = 'landscape' | 'portrait'
+interface _MediaTypeOrientation extends Primitive._string {
+  content: MediaTypeOrientation
 }
 
-type MediaTypePositionType = 'anchor' | 'background' | 'float' | 'margin'
-interface _MediaTypePositionType extends Primitive._string {
-  content: MediaTypePositionType
+type MediaTypePosition = 'anchor' | 'background' | 'float' | 'margin'
+interface _MediaTypePosition extends Primitive._string {
+  content: MediaTypePosition
 }
 
-interface _MetaNameType extends BaseType {
-  id?: string
-}
-interface MetaNameType extends _MetaNameType {
-  constructor: { new (): MetaNameType }
+interface MetaName extends Base {
+  type: 'metaName'
+  properties: {
+    id?: string
+  }
 }
 
-interface _MetaValueType extends BaseType {
-  id?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface MetaValue extends Base {
+  type: 'metaValue'
+  properties: {
+    id?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface MetaValueType extends _MetaValueType {
-  constructor: { new (): MetaValueType }
+  xref?: Xref[]
 }
 
-interface _MilestoneEndType extends BaseType {
-  contentType?: string
-  id?: string
-  rationale?: string
-  rid?: string
-  specificUse?: string
-}
-interface MilestoneEndType extends _MilestoneEndType {
-  constructor: { new (): MilestoneEndType }
-}
-
-interface _MilestoneStartType extends BaseType {
-  contentType?: string
-  id?: string
-  rationale?: string
-  rid?: string
-  specificUse?: string
-}
-interface MilestoneStartType extends _MilestoneStartType {
-  constructor: { new (): MilestoneStartType }
+interface MilestoneEnd extends Base {
+  type: 'milestoneEnd'
+  properties: {
+    contentType?: string
+    id?: string
+    rationale?: string
+    rid?: string
+    specificUse?: string
+  }
 }
 
-interface _MixedCitationType extends BaseType {
-  hreflang?: string
-  id?: string
-  publicationFormat?: string
-  publicationType?: string
-  publisherType?: string
-  specificUse?: string
-  useType?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface MilestoneStart extends Base {
+  type: 'milestoneStart'
+  properties: {
+    contentType?: string
+    id?: string
+    rationale?: string
+    rid?: string
+    specificUse?: string
+  }
+}
+
+interface MixedCitation extends Base {
+  type: 'mixedCitation'
+  properties: {
+    hreflang?: string
+    id?: string
+    publicationFormat?: string
+    publicationType?: string
+    publisherType?: string
+    specificUse?: string
+    useType?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Annotation in a Citation */
-  annotation?: AnnotationType[]
+  annotation?: Annotation[]
   /** Article Title */
-  articleTitle?: ArticleTitleType[]
+  articleTitle?: ArticleTitle[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chapter Title in a Citation */
-  chapterTitle?: ChapterTitleType[]
+  chapterTitle?: ChapterTitle[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Collaborative (Group) Author */
-  collab?: CollabType[]
+  collab?: Collab[]
   /** Collaboration Alternatives */
-  collabAlternatives?: CollabAlternativesType[]
+  collabAlternatives?: CollabAlternatives[]
   /** Comment in a Citation */
-  comment?: CommentType[]
+  comment?: Comment[]
   /** Conference Acronym */
-  confAcronym?: ConfAcronymType[]
+  confAcronym?: ConfAcronym[]
   /** Conference Date */
-  confDate?: ConfDateType[]
+  confDate?: ConfDate[]
   /** Conference Location */
-  confLoc?: ConfLocType[]
+  confLoc?: ConfLoc[]
   /** Conference Name */
-  confName?: ConfNameType[]
+  confName?: ConfName[]
   /** Conference Sponsor */
-  confSponsor?: ConfSponsorType[]
+  confSponsor?: ConfSponsor[]
   /** Data Title in a Citation */
-  dataTitle?: DataTitleType[]
+  dataTitle?: DataTitle[]
   /** Date */
-  date?: DateType[]
+  date?: Date[]
   /** Date Inside Citation */
-  dateIncitation?: DateIncitationType[]
+  dateIncitation?: DateIncitation[]
   /** Day */
-  day?: DayType[]
+  day?: Day[]
   /** Edition Statement, Cited */
-  edition?: EditionType[]
+  edition?: Edition[]
   /** Electronic Location Identifier */
-  elocationId?: ElocationIdType[]
+  elocationId?: ElocationId[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** Et Al */
-  etal?: EtalType[]
+  etal?: Etal[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** First Page */
-  fpage?: FpageType[]
+  fpage?: Fpage[]
   /** Government Report, Cited */
-  gov?: GovType[]
+  gov?: Gov[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Institution Name: in an Address */
-  institution?: InstitutionType[]
+  institution?: Institution[]
   /** Institution Wrapper */
-  institutionWrap?: InstitutionWrapType[]
+  institutionWrap?: InstitutionWrap[]
   /** Isbn */
-  isbn?: IsbnType[]
+  isbn?: Isbn[]
   /** Issn */
-  issn?: IssnType[]
+  issn?: Issn[]
   /** Issn Linking */
-  issnL?: IssnLType[]
+  issnL?: IssnL[]
   /** Issue Number */
-  issue?: IssueType[]
+  issue?: Issue[]
   /** Issue Identifier */
-  issueId?: IssueIdType[]
+  issueId?: IssueId[]
   /** Issue Part */
-  issuePart?: IssuePartType[]
+  issuePart?: IssuePart[]
   /** Issue Title */
-  issueTitle?: IssueTitleType[]
+  issueTitle?: IssueTitle[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType[]
+  label?: Label[]
   /** Last Page */
-  lpage?: LpageType[]
+  lpage?: Lpage[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Month */
-  month?: MonthType[]
+  month?: Month[]
   /** Name of Person (Structured) */
-  name?: NameType[]
+  name?: Name[]
   /** Name Alternatives */
-  nameAlternatives?: NameAlternativesType[]
+  nameAlternatives?: NameAlternatives[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Page Ranges */
-  pageRange?: PageRangeType[]
+  pageRange?: PageRange[]
   /** Part Title in a Citation */
-  partTitle?: PartTitleType[]
+  partTitle?: PartTitle[]
   /** Patent Number, Cited */
-  patent?: PatentType[]
+  patent?: Patent[]
   /** Person Group For a Cited Publication */
-  personGroup?: PersonGroupType[]
+  personGroup?: PersonGroup[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Publication Identifier For a Cited Publication */
-  pubId?: PubIdType[]
+  pubId?: PubId[]
   /** Publisher's Location */
-  publisherLoc?: PublisherLocType[]
+  publisherLoc?: PublisherLoc[]
   /** Publisher's Name */
-  publisherName?: PublisherNameType[]
+  publisherName?: PublisherName[]
   /** Role or Function Title of Contributor */
-  role?: RoleType[]
+  role?: Role[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Season */
-  season?: SeasonType[]
+  season?: Season[]
   /** Series */
-  series?: SeriesType[]
+  series?: Series[]
   /** Size */
-  size?: SizeType[]
+  size?: Size[]
   /** Source */
-  source?: SourceType[]
+  source?: Source[]
   /** Standard, Cited */
-  std?: StdType[]
+  std?: Std[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Date As a String */
-  stringDate?: StringDateType[]
+  stringDate?: StringDate[]
   /** Name of Person (Unstructured) */
-  stringName?: StringNameType[]
+  stringName?: StringName[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Supplement */
-  supplement?: SupplementType[]
+  supplement?: Supplement[]
   /** Translated Source */
-  transSource?: TransSourceType[]
+  transSource?: TransSource[]
   /** Translated Title */
-  transTitle?: TransTitleType[]
+  transTitle?: TransTitle[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** Version Statement, Cited */
-  version?: VersionType[]
+  version?: Version[]
   /** Volume Number */
-  volume?: VolumeType[]
+  volume?: Volume[]
   /** Volume Identifier */
-  volumeId?: VolumeIdType[]
+  volumeId?: VolumeId[]
   /** Volume Series */
-  volumeSeries?: VolumeSeriesType[]
+  volumeSeries?: VolumeSeries[]
   /** Year */
-  year?: YearType[]
-}
-interface MixedCitationType extends _MixedCitationType {
-  constructor: { new (): MixedCitationType }
+  year?: Year[]
 }
 
-interface _MonospaceType extends BaseType {
-  id?: string
-  specificUse?: string
-  toggle?: MonospaceTypeToggleType
+interface Monospace extends Base {
+  type: 'monospace'
+  properties: {
+    id?: string
+    specificUse?: string
+  }
+  toggle?: MonospaceTypeToggle
   /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface MonospaceType extends _MonospaceType {
-  constructor: { new (): MonospaceType }
+  xref?: Xref[]
 }
 
-type MonospaceTypeToggleType = 'no' | 'yes'
-interface _MonospaceTypeToggleType extends Primitive._string {
-  content: MonospaceTypeToggleType
+type MonospaceTypeToggle = 'no' | 'yes'
+interface _MonospaceTypeToggle extends Primitive._string {
+  content: MonospaceTypeToggle
 }
 
-interface _MonthType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface MonthType extends _MonthType {
-  constructor: { new (): MonthType }
+interface Month extends Base {
+  type: 'month'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _NameAlternativesType extends BaseType {
-  id?: string
-  /** Name of Person (Structured) */
-  name: NameType[]
+interface NameAlternatives extends Base {
+  type: 'nameAlternatives'
+  properties: {
+    id?: string
+  } /** Name of Person (Structured) */
+  name: Name[]
   /** Name of Person (Unstructured) */
-  stringName: StringNameType[]
-}
-interface NameAlternativesType extends _NameAlternativesType {
-  constructor: { new (): NameAlternativesType }
+  stringName: StringName[]
 }
 
-interface _NamedContentType extends BaseType {
-  alt?: string
-  contentType: string
-  hreflang?: string
-  id?: string
-  rid?: string
-  specificUse?: string
-  vocab?: string
-  vocabIdentifier?: string
-  vocabTerm?: string
-  vocabTermidentifier?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface NamedContent extends Base {
+  type: 'namedContent'
+  properties: {
+    alt?: string
+    contentType: string
+    hreflang?: string
+    id?: string
+    rid?: string
+    specificUse?: string
+    vocab?: string
+    vocabIdentifier?: string
+    vocabTerm?: string
+    vocabTermidentifier?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Address/Contact Information */
-  address?: AddressType[]
+  address?: Address[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Answer Elements */
-  answer?: AnswerType[]
+  answer?: Answer[]
   /** Answer Set */
-  answerSet?: AnswerSetType[]
+  answerSet?: AnswerSet[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Block-Level Alternatives For Processing */
-  blockAlternatives?: BlockAlternativesType[]
+  blockAlternatives?: BlockAlternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Boxed Text */
-  boxedText?: BoxedTextType[]
+  boxedText?: BoxedText[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Chemical Structure Wrapper */
-  chemStructwrap?: ChemStructwrapType[]
+  chemStructwrap?: ChemStructwrap[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote?: DispQuoteType[]
+  dispQuote?: DispQuote[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** Explanation */
-  explanation?: ExplanationType[]
+  explanation?: Explanation[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Figure */
-  fig?: FigType[]
+  fig?: Fig[]
   /** Figure Group */
-  figGroup?: FigGroupType[]
+  figGroup?: FigGroup[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** List */
-  list?: ListType[]
+  list?: List[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Question */
-  question?: QuestionType[]
+  question?: Question[]
   /** Question Wrap */
-  questionWrap?: QuestionWrapType[]
+  questionWrap?: QuestionWrap[]
   /** Question Wrap Group */
-  questionWrapgroup?: QuestionWrapgroupType[]
+  questionWrapgroup?: QuestionWrapgroup[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Speech */
-  speech?: SpeechType[]
+  speech?: Speech[]
   /** Statement, Formal */
-  statement?: StatementType[]
+  statement?: Statement[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Supplementary Material */
-  supplementaryMaterial?: SupplementaryMaterialType[]
+  supplementaryMaterial?: SupplementaryMaterial[]
   /** Table Wrapper */
-  tableWrap?: TableWrapType[]
+  tableWrap?: TableWrap[]
   /** Table Wrapper Group */
-  tableWrapgroup?: TableWrapgroupType[]
+  tableWrapgroup?: TableWrapgroup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** Verse Form For Poetry */
-  verseGroup?: VerseGroupType[]
+  verseGroup?: VerseGroup[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface NamedContentType extends _NamedContentType {
-  constructor: { new (): NamedContentType }
+  xref?: Xref[]
 }
 
-interface _NameType extends BaseType {
-  contentType?: string
-  id?: string
-  nameStyle?: NameTypeNameStyleType
-  specificUse?: string
-  /** Given (First) Names */
-  givenNames: GivenNamesType[]
+interface Name extends Base {
+  type: 'name'
+  properties: {
+    contentType?: string
+    id?: string
+
+    specificUse?: string
+  }
+  nameStyle?: NameTypeNameStyle /** Given (First) Names */
+  givenNames: GivenNames[]
   /** Prefix */
-  prefix?: PrefixType
+  prefix?: Prefix
   /** Suffix */
-  suffix?: SuffixType
+  suffix?: Suffix
   /** Surname */
-  surname: SurnameType
-}
-interface NameType extends _NameType {
-  constructor: { new (): NameType }
+  surname: Surname
 }
 
-type NameTypeNameStyleType = 'eastern' | 'given-only' | 'islensk' | 'western'
-interface _NameTypeNameStyleType extends Primitive._string {
-  content: NameTypeNameStyleType
+type NameTypeNameStyle = 'eastern' | 'given-only' | 'islensk' | 'western'
+interface _NameTypeNameStyle extends Primitive._string {
+  content: NameTypeNameStyle
 }
 
-interface _NestedKwdType extends BaseType {
-  assigningAuthority?: string
-  contentType?: string
-  id?: string
-  vocab?: string
-  vocabIdentifier?: string
-  vocabTerm?: string
-  vocabTermidentifier?: string
-  /** Compound Keyword */
-  compoundKwd: CompoundKwdType[]
+interface NestedKwd extends Base {
+  type: 'nestedKwd'
+  properties: {
+    assigningAuthority?: string
+    contentType?: string
+    id?: string
+    vocab?: string
+    vocabIdentifier?: string
+    vocabTerm?: string
+    vocabTermidentifier?: string
+  } /** Compound Keyword */
+  compoundKwd: CompoundKwd[]
   /** Keyword */
-  kwd: KwdType[]
+  kwd: Kwd[]
   /** Nested Keyword */
-  nestedKwd?: NestedKwdType[]
-}
-interface NestedKwdType extends _NestedKwdType {
-  constructor: { new (): NestedKwdType }
+  nestedKwd?: NestedKwd[]
 }
 
-interface _NlmCitationType extends BaseType {
-  hreflang?: string
-  id?: string
-  publicationFormat?: string
-  publicationType?: string
-  publisherType?: string
-  specificUse?: string
-  /** Access Date For Cited Work */
-  accessDate?: AccessDateType
+interface NlmCitation extends Base {
+  type: 'nlmCitation'
+  properties: {
+    hreflang?: string
+    id?: string
+    publicationFormat?: string
+    publicationType?: string
+    publisherType?: string
+    specificUse?: string
+  } /** Access Date For Cited Work */
+  accessDate?: AccessDate
   /** Annotation in a Citation */
-  annotation?: AnnotationType
+  annotation?: Annotation
   /** Article Title */
-  articleTitle?: ArticleTitleType[]
+  articleTitle?: ArticleTitle[]
   /** Collaborative (Group) Author */
-  collab?: CollabType[]
+  collab?: Collab[]
   /** Comment in a Citation */
-  comment?: CommentType[]
+  comment?: Comment[]
   /** Conference Date */
-  confDate?: ConfDateType
+  confDate?: ConfDate
   /** Conference Location */
-  confLoc?: ConfLocType
+  confLoc?: ConfLoc
   /** Conference Name */
-  confName?: ConfNameType
+  confName?: ConfName
   /** Day */
-  day?: DayType
+  day?: Day
   /** Edition Statement, Cited */
-  edition?: EditionType
+  edition?: Edition
   /** First Page */
-  fpage?: FpageType[]
+  fpage?: Fpage[]
   /** Issue Number */
-  issue?: IssueType[]
+  issue?: Issue[]
   /** Last Page */
-  lpage?: LpageType[]
+  lpage?: Lpage[]
   /** Month */
-  month?: MonthType
+  month?: Month
   /** Page Count */
-  pageCount?: PageCountType
+  pageCount?: PageCount
   /** Patent Number, Cited */
-  patent?: PatentType
+  patent?: Patent
   /** Person Group For a Cited Publication */
-  personGroup?: PersonGroupType[]
+  personGroup?: PersonGroup[]
   /** Publication Identifier For a Cited Publication */
-  pubId?: PubIdType[]
+  pubId?: PubId[]
   /** Publisher's Location */
-  publisherLoc?: PublisherLocType
+  publisherLoc?: PublisherLoc
   /** Publisher's Name */
-  publisherName?: PublisherNameType
+  publisherName?: PublisherName
   /** Season */
-  season?: SeasonType
+  season?: Season
   /** Series */
-  series?: SeriesType
+  series?: Series
   /** Source */
-  source?: SourceType
+  source?: Source
   /** Supplement */
-  supplement?: SupplementType[]
+  supplement?: Supplement[]
   /** Time Stamp For Cited Work */
-  timeStamp?: TimeStampType
+  timeStamp?: TimeStamp
   /** Translated Source */
-  transSource?: TransSourceType
+  transSource?: TransSource
   /** Translated Title */
-  transTitle?: TransTitleType[]
+  transTitle?: TransTitle[]
   /** Volume Number */
-  volume?: VolumeType
+  volume?: Volume
   /** Year */
-  year?: YearType
-}
-interface NlmCitationType extends _NlmCitationType {
-  constructor: { new (): NlmCitationType }
+  year?: Year
 }
 
-interface _NotesType extends BaseType {
-  id?: string
-  notesType?: string
-  specificUse?: string
-  /** Address/Contact Information */
-  address?: AddressType[]
+interface Notes extends Base {
+  type: 'notes'
+  properties: {
+    id?: string
+    notesType?: string
+    specificUse?: string
+  } /** Address/Contact Information */
+  address?: Address[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Answer Elements */
-  answer?: AnswerType[]
+  answer?: Answer[]
   /** Answer Set */
-  answerSet?: AnswerSetType[]
+  answerSet?: AnswerSet[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Block-Level Alternatives For Processing */
-  blockAlternatives?: BlockAlternativesType[]
+  blockAlternatives?: BlockAlternatives[]
   /** Boxed Text */
-  boxedText?: BoxedTextType[]
+  boxedText?: BoxedText[]
   /** Chemical Structure Wrapper */
-  chemStructwrap?: ChemStructwrapType[]
+  chemStructwrap?: ChemStructwrap[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote?: DispQuoteType[]
+  dispQuote?: DispQuote[]
   /** Explanation */
-  explanation?: ExplanationType[]
+  explanation?: Explanation[]
   /** Figure */
-  fig?: FigType[]
+  fig?: Fig[]
   /** Figure Group */
-  figGroup?: FigGroupType[]
+  figGroup?: FigGroup[]
   /** Footnote Group */
-  fnGroup?: FnGroupType[]
+  fnGroup?: FnGroup[]
   /** Glossary Elements */
-  glossary?: GlossaryType[]
+  glossary?: Glossary[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** List */
-  list?: ListType[]
+  list?: List[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Paragraph */
-  p?: PType[]
+  p?: P[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Question */
-  question?: QuestionType[]
+  question?: Question[]
   /** Question Wrap */
-  questionWrap?: QuestionWrapType[]
+  questionWrap?: QuestionWrap[]
   /** Question Wrap Group */
-  questionWrapgroup?: QuestionWrapgroupType[]
+  questionWrapgroup?: QuestionWrapgroup[]
   /** Reference List (Bibliographic Reference List) */
-  refList?: RefListType[]
+  refList?: RefList[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Section */
-  sec?: SecType[]
+  sec?: Sec[]
   /** Section Metadata */
-  secMeta?: SecMetaType
+  secMeta?: SecMeta
   /** Speech */
-  speech?: SpeechType[]
+  speech?: Speech[]
   /** Statement, Formal */
-  statement?: StatementType[]
+  statement?: Statement[]
   /** Supplementary Material */
-  supplementaryMaterial?: SupplementaryMaterialType[]
+  supplementaryMaterial?: SupplementaryMaterial[]
   /** Table Wrapper */
-  tableWrap?: TableWrapType[]
+  tableWrap?: TableWrap[]
   /** Table Wrapper Group */
-  tableWrapgroup?: TableWrapgroupType[]
+  tableWrapgroup?: TableWrapgroup[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Title */
-  title?: TitleType
+  title?: Title
   /** Verse Form For Poetry */
-  verseGroup?: VerseGroupType[]
-}
-interface NotesType extends _NotesType {
-  constructor: { new (): NotesType }
+  verseGroup?: VerseGroup[]
 }
 
-interface _NoteType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+interface Note extends Base {
+  type: 'note'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Label of a Figure, Reference, Etc. */
+  label?: Label
   /** Paragraph */
-  p: PType[]
+  p: P[]
   /** Product Information */
-  product: ProductType[]
-}
-interface NoteType extends _NoteType {
-  constructor: { new (): NoteType }
+  product: Product[]
 }
 
-interface _ObjectIdType extends BaseType {
-  assigningAuthority?: string
-  contentType?: string
-  id?: string
-  pubIdtype?: string
-  specificUse?: string
-}
-interface ObjectIdType extends _ObjectIdType {
-  constructor: { new (): ObjectIdType }
+interface ObjectId extends Base {
+  type: 'objectId'
+  properties: {
+    assigningAuthority?: string
+    contentType?: string
+    id?: string
+    pubIdtype?: string
+    specificUse?: string
+  }
 }
 
-interface _OnBehalfofType extends BaseType {
-  id?: string
-  specificUse?: string
-  /** Bold */
-  bold?: BoldType[]
+interface OnBehalfof extends Base {
+  type: 'onBehalfof'
+  properties: {
+    id?: string
+    specificUse?: string
+  } /** Bold */
+  bold?: Bold[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Institution Name: in an Address */
-  institution?: InstitutionType[]
+  institution?: Institution[]
   /** Institution Wrapper */
-  institutionWrap?: InstitutionWrapType[]
+  institutionWrap?: InstitutionWrap[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface OnBehalfofType extends _OnBehalfofType {
-  constructor: { new (): OnBehalfofType }
+  xref?: Xref[]
 }
 
-interface _OpenAccessType extends BaseType {
-  id?: string
-  specificUse?: string
-  /** Paragraph */
-  p: PType[]
-}
-interface OpenAccessType extends _OpenAccessType {
-  constructor: { new (): OpenAccessType }
+interface OpenAccess extends Base {
+  type: 'openAccess'
+  properties: {
+    id?: string
+    specificUse?: string
+  } /** Paragraph */
+  p: P[]
 }
 
-interface _OptionType extends BaseType {
-  contentType?: string
-  correct?: OptionTypeCorrectType
-  id?: string
-  specificUse?: string
-  /** Address/Contact Information */
-  address: AddressType[]
+interface Option extends Base {
+  type: 'option'
+  properties: {
+    contentType?: string
+
+    id?: string
+    specificUse?: string
+  }
+  correct?: OptionTypeCorrect /** Address/Contact Information */
+  address: Address[]
   /** Alternate Title */
-  altTitle?: AltTitleType[]
+  altTitle?: AltTitle[]
   /** Alternatives For Processing */
-  alternatives: AlternativesType[]
+  alternatives: Alternatives[]
   /** Answer Elements */
-  answer: AnswerType[]
+  answer: Answer[]
   /** Answer Set */
-  answerSet: AnswerSetType[]
+  answerSet: AnswerSet[]
   /** Array (Simple Tabular Array) */
-  array: ArrayType[]
+  array: Array[]
   /** Block-Level Alternatives For Processing */
-  blockAlternatives: BlockAlternativesType[]
+  blockAlternatives: BlockAlternatives[]
   /** Boxed Text */
-  boxedText: BoxedTextType[]
+  boxedText: BoxedText[]
   /** Chemical Structure Wrapper */
-  chemStructwrap: ChemStructwrapType[]
+  chemStructwrap: ChemStructwrap[]
   /** Code Text */
-  code: CodeType[]
+  code: Code[]
   /** Definition List */
-  defList: DefListType[]
+  defList: DefList[]
   /** Formula, Display */
-  dispFormula: DispFormulaType[]
+  dispFormula: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup: DispFormulagroupType[]
+  dispFormulagroup: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote: DispQuoteType[]
+  dispQuote: DispQuote[]
   /** Explanation */
-  explanation?: ExplanationType[]
+  explanation?: Explanation[]
   /** Figure */
-  fig: FigType[]
+  fig: Fig[]
   /** Figure Group */
-  figGroup: FigGroupType[]
+  figGroup: FigGroup[]
   /** Footnote Group */
-  fnGroup?: FnGroupType[]
+  fnGroup?: FnGroup[]
   /** Glossary Elements */
-  glossary?: GlossaryType[]
+  glossary?: Glossary[]
   /** Graphic */
-  graphic: GraphicType[]
+  graphic: Graphic[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** List */
-  list: ListType[]
+  list: List[]
   /** Media Object */
-  media: MediaType[]
+  media: Media[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Paragraph */
-  p: PType[]
+  p: P[]
   /** Preformatted Text */
-  preformat: PreformatType[]
+  preformat: Preformat[]
   /** Question */
-  question: QuestionType[]
+  question: Question[]
   /** Question Wrap */
-  questionWrap: QuestionWrapType[]
+  questionWrap: QuestionWrap[]
   /** Question Wrap Group */
-  questionWrapgroup: QuestionWrapgroupType[]
+  questionWrapgroup: QuestionWrapgroup[]
   /** Reference List (Bibliographic Reference List) */
-  refList?: RefListType[]
+  refList?: RefList[]
   /** Related Article Information */
-  relatedArticle: RelatedArticleType[]
+  relatedArticle: RelatedArticle[]
   /** Related Object Information */
-  relatedObject: RelatedObjectType[]
+  relatedObject: RelatedObject[]
   /** Section */
-  sec: SecType[]
+  sec: Sec[]
   /** Speech */
-  speech: SpeechType[]
+  speech: Speech[]
   /** Statement, Formal */
-  statement: StatementType[]
+  statement: Statement[]
   /** Article Subtitle */
-  subtitle?: SubtitleType[]
+  subtitle?: Subtitle[]
   /** Supplementary Material */
-  supplementaryMaterial: SupplementaryMaterialType[]
+  supplementaryMaterial: SupplementaryMaterial[]
   /** Table Wrapper */
-  tableWrap: TableWrapType[]
+  tableWrap: TableWrap[]
   /** Table Wrapper Group */
-  tableWrapgroup: TableWrapgroupType[]
+  tableWrapgroup: TableWrapgroup[]
   /** Tex Math Equation */
-  texMath: TexMathType[]
+  texMath: TexMath[]
   /** Title */
-  title?: TitleType
+  title?: Title
   /** Verse Form For Poetry */
-  verseGroup: VerseGroupType[]
-}
-interface OptionType extends _OptionType {
-  constructor: { new (): OptionType }
+  verseGroup: VerseGroup[]
 }
 
-type OptionTypeCorrectType = 'no' | 'yes'
-interface _OptionTypeCorrectType extends Primitive._string {
-  content: OptionTypeCorrectType
+type OptionTypeCorrect = 'no' | 'yes'
+interface _OptionTypeCorrect extends Primitive._string {
+  content: OptionTypeCorrect
 }
 
-interface _OverlineEndType extends BaseType {
-  id?: string
-  rid: string
-  specificUse?: string
-}
-interface OverlineEndType extends _OverlineEndType {
-  constructor: { new (): OverlineEndType }
-}
-
-interface _OverlineStartType extends BaseType {
-  id: string
-  specificUse?: string
-}
-interface OverlineStartType extends _OverlineStartType {
-  constructor: { new (): OverlineStartType }
+interface OverlineEnd extends Base {
+  type: 'overlineEnd'
+  properties: {
+    id?: string
+    rid: string
+    specificUse?: string
+  }
 }
 
-interface _OverlineType extends BaseType {
-  id?: string
-  specificUse?: string
-  toggle?: OverlineTypeToggleType
+interface OverlineStart extends Base {
+  type: 'overlineStart'
+  properties: {
+    id: string
+    specificUse?: string
+  }
+}
+
+interface Overline extends Base {
+  type: 'overline'
+  properties: {
+    id?: string
+    specificUse?: string
+  }
+  toggle?: OverlineTypeToggle
   /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface OverlineType extends _OverlineType {
-  constructor: { new (): OverlineType }
+  xref?: Xref[]
 }
 
-type OverlineTypeToggleType = 'no' | 'yes'
-interface _OverlineTypeToggleType extends Primitive._string {
-  content: OverlineTypeToggleType
+type OverlineTypeToggle = 'no' | 'yes'
+interface _OverlineTypeToggle extends Primitive._string {
+  content: OverlineTypeToggle
 }
 
-interface _PageCountType extends BaseType {
-  count: string
-  id?: string
-}
-interface PageCountType extends _PageCountType {
-  constructor: { new (): PageCountType }
-}
-
-interface _PageRangeType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface PageRangeType extends _PageRangeType {
-  constructor: { new (): PageRangeType }
+interface PageCount extends Base {
+  type: 'pageCount'
+  properties: {
+    count: string
+    id?: string
+  }
 }
 
-interface _PartTitleType extends BaseType {
-  id?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface PageRange extends Base {
+  type: 'pageRange'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
+}
+
+interface PartTitle extends Base {
+  type: 'partTitle'
+  properties: {
+    id?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface PartTitleType extends _PartTitleType {
-  constructor: { new (): PartTitleType }
+  xref?: Xref[]
 }
 
-interface _PatentType extends BaseType {
-  contentType?: string
-  country?: string
-  id?: string
-  specificUse?: string
-}
-interface PatentType extends _PatentType {
-  constructor: { new (): PatentType }
+interface Patent extends Base {
+  type: 'patent'
+  properties: {
+    contentType?: string
+    country?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _PermissionsType extends BaseType {
-  id?: string
-  /** Copyright Holder */
-  copyrightHolder?: CopyrightHolderType[]
+interface Permissions extends Base {
+  type: 'permissions'
+  properties: {
+    id?: string
+  } /** Copyright Holder */
+  copyrightHolder?: CopyrightHolder[]
   /** Copyright Statement */
-  copyrightStatement?: CopyrightStatementType[]
+  copyrightStatement?: CopyrightStatement[]
   /** Copyright Year */
-  copyrightYear?: CopyrightYearType[]
+  copyrightYear?: CopyrightYear[]
   /** License Information */
-  license?: LicenseType[]
-}
-interface PermissionsType extends _PermissionsType {
-  constructor: { new (): PermissionsType }
+  license?: License[]
 }
 
-interface _PersonGroupType extends BaseType {
-  customType?: string
-  id?: string
-  personGrouptype?: PersonGroupTypePersonGrouptypeType
-  specificUse?: string
-  /** Affiliation */
-  aff?: AffType[]
+interface PersonGroup extends Base {
+  type: 'personGroup'
+  properties: {
+    customType?: string
+    id?: string
+
+    specificUse?: string
+  }
+  personGrouptype?: PersonGroupTypePersonGrouptype /** Affiliation */
+  aff?: Aff[]
   /** Affiliation Alternatives */
-  affAlternatives?: AffAlternativesType[]
+  affAlternatives?: AffAlternatives[]
   /** Anonymous */
-  anonymous?: AnonymousType[]
+  anonymous?: Anonymous[]
   /** Collaborative (Group) Author */
-  collab?: CollabType[]
+  collab?: Collab[]
   /** Collaboration Alternatives */
-  collabAlternatives?: CollabAlternativesType[]
+  collabAlternatives?: CollabAlternatives[]
   /** Et Al */
-  etal?: EtalType[]
+  etal?: Etal[]
   /** Name of Person (Structured) */
-  name?: NameType[]
+  name?: Name[]
   /** Name Alternatives */
-  nameAlternatives?: NameAlternativesType[]
+  nameAlternatives?: NameAlternatives[]
   /** Role or Function Title of Contributor */
-  role?: RoleType[]
+  role?: Role[]
   /** Name of Person (Unstructured) */
-  stringName?: StringNameType[]
-}
-interface PersonGroupType extends _PersonGroupType {
-  constructor: { new (): PersonGroupType }
+  stringName?: StringName[]
 }
 
-type PersonGroupTypePersonGrouptypeType =
+type PersonGroupTypePersonGrouptype =
   | 'allauthors'
   | 'assignee'
   | 'author'
@@ -6695,636 +6599,630 @@ type PersonGroupTypePersonGrouptypeType =
   | 'research-assistant'
   | 'transed'
   | 'translator'
-interface _PersonGroupTypePersonGrouptypeType extends Primitive._string {
-  content: PersonGroupTypePersonGrouptypeType
+interface _PersonGroupTypePersonGrouptype extends Primitive._string {
+  content: PersonGroupTypePersonGrouptype
 }
 
-interface _PhoneType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface PhoneType extends _PhoneType {
-  constructor: { new (): PhoneType }
-}
-
-interface _PostalCodeType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface PostalCodeType extends _PostalCodeType {
-  constructor: { new (): PostalCodeType }
+interface Phone extends Base {
+  type: 'phone'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _PrefixType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface PrefixType extends _PrefixType {
-  constructor: { new (): PrefixType }
+interface PostalCode extends Base {
+  type: 'postalCode'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _PreformatType extends BaseType {
-  id?: string
-  orientation?: PreformatTypeOrientationType
-  position?: PreformatTypePositionType
-  preformatType?: string
-  specificUse?: string
+interface Prefix extends Base {
+  type: 'prefix'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
+}
+
+interface Preformat extends Base {
+  type: 'preformat'
+  properties: {
+    id?: string
+
+    preformatType?: string
+    specificUse?: string
+  }
+  orientation?: PreformatTypeOrientation
+  position?: PreformatTypePosition
   /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+  abbrev?: Abbrev[]
   /** Alternate Title Text For a Figure, Etc. */
-  altText?: AltTextType[]
+  altText?: AltText[]
   /** Attribution */
-  attrib?: AttribType[]
+  attrib?: Attrib[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Long Description */
-  longDesc?: LongDescType[]
+  longDesc?: LongDesc[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Permissions */
-  permissions?: PermissionsType[]
+  permissions?: Permissions[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
-}
-interface PreformatType extends _PreformatType {
-  constructor: { new (): PreformatType }
+  uri?: Uri[]
 }
 
-type PreformatTypeOrientationType = 'landscape' | 'portrait'
-interface _PreformatTypeOrientationType extends Primitive._string {
-  content: PreformatTypeOrientationType
+type PreformatTypeOrientation = 'landscape' | 'portrait'
+interface _PreformatTypeOrientation extends Primitive._string {
+  content: PreformatTypeOrientation
 }
 
-type PreformatTypePositionType = 'anchor' | 'background' | 'float' | 'margin'
-interface _PreformatTypePositionType extends Primitive._string {
-  content: PreformatTypePositionType
+type PreformatTypePosition = 'anchor' | 'background' | 'float' | 'margin'
+interface _PreformatTypePosition extends Primitive._string {
+  content: PreformatTypePosition
 }
 
-interface _PriceType extends BaseType {
-  contentType?: string
-  currency?: string
-  id?: string
-  specificUse?: string
-  /** Bold */
-  bold?: BoldType[]
+interface Price extends Base {
+  type: 'price'
+  properties: {
+    contentType?: string
+    currency?: string
+    id?: string
+    specificUse?: string
+  } /** Bold */
+  bold?: Bold[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface PriceType extends _PriceType {
-  constructor: { new (): PriceType }
+  underline?: Underline[]
 }
 
-interface _PrincipalAwardrecipientType extends BaseType {
-  id?: string
-  specificUse?: string
-  /** Contributor Identifier */
-  contribId?: ContribIdType[]
+interface PrincipalAwardrecipient extends Base {
+  type: 'principalAwardrecipient'
+  properties: {
+    id?: string
+    specificUse?: string
+  } /** Contributor Identifier */
+  contribId?: ContribId[]
   /** Institution Name: in an Address */
-  institution?: InstitutionType[]
+  institution?: Institution[]
   /** Institution Wrapper */
-  institutionWrap?: InstitutionWrapType[]
+  institutionWrap?: InstitutionWrap[]
   /** Name of Person (Structured) */
-  name?: NameType[]
+  name?: Name[]
   /** Name Alternatives */
-  nameAlternatives?: NameAlternativesType[]
+  nameAlternatives?: NameAlternatives[]
   /** Name of Person (Unstructured) */
-  stringName?: StringNameType[]
-}
-interface PrincipalAwardrecipientType extends _PrincipalAwardrecipientType {
-  constructor: { new (): PrincipalAwardrecipientType }
+  stringName?: StringName[]
 }
 
-interface _PrincipalInvestigatorType extends BaseType {
-  id?: string
-  specificUse?: string
-  /** Contributor Identifier */
-  contribId?: ContribIdType[]
+interface PrincipalInvestigator extends Base {
+  type: 'principalInvestigator'
+  properties: {
+    id?: string
+    specificUse?: string
+  } /** Contributor Identifier */
+  contribId?: ContribId[]
   /** Name of Person (Structured) */
-  name?: NameType[]
+  name?: Name[]
   /** Name Alternatives */
-  nameAlternatives?: NameAlternativesType[]
+  nameAlternatives?: NameAlternatives[]
   /** Name of Person (Unstructured) */
-  stringName?: StringNameType[]
-}
-interface PrincipalInvestigatorType extends _PrincipalInvestigatorType {
-  constructor: { new (): PrincipalInvestigatorType }
+  stringName?: StringName[]
 }
 
-interface _PrivateCharType extends BaseType {
-  description?: string
-  id?: string
-  name?: string
-  specificUse?: string
-  /** Glyph Data For a Private Character */
-  glyphData: GlyphDataType
+interface PrivateChar extends Base {
+  type: 'privateChar'
+  properties: {
+    description?: string
+    id?: string
+    name?: string
+    specificUse?: string
+  } /** Glyph Data For a Private Character */
+  glyphData: GlyphData
   /** Glyph Reference For a Private Character */
-  glyphRef: GlyphRefType
+  glyphRef: GlyphRef
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
-}
-interface PrivateCharType extends _PrivateCharType {
-  constructor: { new (): PrivateCharType }
+  inlineGraphic?: InlineGraphic[]
 }
 
-interface _ProcessingMetaType extends BaseType {
-  baseTagset?: ProcessingMetaTypeBaseTagsetType
-  id?: string
-  mathRepresentation?: string
-  mathmlVersion?: ProcessingMetaTypeMathmlVersionType
-  tableModel?: ProcessingMetaTypeTableModelType
-  tagsetFamily?: ProcessingMetaTypeTagsetFamilyType
+interface ProcessingMeta extends Base {
+  type: 'processingMeta'
+  baseTagset?: ProcessingMetaTypeBaseTagset
+  properties: {
+    id?: string
+    mathRepresentation?: string
+  }
+  mathmlVersion?: ProcessingMetaTypeMathmlVersion
+  tableModel?: ProcessingMetaTypeTableModel
+  tagsetFamily?: ProcessingMetaTypeTagsetFamily
   /** Custom Metadata Group */
-  customMetagroup?: CustomMetagroupType[]
+  customMetagroup?: CustomMetagroup[]
   /** Extended-by Model */
-  extendedBy?: ExtendedByType[]
+  extendedBy?: ExtendedBy[]
   /** Restricted-by Model */
-  restrictedBy?: RestrictedByType[]
-}
-interface ProcessingMetaType extends _ProcessingMetaType {
-  constructor: { new (): ProcessingMetaType }
+  restrictedBy?: RestrictedBy[]
 }
 
-type ProcessingMetaTypeBaseTagsetType = 'archiving' | 'authoring' | 'publishing'
-interface _ProcessingMetaTypeBaseTagsetType extends Primitive._string {
-  content: ProcessingMetaTypeBaseTagsetType
+type ProcessingMetaTypeBaseTagset = 'archiving' | 'authoring' | 'publishing'
+interface _ProcessingMetaTypeBaseTagset extends Primitive._string {
+  content: ProcessingMetaTypeBaseTagset
 }
 
-type ProcessingMetaTypeMathmlVersionType = '2.0' | '3.0'
-interface _ProcessingMetaTypeMathmlVersionType extends Primitive._string {
-  content: ProcessingMetaTypeMathmlVersionType
+type ProcessingMetaTypeMathmlVersion = '2.0' | '3.0'
+interface _ProcessingMetaTypeMathmlVersion extends Primitive._string {
+  content: ProcessingMetaTypeMathmlVersion
 }
 
-type ProcessingMetaTypeTableModelType = 'both' | 'none' | 'oasis' | 'xhtml'
-interface _ProcessingMetaTypeTableModelType extends Primitive._string {
-  content: ProcessingMetaTypeTableModelType
+type ProcessingMetaTypeTableModel = 'both' | 'none' | 'oasis' | 'xhtml'
+interface _ProcessingMetaTypeTableModel extends Primitive._string {
+  content: ProcessingMetaTypeTableModel
 }
 
-type ProcessingMetaTypeTagsetFamilyType = 'bits' | 'jats' | 'sts'
-interface _ProcessingMetaTypeTagsetFamilyType extends Primitive._string {
-  content: ProcessingMetaTypeTagsetFamilyType
+type ProcessingMetaTypeTagsetFamily = 'bits' | 'jats' | 'sts'
+interface _ProcessingMetaTypeTagsetFamily extends Primitive._string {
+  content: ProcessingMetaTypeTagsetFamily
 }
 
-interface _ProductType extends BaseType {
-  hreflang?: string
-  id?: string
-  productType?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface Product extends Base {
+  type: 'product'
+  properties: {
+    hreflang?: string
+    id?: string
+    productType?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Annotation in a Citation */
-  annotation?: AnnotationType[]
+  annotation?: Annotation[]
   /** Article Title */
-  articleTitle?: ArticleTitleType[]
+  articleTitle?: ArticleTitle[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Line Break */
-  break?: BreakType[]
+  break?: Break[]
   /** Chapter Title in a Citation */
-  chapterTitle?: ChapterTitleType[]
+  chapterTitle?: ChapterTitle[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Collaborative (Group) Author */
-  collab?: CollabType[]
+  collab?: Collab[]
   /** Collaboration Alternatives */
-  collabAlternatives?: CollabAlternativesType[]
+  collabAlternatives?: CollabAlternatives[]
   /** Comment in a Citation */
-  comment?: CommentType[]
+  comment?: Comment[]
   /** Conference Acronym */
-  confAcronym?: ConfAcronymType[]
+  confAcronym?: ConfAcronym[]
   /** Conference Date */
-  confDate?: ConfDateType[]
+  confDate?: ConfDate[]
   /** Conference Location */
-  confLoc?: ConfLocType[]
+  confLoc?: ConfLoc[]
   /** Conference Name */
-  confName?: ConfNameType[]
+  confName?: ConfName[]
   /** Conference Sponsor */
-  confSponsor?: ConfSponsorType[]
+  confSponsor?: ConfSponsor[]
   /** Data Title in a Citation */
-  dataTitle?: DataTitleType[]
+  dataTitle?: DataTitle[]
   /** Date */
-  date?: DateType[]
+  date?: Date[]
   /** Date Inside Citation */
-  dateIncitation?: DateIncitationType[]
+  dateIncitation?: DateIncitation[]
   /** Day */
-  day?: DayType[]
+  day?: Day[]
   /** Edition Statement, Cited */
-  edition?: EditionType[]
+  edition?: Edition[]
   /** Electronic Location Identifier */
-  elocationId?: ElocationIdType[]
+  elocationId?: ElocationId[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** Et Al */
-  etal?: EtalType[]
+  etal?: Etal[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** First Page */
-  fpage?: FpageType[]
+  fpage?: Fpage[]
   /** Government Report, Cited */
-  gov?: GovType[]
+  gov?: Gov[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Institution Name: in an Address */
-  institution?: InstitutionType[]
+  institution?: Institution[]
   /** Institution Wrapper */
-  institutionWrap?: InstitutionWrapType[]
+  institutionWrap?: InstitutionWrap[]
   /** Isbn */
-  isbn?: IsbnType[]
+  isbn?: Isbn[]
   /** Issn */
-  issn?: IssnType[]
+  issn?: Issn[]
   /** Issn Linking */
-  issnL?: IssnLType[]
+  issnL?: IssnL[]
   /** Issue Number */
-  issue?: IssueType[]
+  issue?: Issue[]
   /** Issue Identifier */
-  issueId?: IssueIdType[]
+  issueId?: IssueId[]
   /** Issue Part */
-  issuePart?: IssuePartType[]
+  issuePart?: IssuePart[]
   /** Issue Title */
-  issueTitle?: IssueTitleType[]
+  issueTitle?: IssueTitle[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Last Page */
-  lpage?: LpageType[]
+  lpage?: Lpage[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Month */
-  month?: MonthType[]
+  month?: Month[]
   /** Name of Person (Structured) */
-  name?: NameType[]
+  name?: Name[]
   /** Name Alternatives */
-  nameAlternatives?: NameAlternativesType[]
+  nameAlternatives?: NameAlternatives[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Page Ranges */
-  pageRange?: PageRangeType[]
+  pageRange?: PageRange[]
   /** Part Title in a Citation */
-  partTitle?: PartTitleType[]
+  partTitle?: PartTitle[]
   /** Patent Number, Cited */
-  patent?: PatentType[]
+  patent?: Patent[]
   /** Person Group For a Cited Publication */
-  personGroup?: PersonGroupType[]
+  personGroup?: PersonGroup[]
   /** Price */
-  price?: PriceType[]
+  price?: Price[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Publication Identifier For a Cited Publication */
-  pubId?: PubIdType[]
+  pubId?: PubId[]
   /** Publisher's Location */
-  publisherLoc?: PublisherLocType[]
+  publisherLoc?: PublisherLoc[]
   /** Publisher's Name */
-  publisherName?: PublisherNameType[]
+  publisherName?: PublisherName[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Role or Function Title of Contributor */
-  role?: RoleType[]
+  role?: Role[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Season */
-  season?: SeasonType[]
+  season?: Season[]
   /** Series */
-  series?: SeriesType[]
+  series?: Series[]
   /** Size */
-  size?: SizeType[]
+  size?: Size[]
   /** Source */
-  source?: SourceType[]
+  source?: Source[]
   /** Standard, Cited */
-  std?: StdType[]
+  std?: Std[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Date As a String */
-  stringDate?: StringDateType[]
+  stringDate?: StringDate[]
   /** Name of Person (Unstructured) */
-  stringName?: StringNameType[]
+  stringName?: StringName[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Supplement */
-  supplement?: SupplementType[]
+  supplement?: Supplement[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Translated Source */
-  transSource?: TransSourceType[]
+  transSource?: TransSource[]
   /** Translated Title */
-  transTitle?: TransTitleType[]
+  transTitle?: TransTitle[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** Version Statement, Cited */
-  version?: VersionType[]
+  version?: Version[]
   /** Volume Number */
-  volume?: VolumeType[]
+  volume?: Volume[]
   /** Volume Identifier */
-  volumeId?: VolumeIdType[]
+  volumeId?: VolumeId[]
   /** Volume Series */
-  volumeSeries?: VolumeSeriesType[]
+  volumeSeries?: VolumeSeries[]
   /** X(cross) Reference */
-  xref?: XrefType[]
+  xref?: Xref[]
   /** Year */
-  year?: YearType[]
-}
-interface ProductType extends _ProductType {
-  constructor: { new (): ProductType }
+  year?: Year[]
 }
 
-interface _PType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface P extends Base {
+  type: 'p'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Address/Contact Information */
-  address?: AddressType[]
+  address?: Address[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Answer Elements */
-  answer?: AnswerType[]
+  answer?: Answer[]
   /** Answer Set */
-  answerSet?: AnswerSetType[]
+  answerSet?: AnswerSet[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Award Identifier */
-  awardId?: AwardIdType[]
+  awardId?: AwardId[]
   /** Block-Level Alternatives For Processing */
-  blockAlternatives?: BlockAlternativesType[]
+  blockAlternatives?: BlockAlternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Boxed Text */
-  boxedText?: BoxedTextType[]
+  boxedText?: BoxedText[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Chemical Structure Wrapper */
-  chemStructwrap?: ChemStructwrapType[]
+  chemStructwrap?: ChemStructwrap[]
   /** Citation Alternatives */
-  citationAlternatives?: CitationAlternativesType[]
+  citationAlternatives?: CitationAlternatives[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote?: DispQuoteType[]
+  dispQuote?: DispQuote[]
   /** Element Citation */
-  elementCitation?: ElementCitationType[]
+  elementCitation?: ElementCitation[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** Explanation */
-  explanation?: ExplanationType[]
+  explanation?: Explanation[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Figure */
-  fig?: FigType[]
+  fig?: Fig[]
   /** Figure Group */
-  figGroup?: FigGroupType[]
+  figGroup?: FigGroup[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Funding Source */
-  fundingSource?: FundingSourceType[]
+  fundingSource?: FundingSource[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** List */
-  list?: ListType[]
+  list?: List[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Mixed Citation */
-  mixedCitation?: MixedCitationType[]
+  mixedCitation?: MixedCitation[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Nlm Citation Model */
-  nlmCitation?: NlmCitationType[]
+  nlmCitation?: NlmCitation[]
   /** Open Access */
-  openAccess?: OpenAccessType[]
+  openAccess?: OpenAccess[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Question */
-  question?: QuestionType[]
+  question?: Question[]
   /** Question Wrap */
-  questionWrap?: QuestionWrapType[]
+  questionWrap?: QuestionWrap[]
   /** Question Wrap Group */
-  questionWrapgroup?: QuestionWrapgroupType[]
+  questionWrapgroup?: QuestionWrapgroup[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Speech */
-  speech?: SpeechType[]
+  speech?: Speech[]
   /** Statement, Formal */
-  statement?: StatementType[]
+  statement?: Statement[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Supplementary Material */
-  supplementaryMaterial?: SupplementaryMaterialType[]
+  supplementaryMaterial?: SupplementaryMaterial[]
   /** Table Wrapper */
-  tableWrap?: TableWrapType[]
+  tableWrap?: TableWrap[]
   /** Table Wrapper Group */
-  tableWrapgroup?: TableWrapgroupType[]
+  tableWrapgroup?: TableWrapgroup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** Verse Form For Poetry */
-  verseGroup?: VerseGroupType[]
+  verseGroup?: VerseGroup[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface PType extends _PType {
-  constructor: { new (): PType }
+  xref?: Xref[]
 }
 
-interface _PubDatenotavailableType extends BaseType {
-  id?: string
-  specificUse?: string
-}
-interface PubDatenotavailableType extends _PubDatenotavailableType {
-  constructor: { new (): PubDatenotavailableType }
+interface PubDatenotavailable extends Base {
+  type: 'pubDatenotavailable'
+  properties: {
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _PubDateType extends BaseType {
-  assigningAuthority?: string
-  calendar?: string
-  dateType?: string
-  id?: string
-  iso8601Date?: string
-  pubType?: string
-  publicationFormat?: string
-  /** Day */
-  day?: DayType
+interface PubDate extends Base {
+  type: 'pubDate'
+  properties: {
+    assigningAuthority?: string
+    calendar?: string
+    dateType?: string
+    id?: string
+    iso8601Date?: string
+    pubType?: string
+    publicationFormat?: string
+  } /** Day */
+  day?: Day
   /** Era */
-  era?: EraType
+  era?: Era
   /** Month */
-  month?: MonthType
+  month?: Month
   /** Season */
-  season?: SeasonType
+  season?: Season
   /** Year */
-  year: YearType
-}
-interface PubDateType extends _PubDateType {
-  constructor: { new (): PubDateType }
+  year: Year
 }
 
-interface _PubHistoryType extends BaseType {
-  id?: string
-  /** Event in Publishing History */
-  event: EventType[]
-}
-interface PubHistoryType extends _PubHistoryType {
-  constructor: { new (): PubHistoryType }
-}
-
-interface _PubIdType extends BaseType {
-  assigningAuthority?: string
-  customType?: string
-  hreflang?: string
-  id?: string
-  pubIdtype?: PubIdTypePubIdtypeType
-  specificUse?: string
-}
-interface PubIdType extends _PubIdType {
-  constructor: { new (): PubIdType }
+interface PubHistory extends Base {
+  type: 'pubHistory'
+  properties: {
+    id?: string
+  } /** Event in Publishing History */
+  event: Event[]
 }
 
-type PubIdTypePubIdtypeType =
+interface PubId extends Base {
+  type: 'pubId'
+  properties: {
+    assigningAuthority?: string
+    customType?: string
+    hreflang?: string
+    id?: string
+
+    specificUse?: string
+  }
+  pubIdtype?: PubIdTypePubIdtype
+}
+
+type PubIdTypePubIdtype =
   | 'accession'
   | 'archive'
   | 'ark'
@@ -7348,3004 +7246,2962 @@ type PubIdTypePubIdtypeType =
   | 'sici'
   | 'std-designation'
   | 'zbl'
-interface _PubIdTypePubIdtypeType extends Primitive._string {
-  content: PubIdTypePubIdtypeType
+interface _PubIdTypePubIdtype extends Primitive._string {
+  content: PubIdTypePubIdtype
 }
 
-interface _PublisherLocType extends BaseType {
-  id?: string
-  specificUse?: string
-  /** Address Line */
-  addrLine?: AddrLineType[]
+interface PublisherLoc extends Base {
+  type: 'publisherLoc'
+  properties: {
+    id?: string
+    specificUse?: string
+  } /** Address Line */
+  addrLine?: AddrLine[]
   /** City: in an Address */
-  city?: CityType[]
+  city?: City[]
   /** Country: in an Address */
-  country?: CountryType[]
+  country?: Country[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fax Number: in an Address */
-  fax?: FaxType[]
+  fax?: Fax[]
   /** Institution Name: in an Address */
-  institution?: InstitutionType[]
+  institution?: Institution[]
   /** Institution Wrapper */
-  institutionWrap?: InstitutionWrapType[]
+  institutionWrap?: InstitutionWrap[]
   /** Phone Number: in an Address */
-  phone?: PhoneType[]
+  phone?: Phone[]
   /** Postal Code: in an Address */
-  postalCode?: PostalCodeType[]
+  postalCode?: PostalCode[]
   /** State or Province: in an Address */
-  state?: StateType[]
+  state?: State[]
   /** Uri */
-  uri?: UriType[]
-}
-interface PublisherLocType extends _PublisherLocType {
-  constructor: { new (): PublisherLocType }
+  uri?: Uri[]
 }
 
-interface _PublisherNameType extends BaseType {
-  id?: string
-  specificUse?: string
-  /** Institution Name: in an Address */
-  institution?: InstitutionType[]
+interface PublisherName extends Base {
+  type: 'publisherName'
+  properties: {
+    id?: string
+    specificUse?: string
+  } /** Institution Name: in an Address */
+  institution?: Institution[]
   /** Institution Wrapper */
-  institutionWrap?: InstitutionWrapType[]
-}
-interface PublisherNameType extends _PublisherNameType {
-  constructor: { new (): PublisherNameType }
+  institutionWrap?: InstitutionWrap[]
 }
 
-interface _PublisherType extends BaseType {
-  contentType?: string
-  id?: string
-  /** Publisher's Location */
-  publisherLoc?: PublisherLocType[]
+interface Publisher extends Base {
+  type: 'publisher'
+  properties: {
+    contentType?: string
+    id?: string
+  } /** Publisher's Location */
+  publisherLoc?: PublisherLoc[]
   /** Publisher's Name */
-  publisherName: PublisherNameType[]
-}
-interface PublisherType extends _PublisherType {
-  constructor: { new (): PublisherType }
+  publisherName: PublisherName[]
 }
 
-interface _QuestionPreambleType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Address/Contact Information */
-  address?: AddressType[]
+interface QuestionPreamble extends Base {
+  type: 'questionPreamble'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Address/Contact Information */
+  address?: Address[]
   /** Alternate Title */
-  altTitle?: AltTitleType[]
+  altTitle?: AltTitle[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Answer Elements */
-  answer?: AnswerType[]
+  answer?: Answer[]
   /** Answer Set */
-  answerSet?: AnswerSetType[]
+  answerSet?: AnswerSet[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Block-Level Alternatives For Processing */
-  blockAlternatives?: BlockAlternativesType[]
+  blockAlternatives?: BlockAlternatives[]
   /** Boxed Text */
-  boxedText?: BoxedTextType[]
+  boxedText?: BoxedText[]
   /** Chemical Structure Wrapper */
-  chemStructwrap?: ChemStructwrapType[]
+  chemStructwrap?: ChemStructwrap[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote?: DispQuoteType[]
+  dispQuote?: DispQuote[]
   /** Explanation */
-  explanation?: ExplanationType[]
+  explanation?: Explanation[]
   /** Figure */
-  fig?: FigType[]
+  fig?: Fig[]
   /** Figure Group */
-  figGroup?: FigGroupType[]
+  figGroup?: FigGroup[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** List */
-  list?: ListType[]
+  list?: List[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Paragraph */
-  p?: PType[]
+  p?: P[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Question */
-  question?: QuestionType[]
+  question?: Question[]
   /** Question Wrap */
-  questionWrap?: QuestionWrapType[]
+  questionWrap?: QuestionWrap[]
   /** Question Wrap Group */
-  questionWrapgroup?: QuestionWrapgroupType[]
+  questionWrapgroup?: QuestionWrapgroup[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Section */
-  sec?: SecType[]
+  sec?: Sec[]
   /** Speech */
-  speech?: SpeechType[]
+  speech?: Speech[]
   /** Statement, Formal */
-  statement?: StatementType[]
+  statement?: Statement[]
   /** Article Subtitle */
-  subtitle?: SubtitleType[]
+  subtitle?: Subtitle[]
   /** Supplementary Material */
-  supplementaryMaterial?: SupplementaryMaterialType[]
+  supplementaryMaterial?: SupplementaryMaterial[]
   /** Table Wrapper */
-  tableWrap?: TableWrapType[]
+  tableWrap?: TableWrap[]
   /** Table Wrapper Group */
-  tableWrapgroup?: TableWrapgroupType[]
+  tableWrapgroup?: TableWrapgroup[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Title */
-  title?: TitleType
+  title?: Title
   /** Verse Form For Poetry */
-  verseGroup?: VerseGroupType[]
-}
-interface QuestionPreambleType extends _QuestionPreambleType {
-  constructor: { new (): QuestionPreambleType }
+  verseGroup?: VerseGroup[]
 }
 
-interface _QuestionType extends BaseType {
-  contentType?: string
-  id?: string
-  questionResponsetype?: QuestionTypeQuestionResponsetypeType
-  specificUse?: string
-  /** Address/Contact Information */
-  address: AddressType[]
+interface Question extends Base {
+  type: 'question'
+  properties: {
+    contentType?: string
+    id?: string
+
+    specificUse?: string
+  }
+  questionResponsetype?: QuestionTypeQuestionResponsetype /** Address/Contact Information */
+  address: Address[]
   /** Alternate Title */
-  altTitle?: AltTitleType[]
+  altTitle?: AltTitle[]
   /** Alternatives For Processing */
-  alternatives: AlternativesType[]
+  alternatives: Alternatives[]
   /** Answer Elements */
-  answer: AnswerType[]
+  answer: Answer[]
   /** Answer Set */
-  answerSet: AnswerSetType[]
+  answerSet: AnswerSet[]
   /** Array (Simple Tabular Array) */
-  array: ArrayType[]
+  array: Array[]
   /** Block-Level Alternatives For Processing */
-  blockAlternatives: BlockAlternativesType[]
+  blockAlternatives: BlockAlternatives[]
   /** Boxed Text */
-  boxedText: BoxedTextType[]
+  boxedText: BoxedText[]
   /** Chemical Structure Wrapper */
-  chemStructwrap: ChemStructwrapType[]
+  chemStructwrap: ChemStructwrap[]
   /** Code Text */
-  code: CodeType[]
+  code: Code[]
   /** Definition List */
-  defList: DefListType[]
+  defList: DefList[]
   /** Formula, Display */
-  dispFormula: DispFormulaType[]
+  dispFormula: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup: DispFormulagroupType[]
+  dispFormulagroup: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote: DispQuoteType[]
+  dispQuote: DispQuote[]
   /** Explanation */
-  explanation: ExplanationType[]
+  explanation: Explanation[]
   /** Figure */
-  fig: FigType[]
+  fig: Fig[]
   /** Figure Group */
-  figGroup: FigGroupType[]
+  figGroup: FigGroup[]
   /** Footnote Group */
-  fnGroup?: FnGroupType[]
+  fnGroup?: FnGroup[]
   /** Glossary Elements */
-  glossary?: GlossaryType[]
+  glossary?: Glossary[]
   /** Graphic */
-  graphic: GraphicType[]
+  graphic: Graphic[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** List */
-  list: ListType[]
+  list: List[]
   /** Media Object */
-  media: MediaType[]
+  media: Media[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Option Elements */
-  option?: OptionType[]
+  option?: Option[]
   /** Paragraph */
-  p: PType[]
+  p: P[]
   /** Preformatted Text */
-  preformat: PreformatType[]
+  preformat: Preformat[]
   /** Question */
-  question: QuestionType[]
+  question: Question[]
   /** Question Wrap */
-  questionWrap: QuestionWrapType[]
+  questionWrap: QuestionWrap[]
   /** Question Wrap Group */
-  questionWrapgroup: QuestionWrapgroupType[]
+  questionWrapgroup: QuestionWrapgroup[]
   /** Reference List (Bibliographic Reference List) */
-  refList?: RefListType[]
+  refList?: RefList[]
   /** Related Article Information */
-  relatedArticle: RelatedArticleType[]
+  relatedArticle: RelatedArticle[]
   /** Related Object Information */
-  relatedObject: RelatedObjectType[]
+  relatedObject: RelatedObject[]
   /** Section */
-  sec: SecType[]
+  sec: Sec[]
   /** Section Metadata */
-  secMeta?: SecMetaType
+  secMeta?: SecMeta
   /** Speech */
-  speech: SpeechType[]
+  speech: Speech[]
   /** Statement, Formal */
-  statement: StatementType[]
+  statement: Statement[]
   /** Article Subtitle */
-  subtitle?: SubtitleType[]
+  subtitle?: Subtitle[]
   /** Supplementary Material */
-  supplementaryMaterial: SupplementaryMaterialType[]
+  supplementaryMaterial: SupplementaryMaterial[]
   /** Table Wrapper */
-  tableWrap: TableWrapType[]
+  tableWrap: TableWrap[]
   /** Table Wrapper Group */
-  tableWrapgroup: TableWrapgroupType[]
+  tableWrapgroup: TableWrapgroup[]
   /** Tex Math Equation */
-  texMath: TexMathType[]
+  texMath: TexMath[]
   /** Title */
-  title?: TitleType
+  title?: Title
   /** Verse Form For Poetry */
-  verseGroup: VerseGroupType[]
-}
-interface QuestionType extends _QuestionType {
-  constructor: { new (): QuestionType }
+  verseGroup: VerseGroup[]
 }
 
-type QuestionTypeQuestionResponsetypeType =
+type QuestionTypeQuestionResponsetype =
   | 'essay'
   | 'fill-in-the-blank'
   | 'multi-select'
   | 'multiple-choice'
   | 'short-answer'
   | 'true-false'
-interface _QuestionTypeQuestionResponsetypeType extends Primitive._string {
-  content: QuestionTypeQuestionResponsetypeType
+interface _QuestionTypeQuestionResponsetype extends Primitive._string {
+  content: QuestionTypeQuestionResponsetype
 }
 
-interface _QuestionWrapgroupType extends BaseType {
-  audience?: string
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Alternate Title */
-  altTitle?: AltTitleType[]
+interface QuestionWrapgroup extends Base {
+  type: 'questionWrapgroup'
+  properties: {
+    audience?: string
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Alternate Title */
+  altTitle?: AltTitle[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Question Preamble */
-  questionPreamble?: QuestionPreambleType
+  questionPreamble?: QuestionPreamble
   /** Question Wrap */
-  questionWrap: QuestionWrapType[]
+  questionWrap: QuestionWrap[]
   /** Article Subtitle */
-  subtitle?: SubtitleType[]
+  subtitle?: Subtitle[]
   /** Title */
-  title?: TitleType
-}
-interface QuestionWrapgroupType extends _QuestionWrapgroupType {
-  constructor: { new (): QuestionWrapgroupType }
+  title?: Title
 }
 
-interface _QuestionWrapType extends BaseType {
-  audience?: string
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Answer Elements */
-  answer?: AnswerType
+interface QuestionWrap extends Base {
+  type: 'questionWrap'
+  properties: {
+    audience?: string
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Answer Elements */
+  answer?: Answer
   /** Answer Set */
-  answerSet?: AnswerSetType
+  answerSet?: AnswerSet
   /** Explanation */
-  explanation?: ExplanationType[]
+  explanation?: Explanation[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Question */
-  question: QuestionType
-}
-interface QuestionWrapType extends _QuestionWrapType {
-  constructor: { new (): QuestionWrapType }
+  question: Question
 }
 
-interface _RbType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Bold */
-  bold?: BoldType[]
+interface Rb extends Base {
+  type: 'rb'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Bold */
+  bold?: Bold[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface RbType extends _RbType {
-  constructor: { new (): RbType }
+  underline?: Underline[]
 }
 
-interface _RefCountType extends BaseType {
-  count: string
-  id?: string
-}
-interface RefCountType extends _RefCountType {
-  constructor: { new (): RefCountType }
+interface RefCount extends Base {
+  type: 'refCount'
+  properties: {
+    count: string
+    id?: string
+  }
 }
 
-interface _RefListType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Address/Contact Information */
-  address?: AddressType[]
+interface RefList extends Base {
+  type: 'refList'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Address/Contact Information */
+  address?: Address[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Answer Elements */
-  answer?: AnswerType[]
+  answer?: Answer[]
   /** Answer Set */
-  answerSet?: AnswerSetType[]
+  answerSet?: AnswerSet[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Block-Level Alternatives For Processing */
-  blockAlternatives?: BlockAlternativesType[]
+  blockAlternatives?: BlockAlternatives[]
   /** Boxed Text */
-  boxedText?: BoxedTextType[]
+  boxedText?: BoxedText[]
   /** Chemical Structure Wrapper */
-  chemStructwrap?: ChemStructwrapType[]
+  chemStructwrap?: ChemStructwrap[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote?: DispQuoteType[]
+  dispQuote?: DispQuote[]
   /** Explanation */
-  explanation?: ExplanationType[]
+  explanation?: Explanation[]
   /** Figure */
-  fig?: FigType[]
+  fig?: Fig[]
   /** Figure Group */
-  figGroup?: FigGroupType[]
+  figGroup?: FigGroup[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** List */
-  list?: ListType[]
+  list?: List[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Paragraph */
-  p?: PType[]
+  p?: P[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Question */
-  question?: QuestionType[]
+  question?: Question[]
   /** Question Wrap */
-  questionWrap?: QuestionWrapType[]
+  questionWrap?: QuestionWrap[]
   /** Question Wrap Group */
-  questionWrapgroup?: QuestionWrapgroupType[]
+  questionWrapgroup?: QuestionWrapgroup[]
   /** Reference Item */
-  ref?: RefType[]
+  ref?: Ref[]
   /** Reference List (Bibliographic Reference List) */
-  refList?: RefListType[]
+  refList?: RefList[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Speech */
-  speech?: SpeechType[]
+  speech?: Speech[]
   /** Statement, Formal */
-  statement?: StatementType[]
+  statement?: Statement[]
   /** Supplementary Material */
-  supplementaryMaterial?: SupplementaryMaterialType[]
+  supplementaryMaterial?: SupplementaryMaterial[]
   /** Table Wrapper */
-  tableWrap?: TableWrapType[]
+  tableWrap?: TableWrap[]
   /** Table Wrapper Group */
-  tableWrapgroup?: TableWrapgroupType[]
+  tableWrapgroup?: TableWrapgroup[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Title */
-  title?: TitleType
+  title?: Title
   /** Verse Form For Poetry */
-  verseGroup?: VerseGroupType[]
-}
-interface RefListType extends _RefListType {
-  constructor: { new (): RefListType }
+  verseGroup?: VerseGroup[]
 }
 
-interface _RefType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Citation Alternatives */
-  citationAlternatives: CitationAlternativesType[]
+interface Ref extends Base {
+  type: 'ref'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Citation Alternatives */
+  citationAlternatives: CitationAlternatives[]
   /** Element Citation */
-  elementCitation: ElementCitationType[]
+  elementCitation: ElementCitation[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** Mixed Citation */
-  mixedCitation: MixedCitationType[]
+  mixedCitation: MixedCitation[]
   /** Nlm Citation Model */
-  nlmCitation: NlmCitationType[]
+  nlmCitation: NlmCitation[]
   /** Note in a Reference List */
-  note: NoteType[]
-}
-interface RefType extends _RefType {
-  constructor: { new (): RefType }
+  note: Note[]
 }
 
-interface _RelatedArticleType extends BaseType {
+interface RelatedArticle extends Base {
+  type: 'relatedArticle'
   $elocationId?: string
-  extLinktype?: string
-  hreflang?: string
-  id?: string
-  $issue?: string
-  $journalId?: string
-  journalIdtype?: string
-  page?: string
-  relatedArticletype: string
-  specificUse?: string
-  vol?: string
-  /** Annotation in a Citation */
-  annotation?: AnnotationType[]
+  properties: {
+    extLinktype?: string
+    hreflang?: string
+    id?: string
+
+    $issue?: string
+    $journalId?: string
+    journalIdtype?: string
+    page?: string
+    relatedArticletype: string
+    specificUse?: string
+    vol?: string
+  } /** Annotation in a Citation */
+  annotation?: Annotation[]
   /** Article Title */
-  articleTitle?: ArticleTitleType[]
+  articleTitle?: ArticleTitle[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chapter Title in a Citation */
-  chapterTitle?: ChapterTitleType[]
+  chapterTitle?: ChapterTitle[]
   /** Collaborative (Group) Author */
-  collab?: CollabType[]
+  collab?: Collab[]
   /** Collaboration Alternatives */
-  collabAlternatives?: CollabAlternativesType[]
+  collabAlternatives?: CollabAlternatives[]
   /** Comment in a Citation */
-  comment?: CommentType[]
+  comment?: Comment[]
   /** Conference Acronym */
-  confAcronym?: ConfAcronymType[]
+  confAcronym?: ConfAcronym[]
   /** Conference Date */
-  confDate?: ConfDateType[]
+  confDate?: ConfDate[]
   /** Conference Location */
-  confLoc?: ConfLocType[]
+  confLoc?: ConfLoc[]
   /** Conference Name */
-  confName?: ConfNameType[]
+  confName?: ConfName[]
   /** Conference Sponsor */
-  confSponsor?: ConfSponsorType[]
+  confSponsor?: ConfSponsor[]
   /** Data Title in a Citation */
-  dataTitle?: DataTitleType[]
+  dataTitle?: DataTitle[]
   /** Date */
-  date?: DateType[]
+  date?: Date[]
   /** Date Inside Citation */
-  dateIncitation?: DateIncitationType[]
+  dateIncitation?: DateIncitation[]
   /** Day */
-  day?: DayType[]
+  day?: Day[]
   /** Edition Statement, Cited */
-  edition?: EditionType[]
+  edition?: Edition[]
   /** Electronic Location Identifier */
-  elocationId?: ElocationIdType[]
+  elocationId?: ElocationId[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** Et Al */
-  etal?: EtalType[]
+  etal?: Etal[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** First Page */
-  fpage?: FpageType[]
+  fpage?: Fpage[]
   /** Government Report, Cited */
-  gov?: GovType[]
+  gov?: Gov[]
   /** Institution Name: in an Address */
-  institution?: InstitutionType[]
+  institution?: Institution[]
   /** Institution Wrapper */
-  institutionWrap?: InstitutionWrapType[]
+  institutionWrap?: InstitutionWrap[]
   /** Isbn */
-  isbn?: IsbnType[]
+  isbn?: Isbn[]
   /** Issn */
-  issn?: IssnType[]
+  issn?: Issn[]
   /** Issn Linking */
-  issnL?: IssnLType[]
+  issnL?: IssnL[]
   /** Issue Number */
-  issue?: IssueType[]
+  issue?: Issue[]
   /** Issue Identifier */
-  issueId?: IssueIdType[]
+  issueId?: IssueId[]
   /** Issue Part */
-  issuePart?: IssuePartType[]
+  issuePart?: IssuePart[]
   /** Issue Title */
-  issueTitle?: IssueTitleType[]
+  issueTitle?: IssueTitle[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Journal Identifier */
-  journalId?: JournalIdType[]
+  journalId?: JournalId[]
   /** Last Page */
-  lpage?: LpageType[]
+  lpage?: Lpage[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Month */
-  month?: MonthType[]
+  month?: Month[]
   /** Name of Person (Structured) */
-  name?: NameType[]
+  name?: Name[]
   /** Name Alternatives */
-  nameAlternatives?: NameAlternativesType[]
+  nameAlternatives?: NameAlternatives[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Page Ranges */
-  pageRange?: PageRangeType[]
+  pageRange?: PageRange[]
   /** Part Title in a Citation */
-  partTitle?: PartTitleType[]
+  partTitle?: PartTitle[]
   /** Patent Number, Cited */
-  patent?: PatentType[]
+  patent?: Patent[]
   /** Person Group For a Cited Publication */
-  personGroup?: PersonGroupType[]
+  personGroup?: PersonGroup[]
   /** Publication Identifier For a Cited Publication */
-  pubId?: PubIdType[]
+  pubId?: PubId[]
   /** Publisher's Location */
-  publisherLoc?: PublisherLocType[]
+  publisherLoc?: PublisherLoc[]
   /** Publisher's Name */
-  publisherName?: PublisherNameType[]
+  publisherName?: PublisherName[]
   /** Role or Function Title of Contributor */
-  role?: RoleType[]
+  role?: Role[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Season */
-  season?: SeasonType[]
+  season?: Season[]
   /** Series */
-  series?: SeriesType[]
+  series?: Series[]
   /** Size */
-  size?: SizeType[]
+  size?: Size[]
   /** Source */
-  source?: SourceType[]
+  source?: Source[]
   /** Standard, Cited */
-  std?: StdType[]
+  std?: Std[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Date As a String */
-  stringDate?: StringDateType[]
+  stringDate?: StringDate[]
   /** Name of Person (Unstructured) */
-  stringName?: StringNameType[]
+  stringName?: StringName[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Supplement */
-  supplement?: SupplementType[]
+  supplement?: Supplement[]
   /** Translated Source */
-  transSource?: TransSourceType[]
+  transSource?: TransSource[]
   /** Translated Title */
-  transTitle?: TransTitleType[]
+  transTitle?: TransTitle[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** Version Statement, Cited */
-  version?: VersionType[]
+  version?: Version[]
   /** Volume Number */
-  volume?: VolumeType[]
+  volume?: Volume[]
   /** Volume Identifier */
-  volumeId?: VolumeIdType[]
+  volumeId?: VolumeId[]
   /** Volume Series */
-  volumeSeries?: VolumeSeriesType[]
+  volumeSeries?: VolumeSeries[]
   /** Year */
-  year?: YearType[]
-}
-interface RelatedArticleType extends _RelatedArticleType {
-  constructor: { new (): RelatedArticleType }
+  year?: Year[]
 }
 
-interface _RelatedObjectType extends BaseType {
-  contentType?: string
-  documentId?: string
-  documentIdtype?: string
-  documentType?: string
-  extLinktype?: string
-  hreflang?: string
-  id?: string
-  linkType?: string
-  $objectId?: string
-  objectIdtype?: string
-  objectType?: string
-  sourceId?: string
-  sourceIdtype?: string
-  sourceType?: string
-  specificUse?: string
-  /** Annotation in a Citation */
-  annotation?: AnnotationType[]
+interface RelatedObject extends Base {
+  type: 'relatedObject'
+  properties: {
+    contentType?: string
+    documentId?: string
+    documentIdtype?: string
+    documentType?: string
+    extLinktype?: string
+    hreflang?: string
+    id?: string
+    linkType?: string
+
+    objectIdtype?: string
+    objectType?: string
+    sourceId?: string
+    sourceIdtype?: string
+    sourceType?: string
+    specificUse?: string
+  }
+  $objectId?: string /** Annotation in a Citation */
+  annotation?: Annotation[]
   /** Article Title */
-  articleTitle?: ArticleTitleType[]
+  articleTitle?: ArticleTitle[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chapter Title in a Citation */
-  chapterTitle?: ChapterTitleType[]
+  chapterTitle?: ChapterTitle[]
   /** Collaborative (Group) Author */
-  collab?: CollabType[]
+  collab?: Collab[]
   /** Collaboration Alternatives */
-  collabAlternatives?: CollabAlternativesType[]
+  collabAlternatives?: CollabAlternatives[]
   /** Comment in a Citation */
-  comment?: CommentType[]
+  comment?: Comment[]
   /** Conference Acronym */
-  confAcronym?: ConfAcronymType[]
+  confAcronym?: ConfAcronym[]
   /** Conference Date */
-  confDate?: ConfDateType[]
+  confDate?: ConfDate[]
   /** Conference Location */
-  confLoc?: ConfLocType[]
+  confLoc?: ConfLoc[]
   /** Conference Name */
-  confName?: ConfNameType[]
+  confName?: ConfName[]
   /** Conference Sponsor */
-  confSponsor?: ConfSponsorType[]
+  confSponsor?: ConfSponsor[]
   /** Data Title in a Citation */
-  dataTitle?: DataTitleType[]
+  dataTitle?: DataTitle[]
   /** Date */
-  date?: DateType[]
+  date?: Date[]
   /** Date Inside Citation */
-  dateIncitation?: DateIncitationType[]
+  dateIncitation?: DateIncitation[]
   /** Day */
-  day?: DayType[]
+  day?: Day[]
   /** Edition Statement, Cited */
-  edition?: EditionType[]
+  edition?: Edition[]
   /** Electronic Location Identifier */
-  elocationId?: ElocationIdType[]
+  elocationId?: ElocationId[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** Et Al */
-  etal?: EtalType[]
+  etal?: Etal[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** First Page */
-  fpage?: FpageType[]
+  fpage?: Fpage[]
   /** Government Report, Cited */
-  gov?: GovType[]
+  gov?: Gov[]
   /** Institution Name: in an Address */
-  institution?: InstitutionType[]
+  institution?: Institution[]
   /** Institution Wrapper */
-  institutionWrap?: InstitutionWrapType[]
+  institutionWrap?: InstitutionWrap[]
   /** Isbn */
-  isbn?: IsbnType[]
+  isbn?: Isbn[]
   /** Issn */
-  issn?: IssnType[]
+  issn?: Issn[]
   /** Issn Linking */
-  issnL?: IssnLType[]
+  issnL?: IssnL[]
   /** Issue Number */
-  issue?: IssueType[]
+  issue?: Issue[]
   /** Issue Identifier */
-  issueId?: IssueIdType[]
+  issueId?: IssueId[]
   /** Issue Part */
-  issuePart?: IssuePartType[]
+  issuePart?: IssuePart[]
   /** Issue Title */
-  issueTitle?: IssueTitleType[]
+  issueTitle?: IssueTitle[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Last Page */
-  lpage?: LpageType[]
+  lpage?: Lpage[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Month */
-  month?: MonthType[]
+  month?: Month[]
   /** Name of Person (Structured) */
-  name?: NameType[]
+  name?: Name[]
   /** Name Alternatives */
-  nameAlternatives?: NameAlternativesType[]
+  nameAlternatives?: NameAlternatives[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Page Ranges */
-  pageRange?: PageRangeType[]
+  pageRange?: PageRange[]
   /** Part Title in a Citation */
-  partTitle?: PartTitleType[]
+  partTitle?: PartTitle[]
   /** Patent Number, Cited */
-  patent?: PatentType[]
+  patent?: Patent[]
   /** Person Group For a Cited Publication */
-  personGroup?: PersonGroupType[]
+  personGroup?: PersonGroup[]
   /** Publication Identifier For a Cited Publication */
-  pubId?: PubIdType[]
+  pubId?: PubId[]
   /** Publisher's Location */
-  publisherLoc?: PublisherLocType[]
+  publisherLoc?: PublisherLoc[]
   /** Publisher's Name */
-  publisherName?: PublisherNameType[]
+  publisherName?: PublisherName[]
   /** Role or Function Title of Contributor */
-  role?: RoleType[]
+  role?: Role[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Season */
-  season?: SeasonType[]
+  season?: Season[]
   /** Series */
-  series?: SeriesType[]
+  series?: Series[]
   /** Size */
-  size?: SizeType[]
+  size?: Size[]
   /** Source */
-  source?: SourceType[]
+  source?: Source[]
   /** Standard, Cited */
-  std?: StdType[]
+  std?: Std[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Date As a String */
-  stringDate?: StringDateType[]
+  stringDate?: StringDate[]
   /** Name of Person (Unstructured) */
-  stringName?: StringNameType[]
+  stringName?: StringName[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Supplement */
-  supplement?: SupplementType[]
+  supplement?: Supplement[]
   /** Translated Source */
-  transSource?: TransSourceType[]
+  transSource?: TransSource[]
   /** Translated Title */
-  transTitle?: TransTitleType[]
+  transTitle?: TransTitle[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** Version Statement, Cited */
-  version?: VersionType[]
+  version?: Version[]
   /** Volume Number */
-  volume?: VolumeType[]
+  volume?: Volume[]
   /** Volume Identifier */
-  volumeId?: VolumeIdType[]
+  volumeId?: VolumeId[]
   /** Volume Series */
-  volumeSeries?: VolumeSeriesType[]
+  volumeSeries?: VolumeSeries[]
   /** Year */
-  year?: YearType[]
-}
-interface RelatedObjectType extends _RelatedObjectType {
-  constructor: { new (): RelatedObjectType }
+  year?: Year[]
 }
 
-interface _ResourceGroupType extends BaseType {
-  id?: string
-  specificUse?: string
-  /** Resource Name */
-  resourceName: ResourceNameType[]
+interface ResourceGroup extends Base {
+  type: 'resourceGroup'
+  properties: {
+    id?: string
+    specificUse?: string
+  } /** Resource Name */
+  resourceName: ResourceName[]
   /** Resource Wrap */
-  resourceWrap: ResourceWrapType[]
-}
-interface ResourceGroupType extends _ResourceGroupType {
-  constructor: { new (): ResourceGroupType }
+  resourceWrap: ResourceWrap[]
 }
 
-interface _ResourceIdType extends BaseType {
-  assigningAuthority?: string
-  contentType?: string
-  id?: string
-  resourceIdtype?: string
-  specificUse?: string
-  vocab?: string
-  vocabIdentifier?: string
-}
-interface ResourceIdType extends _ResourceIdType {
-  constructor: { new (): ResourceIdType }
+interface ResourceId extends Base {
+  type: 'resourceId'
+  properties: {
+    assigningAuthority?: string
+    contentType?: string
+    id?: string
+    resourceIdtype?: string
+    specificUse?: string
+    vocab?: string
+    vocabIdentifier?: string
+  }
 }
 
-interface _ResourceNameType extends BaseType {
-  contentType?: string
-  hreflang?: string
-  id?: string
-  specificUse?: string
-  /** Bold */
-  bold?: BoldType[]
+interface ResourceName extends Base {
+  type: 'resourceName'
+  properties: {
+    contentType?: string
+    hreflang?: string
+    id?: string
+    specificUse?: string
+  } /** Bold */
+  bold?: Bold[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface ResourceNameType extends _ResourceNameType {
-  constructor: { new (): ResourceNameType }
+  underline?: Underline[]
 }
 
-interface _ResourceWrapType extends BaseType {
-  id?: string
-  /** Resource Identifier */
-  resourceId?: ResourceIdType[]
+interface ResourceWrap extends Base {
+  type: 'resourceWrap'
+  properties: {
+    id?: string
+  } /** Resource Identifier */
+  resourceId?: ResourceId[]
   /** Resource Name */
-  resourceName: ResourceNameType
-}
-interface ResourceWrapType extends _ResourceWrapType {
-  constructor: { new (): ResourceWrapType }
+  resourceName: ResourceName
 }
 
-interface _ResponseType extends BaseType {
-  id?: string
-  responseType?: string
-  specificUse?: string
-  /** Back Matter */
-  back?: BackType
+interface Response extends Base {
+  type: 'response'
+  properties: {
+    id?: string
+    responseType?: string
+    specificUse?: string
+  } /** Back Matter */
+  back?: Back
   /** Body of the Article */
-  body?: BodyType
+  body?: Body
   /** Floats Group */
-  floatsGroup?: FloatsGroupType
+  floatsGroup?: FloatsGroup
   /** Front Matter */
-  front: FrontType
+  front: Front
   /** Stub Front Metadata */
-  frontStub: FrontStubType
+  frontStub: FrontStub
   /** Processing Metadata Model */
-  processingMeta?: ProcessingMetaType
-}
-interface ResponseType extends _ResponseType {
-  constructor: { new (): ResponseType }
+  processingMeta?: ProcessingMeta
 }
 
-interface _RestrictedByType extends BaseType {
-  assigningAuthority?: string
-  designator?: string
-  hreflang?: string
-  id?: string
-  vocab?: string
-  vocabIdentifier?: string
-  vocabTerm?: string
-  vocabTermidentifier?: string
-}
-interface RestrictedByType extends _RestrictedByType {
-  constructor: { new (): RestrictedByType }
+interface RestrictedBy extends Base {
+  type: 'restrictedBy'
+  properties: {
+    assigningAuthority?: string
+    designator?: string
+    hreflang?: string
+    id?: string
+    vocab?: string
+    vocabIdentifier?: string
+    vocabTerm?: string
+    vocabTermidentifier?: string
+  }
 }
 
-interface _RoleType extends BaseType {
-  assigningAuthority?: string
-  contentType?: string
-  degreeContribution?: string
-  id?: string
-  specificUse?: string
-  vocab?: string
-  vocabIdentifier?: string
-  vocabTerm?: string
-  vocabTermidentifier?: string
-  /** Bold */
-  bold?: BoldType[]
+interface Role extends Base {
+  type: 'role'
+  properties: {
+    assigningAuthority?: string
+    contentType?: string
+    degreeContribution?: string
+    id?: string
+    specificUse?: string
+    vocab?: string
+    vocabIdentifier?: string
+    vocabTerm?: string
+    vocabTermidentifier?: string
+  } /** Bold */
+  bold?: Bold[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface RoleType extends _RoleType {
-  constructor: { new (): RoleType }
+  underline?: Underline[]
 }
 
-interface _RomanType extends BaseType {
-  id?: string
-  specificUse?: string
-  toggle?: RomanTypeToggleType
+interface Roman extends Base {
+  type: 'roman'
+  properties: {
+    id?: string
+    specificUse?: string
+  }
+  toggle?: RomanTypeToggle
   /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface RomanType extends _RomanType {
-  constructor: { new (): RomanType }
+  xref?: Xref[]
 }
 
-type RomanTypeToggleType = 'no' | 'yes'
-interface _RomanTypeToggleType extends Primitive._string {
-  content: RomanTypeToggleType
+type RomanTypeToggle = 'no' | 'yes'
+interface _RomanTypeToggle extends Primitive._string {
+  content: RomanTypeToggle
 }
 
-interface _RpType extends BaseType {
-  id?: string
-}
-interface RpType extends _RpType {
-  constructor: { new (): RpType }
-}
-
-interface _RtType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface RtType extends _RtType {
-  constructor: { new (): RtType }
+interface Rp extends Base {
+  type: 'rp'
+  properties: {
+    id?: string
+  }
 }
 
-interface _RubyType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Ruby Base */
-  rb: RbType
+interface Rt extends Base {
+  type: 'rt'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
+}
+
+interface Ruby extends Base {
+  type: 'ruby'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Ruby Base */
+  rb: Rb
   /** Ruby Textual Annotation */
-  rt: RtType
-}
-interface RubyType extends _RubyType {
-  constructor: { new (): RubyType }
+  rt: Rt
 }
 
-interface _SansSerifType extends BaseType {
-  id?: string
-  specificUse?: string
-  toggle?: SansSerifTypeToggleType
+interface SansSerif extends Base {
+  type: 'sansSerif'
+  properties: {
+    id?: string
+    specificUse?: string
+  }
+  toggle?: SansSerifTypeToggle
   /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface SansSerifType extends _SansSerifType {
-  constructor: { new (): SansSerifType }
+  xref?: Xref[]
 }
 
-type SansSerifTypeToggleType = 'no' | 'yes'
-interface _SansSerifTypeToggleType extends Primitive._string {
-  content: SansSerifTypeToggleType
+type SansSerifTypeToggle = 'no' | 'yes'
+interface _SansSerifTypeToggle extends Primitive._string {
+  content: SansSerifTypeToggle
 }
 
-interface _ScType extends BaseType {
-  id?: string
-  specificUse?: string
-  toggle?: ScTypeToggleType
+interface Sc extends Base {
+  type: 'sc'
+  properties: {
+    id?: string
+    specificUse?: string
+  }
+  toggle?: ScTypeToggle
   /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface ScType extends _ScType {
-  constructor: { new (): ScType }
+  xref?: Xref[]
 }
 
-type ScTypeToggleType = 'no' | 'yes'
-interface _ScTypeToggleType extends Primitive._string {
-  content: ScTypeToggleType
+type ScTypeToggle = 'no' | 'yes'
+interface _ScTypeToggle extends Primitive._string {
+  content: ScTypeToggle
 }
 
-interface _SeasonType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface SeasonType extends _SeasonType {
-  constructor: { new (): SeasonType }
+interface Season extends Base {
+  type: 'season'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _SecMetaType extends BaseType {
-  id?: string
-  /** Abstract */
-  abstract?: AbstractType[]
+interface SecMeta extends Base {
+  type: 'secMeta'
+  properties: {
+    id?: string
+  } /** Abstract */
+  abstract?: Abstract[]
   /** Contributor Group */
-  contribGroup?: ContribGroupType[]
+  contribGroup?: ContribGroup[]
   /** Keyword Group */
-  kwdGroup?: KwdGroupType[]
+  kwdGroup?: KwdGroup[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Permissions */
-  permissions?: PermissionsType
-  subjGroup?: SubjGroupType[]
-}
-interface SecMetaType extends _SecMetaType {
-  constructor: { new (): SecMetaType }
+  permissions?: Permissions
+  subjGroup?: SubjGroup[]
 }
 
-interface _SecType extends BaseType {
-  id?: string
-  secType?: string
-  specificUse?: string
-  /** Address/Contact Information */
-  address?: AddressType[]
+interface Sec extends Base {
+  type: 'sec'
+  properties: {
+    id?: string
+    secType?: string
+    specificUse?: string
+  } /** Address/Contact Information */
+  address?: Address[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Answer Elements */
-  answer?: AnswerType[]
+  answer?: Answer[]
   /** Answer Set */
-  answerSet?: AnswerSetType[]
+  answerSet?: AnswerSet[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Block-Level Alternatives For Processing */
-  blockAlternatives?: BlockAlternativesType[]
+  blockAlternatives?: BlockAlternatives[]
   /** Boxed Text */
-  boxedText?: BoxedTextType[]
+  boxedText?: BoxedText[]
   /** Chemical Structure Wrapper */
-  chemStructwrap?: ChemStructwrapType[]
+  chemStructwrap?: ChemStructwrap[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote?: DispQuoteType[]
+  dispQuote?: DispQuote[]
   /** Explanation */
-  explanation?: ExplanationType[]
+  explanation?: Explanation[]
   /** Figure */
-  fig?: FigType[]
+  fig?: Fig[]
   /** Figure Group */
-  figGroup?: FigGroupType[]
+  figGroup?: FigGroup[]
   /** Footnote Group */
-  fnGroup?: FnGroupType[]
+  fnGroup?: FnGroup[]
   /** Glossary Elements */
-  glossary?: GlossaryType[]
+  glossary?: Glossary[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Label of a Figure, Reference, Etc. */
-  label: LabelType
+  label: Label
   /** List */
-  list?: ListType[]
+  list?: List[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Paragraph */
-  p?: PType[]
+  p?: P[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Question */
-  question?: QuestionType[]
+  question?: Question[]
   /** Question Wrap */
-  questionWrap?: QuestionWrapType[]
+  questionWrap?: QuestionWrap[]
   /** Question Wrap Group */
-  questionWrapgroup?: QuestionWrapgroupType[]
+  questionWrapgroup?: QuestionWrapgroup[]
   /** Reference List (Bibliographic Reference List) */
-  refList?: RefListType[]
+  refList?: RefList[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Section */
-  sec?: SecType[]
+  sec?: Sec[]
   /** Section Metadata */
-  secMeta?: SecMetaType
+  secMeta?: SecMeta
   /** Speech */
-  speech?: SpeechType[]
+  speech?: Speech[]
   /** Statement, Formal */
-  statement?: StatementType[]
+  statement?: Statement[]
   /** Supplementary Material */
-  supplementaryMaterial?: SupplementaryMaterialType[]
+  supplementaryMaterial?: SupplementaryMaterial[]
   /** Table Wrapper */
-  tableWrap?: TableWrapType[]
+  tableWrap?: TableWrap[]
   /** Table Wrapper Group */
-  tableWrapgroup?: TableWrapgroupType[]
+  tableWrapgroup?: TableWrapgroup[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Title */
-  title: TitleType[]
+  title: Title[]
   /** Verse Form For Poetry */
-  verseGroup?: VerseGroupType[]
-}
-interface SecType extends _SecType {
-  constructor: { new (): SecType }
+  verseGroup?: VerseGroup[]
 }
 
-interface _SeeAlsoType extends BaseType {
-  contentType?: string
-  id?: string
-  rid?: string
-  specificUse?: string
-  vocab?: string
-  vocabIdentifier?: string
-  vocabTerm?: string
-  vocabTermidentifier?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface SeeAlso extends Base {
+  type: 'seeAlso'
+  properties: {
+    contentType?: string
+    id?: string
+    rid?: string
+    specificUse?: string
+    vocab?: string
+    vocabIdentifier?: string
+    vocabTerm?: string
+    vocabTermidentifier?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface SeeAlsoType extends _SeeAlsoType {
-  constructor: { new (): SeeAlsoType }
+  xref?: Xref[]
 }
 
-interface _SeeType extends BaseType {
-  contentType?: string
-  id?: string
-  rid?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface See extends Base {
+  type: 'see'
+  properties: {
+    contentType?: string
+    id?: string
+    rid?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface SeeType extends _SeeType {
-  constructor: { new (): SeeType }
+  xref?: Xref[]
 }
 
-interface _SelfUriType extends BaseType {
-  assigningAuthority?: string
-  contentType?: string
-  hreflang?: string
-  id?: string
-  specificUse?: string
-}
-interface SelfUriType extends _SelfUriType {
-  constructor: { new (): SelfUriType }
+interface SelfUri extends Base {
+  type: 'selfUri'
+  properties: {
+    assigningAuthority?: string
+    contentType?: string
+    hreflang?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _SeriesTextType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Bold */
-  bold?: BoldType[]
+interface SeriesText extends Base {
+  type: 'seriesText'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Bold */
+  bold?: Bold[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface SeriesTextType extends _SeriesTextType {
-  constructor: { new (): SeriesTextType }
+  underline?: Underline[]
 }
 
-interface _SeriesTitleType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Bold */
-  bold?: BoldType[]
+interface SeriesTitle extends Base {
+  type: 'seriesTitle'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Bold */
+  bold?: Bold[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface SeriesTitleType extends _SeriesTitleType {
-  constructor: { new (): SeriesTitleType }
+  underline?: Underline[]
 }
 
-interface _SeriesType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Bold */
-  bold?: BoldType[]
+interface Series extends Base {
+  type: 'series'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Bold */
+  bold?: Bold[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface SeriesType extends _SeriesType {
-  constructor: { new (): SeriesType }
+  underline?: Underline[]
 }
 
-interface _SigBlockType extends BaseType {
-  contentType?: string
-  id?: string
-  rid?: string
-  specificUse?: string
-  /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+interface SigBlock extends Base {
+  type: 'sigBlock'
+  properties: {
+    contentType?: string
+    id?: string
+    rid?: string
+    specificUse?: string
+  } /** Alternatives For Processing */
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Line Break */
-  break?: BreakType[]
+  break?: Break[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Signature */
-  sig?: SigType[]
+  sig?: Sig[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface SigBlockType extends _SigBlockType {
-  constructor: { new (): SigBlockType }
+  underline?: Underline[]
 }
 
-interface _SigType extends BaseType {
-  contentType?: string
-  id?: string
-  rid?: string
-  specificUse?: string
-  /** Bold */
-  bold?: BoldType[]
+interface Sig extends Base {
+  type: 'sig'
+  properties: {
+    contentType?: string
+    id?: string
+    rid?: string
+    specificUse?: string
+  } /** Bold */
+  bold?: Bold[]
   /** Line Break */
-  break?: BreakType[]
+  break?: Break[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface SigType extends _SigType {
-  constructor: { new (): SigType }
+  underline?: Underline[]
 }
 
-interface _SizeType extends BaseType {
-  id?: string
-  specificUse?: string
-  units: string
-}
-interface SizeType extends _SizeType {
-  constructor: { new (): SizeType }
+interface Size extends Base {
+  type: 'size'
+  properties: {
+    id?: string
+    specificUse?: string
+    units: string
+  }
 }
 
-interface _SourceType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface Source extends Base {
+  type: 'source'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface SourceType extends _SourceType {
-  constructor: { new (): SourceType }
+  xref?: Xref[]
 }
 
-interface _SpeakerType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Degree(s) */
-  degrees?: DegreesType[]
+interface Speaker extends Base {
+  type: 'speaker'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Degree(s) */
+  degrees?: Degrees[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Given (First) Names */
-  givenNames?: GivenNamesType[]
+  givenNames?: GivenNames[]
   /** Prefix */
-  prefix?: PrefixType[]
+  prefix?: Prefix[]
   /** Suffix */
-  suffix?: SuffixType[]
+  suffix?: Suffix[]
   /** Surname */
-  surname?: SurnameType[]
+  surname?: Surname[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface SpeakerType extends _SpeakerType {
-  constructor: { new (): SpeakerType }
+  xref?: Xref[]
 }
 
-interface _SpeechType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Object Identifier */
-  objectId?: ObjectIdType[]
+interface Speech extends Base {
+  type: 'speech'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Object Identifier */
+  objectId?: ObjectId[]
   /** Paragraph */
-  p: PType[]
+  p: P[]
   /** Speaker */
-  speaker: SpeakerType
-}
-interface SpeechType extends _SpeechType {
-  constructor: { new (): SpeechType }
+  speaker: Speaker
 }
 
-interface _StatementType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Abstract */
-  abstract?: AbstractType[]
+interface Statement extends Base {
+  type: 'statement'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Abstract */
+  abstract?: Abstract[]
   /** Attribution */
-  attrib?: AttribType[]
+  attrib?: Attrib[]
   /** Keyword Group */
-  kwdGroup?: KwdGroupType[]
+  kwdGroup?: KwdGroup[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** Paragraph */
-  p: PType[]
+  p: P[]
   /** Permissions */
-  permissions?: PermissionsType[]
+  permissions?: Permissions[]
   /** Statement, Formal */
-  statement: StatementType[]
-  subjGroup?: SubjGroupType[]
+  statement: Statement[]
+  subjGroup?: SubjGroup[]
   /** Title */
-  title?: TitleType
-}
-interface StatementType extends _StatementType {
-  constructor: { new (): StatementType }
+  title?: Title
 }
 
-interface _StateType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface StateType extends _StateType {
-  constructor: { new (): StateType }
+interface State extends Base {
+  type: 'state'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _StdOrganizationType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Institution Name: in an Address */
-  institution?: InstitutionType[]
+interface StdOrganization extends Base {
+  type: 'stdOrganization'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Institution Name: in an Address */
+  institution?: Institution[]
   /** Institution Wrapper */
-  institutionWrap?: InstitutionWrapType[]
+  institutionWrap?: InstitutionWrap[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
-}
-interface StdOrganizationType extends _StdOrganizationType {
-  constructor: { new (): StdOrganizationType }
+  sup?: Sup[]
 }
 
-interface _StdType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Bold */
-  bold?: BoldType[]
+interface Std extends Base {
+  type: 'std'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Bold */
+  bold?: Bold[]
   /** Day */
-  day?: DayType[]
+  day?: Day[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Month */
-  month?: MonthType[]
+  month?: Month[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Publication Identifier For a Cited Publication */
-  pubId?: PubIdType[]
+  pubId?: PubId[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Source */
-  source?: SourceType[]
+  source?: Source[]
   /** Standards Organization */
-  stdOrganization?: StdOrganizationType[]
+  stdOrganization?: StdOrganization[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Year */
-  year?: YearType[]
-}
-interface StdType extends _StdType {
-  constructor: { new (): StdType }
+  year?: Year[]
 }
 
-interface _StrikeType extends BaseType {
-  id?: string
-  specificUse?: string
-  toggle?: StrikeTypeToggleType
+interface Strike extends Base {
+  type: 'strike'
+  properties: {
+    id?: string
+    specificUse?: string
+  }
+  toggle?: StrikeTypeToggle
   /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface StrikeType extends _StrikeType {
-  constructor: { new (): StrikeType }
+  xref?: Xref[]
 }
 
-type StrikeTypeToggleType = 'no' | 'yes'
-interface _StrikeTypeToggleType extends Primitive._string {
-  content: StrikeTypeToggleType
+type StrikeTypeToggle = 'no' | 'yes'
+interface _StrikeTypeToggle extends Primitive._string {
+  content: StrikeTypeToggle
 }
 
-interface _StringConfType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface StringConf extends Base {
+  type: 'stringConf'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Conference Acronym */
-  confAcronym?: ConfAcronymType[]
+  confAcronym?: ConfAcronym[]
   /** Conference Date */
-  confDate?: ConfDateType[]
+  confDate?: ConfDate[]
   /** Conference Location */
-  confLoc?: ConfLocType[]
+  confLoc?: ConfLoc[]
   /** Conference Name */
-  confName?: ConfNameType[]
+  confName?: ConfName[]
   /** Conference Number */
-  confNum?: ConfNumType[]
+  confNum?: ConfNum[]
   /** Conference Sponsor */
-  confSponsor?: ConfSponsorType[]
+  confSponsor?: ConfSponsor[]
   /** Conference Theme */
-  confTheme?: ConfThemeType[]
+  confTheme?: ConfTheme[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** String Conference Name */
-  stringConf?: StringConfType[]
+  stringConf?: StringConf[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface StringConfType extends _StringConfType {
-  constructor: { new (): StringConfType }
+  underline?: Underline[]
 }
 
-interface _StringDateType extends BaseType {
-  calendar?: string
-  contentType?: string
-  id?: string
-  iso8601Date?: string
-  specificUse?: string
-  /** Day */
-  day?: DayType[]
+interface StringDate extends Base {
+  type: 'stringDate'
+  properties: {
+    calendar?: string
+    contentType?: string
+    id?: string
+    iso8601Date?: string
+    specificUse?: string
+  } /** Day */
+  day?: Day[]
   /** Era */
-  era?: EraType[]
+  era?: Era[]
   /** Month */
-  month?: MonthType[]
+  month?: Month[]
   /** Season */
-  season?: SeasonType[]
+  season?: Season[]
   /** Year */
-  year?: YearType[]
-}
-interface StringDateType extends _StringDateType {
-  constructor: { new (): StringDateType }
+  year?: Year[]
 }
 
-interface _StringNameType extends BaseType {
-  contentType?: string
-  id?: string
-  nameStyle?: StringNameTypeNameStyleType
-  specificUse?: string
-  /** Degree(s) */
-  degrees?: DegreesType[]
+interface StringName extends Base {
+  type: 'stringName'
+  properties: {
+    contentType?: string
+    id?: string
+
+    specificUse?: string
+  }
+  nameStyle?: StringNameTypeNameStyle /** Degree(s) */
+  degrees?: Degrees[]
   /** Given (First) Names */
-  givenNames?: GivenNamesType[]
+  givenNames?: GivenNames[]
   /** Prefix */
-  prefix?: PrefixType[]
+  prefix?: Prefix[]
   /** Suffix */
-  suffix?: SuffixType[]
+  suffix?: Suffix[]
   /** Surname */
-  surname?: SurnameType[]
-}
-interface StringNameType extends _StringNameType {
-  constructor: { new (): StringNameType }
+  surname?: Surname[]
 }
 
-type StringNameTypeNameStyleType =
-  | 'eastern'
-  | 'given-only'
-  | 'islensk'
-  | 'western'
-interface _StringNameTypeNameStyleType extends Primitive._string {
-  content: StringNameTypeNameStyleType
+type StringNameTypeNameStyle = 'eastern' | 'given-only' | 'islensk' | 'western'
+interface _StringNameTypeNameStyle extends Primitive._string {
+  content: StringNameTypeNameStyle
 }
 
-interface _StyledContentType extends BaseType {
-  alt?: string
-  id?: string
-  specificUse?: string
-  style?: string
-  styleDetail?: string
-  styleType?: string
-  toggle?: StyledContentTypeToggleType
+interface StyledContent extends Base {
+  type: 'styledContent'
+  properties: {
+    alt?: string
+    id?: string
+    specificUse?: string
+    style?: string
+    styleDetail?: string
+    styleType?: string
+  }
+  toggle?: StyledContentTypeToggle
   /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+  abbrev?: Abbrev[]
   /** Address/Contact Information */
-  address?: AddressType[]
+  address?: Address[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Answer Elements */
-  answer?: AnswerType[]
+  answer?: Answer[]
   /** Answer Set */
-  answerSet?: AnswerSetType[]
+  answerSet?: AnswerSet[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Block-Level Alternatives For Processing */
-  blockAlternatives?: BlockAlternativesType[]
+  blockAlternatives?: BlockAlternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Boxed Text */
-  boxedText?: BoxedTextType[]
+  boxedText?: BoxedText[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Chemical Structure Wrapper */
-  chemStructwrap?: ChemStructwrapType[]
+  chemStructwrap?: ChemStructwrap[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote?: DispQuoteType[]
+  dispQuote?: DispQuote[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** Explanation */
-  explanation?: ExplanationType[]
+  explanation?: Explanation[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Figure */
-  fig?: FigType[]
+  fig?: Fig[]
   /** Figure Group */
-  figGroup?: FigGroupType[]
+  figGroup?: FigGroup[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** List */
-  list?: ListType[]
+  list?: List[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Question */
-  question?: QuestionType[]
+  question?: Question[]
   /** Question Wrap */
-  questionWrap?: QuestionWrapType[]
+  questionWrap?: QuestionWrap[]
   /** Question Wrap Group */
-  questionWrapgroup?: QuestionWrapgroupType[]
+  questionWrapgroup?: QuestionWrapgroup[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Speech */
-  speech?: SpeechType[]
+  speech?: Speech[]
   /** Statement, Formal */
-  statement?: StatementType[]
+  statement?: Statement[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Supplementary Material */
-  supplementaryMaterial?: SupplementaryMaterialType[]
+  supplementaryMaterial?: SupplementaryMaterial[]
   /** Table Wrapper */
-  tableWrap?: TableWrapType[]
+  tableWrap?: TableWrap[]
   /** Table Wrapper Group */
-  tableWrapgroup?: TableWrapgroupType[]
+  tableWrapgroup?: TableWrapgroup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** Verse Form For Poetry */
-  verseGroup?: VerseGroupType[]
+  verseGroup?: VerseGroup[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface StyledContentType extends _StyledContentType {
-  constructor: { new (): StyledContentType }
+  xref?: Xref[]
 }
 
-type StyledContentTypeToggleType = 'no' | 'yes'
-interface _StyledContentTypeToggleType extends Primitive._string {
-  content: StyledContentTypeToggleType
+type StyledContentTypeToggle = 'no' | 'yes'
+interface _StyledContentTypeToggle extends Primitive._string {
+  content: StyledContentTypeToggle
 }
 
-interface _SubArticleType extends BaseType {
-  articleType?: string
-  id?: string
-  specificUse?: string
-  /** Back Matter */
-  back?: BackType
+interface SubArticle extends Base {
+  type: 'subArticle'
+  properties: {
+    articleType?: string
+    id?: string
+    specificUse?: string
+  } /** Back Matter */
+  back?: Back
   /** Body of the Article */
-  body?: BodyType
+  body?: Body
   /** Floats Group */
-  floatsGroup?: FloatsGroupType
+  floatsGroup?: FloatsGroup
   /** Front Matter */
-  front: FrontType
+  front: Front
   /** Stub Front Metadata */
-  frontStub: FrontStubType
+  frontStub: FrontStub
   /** Processing Metadata Model */
-  processingMeta?: ProcessingMetaType
+  processingMeta?: ProcessingMeta
   /** Response */
-  response?: ResponseType[]
+  response?: Response[]
   /** Sub-Article */
-  subArticle?: SubArticleType[]
-}
-interface SubArticleType extends _SubArticleType {
-  constructor: { new (): SubArticleType }
+  subArticle?: SubArticle[]
 }
 
-interface _SubjectType extends BaseType {
-  assigningAuthority?: string
-  contentType?: string
-  id?: string
-  vocab?: string
-  vocabIdentifier?: string
-  vocabTerm?: string
-  vocabTermidentifier?: string
-  /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+interface Subject extends Base {
+  type: 'subject'
+  properties: {
+    assigningAuthority?: string
+    contentType?: string
+    id?: string
+    vocab?: string
+    vocabIdentifier?: string
+    vocabTerm?: string
+    vocabTermidentifier?: string
+  } /** Alternatives For Processing */
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface SubjectType extends _SubjectType {
-  constructor: { new (): SubjectType }
+  underline?: Underline[]
 }
 
-interface _SubjGroupType extends BaseType {
-  assigningAuthority?: string
-  id?: string
-  specificUse?: string
-  subjGrouptype?: string
-  vocab?: string
-  vocabIdentifier?: string
-  /** Compound Subject Name */
-  compoundSubject: CompoundSubjectType[]
-  subjGroup?: SubjGroupType[]
+interface SubjGroup extends Base {
+  type: 'subjGroup'
+  properties: {
+    assigningAuthority?: string
+    id?: string
+    specificUse?: string
+    subjGrouptype?: string
+    vocab?: string
+    vocabIdentifier?: string
+  } /** Compound Subject Name */
+  compoundSubject: CompoundSubject[]
+  subjGroup?: SubjGroup[]
   /** Subject Name */
-  subject: SubjectType[]
-}
-interface SubjGroupType extends _SubjGroupType {
-  constructor: { new (): SubjGroupType }
+  subject: Subject[]
 }
 
-interface _SubtitleType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface Subtitle extends Base {
+  type: 'subtitle'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Line Break */
-  break?: BreakType[]
+  break?: Break[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface SubtitleType extends _SubtitleType {
-  constructor: { new (): SubtitleType }
+  xref?: Xref[]
 }
 
-interface _SubType extends BaseType {
-  arrange?: SubTypeArrangeType
-  id?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface Sub extends Base {
+  type: 'sub'
+  arrange?: SubTypeArrange
+  properties: {
+    id?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface SubType extends _SubType {
-  constructor: { new (): SubType }
+  xref?: Xref[]
 }
 
-type SubTypeArrangeType = 'stack' | 'stagger'
-interface _SubTypeArrangeType extends Primitive._string {
-  content: SubTypeArrangeType
+type SubTypeArrange = 'stack' | 'stagger'
+interface _SubTypeArrange extends Primitive._string {
+  content: SubTypeArrange
 }
 
-interface _SuffixType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface SuffixType extends _SuffixType {
-  constructor: { new (): SuffixType }
+interface Suffix extends Base {
+  type: 'suffix'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _SupplementaryMaterialType extends BaseType {
-  contentType?: string
-  hreflang?: string
-  id?: string
-  mimeSubtype?: string
-  mimetype?: string
-  orientation?: SupplementaryMaterialTypeOrientationType
-  position?: SupplementaryMaterialTypePositionType
-  specificUse?: string
+interface SupplementaryMaterial extends Base {
+  type: 'supplementaryMaterial'
+  properties: {
+    contentType?: string
+    hreflang?: string
+    id?: string
+    mimeSubtype?: string
+    mimetype?: string
+
+    specificUse?: string
+  }
+  orientation?: SupplementaryMaterialTypeOrientation
+  position?: SupplementaryMaterialTypePosition
   /** Abstract */
-  abstract?: AbstractType[]
+  abstract?: Abstract[]
   /** Alternate Title Text For a Figure, Etc. */
-  altText?: AltTextType[]
+  altText?: AltText[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Attribution */
-  attrib?: AttribType[]
+  attrib?: Attrib[]
   /** Caption of a Figure, Table, Etc. */
-  caption?: CaptionType[]
+  caption?: Caption[]
   /** Chemical Structure Wrapper */
-  chemStructwrap?: ChemStructwrapType[]
+  chemStructwrap?: ChemStructwrap[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote?: DispQuoteType[]
+  dispQuote?: DispQuote[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Keyword Group */
-  kwdGroup?: KwdGroupType[]
+  kwdGroup?: KwdGroup[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType[]
+  label?: Label[]
   /** List */
-  list?: ListType[]
+  list?: List[]
   /** Long Description */
-  longDesc?: LongDescType[]
+  longDesc?: LongDesc[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Paragraph */
-  p?: PType[]
+  p?: P[]
   /** Permissions */
-  permissions?: PermissionsType[]
+  permissions?: Permissions[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Speech */
-  speech?: SpeechType[]
+  speech?: Speech[]
   /** Statement, Formal */
-  statement?: StatementType[]
-  subjGroup?: SubjGroupType[]
+  statement?: Statement[]
+  subjGroup?: SubjGroup[]
   /** Table Wrapper */
-  tableWrap?: TableWrapType[]
+  tableWrap?: TableWrap[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** Verse Form For Poetry */
-  verseGroup?: VerseGroupType[]
+  verseGroup?: VerseGroup[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface SupplementaryMaterialType extends _SupplementaryMaterialType {
-  constructor: { new (): SupplementaryMaterialType }
+  xref?: Xref[]
 }
 
-type SupplementaryMaterialTypeOrientationType = 'landscape' | 'portrait'
-interface _SupplementaryMaterialTypeOrientationType extends Primitive._string {
-  content: SupplementaryMaterialTypeOrientationType
+type SupplementaryMaterialTypeOrientation = 'landscape' | 'portrait'
+interface _SupplementaryMaterialTypeOrientation extends Primitive._string {
+  content: SupplementaryMaterialTypeOrientation
 }
 
-type SupplementaryMaterialTypePositionType =
+type SupplementaryMaterialTypePosition =
   | 'anchor'
   | 'background'
   | 'float'
   | 'margin'
-interface _SupplementaryMaterialTypePositionType extends Primitive._string {
-  content: SupplementaryMaterialTypePositionType
+interface _SupplementaryMaterialTypePosition extends Primitive._string {
+  content: SupplementaryMaterialTypePosition
 }
 
-interface _SupplementType extends BaseType {
-  id?: string
-  specificUse?: string
-  supplementType?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface Supplement extends Base {
+  type: 'supplement'
+  properties: {
+    id?: string
+    specificUse?: string
+    supplementType?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Contributor Group */
-  contribGroup?: ContribGroupType[]
+  contribGroup?: ContribGroup[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Title */
-  title?: TitleType[]
+  title?: Title[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface SupplementType extends _SupplementType {
-  constructor: { new (): SupplementType }
+  underline?: Underline[]
 }
 
-interface _SupportDescriptionType extends BaseType {
-  id?: string
-  rid?: string
-  specificUse?: string
-  /** Paragraph */
-  p: PType[]
-}
-interface SupportDescriptionType extends _SupportDescriptionType {
-  constructor: { new (): SupportDescriptionType }
+interface SupportDescription extends Base {
+  type: 'supportDescription'
+  properties: {
+    id?: string
+    rid?: string
+    specificUse?: string
+  } /** Paragraph */
+  p: P[]
 }
 
-interface _SupportGroupType extends BaseType {
-  id?: string
-  specificUse?: string
-  /** Contributed Resource Group */
-  contributedResourcegroup?: ContributedResourcegroupType[]
+interface SupportGroup extends Base {
+  type: 'supportGroup'
+  properties: {
+    id?: string
+    specificUse?: string
+  } /** Contributed Resource Group */
+  contributedResourcegroup?: ContributedResourcegroup[]
   /** Funding Group */
-  fundingGroup?: FundingGroupType[]
-}
-interface SupportGroupType extends _SupportGroupType {
-  constructor: { new (): SupportGroupType }
+  fundingGroup?: FundingGroup[]
 }
 
-interface _SupportSourceType extends BaseType {
-  country?: string
-  hreflang?: string
-  id?: string
-  rid?: string
-  specificUse?: string
-  supportType?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface SupportSource extends Base {
+  type: 'supportSource'
+  properties: {
+    country?: string
+    hreflang?: string
+    id?: string
+    rid?: string
+    specificUse?: string
+    supportType?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Institution Name: in an Address */
-  institution?: InstitutionType[]
+  institution?: Institution[]
   /** Institution Wrapper */
-  institutionWrap?: InstitutionWrapType[]
+  institutionWrap?: InstitutionWrap[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface SupportSourceType extends _SupportSourceType {
-  constructor: { new (): SupportSourceType }
+  underline?: Underline[]
 }
 
-interface _SupType extends BaseType {
-  arrange?: SupTypeArrangeType
-  id?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface Sup extends Base {
+  type: 'sup'
+  arrange?: SupTypeArrange
+  properties: {
+    id?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface SupType extends _SupType {
-  constructor: { new (): SupType }
+  xref?: Xref[]
 }
 
-type SupTypeArrangeType = 'stack' | 'stagger'
-interface _SupTypeArrangeType extends Primitive._string {
-  content: SupTypeArrangeType
+type SupTypeArrange = 'stack' | 'stagger'
+interface _SupTypeArrange extends Primitive._string {
+  content: SupTypeArrange
 }
 
-interface _SurnameType extends BaseType {
-  id?: string
-  initials?: string
-}
-interface SurnameType extends _SurnameType {
-  constructor: { new (): SurnameType }
-}
-
-interface _TableCountType extends BaseType {
-  count: string
-  id?: string
-}
-interface TableCountType extends _TableCountType {
-  constructor: { new (): TableCountType }
+interface Surname extends Base {
+  type: 'surname'
+  properties: {
+    id?: string
+    initials?: string
+  }
 }
 
-interface _TableType extends BaseType {
-  border?: string
-  cellpadding?: string
-  cellspacing?: string
-  contentType?: string
-  frame?: TableTypeFrameType
-  id?: string
-  rules?: TableTypeRulesType
-  specificUse?: string
-  style?: string
-  summary?: string
-  width?: string
-  col?: ColType[]
-  colgroup?: ColgroupType[]
-  tbody: TbodyType[]
-  tfoot?: TfootType
-  thead?: TheadType
-  tr: TrType[]
-}
-interface TableType extends _TableType {
-  constructor: { new (): TableType }
+interface TableCount extends Base {
+  type: 'tableCount'
+  properties: {
+    count: string
+    id?: string
+  }
 }
 
-type TableTypeFrameType =
+interface Table extends Base {
+  type: 'table'
+  properties: {
+    border?: string
+    cellpadding?: string
+    cellspacing?: string
+    contentType?: string
+
+    id?: string
+
+    specificUse?: string
+    style?: string
+    summary?: string
+    width?: string
+  }
+  frame?: TableTypeFrame
+  rules?: TableTypeRules
+
+  col?: Col[]
+  colgroup?: Colgroup[]
+  tbody: Tbody[]
+  tfoot?: Tfoot
+  thead?: Thead
+  tr: Tr[]
+}
+
+type TableTypeFrame =
   | 'above'
   | 'below'
   | 'border'
@@ -10355,1584 +10211,1573 @@ type TableTypeFrameType =
   | 'rhs'
   | 'void'
   | 'vsides'
-interface _TableTypeFrameType extends Primitive._string {
-  content: TableTypeFrameType
+interface _TableTypeFrame extends Primitive._string {
+  content: TableTypeFrame
 }
 
-type TableTypeRulesType = 'all' | 'cols' | 'groups' | 'none' | 'rows'
-interface _TableTypeRulesType extends Primitive._string {
-  content: TableTypeRulesType
+type TableTypeRules = 'all' | 'cols' | 'groups' | 'none' | 'rows'
+interface _TableTypeRules extends Primitive._string {
+  content: TableTypeRules
 }
 
-interface _TableWrapfootType extends BaseType {
-  id?: string
-  /** Attribution */
-  attrib: AttribType[]
+interface TableWrapfoot extends Base {
+  type: 'tableWrapfoot'
+  properties: {
+    id?: string
+  } /** Attribution */
+  attrib: Attrib[]
   /** Footnote */
-  fn: FnType[]
+  fn: Fn[]
   /** Footnote Group */
-  fnGroup: FnGroupType[]
+  fnGroup: FnGroup[]
   /** Paragraph */
-  p: PType[]
+  p: P[]
   /** Permissions */
-  permissions: PermissionsType[]
+  permissions: Permissions[]
   /** Title */
-  title?: TitleType
-}
-interface TableWrapfootType extends _TableWrapfootType {
-  constructor: { new (): TableWrapfootType }
+  title?: Title
 }
 
-interface _TableWrapgroupType extends BaseType {
-  contentType?: string
-  id?: string
-  orientation?: TableWrapgroupTypeOrientationType
-  position?: TableWrapgroupTypePositionType
-  specificUse?: string
+interface TableWrapgroup extends Base {
+  type: 'tableWrapgroup'
+  properties: {
+    contentType?: string
+    id?: string
+
+    specificUse?: string
+  }
+  orientation?: TableWrapgroupTypeOrientation
+  position?: TableWrapgroupTypePosition
   /** Abstract */
-  abstract?: AbstractType[]
+  abstract?: Abstract[]
   /** Alternate Title Text For a Figure, Etc. */
-  altText?: AltTextType[]
+  altText?: AltText[]
   /** Caption of a Figure, Table, Etc. */
-  caption?: CaptionType[]
+  caption?: Caption[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Keyword Group */
-  kwdGroup?: KwdGroupType[]
+  kwdGroup?: KwdGroup[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType[]
+  label?: Label[]
   /** Long Description */
-  longDesc?: LongDescType[]
+  longDesc?: LongDesc[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
-  subjGroup?: SubjGroupType[]
+  objectId?: ObjectId[]
+  subjGroup?: SubjGroup[]
   /** Table Wrapper */
-  tableWrap: TableWrapType[]
+  tableWrap: TableWrap[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref: XrefType[]
-}
-interface TableWrapgroupType extends _TableWrapgroupType {
-  constructor: { new (): TableWrapgroupType }
+  xref: Xref[]
 }
 
-type TableWrapgroupTypeOrientationType = 'landscape' | 'portrait'
-interface _TableWrapgroupTypeOrientationType extends Primitive._string {
-  content: TableWrapgroupTypeOrientationType
+type TableWrapgroupTypeOrientation = 'landscape' | 'portrait'
+interface _TableWrapgroupTypeOrientation extends Primitive._string {
+  content: TableWrapgroupTypeOrientation
 }
 
-type TableWrapgroupTypePositionType =
-  | 'anchor'
-  | 'background'
-  | 'float'
-  | 'margin'
-interface _TableWrapgroupTypePositionType extends Primitive._string {
-  content: TableWrapgroupTypePositionType
+type TableWrapgroupTypePosition = 'anchor' | 'background' | 'float' | 'margin'
+interface _TableWrapgroupTypePosition extends Primitive._string {
+  content: TableWrapgroupTypePosition
 }
 
-interface _TableWrapType extends BaseType {
-  contentType?: string
-  id?: string
-  orientation?: TableWrapTypeOrientationType
-  position?: TableWrapTypePositionType
-  specificUse?: string
+interface TableWrap extends Base {
+  type: 'tableWrap'
+  properties: {
+    contentType?: string
+    id?: string
+
+    specificUse?: string
+  }
+  orientation?: TableWrapTypeOrientation
+  position?: TableWrapTypePosition
   /** Abstract */
-  abstract?: AbstractType[]
+  abstract?: Abstract[]
   /** Alternate Title Text For a Figure, Etc. */
-  altText?: AltTextType[]
+  altText?: AltText[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Attribution */
-  attrib?: AttribType[]
+  attrib?: Attrib[]
   /** Caption of a Figure, Table, Etc. */
-  caption?: CaptionType[]
+  caption?: Caption[]
   /** Chemical Structure Wrapper */
-  chemStructwrap?: ChemStructwrapType[]
+  chemStructwrap?: ChemStructwrap[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Quote, Displayed */
-  dispQuote?: DispQuoteType[]
+  dispQuote?: DispQuote[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Keyword Group */
-  kwdGroup?: KwdGroupType[]
+  kwdGroup?: KwdGroup[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType[]
+  label?: Label[]
   /** List */
-  list?: ListType[]
+  list?: List[]
   /** Long Description */
-  longDesc?: LongDescType[]
+  longDesc?: LongDesc[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Permissions */
-  permissions?: PermissionsType[]
+  permissions?: Permissions[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Speech */
-  speech?: SpeechType[]
+  speech?: Speech[]
   /** Statement, Formal */
-  statement?: StatementType[]
-  subjGroup?: SubjGroupType[]
+  statement?: Statement[]
+  subjGroup?: SubjGroup[]
   /** Table: Table Element .............................. */
-  table?: TableType[]
+  table?: Table[]
   /** Table Wrap Footer */
-  tableWrapfoot?: TableWrapfootType[]
+  tableWrapfoot?: TableWrapfoot[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** Verse Form For Poetry */
-  verseGroup?: VerseGroupType[]
+  verseGroup?: VerseGroup[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface TableWrapType extends _TableWrapType {
-  constructor: { new (): TableWrapType }
+  xref?: Xref[]
 }
 
-type TableWrapTypeOrientationType = 'landscape' | 'portrait'
-interface _TableWrapTypeOrientationType extends Primitive._string {
-  content: TableWrapTypeOrientationType
+type TableWrapTypeOrientation = 'landscape' | 'portrait'
+interface _TableWrapTypeOrientation extends Primitive._string {
+  content: TableWrapTypeOrientation
 }
 
-type TableWrapTypePositionType = 'anchor' | 'background' | 'float' | 'margin'
-interface _TableWrapTypePositionType extends Primitive._string {
-  content: TableWrapTypePositionType
+type TableWrapTypePosition = 'anchor' | 'background' | 'float' | 'margin'
+interface _TableWrapTypePosition extends Primitive._string {
+  content: TableWrapTypePosition
 }
 
-interface _TargetType extends BaseType {
-  id: string
-  specificUse?: string
-  targetType?: string
-  /** Bold */
-  bold?: BoldType[]
+interface Target extends Base {
+  type: 'target'
+  properties: {
+    id: string
+    specificUse?: string
+    targetType?: string
+  } /** Bold */
+  bold?: Bold[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface TargetType extends _TargetType {
-  constructor: { new (): TargetType }
+  underline?: Underline[]
 }
 
-interface _TbodyType extends BaseType {
-  align?: TbodyTypeAlignType
-  char?: string
-  charoff?: string
-  contentType?: string
-  id?: string
-  style?: string
-  valign?: TbodyTypeValignType
-  tr: TrType[]
-}
-interface TbodyType extends _TbodyType {
-  constructor: { new (): TbodyType }
-}
-
-type TbodyTypeAlignType = 'center' | 'char' | 'justify' | 'left' | 'right'
-interface _TbodyTypeAlignType extends Primitive._string {
-  content: TbodyTypeAlignType
+interface Tbody extends Base {
+  type: 'tbody'
+  align?: TbodyTypeAlign
+  properties: {
+    char?: string
+    charoff?: string
+    contentType?: string
+    id?: string
+    style?: string
+  }
+  valign?: TbodyTypeValign
+  tr: Tr[]
 }
 
-type TbodyTypeValignType = 'baseline' | 'bottom' | 'middle' | 'top'
-interface _TbodyTypeValignType extends Primitive._string {
-  content: TbodyTypeValignType
+type TbodyTypeAlign = 'center' | 'char' | 'justify' | 'left' | 'right'
+interface _TbodyTypeAlign extends Primitive._string {
+  content: TbodyTypeAlign
 }
 
-interface _TdType extends BaseType {
-  abbr?: string
-  align?: TdTypeAlignType
-  axis?: string
-  char?: string
-  charoff?: string
-  colspan?: string
-  contentType?: string
-  headers?: string
-  id?: string
-  rowspan?: string
-  scope?: TdTypeScopeType
-  style?: string
-  valign?: TdTypeValignType
+type TbodyTypeValign = 'baseline' | 'bottom' | 'middle' | 'top'
+interface _TbodyTypeValign extends Primitive._string {
+  content: TbodyTypeValign
+}
+
+interface Td extends Base {
+  type: 'td'
+  properties: {
+    abbr?: string
+
+    axis?: string
+    char?: string
+    charoff?: string
+    colspan?: string
+    contentType?: string
+    headers?: string
+    id?: string
+    rowspan?: string
+
+    style?: string
+  }
+  align?: TdTypeAlign
+  scope?: TdTypeScope
+
+  valign?: TdTypeValign
   /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Answer Elements */
-  answer?: AnswerType[]
+  answer?: Answer[]
   /** Answer Set */
-  answerSet?: AnswerSetType[]
+  answerSet?: AnswerSet[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Line Break */
-  break?: BreakType[]
+  break?: Break[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Citation Alternatives */
-  citationAlternatives?: CitationAlternativesType[]
+  citationAlternatives?: CitationAlternatives[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote?: DispQuoteType[]
+  dispQuote?: DispQuote[]
   /** Element Citation */
-  elementCitation?: ElementCitationType[]
+  elementCitation?: ElementCitation[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** Explanation */
-  explanation?: ExplanationType[]
+  explanation?: Explanation[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Horizontal Rule */
-  hr?: HrType[]
+  hr?: Hr[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** List */
-  list?: ListType[]
+  list?: List[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Mixed Citation */
-  mixedCitation?: MixedCitationType[]
+  mixedCitation?: MixedCitation[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Nlm Citation Model */
-  nlmCitation?: NlmCitationType[]
+  nlmCitation?: NlmCitation[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Paragraph */
-  p?: PType[]
+  p?: P[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Question */
-  question?: QuestionType[]
+  question?: Question[]
   /** Question Wrap */
-  questionWrap?: QuestionWrapType[]
+  questionWrap?: QuestionWrap[]
   /** Question Wrap Group */
-  questionWrapgroup?: QuestionWrapgroupType[]
+  questionWrapgroup?: QuestionWrapgroup[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Speech */
-  speech?: SpeechType[]
+  speech?: Speech[]
   /** Statement, Formal */
-  statement?: StatementType[]
+  statement?: Statement[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** Verse Form For Poetry */
-  verseGroup?: VerseGroupType[]
+  verseGroup?: VerseGroup[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface TdType extends _TdType {
-  constructor: { new (): TdType }
+  xref?: Xref[]
 }
 
-type TdTypeAlignType = 'center' | 'char' | 'justify' | 'left' | 'right'
-interface _TdTypeAlignType extends Primitive._string {
-  content: TdTypeAlignType
+type TdTypeAlign = 'center' | 'char' | 'justify' | 'left' | 'right'
+interface _TdTypeAlign extends Primitive._string {
+  content: TdTypeAlign
 }
 
-type TdTypeScopeType = 'col' | 'colgroup' | 'row' | 'rowgroup'
-interface _TdTypeScopeType extends Primitive._string {
-  content: TdTypeScopeType
+type TdTypeScope = 'col' | 'colgroup' | 'row' | 'rowgroup'
+interface _TdTypeScope extends Primitive._string {
+  content: TdTypeScope
 }
 
-type TdTypeValignType = 'baseline' | 'bottom' | 'middle' | 'top'
-interface _TdTypeValignType extends Primitive._string {
-  content: TdTypeValignType
+type TdTypeValign = 'baseline' | 'bottom' | 'middle' | 'top'
+interface _TdTypeValign extends Primitive._string {
+  content: TdTypeValign
 }
 
-interface _TermHeadType extends BaseType {
-  id?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface TermHead extends Base {
+  type: 'termHead'
+  properties: {
+    id?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface TermHeadType extends _TermHeadType {
-  constructor: { new (): TermHeadType }
+  xref?: Xref[]
 }
 
-interface _TermType extends BaseType {
-  id?: string
-  rid?: string
-  specificUse?: string
-  termStatus?: string
-  termType?: string
-  vocab?: string
-  vocabIdentifier?: string
-  vocabTerm?: string
-  vocabTermidentifier?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface Term extends Base {
+  type: 'term'
+  properties: {
+    id?: string
+    rid?: string
+    specificUse?: string
+    termStatus?: string
+    termType?: string
+    vocab?: string
+    vocabIdentifier?: string
+    vocabTerm?: string
+    vocabTermidentifier?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface TermType extends _TermType {
-  constructor: { new (): TermType }
+  xref?: Xref[]
 }
 
-interface _TexMathType extends BaseType {
-  contentType?: string
-  id?: string
-  notation?: TexMathTypeNotationType
-  specificUse?: string
-  version?: string
-}
-interface TexMathType extends _TexMathType {
-  constructor: { new (): TexMathType }
+interface TexMath extends Base {
+  type: 'texMath'
+  properties: {
+    contentType?: string
+    id?: string
+
+    specificUse?: string
+    version?: string
+  }
+  notation?: TexMathTypeNotation
 }
 
-type TexMathTypeNotationType = 'LaTeX' | 'TEX' | 'TeX' | 'tex'
-interface _TexMathTypeNotationType extends Primitive._string {
-  content: TexMathTypeNotationType
+type TexMathTypeNotation = 'LaTeX' | 'TEX' | 'TeX' | 'tex'
+interface _TexMathTypeNotation extends Primitive._string {
+  content: TexMathTypeNotation
 }
 
-interface _TextualFormType extends BaseType {
-  id?: string
-  specificUse?: string
-  /** Bold */
-  bold?: BoldType[]
+interface TextualForm extends Base {
+  type: 'textualForm'
+  properties: {
+    id?: string
+    specificUse?: string
+  } /** Bold */
+  bold?: Bold[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface TextualFormType extends _TextualFormType {
-  constructor: { new (): TextualFormType }
+  underline?: Underline[]
 }
 
-interface _TfootType extends BaseType {
-  align?: TfootTypeAlignType
-  char?: string
-  charoff?: string
-  contentType?: string
-  id?: string
-  style?: string
-  valign?: TfootTypeValignType
-  tr: TrType[]
-}
-interface TfootType extends _TfootType {
-  constructor: { new (): TfootType }
-}
-
-type TfootTypeAlignType = 'center' | 'char' | 'justify' | 'left' | 'right'
-interface _TfootTypeAlignType extends Primitive._string {
-  content: TfootTypeAlignType
+interface Tfoot extends Base {
+  type: 'tfoot'
+  align?: TfootTypeAlign
+  properties: {
+    char?: string
+    charoff?: string
+    contentType?: string
+    id?: string
+    style?: string
+  }
+  valign?: TfootTypeValign
+  tr: Tr[]
 }
 
-type TfootTypeValignType = 'baseline' | 'bottom' | 'middle' | 'top'
-interface _TfootTypeValignType extends Primitive._string {
-  content: TfootTypeValignType
+type TfootTypeAlign = 'center' | 'char' | 'justify' | 'left' | 'right'
+interface _TfootTypeAlign extends Primitive._string {
+  content: TfootTypeAlign
 }
 
-interface _TheadType extends BaseType {
-  align?: TheadTypeAlignType
-  char?: string
-  charoff?: string
-  contentType?: string
-  id?: string
-  style?: string
-  valign?: TheadTypeValignType
-  tr: TrType[]
-}
-interface TheadType extends _TheadType {
-  constructor: { new (): TheadType }
+type TfootTypeValign = 'baseline' | 'bottom' | 'middle' | 'top'
+interface _TfootTypeValign extends Primitive._string {
+  content: TfootTypeValign
 }
 
-type TheadTypeAlignType = 'center' | 'char' | 'justify' | 'left' | 'right'
-interface _TheadTypeAlignType extends Primitive._string {
-  content: TheadTypeAlignType
+interface Thead extends Base {
+  type: 'thead'
+  align?: TheadTypeAlign
+  properties: {
+    char?: string
+    charoff?: string
+    contentType?: string
+    id?: string
+    style?: string
+  }
+  valign?: TheadTypeValign
+  tr: Tr[]
 }
 
-type TheadTypeValignType = 'baseline' | 'bottom' | 'middle' | 'top'
-interface _TheadTypeValignType extends Primitive._string {
-  content: TheadTypeValignType
+type TheadTypeAlign = 'center' | 'char' | 'justify' | 'left' | 'right'
+interface _TheadTypeAlign extends Primitive._string {
+  content: TheadTypeAlign
 }
 
-interface _ThType extends BaseType {
-  abbr?: string
-  align?: ThTypeAlignType
-  axis?: string
-  char?: string
-  charoff?: string
-  colspan?: string
-  contentType?: string
-  headers?: string
-  id?: string
-  rowspan?: string
-  scope?: ThTypeScopeType
-  style?: string
-  valign?: ThTypeValignType
+type TheadTypeValign = 'baseline' | 'bottom' | 'middle' | 'top'
+interface _TheadTypeValign extends Primitive._string {
+  content: TheadTypeValign
+}
+
+interface Th extends Base {
+  type: 'th'
+  properties: {
+    abbr?: string
+
+    axis?: string
+    char?: string
+    charoff?: string
+    colspan?: string
+    contentType?: string
+    headers?: string
+    id?: string
+    rowspan?: string
+
+    style?: string
+  }
+  align?: ThTypeAlign
+  scope?: ThTypeScope
+
+  valign?: ThTypeValign
   /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Answer Elements */
-  answer?: AnswerType[]
+  answer?: Answer[]
   /** Answer Set */
-  answerSet?: AnswerSetType[]
+  answerSet?: AnswerSet[]
   /** Array (Simple Tabular Array) */
-  array?: ArrayType[]
+  array?: Array[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Line Break */
-  break?: BreakType[]
+  break?: Break[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Citation Alternatives */
-  citationAlternatives?: CitationAlternativesType[]
+  citationAlternatives?: CitationAlternatives[]
   /** Code Text */
-  code?: CodeType[]
+  code?: Code[]
   /** Definition List */
-  defList?: DefListType[]
+  defList?: DefList[]
   /** Formula, Display */
-  dispFormula?: DispFormulaType[]
+  dispFormula?: DispFormula[]
   /** Formula, Display Group */
-  dispFormulagroup?: DispFormulagroupType[]
+  dispFormulagroup?: DispFormulagroup[]
   /** Quote, Displayed */
-  dispQuote?: DispQuoteType[]
+  dispQuote?: DispQuote[]
   /** Element Citation */
-  elementCitation?: ElementCitationType[]
+  elementCitation?: ElementCitation[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** Explanation */
-  explanation?: ExplanationType[]
+  explanation?: Explanation[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Graphic */
-  graphic?: GraphicType[]
+  graphic?: Graphic[]
   /** Horizontal Rule */
-  hr?: HrType[]
+  hr?: Hr[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** List */
-  list?: ListType[]
+  list?: List[]
   /** Media Object */
-  media?: MediaType[]
+  media?: Media[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Mixed Citation */
-  mixedCitation?: MixedCitationType[]
+  mixedCitation?: MixedCitation[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Nlm Citation Model */
-  nlmCitation?: NlmCitationType[]
+  nlmCitation?: NlmCitation[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Paragraph */
-  p?: PType[]
+  p?: P[]
   /** Preformatted Text */
-  preformat?: PreformatType[]
+  preformat?: Preformat[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Question */
-  question?: QuestionType[]
+  question?: Question[]
   /** Question Wrap */
-  questionWrap?: QuestionWrapType[]
+  questionWrap?: QuestionWrap[]
   /** Question Wrap Group */
-  questionWrapgroup?: QuestionWrapgroupType[]
+  questionWrapgroup?: QuestionWrapgroup[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Speech */
-  speech?: SpeechType[]
+  speech?: Speech[]
   /** Statement, Formal */
-  statement?: StatementType[]
+  statement?: Statement[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** Verse Form For Poetry */
-  verseGroup?: VerseGroupType[]
+  verseGroup?: VerseGroup[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface ThType extends _ThType {
-  constructor: { new (): ThType }
+  xref?: Xref[]
 }
 
-type ThTypeAlignType = 'center' | 'char' | 'justify' | 'left' | 'right'
-interface _ThTypeAlignType extends Primitive._string {
-  content: ThTypeAlignType
+type ThTypeAlign = 'center' | 'char' | 'justify' | 'left' | 'right'
+interface _ThTypeAlign extends Primitive._string {
+  content: ThTypeAlign
 }
 
-type ThTypeScopeType = 'col' | 'colgroup' | 'row' | 'rowgroup'
-interface _ThTypeScopeType extends Primitive._string {
-  content: ThTypeScopeType
+type ThTypeScope = 'col' | 'colgroup' | 'row' | 'rowgroup'
+interface _ThTypeScope extends Primitive._string {
+  content: ThTypeScope
 }
 
-type ThTypeValignType = 'baseline' | 'bottom' | 'middle' | 'top'
-interface _ThTypeValignType extends Primitive._string {
-  content: ThTypeValignType
+type ThTypeValign = 'baseline' | 'bottom' | 'middle' | 'top'
+interface _ThTypeValign extends Primitive._string {
+  content: ThTypeValign
 }
 
-interface _TimeStampType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface TimeStampType extends _TimeStampType {
-  constructor: { new (): TimeStampType }
+interface TimeStamp extends Base {
+  type: 'timeStamp'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _TitleGroupType extends BaseType {
-  id?: string
-  /** Alternate Title */
-  altTitle?: AltTitleType[]
+interface TitleGroup extends Base {
+  type: 'titleGroup'
+  properties: {
+    id?: string
+  } /** Alternate Title */
+  altTitle?: AltTitle[]
   /** Article Title */
-  articleTitle: ArticleTitleType
+  articleTitle: ArticleTitle
   /** Footnote Group */
-  fnGroup?: FnGroupType
+  fnGroup?: FnGroup
   /** Article Subtitle */
-  subtitle?: SubtitleType[]
+  subtitle?: Subtitle[]
   /** Translated Title Group */
-  transTitlegroup?: TransTitlegroupType[]
-}
-interface TitleGroupType extends _TitleGroupType {
-  constructor: { new (): TitleGroupType }
+  transTitlegroup?: TransTitlegroup[]
 }
 
-interface _TitleType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface Title extends Base {
+  type: 'title'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Line Break */
-  break?: BreakType[]
+  break?: Break[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Citation Alternatives */
-  citationAlternatives?: CitationAlternativesType[]
+  citationAlternatives?: CitationAlternatives[]
   /** Element Citation */
-  elementCitation?: ElementCitationType[]
+  elementCitation?: ElementCitation[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Mixed Citation */
-  mixedCitation?: MixedCitationType[]
+  mixedCitation?: MixedCitation[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Nlm Citation Model */
-  nlmCitation?: NlmCitationType[]
+  nlmCitation?: NlmCitation[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface TitleType extends _TitleType {
-  constructor: { new (): TitleType }
+  xref?: Xref[]
 }
 
-interface _TransAbstractType extends BaseType {
-  abstractType?: string
-  id?: string
-  specificUse?: string
-  /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+interface TransAbstract extends Base {
+  type: 'transAbstract'
+  properties: {
+    abstractType?: string
+    id?: string
+    specificUse?: string
+  } /** Label of a Figure, Reference, Etc. */
+  label?: Label
   /** Object Identifier */
-  objectId?: ObjectIdType[]
+  objectId?: ObjectId[]
   /** Paragraph */
-  p?: PType[]
+  p?: P[]
   /** Section */
-  sec?: SecType[]
+  sec?: Sec[]
   /** Title */
-  title?: TitleType
-}
-interface TransAbstractType extends _TransAbstractType {
-  constructor: { new (): TransAbstractType }
+  title?: Title
 }
 
-interface _TransSourceType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface TransSource extends Base {
+  type: 'transSource'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface TransSourceType extends _TransSourceType {
-  constructor: { new (): TransSourceType }
+  xref?: Xref[]
 }
 
-interface _TransSubtitleType extends BaseType {
-  id?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface TransSubtitle extends Base {
+  type: 'transSubtitle'
+  properties: {
+    id?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Line Break */
-  break?: BreakType[]
+  break?: Break[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface TransSubtitleType extends _TransSubtitleType {
-  constructor: { new (): TransSubtitleType }
+  xref?: Xref[]
 }
 
-interface _TransTitlegroupType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Translated Subtitle */
-  transSubtitle?: TransSubtitleType[]
+interface TransTitlegroup extends Base {
+  type: 'transTitlegroup'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Translated Subtitle */
+  transSubtitle?: TransSubtitle[]
   /** Translated Title */
-  transTitle: TransTitleType
-}
-interface TransTitlegroupType extends _TransTitlegroupType {
-  constructor: { new (): TransTitlegroupType }
+  transTitle: TransTitle
 }
 
-interface _TransTitleType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface TransTitle extends Base {
+  type: 'transTitle'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Line Break */
-  break?: BreakType[]
+  break?: Break[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface TransTitleType extends _TransTitleType {
-  constructor: { new (): TransTitleType }
+  xref?: Xref[]
 }
 
-interface _TrType extends BaseType {
-  align?: TrTypeAlignType
-  char?: string
-  charoff?: string
-  contentType?: string
-  id?: string
-  style?: string
-  valign?: TrTypeValignType
-  td: TdType[]
-  th: ThType[]
-}
-interface TrType extends _TrType {
-  constructor: { new (): TrType }
-}
-
-type TrTypeAlignType = 'center' | 'char' | 'justify' | 'left' | 'right'
-interface _TrTypeAlignType extends Primitive._string {
-  content: TrTypeAlignType
+interface Tr extends Base {
+  type: 'tr'
+  align?: TrTypeAlign
+  properties: {
+    char?: string
+    charoff?: string
+    contentType?: string
+    id?: string
+    style?: string
+  }
+  valign?: TrTypeValign
+  td: Td[]
+  th: Th[]
 }
 
-type TrTypeValignType = 'baseline' | 'bottom' | 'middle' | 'top'
-interface _TrTypeValignType extends Primitive._string {
-  content: TrTypeValignType
+type TrTypeAlign = 'center' | 'char' | 'justify' | 'left' | 'right'
+interface _TrTypeAlign extends Primitive._string {
+  content: TrTypeAlign
 }
 
-interface _UnderlineEndType extends BaseType {
-  id?: string
-  rid: string
-  specificUse?: string
-}
-interface UnderlineEndType extends _UnderlineEndType {
-  constructor: { new (): UnderlineEndType }
+type TrTypeValign = 'baseline' | 'bottom' | 'middle' | 'top'
+interface _TrTypeValign extends Primitive._string {
+  content: TrTypeValign
 }
 
-interface _UnderlineStartType extends BaseType {
-  id: string
-  specificUse?: string
-}
-interface UnderlineStartType extends _UnderlineStartType {
-  constructor: { new (): UnderlineStartType }
+interface UnderlineEnd extends Base {
+  type: 'underlineEnd'
+  properties: {
+    id?: string
+    rid: string
+    specificUse?: string
+  }
 }
 
-interface _UnderlineType extends BaseType {
-  id?: string
-  specificUse?: string
-  toggle?: UnderlineTypeToggleType
-  underlineStyle?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface UnderlineStart extends Base {
+  type: 'underlineStart'
+  properties: {
+    id: string
+    specificUse?: string
+  }
+}
+
+interface Underline extends Base {
+  type: 'underline'
+  properties: {
+    id?: string
+    specificUse?: string
+
+    underlineStyle?: string
+  }
+  toggle?: UnderlineTypeToggle /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Email Address */
-  email?: EmailType[]
+  email?: Email[]
   /** External Link */
-  extLink?: ExtLinkType[]
+  extLink?: ExtLink[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial?: InlineSupplementarymaterialType[]
+  inlineSupplementarymaterial?: InlineSupplementarymaterial[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Related Article Information */
-  relatedArticle?: RelatedArticleType[]
+  relatedArticle?: RelatedArticle[]
   /** Related Object Information */
-  relatedObject?: RelatedObjectType[]
+  relatedObject?: RelatedObject[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Tex Math Equation */
-  texMath?: TexMathType[]
+  texMath?: TexMath[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** Uri */
-  uri?: UriType[]
+  uri?: Uri[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface UnderlineType extends _UnderlineType {
-  constructor: { new (): UnderlineType }
+  xref?: Xref[]
 }
 
-type UnderlineTypeToggleType = 'no' | 'yes'
-interface _UnderlineTypeToggleType extends Primitive._string {
-  content: UnderlineTypeToggleType
+type UnderlineTypeToggle = 'no' | 'yes'
+interface _UnderlineTypeToggle extends Primitive._string {
+  content: UnderlineTypeToggle
 }
 
-interface _UnstructuredKwdgroupType extends BaseType {
-  assigningAuthority?: string
-  id?: string
-  kwdGrouptype?: string
-  specificUse?: string
-  vocab?: string
-  vocabIdentifier?: string
-}
-interface UnstructuredKwdgroupType extends _UnstructuredKwdgroupType {
-  constructor: { new (): UnstructuredKwdgroupType }
-}
-
-interface _UriType extends BaseType {
-  assigningAuthority?: string
-  contentType?: string
-  hreflang?: string
-  id?: string
-  specificUse?: string
-}
-interface UriType extends _UriType {
-  constructor: { new (): UriType }
+interface UnstructuredKwdgroup extends Base {
+  type: 'unstructuredKwdgroup'
+  properties: {
+    assigningAuthority?: string
+    id?: string
+    kwdGrouptype?: string
+    specificUse?: string
+    vocab?: string
+    vocabIdentifier?: string
+  }
 }
 
-interface _VerseGroupType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  style?: string
-  styleDetail?: string
-  styleType?: string
-  /** Attribution */
-  attrib?: AttribType[]
+interface Uri extends Base {
+  type: 'uri'
+  properties: {
+    assigningAuthority?: string
+    contentType?: string
+    hreflang?: string
+    id?: string
+    specificUse?: string
+  }
+}
+
+interface VerseGroup extends Base {
+  type: 'verseGroup'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+    style?: string
+    styleDetail?: string
+    styleType?: string
+  } /** Attribution */
+  attrib?: Attrib[]
   /** Label of a Figure, Reference, Etc. */
-  label?: LabelType
+  label?: Label
   /** Permissions */
-  permissions?: PermissionsType[]
+  permissions?: Permissions[]
   /** Article Subtitle */
-  subtitle?: SubtitleType
+  subtitle?: Subtitle
   /** Title */
-  title?: TitleType
+  title?: Title
   /** Verse Form For Poetry */
-  verseGroup: VerseGroupType[]
+  verseGroup: VerseGroup[]
   /** Line of a Verse */
-  verseLine: VerseLineType[]
-}
-interface VerseGroupType extends _VerseGroupType {
-  constructor: { new (): VerseGroupType }
+  verseLine: VerseLine[]
 }
 
-interface _VerseLineType extends BaseType {
-  contentType?: string
-  id?: string
-  indentLevel?: string
-  specificUse?: string
-  style?: string
-  styleDetail?: string
-  styleType?: string
-  /** Abbreviation or Acronym */
-  abbrev?: AbbrevType[]
+interface VerseLine extends Base {
+  type: 'verseLine'
+  properties: {
+    contentType?: string
+    id?: string
+    indentLevel?: string
+    specificUse?: string
+    style?: string
+    styleDetail?: string
+    styleType?: string
+  } /** Abbreviation or Acronym */
+  abbrev?: Abbrev[]
   /** Alternatives For Processing */
-  alternatives?: AlternativesType[]
+  alternatives?: Alternatives[]
   /** Bold */
-  bold?: BoldType[]
+  bold?: Bold[]
   /** Chemical Structure (Display) */
-  chemStruct?: ChemStructType[]
+  chemStruct?: ChemStruct[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Footnote */
-  fn?: FnType[]
+  fn?: Fn[]
   /** Index Term */
-  indexTerm?: IndexTermType[]
+  indexTerm?: IndexTerm[]
   /** Index Term Range End */
-  indexTermrangeend?: IndexTermrangeendType[]
+  indexTermrangeend?: IndexTermrangeend[]
   /** Formula, Inline */
-  inlineFormula?: InlineFormulaType[]
+  inlineFormula?: InlineFormula[]
   /** Inline Graphic */
-  inlineGraphic?: InlineGraphicType[]
+  inlineGraphic?: InlineGraphic[]
   /** Inline Media Object */
-  inlineMedia?: InlineMediaType[]
+  inlineMedia?: InlineMedia[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Milestone End */
-  milestoneEnd?: MilestoneEndType[]
+  milestoneEnd?: MilestoneEnd[]
   /** Milestone Start */
-  milestoneStart?: MilestoneStartType[]
+  milestoneStart?: MilestoneStart[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Private Character (Custom or Unicode) */
-  privateChar?: PrivateCharType[]
+  privateChar?: PrivateChar[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Target of an Internal Link */
-  target?: TargetType[]
+  target?: Target[]
   /** Underline */
-  underline?: UnderlineType[]
+  underline?: Underline[]
   /** X(cross) Reference */
-  xref?: XrefType[]
-}
-interface VerseLineType extends _VerseLineType {
-  constructor: { new (): VerseLineType }
+  xref?: Xref[]
 }
 
-interface _VersionType extends BaseType {
-  contentType?: string
-  designator?: string
-  id?: string
-  specificUse?: string
-  /** Subscript */
-  sub?: SubType[]
+interface Version extends Base {
+  type: 'version'
+  properties: {
+    contentType?: string
+    designator?: string
+    id?: string
+    specificUse?: string
+  } /** Subscript */
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
-}
-interface VersionType extends _VersionType {
-  constructor: { new (): VersionType }
+  sup?: Sup[]
 }
 
-interface _VolumeIdType extends BaseType {
-  assigningAuthority?: string
-  contentType?: string
-  hreflang?: string
-  id?: string
-  pubIdtype?: string
-  specificUse?: string
-}
-interface VolumeIdType extends _VolumeIdType {
-  constructor: { new (): VolumeIdType }
+interface VolumeId extends Base {
+  type: 'volumeId'
+  properties: {
+    assigningAuthority?: string
+    contentType?: string
+    hreflang?: string
+    id?: string
+    pubIdtype?: string
+    specificUse?: string
+  }
 }
 
-interface _VolumeIssuegroupType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-  /** Issue Number */
-  issue?: IssueType[]
+interface VolumeIssuegroup extends Base {
+  type: 'volumeIssuegroup'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  } /** Issue Number */
+  issue?: Issue[]
   /** Issue Identifier */
-  issueId?: IssueIdType[]
+  issueId?: IssueId[]
   /** Issue Part */
-  issuePart?: IssuePartType
+  issuePart?: IssuePart
   /** Issue Title */
-  issueSponsor?: IssueSponsorType[]
+  issueSponsor?: IssueSponsor[]
   /** Issue Title */
-  issueTitle?: IssueTitleType[]
+  issueTitle?: IssueTitle[]
   /** Issue Title Group */
-  issueTitlegroup?: IssueTitlegroupType[]
+  issueTitlegroup?: IssueTitlegroup[]
   /** Volume Number */
-  volume?: VolumeType[]
+  volume?: Volume[]
   /** Volume Identifier */
-  volumeId?: VolumeIdType[]
+  volumeId?: VolumeId[]
   /** Volume Series */
-  volumeSeries?: VolumeSeriesType
-}
-interface VolumeIssuegroupType extends _VolumeIssuegroupType {
-  constructor: { new (): VolumeIssuegroupType }
+  volumeSeries?: VolumeSeries
 }
 
-interface _VolumeSeriesType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface VolumeSeriesType extends _VolumeSeriesType {
-  constructor: { new (): VolumeSeriesType }
-}
-
-interface _VolumeType extends BaseType {
-  contentType?: string
-  id?: string
-  seq?: string
-  specificUse?: string
-}
-interface VolumeType extends _VolumeType {
-  constructor: { new (): VolumeType }
+interface VolumeSeries extends Base {
+  type: 'volumeSeries'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-interface _WordCountType extends BaseType {
-  count: string
-  id?: string
-}
-interface WordCountType extends _WordCountType {
-  constructor: { new (): WordCountType }
+interface Volume extends Base {
+  type: 'volume'
+  properties: {
+    contentType?: string
+    id?: string
+    seq?: string
+    specificUse?: string
+  }
 }
 
-interface _XrefType extends BaseType {
-  alt?: string
-  customType?: string
-  id?: string
-  refType?: XrefTypeRefTypeType
-  rid?: string
-  specificUse?: string
-  /** Bold */
-  bold?: BoldType[]
+interface WordCount extends Base {
+  type: 'wordCount'
+  properties: {
+    count: string
+    id?: string
+  }
+}
+
+interface Xref extends Base {
+  type: 'xref'
+  properties: {
+    alt?: string
+    customType?: string
+    id?: string
+
+    rid?: string
+    specificUse?: string
+  }
+  refType?: XrefTypeRefType /** Bold */
+  bold?: Bold[]
   /** Fixed Case */
-  fixedCase?: FixedCaseType[]
+  fixedCase?: FixedCase[]
   /** Italic */
-  italic?: ItalicType[]
+  italic?: Italic[]
   /** Monospace Text (Typewriter Text) */
-  monospace?: MonospaceType[]
+  monospace?: Monospace[]
   /** Named Special (Subject) Content */
-  namedContent?: NamedContentType[]
+  namedContent?: NamedContent[]
   /** Overline */
-  overline?: OverlineType[]
+  overline?: Overline[]
   /** Roman */
-  roman?: RomanType[]
+  roman?: Roman[]
   /** Ruby Wrapper */
-  ruby?: RubyType[]
+  ruby?: Ruby[]
   /** Sans Serif */
-  sansSerif?: SansSerifType[]
+  sansSerif?: SansSerif[]
   /** Small Caps */
-  sc?: ScType[]
+  sc?: Sc[]
   /** Strike Through */
-  strike?: StrikeType[]
+  strike?: Strike[]
   /** Styled Special (Subject) Content */
-  styledContent?: StyledContentType[]
+  styledContent?: StyledContent[]
   /** Subscript */
-  sub?: SubType[]
+  sub?: Sub[]
   /** Superscript */
-  sup?: SupType[]
+  sup?: Sup[]
   /** Underline */
-  underline?: UnderlineType[]
-}
-interface XrefType extends _XrefType {
-  constructor: { new (): XrefType }
+  underline?: Underline[]
 }
 
-type XrefTypeRefTypeType =
+type XrefTypeRefType =
   | 'aff'
   | 'app'
   | 'author-notes'
@@ -11958,628 +11803,629 @@ type XrefTypeRefTypeType =
   | 'supplementary-material'
   | 'table'
   | 'table-fn'
-interface _XrefTypeRefTypeType extends Primitive._string {
-  content: XrefTypeRefTypeType
+interface _XrefTypeRefType extends Primitive._string {
+  content: XrefTypeRefType
 }
 
-interface _XType extends BaseType {
-  contentType?: string
-  id?: string
-  specificUse?: string
-}
-interface XType extends _XType {
-  constructor: { new (): XType }
-}
-
-interface _YearType extends BaseType {
-  calendar?: string
-  contentType?: string
-  id?: string
-  iso8601Date?: string
-  specificUse?: string
-}
-interface YearType extends _YearType {
-  constructor: { new (): YearType }
+interface X extends Base {
+  type: 'x'
+  properties: {
+    contentType?: string
+    id?: string
+    specificUse?: string
+  }
 }
 
-export interface document extends BaseType {
+interface Year extends Base {
+  type: 'year'
+  properties: {
+    calendar?: string
+    contentType?: string
+    id?: string
+    iso8601Date?: string
+    specificUse?: string
+  }
+}
+
+export interface document extends Base {
+  type: 'document'
   /** Abbreviation or Acronym */
-  abbrev: AbbrevType
+  abbrev: Abbrev
   /** Abbreviated Journal Title */
-  abbrevJournaltitle: AbbrevJournaltitleType
+  abbrevJournaltitle: AbbrevJournaltitle
   /** Abstract */
-  abstract: AbstractType
+  abstract: Abstract
   /** Access Date For Cited Work */
-  accessDate: AccessDateType
+  accessDate: AccessDate
   /** Acknowledgments */
-  ack: AckType
+  ack: Ack
   /** Address Line */
-  addrLine: AddrLineType
+  addrLine: AddrLine
   /** Address/Contact Information */
-  address: AddressType
+  address: Address
   /** Affiliation */
-  aff: AffType
+  aff: Aff
   /** Affiliation Alternatives */
-  affAlternatives: AffAlternativesType
+  affAlternatives: AffAlternatives
   /** Alternate Title Text For a Figure, Etc. */
-  altText: AltTextType
+  altText: AltText
   /** Alternate Title */
-  altTitle: AltTitleType
+  altTitle: AltTitle
   /** Alternatives For Processing */
-  alternatives: AlternativesType
+  alternatives: Alternatives
   /** Annotation in a Citation */
-  annotation: AnnotationType
+  annotation: Annotation
   /** Anonymous */
-  anonymous: AnonymousType
+  anonymous: Anonymous
   /** Answer Elements */
-  answer: AnswerType
+  answer: Answer
   /** Answer Set */
-  answerSet: AnswerSetType
+  answerSet: AnswerSet
   /** Appendix */
-  app: AppType
+  app: App
   /** Appendix Group */
-  appGroup: AppGroupType
+  appGroup: AppGroup
   /** Array (Simple Tabular Array) */
-  array: ArrayType
+  array: Array
   /** Article */
-  article: ArticleType
+  article: Article
   /** Article Grouping Data */
-  articleCategories: ArticleCategoriesType
+  articleCategories: ArticleCategories
   /** Article Identifier */
-  articleId: ArticleIdType
+  articleId: ArticleId
   /** Article Metadata */
-  articleMeta: ArticleMetaType
+  articleMeta: ArticleMeta
   /** Article Title */
-  articleTitle: ArticleTitleType
+  articleTitle: ArticleTitle
   /** Article Version */
-  articleVersion: ArticleVersionType
+  articleVersion: ArticleVersion
   /** Article Version Alternatives */
-  articleVersionalternatives: ArticleVersionalternativesType
+  articleVersionalternatives: ArticleVersionalternatives
   /** Attribution */
-  attrib: AttribType
+  attrib: Attrib
   /** Author Comment */
-  authorComment: AuthorCommentType
+  authorComment: AuthorComment
   /** Author Note Group */
-  authorNotes: AuthorNotesType
+  authorNotes: AuthorNotes
   /** Award Description */
-  awardDesc: AwardDescType
+  awardDesc: AwardDesc
   /** Award Group */
-  awardGroup: AwardGroupType
+  awardGroup: AwardGroup
   /** Award Identifier */
-  awardId: AwardIdType
+  awardId: AwardId
   /** Award Name */
-  awardName: AwardNameType
+  awardName: AwardName
   /** Back Matter */
-  back: BackType
+  back: Back
   /** Biography */
-  bio: BioType
+  bio: Bio
   /** Block-Level Alternatives For Processing */
-  blockAlternatives: BlockAlternativesType
+  blockAlternatives: BlockAlternatives
   /** Body of the Article */
-  body: BodyType
+  body: Body
   /** Bold */
-  bold: BoldType
+  bold: Bold
   /** Boxed Text */
-  boxedText: BoxedTextType
+  boxedText: BoxedText
   /** Line Break */
-  break: BreakType
+  break: Break
   /** Caption of a Figure, Table, Etc. */
-  caption: CaptionType
+  caption: Caption
   /** Chapter Title in a Citation */
-  chapterTitle: ChapterTitleType
+  chapterTitle: ChapterTitle
   /** Chemical Structure (Display) */
-  chemStruct: ChemStructType
+  chemStruct: ChemStruct
   /** Chemical Structure Wrapper */
-  chemStructwrap: ChemStructwrapType
+  chemStructwrap: ChemStructwrap
   /** Citation Alternatives */
-  citationAlternatives: CitationAlternativesType
+  citationAlternatives: CitationAlternatives
   /** City: in an Address */
-  city: CityType
+  city: City
   /** Code Text */
-  code: CodeType
-  col: ColType
-  colgroup: ColgroupType
+  code: Code
+  col: Col
+  colgroup: Colgroup
   /** Collaborative (Group) Author */
-  collab: CollabType
+  collab: Collab
   /** Collaboration Alternatives */
-  collabAlternatives: CollabAlternativesType
+  collabAlternatives: CollabAlternatives
   /** Comment in a Citation */
-  comment: CommentType
+  comment: Comment
   /** Compound Keyword */
-  compoundKwd: CompoundKwdType
+  compoundKwd: CompoundKwd
   /** Compound Keyword Part */
-  compoundKwdpart: CompoundKwdpartType
+  compoundKwdpart: CompoundKwdpart
   /** Compound Subject Name */
-  compoundSubject: CompoundSubjectType
+  compoundSubject: CompoundSubject
   /** Compound Subject Part Name */
-  compoundSubjectpart: CompoundSubjectpartType
+  compoundSubjectpart: CompoundSubjectpart
   /** Conference Acronym */
-  confAcronym: ConfAcronymType
+  confAcronym: ConfAcronym
   /** Conference Date */
-  confDate: ConfDateType
+  confDate: ConfDate
   /** Conference Location */
-  confLoc: ConfLocType
+  confLoc: ConfLoc
   /** Conference Name */
-  confName: ConfNameType
+  confName: ConfName
   /** Conference Number */
-  confNum: ConfNumType
+  confNum: ConfNum
   /** Conference Sponsor */
-  confSponsor: ConfSponsorType
+  confSponsor: ConfSponsor
   /** Conference Theme */
-  confTheme: ConfThemeType
+  confTheme: ConfTheme
   /** Conference Information */
-  conference: ConferenceType
+  conference: Conference
   /** Contributor */
-  contrib: ContribType
+  contrib: Contrib
   /** Contributor Group */
-  contribGroup: ContribGroupType
+  contribGroup: ContribGroup
   /** Contributor Identifier */
-  contribId: ContribIdType
+  contribId: ContribId
   /** Contributed Resource Group */
-  contributedResourcegroup: ContributedResourcegroupType
+  contributedResourcegroup: ContributedResourcegroup
   /** Copyright Holder */
-  copyrightHolder: CopyrightHolderType
+  copyrightHolder: CopyrightHolder
   /** Copyright Statement */
-  copyrightStatement: CopyrightStatementType
+  copyrightStatement: CopyrightStatement
   /** Copyright Year */
-  copyrightYear: CopyrightYearType
+  copyrightYear: CopyrightYear
   /** Correspondence Information */
-  corresp: CorrespType
+  corresp: Corresp
   /** Count */
-  count: CountType
+  count: Count
   /** Country: in an Address */
-  country: CountryType
+  country: Country
   /** Counts */
-  counts: CountsType
+  counts: Counts
   /** Custom Metadata */
-  customMeta: CustomMetaType
+  customMeta: CustomMeta
   /** Custom Metadata Group */
-  customMetagroup: CustomMetagroupType
+  customMetagroup: CustomMetagroup
   /** Data Title in a Citation */
-  dataTitle: DataTitleType
+  dataTitle: DataTitle
   /** Date */
-  date: DateType
+  date: Date
   /** Date Inside Citation */
-  dateIncitation: DateIncitationType
+  dateIncitation: DateIncitation
   /** Day */
-  day: DayType
+  day: Day
   /** Definition List: Definition */
-  def: DefType
+  def: Def
   /** Definition List: Definition Head */
-  defHead: DefHeadType
+  defHead: DefHead
   /** Definition List: Definition Item */
-  defItem: DefItemType
+  defItem: DefItem
   /** Definition List */
-  defList: DefListType
+  defList: DefList
   /** Degree(s) */
-  degrees: DegreesType
+  degrees: Degrees
   /** Formula, Display */
-  dispFormula: DispFormulaType
+  dispFormula: DispFormula
   /** Formula, Display Group */
-  dispFormulagroup: DispFormulagroupType
+  dispFormulagroup: DispFormulagroup
   /** Quote, Displayed */
-  dispQuote: DispQuoteType
+  dispQuote: DispQuote
   /** Edition Statement, Cited */
-  edition: EditionType
+  edition: Edition
   /** Element Citation */
-  elementCitation: ElementCitationType
+  elementCitation: ElementCitation
   /** Electronic Location Identifier */
-  elocationId: ElocationIdType
+  elocationId: ElocationId
   /** Email Address */
-  email: EmailType
+  email: Email
   /** Equation Count */
-  equationCount: EquationCountType
+  equationCount: EquationCount
   /** Era */
-  era: EraType
+  era: Era
   /** Et Al */
-  etal: EtalType
+  etal: Etal
   /** Event in Publishing History */
-  event: EventType
+  event: Event
   /** Event Description */
-  eventDesc: EventDescType
+  eventDesc: EventDesc
   /** Explanation */
-  explanation: ExplanationType
+  explanation: Explanation
   /** External Link */
-  extLink: ExtLinkType
+  extLink: ExtLink
   /** Extended-by Model */
-  extendedBy: ExtendedByType
+  extendedBy: ExtendedBy
   /** Fax Number: in an Address */
-  fax: FaxType
+  fax: Fax
   /** Figure */
-  fig: FigType
+  fig: Fig
   /** Figure Count */
-  figCount: FigCountType
+  figCount: FigCount
   /** Figure Group */
-  figGroup: FigGroupType
+  figGroup: FigGroup
   /** Fixed Case */
-  fixedCase: FixedCaseType
+  fixedCase: FixedCase
   /** Floats Group */
-  floatsGroup: FloatsGroupType
+  floatsGroup: FloatsGroup
   /** Footnote */
-  fn: FnType
+  fn: Fn
   /** Footnote Group */
-  fnGroup: FnGroupType
+  fnGroup: FnGroup
   /** First Page */
-  fpage: FpageType
+  fpage: Fpage
   /** Front Matter */
-  front: FrontType
+  front: Front
   /** Stub Front Metadata */
-  frontStub: FrontStubType
+  frontStub: FrontStub
   /** Funding Group */
-  fundingGroup: FundingGroupType
+  fundingGroup: FundingGroup
   /** Funding Source */
-  fundingSource: FundingSourceType
+  fundingSource: FundingSource
   /** Funding Statement */
-  fundingStatement: FundingStatementType
+  fundingStatement: FundingStatement
   /** Given (First) Names */
-  givenNames: GivenNamesType
+  givenNames: GivenNames
   /** Glossary Elements */
-  glossary: GlossaryType
+  glossary: Glossary
   /** Glyph Data For a Private Character */
-  glyphData: GlyphDataType
+  glyphData: GlyphData
   /** Glyph Reference For a Private Character */
-  glyphRef: GlyphRefType
+  glyphRef: GlyphRef
   /** Government Report, Cited */
-  gov: GovType
+  gov: Gov
   /** Graphic */
-  graphic: GraphicType
+  graphic: Graphic
   /** History: Document History */
-  history: HistoryType
+  history: History
   /** Horizontal Rule */
-  hr: HrType
+  hr: Hr
   /** Index Term */
-  indexTerm: IndexTermType
+  indexTerm: IndexTerm
   /** Index Term Range End */
-  indexTermrangeend: IndexTermrangeendType
+  indexTermrangeend: IndexTermrangeend
   /** Formula, Inline */
-  inlineFormula: InlineFormulaType
+  inlineFormula: InlineFormula
   /** Inline Graphic */
-  inlineGraphic: InlineGraphicType
+  inlineGraphic: InlineGraphic
   /** Inline Media Object */
-  inlineMedia: InlineMediaType
+  inlineMedia: InlineMedia
   /** Inline Supplementary Material */
-  inlineSupplementarymaterial: InlineSupplementarymaterialType
+  inlineSupplementarymaterial: InlineSupplementarymaterial
   /** Institution Name: in an Address */
-  institution: InstitutionType
+  institution: Institution
   /** Institution Identifier */
-  institutionId: InstitutionIdType
+  institutionId: InstitutionId
   /** Institution Wrapper */
-  institutionWrap: InstitutionWrapType
+  institutionWrap: InstitutionWrap
   /** Isbn */
-  isbn: IsbnType
+  isbn: Isbn
   /** Issn */
-  issn: IssnType
+  issn: Issn
   /** Issn Linking */
-  issnL: IssnLType
+  issnL: IssnL
   /** Issue Number */
-  issue: IssueType
+  issue: Issue
   /** Issue Identifier */
-  issueId: IssueIdType
+  issueId: IssueId
   /** Issue Part */
-  issuePart: IssuePartType
+  issuePart: IssuePart
   /** Issue Title */
-  issueSponsor: IssueSponsorType
+  issueSponsor: IssueSponsor
   /** Issue Subtitle */
-  issueSubtitle: IssueSubtitleType
+  issueSubtitle: IssueSubtitle
   /** Issue Title */
-  issueTitle: IssueTitleType
+  issueTitle: IssueTitle
   /** Issue Title Group */
-  issueTitlegroup: IssueTitlegroupType
+  issueTitlegroup: IssueTitlegroup
   /** Italic */
-  italic: ItalicType
+  italic: Italic
   /** Journal Identifier */
-  journalId: JournalIdType
+  journalId: JournalId
   /** Journal Metadata */
-  journalMeta: JournalMetaType
+  journalMeta: JournalMeta
   /** Journal Subtitle */
-  journalSubtitle: JournalSubtitleType
+  journalSubtitle: JournalSubtitle
   /** Journal Title (Full) */
-  journalTitle: JournalTitleType
+  journalTitle: JournalTitle
   /** Journal Title Group */
-  journalTitlegroup: JournalTitlegroupType
+  journalTitlegroup: JournalTitlegroup
   /** Keyword */
-  kwd: KwdType
+  kwd: Kwd
   /** Keyword Group */
-  kwdGroup: KwdGroupType
+  kwdGroup: KwdGroup
   /** Label of a Figure, Reference, Etc. */
-  label: LabelType
+  label: Label
   /** License Information */
-  license: LicenseType
+  license: License
   /** License Paragraph */
-  licenseP: LicensePType
+  licenseP: LicenseP
   /** List */
-  list: ListType
+  list: List
   /** List Item */
-  listItem: ListItemType
+  listItem: ListItem
   /** Long Description */
-  longDesc: LongDescType
+  longDesc: LongDesc
   /** Last Page */
-  lpage: LpageType
+  lpage: Lpage
   /** Media Object */
-  media: MediaType
+  media: Media
   /** Metadata Data Name For Custom Metadata */
-  metaName: MetaNameType
+  metaName: MetaName
   /** Metadata Data Value For Custom Metadata */
-  metaValue: MetaValueType
+  metaValue: MetaValue
   /** Milestone End */
-  milestoneEnd: MilestoneEndType
+  milestoneEnd: MilestoneEnd
   /** Milestone Start */
-  milestoneStart: MilestoneStartType
+  milestoneStart: MilestoneStart
   /** Mixed Citation */
-  mixedCitation: MixedCitationType
+  mixedCitation: MixedCitation
   /** Monospace Text (Typewriter Text) */
-  monospace: MonospaceType
+  monospace: Monospace
   /** Month */
-  month: MonthType
+  month: Month
   /** Name of Person (Structured) */
-  name: NameType
+  name: Name
   /** Name Alternatives */
-  nameAlternatives: NameAlternativesType
+  nameAlternatives: NameAlternatives
   /** Named Special (Subject) Content */
-  namedContent: NamedContentType
+  namedContent: NamedContent
   /** Nested Keyword */
-  nestedKwd: NestedKwdType
+  nestedKwd: NestedKwd
   /** Nlm Citation Model */
-  nlmCitation: NlmCitationType
+  nlmCitation: NlmCitation
   /** Note in a Reference List */
-  note: NoteType
+  note: Note
   /** Notes */
-  notes: NotesType
+  notes: Notes
   /** Object Identifier */
-  objectId: ObjectIdType
+  objectId: ObjectId
   /** On Behalf of */
-  onBehalfof: OnBehalfofType
+  onBehalfof: OnBehalfof
   /** Open Access */
-  openAccess: OpenAccessType
+  openAccess: OpenAccess
   /** Option Elements */
-  option: OptionType
+  option: Option
   /** Overline */
-  overline: OverlineType
+  overline: Overline
   /** Overline End */
-  overlineEnd: OverlineEndType
+  overlineEnd: OverlineEnd
   /** Overline Start */
-  overlineStart: OverlineStartType
+  overlineStart: OverlineStart
   /** Paragraph */
-  p: PType
+  p: P
   /** Page Count */
-  pageCount: PageCountType
+  pageCount: PageCount
   /** Page Ranges */
-  pageRange: PageRangeType
+  pageRange: PageRange
   /** Part Title in a Citation */
-  partTitle: PartTitleType
+  partTitle: PartTitle
   /** Patent Number, Cited */
-  patent: PatentType
+  patent: Patent
   /** Permissions */
-  permissions: PermissionsType
+  permissions: Permissions
   /** Person Group For a Cited Publication */
-  personGroup: PersonGroupType
+  personGroup: PersonGroup
   /** Phone Number: in an Address */
-  phone: PhoneType
+  phone: Phone
   /** Postal Code: in an Address */
-  postalCode: PostalCodeType
+  postalCode: PostalCode
   /** Prefix */
-  prefix: PrefixType
+  prefix: Prefix
   /** Preformatted Text */
-  preformat: PreformatType
+  preformat: Preformat
   /** Price */
-  price: PriceType
+  price: Price
   /** Principal Award Recipient */
-  principalAwardrecipient: PrincipalAwardrecipientType
+  principalAwardrecipient: PrincipalAwardrecipient
   /** Principal Investigator Recipient */
-  principalInvestigator: PrincipalInvestigatorType
+  principalInvestigator: PrincipalInvestigator
   /** Private Character (Custom or Unicode) */
-  privateChar: PrivateCharType
+  privateChar: PrivateChar
   /** Processing Metadata Model */
-  processingMeta: ProcessingMetaType
+  processingMeta: ProcessingMeta
   /** Product Information */
-  product: ProductType
+  product: Product
   /** Publication Date */
-  pubDate: PubDateType
+  pubDate: PubDate
   /** Date Not Available Flag */
-  pubDatenotavailable: PubDatenotavailableType
+  pubDatenotavailable: PubDatenotavailable
   /** Publication History */
-  pubHistory: PubHistoryType
+  pubHistory: PubHistory
   /** Publication Identifier For a Cited Publication */
-  pubId: PubIdType
+  pubId: PubId
   /** Publisher */
-  publisher: PublisherType
+  publisher: Publisher
   /** Publisher's Location */
-  publisherLoc: PublisherLocType
+  publisherLoc: PublisherLoc
   /** Publisher's Name */
-  publisherName: PublisherNameType
+  publisherName: PublisherName
   /** Question */
-  question: QuestionType
+  question: Question
   /** Question Preamble */
-  questionPreamble: QuestionPreambleType
+  questionPreamble: QuestionPreamble
   /** Question Wrap */
-  questionWrap: QuestionWrapType
+  questionWrap: QuestionWrap
   /** Question Wrap Group */
-  questionWrapgroup: QuestionWrapgroupType
+  questionWrapgroup: QuestionWrapgroup
   /** Ruby Base */
-  rb: RbType
+  rb: Rb
   /** Reference Item */
-  ref: RefType
+  ref: Ref
   /** Reference Count */
-  refCount: RefCountType
+  refCount: RefCount
   /** Reference List (Bibliographic Reference List) */
-  refList: RefListType
+  refList: RefList
   /** Related Article Information */
-  relatedArticle: RelatedArticleType
+  relatedArticle: RelatedArticle
   /** Related Object Information */
-  relatedObject: RelatedObjectType
+  relatedObject: RelatedObject
   /** Resource Group */
-  resourceGroup: ResourceGroupType
+  resourceGroup: ResourceGroup
   /** Resource Identifier */
-  resourceId: ResourceIdType
+  resourceId: ResourceId
   /** Resource Name */
-  resourceName: ResourceNameType
+  resourceName: ResourceName
   /** Resource Wrap */
-  resourceWrap: ResourceWrapType
+  resourceWrap: ResourceWrap
   /** Response */
-  response: ResponseType
+  response: Response
   /** Restricted-by Model */
-  restrictedBy: RestrictedByType
+  restrictedBy: RestrictedBy
   /** Role or Function Title of Contributor */
-  role: RoleType
+  role: Role
   /** Roman */
-  roman: RomanType
+  roman: Roman
   /** Ruby Parenthesis */
-  rp: RpType
+  rp: Rp
   /** Ruby Textual Annotation */
-  rt: RtType
+  rt: Rt
   /** Ruby Wrapper */
-  ruby: RubyType
+  ruby: Ruby
   /** Sans Serif */
-  sansSerif: SansSerifType
+  sansSerif: SansSerif
   /** Small Caps */
-  sc: ScType
+  sc: Sc
   /** Season */
-  season: SeasonType
+  season: Season
   /** Section */
-  sec: SecType
+  sec: Sec
   /** Section Metadata */
-  secMeta: SecMetaType
+  secMeta: SecMeta
   /** See */
-  see: SeeType
+  see: See
   /** See-Also Term */
-  seeAlso: SeeAlsoType
+  seeAlso: SeeAlso
   /** Uri For This Same Article Online */
-  selfUri: SelfUriType
+  selfUri: SelfUri
   /** Series */
-  series: SeriesType
+  series: Series
   /** Series Text: Header Text to Describe */
-  seriesText: SeriesTextType
+  seriesText: SeriesText
   /** Series Title */
-  seriesTitle: SeriesTitleType
+  seriesTitle: SeriesTitle
   /** Signature */
-  sig: SigType
+  sig: Sig
   /** Signature Block */
-  sigBlock: SigBlockType
+  sigBlock: SigBlock
   /** Size */
-  size: SizeType
+  size: Size
   /** Source */
-  source: SourceType
+  source: Source
   /** Speaker */
-  speaker: SpeakerType
+  speaker: Speaker
   /** Speech */
-  speech: SpeechType
+  speech: Speech
   /** State or Province: in an Address */
-  state: StateType
+  state: State
   /** Statement, Formal */
-  statement: StatementType
+  statement: Statement
   /** Standard, Cited */
-  std: StdType
+  std: Std
   /** Standards Organization */
-  stdOrganization: StdOrganizationType
+  stdOrganization: StdOrganization
   /** Strike Through */
-  strike: StrikeType
+  strike: Strike
   /** String Conference Name */
-  stringConf: StringConfType
+  stringConf: StringConf
   /** Date As a String */
-  stringDate: StringDateType
+  stringDate: StringDate
   /** Name of Person (Unstructured) */
-  stringName: StringNameType
+  stringName: StringName
   /** Styled Special (Subject) Content */
-  styledContent: StyledContentType
+  styledContent: StyledContent
   /** Subscript */
-  sub: SubType
+  sub: Sub
   /** Sub-Article */
-  subArticle: SubArticleType
-  subjGroup: SubjGroupType
+  subArticle: SubArticle
+  subjGroup: SubjGroup
   /** Subject Name */
-  subject: SubjectType
+  subject: Subject
   /** Article Subtitle */
-  subtitle: SubtitleType
+  subtitle: Subtitle
   /** Suffix */
-  suffix: SuffixType
+  suffix: Suffix
   /** Superscript */
-  sup: SupType
+  sup: Sup
   /** Supplement */
-  supplement: SupplementType
+  supplement: Supplement
   /** Supplementary Material */
-  supplementaryMaterial: SupplementaryMaterialType
+  supplementaryMaterial: SupplementaryMaterial
   /** Support Description */
-  supportDescription: SupportDescriptionType
+  supportDescription: SupportDescription
   /** Support Group */
-  supportGroup: SupportGroupType
+  supportGroup: SupportGroup
   /** Support Source */
-  supportSource: SupportSourceType
+  supportSource: SupportSource
   /** Surname */
-  surname: SurnameType
+  surname: Surname
   /** Table: Table Element .............................. */
-  table: TableType
+  table: Table
   /** Table Count */
-  tableCount: TableCountType
+  tableCount: TableCount
   /** Table Wrapper */
-  tableWrap: TableWrapType
+  tableWrap: TableWrap
   /** Table Wrap Footer */
-  tableWrapfoot: TableWrapfootType
+  tableWrapfoot: TableWrapfoot
   /** Table Wrapper Group */
-  tableWrapgroup: TableWrapgroupType
+  tableWrapgroup: TableWrapgroup
   /** Target of an Internal Link */
-  target: TargetType
-  tbody: TbodyType
-  td: TdType
+  target: Target
+  tbody: Tbody
+  td: Td
   /** Definition List: Term */
-  term: TermType
+  term: Term
   /** Definition List: Term Head */
-  termHead: TermHeadType
+  termHead: TermHead
   /** Tex Math Equation */
-  texMath: TexMathType
+  texMath: TexMath
   /** Textual Form */
-  textualForm: TextualFormType
-  tfoot: TfootType
-  th: ThType
-  thead: TheadType
+  textualForm: TextualForm
+  tfoot: Tfoot
+  th: Th
+  thead: Thead
   /** Time Stamp For Cited Work */
-  timeStamp: TimeStampType
+  timeStamp: TimeStamp
   /** Title */
-  title: TitleType
+  title: Title
   /** Title Group */
-  titleGroup: TitleGroupType
-  tr: TrType
+  titleGroup: TitleGroup
+  tr: Tr
   /** Translated Abstract */
-  transAbstract: TransAbstractType
+  transAbstract: TransAbstract
   /** Translated Source */
-  transSource: TransSourceType
+  transSource: TransSource
   /** Translated Subtitle */
-  transSubtitle: TransSubtitleType
+  transSubtitle: TransSubtitle
   /** Translated Title */
-  transTitle: TransTitleType
+  transTitle: TransTitle
   /** Translated Title Group */
-  transTitlegroup: TransTitlegroupType
+  transTitlegroup: TransTitlegroup
   /** Underline */
-  underline: UnderlineType
+  underline: Underline
   /** Underline End */
-  underlineEnd: UnderlineEndType
+  underlineEnd: UnderlineEnd
   /** Underline Start */
-  underlineStart: UnderlineStartType
+  underlineStart: UnderlineStart
   /** Unstructured Keyword Group */
-  unstructuredKwdgroup: UnstructuredKwdgroupType
+  unstructuredKwdgroup: UnstructuredKwdgroup
   /** Uri */
-  uri: UriType
+  uri: Uri
   /** Verse Form For Poetry */
-  verseGroup: VerseGroupType
+  verseGroup: VerseGroup
   /** Line of a Verse */
-  verseLine: VerseLineType
+  verseLine: VerseLine
   /** Version Statement, Cited */
-  version: VersionType
+  version: Version
   /** Volume Number */
-  volume: VolumeType
+  volume: Volume
   /** Volume Identifier */
-  volumeId: VolumeIdType
+  volumeId: VolumeId
   /** Translated Title Group */
-  volumeIssuegroup: VolumeIssuegroupType
+  volumeIssuegroup: VolumeIssuegroup
   /** Volume Series */
-  volumeSeries: VolumeSeriesType
+  volumeSeries: VolumeSeries
   /** Word Count */
-  wordCount: WordCountType
+  wordCount: WordCount
   /** X - Generated Text and Punctuation */
-  x: XType
+  x: X
   /** X(cross) Reference */
-  xref: XrefType
+  xref: Xref
   /** Year */
-  year: YearType
+  year: Year
 }
 
 export var document: document

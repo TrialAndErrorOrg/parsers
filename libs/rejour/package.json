@@ -1,4 +1,7 @@
 {
   "name": "rejour",
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "devDependencies": {
+    "utility-types": "^3.10.0"
+  }
 }

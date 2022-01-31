@@ -36,3 +36,8 @@ export function toLatex(node: Node | Node[], options: Options = {}): string {
     : handleNodeProperly(node.type, node, options)
   return result
 }
+
+function treeToLatex(node: Node, options: Options = {}) {
+  return toLatex(node, options)
+}
+export default treeToLatex

@@ -1,3 +1,4 @@
+//@ts-nocheck
 import { handle } from './handle'
 import { zwitch } from 'zwitch'
 import { configure } from './configure'

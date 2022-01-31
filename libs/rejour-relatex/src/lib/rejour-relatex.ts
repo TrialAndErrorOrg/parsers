@@ -1,7 +1,13 @@
 import { toLtast, Options } from 'jast-util-to-ltast'
 import { Root as JastRoot } from 'rejour'
 import { Root as LtastRoot } from 'relatex'
-import { Plugin, Processor as UnifiedProcessor } from 'unified'
+import {
+  Plugin,
+  Processor as UnifiedProcessor,
+  TransformCallback,
+  Transformer,
+} from 'unified'
+import { VFile } from 'vfile'
 type Processor = UnifiedProcessor<any, any, any, any>
 
 /**
@@ -9,28 +15,26 @@ type Processor = UnifiedProcessor<any, any, any, any>
  * Runs the destination with the new mdast tree.
  *
  */
-// function bridge(
-//   this,
-//   destination,
-//   options
-// ) {
-//   return (node, file, next) => {
-//     destination.run(toLtast(node, options), file, (error) => {
-//       next(error)
-//     })
-//   }
-// } as Plugin<[Processor, Options], JastRoot>
+function bridge(
+  destination: Processor,
+  options?: Options
+): void | Transformer<JastRoot, JastRoot> {
+  return (node, file, next) => {
+    destination.run(toLtast(node, options), file, (error) => {
+      next(error)
+    })
+  }
+}
 
 /**
  * Mutate-mode.
  * Further transformers run on the mdast tree.
  */
-const mutate: Plugin<[Options?] | [void], JastRoot, LtastRoot> = function (
-  this,
-  options = {}
-) {
+function mutate(
+  options: void | Options | undefined = {}
+): Transformer<JastRoot, JastRoot> | void {
   return (node) => {
-    const result = toLtast(node, options) as LtastRoot
+    const result = toLtast(node, options)
     return result
   }
 }
@@ -48,9 +52,9 @@ const mutate: Plugin<[Options?] | [void], JastRoot, LtastRoot> = function (
  * @param options
  *   Options passed to `jast-util-to-ltast`.
  */
-function rejourRelatex(
-  destination: Processor | Options,
-  options: Options = {}
+const rejourRelatex = function (
+  destination?: Processor | Options,
+  options?: Options
 ) {
   let settings: Options | undefined
   let processor: Processor | undefined
@@ -62,14 +66,12 @@ function rejourRelatex(
     settings = destination
   }
 
-  if (settings.document === undefined || settings.document === null) {
+  if (settings?.document === undefined || settings.document === null) {
     settings = Object.assign({}, settings, { document: true })
   }
 
-  return (node: any) => {
-    const result = toLtast(node, options) as LtastRoot
-    return result
-  }
-}
+  return processor ? bridge(processor, settings) : mutate(settings)
+} as Plugin<[Processor, Options?], JastRoot> &
+  Plugin<[Options?] | void[], JastRoot, LtastRoot>
 
 export default rejourRelatex

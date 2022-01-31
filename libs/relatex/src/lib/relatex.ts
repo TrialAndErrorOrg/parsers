@@ -64,7 +64,7 @@ export type MathContent =
   | Script
   | Command
 
-export type CommandContent = Command | Text | Comment | UnistLiteral
+export type CommandContent = Command | Text | Comment
 
 export type ParagraphContent = Text | InlineMath | Command | Comment
 

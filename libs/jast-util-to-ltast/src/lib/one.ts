@@ -12,9 +12,9 @@ export function one(
   let fn: Handle | undefined
 
   if (node.type === 'element') {
-    if (node.properties && node.properties.dataLtast === 'ignore') {
-      return
-    }
+    // if (node.properties && node.properties.dataLtast === 'ignore') {
+    //   return
+    // }
 
     if (own.call(j.handlers, node.tagName)) {
       fn = j.handlers[node.tagName]

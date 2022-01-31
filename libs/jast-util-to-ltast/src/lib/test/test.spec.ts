@@ -1,6 +1,6 @@
-import { rejourParse } from 'rejour-parse'
-import { rejourRelatex } from 'rejour-relatex'
-import { relatexStringify } from 'relatex-stringify'
+import rejourParse from 'rejour-parse'
+import rejourRelatex from 'rejour-relatex'
+import relatexStringify from 'relatex-stringify'
 import { unified } from 'unified'
 
 describe('fixtures', () => {

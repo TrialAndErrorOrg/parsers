@@ -1,17 +1,18 @@
 import { fromXml } from 'xast-util-from-xml'
 
 import { ParserFunction } from 'unified'
-//import { Root as xastRoot, Node } from 'xast'
-import { Root, Element } from 'rejour'
+import { Root as xastRoot, Node as XastNode } from 'xast'
+import { Root } from 'rejour'
 import { filter } from 'unist-util-filter'
 import { map } from 'unist-util-map'
 import { Element as xastElement } from 'xast-util-from-xml/lib'
 
 export interface Settings {
   removeWhiteSpace?: boolean
+  fragment?: boolean
 }
 
-export function rejourParse(settings: Settings = {}) {
+export default function rejourParse(settings: Settings = {}) {
   const parser: ParserFunction<Root> = (doc) => {
     // Assume options.
     // const settings = /** @type {Options} */ (this.data('settings'))
@@ -27,9 +28,10 @@ export function rejourParse(settings: Settings = {}) {
     let tree = treeify(doc)
 
     tree = settings.removeWhiteSpace
-      ? filter(tree, (node: any) => {
+      ? filter(tree, (node: XastNode) => {
           return !(
-            node.type === 'text' && node.value.replace(/[\n ]+/, '') === ''
+            //@ts-expect-error ITS FINE
+            (node.type === 'text' && node.value.replace(/[\n ]+/, '') === '')
           )
         })!
       : tree

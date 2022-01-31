@@ -1,33 +1,27 @@
-import { Data } from 'unist'
 import {
-  Cdata,
   Instruction,
   Doctype,
-  ElementChildMap as XastElementChildMap,
   Attributes as XastAttributes,
-  Comment,
-  Parent as XastParent,
-  Text as XastText,
-  Root as XastRoot,
-  Element as XastElement,
-  RootChildMap as XastRootChildMap,
 } from 'libs/rejour-parse/node_modules/@types/xast'
 import { Node as UnistNode, Parent as UnistParent } from 'unist'
-import { Article, Content, Glossary } from './jats'
-import {
-  Intersection,
-  OmitByValue,
-  PickByValue,
-  PickByValueExact,
-  RequiredKeys,
-  ValuesType,
-} from 'utility-types'
+import { Text, Article, Content, Glossary } from './jats'
+import { RequiredKeys, ValuesType } from 'utility-types'
 
 export type ArrayValueMaybe<T> = T extends any[] ? ValuesType<T> : T
 export type AllTypes<T> = ArrayValueMaybe<ValuesType<T>>
 export type RequiredMap<T> = RequiredKeys<T> extends string
   ? AllTypes<T>
   : AllTypes<T> | undefined
+
+export interface Properties extends XastAttributes {}
+export interface Root extends UnistParent {
+  type: 'root'
+  children: Array<Text | Article | Instruction | Doctype | Content>
+}
+
+export interface Parent extends UnistParent {
+  children: Array<Content>
+}
 
 // type JATSContent = Extract<document[keyof document], { type: string }>
 
@@ -194,15 +188,5 @@ export type RequiredMap<T> = RequiredKeys<T> extends string
 // // export interface RootChildMap extends Omit<XastRootChildMap, 'element'> {
 // //   element: Element
 // // }
-
-export interface Properties extends XastAttributes {}
-export interface Root extends UnistParent {
-  type: 'root'
-  children: [Article]
-}
-
-export interface Parent extends UnistParent {
-  children: Array<Content>
-}
 
 // export { UnistNode as Node }

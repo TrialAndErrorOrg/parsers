@@ -24,7 +24,7 @@ export { handlers as defaultHandlers }
 const block = convert(['heading', 'paragraph', 'root'])
 
 export function toLtast(
-  tree: Node,
+  tree: LtastRoot | LtastContent,
   options: Options = {
     newLines: false,
     checked: '[x]',
@@ -36,9 +36,9 @@ export function toLtast(
   let ltast: LtastContent | LtastRoot
 
   // TODO: fix this type error
-  const j: J = Object.assign<JWithProps & JWithoutProps, Context>(
-    (
-      node: Node,
+  const j: J = Object.assign(
+    ((
+      node: LtastRoot | LtastContent,
       type: string,
       props?: Properties | string | Array<LtastContent>,
       children?: string | Array<LtastContent>
@@ -67,8 +67,9 @@ export function toLtast(
         result.position = node.position
       }
 
-      return result
-    },
+      //@ts-expect-error yeahyeah
+      return result as LtastContent
+    }) as JWithProps & JWithoutProps,
     {
       //  nodeById: byId,
       baseFound: false,

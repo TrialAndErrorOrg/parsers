@@ -18,22 +18,22 @@ export function all(j: J, parent: Node): Array<LtastContent> {
   // Trim initial and final `<br>`s.
   // They’re not semantic per HTML, and they can’t be made in markdown things
   // like paragraphs or headings.
-  while (child && child.type === 'element' && child.tagName === 'br') {
-    index++
-    child = nodes[index + 1]
-  }
+  // while (child && child.type === 'element' && child.tagName === 'br') {
+  //   index++
+  //   child = nodes[index + 1]
+  // }
 
-  child = nodes[length - 1]
+  // child = nodes[length - 1]
 
-  while (
-    length - 1 > index &&
-    child &&
-    child.type === 'element' &&
-    child.tagName === 'br'
-  ) {
-    length--
-    child = nodes[length - 1]
-  }
+  // while (
+  //   length - 1 > index &&
+  //   child &&
+  //   child.type === 'element' &&
+  //   child.tagName === 'br'
+  // ) {
+  //   length--
+  //   child = nodes[length - 1]
+  // }
 
   while (++index < length) {
     // @ts-expect-error assume `parent` is a parent.

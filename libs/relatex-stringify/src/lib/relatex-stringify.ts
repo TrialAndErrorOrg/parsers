@@ -4,9 +4,9 @@ import { CompilerFunction, Plugin } from 'unified'
 
 type Options = Omit<ToLatexOptions, 'extensions'>
 type Node = Root | LtastContent
-type stringify = Plugin<[Options] | void[], Node, string>
+type stringify = Plugin<[Options?] | void[], Node, string>
 
-const relatexStringify = function relatexStringify(options: Options | void) {
+const relatexStringify = function relatexStringify(options?: Options | void) {
   const compiler: CompilerFunction<Node, string> = (tree) => {
     // Assume options.
     const settings = this.data('settings') as Options
@@ -24,6 +24,6 @@ const relatexStringify = function relatexStringify(options: Options | void) {
   }
 
   Object.assign(this, { Compiler: compiler })
-} as stringify
+} as Plugin<[Options] | void[], Root, string>
 
 export default relatexStringify

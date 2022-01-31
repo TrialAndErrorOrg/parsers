@@ -1,5 +1,6 @@
 import { italic } from './italic'
 import { all } from '../all'
+import { command } from './command'
 export * from './italic'
 
 export const handlers = {
@@ -7,7 +8,7 @@ export const handlers = {
   //text,
   //comment,
   doctype: ignore,
-
+  title: command,
   applet: ignore,
   area: ignore,
   basefont: ignore,
@@ -43,7 +44,6 @@ export const handlers = {
   style: ignore,
   svg: ignore,
   template: ignore,
-  title: ignore,
   track: ignore,
 
   abbr: all,

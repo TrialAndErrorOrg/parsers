@@ -13891,6 +13891,7 @@ export interface documentMap {
   xref: Xref
 
   year: Year
+  text: Text
 }
 
 export type Content = ValuesType<documentMap>

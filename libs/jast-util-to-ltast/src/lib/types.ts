@@ -8,7 +8,7 @@ import {
 } from 'relatex'
 
 import {
-  Properties,
+  Properties as JastProperties,
   //Node,
   Parent,
   ElementContent as Element,
@@ -21,6 +21,9 @@ import {
  * jast Node
  */
 export type Node = Parent['children'][number] | Root
+type t = Extract<Node, Text>
+
+export type Properties = JastProperties | boolean | number
 export interface Options {
   handlers?: { [handle: string]: Handle }
   document?: boolean
@@ -85,6 +88,5 @@ export {
   LtastContent,
   LtastParent,
   LtastRoot,
-  Properties,
   Text,
 }

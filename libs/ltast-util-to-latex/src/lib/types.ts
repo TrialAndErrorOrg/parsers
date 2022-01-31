@@ -67,7 +67,8 @@ export interface Options {
   wrapDocument?: boolean
   parbreak?: 'par' | 'newline'
   emph?: 'textit' | 'emph'
-  inlineMathDelimiter?: 'parenthesis' | 'dollar'
+  inlineMathDelimiters?: '()' | '$'
+  displayMathDelimiters?: '[]' | '$$'
   handlers?: Handlers
   extensions?: Array<Options>
   join?: Array<Join>

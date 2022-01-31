@@ -15,6 +15,7 @@ export function isKnownNode(node: UnistNode): node is LtastContent {
     'command',
     'commandArg',
     'mathContainer',
+    'mathCharacter',
     'alignmentTab',
     'math',
     'break',
@@ -27,10 +28,12 @@ export type LtastContent =
   | TopLevelDocumentContent
   | PreambleContent
   | AlignmentContent
-  | TabularContent
   | MathContent
   | CommandContent
   | ParagraphContent
+  | CommandArg
+  | ListContent
+  | Text
 
 export type TopLevelDocumentContent =
   | Environment
@@ -38,6 +41,8 @@ export type TopLevelDocumentContent =
   | MathContainer
   | Command
   | Comment
+  | TabularContent
+  | TopLevelMathContent
 
 export type PreambleContent = Command | Comment
 
@@ -50,15 +55,20 @@ export type TabularContent =
   | Linebreak
   | Text
 
+export type TopLevelMathContent = MathContainer | InlineMath | DisplayMath
+
 export type MathContent =
   | AlignmentTab
   | MathCharacter
-  | MathEnvironmentAligned
+  //| MathEnvironmentAligned
   | Script
+  | Command
 
-export type CommandContent = Command | Text | Comment
+export type CommandContent = Command | Text | Comment | UnistLiteral
 
 export type ParagraphContent = Text | InlineMath | Command | Comment
+
+export type ListContent = ListItem
 
 export type NeedsEscape = '&'
 export interface Root extends Parent {
@@ -95,9 +105,10 @@ export interface Command extends Parent {
   name: string
   children: CommandArg[]
 }
-export interface CommandArg extends Group<CommandContent> {
+export interface CommandArg extends Parent {
   type: 'commandArg'
   optional?: boolean
+  children: CommandContent[]
 }
 export const isCommandArg = (node: LtastContent): node is CommandArg =>
   node.type === 'commandArg'
@@ -144,11 +155,11 @@ export interface MathContainer extends Parent {
 }
 export interface InlineMath extends MathContainer {
   name: 'inlineMath'
-  delimiters?: 'dollar' | 'parenthesis'
+  delimiters?: '$' | '()'
 }
 export interface DisplayMath extends MathContainer {
   name: 'displayMath'
-  delimiters?: 'dollar' | 'bracket'
+  delimiters?: '$$' | '[]'
 }
 export interface Script extends Parent {
   type: 'super' | 'sub'
@@ -156,7 +167,7 @@ export interface Script extends Parent {
 }
 
 export interface MathCharacter extends UnistLiteral {
-  type: 'math'
+  type: 'mathCharacter'
   value: string
 }
 
@@ -185,6 +196,7 @@ export interface Text extends UnistLiteral {
 }
 
 export interface Linebreak extends UnistNode {
+  type: 'linebreak'
   height?: string
 }
 // export type Nodes = NodeMap<UtensilNodes>

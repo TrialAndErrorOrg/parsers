@@ -10,10 +10,10 @@ export const mathContainer: BasicHandle = (
 ) => {
   switch (node.name) {
     case 'inlineMath':
-      return inlineMath(node.children)
+      return inlineMath(node, options)
     case 'displayMath':
-      return displayMath(node.children)
+      return displayMath(node, options)
     default:
-      return toLatex(node.children)
+      return toLatex(node.children, options)
   }
 }

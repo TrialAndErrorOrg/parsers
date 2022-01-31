@@ -1,6 +1,13 @@
-import { Command, CommandArg, CommandArgOpt, Environment } from 'relatex'
+import {
+  Text,
+  Command,
+  CommandArg,
+  CommandArgOpt,
+  Environment,
+  InlineMath,
+} from 'relatex'
 import { toLatex } from './ltast-util-to-latex'
-const text = { type: 'text', value: 'hello world!' }
+const text: Text = { type: 'text', value: 'hello world!' }
 
 const commandWithNoArgs: Command = {
   type: 'command',
@@ -133,5 +140,64 @@ describe('environment', () => {
 
   \\end{basic}`
     )
+  })
+})
+
+describe('math', () => {
+  const inlineMath: InlineMath = {
+    type: 'mathContainer',
+    name: 'inlineMath',
+    children: [
+      {
+        type: 'mathCharacter',
+        value: '8 + 9 = ',
+      },
+      {
+        type: 'command',
+        name: 'frac',
+        children: [
+          {
+            type: 'commandArg',
+            optional: false,
+            children: [
+              {
+                type: 'mathCharacter',
+                value: '8',
+              },
+            ],
+          },
+          {
+            type: 'commandArg',
+            optional: false,
+            children: [
+              {
+                type: 'mathCharacter',
+                value: '8',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  }
+  it('should parse inlinemath', () => {
+    expect(toLatex(inlineMath)).toEqual(` $ 8 + 9 = \\frac{8}{8} $ `)
+  })
+  it('should change delimiters based on node properties', () => {
+    const inlineMathWithDelimiters = {
+      ...inlineMath,
+      delimiters: '()',
+    }
+    expect(toLatex(inlineMathWithDelimiters)).toEqual(
+      ` \\( 8 + 9 = \\frac{8}{8} \\) `
+    )
+  })
+  it('should change delimiters based on global options', () => {
+    const inlineMathWithDelimiters = {
+      ...inlineMath,
+    }
+    expect(
+      toLatex(inlineMathWithDelimiters, { inlineMathDelimiters: '()' })
+    ).toEqual(` \\( 8 + 9 = \\frac{8}{8} \\) `)
   })
 })

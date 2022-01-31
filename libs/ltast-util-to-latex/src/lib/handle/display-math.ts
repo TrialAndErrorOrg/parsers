@@ -7,12 +7,14 @@ export const displayMath: BasicHandle = (
   options: Options = {}
 ) => {
   const builtInDelimiters =
-    node.delimiters === 'bracket' ? ['\\[', '\\]'] : ['$$', '$$']
+    node.delimiters === '[]' ? ['\\[', '\\]'] : ['$$', '$$']
 
-  const delimiters =
-    options.inlineMathDelimiter === 'parenthesis'
+  // TODO: Clean up delimiter picking for math env
+  const delimiters = options.inlineMathDelimiters
+    ? options.displayMathDelimiters === '[]'
       ? ['\\[', '\\]']
-      : builtInDelimiters
+      : ['$$', '$$']
+    : builtInDelimiters
   const [left, right] = delimiters
   return `
   ${left}

@@ -7,12 +7,15 @@ export const inlineMath: BasicHandle = (
   options: Options = {}
 ) => {
   const builtInDelimiters =
-    node.delimiters === 'parenthesis' ? ['\\(', '\\)'] : ['$', '$']
+    node.delimiters === '()' ? ['\\(', '\\)'] : ['$', '$']
+  console.log(node.delimiters)
 
-  const delimiters =
-    options.inlineMathDelimiter === 'parenthesis'
+  // TODO: Clean up delimiter picking for math env
+  const delimiters = options.inlineMathDelimiters
+    ? options.inlineMathDelimiters === '()'
       ? ['\\(', '\\)']
-      : builtInDelimiters
+      : ['$', '$']
+    : builtInDelimiters
   const [left, right] = delimiters
   return ` ${left} ${toLatex(node.children)} ${right} `
 }

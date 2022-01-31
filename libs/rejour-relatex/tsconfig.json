@@ -2,6 +2,7 @@
   "extends": "../../tsconfig.base.json",
   "files": [],
   "include": [],
+  "exclude": ["./src/lib/bak.ts"],
   "references": [
     {
       "path": "./tsconfig.lib.json"

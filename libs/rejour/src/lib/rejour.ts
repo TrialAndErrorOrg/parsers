@@ -13,7 +13,7 @@ import {
   RootChildMap as XastRootChildMap,
 } from 'libs/rejour-parse/node_modules/@types/xast'
 import { Node as UnistNode, Parent as UnistParent } from 'unist'
-import { document, Glossary } from './jats'
+import { Article, Content, Glossary } from './jats'
 import {
   Intersection,
   OmitByValue,
@@ -195,11 +195,14 @@ export type RequiredMap<T> = RequiredKeys<T> extends string
 // //   element: Element
 // // }
 
-// export interface Properties extends XastAttributes {}
-// export interface Text extends XastText {}
+export interface Properties extends XastAttributes {}
+export interface Root extends UnistParent {
+  type: 'root'
+  children: [Article]
+}
 
-// export interface Parent extends UnistParent {
-//   children: Array<Content>
-// }
+export interface Parent extends UnistParent {
+  children: Array<Content>
+}
 
 // export { UnistNode as Node }

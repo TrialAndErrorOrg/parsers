@@ -11,7 +11,7 @@ import {
   Properties,
   //Node,
   Parent,
-  Element,
+  ElementContent as Element,
   Text,
   Root,
   Content,
@@ -20,14 +20,15 @@ import {
 /**
  * jast Node
  */
-export type Node = Content | Root
+export type Node = Parent['children'][number] | Root
 export interface Options {
   handlers?: { [handle: string]: Handle }
   document?: boolean
-  newLines: boolean
-  checked: string
-  unchecked: string
-  quotes: Array<string>
+  newLines?: boolean
+  checked?: string
+  unchecked?: string
+  quotes?: Array<string>
+  italics?: 'emph' | 'textit'
 }
 
 export type Handle = (

@@ -1,6 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`fixtures parses correctly for NaN 1`] = `
-"\\\\emph{Hey}
-"
+exports[`parses correctly for article should match snapshot 1`] = `
+"\\\\begin{document}
+
+  
+
+\\\\end{document}"
 `;
+
+exports[`parses correctly for environment should match snapshot 1`] = `
+"\\\\begin{document}
+
+  
+
+\\\\end{document}"
+`;
+
+exports[`parses correctly for italic should match snapshot 1`] = `"\\\\italic{Hey\\\\n\\\\n}"`;
+
+exports[`parses correctly for root should match snapshot 1`] = `
+"\\\\begin{document}
+
+  
+
+\\\\end{document}"
+`;
+
+exports[`parses correctly for title should match snapshot 1`] = `"\\\\title{A fancy title\\\\n\\\\n}"`;

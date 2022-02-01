@@ -8,48 +8,56 @@ import { LtastContent, LtastRoot, Options } from '../types'
 import { removePosition } from 'unist-util-remove-position'
 import { toLatex } from 'ltast-util-to-latex'
 
-describe('fixtures', () => {
-  const fromXML = (config: Options = {}) =>
-    unified()
-      .use(rejourParse)
-      //@ts-expect-error yayayay
-      .use(() => {
-        return transformer
-        function transformer(tree: LtastRoot | LtastContent) {
-          return toLtast(tree, config)
-        }
-      })
-      .use(relatexStringify)
-
-  const fixtures = join(__dirname, 'fixtures')
-  const dir = readdirSync(fixtures)
-  console.log(dir)
-  const doubleDir = dir.map((f) => [
-    join(fixtures, f, 'index.xml'),
-    join(fixtures, f, 'index.tex'),
-    join(fixtures, f, 'index.json'),
-  ])
-
-  console.log(doubleDir)
-
-  test.each(doubleDir)(
-    'parses correctly for %i',
-    (jats: string, latex: string) => {
-      const jatsIn = String(readFileSync(jats))
-      const texOut = String(readFileSync(latex))
-      let config: Options | undefined
-      try {
-        config = JSON.parse(String(readFileSync(latex)))
-      } catch (e) {
-        console.log(e)
+//describe('fixtures', () => {
+const fromXML = (config: Options = {}) =>
+  unified()
+    .use(rejourParse)
+    //@ts-expect-error yayayay
+    .use(() => {
+      return transformer
+      function transformer(tree: LtastRoot | LtastContent) {
+        return toLtast(tree, config)
       }
-      const proc = fromXML(config)
+    })
+    .use(relatexStringify)
 
-      const tree = removePosition(proc.runSync(proc.parse(jatsIn)), true)
-      const lx = toLatex(tree)
+const fixtures = join(__dirname, 'fixtures')
+const dir = readdirSync(fixtures)
+const arrDir = dir.map((f) => f)
+const doubleDir = dir.map((f) => [
+  join(fixtures, f, 'index.jats.xml'),
+  join(fixtures, f, 'index.tex'),
+  join(fixtures, f, 'index.json'),
+])
 
-      expect(lx).toEqual(texOut)
-      expect(lx).toMatchSnapshot()
-    }
+describe.each(dir)('parses correctly for %s', (name: string) => {
+  const [jats, latex, json] = ['index.jats.xml', 'index.tex', 'index.json'].map(
+    (ext) => join(fixtures, name, ext)
   )
+
+  const jatsIn = String(readFileSync(jats))
+  const texOut = String(readFileSync(latex))
+
+  let config: Options | undefined
+  try {
+    config = JSON.parse(String(readFileSync(latex)))
+  } catch (e) {
+    console.log(e)
+  }
+  const proc = fromXML(config)
+
+  const xmlTree = removePosition(proc.parse(jatsIn), true)
+  console.log(xmlTree)
+
+  const tree = removePosition(proc.runSync(xmlTree), true)
+  console.log(tree)
+
+  const lx = toLatex(tree)
+
+  test('should match snapshot', () => {
+    expect(lx).toMatchSnapshot()
+  })
+  test('should match predefined thing', () => {
+    expect(lx).toEqual(texOut)
+  })
 })

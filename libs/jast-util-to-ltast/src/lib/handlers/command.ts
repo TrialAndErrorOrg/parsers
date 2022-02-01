@@ -1,17 +1,20 @@
+import { CommandArg, CommandArgOpt } from 'relatex'
 import { all } from '../all.js'
-import { J, Node, Root, Text } from '../types.js'
+import { one } from '../one.js'
+import { J, Node, Parents, Root, TagName, Text } from '../types.js'
+import { wrap } from '../util/wrap.js'
 
-type TagNamesMap<T> = T extends { tagName: string } ? Pick<T, 'tagName'> : never
-type TagNames = TagNamesMap<Node>
 const typeCommandMap: {
   [key: string]: {
-    name: string
-    required?: TagNames[]
-    optional?: TagNames[]
+    name?: string
+    first?: TagName[]
+    required?: TagName[][]
+    optional?: TagName[]
+    empty?: boolean
   }
-} = {}
-
-type Parents = Extract<Exclude<Node, Text | Root>, { children: any[] }>
+} = {
+  title: {},
+}
 
 export function command(j: J, node: Parents) {
   // if (!typeCommandMap[node.type]) {
@@ -19,30 +22,53 @@ export function command(j: J, node: Parents) {
   // }
 
   const mapEntry = typeCommandMap[node.tagName]
+  const commandName = mapEntry?.name || node.tagName
 
-  const requiredCommandArgs = node?.children
+  if (mapEntry?.empty) {
+    return j(node, 'command', { name: commandName }, [])
+  }
+  const firstCommandArg = j(
+    node,
+    'commandArg',
+    { optional: false },
+    wrap(
+      node?.children
+        // @ts-expect-error dude just chill
+        ?.filter(
+          (child: Node) =>
+            mapEntry?.first?.includes(
+              // @ts-expect-error dude just chill
+              child.tagName
+            ) || child?.type === 'text'
+        )
+    )
+  )
+
+  const requiredCommandArgs: CommandArg[] = node?.children
     // @ts-expect-error dude just chill
-    ?.filter((child: Parents) =>
+    ?.filter((child: Node) =>
       mapEntry?.required?.includes(
         // @ts-expect-error dude just chill
         child.tagName
       )
     )
-    .map((child: Node) =>
-      j(child, 'commandArg', { optional: false }, all(j, child))
-    )
+    .map((child: Node) => {
+      console.log(child)
+      return j(child, 'commandArg', { optional: false }, all(j, child))
+    })
 
-  const optionalCommandArgs = node?.children
+  const optionalCommandArgs: CommandArgOpt[] = node?.children
     // @ts-expect-error dude just chill
-    ?.filter((child: Parents) =>
-      mapEntry?.optional?.includes(
-        // @ts-expect-error dude just chill
-        child.tagName
-      )
-    )
+    ?.filter((child: Parents) => mapEntry?.optional?.includes(child.tagName))
     .map((child: Node) =>
       j(child, 'commandArg', { optional: true }, all(j, child))
     )
 
-  return j(node, 'command', { name: mapEntry?.name || node.tagName })
+  console.log(requiredCommandArgs)
+  console.log(node)
+  return j(node, 'command', { name: commandName }, [
+    firstCommandArg,
+    ...requiredCommandArgs,
+    ...optionalCommandArgs,
+  ])
 }

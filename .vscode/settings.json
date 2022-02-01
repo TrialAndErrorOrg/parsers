@@ -1,3 +1,14 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "xml.validation.resolveExternalEntities": true,
+  "xml.fileAssociations": [
+    {
+      "pattern": "**/*.jats.xml",
+      "systemId": "libs/rejour/src/xsd/JATS-Publishing-1-3-MathML3-XSD/JATS-journalpublishing1-3-mathml3.xsd"
+    }
+  ],
+  "xml.format.closingBracketNewLine": true,
+  "xml.format.splitAttributes": true,
+  "xml.codeLens.enabled": true,
+  "latex-workshop.latexindent.path": "/Library/TeX/texbin/latexindent"
 }

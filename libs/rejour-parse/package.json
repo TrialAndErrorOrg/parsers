@@ -6,5 +6,8 @@
     "unist-util-filter": "^4.0.0",
     "unist-util-map": "^3.0.0",
     "xast-util-from-xml": "^2.0.1"
+  },
+  "devDependencies": {
+    "unist-util-remove-position": "^4.0.1"
   }
 }

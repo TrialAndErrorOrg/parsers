@@ -4,25 +4,53 @@ import {
   Attributes as XastAttributes,
 } from 'libs/rejour-parse/node_modules/@types/xast'
 import { Node as UnistNode, Parent as UnistParent } from 'unist'
-import { Text, Article, Content, Glossary } from './jats'
+import { documentMap, Text, Article, Content, Glossary } from './jats'
 import { RequiredKeys, ValuesType } from 'utility-types'
 
-export type ArrayValueMaybe<T> = T extends any[] ? ValuesType<T> : T
+const types = Object.keys(documentMap)
+
+export type NoUndefined<T> = Exclude<T, undefined>
+export type ArrayValueMaybe<T> = T extends any[]
+  ? ValuesType<NoUndefined<T>>
+  : NoUndefined<T>
 export type AllTypes<T> = ArrayValueMaybe<ValuesType<T>>
-export type RequiredMap<T> = RequiredKeys<T> extends string
+
+export type RequiredMap<T> = AllTypes<T>
+export type OldRequiredMap<T> = RequiredKeys<T> extends string
   ? AllTypes<T>
   : AllTypes<T> | undefined
 
-export interface Properties extends XastAttributes {}
+export interface Properties {
+  [name: string]: string | null | undefined | boolean | number
+}
 export interface Root extends UnistParent {
   type: 'root'
   children: Array<Text | Article | Instruction | Doctype | Content>
 }
+export type TagHavers = Extract<Content, { tagName: string }>
 
 export interface Parent extends UnistParent {
   children: Array<Content>
 }
 
+export interface Element extends UnistNode {
+  type: 'element'
+  properties: Properties
+  tagName: string
+  children?: Content
+}
+export function isElement(node: UnistNode): node is Element {
+  return node.hasOwnProperty('tagName') && node.hasOwnProperty('properties')
+}
+
+export type TagNamesMap<T> = T extends { tagName: string }
+  ? T['tagName']
+  : never
+export type TagName = TagNamesMap<Content>
+
+export function isValidJATSTagName(tag: string): tag is TagName {
+  return tag in types
+}
 // type JATSContent = Extract<document[keyof document], { type: string }>
 
 // /**

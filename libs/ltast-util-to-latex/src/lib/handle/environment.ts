@@ -1,4 +1,3 @@
-import { LtastContent } from 'libs/jast-util-to-ltast/src/lib/types'
 import {
   CommandArg,
   Environment,
@@ -9,7 +8,7 @@ import { toLatex } from '../ltast-util-to-latex'
 import { BasicHandle, Handle, Node, Options } from '../types'
 
 interface EnvChildren {
-  children: LtastContent[]
+  children: Node[]
   optargs: CommandArg[]
   args: CommandArg[]
 }
@@ -18,7 +17,7 @@ export const environment: BasicHandle = (
   options: Options = {}
 ) => {
   const contents: EnvChildren = node.children.reduce(
-    (acc: EnvChildren, child: LtastContent) => {
+    (acc: EnvChildren, child: Node) => {
       if (isCommandArg(child)) {
         if (isOptionalCommandArg(child)) {
           acc.optargs.push(child)
@@ -35,11 +34,10 @@ export const environment: BasicHandle = (
     { children: [], optargs: [], args: [] }
   )
 
-  return `\\begin{${node.name}}${toLatex(contents.optargs)}${toLatex(
-    contents.args
-  )}
+  // prettier-ignore
+  return `\\begin{${node.name}}${toLatex(contents.optargs)}${toLatex(contents.args)}
 
-      ${toLatex(contents.children)}
+${"  "}${toLatex(contents.children)}
 
-  \\end{${node.name}}`
+\\end{${node.name}}`
 }

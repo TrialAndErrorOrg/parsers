@@ -37,11 +37,10 @@ export type LtastContent =
 
 export type TopLevelDocumentContent =
   | Environment
-  | ParagraphContent
+  | Paragraph
   | MathContainer
   | Command
   | Comment
-  | TabularContent
   | TopLevelMathContent
 
 export type PreambleContent = Command | Comment
@@ -64,9 +63,16 @@ export type MathContent =
   | Script
   | Command
 
+export type EnvironmentContent = TopLevelDocumentContent
+
 export type CommandContent = Command | Text | Comment
 
 export type ParagraphContent = Text | InlineMath | Command | Comment
+export function isParagraphContent(
+  content: LtastContent
+): content is ParagraphContent {
+  return ['text', 'inlineMath', 'command', 'comment'].includes(content.type)
+}
 
 export type ListContent = ListItem
 
@@ -95,7 +101,7 @@ export interface Parent extends UnistParent {
   children: LtastContent[]
 }
 
-export interface Group<Child extends LtastContent = LtastContent>
+export interface Group<Child extends LtastContent = EnvironmentContent>
   extends Parent {
   type: Pick<Child, 'type'> extends string ? Pick<Child, 'type'> : string
   children: Child[]
@@ -110,7 +116,7 @@ export interface CommandArg extends Parent {
   optional?: boolean
   children: CommandContent[]
 }
-export const isCommandArg = (node: LtastContent): node is CommandArg =>
+export const isCommandArg = (node: Root | LtastContent): node is CommandArg =>
   node.type === 'commandArg'
 export interface CommandArgOpt extends CommandArg {
   optional: true

@@ -14,6 +14,7 @@ import {
   Properties,
 } from './types'
 import { convert } from 'unist-util-is'
+import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
 //import { visit } from 'unist-util-visit'
 //import {BuildVisitor} from 'unist-util-visit/complex-types'
 
@@ -67,7 +68,6 @@ export function toLtast(
         result.position = node.position
       }
 
-      //@ts-expect-error yeahyeah
       return result as LtastContent
     }) as JWithProps & JWithoutProps,
     {
@@ -85,7 +85,8 @@ export function toLtast(
       checked: options.checked || '[x]',
       unchecked: options.unchecked || '[ ]',
       quotes: options.quotes || ['"'],
-    }
+      italics: options.italics || 'emph',
+    } as Context
   )
 
   // visit(tree, 'element', (node) => {
@@ -100,8 +101,9 @@ export function toLtast(
   // })
 
   // @ts-expect-error: does return a transformer, that does accept any node.
-  //rehypeMinifyWhitespace({ newlines: options.newlines === true })(tree)
+  rehypeMinifyWhitespace({ newlines: options.newlines === true })(tree)
 
+  // @ts-expect-error: does return a transformer, that does accept any node.
   const result = one(j, tree, undefined)
 
   if (!result) {

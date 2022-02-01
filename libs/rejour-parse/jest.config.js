@@ -11,7 +11,7 @@ module.exports = {
   transform: {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
-  transformIgnorePatterns: [],
+  //transformIgnorePatterns: [],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/libs/rejour-parse',
   extensionsToTreatAsEsm: ['.ts'],

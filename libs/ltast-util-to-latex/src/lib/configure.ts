@@ -1,8 +1,3 @@
-/**
- * @typedef {import('./types.js').Options} Options
- * @typedef {import('./types.js').Context} Context
- */
-
 import { Options, Context } from './types'
 
 export function configure(base: Context, extension: Options): Context {

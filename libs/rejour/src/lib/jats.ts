@@ -240,7 +240,7 @@ export interface AffAlternatives extends UnistNode {
     id?: string
   }
 
-  children: Required<AffAlternativesChildrenMap>[]
+  children: RequiredMap<AffAlternativesChildrenMap>[]
 }
 
 export interface AffAlternativesChildrenMap {
@@ -831,14 +831,13 @@ export interface Array extends UnistNode {
   properties: {
     id?: string
     specificUse?: string
+    orientation?: ArrayTypeOrientation
   }
 
   children: RequiredMap<ArrayChildrenMap>[]
 }
 
 export interface ArrayChildrenMap {
-  orientation?: ArrayTypeOrientation
-
   altText?: AltText[]
 
   alternatives?: Alternatives[]
@@ -870,7 +869,7 @@ export interface ArticleCategories extends UnistNode {
     id?: string
   }
 
-  children: Required<ArticleCategoriesChildrenMap>[]
+  children: RequiredMap<ArticleCategoriesChildrenMap>[]
 }
 
 export interface ArticleCategoriesChildrenMap {
@@ -885,17 +884,16 @@ export interface ArticleId extends UnistNode {
   tagName: 'articleId'
   properties: {
     assigningAuthority?: string
-    customType?: string
     id?: string
     specificUse?: string
+    pubIdtype?: ArticleIdTypePubIdtype
   }
 
   children: RequiredMap<ArticleIdChildrenMap>[]
+  contentType?: Text
 }
 
-export interface ArticleIdChildrenMap {
-  pubIdtype?: ArticleIdTypePubIdtype
-}
+export interface ArticleIdChildrenMap {}
 
 type ArticleIdTypePubIdtype =
   | 'accession'
@@ -1119,13 +1117,12 @@ export interface Article extends UnistNode {
     articleType?: string
     id?: string
     specificUse?: string
+    dtdVersion?: ArticleTypeDtdVersion
   }
 
   children: RequiredMap<ArticleChildrenMap>[]
 }
-
 export interface ArticleChildrenMap {
-  dtdVersion?: ArticleTypeDtdVersion
   back?: Back
 
   body?: Body
@@ -1163,7 +1160,7 @@ export interface ArticleVersionalternatives extends UnistNode {
     id?: string
   }
 
-  children: Required<ArticleVersionalternativesChildrenMap>[]
+  children: RequiredMap<ArticleVersionalternativesChildrenMap>[]
 }
 
 export interface ArticleVersionalternativesChildrenMap {
@@ -1187,7 +1184,7 @@ export interface ArticleVersion extends UnistNode {
     vocabTermidentifier?: string
   }
 
-  children: Required<ArticleVersionChildrenMap>[]
+  children: RequiredMap<ArticleVersionChildrenMap>[]
 }
 
 export interface ArticleVersionChildrenMap {
@@ -1576,7 +1573,7 @@ export interface BlockAlternatives extends UnistNode {
     id?: string
   }
 
-  children: Required<BlockAlternativesChildrenMap>[]
+  children: RequiredMap<BlockAlternativesChildrenMap>[]
 }
 
 export interface BlockAlternativesChildrenMap {
@@ -2065,7 +2062,7 @@ export interface ChemStructwrap extends UnistNode {
     position?: ChemStructwrapTypePosition
   }
 
-  children: Required<ChemStructwrapChildrenMap>[]
+  children: RequiredMap<ChemStructwrapChildrenMap>[]
 }
 
 export interface ChemStructwrapChildrenMap {
@@ -2120,7 +2117,7 @@ export interface CitationAlternatives extends UnistNode {
     id?: string
   }
 
-  children: Required<CitationAlternativesChildrenMap>[]
+  children: RequiredMap<CitationAlternativesChildrenMap>[]
 }
 
 export interface CitationAlternativesChildrenMap {
@@ -2267,7 +2264,7 @@ export interface CollabAlternatives extends UnistNode {
     id?: string
   }
 
-  children: Required<CollabAlternativesChildrenMap>[]
+  children: RequiredMap<CollabAlternativesChildrenMap>[]
 }
 
 export interface CollabAlternativesChildrenMap {
@@ -2505,7 +2502,7 @@ export interface CompoundKwdpart extends UnistNode {
     id?: string
   }
 
-  children: Required<CompoundKwdpartChildrenMap>[]
+  children: RequiredMap<CompoundKwdpartChildrenMap>[]
 }
 
 export interface CompoundKwdpartChildrenMap {
@@ -2588,7 +2585,7 @@ export interface CompoundSubjectpart extends UnistNode {
     id?: string
   }
 
-  children: Required<CompoundSubjectpartChildrenMap>[]
+  children: RequiredMap<CompoundSubjectpartChildrenMap>[]
 }
 
 export interface CompoundSubjectpartChildrenMap {
@@ -2649,7 +2646,7 @@ export interface CompoundSubject extends UnistNode {
     vocabTermidentifier?: string
   }
 
-  children: Required<CompoundSubjectChildrenMap>[]
+  children: RequiredMap<CompoundSubjectChildrenMap>[]
 }
 
 export interface CompoundSubjectChildrenMap {
@@ -3001,7 +2998,7 @@ export interface ContributedResourcegroup extends UnistNode {
     specificUse?: string
   }
 
-  children: Required<ContributedResourcegroupChildrenMap>[]
+  children: RequiredMap<ContributedResourcegroupChildrenMap>[]
 }
 
 export interface ContributedResourcegroupChildrenMap {
@@ -3020,7 +3017,7 @@ export interface CopyrightHolder extends UnistNode {
     specificUse?: string
   }
 
-  children: Required<CopyrightHolderChildrenMap>[]
+  children: RequiredMap<CopyrightHolderChildrenMap>[]
 }
 
 export interface CopyrightHolderChildrenMap {
@@ -3043,7 +3040,7 @@ export interface CopyrightStatement extends UnistNode {
     specificUse?: string
   }
 
-  children: Required<CopyrightStatementChildrenMap>[]
+  children: RequiredMap<CopyrightStatementChildrenMap>[]
 }
 
 export interface CopyrightStatementChildrenMap {
@@ -3232,7 +3229,7 @@ export interface CustomMetagroup extends UnistNode {
     specificUse?: string
   }
 
-  children: Required<CustomMetagroupChildrenMap>[]
+  children: RequiredMap<CustomMetagroupChildrenMap>[]
 }
 
 export interface CustomMetagroupChildrenMap {
@@ -3331,7 +3328,7 @@ export interface DateIncitation extends UnistNode {
     specificUse?: string
   }
 
-  children: Required<DateIncitationChildrenMap>[]
+  children: RequiredMap<DateIncitationChildrenMap>[]
 }
 
 export interface DateIncitationChildrenMap {
@@ -3559,7 +3556,7 @@ export interface DispFormulagroup extends UnistNode {
     specificUse?: string
   }
 
-  children: Required<DispFormulagroupChildrenMap>[]
+  children: RequiredMap<DispFormulagroupChildrenMap>[]
 }
 
 export interface DispFormulagroupChildrenMap {
@@ -3805,7 +3802,7 @@ export interface ElementCitation extends UnistNode {
     useType?: string
   }
 
-  children: Required<ElementCitationChildrenMap>[]
+  children: RequiredMap<ElementCitationChildrenMap>[]
 }
 
 export interface ElementCitationChildrenMap {
@@ -4371,15 +4368,14 @@ export interface Fig extends UnistNode {
     figType?: string
     id?: string
     specificUse?: string
+    position?: FigTypePosition
+    orientation?: FigTypeOrientation
   }
 
   children: RequiredMap<FigChildrenMap>[]
 }
 
 export interface FigChildrenMap {
-  orientation?: FigTypeOrientation
-  position?: FigTypePosition
-
   abstract?: Abstract[]
 
   altText?: AltText[]
@@ -4600,13 +4596,13 @@ export interface Fn extends UnistNode {
     id?: string
     specificUse?: string
     symbol?: string
+    fnType?: FnTypeFnType
   }
 
   children: RequiredMap<FnChildrenMap>[]
 }
 
 export interface FnChildrenMap {
-  fnType?: FnTypeFnType
   label?: Label
 
   p: P[]
@@ -4875,7 +4871,7 @@ export interface FundingStatement extends UnistNode {
     specificUse?: string
   }
 
-  children: Required<FundingStatementChildrenMap>[]
+  children: RequiredMap<FundingStatementChildrenMap>[]
 }
 
 export interface FundingStatementChildrenMap {
@@ -5350,7 +5346,7 @@ export interface InlineSupplementarymaterial extends UnistNode {
     specificUse?: string
   }
 
-  children: Required<InlineSupplementarymaterialChildrenMap>[]
+  children: RequiredMap<InlineSupplementarymaterialChildrenMap>[]
 }
 
 export interface InlineSupplementarymaterialChildrenMap {
@@ -5443,7 +5439,7 @@ export interface InstitutionWrap extends UnistNode {
     id?: string
   }
 
-  children: Required<InstitutionWrapChildrenMap>[]
+  children: RequiredMap<InstitutionWrapChildrenMap>[]
 }
 
 export interface InstitutionWrapChildrenMap {
@@ -5568,7 +5564,7 @@ export interface IssueTitlegroup extends UnistNode {
     specificUse?: string
   }
 
-  children: Required<IssueTitlegroupChildrenMap>[]
+  children: RequiredMap<IssueTitlegroupChildrenMap>[]
 }
 
 export interface IssueTitlegroupChildrenMap {
@@ -5753,7 +5749,7 @@ export interface JournalSubtitle extends UnistNode {
     specificUse?: string
   }
 
-  children: Required<JournalSubtitleChildrenMap>[]
+  children: RequiredMap<JournalSubtitleChildrenMap>[]
 }
 
 export interface JournalSubtitleChildrenMap {
@@ -5767,7 +5763,7 @@ export interface JournalTitlegroup extends UnistNode {
     id?: string
   }
 
-  children: Required<JournalTitlegroupChildrenMap>[]
+  children: RequiredMap<JournalTitlegroupChildrenMap>[]
 }
 
 export interface JournalTitlegroupChildrenMap {
@@ -6349,7 +6345,7 @@ export interface MilestoneStart extends UnistNode {
     specificUse?: string
   }
 
-  children: Required<MilestoneStartChildrenMap>[]
+  children: RequiredMap<MilestoneStartChildrenMap>[]
 }
 
 export interface MilestoneStartChildrenMap {
@@ -6658,7 +6654,7 @@ export interface NameAlternatives extends UnistNode {
     id?: string
   }
 
-  children: Required<NameAlternativesChildrenMap>[]
+  children: RequiredMap<NameAlternativesChildrenMap>[]
 }
 
 export interface NameAlternativesChildrenMap {
@@ -7487,13 +7483,13 @@ export interface PersonGroup extends UnistNode {
     customType?: string
     id?: string
     specificUse?: string
+    personGrouptype?: PersonGroupTypePersonGrouptype
   }
 
   children: RequiredMap<PersonGroupChildrenMap>[]
 }
 
 export interface PersonGroupChildrenMap {
-  personGrouptype?: PersonGroupTypePersonGrouptype
   aff?: Aff[]
 
   affAlternatives?: AffAlternatives[]
@@ -7696,7 +7692,7 @@ export interface PrincipalAwardrecipient extends UnistNode {
     specificUse?: string
   }
 
-  children: Required<PrincipalAwardrecipientChildrenMap>[]
+  children: RequiredMap<PrincipalAwardrecipientChildrenMap>[]
 }
 
 export interface PrincipalAwardrecipientChildrenMap {
@@ -7721,7 +7717,7 @@ export interface PrincipalInvestigator extends UnistNode {
     specificUse?: string
   }
 
-  children: Required<PrincipalInvestigatorChildrenMap>[]
+  children: RequiredMap<PrincipalInvestigatorChildrenMap>[]
 }
 
 export interface PrincipalInvestigatorChildrenMap {
@@ -7767,7 +7763,7 @@ export interface ProcessingMeta extends UnistNode {
     tagsetFamily?: ProcessingMetaTypeTagsetFamily
   }
 
-  children: Required<ProcessingMetaChildrenMap>[]
+  children: RequiredMap<ProcessingMetaChildrenMap>[]
 }
 
 export interface ProcessingMetaChildrenMap {
@@ -8205,17 +8201,17 @@ export interface PubId extends UnistNode {
   tagName: 'pubId'
   properties: {
     assigningAuthority?: string
-    customType?: string
     hreflang?: string
     id?: string
     specificUse?: string
+    pubIdtype?: PubIdTypePubIdtype
   }
 
   children: RequiredMap<PubIdChildrenMap>[]
 }
 
 export interface PubIdChildrenMap {
-  pubIdtype?: PubIdTypePubIdtype
+  customType?: Text
 }
 
 type PubIdTypePubIdtype =
@@ -8323,7 +8319,7 @@ export interface QuestionPreamble extends UnistNode {
     specificUse?: string
   }
 
-  children: Required<QuestionPreambleChildrenMap>[]
+  children: RequiredMap<QuestionPreambleChildrenMap>[]
 }
 
 export interface QuestionPreambleChildrenMap {
@@ -8415,13 +8411,13 @@ export interface Question extends UnistNode {
   properties: {
     id?: string
     specificUse?: string
+    questionResponsetype?: QuestionTypeQuestionResponsetype
   }
 
   children: RequiredMap<QuestionChildrenMap>[]
 }
 
 export interface QuestionChildrenMap {
-  questionResponsetype?: QuestionTypeQuestionResponsetype
   address: Address[]
 
   altTitle?: AltTitle[]
@@ -8528,7 +8524,7 @@ export interface QuestionWrapgroup extends UnistNode {
     specificUse?: string
   }
 
-  children: Required<QuestionWrapgroupChildrenMap>[]
+  children: RequiredMap<QuestionWrapgroupChildrenMap>[]
 }
 
 export interface QuestionWrapgroupChildrenMap {
@@ -8754,7 +8750,7 @@ export interface RelatedArticle extends UnistNode {
     vol?: string
   }
 
-  children: Required<RelatedArticleChildrenMap>[]
+  children: RequiredMap<RelatedArticleChildrenMap>[]
 }
 
 export interface RelatedArticleChildrenMap {
@@ -10374,7 +10370,7 @@ export interface StdOrganization extends UnistNode {
     specificUse?: string
   }
 
-  children: Required<StdOrganizationChildrenMap>[]
+  children: RequiredMap<StdOrganizationChildrenMap>[]
 }
 
 export interface StdOrganizationChildrenMap {
@@ -11143,7 +11139,7 @@ export interface SupplementaryMaterial extends UnistNode {
     position?: SupplementaryMaterialTypePosition
   }
 
-  children: Required<SupplementaryMaterialChildrenMap>[]
+  children: RequiredMap<SupplementaryMaterialChildrenMap>[]
 }
 
 export interface SupplementaryMaterialChildrenMap {
@@ -11297,7 +11293,7 @@ export interface SupportDescription extends UnistNode {
     specificUse?: string
   }
 
-  children: Required<SupportDescriptionChildrenMap>[]
+  children: RequiredMap<SupportDescriptionChildrenMap>[]
 }
 
 export interface SupportDescriptionChildrenMap {
@@ -11512,15 +11508,14 @@ export interface Table extends UnistNode {
     style?: string
     summary?: string
     width?: string
+    frame?: TableTypeFrame
+    rules?: TableTypeRules
   }
 
   children: RequiredMap<TableChildrenMap>[]
 }
 
 export interface TableChildrenMap {
-  frame?: TableTypeFrame
-  rules?: TableTypeRules
-
   col?: Col[]
   colgroup?: Colgroup[]
   tbody: Tbody[]
@@ -11576,7 +11571,7 @@ export interface TableWrapgroup extends UnistNode {
     position?: TableWrapgroupTypePosition
   }
 
-  children: Required<TableWrapgroupChildrenMap>[]
+  children: RequiredMap<TableWrapgroupChildrenMap>[]
 }
 
 export interface TableWrapgroupChildrenMap {
@@ -12180,6 +12175,7 @@ export interface Tfoot extends UnistNode {
     charoff?: string
     id?: string
     style?: string
+    valign?: TfootTypeValign
   }
 
   children: RequiredMap<TfootChildrenMap>[]
@@ -12187,7 +12183,6 @@ export interface Tfoot extends UnistNode {
 
 export interface TfootChildrenMap {
   contentType?: Text
-  valign?: TfootTypeValign
   tr: Tr[]
 }
 
@@ -12701,7 +12696,7 @@ export interface TransTitlegroup extends UnistNode {
     specificUse?: string
   }
 
-  children: Required<TransTitlegroupChildrenMap>[]
+  children: RequiredMap<TransTitlegroupChildrenMap>[]
 }
 
 export interface TransTitlegroupChildrenMap {
@@ -13120,7 +13115,7 @@ export interface VolumeIssuegroup extends UnistNode {
     specificUse?: string
   }
 
-  children: Required<VolumeIssuegroupChildrenMap>[]
+  children: RequiredMap<VolumeIssuegroupChildrenMap>[]
 }
 
 export interface VolumeIssuegroupChildrenMap {
@@ -13194,13 +13189,13 @@ export interface Xref extends UnistNode {
     id?: string
     rid?: string
     specificUse?: string
+    refType?: XrefTypeRefType
   }
 
   children: RequiredMap<XrefChildrenMap>[]
 }
 
 export interface XrefChildrenMap {
-  refType?: XrefTypeRefType
   bold?: Bold[]
 
   fixedCase?: FixedCase[]
@@ -13894,5 +13889,6 @@ export interface documentMap {
   text: Text
 }
 
+export var documentMap: documentMap
 export type Content = ValuesType<documentMap>
 export type ElementContent = Extract<Content, { type: 'element' }>

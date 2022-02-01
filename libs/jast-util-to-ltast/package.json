@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "@types/unist": "^2.0.6",
+    "rehype-minify-whitespace": "^5.0.0",
     "unist-util-filter": "^4.0.0",
     "unist-util-is": "^5.1.1"
   },

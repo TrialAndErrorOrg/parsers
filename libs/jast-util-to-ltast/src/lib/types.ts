@@ -5,6 +5,7 @@ import {
   LtastContent,
   Literal as LtastLiteral,
   Root as LtastRoot,
+  ParagraphContent as LtastParagraphContent,
 } from 'relatex'
 
 import {
@@ -15,6 +16,7 @@ import {
   Text,
   Root,
   Content,
+  TagName,
 } from 'rejour'
 
 /**
@@ -23,7 +25,7 @@ import {
 export type Node = Parent['children'][number] | Root
 type t = Extract<Node, Text>
 
-export type Properties = JastProperties | boolean | number
+export type Properties = JastProperties
 export interface Options {
   handlers?: { [handle: string]: Handle }
   document?: boolean
@@ -54,6 +56,7 @@ export interface Context {
   checked: string
   unchecked: string
   quotes: Array<string>
+  italics: string
 }
 
 export type JWithProps = (
@@ -88,5 +91,9 @@ export {
   LtastContent,
   LtastParent,
   LtastRoot,
+  LtastParagraphContent,
   Text,
+  TagName,
 }
+
+export type Parents = Extract<Exclude<Node, Text | Root>, { children: any[] }>

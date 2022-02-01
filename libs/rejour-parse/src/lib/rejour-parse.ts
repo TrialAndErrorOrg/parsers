@@ -1,21 +1,32 @@
 import { fromXml } from 'xast-util-from-xml'
 
 import { ParserFunction } from 'unified'
-import { Root as xastRoot, Node as XastNode } from 'xast'
+import {
+  Root as xastRoot,
+  Node as XastNode,
+  Element as XastElement,
+} from 'xast'
 import { Root } from 'rejour'
 import { filter } from 'unist-util-filter'
 import { map } from 'unist-util-map'
-import { Element as xastElement } from 'xast-util-from-xml/lib'
 
 export interface Settings {
   removeWhiteSpace?: boolean
   fragment?: boolean
 }
 
-export default function rejourParse(settings: Settings = {}) {
+export default function rejourParse(options: Settings = {}) {
   const parser: ParserFunction<Root> = (doc) => {
     // Assume options.
-    // const settings = /** @type {Options} */ (this.data('settings'))
+    const settings: Settings = this.data('settings')
+
+    const configuration = Object.assign({}, settings, options, {
+      // Note: these options are not in the readme.
+      // The goal is for them to be set by plugins on `data` instead of being
+      // passed by users.
+      //extensions: this.data('micromarkExtensions') || [],
+      //mdastExtensions: this.data('fromMarkdownExtensions') || [],
+    })
 
     const treeify = (doc: string) => {
       try {
@@ -27,7 +38,7 @@ export default function rejourParse(settings: Settings = {}) {
     }
     let tree = treeify(doc)
 
-    tree = settings.removeWhiteSpace
+    tree = settings?.removeWhiteSpace
       ? filter(tree, (node: XastNode) => {
           return !(
             //@ts-expect-error ITS FINE
@@ -43,7 +54,7 @@ export default function rejourParse(settings: Settings = {}) {
     //@ts-expect-error: TODO:somehow types don't align, fix
     tree = map(tree!, (node) => {
       if (node.type !== 'element') return node
-      const element = node as xastElement
+      const element = node as XastElement
 
       return {
         type: 'element',

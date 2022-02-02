@@ -1,6 +1,6 @@
-import { toLtast, Options } from 'jast-util-to-ltast'
+import { toTexast, Options } from 'jast-util-to-texast'
 import { Root as JastRoot } from 'rejour'
-import { Root as LtastRoot } from 'relatex'
+import { Root as TexastRoot } from 'relatex'
 import {
   Plugin,
   Processor as UnifiedProcessor,
@@ -20,7 +20,7 @@ function bridge(
   options?: Options
 ): void | Transformer<JastRoot, JastRoot> {
   return (node, file, next) => {
-    destination.run(toLtast(node, options), file, (error) => {
+    destination.run(toTexast(node, options), file, (error) => {
       next(error)
     })
   }
@@ -34,7 +34,7 @@ function mutate(
   options: void | Options | undefined = {}
 ): Transformer<JastRoot, JastRoot> | void {
   return (node) => {
-    const result = toLtast(node, options)
+    const result = toTexast(node, options)
     return result
   }
 }
@@ -50,7 +50,7 @@ function mutate(
  * @param destination
  *   Optional unified processor.
  * @param options
- *   Options passed to `jast-util-to-ltast`.
+ *   Options passed to `jast-util-to-texast`.
  */
 const rejourRelatex = function (
   destination?: Processor | Options,
@@ -72,6 +72,6 @@ const rejourRelatex = function (
 
   return processor ? bridge(processor, settings) : mutate(settings)
 } as Plugin<[Processor, Options?], JastRoot> &
-  Plugin<[Options?] | void[], JastRoot, LtastRoot>
+  Plugin<[Options?] | void[], JastRoot, TexastRoot>
 
 export default rejourRelatex

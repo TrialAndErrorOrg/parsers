@@ -1,7 +1,0 @@
-{
-  "name": "ltast-util-to-latex",
-  "version": "0.0.1",
-  "dependencies": {
-    "zwitch": "^2.0.2"
-  }
-}

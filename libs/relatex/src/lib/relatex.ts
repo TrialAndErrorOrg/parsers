@@ -4,7 +4,7 @@ import {
   Parent as UnistParent,
 } from 'unist'
 
-export function isKnownNode(node: UnistNode): node is LtastContent {
+export function isKnownNode(node: UnistNode): node is TexastContent {
   return [
     'root',
     'document',
@@ -24,7 +24,7 @@ export function isKnownNode(node: UnistNode): node is LtastContent {
   ].includes(node.type)
 }
 
-export type LtastContent =
+export type TexastContent =
   | TopLevelDocumentContent
   | PreambleContent
   | AlignmentContent
@@ -69,7 +69,7 @@ export type CommandContent = Command | Text | Comment
 
 export type ParagraphContent = Text | InlineMath | Command | Comment
 export function isParagraphContent(
-  content: LtastContent
+  content: TexastContent
 ): content is ParagraphContent {
   return ['text', 'inlineMath', 'command', 'comment'].includes(content.type)
 }
@@ -79,7 +79,7 @@ export type ListContent = ListItem
 export type NeedsEscape = '&'
 export interface Root extends Parent {
   type: 'root'
-  // children: LtastContent[] //TopLevelDocumentContent[] | (Preamble | DocumentEnvironment)[]
+  // children:TexastContent[] //TopLevelDocumentContent[] | (Preamble | DocumentEnvironment)[]
 }
 export interface Preamble extends Parent {
   type: 'preamble'
@@ -98,10 +98,10 @@ export interface DocumentEnvironment extends Parent {
 // }
 
 export interface Parent extends UnistParent {
-  children: LtastContent[]
+  children: TexastContent[]
 }
 
-export interface Group<Child extends LtastContent = EnvironmentContent>
+export interface Group<Child extends TexastContent = EnvironmentContent>
   extends Parent {
   type: Pick<Child, 'type'> extends string ? Pick<Child, 'type'> : string
   children: Child[]
@@ -116,16 +116,16 @@ export interface CommandArg extends Parent {
   optional?: boolean
   children: CommandContent[]
 }
-export const isCommandArg = (node: Root | LtastContent): node is CommandArg =>
+export const isCommandArg = (node: Root | TexastContent): node is CommandArg =>
   node.type === 'commandArg'
 export interface CommandArgOpt extends CommandArg {
   optional: true
 }
 export const isOptionalCommandArg = (
-  node: LtastContent
+  node: TexastContent
 ): node is CommandArgOpt => isCommandArg(node) && !!node.optional
 
-export interface Environment<TNode extends LtastContent = LtastContent>
+export interface Environment<TNode extends TexastContent = TexastContent>
   extends Parent {
   type: 'environment'
   name: string

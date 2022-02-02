@@ -1,0 +1,15 @@
+# Fdb version 3
+["pdflatex"] 1643733846 "/Users/thomas/Projects/jote-monorepo/libs/jast-util-to-texast/src/lib/test/fixtures/environment/index.tex" "/Users/thomas/Projects/jote-monorepo/libs/jast-util-to-texast/src/lib/test/fixtures/environment/index.pdf" "index" 1643733846
+  "/Users/thomas/Projects/jote-monorepo/libs/jast-util-to-texast/src/lib/test/fixtures/environment/index.aux" 1643733846 8 a94a2480d3289e625eea47cd1b285758 ""
+  "/Users/thomas/Projects/jote-monorepo/libs/jast-util-to-texast/src/lib/test/fixtures/environment/index.tex" 1643733845 36 a2db092c5cbed431f919942bf061a43c ""
+  "/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1616101731 27164 3d5f7887a89df4eb2f6e86ba26ef3254 ""
+  "/usr/local/texlive/2021/texmf-dist/web2c/texmf.cnf" 1616443989 39972 3d6bb4d9d719e93193fa020b58adf5d4 ""
+  "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1632158863 2724739 6047ece79d526d434f62a736a404b938 ""
+  "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
+  "index.aux" 0 -1 0 "pdflatex"
+  "index.tex" 1643733845 36 a2db092c5cbed431f919942bf061a43c ""
+  (generated)
+  "/Users/thomas/Projects/jote-monorepo/libs/jast-util-to-texast/src/lib/test/fixtures/environment/index.pdf"
+  "index.aux"
+  "/Users/thomas/Projects/jote-monorepo/libs/jast-util-to-texast/src/lib/test/fixtures/environment/index.log"
+  "index.log"

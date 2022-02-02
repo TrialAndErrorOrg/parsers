@@ -1,5 +1,5 @@
 import { remove } from 'unist-util-remove'
-import { visit } from 'unist-util-visit'
+//import { visit } from 'unist-util-visit'
 import { Element, Root } from 'rejour'
 import { filter } from 'unist-util-filter'
 

@@ -1,8 +1,8 @@
 // @ts-nocheck
 
-import { toLtast, Options } from 'jast-util-to-ltast'
+import { toTexast, Options } from 'jast-util-to-texast'
 import { Root as JastRoot } from 'rejour'
-import { Root as LtastRoot } from 'relatex'
+import { Root as TexastRoot } from 'relatex'
 import { Plugin, Processor as UnifiedProcessor } from 'unified'
 type Processor = UnifiedProcessor<any, any, any, any>
 
@@ -13,7 +13,7 @@ type Processor = UnifiedProcessor<any, any, any, any>
  */
 function bridge(this, destination, options) {
   return (node, file, next) => {
-    destination.run(toLtast(node, options), file, (error) => {
+    destination.run(toTexast(node, options), file, (error) => {
       next(error)
     })
   }
@@ -23,12 +23,12 @@ function bridge(this, destination, options) {
  * Mutate-mode.
  * Further transformers run on the mdast tree.
  */
-const mutate: Plugin<[Options?] | [void], JastRoot, LtastRoot> = function (
+const mutate: Plugin<[Options?] | [void], JastRoot, TexastRoot> = function (
   this,
   options = {}
 ) {
   return (node) => {
-    const result = toLtast(node, options) as LtastRoot
+    const result = toTexast(node, options) as TexastRoot
     return result
   }
 }
@@ -44,11 +44,11 @@ const mutate: Plugin<[Options?] | [void], JastRoot, LtastRoot> = function (
  * @param destination
  *   Optional unified processor.
  * @param options
- *   Options passed to `jast-util-to-ltast`.
+ *   Options passed to `jast-util-to-texast`.
  */
 type OptionsOrVoid = [Options?] | [void]
-const rehypeRemark: Plugin<[Processor, Options?], JastRoot, LtastRoot> &
-  Plugin<OptionsOrVoid, JastRoot, LtastRoot> =
+const rehypeRemark: Plugin<[Processor, Options?], JastRoot, TexastRoot> &
+  Plugin<OptionsOrVoid, JastRoot, TexastRoot> =
   // /**
   //  * @type {(import('unified').Plugin<[Processor, Options?], HastRoot> & import('unified').Plugin<[Options?]|void[], HastRoot, MdastRoot>)}
   //  */

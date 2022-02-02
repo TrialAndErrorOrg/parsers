@@ -1,9 +1,9 @@
-import { Root, LtastContent } from 'relatex'
-import toLatex, { Options as ToLatexOptions } from 'ltast-util-to-latex'
+import { Root, TexastContent } from 'relatex'
+import toLatex, { Options as ToLatexOptions } from 'texast-util-to-latex'
 import { CompilerFunction, Plugin } from 'unified'
 
 type Options = Omit<ToLatexOptions, 'extensions'>
-type Node = Root | LtastContent
+type Node = Root | TexastContent
 type stringify = Plugin<[Options?] | void[], Node, string>
 
 const relatexStringify = function relatexStringify(options?: Options | void) {

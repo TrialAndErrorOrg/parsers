@@ -1,9 +1,7 @@
-import { document, Root, Content } from 'rejour'
-import { visit } from 'unist-util-visit'
+import { ArticleMeta, Root, Content, Element, Text } from 'rejour'
 
-export default function rejourMoveAbstract(
-  options: Pick<document, 'articleMeta'>
-) {
+export type MetaProps = Record<keyof ArticleMeta, Element | Text>
+export default function rejourMoveAbstract(options: ArticleMeta) {
   return (tree: Root | Content) => {
     // visit(
     //   tree,

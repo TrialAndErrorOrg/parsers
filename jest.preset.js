@@ -2,7 +2,6 @@ const nxPreset = require('@nrwl/jest/preset')
 
 module.exports = {
   ...nxPreset,
-  preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
       tsconfig: '<rootDir>/tsconfig.spec.json',
@@ -13,7 +12,6 @@ module.exports = {
   transform: {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
-  transformIgnorePatterns: [],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: {

@@ -3,10 +3,9 @@
   "projects": {
     "ast-stringify": "libs/ast-stringify",
     "jast": "libs/jast",
-    "jast-util-to-ltast": "libs/jast-util-to-ltast",
+    "jast-util-to-texast": "libs/jast-util-to-texast",
     "jastscript": "libs/jastscript",
     "jote": "apps/jote",
-    "ltast-util-to-latex": "libs/ltast-util-to-latex",
     "rejour": "libs/rejour",
     "rejour-meta": "libs/rejour-meta",
     "rejour-move-abstract": "libs/rejour-move-abstract",
@@ -16,6 +15,7 @@
     "relatex": "libs/relatex",
     "relatex-stringify": "libs/relatex-stringify",
     "texast": "libs/texast",
+    "texast-util-to-texast": "libs/texast-util-to-latex",
     "utils": "libs/utils"
   }
 }

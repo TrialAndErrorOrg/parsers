@@ -33,7 +33,7 @@ export interface Abbrev extends UnistNode {
 }
 
 export interface AbbrevChildrenMap {
-  contentType?: Text
+  text?: Text
 
   def?: Def[]
 }
@@ -76,7 +76,7 @@ export interface AccessDate extends UnistNode {
 }
 
 export interface AccessDateChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface Ack extends UnistNode {
@@ -91,7 +91,7 @@ export interface Ack extends UnistNode {
 }
 
 export interface AckChildrenMap {
-  contentType?: Text
+  text?: Text
 
   abstract?: Abstract[]
 
@@ -123,7 +123,7 @@ export interface Address extends UnistNode {
 }
 
 export interface AddressChildrenMap {
-  contentType?: Text
+  text?: Text
 
   addrLine?: AddrLine[]
 
@@ -162,7 +162,7 @@ export interface AddrLine extends UnistNode {
 }
 
 export interface AddrLineChildrenMap {
-  contentType?: Text
+  text?: Text
 
   abbrev?: Abbrev[]
 
@@ -260,7 +260,7 @@ export interface Aff extends UnistNode {
 }
 
 export interface AffChildrenMap {
-  contentType?: Text
+  text?: Text
 
   addrLine?: AddrLine[]
 
@@ -383,7 +383,7 @@ export interface AltText extends UnistNode {
 }
 
 export interface AltTextChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface AltTitle extends UnistNode {
@@ -486,7 +486,7 @@ export interface Annotation extends UnistNode {
 }
 
 export interface AnnotationChildrenMap {
-  contentType?: Text
+  text?: Text
 
   p: P[]
 }
@@ -512,7 +512,7 @@ export interface AnswerSet extends UnistNode {
 }
 
 export interface AnswerSetChildrenMap {
-  contentType?: Text
+  text?: Text
 
   altTitle?: AltTitle[]
 
@@ -544,7 +544,7 @@ export interface Answer extends UnistNode {
 }
 
 export interface AnswerChildrenMap {
-  contentType?: Text
+  text?: Text
 
   address: Address[]
 
@@ -643,7 +643,7 @@ export interface AppGroup extends UnistNode {
 }
 
 export interface AppGroupChildrenMap {
-  contentType?: Text
+  text?: Text
 
   abstract?: Abstract[]
 
@@ -739,7 +739,7 @@ export interface App extends UnistNode {
 }
 
 export interface AppChildrenMap {
-  contentType?: Text
+  text?: Text
 
   address?: Address[]
 
@@ -827,7 +827,7 @@ export interface AppChildrenMap {
 export interface Array extends UnistNode {
   type: 'element'
   tagName: 'array'
-  contentType?: Text
+  text?: Text
   properties: {
     id?: string
     specificUse?: string
@@ -890,7 +890,7 @@ export interface ArticleId extends UnistNode {
   }
 
   children: RequiredMap<ArticleIdChildrenMap>[]
-  contentType?: Text
+  text?: Text
 }
 
 export interface ArticleIdChildrenMap {}
@@ -1188,7 +1188,7 @@ export interface ArticleVersion extends UnistNode {
 }
 
 export interface ArticleVersionChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface Attrib extends UnistNode {
@@ -1288,7 +1288,7 @@ export interface AuthorComment extends UnistNode {
 }
 
 export interface AuthorCommentChildrenMap {
-  contentType?: Text
+  text?: Text
 
   p: P[]
 
@@ -1483,7 +1483,7 @@ export interface Bio extends UnistNode {
 }
 
 export interface BioChildrenMap {
-  contentType?: Text
+  text?: Text
 
   address?: Address[]
 
@@ -1765,7 +1765,7 @@ type BoldTypeToggle = 'no' | 'yes'
 export interface BoxedText extends UnistNode {
   type: 'element'
   tagName: 'boxedText'
-  contentType?: Text
+  text?: Text
   properties: {
     id?: string
     specificUse?: string
@@ -1889,7 +1889,7 @@ export interface Caption extends UnistNode {
 }
 
 export interface CaptionChildrenMap {
-  contentType?: Text
+  text?: Text
 
   p?: P[]
 
@@ -1980,7 +1980,7 @@ export interface ChemStruct extends UnistNode {
 }
 
 export interface ChemStructChildrenMap {
-  contentType?: Text
+  text?: Text
 
   altText?: AltText[]
 
@@ -2054,7 +2054,7 @@ export interface ChemStructChildrenMap {
 export interface ChemStructwrap extends UnistNode {
   type: 'element'
   tagName: 'chemStructwrap'
-  contentType?: Text
+  text?: Text
   properties: {
     id?: string
     specificUse?: string
@@ -2142,7 +2142,7 @@ export interface City extends UnistNode {
 }
 
 export interface CityChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface Code extends UnistNode {
@@ -2249,7 +2249,7 @@ export interface Colgroup extends UnistNode {
 }
 
 export interface ColgroupChildrenMap {
-  contentType?: Text
+  text?: Text
   col?: Col[]
 }
 
@@ -2401,7 +2401,7 @@ export interface Col extends UnistNode {
 }
 
 export interface ColChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 type ColTypeAlign = 'center' | 'char' | 'justify' | 'left' | 'right'
@@ -2420,7 +2420,7 @@ export interface Comment extends UnistNode {
 }
 
 export interface CommentChildrenMap {
-  contentType?: Text
+  text?: Text
 
   abbrev?: Abbrev[]
 
@@ -2506,7 +2506,7 @@ export interface CompoundKwdpart extends UnistNode {
 }
 
 export interface CompoundKwdpartChildrenMap {
-  contentType?: Text
+  text?: Text
 
   alternatives?: Alternatives[]
 
@@ -2573,7 +2573,7 @@ export interface CompoundKwd extends UnistNode {
 }
 
 export interface CompoundKwdChildrenMap {
-  contentType?: Text
+  text?: Text
 
   compoundKwdpart: CompoundKwdpart[]
 }
@@ -2589,7 +2589,7 @@ export interface CompoundSubjectpart extends UnistNode {
 }
 
 export interface CompoundSubjectpartChildrenMap {
-  contentType?: Text
+  text?: Text
 
   alternatives?: Alternatives[]
 
@@ -2650,7 +2650,7 @@ export interface CompoundSubject extends UnistNode {
 }
 
 export interface CompoundSubjectChildrenMap {
-  contentType?: Text
+  text?: Text
 
   compoundSubjectpart: CompoundSubjectpart[]
 }
@@ -2667,7 +2667,7 @@ export interface ConfAcronym extends UnistNode {
 }
 
 export interface ConfAcronymChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface ConfDate extends UnistNode {
@@ -2684,7 +2684,7 @@ export interface ConfDate extends UnistNode {
 }
 
 export interface ConfDateChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface Conference extends UnistNode {
@@ -2700,7 +2700,7 @@ export interface Conference extends UnistNode {
 }
 
 export interface ConferenceChildrenMap {
-  contentType?: Text
+  text?: Text
 
   confAcronym: ConfAcronym[]
 
@@ -2729,7 +2729,7 @@ export interface ConfLoc extends UnistNode {
 }
 
 export interface ConfLocChildrenMap {
-  contentType?: Text
+  text?: Text
 
   addrLine?: AddrLine[]
 
@@ -2762,7 +2762,7 @@ export interface ConfName extends UnistNode {
 }
 
 export interface ConfNameChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface ConfNum extends UnistNode {
@@ -2777,7 +2777,7 @@ export interface ConfNum extends UnistNode {
 }
 
 export interface ConfNumChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface ConfSponsor extends UnistNode {
@@ -2792,7 +2792,7 @@ export interface ConfSponsor extends UnistNode {
 }
 
 export interface ConfSponsorChildrenMap {
-  contentType?: Text
+  text?: Text
 
   institution?: Institution[]
 
@@ -2811,7 +2811,7 @@ export interface ConfTheme extends UnistNode {
 }
 
 export interface ConfThemeChildrenMap {
-  contentType?: Text
+  text?: Text
 
   abbrev?: Abbrev[]
 
@@ -2878,7 +2878,7 @@ export interface ContribGroup extends UnistNode {
 }
 
 export interface ContribGroupChildrenMap {
-  contentType?: Text
+  text?: Text
 
   address?: Address[]
 
@@ -2920,7 +2920,7 @@ export interface ContribId extends UnistNode {
 }
 
 export interface ContribIdChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 type ContribIdTypeAuthenticated = 'false' | 'true'
@@ -3021,7 +3021,7 @@ export interface CopyrightHolder extends UnistNode {
 }
 
 export interface CopyrightHolderChildrenMap {
-  contentType?: Text
+  text?: Text
 
   institution?: Institution[]
 
@@ -3044,7 +3044,7 @@ export interface CopyrightStatement extends UnistNode {
 }
 
 export interface CopyrightStatementChildrenMap {
-  contentType?: Text
+  text?: Text
 
   bold?: Bold[]
 
@@ -3095,7 +3095,7 @@ export interface CopyrightYear extends UnistNode {
 }
 
 export interface CopyrightYearChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface Corresp extends UnistNode {
@@ -3110,7 +3110,7 @@ export interface Corresp extends UnistNode {
 }
 
 export interface CorrespChildrenMap {
-  contentType?: Text
+  text?: Text
 
   addrLine?: AddrLine[]
 
@@ -3182,7 +3182,7 @@ export interface Country extends UnistNode {
 }
 
 export interface CountryChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface Counts extends UnistNode {
@@ -3233,7 +3233,7 @@ export interface CustomMetagroup extends UnistNode {
 }
 
 export interface CustomMetagroupChildrenMap {
-  contentType?: Text
+  text?: Text
 
   customMeta: CustomMeta[]
 }
@@ -3273,7 +3273,7 @@ export interface DataTitle extends UnistNode {
 }
 
 export interface DataTitleChildrenMap {
-  contentType?: Text
+  text?: Text
 
   bold?: Bold[]
 
@@ -3332,7 +3332,7 @@ export interface DateIncitation extends UnistNode {
 }
 
 export interface DateIncitationChildrenMap {
-  contentType?: Text
+  text?: Text
 
   day?: Day[]
 
@@ -3384,7 +3384,7 @@ export interface Day extends UnistNode {
 }
 
 export interface DayChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface DefHead extends UnistNode {
@@ -3545,7 +3545,7 @@ export interface Degrees extends UnistNode {
 }
 
 export interface DegreesChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface DispFormulagroup extends UnistNode {
@@ -3560,7 +3560,7 @@ export interface DispFormulagroup extends UnistNode {
 }
 
 export interface DispFormulagroupChildrenMap {
-  contentType?: Text
+  text?: Text
 
   abstract?: Abstract[]
 
@@ -3600,7 +3600,7 @@ export interface DispFormula extends UnistNode {
 }
 
 export interface DispFormulaChildrenMap {
-  contentType?: Text
+  text?: Text
 
   abstract?: Abstract[]
 
@@ -3692,7 +3692,7 @@ export interface DispQuote extends UnistNode {
 }
 
 export interface DispQuoteChildrenMap {
-  contentType?: Text
+  text?: Text
 
   address?: Address[]
 
@@ -3782,7 +3782,7 @@ export interface Edition extends UnistNode {
 }
 
 export interface EditionChildrenMap {
-  contentType?: Text
+  text?: Text
 
   sub?: Sub[]
 
@@ -3994,7 +3994,7 @@ export interface ElocationId extends UnistNode {
 }
 
 export interface ElocationIdChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface Email extends UnistNode {
@@ -4010,7 +4010,7 @@ export interface Email extends UnistNode {
 }
 
 export interface EmailChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface EquationCount extends UnistNode {
@@ -4034,7 +4034,7 @@ export interface Era extends UnistNode {
 }
 
 export interface EraChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface Etal extends UnistNode {
@@ -4138,7 +4138,7 @@ export interface Explanation extends UnistNode {
 }
 
 export interface ExplanationChildrenMap {
-  contentType?: Text
+  text?: Text
 
   address: Address[]
 
@@ -4296,7 +4296,7 @@ export interface Fax extends UnistNode {
 }
 
 export interface FaxChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface FigCount extends UnistNode {
@@ -4322,7 +4322,7 @@ export interface FigGroup extends UnistNode {
 }
 
 export interface FigGroupChildrenMap {
-  contentType?: Text
+  text?: Text
   abstract?: Abstract[]
 
   altText?: AltText[]
@@ -4454,7 +4454,7 @@ export interface FixedCase extends UnistNode {
 }
 
 export interface FixedCaseChildrenMap {
-  contentType?: Text
+  text?: Text
 
   abbrev?: Abbrev[]
 
@@ -4579,7 +4579,7 @@ export interface FnGroup extends UnistNode {
 }
 
 export interface FnGroupChildrenMap {
-  contentType?: Text
+  text?: Text
 
   fn: Fn[]
 
@@ -4592,7 +4592,6 @@ export interface Fn extends UnistNode {
   type: 'element'
   tagName: 'fn'
   properties: {
-    customType?: string
     id?: string
     specificUse?: string
     symbol?: string
@@ -4603,6 +4602,7 @@ export interface Fn extends UnistNode {
 }
 
 export interface FnChildrenMap {
+  customType?: Text
   label?: Label
 
   p: P[]
@@ -4645,7 +4645,7 @@ export interface Fpage extends UnistNode {
 }
 
 export interface FpageChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface FrontStub extends UnistNode {
@@ -4933,7 +4933,7 @@ export interface Glossary extends UnistNode {
 }
 
 export interface GlossaryChildrenMap {
-  contentType?: Text
+  text?: Text
 
   address?: Address[]
 
@@ -5045,7 +5045,7 @@ export interface Gov extends UnistNode {
 }
 
 export interface GovChildrenMap {
-  contentType?: Text
+  text?: Text
 
   bold?: Bold[]
 
@@ -5081,7 +5081,7 @@ export interface GovChildrenMap {
 export interface Graphic extends UnistNode {
   type: 'element'
   tagName: 'graphic'
-  contentType?: Text
+  text?: Text
   properties: {
     orientation?: GraphicTypeOrientation
     position?: GraphicTypePosition
@@ -5176,7 +5176,7 @@ export interface IndexTerm extends UnistNode {
 }
 
 export interface IndexTermChildrenMap {
-  contentType?: Text
+  text?: Text
 
   indexTerm: IndexTerm
 
@@ -5199,7 +5199,7 @@ export interface InlineFormula extends UnistNode {
 }
 
 export interface InlineFormulaChildrenMap {
-  contentType?: Text
+  text?: Text
 
   altText?: AltText[]
 
@@ -5266,7 +5266,7 @@ export interface InlineGraphic extends UnistNode {
 }
 
 export interface InlineGraphicChildrenMap {
-  contentType?: Text
+  text?: Text
 
   altText?: AltText[]
 
@@ -5292,7 +5292,7 @@ export interface InlineMedia extends UnistNode {
 }
 
 export interface InlineMediaChildrenMap {
-  contentType?: Text
+  text?: Text
 
   altText?: AltText[]
 
@@ -5350,7 +5350,7 @@ export interface InlineSupplementarymaterial extends UnistNode {
 }
 
 export interface InlineSupplementarymaterialChildrenMap {
-  contentType?: Text
+  text?: Text
 
   altText?: AltText[]
 
@@ -5409,7 +5409,7 @@ export interface InstitutionId extends UnistNode {
 }
 
 export interface InstitutionIdChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface Institution extends UnistNode {
@@ -5425,7 +5425,7 @@ export interface Institution extends UnistNode {
 }
 
 export interface InstitutionChildrenMap {
-  contentType?: Text
+  text?: Text
 
   sub?: Sub[]
 
@@ -5462,7 +5462,7 @@ export interface Isbn extends UnistNode {
 }
 
 export interface IsbnChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface IssnL extends UnistNode {
@@ -5490,7 +5490,7 @@ export interface Issn extends UnistNode {
 }
 
 export interface IssnChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface IssueId extends UnistNode {
@@ -5508,7 +5508,7 @@ export interface IssueId extends UnistNode {
 }
 
 export interface IssueIdChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface IssuePart extends UnistNode {
@@ -5523,7 +5523,7 @@ export interface IssuePart extends UnistNode {
 }
 
 export interface IssuePartChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface IssueSponsor extends UnistNode {
@@ -5538,7 +5538,7 @@ export interface IssueSponsor extends UnistNode {
 }
 
 export interface IssueSponsorChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface IssueSubtitle extends UnistNode {
@@ -5553,7 +5553,7 @@ export interface IssueSubtitle extends UnistNode {
 }
 
 export interface IssueSubtitleChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface IssueTitlegroup extends UnistNode {
@@ -5568,7 +5568,7 @@ export interface IssueTitlegroup extends UnistNode {
 }
 
 export interface IssueTitlegroupChildrenMap {
-  contentType?: Text
+  text?: Text
 
   issueSubtitle?: IssueSubtitle[]
 
@@ -5589,7 +5589,7 @@ export interface IssueTitle extends UnistNode {
 }
 
 export interface IssueTitleChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface Issue extends UnistNode {
@@ -5605,7 +5605,7 @@ export interface Issue extends UnistNode {
 }
 
 export interface IssueChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface Italic extends UnistNode {
@@ -5753,7 +5753,7 @@ export interface JournalSubtitle extends UnistNode {
 }
 
 export interface JournalSubtitleChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface JournalTitlegroup extends UnistNode {
@@ -5767,7 +5767,7 @@ export interface JournalTitlegroup extends UnistNode {
 }
 
 export interface JournalTitlegroupChildrenMap {
-  contentType?: Text
+  text?: Text
 
   abbrevJournaltitle?: AbbrevJournaltitle[]
 
@@ -5790,7 +5790,7 @@ export interface JournalTitle extends UnistNode {
 }
 
 export interface JournalTitleChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface KwdGroup extends UnistNode {
@@ -5836,7 +5836,7 @@ export interface Kwd extends UnistNode {
 }
 
 export interface KwdChildrenMap {
-  contentType?: Text
+  text?: Text
 
   bold?: Bold[]
 
@@ -5932,7 +5932,7 @@ export interface LicenseP extends UnistNode {
 }
 
 export interface LicensePChildrenMap {
-  contentType?: Text
+  text?: Text
 
   abbrev?: Abbrev[]
 
@@ -6157,7 +6157,7 @@ export interface LongDesc extends UnistNode {
 }
 
 export interface LongDescChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface Lpage extends UnistNode {
@@ -6172,13 +6172,13 @@ export interface Lpage extends UnistNode {
 }
 
 export interface LpageChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface Media extends UnistNode {
   type: 'element'
   tagName: 'media'
-  contentType?: Text
+  text?: Text
   properties: {
     hreflang?: string
     id?: string
@@ -6332,7 +6332,7 @@ export interface MilestoneEnd extends UnistNode {
 }
 
 export interface MilestoneEndChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface MilestoneStart extends UnistNode {
@@ -6349,7 +6349,7 @@ export interface MilestoneStart extends UnistNode {
 }
 
 export interface MilestoneStartChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface MixedCitation extends UnistNode {
@@ -6644,7 +6644,7 @@ export interface Month extends UnistNode {
 }
 
 export interface MonthChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface NameAlternatives extends UnistNode {
@@ -6682,7 +6682,7 @@ export interface NamedContent extends UnistNode {
 }
 
 export interface NamedContentChildrenMap {
-  contentType?: Text
+  text?: Text
   abbrev?: Abbrev[]
 
   address?: Address[]
@@ -6825,7 +6825,7 @@ export interface Name extends UnistNode {
 }
 
 export interface NameChildrenMap {
-  contentType?: Text
+  text?: Text
   givenNames: GivenNames[]
 
   prefix?: Prefix
@@ -6853,7 +6853,7 @@ export interface NestedKwd extends UnistNode {
 }
 
 export interface NestedKwdChildrenMap {
-  contentType?: Text
+  text?: Text
 
   compoundKwd: CompoundKwd[]
 
@@ -7043,7 +7043,7 @@ export interface Note extends UnistNode {
 }
 
 export interface NoteChildrenMap {
-  contentType?: Text
+  text?: Text
 
   label?: Label
 
@@ -7066,7 +7066,7 @@ export interface ObjectId extends UnistNode {
 }
 
 export interface ObjectIdChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface OnBehalfof extends UnistNode {
@@ -7150,7 +7150,7 @@ export interface Option extends UnistNode {
 }
 
 export interface OptionChildrenMap {
-  contentType?: Text
+  text?: Text
   address: Address[]
 
   altTitle?: AltTitle[]
@@ -7366,7 +7366,7 @@ export interface PageRange extends UnistNode {
 }
 
 export interface PageRangeChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface PartTitle extends UnistNode {
@@ -7453,7 +7453,7 @@ export interface Patent extends UnistNode {
 }
 
 export interface PatentChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface Permissions extends UnistNode {
@@ -7480,7 +7480,6 @@ export interface PersonGroup extends UnistNode {
   type: 'element'
   tagName: 'personGroup'
   properties: {
-    customType?: string
     id?: string
     specificUse?: string
     personGrouptype?: PersonGroupTypePersonGrouptype
@@ -7490,6 +7489,7 @@ export interface PersonGroup extends UnistNode {
 }
 
 export interface PersonGroupChildrenMap {
+  customType?: Text[]
   aff?: Aff[]
 
   affAlternatives?: AffAlternatives[]
@@ -7539,7 +7539,7 @@ export interface Phone extends UnistNode {
 }
 
 export interface PhoneChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface PostalCode extends UnistNode {
@@ -7554,7 +7554,7 @@ export interface PostalCode extends UnistNode {
 }
 
 export interface PostalCodeChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface Prefix extends UnistNode {
@@ -7569,7 +7569,7 @@ export interface Prefix extends UnistNode {
 }
 
 export interface PrefixChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface Preformat extends UnistNode {
@@ -7659,7 +7659,7 @@ export interface Price extends UnistNode {
 }
 
 export interface PriceChildrenMap {
-  contentType?: Text
+  text?: Text
 
   bold?: Bold[]
 
@@ -8000,7 +8000,7 @@ export interface P extends UnistNode {
 }
 
 export interface PChildrenMap {
-  contentType?: Text
+  text?: Text
 
   abbrev?: Abbrev[]
 
@@ -8304,7 +8304,7 @@ export interface Publisher extends UnistNode {
 }
 
 export interface PublisherChildrenMap {
-  contentType?: Text
+  text?: Text
 
   publisherLoc?: PublisherLoc[]
 
@@ -8323,7 +8323,7 @@ export interface QuestionPreamble extends UnistNode {
 }
 
 export interface QuestionPreambleChildrenMap {
-  contentType?: Text
+  text?: Text
 
   address?: Address[]
 
@@ -8407,7 +8407,7 @@ export interface QuestionPreambleChildrenMap {
 export interface Question extends UnistNode {
   type: 'element'
   tagName: 'question'
-  contentType?: Text
+  text?: Text
   properties: {
     id?: string
     specificUse?: string
@@ -8528,7 +8528,7 @@ export interface QuestionWrapgroup extends UnistNode {
 }
 
 export interface QuestionWrapgroupChildrenMap {
-  contentType?: Text
+  text?: Text
 
   altTitle?: AltTitle[]
 
@@ -8558,7 +8558,7 @@ export interface QuestionWrap extends UnistNode {
 }
 
 export interface QuestionWrapChildrenMap {
-  contentType?: Text
+  text?: Text
 
   answer?: Answer
 
@@ -8583,7 +8583,7 @@ export interface Rb extends UnistNode {
 }
 
 export interface RbChildrenMap {
-  contentType?: Text
+  text?: Text
 
   bold?: Bold[]
 
@@ -8627,7 +8627,7 @@ export interface RefList extends UnistNode {
 }
 
 export interface RefListChildrenMap {
-  contentType?: Text
+  text?: Text
 
   address?: Address[]
 
@@ -8718,7 +8718,7 @@ export interface Ref extends UnistNode {
 }
 
 export interface RefChildrenMap {
-  contentType?: Text
+  text?: Text
 
   citationAlternatives: CitationAlternatives[]
 
@@ -8910,7 +8910,7 @@ export interface RelatedArticleChildrenMap {
 export interface RelatedObject extends UnistNode {
   type: 'element'
   tagName: 'relatedObject'
-  contentType?: Text
+  text?: Text
   properties: {
     documentId?: string
     documentIdtype?: string
@@ -9111,7 +9111,7 @@ export interface ResourceId extends UnistNode {
 }
 
 export interface ResourceIdChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface ResourceName extends UnistNode {
@@ -9127,7 +9127,7 @@ export interface ResourceName extends UnistNode {
 }
 
 export interface ResourceNameChildrenMap {
-  contentType?: Text
+  text?: Text
 
   bold?: Bold[]
 
@@ -9229,7 +9229,7 @@ export interface Role extends UnistNode {
 }
 
 export interface RoleChildrenMap {
-  contentType?: Text
+  text?: Text
 
   bold?: Bold[]
 
@@ -9370,7 +9370,7 @@ export interface Rt extends UnistNode {
 }
 
 export interface RtChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface Ruby extends UnistNode {
@@ -9385,7 +9385,7 @@ export interface Ruby extends UnistNode {
 }
 
 export interface RubyChildrenMap {
-  contentType?: Text
+  text?: Text
 
   rb: Rb
 
@@ -9580,7 +9580,7 @@ export interface Season extends UnistNode {
 }
 
 export interface SeasonChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface SecMeta extends UnistNode {
@@ -9717,7 +9717,7 @@ export interface SeeAlso extends UnistNode {
 }
 
 export interface SeeAlsoChildrenMap {
-  contentType?: Text
+  text?: Text
 
   abbrev?: Abbrev[]
 
@@ -9819,7 +9819,7 @@ export interface See extends UnistNode {
 }
 
 export interface SeeChildrenMap {
-  contentType?: Text
+  text?: Text
 
   abbrev?: Abbrev[]
 
@@ -9922,7 +9922,7 @@ export interface SelfUri extends UnistNode {
 }
 
 export interface SelfUriChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface SeriesText extends UnistNode {
@@ -9937,7 +9937,7 @@ export interface SeriesText extends UnistNode {
 }
 
 export interface SeriesTextChildrenMap {
-  contentType?: Text
+  text?: Text
 
   bold?: Bold[]
 
@@ -9982,7 +9982,7 @@ export interface SeriesTitle extends UnistNode {
 }
 
 export interface SeriesTitleChildrenMap {
-  contentType?: Text
+  text?: Text
 
   bold?: Bold[]
 
@@ -10027,7 +10027,7 @@ export interface Series extends UnistNode {
 }
 
 export interface SeriesChildrenMap {
-  contentType?: Text
+  text?: Text
 
   bold?: Bold[]
 
@@ -10073,7 +10073,7 @@ export interface SigBlock extends UnistNode {
 }
 
 export interface SigBlockChildrenMap {
-  contentType?: Text
+  text?: Text
 
   alternatives?: Alternatives[]
 
@@ -10135,7 +10135,7 @@ export interface Sig extends UnistNode {
 }
 
 export interface SigChildrenMap {
-  contentType?: Text
+  text?: Text
 
   bold?: Bold[]
 
@@ -10202,7 +10202,7 @@ export interface Source extends UnistNode {
 }
 
 export interface SourceChildrenMap {
-  contentType?: Text
+  text?: Text
 
   abbrev?: Abbrev[]
 
@@ -10275,7 +10275,7 @@ export interface Speaker extends UnistNode {
 }
 
 export interface SpeakerChildrenMap {
-  contentType?: Text
+  text?: Text
 
   degrees?: Degrees[]
 
@@ -10306,7 +10306,7 @@ export interface Speech extends UnistNode {
 }
 
 export interface SpeechChildrenMap {
-  contentType?: Text
+  text?: Text
 
   objectId?: ObjectId[]
 
@@ -10327,7 +10327,7 @@ export interface Statement extends UnistNode {
 }
 
 export interface StatementChildrenMap {
-  contentType?: Text
+  text?: Text
 
   abstract?: Abstract[]
 
@@ -10359,7 +10359,7 @@ export interface State extends UnistNode {
 }
 
 export interface StateChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface StdOrganization extends UnistNode {
@@ -10374,7 +10374,7 @@ export interface StdOrganization extends UnistNode {
 }
 
 export interface StdOrganizationChildrenMap {
-  contentType?: Text
+  text?: Text
 
   institution?: Institution[]
 
@@ -10397,7 +10397,7 @@ export interface Std extends UnistNode {
 }
 
 export interface StdChildrenMap {
-  contentType?: Text
+  text?: Text
 
   bold?: Bold[]
 
@@ -10548,7 +10548,7 @@ export interface StringConf extends UnistNode {
 }
 
 export interface StringConfChildrenMap {
-  contentType?: Text
+  text?: Text
 
   abbrev?: Abbrev[]
 
@@ -10633,7 +10633,7 @@ export interface StringDate extends UnistNode {
 }
 
 export interface StringDateChildrenMap {
-  contentType?: Text
+  text?: Text
 
   day?: Day[]
 
@@ -10649,7 +10649,7 @@ export interface StringDateChildrenMap {
 export interface StringName extends UnistNode {
   type: 'element'
   tagName: 'stringName'
-  contentType?: Text
+  text?: Text
   properties: {
     id?: string
     nameStyle?: StringNameTypeNameStyle
@@ -10683,7 +10683,7 @@ export interface StyledContent extends UnistNode {
     style?: string
     styleDetail?: string
     styleType?: string
-    toggle?: StyledContentTypeToggle
+    toggle?: StyledtextToggle
   }
 
   children: RequiredMap<StyledContentChildrenMap>[]
@@ -10819,7 +10819,7 @@ export interface StyledContentChildrenMap {
   xref?: Xref[]
 }
 
-type StyledContentTypeToggle = 'no' | 'yes'
+type StyledtextToggle = 'no' | 'yes'
 
 export interface SubArticle extends UnistNode {
   type: 'element'
@@ -10867,7 +10867,7 @@ export interface Subject extends UnistNode {
 }
 
 export interface SubjectChildrenMap {
-  contentType?: Text
+  text?: Text
 
   alternatives?: Alternatives[]
 
@@ -10946,7 +10946,7 @@ export interface Subtitle extends UnistNode {
 }
 
 export interface SubtitleChildrenMap {
-  contentType?: Text
+  text?: Text
 
   abbrev?: Abbrev[]
 
@@ -11123,7 +11123,7 @@ export interface Suffix extends UnistNode {
 }
 
 export interface SuffixChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface SupplementaryMaterial extends UnistNode {
@@ -11144,7 +11144,7 @@ export interface SupplementaryMaterial extends UnistNode {
 
 export interface SupplementaryMaterialChildrenMap {
   abstract?: Abstract[]
-  contentType?: Text
+  text?: Text
 
   altText?: AltText[]
 
@@ -11498,7 +11498,7 @@ export interface TableCount extends UnistNode {
 export interface Table extends UnistNode {
   type: 'element'
   tagName: 'table'
-  contentType?: Text
+  text?: Text
   properties: {
     border?: string
     cellpadding?: string
@@ -11575,7 +11575,7 @@ export interface TableWrapgroup extends UnistNode {
 }
 
 export interface TableWrapgroupChildrenMap {
-  contentType?: Text
+  text?: Text
   abstract?: Abstract[]
 
   altText?: AltText[]
@@ -11620,7 +11620,7 @@ export interface TableWrap extends UnistNode {
 }
 
 export interface TableWrapChildrenMap {
-  contentType?: Text
+  text?: Text
   abstract?: Abstract[]
 
   altText?: AltText[]
@@ -11743,7 +11743,7 @@ export interface Tbody extends UnistNode {
 }
 
 export interface TbodyChildrenMap {
-  contentType?: Text
+  text?: Text
   tr: Tr[]
 }
 
@@ -11760,7 +11760,7 @@ export interface Td extends UnistNode {
     char?: string
     charoff?: string
     colspan?: string
-    contentType?: Text
+    text?: Text
     headers?: string
     id?: string
     rowspan?: string
@@ -12110,7 +12110,7 @@ export interface TexMath extends UnistNode {
 }
 
 export interface TexMathChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 type TexMathTypeNotation = 'LaTeX' | 'TEX' | 'TeX' | 'tex'
@@ -12182,7 +12182,7 @@ export interface Tfoot extends UnistNode {
 }
 
 export interface TfootChildrenMap {
-  contentType?: Text
+  text?: Text
   tr: Tr[]
 }
 
@@ -12206,7 +12206,7 @@ export interface Thead extends UnistNode {
 }
 
 export interface TheadChildrenMap {
-  contentType?: Text
+  text?: Text
   tr: Tr[]
 }
 
@@ -12223,7 +12223,7 @@ export interface Th extends UnistNode {
     char?: string
     charoff?: string
     colspan?: string
-    contentType?: Text
+    text?: Text
     headers?: string
     id?: string
     rowspan?: string
@@ -12382,7 +12382,7 @@ export interface TimeStamp extends UnistNode {
 }
 
 export interface TimeStampChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface TitleGroup extends UnistNode {
@@ -12419,7 +12419,7 @@ export interface Title extends UnistNode {
 }
 
 export interface TitleChildrenMap {
-  contentType?: Text
+  text?: Text
 
   abbrev?: Abbrev[]
 
@@ -12540,7 +12540,7 @@ export interface TransSource extends UnistNode {
 }
 
 export interface TransSourceChildrenMap {
-  contentType?: Text
+  text?: Text
 
   abbrev?: Abbrev[]
 
@@ -12700,7 +12700,7 @@ export interface TransTitlegroup extends UnistNode {
 }
 
 export interface TransTitlegroupChildrenMap {
-  contentType?: Text
+  text?: Text
 
   transSubtitle?: TransSubtitle[]
 
@@ -12719,7 +12719,7 @@ export interface TransTitle extends UnistNode {
 }
 
 export interface TransTitleChildrenMap {
-  contentType?: Text
+  text?: Text
 
   abbrev?: Abbrev[]
 
@@ -12812,7 +12812,7 @@ export interface Tr extends UnistNode {
 }
 
 export interface TrChildrenMap {
-  contentType?: Text
+  text?: Text
   td: Td[]
   th: Th[]
 }
@@ -12957,7 +12957,7 @@ export interface Uri extends UnistNode {
 }
 
 export interface UriChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface VerseGroup extends UnistNode {
@@ -12975,7 +12975,7 @@ export interface VerseGroup extends UnistNode {
 }
 
 export interface VerseGroupChildrenMap {
-  contentType?: Text
+  text?: Text
 
   attrib?: Attrib[]
 
@@ -13008,7 +13008,7 @@ export interface VerseLine extends UnistNode {
 }
 
 export interface VerseLineChildrenMap {
-  contentType?: Text
+  text?: Text
 
   abbrev?: Abbrev[]
 
@@ -13082,7 +13082,7 @@ export interface Version extends UnistNode {
 }
 
 export interface VersionChildrenMap {
-  contentType?: Text
+  text?: Text
 
   sub?: Sub[]
 
@@ -13104,7 +13104,7 @@ export interface VolumeId extends UnistNode {
 }
 
 export interface VolumeIdChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface VolumeIssuegroup extends UnistNode {
@@ -13119,7 +13119,7 @@ export interface VolumeIssuegroup extends UnistNode {
 }
 
 export interface VolumeIssuegroupChildrenMap {
-  contentType?: Text
+  text?: Text
 
   issue?: Issue[]
 
@@ -13152,7 +13152,7 @@ export interface VolumeSeries extends UnistNode {
 }
 
 export interface VolumeSeriesChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface Volume extends UnistNode {
@@ -13168,7 +13168,7 @@ export interface Volume extends UnistNode {
 }
 
 export interface VolumeChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface WordCount extends UnistNode {
@@ -13185,7 +13185,6 @@ export interface Xref extends UnistNode {
   tagName: 'xref'
   properties: {
     alt?: string
-    customType?: string
     id?: string
     rid?: string
     specificUse?: string
@@ -13196,6 +13195,7 @@ export interface Xref extends UnistNode {
 }
 
 export interface XrefChildrenMap {
+  customType?: Text
   bold?: Bold[]
 
   fixedCase?: FixedCase[]
@@ -13266,7 +13266,7 @@ export interface X extends UnistNode {
 }
 
 export interface XChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface Year extends UnistNode {
@@ -13283,7 +13283,7 @@ export interface Year extends UnistNode {
 }
 
 export interface YearChildrenMap {
-  contentType?: Text
+  text?: Text
 }
 
 export interface documentMap {

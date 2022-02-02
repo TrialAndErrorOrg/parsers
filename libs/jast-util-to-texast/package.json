@@ -1,15 +1,20 @@
 {
-  "name": "jast-util-to-texast",
+  "name": "jast",
   "version": "0.0.1",
   "dependencies": {
-    "@types/unist": "^2.0.6",
     "rehype-minify-whitespace": "^5.0.0",
-    "unist-util-filter": "^4.0.0",
     "unist-util-is": "^5.1.1"
   },
-  "devDependencies": {
-    "unified": "^10.1.1",
-    "unist-util-map": "^3.0.0",
-    "unist-util-remove-position": "^4.0.1"
-  }
+  "license": "GPL-3-0-or-later",
+  "repository": "https://github.com/journaloftrialanderror/jote",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
+  "description": "",
+  "keywords": [
+    "unified",
+    "abstract",
+    "syntax",
+    "tree",
+    "ast"
+  ]
 }

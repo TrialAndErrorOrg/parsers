@@ -5,5 +5,17 @@
     "unified": "^10.1.1",
     "unist-util-map": "^3.0.0",
     "xast-util-to-xml": "^3.0.0"
-  }
+  },
+  "license": "GPL-3-0-or-later",
+  "repository": "https://github.com/journaloftrialanderror/jote",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
+  "description": "",
+  "keywords": [
+    "unified",
+    "abstract",
+    "syntax",
+    "tree",
+    "ast"
+  ]
 }

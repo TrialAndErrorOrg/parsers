@@ -1,8 +1,4 @@
-import {
-  Instruction,
-  Doctype,
-  Attributes as XastAttributes,
-} from 'libs/rejour-parse/node_modules/@types/xast'
+import { Instruction, Doctype, Attributes as XastAttributes } from 'xast'
 import { Node as UnistNode, Parent as UnistParent } from 'unist'
 import { documentMap, Text, Article, Content, Glossary } from './jats'
 import { RequiredKeys, ValuesType } from 'utility-types'

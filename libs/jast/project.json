@@ -1,0 +1,34 @@
+{
+  "root": "libs/jast",
+  "sourceRoot": "libs/jast/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/jast/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/jast"],
+      "options": {
+        "jestConfig": "libs/jast/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/jast",
+        "tsConfig": "libs/jast/tsconfig.lib.json",
+        "packageJson": "libs/jast/package.json",
+        "main": "libs/jast/src/index.ts",
+        "assets": ["libs/jast/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

@@ -8,6 +8,14 @@ exports[`parses correctly for article should match snapshot 1`] = `
 \\\\end{document}"
 `;
 
+exports[`parses correctly for complete should match snapshot 1`] = `
+"version=\\"1.0\\" encoding=\\"utf-8\\"Classical Conditioning for Pain: The Development of a Customized Single-Case Experimental Design \\\\begin{document}
+
+  
+
+\\\\end{document}"
+`;
+
 exports[`parses correctly for environment should match snapshot 1`] = `
 "\\\\begin{document}
 
@@ -16,7 +24,7 @@ exports[`parses correctly for environment should match snapshot 1`] = `
 \\\\end{document}"
 `;
 
-exports[`parses correctly for italic should match snapshot 1`] = `"\\\\italic{Hey\\\\n\\\\n}"`;
+exports[`parses correctly for italic should match snapshot 1`] = `"\\\\emph{Hey}"`;
 
 exports[`parses correctly for root should match snapshot 1`] = `
 "\\\\begin{document}

@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "ast-stringify": "libs/ast-stringify",
+    "jast": "libs/jast",
     "jast-util-to-ltast": "libs/jast-util-to-ltast",
     "jastscript": "libs/jastscript",
     "jote": "apps/jote",

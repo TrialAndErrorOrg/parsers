@@ -15,6 +15,7 @@
     "rejour-stringify": "libs/rejour-stringify",
     "relatex": "libs/relatex",
     "relatex-stringify": "libs/relatex-stringify",
+    "texast": "libs/texast",
     "utils": "libs/utils"
   }
 }

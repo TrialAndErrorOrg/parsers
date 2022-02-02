@@ -36,7 +36,8 @@
       "rejour-relatex": ["libs/rejour-relatex/src/index.ts"],
       "rejour-stringify": ["libs/rejour-stringify/src/index.ts"],
       "relatex": ["libs/relatex/src/index.ts"],
-      "relatex-stringify": ["libs/relatex-stringify/src/index.ts"]
+      "relatex-stringify": ["libs/relatex-stringify/src/index.ts"],
+      "texast": ["libs/texast/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

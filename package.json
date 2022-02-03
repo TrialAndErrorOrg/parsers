@@ -7,7 +7,7 @@
     "build": "nx run-many --target=build --all",
     "test": "nx run-many --target=test --all",
     "clean-libs": "echo 'for i in libs/relatex/* libs/rejour/* \\n do \\n rm -f $i/yarn.lock && rm -rf $i/node_modules && yarn --cwd $i \\n done' | bash",
-    "update-readme": "ts-node -P ./libs/utils/tsconfig.lib.json ./libs/utils/src/lib/updateReadme.ts"
+    "update-readme": "echo 'for i in libs/*/README.md libs/re*/*/README.md; do;  node ./scripts/updateReadme.mjs $i; done' |bash"
   },
   "private": true,
   "dependencies": {

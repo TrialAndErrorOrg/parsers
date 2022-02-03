@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx run-many --target=build --all",
-    "test": "nx run-many --target=test --all"
+    "test": "nx run-many --target=test --all",
+    "clean-libs": "echo 'for i in libs/* \\n do \\n rm -f $i/yarn.lock && rm -rf $i/node_modules && yarn --cwd $i \\n done' | bash"
   },
   "private": true,
   "dependencies": {
@@ -15,11 +16,7 @@
     "docx4js": "^3.2.20",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.0.0",
-    "tslib": "^2.0.0",
-    "unified": "^10.1.1",
-    "unist-util-remove": "^3.1.0",
-    "unist-util-visit": "^4.1.0",
-    "xast-util-from-xml": "^2.0.1"
+    "tslib": "^2.0.0"
   },
   "devDependencies": {
     "@nestjs/schematics": "^8.0.0",
@@ -47,7 +44,7 @@
     "prettier": "^2.5.1",
     "ts-jest": "27.0.5",
     "ts-node": "^10.4.0",
-    "typescript": "^4.5.5"
+    "typescript": "4.4.4"
   },
   "packageManager": "yarn@1.22.1"
 }

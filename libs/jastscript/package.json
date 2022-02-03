@@ -4,7 +4,7 @@
   "dependencies": {
     "hastscript": "^7.0.2"
   },
-  "license": "GPL-3-0-or-later",
+  "license": "GPL-3.0-or-later",
   "repository": "https://github.com/journaloftrialanderror/jote",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",

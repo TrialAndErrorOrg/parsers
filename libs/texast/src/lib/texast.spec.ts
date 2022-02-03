@@ -1,7 +1,7 @@
-import {Texast } from './texast'
+import { Texast } from './texast'
 
 describe('texast', () => {
   it('should work', () => {
-    expectoTexast()).toEqual('texast')
+    expect(Texast()).toEqual('texast')
   })
 })

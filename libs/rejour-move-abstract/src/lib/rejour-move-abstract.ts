@@ -1,11 +1,11 @@
 import { remove } from 'unist-util-remove'
-//import { visit } from 'unist-util-visit'
-import { Element, Root } from 'rejour'
+import { visit } from 'unist-util-visit'
+import { Element, Root, Text } from 'rejour'
 import { filter } from 'unist-util-filter'
 
 const containsAbstract = (node: Element) => {
   let containsAbstract = false
-  visit(node, 'text', (textNode) => {
+  visit(node, 'text', (textNode: Text) => {
     if (!(textNode.value.replace(/[^\w]/g, '').toLowerCase() === 'abstract')) {
       return
     }

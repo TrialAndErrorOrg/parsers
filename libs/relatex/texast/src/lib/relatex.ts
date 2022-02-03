@@ -114,7 +114,7 @@ export interface Command extends Parent {
 export interface CommandArg extends Parent {
   type: 'commandArg'
   optional?: boolean
-  children: CommandContent[]
+  children: CommandContent[] | MathContent[]
 }
 export const isCommandArg = (node: Root | TexastContent): node is CommandArg =>
   node.type === 'commandArg'

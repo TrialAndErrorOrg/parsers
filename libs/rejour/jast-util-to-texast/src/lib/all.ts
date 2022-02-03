@@ -8,7 +8,7 @@ import { J, TexastContent, Node, Parent, Handle } from './types.js'
  * @returns
  */
 export function all(j: J, parent: Node): Array<TexastContent> {
-  // @ts-expect-error Assume `parent` is a parent.
+  // @ts-ignore Assume `parent` is a parent.
   const nodes: Array<Node> = parent.children || []
   const values: Array<TexastContent> = []
   let index = -1
@@ -36,7 +36,7 @@ export function all(j: J, parent: Node): Array<TexastContent> {
   // }
 
   while (++index < length) {
-    // @ts-expect-error assume `parent` is a parent.
+    // @ts-ignore assume `parent` is a parent.
     const result = one(j, nodes[index], parent)
 
     if (Array.isArray(result)) {

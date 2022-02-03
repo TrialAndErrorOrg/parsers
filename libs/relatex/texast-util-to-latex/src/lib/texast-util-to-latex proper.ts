@@ -14,7 +14,7 @@ const unknown: Handle = (node: Node) => {
 export function toLatex(tree: Node, options: Options = {}): string {
   //   const handle = zwitch('type', { invalid,
 
-  //     // @ts-expect-error hush
+  //     // @ts-ignore hush
   //     unknown,
   //     handlers: node })
   //   const result = Array.isArray(node)
@@ -24,7 +24,7 @@ export function toLatex(tree: Node, options: Options = {}): string {
   // }
 
   /** @type {Context} */
-  // @ts-expect-error: we’ll add `handle` later.
+  // @ts-ignore: we’ll add `handle` later.
   const context: Context = {
     enter,
     stack: [],
@@ -45,13 +45,13 @@ export function toLatex(tree: Node, options: Options = {}): string {
   // }
 
   /** @type {Handle} */
-  // @ts-expect-error: hush.
+  // @ts-ignore: hush.
   context.handle = zwitch('type', {
-    // @ts-expect-error: hush.
+    // @ts-ignore: hush.
     invalid,
-    // @ts-expect-error: hush.
+    // @ts-ignore: hush.
     unknown,
-    // @ts-expect-error: hush.
+    // @ts-ignore: hush.
     handlers: context.handlers,
   })
 

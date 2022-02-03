@@ -16,12 +16,12 @@ export function configure(base: Context, extension: Options): Context {
       // Empty.
     } else if (key === 'unsafe' || key === 'join') {
       /* c8 ignore next 2 */
-      // @ts-expect-error: hush.
+      // @ts-ignore: hush.
       base[key] = [...(base[key] || []), ...(extension[key] || [])]
     } else if (key === 'handlers') {
       base[key] = Object.assign(base[key], extension[key] || {})
     } else {
-      // @ts-expect-error: hush.
+      // @ts-ignore: hush.
       base.options[key] = extension[key]
     }
   }

@@ -1,6 +1,6 @@
+import { Element, Root, Text } from 'jast'
 import { remove } from 'unist-util-remove'
 import { visit } from 'unist-util-visit'
-import { Element, Root, Text } from 'jast'
 import { filter } from 'unist-util-filter'
 
 const containsAbstract = (node: Element) => {
@@ -31,7 +31,7 @@ export default function rejourMoveAbstract() {
   return (tree: Root) => {
     const abstractNode = findAbstractNode(tree)
 
-    // TODO: Make finding abstract less inefficient
+    // TODO: [rejour-move-abstract] Make finding abstract less inefficient
     remove(tree, (rawNode) => {
       const node = rawNode as Element
       return node.tagName === 'sec' && containsAbstract(node)

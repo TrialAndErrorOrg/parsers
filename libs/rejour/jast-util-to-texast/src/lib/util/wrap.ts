@@ -130,7 +130,7 @@ function flatten(nodes: Array<TexastContent>): Array<TexastContent> {
  * @returns {Array.TexastContent>}
  */
 function split(node: TexastContent): Array<TexastContent> {
-  // @ts-expect-error Assume parent.
+  // @ts-ignore Assume parent.
   return runs(node.children, onphrasing, onnonphrasing)
 
   /**
@@ -146,7 +146,7 @@ function split(node: TexastContent): Array<TexastContent> {
       const { children, ...rest } = node
       return {
         ...child,
-        // @ts-expect-error: assume matching parent & child.
+        // @ts-ignore: assume matching parent & child.
         children: [{ ...rest, children: child.children }],
       }
     }
@@ -161,9 +161,9 @@ function split(node: TexastContent): Array<TexastContent> {
    * @returns TexastContent}
    */
   function onphrasing(nodes: Array<TexastParagraphContent>): TexastContent {
-    // @ts-expect-error: assume parent.
+    // @ts-ignore: assume parent.
     const { children, ...rest } = node
-    // @ts-expect-error: assume matching parent & child.
+    // @ts-ignore: assume matching parent & child.
     return { ...rest, children: nodes }
   }
 }

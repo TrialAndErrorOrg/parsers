@@ -15,8 +15,6 @@ import {
 } from './types'
 import { convert } from 'unist-util-is'
 import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
-//import { visit } from 'unist-util-visit'
-//import {BuildVisitor} from 'unist-util-visit/complex-types'
 
 export { one } from './one'
 export { all } from './all'
@@ -53,14 +51,14 @@ export function toTexast(
         properties = props
       }
 
-      // @ts-expect-error Assume valid `type` and `children`/`value`.
+      // @ts-ignore Assume valid `type` and `children`/`value`.
       const result: Node = { type, ...properties }
 
       if (typeof children === 'string') {
-        // @ts-expect-error: Looks like a literal.
+        // @ts-ignore: Looks like a literal.
         result.value = children
       } else if (children) {
-        // @ts-expect-error: Looks like a parent.
+        // @ts-ignore: Looks like a parent.
         result.children = children
       }
 
@@ -100,10 +98,10 @@ export function toTexast(
   //   }
   // })
 
-  // @ts-expect-error: does return a transformer, that does accept any node.
+  // @ts-ignore: does return a transformer, that does accept any node.
   rehypeMinifyWhitespace({ newlines: options.newlines === true })(tree)
 
-  // @ts-expect-error: does return a transformer, that does accept any node.
+  // @ts-ignore: does return a transformer, that does accept any node.
   const result = one(j, tree, undefined)
 
   if (!result) {

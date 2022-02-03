@@ -2,8 +2,8 @@
   "name": "jast-util-to-texast",
   "version": "0.0.1",
   "dependencies": {
-    "rehype-minify-whitespace": "^5.0.0",
-    "unist-util-is": "^5.1.1"
+    "rehype-minify-whitespace": "5.0.0",
+    "unist-util-is": "5.0.0"
   },
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/journaloftrialanderror/jote",
@@ -18,7 +18,9 @@
     "ast"
   ],
   "devDependencies": {
-    "unist-util-remove-position": "^4.0.1"
+    "unist-util-remove-position": "4.0.0",
+    "unist-util-visit": "4.0.0",
+    "unist-util-visit-parents": "5.0.0"
   },
   "wallaby": {
     "autoDetect": true,

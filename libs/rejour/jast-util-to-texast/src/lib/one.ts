@@ -31,9 +31,9 @@ export function one(
 }
 
 function unknown(j: J, node: Node) {
-  // @ts-expect-error: Looks like a literal.
+  // @ts-ignore: Looks like a literal.
   if (typeof node.value === 'string') {
-    // @ts-expect-error: Looks like a literal.
+    // @ts-ignore: Looks like a literal.
     return j(node, 'text', wrapText(j, node.value))
   }
 

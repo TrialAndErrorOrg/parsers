@@ -12,7 +12,7 @@ import { toLatex } from 'texast-util-to-latex'
 const fromXML = (config: Options = {}) =>
   unified()
     .use(rejourParse)
-    //@ts-expect-error yayayay
+    //@ts-ignore yayayay
     .use(() => {
       return transformer
       function transformer(tree: TexastRoot | TexastContent) {

@@ -39,5 +39,5 @@
       "texast-util-to-latex": ["libs/relatex/texast-util-to-latex/src/index.ts"]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": ["node_modules", "tmp", "**/example.js"]
 }

@@ -16,7 +16,7 @@ const handleNodeProperly = (
   node: Node,
   options: Options = {}
 ) => {
-  // @ts-expect-error No it's fine we can throw everything into it
+  // @ts-ignore No it's fine we can throw everything into it
   const handleFunction = handle?.[type]
 
   if (!isKnownNode(node)) {

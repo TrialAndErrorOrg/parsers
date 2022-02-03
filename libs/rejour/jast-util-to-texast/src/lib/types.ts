@@ -76,7 +76,7 @@ export type JWithPropsSpecific<TNode extends TexastContent = TexastContent> = (
   node: Node,
   type: Pick<TNode, 'type'>,
   props?: Properties,
-  //@ts-expect-error yeah i know butttt
+  //@ts-ignore yeah i know butttt
   // TODO: Make this not error
   children?: Pick<TNode, 'children'>
 ) => TNode

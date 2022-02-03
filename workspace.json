@@ -15,7 +15,7 @@
     "relatex": "libs/relatex",
     "relatex-stringify": "libs/relatex-stringify",
     "texast": "libs/texast",
-    "texast-util-to-texast": "libs/texast-util-to-latex",
+    "texast-util-to-latex": "libs/texast-util-to-latex",
     "utils": "libs/utils"
   }
 }

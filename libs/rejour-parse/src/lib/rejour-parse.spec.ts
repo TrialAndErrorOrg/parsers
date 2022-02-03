@@ -42,7 +42,7 @@ describe('parser', () => {
     })
   })
   it('should remove whitespace *with* setting', () => {
-    const proc = unified().use(rejourParse, { reoveWhiteSpace: true })
+    const proc = unified().use(rejourParse, { removeWhiteSpace: true })
     const tree = removePosition(
       proc.parse(`<article>
 

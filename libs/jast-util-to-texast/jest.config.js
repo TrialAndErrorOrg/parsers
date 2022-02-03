@@ -1,4 +1,4 @@
-module.exports = {
+const config = {
   displayName: 'jast-util-to-texast',
   preset: '../../jest.preset.js',
   globals: {
@@ -19,3 +19,5 @@ module.exports = {
     '^(\\.{1,2}/.*)\\.js$': '$1',
   },
 }
+
+export default config

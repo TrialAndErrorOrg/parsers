@@ -1,4 +1,4 @@
-import { Parent as UnistParent, Point } from 'unist'
+'unist'
 import { Root, TexastContent as Content } from 'relatex'
 export type Node = Root | Content
 export type Parent = Extract<Node, UnistParent>

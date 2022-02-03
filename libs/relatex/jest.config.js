@@ -1,5 +1,5 @@
-module.exports = {
-  displayName: 'relatex',
+const config = {
+  displayName: 'jast-util-to-texast',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -13,9 +13,11 @@ module.exports = {
   },
   transformIgnorePatterns: [],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/relatex',
+  coverageDirectory: '../../coverage/libs/jast-util-to-texast',
   extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: {
     '^(\\.{1,2}/.*)\\.js$': '$1',
   },
 }
+
+export default config

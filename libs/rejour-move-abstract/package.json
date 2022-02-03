@@ -17,5 +17,10 @@
     "syntax",
     "tree",
     "ast"
-  ]
+  ],
+  "devDependencies": {
+    "unified": "^10.1.1",
+    "unist-util-map": "^3.0.0",
+    "vfile-reporter": "^7.0.3"
+  }
 }

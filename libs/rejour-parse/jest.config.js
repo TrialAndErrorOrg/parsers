@@ -1,5 +1,5 @@
-module.exports = {
-  displayName: 'rejour-parse',
+const config = {
+  displayName: 'jast-util-to-texast',
   preset: '../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -11,11 +11,13 @@ module.exports = {
   transform: {
     '^.+\\.[tj]sx?$': 'ts-jest',
   },
-  //transformIgnorePatterns: [],
+  transformIgnorePatterns: [],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/libs/rejour-parse',
+  coverageDirectory: '../../coverage/libs/jast-util-to-texast',
   extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: {
     '^(\\.{1,2}/.*)\\.js$': '$1',
   },
 }
+
+export default config

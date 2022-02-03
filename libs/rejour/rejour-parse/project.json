@@ -1,0 +1,34 @@
+{
+  "root": "libs/rejour/rejour-parse",
+  "sourceRoot": "libs/rejour/rejour-parse/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/rejour/rejour-parse/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/rejour/rejour-parse"],
+      "options": {
+        "jestConfig": "libs/rejour/rejour-parse/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/rejour/rejour-parse",
+        "tsConfig": "libs/rejour/rejour-parse/tsconfig.lib.json",
+        "packageJson": "libs/rejour/rejour-parse/package.json",
+        "main": "libs/rejour/rejour-parse/src/index.ts",
+        "assets": ["libs/rejour/rejour-parse/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

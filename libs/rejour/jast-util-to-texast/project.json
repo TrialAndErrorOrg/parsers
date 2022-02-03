@@ -1,0 +1,34 @@
+{
+  "root": "libs/rejour/jast-util-to-texast",
+  "sourceRoot": "libs/rejour/jast-util-to-texast/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/rejour/jast-util-to-texast/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/rejour/jast-util-to-texast"],
+      "options": {
+        "jestConfig": "libs/rejour/jast-util-to-texast/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/rejour/jast-util-to-texast",
+        "tsConfig": "libs/rejour/jast-util-to-texast/tsconfig.lib.json",
+        "packageJson": "libs/rejour/jast-util-to-texast/package.json",
+        "main": "libs/rejour/jast-util-to-texast/src/index.ts",
+        "assets": ["libs/rejour/jast-util-to-texast/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

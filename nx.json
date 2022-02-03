@@ -7,9 +7,7 @@
     "defaultCollection": "@nrwl/node"
   },
   "generators": {
-    "@nrwl/node:library": {
-      "publishable": true
-    }
+    "@nrwl/node:library": {}
   },
   "implicitDependencies": {
     "package.json": {

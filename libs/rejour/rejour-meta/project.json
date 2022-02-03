@@ -1,0 +1,34 @@
+{
+  "root": "libs/rejour/rejour-meta",
+  "sourceRoot": "libs/rejour/rejour-meta/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/rejour/rejour-meta/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/rejour/rejour-meta"],
+      "options": {
+        "jestConfig": "libs/rejour/rejour-meta/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/rejour/rejour-meta",
+        "tsConfig": "libs/rejour/rejour-meta/tsconfig.lib.json",
+        "packageJson": "libs/rejour/rejour-meta/package.json",
+        "main": "libs/rejour/rejour-meta/src/index.ts",
+        "assets": ["libs/rejour/rejour-meta/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

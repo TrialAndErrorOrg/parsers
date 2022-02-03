@@ -1,12 +1,13 @@
 {
   "name": "jote",
   "version": "0.0.1",
-  "license": "GPLv3.0 and later",
+  "license": "GPL-3.0+",
   "scripts": {
     "start": "nx serve",
     "build": "nx run-many --target=build --all",
     "test": "nx run-many --target=test --all",
-    "clean-libs": "echo 'for i in libs/* \\n do \\n rm -f $i/yarn.lock && rm -rf $i/node_modules && yarn --cwd $i \\n done' | bash"
+    "clean-libs": "echo 'for i in libs/relatex/* libs/rejour/* \\n do \\n rm -f $i/yarn.lock && rm -rf $i/node_modules && yarn --cwd $i \\n done' | bash",
+    "update-readme": "ts-node -P ./libs/utils/tsconfig.lib.json ./libs/utils/src/lib/updateReadme.ts"
   },
   "private": true,
   "dependencies": {
@@ -44,7 +45,31 @@
     "prettier": "^2.5.1",
     "ts-jest": "27.0.5",
     "ts-node": "^10.4.0",
-    "typescript": "4.4.4"
+    "typescript": "4.4.4",
+    "commander": "^9.0.0",
+    "remark": "^14.0.2",
+    "remark-license": "^6.1.0",
+    "remark-toc": "^8.0.1",
+    "remark-usage": "^10.0.1",
+    "to-vfile": "^7.2.3"
   },
-  "packageManager": "yarn@1.22.1"
+  "packageManager": "yarn@1.22.1",
+  "wallaby": {
+    "autoDetect": true,
+    "env": {
+      "params": {
+        "runner": "--experimental-vm-modules"
+      }
+    }
+  },
+  "repository": "https://github.com/journaloftrialanderror/jote",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "description": "",
+  "keywords": [
+    "unified",
+    "abstract",
+    "syntax",
+    "tree",
+    "ast"
+  ]
 }

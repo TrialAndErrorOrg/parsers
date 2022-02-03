@@ -1,5 +1,5 @@
 import { CompilerFunction } from 'unified'
-import { Root } from 'rejour'
+import { Root } from 'jast'
 
 export function astStringify() {
   const compiler: CompilerFunction<Root, string> = (tree) => {

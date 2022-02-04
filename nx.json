@@ -7,7 +7,18 @@
     "defaultCollection": "@nrwl/node"
   },
   "generators": {
-    "@nrwl/node:library": {}
+    "@nrwl/node:library": {},
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
+    },
+    "@nrwl/next": {
+      "application": {
+        "style": "css",
+        "linter": "eslint"
+      }
+    }
   },
   "implicitDependencies": {
     "package.json": {

@@ -1,9 +1,8 @@
 import { Instruction, Doctype, Attributes as XastAttributes } from 'xast'
 import { Node as UnistNode, Parent as UnistParent } from 'unist'
-import { documentMap, Text, Article, Content, Glossary } from './jats'
+import { Text, Article, Content, Glossary } from './jats'
 import { RequiredKeys, ValuesType } from 'utility-types'
-
-const types = Object.keys(documentMap)
+import { tagNames } from './names'
 
 export type NoUndefined<T> = Exclude<T, undefined>
 export type ArrayValueMaybe<T> = T extends any[]
@@ -45,7 +44,7 @@ export type TagNamesMap<T> = T extends { tagName: string }
 export type TagName = TagNamesMap<Content>
 
 export function isValidJATSTagName(tag: string): tag is TagName {
-  return tag in types
+  return tag in tagNames
 }
 // type JATSContent = Extract<document[keyof document], { type: string }>
 

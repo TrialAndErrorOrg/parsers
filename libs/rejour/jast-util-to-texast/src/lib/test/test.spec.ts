@@ -27,7 +27,7 @@ const arrDir = dir.map((f) => f)
 const doubleDir = dir.map((f) => [
   join(fixtures, f, 'index.jats.xml'),
   join(fixtures, f, 'index.tex'),
-  join(fixtures, f, 'index.json'),
+  join(fixtures, f, 'indexon'),
 ])
 
 describe.each(dir)('parses correctly for %s', (name: string) => {
@@ -47,12 +47,12 @@ describe.each(dir)('parses correctly for %s', (name: string) => {
   const proc = fromXML(config)
 
   const xmlTree = removePosition(proc.parse(jatsIn), true)
-  console.log(xmlTree)
+  console.dir(xmlTree, { depth: null })
 
   const tree = removePosition(proc.runSync(xmlTree), true)
-  console.log(tree)
+  console.dir(tree, { depth: null })
 
-  const lx = toLatex(tree)
+  const lx = toLatex(tree as TexastRoot)
 
   test('should match snapshot', () => {
     expect(lx).toMatchSnapshot()

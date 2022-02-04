@@ -15,7 +15,7 @@ const typeEnvArgMap: {
     empty?: boolean
   }
 } = {
-  title: {},
+  list: { name: 'itemize' },
 }
 
 export function environment(j: J, node: Parents) {
@@ -26,7 +26,7 @@ export function environment(j: J, node: Parents) {
   const mapEntry = typeEnvArgMap[node.tagName]
   const envName = mapEntry?.name || node.tagName
 
-  if (mapEntry.empty) {
+  if (mapEntry?.empty) {
     return j(node, 'environment', { name: envName }, wrapChildren(j, node))
   }
 
@@ -60,7 +60,7 @@ export function environment(j: J, node: Parents) {
       { req: [], opt: [], children: [] }
     )
 
-  return j(node, 'enviroment', { name: envName }, [
+  return j(node, 'environment', { name: envName }, [
     wrapCommandArg(
       j,
       { type: 'element', tagName: 'p', properties: {}, children: [things.opt] },

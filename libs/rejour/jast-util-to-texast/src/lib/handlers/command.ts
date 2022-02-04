@@ -1,8 +1,8 @@
 import { CommandArg, CommandArgOpt } from 'texast'
-import { all } from '../all.js'
-import { one } from '../one.js'
-import { J, Node, Parents, Root, TagName, Text } from '../types.js'
-import { wrap } from '../util/wrap.js'
+import { all } from '../all'
+import { one } from '../one'
+import { J, Node, Parents, Root, TagName, Text } from '../types'
+import { wrap } from '../util/wrap'
 
 const typeCommandMap: {
   [key: string]: {
@@ -13,7 +13,10 @@ const typeCommandMap: {
     empty?: boolean
   }
 } = {
-  title: {},
+  title: { name: 'section' },
+  'article-title': {},
+  listItem: {},
+  bold: { name: 'textbf' },
 }
 
 export function command(j: J, node: Parents) {
@@ -64,8 +67,6 @@ export function command(j: J, node: Parents) {
       j(child, 'commandArg', { optional: true }, all(j, child))
     )
 
-  console.log(requiredCommandArgs)
-  console.log(node)
   return j(node, 'command', { name: commandName }, [
     firstCommandArg,
     ...requiredCommandArgs,

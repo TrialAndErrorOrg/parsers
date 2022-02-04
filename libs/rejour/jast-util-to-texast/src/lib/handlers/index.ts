@@ -6,6 +6,8 @@ import { article } from './article'
 import { body } from './body'
 import { text } from './text'
 import { front } from './front'
+import { wrapChildren } from '../util/wrap-children'
+import { environment } from './environment'
 export * from './italic'
 
 export const andlers = {
@@ -177,6 +179,18 @@ export const handlers = {
   text,
   italic,
   command,
+
+  instruction: ignore,
+
+  articleTitle: command,
+
+  p: wrapChildren,
+
+  list: environment,
+  listItem: command,
+  title: command,
+  sec: wrapChildren,
+
   abbrevJournaltitle: ignore,
   abbrev: ignore,
   abstract: ignore,
@@ -199,7 +213,6 @@ export const handlers = {
   articleCategories: ignore,
   articleId: ignore,
   articleMeta: ignore,
-  articleTitle: ignore,
   articleVersionalternatives: ignore,
   articleVersion: ignore,
   attrib: ignore,
@@ -326,8 +339,6 @@ export const handlers = {
   label: ignore,
   licenseP: ignore,
   license: ignore,
-  listItem: ignore,
-  list: ignore,
   longDesc: ignore,
   lpage: ignore,
   media: ignore,
@@ -368,7 +379,6 @@ export const handlers = {
   privateChar: ignore,
   processingMeta: ignore,
   product: ignore,
-  p: ignore,
   pubDatenotavailable: ignore,
   pubDate: ignore,
   pubHistory: ignore,
@@ -400,7 +410,6 @@ export const handlers = {
   sc: command,
   season: ignore,
   secMeta: ignore,
-  sec: ignore,
   seeAlso: ignore,
   see: ignore,
   selfUri: ignore,
@@ -452,7 +461,6 @@ export const handlers = {
   th: ignore,
   timeStamp: ignore,
   titleGroup: ignore,
-  title: command,
   transAbstract: ignore,
   transSource: ignore,
   transSubtitle: ignore,

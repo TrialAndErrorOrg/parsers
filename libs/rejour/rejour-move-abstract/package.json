@@ -4,7 +4,6 @@
   "dependencies": {
     "unist-util-filter": "4.0.0",
     "unist-util-remove": "3.0.0",
-    "unist-util-visit": "4.0.0",
     "unist-util-remove-position": "4.0.0",
     "unist-util-visit": "4.0.0",
     "unist-util-visit-parents": "5.0.0"

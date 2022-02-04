@@ -83,7 +83,7 @@ export type JWithPropsSpecific<TNode extends TexastContent = TexastContent> = (
 
 export type J = JWithProps & JWithoutProps & Context
 
-export {
+export type {
   Parent,
   Root,
   Element,

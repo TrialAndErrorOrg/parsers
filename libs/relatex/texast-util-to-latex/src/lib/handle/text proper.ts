@@ -1,6 +1,6 @@
 import { Text } from 'texast'
-import { Handle, Context, Options, SafeOptions, Parent } from '../types.js'
-import { safe } from '../util/safe.js'
+import { Handle, Context, Options, SafeOptions, Parent } from '../types'
+import { safe } from '../util/safe'
 
 export const text: Handle = (
   node: Text,

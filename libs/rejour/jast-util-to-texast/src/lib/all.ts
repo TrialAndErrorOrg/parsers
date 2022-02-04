@@ -1,5 +1,5 @@
-import { one } from './one.js'
-import { J, TexastContent, Node, Parent, Handle } from './types.js'
+import { one } from './one'
+import { J, TexastContent, Node, Parent, Handle } from './types'
 
 /**
  * Convert all nodes in tree using j

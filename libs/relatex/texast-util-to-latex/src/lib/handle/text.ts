@@ -6,8 +6,8 @@ import {
   SafeOptions,
   Parent,
   BasicHandle,
-} from '../types.js'
-import { safe } from '../util/safe.js'
+} from '../types'
+import { safe } from '../util/safe'
 
 export const text: BasicHandle = (node: Text, options: Options = {}) => {
   return node.value

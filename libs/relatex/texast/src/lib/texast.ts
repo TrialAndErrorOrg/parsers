@@ -244,4 +244,4 @@ export interface ListItem extends Parent {
   children: ParagraphContent[]
 }
 
-export { UnistNode as Node, UnistLiteral as Literal }
+export type { UnistNode as Node, UnistLiteral as Literal }

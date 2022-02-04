@@ -1,7 +1,7 @@
 import * as Primitive from './xml-primitives'
-import { Literal as UnistLiteral, Node as UnistNode } from 'unist'
-import { RequiredMap } from './rejour'
-import { ValuesType } from 'utility-types'
+import type { Literal as UnistLiteral, Node as UnistNode } from 'unist'
+import type { RequiredMap } from './rejour'
+import type { ValuesType } from 'utility-types'
 // Source files:
 // http://localhost:3001/jats.xsd
 
@@ -13286,7 +13286,7 @@ export interface YearChildrenMap {
   text?: Text
 }
 
-export interface documentMap {
+export type documentMap = {
   // type: 'element'
   // tagName: 'document'
 
@@ -13889,6 +13889,6 @@ export interface documentMap {
   text: Text
 }
 
-export var documentMap: documentMap
+export var docMap: documentMap
 export type Content = ValuesType<documentMap>
 export type ElementContent = Extract<Content, { type: 'element' }>

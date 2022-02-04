@@ -1,9 +1,9 @@
 // /**
-//  * @typedef {import('./types.js').Join} Join
+//  * @typedef {import('./types').Join} Join
 //  */
 
-// import {formatCodeAsIndented} from './util/format-code-as-indented.js'
-// import {formatHeadingAsSetext} from './util/format-heading-as-setext.js'
+// import {formatCodeAsIndented} from './util/format-code-as-indented'
+// import {formatHeadingAsSetext} from './util/format-heading-as-setext'
 
 // /** @type {Array<Join>} */
 // export const join = [joinDefaults]

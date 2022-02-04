@@ -1,8 +1,8 @@
-// based on https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/em.js
+// based on https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/em
 
 import { Article, Parent, TagHavers } from 'jast'
-import { all } from '../all.js'
-import { J, Node, Root } from '../types.js'
+import { all } from '../all'
+import { J, Node, Root } from '../types'
 
 export function root(j: J, node: Root) {
   const kids = node.children as TagHavers[]

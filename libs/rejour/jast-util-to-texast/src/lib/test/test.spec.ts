@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync } from 'fs'
+import { readdirSync, readFileSync, writeFileSync } from 'fs'
 import { join } from 'path'
 import rejourParse from 'rejour-parse'
 import { toTexast } from '../jast-util-to-texast'
@@ -48,9 +48,11 @@ describe.each(dir)('parses correctly for %s', (name: string) => {
 
   const xmlTree = removePosition(proc.parse(jatsIn), true)
   console.dir(xmlTree, { depth: null })
+  if (name === 'complete')
+    writeFileSync('longtree', JSON.stringify(xmlTree, null, 2))
 
   const tree = removePosition(proc.runSync(xmlTree), true)
-  console.dir(tree, { depth: null })
+  //console.dir(tree, { depth: null })
 
   const lx = toLatex(tree as TexastRoot)
 

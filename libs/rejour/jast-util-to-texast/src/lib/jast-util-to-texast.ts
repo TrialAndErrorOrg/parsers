@@ -29,6 +29,8 @@ export function toTexast(
     checked: '[x]',
     unchecked: '[ ]',
     quotes: ['"'],
+    topSection: 1,
+    documentClass: 'article',
   }
 ) {
   // const byId: { [s: string]: Element } = {}
@@ -84,6 +86,8 @@ export function toTexast(
       unchecked: options.unchecked || '[ ]',
       quotes: options.quotes || ['"'],
       italics: options.italics || 'emph',
+      sectionDepth: options.topSection || 1,
+      documentClass: options.documentClass || 'article',
     } as Context
   )
 

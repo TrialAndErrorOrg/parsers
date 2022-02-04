@@ -33,6 +33,8 @@ export interface Options {
   checked?: string
   unchecked?: string
   quotes?: Array<string>
+  documentClass?: string
+  topSection?: number
   italics?: 'emph' | 'textit'
 }
 
@@ -57,6 +59,8 @@ export interface Context {
   unchecked: string
   quotes: Array<string>
   italics: string
+  documentClass: string
+  sectionDepth: number
 }
 
 export type JWithProps = (

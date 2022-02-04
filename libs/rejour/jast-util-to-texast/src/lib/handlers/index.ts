@@ -8,6 +8,9 @@ import { text } from './text'
 import { front } from './front'
 import { wrapChildren } from '../util/wrap-children'
 import { environment } from './environment'
+import { sec } from './sec'
+import { listItem } from './listItem'
+import { list } from './list'
 export * from './italic'
 
 export const andlers = {
@@ -186,10 +189,10 @@ export const handlers = {
 
   p: wrapChildren,
 
-  list: environment,
-  listItem: command,
+  list,
+  listItem,
   title: command,
-  sec: wrapChildren,
+  sec,
 
   abbrevJournaltitle: ignore,
   abbrev: ignore,

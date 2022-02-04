@@ -14,6 +14,7 @@ import { mathCharacter } from './math-character'
 import { linebreak } from './linebreak'
 import { root } from './root'
 import { preamble } from './preamble'
+import { listItem } from './listItem'
 
 export const handle = {
   alignmentTab,
@@ -31,4 +32,5 @@ export const handle = {
   environment,
   group,
   text,
+  listItem,
 }

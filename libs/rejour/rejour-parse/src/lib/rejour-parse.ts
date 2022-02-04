@@ -56,10 +56,22 @@ export default function rejourParse(options: Settings = {}) {
       if (node.type !== 'element') return node
       const element = node as XastElement
 
+      const properties = element.attributes
+        ? Object.entries(element.attributes).reduce(
+            (
+              acc: { [key: string]: any },
+              [key, value]: [key: string, value: any]
+            ) => {
+              acc[pascalToCamelCase(key)] = value
+              return acc
+            },
+            {}
+          )
+        : {}
       return {
         type: 'element',
-        tagName: element.name,
-        properties: element.attributes,
+        tagName: pascalToCamelCase(element.name),
+        properties: properties,
         children: element.children,
         ...(element.position ? { position: element.position } : {}),
       }
@@ -69,4 +81,14 @@ export default function rejourParse(options: Settings = {}) {
   }
 
   Object.assign(this, { Parser: parser })
+}
+
+/**
+ * Turn a pascal-case string into a camel-case string.
+ * Necessary because working with pascal-case in js is annoying.
+ */
+function pascalToCamelCase(input: string): string {
+  return input.replace(/-(\w)/g, (string, lowercaseLetter) =>
+    lowercaseLetter.toUpperCase()
+  )
 }

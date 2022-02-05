@@ -37,6 +37,7 @@ export interface Options {
   topSection?: number
   italics?: 'emph' | 'textit'
   bibname?: string
+  columnSeparator?: boolean
 }
 
 export type Handle = (
@@ -63,6 +64,7 @@ export interface Context {
   documentClass: string
   sectionDepth: number
   bibname: string
+  columnSeparator: boolean
 }
 
 export type JWithProps = (

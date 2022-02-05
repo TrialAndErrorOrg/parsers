@@ -10,7 +10,7 @@ import { CommandArg } from 'texast'
 // https://github.com/syntax-tree/unist-util-visit/issues/33
 const visit = origVisit as any
 export function table(j: J, table: Table) {
-  let numberOfColumns = 0
+  let columns: string[] = []
   let hasCols = false
   // tables can be def'd in terms of cols or rows
   // TODO: [jast-util-to-texast] Store information about column alignment in tabular
@@ -20,19 +20,19 @@ export function table(j: J, table: Table) {
     (node: Element) => {
       if (node.tagName === 'col') {
         hasCols = true
-        numberOfColumns++
+        columns.push('c')
         return
       }
 
       if (hasCols) return
-      visit(node, 'td', (td: Node) => {
-        numberOfColumns++
+      node?.children?.forEach((child) => {
+        columns.push('c')
       })
       hasCols = true
     }
   )
 
-  const colAlignment = new Array(numberOfColumns).map((col) => 'c').join(' | ')
+  const colAlignment = columns.join(` ${j.columnSeparator ? '|' : ''} `)
   const colAlignArg: CommandArg = {
     type: 'commandArg',
     children: [{ type: 'text', value: colAlignment }],

@@ -31,6 +31,7 @@ export function toTexast(
     quotes: ['"'],
     topSection: 1,
     documentClass: 'article',
+    columnSeparator: false,
   }
 ) {
   // const byId: { [s: string]: Element } = {}
@@ -89,6 +90,7 @@ export function toTexast(
       sectionDepth: options.topSection || 1,
       documentClass: options.documentClass || 'article',
       bibname: options.bibname || 'bibliography',
+      columnSeparator: !!options.columnSeparator,
     } as Context
   )
 

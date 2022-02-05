@@ -47,6 +47,7 @@ export const handlers = {
   back: all,
 
   refList: refList,
+  tbody: all,
 
   abbrevJournaltitle: ignore,
   abbrev: ignore,
@@ -301,7 +302,6 @@ export const handlers = {
   tableWrapfoot: ignore,
   tableWrapgroup: ignore,
   target: ignore,
-  tbody: ignore,
   termHead: ignore,
   term: ignore,
   texMath: ignore,

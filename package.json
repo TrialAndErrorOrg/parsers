@@ -1,7 +1,7 @@
 {
   "name": "jote",
   "version": "0.0.1",
-  "license": "GPL-3.0+",
+  "license": "GPL-3-0-or-later",
   "scripts": {
     "start": "nx serve",
     "build": "nx run-many --target=build --all",

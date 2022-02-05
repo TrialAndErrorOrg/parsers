@@ -4,7 +4,7 @@ import rejourParse from 'rejour-parse'
 import { toTexast } from '../jast-util-to-texast'
 import relatexStringify from 'relatex-stringify'
 import { unified } from 'unified'
-import { TexastContent, TexastRoot, Options } from '../types'
+import { TexastContent, Options, TexastRoot } from '../types'
 import { removePosition } from 'unist-util-remove-position'
 import { toLatex } from 'texast-util-to-latex'
 
@@ -42,14 +42,21 @@ describe.each(dir)('parses correctly for %s', (name: string) => {
   try {
     config = JSON.parse(String(readFileSync(latex)))
   } catch (e) {
-    console.log(e)
+    console.error(e)
   }
   const proc = fromXML(config)
 
   const xmlTree = removePosition(proc.parse(jatsIn), true)
-  console.dir(xmlTree, { depth: null })
+  // console.dir(xmlTree, { depth: null })
 
-  const tree = removePosition(proc.runSync(xmlTree), true)
+  let tree: TexastRoot = { type: 'root', children: [] }
+  try {
+    //@ts-ignore
+    tree = removePosition(proc.runSync(xmlTree), true)
+  } catch (e) {
+    console.error('woops')
+    console.error(e)
+  }
   //console.dir(tree, { depth: null })
   if (name === 'complete') {
     writeFileSync(
@@ -62,7 +69,12 @@ describe.each(dir)('parses correctly for %s', (name: string) => {
     )
   }
 
-  const lx = toLatex(tree as TexastRoot)
+  let lx: string
+  try {
+    lx = toLatex(tree as TexastRoot)
+  } catch (e) {
+    console.log(e)
+  }
 
   test('should match snapshot', () => {
     expect(lx).toMatchSnapshot()

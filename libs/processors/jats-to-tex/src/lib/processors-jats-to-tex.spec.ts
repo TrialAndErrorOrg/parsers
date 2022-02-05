@@ -1,7 +1,7 @@
-import { processorsJatsToTex } from './processors-jats-to-tex'
+import { jatsToTex } from './processors-jats-to-tex'
 
 describe('processorsJatsToTex', () => {
   it('should work', () => {
-    expect(processorsJatsToTex()).toEqual('processors-jats-to-tex')
+    expect(jatsToTex).toBeDefined()
   })
 })

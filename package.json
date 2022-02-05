@@ -40,8 +40,12 @@
     "regenerator-runtime": "0.13.7",
     "rxjs": "^7.0.0",
     "tslib": "^2.0.0",
+    "unist-util-filter": "^4.0.0",
+    "unist-util-map": "^3.0.0",
     "unist-util-visit": "4.0.0",
-    "utility-types": "^3.10.0"
+    "utility-types": "^3.10.0",
+    "xast-util-from-xml": "^2.0.1",
+    "xast-util-to-xml": "^3.0.0"
   },
   "devDependencies": {
     "@nestjs/schematics": "^8.0.0",

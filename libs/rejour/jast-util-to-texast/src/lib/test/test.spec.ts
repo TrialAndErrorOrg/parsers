@@ -58,6 +58,16 @@ describe.each(dir)('parses correctly for %s', (name: string) => {
     console.error(e)
   }
   //console.dir(tree, { depth: null })
+  if (name === 'complete') {
+    writeFileSync(
+      join('libs', 'rejour', 'jast-util-to-texast', 'jasttree'),
+      JSON.stringify(xmlTree, null, 2)
+    )
+    writeFileSync(
+      join('libs', 'rejour', 'jast-util-to-texast', 'texasttree'),
+      JSON.stringify(tree, null, 2)
+    )
+  }
 
   let lx = ''
   try {

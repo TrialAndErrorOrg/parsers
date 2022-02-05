@@ -15,6 +15,8 @@ import { linebreak } from './linebreak'
 import { root } from './root'
 import { preamble } from './preamble'
 import { listItem } from './listItem'
+import { tableRow } from './table-row'
+import { tableCell } from './table-cell'
 
 export const handle = {
   alignmentTab,
@@ -33,4 +35,6 @@ export const handle = {
   group,
   text,
   listItem,
+  tableRow,
+  tableCell,
 }

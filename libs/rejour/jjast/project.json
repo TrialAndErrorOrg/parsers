@@ -1,0 +1,34 @@
+{
+  "root": "libs/rejour/jjast",
+  "sourceRoot": "libs/rejour/jjast/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/rejour/jjast",
+        "tsConfig": "libs/rejour/jjast/tsconfig.lib.json",
+        "packageJson": "libs/rejour/jjast/package.json",
+        "main": "libs/rejour/jjast/src/index.ts",
+        "assets": ["libs/rejour/jjast/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/rejour/jjast/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/rejour/jjast"],
+      "options": {
+        "jestConfig": "libs/rejour/jjast/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,4 +1,4 @@
-import { ArticleMeta, Root, Content, Element, Text } from 'jast'
+import { ArticleMeta, Root, Content, Element, Text } from 'jjast'
 
 export type MetaProps = Record<keyof ArticleMeta, Element | Text>
 export default function rejourMoveAbstract(options: ArticleMeta) {

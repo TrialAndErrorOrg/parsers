@@ -4,10 +4,10 @@
   "license": "GPL-3.0+",
   "scripts": {
     "start": "nx serve",
-    "build": "yarn install-node && nx run-many --target=build --all",
+    "build": "nx run-many --target=build --all",
     "test": "nx run-many --target=test --all",
     "clean-libs": "echo 'for i in libs/relatex/* libs/rejour/* \\n do \\n rm -f $i/yarn.lock && rm -rf $i/node_modules && yarn --cwd $i \\n done' | bash",
-    "install-node": "echo 'for i in libs/relatex/* libs/rejour/* \\n do \\n yarn --cwd $i \\n done' | bash",
+    "install-node": "echo 'for i in libs/relatex/* libs/rejour/* \\n do \\n rm -rf $i/node_modules && yarn --cwd $i \\n done' | bash",
     "update-readme": "echo 'for i in libs/*/README.md libs/re*/*/README.md; do;  node ./scripts/updateReadme.mjs $i; done' |bash"
   },
   "private": true,
@@ -26,9 +26,11 @@
     "@nrwl/next": "^13.7.2",
     "@types/react-file-icon": "^1.0.1",
     "@types/unist": "^2.0.6",
+    "@types/xast": "^1.0.2",
     "core-js": "^3.6.5",
     "dayjs": "^1.10.7",
     "docx4js": "^3.2.20",
+    "hastscript": "^7.0.2",
     "next": "12.0.7",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -36,8 +38,16 @@
     "react-icons": "^4.3.1",
     "reflect-metadata": "^0.1.13",
     "regenerator-runtime": "0.13.7",
+    "rehype-minify-whitespace": "^5.0.0",
     "rxjs": "^7.0.0",
-    "tslib": "^2.0.0"
+    "tslib": "^2.0.0",
+    "unist-util-filter": "^4.0.0",
+    "unist-util-map": "^3.0.0",
+    "unist-util-remove": "^3.0.0",
+    "unist-util-visit": "4.0.0",
+    "utility-types": "^3.10.0",
+    "xast-util-from-xml": "^2.0.1",
+    "xast-util-to-xml": "^3.0.0"
   },
   "devDependencies": {
     "@nestjs/schematics": "^8.0.0",
@@ -90,7 +100,6 @@
     "ts-node": "^10.4.0",
     "typescript": "4.4.4",
     "unist-util-remove-position": "4.0.0",
-    "unist-util-visit": "4.0.0",
     "unist-util-visit-parents": "5.0.0",
     "vercel": "^23.1.2"
   },

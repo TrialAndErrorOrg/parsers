@@ -1,8 +1,9 @@
 // based on https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/em
 
+import { Td } from 'jjast'
 import { all } from '../all'
 import { J, Node } from '../types'
 
-export function inlineFormula(j: J, node: Node) {
-  return j(node, 'inline-math', all(j, node))
+export function td(j: J, node: Td) {
+  return j(node, 'tableCell', all(j, node))
 }

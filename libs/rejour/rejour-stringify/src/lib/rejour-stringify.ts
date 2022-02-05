@@ -1,6 +1,6 @@
 import { CompilerFunction } from 'unified'
 //import { } from 'libs/rejour-parse/node_modules/xast-util-from-xml/lib'
-import { Element, Root } from 'jast'
+import { Element, Root } from 'jjast'
 import { map } from 'unist-util-map'
 import { toXml } from 'xast-util-to-xml'
 import { Root as xastRoot } from 'xast-util-to-xml/lib'

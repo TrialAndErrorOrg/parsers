@@ -17,7 +17,7 @@ import {
   Root,
   Content,
   TagName,
-} from 'jast'
+} from 'jjast'
 
 /**
  * jast Node
@@ -36,6 +36,7 @@ export interface Options {
   documentClass?: string
   topSection?: number
   italics?: 'emph' | 'textit'
+  bibname?: string
 }
 
 export type Handle = (
@@ -61,6 +62,7 @@ export interface Context {
   italics: string
   documentClass: string
   sectionDepth: number
+  bibname: string
 }
 
 export type JWithProps = (
@@ -91,6 +93,7 @@ export type {
   Parent,
   Root,
   Element,
+  Content,
   TexastLiteral,
   TexastContent,
   TexastParent,

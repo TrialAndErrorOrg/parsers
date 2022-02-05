@@ -1,4 +1,4 @@
-import { ListItem } from 'jast'
+import { ListItem } from 'jjast'
 import { all } from 'jast-util-to-texast'
 import { CommandArg } from 'texast'
 import { wrap } from '../util/wrap'

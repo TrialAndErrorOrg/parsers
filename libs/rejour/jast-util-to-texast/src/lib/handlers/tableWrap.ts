@@ -4,12 +4,9 @@ import { Article, Parent, TagHavers } from 'jjast'
 import { all } from '../all'
 import { J, Node, Root } from '../types'
 
-export function root(j: J, node: Root) {
-  const kids = node.children as TagHavers[]
-  const article = kids.find((child) => child?.tagName === 'article')
-
+export function tableWrap(j: J, node: Root) {
   //  if (!article) {
-  return j(node, 'root', all(j, node))
+  return j(node, 'environment', { name: 'table' }, all(j, node))
   //  }
 
   // return j(article, 'root', [

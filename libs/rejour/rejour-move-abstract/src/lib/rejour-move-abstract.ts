@@ -1,8 +1,11 @@
-import { Element, Root, Text } from 'jast'
+import { Node, Element, isElement, Root, Text, Abstract } from 'jjast'
 import { remove } from 'unist-util-remove'
-import { visit } from 'unist-util-visit'
+import { visit as origVisit } from 'unist-util-visit'
 import { filter } from 'unist-util-filter'
 
+console.log(Node)
+// fix for typescript bug
+const visit = origVisit as any
 const containsAbstract = (node: Element) => {
   let containsAbstract = false
   visit(node, 'text', (textNode: Text) => {
@@ -15,12 +18,12 @@ const containsAbstract = (node: Element) => {
   return containsAbstract
 }
 
-const findAbstractNode = (tree: Root): Element | null => {
+const findAbstractNode = (tree: Root): Abstract | null => {
   let abstractNode: Element | null = null
   visit(
     tree,
-    (node) => (node as Element).tagName === 'sec',
-    (node) => {
+    (node: Node) => isElement(node) && node.tagName === 'sec',
+    (node: Element) => {
       if (containsAbstract(node as Element)) abstractNode = node as Element
     }
   )
@@ -39,21 +42,24 @@ export default function rejourMoveAbstract() {
 
     if (!abstractNode) return
 
-    const abstractPs = filter(
+    const abstractBody = filter(
       abstractNode,
-      (node) => node.type !== 'element' || (node as Element).tagName !== 'title'
+      (node) => !(isElement(node) && node.tagName === 'title')
     )
-    const abstract: Element = {
+
+    if (abstractBody === null) return
+
+    const abstract: Abstract = {
       type: 'element',
       tagName: 'abstract',
       properties: {},
-      children: abstractPs!.children || [],
+      children: abstractBody.children,
     }
     visit(
       tree,
-      (node) => (node as Element).tagName === 'article-meta',
-      (articleMetaDataNode) => {
-        ;(articleMetaDataNode as Element).children.push(abstract)
+      (node: Node) => isElement(node) && node.tagName === 'article-meta',
+      (articleMetaDataNode: Element) => {
+        articleMetaDataNode?.children?.push(abstract)
       }
     )
   }

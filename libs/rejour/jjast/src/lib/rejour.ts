@@ -32,7 +32,7 @@ export interface Element extends UnistNode {
   type: 'element'
   properties: Properties
   tagName: string
-  children?: Content
+  children?: Content[]
 }
 export function isElement(node: UnistNode): node is Element {
   return node.hasOwnProperty('tagName') && node.hasOwnProperty('properties')
@@ -46,6 +46,8 @@ export type TagName = TagNamesMap<Content>
 export function isValidJATSTagName(tag: string): tag is TagName {
   return tag in tagNames
 }
+
+export type { UnistNode as Node }
 // type JATSContent = Extract<document[keyof document], { type: string }>
 
 // /**

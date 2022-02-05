@@ -494,7 +494,7 @@ mdast-util-to-markdown@^1.0.0:
     longest-streak "^3.0.0"
     mdast-util-to-string "^3.0.0"
     micromark-util-decode-string "^1.0.0"
-    unist-util-visit "^4.0.0"
+    unist-util-visit "4.0.0"
     zwitch "^2.0.0"
 
 mdast-util-to-string@^3.0.0, mdast-util-to-string@^3.1.0:
@@ -514,7 +514,7 @@ mdast-util-toc@^6.0.0:
     github-slugger "^1.0.0"
     mdast-util-to-string "^3.1.0"
     unist-util-is "^5.0.0"
-    unist-util-visit "^3.0.0"
+    unist-util-visit "3.0.0"
 
 micromark-core-commonmark@^1.0.1:
   version "1.0.6"
@@ -909,7 +909,7 @@ unist-util-remove-position@^4.0.0:
   integrity sha512-0yDkppiIhDlPrfHELgB+NLQD5mfjup3a8UYclHruTJWmY74je8g+CIFr79x5f6AkmzSwlvKLbs63hC0meOMowQ==
   dependencies:
     "@types/unist" "^2.0.0"
-    unist-util-visit "^4.0.0"
+    unist-util-visit "4.0.0"
 
 unist-util-stringify-position@^3.0.0:
   version "3.0.0"
@@ -943,14 +943,6 @@ unist-util-visit@^3.0.0:
     unist-util-is "^5.0.0"
     unist-util-visit-parents "^4.0.0"
 
-unist-util-visit@^4.0.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-4.1.0.tgz#f41e407a9e94da31594e6b1c9811c51ab0b3d8f5"
-  integrity sha512-n7lyhFKJfVZ9MnKtqbsqkQEk5P1KShj0+//V7mAcoI6bpbUjh3C/OG8HVD+pBihfh6Ovl01m8dkcv9HNqYajmQ==
-  dependencies:
-    "@types/unist" "^2.0.0"
-    unist-util-is "^5.0.0"
-    unist-util-visit-parents "^5.0.0"
 
 uvu@^0.5.0:
   version "0.5.3"

@@ -16,6 +16,7 @@ import { table } from './table'
 import { tr } from './tr'
 import { td } from './td'
 import { refList } from './refList'
+import { xref } from './xref'
 export * from './italic'
 
 export const handlers = {
@@ -26,6 +27,7 @@ export const handlers = {
   text,
   italic,
   command,
+  xref,
 
   instruction: ignore,
 
@@ -329,7 +331,6 @@ export const handlers = {
   volumeSeries: command,
   volume: command,
   wordCount: ignore,
-  xref: ignore,
   x: ignore,
   year: ignore,
 }

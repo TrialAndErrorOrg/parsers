@@ -58,6 +58,14 @@ describe.each(dir)('parses correctly for %s', (name: string) => {
     console.error(e)
   }
   //console.dir(tree, { depth: null })
+
+  let lx = ''
+  try {
+    lx = toLatex(tree as TexastRoot)
+  } catch (e) {
+    console.log(e)
+  }
+
   if (name === 'complete') {
     writeFileSync(
       join('libs', 'rejour', 'jast-util-to-texast', 'jasttree'),
@@ -67,15 +75,21 @@ describe.each(dir)('parses correctly for %s', (name: string) => {
       join('libs', 'rejour', 'jast-util-to-texast', 'texasttree'),
       JSON.stringify(tree, null, 2)
     )
+    writeFileSync(
+      join(
+        'libs',
+        'rejour',
+        'jast-util-to-texast',
+        'src',
+        'lib',
+        'test',
+        'fixtures',
+        'complete',
+        'test.tex'
+      ),
+      lx
+    )
   }
-
-  let lx: string
-  try {
-    lx = toLatex(tree as TexastRoot)
-  } catch (e) {
-    console.log(e)
-  }
-
   test('should match snapshot', () => {
     expect(lx).toMatchSnapshot()
   })

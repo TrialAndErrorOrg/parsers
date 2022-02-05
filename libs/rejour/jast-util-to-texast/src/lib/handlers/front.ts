@@ -24,6 +24,23 @@ export function front(j: J, node: Root) {
         ],
       },
       { type: 'text', value: '\n' },
+      {
+        type: 'command',
+        name: 'usepackage',
+        children: [
+          {
+            type: 'commandArg',
+            optional: true,
+            children: [{ type: 'text', value: 'style=apa' }],
+          },
+          {
+            type: 'commandArg',
+            optional: false,
+            children: [{ type: 'text', value: 'biblatex' }],
+          },
+        ],
+      },
+      { type: 'text', value: '\n' },
       ...all(j, node),
     ])
   )

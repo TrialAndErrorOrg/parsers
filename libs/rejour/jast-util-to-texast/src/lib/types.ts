@@ -23,7 +23,7 @@ import {
  * jast Node
  */
 export type Node = Parent['children'][number] | Root
-type t = Extract<Node, Text>
+type t = Extract<Node, { tagName: 'td' }>
 
 export type Properties = JastProperties
 export interface Options {

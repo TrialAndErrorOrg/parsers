@@ -1,6 +1,6 @@
 // based on https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/em
 
-import { Td } from 'jast'
+import { Td } from 'jjast'
 import { all } from '../all'
 import { J, Node } from '../types'
 

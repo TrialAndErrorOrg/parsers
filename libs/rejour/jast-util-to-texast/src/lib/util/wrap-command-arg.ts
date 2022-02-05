@@ -1,4 +1,4 @@
-import { P } from 'jast'
+import { P } from 'jjast'
 import { CommandArg, CommandContent, ParagraphContent } from 'texast'
 import { all } from '../all'
 import { one } from '../one'

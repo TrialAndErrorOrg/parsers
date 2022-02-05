@@ -17,7 +17,7 @@ import {
   Root,
   Content,
   TagName,
-} from 'jast'
+} from 'jjast'
 
 /**
  * jast Node

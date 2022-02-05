@@ -1,5 +1,5 @@
 import { toTexast, Options } from 'jast-util-to-texast'
-import { Root as JastRoot } from 'jast'
+import { Root as JastRoot } from 'jjast'
 import { Root as TexastRoot } from 'texast'
 import {
   Plugin,

@@ -1,6 +1,6 @@
 // based on https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/em
 
-import { Table, isElement, Element } from 'jast'
+import { Table, isElement, Element } from 'jjast'
 import { all } from '../all'
 import { J, Node } from '../types'
 import { visit as origVisit } from 'unist-util-visit'

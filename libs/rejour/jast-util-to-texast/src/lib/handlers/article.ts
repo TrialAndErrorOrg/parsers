@@ -1,6 +1,6 @@
 // based on https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/em
 
-import { Article, Parent, TagHavers } from 'jast'
+import { Article, Parent, TagHavers } from 'jjast'
 import { all } from '../all'
 import { J, Node, Root } from '../types'
 

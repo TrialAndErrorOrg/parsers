@@ -1,4 +1,4 @@
-import { List } from 'jast'
+import { List } from 'jjast'
 import { all } from 'jast-util-to-texast'
 import { J } from '../types'
 

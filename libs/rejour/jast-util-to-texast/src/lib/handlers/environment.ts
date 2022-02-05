@@ -1,4 +1,4 @@
-import { isElement } from 'jast'
+import { isElement } from 'jjast'
 import { CommandArg, CommandArgOpt, EnvironmentContent } from 'texast'
 import { all } from '../all'
 import { J, Parents, TagName, Node } from '../types'

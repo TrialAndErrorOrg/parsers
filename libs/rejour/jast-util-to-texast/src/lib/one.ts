@@ -1,4 +1,4 @@
-import { Parent } from 'jast'
+import { Parent } from 'jjast'
 import { all } from './all'
 import { Handle, J, TexastContent, Node, Element } from './types'
 import { own } from './util/own'

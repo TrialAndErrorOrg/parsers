@@ -15,6 +15,7 @@ import { tableWrap } from './tableWrap'
 import { table } from './table'
 import { tr } from './tr'
 import { td } from './td'
+import { refList } from './refList'
 export * from './italic'
 
 export const handlers = {
@@ -43,6 +44,9 @@ export const handlers = {
   table,
   tr,
   td,
+  back: all,
+
+  refList: refList,
 
   abbrevJournaltitle: ignore,
   abbrev: ignore,
@@ -75,7 +79,6 @@ export const handlers = {
   awardGroup: ignore,
   awardId: ignore,
   awardName: ignore,
-  back: ignore,
   bio: ignore,
   blockAlternatives: ignore,
   bold: command,
@@ -243,7 +246,6 @@ export const handlers = {
   questionWrap: ignore,
   rb: ignore,
   refCount: ignore,
-  refList: ignore,
   ref: ignore,
   relatedArticle: ignore,
   relatedObject: ignore,

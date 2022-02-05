@@ -41,5 +41,5 @@ export function table(j: J, table: Table) {
   const contents = all(j, table)
   contents.unshift(colAlignArg)
 
-  return j(table, 'environment', { name: 'tabular' }, contents)
+  return { type: 'environment', name: 'tabular', children: contents }
 }

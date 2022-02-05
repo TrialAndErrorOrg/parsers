@@ -36,6 +36,7 @@ export interface Options {
   documentClass?: string
   topSection?: number
   italics?: 'emph' | 'textit'
+  bibname?: string
 }
 
 export type Handle = (
@@ -61,6 +62,7 @@ export interface Context {
   italics: string
   documentClass: string
   sectionDepth: number
+  bibname: string
 }
 
 export type JWithProps = (

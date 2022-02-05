@@ -2591,6 +2591,11 @@
               ]
             }
           ]
+        },
+        {
+          "type": "environment",
+          "name": "filecontents",
+          "children": []
         }
       ]
     }

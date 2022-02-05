@@ -88,6 +88,7 @@ export function toTexast(
       italics: options.italics || 'emph',
       sectionDepth: options.topSection || 1,
       documentClass: options.documentClass || 'article',
+      bibname: options.bibname || 'bibliography',
     } as Context
   )
 

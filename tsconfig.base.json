@@ -28,6 +28,7 @@
       "ast-stringify": ["libs/ast-stringify/src/index.ts"],
       "docx-parse": ["libs/docx-parse/src/index.ts"],
       "jast-stringify": ["libs/rejour/jast-stringify/src/index.ts"],
+      "jast-util-is-element": ["libs/rejour/jast-util-is-element/src/index.ts"],
       "jast-util-to-texast": ["libs/rejour/jast-util-to-texast/src/index.ts"],
       "jastscript": ["libs/rejour/jastscript/src/index.ts"],
       "jjast": ["libs/rejour/jjast/src/index.ts"],

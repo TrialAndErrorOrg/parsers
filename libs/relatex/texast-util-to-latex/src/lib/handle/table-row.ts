@@ -6,6 +6,5 @@ export const tableRow: BasicHandle = (
   node: TableRow,
   options: Options = {}
 ) => {
-  console.log(node)
   return `${toLatex(node.children, options)}\n`
 }

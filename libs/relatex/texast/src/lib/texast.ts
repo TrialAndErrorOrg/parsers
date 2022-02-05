@@ -34,6 +34,9 @@ export type TexastContent =
   | CommandArg
   | ListContent
   | Text
+  | Comment
+  | TabularContent
+  | TableRowContent
 
 export type TopLevelDocumentContent =
   | Environment
@@ -47,12 +50,9 @@ export type PreambleContent = Command | Comment
 
 export type AlignmentContent = MathEnvironmentAligned | TabularContent
 
-export type TabularContent =
-  | AlignmentTab
-  | InlineMath
-  | Command
-  | Linebreak
-  | Text
+export type TabularContent = Linebreak | TableRow
+
+export type TableRowContent = TableCell | AlignmentTab
 
 export type TopLevelMathContent = MathContainer | InlineMath | DisplayMath
 
@@ -114,7 +114,7 @@ export interface Command extends Parent {
 export interface CommandArg extends Parent {
   type: 'commandArg'
   optional?: boolean
-  children: CommandContent[] | MathContent[]
+  children: CommandContent[] | MathContent[] | ParagraphContent[]
 }
 export const isCommandArg = (node: Root | TexastContent): node is CommandArg =>
   node.type === 'commandArg'
@@ -235,11 +235,19 @@ export interface Tabular extends Environment<TabularContent> {
   name: 'tabular'
   package?: 'plain' | 'tabularx' | 'tabulary' | 'tabu'
 }
+export interface TableRow extends UnistParent {
+  type: 'tableRow'
+  children: TableRowContent[]
+}
+export interface TableCell extends UnistParent {
+  type: 'tableCell'
+  children: ParagraphContent[]
+}
 
 export interface List extends Environment<ListItem> {
   name: 'itemize' | 'enumerate'
 }
-export interface ListItem extends Parent {
+export interface ListItem extends UnistParent {
   type: 'listItem'
   children: ParagraphContent[]
 }

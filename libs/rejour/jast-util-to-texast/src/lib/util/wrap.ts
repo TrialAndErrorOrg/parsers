@@ -51,10 +51,6 @@ export function wrapNeeded(nodes: Array<TexastContent>): boolean {
 
 /**
  * Wrap all runs of mdast phrasing content in `paragraph` nodes.
- *
- * @param {Array.TexastContent>} nodes
- * @param {(nodes: Array.TexastParagraphContent>) =>TexastContent|Array.TexastContent>} onphrasing
- * @param {(node:TexastContent) =>TexastContent} [onnonphrasing]
  */
 function runs(
   nodes: Array<TexastContent>,
@@ -64,14 +60,10 @@ function runs(
   onnonphrasing?: (node: TexastContent) => TexastContent
 ) {
   const nonphrasing = onnonphrasing || identity
-  /** @type {Array.TexastContent>} */
   const flattened: Array<TexastContent> = flatten(nodes)
-  /** @type {Array.TexastContent>} */
   let result: Array<TexastContent> = []
   let index = -1
-  /** @type {Array.TexastParagraphContent>|undefined} */
   let queue: Array<TexastParagraphContent> | undefined
-  /** @type TexastContent} */
   let node: TexastContent
 
   while (++index < flattened.length) {

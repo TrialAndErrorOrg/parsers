@@ -91,6 +91,7 @@ export type {
   Parent,
   Root,
   Element,
+  Content,
   TexastLiteral,
   TexastContent,
   TexastParent,

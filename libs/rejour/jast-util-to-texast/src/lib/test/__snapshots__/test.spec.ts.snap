@@ -28,9 +28,7 @@ We wanted to design a single-case experiment to test whether classical condition
 
 Single-case experiments are increasingly popular in the behavioral sciences. Due to their flexibility, single-case designs can be customized to test a variety of experimental hypotheses. We were interested in using a single-case experimental approach to test whether pain thresholds can be influenced by Pavlovian classical conditioning. Following the example of earlier studies into this topic, we planned to measure whether participants would more frequently report specific electrocutaneous stimuli as painful when they were presented with specific vibrotactile stimuli that had previously been associated with painful electrocutaneous stimuli. First, we decided on a mean difference effect size measure derived from the Sensation and Pain Rating Scale ratings for the electrocutaneous stimuli provided by the participants. Next, we discussed several possible single-case designs and evaluated their benefits and shortcomings. Then, we ran pilot tests with a few participants based on the possible single-case designs. We also conducted a simulation study to estimate the power of a randomization test to test our hypothesis using different values for effect size, number of participants, and number of measurements. Finally, we decided on a sequentially replicated AB phase design with 30 participants based on the results from the pilot tests and the power study. We plan to implement this single-case design in a future experiment to test our hypothesis.
 
-\\\\textbf{Keywords
-
-}: single-case, classical conditioning, pain, randomization test, statistical power.
+\\\\textbf{Keywords}: single-case, classical conditioning, pain, randomization test, statistical power.
 
 \\\\section{Purpose}
 
@@ -192,6 +190,18 @@ The simulations were run on supercomputer nodes at the Flemish Supercomputer Cen
 
 The results from the power study () revealed that due to the relatively small effect sizes and restricted number of measurements, the number of participants need to be high to achieve 80% power. If we restrict the number of measurements to 30, which allows sufficient acquisition trials for learning and reinforcement within 30 minutes, 30 participants result in sufficient power even with a moderate effect size.
 
+
+  \\\\begin{table}
+
+  \\\\label{Table 1}\\\\caption{}
+  \\\\begin{tabular}{}
+
+  
+
+\\\\end{tabular}
+
+
+\\\\end{table}
 Based on these results, we decided to run the final set of pilot tests with 30 measurements. We decided on six training trials (two trials for each type of CS) before the baseline phase, 24 acquisition trials between the baseline and test phases, and additionally one acquisition trial pair for reinforcement after two test trial pairs during the test phase. With a minimum of five measurements in the baseline phase, and a minimum of 15 measurements in the test phase, this design allows for 11 possible randomizations. Depending on the number of measurements in the test phase which will vary based on the test phase start point selected, the experiment could theoretically consist of 104 to 114 trials. This is the design we intend to follow in the final experiment with 30 participants ().
 
 \\\\subsection{Pilot Tests}
@@ -231,6 +241,30 @@ The data and R code used in this study are openly available on Open Science Foun
 \\\\section{Appendix} 
 
 
+  \\\\begin{table}
+
+  \\\\label{Table 2}\\\\caption{}
+  \\\\begin{tabular}{}
+
+  
+
+\\\\end{tabular}
+
+
+\\\\end{table}
+
+  \\\\begin{table}
+
+  \\\\label{Table 3}\\\\caption{}
+  \\\\begin{tabular}{}
+
+  
+
+\\\\end{tabular}
+
+
+\\\\end{table}
+
 
 \\\\end{document}
 "
@@ -261,8 +295,4 @@ exports[`parses correctly for root should match snapshot 1`] = `
 "
 `;
 
-exports[`parses correctly for title should match snapshot 1`] = `
-"\\\\section{A fancy title
-
-}"
-`;
+exports[`parses correctly for title should match snapshot 1`] = `"\\\\section{A fancy title}"`;

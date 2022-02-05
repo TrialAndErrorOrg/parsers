@@ -61,16 +61,7 @@ export function environment(j: J, node: Parents) {
     )
 
   return j(node, 'environment', { name: envName }, [
-    wrapCommandArg(
-      j,
-      { type: 'element', tagName: 'p', properties: {}, children: [things.opt] },
-      true
-    ),
-    wrapCommandArg(j, {
-      type: 'element',
-      tagName: 'p',
-      properties: {},
-      children: things.req,
-    }),
+    wrapCommandArg(j, [things.opt], true),
+    wrapCommandArg(j, things.req),
   ])
 }

@@ -1,8 +1,9 @@
 import { CommandArg, CommandArgOpt } from 'texast'
 import { all } from '../all'
 import { one } from '../one'
-import { J, Node, Parents, Root, TagName, Text } from '../types'
+import { J, Node, Parent, Parents, Root, TagName, Text } from '../types'
 import { wrap } from '../util/wrap'
+import { wrapCommandArg } from '../util/wrap-command-arg'
 
 const typeCommandMap: {
   [key: string]: {
@@ -19,7 +20,7 @@ const typeCommandMap: {
   bold: { name: 'textbf' },
 }
 
-export function command(j: J, node: Parents) {
+export function command(j: J, node: Parents, parent: Parent) {
   // if (!typeCommandMap[node.type]) {
   //   return j(node, 'paragraph', all(j, node))
   // }
@@ -30,21 +31,17 @@ export function command(j: J, node: Parents) {
   if (mapEntry?.empty) {
     return j(node, 'command', { name: commandName }, [])
   }
-  const firstCommandArg = j(
-    node,
-    'commandArg',
-    { optional: false },
-    wrap(
-      node?.children
-        // @ts-ignore dude just chill
-        ?.filter(
-          (child: Node) =>
-            mapEntry?.first?.includes(
-              // @ts-ignore dude just chill
-              child.tagName
-            ) || child?.type === 'text'
-        )
-    )
+  const firstCommandArg = wrapCommandArg(
+    j,
+    node?.children
+      // @ts-ignore dude just chill
+      ?.filter(
+        (child: Node) =>
+          mapEntry?.first?.includes(
+            // @ts-ignore dude just chill
+            child.tagName
+          ) || child?.type === 'text'
+      )
   )
 
   const requiredCommandArgs: CommandArg[] = node?.children
@@ -55,17 +52,14 @@ export function command(j: J, node: Parents) {
         child.tagName
       )
     )
-    .map((child: Node) => {
-      console.log(child)
-      return j(child, 'commandArg', { optional: false }, all(j, child))
+    .map((child: any) => {
+      return wrapCommandArg(j, [child])
     })
 
   const optionalCommandArgs: CommandArgOpt[] = node?.children
     // @ts-ignore dude just chill
     ?.filter((child: Parents) => mapEntry?.optional?.includes(child.tagName))
-    .map((child: Node) =>
-      j(child, 'commandArg', { optional: true }, all(j, child))
-    )
+    .map((child: any) => wrapCommandArg(j, [child], true))
 
   return j(node, 'command', { name: commandName }, [
     firstCommandArg,

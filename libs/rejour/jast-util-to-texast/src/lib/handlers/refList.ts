@@ -98,25 +98,27 @@ export function refList(j: J, list: RefList): Environment {
   const csl: CSL[] = list.children.reduce(
     (acc: CSL[], ref: RefList['children'][number]) => {
       if (!(isElement(ref) && ref.tagName === 'ref')) return acc
-      console.log(ref)
       const citation = ref.children[0]
       if (!(isElement(citation) && isElementCitation(citation))) return acc
 
-      console.log(citation)
+      const issued: { [key: string]: string | undefined } = {
+        year: undefined,
+        month: undefined,
+        day: undefined,
+      }
       const entry = citation.children.reduce(
         // @ts-expect-error
         (acc: CSL, curr: ElementCitation['children'][number]) => {
           if (!isElement(curr)) return acc
           switch (curr.tagName) {
             case 'day':
+              issued.day = toString(curr)
+              return acc
             case 'month':
+              issued.month = toString(curr)
+              return acc
             case 'year': {
-              try {
-                // @ts-expect-error
-                acc?.issued?.[0]?.['date-parts']?.push(toString(curr))
-              } catch (e) {
-                console.error(e)
-              }
+              issued.year = toString(curr)
               return acc
             }
             case 'personGroup': {
@@ -188,7 +190,7 @@ export function refList(j: J, list: RefList): Environment {
           }
         },
         {
-          issued: [{ 'date-parts': [] }],
+          issued: { 'date-parts': [] },
           id: ref?.properties?.id,
           'citation-key': ref.properties?.id,
           type:
@@ -198,8 +200,13 @@ export function refList(j: J, list: RefList): Environment {
           author: [],
         }
       )
-      console.log(entry)
-      console.log(acc)
+
+      //@ts-expect-error shhh
+      entry.issued = {
+        'date-parts': [issued.year, issued.month, issued.day]
+          .filter((part) => !!part)
+          .map((part) => (part?.length === 1 ? `0${part}` : part)),
+      }
       // @ts-expect-error yeah i know but im lazy
       acc.push(entry)
       return acc

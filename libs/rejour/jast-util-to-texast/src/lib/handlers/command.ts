@@ -12,12 +12,17 @@ const typeCommandMap: {
     required?: TagName[][]
     optional?: TagName[]
     empty?: boolean
+    needsNewline?: boolean
   }
 } = {
-  title: { name: 'section' },
-  'article-title': {},
-  listItem: {},
+  title: { name: 'section', needsNewline: true },
+  'article-title': { name: 'title', needsNewline: true },
   bold: { name: 'textbf' },
+  caption: { name: 'caption', first: ['title'], needsNewline: true },
+  label: { name: 'label', needsNewline: true },
+  documentclass: { needsNewline: true },
+  usepackage: { needsNewline: true },
+  author: { needsNewline: true },
 }
 
 export function command(j: J, node: Parents, parent: Parent) {
@@ -65,5 +70,6 @@ export function command(j: J, node: Parents, parent: Parent) {
     firstCommandArg,
     ...requiredCommandArgs,
     ...optionalCommandArgs,
+    ...(mapEntry.needsNewline ? [{ type: 'text', value: '\n' } as Text] : []),
   ])
 }

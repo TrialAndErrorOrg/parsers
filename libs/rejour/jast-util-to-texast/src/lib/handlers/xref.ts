@@ -37,9 +37,33 @@ export function xref(j: J, node: Xref) {
     'table-fn': 'ref-fn',
   }
 
+  // TODO: [rejour-rehype/citations] make citation parsing less hardcoded
+  // Maybe add a new type to texast: citation.
+
+  // TODO: [rejour-rehype/citations] make checks for the kind of citations used.
   switch (node.properties.refType) {
     case 'bibr': {
-      return j(node, 'command', { name: 'cite' }, [
+      return j(node, 'command', { name: 'autocite' }, [
+        {
+          type: 'commandArg',
+          children: [
+            {
+              type: 'text',
+              value: node.children
+                .map((node) => {
+                  //@ts-ignore
+                  const n = node.value.replace(/[\[\], ]/g, '')
+                  return n ? `bib${n}` : undefined
+                })
+                .filter((n) => !!n)
+                .join(','),
+            },
+          ],
+        },
+      ])
+    }
+    case 'fig': {
+      return j(node, 'command', { name: 'autocite' }, [
         {
           type: 'commandArg',
           children: [

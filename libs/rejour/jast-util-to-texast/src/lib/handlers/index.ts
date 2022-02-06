@@ -17,6 +17,10 @@ import { tr } from './tr'
 import { td } from './td'
 import { refList } from './refList'
 import { xref } from './xref'
+import { fig } from './fig'
+import { graphic } from './graphic'
+import { extLink } from './extLink'
+import { p } from './p'
 export * from './italic'
 
 export const handlers = {
@@ -33,11 +37,11 @@ export const handlers = {
 
   articleTitle: command,
 
-  p: wrapChildren,
+  p,
 
   list,
   listItem,
-  title: command,
+  title: all,
   sec,
 
   label: command,
@@ -46,10 +50,15 @@ export const handlers = {
   table,
   tr,
   td,
+  fig,
+  inlineGraphic: graphic,
+  graphic,
   back: all,
 
   refList: refList,
   tbody: all,
+
+  extLink,
 
   abbrevJournaltitle: ignore,
   abbrev: ignore,
@@ -146,11 +155,9 @@ export const handlers = {
   event: ignore,
   explanation: ignore,
   extendedBy: ignore,
-  extLink: ignore,
   fax: ignore,
   figCount: ignore,
   figGroup: ignore,
-  fig: ignore,
   fixedCase: ignore,
   floatsGroup: ignore,
   fnGroup: ignore,
@@ -165,13 +172,11 @@ export const handlers = {
   glyphData: ignore,
   glyphRef: ignore,
   gov: ignore,
-  graphic: ignore,
   history: ignore,
   hr: ignore,
   indexTermrangeend: ignore,
   indexTerm: ignore,
   inlineFormula: ignore,
-  inlineGraphic: ignore,
   inlineMedia: ignore,
   inlineSupplementarymaterial: ignore,
   institutionId: ignore,

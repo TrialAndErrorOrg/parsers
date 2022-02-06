@@ -57,6 +57,10 @@
                   ]
                 },
                 {
+                  "type": "text",
+                  "value": "\n"
+                },
+                {
                   "type": "command",
                   "name": "addbibresource",
                   "children": [
@@ -75,6 +79,26 @@
                 {
                   "type": "text",
                   "value": "\n"
+                }
+              ]
+            },
+            {
+              "type": "environment",
+              "name": "filecontents",
+              "children": [
+                {
+                  "type": "commandArg",
+                  "optional": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "bibliography.bib"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "@article{bib1,\n      title = {Evidence for a central component of post-injury pain hypersensitivity},\n      author = {Woolf, Clifford J },\n      number = {5944},\n      volume = {306},\n      url = {},\n      doi = {10.1038/306686a0},\n      publisher = {},\n      year = {1983-12},\n      pages = {686-688},\n      journal = {Nature},\n    }\n\n\n\n\n@article{bib2,\n      title = {Central sensitization: Implications for the diagnosis and treatment of pain},\n      author = {Woolf, Clifford J },\n      number = {3 Suppl},\n      volume = {152},\n      url = {},\n      doi = {10.1016/j.pain.2010.09.030},\n      publisher = {},\n      year = {2011-03},\n      pages = {S2-S15},\n      journal = {Pain},\n    }\n\n\n\n\n@article{bib3,\n      title = {Fear-avoidance and its consequences in chronic musculoskeletal pain: A state of the art},\n      author = {Vlaeyen, Johan W.S.  and Linton, Steven J. },\n      number = {3},\n      volume = {85},\n      url = {},\n      doi = {10.1016/s0304-3959(99)00242-0},\n      publisher = {},\n      year = {2000-04},\n      pages = {317-332},\n      journal = {Pain},\n    }\n\n\n\n\n@article{bib4,\n      title = {Fear-avoidance model of chronic musculoskeletal pain: 12 years on},\n      author = {Vlaeyen, Johan W S  and Linton, Steven J },\n      number = {6},\n      volume = {153},\n      url = {},\n      doi = {10.1016/j.pain.2011.12.009},\n      publisher = {},\n      year = {2012-06},\n      pages = {1144-1147},\n      journal = {Pain},\n    }\n\n\n\n\n@article{bib5,\n      title = {Beyond nociception: The imprecision hypothesis of chronic pain},\n      author = {Moseley, G Lorimer  and Vlaeyen, Johan W S },\n      number = {1},\n      volume = {156},\n      url = {},\n      doi = {10.1016/j.pain.0000000000000014},\n      publisher = {},\n      year = {2015-01},\n      pages = {35-38},\n      journal = {Pain},\n    }\n\n\n\n\n@article{bib6,\n      title = {Pain by association? Experimental modulation of human pain thresholds using classical conditioning},\n      author = {Madden, Victoria J.  and Bellan, Valeria  and Russek, Leslie N.  and Camfferman, Danny  and Vlaeyen, Johan W.S.  and Moseley, G. Lorimer },\n      number = {10},\n      volume = {17},\n      url = {},\n      doi = {10.1016/j.jpain.2016.06.012},\n      publisher = {},\n      year = {2016},\n      pages = {1105-1115},\n      journal = {Journal of Pain},\n    }\n\n\n\n\n@article{bib7,\n      title = {Modulating pain thresholds through classical conditioning},\n      author = {Traxler, Juliane  and Madden, Victoria J.  and Moseley, G. Lorimer  and Vlaeyen, Johan W.S. },\n      number = {3},\n      volume = {2019},\n      url = {},\n      doi = {10.7717/peerj.6486},\n      publisher = {},\n      year = {2019},\n      pages = {1-20},\n      journal = {PeerJ},\n    }\n\n\n\n\n@book{bib8,\n      title = {Lectures on conditioned reflexes: Twenty-five years of objective study of the higher nervous activity (behaviour) of animals.},\n      author = {Pavlov, Ivan Petrovitch },\n      number = {},\n      volume = {},\n      url = {},\n      doi = {10.1037/11081-000},\n      publisher = {Liverwright Publishing Corporation},\n      year = {1928},\n      pages = {},\n      journal = {},\n    }\n\n\n\n\n@book{bib9,\n      title = {Single case experimental designs: Strategies for studying behavior change},\n      author = {Barlow, D H  and Nock, M K  and Hersen, M },\n      number = {},\n      volume = {},\n      url = {},\n      doi = {},\n      publisher = {Pearson/Allyn and Bacon},\n      year = {2009},\n      pages = {},\n      journal = {},\n    }\n\n\n\n\n@book{bib10,\n      title = {Single-case research designs: Methods for clinical and applied settings},\n      author = {Kazdin, Alan E },\n      number = {},\n      volume = {},\n      url = {},\n      doi = {},\n      publisher = {Oxford University Press},\n      year = {2011},\n      pages = {},\n      journal = {},\n    }\n\n\n\n\n@article{bib11,\n      title = {Randomization tests for single-case experiments: State of the art, state of the science, and state of the application},\n      author = {Heyvaert, Mieke  and Onghena, Patrick },\n      number = {1},\n      volume = {3},\n      url = {},\n      doi = {10.1016/j.jcbs.2013.10.002},\n      publisher = {},\n      year = {2014},\n      pages = {51-64},\n      journal = {Journal of Contextual Behavioral Science},\n    }\n\n\n\n\n@article{bib12,\n      title = {From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research},\n      author = {Vlaeyen, Johan W S  and Wicksell, Rikard K  and Simons, Laura E  and Gentili, Charlotte  and De, Tamal Kumar  and Tate, Robyn L  and Vohra, Sunita  and Punja, Salima  and Linton, Steven J  and Sniehotta, Falko F  and Onghena, Patrick },\n      number = {},\n      volume = {70},\n      url = {},\n      doi = {10.1007/s40732-020-00402-5},\n      publisher = {},\n      year = {2020},\n      pages = {659–670},\n      journal = {The Psychological Record},\n    }\n\n\n\n\n@article{bib13,\n      title = {Enhancing the scientific credibility of single-case intervention research: Randomization to the rescue},\n      author = {Kratochwill, T. R.  and Levin, Joel R },\n      number = {2},\n      volume = {15},\n      url = {},\n      doi = {10.1037/a0017736},\n      publisher = {},\n      year = {2010},\n      pages = {124-144},\n      journal = {Psychological Methods},\n    }\n\n\n\n\n@article{bib14,\n      title = {Randomization tests for one-subject operant experiments},\n      author = {Edgington, Eugene S },\n      number = {1},\n      volume = {90},\n      url = {},\n      doi = {10.1080/00223980.1975.9923926},\n      publisher = {},\n      year = {1975-05-01},\n      pages = {57},\n      journal = {Journal of Psychology},\n    }\n\n\n\n\n@article{bib15,\n      title = {The use of single-subject research to identify evidence-based practice in special education},\n      author = {Horner, Robert H.  and Carr, Edward G.  and Halle, James  and Mcgee, Gail  and Odom, Samuel  and Wolery, Mark },\n      number = {2},\n      volume = {71},\n      url = {},\n      doi = {10.1177/001440290507100203},\n      publisher = {},\n      year = {2005},\n      pages = {165-179},\n      journal = {Exceptional Children},\n    }\n\n\n\n\n@article{bib16,\n      title = {The new person-specific paradigm in psychology},\n      author = {Molenaar, Peter C M  and Campbell, Cynthia G },\n      number = {2},\n      volume = {18},\n      url = {},\n      doi = {10.1111/j.1467-8721.2009.01619.x},\n      publisher = {},\n      year = {2009-04-01},\n      pages = {112-117},\n      journal = {Current Directions in Psychological Science},\n    }\n\n\n\n\n@article{bib17,\n      title = {Lack of group-to-individual generalizability is a threat to human subjects research},\n      author = {Fisher, Aaron J  and Medaglia, John D  and Jeronimus, Bertus F },\n      number = {27},\n      volume = {115},\n      url = {},\n      doi = {10.1073/pnas.1711978115},\n      publisher = {},\n      year = {2018-07-03},\n      pages = {E6106 LP - E6115},\n      journal = {Proceedings of the National Academy of Sciences},\n    }\n\n\n\n\n@article{bib18,\n      title = {Analyzing single-case data: The power of randomization tests},\n      author = {Ferron, John  and Ware, William },\n      number = {2},\n      volume = {63},\n      url = {},\n      doi = {},\n      publisher = {},\n      year = {1995},\n      pages = {167-178},\n      journal = {The Journal of Experimental Education},\n    }\n\n\n\n\n@article{bib19,\n      title = {The power of randomization tests for single-case phase designs},\n      author = {Ferron, John  and Onghena, Patrick },\n      number = {3},\n      volume = {64},\n      url = {},\n      doi = {10.1080/00220973.1996.9943805},\n      publisher = {},\n      year = {1996},\n      pages = {231-239},\n      journal = {Journal of Experimental Education},\n    }\n\n\n\n\n@article{bib20,\n      title = {Autocorrelation in single-subject research: A counterargument to the myth of no autocorrelation.},\n      author = {Busk, Patricia L  and Marascuilo, Leonard A },\n      number = {3},\n      volume = {10},\n      url = {},\n      doi = {},\n      publisher = {},\n      year = {1988},\n      pages = {229-242},\n      journal = {Behavioral Assessment},\n    }\n\n\n\n\n@article{bib21,\n      title = {Violations of assumptions in school-based single-case data: Implications for the selection and interpretation of effect sizes},\n      author = {Solomon, Benjamin George },\n      number = {4},\n      volume = {38},\n      url = {},\n      doi = {10.1177/0145445513510931},\n      publisher = {},\n      year = {2014},\n      pages = {477-496},\n      journal = {Behavior Modification},\n    }\n\n\n\n\n@article{bib22,\n      title = {Using randomization techniques to analyse behavioural data},\n      author = {Adams, Dean C  and Anthony, Carl D },\n      number = {4},\n      volume = {51},\n      url = {},\n      doi = {https://doi.org/10.1006/anbe.1996.0077},\n      publisher = {},\n      year = {1996},\n      pages = {733-738},\n      journal = {Animal Behaviour},\n    }\n\n\n\n\n@article{bib23,\n      title = {Single-case experimental designs: A systematic review of published research and current standards},\n      author = {Smith, Justin D. },\n      number = {4},\n      volume = {17},\n      url = {},\n      doi = {10.1037/a0029312},\n      publisher = {},\n      year = {2012},\n      pages = {510-550},\n      journal = {Psychological Methods},\n    }\n\n\n\n\n@article{bib24,\n      title = {When is a picture worth a thousand p values? A comparison of visual and quantitative methods to analyze single subject data},\n      author = {Ottenbacher, Kenneth J },\n      number = {4},\n      volume = {23},\n      url = {},\n      doi = {10.1177/002246699002300407},\n      publisher = {},\n      year = {1990-01-01},\n      pages = {436-449},\n      journal = {The Journal of Special Education},\n    }\n\n\n\n\n@article{bib25,\n      title = {Visual analysis of single-case time series: Effects of variability, serial dependence, and magnitude of intervention effects},\n      author = {Matyas, T A  and Greenwood, K M },\n      number = {3},\n      volume = {23},\n      url = {},\n      doi = {10.1901/jaba.1990.23-341},\n      publisher = {},\n      year = {1990},\n      pages = {341-351},\n      journal = {Journal of applied behavior analysis},\n    }\n\n\n\n\n@article{bib26,\n      title = {Single-case design technical documentation},\n      author = {Kratochwill, T. R.  and Hitchcock, J  and Horner, Robert H  and Levin, J R  and Odom, S L  and Rindskopf, D M  and Shadish, W R },\n      number = {},\n      volume = {},\n      url = {},\n      doi = {},\n      publisher = {},\n      year = {2010},\n      pages = {},\n      journal = {},\n    }\n\n\n\n\n@article{bib27,\n      title = {Analytical options for single-case experimental designs: Review and application to brain impairment},\n      author = {Manolov, Rumen  and Solanas, Antonio },\n      number = {1},\n      volume = {19},\n      url = {},\n      doi = {10.1017/BrImp.2017.17},\n      publisher = {},\n      year = {2018},\n      pages = {18-32},\n      journal = {Brain Impairment},\n    }\n\n\n\n\n@article{bib28,\n      title = {Recommendations for choosing single-case data analytical techniques},\n      author = {Manolov, Rumen  and Moeyaert, Mariola },\n      number = {1},\n      volume = {48},\n      url = {},\n      doi = {10.1016/j.beth.2016.04.008},\n      publisher = {},\n      year = {2017},\n      pages = {97-114},\n      journal = {Behavior Therapy},\n    }\n\n\n\n\n@book{bib29,\n      title = {Randomization tests},\n      author = {Edgington, Eugene S  and Onghena, Patrick },\n      number = {},\n      volume = {},\n      url = {},\n      doi = {},\n      publisher = {Chapman & Hall/CRC},\n      year = {2007},\n      pages = {},\n      journal = {},\n    }\n\n\n\n\n@article{bib30,\n      title = {A randomization test wrapper for synthesizing single-case experiments using multilevel models: A Monte Carlo simulation study},\n      author = {Michiels, Bart  and Tanious, René  and De, Tamal Kumar  and Onghena, Patrick },\n      number = {2},\n      volume = {52},\n      url = {},\n      doi = {10.3758/s13428-019-01266-6},\n      publisher = {},\n      year = {2020},\n      pages = {654-666},\n      journal = {Behavior Research Methods},\n    }\n\n\n\n\n@article{bib31,\n      title = {Analysis of single-case data: Randomisation tests for measures of effect size},\n      author = {Heyvaert, Mieke  and Onghena, Patrick },\n      number = {3-4},\n      volume = {24},\n      url = {},\n      doi = {10.1080/09602011.2013.818564},\n      publisher = {},\n      year = {2014},\n      pages = {507-527},\n      journal = {Neuropsychological Rehabilitation},\n    }\n\n\n\n\n@book{bib32,\n      title = {Statistical power analysis for the behavioral sciences},\n      author = {Cohen, Jacob },\n      number = {},\n      volume = {},\n      url = {},\n      doi = {10.4324/9780203771587},\n      publisher = {Routledge},\n      year = {1988},\n      pages = {},\n      journal = {},\n    }\n\n\n\n\n@article{bib33,\n      title = {CONSORT extension for reporting N-of-1 trials (CENT) 2015 statement},\n      author = {Vohra, Sunita  and Shamseer, Larissa  and Sampson, Margaret  and Bukutu, Cecilia  and Schmid, Christopher H.  and Tate, Robyn  and Nikles, Jane  and Zucker, Deborah R.  and Kravitz, Richard  and Guyatt, Gordon  and Altman, Douglas G.  and Moher, David },\n      number = {},\n      volume = {350},\n      url = {},\n      doi = {10.1136/bmj.h1738},\n      publisher = {},\n      year = {2015},\n      pages = {h1738},\n      journal = {BMJ (Clinical research ed.)},\n    }\n\n\n\n\n@article{bib34,\n      title = {Statistical methods in psychology journals: Guidelines and explanations},\n      author = {Willkinson, Leland },\n      number = {8},\n      volume = {54},\n      url = {},\n      doi = {10.1037/0003-066X.54.8.594},\n      publisher = {},\n      year = {1999},\n      pages = {594-604},\n      journal = {American Psychologist},\n    }\n\n\n\n\n@article{bib35,\n      title = {Randomization tests for extensions and variations of ABAB single-case experimental designs: A rejoinder},\n      author = {Onghena, Patrick },\n      number = {2},\n      volume = {14},\n      url = {},\n      doi = {},\n      publisher = {},\n      year = {1992},\n      pages = {153-171},\n      journal = {Behavioral Assessment},\n    }\n\n\n\n\n@article{bib36,\n      title = {The conditional power of randomization tests for single-case effect sizes in designs with randomized treatment order: A Monte Carlo simulation study},\n      author = {Michiels, Bart  and Heyvaert, Mieke  and Onghena, Patrick },\n      number = {2},\n      volume = {50},\n      url = {},\n      doi = {10.3758/s13428-017-0885-7},\n      publisher = {},\n      year = {2018},\n      pages = {557-575},\n      journal = {Behavior Research Methods},\n    }\n\n\n\n\n@article{bib37,\n      title = {Power of a randomization test in a single case multiple baseline AB design},\n      author = {Bouwmeester, Samantha  and Jongerling, Joran },\n      number = {2},\n      volume = {15},\n      url = {},\n      doi = {10.1371/journal.pone.0228355},\n      publisher = {},\n      year = {2020},\n      pages = {1-21},\n      journal = {PLoS ONE},\n    }\n\n\n\n\n@article{bib38,\n      title = {Statistical power of randomization tests used with multiple-baseline designs},\n      author = {Ferron, John  and Sentovich, Chris },\n      number = {2},\n      volume = {70},\n      url = {},\n      doi = {10.1080/00220970209599504},\n      publisher = {},\n      year = {2002},\n      pages = {165-178},\n      journal = {Journal of Experimental Education},\n    }\n\n\n\n\n@article{bib39,\n      title = {Handling missing data in randomization tests for single-case experiments: A simulation study},\n      author = {De, Tamal Kumar  and Michiels, Bart  and Tanious, René  and Onghena, Patrick },\n      number = {3},\n      volume = {52},\n      url = {},\n      doi = {10.3758/s13428-019-01320-3},\n      publisher = {},\n      year = {2020},\n      pages = {1355-1370},\n      journal = {Behavior Research Methods},\n    }\n\n\n\n\n@article{bib40,\n      title = {Was that painful or nonpainful? The Sensation and Pain Rating Scale performs well in the experimental context},\n      author = {Madden, Victoria J.  and Kamerman, Peter R.  and Bellan, Valeria  and Catley, Mark J.  and Russek, Leslie N.  and Camfferman, Danny  and Moseley, G. Lorimer },\n      number = {4},\n      volume = {20},\n      url = {},\n      doi = {10.1016/j.jpain.2018.10.006},\n      publisher = {},\n      year = {2019},\n      pages = {472.e1-472.e12},\n      journal = {Journal of Pain},\n    }\n\n\n\n\n@article{bib41,\n      title = {Affect 4.0: A free software package for implementing psychological and psychophysiological experiments},\n      author = {Spruyt, Adriaan  and Clarysse, Jeroen  and Vansteenwegen, Debora  and Baeyens, Frank  and Hermans, Dirk },\n      number = {1},\n      volume = {57},\n      url = {},\n      doi = {10.1027/1618-3169/a000005},\n      publisher = {},\n      year = {2009},\n      pages = {36-45},\n      journal = {Experimental Psychology},\n    }\n\n\n\n\n@article{bib42,\n      title = {Tactor},\n      author = {},\n      number = {},\n      volume = {},\n      url = {},\n      doi = {},\n      publisher = {},\n      year = {},\n      pages = {},\n      journal = {http://www.dancerdesign.co.uk/tactor.htm},\n    }\n\n\n\n\n@article{bib43,\n      title = {DS7A High Voltage Constant Current Stimulator},\n      author = {},\n      number = {},\n      volume = {},\n      url = {},\n      doi = {},\n      publisher = {},\n      year = {},\n      pages = {},\n      journal = {https://www.digitimer.com/product/human-neurophysiology/peripheral-stimulators/ds7a-ds7ah-hv-current-stimulator/},\n    }\n\n\n\n\n@article{bib44,\n      title = {Classical conditioning fails to elicit allodynia in an experimental study with healthy humans},\n      author = {Madden, Victoria J.  and Russek, Leslie N.  and Harvie, Daniel S.  and Vlaeyen, Johan W.S.  and Moseley, G. Lorimer },\n      number = {7},\n      volume = {18},\n      url = {},\n      doi = {10.1093/pm/pnw221},\n      publisher = {},\n      year = {2017},\n      pages = {1314-1325},\n      journal = {Pain Medicine},\n    }\n\n\n\n\n@inbook{bib45,\n      title = {Single‐case designs},\n      author = {Onghena, Patrick },\n      number = {},\n      volume = {4},\n      url = {},\n      doi = {10.1002/0470013192.bsa625},\n      publisher = {John Wiley & Sons, Ltd},\n      year = {2005-04-15},\n      pages = {1850-1854},\n      journal = {Encyclopedia of statistics in behavioral science},\n    }\n\n\n\n\n@article{bib46,\n      title = {Randomized single-case AB phase designs: Prospects and pitfalls},\n      author = {Michiels, Bart  and Onghena, Patrick },\n      number = {6},\n      volume = {51},\n      url = {},\n      doi = {10.3758/s13428-018-1084-x},\n      publisher = {},\n      year = {2019},\n      pages = {2454-2476},\n      journal = {Behavior Research Methods},\n    }\n\n\n\n\n@article{bib47,\n      title = {Shiny SCDA},\n      author = {De, Tamal Kumar  and Michiels, Bart  and Vlaeyen, Johan W S  and Onghena, Patrick },\n      number = {},\n      volume = {},\n      url = {},\n      doi = {},\n      publisher = {},\n      year = {2020},\n      pages = {},\n      journal = {},\n    }\n\n\n\n\n@article{bib48,\n      title = {Comparison of randomization-test procedures for single-case multiple-baseline designs},\n      author = {Levin, Joel R.  and Ferron, John M.  and Gafurov, Boris S. },\n      number = {5},\n      volume = {21},\n      url = {},\n      doi = {10.1080/17518423.2016.1197708},\n      publisher = {},\n      year = {2018},\n      pages = {290-311},\n      journal = {Developmental Neurorehabilitation},\n    }\n\n\n\n\n@article{bib49,\n      title = {Approximate randomization tests},\n      author = {Edgington, Eugene S },\n      number = {2},\n      volume = {72},\n      url = {},\n      doi = {10.1080/00223980.1969.10543491},\n      publisher = {},\n      year = {1969-07-01},\n      pages = {143-149},\n      journal = {The Journal of Psychology},\n    }\n\n\n\n\n@article{bib50,\n      title = {A simplified Monte Carlo significance test procedure},\n      author = {Hope, Adery C A },\n      number = {3},\n      volume = {30},\n      url = {},\n      doi = {},\n      publisher = {},\n      year = {1968},\n      pages = {582-598},\n      journal = {Journal of the Royal Statistical Society. Series B (Methodological)},\n    }\n\n"
                 }
               ]
             }
@@ -250,71 +274,14 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib1"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib2"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib3"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib4"
+                          "value": "bib1,bib2,bib3,bib4"
                         }
                       ]
                     }
@@ -326,7 +293,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -354,33 +321,14 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib6"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib7"
+                          "value": "bib6,bib7"
                         }
                       ]
                     }
@@ -392,7 +340,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -450,33 +398,14 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib9"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib10"
+                          "value": "bib9,bib10"
                         }
                       ]
                     }
@@ -488,7 +417,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -545,7 +474,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -573,33 +502,14 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib13"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib14"
+                          "value": "bib13,bib14"
                         }
                       ]
                     }
@@ -611,33 +521,14 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib13"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib15"
+                          "value": "bib13,bib15"
                         }
                       ]
                     }
@@ -679,7 +570,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -698,7 +589,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -717,33 +608,14 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib18"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib19"
+                          "value": "bib18,bib19"
                         }
                       ]
                     }
@@ -785,71 +657,14 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib20"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib21"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib22"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib23"
+                          "value": "bib20,bib21,bib22,bib23"
                         }
                       ]
                     }
@@ -861,90 +676,14 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib24"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib25"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib26"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib27"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib28"
+                          "value": "bib24,bib25,bib26,bib27,bib28"
                         }
                       ]
                     }
@@ -965,52 +704,14 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib14"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib22"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib11"
+                          "value": "bib14,bib22,bib11"
                         }
                       ]
                     }
@@ -1022,7 +723,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -1041,52 +742,14 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib30"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib31"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib11"
+                          "value": "bib30,bib31,bib11"
                         }
                       ]
                     }
@@ -1128,7 +791,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -1147,33 +810,14 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib33"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib34"
+                          "value": "bib33,bib34"
                         }
                       ]
                     }
@@ -1194,33 +838,14 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib35"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib18"
+                          "value": "bib35,bib18"
                         }
                       ]
                     }
@@ -1232,109 +857,14 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib19"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib18"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib36"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib37"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib38"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib39"
+                          "value": "bib19,bib18,bib36,bib37,bib38,bib39"
                         }
                       ]
                     }
@@ -1409,7 +939,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -1466,7 +996,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -1485,7 +1015,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -1504,7 +1034,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -1523,15 +1053,14 @@
                 },
                 {
                   "type": "command",
-                  "name": "ref",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
-                      "optional": false,
                       "children": [
                         {
                           "type": "text",
-                          "value": "Figure 1"
+                          "value": "bibFigure 1"
                         }
                       ]
                     }
@@ -1548,6 +1077,155 @@
               ]
             },
             {
+              "type": "environment",
+              "name": "figure",
+              "children": [
+                {
+                  "type": "command",
+                  "name": "includegraphics",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Other,+Figure+1.png"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "caption",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Arrangement of Tactors and Electrodes on the Back"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "(Adapted From Traxler et al. "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "autocite",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "bib7"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": ")"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "label",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Figure 1"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "type": "paragraph",
               "children": [
                 {
@@ -1556,7 +1234,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -1617,7 +1295,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -1816,33 +1494,14 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib44"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib40"
+                          "value": "bib44,bib40"
                         }
                       ]
                     }
@@ -1941,7 +1600,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -2020,7 +1679,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -2056,7 +1715,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -2202,33 +1861,14 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib46"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib18"
+                          "value": "bib46,bib18"
                         }
                       ]
                     }
@@ -2303,7 +1943,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -2331,33 +1971,14 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib9"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib10"
+                          "value": "bib9,bib10"
                         }
                       ]
                     }
@@ -2399,7 +2020,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -2638,7 +2259,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -2657,7 +2278,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -2915,7 +2536,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -2934,7 +2555,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -3078,7 +2699,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -3183,6 +2804,411 @@
               "children": [
                 {
                   "type": "command",
+                  "name": "caption",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Estimated "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "P"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "ower "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "S"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "imulated "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "U"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "sing "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "D"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "ifferent "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "V"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "alues for "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "E"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "ffect "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Si"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "ze, "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "N"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "umber of "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "M"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "easurements, and "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "N"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "umber of "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "P"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "articipants."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
                   "name": "label",
                   "children": [
                     {
@@ -3194,17 +3220,10 @@
                           "value": "Table 1"
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": "command",
-                  "name": "caption",
-                  "children": [
+                    },
                     {
-                      "type": "commandArg",
-                      "optional": false,
-                      "children": []
+                      "type": "text",
+                      "value": "\n"
                     }
                   ]
                 },
@@ -3217,7 +3236,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "c  c  c"
+                          "value": "c  c  c  c  c  c  c"
                         }
                       ]
                     },
@@ -5204,7 +5223,83 @@
                 },
                 {
                   "type": "command",
-                  "name": "ref",
+                  "name": "autocite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "bibFigure 2"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ")."
+                }
+              ]
+            },
+            {
+              "type": "environment",
+              "name": "figure",
+              "children": [
+                {
+                  "type": "command",
+                  "name": "includegraphics",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Other,+Figure+2.png"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "caption",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Final Design With 30 Measurements."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "label",
                   "children": [
                     {
                       "type": "commandArg",
@@ -5215,12 +5310,12 @@
                           "value": "Figure 2"
                         }
                       ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
                     }
                   ]
-                },
-                {
-                  "type": "text",
-                  "value": ")."
                 }
               ]
             },
@@ -5255,6 +5350,117 @@
               ]
             },
             {
+              "type": "environment",
+              "name": "figure",
+              "children": [
+                {
+                  "type": "command",
+                  "name": "includegraphics",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Other,+Figure+3.png"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "caption",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Plot of Observed Scores Obtained "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "From"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "the Initial Nine Participants in the Pilot Tests."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "label",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Figure 3"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
               "type": "paragraph",
               "children": [
                 {
@@ -5263,15 +5469,14 @@
                 },
                 {
                   "type": "command",
-                  "name": "ref",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
-                      "optional": false,
                       "children": [
                         {
                           "type": "text",
-                          "value": "Figure 4"
+                          "value": "bibFigure 4"
                         }
                       ]
                     }
@@ -5299,6 +5504,374 @@
                 {
                   "type": "text",
                   "value": "-value of 0.112. Hence, the null hypothesis of the RT could not be rejected at a 5% level of significance."
+                }
+              ]
+            },
+            {
+              "type": "environment",
+              "name": "figure",
+              "children": [
+                {
+                  "type": "command",
+                  "name": "includegraphics",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Other,+Figure+4.png"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "caption",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Plot of "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Observed Score"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "s "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "O"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "btained "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "F"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "rom"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "the "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "F"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "inal "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "F"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "our "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "P"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "articipants in the "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "P"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "ilot "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "T"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "ests."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "label",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Figure 4"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    }
+                  ]
                 }
               ]
             },
@@ -5386,7 +5959,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -5405,7 +5978,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -5503,33 +6076,14 @@
                 },
                 {
                   "type": "command",
-                  "name": "cite",
+                  "name": "autocite",
                   "children": [
                     {
                       "type": "commandArg",
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib49"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "command",
-                  "name": "cite",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "bib50"
+                          "value": "bib49,bib50"
                         }
                       ]
                     }
@@ -5639,6 +6193,32 @@
                   "value": "The data and R code used in this study are openly available on Open Science Foundation at "
                 },
                 {
+                  "type": "command",
+                  "name": "href",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "https://osf.io/d9mfn/?view_only=6b9bd4580dbf42b4952e551972f48c68"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "https://osf.io/d9mfn/?view_only=6b9bd4580dbf42b4952e551972f48c68"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
                   "type": "text",
                   "value": "."
                 }
@@ -5675,6 +6255,124 @@
               "children": [
                 {
                   "type": "command",
+                  "name": "caption",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Observed "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Scores "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "From"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "the"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Initial Nine"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Pilot Tests."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
                   "name": "label",
                   "children": [
                     {
@@ -5686,17 +6384,10 @@
                           "value": "Table 2"
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": "command",
-                  "name": "caption",
-                  "children": [
+                    },
                     {
-                      "type": "commandArg",
-                      "optional": false,
-                      "children": []
+                      "type": "text",
+                      "value": "\n"
                     }
                   ]
                 },
@@ -11958,9 +12649,112 @@
               ]
             },
             {
+              "type": "paragraph",
+              "children": []
+            },
+            {
               "type": "environment",
               "name": "table",
               "children": [
+                {
+                  "type": "command",
+                  "name": "caption",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Observed "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Scores "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "From"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "the Final Four"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "emph",
+                          "children": [
+                            {
+                              "type": "commandArg",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Pilot Tests Formatted for Shiny SCDA."
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "\n"
+                    }
+                  ]
+                },
                 {
                   "type": "command",
                   "name": "label",
@@ -11974,17 +12768,10 @@
                           "value": "Table 3"
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": "command",
-                  "name": "caption",
-                  "children": [
+                    },
                     {
-                      "type": "commandArg",
-                      "optional": false,
-                      "children": []
+                      "type": "text",
+                      "value": "\n"
                     }
                   ]
                 },
@@ -15383,26 +16170,6 @@
                   ]
                 }
               ]
-            }
-          ]
-        },
-        {
-          "type": "environment",
-          "name": "filecontents",
-          "children": [
-            {
-              "type": "commandArg",
-              "optional": false,
-              "children": [
-                {
-                  "type": "text",
-                  "value": "bibliography.bib"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "value": "@article{bib1,\n      title = {Evidence for a central component of post-injury pain hypersensitivity},\n      author = {Woolf, Clifford J },\n      number = {5944},\n      volume = {306},\n      url = {},\n      doi = {10.1038/306686a0},\n      publisher = {},\n      year = {},\n      pages = {686-688},\n      journal = {Nature},\n    }\n\n\n\n\n@article{bib2,\n      title = {Central sensitization: Implications for the diagnosis and treatment of pain},\n      author = {Woolf, Clifford J },\n      number = {3 Suppl},\n      volume = {152},\n      url = {},\n      doi = {10.1016/j.pain.2010.09.030},\n      publisher = {},\n      year = {},\n      pages = {S2-S15},\n      journal = {Pain},\n    }\n\n\n\n\n@article{bib3,\n      title = {Fear-avoidance and its consequences in chronic musculoskeletal pain: A state of the art},\n      author = {Vlaeyen, Johan W.S.  and Linton, Steven J. },\n      number = {3},\n      volume = {85},\n      url = {},\n      doi = {10.1016/s0304-3959(99)00242-0},\n      publisher = {},\n      year = {},\n      pages = {317-332},\n      journal = {Pain},\n    }\n\n\n\n\n@article{bib4,\n      title = {Fear-avoidance model of chronic musculoskeletal pain: 12 years on},\n      author = {Vlaeyen, Johan W S  and Linton, Steven J },\n      number = {6},\n      volume = {153},\n      url = {},\n      doi = {10.1016/j.pain.2011.12.009},\n      publisher = {},\n      year = {},\n      pages = {1144-1147},\n      journal = {Pain},\n    }\n\n\n\n\n@article{bib5,\n      title = {Beyond nociception: The imprecision hypothesis of chronic pain},\n      author = {Moseley, G Lorimer  and Vlaeyen, Johan W S },\n      number = {1},\n      volume = {156},\n      url = {},\n      doi = {10.1016/j.pain.0000000000000014},\n      publisher = {},\n      year = {},\n      pages = {35-38},\n      journal = {Pain},\n    }\n\n\n\n\n@article{bib6,\n      title = {Pain by association? Experimental modulation of human pain thresholds using classical conditioning},\n      author = {Madden, Victoria J.  and Bellan, Valeria  and Russek, Leslie N.  and Camfferman, Danny  and Vlaeyen, Johan W.S.  and Moseley, G. Lorimer },\n      number = {10},\n      volume = {17},\n      url = {},\n      doi = {10.1016/j.jpain.2016.06.012},\n      publisher = {},\n      year = {},\n      pages = {1105-1115},\n      journal = {Journal of Pain},\n    }\n\n\n\n\n@article{bib7,\n      title = {Modulating pain thresholds through classical conditioning},\n      author = {Traxler, Juliane  and Madden, Victoria J.  and Moseley, G. Lorimer  and Vlaeyen, Johan W.S. },\n      number = {3},\n      volume = {2019},\n      url = {},\n      doi = {10.7717/peerj.6486},\n      publisher = {},\n      year = {},\n      pages = {1-20},\n      journal = {PeerJ},\n    }\n\n\n\n\n@book{bib8,\n      title = {Lectures on conditioned reflexes: Twenty-five years of objective study of the higher nervous activity (behaviour) of animals.},\n      author = {Pavlov, Ivan Petrovitch },\n      number = {},\n      volume = {},\n      url = {},\n      doi = {10.1037/11081-000},\n      publisher = {Liverwright Publishing Corporation},\n      year = {},\n      pages = {},\n      journal = {},\n    }\n\n\n\n\n@book{bib9,\n      title = {Single case experimental designs: Strategies for studying behavior change},\n      author = {Barlow, D H  and Nock, M K  and Hersen, M },\n      number = {},\n      volume = {},\n      url = {},\n      doi = {},\n      publisher = {Pearson/Allyn and Bacon},\n      year = {},\n      pages = {},\n      journal = {},\n    }\n\n\n\n\n@book{bib10,\n      title = {Single-case research designs: Methods for clinical and applied settings},\n      author = {Kazdin, Alan E },\n      number = {},\n      volume = {},\n      url = {},\n      doi = {},\n      publisher = {Oxford University Press},\n      year = {},\n      pages = {},\n      journal = {},\n    }\n\n\n\n\n@article{bib11,\n      title = {Randomization tests for single-case experiments: State of the art, state of the science, and state of the application},\n      author = {Heyvaert, Mieke  and Onghena, Patrick },\n      number = {1},\n      volume = {3},\n      url = {},\n      doi = {10.1016/j.jcbs.2013.10.002},\n      publisher = {},\n      year = {},\n      pages = {51-64},\n      journal = {Journal of Contextual Behavioral Science},\n    }\n\n\n\n\n@article{bib12,\n      title = {From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research},\n      author = {Vlaeyen, Johan W S  and Wicksell, Rikard K  and Simons, Laura E  and Gentili, Charlotte  and De, Tamal Kumar  and Tate, Robyn L  and Vohra, Sunita  and Punja, Salima  and Linton, Steven J  and Sniehotta, Falko F  and Onghena, Patrick },\n      number = {},\n      volume = {70},\n      url = {},\n      doi = {10.1007/s40732-020-00402-5},\n      publisher = {},\n      year = {},\n      pages = {659–670},\n      journal = {The Psychological Record},\n    }\n\n\n\n\n@article{bib13,\n      title = {Enhancing the scientific credibility of single-case intervention research: Randomization to the rescue},\n      author = {Kratochwill, T. R.  and Levin, Joel R },\n      number = {2},\n      volume = {15},\n      url = {},\n      doi = {10.1037/a0017736},\n      publisher = {},\n      year = {},\n      pages = {124-144},\n      journal = {Psychological Methods},\n    }\n\n\n\n\n@article{bib14,\n      title = {Randomization tests for one-subject operant experiments},\n      author = {Edgington, Eugene S },\n      number = {1},\n      volume = {90},\n      url = {},\n      doi = {10.1080/00223980.1975.9923926},\n      publisher = {},\n      year = {},\n      pages = {57},\n      journal = {Journal of Psychology},\n    }\n\n\n\n\n@article{bib15,\n      title = {The use of single-subject research to identify evidence-based practice in special education},\n      author = {Horner, Robert H.  and Carr, Edward G.  and Halle, James  and Mcgee, Gail  and Odom, Samuel  and Wolery, Mark },\n      number = {2},\n      volume = {71},\n      url = {},\n      doi = {10.1177/001440290507100203},\n      publisher = {},\n      year = {},\n      pages = {165-179},\n      journal = {Exceptional Children},\n    }\n\n\n\n\n@article{bib16,\n      title = {The new person-specific paradigm in psychology},\n      author = {Molenaar, Peter C M  and Campbell, Cynthia G },\n      number = {2},\n      volume = {18},\n      url = {},\n      doi = {10.1111/j.1467-8721.2009.01619.x},\n      publisher = {},\n      year = {},\n      pages = {112-117},\n      journal = {Current Directions in Psychological Science},\n    }\n\n\n\n\n@article{bib17,\n      title = {Lack of group-to-individual generalizability is a threat to human subjects research},\n      author = {Fisher, Aaron J  and Medaglia, John D  and Jeronimus, Bertus F },\n      number = {27},\n      volume = {115},\n      url = {},\n      doi = {10.1073/pnas.1711978115},\n      publisher = {},\n      year = {},\n      pages = {E6106 LP - E6115},\n      journal = {Proceedings of the National Academy of Sciences},\n    }\n\n\n\n\n@article{bib18,\n      title = {Analyzing single-case data: The power of randomization tests},\n      author = {Ferron, John  and Ware, William },\n      number = {2},\n      volume = {63},\n      url = {},\n      doi = {},\n      publisher = {},\n      year = {},\n      pages = {167-178},\n      journal = {The Journal of Experimental Education},\n    }\n\n\n\n\n@article{bib19,\n      title = {The power of randomization tests for single-case phase designs},\n      author = {Ferron, John  and Onghena, Patrick },\n      number = {3},\n      volume = {64},\n      url = {},\n      doi = {10.1080/00220973.1996.9943805},\n      publisher = {},\n      year = {},\n      pages = {231-239},\n      journal = {Journal of Experimental Education},\n    }\n\n\n\n\n@article{bib20,\n      title = {Autocorrelation in single-subject research: A counterargument to the myth of no autocorrelation.},\n      author = {Busk, Patricia L  and Marascuilo, Leonard A },\n      number = {3},\n      volume = {10},\n      url = {},\n      doi = {},\n      publisher = {},\n      year = {},\n      pages = {229-242},\n      journal = {Behavioral Assessment},\n    }\n\n\n\n\n@article{bib21,\n      title = {Violations of assumptions in school-based single-case data: Implications for the selection and interpretation of effect sizes},\n      author = {Solomon, Benjamin George },\n      number = {4},\n      volume = {38},\n      url = {},\n      doi = {10.1177/0145445513510931},\n      publisher = {},\n      year = {},\n      pages = {477-496},\n      journal = {Behavior Modification},\n    }\n\n\n\n\n@article{bib22,\n      title = {Using randomization techniques to analyse behavioural data},\n      author = {Adams, Dean C  and Anthony, Carl D },\n      number = {4},\n      volume = {51},\n      url = {},\n      doi = {https://doi.org/10.1006/anbe.1996.0077},\n      publisher = {},\n      year = {},\n      pages = {733-738},\n      journal = {Animal Behaviour},\n    }\n\n\n\n\n@article{bib23,\n      title = {Single-case experimental designs: A systematic review of published research and current standards},\n      author = {Smith, Justin D. },\n      number = {4},\n      volume = {17},\n      url = {},\n      doi = {10.1037/a0029312},\n      publisher = {},\n      year = {},\n      pages = {510-550},\n      journal = {Psychological Methods},\n    }\n\n\n\n\n@article{bib24,\n      title = {When is a picture worth a thousand p values? A comparison of visual and quantitative methods to analyze single subject data},\n      author = {Ottenbacher, Kenneth J },\n      number = {4},\n      volume = {23},\n      url = {},\n      doi = {10.1177/002246699002300407},\n      publisher = {},\n      year = {},\n      pages = {436-449},\n      journal = {The Journal of Special Education},\n    }\n\n\n\n\n@article{bib25,\n      title = {Visual analysis of single-case time series: Effects of variability, serial dependence, and magnitude of intervention effects},\n      author = {Matyas, T A  and Greenwood, K M },\n      number = {3},\n      volume = {23},\n      url = {},\n      doi = {10.1901/jaba.1990.23-341},\n      publisher = {},\n      year = {},\n      pages = {341-351},\n      journal = {Journal of applied behavior analysis},\n    }\n\n\n\n\n@article{bib26,\n      title = {Single-case design technical documentation},\n      author = {Kratochwill, T. R.  and Hitchcock, J  and Horner, Robert H  and Levin, J R  and Odom, S L  and Rindskopf, D M  and Shadish, W R },\n      number = {},\n      volume = {},\n      url = {},\n      doi = {},\n      publisher = {},\n      year = {},\n      pages = {},\n      journal = {},\n    }\n\n\n\n\n@article{bib27,\n      title = {Analytical options for single-case experimental designs: Review and application to brain impairment},\n      author = {Manolov, Rumen  and Solanas, Antonio },\n      number = {1},\n      volume = {19},\n      url = {},\n      doi = {10.1017/BrImp.2017.17},\n      publisher = {},\n      year = {},\n      pages = {18-32},\n      journal = {Brain Impairment},\n    }\n\n\n\n\n@article{bib28,\n      title = {Recommendations for choosing single-case data analytical techniques},\n      author = {Manolov, Rumen  and Moeyaert, Mariola },\n      number = {1},\n      volume = {48},\n      url = {},\n      doi = {10.1016/j.beth.2016.04.008},\n      publisher = {},\n      year = {},\n      pages = {97-114},\n      journal = {Behavior Therapy},\n    }\n\n\n\n\n@book{bib29,\n      title = {Randomization tests},\n      author = {Edgington, Eugene S  and Onghena, Patrick },\n      number = {},\n      volume = {},\n      url = {},\n      doi = {},\n      publisher = {Chapman & Hall/CRC},\n      year = {},\n      pages = {},\n      journal = {},\n    }\n\n\n\n\n@article{bib30,\n      title = {A randomization test wrapper for synthesizing single-case experiments using multilevel models: A Monte Carlo simulation study},\n      author = {Michiels, Bart  and Tanious, René  and De, Tamal Kumar  and Onghena, Patrick },\n      number = {2},\n      volume = {52},\n      url = {},\n      doi = {10.3758/s13428-019-01266-6},\n      publisher = {},\n      year = {},\n      pages = {654-666},\n      journal = {Behavior Research Methods},\n    }\n\n\n\n\n@article{bib31,\n      title = {Analysis of single-case data: Randomisation tests for measures of effect size},\n      author = {Heyvaert, Mieke  and Onghena, Patrick },\n      number = {3-4},\n      volume = {24},\n      url = {},\n      doi = {10.1080/09602011.2013.818564},\n      publisher = {},\n      year = {},\n      pages = {507-527},\n      journal = {Neuropsychological Rehabilitation},\n    }\n\n\n\n\n@book{bib32,\n      title = {Statistical power analysis for the behavioral sciences},\n      author = {Cohen, Jacob },\n      number = {},\n      volume = {},\n      url = {},\n      doi = {10.4324/9780203771587},\n      publisher = {Routledge},\n      year = {},\n      pages = {},\n      journal = {},\n    }\n\n\n\n\n@article{bib33,\n      title = {CONSORT extension for reporting N-of-1 trials (CENT) 2015 statement},\n      author = {Vohra, Sunita  and Shamseer, Larissa  and Sampson, Margaret  and Bukutu, Cecilia  and Schmid, Christopher H.  and Tate, Robyn  and Nikles, Jane  and Zucker, Deborah R.  and Kravitz, Richard  and Guyatt, Gordon  and Altman, Douglas G.  and Moher, David },\n      number = {},\n      volume = {350},\n      url = {},\n      doi = {10.1136/bmj.h1738},\n      publisher = {},\n      year = {},\n      pages = {h1738},\n      journal = {BMJ (Clinical research ed.)},\n    }\n\n\n\n\n@article{bib34,\n      title = {Statistical methods in psychology journals: Guidelines and explanations},\n      author = {Willkinson, Leland },\n      number = {8},\n      volume = {54},\n      url = {},\n      doi = {10.1037/0003-066X.54.8.594},\n      publisher = {},\n      year = {},\n      pages = {594-604},\n      journal = {American Psychologist},\n    }\n\n\n\n\n@article{bib35,\n      title = {Randomization tests for extensions and variations of ABAB single-case experimental designs: A rejoinder},\n      author = {Onghena, Patrick },\n      number = {2},\n      volume = {14},\n      url = {},\n      doi = {},\n      publisher = {},\n      year = {},\n      pages = {153-171},\n      journal = {Behavioral Assessment},\n    }\n\n\n\n\n@article{bib36,\n      title = {The conditional power of randomization tests for single-case effect sizes in designs with randomized treatment order: A Monte Carlo simulation study},\n      author = {Michiels, Bart  and Heyvaert, Mieke  and Onghena, Patrick },\n      number = {2},\n      volume = {50},\n      url = {},\n      doi = {10.3758/s13428-017-0885-7},\n      publisher = {},\n      year = {},\n      pages = {557-575},\n      journal = {Behavior Research Methods},\n    }\n\n\n\n\n@article{bib37,\n      title = {Power of a randomization test in a single case multiple baseline AB design},\n      author = {Bouwmeester, Samantha  and Jongerling, Joran },\n      number = {2},\n      volume = {15},\n      url = {},\n      doi = {10.1371/journal.pone.0228355},\n      publisher = {},\n      year = {},\n      pages = {1-21},\n      journal = {PLoS ONE},\n    }\n\n\n\n\n@article{bib38,\n      title = {Statistical power of randomization tests used with multiple-baseline designs},\n      author = {Ferron, John  and Sentovich, Chris },\n      number = {2},\n      volume = {70},\n      url = {},\n      doi = {10.1080/00220970209599504},\n      publisher = {},\n      year = {},\n      pages = {165-178},\n      journal = {Journal of Experimental Education},\n    }\n\n\n\n\n@article{bib39,\n      title = {Handling missing data in randomization tests for single-case experiments: A simulation study},\n      author = {De, Tamal Kumar  and Michiels, Bart  and Tanious, René  and Onghena, Patrick },\n      number = {3},\n      volume = {52},\n      url = {},\n      doi = {10.3758/s13428-019-01320-3},\n      publisher = {},\n      year = {},\n      pages = {1355-1370},\n      journal = {Behavior Research Methods},\n    }\n\n\n\n\n@article{bib40,\n      title = {Was that painful or nonpainful? The Sensation and Pain Rating Scale performs well in the experimental context},\n      author = {Madden, Victoria J.  and Kamerman, Peter R.  and Bellan, Valeria  and Catley, Mark J.  and Russek, Leslie N.  and Camfferman, Danny  and Moseley, G. Lorimer },\n      number = {4},\n      volume = {20},\n      url = {},\n      doi = {10.1016/j.jpain.2018.10.006},\n      publisher = {},\n      year = {},\n      pages = {472.e1-472.e12},\n      journal = {Journal of Pain},\n    }\n\n\n\n\n@article{bib41,\n      title = {Affect 4.0: A free software package for implementing psychological and psychophysiological experiments},\n      author = {Spruyt, Adriaan  and Clarysse, Jeroen  and Vansteenwegen, Debora  and Baeyens, Frank  and Hermans, Dirk },\n      number = {1},\n      volume = {57},\n      url = {},\n      doi = {10.1027/1618-3169/a000005},\n      publisher = {},\n      year = {},\n      pages = {36-45},\n      journal = {Experimental Psychology},\n    }\n\n\n\n\n@article{bib42,\n      title = {Tactor},\n      author = {},\n      number = {},\n      volume = {},\n      url = {},\n      doi = {},\n      publisher = {},\n      year = {},\n      pages = {},\n      journal = {http://www.dancerdesign.co.uk/tactor.htm},\n    }\n\n\n\n\n@article{bib43,\n      title = {DS7A High Voltage Constant Current Stimulator},\n      author = {},\n      number = {},\n      volume = {},\n      url = {},\n      doi = {},\n      publisher = {},\n      year = {},\n      pages = {},\n      journal = {https://www.digitimer.com/product/human-neurophysiology/peripheral-stimulators/ds7a-ds7ah-hv-current-stimulator/},\n    }\n\n\n\n\n@article{bib44,\n      title = {Classical conditioning fails to elicit allodynia in an experimental study with healthy humans},\n      author = {Madden, Victoria J.  and Russek, Leslie N.  and Harvie, Daniel S.  and Vlaeyen, Johan W.S.  and Moseley, G. Lorimer },\n      number = {7},\n      volume = {18},\n      url = {},\n      doi = {10.1093/pm/pnw221},\n      publisher = {},\n      year = {},\n      pages = {1314-1325},\n      journal = {Pain Medicine},\n    }\n\n\n\n\n@inbook{bib45,\n      title = {Single‐case designs},\n      author = {Onghena, Patrick },\n      number = {},\n      volume = {4},\n      url = {},\n      doi = {10.1002/0470013192.bsa625},\n      publisher = {John Wiley & Sons, Ltd},\n      year = {},\n      pages = {1850-1854},\n      journal = {Encyclopedia of statistics in behavioral science},\n    }\n\n\n\n\n@article{bib46,\n      title = {Randomized single-case AB phase designs: Prospects and pitfalls},\n      author = {Michiels, Bart  and Onghena, Patrick },\n      number = {6},\n      volume = {51},\n      url = {},\n      doi = {10.3758/s13428-018-1084-x},\n      publisher = {},\n      year = {},\n      pages = {2454-2476},\n      journal = {Behavior Research Methods},\n    }\n\n\n\n\n@article{bib47,\n      title = {Shiny SCDA},\n      author = {De, Tamal Kumar  and Michiels, Bart  and Vlaeyen, Johan W S  and Onghena, Patrick },\n      number = {},\n      volume = {},\n      url = {},\n      doi = {},\n      publisher = {},\n      year = {},\n      pages = {},\n      journal = {},\n    }\n\n\n\n\n@article{bib48,\n      title = {Comparison of randomization-test procedures for single-case multiple-baseline designs},\n      author = {Levin, Joel R.  and Ferron, John M.  and Gafurov, Boris S. },\n      number = {5},\n      volume = {21},\n      url = {},\n      doi = {10.1080/17518423.2016.1197708},\n      publisher = {},\n      year = {},\n      pages = {290-311},\n      journal = {Developmental Neurorehabilitation},\n    }\n\n\n\n\n@article{bib49,\n      title = {Approximate randomization tests},\n      author = {Edgington, Eugene S },\n      number = {2},\n      volume = {72},\n      url = {},\n      doi = {10.1080/00223980.1969.10543491},\n      publisher = {},\n      year = {},\n      pages = {143-149},\n      journal = {The Journal of Psychology},\n    }\n\n\n\n\n@article{bib50,\n      title = {A simplified Monte Carlo significance test procedure},\n      author = {Hope, Adery C A },\n      number = {3},\n      volume = {30},\n      url = {},\n      doi = {},\n      publisher = {},\n      year = {},\n      pages = {582-598},\n      journal = {Journal of the Royal Statistical Society. Series B (Methodological)},\n    }\n\n"
             }
           ]
         }

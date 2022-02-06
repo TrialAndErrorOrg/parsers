@@ -14,9 +14,7 @@ const typeEnvArgMap: {
     optional?: TagName[]
     empty?: boolean
   }
-} = {
-  list: { name: 'itemize' },
-}
+} = {}
 
 export function environment(j: J, node: Parents) {
   // if (!typeCommandMap[node.type]) {

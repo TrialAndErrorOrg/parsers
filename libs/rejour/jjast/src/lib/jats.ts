@@ -5,6 +5,40 @@ import type { ValuesType } from 'utility-types'
 // Source files:
 // http://localhost:3001/jats.xsd
 
+export type SimpleTextContentMap = {
+  text?: Text
+
+  bold?: Bold[]
+
+  fixedCase?: FixedCase[]
+
+  italic?: Italic[]
+
+  monospace?: Monospace[]
+
+  namedContent?: NamedContent[]
+
+  overline?: Overline[]
+
+  roman?: Roman[]
+
+  ruby?: Ruby[]
+
+  sansSerif?: SansSerif[]
+
+  sc?: Sc[]
+
+  strike?: Strike[]
+
+  styledContent?: StyledContent[]
+
+  sub?: Sub[]
+
+  sup?: Sup[]
+
+  underline?: Underline[]
+}
+export type SimpleTextContent = RequiredMap<SimpleTextContentMap>
 export interface Text extends UnistLiteral {
   type: 'text'
   value: string
@@ -4247,41 +4281,15 @@ export interface ExtLink extends UnistNode {
     hreflang?: string
     id?: string
     specificUse?: string
+    'xlink:href': string
   }
 
   children: RequiredMap<ExtLinkChildrenMap>[]
 }
 
 export interface ExtLinkChildrenMap {
-  bold?: Bold[]
-
-  fixedCase?: FixedCase[]
-
-  italic?: Italic[]
-
-  monospace?: Monospace[]
-
-  namedContent?: NamedContent[]
-
-  overline?: Overline[]
-
-  roman?: Roman[]
-
-  ruby?: Ruby[]
-
-  sansSerif?: SansSerif[]
-
-  sc?: Sc[]
-
-  strike?: Strike[]
-
-  styledContent?: StyledContent[]
-
-  sub?: Sub[]
-
-  sup?: Sup[]
-
-  underline?: Underline[]
+  text?: Text
+  content: SimpleTextContent[]
 }
 
 export interface Fax extends UnistNode {
@@ -5048,35 +5056,7 @@ export interface Gov extends UnistNode {
 export interface GovChildrenMap {
   text?: Text
 
-  bold?: Bold[]
-
-  fixedCase?: FixedCase[]
-
-  italic?: Italic[]
-
-  monospace?: Monospace[]
-
-  namedContent?: NamedContent[]
-
-  overline?: Overline[]
-
-  roman?: Roman[]
-
-  ruby?: Ruby[]
-
-  sansSerif?: SansSerif[]
-
-  sc?: Sc[]
-
-  strike?: Strike[]
-
-  styledContent?: StyledContent[]
-
-  sub?: Sub[]
-
-  sup?: Sup[]
-
-  underline?: Underline[]
+  content: SimpleTextContent[]
 }
 
 export interface Graphic extends UnistNode {
@@ -5091,6 +5071,7 @@ export interface Graphic extends UnistNode {
     mimeSubtype?: string
     mimetype?: string
     specificUse?: string
+    'xlink:href'?: string
   }
 
   children: RequiredMap<GraphicChildrenMap>[]
@@ -5261,6 +5242,7 @@ export interface InlineGraphic extends UnistNode {
     mimeSubtype?: string
     mimetype?: string
     specificUse?: string
+    'xlink:href'?: string
   }
 
   children: RequiredMap<InlineGraphicChildrenMap>[]
@@ -5839,35 +5821,7 @@ export interface Kwd extends UnistNode {
 export interface KwdChildrenMap {
   text?: Text
 
-  bold?: Bold[]
-
-  fixedCase?: FixedCase[]
-
-  italic?: Italic[]
-
-  monospace?: Monospace[]
-
-  namedContent?: NamedContent[]
-
-  overline?: Overline[]
-
-  roman?: Roman[]
-
-  ruby?: Ruby[]
-
-  sansSerif?: SansSerif[]
-
-  sc?: Sc[]
-
-  strike?: Strike[]
-
-  styledContent?: StyledContent[]
-
-  sub?: Sub[]
-
-  sup?: Sup[]
-
-  underline?: Underline[]
+  content: SimpleTextContent[]
 }
 
 export interface Label extends UnistNode {
@@ -9232,35 +9186,7 @@ export interface Role extends UnistNode {
 export interface RoleChildrenMap {
   text?: Text
 
-  bold?: Bold[]
-
-  fixedCase?: FixedCase[]
-
-  italic?: Italic[]
-
-  monospace?: Monospace[]
-
-  namedContent?: NamedContent[]
-
-  overline?: Overline[]
-
-  roman?: Roman[]
-
-  ruby?: Ruby[]
-
-  sansSerif?: SansSerif[]
-
-  sc?: Sc[]
-
-  strike?: Strike[]
-
-  styledContent?: StyledContent[]
-
-  sub?: Sub[]
-
-  sup?: Sup[]
-
-  underline?: Underline[]
+  content: SimpleTextContent[]
 }
 
 export interface Roman extends UnistNode {
@@ -9940,35 +9866,7 @@ export interface SeriesText extends UnistNode {
 export interface SeriesTextChildrenMap {
   text?: Text
 
-  bold?: Bold[]
-
-  fixedCase?: FixedCase[]
-
-  italic?: Italic[]
-
-  monospace?: Monospace[]
-
-  namedContent?: NamedContent[]
-
-  overline?: Overline[]
-
-  roman?: Roman[]
-
-  ruby?: Ruby[]
-
-  sansSerif?: SansSerif[]
-
-  sc?: Sc[]
-
-  strike?: Strike[]
-
-  styledContent?: StyledContent[]
-
-  sub?: Sub[]
-
-  sup?: Sup[]
-
-  underline?: Underline[]
+  content: SimpleTextContent[]
 }
 
 export interface SeriesTitle extends UnistNode {
@@ -9985,35 +9883,7 @@ export interface SeriesTitle extends UnistNode {
 export interface SeriesTitleChildrenMap {
   text?: Text
 
-  bold?: Bold[]
-
-  fixedCase?: FixedCase[]
-
-  italic?: Italic[]
-
-  monospace?: Monospace[]
-
-  namedContent?: NamedContent[]
-
-  overline?: Overline[]
-
-  roman?: Roman[]
-
-  ruby?: Ruby[]
-
-  sansSerif?: SansSerif[]
-
-  sc?: Sc[]
-
-  strike?: Strike[]
-
-  styledContent?: StyledContent[]
-
-  sub?: Sub[]
-
-  sup?: Sup[]
-
-  underline?: Underline[]
+  content: SimpleTextContent[]
 }
 
 export interface Series extends UnistNode {
@@ -10030,35 +9900,7 @@ export interface Series extends UnistNode {
 export interface SeriesChildrenMap {
   text?: Text
 
-  bold?: Bold[]
-
-  fixedCase?: FixedCase[]
-
-  italic?: Italic[]
-
-  monospace?: Monospace[]
-
-  namedContent?: NamedContent[]
-
-  overline?: Overline[]
-
-  roman?: Roman[]
-
-  ruby?: Ruby[]
-
-  sansSerif?: SansSerif[]
-
-  sc?: Sc[]
-
-  strike?: Strike[]
-
-  styledContent?: StyledContent[]
-
-  sub?: Sub[]
-
-  sup?: Sup[]
-
-  underline?: Underline[]
+  content: SimpleTextContent[]
 }
 
 export interface SigBlock extends UnistNode {
@@ -11698,35 +11540,7 @@ export interface Target extends UnistNode {
 }
 
 export interface TargetChildrenMap {
-  bold?: Bold[]
-
-  fixedCase?: FixedCase[]
-
-  italic?: Italic[]
-
-  monospace?: Monospace[]
-
-  namedContent?: NamedContent[]
-
-  overline?: Overline[]
-
-  roman?: Roman[]
-
-  ruby?: Ruby[]
-
-  sansSerif?: SansSerif[]
-
-  sc?: Sc[]
-
-  strike?: Strike[]
-
-  styledContent?: StyledContent[]
-
-  sub?: Sub[]
-
-  sup?: Sup[]
-
-  underline?: Underline[]
+  content: SimpleTextContent[]
 }
 
 export interface Tbody extends UnistNode {
@@ -13198,35 +13012,7 @@ export interface Xref extends UnistNode {
 
 export interface XrefChildrenMap {
   customType?: Text
-  bold?: Bold[]
-
-  fixedCase?: FixedCase[]
-
-  italic?: Italic[]
-
-  monospace?: Monospace[]
-
-  namedContent?: NamedContent[]
-
-  overline?: Overline[]
-
-  roman?: Roman[]
-
-  ruby?: Ruby[]
-
-  sansSerif?: SansSerif[]
-
-  sc?: Sc[]
-
-  strike?: Strike[]
-
-  styledContent?: StyledContent[]
-
-  sub?: Sub[]
-
-  sup?: Sup[]
-
-  underline?: Underline[]
+  content: SimpleTextContent[]
 }
 
 type XrefTypeRefType =

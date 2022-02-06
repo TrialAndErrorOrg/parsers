@@ -7,7 +7,6 @@ import { wrapCommandArg } from '../util/wrap-command-arg'
 import { wrap } from '../util/wrap'
 
 export function front(j: J, node: Root) {
-  // const back = kids.find((child) => child?.tagName === 'back')
   return j(
     node,
     'preamble',
@@ -40,6 +39,7 @@ export function front(j: J, node: Root) {
           },
         ],
       },
+      { type: 'text', value: '\n' },
       {
         type: 'command',
         name: 'addbibresource',

@@ -1,11 +1,26 @@
 // based on https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/em
 
-import { Article, Parent, TagHavers } from 'jjast'
+import { Article, isElement, Parent, TableWrap, TagHavers } from 'jjast'
 import { all } from '../all'
 import { J, Node, Root } from '../types'
 
-export function tableWrap(j: J, node: Root) {
+const relativeOrderTable = (element: TableWrap['children'][number]) => {
+  if (!isElement(element)) return 4
+  switch (element.tagName) {
+    case 'caption':
+      return 1
+    case 'label':
+      return 2
+    case 'table':
+      return 2
+    default:
+      return 4
+  }
+}
+export function tableWrap(j: J, node: TableWrap) {
   //  if (!article) {
+  node.children.sort((a, b) => relativeOrderTable(a) - relativeOrderTable(b))
+
   return j(node, 'environment', { name: 'table' }, all(j, node))
   //  }
 

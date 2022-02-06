@@ -1,6 +1,6 @@
 // based on https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/em
 
-import { Table, isElement, Element } from 'jjast'
+import { Table, isElement, Element, Tr, Col } from 'jjast'
 import { all } from '../all'
 import { J, Node } from '../types'
 import { visit as origVisit } from 'unist-util-visit'
@@ -17,7 +17,7 @@ export function table(j: J, table: Table) {
   visit(
     table,
     (node: Node) => isElement(node) && ['col', 'tr'].includes(node.tagName),
-    (node: Element) => {
+    (node: Col | Tr) => {
       if (node.tagName === 'col') {
         hasCols = true
         columns.push('c')
@@ -25,10 +25,16 @@ export function table(j: J, table: Table) {
       }
 
       if (hasCols) return
+      let tempCols: string[] = []
+
       node?.children?.forEach((child) => {
-        columns.push('c')
+        isElement(child) && child.tagName === 'td' && tempCols.push('c')
       })
-      hasCols = true
+      // Just make the table as wide as it needs to be, overfull tables
+      // error out while  underfull ones are fine
+      if (tempCols.length > columns.length) columns = tempCols
+      tempCols = []
+      return
     }
   )
 

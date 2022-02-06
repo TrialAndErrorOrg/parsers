@@ -46,6 +46,7 @@
     "unist-util-remove": "^3.0.0",
     "unist-util-visit": "4.0.0",
     "utility-types": "^3.10.0",
+    "vfile": "^5.3.0",
     "xast-util-from-xml": "^2.0.1",
     "xast-util-to-xml": "^3.0.0"
   },

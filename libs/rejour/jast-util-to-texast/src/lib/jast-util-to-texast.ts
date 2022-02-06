@@ -30,7 +30,6 @@ export function toTexast(
     unchecked: '[ ]',
     quotes: ['"'],
     topSection: 1,
-    documentClass: 'article',
     columnSeparator: false,
   }
 ) {
@@ -88,7 +87,7 @@ export function toTexast(
       quotes: options.quotes || ['"'],
       italics: options.italics || 'emph',
       sectionDepth: options.topSection || 1,
-      documentClass: options.documentClass || 'article',
+      documentClass: options.documentClass || { name: 'article' },
       bibname: options.bibname || 'bibliography',
       columnSeparator: !!options.columnSeparator,
     } as Context

@@ -5,6 +5,7 @@ import { all } from '../all'
 import { J, Node, Root } from '../types'
 import { wrapCommandArg } from '../util/wrap-command-arg'
 import { wrap } from '../util/wrap'
+import { CommandArg } from 'texast'
 
 export function front(j: J, node: Root) {
   return j(
@@ -18,8 +19,19 @@ export function front(j: J, node: Root) {
           {
             type: 'commandArg',
             optional: false,
-            children: [{ type: 'text', value: 'jote-article' }],
+            children: [{ type: 'text', value: j.documentClass.name }],
           },
+          ...(j.documentClass.options
+            ? [
+                {
+                  type: 'commandArg',
+                  optional: true,
+                  children: [
+                    { type: 'text', value: j.documentClass.options.join(', ') },
+                  ],
+                } as CommandArg,
+              ]
+            : []),
         ],
       },
       { type: 'text', value: '\n' },

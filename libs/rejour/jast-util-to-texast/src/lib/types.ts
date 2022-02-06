@@ -33,11 +33,14 @@ export interface Options {
   checked?: string
   unchecked?: string
   quotes?: Array<string>
-  documentClass?: string
   topSection?: number
   italics?: 'emph' | 'textit'
   bibname?: string
   columnSeparator?: boolean
+  documentClass?: {
+    options?: string[]
+    name: string
+  }
 }
 
 export type Handle = (
@@ -61,7 +64,10 @@ export interface Context {
   unchecked: string
   quotes: Array<string>
   italics: string
-  documentClass: string
+  documentClass: {
+    options?: string[]
+    name: string
+  }
   sectionDepth: number
   bibname: string
   columnSeparator: boolean

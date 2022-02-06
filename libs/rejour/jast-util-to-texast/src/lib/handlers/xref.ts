@@ -10,8 +10,8 @@ export function xref(j: J, node: Xref) {
   //  if (!article) {
   const refTypeMap = {
     bibr: 'cite',
-    aff: 'aff',
-    app: 'app',
+    aff: 'ref',
+    app: 'ref',
     bio: 'bio',
     default: 'ref',
     'author-notes': 'author-notes',
@@ -22,19 +22,19 @@ export function xref(j: J, node: Xref) {
     contrib: 'contrib',
     corresp: 'corresp',
     custom: 'custom',
-    'disp-formula': 'disp-formula',
-    fig: 'fig',
+    'disp-formula': 'eqref',
+    fig: 'ref',
     fn: 'fn',
     kwd: 'kwd',
     list: 'list',
     other: 'other',
     plate: 'plate',
     scheme: 'scheme',
-    sec: 'sec',
+    sec: 'ref',
     statement: 'statement',
     'supplementary-material': 'supplementary-material',
-    table: 'table',
-    'table-fn': 'table-fn',
+    table: 'ref',
+    'table-fn': 'ref-fn',
   }
 
   switch (node.properties.refType) {
@@ -46,7 +46,7 @@ export function xref(j: J, node: Xref) {
             {
               type: 'text',
               //@ts-expect-error
-              value: 'bibr' + node.children[0]?.value?.replace(/[\[\]]/g, ''),
+              value: 'bib' + node.children[0]?.value?.replace(/[\[\]]/g, ''),
             },
           ],
         },

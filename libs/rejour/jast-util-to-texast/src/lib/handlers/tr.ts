@@ -7,10 +7,12 @@ import { J, Node } from '../types'
 
 export function tr(j: J, node: Tr) {
   const contentsNoTabs = all(j, node)
-  const contents = contentsNoTabs.flatMap((cell) => [
-    cell,
-    { type: 'alignmentTab', value: '&' } as AlignmentTab,
-  ])
+  const contents = contentsNoTabs
+    .flatMap((cell) => [
+      { type: 'alignmentTab', value: '&' } as AlignmentTab,
+      cell,
+    ])
+    .slice(1)
 
   contents.push({ type: 'linebreak', value: '\\' } as Linebreak)
   return j(node, 'tableRow', contents)

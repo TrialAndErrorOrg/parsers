@@ -40,6 +40,17 @@ export function front(j: J, node: Root) {
           },
         ],
       },
+      {
+        type: 'command',
+        name: 'addbibresource',
+        children: [
+          {
+            type: 'commandArg',
+            optional: false,
+            children: [{ type: 'text', value: 'bibliography.bib' }],
+          },
+        ],
+      },
       { type: 'text', value: '\n' },
       ...all(j, node),
     ])

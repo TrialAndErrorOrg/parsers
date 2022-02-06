@@ -7,6 +7,7 @@ import { convertElement } from 'hast-util-is-element'
 import { BibLatexParser } from 'biblatex-csl-converter'
 import { Person, Data as CSL } from 'csl-json'
 import { Environment } from 'texast'
+import { wrapCommandArg } from '../util/wrap-command-arg'
 
 const isElementCitation = (element: Element): element is ElementCitation =>
   element.tagName === 'elementCitation'
@@ -212,7 +213,7 @@ export function refList(j: J, list: RefList): Environment {
         // prettier-ignore
         // @ts-expect-error
         (ref) => `@${(biblatexCSLMap.target as any)[ref.type]}{${ref['citation-key'] || ref.id},
-      title = {${ref.title||''}}
+      title = {${ref.title||''}},
       author = {${ref.author
         ?.map(
           (auth) =>
@@ -221,15 +222,15 @@ export function refList(j: J, list: RefList): Environment {
               auth['dropping-particle'] || auth['non-dropping-particle'] || ''
             }${auth.given ||''} ${auth.suffix || ''}`
         )
-        .join(' and ')||''}}
-      number = {${ref.number||ref.issue||''}}
-      volume = {${ref.volume||''}}
-      url = {${ref.URL||''}}
-      doi = {${ref.DOI||''}}
-      publisher = {${ref.publisher||''}}
-      year = {${ref.issued?.literal || ref.issued?.['date-parts']?.join('-')||''}}
-      pages = {${ref.page||''}}
-      journal = {${ref.source||''}}
+        .join(' and ')||''}},
+      number = {${ref.number||ref.issue||''}},
+      volume = {${ref.volume||''}},
+      url = {${ref.URL||''}},
+      doi = {${ref.DOI||''}},
+      publisher = {${ref.publisher||''}},
+      year = {${ref.issued?.literal || ref.issued?.['date-parts']?.join('-')||''}},
+      pages = {${ref.page||''}},
+      journal = {${ref.source||''}},
     }
 
 `
@@ -237,11 +238,13 @@ export function refList(j: J, list: RefList): Environment {
       .join('\n\n\n')
   }
   const bibtex = toBibtex(csl)
-  console.log(bibtex)
 
   return {
     type: 'environment',
     name: 'filecontents',
-    children: [{ type: 'text', value: bibtex }],
+    children: [
+      wrapCommandArg(j, [{ type: 'text', value: 'bibliography.bib' }]),
+      { type: 'text', value: bibtex },
+    ],
   }
 }

@@ -10,5 +10,7 @@
   "xml.format.closingBracketNewLine": true,
   "xml.format.splitAttributes": true,
   "xml.codeLens.enabled": true,
-  "latex-workshop.latexindent.path": "/Library/TeX/texbin/latexindent"
+  "latex-workshop.latexindent.path": "/Library/TeX/texbin/latexindent",
+  "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+  "latex-workshop.latex.autoBuild.run": "never"
 }

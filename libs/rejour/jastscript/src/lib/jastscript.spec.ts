@@ -4,8 +4,8 @@ describe('jastscript', () => {
   it('parses the bare minimum', () => {
     expect(j('p')).toEqual({
       children: [],
-      properties: {},
-      tagName: 'p',
+      attributes: {},
+      name: 'p',
       type: 'element',
     })
   })
@@ -15,18 +15,18 @@ describe('jastscript', () => {
   it('generates root if empty', () => {
     expect(j('article', { something: 'new' })).toEqual({
       type: 'element',
-      tagName: 'article',
-      properties: { something: 'new' },
+      name: 'article',
+      attributes: { something: 'new' },
       children: [],
     })
   })
   it('should add child', () => {
     expect(j('article', { something: 'new' }, j('front'))).toEqual({
       type: 'element',
-      tagName: 'article',
-      properties: { something: 'new' },
+      name: 'article',
+      attributes: { something: 'new' },
       children: [
-        { type: 'element', tagName: 'front', children: [], properties: {} },
+        { type: 'element', name: 'front', children: [], attributes: {} },
       ],
     })
   })

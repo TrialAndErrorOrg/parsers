@@ -9,23 +9,23 @@ import {
 } from 'texast'
 
 import {
-  Properties as JastProperties,
+  Attributes as JastProperties,
   //Node,
   Parent,
   ElementContent as Element,
   Text,
   Root,
   Content,
-  TagName,
+  Name,
 } from 'jjast'
 
 /**
  * jast Node
  */
 export type Node = Parent['children'][number] | Root
-type t = Extract<Node, { tagName: 'td' }>
+type t = Extract<Node, { name: 'td' }>
 
-export type Properties = JastProperties
+export type Attributes = JastProperties
 export interface Options {
   handlers?: { [handle: string]: Handle }
   document?: boolean
@@ -76,7 +76,7 @@ export interface Context {
 export type JWithProps = (
   node: Node,
   type: string,
-  props?: Properties,
+  props?: Attributes,
   children?: string | Array<TexastContent>
 ) => TexastContent
 
@@ -89,7 +89,7 @@ export type JWithoutProps = (
 export type JWithPropsSpecific<TNode extends TexastContent = TexastContent> = (
   node: Node,
   type: Pick<TNode, 'type'>,
-  props?: Properties,
+  props?: Attributes,
   //@ts-ignore yeah i know butttt
   // TODO: Make this not error
   children?: Pick<TNode, 'children'>
@@ -108,7 +108,7 @@ export type {
   TexastRoot,
   TexastParagraphContent,
   Text,
-  TagName,
+  Name,
 }
 
 export type Parents = Extract<Exclude<Node, Text | Root>, { children: any[] }>

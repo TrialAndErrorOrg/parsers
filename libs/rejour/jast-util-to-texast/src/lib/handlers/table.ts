@@ -16,9 +16,9 @@ export function table(j: J, table: Table) {
   // TODO: [jast-util-to-texast] Store information about column alignment in tabular
   visit(
     table,
-    (node: Node) => isElement(node) && ['col', 'tr'].includes(node.tagName),
+    (node: Node) => isElement(node) && ['col', 'tr'].includes(node.name),
     (node: Col | Tr) => {
-      if (node.tagName === 'col') {
+      if (node.name === 'col') {
         hasCols = true
         columns.push('c')
         return
@@ -28,7 +28,7 @@ export function table(j: J, table: Table) {
       let tempCols: string[] = []
 
       node?.children?.forEach((child) => {
-        isElement(child) && child.tagName === 'td' && tempCols.push('c')
+        isElement(child) && child.name === 'td' && tempCols.push('c')
       })
       // Just make the table as wide as it needs to be, overfull tables
       // error out while  underfull ones are fine

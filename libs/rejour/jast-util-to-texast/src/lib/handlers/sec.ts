@@ -1,7 +1,7 @@
 import { isElement, Title } from 'jjast'
 import { CommandArg, CommandArgOpt, EnvironmentContent } from 'texast'
 import { all } from '../all'
-import { J, Parents, TagName, Node } from '../types'
+import { J, Parents, Name, Node } from '../types'
 import { wrap } from '../util/wrap'
 import { wrapChildren } from '../util/wrap-children'
 import { wrapCommandArg } from '../util/wrap-command-arg'
@@ -23,7 +23,7 @@ export function sec(j: J, node: Parents) {
 
   for (let i = 0; i < node?.children?.length || 0; i++) {
     const child = node?.children[i]
-    if (isElement(child) && child.tagName === 'title') {
+    if (isElement(child) && child.name === 'title') {
       node.children.splice(i, 1)
       titleElement = child
       break

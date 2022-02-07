@@ -9,7 +9,7 @@ import { J } from '../types'
 
 const relativeOrderFigure = (element: Fig['children'][number]) => {
   if (!isElement(element)) return 4
-  switch (element.tagName) {
+  switch (element.name) {
     case 'graphic':
       return 1
     case 'caption':

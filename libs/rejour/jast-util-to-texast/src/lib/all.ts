@@ -18,7 +18,7 @@ export function all(j: J, parent: Node): Array<TexastContent> {
   // Trim initial and final `<br>`s.
   // They’re not semantic per HTML, and they can’t be made in markdown things
   // like paragraphs or headings.
-  // while (child && child.type === 'element' && child.tagName === 'br') {
+  // while (child && child.type === 'element' && child.name === 'br') {
   //   index++
   //   child = nodes[index + 1]
   // }
@@ -29,7 +29,7 @@ export function all(j: J, parent: Node): Array<TexastContent> {
   //   length - 1 > index &&
   //   child &&
   //   child.type === 'element' &&
-  //   child.tagName === 'br'
+  //   child.name === 'br'
   // ) {
   //   length--
   //   child = nodes[length - 1]

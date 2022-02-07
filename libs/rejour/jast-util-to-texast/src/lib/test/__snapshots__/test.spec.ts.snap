@@ -7,7 +7,7 @@ exports[`parses correctly for article should match snapshot 1`] = `
 
   \\\\begin{document}
 
-  
+
 
 \\\\end{document}
 "
@@ -104,7 +104,7 @@ Based on the experimental setup discussed previously, and given the pairing of C
   \\\\item Irrelevant trials: These trials consist of a CS combined with an US stimuli. These trials are noninformative and are included to satisfy the assumptions of the analytical approach; they are included only to achieve consistency in the time gaps between baseline or test trials.
 
 
-  
+
 
 \\\\end{enumerate}
 \\\\subsection{Observed Variables}
@@ -173,7 +173,7 @@ The following three simulation conditions were varied for this power study:
   \\\\item Number of participants: Since the pilot tests revealed a small effect size, and the number of measurements is also limited, to ensure high power we considered a large range of participant count at 10, 20, 30, 40, and 50.
 
 
-  
+
 
 \\\\end{enumerate}
 \\\\subsubsection{Other Simulation Parameters}
@@ -196,7 +196,7 @@ The results from the power study () revealed that due to the relatively small ef
   \\\\label{Table 1}\\\\caption{}
   \\\\begin{tabular}{}
 
-  
+
 
 \\\\end{tabular}
 
@@ -218,7 +218,7 @@ The final study using this protocol was not conducted immediately, due to lack o
 
 The final design suffers from a few limitations. The first limitation is the observed variable defined by us, which only yields values of -1, 0, and 1. Unfortunately, this restricts variation in observed data and can cause duplicates in the randomization distribution, which can affect power. An alternative is to use the difference between SPARS ratings from CS+/ US and CS−/ US trial pairs. However, this would require a slightly different hypothesis, which would not clarify whether classical conditioning can affect pain thresholds specifically.
 
-The second limitation is due to the properties of the AB phase design. RTs using randomization of intervention start points in AB phase designs are known to lack power at lower sample sizes . AB phase designs do not satisfy the guidelines set by Kratochwill et al.  without multiple replications. Since we are not sure how quickly the effect of our conditioning is reversed, we cannot use phase designs with more phase changes, such as the ABAB phase design. Due to the requirement of specialized equipment, we cannot use an MBD. Critically, we cannot increase the number of measurements due to time constraints. Therefore, we have to rely on sequential replications for both validity and statistical power.
+The second limitation is due to the attributes of the AB phase design. RTs using randomization of intervention start points in AB phase designs are known to lack power at lower sample sizes . AB phase designs do not satisfy the guidelines set by Kratochwill et al.  without multiple replications. Since we are not sure how quickly the effect of our conditioning is reversed, we cannot use phase designs with more phase changes, such as the ABAB phase design. Due to the requirement of specialized equipment, we cannot use an MBD. Critically, we cannot increase the number of measurements due to time constraints. Therefore, we have to rely on sequential replications for both validity and statistical power.
 
 The power study for this design also presents certain limitations. We used only one possible distribution of the SPARS ratings to simulate our observed data. While the assumption of a symmetric distribution around 0 is not unreasonable, with more pilot data, it might be possible to simulate using a distribution that resembles the observed data. We also did not account for any variability in effect size across participants. Instead, we simulated an equal effect size for all participants. However, we believe these are reasonable assumptions given the scope of our study.
 
@@ -238,7 +238,7 @@ This research is supported by the Asthenes long-term structural funding - Methus
 
 The data and R code used in this study are openly available on Open Science Foundation at .
 
-\\\\section{Appendix} 
+\\\\section{Appendix}
 
 
   \\\\begin{table}
@@ -246,7 +246,7 @@ The data and R code used in this study are openly available on Open Science Foun
   \\\\label{Table 2}\\\\caption{}
   \\\\begin{tabular}{}
 
-  
+
 
 \\\\end{tabular}
 
@@ -258,7 +258,7 @@ The data and R code used in this study are openly available on Open Science Foun
   \\\\label{Table 3}\\\\caption{}
   \\\\begin{tabular}{}
 
-  
+
 
 \\\\end{tabular}
 
@@ -274,7 +274,7 @@ exports[`parses correctly for environment should match snapshot 1`] = `
 "
   \\\\begin{document}
 
-  
+
 
 \\\\end{document}
 "
@@ -289,7 +289,7 @@ exports[`parses correctly for root should match snapshot 1`] = `
 
   \\\\begin{document}
 
-  
+
 
 \\\\end{document}
 "

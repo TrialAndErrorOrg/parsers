@@ -11,8 +11,8 @@ export function wrapCommandArg(
 ): CommandArg {
   const fakeNode: P = {
     type: 'element',
-    tagName: 'p',
-    properties: {},
+    name: 'p',
+    attributes: {},
     children: nodes,
   }
   return {

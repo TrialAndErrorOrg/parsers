@@ -12,12 +12,12 @@ export function one(
   let fn: Handle | undefined
 
   if (node.type === 'element') {
-    // if (node.properties && node.properties.datoTexast === 'ignore') {
+    // if (node.attributes && node.attributes.datoTexast === 'ignore') {
     //   return
     // }
 
-    if (own.call(j.handlers, node.tagName)) {
-      fn = j.handlers[node.tagName]
+    if (own.call(j.handlers, node.name)) {
+      fn = j.handlers[node.name]
     }
   } else if (own.call(j.handlers, node.type)) {
     fn = j.handlers[node.type]

@@ -5955,7 +5955,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The second limitation is due to the properties of the AB phase design. RTs using randomization of intervention start points in AB phase designs are known to lack power at lower sample sizes "
+                  "value": "The second limitation is due to the attributes of the AB phase design. RTs using randomization of intervention start points in AB phase designs are known to lack power at lower sample sizes "
                 },
                 {
                   "type": "command",

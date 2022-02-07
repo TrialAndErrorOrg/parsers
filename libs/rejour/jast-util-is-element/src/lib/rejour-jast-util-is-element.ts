@@ -4,28 +4,28 @@
 import { Node, Parent } from 'unist'
 import { Element } from 'jjast'
 
-export type TagName = string
+export type Name = string
 
 export type Test =
   | null
   | undefined
-  | TagName
+  | Name
   | TestFunctionAnything
-  | Array<TagName | TestFunctionAnything>
+  | Array<Name | TestFunctionAnything>
 /**
  * @typedef {import('unist').Node} Node
  * @typedef {import('unist').Parent} Parent
  * @typedef {import('hast').Element} Element
  *
- * @typedef {string} TagName
+ * @typedef {string} Name
  */
 
 export type PredicateTest<T extends Element> =
   | null
   | undefined
-  | T['tagName']
+  | T['name']
   | TestFunctionPredicate<T>
-  | Array<T['tagName'] | TestFunctionPredicate<T>>
+  | Array<T['name'] | TestFunctionPredicate<T>>
 
 /**
  * Check if an element passes a test
@@ -103,7 +103,7 @@ export const isElement: (() => false) &
    * @param {number} [index] Position of `node` in `parent`
    * @param {Parent} [parent] Parent of `node`
    * @param {unknown} [context] Context object to invoke `test` with
-   * @returns {boolean} Whether test passed and `node` is an `Element` (object with `type` set to `element` and `tagName` set to a non-empty string).
+   * @returns {boolean} Whether test passed and `node` is an `Element` (object with `type` set to `element` and `name` set to a non-empty string).
    */
   // eslint-disable-next-line max-params
   function (
@@ -149,12 +149,12 @@ export const isElement: (() => false) &
   }
 
 export const convertElement: (<T extends Element>(
-  test: T['tagName'] | TestFunctionPredicate<T>
+  test: T['name'] | TestFunctionPredicate<T>
 ) => AssertPredicate<T>) &
   ((test?: Test) => AssertAnything) =
   /**
    * @type {(
-   *   (<T extends Element>(test: T['tagName']|TestFunctionPredicate<T>) => AssertPredicate<T>) &
+   *   (<T extends Element>(test: T['name']|TestFunctionPredicate<T>) => AssertPredicate<T>) &
    *   ((test?: Test) => AssertAnything)
    * )}
    */
@@ -174,7 +174,7 @@ export const convertElement: (<T extends Element>(
     }
 
     if (typeof test === 'string') {
-      return tagNameFactory(test)
+      return nameFactory(test)
     }
 
     if (typeof test === 'object') {
@@ -189,12 +189,10 @@ export const convertElement: (<T extends Element>(
   }
 
 /**
- * @param {Array.<TagName|TestFunctionAnything>} tests
+ * @param {Array.<Name|TestFunctionAnything>} tests
  * @returns {AssertAnything}
  */
-function anyFactory(
-  tests: Array<TagName | TestFunctionAnything>
-): AssertAnything {
+function anyFactory(tests: Array<Name | TestFunctionAnything>): AssertAnything {
   /** @type {Array.<AssertAnything>} */
   const checks: Array<AssertAnything> = []
   let index = -1
@@ -227,18 +225,18 @@ function anyFactory(
  * Utility to convert a string into a function which checks a given node’s tag
  * name for said string.
  *
- * @param {TagName} check
+ * @param {Name} check
  * @returns {AssertAnything}
  */
-function tagNameFactory(check: TagName): AssertAnything {
-  return tagName
+function nameFactory(check: Name): AssertAnything {
+  return name
 
   /**
    * @param {unknown} node
    * @returns {boolean}
    */
-  function tagName(node: unknown): boolean {
-    return element(node) && node.tagName === check
+  function name(node: unknown): boolean {
+    return element(node) && node.name === check
   }
 }
 
@@ -273,6 +271,6 @@ function element(node: unknown): node is Element {
       // @ts-expect-error Looks like a node.
       node.type === 'element' &&
       // @ts-expect-error Looks like an element.
-      typeof node.tagName === 'string'
+      typeof node.name === 'string'
   )
 }

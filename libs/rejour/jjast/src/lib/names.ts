@@ -1,4 +1,4 @@
-export const tagNames = [
+export const names = [
   'root',
   'article',
   'front',

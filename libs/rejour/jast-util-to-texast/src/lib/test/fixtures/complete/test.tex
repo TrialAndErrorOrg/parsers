@@ -807,9 +807,9 @@
 
 \end{filecontents}
 
-  \begin{document}
+\begin{document}
 
-  \section{Take-Home Message}
+\section{Take-Home Message}
 
 We wanted to design a single-case experiment to test whether classical conditioning can influence pain thresholds. We settled on a customized AB phase design for which we ran pilot tests and a power study. The results indicated that this single-case design can be used to test our hypothesis.
 
@@ -866,11 +866,11 @@ In this experiment, participants receive two different types of stimuli: a vibro
 The participants receive two types of stimuli at the same time, replicating the procedure in Traxler et al. \autocite{bib7}. Stimulus onset and timing are controlled using Affect 4.0 \autocite{bib41}. A vibrotactile stimulus is delivered to the skin using tactors manufactured by Dancer Design taped to the participant's skin \autocite{bib42}. This stimulus is of fixed duration and a clearly perceptible intensity. Three tactors are used in the arrangement as the source of a CS (see \autocite{bibFigure 1}). The SIDE tactor is allocated to CS, whereas the ABOVE and BELOW tactors are assigned to CS+ and CS- in a counterbalanced way across participants.
 
 
-  \begin{figure}
+\begin{figure}
 
   \includegraphics{Other,+Figure+1.png}
-\caption{\emph{Arrangement of Tactors and Electrodes on the Back} \emph{(Adapted From Traxler et al. }\autocite{bib7} \emph{)} \emph{.}}
-\label{Figure 1}
+  \caption{\emph{Arrangement of Tactors and Electrodes on the Back} \emph{(Adapted From Traxler et al. }\autocite{bib7} \emph{)} \emph{.}}
+  \label{Figure 1}
 
 
 \end{figure}
@@ -885,7 +885,7 @@ On arrival, participants are seated straddling a chair in front of a desk with a
 Based on the experimental setup discussed previously, and given the pairing of CSs and USs, the experiment for a participant can theoretically consist of five different types of trials:
 
 
-  \begin{enumerate}
+\begin{enumerate}
 
   \item Training trials: Each training trial consists of one CS, with each of the three CS types used in different trials. There is no electrocutaneous stimulation (i.e., US) presented. These trials are conducted to familiarize the participants with the locations of the CS tactors.
 
@@ -902,7 +902,7 @@ Based on the experimental setup discussed previously, and given the pairing of C
   \item Irrelevant trials: These trials consist of a CS combined with an US stimuli. These trials are noninformative and are included to satisfy the assumptions of the analytical approach; they are included only to achieve consistency in the time gaps between baseline or test trials.
 
 
-  
+
 
 \end{enumerate}
 \subsection{Observed Variables}
@@ -960,7 +960,7 @@ We used the Monte Carlo method used by Ferron and Onghena \autocite{bib19} to es
 The following three simulation conditions were varied for this power study:
 
 
-  \begin{enumerate}
+\begin{enumerate}
 
   \item Effect size: Based on the low effect sizes observed in the pilot tests, we simulated MD effect sizes of 0.1, 0.2, 0.3, 0.4, and 0.5 for the simulated observed data.
 
@@ -971,7 +971,7 @@ The following three simulation conditions were varied for this power study:
   \item Number of participants: Since the pilot tests revealed a small effect size, and the number of measurements is also limited, to ensure high power we considered a large range of participant count at 10, 20, 30, 40, and 50.
 
 
-  
+
 
 \end{enumerate}
 \subsubsection{Other Simulation Parameters}
@@ -989,49 +989,47 @@ The simulations were run on supercomputer nodes at the Flemish Supercomputer Cen
 The results from the power study (\ref{Table 1}) revealed that due to the relatively small effect sizes and restricted number of measurements, the number of participants need to be high to achieve 80\% power. If we restrict the number of measurements to 30, which allows sufficient acquisition trials for learning and reinforcement within 30 minutes, 30 participants result in sufficient power even with a moderate effect size.
 
 
-  \begin{table}
+\begin{table}
 
   \caption{\emph{Estimated }\emph{P} \emph{ower }\emph{S} \emph{imulated }\emph{U} \emph{sing }\emph{D} \emph{ifferent }\emph{V} \emph{alues for }\emph{E} \emph{ffect }\emph{Si} \emph{ze, }\emph{N} \emph{umber of }\emph{M} \emph{easurements, and }\emph{N} \emph{umber of }\emph{P} \emph{articipants.}}
-\label{Table 1}
+  \label{Table 1}
 
   \begin{tabular}{c  c  c  c  c  c  c}
 
-  No. of measurements & No. of participants & Effect size\\
-0.1 & 0.2 & 0.3 & 0.4 & 0.5 &  & \\
-25 & 10 & 10.3 & 19.0 & 32.2 & 48.6 & 66.1\\
- & 20 & 13.4 & 29.3 & 51.4 & 74.4 & 90.0\\
- & 30 & 16.4 & 38.8 & 66.1 & 87.9 & 97.7\\
- & 40 & 18.9 & 47.5 & 77.4 & 94.8 & 99.5\\
- & 50 & 22.2 & 54.7 & 85.1 & 97.9 & 99.9\\
-30 & 10 & 13.0 & 25.9 & 45.0 & 66.1 & 83.9\\
- & 20 & 17.9 & 42.0 & 70.6 & 90.8 & 98.5\\
- & 30 & 21.9 & 54.9 & 86.0 & 97.9 & 99.9\\
- & 40 & 26.4 & 65.2 & 92.7 & 99.6 & 100.0\\
- & 50 & 30.0 & 73.4 & 96.6 & 99.9 & 100.0\\
-35 & 10 & 14.3 & 31.4 & 55.0 & 77.4 & 92.7\\
- & 20 & 21.0 & 51.4 & 81.0 & 96.6 & 99.7\\
- & 30 & 27.4 & 65.5 & 93.3 & 99.7 & 100.0\\
- & 40 & 32.8 & 77.1 & 97.5 & 99.9 & 100.0\\
- & 50 & 37.4 & 84.7 & 99.1 & 100.0 & 100.0\\
-40 & 10 & 15.4 & 36.0 & 63.9 & 84.9 & 96.3\\
- & 20 & 23.6 & 58.1 & 88.4 & 98.6 & 100.0\\
- & 30 & 30.7 & 74.0 & 96.8 & 99.9 & 100.0\\
- & 40 & 37.0 & 84.6 & 99.2 & 100.0 & 100.0\\
- & 50 & 42.8 & 90.4 & 99.8 & 100.0 & 100.0\\
-
-
-\end{tabular}
+    No. of measurements & No. of participants & Effect size                               \\
+    0.1                 & 0.2                 & 0.3         & 0.4  & 0.5  &       &       \\
+    25                  & 10                  & 10.3        & 19.0 & 32.2 & 48.6  & 66.1  \\
+                        & 20                  & 13.4        & 29.3 & 51.4 & 74.4  & 90.0  \\
+                        & 30                  & 16.4        & 38.8 & 66.1 & 87.9  & 97.7  \\
+                        & 40                  & 18.9        & 47.5 & 77.4 & 94.8  & 99.5  \\
+                        & 50                  & 22.2        & 54.7 & 85.1 & 97.9  & 99.9  \\
+    30                  & 10                  & 13.0        & 25.9 & 45.0 & 66.1  & 83.9  \\
+                        & 20                  & 17.9        & 42.0 & 70.6 & 90.8  & 98.5  \\
+                        & 30                  & 21.9        & 54.9 & 86.0 & 97.9  & 99.9  \\
+                        & 40                  & 26.4        & 65.2 & 92.7 & 99.6  & 100.0 \\
+                        & 50                  & 30.0        & 73.4 & 96.6 & 99.9  & 100.0 \\
+    35                  & 10                  & 14.3        & 31.4 & 55.0 & 77.4  & 92.7  \\
+                        & 20                  & 21.0        & 51.4 & 81.0 & 96.6  & 99.7  \\
+                        & 30                  & 27.4        & 65.5 & 93.3 & 99.7  & 100.0 \\
+                        & 40                  & 32.8        & 77.1 & 97.5 & 99.9  & 100.0 \\
+                        & 50                  & 37.4        & 84.7 & 99.1 & 100.0 & 100.0 \\
+    40                  & 10                  & 15.4        & 36.0 & 63.9 & 84.9  & 96.3  \\
+                        & 20                  & 23.6        & 58.1 & 88.4 & 98.6  & 100.0 \\
+                        & 30                  & 30.7        & 74.0 & 96.8 & 99.9  & 100.0 \\
+                        & 40                  & 37.0        & 84.6 & 99.2 & 100.0 & 100.0 \\
+                        & 50                  & 42.8        & 90.4 & 99.8 & 100.0 & 100.0 \\
+  \end{tabular}
 
 
 \end{table}
 Based on these results, we decided to run the final set of pilot tests with 30 measurements. We decided on six training trials (two trials for each type of CS) before the baseline phase, 24 acquisition trials between the baseline and test phases, and additionally one acquisition trial pair for reinforcement after two test trial pairs during the test phase. With a minimum of five measurements in the baseline phase, and a minimum of 15 measurements in the test phase, this design allows for 11 possible randomizations. Depending on the number of measurements in the test phase which will vary based on the test phase start point selected, the experiment could theoretically consist of 104 to 114 trials. This is the design we intend to follow in the final experiment with 30 participants (\autocite{bibFigure 2}).
 
 
-  \begin{figure}
+\begin{figure}
 
   \includegraphics{Other,+Figure+2.png}
-\caption{\emph{Final Design With 30 Measurements.}}
-\label{Figure 2}
+  \caption{\emph{Final Design With 30 Measurements.}}
+  \label{Figure 2}
 
 
 \end{figure}
@@ -1040,22 +1038,22 @@ Based on these results, we decided to run the final set of pilot tests with 30 m
 As mentioned previously, the initial nine pilot tests resulted in extremely small (and a few negative) effect sizes. The average MD effect size was -0.037, with a maximum of 0.143 and a minimum of -0.400. The low effect sizes indicated that the final design would need a large number of measurements and participants to achieve sufficient power in the RT. The first seven of these pilot tests consisted of 10-20 measurements each, which seemed too few. On the other hand, the last two pilot tests out of these consisted of 238 trials each. The feedback from both the experimenters and participants was that these tests were too long. These results influenced the decision to limit the number of trails to 140, remove irrelevant trial pairs from the baseline phase, and lower the number of acquisition trail pairs in the treatment phase.
 
 
-  \begin{figure}
+\begin{figure}
 
   \includegraphics{Other,+Figure+3.png}
-\caption{\emph{Plot of Observed Scores Obtained }\emph{From} \emph{the Initial Nine Participants in the Pilot Tests.}}
-\label{Figure 3}
+  \caption{\emph{Plot of Observed Scores Obtained }\emph{From} \emph{the Initial Nine Participants in the Pilot Tests.}}
+  \label{Figure 3}
 
 
 \end{figure}
 The later four pilot tests were run using the design parameters we decided on after the power study. The average MD effect size for these participants was 0.057, with a maximum of 0.476 and a minimum of -0.250. Visual analysis (\autocite{bibFigure 4}) revealed that the first, third, and fourth participant did not seem to show any sign of conditioning. However, the second participant seemed to show significant conditioning effects. This is also confirmed by the MD effect size for the second participant (0.476). Finally, a Monte Carlo RT with 1000 randomizations resulted in a \emph{p}-value of 0.112. Hence, the null hypothesis of the RT could not be rejected at a 5\% level of significance.
 
 
-  \begin{figure}
+\begin{figure}
 
   \includegraphics{Other,+Figure+4.png}
-\caption{\emph{Plot of }\emph{Observed Score} \emph{s }\emph{O} \emph{btained }\emph{F} \emph{rom} \emph{the }\emph{F} \emph{inal }\emph{F} \emph{our }\emph{P} \emph{articipants in the }\emph{P} \emph{ilot }\emph{T} \emph{ests.}}
-\label{Figure 4}
+  \caption{\emph{Plot of }\emph{Observed Score} \emph{s }\emph{O} \emph{btained }\emph{F} \emph{rom} \emph{the }\emph{F} \emph{inal }\emph{F} \emph{our }\emph{P} \emph{articipants in the }\emph{P} \emph{ilot }\emph{T} \emph{ests.}}
+  \label{Figure 4}
 
 
 \end{figure}
@@ -1067,7 +1065,7 @@ The final study using this protocol was not conducted immediately, due to lack o
 
 The final design suffers from a few limitations. The first limitation is the observed variable defined by us, which only yields values of -1, 0, and 1. Unfortunately, this restricts variation in observed data and can cause duplicates in the randomization distribution, which can affect power. An alternative is to use the difference between SPARS ratings from CS+/ US and CS-/ US trial pairs. However, this would require a slightly different hypothesis, which would not clarify whether classical conditioning can affect pain thresholds specifically.
 
-The second limitation is due to the properties of the AB phase design. RTs using randomization of intervention start points in AB phase designs are known to lack power at lower sample sizes \autocite{bib46}. AB phase designs do not satisfy the guidelines set by Kratochwill et al. \autocite{bib26} without multiple replications. Since we are not sure how quickly the effect of our conditioning is reversed, we cannot use phase designs with more phase changes, such as the ABAB phase design. Due to the requirement of specialized equipment, we cannot use an MBD. Critically, we cannot increase the number of measurements due to time constraints. Therefore, we have to rely on sequential replications for both validity and statistical power.
+The second limitation is due to the attributes of the AB phase design. RTs using randomization of intervention start points in AB phase designs are known to lack power at lower sample sizes \autocite{bib46}. AB phase designs do not satisfy the guidelines set by Kratochwill et al. \autocite{bib26} without multiple replications. Since we are not sure how quickly the effect of our conditioning is reversed, we cannot use phase designs with more phase changes, such as the ABAB phase design. Due to the requirement of specialized equipment, we cannot use an MBD. Critically, we cannot increase the number of measurements due to time constraints. Therefore, we have to rely on sequential replications for both validity and statistical power.
 
 The power study for this design also presents certain limitations. We used only one possible distribution of the SPARS ratings to simulate our observed data. While the assumption of a symmetric distribution around 0 is not unreasonable, with more pilot data, it might be possible to simulate using a distribution that resembles the observed data. We also did not account for any variability in effect size across participants. Instead, we simulated an equal effect size for all participants. However, we believe these are reasonable assumptions given the scope of our study.
 
@@ -1087,96 +1085,92 @@ This research is supported by the Asthenes long-term structural funding - Methus
 
 The data and R code used in this study are openly available on Open Science Foundation at \href{https://osf.io/d9mfn/?view\_only=6b9bd4580dbf42b4952e551972f48c68}{https://osf.io/d9mfn/?view\_only=6b9bd4580dbf42b4952e551972f48c68}.
 
-\section{Appendix} 
+\section{Appendix}
 
 
-  \begin{table}
+\begin{table}
 
   \caption{\emph{Observed }\emph{Scores }\emph{From} \emph{the} \emph{Initial Nine} \emph{Pilot Tests.}}
-\label{Table 2}
+  \label{Table 2}
 
   \begin{tabular}{c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c}
 
-  P1 & V1 & P2 & V2 & P3 & V3 & P4 & V4 & P5 & V5 & P6 & V6 & P7 & V7 & P8 & V8 & P9 & V9\\
-A & 0 & A & 1 & A & 1 & A & 0 & A & NA & A & -1 & A & 0 & A & 1 & A & 0\\
-A & 1 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & 1 & A & 0\\
-A & 0 & A & 0 & A & 0 & A & 1 & A & 0 & A & -1 & A & 0 & A & 1 & A & 0\\
-A & 0 & A & 0 & A & 0 & A & 1 & A & 0 & A & 1 & A & 0 & A & 1 & A & -1\\
-A & 1 & A & 0 & A & 0 & A & -1 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0\\
-B & 1 & B & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & -1 & A & 0\\
-B & 1 & B & 0 & A & NA & A & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0\\
-B & 0 & B & 0 & A & 1 & A & 0 & A & 0 & B & 0 & B & 0 & A & 0 & A & 1\\
-B & 0 & B & -1 & A & 1 & A & 1 & A & 0 & B & 0 & B & 0 & A & 0 & A & 0\\
-B & 0 & B & 0 & A & 0 & A & -1 & A & 0 & B & 0 & B & 0 & B & 1 & B & 0\\
- &  &  &  & B & 0 & B & 1 & B & -1 & B & 0 & B & 0 & B & 0 & B & 0\\
- &  &  &  & B & NA & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 0\\
- &  &  &  & B & NA & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 0\\
- &  &  &  & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 0\\
- &  &  &  & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 1 & B & -1\\
- &  &  &  & B & 0 & B & -1 & B & 0 &  &  &  &  & B & 0 & B & 1\\
- &  &  &  & B & 0 & B & 0 & B & 0 &  &  &  &  & B & 0 & B & 0\\
- &  &  &  & B & 0 & B & 1 & B & 0 &  &  &  &  & B & 1 & B & 0\\
- &  &  &  & B & NA & B & 0 & B & 0 &  &  &  &  & B & 1 & B & -1\\
- &  &  &  & B & 1 & B & 1 & B & 0 &  &  &  &  & B & 1 & B & 0\\
- &  &  &  &  &  &  &  &  &  &  &  &  &  & B & 0 & B & 1\\
- &  &  &  &  &  &  &  &  &  &  &  &  &  & B & 0 & B & 1\\
- &  &  &  &  &  &  &  &  &  &  &  &  &  & B & 1 & B & 0\\
- &  &  &  &  &  &  &  &  &  &  &  &  &  & B & 1 & B & 0\\
- &  &  &  &  &  &  &  &  &  &  &  &  &  & B & 0 & B & 0\\
- &  &  &  &  &  &  &  &  &  &  &  &  &  & B & 1 & B & 0\\
- &  &  &  &  &  &  &  &  &  &  &  &  &  & B & 0 & B & 0\\
- &  &  &  &  &  &  &  &  &  &  &  &  &  & B & 0 & B & 0\\
- &  &  &  &  &  &  &  &  &  &  &  &  &  & B & 0 & B & 0\\
-
-
-\end{tabular}
+    P1 & V1 & P2 & V2 & P3 & V3 & P4 & V4 & P5 & V5 & P6 & V6 & P7 & V7 & P8 & V8 & P9 & V9 \\
+    A  & 0  & A  & 1  & A  & 1  & A  & 0  & A  & NA & A  & -1 & A  & 0  & A  & 1  & A  & 0  \\
+    A  & 1  & A  & 0  & A  & 0  & A  & 0  & A  & 0  & A  & 0  & A  & 0  & A  & 1  & A  & 0  \\
+    A  & 0  & A  & 0  & A  & 0  & A  & 1  & A  & 0  & A  & -1 & A  & 0  & A  & 1  & A  & 0  \\
+    A  & 0  & A  & 0  & A  & 0  & A  & 1  & A  & 0  & A  & 1  & A  & 0  & A  & 1  & A  & -1 \\
+    A  & 1  & A  & 0  & A  & 0  & A  & -1 & A  & 0  & A  & 0  & A  & 0  & A  & 0  & A  & 0  \\
+    B  & 1  & B  & 0  & A  & 0  & A  & 0  & A  & 0  & A  & 0  & A  & 0  & A  & -1 & A  & 0  \\
+    B  & 1  & B  & 0  & A  & NA & A  & 0  & A  & 0  & A  & 0  & A  & 0  & A  & 0  & A  & 0  \\
+    B  & 0  & B  & 0  & A  & 1  & A  & 0  & A  & 0  & B  & 0  & B  & 0  & A  & 0  & A  & 1  \\
+    B  & 0  & B  & -1 & A  & 1  & A  & 1  & A  & 0  & B  & 0  & B  & 0  & A  & 0  & A  & 0  \\
+    B  & 0  & B  & 0  & A  & 0  & A  & -1 & A  & 0  & B  & 0  & B  & 0  & B  & 1  & B  & 0  \\
+       &    &    &    & B  & 0  & B  & 1  & B  & -1 & B  & 0  & B  & 0  & B  & 0  & B  & 0  \\
+       &    &    &    & B  & NA & B  & 0  & B  & 0  & B  & 0  & B  & 0  & B  & 0  & B  & 0  \\
+       &    &    &    & B  & NA & B  & 0  & B  & 0  & B  & 0  & B  & 0  & B  & 0  & B  & 0  \\
+       &    &    &    & B  & 0  & B  & 0  & B  & 0  & B  & 0  & B  & 0  & B  & 0  & B  & 0  \\
+       &    &    &    & B  & 0  & B  & 0  & B  & 0  & B  & 0  & B  & 0  & B  & 1  & B  & -1 \\
+       &    &    &    & B  & 0  & B  & -1 & B  & 0  &    &    &    &    & B  & 0  & B  & 1  \\
+       &    &    &    & B  & 0  & B  & 0  & B  & 0  &    &    &    &    & B  & 0  & B  & 0  \\
+       &    &    &    & B  & 0  & B  & 1  & B  & 0  &    &    &    &    & B  & 1  & B  & 0  \\
+       &    &    &    & B  & NA & B  & 0  & B  & 0  &    &    &    &    & B  & 1  & B  & -1 \\
+       &    &    &    & B  & 1  & B  & 1  & B  & 0  &    &    &    &    & B  & 1  & B  & 0  \\
+       &    &    &    &    &    &    &    &    &    &    &    &    &    & B  & 0  & B  & 1  \\
+       &    &    &    &    &    &    &    &    &    &    &    &    &    & B  & 0  & B  & 1  \\
+       &    &    &    &    &    &    &    &    &    &    &    &    &    & B  & 1  & B  & 0  \\
+       &    &    &    &    &    &    &    &    &    &    &    &    &    & B  & 1  & B  & 0  \\
+       &    &    &    &    &    &    &    &    &    &    &    &    &    & B  & 0  & B  & 0  \\
+       &    &    &    &    &    &    &    &    &    &    &    &    &    & B  & 1  & B  & 0  \\
+       &    &    &    &    &    &    &    &    &    &    &    &    &    & B  & 0  & B  & 0  \\
+       &    &    &    &    &    &    &    &    &    &    &    &    &    & B  & 0  & B  & 0  \\
+       &    &    &    &    &    &    &    &    &    &    &    &    &    & B  & 0  & B  & 0  \\
+  \end{tabular}
 
 
 \end{table}
 
 
 
-  \begin{table}
+\begin{table}
 
   \caption{\emph{Observed }\emph{Scores }\emph{From} \emph{the Final Four} \emph{Pilot Tests Formatted for Shiny SCDA.}}
-\label{Table 3}
+  \label{Table 3}
 
   \begin{tabular}{c  c  c  c  c  c  c  c}
 
-  P10 & V10 & P11 & V11 & P12 & V12 & P13 & V13\\
-A & 1 & A & 0 & A & 0 & A & 0\\
-A & NA & A & 0 & A & 0 & A & 0\\
-A & 0 & A & 0 & A & 0 & A & 0\\
-A & 1 & A & 0 & A & 0 & A & 0\\
-A & 0 & A & 0 & A & 0 & A & 0\\
-A & 0 & A & 0 & A & 0 & A & 0\\
-A & 0 & A & 0 & A & 0 & A & 0\\
-A & 1 & A & 0 & A & 0 & A & 0\\
-A & -1 & A & 0 & A & 0 & A & 0\\
-B & NA & B & 1 & B & 0 & B & 0\\
-B & 0 & B & 0 & B & 0 & B & 0\\
-B & NA & B & 1 & B & 0 & B & 0\\
-B & NA & B & 0 & B & 0 & B & 0\\
-B & NA & B & 1 & B & 0 & B & 0\\
-B & 0 & B & 0 & B & 0 & B & 0\\
-B & 0 & B & 1 & B & 0 & B & 0\\
-B & 0 & B & 1 & B & 0 & B & 0\\
-B & 0 & B & 1 & B & 0 & B & 0\\
-B & 0 & B & 1 & B & 0 & B & 0\\
-B & 0 & B & 1 & B & 0 & B & 0\\
-B & 0 & B & 1 & B & 0 & B & 0\\
-B & 0 & B & 0 & B & 0 & B & 0\\
-B & 0 & B & 0 & B & 0 & B & 0\\
-B & 0 & B & 1 & B & 0 & B & 0\\
-B & 0 & B & 0 & B & 0 & B & 0\\
-B & 0 & B & 0 & B & 0 & B & 0\\
-B & 0 & B & 0 & B & 0 & B & 0\\
-B & 0 & B & 0 & B & 0 & B & 0\\
-B & 0 & B & 0 & B & 0 & B & 0\\
-B & 0 & B & 0 & B & 0 & B & 0\\
-
-
-\end{tabular}
+    P10 & V10 & P11 & V11 & P12 & V12 & P13 & V13 \\
+    A   & 1   & A   & 0   & A   & 0   & A   & 0   \\
+    A   & NA  & A   & 0   & A   & 0   & A   & 0   \\
+    A   & 0   & A   & 0   & A   & 0   & A   & 0   \\
+    A   & 1   & A   & 0   & A   & 0   & A   & 0   \\
+    A   & 0   & A   & 0   & A   & 0   & A   & 0   \\
+    A   & 0   & A   & 0   & A   & 0   & A   & 0   \\
+    A   & 0   & A   & 0   & A   & 0   & A   & 0   \\
+    A   & 1   & A   & 0   & A   & 0   & A   & 0   \\
+    A   & -1  & A   & 0   & A   & 0   & A   & 0   \\
+    B   & NA  & B   & 1   & B   & 0   & B   & 0   \\
+    B   & 0   & B   & 0   & B   & 0   & B   & 0   \\
+    B   & NA  & B   & 1   & B   & 0   & B   & 0   \\
+    B   & NA  & B   & 0   & B   & 0   & B   & 0   \\
+    B   & NA  & B   & 1   & B   & 0   & B   & 0   \\
+    B   & 0   & B   & 0   & B   & 0   & B   & 0   \\
+    B   & 0   & B   & 1   & B   & 0   & B   & 0   \\
+    B   & 0   & B   & 1   & B   & 0   & B   & 0   \\
+    B   & 0   & B   & 1   & B   & 0   & B   & 0   \\
+    B   & 0   & B   & 1   & B   & 0   & B   & 0   \\
+    B   & 0   & B   & 1   & B   & 0   & B   & 0   \\
+    B   & 0   & B   & 1   & B   & 0   & B   & 0   \\
+    B   & 0   & B   & 0   & B   & 0   & B   & 0   \\
+    B   & 0   & B   & 0   & B   & 0   & B   & 0   \\
+    B   & 0   & B   & 1   & B   & 0   & B   & 0   \\
+    B   & 0   & B   & 0   & B   & 0   & B   & 0   \\
+    B   & 0   & B   & 0   & B   & 0   & B   & 0   \\
+    B   & 0   & B   & 0   & B   & 0   & B   & 0   \\
+    B   & 0   & B   & 0   & B   & 0   & B   & 0   \\
+    B   & 0   & B   & 0   & B   & 0   & B   & 0   \\
+    B   & 0   & B   & 0   & B   & 0   & B   & 0   \\
+  \end{tabular}
 
 
 \end{table}

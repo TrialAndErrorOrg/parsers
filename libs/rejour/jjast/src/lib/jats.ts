@@ -45,8 +45,8 @@ export interface Text extends UnistLiteral {
 }
 export interface AbbrevJournaltitle extends UnistNode {
   type: 'childless'
-  tagName: 'abbrevJournaltitle'
-  properties: {
+  name: 'abbrevJournaltitle'
+  attributes: {
     abbrevType?: string
     id?: string
     specificUse?: string
@@ -55,8 +55,8 @@ export interface AbbrevJournaltitle extends UnistNode {
 
 export interface Abbrev extends UnistNode {
   type: 'element'
-  tagName: 'abbrev'
-  properties: {
+  name: 'abbrev'
+  attributes: {
     alt?: string
     hreflang?: string
     id?: string
@@ -74,8 +74,8 @@ export interface AbbrevChildrenMap {
 
 export interface Abstract extends UnistNode {
   type: 'element'
-  tagName: 'abstract'
-  properties: {
+  name: 'abstract'
+  attributes: {
     abstractType?: string
     id?: string
     specificUse?: string
@@ -98,8 +98,8 @@ export interface AbstractChildrenMap {
 
 export interface AccessDate extends UnistNode {
   type: 'element'
-  tagName: 'accessDate'
-  properties: {
+  name: 'accessDate'
+  attributes: {
     calendar?: string
     id?: string
     iso8601Date?: string
@@ -115,8 +115,8 @@ export interface AccessDateChildrenMap {
 
 export interface Ack extends UnistNode {
   type: 'element'
-  tagName: 'ack'
-  properties: {
+  name: 'ack'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -147,8 +147,8 @@ export interface AckChildrenMap {
 
 export interface Address extends UnistNode {
   type: 'element'
-  tagName: 'address'
-  properties: {
+  name: 'address'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -186,8 +186,8 @@ export interface AddressChildrenMap {
 
 export interface AddrLine extends UnistNode {
   type: 'element'
-  tagName: 'addrLine'
-  properties: {
+  name: 'addrLine'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -269,8 +269,8 @@ export interface AddrLineChildrenMap {
 
 export interface AffAlternatives extends UnistNode {
   type: 'element'
-  tagName: 'affAlternatives'
-  properties: {
+  name: 'affAlternatives'
+  attributes: {
     id?: string
   }
 
@@ -283,8 +283,8 @@ export interface AffAlternativesChildrenMap {
 
 export interface Aff extends UnistNode {
   type: 'element'
-  tagName: 'aff'
-  properties: {
+  name: 'aff'
+  attributes: {
     id?: string
     rid?: string
     specificUse?: string
@@ -365,8 +365,8 @@ export interface AffChildrenMap {
 
 export interface Alternatives extends UnistNode {
   type: 'element'
-  tagName: 'alternatives'
-  properties: {
+  name: 'alternatives'
+  attributes: {
     id?: string
   }
 
@@ -407,8 +407,8 @@ export interface AlternativesChildrenMap {
 
 export interface AltText extends UnistNode {
   type: 'element'
-  tagName: 'altText'
-  properties: {
+  name: 'altText'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -422,8 +422,8 @@ export interface AltTextChildrenMap {
 
 export interface AltTitle extends UnistNode {
   type: 'element'
-  tagName: 'altTitle'
-  properties: {
+  name: 'altTitle'
+  attributes: {
     altTitletype?: string
     id?: string
     specificUse?: string
@@ -510,8 +510,8 @@ export interface AltTitleChildrenMap {
 
 export interface Annotation extends UnistNode {
   type: 'element'
-  tagName: 'annotation'
-  properties: {
+  name: 'annotation'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -527,8 +527,8 @@ export interface AnnotationChildrenMap {
 
 export interface Anonymous extends UnistNode {
   type: 'childless'
-  tagName: 'anonymous'
-  properties: {
+  name: 'anonymous'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -536,8 +536,8 @@ export interface Anonymous extends UnistNode {
 
 export interface AnswerSet extends UnistNode {
   type: 'element'
-  tagName: 'answerSet'
-  properties: {
+  name: 'answerSet'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -567,8 +567,8 @@ export interface AnswerSetChildrenMap {
 
 export interface Answer extends UnistNode {
   type: 'element'
-  tagName: 'answer'
-  properties: {
+  name: 'answer'
+  attributes: {
     id?: string
     pointerToquestion: string
     specificUse?: string
@@ -667,8 +667,8 @@ export interface AnswerChildrenMap {
 
 export interface AppGroup extends UnistNode {
   type: 'element'
-  tagName: 'appGroup'
-  properties: {
+  name: 'appGroup'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -763,8 +763,8 @@ export interface AppGroupChildrenMap {
 
 export interface App extends UnistNode {
   type: 'element'
-  tagName: 'app'
-  properties: {
+  name: 'app'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -860,9 +860,9 @@ export interface AppChildrenMap {
 
 export interface Array extends UnistNode {
   type: 'element'
-  tagName: 'array'
+  name: 'array'
   text?: Text
-  properties: {
+  attributes: {
     id?: string
     specificUse?: string
     orientation?: ArrayTypeOrientation
@@ -898,8 +898,8 @@ type ArrayTypeOrientation = 'landscape' | 'portrait'
 
 export interface ArticleCategories extends UnistNode {
   type: 'element'
-  tagName: 'articleCategories'
-  properties: {
+  name: 'articleCategories'
+  attributes: {
     id?: string
   }
 
@@ -915,8 +915,8 @@ export interface ArticleCategoriesChildrenMap {
 
 export interface ArticleId extends UnistNode {
   type: 'element'
-  tagName: 'articleId'
-  properties: {
+  name: 'articleId'
+  attributes: {
     assigningAuthority?: string
     id?: string
     specificUse?: string
@@ -956,8 +956,8 @@ type ArticleIdTypePubIdtype =
 
 export interface ArticleMeta extends UnistNode {
   type: 'element'
-  tagName: 'articleMeta'
-  properties: {
+  name: 'articleMeta'
+  attributes: {
     id?: string
   }
 
@@ -1060,8 +1060,8 @@ export interface ArticleMetaChildrenMap {
 
 export interface ArticleTitle extends UnistNode {
   type: 'element'
-  tagName: 'articleTitle'
-  properties: {
+  name: 'articleTitle'
+  attributes: {
     id?: string
   }
 
@@ -1146,8 +1146,8 @@ export interface ArticleTitleChildrenMap {
 
 export interface Article extends UnistNode {
   type: 'element'
-  tagName: 'article'
-  properties: {
+  name: 'article'
+  attributes: {
     articleType?: string
     id?: string
     specificUse?: string
@@ -1189,8 +1189,8 @@ type ArticleTypeDtdVersion =
 
 export interface ArticleVersionalternatives extends UnistNode {
   type: 'element'
-  tagName: 'articleVersionalternatives'
-  properties: {
+  name: 'articleVersionalternatives'
+  attributes: {
     id?: string
   }
 
@@ -1203,8 +1203,8 @@ export interface ArticleVersionalternativesChildrenMap {
 
 export interface ArticleVersion extends UnistNode {
   type: 'element'
-  tagName: 'articleVersion'
-  properties: {
+  name: 'articleVersion'
+  attributes: {
     articleVersiontype?: string
     assigningAuthority?: string
     designator?: string
@@ -1227,8 +1227,8 @@ export interface ArticleVersionChildrenMap {
 
 export interface Attrib extends UnistNode {
   type: 'element'
-  tagName: 'attrib'
-  properties: {
+  name: 'attrib'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -1312,8 +1312,8 @@ export interface AttribChildrenMap {
 
 export interface AuthorComment extends UnistNode {
   type: 'element'
-  tagName: 'authorComment'
-  properties: {
+  name: 'authorComment'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -1331,8 +1331,8 @@ export interface AuthorCommentChildrenMap {
 
 export interface AuthorNotes extends UnistNode {
   type: 'element'
-  tagName: 'authorNotes'
-  properties: {
+  name: 'authorNotes'
+  attributes: {
     id?: string
     rid?: string
     specificUse?: string
@@ -1355,8 +1355,8 @@ export interface AuthorNotesChildrenMap {
 
 export interface AwardDesc extends UnistNode {
   type: 'childless'
-  tagName: 'awardDesc'
-  properties: {
+  name: 'awardDesc'
+  attributes: {
     hreflang?: string
     id?: string
   }
@@ -1364,8 +1364,8 @@ export interface AwardDesc extends UnistNode {
 
 export interface AwardGroup extends UnistNode {
   type: 'element'
-  tagName: 'awardGroup'
-  properties: {
+  name: 'awardGroup'
+  attributes: {
     awardType?: string
     hreflang?: string
     id?: string
@@ -1394,8 +1394,8 @@ export interface AwardGroupChildrenMap {
 
 export interface AwardId extends UnistNode {
   type: 'element'
-  tagName: 'awardId'
-  properties: {
+  name: 'awardId'
+  attributes: {
     assigningAuthority?: string
     awardIdtype?: string
     awardType?: string
@@ -1464,8 +1464,8 @@ export interface AwardIdChildrenMap {
 
 export interface AwardName extends UnistNode {
   type: 'childless'
-  tagName: 'awardName'
-  properties: {
+  name: 'awardName'
+  attributes: {
     hreflang?: string
     id?: string
   }
@@ -1473,8 +1473,8 @@ export interface AwardName extends UnistNode {
 
 export interface Back extends UnistNode {
   type: 'element'
-  tagName: 'back'
-  properties: {
+  name: 'back'
+  attributes: {
     id?: string
   }
 
@@ -1505,8 +1505,8 @@ export interface BackChildrenMap {
 
 export interface Bio extends UnistNode {
   type: 'element'
-  tagName: 'bio'
-  properties: {
+  name: 'bio'
+  attributes: {
     hreflang?: string
     id?: string
     rid?: string
@@ -1602,8 +1602,8 @@ export interface BioChildrenMap {
 
 export interface BlockAlternatives extends UnistNode {
   type: 'element'
-  tagName: 'blockAlternatives'
-  properties: {
+  name: 'blockAlternatives'
+  attributes: {
     id?: string
   }
 
@@ -1626,8 +1626,8 @@ export interface BlockAlternativesChildrenMap {
 
 export interface Body extends UnistNode {
   type: 'element'
-  tagName: 'body'
-  properties: {
+  name: 'body'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -1709,8 +1709,8 @@ export interface BodyChildrenMap {
 
 export interface Bold extends UnistNode {
   type: 'element'
-  tagName: 'bold'
-  properties: {
+  name: 'bold'
+  attributes: {
     id?: string
 
     toggle?: BoldTypeToggle
@@ -1798,9 +1798,9 @@ type BoldTypeToggle = 'no' | 'yes'
 
 export interface BoxedText extends UnistNode {
   type: 'element'
-  tagName: 'boxedText'
+  name: 'boxedText'
   text?: Text
-  properties: {
+  attributes: {
     id?: string
     specificUse?: string
     orientation?: BoxedTextTypeOrientation
@@ -1904,16 +1904,16 @@ type BoxedTextTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
 export interface Break extends UnistNode {
   type: 'childless'
-  tagName: 'break'
-  properties: {
+  name: 'break'
+  attributes: {
     id?: string
   }
 }
 
 export interface Caption extends UnistNode {
   type: 'element'
-  tagName: 'caption'
-  properties: {
+  name: 'caption'
+  attributes: {
     id?: string
     specificUse?: string
     style?: string
@@ -1932,8 +1932,8 @@ export interface CaptionChildrenMap {
 
 export interface ChapterTitle extends UnistNode {
   type: 'element'
-  tagName: 'chapterTitle'
-  properties: {
+  name: 'chapterTitle'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -2003,8 +2003,8 @@ export interface ChapterTitleChildrenMap {
 
 export interface ChemStruct extends UnistNode {
   type: 'element'
-  tagName: 'chemStruct'
-  properties: {
+  name: 'chemStruct'
+  attributes: {
     hreflang?: string
     id?: string
     specificUse?: string
@@ -2087,9 +2087,9 @@ export interface ChemStructChildrenMap {
 
 export interface ChemStructwrap extends UnistNode {
   type: 'element'
-  tagName: 'chemStructwrap'
+  name: 'chemStructwrap'
   text?: Text
-  properties: {
+  attributes: {
     id?: string
     specificUse?: string
     orientation?: ChemStructwrapTypeOrientation
@@ -2146,8 +2146,8 @@ type ChemStructwrapTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
 export interface CitationAlternatives extends UnistNode {
   type: 'element'
-  tagName: 'citationAlternatives'
-  properties: {
+  name: 'citationAlternatives'
+  attributes: {
     id?: string
   }
 
@@ -2166,8 +2166,8 @@ export interface CitationAlternativesChildrenMap {
 
 export interface City extends UnistNode {
   type: 'element'
-  tagName: 'city'
-  properties: {
+  name: 'city'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -2181,8 +2181,8 @@ export interface CityChildrenMap {
 
 export interface Code extends UnistNode {
   type: 'element'
-  tagName: 'code'
-  properties: {
+  name: 'code'
+  attributes: {
     codeType?: string
     codeVersion?: string
     platforms?: string
@@ -2267,8 +2267,8 @@ type CodeTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
 export interface Colgroup extends UnistNode {
   type: 'element'
-  tagName: 'colgroup'
-  properties: {
+  name: 'colgroup'
+  attributes: {
     align?: ColgroupTypeAlign
     char?: string
     charoff?: string
@@ -2293,8 +2293,8 @@ type ColgroupTypeValign = 'UnistNodeline' | 'bottom' | 'middle' | 'top'
 
 export interface CollabAlternatives extends UnistNode {
   type: 'element'
-  tagName: 'collabAlternatives'
-  properties: {
+  name: 'collabAlternatives'
+  attributes: {
     id?: string
   }
 
@@ -2307,8 +2307,8 @@ export interface CollabAlternativesChildrenMap {
 
 export interface Collab extends UnistNode {
   type: 'element'
-  tagName: 'collab'
-  properties: {
+  name: 'collab'
+  attributes: {
     collabType?: string
     hreflang?: string
     id?: string
@@ -2419,8 +2419,8 @@ export interface CollabChildrenMap {
 
 export interface Col extends UnistNode {
   type: 'element'
-  tagName: 'col'
-  properties: {
+  name: 'col'
+  attributes: {
     align?: ColTypeAlign
     char?: string
     charoff?: string
@@ -2444,8 +2444,8 @@ type ColTypeValign = 'UnistNodeline' | 'bottom' | 'middle' | 'top'
 
 export interface Comment extends UnistNode {
   type: 'element'
-  tagName: 'comment'
-  properties: {
+  name: 'comment'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -2531,8 +2531,8 @@ export interface CommentChildrenMap {
 
 export interface CompoundKwdpart extends UnistNode {
   type: 'element'
-  tagName: 'compoundKwdpart'
-  properties: {
+  name: 'compoundKwdpart'
+  attributes: {
     id?: string
   }
 
@@ -2593,8 +2593,8 @@ export interface CompoundKwdpartChildrenMap {
 
 export interface CompoundKwd extends UnistNode {
   type: 'element'
-  tagName: 'compoundKwd'
-  properties: {
+  name: 'compoundKwd'
+  attributes: {
     assigningAuthority?: string
     id?: string
     vocab?: string
@@ -2614,8 +2614,8 @@ export interface CompoundKwdChildrenMap {
 
 export interface CompoundSubjectpart extends UnistNode {
   type: 'element'
-  tagName: 'compoundSubjectpart'
-  properties: {
+  name: 'compoundSubjectpart'
+  attributes: {
     id?: string
   }
 
@@ -2670,8 +2670,8 @@ export interface CompoundSubjectpartChildrenMap {
 
 export interface CompoundSubject extends UnistNode {
   type: 'element'
-  tagName: 'compoundSubject'
-  properties: {
+  name: 'compoundSubject'
+  attributes: {
     assigningAuthority?: string
     id?: string
     vocab?: string
@@ -2691,8 +2691,8 @@ export interface CompoundSubjectChildrenMap {
 
 export interface ConfAcronym extends UnistNode {
   type: 'element'
-  tagName: 'confAcronym'
-  properties: {
+  name: 'confAcronym'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -2706,8 +2706,8 @@ export interface ConfAcronymChildrenMap {
 
 export interface ConfDate extends UnistNode {
   type: 'element'
-  tagName: 'confDate'
-  properties: {
+  name: 'confDate'
+  attributes: {
     calendar?: string
     id?: string
     iso8601Date?: string
@@ -2723,8 +2723,8 @@ export interface ConfDateChildrenMap {
 
 export interface Conference extends UnistNode {
   type: 'element'
-  tagName: 'conference'
-  properties: {
+  name: 'conference'
+  attributes: {
     hreflang?: string
     id?: string
     specificUse?: string
@@ -2753,8 +2753,8 @@ export interface ConferenceChildrenMap {
 
 export interface ConfLoc extends UnistNode {
   type: 'element'
-  tagName: 'confLoc'
-  properties: {
+  name: 'confLoc'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -2786,8 +2786,8 @@ export interface ConfLocChildrenMap {
 
 export interface ConfName extends UnistNode {
   type: 'element'
-  tagName: 'confName'
-  properties: {
+  name: 'confName'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -2801,8 +2801,8 @@ export interface ConfNameChildrenMap {
 
 export interface ConfNum extends UnistNode {
   type: 'element'
-  tagName: 'confNum'
-  properties: {
+  name: 'confNum'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -2816,8 +2816,8 @@ export interface ConfNumChildrenMap {
 
 export interface ConfSponsor extends UnistNode {
   type: 'element'
-  tagName: 'confSponsor'
-  properties: {
+  name: 'confSponsor'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -2835,8 +2835,8 @@ export interface ConfSponsorChildrenMap {
 
 export interface ConfTheme extends UnistNode {
   type: 'element'
-  tagName: 'confTheme'
-  properties: {
+  name: 'confTheme'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -2902,8 +2902,8 @@ export interface ConfThemeChildrenMap {
 
 export interface ContribGroup extends UnistNode {
   type: 'element'
-  tagName: 'contribGroup'
-  properties: {
+  name: 'contribGroup'
+  attributes: {
     id?: string
     specificUse?: string
     contentType?: string
@@ -2940,8 +2940,8 @@ export interface ContribGroupChildrenMap {
 
 export interface ContribId extends UnistNode {
   type: 'element'
-  tagName: 'contribId'
-  properties: {
+  name: 'contribId'
+  attributes: {
     assigningAuthority?: string
     contribIdtype?: string
     id?: string
@@ -2960,8 +2960,8 @@ type ContribIdTypeAuthenticated = 'false' | 'true'
 
 export interface Contrib extends UnistNode {
   type: 'element'
-  tagName: 'contrib'
-  properties: {
+  name: 'contrib'
+  attributes: {
     contribType?: string
     hreflang?: string
     id?: string
@@ -3024,8 +3024,8 @@ type ContribTypeEqualContrib = 'no' | 'yes'
 
 export interface ContributedResourcegroup extends UnistNode {
   type: 'element'
-  tagName: 'contributedResourcegroup'
-  properties: {
+  name: 'contributedResourcegroup'
+  attributes: {
     id?: string
     resourceType?: string
     specificUse?: string
@@ -3044,8 +3044,8 @@ export interface ContributedResourcegroupChildrenMap {
 
 export interface CopyrightHolder extends UnistNode {
   type: 'element'
-  tagName: 'copyrightHolder'
-  properties: {
+  name: 'copyrightHolder'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -3067,8 +3067,8 @@ export interface CopyrightHolderChildrenMap {
 
 export interface CopyrightStatement extends UnistNode {
   type: 'element'
-  tagName: 'copyrightStatement'
-  properties: {
+  name: 'copyrightStatement'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -3118,8 +3118,8 @@ export interface CopyrightStatementChildrenMap {
 
 export interface CopyrightYear extends UnistNode {
   type: 'element'
-  tagName: 'copyrightYear'
-  properties: {
+  name: 'copyrightYear'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -3133,8 +3133,8 @@ export interface CopyrightYearChildrenMap {
 
 export interface Corresp extends UnistNode {
   type: 'element'
-  tagName: 'corresp'
-  properties: {
+  name: 'corresp'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -3204,8 +3204,8 @@ export interface CorrespChildrenMap {
 
 export interface Country extends UnistNode {
   type: 'element'
-  tagName: 'country'
-  properties: {
+  name: 'country'
+  attributes: {
     country?: string
     id?: string
     specificUse?: string
@@ -3220,8 +3220,8 @@ export interface CountryChildrenMap {
 
 export interface Counts extends UnistNode {
   type: 'element'
-  tagName: 'counts'
-  properties: {
+  name: 'counts'
+  attributes: {
     id?: string
   }
 
@@ -3246,8 +3246,8 @@ export interface CountsChildrenMap {
 
 export interface Count extends UnistNode {
   type: 'childless'
-  tagName: 'count'
-  properties: {
+  name: 'count'
+  attributes: {
     count: string
     countType: string
     id?: string
@@ -3256,8 +3256,8 @@ export interface Count extends UnistNode {
 
 export interface CustomMetagroup extends UnistNode {
   type: 'element'
-  tagName: 'customMetagroup'
-  properties: {
+  name: 'customMetagroup'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -3273,8 +3273,8 @@ export interface CustomMetagroupChildrenMap {
 
 export interface CustomMeta extends UnistNode {
   type: 'element'
-  tagName: 'customMeta'
-  properties: {
+  name: 'customMeta'
+  attributes: {
     assigningAuthority?: string
     hreflang?: string
     id?: string
@@ -3296,8 +3296,8 @@ export interface CustomMetaChildrenMap {
 
 export interface DataTitle extends UnistNode {
   type: 'element'
-  tagName: 'dataTitle'
-  properties: {
+  name: 'dataTitle'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -3353,8 +3353,8 @@ export interface DataTitleChildrenMap {
 
 export interface DateIncitation extends UnistNode {
   type: 'element'
-  tagName: 'dateIncitation'
-  properties: {
+  name: 'dateIncitation'
+  attributes: {
     calendar?: string
     id?: string
     iso8601Date?: string
@@ -3380,8 +3380,8 @@ export interface DateIncitationChildrenMap {
 
 export interface Date extends UnistNode {
   type: 'element'
-  tagName: 'date'
-  properties: {
+  name: 'date'
+  attributes: {
     calendar?: string
     dateType?: string
     id?: string
@@ -3407,8 +3407,8 @@ export interface DateChildrenMap {
 
 export interface Day extends UnistNode {
   type: 'element'
-  tagName: 'day'
-  properties: {
+  name: 'day'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -3422,8 +3422,8 @@ export interface DayChildrenMap {
 
 export interface DefHead extends UnistNode {
   type: 'element'
-  tagName: 'defHead'
-  properties: {
+  name: 'defHead'
+  attributes: {
     id?: string
   }
 
@@ -3506,8 +3506,8 @@ export interface DefHeadChildrenMap {
 
 export interface DefItem extends UnistNode {
   type: 'element'
-  tagName: 'defItem'
-  properties: {
+  name: 'defItem'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -3523,8 +3523,8 @@ export interface DefItemChildrenMap {
 
 export interface DefList extends UnistNode {
   type: 'element'
-  tagName: 'defList'
-  properties: {
+  name: 'defList'
+  attributes: {
     continuedFrom?: string
     id?: string
     listContent?: string
@@ -3552,8 +3552,8 @@ export interface DefListChildrenMap {
 
 export interface Def extends UnistNode {
   type: 'element'
-  tagName: 'def'
-  properties: {
+  name: 'def'
+  attributes: {
     id?: string
     rid?: string
     specificUse?: string
@@ -3568,8 +3568,8 @@ export interface DefChildrenMap {
 
 export interface Degrees extends UnistNode {
   type: 'element'
-  tagName: 'degrees'
-  properties: {
+  name: 'degrees'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -3583,8 +3583,8 @@ export interface DegreesChildrenMap {
 
 export interface DispFormulagroup extends UnistNode {
   type: 'element'
-  tagName: 'dispFormulagroup'
-  properties: {
+  name: 'dispFormulagroup'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -3623,8 +3623,8 @@ export interface DispFormulagroupChildrenMap {
 
 export interface DispFormula extends UnistNode {
   type: 'element'
-  tagName: 'dispFormula'
-  properties: {
+  name: 'dispFormula'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -3715,8 +3715,8 @@ export interface DispFormulaChildrenMap {
 
 export interface DispQuote extends UnistNode {
   type: 'element'
-  tagName: 'dispQuote'
-  properties: {
+  name: 'dispQuote'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -3804,8 +3804,8 @@ export interface DispQuoteChildrenMap {
 
 export interface Edition extends UnistNode {
   type: 'element'
-  tagName: 'edition'
-  properties: {
+  name: 'edition'
+  attributes: {
     designator?: string
     id?: string
     specificUse?: string
@@ -3824,8 +3824,8 @@ export interface EditionChildrenMap {
 
 export interface ElementCitation extends UnistNode {
   type: 'element'
-  tagName: 'elementCitation'
-  properties: {
+  name: 'elementCitation'
+  attributes: {
     hreflang?: string
     id?: string
     publicationFormat?: string
@@ -4016,8 +4016,8 @@ export interface ElementCitationChildrenMap {
 
 export interface ElocationId extends UnistNode {
   type: 'element'
-  tagName: 'elocationId'
-  properties: {
+  name: 'elocationId'
+  attributes: {
     id?: string
     seq?: string
     specificUse?: string
@@ -4032,8 +4032,8 @@ export interface ElocationIdChildrenMap {
 
 export interface Email extends UnistNode {
   type: 'element'
-  tagName: 'email'
-  properties: {
+  name: 'email'
+  attributes: {
     hreflang?: string
     id?: string
     specificUse?: string
@@ -4048,8 +4048,8 @@ export interface EmailChildrenMap {
 
 export interface EquationCount extends UnistNode {
   type: 'childless'
-  tagName: 'equationCount'
-  properties: {
+  name: 'equationCount'
+  attributes: {
     count: string
     id?: string
   }
@@ -4057,8 +4057,8 @@ export interface EquationCount extends UnistNode {
 
 export interface Era extends UnistNode {
   type: 'element'
-  tagName: 'era'
-  properties: {
+  name: 'era'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -4072,8 +4072,8 @@ export interface EraChildrenMap {
 
 export interface Etal extends UnistNode {
   type: 'childless'
-  tagName: 'etal'
-  properties: {
+  name: 'etal'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -4081,8 +4081,8 @@ export interface Etal extends UnistNode {
 
 export interface EventDesc extends UnistNode {
   type: 'element'
-  tagName: 'eventDesc'
-  properties: {
+  name: 'eventDesc'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -4120,8 +4120,8 @@ export interface EventDescChildrenMap {
 
 export interface Event extends UnistNode {
   type: 'element'
-  tagName: 'event'
-  properties: {
+  name: 'event'
+  attributes: {
     eventType?: string
     id?: string
     specificUse?: string
@@ -4160,8 +4160,8 @@ export interface EventChildrenMap {
 
 export interface Explanation extends UnistNode {
   type: 'element'
-  tagName: 'explanation'
-  properties: {
+  name: 'explanation'
+  attributes: {
     id?: string
     pointerToexplained: string
     specificUse?: string
@@ -4258,8 +4258,8 @@ export interface ExplanationChildrenMap {
 
 export interface ExtendedBy extends UnistNode {
   type: 'childless'
-  tagName: 'extendedBy'
-  properties: {
+  name: 'extendedBy'
+  attributes: {
     assigningAuthority?: string
     designator?: string
     hreflang?: string
@@ -4273,8 +4273,8 @@ export interface ExtendedBy extends UnistNode {
 
 export interface ExtLink extends UnistNode {
   type: 'element'
-  tagName: 'extLink'
-  properties: {
+  name: 'extLink'
+  attributes: {
     assigningAuthority?: string
     extLinktype?: string
     hreflang?: string
@@ -4293,8 +4293,8 @@ export interface ExtLinkChildrenMap {
 
 export interface Fax extends UnistNode {
   type: 'element'
-  tagName: 'fax'
-  properties: {
+  name: 'fax'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -4308,8 +4308,8 @@ export interface FaxChildrenMap {
 
 export interface FigCount extends UnistNode {
   type: 'childless'
-  tagName: 'figCount'
-  properties: {
+  name: 'figCount'
+  attributes: {
     count: string
     id?: string
   }
@@ -4317,8 +4317,8 @@ export interface FigCount extends UnistNode {
 
 export interface FigGroup extends UnistNode {
   type: 'element'
-  tagName: 'figGroup'
-  properties: {
+  name: 'figGroup'
+  attributes: {
     id?: string
     specificUse?: string
     orientation?: FigGroupTypeOrientation
@@ -4370,8 +4370,8 @@ type FigGroupTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
 export interface Fig extends UnistNode {
   type: 'element'
-  tagName: 'fig'
-  properties: {
+  name: 'fig'
+  attributes: {
     figType?: string
     id?: string
     specificUse?: string
@@ -4451,8 +4451,8 @@ type FigTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
 export interface FixedCase extends UnistNode {
   type: 'element'
-  tagName: 'fixedCase'
-  properties: {
+  name: 'fixedCase'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -4538,8 +4538,8 @@ export interface FixedCaseChildrenMap {
 
 export interface FloatsGroup extends UnistNode {
   type: 'element'
-  tagName: 'floatsGroup'
-  properties: {
+  name: 'floatsGroup'
+  attributes: {
     id?: string
   }
 
@@ -4576,8 +4576,8 @@ export interface FloatsGroupChildrenMap {
 
 export interface FnGroup extends UnistNode {
   type: 'element'
-  tagName: 'fnGroup'
-  properties: {
+  name: 'fnGroup'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -4597,8 +4597,8 @@ export interface FnGroupChildrenMap {
 
 export interface Fn extends UnistNode {
   type: 'element'
-  tagName: 'fn'
-  properties: {
+  name: 'fn'
+  attributes: {
     id?: string
     specificUse?: string
     symbol?: string
@@ -4641,8 +4641,8 @@ type FnTypeFnType =
 
 export interface Fpage extends UnistNode {
   type: 'element'
-  tagName: 'fpage'
-  properties: {
+  name: 'fpage'
+  attributes: {
     id?: string
     seq?: string
     specificUse?: string
@@ -4657,8 +4657,8 @@ export interface FpageChildrenMap {
 
 export interface FrontStub extends UnistNode {
   type: 'element'
-  tagName: 'frontStub'
-  properties: {
+  name: 'frontStub'
+  attributes: {
     id?: string
   }
 
@@ -4761,8 +4761,8 @@ export interface FrontStubChildrenMap {
 
 export interface Front extends UnistNode {
   type: 'element'
-  tagName: 'front'
-  properties: {
+  name: 'front'
+  attributes: {
     id?: string
   }
 
@@ -4779,8 +4779,8 @@ export interface FrontChildrenMap {
 
 export interface FundingGroup extends UnistNode {
   type: 'element'
-  tagName: 'fundingGroup'
-  properties: {
+  name: 'fundingGroup'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -4798,8 +4798,8 @@ export interface FundingGroupChildrenMap {
 
 export interface FundingSource extends UnistNode {
   type: 'element'
-  tagName: 'fundingSource'
-  properties: {
+  name: 'fundingSource'
+  attributes: {
     country?: string
     hreflang?: string
     id?: string
@@ -4871,8 +4871,8 @@ export interface FundingSourceChildrenMap {
 
 export interface FundingStatement extends UnistNode {
   type: 'element'
-  tagName: 'fundingStatement'
-  properties: {
+  name: 'fundingStatement'
+  attributes: {
     id?: string
     rid?: string
     specificUse?: string
@@ -4921,8 +4921,8 @@ export interface FundingStatementChildrenMap {
 
 export interface GivenNames extends UnistNode {
   type: 'element'
-  tagName: 'givenNames'
-  properties: {
+  name: 'givenNames'
+  attributes: {
     id?: string
     initials?: string
   }
@@ -4931,8 +4931,8 @@ export interface GivenNames extends UnistNode {
 
 export interface Glossary extends UnistNode {
   type: 'element'
-  tagName: 'glossary'
-  properties: {
+  name: 'glossary'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -5020,8 +5020,8 @@ export interface GlossaryChildrenMap {
 
 export interface GlyphData extends UnistNode {
   type: 'childless'
-  tagName: 'glyphData'
-  properties: {
+  name: 'glyphData'
+  attributes: {
     fontchar?: string
     fontname?: string
     format?: string
@@ -5034,8 +5034,8 @@ export interface GlyphData extends UnistNode {
 
 export interface GlyphRef extends UnistNode {
   type: 'childless'
-  tagName: 'glyphRef'
-  properties: {
+  name: 'glyphRef'
+  attributes: {
     glyphData?: string
     id?: string
   }
@@ -5043,8 +5043,8 @@ export interface GlyphRef extends UnistNode {
 
 export interface Gov extends UnistNode {
   type: 'element'
-  tagName: 'gov'
-  properties: {
+  name: 'gov'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -5060,9 +5060,9 @@ export interface GovChildrenMap {
 
 export interface Graphic extends UnistNode {
   type: 'element'
-  tagName: 'graphic'
+  name: 'graphic'
   text?: Text
-  properties: {
+  attributes: {
     orientation?: GraphicTypeOrientation
     position?: GraphicTypePosition
     hreflang?: string
@@ -5111,8 +5111,8 @@ type GraphicTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
 export interface History extends UnistNode {
   type: 'element'
-  tagName: 'history'
-  properties: {
+  name: 'history'
+  attributes: {
     id?: string
   }
 
@@ -5125,16 +5125,16 @@ export interface HistoryChildrenMap {
 
 export interface Hr extends UnistNode {
   type: 'childless'
-  tagName: 'hr'
-  properties: {
+  name: 'hr'
+  attributes: {
     id?: string
   }
 }
 
 export interface IndexTermrangeend extends UnistNode {
   type: 'childless'
-  tagName: 'indexTermrangeend'
-  properties: {
+  name: 'indexTermrangeend'
+  attributes: {
     id?: string
     rid: string
   }
@@ -5142,8 +5142,8 @@ export interface IndexTermrangeend extends UnistNode {
 
 export interface IndexTerm extends UnistNode {
   type: 'element'
-  tagName: 'indexTerm'
-  properties: {
+  name: 'indexTerm'
+  attributes: {
     id?: string
     indexType?: string
     specificUse?: string
@@ -5170,8 +5170,8 @@ export interface IndexTermChildrenMap {
 
 export interface InlineFormula extends UnistNode {
   type: 'element'
-  tagName: 'inlineFormula'
-  properties: {
+  name: 'inlineFormula'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -5233,8 +5233,8 @@ export interface InlineFormulaChildrenMap {
 
 export interface InlineGraphic extends UnistNode {
   type: 'element'
-  tagName: 'inlineGraphic'
-  properties: {
+  name: 'inlineGraphic'
+  attributes: {
     UnistNodelineShift?: string
     hreflang?: string
     id?: string
@@ -5257,8 +5257,8 @@ export interface InlineGraphicChildrenMap {
 
 export interface InlineMedia extends UnistNode {
   type: 'element'
-  tagName: 'inlineMedia'
-  properties: {
+  name: 'inlineMedia'
+  attributes: {
     hreflang?: string
     id?: string
     mimeSubtype?: string
@@ -5319,8 +5319,8 @@ export interface InlineMediaChildrenMap {
 
 export interface InlineSupplementarymaterial extends UnistNode {
   type: 'element'
-  tagName: 'inlineSupplementarymaterial'
-  properties: {
+  name: 'inlineSupplementarymaterial'
+  attributes: {
     hreflang?: string
     id?: string
     mimeSubtype?: string
@@ -5377,8 +5377,8 @@ export interface InlineSupplementarymaterialChildrenMap {
 
 export interface InstitutionId extends UnistNode {
   type: 'element'
-  tagName: 'institutionId'
-  properties: {
+  name: 'institutionId'
+  attributes: {
     assigningAuthority?: string
     id?: string
     institutionIdtype?: string
@@ -5396,8 +5396,8 @@ export interface InstitutionIdChildrenMap {
 
 export interface Institution extends UnistNode {
   type: 'element'
-  tagName: 'institution'
-  properties: {
+  name: 'institution'
+  attributes: {
     hreflang?: string
     id?: string
     specificUse?: string
@@ -5416,8 +5416,8 @@ export interface InstitutionChildrenMap {
 
 export interface InstitutionWrap extends UnistNode {
   type: 'element'
-  tagName: 'institutionWrap'
-  properties: {
+  name: 'institutionWrap'
+  attributes: {
     id?: string
   }
 
@@ -5432,8 +5432,8 @@ export interface InstitutionWrapChildrenMap {
 
 export interface Isbn extends UnistNode {
   type: 'element'
-  tagName: 'isbn'
-  properties: {
+  name: 'isbn'
+  attributes: {
     assigningAuthority?: string
     id?: string
     publicationFormat?: string
@@ -5449,8 +5449,8 @@ export interface IsbnChildrenMap {
 
 export interface IssnL extends UnistNode {
   type: 'childless'
-  tagName: 'issnL'
-  properties: {
+  name: 'issnL'
+  attributes: {
     assigningAuthority?: string
     id?: string
     specificUse?: string
@@ -5459,8 +5459,8 @@ export interface IssnL extends UnistNode {
 
 export interface Issn extends UnistNode {
   type: 'element'
-  tagName: 'issn'
-  properties: {
+  name: 'issn'
+  attributes: {
     assigningAuthority?: string
     id?: string
     pubType?: string
@@ -5477,8 +5477,8 @@ export interface IssnChildrenMap {
 
 export interface IssueId extends UnistNode {
   type: 'element'
-  tagName: 'issueId'
-  properties: {
+  name: 'issueId'
+  attributes: {
     assigningAuthority?: string
     hreflang?: string
     id?: string
@@ -5495,8 +5495,8 @@ export interface IssueIdChildrenMap {
 
 export interface IssuePart extends UnistNode {
   type: 'element'
-  tagName: 'issuePart'
-  properties: {
+  name: 'issuePart'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -5510,8 +5510,8 @@ export interface IssuePartChildrenMap {
 
 export interface IssueSponsor extends UnistNode {
   type: 'element'
-  tagName: 'issueSponsor'
-  properties: {
+  name: 'issueSponsor'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -5525,8 +5525,8 @@ export interface IssueSponsorChildrenMap {
 
 export interface IssueSubtitle extends UnistNode {
   type: 'element'
-  tagName: 'issueSubtitle'
-  properties: {
+  name: 'issueSubtitle'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -5540,8 +5540,8 @@ export interface IssueSubtitleChildrenMap {
 
 export interface IssueTitlegroup extends UnistNode {
   type: 'element'
-  tagName: 'issueTitlegroup'
-  properties: {
+  name: 'issueTitlegroup'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -5561,8 +5561,8 @@ export interface IssueTitlegroupChildrenMap {
 
 export interface IssueTitle extends UnistNode {
   type: 'element'
-  tagName: 'issueTitle'
-  properties: {
+  name: 'issueTitle'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -5576,8 +5576,8 @@ export interface IssueTitleChildrenMap {
 
 export interface Issue extends UnistNode {
   type: 'element'
-  tagName: 'issue'
-  properties: {
+  name: 'issue'
+  attributes: {
     id?: string
     seq?: string
     specificUse?: string
@@ -5592,8 +5592,8 @@ export interface IssueChildrenMap {
 
 export interface Italic extends UnistNode {
   type: 'element'
-  tagName: 'italic'
-  properties: {
+  name: 'italic'
+  attributes: {
     id?: string
     specificUse?: string
     toggle?: ItalicTypeToggle
@@ -5680,8 +5680,8 @@ type ItalicTypeToggle = 'no' | 'yes'
 
 export interface JournalId extends UnistNode {
   type: 'childless'
-  tagName: 'journalId'
-  properties: {
+  name: 'journalId'
+  attributes: {
     assigningAuthority?: string
     id?: string
     journalIdtype?: string
@@ -5691,8 +5691,8 @@ export interface JournalId extends UnistNode {
 
 export interface JournalMeta extends UnistNode {
   type: 'element'
-  tagName: 'journalMeta'
-  properties: {
+  name: 'journalMeta'
+  attributes: {
     id?: string
   }
 
@@ -5725,8 +5725,8 @@ export interface JournalMetaChildrenMap {
 
 export interface JournalSubtitle extends UnistNode {
   type: 'element'
-  tagName: 'journalSubtitle'
-  properties: {
+  name: 'journalSubtitle'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -5740,8 +5740,8 @@ export interface JournalSubtitleChildrenMap {
 
 export interface JournalTitlegroup extends UnistNode {
   type: 'element'
-  tagName: 'journalTitlegroup'
-  properties: {
+  name: 'journalTitlegroup'
+  attributes: {
     id?: string
   }
 
@@ -5762,8 +5762,8 @@ export interface JournalTitlegroupChildrenMap {
 
 export interface JournalTitle extends UnistNode {
   type: 'element'
-  tagName: 'journalTitle'
-  properties: {
+  name: 'journalTitle'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -5777,8 +5777,8 @@ export interface JournalTitleChildrenMap {
 
 export interface KwdGroup extends UnistNode {
   type: 'element'
-  tagName: 'kwdGroup'
-  properties: {
+  name: 'kwdGroup'
+  attributes: {
     assigningAuthority?: string
     id?: string
     kwdGrouptype?: string
@@ -5804,8 +5804,8 @@ export interface KwdGroupChildrenMap {
 
 export interface Kwd extends UnistNode {
   type: 'element'
-  tagName: 'kwd'
-  properties: {
+  name: 'kwd'
+  attributes: {
     assigningAuthority?: string
     id?: string
     vocab?: string
@@ -5825,8 +5825,8 @@ export interface KwdChildrenMap {
 
 export interface Label extends UnistNode {
   type: 'element'
-  tagName: 'label'
-  properties: {
+  name: 'label'
+  attributes: {
     alt?: string
     id?: string
   }
@@ -5876,8 +5876,8 @@ export interface LabelChildrenMap {
 
 export interface LicenseP extends UnistNode {
   type: 'element'
-  tagName: 'licenseP'
-  properties: {
+  name: 'licenseP'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -6035,8 +6035,8 @@ export interface LicensePChildrenMap {
 
 export interface License extends UnistNode {
   type: 'element'
-  tagName: 'license'
-  properties: {
+  name: 'license'
+  attributes: {
     hreflang?: string
     id?: string
     licenseType?: string
@@ -6052,8 +6052,8 @@ export interface LicenseChildrenMap {
 
 export interface ListItem extends UnistNode {
   type: 'element'
-  tagName: 'listItem'
-  properties: {
+  name: 'listItem'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -6075,8 +6075,8 @@ export interface ListItemChildrenMap {
 
 export interface List extends UnistNode {
   type: 'element'
-  tagName: 'list'
-  properties: {
+  name: 'list'
+  attributes: {
     continuedFrom?: string
     id?: string
     listContent?: string
@@ -6100,8 +6100,8 @@ export interface ListChildrenMap {
 
 export interface LongDesc extends UnistNode {
   type: 'element'
-  tagName: 'longDesc'
-  properties: {
+  name: 'longDesc'
+  attributes: {
     hreflang?: string
     id?: string
     specificUse?: string
@@ -6116,8 +6116,8 @@ export interface LongDescChildrenMap {
 
 export interface Lpage extends UnistNode {
   type: 'element'
-  tagName: 'lpage'
-  properties: {
+  name: 'lpage'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -6131,9 +6131,9 @@ export interface LpageChildrenMap {
 
 export interface Media extends UnistNode {
   type: 'element'
-  tagName: 'media'
+  name: 'media'
   text?: Text
-  properties: {
+  attributes: {
     hreflang?: string
     id?: string
     mimeSubtype?: string
@@ -6182,16 +6182,16 @@ type MediaTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
 export interface MetaName extends UnistNode {
   type: 'childless'
-  tagName: 'metaName'
-  properties: {
+  name: 'metaName'
+  attributes: {
     id?: string
   }
 }
 
 export interface MetaValue extends UnistNode {
   type: 'element'
-  tagName: 'metaValue'
-  properties: {
+  name: 'metaValue'
+  attributes: {
     id?: string
   }
 
@@ -6274,8 +6274,8 @@ export interface MetaValueChildrenMap {
 
 export interface MilestoneEnd extends UnistNode {
   type: 'element'
-  tagName: 'milestoneEnd'
-  properties: {
+  name: 'milestoneEnd'
+  attributes: {
     id?: string
     rationale?: string
     rid?: string
@@ -6291,8 +6291,8 @@ export interface MilestoneEndChildrenMap {
 
 export interface MilestoneStart extends UnistNode {
   type: 'element'
-  tagName: 'milestoneStart'
-  properties: {
+  name: 'milestoneStart'
+  attributes: {
     id?: string
     rationale?: string
     rid?: string
@@ -6308,8 +6308,8 @@ export interface MilestoneStartChildrenMap {
 
 export interface MixedCitation extends UnistNode {
   type: 'element'
-  tagName: 'mixedCitation'
-  properties: {
+  name: 'mixedCitation'
+  attributes: {
     hreflang?: string
     id?: string
     publicationFormat?: string
@@ -6500,8 +6500,8 @@ export interface MixedCitationChildrenMap {
 
 export interface Monospace extends UnistNode {
   type: 'element'
-  tagName: 'monospace'
-  properties: {
+  name: 'monospace'
+  attributes: {
     id?: string
     specificUse?: string
     toggle?: MonospaceTypeToggle
@@ -6588,8 +6588,8 @@ type MonospaceTypeToggle = 'no' | 'yes'
 
 export interface Month extends UnistNode {
   type: 'element'
-  tagName: 'month'
-  properties: {
+  name: 'month'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -6603,8 +6603,8 @@ export interface MonthChildrenMap {
 
 export interface NameAlternatives extends UnistNode {
   type: 'element'
-  tagName: 'nameAlternatives'
-  properties: {
+  name: 'nameAlternatives'
+  attributes: {
     id?: string
   }
 
@@ -6619,8 +6619,8 @@ export interface NameAlternativesChildrenMap {
 
 export interface NamedContent extends UnistNode {
   type: 'element'
-  tagName: 'namedContent'
-  properties: {
+  name: 'namedContent'
+  attributes: {
     alt?: string
     hreflang?: string
     id?: string
@@ -6768,8 +6768,8 @@ export interface NamedContentChildrenMap {
 
 export interface Name extends UnistNode {
   type: 'element'
-  tagName: 'name'
-  properties: {
+  name: 'name'
+  attributes: {
     id?: string
     specificUse?: string
     nameStyle?: NameTypeNameStyle
@@ -6793,8 +6793,8 @@ type NameTypeNameStyle = 'eastern' | 'given-only' | 'islensk' | 'western'
 
 export interface NestedKwd extends UnistNode {
   type: 'element'
-  tagName: 'nestedKwd'
-  properties: {
+  name: 'nestedKwd'
+  attributes: {
     assigningAuthority?: string
     id?: string
     vocab?: string
@@ -6818,8 +6818,8 @@ export interface NestedKwdChildrenMap {
 
 export interface NlmCitation extends UnistNode {
   type: 'element'
-  tagName: 'nlmCitation'
-  properties: {
+  name: 'nlmCitation'
+  attributes: {
     hreflang?: string
     id?: string
     publicationFormat?: string
@@ -6893,8 +6893,8 @@ export interface NlmCitationChildrenMap {
 
 export interface Notes extends UnistNode {
   type: 'element'
-  tagName: 'notes'
-  properties: {
+  name: 'notes'
+  attributes: {
     id?: string
     notesType?: string
     specificUse?: string
@@ -6987,8 +6987,8 @@ export interface NotesChildrenMap {
 
 export interface Note extends UnistNode {
   type: 'element'
-  tagName: 'note'
-  properties: {
+  name: 'note'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -7008,8 +7008,8 @@ export interface NoteChildrenMap {
 
 export interface ObjectId extends UnistNode {
   type: 'element'
-  tagName: 'objectId'
-  properties: {
+  name: 'objectId'
+  attributes: {
     assigningAuthority?: string
     id?: string
     pubIdType?: string
@@ -7025,8 +7025,8 @@ export interface ObjectIdChildrenMap {
 
 export interface OnBehalfof extends UnistNode {
   type: 'element'
-  tagName: 'onBehalfof'
-  properties: {
+  name: 'onBehalfof'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -7078,8 +7078,8 @@ export interface OnBehalfofChildrenMap {
 
 export interface OpenAccess extends UnistNode {
   type: 'element'
-  tagName: 'openAccess'
-  properties: {
+  name: 'openAccess'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -7093,8 +7093,8 @@ export interface OpenAccessChildrenMap {
 
 export interface Option extends UnistNode {
   type: 'element'
-  tagName: 'option'
-  properties: {
+  name: 'option'
+  attributes: {
     id?: string
     specificUse?: string
     correct?: OptionTypeCorrect
@@ -7194,8 +7194,8 @@ type OptionTypeCorrect = 'no' | 'yes'
 
 export interface OverlineEnd extends UnistNode {
   type: 'childless'
-  tagName: 'overlineEnd'
-  properties: {
+  name: 'overlineEnd'
+  attributes: {
     id?: string
     rid: string
     specificUse?: string
@@ -7204,8 +7204,8 @@ export interface OverlineEnd extends UnistNode {
 
 export interface OverlineStart extends UnistNode {
   type: 'childless'
-  tagName: 'overlineStart'
-  properties: {
+  name: 'overlineStart'
+  attributes: {
     id: string
     specificUse?: string
   }
@@ -7213,8 +7213,8 @@ export interface OverlineStart extends UnistNode {
 
 export interface Overline extends UnistNode {
   type: 'element'
-  tagName: 'overline'
-  properties: {
+  name: 'overline'
+  attributes: {
     id?: string
     specificUse?: string
     toggle?: OverlineTypeToggle
@@ -7301,8 +7301,8 @@ type OverlineTypeToggle = 'no' | 'yes'
 
 export interface PageCount extends UnistNode {
   type: 'childless'
-  tagName: 'pageCount'
-  properties: {
+  name: 'pageCount'
+  attributes: {
     count: string
     id?: string
   }
@@ -7310,8 +7310,8 @@ export interface PageCount extends UnistNode {
 
 export interface PageRange extends UnistNode {
   type: 'element'
-  tagName: 'pageRange'
-  properties: {
+  name: 'pageRange'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -7325,8 +7325,8 @@ export interface PageRangeChildrenMap {
 
 export interface PartTitle extends UnistNode {
   type: 'element'
-  tagName: 'partTitle'
-  properties: {
+  name: 'partTitle'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -7396,8 +7396,8 @@ export interface PartTitleChildrenMap {
 
 export interface Patent extends UnistNode {
   type: 'element'
-  tagName: 'patent'
-  properties: {
+  name: 'patent'
+  attributes: {
     country?: string
     id?: string
     specificUse?: string
@@ -7412,8 +7412,8 @@ export interface PatentChildrenMap {
 
 export interface Permissions extends UnistNode {
   type: 'element'
-  tagName: 'permissions'
-  properties: {
+  name: 'permissions'
+  attributes: {
     id?: string
   }
 
@@ -7432,8 +7432,8 @@ export interface PermissionsChildrenMap {
 
 export interface PersonGroup extends UnistNode {
   type: 'element'
-  tagName: 'personGroup'
-  properties: {
+  name: 'personGroup'
+  attributes: {
     id?: string
     specificUse?: string
     personGroupType?: PersonGroupTypePersonGrouptype
@@ -7483,8 +7483,8 @@ type PersonGroupTypePersonGrouptype =
 
 export interface Phone extends UnistNode {
   type: 'element'
-  tagName: 'phone'
-  properties: {
+  name: 'phone'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -7498,8 +7498,8 @@ export interface PhoneChildrenMap {
 
 export interface PostalCode extends UnistNode {
   type: 'element'
-  tagName: 'postalCode'
-  properties: {
+  name: 'postalCode'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -7513,8 +7513,8 @@ export interface PostalCodeChildrenMap {
 
 export interface Prefix extends UnistNode {
   type: 'element'
-  tagName: 'prefix'
-  properties: {
+  name: 'prefix'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -7528,8 +7528,8 @@ export interface PrefixChildrenMap {
 
 export interface Preformat extends UnistNode {
   type: 'element'
-  tagName: 'preformat'
-  properties: {
+  name: 'preformat'
+  attributes: {
     id?: string
     preformatType?: string
     specificUse?: string
@@ -7602,8 +7602,8 @@ type PreformatTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
 export interface Price extends UnistNode {
   type: 'element'
-  tagName: 'price'
-  properties: {
+  name: 'price'
+  attributes: {
     currency?: string
     id?: string
     specificUse?: string
@@ -7640,8 +7640,8 @@ export interface PriceChildrenMap {
 
 export interface PrincipalAwardrecipient extends UnistNode {
   type: 'element'
-  tagName: 'principalAwardrecipient'
-  properties: {
+  name: 'principalAwardrecipient'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -7665,8 +7665,8 @@ export interface PrincipalAwardrecipientChildrenMap {
 
 export interface PrincipalInvestigator extends UnistNode {
   type: 'element'
-  tagName: 'principalInvestigator'
-  properties: {
+  name: 'principalInvestigator'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -7686,8 +7686,8 @@ export interface PrincipalInvestigatorChildrenMap {
 
 export interface PrivateChar extends UnistNode {
   type: 'element'
-  tagName: 'privateChar'
-  properties: {
+  name: 'privateChar'
+  attributes: {
     description?: string
     id?: string
     name?: string
@@ -7707,8 +7707,8 @@ export interface PrivateCharChildrenMap {
 
 export interface ProcessingMeta extends UnistNode {
   type: 'element'
-  tagName: 'processingMeta'
-  properties: {
+  name: 'processingMeta'
+  attributes: {
     id?: string
     mathRepresentation?: string
     BaseTagSet?: ProcessingMetaTypeUnistNodeTagset
@@ -7741,8 +7741,8 @@ type ProcessingMetaTypeTagsetFamily = 'bits' | 'jats' | 'sts'
 
 export interface Product extends UnistNode {
   type: 'element'
-  tagName: 'product'
-  properties: {
+  name: 'product'
+  attributes: {
     hreflang?: string
     id?: string
     productType?: string
@@ -7944,8 +7944,8 @@ export interface ProductChildrenMap {
 
 export interface P extends UnistNode {
   type: 'element'
-  tagName: 'p'
-  properties: {
+  name: 'p'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -8101,8 +8101,8 @@ export interface PChildrenMap {
 
 export interface PubDatenotavailable extends UnistNode {
   type: 'childless'
-  tagName: 'pubDatenotavailable'
-  properties: {
+  name: 'pubDatenotavailable'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -8110,8 +8110,8 @@ export interface PubDatenotavailable extends UnistNode {
 
 export interface PubDate extends UnistNode {
   type: 'element'
-  tagName: 'pubDate'
-  properties: {
+  name: 'pubDate'
+  attributes: {
     assigningAuthority?: string
     calendar?: string
     dateType?: string
@@ -8138,8 +8138,8 @@ export interface PubDateChildrenMap {
 
 export interface PubHistory extends UnistNode {
   type: 'element'
-  tagName: 'pubHistory'
-  properties: {
+  name: 'pubHistory'
+  attributes: {
     id?: string
   }
 
@@ -8152,8 +8152,8 @@ export interface PubHistoryChildrenMap {
 
 export interface PubId extends UnistNode {
   type: 'element'
-  tagName: 'pubId'
-  properties: {
+  name: 'pubId'
+  attributes: {
     assigningAuthority?: string
     hreflang?: string
     id?: string
@@ -8195,8 +8195,8 @@ type PubIdTypePubIdtype =
 
 export interface PublisherLoc extends UnistNode {
   type: 'element'
-  tagName: 'publisherLoc'
-  properties: {
+  name: 'publisherLoc'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -8232,8 +8232,8 @@ export interface PublisherLocChildrenMap {
 
 export interface PublisherName extends UnistNode {
   type: 'element'
-  tagName: 'publisherName'
-  properties: {
+  name: 'publisherName'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -8249,8 +8249,8 @@ export interface PublisherNameChildrenMap {
 
 export interface Publisher extends UnistNode {
   type: 'element'
-  tagName: 'publisher'
-  properties: {
+  name: 'publisher'
+  attributes: {
     id?: string
   }
 
@@ -8267,8 +8267,8 @@ export interface PublisherChildrenMap {
 
 export interface QuestionPreamble extends UnistNode {
   type: 'element'
-  tagName: 'questionPreamble'
-  properties: {
+  name: 'questionPreamble'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -8360,9 +8360,9 @@ export interface QuestionPreambleChildrenMap {
 
 export interface Question extends UnistNode {
   type: 'element'
-  tagName: 'question'
+  name: 'question'
   text?: Text
-  properties: {
+  attributes: {
     id?: string
     specificUse?: string
     questionResponsetype?: QuestionTypeQuestionResponsetype
@@ -8471,8 +8471,8 @@ type QuestionTypeQuestionResponsetype =
 
 export interface QuestionWrapgroup extends UnistNode {
   type: 'element'
-  tagName: 'questionWrapgroup'
-  properties: {
+  name: 'questionWrapgroup'
+  attributes: {
     audience?: string
     id?: string
     specificUse?: string
@@ -8501,8 +8501,8 @@ export interface QuestionWrapgroupChildrenMap {
 
 export interface QuestionWrap extends UnistNode {
   type: 'element'
-  tagName: 'questionWrap'
-  properties: {
+  name: 'questionWrap'
+  attributes: {
     audience?: string
     id?: string
     specificUse?: string
@@ -8527,8 +8527,8 @@ export interface QuestionWrapChildrenMap {
 
 export interface Rb extends UnistNode {
   type: 'element'
-  tagName: 'rb'
-  properties: {
+  name: 'rb'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -8562,8 +8562,8 @@ export interface RbChildrenMap {
 
 export interface RefCount extends UnistNode {
   type: 'childless'
-  tagName: 'refCount'
-  properties: {
+  name: 'refCount'
+  attributes: {
     count: string
     id?: string
   }
@@ -8571,8 +8571,8 @@ export interface RefCount extends UnistNode {
 
 export interface RefList extends UnistNode {
   type: 'element'
-  tagName: 'refList'
-  properties: {
+  name: 'refList'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -8662,8 +8662,8 @@ export interface RefListChildrenMap {
 
 export interface Ref extends UnistNode {
   type: 'element'
-  tagName: 'ref'
-  properties: {
+  name: 'ref'
+  attributes: {
     id?: string
     specificUse?: string
     contentType?: string
@@ -8690,8 +8690,8 @@ export interface RefChildrenMap {
 
 export interface RelatedArticle extends UnistNode {
   type: 'element'
-  tagName: 'relatedArticle'
-  properties: {
+  name: 'relatedArticle'
+  attributes: {
     $elocationId?: string
     extLinktype?: string
     hreflang?: string
@@ -8864,9 +8864,9 @@ export interface RelatedArticleChildrenMap {
 
 export interface RelatedObject extends UnistNode {
   type: 'element'
-  tagName: 'relatedObject'
+  name: 'relatedObject'
   text?: Text
-  properties: {
+  attributes: {
     documentId?: string
     documentIdtype?: string
     documentType?: string
@@ -8882,6 +8882,9 @@ export interface RelatedObject extends UnistNode {
     specificUse?: string
     $objectId?: string
   }
+  children: RequiredMap<RelatedObjectChildrenMap>
+}
+export interface RelatedObjectChildrenMap {
   annotation?: Annotation[]
 
   articleTitle?: ArticleTitle[]
@@ -9035,16 +9038,16 @@ export interface RelatedObject extends UnistNode {
 
 interface ResourceGroup extends UnistNode {
   type: 'element'
-  tagName: 'resourceGroup'
-  properties: {
+  name: 'resourceGroup'
+  attributes: {
     id?: string
     specificUse?: string
   }
 
-  children: RequiredMap<RelatedObjectChildrenMap>[]
+  children: RequiredMap<ResourceGroupChildrenMap>[]
 }
 
-export interface RelatedObjectChildrenMap {
+export interface ResourceGroupChildrenMap {
   resourceName: ResourceName[]
 
   resourceWrap: ResourceWrap[]
@@ -9052,8 +9055,8 @@ export interface RelatedObjectChildrenMap {
 
 export interface ResourceId extends UnistNode {
   type: 'element'
-  tagName: 'resourceId'
-  properties: {
+  name: 'resourceId'
+  attributes: {
     assigningAuthority?: string
     id?: string
     resourceIdtype?: string
@@ -9071,8 +9074,8 @@ export interface ResourceIdChildrenMap {
 
 export interface ResourceName extends UnistNode {
   type: 'element'
-  tagName: 'resourceName'
-  properties: {
+  name: 'resourceName'
+  attributes: {
     hreflang?: string
     id?: string
     specificUse?: string
@@ -9111,8 +9114,8 @@ export interface ResourceNameChildrenMap {
 
 export interface ResourceWrap extends UnistNode {
   type: 'element'
-  tagName: 'resourceWrap'
-  properties: {
+  name: 'resourceWrap'
+  attributes: {
     id?: string
   }
 
@@ -9127,8 +9130,8 @@ export interface ResourceWrapChildrenMap {
 
 export interface Response extends UnistNode {
   type: 'element'
-  tagName: 'response'
-  properties: {
+  name: 'response'
+  attributes: {
     id?: string
     responseType?: string
     specificUse?: string
@@ -9153,8 +9156,8 @@ export interface ResponseChildrenMap {
 
 export interface RestrictedBy extends UnistNode {
   type: 'childless'
-  tagName: 'restrictedBy'
-  properties: {
+  name: 'restrictedBy'
+  attributes: {
     assigningAuthority?: string
     designator?: string
     hreflang?: string
@@ -9168,8 +9171,8 @@ export interface RestrictedBy extends UnistNode {
 
 export interface Role extends UnistNode {
   type: 'element'
-  tagName: 'role'
-  properties: {
+  name: 'role'
+  attributes: {
     assigningAuthority?: string
     degreeContribution?: string
     id?: string
@@ -9191,8 +9194,8 @@ export interface RoleChildrenMap {
 
 export interface Roman extends UnistNode {
   type: 'element'
-  tagName: 'roman'
-  properties: {
+  name: 'roman'
+  attributes: {
     id?: string
     specificUse?: string
     toggle?: RomanTypeToggle
@@ -9279,16 +9282,16 @@ type RomanTypeToggle = 'no' | 'yes'
 
 export interface Rp extends UnistNode {
   type: 'childless'
-  tagName: 'rp'
-  properties: {
+  name: 'rp'
+  attributes: {
     id?: string
   }
 }
 
 export interface Rt extends UnistNode {
   type: 'element'
-  tagName: 'rt'
-  properties: {
+  name: 'rt'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -9302,8 +9305,8 @@ export interface RtChildrenMap {
 
 export interface Ruby extends UnistNode {
   type: 'element'
-  tagName: 'ruby'
-  properties: {
+  name: 'ruby'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -9321,8 +9324,8 @@ export interface RubyChildrenMap {
 
 export interface SansSerif extends UnistNode {
   type: 'element'
-  tagName: 'sansSerif'
-  properties: {
+  name: 'sansSerif'
+  attributes: {
     id?: string
     specificUse?: string
     toggle?: SansSerifTypeToggle
@@ -9409,8 +9412,8 @@ type SansSerifTypeToggle = 'no' | 'yes'
 
 export interface Sc extends UnistNode {
   type: 'element'
-  tagName: 'sc'
-  properties: {
+  name: 'sc'
+  attributes: {
     id?: string
     specificUse?: string
     toggle?: ScTypeToggle
@@ -9497,8 +9500,8 @@ type ScTypeToggle = 'no' | 'yes'
 
 export interface Season extends UnistNode {
   type: 'element'
-  tagName: 'season'
-  properties: {
+  name: 'season'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -9512,8 +9515,8 @@ export interface SeasonChildrenMap {
 
 export interface SecMeta extends UnistNode {
   type: 'element'
-  tagName: 'secMeta'
-  properties: {
+  name: 'secMeta'
+  attributes: {
     id?: string
   }
 
@@ -9535,8 +9538,8 @@ export interface SecMetaChildrenMap {
 
 export interface Sec extends UnistNode {
   type: 'element'
-  tagName: 'sec'
-  properties: {
+  name: 'sec'
+  attributes: {
     id?: string
     secType?: string
     specificUse?: string
@@ -9629,8 +9632,8 @@ export interface SecChildrenMap {
 
 export interface SeeAlso extends UnistNode {
   type: 'element'
-  tagName: 'seeAlso'
-  properties: {
+  name: 'seeAlso'
+  attributes: {
     id?: string
     rid?: string
     specificUse?: string
@@ -9735,8 +9738,8 @@ export interface SeeAlsoChildrenMap {
 
 export interface See extends UnistNode {
   type: 'element'
-  tagName: 'see'
-  properties: {
+  name: 'see'
+  attributes: {
     id?: string
     rid?: string
     specificUse?: string
@@ -9837,8 +9840,8 @@ export interface SeeChildrenMap {
 
 export interface SelfUri extends UnistNode {
   type: 'element'
-  tagName: 'selfUri'
-  properties: {
+  name: 'selfUri'
+  attributes: {
     assigningAuthority?: string
     hreflang?: string
     id?: string
@@ -9854,8 +9857,8 @@ export interface SelfUriChildrenMap {
 
 export interface SeriesText extends UnistNode {
   type: 'element'
-  tagName: 'seriesText'
-  properties: {
+  name: 'seriesText'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -9871,8 +9874,8 @@ export interface SeriesTextChildrenMap {
 
 export interface SeriesTitle extends UnistNode {
   type: 'element'
-  tagName: 'seriesTitle'
-  properties: {
+  name: 'seriesTitle'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -9888,8 +9891,8 @@ export interface SeriesTitleChildrenMap {
 
 export interface Series extends UnistNode {
   type: 'element'
-  tagName: 'series'
-  properties: {
+  name: 'series'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -9905,8 +9908,8 @@ export interface SeriesChildrenMap {
 
 export interface SigBlock extends UnistNode {
   type: 'element'
-  tagName: 'sigBlock'
-  properties: {
+  name: 'sigBlock'
+  attributes: {
     id?: string
     rid?: string
     specificUse?: string
@@ -9967,8 +9970,8 @@ export interface SigBlockChildrenMap {
 
 export interface Sig extends UnistNode {
   type: 'element'
-  tagName: 'sig'
-  properties: {
+  name: 'sig'
+  attributes: {
     id?: string
     rid?: string
     specificUse?: string
@@ -10025,8 +10028,8 @@ export interface SigChildrenMap {
 
 export interface Size extends UnistNode {
   type: 'childless'
-  tagName: 'size'
-  properties: {
+  name: 'size'
+  attributes: {
     id?: string
     specificUse?: string
     units: string
@@ -10035,8 +10038,8 @@ export interface Size extends UnistNode {
 
 export interface Source extends UnistNode {
   type: 'element'
-  tagName: 'source'
-  properties: {
+  name: 'source'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -10108,8 +10111,8 @@ export interface SourceChildrenMap {
 
 export interface Speaker extends UnistNode {
   type: 'element'
-  tagName: 'speaker'
-  properties: {
+  name: 'speaker'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -10139,8 +10142,8 @@ export interface SpeakerChildrenMap {
 
 export interface Speech extends UnistNode {
   type: 'element'
-  tagName: 'speech'
-  properties: {
+  name: 'speech'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -10160,8 +10163,8 @@ export interface SpeechChildrenMap {
 
 export interface Statement extends UnistNode {
   type: 'element'
-  tagName: 'statement'
-  properties: {
+  name: 'statement'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -10192,8 +10195,8 @@ export interface StatementChildrenMap {
 
 export interface State extends UnistNode {
   type: 'element'
-  tagName: 'state'
-  properties: {
+  name: 'state'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -10207,8 +10210,8 @@ export interface StateChildrenMap {
 
 export interface StdOrganization extends UnistNode {
   type: 'element'
-  tagName: 'stdOrganization'
-  properties: {
+  name: 'stdOrganization'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -10230,8 +10233,8 @@ export interface StdOrganizationChildrenMap {
 
 export interface Std extends UnistNode {
   type: 'element'
-  tagName: 'std'
-  properties: {
+  name: 'std'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -10293,8 +10296,8 @@ export interface StdChildrenMap {
 
 export interface Strike extends UnistNode {
   type: 'element'
-  tagName: 'strike'
-  properties: {
+  name: 'strike'
+  attributes: {
     id?: string
     specificUse?: string
     toggle?: StrikeTypeToggle
@@ -10381,8 +10384,8 @@ type StrikeTypeToggle = 'no' | 'yes'
 
 export interface StringConf extends UnistNode {
   type: 'element'
-  tagName: 'stringConf'
-  properties: {
+  name: 'stringConf'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -10464,8 +10467,8 @@ export interface StringConfChildrenMap {
 
 export interface StringDate extends UnistNode {
   type: 'element'
-  tagName: 'stringDate'
-  properties: {
+  name: 'stringDate'
+  attributes: {
     calendar?: string
     id?: string
     iso8601Date?: string
@@ -10491,9 +10494,9 @@ export interface StringDateChildrenMap {
 
 export interface StringName extends UnistNode {
   type: 'element'
-  tagName: 'stringName'
+  name: 'stringName'
   text?: Text
-  properties: {
+  attributes: {
     id?: string
     nameStyle?: StringNameTypeNameStyle
     specificUse?: string
@@ -10518,8 +10521,8 @@ type StringNameTypeNameStyle = 'eastern' | 'given-only' | 'islensk' | 'western'
 
 export interface StyledContent extends UnistNode {
   type: 'element'
-  tagName: 'styledContent'
-  properties: {
+  name: 'styledContent'
+  attributes: {
     alt?: string
     id?: string
     specificUse?: string
@@ -10666,8 +10669,8 @@ type StyledtextToggle = 'no' | 'yes'
 
 export interface SubArticle extends UnistNode {
   type: 'element'
-  tagName: 'subArticle'
-  properties: {
+  name: 'subArticle'
+  attributes: {
     articleType?: string
     id?: string
     specificUse?: string
@@ -10696,8 +10699,8 @@ export interface SubArticleChildrenMap {
 
 export interface Subject extends UnistNode {
   type: 'element'
-  tagName: 'subject'
-  properties: {
+  name: 'subject'
+  attributes: {
     assigningAuthority?: string
     id?: string
     vocab?: string
@@ -10757,8 +10760,8 @@ export interface SubjectChildrenMap {
 
 export interface SubjGroup extends UnistNode {
   type: 'element'
-  tagName: 'subjGroup'
-  properties: {
+  name: 'subjGroup'
+  attributes: {
     assigningAuthority?: string
     id?: string
     specificUse?: string
@@ -10779,8 +10782,8 @@ export interface SubjGroupChildrenMap {
 
 export interface Subtitle extends UnistNode {
   type: 'element'
-  tagName: 'subtitle'
-  properties: {
+  name: 'subtitle'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -10868,8 +10871,8 @@ export interface SubtitleChildrenMap {
 
 export interface Sub extends UnistNode {
   type: 'element'
-  tagName: 'sub'
-  properties: {
+  name: 'sub'
+  attributes: {
     arrange?: SubTypeArrange
     id?: string
     specificUse?: string
@@ -10956,8 +10959,8 @@ type SubTypeArrange = 'stack' | 'stagger'
 
 export interface Suffix extends UnistNode {
   type: 'element'
-  tagName: 'suffix'
-  properties: {
+  name: 'suffix'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -10971,8 +10974,8 @@ export interface SuffixChildrenMap {
 
 export interface SupplementaryMaterial extends UnistNode {
   type: 'element'
-  tagName: 'supplementaryMaterial'
-  properties: {
+  name: 'supplementaryMaterial'
+  attributes: {
     hreflang?: string
     id?: string
     mimeSubtype?: string
@@ -11059,8 +11062,8 @@ type SupplementaryMaterialTypePosition =
 
 export interface Supplement extends UnistNode {
   type: 'element'
-  tagName: 'supplement'
-  properties: {
+  name: 'supplement'
+  attributes: {
     id?: string
     specificUse?: string
     supplementType?: string
@@ -11129,8 +11132,8 @@ export interface SupplementChildrenMap {
 
 export interface SupportDescription extends UnistNode {
   type: 'element'
-  tagName: 'supportDescription'
-  properties: {
+  name: 'supportDescription'
+  attributes: {
     id?: string
     rid?: string
     specificUse?: string
@@ -11145,8 +11148,8 @@ export interface SupportDescriptionChildrenMap {
 
 export interface SupportGroup extends UnistNode {
   type: 'element'
-  tagName: 'supportGroup'
-  properties: {
+  name: 'supportGroup'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -11162,8 +11165,8 @@ export interface SupportGroupChildrenMap {
 
 export interface SupportSource extends UnistNode {
   type: 'element'
-  tagName: 'supportSource'
-  properties: {
+  name: 'supportSource'
+  attributes: {
     country?: string
     hreflang?: string
     id?: string
@@ -11235,8 +11238,8 @@ export interface SupportSourceChildrenMap {
 
 export interface Sup extends UnistNode {
   type: 'element'
-  tagName: 'sup'
-  properties: {
+  name: 'sup'
+  attributes: {
     arrange?: SupTypeArrange
     id?: string
     specificUse?: string
@@ -11322,8 +11325,8 @@ export interface SupChildrenMap {
 type SupTypeArrange = 'stack' | 'stagger'
 export interface Surname extends UnistNode {
   type: 'element'
-  tagName: 'surname'
-  properties: {
+  name: 'surname'
+  attributes: {
     id?: string
     initials?: string
   }
@@ -11332,8 +11335,8 @@ export interface Surname extends UnistNode {
 
 export interface TableCount extends UnistNode {
   type: 'childless'
-  tagName: 'tableCount'
-  properties: {
+  name: 'tableCount'
+  attributes: {
     count: string
     id?: string
   }
@@ -11341,9 +11344,9 @@ export interface TableCount extends UnistNode {
 
 export interface Table extends UnistNode {
   type: 'element'
-  tagName: 'table'
+  name: 'table'
   text?: Text
-  properties: {
+  attributes: {
     border?: string
     cellpadding?: string
     cellspacing?: string
@@ -11383,8 +11386,8 @@ type TableTypeRules = 'all' | 'cols' | 'groups' | 'none' | 'rows'
 
 export interface TableWrapfoot extends UnistNode {
   type: 'element'
-  tagName: 'tableWrapfoot'
-  properties: {
+  name: 'tableWrapfoot'
+  attributes: {
     id?: string
   }
 
@@ -11407,8 +11410,8 @@ export interface TableWrapfootChildrenMap {
 
 export interface TableWrapgroup extends UnistNode {
   type: 'element'
-  tagName: 'tableWrapgroup'
-  properties: {
+  name: 'tableWrapgroup'
+  attributes: {
     id?: string
     specificUse?: string
     orientation?: TableWrapgroupTypeOrientation
@@ -11452,8 +11455,8 @@ type TableWrapgroupTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
 export interface TableWrap extends UnistNode {
   type: 'element'
-  tagName: 'tableWrap'
-  properties: {
+  name: 'tableWrap'
+  attributes: {
     id?: string
     specificUse?: string
     orientation?: TableWrapTypeOrientation
@@ -11529,8 +11532,8 @@ type TableWrapTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
 export interface Target extends UnistNode {
   type: 'element'
-  tagName: 'target'
-  properties: {
+  name: 'target'
+  attributes: {
     id: string
     specificUse?: string
     targetType?: string
@@ -11545,8 +11548,8 @@ export interface TargetChildrenMap {
 
 export interface Tbody extends UnistNode {
   type: 'element'
-  tagName: 'tbody'
-  properties: {
+  name: 'tbody'
+  attributes: {
     char?: string
     align?: TbodyTypeAlign
     charoff?: string
@@ -11569,8 +11572,8 @@ type TbodyTypeValign = 'UnistNodeline' | 'bottom' | 'middle' | 'top'
 
 export interface Td extends UnistNode {
   type: 'element'
-  tagName: 'td'
-  properties: {
+  name: 'td'
+  attributes: {
     abbr?: string
     axis?: string
     char?: string
@@ -11724,8 +11727,8 @@ type TdTypeValign = 'UnistNodeline' | 'bottom' | 'middle' | 'top'
 
 export interface TermHead extends UnistNode {
   type: 'element'
-  tagName: 'termHead'
-  properties: {
+  name: 'termHead'
+  attributes: {
     id?: string
   }
 
@@ -11808,8 +11811,8 @@ export interface TermHeadChildrenMap {
 
 export interface Term extends UnistNode {
   type: 'element'
-  tagName: 'term'
-  properties: {
+  name: 'term'
+  attributes: {
     id?: string
     rid?: string
     specificUse?: string
@@ -11914,8 +11917,8 @@ export interface TermChildrenMap {
 
 export interface TexMath extends UnistNode {
   type: 'element'
-  tagName: 'texMath'
-  properties: {
+  name: 'texMath'
+  attributes: {
     id?: string
     specificUse?: string
     version?: string
@@ -11933,8 +11936,8 @@ type TexMathTypeNotation = 'LaTeX' | 'TEX' | 'TeX' | 'tex'
 
 export interface TextualForm extends UnistNode {
   type: 'element'
-  tagName: 'textualForm'
-  properties: {
+  name: 'textualForm'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -11984,9 +11987,9 @@ export interface TextualFormChildrenMap {
 
 export interface Tfoot extends UnistNode {
   type: 'element'
-  tagName: 'tfoot'
+  name: 'tfoot'
   align?: TfootTypeAlign
-  properties: {
+  attributes: {
     char?: string
     charoff?: string
     id?: string
@@ -12008,8 +12011,8 @@ type TfootTypeValign = 'UnistNodeline' | 'bottom' | 'middle' | 'top'
 
 export interface Thead extends UnistNode {
   type: 'element'
-  tagName: 'thead'
-  properties: {
+  name: 'thead'
+  attributes: {
     align?: TheadTypeAlign
     valign?: TheadTypeValign
     char?: string
@@ -12032,8 +12035,8 @@ type TheadTypeValign = 'UnistNodeline' | 'bottom' | 'middle' | 'top'
 
 export interface Th extends UnistNode {
   type: 'element'
-  tagName: 'th'
-  properties: {
+  name: 'th'
+  attributes: {
     abbr?: string
     axis?: string
     char?: string
@@ -12188,8 +12191,8 @@ type ThTypeValign = 'UnistNodeline' | 'bottom' | 'middle' | 'top'
 
 export interface TimeStamp extends UnistNode {
   type: 'element'
-  tagName: 'timeStamp'
-  properties: {
+  name: 'timeStamp'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -12203,8 +12206,8 @@ export interface TimeStampChildrenMap {
 
 export interface TitleGroup extends UnistNode {
   type: 'element'
-  tagName: 'titleGroup'
-  properties: {
+  name: 'titleGroup'
+  attributes: {
     id?: string
   }
 
@@ -12225,8 +12228,8 @@ export interface TitleGroupChildrenMap {
 
 export interface Title extends UnistNode {
   type: 'element'
-  tagName: 'title'
-  properties: {
+  name: 'title'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -12322,8 +12325,8 @@ export interface TitleChildrenMap {
 
 export interface TransAbstract extends UnistNode {
   type: 'element'
-  tagName: 'transAbstract'
-  properties: {
+  name: 'transAbstract'
+  attributes: {
     abstractType?: string
     id?: string
     specificUse?: string
@@ -12346,8 +12349,8 @@ export interface TransAbstractChildrenMap {
 
 export interface TransSource extends UnistNode {
   type: 'element'
-  tagName: 'transSource'
-  properties: {
+  name: 'transSource'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -12419,8 +12422,8 @@ export interface TransSourceChildrenMap {
 
 export interface TransSubtitle extends UnistNode {
   type: 'element'
-  tagName: 'transSubtitle'
-  properties: {
+  name: 'transSubtitle'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -12506,8 +12509,8 @@ export interface TransSubtitleChildrenMap {
 
 export interface TransTitlegroup extends UnistNode {
   type: 'element'
-  tagName: 'transTitlegroup'
-  properties: {
+  name: 'transTitlegroup'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -12525,8 +12528,8 @@ export interface TransTitlegroupChildrenMap {
 
 export interface TransTitle extends UnistNode {
   type: 'element'
-  tagName: 'transTitle'
-  properties: {
+  name: 'transTitle'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -12614,8 +12617,8 @@ export interface TransTitleChildrenMap {
 
 export interface Tr extends UnistNode {
   type: 'element'
-  tagName: 'tr'
-  properties: {
+  name: 'tr'
+  attributes: {
     align?: TrTypeAlign
     valign?: TrTypeValign
     char?: string
@@ -12639,8 +12642,8 @@ type TrTypeValign = 'UnistNodeline' | 'bottom' | 'middle' | 'top'
 
 export interface UnderlineEnd extends UnistNode {
   type: 'childless'
-  tagName: 'underlineEnd'
-  properties: {
+  name: 'underlineEnd'
+  attributes: {
     id?: string
     rid: string
     specificUse?: string
@@ -12649,8 +12652,8 @@ export interface UnderlineEnd extends UnistNode {
 
 export interface UnderlineStart extends UnistNode {
   type: 'childless'
-  tagName: 'underlineStart'
-  properties: {
+  name: 'underlineStart'
+  attributes: {
     id: string
     specificUse?: string
   }
@@ -12658,8 +12661,8 @@ export interface UnderlineStart extends UnistNode {
 
 export interface Underline extends UnistNode {
   type: 'element'
-  tagName: 'underline'
-  properties: {
+  name: 'underline'
+  attributes: {
     id?: string
     specificUse?: string
     underlineStyle?: string
@@ -12748,8 +12751,8 @@ type UnderlineTypeToggle = 'no' | 'yes'
 
 export interface UnstructuredKwdgroup extends UnistNode {
   type: 'childless'
-  tagName: 'unstructuredKwdgroup'
-  properties: {
+  name: 'unstructuredKwdgroup'
+  attributes: {
     assigningAuthority?: string
     id?: string
     kwdGrouptype?: string
@@ -12761,8 +12764,8 @@ export interface UnstructuredKwdgroup extends UnistNode {
 
 export interface Uri extends UnistNode {
   type: 'element'
-  tagName: 'uri'
-  properties: {
+  name: 'uri'
+  attributes: {
     assigningAuthority?: string
     hreflang?: string
     id?: string
@@ -12778,8 +12781,8 @@ export interface UriChildrenMap {
 
 export interface VerseGroup extends UnistNode {
   type: 'element'
-  tagName: 'verseGroup'
-  properties: {
+  name: 'verseGroup'
+  attributes: {
     id?: string
     specificUse?: string
     style?: string
@@ -12810,8 +12813,8 @@ export interface VerseGroupChildrenMap {
 
 export interface VerseLine extends UnistNode {
   type: 'element'
-  tagName: 'verseLine'
-  properties: {
+  name: 'verseLine'
+  attributes: {
     id?: string
     indentLevel?: string
     specificUse?: string
@@ -12887,8 +12890,8 @@ export interface VerseLineChildrenMap {
 
 export interface Version extends UnistNode {
   type: 'element'
-  tagName: 'version'
-  properties: {
+  name: 'version'
+  attributes: {
     designator?: string
     id?: string
     specificUse?: string
@@ -12907,8 +12910,8 @@ export interface VersionChildrenMap {
 
 export interface VolumeId extends UnistNode {
   type: 'element'
-  tagName: 'volumeId'
-  properties: {
+  name: 'volumeId'
+  attributes: {
     assigningAuthority?: string
     hreflang?: string
     id?: string
@@ -12925,8 +12928,8 @@ export interface VolumeIdChildrenMap {
 
 export interface VolumeIssuegroup extends UnistNode {
   type: 'element'
-  tagName: 'volumeIssuegroup'
-  properties: {
+  name: 'volumeIssuegroup'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -12958,8 +12961,8 @@ export interface VolumeIssuegroupChildrenMap {
 
 export interface VolumeSeries extends UnistNode {
   type: 'element'
-  tagName: 'volumeSeries'
-  properties: {
+  name: 'volumeSeries'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -12973,8 +12976,8 @@ export interface VolumeSeriesChildrenMap {
 
 export interface Volume extends UnistNode {
   type: 'element'
-  tagName: 'volume'
-  properties: {
+  name: 'volume'
+  attributes: {
     id?: string
     seq?: string
     specificUse?: string
@@ -12989,8 +12992,8 @@ export interface VolumeChildrenMap {
 
 export interface WordCount extends UnistNode {
   type: 'childless'
-  tagName: 'wordCount'
-  properties: {
+  name: 'wordCount'
+  attributes: {
     count: string
     id?: string
   }
@@ -12998,8 +13001,8 @@ export interface WordCount extends UnistNode {
 
 export interface Xref extends UnistNode {
   type: 'element'
-  tagName: 'xref'
-  properties: {
+  name: 'xref'
+  attributes: {
     alt?: string
     id?: string
     rid?: string
@@ -13044,8 +13047,8 @@ type XrefTypeRefType =
 
 export interface X extends UnistNode {
   type: 'element'
-  tagName: 'x'
-  properties: {
+  name: 'x'
+  attributes: {
     id?: string
     specificUse?: string
   }
@@ -13059,8 +13062,8 @@ export interface XChildrenMap {
 
 export interface Year extends UnistNode {
   type: 'element'
-  tagName: 'year'
-  properties: {
+  name: 'year'
+  attributes: {
     calendar?: string
     id?: string
     iso8601Date?: string
@@ -13076,7 +13079,7 @@ export interface YearChildrenMap {
 
 export type documentMap = {
   // type: 'element'
-  // tagName: 'document'
+  // name: 'document'
 
   abbrev: Abbrev
 

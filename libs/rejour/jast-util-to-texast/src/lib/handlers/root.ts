@@ -6,13 +6,13 @@ import { J, Node, Root } from '../types'
 
 export function root(j: J, node: Root) {
   const kids = node.children as TagHavers[]
-  const article = kids.find((child) => child?.tagName === 'article')
+  const article = kids.find((child) => child?.name === 'article')
 
   //  if (!article) {
   return j(node, 'root', all(j, node))
   //  }
 
   // return j(article, 'root', [
-  //   j(node, 'element', { tagName: 'article' }, all(j, article)),
+  //   j(node, 'element', { name: 'article' }, all(j, article)),
   // ])
 }

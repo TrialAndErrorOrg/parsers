@@ -183,7 +183,7 @@ describe('math', () => {
   it('should parse inlinemath', () => {
     expect(toLatex(inlineMath)).toEqual(` $ 8 + 9 = \\frac{8}{8} $ `)
   })
-  it('should change delimiters based on node properties', () => {
+  it('should change delimiters based on node attributes', () => {
     const inlineMathWithDelimiters = {
       ...inlineMath,
       delimiters: '()',

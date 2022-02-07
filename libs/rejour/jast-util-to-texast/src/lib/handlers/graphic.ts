@@ -9,7 +9,7 @@ export function graphic(j: J, node: Graphic) {
     name: 'includegraphics',
     children: [
       wrapCommandArg(j, [
-        { type: 'text', value: node.properties['xlink:href'] || '' },
+        { type: 'text', value: node.attributes['xlink:href'] || '' },
       ]),
       { type: 'text', value: '\n' },
     ],

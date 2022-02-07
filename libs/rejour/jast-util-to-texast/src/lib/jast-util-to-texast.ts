@@ -11,7 +11,7 @@ import {
   TexastRoot,
   Node,
   Options,
-  Properties,
+  Attributes,
 } from './types'
 import { convert } from 'unist-util-is'
 import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
@@ -41,20 +41,20 @@ export function toTexast(
     ((
       node: TexastRoot | TexastContent,
       type: string,
-      props?: Properties | string | Array<TexastContent>,
+      props?: Attributes | string | Array<TexastContent>,
       children?: string | Array<TexastContent>
     ) => {
-      let properties: Properties | undefined
+      let attributes: Attributes | undefined
 
       if (typeof props === 'string' || Array.isArray(props)) {
         children = props
-        properties = {}
+        attributes = {}
       } else {
-        properties = props
+        attributes = props
       }
 
       // @ts-ignore Assume valid `type` and `children`/`value`.
-      const result: Node = { type, ...properties }
+      const result: Node = { type, ...attributes }
 
       if (typeof children === 'string') {
         // @ts-ignore: Looks like a literal.
@@ -95,9 +95,9 @@ export function toTexast(
 
   // visit(tree, 'element', (node) => {
   //   const id =
-  //     node.properties &&
-  //     'id' in node.properties &&
-  //     String(node.properties.id).toUpperCase()
+  //     node.attributes &&
+  //     'id' in node.attributes &&
+  //     String(node.attributes.id).toUpperCase()
 
   //   if (id && !own.call(byId, id)) {
   //     byId[id] = node

@@ -1,7 +1,7 @@
 import { isElement } from 'jjast'
 import { CommandArg, CommandArgOpt, EnvironmentContent } from 'texast'
 import { all } from '../all'
-import { J, Parents, TagName, Node } from '../types'
+import { J, Parents, Name, Node } from '../types'
 import { wrap } from '../util/wrap'
 import { wrapChildren } from '../util/wrap-children'
 import { wrapCommandArg } from '../util/wrap-command-arg'
@@ -9,9 +9,9 @@ import { wrapCommandArg } from '../util/wrap-command-arg'
 const typeEnvArgMap: {
   [key: string]: {
     name?: string
-    first?: TagName[]
-    required?: TagName[][]
-    optional?: TagName[]
+    first?: Name[]
+    required?: Name[][]
+    optional?: Name[]
     empty?: boolean
   }
 } = {}
@@ -21,8 +21,8 @@ export function environment(j: J, node: Parents) {
   //   return j(node, 'paragraph', all(j, node))
   // }
 
-  const mapEntry = typeEnvArgMap[node.tagName]
-  const envName = mapEntry?.name || node.tagName
+  const mapEntry = typeEnvArgMap[node.name]
+  const envName = mapEntry?.name || node.name
 
   if (mapEntry?.empty) {
     return j(node, 'environment', { name: envName }, wrapChildren(j, node))
@@ -40,12 +40,12 @@ export function environment(j: J, node: Parents) {
         child: Node
       ) => {
         if (isElement(child)) {
-          if (mapEntry?.optional?.includes(child.tagName)) {
+          if (mapEntry?.optional?.includes(child.name)) {
             acc.opt = child
             return acc
           }
           mapEntry?.required?.forEach((arg, i) => {
-            if (arg.includes(child.tagName)) {
+            if (arg.includes(child.name)) {
               acc.req.push(child)
               return acc
             }

@@ -10,7 +10,7 @@ export function extLink(j: J, node: ExtLink) {
     name: 'href',
     children: [
       wrapCommandArg(j, [
-        { type: 'text', value: node.properties['xlink:href'] },
+        { type: 'text', value: node.attributes['xlink:href'] },
       ]),
       //@ts-ignore shut up
       wrapCommandArg(j, node.children),

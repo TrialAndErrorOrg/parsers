@@ -1,16 +1,16 @@
 import { CommandArg, CommandArgOpt } from 'texast'
 import { all } from '../all'
 import { one } from '../one'
-import { J, Node, Parent, Parents, Root, TagName, Text } from '../types'
+import { J, Node, Parent, Parents, Root, Name, Text } from '../types'
 import { wrap } from '../util/wrap'
 import { wrapCommandArg } from '../util/wrap-command-arg'
 
 const typeCommandMap: {
   [key: string]: {
     name?: string
-    first?: TagName[]
-    required?: TagName[][]
-    optional?: TagName[]
+    first?: Name[]
+    required?: Name[][]
+    optional?: Name[]
     empty?: boolean
     needsNewline?: boolean
   }
@@ -30,8 +30,8 @@ export function command(j: J, node: Parents, parent: Parent) {
   //   return j(node, 'paragraph', all(j, node))
   // }
 
-  const mapEntry = typeCommandMap[node.tagName]
-  const commandName = mapEntry?.name || node.tagName
+  const mapEntry = typeCommandMap[node.name]
+  const commandName = mapEntry?.name || node.name
 
   if (mapEntry?.empty) {
     return j(node, 'command', { name: commandName }, [])
@@ -44,7 +44,7 @@ export function command(j: J, node: Parents, parent: Parent) {
         (child: Node) =>
           mapEntry?.first?.includes(
             // @ts-ignore dude just chill
-            child.tagName
+            child.name
           ) || child?.type === 'text'
       )
   )
@@ -54,7 +54,7 @@ export function command(j: J, node: Parents, parent: Parent) {
     ?.filter((child: Node) =>
       mapEntry?.required?.includes(
         // @ts-ignore dude just chill
-        child.tagName
+        child.name
       )
     )
     .map((child: any) => {
@@ -63,7 +63,7 @@ export function command(j: J, node: Parents, parent: Parent) {
 
   const optionalCommandArgs: CommandArgOpt[] = node?.children
     // @ts-ignore dude just chill
-    ?.filter((child: Parents) => mapEntry?.optional?.includes(child.tagName))
+    ?.filter((child: Parents) => mapEntry?.optional?.includes(child.name))
     .map((child: any) => wrapCommandArg(j, [child], true))
 
   return j(node, 'command', { name: commandName }, [

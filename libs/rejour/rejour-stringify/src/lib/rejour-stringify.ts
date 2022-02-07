@@ -9,8 +9,8 @@ export function rejourStringify() {
   const compiler: CompilerFunction<Root, string> = (tree) => {
     const mappedTree = map(tree, (node) => {
       if (node.type !== 'element') return node
-      const { tagName, properties, ...rest } = node as Element
-      return { ...rest, name: tagName, attributes: properties }
+      const { name, attributes, ...rest } = node as Element
+      return { ...rest, name: name, attributes: attributes }
     })
 
     return toXml(mappedTree as xastRoot)

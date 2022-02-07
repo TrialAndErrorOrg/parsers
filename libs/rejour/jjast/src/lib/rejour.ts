@@ -2,7 +2,7 @@ import { Instruction, Doctype, Attributes as XastAttributes } from 'xast'
 import { Node as UnistNode, Parent as UnistParent } from 'unist'
 import { Text, Article, Content, Glossary } from './jats'
 import { RequiredKeys, ValuesType } from 'utility-types'
-import { tagNames } from './names'
+import { names } from './names'
 
 export type NoUndefined<T> = Exclude<T, undefined>
 export type ArrayValueMaybe<T> = T extends any[]
@@ -15,14 +15,14 @@ export type OldRequiredMap<T> = RequiredKeys<T> extends string
   ? AllTypes<T>
   : AllTypes<T> | undefined
 
-export interface Properties {
+export interface Attributes {
   [name: string]: string | null | undefined | boolean | number
 }
 export interface Root extends UnistParent {
   type: 'root'
   children: Array<Text | Article | Instruction | Doctype | Content>
 }
-export type TagHavers = Extract<Content, { tagName: string }>
+export type TagHavers = Extract<Content, { name: string }>
 
 export interface Parent extends UnistParent {
   children: Array<Content>
@@ -30,28 +30,26 @@ export interface Parent extends UnistParent {
 
 export interface Element extends UnistNode {
   type: 'element'
-  properties: Properties
-  tagName: string
+  attributes: Attributes
+  name: string
   children?: Content[]
 }
 export function isElement(node: UnistNode): node is Element {
-  return node.hasOwnProperty('tagName') && node.hasOwnProperty('properties')
+  return node.hasOwnProperty('name') && node.hasOwnProperty('attributes')
 }
 
-export type TagNamesMap<T> = T extends { tagName: string }
-  ? T['tagName']
-  : never
-export type TagName = TagNamesMap<Content>
+export type NamesMap<T> = T extends { name: string } ? T['name'] : never
+export type Names = NamesMap<Content>
 
-export function isValidJATSTagName(tag: string): tag is TagName {
-  return tag in tagNames
+export function isValidJATSName(tag: string): tag is Names {
+  return tag in names
 }
 
 export type { UnistNode as Node }
 // type JATSContent = Extract<document[keyof document], { type: string }>
 
 // /**
-//  * Find types which only have string subtypes, i.e. only have properties or Text subtype
+//  * Find types which only have string subtypes, i.e. only have attributes or Text subtype
 //  */
 // type ExtractLiteral<TNode> = TNode extends {}
 //   ? Omit<TNode, '_namespace' | 'constructor' | '_exists'> extends {
@@ -88,9 +86,9 @@ export type { UnistNode as Node }
 // type JATSParents = ExtractParents<JATSContent>
 
 // /**
-//  * The tagname of the element, default to string otherwise.
+//  * The name of the element, default to string otherwise.
 //  */
-// type TagName<TNode extends JATSParents = JATSParents> = Pick<
+// type Name<TNode extends JATSParents = JATSParents> = Pick<
 //   TNode,
 //   'type'
 // > extends string
@@ -101,7 +99,7 @@ export type { UnistNode as Node }
 // type ashtb = Not<any, undefined>
 
 // /**
-//  *  Find the properties of an JATS type, i.e. all those properties which are strings, except for `_namespace`, `contentType` and `type`
+//  *  Find the attributes of an JATS type, i.e. all those attributes which are strings, except for `_namespace`, `contentType` and `type`
 //  */
 // type PropertiesMap<TNode extends JATSContent> = OmitByValue<
 //   Omit<TNode, '_namespace' | 'contentType' | 'type'>,
@@ -117,7 +115,7 @@ export type { UnistNode as Node }
 //   TNode extends { contentType?: string }
 //   ? { contentType: string }
 //   : {}
-// //& { type: 'element'; tagName: TagName<TNode> }
+// //& { type: 'element'; name: Name<TNode> }
 
 // type ashitnas = NotStringAttributeMap<document['year']>
 
@@ -138,8 +136,8 @@ export type { UnistNode as Node }
 // type JATSJastMap<TNode extends JATSContent = JATSContent> = TNode extends any
 //   ? {
 //       type: 'element'
-//       tagName: Pick<TNode, 'type'>
-//       properties: PropertiesMap<TNode>
+//       name: Pick<TNode, 'type'>
+//       attributes: PropertiesMap<TNode>
 //       //children: JATSJastMap<
 //       //   ChildrenMap<TNode> extends JATSContent ? ChildrenMap<TNode> : {}
 //       //  >[]
@@ -163,7 +161,7 @@ export type { UnistNode as Node }
 
 // export type JASTMap<TNode extends JATSContent> = {
 //   name: string
-//   properties?: Omit<PickByValue<TNode, string | undefined>, '_namespace'>
+//   attributes?: Omit<PickByValue<TNode, string | undefined>, '_namespace'>
 //   children?: Omit<
 //     OmitByValue<TNode, string | undefined>,
 //     'constructor' | '_exists'
@@ -179,11 +177,11 @@ export type { UnistNode as Node }
 //   /**
 //    * The element's qualified name.
 //    */
-//   tagName: string
+//   name: string
 //   /**
 //    * Information associated with the element.
 //    */
-//   properties?: Properties | undefined
+//   attributes?: Attributes | undefined
 //   children: Array<ElementContent>
 // }
 

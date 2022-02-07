@@ -13,8 +13,8 @@ const combineCitations = (p: P): P => {
     if (
       !(
         (isElement(node) &&
-          node.tagName === 'xref' &&
-          node.properties.refType === 'bibr') ||
+          node.name === 'xref' &&
+          node.attributes.refType === 'bibr') ||
         (stack.length > 0 &&
           node.type === 'text' &&
           node.value.replace(/[ ,]+/g, '') === '')
@@ -47,8 +47,8 @@ const combineStack = (nodes: (Text | Xref)[]): (Xref | Text)[] => {
 
   const combinedCitation: Xref = {
     type: 'element',
-    tagName: 'xref',
-    properties: { refType: 'bibr' },
+    name: 'xref',
+    attributes: { refType: 'bibr' },
     children: rawCitations.flatMap((cite) => {
       if (cite.type === 'text') return [cite]
       return cite.children

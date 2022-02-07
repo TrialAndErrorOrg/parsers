@@ -14,12 +14,13 @@
     "rejour-meta": "libs/rejour/rejour-meta",
     "rejour-move-abstract": "libs/rejour/rejour-move-abstract",
     "rejour-parse": "libs/rejour/rejour-parse",
-    "rejour-rejour-frontmatter": "libs/rejour/rejour-frontmatter",
+    "rejour-frontmatter": "libs/rejour/rejour-frontmatter",
     "rejour-relatex": "libs/rejour/rejour-relatex",
     "rejour-stringify": "libs/rejour/rejour-stringify",
     "relatex-stringify": "libs/relatex/relatex-stringify",
     "texast": "libs/relatex/texast",
     "texast-util-to-latex": "libs/relatex/texast-util-to-latex",
-    "utils": "libs/utils"
+    "utils": "libs/utils",
+    "xast-util-to-string": "libs/xast/xast-util-to-string"
   }
 }

@@ -191,7 +191,7 @@
   integrity sha512-TmKSNO4D5rzhL5bjWFcVHHLETzfQ/AmbKpKPOSjlP0WoHZ6L911fgoOKY4Alp/emzG4cHJdyN49zpgkbXFEHHw==
   dependencies:
     "@babel/helper-validator-identifier" "^7.16.7"
-    to-fast-properties "^2.0.0"
+    to-fast-attributes "^2.0.0"
 
 "@jridgewell/resolve-uri@^3.0.3":
   version "3.0.4"
@@ -867,9 +867,9 @@ supports-color@^5.3.0:
   dependencies:
     has-flag "^3.0.0"
 
-to-fast-properties@^2.0.0:
+to-fast-attributes@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
+  resolved "https://registry.yarnpkg.com/to-fast-attributes/-/to-fast-attributes-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
   integrity sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=
 
 to-vfile@^7.0.0, to-vfile@^7.2.3:

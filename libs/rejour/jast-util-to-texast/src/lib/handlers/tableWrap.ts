@@ -6,7 +6,7 @@ import { J, Node, Root } from '../types'
 
 const relativeOrderTable = (element: TableWrap['children'][number]) => {
   if (!isElement(element)) return 4
-  switch (element.tagName) {
+  switch (element.name) {
     case 'caption':
       return 1
     case 'label':
@@ -25,6 +25,6 @@ export function tableWrap(j: J, node: TableWrap) {
   //  }
 
   // return j(article, 'root', [
-  //   j(node, 'element', { tagName: 'article' }, all(j, article)),
+  //   j(node, 'element', { name: 'article' }, all(j, article)),
   // ])
 }

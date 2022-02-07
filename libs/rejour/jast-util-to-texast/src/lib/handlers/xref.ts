@@ -41,7 +41,7 @@ export function xref(j: J, node: Xref) {
   // Maybe add a new type to texast: citation.
 
   // TODO: [rejour-rehype/citations] make checks for the kind of citations used.
-  switch (node.properties.refType) {
+  switch (node.attributes.refType) {
     case 'bibr': {
       return j(node, 'command', { name: 'autocite' }, [
         {
@@ -80,13 +80,13 @@ export function xref(j: J, node: Xref) {
       return j(
         node,
         'command',
-        { name: refTypeMap[node.properties.refType || 'default'] || 'ref' },
+        { name: refTypeMap[node.attributes.refType || 'default'] || 'ref' },
         [wrapCommandArg(j, node.children)]
       )
   }
   //  }
 
   // return j(article, 'root', [
-  //   j(node, 'element', { tagName: 'article' }, all(j, article)),
+  //   j(node, 'element', { name: 'article' }, all(j, article)),
   // ])
 }

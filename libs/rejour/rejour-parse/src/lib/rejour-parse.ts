@@ -48,15 +48,15 @@ export default function rejourParse(options: Settings = {}) {
       : tree
 
     // map
-    // attributes --> properties
-    // name --> tagName
+    // attributes --> attributes
+    // name --> name
     // to be more in line with hast, which makes plugins easier to port
     //@ts-ignore: TODO:somehow types don't align, fix
     tree = map(tree!, (node) => {
       if (node.type !== 'element') return node
       const element = node as XastElement
 
-      const properties = element.attributes
+      const attributes = element.attributes
         ? Object.entries(element.attributes).reduce(
             (
               acc: { [key: string]: any },
@@ -70,8 +70,8 @@ export default function rejourParse(options: Settings = {}) {
         : {}
       return {
         type: 'element',
-        tagName: pascalToCamelCase(element.name),
-        properties: properties,
+        name: pascalToCamelCase(element.name),
+        attributes: attributes,
         children: element.children,
         ...(element.position ? { position: element.position } : {}),
       }

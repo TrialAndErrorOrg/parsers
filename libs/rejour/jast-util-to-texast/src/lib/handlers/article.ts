@@ -6,21 +6,21 @@ import { J, Node, Root } from '../types'
 
 export function article(j: J, node: Root) {
   const kids = node.children as Element[]
-  const front = kids.find((child) => child?.tagName === 'front')
+  const front = kids.find((child) => child?.name === 'front')
   if (!front) {
     throw new Error(
       `Node ${node.type} requires a "front" child, but none were found.`
     )
   }
 
-  const back = kids.find((child) => child?.tagName === 'back')
+  const back = kids.find((child) => child?.name === 'back')
   if (back) {
     front?.children?.push(...(back?.children || []))
   }
 
-  const body = kids.find((child) => child?.tagName === 'body')
+  const body = kids.find((child) => child?.name === 'body')
   if (!body) {
-    return j(node, 'root', { tagName: 'article' }, [
+    return j(node, 'root', { name: 'article' }, [
       ...all(j, node),
       j(node, 'body'),
     ])

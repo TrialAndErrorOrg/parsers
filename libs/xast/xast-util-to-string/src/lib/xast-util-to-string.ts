@@ -1,7 +1,7 @@
 /**
  * xast utility to get the plain-text value of a node.
  * Adapted from
- * [`hast-util-to-string`](https://github.com/rehype-minify/blob/main/packages/hast-util-to-string).
+ * [`xast-util-to-string`](https://github.com/rehype-minify/blob/main/packages/xast-util-to-string).
  *
  * ## What is this?
  *

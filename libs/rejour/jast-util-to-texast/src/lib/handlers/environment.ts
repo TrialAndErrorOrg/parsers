@@ -1,4 +1,4 @@
-import { isElement } from 'jjast'
+import { isElement, Names } from 'jjast'
 import { CommandArg, CommandArgOpt, EnvironmentContent } from 'texast'
 import { all } from '../all'
 import { J, Parents, Name, Node } from '../types'
@@ -9,9 +9,9 @@ import { wrapCommandArg } from '../util/wrap-command-arg'
 const typeEnvArgMap: {
   [key: string]: {
     name?: string
-    first?: Name[]
-    required?: Name[][]
-    optional?: Name[]
+    first?: Names[]
+    required?: Names[][]
+    optional?: Names[]
     empty?: boolean
   }
 } = {}

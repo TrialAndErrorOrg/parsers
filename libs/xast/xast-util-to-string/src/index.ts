@@ -1,1 +1,1 @@
-export * from './lib/xast-xast-util-to-string'
+export * from './lib/xast-util-to-string'

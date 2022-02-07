@@ -1,5 +1,5 @@
 const config = {
-  displayName: 'jast-util-to-texast',
+  displayName: 'rejour-jast-util-to-texast',
   preset: '../../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -13,7 +13,7 @@ const config = {
   },
   transformIgnorePatterns: [],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../../coverage/libs/jast-util-to-texast',
+  coverageDirectory: '../../../coverage/libs/rejour/jast-util-to-texast',
   extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: {
     '^(\\.{1,2}/.*)\\.js$': '$1',

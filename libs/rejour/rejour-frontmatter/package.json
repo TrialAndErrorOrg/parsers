@@ -1,5 +1,5 @@
 {
-  "name": "xast-util-to-string",
+  "name": "rejour-frontmatter",
   "version": "0.0.1",
   "license": "GPL-3-0-or-later",
   "repository": "https://github.com/journaloftrialanderror/jote",
@@ -12,5 +12,8 @@
     "syntax",
     "tree",
     "ast"
-  ]
+  ],
+  "dependencies": {
+    "vfile": "^5.3.0"
+  }
 }

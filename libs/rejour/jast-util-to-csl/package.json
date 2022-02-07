@@ -1,6 +1,11 @@
 {
-  "name": "xast-util-to-string",
+  "name": "jast-util-to-csl",
   "version": "0.0.1",
+  "dependencies": {
+    "csl-json": "^0.1.0",
+    "xast-util-to-string": "^2.0.0",
+    "unist-util-is": "^5.1.1"
+  },
   "license": "GPL-3-0-or-later",
   "repository": "https://github.com/journaloftrialanderror/jote",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",

@@ -1,0 +1,34 @@
+{
+  "root": "libs/rejour/rejour-frontmatter",
+  "sourceRoot": "libs/rejour/rejour-frontmatter/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/rejour/rejour-frontmatter",
+        "tsConfig": "libs/rejour/rejour-frontmatter/tsconfig.lib.json",
+        "packageJson": "libs/rejour/rejour-frontmatter/package.json",
+        "main": "libs/rejour/rejour-frontmatter/src/index.ts",
+        "assets": ["libs/rejour/rejour-frontmatter/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/rejour/rejour-frontmatter/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/rejour/rejour-frontmatter"],
+      "options": {
+        "jestConfig": "libs/rejour/rejour-frontmatter/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

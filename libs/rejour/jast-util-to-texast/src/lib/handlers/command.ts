@@ -1,16 +1,17 @@
+import { Names } from 'jjast'
 import { CommandArg, CommandArgOpt } from 'texast'
 import { all } from '../all'
 import { one } from '../one'
-import { J, Node, Parent, Parents, Root, Name, Text } from '../types'
+import { J, Node, Parent, Parents, Root, Text } from '../types'
 import { wrap } from '../util/wrap'
 import { wrapCommandArg } from '../util/wrap-command-arg'
 
 const typeCommandMap: {
   [key: string]: {
     name?: string
-    first?: Name[]
-    required?: Name[][]
-    optional?: Name[]
+    first?: Names[]
+    required?: Names[][]
+    optional?: Names[]
     empty?: boolean
     needsNewline?: boolean
   }

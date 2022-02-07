@@ -22,7 +22,7 @@ const findAbstractNode = (tree: Root): Abstract | null => {
   let abstractNode: Element | null = null
   visit(
     tree,
-    (node: Node) => isElement(node) && node.tagName === 'sec',
+    (node: Node) => isElement(node) && node.name === 'sec',
     (node: Element) => {
       if (containsAbstract(node as Element)) abstractNode = node as Element
     }
@@ -37,27 +37,27 @@ export default function rejourMoveAbstract() {
     // TODO: [rejour-move-abstract] Make finding abstract less inefficient
     remove(tree, (rawNode) => {
       const node = rawNode as Element
-      return node.tagName === 'sec' && containsAbstract(node)
+      return node.name === 'sec' && containsAbstract(node)
     })
 
     if (!abstractNode) return
 
     const abstractBody = filter(
       abstractNode,
-      (node) => !(isElement(node) && node.tagName === 'title')
+      (node) => !(isElement(node) && node.name === 'title')
     )
 
     if (abstractBody === null) return
 
     const abstract: Abstract = {
       type: 'element',
-      tagName: 'abstract',
-      properties: {},
+      name: 'abstract',
+      attributes: {},
       children: abstractBody.children,
     }
     visit(
       tree,
-      (node: Node) => isElement(node) && node.tagName === 'article-meta',
+      (node: Node) => isElement(node) && node.name === 'article-meta',
       (articleMetaDataNode: Element) => {
         articleMetaDataNode?.children?.push(abstract)
       }

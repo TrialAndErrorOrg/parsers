@@ -157,6 +157,7 @@ export function refToCSL(citation: ElementCitation, id: string): CSL {
 const isText = convert<Text>('text')
 type Node = Content
 
+/*
 export function toCSLFront(node: Front): CSL | undefined {
   return toCSL(node)
 }
@@ -186,36 +187,37 @@ export function toCSLRoot(node: Root): CSLResult {
 
   return result
 }
+*/
 
 /**
  * Parses either Root, Front, or Back jast-element and returns CSL JSON
  */
-export function toCSL(node: Node | Node[]): CSL | CSL[] | string {
-  //@ts-ignore
-  if (Array.isArray(node)) return node.map((n) => toCSL(n))
+// export function toCSL(node: Node | Node[]): CSL | CSL[] | string {
+//   //@ts-ignore
+//   if (Array.isArray(node)) return node.map((n) => toCSL(n))
 
-  if (isText(node)) return node.value
+//   if (isText(node)) return node.value
 
-  switch (node.name) {
-    case 'articleTitle':
-      return { title: toString(node) }
-    case 'refList':
-      refListToCSL(node)
-    case 'contribGroup': {
-      //@ts-ignore
-      if (node.attributes.contentType === 'author') {
-        return { author: Object.assign(...toCSL(node.children)) }
-      }
-    }
-    case 'surname': {
-      return { family: toString(node) }
-    }
-    case 'givenNames': {
-      return { given: toString(node) }
-    }
-    default:
-      //@ts-ignore
+//   switch (node.name) {
+//     case 'articleTitle':
+//       return { title: toString(node) }
+//     case 'refList':
+//       refListToCSL(node)
+//     case 'contribGroup': {
+//       //@ts-ignore
+//       if (node.attributes.contentType === 'author') {
+//         return { author: Object.assign(...toCSL(node.children)) }
+//       }
+//     }
+//     case 'surname': {
+//       return { family: toString(node) }
+//     }
+//     case 'givenNames': {
+//       return { given: toString(node) }
+//     }
+//     default:
+//       //@ts-ignore
 
-      return toCSL(node.children)
-  }
-}
+//       return toCSL(node.children)
+//   }
+// }

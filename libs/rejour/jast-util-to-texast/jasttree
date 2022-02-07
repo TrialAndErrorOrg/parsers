@@ -12417,17 +12417,6 @@
               "children": [
                 {
                   "type": "element",
-                  "tagName": "title",
-                  "properties": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "Take-Home Message"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
                   "tagName": "p",
                   "properties": {
                     "id": "_paragraph-3"
@@ -12448,17 +12437,6 @@
                 "id": "sec-3"
               },
               "children": [
-                {
-                  "type": "element",
-                  "tagName": "title",
-                  "properties": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "Abstract"
-                    }
-                  ]
-                },
                 {
                   "type": "element",
                   "tagName": "p",
@@ -12509,17 +12487,6 @@
               "children": [
                 {
                   "type": "element",
-                  "tagName": "title",
-                  "properties": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "Purpose"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
                   "tagName": "p",
                   "properties": {
                     "id": "_paragraph-5"
@@ -12542,33 +12509,11 @@
               "children": [
                 {
                   "type": "element",
-                  "tagName": "title",
-                  "properties": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "Introduction"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
                   "tagName": "sec",
                   "properties": {
                     "id": "sec-5_1"
                   },
                   "children": [
-                    {
-                      "type": "element",
-                      "tagName": "title",
-                      "properties": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Classical Conditioning"
-                        }
-                      ]
-                    },
                     {
                       "type": "element",
                       "tagName": "p",
@@ -12584,68 +12529,33 @@
                           "type": "element",
                           "tagName": "xref",
                           "properties": {
-                            "id": "_xref-1",
-                            "refType": "bibr",
-                            "rid": "bib1"
+                            "refType": "bibr"
                           },
                           "children": [
                             {
                               "type": "text",
                               "value": "[1]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-2",
-                            "refType": "bibr",
-                            "rid": "bib2"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[2]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-3",
-                            "refType": "bibr",
-                            "rid": "bib3"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[3]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-4",
-                            "refType": "bibr",
-                            "rid": "bib4"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[4]"
@@ -12692,30 +12602,17 @@
                           "type": "element",
                           "tagName": "xref",
                           "properties": {
-                            "id": "_xref-6",
-                            "refType": "bibr",
-                            "rid": "bib6"
+                            "refType": "bibr"
                           },
                           "children": [
                             {
                               "type": "text",
                               "value": "[6]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-7",
-                            "refType": "bibr",
-                            "rid": "bib7"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[7]"
@@ -12771,17 +12668,6 @@
                   "children": [
                     {
                       "type": "element",
-                      "tagName": "title",
-                      "properties": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Single-Case Experiments"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
                       "tagName": "p",
                       "properties": {
                         "id": "_paragraph-9"
@@ -12795,30 +12681,17 @@
                           "type": "element",
                           "tagName": "xref",
                           "properties": {
-                            "id": "_xref-9",
-                            "refType": "bibr",
-                            "rid": "bib9"
+                            "refType": "bibr"
                           },
                           "children": [
                             {
                               "type": "text",
                               "value": "[9]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-10",
-                            "refType": "bibr",
-                            "rid": "bib10"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[10]"
@@ -12918,30 +12791,17 @@
                           "type": "element",
                           "tagName": "xref",
                           "properties": {
-                            "id": "_xref-13",
-                            "refType": "bibr",
-                            "rid": "bib13"
+                            "refType": "bibr"
                           },
                           "children": [
                             {
                               "type": "text",
                               "value": "[13]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-14",
-                            "refType": "bibr",
-                            "rid": "bib14"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[14]"
@@ -12956,30 +12816,17 @@
                           "type": "element",
                           "tagName": "xref",
                           "properties": {
-                            "id": "_xref-15",
-                            "refType": "bibr",
-                            "rid": "bib13"
+                            "refType": "bibr"
                           },
                           "children": [
                             {
                               "type": "text",
                               "value": "[13]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-16",
-                            "refType": "bibr",
-                            "rid": "bib15"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[15]"
@@ -13001,17 +12848,6 @@
                     "id": "sec-5_3"
                   },
                   "children": [
-                    {
-                      "type": "element",
-                      "tagName": "title",
-                      "properties": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Advantages of SCEs for Classical Conditioning"
-                        }
-                      ]
-                    },
                     {
                       "type": "element",
                       "tagName": "p",
@@ -13065,30 +12901,17 @@
                           "type": "element",
                           "tagName": "xref",
                           "properties": {
-                            "id": "_xref-19",
-                            "refType": "bibr",
-                            "rid": "bib18"
+                            "refType": "bibr"
                           },
                           "children": [
                             {
                               "type": "text",
                               "value": "[18]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-20",
-                            "refType": "bibr",
-                            "rid": "bib19"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[19]"
@@ -13112,17 +12935,6 @@
                   "children": [
                     {
                       "type": "element",
-                      "tagName": "title",
-                      "properties": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Analyzing SCEs"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
                       "tagName": "p",
                       "properties": {
                         "id": "_paragraph-12"
@@ -13136,68 +12948,33 @@
                           "type": "element",
                           "tagName": "xref",
                           "properties": {
-                            "id": "_xref-21",
-                            "refType": "bibr",
-                            "rid": "bib20"
+                            "refType": "bibr"
                           },
                           "children": [
                             {
                               "type": "text",
                               "value": "[20]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-22",
-                            "refType": "bibr",
-                            "rid": "bib21"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[21]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-23",
-                            "refType": "bibr",
-                            "rid": "bib22"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[22]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-24",
-                            "refType": "bibr",
-                            "rid": "bib23"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[23]"
@@ -13212,87 +12989,41 @@
                           "type": "element",
                           "tagName": "xref",
                           "properties": {
-                            "id": "_xref-25",
-                            "refType": "bibr",
-                            "rid": "bib24"
+                            "refType": "bibr"
                           },
                           "children": [
                             {
                               "type": "text",
                               "value": "[24]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-26",
-                            "refType": "bibr",
-                            "rid": "bib25"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[25]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-27",
-                            "refType": "bibr",
-                            "rid": "bib26"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[26]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-28",
-                            "refType": "bibr",
-                            "rid": "bib27"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[27]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-29",
-                            "refType": "bibr",
-                            "rid": "bib28"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[28]"
@@ -13320,49 +13051,25 @@
                           "type": "element",
                           "tagName": "xref",
                           "properties": {
-                            "id": "_xref-30",
-                            "refType": "bibr",
-                            "rid": "bib14"
+                            "refType": "bibr"
                           },
                           "children": [
                             {
                               "type": "text",
                               "value": "[14]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-31",
-                            "refType": "bibr",
-                            "rid": "bib22"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[22]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-32",
-                            "refType": "bibr",
-                            "rid": "bib11"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[11]"
@@ -13396,49 +13103,25 @@
                           "type": "element",
                           "tagName": "xref",
                           "properties": {
-                            "id": "_xref-34",
-                            "refType": "bibr",
-                            "rid": "bib30"
+                            "refType": "bibr"
                           },
                           "children": [
                             {
                               "type": "text",
                               "value": "[30]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-35",
-                            "refType": "bibr",
-                            "rid": "bib31"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[31]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-36",
-                            "refType": "bibr",
-                            "rid": "bib11"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[11]"
@@ -13460,17 +13143,6 @@
                     "id": "sec-5_5"
                   },
                   "children": [
-                    {
-                      "type": "element",
-                      "tagName": "title",
-                      "properties": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Statistical Power of SCE RTs"
-                        }
-                      ]
-                    },
                     {
                       "type": "element",
                       "tagName": "p",
@@ -13505,30 +13177,17 @@
                           "type": "element",
                           "tagName": "xref",
                           "properties": {
-                            "id": "_xref-38",
-                            "refType": "bibr",
-                            "rid": "bib33"
+                            "refType": "bibr"
                           },
                           "children": [
                             {
                               "type": "text",
                               "value": "[33]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-39",
-                            "refType": "bibr",
-                            "rid": "bib34"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[34]"
@@ -13556,30 +13215,17 @@
                           "type": "element",
                           "tagName": "xref",
                           "properties": {
-                            "id": "_xref-40",
-                            "refType": "bibr",
-                            "rid": "bib35"
+                            "refType": "bibr"
                           },
                           "children": [
                             {
                               "type": "text",
                               "value": "[35]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-41",
-                            "refType": "bibr",
-                            "rid": "bib18"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[18]"
@@ -13594,106 +13240,49 @@
                           "type": "element",
                           "tagName": "xref",
                           "properties": {
-                            "id": "_xref-42",
-                            "refType": "bibr",
-                            "rid": "bib19"
+                            "refType": "bibr"
                           },
                           "children": [
                             {
                               "type": "text",
                               "value": "[19]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-43",
-                            "refType": "bibr",
-                            "rid": "bib18"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[18]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-44",
-                            "refType": "bibr",
-                            "rid": "bib36"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[36]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-45",
-                            "refType": "bibr",
-                            "rid": "bib37"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[37]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-46",
-                            "refType": "bibr",
-                            "rid": "bib38"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[38]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-47",
-                            "refType": "bibr",
-                            "rid": "bib39"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[39]"
@@ -13719,33 +13308,11 @@
               "children": [
                 {
                   "type": "element",
-                  "tagName": "title",
-                  "properties": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "Methods"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
                   "tagName": "sec",
                   "properties": {
                     "id": "sec-6_1"
                   },
                   "children": [
-                    {
-                      "type": "element",
-                      "tagName": "title",
-                      "properties": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Experimental Setup"
-                        }
-                      ]
-                    },
                     {
                       "type": "element",
                       "tagName": "p",
@@ -13874,17 +13441,6 @@
                   "children": [
                     {
                       "type": "element",
-                      "tagName": "title",
-                      "properties": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Laboratory Setup"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
                       "tagName": "p",
                       "properties": {
                         "id": "_paragraph-17"
@@ -13998,14 +13554,14 @@
                       "children": [
                         {
                           "type": "element",
-                          "tagName": "label",
-                          "properties": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "Figure 1"
-                            }
-                          ]
+                          "tagName": "graphic",
+                          "properties": {
+                            "id": "graphic-cfd6c788e6164f6a48417fbbf6dfd01d",
+                            "mimetype": "image",
+                            "mimeSubtype": "png",
+                            "xlink:href": "Other,+Figure+1.png"
+                          },
+                          "children": []
                         },
                         {
                           "type": "element",
@@ -14110,14 +13666,14 @@
                         },
                         {
                           "type": "element",
-                          "tagName": "graphic",
-                          "properties": {
-                            "id": "graphic-cfd6c788e6164f6a48417fbbf6dfd01d",
-                            "mimetype": "image",
-                            "mimeSubtype": "png",
-                            "xlink:href": "Other,+Figure+1.png"
-                          },
-                          "children": []
+                          "tagName": "label",
+                          "properties": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Figure 1"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -14215,17 +13771,6 @@
                   "children": [
                     {
                       "type": "element",
-                      "tagName": "title",
-                      "properties": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Tactor and Electrode Preparation"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
                       "tagName": "p",
                       "properties": {
                         "id": "_paragraph-22"
@@ -14316,17 +13861,6 @@
                     "id": "sec-6_4"
                   },
                   "children": [
-                    {
-                      "type": "element",
-                      "tagName": "title",
-                      "properties": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Experimental Trials"
-                        }
-                      ]
-                    },
                     {
                       "type": "element",
                       "tagName": "p",
@@ -14587,17 +14121,6 @@
                   "children": [
                     {
                       "type": "element",
-                      "tagName": "title",
-                      "properties": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Observed Variables"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
                       "tagName": "p",
                       "properties": {
                         "id": "_paragraph-24"
@@ -14611,30 +14134,17 @@
                           "type": "element",
                           "tagName": "xref",
                           "properties": {
-                            "id": "_xref-55",
-                            "refType": "bibr",
-                            "rid": "bib44"
+                            "refType": "bibr"
                           },
                           "children": [
                             {
                               "type": "text",
                               "value": "[44]"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " "
-                        },
-                        {
-                          "type": "element",
-                          "tagName": "xref",
-                          "properties": {
-                            "id": "_xref-56",
-                            "refType": "bibr",
-                            "rid": "bib40"
-                          },
-                          "children": [
+                            },
+                            {
+                              "type": "text",
+                              "value": " "
+                            },
                             {
                               "type": "text",
                               "value": "[40]"
@@ -14669,17 +14179,6 @@
                     "id": "sec-6_6"
                   },
                   "children": [
-                    {
-                      "type": "element",
-                      "tagName": "title",
-                      "properties": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Effect Size Measure and Test Statistic"
-                        }
-                      ]
-                    },
                     {
                       "type": "element",
                       "tagName": "p",
@@ -14927,17 +14426,6 @@
                   "children": [
                     {
                       "type": "element",
-                      "tagName": "title",
-                      "properties": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Single-Case Design"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
                       "tagName": "p",
                       "properties": {
                         "id": "_paragraph-27"
@@ -14956,17 +14444,6 @@
                         "id": "sec-6_7_1"
                       },
                       "children": [
-                        {
-                          "type": "element",
-                          "tagName": "title",
-                          "properties": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "Initial Design Options"
-                            }
-                          ]
-                        },
                         {
                           "type": "element",
                           "tagName": "p",
@@ -15288,30 +14765,17 @@
                               "type": "element",
                               "tagName": "xref",
                               "properties": {
-                                "id": "_xref-60",
-                                "refType": "bibr",
-                                "rid": "bib46"
+                                "refType": "bibr"
                               },
                               "children": [
                                 {
                                   "type": "text",
                                   "value": "[46]"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "value": " "
-                            },
-                            {
-                              "type": "element",
-                              "tagName": "xref",
-                              "properties": {
-                                "id": "_xref-61",
-                                "refType": "bibr",
-                                "rid": "bib18"
-                              },
-                              "children": [
+                                },
+                                {
+                                  "type": "text",
+                                  "value": " "
+                                },
                                 {
                                   "type": "text",
                                   "value": "[18]"
@@ -15333,17 +14797,6 @@
                         "id": "sec-6_7_2"
                       },
                       "children": [
-                        {
-                          "type": "element",
-                          "tagName": "title",
-                          "properties": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "Final Design"
-                            }
-                          ]
-                        },
                         {
                           "type": "element",
                           "tagName": "p",
@@ -15506,30 +14959,17 @@
                               "type": "element",
                               "tagName": "xref",
                               "properties": {
-                                "id": "_xref-63",
-                                "refType": "bibr",
-                                "rid": "bib9"
+                                "refType": "bibr"
                               },
                               "children": [
                                 {
                                   "type": "text",
                                   "value": "[9]"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "value": " "
-                            },
-                            {
-                              "type": "element",
-                              "tagName": "xref",
-                              "properties": {
-                                "id": "_xref-64",
-                                "refType": "bibr",
-                                "rid": "bib10"
-                              },
-                              "children": [
+                                },
+                                {
+                                  "type": "text",
+                                  "value": " "
+                                },
                                 {
                                   "type": "text",
                                   "value": "[10]"
@@ -15553,17 +14993,6 @@
                     "id": "sec-6_8"
                   },
                   "children": [
-                    {
-                      "type": "element",
-                      "tagName": "title",
-                      "properties": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Randomization Scheme and RT"
-                        }
-                      ]
-                    },
                     {
                       "type": "element",
                       "tagName": "p",
@@ -15936,17 +15365,6 @@
                   "children": [
                     {
                       "type": "element",
-                      "tagName": "title",
-                      "properties": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Pilot Tests"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
                       "tagName": "p",
                       "properties": {
                         "id": "_paragraph-36"
@@ -15980,17 +15398,6 @@
                     "id": "sec-6_10"
                   },
                   "children": [
-                    {
-                      "type": "element",
-                      "tagName": "title",
-                      "properties": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Power Study"
-                        }
-                      ]
-                    },
                     {
                       "type": "element",
                       "tagName": "p",
@@ -16213,17 +15620,6 @@
                       "children": [
                         {
                           "type": "element",
-                          "tagName": "title",
-                          "properties": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "Simulation Conditions"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
                           "tagName": "p",
                           "properties": {
                             "id": "_paragraph-41"
@@ -16308,17 +15704,6 @@
                         "id": "sec-6_10_2"
                       },
                       "children": [
-                        {
-                          "type": "element",
-                          "tagName": "title",
-                          "properties": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "Other Simulation Parameters"
-                            }
-                          ]
-                        },
                         {
                           "type": "element",
                           "tagName": "p",
@@ -16426,33 +15811,11 @@
               "children": [
                 {
                   "type": "element",
-                  "tagName": "title",
-                  "properties": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "Results"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
                   "tagName": "sec",
                   "properties": {
                     "id": "sec-7_1"
                   },
                   "children": [
-                    {
-                      "type": "element",
-                      "tagName": "title",
-                      "properties": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Power Analysis"
-                        }
-                      ]
-                    },
                     {
                       "type": "element",
                       "tagName": "p",
@@ -16492,17 +15855,6 @@
                         "id": "tbl1"
                       },
                       "children": [
-                        {
-                          "type": "element",
-                          "tagName": "label",
-                          "properties": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "Table 1"
-                            }
-                          ]
-                        },
                         {
                           "type": "element",
                           "tagName": "caption",
@@ -16865,6 +16217,17 @@
                                 "id": "_paragraph-48"
                               },
                               "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "tagName": "label",
+                          "properties": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Table 1"
                             }
                           ]
                         },
@@ -18988,14 +18351,14 @@
                       "children": [
                         {
                           "type": "element",
-                          "tagName": "label",
-                          "properties": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "Figure 2"
-                            }
-                          ]
+                          "tagName": "graphic",
+                          "properties": {
+                            "id": "graphic-2b65335d8192b997fbbf5ff50e87239a",
+                            "mimetype": "image",
+                            "mimeSubtype": "png",
+                            "xlink:href": "Other,+Figure+2.png"
+                          },
+                          "children": []
                         },
                         {
                           "type": "element",
@@ -19034,14 +18397,14 @@
                         },
                         {
                           "type": "element",
-                          "tagName": "graphic",
-                          "properties": {
-                            "id": "graphic-2b65335d8192b997fbbf5ff50e87239a",
-                            "mimetype": "image",
-                            "mimeSubtype": "png",
-                            "xlink:href": "Other,+Figure+2.png"
-                          },
-                          "children": []
+                          "tagName": "label",
+                          "properties": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Figure 2"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -19054,17 +18417,6 @@
                     "id": "sec-7_2"
                   },
                   "children": [
-                    {
-                      "type": "element",
-                      "tagName": "title",
-                      "properties": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Pilot Tests"
-                        }
-                      ]
-                    },
                     {
                       "type": "element",
                       "tagName": "p",
@@ -19087,14 +18439,14 @@
                       "children": [
                         {
                           "type": "element",
-                          "tagName": "label",
-                          "properties": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "Figure 3"
-                            }
-                          ]
+                          "tagName": "graphic",
+                          "properties": {
+                            "id": "graphic-7c7237a2181ba54a3ef129f52bbe1e2d",
+                            "mimetype": "image",
+                            "mimeSubtype": "png",
+                            "xlink:href": "Other,+Figure+3.png"
+                          },
+                          "children": []
                         },
                         {
                           "type": "element",
@@ -19163,14 +18515,14 @@
                         },
                         {
                           "type": "element",
-                          "tagName": "graphic",
-                          "properties": {
-                            "id": "graphic-7c7237a2181ba54a3ef129f52bbe1e2d",
-                            "mimetype": "image",
-                            "mimeSubtype": "png",
-                            "xlink:href": "Other,+Figure+3.png"
-                          },
-                          "children": []
+                          "tagName": "label",
+                          "properties": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Figure 3"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -19232,14 +18584,14 @@
                       "children": [
                         {
                           "type": "element",
-                          "tagName": "label",
-                          "properties": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "Figure 4"
-                            }
-                          ]
+                          "tagName": "graphic",
+                          "properties": {
+                            "id": "graphic-fa4652dd8db4fd7fea261a960ada2c60",
+                            "mimetype": "image",
+                            "mimeSubtype": "png",
+                            "xlink:href": "Other,+Figure+4.png"
+                          },
+                          "children": []
                         },
                         {
                           "type": "element",
@@ -19535,14 +18887,14 @@
                         },
                         {
                           "type": "element",
-                          "tagName": "graphic",
-                          "properties": {
-                            "id": "graphic-fa4652dd8db4fd7fea261a960ada2c60",
-                            "mimetype": "image",
-                            "mimeSubtype": "png",
-                            "xlink:href": "Other,+Figure+4.png"
-                          },
-                          "children": []
+                          "tagName": "label",
+                          "properties": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Figure 4"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -19557,17 +18909,6 @@
                 "id": "sec-8"
               },
               "children": [
-                {
-                  "type": "element",
-                  "tagName": "title",
-                  "properties": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "Discussion"
-                    }
-                  ]
-                },
                 {
                   "type": "element",
                   "tagName": "p",
@@ -19827,30 +19168,17 @@
                       "type": "element",
                       "tagName": "xref",
                       "properties": {
-                        "id": "_xref-73",
-                        "refType": "bibr",
-                        "rid": "bib49"
+                        "refType": "bibr"
                       },
                       "children": [
                         {
                           "type": "text",
                           "value": "[49]"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "value": " "
-                    },
-                    {
-                      "type": "element",
-                      "tagName": "xref",
-                      "properties": {
-                        "id": "_xref-74",
-                        "refType": "bibr",
-                        "rid": "bib50"
-                      },
-                      "children": [
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
                         {
                           "type": "text",
                           "value": "[50]"
@@ -19887,17 +19215,6 @@
               "children": [
                 {
                   "type": "element",
-                  "tagName": "title",
-                  "properties": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "Conclusion"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
                   "tagName": "p",
                   "properties": {
                     "id": "_paragraph-68"
@@ -19920,17 +19237,6 @@
               "children": [
                 {
                   "type": "element",
-                  "tagName": "title",
-                  "properties": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "Funding"
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
                   "tagName": "p",
                   "properties": {
                     "id": "_paragraph-69"
@@ -19951,17 +19257,6 @@
                 "id": "sec-11"
               },
               "children": [
-                {
-                  "type": "element",
-                  "tagName": "title",
-                  "properties": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "Data Availability"
-                    }
-                  ]
-                },
                 {
                   "type": "element",
                   "tagName": "p",
@@ -20003,17 +19298,6 @@
               },
               "children": [
                 {
-                  "type": "element",
-                  "tagName": "title",
-                  "properties": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "Appendix"
-                    }
-                  ]
-                },
-                {
                   "type": "text",
                   "value": " "
                 },
@@ -20024,17 +19308,6 @@
                     "id": "tbl2"
                   },
                   "children": [
-                    {
-                      "type": "element",
-                      "tagName": "label",
-                      "properties": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Table 2"
-                        }
-                      ]
-                    },
                     {
                       "type": "element",
                       "tagName": "caption",
@@ -20144,6 +19417,17 @@
                             "id": "_paragraph-127"
                           },
                           "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "label",
+                      "properties": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Table 2"
                         }
                       ]
                     },
@@ -26542,17 +25826,6 @@
                   "children": [
                     {
                       "type": "element",
-                      "tagName": "label",
-                      "properties": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Table 3"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
                       "tagName": "caption",
                       "properties": {},
                       "children": [
@@ -26643,6 +25916,17 @@
                             "id": "_paragraph-130"
                           },
                           "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "label",
+                      "properties": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Table 3"
                         }
                       ]
                     },

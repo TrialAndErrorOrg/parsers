@@ -2906,14 +2906,13 @@ export interface ContribGroup extends UnistNode {
   properties: {
     id?: string
     specificUse?: string
+    contentType?: string
   }
 
   children: RequiredMap<ContribGroupChildrenMap>[]
 }
 
 export interface ContribGroupChildrenMap {
-  text?: Text
-
   address?: Address[]
 
   aff?: Aff[]
@@ -8667,6 +8666,7 @@ export interface Ref extends UnistNode {
   properties: {
     id?: string
     specificUse?: string
+    contentType?: string
   }
 
   children: RequiredMap<RefChildrenMap>[]

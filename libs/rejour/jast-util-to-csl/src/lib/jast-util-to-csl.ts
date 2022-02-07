@@ -8,10 +8,13 @@ import {
   RefList,
   Content,
   Root,
+  Front,
+  Back,
 } from 'jjast'
 import { Data as CSL, LooseNumber, Person } from 'csl-json'
 import { toString } from 'xast-util-to-string'
 import { convert } from 'unist-util-is'
+import { visit } from '@jote/utils'
 type Date = [
   [LooseNumber, (LooseNumber | undefined)?, (LooseNumber | undefined)?],
   (
@@ -153,6 +156,40 @@ export function refToCSL(citation: ElementCitation, id: string): CSL {
 
 const isText = convert<Text>('text')
 type Node = Content
+
+export function toCSLFront(node: Front): CSL | undefined {
+  return toCSL(node)
+}
+export function toCSLBack(node: Back): CSL[] | undefined {
+  return
+}
+
+type CSLResult = { front: CSL | undefined; back: CSL[] | undefined }
+
+export function toCSLRoot(node: Root): CSLResult {
+  let result: CSLResult = { front: undefined, back: [] }
+  visit(
+    node,
+    (node: Node) => isElement(node) && node.name === 'front',
+    (node: Front) => {
+      result.front = toCSLFront(node)
+    }
+  )
+
+  visit(
+    node,
+    (node: Node) => isElement(node) && node.name === 'back',
+    (node: Back) => {
+      result.back = toCSLBack(node)
+    }
+  )
+
+  return result
+}
+
+/**
+ * Parses either Root, Front, or Back jast-element and returns CSL JSON
+ */
 export function toCSL(node: Node | Node[]): CSL | CSL[] | string {
   //@ts-ignore
   if (Array.isArray(node)) return node.map((n) => toCSL(n))
@@ -160,15 +197,25 @@ export function toCSL(node: Node | Node[]): CSL | CSL[] | string {
   if (isText(node)) return node.value
 
   switch (node.name) {
+    case 'articleTitle':
+      return { title: toString(node) }
     case 'refList':
       refListToCSL(node)
     case 'contribGroup': {
       //@ts-ignore
       if (node.attributes.contentType === 'author') {
+        return { author: Object.assign(...toCSL(node.children)) }
       }
+    }
+    case 'surname': {
+      return { family: toString(node) }
+    }
+    case 'givenNames': {
+      return { given: toString(node) }
     }
     default:
       //@ts-ignore
+
       return toCSL(node.children)
   }
 }

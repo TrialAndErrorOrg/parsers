@@ -1,0 +1,34 @@
+{
+  "root": "libs/ooxast/ooxast",
+  "sourceRoot": "libs/ooxast/ooxast/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ooxast/ooxast/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ooxast/ooxast"],
+      "options": {
+        "jestConfig": "libs/ooxast/ooxast/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ooxast/ooxast",
+        "tsConfig": "libs/ooxast/ooxast/tsconfig.lib.json",
+        "packageJson": "libs/ooxast/ooxast/package.json",
+        "main": "libs/ooxast/ooxast/src/index.ts",
+        "assets": ["libs/ooxast/ooxast/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

@@ -4,7 +4,8 @@
   "license": "GPL-3-0-or-later",
   "scripts": {
     "start": "nx serve",
-    "build": "nx run-many --target=build --all",
+    "build": "nx run-many --target=build --all --prod",
+    "build-dev": "nx run-many --target=build --all",
     "test": "nx run-many --target=test --all",
     "clean-libs": "echo 'for i in libs/relatex/* libs/rejour/* \\n do \\n rm -f $i/yarn.lock && rm -rf $i/node_modules && yarn --cwd $i \\n done' | bash",
     "install-node": "echo 'for i in libs/relatex/* libs/rejour/* \\n do \\n rm -rf $i/node_modules && yarn --cwd $i \\n done' | bash",

@@ -67,7 +67,7 @@ export default function Index() {
             <Navbar.Section>Journal of Trial and Error</Navbar.Section>
             <Navbar.Section grow mt="lg">
               <VStack>
-                {['1', '2', '3', '4', '5'].map((num) => (
+                {['2', '2', '3', '4', '5'].map((num) => (
                   <HStack key={num}>
                     <Text>Icon {num}</Text>
                     <Text>Link {num}</Text>

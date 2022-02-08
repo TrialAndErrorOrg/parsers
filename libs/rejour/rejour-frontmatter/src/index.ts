@@ -1,1 +1,1 @@
-export * from './lib/rejour-rejour-frontmatter'
+export * from './lib/rejour-frontmatter'

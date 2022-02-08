@@ -166,7 +166,6 @@ const merge = (
       curr: { [key: string]: any | any[] } | any
     ) => {
       if (typeof curr !== 'object') {
-        console.log(curr)
         return acc
       }
 

@@ -1,4 +1,4 @@
-import { reoffReoffParse } from './reoff-reoff-parse'
+import reoffParse from './reoff-parse'
 
 describe('reoffReoffParse', () => {
   it('should work', () => {

@@ -28,6 +28,7 @@
     "@types/react-file-icon": "^1.0.1",
     "@types/unist": "^2.0.6",
     "@types/xast": "^1.0.2",
+    "csl-json": "0.1.0",
     "core-js": "^3.6.5",
     "dayjs": "^1.10.7",
     "docx4js": "^3.2.20",

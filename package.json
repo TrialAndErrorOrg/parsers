@@ -50,7 +50,8 @@
     "utility-types": "^3.10.0",
     "vfile": "^5.3.0",
     "xast-util-from-xml": "^2.0.1",
-    "xast-util-to-xml": "^3.0.0"
+    "xast-util-to-xml": "^3.0.0", 
+    "escape-latex": "1.2.0"
   },
   "devDependencies": {
     "@nestjs/schematics": "^8.0.0",
@@ -79,6 +80,7 @@
     "@typescript-eslint/parser": "~5.3.0",
     "@typescript/analyze-trace": "^0.6.0",
     "babel-jest": "27.2.3",
+    "@types/escape-latex": "0.1.30",
     "commander": "^9.0.0",
     "csstype": "^3.0.10",
     "cypress": "^9.1.0",

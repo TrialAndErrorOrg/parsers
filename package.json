@@ -28,6 +28,7 @@
     "@types/react-file-icon": "^1.0.1",
     "@types/unist": "^2.0.6",
     "@types/xast": "^1.0.2",
+    "csl-json": "0.1.0",
     "core-js": "^3.6.5",
     "dayjs": "^1.10.7",
     "docx4js": "^3.2.20",
@@ -49,7 +50,8 @@
     "utility-types": "^3.10.0",
     "vfile": "^5.3.0",
     "xast-util-from-xml": "^2.0.1",
-    "xast-util-to-xml": "^3.0.0"
+    "xast-util-to-xml": "^3.0.0", 
+    "escape-latex": "1.2.0"
   },
   "devDependencies": {
     "@nestjs/schematics": "^8.0.0",

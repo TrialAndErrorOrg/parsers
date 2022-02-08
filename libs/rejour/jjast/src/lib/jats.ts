@@ -924,10 +924,11 @@ export interface ArticleId extends UnistNode {
   }
 
   children: RequiredMap<ArticleIdChildrenMap>[]
-  text?: Text
 }
 
-export interface ArticleIdChildrenMap {}
+export interface ArticleIdChildrenMap {
+  text?: Text
+}
 
 type ArticleIdTypePubIdtype =
   | 'accession'
@@ -10882,6 +10883,7 @@ export interface Sub extends UnistNode {
 }
 
 export interface SubChildrenMap {
+  text?: Text
   abbrev?: Abbrev[]
 
   alternatives?: Alternatives[]

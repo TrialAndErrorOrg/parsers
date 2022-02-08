@@ -1,6 +1,4 @@
 import { isElement, Names } from 'jjast'
-import { CommandArg, CommandArgOpt, EnvironmentContent } from 'texast'
-import { all } from '../all'
 import { J, Parents, Name, Node } from '../types'
 import { wrap } from '../util/wrap'
 import { wrapChildren } from '../util/wrap-children'

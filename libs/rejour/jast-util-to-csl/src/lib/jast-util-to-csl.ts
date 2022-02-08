@@ -157,67 +157,238 @@ export function refToCSL(citation: ElementCitation, id: string): CSL {
 const isText = convert<Text>('text')
 type Node = Content
 
-/*
+const merge = (
+  array: ({ [key: string]: any | any[] } | any)[]
+): { [key: string]: any | any[] } =>
+  array.reduce(
+    (
+      acc: { [key: string]: any },
+      curr: { [key: string]: any | any[] } | any
+    ) => {
+      if (typeof curr !== 'object') {
+        console.log(curr)
+        return acc
+      }
+
+      const [key, val] = Object.entries(curr)[0]
+      if (!Array.isArray(val)) {
+        acc[key] = val
+        return acc
+      }
+      return { ...acc, [key]: [...(acc[key] || []), ...val] }
+    },
+    {}
+  )
+
 export function toCSLFront(node: Front): CSL | undefined {
-  return toCSL(node)
+  const csl = merge(one(node))
+  if (csl.custom) {
+    csl.custom = merge(csl.custom)
+  }
+  return csl as CSL
 }
+
 export function toCSLBack(node: Back): CSL[] | undefined {
-  return
-}
-
-type CSLResult = { front: CSL | undefined; back: CSL[] | undefined }
-
-export function toCSLRoot(node: Root): CSLResult {
-  let result: CSLResult = { front: undefined, back: [] }
+  let back: CSL[] | undefined
   visit(
     node,
-    (node: Node) => isElement(node) && node.name === 'front',
-    (node: Front) => {
-      result.front = toCSLFront(node)
+    (element: Content) => isElement(element) && element.name === 'refList',
+    (node: RefList) => {
+      back = refListToCSL(node)
     }
   )
-
-  visit(
-    node,
-    (node: Node) => isElement(node) && node.name === 'back',
-    (node: Back) => {
-      result.back = toCSLBack(node)
-    }
-  )
-
-  return result
+  return back
 }
-*/
 
+type MetaData = { front: CSL | undefined; back: CSL[] | undefined }
+type CSLConditional<T extends Root | Front | Back> = T extends Root
+  ? MetaData
+  : T extends Front
+  ? CSL
+  : CSL[]
 /**
  * Parses either Root, Front, or Back jast-element and returns CSL JSON
  */
-// export function toCSL(node: Node | Node[]): CSL | CSL[] | string {
-//   //@ts-ignore
-//   if (Array.isArray(node)) return node.map((n) => toCSL(n))
+export function toCSL<T extends Root | Front | Back>(
+  root: T
+): CSLConditional<T> {
+  if (root.type === 'root') {
+    let front: CSL | undefined
+    let back: CSL[] | undefined
 
-//   if (isText(node)) return node.value
+    visit(
+      root,
+      (element: Content) => isElement(element) && element.name === 'front',
+      (node: Front) => {
+        front = toCSLFront(node)
+      }
+    )
 
-//   switch (node.name) {
-//     case 'articleTitle':
-//       return { title: toString(node) }
-//     case 'refList':
-//       refListToCSL(node)
-//     case 'contribGroup': {
-//       //@ts-ignore
-//       if (node.attributes.contentType === 'author') {
-//         return { author: Object.assign(...toCSL(node.children)) }
-//       }
-//     }
-//     case 'surname': {
-//       return { family: toString(node) }
-//     }
-//     case 'givenNames': {
-//       return { given: toString(node) }
-//     }
-//     default:
-//       //@ts-ignore
+    visit(
+      root,
+      (element: Content) => isElement(element) && element.name === 'back',
+      (node: Back) => {
+        back = toCSLBack(node)
+      }
+    )
 
-//       return toCSL(node.children)
-//   }
-// }
+    return { front, back } as CSLConditional<T>
+  }
+  if (root.name === 'front') {
+    return toCSLFront(root) as CSLConditional<T>
+  }
+  return toCSLBack(root) as CSLConditional<T>
+}
+
+export function all(node: Extract<Node, { children: any[] }>): any[] {
+  return node?.children?.flatMap((n: Node) => one(n)).filter((n) => n)
+  // .reduce((acc: { [key: string]: any | any[] }, curr: undefined | {[key:string]: any}) => {
+  //   if (!curr) return acc
+  //   const [key, val] = Object.entries(curr)[0]
+  //   if (acc[key] && Array.isArray(acc[key])) {
+  //     Array.isArray(acc[key]) && acc[key].push(val)
+  //     return acc
+  //   }
+  //   acc[key] = val
+  //   return acc
+  // }, {})
+}
+
+export function one(node: Node) {
+  if (isText(node)) return
+
+  switch (node.name) {
+    case 'articleTitle':
+      //@ts-expect-error yes
+      return { title: toString(node) }
+    case 'refList':
+      return refListToCSL(node)
+    case 'contribGroup': {
+      //@ts-ignore
+      if (node.attributes.contentType === 'author') {
+        return { author: all(node) }
+      }
+      return
+    }
+    case 'event': {
+      return {
+        //@ts-ignore
+        [node.attributes.eventType]: Object.assign({}, ...all(node)),
+      }
+    }
+    case 'date': {
+      switch (node.attributes.dateType) {
+        case 'published': {
+          return {
+            issued: {
+              'date-parts': [all(node)],
+              ...(node.attributes.iso8601Date
+                ? { literal: node.attributes.iso8601Date }
+                : {}),
+            },
+          }
+        }
+        case 'accepted':
+          return {
+            custom: [
+              {
+                accepted: {
+                  'date-parts': [all(node)],
+                  ...(node.attributes.iso8601Date
+                    ? { literal: node.attributes.iso8601Date }
+                    : {}),
+                },
+              },
+            ],
+          }
+        case 'received':
+          return {
+            custom: [
+              {
+                received: {
+                  'date-parts': [all(node)],
+                  ...(node.attributes.iso8601Date
+                    ? { literal: node.attributes.iso8601Date }
+                    : {}),
+                },
+              },
+            ],
+          }
+      }
+    }
+    case 'month':
+    case 'day':
+    case 'year':
+      return toString(node)
+    case 'pubDate': {
+      return {
+        issued: {
+          'date-parts': [all(node)],
+        },
+      }
+    }
+    case 'contrib': {
+      if (node.attributes.contribType !== 'person') return
+      return Object.assign({}, ...all(node))
+    }
+    case 'surname': {
+      return { family: toString(node) }
+    }
+    case 'givenNames': {
+      return { given: toString(node) }
+    }
+    case 'email': {
+      // yes i know but it's handy
+      return { email: toString(node) }
+    }
+    case 'aff': {
+      // it'll be fine
+      return {
+        custom: [{ [node.attributes.id || 'aff']: all(node as any) }],
+      }
+    }
+    case 'xref': {
+      if (node.attributes.refType !== 'aff') return
+      return { 'aff-link': node.attributes.rid }
+    }
+
+    //@ts-ignore yea
+    case 'orcid': {
+      return toString(node)
+    }
+    case 'issn': {
+      return { issn: toString(node) }
+    }
+    case 'isbn': {
+      return { isbn: toString(node) }
+    }
+    case 'publisherName': {
+      return { publisher: all(node).join('') }
+    }
+    case 'institution': {
+      // @ts-ignore it'll be finneeeee
+      return { instution: toString(node) }
+    }
+    case 'country': {
+      return { country: toString(node) }
+    }
+    case 'volumeId':
+    case 'articleId': {
+      switch (node.attributes.pubIdType) {
+        case 'doi':
+          return { DOI: toString(node) }
+        case 'pmid':
+          return { PMID: toString(node) }
+        case 'pmcid':
+          return { PMCID: toString(node) }
+        default:
+          //@ts-ignore yea
+          return { [node.attributes.pubIdType]: toString(node) }
+      }
+    }
+    default:
+      //@ts-ignore
+
+      return all(node)
+  }
+}

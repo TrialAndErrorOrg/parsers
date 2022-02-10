@@ -1,15 +1,23 @@
-module.exports = {
-  displayName: 'reoff-reoff-parse',
+const config = {
+  displayName: 'reoff-parse',
   preset: '../../../jest.preset.js',
   globals: {
     'ts-jest': {
       tsconfig: '<rootDir>/tsconfig.spec.json',
+      useESM: true,
     },
   },
   testEnvironment: 'node',
   transform: {
-    '^.+\\.[tj]sx?$': 'ts-jest',
+    '^.+\.[tj]sx?$': 'ts-jest',
   },
+  transformIgnorePatterns: [],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../../coverage/libs/reoff/reoff-parse',
+  coverageDirectory: '../../../coverage/libs/reoff-parse',
+  extensionsToTreatAsEsm: ['.ts'],
+  moduleNameMapper: {
+    '^(\.{1,2}/.*)\.js$': '$1',
+  },
 }
+
+export default config

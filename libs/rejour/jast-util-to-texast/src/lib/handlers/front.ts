@@ -63,6 +63,28 @@ export function front(j: J, node: Root) {
           },
         ],
       },
+      {
+        type: 'command',
+        name: 'usepackage',
+        children: [
+          {
+            type: 'commandArg',
+            optional: false,
+            children: [{ type: 'text', value: 'graphicx' }],
+          },
+        ],
+      },
+      {
+        type: 'command',
+        name: 'usepackage',
+        children: [
+          {
+            type: 'commandArg',
+            optional: false,
+            children: [{ type: 'text', value: 'hyperref' }],
+          },
+        ],
+      },
       { type: 'text', value: '\n' },
       ...all(j, node),
     ])

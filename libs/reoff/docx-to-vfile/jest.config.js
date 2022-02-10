@@ -1,5 +1,5 @@
 const config = {
-  displayName: 'reoff-rejour',
+  displayName: 'docx-to-vfile',
   preset: '../../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -13,7 +13,7 @@ const config = {
   },
   transformIgnorePatterns: [],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../../coverage/libs/reoff-rejour',
+  coverageDirectory: '../../../coverage/libs/docx-to-vfile',
   extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: {
     '^(\.{1,2}/.*)\.js$': '$1',

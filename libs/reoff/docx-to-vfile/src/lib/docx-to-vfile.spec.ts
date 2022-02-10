@@ -1,7 +1,12 @@
-import { reoffDocxToVfile } from './reoff-docx-to-vfile'
+import { docxToVFile } from './docx-to-vfile'
+import fs from 'fs'
+import path from 'path'
 
 describe('reoffDocxToVfile', () => {
-  it('should work', () => {
-    expect(reoffDocxToVfile()).toEqual('reoff-docx-to-vfile')
+  const doc = fs.readFileSync(
+    path.join(__dirname, '../fixtures/Manuscript-2.docx')
+  )
+  it('should work', async () => {
+    expect(await docxToVFile(doc)).toMatchSnapshot()
   })
 })

@@ -1,59 +1,20 @@
-import AdmZip from 'adm-zip'
-import { extname } from 'path'
+import { VFile } from 'vfile'
+import { getXMLData } from './get-xml-data'
 
-const tab = '\t',
-  cr = '\n\n',
-  empty = ''
-const tabRegex = new RegExp('<w:tab/>', 'g')
-const tagRegex = new RegExp('(</|<)w:[^>]*>', 'g')
-const extensionRegex = new RegExp('^(.docx|.xlsx|.pptx)$')
-const paragraphRegex = new RegExp(
-  '(<w:t>|<w:t xml:space="preserve">)[^]*?(?=</w:p>)',
-  'g'
-)
-
-export async function getXMLData(
-  file: string | Buffer,
-  {
-    filename,
-    xml = true,
-    returnBuffer = false,
-  }: { filename: string | string[]; xml?: boolean; returnBuffer?: boolean }
-) {
-  return new Promise((resolve, reject) => {
-    if (
-      typeof file === 'string' &&
-      !extensionRegex.test(extname(file).toLowerCase())
-    ) {
-      reject(new Error('The file must be either a .docx, .xlsx or .pptx'))
-    }
-    try {
-      const zip = new AdmZip(file)
-      zip
-        ?.getEntry(xml ? `word/${filename}.xml` : filename)
-        ?.getDataAsync((data) => resolve(data.toString()))
-    } catch (err) {
-      reject(`${err} (${file})`)
-    }
-  })
-}
-
-/**
- * Extracts the text from your Office file.
- *
- * @param {String} path Path to the file you want to extract the text from.
- * @param {String} [xmlFilename='document'] Optional argument used to specify
- * the XML component of the file from which to extract the text (default is: 'document').
- */
-export const extractText = async (
-  path: string,
-  xmlFilename: string = 'document'
-) => {
-  const xml = await getXMLData(path, xmlFilename)
-  let paragraph,
-    text = ''
-  while ((paragraph = paragraphRegex.exec(xml))) {
-    text += paragraph[0].replace(tabRegex, tab).replace(tagRegex, empty) + cr
-  }
-  return text
+export async function docxToVFile(file: Buffer | string) {
+  const mainXML = (await getXMLData(file)).slice(0, -'</w:document>'.length)
+  // xast-util-from-xml cannot handle two xml headers in one doc
+  const footnotes = (await getXMLData(file, { filename: 'footnotes' })).replace(
+    '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>',
+    ''
+  )
+  // easier to put the footnotes in the same spot
+  const total = `${mainXML}${footnotes}
+  </w:document>`
+  console.log(footnotes)
+  const vfile = new VFile(total)
+  // if (footnotes) {
+  //   Object.assign(vfile.data, { footnotes })
+  // }
+  return vfile
 }

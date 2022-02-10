@@ -1,8 +1,24 @@
 import reoffParse from './reoff-parse'
-import unified from 'unified'
+import { unified } from 'unified'
+import fs from 'fs/promises'
+import path from 'path'
+import { docxToVFile } from 'docx-to-vfile'
 
-describe('reoffReoffParse', () => {
-  it('should work', () => {
-    expect(reoffParse()).toEqual('reoff-reoff-parse')
+describe('reoffParse', () => {
+  it('should work', async () => {
+    const proc = unified().use(reoffParse)
+    const doc = await fs.readFile(
+      path.join(__dirname, '../test/Manuscript-2.docx')
+    )
+    const file = await docxToVFile(doc)
+    console.log(file)
+    const res = proc.parse(file)
+
+    await fs.writeFile(
+      path.join(__dirname, '../test/ooxasttree'),
+      JSON.stringify(res, null, 2)
+    )
+    console.log(res)
+    expect(res).toMatchSnapshot()
   })
 })

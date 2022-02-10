@@ -13,7 +13,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const tex = req.body
   const tarStream = new WritableStreamBuffer()
   console.log('Received tex')
-  console.log(tex)
 
   const tararr: any[] = []
   const writable = new Writable({
@@ -27,9 +26,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const pack = tar.pack()
   console.log('Packing tarball')
   pack.entry({ name: 'article.tex' }, tex)
-  pack.on('finish', function () {
-    console.log(this)
-  })
+  pack.on('finish', function () {})
   console.log('Laying pipe')
 
   pack.finalize()
@@ -37,13 +34,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   console.log('Converting tarball to buffer')
   let tarball
   writable.on('finish', async () => {
-    // Create a buffer from all the received chunks
     tarball = Buffer.concat(tararr)
-    console.log(tararr)
-
-    // Insert your business logic here
-
-    console.log(tarball)
 
     formdata.append('files[]', tarball, 'tarball.tar.gz')
     console.log('Posting tarball...')
@@ -54,17 +45,17 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
         formdata,
         {
-          headers: { ...formdata.getHeaders(), responseType: 'arraybuffer' },
+          responseType: 'arraybuffer',
+          headers: {
+            ...formdata.getHeaders(),
+            Accept: 'application/pdf',
+          },
         }
       )
       .then(async (result) => {
         console.log('PDF Received!')
         console.log('Sending back result...')
         const data = Buffer.from(result.data)
-        await writeFile('myFile.pdf', result.data, {
-          encoding: 'binary',
-        })
-        console.log(result)
         res.status(200)
         res.setHeader('Content-Type', 'application/pdf')
         res.send(data)
@@ -72,6 +63,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       .catch(async (e) => {
         console.log('Oopsie whoopsie, we made a fucky wucky!')
         console.error(e)
+        res.status(400)
+        res.send(e)
       })
   })
 }

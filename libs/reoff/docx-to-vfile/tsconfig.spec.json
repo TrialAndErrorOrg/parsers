@@ -13,7 +13,6 @@
     "**/*.spec.js",
     "**/*.test.jsx",
     "**/*.spec.jsx",
-    "**/*.d.ts",
-    "src/lib/rejour-frontmatter.ts"
+    "**/*.d.ts"
   ]
 }

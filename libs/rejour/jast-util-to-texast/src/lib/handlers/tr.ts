@@ -7,7 +7,9 @@ import { J, Node } from '../types'
 
 export function tr(j: J, node: Tr) {
   const contentsNoTabs = all(j, node)
+  // too many alignment tabs
   const contents = contentsNoTabs
+    .filter((node) => node.type === 'tableCell')
     .flatMap((cell) => [
       { type: 'alignmentTab', value: '&' } as AlignmentTab,
       cell,

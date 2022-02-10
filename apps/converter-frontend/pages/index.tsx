@@ -176,13 +176,45 @@ export default function Index() {
         )}
       </Dropzone>
       <Title>Input</Title>
-      <Code>
-        <pre>{thing}</pre>
+      <Code
+        style={{
+          maxHeight: '400px',
+          overflow: 'scroll',
+        }}
+      >
+        <pre
+          style={{
+            maxHeight: '400px',
+            overflow: 'scroll',
+          }}
+        >
+          {thing}
+        </pre>
       </Code>
       <Title>Output</Title>
+      <Button
+        onClick={() =>
+          fetch('/api/tex-to-pdf', { method: 'POST', body: tex })
+            .then((res) => res.blob())
+            .then((res) => {
+              window.open(URL.createObjectURL(res))
+            })
+            .catch((e) => console.error(e))
+        }
+      >
+        Try make pdf
+      </Button>
       <Code>
-        <pre>{tex}</pre>
+        <pre
+          style={{
+            maxHeight: '400px',
+            overflow: 'scroll',
+          }}
+        >
+          {tex}
+        </pre>
       </Code>
+
       {/* <Container>
         {[
           'docx',

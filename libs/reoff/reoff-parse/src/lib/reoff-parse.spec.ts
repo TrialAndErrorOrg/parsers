@@ -1,7 +1,8 @@
 import reoffParse from './reoff-parse'
+import unified from 'unified'
 
 describe('reoffReoffParse', () => {
   it('should work', () => {
-    expect(reoffReoffParse()).toEqual('reoff-reoff-parse')
+    expect(reoffParse()).toEqual('reoff-reoff-parse')
   })
 })

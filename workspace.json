@@ -19,6 +19,7 @@
     "rejour-relatex": "libs/rejour/rejour-relatex",
     "rejour-stringify": "libs/rejour/rejour-stringify",
     "relatex-stringify": "libs/relatex/relatex-stringify",
+    "reoff-docx-to-vfile": "libs/reoff/docx-to-vfile",
     "reoff-reoff-parse": "libs/reoff/reoff-parse",
     "reoff-reoff-rejour": "libs/reoff/reoff-rejour",
     "texast": "libs/relatex/texast",

@@ -1,0 +1,34 @@
+{
+  "root": "libs/reoff/docx-to-vfile",
+  "sourceRoot": "libs/reoff/docx-to-vfile/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/reoff/docx-to-vfile/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/reoff/docx-to-vfile"],
+      "options": {
+        "jestConfig": "libs/reoff/docx-to-vfile/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/reoff/docx-to-vfile",
+        "tsConfig": "libs/reoff/docx-to-vfile/tsconfig.lib.json",
+        "packageJson": "libs/reoff/docx-to-vfile/package.json",
+        "main": "libs/reoff/docx-to-vfile/src/index.ts",
+        "assets": ["libs/reoff/docx-to-vfile/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

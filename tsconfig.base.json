@@ -50,6 +50,11 @@
       "texast-util-to-latex": [
         "libs/relatex/texast-util-to-latex/src/index.ts"
       ],
+      "xast-util-has-attribute": [
+        "libs/xast/xast-util-has-attribute/src/index.ts"
+      ],
+      "xast-util-is-element": ["libs/xast/xast-util-is-element/src/index.ts"],
+      "xast-util-select": ["libs/xast/xast-util-select/src/index.ts"],
       "xast-util-to-string": ["libs/xast/xast-util-to-string/src/index.ts"]
     }
   },

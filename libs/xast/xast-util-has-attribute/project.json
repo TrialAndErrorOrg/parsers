@@ -1,0 +1,34 @@
+{
+  "root": "libs/xast/xast-util-has-attribute",
+  "sourceRoot": "libs/xast/xast-util-has-attribute/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/xast/xast-util-has-attribute",
+        "tsConfig": "libs/xast/xast-util-has-attribute/tsconfig.lib.json",
+        "packageJson": "libs/xast/xast-util-has-attribute/package.json",
+        "main": "libs/xast/xast-util-has-attribute/src/index.ts",
+        "assets": ["libs/xast/xast-util-has-attribute/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/xast/xast-util-has-attribute/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/xast/xast-util-has-attribute"],
+      "options": {
+        "jestConfig": "libs/xast/xast-util-has-attribute/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,8 +1,10 @@
-# <name>
+# xast-util-has-attribute
+
+Port of [hast-util-has-property](https://github.com/syntax-tree/hast-util-has-property) for [xast][xast]
 
 ## Contents
 
-- [<name>](#name)
+- [xast-util-has-attribute](#xast-util-has-attribute)
   - [Contents](#contents)
   - [What is this?](#what-is-this)
   - [When should I use this?](#when-should-i-use-this)
@@ -26,13 +28,13 @@
 This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, or 16.0+), install with [yarn](https://classic.yarnpkg.com/en/docs/cli/add)
 
 ```sh
-yarn add <name>
+yarn add xast-util-has-attribute
 ```
 
 or with [npm](https://docs.npmjs.com/cli/install)
 
 ```sh
-npm install <name>
+npm install xast-util-has-attribute
 ```
 
 ## Use

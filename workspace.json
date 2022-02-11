@@ -25,6 +25,9 @@
     "texast": "libs/relatex/texast",
     "texast-util-to-latex": "libs/relatex/texast-util-to-latex",
     "utils": "libs/utils",
-    "xast-util-to-string": "libs/xast/xast-util-to-string"
+    "xast-util-has-attribute": "libs/xast/xast-util-has-attribute",
+    "xast-util-to-string": "libs/xast/xast-util-to-string",
+    "xast-xast-util-is-element": "libs/xast/xast-util-is-element",
+    "xast-xast-util-select": "libs/xast/xast-util-select"
   }
 }

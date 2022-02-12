@@ -863,6 +863,7 @@ export interface AppChildrenMap {
 export interface Array extends UnistNode {
   type: 'element'
   name: 'array'
+  attributes: {}
   text?: Text
   attributes: {
     id?: string
@@ -1804,6 +1805,7 @@ type BoldTypeToggle = 'no' | 'yes'
 export interface BoxedText extends UnistNode {
   type: 'element'
   name: 'boxedText'
+  attributes: {}
   text?: Text
   attributes: {
     id?: string
@@ -2094,6 +2096,7 @@ export interface ChemStructChildrenMap {
 export interface ChemStructwrap extends UnistNode {
   type: 'element'
   name: 'chemStructwrap'
+  attributes: {}
   text?: Text
   attributes: {
     id?: string
@@ -5074,6 +5077,7 @@ export interface GovChildrenMap {
 export interface Graphic extends UnistNode {
   type: 'element'
   name: 'graphic'
+  attributes: {}
   text?: Text
   attributes: {
     orientation?: GraphicTypeOrientation
@@ -6149,6 +6153,7 @@ export interface LpageChildrenMap {
 export interface Media extends UnistNode {
   type: 'element'
   name: 'media'
+  attributes: {}
   text?: Text
   attributes: {
     hreflang?: string
@@ -8383,6 +8388,7 @@ export interface QuestionPreambleChildrenMap {
 export interface Question extends UnistNode {
   type: 'element'
   name: 'question'
+  attributes: {}
   text?: Text
   attributes: {
     id?: string
@@ -8888,6 +8894,7 @@ export interface RelatedArticleChildrenMap {
 export interface RelatedObject extends UnistNode {
   type: 'element'
   name: 'relatedObject'
+  attributes: {}
   text?: Text
   attributes: {
     documentId?: string
@@ -10521,6 +10528,7 @@ export interface StringDateChildrenMap {
 export interface StringName extends UnistNode {
   type: 'element'
   name: 'stringName'
+  attributes: {}
   text?: Text
   attributes: {
     id?: string
@@ -11373,6 +11381,7 @@ export interface TableCount extends UnistNode {
 export interface Table extends UnistNode {
   type: 'element'
   name: 'table'
+  attributes: {}
   text?: Text
   attributes: {
     border?: string
@@ -12016,6 +12025,7 @@ export interface TextualFormChildrenMap {
 export interface Tfoot extends UnistNode {
   type: 'element'
   name: 'tfoot'
+  attributes: {}
   align?: TfootTypeAlign
   attributes: {
     char?: string
@@ -13112,7 +13122,7 @@ export interface YearChildrenMap {
 export type documentMap = {
   // type: 'element'
   // name: 'document'
-
+  attributes: {}
   abbrev: Abbrev
 
   abbrevJournaltitle: AbbrevJournaltitle

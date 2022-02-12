@@ -63,7 +63,7 @@ export interface EffectExtent extends BaseType {
 export interface GraphicFrame extends BaseType {
   type: 'element'
   name: 'wp:graphicFrame'
-
+  attributes: {}
   children: RequiredMap<GraphicFrameMap>
 }
 
@@ -154,7 +154,7 @@ export interface TextboxInfoMap {
 export interface TxbxContent extends BaseType {
   type: 'element'
   name: 'wp:txbxContent'
-
+  attributes: {}
   children: RequiredMap<TxbxContentMap>
 }
 
@@ -194,7 +194,7 @@ export interface TxbxContentMap {
 export interface WordprocessingCanvas extends BaseType {
   type: 'element'
   name: 'wp:wordprocessingCanvas'
-
+  attributes: {}
   children: RequiredMap<WordprocessingCanvasMap>
 }
 
@@ -228,7 +228,7 @@ export interface WordprocessingContentPartMap {
 export interface WordprocessingContentPartNonVisual extends BaseType {
   type: 'element'
   name: 'wp:wordprocessingContentPartNonVisual'
-
+  attributes: {}
   children: RequiredMap<WordprocessingContentPartNonVisualMap>
 }
 
@@ -240,7 +240,7 @@ export interface WordprocessingContentPartNonVisualMap {
 export interface WordprocessingGroup extends BaseType {
   type: 'element'
   name: 'wp:wordprocessingGroup'
-
+  attributes: {}
   children: RequiredMap<WordprocessingGroupMap>
 }
 

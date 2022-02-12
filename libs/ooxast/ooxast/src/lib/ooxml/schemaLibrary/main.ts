@@ -23,7 +23,7 @@ export interface Schema extends BaseType {
 export interface SchemaLibrary extends BaseType {
   type: 'element'
   name: 'SchemaLibrary'
-
+  attributes: {}
   children: RequiredMap<SchemaLibraryMap>
 }
 

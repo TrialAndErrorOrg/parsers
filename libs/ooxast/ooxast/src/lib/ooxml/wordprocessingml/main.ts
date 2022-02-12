@@ -49,7 +49,7 @@ export interface AltChunkMap {
 export interface AltChunkPr extends BaseType {
   type: 'element'
   name: 'w:altChunkPr'
-
+  attributes: {}
   children: RequiredMap<AltChunkPrMap>[]
 }
 
@@ -81,7 +81,7 @@ export interface AutoCaption extends BaseType {
 export interface AutoCaptions extends BaseType {
   type: 'element'
   name: 'w:autoCaptions'
-
+  attributes: {}
   children: RequiredMap<AutoCaptionsMap>[]
 }
 
@@ -163,7 +163,7 @@ export interface BdoContentRunMap {
 export interface Body extends BaseType {
   type: 'element'
   name: 'w:body'
-
+  attributes: {}
   children: RequiredMap<BodyMap>[]
 }
 
@@ -282,7 +282,7 @@ export interface Caption extends BaseType {
 export interface Captions extends BaseType {
   type: 'element'
   name: 'w:captions'
-
+  attributes: {}
   children: RequiredMap<CaptionsMap>[]
 }
 
@@ -442,7 +442,7 @@ export interface CommentMap {
 export interface Comments extends BaseType {
   type: 'element'
   name: 'w:comments'
-
+  attributes: {}
   children: RequiredMap<CommentsMap>[]
 }
 
@@ -453,7 +453,7 @@ export interface CommentsMap {
 export interface Compat extends BaseType {
   type: 'element'
   name: 'w:compat'
-
+  attributes: {}
   children: RequiredMap<CompatMap>[]
 }
 
@@ -578,7 +578,7 @@ export interface CustomXmlCellMap {
 export interface CustomXmlPr extends BaseType {
   type: 'element'
   name: 'w:customXmlPr'
-
+  attributes: {}
   children: RequiredMap<CustomXmlPrMap>[]
 }
 
@@ -775,7 +775,7 @@ export interface DivMap {
 export interface DivBdr extends BaseType {
   type: 'element'
   name: 'w:divBdr'
-
+  attributes: {}
   children: RequiredMap<DivBdrMap>[]
 }
 
@@ -789,7 +789,7 @@ export interface DivBdrMap {
 export interface Divs extends BaseType {
   type: 'element'
   name: 'w:divs'
-
+  attributes: {}
   children: RequiredMap<DivsMap>[]
 }
 
@@ -800,7 +800,7 @@ export interface DivsMap {
 export interface DocDefaults extends BaseType {
   type: 'element'
   name: 'w:docDefaults'
-
+  attributes: {}
   children: RequiredMap<DocDefaultsMap>[]
 }
 
@@ -823,7 +823,7 @@ export interface DocGrid extends BaseType {
 export interface DocPart extends BaseType {
   type: 'element'
   name: 'w:docPart'
-
+  attributes: {}
   children: RequiredMap<DocPartMap>[]
 }
 
@@ -844,7 +844,7 @@ export interface DocPartBehavior extends BaseType {
 export interface DocPartBehaviors extends BaseType {
   type: 'element'
   name: 'w:docPartBehaviors'
-
+  attributes: {}
   children: RequiredMap<DocPartBehaviorsMap>[]
 }
 
@@ -855,7 +855,7 @@ export interface DocPartBehaviorsMap {
 export interface DocPartCategory extends BaseType {
   type: 'element'
   name: 'w:docPartCategory'
-
+  attributes: {}
   children: RequiredMap<DocPartCategoryMap>[]
 }
 
@@ -891,7 +891,7 @@ export interface DocPartPr extends BaseType {
 export interface DocParts extends BaseType {
   type: 'element'
   name: 'w:docParts'
-
+  attributes: {}
   children: RequiredMap<DocPartsMap>[]
 }
 
@@ -939,7 +939,7 @@ export interface DocProtect extends BaseType {
 export interface DocRsids extends BaseType {
   type: 'element'
   name: 'w:docRsids'
-
+  attributes: {}
   children: RequiredMap<DocRsidsMap>[]
 }
 
@@ -972,7 +972,7 @@ export interface DocumentMap {
 export interface DocumentBase extends BaseType {
   type: 'element'
   name: 'w:documentBase'
-
+  attributes: {}
   children: RequiredMap<DocumentBaseMap>[]
 }
 
@@ -993,7 +993,7 @@ export interface DocVar extends BaseType {
 export interface DocVars extends BaseType {
   type: 'element'
   name: 'w:docVars'
-
+  attributes: {}
   children: RequiredMap<DocVarsMap>[]
 }
 
@@ -1004,7 +1004,7 @@ export interface DocVarsMap {
 export interface Drawing extends BaseType {
   type: 'element'
   name: 'w:drawing'
-
+  attributes: {}
   children: RequiredMap<DrawingMap>[]
 }
 
@@ -1028,7 +1028,7 @@ export interface EastAsianLayout extends BaseType {
 export type EdnDocProps = EdnProps & {
   type: 'element'
   name: 'w:ednDocProps'
-
+  attributes: {}
   children: RequiredMap<EdnDocPropsMap>[]
 }
 
@@ -1048,7 +1048,7 @@ export interface EdnPos extends BaseType {
 export interface EdnProps extends BaseType {
   type: 'element'
   name: 'w:ednProps'
-
+  attributes: {}
   children: RequiredMap<EdnPropsMap>[]
 }
 
@@ -1076,7 +1076,7 @@ export interface Empty extends BaseType {
 export interface Endnotes extends BaseType {
   type: 'element'
   name: 'w:endnotes'
-
+  attributes: {}
   children: RequiredMap<EndnotesMap>[]
 }
 
@@ -1087,7 +1087,7 @@ export interface EndnotesMap {
 export interface FFCheckBox extends BaseType {
   type: 'element'
   name: 'w:fFCheckBox'
-
+  attributes: {}
   children: RequiredMap<FFCheckBoxMap>[]
 }
 
@@ -1101,7 +1101,7 @@ export interface FFCheckBoxMap {
 export interface FFData extends BaseType {
   type: 'element'
   name: 'w:fFData'
-
+  attributes: {}
   children: RequiredMap<FFDataMap>[]
 }
 
@@ -1123,7 +1123,7 @@ export interface FFDataMap {
 export interface FFDDList extends BaseType {
   type: 'element'
   name: 'w:fFDDList'
-
+  attributes: {}
   children: RequiredMap<FFDDListMap>[]
 }
 
@@ -1165,7 +1165,7 @@ export interface FFStatusText extends BaseType {
 export interface FFTextInput extends BaseType {
   type: 'element'
   name: 'w:fFTextInput'
-
+  attributes: {}
   children: RequiredMap<FFTextInputMap>[]
 }
 
@@ -1285,7 +1285,7 @@ export interface FontSig extends BaseType {
 export interface FontsList extends BaseType {
   type: 'element'
   name: 'w:fontsList'
-
+  attributes: {}
   children: RequiredMap<FontsListMap>[]
 }
 
@@ -1296,7 +1296,7 @@ export interface FontsListMap {
 export interface Footnotes extends BaseType {
   type: 'element'
   name: 'w:footnotes'
-
+  attributes: {}
   children: RequiredMap<FootnotesMap>[]
 }
 
@@ -1307,7 +1307,7 @@ export interface FootnotesMap {
 export interface Frame extends BaseType {
   type: 'element'
   name: 'w:frame'
-
+  attributes: {}
   children: RequiredMap<FrameMap>[]
 }
 
@@ -1368,7 +1368,7 @@ export interface FrameScrollbar extends BaseType {
 export interface Frameset extends BaseType {
   type: 'element'
   name: 'w:frameset'
-
+  attributes: {}
   children: RequiredMap<FramesetMap>[]
 }
 
@@ -1384,7 +1384,7 @@ export interface FramesetMap {
 export interface FramesetSplitbar extends BaseType {
   type: 'element'
   name: 'w:framesetSplitbar'
-
+  attributes: {}
   children: RequiredMap<FramesetSplitbarMap>[]
 }
 
@@ -1398,7 +1398,7 @@ export interface FramesetSplitbarMap {
 export type FtnDocProps = FtnProps & {
   type: 'element'
   name: 'w:ftnDocProps'
-
+  attributes: {}
   children: RequiredMap<FtnDocPropsMap>[]
 }
 
@@ -1480,7 +1480,7 @@ export interface FtnPos extends BaseType {
 export interface FtnProps extends BaseType {
   type: 'element'
   name: 'w:ftnProps'
-
+  attributes: {}
   children: RequiredMap<FtnPropsMap>[]
 }
 
@@ -1494,7 +1494,7 @@ export interface FtnPropsMap {
 export type GlossaryDocument = DocumentBase & {
   type: 'element'
   name: 'w:glossaryDocument'
-
+  attributes: {}
   children: RequiredMap<GlossaryDocumentMap>[]
 }
 
@@ -1514,7 +1514,7 @@ export interface Guid extends BaseType {
 export interface HdrFtr extends BaseType {
   type: 'element'
   name: 'w:hdrFtr'
-
+  attributes: {}
   children: RequiredMap<HdrFtrMap>[]
 }
 
@@ -1563,7 +1563,7 @@ export type HdrFtrRef = Rel & {
 export interface Headers extends BaseType {
   type: 'element'
   name: 'w:headers'
-
+  attributes: {}
   children: RequiredMap<HeadersMap>[]
 }
 
@@ -1832,7 +1832,7 @@ export interface MacroName extends BaseType {
 export interface MailMerge extends BaseType {
   type: 'element'
   name: 'w:mailMerge'
-
+  attributes: {}
   children: RequiredMap<MailMergeMap>[]
 }
 
@@ -1919,6 +1919,7 @@ export type MarkupRange = Markup & {
 export type MathCtrlDel = TrackChange & {
   type: 'element'
   name: 'w:mathCtrlDel'
+  attributes: {}
   children: RequiredMap<MathCtrlDelMap>[]
 }
 
@@ -1929,7 +1930,7 @@ export interface MathCtrlDelMap {
 export type MathCtrlIns = TrackChange & {
   type: 'element'
   name: 'w:mathCtrlIns'
-
+  attributes: {}
   children: RequiredMap<MathCtrlInsMap>[]
 }
 
@@ -1974,7 +1975,7 @@ export interface NumMap {
 export interface Numbering extends BaseType {
   type: 'element'
   name: 'w:numbering'
-
+  attributes: {}
   children: RequiredMap<NumberingMap>[]
 }
 
@@ -2025,7 +2026,7 @@ export interface NumPicBulletMap {
 export interface NumPr extends BaseType {
   type: 'element'
   name: 'w:numPr'
-
+  attributes: {}
   children: RequiredMap<NumPrMap>[]
 }
 
@@ -2087,7 +2088,7 @@ export type ObjectLink = ObjectEmbed & {
 export interface Odso extends BaseType {
   type: 'element'
   name: 'w:odso'
-
+  attributes: {}
   children: RequiredMap<OdsoMap>[]
 }
 
@@ -2105,7 +2106,7 @@ export interface OdsoMap {
 export interface OdsoFieldMapData extends BaseType {
   type: 'element'
   name: 'w:odsoFieldMapData'
-
+  attributes: {}
   children: RequiredMap<OdsoFieldMapDataMap>[]
 }
 
@@ -2274,7 +2275,7 @@ export interface PaperSource extends BaseType {
 export interface ParaRPr extends BaseType {
   type: 'element'
   name: 'w:paraRPr'
-
+  attributes: {}
   children: RequiredMap<ParaRPrMap>[]
 }
 
@@ -2328,7 +2329,7 @@ export interface ParaRPrMap {
 export type ParaRPrChange = TrackChange & {
   type: 'element'
   name: 'w:paraRPrChange'
-
+  attributes: {}
   children: RequiredMap<ParaRPrChangeMap>[]
 }
 
@@ -2339,7 +2340,7 @@ export interface ParaRPrChangeMap {
 export interface ParaRPrOriginal extends BaseType {
   type: 'element'
   name: 'w:paraRPrOriginal'
-
+  attributes: {}
   children: RequiredMap<ParaRPrOriginalMap>[]
 }
 
@@ -2392,7 +2393,7 @@ export interface ParaRPrOriginalMap {
 export interface PBdr extends BaseType {
   type: 'element'
   name: 'w:pBdr'
-
+  attributes: {}
   children: RequiredMap<PBdrMap>[]
 }
 
@@ -2447,7 +2448,7 @@ export interface PixelsMeasure extends BaseType {
 export interface Placeholder extends BaseType {
   type: 'element'
   name: 'w:placeholder'
-
+  attributes: {}
   children: RequiredMap<PlaceholderMap>[]
 }
 
@@ -2458,7 +2459,7 @@ export interface PlaceholderMap {
 export type PPr = PPrBase & {
   type: 'element'
   name: 'w:pPr'
-
+  attributes: {}
   children: RequiredMap<PPrMap>[]
 }
 
@@ -2471,7 +2472,7 @@ export interface PPrMap {
 export interface PPrBase extends BaseType {
   type: 'element'
   name: 'w:pPrBase'
-
+  attributes: {}
   children: RequiredMap<PPrBaseMap>[]
 }
 
@@ -2514,7 +2515,7 @@ export interface PPrBaseMap {
 export type PPrChange = TrackChange & {
   type: 'element'
   name: 'w:pPrChange'
-
+  attributes: {}
   children: RequiredMap<PPrChangeMap>[]
 }
 
@@ -2525,7 +2526,7 @@ export interface PPrChangeMap {
 export interface PPrDefault extends BaseType {
   type: 'element'
   name: 'w:pPrDefault'
-
+  attributes: {}
   children: RequiredMap<PPrDefaultMap>[]
 }
 
@@ -2536,7 +2537,7 @@ export interface PPrDefaultMap {
 export type PPrGeneral = PPrBase & {
   type: 'element'
   name: 'w:pPrGeneral'
-
+  attributes: {}
   children: RequiredMap<PPrGeneralMap>[]
 }
 
@@ -2636,7 +2637,7 @@ export interface ReadingModeInkLockDown extends BaseType {
 export interface RecipientData extends BaseType {
   type: 'element'
   name: 'w:recipientData'
-
+  attributes: {}
   children: RequiredMap<RecipientDataMap>[]
 }
 
@@ -2649,7 +2650,7 @@ export interface RecipientDataMap {
 export interface Recipients extends BaseType {
   type: 'element'
   name: 'w:recipients'
-
+  attributes: {}
   children: RequiredMap<RecipientsMap>[]
 }
 
@@ -2714,7 +2715,7 @@ export interface RowMap {
 export interface RPr extends BaseType {
   type: 'element'
   name: 'w:rPr'
-
+  attributes: {}
   children: RequiredMap<RPrMap>[]
 }
 
@@ -2764,7 +2765,7 @@ export interface RPrMap {
 export type RPrChange = TrackChange & {
   type: 'element'
   name: 'w:rPrChange'
-
+  attributes: {}
   children: RequiredMap<RPrChangeMap>[]
 }
 
@@ -2775,7 +2776,7 @@ export interface RPrChangeMap {
 export interface RPrDefault extends BaseType {
   type: 'element'
   name: 'w:rPrDefault'
-
+  attributes: {}
   children: RequiredMap<RPrDefaultMap>[]
 }
 
@@ -2786,7 +2787,7 @@ export interface RPrDefaultMap {
 export interface RPrOriginal extends BaseType {
   type: 'element'
   name: 'w:rPrOriginal'
-
+  attributes: {}
   children: RequiredMap<RPrOriginalMap>[]
 }
 
@@ -2835,7 +2836,7 @@ export interface RPrOriginalMap {
 export interface Ruby extends BaseType {
   type: 'element'
   name: 'w:ruby'
-
+  attributes: {}
   children: RequiredMap<RubyMap>[]
 }
 
@@ -2857,7 +2858,7 @@ export interface RubyAlign extends BaseType {
 export interface RubyContent extends BaseType {
   type: 'element'
   name: 'w:rubyContent'
-
+  attributes: {}
   children: RequiredMap<RubyContentMap>[]
 }
 
@@ -2893,7 +2894,7 @@ export interface RubyContentMap {
 export interface RubyPr extends BaseType {
   type: 'element'
   name: 'w:rubyPr'
-
+  attributes: {}
   children: RequiredMap<RubyPrMap>[]
 }
 
@@ -2909,7 +2910,7 @@ export interface RubyPrMap {
 export type RunTrackChange = TrackChange & {
   type: 'element'
   name: 'w:runTrackChange'
-
+  attributes: {}
   children: RequiredMap<RunTrackChangeMap>[]
 }
 
@@ -2980,7 +2981,7 @@ export interface SaveThroughXslt extends BaseType {
 export interface SdtBlock extends BaseType {
   type: 'element'
   name: 'w:sdtBlock'
-
+  attributes: {}
   children: RequiredMap<SdtBlockMap>[]
 }
 
@@ -2993,7 +2994,7 @@ export interface SdtBlockMap {
 export interface SdtCell extends BaseType {
   type: 'element'
   name: 'w:sdtCell'
-
+  attributes: {}
   children: RequiredMap<SdtCellMap>[]
 }
 
@@ -3019,7 +3020,7 @@ export interface SdtComboBoxMap {
 export interface SdtContentBlock extends BaseType {
   type: 'element'
   name: 'w:sdtContentBlock'
-
+  attributes: {}
   children: RequiredMap<SdtContentBlockMap>[]
 }
 
@@ -3058,7 +3059,7 @@ export interface SdtContentBlockMap {
 export interface SdtContentCell extends BaseType {
   type: 'element'
   name: 'w:sdtContentCell'
-
+  attributes: {}
   children: RequiredMap<SdtContentCellMap>[]
 }
 
@@ -3096,7 +3097,7 @@ export interface SdtContentCellMap {
 export interface SdtContentRow extends BaseType {
   type: 'element'
   name: 'w:sdtContentRow'
-
+  attributes: {}
   children: RequiredMap<SdtContentRowMap>[]
 }
 
@@ -3134,7 +3135,7 @@ export interface SdtContentRowMap {
 export interface SdtContentRun extends BaseType {
   type: 'element'
   name: 'w:sdtContentRun'
-
+  attributes: {}
   children: RequiredMap<SdtContentRunMap>[]
 }
 
@@ -3203,7 +3204,7 @@ export interface SdtDateMappingType extends BaseType {
 export interface SdtDocPart extends BaseType {
   type: 'element'
   name: 'w:sdtDocPart'
-
+  attributes: {}
   children: RequiredMap<SdtDocPartMap>[]
 }
 
@@ -3229,7 +3230,7 @@ export interface SdtDropDownListMap {
 export interface SdtEndPr extends BaseType {
   type: 'element'
   name: 'w:sdtEndPr'
-
+  attributes: {}
   children: RequiredMap<SdtEndPrMap>[]
 }
 
@@ -3250,7 +3251,7 @@ export interface SdtListItem extends BaseType {
 export interface SdtPr extends BaseType {
   type: 'element'
   name: 'w:sdtPr'
-
+  attributes: {}
   children: RequiredMap<SdtPrMap>[]
 }
 
@@ -3283,7 +3284,7 @@ export interface SdtPrMap {
 export interface SdtRow extends BaseType {
   type: 'element'
   name: 'w:sdtRow'
-
+  attributes: {}
   children: RequiredMap<SdtRowMap>[]
 }
 
@@ -3296,7 +3297,7 @@ export interface SdtRowMap {
 export interface SdtRun extends BaseType {
   type: 'element'
   name: 'w:sdtRun'
-
+  attributes: {}
   children: RequiredMap<SdtRunMap>[]
 }
 
@@ -3389,7 +3390,7 @@ export interface SectPrBaseMap {
 export type SectPrChange = TrackChange & {
   type: 'element'
   name: 'w:sectPrChange'
-
+  attributes: {}
   children: RequiredMap<SectPrChangeMap>[]
 }
 
@@ -3409,7 +3410,7 @@ export interface SectType extends BaseType {
 export interface Settings extends BaseType {
   type: 'element'
   name: 'w:settings'
-
+  attributes: {}
   children: RequiredMap<SettingsMap>[]
 }
 
@@ -3598,7 +3599,7 @@ export interface SimpleFieldMap {
 export interface SmartTagPr extends BaseType {
   type: 'element'
   name: 'w:smartTagPr'
-
+  attributes: {}
   children: RequiredMap<SmartTagPrMap>[]
 }
 
@@ -3753,7 +3754,7 @@ export interface StylePaneFilter extends BaseType {
 export interface Styles extends BaseType {
   type: 'element'
   name: 'w:styles'
-
+  attributes: {}
   children: RequiredMap<StylesMap>[]
 }
 
@@ -3785,7 +3786,7 @@ export interface Sym extends BaseType {
 export interface Tabs extends BaseType {
   type: 'element'
   name: 'w:tabs'
-
+  attributes: {}
   children: RequiredMap<TabsMap>[]
 }
 
@@ -3816,7 +3817,7 @@ export interface TargetScreenSz extends BaseType {
 export interface Tbl extends BaseType {
   type: 'element'
   name: 'w:tbl'
-
+  attributes: {}
   children: RequiredMap<TblMap>[]
 }
 
@@ -3856,7 +3857,7 @@ export interface TblMap {
 export interface TblBorders extends BaseType {
   type: 'element'
   name: 'w:tblBorders'
-
+  attributes: {}
   children: RequiredMap<TblBordersMap>[]
 }
 
@@ -3872,7 +3873,7 @@ export interface TblBordersMap {
 export interface TblCellMar extends BaseType {
   type: 'element'
   name: 'w:tblCellMar'
-
+  attributes: {}
   children: RequiredMap<TblCellMarMap>[]
 }
 
@@ -3886,7 +3887,7 @@ export interface TblCellMarMap {
 export type TblGrid = TblGridBase & {
   type: 'element'
   name: 'w:tblGrid'
-
+  attributes: {}
   children: RequiredMap<TblGridMap>[]
 }
 
@@ -3897,7 +3898,7 @@ export interface TblGridMap {
 export interface TblGridBase extends BaseType {
   type: 'element'
   name: 'w:tblGridBase'
-
+  attributes: {}
   children: RequiredMap<TblGridBaseMap>[]
 }
 
@@ -3908,7 +3909,7 @@ export interface TblGridBaseMap {
 export type TblGridChange = Markup & {
   type: 'element'
   name: 'w:tblGridChange'
-
+  attributes: {}
   children: RequiredMap<TblGridChangeMap>[]
 }
 
@@ -3977,7 +3978,7 @@ export interface TblPPr extends BaseType {
 export type TblPr = TblPrBase & {
   type: 'element'
   name: 'w:tblPr'
-
+  attributes: {}
   children: RequiredMap<TblPrMap>[]
 }
 
@@ -3988,7 +3989,7 @@ export interface TblPrMap {
 export interface TblPrBase extends BaseType {
   type: 'element'
   name: 'w:tblPrBase'
-
+  attributes: {}
   children: RequiredMap<TblPrBaseMap>[]
 }
 
@@ -4015,7 +4016,7 @@ export interface TblPrBaseMap {
 export type TblPrChange = TrackChange & {
   type: 'element'
   name: 'w:tblPrChange'
-
+  attributes: {}
   children: RequiredMap<TblPrChangeMap>[]
 }
 
@@ -4026,7 +4027,7 @@ export interface TblPrChangeMap {
 export type TblPrEx = TblPrExBase & {
   type: 'element'
   name: 'w:tblPrEx'
-
+  attributes: {}
   children: RequiredMap<TblPrExMap>[]
 }
 
@@ -4037,7 +4038,7 @@ export interface TblPrExMap {
 export interface TblPrExBase extends BaseType {
   type: 'element'
   name: 'w:tblPrExBase'
-
+  attributes: {}
   children: RequiredMap<TblPrExBaseMap>[]
 }
 
@@ -4056,7 +4057,7 @@ export interface TblPrExBaseMap {
 export type TblPrExChange = TrackChange & {
   type: 'element'
   name: 'w:tblPrExChange'
-
+  attributes: {}
   children: RequiredMap<TblPrExChangeMap>[]
 }
 
@@ -4137,7 +4138,7 @@ export interface TcMap {
 export interface TcBorders extends BaseType {
   type: 'element'
   name: 'w:tcBorders'
-
+  attributes: {}
   children: RequiredMap<TcBordersMap>[]
 }
 
@@ -4155,7 +4156,7 @@ export interface TcBordersMap {
 export interface TcMar extends BaseType {
   type: 'element'
   name: 'w:tcMar'
-
+  attributes: {}
   children: RequiredMap<TcMarMap>[]
 }
 
@@ -4169,7 +4170,7 @@ export interface TcMarMap {
 export type TcPr = TcPrInner & {
   type: 'element'
   name: 'w:tcPr'
-
+  attributes: {}
   children: RequiredMap<TcPrMap>[]
 }
 
@@ -4180,7 +4181,7 @@ export interface TcPrMap {
 export interface TcPrBase extends BaseType {
   type: 'element'
   name: 'w:tcPrBase'
-
+  attributes: {}
   children: RequiredMap<TcPrBaseMap>[]
 }
 
@@ -4203,7 +4204,7 @@ export interface TcPrBaseMap {
 export type TcPrChange = TrackChange & {
   type: 'element'
   name: 'w:tcPrChange'
-
+  attributes: {}
   children: RequiredMap<TcPrChangeMap>[]
 }
 
@@ -4214,7 +4215,7 @@ export interface TcPrChangeMap {
 export type TcPrInner = TcPrBase & {
   type: 'element'
   name: 'w:tcPrInner'
-
+  attributes: {}
   children: RequiredMap<TcPrInnerMap>[]
 }
 
@@ -4324,7 +4325,7 @@ export interface TrackChangesView extends BaseType {
 export type TrPr = TrPrBase & {
   type: 'element'
   name: 'w:trPr'
-
+  attributes: {}
   children: RequiredMap<TrPrMap>[]
 }
 
@@ -4337,7 +4338,7 @@ export interface TrPrMap {
 export interface TrPrBase extends BaseType {
   type: 'element'
   name: 'w:trPrBase'
-
+  attributes: {}
   children: RequiredMap<TrPrBaseMap>[]
 }
 
@@ -4359,7 +4360,7 @@ export interface TrPrBaseMap {
 export type TrPrChange = TrackChange & {
   type: 'element'
   name: 'w:trPrChange'
-
+  attributes: {}
   children: RequiredMap<TrPrChangeMap>[]
 }
 
@@ -4437,7 +4438,7 @@ export interface VMerge extends BaseType {
 export interface WebSettings extends BaseType {
   type: 'element'
   name: 'w:webSettings'
-
+  attributes: {}
   children: RequiredMap<WebSettingsMap>[]
 }
 

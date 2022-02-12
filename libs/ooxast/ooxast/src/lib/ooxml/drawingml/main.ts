@@ -23,7 +23,7 @@ export interface AdjPoint2D extends BaseType {
 export interface AdjustHandleList extends BaseType {
   type: 'element'
   name: 'a:adjustHandleList'
-
+  attributes: {}
   children: RequiredMap<AdjustHandleListMap>
 }
 
@@ -54,7 +54,7 @@ export interface AlphaFloorEffect extends BaseType {
 export interface AlphaInverseEffect extends BaseType {
   type: 'element'
   name: 'a:alphaInverseEffect'
-
+  attributes: {}
   children: RequiredMap<AlphaInverseEffectMap>
 }
 
@@ -70,7 +70,7 @@ export interface AlphaInverseEffectMap {
 export interface AlphaModulateEffect extends BaseType {
   type: 'element'
   name: 'a:alphaModulateEffect'
-
+  attributes: {}
   children: RequiredMap<AlphaModulateEffectMap>
 }
 
@@ -158,7 +158,7 @@ export interface AnimationDgmElement extends BaseType {
 export interface AnimationElementChoice extends BaseType {
   type: 'element'
   name: 'a:animationElementChoice'
-
+  attributes: {}
   children: RequiredMap<AnimationElementChoiceMap>
 }
 
@@ -170,7 +170,7 @@ export interface AnimationElementChoiceMap {
 export interface AnimationGraphicalObjectBuildProperties extends BaseType {
   type: 'element'
   name: 'a:animationGraphicalObjectBuildProperties'
-
+  attributes: {}
   children: RequiredMap<AnimationGraphicalObjectBuildPropertiesMap>
 }
 
@@ -182,7 +182,7 @@ export interface AnimationGraphicalObjectBuildPropertiesMap {
 export interface AudioCD extends BaseType {
   type: 'element'
   name: 'a:audioCD'
-
+  attributes: {}
   children: RequiredMap<AudioCDMap>
 }
 
@@ -219,7 +219,7 @@ export interface AudioFileMap {
 export interface Backdrop extends BaseType {
   type: 'element'
   name: 'a:backdrop'
-
+  attributes: {}
   children: RequiredMap<BackdropMap>
 }
 
@@ -233,7 +233,7 @@ export interface BackdropMap {
 export interface BackgroundFillStyleList extends BaseType {
   type: 'element'
   name: 'a:backgroundFillStyleList'
-
+  attributes: {}
   children: RequiredMap<BackgroundFillStyleListMap>
 }
 
@@ -249,7 +249,7 @@ export interface BackgroundFillStyleListMap {
 export interface BackgroundFormatting extends BaseType {
   type: 'element'
   name: 'a:backgroundFormatting'
-
+  attributes: {}
   children: RequiredMap<BackgroundFormattingMap>
 }
 
@@ -267,7 +267,7 @@ export interface BackgroundFormattingMap {
 export interface BaseStyles extends BaseType {
   type: 'element'
   name: 'a:baseStyles'
-
+  attributes: {}
   children: RequiredMap<BaseStylesMap>
 }
 
@@ -281,7 +281,7 @@ export interface BaseStylesMap {
 export interface BaseStylesOverride extends BaseType {
   type: 'element'
   name: 'a:baseStylesOverride'
-
+  attributes: {}
   children: RequiredMap<BaseStylesOverrideMap>
 }
 
@@ -425,7 +425,7 @@ export interface Cell3DMap {
 export interface ClipboardStyleSheet extends BaseType {
   type: 'element'
   name: 'a:clipboardStyleSheet'
-
+  attributes: {}
   children: RequiredMap<ClipboardStyleSheetMap>
 }
 
@@ -437,7 +437,7 @@ export interface ClipboardStyleSheetMap {
 export interface Color extends BaseType {
   type: 'element'
   name: 'a:color'
-
+  attributes: {}
   children: RequiredMap<ColorMap>
 }
 
@@ -491,7 +491,7 @@ export interface ColorMappingMap {
 export interface ColorMappingOverride extends BaseType {
   type: 'element'
   name: 'a:colorMappingOverride'
-
+  attributes: {}
   children: RequiredMap<ColorMappingOverrideMap>
 }
 
@@ -503,7 +503,7 @@ export interface ColorMappingOverrideMap {
 export interface ColorMRU extends BaseType {
   type: 'element'
   name: 'a:colorMRU'
-
+  attributes: {}
   children: RequiredMap<ColorMRUMap>
 }
 
@@ -519,7 +519,7 @@ export interface ColorMRUMap {
 export interface ColorReplaceEffect extends BaseType {
   type: 'element'
   name: 'a:colorReplaceEffect'
-
+  attributes: {}
   children: RequiredMap<ColorReplaceEffectMap>
 }
 
@@ -560,7 +560,7 @@ export interface ColorSchemeMap {
 export interface ColorSchemeAndMapping extends BaseType {
   type: 'element'
   name: 'a:colorSchemeAndMapping'
-
+  attributes: {}
   children: RequiredMap<ColorSchemeAndMappingMap>
 }
 
@@ -572,7 +572,7 @@ export interface ColorSchemeAndMappingMap {
 export interface ColorSchemeList extends BaseType {
   type: 'element'
   name: 'a:colorSchemeList'
-
+  attributes: {}
   children: RequiredMap<ColorSchemeListMap>
 }
 
@@ -611,7 +611,7 @@ export interface ConnectionSiteMap {
 export interface ConnectionSiteList extends BaseType {
   type: 'element'
   name: 'a:connectionSiteList'
-
+  attributes: {}
   children: RequiredMap<ConnectionSiteListMap>
 }
 
@@ -684,7 +684,7 @@ export interface CustomColorMap {
 export interface CustomColorList extends BaseType {
   type: 'element'
   name: 'a:customColorList'
-
+  attributes: {}
   children: RequiredMap<CustomColorListMap>
 }
 
@@ -695,7 +695,7 @@ export interface CustomColorListMap {
 export interface CustomGeometry2D extends BaseType {
   type: 'element'
   name: 'a:customGeometry2D'
-
+  attributes: {}
   children: RequiredMap<CustomGeometry2DMap>
 }
 
@@ -721,7 +721,7 @@ export interface DashStop extends BaseType {
 export interface DashStopList extends BaseType {
   type: 'element'
   name: 'a:dashStopList'
-
+  attributes: {}
   children: RequiredMap<DashStopListMap>
 }
 
@@ -732,7 +732,7 @@ export interface DashStopListMap {
 export interface DefaultShapeDefinition extends BaseType {
   type: 'element'
   name: 'a:defaultShapeDefinition'
-
+  attributes: {}
   children: RequiredMap<DefaultShapeDefinitionMap>
 }
 
@@ -747,7 +747,7 @@ export interface DefaultShapeDefinitionMap {
 export interface DuotoneEffect extends BaseType {
   type: 'element'
   name: 'a:duotoneEffect'
-
+  attributes: {}
   children: RequiredMap<DuotoneEffectMap>
 }
 
@@ -806,7 +806,7 @@ export interface EffectContainerMap {
 export interface EffectList extends BaseType {
   type: 'element'
   name: 'a:effectList'
-
+  attributes: {}
   children: RequiredMap<EffectListMap>
 }
 
@@ -824,7 +824,7 @@ export interface EffectListMap {
 export interface EffectProperties extends BaseType {
   type: 'element'
   name: 'a:effectProperties'
-
+  attributes: {}
   children: RequiredMap<EffectPropertiesMap>
 }
 
@@ -845,7 +845,7 @@ export interface EffectReference extends BaseType {
 export interface EffectStyleItem extends BaseType {
   type: 'element'
   name: 'a:effectStyleItem'
-
+  attributes: {}
   children: RequiredMap<EffectStyleItemMap>
 }
 
@@ -859,7 +859,7 @@ export interface EffectStyleItemMap {
 export interface EffectStyleList extends BaseType {
   type: 'element'
   name: 'a:effectStyleList'
-
+  attributes: {}
   children: RequiredMap<EffectStyleListMap>
 }
 
@@ -885,7 +885,7 @@ export interface EmptyElement extends BaseType {
 export interface FillEffect extends BaseType {
   type: 'element'
   name: 'a:fillEffect'
-
+  attributes: {}
   children: RequiredMap<FillEffectMap>
 }
 
@@ -919,7 +919,7 @@ export interface FillOverlayEffectMap {
 export interface FillProperties extends BaseType {
   type: 'element'
   name: 'a:fillProperties'
-
+  attributes: {}
   children: RequiredMap<FillPropertiesMap>
 }
 
@@ -935,7 +935,7 @@ export interface FillPropertiesMap {
 export interface FillStyleList extends BaseType {
   type: 'element'
   name: 'a:fillStyleList'
-
+  attributes: {}
   children: RequiredMap<FillStyleListMap>
 }
 
@@ -969,7 +969,7 @@ export interface FlatText extends BaseType {
 export interface FontCollection extends BaseType {
   type: 'element'
   name: 'a:fontCollection'
-
+  attributes: {}
   children: RequiredMap<FontCollectionMap>
 }
 
@@ -1032,7 +1032,7 @@ export interface GeomGuide extends BaseType {
 export interface GeomGuideList extends BaseType {
   type: 'element'
   name: 'a:geomGuideList'
-
+  attributes: {}
   children: RequiredMap<GeomGuideListMap>
 }
 
@@ -1108,7 +1108,7 @@ export interface GradientStopMap {
 export interface GradientStopList extends BaseType {
   type: 'element'
   name: 'a:gradientStopList'
-
+  attributes: {}
   children: RequiredMap<GradientStopListMap>
 }
 
@@ -1119,7 +1119,7 @@ export interface GradientStopListMap {
 export interface GraphicalObject extends BaseType {
   type: 'element'
   name: 'a:graphicalObject'
-
+  attributes: {}
   children: RequiredMap<GraphicalObjectMap>
 }
 
@@ -1232,7 +1232,7 @@ export interface GroupTransform2DMap {
 export interface GvmlConnector extends BaseType {
   type: 'element'
   name: 'a:gvmlConnector'
-
+  attributes: {}
   children: RequiredMap<GvmlConnectorMap>
 }
 
@@ -1246,7 +1246,7 @@ export interface GvmlConnectorMap {
 export interface GvmlConnectorNonVisual extends BaseType {
   type: 'element'
   name: 'a:gvmlConnectorNonVisual'
-
+  attributes: {}
   children: RequiredMap<GvmlConnectorNonVisualMap>
 }
 
@@ -1258,7 +1258,7 @@ export interface GvmlConnectorNonVisualMap {
 export interface GvmlGraphicalObjectFrame extends BaseType {
   type: 'element'
   name: 'a:gvmlGraphicalObjectFrame'
-
+  attributes: {}
   children: RequiredMap<GvmlGraphicalObjectFrameMap>
 }
 
@@ -1272,7 +1272,7 @@ export interface GvmlGraphicalObjectFrameMap {
 export interface GvmlGraphicFrameNonVisual extends BaseType {
   type: 'element'
   name: 'a:gvmlGraphicFrameNonVisual'
-
+  attributes: {}
   children: RequiredMap<GvmlGraphicFrameNonVisualMap>
 }
 
@@ -1284,7 +1284,7 @@ export interface GvmlGraphicFrameNonVisualMap {
 export interface GvmlGroupShape extends BaseType {
   type: 'element'
   name: 'a:gvmlGroupShape'
-
+  attributes: {}
   children: RequiredMap<GvmlGroupShapeMap>
 }
 
@@ -1303,7 +1303,7 @@ export interface GvmlGroupShapeMap {
 export interface GvmlGroupShapeNonVisual extends BaseType {
   type: 'element'
   name: 'a:gvmlGroupShapeNonVisual'
-
+  attributes: {}
   children: RequiredMap<GvmlGroupShapeNonVisualMap>
 }
 
@@ -1315,7 +1315,7 @@ export interface GvmlGroupShapeNonVisualMap {
 export interface GvmlPicture extends BaseType {
   type: 'element'
   name: 'a:gvmlPicture'
-
+  attributes: {}
   children: RequiredMap<GvmlPictureMap>
 }
 
@@ -1330,7 +1330,7 @@ export interface GvmlPictureMap {
 export interface GvmlPictureNonVisual extends BaseType {
   type: 'element'
   name: 'a:gvmlPictureNonVisual'
-
+  attributes: {}
   children: RequiredMap<GvmlPictureNonVisualMap>
 }
 
@@ -1342,7 +1342,7 @@ export interface GvmlPictureNonVisualMap {
 export interface GvmlShape extends BaseType {
   type: 'element'
   name: 'a:gvmlShape'
-
+  attributes: {}
   children: RequiredMap<GvmlShapeMap>
 }
 
@@ -1357,7 +1357,7 @@ export interface GvmlShapeMap {
 export interface GvmlShapeNonVisual extends BaseType {
   type: 'element'
   name: 'a:gvmlShapeNonVisual'
-
+  attributes: {}
   children: RequiredMap<GvmlShapeNonVisualMap>
 }
 
@@ -1369,7 +1369,7 @@ export interface GvmlShapeNonVisualMap {
 export interface GvmlTextShape extends BaseType {
   type: 'element'
   name: 'a:gvmlTextShape'
-
+  attributes: {}
   children: RequiredMap<GvmlTextShapeMap>
 }
 
@@ -1388,7 +1388,7 @@ export interface GvmlUseShapeRectangle extends BaseType {
 export interface Headers extends BaseType {
   type: 'element'
   name: 'a:headers'
-
+  attributes: {}
   children: RequiredMap<HeadersMap>
 }
 
@@ -1584,7 +1584,7 @@ export interface LinePropertiesMap {
 export interface LineStyleList extends BaseType {
   type: 'element'
   name: 'a:lineStyleList'
-
+  attributes: {}
   children: RequiredMap<LineStyleListMap>
 }
 
@@ -1610,7 +1610,7 @@ export interface NoFillProperties extends BaseType {
 export interface NonVisualConnectorProperties extends BaseType {
   type: 'element'
   name: 'a:nonVisualConnectorProperties'
-
+  attributes: {}
   children: RequiredMap<NonVisualConnectorPropertiesMap>
 }
 
@@ -1671,7 +1671,7 @@ export interface NonVisualDrawingShapePropsMap {
 export interface NonVisualGraphicFrameProperties extends BaseType {
   type: 'element'
   name: 'a:nonVisualGraphicFrameProperties'
-
+  attributes: {}
   children: RequiredMap<NonVisualGraphicFramePropertiesMap>
 }
 
@@ -1683,7 +1683,7 @@ export interface NonVisualGraphicFramePropertiesMap {
 export interface NonVisualGroupDrawingShapeProps extends BaseType {
   type: 'element'
   name: 'a:nonVisualGroupDrawingShapeProps'
-
+  attributes: {}
   children: RequiredMap<NonVisualGroupDrawingShapePropsMap>
 }
 
@@ -1709,7 +1709,7 @@ export interface NonVisualPicturePropertiesMap {
 export interface ObjectStyleDefaults extends BaseType {
   type: 'element'
   name: 'a:objectStyleDefaults'
-
+  attributes: {}
   children: RequiredMap<ObjectStyleDefaultsMap>
 }
 
@@ -1732,7 +1732,7 @@ export interface OfficeArtExtension extends BaseType {
 export interface OfficeArtExtensionList extends BaseType {
   type: 'element'
   name: 'a:officeArtExtensionList'
-
+  attributes: {}
   children: RequiredMap<OfficeArtExtensionListMap>
 }
 
@@ -1825,7 +1825,7 @@ export interface Path2DClose extends BaseType {
 export interface Path2DCubicBezierTo extends BaseType {
   type: 'element'
   name: 'a:path2DCubicBezierTo'
-
+  attributes: {}
   children: RequiredMap<Path2DCubicBezierToMap>
 }
 
@@ -1836,7 +1836,7 @@ export interface Path2DCubicBezierToMap {
 export interface Path2DLineTo extends BaseType {
   type: 'element'
   name: 'a:path2DLineTo'
-
+  attributes: {}
   children: RequiredMap<Path2DLineToMap>
 }
 
@@ -1847,7 +1847,7 @@ export interface Path2DLineToMap {
 export interface Path2DList extends BaseType {
   type: 'element'
   name: 'a:path2DList'
-
+  attributes: {}
   children: RequiredMap<Path2DListMap>
 }
 
@@ -1858,7 +1858,7 @@ export interface Path2DListMap {
 export interface Path2DMoveTo extends BaseType {
   type: 'element'
   name: 'a:path2DMoveTo'
-
+  attributes: {}
   children: RequiredMap<Path2DMoveToMap>
 }
 
@@ -1869,7 +1869,7 @@ export interface Path2DMoveToMap {
 export interface Path2DQuadBezierTo extends BaseType {
   type: 'element'
   name: 'a:path2DQuadBezierTo'
-
+  attributes: {}
   children: RequiredMap<Path2DQuadBezierToMap>
 }
 
@@ -2155,7 +2155,7 @@ export interface ReflectionEffect extends BaseType {
 export interface RegularTextRun extends BaseType {
   type: 'element'
   name: 'a:regularTextRun'
-
+  attributes: {}
   children: RequiredMap<RegularTextRunMap>
 }
 
@@ -2189,7 +2189,7 @@ export interface RelativeRect extends BaseType {
 export interface Scale2D extends BaseType {
   type: 'element'
   name: 'a:scale2D'
-
+  attributes: {}
   children: RequiredMap<Scale2DMap>
 }
 
@@ -2201,7 +2201,7 @@ export interface Scale2DMap {
 export interface Scene3D extends BaseType {
   type: 'element'
   name: 'a:scene3D'
-
+  attributes: {}
   children: RequiredMap<Scene3DMap>
 }
 
@@ -2367,7 +2367,7 @@ export interface ShapePropertiesMap {
 export interface ShapeStyle extends BaseType {
   type: 'element'
   name: 'a:shapeStyle'
-
+  attributes: {}
   children: RequiredMap<ShapeStyleMap>
 }
 
@@ -2390,7 +2390,7 @@ export interface SoftEdgesEffect extends BaseType {
 export interface SolidColorFillProperties extends BaseType {
   type: 'element'
   name: 'a:solidColorFillProperties'
-
+  attributes: {}
   children: RequiredMap<SolidColorFillPropertiesMap>
 }
 
@@ -2457,7 +2457,7 @@ export interface SRgbColorMap {
 export interface StretchInfoProperties extends BaseType {
   type: 'element'
   name: 'a:stretchInfoProperties'
-
+  attributes: {}
   children: RequiredMap<StretchInfoPropertiesMap>
 }
 
@@ -2553,7 +2553,7 @@ export interface SystemColorMap {
 export interface Table extends BaseType {
   type: 'element'
   name: 'a:table'
-
+  attributes: {}
   children: RequiredMap<TableMap>
 }
 
@@ -2566,7 +2566,7 @@ export interface TableMap {
 export interface TableBackgroundStyle extends BaseType {
   type: 'element'
   name: 'a:tableBackgroundStyle'
-
+  attributes: {}
   children: RequiredMap<TableBackgroundStyleMap>
 }
 
@@ -2599,7 +2599,7 @@ export interface TableCellMap {
 export interface TableCellBorderStyle extends BaseType {
   type: 'element'
   name: 'a:tableCellBorderStyle'
-
+  attributes: {}
   children: RequiredMap<TableCellBorderStyleMap>
 }
 
@@ -2665,7 +2665,7 @@ export interface TableColMap {
 export interface TableGrid extends BaseType {
   type: 'element'
   name: 'a:tableGrid'
-
+  attributes: {}
   children: RequiredMap<TableGridMap>
 }
 
@@ -2676,7 +2676,7 @@ export interface TableGridMap {
 export interface TablePartStyle extends BaseType {
   type: 'element'
   name: 'a:tablePartStyle'
-
+  attributes: {}
   children: RequiredMap<TablePartStyleMap>
 }
 
@@ -2759,7 +2759,7 @@ export interface TableStyleMap {
 export interface TableStyleCellStyle extends BaseType {
   type: 'element'
   name: 'a:tableStyleCellStyle'
-
+  attributes: {}
   children: RequiredMap<TableStyleCellStyleMap>
 }
 
@@ -2818,7 +2818,7 @@ export interface TextAutonumberBullet extends BaseType {
 export interface TextBlipBullet extends BaseType {
   type: 'element'
   name: 'a:textBlipBullet'
-
+  attributes: {}
   children: RequiredMap<TextBlipBulletMap>
 }
 
@@ -2829,7 +2829,7 @@ export interface TextBlipBulletMap {
 export interface TextBody extends BaseType {
   type: 'element'
   name: 'a:textBody'
-
+  attributes: {}
   children: RequiredMap<TextBodyMap>
 }
 
@@ -3002,7 +3002,7 @@ export interface TextFont extends BaseType {
 export interface TextLineBreak extends BaseType {
   type: 'element'
   name: 'a:textLineBreak'
-
+  attributes: {}
   children: RequiredMap<TextLineBreakMap>
 }
 
@@ -3013,7 +3013,7 @@ export interface TextLineBreakMap {
 export interface TextListStyle extends BaseType {
   type: 'element'
   name: 'a:textListStyle'
-
+  attributes: {}
   children: RequiredMap<TextListStyleMap>
 }
 
@@ -3054,7 +3054,7 @@ export interface TextNormalAutofit extends BaseType {
 export interface TextParagraph extends BaseType {
   type: 'element'
   name: 'a:textParagraph'
-
+  attributes: {}
   children: RequiredMap<TextParagraphMap>
 }
 
@@ -3113,7 +3113,7 @@ export interface TextShapeAutofit extends BaseType {
 export interface TextSpacing extends BaseType {
   type: 'element'
   name: 'a:textSpacing'
-
+  attributes: {}
   children: RequiredMap<TextSpacingMap>
 }
 
@@ -3153,7 +3153,7 @@ export interface TextTabStop extends BaseType {
 export interface TextTabStopList extends BaseType {
   type: 'element'
   name: 'a:textTabStopList'
-
+  attributes: {}
   children: RequiredMap<TextTabStopListMap>
 }
 
@@ -3169,7 +3169,7 @@ export interface TextUnderlineFillFollowText extends BaseType {
 export interface TextUnderlineFillGroupWrapper extends BaseType {
   type: 'element'
   name: 'a:textUnderlineFillGroupWrapper'
-
+  attributes: {}
   children: RequiredMap<TextUnderlineFillGroupWrapperMap>
 }
 
@@ -3190,7 +3190,7 @@ export interface TextUnderlineLineFollowText extends BaseType {
 export interface ThemeableLineStyle extends BaseType {
   type: 'element'
   name: 'a:themeableLineStyle'
-
+  attributes: {}
   children: RequiredMap<ThemeableLineStyleMap>
 }
 
@@ -3281,7 +3281,7 @@ export interface VideoFileMap {
 export interface WholeE2oFormatting extends BaseType {
   type: 'element'
   name: 'a:wholeE2oFormatting'
-
+  attributes: {}
   children: RequiredMap<WholeE2oFormattingMap>
 }
 

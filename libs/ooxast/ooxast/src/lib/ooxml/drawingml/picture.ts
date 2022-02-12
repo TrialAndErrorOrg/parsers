@@ -11,7 +11,7 @@ interface BaseType {
 export interface Picture extends BaseType {
   type: 'element'
   name: 'dpct:picture'
-
+  attributes: {}
   children: RequiredMap<PictureMap>
 }
 
@@ -24,7 +24,7 @@ export interface PictureMap {
 export interface PictureNonVisual extends BaseType {
   type: 'element'
   name: 'dpct:pictureNonVisual'
-
+  attributes: {}
   children: RequiredMap<PictureNonVisualMap>
 }
 

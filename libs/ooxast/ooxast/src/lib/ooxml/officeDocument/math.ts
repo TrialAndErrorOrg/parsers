@@ -118,7 +118,7 @@ export interface BreakBin extends UnistNode {
   type: 'element'
   name: 'm:breakBin'
   attributes: {
-    val: BreakBinVal
+    'm:val': BreakBinVal
   }
   children: []
 }
@@ -127,7 +127,7 @@ export interface BreakBinSub extends UnistNode {
   type: 'element'
   name: 'm:breakBinSub'
   attributes: {
-    val: BreakBinSubVal
+    'm:val': BreakBinSubVal
   }
   children: []
 }
@@ -136,7 +136,7 @@ export interface Char extends UnistNode {
   type: 'element'
   name: 'm:char'
   attributes: {
-    val: string
+    'm:val': string
   }
   children: []
 }
@@ -239,7 +239,7 @@ export interface FType extends UnistNode {
   type: 'element'
   name: 'm:fType'
   attributes: {
-    val: FTypeVal
+    'm:val': FTypeVal
   }
   children: []
 }
@@ -298,7 +298,7 @@ export interface Integer2 extends UnistNode {
   type: 'element'
   name: 'm:integer2'
   attributes: {
-    val: string
+    'm:val': string
   }
   children: []
 }
@@ -307,7 +307,7 @@ export interface Integer255 extends UnistNode {
   type: 'element'
   name: 'm:integer255'
   attributes: {
-    val: string
+    'm:val': string
   }
   children: []
 }
@@ -316,7 +316,7 @@ export interface LimLoc extends UnistNode {
   type: 'element'
   name: 'm:limLoc'
   attributes: {
-    val: LimLocVal
+    'm:val': LimLocVal
   }
   children: []
 }
@@ -385,7 +385,7 @@ export interface ManualBreak extends UnistNode {
   type: 'element'
   name: 'm:manualBreak'
   attributes: {
-    alnAt: string
+    'm:alnAt': string
   }
   children: []
 }
@@ -647,7 +647,7 @@ export interface OMathJc extends UnistNode {
   type: 'element'
   name: 'm:oMathJc'
   attributes: {
-    val: JcVal
+    'm:val': JcVal
   }
   children: []
 }
@@ -679,7 +679,7 @@ export interface OnOff extends UnistNode {
   type: 'element'
   name: 'm:onOff'
   attributes: {
-    val: string
+    'm:val': string
   }
   children: []
 }
@@ -802,7 +802,7 @@ export interface Script extends UnistNode {
   type: 'element'
   name: 'm:script'
   attributes: {
-    val: ScriptVal
+    'm:val': ScriptVal
   }
   children: []
 }
@@ -811,7 +811,7 @@ export interface Shp extends UnistNode {
   type: 'element'
   name: 'm:shp'
   attributes: {
-    val: ShpVal
+    'm:val': ShpVal
   }
   children: []
 }
@@ -820,7 +820,7 @@ export interface SpacingRule extends UnistNode {
   type: 'element'
   name: 'm:spacingRule'
   attributes: {
-    val: string
+    'm:val': string
   }
   children: []
 }
@@ -928,7 +928,7 @@ export interface String extends UnistNode {
   type: 'element'
   name: 'm:string'
   attributes: {
-    val: string
+    'm:val': string
   }
   children: []
 }
@@ -937,7 +937,7 @@ export interface Style extends UnistNode {
   type: 'element'
   name: 'm:style'
   attributes: {
-    val: StyleVal
+    'm:val': StyleVal
   }
   children: []
 }
@@ -953,7 +953,7 @@ export interface TopBot extends UnistNode {
   type: 'element'
   name: 'm:topBot'
   attributes: {
-    val: TopBotVal
+    'm:val': TopBotVal
   }
   children: []
 }
@@ -962,7 +962,7 @@ export interface TwipsMeasure extends UnistNode {
   type: 'element'
   name: 'm:twipsMeasure'
   attributes: {
-    val: string
+    'm:val': string
   }
   children: []
 }
@@ -971,7 +971,7 @@ export interface UnSignedInteger extends UnistNode {
   type: 'element'
   name: 'm:unSignedInteger'
   attributes: {
-    val: string
+    'm:val': string
   }
   children: []
 }
@@ -980,7 +980,7 @@ export interface XAlign extends UnistNode {
   type: 'element'
   name: 'm:xAlign'
   attributes: {
-    val: s.XAlignVal
+    'm:val': s.XAlignVal
   }
   children: []
 }
@@ -989,7 +989,7 @@ export interface YAlign extends UnistNode {
   type: 'element'
   name: 'm:yAlign'
   attributes: {
-    val: s.YAlignVal
+    'm:val': s.YAlignVal
   }
   children: []
 }

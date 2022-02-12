@@ -14,7 +14,7 @@ export interface AbstractNum extends UnistNode {
   type: 'element'
   name: 'w:abstractNum'
   attributes: {
-    abstractNumId: string
+    'w:abstractNumId': string
   }
   children: RequiredMap<AbstractNumMap>[]
 }
@@ -33,7 +33,7 @@ export interface AltChunk extends UnistNode {
   type: 'element'
   name: 'w:altChunk'
   attributes: {
-    id?: string
+    'w:id'?: string
   }
   children: RequiredMap<AltChunkMap>[]
 }
@@ -57,9 +57,9 @@ export interface Attr extends UnistNode {
   type: 'element'
   name: 'w:attr'
   attributes: {
-    name: string
-    uri: string
-    val: string
+    'w:name': string
+    'w:uri': string
+    'w:val': string
   }
   children: []
 }
@@ -68,8 +68,8 @@ export interface AutoCaption extends UnistNode {
   type: 'element'
   name: 'w:autoCaption'
   attributes: {
-    caption: string
-    name: string
+    'w:caption': string
+    'w:name': string
   }
   children: []
 }
@@ -89,10 +89,10 @@ export interface Background extends UnistNode {
   type: 'element'
   name: 'w:background'
   attributes: {
-    color?: string
-    themeColor?: ThemeColorVal
-    themeShade?: string
-    themeTint?: string
+    'w:color'?: string
+    'w:themeColor'?: ThemeColorVal
+    'w:themeShade'?: string
+    'w:themeTint'?: string
   }
   children: RequiredMap<BackgroundMap>[]
 }
@@ -105,7 +105,7 @@ export interface Base64Binary extends UnistNode {
   type: 'element'
   name: 'w:base64Binary'
   attributes: {
-    val: string
+    'w:val': string
   }
   children: []
 }
@@ -114,7 +114,7 @@ export interface BdoContentRun extends UnistNode {
   type: 'element'
   name: 'w:bdoContentRun'
   attributes: {
-    val?: DirectionVal
+    'w:val'?: DirectionVal
   }
   children: RequiredMap<BdoContentRunMap>[]
 }
@@ -201,7 +201,7 @@ export type Bookmark = BookmarkRange & {
   type: 'element'
   name: 'w:bookmark' | string
   attributes: {
-    name: string
+    'w:name': string
   }
   children: []
 }
@@ -210,8 +210,8 @@ export type BookmarkRange = MarkupRange & {
   type: 'element'
   name: 'w:bookmarkRange'
   attributes: {
-    colFirst?: string
-    colLast?: string
+    'w:colFirst'?: string
+    'w:colLast'?: string
   }
   children: []
 }
@@ -220,15 +220,15 @@ export interface Border extends UnistNode {
   type: 'element'
   name: 'w:border'
   attributes: {
-    color?: string
-    frame?: string
-    shadow?: string
-    space?: string
-    sz?: string
-    themeColor?: ThemeColorVal
-    themeShade?: string
-    themeTint?: string
-    val: BorderVal
+    'w:color'?: string
+    'w:frame'?: string
+    'w:shadow'?: string
+    'w:space'?: string
+    'w:sz'?: string
+    'w:themeColor'?: ThemeColorVal
+    'w:themeShade'?: string
+    'w:themeTint'?: string
+    'w:val': BorderVal
   }
   children: []
 }
@@ -237,8 +237,8 @@ export type BottomPageBorder = PageBorder & {
   type: 'element'
   name: 'w:bottomPageBorder'
   attributes: {
-    bottomLeft?: string
-    bottomRight?: string
+    'w:bottomLeft'?: string
+    'w:bottomRight'?: string
   }
   children: []
 }
@@ -247,8 +247,8 @@ export interface Br extends UnistNode {
   type: 'element'
   name: 'w:br'
   attributes: {
-    clear?: BrClearVal
-    type?: BrTypeVal
+    'w:clear'?: BrClearVal
+    'w:type'?: BrTypeVal
   }
   children: []
 }
@@ -257,7 +257,7 @@ export interface CalendarType extends UnistNode {
   type: 'element'
   name: 'w:calendarType'
   attributes: {
-    val: s.CalendarTypeVal
+    'w:val': s.CalendarTypeVal
   }
   children: []
 }
@@ -266,13 +266,13 @@ export interface Caption extends UnistNode {
   type: 'element'
   name: 'w:caption'
   attributes: {
-    chapNum?: string
-    heading?: string
-    name: string
-    noLabel?: string
-    numFmt?: NumberFormatVal
-    pos?: CaptionPosVal
-    sep?: ChapterSepVal
+    'w:chapNum'?: string
+    'w:heading'?: string
+    'w:name': string
+    'w:noLabel'?: string
+    'w:numFmt'?: NumberFormatVal
+    'w:pos'?: CaptionPosVal
+    'w:sep'?: ChapterSepVal
   }
   children: []
 }
@@ -293,8 +293,8 @@ export type CellMergeTrackChange = TrackChange & {
   type: 'element'
   name: 'w:cellMergeTrackChange'
   attributes: {
-    vMerge?: AnnotationVMergeVal
-    vMergeOrig?: AnnotationVMergeVal
+    'w:vMerge'?: AnnotationVMergeVal
+    'w:vMergeOrig'?: AnnotationVMergeVal
   }
   children: []
 }
@@ -303,7 +303,7 @@ export interface CharacterSpacing extends UnistNode {
   type: 'element'
   name: 'w:characterSpacing'
   attributes: {
-    val: CharacterSpacingVal
+    'w:val': CharacterSpacingVal
   }
   children: []
 }
@@ -312,7 +312,7 @@ export interface Charset extends UnistNode {
   type: 'element'
   name: 'w:charset'
   attributes: {
-    characterSet?: string
+    'w:characterSet'?: string
   }
   children: []
 }
@@ -321,18 +321,18 @@ export interface Cnf extends UnistNode {
   type: 'element'
   name: 'w:cnf'
   attributes: {
-    evenHBand: string
-    evenVBand: string
-    firstColumn: string
-    firstRow: string
-    firstRowFirstColumn: string
-    firstRowLastColumn: string
-    lastColumn: string
-    lastRow: string
-    lastRowFirstColumn: string
-    lastRowLastColumn: string
-    oddHBand: string
-    oddVBand: string
+    'w:evenHBand': string
+    'w:evenVBand': string
+    'w:firstColumn': string
+    'w:firstRow': string
+    'w:firstRowFirstColumn': string
+    'w:firstRowLastColumn': string
+    'w:lastColumn': string
+    'w:lastRow': string
+    'w:lastRowFirstColumn': string
+    'w:lastRowLastColumn': string
+    'w:oddHBand': string
+    'w:oddVBand': string
   }
   children: []
 }
@@ -341,10 +341,10 @@ export interface Color extends UnistNode {
   type: 'element'
   name: 'w:color'
   attributes: {
-    themeColor?: ThemeColorVal
-    themeShade?: string
-    themeTint?: string
-    val: string
+    'w:themeColor'?: ThemeColorVal
+    'w:themeShade'?: string
+    'w:themeTint'?: string
+    'w:val': string
   }
   children: []
 }
@@ -353,18 +353,18 @@ export interface ColorSchemeMapping extends UnistNode {
   type: 'element'
   name: 'w:colorSchemeMapping'
   attributes: {
-    accent1: WmlColorSchemeIndexVal
-    accent2: WmlColorSchemeIndexVal
-    accent3: WmlColorSchemeIndexVal
-    accent4: WmlColorSchemeIndexVal
-    accent5: WmlColorSchemeIndexVal
-    accent6: WmlColorSchemeIndexVal
-    bg1: WmlColorSchemeIndexVal
-    bg2: WmlColorSchemeIndexVal
-    followedHyperlink: WmlColorSchemeIndexVal
-    hyperlink: WmlColorSchemeIndexVal
-    t1: WmlColorSchemeIndexVal
-    t2: WmlColorSchemeIndexVal
+    'w:accent1': WmlColorSchemeIndexVal
+    'w:accent2': WmlColorSchemeIndexVal
+    'w:accent3': WmlColorSchemeIndexVal
+    'w:accent4': WmlColorSchemeIndexVal
+    'w:accent5': WmlColorSchemeIndexVal
+    'w:accent6': WmlColorSchemeIndexVal
+    'w:bg1': WmlColorSchemeIndexVal
+    'w:bg2': WmlColorSchemeIndexVal
+    'w:followedHyperlink': WmlColorSchemeIndexVal
+    'w:hyperlink': WmlColorSchemeIndexVal
+    'w:t1': WmlColorSchemeIndexVal
+    'w:t2': WmlColorSchemeIndexVal
   }
   children: []
 }
@@ -373,8 +373,8 @@ export interface Column extends UnistNode {
   type: 'element'
   name: 'w:column'
   attributes: {
-    space?: string
-    w?: string
+    'w:space'?: string
+    'w:w'?: string
   }
   children: []
 }
@@ -383,10 +383,10 @@ export interface Columns extends UnistNode {
   type: 'element'
   name: 'w:columns'
   attributes: {
-    equalWidth?: string
-    num?: string
-    sep?: string
-    space?: string
+    'w:equalWidth'?: string
+    'w:num'?: string
+    'w:sep'?: string
+    'w:space'?: string
   }
   children: RequiredMap<ColumnsMap>[]
 }
@@ -399,7 +399,7 @@ export type Comment = TrackChange & {
   type: 'element'
   name: 'w:comment'
   attributes: {
-    initials?: string
+    'w:initials'?: string
   }
   children: RequiredMap<CommentMap>[]
 }
@@ -470,9 +470,9 @@ export interface CompatSetting extends UnistNode {
   type: 'element'
   name: 'w:compatSetting'
   attributes: {
-    name: string
-    uri: string
-    val: string
+    'w:name': string
+    'w:uri': string
+    'w:val': string
   }
   children: []
 }
@@ -481,9 +481,9 @@ export interface Control extends UnistNode {
   type: 'element'
   name: 'w:control'
   attributes: {
-    id?: string
-    name?: string
-    shapeid?: string
+    'w:id'?: string
+    'w:name'?: string
+    'w:shapeid'?: string
   }
   children: []
 }
@@ -492,8 +492,8 @@ export interface CustomXmlBlock extends UnistNode {
   type: 'element'
   name: 'w:customXmlBlock'
   attributes: {
-    element: string
-    uri: string
+    'w:element': string
+    'w:uri': string
   }
   children: RequiredMap<CustomXmlBlockMap>[]
 }
@@ -535,8 +535,8 @@ export interface CustomXmlCell extends UnistNode {
   type: 'element'
   name: 'w:customXmlCell'
   attributes: {
-    element: string
-    uri: string
+    'w:element': string
+    'w:uri': string
   }
   children: RequiredMap<CustomXmlCellMap>[]
 }
@@ -589,8 +589,8 @@ export interface CustomXmlRow extends UnistNode {
   type: 'element'
   name: 'w:customXmlRow'
   attributes: {
-    element: string
-    uri: string
+    'w:element': string
+    'w:uri': string
   }
   children: RequiredMap<CustomXmlRowMap>[]
 }
@@ -631,8 +631,8 @@ export interface CustomXmlRun extends UnistNode {
   type: 'element'
   name: 'w:customXmlRun'
   attributes: {
-    element: string
-    uri: string
+    'w:element': string
+    'w:uri': string
   }
   children: RequiredMap<CustomXmlRunMap>[]
 }
@@ -679,9 +679,9 @@ export interface DataBinding extends UnistNode {
   type: 'element'
   name: 'w:dataBinding'
   attributes: {
-    prefixMappings: string
-    storeItemID: string
-    xpath: string
+    'w:prefixMappings': string
+    'w:storeItemID': string
+    'w:xpath': string
   }
   children: []
 }
@@ -690,7 +690,7 @@ export interface DecimalNumber extends UnistNode {
   type: 'element'
   name: 'w:decimalNumber'
   attributes: {
-    val: string
+    'w:val': string
   }
   children: []
 }
@@ -699,7 +699,7 @@ export interface DecimalNumberOrPrecent extends UnistNode {
   type: 'element'
   name: 'w:decimalNumberOrPrecent'
   attributes: {
-    val: string
+    'w:val': string
   }
   children: []
 }
@@ -708,7 +708,7 @@ export interface DirContentRun extends UnistNode {
   type: 'element'
   name: 'w:dirContentRun'
   attributes: {
-    val?: DirectionVal
+    'w:val'?: DirectionVal
   }
   children: RequiredMap<DirContentRunMap>[]
 }
@@ -754,7 +754,7 @@ export interface Div extends UnistNode {
   type: 'element'
   name: 'w:div'
   attributes: {
-    id: string
+    'w:id': string
   }
   children: RequiredMap<DivMap>[]
 }
@@ -811,9 +811,9 @@ export interface DocGrid extends UnistNode {
   type: 'element'
   name: 'w:docGrid'
   attributes: {
-    charSpace?: string
-    linePitch: string
-    type: DocGridVal
+    'w:charSpace'?: string
+    'w:linePitch': string
+    'w:type': DocGridVal
   }
   children: []
 }
@@ -834,7 +834,7 @@ export interface DocPartBehavior extends UnistNode {
   type: 'element'
   name: 'w:docPartBehavior'
   attributes: {
-    val: DocPartBehaviorVal
+    'w:val': DocPartBehaviorVal
   }
   children: []
 }
@@ -866,7 +866,7 @@ export interface DocPartGallery extends UnistNode {
   type: 'element'
   name: 'w:docPartGallery'
   attributes: {
-    val: DocPartGalleryVal
+    'w:val': DocPartGalleryVal
   }
   children: []
 }
@@ -875,8 +875,8 @@ export interface DocPartName extends UnistNode {
   type: 'element'
   name: 'w:docPartName'
   attributes: {
-    decorated?: string
-    val: string
+    'w:decorated'?: string
+    'w:val': string
   }
   children: []
 }
@@ -901,7 +901,7 @@ export interface DocPartType extends UnistNode {
   type: 'element'
   name: 'w:docPartType'
   attributes: {
-    val: DocPartTypeVal
+    'w:val': DocPartTypeVal
   }
   children: []
 }
@@ -910,7 +910,7 @@ export interface DocPartTypes extends UnistNode {
   type: 'element'
   name: 'w:docPartTypes'
   attributes: {
-    all?: string
+    'w:all'?: string
   }
   children: RequiredMap<DocPartTypesMap>[]
 }
@@ -923,13 +923,13 @@ export interface DocProtect extends UnistNode {
   type: 'element'
   name: 'w:docProtect'
   attributes: {
-    algorithmName?: string
-    edit?: DocProtectVal
-    enforcement: string
-    formatting?: string
-    hashValue?: string
-    saltValue?: string
-    spinCount?: string
+    'w:algorithmName'?: string
+    'w:edit'?: DocProtectVal
+    'w:enforcement': string
+    'w:formatting'?: string
+    'w:hashValue'?: string
+    'w:saltValue'?: string
+    'w:spinCount'?: string
   }
   children: []
 }
@@ -950,7 +950,7 @@ export interface DocType extends UnistNode {
   type: 'element'
   name: 'w:docType'
   attributes: {
-    val: string
+    'w:val': string
   }
 }
 
@@ -958,7 +958,7 @@ export type Document = DocumentBase & {
   type: 'element'
   name: 'w:document'
   attributes: {
-    conformance: s.ConformanceClassVal
+    'w:conformance': s.ConformanceClassVal
   }
   children: RequiredMap<DocumentMap>[]
 }
@@ -982,8 +982,8 @@ export interface DocVar extends UnistNode {
   type: 'element'
   name: 'w:docVar'
   attributes: {
-    name: string
-    val: string
+    'w:name': string
+    'w:val': string
   }
   children: []
 }
@@ -1015,11 +1015,11 @@ export interface EastAsianLayout extends UnistNode {
   type: 'element'
   name: 'w:eastAsianLayout'
   attributes: {
-    combine?: string
-    combineBrackets?: CombineBracketsVal
-    id?: string
-    vert?: string
-    vertCompress?: string
+    'w:combine'?: string
+    'w:combineBrackets'?: CombineBracketsVal
+    'w:id'?: string
+    'w:vert'?: string
+    'w:vertCompress'?: string
   }
 }
 
@@ -1038,7 +1038,7 @@ export interface EdnPos extends UnistNode {
   type: 'element'
   name: 'w:ednPos'
   attributes: {
-    val: EdnPosVal
+    'w:val': EdnPosVal
   }
   children: []
 }
@@ -1061,7 +1061,7 @@ export interface Em extends UnistNode {
   type: 'element'
   name: 'w:em'
   attributes: {
-    val: EmVal
+    'w:val': EmVal
   }
   children: []
 }
@@ -1136,8 +1136,8 @@ export interface FFHelpText extends UnistNode {
   type: 'element'
   name: 'w:fFHelpText'
   attributes: {
-    type: InfoTextTypeVal
-    val: string
+    'w:type': InfoTextTypeVal
+    'w:val': string
   }
   children: []
 }
@@ -1146,7 +1146,7 @@ export interface FFName extends UnistNode {
   type: 'element'
   name: 'w:fFName'
   attributes: {
-    val: string
+    'w:val': string
   }
   children: []
 }
@@ -1155,8 +1155,8 @@ export interface FFStatusText extends UnistNode {
   type: 'element'
   name: 'w:fFStatusText'
   attributes: {
-    type: InfoTextTypeVal
-    val: string
+    'w:type': InfoTextTypeVal
+    'w:val': string
   }
   children: []
 }
@@ -1179,7 +1179,7 @@ export interface FFTextType extends UnistNode {
   type: 'element'
   name: 'w:fFTextType'
   attributes: {
-    val: FFTextTypeVal
+    'w:val': FFTextTypeVal
   }
   children: []
 }
@@ -1188,8 +1188,8 @@ export interface FitText extends UnistNode {
   type: 'element'
   name: 'w:fitText'
   attributes: {
-    id?: string
-    val: string
+    'w:id'?: string
+    'w:val': string
   }
   children: []
 }
@@ -1198,9 +1198,9 @@ export interface FldChar extends UnistNode {
   type: 'element'
   name: 'w:fldChar'
   attributes: {
-    dirty: string
-    fldCharType: FldCharTypeVal
-    fldLock: string
+    'w:dirty': string
+    'w:fldCharType': FldCharTypeVal
+    'w:fldLock': string
   }
   children: RequiredMap<FldCharMap>[]
 }
@@ -1213,7 +1213,7 @@ export interface Font extends UnistNode {
   type: 'element'
   name: 'w:font'
   attributes: {
-    name: string
+    'w:name': string
   }
   children: RequiredMap<FontMap>[]
 }
@@ -1236,7 +1236,7 @@ export interface FontFamily extends UnistNode {
   type: 'element'
   name: 'w:fontFamily'
   attributes: {
-    val: FontFamilyVal
+    'w:val': FontFamilyVal
   }
 }
 
@@ -1244,8 +1244,8 @@ export type FontRel = Rel & {
   type: 'element'
   name: 'w:fontRel'
   attributes: {
-    fontKey: string
-    subsetted: string
+    'w:fontKey': string
+    'w:subsetted': string
   }
   children: []
 }
@@ -1254,15 +1254,15 @@ export interface Fonts extends UnistNode {
   type: 'element'
   name: 'w:fonts'
   attributes: {
-    ascii: string
-    asciiTheme: ThemeVal
-    cs: string
-    cstheme: ThemeVal
-    eastAsia: string
-    eastAsiaTheme: ThemeVal
-    hAnsi: string
-    hAnsiTheme: ThemeVal
-    hint: HintVal
+    'w:ascii': string
+    'w:asciiTheme': ThemeVal
+    'w:cs': string
+    'w:cstheme': ThemeVal
+    'w:eastAsia': string
+    'w:eastAsiaTheme': ThemeVal
+    'w:hAnsi': string
+    'w:hAnsiTheme': ThemeVal
+    'w:hint': HintVal
   }
   children: []
 }
@@ -1271,12 +1271,12 @@ export interface FontSig extends UnistNode {
   type: 'element'
   name: 'w:fontSig'
   attributes: {
-    csb0: string
-    csb1: string
-    usb0: string
-    usb1: string
-    usb2: string
-    usb3: string
+    'w:csb0': string
+    'w:csb1': string
+    'w:usb0': string
+    'w:usb1': string
+    'w:usb2': string
+    'w:usb3': string
   }
   children: []
 }
@@ -1327,7 +1327,7 @@ export interface FrameLayout extends UnistNode {
   type: 'element'
   name: 'w:frameLayout'
   attributes: {
-    val: FrameLayoutVal
+    'w:val': FrameLayoutVal
   }
   children: []
 }
@@ -1336,21 +1336,21 @@ export interface FramePr extends UnistNode {
   type: 'element'
   name: 'w:framePr'
   attributes: {
-    anchorLock?: string
-    dropCap?: DropCapVal
-    h?: string
-    hAnchor?: HAnchorVal
-    hRule?: HeightRuleVal
-    hSpace?: string
-    lines?: string
-    vAnchor?: VAnchorVal
-    vSpace?: string
-    w?: string
-    wrap?: WrapVal
-    x?: string
-    xAlign?: s.XAlignVal
-    y?: string
-    yAlign?: s.YAlignVal
+    'w:anchorLock'?: string
+    'w:dropCap'?: DropCapVal
+    'w:h'?: string
+    'w:hAnchor'?: HAnchorVal
+    'w:hRule'?: HeightRuleVal
+    'w:hSpace'?: string
+    'w:lines'?: string
+    'w:vAnchor'?: VAnchorVal
+    'w:vSpace'?: string
+    'w:w'?: string
+    'w:wrap'?: WrapVal
+    'w:x'?: string
+    'w:xAlign'?: s.XAlignVal
+    'w:y'?: string
+    'w:yAlign'?: s.YAlignVal
   }
   children: []
 }
@@ -1359,7 +1359,7 @@ export interface FrameScrollbar extends UnistNode {
   type: 'element'
   name: 'w:frameScrollbar'
   attributes: {
-    val: FrameScrollbarVal
+    'w:val': FrameScrollbarVal
   }
   children: []
 }
@@ -1409,8 +1409,8 @@ export interface FtnEdn extends UnistNode {
   type: 'element'
   name: 'w:ftnEdn'
   attributes: {
-    id: string
-    type?: FtnEdnVal
+    'w:id': string
+    'w:type'?: FtnEdnVal
   }
   children: RequiredMap<FtnEdnMap>[]
 }
@@ -1452,8 +1452,8 @@ export interface FtnEdnRef extends UnistNode {
   type: 'element'
   name: 'w:ftnEdnRef'
   attributes: {
-    customMarkFollows?: string
-    id: string
+    'w:customMarkFollows'?: string
+    'w:id': string
   }
   children: []
 }
@@ -1462,7 +1462,7 @@ export interface FtnEdnSepRef extends UnistNode {
   type: 'element'
   name: 'w:ftnEdnSepRef'
   attributes: {
-    id: string
+    'w:id': string
   }
   children: []
 }
@@ -1471,7 +1471,7 @@ export interface FtnPos extends UnistNode {
   type: 'element'
   name: 'w:ftnPos'
   attributes: {
-    val: FtnPosVal
+    'w:val': FtnPosVal
   }
   children: []
 }
@@ -1505,7 +1505,7 @@ export interface Guid extends UnistNode {
   type: 'element'
   name: 'w:guid'
   attributes: {
-    val: string
+    'w:val': string
   }
   children: []
 }
@@ -1554,7 +1554,7 @@ export type HdrFtrRef = Rel & {
   type: 'element'
   name: 'w:hdrFtrRef'
   attributes: {
-    type: HdrFtrVal
+    'w:type': HdrFtrVal
   }
   children: []
 }
@@ -1574,8 +1574,8 @@ export interface Height extends UnistNode {
   type: 'element'
   name: 'w:height'
   attributes: {
-    hRule: HeightRuleVal
-    val: string
+    'w:hRule': HeightRuleVal
+    'w:val': string
   }
   children: []
 }
@@ -1584,7 +1584,7 @@ export interface Highlight extends UnistNode {
   type: 'element'
   name: 'w:highlight'
   attributes: {
-    val: HighlightColorVal
+    'w:val': HighlightColorVal
   }
   children: []
 }
@@ -1593,7 +1593,7 @@ export interface HpsMeasure extends UnistNode {
   type: 'element'
   name: 'w:hpsMeasure'
   attributes: {
-    val: string
+    'w:val': string
   }
   children: []
 }
@@ -1602,12 +1602,12 @@ export interface Hyperlink extends UnistNode {
   type: 'element'
   name: 'w:hyperlink'
   attributes: {
-    anchor?: string
-    docLocation?: string
-    history?: string
-    id: string
-    tgtFrame?: string
-    tooltip?: string
+    'w:anchor'?: string
+    'w:docLocation'?: string
+    'w:history'?: string
+    'w:id': string
+    'w:tgtFrame'?: string
+    'w:tooltip'?: string
   }
   children: RequiredMap<HyperlinkMap>[]
 }
@@ -1653,14 +1653,14 @@ export interface Ind extends UnistNode {
   type: 'element'
   name: 'w:ind'
   attributes: {
-    end?: string
-    endChars?: string
-    firstLine?: string
-    firstLineChars?: string
-    hanging?: string
-    hangingChars?: string
-    start?: string
-    startChars?: string
+    'w:end'?: string
+    'w:endChars'?: string
+    'w:firstLine'?: string
+    'w:firstLineChars'?: string
+    'w:hanging'?: string
+    'w:hangingChars'?: string
+    'w:start'?: string
+    'w:startChars'?: string
   }
   children: []
 }
@@ -1669,7 +1669,7 @@ export interface Jc extends UnistNode {
   type: 'element'
   name: 'w:jc'
   attributes: {
-    val: JcVal
+    'w:val': JcVal
   }
   children: []
 }
@@ -1678,7 +1678,7 @@ export interface JcTable extends UnistNode {
   type: 'element'
   name: 'w:jcTable'
   attributes: {
-    val: JcTableVal
+    'w:val': JcTableVal
   }
   children: []
 }
@@ -1687,8 +1687,8 @@ export interface Kinsoku extends UnistNode {
   type: 'element'
   name: 'w:kinsoku'
   attributes: {
-    lang: string
-    val: string
+    'w:lang': string
+    'w:val': string
   }
   children: []
 }
@@ -1697,7 +1697,7 @@ export interface Lang extends UnistNode {
   type: 'element'
   name: 'w:lang'
   attributes: {
-    val: string
+    'w:val': string
   }
   children: []
 }
@@ -1706,9 +1706,9 @@ export interface Language extends UnistNode {
   type: 'element'
   name: 'w:language'
   attributes: {
-    bidi?: string
-    eastAsia?: string
-    val?: string
+    'w:bidi'?: string
+    'w:eastAsia'?: string
+    'w:val'?: string
   }
   children: []
 }
@@ -1717,12 +1717,12 @@ export interface LatentStyles extends UnistNode {
   type: 'element'
   name: 'w:latentStyles'
   attributes: {
-    count: string
-    defLockedState: string
-    defQFormat: string
-    defSemiHidden: string
-    defUIPriority: string
-    defUnhideWhenUsed: string
+    'w:count': string
+    'w:defLockedState': string
+    'w:defQFormat': string
+    'w:defSemiHidden': string
+    'w:defUIPriority': string
+    'w:defUnhideWhenUsed': string
   }
   children: RequiredMap<LatentStylesMap>[]
 }
@@ -1735,7 +1735,7 @@ export interface LevelSuffix extends UnistNode {
   type: 'element'
   name: 'w:levelSuffix'
   attributes: {
-    val: LevelSuffixVal
+    'w:val': LevelSuffixVal
   }
   children: []
 }
@@ -1744,8 +1744,8 @@ export interface LevelText extends UnistNode {
   type: 'element'
   name: 'w:levelText'
   attributes: {
-    null?: string
-    val?: string
+    'w:null'?: string
+    'w:val'?: string
   }
   children: []
 }
@@ -1754,10 +1754,10 @@ export interface LineNumber extends UnistNode {
   type: 'element'
   name: 'w:lineNumber'
   attributes: {
-    countBy?: string
-    distance?: string
-    restart?: LineNumberRestartVal
-    start?: string
+    'w:countBy'?: string
+    'w:distance'?: string
+    'w:restart'?: LineNumberRestartVal
+    'w:start'?: string
   }
   children: []
 }
@@ -1766,7 +1766,7 @@ export interface Lock extends UnistNode {
   type: 'element'
   name: 'w:lock'
   attributes: {
-    val: LockVal
+    'w:val': LockVal
   }
   children: []
 }
@@ -1775,7 +1775,7 @@ export interface LongHexNumber extends UnistNode {
   type: 'element'
   name: 'w:longHexNumber'
   attributes: {
-    val: string
+    'w:val': string
   }
   children: []
 }
@@ -1784,12 +1784,12 @@ export interface LsdException extends UnistNode {
   type: 'element'
   name: 'w:lsdException'
   attributes: {
-    locked: string
-    name: string
-    qFormat: string
-    semiHidden: string
-    uiPriority: string
-    unhideWhenUsed: string
+    'w:locked': string
+    'w:name': string
+    'w:qFormat': string
+    'w:semiHidden': string
+    'w:uiPriority': string
+    'w:unhideWhenUsed': string
   }
   children: []
 }
@@ -1798,9 +1798,9 @@ export interface Lvl extends UnistNode {
   type: 'element'
   name: 'w:lvl'
   attributes: {
-    ilvl: string
-    tentative?: string
-    tplc?: string
+    'w:ilvl': string
+    'w:tentative'?: string
+    'w:tplc'?: string
   }
   children: RequiredMap<LvlMap>[]
 }
@@ -1823,7 +1823,7 @@ export interface MacroName extends UnistNode {
   type: 'element'
   name: 'w:macroName'
   attributes: {
-    val: string
+    'w:val': string
   }
   children: []
 }
@@ -1858,7 +1858,7 @@ export interface MailMergeDataType extends UnistNode {
   type: 'element'
   name: 'w:mailMergeDataType'
   attributes: {
-    val: string
+    'w:val': string
   }
   children: []
 }
@@ -1867,7 +1867,7 @@ export interface MailMergeDest extends UnistNode {
   type: 'element'
   name: 'w:mailMergeDest'
   attributes: {
-    val: MailMergeDestVal
+    'w:val': MailMergeDestVal
   }
   children: []
 }
@@ -1876,7 +1876,7 @@ export interface MailMergeDocType extends UnistNode {
   type: 'element'
   name: 'w:mailMergeDocType'
   attributes: {
-    val: MailMergeDocTypeVal
+    'w:val': MailMergeDocTypeVal
   }
   children: []
 }
@@ -1885,7 +1885,7 @@ export interface MailMergeOdsoFMDFieldType extends UnistNode {
   type: 'element'
   name: 'w:mailMergeOdsoFMDFieldType'
   attributes: {
-    val: MailMergeOdsoFMDFieldTypeVal
+    'w:val': MailMergeOdsoFMDFieldTypeVal
   }
   children: []
 }
@@ -1894,7 +1894,7 @@ export interface MailMergeSourceType extends UnistNode {
   type: 'element'
   name: 'w:mailMergeSourceType'
   attributes: {
-    val: MailMergeSourceTypeVal
+    'w:val': MailMergeSourceTypeVal
   }
   children: []
 }
@@ -1903,7 +1903,7 @@ export interface Markup extends UnistNode {
   type: 'element'
   name: 'w:markup' | string
   attributes: {
-    id: string
+    'w:id': string
   }
   children: any[]
 }
@@ -1911,8 +1911,8 @@ export interface Markup extends UnistNode {
 export type MarkupRange = Markup & {
   name: 'w:markupRange' | string
   attributes: {
-    id: string
-    displacedByCustomXml?: DisplacedByCustomXmlVal
+    'w:id': string
+    'w:displacedByCustomXml'?: DisplacedByCustomXmlVal
   }
   children: any[]
 }
@@ -1944,8 +1944,8 @@ export type MoveBookmark = Bookmark & {
   type: 'element'
   name: 'w:moveBookmark'
   attributes: {
-    author: string
-    date: string
+    'w:author': string
+    'w:date': string
   }
   children: []
 }
@@ -1954,7 +1954,7 @@ export interface MultiLevelType extends UnistNode {
   type: 'element'
   name: 'w:multiLevelType'
   attributes: {
-    val: MultiLevelTypeVal
+    'w:val': MultiLevelTypeVal
   }
   children: []
 }
@@ -1963,7 +1963,7 @@ export interface Num extends UnistNode {
   type: 'element'
   name: 'w:num'
   attributes: {
-    numId: string
+    'w:numId': string
   }
   children: RequiredMap<NumMap>[]
 }
@@ -1991,8 +1991,8 @@ export interface NumFmt extends UnistNode {
   type: 'element'
   name: 'w:numFmt'
   attributes: {
-    format?: string
-    val: NumberFormatVal
+    'w:format'?: string
+    'w:val': NumberFormatVal
   }
   children: []
 }
@@ -2001,7 +2001,7 @@ export interface NumLvl extends UnistNode {
   type: 'element'
   name: 'w:numLvl'
   attributes: {
-    ilvl: string
+    'w:ilvl': string
   }
   children: RequiredMap<NumLvlMap>[]
 }
@@ -2015,7 +2015,7 @@ export interface NumPicBullet extends UnistNode {
   type: 'element'
   name: 'w:numPicBullet'
   attributes: {
-    numPicBulletId: string
+    'w:numPicBulletId': string
   }
   children: RequiredMap<NumPicBulletMap>[]
 }
@@ -2041,7 +2041,7 @@ export interface NumRestart extends UnistNode {
   type: 'element'
   name: 'w:numRestart'
   attributes: {
-    val: RestartNumberVal
+    'w:val': RestartNumberVal
   }
   children: []
 }
@@ -2050,8 +2050,8 @@ export interface Object extends UnistNode {
   type: 'element'
   name: 'w:object'
   attributes: {
-    dxaOrig?: string
-    dyaOrig?: string
+    'w:dxaOrig'?: string
+    'w:dyaOrig'?: string
   }
   children: RequiredMap<ObjectMap>[]
 }
@@ -2068,11 +2068,11 @@ export interface ObjectEmbed extends UnistNode {
   type: 'element'
   name: 'w:objectEmbed'
   attributes: {
-    drawAspect?: ObjectDrawAspectVal
-    fieldCodes?: string
-    id: string
-    progId?: string
-    shapeId?: string
+    'w:drawAspect'?: ObjectDrawAspectVal
+    'w:fieldCodes'?: string
+    'w:id': string
+    'w:progId'?: string
+    'w:shapeId'?: string
   }
   children: []
 }
@@ -2081,8 +2081,8 @@ export type ObjectLink = ObjectEmbed & {
   type: 'element'
   name: 'w:objectLink'
   attributes: {
-    lockedField?: string
-    updateMode: ObjectUpdateModeVal
+    'w:lockedField'?: string
+    'w:updateMode': ObjectUpdateModeVal
   }
   children: []
 }
@@ -2125,7 +2125,7 @@ export interface OnOff extends UnistNode {
   type: 'element'
   name: 'w:onOff'
   attributes: {
-    val: string
+    'w:val': string
   }
   children: []
 }
@@ -2134,7 +2134,7 @@ export type OptimizeForBrowser = OnOff & {
   type: 'element'
   name: 'w:optimizeForBrowser'
   attributes: {
-    target?: string
+    'w:target'?: string
   }
   children: []
 }
@@ -2143,11 +2143,11 @@ export interface P extends UnistNode {
   type: 'element'
   name: 'w:p'
   attributes: {
-    rsidDel: string
-    rsidP: string
-    rsidR: string
-    rsidRDefault: string
-    rsidRPr: string
+    'w:rsidDel': string
+    'w:rsidP': string
+    'w:rsidR': string
+    'w:rsidRDefault': string
+    'w:rsidRPr': string
   }
   children: RequiredMap<PMap>[]
 }
@@ -2194,7 +2194,7 @@ export type PageBorder = Border & {
   type: 'element'
   name: 'w:pageBorder'
   attributes: {
-    id?: string
+    'w:id'?: string
   }
   children: []
 }
@@ -2203,9 +2203,9 @@ export interface PageBorders extends UnistNode {
   type: 'element'
   name: 'w:pageBorders'
   attributes: {
-    display?: PageBorderDisplayVal
-    offsetFrom?: PageBorderOffsetVal
-    zOrder?: PageBorderZOrderVal
+    'w:display'?: PageBorderDisplayVal
+    'w:offsetFrom'?: PageBorderOffsetVal
+    'w:zOrder'?: PageBorderZOrderVal
   }
   children: RequiredMap<PageBordersMap>[]
 }
@@ -2221,13 +2221,13 @@ export interface PageMar extends UnistNode {
   type: 'element'
   name: 'w:pageMar'
   attributes: {
-    bottom: string
-    footer: string
-    gutter: string
-    header: string
-    left: string
-    right: string
-    top: string
+    'w:bottom': string
+    'w:footer': string
+    'w:gutter': string
+    'w:header': string
+    'w:left': string
+    'w:right': string
+    'w:top': string
   }
   children: []
 }
@@ -2236,10 +2236,10 @@ export interface PageNumber extends UnistNode {
   type: 'element'
   name: 'w:pageNumber'
   attributes: {
-    chapSep?: ChapterSepVal
-    chapStyle?: string
-    fmt?: NumberFormatVal
-    start?: string
+    'w:chapSep'?: ChapterSepVal
+    'w:chapStyle'?: string
+    'w:fmt'?: NumberFormatVal
+    'w:start'?: string
   }
   children: []
 }
@@ -2248,10 +2248,10 @@ export interface PageSz extends UnistNode {
   type: 'element'
   name: 'w:pageSz'
   attributes: {
-    code?: string
-    h: string
-    orient?: PageOrientationVal
-    w: string
+    'w:code'?: string
+    'w:h': string
+    'w:orient'?: PageOrientationVal
+    'w:w': string
   }
   children: []
 }
@@ -2260,7 +2260,7 @@ export interface Panose extends UnistNode {
   type: 'element'
   name: 'w:panose'
   attributes: {
-    val: string
+    'w:val': string
   }
   children: []
 }
@@ -2269,8 +2269,8 @@ export interface PaperSource extends UnistNode {
   type: 'element'
   name: 'w:paperSource'
   attributes: {
-    first: string
-    other: string
+    'w:first': string
+    'w:other': string
   }
   children: []
 }
@@ -2413,8 +2413,8 @@ export interface Perm extends UnistNode {
   type: 'element'
   name: 'w:perm'
   attributes: {
-    displacedByCustomXml?: DisplacedByCustomXmlVal
-    id: string
+    'w:displacedByCustomXml'?: DisplacedByCustomXmlVal
+    'w:id': string
   }
   children: []
 }
@@ -2423,10 +2423,10 @@ export type PermStart = Perm & {
   type: 'element'
   name: 'w:permStart'
   attributes: {
-    colFirst?: string
-    colLast?: string
-    ed?: string
-    edGrp?: EdGrpVal
+    'w:colFirst'?: string
+    'w:colLast'?: string
+    'w:ed'?: string
+    'w:edGrp'?: EdGrpVal
   }
   children: []
 }
@@ -2435,7 +2435,7 @@ export interface Pitch extends UnistNode {
   type: 'element'
   name: 'w:pitch'
   attributes: {
-    val: PitchVal
+    'w:val': PitchVal
   }
   children: []
 }
@@ -2444,7 +2444,7 @@ export interface PixelsMeasure extends UnistNode {
   type: 'element'
   name: 'w:pixelsMeasure'
   attributes: {
-    val: string
+    'w:val': string
   }
   children: []
 }
@@ -2553,8 +2553,8 @@ export interface Proof extends UnistNode {
   type: 'element'
   name: 'w:proof'
   attributes: {
-    grammar?: ProofVal
-    spelling?: ProofVal
+    'w:grammar'?: ProofVal
+    'w:spelling'?: ProofVal
   }
   children: []
 }
@@ -2563,7 +2563,7 @@ export interface ProofErr extends UnistNode {
   type: 'element'
   name: 'w:proofErr'
   attributes: {
-    type: ProofErrVal
+    'w:type': ProofErrVal
   }
   children: []
 }
@@ -2572,9 +2572,9 @@ export interface PTab extends UnistNode {
   type: 'element'
   name: 'w:pTab'
   attributes: {
-    alignment: PTabAlignmentVal
-    leader: PTabLeaderVal
-    relativeTo: PTabRelativeToVal
+    'w:alignment': PTabAlignmentVal
+    'w:leader': PTabLeaderVal
+    'w:relativeTo': PTabRelativeToVal
   }
   children: []
 }
@@ -2583,9 +2583,9 @@ export interface R extends UnistNode {
   type: 'element'
   name: 'w:r'
   attributes: {
-    rsidDel: string
-    rsidR: string
-    rsidRPr: string
+    'w:rsidDel': string
+    'w:rsidR': string
+    'w:rsidRPr': string
   }
   children: RequiredMap<RMap>[]
 }
@@ -2630,10 +2630,10 @@ export interface ReadingModeInkLockDown extends UnistNode {
   type: 'element'
   name: 'w:readingModeInkLockDown'
   attributes: {
-    actualPg: string
-    fontSz: string
-    h: string
-    w: string
+    'w:actualPg': string
+    'w:fontSz': string
+    'w:h': string
+    'w:w': string
   }
   children: []
 }
@@ -2666,7 +2666,7 @@ export interface Rel extends UnistNode {
   type: 'element'
   name: 'w:rel'
   attributes: {
-    id: string
+    'w:id': string
   }
   children: []
 }
@@ -2675,10 +2675,10 @@ export interface Row extends UnistNode {
   type: 'element'
   name: 'w:row'
   attributes: {
-    rsidDel: string
-    rsidR: string
-    rsidRPr: string
-    rsidTr: string
+    'w:rsidDel': string
+    'w:rsidR': string
+    'w:rsidRPr': string
+    'w:rsidTr': string
   }
   children: RequiredMap<RowMap>[]
 }
@@ -2854,7 +2854,7 @@ export interface RubyAlign extends UnistNode {
   type: 'element'
   name: 'w:rubyAlign'
   attributes: {
-    val: RubyAlignVal
+    'w:val': RubyAlignVal
   }
   children: []
 }
@@ -2915,9 +2915,9 @@ export interface RunTrackChange extends TrackChange {
   type: 'element'
   name: 'w:runTrackChange'
   attributes: {
-    id: string
-    author: string
-    date?: string
+    'w:id': string
+    'w:author': string
+    'w:date'?: string
   }
   children: RequiredMap<RunTrackChangeMap>[]
 }
@@ -2980,8 +2980,8 @@ export interface SaveThroughXslt extends UnistNode {
   type: 'element'
   name: 'w:saveThroughXslt'
   attributes: {
-    id?: string
-    solutionID?: string
+    'w:id'?: string
+    'w:solutionID'?: string
   }
   children: []
 }
@@ -3016,7 +3016,7 @@ export interface SdtComboBox extends UnistNode {
   type: 'element'
   name: 'w:sdtComboBox'
   attributes: {
-    lastValue?: string
+    'w:lastValue'?: string
   }
   children: RequiredMap<SdtComboBoxMap>[]
 }
@@ -3188,7 +3188,7 @@ export interface SdtDate extends UnistNode {
   type: 'element'
   name: 'w:sdtDate'
   attributes: {
-    fullDate?: string
+    'w:fullDate'?: string
   }
   children: RequiredMap<SdtDateMap>[]
 }
@@ -3204,7 +3204,7 @@ export interface SdtDateMappingType extends UnistNode {
   type: 'element'
   name: 'w:sdtDateMappingType'
   attributes: {
-    val: SdtDateMappingTypeVal
+    'w:val': SdtDateMappingTypeVal
   }
   children: []
 }
@@ -3226,7 +3226,7 @@ export interface SdtDropDownList extends UnistNode {
   type: 'element'
   name: 'w:sdtDropDownList'
   attributes: {
-    lastValue?: string
+    'w:lastValue'?: string
   }
   children: RequiredMap<SdtDropDownListMap>[]
 }
@@ -3250,8 +3250,8 @@ export interface SdtListItem extends UnistNode {
   type: 'element'
   name: 'w:sdtListItem'
   attributes: {
-    displayText: string
-    value: string
+    'w:displayText': string
+    'w:value': string
   }
   children: []
 }
@@ -3319,7 +3319,7 @@ export interface SdtText extends UnistNode {
   type: 'element'
   name: 'w:sdtText'
   attributes: {
-    multiLine: string
+    'w:multiLine': string
   }
   children: []
 }
@@ -3328,10 +3328,10 @@ export interface SectPr extends UnistNode {
   type: 'element'
   name: 'w:sectPr'
   attributes: {
-    rsidDel: string
-    rsidR: string
-    rsidRPr: string
-    rsidSect: string
+    'w:rsidDel': string
+    'w:rsidR': string
+    'w:rsidRPr': string
+    'w:rsidSect': string
   }
   children: RequiredMap<SectPrMap>[]
 }
@@ -3365,10 +3365,10 @@ export interface SectPrBase extends UnistNode {
   type: 'element'
   name: 'w:sectPrBase'
   attributes: {
-    rsidDel: string
-    rsidR: string
-    rsidRPr: string
-    rsidSect: string
+    'w:rsidDel': string
+    'w:rsidR': string
+    'w:rsidRPr': string
+    'w:rsidSect': string
   }
   children: RequiredMap<SectPrBaseMap>[]
 }
@@ -3410,7 +3410,7 @@ export interface SectType extends UnistNode {
   type: 'element'
   name: 'w:sectType'
   attributes: {
-    val: SectionMarkVal
+    'w:val': SectionMarkVal
   }
   children: []
 }
@@ -3525,15 +3525,15 @@ export interface Shd extends UnistNode {
   type: 'element'
   name: 'w:shd'
   attributes: {
-    color?: string
-    fill?: string
-    themeColor?: ThemeColorVal
-    themeFill?: ThemeColorVal
-    themeFillShade?: string
-    themeFillTint?: string
-    themeShade?: string
-    themeTint?: string
-    val: ShdVal
+    'w:color'?: string
+    'w:fill'?: string
+    'w:themeColor'?: ThemeColorVal
+    'w:themeFill'?: ThemeColorVal
+    'w:themeFillShade'?: string
+    'w:themeFillTint'?: string
+    'w:themeShade'?: string
+    'w:themeTint'?: string
+    'w:val': ShdVal
   }
   children: []
 }
@@ -3542,7 +3542,7 @@ export interface SignedHpsMeasure extends UnistNode {
   type: 'element'
   name: 'w:signedHpsMeasure'
   attributes: {
-    val: string
+    'w:val': string
   }
   children: []
 }
@@ -3551,7 +3551,7 @@ export interface SignedTwipsMeasure extends UnistNode {
   type: 'element'
   name: 'w:signedTwipsMeasure'
   attributes: {
-    val: string
+    'w:val': string
   }
   children: []
 }
@@ -3560,9 +3560,9 @@ export interface SimpleField extends UnistNode {
   type: 'element'
   name: 'w:simpleField'
   attributes: {
-    dirty: string
-    fldLock: string
-    instr: string
+    'w:dirty': string
+    'w:fldLock': string
+    'w:instr': string
   }
   children: RequiredMap<SimpleFieldMap>[]
 }
@@ -3619,8 +3619,8 @@ export interface SmartTagRun extends UnistNode {
   type: 'element'
   name: 'w:smartTagRun'
   attributes: {
-    element: string
-    uri: string
+    'w:element': string
+    'w:uri': string
   }
   children: RequiredMap<SmartTagRunMap>[]
 }
@@ -3667,9 +3667,9 @@ export interface SmartTagType extends UnistNode {
   type: 'element'
   name: 'w:smartTagType'
   attributes: {
-    name: string
-    namespaceuri: string
-    url: string
+    'w:name': string
+    'w:namespaceuri': string
+    'w:url': string
   }
   children: []
 }
@@ -3678,14 +3678,14 @@ export interface Spacing extends UnistNode {
   type: 'element'
   name: 'w:spacing'
   attributes: {
-    after?: string
-    afterAutospacing?: string
-    afterLines?: string
-    before?: string
-    beforeAutospacing?: string
-    beforeLines?: string
-    line?: string
-    lineRule?: LineSpacingRuleVal
+    'w:after'?: string
+    'w:afterAutospacing'?: string
+    'w:afterLines'?: string
+    'w:before'?: string
+    'w:beforeAutospacing'?: string
+    'w:beforeLines'?: string
+    'w:line'?: string
+    'w:lineRule'?: LineSpacingRuleVal
   }
   children: []
 }
@@ -3694,7 +3694,7 @@ export interface String extends UnistNode {
   type: 'element'
   name: 'w:string'
   attributes: {
-    val: string
+    'w:val': string
   }
   children: []
 }
@@ -3703,10 +3703,10 @@ export interface Style extends UnistNode {
   type: 'element'
   name: 'w:style'
   attributes: {
-    customStyle?: string
-    default?: string
-    styleId?: string
-    type?: StyleTypeVal
+    'w:customStyle'?: string
+    'w:default'?: string
+    'w:styleId'?: string
+    'w:type'?: StyleTypeVal
   }
   children: RequiredMap<StyleMap>[]
 }
@@ -3740,21 +3740,21 @@ export interface StylePaneFilter extends UnistNode {
   type: 'element'
   name: 'w:stylePaneFilter'
   attributes: {
-    allStyles: string
-    alternateStyleNames: string
-    clearFormatting: string
-    customStyles: string
-    directFormattingOnNumbering: string
-    directFormattingOnParagraphs: string
-    directFormattingOnRuns: string
-    directFormattingOnTables: string
-    headingStyles: string
-    latentStyles: string
-    numberingStyles: string
-    stylesInUse: string
-    tableStyles: string
-    top3HeadingStyles: string
-    visibleStyles: string
+    'w:allStyles': string
+    'w:alternateStyleNames': string
+    'w:clearFormatting': string
+    'w:customStyles': string
+    'w:directFormattingOnNumbering': string
+    'w:directFormattingOnParagraphs': string
+    'w:directFormattingOnRuns': string
+    'w:directFormattingOnTables': string
+    'w:headingStyles': string
+    'w:latentStyles': string
+    'w:numberingStyles': string
+    'w:stylesInUse': string
+    'w:tableStyles': string
+    'w:top3HeadingStyles': string
+    'w:visibleStyles': string
   }
   children: []
 }
@@ -3776,7 +3776,7 @@ export interface StyleSort extends UnistNode {
   type: 'element'
   name: 'w:styleSort'
   attributes: {
-    val: StyleSortVal
+    'w:val': StyleSortVal
   }
   children: []
 }
@@ -3785,8 +3785,8 @@ export interface Sym extends UnistNode {
   type: 'element'
   name: 'w:sym'
   attributes: {
-    char: string
-    font: string
+    'w:char': string
+    'w:font': string
   }
   children: []
 }
@@ -3806,9 +3806,9 @@ export interface TabStop extends UnistNode {
   type: 'element'
   name: 'w:tabStop'
   attributes: {
-    leader?: TabTlcVal
-    pos: string
-    val: TabJcVal
+    'w:leader'?: TabTlcVal
+    'w:pos': string
+    'w:val': TabJcVal
   }
   children: []
 }
@@ -3817,7 +3817,7 @@ export interface TargetScreenSz extends UnistNode {
   type: 'element'
   name: 'w:targetScreenSz'
   attributes: {
-    val: TargetScreenSzVal
+    'w:val': TargetScreenSzVal
   }
   children: []
 }
@@ -3929,7 +3929,7 @@ export interface TblGridCol extends UnistNode {
   type: 'element'
   name: 'w:tblGridCol'
   attributes: {
-    w: string
+    'w:w': string
   }
   children: []
 }
@@ -3938,7 +3938,7 @@ export interface TblLayoutType extends UnistNode {
   type: 'element'
   name: 'w:tblLayoutType'
   attributes: {
-    type: TblLayoutTypeVal
+    'w:type': TblLayoutTypeVal
   }
   children: []
 }
@@ -3947,12 +3947,12 @@ export interface TblLook extends UnistNode {
   type: 'element'
   name: 'w:tblLook'
   attributes: {
-    firstColumn: string
-    firstRow: string
-    lastColumn: string
-    lastRow: string
-    noHBand: string
-    noVBand: string
+    'w:firstColumn': string
+    'w:firstRow': string
+    'w:lastColumn': string
+    'w:lastRow': string
+    'w:noHBand': string
+    'w:noVBand': string
   }
   children: []
 }
@@ -3961,7 +3961,7 @@ export interface TblOverlap extends UnistNode {
   type: 'element'
   name: 'w:tblOverlap'
   attributes: {
-    val: TblOverlapVal
+    'w:val': TblOverlapVal
   }
   children: []
 }
@@ -3970,16 +3970,16 @@ export interface TblPPr extends UnistNode {
   type: 'element'
   name: 'w:tblPPr'
   attributes: {
-    bottomFromText: string
-    horzAnchor: HAnchorVal
-    leftFromText: string
-    rightFromText: string
-    tblpX: string
-    tblpXSpec: s.XAlignVal
-    tblpY: string
-    tblpYSpec: s.YAlignVal
-    topFromText: string
-    vertAnchor: VAnchorVal
+    'w:bottomFromText': string
+    'w:horzAnchor': HAnchorVal
+    'w:leftFromText': string
+    'w:rightFromText': string
+    'w:tblpX': string
+    'w:tblpXSpec': s.XAlignVal
+    'w:tblpY': string
+    'w:tblpYSpec': s.YAlignVal
+    'w:topFromText': string
+    'w:vertAnchor': VAnchorVal
   }
 }
 
@@ -4077,7 +4077,7 @@ export interface TblStylePr extends UnistNode {
   type: 'element'
   name: 'w:tblStylePr'
   attributes: {
-    type: TblStyleOverrideTypeVal
+    'w:type': TblStyleOverrideTypeVal
   }
   children: RequiredMap<TblStylePrMap>[]
 }
@@ -4094,8 +4094,8 @@ export interface TblWidth extends UnistNode {
   type: 'element'
   name: 'w:tblWidth'
   attributes: {
-    type: TblWidthVal
-    w: string
+    'w:type': TblWidthVal
+    'w:w': string
   }
   children: []
 }
@@ -4104,7 +4104,7 @@ export interface Tc extends UnistNode {
   type: 'element'
   name: 'w:tc'
   attributes: {
-    id?: string
+    'w:id'?: string
   }
   children: RequiredMap<TcMap>[]
 }
@@ -4250,7 +4250,7 @@ export interface TextAlignment extends UnistNode {
   type: 'element'
   name: 'w:textAlignment'
   attributes: {
-    val: TextAlignmentVal
+    'w:val': TextAlignmentVal
   }
   children: []
 }
@@ -4259,7 +4259,7 @@ export interface TextboxTightWrap extends UnistNode {
   type: 'element'
   name: 'w:textboxTightWrap'
   attributes: {
-    val: TextboxTightWrapVal
+    'w:val': TextboxTightWrapVal
   }
   children: []
 }
@@ -4268,7 +4268,7 @@ export interface TextDirection extends UnistNode {
   type: 'element'
   name: 'w:textDirection'
   attributes: {
-    val: TextDirectionVal
+    'w:val': TextDirectionVal
   }
   children: []
 }
@@ -4277,7 +4277,7 @@ export interface TextEffect extends UnistNode {
   type: 'element'
   name: 'w:textEffect'
   attributes: {
-    val: TextEffectVal
+    'w:val': TextEffectVal
   }
   children: []
 }
@@ -4286,7 +4286,7 @@ export interface TextScale extends UnistNode {
   type: 'element'
   name: 'w:textScale'
   attributes: {
-    val: string
+    'w:val': string
   }
   children: []
 }
@@ -4295,8 +4295,8 @@ export type TopPageBorder = PageBorder & {
   type: 'element'
   name: 'w:topPageBorder'
   attributes: {
-    topLeft?: string
-    topRight?: string
+    'w:topLeft'?: string
+    'w:topRight'?: string
   }
 }
 
@@ -4304,9 +4304,9 @@ export type TrackChange = Markup & {
   type: 'element'
   name: 'w:trackChange' | string
   attributes: {
-    id: string
-    author: string
-    date?: string
+    'w:id': string
+    'w:author': string
+    'w:date'?: string
   }
   children: any[]
 }
@@ -4315,7 +4315,7 @@ export type TrackChangeRange = TrackChange & {
   type: 'element'
   name: 'w:trackChangeRange'
   attributes: {
-    displacedByCustomXml?: DisplacedByCustomXmlVal
+    'w:displacedByCustomXml'?: DisplacedByCustomXmlVal
   }
   children: any[]
 }
@@ -4324,11 +4324,11 @@ export interface TrackChangesView extends UnistNode {
   type: 'element'
   name: 'w:trackChangesView'
   attributes: {
-    comments?: string
-    formatting?: string
-    inkAnnotations?: string
-    insDel?: string
-    markup?: string
+    'w:comments'?: string
+    'w:formatting'?: string
+    'w:inkAnnotations'?: string
+    'w:insDel'?: string
+    'w:markup'?: string
   }
 }
 
@@ -4382,7 +4382,7 @@ export interface TwipsMeasure extends UnistNode {
   type: 'element'
   name: 'w:twipsMeasure'
   attributes: {
-    val: string
+    'w:val': string
   }
   children: []
 }
@@ -4391,11 +4391,11 @@ export interface Underline extends UnistNode {
   type: 'element'
   name: 'w:underline'
   attributes: {
-    color?: string
-    themeColor?: ThemeColorVal
-    themeShade?: string
-    themeTint?: string
-    val?: UnderlineVal
+    'w:color'?: string
+    'w:themeColor'?: ThemeColorVal
+    'w:themeShade'?: string
+    'w:themeTint'?: string
+    'w:val'?: UnderlineVal
   }
   children: []
 }
@@ -4404,7 +4404,7 @@ export interface UnsignedDecimalNumber extends UnistNode {
   type: 'element'
   name: 'w:unsignedDecimalNumber'
   attributes: {
-    val: string
+    'w:val': string
   }
   children: []
 }
@@ -4413,7 +4413,7 @@ export interface VerticalAlignRun extends UnistNode {
   type: 'element'
   name: 'w:verticalAlignRun'
   attributes: {
-    val: s.VerticalAlignRunVal
+    'w:val': s.VerticalAlignRunVal
   }
   children: []
 }
@@ -4422,7 +4422,7 @@ export interface VerticalJc extends UnistNode {
   type: 'element'
   name: 'w:verticalJc'
   attributes: {
-    val: VerticalJcVal
+    'w:val': VerticalJcVal
   }
   children: []
 }
@@ -4431,7 +4431,7 @@ export interface View extends UnistNode {
   type: 'element'
   name: 'w:view'
   attributes: {
-    val: ViewVal
+    'w:val': ViewVal
   }
   children: []
 }
@@ -4440,7 +4440,7 @@ export interface VMerge extends UnistNode {
   type: 'element'
   name: 'w:vMerge'
   attributes: {
-    val: MergeVal
+    'w:val': MergeVal
   }
   children: []
 }
@@ -4471,11 +4471,11 @@ export interface WriteProtection extends UnistNode {
   type: 'element'
   name: 'w:writeProtection'
   attributes: {
-    algorithmName?: string
-    hashValue?: string
-    recommended?: string
-    saltValue?: string
-    spinCount?: string
+    'w:algorithmName'?: string
+    'w:hashValue'?: string
+    'w:recommended'?: string
+    'w:saltValue'?: string
+    'w:spinCount'?: string
   }
   children: []
 }
@@ -4484,12 +4484,12 @@ export interface WritingStyle extends UnistNode {
   type: 'element'
   name: 'w:writingStyle'
   attributes: {
-    appName: string
-    checkStyle: string
-    dllVersion: string
-    lang: string
-    nlCheck?: string
-    vendorID: string
+    'w:appName': string
+    'w:checkStyle': string
+    'w:dllVersion': string
+    'w:lang': string
+    'w:nlCheck'?: string
+    'w:vendorID': string
   }
   children: []
 }
@@ -4498,8 +4498,8 @@ export interface Zoom extends UnistNode {
   type: 'element'
   name: 'w:zoom'
   attributes: {
-    percent: string
-    val?: ZoomVal
+    'w:percent': string
+    'w:val'?: ZoomVal
   }
   children: []
 }

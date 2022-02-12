@@ -11,8 +11,8 @@ export interface AdjPoint2D extends UnistNode {
   type: 'element'
   name: 'a:adjPoint2D'
   attributes: {
-    x: string
-    y: string
+    'a:x': string
+    'a:y': string
   }
   children: []
 }
@@ -33,7 +33,7 @@ export interface AlphaBiLevelEffect extends UnistNode {
   type: 'element'
   name: 'a:alphaBiLevelEffect'
   attributes: {
-    thresh: string
+    'a:thresh': string
   }
   children: []
 }
@@ -79,7 +79,7 @@ export interface AlphaModulateFixedEffect extends UnistNode {
   type: 'element'
   name: 'a:alphaModulateFixedEffect'
   attributes: {
-    amt?: string
+    'a:amt'?: string
   }
   children: []
 }
@@ -88,7 +88,7 @@ export interface AlphaOutsetEffect extends UnistNode {
   type: 'element'
   name: 'a:alphaOutsetEffect'
   attributes: {
-    rad?: string
+    'a:rad'?: string
   }
   children: []
 }
@@ -97,7 +97,7 @@ export interface AlphaReplaceEffect extends UnistNode {
   type: 'element'
   name: 'a:alphaReplaceEffect'
   attributes: {
-    a: string
+    'a:a': string
   }
   children: []
 }
@@ -106,7 +106,7 @@ export interface Angle extends UnistNode {
   type: 'element'
   name: 'a:angle'
   attributes: {
-    val: string
+    'a:val': string
   }
   children: []
 }
@@ -115,8 +115,8 @@ export interface AnimationChartBuildProperties extends UnistNode {
   type: 'element'
   name: 'a:animationChartBuildProperties'
   attributes: {
-    animBg?: string
-    bld?: string
+    'a:animBg'?: string
+    'a:bld'?: string
   }
   children: []
 }
@@ -125,9 +125,9 @@ export interface AnimationChartElement extends UnistNode {
   type: 'element'
   name: 'a:animationChartElement'
   attributes: {
-    bldStep: ChartBuildStepVal
-    categoryIdx?: string
-    seriesIdx?: string
+    'a:bldStep': ChartBuildStepVal
+    'a:categoryIdx'?: string
+    'a:seriesIdx'?: string
   }
   children: []
 }
@@ -136,8 +136,8 @@ export interface AnimationDgmBuildProperties extends UnistNode {
   type: 'element'
   name: 'a:animationDgmBuildProperties'
   attributes: {
-    bld?: string
-    rev?: string
+    'a:bld'?: string
+    'a:rev'?: string
   }
   children: []
 }
@@ -146,8 +146,8 @@ export interface AnimationDgmElement extends UnistNode {
   type: 'element'
   name: 'a:animationDgmElement'
   attributes: {
-    bldStep?: DgmBuildStepVal
-    id?: string
+    'a:bldStep'?: DgmBuildStepVal
+    'a:id'?: string
   }
   children: []
 }
@@ -193,8 +193,8 @@ export interface AudioCDTime extends UnistNode {
   type: 'element'
   name: 'a:audioCDTime'
   attributes: {
-    time?: string
-    track: string
+    'a:time'?: string
+    'a:track': string
   }
   children: []
 }
@@ -203,8 +203,8 @@ export interface AudioFile extends UnistNode {
   type: 'element'
   name: 'a:audioFile'
   attributes: {
-    contentType?: string
-    link: string
+    'a:contentType'?: string
+    'a:link': string
   }
   children: RequiredMap<AudioFileMap>[]
 }
@@ -292,9 +292,9 @@ export interface Bevel extends UnistNode {
   type: 'element'
   name: 'a:bevel'
   attributes: {
-    h?: string
-    prst?: BevelPresetTypeVal
-    w?: string
+    'a:h'?: string
+    'a:prst'?: BevelPresetTypeVal
+    'a:w'?: string
   }
   children: []
 }
@@ -303,7 +303,7 @@ export interface BiLevelEffect extends UnistNode {
   type: 'element'
   name: 'a:biLevelEffect'
   attributes: {
-    thresh: string
+    'a:thresh': string
   }
   children: []
 }
@@ -312,7 +312,7 @@ export interface BlendEffect extends UnistNode {
   type: 'element'
   name: 'a:blendEffect'
   attributes: {
-    blend: BlendModeVal
+    'a:blend': BlendModeVal
   }
   children: RequiredMap<BlendEffectMap>[]
 }
@@ -325,9 +325,9 @@ export interface Blip extends UnistNode {
   type: 'element'
   name: 'a:blip'
   attributes: {
-    cstate?: BlipCompressionVal
-    embed?: string
-    link?: string
+    'a:cstate'?: BlipCompressionVal
+    'a:embed'?: string
+    'a:link'?: string
   }
   children: RequiredMap<BlipMap>[]
 }
@@ -357,8 +357,8 @@ export interface BlipFillProperties extends UnistNode {
   type: 'element'
   name: 'a:blipFillProperties'
   attributes: {
-    dpi?: string
-    rotWithShape?: string
+    'a:dpi'?: string
+    'a:rotWithShape'?: string
   }
   children: RequiredMap<BlipFillPropertiesMap>[]
 }
@@ -374,8 +374,8 @@ export interface BlurEffect extends UnistNode {
   type: 'element'
   name: 'a:blurEffect'
   attributes: {
-    grow?: string
-    rad?: string
+    'a:grow'?: string
+    'a:rad'?: string
   }
   children: []
 }
@@ -384,7 +384,7 @@ export interface Boolean extends UnistNode {
   type: 'element'
   name: 'a:boolean'
   attributes: {
-    val: string
+    'a:val': string
   }
   children: []
 }
@@ -393,9 +393,9 @@ export interface Camera extends UnistNode {
   type: 'element'
   name: 'a:camera'
   attributes: {
-    fov?: string
-    prst: PresetCameraTypeVal
-    zoom?: string
+    'a:fov'?: string
+    'a:prst': PresetCameraTypeVal
+    'a:zoom'?: string
   }
   children: RequiredMap<CameraMap>[]
 }
@@ -408,7 +408,7 @@ export interface Cell3D extends UnistNode {
   type: 'element'
   name: 'a:cell3D'
   attributes: {
-    prstMaterial?: PresetMaterialTypeVal
+    'a:prstMaterial'?: PresetMaterialTypeVal
   }
   children: RequiredMap<Cell3DMap>[]
 }
@@ -451,7 +451,7 @@ export interface ColorChangeEffect extends UnistNode {
   type: 'element'
   name: 'a:colorChangeEffect'
   attributes: {
-    useA?: string
+    'a:useA'?: string
   }
   children: RequiredMap<ColorChangeEffectMap>[]
 }
@@ -465,18 +465,18 @@ export interface ColorMapping extends UnistNode {
   type: 'element'
   name: 'a:colorMapping'
   attributes: {
-    accent1: ColorSchemeIndexVal
-    accent2: ColorSchemeIndexVal
-    accent3: ColorSchemeIndexVal
-    accent4: ColorSchemeIndexVal
-    accent5: ColorSchemeIndexVal
-    accent6: ColorSchemeIndexVal
-    bg1: ColorSchemeIndexVal
-    bg2: ColorSchemeIndexVal
-    folHlink: ColorSchemeIndexVal
-    hlink: ColorSchemeIndexVal
-    tx1: ColorSchemeIndexVal
-    tx2: ColorSchemeIndexVal
+    'a:accent1': ColorSchemeIndexVal
+    'a:accent2': ColorSchemeIndexVal
+    'a:accent3': ColorSchemeIndexVal
+    'a:accent4': ColorSchemeIndexVal
+    'a:accent5': ColorSchemeIndexVal
+    'a:accent6': ColorSchemeIndexVal
+    'a:bg1': ColorSchemeIndexVal
+    'a:bg2': ColorSchemeIndexVal
+    'a:folHlink': ColorSchemeIndexVal
+    'a:hlink': ColorSchemeIndexVal
+    'a:tx1': ColorSchemeIndexVal
+    'a:tx2': ColorSchemeIndexVal
   }
   children: RequiredMap<ColorMappingMap>[]
 }
@@ -533,7 +533,7 @@ export interface ColorScheme extends UnistNode {
   type: 'element'
   name: 'a:colorScheme'
   attributes: {
-    name: string
+    'a:name': string
   }
   children: RequiredMap<ColorSchemeMap>[]
 }
@@ -586,8 +586,8 @@ export interface Connection extends UnistNode {
   type: 'element'
   name: 'a:connection'
   attributes: {
-    id: string
-    idx: string
+    'a:id': string
+    'a:idx': string
   }
   children: []
 }
@@ -596,7 +596,7 @@ export interface ConnectionSite extends UnistNode {
   type: 'element'
   name: 'a:connectionSite'
   attributes: {
-    ang: string
+    'a:ang': string
   }
   children: RequiredMap<ConnectionSiteMap>[]
 }
@@ -620,16 +620,16 @@ export interface ConnectorLocking extends UnistNode {
   type: 'element'
   name: 'a:connectorLocking'
   attributes: {
-    noAdjustHandles?: string
-    noChangeArrowheads?: string
-    noChangeAspect?: string
-    noChangeShapeType?: string
-    noEditPoints?: string
-    noGrp?: string
-    noMove?: string
-    noResize?: string
-    noRot?: string
-    noSelect?: string
+    'a:noAdjustHandles'?: string
+    'a:noChangeArrowheads'?: string
+    'a:noChangeAspect'?: string
+    'a:noChangeShapeType'?: string
+    'a:noEditPoints'?: string
+    'a:noGrp'?: string
+    'a:noMove'?: string
+    'a:noResize'?: string
+    'a:noRot'?: string
+    'a:noSelect'?: string
   }
   children: RequiredMap<ConnectorLockingMap>[]
 }
@@ -642,16 +642,16 @@ export interface ContentPartLocking extends UnistNode {
   type: 'element'
   name: 'a:contentPartLocking'
   attributes: {
-    noAdjustHandles?: string
-    noChangeArrowheads?: string
-    noChangeAspect?: string
-    noChangeShapeType?: string
-    noEditPoints?: string
-    noGrp?: string
-    noMove?: string
-    noResize?: string
-    noRot?: string
-    noSelect?: string
+    'a:noAdjustHandles'?: string
+    'a:noChangeArrowheads'?: string
+    'a:noChangeAspect'?: string
+    'a:noChangeShapeType'?: string
+    'a:noEditPoints'?: string
+    'a:noGrp'?: string
+    'a:noMove'?: string
+    'a:noResize'?: string
+    'a:noRot'?: string
+    'a:noSelect'?: string
   }
   children: RequiredMap<ContentPartLockingMap>[]
 }
@@ -664,7 +664,7 @@ export interface CustomColor extends UnistNode {
   type: 'element'
   name: 'a:customColor'
   attributes: {
-    name?: string
+    'a:name'?: string
   }
   children: RequiredMap<CustomColorMap>[]
 }
@@ -709,8 +709,8 @@ export interface DashStop extends UnistNode {
   type: 'element'
   name: 'a:dashStop'
   attributes: {
-    d: string
-    sp: string
+    'a:d': string
+    'a:sp': string
   }
   children: []
 }
@@ -761,8 +761,8 @@ export interface EffectContainer extends UnistNode {
   type: 'element'
   name: 'a:effectContainer'
   attributes: {
-    name?: string
-    type?: EffectContainerTypeVal
+    'a:name'?: string
+    'a:type'?: EffectContainerTypeVal
   }
   children: RequiredMap<EffectContainerMap>[]
 }
@@ -834,7 +834,7 @@ export interface EffectReference extends UnistNode {
   type: 'element'
   name: 'a:effectReference'
   attributes: {
-    ref: string
+    'a:ref': string
   }
   children: []
 }
@@ -868,8 +868,8 @@ export interface EmbeddedWAVAudioFile extends UnistNode {
   type: 'element'
   name: 'a:embeddedWAVAudioFile'
   attributes: {
-    embed: string
-    name?: string
+    'a:embed': string
+    'a:name'?: string
   }
   children: []
 }
@@ -899,7 +899,7 @@ export interface FillOverlayEffect extends UnistNode {
   type: 'element'
   name: 'a:fillOverlayEffect'
   attributes: {
-    blend: BlendModeVal
+    'a:blend': BlendModeVal
   }
   children: RequiredMap<FillOverlayEffectMap>[]
 }
@@ -949,7 +949,7 @@ export interface FixedPercentage extends UnistNode {
   type: 'element'
   name: 'a:fixedPercentage'
   attributes: {
-    val: string
+    'a:val': string
   }
   children: []
 }
@@ -958,7 +958,7 @@ export interface FlatText extends UnistNode {
   type: 'element'
   name: 'a:flatText'
   attributes: {
-    z?: string
+    'a:z'?: string
   }
   children: []
 }
@@ -982,7 +982,7 @@ export interface FontReference extends UnistNode {
   type: 'element'
   name: 'a:fontReference'
   attributes: {
-    idx: FontCollectionIndexVal
+    'a:idx': FontCollectionIndexVal
   }
   children: RequiredMap<FontReferenceMap>[]
 }
@@ -1000,7 +1000,7 @@ export interface FontScheme extends UnistNode {
   type: 'element'
   name: 'a:fontScheme'
   attributes: {
-    name: string
+    'a:name': string
   }
   children: RequiredMap<FontSchemeMap>[]
 }
@@ -1020,8 +1020,8 @@ export interface GeomGuide extends UnistNode {
   type: 'element'
   name: 'a:geomGuide'
   attributes: {
-    fmla: string
-    name: string
+    'a:fmla': string
+    'a:name': string
   }
   children: []
 }
@@ -1041,10 +1041,10 @@ export interface GeomRect extends UnistNode {
   type: 'element'
   name: 'a:geomRect'
   attributes: {
-    b: string
-    l: string
-    r: string
-    t: string
+    'a:b': string
+    'a:l': string
+    'a:r': string
+    'a:t': string
   }
   children: []
 }
@@ -1053,7 +1053,7 @@ export interface GlowEffect extends UnistNode {
   type: 'element'
   name: 'a:glowEffect'
   attributes: {
-    rad?: string
+    'a:rad'?: string
   }
   children: RequiredMap<GlowEffectMap>[]
 }
@@ -1071,8 +1071,8 @@ export interface GradientFillProperties extends UnistNode {
   type: 'element'
   name: 'a:gradientFillProperties'
   attributes: {
-    flip?: TileFlipModeVal
-    rotWithShape?: string
+    'a:flip'?: TileFlipModeVal
+    'a:rotWithShape'?: string
   }
   children: RequiredMap<GradientFillPropertiesMap>[]
 }
@@ -1088,7 +1088,7 @@ export interface GradientStop extends UnistNode {
   type: 'element'
   name: 'a:gradientStop'
   attributes: {
-    pos: string
+    'a:pos': string
   }
   children: RequiredMap<GradientStopMap>[]
 }
@@ -1128,7 +1128,7 @@ export interface GraphicalObjectData extends UnistNode {
   type: 'element'
   name: 'a:graphicalObjectData'
   attributes: {
-    uri: string
+    'a:uri': string
   }
   children: []
 }
@@ -1137,12 +1137,12 @@ export interface GraphicalObjectFrameLocking extends UnistNode {
   type: 'element'
   name: 'a:graphicalObjectFrameLocking'
   attributes: {
-    noChangeAspect?: string
-    noDrilldown?: string
-    noGrp?: string
-    noMove?: string
-    noResize?: string
-    noSelect?: string
+    'a:noChangeAspect'?: string
+    'a:noDrilldown'?: string
+    'a:noGrp'?: string
+    'a:noMove'?: string
+    'a:noResize'?: string
+    'a:noSelect'?: string
   }
   children: RequiredMap<GraphicalObjectFrameLockingMap>[]
 }
@@ -1170,13 +1170,13 @@ export interface GroupLocking extends UnistNode {
   type: 'element'
   name: 'a:groupLocking'
   attributes: {
-    noChangeAspect?: string
-    noGrp?: string
-    noMove?: string
-    noResize?: string
-    noRot?: string
-    noSelect?: string
-    noUngrp?: string
+    'a:noChangeAspect'?: string
+    'a:noGrp'?: string
+    'a:noMove'?: string
+    'a:noResize'?: string
+    'a:noRot'?: string
+    'a:noSelect'?: string
+    'a:noUngrp'?: string
   }
   children: RequiredMap<GroupLockingMap>[]
 }
@@ -1189,7 +1189,7 @@ export interface GroupShapeProperties extends UnistNode {
   type: 'element'
   name: 'a:groupShapeProperties'
   attributes: {
-    bwMode?: BlackWhiteModeVal
+    'a:bwMode'?: BlackWhiteModeVal
   }
   children: RequiredMap<GroupShapePropertiesMap>[]
 }
@@ -1212,9 +1212,9 @@ export interface GroupTransform2D extends UnistNode {
   type: 'element'
   name: 'a:groupTransform2D'
   attributes: {
-    flipH?: string
-    flipV?: string
-    rot?: string
+    'a:flipH'?: string
+    'a:flipV'?: string
+    'a:rot'?: string
   }
   children: RequiredMap<GroupTransform2DMap>[]
 }
@@ -1439,9 +1439,9 @@ export interface HSLEffect extends UnistNode {
   type: 'element'
   name: 'a:hSLEffect'
   attributes: {
-    hue?: string
-    lum?: string
-    sat?: string
+    'a:hue'?: string
+    'a:lum'?: string
+    'a:sat'?: string
   }
   children: []
 }
@@ -1450,14 +1450,14 @@ export interface Hyperlink extends UnistNode {
   type: 'element'
   name: 'a:hyperlink'
   attributes: {
-    action?: string
-    endSnd?: string
-    highlightClick?: string
-    history?: string
-    id?: string
-    invalidUrl?: string
-    tgtFrame?: string
-    tooltip?: string
+    'a:action'?: string
+    'a:endSnd'?: string
+    'a:highlightClick'?: string
+    'a:history'?: string
+    'a:id'?: string
+    'a:invalidUrl'?: string
+    'a:tgtFrame'?: string
+    'a:tooltip'?: string
   }
   children: RequiredMap<HyperlinkMap>[]
 }
@@ -1471,9 +1471,9 @@ export interface InnerShadowEffect extends UnistNode {
   type: 'element'
   name: 'a:innerShadowEffect'
   attributes: {
-    blurRad?: string
-    dir?: string
-    dist?: string
+    'a:blurRad'?: string
+    'a:dir'?: string
+    'a:dist'?: string
   }
   children: RequiredMap<InnerShadowEffectMap>[]
 }
@@ -1501,8 +1501,8 @@ export interface LightRig extends UnistNode {
   type: 'element'
   name: 'a:lightRig'
   attributes: {
-    dir: LightRigDirectionVal
-    rig: LightRigTypeVal
+    'a:dir': LightRigDirectionVal
+    'a:rig': LightRigTypeVal
   }
   children: RequiredMap<LightRigMap>[]
 }
@@ -1515,8 +1515,8 @@ export interface LinearShadeProperties extends UnistNode {
   type: 'element'
   name: 'a:linearShadeProperties'
   attributes: {
-    ang?: string
-    scaled?: string
+    'a:ang'?: string
+    'a:scaled'?: string
   }
   children: []
 }
@@ -1525,9 +1525,9 @@ export interface LineEndProperties extends UnistNode {
   type: 'element'
   name: 'a:lineEndProperties'
   attributes: {
-    len?: LineEndLengthVal
-    type?: LineEndTypeVal
-    w?: LineEndWidthVal
+    'a:len'?: LineEndLengthVal
+    'a:type'?: LineEndTypeVal
+    'a:w'?: LineEndWidthVal
   }
   children: []
 }
@@ -1541,7 +1541,7 @@ export interface LineJoinMiterProperties extends UnistNode {
   type: 'element'
   name: 'a:lineJoinMiterProperties'
   attributes: {
-    lim?: string
+    'a:lim'?: string
   }
   children: []
 }
@@ -1555,10 +1555,10 @@ export interface LineProperties extends UnistNode {
   type: 'element'
   name: 'a:lineProperties'
   attributes: {
-    algn?: PenAlignmentVal
-    cap?: LineCapVal
-    cmpd?: CompoundLineVal
-    w?: string
+    'a:algn'?: PenAlignmentVal
+    'a:cap'?: LineCapVal
+    'a:cmpd'?: CompoundLineVal
+    'a:w'?: string
   }
   children: RequiredMap<LinePropertiesMap>[]
 }
@@ -1593,8 +1593,8 @@ export interface LuminanceEffect extends UnistNode {
   type: 'element'
   name: 'a:luminanceEffect'
   attributes: {
-    bright?: string
-    contrast?: string
+    'a:bright'?: string
+    'a:contrast'?: string
   }
   children: []
 }
@@ -1622,7 +1622,7 @@ export interface NonVisualContentPartProperties extends UnistNode {
   type: 'element'
   name: 'a:nonVisualContentPartProperties'
   attributes: {
-    isComment?: string
+    'a:isComment'?: string
   }
   children: RequiredMap<NonVisualContentPartPropertiesMap>[]
 }
@@ -1636,11 +1636,11 @@ export interface NonVisualDrawingProps extends UnistNode {
   type: 'element'
   name: 'a:nonVisualDrawingProps'
   attributes: {
-    descr?: string
-    hidden?: string
-    id: string
-    name: string
-    title?: string
+    'a:descr'?: string
+    'a:hidden'?: string
+    'a:id': string
+    'a:name': string
+    'a:title'?: string
   }
   children: RequiredMap<NonVisualDrawingPropsMap>[]
 }
@@ -1655,7 +1655,7 @@ export interface NonVisualDrawingShapeProps extends UnistNode {
   type: 'element'
   name: 'a:nonVisualDrawingShapeProps'
   attributes: {
-    txBox?: string
+    'a:txBox'?: string
   }
   children: RequiredMap<NonVisualDrawingShapePropsMap>[]
 }
@@ -1693,7 +1693,7 @@ export interface NonVisualPictureProperties extends UnistNode {
   type: 'element'
   name: 'a:nonVisualPictureProperties'
   attributes: {
-    preferRelativeResize?: string
+    'a:preferRelativeResize'?: string
   }
   children: RequiredMap<NonVisualPicturePropertiesMap>[]
 }
@@ -1721,7 +1721,7 @@ export interface OfficeArtExtension extends UnistNode {
   type: 'element'
   name: 'a:officeArtExtension'
   attributes: {
-    uri: string
+    'a:uri': string
   }
   children: []
 }
@@ -1741,7 +1741,7 @@ export interface OfficeStyleSheet extends UnistNode {
   type: 'element'
   name: 'a:officeStyleSheet'
   attributes: {
-    name?: string
+    'a:name'?: string
   }
   children: RequiredMap<OfficeStyleSheetMap>[]
 }
@@ -1758,15 +1758,15 @@ export interface OuterShadowEffect extends UnistNode {
   type: 'element'
   name: 'a:outerShadowEffect'
   attributes: {
-    algn?: RectAlignmentVal
-    blurRad?: string
-    dir?: string
-    dist?: string
-    kx?: string
-    ky?: string
-    rotWithShape?: string
-    sx?: string
-    sy?: string
+    'a:algn'?: RectAlignmentVal
+    'a:blurRad'?: string
+    'a:dir'?: string
+    'a:dist'?: string
+    'a:kx'?: string
+    'a:ky'?: string
+    'a:rotWithShape'?: string
+    'a:sx'?: string
+    'a:sy'?: string
   }
   children: RequiredMap<OuterShadowEffectMap>[]
 }
@@ -1784,11 +1784,11 @@ export interface Path2D extends UnistNode {
   type: 'element'
   name: 'a:path2D'
   attributes: {
-    extrusionOk?: string
-    fill?: PathFillModeVal
-    h?: string
-    stroke?: string
-    w?: string
+    'a:extrusionOk'?: string
+    'a:fill'?: PathFillModeVal
+    'a:h'?: string
+    'a:stroke'?: string
+    'a:w'?: string
   }
   children: RequiredMap<Path2DMap>[]
 }
@@ -1806,10 +1806,10 @@ export interface Path2DArcTo extends UnistNode {
   type: 'element'
   name: 'a:path2DArcTo'
   attributes: {
-    hR: string
-    stAng: string
-    swAng: string
-    wR: string
+    'a:hR': string
+    'a:stAng': string
+    'a:swAng': string
+    'a:wR': string
   }
   children: []
 }
@@ -1878,7 +1878,7 @@ export interface PathShadeProperties extends UnistNode {
   type: 'element'
   name: 'a:pathShadeProperties'
   attributes: {
-    path?: PathShadeTypeVal
+    'a:path'?: PathShadeTypeVal
   }
   children: RequiredMap<PathShadePropertiesMap>[]
 }
@@ -1891,7 +1891,7 @@ export interface PatternFillProperties extends UnistNode {
   type: 'element'
   name: 'a:patternFillProperties'
   attributes: {
-    prst?: PresetPatternValVal
+    'a:prst'?: PresetPatternValVal
   }
   children: RequiredMap<PatternFillPropertiesMap>[]
 }
@@ -1905,7 +1905,7 @@ export interface Percentage extends UnistNode {
   type: 'element'
   name: 'a:percentage'
   attributes: {
-    val: string
+    'a:val': string
   }
   children: []
 }
@@ -1914,17 +1914,17 @@ export interface PictureLocking extends UnistNode {
   type: 'element'
   name: 'a:pictureLocking'
   attributes: {
-    noAdjustHandles?: string
-    noChangeArrowheads?: string
-    noChangeAspect?: string
-    noChangeShapeType?: string
-    noCrop?: string
-    noEditPoints?: string
-    noGrp?: string
-    noMove?: string
-    noResize?: string
-    noRot?: string
-    noSelect?: string
+    'a:noAdjustHandles'?: string
+    'a:noChangeArrowheads'?: string
+    'a:noChangeAspect'?: string
+    'a:noChangeShapeType'?: string
+    'a:noCrop'?: string
+    'a:noEditPoints'?: string
+    'a:noGrp'?: string
+    'a:noMove'?: string
+    'a:noResize'?: string
+    'a:noRot'?: string
+    'a:noSelect'?: string
   }
   children: RequiredMap<PictureLockingMap>[]
 }
@@ -1937,8 +1937,8 @@ export interface Point2D extends UnistNode {
   type: 'element'
   name: 'a:point2D'
   attributes: {
-    x: string
-    y: string
+    'a:x': string
+    'a:y': string
   }
   children: []
 }
@@ -1947,9 +1947,9 @@ export interface Point3D extends UnistNode {
   type: 'element'
   name: 'a:point3D'
   attributes: {
-    x: string
-    y: string
-    z: string
+    'a:x': string
+    'a:y': string
+    'a:z': string
   }
   children: []
 }
@@ -1958,12 +1958,12 @@ export interface PolarAdjustHandle extends UnistNode {
   type: 'element'
   name: 'a:polarAdjustHandle'
   attributes: {
-    gdRefAng?: string
-    gdRefR?: string
-    maxAng?: string
-    maxR?: string
-    minAng?: string
-    minR?: string
+    'a:gdRefAng'?: string
+    'a:gdRefR'?: string
+    'a:maxAng'?: string
+    'a:maxR'?: string
+    'a:minAng'?: string
+    'a:minR'?: string
   }
   children: RequiredMap<PolarAdjustHandleMap>[]
 }
@@ -1976,7 +1976,7 @@ export interface PositiveFixedAngle extends UnistNode {
   type: 'element'
   name: 'a:positiveFixedAngle'
   attributes: {
-    val: string
+    'a:val': string
   }
   children: []
 }
@@ -1985,7 +1985,7 @@ export interface PositiveFixedPercentage extends UnistNode {
   type: 'element'
   name: 'a:positiveFixedPercentage'
   attributes: {
-    val: string
+    'a:val': string
   }
   children: []
 }
@@ -1994,7 +1994,7 @@ export interface PositivePercentage extends UnistNode {
   type: 'element'
   name: 'a:positivePercentage'
   attributes: {
-    val: string
+    'a:val': string
   }
   children: []
 }
@@ -2003,8 +2003,8 @@ export interface PositiveSize2D extends UnistNode {
   type: 'element'
   name: 'a:positiveSize2D'
   attributes: {
-    cx: string
-    cy: string
+    'a:cx': string
+    'a:cy': string
   }
   children: []
 }
@@ -2013,7 +2013,7 @@ export interface PresetColor extends UnistNode {
   type: 'element'
   name: 'a:presetColor'
   attributes: {
-    val: PresetColorValVal
+    'a:val': PresetColorValVal
   }
   children: RequiredMap<PresetColorMap>[]
 }
@@ -2053,7 +2053,7 @@ export interface PresetGeometry2D extends UnistNode {
   type: 'element'
   name: 'a:presetGeometry2D'
   attributes: {
-    prst: ShapeTypeVal
+    'a:prst': ShapeTypeVal
   }
   children: RequiredMap<PresetGeometry2DMap>[]
 }
@@ -2066,7 +2066,7 @@ export interface PresetLineDashProperties extends UnistNode {
   type: 'element'
   name: 'a:presetLineDashProperties'
   attributes: {
-    val?: PresetLineDashValVal
+    'a:val'?: PresetLineDashValVal
   }
   children: []
 }
@@ -2075,9 +2075,9 @@ export interface PresetShadowEffect extends UnistNode {
   type: 'element'
   name: 'a:presetShadowEffect'
   attributes: {
-    dir?: string
-    dist?: string
-    prst: PresetShadowValVal
+    'a:dir'?: string
+    'a:dist'?: string
+    'a:prst': PresetShadowValVal
   }
   children: RequiredMap<PresetShadowEffectMap>[]
 }
@@ -2095,7 +2095,7 @@ export interface PresetTextShape extends UnistNode {
   type: 'element'
   name: 'a:presetTextShape'
   attributes: {
-    prst: TextShapeTypeVal
+    'a:prst': TextShapeTypeVal
   }
   children: RequiredMap<PresetTextShapeMap>[]
 }
@@ -2108,7 +2108,7 @@ export interface QuickTimeFile extends UnistNode {
   type: 'element'
   name: 'a:quickTimeFile'
   attributes: {
-    link: string
+    'a:link': string
   }
   children: RequiredMap<QuickTimeFileMap>[]
 }
@@ -2121,8 +2121,8 @@ export interface Ratio extends UnistNode {
   type: 'element'
   name: 'a:ratio'
   attributes: {
-    d: string
-    n: string
+    'a:d': string
+    'a:n': string
   }
   children: []
 }
@@ -2131,20 +2131,20 @@ export interface ReflectionEffect extends UnistNode {
   type: 'element'
   name: 'a:reflectionEffect'
   attributes: {
-    algn?: RectAlignmentVal
-    blurRad?: string
-    dir?: string
-    dist?: string
-    endA?: string
-    endPos?: string
-    fadeDir?: string
-    kx?: string
-    ky?: string
-    rotWithShape?: string
-    stA?: string
-    stPos?: string
-    sx?: string
-    sy?: string
+    'a:algn'?: RectAlignmentVal
+    'a:blurRad'?: string
+    'a:dir'?: string
+    'a:dist'?: string
+    'a:endA'?: string
+    'a:endPos'?: string
+    'a:fadeDir'?: string
+    'a:kx'?: string
+    'a:ky'?: string
+    'a:rotWithShape'?: string
+    'a:stA'?: string
+    'a:stPos'?: string
+    'a:sx'?: string
+    'a:sy'?: string
   }
   children: []
 }
@@ -2165,8 +2165,8 @@ export interface RelativeOffsetEffect extends UnistNode {
   type: 'element'
   name: 'a:relativeOffsetEffect'
   attributes: {
-    tx?: string
-    ty?: string
+    'a:tx'?: string
+    'a:ty'?: string
   }
   children: []
 }
@@ -2175,10 +2175,10 @@ export interface RelativeRect extends UnistNode {
   type: 'element'
   name: 'a:relativeRect'
   attributes: {
-    b?: string
-    l?: string
-    r?: string
-    t?: string
+    'a:b'?: string
+    'a:l'?: string
+    'a:r'?: string
+    'a:t'?: string
   }
   children: []
 }
@@ -2213,7 +2213,7 @@ export interface SchemeColor extends UnistNode {
   type: 'element'
   name: 'a:schemeColor'
   attributes: {
-    val: SchemeColorValVal
+    'a:val': SchemeColorValVal
   }
   children: RequiredMap<SchemeColorMap>[]
 }
@@ -2253,9 +2253,9 @@ export interface ScRgbColor extends UnistNode {
   type: 'element'
   name: 'a:scRgbColor'
   attributes: {
-    b: string
-    g: string
-    r: string
+    'a:b': string
+    'a:g': string
+    'a:r': string
   }
   children: RequiredMap<ScRgbColorMap>[]
 }
@@ -2295,10 +2295,10 @@ export interface Shape3D extends UnistNode {
   type: 'element'
   name: 'a:shape3D'
   attributes: {
-    contourW?: string
-    extrusionH?: string
-    prstMaterial?: PresetMaterialTypeVal
-    z?: string
+    'a:contourW'?: string
+    'a:extrusionH'?: string
+    'a:prstMaterial'?: PresetMaterialTypeVal
+    'a:z'?: string
   }
   children: RequiredMap<Shape3DMap>[]
 }
@@ -2315,17 +2315,17 @@ export interface ShapeLocking extends UnistNode {
   type: 'element'
   name: 'a:shapeLocking'
   attributes: {
-    noAdjustHandles?: string
-    noChangeArrowheads?: string
-    noChangeAspect?: string
-    noChangeShapeType?: string
-    noEditPoints?: string
-    noGrp?: string
-    noMove?: string
-    noResize?: string
-    noRot?: string
-    noSelect?: string
-    noTextEdit?: string
+    'a:noAdjustHandles'?: string
+    'a:noChangeArrowheads'?: string
+    'a:noChangeAspect'?: string
+    'a:noChangeShapeType'?: string
+    'a:noEditPoints'?: string
+    'a:noGrp'?: string
+    'a:noMove'?: string
+    'a:noResize'?: string
+    'a:noRot'?: string
+    'a:noSelect'?: string
+    'a:noTextEdit'?: string
   }
   children: RequiredMap<ShapeLockingMap>[]
 }
@@ -2338,7 +2338,7 @@ export interface ShapeProperties extends UnistNode {
   type: 'element'
   name: 'a:shapeProperties'
   attributes: {
-    bwMode?: BlackWhiteModeVal
+    'a:bwMode'?: BlackWhiteModeVal
   }
   children: RequiredMap<ShapePropertiesMap>[]
 }
@@ -2379,7 +2379,7 @@ export interface SoftEdgesEffect extends UnistNode {
   type: 'element'
   name: 'a:softEdgesEffect'
   attributes: {
-    rad: string
+    'a:rad': string
   }
   children: []
 }
@@ -2404,9 +2404,9 @@ export interface SphereCoords extends UnistNode {
   type: 'element'
   name: 'a:sphereCoords'
   attributes: {
-    lat: string
-    lon: string
-    rev: string
+    'a:lat': string
+    'a:lon': string
+    'a:rev': string
   }
   children: []
 }
@@ -2415,7 +2415,7 @@ export interface SRgbColor extends UnistNode {
   type: 'element'
   name: 'a:sRgbColor'
   attributes: {
-    val: string
+    'a:val': string
   }
   children: RequiredMap<SRgbColorMap>[]
 }
@@ -2466,7 +2466,7 @@ export interface StyleMatrix extends UnistNode {
   type: 'element'
   name: 'a:styleMatrix'
   attributes: {
-    name?: string
+    'a:name'?: string
   }
   children: RequiredMap<StyleMatrixMap>[]
 }
@@ -2482,7 +2482,7 @@ export interface StyleMatrixReference extends UnistNode {
   type: 'element'
   name: 'a:styleMatrixReference'
   attributes: {
-    idx: string
+    'a:idx': string
   }
   children: RequiredMap<StyleMatrixReferenceMap>[]
 }
@@ -2500,8 +2500,8 @@ export interface SupplementalFont extends UnistNode {
   type: 'element'
   name: 'a:supplementalFont'
   attributes: {
-    script: string
-    typeface: string
+    'a:script': string
+    'a:typeface': string
   }
   children: []
 }
@@ -2510,8 +2510,8 @@ export interface SystemColor extends UnistNode {
   type: 'element'
   name: 'a:systemColor'
   attributes: {
-    lastClr?: string
-    val: SystemColorValVal
+    'a:lastClr'?: string
+    'a:val': SystemColorValVal
   }
   children: RequiredMap<SystemColorMap>[]
 }
@@ -2578,11 +2578,11 @@ export interface TableCell extends UnistNode {
   type: 'element'
   name: 'a:tableCell'
   attributes: {
-    gridSpan?: string
-    hMerge?: string
-    id?: string
-    rowSpan?: string
-    vMerge?: string
+    'a:gridSpan'?: string
+    'a:hMerge'?: string
+    'a:id'?: string
+    'a:rowSpan'?: string
+    'a:vMerge'?: string
   }
   children: RequiredMap<TableCellMap>[]
 }
@@ -2616,14 +2616,14 @@ export interface TableCellProperties extends UnistNode {
   type: 'element'
   name: 'a:tableCellProperties'
   attributes: {
-    anchor?: TextAnchoringTypeVal
-    anchorCtr?: string
-    horzOverflow?: TextHorzOverflowTypeVal
-    marB?: string
-    marL?: string
-    marR?: string
-    marT?: string
-    vert?: TextVerticalTypeVal
+    'a:anchor'?: TextAnchoringTypeVal
+    'a:anchorCtr'?: string
+    'a:horzOverflow'?: TextHorzOverflowTypeVal
+    'a:marB'?: string
+    'a:marL'?: string
+    'a:marR'?: string
+    'a:marT'?: string
+    'a:vert'?: TextVerticalTypeVal
   }
   children: RequiredMap<TableCellPropertiesMap>[]
 }
@@ -2650,7 +2650,7 @@ export interface TableCol extends UnistNode {
   type: 'element'
   name: 'a:tableCol'
   attributes: {
-    w: string
+    'a:w': string
   }
   children: RequiredMap<TableColMap>[]
 }
@@ -2686,13 +2686,13 @@ export interface TableProperties extends UnistNode {
   type: 'element'
   name: 'a:tableProperties'
   attributes: {
-    bandCol?: string
-    bandRow?: string
-    firstCol?: string
-    firstRow?: string
-    lastCol?: string
-    lastRow?: string
-    rtl?: string
+    'a:bandCol'?: string
+    'a:bandRow'?: string
+    'a:firstCol'?: string
+    'a:firstRow'?: string
+    'a:lastCol'?: string
+    'a:lastRow'?: string
+    'a:rtl'?: string
   }
   children: RequiredMap<TablePropertiesMap>[]
 }
@@ -2715,7 +2715,7 @@ export interface TableRow extends UnistNode {
   type: 'element'
   name: 'a:tableRow'
   attributes: {
-    h: string
+    'a:h': string
   }
   children: RequiredMap<TableRowMap>[]
 }
@@ -2729,8 +2729,8 @@ export interface TableStyle extends UnistNode {
   type: 'element'
   name: 'a:tableStyle'
   attributes: {
-    styleId: string
-    styleName: string
+    'a:styleId': string
+    'a:styleName': string
   }
   children: RequiredMap<TableStyleMap>[]
 }
@@ -2771,7 +2771,7 @@ export interface TableStyleList extends UnistNode {
   type: 'element'
   name: 'a:tableStyleList'
   attributes: {
-    def: string
+    'a:def': string
   }
   children: RequiredMap<TableStyleListMap>[]
 }
@@ -2784,8 +2784,8 @@ export interface TableStyleTextStyle extends UnistNode {
   type: 'element'
   name: 'a:tableStyleTextStyle'
   attributes: {
-    b?: OnOffStyleTypeVal
-    i?: OnOffStyleTypeVal
+    'a:b'?: OnOffStyleTypeVal
+    'a:i'?: OnOffStyleTypeVal
   }
   children: RequiredMap<TableStyleTextStyleMap>[]
 }
@@ -2806,8 +2806,8 @@ export interface TextAutonumberBullet extends UnistNode {
   type: 'element'
   name: 'a:textAutonumberBullet'
   attributes: {
-    startAt?: string
-    type: TextAutonumberSchemeVal
+    'a:startAt'?: string
+    'a:type': TextAutonumberSchemeVal
   }
   children: []
 }
@@ -2840,25 +2840,25 @@ export interface TextBodyProperties extends UnistNode {
   type: 'element'
   name: 'a:textBodyProperties'
   attributes: {
-    anchor?: TextAnchoringTypeVal
-    anchorCtr?: string
-    bIns?: string
-    compatLnSpc?: string
-    forceAA?: string
-    fromWordArt?: string
-    horzOverflow?: TextHorzOverflowTypeVal
-    lIns?: string
-    numCol?: string
-    rIns?: string
-    rot?: string
-    rtlCol?: string
-    spcCol?: string
-    spcFirstLastPara?: string
-    tIns?: string
-    upright?: string
-    vert?: TextVerticalTypeVal
-    vertOverflow?: TextVertOverflowTypeVal
-    wrap?: TextWrappingTypeVal
+    'a:anchor'?: TextAnchoringTypeVal
+    'a:anchorCtr'?: string
+    'a:bIns'?: string
+    'a:compatLnSpc'?: string
+    'a:forceAA'?: string
+    'a:fromWordArt'?: string
+    'a:horzOverflow'?: TextHorzOverflowTypeVal
+    'a:lIns'?: string
+    'a:numCol'?: string
+    'a:rIns'?: string
+    'a:rot'?: string
+    'a:rtlCol'?: string
+    'a:spcCol'?: string
+    'a:spcFirstLastPara'?: string
+    'a:tIns'?: string
+    'a:upright'?: string
+    'a:vert'?: TextVerticalTypeVal
+    'a:vertOverflow'?: TextVertOverflowTypeVal
+    'a:wrap'?: TextWrappingTypeVal
   }
   children: RequiredMap<TextBodyPropertiesMap>[]
 }
@@ -2888,7 +2888,7 @@ export interface TextBulletSizePercent extends UnistNode {
   type: 'element'
   name: 'a:textBulletSizePercent'
   attributes: {
-    val: string
+    'a:val': string
   }
   children: []
 }
@@ -2897,7 +2897,7 @@ export interface TextBulletSizePoint extends UnistNode {
   type: 'element'
   name: 'a:textBulletSizePoint'
   attributes: {
-    val: string
+    'a:val': string
   }
   children: []
 }
@@ -2911,25 +2911,25 @@ export interface TextCharacterProperties extends UnistNode {
   type: 'element'
   name: 'a:textCharacterProperties'
   attributes: {
-    altLang?: string
-    b?: string
-    baseline?: string
-    bmk?: string
-    cap?: TextCapsTypeVal
-    dirty?: string
-    err?: string
-    i?: string
-    kern?: string
-    kumimoji?: string
-    lang?: string
-    noProof?: string
-    normalizeH?: string
-    smtClean?: string
-    smtId?: string
-    spc?: string
-    strike?: TextStrikeTypeVal
-    sz?: string
-    u?: TextUnderlineTypeVal
+    'a:altLang'?: string
+    'a:b'?: string
+    'a:baseline'?: string
+    'a:bmk'?: string
+    'a:cap'?: TextCapsTypeVal
+    'a:dirty'?: string
+    'a:err'?: string
+    'a:i'?: string
+    'a:kern'?: string
+    'a:kumimoji'?: string
+    'a:lang'?: string
+    'a:noProof'?: string
+    'a:normalizeH'?: string
+    'a:smtClean'?: string
+    'a:smtId'?: string
+    'a:spc'?: string
+    'a:strike'?: TextStrikeTypeVal
+    'a:sz'?: string
+    'a:u'?: TextUnderlineTypeVal
   }
   children: RequiredMap<TextCharacterPropertiesMap>[]
 }
@@ -2963,7 +2963,7 @@ export interface TextCharBullet extends UnistNode {
   type: 'element'
   name: 'a:textCharBullet'
   attributes: {
-    char: string
+    'a:char': string
   }
   children: []
 }
@@ -2972,8 +2972,8 @@ export interface TextField extends UnistNode {
   type: 'element'
   name: 'a:textField'
   attributes: {
-    id: string
-    type?: string
+    'a:id': string
+    'a:type'?: string
   }
   children: RequiredMap<TextFieldMap>[]
 }
@@ -2988,10 +2988,10 @@ export interface TextFont extends UnistNode {
   type: 'element'
   name: 'a:textFont'
   attributes: {
-    charset?: string
-    panose?: string
-    pitchFamily?: PitchFamilyVal
-    typeface: string
+    'a:charset'?: string
+    'a:panose'?: string
+    'a:pitchFamily'?: PitchFamilyVal
+    'a:typeface': string
   }
   children: []
 }
@@ -3042,8 +3042,8 @@ export interface TextNormalAutofit extends UnistNode {
   type: 'element'
   name: 'a:textNormalAutofit'
   attributes: {
-    fontScale?: string
-    lnSpcReduction?: string
+    'a:fontScale'?: string
+    'a:lnSpcReduction'?: string
   }
   children: []
 }
@@ -3067,17 +3067,17 @@ export interface TextParagraphProperties extends UnistNode {
   type: 'element'
   name: 'a:textParagraphProperties'
   attributes: {
-    algn?: TextAlignTypeVal
-    defTabSz?: string
-    eaLnBrk?: string
-    fontAlgn?: TextFontAlignTypeVal
-    hangingPunct?: string
-    indent?: string
-    latinLnBrk?: string
-    lvl?: string
-    marL?: string
-    marR?: string
-    rtl?: string
+    'a:algn'?: TextAlignTypeVal
+    'a:defTabSz'?: string
+    'a:eaLnBrk'?: string
+    'a:fontAlgn'?: TextFontAlignTypeVal
+    'a:hangingPunct'?: string
+    'a:indent'?: string
+    'a:latinLnBrk'?: string
+    'a:lvl'?: string
+    'a:marL'?: string
+    'a:marR'?: string
+    'a:rtl'?: string
   }
   children: RequiredMap<TextParagraphPropertiesMap>[]
 }
@@ -3123,7 +3123,7 @@ export interface TextSpacingPercent extends UnistNode {
   type: 'element'
   name: 'a:textSpacingPercent'
   attributes: {
-    val: string
+    'a:val': string
   }
   children: []
 }
@@ -3132,7 +3132,7 @@ export interface TextSpacingPoint extends UnistNode {
   type: 'element'
   name: 'a:textSpacingPoint'
   attributes: {
-    val: string
+    'a:val': string
   }
   children: []
 }
@@ -3141,8 +3141,8 @@ export interface TextTabStop extends UnistNode {
   type: 'element'
   name: 'a:textTabStop'
   attributes: {
-    algn?: TextTabAlignTypeVal
-    pos?: string
+    'a:algn'?: TextTabAlignTypeVal
+    'a:pos'?: string
   }
   children: []
 }
@@ -3200,12 +3200,12 @@ export interface TileInfoProperties extends UnistNode {
   type: 'element'
   name: 'a:tileInfoProperties'
   attributes: {
-    algn?: RectAlignmentVal
-    flip?: TileFlipModeVal
-    sx?: string
-    sy?: string
-    tx?: string
-    ty?: string
+    'a:algn'?: RectAlignmentVal
+    'a:flip'?: TileFlipModeVal
+    'a:sx'?: string
+    'a:sy'?: string
+    'a:tx'?: string
+    'a:ty'?: string
   }
   children: []
 }
@@ -3214,8 +3214,8 @@ export interface TintEffect extends UnistNode {
   type: 'element'
   name: 'a:tintEffect'
   attributes: {
-    amt?: string
-    hue?: string
+    'a:amt'?: string
+    'a:hue'?: string
   }
   children: []
 }
@@ -3224,9 +3224,9 @@ export interface Transform2D extends UnistNode {
   type: 'element'
   name: 'a:transform2D'
   attributes: {
-    flipH?: string
-    flipV?: string
-    rot?: string
+    'a:flipH'?: string
+    'a:flipV'?: string
+    'a:rot'?: string
   }
   children: RequiredMap<Transform2DMap>[]
 }
@@ -3240,12 +3240,12 @@ export interface TransformEffect extends UnistNode {
   type: 'element'
   name: 'a:transformEffect'
   attributes: {
-    kx?: string
-    ky?: string
-    sx?: string
-    sy?: string
-    tx?: string
-    ty?: string
+    'a:kx'?: string
+    'a:ky'?: string
+    'a:sx'?: string
+    'a:sy'?: string
+    'a:tx'?: string
+    'a:ty'?: string
   }
   children: []
 }
@@ -3254,9 +3254,9 @@ export interface Vector3D extends UnistNode {
   type: 'element'
   name: 'a:vector3D'
   attributes: {
-    dx: string
-    dy: string
-    dz: string
+    'a:dx': string
+    'a:dy': string
+    'a:dz': string
   }
   children: []
 }
@@ -3265,8 +3265,8 @@ export interface VideoFile extends UnistNode {
   type: 'element'
   name: 'a:videoFile'
   attributes: {
-    contentType?: string
-    link: string
+    'a:contentType'?: string
+    'a:link': string
   }
   children: RequiredMap<VideoFileMap>[]
 }
@@ -3292,12 +3292,12 @@ export interface XYAdjustHandle extends UnistNode {
   type: 'element'
   name: 'a:xYAdjustHandle'
   attributes: {
-    gdRefX?: string
-    gdRefY?: string
-    maxX?: string
-    maxY?: string
-    minX?: string
-    minY?: string
+    'a:gdRefX'?: string
+    'a:gdRefY'?: string
+    'a:maxX'?: string
+    'a:maxY'?: string
+    'a:minX'?: string
+    'a:minY'?: string
   }
   children: RequiredMap<XYAdjustHandleMap>[]
 }

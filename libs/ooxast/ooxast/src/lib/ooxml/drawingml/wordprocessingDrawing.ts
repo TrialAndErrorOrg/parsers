@@ -14,16 +14,16 @@ export interface Anchor extends UnistNode {
   type: 'element'
   name: 'wp:anchor'
   attributes: {
-    allowOverlap: string
-    behindDoc: string
-    distB?: string
-    distL?: string
-    distR?: string
-    distT?: string
-    hidden?: string
-    layoutInCell: string
-    locked: string
-    relativeHeight: string
+    'wp:allowOverlap': string
+    'wp:behindDoc': string
+    'wp:distB'?: string
+    'wp:distL'?: string
+    'wp:distR'?: string
+    'wp:distT'?: string
+    'wp:hidden'?: string
+    'wp:layoutInCell': string
+    'wp:locked': string
+    'wp:relativeHeight': string
     $simplePos: string
   }
   children: RequiredMap<AnchorMap>[]
@@ -49,10 +49,10 @@ export interface EffectExtent extends UnistNode {
   type: 'element'
   name: 'wp:effectExtent'
   attributes: {
-    b: string
-    l: string
-    r: string
-    t: string
+    'wp:b': string
+    'wp:l': string
+    'wp:r': string
+    'wp:t': string
   }
   children: []
 }
@@ -76,10 +76,10 @@ export interface Inline extends UnistNode {
   type: 'element'
   name: 'wp:inline'
   attributes: {
-    distB?: string
-    distL?: string
-    distR?: string
-    distT?: string
+    'wp:distB'?: string
+    'wp:distL'?: string
+    'wp:distR'?: string
+    'wp:distT'?: string
   }
   children: RequiredMap<InlineMap>[]
 }
@@ -96,8 +96,8 @@ export interface LinkedTextboxInformation extends UnistNode {
   type: 'element'
   name: 'wp:linkedTextboxInformation'
   attributes: {
-    id: string
-    seq: string
+    'wp:id': string
+    'wp:seq': string
   }
   children: RequiredMap<LinkedTextboxInformationMap>[]
 }
@@ -110,7 +110,7 @@ export interface PosH extends UnistNode {
   type: 'element'
   name: 'wp:posH'
   attributes: {
-    relativeFrom: RelFromHVal
+    'wp:relativeFrom': RelFromHVal
   }
   children: RequiredMap<PosHMap>[]
 }
@@ -124,7 +124,7 @@ export interface PosV extends UnistNode {
   type: 'element'
   name: 'wp:posV'
   attributes: {
-    relativeFrom: RelFromVVal
+    'wp:relativeFrom': RelFromVVal
   }
   children: RequiredMap<PosVMap>[]
 }
@@ -138,7 +138,7 @@ export interface TextboxInfo extends UnistNode {
   type: 'element'
   name: 'wp:textboxInfo'
   attributes: {
-    id?: string
+    'wp:id'?: string
   }
   children: RequiredMap<TextboxInfoMap>[]
 }
@@ -210,8 +210,8 @@ export interface WordprocessingContentPart extends UnistNode {
   type: 'element'
   name: 'wp:wordprocessingContentPart'
   attributes: {
-    bwMode?: a.BlackWhiteModeVal
-    id: string
+    'wp:bwMode'?: a.BlackWhiteModeVal
+    'wp:id': string
   }
   children: RequiredMap<WordprocessingContentPartMap>[]
 }
@@ -257,7 +257,7 @@ export interface WordprocessingShape extends UnistNode {
   type: 'element'
   name: 'wp:wordprocessingShape'
   attributes: {
-    normalEastAsianFlow?: string
+    'wp:normalEastAsianFlow'?: string
   }
   children: RequiredMap<WordprocessingShapeMap>[]
 }
@@ -284,7 +284,7 @@ export interface WrapPath extends UnistNode {
   type: 'element'
   name: 'wp:wrapPath'
   attributes: {
-    edited?: string
+    'wp:edited'?: string
   }
   children: RequiredMap<WrapPathMap>[]
 }
@@ -298,11 +298,11 @@ export interface WrapSquare extends UnistNode {
   type: 'element'
   name: 'wp:wrapSquare'
   attributes: {
-    distB?: string
-    distL?: string
-    distR?: string
-    distT?: string
-    wrapText: WrapTextVal
+    'wp:distB'?: string
+    'wp:distL'?: string
+    'wp:distR'?: string
+    'wp:distT'?: string
+    'wp:wrapText': WrapTextVal
   }
   children: RequiredMap<WrapSquareMap>[]
 }
@@ -315,9 +315,9 @@ export interface WrapThrough extends UnistNode {
   type: 'element'
   name: 'wp:wrapThrough'
   attributes: {
-    distL?: string
-    distR?: string
-    wrapText: WrapTextVal
+    'wp:distL'?: string
+    'wp:distR'?: string
+    'wp:wrapText': WrapTextVal
   }
   children: RequiredMap<WrapThroughMap>[]
 }
@@ -330,9 +330,9 @@ export interface WrapTight extends UnistNode {
   type: 'element'
   name: 'wp:wrapTight'
   attributes: {
-    distL?: string
-    distR?: string
-    wrapText: WrapTextVal
+    'wp:distL'?: string
+    'wp:distR'?: string
+    'wp:wrapText': WrapTextVal
   }
   children: RequiredMap<WrapTightMap>[]
 }
@@ -345,8 +345,8 @@ export interface WrapTopBottom extends UnistNode {
   type: 'element'
   name: 'wp:wrapTopBottom'
   attributes: {
-    distB?: string
-    distT?: string
+    'wp:distB'?: string
+    'wp:distT'?: string
   }
   children: RequiredMap<WrapTopBottomMap>[]
 }

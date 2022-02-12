@@ -52,7 +52,7 @@ export default function rejourMoveAbstract() {
     const abstract: Abstract = {
       type: 'element',
       name: 'abstract',
-      attributes: {},
+      //attributes: {},
       children: abstractBody.children,
     }
     visit(

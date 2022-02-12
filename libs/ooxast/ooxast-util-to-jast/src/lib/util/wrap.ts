@@ -21,7 +21,7 @@ export function wrap(nodes: Array<JastContent>) {
     return {
       type: 'element',
       name: 'p',
-      attributes: {},
+      //attributes: {},
       children: nodes,
     } as JastP
   }

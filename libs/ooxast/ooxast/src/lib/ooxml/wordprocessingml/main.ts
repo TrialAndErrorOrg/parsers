@@ -4,21 +4,17 @@ import * as r from '../officeDocument/relationships'
 import * as s from '../officeDocument/sharedTypes'
 import * as sl from '../schemaLibrary/main'
 import * as wp from '../drawingml/wordprocessingDrawing'
-import { Literal as UnistLiteral } from 'unist'
+import { Literal as UnistLiteral, Node as UnistNode } from 'unist'
 import { RequiredMap } from '../../ooxast'
 
 // Source files:
 // http://localhost:3000/wml.xsd
 
-interface BaseType {
-  _exists: boolean
-  _namespace: string
-}
-export interface AbstractNum extends BaseType {
+export interface AbstractNum extends UnistNode {
   type: 'element'
   name: 'w:abstractNum'
   attributes: {
-    abstractNumId: number
+    abstractNumId: string
   }
   children: RequiredMap<AbstractNumMap>[]
 }
@@ -33,7 +29,7 @@ export interface AbstractNumMap {
   tmpl?: LongHexNumber
 }
 
-export interface AltChunk extends BaseType {
+export interface AltChunk extends UnistNode {
   type: 'element'
   name: 'w:altChunk'
   attributes: {
@@ -46,10 +42,10 @@ export interface AltChunkMap {
   altChunkPr?: AltChunkPr
 }
 
-export interface AltChunkPr extends BaseType {
+export interface AltChunkPr extends UnistNode {
   type: 'element'
   name: 'w:altChunkPr'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<AltChunkPrMap>[]
 }
 
@@ -57,7 +53,7 @@ export interface AltChunkPrMap {
   matchSrc?: OnOff
 }
 
-export interface Attr extends BaseType {
+export interface Attr extends UnistNode {
   type: 'element'
   name: 'w:attr'
   attributes: {
@@ -68,7 +64,7 @@ export interface Attr extends BaseType {
   children: []
 }
 
-export interface AutoCaption extends BaseType {
+export interface AutoCaption extends UnistNode {
   type: 'element'
   name: 'w:autoCaption'
   attributes: {
@@ -78,10 +74,10 @@ export interface AutoCaption extends BaseType {
   children: []
 }
 
-export interface AutoCaptions extends BaseType {
+export interface AutoCaptions extends UnistNode {
   type: 'element'
   name: 'w:autoCaptions'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<AutoCaptionsMap>[]
 }
 
@@ -89,7 +85,7 @@ export interface AutoCaptionsMap {
   autoCaption: AutoCaption[]
 }
 
-export interface Background extends BaseType {
+export interface Background extends UnistNode {
   type: 'element'
   name: 'w:background'
   attributes: {
@@ -105,7 +101,7 @@ export interface BackgroundMap {
   drawing?: Drawing
 }
 
-export interface Base64Binary extends BaseType {
+export interface Base64Binary extends UnistNode {
   type: 'element'
   name: 'w:base64Binary'
   attributes: {
@@ -114,7 +110,7 @@ export interface Base64Binary extends BaseType {
   children: []
 }
 
-export interface BdoContentRun extends BaseType {
+export interface BdoContentRun extends UnistNode {
   type: 'element'
   name: 'w:bdoContentRun'
   attributes: {
@@ -160,10 +156,10 @@ export interface BdoContentRunMap {
   subDoc?: Rel[]
 }
 
-export interface Body extends BaseType {
+export interface Body extends UnistNode {
   type: 'element'
   name: 'w:body'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<BodyMap>[]
 }
 
@@ -213,21 +209,21 @@ export type BookmarkRange = MarkupRange & {
   type: 'element'
   name: 'w:bookmarkRange'
   attributes: {
-    colFirst?: number
-    colLast?: number
+    colFirst?: string
+    colLast?: string
   }
   children: []
 }
 
-export interface Border extends BaseType {
+export interface Border extends UnistNode {
   type: 'element'
   name: 'w:border'
   attributes: {
     color?: string
     frame?: string
     shadow?: string
-    space?: number
-    sz?: number
+    space?: string
+    sz?: string
     themeColor?: ThemeColorVal
     themeShade?: string
     themeTint?: string
@@ -245,7 +241,7 @@ export type BottomPageBorder = PageBorder & {
   children: []
 }
 
-export interface Br extends BaseType {
+export interface Br extends UnistNode {
   type: 'element'
   name: 'w:br'
   attributes: {
@@ -255,7 +251,7 @@ export interface Br extends BaseType {
   children: []
 }
 
-export interface CalendarType extends BaseType {
+export interface CalendarType extends UnistNode {
   type: 'element'
   name: 'w:calendarType'
   attributes: {
@@ -264,12 +260,12 @@ export interface CalendarType extends BaseType {
   children: []
 }
 
-export interface Caption extends BaseType {
+export interface Caption extends UnistNode {
   type: 'element'
   name: 'w:caption'
   attributes: {
     chapNum?: string
-    heading?: number
+    heading?: string
     name: string
     noLabel?: string
     numFmt?: NumberFormatVal
@@ -279,10 +275,10 @@ export interface Caption extends BaseType {
   children: []
 }
 
-export interface Captions extends BaseType {
+export interface Captions extends UnistNode {
   type: 'element'
   name: 'w:captions'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<CaptionsMap>[]
 }
 
@@ -301,7 +297,7 @@ export type CellMergeTrackChange = TrackChange & {
   children: []
 }
 
-export interface CharacterSpacing extends BaseType {
+export interface CharacterSpacing extends UnistNode {
   type: 'element'
   name: 'w:characterSpacing'
   attributes: {
@@ -310,7 +306,7 @@ export interface CharacterSpacing extends BaseType {
   children: []
 }
 
-export interface Charset extends BaseType {
+export interface Charset extends UnistNode {
   type: 'element'
   name: 'w:charset'
   attributes: {
@@ -319,7 +315,7 @@ export interface Charset extends BaseType {
   children: []
 }
 
-export interface Cnf extends BaseType {
+export interface Cnf extends UnistNode {
   type: 'element'
   name: 'w:cnf'
   attributes: {
@@ -339,7 +335,7 @@ export interface Cnf extends BaseType {
   children: []
 }
 
-export interface Color extends BaseType {
+export interface Color extends UnistNode {
   type: 'element'
   name: 'w:color'
   attributes: {
@@ -351,7 +347,7 @@ export interface Color extends BaseType {
   children: []
 }
 
-export interface ColorSchemeMapping extends BaseType {
+export interface ColorSchemeMapping extends UnistNode {
   type: 'element'
   name: 'w:colorSchemeMapping'
   attributes: {
@@ -371,7 +367,7 @@ export interface ColorSchemeMapping extends BaseType {
   children: []
 }
 
-export interface Column extends BaseType {
+export interface Column extends UnistNode {
   type: 'element'
   name: 'w:column'
   attributes: {
@@ -381,12 +377,12 @@ export interface Column extends BaseType {
   children: []
 }
 
-export interface Columns extends BaseType {
+export interface Columns extends UnistNode {
   type: 'element'
   name: 'w:columns'
   attributes: {
     equalWidth?: string
-    num?: number
+    num?: string
     sep?: string
     space?: string
   }
@@ -439,10 +435,10 @@ export interface CommentMap {
   tbl?: Tbl[]
 }
 
-export interface Comments extends BaseType {
+export interface Comments extends UnistNode {
   type: 'element'
   name: 'w:comments'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<CommentsMap>[]
 }
 
@@ -450,10 +446,10 @@ export interface CommentsMap {
   comment?: Comment[]
 }
 
-export interface Compat extends BaseType {
+export interface Compat extends UnistNode {
   type: 'element'
   name: 'w:compat'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<CompatMap>[]
 }
 
@@ -468,7 +464,7 @@ export interface CompatMap {
   ulTrailSpace?: OnOff
 }
 
-export interface CompatSetting extends BaseType {
+export interface CompatSetting extends UnistNode {
   type: 'element'
   name: 'w:compatSetting'
   attributes: {
@@ -479,7 +475,7 @@ export interface CompatSetting extends BaseType {
   children: []
 }
 
-export interface Control extends BaseType {
+export interface Control extends UnistNode {
   type: 'element'
   name: 'w:control'
   attributes: {
@@ -490,7 +486,7 @@ export interface Control extends BaseType {
   children: []
 }
 
-export interface CustomXmlBlock extends BaseType {
+export interface CustomXmlBlock extends UnistNode {
   type: 'element'
   name: 'w:customXmlBlock'
   attributes: {
@@ -533,7 +529,7 @@ export interface CustomXmlBlockMap {
   tbl?: Tbl[]
 }
 
-export interface CustomXmlCell extends BaseType {
+export interface CustomXmlCell extends UnistNode {
   type: 'element'
   name: 'w:customXmlCell'
   attributes: {
@@ -575,10 +571,10 @@ export interface CustomXmlCellMap {
   tc?: Tc[]
 }
 
-export interface CustomXmlPr extends BaseType {
+export interface CustomXmlPr extends UnistNode {
   type: 'element'
   name: 'w:customXmlPr'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<CustomXmlPrMap>[]
 }
 
@@ -587,7 +583,7 @@ export interface CustomXmlPrMap {
   placeholder?: String
 }
 
-export interface CustomXmlRow extends BaseType {
+export interface CustomXmlRow extends UnistNode {
   type: 'element'
   name: 'w:customXmlRow'
   attributes: {
@@ -629,7 +625,7 @@ export interface CustomXmlRowMap {
   tr?: Row[]
 }
 
-export interface CustomXmlRun extends BaseType {
+export interface CustomXmlRun extends UnistNode {
   type: 'element'
   name: 'w:customXmlRun'
   attributes: {
@@ -677,7 +673,7 @@ export interface CustomXmlRunMap {
   subDoc?: Rel[]
 }
 
-export interface DataBinding extends BaseType {
+export interface DataBinding extends UnistNode {
   type: 'element'
   name: 'w:dataBinding'
   attributes: {
@@ -688,16 +684,16 @@ export interface DataBinding extends BaseType {
   children: []
 }
 
-export interface DecimalNumber extends BaseType {
+export interface DecimalNumber extends UnistNode {
   type: 'element'
   name: 'w:decimalNumber'
   attributes: {
-    val: number
+    val: string
   }
   children: []
 }
 
-export interface DecimalNumberOrPrecent extends BaseType {
+export interface DecimalNumberOrPrecent extends UnistNode {
   type: 'element'
   name: 'w:decimalNumberOrPrecent'
   attributes: {
@@ -706,7 +702,7 @@ export interface DecimalNumberOrPrecent extends BaseType {
   children: []
 }
 
-export interface DirContentRun extends BaseType {
+export interface DirContentRun extends UnistNode {
   type: 'element'
   name: 'w:dirContentRun'
   attributes: {
@@ -752,11 +748,11 @@ export interface DirContentRunMap {
   subDoc?: Rel[]
 }
 
-export interface Div extends BaseType {
+export interface Div extends UnistNode {
   type: 'element'
   name: 'w:div'
   attributes: {
-    id: number
+    id: string
   }
   children: RequiredMap<DivMap>[]
 }
@@ -772,10 +768,10 @@ export interface DivMap {
   marTop: SignedTwipsMeasure
 }
 
-export interface DivBdr extends BaseType {
+export interface DivBdr extends UnistNode {
   type: 'element'
   name: 'w:divBdr'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<DivBdrMap>[]
 }
 
@@ -786,10 +782,10 @@ export interface DivBdrMap {
   top?: Border
 }
 
-export interface Divs extends BaseType {
+export interface Divs extends UnistNode {
   type: 'element'
   name: 'w:divs'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<DivsMap>[]
 }
 
@@ -797,10 +793,10 @@ export interface DivsMap {
   div: Div[]
 }
 
-export interface DocDefaults extends BaseType {
+export interface DocDefaults extends UnistNode {
   type: 'element'
   name: 'w:docDefaults'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<DocDefaultsMap>[]
 }
 
@@ -809,21 +805,21 @@ export interface DocDefaultsMap {
   rPrDefault?: RPrDefault
 }
 
-export interface DocGrid extends BaseType {
+export interface DocGrid extends UnistNode {
   type: 'element'
   name: 'w:docGrid'
   attributes: {
-    charSpace?: number
-    linePitch: number
+    charSpace?: string
+    linePitch: string
     type: DocGridVal
   }
   children: []
 }
 
-export interface DocPart extends BaseType {
+export interface DocPart extends UnistNode {
   type: 'element'
   name: 'w:docPart'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<DocPartMap>[]
 }
 
@@ -832,7 +828,7 @@ export interface DocPartMap {
   docPartPr?: DocPartPr
 }
 
-export interface DocPartBehavior extends BaseType {
+export interface DocPartBehavior extends UnistNode {
   type: 'element'
   name: 'w:docPartBehavior'
   attributes: {
@@ -841,10 +837,10 @@ export interface DocPartBehavior extends BaseType {
   children: []
 }
 
-export interface DocPartBehaviors extends BaseType {
+export interface DocPartBehaviors extends UnistNode {
   type: 'element'
   name: 'w:docPartBehaviors'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<DocPartBehaviorsMap>[]
 }
 
@@ -852,10 +848,10 @@ export interface DocPartBehaviorsMap {
   behavior: DocPartBehavior[]
 }
 
-export interface DocPartCategory extends BaseType {
+export interface DocPartCategory extends UnistNode {
   type: 'element'
   name: 'w:docPartCategory'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<DocPartCategoryMap>[]
 }
 
@@ -864,7 +860,7 @@ export interface DocPartCategoryMap {
   name: String
 }
 
-export interface DocPartGallery extends BaseType {
+export interface DocPartGallery extends UnistNode {
   type: 'element'
   name: 'w:docPartGallery'
   attributes: {
@@ -873,7 +869,7 @@ export interface DocPartGallery extends BaseType {
   children: []
 }
 
-export interface DocPartName extends BaseType {
+export interface DocPartName extends UnistNode {
   type: 'element'
   name: 'w:docPartName'
   attributes: {
@@ -883,15 +879,15 @@ export interface DocPartName extends BaseType {
   children: []
 }
 
-export interface DocPartPr extends BaseType {
+export interface DocPartPr extends UnistNode {
   type: 'element'
   name: 'w:docPartPr'
 }
 
-export interface DocParts extends BaseType {
+export interface DocParts extends UnistNode {
   type: 'element'
   name: 'w:docParts'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<DocPartsMap>[]
 }
 
@@ -899,7 +895,7 @@ export interface DocPartsMap {
   docPart: DocPart[]
 }
 
-export interface DocPartType extends BaseType {
+export interface DocPartType extends UnistNode {
   type: 'element'
   name: 'w:docPartType'
   attributes: {
@@ -908,7 +904,7 @@ export interface DocPartType extends BaseType {
   children: []
 }
 
-export interface DocPartTypes extends BaseType {
+export interface DocPartTypes extends UnistNode {
   type: 'element'
   name: 'w:docPartTypes'
   attributes: {
@@ -921,7 +917,7 @@ export interface DocPartTypesMap {
   type: DocPartType[]
 }
 
-export interface DocProtect extends BaseType {
+export interface DocProtect extends UnistNode {
   type: 'element'
   name: 'w:docProtect'
   attributes: {
@@ -931,15 +927,15 @@ export interface DocProtect extends BaseType {
     formatting?: string
     hashValue?: string
     saltValue?: string
-    spinCount?: number
+    spinCount?: string
   }
   children: []
 }
 
-export interface DocRsids extends BaseType {
+export interface DocRsids extends UnistNode {
   type: 'element'
   name: 'w:docRsids'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<DocRsidsMap>[]
 }
 
@@ -948,7 +944,7 @@ export interface DocRsidsMap {
   rsidRoot?: LongHexNumber
 }
 
-export interface DocType extends BaseType {
+export interface DocType extends UnistNode {
   type: 'element'
   name: 'w:docType'
   attributes: {
@@ -969,10 +965,10 @@ export interface DocumentMap {
   body?: Body
 }
 
-export interface DocumentBase extends BaseType {
+export interface DocumentBase extends UnistNode {
   type: 'element'
   name: 'w:documentBase'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<DocumentBaseMap>[]
 }
 
@@ -980,7 +976,7 @@ export interface DocumentBaseMap {
   background?: Background
 }
 
-export interface DocVar extends BaseType {
+export interface DocVar extends UnistNode {
   type: 'element'
   name: 'w:docVar'
   attributes: {
@@ -990,10 +986,10 @@ export interface DocVar extends BaseType {
   children: []
 }
 
-export interface DocVars extends BaseType {
+export interface DocVars extends UnistNode {
   type: 'element'
   name: 'w:docVars'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<DocVarsMap>[]
 }
 
@@ -1001,10 +997,10 @@ export interface DocVarsMap {
   docVar?: DocVar[]
 }
 
-export interface Drawing extends BaseType {
+export interface Drawing extends UnistNode {
   type: 'element'
   name: 'w:drawing'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<DrawingMap>[]
 }
 
@@ -1013,13 +1009,13 @@ export interface DrawingMap {
   inline?: wp.Inline[]
 }
 
-export interface EastAsianLayout extends BaseType {
+export interface EastAsianLayout extends UnistNode {
   type: 'element'
   name: 'w:eastAsianLayout'
   attributes: {
     combine?: string
     combineBrackets?: CombineBracketsVal
-    id?: number
+    id?: string
     vert?: string
     vertCompress?: string
   }
@@ -1028,7 +1024,7 @@ export interface EastAsianLayout extends BaseType {
 export type EdnDocProps = EdnProps & {
   type: 'element'
   name: 'w:ednDocProps'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<EdnDocPropsMap>[]
 }
 
@@ -1036,7 +1032,7 @@ export interface EdnDocPropsMap {
   endnote?: FtnEdnSepRef[]
 }
 
-export interface EdnPos extends BaseType {
+export interface EdnPos extends UnistNode {
   type: 'element'
   name: 'w:ednPos'
   attributes: {
@@ -1045,10 +1041,10 @@ export interface EdnPos extends BaseType {
   children: []
 }
 
-export interface EdnProps extends BaseType {
+export interface EdnProps extends UnistNode {
   type: 'element'
   name: 'w:ednProps'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<EdnPropsMap>[]
 }
 
@@ -1059,7 +1055,7 @@ export interface EdnPropsMap {
   pos?: EdnPos
 }
 
-export interface Em extends BaseType {
+export interface Em extends UnistNode {
   type: 'element'
   name: 'w:em'
   attributes: {
@@ -1068,15 +1064,15 @@ export interface Em extends BaseType {
   children: []
 }
 
-export interface Empty extends BaseType {
+export interface Empty extends UnistNode {
   type: 'element'
   name: 'w:empty'
 }
 
-export interface Endnotes extends BaseType {
+export interface Endnotes extends UnistNode {
   type: 'element'
   name: 'w:endnotes'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<EndnotesMap>[]
 }
 
@@ -1084,10 +1080,10 @@ export interface EndnotesMap {
   endnote?: FtnEdn[]
 }
 
-export interface FFCheckBox extends BaseType {
+export interface FFCheckBox extends UnistNode {
   type: 'element'
   name: 'w:fFCheckBox'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<FFCheckBoxMap>[]
 }
 
@@ -1098,10 +1094,10 @@ export interface FFCheckBoxMap {
   sizeAuto: OnOff
 }
 
-export interface FFData extends BaseType {
+export interface FFData extends UnistNode {
   type: 'element'
   name: 'w:fFData'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<FFDataMap>[]
 }
 
@@ -1120,10 +1116,10 @@ export interface FFDataMap {
   textInput: FFTextInput[]
 }
 
-export interface FFDDList extends BaseType {
+export interface FFDDList extends UnistNode {
   type: 'element'
   name: 'w:fFDDList'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<FFDDListMap>[]
 }
 
@@ -1133,7 +1129,7 @@ export interface FFDDListMap {
   result?: DecimalNumber
 }
 
-export interface FFHelpText extends BaseType {
+export interface FFHelpText extends UnistNode {
   type: 'element'
   name: 'w:fFHelpText'
   attributes: {
@@ -1143,7 +1139,7 @@ export interface FFHelpText extends BaseType {
   children: []
 }
 
-export interface FFName extends BaseType {
+export interface FFName extends UnistNode {
   type: 'element'
   name: 'w:fFName'
   attributes: {
@@ -1152,7 +1148,7 @@ export interface FFName extends BaseType {
   children: []
 }
 
-export interface FFStatusText extends BaseType {
+export interface FFStatusText extends UnistNode {
   type: 'element'
   name: 'w:fFStatusText'
   attributes: {
@@ -1162,10 +1158,10 @@ export interface FFStatusText extends BaseType {
   children: []
 }
 
-export interface FFTextInput extends BaseType {
+export interface FFTextInput extends UnistNode {
   type: 'element'
   name: 'w:fFTextInput'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<FFTextInputMap>[]
 }
 
@@ -1176,7 +1172,7 @@ export interface FFTextInputMap {
   type?: FFTextType
 }
 
-export interface FFTextType extends BaseType {
+export interface FFTextType extends UnistNode {
   type: 'element'
   name: 'w:fFTextType'
   attributes: {
@@ -1185,17 +1181,17 @@ export interface FFTextType extends BaseType {
   children: []
 }
 
-export interface FitText extends BaseType {
+export interface FitText extends UnistNode {
   type: 'element'
   name: 'w:fitText'
   attributes: {
-    id?: number
+    id?: string
     val: string
   }
   children: []
 }
 
-export interface FldChar extends BaseType {
+export interface FldChar extends UnistNode {
   type: 'element'
   name: 'w:fldChar'
   attributes: {
@@ -1210,7 +1206,7 @@ export interface FldCharMap {
   ffData?: FFData
 }
 
-export interface Font extends BaseType {
+export interface Font extends UnistNode {
   type: 'element'
   name: 'w:font'
   attributes: {
@@ -1233,7 +1229,7 @@ export interface FontMap {
   sig?: FontSig
 }
 
-export interface FontFamily extends BaseType {
+export interface FontFamily extends UnistNode {
   type: 'element'
   name: 'w:fontFamily'
   attributes: {
@@ -1251,7 +1247,7 @@ export type FontRel = Rel & {
   children: []
 }
 
-export interface Fonts extends BaseType {
+export interface Fonts extends UnistNode {
   type: 'element'
   name: 'w:fonts'
   attributes: {
@@ -1268,7 +1264,7 @@ export interface Fonts extends BaseType {
   children: []
 }
 
-export interface FontSig extends BaseType {
+export interface FontSig extends UnistNode {
   type: 'element'
   name: 'w:fontSig'
   attributes: {
@@ -1282,10 +1278,10 @@ export interface FontSig extends BaseType {
   children: []
 }
 
-export interface FontsList extends BaseType {
+export interface FontsList extends UnistNode {
   type: 'element'
   name: 'w:fontsList'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<FontsListMap>[]
 }
 
@@ -1293,10 +1289,10 @@ export interface FontsListMap {
   font?: Font[]
 }
 
-export interface Footnotes extends BaseType {
+export interface Footnotes extends UnistNode {
   type: 'element'
   name: 'w:footnotes'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<FootnotesMap>[]
 }
 
@@ -1304,10 +1300,10 @@ export interface FootnotesMap {
   footnote?: FtnEdn[]
 }
 
-export interface Frame extends BaseType {
+export interface Frame extends UnistNode {
   type: 'element'
   name: 'w:frame'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<FrameMap>[]
 }
 
@@ -1324,7 +1320,7 @@ export interface FrameMap {
   title?: String
 }
 
-export interface FrameLayout extends BaseType {
+export interface FrameLayout extends UnistNode {
   type: 'element'
   name: 'w:frameLayout'
   attributes: {
@@ -1333,7 +1329,7 @@ export interface FrameLayout extends BaseType {
   children: []
 }
 
-export interface FramePr extends BaseType {
+export interface FramePr extends UnistNode {
   type: 'element'
   name: 'w:framePr'
   attributes: {
@@ -1343,7 +1339,7 @@ export interface FramePr extends BaseType {
     hAnchor?: HAnchorVal
     hRule?: HeightRuleVal
     hSpace?: string
-    lines?: number
+    lines?: string
     vAnchor?: VAnchorVal
     vSpace?: string
     w?: string
@@ -1356,7 +1352,7 @@ export interface FramePr extends BaseType {
   children: []
 }
 
-export interface FrameScrollbar extends BaseType {
+export interface FrameScrollbar extends UnistNode {
   type: 'element'
   name: 'w:frameScrollbar'
   attributes: {
@@ -1365,10 +1361,10 @@ export interface FrameScrollbar extends BaseType {
   children: []
 }
 
-export interface Frameset extends BaseType {
+export interface Frameset extends UnistNode {
   type: 'element'
   name: 'w:frameset'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<FramesetMap>[]
 }
 
@@ -1381,10 +1377,10 @@ export interface FramesetMap {
   title?: String
 }
 
-export interface FramesetSplitbar extends BaseType {
+export interface FramesetSplitbar extends UnistNode {
   type: 'element'
   name: 'w:framesetSplitbar'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<FramesetSplitbarMap>[]
 }
 
@@ -1398,7 +1394,7 @@ export interface FramesetSplitbarMap {
 export type FtnDocProps = FtnProps & {
   type: 'element'
   name: 'w:ftnDocProps'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<FtnDocPropsMap>[]
 }
 
@@ -1406,11 +1402,11 @@ export interface FtnDocPropsMap {
   footnote?: FtnEdnSepRef[]
 }
 
-export interface FtnEdn extends BaseType {
+export interface FtnEdn extends UnistNode {
   type: 'element'
   name: 'w:ftnEdn'
   attributes: {
-    id: number
+    id: string
     type?: FtnEdnVal
   }
   children: RequiredMap<FtnEdnMap>[]
@@ -1449,26 +1445,26 @@ export interface FtnEdnMap {
   tbl?: Tbl[]
 }
 
-export interface FtnEdnRef extends BaseType {
+export interface FtnEdnRef extends UnistNode {
   type: 'element'
   name: 'w:ftnEdnRef'
   attributes: {
     customMarkFollows?: string
-    id: number
+    id: string
   }
   children: []
 }
 
-export interface FtnEdnSepRef extends BaseType {
+export interface FtnEdnSepRef extends UnistNode {
   type: 'element'
   name: 'w:ftnEdnSepRef'
   attributes: {
-    id: number
+    id: string
   }
   children: []
 }
 
-export interface FtnPos extends BaseType {
+export interface FtnPos extends UnistNode {
   type: 'element'
   name: 'w:ftnPos'
   attributes: {
@@ -1477,10 +1473,10 @@ export interface FtnPos extends BaseType {
   children: []
 }
 
-export interface FtnProps extends BaseType {
+export interface FtnProps extends UnistNode {
   type: 'element'
   name: 'w:ftnProps'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<FtnPropsMap>[]
 }
 
@@ -1494,7 +1490,7 @@ export interface FtnPropsMap {
 export type GlossaryDocument = DocumentBase & {
   type: 'element'
   name: 'w:glossaryDocument'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<GlossaryDocumentMap>[]
 }
 
@@ -1502,7 +1498,7 @@ export interface GlossaryDocumentMap {
   docParts?: DocParts
 }
 
-export interface Guid extends BaseType {
+export interface Guid extends UnistNode {
   type: 'element'
   name: 'w:guid'
   attributes: {
@@ -1511,10 +1507,10 @@ export interface Guid extends BaseType {
   children: []
 }
 
-export interface HdrFtr extends BaseType {
+export interface HdrFtr extends UnistNode {
   type: 'element'
   name: 'w:hdrFtr'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<HdrFtrMap>[]
 }
 
@@ -1560,10 +1556,10 @@ export type HdrFtrRef = Rel & {
   children: []
 }
 
-export interface Headers extends BaseType {
+export interface Headers extends UnistNode {
   type: 'element'
   name: 'w:headers'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<HeadersMap>[]
 }
 
@@ -1571,7 +1567,7 @@ export interface HeadersMap {
   header?: String[]
 }
 
-export interface Height extends BaseType {
+export interface Height extends UnistNode {
   type: 'element'
   name: 'w:height'
   attributes: {
@@ -1581,7 +1577,7 @@ export interface Height extends BaseType {
   children: []
 }
 
-export interface Highlight extends BaseType {
+export interface Highlight extends UnistNode {
   type: 'element'
   name: 'w:highlight'
   attributes: {
@@ -1590,7 +1586,7 @@ export interface Highlight extends BaseType {
   children: []
 }
 
-export interface HpsMeasure extends BaseType {
+export interface HpsMeasure extends UnistNode {
   type: 'element'
   name: 'w:hpsMeasure'
   attributes: {
@@ -1599,7 +1595,7 @@ export interface HpsMeasure extends BaseType {
   children: []
 }
 
-export interface Hyperlink extends BaseType {
+export interface Hyperlink extends UnistNode {
   type: 'element'
   name: 'w:hyperlink'
   attributes: {
@@ -1650,23 +1646,23 @@ export interface HyperlinkMap {
   subDoc?: Rel[]
 }
 
-export interface Ind extends BaseType {
+export interface Ind extends UnistNode {
   type: 'element'
   name: 'w:ind'
   attributes: {
     end?: string
-    endChars?: number
+    endChars?: string
     firstLine?: string
-    firstLineChars?: number
+    firstLineChars?: string
     hanging?: string
-    hangingChars?: number
+    hangingChars?: string
     start?: string
-    startChars?: number
+    startChars?: string
   }
   children: []
 }
 
-export interface Jc extends BaseType {
+export interface Jc extends UnistNode {
   type: 'element'
   name: 'w:jc'
   attributes: {
@@ -1675,7 +1671,7 @@ export interface Jc extends BaseType {
   children: []
 }
 
-export interface JcTable extends BaseType {
+export interface JcTable extends UnistNode {
   type: 'element'
   name: 'w:jcTable'
   attributes: {
@@ -1684,7 +1680,7 @@ export interface JcTable extends BaseType {
   children: []
 }
 
-export interface Kinsoku extends BaseType {
+export interface Kinsoku extends UnistNode {
   type: 'element'
   name: 'w:kinsoku'
   attributes: {
@@ -1694,7 +1690,7 @@ export interface Kinsoku extends BaseType {
   children: []
 }
 
-export interface Lang extends BaseType {
+export interface Lang extends UnistNode {
   type: 'element'
   name: 'w:lang'
   attributes: {
@@ -1703,7 +1699,7 @@ export interface Lang extends BaseType {
   children: []
 }
 
-export interface Language extends BaseType {
+export interface Language extends UnistNode {
   type: 'element'
   name: 'w:language'
   attributes: {
@@ -1714,15 +1710,15 @@ export interface Language extends BaseType {
   children: []
 }
 
-export interface LatentStyles extends BaseType {
+export interface LatentStyles extends UnistNode {
   type: 'element'
   name: 'w:latentStyles'
   attributes: {
-    count: number
+    count: string
     defLockedState: string
     defQFormat: string
     defSemiHidden: string
-    defUIPriority: number
+    defUIPriority: string
     defUnhideWhenUsed: string
   }
   children: RequiredMap<LatentStylesMap>[]
@@ -1732,7 +1728,7 @@ export interface LatentStylesMap {
   lsdException?: LsdException[]
 }
 
-export interface LevelSuffix extends BaseType {
+export interface LevelSuffix extends UnistNode {
   type: 'element'
   name: 'w:levelSuffix'
   attributes: {
@@ -1741,7 +1737,7 @@ export interface LevelSuffix extends BaseType {
   children: []
 }
 
-export interface LevelText extends BaseType {
+export interface LevelText extends UnistNode {
   type: 'element'
   name: 'w:levelText'
   attributes: {
@@ -1751,19 +1747,19 @@ export interface LevelText extends BaseType {
   children: []
 }
 
-export interface LineNumber extends BaseType {
+export interface LineNumber extends UnistNode {
   type: 'element'
   name: 'w:lineNumber'
   attributes: {
-    countBy?: number
+    countBy?: string
     distance?: string
     restart?: LineNumberRestartVal
-    start?: number
+    start?: string
   }
   children: []
 }
 
-export interface Lock extends BaseType {
+export interface Lock extends UnistNode {
   type: 'element'
   name: 'w:lock'
   attributes: {
@@ -1772,7 +1768,7 @@ export interface Lock extends BaseType {
   children: []
 }
 
-export interface LongHexNumber extends BaseType {
+export interface LongHexNumber extends UnistNode {
   type: 'element'
   name: 'w:longHexNumber'
   attributes: {
@@ -1781,7 +1777,7 @@ export interface LongHexNumber extends BaseType {
   children: []
 }
 
-export interface LsdException extends BaseType {
+export interface LsdException extends UnistNode {
   type: 'element'
   name: 'w:lsdException'
   attributes: {
@@ -1789,17 +1785,17 @@ export interface LsdException extends BaseType {
     name: string
     qFormat: string
     semiHidden: string
-    uiPriority: number
+    uiPriority: string
     unhideWhenUsed: string
   }
   children: []
 }
 
-export interface Lvl extends BaseType {
+export interface Lvl extends UnistNode {
   type: 'element'
   name: 'w:lvl'
   attributes: {
-    ilvl: number
+    ilvl: string
     tentative?: string
     tplc?: string
   }
@@ -1820,7 +1816,7 @@ export interface LvlMap {
   suff?: LevelSuffix
 }
 
-export interface MacroName extends BaseType {
+export interface MacroName extends UnistNode {
   type: 'element'
   name: 'w:macroName'
   attributes: {
@@ -1829,10 +1825,10 @@ export interface MacroName extends BaseType {
   children: []
 }
 
-export interface MailMerge extends BaseType {
+export interface MailMerge extends UnistNode {
   type: 'element'
   name: 'w:mailMerge'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<MailMergeMap>[]
 }
 
@@ -1855,7 +1851,7 @@ export interface MailMergeMap {
   viewMergedData?: OnOff
 }
 
-export interface MailMergeDataType extends BaseType {
+export interface MailMergeDataType extends UnistNode {
   type: 'element'
   name: 'w:mailMergeDataType'
   attributes: {
@@ -1864,7 +1860,7 @@ export interface MailMergeDataType extends BaseType {
   children: []
 }
 
-export interface MailMergeDest extends BaseType {
+export interface MailMergeDest extends UnistNode {
   type: 'element'
   name: 'w:mailMergeDest'
   attributes: {
@@ -1873,7 +1869,7 @@ export interface MailMergeDest extends BaseType {
   children: []
 }
 
-export interface MailMergeDocType extends BaseType {
+export interface MailMergeDocType extends UnistNode {
   type: 'element'
   name: 'w:mailMergeDocType'
   attributes: {
@@ -1882,7 +1878,7 @@ export interface MailMergeDocType extends BaseType {
   children: []
 }
 
-export interface MailMergeOdsoFMDFieldType extends BaseType {
+export interface MailMergeOdsoFMDFieldType extends UnistNode {
   type: 'element'
   name: 'w:mailMergeOdsoFMDFieldType'
   attributes: {
@@ -1891,7 +1887,7 @@ export interface MailMergeOdsoFMDFieldType extends BaseType {
   children: []
 }
 
-export interface MailMergeSourceType extends BaseType {
+export interface MailMergeSourceType extends UnistNode {
   type: 'element'
   name: 'w:mailMergeSourceType'
   attributes: {
@@ -1900,26 +1896,28 @@ export interface MailMergeSourceType extends BaseType {
   children: []
 }
 
-export interface Markup extends BaseType {
+export interface Markup extends UnistNode {
   type: 'element'
   name: 'w:markup' | string
   attributes: {
-    id: number
+    id: string
   }
+  children: any[]
 }
 
 export type MarkupRange = Markup & {
   name: 'w:markupRange' | string
   attributes: {
-    id: number
+    id: string
     displacedByCustomXml?: DisplacedByCustomXmlVal
   }
+  children: any[]
 }
 
 export type MathCtrlDel = TrackChange & {
   type: 'element'
   name: 'w:mathCtrlDel'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<MathCtrlDelMap>[]
 }
 
@@ -1930,7 +1928,7 @@ export interface MathCtrlDelMap {
 export type MathCtrlIns = TrackChange & {
   type: 'element'
   name: 'w:mathCtrlIns'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<MathCtrlInsMap>[]
 }
 
@@ -1944,12 +1942,12 @@ export type MoveBookmark = Bookmark & {
   name: 'w:moveBookmark'
   attributes: {
     author: string
-    date: Date
+    date: string
   }
   children: []
 }
 
-export interface MultiLevelType extends BaseType {
+export interface MultiLevelType extends UnistNode {
   type: 'element'
   name: 'w:multiLevelType'
   attributes: {
@@ -1958,11 +1956,11 @@ export interface MultiLevelType extends BaseType {
   children: []
 }
 
-export interface Num extends BaseType {
+export interface Num extends UnistNode {
   type: 'element'
   name: 'w:num'
   attributes: {
-    numId: number
+    numId: string
   }
   children: RequiredMap<NumMap>[]
 }
@@ -1972,10 +1970,10 @@ export interface NumMap {
   lvlOverride?: NumLvl[]
 }
 
-export interface Numbering extends BaseType {
+export interface Numbering extends UnistNode {
   type: 'element'
   name: 'w:numbering'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<NumberingMap>[]
 }
 
@@ -1986,7 +1984,7 @@ export interface NumberingMap {
   numPicBullet?: NumPicBullet[]
 }
 
-export interface NumFmt extends BaseType {
+export interface NumFmt extends UnistNode {
   type: 'element'
   name: 'w:numFmt'
   attributes: {
@@ -1996,11 +1994,11 @@ export interface NumFmt extends BaseType {
   children: []
 }
 
-export interface NumLvl extends BaseType {
+export interface NumLvl extends UnistNode {
   type: 'element'
   name: 'w:numLvl'
   attributes: {
-    ilvl: number
+    ilvl: string
   }
   children: RequiredMap<NumLvlMap>[]
 }
@@ -2010,11 +2008,11 @@ export interface NumLvlMap {
   startOverride?: DecimalNumber
 }
 
-export interface NumPicBullet extends BaseType {
+export interface NumPicBullet extends UnistNode {
   type: 'element'
   name: 'w:numPicBullet'
   attributes: {
-    numPicBulletId: number
+    numPicBulletId: string
   }
   children: RequiredMap<NumPicBulletMap>[]
 }
@@ -2023,10 +2021,10 @@ export interface NumPicBulletMap {
   drawing: Drawing
 }
 
-export interface NumPr extends BaseType {
+export interface NumPr extends UnistNode {
   type: 'element'
   name: 'w:numPr'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<NumPrMap>[]
 }
 
@@ -2036,7 +2034,7 @@ export interface NumPrMap {
   numId?: DecimalNumber
 }
 
-export interface NumRestart extends BaseType {
+export interface NumRestart extends UnistNode {
   type: 'element'
   name: 'w:numRestart'
   attributes: {
@@ -2045,7 +2043,7 @@ export interface NumRestart extends BaseType {
   children: []
 }
 
-export interface Object extends BaseType {
+export interface Object extends UnistNode {
   type: 'element'
   name: 'w:object'
   attributes: {
@@ -2063,7 +2061,7 @@ export interface ObjectMap {
   objectLink?: ObjectLink
 }
 
-export interface ObjectEmbed extends BaseType {
+export interface ObjectEmbed extends UnistNode {
   type: 'element'
   name: 'w:objectEmbed'
   attributes: {
@@ -2073,6 +2071,7 @@ export interface ObjectEmbed extends BaseType {
     progId?: string
     shapeId?: string
   }
+  children: []
 }
 
 export type ObjectLink = ObjectEmbed & {
@@ -2085,10 +2084,10 @@ export type ObjectLink = ObjectEmbed & {
   children: []
 }
 
-export interface Odso extends BaseType {
+export interface Odso extends UnistNode {
   type: 'element'
   name: 'w:odso'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<OdsoMap>[]
 }
 
@@ -2103,10 +2102,10 @@ export interface OdsoMap {
   udl?: String
 }
 
-export interface OdsoFieldMapData extends BaseType {
+export interface OdsoFieldMapData extends UnistNode {
   type: 'element'
   name: 'w:odsoFieldMapData'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<OdsoFieldMapDataMap>[]
 }
 
@@ -2119,12 +2118,13 @@ export interface OdsoFieldMapDataMap {
   type?: MailMergeOdsoFMDFieldType
 }
 
-export interface OnOff extends BaseType {
+export interface OnOff extends UnistNode {
   type: 'element'
   name: 'w:onOff'
   attributes: {
     val: string
   }
+  children: []
 }
 
 export type OptimizeForBrowser = OnOff & {
@@ -2136,7 +2136,7 @@ export type OptimizeForBrowser = OnOff & {
   children: []
 }
 
-export interface P extends BaseType {
+export interface P extends UnistNode {
   type: 'element'
   name: 'w:p'
   attributes: {
@@ -2196,7 +2196,7 @@ export type PageBorder = Border & {
   children: []
 }
 
-export interface PageBorders extends BaseType {
+export interface PageBorders extends UnistNode {
   type: 'element'
   name: 'w:pageBorders'
   attributes: {
@@ -2214,7 +2214,7 @@ export interface PageBordersMap {
   top?: TopPageBorder
 }
 
-export interface PageMar extends BaseType {
+export interface PageMar extends UnistNode {
   type: 'element'
   name: 'w:pageMar'
   attributes: {
@@ -2229,23 +2229,23 @@ export interface PageMar extends BaseType {
   children: []
 }
 
-export interface PageNumber extends BaseType {
+export interface PageNumber extends UnistNode {
   type: 'element'
   name: 'w:pageNumber'
   attributes: {
     chapSep?: ChapterSepVal
-    chapStyle?: number
+    chapStyle?: string
     fmt?: NumberFormatVal
-    start?: number
+    start?: string
   }
   children: []
 }
 
-export interface PageSz extends BaseType {
+export interface PageSz extends UnistNode {
   type: 'element'
   name: 'w:pageSz'
   attributes: {
-    code?: number
+    code?: string
     h: string
     orient?: PageOrientationVal
     w: string
@@ -2253,7 +2253,7 @@ export interface PageSz extends BaseType {
   children: []
 }
 
-export interface Panose extends BaseType {
+export interface Panose extends UnistNode {
   type: 'element'
   name: 'w:panose'
   attributes: {
@@ -2262,20 +2262,20 @@ export interface Panose extends BaseType {
   children: []
 }
 
-export interface PaperSource extends BaseType {
+export interface PaperSource extends UnistNode {
   type: 'element'
   name: 'w:paperSource'
   attributes: {
-    first: number
-    other: number
+    first: string
+    other: string
   }
   children: []
 }
 
-export interface ParaRPr extends BaseType {
+export interface ParaRPr extends UnistNode {
   type: 'element'
   name: 'w:paraRPr'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<ParaRPrMap>[]
 }
 
@@ -2329,7 +2329,7 @@ export interface ParaRPrMap {
 export type ParaRPrChange = TrackChange & {
   type: 'element'
   name: 'w:paraRPrChange'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<ParaRPrChangeMap>[]
 }
 
@@ -2337,10 +2337,10 @@ export interface ParaRPrChangeMap {
   rPr: ParaRPrOriginal
 }
 
-export interface ParaRPrOriginal extends BaseType {
+export interface ParaRPrOriginal extends UnistNode {
   type: 'element'
   name: 'w:paraRPrOriginal'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<ParaRPrOriginalMap>[]
 }
 
@@ -2390,10 +2390,10 @@ export interface ParaRPrOriginalMap {
   webHidden?: OnOff[]
 }
 
-export interface PBdr extends BaseType {
+export interface PBdr extends UnistNode {
   type: 'element'
   name: 'w:pBdr'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<PBdrMap>[]
 }
 
@@ -2406,28 +2406,29 @@ export interface PBdrMap {
   top?: Border
 }
 
-export interface Perm extends BaseType {
+export interface Perm extends UnistNode {
   type: 'element'
   name: 'w:perm'
   attributes: {
     displacedByCustomXml?: DisplacedByCustomXmlVal
     id: string
   }
+  children: []
 }
 
 export type PermStart = Perm & {
   type: 'element'
   name: 'w:permStart'
   attributes: {
-    colFirst?: number
-    colLast?: number
+    colFirst?: string
+    colLast?: string
     ed?: string
     edGrp?: EdGrpVal
   }
   children: []
 }
 
-export interface Pitch extends BaseType {
+export interface Pitch extends UnistNode {
   type: 'element'
   name: 'w:pitch'
   attributes: {
@@ -2436,19 +2437,19 @@ export interface Pitch extends BaseType {
   children: []
 }
 
-export interface PixelsMeasure extends BaseType {
+export interface PixelsMeasure extends UnistNode {
   type: 'element'
   name: 'w:pixelsMeasure'
   attributes: {
-    val: number
+    val: string
   }
   children: []
 }
 
-export interface Placeholder extends BaseType {
+export interface Placeholder extends UnistNode {
   type: 'element'
   name: 'w:placeholder'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<PlaceholderMap>[]
 }
 
@@ -2459,7 +2460,7 @@ export interface PlaceholderMap {
 export type PPr = PPrBase & {
   type: 'element'
   name: 'w:pPr'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<PPrMap>[]
 }
 
@@ -2469,10 +2470,10 @@ export interface PPrMap {
   sectPr?: SectPr
 }
 
-export interface PPrBase extends BaseType {
+export interface PPrBase extends UnistNode {
   type: 'element'
   name: 'w:pPrBase'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<PPrBaseMap>[]
 }
 
@@ -2515,7 +2516,7 @@ export interface PPrBaseMap {
 export type PPrChange = TrackChange & {
   type: 'element'
   name: 'w:pPrChange'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<PPrChangeMap>[]
 }
 
@@ -2523,10 +2524,10 @@ export interface PPrChangeMap {
   pPr: PPrBase
 }
 
-export interface PPrDefault extends BaseType {
+export interface PPrDefault extends UnistNode {
   type: 'element'
   name: 'w:pPrDefault'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<PPrDefaultMap>[]
 }
 
@@ -2537,7 +2538,7 @@ export interface PPrDefaultMap {
 export type PPrGeneral = PPrBase & {
   type: 'element'
   name: 'w:pPrGeneral'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<PPrGeneralMap>[]
 }
 
@@ -2545,7 +2546,7 @@ export interface PPrGeneralMap {
   pPrChange?: PPrChange
 }
 
-export interface Proof extends BaseType {
+export interface Proof extends UnistNode {
   type: 'element'
   name: 'w:proof'
   attributes: {
@@ -2555,7 +2556,7 @@ export interface Proof extends BaseType {
   children: []
 }
 
-export interface ProofErr extends BaseType {
+export interface ProofErr extends UnistNode {
   type: 'element'
   name: 'w:proofErr'
   attributes: {
@@ -2564,7 +2565,7 @@ export interface ProofErr extends BaseType {
   children: []
 }
 
-export interface PTab extends BaseType {
+export interface PTab extends UnistNode {
   type: 'element'
   name: 'w:pTab'
   attributes: {
@@ -2575,7 +2576,7 @@ export interface PTab extends BaseType {
   children: []
 }
 
-export interface R extends BaseType {
+export interface R extends UnistNode {
   type: 'element'
   name: 'w:r'
   attributes: {
@@ -2622,22 +2623,22 @@ export interface RMap {
   yearShort?: Empty[]
 }
 
-export interface ReadingModeInkLockDown extends BaseType {
+export interface ReadingModeInkLockDown extends UnistNode {
   type: 'element'
   name: 'w:readingModeInkLockDown'
   attributes: {
     actualPg: string
     fontSz: string
-    h: number
-    w: number
+    h: string
+    w: string
   }
   children: []
 }
 
-export interface RecipientData extends BaseType {
+export interface RecipientData extends UnistNode {
   type: 'element'
   name: 'w:recipientData'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<RecipientDataMap>[]
 }
 
@@ -2647,10 +2648,10 @@ export interface RecipientDataMap {
   uniqueTag: Base64Binary
 }
 
-export interface Recipients extends BaseType {
+export interface Recipients extends UnistNode {
   type: 'element'
   name: 'w:recipients'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<RecipientsMap>[]
 }
 
@@ -2658,7 +2659,7 @@ export interface RecipientsMap {
   recipientData: RecipientData[]
 }
 
-export interface Rel extends BaseType {
+export interface Rel extends UnistNode {
   type: 'element'
   name: 'w:rel'
   attributes: {
@@ -2667,7 +2668,7 @@ export interface Rel extends BaseType {
   children: []
 }
 
-export interface Row extends BaseType {
+export interface Row extends UnistNode {
   type: 'element'
   name: 'w:row'
   attributes: {
@@ -2712,10 +2713,10 @@ export interface RowMap {
   trPr?: TrPr
 }
 
-export interface RPr extends BaseType {
+export interface RPr extends UnistNode {
   type: 'element'
   name: 'w:rPr'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<RPrMap>[]
 }
 
@@ -2765,7 +2766,7 @@ export interface RPrMap {
 export type RPrChange = TrackChange & {
   type: 'element'
   name: 'w:rPrChange'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<RPrChangeMap>[]
 }
 
@@ -2773,10 +2774,10 @@ export interface RPrChangeMap {
   rPr: RPrOriginal
 }
 
-export interface RPrDefault extends BaseType {
+export interface RPrDefault extends UnistNode {
   type: 'element'
   name: 'w:rPrDefault'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<RPrDefaultMap>[]
 }
 
@@ -2784,10 +2785,10 @@ export interface RPrDefaultMap {
   rPr?: RPr
 }
 
-export interface RPrOriginal extends BaseType {
+export interface RPrOriginal extends UnistNode {
   type: 'element'
   name: 'w:rPrOriginal'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<RPrOriginalMap>[]
 }
 
@@ -2833,10 +2834,10 @@ export interface RPrOriginalMap {
   webHidden?: OnOff[]
 }
 
-export interface Ruby extends BaseType {
+export interface Ruby extends UnistNode {
   type: 'element'
   name: 'w:ruby'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<RubyMap>[]
 }
 
@@ -2846,7 +2847,7 @@ export interface RubyMap {
   rubyPr: RubyPr
 }
 
-export interface RubyAlign extends BaseType {
+export interface RubyAlign extends UnistNode {
   type: 'element'
   name: 'w:rubyAlign'
   attributes: {
@@ -2855,10 +2856,10 @@ export interface RubyAlign extends BaseType {
   children: []
 }
 
-export interface RubyContent extends BaseType {
+export interface RubyContent extends UnistNode {
   type: 'element'
   name: 'w:rubyContent'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<RubyContentMap>[]
 }
 
@@ -2891,10 +2892,10 @@ export interface RubyContentMap {
   r?: R[]
 }
 
-export interface RubyPr extends BaseType {
+export interface RubyPr extends UnistNode {
   type: 'element'
   name: 'w:rubyPr'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<RubyPrMap>[]
 }
 
@@ -2907,10 +2908,14 @@ export interface RubyPrMap {
   rubyAlign: RubyAlign
 }
 
-export type RunTrackChange = TrackChange & {
+export interface RunTrackChange extends TrackChange {
   type: 'element'
   name: 'w:runTrackChange'
-  attributes: {}
+  attributes: {
+    id: string
+    author: string
+    date?: string
+  }
   children: RequiredMap<RunTrackChangeMap>[]
 }
 
@@ -2968,7 +2973,7 @@ export interface RunTrackChangeMap {
   sSup?: m.SSup[]
 }
 
-export interface SaveThroughXslt extends BaseType {
+export interface SaveThroughXslt extends UnistNode {
   type: 'element'
   name: 'w:saveThroughXslt'
   attributes: {
@@ -2978,10 +2983,10 @@ export interface SaveThroughXslt extends BaseType {
   children: []
 }
 
-export interface SdtBlock extends BaseType {
+export interface SdtBlock extends UnistNode {
   type: 'element'
   name: 'w:sdtBlock'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<SdtBlockMap>[]
 }
 
@@ -2991,10 +2996,10 @@ export interface SdtBlockMap {
   sdtPr?: SdtPr
 }
 
-export interface SdtCell extends BaseType {
+export interface SdtCell extends UnistNode {
   type: 'element'
   name: 'w:sdtCell'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<SdtCellMap>[]
 }
 
@@ -3004,7 +3009,7 @@ export interface SdtCellMap {
   sdtPr?: SdtPr
 }
 
-export interface SdtComboBox extends BaseType {
+export interface SdtComboBox extends UnistNode {
   type: 'element'
   name: 'w:sdtComboBox'
   attributes: {
@@ -3017,10 +3022,10 @@ export interface SdtComboBoxMap {
   listItem?: SdtListItem[]
 }
 
-export interface SdtContentBlock extends BaseType {
+export interface SdtContentBlock extends UnistNode {
   type: 'element'
   name: 'w:sdtContentBlock'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<SdtContentBlockMap>[]
 }
 
@@ -3056,10 +3061,10 @@ export interface SdtContentBlockMap {
   tbl?: Tbl[]
 }
 
-export interface SdtContentCell extends BaseType {
+export interface SdtContentCell extends UnistNode {
   type: 'element'
   name: 'w:sdtContentCell'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<SdtContentCellMap>[]
 }
 
@@ -3094,10 +3099,10 @@ export interface SdtContentCellMap {
   tc?: Tc[]
 }
 
-export interface SdtContentRow extends BaseType {
+export interface SdtContentRow extends UnistNode {
   type: 'element'
   name: 'w:sdtContentRow'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<SdtContentRowMap>[]
 }
 
@@ -3132,10 +3137,10 @@ export interface SdtContentRowMap {
   tr?: Row[]
 }
 
-export interface SdtContentRun extends BaseType {
+export interface SdtContentRun extends UnistNode {
   type: 'element'
   name: 'w:sdtContentRun'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<SdtContentRunMap>[]
 }
 
@@ -3176,11 +3181,11 @@ export interface SdtContentRunMap {
   subDoc?: Rel[]
 }
 
-export interface SdtDate extends BaseType {
+export interface SdtDate extends UnistNode {
   type: 'element'
   name: 'w:sdtDate'
   attributes: {
-    fullDate?: Date
+    fullDate?: string
   }
   children: RequiredMap<SdtDateMap>[]
 }
@@ -3192,7 +3197,7 @@ export interface SdtDateMap {
   storeMappedDataAs?: SdtDateMappingType
 }
 
-export interface SdtDateMappingType extends BaseType {
+export interface SdtDateMappingType extends UnistNode {
   type: 'element'
   name: 'w:sdtDateMappingType'
   attributes: {
@@ -3201,10 +3206,10 @@ export interface SdtDateMappingType extends BaseType {
   children: []
 }
 
-export interface SdtDocPart extends BaseType {
+export interface SdtDocPart extends UnistNode {
   type: 'element'
   name: 'w:sdtDocPart'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<SdtDocPartMap>[]
 }
 
@@ -3214,7 +3219,7 @@ export interface SdtDocPartMap {
   docPartUnique?: OnOff
 }
 
-export interface SdtDropDownList extends BaseType {
+export interface SdtDropDownList extends UnistNode {
   type: 'element'
   name: 'w:sdtDropDownList'
   attributes: {
@@ -3227,10 +3232,10 @@ export interface SdtDropDownListMap {
   listItem?: SdtListItem[]
 }
 
-export interface SdtEndPr extends BaseType {
+export interface SdtEndPr extends UnistNode {
   type: 'element'
   name: 'w:sdtEndPr'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<SdtEndPrMap>[]
 }
 
@@ -3238,7 +3243,7 @@ export interface SdtEndPrMap {
   rPr?: RPr[]
 }
 
-export interface SdtListItem extends BaseType {
+export interface SdtListItem extends UnistNode {
   type: 'element'
   name: 'w:sdtListItem'
   attributes: {
@@ -3248,10 +3253,10 @@ export interface SdtListItem extends BaseType {
   children: []
 }
 
-export interface SdtPr extends BaseType {
+export interface SdtPr extends UnistNode {
   type: 'element'
   name: 'w:sdtPr'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<SdtPrMap>[]
 }
 
@@ -3281,10 +3286,10 @@ export interface SdtPrMap {
   text?: SdtText
 }
 
-export interface SdtRow extends BaseType {
+export interface SdtRow extends UnistNode {
   type: 'element'
   name: 'w:sdtRow'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<SdtRowMap>[]
 }
 
@@ -3294,10 +3299,10 @@ export interface SdtRowMap {
   sdtPr?: SdtPr
 }
 
-export interface SdtRun extends BaseType {
+export interface SdtRun extends UnistNode {
   type: 'element'
   name: 'w:sdtRun'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<SdtRunMap>[]
 }
 
@@ -3307,7 +3312,7 @@ export interface SdtRunMap {
   sdtPr?: SdtPr
 }
 
-export interface SdtText extends BaseType {
+export interface SdtText extends UnistNode {
   type: 'element'
   name: 'w:sdtText'
   attributes: {
@@ -3316,7 +3321,7 @@ export interface SdtText extends BaseType {
   children: []
 }
 
-export interface SectPr extends BaseType {
+export interface SectPr extends UnistNode {
   type: 'element'
   name: 'w:sectPr'
   attributes: {
@@ -3353,7 +3358,7 @@ export interface SectPrMap {
   vAlign?: VerticalJc
 }
 
-export interface SectPrBase extends BaseType {
+export interface SectPrBase extends UnistNode {
   type: 'element'
   name: 'w:sectPrBase'
   attributes: {
@@ -3390,7 +3395,7 @@ export interface SectPrBaseMap {
 export type SectPrChange = TrackChange & {
   type: 'element'
   name: 'w:sectPrChange'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<SectPrChangeMap>[]
 }
 
@@ -3398,7 +3403,7 @@ export interface SectPrChangeMap {
   sectPr?: SectPrBase
 }
 
-export interface SectType extends BaseType {
+export interface SectType extends UnistNode {
   type: 'element'
   name: 'w:sectType'
   attributes: {
@@ -3407,10 +3412,10 @@ export interface SectType extends BaseType {
   children: []
 }
 
-export interface Settings extends BaseType {
+export interface Settings extends UnistNode {
   type: 'element'
   name: 'w:settings'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<SettingsMap>[]
 }
 
@@ -3513,7 +3518,7 @@ export interface SettingsMap {
   zoom?: Zoom
 }
 
-export interface Shd extends BaseType {
+export interface Shd extends UnistNode {
   type: 'element'
   name: 'w:shd'
   attributes: {
@@ -3530,7 +3535,7 @@ export interface Shd extends BaseType {
   children: []
 }
 
-export interface SignedHpsMeasure extends BaseType {
+export interface SignedHpsMeasure extends UnistNode {
   type: 'element'
   name: 'w:signedHpsMeasure'
   attributes: {
@@ -3539,7 +3544,7 @@ export interface SignedHpsMeasure extends BaseType {
   children: []
 }
 
-export interface SignedTwipsMeasure extends BaseType {
+export interface SignedTwipsMeasure extends UnistNode {
   type: 'element'
   name: 'w:signedTwipsMeasure'
   attributes: {
@@ -3548,7 +3553,7 @@ export interface SignedTwipsMeasure extends BaseType {
   children: []
 }
 
-export interface SimpleField extends BaseType {
+export interface SimpleField extends UnistNode {
   type: 'element'
   name: 'w:simpleField'
   attributes: {
@@ -3596,10 +3601,10 @@ export interface SimpleFieldMap {
   subDoc?: Rel[]
 }
 
-export interface SmartTagPr extends BaseType {
+export interface SmartTagPr extends UnistNode {
   type: 'element'
   name: 'w:smartTagPr'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<SmartTagPrMap>[]
 }
 
@@ -3607,7 +3612,7 @@ export interface SmartTagPrMap {
   attr?: Attr[]
 }
 
-export interface SmartTagRun extends BaseType {
+export interface SmartTagRun extends UnistNode {
   type: 'element'
   name: 'w:smartTagRun'
   attributes: {
@@ -3655,7 +3660,7 @@ export interface SmartTagRunMap {
   subDoc?: Rel[]
 }
 
-export interface SmartTagType extends BaseType {
+export interface SmartTagType extends UnistNode {
   type: 'element'
   name: 'w:smartTagType'
   attributes: {
@@ -3666,23 +3671,23 @@ export interface SmartTagType extends BaseType {
   children: []
 }
 
-export interface Spacing extends BaseType {
+export interface Spacing extends UnistNode {
   type: 'element'
   name: 'w:spacing'
   attributes: {
     after?: string
     afterAutospacing?: string
-    afterLines?: number
+    afterLines?: string
     before?: string
     beforeAutospacing?: string
-    beforeLines?: number
+    beforeLines?: string
     line?: string
     lineRule?: LineSpacingRuleVal
   }
   children: []
 }
 
-export interface String extends BaseType {
+export interface String extends UnistNode {
   type: 'element'
   name: 'w:string'
   attributes: {
@@ -3691,7 +3696,7 @@ export interface String extends BaseType {
   children: []
 }
 
-export interface Style extends BaseType {
+export interface Style extends UnistNode {
   type: 'element'
   name: 'w:style'
   attributes: {
@@ -3728,7 +3733,7 @@ export interface StyleMap {
   unhideWhenUsed?: OnOff
 }
 
-export interface StylePaneFilter extends BaseType {
+export interface StylePaneFilter extends UnistNode {
   type: 'element'
   name: 'w:stylePaneFilter'
   attributes: {
@@ -3751,10 +3756,10 @@ export interface StylePaneFilter extends BaseType {
   children: []
 }
 
-export interface Styles extends BaseType {
+export interface Styles extends UnistNode {
   type: 'element'
   name: 'w:styles'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<StylesMap>[]
 }
 
@@ -3764,7 +3769,7 @@ export interface StylesMap {
   style?: Style[]
 }
 
-export interface StyleSort extends BaseType {
+export interface StyleSort extends UnistNode {
   type: 'element'
   name: 'w:styleSort'
   attributes: {
@@ -3773,7 +3778,7 @@ export interface StyleSort extends BaseType {
   children: []
 }
 
-export interface Sym extends BaseType {
+export interface Sym extends UnistNode {
   type: 'element'
   name: 'w:sym'
   attributes: {
@@ -3783,10 +3788,10 @@ export interface Sym extends BaseType {
   children: []
 }
 
-export interface Tabs extends BaseType {
+export interface Tabs extends UnistNode {
   type: 'element'
   name: 'w:tabs'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TabsMap>[]
 }
 
@@ -3794,7 +3799,7 @@ export interface TabsMap {
   tab: TabStop[]
 }
 
-export interface TabStop extends BaseType {
+export interface TabStop extends UnistNode {
   type: 'element'
   name: 'w:tabStop'
   attributes: {
@@ -3805,7 +3810,7 @@ export interface TabStop extends BaseType {
   children: []
 }
 
-export interface TargetScreenSz extends BaseType {
+export interface TargetScreenSz extends UnistNode {
   type: 'element'
   name: 'w:targetScreenSz'
   attributes: {
@@ -3814,10 +3819,10 @@ export interface TargetScreenSz extends BaseType {
   children: []
 }
 
-export interface Tbl extends BaseType {
+export interface Tbl extends UnistNode {
   type: 'element'
   name: 'w:tbl'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TblMap>[]
 }
 
@@ -3854,10 +3859,10 @@ export interface TblMap {
   tr?: Row[]
 }
 
-export interface TblBorders extends BaseType {
+export interface TblBorders extends UnistNode {
   type: 'element'
   name: 'w:tblBorders'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TblBordersMap>[]
 }
 
@@ -3870,10 +3875,10 @@ export interface TblBordersMap {
   top?: Border
 }
 
-export interface TblCellMar extends BaseType {
+export interface TblCellMar extends UnistNode {
   type: 'element'
   name: 'w:tblCellMar'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TblCellMarMap>[]
 }
 
@@ -3887,7 +3892,7 @@ export interface TblCellMarMap {
 export type TblGrid = TblGridBase & {
   type: 'element'
   name: 'w:tblGrid'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TblGridMap>[]
 }
 
@@ -3895,10 +3900,10 @@ export interface TblGridMap {
   tblGridChange?: TblGridChange
 }
 
-export interface TblGridBase extends BaseType {
+export interface TblGridBase extends UnistNode {
   type: 'element'
   name: 'w:tblGridBase'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TblGridBaseMap>[]
 }
 
@@ -3909,7 +3914,7 @@ export interface TblGridBaseMap {
 export type TblGridChange = Markup & {
   type: 'element'
   name: 'w:tblGridChange'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TblGridChangeMap>[]
 }
 
@@ -3917,7 +3922,7 @@ export interface TblGridChangeMap {
   tblGrid: TblGridBase
 }
 
-export interface TblGridCol extends BaseType {
+export interface TblGridCol extends UnistNode {
   type: 'element'
   name: 'w:tblGridCol'
   attributes: {
@@ -3926,7 +3931,7 @@ export interface TblGridCol extends BaseType {
   children: []
 }
 
-export interface TblLayoutType extends BaseType {
+export interface TblLayoutType extends UnistNode {
   type: 'element'
   name: 'w:tblLayoutType'
   attributes: {
@@ -3935,7 +3940,7 @@ export interface TblLayoutType extends BaseType {
   children: []
 }
 
-export interface TblLook extends BaseType {
+export interface TblLook extends UnistNode {
   type: 'element'
   name: 'w:tblLook'
   attributes: {
@@ -3949,7 +3954,7 @@ export interface TblLook extends BaseType {
   children: []
 }
 
-export interface TblOverlap extends BaseType {
+export interface TblOverlap extends UnistNode {
   type: 'element'
   name: 'w:tblOverlap'
   attributes: {
@@ -3958,7 +3963,7 @@ export interface TblOverlap extends BaseType {
   children: []
 }
 
-export interface TblPPr extends BaseType {
+export interface TblPPr extends UnistNode {
   type: 'element'
   name: 'w:tblPPr'
   attributes: {
@@ -3978,7 +3983,7 @@ export interface TblPPr extends BaseType {
 export type TblPr = TblPrBase & {
   type: 'element'
   name: 'w:tblPr'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TblPrMap>[]
 }
 
@@ -3986,10 +3991,10 @@ export interface TblPrMap {
   tblPrChange?: TblPrChange
 }
 
-export interface TblPrBase extends BaseType {
+export interface TblPrBase extends UnistNode {
   type: 'element'
   name: 'w:tblPrBase'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TblPrBaseMap>[]
 }
 
@@ -4016,7 +4021,7 @@ export interface TblPrBaseMap {
 export type TblPrChange = TrackChange & {
   type: 'element'
   name: 'w:tblPrChange'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TblPrChangeMap>[]
 }
 
@@ -4027,7 +4032,7 @@ export interface TblPrChangeMap {
 export type TblPrEx = TblPrExBase & {
   type: 'element'
   name: 'w:tblPrEx'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TblPrExMap>[]
 }
 
@@ -4035,10 +4040,10 @@ export interface TblPrExMap {
   tblPrExChange?: TblPrExChange
 }
 
-export interface TblPrExBase extends BaseType {
+export interface TblPrExBase extends UnistNode {
   type: 'element'
   name: 'w:tblPrExBase'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TblPrExBaseMap>[]
 }
 
@@ -4057,7 +4062,7 @@ export interface TblPrExBaseMap {
 export type TblPrExChange = TrackChange & {
   type: 'element'
   name: 'w:tblPrExChange'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TblPrExChangeMap>[]
 }
 
@@ -4065,7 +4070,7 @@ export interface TblPrExChangeMap {
   tblPrEx: TblPrExBase
 }
 
-export interface TblStylePr extends BaseType {
+export interface TblStylePr extends UnistNode {
   type: 'element'
   name: 'w:tblStylePr'
   attributes: {
@@ -4082,7 +4087,7 @@ export interface TblStylePrMap {
   trPr?: TrPr
 }
 
-export interface TblWidth extends BaseType {
+export interface TblWidth extends UnistNode {
   type: 'element'
   name: 'w:tblWidth'
   attributes: {
@@ -4092,7 +4097,7 @@ export interface TblWidth extends BaseType {
   children: []
 }
 
-export interface Tc extends BaseType {
+export interface Tc extends UnistNode {
   type: 'element'
   name: 'w:tc'
   attributes: {
@@ -4135,10 +4140,10 @@ export interface TcMap {
   tcPr?: TcPr
 }
 
-export interface TcBorders extends BaseType {
+export interface TcBorders extends UnistNode {
   type: 'element'
   name: 'w:tcBorders'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TcBordersMap>[]
 }
 
@@ -4153,10 +4158,10 @@ export interface TcBordersMap {
   tr2bl?: Border
 }
 
-export interface TcMar extends BaseType {
+export interface TcMar extends UnistNode {
   type: 'element'
   name: 'w:tcMar'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TcMarMap>[]
 }
 
@@ -4170,7 +4175,7 @@ export interface TcMarMap {
 export type TcPr = TcPrInner & {
   type: 'element'
   name: 'w:tcPr'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TcPrMap>[]
 }
 
@@ -4178,10 +4183,10 @@ export interface TcPrMap {
   tcPrChange?: TcPrChange
 }
 
-export interface TcPrBase extends BaseType {
+export interface TcPrBase extends UnistNode {
   type: 'element'
   name: 'w:tcPrBase'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TcPrBaseMap>[]
 }
 
@@ -4204,7 +4209,7 @@ export interface TcPrBaseMap {
 export type TcPrChange = TrackChange & {
   type: 'element'
   name: 'w:tcPrChange'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TcPrChangeMap>[]
 }
 
@@ -4215,7 +4220,7 @@ export interface TcPrChangeMap {
 export type TcPrInner = TcPrBase & {
   type: 'element'
   name: 'w:tcPrInner'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TcPrInnerMap>[]
 }
 
@@ -4225,7 +4230,7 @@ export interface TcPrInnerMap {
   cellMerge?: CellMergeTrackChange
 }
 
-export interface T extends BaseType {
+export interface T extends UnistNode {
   type: 'element'
   name: 'w:text'
   attributes: {
@@ -4238,7 +4243,7 @@ export type Text = UnistLiteral & {
   value: string
 }
 
-export interface TextAlignment extends BaseType {
+export interface TextAlignment extends UnistNode {
   type: 'element'
   name: 'w:textAlignment'
   attributes: {
@@ -4247,7 +4252,7 @@ export interface TextAlignment extends BaseType {
   children: []
 }
 
-export interface TextboxTightWrap extends BaseType {
+export interface TextboxTightWrap extends UnistNode {
   type: 'element'
   name: 'w:textboxTightWrap'
   attributes: {
@@ -4256,7 +4261,7 @@ export interface TextboxTightWrap extends BaseType {
   children: []
 }
 
-export interface TextDirection extends BaseType {
+export interface TextDirection extends UnistNode {
   type: 'element'
   name: 'w:textDirection'
   attributes: {
@@ -4265,7 +4270,7 @@ export interface TextDirection extends BaseType {
   children: []
 }
 
-export interface TextEffect extends BaseType {
+export interface TextEffect extends UnistNode {
   type: 'element'
   name: 'w:textEffect'
   attributes: {
@@ -4274,12 +4279,13 @@ export interface TextEffect extends BaseType {
   children: []
 }
 
-export interface TextScale extends BaseType {
+export interface TextScale extends UnistNode {
   type: 'element'
   name: 'w:textScale'
   attributes: {
     val: string
   }
+  children: []
 }
 
 export type TopPageBorder = PageBorder & {
@@ -4295,10 +4301,11 @@ export type TrackChange = Markup & {
   type: 'element'
   name: 'w:trackChange' | string
   attributes: {
-    id: number
+    id: string
     author: string
-    date?: Date
+    date?: string
   }
+  children: any[]
 }
 
 export type TrackChangeRange = TrackChange & {
@@ -4307,10 +4314,10 @@ export type TrackChangeRange = TrackChange & {
   attributes: {
     displacedByCustomXml?: DisplacedByCustomXmlVal
   }
-  children: []
+  children: any[]
 }
 
-export interface TrackChangesView extends BaseType {
+export interface TrackChangesView extends UnistNode {
   type: 'element'
   name: 'w:trackChangesView'
   attributes: {
@@ -4325,7 +4332,7 @@ export interface TrackChangesView extends BaseType {
 export type TrPr = TrPrBase & {
   type: 'element'
   name: 'w:trPr'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TrPrMap>[]
 }
 
@@ -4335,10 +4342,10 @@ export interface TrPrMap {
   trPrChange?: TrPrChange
 }
 
-export interface TrPrBase extends BaseType {
+export interface TrPrBase extends UnistNode {
   type: 'element'
   name: 'w:trPrBase'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TrPrBaseMap>[]
 }
 
@@ -4360,7 +4367,7 @@ export interface TrPrBaseMap {
 export type TrPrChange = TrackChange & {
   type: 'element'
   name: 'w:trPrChange'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<TrPrChangeMap>[]
 }
 
@@ -4368,7 +4375,7 @@ export interface TrPrChangeMap {
   trPr: TrPrBase
 }
 
-export interface TwipsMeasure extends BaseType {
+export interface TwipsMeasure extends UnistNode {
   type: 'element'
   name: 'w:twipsMeasure'
   attributes: {
@@ -4377,7 +4384,7 @@ export interface TwipsMeasure extends BaseType {
   children: []
 }
 
-export interface Underline extends BaseType {
+export interface Underline extends UnistNode {
   type: 'element'
   name: 'w:underline'
   attributes: {
@@ -4390,16 +4397,16 @@ export interface Underline extends BaseType {
   children: []
 }
 
-export interface UnsignedDecimalNumber extends BaseType {
+export interface UnsignedDecimalNumber extends UnistNode {
   type: 'element'
   name: 'w:unsignedDecimalNumber'
   attributes: {
-    val: number
+    val: string
   }
   children: []
 }
 
-export interface VerticalAlignRun extends BaseType {
+export interface VerticalAlignRun extends UnistNode {
   type: 'element'
   name: 'w:verticalAlignRun'
   attributes: {
@@ -4408,7 +4415,7 @@ export interface VerticalAlignRun extends BaseType {
   children: []
 }
 
-export interface VerticalJc extends BaseType {
+export interface VerticalJc extends UnistNode {
   type: 'element'
   name: 'w:verticalJc'
   attributes: {
@@ -4417,7 +4424,7 @@ export interface VerticalJc extends BaseType {
   children: []
 }
 
-export interface View extends BaseType {
+export interface View extends UnistNode {
   type: 'element'
   name: 'w:view'
   attributes: {
@@ -4426,7 +4433,7 @@ export interface View extends BaseType {
   children: []
 }
 
-export interface VMerge extends BaseType {
+export interface VMerge extends UnistNode {
   type: 'element'
   name: 'w:vMerge'
   attributes: {
@@ -4435,10 +4442,10 @@ export interface VMerge extends BaseType {
   children: []
 }
 
-export interface WebSettings extends BaseType {
+export interface WebSettings extends UnistNode {
   type: 'element'
   name: 'w:webSettings'
-  attributes: {}
+  //attributes: {}
   children: RequiredMap<WebSettingsMap>[]
 }
 
@@ -4457,7 +4464,7 @@ export interface WebSettingsMap {
   targetScreenSz?: TargetScreenSz
 }
 
-export interface WriteProtection extends BaseType {
+export interface WriteProtection extends UnistNode {
   type: 'element'
   name: 'w:writeProtection'
   attributes: {
@@ -4465,12 +4472,12 @@ export interface WriteProtection extends BaseType {
     hashValue?: string
     recommended?: string
     saltValue?: string
-    spinCount?: number
+    spinCount?: string
   }
   children: []
 }
 
-export interface WritingStyle extends BaseType {
+export interface WritingStyle extends UnistNode {
   type: 'element'
   name: 'w:writingStyle'
   attributes: {
@@ -4484,13 +4491,14 @@ export interface WritingStyle extends BaseType {
   children: []
 }
 
-export interface Zoom extends BaseType {
+export interface Zoom extends UnistNode {
   type: 'element'
   name: 'w:zoom'
   attributes: {
     percent: string
     val?: ZoomVal
   }
+  children: []
 }
 
 export type AnnotationVMergeVal = 'cont' | 'rest'
@@ -5264,7 +5272,7 @@ export type WrapVal =
 
 export type ZoomVal = 'none' | 'fullPage' | 'bestFit' | 'textFit'
 
-export interface document extends BaseType {
+export interface document extends UnistNode {
   comments: Comments
   document: Document
   endnotes: Endnotes

@@ -4,7 +4,7 @@ describe('jastscript', () => {
   it('parses the bare minimum', () => {
     expect(j('p')).toEqual({
       children: [],
-      attributes: {},
+      //attributes: {},
       name: 'p',
       type: 'element',
     })
@@ -26,7 +26,7 @@ describe('jastscript', () => {
       name: 'article',
       attributes: { something: 'new' },
       children: [
-        { type: 'element', name: 'front', children: [], attributes: {} },
+        { type: 'element', name: 'front', children: [], //attributes: {} },
       ],
     })
   })

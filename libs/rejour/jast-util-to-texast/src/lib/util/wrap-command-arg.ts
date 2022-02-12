@@ -12,7 +12,7 @@ export function wrapCommandArg(
   const fakeNode: P = {
     type: 'element',
     name: 'p',
-    attributes: {},
+    //attributes: {},
     children: nodes,
   }
   return {

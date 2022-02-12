@@ -29,7 +29,7 @@ export interface Anchor extends BaseType {
     relativeHeight: number
     $simplePos: boolean
   }
-  children: RequiredMap<AnchorMap>
+  children: RequiredMap<AnchorMap>[]
 }
 
 export interface AnchorMap {
@@ -63,8 +63,8 @@ export interface EffectExtent extends BaseType {
 export interface GraphicFrame extends BaseType {
   type: 'element'
   name: 'wp:graphicFrame'
-  attributes: {}
-  children: RequiredMap<GraphicFrameMap>
+  //attributes: {}
+  children: RequiredMap<GraphicFrameMap>[]
 }
 
 export interface GraphicFrameMap {
@@ -84,7 +84,7 @@ export interface Inline extends BaseType {
     distR?: number
     distT?: number
   }
-  children: RequiredMap<InlineMap>
+  children: RequiredMap<InlineMap>[]
 }
 
 export interface InlineMap {
@@ -102,7 +102,7 @@ export interface LinkedTextboxInformation extends BaseType {
     id: number
     seq: number
   }
-  children: RequiredMap<LinkedTextboxInformationMap>
+  children: RequiredMap<LinkedTextboxInformationMap>[]
 }
 
 export interface LinkedTextboxInformationMap {
@@ -115,7 +115,7 @@ export interface PosH extends BaseType {
   attributes: {
     relativeFrom: RelFromHVal
   }
-  children: RequiredMap<PosHMap>
+  children: RequiredMap<PosHMap>[]
 }
 
 export interface PosHMap {
@@ -129,7 +129,7 @@ export interface PosV extends BaseType {
   attributes: {
     relativeFrom: RelFromVVal
   }
-  children: RequiredMap<PosVMap>
+  children: RequiredMap<PosVMap>[]
 }
 
 export interface PosVMap {
@@ -143,7 +143,7 @@ export interface TextboxInfo extends BaseType {
   attributes: {
     id?: number
   }
-  children: RequiredMap<TextboxInfoMap>
+  children: RequiredMap<TextboxInfoMap>[]
 }
 
 export interface TextboxInfoMap {
@@ -154,8 +154,8 @@ export interface TextboxInfoMap {
 export interface TxbxContent extends BaseType {
   type: 'element'
   name: 'wp:txbxContent'
-  attributes: {}
-  children: RequiredMap<TxbxContentMap>
+  //attributes: {}
+  children: RequiredMap<TxbxContentMap>[]
 }
 
 export interface TxbxContentMap {
@@ -194,8 +194,8 @@ export interface TxbxContentMap {
 export interface WordprocessingCanvas extends BaseType {
   type: 'element'
   name: 'wp:wordprocessingCanvas'
-  attributes: {}
-  children: RequiredMap<WordprocessingCanvasMap>
+  //attributes: {}
+  children: RequiredMap<WordprocessingCanvasMap>[]
 }
 
 export interface WordprocessingCanvasMap {
@@ -216,7 +216,7 @@ export interface WordprocessingContentPart extends BaseType {
     bwMode?: a.BlackWhiteModeVal
     id: string
   }
-  children: RequiredMap<WordprocessingContentPartMap>
+  children: RequiredMap<WordprocessingContentPartMap>[]
 }
 
 export interface WordprocessingContentPartMap {
@@ -228,8 +228,8 @@ export interface WordprocessingContentPartMap {
 export interface WordprocessingContentPartNonVisual extends BaseType {
   type: 'element'
   name: 'wp:wordprocessingContentPartNonVisual'
-  attributes: {}
-  children: RequiredMap<WordprocessingContentPartNonVisualMap>
+  //attributes: {}
+  children: RequiredMap<WordprocessingContentPartNonVisualMap>[]
 }
 
 export interface WordprocessingContentPartNonVisualMap {
@@ -240,8 +240,8 @@ export interface WordprocessingContentPartNonVisualMap {
 export interface WordprocessingGroup extends BaseType {
   type: 'element'
   name: 'wp:wordprocessingGroup'
-  attributes: {}
-  children: RequiredMap<WordprocessingGroupMap>
+  //attributes: {}
+  children: RequiredMap<WordprocessingGroupMap>[]
 }
 
 export interface WordprocessingGroupMap {
@@ -262,7 +262,7 @@ export interface WordprocessingShape extends BaseType {
   attributes: {
     normalEastAsianFlow?: boolean
   }
-  children: RequiredMap<WordprocessingShapeMap>
+  children: RequiredMap<WordprocessingShapeMap>[]
 }
 
 export interface WordprocessingShapeMap {
@@ -288,7 +288,7 @@ export interface WrapPath extends BaseType {
   attributes: {
     edited?: boolean
   }
-  children: RequiredMap<WrapPathMap>
+  children: RequiredMap<WrapPathMap>[]
 }
 
 export interface WrapPathMap {
@@ -306,7 +306,7 @@ export interface WrapSquare extends BaseType {
     distT?: number
     wrapText: WrapTextVal
   }
-  children: RequiredMap<WrapSquareMap>
+  children: RequiredMap<WrapSquareMap>[]
 }
 
 export interface WrapSquareMap {
@@ -321,7 +321,7 @@ export interface WrapThrough extends BaseType {
     distR?: number
     wrapText: WrapTextVal
   }
-  children: RequiredMap<WrapThroughMap>
+  children: RequiredMap<WrapThroughMap>[]
 }
 
 export interface WrapThroughMap {
@@ -336,7 +336,7 @@ export interface WrapTight extends BaseType {
     distR?: number
     wrapText: WrapTextVal
   }
-  children: RequiredMap<WrapTightMap>
+  children: RequiredMap<WrapTightMap>[]
 }
 
 export interface WrapTightMap {
@@ -350,7 +350,7 @@ export interface WrapTopBottom extends BaseType {
     distB?: number
     distT?: number
   }
-  children: RequiredMap<WrapTopBottomMap>
+  children: RequiredMap<WrapTopBottomMap>[]
 }
 
 export interface WrapTopBottomMap {

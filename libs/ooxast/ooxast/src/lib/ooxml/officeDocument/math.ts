@@ -13,8 +13,8 @@ interface BaseType {
 export interface Acc extends BaseType {
   type: 'element'
   name: 'm:acc'
-  attributes: {}
-  children: RequiredMap<AccMap>
+  //attributes: {}
+  children: RequiredMap<AccMap>[]
 }
 
 export interface AccMap {
@@ -25,8 +25,8 @@ export interface AccMap {
 export interface AccPr extends BaseType {
   type: 'element'
   name: 'm:accPr'
-  attributes: {}
-  children: RequiredMap<AccPrMap>
+  //attributes: {}
+  children: RequiredMap<AccPrMap>[]
 }
 
 export interface AccPrMap {
@@ -37,8 +37,8 @@ export interface AccPrMap {
 export interface Bar extends BaseType {
   type: 'element'
   name: 'm:bar'
-  attributes: {}
-  children: RequiredMap<BarMap>
+  //attributes: {}
+  children: RequiredMap<BarMap>[]
 }
 
 export interface BarMap {
@@ -49,8 +49,8 @@ export interface BarMap {
 export interface BarPr extends BaseType {
   type: 'element'
   name: 'm:barPr'
-  attributes: {}
-  children: RequiredMap<BarPrMap>
+  //attributes: {}
+  children: RequiredMap<BarPrMap>[]
 }
 
 export interface BarPrMap {
@@ -61,8 +61,8 @@ export interface BarPrMap {
 export interface BorderBox extends BaseType {
   type: 'element'
   name: 'm:borderBox'
-  attributes: {}
-  children: RequiredMap<BorderBoxMap>
+  //attributes: {}
+  children: RequiredMap<BorderBoxMap>[]
 }
 
 export interface BorderBoxMap {
@@ -73,8 +73,8 @@ export interface BorderBoxMap {
 export interface BorderBoxPr extends BaseType {
   type: 'element'
   name: 'm:borderBoxPr'
-  attributes: {}
-  children: RequiredMap<BorderBoxPrMap>
+  //attributes: {}
+  children: RequiredMap<BorderBoxPrMap>[]
 }
 
 export interface BorderBoxPrMap {
@@ -92,8 +92,8 @@ export interface BorderBoxPrMap {
 export interface Box extends BaseType {
   type: 'element'
   name: 'm:box'
-  attributes: {}
-  children: RequiredMap<BoxMap>
+  //attributes: {}
+  children: RequiredMap<BoxMap>[]
 }
 
 export interface BoxMap {
@@ -104,8 +104,8 @@ export interface BoxMap {
 export interface BoxPr extends BaseType {
   type: 'element'
   name: 'm:boxPr'
-  attributes: {}
-  children: RequiredMap<BoxPrMap>
+  //attributes: {}
+  children: RequiredMap<BoxPrMap>[]
 }
 
 export interface BoxPrMap {
@@ -147,8 +147,8 @@ export interface Char extends BaseType {
 export interface CtrlPr extends BaseType {
   type: 'element'
   name: 'm:ctrlPr'
-  attributes: {}
-  children: RequiredMap<CtrlPrMap>
+  //attributes: {}
+  children: RequiredMap<CtrlPrMap>[]
 }
 
 export interface CtrlPrMap {
@@ -160,8 +160,8 @@ export interface CtrlPrMap {
 export interface D extends BaseType {
   type: 'element'
   name: 'm:d'
-  attributes: {}
-  children: RequiredMap<DMap>
+  //attributes: {}
+  children: RequiredMap<DMap>[]
 }
 
 export interface DMap {
@@ -172,8 +172,8 @@ export interface DMap {
 export interface DPr extends BaseType {
   type: 'element'
   name: 'm:dPr'
-  attributes: {}
-  children: RequiredMap<DPrMap>
+  //attributes: {}
+  children: RequiredMap<DPrMap>[]
 }
 
 export interface DPrMap {
@@ -188,8 +188,8 @@ export interface DPrMap {
 export interface EqArr extends BaseType {
   type: 'element'
   name: 'm:eqArr'
-  attributes: {}
-  children: RequiredMap<EqArrMap>
+  //attributes: {}
+  children: RequiredMap<EqArrMap>[]
 }
 
 export interface EqArrMap {
@@ -200,8 +200,8 @@ export interface EqArrMap {
 export interface EqArrPr extends BaseType {
   type: 'element'
   name: 'm:eqArrPr'
-  attributes: {}
-  children: RequiredMap<EqArrPrMap>
+  //attributes: {}
+  children: RequiredMap<EqArrPrMap>[]
 }
 
 export interface EqArrPrMap {
@@ -216,8 +216,8 @@ export interface EqArrPrMap {
 export interface F extends BaseType {
   type: 'element'
   name: 'm:f'
-  attributes: {}
-  children: RequiredMap<FMap>
+  //attributes: {}
+  children: RequiredMap<FMap>[]
 }
 
 export interface FMap {
@@ -229,8 +229,8 @@ export interface FMap {
 export interface FPr extends BaseType {
   type: 'element'
   name: 'm:fPr'
-  attributes: {}
-  children: RequiredMap<FPrMap>
+  //attributes: {}
+  children: RequiredMap<FPrMap>[]
 }
 
 export interface FPrMap {
@@ -250,8 +250,8 @@ export interface FType extends BaseType {
 export interface Func extends BaseType {
   type: 'element'
   name: 'm:func'
-  attributes: {}
-  children: RequiredMap<FuncMap>
+  //attributes: {}
+  children: RequiredMap<FuncMap>[]
 }
 
 export interface FuncMap {
@@ -263,8 +263,8 @@ export interface FuncMap {
 export interface FuncPr extends BaseType {
   type: 'element'
   name: 'm:funcPr'
-  attributes: {}
-  children: RequiredMap<FuncPrMap>
+  //attributes: {}
+  children: RequiredMap<FuncPrMap>[]
 }
 
 export interface FuncPrMap {
@@ -274,8 +274,8 @@ export interface FuncPrMap {
 export interface GroupChr extends BaseType {
   type: 'element'
   name: 'm:groupChr'
-  attributes: {}
-  children: RequiredMap<GroupChrMap>
+  //attributes: {}
+  children: RequiredMap<GroupChrMap>[]
 }
 
 export interface GroupChrMap {
@@ -286,8 +286,8 @@ export interface GroupChrMap {
 export interface GroupChrPr extends BaseType {
   type: 'element'
   name: 'm:groupChrPr'
-  attributes: {}
-  children: RequiredMap<GroupChrPrMap>
+  //attributes: {}
+  children: RequiredMap<GroupChrPrMap>[]
 }
 
 export interface GroupChrPrMap {
@@ -327,8 +327,8 @@ export interface LimLoc extends BaseType {
 export interface LimLow extends BaseType {
   type: 'element'
   name: 'm:limLow'
-  attributes: {}
-  children: RequiredMap<LimLowMap>
+  //attributes: {}
+  children: RequiredMap<LimLowMap>[]
 }
 
 export interface LimLowMap {
@@ -340,8 +340,8 @@ export interface LimLowMap {
 export interface LimLowPr extends BaseType {
   type: 'element'
   name: 'm:limLowPr'
-  attributes: {}
-  children: RequiredMap<LimLowPrMap>
+  //attributes: {}
+  children: RequiredMap<LimLowPrMap>[]
 }
 
 export interface LimLowPrMap {
@@ -351,8 +351,8 @@ export interface LimLowPrMap {
 export interface LimUpp extends BaseType {
   type: 'element'
   name: 'm:limUpp'
-  attributes: {}
-  children: RequiredMap<LimUppMap>
+  //attributes: {}
+  children: RequiredMap<LimUppMap>[]
 }
 
 export interface LimUppMap {
@@ -364,8 +364,8 @@ export interface LimUppMap {
 export interface LimUppPr extends BaseType {
   type: 'element'
   name: 'm:limUppPr'
-  attributes: {}
-  children: RequiredMap<LimUppPrMap>
+  //attributes: {}
+  children: RequiredMap<LimUppPrMap>[]
 }
 
 export interface LimUppPrMap {
@@ -375,8 +375,8 @@ export interface LimUppPrMap {
 export interface M extends BaseType {
   type: 'element'
   name: 'm:m'
-  attributes: {}
-  children: RequiredMap<MMap>
+  //attributes: {}
+  children: RequiredMap<MMap>[]
 }
 
 export interface MMap {
@@ -396,8 +396,8 @@ export interface ManualBreak extends BaseType {
 export interface MathPr extends BaseType {
   type: 'element'
   name: 'm:mathPr'
-  attributes: {}
-  children: RequiredMap<MathPrMap>
+  //attributes: {}
+  children: RequiredMap<MathPrMap>[]
 }
 
 export interface MathPrMap {
@@ -422,8 +422,8 @@ export interface MathPrMap {
 export interface MC extends BaseType {
   type: 'element'
   name: 'm:mC'
-  attributes: {}
-  children: RequiredMap<MCMap>
+  //attributes: {}
+  children: RequiredMap<MCMap>[]
 }
 
 export interface MCMap {
@@ -433,8 +433,8 @@ export interface MCMap {
 export interface MCPr extends BaseType {
   type: 'element'
   name: 'm:mCPr'
-  attributes: {}
-  children: RequiredMap<MCPrMap>
+  //attributes: {}
+  children: RequiredMap<MCPrMap>[]
 }
 
 export interface MCPrMap {
@@ -445,8 +445,8 @@ export interface MCPrMap {
 export interface MCS extends BaseType {
   type: 'element'
   name: 'm:mCS'
-  attributes: {}
-  children: RequiredMap<MCSMap>
+  //attributes: {}
+  children: RequiredMap<MCSMap>[]
 }
 
 export interface MCSMap {
@@ -456,8 +456,8 @@ export interface MCSMap {
 export interface MPr extends BaseType {
   type: 'element'
   name: 'm:mPr'
-  attributes: {}
-  children: RequiredMap<MPrMap>
+  //attributes: {}
+  children: RequiredMap<MPrMap>[]
 }
 
 export interface MPrMap {
@@ -475,8 +475,8 @@ export interface MPrMap {
 export interface MR extends BaseType {
   type: 'element'
   name: 'm:mR'
-  attributes: {}
-  children: RequiredMap<MRMap>
+  //attributes: {}
+  children: RequiredMap<MRMap>[]
 }
 
 export interface MRMap {
@@ -486,8 +486,8 @@ export interface MRMap {
 export interface Nary extends BaseType {
   type: 'element'
   name: 'm:nary'
-  attributes: {}
-  children: RequiredMap<NaryMap>
+  //attributes: {}
+  children: RequiredMap<NaryMap>[]
 }
 
 export interface NaryMap {
@@ -500,8 +500,8 @@ export interface NaryMap {
 export interface NaryPr extends BaseType {
   type: 'element'
   name: 'm:naryPr'
-  attributes: {}
-  children: RequiredMap<NaryPrMap>
+  //attributes: {}
+  children: RequiredMap<NaryPrMap>[]
 }
 
 export interface NaryPrMap {
@@ -516,8 +516,8 @@ export interface NaryPrMap {
 export interface OMath extends BaseType {
   type: 'element'
   name: 'm:oMath'
-  attributes: {}
-  children: RequiredMap<OMathMap>
+  //attributes: {}
+  children: RequiredMap<OMathMap>[]
 }
 
 export interface OMathMap {
@@ -576,8 +576,8 @@ export interface OMathMap {
 export interface OMathArg extends BaseType {
   type: 'element'
   name: 'm:oMathArg'
-  attributes: {}
-  children: RequiredMap<OMathArgMap>
+  //attributes: {}
+  children: RequiredMap<OMathArgMap>[]
 }
 
 export interface OMathArgMap {
@@ -638,8 +638,8 @@ export interface OMathArgMap {
 export interface OMathArgPr extends BaseType {
   type: 'element'
   name: 'm:oMathArgPr'
-  attributes: {}
-  children: RequiredMap<OMathArgPrMap>
+  //attributes: {}
+  children: RequiredMap<OMathArgPrMap>[]
 }
 
 export interface OMathArgPrMap {
@@ -658,8 +658,8 @@ export interface OMathJc extends BaseType {
 export interface OMathPara extends BaseType {
   type: 'element'
   name: 'm:oMathPara'
-  attributes: {}
-  children: RequiredMap<OMathParaMap>
+  //attributes: {}
+  children: RequiredMap<OMathParaMap>[]
 }
 
 export interface OMathParaMap {
@@ -670,8 +670,8 @@ export interface OMathParaMap {
 export interface OMathParaPr extends BaseType {
   type: 'element'
   name: 'm:oMathParaPr'
-  attributes: {}
-  children: RequiredMap<OMathParaPrMap>
+  //attributes: {}
+  children: RequiredMap<OMathParaPrMap>[]
 }
 
 export interface OMathParaPrMap {
@@ -690,8 +690,8 @@ export interface OnOff extends BaseType {
 export interface Phant extends BaseType {
   type: 'element'
   name: 'm:phant'
-  attributes: {}
-  children: RequiredMap<PhantMap>
+  //attributes: {}
+  children: RequiredMap<PhantMap>[]
 }
 
 export interface PhantMap {
@@ -702,8 +702,8 @@ export interface PhantMap {
 export interface PhantPr extends BaseType {
   type: 'element'
   name: 'm:phantPr'
-  attributes: {}
-  children: RequiredMap<PhantPrMap>
+  //attributes: {}
+  children: RequiredMap<PhantPrMap>[]
 }
 
 export interface PhantPrMap {
@@ -718,8 +718,8 @@ export interface PhantPrMap {
 export interface R extends BaseType {
   type: 'element'
   name: 'm:r'
-  attributes: {}
-  children: RequiredMap<RMap>
+  //attributes: {}
+  children: RequiredMap<RMap>[]
 }
 
 export interface RMap {
@@ -763,8 +763,8 @@ export interface RMap {
 export interface Rad extends BaseType {
   type: 'element'
   name: 'm:rad'
-  attributes: {}
-  children: RequiredMap<RadMap>
+  //attributes: {}
+  children: RequiredMap<RadMap>[]
 }
 
 export interface RadMap {
@@ -776,8 +776,8 @@ export interface RadMap {
 export interface RadPr extends BaseType {
   type: 'element'
   name: 'm:radPr'
-  attributes: {}
-  children: RequiredMap<RadPrMap>
+  //attributes: {}
+  children: RequiredMap<RadPrMap>[]
 }
 
 export interface RadPrMap {
@@ -788,8 +788,8 @@ export interface RadPrMap {
 export interface RPR extends BaseType {
   type: 'element'
   name: 'm:rPR'
-  attributes: {}
-  children: RequiredMap<RPRMap>
+  //attributes: {}
+  children: RequiredMap<RPRMap>[]
 }
 
 export interface RPRMap {
@@ -831,8 +831,8 @@ export interface SpacingRule extends BaseType {
 export interface SPre extends BaseType {
   type: 'element'
   name: 'm:sPre'
-  attributes: {}
-  children: RequiredMap<SPreMap>
+  //attributes: {}
+  children: RequiredMap<SPreMap>[]
 }
 
 export interface SPreMap {
@@ -845,8 +845,8 @@ export interface SPreMap {
 export interface SPrePr extends BaseType {
   type: 'element'
   name: 'm:sPrePr'
-  attributes: {}
-  children: RequiredMap<SPrePrMap>
+  //attributes: {}
+  children: RequiredMap<SPrePrMap>[]
 }
 
 export interface SPrePrMap {
@@ -856,8 +856,8 @@ export interface SPrePrMap {
 export interface SSub extends BaseType {
   type: 'element'
   name: 'm:sSub'
-  attributes: {}
-  children: RequiredMap<SSubMap>
+  //attributes: {}
+  children: RequiredMap<SSubMap>[]
 }
 
 export interface SSubMap {
@@ -869,8 +869,8 @@ export interface SSubMap {
 export interface SSubPr extends BaseType {
   type: 'element'
   name: 'm:sSubPr'
-  attributes: {}
-  children: RequiredMap<SSubPrMap>
+  //attributes: {}
+  children: RequiredMap<SSubPrMap>[]
 }
 
 export interface SSubPrMap {
@@ -880,8 +880,8 @@ export interface SSubPrMap {
 export interface SSubSup extends BaseType {
   type: 'element'
   name: 'm:sSubSup'
-  attributes: {}
-  children: RequiredMap<SSubSupMap>
+  //attributes: {}
+  children: RequiredMap<SSubSupMap>[]
 }
 
 export interface SSubSupMap {
@@ -894,8 +894,8 @@ export interface SSubSupMap {
 export interface SSubSupPr extends BaseType {
   type: 'element'
   name: 'm:sSubSupPr'
-  attributes: {}
-  children: RequiredMap<SSubSupPrMap>
+  //attributes: {}
+  children: RequiredMap<SSubSupPrMap>[]
 }
 
 export interface SSubSupPrMap {
@@ -906,8 +906,8 @@ export interface SSubSupPrMap {
 export interface SSup extends BaseType {
   type: 'element'
   name: 'm:sSup'
-  attributes: {}
-  children: RequiredMap<SSupMap>
+  //attributes: {}
+  children: RequiredMap<SSupMap>[]
 }
 
 export interface SSupMap {
@@ -919,8 +919,8 @@ export interface SSupMap {
 export interface SSupPr extends BaseType {
   type: 'element'
   name: 'm:sSupPr'
-  attributes: {}
-  children: RequiredMap<SSupPrMap>
+  //attributes: {}
+  children: RequiredMap<SSupPrMap>[]
 }
 
 export interface SSupPrMap {
@@ -948,7 +948,7 @@ export interface Style extends BaseType {
 export interface T extends BaseType {
   type: 'element'
   name: 'm:t'
-  attributes: {}
+  //attributes: {}
   children: Text[]
 }
 

@@ -12,7 +12,6 @@ import {
   Attributes as OoxastProperties,
   //Node,
   Parent,
-  Parent,
   Body,
   Text,
   Root,
@@ -86,30 +85,30 @@ export type JWithoutProps = (
   children?: string | Array<JastContent>
 ) => JastContent
 
-export type JWithPropsSpecific<TNode extends JastContent = JastContent> = (
-  node: Node,
-  type: TNode['type'] extends 'root' | 'text'
-    ? TNode['type'] extends 'root'
-      ? 'root'
-      : 'text'
-    : Exclude<TNode, Text | Root>['name'],
-  props?: Attributes,
-  children?:
-    | string
-    | (TNode extends JastParent ? TNode['children'][number][] : never)
-) => TNode
+// export type JWithPropsSpecific<TNode extends JastContent = JastContent> = (
+//   node: Node,
+//   type: TNode['type'] extends 'root' | 'text'
+//     ? TNode['type'] extends 'root'
+//       ? 'root'
+//       : 'text'
+//     : Exclude<TNode, Text | Root>['name'],
+//   props?: Attributes,
+//   children?:
+//     | string
+//     | (TNode extends JastParent ? TNode['children'][number][] : never)
+// ) => TNode
 
-export type JWithoutPropsSpecific<TNode extends JastContent = JastContent> = (
-  node: Node,
-  type: TNode['type'] extends 'root' | 'text'
-    ? TNode['type'] extends 'root'
-      ? 'root'
-      : 'text'
-    : Exclude<TNode, Text | Root>['name'],
-  children?:
-    | string
-    | (TNode extends JastParent ? TNode['children'][number][] : never)
-) => TNode
+// export type JWithoutPropsSpecific<TNode extends JastContent = JastContent> = (
+//   node: Node,
+//   type: TNode['type'] extends 'root' | 'text'
+//     ? TNode['type'] extends 'root'
+//       ? 'root'
+//       : 'text'
+//     : Exclude<TNode, Text | Root>['name'],
+//   children?:
+//     | string
+//     | (TNode extends JastParent ? TNode['children'][number][] : never)
+// ) => TNode
 
 export type J = JWithProps & JWithoutProps & Context
 

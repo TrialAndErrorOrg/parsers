@@ -8,11 +8,22 @@ import {
   Node as XastNode,
   Instruction,
 } from 'xast'
+export type {
+  Parent,
+  XastNode as Node,
+  Instruction,
+  XastLiteral as Literal,
+  XastAttributes as Attributes,
+}
+import { document } from './ooxml/wordprocessingml/main'
 
+export type Root = XastRoot & {
+  children: RequiredMap<document>[]
+}
 export interface TagLiteral extends XastElement {
   children: []
 }
-
+/*
 export type TableContent = TblContent | TrContent | TcContent
 export type ParagraphContent = PContent | RContent | Text
 export type Content =
@@ -25,10 +36,9 @@ export type Content =
 // export interface Parent extends Omit<XastParent, 'children'> {
 //   children: (XastElement['children'][number] | TagLiteral)[]
 // }
-export interface Root extends XastRoot {
-  children: (Instruction | Text | Document | Footnotes)[]
-}
+*/
 
+/*
 export type FootnotesContent = Footnotes['children'][number]
 export interface Footnotes extends Parent {
   name: 'w:footnotes'
@@ -67,9 +77,9 @@ export interface Body extends Parent {
   children: (P | SectPr | Tbl)[]
 }
 
-/**
- * Stores information about page size and such.
- */
+///**
+// * Stores information about page size and such.
+//
 export interface SectPr extends Parent {
   name: 'w:sectPr'
 }
@@ -133,13 +143,13 @@ export interface T extends Parent {
 }
 /**
  * Run properties
- */
+
 export interface RPr extends Parent {
   name: 'w:rPr'
 }
 /**
  * Paragraph properties
- */
+
 export interface PPr extends Parent {
   name: 'w:rPr'
 }
@@ -184,6 +194,7 @@ export type {
   XastNode as Node,
 }
 
+*/
 export type NoUndefined<T> = Exclude<T, undefined>
 export type ArrayValueMaybe<T> = T extends any[]
   ? ValuesType<NoUndefined<T>>

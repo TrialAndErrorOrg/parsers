@@ -304,9 +304,8 @@ export interface Integer2 extends BaseType {
 export interface Integer255 extends BaseType {
   type: 'element'
   name: 'm:integer255'
-  attributes: {
-    val: number
-  }
+  $1
+  children: []
 }
 
 export interface LimLoc extends BaseType {

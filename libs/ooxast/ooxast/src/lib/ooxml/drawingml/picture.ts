@@ -4,11 +4,8 @@ import { RequiredMap } from '../../ooxast'
 // Source files:
 // http://localhost:3000/dml-picture.xsd
 
-interface BaseType {
-  _exists: boolean
-  _namespace: string
-}
-export interface Picture extends BaseType {
+import { Node as UnistNode } from 'unist'
+export interface Picture extends UnistNode {
   type: 'element'
   name: 'dpct:picture'
   //attributes: {}
@@ -21,7 +18,7 @@ export interface PictureMap {
   spPr: a.ShapeProperties
 }
 
-export interface PictureNonVisual extends BaseType {
+export interface PictureNonVisual extends UnistNode {
   type: 'element'
   name: 'dpct:pictureNonVisual'
   //attributes: {}
@@ -33,7 +30,7 @@ export interface PictureNonVisualMap {
   cNvPr: a.NonVisualDrawingProps
 }
 
-export interface document extends BaseType {
+export interface document extends UnistNode {
   pic: Picture
 }
 export var document: document

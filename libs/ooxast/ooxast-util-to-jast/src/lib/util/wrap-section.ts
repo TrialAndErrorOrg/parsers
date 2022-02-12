@@ -1,5 +1,5 @@
 import { J } from '../types'
-import { convertElement } from 'xast-util-is-element'
+import { isElement } from 'xast-util-is-element'
 import { Parent, Element, P, Node, Body } from '../types'
 import { getPStyle } from './get-pstyle'
 import { Sec, Body as JastBody } from 'jjast'
@@ -32,13 +32,17 @@ export function wrapSec(
     : (j(parent, 'sec', all(j, parentSec)) as Sec)
 }
 
-const isP = convertElement<P>('w:p')
+//const isP = convertElement<P>('w:p')
 
-export function isHeading(elem: Node): elem is P {
-  return !!(isP(elem) && getPStyle(elem)?.toLowerCase()?.includes('heading'))
+export function isHeading(elem: Element): boolean {
+  return !!(
+    isElement(elem) &&
+    elem.name === 'p' &&
+    getPStyle(elem)?.toLowerCase()?.includes('heading')
+  )
 }
 
-export function getHeadingLevel(p: P) {
+export function getHeadingLevel(p: Element) {
   const lastNumber = getPStyle(p)?.toLowerCase()?.slice(-1)
   return !lastNumber ? null : parseInt(lastNumber, 10)
 }

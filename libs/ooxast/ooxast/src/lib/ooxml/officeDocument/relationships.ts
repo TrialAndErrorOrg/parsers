@@ -4,11 +4,8 @@ import { RequiredMap } from '../../ooxast'
 // Source files:
 // http://localhost:3000/shared-relationshipReference.xsd
 
-interface BaseType {
-  _exists: boolean
-  _namespace: string
-}
+import { Node as UnistNode } from 'unist'
 export type RelationshipIdVal = string
 
-export interface document extends BaseType {}
+export interface document extends UnistNode {}
 export var document: document

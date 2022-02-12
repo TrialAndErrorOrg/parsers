@@ -4,11 +4,8 @@ import { RequiredMap } from '../../ooxast'
 // Source files:
 // http://localhost:3000/shared-customXmlSchemaProperties.xsd
 
-interface BaseType {
-  _exists: boolean
-  _namespace: string
-}
-export interface Schema extends BaseType {
+import { Node as UnistNode } from 'unist'
+export interface Schema extends UnistNode {
   type: 'element'
   name: 'Schema'
   attributes: {
@@ -20,7 +17,7 @@ export interface Schema extends BaseType {
   children: []
 }
 
-export interface SchemaLibrary extends BaseType {
+export interface SchemaLibrary extends UnistNode {
   type: 'element'
   name: 'SchemaLibrary'
   //attributes: {}
@@ -31,7 +28,7 @@ export interface SchemaLibraryMap {
   schema?: Schema[]
 }
 
-export interface document extends BaseType {
+export interface document extends UnistNode {
   schemaLibrary: SchemaLibrary
 }
 export var document: document

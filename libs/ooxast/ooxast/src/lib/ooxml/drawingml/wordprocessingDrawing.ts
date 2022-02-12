@@ -9,25 +9,22 @@ import { RequiredMap } from '../../ooxast'
 // Source files:
 // http://localhost:3000/dml-wordprocessingDrawing.xsd
 
-interface BaseType {
-  _exists: boolean
-  _namespace: string
-}
-export interface Anchor extends BaseType {
+import { Node as UnistNode } from 'unist'
+export interface Anchor extends UnistNode {
   type: 'element'
   name: 'wp:anchor'
   attributes: {
-    allowOverlap: boolean
-    behindDoc: boolean
-    distB?: number
-    distL?: number
-    distR?: number
-    distT?: number
-    hidden?: boolean
-    layoutInCell: boolean
-    locked: boolean
-    relativeHeight: number
-    $simplePos: boolean
+    allowOverlap: string
+    behindDoc: string
+    distB?: string
+    distL?: string
+    distR?: string
+    distT?: string
+    hidden?: string
+    layoutInCell: string
+    locked: string
+    relativeHeight: string
+    $simplePos: string
   }
   children: RequiredMap<AnchorMap>[]
 }
@@ -48,7 +45,7 @@ export interface AnchorMap {
   wrapTopAndBottom: WrapTopBottom
 }
 
-export interface EffectExtent extends BaseType {
+export interface EffectExtent extends UnistNode {
   type: 'element'
   name: 'wp:effectExtent'
   attributes: {
@@ -60,7 +57,7 @@ export interface EffectExtent extends BaseType {
   children: []
 }
 
-export interface GraphicFrame extends BaseType {
+export interface GraphicFrame extends UnistNode {
   type: 'element'
   name: 'wp:graphicFrame'
   //attributes: {}
@@ -75,14 +72,14 @@ export interface GraphicFrameMap {
   xfrm: a.Transform2D
 }
 
-export interface Inline extends BaseType {
+export interface Inline extends UnistNode {
   type: 'element'
   name: 'wp:inline'
   attributes: {
-    distB?: number
-    distL?: number
-    distR?: number
-    distT?: number
+    distB?: string
+    distL?: string
+    distR?: string
+    distT?: string
   }
   children: RequiredMap<InlineMap>[]
 }
@@ -95,12 +92,12 @@ export interface InlineMap {
   graphic: a.GraphicalObject
 }
 
-export interface LinkedTextboxInformation extends BaseType {
+export interface LinkedTextboxInformation extends UnistNode {
   type: 'element'
   name: 'wp:linkedTextboxInformation'
   attributes: {
-    id: number
-    seq: number
+    id: string
+    seq: string
   }
   children: RequiredMap<LinkedTextboxInformationMap>[]
 }
@@ -109,7 +106,7 @@ export interface LinkedTextboxInformationMap {
   extLst?: a.OfficeArtExtensionList
 }
 
-export interface PosH extends BaseType {
+export interface PosH extends UnistNode {
   type: 'element'
   name: 'wp:posH'
   attributes: {
@@ -120,10 +117,10 @@ export interface PosH extends BaseType {
 
 export interface PosHMap {
   align: AlignHVal
-  posOffset: number
+  posOffset: string
 }
 
-export interface PosV extends BaseType {
+export interface PosV extends UnistNode {
   type: 'element'
   name: 'wp:posV'
   attributes: {
@@ -134,14 +131,14 @@ export interface PosV extends BaseType {
 
 export interface PosVMap {
   align: AlignVVal
-  posOffset: number
+  posOffset: string
 }
 
-export interface TextboxInfo extends BaseType {
+export interface TextboxInfo extends UnistNode {
   type: 'element'
   name: 'wp:textboxInfo'
   attributes: {
-    id?: number
+    id?: string
   }
   children: RequiredMap<TextboxInfoMap>[]
 }
@@ -151,7 +148,7 @@ export interface TextboxInfoMap {
   txbxContent: TxbxContent
 }
 
-export interface TxbxContent extends BaseType {
+export interface TxbxContent extends UnistNode {
   type: 'element'
   name: 'wp:txbxContent'
   //attributes: {}
@@ -191,7 +188,7 @@ export interface TxbxContentMap {
   tbl?: w.Tbl[]
 }
 
-export interface WordprocessingCanvas extends BaseType {
+export interface WordprocessingCanvas extends UnistNode {
   type: 'element'
   name: 'wp:wordprocessingCanvas'
   //attributes: {}
@@ -209,7 +206,7 @@ export interface WordprocessingCanvasMap {
   wsp?: WordprocessingShape[]
 }
 
-export interface WordprocessingContentPart extends BaseType {
+export interface WordprocessingContentPart extends UnistNode {
   type: 'element'
   name: 'wp:wordprocessingContentPart'
   attributes: {
@@ -225,7 +222,7 @@ export interface WordprocessingContentPartMap {
   xfrm?: a.Transform2D
 }
 
-export interface WordprocessingContentPartNonVisual extends BaseType {
+export interface WordprocessingContentPartNonVisual extends UnistNode {
   type: 'element'
   name: 'wp:wordprocessingContentPartNonVisual'
   //attributes: {}
@@ -237,7 +234,7 @@ export interface WordprocessingContentPartNonVisualMap {
   cNvPr?: a.NonVisualDrawingProps
 }
 
-export interface WordprocessingGroup extends BaseType {
+export interface WordprocessingGroup extends UnistNode {
   type: 'element'
   name: 'wp:wordprocessingGroup'
   //attributes: {}
@@ -256,11 +253,11 @@ export interface WordprocessingGroupMap {
   wsp?: WordprocessingShape[]
 }
 
-export interface WordprocessingShape extends BaseType {
+export interface WordprocessingShape extends UnistNode {
   type: 'element'
   name: 'wp:wordprocessingShape'
   attributes: {
-    normalEastAsianFlow?: boolean
+    normalEastAsianFlow?: string
   }
   children: RequiredMap<WordprocessingShapeMap>[]
 }
@@ -277,16 +274,17 @@ export interface WordprocessingShapeMap {
   txbx?: TextboxInfo
 }
 
-export interface WrapNone extends BaseType {
+export interface WrapNone extends UnistNode {
   type: 'element'
   name: 'wp:wrapNone'
+  children: []
 }
 
-export interface WrapPath extends BaseType {
+export interface WrapPath extends UnistNode {
   type: 'element'
   name: 'wp:wrapPath'
   attributes: {
-    edited?: boolean
+    edited?: string
   }
   children: RequiredMap<WrapPathMap>[]
 }
@@ -296,14 +294,14 @@ export interface WrapPathMap {
   start: a.Point2D
 }
 
-export interface WrapSquare extends BaseType {
+export interface WrapSquare extends UnistNode {
   type: 'element'
   name: 'wp:wrapSquare'
   attributes: {
-    distB?: number
-    distL?: number
-    distR?: number
-    distT?: number
+    distB?: string
+    distL?: string
+    distR?: string
+    distT?: string
     wrapText: WrapTextVal
   }
   children: RequiredMap<WrapSquareMap>[]
@@ -313,12 +311,12 @@ export interface WrapSquareMap {
   effectExtent?: EffectExtent
 }
 
-export interface WrapThrough extends BaseType {
+export interface WrapThrough extends UnistNode {
   type: 'element'
   name: 'wp:wrapThrough'
   attributes: {
-    distL?: number
-    distR?: number
+    distL?: string
+    distR?: string
     wrapText: WrapTextVal
   }
   children: RequiredMap<WrapThroughMap>[]
@@ -328,12 +326,12 @@ export interface WrapThroughMap {
   wrapPolygon: WrapPath
 }
 
-export interface WrapTight extends BaseType {
+export interface WrapTight extends UnistNode {
   type: 'element'
   name: 'wp:wrapTight'
   attributes: {
-    distL?: number
-    distR?: number
+    distL?: string
+    distR?: string
     wrapText: WrapTextVal
   }
   children: RequiredMap<WrapTightMap>[]
@@ -343,12 +341,12 @@ export interface WrapTightMap {
   wrapPolygon: WrapPath
 }
 
-export interface WrapTopBottom extends BaseType {
+export interface WrapTopBottom extends UnistNode {
   type: 'element'
   name: 'wp:wrapTopBottom'
   attributes: {
-    distB?: number
-    distT?: number
+    distB?: string
+    distT?: string
   }
   children: RequiredMap<WrapTopBottomMap>[]
 }
@@ -387,7 +385,7 @@ export type WrapDistanceVal = number
 
 export type WrapTextVal = 'bothSides' | 'left' | 'right' | 'largest'
 
-export interface document extends BaseType {
+export interface document extends UnistNode {
   anchor: Anchor
   inline: Inline
   wgp: WordprocessingGroup

@@ -203,6 +203,7 @@ export type Bookmark = BookmarkRange & {
   attributes: {
     name: string
   }
+  children: []
 }
 
 export type BookmarkRange = MarkupRange & {
@@ -229,6 +230,7 @@ export interface Border extends UnistNode {
     themeTint?: string
     val: BorderVal
   }
+  children: []
 }
 
 export type BottomPageBorder = PageBorder & {
@@ -1067,6 +1069,7 @@ export interface Em extends UnistNode {
 export interface Empty extends UnistNode {
   type: 'element'
   name: 'w:empty'
+  children: []
 }
 
 export interface Endnotes extends UnistNode {

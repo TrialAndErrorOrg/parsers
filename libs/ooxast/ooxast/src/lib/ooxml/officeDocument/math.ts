@@ -6,11 +6,8 @@ import { RequiredMap } from '../../ooxast'
 // Source files:
 // http://localhost:3000/shared-math.xsd
 
-interface BaseType {
-  _exists: boolean
-  _namespace: string
-}
-export interface Acc extends BaseType {
+import { Node as UnistNode } from 'unist'
+export interface Acc extends UnistNode {
   type: 'element'
   name: 'm:acc'
   //attributes: {}
@@ -22,7 +19,7 @@ export interface AccMap {
   e: OMathArg
 }
 
-export interface AccPr extends BaseType {
+export interface AccPr extends UnistNode {
   type: 'element'
   name: 'm:accPr'
   //attributes: {}
@@ -34,7 +31,7 @@ export interface AccPrMap {
   ctrlPr?: CtrlPr
 }
 
-export interface Bar extends BaseType {
+export interface Bar extends UnistNode {
   type: 'element'
   name: 'm:bar'
   //attributes: {}
@@ -46,7 +43,7 @@ export interface BarMap {
   e: OMathArg
 }
 
-export interface BarPr extends BaseType {
+export interface BarPr extends UnistNode {
   type: 'element'
   name: 'm:barPr'
   //attributes: {}
@@ -58,7 +55,7 @@ export interface BarPrMap {
   pos?: TopBot
 }
 
-export interface BorderBox extends BaseType {
+export interface BorderBox extends UnistNode {
   type: 'element'
   name: 'm:borderBox'
   //attributes: {}
@@ -70,7 +67,7 @@ export interface BorderBoxMap {
   e: OMathArg
 }
 
-export interface BorderBoxPr extends BaseType {
+export interface BorderBoxPr extends UnistNode {
   type: 'element'
   name: 'm:borderBoxPr'
   //attributes: {}
@@ -89,7 +86,7 @@ export interface BorderBoxPrMap {
   strikeV?: OnOff
 }
 
-export interface Box extends BaseType {
+export interface Box extends UnistNode {
   type: 'element'
   name: 'm:box'
   //attributes: {}
@@ -101,7 +98,7 @@ export interface BoxMap {
   e: OMathArg
 }
 
-export interface BoxPr extends BaseType {
+export interface BoxPr extends UnistNode {
   type: 'element'
   name: 'm:boxPr'
   //attributes: {}
@@ -117,7 +114,7 @@ export interface BoxPrMap {
   opEmu?: OnOff
 }
 
-export interface BreakBin extends BaseType {
+export interface BreakBin extends UnistNode {
   type: 'element'
   name: 'm:breakBin'
   attributes: {
@@ -126,7 +123,7 @@ export interface BreakBin extends BaseType {
   children: []
 }
 
-export interface BreakBinSub extends BaseType {
+export interface BreakBinSub extends UnistNode {
   type: 'element'
   name: 'm:breakBinSub'
   attributes: {
@@ -135,7 +132,7 @@ export interface BreakBinSub extends BaseType {
   children: []
 }
 
-export interface Char extends BaseType {
+export interface Char extends UnistNode {
   type: 'element'
   name: 'm:char'
   attributes: {
@@ -144,7 +141,7 @@ export interface Char extends BaseType {
   children: []
 }
 
-export interface CtrlPr extends BaseType {
+export interface CtrlPr extends UnistNode {
   type: 'element'
   name: 'm:ctrlPr'
   //attributes: {}
@@ -157,7 +154,7 @@ export interface CtrlPrMap {
   rPr?: w.RPr
 }
 
-export interface D extends BaseType {
+export interface D extends UnistNode {
   type: 'element'
   name: 'm:d'
   //attributes: {}
@@ -169,7 +166,7 @@ export interface DMap {
   e: OMathArg[]
 }
 
-export interface DPr extends BaseType {
+export interface DPr extends UnistNode {
   type: 'element'
   name: 'm:dPr'
   //attributes: {}
@@ -185,7 +182,7 @@ export interface DPrMap {
   shp?: Shp
 }
 
-export interface EqArr extends BaseType {
+export interface EqArr extends UnistNode {
   type: 'element'
   name: 'm:eqArr'
   //attributes: {}
@@ -197,7 +194,7 @@ export interface EqArrMap {
   eqArrPr?: EqArrPr
 }
 
-export interface EqArrPr extends BaseType {
+export interface EqArrPr extends UnistNode {
   type: 'element'
   name: 'm:eqArrPr'
   //attributes: {}
@@ -213,7 +210,7 @@ export interface EqArrPrMap {
   rSpRule?: SpacingRule
 }
 
-export interface F extends BaseType {
+export interface F extends UnistNode {
   type: 'element'
   name: 'm:f'
   //attributes: {}
@@ -226,7 +223,7 @@ export interface FMap {
   num: OMathArg
 }
 
-export interface FPr extends BaseType {
+export interface FPr extends UnistNode {
   type: 'element'
   name: 'm:fPr'
   //attributes: {}
@@ -238,7 +235,7 @@ export interface FPrMap {
   type?: FType
 }
 
-export interface FType extends BaseType {
+export interface FType extends UnistNode {
   type: 'element'
   name: 'm:fType'
   attributes: {
@@ -247,7 +244,7 @@ export interface FType extends BaseType {
   children: []
 }
 
-export interface Func extends BaseType {
+export interface Func extends UnistNode {
   type: 'element'
   name: 'm:func'
   //attributes: {}
@@ -260,7 +257,7 @@ export interface FuncMap {
   funcPr?: FuncPr
 }
 
-export interface FuncPr extends BaseType {
+export interface FuncPr extends UnistNode {
   type: 'element'
   name: 'm:funcPr'
   //attributes: {}
@@ -271,7 +268,7 @@ export interface FuncPrMap {
   ctrlPr?: CtrlPr
 }
 
-export interface GroupChr extends BaseType {
+export interface GroupChr extends UnistNode {
   type: 'element'
   name: 'm:groupChr'
   //attributes: {}
@@ -283,7 +280,7 @@ export interface GroupChrMap {
   groupChrPr?: GroupChrPr
 }
 
-export interface GroupChrPr extends BaseType {
+export interface GroupChrPr extends UnistNode {
   type: 'element'
   name: 'm:groupChrPr'
   //attributes: {}
@@ -297,25 +294,25 @@ export interface GroupChrPrMap {
   vertJc?: TopBot
 }
 
-export interface Integer2 extends BaseType {
+export interface Integer2 extends UnistNode {
   type: 'element'
   name: 'm:integer2'
   attributes: {
-    val: number
+    val: string
   }
   children: []
 }
 
-export interface Integer255 extends BaseType {
+export interface Integer255 extends UnistNode {
   type: 'element'
   name: 'm:integer255'
   attributes: {
-    val: number
+    val: string
   }
   children: []
 }
 
-export interface LimLoc extends BaseType {
+export interface LimLoc extends UnistNode {
   type: 'element'
   name: 'm:limLoc'
   attributes: {
@@ -324,7 +321,7 @@ export interface LimLoc extends BaseType {
   children: []
 }
 
-export interface LimLow extends BaseType {
+export interface LimLow extends UnistNode {
   type: 'element'
   name: 'm:limLow'
   //attributes: {}
@@ -337,7 +334,7 @@ export interface LimLowMap {
   limLowPr?: LimLowPr
 }
 
-export interface LimLowPr extends BaseType {
+export interface LimLowPr extends UnistNode {
   type: 'element'
   name: 'm:limLowPr'
   //attributes: {}
@@ -348,7 +345,7 @@ export interface LimLowPrMap {
   ctrlPr?: CtrlPr
 }
 
-export interface LimUpp extends BaseType {
+export interface LimUpp extends UnistNode {
   type: 'element'
   name: 'm:limUpp'
   //attributes: {}
@@ -361,7 +358,7 @@ export interface LimUppMap {
   limUppPr?: LimUppPr
 }
 
-export interface LimUppPr extends BaseType {
+export interface LimUppPr extends UnistNode {
   type: 'element'
   name: 'm:limUppPr'
   //attributes: {}
@@ -372,7 +369,7 @@ export interface LimUppPrMap {
   ctrlPr?: CtrlPr
 }
 
-export interface M extends BaseType {
+export interface M extends UnistNode {
   type: 'element'
   name: 'm:m'
   //attributes: {}
@@ -384,16 +381,16 @@ export interface MMap {
   mr: MR[]
 }
 
-export interface ManualBreak extends BaseType {
+export interface ManualBreak extends UnistNode {
   type: 'element'
   name: 'm:manualBreak'
   attributes: {
-    alnAt: number
+    alnAt: string
   }
   children: []
 }
 
-export interface MathPr extends BaseType {
+export interface MathPr extends UnistNode {
   type: 'element'
   name: 'm:mathPr'
   //attributes: {}
@@ -419,7 +416,7 @@ export interface MathPrMap {
   wrapRight?: OnOff
 }
 
-export interface MC extends BaseType {
+export interface MC extends UnistNode {
   type: 'element'
   name: 'm:mC'
   //attributes: {}
@@ -430,7 +427,7 @@ export interface MCMap {
   mcPr?: MCPr
 }
 
-export interface MCPr extends BaseType {
+export interface MCPr extends UnistNode {
   type: 'element'
   name: 'm:mCPr'
   //attributes: {}
@@ -442,7 +439,7 @@ export interface MCPrMap {
   mcJc?: XAlign
 }
 
-export interface MCS extends BaseType {
+export interface MCS extends UnistNode {
   type: 'element'
   name: 'm:mCS'
   //attributes: {}
@@ -453,7 +450,7 @@ export interface MCSMap {
   mc: MC[]
 }
 
-export interface MPr extends BaseType {
+export interface MPr extends UnistNode {
   type: 'element'
   name: 'm:mPr'
   //attributes: {}
@@ -472,7 +469,7 @@ export interface MPrMap {
   rSpRule?: SpacingRule
 }
 
-export interface MR extends BaseType {
+export interface MR extends UnistNode {
   type: 'element'
   name: 'm:mR'
   //attributes: {}
@@ -483,7 +480,7 @@ export interface MRMap {
   e: OMathArg[]
 }
 
-export interface Nary extends BaseType {
+export interface Nary extends UnistNode {
   type: 'element'
   name: 'm:nary'
   //attributes: {}
@@ -497,7 +494,7 @@ export interface NaryMap {
   sup: OMathArg
 }
 
-export interface NaryPr extends BaseType {
+export interface NaryPr extends UnistNode {
   type: 'element'
   name: 'm:naryPr'
   //attributes: {}
@@ -513,7 +510,7 @@ export interface NaryPrMap {
   supHide?: OnOff
 }
 
-export interface OMath extends BaseType {
+export interface OMath extends UnistNode {
   type: 'element'
   name: 'm:oMath'
   //attributes: {}
@@ -573,7 +570,7 @@ export interface OMathMap {
   sSup?: SSup[]
 }
 
-export interface OMathArg extends BaseType {
+export interface OMathArg extends UnistNode {
   type: 'element'
   name: 'm:oMathArg'
   //attributes: {}
@@ -635,7 +632,7 @@ export interface OMathArgMap {
   sSup?: SSup[]
 }
 
-export interface OMathArgPr extends BaseType {
+export interface OMathArgPr extends UnistNode {
   type: 'element'
   name: 'm:oMathArgPr'
   //attributes: {}
@@ -646,7 +643,7 @@ export interface OMathArgPrMap {
   argSz?: Integer2
 }
 
-export interface OMathJc extends BaseType {
+export interface OMathJc extends UnistNode {
   type: 'element'
   name: 'm:oMathJc'
   attributes: {
@@ -655,7 +652,7 @@ export interface OMathJc extends BaseType {
   children: []
 }
 
-export interface OMathPara extends BaseType {
+export interface OMathPara extends UnistNode {
   type: 'element'
   name: 'm:oMathPara'
   //attributes: {}
@@ -667,7 +664,7 @@ export interface OMathParaMap {
   oMathParaPr?: OMathParaPr
 }
 
-export interface OMathParaPr extends BaseType {
+export interface OMathParaPr extends UnistNode {
   type: 'element'
   name: 'm:oMathParaPr'
   //attributes: {}
@@ -678,7 +675,7 @@ export interface OMathParaPrMap {
   jc?: OMathJc
 }
 
-export interface OnOff extends BaseType {
+export interface OnOff extends UnistNode {
   type: 'element'
   name: 'm:onOff'
   attributes: {
@@ -687,7 +684,7 @@ export interface OnOff extends BaseType {
   children: []
 }
 
-export interface Phant extends BaseType {
+export interface Phant extends UnistNode {
   type: 'element'
   name: 'm:phant'
   //attributes: {}
@@ -699,7 +696,7 @@ export interface PhantMap {
   phantPr?: PhantPr
 }
 
-export interface PhantPr extends BaseType {
+export interface PhantPr extends UnistNode {
   type: 'element'
   name: 'm:phantPr'
   //attributes: {}
@@ -715,7 +712,7 @@ export interface PhantPrMap {
   zeroWid?: OnOff
 }
 
-export interface R extends BaseType {
+export interface R extends UnistNode {
   type: 'element'
   name: 'm:r'
   //attributes: {}
@@ -760,7 +757,7 @@ export interface RMap {
   t?: Text[]
 }
 
-export interface Rad extends BaseType {
+export interface Rad extends UnistNode {
   type: 'element'
   name: 'm:rad'
   //attributes: {}
@@ -773,7 +770,7 @@ export interface RadMap {
   radPr?: RadPr
 }
 
-export interface RadPr extends BaseType {
+export interface RadPr extends UnistNode {
   type: 'element'
   name: 'm:radPr'
   //attributes: {}
@@ -785,7 +782,7 @@ export interface RadPrMap {
   degHide?: OnOff
 }
 
-export interface RPR extends BaseType {
+export interface RPR extends UnistNode {
   type: 'element'
   name: 'm:rPR'
   //attributes: {}
@@ -801,7 +798,7 @@ export interface RPRMap {
   sty?: Style
 }
 
-export interface Script extends BaseType {
+export interface Script extends UnistNode {
   type: 'element'
   name: 'm:script'
   attributes: {
@@ -810,7 +807,7 @@ export interface Script extends BaseType {
   children: []
 }
 
-export interface Shp extends BaseType {
+export interface Shp extends UnistNode {
   type: 'element'
   name: 'm:shp'
   attributes: {
@@ -819,16 +816,16 @@ export interface Shp extends BaseType {
   children: []
 }
 
-export interface SpacingRule extends BaseType {
+export interface SpacingRule extends UnistNode {
   type: 'element'
   name: 'm:spacingRule'
   attributes: {
-    val: number
+    val: string
   }
   children: []
 }
 
-export interface SPre extends BaseType {
+export interface SPre extends UnistNode {
   type: 'element'
   name: 'm:sPre'
   //attributes: {}
@@ -842,7 +839,7 @@ export interface SPreMap {
   sup: OMathArg
 }
 
-export interface SPrePr extends BaseType {
+export interface SPrePr extends UnistNode {
   type: 'element'
   name: 'm:sPrePr'
   //attributes: {}
@@ -853,7 +850,7 @@ export interface SPrePrMap {
   ctrlPr?: CtrlPr
 }
 
-export interface SSub extends BaseType {
+export interface SSub extends UnistNode {
   type: 'element'
   name: 'm:sSub'
   //attributes: {}
@@ -866,7 +863,7 @@ export interface SSubMap {
   sub: OMathArg
 }
 
-export interface SSubPr extends BaseType {
+export interface SSubPr extends UnistNode {
   type: 'element'
   name: 'm:sSubPr'
   //attributes: {}
@@ -877,7 +874,7 @@ export interface SSubPrMap {
   ctrlPr?: CtrlPr
 }
 
-export interface SSubSup extends BaseType {
+export interface SSubSup extends UnistNode {
   type: 'element'
   name: 'm:sSubSup'
   //attributes: {}
@@ -891,7 +888,7 @@ export interface SSubSupMap {
   sup: OMathArg
 }
 
-export interface SSubSupPr extends BaseType {
+export interface SSubSupPr extends UnistNode {
   type: 'element'
   name: 'm:sSubSupPr'
   //attributes: {}
@@ -903,7 +900,7 @@ export interface SSubSupPrMap {
   ctrlPr?: CtrlPr
 }
 
-export interface SSup extends BaseType {
+export interface SSup extends UnistNode {
   type: 'element'
   name: 'm:sSup'
   //attributes: {}
@@ -916,7 +913,7 @@ export interface SSupMap {
   sup: OMathArg
 }
 
-export interface SSupPr extends BaseType {
+export interface SSupPr extends UnistNode {
   type: 'element'
   name: 'm:sSupPr'
   //attributes: {}
@@ -927,7 +924,7 @@ export interface SSupPrMap {
   ctrlPr?: CtrlPr
 }
 
-export interface String extends BaseType {
+export interface String extends UnistNode {
   type: 'element'
   name: 'm:string'
   attributes: {
@@ -936,7 +933,7 @@ export interface String extends BaseType {
   children: []
 }
 
-export interface Style extends BaseType {
+export interface Style extends UnistNode {
   type: 'element'
   name: 'm:style'
   attributes: {
@@ -945,14 +942,14 @@ export interface Style extends BaseType {
   children: []
 }
 
-export interface T extends BaseType {
+export interface T extends UnistNode {
   type: 'element'
   name: 'm:t'
   //attributes: {}
   children: Text[]
 }
 
-export interface TopBot extends BaseType {
+export interface TopBot extends UnistNode {
   type: 'element'
   name: 'm:topBot'
   attributes: {
@@ -961,7 +958,7 @@ export interface TopBot extends BaseType {
   children: []
 }
 
-export interface TwipsMeasure extends BaseType {
+export interface TwipsMeasure extends UnistNode {
   type: 'element'
   name: 'm:twipsMeasure'
   attributes: {
@@ -970,16 +967,16 @@ export interface TwipsMeasure extends BaseType {
   children: []
 }
 
-export interface UnSignedInteger extends BaseType {
+export interface UnSignedInteger extends UnistNode {
   type: 'element'
   name: 'm:unSignedInteger'
   attributes: {
-    val: number
+    val: string
   }
   children: []
 }
 
-export interface XAlign extends BaseType {
+export interface XAlign extends UnistNode {
   type: 'element'
   name: 'm:xAlign'
   attributes: {
@@ -988,12 +985,13 @@ export interface XAlign extends BaseType {
   children: []
 }
 
-export interface YAlign extends BaseType {
+export interface YAlign extends UnistNode {
   type: 'element'
   name: 'm:yAlign'
   attributes: {
     val: s.YAlignVal
   }
+  children: []
 }
 
 export type BreakBinVal = 'before' | 'after' | 'repeat'
@@ -1030,7 +1028,7 @@ export type TopBotVal = 'top' | 'bot'
 
 export type UnSignedIntegerVal = number
 
-export interface document extends BaseType {
+export interface document extends UnistNode {
   mathPr: MathPr
   oMath: OMath
   oMathPara: OMathPara

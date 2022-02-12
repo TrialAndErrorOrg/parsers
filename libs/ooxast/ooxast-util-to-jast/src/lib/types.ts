@@ -1,5 +1,6 @@
 import { Node as UnistNode, Parent as UnistParent } from 'unist'
 
+import { Element } from 'xast'
 import {
   Parent as JastParent,
   Content as JastContent,
@@ -115,7 +116,7 @@ export type J = JWithProps & JWithoutProps & Context
 export type {
   Parent,
   Root,
-  Parent as Element,
+  Element,
   JastContent,
   JastParent,
   JastRoot,

@@ -17,6 +17,7 @@ export interface Schema extends BaseType {
     schemaLocation: string
     uri: string
   }
+  children: []
 }
 
 export interface SchemaLibrary extends BaseType {

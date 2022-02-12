@@ -65,6 +65,7 @@ export interface Attr extends BaseType {
     uri: string
     val: string
   }
+  children: []
 }
 
 export interface AutoCaption extends BaseType {
@@ -74,6 +75,7 @@ export interface AutoCaption extends BaseType {
     caption: string
     name: string
   }
+  children: []
 }
 
 export interface AutoCaptions extends BaseType {
@@ -109,6 +111,7 @@ export interface Base64Binary extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface BdoContentRun extends BaseType {
@@ -213,6 +216,7 @@ export type BookmarkRange = MarkupRange & {
     colFirst?: number
     colLast?: number
   }
+  children: []
 }
 
 export interface Border extends BaseType {
@@ -238,6 +242,7 @@ export type BottomPageBorder = PageBorder & {
     bottomLeft?: string
     bottomRight?: string
   }
+  children: []
 }
 
 export interface Br extends BaseType {
@@ -247,6 +252,7 @@ export interface Br extends BaseType {
     clear?: BrClearVal
     type?: BrTypeVal
   }
+  children: []
 }
 
 export interface CalendarType extends BaseType {
@@ -255,6 +261,7 @@ export interface CalendarType extends BaseType {
   attributes: {
     val: s.CalendarTypeVal
   }
+  children: []
 }
 
 export interface Caption extends BaseType {
@@ -269,6 +276,7 @@ export interface Caption extends BaseType {
     pos?: CaptionPosVal
     sep?: ChapterSepVal
   }
+  children: []
 }
 
 export interface Captions extends BaseType {
@@ -290,6 +298,7 @@ export type CellMergeTrackChange = TrackChange & {
     vMerge?: AnnotationVMergeVal
     vMergeOrig?: AnnotationVMergeVal
   }
+  children: []
 }
 
 export interface CharacterSpacing extends BaseType {
@@ -298,6 +307,7 @@ export interface CharacterSpacing extends BaseType {
   attributes: {
     val: CharacterSpacingVal
   }
+  children: []
 }
 
 export interface Charset extends BaseType {
@@ -306,6 +316,7 @@ export interface Charset extends BaseType {
   attributes: {
     characterSet?: string
   }
+  children: []
 }
 
 export interface Cnf extends BaseType {
@@ -325,6 +336,7 @@ export interface Cnf extends BaseType {
     oddHBand: string
     oddVBand: string
   }
+  children: []
 }
 
 export interface Color extends BaseType {
@@ -336,6 +348,7 @@ export interface Color extends BaseType {
     themeTint?: string
     val: string
   }
+  children: []
 }
 
 export interface ColorSchemeMapping extends BaseType {
@@ -355,6 +368,7 @@ export interface ColorSchemeMapping extends BaseType {
     t1: WmlColorSchemeIndexVal
     t2: WmlColorSchemeIndexVal
   }
+  children: []
 }
 
 export interface Column extends BaseType {
@@ -364,6 +378,7 @@ export interface Column extends BaseType {
     space?: string
     w?: string
   }
+  children: []
 }
 
 export interface Columns extends BaseType {
@@ -461,6 +476,7 @@ export interface CompatSetting extends BaseType {
     uri: string
     val: string
   }
+  children: []
 }
 
 export interface Control extends BaseType {
@@ -471,6 +487,7 @@ export interface Control extends BaseType {
     name?: string
     shapeid?: string
   }
+  children: []
 }
 
 export interface CustomXmlBlock extends BaseType {
@@ -668,6 +685,7 @@ export interface DataBinding extends BaseType {
     storeItemID: string
     xpath: string
   }
+  children: []
 }
 
 export interface DecimalNumber extends BaseType {
@@ -676,6 +694,7 @@ export interface DecimalNumber extends BaseType {
   attributes: {
     val: number
   }
+  children: []
 }
 
 export interface DecimalNumberOrPrecent extends BaseType {
@@ -684,6 +703,7 @@ export interface DecimalNumberOrPrecent extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface DirContentRun extends BaseType {
@@ -797,6 +817,7 @@ export interface DocGrid extends BaseType {
     linePitch: number
     type: DocGridVal
   }
+  children: []
 }
 
 export interface DocPart extends BaseType {
@@ -817,6 +838,7 @@ export interface DocPartBehavior extends BaseType {
   attributes: {
     val: DocPartBehaviorVal
   }
+  children: []
 }
 
 export interface DocPartBehaviors extends BaseType {
@@ -848,6 +870,7 @@ export interface DocPartGallery extends BaseType {
   attributes: {
     val: DocPartGalleryVal
   }
+  children: []
 }
 
 export interface DocPartName extends BaseType {
@@ -857,6 +880,7 @@ export interface DocPartName extends BaseType {
     decorated?: string
     val: string
   }
+  children: []
 }
 
 export interface DocPartPr extends BaseType {
@@ -881,6 +905,7 @@ export interface DocPartType extends BaseType {
   attributes: {
     val: DocPartTypeVal
   }
+  children: []
 }
 
 export interface DocPartTypes extends BaseType {
@@ -908,6 +933,7 @@ export interface DocProtect extends BaseType {
     saltValue?: string
     spinCount?: number
   }
+  children: []
 }
 
 export interface DocRsids extends BaseType {
@@ -961,6 +987,7 @@ export interface DocVar extends BaseType {
     name: string
     val: string
   }
+  children: []
 }
 
 export interface DocVars extends BaseType {
@@ -1015,6 +1042,7 @@ export interface EdnPos extends BaseType {
   attributes: {
     val: EdnPosVal
   }
+  children: []
 }
 
 export interface EdnProps extends BaseType {
@@ -1037,6 +1065,7 @@ export interface Em extends BaseType {
   attributes: {
     val: EmVal
   }
+  children: []
 }
 
 export interface Empty extends BaseType {
@@ -1111,6 +1140,7 @@ export interface FFHelpText extends BaseType {
     type: InfoTextTypeVal
     val: string
   }
+  children: []
 }
 
 export interface FFName extends BaseType {
@@ -1119,6 +1149,7 @@ export interface FFName extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface FFStatusText extends BaseType {
@@ -1128,6 +1159,7 @@ export interface FFStatusText extends BaseType {
     type: InfoTextTypeVal
     val: string
   }
+  children: []
 }
 
 export interface FFTextInput extends BaseType {
@@ -1150,6 +1182,7 @@ export interface FFTextType extends BaseType {
   attributes: {
     val: FFTextTypeVal
   }
+  children: []
 }
 
 export interface FitText extends BaseType {
@@ -1159,6 +1192,7 @@ export interface FitText extends BaseType {
     id?: number
     val: string
   }
+  children: []
 }
 
 export interface FldChar extends BaseType {
@@ -1214,6 +1248,7 @@ export type FontRel = Rel & {
     fontKey: string
     subsetted: string
   }
+  children: []
 }
 
 export interface Fonts extends BaseType {
@@ -1230,6 +1265,7 @@ export interface Fonts extends BaseType {
     hAnsiTheme: ThemeVal
     hint: HintVal
   }
+  children: []
 }
 
 export interface FontSig extends BaseType {
@@ -1243,6 +1279,7 @@ export interface FontSig extends BaseType {
     usb2: string
     usb3: string
   }
+  children: []
 }
 
 export interface FontsList extends BaseType {
@@ -1293,6 +1330,7 @@ export interface FrameLayout extends BaseType {
   attributes: {
     val: FrameLayoutVal
   }
+  children: []
 }
 
 export interface FramePr extends BaseType {
@@ -1315,6 +1353,7 @@ export interface FramePr extends BaseType {
     y?: string
     yAlign?: s.YAlignVal
   }
+  children: []
 }
 
 export interface FrameScrollbar extends BaseType {
@@ -1323,6 +1362,7 @@ export interface FrameScrollbar extends BaseType {
   attributes: {
     val: FrameScrollbarVal
   }
+  children: []
 }
 
 export interface Frameset extends BaseType {
@@ -1416,6 +1456,7 @@ export interface FtnEdnRef extends BaseType {
     customMarkFollows?: string
     id: number
   }
+  children: []
 }
 
 export interface FtnEdnSepRef extends BaseType {
@@ -1424,6 +1465,7 @@ export interface FtnEdnSepRef extends BaseType {
   attributes: {
     id: number
   }
+  children: []
 }
 
 export interface FtnPos extends BaseType {
@@ -1432,6 +1474,7 @@ export interface FtnPos extends BaseType {
   attributes: {
     val: FtnPosVal
   }
+  children: []
 }
 
 export interface FtnProps extends BaseType {
@@ -1465,6 +1508,7 @@ export interface Guid extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface HdrFtr extends BaseType {
@@ -1513,6 +1557,7 @@ export type HdrFtrRef = Rel & {
   attributes: {
     type: HdrFtrVal
   }
+  children: []
 }
 
 export interface Headers extends BaseType {
@@ -1533,6 +1578,7 @@ export interface Height extends BaseType {
     hRule: HeightRuleVal
     val: string
   }
+  children: []
 }
 
 export interface Highlight extends BaseType {
@@ -1541,6 +1587,7 @@ export interface Highlight extends BaseType {
   attributes: {
     val: HighlightColorVal
   }
+  children: []
 }
 
 export interface HpsMeasure extends BaseType {
@@ -1549,6 +1596,7 @@ export interface HpsMeasure extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface Hyperlink extends BaseType {
@@ -1615,6 +1663,7 @@ export interface Ind extends BaseType {
     start?: string
     startChars?: number
   }
+  children: []
 }
 
 export interface Jc extends BaseType {
@@ -1623,6 +1672,7 @@ export interface Jc extends BaseType {
   attributes: {
     val: JcVal
   }
+  children: []
 }
 
 export interface JcTable extends BaseType {
@@ -1631,6 +1681,7 @@ export interface JcTable extends BaseType {
   attributes: {
     val: JcTableVal
   }
+  children: []
 }
 
 export interface Kinsoku extends BaseType {
@@ -1640,6 +1691,7 @@ export interface Kinsoku extends BaseType {
     lang: string
     val: string
   }
+  children: []
 }
 
 export interface Lang extends BaseType {
@@ -1648,6 +1700,7 @@ export interface Lang extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface Language extends BaseType {
@@ -1658,6 +1711,7 @@ export interface Language extends BaseType {
     eastAsia?: string
     val?: string
   }
+  children: []
 }
 
 export interface LatentStyles extends BaseType {
@@ -1684,6 +1738,7 @@ export interface LevelSuffix extends BaseType {
   attributes: {
     val: LevelSuffixVal
   }
+  children: []
 }
 
 export interface LevelText extends BaseType {
@@ -1693,6 +1748,7 @@ export interface LevelText extends BaseType {
     null?: string
     val?: string
   }
+  children: []
 }
 
 export interface LineNumber extends BaseType {
@@ -1704,6 +1760,7 @@ export interface LineNumber extends BaseType {
     restart?: LineNumberRestartVal
     start?: number
   }
+  children: []
 }
 
 export interface Lock extends BaseType {
@@ -1712,6 +1769,7 @@ export interface Lock extends BaseType {
   attributes: {
     val: LockVal
   }
+  children: []
 }
 
 export interface LongHexNumber extends BaseType {
@@ -1720,6 +1778,7 @@ export interface LongHexNumber extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface LsdException extends BaseType {
@@ -1733,6 +1792,7 @@ export interface LsdException extends BaseType {
     uiPriority: number
     unhideWhenUsed: string
   }
+  children: []
 }
 
 export interface Lvl extends BaseType {
@@ -1766,6 +1826,7 @@ export interface MacroName extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface MailMerge extends BaseType {
@@ -1800,6 +1861,7 @@ export interface MailMergeDataType extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface MailMergeDest extends BaseType {
@@ -1808,6 +1870,7 @@ export interface MailMergeDest extends BaseType {
   attributes: {
     val: MailMergeDestVal
   }
+  children: []
 }
 
 export interface MailMergeDocType extends BaseType {
@@ -1816,6 +1879,7 @@ export interface MailMergeDocType extends BaseType {
   attributes: {
     val: MailMergeDocTypeVal
   }
+  children: []
 }
 
 export interface MailMergeOdsoFMDFieldType extends BaseType {
@@ -1824,6 +1888,7 @@ export interface MailMergeOdsoFMDFieldType extends BaseType {
   attributes: {
     val: MailMergeOdsoFMDFieldTypeVal
   }
+  children: []
 }
 
 export interface MailMergeSourceType extends BaseType {
@@ -1832,6 +1897,7 @@ export interface MailMergeSourceType extends BaseType {
   attributes: {
     val: MailMergeSourceTypeVal
   }
+  children: []
 }
 
 export interface Markup extends BaseType {
@@ -1879,6 +1945,7 @@ export type MoveBookmark = Bookmark & {
     author: string
     date: Date
   }
+  children: []
 }
 
 export interface MultiLevelType extends BaseType {
@@ -1887,6 +1954,7 @@ export interface MultiLevelType extends BaseType {
   attributes: {
     val: MultiLevelTypeVal
   }
+  children: []
 }
 
 export interface Num extends BaseType {
@@ -1924,6 +1992,7 @@ export interface NumFmt extends BaseType {
     format?: string
     val: NumberFormatVal
   }
+  children: []
 }
 
 export interface NumLvl extends BaseType {
@@ -1972,6 +2041,7 @@ export interface NumRestart extends BaseType {
   attributes: {
     val: RestartNumberVal
   }
+  children: []
 }
 
 export interface Object extends BaseType {
@@ -2011,6 +2081,7 @@ export type ObjectLink = ObjectEmbed & {
     lockedField?: string
     updateMode: ObjectUpdateModeVal
   }
+  children: []
 }
 
 export interface Odso extends BaseType {
@@ -2061,6 +2132,7 @@ export type OptimizeForBrowser = OnOff & {
   attributes: {
     target?: string
   }
+  children: []
 }
 
 export interface P extends BaseType {
@@ -2120,6 +2192,7 @@ export type PageBorder = Border & {
   attributes: {
     id?: string
   }
+  children: []
 }
 
 export interface PageBorders extends BaseType {
@@ -2152,6 +2225,7 @@ export interface PageMar extends BaseType {
     right: string
     top: string
   }
+  children: []
 }
 
 export interface PageNumber extends BaseType {
@@ -2163,6 +2237,7 @@ export interface PageNumber extends BaseType {
     fmt?: NumberFormatVal
     start?: number
   }
+  children: []
 }
 
 export interface PageSz extends BaseType {
@@ -2174,6 +2249,7 @@ export interface PageSz extends BaseType {
     orient?: PageOrientationVal
     w: string
   }
+  children: []
 }
 
 export interface Panose extends BaseType {
@@ -2182,6 +2258,7 @@ export interface Panose extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface PaperSource extends BaseType {
@@ -2191,6 +2268,7 @@ export interface PaperSource extends BaseType {
     first: number
     other: number
   }
+  children: []
 }
 
 export interface ParaRPr extends BaseType {
@@ -2345,6 +2423,7 @@ export type PermStart = Perm & {
     ed?: string
     edGrp?: EdGrpVal
   }
+  children: []
 }
 
 export interface Pitch extends BaseType {
@@ -2353,6 +2432,7 @@ export interface Pitch extends BaseType {
   attributes: {
     val: PitchVal
   }
+  children: []
 }
 
 export interface PixelsMeasure extends BaseType {
@@ -2361,6 +2441,7 @@ export interface PixelsMeasure extends BaseType {
   attributes: {
     val: number
   }
+  children: []
 }
 
 export interface Placeholder extends BaseType {
@@ -2470,6 +2551,7 @@ export interface Proof extends BaseType {
     grammar?: ProofVal
     spelling?: ProofVal
   }
+  children: []
 }
 
 export interface ProofErr extends BaseType {
@@ -2478,6 +2560,7 @@ export interface ProofErr extends BaseType {
   attributes: {
     type: ProofErrVal
   }
+  children: []
 }
 
 export interface PTab extends BaseType {
@@ -2488,6 +2571,7 @@ export interface PTab extends BaseType {
     leader: PTabLeaderVal
     relativeTo: PTabRelativeToVal
   }
+  children: []
 }
 
 export interface R extends BaseType {
@@ -2546,6 +2630,7 @@ export interface ReadingModeInkLockDown extends BaseType {
     h: number
     w: number
   }
+  children: []
 }
 
 export interface RecipientData extends BaseType {
@@ -2578,6 +2663,7 @@ export interface Rel extends BaseType {
   attributes: {
     id: string
   }
+  children: []
 }
 
 export interface Row extends BaseType {
@@ -2765,6 +2851,7 @@ export interface RubyAlign extends BaseType {
   attributes: {
     val: RubyAlignVal
   }
+  children: []
 }
 
 export interface RubyContent extends BaseType {
@@ -2887,6 +2974,7 @@ export interface SaveThroughXslt extends BaseType {
     id?: string
     solutionID?: string
   }
+  children: []
 }
 
 export interface SdtBlock extends BaseType {
@@ -3109,6 +3197,7 @@ export interface SdtDateMappingType extends BaseType {
   attributes: {
     val: SdtDateMappingTypeVal
   }
+  children: []
 }
 
 export interface SdtDocPart extends BaseType {
@@ -3155,6 +3244,7 @@ export interface SdtListItem extends BaseType {
     displayText: string
     value: string
   }
+  children: []
 }
 
 export interface SdtPr extends BaseType {
@@ -3222,6 +3312,7 @@ export interface SdtText extends BaseType {
   attributes: {
     multiLine: string
   }
+  children: []
 }
 
 export interface SectPr extends BaseType {
@@ -3312,6 +3403,7 @@ export interface SectType extends BaseType {
   attributes: {
     val: SectionMarkVal
   }
+  children: []
 }
 
 export interface Settings extends BaseType {
@@ -3434,6 +3526,7 @@ export interface Shd extends BaseType {
     themeTint?: string
     val: ShdVal
   }
+  children: []
 }
 
 export interface SignedHpsMeasure extends BaseType {
@@ -3442,6 +3535,7 @@ export interface SignedHpsMeasure extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface SignedTwipsMeasure extends BaseType {
@@ -3450,6 +3544,7 @@ export interface SignedTwipsMeasure extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface SimpleField extends BaseType {
@@ -3567,6 +3662,7 @@ export interface SmartTagType extends BaseType {
     namespaceuri: string
     url: string
   }
+  children: []
 }
 
 export interface Spacing extends BaseType {
@@ -3582,6 +3678,7 @@ export interface Spacing extends BaseType {
     line?: string
     lineRule?: LineSpacingRuleVal
   }
+  children: []
 }
 
 export interface String extends BaseType {
@@ -3590,6 +3687,7 @@ export interface String extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface Style extends BaseType {
@@ -3649,6 +3747,7 @@ export interface StylePaneFilter extends BaseType {
     top3HeadingStyles: string
     visibleStyles: string
   }
+  children: []
 }
 
 export interface Styles extends BaseType {
@@ -3670,6 +3769,7 @@ export interface StyleSort extends BaseType {
   attributes: {
     val: StyleSortVal
   }
+  children: []
 }
 
 export interface Sym extends BaseType {
@@ -3679,6 +3779,7 @@ export interface Sym extends BaseType {
     char: string
     font: string
   }
+  children: []
 }
 
 export interface Tabs extends BaseType {
@@ -3700,6 +3801,7 @@ export interface TabStop extends BaseType {
     pos: string
     val: TabJcVal
   }
+  children: []
 }
 
 export interface TargetScreenSz extends BaseType {
@@ -3708,6 +3810,7 @@ export interface TargetScreenSz extends BaseType {
   attributes: {
     val: TargetScreenSzVal
   }
+  children: []
 }
 
 export interface Tbl extends BaseType {
@@ -3819,6 +3922,7 @@ export interface TblGridCol extends BaseType {
   attributes: {
     w: string
   }
+  children: []
 }
 
 export interface TblLayoutType extends BaseType {
@@ -3827,6 +3931,7 @@ export interface TblLayoutType extends BaseType {
   attributes: {
     type: TblLayoutTypeVal
   }
+  children: []
 }
 
 export interface TblLook extends BaseType {
@@ -3840,6 +3945,7 @@ export interface TblLook extends BaseType {
     noHBand: string
     noVBand: string
   }
+  children: []
 }
 
 export interface TblOverlap extends BaseType {
@@ -3848,6 +3954,7 @@ export interface TblOverlap extends BaseType {
   attributes: {
     val: TblOverlapVal
   }
+  children: []
 }
 
 export interface TblPPr extends BaseType {
@@ -3981,6 +4088,7 @@ export interface TblWidth extends BaseType {
     type: TblWidthVal
     w: string
   }
+  children: []
 }
 
 export interface Tc extends BaseType {
@@ -4135,6 +4243,7 @@ export interface TextAlignment extends BaseType {
   attributes: {
     val: TextAlignmentVal
   }
+  children: []
 }
 
 export interface TextboxTightWrap extends BaseType {
@@ -4143,6 +4252,7 @@ export interface TextboxTightWrap extends BaseType {
   attributes: {
     val: TextboxTightWrapVal
   }
+  children: []
 }
 
 export interface TextDirection extends BaseType {
@@ -4151,6 +4261,7 @@ export interface TextDirection extends BaseType {
   attributes: {
     val: TextDirectionVal
   }
+  children: []
 }
 
 export interface TextEffect extends BaseType {
@@ -4159,6 +4270,7 @@ export interface TextEffect extends BaseType {
   attributes: {
     val: TextEffectVal
   }
+  children: []
 }
 
 export interface TextScale extends BaseType {
@@ -4194,6 +4306,7 @@ export type TrackChangeRange = TrackChange & {
   attributes: {
     displacedByCustomXml?: DisplacedByCustomXmlVal
   }
+  children: []
 }
 
 export interface TrackChangesView extends BaseType {
@@ -4260,6 +4373,7 @@ export interface TwipsMeasure extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface Underline extends BaseType {
@@ -4272,6 +4386,7 @@ export interface Underline extends BaseType {
     themeTint?: string
     val?: UnderlineVal
   }
+  children: []
 }
 
 export interface UnsignedDecimalNumber extends BaseType {
@@ -4280,6 +4395,7 @@ export interface UnsignedDecimalNumber extends BaseType {
   attributes: {
     val: number
   }
+  children: []
 }
 
 export interface VerticalAlignRun extends BaseType {
@@ -4288,6 +4404,7 @@ export interface VerticalAlignRun extends BaseType {
   attributes: {
     val: s.VerticalAlignRunVal
   }
+  children: []
 }
 
 export interface VerticalJc extends BaseType {
@@ -4296,6 +4413,7 @@ export interface VerticalJc extends BaseType {
   attributes: {
     val: VerticalJcVal
   }
+  children: []
 }
 
 export interface View extends BaseType {
@@ -4304,6 +4422,7 @@ export interface View extends BaseType {
   attributes: {
     val: ViewVal
   }
+  children: []
 }
 
 export interface VMerge extends BaseType {
@@ -4312,6 +4431,7 @@ export interface VMerge extends BaseType {
   attributes: {
     val: MergeVal
   }
+  children: []
 }
 
 export interface WebSettings extends BaseType {
@@ -4346,6 +4466,7 @@ export interface WriteProtection extends BaseType {
     saltValue?: string
     spinCount?: number
   }
+  children: []
 }
 
 export interface WritingStyle extends BaseType {
@@ -4359,6 +4480,7 @@ export interface WritingStyle extends BaseType {
     nlCheck?: string
     vendorID: string
   }
+  children: []
 }
 
 export interface Zoom extends BaseType {

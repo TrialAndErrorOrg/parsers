@@ -118,6 +118,7 @@ export interface Cr extends TagLiteral {
 export interface Sym extends TagLiteral {
   name: 'w:sym'
   attributes: { char: string; font: string }
+  children: []
 }
 
 export interface Tab extends TagLiteral {

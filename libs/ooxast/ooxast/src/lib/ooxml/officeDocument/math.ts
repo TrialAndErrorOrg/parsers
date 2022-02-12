@@ -123,6 +123,7 @@ export interface BreakBin extends BaseType {
   attributes: {
     val: BreakBinVal
   }
+  children: []
 }
 
 export interface BreakBinSub extends BaseType {
@@ -131,6 +132,7 @@ export interface BreakBinSub extends BaseType {
   attributes: {
     val: BreakBinSubVal
   }
+  children: []
 }
 
 export interface Char extends BaseType {
@@ -139,6 +141,7 @@ export interface Char extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface CtrlPr extends BaseType {
@@ -241,6 +244,7 @@ export interface FType extends BaseType {
   attributes: {
     val: FTypeVal
   }
+  children: []
 }
 
 export interface Func extends BaseType {
@@ -299,12 +303,15 @@ export interface Integer2 extends BaseType {
   attributes: {
     val: number
   }
+  children: []
 }
 
 export interface Integer255 extends BaseType {
   type: 'element'
   name: 'm:integer255'
-  $1
+  attributes: {
+    val: number
+  }
   children: []
 }
 
@@ -314,6 +321,7 @@ export interface LimLoc extends BaseType {
   attributes: {
     val: LimLocVal
   }
+  children: []
 }
 
 export interface LimLow extends BaseType {
@@ -382,6 +390,7 @@ export interface ManualBreak extends BaseType {
   attributes: {
     alnAt: number
   }
+  children: []
 }
 
 export interface MathPr extends BaseType {
@@ -643,6 +652,7 @@ export interface OMathJc extends BaseType {
   attributes: {
     val: JcVal
   }
+  children: []
 }
 
 export interface OMathPara extends BaseType {
@@ -674,6 +684,7 @@ export interface OnOff extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface Phant extends BaseType {
@@ -796,6 +807,7 @@ export interface Script extends BaseType {
   attributes: {
     val: ScriptVal
   }
+  children: []
 }
 
 export interface Shp extends BaseType {
@@ -804,6 +816,7 @@ export interface Shp extends BaseType {
   attributes: {
     val: ShpVal
   }
+  children: []
 }
 
 export interface SpacingRule extends BaseType {
@@ -812,6 +825,7 @@ export interface SpacingRule extends BaseType {
   attributes: {
     val: number
   }
+  children: []
 }
 
 export interface SPre extends BaseType {
@@ -916,6 +930,7 @@ export interface String extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface Style extends BaseType {
@@ -924,6 +939,7 @@ export interface Style extends BaseType {
   attributes: {
     val: StyleVal
   }
+  children: []
 }
 
 export interface T extends BaseType {
@@ -939,6 +955,7 @@ export interface TopBot extends BaseType {
   attributes: {
     val: TopBotVal
   }
+  children: []
 }
 
 export interface TwipsMeasure extends BaseType {
@@ -947,6 +964,7 @@ export interface TwipsMeasure extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface UnSignedInteger extends BaseType {
@@ -955,6 +973,7 @@ export interface UnSignedInteger extends BaseType {
   attributes: {
     val: number
   }
+  children: []
 }
 
 export interface XAlign extends BaseType {
@@ -963,6 +982,7 @@ export interface XAlign extends BaseType {
   attributes: {
     val: s.XAlignVal
   }
+  children: []
 }
 
 export interface YAlign extends BaseType {

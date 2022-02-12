@@ -57,6 +57,7 @@ export interface EffectExtent extends BaseType {
     r: string
     t: string
   }
+  children: []
 }
 
 export interface GraphicFrame extends BaseType {

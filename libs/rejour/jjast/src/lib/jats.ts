@@ -51,6 +51,7 @@ export interface AbbrevJournaltitle extends UnistNode {
     id?: string
     specificUse?: string
   }
+  children: []
 }
 
 export interface Abbrev extends UnistNode {
@@ -532,6 +533,7 @@ export interface Anonymous extends UnistNode {
     id?: string
     specificUse?: string
   }
+  children: []
 }
 
 export interface AnswerSet extends UnistNode {
@@ -1361,6 +1363,7 @@ export interface AwardDesc extends UnistNode {
     hreflang?: string
     id?: string
   }
+  children: []
 }
 
 export interface AwardGroup extends UnistNode {
@@ -1470,6 +1473,7 @@ export interface AwardName extends UnistNode {
     hreflang?: string
     id?: string
   }
+  children: []
 }
 
 export interface Back extends UnistNode {
@@ -1909,6 +1913,7 @@ export interface Break extends UnistNode {
   attributes: {
     id?: string
   }
+  children: []
 }
 
 export interface Caption extends UnistNode {
@@ -3253,6 +3258,7 @@ export interface Count extends UnistNode {
     countType: string
     id?: string
   }
+  children: []
 }
 
 export interface CustomMetagroup extends UnistNode {
@@ -4054,6 +4060,7 @@ export interface EquationCount extends UnistNode {
     count: string
     id?: string
   }
+  children: []
 }
 
 export interface Era extends UnistNode {
@@ -4078,6 +4085,7 @@ export interface Etal extends UnistNode {
     id?: string
     specificUse?: string
   }
+  children: []
 }
 
 export interface EventDesc extends UnistNode {
@@ -4270,6 +4278,7 @@ export interface ExtendedBy extends UnistNode {
     vocabTerm?: string
     vocabTermidentifier?: string
   }
+  children: []
 }
 
 export interface ExtLink extends UnistNode {
@@ -4314,6 +4323,7 @@ export interface FigCount extends UnistNode {
     count: string
     id?: string
   }
+  children: []
 }
 
 export interface FigGroup extends UnistNode {
@@ -5031,6 +5041,7 @@ export interface GlyphData extends UnistNode {
     xSize?: string
     ySize?: string
   }
+  children: []
 }
 
 export interface GlyphRef extends UnistNode {
@@ -5040,6 +5051,7 @@ export interface GlyphRef extends UnistNode {
     glyphData?: string
     id?: string
   }
+  children: []
 }
 
 export interface Gov extends UnistNode {
@@ -5130,6 +5142,7 @@ export interface Hr extends UnistNode {
   attributes: {
     id?: string
   }
+  children: []
 }
 
 export interface IndexTermrangeend extends UnistNode {
@@ -5139,6 +5152,7 @@ export interface IndexTermrangeend extends UnistNode {
     id?: string
     rid: string
   }
+  children: []
 }
 
 export interface IndexTerm extends UnistNode {
@@ -5456,6 +5470,7 @@ export interface IssnL extends UnistNode {
     id?: string
     specificUse?: string
   }
+  children: []
 }
 
 export interface Issn extends UnistNode {
@@ -5688,6 +5703,7 @@ export interface JournalId extends UnistNode {
     journalIdtype?: string
     specificUse?: string
   }
+  children: []
 }
 
 export interface JournalMeta extends UnistNode {
@@ -6187,6 +6203,7 @@ export interface MetaName extends UnistNode {
   attributes: {
     id?: string
   }
+  children: []
 }
 
 export interface MetaValue extends UnistNode {
@@ -7201,6 +7218,7 @@ export interface OverlineEnd extends UnistNode {
     rid: string
     specificUse?: string
   }
+  children: []
 }
 
 export interface OverlineStart extends UnistNode {
@@ -7210,6 +7228,7 @@ export interface OverlineStart extends UnistNode {
     id: string
     specificUse?: string
   }
+  children: []
 }
 
 export interface Overline extends UnistNode {
@@ -7307,6 +7326,7 @@ export interface PageCount extends UnistNode {
     count: string
     id?: string
   }
+  children: []
 }
 
 export interface PageRange extends UnistNode {
@@ -8107,6 +8127,7 @@ export interface PubDatenotavailable extends UnistNode {
     id?: string
     specificUse?: string
   }
+  children: []
 }
 
 export interface PubDate extends UnistNode {
@@ -8568,6 +8589,7 @@ export interface RefCount extends UnistNode {
     count: string
     id?: string
   }
+  children: []
 }
 
 export interface RefList extends UnistNode {
@@ -9168,6 +9190,7 @@ export interface RestrictedBy extends UnistNode {
     vocabTerm?: string
     vocabTermidentifier?: string
   }
+  children: []
 }
 
 export interface Role extends UnistNode {
@@ -9287,6 +9310,7 @@ export interface Rp extends UnistNode {
   attributes: {
     id?: string
   }
+  children: []
 }
 
 export interface Rt extends UnistNode {
@@ -10035,6 +10059,7 @@ export interface Size extends UnistNode {
     specificUse?: string
     units: string
   }
+  children: []
 }
 
 export interface Source extends UnistNode {
@@ -11342,6 +11367,7 @@ export interface TableCount extends UnistNode {
     count: string
     id?: string
   }
+  children: []
 }
 
 export interface Table extends UnistNode {
@@ -12650,6 +12676,7 @@ export interface UnderlineEnd extends UnistNode {
     rid: string
     specificUse?: string
   }
+  children: []
 }
 
 export interface UnderlineStart extends UnistNode {
@@ -12659,6 +12686,7 @@ export interface UnderlineStart extends UnistNode {
     id: string
     specificUse?: string
   }
+  children: []
 }
 
 export interface Underline extends UnistNode {
@@ -12762,6 +12790,7 @@ export interface UnstructuredKwdgroup extends UnistNode {
     vocab?: string
     vocabIdentifier?: string
   }
+  children: []
 }
 
 export interface Uri extends UnistNode {
@@ -12999,6 +13028,7 @@ export interface WordCount extends UnistNode {
     count: string
     id?: string
   }
+  children: []
 }
 
 export interface Xref extends UnistNode {

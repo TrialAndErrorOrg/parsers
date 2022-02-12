@@ -17,6 +17,7 @@ export interface AdjPoint2D extends BaseType {
     x: string
     y: string
   }
+  children: []
 }
 
 export interface AdjustHandleList extends BaseType {
@@ -37,6 +38,7 @@ export interface AlphaBiLevelEffect extends BaseType {
   attributes: {
     thresh: string
   }
+  children: []
 }
 
 export interface AlphaCeilingEffect extends BaseType {
@@ -82,6 +84,7 @@ export interface AlphaModulateFixedEffect extends BaseType {
   attributes: {
     amt?: string
   }
+  children: []
 }
 
 export interface AlphaOutsetEffect extends BaseType {
@@ -90,6 +93,7 @@ export interface AlphaOutsetEffect extends BaseType {
   attributes: {
     rad?: string
   }
+  children: []
 }
 
 export interface AlphaReplaceEffect extends BaseType {
@@ -98,6 +102,7 @@ export interface AlphaReplaceEffect extends BaseType {
   attributes: {
     a: string
   }
+  children: []
 }
 
 export interface Angle extends BaseType {
@@ -106,6 +111,7 @@ export interface Angle extends BaseType {
   attributes: {
     val: number
   }
+  children: []
 }
 
 export interface AnimationChartBuildProperties extends BaseType {
@@ -115,6 +121,7 @@ export interface AnimationChartBuildProperties extends BaseType {
     animBg?: boolean
     bld?: string
   }
+  children: []
 }
 
 export interface AnimationChartElement extends BaseType {
@@ -125,6 +132,7 @@ export interface AnimationChartElement extends BaseType {
     categoryIdx?: number
     seriesIdx?: number
   }
+  children: []
 }
 
 export interface AnimationDgmBuildProperties extends BaseType {
@@ -134,6 +142,7 @@ export interface AnimationDgmBuildProperties extends BaseType {
     bld?: string
     rev?: boolean
   }
+  children: []
 }
 
 export interface AnimationDgmElement extends BaseType {
@@ -143,6 +152,7 @@ export interface AnimationDgmElement extends BaseType {
     bldStep?: DgmBuildStepVal
     id?: string
   }
+  children: []
 }
 
 export interface AnimationElementChoice extends BaseType {
@@ -189,6 +199,7 @@ export interface AudioCDTime extends BaseType {
     time?: number
     track: number
   }
+  children: []
 }
 
 export interface AudioFile extends BaseType {
@@ -288,6 +299,7 @@ export interface Bevel extends BaseType {
     prst?: BevelPresetTypeVal
     w?: number
   }
+  children: []
 }
 
 export interface BiLevelEffect extends BaseType {
@@ -296,6 +308,7 @@ export interface BiLevelEffect extends BaseType {
   attributes: {
     thresh: string
   }
+  children: []
 }
 
 export interface BlendEffect extends BaseType {
@@ -367,6 +380,7 @@ export interface BlurEffect extends BaseType {
     grow?: boolean
     rad?: number
   }
+  children: []
 }
 
 export interface Boolean extends BaseType {
@@ -375,6 +389,7 @@ export interface Boolean extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface Camera extends BaseType {
@@ -577,6 +592,7 @@ export interface Connection extends BaseType {
     id: number
     idx: number
   }
+  children: []
 }
 
 export interface ConnectionSite extends BaseType {
@@ -699,6 +715,7 @@ export interface DashStop extends BaseType {
     d: string
     sp: string
   }
+  children: []
 }
 
 export interface DashStopList extends BaseType {
@@ -822,6 +839,7 @@ export interface EffectReference extends BaseType {
   attributes: {
     ref: string
   }
+  children: []
 }
 
 export interface EffectStyleItem extends BaseType {
@@ -856,6 +874,7 @@ export interface EmbeddedWAVAudioFile extends BaseType {
     embed: string
     name?: string
   }
+  children: []
 }
 
 export interface EmptyElement extends BaseType {
@@ -935,6 +954,7 @@ export interface FixedPercentage extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface FlatText extends BaseType {
@@ -943,6 +963,7 @@ export interface FlatText extends BaseType {
   attributes: {
     z?: string
   }
+  children: []
 }
 
 export interface FontCollection extends BaseType {
@@ -1005,6 +1026,7 @@ export interface GeomGuide extends BaseType {
     fmla: string
     name: string
   }
+  children: []
 }
 
 export interface GeomGuideList extends BaseType {
@@ -1027,6 +1049,7 @@ export interface GeomRect extends BaseType {
     r: string
     t: string
   }
+  children: []
 }
 
 export interface GlowEffect extends BaseType {
@@ -1110,6 +1133,7 @@ export interface GraphicalObjectData extends BaseType {
   attributes: {
     uri: string
   }
+  children: []
 }
 
 export interface GraphicalObjectFrameLocking extends BaseType {
@@ -1422,6 +1446,7 @@ export interface HSLEffect extends BaseType {
     lum?: string
     sat?: string
   }
+  children: []
 }
 
 export interface Hyperlink extends BaseType {
@@ -1496,6 +1521,7 @@ export interface LinearShadeProperties extends BaseType {
     ang?: number
     scaled?: boolean
   }
+  children: []
 }
 
 export interface LineEndProperties extends BaseType {
@@ -1506,6 +1532,7 @@ export interface LineEndProperties extends BaseType {
     type?: LineEndTypeVal
     w?: LineEndWidthVal
   }
+  children: []
 }
 
 export interface LineJoinBevel extends BaseType {
@@ -1519,6 +1546,7 @@ export interface LineJoinMiterProperties extends BaseType {
   attributes: {
     lim?: string
   }
+  children: []
 }
 
 export interface LineJoinRound extends BaseType {
@@ -1571,6 +1599,7 @@ export interface LuminanceEffect extends BaseType {
     bright?: string
     contrast?: string
   }
+  children: []
 }
 
 export interface NoFillProperties extends BaseType {
@@ -1697,6 +1726,7 @@ export interface OfficeArtExtension extends BaseType {
   attributes: {
     uri: string
   }
+  children: []
 }
 
 export interface OfficeArtExtensionList extends BaseType {
@@ -1784,6 +1814,7 @@ export interface Path2DArcTo extends BaseType {
     swAng: string
     wR: string
   }
+  children: []
 }
 
 export interface Path2DClose extends BaseType {
@@ -1879,6 +1910,7 @@ export interface Percentage extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface PictureLocking extends BaseType {
@@ -1911,6 +1943,7 @@ export interface Point2D extends BaseType {
     x: string
     y: string
   }
+  children: []
 }
 
 export interface Point3D extends BaseType {
@@ -1921,6 +1954,7 @@ export interface Point3D extends BaseType {
     y: string
     z: string
   }
+  children: []
 }
 
 export interface PolarAdjustHandle extends BaseType {
@@ -1947,6 +1981,7 @@ export interface PositiveFixedAngle extends BaseType {
   attributes: {
     val: number
   }
+  children: []
 }
 
 export interface PositiveFixedPercentage extends BaseType {
@@ -1955,6 +1990,7 @@ export interface PositiveFixedPercentage extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface PositivePercentage extends BaseType {
@@ -1963,6 +1999,7 @@ export interface PositivePercentage extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface PositiveSize2D extends BaseType {
@@ -1972,6 +2009,7 @@ export interface PositiveSize2D extends BaseType {
     cx: number
     cy: number
   }
+  children: []
 }
 
 export interface PresetColor extends BaseType {
@@ -2033,6 +2071,7 @@ export interface PresetLineDashProperties extends BaseType {
   attributes: {
     val?: PresetLineDashValVal
   }
+  children: []
 }
 
 export interface PresetShadowEffect extends BaseType {
@@ -2088,6 +2127,7 @@ export interface Ratio extends BaseType {
     d: number
     n: number
   }
+  children: []
 }
 
 export interface ReflectionEffect extends BaseType {
@@ -2109,6 +2149,7 @@ export interface ReflectionEffect extends BaseType {
     sx?: string
     sy?: string
   }
+  children: []
 }
 
 export interface RegularTextRun extends BaseType {
@@ -2130,6 +2171,7 @@ export interface RelativeOffsetEffect extends BaseType {
     tx?: string
     ty?: string
   }
+  children: []
 }
 
 export interface RelativeRect extends BaseType {
@@ -2141,6 +2183,7 @@ export interface RelativeRect extends BaseType {
     r?: string
     t?: string
   }
+  children: []
 }
 
 export interface Scale2D extends BaseType {
@@ -2341,6 +2384,7 @@ export interface SoftEdgesEffect extends BaseType {
   attributes: {
     rad: number
   }
+  children: []
 }
 
 export interface SolidColorFillProperties extends BaseType {
@@ -2367,6 +2411,7 @@ export interface SphereCoords extends BaseType {
     lon: number
     rev: number
   }
+  children: []
 }
 
 export interface SRgbColor extends BaseType {
@@ -2461,6 +2506,7 @@ export interface SupplementalFont extends BaseType {
     script: string
     typeface: string
   }
+  children: []
 }
 
 export interface SystemColor extends BaseType {
@@ -2766,6 +2812,7 @@ export interface TextAutonumberBullet extends BaseType {
     startAt?: number
     type: TextAutonumberSchemeVal
   }
+  children: []
 }
 
 export interface TextBlipBullet extends BaseType {
@@ -2846,6 +2893,7 @@ export interface TextBulletSizePercent extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface TextBulletSizePoint extends BaseType {
@@ -2854,6 +2902,7 @@ export interface TextBulletSizePoint extends BaseType {
   attributes: {
     val: number
   }
+  children: []
 }
 
 export interface TextBulletTypefaceFollowText extends BaseType {
@@ -2919,6 +2968,7 @@ export interface TextCharBullet extends BaseType {
   attributes: {
     char: string
   }
+  children: []
 }
 
 export interface TextField extends BaseType {
@@ -2946,6 +2996,7 @@ export interface TextFont extends BaseType {
     pitchFamily?: PitchFamilyVal
     typeface: string
   }
+  children: []
 }
 
 export interface TextLineBreak extends BaseType {
@@ -2997,6 +3048,7 @@ export interface TextNormalAutofit extends BaseType {
     fontScale?: string
     lnSpcReduction?: string
   }
+  children: []
 }
 
 export interface TextParagraph extends BaseType {
@@ -3076,6 +3128,7 @@ export interface TextSpacingPercent extends BaseType {
   attributes: {
     val: string
   }
+  children: []
 }
 
 export interface TextSpacingPoint extends BaseType {
@@ -3084,6 +3137,7 @@ export interface TextSpacingPoint extends BaseType {
   attributes: {
     val: number
   }
+  children: []
 }
 
 export interface TextTabStop extends BaseType {
@@ -3093,6 +3147,7 @@ export interface TextTabStop extends BaseType {
     algn?: TextTabAlignTypeVal
     pos?: string
   }
+  children: []
 }
 
 export interface TextTabStopList extends BaseType {
@@ -3155,6 +3210,7 @@ export interface TileInfoProperties extends BaseType {
     tx?: string
     ty?: string
   }
+  children: []
 }
 
 export interface TintEffect extends BaseType {
@@ -3164,6 +3220,7 @@ export interface TintEffect extends BaseType {
     amt?: string
     hue?: number
   }
+  children: []
 }
 
 export interface Transform2D extends BaseType {
@@ -3193,6 +3250,7 @@ export interface TransformEffect extends BaseType {
     tx?: string
     ty?: string
   }
+  children: []
 }
 
 export interface Vector3D extends BaseType {
@@ -3203,6 +3261,7 @@ export interface Vector3D extends BaseType {
     dy: string
     dz: string
   }
+  children: []
 }
 
 export interface VideoFile extends BaseType {

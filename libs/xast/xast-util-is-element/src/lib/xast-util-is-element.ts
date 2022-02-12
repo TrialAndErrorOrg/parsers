@@ -72,7 +72,7 @@ export const isElement =
    *
    * node] Node to check?: unknown
    * test] When nullish, checks if `node` is a `Node`.?: Test
-   * When `string`, works like passing `function (node) {return node.type === test}`.
+   * When `string`, works like passing `function (node) {return node.name=== test}`.
    * When `function` checks if function passed the node is true.
    * When `array`, checks any one of the subtests pass.
    * index] Position of `node` in `parent`?: number
@@ -82,11 +82,11 @@ export const isElement =
    */
   // eslint-disable-next-line max-params
   function (
-    node: unknown,
-    test: Test,
-    index: number,
-    parent: Parent,
-    context: unknown
+    node?: unknown,
+    test?: Test,
+    index?: number,
+    parent?: Parent,
+    context?: unknown
   ): boolean {
     const check = convertElement(test)
 
@@ -154,7 +154,7 @@ export const convertElement =
    * When `array`, checks any one of the subtests pass.
    * => AssertAnything
    */
-  function (test: Test): AssertAnything {
+  function (test?: Test): AssertAnything {
     if (test === undefined || test === null) {
       return element
     }

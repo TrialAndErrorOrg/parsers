@@ -1,6 +1,6 @@
 import { Instruction, Doctype, Attributes as XastAttributes } from 'xast'
 import { Node as UnistNode, Parent as UnistParent } from 'unist'
-import { Text, Article, Content, Glossary } from './jats'
+import { Text, Article, Content, Glossary, P, pMap } from './jats'
 import { RequiredKeys, ValuesType } from 'utility-types'
 import { names } from './names'
 
@@ -11,9 +11,6 @@ export type ArrayValueMaybe<T> = T extends any[]
 export type AllTypes<T> = ArrayValueMaybe<ValuesType<T>>
 
 export type RequiredMap<T> = AllTypes<T>
-export type OldRequiredMap<T> = RequiredKeys<T> extends string
-  ? AllTypes<T>
-  : AllTypes<T> | undefined
 
 export interface Attributes {
   [name: string]: string | null | undefined | boolean | number
@@ -34,8 +31,15 @@ export interface Element extends UnistNode {
   name: string
   children?: Content[]
 }
+
 export function isElement(node: UnistNode): node is Element {
   return node.hasOwnProperty('name') && node.hasOwnProperty('attributes')
+}
+
+export function isParagraphContent(
+  node: UnistNode
+): node is P['children'][number] {
+  return node.type === 'text' || (isElement(node) && node.name in pMap)
 }
 
 export type NamesMap<T> = T extends { name: string } ? T['name'] : never

@@ -1,3 +1,4 @@
+import { isElement } from 'xast-util-is-element'
 import { Parent } from 'ooxast'
 import { all } from './all'
 import { Handle, J, JastContent, Node, Element } from './types'
@@ -11,13 +12,13 @@ export function one(
 ): JastContent | Array<JastContent> | void {
   let fn: Handle | undefined
 
-  if (node.type === 'element') {
+  if (isElement(node)) {
     // if (node.attributes && node.attributes.datoJast === 'ignore') {
     //   return
     // }
 
-    if (own.call(j.handlers, node.name)) {
-      fn = j.handlers[node.name]
+    if (own.call(j.handlers, node.name.replace('w:', ''))) {
+      fn = j.handlers[node.name.replace('w:', '')]
     }
   } else if (own.call(j.handlers, node.type)) {
     fn = j.handlers[node.type]

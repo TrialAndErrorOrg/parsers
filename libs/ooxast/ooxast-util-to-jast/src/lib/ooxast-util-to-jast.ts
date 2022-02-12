@@ -12,6 +12,9 @@ import {
   Node,
   Options,
   Attributes,
+  Root,
+  Element,
+  Text,
 } from './types'
 import { convert } from 'unist-util-is'
 import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
@@ -23,7 +26,7 @@ export { handlers as defaultHandlers }
 const block = convert(['heading', 'paragraph', 'root'])
 
 export function toJast(
-  tree: JastRoot | JastContent,
+  tree: Root | Element | Text,
   options: Options = {
     newLines: false,
     checked: '[x]',
@@ -36,7 +39,6 @@ export function toJast(
   // const byId: { [s: string]: Element } = {}
   let jast: JastContent | JastRoot
 
-  // TODO: fix this type error
   const j: J = Object.assign(
     ((
       node: JastRoot | JastContent,

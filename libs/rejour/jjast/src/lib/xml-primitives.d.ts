@@ -21,7 +21,7 @@ export interface _number extends BaseType {
   content: number
 }
 
-export interface _string extends BaseType {
+export
   content: string
 }
 

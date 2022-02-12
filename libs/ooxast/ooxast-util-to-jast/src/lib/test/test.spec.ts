@@ -1,17 +1,16 @@
 import { readdirSync, readFileSync, writeFileSync } from 'fs'
 import { join } from 'path'
-import rejourParse from 'rejour-parse'
-import { toJast } from '../ooxast-util-to-ooxast'
+import reoffParse from 'reoff-parse'
+import { toJast } from '../ooxast-util-to-jast'
 import relatexStringify from 'relatex-stringify'
 import { unified } from 'unified'
 import { JastContent, Options, JastRoot } from '../types'
 import { removePosition } from 'unist-util-remove-position'
-import { toLatex } from 'jast-util-to-latex'
 
 //describe('fixtures', () => {
 const fromXML = (config: Options = {}) =>
   unified()
-    .use(rejourParse)
+    .use(reoffParse)
     //@ts-ignore yayayay
     .use(() => {
       return transformer
@@ -60,11 +59,11 @@ describe.each(dir)('parses correctly for %s', (name: string) => {
   //console.dir(tree, { depth: null })
   if (name === 'complete') {
     writeFileSync(
-      join('libs', 'rejour', 'ooxast-util-to-jast', 'ooxasttree'),
+      join('libs', 'ooxast', 'ooxast-util-to-jast', 'ooxasttree'),
       JSON.stringify(xmlTree, null, 2)
     )
     writeFileSync(
-      join('libs', 'rejour', 'ooxast-util-to-jast', 'jasttree'),
+      join('libs', 'ooxast', 'ooxast-util-to-jast', 'jasttree'),
       JSON.stringify(tree, null, 2)
     )
   }
@@ -78,17 +77,17 @@ describe.each(dir)('parses correctly for %s', (name: string) => {
 
   if (name === 'complete') {
     writeFileSync(
-      join('libs', 'rejour', 'ooxast-util-to-jast', 'ooxasttree'),
+      join('libs', 'ooxast', 'ooxast-util-to-jast', 'ooxasttree'),
       JSON.stringify(xmlTree, null, 2)
     )
     writeFileSync(
-      join('libs', 'rejour', 'ooxast-util-to-jast', 'jasttree'),
+      join('libs', 'ooxast', 'ooxast-util-to-jast', 'jasttree'),
       JSON.stringify(tree, null, 2)
     )
     writeFileSync(
       join(
         'libs',
-        'rejour',
+        'ooxast',
         'ooxast-util-to-jast',
         'src',
         'lib',

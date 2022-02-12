@@ -1,29 +1,91 @@
+import { ValuesType } from 'utility-types'
 import {
   Root as XastRoot,
   Element as XastElement,
-  Parent as XastParent,
+  Parent,
   Literal as XastLiteral,
   Attributes as XastAttributes,
   Node as XastNode,
+  Instruction,
 } from 'xast'
 
 export interface TagLiteral extends XastElement {
   children: []
 }
 
-export interface Element extends Omit<XastElement, 'children'> {
-  children: (XastElement['children'][number] | TagLiteral)[]
+export type TableContent = TblContent | TrContent | TcContent
+export type ParagraphContent = PContent | RContent | Text
+export type Content =
+  | TableContent
+  | ParagraphContent
+  | TopLevelDocumentContent
+  | BodyContent
+  | FootnoteContent
+  | FootnotesContent
+// export interface Parent extends Omit<XastParent, 'children'> {
+//   children: (XastElement['children'][number] | TagLiteral)[]
+// }
+export interface Root extends XastRoot {
+  children: (Instruction | Text | Document | Footnotes)[]
+}
+
+export type FootnotesContent = Footnotes['children'][number]
+export interface Footnotes extends Parent {
+  name: 'w:footnotes'
+  children: Footnote[]
+}
+export type FootnoteContent = Footnote['children'][number]
+export interface Footnote extends Parent {
+  name: 'w:footnote'
+  children: (P | Sdt)[]
+}
+export type SdtContents = Sdt['children'][number]
+export interface Sdt extends Parent {
+  name: 'w:sdt'
+  children: (SdtPr | SdtEndPr | SdtContent)[]
+}
+export interface SdtPr extends Parent {
+  name: 'w:sdtPr'
+}
+export interface SdtEndPr extends Parent {
+  name: 'w:sdtEndPr'
+}
+export interface SdtContent extends Parent {
+  name: 'w:sdtContent'
+}
+export type TopLevelDocumentContent = Document['children'][number]
+export interface Document extends Parent {
+  name: 'w:document'
+  children: (Body | Background | Footnotes)[]
+}
+export interface Background extends Parent {
+  name: 'w:background'
+}
+export type BodyContent = Body['children'][number]
+export interface Body extends Parent {
+  name: 'w:body'
+  children: (P | SectPr | Tbl)[]
+}
+
+/**
+ * Stores information about page size and such.
+ */
+export interface SectPr extends Parent {
+  name: 'w:sectPr'
 }
 
 export interface Text extends XastLiteral {
   type: 'text'
   value: string
 }
-export interface P extends Element {
+export type PContent = P['children'][number]
+export interface P extends Parent {
   name: 'w:p'
   children: [PPr, R]
 }
-export interface R extends Element {
+
+export type RContent = R['children'][number]
+export interface R extends Parent {
   name: 'w:r'
   children: (
     | RPr
@@ -58,11 +120,11 @@ export interface NoBreakHyphen extends TagLiteral {
 export interface SoftHyphen extends TagLiteral {
   name: 'w:softHyphen'
 }
-export interface Drawing extends Element {
+export interface Drawing extends Parent {
   name: 'w:drawing'
 }
 
-export interface T extends Element {
+export interface T extends Parent {
   name: 'w:t'
   attributes: {
     'xml:space'?: 'preserve'
@@ -72,24 +134,26 @@ export interface T extends Element {
 /**
  * Run properties
  */
-export interface RPr extends Element {
+export interface RPr extends Parent {
   name: 'w:rPr'
 }
 /**
  * Paragraph properties
  */
-export interface PPr extends Element {
+export interface PPr extends Parent {
   name: 'w:rPr'
 }
 
-export interface Tbl extends Element {
+export type TblContent = Tbl['children'][number]
+export interface Tbl extends Parent {
   name: 'w:tbl'
   children: (TblPr | TblGrid | Tr)[]
 }
-export interface TblPr extends Element {
+export interface TblPr extends Parent {
   name: 'w:tblPr'
 }
-export interface TblGrid extends Element {
+export type TblGridContent = GridCol
+export interface TblGrid extends Parent {
   name: 'w:tblGrid'
   children: GridCol[]
 }
@@ -97,24 +161,33 @@ export interface GridCol extends TagLiteral {
   name: 'w:gridCol'
   attributes: { 'w:w': string }
 }
-export interface Tr extends Element {
+export type TrContent = Tr['children'][number]
+export interface Tr extends Parent {
   name: 'w:tr'
   children: (TrPr | Tc)[]
 }
-export interface TrPr extends Element {
+export interface TrPr extends Parent {
   name: 'w:trPr'
 }
-export interface Tc extends Element {
+export type TcContent = Tc['children'][number]
+export interface Tc extends Parent {
   name: 'w:tc'
   children: (P | Tbl | TcPr)[]
 }
-export interface TcPr extends Element {
+export interface TcPr extends Parent {
   name: 'w:tcPr'
 }
 
 export type {
-  XastRoot as Root,
   XastParent as Parent,
   XastAttributes as Attributes,
   XastNode as Node,
 }
+
+export type NoUndefined<T> = Exclude<T, undefined>
+export type ArrayValueMaybe<T> = T extends any[]
+  ? ValuesType<NoUndefined<T>>
+  : NoUndefined<T>
+export type AllTypes<T> = ArrayValueMaybe<ValuesType<T>>
+
+export type RequiredMap<T> = AllTypes<T>

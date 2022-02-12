@@ -1,5 +1,5 @@
-import { isParagraphContent } from 'jast'
-import { JastContent, JastParagraphContent } from '../types'
+import { isParagraphContent } from 'jjast'
+import { JastContent, JastP, JastParagraphContent } from '../types'
 //import { phrasing } from 'mdast-util-phrasing'
 
 export function wrap(nodes: Array<JastContent>) {
@@ -18,12 +18,17 @@ export function wrap(nodes: Array<JastContent>) {
       return []
     }
 
-    return { type: 'paragraph', children: nodes }
+    return {
+      type: 'element',
+      name: 'p',
+      attributes: {},
+      children: nodes,
+    } as JastP
   }
 }
 
 /**
- * Check if there are non-phrasing mdast nodes returned.
+ * Check if there are non-phrasing jast nodes returned.
  * This is needed if a fragment is given, which could just be a sentence, and
  * doesn’t need a wrapper paragraph.
  *
@@ -40,6 +45,7 @@ export function wrapNeeded(nodes: Array<JastContent>): boolean {
 
     if (
       !isParagraphContent(node) ||
+      //@ts-expect-error idk man
       ('children' in node && wrapNeeded(node.children))
     ) {
       return true
@@ -50,7 +56,7 @@ export function wrapNeeded(nodes: Array<JastContent>): boolean {
 }
 
 /**
- * Wrap all runs of mdast phrasing content in `paragraph` nodes.
+ * Wrap all runs of jast phrasing content in `paragraph` nodes.
  */
 function runs(
   nodes: Array<JastContent>,

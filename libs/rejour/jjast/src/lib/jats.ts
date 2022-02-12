@@ -9037,7 +9037,7 @@ export interface RelatedObjectChildrenMap {
   year?: Year[]
 }
 
-interface ResourceGroup extends UnistNode {
+export interface ResourceGroup extends UnistNode {
   type: 'element'
   name: 'resourceGroup'
   attributes: {
@@ -13685,3 +13685,4 @@ export type documentMap = {
 export var docMap: documentMap
 export type Content = ValuesType<documentMap>
 export type ElementContent = Extract<Content, { type: 'element' }>
+export var pMap: PChildrenMap

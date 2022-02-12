@@ -1,5 +1,5 @@
 import { one } from './one'
-import { J, JastContent, Node, Parent, Handle } from './types'
+import { J, JastContent, Node, Parent, Handle, JastParent } from './types'
 
 /**
  * Convert all nodes in tree using j
@@ -7,7 +7,11 @@ import { J, JastContent, Node, Parent, Handle } from './types'
  * @param parent
  * @returns
  */
-export function all(j: J, parent: Node): Array<JastContent> {
+
+export function all<T extends JastContent = JastContent>(
+  j: J,
+  parent: Node
+): Array<T extends JastParent ? T['children'][number] : JastContent> {
   // @ts-ignore Assume `parent` is a parent.
   const nodes: Array<Node> = parent.children || []
   const values: Array<JastContent> = []
@@ -15,7 +19,7 @@ export function all(j: J, parent: Node): Array<JastContent> {
   let length = nodes.length
   let child = nodes[index + 1]
 
-  // Trim initial and final `<br>`s.
+  // Trim initial and final  `<br>`s.
   // They’re not semantic per HTML, and they can’t be made in markdown things
   // like paragraphs or headings.
   // while (child && child.type === 'element' && child.name === 'br') {

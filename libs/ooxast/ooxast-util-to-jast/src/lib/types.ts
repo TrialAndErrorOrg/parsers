@@ -4,17 +4,19 @@ import {
   Parent as JastParent,
   Content as JastContent,
   Root as JastRoot,
-  P,
+  P as JastP,
 } from 'jjast'
-type JastParagraphContent = P['children'][number]
+type JastParagraphContent = JastP['children'][number]
 
 import {
   Attributes as OoxastProperties,
   //Node,
   Parent,
-  Element,
+  Parent,
+  Body,
   Text,
   Root,
+  P,
 } from 'ooxast'
 
 /**
@@ -49,7 +51,7 @@ export type Handle = (
 
 export interface Context {
   nodeById?: {
-    [id: string]: Element
+    [id: string]: Parent
   }
   baseFound: boolean
   frozenBaseUrl: string | null
@@ -86,11 +88,27 @@ export type JWithoutProps = (
 
 export type JWithPropsSpecific<TNode extends JastContent = JastContent> = (
   node: Node,
-  type: Pick<TNode, 'type'>,
+  type: TNode['type'] extends 'root' | 'text'
+    ? TNode['type'] extends 'root'
+      ? 'root'
+      : 'text'
+    : Exclude<TNode, Text | Root>['name'],
   props?: Attributes,
-  //@ts-ignore yeah i know butttt
-  // TODO: Make this not error
-  children?: Pick<TNode, 'children'>
+  children?:
+    | string
+    | (TNode extends JastParent ? TNode['children'][number][] : never)
+) => TNode
+
+export type JWithoutPropsSpecific<TNode extends JastContent = JastContent> = (
+  node: Node,
+  type: TNode['type'] extends 'root' | 'text'
+    ? TNode['type'] extends 'root'
+      ? 'root'
+      : 'text'
+    : Exclude<TNode, Text | Root>['name'],
+  children?:
+    | string
+    | (TNode extends JastParent ? TNode['children'][number][] : never)
 ) => TNode
 
 export type J = JWithProps & JWithoutProps & Context
@@ -98,12 +116,15 @@ export type J = JWithProps & JWithoutProps & Context
 export type {
   Parent,
   Root,
-  Element,
+  Parent as Element,
   JastContent,
   JastParent,
   JastRoot,
   JastParagraphContent,
   Text,
+  P,
+  JastP,
+  Body,
 }
 
 export type Parents = Extract<Exclude<Node, Text | Root>, { children: any[] }>

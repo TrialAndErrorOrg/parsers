@@ -98,6 +98,7 @@ export function toJast(
       collectCitation: options.collectCitation || collectCitation,
       parseCitation: options.parseCitation || parseCitation,
       partialCitation: '',
+      deleteNextRun: false,
     } as Context
   )
 
@@ -128,7 +129,7 @@ export function toJast(
 
   // visit(mdast, 'text', ontext)
 
-  console.log(citations)
+  //console.log(citations)
 
   return jast
 

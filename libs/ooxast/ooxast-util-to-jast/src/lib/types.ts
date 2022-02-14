@@ -77,6 +77,7 @@ export interface Context {
   parseCitation: (citation: any) => any
   collectCitation: (citation: any) => any
   partialCitation: string
+  deleteNextRun: boolean
 }
 
 export type JWithProps = (

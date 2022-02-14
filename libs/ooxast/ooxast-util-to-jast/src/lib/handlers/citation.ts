@@ -7,13 +7,14 @@ export function citation(j: J, citation: T, parent: Parent) {
   // i const t = select('', citation) as T
   //  if (!t) return
   const text = citation.children[0].value
-  const type = text.includes('CSL_CITATION')
+  const type = text.includes('CSL_CITATION') || '}'
   // Zotero/mendely citation: easy
   if (type) {
     let citation: { [key: string]: any }
     const json = text.replace(/ADDIN .*?CSL_CITATION/, '')
     try {
-      citation = JSON.parse(json)
+      citation = JSON.parse(j.partialCitation + json)
+      if (j.partialCitation) j.partialCitation = ''
     } catch (e: any) {
       console.log(e.message)
       // With very long Mendely citations, Word will sometimes split it up
@@ -31,6 +32,8 @@ export function citation(j: J, citation: T, parent: Parent) {
         j.partialCitation = ''
         console.log('Success!')
       }
+      console.log(json)
+      console.log(j.partialCitation)
       throw new Error(
         'Corrupt citation! This might be because the text is too long.'
       )
@@ -45,6 +48,7 @@ export function citation(j: J, citation: T, parent: Parent) {
       )
       const formattedCitations = sectionedCitations.split(';')
 
+      j.deleteNextRun = true
       return citation.citationItems.map((cite: any, i: number) => {
         const citation: CSL = cite.itemData
         j.collectCitation(citation)

@@ -9,6 +9,7 @@ import { tbl } from './tbl'
 import { footnotes } from './footnotes'
 import { footnote } from './footnote'
 import { document } from './document'
+import { r } from './r'
 
 export const handlers = {
   p,
@@ -19,7 +20,7 @@ export const handlers = {
   footnotes,
   footnote,
   t: all,
-  r: all,
+  r,
   instrText: citation,
   tbl,
 }

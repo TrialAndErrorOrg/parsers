@@ -6,6 +6,15 @@ import { J } from '../types'
 import { Italic, Bold, Underline, Strike, Sc } from 'jjast'
 
 export function r(j: J, node: R) {
+  if (!node?.children?.[1] || node?.children?.[1]?.name === 'w:fldChar') return
+  if (node?.children?.[1]?.name === 'w:instrText') {
+    j.deleteNextRun = false
+  }
+  if (j.deleteNextRun) {
+    j.deleteNextRun = false
+    return
+  }
+
   const props = select('w\\:rPr', node) as RPr
   let text = j(node, 'text', all(j, node))
   if (!props) return text

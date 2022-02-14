@@ -46,7 +46,7 @@ export const test: any = {
           ],
         },
       ],
-    } as R,
+    } as unknown as R,
   ],
 }
 

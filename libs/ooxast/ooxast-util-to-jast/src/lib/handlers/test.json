@@ -1,0 +1,153 @@
+{
+  "citationItems": [
+    {
+      "id": "ITEM-1",
+      "itemData": {
+        "DOI": "10.1038/306686a0",
+        "ISSN": "0028-0836 (Print)",
+        "PMID": "6656869",
+        "abstract": "Noxious skin stimuli which are sufficiently intense to produce tissue injury, characteristically generate prolonged post-stimulus sensory disturbances that include continuing pain, an increased sensitivity to noxious stimuli and pain following innocuous stimuli. This could result from either a reduction in the thresholds of skin nociceptors (sensitization) or an increase in the excitability of the central nervous system so that normal inputs now evoke exaggerated responses. Because sensitization of peripheral receptors occurs following injury, a peripheral mechanism is widely held to be responsible for post-injury hypersensitivity. To investigate this I have now developed an animal model where changes occur in the threshold and responsiveness of the flexor reflex following peripheral injury that are analogous to the sensory changes found in man. Electrophysiological analysis of the injury-induced increase in excitability of the flexion reflex shows that it in part arises from changes in the activity of the spinal cord. The long-term consequences of noxious stimuli result, therefore, from central as well as from peripheral changes.",
+        "author": [
+          {
+            "dropping-particle": "",
+            "family": "Woolf",
+            "given": "Clifford J",
+            "non-dropping-particle": "",
+            "parse-names": false,
+            "suffix": ""
+          }
+        ],
+        "container-title": "Nature",
+        "id": "ITEM-1",
+        "issue": "5944",
+        "issued": { "date-parts": [["1983", "12"]] },
+        "language": "eng",
+        "page": "686-688",
+        "publisher-place": "England",
+        "title": "Evidence for a central component of post-injury pain hypersensitivity",
+        "type": "article-journal",
+        "volume": "306"
+      },
+      "uris": [
+        "http://www.mendeley.com/documents/?uuid=2ff72fa7-d045-4f16-b5a4-27d849b07504"
+      ]
+    },
+    {
+      "id": "ITEM-2",
+      "itemData": {
+        "DOI": "10.1016/j.pain.2010.09.030",
+        "ISSN": "1872-6623",
+        "abstract": "Nociceptor inputs can trigger a prolonged but reversible increase in the excitability and synaptic efficacy of neurons in central nociceptive pathways, the phenomenon of central sensitization. Central sensitization manifests as pain hypersensitivity, particularly dynamic tactile allodynia, secondary punctate or pressure hyperalgesia, aftersensations, and enhanced temporal summation. It can be readily and rapidly elicited in human volunteers by diverse experimental noxious conditioning stimuli to skin, muscles or viscera, and in addition to producing pain hypersensitivity, results in secondary changes in brain activity that can be detected by electrophysiological or imaging techniques. Studies in clinical cohorts reveal changes in pain sensitivity that have been interpreted as revealing an important contribution of central sensitization to the pain phenotype in patients with fibromyalgia, osteoarthritis, musculoskeletal disorders with generalized pain hypersensitivity, headache, temporomandibular joint disorders, dental pain, neuropathic pain, visceral pain hypersensitivity disorders and post-surgical pain. The comorbidity of those pain hypersensitivity syndromes that present in the absence of inflammation or a neural lesion, their similar pattern of clinical presentation and response to centrally acting analgesics, may reflect a commonality of central sensitization to their pathophysiology. An important question that still needs to be determined is whether there are individuals with a higher inherited propensity for developing central sensitization than others, and if so, whether this conveys an increased risk in both developing conditions with pain hypersensitivity, and their chronification. Diagnostic criteria to establish the presence of central sensitization in patients will greatly assist the phenotyping of patients for choosing treatments that produce analgesia by normalizing hyperexcitable central neural activity. We have certainly come a long way since the first discovery of activity-dependent synaptic plasticity in the spinal cord and the revelation that it occurs and produces pain hypersensitivity in patients. Nevertheless, discovering the genetic and environmental contributors to and objective biomarkers of central sensitization will be highly beneficial, as will additional treatment options to prevent or reduce this prevalent and promiscuous form of pain plasticity.",
+        "author": [
+          {
+            "dropping-particle": "",
+            "family": "Woolf",
+            "given": "Clifford J",
+            "non-dropping-particle": "",
+            "parse-names": false,
+            "suffix": ""
+          }
+        ],
+        "container-title": "Pain",
+        "edition": "2010/10/18",
+        "id": "ITEM-2",
+        "issue": "3 Suppl",
+        "issued": { "date-parts": [["2011", "3"]] },
+        "language": "eng",
+        "page": "S2-S15",
+        "title": "Central sensitization: Implications for the diagnosis and treatment of pain",
+        "type": "article-journal",
+        "volume": "152"
+      },
+      "uris": [
+        "http://www.mendeley.com/documents/?uuid=5004bfd7-ce98-49c3-a1d7-db69173c7609"
+      ]
+    },
+    {
+      "id": "ITEM-3",
+      "itemData": {
+        "DOI": "10.1016/s0304-3959(99)00242-0",
+        "ISSN": "0304-3959 (Print)",
+        "PMID": "10781906",
+        "abstract": "In an attempt to explain how and why some individuals with musculoskeletal pain develop a chronic pain syndrome, Lethem et al. (Lethem J, Slade PD, Troup JDG, Bentley G. Outline of fear-avoidance model of exaggerated pain perceptions. Behav Res Ther 1983; 21: 401-408).ntroduced a so-called 'fear-avoidance' model. The central concept of their model is fear of pain. 'Confrontation' and 'avoidance' are postulated as the two extreme responses to this fear, of which the former leads to the reduction of fear over time. The latter, however, leads to the maintenance or exacerbation of fear, possibly generating a phobic state. In the last decade, an increasing number of investigations have corroborated and refined the fear-avoidance model. The aim of this paper is to review the existing evidence for the mediating role of pain-related fear, and its immediate and long-term consequences in the initiation and maintenance of chronic pain disability. We first highlight possible precursors of pain-related fear including the role negative appraisal of internal and external stimuli, negative affectivity and anxiety sensitivity may play. Subsequently, a number of fear-related processes will be discussed including escape and avoidance behaviors resulting in poor behavioral performance, hypervigilance to internal and external illness information, muscular reactivity, and physical disuse in terms of deconditioning and guarded movement. We also review the available assessment methods for the quantification of pain-related fear and avoidance. Finally, we discuss the implications of the recent findings for the prevention and treatment of chronic musculoskeletal pain. Although there are still a number of unresolved issues which merit future research attention, pain-related fear and avoidance appear to be an essential feature of the development of a chronic problem for a substantial number of patients with musculoskeletal pain.",
+        "author": [
+          {
+            "dropping-particle": "",
+            "family": "Vlaeyen",
+            "given": "Johan W.S.",
+            "non-dropping-particle": "",
+            "parse-names": false,
+            "suffix": ""
+          },
+          {
+            "dropping-particle": "",
+            "family": "Linton",
+            "given": "Steven J.",
+            "non-dropping-particle": "",
+            "parse-names": false,
+            "suffix": ""
+          }
+        ],
+        "container-title": "Pain",
+        "id": "ITEM-3",
+        "issue": "3",
+        "issued": { "date-parts": [["2000", "4"]] },
+        "language": "eng",
+        "page": "317-332",
+        "publisher-place": "United States",
+        "title": "Fear-avoidance and its consequences in chronic musculoskeletal pain: A state of the art",
+        "type": "article-journal",
+        "volume": "85"
+      },
+      "uris": [
+        "http://www.mendeley.com/documents/?uuid=d17914e5-d158-4b59-bf0c-02cc8d5847d7"
+      ]
+    },
+    {
+      "id": "ITEM-4",
+      "itemData": {
+        "DOI": "10.1016/j.pain.2011.12.009",
+        "ISSN": "1872-6623 (Electronic)",
+        "PMID": "22321917",
+        "author": [
+          {
+            "dropping-particle": "",
+            "family": "Vlaeyen",
+            "given": "Johan W S",
+            "non-dropping-particle": "",
+            "parse-names": false,
+            "suffix": ""
+          },
+          {
+            "dropping-particle": "",
+            "family": "Linton",
+            "given": "Steven J",
+            "non-dropping-particle": "",
+            "parse-names": false,
+            "suffix": ""
+          }
+        ],
+        "container-title": "Pain",
+        "id": "ITEM-4",
+        "issue": "6",
+        "issued": { "date-parts": [["2012", "6"]] },
+        "language": "eng",
+        "page": "1144-1147",
+        "publisher-place": "United States",
+        "title": "Fear-avoidance model of chronic musculoskeletal pain: 12 years on",
+        "type": "article-journal",
+        "volume": "153"
+      },
+      "uris": [
+        "http://www.mendeley.com/documents/?uuid=915562a7-fdd4-4e8b-af71-f03a2d817e80"
+      ]
+    }
+  ],
+  "mendeley": {
+    "formattedCitation": "(Vlaeyen & Linton, 2000, 2012; Woolf, 1983, 2011)",
+    "plainTextFormattedCitation": "(Vlaeyen & Linton, 2000, 2012; Woolf, 1983, 2011)",
+    "previouslyFormattedCitation": "(Vlaeyen & Linton, 2000, 2012; Woolf, 1983, 2011)"
+  },
+  "properties": { "noteIndex": 0 },
+  "schema": "https://github.com/citation-style-language/schema/raw/master/csl-citation.json"
+}

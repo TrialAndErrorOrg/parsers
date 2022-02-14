@@ -159,7 +159,7 @@ export interface BdoContentRunMap {
 export interface Body extends UnistNode {
   type: 'element'
   name: 'w:body'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<BodyMap>[]
 }
 
@@ -955,7 +955,7 @@ export interface DocType extends UnistNode {
   }
 }
 
-export type Document = DocumentBase & {
+export interface Document extends DocumentBase {
   type: 'element'
   name: 'w:document'
   attributes: {
@@ -966,17 +966,19 @@ export type Document = DocumentBase & {
 
 export interface DocumentMap {
   body?: Body
+  background?: Background
 }
 
 export interface DocumentBase extends UnistNode {
   type: 'element'
-  name: 'w:documentBase'
-  //attributes: {}
+  name: 'w:documentBase' | 'w:document'
+  attributes: {}
   children: RequiredMap<DocumentBaseMap>[]
 }
 
 export interface DocumentBaseMap {
   background?: Background
+  body?: Body
 }
 
 export interface DocVar extends UnistNode {

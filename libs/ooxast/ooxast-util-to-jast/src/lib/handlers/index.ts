@@ -8,6 +8,7 @@ import { citation } from './citation'
 import { tbl } from './tbl'
 import { footnotes } from './footnotes'
 import { footnote } from './footnote'
+import { document } from './document'
 
 export const handlers = {
   p,

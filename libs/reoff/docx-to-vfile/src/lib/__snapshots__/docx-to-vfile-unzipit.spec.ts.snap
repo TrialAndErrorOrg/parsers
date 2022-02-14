@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`reoffDocxToVfile should work 1`] = `
+VFile {
+  "cwd": "/Users/thomas/Projects/jote-monorepo",
+  "data": Object {},
+  "history": Array [],
+  "messages": Array [],
+  "value": "[object
+  
+  [
+o
+b
+j
+e
+c
+t
+ 
+A
+r
+r
+a
+y
+B
+u
+f
+f
+e
+r
+]
+  </w:document>",
+}
+`;

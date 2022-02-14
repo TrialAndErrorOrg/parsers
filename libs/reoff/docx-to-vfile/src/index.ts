@@ -1,2 +1,2 @@
 export * from './lib/get-xml-data'
-export * from './lib/docx-to-vfile-yauzl'
+export * from './lib/docx-to-vfile-unzipit'

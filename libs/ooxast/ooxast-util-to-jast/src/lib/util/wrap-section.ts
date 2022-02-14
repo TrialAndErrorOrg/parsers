@@ -4,6 +4,7 @@ import { Parent, Element, P, Node, Body } from '../types'
 import { getPStyle } from './get-pstyle'
 import { Sec, Body as JastBody } from 'jjast'
 import { all } from '../all'
+import { one } from '../one'
 
 function parseDepth(str: string) {
   return parseInt(str.slice(-1), 10)
@@ -17,19 +18,27 @@ function wDepth(sec: Sec | JastBody) {
 export function wrapSec(
   j: J,
   depth: number,
-  children: Node[],
-  parent: Parent
+  child: Element | null,
+  parent?: Parent
 ): Sec | JastBody {
-  const parentSec: Sec | JastBody = {
+  const parentSec: Element = {
     type: 'element',
     name: depth === 0 ? 'body' : 'sec',
     attributes: depth === 0 ? {} : { id: `sec-${depth}` },
     //@ts-ignore shush, it's better this way
-    children,
+    children: child
+      ? [
+          {
+            type: 'element',
+            name: 'title',
+            attributes: child.attributes,
+            children: child.children || [],
+          },
+        ]
+      : [],
   }
-  return depth === 0
-    ? (j(parent, 'body', all(j, parentSec)) as JastBody)
-    : (j(parent, 'sec', all(j, parentSec)) as Sec)
+  //@ts-ignore
+  return parentSec
 }
 
 const isP = convertElement<P>('w:p')
@@ -37,16 +46,22 @@ const isP = convertElement<P>('w:p')
 export function isHeading(elem: Element): elem is P {
   return !!(isP(elem) && getPStyle(elem)?.toLowerCase()?.includes('heading'))
 }
+export function isJastHeading(elem: Element): boolean {
+  //@ts-ignore
+  return !!elem?.attributes?.style?.toLowerCase()?.includes('heading')
+}
 
 export function getHeadingLevel(p: P) {
   const lastNumber = getPStyle(p)?.toLowerCase()?.slice(-1)
   return !lastNumber ? null : parseInt(lastNumber, 10)
 }
+export function getJastHeadingLevel(p: Element) {
+  //@ts-ignore
+  return parseInt(p.attributes.style.slice(-1)) || 0
+}
 
-export function wrapSections(j: J, body: Body) {
-  const rootChildren = body.children
-
-  const rootWrapper = wrapSec(j, 0, [], body)
+export function wrapSections(j: J, bodyChildren: Element[]) {
+  const rootWrapper = wrapSec(j, 0, null)
   const wrapperStack: any[] = []
   wrapperStack.push(rootWrapper)
 
@@ -58,20 +73,21 @@ export function wrapSections(j: J, body: Body) {
     return wDepth(currentWrapper())
   }
 
-  for (const elem of rootChildren) {
-    if (isHeading(elem)) {
-      const elemDepth = getHeadingLevel(elem)
-      if (!elemDepth) {
+  for (let i = 0; i < bodyChildren.length; i++) {
+    let elem = bodyChildren[i]
+    if (isJastHeading(elem)) {
+      const elemDepth = getJastHeadingLevel(elem)
+      if (!elemDepth && elemDepth !== 0) {
         currentWrapper().children.push(elem)
-        return
+        continue
       }
       // Child heading
       if (elemDepth > j.sectionDepth) {
-        const childWrapper = wrapSec(j, elemDepth, [elem], body)
+        const childWrapper = wrapSec(j, elemDepth, elem)
         currentWrapper().children.push(childWrapper)
         wrapperStack.push(childWrapper)
         j.sectionDepth++
-        return
+        continue
       }
 
       // Delimiting heading, i.e. one that ends the current sec
@@ -79,10 +95,11 @@ export function wrapSections(j: J, body: Body) {
         wrapperStack.pop()
         j.sectionDepth--
       }
-      const siblingWrapper = wrapSec(j, elemDepth, [elem], body)
+      const siblingWrapper = wrapSec(j, elemDepth, elem)
       currentWrapper().children.push(siblingWrapper)
       wrapperStack.push(siblingWrapper)
     }
+    currentWrapper().children.push(elem)
   }
 
   return rootWrapper

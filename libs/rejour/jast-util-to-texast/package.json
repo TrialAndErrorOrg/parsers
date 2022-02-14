@@ -25,13 +25,5 @@
     "csl-json": "^0.1.0",
     "unist-util-remove-position": "4.0.0",
     "unist-util-visit-parents": "5.0.0"
-  },
-  "wallaby": {
-    "autoDetect": true,
-    "env": {
-      "params": {
-        "runner": "--experimental-vm-modules"
-      }
-    }
   }
 }

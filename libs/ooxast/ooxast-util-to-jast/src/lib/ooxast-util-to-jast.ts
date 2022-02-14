@@ -1,6 +1,7 @@
 import { one } from './one'
 import { handlers } from './handlers/index'
 import { own } from './util/own'
+import { Data as CSL } from 'csl-json'
 
 import {
   Context,
@@ -32,12 +33,13 @@ export function toJast(
     checked: '[x]',
     unchecked: '[ ]',
     quotes: ['"'],
-    topSection: 1,
+    topSection: 0,
     columnSeparator: false,
   }
 ) {
   // const byId: { [s: string]: Element } = {}
   let jast: JastContent | JastRoot
+  let citations: CSL[] = []
 
   const j: J = Object.assign(
     ((
@@ -88,10 +90,14 @@ export function toJast(
       unchecked: options.unchecked || '[ ]',
       quotes: options.quotes || ['"'],
       italics: options.italics || 'emph',
-      sectionDepth: options.topSection || 1,
+      sectionDepth: options.topSection || 0,
       documentClass: options.documentClass || { name: 'article' },
       bibname: options.bibname || 'bibliography',
       columnSeparator: !!options.columnSeparator,
+      citationNumber: 0,
+      collectCitation: options.collectCitation || collectCitation,
+      parseCitation: options.parseCitation || parseCitation,
+      partialCitation: '',
     } as Context
   )
 
@@ -121,6 +127,8 @@ export function toJast(
   }
 
   // visit(mdast, 'text', ontext)
+
+  console.log(citations)
 
   return jast
 
@@ -171,5 +179,9 @@ export function toJast(
       parent.children.splice(index, 1)
       return index
     }
+  }
+  function parseCitation(citation: any) {}
+  function collectCitation(citation: any) {
+    citations.push(citation)
   }
 }

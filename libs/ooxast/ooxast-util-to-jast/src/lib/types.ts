@@ -41,6 +41,8 @@ export interface Options {
     options?: string[]
     name: string
   }
+  parseCitation?: (citation: any) => any
+  collectCitation?: (citation: any) => any
 }
 
 export type Handle = (
@@ -71,6 +73,10 @@ export interface Context {
   sectionDepth: number
   bibname: string
   columnSeparator: boolean
+  citationNumber: number
+  parseCitation: (citation: any) => any
+  collectCitation: (citation: any) => any
+  partialCitation: string
 }
 
 export type JWithProps = (

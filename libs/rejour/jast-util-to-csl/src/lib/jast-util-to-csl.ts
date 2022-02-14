@@ -258,7 +258,6 @@ export function one(node: Node) {
 
   switch (node.name) {
     case 'articleTitle':
-      //@ts-expect-error yes
       return { title: toString(node) }
     case 'refList':
       return refListToCSL(node)

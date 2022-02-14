@@ -1,20 +1,19 @@
-import { Node as Node } from 'unist'
-import { Parent as Parent } from 'unist'
-import { Root as Root } from 'xast'
-import { Element as Element } from 'xast'
-import { Attributes as Attribute } from 'xast'
+import { Parent, Node } from 'unist'
+import { Root, Element, Attributes as Attribute } from 'xast'
 export type XastParent = Element | Root
 import { Element as XXastParent } from 'xast'
 export type XastNode = XXastParent['children'][number] | Root
 
 export type ElementChild = Element['children'][number]
 export type AttributeValue = Attribute[string]
-import { Selector as Selector } from 'css-selector-parser'
-import { Selectors as Selectors } from 'css-selector-parser'
-import { RuleSet as RuleSet } from 'css-selector-parser'
-import { Rule as Rule } from 'css-selector-parser'
-import { RulePseudo as RulePseudo } from 'css-selector-parser'
-import { AttrValueType as AttrValueType } from 'css-selector-parser'
+import {
+  RuleSet,
+  Rule,
+  Selector,
+  Selectors,
+  RulePseudo,
+  AttrValueType,
+} from 'css-selector-parser'
 import { html } from 'property-information'
 
 export type {

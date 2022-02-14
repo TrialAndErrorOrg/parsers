@@ -50,7 +50,7 @@ export interface AltChunkPr extends UnistNode {
 }
 
 export interface AltChunkPrMap {
-  matchSrc?: OnOff
+  matchSrc?: OnOff<'matchSrc'>
 }
 
 export interface Attr extends UnistNode {
@@ -127,22 +127,22 @@ export interface BdoContentRunMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlRun[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
-  del?: RunTrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: RunTrackChange<'del'>[]
   dir?: DirContentRun[]
   fldSimple?: SimpleField[]
   hyperlink?: Hyperlink[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -171,19 +171,19 @@ export interface BodyMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlBlock[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
-  del?: RunTrackChange[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: RunTrackChange<'del'>[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -412,19 +412,19 @@ export interface CommentMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlBlock[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
-  del?: RunTrackChange[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: RunTrackChange<'del'>[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -456,14 +456,14 @@ export interface Compat extends UnistNode {
 }
 
 export interface CompatMap {
-  adjustLineHeightInTable?: OnOff
-  applyBreakingRules?: OnOff
-  balanceSingleByteDoubleByteWidth?: OnOff
+  adjustLineHeightInTable?: OnOff<'adjustLineHeightInTable'>
+  applyBreakingRules?: OnOff<'applyBreakingRules'>
+  balanceSingleByteDoubleByteWidth?: OnOff<'balanceSingleByteDoubleByteWidth'>
   compatSetting?: CompatSetting[]
-  doNotExpandShiftReturn?: OnOff
-  doNotLeaveBackslashAlone?: OnOff
-  spaceForUL?: OnOff
-  ulTrailSpace?: OnOff
+  doNotExpandShiftReturn?: OnOff<'doNotExpandShiftReturn'>
+  doNotLeaveBackslashAlone?: OnOff<'doNotLeaveBackslashAlone'>
+  spaceForUL?: OnOff<'spaceForUL'>
+  ulTrailSpace?: OnOff<'ulTrailSpace'>
 }
 
 export interface CompatSetting extends UnistNode {
@@ -505,20 +505,20 @@ export interface CustomXmlBlockMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlBlock[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
   customXmlPr?: CustomXmlPr
-  del?: RunTrackChange[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  del?: RunTrackChange<'del'>[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -548,20 +548,20 @@ export interface CustomXmlCellMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlCell[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
   customXmlPr?: CustomXmlPr
-  del?: RunTrackChange[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  del?: RunTrackChange<'del'>[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -602,20 +602,20 @@ export interface CustomXmlRowMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlRow[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
   customXmlPr?: CustomXmlPr
-  del?: RunTrackChange[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  del?: RunTrackChange<'del'>[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -645,23 +645,23 @@ export interface CustomXmlRunMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlRun[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
   customXmlPr?: CustomXmlPr
-  del?: RunTrackChange[]
+  del?: RunTrackChange<'del'>[]
   dir?: DirContentRun[]
   fldSimple?: SimpleField[]
   hyperlink?: Hyperlink[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -721,22 +721,22 @@ export interface DirContentRunMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlRun[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
-  del?: RunTrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: RunTrackChange<'del'>[]
   dir?: DirContentRun[]
   fldSimple?: SimpleField[]
   hyperlink?: Hyperlink[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -760,8 +760,8 @@ export interface Div extends UnistNode {
 }
 
 export interface DivMap {
-  blockQuote?: OnOff
-  bodyDiv?: OnOff
+  blockQuote?: OnOff<'blockQuote'>
+  bodyDiv?: OnOff<'bodyDiv'>
   divBdr?: DivBdr
   divsChild?: Divs[]
   marBottom: SignedTwipsMeasure
@@ -1021,6 +1021,7 @@ export interface EastAsianLayout extends UnistNode {
     'w:vert'?: string
     'w:vertCompress'?: string
   }
+  children: []
 }
 
 export type EdnDocProps = EdnProps & {
@@ -1091,10 +1092,10 @@ export interface FFCheckBox extends UnistNode {
 }
 
 export interface FFCheckBoxMap {
-  checked?: OnOff
-  default?: OnOff
-  size: HpsMeasure
-  sizeAuto: OnOff
+  checked?: OnOff<'checked'>
+  default?: OnOff<'default'>
+  size: HpsMeasure<'size'>
+  sizeAuto: OnOff<'sizeAuto'>
 }
 
 export interface FFData extends UnistNode {
@@ -1105,10 +1106,10 @@ export interface FFData extends UnistNode {
 }
 
 export interface FFDataMap {
-  calcOnExit: OnOff[]
+  calcOnExit: OnOff<'calcOnExit'>[]
   checkBox: FFCheckBox[]
   ddList: FFDDList[]
-  enabled: OnOff[]
+  enabled: OnOff<'enabled'>[]
   entryMacro?: MacroName[]
   exitMacro?: MacroName[]
   helpText?: FFHelpText[]
@@ -1226,7 +1227,7 @@ export interface FontMap {
   embedItalic?: FontRel
   embedRegular?: FontRel
   family?: FontFamily
-  notTrueType?: OnOff
+  notTrueType?: OnOff<'notTrueType'>
   panose1?: Panose
   pitch?: Pitch
   sig?: FontSig
@@ -1311,12 +1312,12 @@ export interface Frame extends UnistNode {
 }
 
 export interface FrameMap {
-  linkedToFile?: OnOff
+  linkedToFile?: OnOff<'linkedToFile'>
   longDesc?: Rel
   marH?: PixelsMeasure
   marW?: PixelsMeasure
   name?: String
-  noResizeAllowed?: OnOff
+  noResizeAllowed?: OnOff<'noResizeAllowed'>
   scrollbar?: FrameScrollbar
   sourceFileName?: Rel
   sz?: String
@@ -1389,8 +1390,8 @@ export interface FramesetSplitbar extends UnistNode {
 
 export interface FramesetSplitbarMap {
   color?: Color
-  flatBorders?: OnOff
-  noBorder?: OnOff
+  flatBorders?: OnOff<'flatBorders'>
+  noBorder?: OnOff<'noBorder'>
   w?: TwipsMeasure
 }
 
@@ -1423,19 +1424,19 @@ export interface FtnEdnMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlBlock[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
-  del?: RunTrackChange[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: RunTrackChange<'del'>[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -1525,19 +1526,19 @@ export interface HdrFtrMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlBlock[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
-  del?: RunTrackChange[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: RunTrackChange<'del'>[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -1589,9 +1590,10 @@ export interface Highlight extends UnistNode {
   children: []
 }
 
-export interface HpsMeasure extends UnistNode {
+export interface HpsMeasure<tag extends string = 'hpsMeasure'>
+  extends UnistNode {
   type: 'element'
-  name: 'w:hpsMeasure'
+  name: `w:${tag}`
   attributes: {
     'w:val': string
   }
@@ -1620,22 +1622,22 @@ export interface HyperlinkMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlRun[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
-  del?: RunTrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: RunTrackChange<'del'>[]
   dir?: DirContentRun[]
   fldSimple?: SimpleField[]
   hyperlink?: Hyperlink[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -1806,7 +1808,7 @@ export interface Lvl extends UnistNode {
 }
 
 export interface LvlMap {
-  isLgl?: OnOff
+  isLgl?: OnOff<'isLgl'>
   lvlJc?: Jc
   lvlPicBulletId?: DecimalNumber
   lvlRestart?: DecimalNumber
@@ -1843,15 +1845,15 @@ export interface MailMergeMap {
   dataSource?: Rel
   dataType: MailMergeDataType
   destination?: MailMergeDest
-  doNotSuppressBlankLines?: OnOff
+  doNotSuppressBlankLines?: OnOff<'doNotSuppressBlankLines'>
   headerSource?: Rel
-  linkToQuery?: OnOff
-  mailAsAttachment?: OnOff
+  linkToQuery?: OnOff<'linkToQuery'>
+  mailAsAttachment?: OnOff<'mailAsAttachment'>
   mailSubject?: String
   mainDocumentType: MailMergeDocType
   odso?: Odso
   query?: String
-  viewMergedData?: OnOff
+  viewMergedData?: OnOff<'viewMergedData'>
 }
 
 export interface MailMergeDataType extends UnistNode {
@@ -2033,7 +2035,7 @@ export interface NumPr extends UnistNode {
 
 export interface NumPrMap {
   ilvl?: DecimalNumber
-  ins?: TrackChange
+  ins?: TrackChange<'ins'>
   numId?: DecimalNumber
 }
 
@@ -2096,7 +2098,7 @@ export interface Odso extends UnistNode {
 
 export interface OdsoMap {
   colDelim?: DecimalNumber
-  fHdr?: OnOff
+  fHdr?: OnOff<'fHdr'>
   fieldMapData?: OdsoFieldMapData[]
   recipientData?: Rel[]
   src?: Rel
@@ -2114,16 +2116,16 @@ export interface OdsoFieldMapData extends UnistNode {
 
 export interface OdsoFieldMapDataMap {
   column?: DecimalNumber
-  dynamicAddress?: OnOff
+  dynamicAddress?: OnOff<'dynamicAddress'>
   lid?: Lang
   mappedName?: String
   name?: String
   type?: MailMergeOdsoFMDFieldType
 }
 
-export interface OnOff extends UnistNode {
+export interface OnOff<tag extends string = 'onOff'> extends UnistNode {
   type: 'element'
-  name: 'w:onOff'
+  name: `w:${tag}`
   attributes: {
     'w:val': string
   }
@@ -2160,22 +2162,22 @@ export interface PMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlRun[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
-  del?: RunTrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: RunTrackChange<'del'>[]
   dir?: DirContentRun[]
   fldSimple?: SimpleField[]
   hyperlink?: Hyperlink[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -2283,50 +2285,50 @@ export interface ParaRPr extends UnistNode {
 }
 
 export interface ParaRPrMap {
-  b?: OnOff[]
-  bCs?: OnOff[]
+  b?: OnOff<'b'>[]
+  bCs?: OnOff<'bCs'>[]
   bdr?: Border[]
-  caps?: OnOff[]
+  caps?: OnOff<'caps'>[]
   color?: Color[]
-  cs?: OnOff[]
-  del?: TrackChange
-  dstrike?: OnOff[]
+  cs?: OnOff<'cs'>[]
+  del?: TrackChange<'del'>
+  dstrike?: OnOff<'dstrike'>[]
   eastAsianLayout?: EastAsianLayout[]
   effect?: TextEffect[]
   em?: Em[]
-  emboss?: OnOff[]
+  emboss?: OnOff<'emboss'>[]
   fitText?: FitText[]
   highlight?: Highlight[]
-  i?: OnOff[]
-  iCs?: OnOff[]
-  imprint?: OnOff[]
-  ins?: TrackChange
-  kern?: HpsMeasure[]
+  i?: OnOff<'i'>[]
+  iCs?: OnOff<'iCs'>[]
+  imprint?: OnOff<'imprint'>[]
+  ins?: TrackChange<'ins'>
+  kern?: HpsMeasure<'kern'>[]
   lang?: Language[]
-  moveFrom?: TrackChange
-  moveTo?: TrackChange
-  noProof?: OnOff[]
-  oMath?: OnOff[]
-  outline?: OnOff[]
+  moveFrom?: TrackChange<'moveFrom'>
+  moveTo?: TrackChange<'moveTo'>
+  noProof?: OnOff<'noProof'>[]
+  oMath?: OnOff<'oMath'>[]
+  outline?: OnOff<'outline'>[]
   position?: SignedHpsMeasure[]
   rFonts?: Fonts[]
   rPrChange?: ParaRPrChange
   rStyle?: String[]
-  rtl?: OnOff[]
-  shadow?: OnOff[]
+  rtl?: OnOff<'rtl'>[]
+  shadow?: OnOff<'shadow'>[]
   shd?: Shd[]
-  smallCaps?: OnOff[]
-  snapToGrid?: OnOff[]
+  smallCaps?: OnOff<'smallCaps'>[]
+  snapToGrid?: OnOff<'snapToGrid'>[]
   spacing?: SignedTwipsMeasure[]
-  specVanish?: OnOff[]
-  strike?: OnOff[]
-  sz?: HpsMeasure[]
-  szCs?: HpsMeasure[]
+  specVanish?: OnOff<'specVanish'>[]
+  strike?: OnOff<'strike'>[]
+  sz?: HpsMeasure<'sz'>[]
+  szCs?: HpsMeasure<'szCs'>[]
   u?: Underline[]
-  vanish?: OnOff[]
+  vanish?: OnOff<'vanish'>[]
   vertAlign?: VerticalAlignRun[]
   w?: TextScale[]
-  webHidden?: OnOff[]
+  webHidden?: OnOff<'webHidden'>[]
 }
 
 export type ParaRPrChange = TrackChange & {
@@ -2348,49 +2350,49 @@ export interface ParaRPrOriginal extends UnistNode {
 }
 
 export interface ParaRPrOriginalMap {
-  b?: OnOff[]
-  bCs?: OnOff[]
+  b?: OnOff<'b'>[]
+  bCs?: OnOff<'bCs'>[]
   bdr?: Border[]
-  caps?: OnOff[]
+  caps?: OnOff<'caps'>[]
   color?: Color[]
-  cs?: OnOff[]
-  del?: TrackChange
-  dstrike?: OnOff[]
+  cs?: OnOff<'cs'>[]
+  del?: TrackChange<'del'>
+  dstrike?: OnOff<'dstrike'>[]
   eastAsianLayout?: EastAsianLayout[]
   effect?: TextEffect[]
   em?: Em[]
-  emboss?: OnOff[]
+  emboss?: OnOff<'emboss'>[]
   fitText?: FitText[]
   highlight?: Highlight[]
-  i?: OnOff[]
-  iCs?: OnOff[]
-  imprint?: OnOff[]
-  ins?: TrackChange
-  kern?: HpsMeasure[]
+  i?: OnOff<'i'>[]
+  iCs?: OnOff<'iCs'>[]
+  imprint?: OnOff<'imprint'>[]
+  ins?: TrackChange<'ins'>
+  kern?: HpsMeasure<'kern'>[]
   lang?: Language[]
-  moveFrom?: TrackChange
-  moveTo?: TrackChange
-  noProof?: OnOff[]
-  oMath?: OnOff[]
-  outline?: OnOff[]
+  moveFrom?: TrackChange<'moveFrom'>
+  moveTo?: TrackChange<'moveTo'>
+  noProof?: OnOff<'noProof'>[]
+  oMath?: OnOff<'oMath'>[]
+  outline?: OnOff<'outline'>[]
   position?: SignedHpsMeasure[]
   rFonts?: Fonts[]
   rStyle?: String[]
-  rtl?: OnOff[]
-  shadow?: OnOff[]
+  rtl?: OnOff<'rtl'>[]
+  shadow?: OnOff<'shadow'>[]
   shd?: Shd[]
-  smallCaps?: OnOff[]
-  snapToGrid?: OnOff[]
+  smallCaps?: OnOff<'smallCaps'>[]
+  snapToGrid?: OnOff<'snapToGrid'>[]
   spacing?: SignedTwipsMeasure[]
-  specVanish?: OnOff[]
-  strike?: OnOff[]
-  sz?: HpsMeasure[]
-  szCs?: HpsMeasure[]
+  specVanish?: OnOff<'specVanish'>[]
+  strike?: OnOff<'strike'>[]
+  sz?: HpsMeasure<'sz'>[]
+  szCs?: HpsMeasure<'szCs'>[]
   u?: Underline[]
-  vanish?: OnOff[]
+  vanish?: OnOff<'vanish'>[]
   vertAlign?: VerticalAlignRun[]
   w?: TextScale[]
-  webHidden?: OnOff[]
+  webHidden?: OnOff<'webHidden'>[]
 }
 
 export interface PBdr extends UnistNode {
@@ -2481,39 +2483,39 @@ export interface PPrBase extends UnistNode {
 }
 
 export interface PPrBaseMap {
-  adjustRightInd?: OnOff
-  autoSpaceDE?: OnOff
-  autoSpaceDN?: OnOff
-  bidi?: OnOff
+  adjustRightInd?: OnOff<'adjustRightInd'>
+  autoSpaceDE?: OnOff<'autoSpaceDE'>
+  autoSpaceDN?: OnOff<'autoSpaceDN'>
+  bidi?: OnOff<'bidi'>
   cnfStyle?: Cnf
-  contextualSpacing?: OnOff
+  contextualSpacing?: OnOff<'contextualSpacing'>
   divId?: DecimalNumber
   framePr?: FramePr
   ind?: Ind
   jc?: Jc
-  keepLines?: OnOff
-  keepNext?: OnOff
-  kinsoku?: OnOff
-  mirrorIndents?: OnOff
+  keepLines?: OnOff<'keepLines'>
+  keepNext?: OnOff<'keepNext'>
+  kinsoku?: OnOff<'kinsoku'>
+  mirrorIndents?: OnOff<'mirrorIndents'>
   numPr?: NumPr
   outlineLvl?: DecimalNumber
-  overflowPunct?: OnOff
-  pageBreakBefore?: OnOff
+  overflowPunct?: OnOff<'overflowPunct'>
+  pageBreakBefore?: OnOff<'pageBreakBefore'>
   pBdr?: PBdr
   pStyle?: String
   shd?: Shd
-  snapToGrid?: OnOff
+  snapToGrid?: OnOff<'snapToGrid'>
   spacing?: Spacing
-  suppressAutoHyphens?: OnOff
-  suppressLineNumbers?: OnOff
-  suppressOverlap?: OnOff
+  suppressAutoHyphens?: OnOff<'suppressAutoHyphens'>
+  suppressLineNumbers?: OnOff<'suppressLineNumbers'>
+  suppressOverlap?: OnOff<'suppressOverlap'>
   tabs?: Tabs
   textAlignment?: TextAlignment
   textboxTightWrap?: TextboxTightWrap
   textDirection?: TextDirection
-  topLinePunct?: OnOff
-  widowControl?: OnOff
-  wordWrap?: OnOff
+  topLinePunct?: OnOff<'topLinePunct'>
+  widowControl?: OnOff<'widowControl'>
+  wordWrap?: OnOff<'wordWrap'>
 }
 
 export type PPrChange = TrackChange & {
@@ -2646,7 +2648,7 @@ export interface RecipientData extends UnistNode {
 }
 
 export interface RecipientDataMap {
-  active?: OnOff
+  active?: OnOff<'active'>
   column: DecimalNumber
   uniqueTag: Base64Binary
 }
@@ -2690,19 +2692,19 @@ export interface RowMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlCell[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
-  del?: RunTrackChange[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: RunTrackChange<'del'>[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -2724,46 +2726,46 @@ export interface RPr extends UnistNode {
 }
 
 export interface RPrMap {
-  b?: OnOff[]
-  bCs?: OnOff[]
+  b?: OnOff<'b'>[]
+  bCs?: OnOff<'bCs'>[]
   bdr?: Border[]
-  caps?: OnOff[]
+  caps?: OnOff<'caps'>[]
   color?: Color[]
-  cs?: OnOff[]
-  dstrike?: OnOff[]
+  cs?: OnOff<'cs'>[]
+  dstrike?: OnOff<'dstrike'>[]
   eastAsianLayout?: EastAsianLayout[]
   effect?: TextEffect[]
   em?: Em[]
-  emboss?: OnOff[]
+  emboss?: OnOff<'emboss'>[]
   fitText?: FitText[]
   highlight?: Highlight[]
-  i?: OnOff[]
-  iCs?: OnOff[]
-  imprint?: OnOff[]
-  kern?: HpsMeasure[]
+  i?: OnOff<'i'>[]
+  iCs?: OnOff<'iCs'>[]
+  imprint?: OnOff<'imprint'>[]
+  kern?: HpsMeasure<'kern'>[]
   lang?: Language[]
-  noProof?: OnOff[]
-  oMath?: OnOff[]
-  outline?: OnOff[]
+  noProof?: OnOff<'noProof'>[]
+  oMath?: OnOff<'oMath'>[]
+  outline?: OnOff<'outline'>[]
   position?: SignedHpsMeasure[]
   rFonts?: Fonts[]
   rPrChange?: RPrChange
   rStyle?: String[]
-  rtl?: OnOff[]
-  shadow?: OnOff[]
+  rtl?: OnOff<'rtl'>[]
+  shadow?: OnOff<'shadow'>[]
   shd?: Shd[]
-  smallCaps?: OnOff[]
-  snapToGrid?: OnOff[]
+  smallCaps?: OnOff<'smallCaps'>[]
+  snapToGrid?: OnOff<'snapToGrid'>[]
   spacing?: SignedTwipsMeasure[]
-  specVanish?: OnOff[]
-  strike?: OnOff[]
-  sz?: HpsMeasure[]
-  szCs?: HpsMeasure[]
+  specVanish?: OnOff<'specVanish'>[]
+  strike?: OnOff<'strike'>[]
+  sz?: HpsMeasure<'sz'>[]
+  szCs?: HpsMeasure<'szCs'>[]
   u?: Underline[]
-  vanish?: OnOff[]
+  vanish?: OnOff<'vanish'>[]
   vertAlign?: VerticalAlignRun[]
   w?: TextScale[]
-  webHidden?: OnOff[]
+  webHidden?: OnOff<'webHidden'>[]
 }
 
 export type RPrChange = TrackChange & {
@@ -2796,45 +2798,45 @@ export interface RPrOriginal extends UnistNode {
 }
 
 export interface RPrOriginalMap {
-  b?: OnOff[]
-  bCs?: OnOff[]
+  b?: OnOff<'b'>[]
+  bCs?: OnOff<'bCs'>[]
   bdr?: Border[]
-  caps?: OnOff[]
+  caps?: OnOff<'caps'>[]
   color?: Color[]
-  cs?: OnOff[]
-  dstrike?: OnOff[]
+  cs?: OnOff<'cs'>[]
+  dstrike?: OnOff<'dstrike'>[]
   eastAsianLayout?: EastAsianLayout[]
   effect?: TextEffect[]
   em?: Em[]
-  emboss?: OnOff[]
+  emboss?: OnOff<'emboss'>[]
   fitText?: FitText[]
   highlight?: Highlight[]
-  i?: OnOff[]
-  iCs?: OnOff[]
-  imprint?: OnOff[]
-  kern?: HpsMeasure[]
+  i?: OnOff<'i'>[]
+  iCs?: OnOff<'iCs'>[]
+  imprint?: OnOff<'imprint'>[]
+  kern?: HpsMeasure<'kern'>[]
   lang?: Language[]
-  noProof?: OnOff[]
-  oMath?: OnOff[]
-  outline?: OnOff[]
+  noProof?: OnOff<'noProof'>[]
+  oMath?: OnOff<'oMath'>[]
+  outline?: OnOff<'outline'>[]
   position?: SignedHpsMeasure[]
   rFonts?: Fonts[]
   rStyle?: String[]
-  rtl?: OnOff[]
-  shadow?: OnOff[]
+  rtl?: OnOff<'rtl'>[]
+  shadow?: OnOff<'shadow'>[]
   shd?: Shd[]
-  smallCaps?: OnOff[]
-  snapToGrid?: OnOff[]
+  smallCaps?: OnOff<'smallCaps'>[]
+  snapToGrid?: OnOff<'snapToGrid'>[]
   spacing?: SignedTwipsMeasure[]
-  specVanish?: OnOff[]
-  strike?: OnOff[]
-  sz?: HpsMeasure[]
-  szCs?: HpsMeasure[]
+  specVanish?: OnOff<'specVanish'>[]
+  strike?: OnOff<'strike'>[]
+  sz?: HpsMeasure<'sz'>[]
+  szCs?: HpsMeasure<'szCs'>[]
   u?: Underline[]
-  vanish?: OnOff[]
+  vanish?: OnOff<'vanish'>[]
   vertAlign?: VerticalAlignRun[]
   w?: TextScale[]
-  webHidden?: OnOff[]
+  webHidden?: OnOff<'webHidden'>[]
 }
 
 export interface Ruby extends UnistNode {
@@ -2872,19 +2874,19 @@ export interface RubyContentMap {
   commentRangeEnd?: MarkupRange[]
   commentRangeStart?: MarkupRange[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
-  del?: RunTrackChange[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: RunTrackChange<'del'>[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -2903,24 +2905,26 @@ export interface RubyPr extends UnistNode {
 }
 
 export interface RubyPrMap {
-  dirty?: OnOff
-  hps: HpsMeasure
-  hpsBaseText: HpsMeasure
-  hpsRaise: HpsMeasure
+  dirty?: OnOff<'dirty'>
+  hps: HpsMeasure<'hps'>
+  hpsBaseText: HpsMeasure<'hpsBaseText'>
+  hpsRaise: HpsMeasure<'hpsRaise'>
   lid: Lang
   rubyAlign: RubyAlign
 }
 
-export interface RunTrackChange extends TrackChange {
-  type: 'element'
-  name: 'w:runTrackChange'
-  attributes: {
-    'w:id': string
-    'w:author': string
-    'w:date'?: string
+export type RunTrackChange<tag extends string = 'runTrackChange'> =
+  TrackChange & {
+    type: 'element'
+    name: `w:${tag}`
+    attributes: {
+      'w:id': string
+      'w:author': string
+      'w:date'?: string
+    }
+
+    children: RequiredMap<RunTrackChangeMap>[]
   }
-  children: RequiredMap<RunTrackChangeMap>[]
-}
 
 export interface RunTrackChangeMap {
   bdo?: BdoContentRun[]
@@ -2930,20 +2934,20 @@ export interface RunTrackChangeMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlRun[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
-  del?: RunTrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: RunTrackChange<'del'>[]
   dir?: DirContentRun[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -3039,19 +3043,19 @@ export interface SdtContentBlockMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlBlock[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
-  del?: RunTrackChange[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: RunTrackChange<'del'>[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -3078,19 +3082,19 @@ export interface SdtContentCellMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlCell[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
-  del?: RunTrackChange[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: RunTrackChange<'del'>[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -3116,19 +3120,19 @@ export interface SdtContentRowMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlRow[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
-  del?: RunTrackChange[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: RunTrackChange<'del'>[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -3155,22 +3159,22 @@ export interface SdtContentRunMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlRun[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
-  del?: RunTrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: RunTrackChange<'del'>[]
   dir?: DirContentRun[]
   fldSimple?: SimpleField[]
   hyperlink?: Hyperlink[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -3219,7 +3223,7 @@ export interface SdtDocPart extends UnistNode {
 export interface SdtDocPartMap {
   docPartCategory?: String
   docPartGallery?: String
-  docPartUnique?: OnOff
+  docPartUnique?: OnOff<'docPartUnique'>
 }
 
 export interface SdtDropDownList extends UnistNode {
@@ -3282,10 +3286,10 @@ export interface SdtPrMap {
   placeholder?: Placeholder
   richText?: Empty
   rPr?: RPr
-  showingPlcHdr?: OnOff
+  showingPlcHdr?: OnOff<'showingPlcHdr'>
   tabIndex?: UnsignedDecimalNumber
   tag?: String
-  temporary?: OnOff
+  temporary?: OnOff<'temporary'>
   text?: SdtText
 }
 
@@ -3337,26 +3341,26 @@ export interface SectPr extends UnistNode {
 }
 
 export interface SectPrMap {
-  bidi?: OnOff
+  bidi?: OnOff<'bidi'>
   cols?: Columns
   docGrid?: DocGrid
   endnotePr?: EdnProps
   footerReference?: HdrFtrRef[]
   footnotePr?: FtnProps
-  formProt?: OnOff
+  formProt?: OnOff<'formProt'>
   headerReference?: HdrFtrRef[]
   lnNumType?: LineNumber
-  noEndnote?: OnOff
+  noEndnote?: OnOff<'noEndnote'>
   paperSrc?: PaperSource
   pgBorders?: PageBorders
   pgMar?: PageMar
   pgNumType?: PageNumber
   pgSz?: PageSz
   printerSettings?: Rel
-  rtlGutter?: OnOff
+  rtlGutter?: OnOff<'rtlGutter'>
   sectPrChange?: SectPrChange
   textDirection?: TextDirection
-  titlePg?: OnOff
+  titlePg?: OnOff<'titlePg'>
   type?: SectType
   vAlign?: VerticalJc
 }
@@ -3374,23 +3378,23 @@ export interface SectPrBase extends UnistNode {
 }
 
 export interface SectPrBaseMap {
-  bidi?: OnOff
+  bidi?: OnOff<'bidi'>
   cols?: Columns
   docGrid?: DocGrid
   endnotePr?: EdnProps
   footnotePr?: FtnProps
-  formProt?: OnOff
+  formProt?: OnOff<'formProt'>
   lnNumType?: LineNumber
-  noEndnote?: OnOff
+  noEndnote?: OnOff<'noEndnote'>
   paperSrc?: PaperSource
   pgBorders?: PageBorders
   pgMar?: PageMar
   pgNumType?: PageNumber
   pgSz?: PageSz
   printerSettings?: Rel
-  rtlGutter?: OnOff
+  rtlGutter?: OnOff<'rtlGutter'>
   textDirection?: TextDirection
-  titlePg?: OnOff
+  titlePg?: OnOff<'titlePg'>
   type?: SectType
   vAlign?: VerticalJc
 }
@@ -3424,18 +3428,18 @@ export interface Settings extends UnistNode {
 
 export interface SettingsMap {
   activeWritingStyle?: WritingStyle[]
-  alignBordersAndEdges?: OnOff
-  alwaysMergeEmptyNamespace?: OnOff
-  alwaysShowPlaceholderText?: OnOff
+  alignBordersAndEdges?: OnOff<'alignBordersAndEdges'>
+  alwaysMergeEmptyNamespace?: OnOff<'alwaysMergeEmptyNamespace'>
+  alwaysShowPlaceholderText?: OnOff<'alwaysShowPlaceholderText'>
   attachedSchema?: String[]
   attachedTemplate?: Rel
-  autoFormatOverride?: OnOff
-  autoHyphenation?: OnOff
-  bookFoldPrinting?: OnOff
+  autoFormatOverride?: OnOff<'autoFormatOverride'>
+  autoHyphenation?: OnOff<'autoHyphenation'>
+  bookFoldPrinting?: OnOff<'bookFoldPrinting'>
   bookFoldPrintingSheets?: DecimalNumber
-  bookFoldRevPrinting?: OnOff
-  bordersDoNotSurroundFooter?: OnOff
-  bordersDoNotSurroundHeader?: OnOff
+  bookFoldRevPrinting?: OnOff<'bookFoldRevPrinting'>
+  bordersDoNotSurroundFooter?: OnOff<'bordersDoNotSurroundFooter'>
+  bordersDoNotSurroundHeader?: OnOff<'bordersDoNotSurroundHeader'>
   captions?: Captions
   characterSpacingControl?: CharacterSpacing
   clickAndTypeStyle?: String
@@ -3445,77 +3449,77 @@ export interface SettingsMap {
   decimalSymbol?: String
   defaultTableStyle?: String
   defaultTabStop?: TwipsMeasure
-  displayBackgroundShape?: OnOff
+  displayBackgroundShape?: OnOff<'displayBackgroundShape'>
   displayHorizontalDrawingGridEvery?: DecimalNumber
   displayVerticalDrawingGridEvery?: DecimalNumber
   documentProtection?: DocProtect
   documentType?: DocType
   docVars?: DocVars
-  doNotAutoCompressPictures?: OnOff
-  doNotDemarcateInvalidXml?: OnOff
-  doNotDisplayPageBoundaries?: OnOff
-  doNotEmbedSmartTags?: OnOff
-  doNotHyphenateCaps?: OnOff
-  doNotIncludeSubdocsInStats?: OnOff
-  doNotShadeFormData?: OnOff
-  doNotTrackFormatting?: OnOff
-  doNotTrackMoves?: OnOff
-  doNotUseMarginsForDrawingGridOrigin?: OnOff
-  doNotValidateAgainstSchema?: OnOff
+  doNotAutoCompressPictures?: OnOff<'doNotAutoCompressPictures'>
+  doNotDemarcateInvalidXml?: OnOff<'doNotDemarcateInvalidXml'>
+  doNotDisplayPageBoundaries?: OnOff<'doNotDisplayPageBoundaries'>
+  doNotEmbedSmartTags?: OnOff<'doNotEmbedSmartTags'>
+  doNotHyphenateCaps?: OnOff<'doNotHyphenateCaps'>
+  doNotIncludeSubdocsInStats?: OnOff<'doNotIncludeSubdocsInStats'>
+  doNotShadeFormData?: OnOff<'doNotShadeFormData'>
+  doNotTrackFormatting?: OnOff<'doNotTrackFormatting'>
+  doNotTrackMoves?: OnOff<'doNotTrackMoves'>
+  doNotUseMarginsForDrawingGridOrigin?: OnOff<'doNotUseMarginsForDrawingGridOrigin'>
+  doNotValidateAgainstSchema?: OnOff<'doNotValidateAgainstSchema'>
   drawingGridHorizontalOrigin?: TwipsMeasure
   drawingGridHorizontalSpacing?: TwipsMeasure
   drawingGridVerticalOrigin?: TwipsMeasure
   drawingGridVerticalSpacing?: TwipsMeasure
-  embedSystemFonts?: OnOff
-  embedTrueTypeFonts?: OnOff
+  embedSystemFonts?: OnOff<'embedSystemFonts'>
+  embedTrueTypeFonts?: OnOff<'embedTrueTypeFonts'>
   endnotePr?: EdnDocProps
-  evenAndOddHeaders?: OnOff
+  evenAndOddHeaders?: OnOff<'evenAndOddHeaders'>
   footnotePr?: FtnDocProps
   forceUpgrade?: Empty
-  formsDesign?: OnOff
-  gutterAtTop?: OnOff
-  hideGrammaticalErrors?: OnOff
-  hideSpellingErrors?: OnOff
+  formsDesign?: OnOff<'formsDesign'>
+  gutterAtTop?: OnOff<'gutterAtTop'>
+  hideGrammaticalErrors?: OnOff<'hideGrammaticalErrors'>
+  hideSpellingErrors?: OnOff<'hideSpellingErrors'>
   hyphenationZone?: TwipsMeasure
-  ignoreMixedContent?: OnOff
-  linkStyles?: OnOff
+  ignoreMixedContent?: OnOff<'ignoreMixedContent'>
+  linkStyles?: OnOff<'linkStyles'>
   listSeparator?: String
   mailMerge?: MailMerge
   mathPr?: m.MathPr
-  mirrorMargins?: OnOff
+  mirrorMargins?: OnOff<'mirrorMargins'>
   noLineBreaksAfter?: Kinsoku
   noLineBreaksBefore?: Kinsoku
-  noPunctuationKerning?: OnOff
-  printFormsData?: OnOff
-  printFractionalCharacterWidth?: OnOff
-  printPostScriptOverText?: OnOff
-  printTwoOnOne?: OnOff
+  noPunctuationKerning?: OnOff<'noPunctuationKerning'>
+  printFormsData?: OnOff<'printFormsData'>
+  printFractionalCharacterWidth?: OnOff<'printFractionalCharacterWidth'>
+  printPostScriptOverText?: OnOff<'printPostScriptOverText'>
+  printTwoOnOne?: OnOff<'printTwoOnOne'>
   proofState?: Proof
   readModeInkLockDown?: ReadingModeInkLockDown
-  removeDateAndTime?: OnOff
-  removePersonalInformation?: OnOff
+  removeDateAndTime?: OnOff<'removeDateAndTime'>
+  removePersonalInformation?: OnOff<'removePersonalInformation'>
   revisionView?: TrackChangesView
   rsids?: DocRsids
-  saveFormsData?: OnOff
-  saveInvalidXml?: OnOff
-  savePreviewPicture?: OnOff
-  saveSubsetFonts?: OnOff
+  saveFormsData?: OnOff<'saveFormsData'>
+  saveInvalidXml?: OnOff<'saveInvalidXml'>
+  savePreviewPicture?: OnOff<'savePreviewPicture'>
+  saveSubsetFonts?: OnOff<'saveSubsetFonts'>
   saveThroughXslt?: SaveThroughXslt
-  saveXmlDataOnly?: OnOff
+  saveXmlDataOnly?: OnOff<'saveXmlDataOnly'>
   schemaLibrary?: sl.SchemaLibrary
-  showEnvelope?: OnOff
-  showXMLTags?: OnOff
+  showEnvelope?: OnOff<'showEnvelope'>
+  showXMLTags?: OnOff<'showXMLTags'>
   smartTagType?: SmartTagType[]
-  strictFirstAndLastChars?: OnOff
-  styleLockQFSet?: OnOff
-  styleLockTheme?: OnOff
+  strictFirstAndLastChars?: OnOff<'strictFirstAndLastChars'>
+  styleLockQFSet?: OnOff<'styleLockQFSet'>
+  styleLockTheme?: OnOff<'styleLockTheme'>
   stylePaneFormatFilter?: StylePaneFilter
   stylePaneSortMethod?: StyleSort
   summaryLength?: DecimalNumberOrPrecent
   themeFontLang?: Language
-  trackRevisions?: OnOff
-  updateFields?: OnOff
-  useXSLTWhenSaving?: OnOff
+  trackRevisions?: OnOff<'trackRevisions'>
+  updateFields?: OnOff<'updateFields'>
+  useXSLTWhenSaving?: OnOff<'useXSLTWhenSaving'>
   view?: View
   writeProtection?: WriteProtection
   zoom?: Zoom
@@ -3575,22 +3579,22 @@ export interface SimpleFieldMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlRun[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
-  del?: RunTrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: RunTrackChange<'del'>[]
   dir?: DirContentRun[]
   fldSimple?: SimpleField[]
   hyperlink?: Hyperlink[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -3633,22 +3637,22 @@ export interface SmartTagRunMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlRun[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
-  del?: RunTrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: RunTrackChange<'del'>[]
   dir?: DirContentRun[]
   fldSimple?: SimpleField[]
   hyperlink?: Hyperlink[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -3713,27 +3717,27 @@ export interface Style extends UnistNode {
 
 export interface StyleMap {
   aliases?: String
-  autoRedefine?: OnOff
+  autoRedefine?: OnOff<'autoRedefine'>
   basedOn?: String
-  hidden?: OnOff
+  hidden?: OnOff<'hidden'>
   link?: String
-  locked?: OnOff
+  locked?: OnOff<'locked'>
   name?: String
   next?: String
-  personal?: OnOff
-  personalCompose?: OnOff
-  personalReply?: OnOff
+  personal?: OnOff<'personal'>
+  personalCompose?: OnOff<'personalCompose'>
+  personalReply?: OnOff<'personalReply'>
   pPr?: PPrGeneral
-  qFormat?: OnOff
+  qFormat?: OnOff<'qFormat'>
   rPr?: RPr
   rsid?: LongHexNumber
-  semiHidden?: OnOff
+  semiHidden?: OnOff<'semiHidden'>
   tblPr?: TblPrBase
   tblStylePr?: TblStylePr[]
   tcPr?: TcPr
   trPr?: TrPr
   uiPriority?: DecimalNumber
-  unhideWhenUsed?: OnOff
+  unhideWhenUsed?: OnOff<'unhideWhenUsed'>
 }
 
 export interface StylePaneFilter extends UnistNode {
@@ -3836,19 +3840,19 @@ export interface TblMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlRow[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
-  del?: RunTrackChange[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: RunTrackChange<'del'>[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -4002,7 +4006,7 @@ export interface TblPrBase extends UnistNode {
 }
 
 export interface TblPrBaseMap {
-  bidiVisual?: OnOff
+  bidiVisual?: OnOff<'bidiVisual'>
   jc?: JcTable
   shd?: Shd
   tblBorders?: TblBorders
@@ -4117,19 +4121,19 @@ export interface TcMap {
   commentRangeStart?: MarkupRange[]
   customXml?: CustomXmlBlock[]
   customXmlDelRangeEnd?: Markup[]
-  customXmlDelRangeStart?: TrackChange[]
+  customXmlDelRangeStart?: TrackChange<'customXmlDelRangeStart'>[]
   customXmlInsRangeEnd?: Markup[]
-  customXmlInsRangeStart?: TrackChange[]
+  customXmlInsRangeStart?: TrackChange<'customXmlInsRangeStart'>[]
   customXmlMoveFromRangeEnd?: Markup[]
-  customXmlMoveFromRangeStart?: TrackChange[]
+  customXmlMoveFromRangeStart?: TrackChange<'customXmlMoveFromRangeStart'>[]
   customXmlMoveToRangeEnd?: Markup[]
-  customXmlMoveToRangeStart?: TrackChange[]
-  del?: RunTrackChange[]
-  ins?: RunTrackChange[]
-  moveFrom?: RunTrackChange[]
+  customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: RunTrackChange<'del'>[]
+  ins?: RunTrackChange<'ins'>[]
+  moveFrom?: RunTrackChange<'moveFrom'>[]
   moveFromRangeEnd?: MarkupRange[]
   moveFromRangeStart?: MoveBookmark[]
-  moveTo?: RunTrackChange[]
+  moveTo?: RunTrackChange<'moveTo'>[]
   moveToRangeEnd?: MarkupRange[]
   moveToRangeStart?: MoveBookmark[]
   oMath?: m.OMath[]
@@ -4197,11 +4201,11 @@ export interface TcPrBaseMap {
   cnfStyle?: Cnf
   gridSpan?: DecimalNumber
   headers?: Headers
-  hideMark?: OnOff
-  noWrap?: OnOff
+  hideMark?: OnOff<'hideMark'>
+  noWrap?: OnOff<'noWrap'>
   shd?: Shd
   tcBorders?: TcBorders
-  tcFitText?: OnOff
+  tcFitText?: OnOff<'tcFitText'>
   tcMar?: TcMar
   tcW?: TblWidth
   textDirection?: TextDirection
@@ -4228,16 +4232,16 @@ export type TcPrInner = TcPrBase & {
 }
 
 export interface TcPrInnerMap {
-  cellDel?: TrackChange
-  cellIns?: TrackChange
+  cellDel?: TrackChange<'cellDel'>
+  cellIns?: TrackChange<'cellIns'>
   cellMerge?: CellMergeTrackChange
 }
 
 export interface T extends UnistNode {
   type: 'element'
-  name: 'w:text'
+  name: 'w:text' | 'w:instrText' | 'w:delInstrText' | 'w:delText'
   attributes: {
-    'xml:space': 'preserve' | 'default'
+    'xml:space'?: 'preserve' | 'default'
   }
   children: Text[]
 }
@@ -4300,9 +4304,9 @@ export type TopPageBorder = PageBorder & {
   }
 }
 
-export type TrackChange = Markup & {
+export type TrackChange<tag extends string = 'trackChange'> = Markup & {
   type: 'element'
-  name: 'w:trackChange' | string
+  name: 'w:trackChange' | `w:${tag}`
   attributes: {
     'w:id': string
     'w:author': string
@@ -4340,8 +4344,8 @@ export type TrPr = TrPrBase & {
 }
 
 export interface TrPrMap {
-  del?: TrackChange
-  ins?: TrackChange
+  del?: TrackChange<'del'>
+  ins?: TrackChange<'ins'>
   trPrChange?: TrPrChange
 }
 
@@ -4353,15 +4357,15 @@ export interface TrPrBase extends UnistNode {
 }
 
 export interface TrPrBaseMap {
-  cantSplit?: OnOff[]
+  cantSplit?: OnOff<'cantSplit'>[]
   cnfStyle?: Cnf[]
   divId?: DecimalNumber[]
   gridAfter?: DecimalNumber[]
   gridBefore?: DecimalNumber[]
-  hidden?: OnOff[]
+  hidden?: OnOff<'hidden'>[]
   jc?: JcTable[]
   tblCellSpacing?: TblWidth[]
-  tblHeader?: OnOff[]
+  tblHeader?: OnOff<'tblHeader'>[]
   trHeight?: Height[]
   wAfter?: TblWidth[]
   wBefore?: TblWidth[]
@@ -4453,17 +4457,17 @@ export interface WebSettings extends UnistNode {
 }
 
 export interface WebSettingsMap {
-  allowPNG?: OnOff
+  allowPNG?: OnOff<'allowPNG'>
   divs?: Divs
-  doNotOrganizeInFolder?: OnOff
-  doNotRelyOnCSS?: OnOff
-  doNotSaveAsSingleFile?: OnOff
-  doNotUseLongFileNames?: OnOff
+  doNotOrganizeInFolder?: OnOff<'doNotOrganizeInFolder'>
+  doNotRelyOnCSS?: OnOff<'doNotRelyOnCSS'>
+  doNotSaveAsSingleFile?: OnOff<'doNotSaveAsSingleFile'>
+  doNotUseLongFileNames?: OnOff<'doNotUseLongFileNames'>
   encoding?: String
   frameset?: Frameset
   optimizeForBrowser?: OptimizeForBrowser
   pixelsPerInch?: DecimalNumber
-  saveSmartTagsAsXml?: OnOff
+  saveSmartTagsAsXml?: OnOff<'saveSmartTagsAsXml'>
   targetScreenSz?: TargetScreenSz
 }
 

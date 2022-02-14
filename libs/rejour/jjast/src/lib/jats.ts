@@ -44,7 +44,7 @@ export interface Text extends UnistLiteral {
   value: string
 }
 export interface AbbrevJournaltitle extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'abbrevJournaltitle'
   attributes: {
     abbrevType?: string
@@ -527,7 +527,7 @@ export interface AnnotationChildrenMap {
 }
 
 export interface Anonymous extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'anonymous'
   attributes: {
     id?: string
@@ -1358,7 +1358,7 @@ export interface AuthorNotesChildrenMap {
 }
 
 export interface AwardDesc extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'awardDesc'
   attributes: {
     hreflang?: string
@@ -1468,7 +1468,7 @@ export interface AwardIdChildrenMap {
 }
 
 export interface AwardName extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'awardName'
   attributes: {
     hreflang?: string
@@ -1910,7 +1910,7 @@ type BoxedTextTypeOrientation = 'landscape' | 'portrait'
 type BoxedTextTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
 export interface Break extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'break'
   attributes: {
     id?: string
@@ -3254,7 +3254,7 @@ export interface CountsChildrenMap {
 }
 
 export interface Count extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'count'
   attributes: {
     count: string
@@ -4057,7 +4057,7 @@ export interface EmailChildrenMap {
 }
 
 export interface EquationCount extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'equationCount'
   attributes: {
     count: string
@@ -4082,7 +4082,7 @@ export interface EraChildrenMap {
 }
 
 export interface Etal extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'etal'
   attributes: {
     id?: string
@@ -4269,7 +4269,7 @@ export interface ExplanationChildrenMap {
 }
 
 export interface ExtendedBy extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'extendedBy'
   attributes: {
     assigningAuthority?: string
@@ -4320,7 +4320,7 @@ export interface FaxChildrenMap {
 }
 
 export interface FigCount extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'figCount'
   attributes: {
     count: string
@@ -5033,7 +5033,7 @@ export interface GlossaryChildrenMap {
 }
 
 export interface GlyphData extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'glyphData'
   attributes: {
     fontchar?: string
@@ -5048,7 +5048,7 @@ export interface GlyphData extends UnistNode {
 }
 
 export interface GlyphRef extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'glyphRef'
   attributes: {
     glyphData?: string
@@ -5141,7 +5141,7 @@ export interface HistoryChildrenMap {
 }
 
 export interface Hr extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'hr'
   attributes: {
     id?: string
@@ -5150,7 +5150,7 @@ export interface Hr extends UnistNode {
 }
 
 export interface IndexTermrangeend extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'indexTermrangeend'
   attributes: {
     id?: string
@@ -5467,7 +5467,7 @@ export interface IsbnChildrenMap {
 }
 
 export interface IssnL extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'issnL'
   attributes: {
     assigningAuthority?: string
@@ -5699,7 +5699,7 @@ export interface ItalicChildrenMap {
 type ItalicTypeToggle = 'no' | 'yes'
 
 export interface JournalId extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'journalId'
   attributes: {
     assigningAuthority?: string
@@ -6203,7 +6203,7 @@ type MediaTypeOrientation = 'landscape' | 'portrait'
 type MediaTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
 export interface MetaName extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'metaName'
   attributes: {
     id?: string
@@ -7216,7 +7216,7 @@ export interface OptionChildrenMap {
 type OptionTypeCorrect = 'no' | 'yes'
 
 export interface OverlineEnd extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'overlineEnd'
   attributes: {
     id?: string
@@ -7227,7 +7227,7 @@ export interface OverlineEnd extends UnistNode {
 }
 
 export interface OverlineStart extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'overlineStart'
   attributes: {
     id: string
@@ -7325,7 +7325,7 @@ export interface OverlineChildrenMap {
 type OverlineTypeToggle = 'no' | 'yes'
 
 export interface PageCount extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'pageCount'
   attributes: {
     count: string
@@ -8126,7 +8126,7 @@ export interface PChildrenMap {
 }
 
 export interface PubDatenotavailable extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'pubDatenotavailable'
   attributes: {
     id?: string
@@ -8589,7 +8589,7 @@ export interface RbChildrenMap {
 }
 
 export interface RefCount extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'refCount'
   attributes: {
     count: string
@@ -9185,7 +9185,7 @@ export interface ResponseChildrenMap {
 }
 
 export interface RestrictedBy extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'restrictedBy'
   attributes: {
     assigningAuthority?: string
@@ -9312,7 +9312,7 @@ export interface RomanChildrenMap {
 type RomanTypeToggle = 'no' | 'yes'
 
 export interface Rp extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'rp'
   attributes: {
     id?: string
@@ -10059,7 +10059,7 @@ export interface SigChildrenMap {
 }
 
 export interface Size extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'size'
   attributes: {
     id?: string
@@ -11369,7 +11369,7 @@ export interface Surname extends UnistNode {
 }
 
 export interface TableCount extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'tableCount'
   attributes: {
     count: string
@@ -11616,7 +11616,6 @@ export interface Td extends UnistNode {
     char?: string
     charoff?: string
     colspan?: string
-    text?: Text
     headers?: string
     id?: string
     rowspan?: string
@@ -11631,6 +11630,7 @@ export interface Td extends UnistNode {
 }
 
 export interface TdChildrenMap {
+  text?: Text
   abbrev?: Abbrev[]
 
   alternatives?: Alternatives[]
@@ -12080,7 +12080,6 @@ export interface Th extends UnistNode {
     char?: string
     charoff?: string
     colspan?: string
-    text?: Text
     headers?: string
     id?: string
     rowspan?: string
@@ -12096,6 +12095,7 @@ export interface Th extends UnistNode {
 }
 
 export interface ThChildrenMap {
+  text?: Text
   abbrev?: Abbrev[]
 
   alternatives?: Alternatives[]
@@ -12679,7 +12679,7 @@ type TrTypeAlign = 'center' | 'char' | 'justify' | 'left' | 'right'
 type TrTypeValign = 'UnistNodeline' | 'bottom' | 'middle' | 'top'
 
 export interface UnderlineEnd extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'underlineEnd'
   attributes: {
     id?: string
@@ -12690,7 +12690,7 @@ export interface UnderlineEnd extends UnistNode {
 }
 
 export interface UnderlineStart extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'underlineStart'
   attributes: {
     id: string
@@ -12790,7 +12790,7 @@ export interface UnderlineChildrenMap {
 type UnderlineTypeToggle = 'no' | 'yes'
 
 export interface UnstructuredKwdgroup extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'unstructuredKwdgroup'
   attributes: {
     assigningAuthority?: string
@@ -13032,7 +13032,7 @@ export interface VolumeChildrenMap {
 }
 
 export interface WordCount extends UnistNode {
-  type: 'childless'
+  type: 'element'
   name: 'wordCount'
   attributes: {
     count: string

@@ -1,4 +1,4 @@
-export default function tryCatchVoid(
+export function tryCatchVoid(
   func: any,
   errorHandler?: (error: any) => void
 ): unknown | void {

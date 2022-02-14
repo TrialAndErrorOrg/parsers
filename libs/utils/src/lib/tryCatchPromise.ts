@@ -1,4 +1,4 @@
-export default async function tryCatchPromise(
+export async function tryCatchPromise(
   promise: Promise<any>,
   errorHandler?: (error: any) => void
 ): Promise<[any, any]> {

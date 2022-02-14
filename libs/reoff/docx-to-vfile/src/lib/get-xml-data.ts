@@ -1,5 +1,8 @@
-import AdmZip from 'adm-zip'
-import { extname } from 'path'
+import AdmZip, { IZipEntry } from 'adm-zip'
+import { join, extname } from 'path'
+import { promisify } from 'util'
+import yauzl, { Entry, ZipFile } from 'yauzl'
+import { tryCatchPromise } from '@jote/utils'
 
 const tab = '\t',
   cr = '\n\n',
@@ -11,6 +14,85 @@ const paragraphRegex = new RegExp(
   '(<w:t>|<w:t xml:space="preserve">)[^]*?(?=</w:p>)',
   'g'
 )
+
+/**
+ * Get xml data from either a buffer or path,
+ */
+export async function getXMLDatas(
+  file: string | Buffer,
+  {
+    filenames,
+    xml,
+    returnBuffer,
+  }: { filenames: (string | RegExp)[]; xml?: boolean; returnBuffer?: boolean }
+): Promise<{ [key: string]: string }> {
+  return new Promise((resolve, reject) => {
+    if (
+      typeof file === 'string' &&
+      !extensionRegex.test(extname(file).toLowerCase())
+    ) {
+      reject(new Error('The file must be either a .docx, .xlsx or .pptx'))
+    }
+    try {
+      if (typeof file === 'string') {
+        yauzl.open(file, { lazyEntries: true }, (err, zip) =>
+          unzipCallback(err, zip, resolve, reject, filenames)
+        )
+        return
+      }
+      yauzl.fromBuffer(file, { lazyEntries: true }, (err, zip) =>
+        unzipCallback(err, zip, resolve, reject, filenames)
+      )
+    } catch (err) {
+      reject(new Error(`${err} (${file})`))
+    }
+  })
+}
+
+function unzipCallback(
+  err: unknown,
+  zip: ZipFile | undefined,
+  resolve: (
+    value: { [key: string]: string } | PromiseLike<{ [key: string]: string }>
+  ) => void,
+  reject: (reason?: any) => void,
+  filenames: (string | RegExp)[]
+) {
+  if (err) {
+    reject(err)
+    return
+  }
+  if (!zip) {
+    reject(new Error('Empty zip file'))
+    return
+  }
+  let result: { [key: string]: string }
+
+  const openReadStream = promisify(zip.openReadStream.bind(zip))
+  zip.readEntry()
+  zip.on('entry', async (entry: Entry) => {
+    if (
+      /\/$/.test(entry.fileName) ||
+      !filenames.some((filename) => entry.fileName.match(filename))
+    ) {
+      zip.readEntry()
+      return
+    }
+    let stream = await openReadStream(entry)
+    let entryChunks: any[] = []
+    if (!stream) {
+      zip.readEntry()
+      return
+    }
+    stream.on('data', (chunk) => entryChunks.push(chunk))
+    stream.on('end', () => {
+      result[entry.fileName] = Buffer.from(entryChunks).toString()
+    })
+  })
+  zip.on('end', () => {
+    resolve(result)
+  })
+}
 
 export async function getXMLData(
   file: string | Buffer,

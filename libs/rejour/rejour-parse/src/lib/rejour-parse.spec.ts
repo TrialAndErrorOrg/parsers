@@ -13,7 +13,7 @@ describe('parser', () => {
         {
           type: 'element',
           name: 'article',
-          //attributes: {},
+          attributes: {},
           children: [],
         },
       ],
@@ -33,7 +33,7 @@ describe('parser', () => {
       children: [
         {
           children: [{ type: 'text', value: `${'\n\n\n    '}` }],
-          //attributes: {},
+          attributes: {},
           name: 'article',
           type: 'element',
         },
@@ -55,7 +55,7 @@ describe('parser', () => {
       children: [
         {
           children: [{ type: 'text', value: `` }],
-          //attributes: {},
+          attributes: {},
           name: 'article',
           type: 'element',
         },

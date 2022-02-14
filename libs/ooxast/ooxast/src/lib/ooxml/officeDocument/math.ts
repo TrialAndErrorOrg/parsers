@@ -6,11 +6,11 @@ import { RequiredMap } from '../../ooxast'
 // Source files:
 // http://localhost:3000/shared-math.xsd
 
-import { Node as UnistNode } from 'unist'
+import { Node as UnistNode, Literal as UnistLiteral } from 'unist'
 export interface Acc extends UnistNode {
   type: 'element'
   name: 'm:acc'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<AccMap>[]
 }
 
@@ -22,7 +22,7 @@ export interface AccMap {
 export interface AccPr extends UnistNode {
   type: 'element'
   name: 'm:accPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<AccPrMap>[]
 }
 
@@ -34,7 +34,7 @@ export interface AccPrMap {
 export interface Bar extends UnistNode {
   type: 'element'
   name: 'm:bar'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<BarMap>[]
 }
 
@@ -46,7 +46,7 @@ export interface BarMap {
 export interface BarPr extends UnistNode {
   type: 'element'
   name: 'm:barPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<BarPrMap>[]
 }
 
@@ -58,7 +58,7 @@ export interface BarPrMap {
 export interface BorderBox extends UnistNode {
   type: 'element'
   name: 'm:borderBox'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<BorderBoxMap>[]
 }
 
@@ -70,7 +70,7 @@ export interface BorderBoxMap {
 export interface BorderBoxPr extends UnistNode {
   type: 'element'
   name: 'm:borderBoxPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<BorderBoxPrMap>[]
 }
 
@@ -89,7 +89,7 @@ export interface BorderBoxPrMap {
 export interface Box extends UnistNode {
   type: 'element'
   name: 'm:box'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<BoxMap>[]
 }
 
@@ -101,7 +101,7 @@ export interface BoxMap {
 export interface BoxPr extends UnistNode {
   type: 'element'
   name: 'm:boxPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<BoxPrMap>[]
 }
 
@@ -144,7 +144,7 @@ export interface Char extends UnistNode {
 export interface CtrlPr extends UnistNode {
   type: 'element'
   name: 'm:ctrlPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<CtrlPrMap>[]
 }
 
@@ -157,7 +157,7 @@ export interface CtrlPrMap {
 export interface D extends UnistNode {
   type: 'element'
   name: 'm:d'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<DMap>[]
 }
 
@@ -169,7 +169,7 @@ export interface DMap {
 export interface DPr extends UnistNode {
   type: 'element'
   name: 'm:dPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<DPrMap>[]
 }
 
@@ -185,7 +185,7 @@ export interface DPrMap {
 export interface EqArr extends UnistNode {
   type: 'element'
   name: 'm:eqArr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<EqArrMap>[]
 }
 
@@ -197,7 +197,7 @@ export interface EqArrMap {
 export interface EqArrPr extends UnistNode {
   type: 'element'
   name: 'm:eqArrPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<EqArrPrMap>[]
 }
 
@@ -213,7 +213,7 @@ export interface EqArrPrMap {
 export interface F extends UnistNode {
   type: 'element'
   name: 'm:f'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<FMap>[]
 }
 
@@ -226,7 +226,7 @@ export interface FMap {
 export interface FPr extends UnistNode {
   type: 'element'
   name: 'm:fPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<FPrMap>[]
 }
 
@@ -247,7 +247,7 @@ export interface FType extends UnistNode {
 export interface Func extends UnistNode {
   type: 'element'
   name: 'm:func'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<FuncMap>[]
 }
 
@@ -260,7 +260,7 @@ export interface FuncMap {
 export interface FuncPr extends UnistNode {
   type: 'element'
   name: 'm:funcPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<FuncPrMap>[]
 }
 
@@ -271,7 +271,7 @@ export interface FuncPrMap {
 export interface GroupChr extends UnistNode {
   type: 'element'
   name: 'm:groupChr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<GroupChrMap>[]
 }
 
@@ -283,7 +283,7 @@ export interface GroupChrMap {
 export interface GroupChrPr extends UnistNode {
   type: 'element'
   name: 'm:groupChrPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<GroupChrPrMap>[]
 }
 
@@ -324,7 +324,7 @@ export interface LimLoc extends UnistNode {
 export interface LimLow extends UnistNode {
   type: 'element'
   name: 'm:limLow'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<LimLowMap>[]
 }
 
@@ -337,7 +337,7 @@ export interface LimLowMap {
 export interface LimLowPr extends UnistNode {
   type: 'element'
   name: 'm:limLowPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<LimLowPrMap>[]
 }
 
@@ -348,7 +348,7 @@ export interface LimLowPrMap {
 export interface LimUpp extends UnistNode {
   type: 'element'
   name: 'm:limUpp'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<LimUppMap>[]
 }
 
@@ -361,7 +361,7 @@ export interface LimUppMap {
 export interface LimUppPr extends UnistNode {
   type: 'element'
   name: 'm:limUppPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<LimUppPrMap>[]
 }
 
@@ -372,7 +372,7 @@ export interface LimUppPrMap {
 export interface M extends UnistNode {
   type: 'element'
   name: 'm:m'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<MMap>[]
 }
 
@@ -393,7 +393,7 @@ export interface ManualBreak extends UnistNode {
 export interface MathPr extends UnistNode {
   type: 'element'
   name: 'm:mathPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<MathPrMap>[]
 }
 
@@ -419,7 +419,7 @@ export interface MathPrMap {
 export interface MC extends UnistNode {
   type: 'element'
   name: 'm:mC'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<MCMap>[]
 }
 
@@ -430,7 +430,7 @@ export interface MCMap {
 export interface MCPr extends UnistNode {
   type: 'element'
   name: 'm:mCPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<MCPrMap>[]
 }
 
@@ -442,7 +442,7 @@ export interface MCPrMap {
 export interface MCS extends UnistNode {
   type: 'element'
   name: 'm:mCS'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<MCSMap>[]
 }
 
@@ -453,7 +453,7 @@ export interface MCSMap {
 export interface MPr extends UnistNode {
   type: 'element'
   name: 'm:mPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<MPrMap>[]
 }
 
@@ -472,7 +472,7 @@ export interface MPrMap {
 export interface MR extends UnistNode {
   type: 'element'
   name: 'm:mR'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<MRMap>[]
 }
 
@@ -483,7 +483,7 @@ export interface MRMap {
 export interface Nary extends UnistNode {
   type: 'element'
   name: 'm:nary'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<NaryMap>[]
 }
 
@@ -497,7 +497,7 @@ export interface NaryMap {
 export interface NaryPr extends UnistNode {
   type: 'element'
   name: 'm:naryPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<NaryPrMap>[]
 }
 
@@ -513,33 +513,33 @@ export interface NaryPrMap {
 export interface OMath extends UnistNode {
   type: 'element'
   name: 'm:oMath'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<OMathMap>[]
 }
 
 export interface OMathMap {
-  bookmarkEnd?: w.MarkupRange[]
-  bookmarkStart?: w.Bookmark[]
-  commentRangeEnd?: w.MarkupRange[]
-  commentRangeStart?: w.MarkupRange[]
+  bookmarkEnd?: w.MarkupRange<'bookmarkEnd'>[]
+  bookmarkStart?: w.Bookmark<'bookmarkStart'>[]
+  commentRangeEnd?: w.MarkupRange<'commentRangeEnd'>[]
+  commentRangeStart?: w.MarkupRange<'commentRangeStart'>[]
   customXml?: w.CustomXmlRun[]
-  customXmlDelRangeEnd?: w.Markup[]
-  customXmlDelRangeStart?: w.TrackChange[]
-  customXmlInsRangeEnd?: w.Markup[]
-  customXmlInsRangeStart?: w.TrackChange[]
-  customXmlMoveFromRangeEnd?: w.Markup[]
-  customXmlMoveFromRangeStart?: w.TrackChange[]
-  customXmlMoveToRangeEnd?: w.Markup[]
-  customXmlMoveToRangeStart?: w.TrackChange[]
-  del?: w.RunTrackChange[]
+  customXmlDelRangeEnd?: w.Markup<'customXmlDelRangeEnd'>[]
+  customXmlDelRangeStart?: w.TrackChange<'customXmlDelRangeStart'>[]
+  customXmlInsRangeEnd?: w.Markup<'customXmlInsRangeEnd'>[]
+  customXmlInsRangeStart?: w.TrackChange<'customXmlInsRangeStart'>[]
+  customXmlMoveFromRangeEnd?: w.Markup<'customXmlMoveFromRangeEnd'>[]
+  customXmlMoveFromRangeStart?: w.TrackChange<'customXmlMoveFromRangeStart'>[]
+  customXmlMoveToRangeEnd?: w.Markup<'customXmlMoveToRangeEnd'>[]
+  customXmlMoveToRangeStart?: w.TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: w.RunTrackChange<'del'>[]
   fldSimple?: w.SimpleField[]
   hyperlink?: w.Hyperlink[]
-  ins?: w.RunTrackChange[]
-  moveFrom?: w.RunTrackChange[]
-  moveFromRangeEnd?: w.MarkupRange[]
+  ins?: w.RunTrackChange<'ins'>[]
+  moveFrom?: w.RunTrackChange<'moveFrom'>[]
+  moveFromRangeEnd?: w.MarkupRange<'moveFromRangeEnd'>[]
   moveFromRangeStart?: w.MoveBookmark[]
-  moveTo?: w.RunTrackChange[]
-  moveToRangeEnd?: w.MarkupRange[]
+  moveTo?: w.RunTrackChange<'moveTo'>[]
+  moveToRangeEnd?: w.MarkupRange<'moveToRangeEnd'>[]
   moveToRangeStart?: w.MoveBookmark[]
   oMath?: OMath[]
   oMathPara?: OMathPara[]
@@ -573,33 +573,33 @@ export interface OMathMap {
 export interface OMathArg extends UnistNode {
   type: 'element'
   name: 'm:oMathArg'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<OMathArgMap>[]
 }
 
 export interface OMathArgMap {
-  bookmarkEnd?: w.MarkupRange[]
-  bookmarkStart?: w.Bookmark[]
-  commentRangeEnd?: w.MarkupRange[]
-  commentRangeStart?: w.MarkupRange[]
+  bookmarkEnd?: w.MarkupRange<'bookmarkEnd'>[]
+  bookmarkStart?: w.Bookmark<'bookmarkStart'>[]
+  commentRangeEnd?: w.MarkupRange<'commentRangeEnd'>[]
+  commentRangeStart?: w.MarkupRange<'commentRangeStart'>[]
   customXml?: w.CustomXmlRun[]
-  customXmlDelRangeEnd?: w.Markup[]
-  customXmlDelRangeStart?: w.TrackChange[]
-  customXmlInsRangeEnd?: w.Markup[]
-  customXmlInsRangeStart?: w.TrackChange[]
-  customXmlMoveFromRangeEnd?: w.Markup[]
-  customXmlMoveFromRangeStart?: w.TrackChange[]
-  customXmlMoveToRangeEnd?: w.Markup[]
-  customXmlMoveToRangeStart?: w.TrackChange[]
-  del?: w.RunTrackChange[]
+  customXmlDelRangeEnd?: w.Markup<'customXmlDelRangeEnd'>[]
+  customXmlDelRangeStart?: w.TrackChange<'customXmlDelRangeStart'>[]
+  customXmlInsRangeEnd?: w.Markup<'customXmlInsRangeEnd'>[]
+  customXmlInsRangeStart?: w.TrackChange<'customXmlInsRangeStart'>[]
+  customXmlMoveFromRangeEnd?: w.Markup<'customXmlMoveFromRangeEnd'>[]
+  customXmlMoveFromRangeStart?: w.TrackChange<'customXmlMoveFromRangeStart'>[]
+  customXmlMoveToRangeEnd?: w.Markup<'customXmlMoveToRangeEnd'>[]
+  customXmlMoveToRangeStart?: w.TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: w.RunTrackChange<'del'>[]
   fldSimple?: w.SimpleField[]
   hyperlink?: w.Hyperlink[]
-  ins?: w.RunTrackChange[]
-  moveFrom?: w.RunTrackChange[]
-  moveFromRangeEnd?: w.MarkupRange[]
+  ins?: w.RunTrackChange<'ins'>[]
+  moveFrom?: w.RunTrackChange<'moveFrom'>[]
+  moveFromRangeEnd?: w.MarkupRange<'moveFromRangeEnd'>[]
   moveFromRangeStart?: w.MoveBookmark[]
-  moveTo?: w.RunTrackChange[]
-  moveToRangeEnd?: w.MarkupRange[]
+  moveTo?: w.RunTrackChange<'moveTo'>[]
+  moveToRangeEnd?: w.MarkupRange<'moveToRangeEnd'>[]
   moveToRangeStart?: w.MoveBookmark[]
   oMath?: OMath[]
   oMathPara?: OMathPara[]
@@ -635,7 +635,7 @@ export interface OMathArgMap {
 export interface OMathArgPr extends UnistNode {
   type: 'element'
   name: 'm:oMathArgPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<OMathArgPrMap>[]
 }
 
@@ -655,7 +655,7 @@ export interface OMathJc extends UnistNode {
 export interface OMathPara extends UnistNode {
   type: 'element'
   name: 'm:oMathPara'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<OMathParaMap>[]
 }
 
@@ -667,7 +667,7 @@ export interface OMathParaMap {
 export interface OMathParaPr extends UnistNode {
   type: 'element'
   name: 'm:oMathParaPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<OMathParaPrMap>[]
 }
 
@@ -687,7 +687,7 @@ export interface OnOff extends UnistNode {
 export interface Phant extends UnistNode {
   type: 'element'
   name: 'm:phant'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<PhantMap>[]
 }
 
@@ -699,7 +699,7 @@ export interface PhantMap {
 export interface PhantPr extends UnistNode {
   type: 'element'
   name: 'm:phantPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<PhantPrMap>[]
 }
 
@@ -715,52 +715,52 @@ export interface PhantPrMap {
 export interface R extends UnistNode {
   type: 'element'
   name: 'm:r'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<RMap>[]
 }
 
 export interface RMap {
-  annotationRef?: w.Empty[]
+  annotationRef?: w.Empty<'annotationRef'>[]
   br?: w.Br[]
-  commentReference?: w.Markup[]
-  contentPart?: w.Rel[]
-  continuationSeparator?: w.Empty[]
-  cr?: w.Empty[]
-  dayLong?: w.Empty[]
-  dayShort?: w.Empty[]
-  delInstrText?: w.Text[]
-  delText?: w.Text[]
+  commentReference?: w.Markup<'commentReference'>[]
+  contentPart?: w.Rel<'contentPart'>[]
+  continuationSeparator?: w.Empty<'continuationSeparator'>[]
+  cr?: w.Empty<'cr'>[]
+  dayLong?: w.Empty<'dayLong'>[]
+  dayShort?: w.Empty<'dayShort'>[]
+  delInstrText?: w.T[]
+  delText?: w.T[]
   drawing?: w.Drawing[]
-  endnoteRef?: w.Empty[]
+  endnoteRef?: w.Empty<'endnoteRef'>[]
   endnoteReference?: w.FtnEdnRef[]
   fldChar?: w.FldChar[]
-  footnoteRef?: w.Empty[]
+  footnoteRef?: w.Empty<'footnoteRef'>[]
   footnoteReference?: w.FtnEdnRef[]
-  instrText?: w.Text[]
-  lastRenderedPageBreak?: w.Empty[]
-  monthLong?: w.Empty[]
-  monthShort?: w.Empty[]
-  noBreakHyphen?: w.Empty[]
+  instrText?: w.T[]
+  lastRenderedPageBreak?: w.Empty<'lastRenderedPageBreak'>[]
+  monthLong?: w.Empty<'monthLong'>[]
+  monthShort?: w.Empty<'monthShort'>[]
+  noBreakHyphen?: w.Empty<'noBreakHyphen'>[]
   object?: w.Object[]
-  pgNum?: w.Empty[]
+  pgNum?: w.Empty<'pgNum'>[]
   ptab?: w.PTab[]
   wrPr?: w.RPr
   ruby?: w.Ruby[]
-  separator?: w.Empty[]
-  softHyphen?: w.Empty[]
+  separator?: w.Empty<'separator'>[]
+  softHyphen?: w.Empty<'softHyphen'>[]
   sym?: w.Sym[]
-  tw?: w.Text[]
-  tab?: w.Empty[]
-  yearLong?: w.Empty[]
-  yearShort?: w.Empty[]
+  tw?: w.T[]
+  tab?: w.Empty<'tab'>[]
+  yearLong?: w.Empty<'yearLong'>[]
+  yearShort?: w.Empty<'yearShort'>[]
   rPr?: RPR
-  t?: Text[]
+  t?: T[]
 }
 
 export interface Rad extends UnistNode {
   type: 'element'
   name: 'm:rad'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<RadMap>[]
 }
 
@@ -773,7 +773,7 @@ export interface RadMap {
 export interface RadPr extends UnistNode {
   type: 'element'
   name: 'm:radPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<RadPrMap>[]
 }
 
@@ -785,7 +785,7 @@ export interface RadPrMap {
 export interface RPR extends UnistNode {
   type: 'element'
   name: 'm:rPR'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<RPRMap>[]
 }
 
@@ -828,7 +828,7 @@ export interface SpacingRule extends UnistNode {
 export interface SPre extends UnistNode {
   type: 'element'
   name: 'm:sPre'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<SPreMap>[]
 }
 
@@ -842,7 +842,7 @@ export interface SPreMap {
 export interface SPrePr extends UnistNode {
   type: 'element'
   name: 'm:sPrePr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<SPrePrMap>[]
 }
 
@@ -853,7 +853,7 @@ export interface SPrePrMap {
 export interface SSub extends UnistNode {
   type: 'element'
   name: 'm:sSub'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<SSubMap>[]
 }
 
@@ -866,7 +866,7 @@ export interface SSubMap {
 export interface SSubPr extends UnistNode {
   type: 'element'
   name: 'm:sSubPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<SSubPrMap>[]
 }
 
@@ -877,7 +877,7 @@ export interface SSubPrMap {
 export interface SSubSup extends UnistNode {
   type: 'element'
   name: 'm:sSubSup'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<SSubSupMap>[]
 }
 
@@ -891,7 +891,7 @@ export interface SSubSupMap {
 export interface SSubSupPr extends UnistNode {
   type: 'element'
   name: 'm:sSubSupPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<SSubSupPrMap>[]
 }
 
@@ -903,7 +903,7 @@ export interface SSubSupPrMap {
 export interface SSup extends UnistNode {
   type: 'element'
   name: 'm:sSup'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<SSupMap>[]
 }
 
@@ -916,7 +916,7 @@ export interface SSupMap {
 export interface SSupPr extends UnistNode {
   type: 'element'
   name: 'm:sSupPr'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<SSupPrMap>[]
 }
 
@@ -945,8 +945,12 @@ export interface Style extends UnistNode {
 export interface T extends UnistNode {
   type: 'element'
   name: 'm:t'
-  //attributes: {}
+  attributes: {}
   children: Text[]
+}
+export interface Text extends UnistLiteral {
+  type: 'text'
+  value: string
 }
 
 export interface TopBot extends UnistNode {

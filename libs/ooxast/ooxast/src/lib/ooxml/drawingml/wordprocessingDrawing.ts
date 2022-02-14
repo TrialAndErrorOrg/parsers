@@ -60,7 +60,7 @@ export interface EffectExtent extends UnistNode {
 export interface GraphicFrame extends UnistNode {
   type: 'element'
   name: 'wp:graphicFrame'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<GraphicFrameMap>[]
 }
 
@@ -151,32 +151,32 @@ export interface TextboxInfoMap {
 export interface TxbxContent extends UnistNode {
   type: 'element'
   name: 'wp:txbxContent'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<TxbxContentMap>[]
 }
 
 export interface TxbxContentMap {
   altChunk?: w.AltChunk[]
-  bookmarkEnd?: w.MarkupRange[]
-  bookmarkStart?: w.Bookmark[]
-  commentRangeEnd?: w.MarkupRange[]
-  commentRangeStart?: w.MarkupRange[]
+  bookmarkEnd?: w.MarkupRange<'bookmarkEnd'>[]
+  bookmarkStart?: w.Bookmark<'bookmarkStart'>[]
+  commentRangeEnd?: w.MarkupRange<'commentRangeEnd'>[]
+  commentRangeStart?: w.MarkupRange<'commentRangeStart'>[]
   customXml?: w.CustomXmlBlock[]
-  customXmlDelRangeEnd?: w.Markup[]
-  customXmlDelRangeStart?: w.TrackChange[]
-  customXmlInsRangeEnd?: w.Markup[]
-  customXmlInsRangeStart?: w.TrackChange[]
-  customXmlMoveFromRangeEnd?: w.Markup[]
-  customXmlMoveFromRangeStart?: w.TrackChange[]
-  customXmlMoveToRangeEnd?: w.Markup[]
-  customXmlMoveToRangeStart?: w.TrackChange[]
-  del?: w.RunTrackChange[]
-  ins?: w.RunTrackChange[]
-  moveFrom?: w.RunTrackChange[]
-  moveFromRangeEnd?: w.MarkupRange[]
+  customXmlDelRangeEnd?: w.Markup<'customXmlDelRangeEnd'>[]
+  customXmlDelRangeStart?: w.TrackChange<'customXmlDelRangeStart'>[]
+  customXmlInsRangeEnd?: w.Markup<'customXmlInsRangeEnd'>[]
+  customXmlInsRangeStart?: w.TrackChange<'customXmlInsRangeStart'>[]
+  customXmlMoveFromRangeEnd?: w.Markup<'customXmlMoveFromRangeEnd'>[]
+  customXmlMoveFromRangeStart?: w.TrackChange<'customXmlMoveFromRangeStart'>[]
+  customXmlMoveToRangeEnd?: w.Markup<'customXmlMoveToRangeEnd'>[]
+  customXmlMoveToRangeStart?: w.TrackChange<'customXmlMoveToRangeStart'>[]
+  del?: w.RunTrackChange<'del'>[]
+  ins?: w.RunTrackChange<'ins'>[]
+  moveFrom?: w.RunTrackChange<'moveFrom'>[]
+  moveFromRangeEnd?: w.MarkupRange<'moveFromRangeEnd'>[]
   moveFromRangeStart?: w.MoveBookmark[]
-  moveTo?: w.RunTrackChange[]
-  moveToRangeEnd?: w.MarkupRange[]
+  moveTo?: w.RunTrackChange<'moveTo'>[]
+  moveToRangeEnd?: w.MarkupRange<'moveToRangeEnd'>[]
   moveToRangeStart?: w.MoveBookmark[]
   oMath?: m.OMath[]
   oMathPara?: m.OMathPara[]
@@ -191,7 +191,7 @@ export interface TxbxContentMap {
 export interface WordprocessingCanvas extends UnistNode {
   type: 'element'
   name: 'wp:wordprocessingCanvas'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<WordprocessingCanvasMap>[]
 }
 
@@ -225,7 +225,7 @@ export interface WordprocessingContentPartMap {
 export interface WordprocessingContentPartNonVisual extends UnistNode {
   type: 'element'
   name: 'wp:wordprocessingContentPartNonVisual'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<WordprocessingContentPartNonVisualMap>[]
 }
 
@@ -237,7 +237,7 @@ export interface WordprocessingContentPartNonVisualMap {
 export interface WordprocessingGroup extends UnistNode {
   type: 'element'
   name: 'wp:wordprocessingGroup'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<WordprocessingGroupMap>[]
 }
 

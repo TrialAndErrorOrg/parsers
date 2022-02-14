@@ -8,7 +8,7 @@ import { Node as UnistNode } from 'unist'
 export interface Picture extends UnistNode {
   type: 'element'
   name: 'dpct:picture'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<PictureMap>[]
 }
 
@@ -21,7 +21,7 @@ export interface PictureMap {
 export interface PictureNonVisual extends UnistNode {
   type: 'element'
   name: 'dpct:pictureNonVisual'
-  //attributes: {}
+  attributes: {}
   children: RequiredMap<PictureNonVisualMap>[]
 }
 

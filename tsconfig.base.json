@@ -21,6 +21,12 @@
     "noImplicitThis": false,
     "baseUrl": ".",
     "paths": {
+      "@jote/processors/docx-to-jats": [
+        "libs/processors/docx-to-jats/src/index.ts"
+      ],
+      "@jote/processors/docx-to-tex": [
+        "libs/processors/docx-to-tex/src/index.ts"
+      ],
       "@jote/processors/jats-to-tex": [
         "libs/processors/jats-to-tex/src/index.ts"
       ],

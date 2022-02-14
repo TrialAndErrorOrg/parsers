@@ -1,8 +1,9 @@
 # docx-to-vfile
 
-Reads a docx file and stores its components in vfile format
+Reads a `.docx` file and stores its components in vfile format
 
 Currently extremely dumb and just stores it all in memory, no streams for you.
+File reading does happen in streams.
 
 Based on [docxtract](https://github.com/sorleone/doxtract/)
 
@@ -32,13 +33,13 @@ Based on [docxtract](https://github.com/sorleone/doxtract/)
 This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, or 16.0+), install with [yarn](https://classic.yarnpkg.com/en/docs/cli/add)
 
 ```sh
-yarn add reoff-parse
+yarn add docx-to-vfile
 ```
 
 or with [npm](https://docs.npmjs.com/cli/install)
 
 ```sh
-npm install reoff-parse
+npm install docx-to-vfile
 ```
 
 ## Use

@@ -1,1 +1,1 @@
-export * from './lib/reoff-reoff-rejour'
+export { default } from './lib/reoff-rejour'

@@ -1,5 +1,4 @@
 import { T, Text } from 'ooxast'
-import { getCitationCSL } from './citation'
 const mendeleyCitation: T = {
   type: 'element',
   name: 'w:instrText',

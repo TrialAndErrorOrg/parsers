@@ -1,0 +1,23 @@
+{
+  "root": "libs/processors/docx-to-jats",
+  "sourceRoot": "libs/processors/docx-to-jats/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/processors/docx-to-jats/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/processors/docx-to-jats"],
+      "options": {
+        "jestConfig": "libs/processors/docx-to-jats/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -7,9 +7,10 @@ export function citation(j: J, citation: T, parent: Parent) {
   // i const t = select('', citation) as T
   //  if (!t) return
   const text = citation.children[0].value
+  if (text.includes('PAGE \\* MERGEFORMAT')) return
   const type = text.includes('CSL_CITATION') || '}'
   // Zotero/mendely citation: easy
-  if (type) {
+  if (type && !text?.slice(0, 50)?.includes('Bibliography')) {
     let citation: { [key: string]: any }
     const json = text.replace(/ADDIN .*?CSL_CITATION/, '')
     try {
@@ -53,21 +54,21 @@ export function citation(j: J, citation: T, parent: Parent) {
         const citation: CSL = cite.itemData
         j.collectCitation(citation)
         j.citationNumber++
-        return {
-          type: 'element',
-          name: 'xref',
-          attributes: {
+        return j(
+          citation,
+          'xref',
+          {
             id: `_xref-${j.citationNumber}`,
             refType: 'bibr',
             rid: `bib${j.citationNumber}`,
           },
-          children: [
+          [
             {
               type: 'text',
               value: formattedCitations?.[i] || `[${j.citationNumber}]`,
             },
-          ],
-        }
+          ]
+        )
       })
     }
   }

@@ -6,18 +6,18 @@ import { removePosition } from 'unist-util-remove-position'
 it('should work', () => {
   const doc = x('w:document', {}, [
     x('w:body', {}, [
-      x('w:p', {}, []),
       x('w:p', {}, [
-        x('w:pPr', {}, [x('w:pStyle', { val: 'Heading1' })]),
+        x('w:pPr', {}, [x('w:pStyle', { 'w:val': 'Heading1' })]),
         x('w:r', {}, [
           x('w:rPr', {}, []),
           x('w:t', {}, [{ type: 'text', value: 'hey' }]),
         ]),
       ]),
+      x('w:p', {}, []),
     ]),
   ])
   expect(toJast(doc)).toEqual(
-    x('sec', {}, [x('title', {}, [{ type: 'text', value: 'hey' }])])
+    x('body', x('sec', {}, [x('title', {}, [{ type: 'text', value: 'hey' }])]))
   )
 })
 

@@ -58,7 +58,13 @@ export function toJast(
       }
 
       // @ts-ignore Assume valid `type` and `children`/`value`.
-      const result: Node = { type, ...attributes }
+      const result: Node = Object.assign(
+        {},
+        ['root', 'text'].includes(type)
+          ? { type }
+          : { type: 'element', name: type },
+        { attributes }
+      )
 
       if (typeof children === 'string') {
         // @ts-ignore: Looks like a literal.

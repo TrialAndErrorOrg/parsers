@@ -14,6 +14,6 @@
     "**/*.test.jsx",
     "**/*.spec.jsx",
     "**/*.d.ts",
-    "src/lib/test/test.specx.ts"
+    "src/lib/test/test.spec.ts"
   ]
 }

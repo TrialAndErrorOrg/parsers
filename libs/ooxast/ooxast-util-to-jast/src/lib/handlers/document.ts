@@ -7,7 +7,8 @@ import { Document } from 'ooxast'
 export function document(j: J, node: Document): Article {
   return x('article', [
     x('front') as Front,
-    x('body', {}, all(j, node)) as Body,
+    // @ts-ignore: hush.
+    all(j, node),
     x('back') as Back,
   ]) as Article
 }

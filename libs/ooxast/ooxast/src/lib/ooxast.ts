@@ -7,6 +7,7 @@ import {
   Attributes as XastAttributes,
   Node as XastNode,
   Instruction,
+  Doctype,
 } from 'xast'
 export type {
   Parent,
@@ -15,10 +16,10 @@ export type {
   XastLiteral as Literal,
   XastAttributes as Attributes,
 }
-import { document } from './ooxml/wordprocessingml/main'
+import { document, Text } from './ooxml/wordprocessingml/main'
 
 export type Root = XastRoot & {
-  children: RequiredMap<document>[]
+  children: (RequiredMap<document> | Doctype | Instruction | Text)[]
 }
 export interface TagLiteral extends XastElement {
   children: []

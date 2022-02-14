@@ -6,9 +6,10 @@ import { J } from '../types'
 import { Italic, Bold, Underline, Strike, Sc } from 'jjast'
 
 export function r(j: J, node: R) {
-  if (!node?.children?.[1] || node?.children?.[1]?.name === 'w:fldChar') return
+  if (node?.children?.[1]?.name === 'w:fldChar') return
   if (node?.children?.[1]?.name === 'w:instrText') {
     j.deleteNextRun = false
+    return all(j, node)
   }
   if (j.deleteNextRun) {
     j.deleteNextRun = false
@@ -16,27 +17,33 @@ export function r(j: J, node: R) {
   }
 
   const props = select('w\\:rPr', node) as RPr
-  let text = j(node, 'text', all(j, node))
+  const mergedText = all(j, node).reduce((acc, curr) => {
+    if (curr.type !== 'text') return acc
+    acc = acc + curr.value
+    return acc
+  }, '')
+
+  let text = { type: 'text', value: mergedText } as any
   if (!props) return text
 
   for (let i = 0; i < props.children.length; i++) {
     const prop = props.children[i]
     switch (prop.name.replace('w:', '')) {
       case 'i':
-        text = x('italic', {}, text) as Italic
+        text = x('italic', {}, text)
         continue
       case 'b':
-        text = x('bold', {}, text) as Bold
+        text = x('bold', {}, text)
         continue
       case 'u':
-        text = x('underline', {}, text) as Underline
+        text = x('underline', {}, text)
         continue
       case 'strike':
       case 'dstrike':
-        text = x('strike', {}, text) as Strike
+        text = x('strike', {}, text)
         continue
       case 'smallCaps':
-        text = x('sc', {}, text) as Sc
+        text = x('sc', {}, text)
         continue
       default:
         continue

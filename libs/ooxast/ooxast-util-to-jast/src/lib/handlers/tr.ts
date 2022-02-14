@@ -11,9 +11,9 @@ export function tr(j: J, tr: Row) {
       type: 'element',
       name: 'td',
       attributes: {},
-      // its fine
-      children: [cell as any],
+      // @ts-ignore
+      children: cell?.children || [cell],
     })
   }
-  return j(tr, 'element', { name: 'tr' }, celldRowContents)
+  return j(tr, 'tr', celldRowContents)
 }

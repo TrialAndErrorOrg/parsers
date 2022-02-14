@@ -10,12 +10,13 @@ import { footnotes } from './footnotes'
 import { footnote } from './footnote'
 import { document } from './document'
 import { r } from './r'
+import { tr } from './tr'
 
 export const handlers = {
   p,
   body,
   root,
-  text: text,
+  text,
   document,
   footnotes,
   footnote,
@@ -23,4 +24,5 @@ export const handlers = {
   r,
   instrText: citation,
   tbl,
+  tr,
 }

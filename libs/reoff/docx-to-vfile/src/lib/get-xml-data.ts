@@ -66,7 +66,7 @@ function unzipCallback(
     reject(new Error('Empty zip file'))
     return
   }
-  let result: { [key: string]: string }
+  let result: { [key: string]: string } = {}
 
   const openReadStream = promisify(zip.openReadStream.bind(zip))
   zip.readEntry()
@@ -76,18 +76,18 @@ function unzipCallback(
       !filenames.some((filename) => entry.fileName.match(filename))
     ) {
       zip.readEntry()
-      return
+    } else {
+      let stream = await openReadStream(entry)
+      let entryChunks: any[] = []
+      if (stream) {
+        stream!.on('data', (chunk) => entryChunks.push(chunk))
+        stream!.on('end', () => {
+          const string = Buffer.concat(entryChunks).toString()
+          result[entry.fileName] = string
+          zip.readEntry()
+        })
+      }
     }
-    let stream = await openReadStream(entry)
-    let entryChunks: any[] = []
-    if (!stream) {
-      zip.readEntry()
-      return
-    }
-    stream.on('data', (chunk) => entryChunks.push(chunk))
-    stream.on('end', () => {
-      result[entry.fileName] = Buffer.from(entryChunks).toString()
-    })
   })
   zip.on('end', () => {
     resolve(result)

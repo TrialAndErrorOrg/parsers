@@ -6,12 +6,23 @@ const removeHeader = (text: string | undefined) =>
 
 export async function docxToVFile(file: Buffer | string) {
   const data = await getXMLDatas(file, {
-    filenames: [/customXml(\/|\\)/, 'word/document.xml', 'word/footnotes.xml'],
+    filenames: [
+      /customXml\/item\d+\.xml/,
+      'word/document.xml',
+      'word/footnotes.xml',
+    ],
   })
 
-  const total = `${removeHeader(data['word/document.xml'])}
-  ${removeHeader(data['word/footnotes.xml'])}
-
+  const {
+    'word/document.xml': document,
+    'word/footnotes.xml': footnotes,
+    ...bibliography
+  } = data
+  const total = `${removeHeader(document).slice(0, -'</w:document>'.length)}
+  ${removeHeader(footnotes)}
+  ${Object.values(bibliography)
+    .map((bib) => removeHeader(bib))
+    .join('\n')}
   </w:document>`
   const vfile = new VFile(total)
   // if (footnotes) {

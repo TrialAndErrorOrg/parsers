@@ -21,6 +21,7 @@
     "src/lib/purl.oclc.org/ooxml/officeDocument/math.ts",
     "src/lib/purl.oclc.org/ooxml/drawingml/wordprocessingDrawing.ts",
     "src/lib/purl.oclc.org/ooxml/drawingml/picture.ts",
-    "src/lib/purl.oclc.org/ooxml/drawingml/main.ts"
+    "src/lib/purl.oclc.org/ooxml/drawingml/main.ts",
+    "src/lib/ooxml/officeDocument/bibliography.ts"
   ]
 }

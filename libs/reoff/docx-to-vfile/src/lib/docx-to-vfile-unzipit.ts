@@ -8,6 +8,14 @@ const removeCarriage = (text: string | undefined) =>
   text ? text.replace(/\r/, '') : ''
 export async function docxToVFile(file: ArrayBuffer) {
   const { entries } = await unzip(file)
+  const rels = await entries['word/_rels/document.xml.rels'].text()
+  const relations = Object.fromEntries(
+    [...rels.matchAll(/Id="(.*?)".*?Target="(.*?)"/g)].map((match) => [
+      match[0],
+      match[1],
+    ])
+  )
+
   const doc = await entries['word/document.xml'].text()
   const foot = (await entries?.['word/footnotes.xml']?.text()) || ''
   const bib = (await entries?.['customXml/item1.xml']?.text()) || ''
@@ -29,6 +37,7 @@ export async function docxToVFile(file: ArrayBuffer) {
   ${removeHeader(bib)}
   </w:document>`
   const vfile = new VFile(total)
+  vfile.data.relations = relations
   // if (footnotes) {
   //   Object.assign(vfile.data, { footnotes })
   // }

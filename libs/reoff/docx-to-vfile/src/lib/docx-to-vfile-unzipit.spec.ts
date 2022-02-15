@@ -12,4 +12,9 @@ describe('reoffDocxToVfile', () => {
     fs.writeFileSync(path.join(__dirname, 'test'), String(vfile))
     expect(vfile).toMatchSnapshot()
   })
+  it('should contain have vfile with relations data object', async () => {
+    const vfile = await docxToVFile(new Uint8Array(doc))
+    fs.writeFileSync(path.join(__dirname, 'test'), String(vfile))
+    expect(vfile.data.relations).toBeDefined()
+  })
 })

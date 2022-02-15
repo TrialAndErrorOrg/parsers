@@ -117,6 +117,10 @@ export function refToCSL(citation: ElementCitation, id: string): CSL {
           //@ts-ignore it's an element
           acc.publisher = toString(curr)
           return acc
+        case 'publisherLoc':
+          //@ts-ignore it's an element
+          acc['publisher-place'] = toString(curr)
+          return acc
         case 'source':
           if (acc.type === 'book') {
             //@ts-ignore it's an element
@@ -367,6 +371,9 @@ export function one(node: Node) {
     }
     case 'publisherName': {
       return { publisher: all(node).join('') }
+    }
+    case 'publisherLoc': {
+      return { 'publisher-place': all(node).join('') }
     }
     case 'institution': {
       // @ts-ignore it'll be finneeeee

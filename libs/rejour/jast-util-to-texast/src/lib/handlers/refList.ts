@@ -91,35 +91,39 @@ export function refList(j: J, list: RefList): Environment {
 
   const csl: CSL[] = refListToCSL(list)
 
+  const texEntryMap = (key: string, value?: string) =>
+    value ? `${key} = {${value}}` : []
   const toBibtex = (c: CSL[]) => {
-    return c
-      .map(
-        // prettier-ignore
-        // @ts-expect-error
-        (ref) => `@${(biblatexCSLMap.target as any)[ref.type]}{${ref['citation-key'] || ref.id},
-      title = {${ref.title||''}},
-      author = {${ref.author
+    return (
+      c
+        .map(
+          // prettier-ignore
+          // @ts-expect-error
+          (ref) =>[ `@${(biblatexCSLMap.target as any)[ref.type]}{${ref.author?.[0]?.family && ref.issued?.['date-parts']?.[0]?.[0] ? `${ref.author[0].family}${ref.issued['date-parts'][0][0]}`:ref['citation-key'] || ref.id}`,
+      texEntryMap('title',ref.title),
+      texEntryMap('author',ref.author
         ?.map(
           (auth) =>
-            auth.literal ||
+            (auth.literal ||
             `${auth.family}, ${
               auth['dropping-particle'] || auth['non-dropping-particle'] || ''
-            }${auth.given ||''} ${auth.suffix || ''}`
+            }${auth.given ||''} ${auth.suffix || ''}`).trim()
         )
-        .join(' and ')||''}},
-      number = {${ref.number||ref.issue||''}},
-      volume = {${ref.volume||''}},
-      url = {${ref.URL||''}},
-      doi = {${ref.DOI||''}},
-      publisher = {${ref.publisher||''}},
-      year = {${ref.issued?.literal || ref.issued?.['date-parts']?.join('-')||''}},
-      pages = {${ref.page||''}},
-      journal = {${ref.source||''}},
-    }
+        .join(' and ')),
+      texEntryMap('number',`${ref.number||ref.issue||''}`),
+      texEntryMap('volume',`${ref.volume||''}`),
+      texEntryMap('url',ref.URL),
+      texEntryMap('doi',ref.DOI),
+      texEntryMap('publisher',ref.publisher),
+      texEntryMap('place',ref['publisher-place']),
+      texEntryMap('year',ref.issued?.literal || ref.issued?.['date-parts']?.[0]?.join('-')),
+      texEntryMap('pages',ref.page),
+      texEntryMap('journal',ref.source),
 
-`
-      )
-      .join('\n\n\n')
+].flat().join(',\n    ')
+        )
+        .join('\n}\n\n\n') + '\n}'
+    )
   }
   const bibtex = toBibtex(csl)
 

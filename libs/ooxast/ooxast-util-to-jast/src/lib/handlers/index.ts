@@ -25,4 +25,7 @@ export const handlers = {
   instrText: citation,
   tbl,
   tr,
+  article: ignore,
 }
+
+function ignore() {}

@@ -86,8 +86,9 @@ const biblatexCSLMap = {
   },
 }
 
-export function refList(j: J, list: RefList): Environment {
+export function refList(j: J, list: RefList): Environment | undefined {
   // we're parsing it to CSL-JSON first, lot easier to render to bib
+  if (list.children.length === 0) return
 
   const csl: CSL[] = refListToCSL(list)
 
@@ -120,9 +121,9 @@ export function refList(j: J, list: RefList): Environment {
       texEntryMap('pages',ref.page),
       texEntryMap('journal',ref.source),
 
-].flat().join(',\n    ')
+].flat().join(',\n    ')+'\n}'
         )
-        .join('\n}\n\n\n') + '\n}'
+        .join('\n\n\n') + '\n}'
     )
   }
   const bibtex = toBibtex(csl)

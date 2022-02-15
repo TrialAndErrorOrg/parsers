@@ -78,15 +78,16 @@ export function xref(j: J, node: Xref) {
       ])
     }
     case 'fn': {
+      const fnContent = j.footnotes[
+        // TODO: [rejour-relatex]: make footnote identification less arbitrary, like a counter or something
+        //@ts-ignore
+        parseInt(node.children?.[0]?.value?.replace(/[\[\]]/g, '')) - 1
+      ] as any
       return j(node, 'command', { name: 'footnote' }, [
         {
           type: 'commandArg',
-          children: [
-            j.footnotes[
-              //@ts-ignore
-              parseInt(select('text', node)?.value?.replace(/[\[\]]/g, ''))
-            ] as any,
-          ],
+          children:
+            fnContent.type === 'paragraph' ? fnContent.children : [fnContent],
         },
       ])
     }

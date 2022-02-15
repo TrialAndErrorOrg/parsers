@@ -36,7 +36,7 @@ export const environment: BasicHandle = (
 
   // prettier-ignore
   return `
-  \\begin{${node.name}}${toLatex(contents.optargs)}${toLatex(contents.args)}
+\\begin{${node.name}}${toLatex(contents.optargs)}${toLatex(contents.args)}
 
 ${"  "}${toLatex(contents.children)}
 

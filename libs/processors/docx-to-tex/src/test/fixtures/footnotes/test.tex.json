@@ -117,26 +117,6 @@
                   "value": "\n"
                 }
               ]
-            },
-            {
-              "type": "environment",
-              "name": "filecontents",
-              "children": [
-                {
-                  "type": "commandArg",
-                  "optional": false,
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "bibliography.bib"
-                    }
-                  ]
-                },
-                {
-                  "type": "text",
-                  "value": "\n}"
-                }
-              ]
             }
           ]
         },
@@ -153,15 +133,14 @@
                 },
                 {
                   "type": "command",
-                  "name": "ref",
+                  "name": "footnote",
                   "children": [
                     {
                       "type": "commandArg",
-                      "optional": false,
                       "children": [
                         {
                           "type": "text",
-                          "value": "[1]"
+                          "value": "A footnote."
                         }
                       ]
                     }

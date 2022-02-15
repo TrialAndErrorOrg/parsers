@@ -123,6 +123,11 @@ export function refToCSL(citation: ElementCitation, id: string): CSL {
             acc.title = toString(curr)
             return acc
           }
+        // if (
+        //   ['article', 'article-journal', 'article-newspaper'].includes(
+        //     acc.type
+        //   )
+        // ) {
         default:
           //@ts-ignore it's an element
           acc[curr.name] = toString(curr as Element)

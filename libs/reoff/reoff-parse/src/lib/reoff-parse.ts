@@ -63,29 +63,29 @@ function unify(string: string, settings: Settings) {
   // name --> name
   // to be more in line with hast, which makes plugins easier to port
   //@ts-ignore: TODO:somehow types don't align, fix
-  tree = map(tree!, (node) => {
-    if (node.type !== 'element') return node
-    const element = node as XastElement
+  // tree = map(tree!, (node) => {
+  //   if (node.type !== 'element') return node
+  //   const element = node as XastElement
 
-    const attributes = element.attributes
-      ? Object.entries(element.attributes).reduce(
-          (
-            acc: { [key: string]: any },
-            [key, value]: [key: string, value: any]
-          ) => {
-            acc[pascalToCamelCase(key)] = value
-            return acc
-          },
-          {}
-        )
-      : {}
-    return {
-      type: 'element',
-      name: pascalToCamelCase(element.name),
-      attributes: attributes,
-      children: element.children,
-      ...(element.position ? { position: element.position } : {}),
-    }
-  })
+  //   const attributes = element.attributes
+  //     ? Object.entries(element.attributes).reduce(
+  //         (
+  //           acc: { [key: string]: any },
+  //           [key, value]: [key: string, value: any]
+  //         ) => {
+  //           acc[pascalToCamelCase(key)] = value
+  //           return acc
+  //         },
+  //         {}
+  //       )
+  //     : {}
+  //   return {
+  //     type: 'element',
+  //     name: pascalToCamelCase(element.name),
+  //     attributes: attributes,
+  //     children: element.children,
+  //     ...(element.position ? { position: element.position } : {}),
+  //   }
+  // })
   return tree as Root
 }

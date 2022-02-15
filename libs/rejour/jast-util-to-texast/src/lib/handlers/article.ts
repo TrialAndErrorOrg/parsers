@@ -1,24 +1,25 @@
 // based on https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/em
 
 import { Article, Parent, TagHavers, Element, Content } from 'jjast'
+import { select } from 'xast-util-select'
 import { all } from '../all'
 import { J, Node, Root } from '../types'
 
 export function article(j: J, node: Root) {
   const kids = node.children as Element[]
-  const front = kids.find((child) => child?.name === 'front')
+  const front = select('front', node)
   if (!front) {
     throw new Error(
       `Node ${node.type} requires a "front" child, but none were found.`
     )
   }
 
-  const back = kids.find((child) => child?.name === 'back')
+  const back = select('back', node)
   if (back) {
     front?.children?.push(...(back?.children || []))
   }
 
-  const body = kids.find((child) => child?.name === 'body')
+  const body = select('body', node)
   if (!body) {
     return j(node, 'root', { name: 'article' }, [
       ...all(j, node),

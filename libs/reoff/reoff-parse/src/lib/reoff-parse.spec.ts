@@ -11,14 +11,14 @@ describe('reoffParse', () => {
       path.join(__dirname, '../test/Manuscript-2.docx')
     )
     const file = await docxToVFile(doc)
-    console.log(file)
+    await fs.writeFile(path.join(__dirname, '../test/xml'), String(file))
+
     const res = proc.parse(file)
 
     await fs.writeFile(
       path.join(__dirname, '../test/ooxasttree'),
       JSON.stringify(res, null, 2)
     )
-    console.log(res)
-    expect(res).toMatchSnapshot()
+    expect(res).toBeDefined()
   })
 })

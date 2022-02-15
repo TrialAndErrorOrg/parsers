@@ -13,6 +13,7 @@
     "processors-docx-to-jats": "libs/processors/docx-to-jats",
     "processors-docx-to-tex": "libs/processors/docx-to-tex",
     "processors-jats-to-tex": "libs/processors/jats-to-tex",
+    "rejour-csl-to-jast": "libs/rejour/csl-to-jast",
     "rejour-frontmatter": "libs/rejour/rejour-frontmatter",
     "rejour-jast-util-to-csl": "libs/rejour/jast-util-to-csl",
     "rejour-meta": "libs/rejour/rejour-meta",

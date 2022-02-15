@@ -9,7 +9,7 @@ describe('reoffDocxToVfile', () => {
   jest.setTimeout(10000)
   it('should work', async () => {
     const vfile = await docxToVFile(new Uint8Array(doc))
-    console.log(vfile)
+    fs.writeFileSync(path.join(__dirname, 'test'), String(vfile))
     expect(vfile).toMatchSnapshot()
   })
 })

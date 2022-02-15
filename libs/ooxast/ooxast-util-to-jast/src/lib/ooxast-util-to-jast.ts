@@ -19,6 +19,9 @@ import {
 } from './types'
 import { convert } from 'unist-util-is'
 import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
+import { select } from 'xast-util-select'
+import { x } from 'xastscript'
+import { cslToRefList } from 'csl-to-jast'
 
 export { one } from './one'
 export { all } from './all'
@@ -136,6 +139,10 @@ export function toJast(
   // visit(mdast, 'text', ontext)
 
   //console.log(citations)
+  const back = select('back', jast)
+  if (!back) return jast
+
+  back.children = [cslToRefList(citations)]
 
   return jast
 

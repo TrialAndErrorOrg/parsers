@@ -4,14 +4,13 @@ import { unzip } from 'unzipit'
 const removeHeader = (text: string | undefined) =>
   text ? text.replace(/<\?xml.*?\?>/, '') : ''
 
+const removeCarriage = (text: string | undefined) =>
+  text ? text.replace(/\r/, '') : ''
 export async function docxToVFile(file: ArrayBuffer) {
   const { entries } = await unzip(file)
-  console.log(entries['word/document.xml'])
-  const doc = (await entries['word/document.xml'].arrayBuffer()).toString()
-  const foot =
-    (await entries?.['word/footnotes.xml']?.arrayBuffer())?.toString() || ''
-  const bib =
-    (await entries?.['customXml/item1.xml']?.arrayBuffer())?.toString() || ''
+  const doc = await entries['word/document.xml'].text()
+  const foot = (await entries?.['word/footnotes.xml']?.text()) || ''
+  const bib = (await entries?.['customXml/item1.xml']?.text()) || ''
   // const data = await getXMLDatas(file, {
   //   filenames: [
   //     /customXml\/item\d+\.xml/,
@@ -25,11 +24,9 @@ export async function docxToVFile(file: ArrayBuffer) {
   //   'word/footnotes.xml': footnotes,
   //   ...bibliography
   // } = data
-  const total = `${removeHeader(doc).slice(0, -'</w:document>'.length)}
+  const total = `${removeCarriage(doc).slice(0, -'</w:document>'.length)}
   ${removeHeader(foot)}
-  ${Object.values(bib)
-    .map((bib) => removeHeader(bib))
-    .join('\n')}
+  ${removeHeader(bib)}
   </w:document>`
   const vfile = new VFile(total)
   // if (footnotes) {

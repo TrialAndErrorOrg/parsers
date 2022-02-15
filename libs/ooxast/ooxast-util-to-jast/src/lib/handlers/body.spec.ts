@@ -26,5 +26,6 @@ it('lets try', () => {
     __dirname + '/../../../../../reoff/reoff-parse/src/test/ooxasttree'
   const x = fs.readFileSync(ooxloc, { encoding: 'utf-8' })
   const tree = JSON.parse(x)
-  expect(toJast(tree)).toMatchSnapshot()
+
+  //expect(toJast(tree)).toMatchSnapshot()
 })

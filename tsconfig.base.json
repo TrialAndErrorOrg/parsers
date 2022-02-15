@@ -32,6 +32,7 @@
       ],
       "@jote/utils": ["libs/utils/src/index.ts"],
       "ast-stringify": ["libs/ast-stringify/src/index.ts"],
+      "csl-to-jast": ["libs/rejour/csl-to-jast/src/index.ts"],
       "docx-parse": ["libs/docx-parse/src/index.ts"],
       "docx-to-vfile": ["libs/reoff/docx-to-vfile/src/index.ts"],
       "jast-stringify": ["libs/rejour/jast-stringify/src/index.ts"],

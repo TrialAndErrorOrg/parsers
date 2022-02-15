@@ -3,10 +3,6 @@
   "children": [
     {
       "type": "text",
-      "value": "version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\""
-    },
-    {
-      "type": "text",
       "value": " "
     },
     {

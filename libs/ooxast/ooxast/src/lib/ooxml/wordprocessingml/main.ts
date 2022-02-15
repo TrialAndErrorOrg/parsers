@@ -1455,9 +1455,9 @@ export interface FtnEdnMap {
   tbl?: Tbl[]
 }
 
-export interface FtnEdnRef extends UnistNode {
+export interface FtnEdnRef<tag extends string = 'ftnEdnRef'> extends UnistNode {
   type: 'element'
-  name: 'w:ftnEdnRef'
+  name: `w:${tag}`
   attributes: {
     'w:customMarkFollows'?: string
     'w:id': string
@@ -2612,10 +2612,10 @@ export interface RMap {
   delText?: T[]
   drawing?: Drawing[]
   endnoteRef?: Empty<'endnoteRef'>[]
-  endnoteReference?: FtnEdnRef[]
+  endnoteReference?: FtnEdnRef<'endnoteReference'>[]
   fldChar?: FldChar[]
   footnoteRef?: Empty<'footnoteRef'>[]
-  footnoteReference?: FtnEdnRef[]
+  footnoteReference?: FtnEdnRef<'footnoteReference'>[]
   instrText?: T[]
   lastRenderedPageBreak?: Empty<'lastRenderedPageBreak'>[]
   monthLong?: Empty<'monthLong'>[]

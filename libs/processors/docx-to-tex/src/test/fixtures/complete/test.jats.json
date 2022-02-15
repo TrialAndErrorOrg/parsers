@@ -15,11 +15,6 @@
     },
     {
       "type": "text",
-      "attributes": {},
-      "value": "version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\""
-    },
-    {
-      "type": "text",
       "value": " "
     },
     {
@@ -42115,6 +42110,29 @@
                           ]
                         }
                       ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "fnGroup",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "element",
+                  "name": "fn",
+                  "attributes": {
+                    "w:type": "continuationNotice",
+                    "w:id": "1"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "p",
+                      "attributes": {},
+                      "children": []
                     }
                   ]
                 }

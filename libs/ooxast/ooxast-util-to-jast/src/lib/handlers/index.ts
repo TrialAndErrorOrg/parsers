@@ -26,6 +26,9 @@ export const handlers = {
   tbl,
   tr,
   article: ignore,
+  xml: ignore,
+  instruction: ignore,
+  doctype: ignore,
 }
 
 function ignore() {}

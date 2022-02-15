@@ -71,6 +71,7 @@ export interface Context {
   sectionDepth: number
   bibname: string
   columnSeparator: boolean
+  footnotes: TexastContent[]
 }
 
 export type JWithProps = (

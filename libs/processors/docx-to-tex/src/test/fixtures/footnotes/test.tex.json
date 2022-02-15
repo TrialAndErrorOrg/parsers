@@ -1,0 +1,177 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "text",
+      "value": " "
+    },
+    {
+      "type": "root",
+      "children": [
+        {
+          "type": "preamble",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "command",
+                  "name": "documentclass",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "article"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
+                },
+                {
+                  "type": "command",
+                  "name": "usepackage",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "style=apa"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "biblatex"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
+                },
+                {
+                  "type": "command",
+                  "name": "addbibresource",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "bibliography.bib"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "usepackage",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "graphicx"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "usepackage",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "hyperref"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
+                }
+              ]
+            },
+            {
+              "type": "environment",
+              "name": "filecontents",
+              "children": [
+                {
+                  "type": "commandArg",
+                  "optional": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "bibliography.bib"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "environment",
+          "name": "document",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Some text"
+                },
+                {
+                  "type": "command",
+                  "name": "ref",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "[1]"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

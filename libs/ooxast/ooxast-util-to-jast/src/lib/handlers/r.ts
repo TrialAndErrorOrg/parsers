@@ -7,6 +7,15 @@ import { Italic, Bold, Underline, Strike, Sc } from 'jjast'
 
 export function r(j: J, node: R) {
   if (node?.children?.[1]?.name === 'w:fldChar') return
+
+  if (node?.children?.[1]?.name === 'w:footnoteReference') {
+    return x(
+      'xref',
+      { refType: 'fn' },
+      { type: 'text', value: `[${node?.children?.[1]?.attributes?.['w:id']}]` }
+    )
+  }
+
   if (node?.children?.[1]?.name === 'w:instrText') {
     j.deleteNextRun = false
     return all(j, node)

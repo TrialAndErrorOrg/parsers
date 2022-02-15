@@ -1,12 +1,11 @@
 // based on https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/em
 
-import { Article, Parent, TagHavers, Element, Content } from 'jjast'
+import { Article, Parent, TagHavers, Element, Content, FnGroup } from 'jjast'
 import { select } from 'xast-util-select'
 import { all } from '../all'
 import { J, Node, Root } from '../types'
 
 export function article(j: J, node: Root) {
-  const kids = node.children as Element[]
   const front = select('front', node)
   if (!front) {
     throw new Error(
@@ -14,10 +13,16 @@ export function article(j: J, node: Root) {
     )
   }
 
-  const back = select('back', node)
-  if (back) {
-    front?.children?.push(...(back?.children || []))
+  const refList = select('back > refList', node)
+
+  if (refList) {
+    front?.children?.push(refList)
   }
+  const footnotes = select('fnGroup', node) as FnGroup | null
+  if (footnotes) {
+    j.footnotes = all(j, footnotes)
+  }
+  console.log(j.footnotes)
 
   const body = select('body', node)
   if (!body) {

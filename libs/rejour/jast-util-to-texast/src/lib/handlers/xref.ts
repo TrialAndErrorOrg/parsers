@@ -5,6 +5,7 @@ import { Command } from 'texast'
 import { all } from '../all'
 import { J, Node, Root } from '../types'
 import { wrapCommandArg } from '../util/wrap-command-arg'
+import { select } from 'xast-util-select'
 
 export function xref(j: J, node: Xref) {
   //  if (!article) {
@@ -24,7 +25,7 @@ export function xref(j: J, node: Xref) {
     custom: 'custom',
     'disp-formula': 'eqref',
     fig: 'ref',
-    fn: 'fn',
+    fn: 'footnote',
     kwd: 'kwd',
     list: 'list',
     other: 'other',
@@ -72,6 +73,19 @@ export function xref(j: J, node: Xref) {
               //@ts-expect-error
               value: 'bib' + node.children[0]?.value?.replace(/[\[\]]/g, ''),
             },
+          ],
+        },
+      ])
+    }
+    case 'fn': {
+      return j(node, 'command', { name: 'footnote' }, [
+        {
+          type: 'commandArg',
+          children: [
+            j.footnotes[
+              //@ts-ignore
+              parseInt(select('text', node)?.value?.replace(/[\[\]]/g, ''))
+            ] as any,
           ],
         },
       ])

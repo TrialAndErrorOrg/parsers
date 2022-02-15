@@ -90,6 +90,7 @@ export function toTexast(
       documentClass: options.documentClass || { name: 'article' },
       bibname: options.bibname || 'bibliography',
       columnSeparator: !!options.columnSeparator,
+      footnotes: [],
     } as Context
   )
 

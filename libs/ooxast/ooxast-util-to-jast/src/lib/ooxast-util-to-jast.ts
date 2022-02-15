@@ -142,7 +142,7 @@ export function toJast(
   const back = select('back', jast)
   if (!back) return jast
 
-  back.children = [cslToRefList(citations)]
+  back.children.unshift(cslToRefList(citations))
 
   return jast
 

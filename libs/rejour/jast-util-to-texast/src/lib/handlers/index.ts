@@ -60,6 +60,10 @@ export const handlers = {
 
   extLink,
 
+  fnGroup: all,
+  fn: all,
+
+  xml: ignore,
   abbrevJournaltitle: ignore,
   abbrev: ignore,
   abstract: ignore,
@@ -160,8 +164,6 @@ export const handlers = {
   figGroup: ignore,
   fixedCase: ignore,
   floatsGroup: ignore,
-  fnGroup: ignore,
-  fn: ignore,
   fpage: ignore,
   frontStub: ignore,
   fundingGroup: ignore,

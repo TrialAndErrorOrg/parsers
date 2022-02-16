@@ -50,14 +50,16 @@ export function xref(j: J, node: Xref) {
           children: [
             {
               type: 'text',
-              value: node.children
-                .map((node) => {
-                  //@ts-ignore
-                  const n = node.value.replace(/[\[\], ]/g, '')
-                  return n ? `bib${n}` : undefined
-                })
-                .filter((n) => !!n)
-                .join(','),
+              value:
+                node.attributes.rid ||
+                node.children
+                  .map((node) => {
+                    //@ts-ignore
+                    const n = node.value.replace(/[\[\], ]/g, '')
+                    return n ? `bib${n}` : undefined
+                  })
+                  .filter((n) => !!n)
+                  .join(','),
             },
           ],
         },

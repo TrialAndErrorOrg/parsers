@@ -41,6 +41,7 @@ export interface Options {
     options?: string[]
     name: string
   }
+  citationAnalyzer?: (node: Node) => string
 }
 
 export type Handle = (
@@ -72,6 +73,7 @@ export interface Context {
   bibname: string
   columnSeparator: boolean
   footnotes: TexastContent[]
+  citationAnalyzer: (node: Node) => string
 }
 
 export type JWithProps = (

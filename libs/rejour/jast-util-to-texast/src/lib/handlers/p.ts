@@ -4,7 +4,8 @@ import { J, Text } from '../types'
 import { wrapChildren } from '../util/wrap-children'
 
 export function p(j: J, p: P) {
-  return j(p, 'paragraph', all(j, combineCitations(p)))
+  return j(p, 'paragraph', all(j, p))
+  //combineCitations(p)))
 }
 
 const combineCitations = (p: P): P => {

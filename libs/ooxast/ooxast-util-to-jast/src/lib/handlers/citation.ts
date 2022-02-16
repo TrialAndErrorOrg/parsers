@@ -33,7 +33,7 @@ export function citation(j: J, citation: T, parent: Parent) {
         j.partialCitation = ''
         console.log('Success!')
       }
-      console.log(json)
+      // console.log(json)
       console.log(j.partialCitation)
       throw new Error(
         'Corrupt citation! This might be because the text is too long.'

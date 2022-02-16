@@ -9,7 +9,7 @@ export async function extractDocx(docx: Buffer, stream?: Stream): Promise<any> {
   const [zipfile, zipfileError]: [ZipFile, Error] = await tryCatchPromise(
     openZipFromBuffer(docx, { lazyEntries: true })
   )
-  console.log(zipfile)
+  // console.log(zipfile)
   if (zipfileError) {
     return
   }
@@ -26,12 +26,12 @@ export async function extractDocx(docx: Buffer, stream?: Stream): Promise<any> {
   }
 
   zipfile.on('entry', async (entry) => {
-    console.log('AAAAAAAAA')
+    // console.log('AAAAAAAAA')
     if (/\/$/.test(entry.fileName)) {
       // Directory file names end with '/'.
       // Note that entries for directories themselves are optional.
       // An entry's fileName implicitly requires its parent directories to exist.
-      console.log(entry)
+      // console.log(entry)
       zipfile.readEntry()
       return
     }
@@ -46,16 +46,16 @@ export async function extractDocx(docx: Buffer, stream?: Stream): Promise<any> {
     }
     if (!stream) {
       console.error('No Stream')
-      console.log(stream)
+      // console.log(stream)
       return
     }
 
     stream.on('data', (data) => {
-      console.log(data)
+      // console.log(data)
     })
 
     stream.on('end', () => {
-      console.log('<EOF>')
+      // console.log('<EOF>')
       zipfile.readEntry()
     })
 
@@ -63,7 +63,7 @@ export async function extractDocx(docx: Buffer, stream?: Stream): Promise<any> {
   })
 
   zipfile.on('end', () => {
-    console.log('end of entries')
+    // console.log('end of entries')
     return
   })
 }

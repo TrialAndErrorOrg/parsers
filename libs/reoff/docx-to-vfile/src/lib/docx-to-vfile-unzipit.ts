@@ -6,13 +6,21 @@ const removeHeader = (text: string | undefined) =>
 
 const removeCarriage = (text: string | undefined) =>
   text ? text.replace(/\r/, '') : ''
-export async function docxToVFile(file: ArrayBuffer) {
+
+export interface Options {
+  withoutImages: boolean
+}
+
+export async function docxToVFile(
+  file: ArrayBuffer,
+  options: Options = { withoutImages: false }
+) {
   const { entries } = await unzip(file)
   const rels = await entries['word/_rels/document.xml.rels'].text()
   const relations = Object.fromEntries(
     [...rels.matchAll(/Id="(.*?)".*?Target="(.*?)"/g)].map((match) => [
-      match[0],
       match[1],
+      match[2],
     ])
   )
 
@@ -38,6 +46,17 @@ export async function docxToVFile(file: ArrayBuffer) {
   </w:document>`
   const vfile = new VFile(total)
   vfile.data.relations = relations
+  if (!options.withoutImages) {
+    const mediaUrls = Object.values(relations).filter((rel: string) =>
+      rel.includes('media/')
+    )
+    const images = {} as { [key: string]: ArrayBuffer }
+    for (const url of mediaUrls) {
+      images[url] = await entries[`word/${url}`].arrayBuffer()
+      // console.log(images)
+    }
+    vfile.data.images = images
+  }
   // if (footnotes) {
   //   Object.assign(vfile.data, { footnotes })
   // }

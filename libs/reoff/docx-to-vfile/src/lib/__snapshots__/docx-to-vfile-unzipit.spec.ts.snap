@@ -3,7 +3,17 @@
 exports[`reoffDocxToVfile should work 1`] = `
 VFile {
   "cwd": "/Users/thomas/Projects/jote-monorepo",
-  "data": Object {},
+  "data": Object {
+    "images": Object {},
+    "relations": Object {
+      "rId1": "../customXml/item1.xml",
+      "rId2": "styles.xml",
+      "rId3": "settings.xml",
+      "rId4": "webSettings.xml",
+      "rId5": "fontTable.xml",
+      "rId6": "theme/theme1.xml",
+    },
+  },
   "history": Array [],
   "messages": Array [],
   "value": "<?xml version=\\"1.0\\" encoding=\\"UTF-8\\" standalone=\\"yes\\"?>

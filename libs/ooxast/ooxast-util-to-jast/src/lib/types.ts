@@ -43,6 +43,8 @@ export interface Options {
   }
   parseCitation?: (citation: any) => any
   collectCitation?: (citation: any) => any
+
+  relations?: { [key: string]: string }
 }
 
 export type Handle = (
@@ -78,6 +80,7 @@ export interface Context {
   collectCitation: (citation: any) => any
   partialCitation: string
   deleteNextRun: boolean
+  relations: { [key: string]: string }
 }
 
 export type JWithProps = (

@@ -9,7 +9,7 @@ describe('reoffDocxToVfile', () => {
   jest.setTimeout(10000)
   it('should work', async () => {
     const vfile = await docxToVFile(doc)
-    console.log(vfile)
+    // console.log(vfile)
     expect(vfile).toMatchSnapshot()
   })
 })

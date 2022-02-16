@@ -15,6 +15,9 @@ export function r(j: J, node: R) {
       { type: 'text', value: `[${node?.children?.[1]?.attributes?.['w:id']}]` }
     )
   }
+  if (node?.children?.[1]?.name === 'w:drawing') {
+    return all(j, node)
+  }
 
   if (node?.children?.[1]?.name === 'w:instrText') {
     j.deleteNextRun = false

@@ -38,6 +38,7 @@ export function toJast(
     quotes: ['"'],
     topSection: 0,
     columnSeparator: false,
+    //relations: {},
   }
 ) {
   // const byId: { [s: string]: Element } = {}
@@ -108,6 +109,7 @@ export function toJast(
       parseCitation: options.parseCitation || parseCitation,
       partialCitation: '',
       deleteNextRun: false,
+      relations: options.relations || {},
     } as Context
   )
 
@@ -138,7 +140,7 @@ export function toJast(
 
   // visit(mdast, 'text', ontext)
 
-  //console.log(citations)
+  //// // // console.log(citations)
   const back = select('back', jast)
   if (!back) return jast
 

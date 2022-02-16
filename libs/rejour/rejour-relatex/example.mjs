@@ -47,4 +47,4 @@ const result = await unified()
   .process(file)
 
 // Now, printing `result` (the newly generated .tex file) yields:
-console.log('latex', String(result))
+// console.log('latex', String(result))

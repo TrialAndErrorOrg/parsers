@@ -3,7 +3,7 @@ import { remove } from 'unist-util-remove'
 import { visit as origVisit } from 'unist-util-visit'
 import { filter } from 'unist-util-filter'
 
-console.log(Node)
+// console.log(Node)
 // fix for typescript bug
 const visit = origVisit as any
 const containsAbstract = (node: Element) => {

@@ -8,7 +8,7 @@ export const inlineMath: BasicHandle = (
 ) => {
   const builtInDelimiters =
     node.delimiters === '()' ? ['\\(', '\\)'] : ['$', '$']
-  console.log(node.delimiters)
+  // console.log(node.delimiters)
 
   // TODO: Clean up delimiter picking for math env
   const delimiters = options.inlineMathDelimiters

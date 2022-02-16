@@ -9,7 +9,7 @@ describe('rejourJastUtilToCsl', () => {
   const proc = unified()
     .use(rejourParse)
     .use(rejourFrontmatter)
-    .use(() => (tree, file) => console.log(file.data))
+    .use(() => (tree, file) => // console.log(file.data))
   it('should work', async () => {
     const tree = proc.parse(
       await read(__dirname + '/../test/index.jats.xml')

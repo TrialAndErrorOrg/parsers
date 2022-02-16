@@ -21,9 +21,16 @@ function bridge(
 ): void | Transformer<OoxastRoot, OoxastRoot> {
   return (node, file, next) => {
     //@ts-ignore there should be a better way to cast this
-    destination.run(toJast(node, options), file, (error) => {
-      next(error)
-    })
+    destination.run(
+      toJast(node, {
+        ...options,
+        relations: (file.data.relations || {}) as { [key: string]: string },
+      }),
+      file,
+      (error) => {
+        next(error)
+      }
+    )
   }
 }
 
@@ -37,8 +44,11 @@ function mutate(
   //Transformer<OoxastRoot, OoxastRoot> | void {
   //@ts-ignore there should be a better way to cast this
   //THIS IS FINE
-  return (node) => {
-    const result = toJast(node, options) as JastRoot
+  return (node, file) => {
+    const result = toJast(node, {
+      ...options,
+      relations: (file.data.relations || {}) as { [key: string]: string },
+    }) as JastRoot
     return result
   }
 }
@@ -60,6 +70,10 @@ const reoffRejour = function (
   destination?: Processor | Options,
   options?: Options
 ) {
+  const relations = this.data('relations')
+  const data = this.data()
+
+  // console.log(data)
   let settings: Options | undefined
   let processor: Processor | undefined
 
@@ -72,6 +86,10 @@ const reoffRejour = function (
 
   if (settings?.document === undefined || settings.document === null) {
     settings = Object.assign({}, settings, { document: true })
+  }
+  // console.log(relations)
+  if (relations) {
+    settings = Object.assign({}, settings, { relations })
   }
 
   return processor ? bridge(processor, settings) : mutate(settings)

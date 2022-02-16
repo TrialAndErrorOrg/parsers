@@ -5,13 +5,16 @@ import relatexStringify from 'relatex-stringify'
 import { docxToVFile } from 'docx-to-vfile'
 
 import { readdirSync, readFileSync, writeFileSync } from 'fs'
+import { readFile, writeFile } from 'fs/promises'
 import { join } from 'path'
 import { unified } from 'unified'
 import { removePosition } from 'unist-util-remove-position'
+import { select } from 'xast-util-select'
 
 //describe('fixtures', () => {
 const fromDocx = (path: string) =>
   unified()
+    .data('hey', 'ho')
     .use(reoffParse)
     //@ts-ignore yayayay
     .use(reoffRejour)
@@ -43,9 +46,9 @@ it.each(dir)('parses correctly for %s', async (name: string) => {
     'index.json',
   ].map((ext) => join(fixtures, name, ext))
 
-  const doccc = new Uint8Array(readFileSync(docx))
-  const docxIn = String(await docxToVFile(doccc))
-  const texOut = String(readFileSync(latex))
+  const doccc = new Uint8Array(await readFile(docx))
+  const docxIn = await docxToVFile(doccc)
+  const texOut = String(await readFile(latex))
 
   // let config: Options | undefined
   // try {
@@ -53,15 +56,21 @@ it.each(dir)('parses correctly for %s', async (name: string) => {
   // } catch (e) {
   //   console.error(e)
   // }
-  const result = String(fromDocx(join(fixtures, name)).processSync(docxIn))
-  writeFileSync(join(fixtures, name, 'result.tex'), result)
+  const result = String(await fromDocx(join(fixtures, name)).process(docxIn))
+  await writeFile(join(fixtures, name, 'result.tex'), result)
 
+  const j = await readFile(join(fixtures, name, 'test.jats.json'), {
+    encoding: 'utf8',
+  })
+  if (name === 'image') {
+    expect(select('fig', JSON.parse(j))).toBeTruthy()
+  }
   // console.dir(xmlTree, { depth: null })
 
-  test('should match snapshot', () => {
-    //expect(result).toMatchSnapshot()
-  })
-  test('should match predefined thing', () => {
-    expect(result).toEqual(texOut)
-  })
+  // it('should match snapshot', () => {
+  //   //expect(result).toMatchSnapshot()
+  // })
+  //it('should match predefined thing', () => {
+  expect(result).toEqual(texOut)
+  // })
 })

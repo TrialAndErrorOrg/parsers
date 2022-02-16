@@ -11,7 +11,7 @@ export async function docxToVFile(file: Buffer | string) {
   ) // easier to put the footnotes in the same spot
   const total = `${mainXML}${footnotes}
   </w:document>`
-  console.log(footnotes)
+  // console.log(footnotes)
   const vfile = new VFile(total)
   // if (footnotes) {
   //   Object.assign(vfile.data, { footnotes })

@@ -11,6 +11,7 @@ import { footnote } from './footnote'
 import { document } from './document'
 import { r } from './r'
 import { tr } from './tr'
+import { drawing } from './drawing'
 
 export const handlers = {
   p,
@@ -29,6 +30,7 @@ export const handlers = {
   xml: ignore,
   instruction: ignore,
   doctype: ignore,
+  drawing,
 }
 
 function ignore() {}

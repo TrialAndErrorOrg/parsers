@@ -14,6 +14,9 @@ export default function reoffParse(options: Settings = {}) {
   const parser: ParserFunction<Root> = (doc, file) => {
     // Assume options.
     const settings: Settings = this.data('settings')
+    // console.log(file.data)
+    // console.log(file)
+    // console.log(this.data())
 
     const configuration = Object.assign({}, settings, options, {
       // Note: these options are not in the readme.

@@ -21,9 +21,9 @@ const relativeOrderFigure = (element: Fig['children'][number]) => {
   }
 }
 export function fig(j: J, fig: Fig) {
-  console.log(fig.children)
+  // console.log(fig.children)
   fig.children.sort((a, b) => relativeOrderFigure(a) - relativeOrderFigure(b))
-  console.log(fig.children)
+  // console.log(fig.children)
 
   return { type: 'environment', name: 'figure', children: all(j, fig) }
 }

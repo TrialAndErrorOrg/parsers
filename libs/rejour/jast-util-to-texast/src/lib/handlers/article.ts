@@ -22,7 +22,7 @@ export function article(j: J, node: Root) {
   if (footnotes) {
     j.footnotes = all(j, footnotes)
   }
-  console.log(j.footnotes)
+  // console.log(j.footnotes)
 
   const body = select('body', node)
   if (!body) {

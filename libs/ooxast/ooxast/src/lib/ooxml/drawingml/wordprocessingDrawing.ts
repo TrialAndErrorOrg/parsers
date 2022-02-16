@@ -115,9 +115,13 @@ export interface PosH extends UnistNode {
   children: RequiredMap<PosHMap>[]
 }
 
+export interface SpecificLiteral<val extends string = string> {
+  type: 'text'
+  value: val
+}
 export interface PosHMap {
-  align: AlignHVal
-  posOffset: string
+  align: SpecificLiteral<AlignHVal>
+  posOffset: SpecificLiteral<string>
 }
 
 export interface PosV extends UnistNode {
@@ -130,8 +134,8 @@ export interface PosV extends UnistNode {
 }
 
 export interface PosVMap {
-  align: AlignVVal
-  posOffset: string
+  align: SpecificLiteral<AlignVVal>
+  posOffset: SpecificLiteral<string>
 }
 
 export interface TextboxInfo extends UnistNode {

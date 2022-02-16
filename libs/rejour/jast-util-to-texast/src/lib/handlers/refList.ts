@@ -100,9 +100,9 @@ export function refList(j: J, list: RefList): Environment | undefined {
         .map(
           // prettier-ignore
           //// @ts-expect-error
-          (ref) =>
+          (ref,index) =>
           [
-            `@${(biblatexCSLMap.target as any)[ref.type]}{bib${ref.id.replace(/[^\d]/g,'')}`,
+            `@${(biblatexCSLMap.target as any)[ref.type]}{${generateCiteKey(ref.id,index)}`,
           //  ${ref.author?.[0]?.family && ref.issued?.['date-parts']?.[0]?.[0] ? `${ref.author[0].family}${ref.issued['date-parts'][0][0]}` :ref['citation-key'] || ref.id}`,
       texEntryMap('title',ref.title),
       texEntryMap('author',ref.author
@@ -139,4 +139,16 @@ export function refList(j: J, list: RefList): Environment | undefined {
       { type: 'text', value: bibtex },
     ],
   }
+}
+
+function generateCiteKey(id?: string, index?: number) {
+  if (!id) {
+    return `$bib{index}`
+  }
+  if (!id.match(/\d/)) return id
+  if (id.slice(-4).match(/(\d{4}||\d{3}[a-z])/)) {
+    return id
+  }
+
+  return `bib${id.replace(/[^\d]/g, '')}`
 }

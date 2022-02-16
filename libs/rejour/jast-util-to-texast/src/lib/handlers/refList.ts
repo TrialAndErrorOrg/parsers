@@ -102,7 +102,7 @@ export function refList(j: J, list: RefList): Environment | undefined {
           //// @ts-expect-error
           (ref) =>
           [
-            `@${(biblatexCSLMap.target as any)[ref.type]}{ @bib${ref.id.replace(/[^\d]/g,'')}`,
+            `@${(biblatexCSLMap.target as any)[ref.type]}{bib${ref.id.replace(/[^\d]/g,'')}`,
           //  ${ref.author?.[0]?.family && ref.issued?.['date-parts']?.[0]?.[0] ? `${ref.author[0].family}${ref.issued['date-parts'][0][0]}` :ref['citation-key'] || ref.id}`,
       texEntryMap('title',ref.title),
       texEntryMap('author',ref.author

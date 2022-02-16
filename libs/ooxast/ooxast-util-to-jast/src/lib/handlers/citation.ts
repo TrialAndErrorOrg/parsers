@@ -52,8 +52,8 @@ export function citation(j: J, citation: T, parent: Parent) {
       j.deleteNextRun = true
       return citation.citationItems.map((cite: any, i: number) => {
         const citation: CSL = cite.itemData
-        j.collectCitation(citation)
         j.citationNumber++
+        j.collectCitation(citation, j.citationNumber)
         return j(
           citation,
           'xref',

@@ -42,7 +42,7 @@ export interface Options {
     name: string
   }
   parseCitation?: (citation: any) => any
-  collectCitation?: (citation: any) => any
+  collectCitation?: (citation: any, index: number) => any
 
   relations?: { [key: string]: string }
 }
@@ -77,7 +77,7 @@ export interface Context {
   columnSeparator: boolean
   citationNumber: number
   parseCitation: (citation: any) => any
-  collectCitation: (citation: any) => any
+  collectCitation: (citation: any, index: number) => any
   partialCitation: string
   deleteNextRun: boolean
   relations: { [key: string]: string }

@@ -197,7 +197,7 @@ export function toJast(
     }
   }
   function parseCitation(citation: any) {}
-  function collectCitation(citation: any) {
-    citations.push(citation)
+  function collectCitation(citation: any, index: number) {
+    citations[index] = citation
   }
 }

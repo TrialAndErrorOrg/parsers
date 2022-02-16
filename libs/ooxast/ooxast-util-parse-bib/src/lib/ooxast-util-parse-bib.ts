@@ -1,0 +1,118 @@
+import { Node, P, Root } from 'ooxast'
+import { Data as CSL } from 'csl-json'
+import { select } from 'xast-util-select'
+import { visit } from '@jote/utils'
+import { convertElement } from 'xast-util-is-element'
+import { getPStyle } from 'ooxast-util-get-style'
+import { toString } from 'xast-util-to-string'
+import axios from 'axios'
+import { execa } from 'execa'
+import { file } from 'tmp-promise'
+import { writeFile } from 'fs/promises'
+
+export async function parseBib(
+  tree: Node,
+  options: {
+    apiUrl?: string
+    apiParams?: { param: string }
+    headers?: { header: string }
+    anyStylePath?: string
+  }
+): Promise<CSL[]> {
+  const { apiUrl, apiParams, anyStylePath, headers } = options
+  const bib = findBib(tree)
+  if (!bib?.length) return []
+  const refs = bib.join('\n')
+  if (apiUrl) {
+    const parsedBib = await callAnystyleApi(refs, apiUrl, apiParams, headers)
+    return parsedBib
+  }
+  const parsedBib = await callAnystyleCLI(refs, anyStylePath)
+  return parsedBib
+}
+
+const isP = convertElement<P>('w:p')
+
+export function findBib(tree: Node): string[] | null {
+  const doc = select('w\\:body', tree as Root)
+  let stack: string[] = []
+
+  let appendixToggle = false
+
+  if (!doc) return []
+  for (let i = 0; i < doc.children.length; i++) {
+    const child = doc.children[i]
+    if (isP(child) && getPStyle(child)?.toLowerCase()?.includes('heading')) {
+      const p = toString(child)
+      if (
+        ['references', 'bibliography', 'citations'].includes(p.toLowerCase())
+      ) {
+        appendixToggle = true
+        continue
+      }
+      appendixToggle = false
+      continue
+    }
+    appendixToggle &&
+      stack.push(
+        toString(child).replace(
+          'ADDIN Mendeley Bibliography CSL_BIBLIOGRAPHY',
+          ''
+        )
+      )
+  }
+  return stack
+  // visit(
+  //   tree,
+  //   (node: Node) =>
+  //     isP(node) && getPStyle(node)?.toLowerCase()?.includes('heading'),
+  //   (node: P) => {
+  //     const ref = ['references', 'bibliography', 'citations'].includes(
+  //       toString(node).toLowerCase()
+  //     )
+  //     if (!ref) return
+  //     //console.log(node)
+  //     start = node
+  //   }
+  // )
+  // return start.name ? start : null
+}
+
+export async function callAnystyleApi(
+  refs: string,
+  apiUrl: string,
+  params?: { [param: string]: string },
+  headers?: { [key: string]: string }
+): Promise<CSL[]> {
+  const response = await axios.post(apiUrl, refs, {
+    headers: {
+      'Content-type': 'text/plain; charset=utf-8',
+      ...headers,
+    },
+    params,
+  })
+  return response.data
+}
+
+export async function callAnystyleCLI(refs: string, path?: string) {
+  const { fd, path: tempPath, cleanup } = await file()
+  await writeFile(tempPath, refs)
+  try {
+    const { stdout: res } = await execa(path || 'anystyle', [
+      '--stdout',
+      '-f',
+      'csl',
+      'parse',
+      tempPath,
+    ])
+    cleanup()
+    return JSON.parse(res)
+  } catch (e) {
+    cleanup()
+    console.error(e)
+    console.log(e)
+    throw new Error('ya done goofed')
+    //if (err.message) throw new Error(err.message)
+    //return []
+  }
+}

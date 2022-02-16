@@ -1,0 +1,34 @@
+{
+  "root": "libs/ooxast/ooxast-util-get-style",
+  "sourceRoot": "libs/ooxast/ooxast-util-get-style/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ooxast/ooxast-util-get-style/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ooxast/ooxast-util-get-style"],
+      "options": {
+        "jestConfig": "libs/ooxast/ooxast-util-get-style/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ooxast/ooxast-util-get-style",
+        "tsConfig": "libs/ooxast/ooxast-util-get-style/tsconfig.lib.json",
+        "packageJson": "libs/ooxast/ooxast-util-get-style/package.json",
+        "main": "libs/ooxast/ooxast-util-get-style/src/index.ts",
+        "assets": ["libs/ooxast/ooxast-util-get-style/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

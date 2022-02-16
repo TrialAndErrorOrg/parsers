@@ -43,7 +43,7 @@ export function toJast(
 ) {
   // const byId: { [s: string]: Element } = {}
   let jast: JastContent | JastRoot
-  let citations: CSL[] = []
+  let citations: { [key: string | number]: CSL } = {}
 
   const j: J = Object.assign(
     ((
@@ -110,6 +110,7 @@ export function toJast(
       partialCitation: '',
       deleteNextRun: false,
       relations: options.relations || {},
+      citeKeys: [],
     } as Context
   )
 

@@ -134,7 +134,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "@article{bib1,\n    title = {Survey of chronic pain in Europe: Prevalence, impact on daily life, and treatment.},\n    author = {Breivik, Harald and Collett, Beverly and Ventafridda, Vittorio and Cohen, Rob and Gallacher, Derek},\n    number = {4},\n    volume = {10},\n    doi = {10.1016/j.ejpain.2005.06.009},\n    place = {England},\n    year = {2006-05},\n    pages = {287-333},\n    journal = {European journal of pain (London, England)}\n}\n\n\n@article{bib2,\n    title = {Common chronic pain conditions in developed and developing countries: Gender and age differences and comorbidity with depression-anxiety disorders.},\n    author = {Tsang, Adley and Korff, VonMichael and Lee, Sing and Alonso, Jordi and Karam, Elie and Angermeyer, Matthias C and Borges, Guilherme Luiz Guimaraes and Bromet, Evelyn J and Demytteneare, K and Girolamo, deGiovanni and Graaf, deRon and Gureje, Oye and Lepine, Jean-Pierre and Haro, Josep Maria and Levinson, Daphna and Oakley Browne, Mark A and Posada-Villa, Jose and Seedat, Soraya and Watanabe, Makoto},\n    number = {10},\n    volume = {9},\n    doi = {10.1016/j.jpain.2008.05.005},\n    place = {United States},\n    year = {2008-10},\n    pages = {883-891},\n    journal = {The Journal of Pain}\n}\n\n\n@article{bib3,\n    title = {Prognosis for patients with chronic low back pain: Inception cohort study},\n    author = {Costa, Luciola da C Menezes and Maher, Christopher G and McAuley, James H and Hancock, Mark J and Herbert, Robert D and Refshauge, Kathryn M and Henschke, Nicholas},\n    volume = {339},\n    doi = {10.1136/bmj.b3829},\n    year = {2009-10-06},\n    pages = {b3829},\n    journal = {BMJ}\n}\n\n\n@article{bib4,\n    title = {Prevention and treatment of low back pain: Evidence, challenges, and promising directions},\n    author = {Foster, Nadine E and Anema, Johannes R and Cherkin, Dan and Chou, Roger and Cohen, Steven P and Gross, Douglas P and Ferreira, Paulo H and Fritz, Julie M and Koes, Bart W and Peul, Wilco and Turner, Judith A and Maher, Chris G and Buchbinder, Rachelle and Hartvigsen, Jan and Cherkin, Dan and Foster, Nadine E and Maher, Chris G and Underwood, Martin and Tulder, vanMaurits and Anema, Johannes R and Chou, Roger and Cohen, Stephen P and Menezes Costa, Lucíola and Croft, Peter and Ferreira, Manuela and Ferreira, Paulo H and Fritz, Julie M and Genevay, Stéphane and Gross, Douglas P and Hancock, Mark J and Hoy, Damian and Karppinen, Jaro and Koes, Bart W and Kongsted, Alice and Louw, Quinette and Öberg, Birgitta and Peul, Wilco C and Pransky, Glenn and Schoene, Mark and Sieper, Joachim and Smeets, Rob J and Turner, Judith A and Woolf, Anthony},\n    number = {10137},\n    volume = {391},\n    doi = {10.1016/S0140-6736(18)30489-6},\n    publisher = {Elsevier},\n    year = {2018-06-09},\n    pages = {2368-2383},\n    journal = {The Lancet}\n}\n\n\n@article{bib5,\n    title = {Chronic pain as a symptom or a disease: The IASP classification of chronic pain for the International Classification of Diseases (ICD-11)},\n    author = {Treede, Rolf Detlef and Rief, Winfried and Barke, Antonia and Aziz, Qasim and Bennett, Michael I. and Benoliel, Rafael and Cohen, Milton and Evers, Stefan and Finnerup, Nanna B. and First, Michael B. and Giamberardino, Maria Adele and Kaasa, Stein and Korwisi, Beatrice and Kosek, Eva and Lavand'Homme, Patricia and Nicholas, Michael and Perrot, Serge and Scholz, Joachim and Schug, Stephan and Smith, Blair H. and Svensson, Peter and Vlaeyen, Johan W.S. and Wang, Shuu Jiun},\n    number = {1},\n    volume = {160},\n    doi = {10.1097/j.pain.0000000000001384},\n    year = {2019},\n    pages = {19-27},\n    journal = {Pain}\n}\n\n\n@article{bib6,\n    title = {Evidence for a central component of post-injury pain hypersensitivity},\n    author = {Woolf, Clifford J},\n    number = {5944},\n    volume = {306},\n    doi = {10.1038/306686a0},\n    place = {England},\n    year = {1983-12},\n    pages = {686-688},\n    journal = {Nature}\n}\n\n\n@article{bib7,\n    title = {Central sensitization: Implications for the diagnosis and treatment of pain},\n    author = {Woolf, Clifford J},\n    number = {3 Suppl},\n    volume = {152},\n    doi = {10.1016/j.pain.2010.09.030},\n    year = {2011-03},\n    pages = {S2-S15},\n    journal = {Pain}\n}\n\n\n@article{bib8,\n    title = {Fear-avoidance and its consequences in chronic musculoskeletal pain: A state of the art},\n    author = {Vlaeyen, Johan W.S. and Linton, Steven J.},\n    number = {3},\n    volume = {85},\n    doi = {10.1016/s0304-3959(99)00242-0},\n    place = {United States},\n    year = {2000-04},\n    pages = {317-332},\n    journal = {Pain}\n}\n\n\n@article{bib9,\n    title = {Fear-avoidance model of chronic musculoskeletal pain: 12 years on},\n    author = {Vlaeyen, Johan W S and Linton, Steven J},\n    number = {6},\n    volume = {153},\n    doi = {10.1016/j.pain.2011.12.009},\n    place = {United States},\n    year = {2012-06},\n    pages = {1144-1147},\n    journal = {Pain}\n}\n\n\n@article{bib10,\n    title = {Beyond nociception: The imprecision hypothesis of chronic pain},\n    author = {Moseley, G Lorimer and Vlaeyen, Johan W S},\n    number = {1},\n    volume = {156},\n    doi = {10.1016/j.pain.0000000000000014},\n    place = {United States},\n    year = {2015-01},\n    pages = {35-38},\n    journal = {Pain}\n}\n\n\n@article{bib11,\n    title = {Pain by association? Experimental modulation of human pain thresholds using classical conditioning},\n    author = {Madden, Victoria J. and Bellan, Valeria and Russek, Leslie N. and Camfferman, Danny and Vlaeyen, Johan W.S. and Moseley, G. Lorimer},\n    number = {10},\n    volume = {17},\n    doi = {10.1016/j.jpain.2016.06.012},\n    publisher = {Elsevier Inc},\n    year = {2016},\n    pages = {1105-1115},\n    journal = {Journal of Pain}\n}\n\n\n@article{bib12,\n    title = {Modulating pain thresholds through classical conditioning},\n    author = {Traxler, Juliane and Madden, Victoria J. and Moseley, G. Lorimer and Vlaeyen, Johan W.S.},\n    number = {3},\n    volume = {2019},\n    doi = {10.7717/peerj.6486},\n    year = {2019},\n    pages = {1-20},\n    journal = {PeerJ}\n}\n\n\n@book{bib13,\n    title = {Lectures on conditioned reflexes: Twenty-five years of objective study of the higher nervous activity (behaviour) of animals.},\n    author = {Pavlov, Ivan Petrovitch},\n    doi = {10.1037/11081-000},\n    publisher = {Liverwright Publishing Corporation},\n    place = {New York, NY, US},\n    year = {1928}\n}\n\n\n@book{bib14,\n    title = {Single case experimental designs: Strategies for studying behavior change},\n    author = {Barlow, D H and Nock, M K and Hersen, M},\n    publisher = {Pearson/Allyn and Bacon},\n    place = {Boston, MA},\n    year = {2009}\n}\n\n\n@book{bib15,\n    title = {Single-case research designs: Methods for clinical and applied settings},\n    author = {Kazdin, Alan E},\n    publisher = {Oxford University Press},\n    place = {New York, NY},\n    year = {2011}\n}\n\n\n@article{bib16,\n    title = {Randomization tests for single-case experiments: State of the art, state of the science, and state of the application},\n    author = {Heyvaert, Mieke and Onghena, Patrick},\n    number = {1},\n    volume = {3},\n    doi = {10.1016/j.jcbs.2013.10.002},\n    year = {2014},\n    pages = {51-64},\n    journal = {Journal of Contextual Behavioral Science}\n}\n\n\n@article{bib17,\n    title = {From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research},\n    author = {Vlaeyen, Johan W S and Wicksell, Rikard K and Simons, Laura E and Gentili, Charlotte and De, Tamal Kumar and Tate, Robyn L and Vohra, Sunita and Punja, Salima and Linton, Steven J and Sniehotta, Falko F and Onghena, Patrick},\n    volume = {70},\n    doi = {10.1007/s40732-020-00402-5},\n    year = {2020},\n    pages = {659–670},\n    journal = {The Psychological Record}\n}\n\n\n@article{bib18,\n    title = {Enhancing the scientific credibility of single-case intervention research: Randomization to the rescue},\n    author = {Kratochwill, T. R. and Levin, Joel R},\n    number = {2},\n    volume = {15},\n    doi = {10.1037/a0017736},\n    year = {2010},\n    pages = {124-144},\n    journal = {Psychological Methods}\n}\n\n\n@article{bib19,\n    title = {Randomization tests for one-subject operant experiments},\n    author = {Edgington, Eugene S},\n    number = {1},\n    volume = {90},\n    doi = {10.1080/00223980.1975.9923926},\n    publisher = {Journal Press, etc.},\n    place = {Provincetown, Mass., etc.},\n    year = {1975-05-01},\n    pages = {57},\n    journal = {Journal of Psychology}\n}\n\n\n@article{bib20,\n    title = {Enhancing the scientific credibility of single-case intervention research: Randomization to the rescue},\n    author = {Kratochwill, T. R. and Levin, Joel R},\n    number = {2},\n    volume = {15},\n    doi = {10.1037/a0017736},\n    year = {2010},\n    pages = {124-144},\n    journal = {Psychological Methods}\n}\n\n\n@article{bib21,\n    title = {The use of single-subject research to identify evidence-based practice in special education},\n    author = {Horner, Robert H. and Carr, Edward G. and Halle, James and Mcgee, Gail and Odom, Samuel and Wolery, Mark},\n    number = {2},\n    volume = {71},\n    doi = {10.1177/001440290507100203},\n    year = {2005},\n    pages = {165-179},\n    journal = {Exceptional Children}\n}\n\n\n@article{bib22,\n    title = {The new person-specific paradigm in psychology},\n    author = {Molenaar, Peter C M and Campbell, Cynthia G},\n    number = {2},\n    volume = {18},\n    doi = {10.1111/j.1467-8721.2009.01619.x},\n    publisher = {SAGE Publications Inc},\n    year = {2009-04-01},\n    pages = {112-117},\n    journal = {Current Directions in Psychological Science}\n}\n\n\n@article{bib23,\n    title = {Lack of group-to-individual generalizability is a threat to human subjects research},\n    author = {Fisher, Aaron J and Medaglia, John D and Jeronimus, Bertus F},\n    number = {27},\n    volume = {115},\n    doi = {10.1073/pnas.1711978115},\n    year = {2018-07-03},\n    pages = {E6106 LP - E6115},\n    journal = {Proceedings of the National Academy of Sciences}\n}\n\n\n@article{bib24,\n    title = {Analyzing single-case data: The power of randomization tests},\n    author = {Ferron, John and Ware, William},\n    number = {2},\n    volume = {63},\n    year = {1995},\n    pages = {167-178},\n    journal = {The Journal of Experimental Education}\n}\n\n\n@article{bib25,\n    title = {The power of randomization tests for single-case phase designs},\n    author = {Ferron, John and Onghena, Patrick},\n    number = {3},\n    volume = {64},\n    doi = {10.1080/00220973.1996.9943805},\n    year = {1996},\n    pages = {231-239},\n    journal = {Journal of Experimental Education}\n}\n\n\n@article{bib26,\n    title = {Autocorrelation in single-subject research: A counterargument to the myth of no autocorrelation.},\n    author = {Busk, Patricia L and Marascuilo, Leonard A},\n    number = {3},\n    volume = {10},\n    publisher = {Pergamon Press, Inc.},\n    place = {US},\n    year = {1988},\n    pages = {229-242},\n    journal = {Behavioral Assessment}\n}\n\n\n@article{bib27,\n    title = {Violations of assumptions in school-based single-case data: Implications for the selection and interpretation of effect sizes},\n    author = {Solomon, Benjamin George},\n    number = {4},\n    volume = {38},\n    doi = {10.1177/0145445513510931},\n    year = {2014},\n    pages = {477-496},\n    journal = {Behavior Modification}\n}\n\n\n@article{bib28,\n    title = {Using randomization techniques to analyse behavioural data},\n    author = {Adams, Dean C and Anthony, Carl D},\n    number = {4},\n    volume = {51},\n    doi = {https://doi.org/10.1006/anbe.1996.0077},\n    year = {1996},\n    pages = {733-738},\n    journal = {Animal Behaviour}\n}\n\n\n@article{bib29,\n    title = {Single-case experimental designs: A systematic review of published research and current standards},\n    author = {Smith, Justin D.},\n    number = {4},\n    volume = {17},\n    doi = {10.1037/a0029312},\n    year = {2012},\n    pages = {510-550},\n    journal = {Psychological Methods}\n}\n\n\n@article{bib30,\n    title = {When is a picture worth a thousand p values? A comparison of visual and quantitative methods to analyze single subject data},\n    author = {Ottenbacher, Kenneth J},\n    number = {4},\n    volume = {23},\n    doi = {10.1177/002246699002300407},\n    publisher = {SAGE Publications Inc},\n    year = {1990-01-01},\n    pages = {436-449},\n    journal = {The Journal of Special Education}\n}\n\n\n@article{bib31,\n    title = {Visual analysis of single-case time series: Effects of variability, serial dependence, and magnitude of intervention effects},\n    author = {Matyas, T A and Greenwood, K M},\n    number = {3},\n    volume = {23},\n    doi = {10.1901/jaba.1990.23-341},\n    year = {1990},\n    pages = {341-351},\n    journal = {Journal of applied behavior analysis}\n}\n\n\n@article{bib32,\n    title = {Single-case design technical documentation},\n    author = {Kratochwill, T. R. and Hitchcock, J and Horner, Robert H and Levin, J R and Odom, S L and Rindskopf, D M and Shadish, W R},\n    year = {2010}\n}\n\n\n@article{bib33,\n    title = {Analytical options for single-case experimental designs: Review and application to brain impairment},\n    author = {Manolov, Rumen and Solanas, Antonio},\n    number = {1},\n    volume = {19},\n    doi = {10.1017/BrImp.2017.17},\n    year = {2018},\n    pages = {18-32},\n    journal = {Brain Impairment}\n}\n\n\n@article{bib34,\n    title = {Recommendations for choosing single-case data analytical techniques},\n    author = {Manolov, Rumen and Moeyaert, Mariola},\n    number = {1},\n    volume = {48},\n    doi = {10.1016/j.beth.2016.04.008},\n    publisher = {Elsevier B.V.},\n    year = {2017},\n    pages = {97-114},\n    journal = {Behavior Therapy}\n}\n\n\n@article{bib35,\n    title = {Randomization tests for one-subject operant experiments},\n    author = {Edgington, Eugene S},\n    number = {1},\n    volume = {90},\n    doi = {10.1080/00223980.1975.9923926},\n    publisher = {Journal Press, etc.},\n    place = {Provincetown, Mass., etc.},\n    year = {1975-05-01},\n    pages = {57},\n    journal = {Journal of Psychology}\n}\n\n\n@article{bib36,\n    title = {Using randomization techniques to analyse behavioural data},\n    author = {Adams, Dean C and Anthony, Carl D},\n    number = {4},\n    volume = {51},\n    doi = {https://doi.org/10.1006/anbe.1996.0077},\n    year = {1996},\n    pages = {733-738},\n    journal = {Animal Behaviour}\n}\n\n\n@article{bib37,\n    title = {Randomization tests for single-case experiments: State of the art, state of the science, and state of the application},\n    author = {Heyvaert, Mieke and Onghena, Patrick},\n    number = {1},\n    volume = {3},\n    doi = {10.1016/j.jcbs.2013.10.002},\n    year = {2014},\n    pages = {51-64},\n    journal = {Journal of Contextual Behavioral Science}\n}\n\n\n@book{bib38,\n    title = {Randomization tests},\n    author = {Edgington, Eugene S and Onghena, Patrick},\n    publisher = {Chapman & Hall/CRC},\n    place = {Boca Raton, FL},\n    year = {2007}\n}\n\n\n@article{bib39,\n    title = {A randomization test wrapper for synthesizing single-case experiments using multilevel models: A Monte Carlo simulation study},\n    author = {Michiels, Bart and Tanious, René and De, Tamal Kumar and Onghena, Patrick},\n    number = {2},\n    volume = {52},\n    doi = {10.3758/s13428-019-01266-6},\n    year = {2020},\n    pages = {654-666},\n    journal = {Behavior Research Methods}\n}\n\n\n@article{bib40,\n    title = {Analysis of single-case data: Randomisation tests for measures of effect size},\n    author = {Heyvaert, Mieke and Onghena, Patrick},\n    number = {3-4},\n    volume = {24},\n    doi = {10.1080/09602011.2013.818564},\n    year = {2014},\n    pages = {507-527},\n    journal = {Neuropsychological Rehabilitation}\n}\n\n\n@article{bib41,\n    title = {Randomization tests for single-case experiments: State of the art, state of the science, and state of the application},\n    author = {Heyvaert, Mieke and Onghena, Patrick},\n    number = {1},\n    volume = {3},\n    doi = {10.1016/j.jcbs.2013.10.002},\n    year = {2014},\n    pages = {51-64},\n    journal = {Journal of Contextual Behavioral Science}\n}\n\n\n@book{bib42,\n    title = {Statistical power analysis for the behavioral sciences},\n    author = {Cohen, Jacob},\n    doi = {10.4324/9780203771587},\n    publisher = {Routledge},\n    place = {New York, NY},\n    year = {1988}\n}\n\n\n@article{bib43,\n    title = {CONSORT extension for reporting N-of-1 trials (CENT) 2015 statement},\n    author = {Vohra, Sunita and Shamseer, Larissa and Sampson, Margaret and Bukutu, Cecilia and Schmid, Christopher H. and Tate, Robyn and Nikles, Jane and Zucker, Deborah R. and Kravitz, Richard and Guyatt, Gordon and Altman, Douglas G. and Moher, David},\n    volume = {350},\n    doi = {10.1136/bmj.h1738},\n    year = {2015},\n    pages = {h1738},\n    journal = {BMJ (Clinical research ed.)}\n}\n\n\n@article{bib44,\n    title = {Statistical methods in psychology journals: Guidelines and explanations},\n    author = {Willkinson, Leland},\n    number = {8},\n    volume = {54},\n    doi = {10.1037/0003-066X.54.8.594},\n    year = {1999},\n    pages = {594-604},\n    journal = {American Psychologist}\n}\n\n\n@article{bib45,\n    title = {Randomization tests for extensions and variations of ABAB single-case experimental designs: A rejoinder},\n    author = {Onghena, Patrick},\n    number = {2},\n    volume = {14},\n    year = {1992},\n    pages = {153-171},\n    journal = {Behavioral Assessment}\n}\n\n\n@article{bib46,\n    title = {Analyzing single-case data: The power of randomization tests},\n    author = {Ferron, John and Ware, William},\n    number = {2},\n    volume = {63},\n    year = {1995},\n    pages = {167-178},\n    journal = {The Journal of Experimental Education}\n}\n\n\n@article{bib47,\n    title = {The power of randomization tests for single-case phase designs},\n    author = {Ferron, John and Onghena, Patrick},\n    number = {3},\n    volume = {64},\n    doi = {10.1080/00220973.1996.9943805},\n    year = {1996},\n    pages = {231-239},\n    journal = {Journal of Experimental Education}\n}\n\n\n@article{bib48,\n    title = {Analyzing single-case data: The power of randomization tests},\n    author = {Ferron, John and Ware, William},\n    number = {2},\n    volume = {63},\n    year = {1995},\n    pages = {167-178},\n    journal = {The Journal of Experimental Education}\n}\n\n\n@article{bib49,\n    title = {The conditional power of randomization tests for single-case effect sizes in designs with randomized treatment order: A Monte Carlo simulation study},\n    author = {Michiels, Bart and Heyvaert, Mieke and Onghena, Patrick},\n    number = {2},\n    volume = {50},\n    doi = {10.3758/s13428-017-0885-7},\n    publisher = {Behavior Research Methods},\n    year = {2018},\n    pages = {557-575},\n    journal = {Behavior Research Methods}\n}\n\n\n@article{bib50,\n    title = {Power of a randomization test in a single case multiple baseline AB design},\n    author = {Bouwmeester, Samantha and Jongerling, Joran},\n    number = {2},\n    volume = {15},\n    doi = {10.1371/journal.pone.0228355},\n    year = {2020},\n    pages = {1-21},\n    journal = {PLoS ONE}\n}\n\n\n@article{bib51,\n    title = {Statistical power of randomization tests used with multiple-baseline designs},\n    author = {Ferron, John and Sentovich, Chris},\n    number = {2},\n    volume = {70},\n    doi = {10.1080/00220970209599504},\n    year = {2002},\n    pages = {165-178},\n    journal = {Journal of Experimental Education}\n}\n\n\n@article{bib52,\n    title = {Handling missing data in randomization tests for single-case experiments: A simulation study},\n    author = {De, Tamal Kumar and Michiels, Bart and Tanious, René and Onghena, Patrick},\n    number = {3},\n    volume = {52},\n    doi = {10.3758/s13428-019-01320-3},\n    year = {2020},\n    pages = {1355-1370},\n    journal = {Behavior Research Methods}\n}\n\n\n@article{bib53,\n    title = {Was that painful or nonpainful? The Sensation and Pain Rating Scale performs well in the experimental context},\n    author = {Madden, Victoria J. and Kamerman, Peter R. and Bellan, Valeria and Catley, Mark J. and Russek, Leslie N. and Camfferman, Danny and Moseley, G. Lorimer},\n    number = {4},\n    volume = {20},\n    doi = {10.1016/j.jpain.2018.10.006},\n    publisher = {Elsevier Inc.},\n    year = {2019},\n    pages = {472.e1-472.e12},\n    journal = {Journal of Pain}\n}\n\n\n@article{bib54,\n    title = {Modulating pain thresholds through classical conditioning},\n    author = {Traxler, Juliane and Madden, Victoria J. and Moseley, G. Lorimer and Vlaeyen, Johan W.S.},\n    number = {3},\n    volume = {2019},\n    doi = {10.7717/peerj.6486},\n    year = {2019},\n    pages = {1-20},\n    journal = {PeerJ}\n}\n\n\n@article{bib55,\n    title = {Affect 4.0: A free software package for implementing psychological and psychophysiological experiments},\n    author = {Spruyt, Adriaan and Clarysse, Jeroen and Vansteenwegen, Debora and Baeyens, Frank and Hermans, Dirk},\n    number = {1},\n    volume = {57},\n    doi = {10.1027/1618-3169/a000005},\n    year = {2009},\n    pages = {36-45},\n    journal = {Experimental Psychology}\n}\n\n\n@article{bib56,\n    title = {Tactor},\n    author = {Dancer Design,},\n    place = {St. Helens, UK},\n    year = {00}\n}\n\n\n@article{bib57,\n    title = {Modulating pain thresholds through classical conditioning},\n    author = {Traxler, Juliane and Madden, Victoria J. and Moseley, G. Lorimer and Vlaeyen, Johan W.S.},\n    number = {3},\n    volume = {2019},\n    doi = {10.7717/peerj.6486},\n    year = {2019},\n    pages = {1-20},\n    journal = {PeerJ}\n}\n\n\n@article{bib58,\n    title = {DS7A High Voltage Constant Current Stimulator},\n    author = {Digitimer Limited,},\n    place = {Hertfordshire, UK},\n    year = {00}\n}\n\n\n@article{bib59,\n    title = {Modulating pain thresholds through classical conditioning},\n    author = {Traxler, Juliane and Madden, Victoria J. and Moseley, G. Lorimer and Vlaeyen, Johan W.S.},\n    number = {3},\n    volume = {2019},\n    doi = {10.7717/peerj.6486},\n    year = {2019},\n    pages = {1-20},\n    journal = {PeerJ}\n}\n\n\n@article{bib60,\n    title = {Classical conditioning fails to elicit allodynia in an experimental study with healthy humans},\n    author = {Madden, Victoria J. and Russek, Leslie N. and Harvie, Daniel S. and Vlaeyen, Johan W.S. and Moseley, G. Lorimer},\n    number = {7},\n    volume = {18},\n    doi = {10.1093/pm/pnw221},\n    year = {2017},\n    pages = {1314-1325},\n    journal = {Pain Medicine}\n}\n\n\n@article{bib61,\n    title = {Was that painful or nonpainful? The Sensation and Pain Rating Scale performs well in the experimental context},\n    author = {Madden, Victoria J. and Kamerman, Peter R. and Bellan, Valeria and Catley, Mark J. and Russek, Leslie N. and Camfferman, Danny and Moseley, G. Lorimer},\n    number = {4},\n    volume = {20},\n    doi = {10.1016/j.jpain.2018.10.006},\n    publisher = {Elsevier Inc.},\n    year = {2019},\n    pages = {472.e1-472.e12},\n    journal = {Journal of Pain}\n}\n\n\n@article{bib62,\n    title = {Analysis of single-case data: Randomisation tests for measures of effect size},\n    author = {Heyvaert, Mieke and Onghena, Patrick},\n    number = {3-4},\n    volume = {24},\n    doi = {10.1080/09602011.2013.818564},\n    year = {2014},\n    pages = {507-527},\n    journal = {Neuropsychological Rehabilitation}\n}\n\n\n@undefined{bib63,\n    title = {Single‐case designs},\n    author = {Onghena, Patrick},\n    volume = {4},\n    doi = {10.1002/0470013192.bsa625},\n    publisher = {John Wiley & Sons, Ltd},\n    place = {Hoboken, NJ},\n    year = {2005-04-15},\n    pages = {1850-1854},\n    journal = {Encyclopedia of statistics in behavioral science}\n}\n\n\n@book{bib64,\n    title = {Single case experimental designs: Strategies for studying behavior change},\n    author = {Barlow, D H and Nock, M K and Hersen, M},\n    publisher = {Pearson/Allyn and Bacon},\n    place = {Boston, MA},\n    year = {2009}\n}\n\n\n@article{bib65,\n    title = {Randomized single-case AB phase designs: Prospects and pitfalls},\n    author = {Michiels, Bart and Onghena, Patrick},\n    number = {6},\n    volume = {51},\n    doi = {10.3758/s13428-018-1084-x},\n    publisher = {Behavior Research Methods},\n    year = {2019},\n    pages = {2454-2476},\n    journal = {Behavior Research Methods}\n}\n\n\n@article{bib66,\n    title = {Analyzing single-case data: The power of randomization tests},\n    author = {Ferron, John and Ware, William},\n    number = {2},\n    volume = {63},\n    year = {1995},\n    pages = {167-178},\n    journal = {The Journal of Experimental Education}\n}\n\n\n@article{bib67,\n    title = {Single-case design technical documentation},\n    author = {Kratochwill, T. R. and Hitchcock, J and Horner, Robert H and Levin, J R and Odom, S L and Rindskopf, D M and Shadish, W R},\n    year = {2010}\n}\n\n\n@book{bib68,\n    title = {Single case experimental designs: Strategies for studying behavior change},\n    author = {Barlow, D H and Nock, M K and Hersen, M},\n    publisher = {Pearson/Allyn and Bacon},\n    place = {Boston, MA},\n    year = {2009}\n}\n\n\n@book{bib69,\n    title = {Single-case research designs: Methods for clinical and applied settings},\n    author = {Kazdin, Alan E},\n    publisher = {Oxford University Press},\n    place = {New York, NY},\n    year = {2011}\n}\n\n\n@article{bib70,\n    title = {Randomization tests for one-subject operant experiments},\n    author = {Edgington, Eugene S},\n    number = {1},\n    volume = {90},\n    doi = {10.1080/00223980.1975.9923926},\n    publisher = {Journal Press, etc.},\n    place = {Provincetown, Mass., etc.},\n    year = {1975-05-01},\n    pages = {57},\n    journal = {Journal of Psychology}\n}\n\n\n@article{bib71,\n    title = {Shiny SCDA},\n    author = {De, Tamal Kumar and Michiels, Bart and Vlaeyen, Johan W S and Onghena, Patrick},\n    number = {Version 2.7},\n    year = {2020}\n}\n\n\n@article{bib72,\n    title = {Comparison of randomization-test procedures for single-case multiple-baseline designs},\n    author = {Levin, Joel R. and Ferron, John M. and Gafurov, Boris S.},\n    number = {5},\n    volume = {21},\n    doi = {10.1080/17518423.2016.1197708},\n    publisher = {Taylor & Francis},\n    year = {2018},\n    pages = {290-311},\n    journal = {Developmental Neurorehabilitation}\n}\n\n\n@article{bib73,\n    title = {The power of randomization tests for single-case phase designs},\n    author = {Ferron, John and Onghena, Patrick},\n    number = {3},\n    volume = {64},\n    doi = {10.1080/00220973.1996.9943805},\n    year = {1996},\n    pages = {231-239},\n    journal = {Journal of Experimental Education}\n}\n\n\n@article{bib74,\n    title = {Handling missing data in randomization tests for single-case experiments: A simulation study},\n    author = {De, Tamal Kumar and Michiels, Bart and Tanious, René and Onghena, Patrick},\n    number = {3},\n    volume = {52},\n    doi = {10.3758/s13428-019-01320-3},\n    year = {2020},\n    pages = {1355-1370},\n    journal = {Behavior Research Methods}\n}\n\n\n@article{bib75,\n    title = {Approximate randomization tests},\n    author = {Edgington, Eugene S},\n    number = {2},\n    volume = {72},\n    doi = {10.1080/00223980.1969.10543491},\n    publisher = {Routledge},\n    year = {1969-07-01},\n    pages = {143-149},\n    journal = {The Journal of Psychology}\n}\n\n\n@article{bib76,\n    title = {Randomized single-case AB phase designs: Prospects and pitfalls},\n    author = {Michiels, Bart and Onghena, Patrick},\n    number = {6},\n    volume = {51},\n    doi = {10.3758/s13428-018-1084-x},\n    publisher = {Behavior Research Methods},\n    year = {2019},\n    pages = {2454-2476},\n    journal = {Behavior Research Methods}\n}\n\n\n@article{bib77,\n    title = {Single-case design technical documentation},\n    author = {Kratochwill, T. R. and Hitchcock, J and Horner, Robert H and Levin, J R and Odom, S L and Rindskopf, D M and Shadish, W R},\n    year = {2010}\n}\n\n\n@article{bib78,\n    title = {Approximate randomization tests},\n    author = {Edgington, Eugene S},\n    number = {2},\n    volume = {72},\n    doi = {10.1080/00223980.1969.10543491},\n    publisher = {Routledge},\n    year = {1969-07-01},\n    pages = {143-149},\n    journal = {The Journal of Psychology}\n}\n\n\n@article{bib79,\n    title = {A simplified Monte Carlo significance test procedure},\n    author = {Hope, Adery C A},\n    number = {3},\n    volume = {30},\n    publisher = {[Royal Statistical Society, Wiley]},\n    year = {1968},\n    pages = {582-598},\n    journal = {Journal of the Royal Statistical Society. Series B (Methodological)}\n}\n}"
+                  "value": "@article{bib2006,\n    title = {Survey of chronic pain in Europe: Prevalence, impact on daily life, and treatment.},\n    author = {Breivik, Harald and Collett, Beverly and Ventafridda, Vittorio and Cohen, Rob and Gallacher, Derek},\n    number = {4},\n    volume = {10},\n    doi = {10.1016/j.ejpain.2005.06.009},\n    place = {England},\n    year = {2006-05},\n    pages = {287-333},\n    journal = {European journal of pain (London, England)}\n}\n\n\n@article{bib2008,\n    title = {Common chronic pain conditions in developed and developing countries: Gender and age differences and comorbidity with depression-anxiety disorders.},\n    author = {Tsang, Adley and Korff, VonMichael and Lee, Sing and Alonso, Jordi and Karam, Elie and Angermeyer, Matthias C and Borges, Guilherme Luiz Guimaraes and Bromet, Evelyn J and Demytteneare, K and Girolamo, deGiovanni and Graaf, deRon and Gureje, Oye and Lepine, Jean-Pierre and Haro, Josep Maria and Levinson, Daphna and Oakley Browne, Mark A and Posada-Villa, Jose and Seedat, Soraya and Watanabe, Makoto},\n    number = {10},\n    volume = {9},\n    doi = {10.1016/j.jpain.2008.05.005},\n    place = {United States},\n    year = {2008-10},\n    pages = {883-891},\n    journal = {The Journal of Pain}\n}\n\n\n@article{bib2009,\n    title = {Prognosis for patients with chronic low back pain: Inception cohort study},\n    author = {Costa, Luciola da C Menezes and Maher, Christopher G and McAuley, James H and Hancock, Mark J and Herbert, Robert D and Refshauge, Kathryn M and Henschke, Nicholas},\n    volume = {339},\n    doi = {10.1136/bmj.b3829},\n    year = {2009-10-06},\n    pages = {b3829},\n    journal = {BMJ}\n}\n\n\n@article{bib2018,\n    title = {Prevention and treatment of low back pain: Evidence, challenges, and promising directions},\n    author = {Foster, Nadine E and Anema, Johannes R and Cherkin, Dan and Chou, Roger and Cohen, Steven P and Gross, Douglas P and Ferreira, Paulo H and Fritz, Julie M and Koes, Bart W and Peul, Wilco and Turner, Judith A and Maher, Chris G and Buchbinder, Rachelle and Hartvigsen, Jan and Cherkin, Dan and Foster, Nadine E and Maher, Chris G and Underwood, Martin and Tulder, vanMaurits and Anema, Johannes R and Chou, Roger and Cohen, Stephen P and Menezes Costa, Lucíola and Croft, Peter and Ferreira, Manuela and Ferreira, Paulo H and Fritz, Julie M and Genevay, Stéphane and Gross, Douglas P and Hancock, Mark J and Hoy, Damian and Karppinen, Jaro and Koes, Bart W and Kongsted, Alice and Louw, Quinette and Öberg, Birgitta and Peul, Wilco C and Pransky, Glenn and Schoene, Mark and Sieper, Joachim and Smeets, Rob J and Turner, Judith A and Woolf, Anthony},\n    number = {10137},\n    volume = {391},\n    doi = {10.1016/S0140-6736(18)30489-6},\n    publisher = {Elsevier},\n    year = {2018-06-09},\n    pages = {2368-2383},\n    journal = {The Lancet}\n}\n\n\n@article{bib2019,\n    title = {Chronic pain as a symptom or a disease: The IASP classification of chronic pain for the International Classification of Diseases (ICD-11)},\n    author = {Treede, Rolf Detlef and Rief, Winfried and Barke, Antonia and Aziz, Qasim and Bennett, Michael I. and Benoliel, Rafael and Cohen, Milton and Evers, Stefan and Finnerup, Nanna B. and First, Michael B. and Giamberardino, Maria Adele and Kaasa, Stein and Korwisi, Beatrice and Kosek, Eva and Lavand'Homme, Patricia and Nicholas, Michael and Perrot, Serge and Scholz, Joachim and Schug, Stephan and Smith, Blair H. and Svensson, Peter and Vlaeyen, Johan W.S. and Wang, Shuu Jiun},\n    number = {1},\n    volume = {160},\n    doi = {10.1097/j.pain.0000000000001384},\n    year = {2019},\n    pages = {19-27},\n    journal = {Pain}\n}\n\n\n@article{bib1983,\n    title = {Evidence for a central component of post-injury pain hypersensitivity},\n    author = {Woolf, Clifford J},\n    number = {5944},\n    volume = {306},\n    doi = {10.1038/306686a0},\n    place = {England},\n    year = {1983-12},\n    pages = {686-688},\n    journal = {Nature}\n}\n\n\n@article{bib2011,\n    title = {Central sensitization: Implications for the diagnosis and treatment of pain},\n    author = {Woolf, Clifford J},\n    number = {3 Suppl},\n    volume = {152},\n    doi = {10.1016/j.pain.2010.09.030},\n    year = {2011-03},\n    pages = {S2-S15},\n    journal = {Pain}\n}\n\n\n@article{bib2000,\n    title = {Fear-avoidance and its consequences in chronic musculoskeletal pain: A state of the art},\n    author = {Vlaeyen, Johan W.S. and Linton, Steven J.},\n    number = {3},\n    volume = {85},\n    doi = {10.1016/s0304-3959(99)00242-0},\n    place = {United States},\n    year = {2000-04},\n    pages = {317-332},\n    journal = {Pain}\n}\n\n\n@article{bib2012,\n    title = {Fear-avoidance model of chronic musculoskeletal pain: 12 years on},\n    author = {Vlaeyen, Johan W S and Linton, Steven J},\n    number = {6},\n    volume = {153},\n    doi = {10.1016/j.pain.2011.12.009},\n    place = {United States},\n    year = {2012-06},\n    pages = {1144-1147},\n    journal = {Pain}\n}\n\n\n@article{bib2015,\n    title = {Beyond nociception: The imprecision hypothesis of chronic pain},\n    author = {Moseley, G Lorimer and Vlaeyen, Johan W S},\n    number = {1},\n    volume = {156},\n    doi = {10.1016/j.pain.0000000000000014},\n    place = {United States},\n    year = {2015-01},\n    pages = {35-38},\n    journal = {Pain}\n}\n\n\n@article{bib2016,\n    title = {Pain by association? Experimental modulation of human pain thresholds using classical conditioning},\n    author = {Madden, Victoria J. and Bellan, Valeria and Russek, Leslie N. and Camfferman, Danny and Vlaeyen, Johan W.S. and Moseley, G. Lorimer},\n    number = {10},\n    volume = {17},\n    doi = {10.1016/j.jpain.2016.06.012},\n    publisher = {Elsevier Inc},\n    year = {2016},\n    pages = {1105-1115},\n    journal = {Journal of Pain}\n}\n\n\n@article{bib2019,\n    title = {Modulating pain thresholds through classical conditioning},\n    author = {Traxler, Juliane and Madden, Victoria J. and Moseley, G. Lorimer and Vlaeyen, Johan W.S.},\n    number = {3},\n    volume = {2019},\n    doi = {10.7717/peerj.6486},\n    year = {2019},\n    pages = {1-20},\n    journal = {PeerJ}\n}\n\n\n@book{bib1928,\n    title = {Lectures on conditioned reflexes: Twenty-five years of objective study of the higher nervous activity (behaviour) of animals.},\n    author = {Pavlov, Ivan Petrovitch},\n    doi = {10.1037/11081-000},\n    publisher = {Liverwright Publishing Corporation},\n    place = {New York, NY, US},\n    year = {1928}\n}\n\n\n@book{bib2009,\n    title = {Single case experimental designs: Strategies for studying behavior change},\n    author = {Barlow, D H and Nock, M K and Hersen, M},\n    publisher = {Pearson/Allyn and Bacon},\n    place = {Boston, MA},\n    year = {2009}\n}\n\n\n@book{bib2011,\n    title = {Single-case research designs: Methods for clinical and applied settings},\n    author = {Kazdin, Alan E},\n    publisher = {Oxford University Press},\n    place = {New York, NY},\n    year = {2011}\n}\n\n\n@article{bib2014,\n    title = {Analysis of single-case data: Randomisation tests for measures of effect size},\n    author = {Heyvaert, Mieke and Onghena, Patrick},\n    number = {3-4},\n    volume = {24},\n    doi = {10.1080/09602011.2013.818564},\n    year = {2014},\n    pages = {507-527},\n    journal = {Neuropsychological Rehabilitation}\n}\n\n\n@article{bib2020,\n    title = {From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research},\n    author = {Vlaeyen, Johan W S and Wicksell, Rikard K and Simons, Laura E and Gentili, Charlotte and De, Tamal Kumar and Tate, Robyn L and Vohra, Sunita and Punja, Salima and Linton, Steven J and Sniehotta, Falko F and Onghena, Patrick},\n    volume = {70},\n    doi = {10.1007/s40732-020-00402-5},\n    year = {2020},\n    pages = {659–670},\n    journal = {The Psychological Record}\n}\n\n\n@article{bib2010,\n    title = {Single-case design technical documentation},\n    author = {Kratochwill, T. R. and Hitchcock, J and Horner, Robert H and Levin, J R and Odom, S L and Rindskopf, D M and Shadish, W R},\n    year = {2010}\n}\n\n\n@article{bib1975,\n    title = {Randomization tests for one-subject operant experiments},\n    author = {Edgington, Eugene S},\n    number = {1},\n    volume = {90},\n    doi = {10.1080/00223980.1975.9923926},\n    publisher = {Journal Press, etc.},\n    place = {Provincetown, Mass., etc.},\n    year = {1975-05-01},\n    pages = {57},\n    journal = {Journal of Psychology}\n}\n\n\n@article{bib2005,\n    title = {The use of single-subject research to identify evidence-based practice in special education},\n    author = {Horner, Robert H. and Carr, Edward G. and Halle, James and Mcgee, Gail and Odom, Samuel and Wolery, Mark},\n    number = {2},\n    volume = {71},\n    doi = {10.1177/001440290507100203},\n    year = {2005},\n    pages = {165-179},\n    journal = {Exceptional Children}\n}\n\n\n@article{bib2009,\n    title = {The new person-specific paradigm in psychology},\n    author = {Molenaar, Peter C M and Campbell, Cynthia G},\n    number = {2},\n    volume = {18},\n    doi = {10.1111/j.1467-8721.2009.01619.x},\n    publisher = {SAGE Publications Inc},\n    year = {2009-04-01},\n    pages = {112-117},\n    journal = {Current Directions in Psychological Science}\n}\n\n\n@article{bib2018,\n    title = {Lack of group-to-individual generalizability is a threat to human subjects research},\n    author = {Fisher, Aaron J and Medaglia, John D and Jeronimus, Bertus F},\n    number = {27},\n    volume = {115},\n    doi = {10.1073/pnas.1711978115},\n    year = {2018-07-03},\n    pages = {E6106 LP - E6115},\n    journal = {Proceedings of the National Academy of Sciences}\n}\n\n\n@article{bib1995,\n    title = {Analyzing single-case data: The power of randomization tests},\n    author = {Ferron, John and Ware, William},\n    number = {2},\n    volume = {63},\n    year = {1995},\n    pages = {167-178},\n    journal = {The Journal of Experimental Education}\n}\n\n\n@article{bib1996,\n    title = {The power of randomization tests for single-case phase designs},\n    author = {Ferron, John and Onghena, Patrick},\n    number = {3},\n    volume = {64},\n    doi = {10.1080/00220973.1996.9943805},\n    year = {1996},\n    pages = {231-239},\n    journal = {Journal of Experimental Education}\n}\n\n\n@article{bib1988,\n    title = {Autocorrelation in single-subject research: A counterargument to the myth of no autocorrelation.},\n    author = {Busk, Patricia L and Marascuilo, Leonard A},\n    number = {3},\n    volume = {10},\n    publisher = {Pergamon Press, Inc.},\n    place = {US},\n    year = {1988},\n    pages = {229-242},\n    journal = {Behavioral Assessment}\n}\n\n\n@article{bib2014,\n    title = {Violations of assumptions in school-based single-case data: Implications for the selection and interpretation of effect sizes},\n    author = {Solomon, Benjamin George},\n    number = {4},\n    volume = {38},\n    doi = {10.1177/0145445513510931},\n    year = {2014},\n    pages = {477-496},\n    journal = {Behavior Modification}\n}\n\n\n@article{bib1996,\n    title = {Using randomization techniques to analyse behavioural data},\n    author = {Adams, Dean C and Anthony, Carl D},\n    number = {4},\n    volume = {51},\n    doi = {https://doi.org/10.1006/anbe.1996.0077},\n    year = {1996},\n    pages = {733-738},\n    journal = {Animal Behaviour}\n}\n\n\n@article{bib2012,\n    title = {Single-case experimental designs: A systematic review of published research and current standards},\n    author = {Smith, Justin D.},\n    number = {4},\n    volume = {17},\n    doi = {10.1037/a0029312},\n    year = {2012},\n    pages = {510-550},\n    journal = {Psychological Methods}\n}\n\n\n@article{bib1990,\n    title = {When is a picture worth a thousand p values? A comparison of visual and quantitative methods to analyze single subject data},\n    author = {Ottenbacher, Kenneth J},\n    number = {4},\n    volume = {23},\n    doi = {10.1177/002246699002300407},\n    publisher = {SAGE Publications Inc},\n    year = {1990-01-01},\n    pages = {436-449},\n    journal = {The Journal of Special Education}\n}\n\n\n@article{bib1990,\n    title = {Visual analysis of single-case time series: Effects of variability, serial dependence, and magnitude of intervention effects},\n    author = {Matyas, T A and Greenwood, K M},\n    number = {3},\n    volume = {23},\n    doi = {10.1901/jaba.1990.23-341},\n    year = {1990},\n    pages = {341-351},\n    journal = {Journal of applied behavior analysis}\n}\n\n\n@article{bib2018,\n    title = {Analytical options for single-case experimental designs: Review and application to brain impairment},\n    author = {Manolov, Rumen and Solanas, Antonio},\n    number = {1},\n    volume = {19},\n    doi = {10.1017/BrImp.2017.17},\n    year = {2018},\n    pages = {18-32},\n    journal = {Brain Impairment}\n}\n\n\n@article{bib2017,\n    title = {Recommendations for choosing single-case data analytical techniques},\n    author = {Manolov, Rumen and Moeyaert, Mariola},\n    number = {1},\n    volume = {48},\n    doi = {10.1016/j.beth.2016.04.008},\n    publisher = {Elsevier B.V.},\n    year = {2017},\n    pages = {97-114},\n    journal = {Behavior Therapy}\n}\n\n\n@book{bib2007,\n    title = {Randomization tests},\n    author = {Edgington, Eugene S and Onghena, Patrick},\n    publisher = {Chapman & Hall/CRC},\n    place = {Boca Raton, FL},\n    year = {2007}\n}\n\n\n@article{bib2020,\n    title = {A randomization test wrapper for synthesizing single-case experiments using multilevel models: A Monte Carlo simulation study},\n    author = {Michiels, Bart and Tanious, René and De, Tamal Kumar and Onghena, Patrick},\n    number = {2},\n    volume = {52},\n    doi = {10.3758/s13428-019-01266-6},\n    year = {2020},\n    pages = {654-666},\n    journal = {Behavior Research Methods}\n}\n\n\n@book{bib1988,\n    title = {Statistical power analysis for the behavioral sciences},\n    author = {Cohen, Jacob},\n    doi = {10.4324/9780203771587},\n    publisher = {Routledge},\n    place = {New York, NY},\n    year = {1988}\n}\n\n\n@article{bib2015,\n    title = {CONSORT extension for reporting N-of-1 trials (CENT) 2015 statement},\n    author = {Vohra, Sunita and Shamseer, Larissa and Sampson, Margaret and Bukutu, Cecilia and Schmid, Christopher H. and Tate, Robyn and Nikles, Jane and Zucker, Deborah R. and Kravitz, Richard and Guyatt, Gordon and Altman, Douglas G. and Moher, David},\n    volume = {350},\n    doi = {10.1136/bmj.h1738},\n    year = {2015},\n    pages = {h1738},\n    journal = {BMJ (Clinical research ed.)}\n}\n\n\n@article{bib1999,\n    title = {Statistical methods in psychology journals: Guidelines and explanations},\n    author = {Willkinson, Leland},\n    number = {8},\n    volume = {54},\n    doi = {10.1037/0003-066X.54.8.594},\n    year = {1999},\n    pages = {594-604},\n    journal = {American Psychologist}\n}\n\n\n@article{bib1992,\n    title = {Randomization tests for extensions and variations of ABAB single-case experimental designs: A rejoinder},\n    author = {Onghena, Patrick},\n    number = {2},\n    volume = {14},\n    year = {1992},\n    pages = {153-171},\n    journal = {Behavioral Assessment}\n}\n\n\n@article{bib2018,\n    title = {The conditional power of randomization tests for single-case effect sizes in designs with randomized treatment order: A Monte Carlo simulation study},\n    author = {Michiels, Bart and Heyvaert, Mieke and Onghena, Patrick},\n    number = {2},\n    volume = {50},\n    doi = {10.3758/s13428-017-0885-7},\n    publisher = {Behavior Research Methods},\n    year = {2018},\n    pages = {557-575},\n    journal = {Behavior Research Methods}\n}\n\n\n@article{bib2020,\n    title = {Power of a randomization test in a single case multiple baseline AB design},\n    author = {Bouwmeester, Samantha and Jongerling, Joran},\n    number = {2},\n    volume = {15},\n    doi = {10.1371/journal.pone.0228355},\n    year = {2020},\n    pages = {1-21},\n    journal = {PLoS ONE}\n}\n\n\n@article{bib2002,\n    title = {Statistical power of randomization tests used with multiple-baseline designs},\n    author = {Ferron, John and Sentovich, Chris},\n    number = {2},\n    volume = {70},\n    doi = {10.1080/00220970209599504},\n    year = {2002},\n    pages = {165-178},\n    journal = {Journal of Experimental Education}\n}\n\n\n@article{bib2020,\n    title = {Handling missing data in randomization tests for single-case experiments: A simulation study},\n    author = {De, Tamal Kumar and Michiels, Bart and Tanious, René and Onghena, Patrick},\n    number = {3},\n    volume = {52},\n    doi = {10.3758/s13428-019-01320-3},\n    year = {2020},\n    pages = {1355-1370},\n    journal = {Behavior Research Methods}\n}\n\n\n@article{bib2019,\n    title = {Was that painful or nonpainful? The Sensation and Pain Rating Scale performs well in the experimental context},\n    author = {Madden, Victoria J. and Kamerman, Peter R. and Bellan, Valeria and Catley, Mark J. and Russek, Leslie N. and Camfferman, Danny and Moseley, G. Lorimer},\n    number = {4},\n    volume = {20},\n    doi = {10.1016/j.jpain.2018.10.006},\n    publisher = {Elsevier Inc.},\n    year = {2019},\n    pages = {472.e1-472.e12},\n    journal = {Journal of Pain}\n}\n\n\n@article{bib2009,\n    title = {Affect 4.0: A free software package for implementing psychological and psychophysiological experiments},\n    author = {Spruyt, Adriaan and Clarysse, Jeroen and Vansteenwegen, Debora and Baeyens, Frank and Hermans, Dirk},\n    number = {1},\n    volume = {57},\n    doi = {10.1027/1618-3169/a000005},\n    year = {2009},\n    pages = {36-45},\n    journal = {Experimental Psychology}\n}\n\n\n@article{bib0,\n    title = {Tactor},\n    author = {Dancer Design,},\n    place = {St. Helens, UK},\n    year = {00}\n}\n\n\n@article{bib0,\n    title = {DS7A High Voltage Constant Current Stimulator},\n    author = {Digitimer Limited,},\n    place = {Hertfordshire, UK},\n    year = {00}\n}\n\n\n@article{bib2017,\n    title = {Classical conditioning fails to elicit allodynia in an experimental study with healthy humans},\n    author = {Madden, Victoria J. and Russek, Leslie N. and Harvie, Daniel S. and Vlaeyen, Johan W.S. and Moseley, G. Lorimer},\n    number = {7},\n    volume = {18},\n    doi = {10.1093/pm/pnw221},\n    year = {2017},\n    pages = {1314-1325},\n    journal = {Pain Medicine}\n}\n\n\n@undefined{bib2005,\n    title = {Single‐case designs},\n    author = {Onghena, Patrick},\n    volume = {4},\n    doi = {10.1002/0470013192.bsa625},\n    publisher = {John Wiley & Sons, Ltd},\n    place = {Hoboken, NJ},\n    year = {2005-04-15},\n    pages = {1850-1854},\n    journal = {Encyclopedia of statistics in behavioral science}\n}\n\n\n@article{bib2019,\n    title = {Randomized single-case AB phase designs: Prospects and pitfalls},\n    author = {Michiels, Bart and Onghena, Patrick},\n    number = {6},\n    volume = {51},\n    doi = {10.3758/s13428-018-1084-x},\n    publisher = {Behavior Research Methods},\n    year = {2019},\n    pages = {2454-2476},\n    journal = {Behavior Research Methods}\n}\n\n\n@article{bib2018,\n    title = {Comparison of randomization-test procedures for single-case multiple-baseline designs},\n    author = {Levin, Joel R. and Ferron, John M. and Gafurov, Boris S.},\n    number = {5},\n    volume = {21},\n    doi = {10.1080/17518423.2016.1197708},\n    publisher = {Taylor & Francis},\n    year = {2018},\n    pages = {290-311},\n    journal = {Developmental Neurorehabilitation}\n}\n\n\n@article{bib1969,\n    title = {Approximate randomization tests},\n    author = {Edgington, Eugene S},\n    number = {2},\n    volume = {72},\n    doi = {10.1080/00223980.1969.10543491},\n    publisher = {Routledge},\n    year = {1969-07-01},\n    pages = {143-149},\n    journal = {The Journal of Psychology}\n}\n\n\n@article{bib1968,\n    title = {A simplified Monte Carlo significance test procedure},\n    author = {Hope, Adery C A},\n    number = {3},\n    volume = {30},\n    publisher = {[Royal Statistical Society, Wiley]},\n    year = {1968},\n    pages = {582-598},\n    journal = {Journal of the Royal Statistical Society. Series B (Methodological)}\n}\n}"
                 }
               ]
             }
@@ -790,7 +790,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib1"
+                          "value": "Breivik2006"
                         }
                       ]
                     }
@@ -805,7 +805,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib2"
+                          "value": "Tsang2008"
                         }
                       ]
                     }
@@ -820,7 +820,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib3"
+                          "value": "Costa2009"
                         }
                       ]
                     }
@@ -835,7 +835,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib4"
+                          "value": "Foster2018"
                         }
                       ]
                     }
@@ -850,7 +850,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib5"
+                          "value": "Treede2019"
                         }
                       ]
                     }
@@ -873,7 +873,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib6"
+                          "value": "Woolf1983"
                         }
                       ]
                     }
@@ -888,7 +888,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib7"
+                          "value": "Woolf2011"
                         }
                       ]
                     }
@@ -903,7 +903,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib8"
+                          "value": "Vlaeyen2000"
                         }
                       ]
                     }
@@ -918,7 +918,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib9"
+                          "value": "Vlaeyen2012"
                         }
                       ]
                     }
@@ -949,7 +949,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib10"
+                          "value": "Moseley2015"
                         }
                       ]
                     }
@@ -985,7 +985,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib11"
+                          "value": "Madden2016"
                         }
                       ]
                     }
@@ -1000,7 +1000,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib12"
+                          "value": "Traxler2019"
                         }
                       ]
                     }
@@ -1031,7 +1031,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib13"
+                          "value": "Pavlov1928"
                         }
                       ]
                     }
@@ -1217,7 +1217,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib14"
+                          "value": "Barlow2009"
                         }
                       ]
                     }
@@ -1232,7 +1232,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib15"
+                          "value": "Kazdin2011"
                         }
                       ]
                     }
@@ -1323,7 +1323,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib16"
+                          "value": "Heyvaert2014"
                         }
                       ]
                     }
@@ -1416,7 +1416,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib17"
+                          "value": "Vlaeyen2020"
                         }
                       ]
                     }
@@ -1464,7 +1464,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib18"
+                          "value": "Kratochwill2010"
                         }
                       ]
                     }
@@ -1479,7 +1479,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib19"
+                          "value": "Edgington1975"
                         }
                       ]
                     }
@@ -1502,7 +1502,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib20"
+                          "value": "Kratochwill2010"
                         }
                       ]
                     }
@@ -1517,7 +1517,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib21"
+                          "value": "Horner2005"
                         }
                       ]
                     }
@@ -1594,7 +1594,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib22"
+                          "value": "Molenaar2009"
                         }
                       ]
                     }
@@ -1649,7 +1649,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib23"
+                          "value": "Fisher2018"
                         }
                       ]
                     }
@@ -1696,7 +1696,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib24"
+                          "value": "Ferron1995"
                         }
                       ]
                     }
@@ -1711,7 +1711,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib25"
+                          "value": "Ferron1996"
                         }
                       ]
                     }
@@ -1784,7 +1784,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib26"
+                          "value": "Busk1988"
                         }
                       ]
                     }
@@ -1799,7 +1799,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib27"
+                          "value": "Solomon2014"
                         }
                       ]
                     }
@@ -1814,7 +1814,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib28"
+                          "value": "Adams1996"
                         }
                       ]
                     }
@@ -1829,7 +1829,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib29"
+                          "value": "Smith2012"
                         }
                       ]
                     }
@@ -1880,7 +1880,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib30"
+                          "value": "Ottenbacher1990"
                         }
                       ]
                     }
@@ -1895,7 +1895,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib31"
+                          "value": "Matyas1990"
                         }
                       ]
                     }
@@ -1910,7 +1910,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib32"
+                          "value": "Kratochwill2010"
                         }
                       ]
                     }
@@ -1925,7 +1925,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib33"
+                          "value": "Manolov2018"
                         }
                       ]
                     }
@@ -1940,7 +1940,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib34"
+                          "value": "Manolov2017"
                         }
                       ]
                     }
@@ -1992,7 +1992,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib35"
+                          "value": "Edgington1975"
                         }
                       ]
                     }
@@ -2007,7 +2007,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib36"
+                          "value": "Adams1996"
                         }
                       ]
                     }
@@ -2022,7 +2022,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib37"
+                          "value": "Heyvaert2014"
                         }
                       ]
                     }
@@ -2053,7 +2053,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib38"
+                          "value": "Edgington2007"
                         }
                       ]
                     }
@@ -2092,7 +2092,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib39"
+                          "value": "Michiels2020"
                         }
                       ]
                     }
@@ -2107,7 +2107,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib40"
+                          "value": "Heyvaert2014"
                         }
                       ]
                     }
@@ -2122,7 +2122,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib41"
+                          "value": "Heyvaert2014"
                         }
                       ]
                     }
@@ -2523,7 +2523,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib53"
+                          "value": "Madden2019"
                         }
                       ]
                     }
@@ -2644,7 +2644,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib54"
+                          "value": "Traxler2019"
                         }
                       ]
                     }
@@ -2671,7 +2671,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib55"
+                          "value": "Spruyt2009"
                         }
                       ]
                     }
@@ -2710,7 +2710,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib56"
+                          "value": "Dancer Design0"
                         }
                       ]
                     }
@@ -2900,7 +2900,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib57"
+                          "value": "Traxler2019"
                         }
                       ]
                     }
@@ -3003,7 +3003,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib58"
+                          "value": "Digitimer Limited0"
                         }
                       ]
                     }
@@ -11823,7 +11823,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib76"
+                          "value": "Michiels2019"
                         }
                       ]
                     }
@@ -11854,7 +11854,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib77"
+                          "value": "Kratochwill2010"
                         }
                       ]
                     }
@@ -12087,7 +12087,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib78"
+                          "value": "Edgington1969"
                         }
                       ]
                     }
@@ -12102,7 +12102,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "bib79"
+                          "value": "Hope1968"
                         }
                       ]
                     }

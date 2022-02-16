@@ -29,12 +29,20 @@ export function cslToJats(data: CSL | CSL[]) {
 // @ts-ignore
 export function cslToFront(data: CSL): Front {}
 
-export function cslToRefList(data: CSL[]): RefList {
-  const reflist = data.map((csl, index) => cslToRef(csl, index))
+export function cslToRefList(
+  data: CSL[] | { [key: string | number]: CSL }
+): RefList {
+  if (Array.isArray(data)) {
+    const reflist = data.map((csl, index) => cslToRef(csl, index))
+    return x('refList', reflist) as RefList
+  }
+  const reflist = Object.entries(data).map(([index, csl]) =>
+    cslToRef(csl, index)
+  )
   return x('refList', reflist) as RefList
 }
 
-export function cslToRef(data: CSL, index: number): Ref {
+export function cslToRef(data: CSL, index: number | string): Ref {
   const date = data.issued?.['date-parts']?.[0]
   const [year, month, day] = date || data.issued?.literal?.split('-') || []
 
@@ -105,7 +113,7 @@ export function cslToRef(data: CSL, index: number): Ref {
     nameMap('edition', `${data['edition'] || ''}`) as Edition,
   ].flat()
 
-  return x('ref', { id: `bib${index}` }, [
+  return x('ref', { id: typeof index === 'string' ? index : `bib${index}` }, [
     x(
       'elementCitation',
       { publicationType: getPublicationType(data) },

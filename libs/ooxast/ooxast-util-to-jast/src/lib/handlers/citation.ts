@@ -53,14 +53,28 @@ export function citation(j: J, citation: T, parent: Parent) {
       return citation.citationItems.map((cite: any, i: number) => {
         const citation: CSL = cite.itemData
         j.citationNumber++
-        j.collectCitation(citation, j.citationNumber)
+        // const citeKey =
+        let citeKey =
+          generateAuthYearFromCSL(citation) || `bib${j.citationNumber}`
+
+        while (citeKey in j.citeKeys) {
+          if (citeKey.slice(-1).match(/\d/)) {
+            citeKey = `${citeKey}a`
+            continue
+          }
+          citeKey = incrementSuffix(citeKey)
+        }
+        j.citeKeys.push(citeKey)
+
+        j.collectCitation(citation, citeKey)
+
         return j(
           citation,
           'xref',
           {
             id: `_xref-${j.citationNumber}`,
             refType: 'bibr',
-            rid: `bib${j.citationNumber}`,
+            rid: citeKey,
           },
           [
             {
@@ -78,3 +92,16 @@ export function citation(j: J, citation: T, parent: Parent) {
 }
 
 export function cslCitation(text: string) {}
+
+function generateAuthYearFromCSL(csl: CSL): string {
+  return csl.author?.[0]?.family && csl.issued?.['date-parts']?.[0]?.[0]
+    ? `${csl.author[0].family}${csl.issued['date-parts'][0][0]}`
+    : `${csl.id}`
+}
+
+function incrementSuffix(text: string) {
+  return (
+    text.slice(0, -1) +
+    String.fromCharCode(text.charCodeAt(text.length - 1) + 1)
+  )
+}

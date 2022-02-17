@@ -9,7 +9,7 @@ import axios from 'axios'
 import { execa } from 'execa'
 import { file } from 'tmp-promise'
 import { writeFile } from 'fs/promises'
-import { getCrossRefMetadata } from './get-crossref-metadata'
+import { consolidate } from 'csl-consolidate'
 
 interface Options {
   apiUrl?: string
@@ -26,7 +26,7 @@ export async function parseBib(tree: Node, options: Options) {
     return
   }
 
-  return await getCrossRefMetadata(csl, { mailto: options.mailto })
+  return await consolidate(csl, { mailto: options.mailto })
 }
 export async function bibToCSL(tree: Node, options: Options): Promise<CSL[]> {
   const { apiUrl, apiParams, anyStylePath, headers } = options

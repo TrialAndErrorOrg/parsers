@@ -34,6 +34,7 @@
       "ast-stringify": ["libs/ast-stringify/src/index.ts"],
       "crossref-json": ["libs/crossref-json/src/index.ts"],
       "crossref-to-csl": ["libs/crossref-to-csl/src/index.ts"],
+      "csl-consolidate": ["libs/csl-consolidate/src/index.ts"],
       "csl-to-jast": ["libs/rejour/csl-to-jast/src/index.ts"],
       "docx-parse": ["libs/docx-parse/src/index.ts"],
       "docx-to-vfile": ["libs/reoff/docx-to-vfile/src/index.ts"],

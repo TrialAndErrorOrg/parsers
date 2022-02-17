@@ -11,6 +11,14 @@ type CSLSinglets = Exclude<keyof CSL, CSLArraylike>
 type Same = (CSLSinglets & CRSinglets) | (CSLArraylike & CRArraylike)
 type Arr = CSLSinglets & CRArraylike
 
+// From https://github.com/relata/relata-prototype
+const typeMappings: { [key: CrossrefJSON['type']]: CSL['type'] } = {
+  'journal-article': 'article-journal',
+  'book-chapter': 'chapter',
+  'posted-content': 'manuscript',
+  'proceedings-article': 'paper-conference',
+}
+
 const sames: Same[] = [
   'issued',
   'issue',
@@ -25,7 +33,7 @@ const sames: Same[] = [
   'page',
   'publisher',
   //'source',
-  'type',
+  //'type',
 ]
 const arrs: Arr[] = [
   'ISBN',
@@ -61,5 +69,6 @@ export function crossrefToCsl(item: CrossrefJSON): CSL {
     ...samesObj,
     ...arrObj,
     ...mapObj,
+    type: typeMappings[item.type] || item.type,
   }
 }

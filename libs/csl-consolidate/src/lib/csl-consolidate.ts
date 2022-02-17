@@ -9,7 +9,7 @@ import { PickByValue } from 'utility-types/dist/mapped-types'
 /**
  * Try to resolve a list of CSL data with crossref metadata
  */
-export async function getCrossRefMetadata(
+export async function consolidate(
   data: CSL[],
   options: {
     mailto: string
@@ -77,7 +77,7 @@ export async function getCrossRefMetadata(
   }
   const datas = resolvedPromises.map((res: any, index: number) => {
     try {
-      return consolidate(data[index], res.data, types[index])
+      return consolidates(data[index], res.data, types[index])
     } catch (e) {
       console.error(e)
       return data[index]
@@ -86,7 +86,7 @@ export async function getCrossRefMetadata(
   return datas
 }
 
-function consolidate(ref: CSL, res: CrossrefResponse, type: string) {
+function consolidates(ref: CSL, res: CrossrefResponse, type: string) {
   if (type === 'anystyle') {
     return ref
   }

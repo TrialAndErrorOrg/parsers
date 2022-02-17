@@ -6,6 +6,7 @@ import {
   callAnystyleApi,
   callAnystyleCLI,
   findBib,
+  bibToCSL,
   parseBib,
 } from './ooxast-util-parse-bib'
 import { toString } from 'xast-util-to-string'
@@ -30,7 +31,7 @@ async function getTree() {
 
 async function getBib() {
   const tree = await getTree()
-  return parseBib(tree, {
+  return bibToCSL(tree, {
     // when using your own web api
     apiUrl: 'https://someapiyousetup.vercel.app/api',
     //apiParams: {...}
@@ -49,25 +50,33 @@ describe('parseBib', () => {
     const bibStart = findBib(await tree)
     expect(bibStart).toBeTruthy()
   })
-  it('should call anystyle cli', async () => {
-    const bibStart = findBib(await tree)
-    expect(bibStart).toBeDefined()
-    if (!bibStart) return
-    const bib = bibStart.join('\n')
-    const csl = await callAnystyleCLI(bib)
-    expect(csl).toMatchSnapshot()
-  })
+  // it('should call anystyle cli', async () => {
+  //   const bibStart = findBib(await tree)
+  //   expect(bibStart).toBeDefined()
+  //   if (!bibStart) return
+  //   const bib = bibStart.join('\n')
+  //   const csl = await callAnystyleCLI(bib)
+  //   expect(csl).toMatchSnapshot()
+  // })
 
-  it('should call anystyle api', async () => {
-    const bibStart = findBib(await tree)
-    expect(bibStart).toBeDefined()
-    if (!bibStart) return
-    const bib = bibStart.join('\n')
-    const csl = await callAnystyleApi(
-      bib,
-      'https://anystyle-api-cote.vercel.app/api/style'
-    )
-    console.log(csl)
-    expect(csl).toMatchSnapshot()
+  // it('should call anystyle api', async () => {
+  //   const bibStart = findBib(await tree)
+  //   expect(bibStart).toBeDefined()
+  //   if (!bibStart) return
+  //   const bib = bibStart.join('\n')
+  //   const csl = await callAnystyleApi(
+  //     bib,
+  //     'https://anystyle-api-cote.vercel.app/api/style'
+  //   )
+  //   expect(csl).toMatchSnapshot()
+  // })
+
+  jest.setTimeout(20000)
+  it('should crossref', async () => {
+    const y = await parseBib(await tree, {
+      mailto: 'support@centeroftrialanderror.com',
+    })
+    //console.log(y)
+    expect(y).toMatchSnapshot()
   })
 })

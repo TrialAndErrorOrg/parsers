@@ -32,6 +32,8 @@
       ],
       "@jote/utils": ["libs/utils/src/index.ts"],
       "ast-stringify": ["libs/ast-stringify/src/index.ts"],
+      "crossref-json": ["libs/crossref-json/src/index.ts"],
+      "crossref-to-csl": ["libs/crossref-to-csl/src/index.ts"],
       "csl-to-jast": ["libs/rejour/csl-to-jast/src/index.ts"],
       "docx-parse": ["libs/docx-parse/src/index.ts"],
       "docx-to-vfile": ["libs/reoff/docx-to-vfile/src/index.ts"],
@@ -42,11 +44,14 @@
       "jastscript": ["libs/rejour/jastscript/src/index.ts"],
       "jjast": ["libs/rejour/jjast/src/index.ts"],
       "ooxast": ["libs/ooxast/ooxast/src/index.ts"],
-      "ooxast-util-parse-bib": [
-        "libs/ooxast/ooxast-util-parse-bib/src/index.ts"
+      "ooxast-util-citations": [
+        "libs/ooxast/ooxast-util-citations/src/index.ts"
       ],
       "ooxast-util-get-style": [
         "libs/ooxast/ooxast-util-get-style/src/index.ts"
+      ],
+      "ooxast-util-parse-bib": [
+        "libs/ooxast/ooxast-util-parse-bib/src/index.ts"
       ],
       "ooxast-util-to-jast": ["libs/ooxast/ooxast-util-to-jast/src/index.ts"],
       "rejour": ["libs/rejour/rejour/src/index.ts"],

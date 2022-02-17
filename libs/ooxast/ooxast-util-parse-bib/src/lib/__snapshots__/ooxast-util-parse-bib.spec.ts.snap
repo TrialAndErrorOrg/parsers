@@ -1,2318 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`parseBib should call anystyle api 1`] = `
+exports[`parseBib should crossref 1`] = `
 Array [
   Object {
-    "author": Array [
-      Object {
-        "family": "Adams",
-        "given": "D.C.",
-      },
-      Object {
-        "family": "Anthony",
-        "given": "C.D.",
-      },
-    ],
-    "container-title": Array [
-      "Animal Behaviour",
-    ],
-    "date": Array [
-      "1996",
-    ],
-    "doi": Array [
-      "10.1006/anbe.1996.0077",
-    ],
-    "issue": Array [
-      "4",
-    ],
-    "pages": Array [
-      "733–738",
-    ],
-    "title": Array [
-      "Using randomization techniques to analyse behavioural data",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/https://doi.org/10.1006/anbe.1996.0077",
-    ],
-    "volume": Array [
-      "51",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Barlow",
-        "given": "D.H.",
-      },
-      Object {
-        "family": "Nock",
-        "given": "M.K.",
-      },
-      Object {
-        "family": "Hersen",
-        "given": "M.",
-      },
-    ],
-    "date": Array [
-      "2009",
-    ],
-    "edition": Array [
-      "3rd",
-    ],
-    "location": Array [
-      "Pearson/Allyn and Bacon",
-    ],
-    "title": Array [
-      "Single case experimental designs: Strategies for studying behavior change",
-    ],
-    "type": null,
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Bouwmeester",
-        "given": "S.",
-      },
-      Object {
-        "family": "Jongerling",
-        "given": "J.",
-      },
-    ],
-    "container-title": Array [
-      "PLoS ONE",
-    ],
-    "date": Array [
-      "2020",
-    ],
-    "doi": Array [
-      "10.1371/journal.pone.0228355",
-    ],
-    "issue": Array [
-      "2",
-    ],
-    "pages": Array [
-      "1–21",
-    ],
-    "title": Array [
-      "Power of a randomization test in a single case multiple baseline AB design",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1371/journal.pone.0228355",
-    ],
-    "volume": Array [
-      "15",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Breivik",
-        "given": "H.",
-      },
-      Object {
-        "family": "Collett",
-        "given": "B.",
-      },
-      Object {
-        "family": "Ventafridda",
-        "given": "V.",
-      },
-      Object {
-        "family": "Cohen",
-        "given": "R.",
-      },
-      Object {
-        "family": "Gallacher",
-        "given": "D.",
-      },
-    ],
-    "container-title": Array [
-      "European Journal of Pain (London",
-    ],
-    "date": Array [
-      "2006",
-    ],
-    "doi": Array [
-      "10.1016/j.ejpain.2005.06.009",
-    ],
-    "issue": Array [
-      "4",
-    ],
-    "pages": Array [
-      "287–333",
-    ],
-    "title": Array [
-      "Survey of chronic pain in Europe: Prevalence, impact on daily life, and treatment",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1016/j.ejpain.2005.06.009",
-    ],
-    "volume": Array [
-      "10",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Busk",
-        "given": "P.L.",
-      },
-      Object {
-        "family": "Marascuilo",
-        "given": "L.A.",
-      },
-    ],
-    "container-title": Array [
-      "Behavioral Assessment",
-    ],
-    "date": Array [
-      "1988",
-    ],
-    "issue": Array [
-      "3",
-    ],
-    "pages": Array [
-      "229–242",
-    ],
-    "title": Array [
-      "Autocorrelation in single-subject research: A counterargument to the myth of no autocorrelation",
-    ],
-    "type": "article-journal",
-    "volume": Array [
-      "10",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Cohen",
-        "given": "J.",
-      },
-    ],
-    "date": Array [
-      "1988",
-    ],
-    "doi": Array [
-      "10.4324/9780203771587",
-    ],
-    "edition": Array [
-      "2nd",
-    ],
-    "note": Array [
-      "Routledge.",
-    ],
-    "title": Array [
-      "Statistical power analysis for the behavioral sciences",
-    ],
-    "type": null,
-    "url": Array [
-      "https://doi.org/10.4324/9780203771587",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Costa",
-        "given": "L.da C.M.",
-      },
-      Object {
-        "family": "Maher",
-        "given": "C.G.",
-      },
-      Object {
-        "family": "McAuley",
-        "given": "J.H.",
-      },
-      Object {
-        "family": "Hancock",
-        "given": "M.J.",
-      },
-      Object {
-        "family": "Herbert",
-        "given": "R.D.",
-      },
-      Object {
-        "family": "Refshauge",
-        "given": "K.M.",
-      },
-      Object {
-        "family": "Henschke",
-        "given": "N.",
-      },
-    ],
-    "container-title": Array [
-      "BMJ",
-    ],
-    "date": Array [
-      "2009",
-    ],
-    "doi": Array [
-      "10.1136/bmj.b3829",
-    ],
-    "pages": Array [
-      "3829",
-    ],
-    "title": Array [
-      "Prognosis for patients with chronic low back pain: Inception cohort study",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1136/bmj.b3829",
-    ],
-    "volume": Array [
-      "339",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Design",
-        "given": "Dancer",
-      },
-    ],
-    "date": Array [
-      "XXXX",
-    ],
-    "note": Array [
-      "Tactor.",
-    ],
-    "type": null,
-    "url": Array [
-      "http://www.dancerdesign.co.uk/tactor.html",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "De",
-        "given": "T.K.",
-      },
-      Object {
-        "family": "Michiels",
-        "given": "B.",
-      },
-      Object {
-        "family": "Tanious",
-        "given": "R.",
-      },
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "container-title": Array [
-      "Behavior Research Methods",
-    ],
-    "date": Array [
-      "2020",
-    ],
-    "doi": Array [
-      "10.3758/s13428-019-01320-3",
-    ],
-    "issue": Array [
-      "3",
-    ],
-    "pages": Array [
-      "1355–1370",
-    ],
-    "title": Array [
-      "Handling missing data in randomization tests for single-case experiments: A simulation study",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.3758/s13428-019-01320-3",
-    ],
-    "volume": Array [
-      "52",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "De",
-        "given": "T.K.",
-      },
-      Object {
-        "family": "Michiels",
-        "given": "B.",
-      },
-      Object {
-        "family": "Vlaeyen",
-        "given": "J.W.S.",
-      },
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "date": Array [
-      "2020",
-      "Version 2.7",
-    ],
-    "title": Array [
-      "Shiny SCDA",
-    ],
-    "type": null,
-    "url": Array [
-      "https://ppw.kuleuven.be/mesrg/software-and-apps/shiny-scda",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Limited",
-        "given": "Digitimer",
-      },
-    ],
-    "date": Array [
-      "XXXX",
-    ],
-    "title": Array [
-      "DS7A High Voltage Constant Current Stimulator",
-    ],
-    "type": null,
-    "url": Array [
-      "https://www.digitimer.com/product/human-neurophysiology/peripheral-stimulators/ds7a-ds7ah-hv-current-stimulator/",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Edgington",
-        "given": "E.S.",
-      },
-    ],
-    "container-title": Array [
-      "The Journal of Psychology",
-    ],
-    "date": Array [
-      "1969",
-    ],
-    "doi": Array [
-      "10.1080/00223980.1969.10543491",
-    ],
-    "issue": Array [
-      "2",
-    ],
-    "pages": Array [
-      "143–149",
-    ],
-    "title": Array [
-      "Approximate randomization tests",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1080/00223980.1969.10543491",
-    ],
-    "volume": Array [
-      "72",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Edgington",
-        "given": "E.S.",
-      },
-    ],
-    "container-title": Array [
-      "Journal of Psychology",
-    ],
-    "date": Array [
-      "1975",
-    ],
-    "doi": Array [
-      "10.1080/00223980.1975.9923926",
-    ],
-    "issue": Array [
-      "1",
-    ],
-    "pages": Array [
-      "57",
-    ],
-    "title": Array [
-      "Randomization tests for one-subject operant experiments",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1080/00223980.1975.9923926",
-    ],
-    "volume": Array [
-      "90",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Edgington",
-        "given": "E.S.",
-      },
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "date": Array [
-      "2007",
-    ],
-    "edition": Array [
-      "4th",
-    ],
-    "publisher": Array [
-      "Chapman & Hall/CRC",
-    ],
-    "title": Array [
-      "Randomization tests",
-    ],
-    "type": "book",
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Ferron",
-        "given": "J.",
-      },
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "container-title": Array [
-      "Journal of Experimental Education",
-    ],
-    "date": Array [
-      "1996",
-    ],
-    "doi": Array [
-      "10.1080/00220973.1996.9943805",
-    ],
-    "issue": Array [
-      "3",
-    ],
-    "pages": Array [
-      "231–239",
-    ],
-    "title": Array [
-      "The power of randomization tests for single-case phase designs",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1080/00220973.1996.9943805",
-    ],
-    "volume": Array [
-      "64",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Ferron",
-        "given": "J.",
-      },
-      Object {
-        "family": "Sentovich",
-        "given": "C.",
-      },
-    ],
-    "container-title": Array [
-      "Journal of Experimental Education",
-    ],
-    "date": Array [
-      "2002",
-    ],
-    "doi": Array [
-      "10.1080/00220970209599504",
-    ],
-    "issue": Array [
-      "2",
-    ],
-    "pages": Array [
-      "165–178",
-    ],
-    "title": Array [
-      "Statistical power of randomization tests used with multiple-baseline designs",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1080/00220970209599504",
-    ],
-    "volume": Array [
-      "70",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Ferron",
-        "given": "J.",
-      },
-      Object {
-        "family": "Ware",
-        "given": "W.",
-      },
-    ],
-    "container-title": Array [
-      "The Journal of Experimental Education",
-    ],
-    "date": Array [
-      "1995",
-    ],
-    "issue": Array [
-      "2",
-    ],
-    "pages": Array [
-      "167–178",
-    ],
-    "title": Array [
-      "Analyzing single-case data: The power of randomization tests",
-    ],
-    "type": "article-journal",
-    "volume": Array [
-      "63",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Fisher",
-        "given": "A.J.",
-      },
-      Object {
-        "family": "Medaglia",
-        "given": "J.D.",
-      },
-      Object {
-        "family": "Jeronimus",
-        "given": "B.F.",
-      },
-    ],
-    "container-title": Array [
-      "Proceedings of the National Academy of Sciences",
-    ],
-    "date": Array [
-      "2018",
-    ],
-    "doi": Array [
-      "10.1073/pnas.1711978115",
-    ],
-    "issue": Array [
-      "27",
-    ],
-    "pages": Array [
-      "6106 – 6115",
-    ],
-    "title": Array [
-      "Lack of group-to-individual generalizability is a threat to human subjects research",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1073/pnas.1711978115",
-    ],
-    "volume": Array [
-      "115",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Foster",
-        "given": "N.E.",
-      },
-      Object {
-        "family": "Anema",
-        "given": "J.R.",
-      },
-      Object {
-        "family": "Cherkin",
-        "given": "D.",
-      },
-      Object {
-        "family": "Chou",
-        "given": "R.",
-      },
-      Object {
-        "family": "Cohen",
-        "given": "S.P.",
-      },
-      Object {
-        "family": "Gross",
-        "given": "D.P.",
-      },
-      Object {
-        "family": "Ferreira",
-        "given": "P.H.",
-      },
-      Object {
-        "family": "Fritz",
-        "given": "J.M.",
-      },
-      Object {
-        "family": "Koes",
-        "given": "B.W.",
-      },
-      Object {
-        "family": "Peul",
-        "given": "W.",
-      },
-      Object {
-        "family": "Turner",
-        "given": "J.A.",
-      },
-      Object {
-        "family": "Maher",
-        "given": "C.G.",
-      },
-      Object {
-        "family": "Buchbinder",
-        "given": "R.",
-      },
-      Object {
-        "family": "Hartvigsen",
-        "given": "J.",
-      },
-      Object {
-        "family": "Cherkin",
-        "given": "D.",
-      },
-      Object {
-        "family": "Foster",
-        "given": "N.E.",
-      },
-      Object {
-        "family": "Maher",
-        "given": "C.G.",
-      },
-      Object {
-        "family": "Underwood",
-        "given": "M.",
-      },
-      Object {
-        "family": "Tulder",
-        "given": "M.",
-        "particle": "van",
-      },
-      Object {
-        "family": "Woolf",
-        "given": "A.",
-      },
-      Object {
-        "others": true,
-      },
-    ],
-    "container-title": Array [
-      "The Lancet",
-    ],
-    "date": Array [
-      "2018",
-    ],
-    "doi": Array [
-      "10.1016/S0140-6736(18)30489-6",
-    ],
-    "issue": Array [
-      "10137",
-    ],
-    "pages": Array [
-      "2368–2383",
-    ],
-    "title": Array [
-      "Prevention and treatment of low back pain: Evidence, challenges, and promising directions",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1016/S0140-6736(18)30489-6",
-    ],
-    "volume": Array [
-      "391",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Heyvaert",
-        "given": "M.",
-      },
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "container-title": Array [
-      "Neuropsychological Rehabilitation",
-    ],
-    "date": Array [
-      "2014",
-    ],
-    "doi": Array [
-      "10.1080/09602011.2013.818564",
-    ],
-    "issue": Array [
-      "3–4",
-    ],
-    "pages": Array [
-      "507–527",
-    ],
-    "title": Array [
-      "Analysis of single-case data: Randomisation tests for measures of effect size",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1080/09602011.2013.818564",
-    ],
-    "volume": Array [
-      "24",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Heyvaert",
-        "given": "M.",
-      },
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "container-title": Array [
-      "Journal of Contextual Behavioral Science",
-    ],
-    "date": Array [
-      "2014",
-    ],
-    "doi": Array [
-      "10.1016/j.jcbs.2013.10.002",
-    ],
-    "issue": Array [
-      "1",
-    ],
-    "pages": Array [
-      "51–64",
-    ],
-    "title": Array [
-      "Randomization tests for single-case experiments: State of the art, state of the science, and state of the application",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1016/j.jcbs.2013.10.002",
-    ],
-    "volume": Array [
-      "3",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Hope",
-        "given": "A.C.A.",
-      },
-    ],
-    "container-title": Array [
-      "Journal of the Royal Statistical Society. Series B (Methodological",
-    ],
-    "date": Array [
-      "1968",
-    ],
-    "issue": Array [
-      "3",
-    ],
-    "pages": Array [
-      "582–598",
-    ],
-    "title": Array [
-      "A simplified Monte Carlo significance test procedure",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "http://www.jstor.org/stable/2984263",
-    ],
-    "volume": Array [
-      "30",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Horner",
-        "given": "R.H.",
-      },
-      Object {
-        "family": "Carr",
-        "given": "E.G.",
-      },
-      Object {
-        "family": "Halle",
-        "given": "J.",
-      },
-      Object {
-        "family": "Mcgee",
-        "given": "G.",
-      },
-      Object {
-        "family": "Odom",
-        "given": "S.",
-      },
-      Object {
-        "family": "Wolery",
-        "given": "M.",
-      },
-    ],
-    "container-title": Array [
-      "Exceptional Children",
-    ],
-    "date": Array [
-      "2005",
-    ],
-    "doi": Array [
-      "10.1177/001440290507100203",
-    ],
-    "issue": Array [
-      "2",
-    ],
-    "pages": Array [
-      "165–179",
-    ],
-    "title": Array [
-      "The use of single-subject research to identify evidence-based practice in special education",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1177/001440290507100203",
-    ],
-    "volume": Array [
-      "71",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Kazdin",
-        "given": "A.E.",
-      },
-    ],
-    "date": Array [
-      "2011",
-    ],
-    "edition": Array [
-      "2nd",
-    ],
-    "publisher": Array [
-      "Oxford University Press",
-    ],
-    "title": Array [
-      "Single-case research designs: Methods for clinical and applied settings",
-    ],
-    "type": "book",
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Kratochwill",
-        "given": "T.R.",
-      },
-      Object {
-        "family": "Hitchcock",
-        "given": "J.",
-      },
-      Object {
-        "family": "Horner",
-        "given": "R.H.",
-      },
-      Object {
-        "family": "Levin",
-        "given": "J.R.",
-      },
-      Object {
-        "family": "Odom",
-        "given": "S.L.",
-      },
-      Object {
-        "family": "Rindskopf",
-        "given": "D.M.",
-      },
-      Object {
-        "family": "Shadish",
-        "given": "W.R.",
-      },
-    ],
-    "date": Array [
-      "2010",
-    ],
-    "title": Array [
-      "Single-case design technical documentation",
-    ],
-    "type": null,
-    "url": Array [
-      "https://ies.ed.gov/ncee/wwc/Docs/ReferenceResources/wwc_scd.pdf",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Kratochwill",
-        "given": "T.R.",
-      },
-      Object {
-        "family": "Levin",
-        "given": "J.R.",
-      },
-    ],
-    "container-title": Array [
-      "Psychological Methods",
-    ],
-    "date": Array [
-      "2010",
-    ],
-    "doi": Array [
-      "10.1037/a0017736",
-    ],
-    "issue": Array [
-      "2",
-    ],
-    "pages": Array [
-      "124–144",
-    ],
-    "title": Array [
-      "Enhancing the scientific credibility of single-case intervention research: Randomization to the rescue",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1037/a0017736",
-    ],
-    "volume": Array [
-      "15",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Levin",
-        "given": "J.R.",
-      },
-      Object {
-        "family": "Ferron",
-        "given": "J.M.",
-      },
-      Object {
-        "family": "Gafurov",
-        "given": "B.S.",
-      },
-    ],
-    "container-title": Array [
-      "Developmental Neurorehabilitation",
-    ],
-    "date": Array [
-      "2018",
-    ],
-    "doi": Array [
-      "10.1080/17518423.2016.1197708",
-    ],
-    "issue": Array [
-      "5",
-    ],
-    "pages": Array [
-      "290–311",
-    ],
-    "title": Array [
-      "Comparison of randomization-test procedures for single-case multiple-baseline designs",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1080/17518423.2016.1197708",
-    ],
-    "volume": Array [
-      "21",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Madden",
-        "given": "V.J.",
-      },
-      Object {
-        "family": "Bellan",
-        "given": "V.",
-      },
-      Object {
-        "family": "Russek",
-        "given": "L.N.",
-      },
-      Object {
-        "family": "Camfferman",
-        "given": "D.",
-      },
-      Object {
-        "family": "Vlaeyen",
-        "given": "J.W.S.",
-      },
-      Object {
-        "family": "Moseley",
-        "given": "G.L.",
-      },
-    ],
-    "container-title": Array [
-      "Journal of Pain",
-    ],
-    "date": Array [
-      "2016",
-    ],
-    "doi": Array [
-      "10.1016/j.jpain.2016.06.012",
-    ],
-    "issue": Array [
-      "10",
-    ],
-    "pages": Array [
-      "1105–1115",
-    ],
-    "title": Array [
-      "Pain by association? Experimental modulation of human pain thresholds using classical conditioning",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1016/j.jpain.2016.06.012",
-    ],
-    "volume": Array [
-      "17",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Madden",
-        "given": "V.J.",
-      },
-      Object {
-        "family": "Kamerman",
-        "given": "P.R.",
-      },
-      Object {
-        "family": "Bellan",
-        "given": "V.",
-      },
-      Object {
-        "family": "Catley",
-        "given": "M.J.",
-      },
-      Object {
-        "family": "Russek",
-        "given": "L.N.",
-      },
-      Object {
-        "family": "Camfferman",
-        "given": "D.",
-      },
-      Object {
-        "family": "Moseley",
-        "given": "G.L.",
-      },
-    ],
-    "container-title": Array [
-      "Journal of Pain",
-    ],
-    "date": Array [
-      "2019",
-    ],
-    "doi": Array [
-      "10.1016/j.jpain.2018.10.006",
-    ],
-    "issue": Array [
-      "4",
-    ],
-    "pages": Array [
-      "472 1–472 12",
-    ],
-    "title": Array [
-      "Was that painful or nonpainful? The Sensation and Pain Rating Scale performs well in the experimental context",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1016/j.jpain.2018.10.006",
-    ],
-    "volume": Array [
-      "20",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Madden",
-        "given": "V.J.",
-      },
-      Object {
-        "family": "Russek",
-        "given": "L.N.",
-      },
-      Object {
-        "family": "Harvie",
-        "given": "D.S.",
-      },
-      Object {
-        "family": "Vlaeyen",
-        "given": "J.W.S.",
-      },
-      Object {
-        "family": "Moseley",
-        "given": "G.L.",
-      },
-    ],
-    "container-title": Array [
-      "Pain Medicine",
-    ],
-    "date": Array [
-      "2017",
-    ],
-    "doi": Array [
-      "10.1093/pm/pnw221",
-    ],
-    "issue": Array [
-      "7",
-    ],
-    "pages": Array [
-      "1314–1325",
-    ],
-    "title": Array [
-      "Classical conditioning fails to elicit allodynia in an experimental study with healthy humans",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1093/pm/pnw221",
-    ],
-    "volume": Array [
-      "18",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Manolov",
-        "given": "R.",
-      },
-      Object {
-        "family": "Moeyaert",
-        "given": "M.",
-      },
-    ],
-    "container-title": Array [
-      "Behavior Therapy",
-    ],
-    "date": Array [
-      "2017",
-    ],
-    "doi": Array [
-      "10.1016/j.beth.2016.04.008",
-    ],
-    "issue": Array [
-      "1",
-    ],
-    "pages": Array [
-      "97–114",
-    ],
-    "title": Array [
-      "Recommendations for choosing single-case data analytical techniques",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1016/j.beth.2016.04.008",
-    ],
-    "volume": Array [
-      "48",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Manolov",
-        "given": "R.",
-      },
-      Object {
-        "family": "Solanas",
-        "given": "A.",
-      },
-    ],
-    "container-title": Array [
-      "Brain Impairment",
-    ],
-    "date": Array [
-      "2018",
-    ],
-    "doi": Array [
-      "10.1017/BrImp.2017.17",
-    ],
-    "issue": Array [
-      "1",
-    ],
-    "pages": Array [
-      "18–32",
-    ],
-    "title": Array [
-      "Analytical options for single-case experimental designs: Review and application to brain impairment",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1017/BrImp.2017.17",
-    ],
-    "volume": Array [
-      "19",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Matyas",
-        "given": "T.A.",
-      },
-      Object {
-        "family": "Greenwood",
-        "given": "K.M.",
-      },
-    ],
-    "container-title": Array [
-      "Journal of Applied Behavior Analysis",
-    ],
-    "date": Array [
-      "1990",
-    ],
-    "doi": Array [
-      "10.1901/jaba.1990.23-341",
-    ],
-    "issue": Array [
-      "3",
-    ],
-    "pages": Array [
-      "341–351",
-    ],
-    "title": Array [
-      "Visual analysis of single-case time series: Effects of variability, serial dependence, and magnitude of intervention effects",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1901/jaba.1990.23-341",
-    ],
-    "volume": Array [
-      "23",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Michiels",
-        "given": "B.",
-      },
-      Object {
-        "family": "Heyvaert",
-        "given": "M.",
-      },
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "container-title": Array [
-      "Behavior Research Methods",
-    ],
-    "date": Array [
-      "2018",
-    ],
-    "doi": Array [
-      "10.3758/s13428-017-0885-7",
-    ],
-    "issue": Array [
-      "2",
-    ],
-    "pages": Array [
-      "557–575",
-    ],
-    "title": Array [
-      "The conditional power of randomization tests for single-case effect sizes in designs with randomized treatment order: A Monte Carlo simulation study",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.3758/s13428-017-0885-7",
-    ],
-    "volume": Array [
-      "50",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Michiels",
-        "given": "B.",
-      },
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "container-title": Array [
-      "Behavior Research Methods",
-    ],
-    "date": Array [
-      "2019",
-    ],
-    "doi": Array [
-      "10.3758/s13428-018-1084-x",
-    ],
-    "issue": Array [
-      "6",
-    ],
-    "pages": Array [
-      "2454–2476",
-    ],
-    "title": Array [
-      "Randomized single-case AB phase designs: Prospects and pitfalls",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.3758/s13428-018-1084-x",
-    ],
-    "volume": Array [
-      "51",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Michiels",
-        "given": "B.",
-      },
-      Object {
-        "family": "Tanious",
-        "given": "R.",
-      },
-      Object {
-        "family": "De",
-        "given": "T.K.",
-      },
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "container-title": Array [
-      "Behavior Research Methods",
-    ],
-    "date": Array [
-      "2020",
-    ],
-    "doi": Array [
-      "10.3758/s13428-019-01266-6",
-    ],
-    "issue": Array [
-      "2",
-    ],
-    "pages": Array [
-      "654–666",
-    ],
-    "title": Array [
-      "A randomization test wrapper for synthesizing single-case experiments using multilevel models: A Monte Carlo simulation study",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.3758/s13428-019-01266-6",
-    ],
-    "volume": Array [
-      "52",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Molenaar",
-        "given": "P.C.M.",
-      },
-      Object {
-        "family": "Campbell",
-        "given": "C.G.",
-      },
-    ],
-    "container-title": Array [
-      "Current Directions in Psychological Science",
-    ],
-    "date": Array [
-      "2009",
-    ],
-    "doi": Array [
-      "10.1111/j.1467-8721.2009.01619.x",
-    ],
-    "issue": Array [
-      "2",
-    ],
-    "pages": Array [
-      "112–117",
-    ],
-    "title": Array [
-      "The new person-specific paradigm in psychology",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1111/j.1467-8721.2009.01619.x",
-    ],
-    "volume": Array [
-      "18",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Moseley",
-        "given": "G.L.",
-      },
-      Object {
-        "family": "Vlaeyen",
-        "given": "J.W.S.",
-      },
-    ],
-    "container-title": Array [
-      "Pain",
-    ],
-    "date": Array [
-      "2015",
-    ],
-    "doi": Array [
-      "10.1016/j.pain.0000000000000014",
-    ],
-    "issue": Array [
-      "1",
-    ],
-    "pages": Array [
-      "35–38",
-    ],
-    "title": Array [
-      "Beyond nociception: The imprecision hypothesis of chronic pain",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1016/j.pain.0000000000000014",
-    ],
-    "volume": Array [
-      "156",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "container-title": Array [
-      "Behavioral Assessment",
-    ],
-    "date": Array [
-      "1992",
-    ],
-    "issue": Array [
-      "2",
-    ],
-    "pages": Array [
-      "153–171",
-    ],
-    "title": Array [
-      "Randomization tests for extensions and variations of ABAB single-case experimental designs: A rejoinder",
-    ],
-    "type": "article-journal",
-    "volume": Array [
-      "14",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "container-title": Array [
-      "Encyclopedia of statistics in behavioral science",
-    ],
-    "date": Array [
-      "2005",
-    ],
-    "doi": Array [
-      "10.1002/0470013192.bsa625",
-    ],
-    "editor": Array [
-      Object {
-        "family": "Everitt",
-        "given": "B.",
-      },
-      Object {
-        "family": "Howell",
-        "given": "D.",
-      },
-    ],
-    "pages": Array [
-      "1850–1854",
-    ],
-    "publisher": Array [
-      "John Wiley & Sons, Ltd",
-    ],
-    "title": Array [
-      "Single‐case designs",
-    ],
-    "type": "chapter",
-    "url": Array [
-      "https://doi.org/10.1002/0470013192.bsa625",
-    ],
-    "volume": Array [
-      "4",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Ottenbacher",
-        "given": "K.J.",
-      },
-    ],
-    "container-title": Array [
-      "The Journal of Special Education",
-    ],
-    "date": Array [
-      "1990",
-    ],
-    "doi": Array [
-      "10.1177/002246699002300407",
-    ],
-    "issue": Array [
-      "4",
-    ],
-    "pages": Array [
-      "436–449",
-    ],
-    "title": Array [
-      "When is a picture worth a thousand p values? A comparison of visual and quantitative methods to analyze single subject data",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1177/002246699002300407",
-    ],
-    "volume": Array [
-      "23",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Pavlov",
-        "given": "I.P.",
-      },
-    ],
-    "date": Array [
-      "1928",
-    ],
-    "doi": Array [
-      "10.1037/11081-000",
-    ],
-    "publisher": Array [
-      "Liverwright Publishing Corporation",
-    ],
-    "title": Array [
-      "Lectures on conditioned reflexes: Twenty-five years of objective study of the higher nervous activity (behaviour) of animals",
-    ],
-    "type": "book",
-    "url": Array [
-      "https://doi.org/10.1037/11081-000",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Smith",
-        "given": "J.D.",
-      },
-    ],
-    "container-title": Array [
-      "Psychological Methods",
-    ],
-    "date": Array [
-      "2012",
-    ],
-    "doi": Array [
-      "10.1037/a0029312",
-    ],
-    "issue": Array [
-      "4",
-    ],
-    "pages": Array [
-      "510–550",
-    ],
-    "title": Array [
-      "Single-case experimental designs: A systematic review of published research and current standards",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1037/a0029312",
-    ],
-    "volume": Array [
-      "17",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Solomon",
-        "given": "B.G.",
-      },
-    ],
-    "container-title": Array [
-      "Behavior Modification",
-    ],
-    "date": Array [
-      "2014",
-    ],
-    "doi": Array [
-      "10.1177/0145445513510931",
-    ],
-    "issue": Array [
-      "4",
-    ],
-    "pages": Array [
-      "477–496",
-    ],
-    "title": Array [
-      "Violations of assumptions in school-based single-case data: Implications for the selection and interpretation of effect sizes",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1177/0145445513510931",
-    ],
-    "volume": Array [
-      "38",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Spruyt",
-        "given": "A.",
-      },
-      Object {
-        "family": "Clarysse",
-        "given": "J.",
-      },
-      Object {
-        "family": "Vansteenwegen",
-        "given": "D.",
-      },
-      Object {
-        "family": "Baeyens",
-        "given": "F.",
-      },
-      Object {
-        "family": "Hermans",
-        "given": "D.",
-      },
-    ],
-    "container-title": Array [
-      "Experimental Psychology",
-    ],
-    "date": Array [
-      "2009",
-    ],
-    "doi": Array [
-      "10.1027/1618-3169/a000005",
-    ],
-    "issue": Array [
-      "1",
-    ],
-    "pages": Array [
-      "36–45",
-    ],
-    "title": Array [
-      "Affect 4.0: A free software package for implementing psychological and psychophysiological experiments",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1027/1618-3169/a000005",
-    ],
-    "volume": Array [
-      "57",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Traxler",
-        "given": "J.",
-      },
-      Object {
-        "family": "Madden",
-        "given": "V.J.",
-      },
-      Object {
-        "family": "Moseley",
-        "given": "G.L.",
-      },
-      Object {
-        "family": "Vlaeyen",
-        "given": "J.W.S.",
-      },
-    ],
-    "container-title": Array [
-      "PeerJ",
-    ],
-    "date": Array [
-      "2019",
-    ],
-    "doi": Array [
-      "10.7717/peerj.6486",
-    ],
-    "issue": Array [
-      "3",
-    ],
-    "pages": Array [
-      "1–20",
-    ],
-    "title": Array [
-      "Modulating pain thresholds through classical conditioning",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.7717/peerj.6486",
-    ],
-    "volume": Array [
-      "2019",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Treede",
-        "given": "R.D.",
-      },
-      Object {
-        "family": "Rief",
-        "given": "W.",
-      },
-      Object {
-        "family": "Barke",
-        "given": "A.",
-      },
-      Object {
-        "family": "Aziz",
-        "given": "Q.",
-      },
-      Object {
-        "family": "Bennett",
-        "given": "M.I.",
-      },
-      Object {
-        "family": "Benoliel",
-        "given": "R.",
-      },
-      Object {
-        "family": "Cohen",
-        "given": "M.",
-      },
-      Object {
-        "family": "Evers",
-        "given": "S.",
-      },
-      Object {
-        "family": "Finnerup",
-        "given": "N.B.",
-      },
-      Object {
-        "family": "First",
-        "given": "M.B.",
-      },
-      Object {
-        "family": "Giamberardino",
-        "given": "M.A.",
-      },
-      Object {
-        "family": "Kaasa",
-        "given": "S.",
-      },
-      Object {
-        "family": "Korwisi",
-        "given": "B.",
-      },
-      Object {
-        "family": "Kosek",
-        "given": "E.",
-      },
-      Object {
-        "family": "Lavand’Homme",
-        "given": "P.",
-      },
-      Object {
-        "family": "Nicholas",
-        "given": "M.",
-      },
-      Object {
-        "family": "Perrot",
-        "given": "S.",
-      },
-      Object {
-        "family": "Scholz",
-        "given": "J.",
-      },
-      Object {
-        "family": "Schug",
-        "given": "S.",
-      },
-      Object {
-        "family": "Wang",
-        "given": "S.J.",
-      },
-      Object {
-        "others": true,
-      },
-    ],
-    "container-title": Array [
-      "Pain",
-    ],
-    "date": Array [
-      "2019",
-    ],
-    "doi": Array [
-      "10.1097/j.pain.0000000000001384",
-    ],
-    "issue": Array [
-      "1",
-    ],
-    "pages": Array [
-      "19–27",
-    ],
-    "title": Array [
-      "Chronic pain as a symptom or a disease: The IASP classification of chronic pain for the International Classification of Diseases (ICD-11",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1097/j.pain.0000000000001384",
-    ],
-    "volume": Array [
-      "160",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Tsang",
-        "given": "A.",
-      },
-      Object {
-        "family": "Korff",
-        "given": "M.",
-        "particle": "Von",
-      },
-      Object {
-        "family": "Lee",
-        "given": "S.",
-      },
-      Object {
-        "family": "Alonso",
-        "given": "J.",
-      },
-      Object {
-        "family": "Karam",
-        "given": "E.",
-      },
-      Object {
-        "family": "Angermeyer",
-        "given": "M.C.",
-      },
-      Object {
-        "family": "Borges",
-        "given": "G.L.G.",
-      },
-      Object {
-        "family": "Bromet",
-        "given": "E.J.",
-      },
-      Object {
-        "family": "Demytteneare",
-        "given": "K.",
-      },
-      Object {
-        "family": "Girolamo",
-        "given": "G.",
-        "particle": "de",
-      },
-      Object {
-        "family": "Graaf",
-        "given": "R.",
-        "particle": "de",
-      },
-      Object {
-        "family": "Gureje",
-        "given": "O.",
-      },
-      Object {
-        "family": "Lepine",
-        "given": "J.-P.",
-      },
-      Object {
-        "family": "Haro",
-        "given": "J.M.",
-      },
-      Object {
-        "family": "Levinson",
-        "given": "D.",
-      },
-      Object {
-        "family": "Oakley Browne",
-        "given": "M.A.",
-      },
-      Object {
-        "family": "Posada-Villa",
-        "given": "J.",
-      },
-      Object {
-        "family": "Seedat",
-        "given": "S.",
-      },
-      Object {
-        "family": "Watanabe",
-        "given": "M.",
-      },
-    ],
-    "container-title": Array [
-      "The Journal of Pain",
-    ],
-    "date": Array [
-      "2008",
-    ],
-    "doi": Array [
-      "10.1016/j.jpain.2008.05.005",
-    ],
-    "issue": Array [
-      "10",
-    ],
-    "pages": Array [
-      "883–891",
-    ],
-    "title": Array [
-      "Common chronic pain conditions in developed and developing countries: Gender and age differences and comorbidity with depression-anxiety disorders",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1016/j.jpain.2008.05.005",
-    ],
-    "volume": Array [
-      "9",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Vlaeyen",
-        "given": "J.W.S.",
-      },
-      Object {
-        "family": "Linton",
-        "given": "S.J.",
-      },
-    ],
-    "container-title": Array [
-      "Pain",
-    ],
-    "date": Array [
-      "2000",
-    ],
-    "doi": Array [
-      "10.1016/s0304-3959(99)00242-0",
-    ],
-    "issue": Array [
-      "3",
-    ],
-    "pages": Array [
-      "317–332",
-    ],
-    "title": Array [
-      "Fear-avoidance and its consequences in chronic musculoskeletal pain: A state of the art",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1016/s0304-3959(99)00242-0",
-    ],
-    "volume": Array [
-      "85",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Vlaeyen",
-        "given": "J.W.S.",
-      },
-      Object {
-        "family": "Linton",
-        "given": "S.J.",
-      },
-    ],
-    "container-title": Array [
-      "Pain",
-    ],
-    "date": Array [
-      "2012",
-    ],
-    "doi": Array [
-      "10.1016/j.pain.2011.12.009",
-    ],
-    "issue": Array [
-      "6",
-    ],
-    "pages": Array [
-      "1144–1147",
-    ],
-    "title": Array [
-      "Fear-avoidance model of chronic musculoskeletal pain: 12 years on",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1016/j.pain.2011.12.009",
-    ],
-    "volume": Array [
-      "153",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Vlaeyen",
-        "given": "J.W.S.",
-      },
-      Object {
-        "family": "Wicksell",
-        "given": "R.K.",
-      },
-      Object {
-        "family": "Simons",
-        "given": "L.E.",
-      },
-      Object {
-        "family": "Gentili",
-        "given": "C.",
-      },
-      Object {
-        "family": "De",
-        "given": "T.K.",
-      },
-      Object {
-        "family": "Tate",
-        "given": "R.L.",
-      },
-      Object {
-        "family": "Vohra",
-        "given": "S.",
-      },
-      Object {
-        "family": "Punja",
-        "given": "S.",
-      },
-      Object {
-        "family": "Linton",
-        "given": "S.J.",
-      },
-      Object {
-        "family": "Sniehotta",
-        "given": "F.F.",
-      },
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "container-title": Array [
-      "The Psychological Record",
-    ],
-    "date": Array [
-      "2020",
-    ],
-    "doi": Array [
-      "10.1007/s40732-020-00402-5",
-    ],
-    "pages": Array [
-      "659–670",
-    ],
-    "title": Array [
-      "From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1007/s40732-020-00402-5",
-    ],
-    "volume": Array [
-      "70",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Vohra",
-        "given": "S.",
-      },
-      Object {
-        "family": "Shamseer",
-        "given": "L.",
-      },
-      Object {
-        "family": "Sampson",
-        "given": "M.",
-      },
-      Object {
-        "family": "Bukutu",
-        "given": "C.",
-      },
-      Object {
-        "family": "Schmid",
-        "given": "C.H.",
-      },
-      Object {
-        "family": "Tate",
-        "given": "R.",
-      },
-      Object {
-        "family": "Nikles",
-        "given": "J.",
-      },
-      Object {
-        "family": "Zucker",
-        "given": "D.R.",
-      },
-      Object {
-        "family": "Kravitz",
-        "given": "R.",
-      },
-      Object {
-        "family": "Guyatt",
-        "given": "G.",
-      },
-      Object {
-        "family": "Altman",
-        "given": "D.G.",
-      },
-      Object {
-        "family": "Moher",
-        "given": "D.",
-      },
-    ],
-    "date": Array [
-      "2015",
-    ],
-    "doi": Array [
-      "10.1136/bmj.h1738",
-    ],
-    "note": Array [
-      "CONSORT extension for reporting N-of-1 trials (CENT) 2015 statement. BMJ (Clinical Research Ed.), 350, h1738.",
-    ],
-    "type": "report",
-    "url": Array [
-      "https://doi.org/10.1136/bmj.h1738",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Willkinson",
-        "given": "L.",
-      },
-    ],
-    "container-title": Array [
-      "American Psychologist",
-    ],
-    "date": Array [
-      "1999",
-    ],
-    "doi": Array [
-      "10.1037/0003-066X.54.8.594",
-    ],
-    "issue": Array [
-      "8",
-    ],
-    "pages": Array [
-      "594–604",
-    ],
-    "title": Array [
-      "Statistical methods in psychology journals: Guidelines and explanations",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1037/0003-066X.54.8.594",
-    ],
-    "volume": Array [
-      "54",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Woolf",
-        "given": "C.J.",
-      },
-    ],
-    "container-title": Array [
-      "Nature",
-    ],
-    "date": Array [
-      "1983",
-    ],
-    "doi": Array [
-      "10.1038/306686a0",
-    ],
-    "issue": Array [
-      "5944",
-    ],
-    "pages": Array [
-      "686–688",
-    ],
-    "title": Array [
-      "Evidence for a central component of post-injury pain hypersensitivity",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1038/306686a0",
-    ],
-    "volume": Array [
-      "306",
-    ],
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Woolf",
-        "given": "C.J.",
-      },
-    ],
-    "container-title": Array [
-      "Pain",
-    ],
-    "date": Array [
-      "2011",
-    ],
-    "doi": Array [
-      "10.1016/j.pain.2010.09.030",
-    ],
-    "issue": Array [
-      "3 Suppl",
-    ],
-    "title": Array [
-      "Central sensitization: Implications for the diagnosis and treatment of pain",
-    ],
-    "type": "article-journal",
-    "url": Array [
-      "https://doi.org/10.1016/j.pain.2010.09.030",
-    ],
-    "volume": Array [
-      "152",
-    ],
-  },
-]
-`;
-
-exports[`parseBib should call anystyle cli 1`] = `
-Array [
-  Object {
-    "DOI": "10.1006/anbe.1996.0077",
-    "URL": "https://doi.org/https://doi.org/10.1006/anbe.1996.0077",
     "author": Array [
       Object {
         "family": "Adams",
@@ -2354,28 +44,735 @@ Array [
   },
   Object {
     "DOI": "10.1371/journal.pone.0228355",
-    "URL": "https://doi.org/10.1371/journal.pone.0228355",
+    "ISSN": Array [
+      "1932-6203",
+    ],
+    "URL": "http://dx.doi.org/10.1371/journal.pone.0228355",
     "author": Array [
       Object {
+        "ORCID": "http://orcid.org/0000-0003-1771-0546",
+        "affiliation": Array [],
+        "authenticated-orcid": true,
         "family": "Bouwmeester",
-        "given": "S.",
+        "given": "Samantha",
+        "sequence": "first",
       },
       Object {
+        "affiliation": Array [],
         "family": "Jongerling",
-        "given": "J.",
+        "given": "Joran",
+        "sequence": "additional",
       },
     ],
-    "container-title": "PLoS ONE",
+    "container-title": "PLOS ONE",
+    "container-title-short": "PLoS ONE",
+    "content-domain": Object {
+      "crossmark-restriction": false,
+      "domain": Array [
+        "www.plosone.org",
+      ],
+    },
+    "created": Object {
+      "date-parts": Array [
+        Array [
+          2020,
+          2,
+          6,
+        ],
+      ],
+      "date-time": "2020-02-06T13:38:10Z",
+      "timestamp": 1580996290000,
+    },
+    "deposited": Object {
+      "date-parts": Array [
+        Array [
+          2020,
+          2,
+          6,
+        ],
+      ],
+      "date-time": "2020-02-06T13:38:31Z",
+      "timestamp": 1580996311000,
+    },
+    "editor": Array [
+      Object {
+        "affiliation": Array [],
+        "family": "Gasparini",
+        "given": "Mauro",
+        "sequence": "first",
+      },
+    ],
+    "indexed": Object {
+      "date-parts": Array [
+        Array [
+          2022,
+          2,
+          7,
+        ],
+      ],
+      "date-time": "2022-02-07T18:26:21Z",
+      "timestamp": 1644258381766,
+    },
+    "is-referenced-by-count": 13,
     "issue": "2",
-    "issued": "2020",
-    "page": "1–21",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          2020,
+          2,
+          6,
+        ],
+      ],
+    },
+    "journal-issue": Object {
+      "issue": "2",
+      "published-online": Object {
+        "date-parts": Array [
+          Array [
+            2020,
+            2,
+            6,
+          ],
+        ],
+      },
+    },
+    "language": "en",
+    "license": Array [
+      Object {
+        "URL": "http://creativecommons.org/licenses/by/4.0/",
+        "content-version": "vor",
+        "delay-in-days": 0,
+        "start": Object {
+          "date-parts": Array [
+            Array [
+              2020,
+              2,
+              6,
+            ],
+          ],
+          "date-time": "2020-02-06T00:00:00Z",
+          "timestamp": 1580947200000,
+        },
+      },
+    ],
+    "link": Array [
+      Object {
+        "URL": "https://dx.plos.org/10.1371/journal.pone.0228355",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking",
+      },
+    ],
+    "member": "340",
+    "original-title": Array [],
+    "page": "e0228355",
+    "prefix": "10.1371",
+    "published": Object {
+      "date-parts": Array [
+        Array [
+          2020,
+          2,
+          6,
+        ],
+      ],
+    },
+    "published-online": Object {
+      "date-parts": Array [
+        Array [
+          2020,
+          2,
+          6,
+        ],
+      ],
+    },
+    "publisher": "Public Library of Science (PLoS)",
+    "reference": Array [
+      Object {
+        "author": "G.T. Fechner",
+        "key": "pone.0228355.ref001",
+        "volume-title": "Elemente der psychophysik [Elements of psychophysics]",
+        "year": "1889",
+      },
+      Object {
+        "author": "J.B. Watson",
+        "key": "pone.0228355.ref002",
+        "volume-title": "Behaviorism",
+        "year": "1925",
+      },
+      Object {
+        "author": "B.F Skinner",
+        "key": "pone.0228355.ref003",
+        "volume-title": "The behavior of organisms",
+        "year": "1938",
+      },
+      Object {
+        "DOI": "10.1037/a0029312",
+        "article-title": "Single-case experimental designs: a systematic review of published research and current standards",
+        "author": "J.D. Smith",
+        "doi-asserted-by": "crossref",
+        "first-page": "510",
+        "journal-title": "Psychological Methods",
+        "key": "pone.0228355.ref004",
+        "volume": "17",
+        "year": "2012",
+      },
+      Object {
+        "DOI": "10.1037/0003-066X.56.2.119",
+        "article-title": "Single-participant research design: Bringing science to managed care",
+        "author": "D.L. Morgan",
+        "doi-asserted-by": "crossref",
+        "first-page": "119",
+        "journal-title": "American Psychologist",
+        "key": "pone.0228355.ref005",
+        "volume": "56",
+        "year": "2001",
+      },
+      Object {
+        "DOI": "10.3758/BRM.40.2.467",
+        "article-title": "An R package for single-case randomization tests",
+        "author": "I. Bulté",
+        "doi-asserted-by": "crossref",
+        "first-page": "467",
+        "journal-title": "Behavior Research Methods",
+        "key": "pone.0228355.ref006",
+        "volume": "40",
+        "year": "2008",
+      },
+      Object {
+        "author": "A. Kazdin",
+        "key": "pone.0228355.ref007",
+        "volume-title": "Single-case research designs: Methods for clinical and applied settings",
+        "year": "2011",
+      },
+      Object {
+        "DOI": "10.5014/ajot.2017.022210",
+        "article-title": "Single-case experimental design: Current standards and applications in occupational therapy",
+        "author": "J. Lane",
+        "doi-asserted-by": "crossref",
+        "first-page": "7102300010",
+        "journal-title": "The American Journal of Occupational Therapy: Official Publication of the American Occupational Therapy Association",
+        "key": "pone.0228355.ref008",
+        "volume": "71",
+        "year": "2017",
+      },
+      Object {
+        "DOI": "10.1177/1088357617741282",
+        "doi-asserted-by": "crossref",
+        "key": "pone.0228355.ref009",
+        "unstructured": "Qi, C., Barton, E., Collier, M., & Lin, Y. (2017). A systematic review of single-case research studies on using video modeling interventions to improve social communication skills for individuals with autism spectrum disorder. Focus on Autism and Other Developmental Disabilities. https://doi.org/10.1177/1088357617741282.",
+      },
+      Object {
+        "DOI": "10.1007/s40688-014-0025-7",
+        "article-title": "Methods for assessing single-case school-based intervention outcomes",
+        "author": "R. Busse",
+        "doi-asserted-by": "crossref",
+        "first-page": "136",
+        "journal-title": "Contemporary School Psychology: The Official Journal of the California Association of School Psychologists",
+        "key": "pone.0228355.ref010",
+        "volume": "19",
+        "year": "2015",
+      },
+      Object {
+        "DOI": "10.1007/s10864-006-9036-4",
+        "article-title": "Describing baseline conditions: Suggestions for study reports",
+        "author": "K. Lane",
+        "doi-asserted-by": "crossref",
+        "first-page": "224",
+        "journal-title": "Journal of Behavioral Education",
+        "key": "pone.0228355.ref011",
+        "volume": "16",
+        "year": "2007",
+      },
+      Object {
+        "DOI": "10.1037/a0018600",
+        "article-title": "Visual Analysis of Multiple Baseline Across Participants Graphs When Change Is Delayed",
+        "author": "G. R. Lieberman",
+        "doi-asserted-by": "crossref",
+        "first-page": "28",
+        "journal-title": "School Psychology Quarterly",
+        "key": "pone.0228355.ref012",
+        "volume": "25",
+        "year": "2010",
+      },
+      Object {
+        "author": "R. H. Horner",
+        "first-page": "53",
+        "key": "pone.0228355.ref013",
+        "volume-title": "Single-case intervention research: Methodological and statistical advances",
+        "year": "2014",
+      },
+      Object {
+        "DOI": "10.3758/BRM.41.2.477",
+        "article-title": "Randomization tests for multiple-baseline designs: An extension of the scrt-r package",
+        "author": "I. Bulté",
+        "doi-asserted-by": "crossref",
+        "first-page": "477",
+        "journal-title": "Behavior Research Methods, Instruments, & Computers",
+        "key": "pone.0228355.ref014",
+        "volume": "41",
+        "year": "2009",
+      },
+      Object {
+        "DOI": "10.1177/1049731511403324",
+        "article-title": "Randomized controlled studies and alternative designs in outcome studies: Challenges and opportunities",
+        "author": "W. Shadish",
+        "doi-asserted-by": "crossref",
+        "first-page": "636",
+        "journal-title": "Research on Social Work Practice",
+        "key": "pone.0228355.ref015",
+        "volume": "21",
+        "year": "2011",
+      },
+      Object {
+        "DOI": "10.4324/9780203521892-11",
+        "author": "D. L. Gast",
+        "doi-asserted-by": "crossref",
+        "first-page": "251",
+        "key": "pone.0228355.ref016",
+        "volume-title": "Single case research methodology",
+        "year": "2014",
+      },
+      Object {
+        "author": "J. O. Cooper",
+        "key": "pone.0228355.ref017",
+        "volume-title": "Applied behavior analysis",
+        "year": "2007",
+      },
+      Object {
+        "DOI": "10.1027/1614-2241/a000042",
+        "article-title": "When the truth hits you between the eyes: A software tool for the visual analysis of single-case experimental data. Methodology",
+        "author": "I. Bulté",
+        "doi-asserted-by": "crossref",
+        "first-page": "104",
+        "journal-title": "European Journal of Research Methods for the Behavioral and Social Sciences",
+        "key": "pone.0228355.ref018",
+        "volume": "8",
+        "year": "2012",
+      },
+      Object {
+        "DOI": "10.1002/jcad.12039",
+        "article-title": "Reporting results of single-case studies",
+        "author": "B. Hott",
+        "doi-asserted-by": "crossref",
+        "first-page": "412",
+        "journal-title": "Journal of Counseling and Development: Jcd",
+        "key": "pone.0228355.ref019",
+        "volume": "93",
+        "year": "2015",
+      },
+      Object {
+        "DOI": "10.1080/09602011.2013.815636",
+        "article-title": "Visual analysis in single case experimental design studies: Brief review and guidelines",
+        "author": "J. Lane",
+        "doi-asserted-by": "crossref",
+        "first-page": "445",
+        "journal-title": "Neuropsychological Rehabilitation",
+        "key": "pone.0228355.ref020",
+        "volume": "24",
+        "year": "2014",
+      },
+      Object {
+        "DOI": "10.1017/BrImp.2017.16",
+        "article-title": "Systematic use of visual analysis for assessing outcomes in single case design studies",
+        "author": "J. Ledford",
+        "doi-asserted-by": "crossref",
+        "first-page": "4",
+        "journal-title": "Brain Impairment",
+        "key": "pone.0228355.ref021",
+        "volume": "19",
+        "year": "2018",
+      },
+      Object {
+        "DOI": "10.1901/jaba.1990.23-341",
+        "article-title": "Visual analysis of single-case time series: Effects of variability, serial dependence, and magnitude of intervention effects",
+        "author": "T. A. Matyas",
+        "doi-asserted-by": "crossref",
+        "first-page": "341",
+        "journal-title": "Journal of Applied Behavior Analysis",
+        "key": "pone.0228355.ref022",
+        "volume": "23",
+        "year": "1990",
+      },
+      Object {
+        "DOI": "10.4324/9781410600943",
+        "author": "J. B. Todman",
+        "doi-asserted-by": "crossref",
+        "key": "pone.0228355.ref023",
+        "volume-title": "Single-case and small-n experimental designs: A practical guide to randomization tests",
+        "year": "2001",
+      },
+      Object {
+        "DOI": "10.1080/00273171.2014.973989",
+        "article-title": "Comparing Visual and Statistical Analysis in Single-Case Studies Using Published Studies",
+        "author": "M. Harrington",
+        "doi-asserted-by": "crossref",
+        "first-page": "162",
+        "journal-title": "Multivariate Behavioral Research",
+        "key": "pone.0228355.ref024",
+        "volume": "50",
+        "year": "2015",
+      },
+      Object {
+        "DOI": "10.1901/jaba.1979.12-573",
+        "article-title": "Inconsistent visual analysis of intrasubject data",
+        "author": "A. DeProspero",
+        "doi-asserted-by": "crossref",
+        "first-page": "573",
+        "journal-title": "Journal of Applied Behavior Analysis",
+        "key": "pone.0228355.ref025",
+        "volume": "12",
+        "year": "1979",
+      },
+      Object {
+        "DOI": "10.1080/00220973.1990.10806545",
+        "article-title": "Visual inspection and statistical analysis in single-case designs",
+        "author": "H. Park",
+        "doi-asserted-by": "crossref",
+        "first-page": "311",
+        "issue": "4",
+        "journal-title": "The Journal of Experimental Education",
+        "key": "pone.0228355.ref026",
+        "volume": "58",
+        "year": "1990",
+      },
+      Object {
+        "DOI": "10.1002/jcad.12038",
+        "article-title": "Evaluating intervention effects in single-case research designs",
+        "author": "K. Vannest",
+        "doi-asserted-by": "crossref",
+        "first-page": "403",
+        "journal-title": "Journal of Counseling & Development",
+        "key": "pone.0228355.ref027",
+        "volume": "93",
+        "year": "2015",
+      },
+      Object {
+        "DOI": "10.1093/jpepsy/jst065",
+        "article-title": "Single-case research design in pediatric psychology: considerations regarding data analysis",
+        "author": "L. Cohen",
+        "doi-asserted-by": "crossref",
+        "first-page": "124",
+        "issue": "2",
+        "journal-title": "Journal of Pediatric Psychology",
+        "key": "pone.0228355.ref028",
+        "volume": "39",
+        "year": "2014",
+      },
+      Object {
+        "DOI": "10.1007/s12124-014-9290-2",
+        "doi-asserted-by": "crossref",
+        "key": "pone.0228355.ref029",
+        "unstructured": "Hurtado-Parrado, C., & López-López, W. D2015]. Single-case research methods: history and suitability for a psychological science in need of alternatives. Integrative Psychological and Behavioral Science.",
+      },
+      Object {
+        "DOI": "10.1111/j.2044-8260.1991.tb00926.x",
+        "article-title": "Graphical analysis of single-case time series data",
+        "author": "S. Morley",
+        "doi-asserted-by": "crossref",
+        "first-page": "97",
+        "journal-title": "British Journal of Clinical Psychology",
+        "key": "pone.0228355.ref030",
+        "volume": "30",
+        "year": "1991",
+      },
+      Object {
+        "author": "B. S. Gorman",
+        "first-page": "159",
+        "key": "pone.0228355.ref031",
+        "volume-title": "Design and analysis of single-case research",
+        "year": "1996",
+      },
+      Object {
+        "DOI": "10.1016/0169-2607(91)90103-Z",
+        "article-title": "Randomization tests: Statistics for experimenters / j. w. l. Hooton",
+        "author": "J. Hooton",
+        "doi-asserted-by": "crossref",
+        "first-page": "43",
+        "journal-title": "Computer Programs in Biomedicine",
+        "key": "pone.0228355.ref032",
+        "volume": "35",
+        "year": "1991",
+      },
+      Object {
+        "author": "A. Kazdin",
+        "key": "pone.0228355.ref033",
+        "volume-title": "Single-case research designs: Methods for clinical and applied settings",
+        "year": "1982",
+      },
+      Object {
+        "DOI": "10.1016/0010-468X(82)90062-9",
+        "article-title": "The simulated randomization test",
+        "author": "M. Recchia",
+        "doi-asserted-by": "crossref",
+        "first-page": "111",
+        "journal-title": "Computer Programs in Biomedicine",
+        "key": "pone.0228355.ref034",
+        "volume": "15",
+        "year": "1982",
+      },
+      Object {
+        "author": "G.E.P. Box",
+        "key": "pone.0228355.ref035",
+        "volume-title": "Time Series Analysis; Forecasting and Control",
+        "year": "1994",
+      },
+      Object {
+        "DOI": "10.1037/0022-006X.61.6.966",
+        "article-title": "Interrupted time-series analysis with brief single-subject data",
+        "author": "J. Crosbie",
+        "doi-asserted-by": "crossref",
+        "first-page": "966",
+        "journal-title": "Journal of Consulting and Clinical Psychology",
+        "key": "pone.0228355.ref036",
+        "volume": "61",
+        "year": "1993",
+      },
+      Object {
+        "DOI": "10.1901/jaba.1982.15-423",
+        "article-title": "A simplified time-series analysis for evaluating treatment interventions",
+        "author": "W. W. Tryon",
+        "doi-asserted-by": "crossref",
+        "first-page": "423",
+        "journal-title": "Journal of Applied Behavior Analysis",
+        "key": "pone.0228355.ref037",
+        "volume": "15",
+        "year": "1982",
+      },
+      Object {
+        "article-title": "Randomization tests for multiple-baseline designs",
+        "author": "B. E. Wampold",
+        "first-page": "135",
+        "journal-title": "Behavioral Assessment",
+        "key": "pone.0228355.ref038",
+        "volume": "8",
+        "year": "1986",
+      },
+      Object {
+        "article-title": "Combining statistics for multiple- baseline AB and replicated ABAB designs across subjects",
+        "author": "L.A. Marascuilo",
+        "first-page": "1",
+        "journal-title": "Behavioral Assessment",
+        "key": "pone.0228355.ref039",
+        "volume": "10",
+        "year": "1988",
+      },
+      Object {
+        "DOI": "10.1037/1082-989X.3.2.206",
+        "article-title": "Regulated randomization: A potentially sharper analytical tool for the multiple-baseline design",
+        "author": "M. J. Koehler",
+        "doi-asserted-by": "crossref",
+        "first-page": "206",
+        "journal-title": "Psychological Methods",
+        "key": "pone.0228355.ref040",
+        "volume": "3",
+        "year": "1998",
+      },
+      Object {
+        "DOI": "10.1080/00220970209599504",
+        "article-title": "Statistical power of randomization tests used with multiple-baseline designs",
+        "author": "J. Ferron",
+        "doi-asserted-by": "crossref",
+        "first-page": "165",
+        "journal-title": "Journal of Experimental Education",
+        "key": "pone.0228355.ref041",
+        "volume": "70",
+        "year": "2002",
+      },
+      Object {
+        "DOI": "10.1007/978-1-4757-2346-5",
+        "author": "P. I. Good",
+        "doi-asserted-by": "crossref",
+        "key": "pone.0228355.ref042",
+        "volume-title": "Permutation tests: A practical guide to resampling methods for testing hypotheses",
+        "year": "1994",
+      },
+      Object {
+        "DOI": "10.22237/jmasm/1036110240",
+        "article-title": "Extensions of the concept of exchangeability and their applications",
+        "author": "P. Good",
+        "doi-asserted-by": "crossref",
+        "first-page": "243",
+        "journal-title": "Journal of Modern Applied Statistical Methods",
+        "key": "pone.0228355.ref043",
+        "volume": "1",
+        "year": "2002",
+      },
+      Object {
+        "article-title": "Autocorrelation in single-subject research: A counterargument to the myth of no autocorrelation",
+        "author": "P. L. Busk",
+        "first-page": "229",
+        "journal-title": "Behavioral Assessment",
+        "key": "pone.0228355.ref044",
+        "volume": "10",
+        "year": "1988",
+      },
+      Object {
+        "DOI": "10.1016/B978-0-12-425850-1.50010-7",
+        "author": "J.R. Levin",
+        "doi-asserted-by": "crossref",
+        "first-page": "167",
+        "key": "pone.0228355.ref045",
+        "volume-title": "Single-subject research: Strategies for evaluating change",
+        "year": "1978",
+      },
+      Object {
+        "DOI": "10.1007/BF03391987",
+        "article-title": "Statistical inference in behavior analysis: Useful friend",
+        "author": "J Crosbie",
+        "doi-asserted-by": "crossref",
+        "first-page": "105",
+        "issue": "2",
+        "journal-title": "The Behavior analyst",
+        "key": "pone.0228355.ref046",
+        "volume": "22",
+        "year": "1999",
+      },
+      Object {
+        "DOI": "10.3200/JEXE.73.2.140-160",
+        "article-title": "Randomization Tests for Systematic Single- Case Designs Are Not Always Appropriate",
+        "author": "V.S. Esade",
+        "doi-asserted-by": "crossref",
+        "first-page": "140",
+        "journal-title": "The Journal of Experimental Education",
+        "key": "pone.0228355.ref047",
+        "volume": "73",
+        "year": "2005",
+      },
+      Object {
+        "DOI": "10.1139/f01-004",
+        "article-title": "Permutation tests for univariate or multivariate analyses of variance and regression",
+        "author": "M. J. Anderson",
+        "doi-asserted-by": "crossref",
+        "first-page": "626",
+        "journal-title": "Canadian Journal of Fisheries and Aquatic Sciences",
+        "key": "pone.0228355.ref048",
+        "volume": "58",
+        "year": "2001",
+      },
+      Object {
+        "DOI": "10.1080/00220970309602066",
+        "article-title": "Measurement, statistics, and research design–the functioning of single-case randomization tests with and without random assignment",
+        "author": "J. Ferron",
+        "doi-asserted-by": "crossref",
+        "first-page": "267",
+        "journal-title": "Journal of Experimental Education",
+        "key": "pone.0228355.ref049",
+        "volume": "71",
+        "year": "2003",
+      },
+      Object {
+        "DOI": "10.1177/1088357609350745",
+        "article-title": "The use of randomization tests in single-subject research",
+        "author": "R. Haardörfer",
+        "doi-asserted-by": "crossref",
+        "first-page": "47",
+        "journal-title": "Focus on Autism and Other Developmental Disabilities",
+        "key": "pone.0228355.ref050",
+        "volume": "25",
+        "year": "2010",
+      },
+      Object {
+        "DOI": "10.3200/JEXE.73.2.140-160",
+        "article-title": "Randomization tests for systematic single-case designs are not always appropriate",
+        "author": "V. Sierra",
+        "doi-asserted-by": "crossref",
+        "first-page": "140",
+        "journal-title": "The Journal of Experimental Education",
+        "key": "pone.0228355.ref051",
+        "volume": "73",
+        "year": "2005",
+      },
+      Object {
+        "DOI": "10.1177/0145445511399147",
+        "article-title": "Effect size in single-case research: a review of nine nonoverlap techniques",
+        "author": "R. I. Parker",
+        "doi-asserted-by": "crossref",
+        "first-page": "303",
+        "journal-title": "Behavior Modification",
+        "key": "pone.0228355.ref052",
+        "volume": "35",
+        "year": "2011",
+      },
+      Object {
+        "DOI": "10.1080/00273171.2018.1466681",
+        "article-title": "A gradual effects model for single-case designs",
+        "author": "D. Swan",
+        "doi-asserted-by": "crossref",
+        "first-page": "574",
+        "journal-title": "Multivariate Behavioral Research",
+        "key": "pone.0228355.ref053",
+        "volume": "53",
+        "year": "2018",
+      },
+      Object {
+        "author": "Rstudio Team",
+        "key": "pone.0228355.ref054",
+        "volume-title": "Rstudio: Integrated Development for R",
+        "year": "2015",
+      },
+      Object {
+        "key": "pone.0228355.ref055",
+        "unstructured": "Cohen, J. (1977). Statistical power analysis for the behavioral sciences. Routledge.",
+      },
+      Object {
+        "DOI": "10.1016/j.paid.2016.06.069",
+        "article-title": "Effect size guidelines for individual differences researchers",
+        "author": "G. E. Gignac",
+        "doi-asserted-by": "crossref",
+        "first-page": "74",
+        "journal-title": "Personality and Individual Differences",
+        "key": "pone.0228355.ref056",
+        "volume": "102",
+        "year": "2016",
+      },
+      Object {
+        "DOI": "10.1037/h0034625",
+        "article-title": "The random-sampling assumption in “comment on component-randomization tests”",
+        "author": "E. S. Edgington",
+        "doi-asserted-by": "crossref",
+        "first-page": "84",
+        "journal-title": "Psychological Bulletin",
+        "key": "pone.0228355.ref057",
+        "volume": "1",
+        "year": "1973",
+      },
+      Object {
+        "author": "J. M. Johnston",
+        "key": "pone.0228355.ref058",
+        "volume-title": "Strategies and tactics of behavioral research",
+        "year": "1993a",
+      },
+      Object {
+        "author": "J. M. Johnston",
+        "key": "pone.0228355.ref059",
+        "volume-title": "Readings for strategies and tactics of behavioral research",
+        "year": "1993b",
+      },
+    ],
+    "reference-count": 59,
+    "references-count": 59,
+    "relation": Object {
+      "is-supplemented-by": Array [
+        Object {
+          "asserted-by": "object",
+          "id": "10.17504/protocols.io.9vrh656",
+          "id-type": "doi",
+        },
+      ],
+    },
+    "score": 1,
+    "short-title": Array [],
+    "source": "Crossref",
+    "subject": Array [
+      "Multidisciplinary",
+    ],
+    "subtitle": Array [],
     "title": "Power of a randomization test in a single case multiple baseline AB design",
-    "type": "article-journal",
+    "type": "journal-article",
+    "update-policy": "http://dx.doi.org/10.1371/journal.pone.corrections_policy",
     "volume": "15",
   },
   Object {
-    "DOI": "10.1016/j.ejpain.2005.06.009",
-    "URL": "https://doi.org/10.1016/j.ejpain.2005.06.009",
     "author": Array [
       Object {
         "family": "Breivik",
@@ -2426,8 +823,6 @@ Array [
     "volume": "10",
   },
   Object {
-    "DOI": "10.4324/9780203771587",
-    "URL": "https://doi.org/10.4324/9780203771587",
     "author": Array [
       Object {
         "family": "Cohen",
@@ -2436,48 +831,187 @@ Array [
     ],
     "edition": "2nd",
     "issued": "1988",
-    "note": "Routledge.",
+    "publisher": "Routledge",
     "title": "Statistical power analysis for the behavioral sciences",
-    "type": null,
+    "type": "book",
   },
   Object {
     "DOI": "10.1136/bmj.b3829",
-    "URL": "https://doi.org/10.1136/bmj.b3829",
+    "ISSN": Array [
+      "0959-8138",
+      "1468-5833",
+    ],
+    "URL": "http://dx.doi.org/10.1136/bmj.b3829",
     "author": Array [
       Object {
+        "affiliation": Array [],
         "family": "Costa",
-        "given": "L.da C.M.",
+        "given": "L. d. C M.",
+        "sequence": "first",
       },
       Object {
+        "affiliation": Array [],
         "family": "Maher",
-        "given": "C.G.",
+        "given": "C. G",
+        "sequence": "additional",
       },
       Object {
+        "affiliation": Array [],
         "family": "McAuley",
-        "given": "J.H.",
+        "given": "J. H",
+        "sequence": "additional",
       },
       Object {
+        "affiliation": Array [],
         "family": "Hancock",
-        "given": "M.J.",
+        "given": "M. J",
+        "sequence": "additional",
       },
       Object {
+        "affiliation": Array [],
         "family": "Herbert",
-        "given": "R.D.",
+        "given": "R. D",
+        "sequence": "additional",
       },
       Object {
+        "affiliation": Array [],
         "family": "Refshauge",
-        "given": "K.M.",
+        "given": "K. M",
+        "sequence": "additional",
       },
       Object {
+        "affiliation": Array [],
         "family": "Henschke",
         "given": "N.",
+        "sequence": "additional",
       },
     ],
     "container-title": "BMJ",
-    "issued": "2009",
-    "page": "3829",
-    "title": "Prognosis for patients with chronic low back pain: Inception cohort study",
-    "type": "article-journal",
+    "container-title-short": "BMJ",
+    "content-domain": Object {
+      "crossmark-restriction": false,
+      "domain": Array [],
+    },
+    "created": Object {
+      "date-parts": Array [
+        Array [
+          2009,
+          10,
+          6,
+        ],
+      ],
+      "date-time": "2009-10-06T23:35:35Z",
+      "timestamp": 1254872135000,
+    },
+    "deposited": Object {
+      "date-parts": Array [
+        Array [
+          2020,
+          9,
+          26,
+        ],
+      ],
+      "date-time": "2020-09-26T00:50:48Z",
+      "timestamp": 1601081448000,
+    },
+    "indexed": Object {
+      "date-parts": Array [
+        Array [
+          2022,
+          2,
+          17,
+        ],
+      ],
+      "date-time": "2022-02-17T06:54:10Z",
+      "timestamp": 1645080850599,
+    },
+    "is-referenced-by-count": 222,
+    "issue": "oct06 2",
+    "issued": Object {
+      "date-parts": Array [
+        Array [
+          2009,
+          10,
+          6,
+        ],
+      ],
+    },
+    "journal-issue": Object {
+      "issue": "oct06 2",
+      "published-online": Object {
+        "date-parts": Array [
+          Array [
+            2009,
+            10,
+            6,
+          ],
+        ],
+      },
+      "published-print": Object {
+        "date-parts": Array [
+          Array [
+            2009,
+            10,
+            6,
+          ],
+        ],
+      },
+    },
+    "language": "en",
+    "link": Array [
+      Object {
+        "URL": "https://syndication.highwire.org/content/doi/10.1136/bmj.b3829",
+        "content-type": "unspecified",
+        "content-version": "vor",
+        "intended-application": "similarity-checking",
+      },
+    ],
+    "member": "239",
+    "original-title": Array [],
+    "page": "b3829-b3829",
+    "prefix": "10.1136",
+    "published": Object {
+      "date-parts": Array [
+        Array [
+          2009,
+          10,
+          6,
+        ],
+      ],
+    },
+    "published-online": Object {
+      "date-parts": Array [
+        Array [
+          2009,
+          10,
+          6,
+        ],
+      ],
+    },
+    "published-print": Object {
+      "date-parts": Array [
+        Array [
+          2009,
+          10,
+          6,
+        ],
+      ],
+    },
+    "publisher": "BMJ",
+    "reference-count": 0,
+    "references-count": 0,
+    "relation": Object {},
+    "score": 1,
+    "short-title": Array [],
+    "source": "Crossref",
+    "subject": Array [
+      "General Earth and Planetary Sciences",
+      "General Environmental Science",
+      "General Engineering",
+    ],
+    "subtitle": Array [],
+    "title": "Prognosis for patients with chronic low back pain: inception cohort study",
+    "type": "journal-article",
     "volume": "339",
   },
   Object {
@@ -2493,8 +1027,6 @@ Array [
     "type": null,
   },
   Object {
-    "DOI": "10.3758/s13428-019-01320-3",
-    "URL": "https://doi.org/10.3758/s13428-019-01320-3",
     "author": Array [
       Object {
         "family": "De",
@@ -2544,1289 +1076,6 @@ Array [
     "issued": "2020",
     "title": "Shiny SCDA",
     "type": null,
-  },
-  Object {
-    "URL": "https://www.digitimer.com/product/human-neurophysiology/peripheral-stimulators/ds7a-ds7ah-hv-current-stimulator/",
-    "author": Array [
-      Object {
-        "family": "Limited",
-        "given": "Digitimer",
-      },
-    ],
-    "issued": "XXXX",
-    "title": "DS7A High Voltage Constant Current Stimulator",
-    "type": null,
-  },
-  Object {
-    "DOI": "10.1080/00223980.1969.10543491",
-    "URL": "https://doi.org/10.1080/00223980.1969.10543491",
-    "author": Array [
-      Object {
-        "family": "Edgington",
-        "given": "E.S.",
-      },
-    ],
-    "container-title": "The Journal of Psychology",
-    "issue": "2",
-    "issued": "1969",
-    "page": "143–149",
-    "title": "Approximate randomization tests",
-    "type": "article-journal",
-    "volume": "72",
-  },
-  Object {
-    "DOI": "10.1080/00223980.1975.9923926",
-    "URL": "https://doi.org/10.1080/00223980.1975.9923926",
-    "author": Array [
-      Object {
-        "family": "Edgington",
-        "given": "E.S.",
-      },
-    ],
-    "container-title": "Journal of Psychology",
-    "issue": "1",
-    "issued": "1975",
-    "page": "57",
-    "title": "Randomization tests for one-subject operant experiments",
-    "type": "article-journal",
-    "volume": "90",
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Edgington",
-        "given": "E.S.",
-      },
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "edition": "4th",
-    "issued": "2007",
-    "publisher": "Chapman & Hall/CRC",
-    "title": "Randomization tests",
-    "type": "book",
-  },
-  Object {
-    "DOI": "10.1080/00220973.1996.9943805",
-    "URL": "https://doi.org/10.1080/00220973.1996.9943805",
-    "author": Array [
-      Object {
-        "family": "Ferron",
-        "given": "J.",
-      },
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "container-title": "Journal of Experimental Education",
-    "issue": "3",
-    "issued": "1996",
-    "page": "231–239",
-    "title": "The power of randomization tests for single-case phase designs",
-    "type": "article-journal",
-    "volume": "64",
-  },
-  Object {
-    "DOI": "10.1080/00220970209599504",
-    "URL": "https://doi.org/10.1080/00220970209599504",
-    "author": Array [
-      Object {
-        "family": "Ferron",
-        "given": "J.",
-      },
-      Object {
-        "family": "Sentovich",
-        "given": "C.",
-      },
-    ],
-    "container-title": "Journal of Experimental Education",
-    "issue": "2",
-    "issued": "2002",
-    "page": "165–178",
-    "title": "Statistical power of randomization tests used with multiple-baseline designs",
-    "type": "article-journal",
-    "volume": "70",
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Ferron",
-        "given": "J.",
-      },
-      Object {
-        "family": "Ware",
-        "given": "W.",
-      },
-    ],
-    "container-title": "The Journal of Experimental Education",
-    "issue": "2",
-    "issued": "1995",
-    "page": "167–178",
-    "title": "Analyzing single-case data: The power of randomization tests",
-    "type": "article-journal",
-    "volume": "63",
-  },
-  Object {
-    "DOI": "10.1073/pnas.1711978115",
-    "URL": "https://doi.org/10.1073/pnas.1711978115",
-    "author": Array [
-      Object {
-        "family": "Fisher",
-        "given": "A.J.",
-      },
-      Object {
-        "family": "Medaglia",
-        "given": "J.D.",
-      },
-      Object {
-        "family": "Jeronimus",
-        "given": "B.F.",
-      },
-    ],
-    "container-title": "Proceedings of the National Academy of Sciences",
-    "issue": "27",
-    "issued": "2018",
-    "page": "6106 – 6115",
-    "title": "Lack of group-to-individual generalizability is a threat to human subjects research",
-    "type": "article-journal",
-    "volume": "115",
-  },
-  Object {
-    "DOI": "10.1016/S0140-6736(18)30489-6",
-    "URL": "https://doi.org/10.1016/S0140-6736(18)30489-6",
-    "author": Array [
-      Object {
-        "family": "Foster",
-        "given": "N.E.",
-      },
-      Object {
-        "family": "Anema",
-        "given": "J.R.",
-      },
-      Object {
-        "family": "Cherkin",
-        "given": "D.",
-      },
-      Object {
-        "family": "Chou",
-        "given": "R.",
-      },
-      Object {
-        "family": "Cohen",
-        "given": "S.P.",
-      },
-      Object {
-        "family": "Gross",
-        "given": "D.P.",
-      },
-      Object {
-        "family": "Ferreira",
-        "given": "P.H.",
-      },
-      Object {
-        "family": "Fritz",
-        "given": "J.M.",
-      },
-      Object {
-        "family": "Koes",
-        "given": "B.W.",
-      },
-      Object {
-        "family": "Peul",
-        "given": "W.",
-      },
-      Object {
-        "family": "Turner",
-        "given": "J.A.",
-      },
-      Object {
-        "family": "Maher",
-        "given": "C.G.",
-      },
-      Object {
-        "family": "Buchbinder",
-        "given": "R.",
-      },
-      Object {
-        "family": "Hartvigsen",
-        "given": "J.",
-      },
-      Object {
-        "family": "Cherkin",
-        "given": "D.",
-      },
-      Object {
-        "family": "Foster",
-        "given": "N.E.",
-      },
-      Object {
-        "family": "Maher",
-        "given": "C.G.",
-      },
-      Object {
-        "family": "Underwood",
-        "given": "M.",
-      },
-      Object {
-        "family": "Tulder",
-        "given": "M.",
-        "particle": "van",
-      },
-      Object {
-        "family": "Woolf",
-        "given": "A.",
-      },
-    ],
-    "container-title": "The Lancet",
-    "issue": "10137",
-    "issued": "2018",
-    "page": "2368–2383",
-    "title": "Prevention and treatment of low back pain: Evidence, challenges, and promising directions",
-    "type": "article-journal",
-    "volume": "391",
-  },
-  Object {
-    "DOI": "10.1080/09602011.2013.818564",
-    "URL": "https://doi.org/10.1080/09602011.2013.818564",
-    "author": Array [
-      Object {
-        "family": "Heyvaert",
-        "given": "M.",
-      },
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "container-title": "Neuropsychological Rehabilitation",
-    "issue": "3–4",
-    "issued": "2014",
-    "page": "507–527",
-    "title": "Analysis of single-case data: Randomisation tests for measures of effect size",
-    "type": "article-journal",
-    "volume": "24",
-  },
-  Object {
-    "DOI": "10.1016/j.jcbs.2013.10.002",
-    "URL": "https://doi.org/10.1016/j.jcbs.2013.10.002",
-    "author": Array [
-      Object {
-        "family": "Heyvaert",
-        "given": "M.",
-      },
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "container-title": "Journal of Contextual Behavioral Science",
-    "issue": "1",
-    "issued": "2014",
-    "page": "51–64",
-    "title": "Randomization tests for single-case experiments: State of the art, state of the science, and state of the application",
-    "type": "article-journal",
-    "volume": "3",
-  },
-  Object {
-    "URL": "http://www.jstor.org/stable/2984263",
-    "author": Array [
-      Object {
-        "family": "Hope",
-        "given": "A.C.A.",
-      },
-    ],
-    "container-title": "Journal of the Royal Statistical Society. Series B (Methodological",
-    "issue": "3",
-    "issued": "1968",
-    "page": "582–598",
-    "title": "A simplified Monte Carlo significance test procedure",
-    "type": "article-journal",
-    "volume": "30",
-  },
-  Object {
-    "DOI": "10.1177/001440290507100203",
-    "URL": "https://doi.org/10.1177/001440290507100203",
-    "author": Array [
-      Object {
-        "family": "Horner",
-        "given": "R.H.",
-      },
-      Object {
-        "family": "Carr",
-        "given": "E.G.",
-      },
-      Object {
-        "family": "Halle",
-        "given": "J.",
-      },
-      Object {
-        "family": "Mcgee",
-        "given": "G.",
-      },
-      Object {
-        "family": "Odom",
-        "given": "S.",
-      },
-      Object {
-        "family": "Wolery",
-        "given": "M.",
-      },
-    ],
-    "container-title": "Exceptional Children",
-    "issue": "2",
-    "issued": "2005",
-    "page": "165–179",
-    "title": "The use of single-subject research to identify evidence-based practice in special education",
-    "type": "article-journal",
-    "volume": "71",
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Kazdin",
-        "given": "A.E.",
-      },
-    ],
-    "edition": "2nd",
-    "issued": "2011",
-    "publisher": "Oxford University Press",
-    "title": "Single-case research designs: Methods for clinical and applied settings",
-    "type": "book",
-  },
-  Object {
-    "URL": "https://ies.ed.gov/ncee/wwc/Docs/ReferenceResources/wwc_scd.pdf",
-    "author": Array [
-      Object {
-        "family": "Kratochwill",
-        "given": "T.R.",
-      },
-      Object {
-        "family": "Hitchcock",
-        "given": "J.",
-      },
-      Object {
-        "family": "Horner",
-        "given": "R.H.",
-      },
-      Object {
-        "family": "Levin",
-        "given": "J.R.",
-      },
-      Object {
-        "family": "Odom",
-        "given": "S.L.",
-      },
-      Object {
-        "family": "Rindskopf",
-        "given": "D.M.",
-      },
-      Object {
-        "family": "Shadish",
-        "given": "W.R.",
-      },
-    ],
-    "issued": "2010",
-    "title": "Single-case design technical documentation",
-    "type": null,
-  },
-  Object {
-    "DOI": "10.1037/a0017736",
-    "URL": "https://doi.org/10.1037/a0017736",
-    "author": Array [
-      Object {
-        "family": "Kratochwill",
-        "given": "T.R.",
-      },
-      Object {
-        "family": "Levin",
-        "given": "J.R.",
-      },
-    ],
-    "container-title": "Psychological Methods",
-    "issue": "2",
-    "issued": "2010",
-    "page": "124–144",
-    "title": "Enhancing the scientific credibility of single-case intervention research: Randomization to the rescue",
-    "type": "article-journal",
-    "volume": "15",
-  },
-  Object {
-    "DOI": "10.1080/17518423.2016.1197708",
-    "URL": "https://doi.org/10.1080/17518423.2016.1197708",
-    "author": Array [
-      Object {
-        "family": "Levin",
-        "given": "J.R.",
-      },
-      Object {
-        "family": "Ferron",
-        "given": "J.M.",
-      },
-      Object {
-        "family": "Gafurov",
-        "given": "B.S.",
-      },
-    ],
-    "container-title": "Developmental Neurorehabilitation",
-    "issue": "5",
-    "issued": "2018",
-    "page": "290–311",
-    "title": "Comparison of randomization-test procedures for single-case multiple-baseline designs",
-    "type": "article-journal",
-    "volume": "21",
-  },
-  Object {
-    "DOI": "10.1016/j.jpain.2016.06.012",
-    "URL": "https://doi.org/10.1016/j.jpain.2016.06.012",
-    "author": Array [
-      Object {
-        "family": "Madden",
-        "given": "V.J.",
-      },
-      Object {
-        "family": "Bellan",
-        "given": "V.",
-      },
-      Object {
-        "family": "Russek",
-        "given": "L.N.",
-      },
-      Object {
-        "family": "Camfferman",
-        "given": "D.",
-      },
-      Object {
-        "family": "Vlaeyen",
-        "given": "J.W.S.",
-      },
-      Object {
-        "family": "Moseley",
-        "given": "G.L.",
-      },
-    ],
-    "container-title": "Journal of Pain",
-    "issue": "10",
-    "issued": "2016",
-    "page": "1105–1115",
-    "title": "Pain by association? Experimental modulation of human pain thresholds using classical conditioning",
-    "type": "article-journal",
-    "volume": "17",
-  },
-  Object {
-    "DOI": "10.1016/j.jpain.2018.10.006",
-    "URL": "https://doi.org/10.1016/j.jpain.2018.10.006",
-    "author": Array [
-      Object {
-        "family": "Madden",
-        "given": "V.J.",
-      },
-      Object {
-        "family": "Kamerman",
-        "given": "P.R.",
-      },
-      Object {
-        "family": "Bellan",
-        "given": "V.",
-      },
-      Object {
-        "family": "Catley",
-        "given": "M.J.",
-      },
-      Object {
-        "family": "Russek",
-        "given": "L.N.",
-      },
-      Object {
-        "family": "Camfferman",
-        "given": "D.",
-      },
-      Object {
-        "family": "Moseley",
-        "given": "G.L.",
-      },
-    ],
-    "container-title": "Journal of Pain",
-    "issue": "4",
-    "issued": "2019",
-    "page": "472 1–472 12",
-    "title": "Was that painful or nonpainful? The Sensation and Pain Rating Scale performs well in the experimental context",
-    "type": "article-journal",
-    "volume": "20",
-  },
-  Object {
-    "DOI": "10.1093/pm/pnw221",
-    "URL": "https://doi.org/10.1093/pm/pnw221",
-    "author": Array [
-      Object {
-        "family": "Madden",
-        "given": "V.J.",
-      },
-      Object {
-        "family": "Russek",
-        "given": "L.N.",
-      },
-      Object {
-        "family": "Harvie",
-        "given": "D.S.",
-      },
-      Object {
-        "family": "Vlaeyen",
-        "given": "J.W.S.",
-      },
-      Object {
-        "family": "Moseley",
-        "given": "G.L.",
-      },
-    ],
-    "container-title": "Pain Medicine",
-    "issue": "7",
-    "issued": "2017",
-    "page": "1314–1325",
-    "title": "Classical conditioning fails to elicit allodynia in an experimental study with healthy humans",
-    "type": "article-journal",
-    "volume": "18",
-  },
-  Object {
-    "DOI": "10.1016/j.beth.2016.04.008",
-    "URL": "https://doi.org/10.1016/j.beth.2016.04.008",
-    "author": Array [
-      Object {
-        "family": "Manolov",
-        "given": "R.",
-      },
-      Object {
-        "family": "Moeyaert",
-        "given": "M.",
-      },
-    ],
-    "container-title": "Behavior Therapy",
-    "issue": "1",
-    "issued": "2017",
-    "page": "97–114",
-    "title": "Recommendations for choosing single-case data analytical techniques",
-    "type": "article-journal",
-    "volume": "48",
-  },
-  Object {
-    "DOI": "10.1017/BrImp.2017.17",
-    "URL": "https://doi.org/10.1017/BrImp.2017.17",
-    "author": Array [
-      Object {
-        "family": "Manolov",
-        "given": "R.",
-      },
-      Object {
-        "family": "Solanas",
-        "given": "A.",
-      },
-    ],
-    "container-title": "Brain Impairment",
-    "issue": "1",
-    "issued": "2018",
-    "page": "18–32",
-    "title": "Analytical options for single-case experimental designs: Review and application to brain impairment",
-    "type": "article-journal",
-    "volume": "19",
-  },
-  Object {
-    "DOI": "10.1901/jaba.1990.23-341",
-    "URL": "https://doi.org/10.1901/jaba.1990.23-341",
-    "author": Array [
-      Object {
-        "family": "Matyas",
-        "given": "T.A.",
-      },
-      Object {
-        "family": "Greenwood",
-        "given": "K.M.",
-      },
-    ],
-    "container-title": "Journal of Applied Behavior Analysis",
-    "issue": "3",
-    "issued": "1990",
-    "page": "341–351",
-    "title": "Visual analysis of single-case time series: Effects of variability, serial dependence, and magnitude of intervention effects",
-    "type": "article-journal",
-    "volume": "23",
-  },
-  Object {
-    "DOI": "10.3758/s13428-017-0885-7",
-    "URL": "https://doi.org/10.3758/s13428-017-0885-7",
-    "author": Array [
-      Object {
-        "family": "Michiels",
-        "given": "B.",
-      },
-      Object {
-        "family": "Heyvaert",
-        "given": "M.",
-      },
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "container-title": "Behavior Research Methods",
-    "issue": "2",
-    "issued": "2018",
-    "page": "557–575",
-    "title": "The conditional power of randomization tests for single-case effect sizes in designs with randomized treatment order: A Monte Carlo simulation study",
-    "type": "article-journal",
-    "volume": "50",
-  },
-  Object {
-    "DOI": "10.3758/s13428-018-1084-x",
-    "URL": "https://doi.org/10.3758/s13428-018-1084-x",
-    "author": Array [
-      Object {
-        "family": "Michiels",
-        "given": "B.",
-      },
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "container-title": "Behavior Research Methods",
-    "issue": "6",
-    "issued": "2019",
-    "page": "2454–2476",
-    "title": "Randomized single-case AB phase designs: Prospects and pitfalls",
-    "type": "article-journal",
-    "volume": "51",
-  },
-  Object {
-    "DOI": "10.3758/s13428-019-01266-6",
-    "URL": "https://doi.org/10.3758/s13428-019-01266-6",
-    "author": Array [
-      Object {
-        "family": "Michiels",
-        "given": "B.",
-      },
-      Object {
-        "family": "Tanious",
-        "given": "R.",
-      },
-      Object {
-        "family": "De",
-        "given": "T.K.",
-      },
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "container-title": "Behavior Research Methods",
-    "issue": "2",
-    "issued": "2020",
-    "page": "654–666",
-    "title": "A randomization test wrapper for synthesizing single-case experiments using multilevel models: A Monte Carlo simulation study",
-    "type": "article-journal",
-    "volume": "52",
-  },
-  Object {
-    "DOI": "10.1111/j.1467-8721.2009.01619.x",
-    "URL": "https://doi.org/10.1111/j.1467-8721.2009.01619.x",
-    "author": Array [
-      Object {
-        "family": "Molenaar",
-        "given": "P.C.M.",
-      },
-      Object {
-        "family": "Campbell",
-        "given": "C.G.",
-      },
-    ],
-    "container-title": "Current Directions in Psychological Science",
-    "issue": "2",
-    "issued": "2009",
-    "page": "112–117",
-    "title": "The new person-specific paradigm in psychology",
-    "type": "article-journal",
-    "volume": "18",
-  },
-  Object {
-    "DOI": "10.1016/j.pain.0000000000000014",
-    "URL": "https://doi.org/10.1016/j.pain.0000000000000014",
-    "author": Array [
-      Object {
-        "family": "Moseley",
-        "given": "G.L.",
-      },
-      Object {
-        "family": "Vlaeyen",
-        "given": "J.W.S.",
-      },
-    ],
-    "container-title": "Pain",
-    "issue": "1",
-    "issued": "2015",
-    "page": "35–38",
-    "title": "Beyond nociception: The imprecision hypothesis of chronic pain",
-    "type": "article-journal",
-    "volume": "156",
-  },
-  Object {
-    "author": Array [
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "container-title": "Behavioral Assessment",
-    "issue": "2",
-    "issued": "1992",
-    "page": "153–171",
-    "title": "Randomization tests for extensions and variations of ABAB single-case experimental designs: A rejoinder",
-    "type": "article-journal",
-    "volume": "14",
-  },
-  Object {
-    "DOI": "10.1002/0470013192.bsa625",
-    "URL": "https://doi.org/10.1002/0470013192.bsa625",
-    "author": Array [
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "container-title": "Encyclopedia of statistics in behavioral science",
-    "editor": Array [
-      Object {
-        "family": "Everitt",
-        "given": "B.",
-      },
-      Object {
-        "family": "Howell",
-        "given": "D.",
-      },
-    ],
-    "issued": "2005",
-    "page": "1850–1854",
-    "publisher": "John Wiley & Sons, Ltd",
-    "title": "Single‐case designs",
-    "type": "chapter",
-    "volume": "4",
-  },
-  Object {
-    "DOI": "10.1177/002246699002300407",
-    "URL": "https://doi.org/10.1177/002246699002300407",
-    "author": Array [
-      Object {
-        "family": "Ottenbacher",
-        "given": "K.J.",
-      },
-    ],
-    "container-title": "The Journal of Special Education",
-    "issue": "4",
-    "issued": "1990",
-    "page": "436–449",
-    "title": "When is a picture worth a thousand p values? A comparison of visual and quantitative methods to analyze single subject data",
-    "type": "article-journal",
-    "volume": "23",
-  },
-  Object {
-    "DOI": "10.1037/11081-000",
-    "URL": "https://doi.org/10.1037/11081-000",
-    "author": Array [
-      Object {
-        "family": "Pavlov",
-        "given": "I.P.",
-      },
-    ],
-    "issued": "1928",
-    "publisher": "Liverwright Publishing Corporation",
-    "title": "Lectures on conditioned reflexes: Twenty-five years of objective study of the higher nervous activity (behaviour) of animals",
-    "type": "book",
-  },
-  Object {
-    "DOI": "10.1037/a0029312",
-    "URL": "https://doi.org/10.1037/a0029312",
-    "author": Array [
-      Object {
-        "family": "Smith",
-        "given": "J.D.",
-      },
-    ],
-    "container-title": "Psychological Methods",
-    "issue": "4",
-    "issued": "2012",
-    "page": "510–550",
-    "title": "Single-case experimental designs: A systematic review of published research and current standards",
-    "type": "article-journal",
-    "volume": "17",
-  },
-  Object {
-    "DOI": "10.1177/0145445513510931",
-    "URL": "https://doi.org/10.1177/0145445513510931",
-    "author": Array [
-      Object {
-        "family": "Solomon",
-        "given": "B.G.",
-      },
-    ],
-    "container-title": "Behavior Modification",
-    "issue": "4",
-    "issued": "2014",
-    "page": "477–496",
-    "title": "Violations of assumptions in school-based single-case data: Implications for the selection and interpretation of effect sizes",
-    "type": "article-journal",
-    "volume": "38",
-  },
-  Object {
-    "DOI": "10.1027/1618-3169/a000005",
-    "URL": "https://doi.org/10.1027/1618-3169/a000005",
-    "author": Array [
-      Object {
-        "family": "Spruyt",
-        "given": "A.",
-      },
-      Object {
-        "family": "Clarysse",
-        "given": "J.",
-      },
-      Object {
-        "family": "Vansteenwegen",
-        "given": "D.",
-      },
-      Object {
-        "family": "Baeyens",
-        "given": "F.",
-      },
-      Object {
-        "family": "Hermans",
-        "given": "D.",
-      },
-    ],
-    "container-title": "Experimental Psychology",
-    "issue": "1",
-    "issued": "2009",
-    "page": "36–45",
-    "title": "Affect 4.0: A free software package for implementing psychological and psychophysiological experiments",
-    "type": "article-journal",
-    "volume": "57",
-  },
-  Object {
-    "DOI": "10.7717/peerj.6486",
-    "URL": "https://doi.org/10.7717/peerj.6486",
-    "author": Array [
-      Object {
-        "family": "Traxler",
-        "given": "J.",
-      },
-      Object {
-        "family": "Madden",
-        "given": "V.J.",
-      },
-      Object {
-        "family": "Moseley",
-        "given": "G.L.",
-      },
-      Object {
-        "family": "Vlaeyen",
-        "given": "J.W.S.",
-      },
-    ],
-    "container-title": "PeerJ",
-    "issue": "3",
-    "issued": "2019",
-    "page": "1–20",
-    "title": "Modulating pain thresholds through classical conditioning",
-    "type": "article-journal",
-    "volume": "2019",
-  },
-  Object {
-    "DOI": "10.1097/j.pain.0000000000001384",
-    "URL": "https://doi.org/10.1097/j.pain.0000000000001384",
-    "author": Array [
-      Object {
-        "family": "Treede",
-        "given": "R.D.",
-      },
-      Object {
-        "family": "Rief",
-        "given": "W.",
-      },
-      Object {
-        "family": "Barke",
-        "given": "A.",
-      },
-      Object {
-        "family": "Aziz",
-        "given": "Q.",
-      },
-      Object {
-        "family": "Bennett",
-        "given": "M.I.",
-      },
-      Object {
-        "family": "Benoliel",
-        "given": "R.",
-      },
-      Object {
-        "family": "Cohen",
-        "given": "M.",
-      },
-      Object {
-        "family": "Evers",
-        "given": "S.",
-      },
-      Object {
-        "family": "Finnerup",
-        "given": "N.B.",
-      },
-      Object {
-        "family": "First",
-        "given": "M.B.",
-      },
-      Object {
-        "family": "Giamberardino",
-        "given": "M.A.",
-      },
-      Object {
-        "family": "Kaasa",
-        "given": "S.",
-      },
-      Object {
-        "family": "Korwisi",
-        "given": "B.",
-      },
-      Object {
-        "family": "Kosek",
-        "given": "E.",
-      },
-      Object {
-        "family": "Lavand’Homme",
-        "given": "P.",
-      },
-      Object {
-        "family": "Nicholas",
-        "given": "M.",
-      },
-      Object {
-        "family": "Perrot",
-        "given": "S.",
-      },
-      Object {
-        "family": "Scholz",
-        "given": "J.",
-      },
-      Object {
-        "family": "Schug",
-        "given": "S.",
-      },
-      Object {
-        "family": "Wang",
-        "given": "S.J.",
-      },
-    ],
-    "container-title": "Pain",
-    "issue": "1",
-    "issued": "2019",
-    "page": "19–27",
-    "title": "Chronic pain as a symptom or a disease: The IASP classification of chronic pain for the International Classification of Diseases (ICD-11",
-    "type": "article-journal",
-    "volume": "160",
-  },
-  Object {
-    "DOI": "10.1016/j.jpain.2008.05.005",
-    "URL": "https://doi.org/10.1016/j.jpain.2008.05.005",
-    "author": Array [
-      Object {
-        "family": "Tsang",
-        "given": "A.",
-      },
-      Object {
-        "family": "Korff",
-        "given": "M.",
-        "particle": "Von",
-      },
-      Object {
-        "family": "Lee",
-        "given": "S.",
-      },
-      Object {
-        "family": "Alonso",
-        "given": "J.",
-      },
-      Object {
-        "family": "Karam",
-        "given": "E.",
-      },
-      Object {
-        "family": "Angermeyer",
-        "given": "M.C.",
-      },
-      Object {
-        "family": "Borges",
-        "given": "G.L.G.",
-      },
-      Object {
-        "family": "Bromet",
-        "given": "E.J.",
-      },
-      Object {
-        "family": "Demytteneare",
-        "given": "K.",
-      },
-      Object {
-        "family": "Girolamo",
-        "given": "G.",
-        "particle": "de",
-      },
-      Object {
-        "family": "Graaf",
-        "given": "R.",
-        "particle": "de",
-      },
-      Object {
-        "family": "Gureje",
-        "given": "O.",
-      },
-      Object {
-        "family": "Lepine",
-        "given": "J.-P.",
-      },
-      Object {
-        "family": "Haro",
-        "given": "J.M.",
-      },
-      Object {
-        "family": "Levinson",
-        "given": "D.",
-      },
-      Object {
-        "family": "Oakley Browne",
-        "given": "M.A.",
-      },
-      Object {
-        "family": "Posada-Villa",
-        "given": "J.",
-      },
-      Object {
-        "family": "Seedat",
-        "given": "S.",
-      },
-      Object {
-        "family": "Watanabe",
-        "given": "M.",
-      },
-    ],
-    "container-title": "The Journal of Pain",
-    "issue": "10",
-    "issued": "2008",
-    "page": "883–891",
-    "title": "Common chronic pain conditions in developed and developing countries: Gender and age differences and comorbidity with depression-anxiety disorders",
-    "type": "article-journal",
-    "volume": "9",
-  },
-  Object {
-    "DOI": "10.1016/s0304-3959(99)00242-0",
-    "URL": "https://doi.org/10.1016/s0304-3959(99)00242-0",
-    "author": Array [
-      Object {
-        "family": "Vlaeyen",
-        "given": "J.W.S.",
-      },
-      Object {
-        "family": "Linton",
-        "given": "S.J.",
-      },
-    ],
-    "container-title": "Pain",
-    "issue": "3",
-    "issued": "2000",
-    "page": "317–332",
-    "title": "Fear-avoidance and its consequences in chronic musculoskeletal pain: A state of the art",
-    "type": "article-journal",
-    "volume": "85",
-  },
-  Object {
-    "DOI": "10.1016/j.pain.2011.12.009",
-    "URL": "https://doi.org/10.1016/j.pain.2011.12.009",
-    "author": Array [
-      Object {
-        "family": "Vlaeyen",
-        "given": "J.W.S.",
-      },
-      Object {
-        "family": "Linton",
-        "given": "S.J.",
-      },
-    ],
-    "container-title": "Pain",
-    "issue": "6",
-    "issued": "2012",
-    "page": "1144–1147",
-    "title": "Fear-avoidance model of chronic musculoskeletal pain: 12 years on",
-    "type": "article-journal",
-    "volume": "153",
-  },
-  Object {
-    "DOI": "10.1007/s40732-020-00402-5",
-    "URL": "https://doi.org/10.1007/s40732-020-00402-5",
-    "author": Array [
-      Object {
-        "family": "Vlaeyen",
-        "given": "J.W.S.",
-      },
-      Object {
-        "family": "Wicksell",
-        "given": "R.K.",
-      },
-      Object {
-        "family": "Simons",
-        "given": "L.E.",
-      },
-      Object {
-        "family": "Gentili",
-        "given": "C.",
-      },
-      Object {
-        "family": "De",
-        "given": "T.K.",
-      },
-      Object {
-        "family": "Tate",
-        "given": "R.L.",
-      },
-      Object {
-        "family": "Vohra",
-        "given": "S.",
-      },
-      Object {
-        "family": "Punja",
-        "given": "S.",
-      },
-      Object {
-        "family": "Linton",
-        "given": "S.J.",
-      },
-      Object {
-        "family": "Sniehotta",
-        "given": "F.F.",
-      },
-      Object {
-        "family": "Onghena",
-        "given": "P.",
-      },
-    ],
-    "container-title": "The Psychological Record",
-    "issued": "2020",
-    "page": "659–670",
-    "title": "From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research",
-    "type": "article-journal",
-    "volume": "70",
-  },
-  Object {
-    "DOI": "10.1136/bmj.h1738",
-    "URL": "https://doi.org/10.1136/bmj.h1738",
-    "author": Array [
-      Object {
-        "family": "Vohra",
-        "given": "S.",
-      },
-      Object {
-        "family": "Shamseer",
-        "given": "L.",
-      },
-      Object {
-        "family": "Sampson",
-        "given": "M.",
-      },
-      Object {
-        "family": "Bukutu",
-        "given": "C.",
-      },
-      Object {
-        "family": "Schmid",
-        "given": "C.H.",
-      },
-      Object {
-        "family": "Tate",
-        "given": "R.",
-      },
-      Object {
-        "family": "Nikles",
-        "given": "J.",
-      },
-      Object {
-        "family": "Zucker",
-        "given": "D.R.",
-      },
-      Object {
-        "family": "Kravitz",
-        "given": "R.",
-      },
-      Object {
-        "family": "Guyatt",
-        "given": "G.",
-      },
-      Object {
-        "family": "Altman",
-        "given": "D.G.",
-      },
-      Object {
-        "family": "Moher",
-        "given": "D.",
-      },
-    ],
-    "issued": "2015",
-    "note": "CONSORT extension for reporting N-of-1 trials (CENT) 2015 statement. BMJ (Clinical Research Ed.), 350, h1738.",
-    "type": "report",
-  },
-  Object {
-    "DOI": "10.1037/0003-066X.54.8.594",
-    "URL": "https://doi.org/10.1037/0003-066X.54.8.594",
-    "author": Array [
-      Object {
-        "family": "Willkinson",
-        "given": "L.",
-      },
-    ],
-    "container-title": "American Psychologist",
-    "issue": "8",
-    "issued": "1999",
-    "page": "594–604",
-    "title": "Statistical methods in psychology journals: Guidelines and explanations",
-    "type": "article-journal",
-    "volume": "54",
-  },
-  Object {
-    "DOI": "10.1038/306686a0",
-    "URL": "https://doi.org/10.1038/306686a0",
-    "author": Array [
-      Object {
-        "family": "Woolf",
-        "given": "C.J.",
-      },
-    ],
-    "container-title": "Nature",
-    "issue": "5944",
-    "issued": "1983",
-    "page": "686–688",
-    "title": "Evidence for a central component of post-injury pain hypersensitivity",
-    "type": "article-journal",
-    "volume": "306",
-  },
-  Object {
-    "DOI": "10.1016/j.pain.2010.09.030",
-    "URL": "https://doi.org/10.1016/j.pain.2010.09.030",
-    "author": Array [
-      Object {
-        "family": "Woolf",
-        "given": "C.J.",
-      },
-    ],
-    "container-title": "Pain",
-    "issue": "3 Suppl",
-    "issued": "2011",
-    "title": "Central sensitization: Implications for the diagnosis and treatment of pain",
-    "type": "article-journal",
-    "volume": "152",
   },
 ]
 `;

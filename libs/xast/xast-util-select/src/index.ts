@@ -1,7 +1,7 @@
 import { XastNode, Space, Element } from './lib/types'
 
-import { any } from './lib/any.js'
-import { parse } from './lib/parse.js'
+import { any } from './lib/any'
+import { parse } from './lib/parse'
 
 export function matches(
   selector: string,

@@ -1,5 +1,5 @@
 {
-  "name": "csl-util-to-jast",
+  "name": "csl-to-jast",
   "version": "0.0.1",
   "dependencies": {
     "csl-json": "^0.1.0",

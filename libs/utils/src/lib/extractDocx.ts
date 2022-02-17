@@ -2,8 +2,8 @@ import { Stream } from 'stream'
 import { promisify } from 'util'
 import { ZipFile } from 'yauzl'
 import openZipFromBuffer from './openZipFromBuffer'
-import tryCatchPromise from './tryCatchPromise'
-import tryCatchVoid from './tryCatchVoid'
+import { tryCatchPromise } from './tryCatchPromise'
+import { tryCatchVoid } from './tryCatchVoid'
 
 export async function extractDocx(docx: Buffer, stream?: Stream): Promise<any> {
   const [zipfile, zipfileError]: [ZipFile, Error] = await tryCatchPromise(

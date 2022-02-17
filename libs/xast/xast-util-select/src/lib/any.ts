@@ -1,17 +1,20 @@
 import { Element } from 'xast'
-import { Selectors } from './types.js'
-import { Rule } from './types.js'
-import { RuleSet } from './types.js'
-import { XastNode as Node, XastParent as Parent } from './types.js'
-import { SelectIterator } from './types.js'
-import { SelectState } from './types.js'
+import {
+  Selectors,
+  Rule,
+  RuleSet,
+  XastNode as Node,
+  XastParent as Parent,
+  SelectIterator,
+  SelectState,
+} from './types'
 
 import { html, svg } from 'property-information'
 import { zwitch } from 'zwitch'
-import { enterState } from './enter-state.js'
-import { nest } from './nest.js'
-import { pseudo } from './pseudo.js'
-import { test } from './test.js'
+import { enterState } from './enter-state'
+import { nest } from './nest'
+import { pseudo } from './pseudo'
+import { test } from './test'
 
 const type = zwitch('type', {
   // @ts-ignore: hush.

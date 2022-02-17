@@ -1,13 +1,15 @@
-import { Rule } from './types.js'
-import { RulePseudo } from './types.js'
-import { RulePseudoNth } from './types.js'
-import { RulePseudoSelector } from './types.js'
-import { XastParent as Parent } from './types.js'
-import { Selector } from './types.js'
-import { Selectors } from './types.js'
-import { SelectState } from './types.js'
-import { Element } from './types.js'
-import { ElementChild } from './types.js'
+import {
+  Rule,
+  RulePseudo,
+  RulePseudoNth,
+  RulePseudoSelector,
+  XastParent as Parent,
+  Selector,
+  Selectors,
+  SelectState,
+  Element,
+  ElementChild,
+} from './types'
 
 import { extendedFilter } from 'bcp-47-match'
 import { parse as commas } from 'comma-separated-tokens'
@@ -15,7 +17,7 @@ import { hasAttribute } from 'xast-util-has-attribute'
 import { isElement } from 'hast-util-is-element'
 import { whitespace } from 'hast-util-whitespace'
 import { zwitch } from 'zwitch'
-import { any } from './any.js'
+import { any } from './any'
 
 const handle = zwitch('name', {
   // @ts-ignore: hush.

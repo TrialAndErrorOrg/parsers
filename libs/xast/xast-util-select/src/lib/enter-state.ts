@@ -1,7 +1,4 @@
-import { SelectState } from './types.js'
-import { XastNode } from './types.js'
-import { ElementChild } from './types.js'
-import { Direction } from './types.js'
+import { SelectState, XastNode, ElementChild, Direction } from './types.js'
 // * @typedef {import('unist-util-visit/complex-types').Visitor<ElementChild>} Visitor
 
 import { direction } from 'direction'
@@ -9,7 +6,7 @@ import { isElement } from 'hast-util-is-element'
 import { toString } from 'xast-util-to-string'
 import { svg } from 'property-information'
 import { visit, EXIT, SKIP } from 'unist-util-visit'
-import { element } from './util.js'
+import { element } from './util'
 import { Parent } from 'ooxast'
 
 /**

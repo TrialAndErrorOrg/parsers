@@ -1,13 +1,3 @@
-/**
- * @typedef {import('./types.js').Rule} Rule
- * @typedef {import('./types.js').Node} Node
- * @typedef {import('./types.js').Element} Element
- * @typedef {import('./types.js').Parent} Parent
- * @typedef {import('./types.js').SelectState} SelectState
- * @typedef {import('./types.js').SelectIterator} SelectIterator
- * @typedef {import('./types.js').Handler} Handler
- */
-
 import {
   Rule,
   XastNode as Node,
@@ -19,8 +9,8 @@ import {
 } from './types'
 
 import { zwitch } from 'zwitch'
-import { enterState } from './enter-state.js'
-import { parent, element } from './util.js'
+import { enterState } from './enter-state'
+import { parent, element } from './util'
 
 const own = {}.hasOwnProperty
 

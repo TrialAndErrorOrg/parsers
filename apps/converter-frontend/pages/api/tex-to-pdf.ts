@@ -1,17 +1,12 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import tar from 'tar-stream'
-import { WritableStreamBuffer } from 'stream-buffers'
-import { streamToBuffer } from '@jorgeferrero/stream-to-buffer'
 import { Writable } from 'stream'
 import axios from 'axios'
 import FormData from 'form-data'
-import { fsyncSync } from 'fs'
-import { writeFile } from 'fs/promises'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   req.statusCode = 200
   const tex = req.body
-  const tarStream = new WritableStreamBuffer()
   console.log('Received tex')
 
   const tararr: any[] = []

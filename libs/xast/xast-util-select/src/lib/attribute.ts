@@ -1,9 +1,11 @@
-import { Rule } from './types.js'
-import { RuleAttr } from './types.js'
-import { Element } from './types.js'
-import { Schema } from './types.js'
-import { Info } from './types.js'
-import { AttributeValue } from './types.js'
+import {
+  Rule,
+  RuleAttr,
+  Element,
+  Schema,
+  Info,
+  AttributeValue,
+} from './types.js'
 
 import { stringify as commas } from 'comma-separated-tokens'
 import { find } from 'property-information'

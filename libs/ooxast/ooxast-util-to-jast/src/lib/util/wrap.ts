@@ -45,7 +45,7 @@ export function wrapNeeded(nodes: Array<JastContent>): boolean {
 
     if (
       !isParagraphContent(node) ||
-      //@ts-expect-error idk man
+      //@ts-ignore idk man
       ('children' in node && wrapNeeded(node.children))
     ) {
       return true

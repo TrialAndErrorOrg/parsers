@@ -12,7 +12,7 @@ export function all<T extends JastContent = JastContent>(
   j: J,
   parent: Node
 ): Array<T extends JastParent ? T['children'][number] : JastContent> {
-  // @ts-ignore Assume `parent` is a parent.
+  // @ts-expect-error Assume `parent` is a parent.
   const nodes: Array<Node> = parent.children || []
   const values: Array<JastContent> = []
   let index = -1
@@ -40,7 +40,7 @@ export function all<T extends JastContent = JastContent>(
   // }
 
   while (++index < length) {
-    // @ts-ignore assume `parent` is a parent.
+    // @ts-expect-error assume `parent` is a parent.
     const result = one(j, nodes[index], parent)
 
     if (Array.isArray(result)) {

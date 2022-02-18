@@ -1,8 +1,7 @@
-//@ts-nocheck
 import { handle } from './handle'
 import { zwitch } from 'zwitch'
 import { configure } from './configure'
-import { Options, Context, Node, Handle, Join, Unsafe } from './types'
+import { Options, Context, Node, Handle } from './types'
 
 const invalid: Handle = (value: unknown) => {
   throw new Error('Cannot handle value `' + value + '`, expected node')
@@ -14,7 +13,7 @@ const unknown: Handle = (node: Node) => {
 export function toLatex(tree: Node, options: Options = {}): string {
   //   const handle = zwitch('type', { invalid,
 
-  //     // @ts-ignore hush
+  //     // @ts-expect-error hush
   //     unknown,
   //     handlers: node })
   //   const result = Array.isArray(node)
@@ -24,7 +23,7 @@ export function toLatex(tree: Node, options: Options = {}): string {
   // }
 
   /** @type {Context} */
-  // @ts-ignore: we’ll add `handle` later.
+  // @ts-expect-error: we’ll add `handle` later.
   const context: Context = {
     enter,
     stack: [],
@@ -37,6 +36,7 @@ export function toLatex(tree: Node, options: Options = {}): string {
     align: false,
   }
 
+  // @ts-expect-error: we’ll add `handle` later.
   configure(context, { handlers: handle })
   configure(context, options)
 
@@ -44,16 +44,14 @@ export function toLatex(tree: Node, options: Options = {}): string {
   //   configure(context, {join: [joinDefinition]})
   // }
 
-  /** @type {Handle} */
-  // @ts-ignore: hush.
   context.handle = zwitch('type', {
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     invalid,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     unknown,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     handlers: context.handlers,
-  })
+  }) as Handle
 
   let result = context.handle(tree, null, context, {
     before: '\n',

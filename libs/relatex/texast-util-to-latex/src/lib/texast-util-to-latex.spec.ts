@@ -45,7 +45,7 @@ const commandWithArgAndOptArg: Command = {
 describe('unknown', () => {
   it('should ignore unknown nodes', () => {
     const erroring = () => {
-      //@ts-ignore i'm testing errors, of course it won't work
+      //@ts-expect-error i'm testing errors, of course it won't work
       toLatex({ type: 'fake', children: [{ type: 'text', value: 'fakenode' }] })
     }
     expect(erroring).toThrowError('Unknown type fake, skipping...')

@@ -17,10 +17,10 @@ import { pseudo } from './pseudo'
 import { test } from './test'
 
 const type = zwitch('type', {
-  // @ts-ignore: hush.
+  // @ts-expect-error: hush.
   unknown: unknownType,
   invalid: invalidType,
-  // @ts-ignore: hush.
+  // @ts-expect-error: hush.
   handlers: { selectors, ruleSet, rule },
 })
 
@@ -35,7 +35,7 @@ export function any(
   node: Node | undefined,
   state: SelectState
 ): Array<Element> {
-  // @ts-ignore zwitch types are off.
+  // @ts-expect-error zwitch types are off.
   return query && node ? type(query, node, state) : []
 }
 
@@ -97,7 +97,7 @@ function rule(query: Rule, tree: Node, state: SelectState): Array<Element> {
       language: undefined,
       direction: 'ltr',
       editableOrEditingHost: false,
-      // @ts-ignore assume elements.
+      // @ts-expect-error assume elements.
       scopeElements: tree.type === 'root' ? tree.children : [tree],
       iterator,
       one: state.one,
@@ -121,7 +121,7 @@ function rule(query: Rule, tree: Node, state: SelectState): Array<Element> {
       if (query.rule) {
         nest(query.rule, node, index, parent, configure(query.rule, state))
       } else {
-        // @ts-ignore `test` also asserts `node is Element`
+        // @ts-expect-error `test` also asserts `node is Element`
         collector.collect(node)
         state.found = true
       }

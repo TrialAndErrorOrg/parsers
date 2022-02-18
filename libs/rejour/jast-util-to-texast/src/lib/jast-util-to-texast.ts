@@ -53,14 +53,14 @@ export function toTexast(
         attributes = props
       }
 
-      // @ts-ignore Assume valid `type` and `children`/`value`.
+      // @ts-expect-error Assume valid `type` and `children`/`value`.
       const result: Node = { type, ...attributes }
 
       if (typeof children === 'string') {
-        // @ts-ignore: Looks like a literal.
+        // @ts-expect-error: Looks like a literal.
         result.value = children
       } else if (children) {
-        // @ts-ignore: Looks like a parent.
+        // @ts-expect-error: Looks like a parent.
         result.children = children
       }
 
@@ -107,10 +107,10 @@ export function toTexast(
   //   }
   // })
 
-  // @ts-ignore: does return a transformer, that does accept any node.
+  // @ts-expect-error: does return a transformer, that does accept any node.
   rehypeMinifyWhitespace({ newlines: options.newlines === true })(tree)
 
-  // @ts-ignore: does return a transformer, that does accept any node.
+  // @ts-expect-error: does return a transformer, that does accept any node.
   const result = one(j, tree, undefined)
 
   if (!result) {

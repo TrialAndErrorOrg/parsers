@@ -11,10 +11,10 @@ import { convertElement } from 'xast-util-is-element'
  * @returns {node is Parent}
  */
 export function parent(node: Node): node is Parent {
-  // @ts-ignore: hush.
+  // @ts-expect-error: hush.
   return Array.isArray(node.children)
 }
 
 /** @type {IsElement} */
-// @ts-ignore it works.
+// @ts-expect-error it works.
 export const element: IsElement = convertElement()

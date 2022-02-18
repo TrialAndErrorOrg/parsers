@@ -32,9 +32,9 @@ export function one(
 }
 
 function unknown(j: J, node: Node) {
-  // @ts-ignore: Looks like a literal.
+  // @ts-expect-error: Looks like a literal.
   if (typeof node.value === 'string') {
-    // @ts-ignore: Looks like a literal.
+    // @ts-expect-error: Looks like a literal.
     return j(node, 'text', wrapText(j, node.value))
   }
 

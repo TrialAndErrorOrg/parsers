@@ -110,20 +110,20 @@ export function refToCSL(citation: ElementCitation, id: string): CSL {
         case 'articleTitle':
         case 'chapterTitle':
         case 'partTitle':
-          //@ts-ignore it's an element
+          //@ts-expect-error it's an element
           acc.title = toString(curr)
           return acc
         case 'publisherName':
-          //@ts-ignore it's an element
+          //@ts-expect-error it's an element
           acc.publisher = toString(curr)
           return acc
         case 'publisherLoc':
-          //@ts-ignore it's an element
+          //@ts-expect-error it's an element
           acc['publisher-place'] = toString(curr)
           return acc
         case 'source':
           if (acc.type === 'book') {
-            //@ts-ignore it's an element
+            //@ts-expect-error it's an element
             acc.title = toString(curr)
             return acc
           }
@@ -133,7 +133,7 @@ export function refToCSL(citation: ElementCitation, id: string): CSL {
         //   )
         // ) {
         default:
-          //@ts-ignore it's an element
+          //@ts-expect-error it's an element
           acc[curr.name] = toString(curr as Element)
           return acc
       }
@@ -271,7 +271,7 @@ export function one(node: Node) {
     case 'refList':
       return refListToCSL(node)
     case 'contribGroup': {
-      //@ts-ignore
+      //@ts-expect-error
       if (node.attributes.contentType === 'author') {
         return { author: all(node) }
       }
@@ -279,7 +279,7 @@ export function one(node: Node) {
     }
     case 'event': {
       return {
-        //@ts-ignore
+        //@ts-expect-error
         [node.attributes.eventType]: Object.assign({}, ...all(node)),
       }
     }
@@ -359,7 +359,7 @@ export function one(node: Node) {
       return { 'aff-link': node.attributes.rid }
     }
 
-    //@ts-ignore yea
+    //@ts-expect-error yea
     case 'orcid': {
       return toString(node)
     }
@@ -376,7 +376,7 @@ export function one(node: Node) {
       return { 'publisher-place': all(node).join('') }
     }
     case 'institution': {
-      // @ts-ignore it'll be finneeeee
+      // @ts-expect-error it'll be finneeeee
       return { instution: toString(node) }
     }
     case 'country': {
@@ -392,12 +392,12 @@ export function one(node: Node) {
         case 'pmcid':
           return { PMCID: toString(node) }
         default:
-          //@ts-ignore yea
+          //@ts-expect-error yea
           return { [node.attributes.pubIdType]: toString(node) }
       }
     }
     default:
-      //@ts-ignore
+      //@ts-expect-error
 
       return all(node)
   }

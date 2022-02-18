@@ -1,8 +1,7 @@
-import AdmZip, { IZipEntry } from 'adm-zip'
-import { join, extname } from 'path'
+import AdmZip from 'adm-zip'
+import { extname } from 'path'
 import { promisify } from 'util'
 import yauzl, { Entry, ZipFile } from 'yauzl'
-import { tryCatchPromise } from '@jote/utils'
 
 const tab = '\t',
   cr = '\n\n',
@@ -66,7 +65,7 @@ function unzipCallback(
     reject(new Error('Empty zip file'))
     return
   }
-  let result: { [key: string]: string } = {}
+  const result: { [key: string]: string } = {}
 
   const openReadStream = promisify(zip.openReadStream.bind(zip))
   zip.readEntry()
@@ -77,8 +76,8 @@ function unzipCallback(
     ) {
       zip.readEntry()
     } else {
-      let stream = await openReadStream(entry)
-      let entryChunks: any[] = []
+      const stream = await openReadStream(entry)
+      const entryChunks: any[] = []
       if (stream) {
         stream!.on('data', (chunk) => entryChunks.push(chunk))
         stream!.on('end', () => {
@@ -127,10 +126,7 @@ export async function getXMLData(
  * @param {String} [xmlFilename='document'] Optional argument used to specify
  * the XML component of the file from which to extract the text (default is: 'document').
  */
-export const extractText = async (
-  path: string,
-  xmlFilename: string = 'document'
-) => {
+export const extractText = async (path: string, xmlFilename = 'document') => {
   const xml = await getXMLData(path, { filename: xmlFilename })
   let paragraph,
     text = ''

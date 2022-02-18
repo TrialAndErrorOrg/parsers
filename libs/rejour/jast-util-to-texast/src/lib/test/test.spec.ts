@@ -12,7 +12,7 @@ import { toLatex } from 'texast-util-to-latex'
 const fromXML = (config: Options = {}) =>
   unified()
     .use(rejourParse)
-    //@ts-ignore yayayay
+    //@ts-expect-error yayayay
     .use(() => {
       return transformer
       function transformer(tree: TexastRoot | TexastContent) {
@@ -51,7 +51,7 @@ describe.each(dir)('parses correctly for %s', (name: string) => {
 
   let tree: TexastRoot = { type: 'root', children: [] }
   try {
-    //@ts-ignore
+    //@ts-expect-error
     tree = removePosition(proc.runSync(xmlTree), true)
   } catch (e) {
     console.error('woops')

@@ -72,9 +72,9 @@ export function enterState(state: SelectState, node: XastNode): () => void {
             type === 'text')
         ) {
           // Check value of `<input>`.
-          // @ts-ignore something is `never` in types but this is needed.
+          // @ts-expect-error something is `never` in types but this is needed.
           dirInferred = node.attributes.value
-            ? // @ts-ignore Assume string
+            ? // @ts-expect-error Assume string
               dirBidi(node.attributes.value)
             : 'ltr'
         } else {

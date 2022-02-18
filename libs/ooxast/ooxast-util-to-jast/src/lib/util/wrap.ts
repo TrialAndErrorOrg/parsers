@@ -45,7 +45,7 @@ export function wrapNeeded(nodes: Array<JastContent>): boolean {
 
     if (
       !isParagraphContent(node) ||
-      //@ts-ignore idk man
+      //@ts-expect-error idk man
       ('children' in node && wrapNeeded(node.children))
     ) {
       return true
@@ -128,7 +128,7 @@ function flatten(nodes: Array<JastContent>): Array<JastContent> {
  * @returns {Array.JastContent>}
  */
 function split(node: JastContent): Array<JastContent> {
-  // @ts-ignore Assume parent.
+  // @ts-expect-error Assume parent.
   return runs(node.children, onphrasing, onnonphrasing)
 
   /**
@@ -144,7 +144,7 @@ function split(node: JastContent): Array<JastContent> {
       const { children, ...rest } = node
       return {
         ...child,
-        // @ts-ignore: assume matching parent & child.
+        // @ts-expect-error: assume matching parent & child.
         children: [{ ...rest, children: child.children }],
       }
     }
@@ -159,9 +159,9 @@ function split(node: JastContent): Array<JastContent> {
    * @returns JastContent}
    */
   function onphrasing(nodes: Array<JastParagraphContent>): JastContent {
-    // @ts-ignore: assume parent.
+    // @ts-expect-error: assume parent.
     const { children, ...rest } = node
-    // @ts-ignore: assume matching parent & child.
+    // @ts-expect-error: assume matching parent & child.
     return { ...rest, children: nodes }
   }
 }

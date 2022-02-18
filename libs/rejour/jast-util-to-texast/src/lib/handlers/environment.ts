@@ -27,7 +27,7 @@ export function environment(j: J, node: Parents) {
   }
 
   const things = node.children
-    // @ts-ignore dude just chill
+    // @ts-expect-error dude just chill
     .reduce(
       (
         acc: {

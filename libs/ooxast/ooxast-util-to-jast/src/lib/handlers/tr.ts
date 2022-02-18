@@ -11,7 +11,7 @@ export function tr(j: J, tr: Row) {
       type: 'element',
       name: 'td',
       attributes: {},
-      // @ts-ignore
+      // @ts-expect-error
       children: cell?.children || [cell],
     })
   }

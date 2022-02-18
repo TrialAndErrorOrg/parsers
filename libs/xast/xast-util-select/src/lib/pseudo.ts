@@ -20,65 +20,65 @@ import { zwitch } from 'zwitch'
 import { any } from './any'
 
 const handle = zwitch('name', {
-  // @ts-ignore: hush.
+  // @ts-expect-error: hush.
   unknown: unknownPseudo,
   invalid: invalidPseudo,
   handlers: {
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     any: matches,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     'any-link': anyLink,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     blank,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     checked,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     dir,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     disabled,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     empty,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     enabled,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     'first-child': firstChild,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     'first-of-type': firstOfType,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     has,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     lang,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     'last-child': lastChild,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     'last-of-type': lastOfType,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     matches,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     not,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     'nth-child': nthChild,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     'nth-last-child': nthLastChild,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     'nth-of-type': nthOfType,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     'nth-last-of-type': nthLastOfType,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     'only-child': onlyChild,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     'only-of-type': onlyOfType,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     optional,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     'read-only': readOnly,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     'read-write': readWrite,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     required,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     root,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     scope,
   },
 })
@@ -426,7 +426,7 @@ function lang(
     state.language !== '' &&
     state.language !== undefined &&
     state.language !== null &&
-    // @ts-ignore never `selectors`.
+    // @ts-expect-error never `selectors`.
     extendedFilter(state.language, commas(query.value)).length > 0
   )
 }
@@ -718,7 +718,7 @@ function appendScope(value: Selector): Selectors {
     ) {
       selector.selectors[index] = {
         type: 'ruleSet',
-        // @ts-ignore pseudos are fine w/ just a name!
+        // @ts-expect-error pseudos are fine w/ just a name!
         rule: { type: 'rule', rule, pseudos: [{ name: 'scope' }] },
       }
     }

@@ -1,4 +1,3 @@
-import { Node } from 'unist'
 import { Parent } from 'unist'
 import { Element } from 'xast'
 

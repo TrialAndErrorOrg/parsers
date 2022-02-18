@@ -55,7 +55,7 @@ function unify(string: string, settings: Settings) {
   tree = settings?.removeWhiteSpace
     ? filter(tree, (node: XastNode) => {
         return !(
-          //@ts-ignore ITS FINE
+          //@ts-expect-error ITS FINE
           (node.type === 'text' && node.value.replace(/[\n ]+/, '') === '')
         )
       })!
@@ -65,7 +65,7 @@ function unify(string: string, settings: Settings) {
   // attributes --> attributes
   // name --> name
   // to be more in line with hast, which makes plugins easier to port
-  //@ts-ignore: TODO:somehow types don't align, fix
+  //@ts-expect-error: TODO:somehow types don't align, fix
   // tree = map(tree!, (node) => {
   //   if (node.type !== 'element') return node
   //   const element = node as XastElement

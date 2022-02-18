@@ -20,7 +20,7 @@ function bridge(
   options?: Options
 ): void | Transformer<OoxastRoot, OoxastRoot> {
   return (node, file, next) => {
-    //@ts-ignore there should be a better way to cast this
+    //@ts-expect-error there should be a better way to cast this
     destination.run(
       toJast(node, {
         ...options,
@@ -42,7 +42,7 @@ function mutate(
   options: void | Options | undefined = {}
 ): ReturnType<Plugin<[Options?] | void[], OoxastRoot, OoxastRoot>> {
   //Transformer<OoxastRoot, OoxastRoot> | void {
-  //@ts-ignore there should be a better way to cast this
+  //@ts-expect-error there should be a better way to cast this
   //THIS IS FINE
   return (node, file) => {
     const result = toJast(node, {

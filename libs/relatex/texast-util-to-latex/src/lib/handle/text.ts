@@ -8,7 +8,7 @@ import {
   BasicHandle,
 } from '../types'
 import { safe } from '../util/safe'
-//@ts-ignore
+//@ts-expect-error
 import lxescape from 'escape-latex'
 
 type EscapeMapFn = (

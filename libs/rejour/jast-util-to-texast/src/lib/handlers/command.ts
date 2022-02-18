@@ -40,21 +40,21 @@ export function command(j: J, node: Parents, parent: Parent) {
   const firstCommandArg = wrapCommandArg(
     j,
     node?.children
-      // @ts-ignore dude just chill
+      // @ts-expect-error dude just chill
       ?.filter(
         (child: Node) =>
           mapEntry?.first?.includes(
-            // @ts-ignore dude just chill
+            // @ts-expect-error dude just chill
             child.name
           ) || child?.type === 'text'
       )
   )
 
   const requiredCommandArgs: CommandArg[] = node?.children
-    // @ts-ignore dude just chill
+    // @ts-expect-error dude just chill
     ?.filter((child: Node) =>
       mapEntry?.required?.includes(
-        // @ts-ignore dude just chill
+        // @ts-expect-error dude just chill
         child.name
       )
     )
@@ -63,7 +63,7 @@ export function command(j: J, node: Parents, parent: Parent) {
     })
 
   const optionalCommandArgs: CommandArgOpt[] = node?.children
-    // @ts-ignore dude just chill
+    // @ts-expect-error dude just chill
     ?.filter((child: Parents) => mapEntry?.optional?.includes(child.name))
     .map((child: any) => wrapCommandArg(j, [child], true))
 

@@ -14,22 +14,22 @@ import { stringify as spaces } from 'space-separated-tokens'
 import { zwitch } from 'zwitch'
 
 const handle = zwitch('operator', {
-  // @ts-ignore: hush.
+  // @ts-expect-error: hush.
   unknown: unknownOperator,
-  // @ts-ignore: hush.
+  // @ts-expect-error: hush.
   invalid: exists,
   handlers: {
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     '=': exact,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     '~=': spaceSeparatedList,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     '|=': exactOrPrefix,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     '^=': begins,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     '$=': ends,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     '*=': contains,
   },
 })
@@ -107,7 +107,7 @@ function spaceSeparatedList(
       value &&
       typeof value === 'object' &&
       query.value &&
-      // @ts-ignore this is for hast but ill leave it in just in case
+      // @ts-expect-error this is for hast but ill leave it in just in case
       value.includes(query.value)) ||
     // For all other values (including comma-separated lists), return whether this
     // is an exact match.

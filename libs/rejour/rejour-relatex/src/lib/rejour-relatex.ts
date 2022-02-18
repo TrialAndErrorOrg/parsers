@@ -20,7 +20,7 @@ function bridge(
   options?: Options
 ): void | Transformer<JastRoot, JastRoot> {
   return (node, file, next) => {
-    //@ts-ignore there should be a better way to cast this
+    //@ts-expect-error there should be a better way to cast this
     destination.run(toTexast(node, options), file, (error) => {
       next(error)
     })
@@ -37,7 +37,7 @@ function mutate(
   //Transformer<JastRoot, JastRoot> | void {
   return (node) => {
     // TODO: [rejour-relatex] Cast JastRoot to TexastRoot better
-    //@ts-ignore there should be a better way to cast this
+    //@ts-expect-error there should be a better way to cast this
     const result = toTexast(node, options) as TexastRoot
     return result
   }

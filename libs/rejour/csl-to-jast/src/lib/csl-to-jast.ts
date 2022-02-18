@@ -26,7 +26,7 @@ export function cslToJats(data: CSL | CSL[]) {
   return cslToFront(data)
 }
 
-// @ts-ignore
+// @ts-expect-error
 export function cslToFront(data: CSL): Front {}
 
 export function cslToRefList(
@@ -47,10 +47,10 @@ export function cslToRef(data: CSL, index: number | string): Ref {
   const [year, month, day] = date || data.issued?.literal?.split('-') || []
 
   const pubIds = ['DOI', 'PMID', 'PMCID'].flatMap(
-    //@ts-ignore no idea why not work
+    //@ts-expect-error no idea why not work
     (id: 'DOI' | 'PMID' | 'PMCID') =>
       data[id]
-        ? //@ts-ignore
+        ? //@ts-expect-error
           (x('pubId', { pubIdType: id.toLowerCase() }, [
             { type: 'text', value: data[id] },
           ]) as PubId)
@@ -82,7 +82,7 @@ export function cslToRef(data: CSL, index: number | string): Ref {
   })
 
   const authors = names
-    ? //@ts-ignore
+    ? //@ts-expect-error
       x('personGroup', { personGroupType: 'author' }, names)
     : []
 

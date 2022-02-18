@@ -12,7 +12,7 @@ export function extLink(j: J, node: ExtLink) {
       wrapCommandArg(j, [
         { type: 'text', value: node.attributes['xlink:href'] },
       ]),
-      //@ts-ignore shut up
+      //@ts-expect-error shut up
       wrapCommandArg(j, node.children),
     ],
   }

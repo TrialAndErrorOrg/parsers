@@ -59,7 +59,7 @@ export function xref(j: J, node: Xref) {
                   node.attributes.rid ||
                   node.children
                     .map((node) => {
-                      //@ts-ignore
+                      //@ts-expect-error
                       const n = node.value.replace(/[\[\], ]/g, '')
                       return n ? `bib${n}` : undefined
                     })
@@ -88,7 +88,7 @@ export function xref(j: J, node: Xref) {
     case 'fn': {
       const fnContent = j.footnotes[
         // TODO: [rejour-relatex]: make footnote identification less arbitrary, like a counter or something
-        //@ts-ignore
+        //@ts-expect-error
         parseInt(node.children?.[0]?.value?.replace(/[\[\]]/g, '')) - 1
       ] as any
       return j(node, 'command', { name: 'footnote' }, [

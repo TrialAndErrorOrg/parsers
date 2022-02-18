@@ -15,18 +15,18 @@ import { parent, element } from './util'
 const own = {}.hasOwnProperty
 
 const handle = zwitch('nestingOperator', {
-  // @ts-ignore: hush.
+  // @ts-expect-error: hush.
   unknown: unknownNesting,
-  // @ts-ignore: hush.
+  // @ts-expect-error: hush.
   invalid: topScan, // `undefined` is the top query selector.
   handlers: {
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     null: descendant, // `null` is the descendant combinator.
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     '>': child,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     '+': adjacentSibling,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     '~': generalSibling,
   },
 })

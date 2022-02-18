@@ -2,8 +2,6 @@ import { Selector } from './types'
 import { Selectors } from './types'
 import { RuleSet } from './types'
 import { Rule } from './types'
-import { RulePseudo } from './types'
-import { RulePseudoNth } from './types'
 
 import { CssSelectorParser } from 'css-selector-parser'
 import fauxEsmNthCheck from 'nth-check'
@@ -22,7 +20,7 @@ const nth = new Set([
 
 const parser = new CssSelectorParser()
 
-// @ts-ignore: hush.
+// @ts-expect-error: hush.
 const compile = zwitch('type', { handlers: { selectors, ruleSet, rule } })
 
 parser.registerAttrEqualityMods('~', '|', '^', '$', '*')
@@ -38,7 +36,7 @@ export function parse(selector: string): Selector {
     throw new TypeError('Expected `string` as selector, not `' + selector + '`')
   }
 
-  // @ts-ignore types are wrong.
+  // @ts-expect-error types are wrong.
   return compile(parser.parse(selector))
 }
 
@@ -76,9 +74,9 @@ function rule(query: Rule): Rule {
     const pseudo = pseudos[index]
 
     if (nth.has(pseudo.name)) {
-      // @ts-ignore
+      // @ts-expect-error
       pseudo.value = nthCheck(pseudo.value)
-      // @ts-ignore
+      // @ts-expect-error
       pseudo.valueType = 'function'
     }
   }

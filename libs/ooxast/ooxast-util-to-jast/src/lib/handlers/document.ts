@@ -11,7 +11,7 @@ export function document(j: J, node: Document): Article {
 
   return x('article', [
     x('front') as Front,
-    // @ts-ignore: hush.
+    // @ts-expect-error: hush.
     all(j, node),
     x('back', fngroup) as Back,
   ]) as Article

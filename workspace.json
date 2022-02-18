@@ -19,6 +19,7 @@
     "ooxast-util-get-style": "libs/ooxast/ooxast-util-get-style",
     "ooxast-util-parse-bib": "libs/ooxast/ooxast-util-parse-bib",
     "ooxast-util-to-jast": "libs/ooxast/ooxast-util-to-jast",
+    "parse-text-cite": "libs/parse-text-cite",
     "processors-docx-to-jats": "libs/processors/docx-to-jats",
     "processors-docx-to-tex": "libs/processors/docx-to-tex",
     "processors-jats-to-tex": "libs/processors/jats-to-tex",

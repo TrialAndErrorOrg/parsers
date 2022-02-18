@@ -55,6 +55,7 @@
         "libs/ooxast/ooxast-util-parse-bib/src/index.ts"
       ],
       "ooxast-util-to-jast": ["libs/ooxast/ooxast-util-to-jast/src/index.ts"],
+      "parse-text-cite": ["libs/parse-text-cite/src/index.ts"],
       "rejour": ["libs/rejour/rejour/src/index.ts"],
       "rejour-frontmatter": ["libs/rejour/rejour-frontmatter/src/index.ts"],
       "rejour-meta": ["libs/rejour/rejour-meta/src/index.ts"],

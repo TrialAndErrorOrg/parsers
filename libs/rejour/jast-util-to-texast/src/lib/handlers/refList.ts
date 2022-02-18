@@ -1,6 +1,6 @@
 import { J } from '../types'
 import { RefList } from 'jjast'
-// @ts-ignore No types :(
+// @ts-expect-error No types :(
 import { Person, Data as CSL } from 'csl-json'
 import { Environment } from 'texast'
 import { wrapCommandArg } from '../util/wrap-command-arg'

@@ -26,7 +26,7 @@ describe('jastscript', () => {
       name: 'article',
       attributes: { something: 'new' },
       children: [
-        { type: 'element', name: 'front', children: [], attributes: {} },
+        { type: 'element', name: 'front', children: [], attributes: Record<string,never> },
       ],
     })
   })

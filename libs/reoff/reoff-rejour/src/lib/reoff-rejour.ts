@@ -20,7 +20,6 @@ function bridge(
   options?: Options
 ): void | Transformer<OoxastRoot, OoxastRoot> {
   return (node, file, next) => {
-    //@ts-expect-error there should be a better way to cast this
     destination.run(
       toJast(node, {
         ...options,

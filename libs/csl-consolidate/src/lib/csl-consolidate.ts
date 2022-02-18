@@ -1,4 +1,4 @@
-import axios, { AxiosPromise, AxiosResponse } from 'axios'
+import axios, { AxiosResponse } from 'axios'
 import { Data as CSL } from 'csl-json'
 import RateLimit from '@hokify/axios-rate-limit'
 import { tryCatchPromise } from '@jote/utils'
@@ -155,7 +155,7 @@ function dateSim(ref: CSL, csl: CSL) {
  * Falls off quadratically, because I feel like 2012 and 2014 are
  * kinda close but 2012 and 2001 aren't.
  */
-function simNum(num1: number, num2: number, tolerance: number = 15) {
+function simNum(num1: number, num2: number, tolerance = 15) {
   if (Math.abs(num1 - num2) > tolerance) return 0
   return (1 - Math.abs(num1 - num2) / tolerance) ^ 2
 }

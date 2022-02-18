@@ -60,7 +60,7 @@ export interface EffectExtent extends UnistNode {
 export interface GraphicFrame extends UnistNode {
   type: 'element'
   name: 'wp:graphicFrame'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<GraphicFrameMap>[]
 }
 
@@ -155,7 +155,7 @@ export interface TextboxInfoMap {
 export interface TxbxContent extends UnistNode {
   type: 'element'
   name: 'wp:txbxContent'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<TxbxContentMap>[]
 }
 
@@ -195,7 +195,7 @@ export interface TxbxContentMap {
 export interface WordprocessingCanvas extends UnistNode {
   type: 'element'
   name: 'wp:wordprocessingCanvas'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<WordprocessingCanvasMap>[]
 }
 
@@ -229,7 +229,7 @@ export interface WordprocessingContentPartMap {
 export interface WordprocessingContentPartNonVisual extends UnistNode {
   type: 'element'
   name: 'wp:wordprocessingContentPartNonVisual'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<WordprocessingContentPartNonVisualMap>[]
 }
 
@@ -241,7 +241,7 @@ export interface WordprocessingContentPartNonVisualMap {
 export interface WordprocessingGroup extends UnistNode {
   type: 'element'
   name: 'wp:wordprocessingGroup'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<WordprocessingGroupMap>[]
 }
 

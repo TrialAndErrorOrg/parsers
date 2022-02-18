@@ -166,8 +166,8 @@ function indexedSearch(
   query: Rule,
   parent: Parent,
   state: SelectState,
-  from: number = 0,
-  firstElementOnly: boolean = false
+  from = 0,
+  firstElementOnly = false
 ) {
   const handle = state.index ? delay : add
   const children = parent.children
@@ -176,6 +176,7 @@ function indexedSearch(
   /** @type {Object.<string, number>} */
   const types: { [s: string]: number } = {}
   /** @type {Array.<Function>} */
+  // eslint-disable-next-line
   const delayed: Array<Function> = []
 
   // Start looking at `from`

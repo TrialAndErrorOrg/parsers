@@ -74,9 +74,9 @@ function rule(query: Rule): Rule {
     const pseudo = pseudos[index]
 
     if (nth.has(pseudo.name)) {
-      // @ts-expect-error
+      // @ts-expect-error This does not work
       pseudo.value = nthCheck(pseudo.value)
-      // @ts-expect-error
+      // @ts-expect-error Not sure why mad
       pseudo.valueType = 'function'
     }
   }

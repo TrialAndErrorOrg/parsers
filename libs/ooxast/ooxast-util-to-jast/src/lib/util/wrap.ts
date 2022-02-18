@@ -45,7 +45,6 @@ export function wrapNeeded(nodes: Array<JastContent>): boolean {
 
     if (
       !isParagraphContent(node) ||
-      //@ts-expect-error idk man
       ('children' in node && wrapNeeded(node.children))
     ) {
       return true
@@ -100,7 +99,7 @@ function runs(
  */
 function flatten(nodes: Array<JastContent>): Array<JastContent> {
   /** @type {Array.JastContent>} */
-  let flattened: Array<JastContent> = []
+  const flattened: Array<JastContent> = []
   let index = -1
   /** @type JastContent} */
   let node: JastContent

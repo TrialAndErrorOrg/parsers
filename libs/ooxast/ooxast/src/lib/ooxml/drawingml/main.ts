@@ -20,7 +20,7 @@ export interface AdjPoint2D extends UnistNode {
 export interface AdjustHandleList extends UnistNode {
   type: 'element'
   name: 'a:adjustHandleList'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<AdjustHandleListMap>[]
 }
 
@@ -51,7 +51,7 @@ export interface AlphaFloorEffect extends UnistNode {
 export interface AlphaInverseEffect extends UnistNode {
   type: 'element'
   name: 'a:alphaInverseEffect'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<AlphaInverseEffectMap>[]
 }
 
@@ -67,7 +67,7 @@ export interface AlphaInverseEffectMap {
 export interface AlphaModulateEffect extends UnistNode {
   type: 'element'
   name: 'a:alphaModulateEffect'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<AlphaModulateEffectMap>[]
 }
 
@@ -155,7 +155,7 @@ export interface AnimationDgmElement extends UnistNode {
 export interface AnimationElementChoice extends UnistNode {
   type: 'element'
   name: 'a:animationElementChoice'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<AnimationElementChoiceMap>[]
 }
 
@@ -167,7 +167,7 @@ export interface AnimationElementChoiceMap {
 export interface AnimationGraphicalObjectBuildProperties extends UnistNode {
   type: 'element'
   name: 'a:animationGraphicalObjectBuildProperties'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<AnimationGraphicalObjectBuildPropertiesMap>[]
 }
 
@@ -179,7 +179,7 @@ export interface AnimationGraphicalObjectBuildPropertiesMap {
 export interface AudioCD extends UnistNode {
   type: 'element'
   name: 'a:audioCD'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<AudioCDMap>[]
 }
 
@@ -216,7 +216,7 @@ export interface AudioFileMap {
 export interface Backdrop extends UnistNode {
   type: 'element'
   name: 'a:backdrop'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<BackdropMap>[]
 }
 
@@ -230,7 +230,7 @@ export interface BackdropMap {
 export interface BackgroundFillStyleList extends UnistNode {
   type: 'element'
   name: 'a:backgroundFillStyleList'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<BackgroundFillStyleListMap>[]
 }
 
@@ -246,7 +246,7 @@ export interface BackgroundFillStyleListMap {
 export interface BackgroundFormatting extends UnistNode {
   type: 'element'
   name: 'a:backgroundFormatting'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<BackgroundFormattingMap>[]
 }
 
@@ -264,7 +264,7 @@ export interface BackgroundFormattingMap {
 export interface BaseStyles extends UnistNode {
   type: 'element'
   name: 'a:baseStyles'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<BaseStylesMap>[]
 }
 
@@ -278,7 +278,7 @@ export interface BaseStylesMap {
 export interface BaseStylesOverride extends UnistNode {
   type: 'element'
   name: 'a:baseStylesOverride'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<BaseStylesOverrideMap>[]
 }
 
@@ -422,7 +422,7 @@ export interface Cell3DMap {
 export interface ClipboardStyleSheet extends UnistNode {
   type: 'element'
   name: 'a:clipboardStyleSheet'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<ClipboardStyleSheetMap>[]
 }
 
@@ -434,7 +434,7 @@ export interface ClipboardStyleSheetMap {
 export interface Color extends UnistNode {
   type: 'element'
   name: 'a:color'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<ColorMap>[]
 }
 
@@ -488,7 +488,7 @@ export interface ColorMappingMap {
 export interface ColorMappingOverride extends UnistNode {
   type: 'element'
   name: 'a:colorMappingOverride'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<ColorMappingOverrideMap>[]
 }
 
@@ -500,7 +500,7 @@ export interface ColorMappingOverrideMap {
 export interface ColorMRU extends UnistNode {
   type: 'element'
   name: 'a:colorMRU'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<ColorMRUMap>[]
 }
 
@@ -516,7 +516,7 @@ export interface ColorMRUMap {
 export interface ColorReplaceEffect extends UnistNode {
   type: 'element'
   name: 'a:colorReplaceEffect'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<ColorReplaceEffectMap>[]
 }
 
@@ -557,7 +557,7 @@ export interface ColorSchemeMap {
 export interface ColorSchemeAndMapping extends UnistNode {
   type: 'element'
   name: 'a:colorSchemeAndMapping'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<ColorSchemeAndMappingMap>[]
 }
 
@@ -569,7 +569,7 @@ export interface ColorSchemeAndMappingMap {
 export interface ColorSchemeList extends UnistNode {
   type: 'element'
   name: 'a:colorSchemeList'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<ColorSchemeListMap>[]
 }
 
@@ -608,7 +608,7 @@ export interface ConnectionSiteMap {
 export interface ConnectionSiteList extends UnistNode {
   type: 'element'
   name: 'a:connectionSiteList'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<ConnectionSiteListMap>[]
 }
 
@@ -681,7 +681,7 @@ export interface CustomColorMap {
 export interface CustomColorList extends UnistNode {
   type: 'element'
   name: 'a:customColorList'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<CustomColorListMap>[]
 }
 
@@ -692,7 +692,7 @@ export interface CustomColorListMap {
 export interface CustomGeometry2D extends UnistNode {
   type: 'element'
   name: 'a:customGeometry2D'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<CustomGeometry2DMap>[]
 }
 
@@ -718,7 +718,7 @@ export interface DashStop extends UnistNode {
 export interface DashStopList extends UnistNode {
   type: 'element'
   name: 'a:dashStopList'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<DashStopListMap>[]
 }
 
@@ -729,7 +729,7 @@ export interface DashStopListMap {
 export interface DefaultShapeDefinition extends UnistNode {
   type: 'element'
   name: 'a:defaultShapeDefinition'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<DefaultShapeDefinitionMap>[]
 }
 
@@ -744,7 +744,7 @@ export interface DefaultShapeDefinitionMap {
 export interface DuotoneEffect extends UnistNode {
   type: 'element'
   name: 'a:duotoneEffect'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<DuotoneEffectMap>[]
 }
 
@@ -803,7 +803,7 @@ export interface EffectContainerMap {
 export interface EffectList extends UnistNode {
   type: 'element'
   name: 'a:effectList'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<EffectListMap>[]
 }
 
@@ -821,7 +821,7 @@ export interface EffectListMap {
 export interface EffectProperties extends UnistNode {
   type: 'element'
   name: 'a:effectProperties'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<EffectPropertiesMap>[]
 }
 
@@ -842,7 +842,7 @@ export interface EffectReference extends UnistNode {
 export interface EffectStyleItem extends UnistNode {
   type: 'element'
   name: 'a:effectStyleItem'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<EffectStyleItemMap>[]
 }
 
@@ -856,7 +856,7 @@ export interface EffectStyleItemMap {
 export interface EffectStyleList extends UnistNode {
   type: 'element'
   name: 'a:effectStyleList'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<EffectStyleListMap>[]
 }
 
@@ -882,7 +882,7 @@ export interface EmptyElement extends UnistNode {
 export interface FillEffect extends UnistNode {
   type: 'element'
   name: 'a:fillEffect'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<FillEffectMap>[]
 }
 
@@ -916,7 +916,7 @@ export interface FillOverlayEffectMap {
 export interface FillProperties extends UnistNode {
   type: 'element'
   name: 'a:fillProperties'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<FillPropertiesMap>[]
 }
 
@@ -932,7 +932,7 @@ export interface FillPropertiesMap {
 export interface FillStyleList extends UnistNode {
   type: 'element'
   name: 'a:fillStyleList'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<FillStyleListMap>[]
 }
 
@@ -966,7 +966,7 @@ export interface FlatText extends UnistNode {
 export interface FontCollection extends UnistNode {
   type: 'element'
   name: 'a:fontCollection'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<FontCollectionMap>[]
 }
 
@@ -1029,7 +1029,7 @@ export interface GeomGuide extends UnistNode {
 export interface GeomGuideList extends UnistNode {
   type: 'element'
   name: 'a:geomGuideList'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<GeomGuideListMap>[]
 }
 
@@ -1105,7 +1105,7 @@ export interface GradientStopMap {
 export interface GradientStopList extends UnistNode {
   type: 'element'
   name: 'a:gradientStopList'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<GradientStopListMap>[]
 }
 
@@ -1116,7 +1116,7 @@ export interface GradientStopListMap {
 export interface GraphicalObject extends UnistNode {
   type: 'element'
   name: 'a:graphicalObject'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<GraphicalObjectMap>[]
 }
 
@@ -1229,7 +1229,7 @@ export interface GroupTransform2DMap {
 export interface GvmlConnector extends UnistNode {
   type: 'element'
   name: 'a:gvmlConnector'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<GvmlConnectorMap>[]
 }
 
@@ -1243,7 +1243,7 @@ export interface GvmlConnectorMap {
 export interface GvmlConnectorNonVisual extends UnistNode {
   type: 'element'
   name: 'a:gvmlConnectorNonVisual'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<GvmlConnectorNonVisualMap>[]
 }
 
@@ -1255,7 +1255,7 @@ export interface GvmlConnectorNonVisualMap {
 export interface GvmlGraphicalObjectFrame extends UnistNode {
   type: 'element'
   name: 'a:gvmlGraphicalObjectFrame'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<GvmlGraphicalObjectFrameMap>[]
 }
 
@@ -1269,7 +1269,7 @@ export interface GvmlGraphicalObjectFrameMap {
 export interface GvmlGraphicFrameNonVisual extends UnistNode {
   type: 'element'
   name: 'a:gvmlGraphicFrameNonVisual'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<GvmlGraphicFrameNonVisualMap>[]
 }
 
@@ -1281,7 +1281,7 @@ export interface GvmlGraphicFrameNonVisualMap {
 export interface GvmlGroupShape extends UnistNode {
   type: 'element'
   name: 'a:gvmlGroupShape'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<GvmlGroupShapeMap>[]
 }
 
@@ -1300,7 +1300,7 @@ export interface GvmlGroupShapeMap {
 export interface GvmlGroupShapeNonVisual extends UnistNode {
   type: 'element'
   name: 'a:gvmlGroupShapeNonVisual'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<GvmlGroupShapeNonVisualMap>[]
 }
 
@@ -1312,7 +1312,7 @@ export interface GvmlGroupShapeNonVisualMap {
 export interface GvmlPicture extends UnistNode {
   type: 'element'
   name: 'a:gvmlPicture'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<GvmlPictureMap>[]
 }
 
@@ -1327,7 +1327,7 @@ export interface GvmlPictureMap {
 export interface GvmlPictureNonVisual extends UnistNode {
   type: 'element'
   name: 'a:gvmlPictureNonVisual'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<GvmlPictureNonVisualMap>[]
 }
 
@@ -1339,7 +1339,7 @@ export interface GvmlPictureNonVisualMap {
 export interface GvmlShape extends UnistNode {
   type: 'element'
   name: 'a:gvmlShape'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<GvmlShapeMap>[]
 }
 
@@ -1354,7 +1354,7 @@ export interface GvmlShapeMap {
 export interface GvmlShapeNonVisual extends UnistNode {
   type: 'element'
   name: 'a:gvmlShapeNonVisual'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<GvmlShapeNonVisualMap>[]
 }
 
@@ -1366,7 +1366,7 @@ export interface GvmlShapeNonVisualMap {
 export interface GvmlTextShape extends UnistNode {
   type: 'element'
   name: 'a:gvmlTextShape'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<GvmlTextShapeMap>[]
 }
 
@@ -1385,7 +1385,7 @@ export interface GvmlUseShapeRectangle extends UnistNode {
 export interface Headers extends UnistNode {
   type: 'element'
   name: 'a:headers'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<HeadersMap>[]
 }
 
@@ -1581,7 +1581,7 @@ export interface LinePropertiesMap {
 export interface LineStyleList extends UnistNode {
   type: 'element'
   name: 'a:lineStyleList'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<LineStyleListMap>[]
 }
 
@@ -1607,7 +1607,7 @@ export interface NoFillProperties extends UnistNode {
 export interface NonVisualConnectorProperties extends UnistNode {
   type: 'element'
   name: 'a:nonVisualConnectorProperties'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<NonVisualConnectorPropertiesMap>[]
 }
 
@@ -1668,7 +1668,7 @@ export interface NonVisualDrawingShapePropsMap {
 export interface NonVisualGraphicFrameProperties extends UnistNode {
   type: 'element'
   name: 'a:nonVisualGraphicFrameProperties'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<NonVisualGraphicFramePropertiesMap>[]
 }
 
@@ -1680,7 +1680,7 @@ export interface NonVisualGraphicFramePropertiesMap {
 export interface NonVisualGroupDrawingShapeProps extends UnistNode {
   type: 'element'
   name: 'a:nonVisualGroupDrawingShapeProps'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<NonVisualGroupDrawingShapePropsMap>[]
 }
 
@@ -1706,7 +1706,7 @@ export interface NonVisualPicturePropertiesMap {
 export interface ObjectStyleDefaults extends UnistNode {
   type: 'element'
   name: 'a:objectStyleDefaults'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<ObjectStyleDefaultsMap>[]
 }
 
@@ -1729,7 +1729,7 @@ export interface OfficeArtExtension extends UnistNode {
 export interface OfficeArtExtensionList extends UnistNode {
   type: 'element'
   name: 'a:officeArtExtensionList'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<OfficeArtExtensionListMap>[]
 }
 
@@ -1822,7 +1822,7 @@ export interface Path2DClose extends UnistNode {
 export interface Path2DCubicBezierTo extends UnistNode {
   type: 'element'
   name: 'a:path2DCubicBezierTo'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<Path2DCubicBezierToMap>[]
 }
 
@@ -1833,7 +1833,7 @@ export interface Path2DCubicBezierToMap {
 export interface Path2DLineTo extends UnistNode {
   type: 'element'
   name: 'a:path2DLineTo'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<Path2DLineToMap>[]
 }
 
@@ -1844,7 +1844,7 @@ export interface Path2DLineToMap {
 export interface Path2DList extends UnistNode {
   type: 'element'
   name: 'a:path2DList'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<Path2DListMap>[]
 }
 
@@ -1855,7 +1855,7 @@ export interface Path2DListMap {
 export interface Path2DMoveTo extends UnistNode {
   type: 'element'
   name: 'a:path2DMoveTo'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<Path2DMoveToMap>[]
 }
 
@@ -1866,7 +1866,7 @@ export interface Path2DMoveToMap {
 export interface Path2DQuadBezierTo extends UnistNode {
   type: 'element'
   name: 'a:path2DQuadBezierTo'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<Path2DQuadBezierToMap>[]
 }
 
@@ -2152,7 +2152,7 @@ export interface ReflectionEffect extends UnistNode {
 export interface RegularTextRun extends UnistNode {
   type: 'element'
   name: 'a:regularTextRun'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<RegularTextRunMap>[]
 }
 
@@ -2186,7 +2186,7 @@ export interface RelativeRect extends UnistNode {
 export interface Scale2D extends UnistNode {
   type: 'element'
   name: 'a:scale2D'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<Scale2DMap>[]
 }
 
@@ -2198,7 +2198,7 @@ export interface Scale2DMap {
 export interface Scene3D extends UnistNode {
   type: 'element'
   name: 'a:scene3D'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<Scene3DMap>[]
 }
 
@@ -2364,7 +2364,7 @@ export interface ShapePropertiesMap {
 export interface ShapeStyle extends UnistNode {
   type: 'element'
   name: 'a:shapeStyle'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<ShapeStyleMap>[]
 }
 
@@ -2387,7 +2387,7 @@ export interface SoftEdgesEffect extends UnistNode {
 export interface SolidColorFillProperties extends UnistNode {
   type: 'element'
   name: 'a:solidColorFillProperties'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<SolidColorFillPropertiesMap>[]
 }
 
@@ -2454,7 +2454,7 @@ export interface SRgbColorMap {
 export interface StretchInfoProperties extends UnistNode {
   type: 'element'
   name: 'a:stretchInfoProperties'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<StretchInfoPropertiesMap>[]
 }
 
@@ -2550,7 +2550,7 @@ export interface SystemColorMap {
 export interface Table extends UnistNode {
   type: 'element'
   name: 'a:table'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<TableMap>[]
 }
 
@@ -2563,7 +2563,7 @@ export interface TableMap {
 export interface TableBackgroundStyle extends UnistNode {
   type: 'element'
   name: 'a:tableBackgroundStyle'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<TableBackgroundStyleMap>[]
 }
 
@@ -2596,7 +2596,7 @@ export interface TableCellMap {
 export interface TableCellBorderStyle extends UnistNode {
   type: 'element'
   name: 'a:tableCellBorderStyle'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<TableCellBorderStyleMap>[]
 }
 
@@ -2662,7 +2662,7 @@ export interface TableColMap {
 export interface TableGrid extends UnistNode {
   type: 'element'
   name: 'a:tableGrid'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<TableGridMap>[]
 }
 
@@ -2673,7 +2673,7 @@ export interface TableGridMap {
 export interface TablePartStyle extends UnistNode {
   type: 'element'
   name: 'a:tablePartStyle'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<TablePartStyleMap>[]
 }
 
@@ -2756,7 +2756,7 @@ export interface TableStyleMap {
 export interface TableStyleCellStyle extends UnistNode {
   type: 'element'
   name: 'a:tableStyleCellStyle'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<TableStyleCellStyleMap>[]
 }
 
@@ -2815,7 +2815,7 @@ export interface TextAutonumberBullet extends UnistNode {
 export interface TextBlipBullet extends UnistNode {
   type: 'element'
   name: 'a:textBlipBullet'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<TextBlipBulletMap>[]
 }
 
@@ -2826,7 +2826,7 @@ export interface TextBlipBulletMap {
 export interface TextBody extends UnistNode {
   type: 'element'
   name: 'a:textBody'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<TextBodyMap>[]
 }
 
@@ -2999,7 +2999,7 @@ export interface TextFont extends UnistNode {
 export interface TextLineBreak extends UnistNode {
   type: 'element'
   name: 'a:textLineBreak'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<TextLineBreakMap>[]
 }
 
@@ -3010,7 +3010,7 @@ export interface TextLineBreakMap {
 export interface TextListStyle extends UnistNode {
   type: 'element'
   name: 'a:textListStyle'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<TextListStyleMap>[]
 }
 
@@ -3051,7 +3051,7 @@ export interface TextNormalAutofit extends UnistNode {
 export interface TextParagraph extends UnistNode {
   type: 'element'
   name: 'a:textParagraph'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<TextParagraphMap>[]
 }
 
@@ -3110,7 +3110,7 @@ export interface TextShapeAutofit extends UnistNode {
 export interface TextSpacing extends UnistNode {
   type: 'element'
   name: 'a:textSpacing'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<TextSpacingMap>[]
 }
 
@@ -3150,7 +3150,7 @@ export interface TextTabStop extends UnistNode {
 export interface TextTabStopList extends UnistNode {
   type: 'element'
   name: 'a:textTabStopList'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<TextTabStopListMap>[]
 }
 
@@ -3166,7 +3166,7 @@ export interface TextUnderlineFillFollowText extends UnistNode {
 export interface TextUnderlineFillGroupWrapper extends UnistNode {
   type: 'element'
   name: 'a:textUnderlineFillGroupWrapper'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<TextUnderlineFillGroupWrapperMap>[]
 }
 
@@ -3187,7 +3187,7 @@ export interface TextUnderlineLineFollowText extends UnistNode {
 export interface ThemeableLineStyle extends UnistNode {
   type: 'element'
   name: 'a:themeableLineStyle'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<ThemeableLineStyleMap>[]
 }
 
@@ -3278,7 +3278,7 @@ export interface VideoFileMap {
 export interface WholeE2oFormatting extends UnistNode {
   type: 'element'
   name: 'a:wholeE2oFormatting'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<WholeE2oFormattingMap>[]
 }
 

@@ -72,10 +72,8 @@ export function enterState(state: SelectState, node: XastNode): () => void {
             type === 'text')
         ) {
           // Check value of `<input>`.
-          // @ts-expect-error something is `never` in types but this is needed.
           dirInferred = node.attributes.value
-            ? // @ts-expect-error Assume string
-              dirBidi(node.attributes.value)
+            ? dirBidi(node.attributes.value)
             : 'ltr'
         } else {
           // Check text nodes in `node`.
@@ -156,4 +154,6 @@ function dirAttribute(node: ElementChild): Direction | undefined {
     : undefined
 }
 
-function noop() {}
+function noop() {
+  //
+}

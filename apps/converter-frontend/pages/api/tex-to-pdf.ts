@@ -4,7 +4,7 @@ import { Writable } from 'stream'
 import axios from 'axios'
 import FormData from 'form-data'
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   req.statusCode = 200
   const tex = req.body
   console.log('Received tex')
@@ -21,7 +21,9 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const pack = tar.pack()
   console.log('Packing tarball')
   pack.entry({ name: 'article.tex' }, tex)
-  pack.on('finish', function () {})
+  pack.on('finish', function () {
+    //
+  })
   console.log('Laying pipe')
 
   pack.finalize()
@@ -63,3 +65,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       })
   })
 }
+
+export default handler

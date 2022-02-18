@@ -5,7 +5,6 @@ import {
   RuleSet,
   XastNode as Node,
   XastParent as Parent,
-  SelectIterator,
   SelectState,
 } from './types'
 

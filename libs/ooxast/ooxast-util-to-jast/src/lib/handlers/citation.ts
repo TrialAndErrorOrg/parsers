@@ -1,5 +1,4 @@
-import { select } from 'xast-util-select'
-import { J, Element } from '../types'
+import { J } from '../types'
 import { Parent, T } from 'ooxast'
 import { Data as CSL } from 'csl-json'
 
@@ -91,7 +90,9 @@ export function citation(j: J, citation: T, parent: Parent) {
   return
 }
 
-export function cslCitation(text: string) {}
+export function cslCitation(text: string) {
+  //
+}
 
 function generateAuthYearFromCSL(csl: CSL): string {
   return csl.author?.[0]?.family && csl.issued?.['date-parts']?.[0]?.[0]

@@ -9,7 +9,7 @@ import { Node as UnistNode } from 'unist'
 export interface Author extends UnistNode {
   type: 'element'
   name: `b:Author`
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<AuthorMap>
 }
 
@@ -35,7 +35,7 @@ export interface AuthorMap {
 export interface NameList extends UnistNode {
   type: 'element'
   name: 'b:NameList'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<NameListMap>
 }
 
@@ -47,7 +47,7 @@ export interface NameOrCorporate<name extends string = 'NameOrCorporate'>
   extends UnistNode {
   type: 'element'
   name: `b:${name}`
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<NameOrCorporateMap>
 }
 
@@ -59,7 +59,7 @@ export interface NameOrCorporateMap {
 export interface Name<name extends string = 'Name'> extends UnistNode {
   type: 'element'
   name: `b:${name}`
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<NameMap>
 }
 
@@ -70,7 +70,7 @@ export interface NameMap {
 export interface Person extends UnistNode {
   type: 'element'
   name: 'b:Person'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<PersonMap>
 }
 
@@ -108,13 +108,13 @@ export interface Source extends UnistNode {
 export interface MetaData<tag extends string = 'SourceType'> extends UnistNode {
   type: 'element'
   name: `b:${tag}`
-  attributes: {}
+  attributes: Record<string, never>
   children: [Text]
 }
 export interface SourceType extends UnistNode {
   type: 'element'
   name: 'b:SourceType'
-  attributes: {}
+  attributes: Record<string, never>
   children: [{ type: 'text'; value: SourceVal }]
 }
 
@@ -195,4 +195,5 @@ export type SourceVal =
 export interface document extends UnistNode {
   Sources: Sources
 }
+//eslint-disable-next-line
 export var document: document

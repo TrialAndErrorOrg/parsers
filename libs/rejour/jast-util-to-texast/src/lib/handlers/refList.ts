@@ -1,7 +1,6 @@
 import { J } from '../types'
 import { RefList } from 'jjast'
-// @ts-expect-error No types :(
-import { Person, Data as CSL } from 'csl-json'
+import { Data as CSL } from 'csl-json'
 import { Environment } from 'texast'
 import { wrapCommandArg } from '../util/wrap-command-arg'
 import { refListToCSL } from 'jast-util-to-csl'
@@ -99,7 +98,6 @@ export function refList(j: J, list: RefList): Environment | undefined {
       c
         .map(
           // prettier-ignore
-          //// @ts-expect-error
           (ref,index) =>
           [
             `@${(biblatexCSLMap.target as any)[ref.type]}{${generateCiteKey(ref.id,index)}`,

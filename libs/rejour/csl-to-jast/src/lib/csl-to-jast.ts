@@ -3,12 +3,9 @@ import {
   Ref,
   RefList,
   Front,
-  ElementCitation,
-  Publisher,
   PubId,
   PersonGroup,
   Source,
-  Date,
   Issn,
   Isbn,
   ExtLink,
@@ -26,8 +23,10 @@ export function cslToJats(data: CSL | CSL[]) {
   return cslToFront(data)
 }
 
-// @ts-expect-error
-export function cslToFront(data: CSL): Front {}
+//
+export function cslToFront(data: CSL) {
+  //TODO: [csl-to-jast] write a function that converts CSL to JAST frontmatter
+}
 
 export function cslToRefList(
   data: CSL[] | { [key: string | number]: CSL }
@@ -50,7 +49,7 @@ export function cslToRef(data: CSL, index: number | string): Ref {
     //@ts-expect-error no idea why not work
     (id: 'DOI' | 'PMID' | 'PMCID') =>
       data[id]
-        ? //@ts-expect-error
+        ? //@ts-expect-error I can assign it to this dw bby
           (x('pubId', { pubIdType: id.toLowerCase() }, [
             { type: 'text', value: data[id] },
           ]) as PubId)
@@ -82,8 +81,7 @@ export function cslToRef(data: CSL, index: number | string): Ref {
   })
 
   const authors = names
-    ? //@ts-expect-error
-      x('personGroup', { personGroupType: 'author' }, names)
+    ? (x('personGroup', { personGroupType: 'author' }, names) as PersonGroup)
     : []
 
   const pages = getPages(data)

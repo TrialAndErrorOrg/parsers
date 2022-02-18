@@ -7,5 +7,5 @@ import { RequiredMap } from '../../ooxast'
 import { Node as UnistNode } from 'unist'
 export type RelationshipIdVal = string
 
-export interface document extends UnistNode {}
-export var document: document
+//eslint-disable-next-line
+export var document: UnistNode

@@ -43,19 +43,19 @@ export type Content =
 export type FootnotesContent = Footnotes['children'][number]
 export interface Footnotes extends Parent {
   name: 'w:footnotes'
-  attributes: {}
+  attributes: Record<string,never>
   children: Footnote[]
 }
 export type FootnoteContent = Footnote['children'][number]
 export interface Footnote extends Parent {
   name: 'w:footnote'
-  attributes: {}
+  attributes: Record<string,never>
   children: (P | Sdt)[]
 }
 export type SdtContents = Sdt['children'][number]
 export interface Sdt extends Parent {
   name: 'w:sdt'
-  attributes: {}
+  attributes: Record<string,never>
   children: (SdtPr | SdtEndPr | SdtContent)[]
 }
 export interface SdtPr extends Parent {
@@ -70,7 +70,7 @@ export interface SdtContent extends Parent {
 export type TopLevelDocumentContent = Document['children'][number]
 export interface Document extends Parent {
   name: 'w:document'
-  attributes: {}
+  attributes: Record<string,never>
   children: (Body | Background | Footnotes)[]
 }
 export interface Background extends Parent {
@@ -79,7 +79,7 @@ export interface Background extends Parent {
 export type BodyContent = Body['children'][number]
 export interface Body extends Parent {
   name: 'w:body'
-  attributes: {}
+  attributes: Record<string,never>
   children: (P | SectPr | Tbl)[]
 }
 
@@ -97,14 +97,14 @@ export interface Text extends XastLiteral {
 export type PContent = P['children'][number]
 export interface P extends Parent {
   name: 'w:p'
-  attributes: {}
+  attributes: Record<string,never>
   children: [PPr, R]
 }
 
 export type RContent = R['children'][number]
 export interface R extends Parent {
   name: 'w:r'
-  attributes: {}
+  attributes: Record<string,never>
   children: (
     | RPr
     | T
@@ -166,7 +166,7 @@ export interface PPr extends Parent {
 export type TblContent = Tbl['children'][number]
 export interface Tbl extends Parent {
   name: 'w:tbl'
-  attributes: {}
+  attributes: Record<string,never>
   children: (TblPr | TblGrid | Tr)[]
 }
 export interface TblPr extends Parent {
@@ -175,7 +175,7 @@ export interface TblPr extends Parent {
 export type TblGridContent = GridCol
 export interface TblGrid extends Parent {
   name: 'w:tblGrid'
-  attributes: {}
+  attributes: Record<string,never>
   children: GridCol[]
 }
 export interface GridCol extends TagLiteral {
@@ -185,7 +185,7 @@ export interface GridCol extends TagLiteral {
 export type TrContent = Tr['children'][number]
 export interface Tr extends Parent {
   name: 'w:tr'
-  attributes: {}
+  attributes: Record<string,never>
   children: (TrPr | Tc)[]
 }
 export interface TrPr extends Parent {
@@ -194,7 +194,7 @@ export interface TrPr extends Parent {
 export type TcContent = Tc['children'][number]
 export interface Tc extends Parent {
   name: 'w:tc'
-  attributes: {}
+  attributes: Record<string,never>
   children: (P | Tbl | TcPr)[]
 }
 export interface TcPr extends Parent {

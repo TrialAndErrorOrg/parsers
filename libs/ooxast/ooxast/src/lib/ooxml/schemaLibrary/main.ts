@@ -20,7 +20,7 @@ export interface Schema extends UnistNode {
 export interface SchemaLibrary extends UnistNode {
   type: 'element'
   name: 'SchemaLibrary'
-  attributes: {}
+  attributes: Record<string, never>
   children: RequiredMap<SchemaLibraryMap>[]
 }
 

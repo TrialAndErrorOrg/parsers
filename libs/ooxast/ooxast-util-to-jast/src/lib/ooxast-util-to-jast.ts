@@ -43,7 +43,7 @@ export function toJast(
 ) {
   // const byId: { [s: string]: Element } = {}
   let jast: JastContent | JastRoot
-  let citations: { [key: string | number]: CSL } = {}
+  const citations: { [key: string | number]: CSL } = {}
 
   const j: J = Object.assign(
     ((
@@ -61,7 +61,6 @@ export function toJast(
         attributes = props
       }
 
-      // @ts-expect-error Assume valid `type` and `children`/`value`.
       const result: Node = Object.assign(
         {},
         ['root', 'text'].includes(type)
@@ -197,7 +196,9 @@ export function toJast(
       return index
     }
   }
-  function parseCitation(citation: any) {}
+  function parseCitation(citation: any) {
+    //
+  }
   function collectCitation(citation: any, index: number) {
     citations[index] = citation
   }

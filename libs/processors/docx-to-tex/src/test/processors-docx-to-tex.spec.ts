@@ -16,7 +16,6 @@ const fromDocx = (path: string) =>
   unified()
     .data('hey', 'ho')
     .use(reoffParse)
-    //@ts-expect-error yayayay
     .use(reoffRejour)
     .use(
       () => (tree) =>

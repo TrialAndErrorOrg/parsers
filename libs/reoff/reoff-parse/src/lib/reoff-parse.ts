@@ -1,9 +1,8 @@
 import { fromXml } from 'xast-util-from-xml'
 
 import { ParserFunction } from 'unified'
-import { Root, Node as XastNode, Element as XastElement } from 'xast'
+import { Root, Node as XastNode } from 'xast'
 import { filter } from 'unist-util-filter'
-import { map } from 'unist-util-map'
 
 export interface Settings {
   removeWhiteSpace?: boolean
@@ -58,14 +57,13 @@ function unify(string: string, settings: Settings) {
           //@ts-expect-error ITS FINE
           (node.type === 'text' && node.value.replace(/[\n ]+/, '') === '')
         )
-      })!
+      }) || tree
     : tree
 
   // map
   // attributes --> attributes
   // name --> name
   // to be more in line with hast, which makes plugins easier to port
-  //@ts-expect-error: TODO:somehow types don't align, fix
   // tree = map(tree!, (node) => {
   //   if (node.type !== 'element') return node
   //   const element = node as XastElement

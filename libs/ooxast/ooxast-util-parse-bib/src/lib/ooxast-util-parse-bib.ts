@@ -47,7 +47,7 @@ const isP = convertElement<P>('w:p')
 
 export function findBib(tree: Node): string[] | null {
   const doc = select('w\\:body', tree as Root)
-  let stack: string[] = []
+  const stack: string[] = []
 
   let appendixToggle = false
 

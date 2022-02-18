@@ -3,8 +3,6 @@ import {
   ElementCitation,
   Element,
   isElement,
-  List,
-  Ref,
   RefList,
   Content,
   Root,
@@ -110,28 +108,20 @@ export function refToCSL(citation: ElementCitation, id: string): CSL {
         case 'articleTitle':
         case 'chapterTitle':
         case 'partTitle':
-          //@ts-expect-error it's an element
           acc.title = toString(curr)
           return acc
         case 'publisherName':
-          //@ts-expect-error it's an element
           acc.publisher = toString(curr)
           return acc
         case 'publisherLoc':
-          //@ts-expect-error it's an element
           acc['publisher-place'] = toString(curr)
           return acc
         case 'source':
           if (acc.type === 'book') {
-            //@ts-expect-error it's an element
             acc.title = toString(curr)
             return acc
           }
-        // if (
-        //   ['article', 'article-journal', 'article-newspaper'].includes(
-        //     acc.type
-        //   )
-        // ) {
+        //fallthrough
         default:
           //@ts-expect-error it's an element
           acc[curr.name] = toString(curr as Element)
@@ -271,16 +261,18 @@ export function one(node: Node) {
     case 'refList':
       return refListToCSL(node)
     case 'contribGroup': {
-      //@ts-expect-error
       if (node.attributes.contentType === 'author') {
         return { author: all(node) }
       }
       return
     }
     case 'event': {
+      const type = node.attributes.eventType
+      if (!type) {
+        return
+      }
       return {
-        //@ts-expect-error
-        [node.attributes.eventType]: Object.assign({}, ...all(node)),
+        [type]: Object.assign({}, ...all(node)),
       }
     }
     case 'date': {
@@ -321,6 +313,8 @@ export function one(node: Node) {
               },
             ],
           }
+        default:
+          return
       }
     }
     case 'month':
@@ -376,7 +370,6 @@ export function one(node: Node) {
       return { 'publisher-place': all(node).join('') }
     }
     case 'institution': {
-      // @ts-expect-error it'll be finneeeee
       return { instution: toString(node) }
     }
     case 'country': {
@@ -397,8 +390,6 @@ export function one(node: Node) {
       }
     }
     default:
-      //@ts-expect-error
-
       return all(node)
   }
 }

@@ -1,11 +1,8 @@
 // based on https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/em
 
-import { Article, Parent, TagHavers, Xref } from 'jjast'
-import { Command } from 'texast'
-import { all } from '../all'
-import { J, Node, Root } from '../types'
+import { Xref } from 'jjast'
+import { J } from '../types'
 import { wrapCommandArg } from '../util/wrap-command-arg'
-import { select } from 'xast-util-select'
 
 export function xref(j: J, node: Xref) {
   //  if (!article) {
@@ -59,8 +56,8 @@ export function xref(j: J, node: Xref) {
                   node.attributes.rid ||
                   node.children
                     .map((node) => {
-                      //@ts-expect-error
-                      const n = node.value.replace(/[\[\], ]/g, '')
+                      //@ts-expect-error it is text, it has value
+                      const n = node.value.replace(/[[\], ]/g, '')
                       return n ? `bib${n}` : undefined
                     })
                     .filter((n) => !!n)
@@ -78,8 +75,8 @@ export function xref(j: J, node: Xref) {
           children: [
             {
               type: 'text',
-              //@ts-expect-error
-              value: 'bib' + node.children[0]?.value?.replace(/[\[\]]/g, ''),
+              //@ts-expect-error It is text, it has value
+              value: 'bib' + node.children[0]?.value?.replace(/[[\]]/g, ''),
             },
           ],
         },
@@ -88,8 +85,8 @@ export function xref(j: J, node: Xref) {
     case 'fn': {
       const fnContent = j.footnotes[
         // TODO: [rejour-relatex]: make footnote identification less arbitrary, like a counter or something
-        //@ts-expect-error
-        parseInt(node.children?.[0]?.value?.replace(/[\[\]]/g, '')) - 1
+        // @ts-expect-error it is text, it has value
+        parseInt(node.children?.[0]?.value?.replace(/[[\]]/g, '')) - 1
       ] as any
       return j(node, 'command', { name: 'footnote' }, [
         {

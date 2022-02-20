@@ -1,7 +1,8 @@
 {
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nrwl/nx", "eslint-plugin-unicorn"],
+  "plugins": ["@nrwl/nx", "eslint-plugin-unicorn", "regexp"],
+  "extends": ["plugin:regexp/recommended"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],

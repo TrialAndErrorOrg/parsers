@@ -176,7 +176,7 @@ function indexedSearch(
   /** @type {Object.<string, number>} */
   const types: { [s: string]: number } = {}
   /** @type {Array.<Function>} */
-  // eslint-disable-next-line
+  // eslint-disable-next-line @typescript-eslint/ban-types
   const delayed: Array<Function> = []
 
   // Start looking at `from`

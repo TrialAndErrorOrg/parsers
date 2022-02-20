@@ -11,6 +11,7 @@ module.exports = {
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]sx?$': 'ts-jest',
+    '^.+\\.ne$': 'jest-transform-nearley',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   extensionsToTreatAsEsm: ['.ts'],

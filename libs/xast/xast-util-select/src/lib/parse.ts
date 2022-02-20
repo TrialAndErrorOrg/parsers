@@ -62,7 +62,7 @@ function ruleSet(query: RuleSet): Rule {
   return rule(query.rule)
 }
 
-/**
+/*
  * @param {Rule} query
  * @returns {Rule}
  */

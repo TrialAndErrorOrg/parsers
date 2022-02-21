@@ -1,5 +1,5 @@
-import { findCitations } from './ooxast-ooxast-util-citations'
-import { readFileSync } from 'fs'
+import { findCitations } from './ooxast-util-citations'
+import { readFileSync, writeFileSync } from 'fs'
 import { join } from 'path'
 
 describe('ooxastOoxastUtilCitations', () => {
@@ -9,7 +9,12 @@ describe('ooxastOoxastUtilCitations', () => {
       { encoding: 'utf-8' }
     )
   )
+  const citetree = findCitations(ooxast)
+  writeFileSync(
+    join(__dirname, 'citetree.json'),
+    JSON.stringify(citetree, null, 2)
+  )
   it('should work', () => {
-    expect(findCitations(ooxast)).toEqual('ooxast-ooxast-util-citations')
+    expect(citetree).toEqual('ooxast-ooxast-util-citations')
   })
 })

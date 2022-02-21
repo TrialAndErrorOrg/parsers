@@ -26,11 +26,13 @@ declare var Cap: any;
 declare var Lowword: any;
 declare var NL: any;
 declare var Misc: any;
+declare var End: any;
 declare var Et: any;
 declare var Low: any;
 
 import {lexer} from './lexer'
 
+// TODO: [parser] It's currently extremely slow for large sentences, not good.
 const getFullName = (name: {family:string,
                             'non-dropping-particle':string
                            }
@@ -161,6 +163,7 @@ const grammar: Grammar = {
     {"name": "NonYearParenContent", "symbols": [(lexer.has("Lowword") ? {type: "Lowword"} : Lowword)], "postprocess": id},
     {"name": "NonYearParenContent", "symbols": [(lexer.has("NL") ? {type: "NL"} : NL)], "postprocess": id},
     {"name": "NonYearParenContent", "symbols": [(lexer.has("Misc") ? {type: "Misc"} : Misc)], "postprocess": id},
+    {"name": "NonYearParenContent", "symbols": [(lexer.has("End") ? {type: "End"} : End)], "postprocess": id},
     {"name": "NarrCite$ebnf$1", "symbols": ["Loc"], "postprocess": id},
     {"name": "NarrCite$ebnf$1", "symbols": [], "postprocess": () => null},
     {"name": "NarrCite", "symbols": ["NameList", (lexer.has("__") ? {type: "__"} : __), (lexer.has("Lp") ? {type: "Lp"} : Lp), "YearList", "NarrCite$ebnf$1", (lexer.has("Rp") ? {type: "Rp"} : Rp)], "postprocess":  ([name,,,year])=>(

@@ -1,0 +1,34 @@
+{
+  "root": "libs/ooxast/ooxast-util-remove-rsid",
+  "sourceRoot": "libs/ooxast/ooxast-util-remove-rsid/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ooxast/ooxast-util-remove-rsid/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ooxast/ooxast-util-remove-rsid"],
+      "options": {
+        "jestConfig": "libs/ooxast/ooxast-util-remove-rsid/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ooxast/ooxast-util-remove-rsid",
+        "tsConfig": "libs/ooxast/ooxast-util-remove-rsid/tsconfig.lib.json",
+        "packageJson": "libs/ooxast/ooxast-util-remove-rsid/package.json",
+        "main": "libs/ooxast/ooxast-util-remove-rsid/src/index.ts",
+        "assets": ["libs/ooxast/ooxast-util-remove-rsid/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

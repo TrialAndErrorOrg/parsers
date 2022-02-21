@@ -3,6 +3,7 @@ import { unified } from 'unified'
 import fs from 'fs/promises'
 import path from 'path'
 import { docxToVFile } from 'docx-to-vfile'
+import { removePosition } from 'unist-util-remove-position'
 
 describe('reoffParse', () => {
   it('should work', async () => {
@@ -17,7 +18,7 @@ describe('reoffParse', () => {
 
     await fs.writeFile(
       path.join(__dirname, '../test/ooxasttree'),
-      JSON.stringify(res, null, 2)
+      JSON.stringify(removePosition(res, true), null, 2)
     )
     expect(res).toBeDefined()
   })

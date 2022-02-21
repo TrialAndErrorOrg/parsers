@@ -113,6 +113,7 @@ NonYearParenContent ->
  | %Lowword {% id %}
  | %NL {% id %}
  | %Misc {% id %}
+ | %End {% id %}
 
 # A narrative citation
 NarrCite -> NameList %__ %Lp YearList Loc:? %Rp {% ([name,,,year])=>(

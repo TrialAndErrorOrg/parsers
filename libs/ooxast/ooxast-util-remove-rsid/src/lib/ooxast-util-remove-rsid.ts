@@ -10,12 +10,12 @@ import { remove } from 'unist-util-remove'
 const isP = convertElement<P>('w:p')
 const isR = convertElement<R>('w:r')
 
-interface Options {
+export interface Options {
   rPrRemoveList?: string[]
 }
 
-export function ooxastUtilRemoveRsid(tree: Node, options?: Options): Node
 export function ooxastUtilRemoveRsid(tree: Root, options?: Options): Root
+export function ooxastUtilRemoveRsid(tree: Node, options?: Options): Node
 export function ooxastUtilRemoveRsid(
   tree: Root | Node,
   options?: Options

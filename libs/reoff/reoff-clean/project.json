@@ -1,0 +1,34 @@
+{
+  "root": "libs/reoff/reoff-clean",
+  "sourceRoot": "libs/reoff/reoff-clean/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/reoff/reoff-clean/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/reoff/reoff-clean"],
+      "options": {
+        "jestConfig": "libs/reoff/reoff-clean/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/reoff/reoff-clean",
+        "tsConfig": "libs/reoff/reoff-clean/tsconfig.lib.json",
+        "packageJson": "libs/reoff/reoff-clean/package.json",
+        "main": "libs/reoff/reoff-clean/src/index.ts",
+        "assets": ["libs/reoff/reoff-clean/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

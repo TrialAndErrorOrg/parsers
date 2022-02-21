@@ -2,9 +2,14 @@
 @preprocessor typescript
 
 @{%
-const lexer =require('./lexer.ts').lexer
+import {lexer} from './lexer'
 
-const getFullName =(name)=> `${name?.['non-dropping-particle']? name?.['non-dropping-particle']+' ':''}${name.family}`
+// TODO: [parser] It's currently extremely slow for large sentences, not good.
+const getFullName = (name: {family:string,
+                            'non-dropping-particle':string
+                           }
+                    ) => `${name?.['non-dropping-particle']? name?.['non-dropping-particle']+' ':''}${name.family}`
+
 
 const locators = [
                             "act",
@@ -38,7 +43,7 @@ const locators = [
                             "volume"
 ]
 
-const labelMap= {
+const labelMap: {[key:string]:string}= {
   'p': 'page',
   'pp': 'page',
   'chapter': 'chapter',
@@ -53,21 +58,29 @@ const labelMap= {
 
 @lexer lexer
 
-Input -> InputContent:* {% ([content])=>{
-  return content.reduce((acc,curr)=>{
-    if(!curr.value){
-      acc.push(curr)
-return acc
-}
 
-      if(typeof acc[acc.length-1] ==='string'){
-acc[acc.length-1]+=curr.value
-return acc
-    }
-    acc.push(curr.value)
-    return acc
-    }  ,[])
-} %}
+
+Input -> InputContent:+ {% (inp: any[])=>{
+                          const [content] = inp
+                          return content.reduce((acc: any[],curr: Record<string, any>)=>{
+
+                                if(!curr.value){
+                                  acc.push(curr)
+                                  return acc
+                                }
+
+                                if(typeof acc[acc.length-1] ==='string'){
+                                  acc[acc.length-1]+=curr.value
+                                  return acc
+                                }
+
+                                acc.push(curr.value)
+                                return acc
+
+                             }  ,[])
+                          }
+                        %}
+
 
 InputContent ->
          ParenCite {% id %}
@@ -75,43 +88,46 @@ InputContent ->
         | NonCiteContent {% id %}
 
 NonCiteContent ->
-         %__ {% id %}
- | %Year {% id %}
- | %Number{% id %}
- | %Com{% id %}
- | %Dot{% id %}
- | %Sem{% id %}
- | %Col{% id %}
- | %Amp{% id %}
- | %And{% id %}
- | %Ca{% id %}
- | %Quote{% id %}
- | %Apo{% id %}
- | %Slash{% id %}
- | %Dash{% id %}
- | %Punct{% id %}
- | %Mc{% id %}
- | %DutchPref{% id %}
- | %Cap{% id %}
- | %Lowword{% id %}
- | %NL{% id %}
- | %Misc{% id %}
+  %Year {% id %}
+ | NonYearParenContent {% id %}
+ | %Lp NonYearParenContent:+ %Rp {% ([l,c,r]) => l+c.join('')+r %}
 
+NonYearParenContent ->
+   %__ {% id %}
+ | %Number {% id %}
+ | %Com {% id %}
+ | %Dot {% id %}
+ | %Sem {% id %}
+ | %Col {% id %}
+ | %Amp {% id %}
+ | %And {% id %}
+ | %Ca {% id %}
+ | %Quote {% id %}
+ | %Apo {% id %}
+ | %Slash {% id %}
+ | %Dash {% id %}
+ | %Punct {% id %}
+ | %Mc {% id %}
+ | %DutchPref {% id %}
+ | %Cap {% id %}
+ | %Lowword {% id %}
+ | %NL {% id %}
+ | %Misc {% id %}
 
-NarrCite -> NameList %__ %Lp YearList Loc:? %Rp {% ([name,, , year])=>(
+# A narrative citation
+NarrCite -> NameList %__ %Lp YearList Loc:? %Rp {% ([name,,,year])=>(
                                                            {
                                                              citationId: 'CITE-X',
-                                                              citationItems: year.map(y=>({
+                                                              citationItems: year.map((y:string)=>({
                                                                   "id":getFullName(name).replace(/ /g,'')+y
                                                               })),
                                                               properties: {noteIndex: 0,mode: "composite"}
                                                            }
-                                                                      )
-                                            %}
+                                                                   )
+                                                %}
 
 # A parenthetical citation
 ParenCite -> %Lp ParenContent %Rp {% ([,content,])=>{
-                                                    console.log(content)
                                                       // This is CSL-JSON cite items
                                                     return  {
                                                         citationId:"CITE-X",
@@ -166,6 +182,8 @@ PreAuthsPre ->   GenericContent:+ %Sem %__    {%
                                                              return content[0]
                                                            }
                                               %}
+                | GenericContent:+ %Com %__ {% content=> content[0]%}
+                | GenericContent:+ %__ {%content=>content[0]%}
 
 # Things like (...; see also Gooden, 2021; Kant, 1800)
 # Extremely inefficient
@@ -180,6 +198,23 @@ PreAuthsMiddle -> %Sem %__  GenericContent:+ {%
 Loc -> %Com %__ LocContent {% ([,,loc])=>loc %}
 
  LocContent ->
+              GenericContent:+ %__ GenericContent:+ {% ([label,space,loc]) => {
+
+                                                                  const rawLabel=label.join('').trim().toLowerCase().replace(/\./g,'')
+
+                                                                  if(!(labelMap[rawLabel]) && !locators.includes(rawLabel)){
+                                                                    return {label:'none', locator: label.join('')+space+loc.join('')}
+                                                                  }
+
+                                                                  const properLabel = labelMap[rawLabel] || rawLabel
+
+                                                                 return {
+                                                                   label: properLabel,
+                                                                   locator: loc.join('').trim()
+                                                                  }
+                                                      }
+                                                    %}
+              | GenericContent:+ {% ([loc]) => ({locator: loc.join(''),label:'none'}) %}
 # %Loc %__:? GenericContent:+ {% ([loc,,cont]) => {
 #                                                                   const locator = cont.join('').trim()
 #                                                                   if(loc.value.includes('p.')){
@@ -188,20 +223,6 @@ Loc -> %Com %__ LocContent {% ([,,loc])=>loc %}
 #                                                                   return {locator: locator,label:loc.value}
 #                                                                 }
 #                                              %}
-              GenericContent:+ %__ GenericContent:+ {% ([label,space,loc]) => {
-                                                                  const rawLabel=label.join('').trim().toLowerCase().replace(/\./g,'')
-                                                                  if(!(labelMap[rawLabel]) && !locators.includes(rawLabel)){
-                                                                    return {label:'none', locator: label.join('')+space+loc.join('')}
-                                                                  }
-                                                                  const properLabel = labelMap[rawLabel] || rawLabel
-
-                                                                 return {
-                                                                  label: properLabel,
-                                                                  locator: loc.join('').trim()
-                                                                  }
-                                                                  }
-                                                                  %}
-              | GenericContent:+ {% ([loc]) => ({locator: loc.join(''),label:'none'}) %}
 
 GenericContent ->   %Lowword                                 {% id %}
                   | %Cap %Cap:+                              {% ([cap,caps]) => cap+caps.join('') %}
@@ -212,7 +233,7 @@ GenericContent ->   %Lowword                                 {% id %}
                   | %Number                                  {% id %}
                   | %Dot                                     {% id %}
                   | %Dash                                    {% id %}
-              #   | %Com {% id %}
+                  | %Com {% id %}
                   | %__                                      {% id %}
                #   | %Misc {% id %}
 
@@ -229,7 +250,7 @@ GenericContent ->   %Lowword                                 {% id %}
 #                                       %}
 
 ParenCiteAuthYear -> ParenNameMaybeList %Com %__ YearList  {% ([name,,,year]) => {
-                                                              return year.map(y=>({
+                                                              return year.map((y:string)=>({
                                                                   "id":getFullName(name).replace(/ /g,'')+y
                                                               }))
                                                             }

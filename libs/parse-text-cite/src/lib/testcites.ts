@@ -21,6 +21,14 @@ export const tests: TestData = {
         input:
           'Another long sentence that ends in a citations is the form that makes Thomas the happiest (Thomas, 2022).',
       },
+      {
+        description: 'Just two sentences',
+        result: [
+          'Another long sentence that ends in a citations is the form that makes Thomas the happiest. Here is one more sentence. ',
+        ],
+        input:
+          'Another long sentence that ends in a citations is the form that makes Thomas the happiest. Here is one more sentence. ',
+      },
     ],
   },
   //   'APA-8-6': {
@@ -78,6 +86,20 @@ export const tests: TestData = {
           properties: { noteIndex: 0 },
         },
         input: `(Koehler, 2016)`,
+      },
+      {
+        description: `plain parenthetical citation with see`,
+        result: {
+          citationId: 'CITE-X',
+          citationItems: [
+            {
+              id: 'Koehler2016',
+              prefix: 'see',
+            },
+          ],
+          properties: { noteIndex: 0 },
+        },
+        input: `(see Koehler, 2016)`,
       },
       {
         description: `plain parenthetical citation with double dog`,

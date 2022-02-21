@@ -4245,7 +4245,7 @@ export interface TcPrInnerMap {
 
 export interface T extends UnistNode {
   type: 'element'
-  name: 'w:text' | 'w:instrText' | 'w:delInstrText' | 'w:delText'
+  name: 'w:t' | 'w:instrText' | 'w:delInstrText' | 'w:delText'
   attributes: {
     'xml:space'?: 'preserve' | 'default'
   }

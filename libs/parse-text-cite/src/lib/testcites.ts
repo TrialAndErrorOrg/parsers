@@ -12,6 +12,10 @@ export const tests: TestData = {
             citationItems: [
               {
                 id: 'Thomas2022',
+                itemData: {
+                  author: [{ family: 'Thomas' }],
+                  issued: { 'date-parts': [['2022']] },
+                },
               },
             ],
             properties: { noteIndex: 0 },
@@ -81,6 +85,10 @@ export const tests: TestData = {
           citationItems: [
             {
               id: 'Koehler2016',
+              itemData: {
+                author: [{ family: 'Koehler' }],
+                issued: { 'date-parts': [['2016']] },
+              },
             },
           ],
           properties: { noteIndex: 0 },
@@ -94,6 +102,10 @@ export const tests: TestData = {
           citationItems: [
             {
               id: 'Koehler2016',
+              itemData: {
+                author: [{ family: 'Koehler' }],
+                issued: { 'date-parts': [['2016']] },
+              },
               prefix: 'see',
             },
           ],
@@ -108,6 +120,10 @@ export const tests: TestData = {
           citationItems: [
             {
               id: 'Koehler-Muller2016',
+              itemData: {
+                author: [{ family: 'Koehler-Muller' }],
+                issued: { 'date-parts': [['2016']] },
+              },
             },
           ],
           properties: { noteIndex: 0 },
@@ -121,6 +137,12 @@ export const tests: TestData = {
           citationItems: [
             {
               id: 'vanRavenzwaai2016',
+              itemData: {
+                author: [
+                  { family: 'Ravenzwaai', 'non-dropping-particle': 'van' },
+                ],
+                issued: { 'date-parts': [['2016']] },
+              },
             },
           ],
           properties: { noteIndex: 0 },
@@ -134,6 +156,10 @@ export const tests: TestData = {
           citationItems: [
             {
               id: "O'Neil-vanRavenzwaai2016",
+              itemData: {
+                author: [{ family: "O'Neil-van Ravenzwaai" }],
+                issued: { 'date-parts': [['2016']] },
+              },
             },
           ],
           properties: { noteIndex: 0 },
@@ -178,9 +204,27 @@ export const tests: TestData = {
         result: {
           citationId: 'CITE-X',
           citationItems: [
-            { id: 'Adams2019' },
-            { id: 'Shumway2015' },
-            { id: 'Westinghouse2017' },
+            {
+              id: 'Adams2019',
+              itemData: {
+                author: [{ family: 'Adams' }],
+                issued: { 'date-parts': [['2019']] },
+              },
+            },
+            {
+              id: 'Shumway2015',
+              itemData: {
+                author: [{ family: 'Shumway' }, { family: 'Shulman' }],
+                issued: { 'date-parts': [['2015']] },
+              },
+            },
+            {
+              id: 'Westinghouse2017',
+              itemData: {
+                author: [{ family: 'Westinghouse' }],
+                issued: { 'date-parts': [['2017']] },
+              },
+            },
           ],
           properties: { noteIndex: 0 },
         },
@@ -200,7 +244,22 @@ export const tests: TestData = {
         description: `two things`,
         result: {
           citationId: 'CITE-X',
-          citationItems: [{ id: 'Carraway2013' }, { id: 'Other2014' }],
+          citationItems: [
+            {
+              id: 'Carraway2013',
+              itemData: {
+                author: [{ family: 'Carraway' }],
+                issued: { 'date-parts': [['2013']] },
+              },
+            },
+            {
+              id: 'Other2014',
+              itemData: {
+                author: [{ family: 'Other' }],
+                issued: { 'date-parts': [['2014']] },
+              },
+            },
+          ],
           properties: { noteIndex: 0 },
         },
         input: `(Carraway, 2013; Other, 2014)`,
@@ -210,9 +269,27 @@ export const tests: TestData = {
         result: {
           citationId: 'CITE-X',
           citationItems: [
-            { id: 'Carraway2013' },
-            { id: 'Carraway2014' },
-            { id: 'Carraway2019' },
+            {
+              id: 'Carraway2013',
+              itemData: {
+                author: [{ family: 'Carraway' }],
+                issued: { 'date-parts': [['2013']] },
+              },
+            },
+            {
+              id: 'Carraway2014',
+              itemData: {
+                author: [{ family: 'Carraway' }],
+                issued: { 'date-parts': [['2014']] },
+              },
+            },
+            {
+              id: 'Carraway2019',
+              itemData: {
+                author: [{ family: 'Carraway' }],
+                issued: { 'date-parts': [['2019']] },
+              },
+            },
           ],
           properties: { noteIndex: 0 },
         },
@@ -223,9 +300,39 @@ export const tests: TestData = {
         result: {
           citationId: 'CITE-X',
           citationItems: [
-            { id: 'Carraway2013' },
-            { id: 'Carraway2014' },
-            { id: 'Carraway2019' },
+            {
+              id: 'Carraway2013',
+              itemData: {
+                author: [
+                  { family: 'Carraway' },
+                  { family: 'Guy' },
+                  { family: 'Man' },
+                ],
+                issued: { 'date-parts': [['2013']] },
+              },
+            },
+            {
+              id: 'Carraway2014',
+              itemData: {
+                author: [
+                  { family: 'Carraway' },
+                  { family: 'Guy' },
+                  { family: 'Man' },
+                ],
+                issued: { 'date-parts': [['2014']] },
+              },
+            },
+            {
+              id: 'Carraway2019',
+              itemData: {
+                author: [
+                  { family: 'Carraway' },
+                  { family: 'Guy' },
+                  { family: 'Man' },
+                ],
+                issued: { 'date-parts': [['2019']] },
+              },
+            },
           ],
           properties: { noteIndex: 0 },
         },
@@ -236,9 +343,27 @@ export const tests: TestData = {
         result: {
           citationId: 'CITE-X',
           citationItems: [
-            { id: 'Carraway2013' },
-            { id: 'Carraway2014' },
-            { id: 'Carraway2019' },
+            {
+              id: 'Carraway2013',
+              itemData: {
+                author: [{ family: 'Carraway' }],
+                issued: { 'date-parts': [['2013']] },
+              },
+            },
+            {
+              id: 'Carraway2014',
+              itemData: {
+                author: [{ family: 'Carraway' }],
+                issued: { 'date-parts': [['2014']] },
+              },
+            },
+            {
+              id: 'Carraway2019',
+              itemData: {
+                author: [{ family: 'Carraway' }],
+                issued: { 'date-parts': [['2019']] },
+              },
+            },
           ],
           properties: { noteIndex: 0 },
         },
@@ -249,9 +374,27 @@ export const tests: TestData = {
         result: {
           citationId: 'CITE-X',
           citationItems: [
-            { id: 'Carraway2013' },
-            { id: 'Carraway2014' },
-            { id: 'Other2014' },
+            {
+              id: 'Carraway2013',
+              itemData: {
+                author: [{ family: 'Carraway' }],
+                issued: { 'date-parts': [['2013']] },
+              },
+            },
+            {
+              id: 'Carraway2014',
+              itemData: {
+                author: [{ family: 'Carraway' }],
+                issued: { 'date-parts': [['2014']] },
+              },
+            },
+            {
+              id: 'Other2014',
+              itemData: {
+                author: [{ family: 'Other' }],
+                issued: { 'date-parts': [['2014']] },
+              },
+            },
           ],
           properties: { noteIndex: 0 },
         },
@@ -262,10 +405,35 @@ export const tests: TestData = {
         result: {
           citationId: 'CITE-X',
           citationItems: [
-            { id: 'Sampson2020' },
-            { id: 'Augustine2017', prefix: 'see also ' },
-            { id: 'Melara2018' },
-            { id: 'Pérez2014' },
+            {
+              id: 'Sampson2020',
+              itemData: {
+                author: [{ family: 'Sampson' }, { family: 'Hughes' }],
+                issued: { 'date-parts': [['2020']] },
+              },
+            },
+            {
+              id: 'Augustine2017',
+              itemData: {
+                author: [{ family: 'Augustine' }],
+                issued: { 'date-parts': [['2017']] },
+              },
+              prefix: 'see also ',
+            },
+            {
+              id: 'Melara2018',
+              itemData: {
+                author: [{ family: 'Melara' }],
+                issued: { 'date-parts': [['2018']] },
+              },
+            },
+            {
+              id: 'Pérez2014',
+              itemData: {
+                author: [{ family: 'Pérez' }],
+                issued: { 'date-parts': [['2014']] },
+              },
+            },
           ],
           properties: { noteIndex: 0 },
         },
@@ -289,6 +457,10 @@ export const tests: TestData = {
           citationItems: [
             {
               id: 'CentersforDiseaseControlandPrevention2019',
+              itemData: {
+                author: [{ family: 'CentersforDiseaseControlandPrevention' }],
+                issued: { 'date-parts': [['2019']] },
+              },
               locator: '10',
               label: 'page',
             },
@@ -302,7 +474,15 @@ export const tests: TestData = {
         result: {
           citationId: 'CITE-X',
           citationItems: [
-            { id: 'Shimamura2017', locator: '3', label: 'chapter' },
+            {
+              id: 'Shimamura2017',
+              itemData: {
+                author: [{ family: 'Shimamura' }],
+                issued: { 'date-parts': [['2017']] },
+              },
+              locator: '3',
+              label: 'chapter',
+            },
           ],
           properties: { noteIndex: 0 },
         },
@@ -313,7 +493,15 @@ export const tests: TestData = {
         result: {
           citationId: 'CITE-X',
           citationItems: [
-            { id: 'Armstrong2015', label: 'page', locator: '3–17' },
+            {
+              id: 'Armstrong2015',
+              itemData: {
+                author: [{ family: 'Armstrong' }],
+                issued: { 'date-parts': [['2015']] },
+              },
+              label: 'page',
+              locator: '3–17',
+            },
           ],
           properties: { noteIndex: 0 },
         },
@@ -324,7 +512,15 @@ export const tests: TestData = {
         result: {
           citationId: 'CITE-X',
           citationItems: [
-            { id: 'Shadid2020', label: 'paragraph', locator: '2–3' },
+            {
+              id: 'Shadid2020',
+              itemData: {
+                author: [{ family: 'Shadid' }],
+                issued: { 'date-parts': [['2020']] },
+              },
+              label: 'paragraph',
+              locator: '2–3',
+            },
           ],
           properties: { noteIndex: 0 },
         },
@@ -334,7 +530,17 @@ export const tests: TestData = {
         description: ``,
         result: {
           citationId: 'CITE-X',
-          citationItems: [{ id: 'Kovačič2019', label: 'table', locator: '1' }],
+          citationItems: [
+            {
+              id: 'Kovačič2019',
+              itemData: {
+                author: [{ family: 'Kovačič' }, { family: 'Horvat' }],
+                issued: { 'date-parts': [['2019']] },
+              },
+              label: 'table',
+              locator: '1',
+            },
+          ],
           properties: { noteIndex: 0 },
         },
         input: `(Kovačič & Horvat, 2019, Table 1)`,
@@ -344,7 +550,15 @@ export const tests: TestData = {
         result: {
           citationId: 'CITE-X',
           citationItems: [
-            { id: 'Thompson2020', label: 'none', locator: 'Slide 7' },
+            {
+              id: 'Thompson2020',
+              itemData: {
+                author: [{ family: 'Thompson' }],
+                issued: { 'date-parts': [['2020']] },
+              },
+              label: 'none',
+              locator: 'Slide 7',
+            },
           ],
           properties: { noteIndex: 0 },
         },
@@ -357,6 +571,12 @@ export const tests: TestData = {
           citationItems: [
             {
               id: 'BeckInstituteforCognitiveBehaviourTherapy2012',
+              itemData: {
+                author: [
+                  { family: 'BeckInstituteforCognitiveBehaviourTherapy' },
+                ],
+                issued: { 'date-parts': [['2012']] },
+              },
               label: 'none',
               locator: '1:30:40',
             },
@@ -370,7 +590,16 @@ export const tests: TestData = {
         result: {
           citationId: 'CITE-X',
           citationItems: [
-            { id: 'KingJamesBible2017', label: 'none', locator: '1 Cor. 13:1' },
+            {
+              id: 'KingJamesBible2017',
+              itemData: {
+                author: [{ family: 'KingJamesBible' }],
+                issued: { 'date-parts': [['2017']] },
+                'original-date': { 'date-parts': [['1769']] },
+              },
+              label: 'none',
+              locator: '1 Cor. 13:1',
+            },
           ],
           properties: { noteIndex: 0 },
         },
@@ -381,7 +610,15 @@ export const tests: TestData = {
         result: {
           citationId: 'CITE-X',
           citationItems: [
-            { id: 'Aristotle1994', label: 'part', locator: 'IV' },
+            {
+              id: 'Aristotle1994',
+              itemData: {
+                author: [{ family: 'Aristotle' }],
+                issued: { 'date-parts': [['1994']] },
+              },
+              label: 'part',
+              locator: 'IV',
+            },
           ],
           properties: { noteIndex: 0 },
         },
@@ -392,11 +629,49 @@ export const tests: TestData = {
         result: {
           citationId: 'CITE-X',
           citationItems: [
-            { id: 'Shakespeare1995', label: 'none', locator: '1.3.36–37' },
+            {
+              id: 'Shakespeare1995',
+              itemData: {
+                author: [{ family: 'Shakespeare' }],
+                issued: { 'date-parts': [['1995']] },
+                'original-date': { 'date-parts': [['1623']] },
+              },
+              label: 'none',
+              locator: '1.3.36–37',
+            },
           ],
           properties: { noteIndex: 0 },
         },
         input: `(Shakespeare, 1623/1995, 1.3.36–37)`,
+      },
+      {
+        description: `Works with multiple locators`,
+        result: {
+          citationId: 'CITE-X',
+          citationItems: [
+            {
+              id: 'Shakespeare1995',
+              label: 'none',
+              locator: '1.3.36–37',
+              itemData: {
+                author: [{ family: 'Shakespeare' }],
+                issued: { 'date-parts': [['1995']] },
+                'original-date': { 'date-parts': [['1623']] },
+              },
+            },
+            {
+              id: 'Johnson2021',
+              label: 'page',
+              locator: '1',
+              itemData: {
+                author: [{ family: 'Johnson' }],
+                issued: { 'date-parts': [['2021']] },
+              },
+            },
+          ],
+          properties: { noteIndex: 0 },
+        },
+        input: `(Shakespeare, 1623/1995, 1.3.36–37; Johnson, 2021, p. 1)`,
       },
       //       // 'Note the use of \\nopp in the Shakespeare example to suppress the pagination prefix since the part specification is auto-detected as a range by biblatex which it then assumes is a page range. Note also the date format for the Aristotle example, see the reference file for the data format–no special formatting is required by the user as biblatex fully supports the relevant parts of the ISO 601 specification and can parse/format such dates automatically.',
     ],
@@ -428,7 +703,16 @@ export const tests: TestData = {
         description: ``,
         result: {
           citationId: 'CITE-X',
-          citationItems: [{ id: 'Freud1953' }],
+          citationItems: [
+            {
+              id: 'Freud1953',
+              itemData: {
+                author: [{ family: 'Freud' }],
+                issued: { 'date-parts': [['1953']] },
+                'original-date': { 'date-parts': [['1900']] },
+              },
+            },
+          ],
           properties: { noteIndex: 0, mode: 'composite' },
         },
         input: `Freud (1900/1953)`,
@@ -437,7 +721,16 @@ export const tests: TestData = {
         description: ``,
         result: {
           citationId: 'CITE-X',
-          citationItems: [{ id: 'Piaget2000' }],
+          citationItems: [
+            {
+              id: 'Piaget2000',
+              itemData: {
+                author: [{ family: 'Piaget' }],
+                issued: { 'date-parts': [['2000']] },
+                'original-date': { 'date-parts': [['1966']] },
+              },
+            },
+          ],
           properties: { noteIndex: 0 },
         },
         input: `(Piaget, 1966/2000)`,
@@ -464,6 +757,10 @@ export const tests: TestData = {
           citationItems: [
             {
               id: 'Jöreskog2007',
+              itemData: {
+                author: [{ family: 'Jöreskog' }, { family: 'Sörbon' }],
+                issued: { 'date-parts': [['2007']] },
+              },
             },
           ],
           properties: { noteIndex: 0 },
@@ -475,7 +772,15 @@ export const tests: TestData = {
 
         result: {
           citationId: 'CITE-X',
-          citationItems: [{ id: 'Eifert2018' }],
+          citationItems: [
+            {
+              id: 'Eifert2018',
+              itemData: {
+                author: [{ family: 'Eifert' }, { family: 'Yildiz' }],
+                issued: { 'date-parts': [['2018']] },
+              },
+            },
+          ],
           properties: { noteIndex: 0, mode: 'composite' },
         },
         input: `Eifert and Yildiz (2018)`,
@@ -487,6 +792,10 @@ export const tests: TestData = {
           citationItems: [
             {
               id: 'AmericanEducationalResearchAssociation2014',
+              itemData: {
+                author: [{ family: 'AmericanEducationalResearchAssociation' }],
+                issued: { 'date-parts': [['2014']] },
+              },
             },
           ],
           properties: { noteIndex: 0 },
@@ -505,6 +814,14 @@ export const tests: TestData = {
           citationItems: [
             {
               id: 'Kapoor2017',
+              itemData: {
+                author: [
+                  { family: 'Kapoor' },
+                  { family: 'Bloom' },
+                  { family: 'Montez' },
+                ],
+                issued: { 'date-parts': [['2017']] },
+              },
             },
           ],
           properties: { noteIndex: 0, mode: 'composite' },
@@ -518,6 +835,14 @@ export const tests: TestData = {
           citationItems: [
             {
               id: 'Kapoor2017',
+              itemData: {
+                author: [
+                  { family: 'Kapoor' },
+                  { family: 'Bloom' },
+                  { family: 'Zucker' },
+                ],
+                issued: { 'date-parts': [['2017']] },
+              },
             },
           ],
           properties: { noteIndex: 0, mode: 'composite' },
@@ -531,6 +856,15 @@ export const tests: TestData = {
           citationItems: [
             {
               id: 'Hasan2015',
+              itemData: {
+                author: [
+                  { family: 'Hasan' },
+                  { family: 'Liang' },
+                  { family: 'Kahn' },
+                  { family: 'Jones-Miller' },
+                ],
+                issued: { 'date-parts': [['2015']] },
+              },
             },
           ],
           properties: { noteIndex: 0, mode: 'composite' },
@@ -544,6 +878,15 @@ export const tests: TestData = {
           citationItems: [
             {
               id: 'Hasan2015',
+              itemData: {
+                author: [
+                  { family: 'Hasan' },
+                  { family: 'Liang' },
+                  { family: 'Kahn' },
+                  { family: 'Weintraub' },
+                ],
+                issued: { 'date-parts': [['2015']] },
+              },
             },
           ],
           properties: { noteIndex: 0, mode: 'composite' },
@@ -557,6 +900,10 @@ export const tests: TestData = {
           citationItems: [
             {
               id: 'Albert1990',
+              itemData: {
+                author: [{ family: 'Albert' }],
+                issued: { 'date-parts': [['1990']] },
+              },
             },
           ],
           properties: { noteIndex: 0, mode: 'composite' },
@@ -570,9 +917,17 @@ export const tests: TestData = {
           citationItems: [
             {
               id: 'Albert1990',
+              itemData: {
+                author: [{ family: 'Albert' }],
+                issued: { 'date-parts': [['1990']] },
+              },
             },
             {
               id: 'Albert1991',
+              itemData: {
+                author: [{ family: 'Albert' }],
+                issued: { 'date-parts': [['1991']] },
+              },
             },
           ],
           properties: { noteIndex: 0, mode: 'composite' },
@@ -586,9 +941,17 @@ export const tests: TestData = {
           citationItems: [
             {
               id: 'Albert1990',
+              itemData: {
+                author: [{ family: 'Albert' }],
+                issued: { 'date-parts': [['1990']] },
+              },
             },
             {
               id: 'Albert1991',
+              itemData: {
+                author: [{ family: 'Albert' }],
+                issued: { 'date-parts': [['1991']] },
+              },
             },
           ],
           properties: { noteIndex: 0 },
@@ -607,6 +970,10 @@ export const tests: TestData = {
           citationItems: [
             {
               id: 'Judge2012b',
+              itemData: {
+                author: [{ family: 'Judge' }, { family: 'Kammeyer-Mueller' }],
+                issued: { 'date-parts': [['2012']] },
+              },
             },
           ],
           properties: { noteIndex: 0 },
@@ -620,6 +987,10 @@ export const tests: TestData = {
           citationItems: [
             {
               id: 'Judge2012a',
+              itemData: {
+                author: [{ family: 'Judge' }, { family: 'Kammeyer-Mueller' }],
+                issued: { 'date-parts': [['2012']] },
+              },
             },
           ],
           properties: { noteIndex: 0, mode: 'composite' },
@@ -654,9 +1025,20 @@ export const tests: TestData = {
           citationItems: [
             {
               id: 'Taylor2015',
+              itemData: {
+                author: [
+                  { family: 'Taylor', given: 'J M' },
+                  { family: 'Neimeyer' },
+                ],
+                issued: { 'date-parts': [['2015']] },
+              },
             },
             {
               id: 'Taylor2014',
+              itemData: {
+                author: [{ family: 'Taylor', given: 'T' }],
+                issued: { 'date-parts': [['2014']] },
+              },
             },
           ],
           properties: { noteIndex: 0 },
@@ -670,9 +1052,17 @@ export const tests: TestData = {
           citationItems: [
             {
               id: 'Plumber2015',
+              itemData: {
+                author: [{ family: 'Plumber' }],
+                issued: { 'date-parts': [['2015']] },
+              },
             },
             {
               id: 'Plumber2014',
+              itemData: {
+                author: [{ family: 'Plumber' }],
+                issued: { 'date-parts': [['2014']] },
+              },
             },
           ],
           properties: { noteIndex: 0 },
@@ -686,18 +1076,38 @@ export const tests: TestData = {
           citationItems: [
             {
               id: 'Brown2004',
+              itemData: {
+                author: [{ family: 'Brown' }, { family: 'Campbell' }],
+                issued: { 'date-parts': [['2004']] },
+              },
             },
             {
               id: 'Campbell1993',
+              itemData: {
+                author: [{ family: 'Campbell', given: 'A' }],
+                issued: { 'date-parts': [['1993']] },
+              },
             },
             {
               id: 'Campbell2005',
+              itemData: {
+                author: [{ family: 'Campbell', given: 'W K' }],
+                issued: { 'date-parts': [['2005']] },
+              },
             },
             {
               id: 'Deutsch1963',
+              itemData: {
+                author: [{ family: 'Deutsch' }, { family: 'Deutsch' }],
+                issued: { 'date-parts': [['1963']] },
+              },
             },
             {
               id: 'Smyth1992',
+              itemData: {
+                author: [{ family: 'Smyth' }],
+                issued: { 'date-parts': [['1992']] },
+              },
             },
           ],
           properties: { noteIndex: 0 },
@@ -711,6 +1121,10 @@ export const tests: TestData = {
           citationItems: [
             {
               id: 'Chen2019',
+              itemData: {
+                author: [{ family: 'Chen' }, { family: 'Chen' }],
+                issued: { 'date-parts': [['2019']] },
+              },
             },
           ],
           properties: { noteIndex: 0 },

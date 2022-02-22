@@ -6,12 +6,15 @@ export function citation(j: J, citation: T, parent: Parent) {
   // i const t = select('', citation) as T
   //  if (!t) return
   const text = citation.children[0].value
+
   if (text.includes('PAGE \\* MERGEFORMAT')) return
+
   const type = text.includes('CSL_CITATION') || '}'
   // Zotero/mendely citation: easy
   if (type && !text?.slice(0, 50)?.includes('Bibliography')) {
     let citation: { [key: string]: any }
     const json = text.replace(/ADDIN .*?CSL_CITATION/, '')
+
     try {
       citation = JSON.parse(j.partialCitation + json)
       if (j.partialCitation) j.partialCitation = ''
@@ -21,19 +24,24 @@ export function citation(j: J, citation: T, parent: Parent) {
       // in two w:instrText tags, in different runs.
       if (e.message === 'Unexpected end of JSON input') {
         console.error('Found incomplete JSON, attempting to recover...')
+
         if (!j.partialCitation) {
           console.log('Stashing current citation')
           j.partialCitation = json
           return
         }
+
         console.log('Attempting to combine old citation with current...')
 
         citation = JSON.parse(j.partialCitation + json)
+
         j.partialCitation = ''
+
         console.log('Success!')
       }
       // console.log(json)
       console.log(j.partialCitation)
+
       throw new Error(
         'Corrupt citation! This might be because the text is too long.'
       )
@@ -46,9 +54,11 @@ export function citation(j: J, citation: T, parent: Parent) {
         /(\d{4}), (\d{4})/g,
         '$1; $2'
       )
+
       const formattedCitations = sectionedCitations.split(';')
 
       j.deleteNextRun = true
+
       return citation.citationItems.map((cite: any, i: number) => {
         const citation: CSL = cite.itemData
         j.citationNumber++

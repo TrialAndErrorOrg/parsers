@@ -5,7 +5,10 @@ import { join } from 'path'
 describe('ooxastOoxastUtilCitations', () => {
   const ooxast = JSON.parse(
     readFileSync(
-      join(__dirname, '../../../../reoff/reoff-parse/src/test/ooxasttree'),
+      join(
+        __dirname,
+        '../../../../ooxast/ooxast-util-remove-rsid/src/lib/removedRsid'
+      ),
       { encoding: 'utf-8' }
     )
   )

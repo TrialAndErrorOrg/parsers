@@ -116,11 +116,23 @@ NonYearParenContent ->
  | %End {% id %}
 
 # A narrative citation
-NarrCite -> NameList %__ %Lp YearList Loc:? %Rp {% ([name,,,year])=>(
+NarrCite -> NameList %__ %Lp YearList Loc:? %Rp {% ([name,,,yearlist])=>(
                                                            {
                                                              citationId: 'CITE-X',
-                                                              citationItems: year.map((y:string)=>({
-                                                                  "id":getFullName(name).replace(/ /g,'')+y
+                                                              citationItems:
+                                                              yearlist.map((y:string[])=>({
+                                                                  "id":getFullName(name[0]).replace(/ /g,'')+y[0],
+                                                                  itemData:{
+                                                                  author: name,
+                                                                  issued: {
+                                                                    'date-parts': [[y[0].replace(/(\d|.-?)[a-z]/,'$1')]]
+
+                                                                  },
+                                                                  ...(y[1]? {'original-date': {
+                                                                    'date-parts': [[y[1].replace(/(\d)[a-z]/,'$1')]]
+                                                                  }
+                                                                  }:{})
+                                                                  }
                                                               })),
                                                               properties: {noteIndex: 0,mode: "composite"}
                                                            }
@@ -148,28 +160,36 @@ ParenContent ->   SingleParenEntry {% id %}
                                                               %}
                 | ParenContent PreAuthsMiddle SingleParenEntry {%
                                                             ([content, pre,single])=>{
-                                                               const sing = single[0]
-                                                               sing.prefix = pre.join('')
+                                                               //const sing = single[0]
+                                                               if(pre){
+                                                               single[0].prefix = pre.join('')
+                                                               }
                                                                return [
                                                                  ...(content.flat()),
-                                                                sing
+                                                                ...single
                                                                  ]
                                                                 }
                                                               %}
 
 
 # Everything between semis in a parenthetical citation
+# if we have an entry like (Guy, 2020 ,2021, p.4), we assume the prefix is for the first and the locator for the last.
 SingleParenEntry -> PreAuthsPre:* ParenCiteAuthYear Loc:? {%
-                                                          ([pre, cont, loc]) => {
-                                                                  if(pre.length){
-                                                                     cont[0].prefix=pre.join('; ')
-                                                                  }
-                                                                  if(loc){
-                                                                    cont[0]={...cont[0], ...loc}
-                                                                    // cont[0].loc=loc
-                                                                  }
-                                                                  return cont
+                                                          ([pre, content, loc]) => {
+                                                            const l = Object.assign({},loc)
+                                                            const p = pre.length ? {prefix:pre?.join('')} :{}
+                                                            if(content.length===1){
+                                                              content[0] = {...content[0],
+                                                              ...l,
+                                                              ...p}
+                                                              return content
                                                             }
+                                                              content[0] = {...content[0],
+                                                              ...p}
+                                                              content[content.length-1]={...
+                                                              content[content.length-1], ...l}
+                                                              return content
+                                                          }
                                                       %}
 
 # Loc -> %Com %__ GenericContent:+ {% content => {
@@ -250,50 +270,74 @@ GenericContent ->   %Lowword                                 {% id %}
 #                                                             )
 #                                       %}
 
-ParenCiteAuthYear -> ParenNameMaybeList %Com %__ YearList  {% ([name,,,year]) => {
-                                                              return year.map((y:string)=>({
-                                                                  "id":getFullName(name).replace(/ /g,'')+y
+ParenCiteAuthYear -> ParenNameMaybeList %Com %__ YearList  {% (content) => {
+                                                              const [name,,,yearlist] = content
+                                                              return yearlist.map((y:string[])=>({
+                                                                  "id":getFullName(name[0]).replace(/ /g,'')+y[0],
+                                                                  itemData:{
+                                                                  author: name,
+                                                                  issued: {
+                                                                    'date-parts': [[y[0].replace(/(\d)[a-z]/,'$1')]]
+                                                                  },
+                                                                  ...(y[1]? {'original-date': {
+                                                                    'date-parts': [[y[1].replace(/(\d)[a-z]/,'$1')]]
+                                                                  }
+                                                                  }:{})
+                                                                  }
                                                               }))
                                                             }
                                                   %}
 
 
-YearList ->   Year {% year=>[year] %}
+
+YearList ->   Year {% year=>year %}
             | YearList %Com %__:+ Year {% ([list,,,year])=> {
                                                               return [...list,year]
                                                            }
-                                      %}
+                                                           %}
+# YearList ->   Year {% (y)=>(y) %}
+
+#             | YearList %Com %__ Year {% ([[list],,,year])=> {
+#                                                               const yl=[list.flat(),year]
+#                                                               return yl
+#                                                            }
+#                                       %}
+#             | YearList %Com %__ YearList {% ([[list],,,year])=> {
+#                                                               const yl=[list.flat(),...year]
+#                                                               return yl
+#                                                            }
+#                                       %}
 
 #NameList -> NameListOne:+ Etal:? {% ([namelist,etal])=>namelist[0] %}
 
 
-NameList ->   Name                                           {% id %}
-            | NameList %Com %__ Name                         {% name=>name[0] %}
-            | NameList %Com %__ NameList                     {% name=>name[0] %}
-            | NameList %Com %__ Comp %__ NameList            {% name=>name[0] %}
-            | NameList %Com %__ Comp %__                     {% name=>name[0] %}
-            | NameList %__ Comp %__ NameList                 {% name=>name[0] %}
-            | NameList %__ Comp %__                          {% name=>name[0] %}
-            | NameList %Com %__ Etal                         {% name=>name[0] %}
-            | NameList Etal                                  {% name=>name[0] %}
+NameList ->   Name                                           {% name=>name %}
+            | NameList %Com %__ Name                         {% ([name,,,n])=>([name,n].flat()) %}
+            | NameList %Com %__ NameList                     {% ([name,,,n])=>([name,n].flat()) %}
+            | NameList %Com %__ Comp %__ NameList            {% ([name,,,,,n])=>([name,n].flat()) %}
+            | NameList %Com %__ Comp %__                     {% ([name,,,,])=>([name].flat()) %}
+            | NameList %__ Comp %__ NameList                 {% ([name,_,and,__,n])=>([name,n].flat()) %}
+            | NameList %__ Comp %__                          {% ([name])=>([name].flat()) %}
+            | NameList %Com %__ Etal                         {% ([name])=>([name].flat()) %}
+            | NameList Etal                                  {% ([name])=>([name].flat()) %}
 
+ParenNameMaybeList ->  ParenNameMaybe                                  {% name=>name %}
+                     | ParenNameMaybeList %Com %__ Name                {% ([name,,,n])=>([name,n].flat()) %}
+                     | ParenNameMaybeList %Com %__ NameList            {% ([name,,,n])=>([name,n].flat()) %}
+                     | ParenNameMaybeList %Com %__ Comp %__ NameList   {% ([name,,,,,n])=>([name,n].flat()) %}
+                     | ParenNameMaybeList %Com %__ Comp %__            {% ([name])=>([name].flat()) %}
+                     | ParenNameMaybeList %__ Comp %__ NameList        {% ([name,,,,n])=>([name,n].flat()) %}
+                     | ParenNameMaybeList %__ Comp %__                 {% ([name])=>([name].flat()) %}
+                     | ParenNameMaybeList %__ Etal                     {% ([name])=>([name].flat()) %}
 
-ParenNameMaybeList ->  ParenNameMaybe                                  {% id %}
-                     | ParenNameMaybeList %Com %__ Name                {% name=>name[0] %}
-                     | ParenNameMaybeList %Com %__ NameList            {% name=>name[0] %}
-                     | ParenNameMaybeList %Com %__ Comp %__ NameList   {% name=>name[0] %}
-                     | ParenNameMaybeList %Com %__ Comp %__            {% name=>name[0] %}
-                     | ParenNameMaybeList %__ Comp %__ NameList        {% name=>name[0] %}
-                     | ParenNameMaybeList %__ Comp %__                 {% name=>name[0] %}
-                     | ParenNameMaybeList %__ Etal                     {% name=>name[0] %}
 
 ParenNameMaybe ->   Name                              {% id %}
-                  | ParenNameMaybe %__ ParenNameMaybe {% ([n,,nn]) => ({family:n.family+nn.family}) %}
-                  | ParenNameMaybe %__ %Lowword       {% ([n,,nn]) => ({family:n.family+nn}) %}
+                  | ParenNameMaybe %__ ParenNameMaybe {% ([n,,nn]) => ({...n,...nn,family:n.family+nn.family}) %}
+                  | ParenNameMaybe %__ %Lowword       {% ([n,,nn]) => ({...n,family:n.family+nn}) %}
 
 Etal ->%__:? %Et {% etal=>null %}
 
-Name -> Initials %__ LastName {% name=> name[2] %}
+Name -> Initials %__ LastName {% ([initials, ,name])=> ({given: initials.join(''),...name}) %}
         | LastName {% id %}
 
 LastName ->  SingleName {% id %}
@@ -346,10 +390,11 @@ DutchPrefix ->  %DutchPref
 
 # Modifier for a year when an author-year combo has been cited already, e.g. 2012a
 
-Year ->  %Year {% ([year]) => `${year}`.replace(/\./g,'').toUpperCase() %}
-       | Year %Slash Year {% ([year, sl, year2]) => year2
+Year ->  %Year {% ([year]) => ([`${year}`.replace(/\./g,'').toUpperCase()]) %}
+       | %Year %Dash:? %Lowword {% ([year,, low])=> ([year + low]) %}
+       | Year %Slash Year {% (content) => {const[year, sl, year2]=content
+                                          return([...year2,...year])}
                              %}
-       | Year %Dash:? %Lowword {% ([year,, low])=> year + low %}
 
 # Year -> Digit Digit Digit Digit {% (year)=>year.join('') %}
 #         | "n" "." "d"

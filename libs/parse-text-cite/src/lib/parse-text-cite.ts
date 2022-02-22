@@ -19,5 +19,19 @@ export const parseTextCite = (string: string, options?: Options) => {
   if (options?.showAll) {
     return parser.results
   }
+  // if (parser.results.length > 1) {
+  //   let result: any
+  //   let maxLength = 0
+  //   for (const res of parser.results) {
+  //     const stringd = JSON.stringify(res)
+  //     const length = stringd.length
+  //     stringd.includes('Carraway') && console.dir(res, { depth: null })
+  //     if (length > maxLength) {
+  //       result = res
+  //       maxLength = res
+  //     }
+  //   }
+  //   return result
+  // }
   return parser.results[0]
 }

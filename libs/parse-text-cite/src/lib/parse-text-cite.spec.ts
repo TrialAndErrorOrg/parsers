@@ -98,7 +98,7 @@ describe.each(citeTable)(
           : null
       parser && parser.feed(inp)
       const results = parser ? parser.results : parseTextCite(inp)
-      console.dir(results, { depth: null })
+      // console.dir(results, { depth: null })
       const expectancy = Array.isArray(res) ? res : [res]
       expect(results).toEqual(expectancy)
     })

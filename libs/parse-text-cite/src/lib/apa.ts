@@ -166,11 +166,23 @@ const grammar: Grammar = {
     {"name": "NonYearParenContent", "symbols": [(lexer.has("End") ? {type: "End"} : End)], "postprocess": id},
     {"name": "NarrCite$ebnf$1", "symbols": ["Loc"], "postprocess": id},
     {"name": "NarrCite$ebnf$1", "symbols": [], "postprocess": () => null},
-    {"name": "NarrCite", "symbols": ["NameList", (lexer.has("__") ? {type: "__"} : __), (lexer.has("Lp") ? {type: "Lp"} : Lp), "YearList", "NarrCite$ebnf$1", (lexer.has("Rp") ? {type: "Rp"} : Rp)], "postprocess":  ([name,,,year])=>(
+    {"name": "NarrCite", "symbols": ["NameList", (lexer.has("__") ? {type: "__"} : __), (lexer.has("Lp") ? {type: "Lp"} : Lp), "YearList", "NarrCite$ebnf$1", (lexer.has("Rp") ? {type: "Rp"} : Rp)], "postprocess":  ([name,,,yearlist])=>(
         {
           citationId: 'CITE-X',
-           citationItems: year.map((y:string)=>({
-               "id":getFullName(name).replace(/ /g,'')+y
+           citationItems:
+           yearlist.map((y:string[])=>({
+               "id":getFullName(name[0]).replace(/ /g,'')+y[0],
+               itemData:{
+               author: name,
+               issued: {
+                 'date-parts': [[y[0].replace(/(\d|.-?)[a-z]/,'$1')]]
+        
+               },
+               ...(y[1]? {'original-date': {
+                 'date-parts': [[y[1].replace(/(\d)[a-z]/,'$1')]]
+               }
+               }:{})
+               }
            })),
            properties: {noteIndex: 0,mode: "composite"}
         }
@@ -194,11 +206,13 @@ const grammar: Grammar = {
                                                                       },
     {"name": "ParenContent", "symbols": ["ParenContent", "PreAuthsMiddle", "SingleParenEntry"], "postprocess": 
         ([content, pre,single])=>{
-           const sing = single[0]
-           sing.prefix = pre.join('')
+           //const sing = single[0]
+           if(pre){
+           single[0].prefix = pre.join('')
+           }
            return [
              ...(content.flat()),
-            sing
+            ...single
              ]
             }
           },
@@ -207,16 +221,21 @@ const grammar: Grammar = {
     {"name": "SingleParenEntry$ebnf$2", "symbols": ["Loc"], "postprocess": id},
     {"name": "SingleParenEntry$ebnf$2", "symbols": [], "postprocess": () => null},
     {"name": "SingleParenEntry", "symbols": ["SingleParenEntry$ebnf$1", "ParenCiteAuthYear", "SingleParenEntry$ebnf$2"], "postprocess": 
-        ([pre, cont, loc]) => {
-                if(pre.length){
-                   cont[0].prefix=pre.join('; ')
-                }
-                if(loc){
-                  cont[0]={...cont[0], ...loc}
-                  // cont[0].loc=loc
-                }
-                return cont
+        ([pre, content, loc]) => {
+          const l = Object.assign({},loc)
+          const p = pre.length ? {prefix:pre?.join('')} :{}
+          if(content.length===1){
+            content[0] = {...content[0],
+            ...l,
+            ...p}
+            return content
           }
+            content[0] = {...content[0],
+            ...p}
+            content[content.length-1]={...
+            content[content.length-1], ...l}
+            return content
+        }
                                                               },
     {"name": "PreAuthsPre$ebnf$1", "symbols": ["GenericContent"]},
     {"name": "PreAuthsPre$ebnf$1", "symbols": ["PreAuthsPre$ebnf$1", "GenericContent"], "postprocess": (d) => d[0].concat([d[1]])},
@@ -279,43 +298,54 @@ const grammar: Grammar = {
     {"name": "GenericContent", "symbols": [(lexer.has("Dash") ? {type: "Dash"} : Dash)], "postprocess": id},
     {"name": "GenericContent", "symbols": [(lexer.has("Com") ? {type: "Com"} : Com)], "postprocess": id},
     {"name": "GenericContent", "symbols": [(lexer.has("__") ? {type: "__"} : __)], "postprocess": id},
-    {"name": "ParenCiteAuthYear", "symbols": ["ParenNameMaybeList", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "YearList"], "postprocess":  ([name,,,year]) => {
-          return year.map((y:string)=>({
-              "id":getFullName(name).replace(/ /g,'')+y
+    {"name": "ParenCiteAuthYear", "symbols": ["ParenNameMaybeList", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "YearList"], "postprocess":  (content) => {
+          const [name,,,yearlist] = content
+          return yearlist.map((y:string[])=>({
+              "id":getFullName(name[0]).replace(/ /g,'')+y[0],
+              itemData:{
+              author: name,
+              issued: {
+                'date-parts': [[y[0].replace(/(\d)[a-z]/,'$1')]]
+              },
+              ...(y[1]? {'original-date': {
+                'date-parts': [[y[1].replace(/(\d)[a-z]/,'$1')]]
+              }
+              }:{})
+              }
           }))
         }
                                                           },
-    {"name": "YearList", "symbols": ["Year"], "postprocess": year=>[year]},
+    {"name": "YearList", "symbols": ["Year"], "postprocess": year=>year},
     {"name": "YearList$ebnf$1", "symbols": [(lexer.has("__") ? {type: "__"} : __)]},
     {"name": "YearList$ebnf$1", "symbols": ["YearList$ebnf$1", (lexer.has("__") ? {type: "__"} : __)], "postprocess": (d) => d[0].concat([d[1]])},
     {"name": "YearList", "symbols": ["YearList", (lexer.has("Com") ? {type: "Com"} : Com), "YearList$ebnf$1", "Year"], "postprocess":  ([list,,,year])=> {
            return [...list,year]
         }
-                                              },
-    {"name": "NameList", "symbols": ["Name"], "postprocess": id},
-    {"name": "NameList", "symbols": ["NameList", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "Name"], "postprocess": name=>name[0]},
-    {"name": "NameList", "symbols": ["NameList", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "NameList"], "postprocess": name=>name[0]},
-    {"name": "NameList", "symbols": ["NameList", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "Comp", (lexer.has("__") ? {type: "__"} : __), "NameList"], "postprocess": name=>name[0]},
-    {"name": "NameList", "symbols": ["NameList", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "Comp", (lexer.has("__") ? {type: "__"} : __)], "postprocess": name=>name[0]},
-    {"name": "NameList", "symbols": ["NameList", (lexer.has("__") ? {type: "__"} : __), "Comp", (lexer.has("__") ? {type: "__"} : __), "NameList"], "postprocess": name=>name[0]},
-    {"name": "NameList", "symbols": ["NameList", (lexer.has("__") ? {type: "__"} : __), "Comp", (lexer.has("__") ? {type: "__"} : __)], "postprocess": name=>name[0]},
-    {"name": "NameList", "symbols": ["NameList", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "Etal"], "postprocess": name=>name[0]},
-    {"name": "NameList", "symbols": ["NameList", "Etal"], "postprocess": name=>name[0]},
-    {"name": "ParenNameMaybeList", "symbols": ["ParenNameMaybe"], "postprocess": id},
-    {"name": "ParenNameMaybeList", "symbols": ["ParenNameMaybeList", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "Name"], "postprocess": name=>name[0]},
-    {"name": "ParenNameMaybeList", "symbols": ["ParenNameMaybeList", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "NameList"], "postprocess": name=>name[0]},
-    {"name": "ParenNameMaybeList", "symbols": ["ParenNameMaybeList", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "Comp", (lexer.has("__") ? {type: "__"} : __), "NameList"], "postprocess": name=>name[0]},
-    {"name": "ParenNameMaybeList", "symbols": ["ParenNameMaybeList", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "Comp", (lexer.has("__") ? {type: "__"} : __)], "postprocess": name=>name[0]},
-    {"name": "ParenNameMaybeList", "symbols": ["ParenNameMaybeList", (lexer.has("__") ? {type: "__"} : __), "Comp", (lexer.has("__") ? {type: "__"} : __), "NameList"], "postprocess": name=>name[0]},
-    {"name": "ParenNameMaybeList", "symbols": ["ParenNameMaybeList", (lexer.has("__") ? {type: "__"} : __), "Comp", (lexer.has("__") ? {type: "__"} : __)], "postprocess": name=>name[0]},
-    {"name": "ParenNameMaybeList", "symbols": ["ParenNameMaybeList", (lexer.has("__") ? {type: "__"} : __), "Etal"], "postprocess": name=>name[0]},
+        },
+    {"name": "NameList", "symbols": ["Name"], "postprocess": name=>name},
+    {"name": "NameList", "symbols": ["NameList", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "Name"], "postprocess": ([name,,,n])=>([name,n].flat())},
+    {"name": "NameList", "symbols": ["NameList", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "NameList"], "postprocess": ([name,,,n])=>([name,n].flat())},
+    {"name": "NameList", "symbols": ["NameList", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "Comp", (lexer.has("__") ? {type: "__"} : __), "NameList"], "postprocess": ([name,,,,,n])=>([name,n].flat())},
+    {"name": "NameList", "symbols": ["NameList", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "Comp", (lexer.has("__") ? {type: "__"} : __)], "postprocess": ([name,,,,])=>([name].flat())},
+    {"name": "NameList", "symbols": ["NameList", (lexer.has("__") ? {type: "__"} : __), "Comp", (lexer.has("__") ? {type: "__"} : __), "NameList"], "postprocess": ([name,_,and,__,n])=>([name,n].flat())},
+    {"name": "NameList", "symbols": ["NameList", (lexer.has("__") ? {type: "__"} : __), "Comp", (lexer.has("__") ? {type: "__"} : __)], "postprocess": ([name])=>([name].flat())},
+    {"name": "NameList", "symbols": ["NameList", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "Etal"], "postprocess": ([name])=>([name].flat())},
+    {"name": "NameList", "symbols": ["NameList", "Etal"], "postprocess": ([name])=>([name].flat())},
+    {"name": "ParenNameMaybeList", "symbols": ["ParenNameMaybe"], "postprocess": name=>name},
+    {"name": "ParenNameMaybeList", "symbols": ["ParenNameMaybeList", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "Name"], "postprocess": ([name,,,n])=>([name,n].flat())},
+    {"name": "ParenNameMaybeList", "symbols": ["ParenNameMaybeList", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "NameList"], "postprocess": ([name,,,n])=>([name,n].flat())},
+    {"name": "ParenNameMaybeList", "symbols": ["ParenNameMaybeList", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "Comp", (lexer.has("__") ? {type: "__"} : __), "NameList"], "postprocess": ([name,,,,,n])=>([name,n].flat())},
+    {"name": "ParenNameMaybeList", "symbols": ["ParenNameMaybeList", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "Comp", (lexer.has("__") ? {type: "__"} : __)], "postprocess": ([name])=>([name].flat())},
+    {"name": "ParenNameMaybeList", "symbols": ["ParenNameMaybeList", (lexer.has("__") ? {type: "__"} : __), "Comp", (lexer.has("__") ? {type: "__"} : __), "NameList"], "postprocess": ([name,,,,n])=>([name,n].flat())},
+    {"name": "ParenNameMaybeList", "symbols": ["ParenNameMaybeList", (lexer.has("__") ? {type: "__"} : __), "Comp", (lexer.has("__") ? {type: "__"} : __)], "postprocess": ([name])=>([name].flat())},
+    {"name": "ParenNameMaybeList", "symbols": ["ParenNameMaybeList", (lexer.has("__") ? {type: "__"} : __), "Etal"], "postprocess": ([name])=>([name].flat())},
     {"name": "ParenNameMaybe", "symbols": ["Name"], "postprocess": id},
-    {"name": "ParenNameMaybe", "symbols": ["ParenNameMaybe", (lexer.has("__") ? {type: "__"} : __), "ParenNameMaybe"], "postprocess": ([n,,nn]) => ({family:n.family+nn.family})},
-    {"name": "ParenNameMaybe", "symbols": ["ParenNameMaybe", (lexer.has("__") ? {type: "__"} : __), (lexer.has("Lowword") ? {type: "Lowword"} : Lowword)], "postprocess": ([n,,nn]) => ({family:n.family+nn})},
+    {"name": "ParenNameMaybe", "symbols": ["ParenNameMaybe", (lexer.has("__") ? {type: "__"} : __), "ParenNameMaybe"], "postprocess": ([n,,nn]) => ({...n,...nn,family:n.family+nn.family})},
+    {"name": "ParenNameMaybe", "symbols": ["ParenNameMaybe", (lexer.has("__") ? {type: "__"} : __), (lexer.has("Lowword") ? {type: "Lowword"} : Lowword)], "postprocess": ([n,,nn]) => ({...n,family:n.family+nn})},
     {"name": "Etal$ebnf$1", "symbols": [(lexer.has("__") ? {type: "__"} : __)], "postprocess": id},
     {"name": "Etal$ebnf$1", "symbols": [], "postprocess": () => null},
     {"name": "Etal", "symbols": ["Etal$ebnf$1", (lexer.has("Et") ? {type: "Et"} : Et)], "postprocess": etal=>null},
-    {"name": "Name", "symbols": ["Initials", (lexer.has("__") ? {type: "__"} : __), "LastName"], "postprocess": name=> name[2]},
+    {"name": "Name", "symbols": ["Initials", (lexer.has("__") ? {type: "__"} : __), "LastName"], "postprocess": ([initials, ,name])=> ({given: initials.join(''),...name})},
     {"name": "Name", "symbols": ["LastName"], "postprocess": id},
     {"name": "LastName", "symbols": ["SingleName"], "postprocess": id},
     {"name": "LastName", "symbols": ["HyphenName"], "postprocess": id},
@@ -342,12 +372,13 @@ const grammar: Grammar = {
     {"name": "BoringWord", "symbols": ["BoringWord$ebnf$1"], "postprocess": (word) =>(word.join(''))},
     {"name": "DutchPrefix", "symbols": [(lexer.has("DutchPref") ? {type: "DutchPref"} : DutchPref)]},
     {"name": "DutchPrefix", "symbols": ["DutchPrefix", (lexer.has("__") ? {type: "__"} : __), (lexer.has("DutchPref") ? {type: "DutchPref"} : DutchPref)]},
-    {"name": "Year", "symbols": [(lexer.has("Year") ? {type: "Year"} : Year)], "postprocess": ([year]) => `${year}`.replace(/\./g,'').toUpperCase()},
-    {"name": "Year", "symbols": ["Year", (lexer.has("Slash") ? {type: "Slash"} : Slash), "Year"], "postprocess":  ([year, sl, year2]) => year2
-                                     },
+    {"name": "Year", "symbols": [(lexer.has("Year") ? {type: "Year"} : Year)], "postprocess": ([year]) => ([`${year}`.replace(/\./g,'').toUpperCase()])},
     {"name": "Year$ebnf$1", "symbols": [(lexer.has("Dash") ? {type: "Dash"} : Dash)], "postprocess": id},
     {"name": "Year$ebnf$1", "symbols": [], "postprocess": () => null},
-    {"name": "Year", "symbols": ["Year", "Year$ebnf$1", (lexer.has("Lowword") ? {type: "Lowword"} : Lowword)], "postprocess": ([year,, low])=> year + low}
+    {"name": "Year", "symbols": [(lexer.has("Year") ? {type: "Year"} : Year), "Year$ebnf$1", (lexer.has("Lowword") ? {type: "Lowword"} : Lowword)], "postprocess": ([year,, low])=> ([year + low])},
+    {"name": "Year", "symbols": ["Year", (lexer.has("Slash") ? {type: "Slash"} : Slash), "Year"], "postprocess":  (content) => {const[year, sl, year2]=content
+        return([...year2,...year])}
+                                     }
   ],
   ParserStart: "Input",
 };

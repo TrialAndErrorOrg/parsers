@@ -36,7 +36,9 @@ import {lexer} from './lexer'
 const getFullName = (name: {family:string,
                             'non-dropping-particle':string
                            }
-                    ) => `${name?.['non-dropping-particle']? name?.['non-dropping-particle']+' ':''}${name.family}`
+                    ) => `${name?.['non-dropping-particle']
+                              ? name?.['non-dropping-particle']+' '
+                            :''}${name.family}`
 
 
 const locators = [
@@ -117,7 +119,10 @@ const grammar: Grammar = {
     {"name": "Input$ebnf$1", "symbols": ["Input$ebnf$1", "InputContent"], "postprocess": (d) => d[0].concat([d[1]])},
     {"name": "Input", "symbols": ["Input$ebnf$1"], "postprocess":  (inp: any[])=>{
         const [content] = inp
-        return content.reduce((acc: any[],curr: Record<string, any>)=>{
+        return content
+              .reduce((acc: any[],
+                      curr: Record<string, any>
+                      )=>{
         
               if(!curr.value){
                 acc.push(curr)
@@ -132,7 +137,7 @@ const grammar: Grammar = {
               acc.push(curr.value)
               return acc
         
-           }  ,[])
+           }, [])
         }
                                 },
     {"name": "InputContent", "symbols": ["ParenCite"], "postprocess": id},
@@ -171,11 +176,13 @@ const grammar: Grammar = {
           citationId: 'CITE-X',
            citationItems:
            yearlist.map((y:string[])=>({
-               "id":getFullName(name[0]).replace(/ /g,'')+y[0],
+               "id":getFullName(name[0])
+                                       .replace(/ /g,'')+y[0],
                itemData:{
                author: name,
                issued: {
-                 'date-parts': [[y[0].replace(/(\d|.-?)[a-z]/,'$1')]]
+                 'date-parts': [[y[0]
+                                     .replace(/(\d|.-?)[a-z]/,'$1')]]
         
                },
                ...(y[1]? {'original-date': {
@@ -223,7 +230,10 @@ const grammar: Grammar = {
     {"name": "SingleParenEntry", "symbols": ["SingleParenEntry$ebnf$1", "ParenCiteAuthYear", "SingleParenEntry$ebnf$2"], "postprocess": 
         ([pre, content, loc]) => {
           const l = Object.assign({},loc)
-          const p = pre.length ? {prefix:pre?.join('')} :{}
+          const p = pre.length
+                     ? {prefix: pre?.join('')}
+                    : {}
+        
           if(content.length===1){
             content[0] = {...content[0],
             ...l,
@@ -263,21 +273,32 @@ const grammar: Grammar = {
     {"name": "LocContent$ebnf$2", "symbols": ["GenericContent"]},
     {"name": "LocContent$ebnf$2", "symbols": ["LocContent$ebnf$2", "GenericContent"], "postprocess": (d) => d[0].concat([d[1]])},
     {"name": "LocContent", "symbols": ["LocContent$ebnf$1", (lexer.has("__") ? {type: "__"} : __), "LocContent$ebnf$2"], "postprocess":  ([label,space,loc]) => {
+                const rawLabel=label
+                                    .join('')
+                                    .trim()
+                                    .toLowerCase()
+                                    .replace(/\./g,'')
         
-                    const rawLabel=label.join('').trim().toLowerCase().replace(/\./g,'')
+                if(!(labelMap[rawLabel])
+                 && !locators.includes(rawLabel)){
+                    return {
+                             label:'none',
+                             locator: label
+                                          .join('')
+                                   + space +
+                                     loc
+                                        .join('')
+                           }
+                 }
         
-                    if(!(labelMap[rawLabel]) && !locators.includes(rawLabel)){
-                      return {label:'none', locator: label.join('')+space+loc.join('')}
-                    }
+                 const properLabel = labelMap[rawLabel] || rawLabel
         
-                    const properLabel = labelMap[rawLabel] || rawLabel
-        
-                   return {
-                     label: properLabel,
-                     locator: loc.join('').trim()
-                    }
+                 return {
+                   label: properLabel,
+                   locator: loc.join('').trim()
+                 }
         }
-                                                            },
+                                        },
     {"name": "LocContent$ebnf$3", "symbols": ["GenericContent"]},
     {"name": "LocContent$ebnf$3", "symbols": ["LocContent$ebnf$3", "GenericContent"], "postprocess": (d) => d[0].concat([d[1]])},
     {"name": "LocContent", "symbols": ["LocContent$ebnf$3"], "postprocess": ([loc]) => ({locator: loc.join(''),label:'none'})},
@@ -314,7 +335,7 @@ const grammar: Grammar = {
               }
           }))
         }
-                                                          },
+                                        },
     {"name": "YearList", "symbols": ["Year"], "postprocess": year=>year},
     {"name": "YearList$ebnf$1", "symbols": [(lexer.has("__") ? {type: "__"} : __)]},
     {"name": "YearList$ebnf$1", "symbols": ["YearList$ebnf$1", (lexer.has("__") ? {type: "__"} : __)], "postprocess": (d) => d[0].concat([d[1]])},
@@ -351,7 +372,13 @@ const grammar: Grammar = {
     {"name": "LastName", "symbols": ["HyphenName"], "postprocess": id},
     {"name": "Comp", "symbols": [(lexer.has("And") ? {type: "And"} : And)], "postprocess": id},
     {"name": "Comp", "symbols": [(lexer.has("Amp") ? {type: "Amp"} : Amp)], "postprocess": id},
-    {"name": "HyphenName", "symbols": ["SingleName", (lexer.has("Dash") ? {type: "Dash"} : Dash), "SingleName"], "postprocess": ([first,d,last])=>({family: `${getFullName(first)+d+getFullName(last)}`})},
+    {"name": "HyphenName", "symbols": ["SingleName", (lexer.has("Dash") ? {type: "Dash"} : Dash), "SingleName"], "postprocess":  ([first,d,last])=> ( {
+            family: `${getFullName(first)
+                      + d
+                      + getFullName(last)}`
+          }
+        )
+                                                  },
     {"name": "SingleName", "symbols": ["BoringNameMaybe"], "postprocess": ([name]) => ({family:name})},
     {"name": "SingleName", "symbols": ["DutchName"], "postprocess": id},
     {"name": "SingleName", "symbols": ["OReilly"], "postprocess": id},
@@ -361,7 +388,14 @@ const grammar: Grammar = {
     {"name": "Initials$ebnf$1", "symbols": ["Initials$ebnf$1", (lexer.has("__") ? {type: "__"} : __)], "postprocess": (d) => d[0].concat([d[1]])},
     {"name": "Initials", "symbols": ["Initials", "Initials$ebnf$1", "Initial"]},
     {"name": "Initial", "symbols": [(lexer.has("Cap") ? {type: "Cap"} : Cap), (lexer.has("Dot") ? {type: "Dot"} : Dot)], "postprocess": id},
-    {"name": "DutchName", "symbols": ["DutchPrefix", (lexer.has("__") ? {type: "__"} : __), "BoringNameMaybe"], "postprocess": ([pref,space, rest]) =>({family: rest, 'non-dropping-particle': pref.join('')})},
+    {"name": "DutchName", "symbols": ["DutchPrefix", (lexer.has("__") ? {type: "__"} : __), "BoringNameMaybe"], "postprocess":  ([pref,space, rest]) => (
+          {
+           family: rest,
+           'non-dropping-particle': pref
+                                      .join('')
+          }
+        )
+                                                      },
     {"name": "OReilly", "symbols": ["BoringNameMaybe", {"literal":"'"}, "BoringNameMaybe"], "postprocess": ([o, a, name]) =>({family:o+a+name })},
     {"name": "McConnel", "symbols": [(lexer.has("Mc") ? {type: "Mc"} : Mc), "BoringNameMaybe"], "postprocess": (name) =>({family:name.join('')})},
     {"name": "BoringNameMaybe$ebnf$1", "symbols": []},

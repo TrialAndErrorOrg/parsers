@@ -8,7 +8,9 @@ import {lexer} from './lexer'
 const getFullName = (name: {family:string,
                             'non-dropping-particle':string
                            }
-                    ) => `${name?.['non-dropping-particle']? name?.['non-dropping-particle']+' ':''}${name.family}`
+                    ) => `${name?.['non-dropping-particle']
+                              ? name?.['non-dropping-particle']+' '
+                            :''}${name.family}`
 
 
 const locators = [
@@ -62,7 +64,10 @@ const labelMap: {[key:string]:string}= {
 
 Input -> InputContent:+ {% (inp: any[])=>{
                           const [content] = inp
-                          return content.reduce((acc: any[],curr: Record<string, any>)=>{
+                          return content
+                                .reduce((acc: any[],
+                                        curr: Record<string, any>
+                                        )=>{
 
                                 if(!curr.value){
                                   acc.push(curr)
@@ -77,7 +82,7 @@ Input -> InputContent:+ {% (inp: any[])=>{
                                 acc.push(curr.value)
                                 return acc
 
-                             }  ,[])
+                             }, [])
                           }
                         %}
 
@@ -121,11 +126,13 @@ NarrCite -> NameList %__ %Lp YearList Loc:? %Rp {% ([name,,,yearlist])=>(
                                                              citationId: 'CITE-X',
                                                               citationItems:
                                                               yearlist.map((y:string[])=>({
-                                                                  "id":getFullName(name[0]).replace(/ /g,'')+y[0],
+                                                                  "id":getFullName(name[0])
+                                                                                          .replace(/ /g,'')+y[0],
                                                                   itemData:{
                                                                   author: name,
                                                                   issued: {
-                                                                    'date-parts': [[y[0].replace(/(\d|.-?)[a-z]/,'$1')]]
+                                                                    'date-parts': [[y[0]
+                                                                                        .replace(/(\d|.-?)[a-z]/,'$1')]]
 
                                                                   },
                                                                   ...(y[1]? {'original-date': {
@@ -177,7 +184,10 @@ ParenContent ->   SingleParenEntry {% id %}
 SingleParenEntry -> PreAuthsPre:* ParenCiteAuthYear Loc:? {%
                                                           ([pre, content, loc]) => {
                                                             const l = Object.assign({},loc)
-                                                            const p = pre.length ? {prefix:pre?.join('')} :{}
+                                                            const p = pre.length
+                                                                       ? {prefix: pre?.join('')}
+                                                                      : {}
+
                                                             if(content.length===1){
                                                               content[0] = {...content[0],
                                                               ...l,
@@ -219,22 +229,35 @@ PreAuthsMiddle -> %Sem %__  GenericContent:+ {%
 Loc -> %Com %__ LocContent {% ([,,loc])=>loc %}
 
  LocContent ->
-              GenericContent:+ %__ GenericContent:+ {% ([label,space,loc]) => {
+              GenericContent:+
+              %__
+              GenericContent:+ {% ([label,space,loc]) => {
+                                                           const rawLabel=label
+                                                                               .join('')
+                                                                               .trim()
+                                                                               .toLowerCase()
+                                                                               .replace(/\./g,'')
 
-                                                                  const rawLabel=label.join('').trim().toLowerCase().replace(/\./g,'')
+                                                           if(!(labelMap[rawLabel])
+                                                            && !locators.includes(rawLabel)){
+                                                               return {
+                                                                        label:'none',
+                                                                        locator: label
+                                                                                     .join('')
+                                                                              + space +
+                                                                                loc
+                                                                                   .join('')
+                                                                      }
+                                                            }
 
-                                                                  if(!(labelMap[rawLabel]) && !locators.includes(rawLabel)){
-                                                                    return {label:'none', locator: label.join('')+space+loc.join('')}
-                                                                  }
+                                                            const properLabel = labelMap[rawLabel] || rawLabel
 
-                                                                  const properLabel = labelMap[rawLabel] || rawLabel
-
-                                                                 return {
-                                                                   label: properLabel,
-                                                                   locator: loc.join('').trim()
-                                                                  }
-                                                      }
-                                                    %}
+                                                            return {
+                                                              label: properLabel,
+                                                              locator: loc.join('').trim()
+                                                            }
+                                                   }
+                                %}
               | GenericContent:+ {% ([loc]) => ({locator: loc.join(''),label:'none'}) %}
 # %Loc %__:? GenericContent:+ {% ([loc,,cont]) => {
 #                                                                   const locator = cont.join('').trim()
@@ -270,23 +293,26 @@ GenericContent ->   %Lowword                                 {% id %}
 #                                                             )
 #                                       %}
 
-ParenCiteAuthYear -> ParenNameMaybeList %Com %__ YearList  {% (content) => {
-                                                              const [name,,,yearlist] = content
-                                                              return yearlist.map((y:string[])=>({
-                                                                  "id":getFullName(name[0]).replace(/ /g,'')+y[0],
-                                                                  itemData:{
-                                                                  author: name,
-                                                                  issued: {
-                                                                    'date-parts': [[y[0].replace(/(\d)[a-z]/,'$1')]]
-                                                                  },
-                                                                  ...(y[1]? {'original-date': {
-                                                                    'date-parts': [[y[1].replace(/(\d)[a-z]/,'$1')]]
-                                                                  }
-                                                                  }:{})
-                                                                  }
-                                                              }))
-                                                            }
-                                                  %}
+ParenCiteAuthYear ->  ParenNameMaybeList
+                      %Com
+                      %__
+                      YearList  {% (content) => {
+                                                  const [name,,,yearlist] = content
+                                                  return yearlist.map((y:string[])=>({
+                                                      "id":getFullName(name[0]).replace(/ /g,'')+y[0],
+                                                      itemData:{
+                                                      author: name,
+                                                      issued: {
+                                                        'date-parts': [[y[0].replace(/(\d)[a-z]/,'$1')]]
+                                                      },
+                                                      ...(y[1]? {'original-date': {
+                                                        'date-parts': [[y[1].replace(/(\d)[a-z]/,'$1')]]
+                                                      }
+                                                      }:{})
+                                                      }
+                                                  }))
+                                                }
+                                %}
 
 
 
@@ -347,7 +373,13 @@ Comp ->  %And {% id %}
        | %Amp {% id %}
 
 # E.g. James-John
-HyphenName -> SingleName %Dash SingleName {% ([first,d,last])=>({family: `${getFullName(first)+d+getFullName(last)}`}) %}
+HyphenName -> SingleName %Dash SingleName {% ([first,d,last])=> ( {
+                                                                    family: `${getFullName(first)
+                                                                              + d
+                                                                              + getFullName(last)}`
+                                                                  }
+                                                                )
+                                          %}
 
 
 SingleName -> BoringNameMaybe {% ([name]) => ({family:name}) %}
@@ -372,7 +404,14 @@ Initial -> %Cap %Dot {% id %}
 
 # SpanishName -> BoringNameMaybe __ BoringNameMaybe
 
-DutchName -> DutchPrefix %__ BoringNameMaybe {% ([pref,space, rest]) =>({family: rest, 'non-dropping-particle': pref.join('')}) %}
+DutchName -> DutchPrefix %__ BoringNameMaybe {% ([pref,space, rest]) => (
+                                                                          {
+                                                                           family: rest,
+                                                                           'non-dropping-particle': pref
+                                                                                                      .join('')
+                                                                          }
+                                                                        )
+                                              %}
 
 OReilly-> BoringNameMaybe "'" BoringNameMaybe {% ([o, a, name]) =>({family:o+a+name })%}
 

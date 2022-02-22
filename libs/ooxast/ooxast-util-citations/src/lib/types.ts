@@ -6,6 +6,7 @@ export interface Citation {
   citationId: string
   citationItems: CitationItem[]
   properties: Properties
+  originalText?: string
 }
 
 export interface Properties {

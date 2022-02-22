@@ -73,8 +73,10 @@ if (MODE === 'dev') {
             : null
         try {
           parser && parser.feed(inp)
+
           const results = parser ? parser.results : parseTextCite(inp)
           const name = results.find((thing: any) => thing.family)
+
           expect(inp.includes(name.family)).toEqual(res)
         } catch (e) {
           expect(res).toBeFalsy()

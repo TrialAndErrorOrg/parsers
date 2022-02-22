@@ -1,5 +1,28 @@
 import nearley from 'nearley'
 import grammar from './apa'
+import { Data as CSL } from 'csl-json'
+
+export interface Citation {
+  citationId: string
+  citationItems: CitationItem[]
+  properties: Properties
+  originalText?: string
+}
+
+export interface Properties {
+  noteIndex: number
+  mode?: string
+}
+
+export interface CitationItem {
+  itemData: CSL
+  id: string
+  prefix?: string
+  suffix?: string
+  infix?: string
+  label?: string
+  locator?: string
+}
 
 interface Options {
   showAll?: boolean
@@ -16,22 +39,37 @@ export const parseTextCite = (string: string, options?: Options) => {
     console.error(err)
   }
 
+  const results = parser.results
+
   if (options?.showAll) {
-    return parser.results
+    return results
   }
-  // if (parser.results.length > 1) {
-  //   let result: any
-  //   let maxLength = 0
-  //   for (const res of parser.results) {
-  //     const stringd = JSON.stringify(res)
-  //     const length = stringd.length
-  //     stringd.includes('Carraway') && console.dir(res, { depth: null })
-  //     if (length > maxLength) {
-  //       result = res
-  //       maxLength = res
-  //     }
-  //   }
-  //   return result
-  // }
-  return parser.results[0]
+  const narrowResults = results[0]
+
+  // I'm too bad at parsing and I want the original value of the thing
+
+  return recoverOriginalCitation(narrowResults, string)
+}
+
+function recoverOriginalCitation(cite: (string | Citation)[], ogText: string) {
+  const narrowString = cite.reduce((acc: string, curr) => {
+    if (typeof curr !== 'string') return acc
+    return acc.replace(curr, '')
+  }, ogText)
+
+  const originalCites = narrowString.split(')').map((c: string) => c + ')')
+
+  let stupidCounterYouShouldKnowBetter = 0
+
+  return cite.reduce((acc: (string | Citation)[], curr) => {
+    if (typeof curr === 'string') {
+      acc.push(curr)
+      return acc
+    }
+
+    curr.originalText = originalCites[stupidCounterYouShouldKnowBetter]
+    stupidCounterYouShouldKnowBetter++
+    acc.push(curr)
+    return acc
+  }, [])
 }

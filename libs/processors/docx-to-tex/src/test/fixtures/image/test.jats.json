@@ -39,37 +39,8 @@
               "attributes": {},
               "children": [
                 {
-                  "type": "element",
-                  "name": "fig",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "inline-figure",
-                      "attributes": {},
-                      "children": []
-                    },
-                    {
-                      "type": "element",
-                      "name": "caption",
-                      "attributes": {},
-                      "children": []
-                    },
-                    {
-                      "type": "element",
-                      "name": "label",
-                      "attributes": {},
-                      "children": []
-                    },
-                    {
-                      "type": "element",
-                      "name": "graphic",
-                      "attributes": {
-                        "xlink:href": "media/image1.jpg"
-                      },
-                      "children": []
-                    }
-                  ]
+                  "type": "text",
+                  "value": ""
                 }
               ]
             },

@@ -139,7 +139,7 @@ function checkSimilarity(ref: CSL, csl: CSL) {
   return Math.sqrt(titleSim ** 2 + authorSim ** 2 + yearSim ** 2) / 3
 }
 
-function dateSim(ref: CSL, csl: CSL) {
+export function dateSim(ref: CSL, csl: CSL) {
   const year1 = parseInt(`${ref['issued']?.['date-parts']?.[0]?.[0] || 0}`)
   const year2 = parseInt(`${csl['issued']?.['date-parts']?.[0]?.[0] || 0}`)
   if (!year1) {

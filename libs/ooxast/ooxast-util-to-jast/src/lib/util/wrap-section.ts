@@ -25,7 +25,6 @@ export function wrapSec(
     type: 'element',
     name: child ? 'sec' : 'body',
     attributes: child ? { id: `sec-${sectionCounter.join('-')}` } : {},
-    //@ts-expect-error shush, it's better this way
     children: child
       ? [
           {
@@ -37,7 +36,7 @@ export function wrapSec(
         ]
       : [],
   }
-  //@ts-expect-error
+  //@ts-expect-error long
   return parentSec
 }
 
@@ -47,7 +46,6 @@ export function isHeading(elem: Element): elem is P {
   return !!(isP(elem) && getPStyle(elem)?.toLowerCase()?.includes('heading'))
 }
 export function isJastHeading(elem: Element): boolean {
-  //@ts-expect-error
   return !!elem?.attributes?.style?.toLowerCase()?.includes('heading')
 }
 
@@ -56,8 +54,7 @@ export function getHeadingLevel(p: P) {
   return !lastNumber ? null : parseInt(lastNumber, 10)
 }
 export function getJastHeadingLevel(p: Element) {
-  //@ts-expect-error
-  return parseInt(p.attributes.style.slice(-1)) || 0
+  return parseInt(p?.attributes?.style?.slice(-1) || '0') || 0
 }
 export function currentWrapperDepth(wrapperStack: any[]) {
   return wrapperStack[wrapperStack.length - 1]?.attributes?.id
@@ -78,7 +75,7 @@ export function wrapSections(j: J, bodyChildren: Element[]) {
   }
 
   for (let i = 0; i < bodyChildren.length; i++) {
-    let elem = bodyChildren[i]
+    const elem = bodyChildren[i]
 
     if (isJastHeading(elem)) {
       const elemDepth = getJastHeadingLevel(elem)

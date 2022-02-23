@@ -10,8 +10,9 @@ export function citation(j: J, citation: T, parent: Parent) {
   if (text.includes('PAGE \\* MERGEFORMAT')) return
 
   const type = text.includes('CSL_CITATION') || '}'
+
   // Zotero/mendely citation: easy
-  if (type && !text?.slice(0, 50)?.includes('Bibliography')) {
+  if (type && !text?.includes('Bibliography')) {
     let citation: { [key: string]: any }
     const json = text.replace(/ADDIN .*?CSL_CITATION/, '')
 
@@ -20,6 +21,7 @@ export function citation(j: J, citation: T, parent: Parent) {
       if (j.partialCitation) j.partialCitation = ''
     } catch (e: any) {
       console.log(e.message)
+      console.log(json)
       // With very long Mendely citations, Word will sometimes split it up
       // in two w:instrText tags, in different runs.
       if (e.message === 'Unexpected end of JSON input') {

@@ -36,15 +36,20 @@ export const parseTextCite = (string: string, options?: Options) => {
   try {
     parser.feed(string)
   } catch (err) {
-    console.error(err)
+    console.warn(string)
+    console.warn('Could not handle a parenthesis')
+    // console.warn(err)
   }
 
   const results = parser.results
 
+  if (!results) return [string]
+
   if (options?.showAll) {
     return results
   }
-  const narrowResults = results[0]
+  const narrowResults = results?.[0]
+  if (!narrowResults) return [string]
 
   // I'm too bad at parsing and I want the original value of the thing
 

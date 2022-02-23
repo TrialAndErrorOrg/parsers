@@ -1,12 +1,12 @@
 import { Node, P, Root } from 'ooxast'
 import { Data as CSL } from 'csl-json'
 import { select } from 'xast-util-select'
-import { visit } from '@jote/utils'
 import { convertElement } from 'xast-util-is-element'
 import { getPStyle } from 'ooxast-util-get-style'
 import { toString } from 'xast-util-to-string'
 import axios from 'axios'
 import { execa } from 'execa'
+//@ts-expect error tmp has types, tmp promise does not
 import { file } from 'tmp-promise'
 import { writeFile } from 'fs/promises'
 import { consolidate } from 'csl-consolidate'

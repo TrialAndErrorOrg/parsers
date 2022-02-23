@@ -13,8 +13,5 @@
     "tree",
     "ast"
   ],
-  "dependencies": {
-    "@types/tmp": "^0.2.3",
-    "tmp-promise": "^3.0.3"
-  }
+  "dependencies": {}
 }

@@ -99,10 +99,6 @@
                         },
                         {
                           "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
                           "value": "A footnote."
                         }
                       ]

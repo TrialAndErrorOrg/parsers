@@ -126,64 +126,7 @@
           "children": [
             {
               "type": "paragraph",
-              "children": [
-                {
-                  "type": "environment",
-                  "name": "figure",
-                  "children": [
-                    {
-                      "type": "command",
-                      "name": "includegraphics",
-                      "children": [
-                        {
-                          "type": "commandArg",
-                          "optional": false,
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "media/image1.jpg"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": "\n"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "command",
-                      "name": "caption",
-                      "children": [
-                        {
-                          "type": "commandArg",
-                          "optional": false,
-                          "children": []
-                        },
-                        {
-                          "type": "text",
-                          "value": "\n"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "command",
-                      "name": "label",
-                      "children": [
-                        {
-                          "type": "commandArg",
-                          "optional": false,
-                          "children": []
-                        },
-                        {
-                          "type": "text",
-                          "value": "\n"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+              "children": []
             },
             {
               "type": "paragraph",

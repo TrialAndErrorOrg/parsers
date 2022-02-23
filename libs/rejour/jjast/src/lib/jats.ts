@@ -13040,13 +13040,14 @@ export interface Xref extends UnistNode {
     rid?: string
     specificUse?: string
     refType?: XrefTypeRefType
+    customType?: string
   }
 
   children: RequiredMap<XrefChildrenMap>[]
 }
 
 export interface XrefChildrenMap {
-  customType?: Text
+  //customType?: Text
   content: SimpleTextContent[]
 }
 
@@ -13711,7 +13712,9 @@ export type documentMap = {
   text: Text
 }
 
+// eslint-disable-next-line
 export var docMap: documentMap
 export type Content = ValuesType<documentMap>
 export type ElementContent = Extract<Content, { type: 'element' }>
+// eslint-disable-next-line
 export var pMap: PChildrenMap

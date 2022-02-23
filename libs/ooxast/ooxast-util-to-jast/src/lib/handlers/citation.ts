@@ -1,6 +1,7 @@
 import { J } from '../types'
 import { Parent, T } from 'ooxast'
 import { Data as CSL } from 'csl-json'
+import { CitationItem, MendeleyCitationItem } from 'ooxast-util-citations'
 
 export function citation(j: J, citation: T, parent: Parent) {
   // i const t = select('', citation) as T
@@ -9,7 +10,7 @@ export function citation(j: J, citation: T, parent: Parent) {
 
   if (text.includes('PAGE \\* MERGEFORMAT')) return
 
-  const type = text.includes('CSL_CITATION') || '}'
+  const type = text.includes('CSL_CITATION') || j.partialCitation
 
   // Zotero/mendely citation: easy
   if (type && !text?.includes('Bibliography')) {
@@ -61,40 +62,49 @@ export function citation(j: J, citation: T, parent: Parent) {
 
       j.deleteNextRun = true
 
-      return citation.citationItems.map((cite: any, i: number) => {
-        const citation: CSL = cite.itemData
-        j.citationNumber++
-        // const citeKey =
-        let citeKey =
-          generateAuthYearFromCSL(citation) || `bib${j.citationNumber}`
+      return citation.citationItems.map(
+        (cite: CitationItem | MendeleyCitationItem, i: number) => {
+          const itemData: CSL = cite.itemData
+          j.citationNumber++
+          // const citeKey =
+          let citeKey =
+            generateAuthYearFromCSL(itemData) || `bib${j.citationNumber}`
 
-        while (citeKey in j.citeKeys) {
-          if (citeKey.slice(-1).match(/\d/)) {
-            citeKey = `${citeKey}a`
-            continue
+          while (citeKey in j.citeKeys) {
+            if (citeKey.slice(-1).match(/\d/)) {
+              citeKey = `${citeKey}a`
+              continue
+            }
+            citeKey = incrementSuffix(citeKey)
           }
-          citeKey = incrementSuffix(citeKey)
-        }
-        j.citeKeys.push(citeKey)
 
-        j.collectCitation(citation, citeKey)
+          j.citeKeys.push(citeKey)
 
-        return j(
-          citation,
-          'xref',
-          {
-            id: `_xref-${j.citationNumber}`,
-            refType: 'bibr',
-            rid: citeKey,
-          },
-          [
+          j.collectCitation(itemData, citeKey)
+
+          const { id, itemData: itemdata, ...rest } = cite
+          const customCiteData = { ...rest, ...citation.properties }
+          return j(
+            itemData,
+            'xref',
             {
-              type: 'text',
-              value: formattedCitations?.[i] || `[${j.citationNumber}]`,
+              id: `_xref-${j.citationNumber}`,
+              refType: 'bibr',
+              rid: citeKey,
+              // We store more value in the custom citation space, such as infix/suffix etc.
+              ...(customCiteData
+                ? { customType: JSON.stringify(customCiteData) }
+                : {}), // customType: JSON.stringify()
             },
-          ]
-        )
-      })
+            [
+              {
+                type: 'text',
+                value: formattedCitations?.[i] || `[${j.citationNumber}]`,
+              },
+            ]
+          )
+        }
+      )
     }
   }
   // Endnote/Citavi citation
@@ -107,7 +117,11 @@ export function cslCitation(text: string) {
 }
 
 function generateAuthYearFromCSL(csl: CSL): string {
-  return csl.author?.[0]?.family && csl.issued?.['date-parts']?.[0]?.[0]
+  if (csl.id) {
+    return csl.id
+  }
+
+  return csl?.author?.[0]?.family && csl?.issued?.['date-parts']?.[0]?.[0]
     ? `${csl.author[0].family}${csl.issued['date-parts'][0][0]}`
     : `${csl.id}`
 }

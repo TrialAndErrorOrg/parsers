@@ -1,5 +1,6 @@
 import { Footnotes } from 'ooxast'
-import { all, J } from 'ooxast-util-to-jast'
+import { J } from '../types'
+import { all } from '../all'
 
 export function footnotes(j: J, node: Footnotes) {
   j(node, 'fnGroup', all(j, node))

@@ -16,6 +16,7 @@ export interface Properties {
 
 export interface CitationItem {
   id: string
+  itemData: CSL
   prefix?: string
   suffix?: string
   infix?: string

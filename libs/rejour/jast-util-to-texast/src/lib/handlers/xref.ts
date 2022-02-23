@@ -1,6 +1,7 @@
 // based on https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/em
 
-import { Xref } from 'jjast'
+import { Xref, Text } from 'jjast'
+import { CommandArg } from 'texast'
 import { J } from '../types'
 import { wrapCommandArg } from '../util/wrap-command-arg'
 
@@ -38,15 +39,44 @@ export function xref(j: J, node: Xref) {
   // TODO: [rejour-rehype/citations] make citation parsing less hardcoded
   // Maybe add a new type to texast: citation.
 
+  const labelToText: { [key: string]: string } = {
+    page: 'pp.',
+    appendix: 'App.',
+  }
+
   // TODO: [rejour-rehype/citations] make checks for the kind of citations used.
-  console.log(node.attributes)
   switch (node.attributes.refType) {
     case 'bibr': {
+      const customType = node.attributes.customType
+
+      // TODO: [rejour-relatex] make latex cite command setting more modular and customizable
+      let command
+      let pre
+      let post
+      if (customType) {
+        const customData = JSON.parse(customType)
+        const { prefix, infix, label, locator, mode, suffix } = customData
+
+        const pref = (mode ? infix : prefix) || ''
+
+        const suff = `${
+          label && label !== 'none'
+            ? `${labelToText[label] || label || 'pp.'} `
+            : ''
+        }${locator || ''}`
+        command = mode ? 'textcite' : 'parencite'
+
+        if (pref) pre = pref
+        if (suff) post = suff
+      }
+
+      const optCommandArgs = createOptCiteArgs(pre, post)
       return j(
         node,
         'command',
-        { name: j.citationAnalyzer(node) || 'autocite' },
+        { name: command || j.citationAnalyzer(node) || 'autocite' },
         [
+          ...optCommandArgs,
           {
             type: 'commandArg',
             children: [
@@ -109,4 +139,55 @@ export function xref(j: J, node: Xref) {
   // return j(article, 'root', [
   //   j(node, 'element', { name: 'article' }, all(j, article)),
   // ])
+}
+
+function createOptCiteArgs(pre?: string, post?: string) {
+  if (!pre && !post) return []
+  if (!post) {
+    return [
+      {
+        type: 'commandArg',
+        optional: true,
+        children: [
+          {
+            type: 'text',
+            value: '',
+          } as Text,
+        ],
+      } as CommandArg,
+      {
+        type: 'commandArg',
+        optional: true,
+        children: [
+          {
+            type: 'text',
+            value: pre,
+          } as Text,
+        ],
+      } as CommandArg,
+    ]
+  }
+
+  return [
+    {
+      type: 'commandArg',
+      optional: true,
+      children: [
+        {
+          type: 'text',
+          value: post,
+        } as Text,
+      ],
+    } as CommandArg,
+    {
+      type: 'commandArg',
+      optional: true,
+      children: [
+        {
+          type: 'text',
+          value: pre,
+        } as Text,
+      ],
+    } as CommandArg,
+  ]
 }

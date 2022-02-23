@@ -6,21 +6,26 @@ import { J } from '../types'
 import { Italic, Bold, Underline, Strike, Sc } from 'jjast'
 
 export function r(j: J, node: R) {
-  if (node?.children?.[1]?.name === 'w:instrText') {
-    j.deleteNextRun = true
+  const instrText = select('w\\:instrText', node)
+  if (instrText) {
+    //j.deleteNextRun = false
     return all(j, node)
   }
 
-  if (node?.children?.[1]?.name === 'w:fldChar') return
+  const fldChar = select('w\\:fldChar', node)
+  if (fldChar) return
 
-  if (node?.children?.[1]?.name === 'w:footnoteReference') {
+  const footnoteReference = select('w\\:footnoteReference', node)
+  if (footnoteReference) {
     return x(
       'xref',
       { refType: 'fn' },
-      { type: 'text', value: `[${node?.children?.[1]?.attributes?.['w:id']}]` }
+      { type: 'text', value: `[${footnoteReference.attributes?.['w:id']}]` }
     )
   }
-  if (node?.children?.[1]?.name === 'w:drawing') {
+
+  const drawing = select('w\\:drawing', node)
+  if (drawing) {
     return all(j, node)
   }
 

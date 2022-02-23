@@ -94,38 +94,34 @@ export function refList(j: J, list: RefList): Environment | undefined {
   const texEntryMap = (key: string, value?: string) =>
     value ? `${key} = {${value}}` : []
   const toBibtex = (c: CSL[]) => {
-    return (
-      c
-        .map(
-          // prettier-ignore
-          (ref,index) =>
+    return c
+      .map(
+        // prettier-ignore
+        (ref,index) =>
           [
-            `@${(biblatexCSLMap.target as any)[ref.type]}{${generateCiteKey(ref.id,index)}`,
+            `@${(biblatexCSLMap.target as any)[ref.type] || 'article'}{${generateCiteKey(ref.id,index)}`,
           //  ${ref.author?.[0]?.family && ref.issued?.['date-parts']?.[0]?.[0] ? `${ref.author[0].family}${ref.issued['date-parts'][0][0]}` :ref['citation-key'] || ref.id}`,
-      texEntryMap('title',ref.title),
-      texEntryMap('author',ref.author
+      texEntryMap('title      ',ref.title),
+      texEntryMap('author     ',ref.author
         ?.map(
           (auth) =>
             (auth.literal ||
-            `${auth.family}, ${
-              auth['dropping-particle'] || auth['non-dropping-particle'] || ''
-            }${auth.given ||''} ${auth.suffix || ''}`).trim()
+            `${(auth['dropping-particle'] || auth['non-dropping-particle'] || '')} ${auth.family}${auth.given ? `, ${auth.given}` : ''}${auth.suffix || ''}`).trim()
         )
         .join(' and ')),
-      texEntryMap('number',`${ref.number||ref.issue||''}`),
-      texEntryMap('volume',`${ref.volume||''}`),
-      texEntryMap('url',ref.URL),
-      texEntryMap('doi',ref.DOI),
-      texEntryMap('publisher',ref.publisher),
-      texEntryMap('place',ref['publisher-place']),
-      texEntryMap('year',ref.issued?.literal || ref.issued?.['date-parts']?.[0]?.join('-')),
-      texEntryMap('pages',ref.page),
-      texEntryMap('journal',ref.source),
+      texEntryMap('number     ',`${ref.number||ref.issue||''}`),
+      texEntryMap('volume     ',`${ref.volume||''}`),
+      texEntryMap('url        ',ref.URL),
+      texEntryMap('doi        ',ref.DOI),
+      texEntryMap('publisher  ',ref.publisher),
+      texEntryMap('place      ',ref['publisher-place']),
+      texEntryMap('year       ',ref.issued?.literal || ref.issued?.['date-parts']?.[0]?.join('-')),
+      texEntryMap('pages      ',ref.page),
+      texEntryMap('journal    ',ref.source),
 
 ].flat().join(',\n    ')+'\n}'
-        )
-        .join('\n\n\n') + '\n}'
-    )
+      )
+      .join('\n\n\n') // + '\n}'
   }
   const bibtex = toBibtex(csl)
 
@@ -144,7 +140,7 @@ function generateCiteKey(id?: string, index?: number) {
     return `$bib{index}`
   }
   if (!id.match(/\d/)) return id
-  if (id.slice(-4).match(/(\d{4}||\d{3}[a-z])/)) {
+  if (id.slice(-4).match(/(\d{4}|\d{3}[a-z])/)) {
     return id
   }
 

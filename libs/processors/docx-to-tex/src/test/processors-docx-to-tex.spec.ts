@@ -14,6 +14,8 @@ import { select } from 'xast-util-select'
 import { parseBib } from 'ooxast-util-parse-bib'
 import { reoffClean } from 'reoff-clean'
 import { findCitations } from 'ooxast-util-citations'
+import reoffCite from 'reoff-cite'
+import reoffParseReferences from 'reoff-parse-references'
 
 //describe('fixtures', () => {
 const fromDocx = (path: string) =>
@@ -30,19 +32,14 @@ const fromDocx = (path: string) =>
         'w:noProof',
       ],
     })
+    .use(reoffParseReferences, { mailto: 'support@centeroftrialanderror.com' })
+    .use(reoffCite)
     .use(() => (tree, vfile) => {
-      vfile.data.bibliography = parseBib(tree, {})
-    })
-    .use(() => (tree, vfile) => {
-      const newtree = findCitations(tree, {
-        bibliography: vfile.data.bibliography as CSL[],
-        type: 'mendeley',
-      })
+      console.log(vfile.data.bibliography)
       writeFileSync(
         join(path, 'test.ooxast.json'),
-        JSON.stringify(newtree, null, 2)
+        JSON.stringify(removePosition(tree), null, 2)
       )
-      return newtree
     })
     .use(reoffRejour)
     .use(

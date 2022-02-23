@@ -67,8 +67,12 @@
       "rejour-relatex": ["libs/rejour/rejour-relatex/src/index.ts"],
       "rejour-stringify": ["libs/rejour/rejour-stringify/src/index.ts"],
       "relatex-stringify": ["libs/relatex/relatex-stringify/src/index.ts"],
+      "reoff-cite": ["libs/reoff/reoff-cite/src/index.ts"],
       "reoff-clean": ["libs/reoff/reoff-clean/src/index.ts"],
       "reoff-parse": ["libs/reoff/reoff-parse/src/index.ts"],
+      "reoff-parse-references": [
+        "libs/reoff/reoff-parse-references/src/index.ts"
+      ],
       "reoff-rejour": ["libs/reoff/reoff-rejour/src/index.ts"],
       "texast": ["libs/relatex/texast/src/index.ts"],
       "texast-util-to-latex": [

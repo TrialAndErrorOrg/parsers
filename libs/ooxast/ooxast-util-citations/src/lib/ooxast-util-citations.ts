@@ -16,6 +16,7 @@ import {
   Mendeley,
   MendeleyProperties,
   MendeleyCitationItem,
+  CitationItem,
 } from './types'
 import similarity from 'similarity'
 import { dateSim } from 'csl-consolidate'
@@ -25,8 +26,9 @@ const isInstrT = convertElement<T>('w:instrText')
 const isP = convertElement<P>('w:p')
 const isR = convertElement<R>('w:r')
 
+export const citationTypesWithSuffixedForm: Options['type'][] = ['mendeley']
 export interface Options {
-  type: 'mendeley' | 'native'
+  type: 'mendeley' | 'native' | 'citavi' | 'zotero' | 'endnote'
   bibliography?: CSL[]
 }
 
@@ -111,7 +113,8 @@ export function findCitations(
             const citation = constructCitation(
               curr,
               options.type,
-              citationCounter
+              citationCounter,
+              options.bibliography
             )
             const val = `ADDIN CSL_CITATION ${JSON.stringify(citation)}`
 
@@ -123,6 +126,22 @@ export function findCitations(
                 ]) as T,
               ]) as R
             )
+            if (
+              citationTypesWithSuffixedForm.includes(options.type) &&
+              citation
+            ) {
+              acc.push(
+                x('w:r', {}, [
+                  ...(rpr ? [rpr] : []),
+                  x('w:t', {}, [
+                    {
+                      type: 'text',
+                      value: citation.mendeley.formattedCitation,
+                    } as Text,
+                  ]) as T,
+                ]) as R
+              )
+            }
 
             citationCounter++
             return acc
@@ -144,10 +163,15 @@ export function findCitations(
   return tree as Root
 }
 
-export function constructCitation(curr: Citation, type: string, index: number) {
+export function constructCitation(
+  curr: Citation,
+  type: string,
+  index: number,
+  bibliography?: CSL[]
+) {
   switch (type) {
     case 'mendeley':
-      return constructMendeleyCitation(curr, index)
+      return constructMendeleyCitation(curr, index, bibliography)
     case 'zotero':
       return constructZoteroCitation(curr, index)
     case 'endnote':
@@ -201,14 +225,14 @@ function constructMendeleyCitation(
     previouslyFormattedCitation: curr.originalText || '',
   }
 
-  curr['citationId'].replace('X', `${index}`)
+  curr['citationId'] = curr['citationId'].replace('X', `${index}`)
   if (!bibliography) {
     const mend: any = { ...curr, schema, mendeley }
     return mend
   }
 
-  const mendCites = curr.citationItems.reduce((acc: CSL[], curr) => {
-    const betterCSL = findRef(curr as CSL, bibliography)
+  const mendCites = curr.citationItems.reduce((acc: CitationItem[], curr) => {
+    const betterCSL = findRef(curr, bibliography)
     acc.push(betterCSL)
     return acc
   }, [])
@@ -224,12 +248,18 @@ function constructMendeleyCitation(
   //const citationItems
 }
 
-function findRef(cite: CSL, bibliography: CSL[]): CSL {
+function findRef(citeItem: CitationItem, bibliography: CSL[]): CitationItem {
   // we'll take it if it has 90% match with the author and the year, except if there are multiple thiingies
-  const gottemInOne = bibliography.find((bib) => bib.id === cite.id)
-  if (gottemInOne) return gottemInOne
+  const cite = citeItem.itemData
+  const gottemInOne = bibliography.find(
+    (bib) => bib.id === cite.id || bib.id === citeItem.id
+  )
+  if (gottemInOne) {
+    citeItem.itemData = gottemInOne
+    return citeItem
+  }
 
-  if (!cite.author || !cite.issued) return cite
+  if (!cite.author || !cite.issued) return citeItem
   let lastDig = alphaToNum(cite.id.slice(-1))
   let theOne: CSL | null = null
 
@@ -244,6 +274,7 @@ function findRef(cite: CSL, bibliography: CSL[]): CSL {
           curr?.family || '',
           csl?.author?.[index]?.family || 'aishotnat'
         )
+
         return acc
       }, 0) / (cite?.author?.length || 100)
 
@@ -259,8 +290,9 @@ function findRef(cite: CSL, bibliography: CSL[]): CSL {
       break
     }
   }
+  if (theOne) citeItem.itemData = theOne
 
-  return theOne || cite
+  return citeItem
 }
 
 function alphaToNum(a: string) {

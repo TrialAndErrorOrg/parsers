@@ -27,38 +27,37 @@ export async function docxToVFile(
   const doc = await entries['word/document.xml'].text()
   const foot = (await entries?.['word/footnotes.xml']?.text()) || ''
   const bib = (await entries?.['customXml/item1.xml']?.text()) || ''
-  // const data = await getXMLDatas(file, {
-  //   filenames: [
-  //     /customXml\/item\d+\.xml/,
-  //     'word/document.xml',
-  //     'word/footnotes.xml',
-  //   ],
-  // })
 
   // const {
   //   'word/document.xml': document,
   //   'word/footnotes.xml': footnotes,
   //   ...bibliography
   // } = data
+
   const total = `${removeCarriage(doc).slice(0, -'</w:document>'.length)}
   ${removeHeader(foot)}
   ${removeHeader(bib)}
   </w:document>`
+
   const vfile = new VFile(total)
+
   vfile.data.relations = relations
-  if (!options.withoutImages) {
-    const mediaUrls = Object.values(relations).filter((rel: string) =>
-      rel.includes('media/')
-    )
-    const images = {} as { [key: string]: ArrayBuffer }
-    for (const url of mediaUrls) {
-      images[url] = await entries[`word/${url}`].arrayBuffer()
-      // console.log(images)
-    }
-    vfile.data.images = images
+
+  if (options.withoutImages) {
+    return vfile
   }
+
+  const mediaUrls = Object.values(relations).filter((rel: string) =>
+    rel.includes('media/')
+  )
+  const images = {} as { [key: string]: ArrayBuffer }
+  for (const url of mediaUrls) {
+    images[url] = await entries[`word/${url}`].arrayBuffer()
+    console.log(images)
+  }
+  vfile.data.images = images
+  return vfile
   // if (footnotes) {
   //   Object.assign(vfile.data, { footnotes })
   // }
-  return vfile
 }

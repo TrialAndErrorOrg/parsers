@@ -1435,20 +1435,9 @@
                       "type": "element",
                       "name": "elementCitation",
                       "attributes": {
-                        "publicationType": "standard"
+                        "publicationType": "journal"
                       },
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "publisherName",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "JOTE Publishers"
-                            }
-                          ]
-                        },
                         {
                           "type": "element",
                           "name": "year",
@@ -1457,28 +1446,6 @@
                             {
                               "type": "text",
                               "value": "2020"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "month",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "12"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "day",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "2"
                             }
                           ]
                         },
@@ -1509,23 +1476,23 @@
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "givenNames",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "Rebecca C."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
                                   "name": "surname",
                                   "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
                                       "value": "Sindall"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "R.C."
                                     }
                                   ]
                                 }
@@ -1538,23 +1505,23 @@
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "givenNames",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "Dani J."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
                                   "name": "surname",
                                   "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
                                       "value": "Barrington"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "D.J."
                                     }
                                   ]
                                 }
@@ -1569,7 +1536,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "6-8"
+                              "value": "6–8"
                             }
                           ]
                         },
@@ -1580,7 +1547,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "Fail Fast, Fail Forward, Fail Openly: The Need to Share Failures in Development"
+                              "value": "Fail fast, fail forward, fail openly: The need to share failures in development"
                             }
                           ]
                         },
@@ -1597,25 +1564,12 @@
                         },
                         {
                           "type": "element",
-                          "name": "issn",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": [
-                                "2667-1204"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
                           "name": "extLink",
                           "attributes": {},
                           "children": [
                             {
                               "type": "text",
-                              "value": "http://dx.doi.org/10.36850/ed2"
+                              "value": "https://doi.org/10.36850/ed2"
                             }
                           ]
                         },
@@ -1661,47 +1615,12 @@
                       "children": [
                         {
                           "type": "element",
-                          "name": "publisherName",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "Wiley"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
                           "name": "year",
                           "attributes": {},
                           "children": [
                             {
                               "type": "text",
-                              "value": "1999"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "month",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "2"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "pubId",
-                          "attributes": {
-                            "pubIdType": "doi"
-                          },
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "10.1002/mare.4080220211"
+                              "value": "2009"
                             }
                           ]
                         },
@@ -1750,7 +1669,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "7-8"
+                              "value": "34–41"
                             }
                           ]
                         },
@@ -1761,7 +1680,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "Blame the people vs. fix the system"
+                              "value": "People or systems? To blame is human. The fix is to engineer"
                             }
                           ]
                         },
@@ -1772,29 +1691,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "Management Report for Nonunion Organizations"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "issn",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "0745-4880"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "extLink",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "http://dx.doi.org/10.1002/mare.4080220211"
+                              "value": "Professional safety"
                             }
                           ]
                         },
@@ -1805,7 +1702,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "2"
+                              "value": "12"
                             }
                           ]
                         },
@@ -1816,7 +1713,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "22"
+                              "value": "54"
                             }
                           ]
                         }
@@ -1835,20 +1732,9 @@
                       "type": "element",
                       "name": "elementCitation",
                       "attributes": {
-                        "publicationType": "standard"
+                        "publicationType": "journal"
                       },
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "publisherName",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "SAGE Publications"
-                            }
-                          ]
-                        },
                         {
                           "type": "element",
                           "name": "year",
@@ -1857,17 +1743,6 @@
                             {
                               "type": "text",
                               "value": "1996"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "month",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "10"
                             }
                           ]
                         },
@@ -1898,23 +1773,23 @@
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "givenNames",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "Richard D."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
                                   "name": "surname",
                                   "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
                                       "value": "Gilson"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "R.D."
                                     }
                                   ]
                                 }
@@ -1925,17 +1800,6 @@
                               "name": "name",
                               "attributes": {},
                               "children": [
-                                {
-                                  "type": "element",
-                                  "name": "givenNames",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "John E."
-                                    }
-                                  ]
-                                },
                                 {
                                   "type": "element",
                                   "name": "surname",
@@ -1946,6 +1810,17 @@
                                       "value": "Deaton"
                                     }
                                   ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "J.E."
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -1956,23 +1831,23 @@
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "givenNames",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "Mustapha"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
                                   "name": "surname",
                                   "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
                                       "value": "Mouloua"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "M."
                                     }
                                   ]
                                 }
@@ -1987,7 +1862,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "12-18"
+                              "value": "12–18"
                             }
                           ]
                         },
@@ -1998,7 +1873,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "Coping with Complex Alarms: Sophisticated Aircraft Cockpit Alarm Systems Demand a Shift in Training Strategies"
+                              "value": "Coping with complex alarms: Sophisticated aircraft cockpit alarm systems demand a shift in training strategies"
                             }
                           ]
                         },
@@ -2015,25 +1890,12 @@
                         },
                         {
                           "type": "element",
-                          "name": "issn",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": [
-                                "1064-8046"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
                           "name": "extLink",
                           "attributes": {},
                           "children": [
                             {
                               "type": "text",
-                              "value": "http://dx.doi.org/10.1177/106480469600400404"
+                              "value": "https://doi.org/10.1177/106480469600400404"
                             }
                           ]
                         },
@@ -2185,20 +2047,9 @@
                       "type": "element",
                       "name": "elementCitation",
                       "attributes": {
-                        "publicationType": "standard"
+                        "publicationType": "journal"
                       },
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "publisherName",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "Informa UK Limited"
-                            }
-                          ]
-                        },
                         {
                           "type": "element",
                           "name": "year",
@@ -2212,17 +2063,6 @@
                         },
                         {
                           "type": "element",
-                          "name": "month",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "3"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
                           "name": "pubId",
                           "attributes": {
                             "pubIdType": "doi"
@@ -2230,7 +2070,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "10.2147/cia.s16802"
+                              "value": "10.2147/CIA.S16802"
                             }
                           ]
                         },
@@ -2248,23 +2088,23 @@
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "givenNames",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "Wai Wang"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
                                   "name": "surname",
                                   "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
-                                      "value": "Chau"
+                                      "value": "Kwok"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "T.C."
                                     }
                                   ]
                                 }
@@ -2277,15 +2117,33 @@
                               "children": [
                                 {
                                   "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Chau"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
                                   "name": "givenNames",
                                   "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
-                                      "value": "K S L"
+                                      "value": "W.W."
                                     }
                                   ]
-                                },
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
                                 {
                                   "type": "element",
                                   "name": "surname",
@@ -2294,6 +2152,104 @@
                                     {
                                       "type": "text",
                                       "value": "Yuen"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "K.S."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Wong"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "A.Y."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Li"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "J.C."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Shiu"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "R.Y."
                                     }
                                   ]
                                 }
@@ -2314,14 +2270,7 @@
                                       "value": "Ho"
                                     }
                                   ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "name",
-                              "attributes": {},
-                              "children": [
+                                },
                                 {
                                   "type": "element",
                                   "name": "givenNames",
@@ -2329,18 +2278,7 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "value": "Timothy"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "surname",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "Kwok"
+                                      "value": "F.K."
                                     }
                                   ]
                                 }
@@ -2355,7 +2293,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "83"
+                              "value": "83–88"
                             }
                           ]
                         },
@@ -2383,25 +2321,12 @@
                         },
                         {
                           "type": "element",
-                          "name": "issn",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": [
-                                "1178-1998"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
                           "name": "extLink",
                           "attributes": {},
                           "children": [
                             {
                               "type": "text",
-                              "value": "http://dx.doi.org/10.2147/CIA.S16802"
+                              "value": "https://doi.org/10.2147/CIA.S16802"
                             }
                           ]
                         },
@@ -2431,20 +2356,9 @@
                       "type": "element",
                       "name": "elementCitation",
                       "attributes": {
-                        "publicationType": "standard"
+                        "publicationType": "journal"
                       },
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "publisherName",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "Frontiers Media SA"
-                            }
-                          ]
-                        },
                         {
                           "type": "element",
                           "name": "year",
@@ -2453,28 +2367,6 @@
                             {
                               "type": "text",
                               "value": "2021"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "month",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "5"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "day",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "26"
                             }
                           ]
                         },
@@ -2505,23 +2397,23 @@
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "givenNames",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "Hilary J."
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
                                   "name": "surname",
                                   "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
                                       "value": "Traut"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "H.J."
                                     }
                                   ]
                                 }
@@ -2532,17 +2424,6 @@
                               "name": "name",
                               "attributes": {},
                               "children": [
-                                {
-                                  "type": "element",
-                                  "name": "givenNames",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "Ryan M."
-                                    }
-                                  ]
-                                },
                                 {
                                   "type": "element",
                                   "name": "surname",
@@ -2553,6 +2434,17 @@
                                       "value": "Guild"
                                     }
                                   ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "R.M."
+                                    }
+                                  ]
                                 }
                               ]
                             },
@@ -2563,23 +2455,23 @@
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "givenNames",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "Yuko"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
                                   "name": "surname",
                                   "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
                                       "value": "Munakata"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Y."
                                     }
                                   ]
                                 }
@@ -2605,7 +2497,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "Why Does Cognitive Training Yield Inconsistent Benefits? A Meta-Analysis of Individual Differences in Baseline Cognitive Abilities and Training Outcomes"
+                              "value": "Why does cognitive training yield inconsistent benefits? A meta-analysis of individual differences in baseline cognitive abilities and training outcomes"
                             }
                           ]
                         },
@@ -2616,20 +2508,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "Frontiers in Psychology"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "issn",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": [
-                                "1664-1078"
-                              ]
+                              "value": "Frontiers in psychology"
                             }
                           ]
                         },
@@ -2640,7 +2519,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "http://dx.doi.org/10.3389/fpsyg.2021.662139"
+                              "value": "https://doi.org/10.3389/fpsyg.2021.662139"
                             }
                           ]
                         },
@@ -2670,20 +2549,9 @@
                       "type": "element",
                       "name": "elementCitation",
                       "attributes": {
-                        "publicationType": "standard"
+                        "publicationType": "journal"
                       },
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "publisherName",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "Elsevier BV"
-                            }
-                          ]
-                        },
                         {
                           "type": "element",
                           "name": "year",
@@ -2692,17 +2560,6 @@
                             {
                               "type": "text",
                               "value": "2018"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "month",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "1"
                             }
                           ]
                         },
@@ -2733,23 +2590,23 @@
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "givenNames",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "Maurizio"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
                                   "name": "surname",
                                   "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
                                       "value": "Bevilacqua"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "M."
                                     }
                                   ]
                                 }
@@ -2762,23 +2619,23 @@
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "givenNames",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "Filippo Emanuele"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
                                   "name": "surname",
                                   "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
                                       "value": "Ciarapica"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "F.E."
                                     }
                                   ]
                                 }
@@ -2793,7 +2650,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "149-159"
+                              "value": "149–159"
                             }
                           ]
                         },
@@ -2821,25 +2678,12 @@
                         },
                         {
                           "type": "element",
-                          "name": "issn",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": [
-                                "0951-8320"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
                           "name": "extLink",
                           "attributes": {},
                           "children": [
                             {
                               "type": "text",
-                              "value": "http://dx.doi.org/10.1016/j.ress.2017.08.013"
+                              "value": "https://doi.org/10.1016/j.ress.2017.08.013"
                             }
                           ]
                         },

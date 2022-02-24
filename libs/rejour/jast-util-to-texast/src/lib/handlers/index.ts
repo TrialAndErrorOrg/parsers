@@ -8,6 +8,8 @@ import { text } from './text'
 import { front } from './front'
 import { wrapChildren } from '../util/wrap-children'
 import { environment } from './environment'
+import { sub } from './sub'
+import { sup } from './sup'
 import { sec } from './sec'
 import { listItem } from './listItem'
 import { list } from './list'
@@ -33,6 +35,8 @@ export const handlers = {
   command,
   xref,
 
+  sub,
+  sup,
   instruction: ignore,
 
   articleTitle: command,
@@ -298,14 +302,12 @@ export const handlers = {
   subject: ignore,
   subjGroup: ignore,
   subtitle: ignore,
-  sub: ignore,
   suffix: ignore,
   supplementaryMaterial: ignore,
   supplement: ignore,
   supportDescription: ignore,
   supportGroup: ignore,
   supportSource: ignore,
-  sup: ignore,
   surname: ignore,
   tableCount: ignore,
   tableWrapfoot: ignore,
@@ -342,4 +344,6 @@ export const handlers = {
   year: ignore,
 }
 
-function ignore() {}
+function ignore() {
+  //
+}

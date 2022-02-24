@@ -9,6 +9,8 @@ export function isKnownNode(node: UnistNode): node is TexastContent {
     'root',
     'document',
     'preamble',
+    'sub',
+    'super',
     'environment',
     'paragraph',
     'comment',

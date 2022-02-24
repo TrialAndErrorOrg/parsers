@@ -1,0 +1,34 @@
+{
+  "root": "libs/texast/texast-util-add-preamble",
+  "sourceRoot": "libs/texast/texast-util-add-preamble/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/texast/texast-util-add-preamble/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/texast/texast-util-add-preamble"],
+      "options": {
+        "jestConfig": "libs/texast/texast-util-add-preamble/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/texast/texast-util-add-preamble",
+        "tsConfig": "libs/texast/texast-util-add-preamble/tsconfig.lib.json",
+        "packageJson": "libs/texast/texast-util-add-preamble/package.json",
+        "main": "libs/texast/texast-util-add-preamble/src/index.ts",
+        "assets": ["libs/texast/texast-util-add-preamble/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,14 +1,17 @@
-import { R, RPr } from 'ooxast'
+import { R, RPr, VerticalAlignRun } from 'ooxast'
 import { select } from 'xast-util-select'
 import { all } from '../all'
 import { x } from 'xastscript'
 import { J } from '../types'
 import { Italic, Bold, Underline, Strike, Sc } from 'jjast'
+import { convertElement } from 'xast-util-is-element'
+
+//const isVert = convertElement<VerticalAlignRun>('w:vertAlign')
 
 export function r(j: J, node: R) {
   const instrText = select('w\\:instrText', node)
   if (instrText) {
-    //j.deleteNextRun = false
+    j.deleteNextRun = true
     return all(j, node)
   }
 
@@ -59,6 +62,19 @@ export function r(j: J, node: R) {
       case 'strike':
       case 'dstrike':
         text = x('strike', {}, text)
+        continue
+      case 'vertAlign':
+        //if (!isVert(prop)) continue
+        // @ts-expect-error aaaa
+        if (prop.attributes['w:val'] === 'superscript') {
+          text = x('sup', {}, text)
+          continue
+        }
+        // @ts-expect-error aaaa
+        if (prop.attributes['w:val'] === 'subscript') {
+          text = x('sub', {}, text)
+          continue
+        }
         continue
       case 'smallCaps':
         text = x('sc', {}, text)

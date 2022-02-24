@@ -20,9 +20,7 @@ export async function callAnystyleCLI(
         tempPath,
       ])
       cleanup()
-      console.log(typeof res)
       const ress = JSON.parse(res)
-      console.log(ress)
       return ress
     } catch (e) {
       cleanup()

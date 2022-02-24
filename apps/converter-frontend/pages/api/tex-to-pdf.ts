@@ -3,6 +3,7 @@ import tar from 'tar-stream'
 import { Writable } from 'stream'
 import axios from 'axios'
 import FormData from 'form-data'
+import { cls } from '../../public/jote-article'
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   req.statusCode = 200
@@ -21,6 +22,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const pack = tar.pack()
   console.log('Packing tarball')
   pack.entry({ name: 'article.tex' }, tex)
+  pack.entry({ name: 'jote-article.cls' }, cls)
   pack.on('finish', function () {
     //
   })

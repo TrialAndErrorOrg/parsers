@@ -35,11 +35,22 @@ export async function docxToTexConverter(
         'w:noProof',
       ],
     })
-    .use(reoffParseReferences, { apiUrl: apiUrl || '/api/style', mailto })
+    .use(reoffParseReferences, {
+      apiUrl:
+        process.env.NODE_ENV === 'production'
+          ? apiUrl || '/api/style'
+          : 'http://localhost:8000/api/style',
+      mailto,
+    })
     .use(reoffCite, { type: type || 'mendeley' })
     .use(reoffRejour)
     .use(rejourStringify)
-    .use(rejourRelatex)
+    .use(rejourRelatex, {
+      documentClass: {
+        name: 'jote-article',
+        options: ['empirical', 'author-date'],
+      },
+    })
     .use(relatexStringify)
 
   return proc.process(vfile)

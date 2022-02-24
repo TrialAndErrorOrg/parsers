@@ -20,6 +20,7 @@ const handleNodeProperly = (
   const handleFunction = handle?.[type]
 
   if (!isKnownNode(node)) {
+    console.log(node)
     unknown(node)
     return ''
   }

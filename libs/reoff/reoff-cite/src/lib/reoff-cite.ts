@@ -10,9 +10,6 @@ export default function reoffCite(
   } = { type: 'mendeley' }
 ) {
   return (tree: Root, vfile: VFile) => {
-    console.warn('IM IN THE CITATIONS RN')
-    console.log(options.bibliography)
-    console.log(vfile.data)
     findCitations(tree, {
       bibliography: options.bibliography || (vfile.data.bibliography as CSL[]),
       type: options.type,

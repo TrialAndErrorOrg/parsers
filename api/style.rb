@@ -13,7 +13,7 @@ Handler = Proc.new do |req, res|
             return
         end
 
-        parsed = AnyStyle.parse(body,format('csl'))
+        parsed = AnyStyle.parse(body,{format:'csl'})
         res.status = 200
         res['Content-Type'] = 'application/json; charset=utf-8'
         res.body = JSON.generate(parsed)

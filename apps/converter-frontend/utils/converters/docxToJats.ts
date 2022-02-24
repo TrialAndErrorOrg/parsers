@@ -18,6 +18,8 @@ export async function docxToJatsConverter(
 ): Promise<VFile> {
   const { citationType: type, url: apiUrl, mailto } = options
 
+  console.log(process.env.NODE_ENV)
+
   const uint = new Uint8Array(input)
   const vfile = await docxToVFile(uint)
 
@@ -33,7 +35,13 @@ export async function docxToJatsConverter(
         'w:noProof',
       ],
     })
-    .use(reoffParseReferences, { apiUrl: apiUrl || '/api/style', mailto })
+    .use(reoffParseReferences, {
+      apiUrl:
+        process.env.NODE_ENV === 'production'
+          ? apiUrl || '/api/style'
+          : 'http://localhost:8000/api/style',
+      mailto,
+    })
     .use(reoffCite, { type: type || 'mendeley' })
     .use(reoffRejour)
     .use(rejourStringify)

@@ -4210,7 +4210,7 @@ export interface UnsignedDecimalNumber extends UnistNode {
 
 export interface VerticalAlignRun extends UnistNode {
   type: 'element'
-  name: 'w:verticalAlignRun'
+  name: 'w:vertAlign'
   attributes: {
     'w:val': s.VerticalAlignRunVal
   }

@@ -16,15 +16,15 @@ import {
 } from '@mantine/core'
 import { HStack, VStack } from '../components/stack/stack'
 import SelectItem from '../components/select-item/select-item'
-import { AiFillFileWord, AiOutlineUpload } from 'react-icons/ai'
+import { AiOutlineUpload } from 'react-icons/ai'
 import { JATSIcon, TexIcon, WordIcon } from '../components/ext-icon/ext-icon'
 
 import { Dropzone } from '@mantine/dropzone'
-import ConvertedBlock from '../components/converted-block/converted-block'
 import ConvertedBlockLocal from '../components/converted-block-local/converted-block-local'
 import { jatsToTexConverter } from '../utils/converters/jatsToTex'
 import { docxToTexConverter } from '../utils/converters/docxToTex'
 import { docxToJatsConverter } from '../utils/converters/docxToJats'
+
 export default function Index() {
   const [thing, setThing] = useState<ArrayBuffer>()
   const [tex, setTex] = useState('')
@@ -182,54 +182,39 @@ export default function Index() {
           </Group>
         )}
       </Dropzone>
-      <Title>Input</Title>
-      <Code
-        style={{
-          maxHeight: '400px',
-          overflow: 'scroll',
-        }}
-      >
-        <pre
-          style={{
-            maxHeight: '400px',
-            overflow: 'scroll',
-          }}
-        >
-          {thing && Buffer.from(thing).toString()}
-        </pre>
-      </Code>
+      {from !== 'docx' && (
+        <>
+          <Title>Input</Title>
+          <Code
+            style={{
+              maxHeight: '400px',
+              overflow: 'scroll',
+            }}
+          >
+            <pre
+              style={{
+                maxHeight: '400px',
+                overflow: 'scroll',
+              }}
+            >
+              {thing && Buffer.from(thing).toString()}
+            </pre>
+          </Code>
+        </>
+      )}
       <Title>Output</Title>
-      <Button
-        onClick={() =>
-          fetch('/api/tex-to-pdf', { method: 'POST', body: tex })
-            .then((res) => res.blob())
-            .then((res) => {
-              window.open(URL.createObjectURL(res))
-            })
-            .catch((e) => console.error(e))
-        }
-      >
-        Try make pdf
-      </Button>
-      <pre
-        style={{
-          maxHeight: '400px',
-          overflow: 'scroll',
-        }}
-      >
-        {thing && (
-          <ConvertedBlockLocal
-            input={thing}
-            converter={
-              from === 'docx'
-                ? to === 'tex'
-                  ? docxToTexConverter
-                  : docxToJatsConverter
-                : jatsToTexConverter
-            }
-          />
-        )}
-      </pre>
+      {thing && (
+        <ConvertedBlockLocal
+          input={thing}
+          converter={
+            from === 'docx'
+              ? to === 'tex'
+                ? docxToTexConverter
+                : docxToJatsConverter
+              : jatsToTexConverter
+          }
+        />
+      )}
 
       {/* <Container>
         {[

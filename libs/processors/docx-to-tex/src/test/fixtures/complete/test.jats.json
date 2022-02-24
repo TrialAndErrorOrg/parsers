@@ -232,19 +232,7 @@
                     },
                     {
                       "type": "text",
-                      "value": " approach to design a customized single-case experiment (SCE) to test the effect of classical conditioning on pain thresholds. We hope that this information helps readers who plan to implement an SCE in better understanding the steps involved and possible challenges. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "We wish to focus on using the flexible nature of SCEs to adapt to the requirements of the experiment. We also wish to highlight the necessity of exploring various available statistical methods and statistical power requirements for these methods prior to starting the experiment."
-                    },
-                    {
-                      "type": "text",
-                      "value": ""
-                    },
-                    {
-                      "type": "text",
-                      "value": " Finally, we demonstrate how SCEs can serve as a viable avenue for pilot-testing new therapies and treatments at a small scale before implementing larger scale studies."
+                      "value": " approach to design a customized single-case experiment (SCE) to test the effect of classical conditioning on pain thresholds. We hope that this information helps readers who plan to implement an SCE in better understanding the steps involved and possible challenges. We wish to focus on using the flexible nature of SCEs to adapt to the requirements of the experiment. We also wish to highlight the necessity of exploring various available statistical methods and statistical power requirements for these methods prior to starting the experiment. Finally, we demonstrate how SCEs can serve as a viable avenue for pilot-testing new therapies and treatments at a small scale before implementing larger scale studies."
                     }
                   ]
                 }
@@ -300,64 +288,172 @@
                           "value": "Persistent pain—pain that is still felt after bodily tissue has healed—is a major healthcare problem that is poorly understood and, consequently, difficult to treat effectively "
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-1",
+                            "refType": "bibr",
+                            "rid": "Breivik2006",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=792ec57c-b8b4-4772-a648-6727255d4af5\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Breivik et al., 2006"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-2",
+                            "refType": "bibr",
+                            "rid": "Tsang2008",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=c5ee4e4e-0c70-4c3f-a17f-d31c1bfc5984\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Costa et al., 2009"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-3",
+                            "refType": "bibr",
+                            "rid": "Costa2009",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=5b919bd1-a70e-4f8c-a038-e4277c5e2f31\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Foster et al., 2018"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": "(Breivik et al., 2006; Costa et al., 2009; Foster et al., 2018; Treede et al., 2019; Tsang et al., 2008)"
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-4",
+                            "refType": "bibr",
+                            "rid": "Foster2018",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=aa835aca-e6c7-46e0-bcfc-0f6815599023\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Treede et al., 2019"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-5",
+                            "refType": "bibr",
+                            "rid": "Treede2019",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=e5f5e7f7-4b64-48a9-9509-3537140e18bd\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Tsang et al., 2008)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
                           "value": ". While there are key models that go some way towards explaining how pain can persist without active tissue damage "
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-6",
+                            "refType": "bibr",
+                            "rid": "Woolf1983",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=2ff72fa7-d045-4f16-b5a4-27d849b07504\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Vlaeyen & Linton, 2000"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-7",
+                            "refType": "bibr",
+                            "rid": "Woolf2011",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=5004bfd7-ce98-49c3-a1d7-db69173c7609\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " 2012"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": "(Vlaeyen & Linton, 2000, 2012; Woolf, 1983, 2011)"
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-8",
+                            "refType": "bibr",
+                            "rid": "Vlaeyen2000",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=d17914e5-d158-4b59-bf0c-02cc8d5847d7\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Woolf, 1983"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-9",
+                            "refType": "bibr",
+                            "rid": "Vlaeyen2012",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=915562a7-fdd4-4e8b-af71-f03a2d817e80\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " 2011)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
                           "value": ", certain pain presentations remain unexplained. The imprecision hypothesis was proposed to address these unexplained presentations, and is founded on the idea that pain can be modulated by pain-associated cues—specifically, via “classical conditioning” "
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Moseley & Vlaeyen, 2015)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-10",
+                            "refType": "bibr",
+                            "rid": "Moseley2015",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=82472e9e-f62a-40ff-8725-16ff06a01187\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Moseley & Vlaeyen, 2015)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -375,40 +471,56 @@
                           "value": "Our study design builds on two previous experiments "
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-11",
+                            "refType": "bibr",
+                            "rid": "Madden2016",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=98eecab5-9592-4297-99e7-e53ecc3d3f5e\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Madden et al., 2016"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Madden et al., 2016; Traxler et al., 2019)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-12",
+                            "refType": "bibr",
+                            "rid": "Traxler2019",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=c5bbffe6-5041-42cb-a91c-332b22183efe\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Traxler et al., 2019)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
                           "value": ", which followed a Pavlovian or “classical” conditioning design "
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Pavlov, 1928)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-13",
+                            "refType": "bibr",
+                            "rid": "Pavlov1928",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=2553402c-9189-4336-9dea-9de09db7afd8\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Pavlov, 1928)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -475,20 +587,36 @@
                           "value": "SCEs are experiments in which the effect of manipulating an independent variable is observed in a single entity "
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-14",
+                            "refType": "bibr",
+                            "rid": "Barlow2009",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=3f9cf20a-1f7e-4f61-b91c-a7cfa8573c37\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Barlow et al., 2009"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Barlow et al., 2009; Kazdin, 2011)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-15",
+                            "refType": "bibr",
+                            "rid": "Kazdin2011",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=0bf25535-0ac8-4a4e-9baf-8d687854b102\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Kazdin, 2011)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -503,20 +631,20 @@
                           "value": " with the purpose of establishing a causal relationship between the independent variable, commonly referred to as the treatment condition, and the observed entity. SCEs are increasingly popular in behavioral and educational sciences due to their flexibility, low cost, and focus on effects of the intervention in individual participants "
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Heyvaert & Onghena, 2014b)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-16",
+                            "refType": "bibr",
+                            "rid": "Heyvaert2014",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=198ba9d4-5192-465e-95ce-823dacfeb34c\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Heyvaert & Onghena, 2014b)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -553,20 +681,20 @@
                           "value": " a group of individuals. The lower cost and flexibility of SCEs also make them ideal for studying new theories and interventions, as is the case in this study "
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Vlaeyen et al., 2020)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-17",
+                            "refType": "bibr",
+                            "rid": "Vlaeyen2020",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=8cbc9455-1fec-45a0-9f79-1b3c919a9263\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Vlaeyen et al., 2020)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -584,40 +712,72 @@
                           "value": "In SCEs, assignment of the treatment conditions to measurement occasions can be randomized to strengthen internal validity "
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-18",
+                            "refType": "bibr",
+                            "rid": "Kratochwill2010",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=ddfbcc90-d048-4d65-9827-fac88001c360\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Edgington, 1975"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Edgington, 1975; Kratochwill & Levin, 2010)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-19",
+                            "refType": "bibr",
+                            "rid": "Edgington1975",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=b8cbd2f4-cfe3-4ff2-81ed-267a4033f315\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Kratochwill & Levin, 2010)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
                           "value": ". Additionally, replication using multiple participants strengthens external validity and generalizability of the results "
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-20",
+                            "refType": "bibr",
+                            "rid": "Kratochwill2010",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=ddfbcc90-d048-4d65-9827-fac88001c360\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Horner et al., 2005"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Horner et al., 2005; Kratochwill & Levin, 2010)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-21",
+                            "refType": "bibr",
+                            "rid": "Horner2005",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=57971ed7-7e9c-446d-b7a8-2e2d0ba25a7c\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Kratochwill & Levin, 2010)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -657,72 +817,76 @@
                           "value": "SCEs are well suited to research questions about within-individual processes. Although group designs are historically respected, they are typically analyzed in a way that aggregates data from all individuals to estimate an effect at the group level—an effect that may be non-existent in any of the individuals within the group "
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Molenaar & Campbell, 2009)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-22",
+                            "refType": "bibr",
+                            "rid": "Molenaar2009",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=688f9077-cb4d-4bc4-b2b3-00e6024c5f5a\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Molenaar & Campbell, 2009)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
                           "value": ". This aggregation approach obscures the true, within-individual effect, and the between-individual variability of that effect (which, itself, is typically worthy of attention; "
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-23",
+                            "refType": "bibr",
+                            "rid": "Fisher2018",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=86f12e6a-3f0a-4d68-a93f-a10143d5b5e0\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Fisher et al., 2018)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
-                          "value": ""
+                          "value": ". Of course, it is possible to consider within-individual changes in some group designs, but an SCE offers a superior approach to achieving a sufficiently powered (> 80%) examination of within-subject effects "
                         },
                         {
-                          "type": "text",
-                          "value": "Fisher et al., 2018)"
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-24",
+                            "refType": "bibr",
+                            "rid": "Ferron1995",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=10969372-d714-4dd9-be5d-56f2952ac89a\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Ferron & Onghena, 1996"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ". Of course, it is possible to consider within-individual changes in some group designs, but an SCE offers a superior approach to achieving a "
-                        },
-                        {
-                          "type": "text",
-                          "value": "sufficiently powered "
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(> 80%) examination of within-subject effects "
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Ferron & Onghena, 1996; Ferron & Ware, 1995)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-25",
+                            "refType": "bibr",
+                            "rid": "Ferron1996",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=a041ea39-019c-41f1-84e0-80ff61fccbc1\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Ferron & Ware, 1995)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -762,52 +926,152 @@
                           "value": "SCEs are often difficult to analyze due to the presence of serial correlation in observed data and nonadherence to distributional assumptions "
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-26",
+                            "refType": "bibr",
+                            "rid": "Busk1988",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=74f7e531-03b7-42a5-ac46-16097a467507\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Adams & Anthony, 1996"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-27",
+                            "refType": "bibr",
+                            "rid": "Solomon2014",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=11839ff2-3056-4ff3-ad43-e69b0a63d7f5\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Busk & Marascuilo, 1988"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-28",
+                            "refType": "bibr",
+                            "rid": "Adams1996",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=7af2bb5e-1012-44cf-9930-577e677fe190\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Smith, 2012"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-29",
+                            "refType": "bibr",
+                            "rid": "Smith2012",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=262394ee-ba03-418c-8487-7cc5f4ad196a\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Solomon, 2014)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
-                          "value": ""
+                          "value": ". Traditionally, visual analysis was the preferred method for analyzing SCE data, but researchers now recommend quantitative statistical analysis to complement visual analysis "
                         },
                         {
-                          "type": "text",
-                          "value": "(Adams & Anthony, 1996; Busk & Marascuilo, 1988; Smith, 2012; Solomon, 2014)"
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-30",
+                            "refType": "bibr",
+                            "rid": "Ottenbacher1990",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=6ac9fab7-9fe1-4444-87d5-e0f6a30a5d50\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Kratochwill et al., 2010"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-31",
+                            "refType": "bibr",
+                            "rid": "Matyas1990",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=e409d006-b37a-4457-8234-b2da63d44f77\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Manolov & Moeyaert, 2017"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ". Traditionally, visual analysis"
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-32",
+                            "refType": "bibr",
+                            "rid": "Kratochwill2010",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=5dcf7b6e-f904-44b1-9c41-015a9c911322\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Manolov & Solanas, 2018"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": " was the preferred method for analyzing SCE data, "
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-33",
+                            "refType": "bibr",
+                            "rid": "Manolov2018",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=4721ed20-453c-4fb0-a49d-2eac81d9d519\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Matyas & Greenwood, 1990"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "but researchers now recommend quantitative statistical analysis to complement visual analysis "
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Kratochwill et al., 2010; Manolov & Moeyaert, 2017; Manolov & Solanas, 2018; Matyas & Greenwood, 1990; Ottenbacher, 1990)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-34",
+                            "refType": "bibr",
+                            "rid": "Manolov2017",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=6d3fa4a6-b213-4df7-bb61-431c358a439c\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Ottenbacher, 1990)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -825,60 +1089,124 @@
                           "value": "Randomization tests (RTs) are nonparametric hypothesis tests recommended for analyzing SCEs "
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-35",
+                            "refType": "bibr",
+                            "rid": "Edgington1975",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=b8cbd2f4-cfe3-4ff2-81ed-267a4033f315\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Adams & Anthony, 1996"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-36",
+                            "refType": "bibr",
+                            "rid": "Adams1996",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=7af2bb5e-1012-44cf-9930-577e677fe190\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Edgington, 1975"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": "(Adams & Anthony, 1996; Edgington, 1975; Heyvaert & Onghena, 2014b)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-37",
+                            "refType": "bibr",
+                            "rid": "Heyvaert2014",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=198ba9d4-5192-465e-95ce-823dacfeb34c\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Heyvaert & Onghena, 2014b)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
                           "value": ". RTs derive their validity from the random assignment of treatment conditions to experimental units, which in the case of SCEs, are measurement occasions "
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Edgington & Onghena, 2007)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-38",
+                            "refType": "bibr",
+                            "rid": "Edgington2007",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=c270a3d6-ab9f-433c-8337-2d2d654ae540\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Edgington & Onghena, 2007)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
                           "value": ". RTs do not require any distributional assumptions for the observed data. Additionally, RTs are immensely flexible, and can be adapted for any SCE design, randomization scheme, and effect size measure as the test statistic "
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-39",
+                            "refType": "bibr",
+                            "rid": "Michiels2020",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=68735d7b-ea0d-438f-af99-3a06a1ddde0b\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Heyvaert & Onghena, 2014a, 2014b"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-40",
+                            "refType": "bibr",
+                            "rid": "Heyvaert2014",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=2b7622b9-97a6-4dc8-8789-3f3716c9bcc5\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Michiels et al., 2020)"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": "(Heyvaert & Onghena, 2014a, 2014b; Michiels et al., 2020)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-41",
+                            "refType": "bibr",
+                            "rid": "Heyvaert2014",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=198ba9d4-5192-465e-95ce-823dacfeb34c\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "[41]"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -918,40 +1246,56 @@
                           "value": "Power analysis is an essential part of statistical hypothesis testing, particularly for determining sample size "
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Cohen, 1988)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-42",
+                            "refType": "bibr",
+                            "rid": "Cohen1988",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=ec6bbbdd-e483-3a39-b0e7-729c00cd3e50\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Cohen, 1988)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
                           "value": ". Several guidelines recommend a power analysis or at least a methodical description of how sample size was determined "
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-43",
+                            "refType": "bibr",
+                            "rid": "Vohra2015",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=3fde21e4-f6b5-41d7-ab5a-e6c0372913b8\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Vohra et al., 2015"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Vohra et al., 2015; Willkinson, 1999)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-44",
+                            "refType": "bibr",
+                            "rid": "Willkinson1999",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=8931ca13-a58c-471d-934c-53e9ce052a48\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Willkinson, 1999)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -969,48 +1313,136 @@
                           "value": "For RTs, the randomization distribution is calculated empirically, and hence statistical power can only be estimated using computer-intensive simulations "
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-45",
+                            "refType": "bibr",
+                            "rid": "Onghena1992",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=8fd3da70-0ba9-4190-8c92-8945f47e53bf\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Ferron & Ware, 1995"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Ferron & Ware, 1995; Onghena, 1992)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-46",
+                            "refType": "bibr",
+                            "rid": "Ferron1995",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=10969372-d714-4dd9-be5d-56f2952ac89a\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Onghena, 1992)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
                           "value": ". Several studies have estimated the power of SCE RTs for various design conditions "
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-47",
+                            "refType": "bibr",
+                            "rid": "Ferron1996",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=a041ea39-019c-41f1-84e0-80ff61fccbc1\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Bouwmeester & Jongerling, 2020"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-48",
+                            "refType": "bibr",
+                            "rid": "Ferron1995",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=10969372-d714-4dd9-be5d-56f2952ac89a\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " De, Michiels, Tanious, et al., 2020"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": "(Bouwmeester & Jongerling, 2020; De, Michiels, Tanious, et al., 2020; Ferron & Onghena, 1996; Ferron & Sentovich, 2002; Ferron & Ware, 1995; Michiels et al., 2018)"
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-49",
+                            "refType": "bibr",
+                            "rid": "Michiels2018",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=cea25ef0-03bd-4861-b740-fc9abe136eef\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Ferron & Onghena, 1996"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-50",
+                            "refType": "bibr",
+                            "rid": "Bouwmeester2020",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=aaf017b0-4754-487e-b98c-ef2839b5af9e\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Ferron & Sentovich, 2002"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-51",
+                            "refType": "bibr",
+                            "rid": "Ferron2002",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=018afbef-dc5b-44ed-a9d6-605525ea8e5a\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Ferron & Ware, 1995"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-52",
+                            "refType": "bibr",
+                            "rid": "De2020",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=3f81dd4a-3b90-4d7c-8466-29e57b7ea490\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Michiels et al., 2018)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -1140,20 +1572,20 @@
                           "value": " stimulus of an intensity calibrated such that there is a 50% chance that the participant judges it to be painful or non-painful at baseline (i.e., before the pairing). Participants are then requested to judge each trial on a scale that distinguishes painful from non-painful events "
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Madden et al., 2019)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-53",
+                            "refType": "bibr",
+                            "rid": "Madden2019",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=158cf65d-2600-4940-8585-4da3f96fb859\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Madden et al., 2019)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -1217,60 +1649,60 @@
                           "value": "The participants receive two types of stimuli at the same time, replicating the procedure in Traxler et al. "
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(2019)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-54",
+                            "refType": "bibr",
+                            "rid": "Traxler2019",
+                            "customType": "{\"suppress-author\":1,\"uris\":[\"http://www.mendeley.com/documents/?uuid=c5bbffe6-5041-42cb-a91c-332b22183efe\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(2019)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
                           "value": ". Stimulus onset and timing are controlled using Affect 4.0 "
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Spruyt et al., 2009)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-55",
+                            "refType": "bibr",
+                            "rid": "Spruyt2009",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=bc9199fe-6a06-41a2-9d2a-41acde6c11a3\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Spruyt et al., 2009)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
                           "value": ". A vibrotactile stimulus is delivered to the skin using tactors manufactured by Dancer Design taped to the participant’s skin "
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Dancer Design, n.d.)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-56",
+                            "refType": "bibr",
+                            "rid": "Dancer Design0",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=8dd14ed3-5ae5-4bcf-9fe2-6534214dc83f\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Dancer Design, n.d.)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -1330,7 +1762,8 @@
                           "attributes": {
                             "id": "_xref-57",
                             "refType": "bibr",
-                            "rid": "Traxler2019"
+                            "rid": "Traxler2019",
+                            "customType": "{\"suppress-author\":1,\"uris\":[\"http://www.mendeley.com/documents/?uuid=c5bbffe6-5041-42cb-a91c-332b22183efe\"],\"noteIndex\":0}"
                           },
                           "children": [
                             {
@@ -1381,20 +1814,20 @@
                           "value": " stimulation is delivered by passing a current across two surface electrodes located at the midpoint between the tactors to serve as the US (Figure 1). The current is delivered using a DS7A constant current stimulator "
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Digitimer Limited, n.d.)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-58",
+                            "refType": "bibr",
+                            "rid": "Digitimer Limited0",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=9b966096-5fdc-481d-970b-1d3b22972fdb\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Digitimer Limited, n.d.)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -1470,20 +1903,20 @@
                           "value": "On arrival, participants are seated straddling a chair in front of a desk with a computer monitor, mouse, and keyboard. Participants are asked to bend backwards to identify the point at which the greatest bend is seen. A point in the upper lumbar region is marked on the back, 2cm to the left of the spine, where the electrodes are placed such that the mark lies exactly between them. Three other points—4cm above, below, and to the left side of the electrodes—are marked, and the tactors are taped in place such that the closest border of each tactor lies at a tactor mark (Figure 1). Calibration is performed by the procedure described in Traxler et al. "
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(2019)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-59",
+                            "refType": "bibr",
+                            "rid": "Traxler2019",
+                            "customType": "{\"suppress-author\":1,\"uris\":[\"http://www.mendeley.com/documents/?uuid=c5bbffe6-5041-42cb-a91c-332b22183efe\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(2019)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -1781,20 +2214,36 @@
                           "value": "The participants are requested to provide two reports on each trial. First, they rate the stimulation event on the Sensation and Pain Rating Scale "
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-60",
+                            "refType": "bibr",
+                            "rid": "Madden2017",
+                            "customType": "{\"prefix\":\"SPARS; previously known as FESTNRS;\",\"uris\":[\"http://www.mendeley.com/documents/?uuid=23f7293f-50b8-4339-a826-9b8c24836fb4\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(SPARS"
+                            }
+                          ]
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(SPARS; previously known as FESTNRS; Madden et al., 2017, 2019)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-61",
+                            "refType": "bibr",
+                            "rid": "Madden2019",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=158cf65d-2600-4940-8585-4da3f96fb859\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " previously known as FESTNRS"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -1989,20 +2438,20 @@
                           "value": " trials are rated as painful or both are rated as non-painful. This difference value, calculated from a pair of trials, constitutes one measurement in our SCE. A simple mean difference (MD) effect size measure is calculated as the difference between the means of the difference values derived from the test trial pairs and the difference values derived from the baseline trial pairs. Due to the flexibility of RTs, this effect size measure can also be used as the test statistic "
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Heyvaert & Onghena, 2014a)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-62",
+                            "refType": "bibr",
+                            "rid": "Heyvaert2014",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=2b7622b9-97a6-4dc8-8789-3f3716c9bcc5\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Heyvaert & Onghena, 2014a)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2077,20 +2526,20 @@
                               "value": " Since each of our measurements requires a pair of trials, we immediately considered a randomized block design (RBD) for the experiment. In an RBD SCE, similar to an RBD in traditional group designs, the measurement occasions are divided into small blocks, with each block containing administrations of all treatment conditions "
                             },
                             {
-                              "type": "text",
-                              "value": ""
-                            },
-                            {
-                              "type": "text",
-                              "value": ""
-                            },
-                            {
-                              "type": "text",
-                              "value": "(Onghena, 2005)"
-                            },
-                            {
-                              "type": "text",
-                              "value": ""
+                              "type": "element",
+                              "name": "xref",
+                              "attributes": {
+                                "id": "_xref-63",
+                                "refType": "bibr",
+                                "rid": "Onghena2005",
+                                "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=76f5ffc0-1aab-422c-8594-df5221dcce08\"],\"noteIndex\":0}"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "(Onghena, 2005)"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -2144,20 +2593,20 @@
                               "value": " When we rejected the RBD, we realized that the experiment should consist of periods of baseline trial pairs and periods of test trial pairs. The simplest method to achieve this is using an AB phase design, with an A phase as the baseline condition and a subsequent B phase as the test condition "
                             },
                             {
-                              "type": "text",
-                              "value": ""
-                            },
-                            {
-                              "type": "text",
-                              "value": ""
-                            },
-                            {
-                              "type": "text",
-                              "value": "(Barlow et al., 2009)"
-                            },
-                            {
-                              "type": "text",
-                              "value": ""
+                              "type": "element",
+                              "name": "xref",
+                              "attributes": {
+                                "id": "_xref-64",
+                                "refType": "bibr",
+                                "rid": "Barlow2009",
+                                "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=3f9cf20a-1f7e-4f61-b91c-a7cfa8573c37\"],\"noteIndex\":0}"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "(Barlow et al., 2009)"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -2335,20 +2784,36 @@
                               "value": ". Unfortunately, this design has low acquisition of the associations as there is no learning period. Additionally, RTs for AB phase designs require a large number of measurements to achieve sufficient statistical power "
                             },
                             {
-                              "type": "text",
-                              "value": ""
+                              "type": "element",
+                              "name": "xref",
+                              "attributes": {
+                                "id": "_xref-65",
+                                "refType": "bibr",
+                                "rid": "Michiels2019",
+                                "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=df9e6256-20e5-4650-b35e-43c7d03b67ed\"],\"noteIndex\":0}"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "(Ferron & Ware, 1995"
+                                }
+                              ]
                             },
                             {
-                              "type": "text",
-                              "value": ""
-                            },
-                            {
-                              "type": "text",
-                              "value": "(Ferron & Ware, 1995; Michiels & Onghena, 2019)"
-                            },
-                            {
-                              "type": "text",
-                              "value": ""
+                              "type": "element",
+                              "name": "xref",
+                              "attributes": {
+                                "id": "_xref-66",
+                                "refType": "bibr",
+                                "rid": "Ferron1995",
+                                "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=10969372-d714-4dd9-be5d-56f2952ac89a\"],\"noteIndex\":0}"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": " Michiels & Onghena, 2019)"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -2495,20 +2960,20 @@
                               "value": " et al. "
                             },
                             {
-                              "type": "text",
-                              "value": ""
-                            },
-                            {
-                              "type": "text",
-                              "value": ""
-                            },
-                            {
-                              "type": "text",
-                              "value": "(2010)"
-                            },
-                            {
-                              "type": "text",
-                              "value": ""
+                              "type": "element",
+                              "name": "xref",
+                              "attributes": {
+                                "id": "_xref-67",
+                                "refType": "bibr",
+                                "rid": "Kratochwill2010",
+                                "customType": "{\"suppress-author\":1,\"uris\":[\"http://www.mendeley.com/documents/?uuid=5dcf7b6e-f904-44b1-9c41-015a9c911322\"],\"noteIndex\":0}"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "(2010)"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -2526,20 +2991,36 @@
                               "value": "Due to the use of specialized equipment and individual calibration, multiple participants cannot be tested at the same time. Hence, simultaneous replication using a multiple baseline design (MBD), which is able to control for environmental confounding factors, is not possible "
                             },
                             {
-                              "type": "text",
-                              "value": ""
+                              "type": "element",
+                              "name": "xref",
+                              "attributes": {
+                                "id": "_xref-68",
+                                "refType": "bibr",
+                                "rid": "Barlow2009",
+                                "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=3f9cf20a-1f7e-4f61-b91c-a7cfa8573c37\"],\"noteIndex\":0}"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "(Barlow et al., 2009"
+                                }
+                              ]
                             },
                             {
-                              "type": "text",
-                              "value": ""
-                            },
-                            {
-                              "type": "text",
-                              "value": "(Barlow et al., 2009; Kazdin, 2011)"
-                            },
-                            {
-                              "type": "text",
-                              "value": ""
+                              "type": "element",
+                              "name": "xref",
+                              "attributes": {
+                                "id": "_xref-69",
+                                "refType": "bibr",
+                                "rid": "Kazdin2011",
+                                "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=0bf25535-0ac8-4a4e-9baf-8d687854b102\"],\"noteIndex\":0}"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": " Kazdin, 2011)"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -2581,20 +3062,20 @@
                           "value": "The design is randomized using intervention start point randomization for each participant "
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Edgington, 1975)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-70",
+                            "refType": "bibr",
+                            "rid": "Edgington1975",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=b8cbd2f4-cfe3-4ff2-81ed-267a4033f315\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Edgington, 1975)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2831,40 +3312,40 @@
                           "value": "We use the Shiny SCDA (Single-Case Data Analysis) web app for SCEs to randomize and analyze the experiment "
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(De, Michiels, Vlaeyen, et al., 2020)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-71",
+                            "refType": "bibr",
+                            "rid": "De2020",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=ff1167ee-c172-4d50-9512-1ab3115e6df4\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(De, Michiels, Vlaeyen, et al., 2020)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
                           "value": ". Whereas this web app does not include an option for simultaneously replicated AB phase design, it does include an MBD option. The MBD option in Shiny SCDA uses the Koehler-Levin regulated randomization procedure "
                         },
                         {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(Levin et al., 2018)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-72",
+                            "refType": "bibr",
+                            "rid": "Levin2018",
+                            "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=ae1f7a7e-dd85-43c8-bfc5-ce1f32088039\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Levin et al., 2018)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -3098,48 +3579,40 @@
                           "value": "We used the Monte Carlo method used by Ferron and Onghena "
                         },
                         {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-73",
+                            "refType": "bibr",
+                            "rid": "Ferron1996",
+                            "customType": "{\"suppress-author\":1,\"uris\":[\"http://www.mendeley.com/documents/?uuid=a041ea39-019c-41f1-84e0-80ff61fccbc1\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(1996)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
-                          "value": ""
+                          "value": " to estimate power. In this method, several datasets are simulated under a set of simulation conditions. The proportion of these simulated datasets in which the RT leads to a rejection of the null hypothesis gives an estimate of statistical power for the given set of simulation conditions. A simulation study of such complexity is both difficult to program and computationally intensive to execute. Fortunately, we were able to modify and repurpose R code used by De, Michiels, Tanious, et al. "
                         },
                         {
-                          "type": "text",
-                          "value": "(1996)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": " to estimate power. In this method, several datasets are simulated under a set of simulation conditions. The proportion of these simulated datasets in which the RT leads to a rejection of the null hypothesis gives an estimate of statistical power for the given set of simulation conditions. A simulation study of such complexity is both difficult to program and computationally intensive to execute. Fortunately, we were able to modify and repurpose R code used by "
-                        },
-                        {
-                          "type": "text",
-                          "value": "De, Michiels, Tanious, et al. "
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "(2020)"
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": ""
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-74",
+                            "refType": "bibr",
+                            "rid": "De2020",
+                            "customType": "{\"suppress-author\":1,\"uris\":[\"http://www.mendeley.com/documents/?uuid=3f81dd4a-3b90-4d7c-8466-29e57b7ea490\"],\"noteIndex\":0}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(2020)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -3292,20 +3765,20 @@
                               "value": "Since the number of randomizations for the RT was huge, we simulated Monte Carlo RTs with 1000 randomizations "
                             },
                             {
-                              "type": "text",
-                              "value": ""
-                            },
-                            {
-                              "type": "text",
-                              "value": ""
-                            },
-                            {
-                              "type": "text",
-                              "value": "(Edgington, 1969)"
-                            },
-                            {
-                              "type": "text",
-                              "value": ""
+                              "type": "element",
+                              "name": "xref",
+                              "attributes": {
+                                "id": "_xref-75",
+                                "refType": "bibr",
+                                "rid": "Edgington1969",
+                                "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=ebadd319-bf20-4e7a-84b0-4ffa7de72276\"],\"noteIndex\":0}"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "(Edgington, 1969)"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -5663,40 +6136,40 @@
                       "value": "The second limitation is due to the properties of the AB phase design. RTs using randomization of intervention start points in AB phase designs are known to lack power at lower sample sizes "
                     },
                     {
-                      "type": "text",
-                      "value": ""
-                    },
-                    {
-                      "type": "text",
-                      "value": ""
-                    },
-                    {
-                      "type": "text",
-                      "value": "(Michiels & Onghena, 2019)"
-                    },
-                    {
-                      "type": "text",
-                      "value": ""
+                      "type": "element",
+                      "name": "xref",
+                      "attributes": {
+                        "id": "_xref-76",
+                        "refType": "bibr",
+                        "rid": "Michiels2019",
+                        "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=df9e6256-20e5-4650-b35e-43c7d03b67ed\"],\"noteIndex\":0}"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "(Michiels & Onghena, 2019)"
+                        }
+                      ]
                     },
                     {
                       "type": "text",
                       "value": ". AB phase designs do not satisfy the guidelines set by Kratochwill et al. "
                     },
                     {
-                      "type": "text",
-                      "value": ""
-                    },
-                    {
-                      "type": "text",
-                      "value": ""
-                    },
-                    {
-                      "type": "text",
-                      "value": "(2010)"
-                    },
-                    {
-                      "type": "text",
-                      "value": ""
+                      "type": "element",
+                      "name": "xref",
+                      "attributes": {
+                        "id": "_xref-77",
+                        "refType": "bibr",
+                        "rid": "Kratochwill2010",
+                        "customType": "{\"suppress-author\":1,\"uris\":[\"http://www.mendeley.com/documents/?uuid=5dcf7b6e-f904-44b1-9c41-015a9c911322\"],\"noteIndex\":0}"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "(2010)"
+                        }
+                      ]
                     },
                     {
                       "type": "text",
@@ -5797,20 +6270,36 @@
                       "value": " possible randomizations would have been extremely costly. Monte Carlo RTs present a simple alternative to this computation cost while maintaining sufficient statistical power "
                     },
                     {
-                      "type": "text",
-                      "value": ""
+                      "type": "element",
+                      "name": "xref",
+                      "attributes": {
+                        "id": "_xref-78",
+                        "refType": "bibr",
+                        "rid": "Edgington1969",
+                        "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=ebadd319-bf20-4e7a-84b0-4ffa7de72276\"],\"noteIndex\":0}"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "(Edgington, 1969"
+                        }
+                      ]
                     },
                     {
-                      "type": "text",
-                      "value": ""
-                    },
-                    {
-                      "type": "text",
-                      "value": "(Edgington, 1969; Hope, 1968)"
-                    },
-                    {
-                      "type": "text",
-                      "value": ""
+                      "type": "element",
+                      "name": "xref",
+                      "attributes": {
+                        "id": "_xref-79",
+                        "refType": "bibr",
+                        "rid": "Hope1968",
+                        "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=0f686ba0-e85d-4051-927b-8d05ab5cc267\"],\"noteIndex\":0}"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " Hope, 1968)"
+                        }
+                      ]
                     },
                     {
                       "type": "text",
@@ -5974,22 +6463,6 @@
                   "name": "p",
                   "attributes": {},
                   "children": [
-                    {
-                      "type": "text",
-                      "value": ""
-                    },
-                    {
-                      "type": "text",
-                      "value": ""
-                    },
-                    {
-                      "type": "text",
-                      "value": ""
-                    },
-                    {
-                      "type": "text",
-                      "value": "Adams, D. C., & Anthony, C. D. (1996). Using randomization techniques to analyse behavioural data. "
-                    },
                     {
                       "type": "element",
                       "name": "italic",
@@ -8090,12 +8563,7 @@
                   "type": "element",
                   "name": "p",
                   "attributes": {},
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": ""
-                    }
-                  ]
+                  "children": []
                 },
                 {
                   "type": "element",

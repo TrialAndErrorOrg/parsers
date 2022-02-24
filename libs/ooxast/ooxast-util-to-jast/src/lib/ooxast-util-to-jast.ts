@@ -38,6 +38,9 @@ export function toJast(
     quotes: ['"'],
     topSection: 0,
     columnSeparator: false,
+    documentClass: { name: 'article' },
+    bibname: 'References',
+
     //relations: {},
   }
 ) {

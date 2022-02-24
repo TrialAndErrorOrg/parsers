@@ -32,7 +32,9 @@ const fromDocx = (path: string) =>
         'w:noProof',
       ],
     })
-    .use(reoffParseReferences, { mailto: 'support@centeroftrialanderror.com' })
+    .use(
+      reoffParseReferences // { mailto: 'support@centeroftrialanderror.com' }
+    )
     .use(reoffCite)
     .use(() => (tree, vfile) => {
       console.log(vfile.data.bibliography)

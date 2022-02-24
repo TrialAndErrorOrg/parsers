@@ -18,8 +18,15 @@ export function citation(j: J, citation: T, parent: Parent) {
     const json = text.replace(/ADDIN .*?CSL_CITATION/, '')
 
     try {
-      citation = JSON.parse(j.partialCitation + json)
-      if (j.partialCitation) j.partialCitation = ''
+      if (j.partialCitation) {
+        console.log('Attemping to combine incomplete citation with new one...')
+        citation = JSON.parse(j.partialCitation + json)
+        console.log('Success!')
+        console.dir(citation, { depth: null })
+        j.partialCitation = ''
+      } else {
+        citation = JSON.parse(json)
+      }
     } catch (e: any) {
       console.log(e.message)
       console.log(json)
@@ -45,9 +52,10 @@ export function citation(j: J, citation: T, parent: Parent) {
       // console.log(json)
       console.log(j.partialCitation)
 
-      throw new Error(
-        'Corrupt citation! This might be because the text is too long.'
+      console.error(
+        'Corrupt citation! This might be because the text is too long. Skipping...'
       )
+      return
     }
 
     if (citation.mendeley) {
@@ -117,7 +125,8 @@ export function cslCitation(text: string) {
 }
 
 function generateAuthYearFromCSL(csl: CSL): string {
-  if (csl.id) {
+  // by default Mendeley generates "ITEM-X" ids, which are bad
+  if (csl.id && !csl.id.match('ITEM')) {
     return csl.id
   }
 

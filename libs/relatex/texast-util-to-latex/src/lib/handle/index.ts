@@ -17,6 +17,7 @@ import { preamble } from './preamble'
 import { listItem } from './listItem'
 import { tableRow } from './table-row'
 import { tableCell } from './table-cell'
+import { script } from './script'
 
 export const handle = {
   alignmentTab,
@@ -32,6 +33,8 @@ export const handle = {
   root,
   preamble,
   environment,
+  sub: script,
+  super: script,
   group,
   text,
   listItem,

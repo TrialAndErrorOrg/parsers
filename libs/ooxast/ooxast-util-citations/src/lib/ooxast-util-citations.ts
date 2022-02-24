@@ -116,6 +116,7 @@ export function findCitations(
               citationCounter,
               options.bibliography
             )
+            citationCounter++
             const val = `ADDIN CSL_CITATION ${JSON.stringify(citation)}`
 
             acc.push(
@@ -143,7 +144,6 @@ export function findCitations(
               )
             }
 
-            citationCounter++
             return acc
           },
           []

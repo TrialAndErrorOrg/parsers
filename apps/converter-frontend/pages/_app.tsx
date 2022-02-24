@@ -1,6 +1,9 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { MantineProvider } from '@mantine/core'
+import React from 'react'
+import { SWRConfig } from 'swr'
+import { fetcher } from '../utils/fetcher'
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props
@@ -15,16 +18,22 @@ export default function App(props: AppProps) {
         />
       </Head>
 
-      <MantineProvider
-        withGlobalStyles
-        withNormalizeCSS
-        theme={{
-          /** Put your mantine theme override here */
-          colorScheme: 'light',
+      <SWRConfig
+        value={{
+          fetcher,
         }}
       >
-        <Component {...pageProps} />
-      </MantineProvider>
+        <MantineProvider
+          withGlobalStyles
+          withNormalizeCSS
+          theme={{
+            /** Put your mantine theme override here */
+            colorScheme: 'light',
+          }}
+        >
+          <Component {...pageProps} />
+        </MantineProvider>
+      </SWRConfig>
     </>
   )
 }

@@ -60,7 +60,7 @@
     "rehype-minify-whitespace": "^5.0.0",
     "rxjs": "^7.0.0",
     "similarity": "^1.2.1",
-    "swr": "^1.2.1",
+    "swr": "^1.2.2",
     "tar-stream": "^2.2.0",
     "tmp-promise": "^3.0.3",
     "tslib": "^2.0.0",

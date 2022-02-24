@@ -1,12 +1,10 @@
 {
-  "name": "ooxast-util-parse-bib",
+  "name": "ooxast-util-parse-bib-node",
   "version": "0.0.1",
   "license": "GPL-3-0-or-later",
   "repository": "https://github.com/journaloftrialanderror/jote",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "main": "./src/index.js",
-  "browser": "./src/index-browser.js",
   "description": "",
   "keywords": [
     "unified",

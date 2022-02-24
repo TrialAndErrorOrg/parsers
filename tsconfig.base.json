@@ -54,6 +54,12 @@
       "ooxast-util-parse-bib": [
         "libs/ooxast/ooxast-util-parse-bib/src/index.ts"
       ],
+      "ooxast-util-parse-bib-browser": [
+        "libs/ooxast/ooxast-util-parse-bib-browser/src/index.ts"
+      ],
+      "ooxast-util-parse-bib-node": [
+        "libs/ooxast/ooxast-util-parse-bib-node/src/index.ts"
+      ],
       "ooxast-util-remove-rsid": [
         "libs/ooxast/ooxast-util-remove-rsid/src/index.ts"
       ],
@@ -72,6 +78,9 @@
       "reoff-parse": ["libs/reoff/reoff-parse/src/index.ts"],
       "reoff-parse-references": [
         "libs/reoff/reoff-parse-references/src/index.ts"
+      ],
+      "reoff-parse-references-browser": [
+        "libs/reoff/reoff-parse-references-browser/src/index.ts"
       ],
       "reoff-rejour": ["libs/reoff/reoff-rejour/src/index.ts"],
       "texast": ["libs/relatex/texast/src/index.ts"],

@@ -903,7 +903,7 @@ export interface DocumentMap {
 export interface DocumentBase extends UnistNode {
   type: 'element'
   name: 'w:documentBase' | 'w:document'
-  attributes: Record<string, never>
+  attributes: Record<string, unknown>
   children: RequiredMap<DocumentBaseMap>[]
 }
 
@@ -2509,6 +2509,7 @@ export interface RMap {
   monthLong?: Empty<'monthLong'>[]
   monthShort?: Empty<'monthShort'>[]
   noBreakHyphen?: Empty<'noBreakHyphen'>[]
+  // eslint-disable-next-line
   object?: Object[]
   pgNum?: Empty<'pgNum'>[]
   ptab?: PTab[]
@@ -5088,4 +5089,6 @@ export interface document extends UnistNode {
   styles: Styles
   webSettings: WebSettings
 }
+
+// eslint-disable-next-line
 export var document: document

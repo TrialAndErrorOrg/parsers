@@ -11,5 +11,5 @@ export const jatsToTex = async (jats: string) => {
 
   // console.log(jats)
   // console.log(proc)
-  return String(await proc.process(jats))
+  return proc.process(jats)
 }

@@ -1,0 +1,34 @@
+{
+  "root": "libs/ooxast/ooxast-util-parse-bib-node",
+  "sourceRoot": "libs/ooxast/ooxast-util-parse-bib-node/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ooxast/ooxast-util-parse-bib-node/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ooxast/ooxast-util-parse-bib-node"],
+      "options": {
+        "jestConfig": "libs/ooxast/ooxast-util-parse-bib-node/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ooxast/ooxast-util-parse-bib-node",
+        "tsConfig": "libs/ooxast/ooxast-util-parse-bib-node/tsconfig.lib.json",
+        "packageJson": "libs/ooxast/ooxast-util-parse-bib-node/package.json",
+        "main": "libs/ooxast/ooxast-util-parse-bib-node/src/index.ts",
+        "assets": ["libs/ooxast/ooxast-util-parse-bib-node/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

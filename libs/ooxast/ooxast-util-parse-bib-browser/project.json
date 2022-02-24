@@ -1,0 +1,36 @@
+{
+  "root": "libs/ooxast/ooxast-util-parse-bib-browser",
+  "sourceRoot": "libs/ooxast/ooxast-util-parse-bib-browser/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/ooxast/ooxast-util-parse-bib-browser/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ooxast/ooxast-util-parse-bib-browser"],
+      "options": {
+        "jestConfig": "libs/ooxast/ooxast-util-parse-bib-browser/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ooxast/ooxast-util-parse-bib-browser",
+        "tsConfig": "libs/ooxast/ooxast-util-parse-bib-browser/tsconfig.lib.json",
+        "packageJson": "libs/ooxast/ooxast-util-parse-bib-browser/package.json",
+        "main": "libs/ooxast/ooxast-util-parse-bib-browser-browser/src/index.ts",
+        "assets": ["libs/ooxast/ooxast-util-parse-bib-browser/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

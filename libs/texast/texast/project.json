@@ -1,0 +1,34 @@
+{
+  "root": "libs/texast/texast",
+  "sourceRoot": "libs/texast/texast/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/texast/texast/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/texast/texast"],
+      "options": {
+        "jestConfig": "libs/texast/texast/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/texast/texast",
+        "tsConfig": "libs/texast/texast/tsconfig.lib.json",
+        "packageJson": "libs/texast/texast/package.json",
+        "main": "libs/texast/texast/src/index.ts",
+        "assets": ["libs/texast/texast/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

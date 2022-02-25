@@ -1,0 +1,34 @@
+{
+  "root": "libs/jast/jast-util-to-csl",
+  "sourceRoot": "libs/jast/jast-util-to-csl/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/jast/jast-util-to-csl",
+        "tsConfig": "libs/jast/jast-util-to-csl/tsconfig.lib.json",
+        "packageJson": "libs/jast/jast-util-to-csl/package.json",
+        "main": "libs/jast/jast-util-to-csl/src/index.ts",
+        "assets": ["libs/jast/jast-util-to-csl/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/jast/jast-util-to-csl/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/jast/jast-util-to-csl"],
+      "options": {
+        "jestConfig": "libs/jast/jast-util-to-csl/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

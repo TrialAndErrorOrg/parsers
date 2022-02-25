@@ -1,0 +1,34 @@
+{
+  "root": "libs/citations/parse-text-cite",
+  "sourceRoot": "libs/citations/parse-text-cite/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/citations/parse-text-cite/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/citations/parse-text-cite"],
+      "options": {
+        "jestConfig": "libs/citations/parse-text-cite/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/citations/parse-text-cite",
+        "tsConfig": "libs/citations/parse-text-cite/tsconfig.lib.json",
+        "packageJson": "libs/citations/parse-text-cite/package.json",
+        "main": "libs/citations/parse-text-cite/src/index.ts",
+        "assets": ["libs/citations/parse-text-cite/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

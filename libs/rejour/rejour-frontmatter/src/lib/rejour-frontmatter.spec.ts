@@ -2,7 +2,7 @@ import rejourParse from 'rejour-parse'
 import { toCSL } from 'jast-util-to-csl'
 import { unified } from 'unified'
 import { read } from 'to-vfile'
-import { Root } from 'jjast'
+import { Root } from 'jast-types'
 import { rejourFrontmatter } from './rejour-frontmatter'
 
 describe('rejourJastUtilToCsl', () => {

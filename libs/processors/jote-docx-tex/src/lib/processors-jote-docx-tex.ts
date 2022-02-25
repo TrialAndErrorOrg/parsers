@@ -43,7 +43,7 @@ export async function docxToTex(
         options: ['empirical', 'author-date'],
       },
     })
-    .use(relatexAddPreamble)
+    .use(relatexAddPreamble, [])
     .use(relatexStringify)
 
   return proc.process(vfile)

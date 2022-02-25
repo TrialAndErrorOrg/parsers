@@ -1,4 +1,4 @@
-import { isParagraphContent } from 'jjast'
+import { isParagraphContent } from 'jast-types'
 import { JastContent, JastP, JastParagraphContent } from '../types'
 //import { phrasing } from 'mdast-util-phrasing'
 

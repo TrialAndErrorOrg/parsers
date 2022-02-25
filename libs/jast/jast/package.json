@@ -1,0 +1,22 @@
+{
+  "name": "jast-types",
+  "version": "0.0.1",
+  "devDependencies": {
+    "@types/unist": "^2.0.6",
+    "@types/xast": "^1.0.2",
+    "utility-types": "^3.10.0"
+  },
+  "dependencies": {},
+  "license": "GPL-3.0-or-later",
+  "repository": "https://github.com/journaloftrialanderror/jote",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
+  "description": "",
+  "keywords": [
+    "unified",
+    "abstract",
+    "syntax",
+    "tree",
+    "ast"
+  ]
+}

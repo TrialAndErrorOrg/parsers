@@ -1,5 +1,5 @@
 import { toJast, Options } from 'ooxast-util-to-jast'
-import { Root as JastRoot } from 'jjast'
+import { Root as JastRoot } from 'jast-types'
 import { Root as OoxastRoot } from 'ooxast'
 import {
   Plugin,

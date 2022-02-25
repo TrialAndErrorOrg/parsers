@@ -1,6 +1,6 @@
 import { J } from '../types'
 import { Row } from 'ooxast'
-import { Td } from 'jjast'
+import { Td } from 'jast-types'
 import { all } from '../all'
 
 export function tr(j: J, tr: Row) {

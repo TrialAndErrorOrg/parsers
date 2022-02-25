@@ -1,4 +1,4 @@
-import { visit } from '@jote/utils'
+import { visit } from 'misc'
 import { Command, CommandArg, Preamble } from 'texast'
 import { Root, Text } from 'texast'
 

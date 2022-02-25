@@ -6,7 +6,7 @@ import {
   Node as XastNode,
   Element as XastElement,
 } from 'xast'
-import { Root } from 'jjast'
+import { Root } from 'jast-types'
 import { filter } from 'unist-util-filter'
 import { map } from 'unist-util-map'
 

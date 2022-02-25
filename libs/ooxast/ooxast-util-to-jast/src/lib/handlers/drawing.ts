@@ -1,7 +1,7 @@
 import { all } from '../all'
 import { J, Node, Root } from '../types'
 import { x } from 'xastscript'
-import { Article, Front, Body, Back, Fig } from 'jjast'
+import { Article, Front, Body, Back, Fig } from 'jast-types'
 import { Drawing } from 'ooxast'
 import { select } from 'xast-util-select'
 

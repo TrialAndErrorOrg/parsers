@@ -6,7 +6,7 @@ import {
   Content as JastContent,
   Root as JastRoot,
   P as JastP,
-} from 'jjast'
+} from 'jast-types'
 type JastParagraphContent = JastP['children'][number]
 
 import {

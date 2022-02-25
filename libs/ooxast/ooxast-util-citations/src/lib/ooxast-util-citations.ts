@@ -1,4 +1,4 @@
-import { visit } from '@jote/utils'
+import { visit } from 'misc'
 import { P, R, T, Text, Root } from 'ooxast'
 import { getPStyle } from 'ooxast-util-get-style'
 import { parseTextCite, parser } from 'parse-text-cite'

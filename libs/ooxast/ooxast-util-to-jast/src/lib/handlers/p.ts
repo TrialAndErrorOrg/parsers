@@ -1,5 +1,5 @@
 import { P, Parent } from 'ooxast'
-import { P as JastP } from 'jjast'
+import { P as JastP } from 'jast-types'
 import { all } from '../all'
 import { J, Text } from '../types'
 import { wrapChildren } from '../util/wrap-children'

@@ -21,7 +21,7 @@ import { convert } from 'unist-util-is'
 import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
 import { select } from 'xast-util-select'
 import { x } from 'xastscript'
-import { cslToRefList } from 'csl-to-jast'
+import { cslToRefList } from 'jast-util-from-csl'
 
 export { one } from './one'
 export { all } from './all'

@@ -2,7 +2,7 @@ import { J } from '../types'
 import { convertElement, isElement } from 'xast-util-is-element'
 import { Parent, Element, P, Node, Body } from '../types'
 import { getPStyle } from './get-pstyle'
-import { Sec, Body as JastBody } from 'jjast'
+import { Sec, Body as JastBody } from 'jast-types'
 import { all } from '../all'
 import { one } from '../one'
 

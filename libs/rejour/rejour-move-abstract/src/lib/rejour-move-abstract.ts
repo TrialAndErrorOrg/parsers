@@ -1,4 +1,4 @@
-import { Node, Element, isElement, Root, Text, Abstract } from 'jjast'
+import { Node, Element, isElement, Root, Text, Abstract } from 'jast-types'
 import { remove } from 'unist-util-remove'
 import { visit as origVisit } from 'unist-util-visit'
 import { filter } from 'unist-util-filter'

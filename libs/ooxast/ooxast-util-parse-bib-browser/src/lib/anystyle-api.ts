@@ -1,4 +1,4 @@
-import { tryCatchPromise } from '@jote/utils'
+import { tryCatchPromise } from 'misc'
 import axios from 'axios'
 import { Data as CSL } from 'csl-json'
 

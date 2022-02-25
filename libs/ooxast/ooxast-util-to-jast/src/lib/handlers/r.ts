@@ -3,7 +3,7 @@ import { select } from 'xast-util-select'
 import { all } from '../all'
 import { x } from 'xastscript'
 import { J } from '../types'
-import { Italic, Bold, Underline, Strike, Sc } from 'jjast'
+import { Italic, Bold, Underline, Strike, Sc } from 'jast-types'
 import { convertElement } from 'xast-util-is-element'
 
 //const isVert = convertElement<VerticalAlignRun>('w:vertAlign')

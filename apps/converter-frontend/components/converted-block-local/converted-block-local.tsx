@@ -66,22 +66,25 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
         </>
       )}
       {vfile ? (
-        <SyntaxHighlighter
-          //wrapLines
-          wrapLongLines
-          language="latex"
-          CodeTag={Code}
-          //showInlineLineNumbers
-          //     style={nord}
-          // sx={{
-          //   maxW: '80%',
-          //   maxH: 200,
-          //   overflowX: 'auto',
-          //   whiteSpace: 'pre-wrap',
-          // }}
-        >
-          {String(vfile)}
-        </SyntaxHighlighter>
+        <Box sx={{ overflow: 'scroll', maxHeight: 500, paddingBottom: 20 }}>
+          <SyntaxHighlighter
+            //wrapLines
+            wrapLongLines
+            language="latex"
+            showLineNumbers
+            // CodeTag={Code}
+            //showInlineLineNumbers
+            //     style={nord}
+            // sx={{
+            //   maxW: '80%',
+            //   maxH: 200,
+            //   overflowX: 'auto',
+            //   whiteSpace: 'pre-wrap',
+            // }}
+          >
+            {String(vfile)}
+          </SyntaxHighlighter>
+        </Box>
       ) : (
         <Loader />
       )}

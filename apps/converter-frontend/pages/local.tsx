@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {
   AppShell,
+  Box,
   Burger,
   Button,
   Code,
@@ -70,20 +71,18 @@ export default function Index() {
           // viewport size > theme.breakpoints.lg – width is 400px
           width={{ sm: 300, lg: 400 }}
         >
-          <Navbar height={600} padding="xs" width={{ base: 300 }}>
-            <Navbar.Section>Journal of Trial and Error</Navbar.Section>
-            <Navbar.Section grow mt="lg">
-              <VStack>
-                {['1', '2', '3', '4', '5'].map((num) => (
-                  <HStack key={num}>
-                    <Text>Icon {num}</Text>
-                    <Text>Link {num}</Text>
-                  </HStack>
-                ))}
-              </VStack>
-            </Navbar.Section>
-            <Navbar.Section>You!</Navbar.Section>
-          </Navbar>
+          <Navbar.Section>Journal of Trial and Error</Navbar.Section>
+          <Navbar.Section grow mt="lg">
+            <VStack>
+              {['1', '2', '3', '4', '5'].map((num) => (
+                <HStack key={num}>
+                  <Text>Icon {num}</Text>
+                  <Text>Link {num}</Text>
+                </HStack>
+              ))}
+            </VStack>
+          </Navbar.Section>
+          <Navbar.Section>You!</Navbar.Section>
         </Navbar>
       }
       header={
@@ -107,116 +106,117 @@ export default function Index() {
         </Header>
       }
     >
-      <Title> Convert DOCX</Title>
-      <Container>
-        <HStack>
-          <Text>Convert</Text>
-          <Select
-            itemComponent={SelectItem}
-            placeholder="Input format"
-            defaultValue="docx"
-            onChange={(value: 'docx' | 'jats') => setFrom(value)}
-            radius="md"
-            data={[
-              {
-                value: 'docx',
-                label: '.docx',
-                description: 'You know',
-                image: <WordIcon />,
-              },
-              {
-                value: 'jats',
-                label: 'JATS XML',
-                description: 'Format used by academic publishers',
-                image: <JATSIcon />,
-              },
-            ]}
-          />
-          <Text>to</Text>
-          <Select
-            defaultValue="latex"
-            radius="md"
-            itemComponent={SelectItem}
-            placeholder="Output format"
-            onChange={(value: 'tex' | 'jats') => setTo(value)}
-            data={[
-              { value: 'tex', label: '.tex', image: <TexIcon /> },
-              { value: 'jats', label: 'JATS XML', image: <JATSIcon /> },
-            ]}
-          />
-          <Button radius="md">Lets gooo</Button>
-        </HStack>
-      </Container>
-      <Dropzone
-        onDrop={async (files) => {
-          const buf = await files[0].arrayBuffer()
-          //const string = Buffer.from(buf).toString()
-          console.log(buf)
-          setThing(buf)
-        }}
-      >
-        {(status) => (
-          <Group
-            position="center"
-            spacing="xl"
-            style={{ minHeight: 220, pointerEvents: 'none' }}
-          >
-            <AiOutlineUpload
-              //status={status}
-              style={{
-                width: 80,
-                height: 80,
-                color: status ? 'green' : 'grey',
-              }}
+      <Box sx={{ paddingLeft: 20, paddingRight: 20 }}>
+        <Title> Convert DOCX</Title>
+        <Container>
+          <HStack>
+            <Text>Convert</Text>
+            <Select
+              itemComponent={SelectItem}
+              placeholder="Input format"
+              defaultValue="docx"
+              onChange={(value: 'docx' | 'jats') => setFrom(value)}
+              radius="md"
+              data={[
+                {
+                  value: 'docx',
+                  label: '.docx',
+                  description: 'You know',
+                  image: <WordIcon />,
+                },
+                {
+                  value: 'jats',
+                  label: 'JATS XML',
+                  description: 'Format used by academic publishers',
+                  image: <JATSIcon />,
+                },
+              ]}
             />
+            <Text>to</Text>
+            <Select
+              defaultValue="tex"
+              radius="md"
+              itemComponent={SelectItem}
+              placeholder="Output format"
+              onChange={(value: 'tex' | 'jats') => setTo(value)}
+              data={[
+                { value: 'tex', label: '.tex', image: <TexIcon /> },
+                { value: 'jats', label: 'JATS XML', image: <JATSIcon /> },
+              ]}
+            />
+            <Button radius="md">Lets gooo</Button>
+          </HStack>
+        </Container>
+        <Dropzone
+          onDrop={async (files) => {
+            const buf = await files[0].arrayBuffer()
+            //const string = Buffer.from(buf).toString()
+            console.log(buf)
+            setThing(buf)
+          }}
+        >
+          {(status) => (
+            <Group
+              position="center"
+              spacing="xl"
+              style={{ minHeight: 220, pointerEvents: 'none' }}
+            >
+              <AiOutlineUpload
+                //status={status}
+                style={{
+                  width: 80,
+                  height: 80,
+                  color: status ? 'green' : 'grey',
+                }}
+              />
 
-            <div>
-              <Text size="xl" inline>
-                Drag images here or click to select files
-              </Text>
-              <Text size="sm" color="dimmed" inline mt={7}>
-                Attach as many files as you like, each file should not exceed
-                5mb
-              </Text>
-            </div>
-          </Group>
-        )}
-      </Dropzone>
-      {from !== 'docx' && (
-        <>
-          <Title>Input</Title>
-          <Code
-            style={{
-              maxHeight: '400px',
-              overflow: 'scroll',
-            }}
-          >
-            <pre
+              <div>
+                <Text size="xl" inline>
+                  Drag images here or click to select files
+                </Text>
+                <Text size="sm" color="dimmed" inline mt={7}>
+                  Attach as many files as you like, each file should not exceed
+                  5mb
+                </Text>
+              </div>
+            </Group>
+          )}
+        </Dropzone>
+        {from !== 'docx' && (
+          <>
+            <Title>Input</Title>
+            <Code
               style={{
                 maxHeight: '400px',
                 overflow: 'scroll',
               }}
             >
-              {thing && Buffer.from(thing).toString()}
-            </pre>
-          </Code>
-        </>
-      )}
-      <Title>Output</Title>
-      {thing && (
-        <ConvertedBlockLocal
-          input={thing}
-          converter={
-            from === 'docx'
-              ? to === 'tex'
-                ? docxToTexConverter
-                : docxToJatsConverter
-              : jatsToTexConverter
-          }
-        />
-      )}
+              <pre
+                style={{
+                  maxHeight: '400px',
+                  overflow: 'scroll',
+                }}
+              >
+                {thing && Buffer.from(thing).toString()}
+              </pre>
+            </Code>
+          </>
+        )}
+        <Title>Output</Title>
+        {thing && (
+          <ConvertedBlockLocal
+            input={thing}
+            converter={
+              from === 'docx'
+                ? to === 'tex'
+                  ? docxToTexConverter
+                  : docxToJatsConverter
+                : jatsToTexConverter
+            }
+          />
+        )}
 
-      {/* <Container>
+        {/* <Container>
         {[
           'docx',
           'xml',
@@ -232,6 +232,7 @@ export default function Index() {
           <FileIcon extension={filename} {...(defaultStyles[filename] || {})} />
         ))}
       </Container> */}
+      </Box>
     </AppShell>
   )
 }

@@ -1,0 +1,91 @@
+{
+	"title": "Announcement",
+	"description": "An announcement or news item.",
+	"required": [
+		"assocType",
+		"assocId",
+		"title"
+	],
+	"properties": {
+		"_href": {
+			"type": "string",
+			"description": "The URL to this announcement in the REST API.",
+			"format": "uri",
+			"readOnly": true,
+			"apiSummary": true
+		},
+		"assocId": {
+			"type": "integer",
+			"description": "The journal, press or preprint server ID.",
+			"apiSummary": true
+		},
+		"assocType": {
+			"type": "integer",
+			"description": "The assoc object. This should always be `ASSOC_TYPE_JOURNAL` (OJS), `ASSOC_TYPE_PRESS` (OMP) or `ASSOC_TYPE_SERVER` (OPS).",
+			"apiSummary": true
+		},
+		"dateExpire": {
+			"type": "string",
+			"description": "(Optional) The date that this announcement expires, if one is set. This is typically used to express closing dates for calls for papers.",
+			"apiSummary": true,
+			"validation": [
+				"nullable",
+				"date_format:Y-m-d"
+			]
+		},
+		"datePosted": {
+			"type": "string",
+			"description": "The date this announcement was posted.",
+			"apiSummary": true,
+			"validation": [
+				"nullable",
+				"date_format:Y-m-d H:i:s"
+			]
+		},
+		"description": {
+			"type": "string",
+			"description": "The full text of the announcement.",
+			"multilingual": true,
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"descriptionShort": {
+			"type": "string",
+			"description": "A summary of this announcement.",
+			"multilingual": true,
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"id": {
+			"type": "integer",
+			"apiSummary": true
+		},
+		"title": {
+			"type": "string",
+			"multilingual": true,
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"typeId": {
+			"type": "integer",
+			"description": "(Optional) One of the announcement type ids.",
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"url": {
+			"type": "string",
+			"format": "uri",
+			"readOnly": true,
+			"apiSummary": true,
+			"description": "The URL to the published announcement."
+		}
+	}
+}

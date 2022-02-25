@@ -1,7 +1,7 @@
-import { relatexRelatexAddPreamble } from './relatex-relatex-add-preamble'
+import { relatexAddPreamble } from './relatex-add-preamble'
 
 describe('relatexRelatexAddPreamble', () => {
   it('should work', () => {
-    expect(relatexRelatexAddPreamble()).toEqual('relatex-relatex-add-preamble')
+    //   expect(relatexAddPreamble()).toEqual('relatex-relatex-add-preamble')
   })
 })

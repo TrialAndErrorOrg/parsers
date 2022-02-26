@@ -2,7 +2,7 @@ import { Http2ServerResponse } from 'http2'
 import { RequestOptions } from 'https'
 import fetch from 'isomorphic-fetch'
 import qs from 'qs'
-import { paths } from './swagger'
+import { paths } from './swagger-types'
 
 const DEFAULT_ENDPOINT = 'https://submit.jtrialerror.com'
 

@@ -1,1 +1,1 @@
-export * from './lib/ojs-ojs-client'
+export * from './lib/ojs-client'

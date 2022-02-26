@@ -12,8 +12,5 @@
     "syntax",
     "tree",
     "ast"
-  ],
-  "devDependencies": {
-    "@types/unist": "^2.0.6"
-  }
+  ]
 }

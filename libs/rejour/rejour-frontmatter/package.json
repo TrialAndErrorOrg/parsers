@@ -12,8 +12,5 @@
     "syntax",
     "tree",
     "ast"
-  ],
-  "dependencies": {
-    "vfile": "^5.3.0"
-  }
+  ]
 }

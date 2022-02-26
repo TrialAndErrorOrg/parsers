@@ -1,9 +1,6 @@
 {
   "name": "relatex-stringify",
   "version": "0.0.1",
-  "dependencies": {
-    "unified": "^10.1.1"
-  },
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/journaloftrialanderror/jote",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",

@@ -56,7 +56,9 @@ export interface paths {
       }
     }
     post: {
-      parameters: {}
+      parameters: {
+        body: { schema: definitions['SubmissionFile'] }
+      }
       responses: {
         /** Details of the submission that was just added. */
         200: {
@@ -106,6 +108,7 @@ export interface paths {
           /** Submission ID */
           submissionId: number
         }
+        body: { schema: definitions['SubmissionFile'] }
       }
       responses: {
         /** The submission that was just edited with the new values after the update has occurred. */
@@ -257,6 +260,9 @@ export interface paths {
           /** The workflow stage id of the file to be edited. For example, `WORKFLOW_STAGE_ID_PRODUCTION`. */
           stageId: number
         }
+        body: {
+          schema: definitions['SubmissionFile']
+        }
       }
       responses: {
         /** The submission file that was just edited with the new values after the update has occurred. */
@@ -372,6 +378,9 @@ export interface paths {
           publicationId: number
         }
       }
+      body: {
+        schema: definitions['Publication']
+      }
       responses: {
         /** Details of the publication that was just added. */
         200: {
@@ -412,6 +421,9 @@ export interface paths {
           submissionId: number
           /** Publication ID */
           publicationId: number
+        }
+        body: {
+          schema: definitions['Publication']
         }
       }
       responses: {

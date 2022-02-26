@@ -3,6 +3,7 @@ import { RequestOptions } from 'https'
 import fetch from 'isomorphic-fetch'
 import qs from 'qs'
 import { paths } from './swagger-types'
+import { Responses } from './types'
 
 const DEFAULT_ENDPOINT = 'https://submit.jtrialerror.com'
 
@@ -79,7 +80,7 @@ export default class OJS {
     path: string,
     data?: Record<string, any> | false,
     query?: Record<string, any>
-  ) => Promise<Response>
+  ) => Promise<any>
   constructor({
     endpoint = DEFAULT_ENDPOINT,
     token = '',
@@ -114,9 +115,9 @@ export default class OJS {
         // mode: 'cors',
       }
 
-      // if (data) {
-      //   opts.body = JSON.stringify(data)
-      // }
+      if (data) {
+        opts.body = JSON.stringify(data)
+      }
 
       const res = await fetch(uri, opts)
       return responseHandler(res)
@@ -211,42 +212,186 @@ export default class OJS {
    */
   async submissions(
     query: paths['/submissions']['get']['parameters']['query'] = {}
-  ) {
-    const submissions = (await (
-      await this.get('/submissions', query)
-    ).json()) as paths['/submissions']['get']['responses'][200]['schema']
+  ): Promise<Responses<'/submissions', 'get'>> {
+    const submissions = await this.get('/submissions', query)
+    return submissions
+  }
 
+  /**
+   * Get a list of submissions
+   */
+  async createSubmission(
+    body: paths['/submissions']['post']['parameters']['body']['schema']
+  ): Promise<Responses<'/submissions', 'get'>> {
+    const submissions = await this.post('/submissions', body)
     return submissions
   }
 
   /**
    * Get a submission by ID
    */
-  async submission(id: number) {
+  async submission(
+    id: number
+  ): Promise<Responses<'/submissions/{submissionId}', 'get'>> {
     const submission = await this.get(`/submissions/${id}`)
-    console.log(submission)
 
     return submission
   }
 
-  async publications(submissionId: number) {
+  /**
+   * Edit a submission by ID
+   */
+  async editSubmission(
+    id: number,
+    body: paths['/submissions/{submissionId}']['put']['parameters']['body']['schema']
+  ): Promise<Responses<'/submissions/{submissionId}', 'put'>> {
+    const submission = await this.put(`/submissions/${id}`, body)
+
+    return submission
+  }
+
+  /**
+   * Delete a submission by ID
+   */
+  async deleteSubmission(
+    id: number
+  ): Promise<Responses<'/submissions/{submissionId}', 'delete'>> {
+    const submission = await this.delete(`/submissions/${id}`)
+
+    return submission
+  }
+
+  /**
+   * Get the publications associatioted with a submission
+   */
+  async postPublication(
+    submissionId: number,
+    body: paths['/submissions/{submissionId}/publications/{publicationId}']['put']['parameters']['body']['schema']
+  ): Promise<Responses<'/submissions/{submissionId}/publications', 'post'>> {
+    const submission = await this.post(
+      `/submissions/${submissionId}/publications`,
+      body
+    )
+
+    return submission
+  }
+
+  /**
+   * Get the publications associatioted with a submission
+   */
+  async publications(
+    submissionId: number
+  ): Promise<Responses<'/submissions/{submissionId}/publications', 'get'>> {
     const submission = await this.get(
       `/submissions/${submissionId}/publications`
     )
-    console.log(submission)
 
     return submission
   }
+
   /**
-   * Get a publication by ID
+   * Get a specific publication associated with a submission
    */
-  async publication(submissionId: number, publicationId: number) {
+  async publication(
+    submissionId: number,
+    publicationId: number
+  ): Promise<
+    Responses<'/submissions/{submissionId}/publications/{publicationId}', 'get'>
+  > {
     const submission = await this.get(
       `/submissions/${submissionId}/publications/${publicationId}`
     )
-    console.log(submission)
 
     return submission
+  }
+
+  /**
+   * Edit a specific publication associated with a submission
+   */
+  async editPublication(
+    submissionId: number,
+    publicationId: number,
+    body: paths['/submissions/{submissionId}/publications/{publicationId}']['put']['parameters']['body']['schema']
+  ): Promise<
+    Responses<'/submissions/{submissionId}/publications/{publicationId}', 'put'>
+  > {
+    const submission = await this.put(
+      `/submissions/${submissionId}/publications/${publicationId}`,
+      body
+    )
+
+    return submission
+  }
+
+  /**
+   * Get the files associated with a specific submission
+   */
+
+  async files(
+    submissionId: string,
+    query?: paths['/submissions/{submissionId}/files']['get']['parameters']['query']
+  ): Promise<Responses<'/submissions/{submissionId}/files', 'get'>> {
+    return await this.get(`/submissions/${submissionId}/files`, query)
+  }
+
+  /**
+   * Get a specific file associated with a specific submission
+   */
+
+  async file(
+    submissionId: string,
+    submissionFileId: string,
+    query?: paths['/submissions/{submissionId}/files/{submissionFileId}']['get']['parameters']['query']
+  ): Promise<
+    Responses<'/submissions/{submissionId}/files/{submissionFileId}', 'get'>
+  > {
+    return await this.get(
+      `/submissions/${submissionId}/files/${submissionFileId}`,
+      query
+    )
+  }
+
+  /**
+   * Post a file
+   */
+
+  async createFile(
+    submissionId: string,
+    body: paths['/submissions/{submissionId}/files']['post']['parameters']['body']['schema']
+  ): Promise<Responses<'/submissions/{submissionId}/files', 'post'>> {
+    return await this.post(`/submissions/${submissionId}/files`, body)
+  }
+
+  /**
+   * Edit a file
+   */
+
+  async editFile(
+    submissionId: string,
+    submissionFileId: string,
+    body: paths['/submissions/{submissionId}/files/{submissionFileId}']['put']['parameters']['body']['schema'],
+    query: paths['/submissions/{submissionId}/files/{submissionFileId}']['delete']['parameters']['query']
+  ): Promise<Responses<'/submissions/{submissionId}/files', 'post'>> {
+    return await this.put(
+      `/submissions/${submissionId}/files/${submissionFileId}`,
+      body,
+      query
+    )
+  }
+
+  /**
+   * Delete a file
+   */
+
+  async deleteFile(
+    submissionId: string,
+    submissionFileId: string,
+    query: paths['/submissions/{submissionId}/files/{submissionFileId}']['delete']['parameters']['query']
+  ): Promise<Responses<'/submissions/{submissionId}/files', 'post'>> {
+    return await this.delete(
+      `/submissions/${submissionId}/files/${submissionFileId}`,
+      query
+    )
   }
 
   // publishSite({ siteId, domains }) {

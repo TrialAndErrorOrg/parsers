@@ -1,3 +1,5 @@
+import { paths } from './swagger-types'
+
 export type SubmissionQuery = {
   /**
    * Filter results by those assigned to one or more user ids. All users except managers and admins are automatically restricted to assigned submissions and do not need to pass this parameter.
@@ -64,3 +66,10 @@ export type SubmissionQuery = {
    */
   status: (1 | 2 | 3 | 4 | 5)[]
 }
+
+export type Responses<
+  path extends keyof paths,
+  method extends keyof paths[path]
+> = paths[path][method] extends { responses: any }
+  ? paths[path][method][keyof paths[path][method]['responses']]
+  : never

@@ -83,7 +83,7 @@ export default function Index() {
               { value: 'jats', label: 'JATS XML', image: <JATSIcon /> },
             ]}
           />
-          <Button radius="md">Let's gooo</Button>
+          <Button radius="md">Lets gooo</Button>
         </HStack>
       </Container>
       <Dropzone

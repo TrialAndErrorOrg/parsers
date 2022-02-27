@@ -18,8 +18,8 @@ export const MetaItem = ({
   console.log(value)
   return (
     <VStack spacing={2} key={datakey}>
-      {(!value || (value?.hasOwnProperty('en_US') && !value?.en_US)) &&
-      !options?.showEmpty ? null : (
+      {/* @ts-expect-error booo  */}
+      {!value && !value?.en_US && !options?.showEmpty ? null : (
         <Text size="xs" color="dimmed">
           {datakey}
         </Text>

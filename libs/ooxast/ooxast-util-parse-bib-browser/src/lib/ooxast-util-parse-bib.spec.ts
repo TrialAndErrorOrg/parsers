@@ -2,15 +2,11 @@ import { docxToVFile } from 'docx-to-vfile'
 import reoffParse from 'reoff-parse'
 import { readFile } from 'fs/promises'
 import { unified } from 'unified'
-import {
-  callAnystyleApi,
-  callAnystyleCLI,
-  findBib,
-  bibToCSL,
-  parseBib,
-} from './ooxast-util-parse-bib'
+import { parseBib } from './ooxast-util-parse-bib-browser'
 import { toString } from 'xast-util-to-string'
 import { writeFileSync } from 'fs'
+import { bibToCSL } from './bib-to-csl'
+import { findBib } from './find-bib'
 
 async function getTree() {
   // If in node, get the correct docx uintarray like so
@@ -39,7 +35,6 @@ async function getBib() {
     // when using it locally
     // if no options are entered, it will try to use
     // anystyle on your path, and will probably fail
-    anyStylePath: '/usr/bin/anystyle',
   })
 }
 
@@ -75,6 +70,7 @@ describe('parseBib', () => {
   it('should crossref', async () => {
     const y = await parseBib(await tree, {
       mailto: 'support@centeroftrialanderror.com',
+      apiUrl: 'http://localhost:8000/api/style',
     })
     //console.log(y)
     expect(y).toMatchSnapshot()

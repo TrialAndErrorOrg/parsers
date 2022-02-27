@@ -2,10 +2,10 @@ import { Data as CSL } from 'csl-json'
 import { callAnystyleApi } from './anystyle-api'
 import { findBib } from './find-bib'
 import { fixBib } from './fix-csl'
-import { Options } from './ooxast-util-parse-bib'
+import { Options } from './ooxast-util-parse-bib-browser'
 import { Node } from 'ooxast'
 
-export async function bibToCSLBrowser(
+export async function bibToCSL(
   tree: Node,
   options: Omit<Options, 'anystylePath'> & { apiUrl: string }
 ): Promise<CSL[]> {

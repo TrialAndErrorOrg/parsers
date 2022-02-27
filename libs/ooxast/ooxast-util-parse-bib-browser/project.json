@@ -27,7 +27,7 @@
         "outputPath": "dist/libs/ooxast/ooxast-util-parse-bib-browser",
         "tsConfig": "libs/ooxast/ooxast-util-parse-bib-browser/tsconfig.lib.json",
         "packageJson": "libs/ooxast/ooxast-util-parse-bib-browser/package.json",
-        "main": "libs/ooxast/ooxast-util-parse-bib-browser-browser/src/index.ts",
+        "main": "libs/ooxast/ooxast-util-parse-bib-browser/src/index.ts",
         "assets": ["libs/ooxast/ooxast-util-parse-bib-browser/*.md"]
       }
     }

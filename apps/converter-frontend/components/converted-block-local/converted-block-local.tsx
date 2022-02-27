@@ -43,23 +43,26 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
           Try make pdf
         </Button>
       )}
-      {/* <Code></Code> */}
+      {/* eslint-disable-next-line*/}
+      {/* @ts-ignore  */}
       {vfile?.messages && (
         <>
           <Header height="20">Images extracted from doc</Header>
           <Box>
-            {vfile?.data?.images &&
-              (Object.entries(vfile?.data?.images).map(
-                ([url, img]: [url: string, img: ArrayBuffer]) => {
+            {vfile?.data?.images
+              ? Object.entries(
+                  vfile?.data?.images as { [key: string]: ArrayBuffer }
+                ).map(([url, img]: [url: string, img: ArrayBuffer]) => {
                   const arrayBufferView = new Uint8Array(img)
                   const blob = new Blob([arrayBufferView], {
                     type: 'image/jpeg',
                   })
                   const urlCreator = window.URL || window.webkitURL
                   const imageUrl = urlCreator.createObjectURL(blob)
-                  return <img src={imageUrl} label={url} />
-                }
-              ) as React.ReactNode[])}
+                  // eslint-disable-next-line
+                  return <img src={imageUrl} key={url} />
+                })
+              : null}
           </Box>
         </>
       )}

@@ -1,6 +1,6 @@
 import { Root } from 'ooxast'
 import { VFile } from 'vfile'
-import { Data as CSL } from 'CSL-JSON'
+import { Data as CSL } from 'csl-json'
 import { findCitations } from 'ooxast-util-citations'
 
 export default function reoffCite(

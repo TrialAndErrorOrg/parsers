@@ -12,6 +12,5 @@
     "syntax",
     "tree",
     "ast"
-  ],
-  "dependencies": {}
+  ]
 }

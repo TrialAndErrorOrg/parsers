@@ -6,8 +6,5 @@
     "types": ["node"]
   },
   "exclude": ["**/*.spec.ts", "**/*.test.ts"],
-  "include": [
-    "**/*.ts",
-    "../../csl-consolidate/src/lib/get-crossref-metadata.ts"
-  ]
+  "include": ["**/*.ts"]
 }

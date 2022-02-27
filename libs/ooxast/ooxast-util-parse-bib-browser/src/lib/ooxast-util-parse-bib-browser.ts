@@ -1,6 +1,6 @@
 import { Node } from 'ooxast'
 import { consolidate } from 'csl-consolidate'
-import { bibToCSLBrowser } from './bib-to-csl'
+import { bibToCSL } from './bib-to-csl'
 export interface Options {
   apiUrl: string
   apiParams?: { param: string }
@@ -10,7 +10,7 @@ export interface Options {
 }
 
 export async function parseBib(tree: Node, options: Options) {
-  const csl = await bibToCSLBrowser(tree, options)
+  const csl = await bibToCSL(tree, options)
   if (!csl) return
   if (!options.mailto) {
     return csl

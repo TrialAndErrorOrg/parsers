@@ -25,7 +25,7 @@ export function Settings(props: SettingsProps) {
     },
     validationRules: {
       email: (value) => /^\S+@\S+$/.test(value),
-      endpoint: (value) => /^https:\/\/.*?\/api\/v1+$/.test(value),
+      endpoint: (value) => /^https:\/\/.*?\/api\/v1+$/?.test(value || ''),
     },
   })
   return (

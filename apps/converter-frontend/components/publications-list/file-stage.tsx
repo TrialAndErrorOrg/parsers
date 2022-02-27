@@ -55,7 +55,7 @@ export const FileStage = (props: {
               wordBreak: 'break-all',
             }}
           >
-            {item.name?.en_US}
+            {item.name?.en_US as string}
           </Text>
           <Button onClick={() => console.log(item._href)}>Convert</Button>
         </Box>

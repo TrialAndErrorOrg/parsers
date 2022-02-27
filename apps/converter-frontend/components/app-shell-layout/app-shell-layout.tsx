@@ -11,6 +11,7 @@ import {
 import React, { useState } from 'react'
 import { HStack, VStack } from '../stack/stack'
 import Image from 'next/image'
+import Link from 'next/link'
 
 /* eslint-disable-next-line */
 export interface AppShellLayoutProps {
@@ -71,12 +72,8 @@ export function AppShellLayout(props: AppShellLayoutProps) {
           <Navbar.Section>Journal of Trial and Error</Navbar.Section>
           <Navbar.Section grow mt="lg">
             <VStack>
-              {['1', '2', '3', '4', '5'].map((num) => (
-                <HStack key={num}>
-                  <Text>Icon {num}</Text>
-                  <Text>Link {num}</Text>
-                </HStack>
-              ))}
+              <Link href="/">Convert</Link>
+              <Link href="/authors">Authors</Link>
             </VStack>
           </Navbar.Section>
           <Navbar.Section>You!</Navbar.Section>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import {
   AppShell,
-  Box,
   Burger,
   Button,
   Code,
@@ -17,21 +16,16 @@ import {
 } from '@mantine/core'
 import { HStack, VStack } from '../components/stack/stack'
 import SelectItem from '../components/select-item/select-item'
-import { AiOutlineUpload } from 'react-icons/ai'
+import { AiFillFileWord, AiOutlineUpload } from 'react-icons/ai'
 import { JATSIcon, TexIcon, WordIcon } from '../components/ext-icon/ext-icon'
 
 import { Dropzone } from '@mantine/dropzone'
-import ConvertedBlockLocal from '../components/converted-block-local/converted-block-local'
-import { jatsToTexConverter } from '../utils/converters/jatsToTex'
-import { docxToTexConverter } from '../utils/converters/docxToTex'
-import { docxToJatsConverter } from '../utils/converters/docxToJats'
-import Settings from '../components/settings/settings'
-
+import ConvertedBlock from '../components/converted-block/converted-block'
 export default function Index() {
   const [thing, setThing] = useState<ArrayBuffer>()
   const [tex, setTex] = useState('')
-  const [from, setFrom] = useState<'docx' | 'jats'>('docx')
-  const [to, setTo] = useState<'jats' | 'tex'>('tex')
+  const [opened, setOpened] = useState(false)
+  const theme = useMantineTheme()
 
   // useEffect(() => {
   //   if (!thing) return
@@ -51,6 +45,7 @@ export default function Index() {
   //       setTex(e)
   //     })
   // }, [thing])
+
   return (
     <>
       <Title> Convert DOCX</Title>
@@ -61,7 +56,6 @@ export default function Index() {
             itemComponent={SelectItem}
             placeholder="Input format"
             defaultValue="docx"
-            onChange={(value: 'docx' | 'jats') => setFrom(value)}
             radius="md"
             data={[
               {
@@ -80,20 +74,18 @@ export default function Index() {
           />
           <Text>to</Text>
           <Select
-            defaultValue="tex"
+            defaultValue="latex"
             radius="md"
             itemComponent={SelectItem}
             placeholder="Output format"
-            onChange={(value: 'tex' | 'jats') => setTo(value)}
             data={[
-              { value: 'tex', label: '.tex', image: <TexIcon /> },
+              { value: 'latex', label: '.tex', image: <TexIcon /> },
               { value: 'jats', label: 'JATS XML', image: <JATSIcon /> },
             ]}
           />
           <Button radius="md">Lets gooo</Button>
         </HStack>
       </Container>
-      <Settings />
       <Dropzone
         onDrop={async (files) => {
           const buf = await files[0].arrayBuffer()
@@ -129,39 +121,43 @@ export default function Index() {
           </Group>
         )}
       </Dropzone>
-      {from !== 'docx' && (
-        <>
-          <Title>Input</Title>
-          <Code
-            style={{
-              maxHeight: '400px',
-              overflow: 'scroll',
-            }}
-          >
-            <pre
-              style={{
-                maxHeight: '400px',
-                overflow: 'scroll',
-              }}
-            >
-              {thing && Buffer.from(thing).toString()}
-            </pre>
-          </Code>
-        </>
-      )}
+      <Title>Input</Title>
+      <Code
+        style={{
+          maxHeight: '400px',
+          overflow: 'scroll',
+        }}
+      >
+        <pre
+          style={{
+            maxHeight: '400px',
+            overflow: 'scroll',
+          }}
+        >
+          {thing && Buffer.from(thing).toString()}
+        </pre>
+      </Code>
       <Title>Output</Title>
-      {thing && (
-        <ConvertedBlockLocal
-          input={thing}
-          converter={
-            from === 'docx'
-              ? to === 'tex'
-                ? docxToTexConverter
-                : docxToJatsConverter
-              : jatsToTexConverter
-          }
-        />
-      )}
+      <Button
+        onClick={() =>
+          fetch('/api/tex-to-pdf', { method: 'POST', body: tex })
+            .then((res) => res.blob())
+            .then((res) => {
+              window.open(URL.createObjectURL(res))
+            })
+            .catch((e) => console.error(e))
+        }
+      >
+        Try make pdf
+      </Button>
+      <pre
+        style={{
+          maxHeight: '400px',
+          overflow: 'scroll',
+        }}
+      >
+        {thing && <ConvertedBlock input={thing} />}
+      </pre>
     </>
   )
 }

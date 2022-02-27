@@ -35,13 +35,5 @@
       }
     ]
   },
-  "defaultProject": "jote",
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nrwl/nx-cloud",
-      "options": {
-        "accessToken": "ODhlMDYwMDctZGYzYi00NjBmLWE1MzQtMjNlOGQyNmFhMjE0fHJlYWQtd3JpdGU="
-      }
-    }
-  }
+  "defaultProject": "jote"
 }

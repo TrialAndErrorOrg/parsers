@@ -1,6 +1,13 @@
 import NextAuth from 'next-auth'
 import AzureADProvider from 'next-auth/providers/azure-ad'
 
+console.log({
+  nextauth: process.env.NEXTAUTH_URL,
+  secret: process.env.NEXTAUTH_SECRET,
+  clientId: process.env.AZURE_ID!,
+  clientSecret: process.env.AZURE_SECRET!,
+  tenantId: process.env.AZURE_TENANT_ID!,
+})
 export default NextAuth({
   secret: process.env.NEXTAUTH_SECRET,
   providers: [

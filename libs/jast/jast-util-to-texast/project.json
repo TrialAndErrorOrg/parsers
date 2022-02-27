@@ -1,0 +1,34 @@
+{
+  "root": "libs/jast/jast-util-to-texast",
+  "sourceRoot": "libs/jast/jast-util-to-texast/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/jast/jast-util-to-texast/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/jast/jast-util-to-texast"],
+      "options": {
+        "jestConfig": "libs/jast/jast-util-to-texast/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/jast/jast-util-to-texast",
+        "tsConfig": "libs/jast/jast-util-to-texast/tsconfig.lib.json",
+        "packageJson": "libs/jast/jast-util-to-texast/package.json",
+        "main": "libs/jast/jast-util-to-texast/src/index.ts",
+        "assets": ["libs/jast/jast-util-to-texast/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,5 @@
+import {Node} from 'unist'
+
+export function <%= importPath %>(node: Node){
+  return node
+}

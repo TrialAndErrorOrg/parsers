@@ -1,0 +1,34 @@
+{
+  "root": "libs/xast/xast-util-is-element",
+  "sourceRoot": "libs/xast/xast-util-is-element/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/xast/xast-util-is-element/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/xast/xast-util-is-element"],
+      "options": {
+        "jestConfig": "libs/xast/xast-util-is-element/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/xast/xast-util-is-element",
+        "tsConfig": "libs/xast/xast-util-is-element/tsconfig.lib.json",
+        "packageJson": "libs/xast/xast-util-is-element/package.json",
+        "main": "libs/xast/xast-util-is-element/src/index.ts",
+        "assets": ["libs/xast/xast-util-is-element/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

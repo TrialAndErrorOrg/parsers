@@ -1,0 +1,34 @@
+{
+  "root": "libs/relatex/relatex-add-preamble",
+  "sourceRoot": "libs/relatex/relatex-add-preamble/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/relatex/relatex-add-preamble/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/relatex/relatex-add-preamble"],
+      "options": {
+        "jestConfig": "libs/relatex/relatex-add-preamble/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/relatex/relatex-add-preamble",
+        "tsConfig": "libs/relatex/relatex-add-preamble/tsconfig.lib.json",
+        "packageJson": "libs/relatex/relatex-add-preamble/package.json",
+        "main": "libs/relatex/relatex-add-preamble/src/index.ts",
+        "assets": ["libs/relatex/relatex-add-preamble/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

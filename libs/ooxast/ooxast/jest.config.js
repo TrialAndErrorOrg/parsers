@@ -9,6 +9,7 @@ const config = {
   },
   testEnvironment: 'node',
   transform: {
+    //eslint-disable-next-line
     '^.+\.[tj]sx?$': 'ts-jest',
   },
   transformIgnorePatterns: [],
@@ -16,6 +17,7 @@ const config = {
   coverageDirectory: '../../../coverage/libs/ooxast',
   extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: {
+    //eslint-disable-next-line 
     '^(\.{1,2}/.*)\.js$': '$1',
   },
 }

@@ -1,0 +1,34 @@
+{
+  "root": "libs/ojs/ojs-client",
+  "sourceRoot": "libs/ojs/ojs-client/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ojs/ojs-client/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ojs/ojs-client"],
+      "options": {
+        "jestConfig": "libs/ojs/ojs-client/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ojs/ojs-client",
+        "tsConfig": "libs/ojs/ojs-client/tsconfig.lib.json",
+        "packageJson": "libs/ojs/ojs-client/package.json",
+        "main": "libs/ojs/ojs-client/src/index.ts",
+        "assets": ["libs/ojs/ojs-client/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

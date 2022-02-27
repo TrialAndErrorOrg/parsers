@@ -40,3 +40,8 @@ testem.log
 Thumbs.db
 
 .vercel
+
+/out
+thebiggestfile.ts
+
+.env

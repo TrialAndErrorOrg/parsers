@@ -1,0 +1,123 @@
+{
+	"title": "Author",
+	"description": "An author of a publication.",
+	"required": [
+		"email",
+		"givenName",
+		"publicationId",
+		"userGroupId"
+	],
+	"properties": {
+		"affiliation": {
+			"type": "string",
+			"description": "The scholarly institution this contributor is employed by or affiliated with.",
+			"multilingual": "true",
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"biography": {
+			"type": "string",
+			"description": "An optional bio statement about this contributor.",
+			"multilingual": "true",
+			"validation": [
+				"nullable"
+			]
+		},
+		"country": {
+			"type": "string"
+		},
+		"email": {
+			"type": "string",
+			"apiSummary": true,
+			"validation": [
+				"email_or_localhost"
+			]
+		},
+		"familyName": {
+			"type": "string",
+			"multilingual": "true",
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"fullName": {
+			"type": "string",
+			"description": "The full name of the author. This will be the preferredPublicName or, if that is not available, a string containing the givenName and familyName.",
+			"apiSummary": true,
+			"readOnly": true
+		},
+		"givenName": {
+			"type": "string",
+			"multilingual": "true",
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"id": {
+			"type": "integer",
+			"apiSummary": true
+		},
+		"includeInBrowse": {
+			"type": "boolean",
+			"description": "Whether or not to include this contributor in author lists when the publication appears in search results, tables of content and catalog entries.",
+			"default": true,
+			"apiSummary": true
+		},
+		"orcid": {
+			"type": "string",
+			"description": "The ORCID of this contributor. See: https://orcid.org/",
+			"apiSummary": true,
+			"validation": [
+				"nullable",
+				"orcid"
+			]
+		},
+		"preferredPublicName": {
+			"type": "string",
+			"description": "An optional field for contributors to specify how they prefer to be identified in this publication.",
+			"multilingual": "true",
+			"apiSummary": true,
+			"validation": [
+				"nullable"
+			]
+		},
+		"publicationId": {
+			"type": "integer",
+			"apiSummary": true
+		},
+		"seq": {
+			"type": "integer",
+			"description": "The order in which this contributor should appear in a list of contriibutors.",
+			"apiSummary": true
+		},
+		"submissionLocale": {
+			"type": "string",
+			"description": "The primary locale of the submission this author is attached to. This locale is used as the fallback when a language is missing from a multilingual property.",
+			"apiSummary": true,
+			"readOnly": true
+		},
+		"url": {
+			"type": "string",
+			"description": "An optional URL to this contributor's webpage.",
+			"validation": [
+				"url",
+				"nullable"
+			]
+		},
+		"userGroupId": {
+			"type": "integer",
+			"description": "The ID of this contributor's assigned user group. See userGroupName.",
+			"apiSummary": true
+		},
+		"userGroupName": {
+			"type": "string",
+			"description": "The name of this contributor's role in the publication, such as 'Author' or 'Translator'.",
+			"apiSummary": true,
+			"readOnly": true
+		}
+	}
+}

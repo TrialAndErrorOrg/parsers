@@ -1,7 +1,7 @@
 /**
  * xast utility to get the plain-text value of a node.
  * Adapted from
- * [`xast-util-to-string`](https://github.com/rehype-minify/blob/main/packages/xast-util-to-string).
+ * [`hast-util-to-string`](https://github.com/rehype-minify/blob/main/packages/xast-util-to-string).
  *
  * ## What is this?
  *
@@ -13,20 +13,15 @@
  * The algorithm used by this package is like the DOMs `Node#textContent`
  * getter.
  *
- * To use the DOMs `Node#innerText` algorithm instead, use
- * [`hast-util-to-text`](https://github.com/syntax-tree/hast-util-to-text).
- * `innerText` is aware of how things are displayed, for example turning hard
- * breaks (`<br>`) into line endings.
- *
  * ## Use
  *
  * ```js
  * import {x} from 'xastscript'
  * import {toString} from 'xast-util-to-string'
  *
- * toString(h('p', 'Alpha'))
+ * toString(x('p', 'Alpha'))
  * //=> 'Alpha'
- * toString(h('div', [h('b', 'Bold'), ' and ', h('i', 'italic'), '.']))
+ * toString(x('div', [x('b', 'Bold'), ' and ', x('i', 'italic'), '.']))
  * //=> 'Bold and italic.'
  * ```
  *

@@ -1,5 +1,5 @@
 import { CompilerFunction } from 'unified'
-import { Root } from 'jjast'
+import { Root } from 'jast-types'
 
 export default function astStringify() {
   const compiler: CompilerFunction<Root, string> = (tree) => {

@@ -1,14 +1,7 @@
 {
   "name": "rejour-move-abstract",
   "version": "0.0.1",
-  "dependencies": {
-    "unist-util-filter": "4.0.0",
-    "unist-util-remove": "3.0.0",
-    "unist-util-remove-position": "4.0.0",
-    "unist-util-visit": "4.0.0",
-    "unist-util-visit-parents": "5.0.0"
-  },
-  "license": "GPL-3.0-or-later",
+  "license": "GPL-3-0-or-later",
   "repository": "https://github.com/journaloftrialanderror/jote",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
@@ -19,10 +12,5 @@
     "syntax",
     "tree",
     "ast"
-  ],
-  "devDependencies": {
-    "unified": "^10.1.1",
-    "unist-util-map": "^3.0.0",
-    "vfile-reporter": "^7.0.3"
-  }
+  ]
 }

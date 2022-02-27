@@ -4,7 +4,6 @@
     "esbenp.prettier-vscode",
     "firsttris.vscode-jest-runner",
     "dbaeumer.vscode-eslint",
-    "redhat.vscode-xml",
-    "james-yu.latex-workshop"
+    "redhat.vscode-xml"
   ]
 }

@@ -9,7 +9,7 @@ export const jatsToTex = async (jats: string) => {
     .use(rejourRelatex)
     .use(relatexStringify)
 
-  console.log(jats)
-  console.log(proc)
-  return String(await proc.process(jats))
+  // console.log(jats)
+  // console.log(proc)
+  return proc.process(jats)
 }

@@ -1,0 +1,1436 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "instruction",
+      "name": "xml",
+      "value": "version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"",
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 56,
+          "offset": 55
+        }
+      }
+    },
+    {
+      "type": "text",
+      "value": "\n",
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 56,
+          "offset": 55
+        },
+        "end": {
+          "line": 2,
+          "column": 1,
+          "offset": 56
+        }
+      }
+    },
+    {
+      "type": "element",
+      "name": "w:document",
+      "attributes": {
+        "xmlns:wpc": "http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas",
+        "xmlns:cx": "http://schemas.microsoft.com/office/drawing/2014/chartex",
+        "xmlns:cx1": "http://schemas.microsoft.com/office/drawing/2015/9/8/chartex",
+        "xmlns:cx2": "http://schemas.microsoft.com/office/drawing/2015/10/21/chartex",
+        "xmlns:cx3": "http://schemas.microsoft.com/office/drawing/2016/5/9/chartex",
+        "xmlns:cx4": "http://schemas.microsoft.com/office/drawing/2016/5/10/chartex",
+        "xmlns:cx5": "http://schemas.microsoft.com/office/drawing/2016/5/11/chartex",
+        "xmlns:cx6": "http://schemas.microsoft.com/office/drawing/2016/5/12/chartex",
+        "xmlns:cx7": "http://schemas.microsoft.com/office/drawing/2016/5/13/chartex",
+        "xmlns:cx8": "http://schemas.microsoft.com/office/drawing/2016/5/14/chartex",
+        "xmlns:mc": "http://schemas.openxmlformats.org/markup-compatibility/2006",
+        "xmlns:aink": "http://schemas.microsoft.com/office/drawing/2016/ink",
+        "xmlns:am3d": "http://schemas.microsoft.com/office/drawing/2017/model3d",
+        "xmlns:o": "urn:schemas-microsoft-com:office:office",
+        "xmlns:r": "http://schemas.openxmlformats.org/officeDocument/2006/relationships",
+        "xmlns:m": "http://schemas.openxmlformats.org/officeDocument/2006/math",
+        "xmlns:v": "urn:schemas-microsoft-com:vml",
+        "xmlns:wp14": "http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing",
+        "xmlns:wp": "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing",
+        "xmlns:w10": "urn:schemas-microsoft-com:office:word",
+        "xmlns:w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main",
+        "xmlns:w14": "http://schemas.microsoft.com/office/word/2010/wordml",
+        "xmlns:w15": "http://schemas.microsoft.com/office/word/2012/wordml",
+        "xmlns:w16cex": "http://schemas.microsoft.com/office/word/2018/wordml/cex",
+        "xmlns:w16cid": "http://schemas.microsoft.com/office/word/2016/wordml/cid",
+        "xmlns:w16": "http://schemas.microsoft.com/office/word/2018/wordml",
+        "xmlns:w16sdtdh": "http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash",
+        "xmlns:w16se": "http://schemas.microsoft.com/office/word/2015/wordml/symex",
+        "xmlns:wpg": "http://schemas.microsoft.com/office/word/2010/wordprocessingGroup",
+        "xmlns:wpi": "http://schemas.microsoft.com/office/word/2010/wordprocessingInk",
+        "xmlns:wne": "http://schemas.microsoft.com/office/word/2006/wordml",
+        "xmlns:wps": "http://schemas.microsoft.com/office/word/2010/wordprocessingShape",
+        "mc:Ignorable": "w14 w15 w16se w16cid w16 w16cex w16sdtdh wp14"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "w:body",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "16E68BE2",
+                "w14:textId": "77777777"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:keepNext",
+                      "attributes": {},
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 2,
+                          "column": 2459,
+                          "offset": 2514
+                        },
+                        "end": {
+                          "line": 2,
+                          "column": 2472,
+                          "offset": 2527
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 2,
+                      "column": 2452,
+                      "offset": 2507
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 2480,
+                      "offset": 2535
+                    }
+                  }
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:drawing",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "wp:inline",
+                          "attributes": {
+                            "distT": "0",
+                            "distB": "0",
+                            "distL": "0",
+                            "distR": "0",
+                            "wp14:anchorId": "7672CEA3",
+                            "wp14:editId": "2B7C9FB1"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "wp:extent",
+                              "attributes": {
+                                "cx": "5731510",
+                                "cy": "8589010"
+                              },
+                              "children": [],
+                              "position": {
+                                "start": {
+                                  "line": 2,
+                                  "column": 2645,
+                                  "offset": 2700
+                                },
+                                "end": {
+                                  "line": 2,
+                                  "column": 2683,
+                                  "offset": 2738
+                                }
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "wp:effectExtent",
+                              "attributes": {
+                                "l": "0",
+                                "t": "0",
+                                "r": "0",
+                                "b": "0"
+                              },
+                              "children": [],
+                              "position": {
+                                "start": {
+                                  "line": 2,
+                                  "column": 2683,
+                                  "offset": 2738
+                                },
+                                "end": {
+                                  "line": 2,
+                                  "column": 2725,
+                                  "offset": 2780
+                                }
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "wp:docPr",
+                              "attributes": {
+                                "id": "1",
+                                "name": "Picture 1",
+                                "descr": "A picture containing text\n\nDescription automatically generated"
+                              },
+                              "children": [],
+                              "position": {
+                                "start": {
+                                  "line": 2,
+                                  "column": 2725,
+                                  "offset": 2780
+                                },
+                                "end": {
+                                  "line": 2,
+                                  "column": 2839,
+                                  "offset": 2894
+                                }
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "wp:cNvGraphicFramePr",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "a:graphicFrameLocks",
+                                  "attributes": {
+                                    "xmlns:a": "http://schemas.openxmlformats.org/drawingml/2006/main",
+                                    "noChangeAspect": "1"
+                                  },
+                                  "children": [],
+                                  "position": {
+                                    "start": {
+                                      "line": 2,
+                                      "column": 2861,
+                                      "offset": 2916
+                                    },
+                                    "end": {
+                                      "line": 2,
+                                      "column": 2966,
+                                      "offset": 3021
+                                    }
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 2,
+                                  "column": 2839,
+                                  "offset": 2894
+                                },
+                                "end": {
+                                  "line": 2,
+                                  "column": 2989,
+                                  "offset": 3044
+                                }
+                              }
+                            },
+                            {
+                              "type": "element",
+                              "name": "a:graphic",
+                              "attributes": {
+                                "xmlns:a": "http://schemas.openxmlformats.org/drawingml/2006/main"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "a:graphicData",
+                                  "attributes": {
+                                    "uri": "http://schemas.openxmlformats.org/drawingml/2006/picture"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "pic:pic",
+                                      "attributes": {
+                                        "xmlns:pic": "http://schemas.openxmlformats.org/drawingml/2006/picture"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "pic:nvPicPr",
+                                          "attributes": {},
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "pic:cNvPr",
+                                              "attributes": {
+                                                "id": "1",
+                                                "name": "Picture 1",
+                                                "descr": "A picture containing text\n\nDescription automatically generated"
+                                              },
+                                              "children": [],
+                                              "position": {
+                                                "start": {
+                                                  "line": 2,
+                                                  "column": 3233,
+                                                  "offset": 3288
+                                                },
+                                                "end": {
+                                                  "line": 2,
+                                                  "column": 3348,
+                                                  "offset": 3403
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "pic:cNvPicPr",
+                                              "attributes": {},
+                                              "children": [],
+                                              "position": {
+                                                "start": {
+                                                  "line": 2,
+                                                  "column": 3348,
+                                                  "offset": 3403
+                                                },
+                                                "end": {
+                                                  "line": 2,
+                                                  "column": 3363,
+                                                  "offset": 3418
+                                                }
+                                              }
+                                            }
+                                          ],
+                                          "position": {
+                                            "start": {
+                                              "line": 2,
+                                              "column": 3220,
+                                              "offset": 3275
+                                            },
+                                            "end": {
+                                              "line": 2,
+                                              "column": 3377,
+                                              "offset": 3432
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "pic:blipFill",
+                                          "attributes": {},
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "a:blip",
+                                              "attributes": {
+                                                "r:embed": "rId7"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "a:extLst",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "a:ext",
+                                                      "attributes": {
+                                                        "uri": "{28A0092B-C50C-407E-A947-70E740481C1C}"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "type": "element",
+                                                          "name": "a14:useLocalDpi",
+                                                          "attributes": {
+                                                            "xmlns:a14": "http://schemas.microsoft.com/office/drawing/2010/main",
+                                                            "val": "0"
+                                                          },
+                                                          "children": [],
+                                                          "position": {
+                                                            "start": {
+                                                              "line": 2,
+                                                              "column": 3476,
+                                                              "offset": 3531
+                                                            },
+                                                            "end": {
+                                                              "line": 2,
+                                                              "column": 3568,
+                                                              "offset": 3623
+                                                            }
+                                                          }
+                                                        }
+                                                      ],
+                                                      "position": {
+                                                        "start": {
+                                                          "line": 2,
+                                                          "column": 3424,
+                                                          "offset": 3479
+                                                        },
+                                                        "end": {
+                                                          "line": 2,
+                                                          "column": 3576,
+                                                          "offset": 3631
+                                                        }
+                                                      }
+                                                    }
+                                                  ],
+                                                  "position": {
+                                                    "start": {
+                                                      "line": 2,
+                                                      "column": 3414,
+                                                      "offset": 3469
+                                                    },
+                                                    "end": {
+                                                      "line": 2,
+                                                      "column": 3587,
+                                                      "offset": 3642
+                                                    }
+                                                  }
+                                                }
+                                              ],
+                                              "position": {
+                                                "start": {
+                                                  "line": 2,
+                                                  "column": 3391,
+                                                  "offset": 3446
+                                                },
+                                                "end": {
+                                                  "line": 2,
+                                                  "column": 3596,
+                                                  "offset": 3651
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "a:stretch",
+                                              "attributes": {},
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "a:fillRect",
+                                                  "attributes": {},
+                                                  "children": [],
+                                                  "position": {
+                                                    "start": {
+                                                      "line": 2,
+                                                      "column": 3607,
+                                                      "offset": 3662
+                                                    },
+                                                    "end": {
+                                                      "line": 2,
+                                                      "column": 3620,
+                                                      "offset": 3675
+                                                    }
+                                                  }
+                                                }
+                                              ],
+                                              "position": {
+                                                "start": {
+                                                  "line": 2,
+                                                  "column": 3596,
+                                                  "offset": 3651
+                                                },
+                                                "end": {
+                                                  "line": 2,
+                                                  "column": 3632,
+                                                  "offset": 3687
+                                                }
+                                              }
+                                            }
+                                          ],
+                                          "position": {
+                                            "start": {
+                                              "line": 2,
+                                              "column": 3377,
+                                              "offset": 3432
+                                            },
+                                            "end": {
+                                              "line": 2,
+                                              "column": 3647,
+                                              "offset": 3702
+                                            }
+                                          }
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "pic:spPr",
+                                          "attributes": {},
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "a:xfrm",
+                                              "attributes": {},
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "a:off",
+                                                  "attributes": {
+                                                    "x": "0",
+                                                    "y": "0"
+                                                  },
+                                                  "children": [],
+                                                  "position": {
+                                                    "start": {
+                                                      "line": 2,
+                                                      "column": 3665,
+                                                      "offset": 3720
+                                                    },
+                                                    "end": {
+                                                      "line": 2,
+                                                      "column": 3685,
+                                                      "offset": 3740
+                                                    }
+                                                  }
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "a:ext",
+                                                  "attributes": {
+                                                    "cx": "5731510",
+                                                    "cy": "8589010"
+                                                  },
+                                                  "children": [],
+                                                  "position": {
+                                                    "start": {
+                                                      "line": 2,
+                                                      "column": 3685,
+                                                      "offset": 3740
+                                                    },
+                                                    "end": {
+                                                      "line": 2,
+                                                      "column": 3719,
+                                                      "offset": 3774
+                                                    }
+                                                  }
+                                                }
+                                              ],
+                                              "position": {
+                                                "start": {
+                                                  "line": 2,
+                                                  "column": 3657,
+                                                  "offset": 3712
+                                                },
+                                                "end": {
+                                                  "line": 2,
+                                                  "column": 3728,
+                                                  "offset": 3783
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "a:prstGeom",
+                                              "attributes": {
+                                                "prst": "rect"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "a:avLst",
+                                                  "attributes": {},
+                                                  "children": [],
+                                                  "position": {
+                                                    "start": {
+                                                      "line": 2,
+                                                      "column": 3752,
+                                                      "offset": 3807
+                                                    },
+                                                    "end": {
+                                                      "line": 2,
+                                                      "column": 3762,
+                                                      "offset": 3817
+                                                    }
+                                                  }
+                                                }
+                                              ],
+                                              "position": {
+                                                "start": {
+                                                  "line": 2,
+                                                  "column": 3728,
+                                                  "offset": 3783
+                                                },
+                                                "end": {
+                                                  "line": 2,
+                                                  "column": 3775,
+                                                  "offset": 3830
+                                                }
+                                              }
+                                            }
+                                          ],
+                                          "position": {
+                                            "start": {
+                                              "line": 2,
+                                              "column": 3647,
+                                              "offset": 3702
+                                            },
+                                            "end": {
+                                              "line": 2,
+                                              "column": 3786,
+                                              "offset": 3841
+                                            }
+                                          }
+                                        }
+                                      ],
+                                      "position": {
+                                        "start": {
+                                          "line": 2,
+                                          "column": 3142,
+                                          "offset": 3197
+                                        },
+                                        "end": {
+                                          "line": 2,
+                                          "column": 3796,
+                                          "offset": 3851
+                                        }
+                                      }
+                                    }
+                                  ],
+                                  "position": {
+                                    "start": {
+                                      "line": 2,
+                                      "column": 3064,
+                                      "offset": 3119
+                                    },
+                                    "end": {
+                                      "line": 2,
+                                      "column": 3812,
+                                      "offset": 3867
+                                    }
+                                  }
+                                }
+                              ],
+                              "position": {
+                                "start": {
+                                  "line": 2,
+                                  "column": 2989,
+                                  "offset": 3044
+                                },
+                                "end": {
+                                  "line": 2,
+                                  "column": 3824,
+                                  "offset": 3879
+                                }
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 2,
+                              "column": 2546,
+                              "offset": 2601
+                            },
+                            "end": {
+                              "line": 2,
+                              "column": 3836,
+                              "offset": 3891
+                            }
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 2,
+                          "column": 2535,
+                          "offset": 2590
+                        },
+                        "end": {
+                          "line": 2,
+                          "column": 3848,
+                          "offset": 3903
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 2,
+                      "column": 2480,
+                      "offset": 2535
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 3854,
+                      "offset": 3909
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 2,
+                  "column": 2339,
+                  "offset": 2394
+                },
+                "end": {
+                  "line": 2,
+                  "column": 3860,
+                  "offset": 3915
+                }
+              }
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "7D19CC40",
+                "w14:textId": "5C36155A"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:pStyle",
+                      "attributes": {
+                        "w:val": "Caption"
+                      },
+                      "children": [],
+                      "position": {
+                        "start": {
+                          "line": 2,
+                          "column": 4001,
+                          "offset": 4056
+                        },
+                        "end": {
+                          "line": 2,
+                          "column": 4028,
+                          "offset": 4083
+                        }
+                      }
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:lang",
+                          "attributes": {
+                            "w:val": "en-US"
+                          },
+                          "children": [],
+                          "position": {
+                            "start": {
+                              "line": 2,
+                              "column": 4035,
+                              "offset": 4090
+                            },
+                            "end": {
+                              "line": 2,
+                              "column": 4058,
+                              "offset": 4113
+                            }
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 2,
+                          "column": 4028,
+                          "offset": 4083
+                        },
+                        "end": {
+                          "line": 2,
+                          "column": 4066,
+                          "offset": 4121
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 2,
+                      "column": 3994,
+                      "offset": 4049
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 4074,
+                      "offset": 4129
+                    }
+                  }
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {
+                        "xml:space": "preserve"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Figure ",
+                          "position": {
+                            "start": {
+                              "line": 2,
+                              "column": 4105,
+                              "offset": 4160
+                            },
+                            "end": {
+                              "line": 2,
+                              "column": 4112,
+                              "offset": 4167
+                            }
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 2,
+                          "column": 4079,
+                          "offset": 4134
+                        },
+                        "end": {
+                          "line": 2,
+                          "column": 4118,
+                          "offset": 4173
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 2,
+                      "column": 4074,
+                      "offset": 4129
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 4124,
+                      "offset": 4179
+                    }
+                  }
+                },
+                {
+                  "type": "element",
+                  "name": "w:fldSimple",
+                  "attributes": {
+                    "w:instr": " SEQ Figure \\* ARABIC "
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:r",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rPr",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "w:noProof",
+                              "attributes": {},
+                              "children": [],
+                              "position": {
+                                "start": {
+                                  "line": 2,
+                                  "column": 4182,
+                                  "offset": 4237
+                                },
+                                "end": {
+                                  "line": 2,
+                                  "column": 4194,
+                                  "offset": 4249
+                                }
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 2,
+                              "column": 4175,
+                              "offset": 4230
+                            },
+                            "end": {
+                              "line": 2,
+                              "column": 4202,
+                              "offset": 4257
+                            }
+                          }
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:t",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1",
+                              "position": {
+                                "start": {
+                                  "line": 2,
+                                  "column": 4207,
+                                  "offset": 4262
+                                },
+                                "end": {
+                                  "line": 2,
+                                  "column": 4208,
+                                  "offset": 4263
+                                }
+                              }
+                            }
+                          ],
+                          "position": {
+                            "start": {
+                              "line": 2,
+                              "column": 4202,
+                              "offset": 4257
+                            },
+                            "end": {
+                              "line": 2,
+                              "column": 4214,
+                              "offset": 4269
+                            }
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 2,
+                          "column": 4170,
+                          "offset": 4225
+                        },
+                        "end": {
+                          "line": 2,
+                          "column": 4220,
+                          "offset": 4275
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 2,
+                      "column": 4124,
+                      "offset": 4179
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 4234,
+                      "offset": 4289
+                    }
+                  }
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ": A pretty pic",
+                          "position": {
+                            "start": {
+                              "line": 2,
+                              "column": 4282,
+                              "offset": 4337
+                            },
+                            "end": {
+                              "line": 2,
+                              "column": 4296,
+                              "offset": 4351
+                            }
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 2,
+                          "column": 4277,
+                          "offset": 4332
+                        },
+                        "end": {
+                          "line": 2,
+                          "column": 4302,
+                          "offset": 4357
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 2,
+                      "column": 4234,
+                      "offset": 4289
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 4308,
+                      "offset": 4363
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 2,
+                  "column": 3860,
+                  "offset": 3915
+                },
+                "end": {
+                  "line": 2,
+                  "column": 4314,
+                  "offset": 4369
+                }
+              }
+            },
+            {
+              "type": "element",
+              "name": "w:sectPr",
+              "attributes": {
+                "w:rsidR": "00C76856",
+                "w:rsidRPr": "007213B7"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pgSz",
+                  "attributes": {
+                    "w:w": "11906",
+                    "w:h": "16838"
+                  },
+                  "children": [],
+                  "position": {
+                    "start": {
+                      "line": 2,
+                      "column": 4364,
+                      "offset": 4419
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 4397,
+                      "offset": 4452
+                    }
+                  }
+                },
+                {
+                  "type": "element",
+                  "name": "w:pgMar",
+                  "attributes": {
+                    "w:top": "1440",
+                    "w:right": "1440",
+                    "w:bottom": "1440",
+                    "w:left": "1440",
+                    "w:header": "708",
+                    "w:footer": "708",
+                    "w:gutter": "0"
+                  },
+                  "children": [],
+                  "position": {
+                    "start": {
+                      "line": 2,
+                      "column": 4397,
+                      "offset": 4452
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 4508,
+                      "offset": 4563
+                    }
+                  }
+                },
+                {
+                  "type": "element",
+                  "name": "w:cols",
+                  "attributes": {
+                    "w:space": "708"
+                  },
+                  "children": [],
+                  "position": {
+                    "start": {
+                      "line": 2,
+                      "column": 4508,
+                      "offset": 4563
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 4531,
+                      "offset": 4586
+                    }
+                  }
+                },
+                {
+                  "type": "element",
+                  "name": "w:docGrid",
+                  "attributes": {
+                    "w:linePitch": "360"
+                  },
+                  "children": [],
+                  "position": {
+                    "start": {
+                      "line": 2,
+                      "column": 4531,
+                      "offset": 4586
+                    },
+                    "end": {
+                      "line": 2,
+                      "column": 4561,
+                      "offset": 4616
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 2,
+                  "column": 4314,
+                  "offset": 4369
+                },
+                "end": {
+                  "line": 2,
+                  "column": 4572,
+                  "offset": 4627
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 2,
+              "column": 2331,
+              "offset": 2386
+            },
+            "end": {
+              "line": 2,
+              "column": 4581,
+              "offset": 4636
+            }
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n  \r\n",
+          "position": {
+            "start": {
+              "line": 2,
+              "column": 4581,
+              "offset": 4636
+            },
+            "end": {
+              "line": 4,
+              "column": 1,
+              "offset": 4641
+            }
+          }
+        },
+        {
+          "type": "element",
+          "name": "w:footnotes",
+          "attributes": {
+            "xmlns:wpc": "http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas",
+            "xmlns:cx": "http://schemas.microsoft.com/office/drawing/2014/chartex",
+            "xmlns:cx1": "http://schemas.microsoft.com/office/drawing/2015/9/8/chartex",
+            "xmlns:cx2": "http://schemas.microsoft.com/office/drawing/2015/10/21/chartex",
+            "xmlns:cx3": "http://schemas.microsoft.com/office/drawing/2016/5/9/chartex",
+            "xmlns:cx4": "http://schemas.microsoft.com/office/drawing/2016/5/10/chartex",
+            "xmlns:cx5": "http://schemas.microsoft.com/office/drawing/2016/5/11/chartex",
+            "xmlns:cx6": "http://schemas.microsoft.com/office/drawing/2016/5/12/chartex",
+            "xmlns:cx7": "http://schemas.microsoft.com/office/drawing/2016/5/13/chartex",
+            "xmlns:cx8": "http://schemas.microsoft.com/office/drawing/2016/5/14/chartex",
+            "xmlns:mc": "http://schemas.openxmlformats.org/markup-compatibility/2006",
+            "xmlns:aink": "http://schemas.microsoft.com/office/drawing/2016/ink",
+            "xmlns:am3d": "http://schemas.microsoft.com/office/drawing/2017/model3d",
+            "xmlns:o": "urn:schemas-microsoft-com:office:office",
+            "xmlns:r": "http://schemas.openxmlformats.org/officeDocument/2006/relationships",
+            "xmlns:m": "http://schemas.openxmlformats.org/officeDocument/2006/math",
+            "xmlns:v": "urn:schemas-microsoft-com:vml",
+            "xmlns:wp14": "http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing",
+            "xmlns:wp": "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing",
+            "xmlns:w10": "urn:schemas-microsoft-com:office:word",
+            "xmlns:w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main",
+            "xmlns:w14": "http://schemas.microsoft.com/office/word/2010/wordml",
+            "xmlns:w15": "http://schemas.microsoft.com/office/word/2012/wordml",
+            "xmlns:w16cex": "http://schemas.microsoft.com/office/word/2018/wordml/cex",
+            "xmlns:w16cid": "http://schemas.microsoft.com/office/word/2016/wordml/cid",
+            "xmlns:w16": "http://schemas.microsoft.com/office/word/2018/wordml",
+            "xmlns:w16sdtdh": "http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash",
+            "xmlns:w16se": "http://schemas.microsoft.com/office/word/2015/wordml/symex",
+            "xmlns:wpg": "http://schemas.microsoft.com/office/word/2010/wordprocessingGroup",
+            "xmlns:wpi": "http://schemas.microsoft.com/office/word/2010/wordprocessingInk",
+            "xmlns:wne": "http://schemas.microsoft.com/office/word/2006/wordml",
+            "xmlns:wps": "http://schemas.microsoft.com/office/word/2010/wordprocessingShape",
+            "mc:Ignorable": "w14 w15 w16se w16cid w16 w16cex w16sdtdh wp14"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "w:footnote",
+              "attributes": {
+                "w:type": "separator",
+                "w:id": "-1"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:p",
+                  "attributes": {
+                    "w14:paraId": "02476DA2",
+                    "w14:textId": "77777777"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:r",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:separator",
+                          "attributes": {},
+                          "children": [],
+                          "position": {
+                            "start": {
+                              "line": 4,
+                              "column": 2491,
+                              "offset": 7131
+                            },
+                            "end": {
+                              "line": 4,
+                              "column": 2505,
+                              "offset": 7145
+                            }
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 4,
+                          "column": 2486,
+                          "offset": 7126
+                        },
+                        "end": {
+                          "line": 4,
+                          "column": 2511,
+                          "offset": 7151
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 4,
+                      "column": 2373,
+                      "offset": 7013
+                    },
+                    "end": {
+                      "line": 4,
+                      "column": 2517,
+                      "offset": 7157
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 4,
+                  "column": 2332,
+                  "offset": 6972
+                },
+                "end": {
+                  "line": 4,
+                  "column": 2530,
+                  "offset": 7170
+                }
+              }
+            },
+            {
+              "type": "element",
+              "name": "w:footnote",
+              "attributes": {
+                "w:type": "continuationSeparator",
+                "w:id": "0"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:p",
+                  "attributes": {
+                    "w14:paraId": "4F9053E7",
+                    "w14:textId": "77777777"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:r",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:continuationSeparator",
+                          "attributes": {},
+                          "children": [],
+                          "position": {
+                            "start": {
+                              "line": 4,
+                              "column": 2700,
+                              "offset": 7340
+                            },
+                            "end": {
+                              "line": 4,
+                              "column": 2726,
+                              "offset": 7366
+                            }
+                          }
+                        }
+                      ],
+                      "position": {
+                        "start": {
+                          "line": 4,
+                          "column": 2695,
+                          "offset": 7335
+                        },
+                        "end": {
+                          "line": 4,
+                          "column": 2732,
+                          "offset": 7372
+                        }
+                      }
+                    }
+                  ],
+                  "position": {
+                    "start": {
+                      "line": 4,
+                      "column": 2582,
+                      "offset": 7222
+                    },
+                    "end": {
+                      "line": 4,
+                      "column": 2738,
+                      "offset": 7378
+                    }
+                  }
+                }
+              ],
+              "position": {
+                "start": {
+                  "line": 4,
+                  "column": 2530,
+                  "offset": 7170
+                },
+                "end": {
+                  "line": 4,
+                  "column": 2751,
+                  "offset": 7391
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 4,
+              "column": 1,
+              "offset": 4641
+            },
+            "end": {
+              "line": 4,
+              "column": 2765,
+              "offset": 7405
+            }
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n  ",
+          "position": {
+            "start": {
+              "line": 4,
+              "column": 2765,
+              "offset": 7405
+            },
+            "end": {
+              "line": 5,
+              "column": 3,
+              "offset": 7408
+            }
+          }
+        },
+        {
+          "type": "element",
+          "name": "b:Sources",
+          "attributes": {
+            "xmlns:b": "http://schemas.openxmlformats.org/officeDocument/2006/bibliography",
+            "xmlns": "http://schemas.openxmlformats.org/officeDocument/2006/bibliography",
+            "SelectedStyle": "/APASixthEditionOfficeOnline.xsl",
+            "StyleName": "APA",
+            "Version": "6"
+          },
+          "children": [],
+          "position": {
+            "start": {
+              "line": 5,
+              "column": 3,
+              "offset": 7408
+            },
+            "end": {
+              "line": 5,
+              "column": 255,
+              "offset": 7660
+            }
+          }
+        },
+        {
+          "type": "text",
+          "value": "\n  ",
+          "position": {
+            "start": {
+              "line": 5,
+              "column": 255,
+              "offset": 7660
+            },
+            "end": {
+              "line": 6,
+              "column": 3,
+              "offset": 7663
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 2,
+          "column": 1,
+          "offset": 56
+        },
+        "end": {
+          "line": 6,
+          "column": 16,
+          "offset": 7676
+        }
+      }
+    }
+  ]
+}

@@ -1,17 +1,13 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import tar from 'tar-stream'
-import { WritableStreamBuffer } from 'stream-buffers'
-import { streamToBuffer } from '@jorgeferrero/stream-to-buffer'
 import { Writable } from 'stream'
 import axios from 'axios'
 import FormData from 'form-data'
-import { fsyncSync } from 'fs'
-import { writeFile } from 'fs/promises'
+import { cls } from '../../public/jote-article'
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   req.statusCode = 200
   const tex = req.body
-  const tarStream = new WritableStreamBuffer()
   console.log('Received tex')
 
   const tararr: any[] = []
@@ -26,7 +22,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const pack = tar.pack()
   console.log('Packing tarball')
   pack.entry({ name: 'article.tex' }, tex)
-  pack.on('finish', function () {})
+  pack.entry({ name: 'jote-article.cls' }, cls)
+  pack.on('finish', function () {
+    //
+  })
   console.log('Laying pipe')
 
   pack.finalize()
@@ -68,3 +67,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       })
   })
 }
+
+export default handler

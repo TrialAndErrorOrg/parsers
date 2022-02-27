@@ -1,0 +1,34 @@
+{
+  "root": "libs/citations/crossref-json",
+  "sourceRoot": "libs/citations/crossref-json/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/citations/crossref-json/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/citations/crossref-json"],
+      "options": {
+        "jestConfig": "libs/citations/crossref-json/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/citations/crossref-json",
+        "tsConfig": "libs/citations/crossref-json/tsconfig.lib.json",
+        "packageJson": "libs/citations/crossref-json/package.json",
+        "main": "libs/citations/crossref-json/src/index.ts",
+        "assets": ["libs/citations/crossref-json/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

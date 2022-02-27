@@ -1,6 +1,6 @@
-import { visit } from '@jote/utils'
+import { visit } from 'misc'
 import { is } from 'unist-util-is'
-import { Front, isElement, Root } from 'jjast'
+import { Front, isElement, Root } from 'jast-types'
 import { VFile } from 'vfile'
 import { Node } from 'unist'
 import { toCSL } from 'jast-util-to-csl'

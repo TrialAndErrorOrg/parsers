@@ -1,0 +1,23 @@
+{
+  "root": "libs/processors/jote-docx-tex",
+  "sourceRoot": "libs/processors/jote-docx-tex/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/processors/jote-docx-tex/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/processors/jote-docx-tex"],
+      "options": {
+        "jestConfig": "libs/processors/jote-docx-tex/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

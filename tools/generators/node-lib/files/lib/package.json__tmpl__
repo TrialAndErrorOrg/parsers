@@ -1,0 +1,16 @@
+{
+  "name": "<%= importPath %>",
+  "version": "0.0.1",
+  "license": "GPL-3-0-or-later",
+  "repository": "https://github.com/journaloftrialanderror/jote",
+  "author": "<%= author %> <<%= email %>>",
+  "type": "module",
+  "description": "<%= description %>",
+  "keywords": [
+    "unified",
+    "abstract",
+    "syntax",
+    "tree",
+    "ast"
+  ]
+}

@@ -31,3 +31,27 @@ export const TexIcon = () => (
     type="code"
   />
 )
+
+export const GenericIcon = ({ type }: { type: string }) => {
+  switch (type.replace(/[./-]/g, '')) {
+    case 'tex':
+      return <TexIcon />
+    case 'jats':
+      return <JATSIcon />
+    case 'docx':
+    case 'word':
+      return <WordIcon />
+    default:
+      return (
+        <FileIcon
+          extension={type}
+          color="whitesmoke"
+          labelColor="grey"
+          radius={4}
+          labelUppercase
+          labelTextColor="whitesmoke"
+          type="code"
+        />
+      )
+  }
+}

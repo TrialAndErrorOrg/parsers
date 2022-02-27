@@ -1,8 +1,7 @@
 name: vercel-deploy-preview
-on: 
+on:
   push:
-    branches:
-      main
+    branches: main
   pull_request:
 jobs:
   deploy:
@@ -10,20 +9,20 @@ jobs:
     environment: deploy
     steps:
       - uses: actions/checkout@v2
-      - name: "PR"
-        if:   ${{ github.event_name == 'pull_request'}}
+      - name: 'PR'
+        if: ${{ github.event_name == 'pull_request'}}
         uses: amondnet/vercel-action@v20
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
-          github-token: ${{ secrets.GITHUB_TOKEN }} #Optional 
-          vercel-org-id: ${{ secrets.ORG_ID}}  #Required
-          vercel-project-id: ${{ secrets.PROJECT_ID}} #Required 
-      - name: "Deploy to prod"
-        if:   ${{ github.event_name != 'pull_request'}}
+          github-token: ${{ secrets.GITHUB_TOKEN }} #Optional
+          vercel-org-id: ${{ secrets.ORG_ID}} #Required
+          vercel-project-id: ${{ secrets.PROJEID}} #Required
+      - name: 'Deploy to prod'
+        if: ${{ github.event_name != 'pull_request'}}
         uses: amondnet/vercel-action@v20
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
-          github-token: ${{ secrets.GITHUB_TOKEN }} #Optional 
-          vercel-org-id: ${{ secrets.ORG_ID}}  #Required
-          vercel-project-id: ${{ secrets.PROJECT_ID}} #Required
+          github-token: ${{ secrets.GITHUB_TOKEN }} #Optional
+          vercel-org-id: ${{ secrets.ORG_ID}} #Required
+          vercel-project-id: ${{ secrets.PROJEID}} #Required
           vercel-args: '--prod'

@@ -1,0 +1,10 @@
+import {Node} from 'unist'
+import { <%= importPath %> } from './<%= importPath %>';
+
+describe('<%= importPath %>', () => {
+
+    it('should work', () => {
+
+        expect(<%= importPath %>({type:'root',children:[]} as Node)).toBeDefined();
+    })
+})

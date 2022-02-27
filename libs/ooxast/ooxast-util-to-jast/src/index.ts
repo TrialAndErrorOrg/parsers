@@ -1,1 +1,2 @@
-export * from './lib/ooxast-ooxast-util-to-jast'
+export * from './lib/ooxast-util-to-jast'
+export * from './lib/types'

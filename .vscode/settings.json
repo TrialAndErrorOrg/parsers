@@ -12,5 +12,15 @@
   "xml.codeLens.enabled": true,
   "latex-workshop.latexindent.path": "/Library/TeX/texbin/latexindent",
   "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
-  "latex-workshop.latex.autoBuild.run": "never"
+  "latex-workshop.latex.autoBuild.run": "never",
+  "LineCount.excludes": [
+    "**/dist/**",
+    "**/.next/**",
+    "**/out/**",
+    "**/*.d.ts",
+    "**/*.spec.ts",
+    "**/node_modules/**",
+    "**/jats.ts",
+    "**/main.ts"
+  ]
 }

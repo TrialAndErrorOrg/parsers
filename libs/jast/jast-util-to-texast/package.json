@@ -9,7 +9,7 @@
     "unist-util-is": "5.0.0",
     "unist-util-visit": "4.0.0"
   },
-  "license": "GPL-3.0-or-later",
+  "license": "GPL-3-0-or-later",
   "repository": "https://github.com/journaloftrialanderror/jote",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",

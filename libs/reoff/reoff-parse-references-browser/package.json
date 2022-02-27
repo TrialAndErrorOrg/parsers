@@ -1,5 +1,16 @@
 {
   "name": "reoff-parse-references-browser",
   "version": "0.0.1",
-  "type": "module"
+  "type": "module",
+  "license": "GPL-3-0-or-later",
+  "repository": "https://github.com/journaloftrialanderror/jote",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "description": "",
+  "keywords": [
+    "unified",
+    "abstract",
+    "syntax",
+    "tree",
+    "ast"
+  ]
 }

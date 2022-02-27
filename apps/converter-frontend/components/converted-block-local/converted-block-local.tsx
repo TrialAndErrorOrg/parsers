@@ -1,7 +1,10 @@
 import { Box, Button, Code, Header, Loader, Text } from '@mantine/core'
+import { useClipboard } from '@mantine/hooks'
 import React, { useEffect, useState } from 'react'
 import { VFile } from 'vfile'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { FaClipboard, FaClipboardList } from 'react-icons/fa'
+import { HStack } from '../stack/stack'
 //import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 /* eslint-disable-next-line */
@@ -17,6 +20,7 @@ export interface ConvertedBlockLocalProps {
 export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
   const { input, options = {}, converter } = props
   const [vfile, setVFile] = useState<VFile | null>(null)
+  const clipboard = useClipboard({ timeout: 2000 })
   useEffect(() => {
     ;(async () => {
       setVFile(await converter(input, options))
@@ -66,21 +70,45 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
         </>
       )}
       {vfile ? (
-        <Box sx={{ overflow: 'scroll', maxHeight: 500, paddingBottom: 20 }}>
+        <Box
+          sx={{
+            overflow: 'scroll',
+            maxHeight: '70vh',
+            paddingBottom: 20,
+            width: 'auto',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-end',
+          }}
+        >
+          <Button
+            style={{
+              position: 'absolute',
+              marginTop: 20,
+              marginRight: 10,
+              marginBottom: -200,
+            }}
+            sx={{
+              width: 100,
+            }}
+            onClick={() => clipboard.copy(String(vfile))}
+          >
+            <HStack spacing={5}>
+              <FaClipboardList />
+              <Text>{clipboard.copied ? 'Copied!' : 'Copy'}</Text>
+            </HStack>
+          </Button>
           <SyntaxHighlighter
             //wrapLines
             wrapLongLines
             language="latex"
-            showLineNumbers
-            // CodeTag={Code}
+            CodeTag={Code}
             //showInlineLineNumbers
             //     style={nord}
-            // sx={{
             //   maxW: '80%',
             //   maxH: 200,
             //   overflowX: 'auto',
             //   whiteSpace: 'pre-wrap',
-            // }}
           >
             {String(vfile)}
           </SyntaxHighlighter>

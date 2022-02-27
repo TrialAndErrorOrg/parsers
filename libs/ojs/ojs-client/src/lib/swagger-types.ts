@@ -181,7 +181,7 @@ export interface paths {
       responses: {
         /** An array of the requested submission files. */
         200: {
-          schema: definitions['SubmissionFileSummary'][]
+          schema: { itemsMax: number; items: definitions['SubmissionFile'][] }
         }
         /**
          * You do not have permission to view the requested files.

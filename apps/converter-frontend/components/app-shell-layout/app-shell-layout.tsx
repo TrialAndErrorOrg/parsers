@@ -73,6 +73,7 @@ export function AppShellLayout(props: AppShellLayoutProps) {
           <Navbar.Section grow mt="lg">
             <VStack>
               <Link href="/">Convert</Link>
+              <Link href="/ojs">OJS Integration</Link>
               <Link href="/authors">Authors</Link>
             </VStack>
           </Navbar.Section>

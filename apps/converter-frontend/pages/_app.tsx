@@ -14,34 +14,32 @@ export default function App(props: AppProps) {
   } = props
 
   return (
-    <>
-      <Head>
-        <title>Covertin</title>
-        <meta
-          name="viewport"
-          content="minimum-scale=1, initial-scale=1, width=device-width"
-        />
-      </Head>
-      <SessionProvider session={session}>
-        <SWRConfig
-          value={{
-            fetcher,
+    <SessionProvider session={session}>
+      <SWRConfig
+        value={{
+          fetcher,
+        }}
+      >
+        <MantineProvider
+          withGlobalStyles
+          withNormalizeCSS
+          theme={{
+            /** Put your mantine theme override here */
+            colorScheme: 'light',
           }}
         >
-          <MantineProvider
-            withGlobalStyles
-            withNormalizeCSS
-            theme={{
-              /** Put your mantine theme override here */
-              colorScheme: 'light',
-            }}
-          >
-            <AppShellLayout>
-              <Component {...pageProps} />
-            </AppShellLayout>
-          </MantineProvider>
-        </SWRConfig>
-      </SessionProvider>
-    </>
+          <Head>
+            <title>Covertin</title>
+            <meta
+              name="viewport"
+              content="minimum-scale=1, initial-scale=1, width=device-width"
+            />
+          </Head>
+          <AppShellLayout>
+            <Component {...pageProps} />
+          </AppShellLayout>
+        </MantineProvider>
+      </SWRConfig>
+    </SessionProvider>
   )
 }

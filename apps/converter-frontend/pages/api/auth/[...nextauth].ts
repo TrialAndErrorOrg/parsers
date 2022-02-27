@@ -9,7 +9,6 @@ console.log({
   tenantId: process.env.AZURE_TENANT_ID!,
 })
 export default NextAuth({
-  secret: process.env.NEXTAUTH_SECRET,
   providers: [
     // OAuth authentication providers...
     AzureADProvider({

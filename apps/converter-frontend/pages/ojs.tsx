@@ -94,6 +94,8 @@ export default function Index() {
         </HStack>
       </Container>
 
+      <Settings />
+
       <Dropzone
         onDrop={async (files) => {
           const buf = await files[0].arrayBuffer()

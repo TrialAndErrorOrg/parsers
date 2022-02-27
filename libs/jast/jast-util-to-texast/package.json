@@ -1,5 +1,5 @@
 {
-  "name": "@jote/jast-jast-util-to-texast",
+  "name": "jast-util-to-texast",
   "version": "0.0.1",
   "dependencies": {
     "biblatex-csl-converter": "^2.0.4",

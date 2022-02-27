@@ -5,8 +5,6 @@
   "repository": "https://github.com/journaloftrialanderror/jote",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "main": "./src/index.js",
-  "browser": "./src/index-browser.js",
   "description": "",
   "keywords": [
     "unified",

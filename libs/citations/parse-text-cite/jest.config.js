@@ -1,5 +1,5 @@
 const config = {
-  displayName: 'citations-parse-text-cite',
+  displayName: 'parse-text-cite',
   preset: '../../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -10,12 +10,12 @@ const config = {
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]sx?$': 'ts-jest',
-    '^.+\\.ne$': 'jest-transform-nearley',
+    //  '^.+\\.ne$': 'jest-transform-nearley',
   },
   transformIgnorePatterns: [],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'ne'],
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../../../coverage/libs/citations/parse-text-cite',
-  extensionsToTreatAsEsm: ['.ts', '.ne'],
+  extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: {
     '^(\\.{1,2}/.*)\\.js$': '$1',
   },

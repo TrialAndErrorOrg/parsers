@@ -1,5 +1,5 @@
 {
-  "name": "@jote/jast-jast-util-to-csl",
+  "name": "jast-util-to-csl",
   "version": "0.0.1",
   "dependencies": {
     "csl-json": "^0.1.0",

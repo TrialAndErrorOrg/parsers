@@ -1,5 +1,5 @@
 {
-  "name": "@jote/texast-texast-util-to-latex",
+  "name": "texast-util-to-latex",
   "version": "0.0.1",
   "dependencies": {
     "escape-latex": "^1.2.0",

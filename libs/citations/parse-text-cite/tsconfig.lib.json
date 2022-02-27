@@ -6,5 +6,5 @@
     "types": ["node"]
   },
   "exclude": ["**/apa.ts", "**/*.spec.ts", "**/*.test.ts"],
-  "include": ["**/*.ts", "src/lib/oldregex"]
+  "include": ["**/*.ts"]
 }

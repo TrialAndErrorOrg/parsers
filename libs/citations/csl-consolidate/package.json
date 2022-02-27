@@ -1,5 +1,5 @@
 {
-  "name": "@jote/citations-csl-consolidate",
+  "name": "csl-consolidate",
   "version": "0.0.1",
   "type": "module",
   "license": "GPL-3-0-or-later",

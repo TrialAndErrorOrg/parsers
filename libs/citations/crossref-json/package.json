@@ -1,5 +1,5 @@
 {
-  "name": "@jote/citations-crossref-json",
+  "name": "crossref-json",
   "version": "0.0.1",
   "license": "GPL-3-0-or-later",
   "repository": "https://github.com/journaloftrialanderror/jote",

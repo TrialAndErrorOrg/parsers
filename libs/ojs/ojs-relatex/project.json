@@ -1,0 +1,26 @@
+{
+  "root": "libs/ojs/ojs-relatex",
+  "sourceRoot": "libs/ojs/ojs-relatex/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ojs/ojs-relatex/**/*.ts"]
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ojs/ojs-relatex",
+        "tsConfig": "libs/ojs/ojs-relatex/tsconfig.lib.json",
+        "packageJson": "libs/ojs/ojs-relatex/package.json",
+        "main": "libs/ojs/ojs-relatex/src/index.ts",
+        "assets": ["libs/ojs/ojs-relatex/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

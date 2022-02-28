@@ -9,12 +9,13 @@ export interface PreambleCommand {
 }
 
 export function addPreamble(tree: Root, commands: PreambleCommand[]) {
+  if (commands.length === 0) return tree
   visit(tree, 'preamble', (pre: Preamble) => {
     pre.children.push(
       ...[
         ...commands.flatMap((c) => [
           preambleCommandToCommand(c),
-          { type: 'text', value: '\\n' } as any,
+          { type: 'text', value: '\n' } as any,
         ]),
       ]
     )
@@ -24,6 +25,7 @@ export function addPreamble(tree: Root, commands: PreambleCommand[]) {
 }
 
 function preambleCommandToCommand(precom: PreambleCommand): Command {
+  console.log(precom)
   const opts: CommandArg[] = precom.opts
     ? precom.opts.map(
         (arg) =>
@@ -38,7 +40,7 @@ function preambleCommandToCommand(precom: PreambleCommand): Command {
           } as CommandArg)
       )
     : []
-  const args: CommandArg[] = precom.args
+  const args: CommandArg[] = precom.args?.length
     ? precom.args.map(
         (arg) =>
           ({

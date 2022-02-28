@@ -9,7 +9,7 @@ export interface SettingsProps {}
 
 export function Settings(props: SettingsProps) {
   //const [f, setF] = {}
-  console.log(process.env.NEXT_PUBLIC_OJS_TOKEN)
+  //console.log(process.env.NEXT_PUBLIC_OJS_TOKEN)
   const form = useForm({
     initialValues: {
       token:

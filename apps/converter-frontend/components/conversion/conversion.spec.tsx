@@ -1,11 +1,10 @@
-import React from 'react'
 import { render } from '@testing-library/react'
 
-import Index from '../pages/remote'
+import Conversion from './conversion'
 
-describe('Index', () => {
+describe('Conversion', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Index />)
+    const { baseElement } = render(<Conversion />)
     expect(baseElement).toBeTruthy()
   })
 })

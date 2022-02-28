@@ -47,12 +47,12 @@ export function AuthAuthorPage(props: { query?: Record<string, any> }) {
   }
 
   // const sortedbyissue = data?.items?.reduce((acc, curr) => {
-  //   console.log(acc)
-  //   console.log(curr)
+  //   //console.log(acc)
+  //   //console.log(curr)
   //   acc[curr.issueId || 0] = [...(acc[curr.issueId] || []), curr]
   //   return acc
   // }, {})
-  // console.log(sortedbyissue)
+  // //console.log(sortedbyissue)
   return (
     <VStack spacing={40} sx={{ alignItems: 'flex-start' }} align="flex-start">
       {/* {Object.entries(sortedbyissue).map(([issue, entry]) => (
@@ -84,13 +84,5 @@ export function AuthAuthorPage(props: { query?: Record<string, any> }) {
 export default AuthorPage
 
 export async function getServerSideProps() {
-  console.log('page')
-  console.log({
-    nextauth: process.env.NEXTAUTH_URL,
-    secret: process.env.NEXTAUTH_SECRET,
-    clientId: process.env.AZURE_ID,
-    clientSecret: process.env.AZURE_SECRET,
-    tenantId: process.env.AZURE_TENANT_ID,
-  })
   return { props: {} }
 }

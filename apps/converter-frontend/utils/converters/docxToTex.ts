@@ -9,6 +9,8 @@ import { unified } from 'unified'
 import { docxToVFile } from 'docx-to-vfile'
 import rejourRelatex from 'rejour-relatex'
 import relatexStringify from 'relatex-stringify'
+import { PreambleCommand } from 'texast-util-add-preamble'
+import relatexAddPreamble from 'relatex-add-preamble'
 
 export async function docxToTexConverter(
   input: ArrayBuffer,
@@ -16,9 +18,10 @@ export async function docxToTexConverter(
     citationType?: 'mendeley' | 'native' | 'citavi' | 'zotero' | 'endnote'
     url?: string
     mailto?: string
+    preamble?: PreambleCommand[]
   } = {}
 ): Promise<VFile> {
-  const { citationType: type, url: apiUrl, mailto } = options
+  const { citationType: type, url: apiUrl, mailto, preamble } = options
 
   const uint = new Uint8Array(input)
   const vfile = await docxToVFile(uint)
@@ -51,6 +54,7 @@ export async function docxToTexConverter(
         options: ['empirical', 'author-date'],
       },
     })
+    .use(relatexAddPreamble, preamble || [])
     .use(relatexStringify)
 
   return proc.process(vfile)

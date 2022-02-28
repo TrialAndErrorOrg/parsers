@@ -33,12 +33,12 @@ export const FileReel = (props: {
   /**
    * OJS doesnt just give a stage id per file....
    */
-  console.log(data?.items[data?.items?.length - 1])
+  //console.log(data?.items[data?.items?.length - 1])
   const furthestStage = getStageId(data?.items[data?.items?.length - 1])
 
   const reviewRounds = furthestStage === 5 ? 1 : furthestStage === 7 ? 2 : 0
 
-  console.log(furthestStage)
+  //console.log(furthestStage)
   const stagesss = [
     '',
     'Submission',
@@ -69,8 +69,8 @@ export const FileReel = (props: {
     <Tabs defaultValue={'production'}>
       {Object.entries(sortedFiles).map(([stageId, data]) => {
         const stageInt = parseInt(stageId) ?? 0
-        console.log(stageInt)
-        console.log(data)
+        //console.log(stageInt)
+        //console.log(data)
         return (
           <Tabs.Tab label={stagesss[stageInt]} key={stagesss[stageInt]}>
             <FileStage

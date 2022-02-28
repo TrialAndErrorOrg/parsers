@@ -15,7 +15,7 @@ export const MetaItem = ({
   extra?: any
   options?: { showEmpty?: boolean }
 }) => {
-  console.log(value)
+  //console.log(value)
   return (
     <VStack spacing={2} key={datakey}>
       {/* @ts-expect-error booo  */}

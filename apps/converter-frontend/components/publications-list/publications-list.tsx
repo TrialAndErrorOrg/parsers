@@ -70,8 +70,8 @@ export function PublicationsList(props: PublicationsListProps) {
     authors: item?.publications?.[0]?.authorsString || '',
   }))
 
-  console.log(error)
-  console.log(data)
+  //console.log(error)
+  //console.log(data)
   return (
     <>
       {data && (

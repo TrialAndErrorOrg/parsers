@@ -15,6 +15,7 @@
     "jast-util-to-texast": "libs/jast/jast-util-to-texast",
     "jote": "apps/jote",
     "ojs-ojs-client": "libs/ojs/ojs-client",
+    "ojs-ojs-relatex": "libs/ojs/ojs-relatex",
     "ooxast": "libs/ooxast/ooxast",
     "ooxast-util-citations": "libs/ooxast/ooxast-util-citations",
     "ooxast-util-get-style": "libs/ooxast/ooxast-util-get-style",

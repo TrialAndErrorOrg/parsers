@@ -20,7 +20,7 @@ export const Citations = ({
     ?.replace(/\\r/g, '')
     ?.replace(/\n([A-Z])/gm, '\n\n\n$1')
     ?.replace(/\n([^A-Z])/g, '$1')
-  console.log(splitextra)
+  //console.log(splitextra)
   const { data, error } = useSWR(url, (resource: string, init: any) =>
     fetch(url, {
       method: 'post',
@@ -36,7 +36,7 @@ export const Citations = ({
       </Container>
     )
   }
-  console.log(data)
+  //console.log(data)
 
   const cite = new Cite(data)
   const biblatex = cite.format('biblatex')

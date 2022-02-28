@@ -5,6 +5,8 @@ import { VFile } from 'vfile'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { FaClipboard, FaClipboardList } from 'react-icons/fa'
 import { HStack } from '../stack/stack'
+import shallow from 'zustand/shallow'
+import { useStore } from '../../utils/store'
 //import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 /* eslint-disable-next-line */
@@ -12,20 +14,25 @@ export interface ConvertedBlockLocalProps {
   input: ArrayBuffer
   converter: (
     input: ArrayBuffer,
-    options: { [key: string]: string }
+    options: { [key: string]: any | any[] }
   ) => Promise<VFile>
-  options?: { [key: string]: string }
+  options?: { [key: string]: any | any[] }
 }
 
 export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
   const { input, options = {}, converter } = props
   const [vfile, setVFile] = useState<VFile | null>(null)
+  const [preamble] = useStore((state) => [state.preamble], shallow)
   const clipboard = useClipboard({ timeout: 2000 })
+
+  if (preamble) {
+    options['preamble'] = preamble
+  }
   useEffect(() => {
     ;(async () => {
       setVFile(await converter(input, options))
     })()
-  }, [input])
+  }, [input, preamble])
 
   return (
     <Box>

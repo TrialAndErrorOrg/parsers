@@ -18,7 +18,7 @@ export async function docxToJatsConverter(
 ): Promise<VFile> {
   const { citationType: type, url: apiUrl, mailto } = options
 
-  console.log(process.env.NODE_ENV)
+  //console.log(process.env.NODE_ENV)
 
   const uint = new Uint8Array(input)
   const vfile = await docxToVFile(uint)

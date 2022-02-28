@@ -1,7 +1,12 @@
 import { Box, Button, Text } from '@mantine/core'
+import { useStore } from '../../utils/store'
 import { definitions } from 'ojs-client'
 import React from 'react'
+import { FaDownload, FaFileDownload } from 'react-icons/fa'
+import { ImShuffle } from 'react-icons/im'
+import shallow from 'zustand/shallow'
 import { GenericIcon } from '../ext-icon/ext-icon'
+import qs from 'querystring'
 import { HStack } from '../stack/stack'
 
 export const FileStage = (props: {
@@ -12,7 +17,17 @@ export const FileStage = (props: {
   data: definitions['SubmissionFile'][]
 }) => {
   const { submissionId, stageId, apiToken, endpoint, data } = props
+  const { setInput } = useStore(
+    (state) => ({ setInput: state.setInput }),
+    shallow
+  )
 
+  console.log(data)
+  const fetchFile = async (url: string) => {
+    setInput(
+      await (await fetch(`/api/ojs/file?url=${encodeURIComponent(url)}`)).json()
+    )
+  }
   return (
     <HStack
       spacing={20}
@@ -40,6 +55,8 @@ export const FileStage = (props: {
           <Text
             size="xs"
             sx={{
+              marginTop: 10,
+              marginBottom: 10,
               width: '70%',
               textAlign: 'center',
               overflowX: 'hidden',
@@ -57,7 +74,15 @@ export const FileStage = (props: {
           >
             {item.name?.en_US as string}
           </Text>
-          <Button onClick={() => console.log(item._href)}>Convert</Button>
+          <HStack>
+            <Button
+              leftIcon={<ImShuffle />}
+              onClick={() => fetchFile(item.url)}
+            ></Button>
+            <a href={item.url} download>
+              <FaFileDownload />
+            </a>
+          </HStack>
         </Box>
       ))}
     </HStack>

@@ -1,7 +1,9 @@
+import { getSID, replaceCookieRes } from '../../../utils/forgeCookie'
 import axios from 'axios'
 import { NextApiRequest, NextApiResponse } from 'next'
 import { getSession } from 'next-auth/react'
 import qs from 'querystring'
+import { setCookie } from '../../../utils/cookies'
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { apiToken: token, searchPhrase, endpoint, ...rest } = req.query
@@ -9,15 +11,19 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const session = await getSession({ req })
   if (session) {
     try {
-      const result = (
-        await axios.get(
-          `${process.env.OJS_API}/submissions?apiToken=${
-            process.env.OJS_TOKEN
-          }${searchPhrase ? `&search-phrase=${searchPhrase}` : ''}${
-            rest ? `&${qs.stringify(rest)}` : ''
-          }`
-        )
-      ).data
+      const response = await axios.get(
+        `${process.env.OJS_API}/submissions?apiToken=${process.env.OJS_TOKEN}${
+          searchPhrase ? `&search-phrase=${searchPhrase}` : ''
+        }${rest ? `&${qs.stringify(rest)}` : ''}`,
+
+        { headers: { cookie: `OJSSID=${req.cookies.OJSSID}` } }
+      )
+      const result = response.data
+
+      const cookie = replaceCookieRes(response, req.headers.host || '')
+      setCookie(res, 'OJSSID', getSID(response.headers['set-cookie'] || ''), {
+        path: '/',
+      })
 
       res.status(200).json(result)
       return
@@ -37,13 +43,17 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const apiToken = token
 
   try {
-    const result = (
-      await axios.get(
-        `${endpoint}/submissions?apiToken=${apiToken}${
-          searchPhrase ? `&search-phrase=${searchPhrase}` : ''
-        }`
-      )
-    ).data
+    const response = await axios.get(
+      `${endpoint}/submissions?apiToken=${apiToken}${
+        searchPhrase ? `&search-phrase=${searchPhrase}` : ''
+      }`
+    )
+
+    const result = response.data
+
+    setCookie(res, 'OJSSID', getSID(response.headers['set-cookie'] || ''), {
+      path: '/',
+    })
 
     res.status(200).json(result)
   } catch (e) {

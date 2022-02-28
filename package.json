@@ -27,11 +27,13 @@
     "@nestjs/core": "^8.0.0",
     "@nestjs/platform-express": "^8.0.0",
     "@nrwl/next": "^13.7.2",
+    "@types/cookie": "^0.4.1",
     "@types/isomorphic-fetch": "^0.0.35",
     "adm-zip": "^0.5.9",
     "axios": "^0.25.0",
     "bcp-47-match": "^2.0.1",
     "citation-js": "^0.5.6",
+    "cookie": "^0.4.2",
     "core-js": "^3.6.5",
     "csl-json": "0.1.0",
     "dayjs": "^1.10.7",
@@ -72,7 +74,8 @@
     "vfile": "^5.3.0",
     "xast-util-from-xml": "^2.0.1",
     "xast-util-to-xml": "^3.0.0",
-    "xastscript": "^3.0.0"
+    "xastscript": "^3.0.0",
+    "zustand": "^3.7.0"
   },
   "devDependencies": {
     "@nestjs/schematics": "^8.0.0",

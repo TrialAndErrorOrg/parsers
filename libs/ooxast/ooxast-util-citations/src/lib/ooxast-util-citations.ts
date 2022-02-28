@@ -22,24 +22,27 @@ import {
 } from './types'
 import similarity from 'similarity'
 import { dateSim } from 'csl-consolidate'
+import { detectCitePlugin } from 'ooxast-util-citation-plugin'
+import { VFile } from 'vfile'
 
 const isT = convertElement<T>('w:t')
 const isInstrT = convertElement<T>('w:instrText')
 const isP = convertElement<P>('w:p')
 const isR = convertElement<R>('w:r')
 
-export const citationTypesWithSuffixedForm: Options['type'][] = ['mendeley']
+export const citationTypesWithSuffixedForm = ['mendeley', 'zotero']
 export interface Options {
-  type: 'mendeley' | 'native' | 'citavi' | 'zotero' | 'endnote'
   bibliography?: CSL[]
 }
 
 export function findCitations(
   tree: Node,
-  options: Options = { type: 'mendeley' }
+  vfile: VFile,
+  options: Options
 ): Root {
-  const { type } = options
-  const citations: any[] = []
+  const type = detectCitePlugin(tree)
+  vfile.data.citePlugin = type
+
   let references = false
   let citationCounter = 1
   visit(tree, isP, (p: P) => {
@@ -115,7 +118,7 @@ export function findCitations(
 
             const { instr, citation } = constructCitation(
               curr,
-              options.type,
+              type,
               citationCounter,
               options.bibliography
             )
@@ -129,10 +132,7 @@ export function findCitations(
                 ]) as T,
               ]) as R
             )
-            if (
-              citationTypesWithSuffixedForm.includes(options.type) &&
-              citation
-            ) {
+            if (citationTypesWithSuffixedForm.includes(type) && citation) {
               acc.push(
                 x('w:r', {}, [
                   ...(rpr ? [rpr] : []),
@@ -141,8 +141,10 @@ export function findCitations(
                       type: 'text',
                       value:
                         type === 'mendeley'
-                          ? citation?.mendeley.formattedCitation
-                          : citation.properties.formattedCitation,
+                          ? (citation as MendeleyCitation)?.mendeley
+                              .formattedCitation
+                          : (citation as ZoteroCitation).properties
+                              .formattedCitation,
                     } as Text,
                   ]) as T,
                 ]) as R
@@ -173,7 +175,7 @@ export function constructCitation(
   type: string,
   index: number,
   bibliography?: CSL[]
-): { citation: Citation; instr: string } {
+): { citation: MendeleyCitation | ZoteroCitation; instr: string } {
   switch (type) {
     case 'mendeley': {
       const citation = constructMendeleyCitation(curr, index, bibliography)
@@ -201,7 +203,6 @@ export function constructCitation(
       throw new Error(
         `Unknown citation type ${type}. Please select a valid type.`
       )
-      return
     }
   }
 }
@@ -376,10 +377,10 @@ function constructZoteroCitation(
   }, [])
 
   const mend: ZoteroCitation = {
-    ...curr,
     citationItems: zotCites as any,
     schema,
     properties,
+    citationID: curr.citationId,
   }
   return mend
 

@@ -4,7 +4,10 @@ import { Options } from '../types'
 
 export const paragraph = (node: Paragraph, options: Options = {}) => {
   const parbreak = options.parbreak === 'par' ? '\\parbreak' : '\n\n'
-  return shittyCombineCites(`${toLatex(node.children)}${parbreak}`)
+  const paragraph = `${toLatex(node.children)}${parbreak}`
+  //return paragraph
+
+  return shittyCombineCites(paragraph)
 }
 
 const shittyCombineCites = (par: string) =>

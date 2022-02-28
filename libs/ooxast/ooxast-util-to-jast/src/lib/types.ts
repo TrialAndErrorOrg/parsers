@@ -41,6 +41,7 @@ export interface Options {
     options?: string[]
     name: string
   }
+  citationType?: 'mendeley' | 'native' | 'citavi' | 'zotero' | 'endnote'
   parseCitation?: (citation: any) => any
   collectCitation?: (citation: any, index: number | string) => any
 
@@ -82,6 +83,7 @@ export interface Context {
   deleteNextRun: boolean
   relations: { [key: string]: string }
   citeKeys: string[]
+  citationType?: 'mendeley' | 'native' | 'citavi' | 'zotero' | 'endnote'
 }
 
 export type JWithProps = (

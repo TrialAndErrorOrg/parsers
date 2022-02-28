@@ -18,7 +18,10 @@ import reoffCite from 'reoff-cite'
 import reoffParseReferences from 'reoff-parse-references'
 
 //describe('fixtures', () => {
-const fromDocx = (path: string) =>
+const fromDocx = (
+  path: string,
+  citationType?: 'mendeley' | 'native' | 'citavi' | 'zotero' | 'endnote'
+) =>
   unified()
     .data('hey', 'ho')
     .use(reoffParse)
@@ -35,7 +38,7 @@ const fromDocx = (path: string) =>
     .use(
       reoffParseReferences // { mailto: 'support@centeroftrialanderror.com' }
     )
-    .use(reoffCite)
+    .use(reoffCite, { type: citationType || 'mendeley' })
     .use(() => (tree, vfile) => {
       console.log(vfile.data.bibliography)
       writeFileSync(
@@ -43,7 +46,7 @@ const fromDocx = (path: string) =>
         JSON.stringify(removePosition(tree), null, 2)
       )
     })
-    .use(reoffRejour)
+    .use(reoffRejour, { citationType: citationType || 'mendeley' })
     .use(
       () => (tree) =>
         writeFileSync(
@@ -82,7 +85,12 @@ it.each(dir)('parses correctly for %s', async (name: string) => {
   // } catch (e) {
   //   console.error(e)
   // }
-  const result = String(await fromDocx(join(fixtures, name)).process(docxIn))
+  const result = String(
+    await fromDocx(
+      join(fixtures, name),
+      name === 'zotero' ? 'zotero' : undefined
+    ).process(docxIn)
+  )
   await writeFile(join(fixtures, name, 'result.tex'), result)
 
   const j = await readFile(join(fixtures, name, 'test.jats.json'), {

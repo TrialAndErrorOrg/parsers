@@ -58,17 +58,24 @@ export function citation(j: J, citation: T, parent: Parent) {
       return
     }
 
-    if (citation.mendeley) {
+    if (citation.mendeley || citation.properties) {
+      const citetype = text.match('ZOTERO') ? 'zotero' : 'mendeley'
       // I want to create a link for each citation,
       // and want to catch things like (Person, 2020, 2021; Other 2020)
-      const sectionedCitations = citation.mendeley.formattedCitation.replace(
+      const formattedCitation =
+        citetype === 'zotero'
+          ? citation.properties.formattedCitation
+          : citation.mendeley.formattedCitation
+      const sectionedCitations = formattedCitation?.replace(
         /(\d{4}), (\d{4})/g,
         '$1; $2'
       )
 
       const formattedCitations = sectionedCitations.split(';')
 
-      j.deleteNextRun = true
+      if (citetype === 'mendeley') {
+        j.deleteNextRun = true
+      }
 
       return citation.citationItems.map(
         (cite: CitationItem | MendeleyCitationItem, i: number) => {
@@ -126,7 +133,8 @@ export function cslCitation(text: string) {
 
 function generateAuthYearFromCSL(csl: CSL): string {
   // by default Mendeley generates "ITEM-X" ids, which are bad
-  if (csl.id && !csl.id.match('ITEM')) {
+  console.log(csl)
+  if (csl?.id && `${!csl?.id}`?.match('ITEM')) {
     return csl.id
   }
 

@@ -95,7 +95,8 @@ InputContent ->
 NonCiteContent ->
   %Year {% id %}
  | NonYearParenContent {% id %}
- | %Lp NonYearParenContent:+ %Rp {% ([l,c,r]) => l+c.join('')+r %}
+ | %Lp NonYearParenContent:+ %Rp:? {% ([l,c,r]) => l+c.join('')+r %}
+ | %Lp:? NonYearParenContent:+ %Rp {% ([l,c,r]) => l+c.join('')+r %}
 
 NonYearParenContent ->
    %__ {% id %}
@@ -228,7 +229,7 @@ PreAuthsMiddle -> %Sem %__  GenericContent:+ {%
 
 Loc -> %Com %__ LocContent {% ([,,loc])=>loc %}
 
- LocContent ->
+LocContent ->
               GenericContent:+
               %__
               GenericContent:+ {% ([label,space,loc]) => {

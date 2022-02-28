@@ -1524,8 +1524,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "high"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "high"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -1544,8 +1551,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "low"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "low"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -1556,8 +1570,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -1596,8 +1617,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -1608,8 +1636,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -1713,8 +1748,15 @@
                           "value": "CS"
                         },
                         {
-                          "type": "text",
-                          "value": "neutral"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "neutral"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -1838,8 +1880,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "high"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "high"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -1850,8 +1899,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "low"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "low"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -1862,8 +1918,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -1927,8 +1990,15 @@
                           "value": "CS"
                         },
                         {
-                          "type": "text",
-                          "value": "neutral"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "neutral"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -1951,8 +2021,15 @@
                           "value": "CS"
                         },
                         {
-                          "type": "text",
-                          "value": "neutral"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "neutral"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -1963,8 +2040,15 @@
                           "value": "CS"
                         },
                         {
-                          "type": "text",
-                          "value": "neutral"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "neutral"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2042,8 +2126,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2054,8 +2145,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2079,8 +2177,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "high"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "high"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2091,8 +2196,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "low"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "low"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2120,8 +2232,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2132,8 +2251,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2161,8 +2287,15 @@
                           "value": "CS"
                         },
                         {
-                          "type": "text",
-                          "value": "neutral"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "neutral"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2173,8 +2306,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2298,8 +2438,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2310,8 +2457,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2322,8 +2476,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2334,8 +2495,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2346,8 +2514,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2358,8 +2533,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2370,8 +2552,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2382,8 +2571,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2394,8 +2590,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2406,8 +2609,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2418,8 +2628,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2430,8 +2647,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2550,8 +2774,15 @@
                               "value": "US"
                             },
                             {
-                              "type": "text",
-                              "value": "test"
+                              "type": "element",
+                              "name": "sub",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "test"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -2562,8 +2793,15 @@
                               "value": "US"
                             },
                             {
-                              "type": "text",
-                              "value": "test"
+                              "type": "element",
+                              "name": "sub",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "test"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -2632,8 +2870,15 @@
                               "value": "CS"
                             },
                             {
-                              "type": "text",
-                              "value": "neutral"
+                              "type": "element",
+                              "name": "sub",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "neutral"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -2644,8 +2889,15 @@
                               "value": "US"
                             },
                             {
-                              "type": "text",
-                              "value": "test"
+                              "type": "element",
+                              "name": "sub",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "test"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -2656,8 +2908,15 @@
                               "value": "US"
                             },
                             {
-                              "type": "text",
-                              "value": "test"
+                              "type": "element",
+                              "name": "sub",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "test"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -2668,8 +2927,15 @@
                               "value": "US"
                             },
                             {
-                              "type": "text",
-                              "value": "test"
+                              "type": "element",
+                              "name": "sub",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "test"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -2695,8 +2961,15 @@
                               "value": "US"
                             },
                             {
-                              "type": "text",
-                              "value": "high"
+                              "type": "element",
+                              "name": "sub",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "high"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -2707,8 +2980,15 @@
                               "value": "US"
                             },
                             {
-                              "type": "text",
-                              "value": "low"
+                              "type": "element",
+                              "name": "sub",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "low"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -2719,8 +2999,15 @@
                               "value": "US"
                             },
                             {
-                              "type": "text",
-                              "value": "test"
+                              "type": "element",
+                              "name": "sub",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "test"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -2731,8 +3018,15 @@
                               "value": "US"
                             },
                             {
-                              "type": "text",
-                              "value": "test"
+                              "type": "element",
+                              "name": "sub",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "test"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -2857,8 +3151,15 @@
                               "value": "US"
                             },
                             {
-                              "type": "text",
-                              "value": "test"
+                              "type": "element",
+                              "name": "sub",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "test"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -2869,8 +3170,15 @@
                               "value": "US"
                             },
                             {
-                              "type": "text",
-                              "value": "test"
+                              "type": "element",
+                              "name": "sub",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "test"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -2881,8 +3189,15 @@
                               "value": "US"
                             },
                             {
-                              "type": "text",
-                              "value": "high"
+                              "type": "element",
+                              "name": "sub",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "high"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -2893,8 +3208,15 @@
                               "value": "US"
                             },
                             {
-                              "type": "text",
-                              "value": "low"
+                              "type": "element",
+                              "name": "sub",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "low"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -2905,8 +3227,15 @@
                               "value": "US"
                             },
                             {
-                              "type": "text",
-                              "value": "test"
+                              "type": "element",
+                              "name": "sub",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "test"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -2917,8 +3246,15 @@
                               "value": "US"
                             },
                             {
-                              "type": "text",
-                              "value": "test"
+                              "type": "element",
+                              "name": "sub",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "test"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -3214,12 +3550,19 @@
                         },
                         {
                           "type": "element",
-                          "name": "italic",
+                          "name": "sup",
                           "attributes": {},
                           "children": [
                             {
-                              "type": "text",
-                              "value": "P"
+                              "type": "element",
+                              "name": "italic",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "P"
+                                }
+                              ]
                             }
                           ]
                         },
@@ -3251,12 +3594,19 @@
                         },
                         {
                           "type": "element",
-                          "name": "italic",
+                          "name": "sup",
                           "attributes": {},
                           "children": [
                             {
-                              "type": "text",
-                              "value": "P"
+                              "type": "element",
+                              "name": "italic",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "P"
+                                }
+                              ]
                             }
                           ]
                         },
@@ -3269,8 +3619,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -3281,8 +3638,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -3293,8 +3657,15 @@
                           "value": "US"
                         },
                         {
-                          "type": "text",
-                          "value": "test"
+                          "type": "element",
+                          "name": "sub",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "test"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -3734,8 +4105,15 @@
                               "value": "US"
                             },
                             {
-                              "type": "text",
-                              "value": "test"
+                              "type": "element",
+                              "name": "sub",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "test"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -3746,8 +4124,15 @@
                               "value": "US"
                             },
                             {
-                              "type": "text",
-                              "value": "test"
+                              "type": "element",
+                              "name": "sub",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "test"
+                                }
+                              ]
                             },
                             {
                               "type": "text",
@@ -6105,8 +6490,15 @@
                       "value": "US"
                     },
                     {
-                      "type": "text",
-                      "value": "test"
+                      "type": "element",
+                      "name": "sub",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "test"
+                        }
+                      ]
                     },
                     {
                       "type": "text",
@@ -6117,8 +6509,15 @@
                       "value": "US"
                     },
                     {
-                      "type": "text",
-                      "value": "test"
+                      "type": "element",
+                      "name": "sub",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "test"
+                        }
+                      ]
                     },
                     {
                       "type": "text",
@@ -6218,12 +6617,19 @@
                     },
                     {
                       "type": "element",
-                      "name": "italic",
+                      "name": "sup",
                       "attributes": {},
                       "children": [
                         {
-                          "type": "text",
-                          "value": "P"
+                          "type": "element",
+                          "name": "italic",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "P"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -6262,8 +6668,15 @@
                       "value": " denotes the number of participants. Even for the smaller scale of the pilot data, computing 11"
                     },
                     {
-                      "type": "text",
-                      "value": "4"
+                      "type": "element",
+                      "name": "sup",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "4"
+                        }
+                      ]
                     },
                     {
                       "type": "text",

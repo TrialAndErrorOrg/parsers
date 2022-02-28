@@ -1,0 +1,34 @@
+{
+  "root": "libs/ooxast/ooxast-util-citation-plugin",
+  "sourceRoot": "libs/ooxast/ooxast-util-citation-plugin/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ooxast/ooxast-util-citation-plugin/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ooxast/ooxast-util-citation-plugin"],
+      "options": {
+        "jestConfig": "libs/ooxast/ooxast-util-citation-plugin/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ooxast/ooxast-util-citation-plugin",
+        "tsConfig": "libs/ooxast/ooxast-util-citation-plugin/tsconfig.lib.json",
+        "packageJson": "libs/ooxast/ooxast-util-citation-plugin/package.json",
+        "main": "libs/ooxast/ooxast-util-citation-plugin/src/index.ts",
+        "assets": ["libs/ooxast/ooxast-util-citation-plugin/*.md"]
+      }
+    }
+  },
+  "tags": []
+}

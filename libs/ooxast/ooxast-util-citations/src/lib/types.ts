@@ -24,7 +24,20 @@ export interface CitationItem {
   locator?: string
 }
 
+export interface ZoteroCitation {
+  citationID: string
+  citationItems: MendeleyCitationItem[]
+  properties: ZoteroProperties
+  schema: string
+}
+
+export interface ZoteroProperties {
+  noteIndex: number
+  formattedCitation: string
+  plainCitation: string
+}
 export interface MendeleyCitation {
+  citationId: string
   citationItems: MendeleyCitationItem[]
   mendeley: Mendeley
   properties: MendeleyProperties

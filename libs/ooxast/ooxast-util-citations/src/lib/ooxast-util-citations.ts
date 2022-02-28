@@ -17,6 +17,8 @@ import {
   MendeleyProperties,
   MendeleyCitationItem,
   CitationItem,
+  ZoteroProperties,
+  ZoteroCitation,
 } from './types'
 import similarity from 'similarity'
 import { dateSim } from 'csl-consolidate'
@@ -36,6 +38,7 @@ export function findCitations(
   tree: Node,
   options: Options = { type: 'mendeley' }
 ): Root {
+  const { type } = options
   const citations: any[] = []
   let references = false
   let citationCounter = 1
@@ -110,20 +113,19 @@ export function findCitations(
               return acc
             }
 
-            const citation = constructCitation(
+            const { instr, citation } = constructCitation(
               curr,
               options.type,
               citationCounter,
               options.bibliography
             )
             citationCounter++
-            const val = `ADDIN CSL_CITATION ${JSON.stringify(citation)}`
 
             acc.push(
               x('w:r', {}, [
                 ...(rpr ? [rpr] : []),
                 x('w:instrText', {}, [
-                  { type: 'text', value: val } as Text,
+                  { type: 'text', value: instr } as Text,
                 ]) as T,
               ]) as R
             )
@@ -137,7 +139,10 @@ export function findCitations(
                   x('w:t', {}, [
                     {
                       type: 'text',
-                      value: citation.mendeley.formattedCitation,
+                      value:
+                        type === 'mendeley'
+                          ? citation?.mendeley.formattedCitation
+                          : citation.properties.formattedCitation,
                     } as Text,
                   ]) as T,
                 ]) as R
@@ -168,18 +173,30 @@ export function constructCitation(
   type: string,
   index: number,
   bibliography?: CSL[]
-) {
+): { citation: Citation; instr: string } {
   switch (type) {
-    case 'mendeley':
-      return constructMendeleyCitation(curr, index, bibliography)
-    case 'zotero':
-      return constructZoteroCitation(curr, index)
-    case 'endnote':
-      return constructEndnoteCitation(curr, index)
-    case 'native':
-      return constructMendeleyCitation(curr, index)
-    case 'citavi':
-      return constructCitaviCitation(curr, index)
+    case 'mendeley': {
+      const citation = constructMendeleyCitation(curr, index, bibliography)
+      return {
+        instr: `ADDIN CSL_CITATION ${JSON.stringify(citation)}`,
+        citation,
+      }
+    }
+    case 'zotero': {
+      const citation = constructZoteroCitation(curr, index, bibliography)
+      return {
+        instr: `ADDIN ZOTERO_ITEM CSL_CITATION ${JSON.stringify(
+          constructZoteroCitation(curr, index, bibliography)
+        )}`,
+        citation,
+      }
+    }
+    // case 'endnote':
+    //   return constructEndnoteCitation(curr, index)
+    // case 'native':
+    //   return constructMendeleyCitation(curr, index)
+    // case 'citavi':
+    //   return constructCitaviCitation(curr, index)
     default: {
       throw new Error(
         `Unknown citation type ${type}. Please select a valid type.`
@@ -211,6 +228,7 @@ export function constructCitation(
 
 //   return mend
 // }
+
 function constructMendeleyCitation(
   curr: Citation,
   index: number,
@@ -327,8 +345,45 @@ function alphaToNum(a: string) {
   return anum[a] || 0
 }
 
-function constructZoteroCitation(curr: Citation, index: number) {
-  throw new Error('Function not implemented.')
+// function constructZoteroCitation(curr: Citation, index: number) {
+//   throw new Error('Function not implemented.')
+// }
+
+function constructZoteroCitation(
+  curr: Citation,
+  index: number,
+  bibliography?: CSL[]
+): ZoteroCitation {
+  const schema =
+    'https://github.com/citation-style-language/schema/raw/master/csl-citation.json'
+
+  const properties: ZoteroProperties = {
+    noteIndex: 0,
+    formattedCitation: curr.originalText || '',
+    plainCitation: curr.originalText || '',
+  }
+
+  curr['citationId'] = curr['citationId'].replace('X', `${index}`)
+  if (!bibliography) {
+    const zot: any = { ...curr, schema, properties }
+    return zot
+  }
+
+  const zotCites = curr.citationItems.reduce((acc: CitationItem[], curr) => {
+    const betterCSL = findRef(curr, bibliography)
+    acc.push(betterCSL)
+    return acc
+  }, [])
+
+  const mend: ZoteroCitation = {
+    ...curr,
+    citationItems: zotCites as any,
+    schema,
+    properties,
+  }
+  return mend
+
+  //const citationItems
 }
 
 function constructEndnoteCitation(curr: Citation, index: number) {

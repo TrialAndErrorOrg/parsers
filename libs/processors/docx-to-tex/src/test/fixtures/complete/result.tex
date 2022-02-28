@@ -186,14 +186,14 @@
 
 
 @article{Heyvaert2014,
-    title       = {Analysis of single-case data: Randomisation tests for measures of effect size},
+    title       = {Randomization tests for single-case experiments: State of the art, state of the science, and state of the application},
     author      = {Heyvaert, Mieke and Onghena, Patrick},
-    number      = {3-4},
-    volume      = {24},
-    doi         = {10.1080/09602011.2013.818564},
+    number      = {1},
+    volume      = {3},
+    doi         = {10.1016/j.jcbs.2013.10.002},
     year        = {2014},
-    pages       = {507-527},
-    journal     = {Neuropsychological Rehabilitation}
+    pages       = {51-64},
+    journal     = {Journal of Contextual Behavioral Science}
 }
 
 
@@ -209,9 +209,14 @@
 
 
 @article{Kratochwill2010,
-    title       = {Single-case design technical documentation},
-    author      = {Kratochwill, T. R. and Hitchcock, J and Horner, Robert H and Levin, J R and Odom, S L and Rindskopf, D M and Shadish, W R},
-    year        = {2010}
+    title       = {Enhancing the scientific credibility of single-case intervention research: Randomization to the rescue},
+    author      = {Kratochwill, T. R. and Levin, Joel R},
+    number      = {2},
+    volume      = {15},
+    doi         = {10.1037/a0017736},
+    year        = {2010},
+    pages       = {124-144},
+    journal     = {Psychological Methods}
 }
 
 
@@ -363,6 +368,13 @@
 }
 
 
+@article{Kratochwill2010a,
+    title       = {Single-case design technical documentation},
+    author      = {Kratochwill, T. R. and Hitchcock, J and Horner, Robert H and Levin, J R and Odom, S L and Rindskopf, D M and Shadish, W R},
+    year        = {2010}
+}
+
+
 @article{Manolov2018,
     title       = {Analytical options for single-case experimental designs: Review and application to brain impairment},
     author      = {Manolov, Rumen and Solanas, Antonio},
@@ -406,6 +418,18 @@
     year        = {2020},
     pages       = {654-666},
     journal     = {Behavior Research Methods}
+}
+
+
+@article{Heyvaert2014a,
+    title       = {Analysis of single-case data: Randomisation tests for measures of effect size},
+    author      = {Heyvaert, Mieke and Onghena, Patrick},
+    number      = {3-4},
+    volume      = {24},
+    doi         = {10.1080/09602011.2013.818564},
+    year        = {2014},
+    pages       = {507-527},
+    journal     = {Neuropsychological Rehabilitation}
 }
 
 
@@ -581,6 +605,14 @@
 }
 
 
+@article{De2020a,
+    title       = {Shiny SCDA},
+    author      = {De, Tamal Kumar and Michiels, Bart and Vlaeyen, Johan W S and Onghena, Patrick},
+    number      = {Version 2.7},
+    year        = {2020}
+}
+
+
 @article{Levin2018,
     title       = {Comparison of randomization-test procedures for single-case multiple-baseline designs},
     author      = {Levin, Joel R. and Ferron, John M. and Gafurov, Boris S.},
@@ -652,33 +684,33 @@ In this manuscript, our purpose is to describe how we used a trial and error app
 
 \subsection{Classical Conditioning}
 
-Persistent pain—pain that is still felt after bodily tissue has healed—is a major healthcare problem that is poorly understood and, consequently, difficult to treat effectively \parencite{Breivik2006}\parencite{Tsang2008}\parencite{Costa2009}\parencite{Foster2018}\parencite{Treede2019}. While there are key models that go some way towards explaining how pain can persist without active tissue damage \parencite{Woolf1983}\parencite{Woolf2011}\parencite{Vlaeyen2000}\parencite{Vlaeyen2012}, certain pain presentations remain unexplained. The imprecision hypothesis was proposed to address these unexplained presentations, and is founded on the idea that pain can be modulated by pain-associated cues—specifically, via “classical conditioning” \parencite{Moseley2015}. 
+Persistent pain—pain that is still felt after bodily tissue has healed—is a major healthcare problem that is poorly understood and, consequently, difficult to treat effectively \parencite{Breivik2006, Tsang2008, Costa2009, Foster2018, Treede2019}. While there are key models that go some way towards explaining how pain can persist without active tissue damage \parencite{Woolf1983, Woolf2011, Vlaeyen2000, Vlaeyen2012}, certain pain presentations remain unexplained. The imprecision hypothesis was proposed to address these unexplained presentations, and is founded on the idea that pain can be modulated by pain-associated cues—specifically, via “classical conditioning” \parencite{Moseley2015}. 
 
-Our study design builds on two previous experiments \parencite{Madden2016}\parencite{Traxler2019}, which followed a Pavlovian or “classical” conditioning design \parencite{Pavlov1928} to test whether neutral but pain-associated cues can bias a participant's decision about whether a stimulus is painful or non-painful. In the differential classical conditioning design used here, one neutral cue is paired with a painful electrocutaneous stimulus, while another neutral cue is paired with a non-painful electrocutaneous stimulus. It is expected that participants form associations between each cue and painfulness, such that subsequent perception of an ambiguous electrical stimulus is modified, dependent on the simultaneous presentation of one of the neutral cues.
+Our study design builds on two previous experiments \parencite{Madden2016, Traxler2019}, which followed a Pavlovian or “classical” conditioning design \parencite{Pavlov1928} to test whether neutral but pain-associated cues can bias a participant's decision about whether a stimulus is painful or non-painful. In the differential classical conditioning design used here, one neutral cue is paired with a painful electrocutaneous stimulus, while another neutral cue is paired with a non-painful electrocutaneous stimulus. It is expected that participants form associations between each cue and painfulness, such that subsequent perception of an ambiguous electrical stimulus is modified, dependent on the simultaneous presentation of one of the neutral cues.
 
 We set out to design an SCE to test this hypothesis. Due to the before (conditioning) and after (conditioning) structure of multiple observations required for each participant, SCE designs are perfectly suited for testing this hypothesis.
 
 \subsection{Single-Case Experiments}
 
-SCEs are experiments in which the effect of manipulating an independent variable is observed in a single entity \parencite{Barlow2009}\parencite{Kazdin2011}. Variables of interest in the entity, which is often a single participant, are measured repeatedly over a period of time with the purpose of establishing a causal relationship between the independent variable, commonly referred to as the treatment condition, and the observed entity. SCEs are increasingly popular in behavioral and educational sciences due to their flexibility, low cost, and focus on effects of the intervention in individual participants \parencite{Heyvaert2014}. SCEs may be preferable to group-based designs, where the existence or magnitude of the effect \emph{within} an individual is more relevant than the average effect \emph{across} a group of individuals. The lower cost and flexibility of SCEs also make them ideal for studying new theories and interventions, as is the case in this study \parencite{Vlaeyen2020}.
+SCEs are experiments in which the effect of manipulating an independent variable is observed in a single entity \parencite{Barlow2009, Kazdin2011}. Variables of interest in the entity, which is often a single participant, are measured repeatedly over a period of time with the purpose of establishing a causal relationship between the independent variable, commonly referred to as the treatment condition, and the observed entity. SCEs are increasingly popular in behavioral and educational sciences due to their flexibility, low cost, and focus on effects of the intervention in individual participants \parencite{Heyvaert2014}. SCEs may be preferable to group-based designs, where the existence or magnitude of the effect \emph{within} an individual is more relevant than the average effect \emph{across} a group of individuals. The lower cost and flexibility of SCEs also make them ideal for studying new theories and interventions, as is the case in this study \parencite{Vlaeyen2020}.
 
-In SCEs, assignment of the treatment conditions to measurement occasions can be randomized to strengthen internal validity \parencite{Kratochwill2010}\parencite{Edgington1975}. Additionally, replication using multiple participants strengthens external validity and generalizability of the results \parencite{Kratochwill2010}\parencite{Horner2005}. In our study design, we incorporated both randomization and replication to enhance internal and external validity of the experiment. 
+In SCEs, assignment of the treatment conditions to measurement occasions can be randomized to strengthen internal validity \parencite{Kratochwill2010, Edgington1975}. Additionally, replication using multiple participants strengthens external validity and generalizability of the results \parencite{Kratochwill2010, Horner2005}. In our study design, we incorporated both randomization and replication to enhance internal and external validity of the experiment. 
 
 \subsection{Advantages of SCEs for Classical Conditioning}
 
-SCEs are well suited to research questions about within-individual processes. Although group designs are historically respected, they are typically analyzed in a way that aggregates data from all individuals to estimate an effect at the group level—an effect that may be non-existent in any of the individuals within the group \parencite{Molenaar2009}. This aggregation approach obscures the true, within-individual effect, and the between-individual variability of that effect (which, itself, is typically worthy of attention; \parencite{Fisher2018}. Of course, it is possible to consider within-individual changes in some group designs, but an SCE offers a superior approach to achieving a sufficiently powered (> 80\%) examination of within-subject effects \parencite{Ferron1995}\parencite{Ferron1996}. Whereas traditional group-based designs generate knowledge on the population level only, SCEs generate knowledge at the level of the individual. Finally, findings from group-based designs cannot be generalized towards individuals, while SCEs can be aggregated for insights on populations.
+SCEs are well suited to research questions about within-individual processes. Although group designs are historically respected, they are typically analyzed in a way that aggregates data from all individuals to estimate an effect at the group level—an effect that may be non-existent in any of the individuals within the group \parencite{Molenaar2009}. This aggregation approach obscures the true, within-individual effect, and the between-individual variability of that effect (which, itself, is typically worthy of attention; \parencite{Fisher2018}. Of course, it is possible to consider within-individual changes in some group designs, but an SCE offers a superior approach to achieving a sufficiently powered (> 80\%) examination of within-subject effects \parencite{Ferron1995, Ferron1996}. Whereas traditional group-based designs generate knowledge on the population level only, SCEs generate knowledge at the level of the individual. Finally, findings from group-based designs cannot be generalized towards individuals, while SCEs can be aggregated for insights on populations.
 
 \subsection{Analyzing SCEs}
 
-SCEs are often difficult to analyze due to the presence of serial correlation in observed data and nonadherence to distributional assumptions \parencite{Busk1988}\parencite{Solomon2014}\parencite{Adams1996}\parencite{Smith2012}. Traditionally, visual analysis was the preferred method for analyzing SCE data, but researchers now recommend quantitative statistical analysis to complement visual analysis \parencite{Ottenbacher1990}\parencite{Matyas1990}\parencite{Kratochwill2010}\parencite{Manolov2018}\parencite{Manolov2017}. Specifically, for experiments involving user-reported ordinal data, such as the current experiment, nonparametric statistical methods may be best suited for analysis, as the observed data may not adhere to distributional assumptions required for popular parametric methods. 
+SCEs are often difficult to analyze due to the presence of serial correlation in observed data and nonadherence to distributional assumptions \parencite{Busk1988, Solomon2014, Adams1996, Smith2012}. Traditionally, visual analysis was the preferred method for analyzing SCE data, but researchers now recommend quantitative statistical analysis to complement visual analysis \parencite{Ottenbacher1990, Matyas1990, Kratochwill2010a, Manolov2018, Manolov2017}. Specifically, for experiments involving user-reported ordinal data, such as the current experiment, nonparametric statistical methods may be best suited for analysis, as the observed data may not adhere to distributional assumptions required for popular parametric methods. 
 
-Randomization tests (RTs) are nonparametric hypothesis tests recommended for analyzing SCEs \parencite{Edgington1975}\parencite{Adams1996}\parencite{Heyvaert2014}. RTs derive their validity from the random assignment of treatment conditions to experimental units, which in the case of SCEs, are measurement occasions \parencite{Edgington2007}. RTs do not require any distributional assumptions for the observed data. Additionally, RTs are immensely flexible, and can be adapted for any SCE design, randomization scheme, and effect size measure as the test statistic \parencite{Michiels2020}\parencite{Heyvaert2014}\parencite{Heyvaert2014}. In our study design, we implemented a customized RT using a mean difference effect size measure as the test statistic. 
+Randomization tests (RTs) are nonparametric hypothesis tests recommended for analyzing SCEs \parencite{Edgington1975, Adams1996, Heyvaert2014}. RTs derive their validity from the random assignment of treatment conditions to experimental units, which in the case of SCEs, are measurement occasions \parencite{Edgington2007}. RTs do not require any distributional assumptions for the observed data. Additionally, RTs are immensely flexible, and can be adapted for any SCE design, randomization scheme, and effect size measure as the test statistic \parencite{Michiels2020, Heyvaert2014a, Heyvaert2014}. In our study design, we implemented a customized RT using a mean difference effect size measure as the test statistic. 
 
 \subsection{Statistical Power of SCE RTs }
 
-Power analysis is an essential part of statistical hypothesis testing, particularly for determining sample size \parencite{Cohen1988}. Several guidelines recommend a power analysis or at least a methodical description of how sample size was determined \parencite{Vohra2015}\parencite{Willkinson1999}. In the context of SCEs, power analysis can be used to determine the number of measurements necessary, and for studies with replication, the number of participants.
+Power analysis is an essential part of statistical hypothesis testing, particularly for determining sample size \parencite{Cohen1988}. Several guidelines recommend a power analysis or at least a methodical description of how sample size was determined \parencite{Vohra2015, Willkinson1999}. In the context of SCEs, power analysis can be used to determine the number of measurements necessary, and for studies with replication, the number of participants.
 
-For RTs, the randomization distribution is calculated empirically, and hence statistical power can only be estimated using computer-intensive simulations \parencite{Onghena1992}\parencite{Ferron1995}. Several studies have estimated the power of SCE RTs for various design conditions \parencite{Ferron1996}\parencite{Ferron1995}\parencite{Michiels2018}\parencite{Bouwmeester2020}\parencite{Ferron2002}\parencite{De2020}. Although the results from these studies can be used as a reference, they are true only for the design parameters and simulated data distributions considered. Since we acquired unusual ordinal observed data, power ideally needed to be estimated using simulated data of the same type as this study would generate.
+For RTs, the randomization distribution is calculated empirically, and hence statistical power can only be estimated using computer-intensive simulations \parencite{Onghena1992, Ferron1995}. Several studies have estimated the power of SCE RTs for various design conditions \parencite{Ferron1996, Ferron1995, Michiels2018, Bouwmeester2020, Ferron2002, De2020}. Although the results from these studies can be used as a reference, they are true only for the design parameters and simulated data distributions considered. Since we acquired unusual ordinal observed data, power ideally needed to be estimated using simulated data of the same type as this study would generate.
 
 \section{Methods}
 
@@ -692,7 +724,7 @@ The participants receive two types of stimuli at the same time, replicating the 
 
 \textbf{Figure 1}
 
-\emph{Arrangement of Tactors and Electrodes on the Back (Adapted From Traxler et al. }\parencite{Traxler2019}\emph{).}
+\emph{Arrangement of Tactors and Electrodes on the Back (Adapted From Traxler et al. , Traxler2019}\emph{).}
 
 [INSERT FIGURE 1 HERE]
 
@@ -718,13 +750,13 @@ Irrelevant trials: These trials consist of a CS\textsubscript{neutral} combined 
 
 \subsection{Observed Variables}
 
-The participants are requested to provide two reports on each trial. First, they rate the stimulation event on the Sensation and Pain Rating Scale \parencite[][SPARS; previously known as FESTNRS;]{Madden2017}\parencite{Madden2019}. The SPARS is anchored at -50 (no sensation), 0 (the exact point at which the feeling transitions to pain), and 50 (worst pain imaginable). The two distinct ranges for non-painful (-50 to -1) and painful (1 to 50) are clearly marked and explained to the participants. Participants are explicitly advised to make an initial decision about whether a trial was non-painful or painful before assigning a rating from the appropriate side of the scale, without selecting 0 on SPARS. 
+The participants are requested to provide two reports on each trial. First, they rate the stimulation event on the Sensation and Pain Rating Scale \parencite[][SPARS; previously known as FESTNRS;]{Madden2017, Madden2019}. The SPARS is anchored at -50 (no sensation), 0 (the exact point at which the feeling transitions to pain), and 50 (worst pain imaginable). The two distinct ranges for non-painful (-50 to -1) and painful (1 to 50) are clearly marked and explained to the participants. Participants are explicitly advised to make an initial decision about whether a trial was non-painful or painful before assigning a rating from the appropriate side of the scale, without selecting 0 on SPARS. 
 
 Second, the participant indicates the location at which they feel the vibrotactile stimulus from the three options “ABOVE”, “BELOW”, and “SIDE”. This is only used to confirm that the participants are identifying the location of the stimuli correctly. Given that discrimination of the vibrotactile stimuli is necessary for differential learning, participants who fail to identify the location of the stimulus correctly in at least 75\% of the trials are excluded and replaced by additional participants.
 
 \subsection{Effect Size Measure and Test Statistic}
 
-We are interested in calculating whether the participants judged trials of CS+/ US\textsubscript{test} and CS-/ US\textsubscript{test} as painful or non-painful differently for baseline and test trials. For this purpose, we first convert the SPARS ratings to a binary variable: 0 for non-painful (-50 to -1 on SPARS) and 1 for painful (1 to 50 on SPARS). A rating of 0 on SPARS can neither be classified as painful nor as non-painful, therefore these are considered indeterminate and were marked as missing. Then, we pair two trials, a CS+/ US\textsubscript{test} and a CS-/ US\textsubscript{test} and calculate the difference between the corresponding binary variables. The resulting difference indicates whether the participant is rating CS+/ US\textsubscript{test} and CS-/ US\textsubscript{test} differently. The difference can result in three different values: 1 when the CS+/ US\textsubscript{test} trial is rated as painful while the corresponding CS-/ US\textsubscript{test} trial is rated as non-painful; -1 when the CS+/ US\textsubscript{test} trial is rated as non-painful while the corresponding CS-/ US\textsubscript{test} trial is rated as painful; and finally, 0 when both CS+/ US\textsubscript{test} and CS-/ US\textsubscript{test} trials are rated as painful or both are rated as non-painful. This difference value, calculated from a pair of trials, constitutes one measurement in our SCE. A simple mean difference (MD) effect size measure is calculated as the difference between the means of the difference values derived from the test trial pairs and the difference values derived from the baseline trial pairs. Due to the flexibility of RTs, this effect size measure can also be used as the test statistic \parencite{Heyvaert2014}. 
+We are interested in calculating whether the participants judged trials of CS+/ US\textsubscript{test} and CS-/ US\textsubscript{test} as painful or non-painful differently for baseline and test trials. For this purpose, we first convert the SPARS ratings to a binary variable: 0 for non-painful (-50 to -1 on SPARS) and 1 for painful (1 to 50 on SPARS). A rating of 0 on SPARS can neither be classified as painful nor as non-painful, therefore these are considered indeterminate and were marked as missing. Then, we pair two trials, a CS+/ US\textsubscript{test} and a CS-/ US\textsubscript{test} and calculate the difference between the corresponding binary variables. The resulting difference indicates whether the participant is rating CS+/ US\textsubscript{test} and CS-/ US\textsubscript{test} differently. The difference can result in three different values: 1 when the CS+/ US\textsubscript{test} trial is rated as painful while the corresponding CS-/ US\textsubscript{test} trial is rated as non-painful; -1 when the CS+/ US\textsubscript{test} trial is rated as non-painful while the corresponding CS-/ US\textsubscript{test} trial is rated as painful; and finally, 0 when both CS+/ US\textsubscript{test} and CS-/ US\textsubscript{test} trials are rated as painful or both are rated as non-painful. This difference value, calculated from a pair of trials, constitutes one measurement in our SCE. A simple mean difference (MD) effect size measure is calculated as the difference between the means of the difference values derived from the test trial pairs and the difference values derived from the baseline trial pairs. Due to the flexibility of RTs, this effect size measure can also be used as the test statistic \parencite{Heyvaert2014a}. 
 
 \subsection{Single-Case Design }
 
@@ -734,15 +766,15 @@ In this section, we describe our considerations regarding which SCE design to us
 
 Randomized Block Design. Since each of our measurements requires a pair of trials, we immediately considered a randomized block design (RBD) for the experiment. In an RBD SCE, similar to an RBD in traditional group designs, the measurement occasions are divided into small blocks, with each block containing administrations of all treatment conditions \parencite{Onghena2005}. For our study, a possible block consists of the two baseline (or test) trials, a CS+/ US\textsubscript{test} and a CS-/ US\textsubscript{test}, in random order. Hence, the experiment for a participant can consist of several blocks of baseline trial pairs, followed by a period of acquisition trials to condition the participants, followed by several blocks of test trial pairs. However, this design is immediately rejected, as an RBD SCE requires all treatment conditions to be applied inside a block. Since the effects of conditioning are acquired over a period of time and are expected to carry over to future trials, true alternation of treatment conditions is not possible in this experiment. 
 
-AB Phase Design with In-Phase Acquisition. When we rejected the RBD, we realized that the experiment should consist of periods of baseline trial pairs and periods of test trial pairs. The simplest method to achieve this is using an AB phase design, with an A phase as the baseline condition and a subsequent B phase as the test condition \parencite{Barlow2009}. In favor of internal validity, the phase transition is preferably randomized. Each phase consists of several blocks of trials, each of which yields one measurement. Each measurement block in the baseline phase consists of \emph{k} irrelevant trial pairs (two CS\textsubscript{neutral}/ US\textsubscript{test}) and a baseline trial pair (a CS+/ US\textsubscript{test} and a CS-/ US\textsubscript{test} in random order). Similarly, each measurement block in the test phase consists of \emph{k} acquisition trial pairs (a CS+/ US\textsubscript{high} and a CS-/ US\textsubscript{low} in random order) followed by a test trial pair (a CS+/ US\textsubscript{test} and a CS-/ US\textsubscript{test} in random order). The number of irrelevant or acquisition trial pairs in each block, or \emph{k}, is set based on the required level of acquisition. A lower \emph{k} would mean we would need a lower number of trials to achieve a certain number of measurements, but would also typically result in weaker acquisition of associations, and vice versa for a higher \emph{k}. Unfortunately, this design has low acquisition of the associations as there is no learning period. Additionally, RTs for AB phase designs require a large number of measurements to achieve sufficient statistical power \parencite{Michiels2019}\parencite{Ferron1995}. As a result, the experiment for a participant would need a very large number of trials over a significantly long time to ensure both high acquisition and enough measurements. As a result, this design is rejected in favor of a slightly modified AB phase design. A similar ABAB phase design is also rejected due to the potentially large number of trials required and possibility of carry-over effects between phases. 
+AB Phase Design with In-Phase Acquisition. When we rejected the RBD, we realized that the experiment should consist of periods of baseline trial pairs and periods of test trial pairs. The simplest method to achieve this is using an AB phase design, with an A phase as the baseline condition and a subsequent B phase as the test condition \parencite{Barlow2009}. In favor of internal validity, the phase transition is preferably randomized. Each phase consists of several blocks of trials, each of which yields one measurement. Each measurement block in the baseline phase consists of \emph{k} irrelevant trial pairs (two CS\textsubscript{neutral}/ US\textsubscript{test}) and a baseline trial pair (a CS+/ US\textsubscript{test} and a CS-/ US\textsubscript{test} in random order). Similarly, each measurement block in the test phase consists of \emph{k} acquisition trial pairs (a CS+/ US\textsubscript{high} and a CS-/ US\textsubscript{low} in random order) followed by a test trial pair (a CS+/ US\textsubscript{test} and a CS-/ US\textsubscript{test} in random order). The number of irrelevant or acquisition trial pairs in each block, or \emph{k}, is set based on the required level of acquisition. A lower \emph{k} would mean we would need a lower number of trials to achieve a certain number of measurements, but would also typically result in weaker acquisition of associations, and vice versa for a higher \emph{k}. Unfortunately, this design has low acquisition of the associations as there is no learning period. Additionally, RTs for AB phase designs require a large number of measurements to achieve sufficient statistical power \parencite{Michiels2019, Ferron1995}. As a result, the experiment for a participant would need a very large number of trials over a significantly long time to ensure both high acquisition and enough measurements. As a result, this design is rejected in favor of a slightly modified AB phase design. A similar ABAB phase design is also rejected due to the potentially large number of trials required and possibility of carry-over effects between phases. 
 
 \subsubsection{Final Design}
 
 The final design combines elements from both previous designs: an AB phase design with both out-of-phase and in-phase learning. The baseline phase for this design contains several pairs of baseline trial pairs (a CS+/ US\textsubscript{test} and a CS-/ US\textsubscript{test} in random order), followed by a period of learning with only acquisition trial pairs (a CS+/ US\textsubscript{high} and a CS-/ US\textsubscript{low} in random order). Finally, the test phase includes test trial pairs (a CS+/ US\textsubscript{test} and a CS-/ US\textsubscript{test} in random order) with a few acquisition trial pairs in between at regular intervals to reinforce the associations and hence prevent extinction. The time of onset of the test phase is randomized. The experiment starts with a few training trials before the baseline phase. 
 
-The number of trials and the number of participants are to be decided based on a power study and some pilot experiments. However, the guidelines for phase designs by Kratochwill et al. \parencite{Kratochwill2010} recommend at least five measurements in both baseline and test phases. Since we are also curious about any increase or decrease in acquisition over time, we decide to include at least 15 measurements in the test phase. 
+The number of trials and the number of participants are to be decided based on a power study and some pilot experiments. However, the guidelines for phase designs by Kratochwill et al. \parencite{Kratochwill2010a} recommend at least five measurements in both baseline and test phases. Since we are also curious about any increase or decrease in acquisition over time, we decide to include at least 15 measurements in the test phase. 
 
-Due to the use of specialized equipment and individual calibration, multiple participants cannot be tested at the same time. Hence, simultaneous replication using a multiple baseline design (MBD), which is able to control for environmental confounding factors, is not possible \parencite{Barlow2009}\parencite{Kazdin2011}. Instead, the experiment is to be run as a sequentially replicated AB phase design experiment. 
+Due to the use of specialized equipment and individual calibration, multiple participants cannot be tested at the same time. Hence, simultaneous replication using a multiple baseline design (MBD), which is able to control for environmental confounding factors, is not possible \parencite{Barlow2009, Kazdin2011}. Instead, the experiment is to be run as a sequentially replicated AB phase design experiment. 
 
 \subsection{Randomization Scheme and RT}
 
@@ -750,7 +782,7 @@ The design is randomized using intervention start point randomization for each p
 
 We conduct a single RT for all participants combined based on these \emph{r}\textsuperscript{\emph{P}} randomizations. The null hypothesis for this RT is that no difference exists between the baseline phase measurements and test phase measurements for all participants. As discussed previously, the measurements represent whether participants rate CS+/ US\textsubscript{test} trials as painful more frequently than CS-/ US\textsubscript{test} trials. Since the Pavlovian conditioning procedure is aimed at participants perceiving the CS+/ US\textsubscript{test} as more painful, the RT is one-sided with the alternate hypothesis being that the test phase measurements are higher than the baseline phase measurements for at least one participant. This RT can be conducted with the average (across participants) of the MD effect size measure discussed previously as the combined test statistic.
 
-We use the Shiny SCDA (Single-Case Data Analysis) web app for SCEs to randomize and analyze the experiment \parencite{De2020}. Whereas this web app does not include an option for simultaneously replicated AB phase design, it does include an MBD option. The MBD option in Shiny SCDA uses the Koehler-Levin regulated randomization procedure \parencite{Levin2018}, which, when using an identical set of possible start points for all participants, is analogous to our randomization scheme. Hence, we can both randomly select test phase start points and run the RT in Shiny SCDA. Additionally, we can plot the observed data for visual analysis in Shiny SCDA. 
+We use the Shiny SCDA (Single-Case Data Analysis) web app for SCEs to randomize and analyze the experiment \parencite{De2020a}. Whereas this web app does not include an option for simultaneously replicated AB phase design, it does include an MBD option. The MBD option in Shiny SCDA uses the Koehler-Levin regulated randomization procedure \parencite{Levin2018}, which, when using an identical set of possible start points for all participants, is analogous to our randomization scheme. Hence, we can both randomly select test phase start points and run the RT in Shiny SCDA. Additionally, we can plot the observed data for visual analysis in Shiny SCDA. 
 
 \subsection{Pilot Tests}
 
@@ -884,11 +916,11 @@ The final study using this protocol was not conducted immediately, due to lack o
 
 The final design suffers from a few limitations. The first limitation is the observed variable defined by us, which only yields values of -1, 0, and 1. Unfortunately, this restricts variation in observed data and can cause duplicates in the randomization distribution, which can affect power. An alternative is to use the difference between SPARS ratings from CS+/ US\textsubscript{test} and CS-/ US\textsubscript{test} trial pairs. However, this would require a slightly different hypothesis, which would not clarify whether classical conditioning can affect pain thresholds specifically.
 
-The second limitation is due to the properties of the AB phase design. RTs using randomization of intervention start points in AB phase designs are known to lack power at lower sample sizes \parencite{Michiels2019}. AB phase designs do not satisfy the guidelines set by Kratochwill et al. \parencite{Kratochwill2010} without multiple replications. Since we are not sure how quickly the effect of our conditioning is reversed, we cannot use phase designs with more phase changes, such as the ABAB phase design. Due to the requirement of specialized equipment, we cannot use an MBD. Critically, we cannot increase the number of measurements due to time constraints. Therefore, we have to rely on sequential replications for both validity and statistical power. 
+The second limitation is due to the properties of the AB phase design. RTs using randomization of intervention start points in AB phase designs are known to lack power at lower sample sizes \parencite{Michiels2019}. AB phase designs do not satisfy the guidelines set by Kratochwill et al. \parencite{Kratochwill2010a} without multiple replications. Since we are not sure how quickly the effect of our conditioning is reversed, we cannot use phase designs with more phase changes, such as the ABAB phase design. Due to the requirement of specialized equipment, we cannot use an MBD. Critically, we cannot increase the number of measurements due to time constraints. Therefore, we have to rely on sequential replications for both validity and statistical power. 
 
 The power study for this design also presents certain limitations. We used only one possible distribution of the SPARS ratings to simulate our observed data. While the assumption of a symmetric distribution around 0 is not unreasonable, with more pilot data, it might be possible to simulate using a distribution that resembles the observed data. We also did not account for any variability in effect size across participants. Instead, we simulated an equal effect size for all participants. However, we believe these are reasonable assumptions given the scope of our study. 
 
-Finally, we conducted Monte Carlo RTs for both the power study and the pilot data. As discussed previously, the number of possible randomizations for this design is \emph{r}\textsuperscript{\emph{P}}, where \emph{r} denotes the number of possible randomizations for one participant, and \emph{P} denotes the number of participants. Even for the smaller scale of the pilot data, computing 11\textsuperscript{4} possible randomizations would have been extremely costly. Monte Carlo RTs present a simple alternative to this computation cost while maintaining sufficient statistical power \parencite{Edgington1969}\parencite{Hope1968}. Hence, we intend to conduct a Monte Carlo RT in the final experiment.
+Finally, we conducted Monte Carlo RTs for both the power study and the pilot data. As discussed previously, the number of possible randomizations for this design is \emph{r}\textsuperscript{\emph{P}}, where \emph{r} denotes the number of possible randomizations for one participant, and \emph{P} denotes the number of participants. Even for the smaller scale of the pilot data, computing 11\textsuperscript{4} possible randomizations would have been extremely costly. Monte Carlo RTs present a simple alternative to this computation cost while maintaining sufficient statistical power \parencite{Edgington1969, Hope1968}. Hence, we intend to conduct a Monte Carlo RT in the final experiment.
 
 As introduced earlier, this design presents certain advantages over traditional group study designs. Single-case designs are a better match for studying within-person changes, because they allow detailed insight into within-individual processes rather than assuming that the response of all individuals in a group is consistent. Additionally, these designs typically require a smaller number of participants. This allows for a lower overall cost and is particularly important for pain studies because it can be difficult to recruit participants.
 

@@ -6,11 +6,11 @@ import { findCitations } from 'ooxast-util-citations'
 export default function reoffCite(
   options: {
     bibliography?: CSL[]
-    type: 'mendeley' | 'native' | 'citavi' | 'zotero' | 'endnote'
+    type: 'mendeley' | 'word' | 'citavi' | 'zotero' | 'endnote'
   } = { type: 'mendeley' }
 ) {
   return (tree: Root, vfile: VFile) => {
-    findCitations(tree, {
+    findCitations(tree, vfile, {
       bibliography: options.bibliography || (vfile.data.bibliography as CSL[]),
       type: options.type,
     })

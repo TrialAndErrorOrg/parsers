@@ -1,0 +1,1581 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "instruction",
+      "name": "xml",
+      "value": "version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\""
+    },
+    {
+      "type": "text",
+      "value": "\n"
+    },
+    {
+      "type": "element",
+      "name": "w:document",
+      "attributes": {
+        "xmlns:wpc": "http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas",
+        "xmlns:cx": "http://schemas.microsoft.com/office/drawing/2014/chartex",
+        "xmlns:cx1": "http://schemas.microsoft.com/office/drawing/2015/9/8/chartex",
+        "xmlns:cx2": "http://schemas.microsoft.com/office/drawing/2015/10/21/chartex",
+        "xmlns:cx3": "http://schemas.microsoft.com/office/drawing/2016/5/9/chartex",
+        "xmlns:cx4": "http://schemas.microsoft.com/office/drawing/2016/5/10/chartex",
+        "xmlns:cx5": "http://schemas.microsoft.com/office/drawing/2016/5/11/chartex",
+        "xmlns:cx6": "http://schemas.microsoft.com/office/drawing/2016/5/12/chartex",
+        "xmlns:cx7": "http://schemas.microsoft.com/office/drawing/2016/5/13/chartex",
+        "xmlns:cx8": "http://schemas.microsoft.com/office/drawing/2016/5/14/chartex",
+        "xmlns:mc": "http://schemas.openxmlformats.org/markup-compatibility/2006",
+        "xmlns:aink": "http://schemas.microsoft.com/office/drawing/2016/ink",
+        "xmlns:am3d": "http://schemas.microsoft.com/office/drawing/2017/model3d",
+        "xmlns:o": "urn:schemas-microsoft-com:office:office",
+        "xmlns:r": "http://schemas.openxmlformats.org/officeDocument/2006/relationships",
+        "xmlns:m": "http://schemas.openxmlformats.org/officeDocument/2006/math",
+        "xmlns:v": "urn:schemas-microsoft-com:vml",
+        "xmlns:wp14": "http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing",
+        "xmlns:wp": "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing",
+        "xmlns:w10": "urn:schemas-microsoft-com:office:word",
+        "xmlns:w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main",
+        "xmlns:w14": "http://schemas.microsoft.com/office/word/2010/wordml",
+        "xmlns:w15": "http://schemas.microsoft.com/office/word/2012/wordml",
+        "xmlns:w16cex": "http://schemas.microsoft.com/office/word/2018/wordml/cex",
+        "xmlns:w16cid": "http://schemas.microsoft.com/office/word/2016/wordml/cid",
+        "xmlns:w16": "http://schemas.microsoft.com/office/word/2018/wordml",
+        "xmlns:w16sdtdh": "http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash",
+        "xmlns:w16se": "http://schemas.microsoft.com/office/word/2015/wordml/symex",
+        "xmlns:wpg": "http://schemas.microsoft.com/office/word/2010/wordprocessingGroup",
+        "xmlns:wpi": "http://schemas.microsoft.com/office/word/2010/wordprocessingInk",
+        "xmlns:wne": "http://schemas.microsoft.com/office/word/2006/wordml",
+        "xmlns:wps": "http://schemas.microsoft.com/office/word/2010/wordprocessingShape",
+        "mc:Ignorable": "w14 w15 w16se w16cid w16 w16cex w16sdtdh wp14"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "w:body",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "36CB8745",
+                "w14:textId": "13B42306"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:sdt",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:sdtPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:id",
+                          "attributes": {
+                            "w:val": "692576755"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:citation",
+                          "attributes": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:sdtContent",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:r",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "w:fldChar",
+                              "attributes": {
+                                "w:fldCharType": "begin"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:r",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "w:rPr",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "w:lang",
+                                  "attributes": {
+                                    "w:val": "en-US"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "w:instrText",
+                              "attributes": {
+                                "xml:space": "preserve"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "CITATION Aut22 \\l 1033 "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:r",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "w:fldChar",
+                              "attributes": {
+                                "w:fldCharType": "separate"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:r",
+                          "attributes": {
+                            "w:rsidR": "00B565CB"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "w:rPr",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "w:noProof",
+                                  "attributes": {},
+                                  "children": []
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "w:lang",
+                                  "attributes": {
+                                    "w:val": "en-US"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "w:t",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "(Author, 2022)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:r",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "w:fldChar",
+                              "attributes": {
+                                "w:fldCharType": "end"
+                              },
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "00B04DAA",
+                "w14:textId": "6F2D9244"
+              },
+              "children": []
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "42512746",
+                "w14:textId": "7F23958B"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:lang",
+                          "attributes": {
+                            "w:val": "en-US"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {
+                        "xml:space": "preserve"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "  "
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "2EC280C4",
+                "w14:textId": "065D19B9"
+              },
+              "children": []
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "3CB0703A",
+                "w14:textId": "3D7D332A"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:sdt",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:sdtPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:id",
+                          "attributes": {
+                            "w:val": "57686830"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:citation",
+                          "attributes": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:sdtContent",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:r",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "w:fldChar",
+                              "attributes": {
+                                "w:fldCharType": "begin"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:r",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "w:rPr",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "w:lang",
+                                  "attributes": {
+                                    "w:val": "en-US"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "w:instrText",
+                              "attributes": {
+                                "xml:space": "preserve"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": " CITATION Ano00 \\l 1033 "
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:r",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "w:fldChar",
+                              "attributes": {
+                                "w:fldCharType": "separate"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:r",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "w:rPr",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "w:noProof",
+                                  "attributes": {},
+                                  "children": []
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "w:lang",
+                                  "attributes": {
+                                    "w:val": "en-US"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "w:t",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "(Another, 1000)"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:r",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "w:fldChar",
+                              "attributes": {
+                                "w:fldCharType": "end"
+                              },
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "26288588",
+                "w14:textId": "7B977025"
+              },
+              "children": []
+            },
+            {
+              "type": "element",
+              "name": "w:sdt",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:sdtPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:id",
+                      "attributes": {
+                        "w:val": "1024518974"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:docPartObj",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:docPartGallery",
+                          "attributes": {
+                            "w:val": "Bibliographies"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:docPartUnique",
+                          "attributes": {},
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:sdtEndPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rFonts",
+                          "attributes": {
+                            "w:asciiTheme": "minorHAnsi",
+                            "w:eastAsiaTheme": "minorHAnsi",
+                            "w:hAnsiTheme": "minorHAnsi",
+                            "w:cstheme": "minorBidi"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:b",
+                          "attributes": {
+                            "w:val": "0"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:bCs",
+                          "attributes": {
+                            "w:val": "0"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "auto"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:sz",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:szCs",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:lang",
+                          "attributes": {
+                            "w:val": "en-NL",
+                            "w:bidi": "ar-SA"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:sdtContent",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:p",
+                      "attributes": {
+                        "w14:paraId": "2D88CF2C",
+                        "w14:textId": "2380C814"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:pPr",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "w:pStyle",
+                              "attributes": {
+                                "w:val": "Heading1"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:r",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "w:t",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Bibliography"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:sdt",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:sdtPr",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "w:id",
+                              "attributes": {
+                                "w:val": "111145805"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "w:bibliography",
+                              "attributes": {},
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:sdtContent",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "w:p",
+                              "attributes": {
+                                "w14:paraId": "469D0581",
+                                "w14:textId": "77777777"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "w:pPr",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:pStyle",
+                                      "attributes": {
+                                        "w:val": "Bibliography"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "w:ind",
+                                      "attributes": {
+                                        "w:left": "720",
+                                        "w:hanging": "720"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "w:rPr",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "w:noProof",
+                                          "attributes": {},
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "w:lang",
+                                          "attributes": {
+                                            "w:val": "en-US"
+                                          },
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "w:r",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:fldChar",
+                                      "attributes": {
+                                        "w:fldCharType": "begin"
+                                      },
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "w:r",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:instrText",
+                                      "attributes": {
+                                        "xml:space": "preserve"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": " BIBLIOGRAPHY "
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "w:r",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:fldChar",
+                                      "attributes": {
+                                        "w:fldCharType": "separate"
+                                      },
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "w:r",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:t",
+                                      "attributes": {
+                                        "xml:space": "preserve"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Author, A. (2022, 1 1). Title of the thing. (Editor, Ed.) "
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "w:r",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:rPr",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "w:i",
+                                          "attributes": {},
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "w:iCs",
+                                          "attributes": {},
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "w:t",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Journal, 1"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "w:r",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:t",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "(1), 11-12."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "w:p",
+                              "attributes": {
+                                "w14:paraId": "10E906AD",
+                                "w14:textId": "77777777"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "w:pPr",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:pStyle",
+                                      "attributes": {
+                                        "w:val": "Bibliography"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "w:ind",
+                                      "attributes": {
+                                        "w:left": "720",
+                                        "w:hanging": "720"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "w:rPr",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "w:noProof",
+                                          "attributes": {},
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "w:lang",
+                                          "attributes": {
+                                            "w:val": "en-US"
+                                          },
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "w:r",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:t",
+                                      "attributes": {
+                                        "xml:space": "preserve"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Another. (1000). Artikel. "
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "w:r",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:rPr",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "w:i",
+                                          "attributes": {},
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "w:iCs",
+                                          "attributes": {},
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "w:t",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "Journal1, 2"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "w:r",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:t",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "(2), 99-104."
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "w:p",
+                              "attributes": {
+                                "w14:paraId": "748089B2",
+                                "w14:textId": "794D3F42"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "w:r",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:rPr",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "w:b",
+                                          "attributes": {},
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "w:bCs",
+                                          "attributes": {},
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "w:fldChar",
+                                      "attributes": {
+                                        "w:fldCharType": "end"
+                                      },
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "7BB62F0D",
+                "w14:textId": "77777777"
+              },
+              "children": []
+            },
+            {
+              "type": "element",
+              "name": "w:sectPr",
+              "attributes": {
+                "w:rsidR": "006132C7"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pgSz",
+                  "attributes": {
+                    "w:w": "11906",
+                    "w:h": "16838"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "element",
+                  "name": "w:pgMar",
+                  "attributes": {
+                    "w:top": "1440",
+                    "w:right": "1440",
+                    "w:bottom": "1440",
+                    "w:left": "1440",
+                    "w:header": "708",
+                    "w:footer": "708",
+                    "w:gutter": "0"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "element",
+                  "name": "w:cols",
+                  "attributes": {
+                    "w:space": "708"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "element",
+                  "name": "w:docGrid",
+                  "attributes": {
+                    "w:linePitch": "360"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n  \n  "
+        },
+        {
+          "type": "element",
+          "name": "b:Sources",
+          "attributes": {
+            "xmlns:b": "http://schemas.openxmlformats.org/officeDocument/2006/bibliography",
+            "xmlns": "http://schemas.openxmlformats.org/officeDocument/2006/bibliography",
+            "SelectedStyle": "/APASixthEditionOfficeOnline.xsl",
+            "StyleName": "APA",
+            "Version": "6"
+          },
+          "children": [
+            {
+              "type": "element",
+              "name": "b:Source",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "element",
+                  "name": "b:Tag",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Aut22"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:SourceType",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "JournalArticle"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:Guid",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "{9EB08ABC-6B94-7C45-96C8-3C8098B8767B}"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:Author",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "b:Author",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "b:NameList",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "b:Person",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "b:Last",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Author"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "b:First",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "An"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "b:Editor",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "b:NameList",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "b:Person",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "b:Last",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Editor"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:Title",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Title of the thing"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:City",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "City"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:Publisher",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Publisher"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:Year",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "2022"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:JournalName",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Journal"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:Pages",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "11-12"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:Month",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "1"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:Day",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "1"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:Volume",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "1"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:Issue",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "1"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:ShortTitle",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Short Title"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:StandardNumber",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "https://doi.org/10.368850/e1"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:Comments",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "rest"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:RefOrder",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "1"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "b:Source",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "element",
+                  "name": "b:Tag",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Ano00"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:SourceType",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "JournalArticle"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:Guid",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "{2ABA2811-735F-3E43-9ECA-D91DBB4082D4}"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:Author",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "b:Author",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "b:NameList",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "b:Person",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "b:Last",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Another"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:Title",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Artikel"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:JournalName",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Journal1"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:Year",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "1000"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:Pages",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "99-104"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:Publisher",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "JOTE Publishers"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:City",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Heerenveen"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:Day",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "11"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:Volume",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "2"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:Issue",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "2"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:ShortTitle",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Artikel"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "b:RefOrder",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n  "
+        }
+      ]
+    }
+  ]
+}

@@ -237,6 +237,95 @@ export const tests: TestData = {
         },
         input: `(Adams et al., 2019; Shumway & Shulman, 2015; Westinghouse, 2017)`,
       },
+      {
+        description: 'tough for some reason',
+        result: {
+          citationId: 'CITE-X',
+          citationItems: [
+            {
+              id: 'Gillich2019',
+              itemData: {
+                author: [{ family: 'Gillich' }],
+                issued: { 'date-parts': [['2019']] },
+              },
+            },
+            {
+              id: 'vanMoorselaar2019',
+              itemData: {
+                author: [
+                  { family: 'Moorselaar', 'non-dropping-particle': 'van' },
+                  { family: 'Slagter' },
+                ],
+                issued: { 'date-parts': [['2019']] },
+              },
+            },
+          ],
+          properties: { noteIndex: 0 },
+
+          originalText:
+            '(Gillich et al., 2019; van Moorselaar & Slagter, 2019)',
+        },
+        input: '(Gillich et al., 2019; van Moorselaar & Slagter, 2019)',
+      },
+      {
+        description: 'tough for some reason with context',
+        result: [
+          'in ',
+          {
+            citationId: 'CITE-X',
+            citationItems: [
+              {
+                id: 'Vallée-Tourangeau2020',
+                itemData: {
+                  author: [
+                    { family: 'Vallée-Tourangeau' },
+                    { family: 'March' },
+                  ],
+                  issued: { 'date-parts': [['2020']] },
+                },
+              },
+            ],
+            properties: { noteIndex: 0, mode: 'composite' },
+
+            originalText: 'Vallée-Tourangeau and March (2020)',
+          },
+        ],
+        input: 'in Vallée-Tourangeau and March (2020)',
+      },
+      {
+        description: 'tough for some reason with context',
+        result: [
+          'all i wanna do is really fucking go ',
+          {
+            citationId: 'CITE-X',
+            citationItems: [
+              {
+                id: 'Gillich2019',
+                itemData: {
+                  author: [{ family: 'Gillich' }],
+                  issued: { 'date-parts': [['2019']] },
+                },
+              },
+              {
+                id: 'vanMoorselaar2019',
+                itemData: {
+                  author: [
+                    { family: 'Moorselaar', 'non-dropping-particle': 'van' },
+                    { family: 'Slagter' },
+                  ],
+                  issued: { 'date-parts': [['2019']] },
+                },
+              },
+            ],
+            properties: { noteIndex: 0 },
+
+            originalText:
+              '(Gillich et al., 2019; van Moorselaar & Slagter, 2019)',
+          },
+        ],
+        input:
+          'all i wanna do is really fucking go (Gillich et al., 2019; van Moorselaar & Slagter, 2019)',
+      },
       //       {
       //         description: ``,
       //         result: `\\parencite{8.12d,8.12e,8.12f,8.12g}`,
@@ -449,7 +538,7 @@ export const tests: TestData = {
             },
           ],
           properties: { noteIndex: 0 },
-          input: `(Sampson & Hughes, 2020; see also Augustine, 2017; Melara et al., 2018; Pérez, 2014)`,
+          originalText: `(Sampson & Hughes, 2020; see also Augustine, 2017; Melara et al., 2018; Pérez, 2014)`,
         },
         input: `(Sampson & Hughes, 2020; see also Augustine, 2017; Melara et al., 2018; Pérez, 2014)`,
       },

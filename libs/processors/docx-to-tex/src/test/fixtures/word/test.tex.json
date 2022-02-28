@@ -1,0 +1,237 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "text",
+      "value": " "
+    },
+    {
+      "type": "root",
+      "children": [
+        {
+          "type": "preamble",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "command",
+                  "name": "documentclass",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "article"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
+                },
+                {
+                  "type": "command",
+                  "name": "usepackage",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "style=apa"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "biblatex"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
+                },
+                {
+                  "type": "command",
+                  "name": "addbibresource",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "bibliography.bib"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "usepackage",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "graphicx"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "usepackage",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "hyperref"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "environment",
+          "name": "document",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": []
+            },
+            {
+              "type": "paragraph",
+              "children": []
+            },
+            {
+              "type": "paragraph",
+              "children": []
+            },
+            {
+              "type": "paragraph",
+              "children": []
+            },
+            {
+              "type": "paragraph",
+              "children": []
+            },
+            {
+              "type": "paragraph",
+              "children": []
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "command",
+                  "name": "section",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Bibliography"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Journal, 1"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "(1), 11-12."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Another. (1000). Artikel. "
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Journal1, 2"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "(2), 99-104."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": []
+            },
+            {
+              "type": "paragraph",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

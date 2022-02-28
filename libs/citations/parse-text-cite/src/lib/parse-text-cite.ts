@@ -37,8 +37,9 @@ export const parseTextCite = (string: string, options?: Options) => {
     parser.feed(string)
   } catch (err) {
     console.warn(string)
-    console.warn('Could not handle a parenthesis')
-    // console.warn(err)
+    ;(err as { message: string }).message.match(/(Rp|Lp)/i)
+      ? console.warn('Could not handle a parenthesis')
+      : console.warn(err)
   }
 
   const results = parser.results

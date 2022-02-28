@@ -66,6 +66,7 @@ export function citation(j: J, citation: T, parent: Parent) {
         citetype === 'zotero'
           ? citation.properties.formattedCitation
           : citation.mendeley.formattedCitation
+
       const sectionedCitations = formattedCitation?.replace(
         /(\d{4}), (\d{4})/g,
         '$1; $2'
@@ -82,18 +83,8 @@ export function citation(j: J, citation: T, parent: Parent) {
           const itemData: CSL = cite.itemData
           j.citationNumber++
           // const citeKey =
-          let citeKey =
-            generateAuthYearFromCSL(itemData) || `bib${j.citationNumber}`
-
-          while (citeKey in j.citeKeys) {
-            if (citeKey.slice(-1).match(/\d/)) {
-              citeKey = `${citeKey}a`
-              continue
-            }
-            citeKey = incrementSuffix(citeKey)
-          }
-
-          j.citeKeys.push(citeKey)
+          const citeKey =
+            generateAuthYearFromCSL(j, itemData) || `bib${j.citationNumber}`
 
           j.collectCitation(itemData, citeKey)
 
@@ -131,19 +122,32 @@ export function cslCitation(text: string) {
   //
 }
 
-function generateAuthYearFromCSL(csl: CSL): string {
+function generateAuthYearFromCSL(j: J, csl: CSL): string {
   // by default Mendeley generates "ITEM-X" ids, which are bad
-  console.log(csl)
-  if (csl?.id && `${!csl?.id}`?.match('ITEM')) {
-    return csl.id
+  if (csl?.id && typeof csl.id === 'string' && !`${csl?.id}`?.match('ITEM')) {
+    return makeUniqueSuffix(j, csl.id, csl)
   }
 
-  return csl?.author?.[0]?.family && csl?.issued?.['date-parts']?.[0]?.[0]
-    ? `${csl.author[0].family}${csl.issued['date-parts'][0][0]}`
-    : `${csl.id}`
+  return makeUniqueSuffix(
+    j,
+    csl?.author?.[0]?.family && csl?.issued?.['date-parts']?.[0]?.[0]
+      ? `${csl.author[0].family}${csl.issued['date-parts'][0][0]}`
+      : `${csl.id}`,
+    csl
+  )
+}
+function makeUniqueSuffix(j: J, key: string, data: CSL) {
+  while (j.citeKeys[key] && j.citeKeys[key] !== data.title) {
+    key = incrementSuffix(key)
+  }
+  j.citeKeys[key] = data.title || ''
+  return key
 }
 
 function incrementSuffix(text: string) {
+  if (!text.slice(-1).match(/[a-zA-Z]/)) {
+    return `${text}a`
+  }
   return (
     text.slice(0, -1) +
     String.fromCharCode(text.charCodeAt(text.length - 1) + 1)

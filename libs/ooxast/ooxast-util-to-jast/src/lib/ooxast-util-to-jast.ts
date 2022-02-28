@@ -112,7 +112,7 @@ export function toJast(
       partialCitation: '',
       deleteNextRun: false,
       relations: options.relations || {},
-      citeKeys: [],
+      citeKeys: {},
       citationType: options.citationType || 'mendeley',
     } as Context
   )

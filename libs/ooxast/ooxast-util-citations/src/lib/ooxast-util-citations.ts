@@ -24,6 +24,8 @@ import similarity from 'similarity'
 import { dateSim } from 'csl-consolidate'
 import { detectCitePlugin } from 'ooxast-util-citation-plugin'
 import { VFile } from 'vfile'
+import { constructMendeleyCitation } from './constructMendeleyCitation'
+import { constructZoteroCitation } from './constructZoteroCitation'
 
 const isT = convertElement<T>('w:t')
 const isInstrT = convertElement<T>('w:instrText')
@@ -33,6 +35,7 @@ const isR = convertElement<R>('w:r')
 export const citationTypesWithSuffixedForm = ['mendeley', 'zotero']
 export interface Options {
   bibliography?: CSL[]
+  type?: 'mendeley' | 'zotero' | 'citavi' | 'word' | 'endnote'
 }
 
 export function findCitations(
@@ -51,11 +54,12 @@ export function findCitations(
     if (getPStyle(p)?.toLowerCase()?.includes('heading')) {
       if (
         ['references', 'citations', 'bibliography'].includes(
-          toString(p)?.toLowerCase()
+          toString(p)?.toLowerCase().trim()
         )
       ) {
         references = true
       }
+      references = false
       return
     }
 
@@ -66,7 +70,7 @@ export function findCitations(
     for (const kid of kids) {
       const instr = select('w\\:instrText', kid)
 
-      // Check if this is a Mendeley citation, because if so we should not try to parse it ourselves
+      // Check if this is a Mendeley/Zotero citation, because if so we should not try to parse it ourselves
       if (
         instr &&
         isInstrT(instr) &&
@@ -84,14 +88,17 @@ export function findCitations(
         continue
       }
 
-      if (skipNext) {
-        skipNext = false
+      const text = unistSelect('text', t) as Text
+      if (!text?.value) {
         runs.push(kid)
         continue
       }
+      if (text.value === '') {
+        continue
+      }
 
-      const text = unistSelect('text', t) as Text
-      if (!text?.value) {
+      if (skipNext) {
+        skipNext = false
         runs.push(kid)
         continue
       }
@@ -132,6 +139,9 @@ export function findCitations(
                 ]) as T,
               ]) as R
             )
+
+            // say this is an empty, clean thing, and we want to turn it into a text
+            // with mendeely citations. then we need to push the formatted citation after the main citation
             if (citationTypesWithSuffixedForm.includes(type) && citation) {
               acc.push(
                 x('w:r', {}, [
@@ -230,162 +240,9 @@ export function constructCitation(
 //   return mend
 // }
 
-function constructMendeleyCitation(
-  curr: Citation,
-  index: number,
-  bibliography?: CSL[]
-): MendeleyCitation {
-  const schema =
-    'https://github.com/citation-style-language/schema/raw/master/csl-citation.json'
-
-  const mendeley: Mendeley = {
-    formattedCitation: curr.originalText || '',
-    plainTextFormattedCitation: curr.originalText || '',
-    previouslyFormattedCitation: curr.originalText || '',
-  }
-
-  curr['citationId'] = curr['citationId'].replace('X', `${index}`)
-  if (!bibliography) {
-    const mend: any = { ...curr, schema, mendeley }
-    return mend
-  }
-
-  const mendCites = curr.citationItems.reduce((acc: CitationItem[], curr) => {
-    const betterCSL = findRef(curr, bibliography)
-    acc.push(betterCSL)
-    return acc
-  }, [])
-
-  const mend: MendeleyCitation = {
-    ...curr,
-    citationItems: mendCites as any,
-    schema,
-    mendeley,
-  }
-  return mend
-
-  //const citationItems
-}
-
-function findRef(citeItem: CitationItem, bibliography: CSL[]): CitationItem {
-  // we'll take it if it has 90% match with the author and the year, except if there are multiple thiingies
-  const cite = citeItem.itemData
-  const gottemInOne = bibliography.find(
-    (bib) => bib.id === cite.id || bib.id === citeItem.id
-  )
-  if (gottemInOne) {
-    citeItem.itemData = gottemInOne
-    return citeItem
-  }
-
-  if (!cite.author || !cite.issued) return citeItem
-  let lastDig = alphaToNum(cite.id.slice(-1))
-  let theOne: CSL | null = null
-
-  for (const csl of bibliography) {
-    if (!csl.author) continue
-
-    const authsim =
-      cite.author.reduce((acc, curr, index) => {
-        if (!csl?.author?.[index]) return acc
-
-        acc += similarity(
-          curr?.family || '',
-          csl?.author?.[index]?.family || 'aishotnat'
-        )
-
-        return acc
-      }, 0) / (cite?.author?.length || 100)
-
-    const yearsim = dateSim(cite, csl)
-
-    if ((yearsim + authsim) / 2 > 1.6) {
-      if (lastDig !== 0) {
-        lastDig--
-        continue
-      }
-
-      theOne = csl
-      break
-    }
-  }
-  if (theOne) citeItem.itemData = theOne
-
-  return citeItem
-}
-
-function alphaToNum(a: string) {
-  const anum: { [key: string]: number } = {
-    a: 1,
-    b: 2,
-    c: 3,
-    d: 4,
-    e: 5,
-    f: 6,
-    g: 7,
-    h: 8,
-    i: 9,
-    j: 10,
-    k: 11,
-    l: 12,
-    m: 13,
-    n: 14,
-    o: 15,
-    p: 16,
-    q: 17,
-    r: 18,
-    s: 19,
-    t: 20,
-    u: 21,
-    v: 22,
-    w: 23,
-    x: 24,
-    y: 25,
-    z: 26,
-  }
-  return anum[a] || 0
-}
-
 // function constructZoteroCitation(curr: Citation, index: number) {
 //   throw new Error('Function not implemented.')
 // }
-
-function constructZoteroCitation(
-  curr: Citation,
-  index: number,
-  bibliography?: CSL[]
-): ZoteroCitation {
-  const schema =
-    'https://github.com/citation-style-language/schema/raw/master/csl-citation.json'
-
-  const properties: ZoteroProperties = {
-    noteIndex: 0,
-    formattedCitation: curr.originalText || '',
-    plainCitation: curr.originalText || '',
-  }
-
-  curr['citationId'] = curr['citationId'].replace('X', `${index}`)
-  if (!bibliography) {
-    const zot: any = { ...curr, schema, properties }
-    return zot
-  }
-
-  const zotCites = curr.citationItems.reduce((acc: CitationItem[], curr) => {
-    const betterCSL = findRef(curr, bibliography)
-    acc.push(betterCSL)
-    return acc
-  }, [])
-
-  const mend: ZoteroCitation = {
-    citationItems: zotCites as any,
-    schema,
-    properties,
-    citationID: curr.citationId,
-  }
-  return mend
-
-  //const citationItems
-}
 
 function constructEndnoteCitation(curr: Citation, index: number) {
   throw new Error('Function not implemented.')

@@ -341,14 +341,6 @@
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -394,14 +386,6 @@
                         },
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -437,14 +421,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -561,14 +537,6 @@
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -681,14 +649,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -825,14 +785,6 @@
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -935,62 +887,15 @@
                 {
                   "type": "element",
                   "name": "w:r",
-                  "attributes": {},
+                  "attributes": {
+                    "w:rsidDel": "00000000"
+                  },
                   "children": [
                     {
                       "type": "element",
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:rtl",
-                          "attributes": {
-                            "w:val": "0"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:instrText",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "ADDIN CSL_CITATION {\"citationId\":\"CITE-1\",\"citationItems\":[{\"id\":\"Sindall2020\",\"itemData\":{\"author\":[{\"family\":\"Sindall\",\"given\":\"R.C.\"},{\"family\":\"Barrington\",\"given\":\"D.J.\"}],\"title\":\"Fail fast, fail forward, fail openly: The need to share failures in development\",\"volume\":\"1\",\"type\":\"article-journal\",\"container-title\":\"Journal of Trial and Error\",\"issue\":\"1\",\"issued\":{\"date-parts\":[[\"2020\"]]},\"page\":\"6–8\",\"URL\":\"https://doi.org/10.36850/ed2\",\"DOI\":\"10.36850/ed2\",\"id\":\"Sindall2020\"}}],\"properties\":{\"noteIndex\":0,\"mode\":\"composite\"},\"originalText\":\"Sindall and Barrington (2020)\",\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"mendeley\":{\"formattedCitation\":\"Sindall and Barrington (2020)\",\"plainTextFormattedCitation\":\"Sindall and Barrington (2020)\",\"previouslyFormattedCitation\":\"Sindall and Barrington (2020)\"}}"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -1004,52 +909,13 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {},
+                      "attributes": {
+                        "xml:space": "preserve"
+                      },
                       "children": [
                         {
                           "type": "text",
-                          "value": "Sindall and Barrington (2020)"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:rtl",
-                          "attributes": {
-                            "w:val": "0"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " paint a compelling picture of an academic system that struggles to find a place for failure and the “multitude of sins” such a system necessarily perpetuates. Rightly so, they place the responsibility for change not only on researchers, but also funders and publication bodies. "
+                          "value": "Sindall and Barrington (2020) paint a compelling picture of an academic system that struggles to find a place for failure and the “multitude of sins” such a system necessarily perpetuates. Rightly so, they place the responsibility for change not only on researchers, but also funders and publication bodies. "
                         }
                       ]
                     }
@@ -1143,14 +1009,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -1475,21 +1333,15 @@
                 {
                   "type": "element",
                   "name": "w:r",
-                  "attributes": {},
+                  "attributes": {
+                    "w:rsidDel": "00000000"
+                  },
                   "children": [
                     {
                       "type": "element",
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -1503,175 +1355,13 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {},
+                      "attributes": {
+                        "xml:space": "preserve"
+                      },
                       "children": [
                         {
                           "type": "text",
-                          "value": "In the field of Human Factors, and more specifically in Forensic Human Factors, it has long been recognized that failure usually occurs in the complex environment of a system. When accidents such as the Chernobyl nuclear disaster occur, it is easy to shift blame to a single individual or to a single team that was present when mistakes occurred. In response to these disasters, these employees are subsequently reprimanded and sometimes fired. A new person might fill their position and, in some cases, training protocols might be updated. However, these are often very ineffective measures. As previously indicated, mistakes are made in a complex environment. This means that mistakes can have occurred for any number of reasons, and often because of a combination of reasons. Accordingly, removing just one factor from the environment "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:rtl",
-                          "attributes": {
-                            "w:val": "0"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "(i.e., the employee present during the disaster) is unlikely to significantly diminish the chances of similar mistakes happening in the future, because it was unlikely to be the determining factor "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:rtl",
-                          "attributes": {
-                            "w:val": "0"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:instrText",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "ADDIN CSL_CITATION {\"citationId\":\"CITE-2\",\"citationItems\":[{\"id\":\"Holden2009\",\"itemData\":{\"author\":[{\"family\":\"Holden\",\"given\":\"R.J.\"}],\"title\":\"People or systems? To blame is human. The fix is to engineer\",\"volume\":\"54\",\"type\":\"article-journal\",\"container-title\":\"Professional safety\",\"issue\":\"12\",\"issued\":{\"date-parts\":[[\"2009\"]]},\"page\":\"34–41\",\"id\":\"Holden2009\"}}],\"properties\":{\"noteIndex\":0},\"originalText\":\"(Holden, 2009)\",\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"mendeley\":{\"formattedCitation\":\"(Holden, 2009)\",\"plainTextFormattedCitation\":\"(Holden, 2009)\",\"previouslyFormattedCitation\":\"(Holden, 2009)\"}}"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:rtl",
-                          "attributes": {
-                            "w:val": "0"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "(Holden, 2009)"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:rtl",
-                          "attributes": {
-                            "w:val": "0"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": ". "
+                          "value": "In the field of Human Factors, and more specifically in Forensic Human Factors, it has long been recognized that failure usually occurs in the complex environment of a system. When accidents such as the Chernobyl nuclear disaster occur, it is easy to shift blame to a single individual or to a single team that was present when mistakes occurred. In response to these disasters, these employees are subsequently reprimanded and sometimes fired. A new person might fill their position and, in some cases, training protocols might be updated. However, these are often very ineffective measures. As previously indicated, mistakes are made in a complex environment. This means that mistakes can have occurred for any number of reasons, and often because of a combination of reasons. Accordingly, removing just one factor from the environment (i.e., the employee present during the disaster) is unlikely to significantly diminish the chances of similar mistakes happening in the future, because it was unlikely to be the determining factor (Holden, 2009). "
                         }
                       ]
                     }
@@ -1792,14 +1482,6 @@
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -1902,21 +1584,15 @@
                 {
                   "type": "element",
                   "name": "w:r",
-                  "attributes": {},
+                  "attributes": {
+                    "w:rsidDel": "00000000"
+                  },
                   "children": [
                     {
                       "type": "element",
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -1930,298 +1606,13 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {},
+                      "attributes": {
+                        "xml:space": "preserve"
+                      },
                       "children": [
                         {
                           "type": "text",
-                          "value": "By increasing the simplicity of the cockpit, pilots were less taxed and could invest more cognitive resources towards flying the plane. An example of such an environmental change is the adaptation of cockpit alarms. In older planes, cockpits would have the same audio-visual cues for every alarm. Thus, the pilot got the same feedback from the system when the fuel was slightly low as when an important engine was malfunctioning. Pilots were then mentally taxed on two levels: they were constantly confronted with distracting alarms, some of which might not need their immediate attention; and when attending to these alarms, they had to invest great effort in distinguishing the alarm and assessing its importance. As a result, pilots learned to ignore most alarms. A research article published in 1996 summarized problems such as these at the time as follows: “The proliferation of alarms has led to the increased likelihood of false or multiple alarm events and the consequent inability of the operator to determine the underlying cause of the alarm"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:rtl",
-                          "attributes": {
-                            "w:val": "0"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "(s)” "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:rtl",
-                          "attributes": {
-                            "w:val": "0"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:instrText",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "ADDIN CSL_CITATION {\"citationId\":\"CITE-3\",\"citationItems\":[{\"id\":\"Gilson1996\",\"itemData\":{\"author\":[{\"family\":\"Gilson\",\"given\":\"R.D.\"},{\"family\":\"Deaton\",\"given\":\"J.E.\"},{\"family\":\"Mouloua\",\"given\":\"M.\"}],\"title\":\"Coping with complex alarms: Sophisticated aircraft cockpit alarm systems demand a shift in training strategies\",\"volume\":\"4\",\"type\":\"article-journal\",\"container-title\":\"Ergonomics in Design: The Quarterly of Human Factors Applications\",\"issue\":\"4\",\"issued\":{\"date-parts\":[[\"1996\"]]},\"page\":\"12–18\",\"URL\":\"https://doi.org/10.1177/106480469600400404\",\"DOI\":\"10.1177/106480469600400404\",\"id\":\"Gilson1996\"},\"locator\":\"12\",\"label\":\"page\"}],\"properties\":{\"noteIndex\":0},\"originalText\":\"(Gilson et al., 1996, p. 12)\",\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"mendeley\":{\"formattedCitation\":\"(Gilson et al., 1996, p. 12)\",\"plainTextFormattedCitation\":\"(Gilson et al., 1996, p. 12)\",\"previouslyFormattedCitation\":\"(Gilson et al., 1996, p. 12)\"}}"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:rtl",
-                          "attributes": {
-                            "w:val": "0"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "(Gilson et al., 1996, p. 12)"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:rtl",
-                          "attributes": {
-                            "w:val": "0"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": ". Under such a system, a situation such as the following might occur: During a flight, one of the important engines malfunctions and needs immediate attention. At the same time, a number of other small, but non-urgent, malfunctions could occur. Because the very attentive, but overly taxed pilot cannot properly differentiate between the different alarms, they end up paying attention to the wrong malfunction. A short while later, the plane crashes. As recently as 2019, a plane crash occurred due to a poorly designed alarm system "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:rtl",
-                          "attributes": {
-                            "w:val": "0"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:instrText",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "ADDIN CSL_CITATION {\"citationId\":\"CITE-4\",\"citationItems\":[{\"id\":\"Levin2019\",\"itemData\":{\"author\":[{\"family\":\"Levin\",\"given\":\"A.\"}],\"title\":\"Boeing failed to predict that slew of 737 Max warning alarms would confuse pilots, investigators say\",\"genre\":\"TIME.\",\"type\":null,\"issued\":{\"date-parts\":[[\"2019\",\"09\",\"26\"]]},\"URL\":\"https://time.com/5687473/boeing-737-alarm-system/\",\"id\":\"Levin2019\"}}],\"properties\":{\"noteIndex\":0},\"originalText\":\"(Levin, 2019)\",\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"mendeley\":{\"formattedCitation\":\"(Levin, 2019)\",\"plainTextFormattedCitation\":\"(Levin, 2019)\",\"previouslyFormattedCitation\":\"(Levin, 2019)\"}}"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:rtl",
-                          "attributes": {
-                            "w:val": "0"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "(Levin, 2019)"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:rtl",
-                          "attributes": {
-                            "w:val": "0"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": ".        "
+                          "value": "By increasing the simplicity of the cockpit, pilots were less taxed and could invest more cognitive resources towards flying the plane. An example of such an environmental change is the adaptation of cockpit alarms. In older planes, cockpits would have the same audio-visual cues for every alarm. Thus, the pilot got the same feedback from the system when the fuel was slightly low as when an important engine was malfunctioning. Pilots were then mentally taxed on two levels: they were constantly confronted with distracting alarms, some of which might not need their immediate attention; and when attending to these alarms, they had to invest great effort in distinguishing the alarm and assessing its importance. As a result, pilots learned to ignore most alarms. A research article published in 1996 summarized problems such as these at the time as follows: “The proliferation of alarms has led to the increased likelihood of false or multiple alarm events and the consequent inability of the operator to determine the underlying cause of the alarm(s)” (Gilson et al., 1996, p. 12). Under such a system, a situation such as the following might occur: During a flight, one of the important engines malfunctions and needs immediate attention. At the same time, a number of other small, but non-urgent, malfunctions could occur. Because the very attentive, but overly taxed pilot cannot properly differentiate between the different alarms, they end up paying attention to the wrong malfunction. A short while later, the plane crashes. As recently as 2019, a plane crash occurred due to a poorly designed alarm system (Levin, 2019).        "
                         }
                       ]
                     }
@@ -2330,21 +1721,15 @@
                 {
                   "type": "element",
                   "name": "w:r",
-                  "attributes": {},
+                  "attributes": {
+                    "w:rsidDel": "00000000"
+                  },
                   "children": [
                     {
                       "type": "element",
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -2358,134 +1743,13 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {},
+                      "attributes": {
+                        "xml:space": "preserve"
+                      },
                       "children": [
                         {
                           "type": "text",
-                          "value": "Faced with the issue of the inattentive pilot, an airline company is presented with two solutions. On the one hand, the company could fire the pilot, hire a new one, and train them for a longer period of time, with a more experienced instructor, and with more expensive training equipment. Besides the fact that this would be very expensive, it would also be unlikely to solve the problem. Humans’ cognitive abilities are limited. This is because, like all human systems, their underlying biological systems operate on limited resources. Similarly, in the realms of cognition, some cognitive scientists believe you can train people for things like working memory, sustained attention, selective attention, and other cognitive skills, but all of these will have a natural ceiling—a point beyond which it is almost impossible to progress "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:rtl",
-                          "attributes": {
-                            "w:val": "0"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:instrText",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "ADDIN CSL_CITATION {\"citationId\":\"CITE-5\",\"citationItems\":[{\"id\":\"Kwok2011\",\"itemData\":{\"author\":[{\"family\":\"Kwok\",\"given\":\"T.C.\"},{\"family\":\"Chau\",\"given\":\"W.W.\"},{\"family\":\"Yuen\",\"given\":\"K.S.\"},{\"family\":\"Wong\",\"given\":\"A.Y.\"},{\"family\":\"Li\",\"given\":\"J.C.\"},{\"family\":\"Shiu\",\"given\":\"R.Y.\"},{\"family\":\"Ho\",\"given\":\"F.K.\"}],\"title\":\"Who would benefit from memory training? A pilot study examining the ceiling effect of concurrent cognitive stimulation\",\"volume\":\"6\",\"type\":\"article-journal\",\"container-title\":\"Clinical Interventions in Aging\",\"issued\":{\"date-parts\":[[\"2011\"]]},\"page\":\"83–88\",\"URL\":\"https://doi.org/10.2147/CIA.S16802\",\"DOI\":\"10.2147/CIA.S16802\",\"id\":\"Kwok2011\"}},{\"id\":\"Traut2021\",\"itemData\":{\"author\":[{\"family\":\"Traut\",\"given\":\"H.J.\"},{\"family\":\"Guild\",\"given\":\"R.M.\"},{\"family\":\"Munakata\",\"given\":\"Y.\"}],\"title\":\"Why does cognitive training yield inconsistent benefits? A meta-analysis of individual differences in baseline cognitive abilities and training outcomes\",\"volume\":\"12\",\"type\":\"article-journal\",\"container-title\":\"Frontiers in psychology\",\"issued\":{\"date-parts\":[[\"2021\"]]},\"page\":\"1–20\",\"URL\":\"https://doi.org/10.3389/fpsyg.2021.662139\",\"DOI\":\"10.3389/fpsyg.2021.662139\",\"id\":\"Traut2021\"}}],\"properties\":{\"noteIndex\":0},\"originalText\":\"(Kwok et al., 2011; Traut et al., 2021)\",\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"mendeley\":{\"formattedCitation\":\"(Kwok et al., 2011; Traut et al., 2021)\",\"plainTextFormattedCitation\":\"(Kwok et al., 2011; Traut et al., 2021)\",\"previouslyFormattedCitation\":\"(Kwok et al., 2011; Traut et al., 2021)\"}}"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:rtl",
-                          "attributes": {
-                            "w:val": "0"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "(Kwok et al., 2011; Traut et al., 2021)"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:rtl",
-                          "attributes": {
-                            "w:val": "0"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": ". "
+                          "value": "Faced with the issue of the inattentive pilot, an airline company is presented with two solutions. On the one hand, the company could fire the pilot, hire a new one, and train them for a longer period of time, with a more experienced instructor, and with more expensive training equipment. Besides the fact that this would be very expensive, it would also be unlikely to solve the problem. Humans’ cognitive abilities are limited. This is because, like all human systems, their underlying biological systems operate on limited resources. Similarly, in the realms of cognition, some cognitive scientists believe you can train people for things like working memory, sustained attention, selective attention, and other cognitive skills, but all of these will have a natural ceiling—a point beyond which it is almost impossible to progress (Kwok et al., 2011; Traut et al., 2021). "
                         }
                       ]
                     }
@@ -2603,14 +1867,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -3756,14 +3012,6 @@
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -3877,14 +3125,6 @@
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -3996,14 +3236,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -4373,14 +3605,6 @@
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -4426,14 +3650,6 @@
                         },
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -4469,14 +3685,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -4593,14 +3801,6 @@
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -4713,14 +3913,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -4861,14 +4053,6 @@
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -4981,14 +4165,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -5111,14 +4287,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -5513,14 +4681,6 @@
                         },
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -5549,14 +4709,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -5697,14 +4849,6 @@
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -5733,14 +4877,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -5870,21 +5006,15 @@
                 {
                   "type": "element",
                   "name": "w:r",
-                  "attributes": {},
+                  "attributes": {
+                    "w:rsidDel": "00000000"
+                  },
                   "children": [
                     {
                       "type": "element",
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -5894,138 +5024,23 @@
                           "children": []
                         }
                       ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:tab",
+                      "attributes": {},
+                      "children": []
                     },
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {},
+                      "attributes": {
+                        "xml:space": "preserve"
+                      },
                       "children": [
                         {
                           "type": "text",
-                          "value": "This lack of knowledge about how to critically evaluate failure extends beyond the sciences to many other types of work such as so-called high-risk industries "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:rtl",
-                          "attributes": {
-                            "w:val": "0"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:instrText",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "ADDIN CSL_CITATION {\"citationId\":\"CITE-6\",\"citationItems\":[{\"id\":\"Bevilacqua2018\",\"itemData\":{\"author\":[{\"family\":\"Bevilacqua\",\"given\":\"M.\"},{\"family\":\"Ciarapica\",\"given\":\"F.E.\"}],\"title\":\"Human factor risk management in the process industry: A case study\",\"volume\":\"169\",\"note\":\"DOI:\",\"type\":\"article-journal\",\"container-title\":\"Reliability Engineering & System Safety\",\"issued\":{\"date-parts\":[[\"2018\"]]},\"page\":\"149–159\",\"URL\":\"https://doi.org/10.1016/j.ress.2017.08.013\",\"DOI\":\"10.1016/j.ress.2017.08.013\",\"id\":\"Bevilacqua2018\"}}],\"properties\":{\"noteIndex\":0},\"originalText\":\"(Bevilacqua & Ciarapica, 2018)\",\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"mendeley\":{\"formattedCitation\":\"(Bevilacqua & Ciarapica, 2018)\",\"plainTextFormattedCitation\":\"(Bevilacqua & Ciarapica, 2018)\",\"previouslyFormattedCitation\":\"(Bevilacqua & Ciarapica, 2018)\"}}"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:rtl",
-                          "attributes": {
-                            "w:val": "0"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "(Bevilacqua & Ciarapica, 2018)"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:rtl",
-                          "attributes": {
-                            "w:val": "0"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": ". This lack of knowledge is not due to a lack of literature on the topic. In philosophy, the process of what we have called “trial and error” has been analyzed in a wide range of contexts. In fields like evolutionary epistemology, agnotology, and within the thought experiments of intuition pumps, much attention is paid to the role of trial and error and failure in the process of gaining knowledge. Additionally, a significant part of the field of Human Factors is dedicated to the analysis and prevention of failure—taking into consideration processes of trial and error. The problem doesn’t seem to be what knowledge is available, but rather what knowledge is known by the relevant actors and put into practice.   "
+                          "value": "This lack of knowledge about how to critically evaluate failure extends beyond the sciences to many other types of work such as so-called high-risk industries (Bevilacqua & Ciarapica, 2018). This lack of knowledge is not due to a lack of literature on the topic. In philosophy, the process of what we have called “trial and error” has been analyzed in a wide range of contexts. In fields like evolutionary epistemology, agnotology, and within the thought experiments of intuition pumps, much attention is paid to the role of trial and error and failure in the process of gaining knowledge. Additionally, a significant part of the field of Human Factors is dedicated to the analysis and prevention of failure—taking into consideration processes of trial and error. The problem doesn’t seem to be what knowledge is available, but rather what knowledge is known by the relevant actors and put into practice.   "
                         }
                       ]
                     }
@@ -6120,14 +5135,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -6242,14 +5249,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -6705,14 +5704,6 @@
                         },
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -6741,14 +5732,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -6796,14 +5779,6 @@
                         },
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -6839,14 +5814,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -6961,14 +5928,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -7091,14 +6050,6 @@
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -7211,14 +6162,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -7357,14 +6300,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -8346,14 +7281,6 @@
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -8399,14 +7326,6 @@
                         },
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -8442,14 +7361,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -8566,14 +7477,6 @@
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -8619,14 +7522,6 @@
                         },
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -8662,14 +7557,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -8786,14 +7673,6 @@
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -8839,14 +7718,6 @@
                         },
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -8882,14 +7753,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -9018,14 +7881,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -9166,14 +8021,6 @@
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -9219,14 +8066,6 @@
                         },
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -9262,14 +8101,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",
@@ -9384,14 +8215,6 @@
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -9409,105 +8232,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": " "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {
-                    "w:rsidDel": "00000000"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:color",
-                          "attributes": {
-                            "w:val": "ff0000"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:rtl",
-                          "attributes": {
-                            "w:val": "0"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {
-                    "w:rsidDel": "00000000"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:rtl",
-                          "attributes": {
-                            "w:val": "0"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": " "
+                          "value": "   "
                         }
                       ]
                     }
@@ -9604,14 +8329,6 @@
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -9657,14 +8374,6 @@
                         },
                         {
                           "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
                           "name": "w:rtl",
                           "attributes": {
                             "w:val": "0"
@@ -9700,14 +8409,6 @@
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
                         {
                           "type": "element",
                           "name": "w:rtl",

@@ -1031,7 +1031,7 @@
                           "attributes": {
                             "id": "_xref-32",
                             "refType": "bibr",
-                            "rid": "Kratochwill2010",
+                            "rid": "Kratochwill2010a",
                             "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=5dcf7b6e-f904-44b1-9c41-015a9c911322\"],\"noteIndex\":0}"
                           },
                           "children": [
@@ -1182,7 +1182,7 @@
                           "attributes": {
                             "id": "_xref-40",
                             "refType": "bibr",
-                            "rid": "Heyvaert2014",
+                            "rid": "Heyvaert2014a",
                             "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=2b7622b9-97a6-4dc8-8789-3f3716c9bcc5\"],\"noteIndex\":0}"
                           },
                           "children": [
@@ -2667,7 +2667,7 @@
                           "attributes": {
                             "id": "_xref-62",
                             "refType": "bibr",
-                            "rid": "Heyvaert2014",
+                            "rid": "Heyvaert2014a",
                             "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=2b7622b9-97a6-4dc8-8789-3f3716c9bcc5\"],\"noteIndex\":0}"
                           },
                           "children": [
@@ -3301,7 +3301,7 @@
                               "attributes": {
                                 "id": "_xref-67",
                                 "refType": "bibr",
-                                "rid": "Kratochwill2010",
+                                "rid": "Kratochwill2010a",
                                 "customType": "{\"suppress-author\":1,\"uris\":[\"http://www.mendeley.com/documents/?uuid=5dcf7b6e-f904-44b1-9c41-015a9c911322\"],\"noteIndex\":0}"
                               },
                               "children": [
@@ -3688,7 +3688,7 @@
                           "attributes": {
                             "id": "_xref-71",
                             "refType": "bibr",
-                            "rid": "De2020",
+                            "rid": "De2020a",
                             "customType": "{\"uris\":[\"http://www.mendeley.com/documents/?uuid=ff1167ee-c172-4d50-9512-1ab3115e6df4\"],\"noteIndex\":0}"
                           },
                           "children": [
@@ -6560,7 +6560,7 @@
                       "attributes": {
                         "id": "_xref-77",
                         "refType": "bibr",
-                        "rid": "Kratochwill2010",
+                        "rid": "Kratochwill2010a",
                         "customType": "{\"suppress-author\":1,\"uris\":[\"http://www.mendeley.com/documents/?uuid=5dcf7b6e-f904-44b1-9c41-015a9c911322\"],\"noteIndex\":0}"
                       },
                       "children": [
@@ -23851,20 +23851,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "10.1080/09602011.2013.818564"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "pubId",
-                          "attributes": {
-                            "pubIdType": "pmid"
-                          },
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "23865938"
+                              "value": "10.1016/j.jcbs.2013.10.002"
                             }
                           ]
                         },
@@ -23942,7 +23929,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "507-527"
+                              "value": "51-64"
                             }
                           ]
                         },
@@ -23953,7 +23940,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "Analysis of single-case data: Randomisation tests for measures of effect size"
+                              "value": "Randomization tests for single-case experiments: State of the art, state of the science, and state of the application"
                             }
                           ]
                         },
@@ -23964,7 +23951,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "Neuropsychological Rehabilitation"
+                              "value": "Journal of Contextual Behavioral Science"
                             }
                           ]
                         },
@@ -23975,7 +23962,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "14640694"
+                              "value": "2212-1447"
                             }
                           ]
                         },
@@ -23986,7 +23973,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "09602011 (ISSN)"
+                              "value": "22121447"
                             }
                           ]
                         },
@@ -23997,7 +23984,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "3-4"
+                              "value": "1"
                             }
                           ]
                         },
@@ -24008,7 +23995,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "24"
+                              "value": "3"
                             }
                           ]
                         }
@@ -24468,6 +24455,19 @@
                         },
                         {
                           "type": "element",
+                          "name": "pubId",
+                          "attributes": {
+                            "pubIdType": "doi"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "10.1037/a0017736"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
                           "name": "personGroup",
                           "attributes": {
                             "personGroupType": "author"
@@ -24514,64 +24514,6 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "value": "Hitchcock"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "givenNames",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "J"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "name",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "surname",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "Horner"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "givenNames",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "Robert H"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "name",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "surname",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
                                       "value": "Levin"
                                     }
                                   ]
@@ -24583,98 +24525,22 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "value": "J R"
+                                      "value": "Joel R"
                                     }
                                   ]
                                 }
                               ]
-                            },
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
                             {
-                              "type": "element",
-                              "name": "name",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "surname",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "Odom"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "givenNames",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "S L"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "name",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "surname",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "Rindskopf"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "givenNames",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "D M"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "name",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "surname",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "Shadish"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "givenNames",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "W R"
-                                    }
-                                  ]
-                                }
-                              ]
+                              "type": "text",
+                              "value": "124-144"
                             }
                           ]
                         },
@@ -24685,18 +24551,51 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "Single-case design technical documentation"
+                              "value": "Enhancing the scientific credibility of single-case intervention research: Randomization to the rescue"
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "isbn",
+                          "name": "source",
                           "attributes": {},
                           "children": [
                             {
                               "type": "text",
-                              "value": "2072366658"
+                              "value": "Psychological Methods"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issn",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1082989X"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issue",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "15"
                             }
                           ]
                         }
@@ -27002,6 +26901,269 @@
                   "type": "element",
                   "name": "ref",
                   "attributes": {
+                    "id": "Kratochwill2010a"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2010"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Kratochwill"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "T. R."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Hitchcock"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "J"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Horner"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Robert H"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Levin"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "J R"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Odom"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "S L"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Rindskopf"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "D M"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Shadish"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "W R"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Single-case design technical documentation"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "isbn",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2072366658"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
                     "id": "Manolov2018"
                   },
                   "children": [
@@ -27738,6 +27900,205 @@
                             {
                               "type": "text",
                               "value": "52"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Heyvaert2014a"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2014"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pubId",
+                          "attributes": {
+                            "pubIdType": "doi"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "10.1080/09602011.2013.818564"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pubId",
+                          "attributes": {
+                            "pubIdType": "pmid"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "23865938"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Heyvaert"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Mieke"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Onghena"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Patrick"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "507-527"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Analysis of single-case data: Randomisation tests for measures of effect size"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Neuropsychological Rehabilitation"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issn",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "14640694"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "isbn",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "09602011 (ISSN)"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issue",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "3-4"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "24"
                             }
                           ]
                         }
@@ -30906,6 +31267,182 @@
                             {
                               "type": "text",
                               "value": "51"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "De2020a"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2020"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "De"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Tamal Kumar"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Michiels"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Bart"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Vlaeyen"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Johan W S"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Onghena"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Patrick"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Shiny SCDA"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issue",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Version 2.7"
                             }
                           ]
                         }

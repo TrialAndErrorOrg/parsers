@@ -134,7 +134,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "@article{Bowden2005,\n    title       = {New approaches to demystifying insight},\n    author      = {Bowden, E and Jung-Beeman, Mark and Fleck, J and Kounios, J},\n    number      = {7},\n    volume      = {9},\n    doi         = {10.1016/j.tics.2005.05.012},\n    year        = {2005-07},\n    pages       = {322-328},\n    journal     = {Trends in Cognitive Sciences}\n}\n\n\n@article{Jones2003,\n    title       = {Testing two cognitive theories of insight.},\n    author      = {Jones, Gary},\n    number      = {5},\n    volume      = {29},\n    doi         = {10.1037/0278-7393.29.5.1017},\n    year        = {2003},\n    pages       = {1017-1027},\n    journal     = {Journal of Experimental Psychology: Learning, Memory, and Cognition}\n}\n\n\n@article{Chu2011,\n    title       = {Human performance on insight problem solving: A review},\n    author      = {Chu, Yun and MacGregor, James N.},\n    number      = {2},\n    volume      = {3},\n    doi         = {10.7771/1932-6246.1094},\n    year        = {2011-02-07},\n    journal     = {The Journal of Problem Solving}\n}\n\n\n@article{Fleck2013,\n    title       = {Insight versus analysis: Evidence for diverse methods in problem solving},\n    author      = {Fleck, Jessica I. and Weisberg, Robert W.},\n    number      = {4},\n    volume      = {25},\n    doi         = {10.1080/20445911.2013.779248},\n    year        = {2013-06},\n    pages       = {436-463},\n    journal     = {Journal of Cognitive Psychology}\n}\n\n\n@article{Weisberg2015,\n    title       = {Toward an integrated theory of insight in problem solving},\n    author      = {Weisberg, Robert W.},\n    number      = {1},\n    volume      = {21},\n    doi         = {10.1080/13546783.2014.886625},\n    year        = {2015-01-02},\n    pages       = {5-39},\n    journal     = {Thinking & Reasoning}\n}\n\n\n@article{Vallée‐Tourangeau2019,\n    title       = {Insight out: Making creativity visible},\n    author      = {Vallée‐Tourangeau, Frédéric and March, Paul L.},\n    doi         = {https://doi.org/10.1002/jocb.409},\n    year        = {2019},\n    journal     = {The Journal of Creative Behavior}\n}\n\n\n@article{Vallée-Tourangeau2020,\n    title       = {Mapping systemic resources in problem solving},\n    author      = {Vallée-Tourangeau, Frédéric and Vallée-Tourangeau, Gaëlle},\n    doi         = {10.1016/j.newideapsych.2020.100812},\n    year        = {2020},\n    journal     = {New Ideas in Psychology}\n}\n\n\n@article{Vallée‐Tourangeau2014,\n    title       = {Diagrams, jars, and matchsticks: A systemicist’s toolkit},\n    author      = {Vallée‐Tourangeau, Frédéric and Vallée-Tourangeau, Gaëlle},\n    number      = {2},\n    volume      = {22},\n    doi         = {10.1075/pc.22.2.02val},\n    year        = {2014-12-31},\n    pages       = {187-205},\n    journal     = {Pragmatics & Cognition}\n}\n\n\n@article{Andriani2017,\n    title       = {Measuring exaptation and its impact on innovation, search, and problem Solving},\n    author      = {Andriani, Pierpaolo and Ali, Ayfer and Mastrogiorgio, Mariano},\n    number      = {2},\n    volume      = {28},\n    doi         = {10.1287/orsc.2017.1116},\n    year        = {2017-04},\n    pages       = {320-338},\n    journal     = {Organization Science}\n}\n\n\n@article{Kirsh1994,\n    title       = {On distinguishing epistemic from pragmatic action},\n    author      = {Kirsh, David and Maglio, Paul},\n    number      = {4},\n    volume      = {18},\n    doi         = {10.1207/s15516709cog1804_1},\n    year        = {1994-10},\n    pages       = {513-549},\n    journal     = {Cognitive Science}\n}\n\n\n@book{Glaser1967,\n    title       = {The discovery of grounded theory: Strategies for Qualitative Research},\n    author      = {Glaser, Barney and Strauss, Anslem},\n    publisher   = {Aldine Publishing Company},\n    place       = {New York},\n    year        = {1967}\n}\n\n\n@article{Grice1975,\n    title       = {Logic and conversation},\n    author      = {Grice, H.P},\n    publisher   = {Aacdemic Press},\n    year        = {1975},\n    pages       = {41-58},\n    journal     = {Speech acts [syntax and semantics 3]}\n}\n\n\n@article{Gozli2017,\n    title       = {Behaviour versus performance: The veiled commitment of experimental psychology},\n    author      = {Gozli, Davood G.},\n    number      = {6},\n    volume      = {27},\n    doi         = {10.1177/0959354317728130},\n    year        = {2017-12},\n    pages       = {741-758},\n    journal     = {Theory & Psychology}\n}\n\n\n@article{Arfini2019,\n    title       = {Situated ignorance: the distribution and extension of ignorance in cognitive niches},\n    author      = {Arfini, Selene},\n    doi         = {10.1007/s11229-019-02328-0},\n    year        = {2019-07-24},\n    journal     = {Synthese}\n}\n\n\n@article{MacGregor2001,\n    title       = {Information processing and insight: A process model of performance on the nine-dot and related problems.},\n    author      = {MacGregor, James N. and Ormerod, Thomas C. and Chronicle, Edward P.},\n    number      = {1},\n    volume      = {27},\n    doi         = {10.1037//0278-7393.27.1.176},\n    year        = {2001},\n    pages       = {176-201},\n    journal     = {Journal of Experimental Psychology: Learning, Memory, and Cognition}\n}\n\n\n@article{Ormerod2013,\n    title       = {Act first, think later: The presence and absence of inferential planning in problem solving},\n    author      = {Ormerod, Thomas C. and MacGregor, James N. and Chronicle, Edward P. and Dewald, Andrew D. and Chu, Yun},\n    number      = {7},\n    volume      = {41},\n    doi         = {10.3758/s13421-013-0318-5},\n    year        = {2013-10},\n    pages       = {1096-1108},\n    journal     = {Memory & Cognition}\n}\n\n\n@article{Wilson2009,\n    title       = {How to situate cognition},\n    author      = {Wilson, Robert A. and Clark, Andy},\n    publisher   = {Cambridge University Press},\n    year        = {2009},\n    pages       = {55 -78},\n    journal     = {The Cambridge handbook of situated cognition}\n}"
+                  "value": "@article{March2020,\n    author      = {March},\n    year        = {2020}\n}\n\n\n@article{Bowden2005,\n    title       = {New approaches to demystifying insight},\n    author      = {Bowden, E and Jung-Beeman, Mark and Fleck, J and Kounios, J},\n    number      = {7},\n    volume      = {9},\n    doi         = {10.1016/j.tics.2005.05.012},\n    year        = {2005-07},\n    pages       = {322-328},\n    journal     = {Trends in Cognitive Sciences}\n}\n\n\n@article{Jones2003,\n    title       = {Testing two cognitive theories of insight.},\n    author      = {Jones, Gary},\n    number      = {5},\n    volume      = {29},\n    doi         = {10.1037/0278-7393.29.5.1017},\n    year        = {2003},\n    pages       = {1017-1027},\n    journal     = {Journal of Experimental Psychology: Learning, Memory, and Cognition}\n}\n\n\n@article{Chu2011,\n    title       = {Human performance on insight problem solving: A review},\n    author      = {Chu, Yun and MacGregor, James N.},\n    number      = {2},\n    volume      = {3},\n    doi         = {10.7771/1932-6246.1094},\n    year        = {2011-02-07},\n    journal     = {The Journal of Problem Solving}\n}\n\n\n@article{Fleck2013,\n    title       = {Insight versus analysis: Evidence for diverse methods in problem solving},\n    author      = {Fleck, Jessica I. and Weisberg, Robert W.},\n    number      = {4},\n    volume      = {25},\n    doi         = {10.1080/20445911.2013.779248},\n    year        = {2013-06},\n    pages       = {436-463},\n    journal     = {Journal of Cognitive Psychology}\n}\n\n\n@article{Weisberg2015,\n    title       = {Toward an integrated theory of insight in problem solving},\n    author      = {Weisberg, Robert W.},\n    number      = {1},\n    volume      = {21},\n    doi         = {10.1080/13546783.2014.886625},\n    year        = {2015-01-02},\n    pages       = {5-39},\n    journal     = {Thinking & Reasoning}\n}\n\n\n@article{Vallée‐Tourangeau2019,\n    title       = {Insight out: Making creativity visible},\n    author      = {Vallée‐Tourangeau, Frédéric and March, Paul L.},\n    doi         = {https://doi.org/10.1002/jocb.409},\n    year        = {2019},\n    journal     = {The Journal of Creative Behavior}\n}\n\n\n@article{Vallée-Tourangeau2020,\n    title       = {Mapping systemic resources in problem solving},\n    author      = {Vallée-Tourangeau, Frédéric and Vallée-Tourangeau, Gaëlle},\n    doi         = {10.1016/j.newideapsych.2020.100812},\n    year        = {2020},\n    journal     = {New Ideas in Psychology}\n}\n\n\n@article{Vallée‐Tourangeau2014,\n    title       = {Diagrams, jars, and matchsticks: A systemicist’s toolkit},\n    author      = {Vallée‐Tourangeau, Frédéric and Vallée-Tourangeau, Gaëlle},\n    number      = {2},\n    volume      = {22},\n    doi         = {10.1075/pc.22.2.02val},\n    year        = {2014-12-31},\n    pages       = {187-205},\n    journal     = {Pragmatics & Cognition}\n}\n\n\n@article{Andriani2017,\n    title       = {Measuring exaptation and its impact on innovation, search, and problem Solving},\n    author      = {Andriani, Pierpaolo and Ali, Ayfer and Mastrogiorgio, Mariano},\n    number      = {2},\n    volume      = {28},\n    doi         = {10.1287/orsc.2017.1116},\n    year        = {2017-04},\n    pages       = {320-338},\n    journal     = {Organization Science}\n}\n\n\n@article{Kirsh1994,\n    title       = {On distinguishing epistemic from pragmatic action},\n    author      = {Kirsh, David and Maglio, Paul},\n    number      = {4},\n    volume      = {18},\n    doi         = {10.1207/s15516709cog1804_1},\n    year        = {1994-10},\n    pages       = {513-549},\n    journal     = {Cognitive Science}\n}\n\n\n@book{Glaser1967,\n    title       = {The discovery of grounded theory: Strategies for Qualitative Research},\n    author      = {Glaser, Barney and Strauss, Anslem},\n    publisher   = {Aldine Publishing Company},\n    place       = {New York},\n    year        = {1967}\n}\n\n\n@article{Vallée-Tourangeau2020a,\n    author      = {Vallée-Tourangeau and March},\n    year        = {2020}\n}\n\n\n@article{Grice1975,\n    title       = {Logic and conversation},\n    author      = {Grice, H.P},\n    publisher   = {Aacdemic Press},\n    year        = {1975},\n    pages       = {41-58},\n    journal     = {Speech acts [syntax and semantics 3]}\n}\n\n\n@article{Gozli2017,\n    title       = {Behaviour versus performance: The veiled commitment of experimental psychology},\n    author      = {Gozli, Davood G.},\n    number      = {6},\n    volume      = {27},\n    doi         = {10.1177/0959354317728130},\n    year        = {2017-12},\n    pages       = {741-758},\n    journal     = {Theory & Psychology}\n}\n\n\n@article{Arfini2019,\n    title       = {Situated ignorance: the distribution and extension of ignorance in cognitive niches},\n    author      = {Arfini, Selene},\n    doi         = {10.1007/s11229-019-02328-0},\n    year        = {2019-07-24},\n    journal     = {Synthese}\n}\n\n\n@article{MacGregor2001,\n    title       = {Information processing and insight: A process model of performance on the nine-dot and related problems.},\n    author      = {MacGregor, James N. and Ormerod, Thomas C. and Chronicle, Edward P.},\n    number      = {1},\n    volume      = {27},\n    doi         = {10.1037//0278-7393.27.1.176},\n    year        = {2001},\n    pages       = {176-201},\n    journal     = {Journal of Experimental Psychology: Learning, Memory, and Cognition}\n}\n\n\n@article{Ormerod2013,\n    title       = {Act first, think later: The presence and absence of inferential planning in problem solving},\n    author      = {Ormerod, Thomas C. and MacGregor, James N. and Chronicle, Edward P. and Dewald, Andrew D. and Chu, Yun},\n    number      = {7},\n    volume      = {41},\n    doi         = {10.3758/s13421-013-0318-5},\n    year        = {2013-10},\n    pages       = {1096-1108},\n    journal     = {Memory & Cognition}\n}\n\n\n@article{Wilson2009,\n    title       = {How to situate cognition},\n    author      = {Wilson, Robert A. and Clark, Andy},\n    publisher   = {Cambridge University Press},\n    year        = {2009},\n    pages       = {55 -78},\n    journal     = {The Cambridge handbook of situated cognition}\n}"
                 }
               ]
             }
@@ -315,15 +315,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Address correspondence to Wendy Ross, "
-                },
-                {
-                  "type": "text",
-                  "value": "Psychology Department, London Metropolitan University, 166-220 Holloway Road, N7 8DB"
-                },
-                {
-                  "type": "text",
-                  "value": "; "
+                  "value": "Address correspondence to Wendy Ross, Psychology Department, London Metropolitan University, 166-220 Holloway Road, N7 8DB; "
                 },
                 {
                   "type": "text",
@@ -429,7 +421,34 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Insight problems are sometimes designed to encourage an incorrect and misleading interpretation that veils a simple answer. The socks problem is one such problem: Given black socks and brown socks in a drawer mixed in a ratio of four to five, how many socks will you have to take out to make sure that you have a pair of the same color? The ratio information is misleading since, with only two colors, pulling three socks will guarantee a matching pair. Recently, Vallée-Tourangeau and March (2020) offered a distinction between first- and second-order problem-solving: The former proceeds with and through a physical model of the problem, while the latter proceeds in the absence of such interactions with the world, in other words on the basis of mental processes alone. Vallée-Tourangeau and March also proposed a thought experiment, suggesting that the ratio information in the socks problem might be quickly abandoned in a first-order environment, that is, one where participants observe the results of drawing socks out of a bag rather than imagining themselves doing so. We tested this prediction by randomly allocating participants to a low- (second-order) or high- (first-order) interactivity condition. Marginally more participants announced the correct answer within a 5-minute period in the high than in the low condition, although the difference was not significant. Detailed analysis of the video recording revealed the challenges of operationalizing a second-order condition, as participants engaged in dialogical interactions with the experimenter. In addition, the manner in which the high-interactivity condition was designed appeared to encourage the physical reification of the misleading ratio, thus anchoring that information more firmly rather than defusing it through interactivity. We close the paper with some reflections on wide, or systemic, cognition in experimental research on creative problem-solving. "
+                  "value": "Insight problems are sometimes designed to encourage an incorrect and misleading interpretation that veils a simple answer. The socks problem is one such problem: Given black socks and brown socks in a drawer mixed in a ratio of four to five, how many socks will you have to take out to make sure that you have a pair of the same color? The ratio information is misleading since, with only two colors, pulling three socks will guarantee a matching pair. Recently, Vallée-Tourangeau and "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "March2020"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " offered a distinction between first- and second-order problem-solving: The former proceeds with and through a physical model of the problem, while the latter proceeds in the absence of such interactions with the world, in other words on the basis of mental processes alone. Vallée-Tourangeau and March also proposed a thought experiment, suggesting that the ratio information in the socks problem might be quickly abandoned in a first-order environment, that is, one where participants observe the results of drawing socks out of a bag rather than imagining themselves doing so. We tested this prediction by randomly allocating participants to a low- "
+                },
+                {
+                  "type": "text",
+                  "value": "(second-order) or high- "
+                },
+                {
+                  "type": "text",
+                  "value": "(first-order) interactivity condition. Marginally more participants announced the correct answer within a 5-minute period in the high than in the low condition, although the difference was not significant. Detailed analysis of the video recording revealed the challenges of operationalizing a second-order condition, as participants engaged in dialogical interactions with the experimenter. In addition, the manner in which the high-interactivity condition was designed appeared to encourage the physical reification of the misleading ratio, thus anchoring that information more firmly rather than defusing it through interactivity. We close the paper with some reflections on wide, or systemic, cognition in experimental research on creative problem-solving. "
                 }
               ]
             },
@@ -463,7 +482,30 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The socks problem is a riddle commonly employed in research on insight problem-solving. The riddle goes: If you have black socks and brown socks in a drawer mixed in a ratio of four to five, how many socks will you have to take out to make sure that you have a pair of the same color? The ratio information is misleading since, with only two colors, pulling three socks will guarantee a matching pair. One of us (Vallée-Tourangeau) in Vallée-Tourangeau and March (2020) suggested that placing a participant in a materially rich environment rather than a sequestered one—in other words, giving her socks to test her ideas—would improve the solution rate. We aimed to translate this thought experiment into a physical one. The participants were therefore placed into two experimental conditions, one in which they could draw socks out of a bag to help them discover the answer or one in which they could not, and their performance was measured in terms of success and latency to success. We predicted that interacting with actual socks would lead to a higher level of success in a faster time. The participants were also filmed to facilitate strategy coding to assess if the different material environments prompted different strategies, as also predicted by Vallée-Tourangeau and March. "
+                  "value": "The socks problem is a riddle commonly employed in research on insight problem-solving. The riddle goes: If you have black socks and brown socks in a drawer mixed in a ratio of four to five, how many socks will you have to take out to make sure that you have a pair of the same color? The ratio information is misleading since, with only two colors, pulling three socks will guarantee a matching pair. One of us "
+                },
+                {
+                  "type": "text",
+                  "value": "(Vallée-Tourangeau) in Vallée-Tourangeau and "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "March2020"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " suggested that placing a participant in a materially rich environment rather than a sequestered one—in other words, giving her socks to test her ideas—would improve the solution rate. We aimed to translate this thought experiment into a physical one. The participants were therefore placed into two experimental conditions, one in which they could draw socks out of a bag to help them discover the answer or one in which they could not, and their performance was measured in terms of success and latency to success. We predicted that interacting with actual socks would lead to a higher level of success in a faster time. The participants were also filmed to facilitate strategy coding to assess if the different material environments prompted different strategies, as also predicted by Vallée-Tourangeau and March. "
                 }
               ]
             },
@@ -548,7 +590,8 @@
                       "optional": true,
                       "children": [
                         {
-                          "type": "text"
+                          "type": "text",
+                          "value": ""
                         }
                       ]
                     },
@@ -586,7 +629,8 @@
                       "optional": true,
                       "children": [
                         {
-                          "type": "text"
+                          "type": "text",
+                          "value": ""
                         }
                       ]
                     },
@@ -643,7 +687,8 @@
                       "optional": true,
                       "children": [
                         {
-                          "type": "text"
+                          "type": "text",
+                          "value": ""
                         }
                       ]
                     },
@@ -700,7 +745,8 @@
                       "optional": true,
                       "children": [
                         {
-                          "type": "text"
+                          "type": "text",
+                          "value": ""
                         }
                       ]
                     },
@@ -747,7 +793,8 @@
                       "optional": true,
                       "children": [
                         {
-                          "type": "text"
+                          "type": "text",
+                          "value": ""
                         }
                       ]
                     },
@@ -924,7 +971,8 @@
                       "optional": true,
                       "children": [
                         {
-                          "type": "text"
+                          "type": "text",
+                          "value": ""
                         }
                       ]
                     },
@@ -975,7 +1023,26 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "There were two predictions made in Vallée-Tourangeau and March (2020). First, that the use of an actual bag of socks will lead to augmented performance, as measured by a higher solution rate. Second, that the way performance would be augmented would feature two components: The first being that the participant would forget the misleading ratio information, and the second being that the participant would be able to view the answer as she pulled socks out of the bag. This clear behavioral process hypothesis has a firm theoretical basis as outlined above. The current study aimed to test both the behavioral and performance hypotheses. "
+                  "value": "There were two predictions made in Vallée-Tourangeau and "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "March2020"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". First, that the use of an actual bag of socks will lead to augmented performance, as measured by a higher solution rate. Second, that the way performance would be augmented would feature two components: The first being that the participant would forget the misleading ratio information, and the second being that the participant would be able to view the answer as she pulled socks out of the bag. This clear behavioral process hypothesis has a firm theoretical basis as outlined above. The current study aimed to test both the behavioral and performance hypotheses. "
                 }
               ]
             },
@@ -1996,7 +2063,26 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The socks problem is a hard one because participants get stuck on the unhelpful ratio. As suggested by Vallée-Tourangeau and March (2020), ignoring the ratio should lead to participants solving the problem more often and faster because they are not tempted to use inappropriate mathematical formulae. As we have addressed above, this is not an unreasonable assumption. However, the specific hypothesis under exploration, that a high-interactivity environment would increase the number of people who disregard the ratio, was not sustained by an analysis of what people did in this condition; it appeared that the opposite was the case, that a high-interactivity reinforced the unhelpful information. "
+                  "value": "The socks problem is a hard one because participants get stuck on the unhelpful ratio. As suggested by "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Vallée-Tourangeau2020a"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", ignoring the ratio should lead to participants solving the problem more often and faster because they are not tempted to use inappropriate mathematical formulae. As we have addressed above, this is not an unreasonable assumption. However, the specific hypothesis under exploration, that a high-interactivity environment would increase the number of people who disregard the ratio, was not sustained by an analysis of what people did in this condition; it appeared that the opposite was the case, that a high-interactivity reinforced the unhelpful information. "
                 }
               ]
             },
@@ -3430,11 +3516,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "This was even clearer in the low-interactivity condition where the participants sought out scaffolding more obviously. Take for example, participant 26 in Table 2. This was a low-interactivity participant who uncovered the answer through a series of guesses using the feedback as a scaffold. As she stated clearly when asked if she knows why: "
-                },
-                {
-                  "type": "text",
-                  "value": "\"When I got to the end I did...when I said two and then I realized...\" (02:51). The act of saying the word alongside the feedback from the environment scaffolded her understanding. Knowledge was gained when the thought was in the world; even if that realization did not take material form, it was still generated in action, this time the action of guessing. To place the results from this participant in a low-interactivity environment would be misleading even if she did not carry out any actions over objects. "
+                  "value": "This was even clearer in the low-interactivity condition where the participants sought out scaffolding more obviously. Take for example, participant 26 in Table 2. This was a low-interactivity participant who uncovered the answer through a series of guesses using the feedback as a scaffold. As she stated clearly when asked if she knows why: \"When I got to the end I did...when I said two and then I realized...\" (02:51). The act of saying the word alongside the feedback from the environment scaffolded her understanding. Knowledge was gained when the thought was in the world; even if that realization did not take material form, it was still generated in action, this time the action of guessing. To place the results from this participant in a low-interactivity environment would be misleading even if she did not carry out any actions over objects. "
                 }
               ]
             },
@@ -5231,11 +5313,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Interactivity posits that a dynamic relationship with the external world is not only augmentative to cognition processes but necessary. However, experimental research in interactivity does so by paradoxically setting up a low-interactivity condition which admits non-interactive thinking. In this way, it assumes that there is an easy way to compare non-systemic and systemic cognition and that non-systemic cognition can be meaningfully isolated in an experimental psychologist’s lab. We suggest that the dualistic assumptions underlying this approach are misguided, as they assume an ideal type of experimental participant can be generated in sequestered experimental conditions. Rather, the evidence we present here suggests a cognitive leakage across both experimental conditions."
-                },
-                {
-                  "type": "text",
-                  "value": " In the process of operationalizing the so-called low-interactivity condition, the presence of the experimenter offered an external resource with which to scaffold the problem-solving process. The participant naturally transformed a solo and ostensibly unaided effort into a dyadic one. Clearly, the experimenter qua interlocutor was an unrequited conversational partner. Still, in the absence of hard physical or instructional constraints, the participant naturally availed themselves of this resource, bootstrapping the cognitive effort through a dialogue with their reluctant partner. And it is through this dialogue that the participant’s hunch underwent many different forms until it was eventually translated into the normative one. These ersatz dialogues offer a telling window on the distributed nature of thinking, in this instance, the distribution over time and the gradual sedimentation through iterative dialogical cycles. The reification of the solution was the product of interactivity despite the experimental procedure."
+                  "value": "Interactivity posits that a dynamic relationship with the external world is not only augmentative to cognition processes but necessary. However, experimental research in interactivity does so by paradoxically setting up a low-interactivity condition which admits non-interactive thinking. In this way, it assumes that there is an easy way to compare non-systemic and systemic cognition and that non-systemic cognition can be meaningfully isolated in an experimental psychologist’s lab. We suggest that the dualistic assumptions underlying this approach are misguided, as they assume an ideal type of experimental participant can be generated in sequestered experimental conditions. Rather, the evidence we present here suggests a cognitive leakage across both experimental conditions. In the process of operationalizing the so-called low-interactivity condition, the presence of the experimenter offered an external resource with which to scaffold the problem-solving process. The participant naturally transformed a solo and ostensibly unaided effort into a dyadic one. Clearly, the experimenter qua interlocutor was an unrequited conversational partner. Still, in the absence of hard physical or instructional constraints, the participant naturally availed themselves of this resource, bootstrapping the cognitive effort through a dialogue with their reluctant partner. And it is through this dialogue that the participant’s hunch underwent many different forms until it was eventually translated into the normative one. These ersatz dialogues offer a telling window on the distributed nature of thinking, in this instance, the distribution over time and the gradual sedimentation through iterative dialogical cycles. The reification of the solution was the product of interactivity despite the experimental procedure."
                 }
               ]
             },
@@ -5244,7 +5322,38 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "A systematic approach to cognition requires that every thoughtful (and arguably every non-thoughtful) encounter should be analyzed as part of a system; however, what constitutes part of the system is rarely specified. Vallée-Tourangeau and March (2020) suggest that a cognitive ecosystem is configured by “the reasoner, the physical reality of the problem, and the action possibilities offered by the external environment” (p. 826). We argue that the data here suggest “the action possibilities offered by the external environment” (p. 826) are broader than whether the problem is represented in movable artifacts or not. Rather, participants actively recruit beyond the resources of interest in the experimental conditions. This means a more granular approach needs to be considered. "
+                  "value": "A systematic approach to cognition requires that every thoughtful "
+                },
+                {
+                  "type": "text",
+                  "value": "(and arguably every non-thoughtful) encounter should be analyzed as part of a system; however, what constitutes part of the system is rarely specified. Vallée-Tourangeau and "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "March2020"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " suggest that a cognitive ecosystem is configured by “the reasoner, the physical reality of the problem, and the action possibilities offered by the external environment” "
+                },
+                {
+                  "type": "text",
+                  "value": "(p. 826). We argue that the data here suggest “the action possibilities offered by the external environment” "
+                },
+                {
+                  "type": "text",
+                  "value": "(p. 826) are broader than whether the problem is represented in movable artifacts or not. Rather, participants actively recruit beyond the resources of interest in the experimental conditions. This means a more granular approach needs to be considered. "
                 }
               ]
             },
@@ -5292,15 +5401,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "It is tempting to question whether the mental tasks used in traditional cognitive psychology experiments are diagnostic of problem-solving outside of the sequestered laboratory environments in which they are commonly operationalized. We propose, rather, that a research program should develop in parallel to examine the solving of problems which rendered complex not because of their structure but because of their situation. "
-                },
-                {
-                  "type": "text",
-                  "value": "When it comes to problem-solving, we need a wider range of outcome measures to even begin to understand how it unfolds across a range of contexts which requires a combination of qualitative and quantitative work. What we can see here is that the genesis of a new idea involves a transformation, which in turn involves resources; these resources come with a cost, and these transactions leave physical traces which can be mapped. To understand the transformations and transactions, that is, the process through which new ideas are constructed, the analysis must be local and granular. I"
-                },
-                {
-                  "type": "text",
-                  "value": "t is our belief that turning to the qualitative in cognitive psychology to complement the quantitative will yield great benefits."
+                  "value": "It is tempting to question whether the mental tasks used in traditional cognitive psychology experiments are diagnostic of problem-solving outside of the sequestered laboratory environments in which they are commonly operationalized. We propose, rather, that a research program should develop in parallel to examine the solving of problems which rendered complex not because of their structure but because of their situation. When it comes to problem-solving, we need a wider range of outcome measures to even begin to understand how it unfolds across a range of contexts which requires a combination of qualitative and quantitative work. What we can see here is that the genesis of a new idea involves a transformation, which in turn involves resources; these resources come with a cost, and these transactions leave physical traces which can be mapped. To understand the transformations and transactions, that is, the process through which new ideas are constructed, the analysis must be local and granular. It is our belief that turning to the qualitative in cognitive psychology to complement the quantitative will yield great benefits."
                 }
               ]
             },

@@ -95,8 +95,10 @@ InputContent ->
 NonCiteContent ->
   %Year {% id %}
  | NonYearParenContent {% id %}
- | %Lp NonYearParenContent:+ %Rp:? {% ([l,c,r]) => l+c.join('')+r %}
- | %Lp:? NonYearParenContent:+ %Rp {% ([l,c,r]) => l+c.join('')+r %}
+ | %Lp NonYearParenContent:+ %Rp {% ([l,c,r]) => l+c.join('')+r %}
+# | %Lp NonYearParenContent:+  {% ([l,c]) => l+c.join('') %}
+#  |  NonYearParenContent:+ %Rp {% ([c,r]) => c.join('')+r%}
+#  | %Year %Rp {% ([l,c]) => l+c%}
 
 NonYearParenContent ->
    %__ {% id %}
@@ -344,6 +346,7 @@ NameList ->   Name                                           {% name=>name %}
             | NameList %Com %__ Comp %__ NameList            {% ([name,,,,,n])=>([name,n].flat()) %}
             | NameList %Com %__ Comp %__                     {% ([name,,,,])=>([name].flat()) %}
             | NameList %__ Comp %__ NameList                 {% ([name,_,and,__,n])=>([name,n].flat()) %}
+            | NameList %__ Comp %__ Name                     {% ([name,_,and,__,n])=>([name,n].flat()) %}
             | NameList %__ Comp %__                          {% ([name])=>([name].flat()) %}
             | NameList %Com %__ Etal                         {% ([name])=>([name].flat()) %}
             | NameList Etal                                  {% ([name])=>([name].flat()) %}

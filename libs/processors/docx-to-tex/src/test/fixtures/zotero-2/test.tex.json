@@ -134,7 +134,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "@article{Gladwin2017,\n    title       = {Carryover effects in spatial attentional bias tasks and their relationship to subclinical PTSD symptoms.},\n    author      = {Gladwin, Thomas E.},\n    number      = {4},\n    volume      = {23},\n    doi         = {10.1037/trm0000121},\n    year        = {2017},\n    pages       = {303},\n    journal     = {Traumatology}\n}\n\n\n@article{Gladwin2019,\n    title       = {Trial-to-trial carryover effects on spatial attentional bias},\n    author      = {Gladwin, Thomas E. and Figner, Bernd},\n    volume      = {196},\n    doi         = {10.1016/j.actpsy.2019.04.006},\n    year        = {2019-05},\n    pages       = {51-55},\n    journal     = {Acta Psychologica}\n}\n\n\n@article{Gladwin2020,\n    title       = {Attentional bias for negative expressions depends on previous target location: replicable effect but unreliable measures},\n    author      = {Gladwin, Thomas E. and Jewiss, Matt and Vink, Matthijs},\n    doi         = {10.1080/20445911.2020.1805453},\n    year        = {2020-08-12},\n    pages       = {1-11},\n    journal     = {Journal of Cognitive Psychology}\n}\n\n\n@article{Becker2017,\n    title       = {The capture of attention and gaze in the search for emotional photographic faces},\n    author      = {Becker, Stefanie I. and Dutt, Neelam and Vromen, Joyce M. G. and Horstmann, Gernot},\n    number      = {1-3},\n    volume      = {25},\n    doi         = {10.1080/13506285.2017.1333182},\n    year        = {2017-03-16},\n    pages       = {241-261},\n    journal     = {Visual Cognition}\n}\n\n\n@article{Schubö2006,\n    title       = {Detecting emotional faces and features in a visual search paradigm: Are faces special?},\n    author      = {Schubö, Anna and Gendolla, Guido H. E. and Meinecke, Cristina and Abele, Andrea E.},\n    number      = {2},\n    volume      = {6},\n    doi         = {10.1037/1528-3542.6.2.246},\n    year        = {2006},\n    pages       = {246-256},\n    journal     = {Emotion}\n}\n\n\n@article{Desimone1995,\n    title       = {Neural Mechanisms of Selective Visual Attention},\n    author      = {Desimone, Robert and Duncan, John},\n    year        = {1995},\n    pages       = {30}\n}\n\n\n@article{Anderson2019,\n    title       = {On the automaticity of attentional orienting to threatening stimuli.},\n    author      = {Anderson, Brian A. and Britton, Mark K.},\n    doi         = {10.1037/emo0000596},\n    year        = {2019-03-14},\n    journal     = {Emotion}\n}\n\n\n@article{MacLeod1986,\n    title       = {Attentional bias in emotional disorders.},\n    author      = {MacLeod, Colin and Mathews, Andrew and Tata, Philip},\n    number      = {1},\n    volume      = {95},\n    doi         = {10.1037/0021-843X.95.1.15},\n    year        = {1986},\n    pages       = {15-20},\n    journal     = {Journal of Abnormal Psychology}\n}\n\n\n@article{Carretié2014,\n    title       = {Exogenous (automatic) attention to emotional stimuli: a review},\n    author      = {Carretié, Luis},\n    number      = {4},\n    volume      = {14},\n    doi         = {10.3758/s13415-014-0270-2},\n    year        = {2014-12},\n    pages       = {1228-1258},\n    journal     = {Cognitive, Affective, & Behavioral Neuroscience}\n}\n\n\n@article{Imhoff2019,\n    title       = {Identification and location tasks rely on different mental processes: a diffusion model account of validity effects in spatial cueing paradigms with emotional stimuli},\n    author      = {Imhoff, Roland and Lange, Jens and Germar, Markus},\n    number      = {2},\n    volume      = {33},\n    doi         = {10.1080/02699931.2018.1443433},\n    year        = {2019-02-17},\n    pages       = {231-244},\n    journal     = {Cognition and Emotion}\n}\n\n\n@article{Kruijt2018,\n    title       = {A Meta-Analysis of Bias at Baseline in RCTs of Attention Bias Modification: No Evidence for Dot-Probe Bias Towards Threat in Clinical Anxiety and PTSD},\n    author      = {Kruijt, Anne-Wil and Parsons, Sam and Fox, Elaine},\n    year        = {2018},\n    pages       = {11},\n    journal     = {Journal of Abnormal Psychology}\n}\n\n\n@article{Mogg2017,\n    title       = {Attention Bias Modification (ABM): Review of Effects of Multisession ABM Training on Anxiety and Threat-Related Attention in High-Anxious Individuals},\n    author      = {Mogg, Karin and Waters, Allison M. and Bradley, Brendan P.},\n    number      = {4},\n    volume      = {5},\n    doi         = {10.1177/2167702617696359},\n    year        = {2017-07},\n    pages       = {698-717},\n    journal     = {Clinical Psychological Science}\n}\n\n\n@article{Schmukle2005,\n    title       = {Unreliability of the dot probe task},\n    author      = {Schmukle, Stefan C.},\n    number      = {7},\n    volume      = {19},\n    doi         = {10.1002/per.554},\n    year        = {2005-12},\n    pages       = {595-605},\n    journal     = {European Journal of Personality}\n}\n\n\n@article{Staugaard2009,\n    title       = {Reliability of two versions of the dot-probe task using photographic faces},\n    author      = {Staugaard, Søren Risløv},\n    number      = {3},\n    volume      = {51},\n    year        = {2009},\n    pages       = {339-350},\n    journal     = {Psychological Science Quarterly}\n}\n\n\n@article{Hedge2018,\n    title       = {The reliability paradox: Why robust cognitive tasks do not produce reliable individual differences},\n    author      = {Hedge, Craig and Powell, Georgina and Sumner, Petroc},\n    number      = {3},\n    volume      = {50},\n    doi         = {10.3758/s13428-017-0935-1},\n    year        = {2018-06},\n    pages       = {1166-1186},\n    journal     = {Behavior Research Methods}\n}\n\n\n@article{Zvielli2015,\n    title       = {Temporal Dynamics of Attentional Bias},\n    author      = {Zvielli, Ariel and Bernstein, Amit and Koster, Ernst H. W.},\n    number      = {5},\n    volume      = {3},\n    doi         = {10.1177/2167702614551572},\n    year        = {2015-09},\n    pages       = {772-788},\n    journal     = {Clinical Psychological Science}\n}\n\n\n@article{Carlson2020,\n    title       = {The stability and reliability of attentional bias measures in the dot-probe task: Evidence from both traditional mean bias scores and trial-level bias scores},\n    author      = {Carlson, Joshua M and Fang, Lin},\n    year        = {2020},\n    pages       = {13},\n    journal     = {Motivation and Emotion}\n}\n\n\n@article{Kruijt2016,\n    title       = {Capturing Dynamics of Biased Attention: Are New Attention Variability Measures the Way Forward?},\n    author      = {Kruijt, Anne-Wil and Field, Andy P. and Fox, Elaine},\n    number      = {11},\n    volume      = {11},\n    doi         = {10.1371/journal.pone.0166600},\n    year        = {2016-11-22},\n    pages       = {e0166600},\n    journal     = {PLOS ONE}\n}\n\n\n@article{Panksepp2011,\n    title       = {What is Basic about Basic Emotions? Lasting Lessons from Affective Neuroscience},\n    author      = {Panksepp, Jaak and Watt, Douglas},\n    number      = {4},\n    volume      = {3},\n    doi         = {10.1177/1754073911410741},\n    year        = {2011-10},\n    pages       = {387-396},\n    journal     = {Emotion Review}\n}\n\n\n@article{Carlson2014,\n    title       = {Attending to the fear in your eyes: Facilitated orienting and delayed disengagement},\n    author      = {Carlson, Joshua M. and Reinke, Karen S.},\n    number      = {8},\n    volume      = {28},\n    doi         = {10.1080/02699931.2014.885410},\n    year        = {2014-11},\n    pages       = {1398-1406},\n    journal     = {Cognition and Emotion}\n}\n\n\n@article{Fox2001,\n    title       = {Do threatening stimuli draw or hold visual attention in subclinical anxiety?},\n    author      = {Fox, Elaine and Russo, Riccardo and Bowles, Robert and Dutton, Kevin},\n    number      = {4},\n    volume      = {130},\n    doi         = {10.1037/0096-3445.130.4.681},\n    year        = {2001},\n    pages       = {681-700},\n    journal     = {Journal of Experimental Psychology: General}\n}\n\n\n@article{Cane2009,\n    title       = {The addiction Stroop task: examining the fast and slow effects of smoking and marijuana-related cues},\n    author      = {Cane, Je and Sharma, D and Albery, Ip},\n    number      = {5},\n    volume      = {23},\n    doi         = {10.1177/0269881108091253},\n    year        = {2009-07},\n    pages       = {510-519},\n    journal     = {Journal of Psychopharmacology}\n}\n\n\n@article{Clarke2015,\n    title       = {Examining fast and slow effects for alcohol and negative emotion in problem and social drinkers},\n    author      = {Clarke, Simon Paul and Sharma, Dinkar and Salter, Daniel},\n    number      = {1},\n    volume      = {23},\n    doi         = {10.3109/16066359.2014.922961},\n    year        = {2015-01-30},\n    pages       = {24-33},\n    journal     = {Addiction Research & Theory}\n}\n\n\n@article{Waters2005,\n    title       = {Generalizability of carry-over effects in the emotional Stroop task},\n    author      = {Waters, Andrew J. and Sayette, Michael A. and Franken, Ingmar H.A. and Schwartz, Joseph E.},\n    number      = {6},\n    volume      = {43},\n    doi         = {10.1016/j.brat.2004.06.003},\n    year        = {2005-06},\n    pages       = {715-732},\n    journal     = {Behaviour Research and Therapy}\n}\n\n\n@article{Wilson2007,\n    title       = {Carry-over effects of smoking cue exposure on working memory performance},\n    author      = {Wilson, Stephen J. and Sayette, Michael A. and Fiez, Julie A. and Brough, Elizabeth},\n    number      = {5},\n    volume      = {9},\n    doi         = {10.1080/14622200701243144},\n    year        = {2007-05},\n    pages       = {613-619},\n    journal     = {Nicotine & Tobacco Research}\n}\n\n\n@article{Hill2016,\n    title       = {Exploring Carry-Over Effects to Elucidate Attention Bias Modification’s Mixed Results},\n    author      = {Hill, Mackenna and Duval, Elizabeth},\n    publisher   = {Journal of Young Investigators},\n    year        = {2016-09-01}\n}\n\n\n@article{Gur2002,\n    title       = {A method for obtaining 3-dimensional facial expressions and its standardization for use in neurocognitive studies},\n    author      = {Gur, Ruben C. and Sara, Radim and Hagendoorn, Michiel and Marom, Oren and Hughett, Paul and Macy, Larry and Turner, Travis and Bajcsy, Ruzena and Posner, Aaron and Gur, Raquel E.},\n    number      = {2},\n    volume      = {115},\n    doi         = {10.1016/S0165-0270(02)00006-7},\n    year        = {2002-04},\n    pages       = {137-143},\n    journal     = {Journal of Neuroscience Methods}\n}\n\n\n@article{Lundqvist1998,\n    title       = {The Karolinska Directed Emotional Faces (KDEF)},\n    author      = {Lundqvist and Flykt, A and Ohman, A},\n    publisher   = {Stockholm : Department of Neurosciences Karolinska Hospital.},\n    year        = {1998}\n}\n\n\n@article{Lang2008,\n    title       = {International affective picture system (IAPS) : affective ratings of pictures and instruction manual},\n    author      = {Lang, PJ},\n    year        = {2008},\n    journal     = {Technical Report}\n}\n\n\n@article{Duthoo2014,\n    title       = {The heterogeneous world of congruency sequence effects: an update},\n    author      = {Duthoo, Wout and Abrahamse, Elger L. and Braem, Senne and Boehler, Carsten N. and Notebaert, Wim},\n    volume      = {5},\n    doi         = {10.3389/fpsyg.2014.01001},\n    year        = {2014-09-09},\n    journal     = {Frontiers in Psychology}\n}\n\n\n@article{Mogg1998,\n    title       = {A cognitive-motivational analysis of anxiety},\n    author      = {Mogg, Karin and Bradley, Brendan P.},\n    number      = {9},\n    volume      = {36},\n    doi         = {10.1016/S0005-7967(98)00063-1},\n    year        = {1998-09-01},\n    pages       = {809-848},\n    journal     = {Behaviour Research and Therapy}\n}\n\n\n@article{Ho2019,\n    title       = {Moving beyond P values: data analysis with estimation graphics},\n    author      = {Ho, Joses and Tumkaya, Tayfun and Aryal, Sameer and Choi, Hyungwon and Claridge-Chang, Adam},\n    number      = {7},\n    volume      = {16},\n    doi         = {10.1038/s41592-019-0470-3},\n    year        = {2019-07},\n    pages       = {565-566},\n    journal     = {Nature Methods}\n}"
+                  "value": "@article{Gladwin2017,\n    title       = {Carryover effects in spatial attentional bias tasks and their relationship to subclinical PTSD symptoms.},\n    author      = {Gladwin, Thomas E.},\n    number      = {4},\n    volume      = {23},\n    doi         = {10.1037/trm0000121},\n    year        = {2017},\n    pages       = {303},\n    journal     = {Traumatology}\n}\n\n\n@article{Gladwin2019,\n    title       = {Anticipation-specific reliability and trial-to-trial carryover of anticipatory attentional bias for threat},\n    author      = {Gladwin, Thomas E. and Figner, Bernd and Vink, Matthijs},\n    number      = {7},\n    volume      = {31},\n    doi         = {10.1080/20445911.2019.1659801},\n    year        = {2019-10-03},\n    pages       = {750-759},\n    journal     = {Journal of Cognitive Psychology}\n}\n\n\n@article{Gladwin2020,\n    title       = {Attentional bias for negative expressions depends on previous target location: replicable effect but unreliable measures},\n    author      = {Gladwin, Thomas E. and Jewiss, Matt and Vink, Matthijs},\n    doi         = {10.1080/20445911.2020.1805453},\n    year        = {2020-08-12},\n    pages       = {1-11},\n    journal     = {Journal of Cognitive Psychology}\n}\n\n\n@article{Gladwin2019a,\n    title       = {Trial-to-trial carryover effects on spatial attentional bias},\n    author      = {Gladwin, T.E. and Figner, B.},\n    volume      = {196},\n    doi         = {10.1016/j.actpsy.2019.04.006},\n    year        = {2019},\n    pages       = {51–55},\n    journal     = {Acta Psychologica}\n}\n\n\n@article{Becker2017,\n    title       = {The capture of attention and gaze in the search for emotional photographic faces},\n    author      = {Becker, Stefanie I. and Dutt, Neelam and Vromen, Joyce M. G. and Horstmann, Gernot},\n    number      = {1-3},\n    volume      = {25},\n    doi         = {10.1080/13506285.2017.1333182},\n    year        = {2017-03-16},\n    pages       = {241-261},\n    journal     = {Visual Cognition}\n}\n\n\n@article{Schubö2006,\n    title       = {Detecting emotional faces and features in a visual search paradigm: Are faces special?},\n    author      = {Schubö, Anna and Gendolla, Guido H. E. and Meinecke, Cristina and Abele, Andrea E.},\n    number      = {2},\n    volume      = {6},\n    doi         = {10.1037/1528-3542.6.2.246},\n    year        = {2006},\n    pages       = {246-256},\n    journal     = {Emotion}\n}\n\n\n@article{Desimone1995,\n    title       = {Neural Mechanisms of Selective Visual Attention},\n    author      = {Desimone, Robert and Duncan, John},\n    year        = {1995},\n    pages       = {30}\n}\n\n\n@article{Anderson2019,\n    title       = {On the automaticity of attentional orienting to threatening stimuli.},\n    author      = {Anderson, Brian A. and Britton, Mark K.},\n    doi         = {10.1037/emo0000596},\n    year        = {2019-03-14},\n    journal     = {Emotion}\n}\n\n\n@article{MacLeod1986,\n    title       = {Attentional bias in emotional disorders.},\n    author      = {MacLeod, Colin and Mathews, Andrew and Tata, Philip},\n    number      = {1},\n    volume      = {95},\n    doi         = {10.1037/0021-843X.95.1.15},\n    year        = {1986},\n    pages       = {15-20},\n    journal     = {Journal of Abnormal Psychology}\n}\n\n\n@article{Carretié2014,\n    title       = {Exogenous (automatic) attention to emotional stimuli: a review},\n    author      = {Carretié, Luis},\n    number      = {4},\n    volume      = {14},\n    doi         = {10.3758/s13415-014-0270-2},\n    year        = {2014-12},\n    pages       = {1228-1258},\n    journal     = {Cognitive, Affective, & Behavioral Neuroscience}\n}\n\n\n@article{Imhoff2019,\n    title       = {Identification and location tasks rely on different mental processes: a diffusion model account of validity effects in spatial cueing paradigms with emotional stimuli},\n    author      = {Imhoff, Roland and Lange, Jens and Germar, Markus},\n    number      = {2},\n    volume      = {33},\n    doi         = {10.1080/02699931.2018.1443433},\n    year        = {2019-02-17},\n    pages       = {231-244},\n    journal     = {Cognition and Emotion}\n}\n\n\n@article{Kruijt2018,\n    title       = {A Meta-Analysis of Bias at Baseline in RCTs of Attention Bias Modification: No Evidence for Dot-Probe Bias Towards Threat in Clinical Anxiety and PTSD},\n    author      = {Kruijt, Anne-Wil and Parsons, Sam and Fox, Elaine},\n    year        = {2018},\n    pages       = {11},\n    journal     = {Journal of Abnormal Psychology}\n}\n\n\n@article{Mogg2017,\n    title       = {Attention Bias Modification (ABM): Review of Effects of Multisession ABM Training on Anxiety and Threat-Related Attention in High-Anxious Individuals},\n    author      = {Mogg, Karin and Waters, Allison M. and Bradley, Brendan P.},\n    number      = {4},\n    volume      = {5},\n    doi         = {10.1177/2167702617696359},\n    year        = {2017-07},\n    pages       = {698-717},\n    journal     = {Clinical Psychological Science}\n}\n\n\n@article{Schmukle2005,\n    title       = {Unreliability of the dot probe task},\n    author      = {Schmukle, Stefan C.},\n    number      = {7},\n    volume      = {19},\n    doi         = {10.1002/per.554},\n    year        = {2005-12},\n    pages       = {595-605},\n    journal     = {European Journal of Personality}\n}\n\n\n@article{Staugaard2009,\n    title       = {Reliability of two versions of the dot-probe task using photographic faces},\n    author      = {Staugaard, Søren Risløv},\n    number      = {3},\n    volume      = {51},\n    year        = {2009},\n    pages       = {339-350},\n    journal     = {Psychological Science Quarterly}\n}\n\n\n@article{Hedge2018,\n    title       = {The reliability paradox: Why robust cognitive tasks do not produce reliable individual differences},\n    author      = {Hedge, Craig and Powell, Georgina and Sumner, Petroc},\n    number      = {3},\n    volume      = {50},\n    doi         = {10.3758/s13428-017-0935-1},\n    year        = {2018-06},\n    pages       = {1166-1186},\n    journal     = {Behavior Research Methods}\n}\n\n\n@article{Zvielli2015,\n    title       = {Temporal Dynamics of Attentional Bias},\n    author      = {Zvielli, Ariel and Bernstein, Amit and Koster, Ernst H. W.},\n    number      = {5},\n    volume      = {3},\n    doi         = {10.1177/2167702614551572},\n    year        = {2015-09},\n    pages       = {772-788},\n    journal     = {Clinical Psychological Science}\n}\n\n\n@article{Carlson2020,\n    title       = {The stability and reliability of attentional bias measures in the dot-probe task: Evidence from both traditional mean bias scores and trial-level bias scores},\n    author      = {Carlson, Joshua M and Fang, Lin},\n    year        = {2020},\n    pages       = {13},\n    journal     = {Motivation and Emotion}\n}\n\n\n@article{Kruijt2016,\n    title       = {Capturing Dynamics of Biased Attention: Are New Attention Variability Measures the Way Forward?},\n    author      = {Kruijt, Anne-Wil and Field, Andy P. and Fox, Elaine},\n    number      = {11},\n    volume      = {11},\n    doi         = {10.1371/journal.pone.0166600},\n    year        = {2016-11-22},\n    pages       = {e0166600},\n    journal     = {PLOS ONE}\n}\n\n\n@article{Panksepp2011,\n    title       = {What is Basic about Basic Emotions? Lasting Lessons from Affective Neuroscience},\n    author      = {Panksepp, Jaak and Watt, Douglas},\n    number      = {4},\n    volume      = {3},\n    doi         = {10.1177/1754073911410741},\n    year        = {2011-10},\n    pages       = {387-396},\n    journal     = {Emotion Review}\n}\n\n\n@article{Carlson2014,\n    title       = {Attending to the fear in your eyes: Facilitated orienting and delayed disengagement},\n    author      = {Carlson, Joshua M. and Reinke, Karen S.},\n    number      = {8},\n    volume      = {28},\n    doi         = {10.1080/02699931.2014.885410},\n    year        = {2014-11},\n    pages       = {1398-1406},\n    journal     = {Cognition and Emotion}\n}\n\n\n@article{Fox2001,\n    title       = {Do threatening stimuli draw or hold visual attention in subclinical anxiety?},\n    author      = {Fox, Elaine and Russo, Riccardo and Bowles, Robert and Dutton, Kevin},\n    number      = {4},\n    volume      = {130},\n    doi         = {10.1037/0096-3445.130.4.681},\n    year        = {2001},\n    pages       = {681-700},\n    journal     = {Journal of Experimental Psychology: General}\n}\n\n\n@article{Cane2009,\n    title       = {The addiction Stroop task: examining the fast and slow effects of smoking and marijuana-related cues},\n    author      = {Cane, Je and Sharma, D and Albery, Ip},\n    number      = {5},\n    volume      = {23},\n    doi         = {10.1177/0269881108091253},\n    year        = {2009-07},\n    pages       = {510-519},\n    journal     = {Journal of Psychopharmacology}\n}\n\n\n@article{Clarke2015,\n    title       = {Examining fast and slow effects for alcohol and negative emotion in problem and social drinkers},\n    author      = {Clarke, Simon Paul and Sharma, Dinkar and Salter, Daniel},\n    number      = {1},\n    volume      = {23},\n    doi         = {10.3109/16066359.2014.922961},\n    year        = {2015-01-30},\n    pages       = {24-33},\n    journal     = {Addiction Research & Theory}\n}\n\n\n@article{Waters2005,\n    title       = {Generalizability of carry-over effects in the emotional Stroop task},\n    author      = {Waters, Andrew J. and Sayette, Michael A. and Franken, Ingmar H.A. and Schwartz, Joseph E.},\n    number      = {6},\n    volume      = {43},\n    doi         = {10.1016/j.brat.2004.06.003},\n    year        = {2005-06},\n    pages       = {715-732},\n    journal     = {Behaviour Research and Therapy}\n}\n\n\n@article{Wilson2007,\n    title       = {Carry-over effects of smoking cue exposure on working memory performance},\n    author      = {Wilson, Stephen J. and Sayette, Michael A. and Fiez, Julie A. and Brough, Elizabeth},\n    number      = {5},\n    volume      = {9},\n    doi         = {10.1080/14622200701243144},\n    year        = {2007-05},\n    pages       = {613-619},\n    journal     = {Nicotine & Tobacco Research}\n}\n\n\n@article{Hill2016,\n    title       = {Exploring Carry-Over Effects to Elucidate Attention Bias Modification’s Mixed Results},\n    author      = {Hill, Mackenna and Duval, Elizabeth},\n    publisher   = {Journal of Young Investigators},\n    year        = {2016-09-01}\n}\n\n\n@article{Hedger2016,\n    title       = {Are visual threats prioritized without awareness? A critical review and meta-analysis involving 3 behavioral paradigms and 2696 observers.},\n    author      = {Hedger, Nicholas and Gray, Katie L. H. and Garner, Matthew and Adams, Wendy J.},\n    number      = {9},\n    volume      = {142},\n    doi         = {10.1037/bul0000054},\n    year        = {2016},\n    pages       = {934-968},\n    journal     = {Psychological Bulletin}\n}\n\n\n@article{Gladwin2020a,\n    title       = {Attentional bias for negative expressions depends on previous target location: Replicable effect but unreliable measures},\n    author      = {Gladwin, T.E. and Jewiss, M. and Vink, M.},\n    doi         = {10.1080/20445911.2020.1805453},\n    year        = {2020},\n    pages       = {1–11},\n    journal     = {Journal of Cognitive Psychology}\n}\n\n\n@article{Gur2002,\n    title       = {A method for obtaining 3-dimensional facial expressions and its standardization for use in neurocognitive studies},\n    author      = {Gur, Ruben C. and Sara, Radim and Hagendoorn, Michiel and Marom, Oren and Hughett, Paul and Macy, Larry and Turner, Travis and Bajcsy, Ruzena and Posner, Aaron and Gur, Raquel E.},\n    number      = {2},\n    volume      = {115},\n    doi         = {10.1016/S0165-0270(02)00006-7},\n    year        = {2002-04},\n    pages       = {137-143},\n    journal     = {Journal of Neuroscience Methods}\n}\n\n\n@article{Lundqvist1998,\n    title       = {The Karolinska Directed Emotional Faces (KDEF)},\n    author      = {Lundqvist and Flykt, A and Ohman, A},\n    publisher   = {Stockholm : Department of Neurosciences Karolinska Hospital.},\n    year        = {1998}\n}\n\n\n@article{Lang2008,\n    title       = {International affective picture system (IAPS) : affective ratings of pictures and instruction manual},\n    author      = {Lang, PJ},\n    year        = {2008},\n    journal     = {Technical Report}\n}\n\n\n@article{Posner1985,\n    title       = {Inhibition of return: Neural basis and function},\n    author      = {Posner, Michael I. and Rafal, Robert D. and Choate, Lisa S. and Vaughan, Jonathan},\n    number      = {3},\n    volume      = {2},\n    doi         = {10.1080/02643298508252866},\n    year        = {1985-08-01},\n    pages       = {211-228},\n    journal     = {Cognitive Neuropsychology}\n}\n\n\n@article{Duthoo2014,\n    title       = {The heterogeneous world of congruency sequence effects: an update},\n    author      = {Duthoo, Wout and Abrahamse, Elger L. and Braem, Senne and Boehler, Carsten N. and Notebaert, Wim},\n    volume      = {5},\n    doi         = {10.3389/fpsyg.2014.01001},\n    year        = {2014-09-09},\n    journal     = {Frontiers in Psychology}\n}\n\n\n@article{Mogg1998,\n    title       = {A cognitive-motivational analysis of anxiety},\n    author      = {Mogg, Karin and Bradley, Brendan P.},\n    number      = {9},\n    volume      = {36},\n    doi         = {10.1016/S0005-7967(98)00063-1},\n    year        = {1998-09-01},\n    pages       = {809-848},\n    journal     = {Behaviour Research and Therapy}\n}\n\n\n@article{Gillich2019,\n    author      = {Gillich},\n    year        = {2019}\n}\n\n\n@article{Ho2019,\n    title       = {Moving beyond P values: data analysis with estimation graphics},\n    author      = {Ho, Joses and Tumkaya, Tayfun and Aryal, Sameer and Choi, Hyungwon and Claridge-Chang, Adam},\n    number      = {7},\n    volume      = {16},\n    doi         = {10.1038/s41592-019-0470-3},\n    year        = {2019-07},\n    pages       = {565-566},\n    journal     = {Nature Methods}\n}\n\n\n@article{R2020,\n    author      = {R},\n    year        = {2020}\n}\n\n\n@article{R2014,\n    author      = {R},\n    year        = {2014}\n}"
                 }
               ]
             }
@@ -149,7 +149,7 @@
               "children": [
                 {
                   "type": "command",
-                  "name": "textbf",
+                  "name": "section",
                   "children": [
                     {
                       "type": "commandArg",
@@ -170,7 +170,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Do Carryover Effects Influence Attentional Bias to Threat in the Dot-Probe Task?"
+                  "value": "Carryover Effects for Threat in the Dot-Probe Task"
                 }
               ]
             },
@@ -183,7 +183,7 @@
               "children": [
                 {
                   "type": "command",
-                  "name": "textbf",
+                  "name": "section",
                   "children": [
                     {
                       "type": "commandArg",
@@ -204,7 +204,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Threatening stimuli are often thought to have sufficient potency to bias attention, relative to neutral stimuli. Researchers and clinicians often opt for frequently used paradigms to measure such bias – like the dot-probe task. Bias to threat in the dot-probe task is indicated by a congruency effect – faster responses on congruent trials than incongruent trials (also referred to as attention capture). However, recent studies have found that such congruency effects suffer from poor internal reliability. One potential explanation of this issue is "
+                  "value": "Threatening stimuli are often thought to have sufficient potency to bias attention, relative to neutral stimuli. Researchers and clinicians opt for frequently used paradigms to measure such bias, such as the dot-probe task. Bias to threat in the dot-probe task is indicated by a congruency effect i.e., faster responses on congruent trials than incongruent trials (also referred to as attention capture). However, recent studies have found that such congruency effects are small and suffer from poor internal reliability. One explanation to low effect sizes and poor reliability is "
                 },
                 {
                   "type": "command",
@@ -223,7 +223,7 @@
                 },
                 {
                   "type": "text",
-                  "value": " of threat – greater congruency effects on trials followed by a congruent trial relative to trials followed by an incongruent trial. In the current study, we improve upon the limitations of the few previous studies that investigated carryover effects for threat by utilizing a typical dot-probe task with two large samples of healthy undergraduates. Although we found a small congruency effect for fearful faces (Experiment 1, "
+                  "value": " of threat – greater congruency effects on trials following a congruent trial relative to trials following an incongruent trial. In the current study, we investigated carryover effects of threat with two large samples of healthy undergraduate students who completed a typical dot-probe task. Although we found a small congruency effect for fearful faces (Experiment 1, "
                 },
                 {
                   "type": "command",
@@ -242,7 +242,26 @@
                 },
                 {
                   "type": "text",
-                  "value": " = 241) and avoidance for threatening images, (Experiment 2, "
+                  "value": " = 241, "
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "d "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "= 0.15) and a reverse congruency effect for threatening images, (Experiment 2, "
                 },
                 {
                   "type": "command",
@@ -261,7 +280,30 @@
                 },
                 {
                   "type": "text",
-                  "value": "= 82) no carryover effects for threat were observed. Bayesian analyses revealed moderate to strong evidence of this null hypothesis. We conclude that carryover effects for threat do not influence attention bias for threat as measured in the standard dot-probe task in healthy individuals."
+                  "value": "= 82, "
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "d "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "= 0.11) whereas no carryover effects for threat were observed in either case. Bayesian analyses revealed moderate to strong evidence in favor of the null hypothesis. We conclude that carryover effects for threat do not influence attention bias for threat"
+                },
+                {
+                  "type": "text",
+                  "value": ". "
                 }
               ]
             },
@@ -311,7 +353,7 @@
               "children": [
                 {
                   "type": "command",
-                  "name": "textbf",
+                  "name": "section",
                   "children": [
                     {
                       "type": "commandArg",
@@ -332,7 +374,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Here we assessed the potential moderation of attention bias to threat by carryover effects for threat. We did not find any evidence of such moderation. Researchers utilizing the standard dot-probe task need not be concerned about carryover effects for threat. "
+                  "value": "How is attentional bias to threat influenced by recent events? In the current study, we tested whether bias to threat (in the dot-probe task) is greater when threat cues recently appeared in a target location, relative to when they appeared in a non-target location (otherwise known as a carryover effect for threat). While we did not find carryover effects for threat, we suspect they are possible in other paradigms and that they exist in real-life scenarios. Carryover effects for threat in the dot-probe task are not likely to influence congruency effects."
                 }
               ]
             },
@@ -345,7 +387,7 @@
               "children": [
                 {
                   "type": "command",
-                  "name": "textbf",
+                  "name": "section",
                   "children": [
                     {
                       "type": "commandArg",
@@ -437,7 +479,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Gladwin2019"
+                          "value": "Gladwin2019a"
                         }
                       ]
                     }
@@ -445,25 +487,9 @@
                 },
                 {
                   "type": "text",
-                  "value": ". But there are several unique elements to the task design and procedure used by these studies that make them difficult to compare to commonly used tasks such as the dot-probe. Applied, basic and clinical studies on emotion processing often utilize the dot-probe task. Our purpose is to extend these previous studies of carryover effects to the dot-probe task. "
+                  "value": ". However, there are several unique elements to the task design and procedure used in these studies that make them difficult to compare to the commonly used dot-probe task (a task often used in applied, clinical, and basic research on emotion processing). Our purpose was to extend these previous studies of carryover effects for threat to the standard dot-probe task."
                 }
               ]
-            },
-            {
-              "type": "paragraph",
-              "children": []
-            },
-            {
-              "type": "paragraph",
-              "children": []
-            },
-            {
-              "type": "paragraph",
-              "children": []
-            },
-            {
-              "type": "paragraph",
-              "children": []
             },
             {
               "type": "paragraph",
@@ -490,7 +516,7 @@
               "children": [
                 {
                   "type": "command",
-                  "name": "textbf",
+                  "name": "section",
                   "children": [
                     {
                       "type": "commandArg",
@@ -511,7 +537,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Emotional stimuli are thought to receive prioritized processing. Threatening stimuli like angry facial expressions of emotion often “beat-out” neutral or innocuous objects "
+                  "value": "Emotional stimuli are thought to receive prioritized processing. Threatening stimuli like angry and fearful facial expressions of emotion often “beat-out” neutral or innocuous objects "
                 },
                 {
                   "type": "command",
@@ -611,7 +637,7 @@
                 },
                 {
                   "type": "text",
-                  "value": ". In a typical dot-probe task, participants search for the location of a target dot and indicate its position (left or right side of the screen) with a corresponding keypress. Immediately prior to the presentation of the target dot, two adjacent cues (one neutral and one threatening cue) are simultaneously presented for a very brief period (e.g., 100 millisecond (ms)). On congruent trials, the dot appears at the location of the threatening cue, whereas on incongruent trials, the dot appears at the location of the neutral cue (see Figure 1A). Each cue is completely irrelevant to the current task demands. And yet, in some circumstances, the threatening cue biases attention to a greater extent than the neutral cue, as shown by the difference in response times (RTs) between congruent and incongruent trials (for reviews, see "
+                  "value": ". In a typical dot-probe task, participants search for the location of a target dot and indicate its position (left or right side of the screen) with a corresponding keypress. Immediately prior to the presentation of the target dot, two adjacent cues (one neutral and one threatening cue) are simultaneously presented for a very brief period (e.g., 100 millisecond (ms)). On congruent trials, the dot appears at the location of the threatening cue, whereas on incongruent trials, the dot appears at the location of the neutral cue (see Figure 1A). Each cue is completely irrelevant to the current task demands. And yet, the threatening cue biases attention to a greater extent than the neutral cue, as shown by faster response times (RTs) for congruent trials relative to incongruent trials (for reviews, see "
                 },
                 {
                   "type": "command",
@@ -664,7 +690,7 @@
                 },
                 {
                   "type": "text",
-                  "value": ", or otherwise attentional capture by threat, or attentional bias to threat."
+                  "value": ", or attentional capture by threat or attentional bias to threat."
                 }
               ]
             },
@@ -673,7 +699,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "While congruency effects are often assessed by the dot-probe task, "
+                  "value": "While congruency effects are often assessed by the dot-probe task "
                 },
                 {
                   "type": "command",
@@ -707,7 +733,7 @@
                 },
                 {
                   "type": "text",
-                  "value": " they have come under scrutiny for poor internal and test-retest reliability "
+                  "value": ", they have come under scrutiny for poor internal and test-retest reliability "
                 },
                 {
                   "type": "command",
@@ -741,7 +767,7 @@
                 },
                 {
                   "type": "text",
-                  "value": ". One root cause of this issue is that difference scores are inherently un-reliable "
+                  "value": ". One root cause of these issues is that difference scores are inherently unreliable "
                 },
                 {
                   "type": "command",
@@ -760,7 +786,7 @@
                 },
                 {
                   "type": "text",
-                  "value": ". But some studies have found that variability in congruency effects can in-part be explained by trial-level bias scores "
+                  "value": ". However, some studies have found that attention (and congruency effects) may fluctuate towards and away from threat during the course of an experiment ("
                 },
                 {
                   "type": "command",
@@ -779,7 +805,7 @@
                 },
                 {
                   "type": "text",
-                  "value": ", and trial-to-trial variability in overall RTs ("
+                  "value": ". This suggests attention bias variability could be a meaningful element of attention bias. However, these trial-to-trial variability measures appear to be strongly related to general RT variability ("
                 },
                 {
                   "type": "command",
@@ -813,7 +839,7 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Identifying new sources of potential variation – like carryover effects – in the dot-probe task is beneficial because they could be accounted for in futures studies."
+                  "value": ". Identifying new sources of potential variation—like carryover effects —in the dot-probe task is beneficial because they could be accounted for in future studies."
                 }
               ]
             },
@@ -822,7 +848,7 @@
               "children": [
                 {
                   "type": "command",
-                  "name": "textbf",
+                  "name": "section",
                   "children": [
                     {
                       "type": "commandArg",
@@ -843,7 +869,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Suppose that an individual’s attention was biased towards a threatening stimulus – like a fearful face – during a congruent trial of a dot-probe task. Such bias could impact the individual "
+                  "value": "Suppose that an individual’s attention was biased towards a threatening stimulus—like a fearful face—during a congruent trial of a dot-probe task. Such bias could impact the individual’s internal state "
                 },
                 {
                   "type": "command",
@@ -862,7 +888,7 @@
                 },
                 {
                   "type": "text",
-                  "value": ", priming them to be more biased towards threat in subsequent trials. A persistent bias for threatening stimuli is quite plausible given that threatening cues can also bring about attentional dwelling towards themselves "
+                  "value": ", priming, or increase their association between the target and the threatening cue, which could subsequently cause them to be more biased towards threat in later trials. A persistent bias for threatening stimuli is quite plausible given that threatening cues can also bring about attentional dwelling towards themselves "
                 },
                 {
                   "type": "command",
@@ -1001,7 +1027,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Gladwin2019"
+                          "value": "Gladwin2019a"
                         }
                       ]
                     }
@@ -1052,7 +1078,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "But for dot-probe studies, the evidence has been quite mixed. In one dot-probe study that used threatening faces, no carryover effects were observed "
+                  "value": "As for dot-probe studies, however, there is not yet a clear answer on this topic given the very limited number of studies. In one dot-probe study that used threatening faces, no carryover effects were observed "
                 },
                 {
                   "type": "command",
@@ -1071,7 +1097,7 @@
                 },
                 {
                   "type": "text",
-                  "value": ". In another study, carryover effects were only observed for accuracy measures, and not response times (for non-face stimuli, "
+                  "value": ". In another study, carryover effects were only observed for accuracy measures, and not RTs (for non-face stimuli, "
                 },
                 {
                   "type": "command",
@@ -1137,7 +1163,7 @@
               "children": [
                 {
                   "type": "command",
-                  "name": "textbf",
+                  "name": "section",
                   "children": [
                     {
                       "type": "commandArg",
@@ -1158,7 +1184,68 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "In the current study we sought to test whether carryover effects influence congruency effects in the dot-probe task. To test this question, we performed a secondary data analysis on two dot-probe experiments with fearful facial stimuli (Experiment 1) and threatening pictorial stimuli (Experiment 2) (AUTHOR, 2020). Based on previous research (Gladwin et al., 2019, 2020), we hypothesized that there would be such an influence (as indicated by an interaction between previous trial congruency and current trial congruency). More specifically, we expected that current trial congruency effects would be larger when the previous trial was congruent, relative to when it was incongruent (see Figure 1B). If our hypothesis is met, we will have identified an important source of variability in the dot-probe task. On the other hand, if our hypothesis is not supported, we would reject that carryover effects are able to influence congruency effects in the dot-probe task."
+                  "value": "In the current study, we sought to test carryover effects for threat in the dot-probe task. To test this question, we performed a secondary data analysis on two dot-probe experiments with fearful facial stimuli (Experiment 1) and threatening pictorial stimuli (Experiment 2; AUTHOR, 2020). We consider fearful faces and pictorial images of threat to be threatening because a recent meta-analysis on threat detection examined both of them "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Hedger2016"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". Based on previous research "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Gladwin2019a"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Gladwin2020a"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", we hypothesized that there would be such an influence "
+                },
+                {
+                  "type": "text",
+                  "value": "(as indicated by an interaction between previous trial congruency and current trial congruency). More specifically, we expected that current trial congruency effects would be larger when the previous trial was congruent, relative to when it was incongruent "
+                },
+                {
+                  "type": "text",
+                  "value": "(see Figure 1B). If our hypothesis was confirmed, we would have identified an important source of variability in the dot-probe task. On the other hand, if our hypothesis was not supported, we would conclude that the influence of carryover effects on congruency effects is negligible."
                 }
               ]
             },
@@ -1167,7 +1254,7 @@
               "children": [
                 {
                   "type": "command",
-                  "name": "textbf",
+                  "name": "section",
                   "children": [
                     {
                       "type": "commandArg",
@@ -1188,26 +1275,15 @@
               "children": [
                 {
                   "type": "command",
-                  "name": "emph",
+                  "name": "subsection",
                   "children": [
                     {
                       "type": "commandArg",
+                      "optional": false,
                       "children": [
                         {
-                          "type": "command",
-                          "name": "textbf",
-                          "children": [
-                            {
-                              "type": "commandArg",
-                              "optional": false,
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "Methods"
-                                }
-                              ]
-                            }
-                          ]
+                          "type": "text",
+                          "value": "Methods"
                         }
                       ]
                     }
@@ -1313,7 +1389,26 @@
                 },
                 {
                   "type": "text",
-                  "value": " = 4.3; 178 females). The data reported here were acquired during a screening session of a larger study on attention bias modification and brain structure, funded by the National Institute of Mental Health (NCT03092609). A portion of the current sample (n = 127) are reported in Experiment 1 of "
+                  "value": " = 4.3; 178 females). The data reported here were acquired during a screening session of a larger study on attention bias modification and brain structure, funded by the National Institute of Mental Health (NCT03092609). A portion of the current sample ("
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "n"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " = 127) were included in Experiment 1 of "
                 },
                 {
                   "type": "command",
@@ -1332,7 +1427,7 @@
                 },
                 {
                   "type": "text",
-                  "value": ". The study was approved by the Northern Michigan University Institutional Review Board. Participants received monetary compensation for their participation."
+                  "value": ". The study was approved by the UNIVERSITY Institutional Review Board. Participants received monetary compensation for their participation."
                 }
               ]
             },
@@ -1356,7 +1451,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "The procedure was administered with a PC and a 16” LCD computer monitor. Stimuli consisted of 20 fearful and neutral grayscale faces of 10 different actors (half female) "
+                  "value": "The procedure was administered with a PC and a 16” LCD computer monitor. Stimuli consisted of 20 fearful and neutral grayscale faces of 10 different actors (half female; "
                 },
                 {
                   "type": "command",
@@ -1387,6 +1482,10 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "text",
+                  "value": ". Fearful faces were rated (1-9, unpleasant to pleasant) as more negative ("
                 },
                 {
                   "type": "command",
@@ -1481,7 +1580,7 @@
                 },
                 {
                   "type": "text",
-                  "value": " (18) = 3.23, "
+                  "value": "(18) = 3.23, "
                 },
                 {
                   "type": "command",
@@ -1500,19 +1599,26 @@
                 },
                 {
                   "type": "text",
-                  "value": " = .005. Faces subtended a visual width and height of 5"
+                  "value": " = .005, "
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "d"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
-                  "value": " × 7"
-                },
-                {
-                  "type": "text",
-                  "value": " and the distance between the center of each face subtended 14"
-                },
-                {
-                  "type": "text",
-                  "value": "."
+                  "value": " = 1.48. Faces subtended a visual width and height of 5 × 7 and the distance between the center of each face subtended 14."
                 }
               ]
             },
@@ -1557,7 +1663,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "The experiment consisted of five blocks of trials and each block consisted of 90 trials for a total of 450 trials. 30 congruent, 30 incongruent, and 30 baseline trials were randomly presented within each block. On baseline trials, two neutral faces were shown in the cue display and the dot was randomly presented in the same position as one of the two neutral faces (one third of all trials). Baseline trials were not included in our analyses. See Figure 1A for examples of incongruent and congruent trials."
+                  "value": "The experiment consisted of five blocks of trials and each block consisted of 90 trials for a total of 450 trials. 30 congruent, 30 incongruent, and 30 baseline trials were randomly presented within each block. During baseline trials, two neutral faces were shown in the cue display and the dot was randomly presented in the same position as one of the two neutral faces (one third of all trials). Baseline trials were not included in our analyses. See Figure 1A for examples of incongruent and congruent trials."
                 }
               ]
             },
@@ -1581,7 +1687,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "Each trial started with a white fixation cue (+) in the center of a black screen for 1000 ms, which was immediately followed by the cue display. The cue display was presented for 100 ms. In the cue display, there were two bilaterally presented faces. Immediately following the cue display, a single dot (the target object) was randomly presented in the central position of one of the previously shown faces in the cue display. Using their right hand, participants indicated the location of the dot (left or right side of the display) by pressing a corresponding button with their pointer or middle finger."
+                  "value": "Each trial started with a white fixation cross (+) in the center of a black screen for 1000 ms, which was immediately followed by the cue display. The cue display was presented for 100 ms. In the cue display, there were two bilaterally presented faces. Immediately following the cue display, a single dot (the target object) was randomly presented in the central position of one of the previously shown faces in the cue display until participants responded. Participants indicated the location of the dot (left or right side of the display) by pressing a corresponding button with the pointer or middle finger of their right hand."
                 }
               ]
             },
@@ -1590,26 +1696,15 @@
               "children": [
                 {
                   "type": "command",
-                  "name": "emph",
+                  "name": "section",
                   "children": [
                     {
                       "type": "commandArg",
+                      "optional": false,
                       "children": [
                         {
-                          "type": "command",
-                          "name": "textbf",
-                          "children": [
-                            {
-                              "type": "commandArg",
-                              "optional": false,
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "Results"
-                                }
-                              ]
-                            }
-                          ]
+                          "type": "text",
+                          "value": "Results"
                         }
                       ]
                     }
@@ -1622,7 +1717,83 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "All trials with an incorrect response or a response time outside of 3 standard deviations from the group mean were removed from all RT analyses (0.6% of trials). Attentional bias was measured by subtracting response times (RTs) for congruent trials from incongruent trials. Positive values indicate the level of attentional bias for fearful faces. As shown in Figure 2A, RTs for congruent trials (331 ms, SD of 72 ms) were significantly different from incongruent trials (342 ms, SD of 72 ms), "
+                  "value": "All trials with an incorrect response (2.2% of trials) or a response time outside of 3 standard deviations from the individual-wise and condition means were removed from all RT analyses (0.6% of trials). Attentional bias was measured by subtracting mean RTs for congruent trials from incongruent trials. Positive values indicate the level of attentional bias for fearful faces. All analyses were not pre-registered but were pre-planned. As shown in Figure 2A, RTs for congruent trials ("
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "M = "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "331 ms, "
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "SD"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " of 72 ms) were significantly shorter for incongruent trials ("
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "M = "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "342 ms, "
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "SD"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " of 72 ms), "
                 },
                 {
                   "type": "command",
@@ -1641,11 +1812,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "("
-                },
-                {
-                  "type": "text",
-                  "value": "240) = 20.56, "
+                  "value": "(240) = 20.56, "
                 },
                 {
                   "type": "command",
@@ -1702,11 +1869,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "("
-                },
-                {
-                  "type": "text",
-                  "value": "240) = 14.31, "
+                  "value": "(240) = 14.31, "
                 },
                 {
                   "type": "command",
@@ -1753,7 +1916,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "As shown in Figure 2B, carryover effects are measured as the interaction between previous trial congruency (pre-congruent or pre-incongruent) and current trial congruency (congruent or incongruent). The location of the fearful face and the target could repeat from trial-trial, so we further separated carryover effects by target location repetition. We tested for the presence of carry over effects by conducting a 2 × 2 × 2 Generalized Linear Mixed Model (GLMM) with the fixed effects of current trial congruency (congruent or incongruent), previous trial congruency (pre-congruent or pre-incongruent) and target location repetition (repeated or non-repeated) on RTs using a Gamma probability distribution with a log link, which accounts for the slightly positive skew of the data. Target location repetition was included in the model because previous studies of carryover effects deliberately chose to make their target locations never repeat between trials, "
+                  "value": "As shown in Figure 2B, carryover effects are measured as the interaction between previous trial congruency (pre-congruent or pre-incongruent) and current trial congruency (congruent or incongruent). The location of the fearful face and the target could repeat from trial to trial, so we further separated carryover effects by target location repetition. We examined target location repetition for two reasons: (a) it is an exploratory approach to analyzing carryover effects and (b) previous studies on carryover effects "
                 },
                 {
                   "type": "command",
@@ -1764,7 +1927,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Gladwin2019"
+                          "value": "Gladwin2019a"
                         }
                       ]
                     }
@@ -1772,7 +1935,71 @@
                 },
                 {
                   "type": "text",
-                  "value": " which leaves open the possibility that target repetition may moderate carryover effects. Similar to the t-test reported above, there was a main effect of current trial type, "
+                  "value": " have deliberately prevented cue and target locations repetitions trial-to-trial. We tested for the presence of carryover effects by conducting a 2 × 2 × 2 Generalized Linear Mixed Model (GLMM) with the random effect of subject and the fixed effects of current trial congruency (congruent or incongruent), previous trial congruency (pre-congruent or pre-incongruent) and target location repetition (repeated or non-repeated) on single trial RTs using a Gamma probability distribution with a log link, which accounts for the slightly positive skew of the data"
+                },
+                {
+                  "type": "command",
+                  "name": "footnote",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "We also tested a model with a random slope for congruency x previous congruency x target location repetition interaction. Although this model fit our data better (AIC"
+                        },
+                        {
+                          "type": "sub",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "without random slope"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " = -26903.474 whereas AIC"
+                        },
+                        {
+                          "type": "sub",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "with random slope"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": " = -27133.846;models with smaller AIC values fit better), the significant levels of all the fixed effects for this model was very similar to the one reported in the main text, where there was no significant carryover effect."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". Target location repetition was included in the model because previous studies of carryover effects deliberately chose to prevent target locations repetition between trials "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Gladwin2019a"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", which leaves open the possibility that target repetition may moderate carryover effects. Similar to the t-test reported above, there was a main effect of current trial type, "
                 },
                 {
                   "type": "command",
@@ -1791,11 +2018,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "("
-                },
-                {
-                  "type": "text",
-                  "value": "1, 46115) = 348.91, "
+                  "value": "(1, 46115) = 348.91, "
                 },
                 {
                   "type": "command",
@@ -1844,7 +2067,22 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "SE "
+                          "value": "SD"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " "
                         }
                       ]
                     }
@@ -1852,7 +2090,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "= 2.32) relative to incongruent ("
+                  "value": "= 68) relative to incongruent ("
                 },
                 {
                   "type": "command",
@@ -1882,7 +2120,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "SE "
+                          "value": "SD "
                         }
                       ]
                     }
@@ -1890,7 +2128,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "= 2.39) trials. There was also a main effect of target location repetition ("
+                  "value": "= 69) trials. There was also a main effect of target location repetition ("
                 },
                 {
                   "type": "command",
@@ -1909,11 +2147,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "("
-                },
-                {
-                  "type": "text",
-                  "value": "1, 46115) = 222.06, "
+                  "value": "(1, 46115) = 222.06, "
                 },
                 {
                   "type": "command",
@@ -1932,7 +2166,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "< .001) where RTs were faster for non-repeated target locations ("
+                  "value": "< .001) wherein RTs were faster for non-repeated target locations ("
                 },
                 {
                   "type": "command",
@@ -2027,11 +2261,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "("
-                },
-                {
-                  "type": "text",
-                  "value": "1, 46115) = 6.08, "
+                  "value": "(1, 46115) = 6.08, "
                 },
                 {
                   "type": "command",
@@ -2126,7 +2356,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "= 2.36). Whereas for repeated target location there was no difference in RTs between trials where the previous trial was congruent ("
+                  "value": "= 2.36). Meanwhile, for repeated target location there was no statistically significant difference in RTs between trials where the previous trial was congruent ("
                 },
                 {
                   "type": "command",
@@ -2221,11 +2451,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "("
-                },
-                {
-                  "type": "text",
-                  "value": "1, 46115) = 0.59, "
+                  "value": "(1, 46115) = 0.59, "
                 },
                 {
                   "type": "command",
@@ -2282,15 +2508,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "= .36) were significant; indicating that no carryover effects were observed."
-                },
-                {
-                  "type": "text",
-                  "value": " "
-                },
-                {
-                  "type": "text",
-                  "value": "No other effects were significant."
+                  "value": "= .36) were significant, indicating that no carryover effects were observed. No other effects were significant."
                 }
               ]
             },
@@ -2299,7 +2517,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "We followed up the GLMM approach with a Bayesian analysis in order to quantify the evidence in-favor of the null hypothesis that there is no carryover effect for threat. A Bayes Factor analysis on a related-sample t-test indicated moderate evidence for the null hypothesis (BF01 = 5.38). In other words, the null hypothesis is 5.38 times as likely as the alternative hypothesis (i.e., the influence of previous trial congruency on current trial congruency). "
+                  "value": "We followed up the GLMM approach with a Bayesian analysis. Given that there were no clear prior probabilities based on previous research, a diffuse (or uninformative) prior was used in SPSS to quantify evidence for the null hypothesis that there is no carryover effect for threat. A Bayes Factor analysis on a related-sample t-test indicated moderate evidence for the null hypothesis (BF01 = 5.38). In other words, the data is 5.38 times as likely under the null hypothesis than under the alternative hypothesis (i.e., that there is an influence of previous trial congruency on current trial congruency). "
                 }
               ]
             },
@@ -2308,7 +2526,7 @@
               "children": [
                 {
                   "type": "command",
-                  "name": "textbf",
+                  "name": "section",
                   "children": [
                     {
                       "type": "commandArg",
@@ -2340,7 +2558,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "In Experiment 2, our goal was to replicate and extend our lack of carryover effects with another category of threating stimuli: threatening images "
+                  "value": "In Experiment 2, our goal was to replicate and extend our lack of carryover effects with another category of threatening stimuli: threatening images "
                 },
                 {
                   "type": "command",
@@ -2359,7 +2577,7 @@
                 },
                 {
                   "type": "text",
-                  "value": ". We utilized data from Experiment 2 of "
+                  "value": ". We used data from Experiment 2 of "
                 },
                 {
                   "type": "command",
@@ -2387,26 +2605,15 @@
               "children": [
                 {
                   "type": "command",
-                  "name": "emph",
+                  "name": "subsection",
                   "children": [
                     {
                       "type": "commandArg",
+                      "optional": false,
                       "children": [
                         {
-                          "type": "command",
-                          "name": "textbf",
-                          "children": [
-                            {
-                              "type": "commandArg",
-                              "optional": false,
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "Method"
-                                }
-                              ]
-                            }
-                          ]
+                          "type": "text",
+                          "value": "Method"
                         }
                       ]
                     }
@@ -2536,7 +2743,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "The visual angle between the two facial stimuli presented in the cue display subtended a visual angle of 12°. The images used in the cue display were taken from the International Affective Picture System (IAPS; "
+                  "value": "The visual angle between the two stimuli presented in the cue display subtended a visual angle of 12°. The images used in the cue display were taken from the International Affective Picture System (IAPS; "
                 },
                 {
                   "type": "command",
@@ -2557,7 +2764,8 @@
                       "optional": true,
                       "children": [
                         {
-                          "type": "text"
+                          "type": "text",
+                          "value": ""
                         }
                       ]
                     },
@@ -2583,26 +2791,15 @@
               "children": [
                 {
                   "type": "command",
-                  "name": "emph",
+                  "name": "subsection",
                   "children": [
                     {
                       "type": "commandArg",
+                      "optional": false,
                       "children": [
                         {
-                          "type": "command",
-                          "name": "textbf",
-                          "children": [
-                            {
-                              "type": "commandArg",
-                              "optional": false,
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "Results"
-                                }
-                              ]
-                            }
-                          ]
+                          "type": "text",
+                          "value": "Results"
                         }
                       ]
                     }
@@ -2615,7 +2812,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "All trials with an incorrect response or a response time outside of 3 standard deviations from the group mean were removed from all RT analyses (0.5% of trials). To test for carryover effects, we conducted the same 2 × 2 × 2 Generalized Linear Mixed Model on RTs as in Experiment 1. There was a main effect of current trial type ("
+                  "value": "Outlier RT trials were removed from all analyses (0.5% of trials). To test for carryover effects, we conducted the same 2 × 2 × 2 Generalized Linear Mixed Model on RTs as in Experiment 1. There was a main effect of current trial type ("
                 },
                 {
                   "type": "command",
@@ -2634,11 +2831,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "("
-                },
-                {
-                  "type": "text",
-                  "value": "1, 15869) = 16.21, "
+                  "value": "(1, 15869) = 16.21, "
                 },
                 {
                   "type": "command",
@@ -2657,7 +2850,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "< .001) where RTs were faster for incongruent ("
+                  "value": "< .001) wherein RTs were faster for incongruent ("
                 },
                 {
                   "type": "command",
@@ -2733,15 +2926,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "= 4.11). Note that this effect indicates attentional bias to neutral, not threatening images, (see Figure 2C) which also might indicate "
-                },
-                {
-                  "type": "text",
-                  "value": "ance"
-                },
-                {
-                  "type": "text",
-                  "value": " for threatening images. There was also a main effect of target location repetition "
+                  "value": "= 4.11). Note that this effect indicates attentional bias to neutral, not threatening images, (see Figure 2C) which also might indicate for threatening images. There was also a main effect of target location repetition, "
                 },
                 {
                   "type": "command",
@@ -2760,11 +2945,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "("
-                },
-                {
-                  "type": "text",
-                  "value": "1, 15869 = 167.53, "
+                  "value": "(1, 15869 = 167.53, "
                 },
                 {
                   "type": "command",
@@ -2783,7 +2964,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "< .001) where RTs were faster for trials with non-repeated target locations ("
+                  "value": "< .001), wherein RTs were faster for trials with non-repeated target locations ("
                 },
                 {
                   "type": "command",
@@ -2878,11 +3059,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "("
-                },
-                {
-                  "type": "text",
-                  "value": "1, 15869) = 0.53, "
+                  "value": "(1, 15869) = 0.53, "
                 },
                 {
                   "type": "command",
@@ -2901,7 +3078,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "= .47) nor the 3-way interaction ("
+                  "value": "= .47) nor were the 3-way interactions ("
                 },
                 {
                   "type": "command",
@@ -2939,7 +3116,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "= .92) were significant. Thus, no carryover effects were observed. In addition, no other effects were significant. We again followed up the GLMM approach with the same Bayesian analysis; for Experiment 2, we found strong evidence for the null hypothesis (BF01 = 11.27) indicating that the null hypothesis is 11.27 times more likely than the hypothesized presence of a carryover effect for threat. "
+                  "value": "= .92) significant (see Figure 2D). Thus, no carryover effects were observed. In addition, no other effects were significant. We again followed up the GLMM approach with the same Bayesian analysis. For Experiment 2, we found strong evidence for the null hypothesis (BF01 = 11.27) indicating that the data are 11.27 times more likely under the null hypothesis than under the hypothesized existence of a carryover effect for threat. "
                 }
               ]
             },
@@ -2969,7 +3146,7 @@
               "children": [
                 {
                   "type": "command",
-                  "name": "textbf",
+                  "name": "section",
                   "children": [
                     {
                       "type": "commandArg",
@@ -2977,7 +3154,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "General Discussion"
+                          "value": "Discussion"
                         }
                       ]
                     }
@@ -2990,7 +3167,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "In two dot-probe experiments, we assessed whether attentional bias to fearful faces (Experiment 1) or threatening images (Experiment 2) would be influenced by carry-over effects. Seeing that threatening stimuli are especially salient, their potential trial-to-trial influence on attention is quite plausible. However, the evidence supporting carryover effects for threat has been mixed "
+                  "value": "In two dot-probe experiments, we assessed whether attentional bias to fearful faces (Experiment 1) or threatening images (Experiment 2) would be influenced by carryover effects. Given that threatening stimuli are especially salient, their potential trial-to-trial influence on attention is quite plausible. However, the evidence supporting carryover effects for threat has been insufficient to rule out the influence of carryover effects "
                 },
                 {
                   "type": "command",
@@ -3001,7 +3178,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Gladwin2019"
+                          "value": "Gladwin2019a"
                         }
                       ]
                     }
@@ -3024,7 +3201,26 @@
                 },
                 {
                   "type": "text",
-                  "value": ". In Experiment 1, while we did observe a small sized congruency effect for fearful faces, we did not find an interaction between current trial congruency and previous trial congruency. Even for non-repeating target location trials (see Figure 1B), we still found no such interaction. These non-significant carryover effects for threat were replicated in Experiment 2, see Figure 2D. The results from our Bayesian analyses showed moderate to strong evidence for this null result. "
+                  "value": ". In Experiment 1, while we did observe a small sized congruency effect for fearful faces, we did not find an interaction between current trial congruency and previous trial congruency. Even for non-repeating target location trials (see Figure 1B), we found no such interaction. There are multiple potential explanations for faster responses on non-repeating target location trials. One is that participants strategically attend away from the emotional cue. Another possibility is that participants avoid previous target locations, as explained by inhibition of return "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Posner1985"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". Lastly, our non-significant carryover effects for threat were replicated in Experiment 2. The results from our Bayesian analyses showed moderate to strong evidence for this null result. "
                 }
               ]
             },
@@ -3033,7 +3229,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Our lack of carryover effects are consistent with previous dot-probe studies "
+                  "value": "The lack of carryover effects we observed is consistent with previous statistical findings from other dot-probe studies "
                 },
                 {
                   "type": "command",
@@ -3081,6 +3277,10 @@
                   ]
                 },
                 {
+                  "type": "text",
+                  "value": ". These previous studies, when combined with the current findings, strongly suggest that attentional bias for threat in dot-probe tasks (congruent-incongruent) is unlikely to be moderated by carryover effects. Our study improved upon the limitations of these previous studies: we used a very large sample in Experiment 1, and did not administer any prior-experimental manipulations (like attentional training in "
+                },
+                {
                   "type": "command",
                   "name": "parencite",
                   "children": [
@@ -3097,7 +3297,7 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Previous studies and future research involving the dot-probe task do not need to consider whether congruency effects are influenced by carryover effects."
+                  "value": ". The current evidence suggests that previous studies and future research involving the dot-probe task do not need to consider whether congruency effects are influenced by carryover effects."
                 }
               ]
             },
@@ -3106,7 +3306,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Carryover effects are structurally analogous to the congruency sequence effect commonly observed in the flanker, Simon, and Stroop tasks "
+                  "value": "Carryover effects are analogous to the congruency sequence effect commonly observed in the flanker, Simon, and Stroop tasks "
                 },
                 {
                   "type": "command",
@@ -3125,7 +3325,7 @@
                 },
                 {
                   "type": "text",
-                  "value": ". One difference between the dot-probe task and these traditional conflict tasks is that the distractor stimulus does not directly conflict with the target. For example, in the Stroop task, the font color of the word stimulus can be incongruent with the meaning of the word, which creates conflict when the goal is to indicate the word color. Similarly, in the arrow flanker task, the central arrow and the flanker arrows can be incongruent (i.e., < < > < <), which creates conflict. However, in the dot-probe task, the target is not only shown at a different time but is also conceptually distinct from the cue because each are distinct categories of objects. Therefore, current trial congruency effects in the dot-probe task may stem from relatively low stimulus conflict and therefore are unaffected by previous trial congruency. In summary, carryover effects, or congruency sequence effects, may only arise for specific types of stimuli conflict."
+                  "value": ". One difference between the dot-probe task and these other tasks is that the distractor stimulus does not directly conflict with the target. For example, in the Stroop task, the font color of the word stimulus can be incongruent with the meaning of the word, which creates conflict when the goal is to indicate the word color. Similarly, in the arrow flanker task, conflict is created on incongruent trials; the two arrows to the left and two to the right point in the direction opposite to the direction of the center target arrow, like this: < < > < <. On congruent trials, all five of the arrows point in the same direction. However, in the dot-probe task, the target does not co-occur with the conflicting cue (they are shown in different displays); they are separated in time, and they are visually distinct categories of stimuli because the cue is a face, and the target is simply a single dot. Therefore, current trial congruency effects in the dot-probe task may stem from relatively low stimulus conflict and therefore be unaffected by previous trial congruency. In sum, carryover effects, or congruency sequence effects, may only arise for specific types of stimulus conflict."
                 }
               ]
             },
@@ -3134,7 +3334,53 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "There are some notable procedural differences between the standard dot-probe task (as used here) and other studies that used a similar spatial cueing task, but did observe carryover effects. For example, Gladwin et al., (2019, 2020) presented their cues until the participants made a response, whereas we only presented our cues for 100 ms (Experiment 1) or 500 ms (Experiment 2). Presenting cues until a response is made increases the possibility of attentional dwelling or delayed disengagement from the cue, as opposed to the initial orienting of attention towards the cue "
+                  "value": "There are some notable procedural differences between the standard dot-probe task "
+                },
+                {
+                  "type": "text",
+                  "value": "(as used here) and other studies that used a similar spatial cueing task but did observe carryover effects. For example, in the unique study design by "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Gladwin2019a"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Gladwin2020a"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", they presented their cues until the participants made a response, whereas we only presented our cues for 100 ms "
+                },
+                {
+                  "type": "text",
+                  "value": "(Experiment 1) or 500 ms "
+                },
+                {
+                  "type": "text",
+                  "value": "(Experiment 2). Presenting cues until a response is made increases the possibility of attentional dwelling or delayed disengagement from the cue, as opposed to the initial orienting of attention towards the cue "
                 },
                 {
                   "type": "command",
@@ -3153,7 +3399,45 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Another key difference is that Gladwin et al. (2019, 2020) presented a distractor (non-target object) in their search display, whereas in the classic dot-probe task, the target appears alone "
+                  "value": ". Another key difference is that "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Gladwin2019a"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Gladwin2020a"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " presented a distractor "
+                },
+                {
+                  "type": "text",
+                  "value": "(non-target object) in their search display, whereas in the classic dot-probe task, the target appears alone "
                 },
                 {
                   "type": "command",
@@ -3172,39 +3456,60 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Inhibition of the cue that appears in the previous non-target location might explain carryover effects for the cue (Gladwin et al., 2020). The presence of the non-target distractor might facilitate such inhibition, thereby creating a carryover effect ("
+                  "value": ". Inhibition of the cue that appears in the previous non-target location might explain carryover effects for the cue "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Gladwin2020a"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
-                  "value": "Gillich"
+                  "value": ". The presence of the non-target distractor might facilitate such inhibition, thereby creating a carryover effect "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Gillich2019"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Gladwin2019a"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
-                  "value": ", Jacobsen, "
-                },
-                {
-                  "type": "text",
-                  "value": "Tomat"
-                },
-                {
-                  "type": "text",
-                  "value": ", & Wendt, 2019; van "
-                },
-                {
-                  "type": "text",
-                  "value": "Moorselaar"
-                },
-                {
-                  "type": "text",
-                  "value": " & "
-                },
-                {
-                  "type": "text",
-                  "value": "Slagter"
-                },
-                {
-                  "type": "text",
-                  "value": ", 2019). Future studies on carryover effects should carefully consider their task design procedure. "
+                  "value": ". Future studies on carryover effects should carefully consider their task design procedure. "
                 }
               ]
             },
@@ -3213,7 +3518,7 @@
               "children": [
                 {
                   "type": "command",
-                  "name": "textbf",
+                  "name": "section",
                   "children": [
                     {
                       "type": "commandArg",
@@ -3234,7 +3539,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Researchers should carefully select their study designs when examining congruency effects. But for studies involving the dot-probe task, carryover effects do not appear to be a concern. The highly controlled and simple design of the dot-probe task adequately controls for sources of variance such as carryover effects. While threatening cues may bias attention to a greater extent than affect-less cues, their residual influence on attention is limited when assessed with the dot-probe task. "
+                  "value": "Researchers should carefully select their study design when examining congruency effects. As for studies involving the dot-probe task, however, carryover effects for threat do not appear to be a concern. The highly controlled and simple design of the dot-probe task adequately controls for sources of variance such as carryover effects. While threatening cues may bias attention to a greater extent than neutral cues, their residual influence on attention is limited when assessed with the dot-probe task. "
                 }
               ]
             },
@@ -3242,31 +3547,8 @@
               "type": "paragraph",
               "children": [
                 {
-                  "type": "command",
-                  "name": "emph",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "command",
-                          "name": "textbf",
-                          "children": [
-                            {
-                              "type": "commandArg",
-                              "optional": false,
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "Data Availability Statement:"
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
+                  "type": "text",
+                  "value": "Data Availability Statement:"
                 },
                 {
                   "type": "command",
@@ -3285,15 +3567,15 @@
                 },
                 {
                   "type": "text",
-                  "value": "Datasets are available here:"
+                  "value": "Datasets are available here: "
+                },
+                {
+                  "type": "text",
+                  "value": "https://osf.io/7qhsj/?view_only=07b52294c1b647829644a833fc3d4883"
                 },
                 {
                   "type": "text",
                   "value": " "
-                },
-                {
-                  "type": "text",
-                  "value": "LINK HIDDEN DUE TO BLIND REVIEW PROCESS "
                 }
               ]
             },
@@ -3359,6 +3641,230 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "environment",
+                  "name": "figure",
+                  "children": [
+                    {
+                      "type": "command",
+                      "name": "includegraphics",
+                      "children": [
+                        {
+                          "type": "commandArg",
+                          "optional": false,
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "media/image2.png"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "command",
+                      "name": "caption",
+                      "children": [
+                        {
+                          "type": "commandArg",
+                          "optional": false,
+                          "children": []
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "command",
+                      "name": "label",
+                      "children": [
+                        {
+                          "type": "commandArg",
+                          "optional": false,
+                          "children": []
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "environment",
+                  "name": "figure",
+                  "children": [
+                    {
+                      "type": "command",
+                      "name": "includegraphics",
+                      "children": [
+                        {
+                          "type": "commandArg",
+                          "optional": false,
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "media/image2.png"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "command",
+                      "name": "caption",
+                      "children": [
+                        {
+                          "type": "commandArg",
+                          "optional": false,
+                          "children": []
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "command",
+                      "name": "label",
+                      "children": [
+                        {
+                          "type": "commandArg",
+                          "optional": false,
+                          "children": []
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "environment",
+                  "name": "figure",
+                  "children": [
+                    {
+                      "type": "command",
+                      "name": "includegraphics",
+                      "children": [
+                        {
+                          "type": "commandArg",
+                          "optional": false,
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "media/image3.png"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "command",
+                      "name": "caption",
+                      "children": [
+                        {
+                          "type": "commandArg",
+                          "optional": false,
+                          "children": []
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "command",
+                      "name": "label",
+                      "children": [
+                        {
+                          "type": "commandArg",
+                          "optional": false,
+                          "children": []
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "environment",
+                  "name": "figure",
+                  "children": [
+                    {
+                      "type": "command",
+                      "name": "includegraphics",
+                      "children": [
+                        {
+                          "type": "commandArg",
+                          "optional": false,
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "media/image4.png"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "command",
+                      "name": "caption",
+                      "children": [
+                        {
+                          "type": "commandArg",
+                          "optional": false,
+                          "children": []
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "command",
+                      "name": "label",
+                      "children": [
+                        {
+                          "type": "commandArg",
+                          "optional": false,
+                          "children": []
+                        },
+                        {
+                          "type": "text",
+                          "value": "\n"
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -3382,13 +3888,47 @@
                 },
                 {
                   "type": "text",
-                  "value": "(A) Examples of congruent and incongruent trials in Experiment 1. (B) what two trials where congruency (left) and target location (right). "
+                  "value": "(A) Examples of congruent and incongruent trials in Experiment 1. (B) On the left is an example of two congruent trials—note the target (dot) appears in the location of the fearful face on the previous trial (trial "
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "n-"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "1) and the current trial (trial "
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "n"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "). A carryover effect occurs when there is a larger congruency effect when the current congruent trial is preceded by a congruent trial, relative to when it is preceded by an incongruent trial. On the right is an example of two sequential trials where the target appears in the same location (repeating target location). "
                 }
               ]
-            },
-            {
-              "type": "paragraph",
-              "children": []
             },
             {
               "type": "paragraph",
@@ -3407,7 +3947,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "media/image2.png"
+                              "value": "media/image5.png"
                             }
                           ]
                         },
@@ -3471,7 +4011,26 @@
                 },
                 {
                   "type": "text",
-                  "value": "Results from Experiment 1 are shown in A and B, Experiment 2 in C and D. A and C show congruent and incongruent RTs (left) and the overall congruency effects (otherwise known as the capturing of attention, or attention bias). The top row of B and D show congruency effects by previous trial congruency and target repetition. The bottom row shows congruency effects by previous trial congruency (incongruent minus congruent), separated by target location repetition. Black error bars represent ± standard deviation of the mean. Gray distributions represent 95% confidence intervals "
+                  "value": "Results from Experiment 1 are shown in A and B, Experiment 2 in C and D ("
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "n"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " indicates participant, values are averages by participant). A and C show congruent and incongruent RTs (left) and the overall congruency effects (otherwise known as the capturing of attention, or attention bias). The top row of B and D show congruency effects by previous trial congruency and target repetition. The bottom row shows congruency effects by previous trial congruency (incongruent minus congruent), separated by target location repetition. Black error bars represent standard deviation of the mean. Gray distributions represent 95% confidence intervals "
                 },
                 {
                   "type": "command",
@@ -3503,7 +4062,7 @@
               "children": [
                 {
                   "type": "command",
-                  "name": "textbf",
+                  "name": "section",
                   "children": [
                     {
                       "type": "commandArg",
@@ -3524,7 +4083,26 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "AUTHOR (2020). "
+                  "value": "AUTHO"
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "R2020"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
                 }
               ]
             },
@@ -3533,7 +4111,26 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "AUTHOR (2014). "
+                  "value": "AUTHO"
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "R2014"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
                 }
               ]
             },
@@ -3660,11 +4257,82 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Carretié"
+                  "value": "Carlson, J. M., & Fang, L. (2020). The stability and reliability of attentional bias measures in the dot-probe task: Evidence from both traditional mean bias scores and trial-level bias scores. "
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Motivation and Emotion"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
-                  "value": ", L. (2014). Exogenous (automatic) attention to emotional stimuli: A review. "
+                  "value": ", 13."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Carlson, J. M., & Reinke, K. S. (2014). Attending to the fear in your eyes: Facilitated orienting and delayed disengagement. "
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Cognition and Emotion"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "28"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "(8), 1398–1406. psyh. https://doi.org/10.1080/02699931.2014.885410"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Carretié, L. (2014). Exogenous (automatic) attention to emotional stimuli: A review. "
                 },
                 {
                   "type": "command",
@@ -4190,6 +4858,53 @@
               "children": [
                 {
                   "type": "text",
+                  "value": "Hedger, N., Gray, K. L. H., Garner, M., & Adams, W. J. (2016). Are visual threats prioritized without awareness? A critical review and meta-analysis involving 3 behavioral paradigms and 2696 observers. "
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Psychological Bulletin"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "142"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "(9), 934–968. https://doi.org/10.1037/bul0000054"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
                   "value": "Hill, M., & Duval, E. (2016). "
                 },
                 {
@@ -4623,6 +5338,53 @@
                 {
                   "type": "text",
                   "value": "(4), 387–396. https://doi.org/10.1177/1754073911410741"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Posner, M. I., Rafal, R. D., Choate, L. S., & Vaughan, J. (1985). Inhibition of return: Neural basis and function. "
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Cognitive Neuropsychology"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", "
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "2"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "(3), 211–228. https://doi.org/10.1080/02643298508252866"
                 }
               ]
             },

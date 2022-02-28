@@ -1,4 +1,4 @@
-import { R, RPr, VerticalAlignRun } from 'ooxast'
+import { FldChar, R, RPr, VerticalAlignRun } from 'ooxast'
 import { select } from 'xast-util-select'
 import { all } from '../all'
 import { x } from 'xastscript'
@@ -16,7 +16,14 @@ export function r(j: J, node: R) {
   }
 
   const fldChar = select('w\\:fldChar', node)
-  if (fldChar) return
+  const isFldChar = convertElement<FldChar>('w:fldChar')
+  if (isFldChar(fldChar)) {
+    if (fldChar.attributes?.['w:fldCharType'] === 'end') {
+      j.deleteNextRun = false
+      return
+    }
+    return
+  }
 
   const footnoteReference = select('w\\:footnoteReference', node)
   if (footnoteReference) {

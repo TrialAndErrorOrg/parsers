@@ -246,15 +246,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Address correspondence to Wendy Ross, "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Psychology Department, London Metropolitan University, 166-220 Holloway Road, N7 8DB"
-                    },
-                    {
-                      "type": "text",
-                      "value": "; "
+                      "value": "Address correspondence to Wendy Ross, Psychology Department, London Metropolitan University, 166-220 Holloway Road, N7 8DB; "
                     },
                     {
                       "type": "text",
@@ -376,7 +368,35 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Insight problems are sometimes designed to encourage an incorrect and misleading interpretation that veils a simple answer. The socks problem is one such problem: Given black socks and brown socks in a drawer mixed in a ratio of four to five, how many socks will you have to take out to make sure that you have a pair of the same color? The ratio information is misleading since, with only two colors, pulling three socks will guarantee a matching pair. Recently, Vallée-Tourangeau and March (2020) offered a distinction between first- and second-order problem-solving: The former proceeds with and through a physical model of the problem, while the latter proceeds in the absence of such interactions with the world, in other words on the basis of mental processes alone. Vallée-Tourangeau and March also proposed a thought experiment, suggesting that the ratio information in the socks problem might be quickly abandoned in a first-order environment, that is, one where participants observe the results of drawing socks out of a bag rather than imagining themselves doing so. We tested this prediction by randomly allocating participants to a low- (second-order) or high- (first-order) interactivity condition. Marginally more participants announced the correct answer within a 5-minute period in the high than in the low condition, although the difference was not significant. Detailed analysis of the video recording revealed the challenges of operationalizing a second-order condition, as participants engaged in dialogical interactions with the experimenter. In addition, the manner in which the high-interactivity condition was designed appeared to encourage the physical reification of the misleading ratio, thus anchoring that information more firmly rather than defusing it through interactivity. We close the paper with some reflections on wide, or systemic, cognition in experimental research on creative problem-solving. "
+                      "value": "Insight problems are sometimes designed to encourage an incorrect and misleading interpretation that veils a simple answer. The socks problem is one such problem: Given black socks and brown socks in a drawer mixed in a ratio of four to five, how many socks will you have to take out to make sure that you have a pair of the same color? The ratio information is misleading since, with only two colors, pulling three socks will guarantee a matching pair. Recently, Vallée-Tourangeau and "
+                    },
+                    {
+                      "type": "element",
+                      "name": "xref",
+                      "attributes": {
+                        "id": "_xref-1",
+                        "refType": "bibr",
+                        "rid": "March2020",
+                        "customType": "{\"noteIndex\":0,\"formattedCitation\":\"March (2020)\",\"plainCitation\":\"March (2020)\"}"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "March (2020)"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " offered a distinction between first- and second-order problem-solving: The former proceeds with and through a physical model of the problem, while the latter proceeds in the absence of such interactions with the world, in other words on the basis of mental processes alone. Vallée-Tourangeau and March also proposed a thought experiment, suggesting that the ratio information in the socks problem might be quickly abandoned in a first-order environment, that is, one where participants observe the results of drawing socks out of a bag rather than imagining themselves doing so. We tested this prediction by randomly allocating participants to a low- "
+                    },
+                    {
+                      "type": "text",
+                      "value": "(second-order) or high- "
+                    },
+                    {
+                      "type": "text",
+                      "value": "(first-order) interactivity condition. Marginally more participants announced the correct answer within a 5-minute period in the high than in the low condition, although the difference was not significant. Detailed analysis of the video recording revealed the challenges of operationalizing a second-order condition, as participants engaged in dialogical interactions with the experimenter. In addition, the manner in which the high-interactivity condition was designed appeared to encourage the physical reification of the misleading ratio, thus anchoring that information more firmly rather than defusing it through interactivity. We close the paper with some reflections on wide, or systemic, cognition in experimental research on creative problem-solving. "
                     }
                   ]
                 },
@@ -415,7 +435,31 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "The socks problem is a riddle commonly employed in research on insight problem-solving. The riddle goes: If you have black socks and brown socks in a drawer mixed in a ratio of four to five, how many socks will you have to take out to make sure that you have a pair of the same color? The ratio information is misleading since, with only two colors, pulling three socks will guarantee a matching pair. One of us (Vallée-Tourangeau) in Vallée-Tourangeau and March (2020) suggested that placing a participant in a materially rich environment rather than a sequestered one—in other words, giving her socks to test her ideas—would improve the solution rate. We aimed to translate this thought experiment into a physical one. The participants were therefore placed into two experimental conditions, one in which they could draw socks out of a bag to help them discover the answer or one in which they could not, and their performance was measured in terms of success and latency to success. We predicted that interacting with actual socks would lead to a higher level of success in a faster time. The participants were also filmed to facilitate strategy coding to assess if the different material environments prompted different strategies, as also predicted by Vallée-Tourangeau and March. "
+                      "value": "The socks problem is a riddle commonly employed in research on insight problem-solving. The riddle goes: If you have black socks and brown socks in a drawer mixed in a ratio of four to five, how many socks will you have to take out to make sure that you have a pair of the same color? The ratio information is misleading since, with only two colors, pulling three socks will guarantee a matching pair. One of us "
+                    },
+                    {
+                      "type": "text",
+                      "value": "(Vallée-Tourangeau) in Vallée-Tourangeau and "
+                    },
+                    {
+                      "type": "element",
+                      "name": "xref",
+                      "attributes": {
+                        "id": "_xref-2",
+                        "refType": "bibr",
+                        "rid": "March2020",
+                        "customType": "{\"noteIndex\":0,\"formattedCitation\":\"March (2020)\",\"plainCitation\":\"March (2020)\"}"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "March (2020)"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": " suggested that placing a participant in a materially rich environment rather than a sequestered one—in other words, giving her socks to test her ideas—would improve the solution rate. We aimed to translate this thought experiment into a physical one. The participants were therefore placed into two experimental conditions, one in which they could draw socks out of a bag to help them discover the answer or one in which they could not, and their performance was measured in terms of success and latency to success. We predicted that interacting with actual socks would lead to a higher level of success in a faster time. The participants were also filmed to facilitate strategy coding to assess if the different material environments prompted different strategies, as also predicted by Vallée-Tourangeau and March. "
                     }
                   ]
                 }
@@ -489,7 +533,7 @@
                           "type": "element",
                           "name": "xref",
                           "attributes": {
-                            "id": "_xref-1",
+                            "id": "_xref-3",
                             "refType": "bibr",
                             "rid": "Bowden2005",
                             "customType": "{\"uris\":[\"http://zotero.org/users/6525679/items/LCNNN3KI\"],\"uri\":[\"http://zotero.org/users/6525679/items/LCNNN3KI\"],\"locator\":\"323\",\"suppress-author\":true,\"formattedCitation\":\"(2005, p. 323)\",\"plainCitation\":\"(2005, p. 323)\",\"noteIndex\":0}"
@@ -509,7 +553,7 @@
                           "type": "element",
                           "name": "xref",
                           "attributes": {
-                            "id": "_xref-2",
+                            "id": "_xref-4",
                             "refType": "bibr",
                             "rid": "Jones2003",
                             "customType": "{\"uris\":[\"http://zotero.org/users/6525679/items/VG2QNAVC\"],\"uri\":[\"http://zotero.org/users/6525679/items/VG2QNAVC\"],\"locator\":\"12\",\"suppress-author\":true,\"formattedCitation\":\"(2003, p. 12)\",\"plainCitation\":\"(2003, p. 12)\",\"dontUpdate\":true,\"noteIndex\":0}"
@@ -544,7 +588,7 @@
                           "type": "element",
                           "name": "xref",
                           "attributes": {
-                            "id": "_xref-3",
+                            "id": "_xref-5",
                             "refType": "bibr",
                             "rid": "Chu2011",
                             "customType": "{\"uris\":[\"http://zotero.org/users/6525679/items/N82QRU9E\"],\"uri\":[\"http://zotero.org/users/6525679/items/N82QRU9E\"],\"locator\":\"211\",\"suppress-author\":true,\"formattedCitation\":\"(2011, p. 211)\",\"plainCitation\":\"(2011, p. 211)\",\"noteIndex\":0}"
@@ -564,7 +608,7 @@
                           "type": "element",
                           "name": "xref",
                           "attributes": {
-                            "id": "_xref-4",
+                            "id": "_xref-6",
                             "refType": "bibr",
                             "rid": "Fleck2013",
                             "customType": "{\"uris\":[\"http://zotero.org/users/6525679/items/IFHKWWCA\"],\"uri\":[\"http://zotero.org/users/6525679/items/IFHKWWCA\"],\"suppress-author\":true,\"formattedCitation\":\"(2013)\",\"plainCitation\":\"(2013)\",\"noteIndex\":0}"
@@ -584,7 +628,7 @@
                           "type": "element",
                           "name": "xref",
                           "attributes": {
-                            "id": "_xref-5",
+                            "id": "_xref-7",
                             "refType": "bibr",
                             "rid": "Weisberg2015",
                             "customType": "{\"uris\":[\"http://zotero.org/users/6525679/items/3KSCHXFB\"],\"uri\":[\"http://zotero.org/users/6525679/items/3KSCHXFB\"],\"locator\":\"32\",\"suppress-author\":true,\"formattedCitation\":\"(2015, p. 32)\",\"plainCitation\":\"(2015, p. 32)\",\"noteIndex\":0}"
@@ -615,7 +659,7 @@
                           "type": "element",
                           "name": "xref",
                           "attributes": {
-                            "id": "_xref-6",
+                            "id": "_xref-8",
                             "refType": "bibr",
                             "rid": "Vallée‐Tourangeau2019",
                             "customType": "{\"uris\":[\"http://zotero.org/users/6525679/items/STWHP5EA\"],\"uri\":[\"http://zotero.org/users/6525679/items/STWHP5EA\"],\"locator\":\"3\",\"suppress-author\":true,\"formattedCitation\":\"(2019, p. 3)\",\"plainCitation\":\"(2019, p. 3)\",\"noteIndex\":0}"
@@ -666,7 +710,7 @@
                               "type": "element",
                               "name": "xref",
                               "attributes": {
-                                "id": "_xref-7",
+                                "id": "_xref-9",
                                 "refType": "bibr",
                                 "rid": "Vallée-Tourangeau2020",
                                 "customType": "{\"uris\":[\"http://zotero.org/users/6525679/items/UTGWWU3E\"],\"uri\":[\"http://zotero.org/users/6525679/items/UTGWWU3E\"],\"formattedCitation\":\"(Vall\\\\uc0\\\\u233{}e-Tourangeau & Vall\\\\uc0\\\\u233{}e-Tourangeau, 2020; Vall\\\\uc0\\\\u233{}e\\\\uc0\\\\u8208{}Tourangeau & Vall\\\\uc0\\\\u233{}e-Tourangeau, 2014)\",\"plainCitation\":\"(Vallée-Tourangeau & Vallée-Tourangeau, 2020; Vallée‐Tourangeau & Vallée-Tourangeau, 2014)\",\"noteIndex\":0}"
@@ -682,7 +726,7 @@
                               "type": "element",
                               "name": "xref",
                               "attributes": {
-                                "id": "_xref-8",
+                                "id": "_xref-10",
                                 "refType": "bibr",
                                 "rid": "Vallée‐Tourangeau2014",
                                 "customType": "{\"uris\":[\"http://zotero.org/users/6525679/items/NW4ZPR9Z\"],\"uri\":[\"http://zotero.org/users/6525679/items/NW4ZPR9Z\"],\"formattedCitation\":\"(Vall\\\\uc0\\\\u233{}e-Tourangeau & Vall\\\\uc0\\\\u233{}e-Tourangeau, 2020; Vall\\\\uc0\\\\u233{}e\\\\uc0\\\\u8208{}Tourangeau & Vall\\\\uc0\\\\u233{}e-Tourangeau, 2014)\",\"plainCitation\":\"(Vallée-Tourangeau & Vallée-Tourangeau, 2020; Vallée‐Tourangeau & Vallée-Tourangeau, 2014)\",\"noteIndex\":0}"
@@ -739,7 +783,7 @@
                               "type": "element",
                               "name": "xref",
                               "attributes": {
-                                "id": "_xref-9",
+                                "id": "_xref-11",
                                 "refType": "bibr",
                                 "rid": "Andriani2017",
                                 "customType": "{\"uris\":[\"http://zotero.org/users/6525679/items/CBICXCKT\"],\"uri\":[\"http://zotero.org/users/6525679/items/CBICXCKT\"],\"formattedCitation\":\"(Andriani et al., 2017)\",\"plainCitation\":\"(Andriani et al., 2017)\",\"noteIndex\":0}"
@@ -759,7 +803,7 @@
                               "type": "element",
                               "name": "xref",
                               "attributes": {
-                                "id": "_xref-10",
+                                "id": "_xref-12",
                                 "refType": "bibr",
                                 "rid": "Kirsh1994",
                                 "customType": "{\"uris\":[\"http://zotero.org/users/6525679/items/53F3BE82\"],\"uri\":[\"http://zotero.org/users/6525679/items/53F3BE82\"],\"formattedCitation\":\"(Kirsh & Maglio, 1994)\",\"plainCitation\":\"(Kirsh & Maglio, 1994)\",\"noteIndex\":0}"
@@ -779,7 +823,7 @@
                               "type": "element",
                               "name": "xref",
                               "attributes": {
-                                "id": "_xref-11",
+                                "id": "_xref-13",
                                 "refType": "bibr",
                                 "rid": "Vallée‐Tourangeau2019",
                                 "customType": "{\"uris\":[\"http://zotero.org/users/6525679/items/STWHP5EA\"],\"uri\":[\"http://zotero.org/users/6525679/items/STWHP5EA\"],\"locator\":\"3\",\"suppress-author\":true,\"formattedCitation\":\"(2019, p. 3)\",\"plainCitation\":\"(2019, p. 3)\",\"noteIndex\":0}"
@@ -832,7 +876,27 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "There were two predictions made in Vallée-Tourangeau and March (2020). First, that the use of an actual bag of socks will lead to augmented performance, as measured by a higher solution rate. Second, that the way performance would be augmented would feature two components: The first being that the participant would forget the misleading ratio information, and the second being that the participant would be able to view the answer as she pulled socks out of the bag. This clear behavioral process hypothesis has a firm theoretical basis as outlined above. The current study aimed to test both the behavioral and performance hypotheses. "
+                          "value": "There were two predictions made in Vallée-Tourangeau and "
+                        },
+                        {
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-14",
+                            "refType": "bibr",
+                            "rid": "March2020",
+                            "customType": "{\"noteIndex\":0,\"formattedCitation\":\"March (2020)\",\"plainCitation\":\"March (2020)\"}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "March (2020)"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "value": ". First, that the use of an actual bag of socks will lead to augmented performance, as measured by a higher solution rate. Second, that the way performance would be augmented would feature two components: The first being that the participant would forget the misleading ratio information, and the second being that the participant would be able to view the answer as she pulled socks out of the bag. This clear behavioral process hypothesis has a firm theoretical basis as outlined above. The current study aimed to test both the behavioral and performance hypotheses. "
                         }
                       ]
                     },
@@ -1627,7 +1691,7 @@
                           "type": "element",
                           "name": "xref",
                           "attributes": {
-                            "id": "_xref-12",
+                            "id": "_xref-15",
                             "refType": "bibr",
                             "rid": "Glaser1967",
                             "customType": "{\"uris\":[\"http://zotero.org/users/6525679/items/KN7FBWNA\"],\"uri\":[\"http://zotero.org/users/6525679/items/KN7FBWNA\"],\"formattedCitation\":\"(Glaser & Strauss, 1967)\",\"plainCitation\":\"(Glaser & Strauss, 1967)\",\"dontUpdate\":true,\"noteIndex\":0}"
@@ -1768,7 +1832,27 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "The socks problem is a hard one because participants get stuck on the unhelpful ratio. As suggested by Vallée-Tourangeau and March (2020), ignoring the ratio should lead to participants solving the problem more often and faster because they are not tempted to use inappropriate mathematical formulae. As we have addressed above, this is not an unreasonable assumption. However, the specific hypothesis under exploration, that a high-interactivity environment would increase the number of people who disregard the ratio, was not sustained by an analysis of what people did in this condition; it appeared that the opposite was the case, that a high-interactivity reinforced the unhelpful information. "
+                              "value": "The socks problem is a hard one because participants get stuck on the unhelpful ratio. As suggested by "
+                            },
+                            {
+                              "type": "element",
+                              "name": "xref",
+                              "attributes": {
+                                "id": "_xref-16",
+                                "refType": "bibr",
+                                "rid": "Vallée-Tourangeau2020a",
+                                "customType": "{\"noteIndex\":0,\"formattedCitation\":\"Vallée-Tourangeau and March (2020)\",\"plainCitation\":\"Vallée-Tourangeau and March (2020)\"}"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Vallée-Tourangeau and March (2020)"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "value": ", ignoring the ratio should lead to participants solving the problem more often and faster because they are not tempted to use inappropriate mathematical formulae. As we have addressed above, this is not an unreasonable assumption. However, the specific hypothesis under exploration, that a high-interactivity environment would increase the number of people who disregard the ratio, was not sustained by an analysis of what people did in this condition; it appeared that the opposite was the case, that a high-interactivity reinforced the unhelpful information. "
                             }
                           ]
                         },
@@ -1796,7 +1880,7 @@
                               "type": "element",
                               "name": "xref",
                               "attributes": {
-                                "id": "_xref-13",
+                                "id": "_xref-17",
                                 "refType": "bibr",
                                 "rid": "Grice1975",
                                 "customType": "{\"uris\":[\"http://zotero.org/users/6525679/items/GLXV8Q49\"],\"uri\":[\"http://zotero.org/users/6525679/items/GLXV8Q49\"],\"formattedCitation\":\"(Grice, 1975)\",\"plainCitation\":\"(Grice, 1975)\",\"noteIndex\":0}"
@@ -2925,11 +3009,7 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "value": "This was even clearer in the low-interactivity condition where the participants sought out scaffolding more obviously. Take for example, participant 26 in Table 2. This was a low-interactivity participant who uncovered the answer through a series of guesses using the feedback as a scaffold. As she stated clearly when asked if she knows why: "
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\"When I got to the end I did...when I said two and then I realized...\" (02:51). The act of saying the word alongside the feedback from the environment scaffolded her understanding. Knowledge was gained when the thought was in the world; even if that realization did not take material form, it was still generated in action, this time the action of guessing. To place the results from this participant in a low-interactivity environment would be misleading even if she did not carry out any actions over objects. "
+                                  "value": "This was even clearer in the low-interactivity condition where the participants sought out scaffolding more obviously. Take for example, participant 26 in Table 2. This was a low-interactivity participant who uncovered the answer through a series of guesses using the feedback as a scaffold. As she stated clearly when asked if she knows why: \"When I got to the end I did...when I said two and then I realized...\" (02:51). The act of saying the word alongside the feedback from the environment scaffolded her understanding. Knowledge was gained when the thought was in the world; even if that realization did not take material form, it was still generated in action, this time the action of guessing. To place the results from this participant in a low-interactivity environment would be misleading even if she did not carry out any actions over objects. "
                                 }
                               ]
                             },
@@ -4102,7 +4182,7 @@
                           "type": "element",
                           "name": "xref",
                           "attributes": {
-                            "id": "_xref-14",
+                            "id": "_xref-18",
                             "refType": "bibr",
                             "rid": "Gozli2017",
                             "customType": "{\"uris\":[\"http://zotero.org/users/6525679/items/SQY977RX\"],\"uri\":[\"http://zotero.org/users/6525679/items/SQY977RX\"],\"suppress-author\":true,\"formattedCitation\":\"(2017)\",\"plainCitation\":\"(2017)\",\"noteIndex\":0}"
@@ -4175,7 +4255,7 @@
                               "type": "element",
                               "name": "xref",
                               "attributes": {
-                                "id": "_xref-15",
+                                "id": "_xref-19",
                                 "refType": "bibr",
                                 "rid": "Arfini2019",
                                 "customType": "{\"uris\":[\"http://zotero.org/users/6525679/items/NZ3G8VTT\"],\"uri\":[\"http://zotero.org/users/6525679/items/NZ3G8VTT\"],\"formattedCitation\":\"(Arfini, 2019)\",\"plainCitation\":\"(Arfini, 2019)\",\"noteIndex\":0}"
@@ -4223,7 +4303,7 @@
                               "type": "element",
                               "name": "xref",
                               "attributes": {
-                                "id": "_xref-16",
+                                "id": "_xref-20",
                                 "refType": "bibr",
                                 "rid": "MacGregor2001",
                                 "customType": "{\"uris\":[\"http://zotero.org/users/6525679/items/6IXDA6AH\"],\"uri\":[\"http://zotero.org/users/6525679/items/6IXDA6AH\"],\"formattedCitation\":\"(MacGregor et al., 2001; Ormerod et al., 2013)\",\"plainCitation\":\"(MacGregor et al., 2001; Ormerod et al., 2013)\",\"dontUpdate\":true,\"noteIndex\":0}"
@@ -4239,7 +4319,7 @@
                               "type": "element",
                               "name": "xref",
                               "attributes": {
-                                "id": "_xref-17",
+                                "id": "_xref-21",
                                 "refType": "bibr",
                                 "rid": "Ormerod2013",
                                 "customType": "{\"uris\":[\"http://zotero.org/users/6525679/items/KCVTQMUM\"],\"uri\":[\"http://zotero.org/users/6525679/items/KCVTQMUM\"],\"formattedCitation\":\"(MacGregor et al., 2001; Ormerod et al., 2013)\",\"plainCitation\":\"(MacGregor et al., 2001; Ormerod et al., 2013)\",\"dontUpdate\":true,\"noteIndex\":0}"
@@ -4296,7 +4376,7 @@
                               "type": "element",
                               "name": "xref",
                               "attributes": {
-                                "id": "_xref-18",
+                                "id": "_xref-22",
                                 "refType": "bibr",
                                 "rid": "Wilson2009",
                                 "customType": "{\"uris\":[\"http://zotero.org/users/6525679/items/A8QXBXPR\"],\"uri\":[\"http://zotero.org/users/6525679/items/A8QXBXPR\"],\"formattedCitation\":\"(Wilson & Clark, 2009)\",\"plainCitation\":\"(Wilson & Clark, 2009)\",\"dontUpdate\":true,\"noteIndex\":0}"
@@ -4321,11 +4401,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "Interactivity posits that a dynamic relationship with the external world is not only augmentative to cognition processes but necessary. However, experimental research in interactivity does so by paradoxically setting up a low-interactivity condition which admits non-interactive thinking. In this way, it assumes that there is an easy way to compare non-systemic and systemic cognition and that non-systemic cognition can be meaningfully isolated in an experimental psychologist’s lab. We suggest that the dualistic assumptions underlying this approach are misguided, as they assume an ideal type of experimental participant can be generated in sequestered experimental conditions. Rather, the evidence we present here suggests a cognitive leakage across both experimental conditions."
-                            },
-                            {
-                              "type": "text",
-                              "value": " In the process of operationalizing the so-called low-interactivity condition, the presence of the experimenter offered an external resource with which to scaffold the problem-solving process. The participant naturally transformed a solo and ostensibly unaided effort into a dyadic one. Clearly, the experimenter qua interlocutor was an unrequited conversational partner. Still, in the absence of hard physical or instructional constraints, the participant naturally availed themselves of this resource, bootstrapping the cognitive effort through a dialogue with their reluctant partner. And it is through this dialogue that the participant’s hunch underwent many different forms until it was eventually translated into the normative one. These ersatz dialogues offer a telling window on the distributed nature of thinking, in this instance, the distribution over time and the gradual sedimentation through iterative dialogical cycles. The reification of the solution was the product of interactivity despite the experimental procedure."
+                              "value": "Interactivity posits that a dynamic relationship with the external world is not only augmentative to cognition processes but necessary. However, experimental research in interactivity does so by paradoxically setting up a low-interactivity condition which admits non-interactive thinking. In this way, it assumes that there is an easy way to compare non-systemic and systemic cognition and that non-systemic cognition can be meaningfully isolated in an experimental psychologist’s lab. We suggest that the dualistic assumptions underlying this approach are misguided, as they assume an ideal type of experimental participant can be generated in sequestered experimental conditions. Rather, the evidence we present here suggests a cognitive leakage across both experimental conditions. In the process of operationalizing the so-called low-interactivity condition, the presence of the experimenter offered an external resource with which to scaffold the problem-solving process. The participant naturally transformed a solo and ostensibly unaided effort into a dyadic one. Clearly, the experimenter qua interlocutor was an unrequited conversational partner. Still, in the absence of hard physical or instructional constraints, the participant naturally availed themselves of this resource, bootstrapping the cognitive effort through a dialogue with their reluctant partner. And it is through this dialogue that the participant’s hunch underwent many different forms until it was eventually translated into the normative one. These ersatz dialogues offer a telling window on the distributed nature of thinking, in this instance, the distribution over time and the gradual sedimentation through iterative dialogical cycles. The reification of the solution was the product of interactivity despite the experimental procedure."
                             }
                           ]
                         },
@@ -4336,7 +4412,39 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "A systematic approach to cognition requires that every thoughtful (and arguably every non-thoughtful) encounter should be analyzed as part of a system; however, what constitutes part of the system is rarely specified. Vallée-Tourangeau and March (2020) suggest that a cognitive ecosystem is configured by “the reasoner, the physical reality of the problem, and the action possibilities offered by the external environment” (p. 826). We argue that the data here suggest “the action possibilities offered by the external environment” (p. 826) are broader than whether the problem is represented in movable artifacts or not. Rather, participants actively recruit beyond the resources of interest in the experimental conditions. This means a more granular approach needs to be considered. "
+                              "value": "A systematic approach to cognition requires that every thoughtful "
+                            },
+                            {
+                              "type": "text",
+                              "value": "(and arguably every non-thoughtful) encounter should be analyzed as part of a system; however, what constitutes part of the system is rarely specified. Vallée-Tourangeau and "
+                            },
+                            {
+                              "type": "element",
+                              "name": "xref",
+                              "attributes": {
+                                "id": "_xref-23",
+                                "refType": "bibr",
+                                "rid": "March2020",
+                                "customType": "{\"noteIndex\":0,\"formattedCitation\":\"March (2020)\",\"plainCitation\":\"March (2020)\"}"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "March (2020)"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "text",
+                              "value": " suggest that a cognitive ecosystem is configured by “the reasoner, the physical reality of the problem, and the action possibilities offered by the external environment” "
+                            },
+                            {
+                              "type": "text",
+                              "value": "(p. 826). We argue that the data here suggest “the action possibilities offered by the external environment” "
+                            },
+                            {
+                              "type": "text",
+                              "value": "(p. 826) are broader than whether the problem is represented in movable artifacts or not. Rather, participants actively recruit beyond the resources of interest in the experimental conditions. This means a more granular approach needs to be considered. "
                             }
                           ]
                         }
@@ -4391,15 +4499,7 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "It is tempting to question whether the mental tasks used in traditional cognitive psychology experiments are diagnostic of problem-solving outside of the sequestered laboratory environments in which they are commonly operationalized. We propose, rather, that a research program should develop in parallel to examine the solving of problems which rendered complex not because of their structure but because of their situation. "
-                            },
-                            {
-                              "type": "text",
-                              "value": "When it comes to problem-solving, we need a wider range of outcome measures to even begin to understand how it unfolds across a range of contexts which requires a combination of qualitative and quantitative work. What we can see here is that the genesis of a new idea involves a transformation, which in turn involves resources; these resources come with a cost, and these transactions leave physical traces which can be mapped. To understand the transformations and transactions, that is, the process through which new ideas are constructed, the analysis must be local and granular. I"
-                            },
-                            {
-                              "type": "text",
-                              "value": "t is our belief that turning to the qualitative in cognitive psychology to complement the quantitative will yield great benefits."
+                              "value": "It is tempting to question whether the mental tasks used in traditional cognitive psychology experiments are diagnostic of problem-solving outside of the sequestered laboratory environments in which they are commonly operationalized. We propose, rather, that a research program should develop in parallel to examine the solving of problems which rendered complex not because of their structure but because of their situation. When it comes to problem-solving, we need a wider range of outcome measures to even begin to understand how it unfolds across a range of contexts which requires a combination of qualitative and quantitative work. What we can see here is that the genesis of a new idea involves a transformation, which in turn involves resources; these resources come with a cost, and these transactions leave physical traces which can be mapped. To understand the transformations and transactions, that is, the process through which new ideas are constructed, the analysis must be local and granular. It is our belief that turning to the qualitative in cognitive psychology to complement the quantitative will yield great benefits."
                             }
                           ]
                         },
@@ -5108,6 +5208,62 @@
               "name": "refList",
               "attributes": {},
               "children": [
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "March2020"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2020"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "March"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
                 {
                   "type": "element",
                   "name": "ref",
@@ -7130,6 +7286,80 @@
                             {
                               "type": "text",
                               "value": "The discovery of grounded theory: Strategies for Qualitative Research"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Vallée-Tourangeau2020a"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2020"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Vallée-Tourangeau"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "March"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         }

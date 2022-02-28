@@ -41,7 +41,7 @@ export interface Options {
     options?: string[]
     name: string
   }
-  citationType?: 'mendeley' | 'native' | 'citavi' | 'zotero' | 'endnote'
+  citationType?: 'mendeley' | 'word' | 'citavi' | 'zotero' | 'endnote'
   parseCitation?: (citation: any) => any
   collectCitation?: (citation: any, index: number | string) => any
 
@@ -82,7 +82,7 @@ export interface Context {
   partialCitation: string
   deleteNextRun: boolean
   relations: { [key: string]: string }
-  citeKeys: string[]
+  citeKeys: { [key: string]: string }
   citationType?: 'mendeley' | 'native' | 'citavi' | 'zotero' | 'endnote'
 }
 

@@ -161,7 +161,7 @@ function createOptCiteArgs(pre?: string, post?: string) {
         children: [
           {
             type: 'text',
-            value: pre,
+            value: pre || '',
           } as Text,
         ],
       } as CommandArg,
@@ -175,7 +175,7 @@ function createOptCiteArgs(pre?: string, post?: string) {
       children: [
         {
           type: 'text',
-          value: post,
+          value: post || '',
         } as Text,
       ],
     } as CommandArg,
@@ -185,7 +185,7 @@ function createOptCiteArgs(pre?: string, post?: string) {
       children: [
         {
           type: 'text',
-          value: pre,
+          value: pre || '',
         } as Text,
       ],
     } as CommandArg,

@@ -20,7 +20,7 @@ import reoffParseReferences from 'reoff-parse-references'
 //describe('fixtures', () => {
 const fromDocx = (
   path: string,
-  citationType?: 'mendeley' | 'native' | 'citavi' | 'zotero' | 'endnote'
+  citationType?: 'mendeley' | 'word' | 'citavi' | 'zotero' | 'endnote'
 ) =>
   unified()
     .data('hey', 'ho')
@@ -30,9 +30,11 @@ const fromDocx = (
         'w:lang',
         'w:shd',
         'w:szCs',
+        'w:sz',
         'w:kern',
         'w:rFonts',
         'w:noProof',
+        'w:color',
       ],
     })
     .use(
@@ -46,7 +48,7 @@ const fromDocx = (
         JSON.stringify(removePosition(tree), null, 2)
       )
     })
-    .use(reoffRejour, { citationType: citationType || 'mendeley' })
+    .use(reoffRejour, { citationType: citationType || 'mendeley' || '' })
     .use(
       () => (tree) =>
         writeFileSync(
@@ -68,23 +70,13 @@ const fixtures = join(__dirname, 'fixtures')
 const dir = readdirSync(fixtures)
 
 it.each(dir)('parses correctly for %s', async (name: string) => {
-  const [docx, latex, jats, json] = [
-    'index.docx',
-    'index.tex',
-    'index.jats.xml',
-    'index.json',
-  ].map((ext) => join(fixtures, name, ext))
+  const [docx, latex, jats, json] = ['index.docx'].map((ext) =>
+    join(fixtures, name, ext)
+  )
 
   const doccc = new Uint8Array(await readFile(docx))
   const docxIn = await docxToVFile(doccc)
-  const texOut = String(await readFile(latex))
 
-  // let config: Options | undefined
-  // try {
-  //   config = JSON.parse(String(readFileSync(latex)))
-  // } catch (e) {
-  //   console.error(e)
-  // }
   const result = String(
     await fromDocx(
       join(fixtures, name),
@@ -99,12 +91,6 @@ it.each(dir)('parses correctly for %s', async (name: string) => {
   if (name === 'image') {
     expect(select('fig', JSON.parse(j))).toBeTruthy()
   }
-  // console.dir(xmlTree, { depth: null })
 
-  // it('should match snapshot', () => {
-  //   //expect(result).toMatchSnapshot()
-  // })
-  //it('should match predefined thing', () => {
-  expect(result).toEqual(texOut)
-  // })
+  expect(result).toMatchSnapshot()
 })

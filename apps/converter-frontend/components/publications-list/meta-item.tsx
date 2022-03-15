@@ -17,7 +17,7 @@ export const MetaItem = ({
 }) => {
   //console.log(value)
   return (
-    <VStack spacing={2} key={datakey}>
+    <VStack spacing={2} sx={{ alignItems: 'flex-start' }} key={datakey}>
       {/* @ts-expect-error booo  */}
       {!value && !value?.en_US && !options?.showEmpty ? null : (
         <Text size="xs" color="dimmed">

@@ -1,9 +1,11 @@
-import { Container, Tabs, Text } from '@mantine/core'
+import { Code, Container, Tabs, Text } from '@mantine/core'
 import { definitions } from 'ojs-client'
 import React from 'react'
 import useSWR from 'swr'
+import { Data as CSL } from 'csl-json'
 // @ts-expect-error no types for cites
 import Cite from 'citation-js'
+import { Prism } from '@mantine/prism'
 
 export const Citations = ({
   value,
@@ -24,7 +26,7 @@ export const Citations = ({
   const { data, error } = useSWR(url, (resource: string, init: any) =>
     fetch(url, {
       method: 'post',
-      body: JSON.stringify({ response: splitextra }),
+      body: splitextra,
     }).then((response) => response.json())
   )
   if (error || !data) {
@@ -38,40 +40,42 @@ export const Citations = ({
   }
   //console.log(data)
 
-  const cite = new Cite(data)
+  console.log(data)
+  const cite = new Cite(
+    data.map((data: CSL) => {
+      if (!data.type) data.type = 'article'
+      return data
+    })
+  )
   const biblatex = cite.format('biblatex')
   const bibtex = cite.format('bibtex')
   const ris = cite.format('ris')
   const csl = data
   return (
-    <Tabs>
-      <Tabs.Tab label="Rich Text">
-        <Container sx={{ overflow: 'scroll', maxHeight: 500 }}>
-          {value?.map((cite) => (
-            <Text key={cite} dangerouslySetInnerHTML={{ __html: cite }} />
-          ))}
-        </Container>
-      </Tabs.Tab>
-      <Tabs.Tab label="biblatex">
-        <Container sx={{ overflow: 'scroll', maxHeight: 500 }}>
-          <Text>{biblatex}</Text>
-        </Container>
-      </Tabs.Tab>
-      <Tabs.Tab label="bibtex">
-        <Container sx={{ overflow: 'scroll', maxHeight: 500 }}>
-          <Text>{bibtex}</Text>
-        </Container>
-      </Tabs.Tab>
-      <Tabs.Tab label="ris">
-        <Container sx={{ overflow: 'scroll', maxHeight: 500 }}>
-          <Text>{ris}</Text>
-        </Container>
-      </Tabs.Tab>
-      <Tabs.Tab label="csl">
-        <Container sx={{ overflow: 'scroll', maxHeight: 500 }}>
-          <Text>{JSON.stringify(csl, null, 2)}</Text>
-        </Container>
-      </Tabs.Tab>
-    </Tabs>
+    <Prism.Tabs>
+      <Prism.Tab
+        withLineNumbers
+        language="actionscript"
+        label="Rich Text"
+        sx={{ whiteSpace: 'pre-wrap', maxWidth: '70vw' }}
+      >
+        {value?.join('\n')}
+        {/* {value?.map((cite) => (
+          <Text key={cite} dangerouslySetInnerHTML={{ __html: cite }} />
+        ))} */}
+      </Prism.Tab>
+      <Prism.Tab withLineNumbers language="clike" label="biblatex">
+        {biblatex}
+      </Prism.Tab>
+      <Prism.Tab withLineNumbers language="clike" label="bibtex">
+        {bibtex}
+      </Prism.Tab>
+      <Prism.Tab withLineNumbers language="jsx" label="ris">
+        {ris}
+      </Prism.Tab>
+      <Prism.Tab withLineNumbers language="json" label="csl">
+        {JSON.stringify(csl, null, 2)}
+      </Prism.Tab>
+    </Prism.Tabs>
   )
 }

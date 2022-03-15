@@ -132,8 +132,8 @@ export const PublicationData = (props: {
           })}
         </Box>
       ) : (
-        <>
-          <Container>
+        <VStack sx={{ alignItems: 'flex-start' }}>
+          <Paper>
             <Text>{categories[data.sectionId]}</Text>
             <Text>{data['pub-id::doi']}</Text>
             <MetaItem datakey={'title'} value={data.title} />
@@ -153,8 +153,8 @@ export const PublicationData = (props: {
 
             return <MetaItem key={key} datakey={key} value={value} />
           })} */}
-          </Container>
-          <Container>
+          </Paper>
+          <Paper>
             <HStack>
               <TextInput
                 label="documentclassopt"
@@ -181,12 +181,16 @@ export const PublicationData = (props: {
                       radius="md"
                       sx={{
                         display: 'flex',
-                        alignItems: 'center',
+                        alignItems: 'flex-start',
                         flexWrap: 'wrap',
+                        flexDirection: 'column',
                       }}
                     >
                       <HStack spacing={10}>
                         <TextInput
+                          labelProps={{
+                            style: { color: 'red', fontWeight: 'bold' },
+                          }}
                           label="givenname"
                           value={author.givenName}
                           onChange={(value) => {
@@ -238,79 +242,82 @@ export const PublicationData = (props: {
                   </InputWrapper>
                 )
               })}
+
+              <HStack sx={{ width: '100%' }}>
+                <TextInput
+                  label="running"
+                  {...form.getInputProps('runningauthor')}
+                  sx={{ width: '100%' }}
+                />
+              </HStack>
+              <VStack sx={{ alignItems: 'flex-start' }}>
+                <Textarea
+                  label="abstract"
+                  {...form.getInputProps('abstract')}
+                ></Textarea>
+                <TextInput
+                  label="keywords"
+                  {...form.getInputProps('keywordsabstract')}
+                ></TextInput>
+              </VStack>
+              <HStack>
+                <TextInput
+                  label="year"
+                  {...form.getInputProps('jyear')}
+                ></TextInput>
+              </HStack>
+
+              <HStack>
+                <Textarea
+                  label="acknowledgments"
+                  {...form.getInputProps('acknowledgments')}
+                ></Textarea>
+                <Textarea
+                  label="funding"
+                  {...form.getInputProps('funding')}
+                ></Textarea>
+              </HStack>
+              <HStack>
+                <TextInput
+                  label="volume"
+                  {...form.getInputProps('jvolume')}
+                ></TextInput>
+                <TextInput
+                  label="issue"
+                  {...form.getInputProps('jissue')}
+                ></TextInput>
+              </HStack>
+
+              <HStack spacing={10} sx={{ flexWrap: 'wrap' }}>
+                <TextInput
+                  label="received"
+                  {...form.getInputProps('paperreceived')}
+                ></TextInput>
+                <TextInput
+                  label="accepted"
+                  {...form.getInputProps('paperaccepted')}
+                ></TextInput>
+                <TextInput
+                  label="published"
+                  {...form.getInputProps('paperpublished')}
+                ></TextInput>
+              </HStack>
+              <HStack>
+                <TextInput
+                  label="website"
+                  {...form.getInputProps('jwebsite')}
+                ></TextInput>
+                <TextInput
+                  label="doi"
+                  {...form.getInputProps('doi')}
+                ></TextInput>
+              </HStack>
             </VStack>
-
-            <HStack sx={{ width: '100%' }}>
-              <TextInput
-                label="running"
-                {...form.getInputProps('runningauthor')}
-                sx={{ width: '100%' }}
-              />
-            </HStack>
-            <HStack>
-              <Textarea
-                label="abstract"
-                {...form.getInputProps('abstract')}
-              ></Textarea>
-              <TextInput
-                label="keywords"
-                {...form.getInputProps('keywordsabstract')}
-              ></TextInput>
-            </HStack>
-            <HStack>
-              <TextInput
-                label="year"
-                {...form.getInputProps('jyear')}
-              ></TextInput>
-            </HStack>
-
-            <HStack>
-              <Textarea
-                label="acknowledgments"
-                {...form.getInputProps('acknowledgments')}
-              ></Textarea>
-              <Textarea
-                label="funding"
-                {...form.getInputProps('funding')}
-              ></Textarea>
-            </HStack>
-            <HStack>
-              <TextInput
-                label="volume"
-                {...form.getInputProps('jvolume')}
-              ></TextInput>
-              <TextInput
-                label="issue"
-                {...form.getInputProps('jissue')}
-              ></TextInput>
-            </HStack>
-
-            <HStack spacing={10} sx={{ flexWrap: 'wrap' }}>
-              <TextInput
-                label="received"
-                {...form.getInputProps('paperreceived')}
-              ></TextInput>
-              <TextInput
-                label="accepted"
-                {...form.getInputProps('paperaccepted')}
-              ></TextInput>
-              <TextInput
-                label="published"
-                {...form.getInputProps('paperpublished')}
-              ></TextInput>
-            </HStack>
-            <HStack>
-              <TextInput
-                label="website"
-                {...form.getInputProps('jwebsite')}
-              ></TextInput>
-              <TextInput label="doi" {...form.getInputProps('doi')}></TextInput>
-            </HStack>
-          </Container>
+          </Paper>
           <Button onClick={() => handleSubmit(form.values)}>
             Add data to template
           </Button>
-        </>
+        </VStack>
       )}
     </>
   )

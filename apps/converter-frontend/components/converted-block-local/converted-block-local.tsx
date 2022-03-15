@@ -67,7 +67,7 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
                   const urlCreator = window.URL || window.webkitURL
                   const imageUrl = urlCreator.createObjectURL(blob)
                   // eslint-disable-next-line
-                  return <img src={imageUrl} key={url} />
+                  return <img width="30%" src={imageUrl} key={url} />
                 })
               : null}
           </Box>

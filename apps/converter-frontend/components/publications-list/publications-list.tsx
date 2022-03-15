@@ -73,7 +73,7 @@ export function PublicationsList(props: PublicationsListProps) {
   //console.log(error)
   //console.log(data)
   return (
-    <>
+    <Box>
       {data && (
         <Autocomplete
           onItemSubmit={(item) => setVal(item as any)}
@@ -87,7 +87,7 @@ export function PublicationsList(props: PublicationsListProps) {
       )}
       {val && <PublicationData pub={val.data} apiToken={token} />}
       {val && <FileReel endpoint={endpoint} data={val.data} apiToken={token} />}
-    </>
+    </Box>
   )
 }
 

@@ -1,4 +1,4 @@
-import { PreambleCommand, PreambleCommand } from 'texast-util-add-preamble'
+import { PreambleCommand } from 'texast-util-add-preamble'
 import create from 'zustand'
 import { combine } from 'zustand/middleware'
 

@@ -194,7 +194,23 @@ export function constructCitation(
         citation,
       }
     }
-    case 'zotero': {
+    // case 'zotero': {
+    //   const citation = constructZoteroCitation(curr, index, bibliography)
+    //   return {
+    //     instr: `ADDIN ZOTERO_ITEM CSL_CITATION ${JSON.stringify(
+    //       constructZoteroCitation(curr, index, bibliography)
+    //     )}`,
+    //     citation,
+    //   }
+    // }
+    // case 'endnote':
+    //   return constructEndnoteCitation(curr, index)
+    // case 'native':
+    //   return constructMendeleyCitation(curr, index)
+    // case 'citavi':
+    //   return constructCitaviCitation(curr, index)
+    case 'zotero':
+    default: {
       const citation = constructZoteroCitation(curr, index, bibliography)
       return {
         instr: `ADDIN ZOTERO_ITEM CSL_CITATION ${JSON.stringify(
@@ -202,17 +218,9 @@ export function constructCitation(
         )}`,
         citation,
       }
-    }
-    // case 'endnote':
-    //   return constructEndnoteCitation(curr, index)
-    // case 'native':
-    //   return constructMendeleyCitation(curr, index)
-    // case 'citavi':
-    //   return constructCitaviCitation(curr, index)
-    default: {
-      throw new Error(
-        `Unknown citation type ${type}. Please select a valid type.`
-      )
+      // throw new Error(
+      //   `Unknown citation type ${type}. Please select a valid type.`
+      // )
     }
   }
 }

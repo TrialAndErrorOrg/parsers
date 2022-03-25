@@ -6,6 +6,8 @@ import { CitationItem, MendeleyCitationItem } from 'ooxast-util-citations'
 export function citation(j: J, citation: T, parent: Parent) {
   // i const t = select('', citation) as T
   //  if (!t) return
+  if (!citation || !citation?.children?.length) return
+
   const text = citation.children[0].value
 
   if (text.includes('PAGE \\* MERGEFORMAT')) return

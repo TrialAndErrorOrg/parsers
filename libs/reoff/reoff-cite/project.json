@@ -1,5 +1,4 @@
 {
-  "root": "libs/reoff/reoff-cite",
   "sourceRoot": "libs/reoff/reoff-cite/src",
   "projectType": "library",
   "targets": {
@@ -14,12 +13,12 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/reoff/reoff-cite"],
       "options": {
-        "jestConfig": "libs/reoff/reoff-cite/jest.config.js",
+        "jestConfig": "libs/reoff/reoff-cite/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/reoff/reoff-cite",

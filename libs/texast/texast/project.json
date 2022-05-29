@@ -1,5 +1,4 @@
 {
-  "root": "libs/texast/texast",
   "sourceRoot": "libs/texast/texast/src",
   "projectType": "library",
   "targets": {
@@ -14,12 +13,12 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/texast/texast"],
       "options": {
-        "jestConfig": "libs/texast/texast/jest.config.js",
+        "jestConfig": "libs/texast/texast/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/texast/texast",

@@ -1,5 +1,4 @@
 {
-  "root": "libs/relatex/relatex-add-preamble",
   "sourceRoot": "libs/relatex/relatex-add-preamble/src",
   "projectType": "library",
   "targets": {
@@ -14,12 +13,12 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/relatex/relatex-add-preamble"],
       "options": {
-        "jestConfig": "libs/relatex/relatex-add-preamble/jest.config.js",
+        "jestConfig": "libs/relatex/relatex-add-preamble/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/relatex/relatex-add-preamble",

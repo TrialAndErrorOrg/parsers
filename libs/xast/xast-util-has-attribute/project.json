@@ -1,10 +1,9 @@
 {
-  "root": "libs/xast/xast-util-has-attribute",
   "sourceRoot": "libs/xast/xast-util-has-attribute/src",
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/xast/xast-util-has-attribute",
@@ -25,7 +24,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/xast/xast-util-has-attribute"],
       "options": {
-        "jestConfig": "libs/xast/xast-util-has-attribute/jest.config.js",
+        "jestConfig": "libs/xast/xast-util-has-attribute/jest.config.ts",
         "passWithNoTests": true
       }
     }

@@ -1,5 +1,4 @@
 {
-  "root": "libs/processors/docx-to-tex",
   "sourceRoot": "libs/processors/docx-to-tex/src",
   "projectType": "library",
   "targets": {
@@ -14,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/processors/docx-to-tex"],
       "options": {
-        "jestConfig": "libs/processors/docx-to-tex/jest.config.js",
+        "jestConfig": "libs/processors/docx-to-tex/jest.config.ts",
         "passWithNoTests": true
       }
     }

@@ -1,5 +1,4 @@
 {
-  "root": "libs/ast-stringify",
   "sourceRoot": "libs/ast-stringify/src",
   "projectType": "library",
   "targets": {
@@ -14,12 +13,12 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/ast-stringify"],
       "options": {
-        "jestConfig": "libs/ast-stringify/jest.config.js",
+        "jestConfig": "libs/ast-stringify/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/ast-stringify",

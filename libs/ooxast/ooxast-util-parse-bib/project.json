@@ -1,5 +1,4 @@
 {
-  "root": "libs/ooxast/ooxast-util-parse-bib",
   "sourceRoot": "libs/ooxast/ooxast-util-parse-bib/src",
   "projectType": "library",
   "targets": {
@@ -14,12 +13,12 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/ooxast/ooxast-util-parse-bib"],
       "options": {
-        "jestConfig": "libs/ooxast/ooxast-util-parse-bib/jest.config.js",
+        "jestConfig": "libs/ooxast/ooxast-util-parse-bib/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/ooxast/ooxast-util-parse-bib",

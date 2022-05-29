@@ -1,10 +1,9 @@
 {
-  "root": "libs/rejour/rejour-frontmatter",
   "sourceRoot": "libs/rejour/rejour-frontmatter/src",
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/rejour/rejour-frontmatter",
@@ -25,7 +24,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/rejour/rejour-frontmatter"],
       "options": {
-        "jestConfig": "libs/rejour/rejour-frontmatter/jest.config.js",
+        "jestConfig": "libs/rejour/rejour-frontmatter/jest.config.ts",
         "passWithNoTests": true
       }
     }

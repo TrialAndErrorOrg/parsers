@@ -1,5 +1,4 @@
 {
-  "root": "libs/processors/docx-to-jats",
   "sourceRoot": "libs/processors/docx-to-jats/src",
   "projectType": "library",
   "targets": {
@@ -14,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/processors/docx-to-jats"],
       "options": {
-        "jestConfig": "libs/processors/docx-to-jats/jest.config.js",
+        "jestConfig": "libs/processors/docx-to-jats/jest.config.ts",
         "passWithNoTests": true
       }
     }

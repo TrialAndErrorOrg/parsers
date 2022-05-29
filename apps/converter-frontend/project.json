@@ -1,5 +1,4 @@
 {
-  "root": "apps/converter-frontend",
   "sourceRoot": "apps/converter-frontend",
   "projectType": "application",
   "targets": {
@@ -12,7 +11,8 @@
         "outputPath": "dist/apps/converter-frontend"
       },
       "configurations": {
-        "production": {}
+        "production": {},
+        "development": {}
       }
     },
     "serve": {
@@ -25,8 +25,13 @@
         "production": {
           "buildTarget": "converter-frontend:build:production",
           "dev": false
+        },
+        "development": {
+          "buildTarget": "converter-frontend:build:development",
+          "dev": true
         }
-      }
+      },
+      "defaultConfiguration": "development"
     },
     "export": {
       "executor": "@nrwl/next:export",
@@ -38,7 +43,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/apps/converter-frontend"],
       "options": {
-        "jestConfig": "apps/converter-frontend/jest.config.js",
+        "jestConfig": "apps/converter-frontend/jest.config.ts",
         "passWithNoTests": true
       }
     },

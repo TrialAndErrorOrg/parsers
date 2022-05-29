@@ -1,5 +1,4 @@
 {
-  "root": "libs/ojs/ojs-client",
   "sourceRoot": "libs/ojs/ojs-client/src",
   "projectType": "library",
   "targets": {
@@ -14,12 +13,12 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/ojs/ojs-client"],
       "options": {
-        "jestConfig": "libs/ojs/ojs-client/jest.config.js",
+        "jestConfig": "libs/ojs/ojs-client/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/ojs/ojs-client",

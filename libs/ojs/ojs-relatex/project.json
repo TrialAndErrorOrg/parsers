@@ -1,5 +1,4 @@
 {
-  "root": "libs/ojs/ojs-relatex",
   "sourceRoot": "libs/ojs/ojs-relatex/src",
   "projectType": "library",
   "targets": {
@@ -11,7 +10,7 @@
       }
     },
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/ojs/ojs-relatex",

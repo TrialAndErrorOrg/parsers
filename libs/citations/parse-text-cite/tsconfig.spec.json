@@ -14,6 +14,7 @@
     "**/*.test.jsx",
     "**/*.spec.jsx",
     "**/*.d.ts",
-    "src/lib/names.ts"
+    "src/lib/names.ts",
+    "jest.config.ts"
   ]
 }

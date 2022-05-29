@@ -1,5 +1,4 @@
 {
-  "root": "libs/reoff/reoff-rejour",
   "sourceRoot": "libs/reoff/reoff-rejour/src",
   "projectType": "library",
   "targets": {
@@ -14,12 +13,12 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/reoff/reoff-rejour"],
       "options": {
-        "jestConfig": "libs/reoff/reoff-rejour/jest.config.js",
+        "jestConfig": "libs/reoff/reoff-rejour/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/reoff/reoff-rejour",

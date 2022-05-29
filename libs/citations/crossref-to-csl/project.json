@@ -1,5 +1,4 @@
 {
-  "root": "libs/citations/crossref-to-csl",
   "sourceRoot": "libs/citations/crossref-to-csl/src",
   "projectType": "library",
   "targets": {
@@ -14,12 +13,12 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/citations/crossref-to-csl"],
       "options": {
-        "jestConfig": "libs/citations/crossref-to-csl/jest.config.js",
+        "jestConfig": "libs/citations/crossref-to-csl/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/citations/crossref-to-csl",

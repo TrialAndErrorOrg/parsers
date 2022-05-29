@@ -1,5 +1,4 @@
 {
-  "root": "libs/ooxast/ooxast-util-citations",
   "sourceRoot": "libs/ooxast/ooxast-util-citations/src",
   "projectType": "library",
   "targets": {
@@ -14,12 +13,12 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/ooxast/ooxast-util-citations"],
       "options": {
-        "jestConfig": "libs/ooxast/ooxast-util-citations/jest.config.js",
+        "jestConfig": "libs/ooxast/ooxast-util-citations/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/ooxast/ooxast-util-citations",

@@ -1,10 +1,9 @@
 {
-  "root": "libs/xast/xast-util-select",
   "sourceRoot": "libs/xast/xast-util-select/src",
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/xast/xast-util-select",
@@ -25,7 +24,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/xast/xast-util-select"],
       "options": {
-        "jestConfig": "libs/xast/xast-util-select/jest.config.js",
+        "jestConfig": "libs/xast/xast-util-select/jest.config.ts",
         "passWithNoTests": true
       }
     }

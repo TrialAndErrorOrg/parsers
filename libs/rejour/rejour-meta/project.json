@@ -1,5 +1,4 @@
 {
-  "root": "libs/rejour/rejour-meta",
   "sourceRoot": "libs/rejour/rejour-meta/src",
   "projectType": "library",
   "targets": {
@@ -14,12 +13,12 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/rejour/rejour-meta"],
       "options": {
-        "jestConfig": "libs/rejour/rejour-meta/jest.config.js",
+        "jestConfig": "libs/rejour/rejour-meta/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/rejour/rejour-meta",

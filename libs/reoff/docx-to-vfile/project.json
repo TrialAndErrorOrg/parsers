@@ -1,5 +1,4 @@
 {
-  "root": "libs/reoff/docx-to-vfile",
   "sourceRoot": "libs/reoff/docx-to-vfile/src",
   "projectType": "library",
   "targets": {
@@ -14,12 +13,12 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/reoff/docx-to-vfile"],
       "options": {
-        "jestConfig": "libs/reoff/docx-to-vfile/jest.config.js",
+        "jestConfig": "libs/reoff/docx-to-vfile/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/reoff/docx-to-vfile",

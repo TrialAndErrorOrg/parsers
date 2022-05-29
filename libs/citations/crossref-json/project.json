@@ -1,5 +1,4 @@
 {
-  "root": "libs/citations/crossref-json",
   "sourceRoot": "libs/citations/crossref-json/src",
   "projectType": "library",
   "targets": {
@@ -19,7 +18,7 @@
       }
     },
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/citations/crossref-json",

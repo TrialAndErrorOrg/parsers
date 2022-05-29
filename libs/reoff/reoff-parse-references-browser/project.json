@@ -1,5 +1,4 @@
 {
-  "root": "libs/reoff/reoff-parse-references-browser",
   "sourceRoot": "libs/reoff/reoff-parse-references-browser/src",
   "projectType": "library",
   "targets": {
@@ -16,12 +15,12 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/reoff/reoff-parse-references-browser"],
       "options": {
-        "jestConfig": "libs/reoff/reoff-parse-references-browser/jest.config.js",
+        "jestConfig": "libs/reoff/reoff-parse-references-browser/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/reoff/reoff-parse-references-browser",

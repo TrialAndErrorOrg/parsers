@@ -1,5 +1,4 @@
 {
-  "root": "apps/converter-frontend-e2e",
   "sourceRoot": "apps/converter-frontend-e2e/src",
   "projectType": "application",
   "targets": {

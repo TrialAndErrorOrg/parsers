@@ -1,10 +1,9 @@
 {
-  "root": "libs/utils/misc",
   "sourceRoot": "libs/utils/misc/src",
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/node:package",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/utils/misc",
@@ -25,7 +24,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/utils/misc"],
       "options": {
-        "jestConfig": "libs/utils/misc/jest.config.js",
+        "jestConfig": "libs/utils/misc/jest.config.ts",
         "passWithNoTests": true
       }
     }

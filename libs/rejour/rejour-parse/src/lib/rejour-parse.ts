@@ -8,7 +8,7 @@ import {
 } from 'xast'
 import { Root } from 'jast-types'
 import { filter } from 'unist-util-filter'
-import { map } from 'unist-util-map'
+import { map } from 'misc'
 
 export interface Settings {
   removeWhiteSpace?: boolean
@@ -51,7 +51,7 @@ export default function rejourParse(options: Settings = {}) {
     // attributes --> attributes
     // name --> name
     // to be more in line with hast, which makes plugins easier to port
-    tree = map(tree!, (node) => {
+    tree = map(tree!, (node: XastElement) => {
       if (node.type !== 'element') return node
       const element = node as XastElement
 

@@ -1,4 +1,4 @@
-const nxPreset = require('@nrwl/jest/preset').default;
+const nxPreset = require('@nrwl/jest/preset').default
 
 module.exports = {
   ...nxPreset,
@@ -10,7 +10,7 @@ module.exports = {
   },
   testEnvironment: 'node',
   transform: {
-    '^.+\\.[tj]sx?$': 'ts-jest',
+    '^.+\\.[tj]sx?$': ['@swc/jest'],
     '^.+\\.ne$': 'jest-transform-nearley',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],

@@ -1,15 +1,14 @@
 import { Node, Element, isElement, Root, Text, Abstract } from 'jast-types'
-import { remove } from 'unist-util-remove'
-import { visit as origVisit } from 'unist-util-visit'
+import { visit, remove } from 'misc'
 import { filter } from 'unist-util-filter'
 
 // console.log(Node)
 // fix for typescript bug
-const visit = origVisit as any
+
 const containsAbstract = (node: Element) => {
   let containsAbstract = false
   visit(node, 'text', (textNode: Text) => {
-    if (!(textNode.value.replace(/[^\w]/g, '').toLowerCase() === 'abstract')) {
+    if (!(textNode.value.replace(/\W/g, '').toLowerCase() === 'abstract')) {
       return
     }
     containsAbstract = true
@@ -35,7 +34,7 @@ export default function rejourMoveAbstract() {
     const abstractNode = findAbstractNode(tree)
 
     // TODO: [rejour-move-abstract] Make finding abstract less inefficient
-    remove(tree, (rawNode) => {
+    remove(tree, (rawNode: Root['children'][number]) => {
       const node = rawNode as Element
       return node.name === 'sec' && containsAbstract(node)
     })
@@ -55,6 +54,7 @@ export default function rejourMoveAbstract() {
       attributes: {},
       children: abstractBody.children,
     }
+
     visit(
       tree,
       (node: Node) => isElement(node) && node.name === 'article-meta',

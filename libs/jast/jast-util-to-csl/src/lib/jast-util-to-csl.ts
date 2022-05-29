@@ -12,7 +12,8 @@ import {
 import { Data as CSL, LooseNumber, Person } from 'csl-json'
 import { toString } from 'xast-util-to-string'
 import { convert } from 'unist-util-is'
-import { visit } from 'unist-util-visit'
+import { visit } from 'misc'
+
 type Date = [
   [LooseNumber, (LooseNumber | undefined)?, (LooseNumber | undefined)?],
   (
@@ -204,6 +205,7 @@ type CSLConditional<T extends Root | Front | Back> = T extends Root
   : T extends Front
   ? CSL
   : CSL[]
+
 /**
  * Parses either Root, Front, or Back jast-element and returns CSL JSON
  */

@@ -8,16 +8,18 @@ import { J, JastContent, Node, Parent, Handle, JastParent } from './types'
  * @returns
  */
 
-export function all<T extends JastContent = JastContent>(
+export function all(
+  //<T extends JastContent = JastContent>
   j: J,
   parent: Node
-): Array<T extends JastParent ? T['children'][number] : JastContent> {
+): // Array<T extends JastParent ? T['children'][number] : JastContent>
+JastContent[] {
   // @ts-expect-error Assume `parent` is a parent.
   const nodes: Array<Node> = parent.children || []
   const values: Array<JastContent> = []
   let index = -1
-  let length = nodes.length
-  let child = nodes[index + 1]
+  const length = nodes.length
+  // const child = nodes[index + 1]
 
   // Trim initial and final  `<br>`s.
   // They’re not semantic per HTML, and they can’t be made in markdown things

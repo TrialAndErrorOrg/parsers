@@ -14,7 +14,7 @@ function AuthorPage(props: AuthorPageProps) {
   const { data: session, status } = useSession()
   if (status !== 'authenticated') {
     return (
-      <Button onClick={() => signIn()} leftIcon={FaMicrosoft}>
+      <Button onClick={() => signIn()} leftIcon={<FaMicrosoft />}>
         Sign In
       </Button>
     )

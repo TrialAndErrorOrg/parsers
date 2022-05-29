@@ -1,20 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import {
-  AppShell,
-  Box,
-  Burger,
-  Button,
-  Code,
-  Container,
-  Group,
-  Header,
-  MediaQuery,
-  Navbar,
-  Select,
-  Text,
-  Title,
-  useMantineTheme,
-} from '@mantine/core'
+import React from 'react'
+import { Title } from '@mantine/core'
 import Conversion from '../components/conversion/conversion'
 
 export default function Index() {

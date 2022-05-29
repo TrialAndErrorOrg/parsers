@@ -77,9 +77,9 @@ export const FileStage = (props: {
           <HStack>
             <Button
               leftIcon={<ImShuffle />}
-              onClick={() => fetchFile(item.url)}
+              onClick={() => item.url && fetchFile(item.url)}
             ></Button>
-            <a href={item.url} download>
+            <a title="Download" href={item.url} download>
               <FaFileDownload />
             </a>
           </HStack>

@@ -42,9 +42,10 @@ export async function docxToJatsConverter(
           : 'http://localhost:8000/api/style',
       mailto,
     })
+    // @ts-expect-error tbh idk what it's talking about
     .use(reoffCite, { type: type || 'mendeley' })
     .use(reoffRejour)
     .use(rejourStringify)
 
-  return proc.process(vfile)
+  return await proc.process(vfile)
 }

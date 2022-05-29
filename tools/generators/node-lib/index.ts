@@ -243,7 +243,7 @@ function addProject(tree: Tree, options: NormalizedSchema) {
     addDependenciesToPackageJson(tree, {}, { '@nrwl/js': nxVersion })
     //@ts-ignore
     projectConfiguration.targets.build = {
-      executor: '@nrwl/js:tsc',
+      executor: '@nrwl/js:swc',
       outputs: ['{options.outputPath}'],
       options: {
         outputPath: `dist/${libsDir}/${options.projectDirectory}`,

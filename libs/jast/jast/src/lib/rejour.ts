@@ -22,7 +22,7 @@ export interface Root extends UnistParent {
 export type TagHavers = Extract<Content, { name: string }>
 
 export interface Parent extends UnistParent {
-  children: Array<Content>
+  children: Content[]
 }
 
 export interface Element extends UnistNode {

@@ -1,22 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import {
-  AppShell,
-  Burger,
   Button,
   Code,
   Container,
   Group,
-  Header,
-  MediaQuery,
-  Navbar,
   Select,
   Text,
   Title,
   useMantineTheme,
 } from '@mantine/core'
-import { HStack, VStack } from '../components/stack/stack'
+import { HStack } from '../components/stack/stack'
 import SelectItem from '../components/select-item/select-item'
-import { AiFillFileWord, AiOutlineUpload } from 'react-icons/ai'
+import { AiOutlineUpload } from 'react-icons/ai'
 import { JATSIcon, TexIcon, WordIcon } from '../components/ext-icon/ext-icon'
 
 import { Dropzone } from '@mantine/dropzone'
@@ -24,8 +19,8 @@ import ConvertedBlock from '../components/converted-block/converted-block'
 export default function Index() {
   const [thing, setThing] = useState<ArrayBuffer>()
   const [tex, setTex] = useState('')
-  const [opened, setOpened] = useState(false)
-  const theme = useMantineTheme()
+  // const [opened, setOpened] = useState(false)
+  // const theme = useMantineTheme()
 
   // useEffect(() => {
   //   if (!thing) return

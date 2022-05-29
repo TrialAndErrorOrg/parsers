@@ -1,25 +1,11 @@
-import {
-  Autocomplete,
-  Text,
-  Group,
-  Loader,
-  Container,
-  Box,
-  Title,
-  Tabs,
-  Button,
-} from '@mantine/core'
+import { Autocomplete, Text, Box } from '@mantine/core'
 import { definitions, paths } from 'ojs-client'
 import OJS from 'ojs-client'
 import React, { forwardRef, useState } from 'react'
 import useSWR from 'swr'
 import { HStack, VStack } from '../stack/stack'
-import Link from 'next/link'
-import { FaOrcid } from 'react-icons/fa'
 // @ts-expect-error there are no types here
 import Cite from 'citation-js'
-import { Responses } from 'ojs-client'
-import { GenericIcon, WordIcon } from '../ext-icon/ext-icon'
 import { FileReel } from './file-reel'
 import { PublicationData } from './publication-data'
 
@@ -49,6 +35,7 @@ const AutoCompleteItem = forwardRef<HTMLDivElement, OJSAutoCompleteProps>(
     </div>
   )
 )
+
 AutoCompleteItem.displayName = 'AutoCompleteItem'
 
 export function PublicationsList(props: PublicationsListProps) {

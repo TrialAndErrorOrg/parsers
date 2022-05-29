@@ -96,6 +96,7 @@
     "@nrwl/workspace": "14.1.9-beta.1",
     "@swc/cli": "^0.1.57",
     "@swc/core": "^1.2.194",
+    "@swc/helpers": "^0.3.16",
     "@swc/jest": "^0.2.21",
     "@testing-library/react": "13.1.1",
     "@types/adm-zip": "^0.4.34",

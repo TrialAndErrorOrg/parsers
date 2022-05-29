@@ -1,10 +1,9 @@
-import { visit } from 'unist-util-visit'
+import { visit, remove } from 'misc'
 import { Text, Root, Node, P, R } from 'ooxast'
 import { convertElement, isElement } from 'xast-util-is-element'
 import { select } from 'xast-util-select'
 import { removePosition } from 'unist-util-remove-position'
 import { select as unistSelect } from 'unist-util-select'
-import { remove } from 'unist-util-remove'
 
 // Check to see if node is a paragraph, because we want to merge elements in a paragraph
 const isP = convertElement<P>('w:p')
@@ -97,7 +96,11 @@ function maybeRemoveRunProperties(r: R, options: string[] | undefined): R {
     return r
   }
 
-  remove(r, (element) => isElement(element) && options.includes(element.name))
+  remove(
+    r,
+    (element: R['children'][number]) =>
+      isElement(element) && options.includes(element.name)
+  )
   return r
 }
 

@@ -67,7 +67,14 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
                   const urlCreator = window.URL || window.webkitURL
                   const imageUrl = urlCreator.createObjectURL(blob)
                   // eslint-disable-next-line
-                  return <img width="30%" src={imageUrl} key={url} />
+                  return (
+                    <img
+                      width="30%"
+                      alt="alternative image"
+                      src={imageUrl}
+                      key={url}
+                    />
+                  )
                 })
               : null}
           </Box>
@@ -76,7 +83,9 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
       {vfile?.messages && (
         <>
           <Header height="20">Errors and warnings</Header>
-          <Text>{vfile?.messages}</Text>
+          {vfile?.messages.map((message) => (
+            <Text key={String(message)}>{String(message)} </Text>
+          ))}
         </>
       )}
       {vfile ? (

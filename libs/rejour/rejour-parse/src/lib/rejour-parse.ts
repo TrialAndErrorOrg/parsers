@@ -51,7 +51,6 @@ export default function rejourParse(options: Settings = {}) {
     // attributes --> attributes
     // name --> name
     // to be more in line with hast, which makes plugins easier to port
-    //@ts-expect-error: TODO:somehow types don't align, fix
     tree = map(tree!, (node) => {
       if (node.type !== 'element') return node
       const element = node as XastElement

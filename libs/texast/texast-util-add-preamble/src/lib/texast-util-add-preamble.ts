@@ -1,4 +1,4 @@
-import { visit } from 'misc'
+import { visit } from 'unist-util-visit'
 import { Command, CommandArg, Preamble } from 'texast'
 import { Root, Text } from 'texast'
 

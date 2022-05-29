@@ -1,4 +1,4 @@
-import { visit } from 'misc'
+import { visit } from 'unist-util-visit'
 import { Text, Root, Node, P, R } from 'ooxast'
 import { convertElement, isElement } from 'xast-util-is-element'
 import { select } from 'xast-util-select'

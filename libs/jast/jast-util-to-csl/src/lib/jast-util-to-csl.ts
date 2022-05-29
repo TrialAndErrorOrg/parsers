@@ -12,7 +12,7 @@ import {
 import { Data as CSL, LooseNumber, Person } from 'csl-json'
 import { toString } from 'xast-util-to-string'
 import { convert } from 'unist-util-is'
-import { visit } from 'misc'
+import { visit } from 'unist-util-visit'
 type Date = [
   [LooseNumber, (LooseNumber | undefined)?, (LooseNumber | undefined)?],
   (

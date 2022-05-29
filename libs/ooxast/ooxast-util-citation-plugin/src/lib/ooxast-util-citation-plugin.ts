@@ -1,4 +1,4 @@
-import { visit } from 'misc'
+import { visit } from 'unist-util-visit'
 import { T } from 'ooxast'
 import { Node } from 'unist'
 import { convertElement } from 'xast-util-is-element'

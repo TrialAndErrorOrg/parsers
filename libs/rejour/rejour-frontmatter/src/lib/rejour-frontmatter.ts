@@ -1,4 +1,4 @@
-import { visit } from 'misc'
+import { visit } from 'unist-util-visit'
 import { is } from 'unist-util-is'
 import { Front, isElement, Root } from 'jast-types'
 import { VFile } from 'vfile'

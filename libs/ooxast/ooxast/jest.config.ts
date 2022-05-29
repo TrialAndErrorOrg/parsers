@@ -11,7 +11,7 @@ const config = {
   testEnvironment: 'node',
   transform: {
     //eslint-disable-next-line
-    '^.+.[tj]sx?$': 'ts-jest',
+    '^.+.[tj]sx?$': ['@swc/jest'],
   },
   transformIgnorePatterns: [],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],

@@ -64,155 +64,32 @@
               "children": [
                 {
                   "type": "element",
-                  "name": "w:sdt",
+                  "name": "w:r",
                   "attributes": {},
                   "children": [
                     {
                       "type": "element",
-                      "name": "w:sdtPr",
+                      "name": "w:rPr",
                       "attributes": {},
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:id",
+                          "name": "w:lang",
                           "attributes": {
-                            "w:val": "692576755"
+                            "w:val": "en-US"
                           },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:citation",
-                          "attributes": {},
                           "children": []
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "w:sdtContent",
+                      "name": "w:instrText",
                       "attributes": {},
                       "children": [
                         {
-                          "type": "element",
-                          "name": "w:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "w:fldChar",
-                              "attributes": {
-                                "w:fldCharType": "begin"
-                              },
-                              "children": []
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "w:instrText",
-                              "attributes": {
-                                "xml:space": "preserve"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "CITATION Aut22 \\l 1033 "
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "w:fldChar",
-                              "attributes": {
-                                "w:fldCharType": "separate"
-                              },
-                              "children": []
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:r",
-                          "attributes": {
-                            "w:rsidR": "00B565CB"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:noProof",
-                                  "attributes": {},
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "w:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "(Author, 2022)"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "w:fldChar",
-                              "attributes": {
-                                "w:fldCharType": "end"
-                              },
-                              "children": []
-                            }
-                          ]
+                          "type": "text",
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Author2022\",\"itemData\":{\"author\":[{\"family\":\"Author\"}],\"issued\":{\"date-parts\":[[\"2022\"]]}}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Author, 2022)\",\"plainCitation\":\"(Author, 2022)\"},\"citationID\":\"CITE-1\"}"
                         }
                       ]
                     }
@@ -300,153 +177,32 @@
               "children": [
                 {
                   "type": "element",
-                  "name": "w:sdt",
+                  "name": "w:r",
                   "attributes": {},
                   "children": [
                     {
                       "type": "element",
-                      "name": "w:sdtPr",
+                      "name": "w:rPr",
                       "attributes": {},
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:id",
+                          "name": "w:lang",
                           "attributes": {
-                            "w:val": "57686830"
+                            "w:val": "en-US"
                           },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:citation",
-                          "attributes": {},
                           "children": []
                         }
                       ]
                     },
                     {
                       "type": "element",
-                      "name": "w:sdtContent",
+                      "name": "w:instrText",
                       "attributes": {},
                       "children": [
                         {
-                          "type": "element",
-                          "name": "w:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "w:fldChar",
-                              "attributes": {
-                                "w:fldCharType": "begin"
-                              },
-                              "children": []
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "w:instrText",
-                              "attributes": {
-                                "xml:space": "preserve"
-                              },
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": " CITATION Ano00 \\l 1033 "
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "w:fldChar",
-                              "attributes": {
-                                "w:fldCharType": "separate"
-                              },
-                              "children": []
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:noProof",
-                                  "attributes": {},
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "w:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "(Another, 1000)"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "w:fldChar",
-                              "attributes": {
-                                "w:fldCharType": "end"
-                              },
-                              "children": []
-                            }
-                          ]
+                          "type": "text",
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Another1000\",\"itemData\":{\"author\":[{\"family\":\"Another\"}],\"issued\":{\"date-parts\":[[\"1000\"]]}}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Another, 1000)\",\"plainCitation\":\"(Another, 1000)\"},\"citationID\":\"CITE-2\"}"
                         }
                       ]
                     }

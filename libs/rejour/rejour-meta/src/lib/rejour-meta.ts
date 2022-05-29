@@ -1,7 +1,7 @@
 import { ArticleMeta, Root, Content, Element, Text } from 'jast-types'
 
 export type MetaProps = Record<keyof ArticleMeta, Element | Text>
-export default function rejourMoveAbstract(options: ArticleMeta) {
+export function rejourMoveAbstract(options: ArticleMeta) {
   return (tree: Root | Content) => {
     // visit(
     //   tree,

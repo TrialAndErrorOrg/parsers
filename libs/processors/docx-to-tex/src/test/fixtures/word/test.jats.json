@@ -37,22 +37,22 @@
               "type": "element",
               "name": "p",
               "attributes": {},
-              "children": []
-            },
-            {
-              "type": "element",
-              "name": "p",
-              "attributes": {},
-              "children": []
-            },
-            {
-              "type": "element",
-              "name": "p",
-              "attributes": {},
               "children": [
                 {
-                  "type": "text",
-                  "value": " "
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-1",
+                    "refType": "bibr",
+                    "rid": "Author2022",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Author, 2022)\",\"plainCitation\":\"(Author, 2022)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Author, 2022)"
+                    }
+                  ]
                 }
               ]
             },
@@ -76,6 +76,35 @@
             },
             {
               "type": "element",
+              "name": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-2",
+                    "refType": "bibr",
+                    "rid": "Another1000",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Another, 1000)\",\"plainCitation\":\"(Another, 1000)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Another, 1000)"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "p",
+              "attributes": {},
+              "children": []
+            },
+            {
+              "type": "element",
               "name": "sec",
               "attributes": {
                 "id": "sec-2"
@@ -87,12 +116,7 @@
                   "attributes": {
                     "style": "Heading1"
                   },
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "Bibliography"
-                    }
-                  ]
+                  "children": []
                 },
                 {
                   "type": "element",
@@ -315,7 +339,120 @@
               "type": "element",
               "name": "refList",
               "attributes": {},
-              "children": []
+              "children": [
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Author2022"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2022"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Author"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Another1000"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1000"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Another"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }

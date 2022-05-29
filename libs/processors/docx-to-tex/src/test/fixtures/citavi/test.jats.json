@@ -326,12 +326,20 @@
                   "value": "Measuring human behavior is an ongoing challenge for social scientists "
                 },
                 {
-                  "type": "text",
-                  "value": "(Schwarz & Oyserman, 2001)"
-                },
-                {
-                  "type": "text",
-                  "value": ""
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-1",
+                    "refType": "bibr",
+                    "rid": "Schwarz2001",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Schwarz & Oyserman, 2001)\",\"plainCitation\":\"(Schwarz & Oyserman, 2001)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Schwarz & Oyserman, 2001)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -397,27 +405,75 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Real-effort designs assume that greater effort in fulfilling a task makes it more likely that participants actually perform what they have stated (Dutcher et al., 2015). Fulfilling real-effort tasks are typically cognitively, creatively, or physically costly for participants "
+                  "value": "Real-effort designs assume that greater effort in fulfilling a task makes it more likely that participants actually perform what they have stated "
                 },
                 {
-                  "type": "text",
-                  "value": "(Charness et al., 2018)"
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-2",
+                    "refType": "bibr",
+                    "rid": "Dutcher2015",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Dutcher et al., 2015)\",\"plainCitation\":\"(Dutcher et al., 2015)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Dutcher et al., 2015)"
+                    }
+                  ]
                 },
                 {
-                  "type": "text",
-                  "value": ""
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-3",
+                    "refType": "bibr",
+                    "rid": "Charness2018",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Charness et al., 2018)\",\"plainCitation\":\"(Charness et al., 2018)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Charness et al., 2018)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
                   "value": ". These costs are higher when more effort is put into fulfilling a task. In some studies, for example, participants are asked to count errors in real-effort tasks, thereby increasing the cognitive cost of the task "
                 },
                 {
-                  "type": "text",
-                  "value": "(Andersen et al., 2018; Gneezy & List, 2006)"
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-4",
+                    "refType": "bibr",
+                    "rid": "Andersen2018",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Andersen et al., 2018; Gneezy & List, 2006)\",\"plainCitation\":\"(Andersen et al., 2018; Gneezy & List, 2006)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Andersen et al., 2018"
+                    }
+                  ]
                 },
                 {
-                  "type": "text",
-                  "value": ""
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-5",
+                    "refType": "bibr",
+                    "rid": "Gneezy2006",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Andersen et al., 2018; Gneezy & List, 2006)\",\"plainCitation\":\"(Andersen et al., 2018; Gneezy & List, 2006)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " Gneezy & List, 2006)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -532,12 +588,68 @@
                   "value": "Several studies use this approach and compare answers to open-ended and closed-ended questions. Most of these studies report substantial discrepancies regarding answering behavior "
                 },
                 {
-                  "type": "text",
-                  "value": "(Converse, 1984; Greenfield et al., 2006; Schuman & Presser, 1979; Schwarz, 1999)"
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-6",
+                    "refType": "bibr",
+                    "rid": "Converse1984",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Converse, 1984; Greenfield et al., 2006; Schuman & Presser, 1979; Schwarz, 1999)\",\"plainCitation\":\"(Converse, 1984; Greenfield et al., 2006; Schuman & Presser, 1979; Schwarz, 1999)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Converse, 1984"
+                    }
+                  ]
                 },
                 {
-                  "type": "text",
-                  "value": ""
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-7",
+                    "refType": "bibr",
+                    "rid": "Greenfield2006",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Converse, 1984; Greenfield et al., 2006; Schuman & Presser, 1979; Schwarz, 1999)\",\"plainCitation\":\"(Converse, 1984; Greenfield et al., 2006; Schuman & Presser, 1979; Schwarz, 1999)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " Greenfield et al., 2006"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-8",
+                    "refType": "bibr",
+                    "rid": "Schuman1979",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Converse, 1984; Greenfield et al., 2006; Schuman & Presser, 1979; Schwarz, 1999)\",\"plainCitation\":\"(Converse, 1984; Greenfield et al., 2006; Schuman & Presser, 1979; Schwarz, 1999)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " Schuman & Presser, 1979"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-9",
+                    "refType": "bibr",
+                    "rid": "Schwarz1999",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Converse, 1984; Greenfield et al., 2006; Schuman & Presser, 1979; Schwarz, 1999)\",\"plainCitation\":\"(Converse, 1984; Greenfield et al., 2006; Schuman & Presser, 1979; Schwarz, 1999)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " Schwarz, 1999)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -612,12 +724,20 @@
                   "value": " found that the answers on the quantity of consumed alcohol of around 30% of respondents differed significantly between answers on open-ended and closed questions. They found that the combination of both an open-ended and a closed measure of the quantity of alcohol consumption was a stronger predictor of alcohol-related consequences than the individual measures "
                 },
                 {
-                  "type": "text",
-                  "value": "(Greenfield et al., 2006)"
-                },
-                {
-                  "type": "text",
-                  "value": ""
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-10",
+                    "refType": "bibr",
+                    "rid": "Greenfield2006",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Greenfield et al., 2006)\",\"plainCitation\":\"(Greenfield et al., 2006)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Greenfield et al., 2006)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -731,12 +851,20 @@
                   "value": "Real-effort experimental designs rely on the assumption that greater effort in fulfilling a task makes it more likely that participants actually perform what they have stated "
                 },
                 {
-                  "type": "text",
-                  "value": "(Dutcher et al., 2015)"
-                },
-                {
-                  "type": "text",
-                  "value": ""
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-11",
+                    "refType": "bibr",
+                    "rid": "Dutcher2015",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Dutcher et al., 2015)\",\"plainCitation\":\"(Dutcher et al., 2015)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Dutcher et al., 2015)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -807,12 +935,20 @@
                   "value": " during which cognitive resources are used "
                 },
                 {
-                  "type": "text",
-                  "value": "(Christensen-Szalanski, 1980)"
-                },
-                {
-                  "type": "text",
-                  "value": ""
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-12",
+                    "refType": "bibr",
+                    "rid": "Christensen-Szalanski1980",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Christensen-Szalanski, 1980)\",\"plainCitation\":\"(Christensen-Szalanski, 1980)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Christensen-Szalanski, 1980)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -1065,24 +1201,56 @@
                   "value": "A survey experiment on knowledge-sharing behavior was conducted to analyze whether tangible or intangible incentives can foster that behavior. Knowledge sharing is the exchange of knowledge among individuals, teams, units, or organizations "
                 },
                 {
-                  "type": "text",
-                  "value": "(Paulin & Suneson, 2012)"
-                },
-                {
-                  "type": "text",
-                  "value": ""
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-13",
+                    "refType": "bibr",
+                    "rid": "Paulin2012",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Paulin & Suneson, 2012)\",\"plainCitation\":\"(Paulin & Suneson, 2012)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Paulin & Suneson, 2012)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
                   "value": ". It is the basis of and a subprocess in an organization’s knowledge management. In this article, the term “knowledge sharing” describes the behavior of donating knowledge from one person to another or to a medium. Multiple determinants influence knowledge sharing. Among others, tangible and intangible rewards are considered to foster knowledge-sharing behavior. Tangible rewards are material incentives, such as financial bonuses, and usually enhance extrinsic motivation. In contrast, intangible rewards, such as praise from a colleague or supervisor, usually influences intrinsic motivation. On the one hand, it has been shown that monitoring (e.g., controlling with performance measures) and rewards increase the knowledge-sharing activity of employees in an organization "
                 },
                 {
-                  "type": "text",
-                  "value": "(Wang et al., 2011; Witherspoon et al., 2013)"
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-14",
+                    "refType": "bibr",
+                    "rid": "Wang2011",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Wang et al., 2011; Witherspoon et al., 2013)\",\"plainCitation\":\"(Wang et al., 2011; Witherspoon et al., 2013)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Wang et al., 2011"
+                    }
+                  ]
                 },
                 {
-                  "type": "text",
-                  "value": ""
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-15",
+                    "refType": "bibr",
+                    "rid": "Witherspoon2013",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Wang et al., 2011; Witherspoon et al., 2013)\",\"plainCitation\":\"(Wang et al., 2011; Witherspoon et al., 2013)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " Witherspoon et al., 2013)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -1383,12 +1551,20 @@
                   "value": " Interrater reliability was calculated using Gwet's Agreement Coefficient "
                 },
                 {
-                  "type": "text",
-                  "value": "(AC; Gwet, 2014)"
-                },
-                {
-                  "type": "text",
-                  "value": ""
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-16",
+                    "refType": "bibr",
+                    "rid": "Gwet2014",
+                    "customType": "{\"prefix\":\"AC\",\"noteIndex\":0,\"formattedCitation\":\"(AC; Gwet, 2014)\",\"plainCitation\":\"(AC; Gwet, 2014)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(AC"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -11257,7 +11433,864 @@
               "type": "element",
               "name": "refList",
               "attributes": {},
-              "children": []
+              "children": [
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Schwarz2001"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2001"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Schwarz"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Oyserman"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Dutcher2015"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2015"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Dutcher"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Charness2018"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2018"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Charness"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Andersen2018"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2018"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Andersen"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Gneezy2006"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2006"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Gneezy"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "List"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Converse1984"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1984"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Converse"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Greenfield2006"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2006"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Greenfield"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Schuman1979"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1979"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Schuman"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Presser"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Schwarz1999"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1999"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Schwarz"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Christensen-Szalanski1980"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1980"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Christensen-Szalanski"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Paulin2012"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2012"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Paulin"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Suneson"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Wang2011"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2011"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Wang"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Witherspoon2013"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2013"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Witherspoon"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Gwet2014"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2014"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Gwet"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             },
             {
               "type": "element",

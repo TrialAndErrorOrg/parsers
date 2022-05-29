@@ -117,6 +117,26 @@
                   "value": "\n"
                 }
               ]
+            },
+            {
+              "type": "environment",
+              "name": "filecontents",
+              "children": [
+                {
+                  "type": "commandArg",
+                  "optional": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "bibliography.bib"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "@article{Schwarz2001,\n    author      = {Schwarz and Oyserman},\n    year        = {2001}\n}\n\n\n@article{Dutcher2015,\n    author      = {Dutcher},\n    year        = {2015}\n}\n\n\n@article{Charness2018,\n    author      = {Charness},\n    year        = {2018}\n}\n\n\n@article{Andersen2018,\n    author      = {Andersen},\n    year        = {2018}\n}\n\n\n@article{Gneezy2006,\n    author      = {Gneezy and List},\n    year        = {2006}\n}\n\n\n@article{Converse1984,\n    author      = {Converse},\n    year        = {1984}\n}\n\n\n@article{Greenfield2006,\n    author      = {Greenfield},\n    year        = {2006}\n}\n\n\n@article{Schuman1979,\n    author      = {Schuman and Presser},\n    year        = {1979}\n}\n\n\n@article{Schwarz1999,\n    author      = {Schwarz},\n    year        = {1999}\n}\n\n\n@article{Christensen-Szalanski1980,\n    author      = {Christensen-Szalanski},\n    year        = {1980}\n}\n\n\n@article{Paulin2012,\n    author      = {Paulin and Suneson},\n    year        = {2012}\n}\n\n\n@article{Wang2011,\n    author      = {Wang},\n    year        = {2011}\n}\n\n\n@article{Witherspoon2013,\n    author      = {Witherspoon},\n    year        = {2013}\n}\n\n\n@article{Gwet2014,\n    author      = {Gwet},\n    year        = {2014}\n}"
+                }
+              ]
             }
           ]
         },
@@ -370,8 +390,19 @@
                   "value": "Measuring human behavior is an ongoing challenge for social scientists "
                 },
                 {
-                  "type": "text",
-                  "value": "(Schwarz & Oyserman, 2001)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Schwarz2001"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -417,19 +448,71 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Real-effort designs assume that greater effort in fulfilling a task makes it more likely that participants actually perform what they have stated (Dutcher et al., 2015). Fulfilling real-effort tasks are typically cognitively, creatively, or physically costly for participants "
+                  "value": "Real-effort designs assume that greater effort in fulfilling a task makes it more likely that participants actually perform what they have stated "
                 },
                 {
-                  "type": "text",
-                  "value": "(Charness et al., 2018)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Dutcher2015"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Charness2018"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
                   "value": ". These costs are higher when more effort is put into fulfilling a task. In some studies, for example, participants are asked to count errors in real-effort tasks, thereby increasing the cognitive cost of the task "
                 },
                 {
-                  "type": "text",
-                  "value": "(Andersen et al., 2018; Gneezy & List, 2006)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Andersen2018"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Gneezy2006"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -517,8 +600,64 @@
                   "value": "Several studies use this approach and compare answers to open-ended and closed-ended questions. Most of these studies report substantial discrepancies regarding answering behavior "
                 },
                 {
-                  "type": "text",
-                  "value": "(Converse, 1984; Greenfield et al., 2006; Schuman & Presser, 1979; Schwarz, 1999)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Converse1984"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Greenfield2006"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Schuman1979"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Schwarz1999"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -565,8 +704,19 @@
                   "value": " found that the answers on the quantity of consumed alcohol of around 30% of respondents differed significantly between answers on open-ended and closed questions. They found that the combination of both an open-ended and a closed measure of the quantity of alcohol consumption was a stronger predictor of alcohol-related consequences than the individual measures "
                 },
                 {
-                  "type": "text",
-                  "value": "(Greenfield et al., 2006)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Greenfield2006"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -640,8 +790,19 @@
                   "value": "Real-effort experimental designs rely on the assumption that greater effort in fulfilling a task makes it more likely that participants actually perform what they have stated "
                 },
                 {
-                  "type": "text",
-                  "value": "(Dutcher et al., 2015)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Dutcher2015"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -700,8 +861,19 @@
                   "value": " during which cognitive resources are used "
                 },
                 {
-                  "type": "text",
-                  "value": "(Christensen-Szalanski, 1980)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Christensen-Szalanski1980"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -887,16 +1059,53 @@
                   "value": "A survey experiment on knowledge-sharing behavior was conducted to analyze whether tangible or intangible incentives can foster that behavior. Knowledge sharing is the exchange of knowledge among individuals, teams, units, or organizations "
                 },
                 {
-                  "type": "text",
-                  "value": "(Paulin & Suneson, 2012)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Paulin2012"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
                   "value": ". It is the basis of and a subprocess in an organization’s knowledge management. In this article, the term “knowledge sharing” describes the behavior of donating knowledge from one person to another or to a medium. Multiple determinants influence knowledge sharing. Among others, tangible and intangible rewards are considered to foster knowledge-sharing behavior. Tangible rewards are material incentives, such as financial bonuses, and usually enhance extrinsic motivation. In contrast, intangible rewards, such as praise from a colleague or supervisor, usually influences intrinsic motivation. On the one hand, it has been shown that monitoring (e.g., controlling with performance measures) and rewards increase the knowledge-sharing activity of employees in an organization "
                 },
                 {
-                  "type": "text",
-                  "value": "(Wang et al., 2011; Witherspoon et al., 2013)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Wang2011"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Witherspoon2013"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -1171,8 +1380,39 @@
                   "value": " Interrater reliability was calculated using Gwet's Agreement Coefficient "
                 },
                 {
-                  "type": "text",
-                  "value": "(AC; Gwet, 2014)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "AC"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Gwet2014"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",

@@ -117,6 +117,26 @@
                   "value": "\n"
                 }
               ]
+            },
+            {
+              "type": "environment",
+              "name": "filecontents",
+              "children": [
+                {
+                  "type": "commandArg",
+                  "optional": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "bibliography.bib"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "@article{Author2022,\n    author      = {Author},\n    year        = {2022}\n}\n\n\n@article{Another1000,\n    author      = {Another},\n    year        = {1000}\n}"
+                }
+              ]
             }
           ]
         },
@@ -126,15 +146,23 @@
           "children": [
             {
               "type": "paragraph",
-              "children": []
-            },
-            {
-              "type": "paragraph",
-              "children": []
-            },
-            {
-              "type": "paragraph",
-              "children": []
+              "children": [
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Author2022"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             },
             {
               "type": "paragraph",
@@ -153,17 +181,36 @@
               "children": [
                 {
                   "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Another1000"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": []
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "command",
                   "name": "section",
                   "children": [
                     {
                       "type": "commandArg",
                       "optional": false,
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Bibliography"
-                        }
-                      ]
+                      "children": []
                     }
                   ]
                 }

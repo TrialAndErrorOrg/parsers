@@ -27,6 +27,7 @@
     "@nestjs/core": "^8.0.0",
     "@nestjs/platform-express": "^8.0.0",
     "@nrwl/next": "14.1.9-beta.1",
+    "@react-pdf/renderer": "^2.2.0",
     "@types/cookie": "^0.5.1",
     "@types/isomorphic-fetch": "^0.0.36",
     "adm-zip": "^0.5.9",

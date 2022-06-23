@@ -200,7 +200,7 @@ export type BookmarkRange<tag extends string = 'bookmarkRange'> =
 
 export interface Border extends UnistNode {
   type: 'element'
-  name: 'w:border'
+  name: 'w:bdr'
   attributes: {
     'w:color'?: string
     'w:frame'?: string
@@ -1187,7 +1187,7 @@ export type FontRel = Rel & {
 
 export interface Fonts extends UnistNode {
   type: 'element'
-  name: 'w:fonts'
+  name: 'w:rFonts'
   attributes: {
     'w:ascii': string
     'w:asciiTheme': ThemeVal
@@ -1610,7 +1610,7 @@ export interface Lang extends UnistNode {
 
 export interface Language extends UnistNode {
   type: 'element'
-  name: 'w:language'
+  name: 'w:lang'
   attributes: {
     'w:bidi'?: string
     'w:eastAsia'?: string
@@ -3377,7 +3377,7 @@ export interface Shd extends UnistNode {
 
 export interface SignedHpsMeasure extends UnistNode {
   type: 'element'
-  name: 'w:signedHpsMeasure'
+  name: 'w:position'
   attributes: {
     'w:val': string
   }
@@ -3386,7 +3386,7 @@ export interface SignedHpsMeasure extends UnistNode {
 
 export interface SignedTwipsMeasure extends UnistNode {
   type: 'element'
-  name: 'w:signedTwipsMeasure'
+  name: 'w:spacing'
   attributes: {
     'w:val': string
   }
@@ -4072,7 +4072,7 @@ export interface TextDirection extends UnistNode {
 
 export interface TextEffect extends UnistNode {
   type: 'element'
-  name: 'w:textEffect'
+  name: 'w:effect'
   attributes: {
     'w:val': TextEffectVal
   }
@@ -4081,7 +4081,7 @@ export interface TextEffect extends UnistNode {
 
 export interface TextScale extends UnistNode {
   type: 'element'
-  name: 'w:textScale'
+  name: 'w:w'
   attributes: {
     'w:val': string
   }
@@ -4188,7 +4188,7 @@ export interface TwipsMeasure extends UnistNode {
 
 export interface Underline extends UnistNode {
   type: 'element'
-  name: 'w:underline'
+  name: 'w:u'
   attributes: {
     'w:color'?: string
     'w:themeColor'?: ThemeColorVal

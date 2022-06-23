@@ -22,11 +22,14 @@ export async function consolidate(
     perMilliseconds: 1000,
     maxRPS: 20,
   })
+
   const crossRefResponses: (Promise<AxiosResponse<any, any>> | CSL)[] = []
   // this is a bad solution because i cannot work with promises
   const types: string[] = []
+
   for (const ref of data) {
     const { DOI, author, issued, title, type } = ref
+
     if (DOI) {
       const res = http.get(
         DOI.replace(
@@ -44,11 +47,13 @@ export async function consolidate(
       types.push('doi')
       continue
     }
+
     if (!type?.includes('article')) {
       crossRefResponses.push(ref)
       types.push('anystyle')
       continue
     }
+
     const res = http.get('https://api.crossref.org/works', {
       headers: {
         //Accept: 'application/vnd.citationstyles.csl+json;q=1.0',
@@ -63,18 +68,21 @@ export async function consolidate(
         mailto: options.mailto,
       },
     })
+
     crossRefResponses.push(Promise.resolve(res))
+
     types.push('crossref')
-    console.log(res)
   }
 
   const [resolvedPromises, error] = await tryCatchPromise(
     Promise.all(crossRefResponses as any)
   )
+
   if (error) {
     console.error(error)
     throw new Error(error)
   }
+
   const datas = resolvedPromises.map((res: any, index: number) => {
     try {
       return consolidates(data[index], res.data, types[index])
@@ -83,6 +91,7 @@ export async function consolidate(
       return data[index]
     }
   })
+
   return datas
 }
 

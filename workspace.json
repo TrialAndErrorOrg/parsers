@@ -29,6 +29,8 @@
     "processors-docx-to-tex": "libs/processors/docx-to-tex",
     "processors-jats-to-tex": "libs/processors/jats-to-tex",
     "processors-jote-docx-tex": "libs/processors/jote-docx-tex",
+    "react-pdf": "apps/react-pdf",
+    "react-pdf-e2e": "apps/react-pdf-e2e",
     "rejour-frontmatter": "libs/rejour/rejour-frontmatter",
     "rejour-meta": "libs/rejour/rejour-meta",
     "rejour-move-abstract": "libs/rejour/rejour-move-abstract",

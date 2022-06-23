@@ -1,5 +1,5 @@
 import { P, PPr, R } from 'ooxast'
-import { getPStyle } from './ooxast-util-get-style'
+import { getPStyle } from './ooxast-util-get-pstyle'
 
 export const test: any = {
   type: 'element',
@@ -34,6 +34,33 @@ export const test: any = {
       name: 'w:r',
       attributes: {},
       children: [
+        {
+          type: 'element',
+          name: 'w:rPr',
+          attributes: {},
+          children: [
+            {
+              type: 'element',
+              name: 'w:i',
+              children: [],
+            },
+            {
+              type: 'element',
+              name: 'w:b',
+              children: [],
+            },
+            {
+              type: 'element',
+              name: 'w:i',
+              children: [],
+            },
+            {
+              type: 'element',
+              name: 'w:strike',
+              children: [],
+            },
+          ],
+        },
         {
           type: 'element',
           name: 'w:t',

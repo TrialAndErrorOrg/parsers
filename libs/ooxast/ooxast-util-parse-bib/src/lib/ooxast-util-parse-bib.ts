@@ -12,7 +12,9 @@ export interface Options {
 
 export async function parseBib(tree: Node, options: Options) {
   const csl = await bibToCSL(tree, options)
+
   if (!csl) return
+
   if (!options.mailto) {
     return csl
   }

@@ -50,6 +50,7 @@ export function findRef(
       break
     }
   }
+
   if (theOne) citeItem.itemData = theOne
 
   return citeItem

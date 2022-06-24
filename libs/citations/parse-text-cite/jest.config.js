@@ -2,16 +2,16 @@
 const config = {
   displayName: 'parse-text-cite',
   preset: '../../../jest.preset.js',
-  globals: {
-    'ts-jest': {
-      tsconfig: '<rootDir>/tsconfig.spec.json',
-      useESM: true,
-    },
-  },
+  // globals: {
+  //   'ts-jest': {
+  //     tsconfig: '<rootDir>/tsconfig.spec.json',
+  //     useESM: true,
+  //   },
+  // },
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]sx?$': ['@swc/jest'],
-    //  '^.+\\.ne$': 'jest-transform-nearley',
+    '^.+\\.ne$': 'jest-transform-nearley',
   },
   transformIgnorePatterns: [],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],

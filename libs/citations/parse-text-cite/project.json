@@ -13,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/citations/parse-text-cite"],
       "options": {
-        "jestConfig": "libs/citations/parse-text-cite/jest.config.ts",
+        "jestConfig": "libs/citations/parse-text-cite/jest.config.js",
         "passWithNoTests": true
       }
     },

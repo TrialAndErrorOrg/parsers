@@ -2,12 +2,12 @@ const nxPreset = require('@nrwl/jest/preset').default
 
 module.exports = {
   ...nxPreset,
-  globals: {
-    'ts-jest': {
-      tsconfig: '<rootDir>/tsconfig.spec.json',
-      useESM: true,
-    },
-  },
+  // globals: {
+  //   'ts-jest': {
+  //     tsconfig: '<rootDir>/tsconfig.spec.json',
+  //     useESM: true,
+  //   },
+  // },
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]sx?$': ['@swc/jest'],

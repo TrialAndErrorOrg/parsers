@@ -1,36 +1,22 @@
 import { visit } from 'unist-util-visit'
 import { P, R, T, Text, Root } from 'ooxast'
 import { getPStyle } from 'ooxast-util-get-style'
-import { parseTextCite, parser } from 'parse-text-cite'
+import { parseTextCite } from 'parse-text-cite'
 import { Node } from 'unist'
 import { convertElement } from 'xast-util-is-element'
-import { select, selectAll } from 'xast-util-select'
+import { select } from 'xast-util-select'
 import { toString } from 'xast-util-to-string'
 import { select as unistSelect } from 'unist-util-select'
 import { x } from 'xastscript'
 import { Data as CSL } from 'csl-json'
-import {
-  CiteOutput,
-  Citation,
-  MendeleyCitation,
-  Mendeley,
-  MendeleyProperties,
-  MendeleyCitationItem,
-  CitationItem,
-  ZoteroProperties,
-  ZoteroCitation,
-} from './types'
-import similarity from 'similarity'
-import { dateSim } from 'csl-consolidate'
+import { CiteOutput, Citation, MendeleyCitation, ZoteroCitation } from './types'
 import { detectCitePlugin } from 'ooxast-util-citation-plugin'
 import { VFile } from 'vfile'
 import { constructMendeleyCitation } from './constructMendeleyCitation'
 import { constructZoteroCitation } from './constructZoteroCitation'
 
-const isT = convertElement<T>('w:t')
 const isInstrT = convertElement<T>('w:instrText')
 const isP = convertElement<P>('w:p')
-const isR = convertElement<R>('w:r')
 
 export const citationTypesWithSuffixedForm = ['mendeley', 'zotero']
 export interface Options {
@@ -40,11 +26,13 @@ export interface Options {
 
 export function findCitations(
   tree: Node,
-  vfile: VFile,
-  options: Options
+  vfile?: VFile,
+  options?: Options
 ): Root {
   const type = detectCitePlugin(tree)
-  vfile.data.citePlugin = type
+  if (vfile) {
+    vfile.data.citePlugin = type
+  }
 
   let references = false
   let citationCounter = 1
@@ -127,7 +115,7 @@ export function findCitations(
               curr,
               type,
               citationCounter,
-              options.bibliography
+              options?.bibliography
             )
             citationCounter++
 

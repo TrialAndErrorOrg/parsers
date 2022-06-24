@@ -4,6 +4,28 @@ export const tests: TestData = {
     description: 'own cases i wanna catch',
     content: [
       {
+        description: 'Other dang parantheses in the sentence!',
+        result: [
+          ') Another long sentence start with a paren ',
+          {
+            citationId: 'CITE-X',
+            citationItems: [
+              {
+                id: 'Thomas2022',
+                itemData: {
+                  author: [{ family: 'Thomas' }],
+                  issued: { 'date-parts': [['2022']] },
+                },
+              },
+            ],
+            originalText: '(Thomas, 2022)',
+            properties: { noteIndex: 0 },
+          },
+          '.',
+        ],
+        input: ') Another long sentence start with a paren (Thomas, 2022).',
+      },
+      {
         description: 'Some build up',
         result: [
           'Another long sentence that ends in a citations is the form that makes Thomas the happiest ',

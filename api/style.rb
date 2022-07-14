@@ -13,10 +13,23 @@ Handler = Proc.new do |req, res|
             return
         end
 
-        parsed = AnyStyle.parse(body,{format:'csl'})
+        ## Get the 'format' parameter from the request query string
+        format = req.query['format']
+
+
+        parsed = AnyStyle.parse(body,{format: format || 'csl'})
+
+
         res.status = 200
-        res['Content-Type'] = 'application/json; charset=utf-8'
         res['Access-Control-Allow-Origin'] = '*'
-        res.body = JSON.generate(parsed)
+        ## if then
+
+        if format == 'json' || !format || format == 'csl'
+          res['Content-Type'] = 'application/json; charset=utf-8'
+          res.body = JSON.generate(parsed)
+        end
+
+        res['Content-Type'] = 'text/plain; charset=utf-8'
+        res.body = parsed
 end
 

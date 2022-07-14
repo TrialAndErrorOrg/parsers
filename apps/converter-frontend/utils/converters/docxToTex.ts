@@ -42,7 +42,7 @@ export async function docxToTexConverter(
       apiUrl:
         process.env.NODE_ENV === 'production'
           ? apiUrl || '/api/style'
-          : 'http://localhost:8000/api/style',
+          : process.env.NEXT_PUBLIC_STYLE_DEV_URL || 'http://localhost:8000/api/style',
       mailto,
     })
     // @ts-expect-error tbh idk what it's talking about
@@ -58,5 +58,7 @@ export async function docxToTexConverter(
     .use(relatexAddPreamble, preamble || [])
     .use(relatexStringify)
 
+    console.log(process.env.NODE_ENV)
+    console.log(process.env.STYLE_DEV_URL)
   return proc.process(vfile)
 }

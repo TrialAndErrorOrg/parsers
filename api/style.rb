@@ -16,6 +16,7 @@ Handler = Proc.new do |req, res|
         parsed = AnyStyle.parse(body,{format:'csl'})
         res.status = 200
         res['Content-Type'] = 'application/json; charset=utf-8'
+        res['Access-Control-Allow-Origin'] = '*'
         res.body = JSON.generate(parsed)
 end
 

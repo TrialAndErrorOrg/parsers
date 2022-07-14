@@ -26,6 +26,7 @@ import { toString } from 'xast-util-to-string'
 import { getPStyle, getRStyle } from 'ooxast-util-get-style'
 import {} from 'ooxast-util-get-style'
 import { convertElement } from 'xast-util-is-element'
+import { text } from 'stream/consumers'
 
 const styles = StyleSheet.create({
   body: {
@@ -75,7 +76,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     marginBottom: 20,
     // textAlign: 'center',
-    family: 'Times-Bold',
+    fontFamily: 'Times-Bold',
     // color: 'grey',
   },
   heading2: {
@@ -110,37 +111,35 @@ const isHeading = (child: Node) => {
 
 export const Index = (props: IndexProps) => {
   const { parsedDocx } = props
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./index.none file.
-   */
-  return (
-    <div style={{ width: '100vw', height: '100vh' }}>
+
+  return <div style={{ width: '100vw', height: '100vh' }}>
       <PDFViewer width="100%" height="100%">
         <Document>
           <Page style={styles.body}>
             {parsedDocx.children.map((child, index) => {
+
               const h = isHeading(child)
 
-              return (
-                <Text
-                  key={`${toString(child)}${index}`}
-                  style={styles[h.heading] ?? styles.text}
-                >
-                  {child.children?.map((run: any, idx: number) => {
+              // return (
+              //   <View
+              //     key={`${toString(child)}${index}`}
+              //     style={styles[h.heading] ?? styles.text}
+              //   >
+                 return child?.children?.map((run: any, idx: number) => {
                     if (!isR(run)) return null
 
                     const attrs = getRStyle(run)
+                    // const style = attrs['w:b'] ? styles.
+
                     return (
-                      <Text key={`${toString(run)}${idx}`} style={styles[]}>
+                      <Text key={`${toString(run)}${idx}`} style={styles[h.heading] ?? {...styles.text,...(attrs['w:b'] ? {fontFamily: 'Roman-Bold'} : attrs['w:i'] ? {fontFamily: 'Roman-Italic'} : {})}}>
                         {toString(run)}
                       </Text>
                     )
-                  })}
+                  })
                   {/* {toString(child)} */}
-                </Text>
-              )
+                // </View>
+
             })}
             {/* <Text style={styles.header} fixed>
             ~ Created with react-pdf ~
@@ -326,7 +325,7 @@ export const Index = (props: IndexProps) => {
         </Document>
       </PDFViewer>
     </div>
-  )
+
 }
 
 Font.register({

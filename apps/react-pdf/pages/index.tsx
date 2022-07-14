@@ -125,6 +125,7 @@ export const Index = (props: IndexProps) => {
               //     key={`${toString(child)}${index}`}
               //     style={styles[h.heading] ?? styles.text}
               //   >
+              // @ts-expect-error yeah it's fine
                  return child?.children?.map((run: any, idx: number) => {
                     if (!isR(run)) return null
 
@@ -347,6 +348,7 @@ export const getStaticProps = async () => {
 
   const vfile = await docxToVFile(docxArrayBuffer)
   const proc = unified().use(reoffParse).parse(vfile)
+  // @ts-expect-error ts-migrate(2339) FIXME: Property 'value' does not exist on type '{}'.
   const bod = select('w\\:body', proc)
 
   return { props: { parsedDocx: bod } }

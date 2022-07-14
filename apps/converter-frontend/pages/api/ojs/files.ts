@@ -13,7 +13,13 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
   if (!apiToken) {
     res.status(403).send('No token included')
+    return
   }
+  if(!endpoint) {
+    res.status(400).send('No ENDPOINT included')
+    return
+  }
+
 
   try {
     const response = await axios.get(

@@ -246,8 +246,7 @@ function castFactory(check: TestFunctionAnything): AssertAnything {
     node: unknown,
     ...parameters: Array<unknown>
   ): boolean {
-    // @ts-expect-error: fine.
-    return element(node) && Boolean(check.call(this, node, ...parameters))
+    return element(node) && Boolean(check.call(this, node, ...parameters as number[]))
   }
 }
 

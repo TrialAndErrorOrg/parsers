@@ -20,8 +20,8 @@ const nth = new Set([
 
 const parser = new CssSelectorParser()
 
-// @ts-expect-error: hush.
-const compile = zwitch('type', { handlers: { selectors, ruleSet, rule } })
+//// @ts-expect-error: hush.
+const compile = zwitch('type', { handlers: { selectors, ruleSet, rule } } as any)
 
 parser.registerAttrEqualityMods('~', '|', '^', '$', '*')
 parser.registerSelectorPseudos('any', 'matches', 'not', 'has')

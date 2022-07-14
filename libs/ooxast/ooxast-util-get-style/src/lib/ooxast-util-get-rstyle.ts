@@ -20,8 +20,8 @@ export function getRStyle(r: R): RPrJSON {
   return style.children.reduce((acc, curr) => {
     if (!curr.name) return acc
 
-    const { 'w:val': val, ...attrs } = curr?.attributes
-    acc[curr.name] = { ...attrs, 'w:val': true }
+    // const { ['w:val']: val, ...attrs } = curr?.attributes
+    acc[curr.name] = { ...curr?.attributes, 'w:val': true }
 
     return acc
   }, {} as RPrJSON)

@@ -20,65 +20,37 @@ import { zwitch } from 'zwitch'
 import { any } from './any'
 
 const handle = zwitch('name', {
-  // @ts-expect-error: hush.
-  unknown: unknownPseudo,
+  //// @ts-expect-error: hush.
+  unknown: unknownPseudo as any,
   invalid: invalidPseudo,
   handlers: {
-    // @ts-expect-error: hush.
-    any: matches,
-    // @ts-expect-error: hush.
-    'any-link': anyLink,
-    // @ts-expect-error: hush.
+    any: matches as any,
+    'any-link': anyLink as any,
     blank,
-    // @ts-expect-error: hush.
     checked,
-    // @ts-expect-error: hush.
     dir,
-    // @ts-expect-error: hush.
     disabled,
-    // @ts-expect-error: hush.
     empty,
-    // @ts-expect-error: hush.
     enabled,
-    // @ts-expect-error: hush.
     'first-child': firstChild,
-    // @ts-expect-error: hush.
     'first-of-type': firstOfType,
-    // @ts-expect-error: hush.
     has,
-    // @ts-expect-error: hush.
     lang,
-    // @ts-expect-error: hush.
     'last-child': lastChild,
-    // @ts-expect-error: hush.
     'last-of-type': lastOfType,
-    // @ts-expect-error: hush.
     matches,
-    // @ts-expect-error: hush.
     not,
-    // @ts-expect-error: hush.
     'nth-child': nthChild,
-    // @ts-expect-error: hush.
     'nth-last-child': nthLastChild,
-    // @ts-expect-error: hush.
     'nth-of-type': nthOfType,
-    // @ts-expect-error: hush.
     'nth-last-of-type': nthLastOfType,
-    // @ts-expect-error: hush.
     'only-child': onlyChild,
-    // @ts-expect-error: hush.
     'only-of-type': onlyOfType,
-    // @ts-expect-error: hush.
     optional,
-    // @ts-expect-error: hush.
     'read-only': readOnly,
-    // @ts-expect-error: hush.
     'read-write': readWrite,
-    // @ts-expect-error: hush.
     required,
-    // @ts-expect-error: hush.
     root,
-    // @ts-expect-error: hush.
     scope,
   },
 })

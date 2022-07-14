@@ -8,9 +8,12 @@ import { VStack } from '../components/stack/stack'
 import qs from 'querystring'
 import Link from 'next/link'
 
-export interface AuthorPageProps {}
+// export interface AuthorPageProps {
+// //
+// }
 
-function AuthorPage(props: AuthorPageProps) {
+function AuthorPage(// props: AuthorPageProps
+  ) {
   const { data: session, status } = useSession()
   if (status !== 'authenticated') {
     return (

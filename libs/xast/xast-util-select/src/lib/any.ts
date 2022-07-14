@@ -16,11 +16,12 @@ import { pseudo } from './pseudo'
 import { test } from './test'
 
 const type = zwitch('type', {
-  // @ts-expect-error: hush.
-  unknown: unknownType,
+  /**
+   * TODO: For some reason ts expect error doesn't work for unknowntype
+   */
+  unknown: unknownType as any ,
   invalid: invalidType,
-  // @ts-expect-error: hush.
-  handlers: { selectors, ruleSet, rule },
+  handlers: { selectors, ruleSet, rule } as any,
 })
 
 /**
@@ -34,7 +35,6 @@ export function any(
   node: Node | undefined,
   state: SelectState
 ): Array<Element> {
-  // @ts-expect-error zwitch types are off.
   return query && node ? type(query, node, state) : []
 }
 

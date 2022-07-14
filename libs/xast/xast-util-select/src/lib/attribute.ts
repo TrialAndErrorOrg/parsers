@@ -14,23 +14,20 @@ import { stringify as spaces } from 'space-separated-tokens'
 import { zwitch } from 'zwitch'
 
 const handle = zwitch('operator', {
-  // @ts-expect-error: hush.
-  unknown: unknownOperator,
-  // @ts-expect-error: hush.
-  invalid: exists,
+  /**
+   * TODO: Why doesnt TS-expect-error work reee
+   */
+  //// @ts-expect-error: hush.
+  unknown: unknownOperator as  any,
+  //// @ts-expect-error: hush.
+  invalid: exists as any,
   handlers: {
-    // @ts-expect-error: hush.
-    '=': exact,
-    // @ts-expect-error: hush.
-    '~=': spaceSeparatedList,
-    // @ts-expect-error: hush.
-    '|=': exactOrPrefix,
-    // @ts-expect-error: hush.
-    '^=': begins,
-    // @ts-expect-error: hush.
-    '$=': ends,
-    // @ts-expect-error: hush.
-    '*=': contains,
+    '=': exact as any,
+    '~=': spaceSeparatedList as any,
+    '|=': exactOrPrefix as any,
+    '^=': begins as any,
+    '$=': ends as any,
+    '*=': contains as any,
   },
 })
 

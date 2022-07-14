@@ -15,6 +15,11 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
   if (!apiToken) {
     res.status(403).send('No token included')
+    return
+  }
+  if (!url) {
+    res.status(400).send('No url included')
+    return
   }
 
   try {

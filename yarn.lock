@@ -4308,6 +4308,11 @@
     treeify "^1.1.0"
     yargs "^16.2.0"
 
+"@unified-latex/unified-latex-types@^1.0.12":
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/@unified-latex/unified-latex-types/-/unified-latex-types-1.0.12.tgz#ac9709f95439483dec2be780353b69a9eb849a01"
+  integrity sha512-T9A8Xqngj3u2qUOMILXBpDYvEsdj1ttEwhZACpBm5RmxIbMACvED2hMNQCebWEUKz9Mdn/wAG/8XSybHpZ6uoA==
+
 "@vercel/build-utils@5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-5.0.1.tgz#d5e7fe5e11f0320c5aca4d99c23b3c10465e3cdb"

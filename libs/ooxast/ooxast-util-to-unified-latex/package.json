@@ -1,0 +1,16 @@
+{
+  "name": "ooxast-util-to-unified-latex",
+  "version": "0.0.1",
+  "license": "GPL-3-0-or-later",
+  "repository": "https://github.com/journaloftrialanderror/jote",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
+  "description": "Convert ooxast to unified-latex instead of relatex",
+  "keywords": [
+    "unified",
+    "abstract",
+    "syntax",
+    "tree",
+    "ast"
+  ]
+}

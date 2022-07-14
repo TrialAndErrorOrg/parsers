@@ -9,7 +9,8 @@
     "test": "nx run-many --target=test --all",
     "clean-libs": "echo 'for i in libs/relatex/* libs/rejour/* \\n do \\n rm -f $i/yarn.lock && rm -rf $i/node_modules && yarn --cwd $i \\n done' | bash",
     "install-node": "echo 'for i in libs/relatex/* libs/rejour/* \\n do \\n rm -rf $i/node_modules && yarn --cwd $i \\n done' | bash",
-    "update-readme": "echo 'for i in libs/*/README.md libs/re*/*/README.md; do;  node ./scripts/updateReadme.mjs $i; done' |bash"
+    "update-readme": "echo 'for i in libs/*/README.md libs/re*/*/README.md; do;  node ./scripts/updateReadme.mjs $i; done' |bash",
+    "ruby": "ruby scripts/server.rb"
   },
   "private": true,
   "dependencies": {
@@ -120,6 +121,7 @@
     "@typescript-eslint/eslint-plugin": "5.30.6",
     "@typescript-eslint/parser": "5.30.6",
     "@typescript/analyze-trace": "^0.9.0",
+    "@unified-latex/unified-latex-types": "^1.0.12",
     "babel-jest": "27.5.1",
     "commander": "^9.0.0",
     "csstype": "^3.0.10",
@@ -164,4 +166,3 @@
     "ast"
   ]
 }
-

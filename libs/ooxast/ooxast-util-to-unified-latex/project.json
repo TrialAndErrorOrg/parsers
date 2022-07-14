@@ -1,0 +1,26 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ooxast/ooxast-util-to-unified-latex/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ooxast/ooxast-util-to-unified-latex",
+        "tsConfig": "libs/ooxast/ooxast-util-to-unified-latex/tsconfig.lib.json",
+        "packageJson": "libs/ooxast/ooxast-util-to-unified-latex/package.json",
+        "main": "libs/ooxast/ooxast-util-to-unified-latex/src/index.ts",
+        "assets": ["libs/ooxast/ooxast-util-to-unified-latex/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ooxast/ooxast-util-to-unified-latex/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

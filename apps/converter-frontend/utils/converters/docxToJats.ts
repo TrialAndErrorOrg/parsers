@@ -39,7 +39,7 @@ export async function docxToJatsConverter(
       apiUrl:
         process.env.NODE_ENV === 'production'
           ? apiUrl || '/api/style'
-          : 'http://localhost:8000/api/style',
+          : process.env.NEXT_PUBLIC_STYLE_DEV_URL ||'http://localhost:8000/api/style',
       mailto,
     })
     // @ts-expect-error tbh idk what it's talking about

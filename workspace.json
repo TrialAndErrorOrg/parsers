@@ -18,6 +18,7 @@
     "ojs-ojs-relatex": "libs/ojs/ojs-relatex",
     "ooxast": "libs/ooxast/ooxast",
     "ooxast-ooxast-util-citation-plugin": "libs/ooxast/ooxast-util-citation-plugin",
+    "ooxast-ooxast-util-to-unified-latex": "libs/ooxast/ooxast-util-to-unified-latex",
     "ooxast-util-citations": "libs/ooxast/ooxast-util-citations",
     "ooxast-util-get-style": "libs/ooxast/ooxast-util-get-style",
     "ooxast-util-parse-bib": "libs/ooxast/ooxast-util-parse-bib",

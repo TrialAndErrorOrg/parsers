@@ -46,7 +46,7 @@ export async function docxToTexConverter(
       mailto,
     })
     // @ts-expect-error tbh idk what it's talking about
-    .use(reoffCite, { type: type || 'mendeley', bibliography: undefined })
+    .use(reoffCite, { type: type || 'zotero', bibliography: undefined })
     .use(reoffRejour)
     .use(rejourStringify)
     .use(rejourRelatex, {

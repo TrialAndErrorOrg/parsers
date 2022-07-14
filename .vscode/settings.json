@@ -10,5 +10,6 @@
   "xml.format.closingBracketNewLine": true,
   "xml.format.splitAttributes": true,
   "xml.codeLens.enabled": true,
-  "importCost.timeout": 1
+  "importCost.timeout": 1,
+  "editor.formatOnSave": true
 }

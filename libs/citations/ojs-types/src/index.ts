@@ -1,1 +1,1 @@
-export * from './lib/ojs-types'
+export * from './lib/types'

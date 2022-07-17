@@ -5,6 +5,7 @@
     "citations-crossref-json": "libs/citations/crossref-json",
     "citations-crossref-to-csl": "libs/citations/crossref-to-csl",
     "citations-csl-consolidate": "libs/citations/csl-consolidate",
+    "citations-ojs-types": "libs/citations/ojs-types",
     "citations-parse-text-cite": "libs/citations/parse-text-cite",
     "converter-frontend": "apps/converter-frontend",
     "converter-frontend-e2e": "apps/converter-frontend-e2e",

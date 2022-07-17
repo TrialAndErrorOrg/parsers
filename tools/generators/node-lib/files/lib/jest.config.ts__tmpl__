@@ -1,6 +1,6 @@
 const config = {
   displayName: '<%= importPath %>',
-  preset: '<%= offsetFromRoot %>jest.preset.js',
+  preset: '<%= offsetFromRoot %>jest.preset.ts',
   globals: {
     'ts-jest': {
       tsconfig: '<rootDir>/tsconfig.spec.json',
@@ -9,11 +9,11 @@ const config = {
   },
   testEnvironment: 'node',
   transform: {
-    '^.+\\.[tj]sx?$': 'ts-jest',
+    '^.+\\.[tj]sx?$': ['@swc/jest'],
   },
   transformIgnorePatterns: [],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '<%= offsetFromRoot %>/coverage/libs/<%= importPath %>',
+  coverageDirectory: '<%= offsetFromRoot %>coverage/libs/<%= importPath %>',
   extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: {
     '^(\\.{1,2}/.*)\\.js$': '$1',

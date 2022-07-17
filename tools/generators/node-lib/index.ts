@@ -24,6 +24,9 @@ import { nxVersion } from '@nrwl/workspace/src/utils/versions'
 import { addLint } from '@nrwl/workspace/src/generators/library/library'
 import { runTasksInSerial } from '@nrwl/workspace/src/utilities/run-tasks-in-serial'
 import { jestProjectGenerator } from '@nrwl/jest'
+import { updateTsConfig } from '@nrwl/jest/src/generators/jest-project/lib/update-tsconfig'
+import { updateJestConfig } from '@nrwl/jest/src/generators/jest-project/lib/update-jestconfig'
+import { updateWorkspace } from '@nrwl/jest/src/generators/jest-project/lib/update-workspace'
 
 export interface NormalizedSchema extends Schema {
   name: string
@@ -34,77 +37,17 @@ export interface NormalizedSchema extends Schema {
   parsedTags: string[]
 }
 
-export async function workspaceLibraryGenerator(tree: Tree, schema: Schema) {
-  const options = normalizeOptions(tree, schema)
+const getCaseAwareFileName = (options: { pascalCaseFiles: boolean; fileName: string }) => {
+  const normalized = names(options.fileName)
 
-  createFiles(tree, options)
-
-  if (!options.skipTsConfig) {
-    updateRootTsConfig(tree, options)
-  }
-  addProject(tree, options)
-
-  const tasks: GeneratorCallback[] = []
-
-  if (options.linter !== 'none') {
-    const lintCallback = await addLint(tree, options)
-    tasks.push(lintCallback)
-  }
-  // if (options.unitTestRunner === 'jest') {
-  // //  const jestCallback = await addJest(tree, options);
-  //   const jestCallback =  generateFiles(tree,join(__dirname, 'files','lib','jest.config.js'),{tmpl:'',...options},)
-  //   tasks.push(jestCallback);
-  // }
-
-  if (!options.skipFormat) {
-    await formatFiles(tree)
-  }
-
-  return runTasksInSerial(...tasks)
+  return options.pascalCaseFiles ? normalized.className : normalized.fileName
 }
 
-export async function libraryGenerator(tree: Tree, schema: Schema) {
-  try {
-    const options = normalizeOptions(tree, schema)
-
-    if (options.publishable === true && !schema.importPath) {
-      throw new Error(
-        `For publishable libs you have to provide a proper "--importPath" which needs to be a valid npm package name (e.g. my-awesome-lib or @myorg/my-lib)`
-      )
-    }
-
-    const libraryInstall = await workspaceLibraryGenerator(tree, {
-      ...schema,
-      importPath: options.importPath,
-      //testEnvironment: 'node',
-      unitTestRunner: 'none',
-      skipFormat: true,
-      setParserOptionsProject: options.setParserOptionsProject,
-    })
-    createFiles(tree, options)
-
-    updateProject(tree, options)
-
-    if (!schema.skipFormat) {
-      await formatFiles(tree)
-    }
-
-    return libraryInstall
-  } catch (e) {
-    console.error(e)
-  }
-}
-
-export default libraryGenerator
-export const librarySchematic = convertNxGenerator(libraryGenerator)
-
-function normalizeOptions(tree: Tree, options: Schema): NormalizedSchema {
+const normalizeOptions = (tree: Tree, options: Schema): NormalizedSchema => {
   const { npmScope, libsDir } = getWorkspaceLayout(tree)
   const defaultPrefix = npmScope
   const name = names(options.name).fileName
-  const projectDirectory = options.directory
-    ? `${names(options.directory).fileName}/${name}`
-    : name
+  const projectDirectory = options.directory ? `${names(options.directory).fileName}/${name}` : name
 
   const projectName = projectDirectory.replace(new RegExp('/', 'g'), '-')
   const fileName = getCaseAwareFileName({
@@ -113,12 +56,9 @@ function normalizeOptions(tree: Tree, options: Schema): NormalizedSchema {
   })
   const projectRoot = joinPathFragments(libsDir, projectDirectory)
 
-  const parsedTags = options.tags
-    ? options.tags.split(',').map((s) => s.trim())
-    : []
+  const parsedTags = options.tags ? options.tags.split(',').map((s) => s.trim()) : []
 
-  const importPath =
-    options.importPath || `@${defaultPrefix}/${projectDirectory}`
+  const importPath = options.importPath || `@${defaultPrefix}/${projectDirectory}`
 
   return {
     ...options,
@@ -132,16 +72,7 @@ function normalizeOptions(tree: Tree, options: Schema): NormalizedSchema {
   }
 }
 
-function getCaseAwareFileName(options: {
-  pascalCaseFiles: boolean
-  fileName: string
-}) {
-  const normalized = names(options.fileName)
-
-  return options.pascalCaseFiles ? normalized.className : normalized.fileName
-}
-
-function createFiles(tree: Tree, options: NormalizedSchema) {
+const createFiles = (tree: Tree, options: NormalizedSchema) => {
   const { className, name, propertyName } = names(options.fileName)
 
   try {
@@ -170,8 +101,29 @@ function createFiles(tree: Tree, options: NormalizedSchema) {
   //   toJS(tree);
   // }
 }
+const updateRootTsConfig = (host: Tree, options: NormalizedSchema) => {
+  updateJson(host, 'tsconfig.base.json', (json) => {
+    const c = json.compilerOptions
+    c.paths = c.paths || {}
+    delete c.paths[options.name]
 
-function updateProject(tree: Tree, options: NormalizedSchema) {
+    //@ts-ignore
+    if (c.paths[options.importPath]) {
+      throw new Error(
+        `You already have a library using the import path "${options.importPath}". Make sure to specify a unique one.`,
+      )
+    }
+
+    //@ts-ignore
+    c.paths[options.importPath] = [
+      joinPathFragments(options.projectRoot, './src', 'index.' + (options.js ? 'js' : 'ts')),
+    ]
+
+    return json
+  })
+}
+
+const updateProject = (tree: Tree, options: NormalizedSchema) => {
   if (!options.publishable && !options.buildable) {
     return
   }
@@ -181,7 +133,7 @@ function updateProject(tree: Tree, options: NormalizedSchema) {
 
   project.targets = project.targets || {}
   project.targets.build = {
-    executor: '@nrwl/node:package',
+    executor: `@nrwl/js:${options.compiler}`,
     outputs: ['{options.outputPath}'],
     options: {
       outputPath: `dist/${libsDir}/${options.projectDirectory}`,
@@ -198,39 +150,26 @@ function updateProject(tree: Tree, options: NormalizedSchema) {
 
   try {
     updateProjectConfiguration(tree, options.name, project)
+    updateTsConfig(tree, {
+      ...options,
+      project: options.name,
+      setupFile: 'none',
+      supportTsx: true,
+      babelJest: options.babelJest,
+      skipSerializers: true,
+      testEnvironment: options.testEnvironment,
+      skipFormat: true,
+    })
+    updateJestConfig(tree, { ...options, project: options.name })
+    updateWorkspace(tree, { ...options, project: options.name })
+    updateRootTsConfig(tree, { ...options })
   } catch (e) {
     console.error(e)
     throw new Error(e as string)
   }
 }
 
-function updateRootTsConfig(host: Tree, options: NormalizedSchema) {
-  updateJson(host, 'tsconfig.base.json', (json) => {
-    const c = json.compilerOptions
-    c.paths = c.paths || {}
-    delete c.paths[options.name]
-
-    //@ts-ignore
-    if (c.paths[options.importPath]) {
-      throw new Error(
-        `You already have a library using the import path "${options.importPath}". Make sure to specify a unique one.`
-      )
-    }
-
-    //@ts-ignore
-    c.paths[options.importPath] = [
-      joinPathFragments(
-        options.projectRoot,
-        './src',
-        'index.' + (options.js ? 'js' : 'ts')
-      ),
-    ]
-
-    return json
-  })
-}
-
-function addProject(tree: Tree, options: NormalizedSchema) {
+const addProject = (tree: Tree, options: NormalizedSchema) => {
   const projectConfiguration: ProjectConfiguration = {
     root: options.projectRoot,
     sourceRoot: joinPathFragments(options.projectRoot, 'src'),
@@ -243,7 +182,7 @@ function addProject(tree: Tree, options: NormalizedSchema) {
     addDependenciesToPackageJson(tree, {}, { '@nrwl/js': nxVersion })
     //@ts-ignore
     projectConfiguration.targets.build = {
-      executor: '@nrwl/js:swc',
+      executor: `@nrwl/js:${options.compiler}`,
       outputs: ['{options.outputPath}'],
       options: {
         outputPath: `dist/${libsDir}/${options.projectDirectory}`,
@@ -253,18 +192,10 @@ function addProject(tree: Tree, options: NormalizedSchema) {
       },
     }
   }
-  addProjectConfiguration(
-    tree,
-    options.name,
-    projectConfiguration,
-    options.standaloneConfig
-  )
+  addProjectConfiguration(tree, options.name, projectConfiguration, options.standaloneConfig)
 }
 
-async function addJest(
-  tree: Tree,
-  options: NormalizedSchema
-): Promise<GeneratorCallback> {
+const addJest = async (tree: Tree, options: NormalizedSchema): Promise<GeneratorCallback> => {
   return await jestProjectGenerator(tree, {
     project: options.name,
     setupFile: 'none',
@@ -275,3 +206,67 @@ async function addJest(
     skipFormat: true,
   })
 }
+
+export const workspaceLibraryGenerator = async (tree: Tree, schema: Schema) => {
+  const options = normalizeOptions(tree, schema)
+
+  createFiles(tree, options)
+
+  if (!options.skipTsConfig) {
+    updateRootTsConfig(tree, options)
+  }
+  addProject(tree, options)
+
+  const tasks: GeneratorCallback[] = []
+
+  if (options.linter !== 'none') {
+    const lintCallback = await addLint(tree, options)
+    tasks.push(lintCallback)
+  }
+  // if (options.unitTestRunner === 'jest') {
+  // //  const jestCallback = await addJest(tree, options);
+  //   const jestCallback =  generateFiles(tree,join(__dirname, 'files','lib','jest.config.js'),{tmpl:'',...options},)
+  //   tasks.push(jestCallback);
+  // }
+
+  if (!options.skipFormat) {
+    await formatFiles(tree)
+  }
+
+  return runTasksInSerial(...tasks)
+}
+
+export const libraryGenerator = async (tree: Tree, schema: Schema) => {
+  try {
+    const options = normalizeOptions(tree, schema)
+
+    if (options.publishable === true && !schema.importPath) {
+      throw new Error(
+        `For publishable libs you have to provide a proper "--importPath" which needs to be a valid npm package name (e.g. my-awesome-lib or @myorg/my-lib)`,
+      )
+    }
+
+    const libraryInstall = await workspaceLibraryGenerator(tree, {
+      ...schema,
+      importPath: options.importPath,
+      //testEnvironment: 'node',
+      unitTestRunner: 'none',
+      skipFormat: true,
+      setParserOptionsProject: options.setParserOptionsProject,
+    })
+    createFiles(tree, options)
+
+    updateProject(tree, options)
+
+    if (!schema.skipFormat) {
+      await formatFiles(tree)
+    }
+
+    return libraryInstall
+  } catch (e) {
+    console.error(e)
+  }
+}
+
+export default libraryGenerator
+export const librarySchematic = convertNxGenerator(libraryGenerator)

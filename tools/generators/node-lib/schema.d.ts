@@ -23,4 +23,5 @@ export interface Schema {
   author?: string
   email?: string
   description?: string
+  compiler: 'tsc' | 'swc'
 }

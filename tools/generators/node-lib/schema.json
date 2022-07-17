@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/schema",
   "cli": "nx",
   "$id": "NxMyNodeLibrary",
-  "title": "Create a Node Library for Nx",
+  "title": "Create an ESM Node Library for Nx",
   "type": "object",
   "examples": [
     {
@@ -60,7 +60,7 @@
     "publishable": {
       "type": "boolean",
       "description": "Create a publishable library.",
-      "default": true
+      "default": false
     },
     "buildable": {
       "type": "boolean",
@@ -126,6 +126,12 @@
     "description": {
       "type": "string",
       "description": "Short description of what the library does. Used for the readme and the description entry of the package.json."
+    },
+    "compiler": {
+      "type": "string",
+      "enum": ["tsc", "swc"],
+      "default": "swc",
+      "description": "The compiler used by the build and test targets."
     }
   },
   "required": ["name", "description"]

@@ -39,6 +39,7 @@
       ],
       "ast-stringify": ["libs/ast-stringify/src/index.ts"],
       "crossref-json": ["libs/citations/crossref-json/src/index.ts"],
+      "crossref-json-xml": ["libs/citations/crossref-json-xml/src/index.ts"],
       "crossref-to-csl": ["libs/citations/crossref-to-csl/src/index.ts"],
       "csl-consolidate": ["libs/citations/csl-consolidate/src/index.ts"],
       "docx-parse": ["libs/docx-parse/src/index.ts"],

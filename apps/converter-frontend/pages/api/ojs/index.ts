@@ -12,9 +12,11 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (session) {
     try {
       const response = await axios.get(
-        `${process.env.OJS_API}/submissions?apiToken=${process.env.OJS_TOKEN}${
-          searchPhrase ? `&search-phrase=${searchPhrase}` : ''
-        }${rest ? `&${qs.stringify(rest)}` : ''}`,
+        `${process.env.OJS_API ?? endpoint}/submissions?apiToken=${
+          process.env.OJS_TOKEN
+        }${searchPhrase ? `&searchPhrase=${searchPhrase}` : ''}${
+          rest ? `&${qs.stringify(rest)}` : ''
+        }`,
 
         { headers: { cookie: `OJSSID=${req.cookies.OJSSID}` } }
       )
@@ -45,11 +47,12 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const response = await axios.get(
       `${endpoint}/submissions?apiToken=${apiToken}${
-        searchPhrase ? `&search-phrase=${searchPhrase}` : ''
+        searchPhrase ? `&searchPhrase=${searchPhrase}` : ''
       }`
     )
 
     const result = response.data
+    console.log(searchPhrase, result)
 
     setCookie(res, 'OJSSID', getSID(response.headers['set-cookie'] || ''), {
       path: '/',

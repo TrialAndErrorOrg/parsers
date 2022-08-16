@@ -44,7 +44,7 @@ export function PublicationsList(props: PublicationsListProps) {
 
   const [val, setVal] = useState<OJSAutoCompleteProps>()
   const { data, error } = useSWR(
-    `/api/ojs/?endpoint=${endpoint}&apiToken=${token}&search-phrase=${search}`
+    `/api/ojs/?endpoint=${endpoint}&apiToken=${token}&searchPhrase=${search}`
   )
   // const { data, error } = useSWR('', (thing: string, thong: RequestInit) =>
   //   ojs.submissions({ searchPhrase: search || '' })
@@ -59,12 +59,12 @@ export function PublicationsList(props: PublicationsListProps) {
 
   //console.log(error)
   //console.log(data)
+  console.log(data)
   return (
     <Box>
       {data && (
         <Autocomplete
           onItemSubmit={(item) => setVal(item as any)}
-          sx={{ width: '50%' }}
           itemComponent={AutoCompleteItem}
           label="Search OJS"
           placeholder="Article name"

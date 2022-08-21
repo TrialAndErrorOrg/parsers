@@ -13,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/relatex/relatex-stringify"],
       "options": {
-        "jestConfig": "libs/relatex/relatex-stringify/jest.config.ts",
+        "jestConfig": "libs/relatex/relatex-stringify/jest.config.js",
         "passWithNoTests": true
       }
     },

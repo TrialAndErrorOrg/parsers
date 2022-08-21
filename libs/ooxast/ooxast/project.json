@@ -13,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/ooxast/ooxast"],
       "options": {
-        "jestConfig": "libs/ooxast/ooxast/jest.config.ts",
+        "jestConfig": "libs/ooxast/ooxast/jest.config.js",
         "passWithNoTests": true
       }
     },

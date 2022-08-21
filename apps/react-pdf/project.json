@@ -44,7 +44,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/apps/react-pdf"],
       "options": {
-        "jestConfig": "apps/react-pdf/jest.config.ts",
+        "jestConfig": "apps/react-pdf/jest.config.js",
         "passWithNoTests": true
       }
     },

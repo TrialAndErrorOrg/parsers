@@ -104,7 +104,27 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "This point is described superbly in a recent editorial piece by public health researchers Rebecca Sindall and Dani Barrington (2020), who point out the many barriers to sharing and promoting scholarly understandings of failure in the public health interventionist field of Water, Sanitation, and Hygiene (WASH), which they experienced personally as well. "
+                      "value": "This point is described superbly in a recent editorial piece by public health researchers Rebecca Sindall and Dani "
+                    },
+                    {
+                      "type": "element",
+                      "name": "xref",
+                      "attributes": {
+                        "id": "_xref-1",
+                        "refType": "bibr",
+                        "rid": "Barrington2020",
+                        "customType": "{\"noteIndex\":0,\"formattedCitation\":\"Barrington (2020)\",\"plainCitation\":\"Barrington (2020)\"}"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Barrington (2020)"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "value": "(WASH), which they experienced personally as well. "
                     }
                   ]
                 },
@@ -140,8 +160,20 @@
                   "attributes": {},
                   "children": [
                     {
-                      "type": "text",
-                      "value": "Sindall and Barrington (2020) paint a compelling picture of an academic system that struggles to find a place for failure and the “multitude of sins” such a system necessarily perpetuates. Rightly so, they place the responsibility for change not only on researchers, but also funders and publication bodies. "
+                      "type": "element",
+                      "name": "xref",
+                      "attributes": {
+                        "id": "_xref-2",
+                        "refType": "bibr",
+                        "rid": "Sindall2020",
+                        "customType": "{\"noteIndex\":0,\"formattedCitation\":\"Sindall and Barrington (2020)\",\"plainCitation\":\"Sindall and Barrington (2020)\"}"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Sindall and Barrington (2020)"
+                        }
+                      ]
                     }
                   ]
                 },
@@ -200,7 +232,27 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "In the field of Human Factors, and more specifically in Forensic Human Factors, it has long been recognized that failure usually occurs in the complex environment of a system. When accidents such as the Chernobyl nuclear disaster occur, it is easy to shift blame to a single individual or to a single team that was present when mistakes occurred. In response to these disasters, these employees are subsequently reprimanded and sometimes fired. A new person might fill their position and, in some cases, training protocols might be updated. However, these are often very ineffective measures. As previously indicated, mistakes are made in a complex environment. This means that mistakes can have occurred for any number of reasons, and often because of a combination of reasons. Accordingly, removing just one factor from the environment (i.e., the employee present during the disaster) is unlikely to significantly diminish the chances of similar mistakes happening in the future, because it was unlikely to be the determining factor (Holden, 2009). "
+                      "value": "In the field of Human Factors, and more specifically in Forensic Human Factors, it has long been recognized that failure usually occurs in the complex environment of a system. When accidents such as the Chernobyl nuclear disaster occur, it is easy to shift blame to a single individual or to a single team that was present when mistakes occurred. In response to these disasters, these employees are subsequently reprimanded and sometimes fired. A new person might fill their position and, in some cases, training protocols might be updated. However, these are often very ineffective measures. As previously indicated, mistakes are made in a complex environment. This means that mistakes can have occurred for any number of reasons, and often because of a combination of reasons. Accordingly, removing just one factor from the environment "
+                    },
+                    {
+                      "type": "text",
+                      "value": "(i.e., the employee present during the disaster) is unlikely to significantly diminish the chances of similar mistakes happening in the future, because it was unlikely to be the determining factor "
+                    },
+                    {
+                      "type": "element",
+                      "name": "xref",
+                      "attributes": {
+                        "id": "_xref-3",
+                        "refType": "bibr",
+                        "rid": "Holden2009",
+                        "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Holden, 2009)\",\"plainCitation\":\"(Holden, 2009)\"}"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "(Holden, 2009)"
+                        }
+                      ]
                     },
                     {
                       "type": "text",
@@ -226,7 +278,43 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "By increasing the simplicity of the cockpit, pilots were less taxed and could invest more cognitive resources towards flying the plane. An example of such an environmental change is the adaptation of cockpit alarms. In older planes, cockpits would have the same audio-visual cues for every alarm. Thus, the pilot got the same feedback from the system when the fuel was slightly low as when an important engine was malfunctioning. Pilots were then mentally taxed on two levels: they were constantly confronted with distracting alarms, some of which might not need their immediate attention; and when attending to these alarms, they had to invest great effort in distinguishing the alarm and assessing its importance. As a result, pilots learned to ignore most alarms. A research article published in 1996 summarized problems such as these at the time as follows: “The proliferation of alarms has led to the increased likelihood of false or multiple alarm events and the consequent inability of the operator to determine the underlying cause of the alarm(s)” (Gilson et al., 1996, p. 12). Under such a system, a situation such as the following might occur: During a flight, one of the important engines malfunctions and needs immediate attention. At the same time, a number of other small, but non-urgent, malfunctions could occur. Because the very attentive, but overly taxed pilot cannot properly differentiate between the different alarms, they end up paying attention to the wrong malfunction. A short while later, the plane crashes. As recently as 2019, a plane crash occurred due to a poorly designed alarm system (Levin, 2019). "
+                      "value": "By increasing the simplicity of the cockpit, pilots were less taxed and could invest more cognitive resources towards flying the plane. An example of such an environmental change is the adaptation of cockpit alarms. In older planes, cockpits would have the same audio-visual cues for every alarm. Thus, the pilot got the same feedback from the system when the fuel was slightly low as when an important engine was malfunctioning. Pilots were then mentally taxed on two levels: they were constantly confronted with distracting alarms, some of which might not need their immediate attention; and when attending to these alarms, they had to invest great effort in distinguishing the alarm and assessing its importance. As a result, pilots learned to ignore most alarms. A research article published in 1996 summarized problems such as these at the time as follows: “The proliferation of alarms has led to the increased likelihood of false or multiple alarm events and the consequent inability of the operator to determine the underlying cause of the alarm"
+                    },
+                    {
+                      "type": "text",
+                      "value": "(s)” "
+                    },
+                    {
+                      "type": "element",
+                      "name": "xref",
+                      "attributes": {
+                        "id": "_xref-4",
+                        "refType": "bibr",
+                        "rid": "Gilson1996",
+                        "customType": "{\"locator\":\"12\",\"label\":\"page\",\"noteIndex\":0,\"formattedCitation\":\"(Gilson et al., 1996, p. 12)\",\"plainCitation\":\"(Gilson et al., 1996, p. 12)\"}"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "(Gilson et al., 1996, p. 12)"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "xref",
+                      "attributes": {
+                        "id": "_xref-5",
+                        "refType": "bibr",
+                        "rid": "Levin2019",
+                        "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Levin, 2019)\",\"plainCitation\":\"(Levin, 2019)\"}"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "(Levin, 2019)"
+                        }
+                      ]
                     },
                     {
                       "type": "text",
@@ -241,7 +329,39 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Faced with the issue of the inattentive pilot, an airline company is presented with two solutions. On the one hand, the company could fire the pilot, hire a new one, and train them for a longer period of time, with a more experienced instructor, and with more expensive training equipment. Besides the fact that this would be very expensive, it would also be unlikely to solve the problem. Humans’ cognitive abilities are limited. This is because, like all human systems, their underlying biological systems operate on limited resources. Similarly, in the realms of cognition, some cognitive scientists believe you can train people for things like working memory, sustained attention, selective attention, and other cognitive skills, but all of these will have a natural ceiling—a point beyond which it is almost impossible to progress (Kwok et al., 2011; Traut et al., 2021). "
+                      "value": "Faced with the issue of the inattentive pilot, an airline company is presented with two solutions. On the one hand, the company could fire the pilot, hire a new one, and train them for a longer period of time, with a more experienced instructor, and with more expensive training equipment. Besides the fact that this would be very expensive, it would also be unlikely to solve the problem. Humans’ cognitive abilities are limited. This is because, like all human systems, their underlying biological systems operate on limited resources. Similarly, in the realms of cognition, some cognitive scientists believe you can train people for things like working memory, sustained attention, selective attention, and other cognitive skills, but all of these will have a natural ceiling—a point beyond which it is almost impossible to progress "
+                    },
+                    {
+                      "type": "element",
+                      "name": "xref",
+                      "attributes": {
+                        "id": "_xref-6",
+                        "refType": "bibr",
+                        "rid": "Kwok2011",
+                        "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Kwok et al., 2011; Traut et al., 2021)\",\"plainCitation\":\"(Kwok et al., 2011; Traut et al., 2021)\"}"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "(Kwok et al., 2011"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "xref",
+                      "attributes": {
+                        "id": "_xref-7",
+                        "refType": "bibr",
+                        "rid": "Traut2021",
+                        "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Kwok et al., 2011; Traut et al., 2021)\",\"plainCitation\":\"(Kwok et al., 2011; Traut et al., 2021)\"}"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " Traut et al., 2021)"
+                        }
+                      ]
                     },
                     {
                       "type": "text",
@@ -639,7 +759,23 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Sindall and Barrington (2020) provide several examples from humanitarian aid projects which went wrong. Two relevant cases in South Africa are mentioned, where failures led to a waste of money and physical injuries. Publishing about failure could prevent this from happening again in the future, but only if the relevant people are able to access these publications. In countries with a lower quality of life, the relative difference that can be made to improving quality of life by preventing waste of money and physical injuries is larger. "
+                          "value": "Sindall and "
+                        },
+                        {
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-8",
+                            "refType": "bibr",
+                            "rid": "Barrington2020",
+                            "customType": "{\"noteIndex\":0,\"formattedCitation\":\"Barrington (2020)\",\"plainCitation\":\"Barrington (2020)\"}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Barrington (2020)"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -769,7 +905,23 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "This lack of knowledge about how to critically evaluate failure extends beyond the sciences to many other types of work such as so-called high-risk industries (Bevilacqua & Ciarapica, 2018). This lack of knowledge is not due to a lack of literature on the topic. In philosophy, the process of what we have called “trial and error” has been analyzed in a wide range of contexts. In fields like evolutionary epistemology, agnotology, and within the thought experiments of intuition pumps, much attention is paid to the role of trial and error and failure in the process of gaining knowledge. Additionally, a significant part of the field of Human Factors is dedicated to the analysis and prevention of failure—taking into consideration processes of trial and error. The problem doesn’t seem to be what knowledge is available, but rather what knowledge is known by the relevant actors and put into practice. "
+                          "value": "This lack of knowledge about how to critically evaluate failure extends beyond the sciences to many other types of work such as so-called high-risk industries "
+                        },
+                        {
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-9",
+                            "refType": "bibr",
+                            "rid": "Bevilacqua2018",
+                            "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Bevilacqua & Ciarapica, 2018)\",\"plainCitation\":\"(Bevilacqua & Ciarapica, 2018)\"}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Bevilacqua & Ciarapica, 2018)"
+                            }
+                          ]
                         }
                       ]
                     },
@@ -885,7 +1037,23 @@
                     },
                     {
                       "type": "text",
-                      "value": "Sindall and Barrington (2020) highlight the need for “more structured ways to report on failures” in science. We could not agree more. However, there are very real, structural, limitations from a publisher’s perspective that makes this goal very difficult to achieve. Thus, we argue that it is not only that “[j]ournals "
+                      "value": "Sindall and "
+                    },
+                    {
+                      "type": "element",
+                      "name": "xref",
+                      "attributes": {
+                        "id": "_xref-10",
+                        "refType": "bibr",
+                        "rid": "Barrington2020",
+                        "customType": "{\"noteIndex\":0,\"formattedCitation\":\"Barrington (2020)\",\"plainCitation\":\"Barrington (2020)\"}"
+                      },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Barrington (2020)"
+                        }
+                      ]
                     },
                     {
                       "type": "element",
@@ -1275,7 +1443,1342 @@
               "type": "element",
               "name": "refList",
               "attributes": {},
-              "children": []
+              "children": [
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Barrington2020"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2020"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Barrington"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Sindall2020"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2020"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pubId",
+                          "attributes": {
+                            "pubIdType": "doi"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "10.36850/ed2"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Sindall"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "R.C."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Barrington"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "D.J."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "6–8"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Fail fast, fail forward, fail openly: The need to share failures in development"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Journal of Trial and Error"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "extLink",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "https://doi.org/10.36850/ed2"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issue",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Holden2009"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2009"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Holden"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "R.J."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "34–41"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "People or systems? To blame is human. The fix is to engineer"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Professional safety"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issue",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "12"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "54"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Gilson1996"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1996"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pubId",
+                          "attributes": {
+                            "pubIdType": "doi"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "10.1177/106480469600400404"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Gilson"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "R.D."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Deaton"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "J.E."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Mouloua"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "M."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "12–18"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Coping with complex alarms: Sophisticated aircraft cockpit alarm systems demand a shift in training strategies"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Ergonomics in Design: The Quarterly of Human Factors Applications"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "extLink",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "https://doi.org/10.1177/106480469600400404"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issue",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "4"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "4"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Levin2019"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2019"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "month",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "09"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "day",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "26"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Levin"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "A."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Boeing failed to predict that slew of 737 Max warning alarms would confuse pilots, investigators say"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "extLink",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "https://time.com/5687473/boeing-737-alarm-system/"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Kwok2011"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2011"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pubId",
+                          "attributes": {
+                            "pubIdType": "doi"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "10.2147/CIA.S16802"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Kwok"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "T.C."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Chau"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "W.W."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Yuen"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "K.S."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Wong"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "A.Y."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Li"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "J.C."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Shiu"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "R.Y."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Ho"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "F.K."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "83–88"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Who would benefit from memory training? A pilot study examining the ceiling effect of concurrent cognitive stimulation"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Clinical Interventions in Aging"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "extLink",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "https://doi.org/10.2147/CIA.S16802"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "6"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Traut2021"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2021"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pubId",
+                          "attributes": {
+                            "pubIdType": "doi"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "10.3389/fpsyg.2021.662139"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Traut"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "H.J."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Guild"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "R.M."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Munakata"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Y."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1–20"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Why does cognitive training yield inconsistent benefits? A meta-analysis of individual differences in baseline cognitive abilities and training outcomes"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Frontiers in psychology"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "extLink",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "https://doi.org/10.3389/fpsyg.2021.662139"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "12"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Bevilacqua2018"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2018"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pubId",
+                          "attributes": {
+                            "pubIdType": "doi"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "10.1016/j.ress.2017.08.013"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Bevilacqua"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "M."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Ciarapica"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "F.E."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "149–159"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Human factor risk management in the process industry: A case study"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Reliability Engineering & System Safety"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "extLink",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "https://doi.org/10.1016/j.ress.2017.08.013"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "169"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }

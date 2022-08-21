@@ -13,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/jast/jast-util-from-csl"],
       "options": {
-        "jestConfig": "libs/jast/jast-util-from-csl/jest.config.ts",
+        "jestConfig": "libs/jast/jast-util-from-csl/jest.config.js",
         "passWithNoTests": true
       }
     },

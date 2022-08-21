@@ -13,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/reoff/reoff-parse-references"],
       "options": {
-        "jestConfig": "libs/reoff/reoff-parse-references/jest.config.ts",
+        "jestConfig": "libs/reoff/reoff-parse-references/jest.config.js",
         "passWithNoTests": true
       }
     },

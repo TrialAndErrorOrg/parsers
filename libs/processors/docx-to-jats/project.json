@@ -13,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/processors/docx-to-jats"],
       "options": {
-        "jestConfig": "libs/processors/docx-to-jats/jest.config.ts",
+        "jestConfig": "libs/processors/docx-to-jats/jest.config.js",
         "passWithNoTests": true
       }
     }

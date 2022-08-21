@@ -1,4 +1,5 @@
 import moo from 'moo'
+console.log(moo)
 export const lexer = moo.compile({
   __: /[ \t]+/u,
   //_: /[ \t]*/u,

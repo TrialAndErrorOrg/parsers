@@ -13,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/ojs/ojs-client"],
       "options": {
-        "jestConfig": "libs/ojs/ojs-client/jest.config.ts",
+        "jestConfig": "libs/ojs/ojs-client/jest.config.js",
         "passWithNoTests": true
       }
     },

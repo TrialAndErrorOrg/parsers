@@ -21,7 +21,7 @@ const fromXML = (config: Options = {}) =>
     })
     .use(relatexStringify)
 
-const fixtures = join(__dirname, 'fixtures')
+const fixtures = new URL('fixtures', import.meta.url)
 const dir = readdirSync(fixtures)
 const arrDir = dir.map((f) => f)
 const doubleDir = dir.map((f) => [

@@ -13,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/reoff/docx-to-vfile"],
       "options": {
-        "jestConfig": "libs/reoff/docx-to-vfile/jest.config.ts",
+        "jestConfig": "libs/reoff/docx-to-vfile/jest.config.js",
         "passWithNoTests": true
       }
     },

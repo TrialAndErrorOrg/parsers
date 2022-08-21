@@ -24,7 +24,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/jast/jast-util-to-csl"],
       "options": {
-        "jestConfig": "libs/jast/jast-util-to-csl/jest.config.ts",
+        "jestConfig": "libs/jast/jast-util-to-csl/jest.config.js",
         "passWithNoTests": true
       }
     }

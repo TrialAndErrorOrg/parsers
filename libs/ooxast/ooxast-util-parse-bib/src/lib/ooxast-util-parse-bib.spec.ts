@@ -14,7 +14,9 @@ import { writeFileSync } from 'fs'
 
 async function getTree() {
   // If in node, get the correct docx uintarray like so
-  const docxBuff = await readFile(__dirname + '/../fixtures/index.docx')
+  const docxBuff = await readFile(
+    new URL('/../fixtures/index.docx', import.meta.url)
+  )
   const docxArr = new Uint8Array(docxBuff)
 
   // if in the browser, find some way

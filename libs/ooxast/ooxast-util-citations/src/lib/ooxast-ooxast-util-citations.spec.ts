@@ -5,16 +5,16 @@ import { join } from 'path'
 describe('ooxastOoxastUtilCitations', () => {
   const ooxast = JSON.parse(
     readFileSync(
-      join(
-        __dirname,
-        '../../../../ooxast/ooxast-util-remove-rsid/src/lib/removedRsid'
+      new URL(
+        '../../../../ooxast/ooxast-util-remove-rsid/src/lib/removedRsid',
+        import.meta.url
       ),
       { encoding: 'utf-8' }
     )
   )
   const citetree = findCitations(ooxast)
   writeFileSync(
-    join(__dirname, 'citetree.json'),
+    new URL('citetree.json', import.meta.url),
     JSON.stringify(citetree, null, 2)
   )
   it('should work', () => {

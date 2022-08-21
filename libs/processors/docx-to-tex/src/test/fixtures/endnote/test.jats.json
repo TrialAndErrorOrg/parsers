@@ -849,6 +849,22 @@
                           "value": "Medication adherence, which is the extent to which patients take their medication as prescribed "
                         },
                         {
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-1",
+                            "refType": "bibr",
+                            "rid": "Brown2011",
+                            "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Brown & Bussell, 2011)\",\"plainCitation\":\"(Brown & Bussell, 2011)\"}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Brown & Bussell, 2011)"
+                            }
+                          ]
+                        },
+                        {
                           "type": "text",
                           "value": ", is essential to treat chronic inflammatory diseases, such as rheumatoid arthritis (RA; "
                         },
@@ -869,8 +885,36 @@
                           "value": ""
                         },
                         {
-                          "type": "text",
-                          "value": "(Jungst et al., 2019; Kini & Ho, 2018)"
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-2",
+                            "refType": "bibr",
+                            "rid": "Jungst2019",
+                            "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Jungst et al., 2019; Kini & Ho, 2018)\",\"plainCitation\":\"(Jungst et al., 2019; Kini & Ho, 2018)\"}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Jungst et al., 2019"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-3",
+                            "refType": "bibr",
+                            "rid": "Kini2018",
+                            "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Jungst et al., 2019; Kini & Ho, 2018)\",\"plainCitation\":\"(Jungst et al., 2019; Kini & Ho, 2018)\"}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": " Kini & Ho, 2018)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -881,8 +925,20 @@
                           "value": ""
                         },
                         {
-                          "type": "text",
-                          "value": "(Jungst et al., 2019)"
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-4",
+                            "refType": "bibr",
+                            "rid": "Jungst2019",
+                            "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Jungst et al., 2019)\",\"plainCitation\":\"(Jungst et al., 2019)\"}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Jungst et al., 2019)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -910,8 +966,20 @@
                           "value": ""
                         },
                         {
-                          "type": "text",
-                          "value": "(Hartman et al., 2021)"
+                          "type": "element",
+                          "name": "xref",
+                          "attributes": {
+                            "id": "_xref-5",
+                            "refType": "bibr",
+                            "rid": "Hartman2021",
+                            "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Hartman et al., 2021)\",\"plainCitation\":\"(Hartman et al., 2021)\"}"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "(Hartman et al., 2021)"
+                            }
+                          ]
                         },
                         {
                           "type": "text",
@@ -2923,7 +2991,1101 @@
               "type": "element",
               "name": "refList",
               "attributes": {},
-              "children": []
+              "children": [
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Brown2011"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2011"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Brown"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "A.D.D.I.N.E.N.R.E.F.L.I.S.T."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "T."
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "M."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Bussell"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "J.K."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "304–314"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Medication adherence: WHO cares?"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Mayo Clinical Proceedings"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issue",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "4"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "86"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Jungst2019"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2019"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Jungst"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "C."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Graber"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "S."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Simons"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "S."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Wedemeyer"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "H."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Lammert"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "F."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "505–512"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Medication adherence among patients with chronic diseases: A survey-based study in pharmacies"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "QJM: An International Journal of Medicine"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issue",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "7"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "112"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Kini2018"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2018"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Kini"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "V."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Ho"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "P.M."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2461–2473"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Interventions to improve medication adherence: A review"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "The Journal of the American Medical Association"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issue",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "23"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "320"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Hartman2021"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2021"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Hartman"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "L."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Cutolo"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "M."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Bos"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "R."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Opris-Belinski"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "D."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Kok"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "M.R."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Griep-Wentink"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "H."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Klaasen"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "R."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Allaart"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "C.F."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Bruyn"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "G.A.W."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Raterman"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "H.G."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Voshaar"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "M.J.H."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Gomes"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "N."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Pinto"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "R.M.A."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Klausch"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "L.T."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Lems"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "W.F."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Boers"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "M."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Medication adherence in older people with rheumatoid arthritis is lower according to electronic monitoring than according to pill count"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Rheumatology"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
             },
             {
               "type": "element",

@@ -13,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/jast/jast-util-to-texast"],
       "options": {
-        "jestConfig": "libs/jast/jast-util-to-texast/jest.config.ts",
+        "jestConfig": "libs/jast/jast-util-to-texast/jest.config.js",
         "passWithNoTests": true
       }
     },

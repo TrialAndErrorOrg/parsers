@@ -24,7 +24,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/xast/xast-util-has-attribute"],
       "options": {
-        "jestConfig": "libs/xast/xast-util-has-attribute/jest.config.ts",
+        "jestConfig": "libs/xast/xast-util-has-attribute/jest.config.js",
         "passWithNoTests": true
       }
     }

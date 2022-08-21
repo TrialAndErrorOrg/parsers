@@ -31,7 +31,7 @@ async function main() {
     }
     try {
       const betterVal = JSON.parse(
-        // readFileSync(join(__dirname, '..', 'schemas', val), {
+        // readFileSync(new URL('..', import.meta.url, 'schemas', val), {
         readFileSync(
           join(
             __dirname,

@@ -9,15 +9,6 @@
         "lintFilePatterns": ["libs/citations/crossref-json/**/*.ts"]
       }
     },
-    "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/citations/crossref-json"],
-      "options": {
-        "jestConfig": "libs/citations/crossref-json/jest.config.ts",
-        "passWithNoTests": true,
-        "tsConfig": "libs/citations/crossref-json/tsconfig.spec.json"
-      }
-    },
     "build": {
       "executor": "@nrwl/js:swc",
       "outputs": ["{options.outputPath}"],

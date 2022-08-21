@@ -13,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/utils/ojs-to-preamble"],
       "options": {
-        "jestConfig": "libs/utils/ojs-to-preamble/jest.config.ts",
+        "jestConfig": "libs/utils/ojs-to-preamble/jest.config.js",
         "passWithNoTests": true
       }
     }

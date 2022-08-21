@@ -4,7 +4,7 @@ import path from 'path'
 
 describe('reoffDocxToVfile', () => {
   const doc = fs.readFileSync(
-    path.join(__dirname, '../fixtures/Manuscript-2.docx')
+    new URL('../fixtures/Manuscript-2.docx', import.meta.url)
   )
   it('should work', async () => {
     const vfile = await docxToVFile(doc)

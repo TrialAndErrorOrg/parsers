@@ -13,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/relatex/relatex-add-preamble"],
       "options": {
-        "jestConfig": "libs/relatex/relatex-add-preamble/jest.config.ts",
+        "jestConfig": "libs/relatex/relatex-add-preamble/jest.config.js",
         "passWithNoTests": true
       }
     },

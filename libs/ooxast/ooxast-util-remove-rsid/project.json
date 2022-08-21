@@ -13,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/ooxast/ooxast-util-remove-rsid"],
       "options": {
-        "jestConfig": "libs/ooxast/ooxast-util-remove-rsid/jest.config.ts",
+        "jestConfig": "libs/ooxast/ooxast-util-remove-rsid/jest.config.js",
         "passWithNoTests": true
       }
     },

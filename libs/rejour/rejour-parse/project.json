@@ -13,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/rejour/rejour-parse"],
       "options": {
-        "jestConfig": "libs/rejour/rejour-parse/jest.config.ts",
+        "jestConfig": "libs/rejour/rejour-parse/jest.config.js",
         "passWithNoTests": true
       }
     },

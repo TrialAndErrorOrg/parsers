@@ -43,7 +43,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/apps/converter-frontend"],
       "options": {
-        "jestConfig": "apps/converter-frontend/jest.config.ts",
+        "jestConfig": "apps/converter-frontend/jest.config.js",
         "passWithNoTests": true
       }
     },

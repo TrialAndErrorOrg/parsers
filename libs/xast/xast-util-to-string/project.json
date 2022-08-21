@@ -24,8 +24,9 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/xast/xast-util-to-string"],
       "options": {
-        "jestConfig": "libs/xast/xast-util-to-string/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/xast/xast-util-to-string/jest.config.js",
+        "passWithNoTests": true,
+        "showConfig": true
       }
     }
   },

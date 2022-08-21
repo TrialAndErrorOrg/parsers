@@ -15,7 +15,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/ooxast/ooxast-util-parse-bib-browser"],
       "options": {
-        "jestConfig": "libs/ooxast/ooxast-util-parse-bib-browser/jest.config.ts",
+        "jestConfig": "libs/ooxast/ooxast-util-parse-bib-browser/jest.config.js",
         "passWithNoTests": true
       }
     },

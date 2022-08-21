@@ -13,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/citations/crossref-to-csl"],
       "options": {
-        "jestConfig": "libs/citations/crossref-to-csl/jest.config.ts",
+        "jestConfig": "libs/citations/crossref-to-csl/jest.config.js",
         "passWithNoTests": true
       }
     },

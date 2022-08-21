@@ -8,7 +8,7 @@ describe('rejourJastUtilToCsl', () => {
   const proc = unified().use(rejourParse)
   it('should work', async () => {
     const tree = proc.parse(
-      await read(__dirname + '/../test/index.jats.xml')
+      await read(new URL('../test/index.jats.xml', import.meta.url))
     ) as Root
     const csl = toCSL(tree)
     console.dir(csl.front, { depth: null })

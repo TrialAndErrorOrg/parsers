@@ -24,7 +24,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/rejour/rejour-frontmatter"],
       "options": {
-        "jestConfig": "libs/rejour/rejour-frontmatter/jest.config.ts",
+        "jestConfig": "libs/rejour/rejour-frontmatter/jest.config.js",
         "passWithNoTests": true
       }
     }

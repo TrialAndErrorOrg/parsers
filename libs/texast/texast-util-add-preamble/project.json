@@ -13,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/texast/texast-util-add-preamble"],
       "options": {
-        "jestConfig": "libs/texast/texast-util-add-preamble/jest.config.ts",
+        "jestConfig": "libs/texast/texast-util-add-preamble/jest.config.js",
         "passWithNoTests": true
       }
     },

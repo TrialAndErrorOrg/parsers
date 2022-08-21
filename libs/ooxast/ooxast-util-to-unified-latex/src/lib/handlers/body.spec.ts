@@ -22,8 +22,10 @@ it('should work', () => {
 })
 
 it('lets try', () => {
-  const ooxloc =
-    __dirname + '/../../../../../reoff/reoff-parse/src/test/ooxasttree'
+  const ooxloc = new URL(
+    '../../../../../reoff/reoff-parse/src/test/ooxasttree',
+    import.meta.url
+  )
   const x = fs.readFileSync(ooxloc, { encoding: 'utf-8' })
   const tree = JSON.parse(x)
 

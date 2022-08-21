@@ -13,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/ast-stringify"],
       "options": {
-        "jestConfig": "libs/ast-stringify/jest.config.ts",
+        "jestConfig": "libs/ast-stringify/jest.config.js",
         "passWithNoTests": true
       }
     },

@@ -13,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/reoff/reoff-clean"],
       "options": {
-        "jestConfig": "libs/reoff/reoff-clean/jest.config.ts",
+        "jestConfig": "libs/reoff/reoff-clean/jest.config.js",
         "passWithNoTests": true
       }
     },

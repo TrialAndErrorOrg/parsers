@@ -1,5 +1,9 @@
 {
   "jsc": {
+    "paths": {
+      "reoff-clean": ["libs/reoff/reoff-clean/src/index.ts"],
+      "reoff-pase": ["libs/reoff/reoff-parse/src/index.ts"]
+    },
     "target": "es2020",
     "parser": {
       "syntax": "typescript",

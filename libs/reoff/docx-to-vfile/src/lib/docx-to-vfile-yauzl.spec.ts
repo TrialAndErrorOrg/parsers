@@ -4,7 +4,7 @@ import path from 'path'
 
 describe('reoffDocxToVfile', () => {
   const doc = fs.readFileSync(
-    path.join(__dirname, '../../../reoff-parse/src/test/word-citation.docx')
+    new URL('../../../reoff-parse/src/test/word-citation.docx', import.meta.url)
   )
   jest.setTimeout(10000)
   it('should work', async () => {

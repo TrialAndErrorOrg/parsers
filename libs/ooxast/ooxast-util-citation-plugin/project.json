@@ -13,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/ooxast/ooxast-util-citation-plugin"],
       "options": {
-        "jestConfig": "libs/ooxast/ooxast-util-citation-plugin/jest.config.ts",
+        "jestConfig": "libs/ooxast/ooxast-util-citation-plugin/jest.config.js",
         "passWithNoTests": true
       }
     },

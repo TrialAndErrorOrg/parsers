@@ -16,20 +16,11 @@ const fromDocx = async (file: string) => {
   return detectCitePlugin(tree)
 }
 const testfile = (type: string) =>
-  path.join(
-    __dirname,
-    '..',
-    '..',
-    '..',
-    '..',
-    'processors',
-    'docx-to-tex',
-    'src',
-    'test',
-    'fixtures',
-    type,
-    'index.docx'
-  )
+  new URL(
+    `../../../../processors/docx-to-tex/src/test/fixtures/${type}/index.docx`,
+    import.meta.url
+  ).pathname
+
 describe('ooxast-util-citation-plugin', () => {
   it('should identify zotero', async () => {
     expect(await fromDocx(testfile('zotero'))).toBe('zotero')

@@ -42,7 +42,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/apps/jote"],
       "options": {
-        "jestConfig": "apps/jote/jest.config.ts",
+        "jestConfig": "apps/jote/jest.config.js",
         "passWithNoTests": true
       }
     }

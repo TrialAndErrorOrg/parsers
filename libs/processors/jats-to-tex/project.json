@@ -13,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/processors/jats-to-tex"],
       "options": {
-        "jestConfig": "libs/processors/jats-to-tex/jest.config.ts",
+        "jestConfig": "libs/processors/jats-to-tex/jest.config.js",
         "passWithNoTests": true
       }
     }

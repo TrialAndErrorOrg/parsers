@@ -13,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/rejour/rejour-meta"],
       "options": {
-        "jestConfig": "libs/rejour/rejour-meta/jest.config.ts",
+        "jestConfig": "libs/rejour/rejour-meta/jest.config.js",
         "passWithNoTests": true
       }
     },

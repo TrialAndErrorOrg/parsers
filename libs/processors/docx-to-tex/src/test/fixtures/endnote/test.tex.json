@@ -117,6 +117,26 @@
                   "value": "\n"
                 }
               ]
+            },
+            {
+              "type": "environment",
+              "name": "filecontents",
+              "children": [
+                {
+                  "type": "commandArg",
+                  "optional": false,
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "bibliography.bib"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "@article{Brown2011,\n    title       = {Medication adherence: WHO cares?},\n    author      = {Brown, A.D.D.I.N.E.N.R.E.F.L.I.S.T. and T., M. and Bussell, J.K.},\n    number      = {4},\n    volume      = {86},\n    year        = {2011},\n    pages       = {304–314},\n    journal     = {Mayo Clinical Proceedings}\n}\n\n\n@article{Jungst2019,\n    title       = {Medication adherence among patients with chronic diseases: A survey-based study in pharmacies},\n    author      = {Jungst, C. and Graber, S. and Simons, S. and Wedemeyer, H. and Lammert, F.},\n    number      = {7},\n    volume      = {112},\n    year        = {2019},\n    pages       = {505–512},\n    journal     = {QJM: An International Journal of Medicine}\n}\n\n\n@article{Kini2018,\n    title       = {Interventions to improve medication adherence: A review},\n    author      = {Kini, V. and Ho, P.M.},\n    number      = {23},\n    volume      = {320},\n    year        = {2018},\n    pages       = {2461–2473},\n    journal     = {The Journal of the American Medical Association}\n}\n\n\n@article{Hartman2021,\n    title       = {Medication adherence in older people with rheumatoid arthritis is lower according to electronic monitoring than according to pill count},\n    author      = {Hartman, L. and Cutolo, M. and Bos, R. and Opris-Belinski, D. and Kok, M.R. and Griep-Wentink, H. and Klaasen, R. and Allaart, C.F. and Bruyn, G.A.W. and Raterman, H.G. and Voshaar, M.J.H. and Gomes, N. and Pinto, R.M.A. and Klausch, L.T. and Lems, W.F. and Boers, M.},\n    year        = {2021},\n    journal     = {Rheumatology}\n}"
+                }
+              ]
             }
           ]
         },
@@ -856,6 +876,21 @@
                   "value": "Medication adherence, which is the extent to which patients take their medication as prescribed "
                 },
                 {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Brown2011"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
                   "type": "text",
                   "value": ", is essential to treat chronic inflammatory diseases, such as rheumatoid arthritis (RA; "
                 },
@@ -868,16 +903,53 @@
                   "value": ". Almost half of patients with chronic diseases are non-adherent "
                 },
                 {
-                  "type": "text",
-                  "value": "(Jungst et al., 2019; Kini & Ho, 2018)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Jungst2019"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Kini2018"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
                   "value": ". Non-adherence substantially increases the risk of a disease flare in RA "
                 },
                 {
-                  "type": "text",
-                  "value": "(Jungst et al., 2019)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Jungst2019"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -897,8 +969,19 @@
                   "value": "In the two-year multicenter Glucocorticoid Low-dose Outcome in Rheumatoid Arthritis (GLORIA) trial, a low-dose prednisolone (5 mg/day) or placebo was added to the standard care in older people (≥65 years) with RA. We measured adherence with electronic monitoring and pill count in all patients "
                 },
                 {
-                  "type": "text",
-                  "value": "(Hartman et al., 2021)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Hartman2021"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",

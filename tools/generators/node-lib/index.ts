@@ -37,7 +37,10 @@ export interface NormalizedSchema extends Schema {
   parsedTags: string[]
 }
 
-const getCaseAwareFileName = (options: { pascalCaseFiles: boolean; fileName: string }) => {
+const getCaseAwareFileName = (options: {
+  pascalCaseFiles: boolean
+  fileName: string
+}) => {
   const normalized = names(options.fileName)
 
   return options.pascalCaseFiles ? normalized.className : normalized.fileName
@@ -47,7 +50,9 @@ const normalizeOptions = (tree: Tree, options: Schema): NormalizedSchema => {
   const { npmScope, libsDir } = getWorkspaceLayout(tree)
   const defaultPrefix = npmScope
   const name = names(options.name).fileName
-  const projectDirectory = options.directory ? `${names(options.directory).fileName}/${name}` : name
+  const projectDirectory = options.directory
+    ? `${names(options.directory).fileName}/${name}`
+    : name
 
   const projectName = projectDirectory.replace(new RegExp('/', 'g'), '-')
   const fileName = getCaseAwareFileName({
@@ -56,9 +61,12 @@ const normalizeOptions = (tree: Tree, options: Schema): NormalizedSchema => {
   })
   const projectRoot = joinPathFragments(libsDir, projectDirectory)
 
-  const parsedTags = options.tags ? options.tags.split(',').map((s) => s.trim()) : []
+  const parsedTags = options.tags
+    ? options.tags.split(',').map((s) => s.trim())
+    : []
 
-  const importPath = options.importPath || `@${defaultPrefix}/${projectDirectory}`
+  const importPath =
+    options.importPath || `@${defaultPrefix}/${projectDirectory}`
 
   return {
     ...options,
@@ -76,14 +84,19 @@ const createFiles = (tree: Tree, options: NormalizedSchema) => {
   const { className, name, propertyName } = names(options.fileName)
 
   try {
-    generateFiles(tree, join(__dirname, './files/lib'), options.projectRoot, {
-      ...options,
-      className,
-      name,
-      propertyName,
-      tmpl: '',
-      offsetFromRoot: offsetFromRoot(options.projectRoot),
-    })
+    generateFiles(
+      tree,
+      new URL('./files/lib', import.meta.url).pathname,
+      options.projectRoot,
+      {
+        ...options,
+        className,
+        name,
+        propertyName,
+        tmpl: '',
+        offsetFromRoot: offsetFromRoot(options.projectRoot),
+      }
+    )
   } catch (e) {
     console.error(e)
     throw new Error(e as string)
@@ -110,13 +123,17 @@ const updateRootTsConfig = (host: Tree, options: NormalizedSchema) => {
     //@ts-ignore
     if (c.paths[options.importPath]) {
       throw new Error(
-        `You already have a library using the import path "${options.importPath}". Make sure to specify a unique one.`,
+        `You already have a library using the import path "${options.importPath}". Make sure to specify a unique one.`
       )
     }
 
     //@ts-ignore
     c.paths[options.importPath] = [
-      joinPathFragments(options.projectRoot, './src', 'index.' + (options.js ? 'js' : 'ts')),
+      joinPathFragments(
+        options.projectRoot,
+        './src',
+        'index.' + (options.js ? 'js' : 'ts')
+      ),
     ]
 
     return json
@@ -192,10 +209,18 @@ const addProject = (tree: Tree, options: NormalizedSchema) => {
       },
     }
   }
-  addProjectConfiguration(tree, options.name, projectConfiguration, options.standaloneConfig)
+  addProjectConfiguration(
+    tree,
+    options.name,
+    projectConfiguration,
+    options.standaloneConfig
+  )
 }
 
-const addJest = async (tree: Tree, options: NormalizedSchema): Promise<GeneratorCallback> => {
+const addJest = async (
+  tree: Tree,
+  options: NormalizedSchema
+): Promise<GeneratorCallback> => {
   return await jestProjectGenerator(tree, {
     project: options.name,
     setupFile: 'none',
@@ -225,7 +250,7 @@ export const workspaceLibraryGenerator = async (tree: Tree, schema: Schema) => {
   }
   // if (options.unitTestRunner === 'jest') {
   // //  const jestCallback = await addJest(tree, options);
-  //   const jestCallback =  generateFiles(tree,join(__dirname, 'files','lib','jest.config.js'),{tmpl:'',...options},)
+  //   const jestCallback =  generateFiles(tree,new URL('files', import.meta.url,'lib','jest.config.js'),{tmpl:'',...options},)
   //   tasks.push(jestCallback);
   // }
 
@@ -242,7 +267,7 @@ export const libraryGenerator = async (tree: Tree, schema: Schema) => {
 
     if (options.publishable === true && !schema.importPath) {
       throw new Error(
-        `For publishable libs you have to provide a proper "--importPath" which needs to be a valid npm package name (e.g. my-awesome-lib or @myorg/my-lib)`,
+        `For publishable libs you have to provide a proper "--importPath" which needs to be a valid npm package name (e.g. my-awesome-lib or @myorg/my-lib)`
       )
     }
 

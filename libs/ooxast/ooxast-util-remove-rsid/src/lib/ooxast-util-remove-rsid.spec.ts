@@ -7,7 +7,7 @@ import { Root } from 'ooxast'
 describe('ooxastOoxastUtilRemoveRsid', () => {
   const tree = JSON.parse(
     readFileSync(
-      join(__dirname, '../../../../reoff/reoff-parse/src/test/ooxasttree'),
+      new URL('../../../../reoff/reoff-parse/src/test/ooxasttree', import.meta.url)),
       { encoding: 'utf-8' }
     )
   ) as Root
@@ -22,7 +22,7 @@ describe('ooxastOoxastUtilRemoveRsid', () => {
     ],
   }) as Root
   writeFileSync(
-    join(__dirname, './removedRsid'),
+    new URL('./removedRsid', import.meta.url)),
     JSON.stringify(cleanedTree, null, 2)
   )
   // console.dir(cleanedTree, { depth: null })

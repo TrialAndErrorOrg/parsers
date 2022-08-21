@@ -15,7 +15,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/reoff/reoff-parse-references-browser"],
       "options": {
-        "jestConfig": "libs/reoff/reoff-parse-references-browser/jest.config.ts",
+        "jestConfig": "libs/reoff/reoff-parse-references-browser/jest.config.js",
         "passWithNoTests": true
       }
     },

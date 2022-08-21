@@ -13,7 +13,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/citations/csl-consolidate"],
       "options": {
-        "jestConfig": "libs/citations/csl-consolidate/jest.config.ts",
+        "jestConfig": "libs/citations/csl-consolidate/jest.config.js",
         "passWithNoTests": true
       }
     },

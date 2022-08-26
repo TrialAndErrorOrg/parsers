@@ -1,6 +1,7 @@
 {
+  "minify": true,
   "jsc": {
-    "target": "es2020",
+    "target": "es2016",
     "parser": {
       "syntax": "typescript",
       "decorators": true,

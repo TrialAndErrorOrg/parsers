@@ -1,11 +1,4 @@
-import {
-  Rule,
-  XastNode,
-  Element,
-  XastParent as Parent,
-  SelectState,
-} from './types'
-import { isElement } from 'xast-util-is-element'
+import { Rule, XastNode, XastParent as Parent, SelectState } from './types'
 
 import { attribute } from './attribute'
 //import {className} from './class-name.js'

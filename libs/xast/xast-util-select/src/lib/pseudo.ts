@@ -14,7 +14,7 @@ import {
 import { extendedFilter } from 'bcp-47-match'
 import { parse as commas } from 'comma-separated-tokens'
 import { hasAttribute } from 'xast-util-has-attribute'
-import { isElement } from 'hast-util-is-element'
+import { isElement } from 'xast-util-is-element'
 import { whitespace } from 'hast-util-whitespace'
 import { zwitch } from 'zwitch'
 import { any } from './any'

@@ -1,10 +1,10 @@
-# xast-util-has-attribute
+# xast-util-is-element
 
-Port of [hast-util-has-property](https://github.com/syntax-tree/hast-util-has-property) for [xast][xast]
+Port of [hast-util-is-element](https://github.com/syntax-tree/hast-util-has-property) for [xast][xast]
 
 ## Contents
 
-- [xast-util-has-attribute](#xast-util-has-attribute)
+- [xast-util-is-element](#xast-util-is-element)
   - [Contents](#contents)
   - [What is this?](#what-is-this)
   - [When should I use this?](#when-should-i-use-this)
@@ -28,13 +28,13 @@ Port of [hast-util-has-property](https://github.com/syntax-tree/hast-util-has-pr
 This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, or 16.0+), install with [yarn](https://classic.yarnpkg.com/en/docs/cli/add)
 
 ```sh
-yarn add xast-util-has-attribute
+yarn add xast-util-is-element
 ```
 
 or with [npm](https://docs.npmjs.com/cli/install)
 
 ```sh
-npm install xast-util-has-attribute
+npm install xast-util-is-element
 ```
 
 ## Use
@@ -55,7 +55,7 @@ npm install xast-util-has-attribute
 
 ## License
 
-GPL-3-0-or-later © Thomas F. K. Jorna
+MIT © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
 [unifiedgh]: https://github.com/unifiedjs/unified

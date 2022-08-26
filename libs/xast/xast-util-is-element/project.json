@@ -18,14 +18,16 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/xast/xast-util-is-element",
         "tsConfig": "libs/xast/xast-util-is-element/tsconfig.lib.json",
         "packageJson": "libs/xast/xast-util-is-element/package.json",
         "main": "libs/xast/xast-util-is-element/src/index.ts",
-        "assets": ["libs/xast/xast-util-is-element/*.md"]
+        "assets": ["libs/xast/xast-util-is-element/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "clean": true
       }
     },
     "deploy": {

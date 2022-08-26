@@ -7,6 +7,7 @@ Port of `(hast-util-select)[https://github.com/syntax-tree/hast-util-select]` fo
 - [xast-util-select](#xast-util-select)
   - [Contents](#contents)
   - [What is this?](#what-is-this)
+    - [Caveats](#caveats)
   - [When should I use this?](#when-should-i-use-this)
   - [Install](#install)
   - [Use](#use)
@@ -21,6 +22,16 @@ Port of `(hast-util-select)[https://github.com/syntax-tree/hast-util-select]` fo
 A tool which allows you to select items from `xast` trees using CSS-like queries.
 
 This is a very naive port, so there's still a lot of HTML-specific logic included that could be removed to improve the size and efficiency of the program.
+
+### Caveats
+
+One thing to watch out for is that it's much more common to find `<namespace:tagname/>` style tags in XML. Make sure you escape the colon
+
+```ts
+const node = select('namespace\\:tagname', tree)
+```
+
+This is also something that could be improved in the future as pseudo-class selectors are not really necessary in generic XML, but I want to keep the API as similar to `hast-util-select` as possible for the time being.
 
 ## When should I use this?
 

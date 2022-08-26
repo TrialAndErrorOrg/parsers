@@ -7501,6 +7501,11 @@ gauge@^3.0.0:
     strip-ansi "^6.0.1"
     wide-align "^1.1.2"
 
+generate-package-json-webpack-plugin@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/generate-package-json-webpack-plugin/-/generate-package-json-webpack-plugin-2.6.0.tgz#cb98336801aad3cdc21304c278e5856f057ae233"
+  integrity sha512-JJS6CTkCIJeiqJay/mqrO005vbyLeozcyQvJf5AbToN7zsBewlu1Zk4dLiTV1+S/jJUUFjjn/ng9rjdbsJYyXw==
+
 generic-names@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/generic-names/-/generic-names-4.0.0.tgz#0bd8a2fd23fe8ea16cbd0a279acd69c06933d9a3"
@@ -14388,7 +14393,7 @@ zustand@^4.0.0-rc.1:
   dependencies:
     use-sync-external-store "1.2.0"
 
-zwitch@^2.0.0:
+zwitch@^2.0.0, zwitch@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/zwitch/-/zwitch-2.0.2.tgz#91f8d0e901ffa3d66599756dde7f57b17c95dce1"
   integrity sha512-JZxotl7SxAJH0j7dN4pxsTV6ZLXoLdGME+PsjkL/DaBrVryK9kTGq06GfKrwcSOqypP+fdXGoCHE36b99fWVoA==

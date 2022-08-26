@@ -45,6 +45,7 @@
     "escape-latex": "1.2.0",
     "execa": "^6.1.0",
     "form-data": "^4.0.0",
+    "generate-package-json-webpack-plugin": "^2.6.0",
     "hastscript": "^7.0.2",
     "isomorphic-fetch": "^3.0.0",
     "moo": "^0.5.1",
@@ -81,7 +82,8 @@
     "xast-util-to-string": "^2.0.0",
     "xast-util-to-xml": "^3.0.0",
     "xastscript": "^3.0.0",
-    "zustand": "^4.0.0-rc.1"
+    "zustand": "^4.0.0-rc.1",
+    "zwitch": "^2.0.2"
   },
   "devDependencies": {
     "@nestjs/schematics": "^8.0.0",

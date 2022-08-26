@@ -20,20 +20,19 @@
       }
     }
   },
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*"],
+    "prod": ["!{projectRoot}/**/*.spec.tsx"]
+  },
   "implicitDependencies": {
+    "workspace.json": "*",
     "package.json": {
       "dependencies": "*",
       "devDependencies": "*"
     },
-    ".eslintrc.json": "*"
-  },
-  "targetDependencies": {
-    "build": [
-      {
-        "target": "build",
-        "projects": "dependencies"
-      }
-    ]
+    ".eslintrc.json": "*",
+    "tsconfig.base.json": "*",
+    "nx.json": "*"
   },
   "defaultProject": "jote",
   "tasksRunnerOptions": {

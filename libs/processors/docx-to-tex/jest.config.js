@@ -1,11 +1,4 @@
 // @ts-check
-
-import { pathsToModuleNameMapper } from 'ts-jest'
-import { readFileSync } from 'fs'
-
-const { compilerOptions } = JSON.parse(
-  readFileSync('./tsconfig.base.json', 'utf8')
-)
 /* eslint-disable */
 
 const config = {

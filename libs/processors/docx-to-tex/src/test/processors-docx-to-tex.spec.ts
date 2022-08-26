@@ -71,7 +71,7 @@ const fromDocx = (
     )
     .use(relatexStringify)
 
-const fixtures = new URL('fixtures', import.meta.url)
+const fixtures = new URL('fixtures', import.meta.url).pathname
 const dir = readdirSync(fixtures)
 
 it.each(dir)('parses correctly for %s', async (name: string) => {

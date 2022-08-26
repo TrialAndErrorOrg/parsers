@@ -1,7 +1,7 @@
 {
   "name": "xast-util-select",
   "version": "0.0.1",
-  "license": "GPL-3-0-or-later",
+  "license": "MIT",
   "repository": "https://github.com/journaloftrialanderror/jote",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",

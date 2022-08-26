@@ -20,6 +20,8 @@ Port of `(hast-util-select)[https://github.com/syntax-tree/hast-util-select]` fo
 
 A tool which allows you to select items from `xast` trees using CSS-like queries.
 
+This is a very naive port, so there's still a lot of HTML-specific logic included that could be removed to improve the size and efficiency of the program.
+
 ## When should I use this?
 
 You are doing something low level with `xast` trees.

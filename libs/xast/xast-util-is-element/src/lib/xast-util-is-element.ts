@@ -246,7 +246,10 @@ function castFactory(check: TestFunctionAnything): AssertAnything {
     node: unknown,
     ...parameters: Array<unknown>
   ): boolean {
-    return element(node) && Boolean(check.call(this, node, ...parameters as number[]))
+    return (
+      element(node) &&
+      Boolean(check.call(this, node, ...(parameters as number[])))
+    )
   }
 }
 

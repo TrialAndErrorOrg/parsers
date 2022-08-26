@@ -36,55 +36,52 @@ export function enterState(state: SelectState, node: XastNode): () => void {
     }
 
     if (schema && schema.space === 'html') {
-      if (node.attributes.contentEditable === 'true') {
-        state.editableOrEditingHost = true
-        found = true
-      }
-
-      if (isElement(node, 'svg')) {
-        state.schema = svg
-        found = true
-      }
-
-      // See: <https://html.spec.whatwg.org/#the-directionality>.
-      // Explicit `[dir=rtl]`.
-      if (dir === 'rtl') {
-        dirInferred = dir
-      } else if (
-        // Explicit `[dir=ltr]`.
-        dir === 'ltr' ||
-        // HTML with an invalid or no `[dir]`.
-        (dir !== 'auto' && isElement(node, 'html')) ||
-        // `input[type=tel]` with an invalid or no `[dir]`.
-        (dir !== 'auto' && isElement(node, 'input') && type === 'tel')
-      ) {
-        dirInferred = 'ltr'
-        // `[dir=auto]` or `bdi` with an invalid or no `[dir]`.
-      } else if (dir === 'auto' || isElement(node, 'bdi')) {
-        if (isElement(node, 'textarea')) {
-          // Check contents of `<textarea>`.
-          dirInferred = dirBidi(toString(node))
-        } else if (
-          isElement(node, 'input') &&
-          (type === 'email' ||
-            type === 'search' ||
-            type === 'tel' ||
-            type === 'text')
-        ) {
-          // Check value of `<input>`.
-          dirInferred = node.attributes.value
-            ? dirBidi(node.attributes.value)
-            : 'ltr'
-        } else {
-          // Check text nodes in `node`.
-          visit(node, inferDirectionality)
-        }
-      }
-
-      if (dirInferred) {
-        state.direction = dirInferred
-        found = true
-      }
+      // if (node.attributes.contentEditable === 'true') {
+      //   state.editableOrEditingHost = true
+      //   found = true
+      // }
+      // if (isElement(node, 'svg')) {
+      //   state.schema = svg
+      //   found = true
+      // }
+      // // See: <https://html.spec.whatwg.org/#the-directionality>.
+      // // Explicit `[dir=rtl]`.
+      // if (dir === 'rtl') {
+      //   dirInferred = dir
+      // } else if (
+      //   // Explicit `[dir=ltr]`.
+      //   dir === 'ltr' ||
+      //   // HTML with an invalid or no `[dir]`.
+      //   (dir !== 'auto' && isElement(node, 'html')) ||
+      //   // `input[type=tel]` with an invalid or no `[dir]`.
+      //   (dir !== 'auto' && isElement(node, 'input') && type === 'tel')
+      // ) {
+      //   dirInferred = 'ltr'
+      //   // `[dir=auto]` or `bdi` with an invalid or no `[dir]`.
+      // } else if (dir === 'auto' || isElement(node, 'bdi')) {
+      //   if (isElement(node, 'textarea')) {
+      //     // Check contents of `<textarea>`.
+      //     dirInferred = dirBidi(toString(node))
+      //   } else if (
+      //     isElement(node, 'input') &&
+      //     (type === 'email' ||
+      //       type === 'search' ||
+      //       type === 'tel' ||
+      //       type === 'text')
+      //   ) {
+      //     // Check value of `<input>`.
+      //     dirInferred = node.attributes.value
+      //       ? dirBidi(node.attributes.value)
+      //       : 'ltr'
+      //   } else {
+      //     // Check text nodes in `node`.
+      //     visit(node, inferDirectionality)
+      //   }
+      // }
+      // if (dirInferred) {
+      //   state.direction = dirInferred
+      //   found = true
+      // }
     }
     // Turn off editing mode in non-HTML spaces.
     else if (state.editableOrEditingHost) {

@@ -7,7 +7,7 @@ import { toString } from 'xast-util-to-string'
 import { svg } from 'property-information'
 import { visit, EXIT, SKIP } from 'unist-util-visit'
 import { element } from './util'
-import { Parent } from 'ooxast'
+import { Parent } from 'xast'
 
 /**
  * @param {SelectState} state

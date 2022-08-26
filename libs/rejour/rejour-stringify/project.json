@@ -27,6 +27,12 @@
         "main": "libs/rejour/rejour-stringify/src/index.ts",
         "assets": ["libs/rejour/rejour-stringify/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

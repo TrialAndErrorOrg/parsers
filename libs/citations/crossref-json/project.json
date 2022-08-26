@@ -19,6 +19,12 @@
         "main": "libs/citations/crossref-json/src/index.ts",
         "assets": ["libs/citations/crossref-json/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

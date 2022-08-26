@@ -27,6 +27,12 @@
         "main": "libs/rejour/rejour-parse/src/index.ts",
         "assets": ["libs/rejour/rejour-parse/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

@@ -19,6 +19,12 @@
         "main": "libs/ojs/ojs-relatex/src/index.ts",
         "assets": ["libs/ojs/ojs-relatex/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

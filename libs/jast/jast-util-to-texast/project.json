@@ -27,6 +27,12 @@
         "main": "libs/jast/jast-util-to-texast/src/index.ts",
         "assets": ["libs/jast/jast-util-to-texast/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

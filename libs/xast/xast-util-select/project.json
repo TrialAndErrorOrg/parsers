@@ -27,6 +27,12 @@
         "jestConfig": "libs/xast/xast-util-select/jest.config.js",
         "passWithNoTests": true
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

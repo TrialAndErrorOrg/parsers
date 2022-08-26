@@ -27,6 +27,12 @@
         "main": "libs/ojs/ojs-client/src/index.ts",
         "assets": ["libs/ojs/ojs-client/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

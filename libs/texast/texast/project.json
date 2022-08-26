@@ -27,6 +27,12 @@
         "main": "libs/texast/texast/src/index.ts",
         "assets": ["libs/texast/texast/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

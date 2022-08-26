@@ -27,6 +27,12 @@
         "jestConfig": "libs/jast/jast-util-to-csl/jest.config.js",
         "passWithNoTests": true
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

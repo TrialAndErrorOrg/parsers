@@ -27,6 +27,12 @@
         "main": "libs/jast/jast-util-from-csl/src/index.ts",
         "assets": ["libs/jast/jast-util-from-csl/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

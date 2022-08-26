@@ -20,6 +20,12 @@
       "options": {
         "lintFilePatterns": ["libs/ooxast/ooxast-util-to-unified-latex/**/*.ts"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

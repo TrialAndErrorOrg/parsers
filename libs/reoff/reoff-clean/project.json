@@ -27,6 +27,12 @@
         "main": "libs/reoff/reoff-clean/src/index.ts",
         "assets": ["libs/reoff/reoff-clean/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

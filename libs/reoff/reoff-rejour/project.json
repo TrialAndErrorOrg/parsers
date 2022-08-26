@@ -27,6 +27,12 @@
         "main": "libs/reoff/reoff-rejour/src/index.ts",
         "assets": ["libs/reoff/reoff-rejour/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

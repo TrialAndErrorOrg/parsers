@@ -27,6 +27,12 @@
         "main": "libs/ooxast/ooxast/src/index.ts",
         "assets": ["libs/ooxast/ooxast/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

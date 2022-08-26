@@ -27,6 +27,12 @@
         "main": "libs/citations/crossref-to-csl/src/index.ts",
         "assets": ["libs/citations/crossref-to-csl/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

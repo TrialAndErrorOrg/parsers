@@ -27,6 +27,12 @@
         "main": "libs/rejour/rejour-relatex/src/index.ts",
         "assets": ["libs/rejour/rejour-relatex/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

@@ -27,6 +27,12 @@
         "main": "libs/reoff/reoff-cite/src/index.ts",
         "assets": ["libs/reoff/reoff-cite/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

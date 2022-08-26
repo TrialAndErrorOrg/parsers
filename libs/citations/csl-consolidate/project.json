@@ -27,6 +27,12 @@
         "main": "libs/citations/csl-consolidate/src/index.ts",
         "assets": ["libs/citations/csl-consolidate/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

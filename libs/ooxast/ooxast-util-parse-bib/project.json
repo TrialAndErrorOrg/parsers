@@ -27,6 +27,12 @@
         "main": "libs/ooxast/ooxast-util-parse-bib/src/index.ts",
         "assets": ["libs/ooxast/ooxast-util-parse-bib/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

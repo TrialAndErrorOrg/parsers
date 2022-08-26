@@ -20,6 +20,12 @@
       "options": {
         "lintFilePatterns": ["libs/citations/ojs-types/**/*.ts"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

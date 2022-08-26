@@ -27,6 +27,12 @@
         "main": "libs/xast/xast-util-is-element/src/index.ts",
         "assets": ["libs/xast/xast-util-is-element/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

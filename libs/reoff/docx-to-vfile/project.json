@@ -27,6 +27,12 @@
         "main": "libs/reoff/docx-to-vfile/src/index.ts",
         "assets": ["libs/reoff/docx-to-vfile/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

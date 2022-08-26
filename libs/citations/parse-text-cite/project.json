@@ -27,6 +27,12 @@
         "main": "libs/citations/parse-text-cite/src/index.ts",
         "assets": ["libs/citations/parse-text-cite/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

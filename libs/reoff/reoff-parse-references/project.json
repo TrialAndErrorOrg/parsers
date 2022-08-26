@@ -27,6 +27,12 @@
         "main": "libs/reoff/reoff-parse-references/src/index.ts",
         "assets": ["libs/reoff/reoff-parse-references/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

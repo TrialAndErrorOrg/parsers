@@ -27,6 +27,12 @@
         "main": "libs/ooxast/ooxast-util-remove-rsid/src/index.ts",
         "assets": ["libs/ooxast/ooxast-util-remove-rsid/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

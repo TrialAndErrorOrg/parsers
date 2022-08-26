@@ -27,6 +27,12 @@
         "main": "libs/rejour/rejour-meta/src/index.ts",
         "assets": ["libs/rejour/rejour-meta/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

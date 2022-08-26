@@ -29,6 +29,12 @@
         "main": "libs/reoff/reoff-parse-references-browser/src/index.ts",
         "assets": ["libs/reoff/reoff-parse-references-browser/*.md"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

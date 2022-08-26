@@ -5,7 +5,7 @@
   "repository": "https://github.com/journaloftrialanderror/jote",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "",
+  "description": "Port of hast-util-select for xast syntax trees",
   "keywords": [
     "unified",
     "abstract",

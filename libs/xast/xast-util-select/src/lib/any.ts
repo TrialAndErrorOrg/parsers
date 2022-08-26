@@ -13,13 +13,13 @@ import { zwitch } from 'zwitch'
 import { enterState } from './enter-state'
 import { nest } from './nest'
 import { pseudo } from './pseudo'
-import { test } from './test'
+import { test } from './test-node'
 
 const type = zwitch('type', {
   /**
    * TODO: For some reason ts expect error doesn't work for unknowntype
    */
-  unknown: unknownType as any ,
+  unknown: unknownType as any,
   invalid: invalidType,
   handlers: { selectors, ruleSet, rule } as any,
 })

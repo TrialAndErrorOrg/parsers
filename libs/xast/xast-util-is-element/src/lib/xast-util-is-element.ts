@@ -268,3 +268,10 @@ function element(node: unknown): node is Element {
       typeof node.name === 'string'
   )
 }
+
+const func = (node: unknown) => {
+  const el = isElement(node, 'textinput')
+  if (!el) {
+    const bel = isElement(node, 'button')
+  }
+}

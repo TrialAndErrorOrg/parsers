@@ -27,8 +27,14 @@
         "tsConfig": "libs/reoff/reoff-parse-references-browser/tsconfig.lib.json",
         "packageJson": "libs/reoff/reoff-parse-references-browser/package.json",
         "main": "libs/reoff/reoff-parse-references-browser/src/index.ts",
-        "assets": ["libs/reoff/reoff-parse-references-browser/*.md"]
-      }
+        "assets": ["libs/reoff/reoff-parse-references-browser/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "clean": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      },
+      "dependsOn": [
+        { "projects": "dependencies", "target": "build", "params": "forward" }
+      ]
     },
     "deploy": {
       "executor": "ngx-deploy-npm:deploy",

@@ -10,8 +10,14 @@
         "tsConfig": "libs/jast/jast-util-to-csl/tsconfig.lib.json",
         "packageJson": "libs/jast/jast-util-to-csl/package.json",
         "main": "libs/jast/jast-util-to-csl/src/index.ts",
-        "assets": ["libs/jast/jast-util-to-csl/*.md"]
-      }
+        "assets": ["libs/jast/jast-util-to-csl/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "clean": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      },
+      "dependsOn": [
+        { "projects": "dependencies", "target": "build", "params": "forward" }
+      ]
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",

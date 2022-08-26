@@ -10,8 +10,14 @@
         "tsConfig": "libs/rejour/rejour-frontmatter/tsconfig.lib.json",
         "packageJson": "libs/rejour/rejour-frontmatter/package.json",
         "main": "libs/rejour/rejour-frontmatter/src/index.ts",
-        "assets": ["libs/rejour/rejour-frontmatter/*.md"]
-      }
+        "assets": ["libs/rejour/rejour-frontmatter/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "clean": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      },
+      "dependsOn": [
+        { "projects": "dependencies", "target": "build", "params": "forward" }
+      ]
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",

@@ -25,8 +25,14 @@
         "tsConfig": "libs/reoff/reoff-rejour/tsconfig.lib.json",
         "packageJson": "libs/reoff/reoff-rejour/package.json",
         "main": "libs/reoff/reoff-rejour/src/index.ts",
-        "assets": ["libs/reoff/reoff-rejour/*.md"]
-      }
+        "assets": ["libs/reoff/reoff-rejour/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "clean": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      },
+      "dependsOn": [
+        { "projects": "dependencies", "target": "build", "params": "forward" }
+      ]
     },
     "deploy": {
       "executor": "ngx-deploy-npm:deploy",

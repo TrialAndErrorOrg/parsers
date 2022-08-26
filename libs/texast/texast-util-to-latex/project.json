@@ -25,8 +25,14 @@
         "tsConfig": "libs/texast/texast-util-to-latex/tsconfig.lib.json",
         "packageJson": "libs/texast/texast-util-to-latex/package.json",
         "main": "libs/texast/texast-util-to-latex/src/index.ts",
-        "assets": ["libs/texast/texast-util-to-latex/*.md"]
-      }
+        "assets": ["libs/texast/texast-util-to-latex/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "clean": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      },
+      "dependsOn": [
+        { "projects": "dependencies", "target": "build", "params": "forward" }
+      ]
     },
     "deploy": {
       "executor": "ngx-deploy-npm:deploy",

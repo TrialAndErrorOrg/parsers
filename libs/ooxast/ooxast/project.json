@@ -25,8 +25,14 @@
         "tsConfig": "libs/ooxast/ooxast/tsconfig.lib.json",
         "packageJson": "libs/ooxast/ooxast/package.json",
         "main": "libs/ooxast/ooxast/src/index.ts",
-        "assets": ["libs/ooxast/ooxast/*.md"]
-      }
+        "assets": ["libs/ooxast/ooxast/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "clean": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      },
+      "dependsOn": [
+        { "projects": "dependencies", "target": "build", "params": "forward" }
+      ]
     },
     "deploy": {
       "executor": "ngx-deploy-npm:deploy",

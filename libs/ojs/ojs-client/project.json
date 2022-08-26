@@ -25,8 +25,14 @@
         "tsConfig": "libs/ojs/ojs-client/tsconfig.lib.json",
         "packageJson": "libs/ojs/ojs-client/package.json",
         "main": "libs/ojs/ojs-client/src/index.ts",
-        "assets": ["libs/ojs/ojs-client/*.md"]
-      }
+        "assets": ["libs/ojs/ojs-client/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "clean": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      },
+      "dependsOn": [
+        { "projects": "dependencies", "target": "build", "params": "forward" }
+      ]
     },
     "deploy": {
       "executor": "ngx-deploy-npm:deploy",

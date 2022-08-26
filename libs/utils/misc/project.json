@@ -10,8 +10,14 @@
         "tsConfig": "libs/utils/misc/tsconfig.lib.json",
         "packageJson": "libs/utils/misc/package.json",
         "main": "libs/utils/misc/src/index.ts",
-        "assets": ["libs/utils/misc/*.md"]
-      }
+        "assets": ["libs/utils/misc/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "clean": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      },
+      "dependsOn": [
+        { "projects": "dependencies", "target": "build", "params": "forward" }
+      ]
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",

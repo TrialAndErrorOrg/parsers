@@ -25,8 +25,14 @@
         "tsConfig": "libs/citations/csl-consolidate/tsconfig.lib.json",
         "packageJson": "libs/citations/csl-consolidate/package.json",
         "main": "libs/citations/csl-consolidate/src/index.ts",
-        "assets": ["libs/citations/csl-consolidate/*.md"]
-      }
+        "assets": ["libs/citations/csl-consolidate/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "clean": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      },
+      "dependsOn": [
+        { "projects": "dependencies", "target": "build", "params": "forward" }
+      ]
     },
     "deploy": {
       "executor": "ngx-deploy-npm:deploy",

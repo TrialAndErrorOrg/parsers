@@ -17,8 +17,14 @@
         "tsConfig": "libs/citations/crossref-json/tsconfig.lib.json",
         "packageJson": "libs/citations/crossref-json/package.json",
         "main": "libs/citations/crossref-json/src/index.ts",
-        "assets": ["libs/citations/crossref-json/*.md"]
-      }
+        "assets": ["libs/citations/crossref-json/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "clean": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      },
+      "dependsOn": [
+        { "projects": "dependencies", "target": "build", "params": "forward" }
+      ]
     },
     "deploy": {
       "executor": "ngx-deploy-npm:deploy",

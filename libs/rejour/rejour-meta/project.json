@@ -25,8 +25,14 @@
         "tsConfig": "libs/rejour/rejour-meta/tsconfig.lib.json",
         "packageJson": "libs/rejour/rejour-meta/package.json",
         "main": "libs/rejour/rejour-meta/src/index.ts",
-        "assets": ["libs/rejour/rejour-meta/*.md"]
-      }
+        "assets": ["libs/rejour/rejour-meta/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "clean": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      },
+      "dependsOn": [
+        { "projects": "dependencies", "target": "build", "params": "forward" }
+      ]
     },
     "deploy": {
       "executor": "ngx-deploy-npm:deploy",

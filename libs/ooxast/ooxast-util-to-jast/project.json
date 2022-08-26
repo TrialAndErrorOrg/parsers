@@ -25,8 +25,14 @@
         "tsConfig": "libs/ooxast/ooxast-util-to-jast/tsconfig.lib.json",
         "packageJson": "libs/ooxast/ooxast-util-to-jast/package.json",
         "main": "libs/ooxast/ooxast-util-to-jast/src/index.ts",
-        "assets": ["libs/ooxast/ooxast-util-to-jast/*.md"]
-      }
+        "assets": ["libs/ooxast/ooxast-util-to-jast/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "clean": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      },
+      "dependsOn": [
+        { "projects": "dependencies", "target": "build", "params": "forward" }
+      ]
     },
     "deploy": {
       "executor": "ngx-deploy-npm:deploy",

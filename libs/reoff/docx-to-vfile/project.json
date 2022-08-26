@@ -25,8 +25,14 @@
         "tsConfig": "libs/reoff/docx-to-vfile/tsconfig.lib.json",
         "packageJson": "libs/reoff/docx-to-vfile/package.json",
         "main": "libs/reoff/docx-to-vfile/src/index.ts",
-        "assets": ["libs/reoff/docx-to-vfile/*.md"]
-      }
+        "assets": ["libs/reoff/docx-to-vfile/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "clean": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      },
+      "dependsOn": [
+        { "projects": "dependencies", "target": "build", "params": "forward" }
+      ]
     },
     "deploy": {
       "executor": "ngx-deploy-npm:deploy",

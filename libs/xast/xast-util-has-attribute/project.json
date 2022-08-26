@@ -10,8 +10,14 @@
         "tsConfig": "libs/xast/xast-util-has-attribute/tsconfig.lib.json",
         "packageJson": "libs/xast/xast-util-has-attribute/package.json",
         "main": "libs/xast/xast-util-has-attribute/src/index.ts",
-        "assets": ["libs/xast/xast-util-has-attribute/*.md"]
-      }
+        "assets": ["libs/xast/xast-util-has-attribute/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "clean": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      },
+      "dependsOn": [
+        { "projects": "dependencies", "target": "build", "params": "forward" }
+      ]
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",

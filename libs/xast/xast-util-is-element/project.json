@@ -28,7 +28,10 @@
         "assets": ["libs/xast/xast-util-is-element/*.md"],
         "updateBuildableProjectDepsInPackageJson": true,
         "clean": true
-      }
+      },
+      "dependsOn": [
+        { "projects": "dependencies", "target": "build", "params": "forward" }
+      ]
     },
     "deploy": {
       "executor": "ngx-deploy-npm:deploy",

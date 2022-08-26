@@ -11,8 +11,14 @@
         "tsConfig": "libs/ooxast/ooxast-util-to-unified-latex/tsconfig.lib.json",
         "packageJson": "libs/ooxast/ooxast-util-to-unified-latex/package.json",
         "main": "libs/ooxast/ooxast-util-to-unified-latex/src/index.ts",
-        "assets": ["libs/ooxast/ooxast-util-to-unified-latex/*.md"]
-      }
+        "assets": ["libs/ooxast/ooxast-util-to-unified-latex/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "clean": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      },
+      "dependsOn": [
+        { "projects": "dependencies", "target": "build", "params": "forward" }
+      ]
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",

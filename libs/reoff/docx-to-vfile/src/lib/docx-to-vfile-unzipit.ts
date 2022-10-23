@@ -53,7 +53,6 @@ export async function docxToVFile(
   const images = {} as { [key: string]: ArrayBuffer }
   for (const url of mediaUrls) {
     images[url] = await entries[`word/${url}`].arrayBuffer()
-    console.log(images)
   }
   vfile.data.images = images
   return vfile

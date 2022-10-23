@@ -10,7 +10,8 @@
     "clean-libs": "echo 'for i in libs/relatex/* libs/rejour/* \\n do \\n rm -f $i/yarn.lock && rm -rf $i/node_modules && yarn --cwd $i \\n done' | bash",
     "install-node": "echo 'for i in libs/relatex/* libs/rejour/* \\n do \\n rm -rf $i/node_modules && yarn --cwd $i \\n done' | bash",
     "update-readme": "echo 'for i in libs/*/README.md libs/re*/*/README.md; do;  node ./scripts/updateReadme.mjs $i; done' |bash",
-    "ruby": "ruby scripts/server.rb"
+    "ruby": "ruby scripts/server.rb",
+    "deploy": "echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc && nx deploy"
   },
   "type": "module",
   "private": true,

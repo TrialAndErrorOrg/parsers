@@ -1,6 +1,6 @@
 import { extractDocx } from './extractDocx'
 import { readFileSync } from 'fs'
-import tryCatchPromise from './tryCatchPromise'
+import { tryCatchPromise } from './tryCatchPromise'
 
 describe('utils', () => {
   const docx = readFileSync(

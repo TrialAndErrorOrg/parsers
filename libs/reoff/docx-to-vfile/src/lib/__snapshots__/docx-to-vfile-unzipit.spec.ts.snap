@@ -2,7 +2,7 @@
 
 exports[`reoffDocxToVfile should work 1`] = `
 VFile {
-  "cwd": "/Users/thomas/Projects/jote-monorepo",
+  "cwd": "/Volumes/SSD/Projects/jote-monorepo",
   "data": Object {
     "images": Object {},
     "relations": Object {

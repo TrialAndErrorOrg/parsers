@@ -21,6 +21,7 @@ const isP = convertElement<P>('w:p')
 export const citationTypesWithSuffixedForm = ['mendeley', 'zotero']
 export interface Options {
   bibliography?: CSL[]
+  log?: boolean
   type?: 'mendeley' | 'zotero' | 'citavi' | 'word' | 'endnote'
 }
 
@@ -92,7 +93,9 @@ export function findCitations(
       }
 
       try {
-        const parsedCitation: CiteOutput = parseTextCite(text.value)
+        const parsedCitation: CiteOutput = parseTextCite(text.value, {
+          log: options?.log,
+        })
         if (parsedCitation.every((item) => typeof item === 'string')) {
           runs.push(kid)
           continue

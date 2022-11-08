@@ -58,7 +58,7 @@ exports[`parses correctly for citationparagraph 1`] = `
 
 \\\\begin{document}
 
-  Despite the ongoing public and scholarly attention on social entrepreneurship, definitional debates seem far from settled \\\\parencite{Saebi2019, Mair2010, Choi2014, Saebi2019, Alegre2017}
+  Despite the ongoing public and scholarly attention on social entrepreneurship, definitional debates seem far from settled \\\\parencite{Saebi2019}. On the one hand, some scholars argue that defining social entrepreneurship is problematic because it means different things to different people and differs between contexts \\\\parencite{Mair2010}. Hence making it a ‘fuzzy' \\\\parencite{Choi2014} or an ‘unclear and contested' concept \\\\parencite{Saebi2019}. On the other hand, others argue that a widespread consensus exists within the academic community on what defines social entrepreneurship, social entrepreneur and social enterprise \\\\parencite{Alegre2017}.
 
 
 
@@ -721,6 +721,93 @@ exports[`parses correctly for citavi 1`] = `
 
 
 
+\\\\begin{filecontents}{bibliography.bib}
+
+  @article{Schwarz2001,
+    author      = {Schwarz and Oyserman},
+    year        = {2001}
+}
+
+
+@article{Dutcher2015,
+    author      = {Dutcher},
+    year        = {2015}
+}
+
+
+@article{Charness2018,
+    author      = {Charness},
+    year        = {2018}
+}
+
+
+@article{Andersen2018,
+    author      = {Andersen},
+    year        = {2018}
+}
+
+
+@article{Gneezy2006,
+    author      = {Gneezy and List},
+    year        = {2006}
+}
+
+
+@article{Converse1984,
+    author      = {Converse},
+    year        = {1984}
+}
+
+
+@article{Greenfield2006,
+    author      = {Greenfield},
+    year        = {2006}
+}
+
+
+@article{Schuman1979,
+    author      = {Schuman and Presser},
+    year        = {1979}
+}
+
+
+@article{Schwarz1999,
+    author      = {Schwarz},
+    year        = {1999}
+}
+
+
+@article{Christensen-Szalanski1980,
+    author      = {Christensen-Szalanski},
+    year        = {1980}
+}
+
+
+@article{Paulin2012,
+    author      = {Paulin and Suneson},
+    year        = {2012}
+}
+
+
+@article{Wang2011,
+    author      = {Wang},
+    year        = {2011}
+}
+
+
+@article{Witherspoon2013,
+    author      = {Witherspoon},
+    year        = {2013}
+}
+
+
+@article{Gwet2014,
+    author      = {Gwet},
+    year        = {2014}
+}
+
+\\\\end{filecontents}
+
 \\\\begin{document}
 
   \\\\textbf{Real-effort survey designs: Open-ended questions to overcome the challenge of measuring behavior in surveys}
@@ -753,11 +840,11 @@ This study aimed at testing a more valid way to study human behavior in surveys.
 
 \\\\textbf{Real-Effort Survey Designs: Open-Ended Questions to Overcome the Challenge of Measuring Behavior in Surveys}
 
-Measuring human behavior is an ongoing challenge for social scientists (Schwarz \\\\& Oyserman, 2001). In ideal circumstances, human behavior should be observed either in the field or in the lab. However, field trips and lab experiments are often both time- and resource-consuming. Observing behavior can also be prohibited in some cases, for instance if the behavior occurs too infrequently to be observed in a timely manner, or is not possible for others to observe (Schwarz \\\\& Oyserman, 2001, p. 128). Additionally, in the field of public administration and other fields using sensitive target groups, it is often difficult to recruit participants for a lab experiment or to even be allowed to observe them in the field. If lab experiments are conducted, they usually rely on students as participants. However, student samples are not externally valid, especially when a special population is being studied, such as public employees,. 
+Measuring human behavior is an ongoing challenge for social scientists \\\\parencite{Schwarz2001}. In ideal circumstances, human behavior should be observed either in the field or in the lab. However, field trips and lab experiments are often both time- and resource-consuming. Observing behavior can also be prohibited in some cases, for instance if the behavior occurs too infrequently to be observed in a timely manner, or is not possible for others to observe (Schwarz \\\\& Oyserman, 2001, p. 128). Additionally, in the field of public administration and other fields using sensitive target groups, it is often difficult to recruit participants for a lab experiment or to even be allowed to observe them in the field. If lab experiments are conducted, they usually rely on students as participants. However, student samples are not externally valid, especially when a special population is being studied, such as public employees,. 
 
 Therefore, self-reported behavior in surveys and survey experiments is an often-used alternative (James et al., 2017, p. 120). Surveys are “quick and cheap” (Friborg \\\\& Rosenvinge, 2013, p. 1398) and can easily reach an intended population. However, these approaches to data collection come with other disadvantages, such as not measuring real behavior. One solution could be to integrate open-ended questions as a measure of answering effort, and thus a proxy for real behavior, into quantitative surveys. This kind of method and data triangulation could help to overcome limitations of surveys related to the measurement of behavior. 
 
-Real-effort designs assume that greater effort in fulfilling a task makes it more likely that participants actually perform what they have stated (Dutcher et al., 2015). Fulfilling real-effort tasks are typically cognitively, creatively, or physically costly for participants (Charness et al., 2018). These costs are higher when more effort is put into fulfilling a task. In some studies, for example, participants are asked to count errors in real-effort tasks, thereby increasing the cognitive cost of the task (Andersen et al., 2018; Gneezy \\\\& List, 2006). Hence, it can be assumed that the more extensive, accurate, and fitting an answer to a question about future behavior is, the more likely it is that the described behavior will actually be performed in the future. 
+Real-effort designs assume that greater effort in fulfilling a task makes it more likely that participants actually perform what they have stated \\\\parencite{Dutcher2015}. Fulfilling real-effort tasks are typically cognitively, creatively, or physically costly for participants \\\\parencite{Charness2018}. These costs are higher when more effort is put into fulfilling a task. In some studies, for example, participants are asked to count errors in real-effort tasks, thereby increasing the cognitive cost of the task \\\\parencite{Andersen2018, Gneezy2006}. Hence, it can be assumed that the more extensive, accurate, and fitting an answer to a question about future behavior is, the more likely it is that the described behavior will actually be performed in the future. 
 
 To test this approach to measuring behavior, a survey experiment was conducted on the effect of rewards on public employees' knowledge-sharing behavior. An open-ended measure of behavior accompanied a closed-ended question measuring behavioral intention. However, it turned out that differences in answers to the open-ended measure were determined by their order. Earlier answers were longer and more accurate, whereas subsequent answers were significantly shorter and, therefore, represented less effort. This unforeseen order effect made the qualitative data unusable for studying within-subject differences. Between-subject differences and differences between rotated questions did not suffer from this order effect. 
 
@@ -767,15 +854,15 @@ This paper is organized as follows. Firstly, the state of research on the use of
 
 Combining open-ended and closed-ended questions in a survey requires a pragmatic approach of method and data triangulation (Rossman \\\\& Wilson, 1985, p. 631). Quantitative and qualitative methods not only succeed one another, but are integrated within a single study. Due to this triangulation, \\"researchers are allowed to improve the accuracy of conclusions by relying on data from more than one method\\" (Rossman \\\\& Wilson, 1985, p. 632). Hence, the combination of qualitative and quantitative data is used here to offset weaknesses of the latter, draw on the strengths of the former, and enhance the validity of the findings (Bryman, 2006, p. 105; Dewasiri et al., 2018).
 
-Several studies use this approach and compare answers to open-ended and closed-ended questions. Most of these studies report substantial discrepancies regarding answering behavior (Converse, 1984; Greenfield et al., 2006; Schuman \\\\& Presser, 1979; Schwarz, 1999). For example, open-ended questions usually produce a more diverse set of answers. In a study reported by Schuman and Presser (1979), 60\\\\% of answers to an open question fell outside of the pre-coded answer categories of a related closed-ended question in the control group. Additionally, new types of responses occurred in a frequency that justified additional answer categories. In contrast, some answer options were less likely to be spontaneously produced in open-ended questions than they were to be chosen when explicitly offered as an option in closed questions (Schuman \\\\& Presser, 1979, p. 365). Similarly, in a study on the quantity of alcohol consumption, Greenfield et al. (2006) found that the answers on the quantity of consumed alcohol of around 30\\\\% of respondents differed significantly between answers on open-ended and closed questions. They found that the combination of both an open-ended and a closed measure of the quantity of alcohol consumption was a stronger predictor of alcohol-related consequences than the individual measures (Greenfield et al., 2006).
+Several studies use this approach and compare answers to open-ended and closed-ended questions. Most of these studies report substantial discrepancies regarding answering behavior \\\\parencite{Converse1984, Greenfield2006, Schuman1979, Schwarz1999}. For example, open-ended questions usually produce a more diverse set of answers. In a study reported by Schuman and Presser (1979), 60\\\\% of answers to an open question fell outside of the pre-coded answer categories of a related closed-ended question in the control group. Additionally, new types of responses occurred in a frequency that justified additional answer categories. In contrast, some answer options were less likely to be spontaneously produced in open-ended questions than they were to be chosen when explicitly offered as an option in closed questions (Schuman \\\\& Presser, 1979, p. 365). Similarly, in a study on the quantity of alcohol consumption, Greenfield et al. (2006) found that the answers on the quantity of consumed alcohol of around 30\\\\% of respondents differed significantly between answers on open-ended and closed questions. They found that the combination of both an open-ended and a closed measure of the quantity of alcohol consumption was a stronger predictor of alcohol-related consequences than the individual measures \\\\parencite{Greenfield2006}.
 
 The aim of studies using open-ended and closed-ended questions in combination is usually to measure attitudes, feelings, or past behavior. However, self-reports, especially on past behavior, are a complex cognitive task that are highly context-dependent, and data are often seen as unreliable (Schwarz \\\\& Oyserman, 2001, p. 128). Some authors state that it is easier for participants to understand questions and recall relevant behavior when closed-ended questions are used (Schwarz \\\\& Oyserman, 2001, p. 131). In contrast, it is usually agreed that open-ended questions are more suited to asking about sensitive or stigmatizing information or when more in-depth information is needed (Friborg \\\\& Rosenvinge, 2013).
 
 However, I argue that the advantages of closed-ended questions only apply to questions on past instead of future behavior, where more emphasis lies on “editing” the answer. Hence, it is more important to get an accurate answer than a correct recall of past behavior. Accordingly, Singer and Couper (2017) suggest using open-ended questions in quantitative surveys more often to “encourage more truthful answers […] [and use them] as an indicator of response quality” (p. 3).
 
-Real-effort experimental designs rely on the assumption that greater effort in fulfilling a task makes it more likely that participants actually perform what they have stated (Dutcher et al., 2015). This assumption is based on the costs connected to fulfilling a real-effort task: The higher the costs an individual is willing to invest in answering, the more likely it is that these costs will also be invested in performing the actual behavior. Results based on real-effort designs are more externally valid when \\"the cost function of that task shares important characteristics with the field task\\" (Dutcher et al., 2015, p. 3). In surveys and survey experiments, open-ended questions can be used to measure effort in answering a question and, ultimately, we can use this as a proxy to measure real instead of stated behavior. Hence, the effort is for the most part cognitive and creative, but typing answers might also cost physical effort (Charness \\\\& Grieco, 2018, p. 75). Such a real-effort design might be a better estimator of actual behavior because \\"simply choosing a number may not capture the field environment and the psychological forces involved in putting forth actual effort\\" (Charness et al., 2018, p. 75). Greater effort can be operationalized with an extensive, accurate, and fitting answer. This is based on different assumptions: 
+Real-effort experimental designs rely on the assumption that greater effort in fulfilling a task makes it more likely that participants actually perform what they have stated \\\\parencite{Dutcher2015}. This assumption is based on the costs connected to fulfilling a real-effort task: The higher the costs an individual is willing to invest in answering, the more likely it is that these costs will also be invested in performing the actual behavior. Results based on real-effort designs are more externally valid when \\"the cost function of that task shares important characteristics with the field task\\" (Dutcher et al., 2015, p. 3). In surveys and survey experiments, open-ended questions can be used to measure effort in answering a question and, ultimately, we can use this as a proxy to measure real instead of stated behavior. Hence, the effort is for the most part cognitive and creative, but typing answers might also cost physical effort (Charness \\\\& Grieco, 2018, p. 75). Such a real-effort design might be a better estimator of actual behavior because \\"simply choosing a number may not capture the field environment and the psychological forces involved in putting forth actual effort\\" (Charness et al., 2018, p. 75). Greater effort can be operationalized with an extensive, accurate, and fitting answer. This is based on different assumptions: 
 
-One dimension of effort is the \\\\emph{length of time} during which cognitive resources are used (Christensen-Szalanski, 1980). Accordingly, the length of a written answer is an approximator of the duration of the effort. Similarly, the length of answers to open-ended questions are often used as indicators of data quality (Galesic \\\\& Bosnjak, 2009, p. 350). 
+One dimension of effort is the \\\\emph{length of time} during which cognitive resources are used \\\\parencite{Christensen-Szalanski1980}. Accordingly, the length of a written answer is an approximator of the duration of the effort. Similarly, the length of answers to open-ended questions are often used as indicators of data quality (Galesic \\\\& Bosnjak, 2009, p. 350). 
 
 \\\\emph{Accuracy and errors} can also be used to capture effort (Charness et al., 2018, p. 78). Such a procedure was used by Gneezy and List (2006), who conducted an experiment in which participants had to enter library data into a database. They counted the number of errors in these entries as a measure of effort. Similarly, Andersen et al. (2018) registered an experiment in public administration research using this approach to compare work effort between public and private organizations. They asked participants to transcribe handwritten timesheets and checked their accuracy. 
 
@@ -785,7 +872,7 @@ In such settings, participants' skills and abilities may strongly confound the r
 
 \\\\textbf{Putting a Real-Effort Survey Design into Practice: The Effect of Rewards on Knowledge-Sharing Behavior}
 
-A survey experiment on knowledge-sharing behavior was conducted to analyze whether tangible or intangible incentives can foster that behavior. Knowledge sharing is the exchange of knowledge among individuals, teams, units, or organizations (Paulin \\\\& Suneson, 2012). It is the basis of and a subprocess in an organization's knowledge management. In this article, the term “knowledge sharing” describes the behavior of donating knowledge from one person to another or to a medium. Multiple determinants influence knowledge sharing. Among others, tangible and intangible rewards are considered to foster knowledge-sharing behavior. Tangible rewards are material incentives, such as financial bonuses, and usually enhance extrinsic motivation. In contrast, intangible rewards, such as praise from a colleague or supervisor, usually influences intrinsic motivation. On the one hand, it has been shown that monitoring (e.g., controlling with performance measures) and rewards increase the knowledge-sharing activity of employees in an organization (Wang et al., 2011; Witherspoon et al., 2013). On the other hand, Bock and Kim's (2002) results suggest that expected rewards do not affect knowledge sharing.
+A survey experiment on knowledge-sharing behavior was conducted to analyze whether tangible or intangible incentives can foster that behavior. Knowledge sharing is the exchange of knowledge among individuals, teams, units, or organizations \\\\parencite{Paulin2012}. It is the basis of and a subprocess in an organization's knowledge management. In this article, the term “knowledge sharing” describes the behavior of donating knowledge from one person to another or to a medium. Multiple determinants influence knowledge sharing. Among others, tangible and intangible rewards are considered to foster knowledge-sharing behavior. Tangible rewards are material incentives, such as financial bonuses, and usually enhance extrinsic motivation. In contrast, intangible rewards, such as praise from a colleague or supervisor, usually influences intrinsic motivation. On the one hand, it has been shown that monitoring (e.g., controlling with performance measures) and rewards increase the knowledge-sharing activity of employees in an organization \\\\parencite{Wang2011, Witherspoon2013}. On the other hand, Bock and Kim's (2002) results suggest that expected rewards do not affect knowledge sharing.
 
 A 2x3 factorial survey experiment was designed to observe the within-subjects and between-subjects effects of the rewards offered. The research design was preregistered on the Open Science Framework (Fischer, 2018). Data were collected from German public employees in the core administration and health sector (\\\\emph{N} = 623) in 2018 using a self-administered questionnaire. As can be seen from Appendix A, most participants were female (61\\\\%). The mean age was 45 years, and participants had a tenure of 20 years on average.
 
@@ -801,7 +888,7 @@ Additionally, \\\\emph{knowledge-sharing intention} (KSI) was measured in a clos
 
 To code the open-ended answers, three dimensions were defined preliminarily, based on the literature, to rate the quality of the answer: the description's length, accuracy, and fit with the vignette. Two dimensions were added inductively during the coding process. Firstly, some participants answered the question with few words and therefore did not score in the quantity dimension, but were considered separately from participants who did not answer because they at least put some effort into answering the question. Secondly, some participants answered very elaborately in terms of length and content, and this effort was assigned a bonus point. Each dimension was coded as a dummy variable and an additive index was formed, ranging from zero to five. 
 
-Coding was done by two independent raters.\\\\footnote{I want to thank Lisa-Sophia Preller for serving as the second coder of this study. Both raters were asked to use different coding strategies, to avoid effects of the coding procedure: (1) one rater coded the cases one by one in order to have an eye on the complete answer, (2) another rater coded each dimension across all cases one by one in order to have an eye on the comparability of the ratings. The fifth dimension (high effort in answering) was not coded by both raters but added afterward and coded by a single rater, therefore no interrater reliability is calculated here.} Interrater reliability was calculated using Gwet's Agreement Coefficient (AC; Gwet, 2014). Due to the fact that there was only partial agreement in the ratings of some dimensions (see Appendix C), the raters discussed differences in coding and specified coding rules. In a second step, both raters agreed on a rating. This “negotiated” rating was used for further analysis.
+Coding was done by two independent raters.\\\\footnote{I want to thank Lisa-Sophia Preller for serving as the second coder of this study. Both raters were asked to use different coding strategies, to avoid effects of the coding procedure: (1) one rater coded the cases one by one in order to have an eye on the complete answer, (2) another rater coded each dimension across all cases one by one in order to have an eye on the comparability of the ratings. The fifth dimension (high effort in answering) was not coded by both raters but added afterward and coded by a single rater, therefore no interrater reliability is calculated here.} Interrater reliability was calculated using Gwet's Agreement Coefficient \\\\parencite[][AC]{Gwet2014}. Due to the fact that there was only partial agreement in the ratings of some dimensions (see Appendix C), the raters discussed differences in coding and specified coding rules. In a second step, both raters agreed on a rating. This “negotiated” rating was used for further analysis.
 
 
 
@@ -1925,7 +2012,7 @@ In this experiment, participants receive two different types of stimuli: a vibro
 
 \\\\subsection{Laboratory Setup}
 
-The participants receive two types of stimuli at the same time, replicating the procedure in Traxler et al. \\\\parencite{Traxler2019}. Stimulus onset and timing are controlled using Affect 4.0 \\\\parencite{Spruyt2009}. A vibrotactile stimulus is delivered to the skin using tactors manufactured by Dancer Design taped to the participant's skin \\\\parencite{Dancer Design0}. This stimulus is of fixed duration and a clearly perceptible intensity. Three tactors are used in the arrangement as the source of a CS (see Figure 1). The SIDE tactor is allocated to CS\\\\textsubscript{neutral}, whereas the ABOVE and BELOW tactors are assigned to CS+ and CS- in a counterbalanced way across participants.
+The participants receive two types of stimuli at the same time, replicating the procedure in Traxler et al. \\\\parencite{Traxler2019}. Stimulus onset and timing are controlled using Affect 4.0 \\\\parencite{Spruyt2009}. A vibrotactile stimulus is delivered to the skin using tactors manufactured by Dancer Design taped to the participant's skin \\\\parencite{Dancer Design0}(Dancer Design, n.d.). This stimulus is of fixed duration and a clearly perceptible intensity. Three tactors are used in the arrangement as the source of a CS (see Figure 1). The SIDE tactor is allocated to CS\\\\textsubscript{neutral}, whereas the ABOVE and BELOW tactors are assigned to CS+ and CS- in a counterbalanced way across participants.
 
 \\\\textbf{Figure 1}
 
@@ -1933,7 +2020,7 @@ The participants receive two types of stimuli at the same time, replicating the 
 
 [INSERT FIGURE 1 HERE]
 
-An electrocutaneous stimulation is delivered by passing a current across two surface electrodes located at the midpoint between the tactors to serve as the US (Figure 1). The current is delivered using a DS7A constant current stimulator \\\\parencite{Digitimer Limited0}. The stimulation intensity is calibrated individually. The number of pulses delivered on each stimulation occasion is varied to provide a US\\\\textsubscript{high} that is usually painful, a US\\\\textsubscript{low} that is usually non-painful, and a US\\\\textsubscript{test} that is calibrated to lie close to the pain threshold, the boundary between non-painful and painful.
+An electrocutaneous stimulation is delivered by passing a current across two surface electrodes located at the midpoint between the tactors to serve as the US (Figure 1). The current is delivered using a DS7A constant current stimulator \\\\parencite{Digitimer Limited0}(Digitimer Limited, n.d.). The stimulation intensity is calibrated individually. The number of pulses delivered on each stimulation occasion is varied to provide a US\\\\textsubscript{high} that is usually painful, a US\\\\textsubscript{low} that is usually non-painful, and a US\\\\textsubscript{test} that is calibrated to lie close to the pain threshold, the boundary between non-painful and painful.
 
 \\\\subsection{Tactor and Electrode Preparation}
 
@@ -2017,7 +2104,7 @@ Number of participants: Since the pilot tests revealed a small effect size, and 
 
 For the power study, we wanted to simulate observed values that were similar to the experiment. For the baseline, we assumed a symmetric distribution around 0 for the SPARS rating. Therefore, the painful/non-painful ratings were expected to be 0s and 1s equally for both CS+/ US\\\\textsubscript{test} and CS-/ US\\\\textsubscript{test} trials. Hence, an observed value corresponding to a trial pair in the baseline was expected to be 1 with 25\\\\% probability, -1 with 25\\\\% probability, and 0 with 50\\\\% probability. We simulated observed values as 1, -1, and 0 with these probabilities. For the test phase, we increased the probability of 1 by half the selected effect size and decreased the probability of -1 by half the selected effect size. This resulted in an expected MD effect size equal to the selected effect size. 
 
-Since the number of randomizations for the RT was huge, we simulated Monte Carlo RTs with 1000 randomizations \\\\parencite{Edgington1969}. For estimating power, we simulated 10000 datasets for each set of simulation conditions. Finally, we used a 5\\\\% level of significance for the simulated RTs.
+Since the number of randomizations for the RT was huge, we simulated Monte Carlo RTs with 1000 randomizations \\\\parencite{Edgington1969}
 
 The simulations were run on supercomputer nodes at the Flemish Supercomputer Center (Leuven, Belgium). This allowed testing more simulation conditions and achieve high accuracy simulating a large number of datasets for each simulation condition; however, the simulations can also be run at a smaller scale on a personal computer. 
 
@@ -2145,7 +2232,7 @@ The data and R code used in this study are openly available on Open Science Foun
 
 \\\\section{References}
 
-\\\\emph{Animal Behaviour}, \\\\emph{51}(4), 733--738. https://doi.org/https://doi.org/10.1006/anbe.1996.0077
+Adams, D. C., \\\\& Anthony, C. D. (1996). Using randomization techniques to analyse behavioural data. \\\\emph{Animal Behaviour}, \\\\emph{51}(4), 733--738. https://doi.org/https://doi.org/10.1006/anbe.1996.0077
 
 Barlow, D. H., Nock, M. K., \\\\& Hersen, M. (2009). \\\\emph{Single case experimental designs: Strategies for studying behavior change} (3rd ed.). Pearson/Allyn and Bacon.
 
@@ -2377,6 +2464,50 @@ exports[`parses correctly for endnote 1`] = `
 
 
 
+\\\\begin{filecontents}{bibliography.bib}
+
+  @article{Brown2011,
+    title       = {Medication adherence: WHO cares?},
+    author      = {Brown, A.D.D.I.N.E.N.R.E.F.L.I.S.T. and T., M. and Bussell, J.K.},
+    number      = {4},
+    volume      = {86},
+    year        = {2011},
+    pages       = {304--314},
+    journal     = {Mayo Clinical Proceedings}
+}
+
+
+@article{Jungst2019,
+    title       = {Medication adherence among patients with chronic diseases: A survey-based study in pharmacies},
+    author      = {Jungst, C. and Graber, S. and Simons, S. and Wedemeyer, H. and Lammert, F.},
+    number      = {7},
+    volume      = {112},
+    year        = {2019},
+    pages       = {505--512},
+    journal     = {QJM: An International Journal of Medicine}
+}
+
+
+@article{Kini2018,
+    title       = {Interventions to improve medication adherence: A review},
+    author      = {Kini, V. and Ho, P.M.},
+    number      = {23},
+    volume      = {320},
+    year        = {2018},
+    pages       = {2461--2473},
+    journal     = {The Journal of the American Medical Association}
+}
+
+
+@article{Hartman2021,
+    title       = {Medication adherence in older people with rheumatoid arthritis is lower according to electronic monitoring than according to pill count},
+    author      = {Hartman, L. and Cutolo, M. and Bos, R. and Opris-Belinski, D. and Kok, M.R. and Griep-Wentink, H. and Klaasen, R. and Allaart, C.F. and Bruyn, G.A.W. and Raterman, H.G. and Voshaar, M.J.H. and Gomes, N. and Pinto, R.M.A. and Klausch, L.T. and Lems, W.F. and Boers, M.},
+    year        = {2021},
+    journal     = {Rheumatology}
+}
+
+\\\\end{filecontents}
+
 \\\\begin{document}
 
   \\\\section{The GLORIA adherence subproject: problems and randomization mistakes}
@@ -2415,11 +2546,11 @@ The ongoing two-year Glucocorticoid Low-dose Outcome in Rheumatoid Arthritis (GL
 
 \\\\subsection{Introduction}
 
-Medication adherence, which is the extent to which patients take their medication as prescribed , is essential to treat chronic inflammatory diseases, such as rheumatoid arthritis (RA; Jungst et al., 2019). Almost half of patients with chronic diseases are non-adherent (Jungst et al., 2019; Kini \\\\& Ho, 2018). Non-adherence substantially increases the risk of a disease flare in RA (Jungst et al., 2019). 
+Medication adherence, which is the extent to which patients take their medication as prescribed \\\\parencite{Brown2011}, is essential to treat chronic inflammatory diseases, such as rheumatoid arthritis (RA; Jungst et al., 2019). Almost half of patients with chronic diseases are non-adherent \\\\parencite{Jungst2019, Kini2018}. Non-adherence substantially increases the risk of a disease flare in RA \\\\parencite{Jungst2019}. 
 
 
 
-In the two-year multicenter Glucocorticoid Low-dose Outcome in Rheumatoid Arthritis (GLORIA) trial, a low-dose prednisolone (5 mg/day) or placebo was added to the standard care in older people (≥65 years) with RA. We measured adherence with electronic monitoring and pill count in all patients (Hartman et al., 2021). In a subproject nested within the trial, we assessed the efficacy of an adherence intervention for the patients with a smart device. 
+In the two-year multicenter Glucocorticoid Low-dose Outcome in Rheumatoid Arthritis (GLORIA) trial, a low-dose prednisolone (5 mg/day) or placebo was added to the standard care in older people (≥65 years) with RA. We measured adherence with electronic monitoring and pill count in all patients \\\\parencite{Hartman2021}. In a subproject nested within the trial, we assessed the efficacy of an adherence intervention for the patients with a smart device. 
 
 
 
@@ -2622,7 +2753,7 @@ J. W. J. Bijlsma, R. Christensen, Y. M. Smulders and S. H. Ralston are members o
 
 \\\\subsection{References}
 
-\\\\emph{Mayo Clinical Proceedings, }\\\\emph{86}(4), 304-314.
+Brown, M. T. \\\\& Bussell, J. K. (2011). Medication adherence: WHO cares? \\\\emph{Mayo Clinical Proceedings, }\\\\emph{86}(4), 304-314.
 
 Hartman, L., Cutolo, M., Bos, R., Opris-Belinski, D., Kok, M. R., Griep-Wentink, H., Klaasen, R., Allaart, C. F., Bruyn, G. A. W., Raterman, H. G., Voshaar, M. J. H., Gomes, N., Pinto, R. M. A., Klausch, L.T., Lems, W. F., \\\\& Boers, M. (2021). Medication adherence in older people with rheumatoid arthritis is lower according to electronic monitoring than according to pill count. \\\\emph{Rheumatology}.
 
@@ -2666,6 +2797,90 @@ exports[`parses correctly for nocites 1`] = `
 
 
 
+\\\\begin{filecontents}{bibliography.bib}
+
+  @article{Barrington2020,
+    author      = {Barrington},
+    year        = {2020}
+}
+
+
+@article{Sindall2020,
+    title       = {Fail fast, fail forward, fail openly: The need to share failures in development},
+    author      = {Sindall, R.C. and Barrington, D.J.},
+    number      = {1},
+    volume      = {1},
+    doi         = {10.36850/ed2},
+    year        = {2020},
+    pages       = {6--8},
+    journal     = {Journal of Trial and Error}
+}
+
+
+@article{Holden2009,
+    title       = {People or systems? To blame is human. The fix is to engineer},
+    author      = {Holden, R.J.},
+    number      = {12},
+    volume      = {54},
+    year        = {2009},
+    pages       = {34--41},
+    journal     = {Professional safety}
+}
+
+
+@article{Gilson1996,
+    title       = {Coping with complex alarms: Sophisticated aircraft cockpit alarm systems demand a shift in training strategies},
+    author      = {Gilson, R.D. and Deaton, J.E. and Mouloua, M.},
+    number      = {4},
+    volume      = {4},
+    doi         = {10.1177/106480469600400404},
+    year        = {1996},
+    pages       = {12--18},
+    journal     = {Ergonomics in Design: The Quarterly of Human Factors Applications}
+}
+
+
+@article{Levin2019,
+    title       = {Boeing failed to predict that slew of 737 Max warning alarms would confuse pilots, investigators say},
+    author      = {Levin, A.},
+    year        = {2019-09-26}
+}
+
+
+@article{Kwok2011,
+    title       = {Who would benefit from memory training? A pilot study examining the ceiling effect of concurrent cognitive stimulation},
+    author      = {Kwok, T.C. and Chau, W.W. and Yuen, K.S. and Wong, A.Y. and Li, J.C. and Shiu, R.Y. and Ho, F.K.},
+    volume      = {6},
+    doi         = {10.2147/CIA.S16802},
+    year        = {2011},
+    pages       = {83--88},
+    journal     = {Clinical Interventions in Aging}
+}
+
+
+@article{Traut2021,
+    title       = {Why does cognitive training yield inconsistent benefits? A meta-analysis of individual differences in baseline cognitive abilities and training outcomes},
+    author      = {Traut, H.J. and Guild, R.M. and Munakata, Y.},
+    volume      = {12},
+    doi         = {10.3389/fpsyg.2021.662139},
+    year        = {2021},
+    pages       = {1--20},
+    journal     = {Frontiers in psychology}
+}
+
+
+@article{Bevilacqua2018,
+    title       = {Human factor risk management in the process industry: A case study},
+    author      = {Bevilacqua, M. and Ciarapica, F.E.},
+    volume      = {169},
+    doi         = {10.1016/j.ress.2017.08.013},
+    year        = {2018},
+    pages       = {149--159},
+    journal     = {Reliability Engineering \\\\& System Safety}
+}
+
+\\\\end{filecontents}
+
 \\\\begin{document}
 
   \\\\section{Systemic Problems in Academia: The Positive Publication Bias and Solutions from a Human Factors Perspective }
@@ -2674,11 +2889,11 @@ exports[`parses correctly for nocites 1`] = `
 
 It will come as no surprise to readers of this journal that failure is systematically ignored in academia. The entire culture of academia revolves around a notion of linear progress made in leaps and bounds by great thinkers, rather than the more realistic image of science as an ongoing process of trial and error. For those already convinced that error deserves a place in scientific discussion, it is often tempting to treat the dismissal of failure as a moral failure on the part of researchers and publishers—if only we were more courageous to do the work that science demands of us, we would publish our failures all the time; if it was not for journals rejecting my work because it is not “innovative” enough, I would tell everyone of my important failures. This perspective, while understandable, misses the mark. Specifically, it neglects the \\\\emph{structure }of modern academia that perpetuates an ideal of “success-first” science on all fronts—a structure, like any structure, that severely limits researchers' and journals' ability to change it. 
 
-This point is described superbly in a recent editorial piece by public health researchers Rebecca Sindall and Dani Barrington (2020), who point out the many barriers to sharing and promoting scholarly understandings of failure in the public health interventionist field of Water, Sanitation, and Hygiene (WASH), which they experienced personally as well. 
+This point is described superbly in a recent editorial piece by public health researchers Rebecca Sindall and Dani \\\\parencite{Barrington2020}, who point out the many barriers to sharing and promoting scholarly understandings of failure in the public health interventionist field of Water, Sanitation, and Hygiene (WASH), which they experienced personally as well. 
 
 In their  in the Journal of Trial and Error's (JOTE) first issue, the authors argue not only for the role of researchers themselves in pursuing submission and publication of reports of what went wrong, but also of funding partners in sharing information about projects that did not \\"turn out as planned,\\" and importantly, for the responsibility of journals in welcoming such sort of publications. Critically, they argue that the widespread fixation on “novelty” contributes to a \\"culture of success-ism\\" that is \\"highly unscientific\\". In short, the outward-facing sheen of scientific success—propagated by scientists, funders, and stakeholders alike—challenges the very foundations scientific development is built on: transparency, collaboration, and trial and error.
 
-Sindall and Barrington (2020) paint a compelling picture of an academic system that struggles to find a place for failure and the “multitude of sins” such a system necessarily perpetuates. Rightly so, they place the responsibility for change not only on researchers, but also funders and publication bodies. 
+\\\\parencite{Sindall2020} paint a compelling picture of an academic system that struggles to find a place for failure and the “multitude of sins” such a system necessarily perpetuates. Rightly so, they place the responsibility for change not only on researchers, but also funders and publication bodies. 
 
 But the buck doesn't stop here. The same culture of success-ism that limits researchers limits individual publishers as well. The problem is diffuse and the blame cannot be laid on a single “bad actor”. Accordingly, we feel it pertinent to extend Sindall \\\\& Barrington's argument by highlighting the structural barriers that restrict the spread of failure in the sciences, even at the editorial level. To do so, we use systems theory to frame three limitations journals face when publishing failure and how these limitations cannot simply be solved by good agents engaging in good science. 
 
@@ -2686,13 +2901,13 @@ But the buck doesn't stop here. The same culture of success-ism that limits rese
 
 \\\\section{2. Failure and Systems }
 
-In the field of Human Factors, and more specifically in Forensic Human Factors, it has long been recognized that failure usually occurs in the complex environment of a system. When accidents such as the Chernobyl nuclear disaster occur, it is easy to shift blame to a single individual or to a single team that was present when mistakes occurred. In response to these disasters, these employees are subsequently reprimanded and sometimes fired. A new person might fill their position and, in some cases, training protocols might be updated. However, these are often very ineffective measures. As previously indicated, mistakes are made in a complex environment. This means that mistakes can have occurred for any number of reasons, and often because of a combination of reasons. Accordingly, removing just one factor from the environment (i.e., the employee present during the disaster) is unlikely to significantly diminish the chances of similar mistakes happening in the future, because it was unlikely to be the determining factor (Holden, 2009). 
+In the field of Human Factors, and more specifically in Forensic Human Factors, it has long been recognized that failure usually occurs in the complex environment of a system. When accidents such as the Chernobyl nuclear disaster occur, it is easy to shift blame to a single individual or to a single team that was present when mistakes occurred. In response to these disasters, these employees are subsequently reprimanded and sometimes fired. A new person might fill their position and, in some cases, training protocols might be updated. However, these are often very ineffective measures. As previously indicated, mistakes are made in a complex environment. This means that mistakes can have occurred for any number of reasons, and often because of a combination of reasons. Accordingly, removing just one factor from the environment (i.e., the employee present during the disaster) is unlikely to significantly diminish the chances of similar mistakes happening in the future, because it was unlikely to be the determining factor \\\\parencite{Holden2009}. 
 
 Fields such as the aviation industry have long recognized that there are better alternatives to simply replacing or retraining staff following a negative incident. For instance, at the beginning of the proliferation of commercial flights, it became clear that cockpits were often too complicated for pilots to understand, which lead to mistakes being made, and consequently accidents occured. Instead of firing the pilots who made mistakes and/or making small changes to training protocols, the aviation industry started making changes to the cockpits themselves. In other words, the industry transformed the environment, not the agents.
 
-By increasing the simplicity of the cockpit, pilots were less taxed and could invest more cognitive resources towards flying the plane. An example of such an environmental change is the adaptation of cockpit alarms. In older planes, cockpits would have the same audio-visual cues for every alarm. Thus, the pilot got the same feedback from the system when the fuel was slightly low as when an important engine was malfunctioning. Pilots were then mentally taxed on two levels: they were constantly confronted with distracting alarms, some of which might not need their immediate attention; and when attending to these alarms, they had to invest great effort in distinguishing the alarm and assessing its importance. As a result, pilots learned to ignore most alarms. A research article published in 1996 summarized problems such as these at the time as follows: “The proliferation of alarms has led to the increased likelihood of false or multiple alarm events and the consequent inability of the operator to determine the underlying cause of the alarm(s)” (Gilson et al., 1996, p. 12). Under such a system, a situation such as the following might occur: During a flight, one of the important engines malfunctions and needs immediate attention. At the same time, a number of other small, but non-urgent, malfunctions could occur. Because the very attentive, but overly taxed pilot cannot properly differentiate between the different alarms, they end up paying attention to the wrong malfunction. A short while later, the plane crashes. As recently as 2019, a plane crash occurred due to a poorly designed alarm system (Levin, 2019). 
+By increasing the simplicity of the cockpit, pilots were less taxed and could invest more cognitive resources towards flying the plane. An example of such an environmental change is the adaptation of cockpit alarms. In older planes, cockpits would have the same audio-visual cues for every alarm. Thus, the pilot got the same feedback from the system when the fuel was slightly low as when an important engine was malfunctioning. Pilots were then mentally taxed on two levels: they were constantly confronted with distracting alarms, some of which might not need their immediate attention; and when attending to these alarms, they had to invest great effort in distinguishing the alarm and assessing its importance. As a result, pilots learned to ignore most alarms. A research article published in 1996 summarized problems such as these at the time as follows: “The proliferation of alarms has led to the increased likelihood of false or multiple alarm events and the consequent inability of the operator to determine the underlying cause of the alarm(s)” \\\\parencite[pp. 12][]{Gilson1996, Levin2019}. 
 
-Faced with the issue of the inattentive pilot, an airline company is presented with two solutions. On the one hand, the company could fire the pilot, hire a new one, and train them for a longer period of time, with a more experienced instructor, and with more expensive training equipment. Besides the fact that this would be very expensive, it would also be unlikely to solve the problem. Humans' cognitive abilities are limited. This is because, like all human systems, their underlying biological systems operate on limited resources. Similarly, in the realms of cognition, some cognitive scientists believe you can train people for things like working memory, sustained attention, selective attention, and other cognitive skills, but all of these will have a natural ceiling—a point beyond which it is almost impossible to progress (Kwok et al., 2011; Traut et al., 2021). 
+Faced with the issue of the inattentive pilot, an airline company is presented with two solutions. On the one hand, the company could fire the pilot, hire a new one, and train them for a longer period of time, with a more experienced instructor, and with more expensive training equipment. Besides the fact that this would be very expensive, it would also be unlikely to solve the problem. Humans' cognitive abilities are limited. This is because, like all human systems, their underlying biological systems operate on limited resources. Similarly, in the realms of cognition, some cognitive scientists believe you can train people for things like working memory, sustained attention, selective attention, and other cognitive skills, but all of these will have a natural ceiling—a point beyond which it is almost impossible to progress \\\\parencite{Kwok2011, Traut2021}. 
 
 In short, simply replacing or retraining bad agents doesn't work on its own; we cannot reduce airplane crashes by just getting new and better pilots. As in aviation, the same can be said for scientific publication. The difference, however, as Sindall and Barrington point out, is that we are already in a nosedive when it comes to recognizing and publishing failure in science. 
 
@@ -2724,7 +2939,7 @@ Increasing the prestige of failure would contribute to an increased willingness 
 
 At the same time, those researchers that do already want to publish about failure often encounter unexpected hurdles in the publication process. If the journal is subscription-based, the readership of an already niche topic—failure within some field of science—is reduced further, rendering the whole exercise much less appealing to the open-minded researcher who wants their failure to be read and understood. Conversely, if the journal is open-access, it is likely to rely on APCs, requiring researchers that send in an article to a journal to pay a fee upon submission. As discussed in the previous section (3.1), with the increasing trend towards open science, APCs are sometimes seen as necessary by open access journals to cover costs. However, these charges selectively disadvantage researchers at less financially prosperous institutions. Often funding to cover high article processing charges is simply not available. This, in turn, prevents researchers in less financially secure situations from sharing their failures.
 
-Sindall and Barrington (2020) provide several examples from humanitarian aid projects which went wrong. Two relevant cases in South Africa are mentioned, where failures led to a waste of money and physical injuries. Publishing about failure could prevent this from happening again in the future, but only if the relevant people are able to access these publications. In countries with a lower quality of life, the relative difference that can be made to improving quality of life by preventing waste of money and physical injuries is larger. 
+Sindall and \\\\parencite{Barrington2020} provide several examples from humanitarian aid projects which went wrong. Two relevant cases in South Africa are mentioned, where failures led to a waste of money and physical injuries. Publishing about failure could prevent this from happening again in the future, but only if the relevant people are able to access these publications. In countries with a lower quality of life, the relative difference that can be made to improving quality of life by preventing waste of money and physical injuries is larger. 
 
 It is not only at the submission phase, however, that the culture of success-ism rears its head. Peer reviewers may also be reluctant to contribute their expertise to results that do not reveal some great discovery about their area of study. On the one hand, this is reasonable because experts are busy and unsolicited requests for reviews are often perceived as a nuisance. On the other hand, reviewers' increased willingness to respond to larger-scale positive-publishing journals over smaller-scale negative-publishing ones reflects again the equating of experimental success with prestige—a relationship that undergirds the philosophy of success-ism that journals like JOTE seek to overturn. 
 
@@ -2736,7 +2951,7 @@ Thus, in addition to battling for financial stability, publishers that seek to p
 
 Academic training in the sciences, whether it be in experimental design or statistical inference, focuses little on the positive interpretation of negative results. That is, scientists today are unequipped to constructively answer the question “what went wrong?” While more and more spaces are opening up to discuss failure in science, such as the WASH Failures Team created by Sindall and Barrington and others, there remains a lack of knowledge about how to critically evaluate failure in the sciences. This is reflected at all levels of the editorial process, from the submissions themselves,wherein reviewers often struggle to quantify or explain the scientific failure in question, to the peer reviews, wherein peer reviewers are used to critiquing a piece based on its positive contribution to the field rather than its negative influence on well-held ideas or techniques. 
 
-This lack of knowledge about how to critically evaluate failure extends beyond the sciences to many other types of work such as so-called high-risk industries (Bevilacqua \\\\& Ciarapica, 2018). This lack of knowledge is not due to a lack of literature on the topic. In philosophy, the process of what we have called “trial and error” has been analyzed in a wide range of contexts. In fields like evolutionary epistemology, agnotology, and within the thought experiments of intuition pumps, much attention is paid to the role of trial and error and failure in the process of gaining knowledge. Additionally, a significant part of the field of Human Factors is dedicated to the analysis and prevention of failure—taking into consideration processes of trial and error. The problem doesn't seem to be what knowledge is available, but rather what knowledge is known by the relevant actors and put into practice. 
+This lack of knowledge about how to critically evaluate failure extends beyond the sciences to many other types of work such as so-called high-risk industries \\\\parencite{Bevilacqua2018}. This lack of knowledge is not due to a lack of literature on the topic. In philosophy, the process of what we have called “trial and error” has been analyzed in a wide range of contexts. In fields like evolutionary epistemology, agnotology, and within the thought experiments of intuition pumps, much attention is paid to the role of trial and error and failure in the process of gaining knowledge. Additionally, a significant part of the field of Human Factors is dedicated to the analysis and prevention of failure—taking into consideration processes of trial and error. The problem doesn't seem to be what knowledge is available, but rather what knowledge is known by the relevant actors and put into practice. 
 
 In one sense, the novelty of interpreting failures in academic practice leads to exciting new horizons where experts are pushed outside their comfort zone and must engage in live, critical, evaluation of data. In another sense, however, this new frontier beckons for structure—structure that can only be achieved through the long-term, symbiotic, practice of conducting and interpreting failed research and the normalization of failure in science.
 
@@ -2746,7 +2961,7 @@ In the meantime however, the onus of structuring failure falls on the editorial 
 
 \\\\section{4\\\\textbf{. }\\\\textbf{Destined to Fail?}}
 
-\\\\textbf{}Sindall and Barrington (2020) highlight the need for “more structured ways to report on failures” in science. We could not agree more. However, there are very real, structural, limitations from a publisher's perspective that makes this goal very difficult to achieve. Thus, we argue that it is not only that “[j]ournals \\\\emph{want} to publish novel research and failure is too often not seen as novel” (italics added), but that oftentimes doing elsewise is self-destructive. 
+\\\\textbf{}Sindall and \\\\parencite{Barrington2020} highlight the need for “more structured ways to report on failures” in science. We could not agree more. However, there are very real, structural, limitations from a publisher's perspective that makes this goal very difficult to achieve. Thus, we argue that it is not only that “[j]ournals \\\\emph{want} to publish novel research and failure is too often not seen as novel” (italics added), but that oftentimes doing elsewise is self-destructive. 
 
 That being said, JOTE is in a fortunate position where we have (and continue to) overcome many of the challenges discussed in this editorial. We do so by leaning into our unorthodoxy, embracing failure wholeheartedly and interdisciplinarily, and tirelessly working to draw informative conclusions from inconclusive results. Nevertheless, the question must be asked: “In the current scientific climate, is this model sustainable?” To that, we must answer with a clear “no”. The evidence is clear that failure is required for a healthy science to flourish. The fact that failure has not even yet budded in the sciences highlights the incompatibility of the current model of scientific success and the promotion of scientific failure. 
 
@@ -2793,23 +3008,38 @@ exports[`parses correctly for word 1`] = `
 
 
 
+\\\\begin{filecontents}{bibliography.bib}
+
+  @article{Author2022,
+    author      = {Author},
+    year        = {2022}
+}
+
+
+@article{Another1000,
+    author      = {Another},
+    year        = {1000}
+}
+
+\\\\end{filecontents}
+
 \\\\begin{document}
 
-  
+  \\\\parencite{Author2022}
 
 
 
+ 
 
 
 
-
-
+\\\\parencite{Another1000}
 
 
 
 \\\\section{Bibliography}
 
-\\\\emph{Journal, 1}(1), 11-12.
+Author, A. (2022, 1 1). Title of the thing. (Editor, Ed.) \\\\emph{Journal, 1}(1), 11-12.
 
 Another. (1000). Artikel. \\\\emph{Journal1, 2}(2), 99-104.
 
@@ -2832,7 +3062,13 @@ exports[`parses correctly for zotero 1`] = `
 
 \\\\begin{filecontents}{bibliography.bib}
 
-  @article{Bowden2005,
+  @article{March2020,
+    author      = {March},
+    year        = {2020}
+}
+
+
+@article{Bowden2005,
     title       = {New approaches to demystifying insight},
     author      = {Bowden, E and Jung-Beeman, Mark and Fleck, J and Kounios, J},
     number      = {7},
@@ -2954,6 +3190,12 @@ exports[`parses correctly for zotero 1`] = `
 }
 
 
+@article{Vallée-Tourangeau2020a,
+    author      = {Vallée-Tourangeau and March},
+    year        = {2020}
+}
+
+
 @article{Grice1975,
     title       = {Logic and conversation},
     author      = {Grice, H.P},
@@ -3072,13 +3314,13 @@ This report describes a failed experimental manipulation in object-supported pro
 
 \\\\section{Abstract}
 
-Insight problems are sometimes designed to encourage an incorrect and misleading interpretation that veils a simple answer. The socks problem is one such problem: Given black socks and brown socks in a drawer mixed in a ratio of four to five, how many socks will you have to take out to make sure that you have a pair of the same color? The ratio information is misleading since, with only two colors, pulling three socks will guarantee a matching pair. Recently, Vallée-Tourangeau and March (2020) offered a distinction between first- and second-order problem-solving: The former proceeds with and through a physical model of the problem, while the latter proceeds in the absence of such interactions with the world, in other words on the basis of mental processes alone. Vallée-Tourangeau and March also proposed a thought experiment, suggesting that the ratio information in the socks problem might be quickly abandoned in a first-order environment, that is, one where participants observe the results of drawing socks out of a bag rather than imagining themselves doing so. We tested this prediction by randomly allocating participants to a low- (second-order) or high- (first-order) interactivity condition. Marginally more participants announced the correct answer within a 5-minute period in the high than in the low condition, although the difference was not significant. Detailed analysis of the video recording revealed the challenges of operationalizing a second-order condition, as participants engaged in dialogical interactions with the experimenter. In addition, the manner in which the high-interactivity condition was designed appeared to encourage the physical reification of the misleading ratio, thus anchoring that information more firmly rather than defusing it through interactivity. We close the paper with some reflections on wide, or systemic, cognition in experimental research on creative problem-solving. 
+Insight problems are sometimes designed to encourage an incorrect and misleading interpretation that veils a simple answer. The socks problem is one such problem: Given black socks and brown socks in a drawer mixed in a ratio of four to five, how many socks will you have to take out to make sure that you have a pair of the same color? The ratio information is misleading since, with only two colors, pulling three socks will guarantee a matching pair. Recently, Vallée-Tourangeau and \\\\parencite{March2020} offered a distinction between first- and second-order problem-solving: The former proceeds with and through a physical model of the problem, while the latter proceeds in the absence of such interactions with the world, in other words on the basis of mental processes alone. Vallée-Tourangeau and March also proposed a thought experiment, suggesting that the ratio information in the socks problem might be quickly abandoned in a first-order environment, that is, one where participants observe the results of drawing socks out of a bag rather than imagining themselves doing so. We tested this prediction by randomly allocating participants to a low- (second-order) or high- (first-order) interactivity condition. Marginally more participants announced the correct answer within a 5-minute period in the high than in the low condition, although the difference was not significant. Detailed analysis of the video recording revealed the challenges of operationalizing a second-order condition, as participants engaged in dialogical interactions with the experimenter. In addition, the manner in which the high-interactivity condition was designed appeared to encourage the physical reification of the misleading ratio, thus anchoring that information more firmly rather than defusing it through interactivity. We close the paper with some reflections on wide, or systemic, cognition in experimental research on creative problem-solving. 
 
 
 
 \\\\section{Purpose }
 
-The socks problem is a riddle commonly employed in research on insight problem-solving. The riddle goes: If you have black socks and brown socks in a drawer mixed in a ratio of four to five, how many socks will you have to take out to make sure that you have a pair of the same color? The ratio information is misleading since, with only two colors, pulling three socks will guarantee a matching pair. One of us (Vallée-Tourangeau) in Vallée-Tourangeau and March (2020) suggested that placing a participant in a materially rich environment rather than a sequestered one—in other words, giving her socks to test her ideas—would improve the solution rate. We aimed to translate this thought experiment into a physical one. The participants were therefore placed into two experimental conditions, one in which they could draw socks out of a bag to help them discover the answer or one in which they could not, and their performance was measured in terms of success and latency to success. We predicted that interacting with actual socks would lead to a higher level of success in a faster time. The participants were also filmed to facilitate strategy coding to assess if the different material environments prompted different strategies, as also predicted by Vallée-Tourangeau and March. 
+The socks problem is a riddle commonly employed in research on insight problem-solving. The riddle goes: If you have black socks and brown socks in a drawer mixed in a ratio of four to five, how many socks will you have to take out to make sure that you have a pair of the same color? The ratio information is misleading since, with only two colors, pulling three socks will guarantee a matching pair. One of us (Vallée-Tourangeau) in Vallée-Tourangeau and \\\\parencite{March2020} suggested that placing a participant in a materially rich environment rather than a sequestered one—in other words, giving her socks to test her ideas—would improve the solution rate. We aimed to translate this thought experiment into a physical one. The participants were therefore placed into two experimental conditions, one in which they could draw socks out of a bag to help them discover the answer or one in which they could not, and their performance was measured in terms of success and latency to success. We predicted that interacting with actual socks would lead to a higher level of success in a faster time. The participants were also filmed to facilitate strategy coding to assess if the different material environments prompted different strategies, as also predicted by Vallée-Tourangeau and March. 
 
 \\\\section{Rewilding Cognition: Complex Dynamics in Open Experimental Systems}
 
@@ -3100,7 +3342,7 @@ In other words, in this case, the problem-solving described above does not rely 
 
 \\\\subsection{The Current Study}
 
-There were two predictions made in Vallée-Tourangeau and March (2020). First, that the use of an actual bag of socks will lead to augmented performance, as measured by a higher solution rate. Second, that the way performance would be augmented would feature two components: The first being that the participant would forget the misleading ratio information, and the second being that the participant would be able to view the answer as she pulled socks out of the bag. This clear behavioral process hypothesis has a firm theoretical basis as outlined above. The current study aimed to test both the behavioral and performance hypotheses. 
+There were two predictions made in Vallée-Tourangeau and \\\\parencite{March2020}. First, that the use of an actual bag of socks will lead to augmented performance, as measured by a higher solution rate. Second, that the way performance would be augmented would feature two components: The first being that the participant would forget the misleading ratio information, and the second being that the participant would be able to view the answer as she pulled socks out of the bag. This clear behavioral process hypothesis has a firm theoretical basis as outlined above. The current study aimed to test both the behavioral and performance hypotheses. 
 
 Participants were presented with a bag containing black and brown socks in a 4:5 ratio (the bag contained 90 socks) and were invited to solve the problem in one of two conditions: In the high-interactivity condition, they could draw the socks from the bag as they saw fit to help them solve the problem, while participants in the low-interactivity condition could look at the bag but not interact with it or its content. The initial study reported here was intended to follow a quantitative to qualitative (QUAN QUAL) analysis plan, but was changed because the experimental manipulation failed. Specifically, we no longer had faith that the low-interactivity condition represented a sequestered environment. In this report, we present the quantitative method and results before moving onto the qualitative phase, which yielded more substantive conclusions. 
 
@@ -3118,7 +3360,7 @@ Forty-one participants (a mix of undergraduate and postgraduate psychology stude
 
 Participants were filmed in a purposely-built lab with three in-built cameras to facilitate coding for the behavioral hypothesis. To minimize the differences between the conditions, both high- and low-interactivity conditions had the same initial setup: In both conditions, each participant was presented with a bag of 90 socks, among which were 50 black and 40 brown, and the only difference was that participants in the high-interactivity condition were allowed to pull socks from the bag (see Figure 1). 
 
-\\\\textbf{Figure }
+\\\\textbf{Figure }\\\\textbf{1}
 
 \\\\paragraph{The Experimental Setup }
 
@@ -3147,7 +3389,7 @@ Performance was better in the high-interactivity condition in which 10 participa
 
 \\\\subsubsection{}
 
-\\\\subsubsection{Figure }
+\\\\subsubsection{Figure 2}
 
 
 \\\\begin{figure}
@@ -3182,7 +3424,7 @@ The initial hypothesis of an augmentative effect of a high-interactivity environ
 
 \\\\subsubsection{Information in the Environment}
 
-The socks problem is a hard one because participants get stuck on the unhelpful ratio. As suggested by Vallée-Tourangeau and March (2020), ignoring the ratio should lead to participants solving the problem more often and faster because they are not tempted to use inappropriate mathematical formulae. As we have addressed above, this is not an unreasonable assumption. However, the specific hypothesis under exploration, that a high-interactivity environment would increase the number of people who disregard the ratio, was not sustained by an analysis of what people did in this condition; it appeared that the opposite was the case, that a high-interactivity reinforced the unhelpful information. 
+The socks problem is a hard one because participants get stuck on the unhelpful ratio. As suggested by \\\\parencite{Vallée-Tourangeau2020a}, ignoring the ratio should lead to participants solving the problem more often and faster because they are not tempted to use inappropriate mathematical formulae. As we have addressed above, this is not an unreasonable assumption. However, the specific hypothesis under exploration, that a high-interactivity environment would increase the number of people who disregard the ratio, was not sustained by an analysis of what people did in this condition; it appeared that the opposite was the case, that a high-interactivity reinforced the unhelpful information. 
 
 There are two ways in which a problem-solver could approach solving a problem using interactivity: The first involves the sort of exaptative actions mentioned in the initial hypothesis, while the second involves using the world to scaffold existing representations. In the case of problems designed to elicit an unhelpful representation, it is plausible that such a representation, when reified, would be harder to disregard. A high-interactivity environment can scaffold unhelpful representations as well as helpful ones.
 
@@ -3414,7 +3656,7 @@ The components in complex systems interact in complex ways and the results are e
 
 Interactivity posits that a dynamic relationship with the external world is not only augmentative to cognition processes but necessary. However, experimental research in interactivity does so by paradoxically setting up a low-interactivity condition which admits non-interactive thinking. In this way, it assumes that there is an easy way to compare non-systemic and systemic cognition and that non-systemic cognition can be meaningfully isolated in an experimental psychologist's lab. We suggest that the dualistic assumptions underlying this approach are misguided, as they assume an ideal type of experimental participant can be generated in sequestered experimental conditions. Rather, the evidence we present here suggests a cognitive leakage across both experimental conditions. In the process of operationalizing the so-called low-interactivity condition, the presence of the experimenter offered an external resource with which to scaffold the problem-solving process. The participant naturally transformed a solo and ostensibly unaided effort into a dyadic one. Clearly, the experimenter qua interlocutor was an unrequited conversational partner. Still, in the absence of hard physical or instructional constraints, the participant naturally availed themselves of this resource, bootstrapping the cognitive effort through a dialogue with their reluctant partner. And it is through this dialogue that the participant's hunch underwent many different forms until it was eventually translated into the normative one. These ersatz dialogues offer a telling window on the distributed nature of thinking, in this instance, the distribution over time and the gradual sedimentation through iterative dialogical cycles. The reification of the solution was the product of interactivity despite the experimental procedure.
 
-A systematic approach to cognition requires that every thoughtful (and arguably every non-thoughtful) encounter should be analyzed as part of a system; however, what constitutes part of the system is rarely specified. Vallée-Tourangeau and March (2020) suggest that a cognitive ecosystem is configured by “the reasoner, the physical reality of the problem, and the action possibilities offered by the external environment” (p. 826). We argue that the data here suggest “the action possibilities offered by the external environment” (p. 826) are broader than whether the problem is represented in movable artifacts or not. Rather, participants actively recruit beyond the resources of interest in the experimental conditions. This means a more granular approach needs to be considered. 
+A systematic approach to cognition requires that every thoughtful (and arguably every non-thoughtful) encounter should be analyzed as part of a system; however, what constitutes part of the system is rarely specified. Vallée-Tourangeau and \\\\parencite{March2020} suggest that a cognitive ecosystem is configured by “the reasoner, the physical reality of the problem, and the action possibilities offered by the external environment” (p. 826). We argue that the data here suggest “the action possibilities offered by the external environment” (p. 826) are broader than whether the problem is represented in movable artifacts or not. Rather, participants actively recruit beyond the resources of interest in the experimental conditions. This means a more granular approach needs to be considered. 
 
 \\\\subsubsection{Conclusion}
 
@@ -3428,7 +3670,7 @@ It is tempting to question whether the mental tasks used in traditional cognitiv
 
 \\\\textbf{References}
 
-\\\\emph{Organization Science}, \\\\emph{28}(2), 320--338. https://doi.org/10.1287/orsc.2017.1116
+Andriani, P., Ali, A., \\\\& Mastrogiorgio, M. (2017). Measuring exaptation and its impact on innovation, search, and problem solving. \\\\emph{Organization Science}, \\\\emph{28}(2), 320--338. https://doi.org/10.1287/orsc.2017.1116
 
 Arfini, S. (2019). Situated ignorance: The distribution and extension of ignorance in cognitive niches. \\\\emph{Synthese, 198}(12). https://doi.org/10.1007/s11229-019-02328-0
 
@@ -3515,11 +3757,11 @@ exports[`parses correctly for zotero-2 1`] = `
 
 @article{Gladwin2019a,
     title       = {Trial-to-trial carryover effects on spatial attentional bias},
-    author      = {Gladwin, Thomas E. and Figner, Bernd},
+    author      = {Gladwin, T.E. and Figner, B.},
     volume      = {196},
     doi         = {10.1016/j.actpsy.2019.04.006},
-    year        = {2019-05},
-    pages       = {51-55},
+    year        = {2019},
+    pages       = {51--55},
     journal     = {Acta Psychologica}
 }
 
@@ -3794,9 +4036,13 @@ exports[`parses correctly for zotero-2 1`] = `
 }
 
 
-@article{undefined,
-    author      = {undefined, A.U.T.H.O.R.},
-    year        = {2020}
+@article{Gladwin2020a,
+    title       = {Attentional bias for negative expressions depends on previous target location: Replicable effect but unreliable measures},
+    author      = {Gladwin, T.E. and Jewiss, M. and Vink, M.},
+    doi         = {10.1080/20445911.2020.1805453},
+    year        = {2020},
+    pages       = {1--11},
+    journal     = {Journal of Cognitive Psychology}
 }
 
 
@@ -3862,6 +4108,12 @@ exports[`parses correctly for zotero-2 1`] = `
 }
 
 
+@article{Gillich2019,
+    author      = {Gillich},
+    year        = {2019}
+}
+
+
 @article{Ho2019,
     title       = {Moving beyond P values: data analysis with estimation graphics},
     author      = {Ho, Joses and Tumkaya, Tayfun and Aryal, Sameer and Choi, Hyungwon and Claridge-Chang, Adam},
@@ -3871,6 +4123,18 @@ exports[`parses correctly for zotero-2 1`] = `
     year        = {2019-07},
     pages       = {565-566},
     journal     = {Nature Methods}
+}
+
+
+@article{R2020,
+    author      = {R},
+    year        = {2020}
+}
+
+
+@article{R2014,
+    author      = {R},
+    year        = {2014}
 }
 
 \\\\end{filecontents}
@@ -3933,7 +4197,7 @@ As for dot-probe studies, however, there is not yet a clear answer on this topic
 
 \\\\section{The Current Study}
 
-In the current study, we sought to test carryover effects for threat in the dot-probe task. To test this question, we performed a secondary data analysis on two dot-probe experiments with fearful facial stimuli (Experiment 1) and threatening pictorial stimuli (Experiment 2; AUTHOR, 2020). We consider fearful faces and pictorial images of threat to be threatening because a recent meta-analysis on threat detection examined both of them \\\\parencite{Hedger2016}. Based on previous research \\\\parencite{undefined, undefined}, we hypothesized that there would be such an influence (as indicated by an interaction between previous trial congruency and current trial congruency). More specifically, we expected that current trial congruency effects would be larger when the previous trial was congruent, relative to when it was incongruent (see Figure 1B). If our hypothesis was confirmed, we would have identified an important source of variability in the dot-probe task. On the other hand, if our hypothesis was not supported, we would conclude that the influence of carryover effects on congruency effects is negligible.
+In the current study, we sought to test carryover effects for threat in the dot-probe task. To test this question, we performed a secondary data analysis on two dot-probe experiments with fearful facial stimuli (Experiment 1) and threatening pictorial stimuli (Experiment 2; AUTHOR, 2020). We consider fearful faces and pictorial images of threat to be threatening because a recent meta-analysis on threat detection examined both of them \\\\parencite{Hedger2016}. Based on previous research \\\\parencite{Gladwin2019a, Gladwin2020a}, we hypothesized that there would be such an influence (as indicated by an interaction between previous trial congruency and current trial congruency). More specifically, we expected that current trial congruency effects would be larger when the previous trial was congruent, relative to when it was incongruent (see Figure 1B). If our hypothesis was confirmed, we would have identified an important source of variability in the dot-probe task. On the other hand, if our hypothesis was not supported, we would conclude that the influence of carryover effects on congruency effects is negligible.
 
 \\\\section{Experiment 1}
 
@@ -3981,7 +4245,7 @@ The lack of carryover effects we observed is consistent with previous statistica
 
 Carryover effects are analogous to the congruency sequence effect commonly observed in the flanker, Simon, and Stroop tasks \\\\parencite{Duthoo2014}. One difference between the dot-probe task and these other tasks is that the distractor stimulus does not directly conflict with the target. For example, in the Stroop task, the font color of the word stimulus can be incongruent with the meaning of the word, which creates conflict when the goal is to indicate the word color. Similarly, in the arrow flanker task, conflict is created on incongruent trials; the two arrows to the left and two to the right point in the direction opposite to the direction of the center target arrow, like this: < < > < <. On congruent trials, all five of the arrows point in the same direction. However, in the dot-probe task, the target does not co-occur with the conflicting cue (they are shown in different displays); they are separated in time, and they are visually distinct categories of stimuli because the cue is a face, and the target is simply a single dot. Therefore, current trial congruency effects in the dot-probe task may stem from relatively low stimulus conflict and therefore be unaffected by previous trial congruency. In sum, carryover effects, or congruency sequence effects, may only arise for specific types of stimulus conflict.
 
-There are some notable procedural differences between the standard dot-probe task (as used here) and other studies that used a similar spatial cueing task but did observe carryover effects. For example, in the unique study design by \\\\parencite{undefined, undefined}, they presented their cues until the participants made a response, whereas we only presented our cues for 100 ms (Experiment 1) or 500 ms (Experiment 2). Presenting cues until a response is made increases the possibility of attentional dwelling or delayed disengagement from the cue, as opposed to the initial orienting of attention towards the cue \\\\parencite{Fox2001}. Another key difference is that \\\\parencite{undefined, undefined} presented a distractor (non-target object) in their search display, whereas in the classic dot-probe task, the target appears alone \\\\parencite{Mogg1998}. Inhibition of the cue that appears in the previous non-target location might explain carryover effects for the cue \\\\parencite{undefined}. The presence of the non-target distractor might facilitate such inhibition, thereby creating a carryover effect \\\\parencite{undefined, undefined}. Future studies on carryover effects should carefully consider their task design procedure. 
+There are some notable procedural differences between the standard dot-probe task (as used here) and other studies that used a similar spatial cueing task but did observe carryover effects. For example, in the unique study design by \\\\parencite{Gladwin2019a, Gladwin2020a}, they presented their cues until the participants made a response, whereas we only presented our cues for 100 ms (Experiment 1) or 500 ms (Experiment 2). Presenting cues until a response is made increases the possibility of attentional dwelling or delayed disengagement from the cue, as opposed to the initial orienting of attention towards the cue \\\\parencite{Fox2001}. Another key difference is that \\\\parencite{Gladwin2019a, Gladwin2020a} presented a distractor (non-target object) in their search display, whereas in the classic dot-probe task, the target appears alone \\\\parencite{Mogg1998}. Inhibition of the cue that appears in the previous non-target location might explain carryover effects for the cue \\\\parencite{Gladwin2020a}. The presence of the non-target distractor might facilitate such inhibition, thereby creating a carryover effect \\\\parencite{Gillich2019, Gladwin2019a}. Future studies on carryover effects should carefully consider their task design procedure. 
 
 \\\\section{Conclusion}
 
@@ -4057,11 +4321,11 @@ Data Availability Statement:\\\\emph{ }Datasets are available here: https://osf.
 
 \\\\section{References}
 
-AUTHO\\\\parencite{undefined}. 
+AUTHO\\\\parencite{R2020}. 
 
-AUTHO\\\\parencite{undefined}. 
+AUTHO\\\\parencite{R2014}. 
 
-\\\\emph{Emotion}. https://doi.org/10.1037/emo0000596
+Anderson, B. A., \\\\& Britton, M. K. (2019). On the automaticity of attentional orienting to threatening stimuli. \\\\emph{Emotion}. https://doi.org/10.1037/emo0000596
 
 Becker, S. I., Dutt, N., Vromen, J. M. G., \\\\& Horstmann, G. (2017). The capture of attention and gaze in the search for emotional photographic faces. \\\\emph{Visual Cognition}, \\\\emph{25}(1--3), 241--261. https://doi.org/10.1080/13506285.2017.1333182
 

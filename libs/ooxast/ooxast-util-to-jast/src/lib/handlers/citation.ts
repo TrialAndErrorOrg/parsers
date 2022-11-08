@@ -61,13 +61,25 @@ export function citation(j: J, citation: T, parent: Parent) {
     }
 
     if (citation.mendeley || citation.properties) {
+      // Zotero and Mendeley citations are very similar, clearest difference is
+      // that Zotero starts as ADDIN ZOTERO_ITEM CSL_CITATION and Mendeley as
+      // ADDDIN CSL_CITATION
       const citetype = text.match('ZOTERO') ? 'zotero' : 'mendeley'
+
       // I want to create a link for each citation,
       // and want to catch things like (Person, 2020, 2021; Other 2020)
       const formattedCitation =
         citetype === 'zotero'
           ? citation.properties.formattedCitation
           : citation.mendeley.formattedCitation
+
+      const plainCitation =
+        citetype === 'zotero'
+          ? citation.properties.plainCitation
+          : citation.mendeley.plainCitation
+
+      j.lastFormattedCitation = formattedCitation
+      j.lastPlainCitation = plainCitation
 
       const sectionedCitations = formattedCitation?.replace(
         /(\d{4}), (\d{4})/g,
@@ -76,9 +88,9 @@ export function citation(j: J, citation: T, parent: Parent) {
 
       const formattedCitations = sectionedCitations.split(';')
 
-      if (citetype === 'mendeley') {
-        j.deleteNextRun = true
-      }
+      // if (citetype === 'mendeley') {
+      //   j.deleteNextRun = true
+      // }
 
       return citation.citationItems.map(
         (cite: CitationItem | MendeleyCitationItem, i: number) => {

@@ -3,17 +3,13 @@ import reoffRejour from 'reoff-rejour'
 import rejourRelatex from 'rejour-relatex'
 import relatexStringify from 'relatex-stringify'
 import { docxToVFile } from 'docx-to-vfile'
-import { Data as CSL } from 'CSL-JSON'
-
-import { readdirSync, readFileSync, writeFileSync } from 'fs'
+import { readdirSync, writeFileSync } from 'fs'
 import { readFile, writeFile } from 'fs/promises'
 import { join } from 'path'
 import { unified } from 'unified'
 import { removePosition } from 'unist-util-remove-position'
 import { select } from 'xast-util-select'
-import { parseBib } from 'ooxast-util-parse-bib'
 import { reoffClean } from 'reoff-clean'
-import { findCitations } from 'ooxast-util-citations'
 import reoffCite from 'reoff-cite'
 import reoffParseReferences from 'reoff-parse-references'
 
@@ -45,15 +41,14 @@ const fromDocx = (
     .use(
       reoffParseReferences // { mailto: 'support@centeroftrialanderror.com' }
     )
-    .use(reoffCite, { type: citationType || 'mendeley' })
+    .use(reoffCite, { type: citationType || 'zotero', log: false })
     .use(() => (tree, vfile) => {
-      console.log(vfile.data.bibliography)
       writeFileSync(
         join(path, 'test.ooxast.json'),
         JSON.stringify(removePosition(tree), null, 2)
       )
     })
-    .use(reoffRejour, { citationType: citationType || 'mendeley' || '' })
+    .use(reoffRejour, { citationType: citationType || 'zotero' || '' })
     .use(
       () => (tree) =>
         writeFileSync(

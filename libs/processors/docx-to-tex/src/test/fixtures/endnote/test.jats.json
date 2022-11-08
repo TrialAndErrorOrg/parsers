@@ -874,11 +874,19 @@
                         },
                         {
                           "type": "text",
+                          "value": ""
+                        },
+                        {
+                          "type": "text",
                           "value": "Jungst et al., 2019)"
                         },
                         {
                           "type": "text",
                           "value": ". Almost half of patients with chronic diseases are non-adherent "
+                        },
+                        {
+                          "type": "text",
+                          "value": ""
                         },
                         {
                           "type": "text",
@@ -925,6 +933,10 @@
                           "value": ""
                         },
                         {
+                          "type": "text",
+                          "value": ""
+                        },
+                        {
                           "type": "element",
                           "name": "xref",
                           "attributes": {
@@ -960,6 +972,10 @@
                         {
                           "type": "text",
                           "value": "In the two-year multicenter Glucocorticoid Low-dose Outcome in Rheumatoid Arthritis (GLORIA) trial, a low-dose prednisolone (5 mg/day) or placebo was added to the standard care in older people (≥65 years) with RA. We measured adherence with electronic monitoring and pill count in all patients "
+                        },
+                        {
+                          "type": "text",
+                          "value": ""
                         },
                         {
                           "type": "text",
@@ -2723,6 +2739,10 @@
                         "style": "EndNoteBibliography"
                       },
                       "children": [
+                        {
+                          "type": "text",
+                          "value": "Brown, M. T. & Bussell, J. K. (2011). Medication adherence: WHO cares? "
+                        },
                         {
                           "type": "element",
                           "name": "italic",

@@ -466,6 +466,10 @@
                   ]
                 },
                 {
+                  "type": "text",
+                  "value": ". Fulfilling real-effort tasks are typically cognitively, creatively, or physically costly for participants "
+                },
+                {
                   "type": "command",
                   "name": "parencite",
                   "children": [

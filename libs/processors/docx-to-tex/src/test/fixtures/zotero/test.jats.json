@@ -1085,6 +1085,17 @@
                                   "value": "Figure "
                                 }
                               ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "bold",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "1"
+                                }
+                              ]
                             }
                           ]
                         },
@@ -1525,6 +1536,10 @@
                             {
                               "type": "text",
                               "value": "Figure "
+                            },
+                            {
+                              "type": "text",
+                              "value": "2"
                             }
                           ]
                         },
@@ -4546,6 +4561,10 @@
                             "style": "Bibliography"
                           },
                           "children": [
+                            {
+                              "type": "text",
+                              "value": "Andriani, P., Ali, A., & Mastrogiorgio, M. (2017). Measuring exaptation and its impact on innovation, search, and problem solving. "
+                            },
                             {
                               "type": "element",
                               "name": "italic",

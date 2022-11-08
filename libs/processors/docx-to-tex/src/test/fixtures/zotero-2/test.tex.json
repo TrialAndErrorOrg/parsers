@@ -4138,6 +4138,10 @@
               "type": "paragraph",
               "children": [
                 {
+                  "type": "text",
+                  "value": "Anderson, B. A., & Britton, M. K. (2019). On the automaticity of attentional orienting to threatening stimuli. "
+                },
+                {
                   "type": "command",
                   "name": "emph",
                   "children": [

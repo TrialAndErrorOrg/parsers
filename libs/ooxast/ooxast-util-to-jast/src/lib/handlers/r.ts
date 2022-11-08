@@ -1,9 +1,9 @@
-import { FldChar, R, RPr, VerticalAlignRun } from 'ooxast'
+import { FldChar, R, RPr, Text, VerticalAlignRun } from 'ooxast'
 import { select } from 'xast-util-select'
 import { all } from '../all'
 import { x } from 'xastscript'
 import { J } from '../types'
-import { Italic, Bold, Underline, Strike, Sc } from 'jast-types'
+import { Italic, Bold, Underline, Strike, Sc, Element } from 'jast-types'
 import { convertElement } from 'xast-util-is-element'
 
 //const isVert = convertElement<VerticalAlignRun>('w:vertAlign')
@@ -11,7 +11,6 @@ import { convertElement } from 'xast-util-is-element'
 export function r(j: J, node: R) {
   const instrText = select('w\\:instrText', node)
   if (instrText) {
-    j.deleteNextRun = true
     return all(j, node)
   }
 
@@ -39,17 +38,34 @@ export function r(j: J, node: R) {
     return all(j, node)
   }
 
-  if (j.deleteNextRun) {
-    j.deleteNextRun = false
-    return
-  }
-
   const props = select('w\\:rPr', node) as RPr
-  const mergedText = all(j, node).reduce((acc, curr) => {
+  let mergedText = all(j, node).reduce((acc, curr) => {
     if (curr.type !== 'text') return acc
     acc = acc + curr.value
     return acc
   }, '')
+
+  if (j.deleteNextRun) {
+    j.deleteNextRun = false
+    // Sometimes the "deleteNextRun" gets triggered by a `fldCharType: end`. In that case, we don't want to delete the text, but just the ).
+    if (!/\)[.,]/.test(mergedText)) {
+      return
+    }
+    mergedText = mergedText.replace(/\)/, '')
+  }
+  // Sometimes Mendely and Zotero will add the formatted citation after the structured
+  // citation. This is a flag to indicate that the next run should be deleted.
+  if (j.lastFormattedCitation || j.lastPlainCitation) {
+    // check if this run looks "citey", which we just define as having a year looking string in it,
+    // which looks like a string of 4 digits or like B.C.E. or A.D.
+    if (
+      /\d{4}|\d+ ?([Bb]\.? ?[Cc]\.? ?[Ee]\.?|[Aa]\.? ?[Dd]\.?)/.test(mergedText)
+    ) {
+      return
+    }
+    j.lastFormattedCitation = undefined
+    j.lastPlainCitation = undefined
+  }
 
   let text = { type: 'text', value: mergedText } as any
   if (!props) return text
@@ -57,20 +73,24 @@ export function r(j: J, node: R) {
   for (let i = 0; i < props.children.length; i++) {
     const prop = props.children[i]
     switch (prop.name.replace('w:', '')) {
-      case 'i':
+      case 'i': {
         text = x('italic', {}, text)
         continue
-      case 'b':
+      }
+      case 'b': {
         text = x('bold', {}, text)
         continue
-      case 'u':
+      }
+      case 'u': {
         text = x('underline', {}, text)
         continue
+      }
       case 'strike':
-      case 'dstrike':
+      case 'dstrike': {
         text = x('strike', {}, text)
         continue
-      case 'vertAlign':
+      }
+      case 'vertAlign': {
         //if (!isVert(prop)) continue
         // @ts-expect-error aaaa
         if (prop.attributes['w:val'] === 'superscript') {
@@ -83,9 +103,11 @@ export function r(j: J, node: R) {
           continue
         }
         continue
-      case 'smallCaps':
+      }
+      case 'smallCaps': {
         text = x('sc', {}, text)
         continue
+      }
       default:
         continue
     }

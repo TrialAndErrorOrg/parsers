@@ -59,6 +59,10 @@
                   ]
                 },
                 {
+                  "type": "text",
+                  "value": ". On the one hand, some scholars argue that defining social entrepreneurship is problematic because it means different things to different people and differs between contexts "
+                },
+                {
                   "type": "element",
                   "name": "xref",
                   "attributes": {
@@ -73,6 +77,10 @@
                       "value": "(Mair, 2010)"
                     }
                   ]
+                },
+                {
+                  "type": "text",
+                  "value": ". Hence making it a ‘fuzzy’ "
                 },
                 {
                   "type": "element",
@@ -91,6 +99,10 @@
                   ]
                 },
                 {
+                  "type": "text",
+                  "value": " or an ‘unclear and contested’ concept "
+                },
+                {
                   "type": "element",
                   "name": "xref",
                   "attributes": {
@@ -107,6 +119,10 @@
                   ]
                 },
                 {
+                  "type": "text",
+                  "value": ". On the other hand, others argue that a widespread consensus exists within the academic community on what defines social entrepreneurship, social entrepreneur and social enterprise "
+                },
+                {
                   "type": "element",
                   "name": "xref",
                   "attributes": {
@@ -121,6 +137,10 @@
                       "value": "(Alegre et al., 2017)"
                     }
                   ]
+                },
+                {
+                  "type": "text",
+                  "value": "."
                 }
               ]
             },

@@ -2,7 +2,7 @@
   "name": "<%= importPath %>",
   "version": "0.0.1",
   "license": "GPL-3-0-or-later",
-  "repository": "https://github.com/journaloftrialanderror/jote",
+  "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "<%= author %> <<%= email %>>",
   "type": "module",
   "description": "<%= description %>",

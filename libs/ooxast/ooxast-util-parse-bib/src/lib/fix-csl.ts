@@ -37,7 +37,7 @@ export function makeCSLIdAuthYear(csl: CSL): CSL {
     !csl.issued ||
     !csl?.issued?.['date-parts']?.[0]?.[0]
   ) {
-    console.log("Don't have an author or issued date for csl, skipping")
+    console.log("Don't have an author or issued date for csl, skipping", csl)
     return csl
   }
 

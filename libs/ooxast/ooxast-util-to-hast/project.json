@@ -1,0 +1,35 @@
+{
+  "name": "ooxast-ooxast-util-to-hast",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ooxast/ooxast-util-to-hast/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ooxast/ooxast-util-to-hast",
+        "tsConfig": "libs/ooxast/ooxast-util-to-hast/tsconfig.lib.json",
+        "packageJson": "libs/ooxast/ooxast-util-to-hast/package.json",
+        "main": "libs/ooxast/ooxast-util-to-hast/src/index.ts",
+        "assets": ["libs/ooxast/ooxast-util-to-hast/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ooxast/ooxast-util-to-hast/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ooxast/ooxast-util-to-hast"],
+      "options": {
+        "jestConfig": "libs/ooxast/ooxast-util-to-hast/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

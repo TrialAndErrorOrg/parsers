@@ -26,6 +26,7 @@ export interface CitationItem {
 
 interface Options {
   showAll?: boolean
+  log?: boolean
 }
 
 export const parser = new nearley.Parser(nearley.Grammar.fromCompiled(grammar))
@@ -36,10 +37,12 @@ export const parseTextCite = (string: string, options?: Options) => {
   try {
     parser.feed(string)
   } catch (err) {
-    console.warn(string)
-    ;(err as { message: string }).message.match(/(Rp|Lp)/i)
-      ? console.warn('Could not handle a parenthesis')
-      : console.warn(err)
+    if (options?.log !== false) {
+      console.warn(string)
+      ;(err as { message: string }).message.match(/(Rp|Lp)/i)
+        ? console.warn('Could not handle a parenthesis')
+        : console.warn(err)
+    }
   }
 
   const results = parser.results

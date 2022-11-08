@@ -16,6 +16,7 @@ export async function docxToTex(
     citationType?: 'mendeley' | 'native' | 'citavi' | 'zotero' | 'endnote'
     url?: string
     mailto?: string
+    log?: boolean
   } = {}
 ): Promise<VFile> {
   const vfile = await docxToVFile(input)

@@ -44,7 +44,6 @@ export interface Options {
   citationType?: 'mendeley' | 'word' | 'citavi' | 'zotero' | 'endnote'
   parseCitation?: (citation: any) => any
   collectCitation?: (citation: any, index: number | string) => any
-
   relations?: { [key: string]: string }
 }
 
@@ -84,6 +83,16 @@ export interface Context {
   relations: { [key: string]: string }
   citeKeys: { [key: string]: string }
   citationType?: 'mendeley' | 'native' | 'citavi' | 'zotero' | 'endnote'
+  /**
+   * Sometimes Zotero/Mendeley will add the formatted citation after the structured
+   * citation. This is a flag to indicate that the next run should be deleted.
+   */
+  lastFormattedCitation?: string
+  /**
+   * Sometimes Zotero/Mendeley will add the plain citation after the structured
+   * citation. This is a flag to indicate that the next run should be deleted.
+   */
+  lastPlainCitation?: string
 }
 
 export type JWithProps = (

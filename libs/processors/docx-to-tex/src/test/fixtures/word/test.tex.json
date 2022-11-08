@@ -170,7 +170,12 @@
             },
             {
               "type": "paragraph",
-              "children": []
+              "children": [
+                {
+                  "type": "text",
+                  "value": " "
+                }
+              ]
             },
             {
               "type": "paragraph",
@@ -210,7 +215,12 @@
                     {
                       "type": "commandArg",
                       "optional": false,
-                      "children": []
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Bibliography"
+                        }
+                      ]
                     }
                   ]
                 }
@@ -219,6 +229,10 @@
             {
               "type": "paragraph",
               "children": [
+                {
+                  "type": "text",
+                  "value": "Author, A. (2022, 1 1). Title of the thing. (Editor, Ed.) "
+                },
                 {
                   "type": "command",
                   "name": "emph",

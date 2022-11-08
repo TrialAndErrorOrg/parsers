@@ -56,7 +56,4 @@ export async function docxToVFile(
   }
   vfile.data.images = images
   return vfile
-  // if (footnotes) {
-  //   Object.assign(vfile.data, { footnotes })
-  // }
 }

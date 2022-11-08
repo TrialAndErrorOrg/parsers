@@ -66,7 +66,12 @@
               "type": "element",
               "name": "p",
               "attributes": {},
-              "children": []
+              "children": [
+                {
+                  "type": "text",
+                  "value": " "
+                }
+              ]
             },
             {
               "type": "element",
@@ -116,7 +121,12 @@
                   "attributes": {
                     "style": "Heading1"
                   },
-                  "children": []
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Bibliography"
+                    }
+                  ]
                 },
                 {
                   "type": "element",
@@ -125,6 +135,10 @@
                     "style": "Bibliography"
                   },
                   "children": [
+                    {
+                      "type": "text",
+                      "value": "Author, A. (2022, 1 1). Title of the thing. (Editor, Ed.) "
+                    },
                     {
                       "type": "element",
                       "name": "italic",

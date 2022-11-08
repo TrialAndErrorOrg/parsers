@@ -1736,6 +1736,10 @@
                 },
                 {
                   "type": "text",
+                  "value": "(Dancer Design, n.d.)"
+                },
+                {
+                  "type": "text",
                   "value": ". This stimulus is of fixed duration and a clearly perceptible intensity. Three tactors are used in the arrangement as the source of a CS (see Figure 1). The SIDE tactor is allocated to "
                 },
                 {
@@ -1866,6 +1870,10 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "text",
+                  "value": "(Digitimer Limited, n.d.)"
                 },
                 {
                   "type": "text",
@@ -4079,10 +4087,6 @@
                       ]
                     }
                   ]
-                },
-                {
-                  "type": "text",
-                  "value": ". For estimating power, we simulated 10000 datasets for each set of simulation conditions. Finally, we used a 5% level of significance for the simulated RTs."
                 }
               ]
             },
@@ -7012,6 +7016,10 @@
             {
               "type": "paragraph",
               "children": [
+                {
+                  "type": "text",
+                  "value": "Adams, D. C., & Anthony, C. D. (1996). Using randomization techniques to analyse behavioural data. "
+                },
                 {
                   "type": "command",
                   "name": "emph",

@@ -33,7 +33,6 @@ export function constructZoteroCitation(
     acc.push(betterCSL)
     return acc
   }, [])
-  console.log(zotCites)
 
   const mend: ZoteroCitation = {
     citationItems: zotCites as any,

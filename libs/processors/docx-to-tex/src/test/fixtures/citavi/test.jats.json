@@ -326,6 +326,10 @@
                   "value": "Measuring human behavior is an ongoing challenge for social scientists "
                 },
                 {
+                  "type": "text",
+                  "value": ""
+                },
+                {
                   "type": "element",
                   "name": "xref",
                   "attributes": {
@@ -343,7 +347,15 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": ". In ideal circumstances, human behavior should be observed either in the field or in the lab. However, field trips and lab experiments are often both time- and resource-consuming. Observing behavior can also be prohibited in some cases, for instance if the behavior occurs too infrequently to be observed in a timely manner, or is not possible for others to observe "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -372,6 +384,10 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": "(James et al., 2017, p. 120)"
                 },
                 {
@@ -381,6 +397,10 @@
                 {
                   "type": "text",
                   "value": ". Surveys are “quick and cheap” "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -424,6 +444,14 @@
                   ]
                 },
                 {
+                  "type": "text",
+                  "value": ". Fulfilling real-effort tasks are typically cognitively, creatively, or physically costly for participants "
+                },
+                {
+                  "type": "text",
+                  "value": ""
+                },
+                {
                   "type": "element",
                   "name": "xref",
                   "attributes": {
@@ -441,7 +469,15 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": ". These costs are higher when more effort is put into fulfilling a task. In some studies, for example, participants are asked to count errors in real-effort tasks, thereby increasing the cognitive cost of the task "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "element",
@@ -474,6 +510,10 @@
                       "value": " Gneezy & List, 2006)"
                     }
                   ]
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -540,6 +580,10 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": "(Rossman & Wilson, 1985, p. 631)"
                 },
                 {
@@ -552,6 +596,10 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": "(Rossman & Wilson, 1985, p. 632)"
                 },
                 {
@@ -561,6 +609,10 @@
                 {
                   "type": "text",
                   "value": ". Hence, the combination of qualitative and quantitative data is used here to offset weaknesses of the latter, draw on the strengths of the former, and enhance the validity of the findings "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -586,6 +638,10 @@
                 {
                   "type": "text",
                   "value": "Several studies use this approach and compare answers to open-ended and closed-ended questions. Most of these studies report substantial discrepancies regarding answering behavior "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "element",
@@ -653,7 +709,15 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": ". For example, open-ended questions usually produce a more diverse set of answers. In a study reported by "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -673,6 +737,10 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": "(1979)"
                 },
                 {
@@ -685,6 +753,10 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": "(Schuman & Presser, 1979, p. 365)"
                 },
                 {
@@ -694,6 +766,10 @@
                 {
                   "type": "text",
                   "value": ". Similarly, in a study on the quantity of alcohol consumption, "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -713,6 +789,10 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": "(2006)"
                 },
                 {
@@ -722,6 +802,10 @@
                 {
                   "type": "text",
                   "value": " found that the answers on the quantity of consumed alcohol of around 30% of respondents differed significantly between answers on open-ended and closed questions. They found that the combination of both an open-ended and a closed measure of the quantity of alcohol consumption was a stronger predictor of alcohol-related consequences than the individual measures "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "element",
@@ -738,6 +822,10 @@
                       "value": "(Greenfield et al., 2006)"
                     }
                   ]
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -758,6 +846,10 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": "(Schwarz & Oyserman, 2001, p. 128)"
                 },
                 {
@@ -774,6 +866,10 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": "(Schwarz & Oyserman, 2001, p. 131)"
                 },
                 {
@@ -783,6 +879,10 @@
                 {
                   "type": "text",
                   "value": ". In contrast, it is usually agreed that open-ended questions are more suited to asking about sensitive or stigmatizing information or when more in-depth information is needed "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -811,6 +911,10 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": "Singer and Couper"
                 },
                 {
@@ -820,6 +924,10 @@
                 {
                   "type": "text",
                   "value": " "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -851,6 +959,10 @@
                   "value": "Real-effort experimental designs rely on the assumption that greater effort in fulfilling a task makes it more likely that participants actually perform what they have stated "
                 },
                 {
+                  "type": "text",
+                  "value": ""
+                },
+                {
                   "type": "element",
                   "name": "xref",
                   "attributes": {
@@ -868,7 +980,15 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": ". This assumption is based on the costs connected to fulfilling a real-effort task: The higher the costs an individual is willing to invest in answering, the more likely it is that these costs will also be invested in performing the actual behavior. Results based on real-effort designs are more externally valid when \"the cost function of that task shares important characteristics with the field task\" "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -884,6 +1004,10 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": "(Charness & Grieco, 2018, p. 75)"
                 },
                 {
@@ -893,6 +1017,10 @@
                 {
                   "type": "text",
                   "value": ". Such a real-effort design might be a better estimator of actual behavior because \"simply choosing a number may not capture the field environment and the psychological forces involved in putting forth actual effort\" "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -935,6 +1063,10 @@
                   "value": " during which cognitive resources are used "
                 },
                 {
+                  "type": "text",
+                  "value": ""
+                },
+                {
                   "type": "element",
                   "name": "xref",
                   "attributes": {
@@ -952,7 +1084,15 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": ". Accordingly, the length of a written answer is an approximator of the duration of the effort. Similarly, the length of answers to open-ended questions are often used as indicators of data quality "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -992,6 +1132,10 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": "(Charness et al., 2018, p. 78)"
                 },
                 {
@@ -1001,6 +1145,10 @@
                 {
                   "type": "text",
                   "value": ". Such a procedure was used by "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -1020,6 +1168,10 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": "(2006)"
                 },
                 {
@@ -1032,6 +1184,10 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": "Andersen et al."
                 },
                 {
@@ -1041,6 +1197,10 @@
                 {
                   "type": "text",
                   "value": " "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -1088,6 +1248,10 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": "Charness and Grieco"
                 },
                 {
@@ -1097,6 +1261,10 @@
                 {
                   "type": "text",
                   "value": " "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -1129,6 +1297,10 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": "(Charness et al., 2018, p. 82)"
                 },
                 {
@@ -1141,6 +1313,10 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": "Charness et al."
                 },
                 {
@@ -1150,6 +1326,10 @@
                 {
                   "type": "text",
                   "value": " "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -1201,6 +1381,10 @@
                   "value": "A survey experiment on knowledge-sharing behavior was conducted to analyze whether tangible or intangible incentives can foster that behavior. Knowledge sharing is the exchange of knowledge among individuals, teams, units, or organizations "
                 },
                 {
+                  "type": "text",
+                  "value": ""
+                },
+                {
                   "type": "element",
                   "name": "xref",
                   "attributes": {
@@ -1218,7 +1402,15 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": ". It is the basis of and a subprocess in an organization’s knowledge management. In this article, the term “knowledge sharing” describes the behavior of donating knowledge from one person to another or to a medium. Multiple determinants influence knowledge sharing. Among others, tangible and intangible rewards are considered to foster knowledge-sharing behavior. Tangible rewards are material incentives, such as financial bonuses, and usually enhance extrinsic motivation. In contrast, intangible rewards, such as praise from a colleague or supervisor, usually influences intrinsic motivation. On the one hand, it has been shown that monitoring (e.g., controlling with performance measures) and rewards increase the knowledge-sharing activity of employees in an organization "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "element",
@@ -1254,7 +1446,15 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": ". On the other hand, "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -1271,6 +1471,10 @@
                 {
                   "type": "text",
                   "value": " "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -1300,6 +1504,10 @@
                 {
                   "type": "text",
                   "value": "A 2x3 factorial survey experiment was designed to observe the within-subjects and between-subjects effects of the rewards offered. The research design was preregistered on the Open Science Framework ("
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -1376,6 +1584,10 @@
                 {
                   "type": "text",
                   "value": "treatment (Participants were given this reminder: “You know that all shared information improves your performance appraisal”). Performance appraisals served as a proxy for later rewards because it seemed unrealistic in the public sector to offer bonuses or other tangible rewards directly based on a person’s knowledge-sharing behavior. This decision should address the problem that vignette experiments are frequently criticized for being unrealistic and lacking external validity "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -1551,6 +1763,10 @@
                   "value": " Interrater reliability was calculated using Gwet's Agreement Coefficient "
                 },
                 {
+                  "type": "text",
+                  "value": ""
+                },
+                {
                   "type": "element",
                   "name": "xref",
                   "attributes": {
@@ -1565,6 +1781,10 @@
                       "value": "(AC"
                     }
                   ]
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -3488,6 +3708,10 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": "Galesic and Bosnjak"
                 },
                 {
@@ -3497,6 +3721,10 @@
                 {
                   "type": "text",
                   "value": " "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 },
                 {
                   "type": "text",
@@ -4397,6 +4625,10 @@
                 },
                 {
                   "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
                   "value": "(Galesic & Bosnjak, 2009)"
                 },
                 {
@@ -4483,6 +4715,10 @@
                     "style": "CitaviBibliographyHeading"
                   },
                   "children": [
+                    {
+                      "type": "text",
+                      "value": ""
+                    },
                     {
                       "type": "text",
                       "value": ""

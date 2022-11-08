@@ -84,19 +84,14 @@ const createFiles = (tree: Tree, options: NormalizedSchema) => {
   const { className, name, propertyName } = names(options.fileName)
 
   try {
-    generateFiles(
-      tree,
-      new URL('./files/lib', import.meta.url).pathname,
-      options.projectRoot,
-      {
-        ...options,
-        className,
-        name,
-        propertyName,
-        tmpl: '',
-        offsetFromRoot: offsetFromRoot(options.projectRoot),
-      }
-    )
+    generateFiles(tree, join(__dirname, './files/lib'), options.projectRoot, {
+      ...options,
+      className,
+      name,
+      propertyName,
+      tmpl: '',
+      offsetFromRoot: offsetFromRoot(options.projectRoot),
+    })
   } catch (e) {
     console.error(e)
     throw new Error(e as string)

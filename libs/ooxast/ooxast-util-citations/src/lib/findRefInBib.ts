@@ -12,8 +12,8 @@ export function findRef(
   const gottemInOne = bibliography.find(
     (bib) => bib.id && (bib.id === cite.id || bib.id === citeItem.id)
   )
-  console.dir(citeItem, { depth: null })
-  console.dir(gottemInOne, { depth: null })
+  // console.dir(citeItem, { depth: null })
+  // console.dir(gottemInOne, { depth: null })
   if (gottemInOne) {
     citeItem.itemData = gottemInOne
     return citeItem

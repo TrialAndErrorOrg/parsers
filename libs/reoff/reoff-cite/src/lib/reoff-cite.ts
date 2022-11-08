@@ -7,13 +7,17 @@ export default function reoffCite(
   options: {
     bibliography?: CSL[]
     type: 'mendeley' | 'word' | 'citavi' | 'zotero' | 'endnote'
+    log?: boolean
   } = { type: 'zotero' }
 ) {
   return (tree: Root, vfile: VFile) => {
-    console.log(vfile.data.bibliography)
+    if (options.log !== false) {
+      console.log(vfile.data.bibliography)
+    }
     return findCitations(tree, vfile, {
       bibliography: options.bibliography || (vfile.data.bibliography as CSL[]),
       type: options.type,
+      log: options.log,
     })
   }
 }

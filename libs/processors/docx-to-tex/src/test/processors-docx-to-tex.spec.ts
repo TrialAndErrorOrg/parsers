@@ -17,11 +17,11 @@ import { findCitations } from 'ooxast-util-citations'
 import reoffCite from 'reoff-cite'
 import reoffParseReferences from 'reoff-parse-references'
 
-import path from 'path'
-import { fileURLToPath } from 'url'
+// import path from 'path'
+// import { fileURLToPath } from 'url'
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
+// const __filename = fileURLToPath(import.meta.url)
+// const __dirname = path.dirname(__filename)
 //describe('fixtures', () => {
 const fromDocx = (
   path: string,

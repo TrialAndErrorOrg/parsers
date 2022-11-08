@@ -4,6 +4,28 @@ export const tests: TestData = {
     description: 'own cases i wanna catch',
     content: [
       {
+        description: 'Spanish Names',
+        result: [
+          'Wow ',
+          {
+            citationId: 'CITE-X',
+            citationItems: [
+              {
+                id: 'BautistaPerpinya2019',
+                itemData: {
+                  author: [{ family: 'Bautista Perpinya' }],
+                  issued: { 'date-parts': [['2019']] },
+                },
+              },
+            ],
+            originalText: '(Bautista Perpinya, 2019)',
+            properties: { noteIndex: 0 },
+          },
+          '.',
+        ],
+        input: 'Wow (Bautista Perpinya, 2019).',
+      },
+      {
         description: 'Just a normal fucking et al.!',
         result: [
           'Wow ',

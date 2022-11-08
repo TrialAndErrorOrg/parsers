@@ -141,26 +141,20 @@
                     "id": "_xref-5",
                     "refType": "bibr",
                     "rid": "Alegre2017",
-                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Alegre et al, 2017)\",\"plainCitation\":\"(Alegre et al, 2017)\"}"
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Alegre et al., 2017)\",\"plainCitation\":\"(Alegre et al., 2017)\"}"
                   },
                   "children": [
                     {
                       "type": "text",
-                      "value": "(Alegre et al, 2017)"
+                      "value": "(Alegre et al., 2017)"
                     }
                   ]
                 },
                 {
                   "type": "text",
-                  "value": "."
+                  "value": ". "
                 }
               ]
-            },
-            {
-              "type": "element",
-              "name": "p",
-              "attributes": {},
-              "children": []
             },
             {
               "type": "element",
@@ -173,7 +167,27 @@
                 },
                 {
                   "type": "text",
-                  "value": " (Stephan et al., 2015). "
+                  "value": " "
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-6",
+                    "refType": "bibr",
+                    "rid": "Stephan2015",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Stephan et al., 2015)\",\"plainCitation\":\"(Stephan et al., 2015)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Stephan et al., 2015)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
                 },
                 {
                   "type": "text",
@@ -187,7 +201,7 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-6",
+                    "id": "_xref-7",
                     "refType": "bibr",
                     "rid": "Korndörfer2015",
                     "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Korndörfer, Egloff, & Schmukle, 2015)\",\"plainCitation\":\"(Korndörfer, Egloff, & Schmukle, 2015)\"}"
@@ -205,7 +219,63 @@
                 },
                 {
                   "type": "text",
-                  "value": "This enables people to start a social enterprise to benefit their local community (Stephan et al., 2015), especially when people feel an ethical desire to contribute to society (Mair & Noboa, 2006; Stirzaker, Galloway, Muhonen, & Christopoulos, 2021). "
+                  "value": "This enables people to start a social enterprise to benefit their local community "
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-8",
+                    "refType": "bibr",
+                    "rid": "Stephan2015",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Stephan et al., 2015)\",\"plainCitation\":\"(Stephan et al., 2015)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Stephan et al., 2015)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", especially when people feel an ethical desire to contribute to society "
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-9",
+                    "refType": "bibr",
+                    "rid": "Mair2006",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Mair & Noboa, 2006; Stirzaker, Galloway, Muhonen, & Christopoulos, 2021)\",\"plainCitation\":\"(Mair & Noboa, 2006; Stirzaker, Galloway, Muhonen, & Christopoulos, 2021)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Mair & Noboa, 2006"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-10",
+                    "refType": "bibr",
+                    "rid": "Stirzaker2021",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Mair & Noboa, 2006; Stirzaker, Galloway, Muhonen, & Christopoulos, 2021)\",\"plainCitation\":\"(Mair & Noboa, 2006; Stirzaker, Galloway, Muhonen, & Christopoulos, 2021)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " Stirzaker, Galloway, Muhonen, & Christopoulos, 2021)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
                 },
                 {
                   "type": "text",
@@ -215,7 +285,7 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-7",
+                    "id": "_xref-11",
                     "refType": "bibr",
                     "rid": "Inglehart1977",
                     "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Inglehart, 1977; Kraus, Piff, Mendoza-Denton, Rheinschmidt, & Keltner, 2012)\",\"plainCitation\":\"(Inglehart, 1977; Kraus, Piff, Mendoza-Denton, Rheinschmidt, & Keltner, 2012)\"}"
@@ -231,7 +301,7 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-8",
+                    "id": "_xref-12",
                     "refType": "bibr",
                     "rid": "Kraus2012",
                     "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Inglehart, 1977; Kraus, Piff, Mendoza-Denton, Rheinschmidt, & Keltner, 2012)\",\"plainCitation\":\"(Inglehart, 1977; Kraus, Piff, Mendoza-Denton, Rheinschmidt, & Keltner, 2012)\"}"
@@ -255,7 +325,7 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-9",
+                    "id": "_xref-13",
                     "refType": "bibr",
                     "rid": "Inglehart1977",
                     "customType": "{\"noteIndex\":0,\"formattedCitation\":\"Inglehart (1977)\",\"plainCitation\":\"Inglehart (1977)\"}"
@@ -275,7 +345,7 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-10",
+                    "id": "_xref-14",
                     "refType": "bibr",
                     "rid": "Franzen2013",
                     "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Franzen & Vogl, 2013)\",\"plainCitation\":\"(Franzen & Vogl, 2013)\"}"
@@ -308,7 +378,445 @@
                 },
                 {
                   "type": "text",
-                  "value": "enterprise (Pathak and Muralidharan, 2016; Stephan et al., 2015). "
+                  "value": "enterprise "
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-15",
+                    "refType": "bibr",
+                    "rid": "Pathak2016",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Pathak and Muralidharan, 2016; Stephan et al., 2015)\",\"plainCitation\":\"(Pathak and Muralidharan, 2016; Stephan et al., 2015)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Pathak and Muralidharan, 2016"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-16",
+                    "refType": "bibr",
+                    "rid": "Stephan2015",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Pathak and Muralidharan, 2016; Stephan et al., 2015)\",\"plainCitation\":\"(Pathak and Muralidharan, 2016; Stephan et al., 2015)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " Stephan et al., 2015)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "p",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Social enterprises are the tangible form of social entrepreneurship "
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-17",
+                    "refType": "bibr",
+                    "rid": "Mair2006",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Mair & Martí, 2006)\",\"plainCitation\":\"(Mair & Martí, 2006)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Mair & Martí, 2006)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "However, the population of social enterprises is not homogeneous. "
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-18",
+                    "refType": "bibr",
+                    "rid": "Lepoutre2013",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"Lepoutre et al. (2013)\",\"plainCitation\":\"Lepoutre et al. (2013)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Lepoutre et al. (2013)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " differentiate between "
+                },
+                {
+                  "type": "element",
+                  "name": "italic",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "explicit "
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "and "
+                },
+                {
+                  "type": "element",
+                  "name": "italic",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "implicit"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " organizational forms of social entrepreneurship. "
+                },
+                {
+                  "type": "text",
+                  "value": "The difference is that a social or environmental objective is part of the core mission or identity of the explicit organizational form, which is not present for the implicit social enterprises. "
+                },
+                {
+                  "type": "text",
+                  "value": "Whether or not they receive additional financial support, the social and entrepreneurial dimensions are present among "
+                },
+                {
+                  "type": "element",
+                  "name": "italic",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "explicit "
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "social enterprises "
+                },
+                {
+                  "type": "text",
+                  "value": "(or hybrid enterprises) "
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-19",
+                    "refType": "bibr",
+                    "rid": "Defourny2010",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Defourny & Nyssens, 2010a)\",\"plainCitation\":\"(Defourny & Nyssens, 2010a)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Defourny & Nyssens, 2010a)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "The entrepreneurial dimension is manifested through a business logic "
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-20",
+                    "refType": "bibr",
+                    "rid": "Lepoutre2013",
+                    "customType": "{\"prefix\":\"at, ,least, ,to, ,some, ,extent, ,–see\",\"noteIndex\":0,\"formattedCitation\":\"(at least to some extent – see Lepoutre et al., 2013)\",\"plainCitation\":\"(at least to some extent – see Lepoutre et al., 2013)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(at least to some extent – see Lepoutre et al., 2013)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " to generate revenue by selling products and services via the market. "
+                },
+                {
+                  "type": "text",
+                  "value": "Despite the idea that business logic is incompatible with the core ideals of social value creation, once intertwined, they create the necessary conditions for classifying social entrepreneurship "
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-21",
+                    "refType": "bibr",
+                    "rid": "Defourny2010",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Defourny & Nyssens, 2010a; Haigh, Walker, Bacq, & Kickul, 2015; Weerawardena & Mort, 2006)\",\"plainCitation\":\"(Defourny & Nyssens, 2010a; Haigh, Walker, Bacq, & Kickul, 2015; Weerawardena & Mort, 2006)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Defourny & Nyssens, 2010a"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-22",
+                    "refType": "bibr",
+                    "rid": "Haigh2015",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Defourny & Nyssens, 2010a; Haigh, Walker, Bacq, & Kickul, 2015; Weerawardena & Mort, 2006)\",\"plainCitation\":\"(Defourny & Nyssens, 2010a; Haigh, Walker, Bacq, & Kickul, 2015; Weerawardena & Mort, 2006)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " Haigh, Walker, Bacq, & Kickul, 2015"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-23",
+                    "refType": "bibr",
+                    "rid": "Weerawardena2006",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Defourny & Nyssens, 2010a; Haigh, Walker, Bacq, & Kickul, 2015; Weerawardena & Mort, 2006)\",\"plainCitation\":\"(Defourny & Nyssens, 2010a; Haigh, Walker, Bacq, & Kickul, 2015; Weerawardena & Mort, 2006)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " Weerawardena & Mort, 2006)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Thus, the related ideal-typical organizational form may focus on the alleviation of a particular social or environmental problem, apply a business logic, and may attract financial capital in ways consistent with either - or both - for-profit and non-profit models "
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-24",
+                    "refType": "bibr",
+                    "rid": "Battilana2014",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Battilana & Lee, 2014; Lepoutre et al., 2013)\",\"plainCitation\":\"(Battilana & Lee, 2014; Lepoutre et al., 2013)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Battilana & Lee, 2014"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-25",
+                    "refType": "bibr",
+                    "rid": "Lepoutre2013",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Battilana & Lee, 2014; Lepoutre et al., 2013)\",\"plainCitation\":\"(Battilana & Lee, 2014; Lepoutre et al., 2013)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " Lepoutre et al., 2013)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
+                },
+                {
+                  "type": "element",
+                  "name": "italic",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Implicit "
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "social organizational forms include a broader spectrum of socially committed enterprises "
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-26",
+                    "refType": "bibr",
+                    "rid": "Lepoutre2013",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Lepoutre et al., 2013)\",\"plainCitation\":\"(Lepoutre et al., 2013)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Lepoutre et al., 2013)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Information on the relative importance of social value creation goals compared to financial value creation goals is useful to classify the degree of social entrepreneurship among these organizational forms "
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-27",
+                    "refType": "bibr",
+                    "rid": "Bacq2016",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Bacq et al., 2016; Zahra et al., 2014)\",\"plainCitation\":\"(Bacq et al., 2016; Zahra et al., 2014)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Bacq et al., 2016"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-28",
+                    "refType": "bibr",
+                    "rid": "Zahra2014",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Bacq et al., 2016; Zahra et al., 2014)\",\"plainCitation\":\"(Bacq et al., 2016; Zahra et al., 2014)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " Zahra et al., 2014)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Although not explicitly addressing a social mission statement, these organizations prioritize non-financial goals in their business operations "
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-29",
+                    "refType": "bibr",
+                    "rid": "Lepoutre2013",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Lepoutre et al., 2013)\",\"plainCitation\":\"(Lepoutre et al., 2013)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Lepoutre et al., 2013)"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "These organizations may focus on economic sustainability and on creating a positive impact on society and ecology."
+                },
+                {
+                  "type": "element",
+                  "name": "italic",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " "
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "For example, such organizations may apply a ‘triple bottom line’ or ‘people-planet-profit’ logic. "
+                },
+                {
+                  "type": "text",
+                  "value": "Whether explicit or implicit, social entrepreneurship manifests itself in a heterogeneous population of organizations. "
+                },
+                {
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
+                  "value": ""
+                },
+                {
+                  "type": "text",
+                  "value": "Furthermore, non-profits or NGOs are other examples of organizational forms that primarily aim for social or environmental value creation. "
+                },
+                {
+                  "type": "text",
+                  "value": "Although an exclusive social value creation mission characterizes these organizations, they do not use a business logic to attain social or environmental impact. "
+                },
+                {
+                  "type": "text",
+                  "value": "For example, these organizational forms are mostly dependent on governmental subsidies, membership fees or donations and cannot be observed as an organizational form of social entrepreneurship. "
+                },
+                {
+                  "type": "text",
+                  "value": "Nevertheless, their funding enables those organizations to commit themselves exclusively to social impact goals. "
+                },
+                {
+                  "type": "text",
+                  "value": ""
                 }
               ]
             },
@@ -16554,6 +17062,199 @@
                   "type": "element",
                   "name": "ref",
                   "attributes": {
+                    "id": "Stephan2015"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2015"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pubId",
+                          "attributes": {
+                            "pubIdType": "doi"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "10.1057/jibs.2014.38"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Stephan"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "U."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Uhlaner"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "L.M."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Stride"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "C."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "308–331"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Institutions and social entrepreneurship: The role of institutional voids, institutional support, and institutional configurations"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Journal of International Business Studies"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issue",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "3"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "46"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
                     "id": "Korndörfer2015"
                   },
                   "children": [
@@ -16725,6 +17426,392 @@
                             {
                               "type": "text",
                               "value": "10"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Mair2006"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2006"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pubId",
+                          "attributes": {
+                            "pubIdType": "doi"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "10.1016/j.jwb.2005.09.002"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Mair"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "J."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Martí"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "I."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "36–44"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Social entrepreneurship research: A source of explanation, prediction, and delight"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Journal of World Business"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issue",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "41"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Stirzaker2021"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2021"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pubId",
+                          "attributes": {
+                            "pubIdType": "doi"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "10.1108/IJEBR-07-2020-0461"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Stirzaker"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "R."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Galloway"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "L."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Muhonen"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "J."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Christopoulos"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "D."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1381–1402"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "The drivers of social entrepreneurship: agency, context, compassion and opportunism"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "International Journal of Entrepreneurial Behavior & Research"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issue",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "6"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "27"
                             }
                           ]
                         }
@@ -17240,6 +18327,1492 @@
                             {
                               "type": "text",
                               "value": "94"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Pathak2016"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2016"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pubId",
+                          "attributes": {
+                            "pubIdType": "doi"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "10.1111/jsbm.12289"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Pathak"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "S."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Muralidharan"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "E."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "168–188"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Informal institutions and their comparative influences on social and commercial entrepreneurship: The role of in‐group collectivism and interpersonal Trust"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Journal of Small Business Management"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issue",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "S1"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "54"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Lepoutre2013"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2013"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pubId",
+                          "attributes": {
+                            "pubIdType": "doi"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "10.1007/s11187-011-9398-4"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Lepoutre"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "J."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Justo"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "R."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Terjesen"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "S."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Bosma"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "N."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "693–714"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Designing a global standardized methodology for measuring social entrepreneurship activity: the Global Entrepreneurship Monitor social entrepreneurship study"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Small Business Economics"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issue",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "3"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "40"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Defourny2010"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2010"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pubId",
+                          "attributes": {
+                            "pubIdType": "doi"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "10.1080/19420670903442053"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Defourny"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "J."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Nyssens"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "M."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "32–53"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Conceptions of Social Enterprise and Social Entrepreneurship in Europe and the United States: Convergences and Divergences"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Journal of Social Entrepreneurship"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issue",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Haigh2015"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2015"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pubId",
+                          "attributes": {
+                            "pubIdType": "doi"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "10.1525/cmr.2015.57.3.5"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Haigh"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "N."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Walker"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "J."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Bacq"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "S."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Kickul"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "J."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "5–12"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Hybrid organizations: origins, strategies, impacts, and implications"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "California Management Review"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issue",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "3"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "57"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Weerawardena2006"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2006"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pubId",
+                          "attributes": {
+                            "pubIdType": "doi"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "10.1016/j.jwb.2005.09.001"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Weerawardena"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "J."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Mort"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "G.S."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "21–35"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Investigating social entrepreneurship: A multidimensional model"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Journal of World Business"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issue",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "41"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Battilana2014"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2014"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pubId",
+                          "attributes": {
+                            "pubIdType": "doi"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "10.1080/19416520.2014.893615"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Battilana"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "J."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Lee"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "M."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "397–441"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Advancing research on hybrid organizing–Insights from the study of social enterprises"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "The Academy of Management Annals"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issue",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "8"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Bacq2016"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2016"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pubId",
+                          "attributes": {
+                            "pubIdType": "doi"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "10.1007/s10551-014-2446-7"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Bacq"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "S."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Hartog"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "C."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Hoogendoorn"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "B."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "703–718"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Beyond the moral portrayal of social entrepreneurs: An empirical approach to who they are and what drives them"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Journal of Business Ethics"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issue",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "4"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "133"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Zahra2014"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2014"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pubId",
+                          "attributes": {
+                            "pubIdType": "doi"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "10.1111/etap.12061"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Zahra"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "S."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Newey"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "L."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Li"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Y."
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pageRange",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "137–158"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "On the frontiers: The implications of social entrepreneurship for international entrepreneurship"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Entrepreneurship Theory and Practice"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "issue",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "volume",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "38"
                             }
                           ]
                         }

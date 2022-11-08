@@ -483,7 +483,7 @@
                     },
                     {
                       "type": "text",
-                      "value": "(Vallée-Tourangeau) in "
+                      "value": "(Vallée-Tourangeau) in Vallée-Tourangeau and "
                     },
                     {
                       "type": "element",
@@ -491,13 +491,13 @@
                       "attributes": {
                         "id": "_xref-2",
                         "refType": "bibr",
-                        "rid": "Vallée-Tourangeau2020",
-                        "customType": "{\"noteIndex\":0,\"formattedCitation\":\"Vallée-Tourangeau and March (2020)\",\"plainCitation\":\"Vallée-Tourangeau and March (2020)\"}"
+                        "rid": "March2020",
+                        "customType": "{\"noteIndex\":0,\"formattedCitation\":\"March (2020)\",\"plainCitation\":\"March (2020)\"}"
                       },
                       "children": [
                         {
                           "type": "text",
-                          "value": "Vallée-Tourangeau and March (2020)"
+                          "value": "March (2020)"
                         }
                       ]
                     },
@@ -2159,7 +2159,7 @@
                             },
                             {
                               "type": "text",
-                              "value": "As suggested by "
+                              "value": "As suggested by Vallée-Tourangeau and "
                             },
                             {
                               "type": "element",
@@ -2167,13 +2167,13 @@
                               "attributes": {
                                 "id": "_xref-16",
                                 "refType": "bibr",
-                                "rid": "Vallée-Tourangeau2020a",
-                                "customType": "{\"noteIndex\":0,\"formattedCitation\":\"Vallée-Tourangeau and March (2020)\",\"plainCitation\":\"Vallée-Tourangeau and March (2020)\"}"
+                                "rid": "March2020",
+                                "customType": "{\"noteIndex\":0,\"formattedCitation\":\"March (2020)\",\"plainCitation\":\"March (2020)\"}"
                               },
                               "children": [
                                 {
                                   "type": "text",
-                                  "value": "Vallée-Tourangeau and March (2020)"
+                                  "value": "March (2020)"
                                 }
                               ]
                             },
@@ -6114,137 +6114,6 @@
                   "type": "element",
                   "name": "ref",
                   "attributes": {
-                    "id": "Vallée-Tourangeau2020"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "elementCitation",
-                      "attributes": {
-                        "publicationType": "journal"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "year",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "2020"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "pubId",
-                          "attributes": {
-                            "pubIdType": "doi"
-                          },
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "10.1016/j.newideapsych.2020.100812"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "personGroup",
-                          "attributes": {
-                            "personGroupType": "author"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "name",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "surname",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "Vallée-Tourangeau"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "givenNames",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "Frédéric"
-                                    }
-                                  ]
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "name",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "surname",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "Vallée-Tourangeau"
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "givenNames",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "Gaëlle"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "articleTitle",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "Mapping systemic resources in problem solving"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "source",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "New Ideas in Psychology"
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "ref",
-                  "attributes": {
                     "id": "Bowden2005"
                   },
                   "children": [
@@ -7372,6 +7241,137 @@
                             {
                               "type": "text",
                               "value": "https://onlinelibrary.wiley.com/doi/abs/10.1002/jocb.409"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Vallée-Tourangeau2020"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "journal"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2020"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "pubId",
+                          "attributes": {
+                            "pubIdType": "doi"
+                          },
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "10.1016/j.newideapsych.2020.100812"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Vallée-Tourangeau"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Frédéric"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Vallée-Tourangeau"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "givenNames",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Gaëlle"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "articleTitle",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Mapping systemic resources in problem solving"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "source",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "New Ideas in Psychology"
                             }
                           ]
                         }

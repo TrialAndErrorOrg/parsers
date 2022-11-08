@@ -134,7 +134,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "@article{Saebi2019,\n    title       = {Social entrepreneurship research: Past achievements and future promises},\n    author      = {Saebi, T. and Foss, N.J. and Linder, S.},\n    number      = {1},\n    volume      = {45},\n    doi         = {10.1177/0149206318793196},\n    year        = {2019},\n    pages       = {70–95},\n    journal     = {Journal of Management}\n}\n\n\n@article{Mair2010,\n    title       = {Social entrepreneurship: taking stock and looking ahead},\n    author      = {Mair, J.},\n    publisher   = {Edward Elgar Publishing Limited},\n    year        = {2010},\n    pages       = {15–28},\n    journal     = {Handbook of Research on Social Entrepreneurship}\n}\n\n\n@article{Choi2014,\n    title       = {Social entrepreneurship as an essentially contested concept: Opening a new avenue for systematic future research},\n    author      = {Choi, N. and Majumdar, S.},\n    number      = {3},\n    volume      = {29},\n    doi         = {10.1016/j.jbusvent.2013.05.001},\n    year        = {2014},\n    pages       = {363–376},\n    journal     = {Journal of Business Venturing}\n}\n\n\n@article{Alegre2017,\n    title       = {Organized Chaos: Mapping the Definitions of Social Entrepreneurship},\n    author      = {Alegre, I. and Kislenko, S. and Berbegal-Mirabent, J.},\n    number      = {2},\n    volume      = {8},\n    doi         = {10.1080/19420676.2017.1371631},\n    year        = {2017},\n    pages       = {248–264},\n    journal     = {Journal of Social Entrepreneurship}\n}\n\n\n@article{Korndörfer2015,\n    title       = {A large scale test of the effect of social class on prosocial behavior},\n    author      = {Korndörfer, M. and Egloff, B. and Schmukle, S.C.},\n    number      = {7},\n    volume      = {10},\n    doi         = {10.1371/journal.pone.0133193},\n    year        = {2015},\n    journal     = {PloS ONE}\n}\n\n\n@book{Inglehart1977,\n    title       = {The silent revolution: Changing values and political styles in advanced industrial society},\n    author      = {Inglehart, R.},\n    publisher   = {Princeton University Press},\n    place       = {Princeton, NJ},\n    year        = {1977}\n}\n\n\n@article{Kraus2012,\n    title       = {Social class, solipsism, and contextualism: how the rich are different from the poor},\n    author      = {Kraus, M.W. and Piff, P.K. and Mendoza-Denton, R. and Rheinschmidt, M.L. and Keltner, D.},\n    number      = {3},\n    volume      = {119},\n    doi         = {10.1037/a0028756},\n    year        = {2012},\n    pages       = {546–572},\n    journal     = {Psychological Review}\n}\n\n\n@article{Franzen2013,\n    title       = {Acquiescence and the Willingness to Pay for Environmental Protection: A Comparison of the ISSP, WVS, and EVS},\n    author      = {Franzen, A. and Vogl, D.},\n    number      = {3},\n    volume      = {94},\n    doi         = {10.1111/j.1540-6237.2012.00903.x},\n    year        = {2013},\n    pages       = {637–659},\n    journal     = {Social Science Quarterly}\n}"
+                  "value": "@article{Saebi2019,\n    title       = {Social entrepreneurship research: Past achievements and future promises},\n    author      = {Saebi, T. and Foss, N.J. and Linder, S.},\n    number      = {1},\n    volume      = {45},\n    doi         = {10.1177/0149206318793196},\n    year        = {2019},\n    pages       = {70–95},\n    journal     = {Journal of Management}\n}\n\n\n@article{Mair2010,\n    title       = {Social entrepreneurship: taking stock and looking ahead},\n    author      = {Mair, J.},\n    publisher   = {Edward Elgar Publishing Limited},\n    year        = {2010},\n    pages       = {15–28},\n    journal     = {Handbook of Research on Social Entrepreneurship}\n}\n\n\n@article{Choi2014,\n    title       = {Social entrepreneurship as an essentially contested concept: Opening a new avenue for systematic future research},\n    author      = {Choi, N. and Majumdar, S.},\n    number      = {3},\n    volume      = {29},\n    doi         = {10.1016/j.jbusvent.2013.05.001},\n    year        = {2014},\n    pages       = {363–376},\n    journal     = {Journal of Business Venturing}\n}\n\n\n@article{Alegre2017,\n    title       = {Organized Chaos: Mapping the Definitions of Social Entrepreneurship},\n    author      = {Alegre, I. and Kislenko, S. and Berbegal-Mirabent, J.},\n    number      = {2},\n    volume      = {8},\n    doi         = {10.1080/19420676.2017.1371631},\n    year        = {2017},\n    pages       = {248–264},\n    journal     = {Journal of Social Entrepreneurship}\n}\n\n\n@article{Stephan2015,\n    title       = {Institutions and social entrepreneurship: The role of institutional voids, institutional support, and institutional configurations},\n    author      = {Stephan, U. and Uhlaner, L.M. and Stride, C.},\n    number      = {3},\n    volume      = {46},\n    doi         = {10.1057/jibs.2014.38},\n    year        = {2015},\n    pages       = {308–331},\n    journal     = {Journal of International Business Studies}\n}\n\n\n@article{Korndörfer2015,\n    title       = {A large scale test of the effect of social class on prosocial behavior},\n    author      = {Korndörfer, M. and Egloff, B. and Schmukle, S.C.},\n    number      = {7},\n    volume      = {10},\n    doi         = {10.1371/journal.pone.0133193},\n    year        = {2015},\n    journal     = {PloS ONE}\n}\n\n\n@article{Mair2006,\n    title       = {Social entrepreneurship research: A source of explanation, prediction, and delight},\n    author      = {Mair, J. and Martí, I.},\n    number      = {1},\n    volume      = {41},\n    doi         = {10.1016/j.jwb.2005.09.002},\n    year        = {2006},\n    pages       = {36–44},\n    journal     = {Journal of World Business}\n}\n\n\n@article{Stirzaker2021,\n    title       = {The drivers of social entrepreneurship: agency, context, compassion and opportunism},\n    author      = {Stirzaker, R. and Galloway, L. and Muhonen, J. and Christopoulos, D.},\n    number      = {6},\n    volume      = {27},\n    doi         = {10.1108/IJEBR-07-2020-0461},\n    year        = {2021},\n    pages       = {1381–1402},\n    journal     = {International Journal of Entrepreneurial Behavior & Research}\n}\n\n\n@book{Inglehart1977,\n    title       = {The silent revolution: Changing values and political styles in advanced industrial society},\n    author      = {Inglehart, R.},\n    publisher   = {Princeton University Press},\n    place       = {Princeton, NJ},\n    year        = {1977}\n}\n\n\n@article{Kraus2012,\n    title       = {Social class, solipsism, and contextualism: how the rich are different from the poor},\n    author      = {Kraus, M.W. and Piff, P.K. and Mendoza-Denton, R. and Rheinschmidt, M.L. and Keltner, D.},\n    number      = {3},\n    volume      = {119},\n    doi         = {10.1037/a0028756},\n    year        = {2012},\n    pages       = {546–572},\n    journal     = {Psychological Review}\n}\n\n\n@article{Franzen2013,\n    title       = {Acquiescence and the Willingness to Pay for Environmental Protection: A Comparison of the ISSP, WVS, and EVS},\n    author      = {Franzen, A. and Vogl, D.},\n    number      = {3},\n    volume      = {94},\n    doi         = {10.1111/j.1540-6237.2012.00903.x},\n    year        = {2013},\n    pages       = {637–659},\n    journal     = {Social Science Quarterly}\n}\n\n\n@article{Pathak2016,\n    title       = {Informal institutions and their comparative influences on social and commercial entrepreneurship: The role of in‐group collectivism and interpersonal Trust},\n    author      = {Pathak, S. and Muralidharan, E.},\n    number      = {S1},\n    volume      = {54},\n    doi         = {10.1111/jsbm.12289},\n    year        = {2016},\n    pages       = {168–188},\n    journal     = {Journal of Small Business Management}\n}\n\n\n@article{Lepoutre2013,\n    title       = {Designing a global standardized methodology for measuring social entrepreneurship activity: the Global Entrepreneurship Monitor social entrepreneurship study},\n    author      = {Lepoutre, J. and Justo, R. and Terjesen, S. and Bosma, N.},\n    number      = {3},\n    volume      = {40},\n    doi         = {10.1007/s11187-011-9398-4},\n    year        = {2013},\n    pages       = {693–714},\n    journal     = {Small Business Economics}\n}\n\n\n@article{Defourny2010,\n    title       = {Conceptions of Social Enterprise and Social Entrepreneurship in Europe and the United States: Convergences and Divergences},\n    author      = {Defourny, J. and Nyssens, M.},\n    number      = {1},\n    volume      = {1},\n    doi         = {10.1080/19420670903442053},\n    year        = {2010},\n    pages       = {32–53},\n    journal     = {Journal of Social Entrepreneurship}\n}\n\n\n@article{Haigh2015,\n    title       = {Hybrid organizations: origins, strategies, impacts, and implications},\n    author      = {Haigh, N. and Walker, J. and Bacq, S. and Kickul, J.},\n    number      = {3},\n    volume      = {57},\n    doi         = {10.1525/cmr.2015.57.3.5},\n    year        = {2015},\n    pages       = {5–12},\n    journal     = {California Management Review}\n}\n\n\n@article{Weerawardena2006,\n    title       = {Investigating social entrepreneurship: A multidimensional model},\n    author      = {Weerawardena, J. and Mort, G.S.},\n    number      = {1},\n    volume      = {41},\n    doi         = {10.1016/j.jwb.2005.09.001},\n    year        = {2006},\n    pages       = {21–35},\n    journal     = {Journal of World Business}\n}\n\n\n@article{Battilana2014,\n    title       = {Advancing research on hybrid organizing–Insights from the study of social enterprises},\n    author      = {Battilana, J. and Lee, M.},\n    number      = {1},\n    volume      = {8},\n    doi         = {10.1080/19416520.2014.893615},\n    year        = {2014},\n    pages       = {397–441},\n    journal     = {The Academy of Management Annals}\n}\n\n\n@article{Bacq2016,\n    title       = {Beyond the moral portrayal of social entrepreneurs: An empirical approach to who they are and what drives them},\n    author      = {Bacq, S. and Hartog, C. and Hoogendoorn, B.},\n    number      = {4},\n    volume      = {133},\n    doi         = {10.1007/s10551-014-2446-7},\n    year        = {2016},\n    pages       = {703–718},\n    journal     = {Journal of Business Ethics}\n}\n\n\n@article{Zahra2014,\n    title       = {On the frontiers: The implications of social entrepreneurship for international entrepreneurship},\n    author      = {Zahra, S. and Newey, L. and Li, Y.},\n    number      = {1},\n    volume      = {38},\n    doi         = {10.1111/etap.12061},\n    year        = {2014},\n    pages       = {137–158},\n    journal     = {Entrepreneurship Theory and Practice}\n}"
                 }
               ]
             }
@@ -256,13 +256,9 @@
                 },
                 {
                   "type": "text",
-                  "value": "."
+                  "value": ". "
                 }
               ]
-            },
-            {
-              "type": "paragraph",
-              "children": []
             },
             {
               "type": "paragraph",
@@ -273,7 +269,26 @@
                 },
                 {
                   "type": "text",
-                  "value": " (Stephan et al., 2015). "
+                  "value": " "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Stephan2015"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
                 },
                 {
                   "type": "text",
@@ -304,7 +319,60 @@
                 },
                 {
                   "type": "text",
-                  "value": "This enables people to start a social enterprise to benefit their local community (Stephan et al., 2015), especially when people feel an ethical desire to contribute to society (Mair & Noboa, 2006; Stirzaker, Galloway, Muhonen, & Christopoulos, 2021). "
+                  "value": "This enables people to start a social enterprise to benefit their local community "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Stephan2015"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ", especially when people feel an ethical desire to contribute to society "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Mair2006"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Stirzaker2021"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
                 },
                 {
                   "type": "text",
@@ -407,7 +475,456 @@
                 },
                 {
                   "type": "text",
-                  "value": "enterprise (Pathak and Muralidharan, 2016; Stephan et al., 2015). "
+                  "value": "enterprise "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Pathak2016"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Stephan2015"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Social enterprises are the tangible form of social entrepreneurship "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Mair2006"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "However, the population of social enterprises is not homogeneous. "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Lepoutre2013"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " differentiate between "
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "explicit "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "and "
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "implicit"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " organizational forms of social entrepreneurship. "
+                },
+                {
+                  "type": "text",
+                  "value": "The difference is that a social or environmental objective is part of the core mission or identity of the explicit organizational form, which is not present for the implicit social enterprises. "
+                },
+                {
+                  "type": "text",
+                  "value": "Whether or not they receive additional financial support, the social and entrepreneurial dimensions are present among "
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "explicit "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "social enterprises "
+                },
+                {
+                  "type": "text",
+                  "value": "(or hybrid enterprises) "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Defourny2010"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "The entrepreneurial dimension is manifested through a business logic "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "at, ,least, ,to, ,some, ,extent, ,–see"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Lepoutre2013"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " to generate revenue by selling products and services via the market. "
+                },
+                {
+                  "type": "text",
+                  "value": "Despite the idea that business logic is incompatible with the core ideals of social value creation, once intertwined, they create the necessary conditions for classifying social entrepreneurship "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Defourny2010"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Haigh2015"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Weerawardena2006"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Thus, the related ideal-typical organizational form may focus on the alleviation of a particular social or environmental problem, apply a business logic, and may attract financial capital in ways consistent with either - or both - for-profit and non-profit models "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Battilana2014"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Lepoutre2013"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Implicit "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "social organizational forms include a broader spectrum of socially committed enterprises "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Lepoutre2013"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Information on the relative importance of social value creation goals compared to financial value creation goals is useful to classify the degree of social entrepreneurship among these organizational forms "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Bacq2016"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Zahra2014"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Although not explicitly addressing a social mission statement, these organizations prioritize non-financial goals in their business operations "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Lepoutre2013"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "These organizations may focus on economic sustainability and on creating a positive impact on society and ecology."
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "For example, such organizations may apply a ‘triple bottom line’ or ‘people-planet-profit’ logic. "
+                },
+                {
+                  "type": "text",
+                  "value": "Whether explicit or implicit, social entrepreneurship manifests itself in a heterogeneous population of organizations. "
+                },
+                {
+                  "type": "text",
+                  "value": "Furthermore, non-profits or NGOs are other examples of organizational forms that primarily aim for social or environmental value creation. "
+                },
+                {
+                  "type": "text",
+                  "value": "Although an exclusive social value creation mission characterizes these organizations, they do not use a business logic to attain social or environmental impact. "
+                },
+                {
+                  "type": "text",
+                  "value": "For example, these organizational forms are mostly dependent on governmental subsidies, membership fees or donations and cannot be observed as an organizational form of social entrepreneurship. "
+                },
+                {
+                  "type": "text",
+                  "value": "Nevertheless, their funding enables those organizations to commit themselves exclusively to social impact goals. "
                 }
               ]
             },

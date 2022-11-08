@@ -25,7 +25,7 @@ export const lexer = moo.compile({
   End: /[?!]/u,
   Punct: /[[\]{}<>]/u,
   Mc: ['Mc', 'Mac'],
-  DutchPref: /\b(?:van|der|ter|ten|te|de|la)\b/u,
+  DutchPref: /\b(?:van|der|den|ter|ten|te|de|la)\b/u,
   Cap: /\p{Lu}/u,
   Lowword: /\p{Ll}+/u,
   NL: { match: /\n/u, lineBreaks: true },

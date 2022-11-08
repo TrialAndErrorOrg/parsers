@@ -2503,7 +2503,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "(Vallée-Tourangeau) in "
+                          "value": "(Vallée-Tourangeau) in Vallée-Tourangeau and "
                         }
                       ]
                     }
@@ -2521,7 +2521,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Vallée-Tourangeau2020\",\"itemData\":{\"author\":[{\"family\":\"Vallée-Tourangeau\"},{\"family\":\"March\"}],\"issued\":{\"date-parts\":[[\"2020\"]]}}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"Vallée-Tourangeau and March (2020)\",\"plainCitation\":\"Vallée-Tourangeau and March (2020)\"},\"citationID\":\"CITE-2\"}"
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"March2020\",\"itemData\":{\"author\":[{\"family\":\"March\"}],\"issued\":{\"date-parts\":[[\"2020\"]]}}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"March (2020)\",\"plainCitation\":\"March (2020)\"},\"citationID\":\"CITE-2\"}"
                         }
                       ]
                     }
@@ -2539,7 +2539,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Vallée-Tourangeau and March (2020)"
+                          "value": "March (2020)"
                         }
                       ]
                     }
@@ -10162,7 +10162,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "As suggested by "
+                          "value": "As suggested by Vallée-Tourangeau and "
                         }
                       ]
                     }
@@ -10180,7 +10180,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Vallée-Tourangeau2020\",\"itemData\":{\"author\":[{\"family\":\"Vallée-Tourangeau\"},{\"family\":\"March\"}],\"issued\":{\"date-parts\":[[\"2020\"]]}}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"Vallée-Tourangeau and March (2020)\",\"plainCitation\":\"Vallée-Tourangeau and March (2020)\"},\"citationID\":\"CITE-4\"}"
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"March2020\",\"itemData\":{\"author\":[{\"family\":\"March\"}],\"issued\":{\"date-parts\":[[\"2020\"]]}}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"March (2020)\",\"plainCitation\":\"March (2020)\"},\"citationID\":\"CITE-4\"}"
                         }
                       ]
                     }
@@ -10198,7 +10198,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Vallée-Tourangeau and March (2020)"
+                          "value": "March (2020)"
                         }
                       ]
                     }

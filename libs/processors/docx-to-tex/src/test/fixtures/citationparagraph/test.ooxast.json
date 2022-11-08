@@ -59,8 +59,8 @@
               "type": "element",
               "name": "w:p",
               "attributes": {
-                "w14:paraId": "7BE15A6B",
-                "w14:textId": "08DC560C"
+                "w14:paraId": "008DC5A0",
+                "w14:textId": "77777777"
               },
               "children": [
                 {
@@ -80,6 +80,14 @@
                             "w:ascii": "Times New Roman",
                             "w:hAnsi": "Times New Roman",
                             "w:cs": "Times New Roman"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:lang",
+                          "attributes": {
+                            "w:val": "en-US"
                           },
                           "children": []
                         }
@@ -315,7 +323,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Alegre2017\",\"itemData\":{\"author\":[{\"family\":\"Alegre\",\"given\":\"I.\"},{\"family\":\"Kislenko\",\"given\":\"S.\"},{\"family\":\"Berbegal-Mirabent\",\"given\":\"J.\"}],\"title\":\"Organized Chaos: Mapping the Definitions of Social Entrepreneurship\",\"volume\":\"8\",\"type\":\"article-journal\",\"container-title\":\"Journal of Social Entrepreneurship\",\"issue\":\"2\",\"issued\":{\"date-parts\":[[\"2017\"]]},\"page\":\"248–264\",\"DOI\":\"10.1080/19420676.2017.1371631\",\"id\":\"Alegre2017\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Alegre et al, 2017)\",\"plainCitation\":\"(Alegre et al, 2017)\"},\"citationID\":\"CITE-5\"}"
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Alegre2017\",\"itemData\":{\"author\":[{\"family\":\"Alegre\",\"given\":\"I.\"},{\"family\":\"Kislenko\",\"given\":\"S.\"},{\"family\":\"Berbegal-Mirabent\",\"given\":\"J.\"}],\"title\":\"Organized Chaos: Mapping the Definitions of Social Entrepreneurship\",\"volume\":\"8\",\"type\":\"article-journal\",\"container-title\":\"Journal of Social Entrepreneurship\",\"issue\":\"2\",\"issued\":{\"date-parts\":[[\"2017\"]]},\"page\":\"248–264\",\"DOI\":\"10.1080/19420676.2017.1371631\",\"id\":\"Alegre2017\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Alegre et al., 2017)\",\"plainCitation\":\"(Alegre et al., 2017)\"},\"citationID\":\"CITE-5\"}"
                         }
                       ]
                     }
@@ -333,41 +341,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "."
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "w:p",
-              "attributes": {
-                "w14:paraId": "07DDC5DB",
-                "w14:textId": "55FBA1FA"
-              },
-              "children": [
-                {
-                  "type": "element",
-                  "name": "w:pPr",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "w:rFonts",
-                          "attributes": {
-                            "w:ascii": "Times New Roman",
-                            "w:hAnsi": "Times New Roman",
-                            "w:cs": "Times New Roman"
-                          },
-                          "children": []
+                          "value": ". "
                         }
                       ]
                     }
@@ -380,7 +354,7 @@
               "name": "w:p",
               "attributes": {
                 "w14:paraId": "01DC4604",
-                "w14:textId": "465FBF38"
+                "w14:textId": "35651908"
               },
               "children": [
                 {
@@ -388,23 +362,6 @@
                   "name": "w:pPr",
                   "attributes": {},
                   "children": [
-                    {
-                      "type": "element",
-                      "name": "w:spacing",
-                      "attributes": {
-                        "w:line": "360",
-                        "w:lineRule": "auto"
-                      },
-                      "children": []
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:jc",
-                      "attributes": {
-                        "w:val": "both"
-                      },
-                      "children": []
-                    },
                     {
                       "type": "element",
                       "name": "w:rPr",
@@ -470,7 +427,43 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": " (Stephan et al., 2015). "
+                          "value": " "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:instrText",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Stephan2015\",\"itemData\":{\"author\":[{\"family\":\"Stephan\",\"given\":\"U.\"},{\"family\":\"Uhlaner\",\"given\":\"L.M.\"},{\"family\":\"Stride\",\"given\":\"C.\"}],\"title\":\"Institutions and social entrepreneurship: The role of institutional voids, institutional support, and institutional configurations\",\"volume\":\"46\",\"type\":\"article-journal\",\"container-title\":\"Journal of International Business Studies\",\"issue\":\"3\",\"issued\":{\"date-parts\":[[\"2015\"]]},\"page\":\"308–331\",\"DOI\":\"10.1057/jibs.2014.38\",\"id\":\"Stephan2015\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Stephan et al., 2015)\",\"plainCitation\":\"(Stephan et al., 2015)\"},\"citationID\":\"CITE-6\"}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ". "
                         }
                       ]
                     }
@@ -524,7 +517,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Korndörfer2015\",\"itemData\":{\"author\":[{\"family\":\"Korndörfer\",\"given\":\"M.\"},{\"family\":\"Egloff\",\"given\":\"B.\"},{\"family\":\"Schmukle\",\"given\":\"S.C.\"}],\"title\":\"A large scale test of the effect of social class on prosocial behavior\",\"volume\":\"10\",\"type\":\"article-journal\",\"container-title\":\"PloS ONE\",\"issue\":\"7\",\"issued\":{\"date-parts\":[[\"2015\"]]},\"DOI\":\"10.1371/journal.pone.0133193\",\"id\":\"Korndörfer2015\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Korndörfer, Egloff, & Schmukle, 2015)\",\"plainCitation\":\"(Korndörfer, Egloff, & Schmukle, 2015)\"},\"citationID\":\"CITE-6\"}"
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Korndörfer2015\",\"itemData\":{\"author\":[{\"family\":\"Korndörfer\",\"given\":\"M.\"},{\"family\":\"Egloff\",\"given\":\"B.\"},{\"family\":\"Schmukle\",\"given\":\"S.C.\"}],\"title\":\"A large scale test of the effect of social class on prosocial behavior\",\"volume\":\"10\",\"type\":\"article-journal\",\"container-title\":\"PloS ONE\",\"issue\":\"7\",\"issued\":{\"date-parts\":[[\"2015\"]]},\"DOI\":\"10.1371/journal.pone.0133193\",\"id\":\"Korndörfer2015\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Korndörfer, Egloff, & Schmukle, 2015)\",\"plainCitation\":\"(Korndörfer, Egloff, & Schmukle, 2015)\"},\"citationID\":\"CITE-7\"}"
                         }
                       ]
                     }
@@ -560,7 +553,79 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "This enables people to start a social enterprise to benefit their local community (Stephan et al., 2015), especially when people feel an ethical desire to contribute to society (Mair & Noboa, 2006; Stirzaker, Galloway, Muhonen, & Christopoulos, 2021). "
+                          "value": "This enables people to start a social enterprise to benefit their local community "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:instrText",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Stephan2015\",\"itemData\":{\"author\":[{\"family\":\"Stephan\",\"given\":\"U.\"},{\"family\":\"Uhlaner\",\"given\":\"L.M.\"},{\"family\":\"Stride\",\"given\":\"C.\"}],\"title\":\"Institutions and social entrepreneurship: The role of institutional voids, institutional support, and institutional configurations\",\"volume\":\"46\",\"type\":\"article-journal\",\"container-title\":\"Journal of International Business Studies\",\"issue\":\"3\",\"issued\":{\"date-parts\":[[\"2015\"]]},\"page\":\"308–331\",\"DOI\":\"10.1057/jibs.2014.38\",\"id\":\"Stephan2015\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Stephan et al., 2015)\",\"plainCitation\":\"(Stephan et al., 2015)\"},\"citationID\":\"CITE-8\"}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ", especially when people feel an ethical desire to contribute to society "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:instrText",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Mair2006\",\"itemData\":{\"author\":[{\"family\":\"Mair\",\"given\":\"J.\"},{\"family\":\"Martí\",\"given\":\"I.\"}],\"title\":\"Social entrepreneurship research: A source of explanation, prediction, and delight\",\"volume\":\"41\",\"type\":\"article-journal\",\"container-title\":\"Journal of World Business\",\"issue\":\"1\",\"issued\":{\"date-parts\":[[\"2006\"]]},\"page\":\"36–44\",\"DOI\":\"10.1016/j.jwb.2005.09.002\",\"id\":\"Mair2006\"}},{\"id\":\"Stirzaker2021\",\"itemData\":{\"author\":[{\"family\":\"Stirzaker\",\"given\":\"R.\"},{\"family\":\"Galloway\",\"given\":\"L.\"},{\"family\":\"Muhonen\",\"given\":\"J.\"},{\"family\":\"Christopoulos\",\"given\":\"D.\"}],\"title\":\"The drivers of social entrepreneurship: agency, context, compassion and opportunism\",\"volume\":\"27\",\"type\":\"article-journal\",\"container-title\":\"International Journal of Entrepreneurial Behavior & Research\",\"issue\":\"6\",\"issued\":{\"date-parts\":[[\"2021\"]]},\"page\":\"1381–1402\",\"DOI\":\"10.1108/IJEBR-07-2020-0461\",\"id\":\"Stirzaker2021\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Mair & Noboa, 2006; Stirzaker, Galloway, Muhonen, & Christopoulos, 2021)\",\"plainCitation\":\"(Mair & Noboa, 2006; Stirzaker, Galloway, Muhonen, & Christopoulos, 2021)\"},\"citationID\":\"CITE-9\"}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ". "
                         }
                       ]
                     }
@@ -596,7 +661,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Inglehart1977\",\"itemData\":{\"author\":[{\"family\":\"Inglehart\",\"given\":\"R.\"}],\"title\":\"The silent revolution: Changing values and political styles in advanced industrial society\",\"publisher\":\"Princeton University Press\",\"type\":\"book\",\"issued\":{\"date-parts\":[[\"1977\"]]},\"publisher-place\":\"Princeton, NJ\",\"id\":\"Inglehart1977\"}},{\"id\":\"Kraus2012\",\"itemData\":{\"author\":[{\"family\":\"Kraus\",\"given\":\"M.W.\"},{\"family\":\"Piff\",\"given\":\"P.K.\"},{\"family\":\"Mendoza-Denton\",\"given\":\"R.\"},{\"family\":\"Rheinschmidt\",\"given\":\"M.L.\"},{\"family\":\"Keltner\",\"given\":\"D.\"}],\"title\":\"Social class, solipsism, and contextualism: how the rich are different from the poor\",\"volume\":\"119\",\"type\":\"article-journal\",\"container-title\":\"Psychological Review\",\"issue\":\"3\",\"issued\":{\"date-parts\":[[\"2012\"]]},\"page\":\"546–572\",\"DOI\":\"10.1037/a0028756\",\"id\":\"Kraus2012\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Inglehart, 1977; Kraus, Piff, Mendoza-Denton, Rheinschmidt, & Keltner, 2012)\",\"plainCitation\":\"(Inglehart, 1977; Kraus, Piff, Mendoza-Denton, Rheinschmidt, & Keltner, 2012)\"},\"citationID\":\"CITE-7\"}"
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Inglehart1977\",\"itemData\":{\"author\":[{\"family\":\"Inglehart\",\"given\":\"R.\"}],\"title\":\"The silent revolution: Changing values and political styles in advanced industrial society\",\"publisher\":\"Princeton University Press\",\"type\":\"book\",\"issued\":{\"date-parts\":[[\"1977\"]]},\"publisher-place\":\"Princeton, NJ\",\"id\":\"Inglehart1977\"}},{\"id\":\"Kraus2012\",\"itemData\":{\"author\":[{\"family\":\"Kraus\",\"given\":\"M.W.\"},{\"family\":\"Piff\",\"given\":\"P.K.\"},{\"family\":\"Mendoza-Denton\",\"given\":\"R.\"},{\"family\":\"Rheinschmidt\",\"given\":\"M.L.\"},{\"family\":\"Keltner\",\"given\":\"D.\"}],\"title\":\"Social class, solipsism, and contextualism: how the rich are different from the poor\",\"volume\":\"119\",\"type\":\"article-journal\",\"container-title\":\"Psychological Review\",\"issue\":\"3\",\"issued\":{\"date-parts\":[[\"2012\"]]},\"page\":\"546–572\",\"DOI\":\"10.1037/a0028756\",\"id\":\"Kraus2012\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Inglehart, 1977; Kraus, Piff, Mendoza-Denton, Rheinschmidt, & Keltner, 2012)\",\"plainCitation\":\"(Inglehart, 1977; Kraus, Piff, Mendoza-Denton, Rheinschmidt, & Keltner, 2012)\"},\"citationID\":\"CITE-10\"}"
                         }
                       ]
                     }
@@ -650,7 +715,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Inglehart1977\",\"itemData\":{\"author\":[{\"family\":\"Inglehart\",\"given\":\"R.\"}],\"title\":\"The silent revolution: Changing values and political styles in advanced industrial society\",\"publisher\":\"Princeton University Press\",\"type\":\"book\",\"issued\":{\"date-parts\":[[\"1977\"]]},\"publisher-place\":\"Princeton, NJ\",\"id\":\"Inglehart1977\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"Inglehart (1977)\",\"plainCitation\":\"Inglehart (1977)\"},\"citationID\":\"CITE-8\"}"
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Inglehart1977\",\"itemData\":{\"author\":[{\"family\":\"Inglehart\",\"given\":\"R.\"}],\"title\":\"The silent revolution: Changing values and political styles in advanced industrial society\",\"publisher\":\"Princeton University Press\",\"type\":\"book\",\"issued\":{\"date-parts\":[[\"1977\"]]},\"publisher-place\":\"Princeton, NJ\",\"id\":\"Inglehart1977\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"Inglehart (1977)\",\"plainCitation\":\"Inglehart (1977)\"},\"citationID\":\"CITE-11\"}"
                         }
                       ]
                     }
@@ -686,7 +751,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Franzen2013\",\"itemData\":{\"author\":[{\"family\":\"Franzen\",\"given\":\"A.\"},{\"family\":\"Vogl\",\"given\":\"D.\"}],\"title\":\"Acquiescence and the Willingness to Pay for Environmental Protection: A Comparison of the ISSP, WVS, and EVS\",\"volume\":\"94\",\"type\":\"article-journal\",\"container-title\":\"Social Science Quarterly\",\"issue\":\"3\",\"issued\":{\"date-parts\":[[\"2013\"]]},\"page\":\"637–659\",\"DOI\":\"10.1111/j.1540-6237.2012.00903.x\",\"id\":\"Franzen2013\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Franzen & Vogl, 2013)\",\"plainCitation\":\"(Franzen & Vogl, 2013)\"},\"citationID\":\"CITE-9\"}"
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Franzen2013\",\"itemData\":{\"author\":[{\"family\":\"Franzen\",\"given\":\"A.\"},{\"family\":\"Vogl\",\"given\":\"D.\"}],\"title\":\"Acquiescence and the Willingness to Pay for Environmental Protection: A Comparison of the ISSP, WVS, and EVS\",\"volume\":\"94\",\"type\":\"article-journal\",\"container-title\":\"Social Science Quarterly\",\"issue\":\"3\",\"issued\":{\"date-parts\":[[\"2013\"]]},\"page\":\"637–659\",\"DOI\":\"10.1111/j.1540-6237.2012.00903.x\",\"id\":\"Franzen2013\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Franzen & Vogl, 2013)\",\"plainCitation\":\"(Franzen & Vogl, 2013)\"},\"citationID\":\"CITE-12\"}"
                         }
                       ]
                     }
@@ -771,9 +836,975 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "enterprise (Pathak and Muralidharan, 2016; Stephan et al., 2015). "
+                          "value": "enterprise "
                         }
                       ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:instrText",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Pathak2016\",\"itemData\":{\"author\":[{\"family\":\"Pathak\",\"given\":\"S.\"},{\"family\":\"Muralidharan\",\"given\":\"E.\"}],\"title\":\"Informal institutions and their comparative influences on social and commercial entrepreneurship: The role of in‐group collectivism and interpersonal Trust\",\"volume\":\"54\",\"type\":\"article-journal\",\"container-title\":\"Journal of Small Business Management\",\"issue\":\"S1\",\"issued\":{\"date-parts\":[[\"2016\"]]},\"page\":\"168–188\",\"DOI\":\"10.1111/jsbm.12289\",\"id\":\"Pathak2016\"}},{\"id\":\"Stephan2015\",\"itemData\":{\"author\":[{\"family\":\"Stephan\",\"given\":\"U.\"},{\"family\":\"Uhlaner\",\"given\":\"L.M.\"},{\"family\":\"Stride\",\"given\":\"C.\"}],\"title\":\"Institutions and social entrepreneurship: The role of institutional voids, institutional support, and institutional configurations\",\"volume\":\"46\",\"type\":\"article-journal\",\"container-title\":\"Journal of International Business Studies\",\"issue\":\"3\",\"issued\":{\"date-parts\":[[\"2015\"]]},\"page\":\"308–331\",\"DOI\":\"10.1057/jibs.2014.38\",\"id\":\"Stephan2015\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Pathak and Muralidharan, 2016; Stephan et al., 2015)\",\"plainCitation\":\"(Pathak and Muralidharan, 2016; Stephan et al., 2015)\"},\"citationID\":\"CITE-13\"}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ". "
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "027E2A11",
+                "w14:textId": "3D207FB4"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rFonts",
+                          "attributes": {
+                            "w:ascii": "Times New Roman",
+                            "w:hAnsi": "Times New Roman",
+                            "w:cs": "Times New Roman"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Social enterprises are the tangible form of social entrepreneurship "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:instrText",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Mair2006\",\"itemData\":{\"author\":[{\"family\":\"Mair\",\"given\":\"J.\"},{\"family\":\"Martí\",\"given\":\"I.\"}],\"title\":\"Social entrepreneurship research: A source of explanation, prediction, and delight\",\"volume\":\"41\",\"type\":\"article-journal\",\"container-title\":\"Journal of World Business\",\"issue\":\"1\",\"issued\":{\"date-parts\":[[\"2006\"]]},\"page\":\"36–44\",\"DOI\":\"10.1016/j.jwb.2005.09.002\",\"id\":\"Mair2006\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Mair & Martí, 2006)\",\"plainCitation\":\"(Mair & Martí, 2006)\"},\"citationID\":\"CITE-14\"}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ". "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "However, the population of social enterprises is not homogeneous. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:instrText",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Lepoutre2013\",\"itemData\":{\"author\":[{\"family\":\"Lepoutre\",\"given\":\"J.\"},{\"family\":\"Justo\",\"given\":\"R.\"},{\"family\":\"Terjesen\",\"given\":\"S.\"},{\"family\":\"Bosma\",\"given\":\"N.\"}],\"title\":\"Designing a global standardized methodology for measuring social entrepreneurship activity: the Global Entrepreneurship Monitor social entrepreneurship study\",\"volume\":\"40\",\"type\":\"article-journal\",\"container-title\":\"Small Business Economics\",\"issue\":\"3\",\"issued\":{\"date-parts\":[[\"2013\"]]},\"page\":\"693–714\",\"DOI\":\"10.1007/s11187-011-9398-4\",\"id\":\"Lepoutre2013\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"Lepoutre et al. (2013)\",\"plainCitation\":\"Lepoutre et al. (2013)\"},\"citationID\":\"CITE-15\"}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " differentiate between "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:i",
+                          "attributes": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "explicit "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "and "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:i",
+                          "attributes": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "implicit"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " organizational forms of social entrepreneurship. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The difference is that a social or environmental objective is part of the core mission or identity of the explicit organizational form, which is not present for the implicit social enterprises. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Whether or not they receive additional financial support, the social and entrepreneurial dimensions are present among "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:i",
+                          "attributes": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "explicit "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "social enterprises "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "(or hybrid enterprises) "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:instrText",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Defourny2010a\",\"itemData\":{\"author\":[{\"family\":\"Defourny\",\"given\":\"J.\"},{\"family\":\"Nyssens\",\"given\":\"M.\"}],\"title\":\"Conceptions of Social Enterprise and Social Entrepreneurship in Europe and the United States: Convergences and Divergences\",\"volume\":\"1\",\"type\":\"article-journal\",\"container-title\":\"Journal of Social Entrepreneurship\",\"issue\":\"1\",\"issued\":{\"date-parts\":[[\"2010\"]]},\"page\":\"32–53\",\"DOI\":\"10.1080/19420670903442053\",\"id\":\"Defourny2010\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Defourny & Nyssens, 2010a)\",\"plainCitation\":\"(Defourny & Nyssens, 2010a)\"},\"citationID\":\"CITE-16\"}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ". "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The entrepreneurial dimension is manifested through a business logic "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:instrText",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Lepoutre2013\",\"itemData\":{\"author\":[{\"family\":\"Lepoutre\",\"given\":\"J.\"},{\"family\":\"Justo\",\"given\":\"R.\"},{\"family\":\"Terjesen\",\"given\":\"S.\"},{\"family\":\"Bosma\",\"given\":\"N.\"}],\"title\":\"Designing a global standardized methodology for measuring social entrepreneurship activity: the Global Entrepreneurship Monitor social entrepreneurship study\",\"volume\":\"40\",\"type\":\"article-journal\",\"container-title\":\"Small Business Economics\",\"issue\":\"3\",\"issued\":{\"date-parts\":[[\"2013\"]]},\"page\":\"693–714\",\"DOI\":\"10.1007/s11187-011-9398-4\",\"id\":\"Lepoutre2013\"},\"prefix\":\"at, ,least, ,to, ,some, ,extent, ,–see\"}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(at least to some extent – see Lepoutre et al., 2013)\",\"plainCitation\":\"(at least to some extent – see Lepoutre et al., 2013)\"},\"citationID\":\"CITE-17\"}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " to generate revenue by selling products and services via the market. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Despite the idea that business logic is incompatible with the core ideals of social value creation, once intertwined, they create the necessary conditions for classifying social entrepreneurship "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:instrText",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Defourny2010a\",\"itemData\":{\"author\":[{\"family\":\"Defourny\",\"given\":\"J.\"},{\"family\":\"Nyssens\",\"given\":\"M.\"}],\"title\":\"Conceptions of Social Enterprise and Social Entrepreneurship in Europe and the United States: Convergences and Divergences\",\"volume\":\"1\",\"type\":\"article-journal\",\"container-title\":\"Journal of Social Entrepreneurship\",\"issue\":\"1\",\"issued\":{\"date-parts\":[[\"2010\"]]},\"page\":\"32–53\",\"DOI\":\"10.1080/19420670903442053\",\"id\":\"Defourny2010\"}},{\"id\":\"Haigh2015\",\"itemData\":{\"author\":[{\"family\":\"Haigh\",\"given\":\"N.\"},{\"family\":\"Walker\",\"given\":\"J.\"},{\"family\":\"Bacq\",\"given\":\"S.\"},{\"family\":\"Kickul\",\"given\":\"J.\"}],\"title\":\"Hybrid organizations: origins, strategies, impacts, and implications\",\"volume\":\"57\",\"type\":\"article-journal\",\"container-title\":\"California Management Review\",\"issue\":\"3\",\"issued\":{\"date-parts\":[[\"2015\"]]},\"page\":\"5–12\",\"DOI\":\"10.1525/cmr.2015.57.3.5\",\"id\":\"Haigh2015\"}},{\"id\":\"Weerawardena2006\",\"itemData\":{\"author\":[{\"family\":\"Weerawardena\",\"given\":\"J.\"},{\"family\":\"Mort\",\"given\":\"G.S.\"}],\"title\":\"Investigating social entrepreneurship: A multidimensional model\",\"volume\":\"41\",\"type\":\"article-journal\",\"container-title\":\"Journal of World Business\",\"issue\":\"1\",\"issued\":{\"date-parts\":[[\"2006\"]]},\"page\":\"21–35\",\"DOI\":\"10.1016/j.jwb.2005.09.001\",\"id\":\"Weerawardena2006\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Defourny & Nyssens, 2010a; Haigh, Walker, Bacq, & Kickul, 2015; Weerawardena & Mort, 2006)\",\"plainCitation\":\"(Defourny & Nyssens, 2010a; Haigh, Walker, Bacq, & Kickul, 2015; Weerawardena & Mort, 2006)\"},\"citationID\":\"CITE-18\"}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ". "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Thus, the related ideal-typical organizational form may focus on the alleviation of a particular social or environmental problem, apply a business logic, and may attract financial capital in ways consistent with either - or both - for-profit and non-profit models "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:instrText",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Battilana2014\",\"itemData\":{\"author\":[{\"family\":\"Battilana\",\"given\":\"J.\"},{\"family\":\"Lee\",\"given\":\"M.\"}],\"title\":\"Advancing research on hybrid organizing–Insights from the study of social enterprises\",\"volume\":\"8\",\"type\":\"article-journal\",\"container-title\":\"The Academy of Management Annals\",\"issue\":\"1\",\"issued\":{\"date-parts\":[[\"2014\"]]},\"page\":\"397–441\",\"DOI\":\"10.1080/19416520.2014.893615\",\"id\":\"Battilana2014\"}},{\"id\":\"Lepoutre2013\",\"itemData\":{\"author\":[{\"family\":\"Lepoutre\",\"given\":\"J.\"},{\"family\":\"Justo\",\"given\":\"R.\"},{\"family\":\"Terjesen\",\"given\":\"S.\"},{\"family\":\"Bosma\",\"given\":\"N.\"}],\"title\":\"Designing a global standardized methodology for measuring social entrepreneurship activity: the Global Entrepreneurship Monitor social entrepreneurship study\",\"volume\":\"40\",\"type\":\"article-journal\",\"container-title\":\"Small Business Economics\",\"issue\":\"3\",\"issued\":{\"date-parts\":[[\"2013\"]]},\"page\":\"693–714\",\"DOI\":\"10.1007/s11187-011-9398-4\",\"id\":\"Lepoutre2013\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Battilana & Lee, 2014; Lepoutre et al., 2013)\",\"plainCitation\":\"(Battilana & Lee, 2014; Lepoutre et al., 2013)\"},\"citationID\":\"CITE-19\"}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ". "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:i",
+                          "attributes": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Implicit "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "social organizational forms include a broader spectrum of socially committed enterprises "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:instrText",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Lepoutre2013\",\"itemData\":{\"author\":[{\"family\":\"Lepoutre\",\"given\":\"J.\"},{\"family\":\"Justo\",\"given\":\"R.\"},{\"family\":\"Terjesen\",\"given\":\"S.\"},{\"family\":\"Bosma\",\"given\":\"N.\"}],\"title\":\"Designing a global standardized methodology for measuring social entrepreneurship activity: the Global Entrepreneurship Monitor social entrepreneurship study\",\"volume\":\"40\",\"type\":\"article-journal\",\"container-title\":\"Small Business Economics\",\"issue\":\"3\",\"issued\":{\"date-parts\":[[\"2013\"]]},\"page\":\"693–714\",\"DOI\":\"10.1007/s11187-011-9398-4\",\"id\":\"Lepoutre2013\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Lepoutre et al., 2013)\",\"plainCitation\":\"(Lepoutre et al., 2013)\"},\"citationID\":\"CITE-20\"}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ". "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Information on the relative importance of social value creation goals compared to financial value creation goals is useful to classify the degree of social entrepreneurship among these organizational forms "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:instrText",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Bacq2016\",\"itemData\":{\"author\":[{\"family\":\"Bacq\",\"given\":\"S.\"},{\"family\":\"Hartog\",\"given\":\"C.\"},{\"family\":\"Hoogendoorn\",\"given\":\"B.\"}],\"title\":\"Beyond the moral portrayal of social entrepreneurs: An empirical approach to who they are and what drives them\",\"volume\":\"133\",\"type\":\"article-journal\",\"container-title\":\"Journal of Business Ethics\",\"issue\":\"4\",\"issued\":{\"date-parts\":[[\"2016\"]]},\"page\":\"703–718\",\"DOI\":\"10.1007/s10551-014-2446-7\",\"id\":\"Bacq2016\"}},{\"id\":\"Zahra2014\",\"itemData\":{\"author\":[{\"family\":\"Zahra\",\"given\":\"S.\"},{\"family\":\"Newey\",\"given\":\"L.\"},{\"family\":\"Li\",\"given\":\"Y.\"}],\"title\":\"On the frontiers: The implications of social entrepreneurship for international entrepreneurship\",\"volume\":\"38\",\"type\":\"article-journal\",\"container-title\":\"Entrepreneurship Theory and Practice\",\"issue\":\"1\",\"issued\":{\"date-parts\":[[\"2014\"]]},\"page\":\"137–158\",\"DOI\":\"10.1111/etap.12061\",\"id\":\"Zahra2014\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Bacq et al., 2016; Zahra et al., 2014)\",\"plainCitation\":\"(Bacq et al., 2016; Zahra et al., 2014)\"},\"citationID\":\"CITE-21\"}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ". "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Although not explicitly addressing a social mission statement, these organizations prioritize non-financial goals in their business operations "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:instrText",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Lepoutre2013\",\"itemData\":{\"author\":[{\"family\":\"Lepoutre\",\"given\":\"J.\"},{\"family\":\"Justo\",\"given\":\"R.\"},{\"family\":\"Terjesen\",\"given\":\"S.\"},{\"family\":\"Bosma\",\"given\":\"N.\"}],\"title\":\"Designing a global standardized methodology for measuring social entrepreneurship activity: the Global Entrepreneurship Monitor social entrepreneurship study\",\"volume\":\"40\",\"type\":\"article-journal\",\"container-title\":\"Small Business Economics\",\"issue\":\"3\",\"issued\":{\"date-parts\":[[\"2013\"]]},\"page\":\"693–714\",\"DOI\":\"10.1007/s11187-011-9398-4\",\"id\":\"Lepoutre2013\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Lepoutre et al., 2013)\",\"plainCitation\":\"(Lepoutre et al., 2013)\"},\"citationID\":\"CITE-22\"}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ". "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "These organizations may focus on economic sustainability and on creating a positive impact on society and ecology."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:i",
+                          "attributes": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "For example, such organizations may apply a ‘triple bottom line’ or ‘people-planet-profit’ logic. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Whether explicit or implicit, social entrepreneurship manifests itself in a heterogeneous population of organizations. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:tab",
+                      "attributes": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:br",
+                      "attributes": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Furthermore, non-profits or NGOs are other examples of organizational forms that primarily aim for social or environmental value creation. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Although an exclusive social value creation mission characterizes these organizations, they do not use a business logic to attain social or environmental impact. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "For example, these organizational forms are mostly dependent on governmental subsidies, membership fees or donations and cannot be observed as an organizational form of social entrepreneurship. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Nevertheless, their funding enables those organizations to commit themselves exclusively to social impact goals.  "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:tab",
+                      "attributes": {},
+                      "children": []
                     }
                   ]
                 }

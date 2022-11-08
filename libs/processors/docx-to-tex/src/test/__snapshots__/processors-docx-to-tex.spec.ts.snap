@@ -54,15 +54,103 @@ exports[`parses correctly for citationparagraph 1`] = `
     journal     = {Journal of Social Entrepreneurship}
 }
 
+
+@article{Stephan2015,
+    title       = {Institutions and social entrepreneurship: The role of institutional voids, institutional support, and institutional configurations},
+    author      = {Stephan, U. and Uhlaner, L.M. and Stride, C.},
+    number      = {3},
+    volume      = {46},
+    doi         = {10.1057/jibs.2014.38},
+    year        = {2015},
+    pages       = {308--331},
+    journal     = {Journal of International Business Studies}
+}
+
+
+@article{Korndörfer2015,
+    title       = {A large scale test of the effect of social class on prosocial behavior},
+    author      = {Korndörfer, M. and Egloff, B. and Schmukle, S.C.},
+    number      = {7},
+    volume      = {10},
+    doi         = {10.1371/journal.pone.0133193},
+    year        = {2015},
+    journal     = {PloS ONE}
+}
+
+
+@article{Mair2006,
+    title       = {Social entrepreneurship research: A source of explanation, prediction, and delight},
+    author      = {Mair, J. and Martí, I.},
+    number      = {1},
+    volume      = {41},
+    doi         = {10.1016/j.jwb.2005.09.002},
+    year        = {2006},
+    pages       = {36--44},
+    journal     = {Journal of World Business}
+}
+
+
+@article{Stirzaker2021,
+    title       = {The drivers of social entrepreneurship: agency, context, compassion and opportunism},
+    author      = {Stirzaker, R. and Galloway, L. and Muhonen, J. and Christopoulos, D.},
+    number      = {6},
+    volume      = {27},
+    doi         = {10.1108/IJEBR-07-2020-0461},
+    year        = {2021},
+    pages       = {1381--1402},
+    journal     = {International Journal of Entrepreneurial Behavior \\\\& Research}
+}
+
+
+@book{Inglehart1977,
+    title       = {The silent revolution: Changing values and political styles in advanced industrial society},
+    author      = {Inglehart, R.},
+    publisher   = {Princeton University Press},
+    place       = {Princeton, NJ},
+    year        = {1977}
+}
+
+
+@article{Kraus2012,
+    title       = {Social class, solipsism, and contextualism: how the rich are different from the poor},
+    author      = {Kraus, M.W. and Piff, P.K. and Mendoza-Denton, R. and Rheinschmidt, M.L. and Keltner, D.},
+    number      = {3},
+    volume      = {119},
+    doi         = {10.1037/a0028756},
+    year        = {2012},
+    pages       = {546--572},
+    journal     = {Psychological Review}
+}
+
+
+@article{Franzen2013,
+    title       = {Acquiescence and the Willingness to Pay for Environmental Protection: A Comparison of the ISSP, WVS, and EVS},
+    author      = {Franzen, A. and Vogl, D.},
+    number      = {3},
+    volume      = {94},
+    doi         = {10.1111/j.1540-6237.2012.00903.x},
+    year        = {2013},
+    pages       = {637--659},
+    journal     = {Social Science Quarterly}
+}
+
+
+@article{Pathak2016,
+    title       = {Informal institutions and their comparative influences on social and commercial entrepreneurship: The role of in-group collectivism and interpersonal Trust},
+    author      = {Pathak, S. and Muralidharan, E.},
+    number      = {S1},
+    volume      = {54},
+    doi         = {10.1111/jsbm.12289},
+    year        = {2016},
+    pages       = {168--188},
+    journal     = {Journal of Small Business Management}
+}
+
 \\\\end{filecontents}
 
 \\\\begin{document}
 
-  Despite the ongoing public and scholarly attention on social entrepreneurship, definitional debates seem far from settled \\\\parencite{Saebi2019}. On the one hand, some scholars argue that defining social entrepreneurship is problematic because it means different things to different people and differs between contexts \\\\parencite{Mair2010}. Hence making it a ‘fuzzy' \\\\parencite{Choi2014} or an ‘unclear and contested' concept \\\\parencite{Saebi2019}. On the other hand, others argue that a widespread consensus exists within the academic community on what defines social entrepreneurship, social entrepreneur and social enterprise \\\\parencite{Alegre2017}.
-
-
-
-Next to the motivations that serve the self-interest of individuals, a desire to help others by contributing to the greater good may also translate into self-employed entrepreneurship. Pro-social behaviour is often enabled by more financial and human capital (Korndörfer, Egloff, \\\\& Schmukle, 2015). This enables people to start a social enterprise to benefit their local community (Stephan et al., 2015), especially when people feel an ethical desire to contribute to society (Mair \\\\& Noboa, 2006; Stirzaker, Galloway, Muhonen, \\\\& Christopoulos, 2021). Such interests, and individual-related immaterial goals, are evoked by relatively higher levels of financial capital (Inglehart, 1977; Kraus, Piff, Mendoza-Denton, Rheinschmidt, \\\\& Keltner, 2012). This is in line with the argument made by Inglehart (1977), who argues that higher levels of financial capital may provide the basis for caring and pro-actively protecting the ecological environment (Franzen \\\\& Vogl, 2013). Furthermore, higher levels of human capital are associated with the propensity to start a \\\\emph{social }enterprise (Pathak \\\\& Muralidharan, 2016; Stephan et al., 2015). 
+  Despite the ongoing public and scholarly attention on social entrepreneurship, definitional debates seem far from settled \\\\parencite{Saebi2019}. On the one hand, some scholars argue that defining social entrepreneurship is problematic because it means different things to different people and differs between contexts \\\\parencite{Mair2010}. Hence making it a ‘fuzzy' \\\\parencite{Choi2014} or an ‘unclear and contested' concept \\\\parencite{Saebi2019}. On the other hand, others argue that a widespread consensus exists within the academic community on what defines social entrepreneurship, social entrepreneur and social enterprise \\\\parencite{Alegre2017}. Wiw \\\\parencite{Stephan2015}. Next to the motivations that serve the self-interest of individuals, a desire to help others by contributing to the greater good may also translate into self-employed entrepreneurship. Pro-social behaviour is often enabled by more financial and human capital \\\\parencite{Korndörfer2015}. This enables people to start a social enterprise to benefit their local community \\\\parencite{Stephan2015}, especially when people feel an ethical desire to contribute to society \\\\parencite{Mair2006, Stirzaker2021}. Such interests, and individual-related immaterial goals, are evoked by relatively higher levels of financial capital \\\\parencite{Inglehart1977, Kraus2012}. This is in line with the argument made by \\\\parencite{Inglehart1977}, who argues that higher levels of financial capital may provide the basis for caring and pro-actively protecting the ecological environment \\\\parencite{Franzen2013}. Furthermore, higher levels of human capital are associated with the propensity to start a \\\\emph{social }enterprise \\\\parencite{Pathak2016, Stephan2015}. 
 
 
 
@@ -136,7 +224,7 @@ Block, J., Thurik, R., Van der Zwan, P., \\\\& Walter, S. (2013). Business takeo
 
 Boden Jr, R. J. (1999). Flexible working hours, family responsibilities, and female self-employment: Gender differences in self-employment selection. \\\\emph{American Journal of Economics and Sociology, 58}(1), 71-83. doi:10.1111/j.1536-7150.1999.tb03285.x
 
-Borzaga, C., \\\\& Defourny, J. (2001). \\\\emph{Conclusions. Social enterprises in Europe: a diversity of initiatives and prospects}. In Borzaga, C., \\\\& Defourny, J. (Eds). \\\\emph{The Emergence of Social Enterprise. }(pp.350-370). London: Routledge.
+Borzaga, C., \\\\& Defourny, J. (2001). \\\\emph{Conclusions. }\\\\emph{Social enterprises in Europe: a diversity of initiatives and prospects}. In Borzaga, C., \\\\& Defourny, J. (Eds). \\\\emph{The Emergence of Social Enterprise. }(pp.350-370). London: Routledge.
 
 Bosma, N. (2013). The Global Entrepreneurship Monitor (GEM) and its impact on entrepreneurship research. \\\\emph{Foundations and Trends in Entrepreneurship, 9}(2). doi:10.1561/0300000033
 
@@ -262,11 +350,11 @@ Esping-Andersen, G. (1999). \\\\emph{Social foundations of }\\\\emph{postindustr
 
 Estrin, S., Mickiewicz, T., \\\\& Stephan, U. (2013). Entrepreneurship, social capital, and institutions: Social and commercial entrepreneurship across nations. \\\\emph{Entrepreneurship Theory and Practice, 37}(3), 479-504. doi:10.1111/etap.12019
 
-European Commission. (2011). \\\\emph{Flash Eurobarometer 283 (Entrepreneurship in the EU and beyond)}. \\\\emph{GESIS Data Archive, Cologne. ZA5439 Data file Version 1.0.0, }doi:10.4232/1.10210
+European Commission. (2011). \\\\emph{Flash Eurobarometer 283 (Entrepreneurship in the EU and beyond)}. \\\\emph{GESIS Data Archive, Cologne. }\\\\emph{ZA5439 Data file Version 1.0.0, }doi:10.4232/1.10210
 
-European Commission. (2013). \\\\emph{Flash Eurobarometer 354 (Entrepreneurship in the EU and beyond)}. \\\\emph{GESIS Data Archive, Cologne. ZA5789 Data file Version 1.0.0, }doi:10.4232/1.11590
+European Commission. (2013). \\\\emph{Flash Eurobarometer 354 (Entrepreneurship in the EU and beyond)}. \\\\emph{GESIS Data Archive, Cologne. }\\\\emph{ZA5789 Data file Version 1.0.0, }doi:10.4232/1.11590
 
-EVS. (2016). \\\\emph{European Values Study 2008: Integrated Dataset (EVS 2008). GESIS Data Archive, Cologne. ZA4800 Data file Version 4.0.0}\\\\emph{, }. 
+EVS. (2016). \\\\emph{European Values Study 2008: Integrated Dataset (EVS 2008). }\\\\emph{GESIS Data Archive, Cologne. }\\\\emph{ZA4800 Data file Version 4.0.0}\\\\emph{, }. 
 
 Fagan, E. J., Jones, B. D., \\\\& Wlezien, C. (2017). Representative systems and policy punctuations. \\\\emph{Journal of European Public Policy, 24}(6), 809-831. doi:10.1080/13501763.2017.1296483
 
@@ -694,7 +782,7 @@ Wennekers, S., Van Wennekers, A., Thurik, R., \\\\& Reynolds, P. (2005). Nascent
 
 Wilkinson, C., Medhurst, J., Henry, N., Wihlborg, M., \\\\& Braithwaite, B. W. (2015). \\\\emph{A map of social enterprises and their eco-systems in Europe: Synthesis Report}. Retrieved from https://ec.europa.eu/social/BlobServlet?docId=12987\\\\&langId=en
 
-WVS. (2014). \\\\emph{World Values Survey: Round Five - Country-Pooled Datafile Version: www.worldvaluessurvey.org/WVSDocumentationWV5.jsp. Madrid: JD Systems Institute.} 
+WVS. (2014). \\\\emph{World Values Survey: Round Five - Country-Pooled Datafile Version: www.worldvaluessurvey.org/WVSDocumentationWV5.jsp. }\\\\emph{Madrid: JD Systems Institute.} 
 
 Yitshaki, R., \\\\& Kropp, F. (2016). Motivations and opportunity recognition of social entrepreneurs. \\\\emph{Journal of Small Business Management, 54}(2), 546-565. doi:10.1111/jsbm.12157
 
@@ -805,6 +893,18 @@ exports[`parses correctly for citavi 1`] = `
 }
 
 
+@article{Bock2002,
+    author      = {Bock and Kim},
+    year        = {2002}
+}
+
+
+@article{Lin2007,
+    author      = {Lin},
+    year        = {2007}
+}
+
+
 @article{Gwet2014,
     author      = {Gwet},
     year        = {2014}
@@ -888,7 +988,7 @@ The \\\\emph{intangible reward} treatment was operationalized by offering explic
 
 \\\\emph{Knowledge-sharing behavior} (KSB) was measured with an open-ended question as a proxy for real behavior. The item reads: “If you decided to share your knowledge, please briefly describe how exactly you will share your knowledge.” Thus, participants were not asked to actually share their knowledge, but it was assumed that the cost function of answering the open-ended question on KSB was similar to the cost function of performing the described behavior in reality, for instance, when individuals share knowledge by writing an e-mail to a co-worker. 
 
-Additionally, \\\\emph{knowledge-sharing intention} (KSI) was measured in a closed-ended way to compare results to the verbatim responses. A measure of KSI was formed by taking the mean of two items, which were rated on 5-point Likert scales. The items read: \\"I will share this knowledge with my co-workers\\" and \\"I would like to share this knowledge with my co-workers.\\" The former item represents the future-oriented and behavioral part of intention and the latter represents the motivational part of intention. Both items were based on scales on KSI used by, for example, Bock and Kim (2002) and Lin (2007). Both were adapted to the experimental context. The items correlate highly (depending on the vignette: \\\\emph{b }= .66-.96, \\\\emph{p} < .001) and were therefore compiled into one index for further analysis. 
+Additionally, \\\\emph{knowledge-sharing intention} (KSI) was measured in a closed-ended way to compare results to the verbatim responses. A measure of KSI was formed by taking the mean of two items, which were rated on 5-point Likert scales. The items read: \\"I will share this knowledge with my co-workers\\" and \\"I would like to share this knowledge with my co-workers.\\" The former item represents the future-oriented and behavioral part of intention and the latter represents the motivational part of intention. Both items were based on scales on KSI used by, for example, \\\\parencite{Bock2002} and \\\\parencite{Lin2007}. Both were adapted to the experimental context. The items correlate highly (depending on the vignette: \\\\emph{b }= .66-.96, \\\\emph{p} < .001) and were therefore compiled into one index for further analysis. 
 
 To code the open-ended answers, three dimensions were defined preliminarily, based on the literature, to rate the quality of the answer: the description's length, accuracy, and fit with the vignette. Two dimensions were added inductively during the coding process. Firstly, some participants answered the question with few words and therefore did not score in the quantity dimension, but were considered separately from participants who did not answer because they at least put some effort into answering the question. Secondly, some participants answered very elaborately in terms of length and content, and this effort was assigned a bonus point. Each dimension was coded as a dummy variable and an additive index was formed, ranging from zero to five. 
 
@@ -1004,7 +1104,7 @@ These results show that open-ended measures in surveys are exposed to strong ord
 
 Using open-ended questions to measure effort as a proxy for real instead of stated behavior was not useful in a within-subjects research design. Due to an order effect, open answers could not serve as a reliable estimator of the likelihood of actual behavior. However, an advantage of verbatim answers is that they can still be used to identify behavioral patterns and modes of KSB. In further research, this strength of qualitative data should be taken into account more instead of merely quantifying qualitative data.
 
-While this approach toward operationalizing behavior in surveys might not be useful in within-subject designs, it can be used in between-subject comparisons if participants are asked to answer to a single vignette. However, as participants' knowledge and competencies might influence answers on questions designed as real-effort tasks, attention must be paid to the sampling strategy when solely using between-subjects designs. When a baseline answer for an individual is missing or not taken into account, which is the idea behind a within-subjects design, an individual cannot be matched to their own standard.The order effect that occurred in this study was not expected by the author in that magnitude. It is known in the literature that, especially regarding open-ended questions, questions asked later in a questionnaire are associated with fatigue and shorter answers (Galesic \\\\& Bosnjak, 2009). However, it was expected that questions directly succeeding each other within a survey would not suffer that strongly from such an order effect. Additionally, the survey was rather short and took participants between 10 and 15 minutes to complete. The author expected that fatigue effects were more likely to occur in longer surveys. Also, the study's pretest with students and public sector professionals did not reveal such order and fatigue effects. Hence, this outcome might be due to characteristics of participants from online panels, who might be motivated to answer a questionnaire in an efficient and quick manner. 
+While this approach toward operationalizing behavior in surveys might not be useful in within-subject designs, it can be used in between-subject comparisons if participants are asked to answer to a single vignette. However, as participants' knowledge and competencies might influence answers on questions designed as real-effort tasks, attention must be paid to the sampling strategy when solely using between-subjects designs. When a baseline answer for an individual is missing or not taken into account, which is the idea behind a within-subjects design, an individual cannot be matched to their own standard.(Galesic \\\\& Bosnjak, 2009). However, it was expected that questions directly succeeding each other within a survey would not suffer that strongly from such an order effect. Additionally, the survey was rather short and took participants between 10 and 15 minutes to complete. The author expected that fatigue effects were more likely to occur in longer surveys. Also, the study's pretest with students and public sector professionals did not reveal such order and fatigue effects. Hence, this outcome might be due to characteristics of participants from online panels, who might be motivated to answer a questionnaire in an efficient and quick manner. 
 
 Due to the state of research on order effects in surveys, the treatment vignettes were randomized. However, I decided to exclude the baseline vignette from this randomization to avoid misunderstandings among the participants and to ensure the vignettes and questions were presented in a logical order. Future studies should, however, be aware of the occurrence of order effects in such an experimental setting, especially when data are collected with a sample of merely extrinsically motivated participants. To prevent order effects, between-subjects designs could be used instead of relying on within-subjects analyses. Apart from that, a combination of open-ended and closed questions allows one to detect order effects and should be included in case of uncertainty. Using both measures together also gives the option to analyze at least a part of the dependent variable and, therefore, minimizes risks of failure based on poor research designs. 
 
@@ -1016,7 +1116,7 @@ Furthermore, open-ended questions might be distributed throughout the survey ins
 
 \\\\section{\\\\textbf{References}}
 
-Aguinis, H., \\\\& Bradley, K. J. (2014). Best practice recommendations for designing and implementing experimental vignette methodology studies. \\\\emph{Organizational Research Methods}, \\\\emph{17}(4), 351--371. https://doi.org/10.1177/1094428114547952
+Aguinis, H., \\\\& Bradley, K. J. (2014). Best practice recommendations for designing and implementing experimental vignette methodology studies. \\\\emph{Organizational Research Methods}, \\\\emph{17}(4), 351--371. https://doi.org/10.1177/1094428114547952
 
 Andersen, S., James, O., \\\\& Jilke, S. (2018). Does work effort for public versus private organizations differ? Evidence from an online work task experiment: Pre-registration. Retrieved from https://www.socialscienceregistry.org/trials/3361
 
@@ -1028,31 +1128,31 @@ Charness, G., Gneezy, U., \\\\& Henderson, A. (2018). Experimental methods: M
 
 Charness, G., \\\\& Grieco, D. (2018). Creativity and incentives. \\\\emph{Journal of the European Economic Association}, \\\\emph{134}(1), 48. https://doi.org/10.1093/jeea/jvx055
 
-Christensen-Szalanski, J. J. J. (1980). A further examination of the selection of problem-solving strategies: The effects of deadlines and analytic aptitudes. \\\\emph{Organizational Behavior and Human Performance}, \\\\emph{25}(1), 107--122. https://doi.org/10.1016/0030-5073(80)90028-8
+Christensen-Szalanski, J. J. J. (1980). A further examination of the selection of problem-solving strategies: The effects of deadlines and analytic aptitudes. \\\\emph{Organizational Behavior and Human Performance}, \\\\emph{25}(1), 107--122. https://doi.org/10.1016/0030-5073(80)90028-8
 
-Converse, J. M. (1984). Strong arguments and weak evidence: The open/closed questioning controversy of the 1940s. \\\\emph{Public Opinion Quarterly}, \\\\emph{48}(1B), 267--282. https://doi.org/10.1093/poq/48.1B.267
+Converse, J. M. (1984). Strong arguments and weak evidence: The open/closed questioning controversy of the 1940s. \\\\emph{Public Opinion Quarterly}, \\\\emph{48}(1B), 267--282. https://doi.org/10.1093/poq/48.1B.267
 
-Dewasiri, N. J., Weerakoon, Y. K. B., \\\\& Azeez, A. A. (2018). Mixed methods in finance research. \\\\emph{International Journal of Qualitative Methods}, \\\\emph{17}(1), 160940691880173. https://doi.org/10.1177/1609406918801730
+Dewasiri, N. J., Weerakoon, Y. K. B., \\\\& Azeez, A. A. (2018). Mixed methods in finance research. \\\\emph{International Journal of Qualitative Methods}, \\\\emph{17}(1), 160940691880173. https://doi.org/10.1177/1609406918801730
 
-Dutcher, G., Salmon, T., \\\\& Saral, K. J. (2015). Is 'real' effort more real? \\\\emph{SSRN Electronic Journal. }Advance online publication. https://doi.org/10.2139/ssrn.2701793
+Dutcher, G., Salmon, T., \\\\& Saral, K. J. (2015). Is 'real' effort more real? \\\\emph{SSRN Electronic Journal. }Advance online publication. https://doi.org/10.2139/ssrn.2701793
 
 Fischer, C. (2018). Fostering Knowledge Sharing Behavior: preregistration. https://osf.io/r5jws/
 
-Friborg, O., \\\\& Rosenvinge, J. H. (2013). A comparison of open-ended and closed questions in the prediction of mental health. \\\\emph{Quality \\\\& Quantity}, \\\\emph{47}(3), 1397--1411. https://doi.org/10.1007/s11135-011-9597-8
+Friborg, O., \\\\& Rosenvinge, J. H. (2013). A comparison of open-ended and closed questions in the prediction of mental health. \\\\emph{Quality \\\\& Quantity}, \\\\emph{47}(3), 1397--1411. https://doi.org/10.1007/s11135-011-9597-8
 
 Galesic, M., \\\\& Bosnjak, M. (2009). Effects of questionnaire length on participation and indicators of response quality in a web survey. \\\\emph{Public Opinion Quarterly}, \\\\emph{73}(2), 349--360. https://doi.org/10.1093/poq/nfp031
 
-Gneezy, U., \\\\& List, J. A. (2006). Putting behavioral economics to work: Testing for gift exchange in labor markets using field experiments. \\\\emph{Econometrica}, \\\\emph{74}(5), 1365--1384. https://doi.org/10.1111/j.1468-0262.2006.00707.x
+Gneezy, U., \\\\& List, J. A. (2006). Putting behavioral economics to work: Testing for gift exchange in labor markets using field experiments. \\\\emph{Econometrica}, \\\\emph{74}(5), 1365--1384. https://doi.org/10.1111/j.1468-0262.2006.00707.x
 
-Greenfield, T. K., Nayak, M. B., Bond, J., Ye, Y., \\\\& Midanik, L. T. (2006). Maximum quantity consumed and alcohol-related problems: Assessing the most alcohol drunk with two measures. \\\\emph{Alcoholism, Clinical and Experimental Research}, \\\\emph{30}(9), 1576--1582. https://doi.org/10.1111/j.1530-0277.2006.00189.x
+Greenfield, T. K., Nayak, M. B., Bond, J., Ye, Y., \\\\& Midanik, L. T. (2006). Maximum quantity consumed and alcohol-related problems: Assessing the most alcohol drunk with two measures. \\\\emph{Alcoholism, Clinical and Experimental Research}, \\\\emph{30}(9), 1576--1582. https://doi.org/10.1111/j.1530-0277.2006.00189.x
 
-Gwet, K. L. [Kilem Li]. (2014). \\\\emph{Handbook of inter-rater reliability: The definitive guide to measuring the extent of agreement among raters} (4th ed.). Advanced Analytics, LLC. 
+Gwet, K. L. [Kilem Li]. (2014). \\\\emph{Handbook of inter-rater reliability: The definitive guide to measuring the extent of agreement among raters} (4th ed.). Advanced Analytics, LLC. 
 
 James, O., Jilke, S. R., \\\\& van Ryzin, G. G. (Eds.). (2017). \\\\emph{Experiments in public management research: Challenges and contributions}. Cambridge University Press. 
 
 Lin, H. F. 2007. ‘Effects of extrinsic and intrinsic motivation on employee knowledge sharing intentions', Journal of Information Science, 33 (2), 135--49.Paulin, D., \\\\& Suneson, K. (2012). Knowledge transfer, knowledge sharing and knowledge barriers--three blurry terms in KM. \\\\emph{The Electronic Journal of Knowledge Management}, \\\\emph{10}(1), 81--91.
 
-Rossman, G. B., \\\\& Wilson, B. L. (1985). Numbers and words. \\\\emph{Evaluation Review}, \\\\emph{9}(5), 627--643. https://doi.org/10.1177/0193841X8500900505
+Rossman, G. B., \\\\& Wilson, B. L. (1985). Numbers and words. \\\\emph{Evaluation Review}, \\\\emph{9}(5), 627--643. https://doi.org/10.1177/0193841X8500900505
 
 Schuman, H., \\\\& Presser, S. (1979). The open and closed question. \\\\emph{American Sociological Review}, \\\\emph{44}(5), 692. https://doi.org/10.2307/2094521
 
@@ -1060,11 +1160,11 @@ Schwarz, N. (1999). Self-reports: How the questions shape the answers. \\\\emph
 
 Schwarz, N., \\\\& Oyserman, D. (2001). Asking questions about behavior: Cognition, communication, and questionnaire construction. \\\\emph{The American Journal of Evaluation}, \\\\emph{22}(2), 127--160. https://doi.org/10.1016/S1098-2140(01)00133-3
 
-Singer, E., \\\\& Couper, M. P. (2017). Some methodological uses of responses to open questions and other verbatim comments in quantitative surveys. \\\\emph{Methods, Data, Analyses}, \\\\emph{11}(2), 1--19. https://doi.org/10.12758/mda.2017.01
+Singer, E., \\\\& Couper, M. P. (2017). Some methodological uses of responses to open questions and other verbatim comments in quantitative surveys. \\\\emph{Methods, Data, Analyses}, \\\\emph{11}(2), 1--19. https://doi.org/10.12758/mda.2017.01
 
-Wang, S., Noe, R. A., \\\\& Wang, Z. M. (2011). Motivating knowledge sharing in knowledge management systems. \\\\emph{Journal of Management}, \\\\emph{40}(4), 978--1009. https://doi.org/10.1177/0149206311412192
+Wang, S., Noe, R. A., \\\\& Wang, Z. M. (2011). Motivating knowledge sharing in knowledge management systems. \\\\emph{Journal of Management}, \\\\emph{40}(4), 978--1009. https://doi.org/10.1177/0149206311412192
 
-Witherspoon, C. L., Bergner, J., Cockrell, C., \\\\& Stone, D. N. (2013). Antecedents of organizational knowledge sharing: A meta-analysis and critique. \\\\emph{Journal of Knowledge Management}, \\\\emph{17}(2), 250--277. https://doi.org/10.1108/13673271311315204
+Witherspoon, C. L., Bergner, J., Cockrell, C., \\\\& Stone, D. N. (2013). Antecedents of organizational knowledge sharing: A meta-analysis and critique. \\\\emph{Journal of Knowledge Management}, \\\\emph{17}(2), 250--277. https://doi.org/10.1108/13673271311315204
 
 
 
@@ -1106,587 +1206,12 @@ fixed-term employm. & 613 & 0.05 & 0.23 & 0 & 1\\\\\\\\
 \\\\begin{table}
 
   
-\\\\begin{tabular}{c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c}
+\\\\begin{tabular}{c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c}
 
    & Explicit knowledge  & Implicit knowledge \\\\\\\\
-Without treatment & Vignette 1 &   & During a daily routine at your workplace, you gathered  & information &  from several sources. This could also improve the work of your co-workers. &  & Please decide whether you will share this information with your co-workers. & ( & N &  = 319) & Vignette 4 &   & During a daily routine at your workplace, you had an  & experience &  that improved your work process. This experience could also help your co-workers. &  & Please decide whether you will share your knowledge with your co-workers.  & ( & N &  = 310)\\\\\\\\
-Intangible reward & Vignette 2 &   & During a daily routine at your workplace, you gathered  & information &  from several sources. This could also improve the work of your co-workers. &  & You know that your co-workers appreciate your knowledge sharing. &  & Please decide whether you will share this information with your co-workers. & ( & N &  = 319) & Vignette 5 &   & During a daily routine at your workplace, you had an  & experience &  that improved your work process. This experience could also help your co-workers. &  & You know that your co-workers appreciate your knowledge sharing. &  & Please decide whether you will share your knowledge with your co-workers. & ( & N &  = 307)\\\\\\\\
-Tangible reward & Vignette 3 & During a daily routine at your workplace, you gathered  & information &  from several sources. This could also improve the work of your co-workers. &  & You know that all shared information improves your performance appraisal. &  & Please decide whether you will share this information with your co-workers. & ( & N &  = 317) & Vignette 6 &   & During a daily routine at your workplace, you had an  & experience &  that improved your work process. This experience could also help your co-workers. &  & You know that all shared information improves your performance appraisal. &  & Please decide whether you will share your knowledge with your co-workers.  & ( & N &  = 309)\\\\\\\\
-
-
-\\\\end{tabular}
-
-
-\\\\end{table}
-\\\\textbf{Appendix C}
-
-\\\\emph{Initial Interrater Reliability Open Answers on Knowledge-Sharing Behavior (KSB)}
-
-
-\\\\begin{table}
-
-  
-\\\\begin{tabular}{c  c  c  c  c  c  c}
-
-    &  Vignette order &   & Gwet's AC & Cohen's Kappa & Extent of Agreement\\\\\\\\
-Vignette 1 & First vignette (v28) & answer provided & .9856*** & .7430*** & substantial\\\\\\\\
- &  & quantity of the answer & .4674*** & .4586*** & moderate\\\\\\\\
- &  & accuracy of the answer & .7522*** & .6225*** & moderate\\\\\\\\
- &  & fit with vignette & .9090*** & .5805*** & moderate\\\\\\\\
-Vignette 1 & First vignette (v34) & answer provided & 1.0000*** & 1.0000*** & perfect\\\\\\\\
- &  & quantity of the answer & .4943*** & .3995*** & fair\\\\\\\\
- &  & accuracy of the answer & .8426*** & .6480*** & substantial\\\\\\\\
- &  & fit with vignette & .8726*** & .5010*** & perfect\\\\\\\\
-Vignette 2 & Second vignette & (v30) & answer provided & .9753*** & .8308*** & perfect\\\\\\\\
- &  & quantity of the answer & .5041*** & .3075*** & fair\\\\\\\\
- &  & accuracy of the answer & .7646*** & .3530*** & substantial\\\\\\\\
- &  & fit with vignette & .9170*** & .7075*** & perfect\\\\\\\\
-Vignette 2 & Third vignette (v38) & answer provided & .9918*** & .9332*** & perfect\\\\\\\\
- &  & quantity of the answer & .7475*** & .4645*** & substantial\\\\\\\\
- &  & accuracy of the answer & .9087*** & .3802* & perfect\\\\\\\\
- &  & fit with vignette & .7888*** &  .4652*** & substantial\\\\\\\\
-Vignette 3 & Third vignette (v32) & answer provided & .9642*** & .8022*** & perfect\\\\\\\\
- &  & quantity of the answer & .5584*** & .3438*** & moderate\\\\\\\\
- &  & accuracy of the answer & .7813*** & .4196*** & substantial\\\\\\\\
- &  & fit with vignette & .8627*** & .6546*** & substantial\\\\\\\\
-Vignette 3 & Second vignette (v36) & answer provided & 1.0000 *** & 1.0000 *** & perfect\\\\\\\\
- &  & quantity of the answer & .5302*** & .2667*** & moderate\\\\\\\\
- &  & accuracy of the answer & .7887*** & .3119** & substantial\\\\\\\\
- &  & fit with vignette & .8417*** & .5005*** & substantial\\\\\\\\
-Vignette 4 & First vignette (v16) & answer provided & 1.0000*** & 1.0000 *** & perfect\\\\\\\\
- &  & quantity of the answer & .6097*** & .5835*** & moderate\\\\\\\\
- &  & accuracy of the answer & .7829*** & .6836*** & substantial\\\\\\\\
- &  & fit with vignette & .9360*** & .6932*** & perfect\\\\\\\\
-Vignette 4 & First vignette (v22) & answer provided & 1.0000*** & 1.0000*** & perfect\\\\\\\\
- &  & quantity of the answer & .5520*** & .5479*** & moderate\\\\\\\\
- &  & accuracy of the answer & .7015*** & .5903*** & moderate\\\\\\\\
- &  & fit with vignette & .9149*** & .6533*** & perfect\\\\\\\\
-Vignette 5 & Second vignette v18 & answer provided & .9830*** & .7921*** & perfect\\\\\\\\
- &  & quantity of the answer & .6968*** & .5625*** & moderate\\\\\\\\
- &  & accuracy of the answer & .7793*** & .4512*** & substantial\\\\\\\\
- &  & fit with vignette & .8637*** & .5912*** & substantial\\\\\\\\
-Vignette 5 & Third vignette v26 & answer provided & .9727*** & .7570*** & perfect\\\\\\\\
- &  & quantity of the answer & .6613*** & .4585*** & moderate\\\\\\\\
- &  & accuracy of the answer & .8328*** & .3934** & substantial\\\\\\\\
- &  & fit with vignette & .8888*** & .6908*** & perfect\\\\\\\\
-Vignette 6 & Third vignette v20 & answer provided & 1.0000*** & 1.0000*** & perfect\\\\\\\\
- &  & quantity of the answer & .6357*** & .5394*** & moderate\\\\\\\\
- &  & accuracy of the answer & .5394*** & .5487*** & substantial\\\\\\\\
- &  & fit with vignette & .8653*** & .6624*** & substantial\\\\\\\\
-Vignette 6 & Second vignette v24 & answer provided & 1.0000*** & 1.0000*** & perfect\\\\\\\\
- &  & quantity of the answer & .6873*** & .5738*** & moderate\\\\\\\\
- &  & accuracy of the answer & .7614*** & .4624*** & substantial\\\\\\\\
- &  & fit with vignette & .9132*** & .6010*** & perfect\\\\\\\\
-
-
-\\\\end{tabular}
-
-
-\\\\end{table}
-***p < 0.001, **p < 0.01, *p < 0.05 
-
-
-
-
-
-\\\\textbf{}
-
-\\\\textbf{Appendix D}
-
-\\\\textbf{Selected Open Answers on Knowledge-Sharing Behavior (KSB)}
-
-Note: Own translation of German answers
-
-\\\\emph{Core public administration}
-
-\\\\textbf{KSB-Index = 1 (does not fit the question)}
-
-Everybody benefits from it.
-
-In my job, information and collegiality are the foundations of our conduct. It wouldn't work any other way. 
-
-It pushes the team forward.
-
-\\\\textbf{KSB-Index = 2}
-
-In a one-on-one conversation
-
-Very precise 
-
-1: jour fixe 2: mailing list 
-
-\\\\textbf{KSB-Index = 3}
-
-New information is transferred personally. 
-
-A written report or e-mail
-
-Via e-mail or during coffee break time
-
-\\\\textbf{KSB-Index = 4}
-
-A group e-mail addressed to the department to inform about the outcome of the issue.
-
-Orally in conversation, and in some circumstances by looking at the file. 
-
-I announce this experience within the team, so everyone can decide for himself or herself whether they can or want to use this information.
-
-\\\\textbf{KSB-Index = 5}
-
-If it is something very interesting in my point of view, I would forward an e-mail with the necessary documents to my colleagues. If it is an issue under the category “…just so you have heard about it…”, I would seek direct talks and elaborate on the case.
-
-An electronic submission such as an appendix via e-mail, or a written submission such as copies distributed or an offer to approach me if required, depending on relevance.
-
-I prepare to address the issue in the next meeting and to share the new information with my co-workers. 
-
-\\\\emph{Health sector}
-
-\\\\textbf{KSB-Index = 1 (does not fit the question)}
-
-Leads to shorter working hours
-
-Because the simplification of work is good
-
-Improvement within the team 
-
-\\\\textbf{KSB-Index = 2}
-
-In a team meeting
-
-In conversations 
-
-By demonstration 
-
-\\\\textbf{KSB-Index = 3}
-
-Not sure, it depends on the co-workers and their mood.
-
-I show them my approach. 
-
-I address it briefly within the team and wait to see if somebody is interested. 
-
-\\\\textbf{KSB-Index = 4}
-
-In a conversation/ team meeting I make suggestions to restructure work processes and ask for opinions of others, after which the team has to decide.
-
-I would post it in our company network or speak about it in a team meeting. 
-
-I gather co-workers, who work in a similar task field, and tell them about my experiences. 
-
-\\\\textbf{KSB-Index = 5}
-
-I will share this experience in personal conversion and will passionately talk about my findings. Hopefully, they will keep thi\\\\textbf{s }knowledge in mind when they are doing their job. 
-
-I would share this with my co-workers in the first situation possible and not wait for the next team meeting. I always get excited when I discover something new that simplifies my work and I want to share this joy with others instantly. 
-
-I inform my manager and ask for permission to change something actively. When it comes to random things, which don't require official procedure instructions, I would train the new co-workers directly, which is the better way of doing things.
-
-
-
-
-
-
-
-
-
-\\\\end{document}
-"
-`;
-
-exports[`parses correctly for citavi 2`] = `
-" \\\\documentclass{article}
-\\\\usepackage[style=apa]{biblatex}
-\\\\addbibresource{bibliography.bib}\\\\usepackage{graphicx}\\\\usepackage{hyperref}
-
-
-
-\\\\begin{filecontents}{bibliography.bib}
-
-  @article{Schwarz2001,
-    author      = {Schwarz and Oyserman},
-    year        = {2001}
-}
-
-
-@article{Dutcher2015,
-    author      = {Dutcher},
-    year        = {2015}
-}
-
-
-@article{Charness2018,
-    author      = {Charness},
-    year        = {2018}
-}
-
-
-@article{Andersen2018,
-    author      = {Andersen},
-    year        = {2018}
-}
-
-
-@article{Gneezy2006,
-    author      = {Gneezy and List},
-    year        = {2006}
-}
-
-
-@article{Converse1984,
-    author      = {Converse},
-    year        = {1984}
-}
-
-
-@article{Greenfield2006,
-    author      = {Greenfield},
-    year        = {2006}
-}
-
-
-@article{Schuman1979,
-    author      = {Schuman and Presser},
-    year        = {1979}
-}
-
-
-@article{Schwarz1999,
-    author      = {Schwarz},
-    year        = {1999}
-}
-
-
-@article{Christensen-Szalanski1980,
-    author      = {Christensen-Szalanski},
-    year        = {1980}
-}
-
-
-@article{Paulin2012,
-    author      = {Paulin and Suneson},
-    year        = {2012}
-}
-
-
-@article{Wang2011,
-    author      = {Wang},
-    year        = {2011}
-}
-
-
-@article{Witherspoon2013,
-    author      = {Witherspoon},
-    year        = {2013}
-}
-
-
-@article{Gwet2014,
-    author      = {Gwet},
-    year        = {2014}
-}
-
-\\\\end{filecontents}
-
-\\\\begin{document}
-
-  \\\\textbf{Real-effort survey designs: Open-ended questions to overcome the challenge of measuring behavior in surveys}
-
-
-
-\\\\textbf{}
-
-\\\\textbf{Keywords}
-
-Survey design, survey experiment, real-effort design, human behavior, order effect 
-
-\\\\textbf{}
-
-\\\\textbf{Take-home message}
-
-It is not possible to measure actual behavior in surveys and stated behavior is not always valid. Real-effort designs use real tasks in experiments to imitate real-world behavior and measure behavior more validly. This study combines both approaches, surveys and real-effort designs, and uses open-ended questions to measure effort in answering behavior as a proxy for actual instead of stated behavior. However, an order effect appears when this strategy is used to measure behavior in within-subject designs and, therefore, results are misleading.
-
-\\\\textbf{}
-
-\\\\textbf{Abstract}
-
-Based on data triangulation, open-ended questions can be used to overcome a typical problem with data collection using surveys: Human behavior can only be captured as stated or intended but not as real behavior. In this study on knowledge sharing in the workplace, a quantitative measure of behavioral intention was accompanied by such a qualitative, open-ended measure of behavior. The latter was used as a proxy for real instead of stated behavior. This item was coded according to the effort a participant made in answering. It is assumed that the greater the effort put into answering the open-ended question, the more likely it is that the described behavior will be performed in reality. A factorial experimental design was used to analyze the effect of rewards on employees' knowledge-sharing behavior. As a within-subject design was used, participants had to answer three open-ended questions referring to different vignettes. A strong order effect appeared, leading to longer answers on average for the first vignette (baseline) compared to subsequent vignettes, independent of treatment. Therefore, this approach to operationalizing behavior in surveys might not be useful in within-subject designs. However, it can be used in between-subject comparisons when participants are asked to answer to a single vignette.
-
-\\\\textbf{Purpose}
-
-This study aimed at testing a more valid way to study human behavior in surveys. I tried to overcome the limited validity of self-reported behavior in surveys. I wanted to adapt experimental real-effort tasks to a survey design by using open-ended questions and analyzing the effort participants' put into answering them.
-
-\\\\textbf{}
-
-\\\\textbf{Real-Effort Survey Designs: Open-Ended Questions to Overcome the Challenge of Measuring Behavior in Surveys}
-
-Measuring human behavior is an ongoing challenge for social scientists \\\\parencite{Schwarz2001}. In ideal circumstances, human behavior should be observed either in the field or in the lab. However, field trips and lab experiments are often both time- and resource-consuming. Observing behavior can also be prohibited in some cases, for instance if the behavior occurs too infrequently to be observed in a timely manner, or is not possible for others to observe (Schwarz \\\\& Oyserman, 2001, p. 128). Additionally, in the field of public administration and other fields using sensitive target groups, it is often difficult to recruit participants for a lab experiment or to even be allowed to observe them in the field. If lab experiments are conducted, they usually rely on students as participants. However, student samples are not externally valid, especially when a special population is being studied, such as public employees,. 
-
-Therefore, self-reported behavior in surveys and survey experiments is an often-used alternative (James et al., 2017, p. 120). Surveys are “quick and cheap” (Friborg \\\\& Rosenvinge, 2013, p. 1398) and can easily reach an intended population. However, these approaches to data collection come with other disadvantages, such as not measuring real behavior. One solution could be to integrate open-ended questions as a measure of answering effort, and thus a proxy for real behavior, into quantitative surveys. This kind of method and data triangulation could help to overcome limitations of surveys related to the measurement of behavior. 
-
-Real-effort designs assume that greater effort in fulfilling a task makes it more likely that participants actually perform what they have stated \\\\parencite{Dutcher2015}. Fulfilling real-effort tasks are typically cognitively, creatively, or physically costly for participants \\\\parencite{Charness2018}. These costs are higher when more effort is put into fulfilling a task. In some studies, for example, participants are asked to count errors in real-effort tasks, thereby increasing the cognitive cost of the task \\\\parencite{Andersen2018, Gneezy2006}. Hence, it can be assumed that the more extensive, accurate, and fitting an answer to a question about future behavior is, the more likely it is that the described behavior will actually be performed in the future. 
-
-To test this approach to measuring behavior, a survey experiment was conducted on the effect of rewards on public employees' knowledge-sharing behavior. An open-ended measure of behavior accompanied a closed-ended question measuring behavioral intention. However, it turned out that differences in answers to the open-ended measure were determined by their order. Earlier answers were longer and more accurate, whereas subsequent answers were significantly shorter and, therefore, represented less effort. This unforeseen order effect made the qualitative data unusable for studying within-subject differences. Between-subject differences and differences between rotated questions did not suffer from this order effect. 
-
-This paper is organized as follows. Firstly, the state of research on the use of open-ended questions in surveys and real-effort experimental designs is described. Secondly, the results of the study are presented. Problems with the approach used to measure behavior with open-ended questions are highlighted. Subsequently, these issues are discussed, and recommendations are made for future research. 
-
-\\\\textbf{Open-Ended Questions in Quantitative Surveys as a Measure of Effort }
-
-Combining open-ended and closed-ended questions in a survey requires a pragmatic approach of method and data triangulation (Rossman \\\\& Wilson, 1985, p. 631). Quantitative and qualitative methods not only succeed one another, but are integrated within a single study. Due to this triangulation, \\"researchers are allowed to improve the accuracy of conclusions by relying on data from more than one method\\" (Rossman \\\\& Wilson, 1985, p. 632). Hence, the combination of qualitative and quantitative data is used here to offset weaknesses of the latter, draw on the strengths of the former, and enhance the validity of the findings (Bryman, 2006, p. 105; Dewasiri et al., 2018).
-
-Several studies use this approach and compare answers to open-ended and closed-ended questions. Most of these studies report substantial discrepancies regarding answering behavior \\\\parencite{Converse1984, Greenfield2006, Schuman1979, Schwarz1999}. For example, open-ended questions usually produce a more diverse set of answers. In a study reported by Schuman and Presser (1979), 60\\\\% of answers to an open question fell outside of the pre-coded answer categories of a related closed-ended question in the control group. Additionally, new types of responses occurred in a frequency that justified additional answer categories. In contrast, some answer options were less likely to be spontaneously produced in open-ended questions than they were to be chosen when explicitly offered as an option in closed questions (Schuman \\\\& Presser, 1979, p. 365). Similarly, in a study on the quantity of alcohol consumption, Greenfield et al. (2006) found that the answers on the quantity of consumed alcohol of around 30\\\\% of respondents differed significantly between answers on open-ended and closed questions. They found that the combination of both an open-ended and a closed measure of the quantity of alcohol consumption was a stronger predictor of alcohol-related consequences than the individual measures \\\\parencite{Greenfield2006}.
-
-The aim of studies using open-ended and closed-ended questions in combination is usually to measure attitudes, feelings, or past behavior. However, self-reports, especially on past behavior, are a complex cognitive task that are highly context-dependent, and data are often seen as unreliable (Schwarz \\\\& Oyserman, 2001, p. 128). Some authors state that it is easier for participants to understand questions and recall relevant behavior when closed-ended questions are used (Schwarz \\\\& Oyserman, 2001, p. 131). In contrast, it is usually agreed that open-ended questions are more suited to asking about sensitive or stigmatizing information or when more in-depth information is needed (Friborg \\\\& Rosenvinge, 2013).
-
-However, I argue that the advantages of closed-ended questions only apply to questions on past instead of future behavior, where more emphasis lies on “editing” the answer. Hence, it is more important to get an accurate answer than a correct recall of past behavior. Accordingly, Singer and Couper (2017) suggest using open-ended questions in quantitative surveys more often to “encourage more truthful answers […] [and use them] as an indicator of response quality” (p. 3).
-
-Real-effort experimental designs rely on the assumption that greater effort in fulfilling a task makes it more likely that participants actually perform what they have stated \\\\parencite{Dutcher2015}. This assumption is based on the costs connected to fulfilling a real-effort task: The higher the costs an individual is willing to invest in answering, the more likely it is that these costs will also be invested in performing the actual behavior. Results based on real-effort designs are more externally valid when \\"the cost function of that task shares important characteristics with the field task\\" (Dutcher et al., 2015, p. 3). In surveys and survey experiments, open-ended questions can be used to measure effort in answering a question and, ultimately, we can use this as a proxy to measure real instead of stated behavior. Hence, the effort is for the most part cognitive and creative, but typing answers might also cost physical effort (Charness \\\\& Grieco, 2018, p. 75). Such a real-effort design might be a better estimator of actual behavior because \\"simply choosing a number may not capture the field environment and the psychological forces involved in putting forth actual effort\\" (Charness et al., 2018, p. 75). Greater effort can be operationalized with an extensive, accurate, and fitting answer. This is based on different assumptions: 
-
-One dimension of effort is the \\\\emph{length of time} during which cognitive resources are used \\\\parencite{Christensen-Szalanski1980}. Accordingly, the length of a written answer is an approximator of the duration of the effort. Similarly, the length of answers to open-ended questions are often used as indicators of data quality (Galesic \\\\& Bosnjak, 2009, p. 350). 
-
-\\\\emph{Accuracy and errors} can also be used to capture effort (Charness et al., 2018, p. 78). Such a procedure was used by Gneezy and List (2006), who conducted an experiment in which participants had to enter library data into a database. They counted the number of errors in these entries as a measure of effort. Similarly, Andersen et al. (2018) registered an experiment in public administration research using this approach to compare work effort between public and private organizations. They asked participants to transcribe handwritten timesheets and checked their accuracy. 
-
-Furthermore, participants may not only be asked to transfer existing information into a database but also to be \\\\emph{creative}. Similarly, Charness and Grieco (2018) asked participants in an experiment to write a story about a predefined topic or by using specified words, and used this story as a measure for the real effort put forth in creative tasks. As it is difficult to rate creativity, the details provided in such an answer can be used to measure effort.
-
-In such settings, participants' skills and abilities may strongly confound the results (Charness et al., 2018, p. 82). Longer answers, for example, may indicate that some participants can write quickly. Unfitting answers may indicate that some participants are unable to understand the question or articulate themselves. Charness et al. (2018, p. 82) recommend using larger samples to capture this treatment effect. Furthermore, within-subjects designs might be useful to overcome these between-subjects differences.
-
-\\\\textbf{Putting a Real-Effort Survey Design into Practice: The Effect of Rewards on Knowledge-Sharing Behavior}
-
-A survey experiment on knowledge-sharing behavior was conducted to analyze whether tangible or intangible incentives can foster that behavior. Knowledge sharing is the exchange of knowledge among individuals, teams, units, or organizations \\\\parencite{Paulin2012}. It is the basis of and a subprocess in an organization's knowledge management. In this article, the term “knowledge sharing” describes the behavior of donating knowledge from one person to another or to a medium. Multiple determinants influence knowledge sharing. Among others, tangible and intangible rewards are considered to foster knowledge-sharing behavior. Tangible rewards are material incentives, such as financial bonuses, and usually enhance extrinsic motivation. In contrast, intangible rewards, such as praise from a colleague or supervisor, usually influences intrinsic motivation. On the one hand, it has been shown that monitoring (e.g., controlling with performance measures) and rewards increase the knowledge-sharing activity of employees in an organization \\\\parencite{Wang2011, Witherspoon2013}. On the other hand, Bock and Kim's (2002) results suggest that expected rewards do not affect knowledge sharing.
-
-A 2x3 factorial survey experiment was designed to observe the within-subjects and between-subjects effects of the rewards offered. The research design was preregistered on the Open Science Framework (Fischer, 2018). Data were collected from German public employees in the core administration and health sector (\\\\emph{N} = 623) in 2018 using a self-administered questionnaire. As can be seen from Appendix A, most participants were female (61\\\\%). The mean age was 45 years, and participants had a tenure of 20 years on average.
-
-Each participant was randomly assigned a set of three vignettes from a pool of six. Randomization was done after participants started to answer the survey, based on their respondent ID. The vignettes incorporated all independent variables (Appendix B). Each set contained vignettes on either explicit or implicit knowledge (between-subject design). The first vignette in each set was a baseline vignette, while the two following vignettes presented a tangible and an intangible reward for knowledge sharing in a randomly assigned order (within-subjects design).
-
-Performance appraisals were used as the \\\\emph{tangible reward }treatment (Participants were given this reminder: “You know that all shared information improves your performance appraisal”). Performance appraisals served as a proxy for later rewards because it seemed unrealistic in the public sector to offer bonuses or other tangible rewards directly based on a person's knowledge-sharing behavior. This decision should address the problem that vignette experiments are frequently criticized for being unrealistic and lacking external validity (Aguinis \\\\& Bradley, 2014, p. 361).
-
-The \\\\emph{intangible reward} treatment was operationalized by offering explicit appreciation from co-workers without further illustrating how this appreciation would occur (Participants were given this reminder: “You know, your co-workers appreciate your knowledge sharing”). A rather superficial description was chosen because every team shows appreciation in a different way (e.g., good team climate, respectful interactions) and the vignette was thought to be not too restrictive.
-
-\\\\emph{Knowledge-sharing behavior} (KSB) was measured with an open-ended question as a proxy for real behavior. The item reads: “If you decided to share your knowledge, please briefly describe how exactly you will share your knowledge.” Thus, participants were not asked to actually share their knowledge, but it was assumed that the cost function of answering the open-ended question on KSB was similar to the cost function of performing the described behavior in reality, for instance, when individuals share knowledge by writing an e-mail to a co-worker. 
-
-Additionally, \\\\emph{knowledge-sharing intention} (KSI) was measured in a closed-ended way to compare results to the verbatim responses. A measure of KSI was formed by taking the mean of two items, which were rated on 5-point Likert scales. The items read: \\"I will share this knowledge with my co-workers\\" and \\"I would like to share this knowledge with my co-workers.\\" The former item represents the future-oriented and behavioral part of intention and the latter represents the motivational part of intention. Both items were based on scales on KSI used by, for example, Bock and Kim (2002) and Lin (2007). Both were adapted to the experimental context. The items correlate highly (depending on the vignette: \\\\emph{b }= .66-.96, \\\\emph{p} < .001) and were therefore compiled into one index for further analysis. 
-
-To code the open-ended answers, three dimensions were defined preliminarily, based on the literature, to rate the quality of the answer: the description's length, accuracy, and fit with the vignette. Two dimensions were added inductively during the coding process. Firstly, some participants answered the question with few words and therefore did not score in the quantity dimension, but were considered separately from participants who did not answer because they at least put some effort into answering the question. Secondly, some participants answered very elaborately in terms of length and content, and this effort was assigned a bonus point. Each dimension was coded as a dummy variable and an additive index was formed, ranging from zero to five. 
-
-Coding was done by two independent raters.\\\\footnote{I want to thank Lisa-Sophia Preller for serving as the second coder of this study. Both raters were asked to use different coding strategies, to avoid effects of the coding procedure: (1) one rater coded the cases one by one in order to have an eye on the complete answer, (2) another rater coded each dimension across all cases one by one in order to have an eye on the comparability of the ratings. The fifth dimension (high effort in answering) was not coded by both raters but added afterward and coded by a single rater, therefore no interrater reliability is calculated here.} Interrater reliability was calculated using Gwet's Agreement Coefficient \\\\parencite[][AC]{Gwet2014}. Due to the fact that there was only partial agreement in the ratings of some dimensions (see Appendix C), the raters discussed differences in coding and specified coding rules. In a second step, both raters agreed on a rating. This “negotiated” rating was used for further analysis.
-
-
-
-\\\\textbf{Results and Discussion of Issues Emerging from the Open-Ended Question Approach}
-
-Table 1 and Table 2 give a short overview of the descriptive statistics for the dependent variables. Examples of verbatim answers to the open-ended question on KSB and their coding are provided in Appendix D.
-
-\\\\textbf{Table 1}
-
-\\\\emph{Descriptive Statistics of KSI After Treatment}
-
-
-\\\\begin{table}
-
-  
-\\\\begin{tabular}{c  c  c  c  c  c}
-
-  Variable & N & M & SD & Min & Max\\\\\\\\
-KSI (vig. 1) & 319 & 4.23 & .80 & 1 & 5\\\\\\\\
-KSI (vig. 2) & 318 & 4.31 & .81 & 1 & 5\\\\\\\\
-KSI (vig. 3) & 318 & 4.27 & .83 & 1 & 5\\\\\\\\
-KSI (vig. 4) & 310 & 4.29 & .78 & 1 & 5\\\\\\\\
-KSI (vig. 5) & 307 & 4.24 & .83 & 1 & 5\\\\\\\\
-KSI (vig. 6) & 309 & 4.29 & .78 & 1 & 5\\\\\\\\
-KSI (without treatment) & 629 & 4.26 & .79 & 1 & 5\\\\\\\\
-KSI (intangible reward) & 625 & 4.27 & .82 & 1 & 5\\\\\\\\
-KSI (tangible reward) & 627 & 4.28 & .80 & 1 & 5\\\\\\\\
-
-
-\\\\end{tabular}
-
-
-\\\\end{table}
-
-
-\\\\textbf{}
-
-\\\\textbf{Table 2}
-
-\\\\emph{Descriptive Statistics of KSB After Treatment}
-
-
-\\\\begin{table}
-
-  
-\\\\begin{tabular}{c  c  c  c  c  c}
-
-  Variable & N & M & SD & Min & Max\\\\\\\\
-KSB (vig. 1) & 261 & 2.75 & .91 & 1 & 5\\\\\\\\
-KSB (vig. 2) & 239 & 2.36 & .70 & 1 & 5\\\\\\\\
-KSB (vig. 3) & 243 & 2.47 & .77 & 1 & 5\\\\\\\\
-KSB (vig. 4) & 286 & 2.66 & .86 & 1 & 5\\\\\\\\
-KSB (vig. 5) & 262 & 2.40 & .68 & 1 & 5\\\\\\\\
-KSB (vig. 6) & 257 & 2.46 & .71 & 1 & 5\\\\\\\\
-KSB (without treatment) & 547 & 2.70 & .89 & 1 & 5\\\\\\\\
-KSB (intangible reward) & 501 & 2.38 & .69 & 1 & 5\\\\\\\\
-KSB (tangible reward) & 500 & 2.47 & .74 & 1 & 5\\\\\\\\
-
-
-\\\\end{tabular}
-
-
-\\\\end{table}
-
-
-The descriptive statistics already show that when open-ended questions (knowledge-sharing \\\\emph{behavior}) were presented later in the survey, there were more missing answers, whereas such a high rate of missing answers was not observed with the closed-ended question (knowledge-sharing \\\\emph{intention}). Furthermore, in the second and third open-ended questions, participants often referred to their previous answers (e.g., \\"see above\\", \\"as just described\\") or answered in a significantly shorter way. Means for knowledge-sharing \\\\emph{behavior} were, therefore, significantly smaller in the second and third vignettes than in the first, which does not measure knowledge-sharing \\\\emph{intention}.
-
-Data were analyzed using Wilcoxon signed-rank tests (within-analysis) and Wilcoxon rank-sum tests (between-analysis) because the data were not normally distributed. Using the closed-ended measure of knowledge-sharing \\\\emph{intention} as the dependent variable led to a slightly greater intention to share when explicit knowledge is shared and a benefit is offered (\\\\emph{M} = 4.31, \\\\emph{SD} = 0.80) than without an offered benefit (\\\\emph{M} = 4.23, \\\\emph{SD} = 0.79; \\\\emph{Z }= 3.23, \\\\emph{p} < .001, \\\\emph{d} = 0.09, bootstrapped 95\\\\% CIs [0.03, 0.16]).
-
-However, using knowledge-sharing \\\\emph{behavior} as the dependent variable led to contradictory results, which might have been caused by a methodological problem. This issue was already identified while coding the data and inspecting the descriptive statistics: There was an order effect leading to longer answers on average for the first presented vignette compared to subsequent vignettes, independent of treatment. This result fits with the literature, as, for example, Galesic and Bosnjak (2009, p. 357) showed that open-ended questions asked later in a questionnaire were associated with shorter answers. 
-
-Accordingly, correlations between the stated knowledge-sharing \\\\emph{intention} and the coded answers related to knowledge-sharing \\\\emph{behavior} were not pronounced (Table 3). While knowledge-sharing \\\\emph{intention} and \\\\emph{behavior} were significantly but still only moderately correlated without an incentive treatment, the correlation was weaker and insignificant when incentives were induced. As the baseline vignette was always presented as the first vignette, this result supports the assumption of an order effect. 
-
-\\\\textbf{}
-
-\\\\textbf{Table 3}
-
-\\\\emph{Correlation Matrix of KSI and KSB}
-
-
-\\\\begin{table}
-
-  
-\\\\begin{tabular}{c  c  c  c  c  c  c  c}
-
-   & KSI &   & without treatment & KSI &  appreciation & KSI &  achievement\\\\\\\\
-KSB &  without treatment & .120** &  & \\\\\\\\
-KSB &  intang. reward &  & .052  & \\\\\\\\
-KSB &  tang. reward &  &  & .083 \\\\\\\\
-
-
-\\\\end{tabular}
-
-
-\\\\end{table}
-\\\\emph{Note.} \\\\emph{N} baseline = 547, \\\\emph{N} intang. Reward = 501, \\\\emph{N} tang. Reward = 500. 
-
-*p < .05. **p < .01.
-
-Analyzing knowledge-sharing \\\\emph{behavior} as the dependent variable, Wilcoxon signed-rank tests indicate significant differences between the treatment groups and the control group (explicit knowledge: appreciation vs. control group: \\\\emph{Z} = -5.86, \\\\emph{p} < .001; achievement vs. control group: \\\\emph{Z} = -4.40, \\\\emph{p} < .001; implicit knowledge: appreciation vs. control group:\\\\emph{ Z} = -6.83, \\\\emph{p} < .001; achievement vs. control group: \\\\emph{Z} = -4.89, \\\\emph{p} < .001). Contradicting the hypothesized relationships, the data show that knowledge-sharing \\\\emph{behavior} is significantly higher in the control group, and thus in the answer to the first vignette (baseline without treatment).
-
-However, the comparison of the two treatments might not suffer from this methodological problem as they were presented in a randomly rotated order, thus either as the second or third vignette. Comparing the two treatments regardless of the kind of knowledge shared yields a significant difference. The tangible reward treatment (\\\\emph{M} = 2.47, \\\\emph{SD} = 0.74) triggered more knowledge-sharing behavior than the intangible reward treatment (\\\\emph{M} = 2.38, \\\\emph{SD} = 0.69; \\\\emph{Z} = 2.40, \\\\emph{p} = .017, \\\\emph{d} = 0.10, bootstrapped 95\\\\% CIs [0.02, 0.18]).
-
-These results show that open-ended measures in surveys are exposed to strong order and fatigue effects. Open-ended questions presented later in the survey result in more missing answers, shorter answers, or answers referring to previous statements. Therefore, behavior reflecting minimal instead of satisficing answers was observed. Hence, these results could not be used in this study to analyze within-subject differences. However, the open-ended measure could be used as a proxy for real behavior in analyzing between-subjects differences and within-subjects comparisons between rotated vignettes (tangible and intangible rewards).
-
-\\\\textbf{}
-
-\\\\textbf{Conclusion: Recommendations for Future Research}
-
-Using open-ended questions to measure effort as a proxy for real instead of stated behavior was not useful in a within-subjects research design. Due to an order effect, open answers could not serve as a reliable estimator of the likelihood of actual behavior. However, an advantage of verbatim answers is that they can still be used to identify behavioral patterns and modes of KSB. In further research, this strength of qualitative data should be taken into account more instead of merely quantifying qualitative data.
-
-While this approach toward operationalizing behavior in surveys might not be useful in within-subject designs, it can be used in between-subject comparisons if participants are asked to answer to a single vignette. However, as participants' knowledge and competencies might influence answers on questions designed as real-effort tasks, attention must be paid to the sampling strategy when solely using between-subjects designs. When a baseline answer for an individual is missing or not taken into account, which is the idea behind a within-subjects design, an individual cannot be matched to their own standard.The order effect that occurred in this study was not expected by the author in that magnitude. It is known in the literature that, especially regarding open-ended questions, questions asked later in a questionnaire are associated with fatigue and shorter answers (Galesic \\\\& Bosnjak, 2009). However, it was expected that questions directly succeeding each other within a survey would not suffer that strongly from such an order effect. Additionally, the survey was rather short and took participants between 10 and 15 minutes to complete. The author expected that fatigue effects were more likely to occur in longer surveys. Also, the study's pretest with students and public sector professionals did not reveal such order and fatigue effects. Hence, this outcome might be due to characteristics of participants from online panels, who might be motivated to answer a questionnaire in an efficient and quick manner. 
-
-Due to the state of research on order effects in surveys, the treatment vignettes were randomized. However, I decided to exclude the baseline vignette from this randomization to avoid misunderstandings among the participants and to ensure the vignettes and questions were presented in a logical order. Future studies should, however, be aware of the occurrence of order effects in such an experimental setting, especially when data are collected with a sample of merely extrinsically motivated participants. To prevent order effects, between-subjects designs could be used instead of relying on within-subjects analyses. Apart from that, a combination of open-ended and closed questions allows one to detect order effects and should be included in case of uncertainty. Using both measures together also gives the option to analyze at least a part of the dependent variable and, therefore, minimizes risks of failure based on poor research designs. 
-
-Further research in this area may want to further consider the above-mentioned order and fatigue effects in answering open questions in survey experiments and how these might be prevented. Studies could, for example, experiment with rotating all vignettes instead of only rotating those with treatments to avoid an order effect. However, if the baseline vignette is not presented first, participants may have difficulties understanding the vignettes.
-
-Furthermore, open-ended questions might be distributed throughout the survey instead of directly after one another in order to prevent participants from referring to earlier answers. However, questions asked in between may induce other treatments and thereby affect the answers. By reporting the failure of the research strategy used in this study, this article intends to serve as a step in further testing the possibility of using open-ended questions as valid measures of effort in surveys and survey experiments.
-
-
-
-\\\\section{\\\\textbf{References}}
-
-Aguinis, H., \\\\& Bradley, K. J. (2014). Best practice recommendations for designing and implementing experimental vignette methodology studies. \\\\emph{Organizational Research Methods}, \\\\emph{17}(4), 351--371. https://doi.org/10.1177/1094428114547952
-
-Andersen, S., James, O., \\\\& Jilke, S. (2018). Does work effort for public versus private organizations differ? Evidence from an online work task experiment: Pre-registration. Retrieved from https://www.socialscienceregistry.org/trials/3361
-
-Bock, G. W., \\\\& Kim, Y. G. (2002). Breaking the myths of rewards: An exploratory study of attitudes about knowledge sharing. \\\\emph{Information Resources Management Journal, 15}(2), 14--21.
-
-Bryman, A. (2006). Integrating quantitative and qualitative research: How is it done? \\\\emph{Qualitative Research}, \\\\emph{6}(1), 97--113. https://doi.org/10.1177/1468794106058877
-
-Charness, G., Gneezy, U., \\\\& Henderson, A. (2018). Experimental methods: Measuring effort in economics experiments. \\\\emph{Journal of Economic Behavior \\\\& Organization}, \\\\emph{149}, 74--87. https://doi.org/10.1016/j.jebo.2018.02.024
-
-Charness, G., \\\\& Grieco, D. (2018). Creativity and incentives. \\\\emph{Journal of the European Economic Association}, \\\\emph{134}(1), 48. https://doi.org/10.1093/jeea/jvx055
-
-Christensen-Szalanski, J. J. J. (1980). A further examination of the selection of problem-solving strategies: The effects of deadlines and analytic aptitudes. \\\\emph{Organizational Behavior and Human Performance}, \\\\emph{25}(1), 107--122. https://doi.org/10.1016/0030-5073(80)90028-8
-
-Converse, J. M. (1984). Strong arguments and weak evidence: The open/closed questioning controversy of the 1940s. \\\\emph{Public Opinion Quarterly}, \\\\emph{48}(1B), 267--282. https://doi.org/10.1093/poq/48.1B.267
-
-Dewasiri, N. J., Weerakoon, Y. K. B., \\\\& Azeez, A. A. (2018). Mixed methods in finance research. \\\\emph{International Journal of Qualitative Methods}, \\\\emph{17}(1), 160940691880173. https://doi.org/10.1177/1609406918801730
-
-Dutcher, G., Salmon, T., \\\\& Saral, K. J. (2015). Is 'real' effort more real? \\\\emph{SSRN Electronic Journal. }Advance online publication. https://doi.org/10.2139/ssrn.2701793
-
-Fischer, C. (2018). Fostering Knowledge Sharing Behavior: preregistration. https://osf.io/r5jws/
-
-Friborg, O., \\\\& Rosenvinge, J. H. (2013). A comparison of open-ended and closed questions in the prediction of mental health. \\\\emph{Quality \\\\& Quantity}, \\\\emph{47}(3), 1397--1411. https://doi.org/10.1007/s11135-011-9597-8
-
-Galesic, M., \\\\& Bosnjak, M. (2009). Effects of questionnaire length on participation and indicators of response quality in a web survey. \\\\emph{Public Opinion Quarterly}, \\\\emph{73}(2), 349--360. https://doi.org/10.1093/poq/nfp031
-
-Gneezy, U., \\\\& List, J. A. (2006). Putting behavioral economics to work: Testing for gift exchange in labor markets using field experiments. \\\\emph{Econometrica}, \\\\emph{74}(5), 1365--1384. https://doi.org/10.1111/j.1468-0262.2006.00707.x
-
-Greenfield, T. K., Nayak, M. B., Bond, J., Ye, Y., \\\\& Midanik, L. T. (2006). Maximum quantity consumed and alcohol-related problems: Assessing the most alcohol drunk with two measures. \\\\emph{Alcoholism, Clinical and Experimental Research}, \\\\emph{30}(9), 1576--1582. https://doi.org/10.1111/j.1530-0277.2006.00189.x
-
-Gwet, K. L. [Kilem Li]. (2014). \\\\emph{Handbook of inter-rater reliability: The definitive guide to measuring the extent of agreement among raters} (4th ed.). Advanced Analytics, LLC. 
-
-James, O., Jilke, S. R., \\\\& van Ryzin, G. G. (Eds.). (2017). \\\\emph{Experiments in public management research: Challenges and contributions}. Cambridge University Press. 
-
-Lin, H. F. 2007. ‘Effects of extrinsic and intrinsic motivation on employee knowledge sharing intentions', Journal of Information Science, 33 (2), 135--49.Paulin, D., \\\\& Suneson, K. (2012). Knowledge transfer, knowledge sharing and knowledge barriers--three blurry terms in KM. \\\\emph{The Electronic Journal of Knowledge Management}, \\\\emph{10}(1), 81--91.
-
-Rossman, G. B., \\\\& Wilson, B. L. (1985). Numbers and words. \\\\emph{Evaluation Review}, \\\\emph{9}(5), 627--643. https://doi.org/10.1177/0193841X8500900505
-
-Schuman, H., \\\\& Presser, S. (1979). The open and closed question. \\\\emph{American Sociological Review}, \\\\emph{44}(5), 692. https://doi.org/10.2307/2094521
-
-Schwarz, N. (1999). Self-reports: How the questions shape the answers. \\\\emph{American Psychologist}, \\\\emph{54}(2), 93--105. https://doi.org/10.1037/0003-066X.54.2.93
-
-Schwarz, N., \\\\& Oyserman, D. (2001). Asking questions about behavior: Cognition, communication, and questionnaire construction. \\\\emph{The American Journal of Evaluation}, \\\\emph{22}(2), 127--160. https://doi.org/10.1016/S1098-2140(01)00133-3
-
-Singer, E., \\\\& Couper, M. P. (2017). Some methodological uses of responses to open questions and other verbatim comments in quantitative surveys. \\\\emph{Methods, Data, Analyses}, \\\\emph{11}(2), 1--19. https://doi.org/10.12758/mda.2017.01
-
-Wang, S., Noe, R. A., \\\\& Wang, Z. M. (2011). Motivating knowledge sharing in knowledge management systems. \\\\emph{Journal of Management}, \\\\emph{40}(4), 978--1009. https://doi.org/10.1177/0149206311412192
-
-Witherspoon, C. L., Bergner, J., Cockrell, C., \\\\& Stone, D. N. (2013). Antecedents of organizational knowledge sharing: A meta-analysis and critique. \\\\emph{Journal of Knowledge Management}, \\\\emph{17}(2), 250--277. https://doi.org/10.1108/13673271311315204
-
-
-
-\\\\textbf{}
-
-\\\\textbf{}
-
-\\\\textbf{Appendix A}
-
-\\\\emph{Sample Description}
-
-
-\\\\begin{table}
-
-  
-\\\\begin{tabular}{c  c  c  c  c  c}
-
-  Variable & N & M & SD & Min & Max\\\\\\\\
-age & 609 & 45.10 & 10.29 & 22 & 80\\\\\\\\
-female & 618 & 0.61 & 0.49 & 0 & 1\\\\\\\\
-supervisor & 615 & 0.29 & 0.45 & 0 & 1\\\\\\\\
-tenure & 615 & 20.20 & 11.23 & 0 & 47\\\\\\\\
-fixed-term employm. & 613 & 0.05 & 0.23 & 0 & 1\\\\\\\\
-
-
-\\\\end{tabular}
-
-
-\\\\end{table}
-\\\\textbf{}
-
-\\\\textbf{}
-
-\\\\textbf{Appendix B}
-
-\\\\textbf{Vignette Plan}
-
-
-\\\\begin{table}
-
-  
-\\\\begin{tabular}{c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c}
-
-   & Explicit knowledge  & Implicit knowledge \\\\\\\\
-Without treatment & Vignette 1 &   & During a daily routine at your workplace, you gathered  & information &  from several sources. This could also improve the work of your co-workers. &  & Please decide whether you will share this information with your co-workers. & ( & N &  = 319) & Vignette 4 &   & During a daily routine at your workplace, you had an  & experience &  that improved your work process. This experience could also help your co-workers. &  & Please decide whether you will share your knowledge with your co-workers.  & ( & N &  = 310)\\\\\\\\
-Intangible reward & Vignette 2 &   & During a daily routine at your workplace, you gathered  & information &  from several sources. This could also improve the work of your co-workers. &  & You know that your co-workers appreciate your knowledge sharing. &  & Please decide whether you will share this information with your co-workers. & ( & N &  = 319) & Vignette 5 &   & During a daily routine at your workplace, you had an  & experience &  that improved your work process. This experience could also help your co-workers. &  & You know that your co-workers appreciate your knowledge sharing. &  & Please decide whether you will share your knowledge with your co-workers. & ( & N &  = 307)\\\\\\\\
-Tangible reward & Vignette 3 & During a daily routine at your workplace, you gathered  & information &  from several sources. This could also improve the work of your co-workers. &  & You know that all shared information improves your performance appraisal. &  & Please decide whether you will share this information with your co-workers. & ( & N &  = 317) & Vignette 6 &   & During a daily routine at your workplace, you had an  & experience &  that improved your work process. This experience could also help your co-workers. &  & You know that all shared information improves your performance appraisal. &  & Please decide whether you will share your knowledge with your co-workers.  & ( & N &  = 309)\\\\\\\\
+Without treatment & Vignette 1 &   & During a daily routine at your workplace, you gathered  & information &  from several sources.  & This could also improve the work of your co-workers. &  & Please decide whether you will share this information with your co-workers. & ( & N &  = 319) & Vignette 4 &   & During a daily routine at your workplace, you had an  & experience &  that improved your work process.  & This experience could also help your co-workers. &  & Please decide whether you will share your knowledge with your co-workers.  & ( & N &  = 310)\\\\\\\\
+Intangible reward & Vignette 2 &   & During a daily routine at your workplace, you gathered  & information &  from several sources.  & This could also improve the work of your co-workers. &  & You know that your co-workers appreciate your knowledge sharing. &  & Please decide whether you will share this information with your co-workers. & ( & N &  = 319) & Vignette 5 &   & During a daily routine at your workplace, you had an  & experience &  that improved your work process.  & This experience could also help your co-workers. &  & You know that your co-workers appreciate your knowledge sharing. &  & Please decide whether you will share your knowledge with your co-workers. & ( & N &  = 307)\\\\\\\\
+Tangible reward & Vignette 3 & During a daily routine at your workplace, you gathered  & information &  from several sources.  & This could also improve the work of your co-workers. &  & You know that all shared information improves your performance appraisal. &  & Please decide whether you will share this information with your co-workers. & ( & N &  = 317) & Vignette 6 &   & During a daily routine at your workplace, you had an  & experience &  that improved your work process.  & This experience could also help your co-workers. &  & You know that all shared information improves your performance appraisal. &  & Please decide whether you will share your knowledge with your co-workers.  & ( & N &  = 309)\\\\\\\\
 
 
 \\\\end{tabular}
@@ -2683,7 +2208,7 @@ Number of participants: Since the pilot tests revealed a small effect size, and 
 
 For the power study, we wanted to simulate observed values that were similar to the experiment. For the baseline, we assumed a symmetric distribution around 0 for the SPARS rating. Therefore, the painful/non-painful ratings were expected to be 0s and 1s equally for both CS+/ US\\\\textsubscript{test} and CS-/ US\\\\textsubscript{test} trials. Hence, an observed value corresponding to a trial pair in the baseline was expected to be 1 with 25\\\\% probability, -1 with 25\\\\% probability, and 0 with 50\\\\% probability. We simulated observed values as 1, -1, and 0 with these probabilities. For the test phase, we increased the probability of 1 by half the selected effect size and decreased the probability of -1 by half the selected effect size. This resulted in an expected MD effect size equal to the selected effect size. 
 
-Since the number of randomizations for the RT was huge, we simulated Monte Carlo RTs with 1000 randomizations \\\\parencite{Edgington1969}
+Since the number of randomizations for the RT was huge, we simulated Monte Carlo RTs with 1000 randomizations \\\\parencite{Edgington1969}. For estimating power, we simulated 10000 datasets for each set of simulation conditions. Finally, we used a 5\\\\% level of significance for the simulated RTs.
 
 The simulations were run on supercomputer nodes at the Flemish Supercomputer Center (Leuven, Belgium). This allowed testing more simulation conditions and achieve high accuracy simulating a large number of datasets for each simulation condition; however, the simulations can also be run at a smaller scale on a personal computer. 
 
@@ -2853,7 +2378,7 @@ Heyvaert, M., \\\\& Onghena, P. (2014a). Analysis of single-case data: Randomisa
 
 Heyvaert, M., \\\\& Onghena, P. (2014b). Randomization tests for single-case experiments: State of the art, state of the science, and state of the application. \\\\emph{Journal of Contextual Behavioral Science}, \\\\emph{3}(1), 51--64. https://doi.org/10.1016/j.jcbs.2013.10.002
 
-Hope, A. C. A. (1968). A simplified Monte Carlo significance test procedure. \\\\emph{Journal of the Royal Statistical Society. Series B (Methodological)}, \\\\emph{30}(3), 582--598. http://www.jstor.org/stable/2984263
+Hope, A. C. A. (1968). A simplified Monte Carlo significance test procedure. \\\\emph{Journal of the Royal Statistical Society. }\\\\emph{Series B (Methodological)}, \\\\emph{30}(3), 582--598. http://www.jstor.org/stable/2984263
 
 Horner, R. H., Carr, E. G., Halle, J., Mcgee, G., Odom, S., \\\\& Wolery, M. (2005). The use of single-subject research to identify evidence-based practice in special education. \\\\emph{Exceptional Children}, \\\\emph{71}(2), 165--179. https://doi.org/10.1177/001440290507100203
 
@@ -3484,7 +3009,7 @@ In the field of Human Factors, and more specifically in Forensic Human Factors, 
 
 Fields such as the aviation industry have long recognized that there are better alternatives to simply replacing or retraining staff following a negative incident. For instance, at the beginning of the proliferation of commercial flights, it became clear that cockpits were often too complicated for pilots to understand, which lead to mistakes being made, and consequently accidents occured. Instead of firing the pilots who made mistakes and/or making small changes to training protocols, the aviation industry started making changes to the cockpits themselves. In other words, the industry transformed the environment, not the agents.
 
-By increasing the simplicity of the cockpit, pilots were less taxed and could invest more cognitive resources towards flying the plane. An example of such an environmental change is the adaptation of cockpit alarms. In older planes, cockpits would have the same audio-visual cues for every alarm. Thus, the pilot got the same feedback from the system when the fuel was slightly low as when an important engine was malfunctioning. Pilots were then mentally taxed on two levels: they were constantly confronted with distracting alarms, some of which might not need their immediate attention; and when attending to these alarms, they had to invest great effort in distinguishing the alarm and assessing its importance. As a result, pilots learned to ignore most alarms. A research article published in 1996 summarized problems such as these at the time as follows: “The proliferation of alarms has led to the increased likelihood of false or multiple alarm events and the consequent inability of the operator to determine the underlying cause of the alarm(s)” \\\\parencite[pp. 12][]{Gilson1996, Levin2019}. 
+By increasing the simplicity of the cockpit, pilots were less taxed and could invest more cognitive resources towards flying the plane. An example of such an environmental change is the adaptation of cockpit alarms. In older planes, cockpits would have the same audio-visual cues for every alarm. Thus, the pilot got the same feedback from the system when the fuel was slightly low as when an important engine was malfunctioning. Pilots were then mentally taxed on two levels: they were constantly confronted with distracting alarms, some of which might not need their immediate attention; and when attending to these alarms, they had to invest great effort in distinguishing the alarm and assessing its importance. As a result, pilots learned to ignore most alarms. A research article published in 1996 summarized problems such as these at the time as follows: “The proliferation of alarms has led to the increased likelihood of false or multiple alarm events and the consequent inability of the operator to determine the underlying cause of the alarm(s)” \\\\parencite[pp. 12][]{Gilson1996}. Under such a system, a situation such as the following might occur: During a flight, one of the important engines malfunctions and needs immediate attention. At the same time, a number of other small, but non-urgent, malfunctions could occur. Because the very attentive, but overly taxed pilot cannot properly differentiate between the different alarms, they end up paying attention to the wrong malfunction. A short while later, the plane crashes. As recently as 2019, a plane crash occurred due to a poorly designed alarm system \\\\parencite{Levin2019}. 
 
 Faced with the issue of the inattentive pilot, an airline company is presented with two solutions. On the one hand, the company could fire the pilot, hire a new one, and train them for a longer period of time, with a more experienced instructor, and with more expensive training equipment. Besides the fact that this would be very expensive, it would also be unlikely to solve the problem. Humans' cognitive abilities are limited. This is because, like all human systems, their underlying biological systems operate on limited resources. Similarly, in the realms of cognition, some cognitive scientists believe you can train people for things like working memory, sustained attention, selective attention, and other cognitive skills, but all of these will have a natural ceiling—a point beyond which it is almost impossible to progress \\\\parencite{Kwok2011, Traut2021}. 
 
@@ -3518,7 +3043,7 @@ Increasing the prestige of failure would contribute to an increased willingness 
 
 At the same time, those researchers that do already want to publish about failure often encounter unexpected hurdles in the publication process. If the journal is subscription-based, the readership of an already niche topic—failure within some field of science—is reduced further, rendering the whole exercise much less appealing to the open-minded researcher who wants their failure to be read and understood. Conversely, if the journal is open-access, it is likely to rely on APCs, requiring researchers that send in an article to a journal to pay a fee upon submission. As discussed in the previous section (3.1), with the increasing trend towards open science, APCs are sometimes seen as necessary by open access journals to cover costs. However, these charges selectively disadvantage researchers at less financially prosperous institutions. Often funding to cover high article processing charges is simply not available. This, in turn, prevents researchers in less financially secure situations from sharing their failures.
 
-Sindall and \\\\parencite{Barrington2020} provide several examples from humanitarian aid projects which went wrong. Two relevant cases in South Africa are mentioned, where failures led to a waste of money and physical injuries. Publishing about failure could prevent this from happening again in the future, but only if the relevant people are able to access these publications. In countries with a lower quality of life, the relative difference that can be made to improving quality of life by preventing waste of money and physical injuries is larger. 
+\\\\parencite{Sindall2020} provide several examples from humanitarian aid projects which went wrong. Two relevant cases in South Africa are mentioned, where failures led to a waste of money and physical injuries. Publishing about failure could prevent this from happening again in the future, but only if the relevant people are able to access these publications. In countries with a lower quality of life, the relative difference that can be made to improving quality of life by preventing waste of money and physical injuries is larger. 
 
 It is not only at the submission phase, however, that the culture of success-ism rears its head. Peer reviewers may also be reluctant to contribute their expertise to results that do not reveal some great discovery about their area of study. On the one hand, this is reasonable because experts are busy and unsolicited requests for reviews are often perceived as a nuisance. On the other hand, reviewers' increased willingness to respond to larger-scale positive-publishing journals over smaller-scale negative-publishing ones reflects again the equating of experimental success with prestige—a relationship that undergirds the philosophy of success-ism that journals like JOTE seek to overturn. 
 
@@ -3540,7 +3065,7 @@ In the meantime however, the onus of structuring failure falls on the editorial 
 
 \\\\section{4\\\\textbf{. }\\\\textbf{Destined to Fail?}}
 
-\\\\textbf{}Sindall and \\\\parencite{Barrington2020} highlight the need for “more structured ways to report on failures” in science. We could not agree more. However, there are very real, structural, limitations from a publisher's perspective that makes this goal very difficult to achieve. Thus, we argue that it is not only that “[j]ournals \\\\emph{want} to publish novel research and failure is too often not seen as novel” (italics added), but that oftentimes doing elsewise is self-destructive. 
+\\\\textbf{, Sindall2020} highlight the need for “more structured ways to report on failures” in science. We could not agree more. However, there are very real, structural, limitations from a publisher's perspective that makes this goal very difficult to achieve. Thus, we argue that it is not only that “[j]ournals \\\\emph{want} to publish novel research and failure is too often not seen as novel” (italics added), but that oftentimes doing elsewise is self-destructive. 
 
 That being said, JOTE is in a fortunate position where we have (and continue to) overcome many of the challenges discussed in this editorial. We do so by leaning into our unorthodoxy, embracing failure wholeheartedly and interdisciplinarily, and tirelessly working to draw informative conclusions from inconclusive results. Nevertheless, the question must be asked: “In the current scientific climate, is this model sustainable?” To that, we must answer with a clear “no”. The evidence is clear that failure is required for a healthy science to flourish. The fact that failure has not even yet budded in the sciences highlights the incompatibility of the current model of scientific success and the promotion of scientific failure. 
 
@@ -3760,18 +3285,18 @@ exports[`parses correctly for zotero 1`] = `
 }
 
 
+@article{Vallée-Tourangeau2020a,
+    author      = {Vallée-Tourangeau and March},
+    year        = {2020}
+}
+
+
 @book{Glaser1967,
     title       = {The discovery of grounded theory: Strategies for Qualitative Research},
     author      = {Glaser, Barney and Strauss, Anslem},
     publisher   = {Aldine Publishing Company},
     place       = {New York},
     year        = {1967}
-}
-
-
-@article{Vallée-Tourangeau2020a,
-    author      = {Vallée-Tourangeau and March},
-    year        = {2020}
 }
 
 
@@ -3921,7 +3446,7 @@ In other words, in this case, the problem-solving described above does not rely 
 
 \\\\subsection{The Current Study}
 
-There were two predictions made in Vallée-Tourangeau and \\\\parencite{March2020}. First, that the use of an actual bag of socks will lead to augmented performance, as measured by a higher solution rate. Second, that the way performance would be augmented would feature two components: The first being that the participant would forget the misleading ratio information, and the second being that the participant would be able to view the answer as she pulled socks out of the bag. This clear behavioral process hypothesis has a firm theoretical basis as outlined above. The current study aimed to test both the behavioral and performance hypotheses. 
+There were two predictions made in \\\\parencite{Vallée-Tourangeau2020a}. First, that the use of an actual bag of socks will lead to augmented performance, as measured by a higher solution rate. Second, that the way performance would be augmented would feature two components: The first being that the participant would forget the misleading ratio information, and the second being that the participant would be able to view the answer as she pulled socks out of the bag. This clear behavioral process hypothesis has a firm theoretical basis as outlined above. The current study aimed to test both the behavioral and performance hypotheses. 
 
 Participants were presented with a bag containing black and brown socks in a 4:5 ratio (the bag contained 90 socks) and were invited to solve the problem in one of two conditions: In the high-interactivity condition, they could draw the socks from the bag as they saw fit to help them solve the problem, while participants in the low-interactivity condition could look at the bag but not interact with it or its content. The initial study reported here was intended to follow a quantitative to qualitative (QUAN QUAL) analysis plan, but was changed because the experimental manipulation failed. Specifically, we no longer had faith that the low-interactivity condition represented a sequestered environment. In this report, we present the quantitative method and results before moving onto the qualitative phase, which yielded more substantive conclusions. 
 
@@ -4003,7 +3528,7 @@ The initial hypothesis of an augmentative effect of a high-interactivity environ
 
 \\\\subsubsection{Information in the Environment}
 
-The socks problem is a hard one because participants get stuck on the unhelpful ratio. As suggested by \\\\parencite{Vallée-Tourangeau2020a}, ignoring the ratio should lead to participants solving the problem more often and faster because they are not tempted to use inappropriate mathematical formulae. As we have addressed above, this is not an unreasonable assumption. However, the specific hypothesis under exploration, that a high-interactivity environment would increase the number of people who disregard the ratio, was not sustained by an analysis of what people did in this condition; it appeared that the opposite was the case, that a high-interactivity reinforced the unhelpful information. 
+The socks problem is a hard one because participants get stuck on the unhelpful ratio. As suggested by Vallée-Tourangeau and \\\\parencite{March2020}, ignoring the ratio should lead to participants solving the problem more often and faster because they are not tempted to use inappropriate mathematical formulae. As we have addressed above, this is not an unreasonable assumption. However, the specific hypothesis under exploration, that a high-interactivity environment would increase the number of people who disregard the ratio, was not sustained by an analysis of what people did in this condition; it appeared that the opposite was the case, that a high-interactivity reinforced the unhelpful information. 
 
 There are two ways in which a problem-solver could approach solving a problem using interactivity: The first involves the sort of exaptative actions mentioned in the initial hypothesis, while the second involves using the world to scaffold existing representations. In the case of problems designed to elicit an unhelpful representation, it is plausible that such a representation, when reified, would be harder to disregard. A high-interactivity environment can scaffold unhelpful representations as well as helpful ones.
 
@@ -4036,19 +3561,7 @@ Additional information was deeply unhelpful in this case. When the problem is pr
 
 
 
-
-\\\\begin{figure}
-
-  
-
-\\\\end{figure}
-Figure 4
-
-Participant 37 Tidying Socks 
-
-
-
-
+Figure 
 \\\\begin{figure}
 
   \\\\includegraphics{media/image4.png}
@@ -4141,7 +3654,7 @@ This was even clearer in the low-interactivity condition where the participants 
 \\\\begin{table}
 
   
-\\\\begin{tabular}{c  c  c}
+\\\\begin{tabular}{c  c  c  c}
 
   01:18 & \\"Oh what and if I get it right you'll tell me?\\" & \\\\caption{}
 \\\\label{}
@@ -4189,7 +3702,7 @@ This was even clearer in the low-interactivity condition where the participants 
 \\\\label{}
 \\\\includegraphics{media/image24.png}
 \\\\\\\\
-02:41 & \\"I'd have to pick 4 socks out\\". Said faster and more determined & \\\\caption{}
+02:41 & \\"I'd have to pick 4 socks out\\".  & Said faster and more determined & \\\\caption{}
 \\\\label{}
 \\\\includegraphics{media/image25.png}
 \\\\\\\\
@@ -4235,7 +3748,7 @@ The components in complex systems interact in complex ways and the results are e
 
 Interactivity posits that a dynamic relationship with the external world is not only augmentative to cognition processes but necessary. However, experimental research in interactivity does so by paradoxically setting up a low-interactivity condition which admits non-interactive thinking. In this way, it assumes that there is an easy way to compare non-systemic and systemic cognition and that non-systemic cognition can be meaningfully isolated in an experimental psychologist's lab. We suggest that the dualistic assumptions underlying this approach are misguided, as they assume an ideal type of experimental participant can be generated in sequestered experimental conditions. Rather, the evidence we present here suggests a cognitive leakage across both experimental conditions. In the process of operationalizing the so-called low-interactivity condition, the presence of the experimenter offered an external resource with which to scaffold the problem-solving process. The participant naturally transformed a solo and ostensibly unaided effort into a dyadic one. Clearly, the experimenter qua interlocutor was an unrequited conversational partner. Still, in the absence of hard physical or instructional constraints, the participant naturally availed themselves of this resource, bootstrapping the cognitive effort through a dialogue with their reluctant partner. And it is through this dialogue that the participant's hunch underwent many different forms until it was eventually translated into the normative one. These ersatz dialogues offer a telling window on the distributed nature of thinking, in this instance, the distribution over time and the gradual sedimentation through iterative dialogical cycles. The reification of the solution was the product of interactivity despite the experimental procedure.
 
-A systematic approach to cognition requires that every thoughtful (and arguably every non-thoughtful) encounter should be analyzed as part of a system; however, what constitutes part of the system is rarely specified. Vallée-Tourangeau and \\\\parencite{March2020} suggest that a cognitive ecosystem is configured by “the reasoner, the physical reality of the problem, and the action possibilities offered by the external environment” (p. 826). We argue that the data here suggest “the action possibilities offered by the external environment” (p. 826) are broader than whether the problem is represented in movable artifacts or not. Rather, participants actively recruit beyond the resources of interest in the experimental conditions. This means a more granular approach needs to be considered. 
+A systematic approach to cognition requires that every thoughtful (and arguably every non-thoughtful) encounter should be analyzed as part of a system; however, what constitutes part of the system is rarely specified. \\\\parencite{Vallée-Tourangeau2020a} suggest that a cognitive ecosystem is configured by “the reasoner, the physical reality of the problem, and the action possibilities offered by the external environment” (p. 826). We argue that the data here suggest “the action possibilities offered by the external environment” (p. 826) are broader than whether the problem is represented in movable artifacts or not. Rather, participants actively recruit beyond the resources of interest in the experimental conditions. This means a more granular approach needs to be considered. 
 
 \\\\subsubsection{Conclusion}
 
@@ -4243,7 +3756,7 @@ The data presented here are not the clean data typically seen in psychological r
 
 The failure of the experimental procedure here revealed the difficulty of doing research in open cognitive systems. Traditional methods of assessing embedded or extended cognition are still rooted in a cognitive and computational model of mind and contrast low- and high-interactivity environments to demonstrate an augmentative effect of interactivity. The research presented here suggests that the reality of experimenting in an open system is more complex than is believed. The target problem here was designed as a mental riddle and its transposition to an interactive space offered a telling window onto the disconnect between first- and second-order problem-solving: The task only “works” as a second-order task.
 
-It is tempting to question whether the mental tasks used in traditional cognitive psychology experiments are diagnostic of problem-solving outside of the sequestered laboratory environments in which they are commonly operationalized. We propose, rather, that a research program should develop in parallel to examine the solving of problems which rendered complex not because of their structure but because of their situation. When it comes to problem-solving, we need a wider range of outcome measures to even begin to understand how it unfolds across a range of contexts which requires a combination of qualitative and quantitative work. What we can see here is that the genesis of a new idea involves a transformation, which in turn involves resources; these resources come with a cost, and these transactions leave physical traces which can be mapped. To understand the transformations and transactions, that is, the process through which new ideas are constructed, the analysis must be local and granular. It is our belief that turning to the qualitative in cognitive psychology to complement the quantitative will yield great benefits.
+It is tempting to question whether the mental tasks used in traditional cognitive psychology experiments are diagnostic of problem-solving outside of the sequestered laboratory environments in which they are commonly operationalized. We propose, rather, that a research program should develop in parallel to examine the solving of problems which rendered complex not because of their structure but because of their situation. When it comes to problem-solving, we need a wider range of outcome measures to even begin to understand how it unfolds across a range of contexts which requires a combination of qualitative and quantitative work. What we can see here is that the genesis of a new idea involves a transformation, which in turn involves resources; these resources come with a cost, and these transactions leave physical traces which can be mapped. To understand the transformations and transactions, that is, the process through which new ideas are constructed, the analysis must be local and granular. It is our belief that turning to the qualitative in cognitive psychology to complement the quantitative will yield great benefits.
 
 \\\\textbf{}
 

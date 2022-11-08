@@ -269,10 +269,10 @@ const grammar: Grammar = {
                   }
                                                       },
     {"name": "Loc", "symbols": [(lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "LocContent"], "postprocess": ([,,loc])=>loc},
-    {"name": "LocContent$ebnf$1", "symbols": ["GenericContent"]},
-    {"name": "LocContent$ebnf$1", "symbols": ["LocContent$ebnf$1", "GenericContent"], "postprocess": (d) => d[0].concat([d[1]])},
-    {"name": "LocContent$ebnf$2", "symbols": ["GenericContent"]},
-    {"name": "LocContent$ebnf$2", "symbols": ["LocContent$ebnf$2", "GenericContent"], "postprocess": (d) => d[0].concat([d[1]])},
+    {"name": "LocContent$ebnf$1", "symbols": ["LocGenericContent"]},
+    {"name": "LocContent$ebnf$1", "symbols": ["LocContent$ebnf$1", "LocGenericContent"], "postprocess": (d) => d[0].concat([d[1]])},
+    {"name": "LocContent$ebnf$2", "symbols": ["LocGenericContent"]},
+    {"name": "LocContent$ebnf$2", "symbols": ["LocContent$ebnf$2", "LocGenericContent"], "postprocess": (d) => d[0].concat([d[1]])},
     {"name": "LocContent", "symbols": ["LocContent$ebnf$1", (lexer.has("__") ? {type: "__"} : __), "LocContent$ebnf$2"], "postprocess":  ([label,space,loc]) => {
                 const rawLabel=label
                                     .join('')
@@ -300,15 +300,18 @@ const grammar: Grammar = {
                  }
         }
                                         },
-    {"name": "LocContent$ebnf$3", "symbols": ["GenericContent"]},
-    {"name": "LocContent$ebnf$3", "symbols": ["LocContent$ebnf$3", "GenericContent"], "postprocess": (d) => d[0].concat([d[1]])},
+    {"name": "LocContent$ebnf$3", "symbols": ["LocGenericContent"]},
+    {"name": "LocContent$ebnf$3", "symbols": ["LocContent$ebnf$3", "LocGenericContent"], "postprocess": (d) => d[0].concat([d[1]])},
     {"name": "LocContent", "symbols": ["LocContent$ebnf$3"], "postprocess": ([loc]) => ({locator: loc.join(''),label:'none'})},
+    {"name": "LocGenericContent", "symbols": ["GenericContent"], "postprocess": content => content},
+    {"name": "LocGenericContent", "symbols": [(lexer.has("Cap") ? {type: "Cap"} : Cap), (lexer.has("Lowword") ? {type: "Lowword"} : Lowword), "LocGenericContent"], "postprocess": ([cap,low,rest])=> [cap+low+rest.join('')]},
+    {"name": "LocGenericContent", "symbols": [(lexer.has("Cap") ? {type: "Cap"} : Cap), (lexer.has("Lowword") ? {type: "Lowword"} : Lowword)], "postprocess": ([cap,low])=> [cap+low]},
     {"name": "GenericContent", "symbols": [(lexer.has("Lowword") ? {type: "Lowword"} : Lowword)], "postprocess": id},
     {"name": "GenericContent$ebnf$1", "symbols": [(lexer.has("Cap") ? {type: "Cap"} : Cap)]},
     {"name": "GenericContent$ebnf$1", "symbols": ["GenericContent$ebnf$1", (lexer.has("Cap") ? {type: "Cap"} : Cap)], "postprocess": (d) => d[0].concat([d[1]])},
     {"name": "GenericContent", "symbols": [(lexer.has("Cap") ? {type: "Cap"} : Cap), "GenericContent$ebnf$1"], "postprocess": ([cap,caps]) => cap+caps.join('')},
     {"name": "GenericContent", "symbols": [(lexer.has("Cap") ? {type: "Cap"} : Cap), (lexer.has("__") ? {type: "__"} : __)], "postprocess": content=>content.join('')},
-    {"name": "GenericContent", "symbols": [(lexer.has("Cap") ? {type: "Cap"} : Cap), (lexer.has("Lowword") ? {type: "Lowword"} : Lowword)], "postprocess": content=>content.join('')},
+    {"name": "GenericContent", "symbols": ["GenericContent", (lexer.has("Cap") ? {type: "Cap"} : Cap), (lexer.has("Lowword") ? {type: "Lowword"} : Lowword)], "postprocess": content=>content.join('')},
     {"name": "GenericContent$ebnf$2$subexpression$1", "symbols": [(lexer.has("Cap") ? {type: "Cap"} : Cap), (lexer.has("Dot") ? {type: "Dot"} : Dot)]},
     {"name": "GenericContent$ebnf$2", "symbols": ["GenericContent$ebnf$2$subexpression$1"]},
     {"name": "GenericContent$ebnf$2$subexpression$2", "symbols": [(lexer.has("Cap") ? {type: "Cap"} : Cap), (lexer.has("Dot") ? {type: "Dot"} : Dot)]},
@@ -385,11 +388,17 @@ const grammar: Grammar = {
     {"name": "SingleName", "symbols": ["DutchName"], "postprocess": id},
     {"name": "SingleName", "symbols": ["OReilly"], "postprocess": id},
     {"name": "SingleName", "symbols": ["McConnel"], "postprocess": id},
+    {"name": "SingleName", "symbols": ["SpanishName"], "postprocess": id},
     {"name": "Initials", "symbols": ["Initial"]},
     {"name": "Initials$ebnf$1", "symbols": []},
     {"name": "Initials$ebnf$1", "symbols": ["Initials$ebnf$1", (lexer.has("__") ? {type: "__"} : __)], "postprocess": (d) => d[0].concat([d[1]])},
     {"name": "Initials", "symbols": ["Initials", "Initials$ebnf$1", "Initial"]},
     {"name": "Initial", "symbols": [(lexer.has("Cap") ? {type: "Cap"} : Cap), (lexer.has("Dot") ? {type: "Dot"} : Dot)], "postprocess": id},
+    {"name": "SpanishName", "symbols": ["BoringNameMaybe", (lexer.has("__") ? {type: "__"} : __), "BoringNameMaybe"], "postprocess": 
+        ([first,,last]) => ({
+            family: `${first} ${last}`
+        })
+                                                           },
     {"name": "DutchName", "symbols": ["DutchPrefix", (lexer.has("__") ? {type: "__"} : __), "BoringNameMaybe"], "postprocess":  ([pref,space, rest]) => (
           {
            family: rest,

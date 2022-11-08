@@ -233,9 +233,9 @@ PreAuthsMiddle -> %Sem %__  GenericContent:+ {%
 Loc -> %Com %__ LocContent {% ([,,loc])=>loc %}
 
 LocContent ->
-              GenericContent:+
+              LocGenericContent:+
               %__
-              GenericContent:+ {% ([label,space,loc]) => {
+              LocGenericContent:+ {% ([label,space,loc]) => {
                                                            const rawLabel=label
                                                                                .join('')
                                                                                .trim()
@@ -262,7 +262,11 @@ LocContent ->
                                                             }
                                                    }
                                 %}
-              | GenericContent:+ {% ([loc]) => ({locator: loc.join(''),label:'none'}) %}
+              | LocGenericContent:+ {% ([loc]) => ({locator: loc.join(''),label:'none'}) %}
+
+LocGenericContent -> GenericContent {% content => content %}
+                    | %Cap %Lowword LocGenericContent {% ([cap,low,rest])=> [cap+low+rest.join('')] %}
+                    | %Cap %Lowword {% ([cap,low])=> [cap+low] %}
 # %Loc %__:? GenericContent:+ {% ([loc,,cont]) => {
 #                                                                   const locator = cont.join('').trim()
 #                                                                   if(loc.value.includes('p.')){
@@ -275,7 +279,7 @@ LocContent ->
 GenericContent ->   %Lowword                                 {% id %}
                   | %Cap %Cap:+                              {% ([cap,caps]) => cap+caps.join('') %}
                   | %Cap %__                                 {% content=>content.join('') %}
-                  | %Cap %Lowword                            {% content=>content.join('') %}
+                  | GenericContent %Cap %Lowword                            {% content=>content.join('') %}
                   | %Cap %Dot (%Cap %Dot):+                  {% ([c,d,content])=>c+d+content.flat().join('') %}
                   | %Col                                     {% id %}
                   | %Number                                  {% id %}
@@ -391,6 +395,7 @@ SingleName -> BoringNameMaybe {% ([name]) => ({family:name}) %}
               | DutchName {% id %}
               | OReilly {% id %}
               | McConnel {% id %}
+              | SpanishName {% id %}
 
 
 Initials ->   Initial
@@ -407,7 +412,11 @@ Initial -> %Cap %Dot {% id %}
 # at the start of sentences!!! GRrrr
 # Is it me who is wrong? 🤔 No, it's gotta be the authors.
 
-# SpanishName -> BoringNameMaybe __ BoringNameMaybe
+SpanishName -> BoringNameMaybe %__ BoringNameMaybe {%
+                                                    ([first,,last]) => ({
+                                                        family: `${first} ${last}`
+                                                    })
+                                                   %}
 
 DutchName -> DutchPrefix %__ BoringNameMaybe {% ([pref,space, rest]) => (
                                                                           {

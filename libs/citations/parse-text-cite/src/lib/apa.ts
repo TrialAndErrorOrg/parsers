@@ -3,9 +3,9 @@
 // Bypasses TS6133. Allow declared but unused functions.
 // @ts-ignore
 function id(d: any[]): any { return d[0]; }
+declare var Rp: any;
 declare var Year: any;
 declare var Lp: any;
-declare var Rp: any;
 declare var __: any;
 declare var Number: any;
 declare var Com: any;
@@ -21,7 +21,6 @@ declare var Slash: any;
 declare var Dash: any;
 declare var Punct: any;
 declare var Mc: any;
-declare var DutchPref: any;
 declare var Cap: any;
 declare var Lowword: any;
 declare var NL: any;
@@ -29,6 +28,8 @@ declare var Misc: any;
 declare var End: any;
 declare var Et: any;
 declare var Low: any;
+declare var DutchPref: any;
+declare var BCE: any;
 
 import {lexer} from './lexer'
 
@@ -143,6 +144,7 @@ const grammar: Grammar = {
     {"name": "InputContent", "symbols": ["ParenCite"], "postprocess": id},
     {"name": "InputContent", "symbols": ["NarrCite"], "postprocess": id},
     {"name": "InputContent", "symbols": ["NonCiteContent"], "postprocess": id},
+    {"name": "InputContent", "symbols": [(lexer.has("Rp") ? {type: "Rp"} : Rp), "NonCiteContent"], "postprocess": n => n.join('')},
     {"name": "NonCiteContent", "symbols": [(lexer.has("Year") ? {type: "Year"} : Year)], "postprocess": id},
     {"name": "NonCiteContent", "symbols": ["NonYearParenContent"], "postprocess": id},
     {"name": "NonCiteContent$ebnf$1", "symbols": ["NonYearParenContent"]},
@@ -163,7 +165,6 @@ const grammar: Grammar = {
     {"name": "NonYearParenContent", "symbols": [(lexer.has("Dash") ? {type: "Dash"} : Dash)], "postprocess": id},
     {"name": "NonYearParenContent", "symbols": [(lexer.has("Punct") ? {type: "Punct"} : Punct)], "postprocess": id},
     {"name": "NonYearParenContent", "symbols": [(lexer.has("Mc") ? {type: "Mc"} : Mc)], "postprocess": id},
-    {"name": "NonYearParenContent", "symbols": [(lexer.has("DutchPref") ? {type: "DutchPref"} : DutchPref)], "postprocess": id},
     {"name": "NonYearParenContent", "symbols": [(lexer.has("Cap") ? {type: "Cap"} : Cap)], "postprocess": id},
     {"name": "NonYearParenContent", "symbols": [(lexer.has("Lowword") ? {type: "Lowword"} : Lowword)], "postprocess": id},
     {"name": "NonYearParenContent", "symbols": [(lexer.has("NL") ? {type: "NL"} : NL)], "postprocess": id},
@@ -360,8 +361,8 @@ const grammar: Grammar = {
     {"name": "ParenNameMaybeList", "symbols": ["ParenNameMaybeList", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __), "Comp", (lexer.has("__") ? {type: "__"} : __)], "postprocess": ([name])=>([name].flat())},
     {"name": "ParenNameMaybeList", "symbols": ["ParenNameMaybeList", (lexer.has("__") ? {type: "__"} : __), "Comp", (lexer.has("__") ? {type: "__"} : __), "NameList"], "postprocess": ([name,,,,n])=>([name,n].flat())},
     {"name": "ParenNameMaybeList", "symbols": ["ParenNameMaybeList", (lexer.has("__") ? {type: "__"} : __), "Comp", (lexer.has("__") ? {type: "__"} : __)], "postprocess": ([name])=>([name].flat())},
-    {"name": "ParenNameMaybeList", "symbols": ["ParenNameMaybeList", (lexer.has("__") ? {type: "__"} : __), "Etal"], "postprocess": ([name])=>([name].flat())},
     {"name": "ParenNameMaybe", "symbols": ["Name"], "postprocess": id},
+    {"name": "ParenNameMaybe", "symbols": ["Name", "Etal"], "postprocess": ([n])=>n},
     {"name": "ParenNameMaybe", "symbols": ["ParenNameMaybe", (lexer.has("__") ? {type: "__"} : __), "ParenNameMaybe"], "postprocess": ([n,,nn]) => ({...n,...nn,family:n.family+nn.family})},
     {"name": "ParenNameMaybe", "symbols": ["ParenNameMaybe", (lexer.has("__") ? {type: "__"} : __), (lexer.has("Lowword") ? {type: "Lowword"} : Lowword)], "postprocess": ([n,,nn]) => ({...n,family:n.family+nn})},
     {"name": "Etal$ebnf$1", "symbols": [(lexer.has("__") ? {type: "__"} : __)], "postprocess": id},
@@ -413,7 +414,13 @@ const grammar: Grammar = {
     {"name": "Year", "symbols": [(lexer.has("Year") ? {type: "Year"} : Year), "Year$ebnf$1", (lexer.has("Lowword") ? {type: "Lowword"} : Lowword)], "postprocess": ([year,, low])=> ([year + low])},
     {"name": "Year", "symbols": ["Year", (lexer.has("Slash") ? {type: "Slash"} : Slash), "Year"], "postprocess":  (content) => {const[year, sl, year2]=content
         return([...year2,...year])}
-                                     }
+                                     },
+    {"name": "Year$ebnf$2", "symbols": [(lexer.has("Number") ? {type: "Number"} : Number)]},
+    {"name": "Year$ebnf$2", "symbols": ["Year$ebnf$2", (lexer.has("Number") ? {type: "Number"} : Number)], "postprocess": (d) => d[0].concat([d[1]])},
+    {"name": "Year$ebnf$3", "symbols": []},
+    {"name": "Year$ebnf$3", "symbols": ["Year$ebnf$3", (lexer.has("__") ? {type: "__"} : __)], "postprocess": (d) => d[0].concat([d[1]])},
+    {"name": "Year", "symbols": ["Year$ebnf$2", "Year$ebnf$3", (lexer.has("BCE") ? {type: "BCE"} : BCE)], "postprocess": ([num,,rest])=> ([`${/b\.?c\.?/i.test(rest) ? '-' : ''}${num}`])},
+    {"name": "Year", "symbols": [(lexer.has("Ca") ? {type: "Ca"} : Ca), (lexer.has("__") ? {type: "__"} : __), "Year"], "postprocess": ([ca,,year])=> ([`${year}`])}
   ],
   ParserStart: "Input",
 };

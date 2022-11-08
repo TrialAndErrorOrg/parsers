@@ -134,7 +134,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "@article{Schwarz2001,\n    author      = {Schwarz and Oyserman},\n    year        = {2001}\n}\n\n\n@article{Dutcher2015,\n    author      = {Dutcher},\n    year        = {2015}\n}\n\n\n@article{Charness2018,\n    author      = {Charness},\n    year        = {2018}\n}\n\n\n@article{Andersen2018,\n    author      = {Andersen},\n    year        = {2018}\n}\n\n\n@article{Gneezy2006,\n    author      = {Gneezy and List},\n    year        = {2006}\n}\n\n\n@article{Converse1984,\n    author      = {Converse},\n    year        = {1984}\n}\n\n\n@article{Greenfield2006,\n    author      = {Greenfield},\n    year        = {2006}\n}\n\n\n@article{Schuman1979,\n    author      = {Schuman and Presser},\n    year        = {1979}\n}\n\n\n@article{Schwarz1999,\n    author      = {Schwarz},\n    year        = {1999}\n}\n\n\n@article{Christensen-Szalanski1980,\n    author      = {Christensen-Szalanski},\n    year        = {1980}\n}\n\n\n@article{Paulin2012,\n    author      = {Paulin and Suneson},\n    year        = {2012}\n}\n\n\n@article{Wang2011,\n    author      = {Wang},\n    year        = {2011}\n}\n\n\n@article{Witherspoon2013,\n    author      = {Witherspoon},\n    year        = {2013}\n}\n\n\n@article{Gwet2014,\n    author      = {Gwet},\n    year        = {2014}\n}"
+                  "value": "@article{Schwarz2001,\n    author      = {Schwarz and Oyserman},\n    year        = {2001}\n}\n\n\n@article{Dutcher2015,\n    author      = {Dutcher},\n    year        = {2015}\n}\n\n\n@article{Charness2018,\n    author      = {Charness},\n    year        = {2018}\n}\n\n\n@article{Andersen2018,\n    author      = {Andersen},\n    year        = {2018}\n}\n\n\n@article{Gneezy2006,\n    author      = {Gneezy and List},\n    year        = {2006}\n}\n\n\n@article{Converse1984,\n    author      = {Converse},\n    year        = {1984}\n}\n\n\n@article{Greenfield2006,\n    author      = {Greenfield},\n    year        = {2006}\n}\n\n\n@article{Schuman1979,\n    author      = {Schuman and Presser},\n    year        = {1979}\n}\n\n\n@article{Schwarz1999,\n    author      = {Schwarz},\n    year        = {1999}\n}\n\n\n@article{Christensen-Szalanski1980,\n    author      = {Christensen-Szalanski},\n    year        = {1980}\n}\n\n\n@article{Paulin2012,\n    author      = {Paulin and Suneson},\n    year        = {2012}\n}\n\n\n@article{Wang2011,\n    author      = {Wang},\n    year        = {2011}\n}\n\n\n@article{Witherspoon2013,\n    author      = {Witherspoon},\n    year        = {2013}\n}\n\n\n@article{Bock2002,\n    author      = {Bock and Kim},\n    year        = {2002}\n}\n\n\n@article{Lin2007,\n    author      = {Lin},\n    year        = {2007}\n}\n\n\n@article{Gwet2014,\n    author      = {Gwet},\n    year        = {2014}\n}"
                 }
               ]
             }
@@ -265,7 +265,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " This study combines both approaches, surveys and real-effort designs, and uses open-ended questions to measure effort in answering behavior as a proxy for actual instead of stated behavior. However, an order effect appears when this strategy is used to measure behavior in within-subject designs and, therefore, results are misleading."
+                  "value": " This study combines both approaches, surveys and real-effort designs, and uses open-ended questions to measure effort in answering behavior as a proxy for actual instead of stated behavior. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, an order effect appears when this strategy is used to measure behavior in within-subject designs and, therefore, results are misleading."
                 }
               ]
             },
@@ -311,7 +315,43 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Based on data triangulation, open-ended questions can be used to overcome a typical problem with data collection using surveys: Human behavior can only be captured as stated or intended but not as real behavior. In this study on knowledge sharing in the workplace, a quantitative measure of behavioral intention was accompanied by such a qualitative, open-ended measure of behavior. The latter was used as a proxy for real instead of stated behavior. This item was coded according to the effort a participant made in answering. It is assumed that the greater the effort put into answering the open-ended question, the more likely it is that the described behavior will be performed in reality. A factorial experimental design was used to analyze the effect of rewards on employees' knowledge-sharing behavior. As a within-subject design was used, participants had to answer three open-ended questions referring to different vignettes. A strong order effect appeared, leading to longer answers on average for the first vignette (baseline) compared to subsequent vignettes, independent of treatment. Therefore, this approach to operationalizing behavior in surveys might not be useful in within-subject designs. However, it can be used in between-subject comparisons when participants are asked to answer to a single vignette."
+                  "value": "Based on data triangulation, open-ended questions can be used to overcome a typical problem with data collection using surveys: Human behavior can only be captured as stated or intended but not as real behavior. "
+                },
+                {
+                  "type": "text",
+                  "value": "In this study on knowledge sharing in the workplace, a quantitative measure of behavioral intention was accompanied by such a qualitative, open-ended measure of behavior. "
+                },
+                {
+                  "type": "text",
+                  "value": "The latter was used as a proxy for real instead of stated behavior. "
+                },
+                {
+                  "type": "text",
+                  "value": "This item was coded according to the effort a participant made in answering. "
+                },
+                {
+                  "type": "text",
+                  "value": "It is assumed that the greater the effort put into answering the open-ended question, the more likely it is that the described behavior will be performed in reality. "
+                },
+                {
+                  "type": "text",
+                  "value": "A factorial experimental design was used to analyze the effect of rewards on employees' knowledge-sharing behavior. "
+                },
+                {
+                  "type": "text",
+                  "value": "As a within-subject design was used, participants had to answer three open-ended questions referring to different vignettes. "
+                },
+                {
+                  "type": "text",
+                  "value": "A strong order effect appeared, leading to longer answers on average for the first vignette (baseline) compared to subsequent vignettes, independent of treatment. "
+                },
+                {
+                  "type": "text",
+                  "value": "Therefore, this approach to operationalizing behavior in surveys might not be useful in within-subject designs. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, it can be used in between-subject comparisons when participants are asked to answer to a single vignette."
                 }
               ]
             },
@@ -341,7 +381,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "This study aimed at testing a more valid way to study human behavior in surveys. I tried to overcome the limited validity of self-reported behavior in surveys. I wanted to adapt experimental real-effort tasks to a survey design by using open-ended questions and analyzing the effort participants' put into answering them."
+                  "value": "This study aimed at testing a more valid way to study human behavior in surveys. "
+                },
+                {
+                  "type": "text",
+                  "value": "I tried to overcome the limited validity of self-reported behavior in surveys. "
+                },
+                {
+                  "type": "text",
+                  "value": "I wanted to adapt experimental real-effort tasks to a survey design by using open-ended questions and analyzing the effort participants' put into answering them."
                 }
               ]
             },
@@ -406,7 +454,19 @@
                 },
                 {
                   "type": "text",
-                  "value": ". In ideal circumstances, human behavior should be observed either in the field or in the lab. However, field trips and lab experiments are often both time- and resource-consuming. Observing behavior can also be prohibited in some cases, for instance if the behavior occurs too infrequently to be observed in a timely manner, or is not possible for others to observe "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "In ideal circumstances, human behavior should be observed either in the field or in the lab. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, field trips and lab experiments are often both time- and resource-consuming. "
+                },
+                {
+                  "type": "text",
+                  "value": "Observing behavior can also be prohibited in some cases, for instance if the behavior occurs too infrequently to be observed in a timely manner, or is not possible for others to observe "
                 },
                 {
                   "type": "text",
@@ -414,7 +474,19 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Additionally, in the field of public administration and other fields using sensitive target groups, it is often difficult to recruit participants for a lab experiment or to even be allowed to observe them in the field. If lab experiments are conducted, they usually rely on students as participants. However, student samples are not externally valid, especially when a special population is being studied, such as public employees,. "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Additionally, in the field of public administration and other fields using sensitive target groups, it is often difficult to recruit participants for a lab experiment or to even be allowed to observe them in the field. "
+                },
+                {
+                  "type": "text",
+                  "value": "If lab experiments are conducted, they usually rely on students as participants. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, student samples are not externally valid, especially when a special population is being studied, such as public employees,. "
                 }
               ]
             },
@@ -431,7 +503,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Surveys are “quick and cheap” "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Surveys are “quick and cheap” "
                 },
                 {
                   "type": "text",
@@ -439,7 +515,19 @@
                 },
                 {
                   "type": "text",
-                  "value": " and can easily reach an intended population. However, these approaches to data collection come with other disadvantages, such as not measuring real behavior. One solution could be to integrate open-ended questions as a measure of answering effort, and thus a proxy for real behavior, into quantitative surveys. This kind of method and data triangulation could help to overcome limitations of surveys related to the measurement of behavior. "
+                  "value": " and can easily reach an intended population. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, these approaches to data collection come with other disadvantages, such as not measuring real behavior. "
+                },
+                {
+                  "type": "text",
+                  "value": "One solution could be to integrate open-ended questions as a measure of answering effort, and thus a proxy for real behavior, into quantitative surveys. "
+                },
+                {
+                  "type": "text",
+                  "value": "This kind of method and data triangulation could help to overcome limitations of surveys related to the measurement of behavior. "
                 }
               ]
             },
@@ -467,7 +555,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Fulfilling real-effort tasks are typically cognitively, creatively, or physically costly for participants "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Fulfilling real-effort tasks are typically cognitively, creatively, or physically costly for participants "
                 },
                 {
                   "type": "command",
@@ -486,7 +578,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ". These costs are higher when more effort is put into fulfilling a task. In some studies, for example, participants are asked to count errors in real-effort tasks, thereby increasing the cognitive cost of the task "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "These costs are higher when more effort is put into fulfilling a task. "
+                },
+                {
+                  "type": "text",
+                  "value": "In some studies, for example, participants are asked to count errors in real-effort tasks, thereby increasing the cognitive cost of the task "
                 },
                 {
                   "type": "command",
@@ -520,7 +620,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Hence, it can be assumed that the more extensive, accurate, and fitting an answer to a question about future behavior is, the more likely it is that the described behavior will actually be performed in the future. "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Hence, it can be assumed that the more extensive, accurate, and fitting an answer to a question about future behavior is, the more likely it is that the described behavior will actually be performed in the future. "
                 }
               ]
             },
@@ -529,7 +633,27 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "To test this approach to measuring behavior, a survey experiment was conducted on the effect of rewards on public employees' knowledge-sharing behavior. An open-ended measure of behavior accompanied a closed-ended question measuring behavioral intention. However, it turned out that differences in answers to the open-ended measure were determined by their order. Earlier answers were longer and more accurate, whereas subsequent answers were significantly shorter and, therefore, represented less effort. This unforeseen order effect made the qualitative data unusable for studying within-subject differences. Between-subject differences and differences between rotated questions did not suffer from this order effect. "
+                  "value": "To test this approach to measuring behavior, a survey experiment was conducted on the effect of rewards on public employees' knowledge-sharing behavior. "
+                },
+                {
+                  "type": "text",
+                  "value": "An open-ended measure of behavior accompanied a closed-ended question measuring behavioral intention. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, it turned out that differences in answers to the open-ended measure were determined by their order. "
+                },
+                {
+                  "type": "text",
+                  "value": "Earlier answers were longer and more accurate, whereas subsequent answers were significantly shorter and, therefore, represented less effort. "
+                },
+                {
+                  "type": "text",
+                  "value": "This unforeseen order effect made the qualitative data unusable for studying within-subject differences. "
+                },
+                {
+                  "type": "text",
+                  "value": "Between-subject differences and differences between rotated questions did not suffer from this order effect. "
                 }
               ]
             },
@@ -538,7 +662,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "This paper is organized as follows. Firstly, the state of research on the use of open-ended questions in surveys and real-effort experimental designs is described. Secondly, the results of the study are presented. Problems with the approach used to measure behavior with open-ended questions are highlighted. Subsequently, these issues are discussed, and recommendations are made for future research. "
+                  "value": "This paper is organized as follows. "
+                },
+                {
+                  "type": "text",
+                  "value": "Firstly, the state of research on the use of open-ended questions in surveys and real-effort experimental designs is described. "
+                },
+                {
+                  "type": "text",
+                  "value": "Secondly, the results of the study are presented. "
+                },
+                {
+                  "type": "text",
+                  "value": "Problems with the approach used to measure behavior with open-ended questions are highlighted. "
+                },
+                {
+                  "type": "text",
+                  "value": "Subsequently, these issues are discussed, and recommendations are made for future research. "
                 }
               ]
             },
@@ -576,7 +716,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Quantitative and qualitative methods not only succeed one another, but are integrated within a single study. Due to this triangulation, \"researchers are allowed to improve the accuracy of conclusions by relying on data from more than one method\" "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Quantitative and qualitative methods not only succeed one another, but are integrated within a single study. "
+                },
+                {
+                  "type": "text",
+                  "value": "Due to this triangulation, \"researchers are allowed to improve the accuracy of conclusions by relying on data from more than one method\" "
                 },
                 {
                   "type": "text",
@@ -584,7 +732,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Hence, the combination of qualitative and quantitative data is used here to offset weaknesses of the latter, draw on the strengths of the former, and enhance the validity of the findings "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Hence, the combination of qualitative and quantitative data is used here to offset weaknesses of the latter, draw on the strengths of the former, and enhance the validity of the findings "
                 },
                 {
                   "type": "text",
@@ -601,7 +753,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Several studies use this approach and compare answers to open-ended and closed-ended questions. Most of these studies report substantial discrepancies regarding answering behavior "
+                  "value": "Several studies use this approach and compare answers to open-ended and closed-ended questions. "
+                },
+                {
+                  "type": "text",
+                  "value": "Most of these studies report substantial discrepancies regarding answering behavior "
                 },
                 {
                   "type": "command",
@@ -665,7 +821,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ". For example, open-ended questions usually produce a more diverse set of answers. In a study reported by "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "For example, open-ended questions usually produce a more diverse set of answers. "
+                },
+                {
+                  "type": "text",
+                  "value": "In a study reported by "
                 },
                 {
                   "type": "text",
@@ -681,7 +845,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ", 60% of answers to an open question fell outside of the pre-coded answer categories of a related closed-ended question in the control group. Additionally, new types of responses occurred in a frequency that justified additional answer categories. In contrast, some answer options were less likely to be spontaneously produced in open-ended questions than they were to be chosen when explicitly offered as an option in closed questions "
+                  "value": ", 60% of answers to an open question fell outside of the pre-coded answer categories of a related closed-ended question in the control group. "
+                },
+                {
+                  "type": "text",
+                  "value": "Additionally, new types of responses occurred in a frequency that justified additional answer categories. "
+                },
+                {
+                  "type": "text",
+                  "value": "In contrast, some answer options were less likely to be spontaneously produced in open-ended questions than they were to be chosen when explicitly offered as an option in closed questions "
                 },
                 {
                   "type": "text",
@@ -689,7 +861,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Similarly, in a study on the quantity of alcohol consumption, "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Similarly, in a study on the quantity of alcohol consumption, "
                 },
                 {
                   "type": "text",
@@ -705,7 +881,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " found that the answers on the quantity of consumed alcohol of around 30% of respondents differed significantly between answers on open-ended and closed questions. They found that the combination of both an open-ended and a closed measure of the quantity of alcohol consumption was a stronger predictor of alcohol-related consequences than the individual measures "
+                  "value": " found that the answers on the quantity of consumed alcohol of around 30% of respondents differed significantly between answers on open-ended and closed questions. "
+                },
+                {
+                  "type": "text",
+                  "value": "They found that the combination of both an open-ended and a closed measure of the quantity of alcohol consumption was a stronger predictor of alcohol-related consequences than the individual measures "
                 },
                 {
                   "type": "command",
@@ -733,7 +913,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The aim of studies using open-ended and closed-ended questions in combination is usually to measure attitudes, feelings, or past behavior. However, self-reports, especially on past behavior, are a complex cognitive task that are highly context-dependent, and data are often seen as unreliable "
+                  "value": "The aim of studies using open-ended and closed-ended questions in combination is usually to measure attitudes, feelings, or past behavior. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, self-reports, especially on past behavior, are a complex cognitive task that are highly context-dependent, and data are often seen as unreliable "
                 },
                 {
                   "type": "text",
@@ -741,7 +925,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Some authors state that it is easier for participants to understand questions and recall relevant behavior when closed-ended questions are used "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Some authors state that it is easier for participants to understand questions and recall relevant behavior when closed-ended questions are used "
                 },
                 {
                   "type": "text",
@@ -749,7 +937,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". In contrast, it is usually agreed that open-ended questions are more suited to asking about sensitive or stigmatizing information or when more in-depth information is needed "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "In contrast, it is usually agreed that open-ended questions are more suited to asking about sensitive or stigmatizing information or when more in-depth information is needed "
                 },
                 {
                   "type": "text",
@@ -766,7 +958,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "However, I argue that the advantages of closed-ended questions only apply to questions on past instead of future behavior, where more emphasis lies on “editing” the answer. Hence, it is more important to get an accurate answer than a correct recall of past behavior. Accordingly, "
+                  "value": "However, I argue that the advantages of closed-ended questions only apply to questions on past instead of future behavior, where more emphasis lies on “editing” the answer. "
+                },
+                {
+                  "type": "text",
+                  "value": "Hence, it is more important to get an accurate answer than a correct recall of past behavior. "
+                },
+                {
+                  "type": "text",
+                  "value": "Accordingly, "
                 },
                 {
                   "type": "text",
@@ -810,7 +1010,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ". This assumption is based on the costs connected to fulfilling a real-effort task: The higher the costs an individual is willing to invest in answering, the more likely it is that these costs will also be invested in performing the actual behavior. Results based on real-effort designs are more externally valid when \"the cost function of that task shares important characteristics with the field task\" "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "This assumption is based on the costs connected to fulfilling a real-effort task: The higher the costs an individual is willing to invest in answering, the more likely it is that these costs will also be invested in performing the actual behavior. "
+                },
+                {
+                  "type": "text",
+                  "value": "Results based on real-effort designs are more externally valid when \"the cost function of that task shares important characteristics with the field task\" "
                 },
                 {
                   "type": "text",
@@ -818,7 +1026,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ". In surveys and survey experiments, open-ended questions can be used to measure effort in answering a question and, ultimately, we can use this as a proxy to measure real instead of stated behavior. Hence, the effort is for the most part cognitive and creative, but typing answers might also cost physical effort "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "In surveys and survey experiments, open-ended questions can be used to measure effort in answering a question and, ultimately, we can use this as a proxy to measure real instead of stated behavior. "
+                },
+                {
+                  "type": "text",
+                  "value": "Hence, the effort is for the most part cognitive and creative, but typing answers might also cost physical effort "
                 },
                 {
                   "type": "text",
@@ -826,7 +1042,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Such a real-effort design might be a better estimator of actual behavior because \"simply choosing a number may not capture the field environment and the psychological forces involved in putting forth actual effort\" "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Such a real-effort design might be a better estimator of actual behavior because \"simply choosing a number may not capture the field environment and the psychological forces involved in putting forth actual effort\" "
                 },
                 {
                   "type": "text",
@@ -834,7 +1054,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Greater effort can be operationalized with an extensive, accurate, and fitting answer. This is based on different assumptions: "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Greater effort can be operationalized with an extensive, accurate, and fitting answer. "
+                },
+                {
+                  "type": "text",
+                  "value": "This is based on different assumptions: "
                 }
               ]
             },
@@ -881,7 +1109,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Accordingly, the length of a written answer is an approximator of the duration of the effort. Similarly, the length of answers to open-ended questions are often used as indicators of data quality "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Accordingly, the length of a written answer is an approximator of the duration of the effort. "
+                },
+                {
+                  "type": "text",
+                  "value": "Similarly, the length of answers to open-ended questions are often used as indicators of data quality "
                 },
                 {
                   "type": "text",
@@ -921,7 +1157,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Such a procedure was used by "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Such a procedure was used by "
                 },
                 {
                   "type": "text",
@@ -937,7 +1177,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ", who conducted an experiment in which participants had to enter library data into a database. They counted the number of errors in these entries as a measure of effort. Similarly, "
+                  "value": ", who conducted an experiment in which participants had to enter library data into a database. "
+                },
+                {
+                  "type": "text",
+                  "value": "They counted the number of errors in these entries as a measure of effort. "
+                },
+                {
+                  "type": "text",
+                  "value": "Similarly, "
                 },
                 {
                   "type": "text",
@@ -953,7 +1201,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " registered an experiment in public administration research using this approach to compare work effort between public and private organizations. They asked participants to transcribe handwritten timesheets and checked their accuracy. "
+                  "value": " registered an experiment in public administration research using this approach to compare work effort between public and private organizations. "
+                },
+                {
+                  "type": "text",
+                  "value": "They asked participants to transcribe handwritten timesheets and checked their accuracy. "
                 }
               ]
             },
@@ -981,7 +1233,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Similarly, "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Similarly, "
                 },
                 {
                   "type": "text",
@@ -997,7 +1253,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " asked participants in an experiment to write a story about a predefined topic or by using specified words, and used this story as a measure for the real effort put forth in creative tasks. As it is difficult to rate creativity, the details provided in such an answer can be used to measure effort."
+                  "value": " asked participants in an experiment to write a story about a predefined topic or by using specified words, and used this story as a measure for the real effort put forth in creative tasks. "
+                },
+                {
+                  "type": "text",
+                  "value": "As it is difficult to rate creativity, the details provided in such an answer can be used to measure effort."
                 }
               ]
             },
@@ -1014,7 +1274,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Longer answers, for example, may indicate that some participants can write quickly. Unfitting answers may indicate that some participants are unable to understand the question or articulate themselves. "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Longer answers, for example, may indicate that some participants can write quickly. "
+                },
+                {
+                  "type": "text",
+                  "value": "Unfitting answers may indicate that some participants are unable to understand the question or articulate themselves. "
                 },
                 {
                   "type": "text",
@@ -1030,7 +1298,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " recommend using larger samples to capture this treatment effect. Furthermore, within-subjects designs might be useful to overcome these between-subjects differences."
+                  "value": " recommend using larger samples to capture this treatment effect. "
+                },
+                {
+                  "type": "text",
+                  "value": "Furthermore, within-subjects designs might be useful to overcome these between-subjects differences."
                 }
               ]
             },
@@ -1060,7 +1332,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "A survey experiment on knowledge-sharing behavior was conducted to analyze whether tangible or intangible incentives can foster that behavior. Knowledge sharing is the exchange of knowledge among individuals, teams, units, or organizations "
+                  "value": "A survey experiment on knowledge-sharing behavior was conducted to analyze whether tangible or intangible incentives can foster that behavior. "
+                },
+                {
+                  "type": "text",
+                  "value": "Knowledge sharing is the exchange of knowledge among individuals, teams, units, or organizations "
                 },
                 {
                   "type": "command",
@@ -1079,7 +1355,35 @@
                 },
                 {
                   "type": "text",
-                  "value": ". It is the basis of and a subprocess in an organization’s knowledge management. In this article, the term “knowledge sharing” describes the behavior of donating knowledge from one person to another or to a medium. Multiple determinants influence knowledge sharing. Among others, tangible and intangible rewards are considered to foster knowledge-sharing behavior. Tangible rewards are material incentives, such as financial bonuses, and usually enhance extrinsic motivation. In contrast, intangible rewards, such as praise from a colleague or supervisor, usually influences intrinsic motivation. On the one hand, it has been shown that monitoring (e.g., controlling with performance measures) and rewards increase the knowledge-sharing activity of employees in an organization "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "It is the basis of and a subprocess in an organization’s knowledge management. "
+                },
+                {
+                  "type": "text",
+                  "value": "In this article, the term “knowledge sharing” describes the behavior of donating knowledge from one person to another or to a medium. "
+                },
+                {
+                  "type": "text",
+                  "value": "Multiple determinants influence knowledge sharing. "
+                },
+                {
+                  "type": "text",
+                  "value": "Among others, tangible and intangible rewards are considered to foster knowledge-sharing behavior. "
+                },
+                {
+                  "type": "text",
+                  "value": "Tangible rewards are material incentives, such as financial bonuses, and usually enhance extrinsic motivation. "
+                },
+                {
+                  "type": "text",
+                  "value": "In contrast, intangible rewards, such as praise from a colleague or supervisor, usually influences intrinsic motivation. "
+                },
+                {
+                  "type": "text",
+                  "value": "On the one hand, it has been shown that monitoring (e.g., controlling with performance measures) and rewards increase the knowledge-sharing activity of employees in an organization "
                 },
                 {
                   "type": "command",
@@ -1113,7 +1417,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". On the other hand, "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "On the other hand, "
                 },
                 {
                   "type": "text",
@@ -1138,7 +1446,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "A 2x3 factorial survey experiment was designed to observe the within-subjects and between-subjects effects of the rewards offered. The research design was preregistered on the Open Science Framework ("
+                  "value": "A 2x3 factorial survey experiment was designed to observe the within-subjects and between-subjects effects of the rewards offered. "
+                },
+                {
+                  "type": "text",
+                  "value": "The research design was preregistered on the Open Science Framework ("
                 },
                 {
                   "type": "text",
@@ -1146,7 +1458,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Data were collected from German public employees in the core administration and health sector ("
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Data were collected from German public employees in the core administration and health sector ("
                 },
                 {
                   "type": "command",
@@ -1165,7 +1481,15 @@
                 },
                 {
                   "type": "text",
-                  "value": " = 623) in 2018 using a self-administered questionnaire. As can be seen from Appendix A, most participants were female (61%). The mean age was 45 years, and participants had a tenure of 20 years on average."
+                  "value": " = 623) in 2018 using a self-administered questionnaire. "
+                },
+                {
+                  "type": "text",
+                  "value": "As can be seen from Appendix A, most participants were female (61%). "
+                },
+                {
+                  "type": "text",
+                  "value": "The mean age was 45 years, and participants had a tenure of 20 years on average."
                 }
               ]
             },
@@ -1182,7 +1506,23 @@
                 },
                 {
                   "type": "text",
-                  "value": "from a pool of six. Randomization was done after participants started to answer the survey, based on their respondent ID. The vignettes incorporated all independent variables (Appendix B). Each set contained vignettes on either explicit or implicit knowledge (between-subject design). The first vignette in each set was a baseline vignette, while the two following vignettes presented a tangible and an intangible reward for knowledge sharing in a randomly assigned order (within-subjects design)."
+                  "value": "from a pool of six. "
+                },
+                {
+                  "type": "text",
+                  "value": "Randomization was done after participants started to answer the survey, based on their respondent ID. "
+                },
+                {
+                  "type": "text",
+                  "value": "The vignettes incorporated all independent variables (Appendix B). "
+                },
+                {
+                  "type": "text",
+                  "value": "Each set contained vignettes on either explicit or implicit knowledge (between-subject design). "
+                },
+                {
+                  "type": "text",
+                  "value": "The first vignette in each set was a baseline vignette, while the two following vignettes presented a tangible and an intangible reward for knowledge sharing in a randomly assigned order (within-subjects design)."
                 }
               ]
             },
@@ -1210,7 +1550,15 @@
                 },
                 {
                   "type": "text",
-                  "value": "treatment (Participants were given this reminder: “You know that all shared information improves your performance appraisal”). Performance appraisals served as a proxy for later rewards because it seemed unrealistic in the public sector to offer bonuses or other tangible rewards directly based on a person’s knowledge-sharing behavior. This decision should address the problem that vignette experiments are frequently criticized for being unrealistic and lacking external validity "
+                  "value": "treatment (Participants were given this reminder: “You know that all shared information improves your performance appraisal”). "
+                },
+                {
+                  "type": "text",
+                  "value": "Performance appraisals served as a proxy for later rewards because it seemed unrealistic in the public sector to offer bonuses or other tangible rewards directly based on a person’s knowledge-sharing behavior. "
+                },
+                {
+                  "type": "text",
+                  "value": "This decision should address the problem that vignette experiments are frequently criticized for being unrealistic and lacking external validity "
                 },
                 {
                   "type": "text",
@@ -1246,7 +1594,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " treatment was operationalized by offering explicit appreciation from co-workers without further illustrating how this appreciation would occur (Participants were given this reminder: “You know, your co-workers appreciate your knowledge sharing”). A rather superficial description was chosen because every team shows appreciation in a different way (e.g., good team climate, respectful interactions) and the vignette was thought to be not too restrictive."
+                  "value": " treatment was operationalized by offering explicit appreciation from co-workers without further illustrating how this appreciation would occur (Participants were given this reminder: “You know, your co-workers appreciate your knowledge sharing”). "
+                },
+                {
+                  "type": "text",
+                  "value": "A rather superficial description was chosen because every team shows appreciation in a different way (e.g., good team climate, respectful interactions) and the vignette was thought to be not too restrictive."
                 }
               ]
             },
@@ -1274,7 +1626,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " was measured with an open-ended question as a proxy for real behavior. The item reads: “If you decided to share your knowledge, please briefly describe how exactly you will share your knowledge.” Thus, participants were not asked to actually share their knowledge, but it was assumed that the cost function of answering the open-ended question on KSB was similar to the cost function of performing the described behavior in reality, for instance, when individuals share knowledge by writing an e-mail to a co-worker. "
+                  "value": " was measured with an open-ended question as a proxy for real behavior. "
+                },
+                {
+                  "type": "text",
+                  "value": "The item reads: “If you decided to share your knowledge, please briefly describe how exactly you will share your knowledge.” Thus, participants were not asked to actually share their knowledge, but it was assumed that the cost function of answering the open-ended question on KSB was similar to the cost function of performing the described behavior in reality, for instance, when individuals share knowledge by writing an e-mail to a co-worker. "
                 }
               ]
             },
@@ -1306,7 +1662,65 @@
                 },
                 {
                   "type": "text",
-                  "value": " was measured in a closed-ended way to compare results to the verbatim responses. A measure of KSI was formed by taking the mean of two items, which were rated on 5-point Likert scales. The items read: \"I will share this knowledge with my co-workers\" and \"I would like to share this knowledge with my co-workers.\" The former item represents the future-oriented and behavioral part of intention and the latter represents the motivational part of intention. Both items were based on scales on KSI used by, for example, Bock and Kim (2002) and Lin (2007). Both were adapted to the experimental context. The items correlate highly (depending on the vignette: "
+                  "value": " was measured in a closed-ended way to compare results to the verbatim responses. "
+                },
+                {
+                  "type": "text",
+                  "value": "A measure of KSI was formed by taking the mean of two items, which were rated on 5-point Likert scales. "
+                },
+                {
+                  "type": "text",
+                  "value": "The items read: \"I will share this knowledge with my co-workers\" and \"I would like to share this knowledge with my co-workers.\" The former item represents the future-oriented and behavioral part of intention and the latter represents the motivational part of intention. "
+                },
+                {
+                  "type": "text",
+                  "value": "Both items were based on scales on KSI used by, for example, "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Bock2002"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": " and "
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Lin2007"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Both were adapted to the experimental context. "
+                },
+                {
+                  "type": "text",
+                  "value": "The items correlate highly (depending on the vignette: "
                 },
                 {
                   "type": "command",
@@ -1353,7 +1767,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "To code the open-ended answers, three dimensions were defined preliminarily, based on the literature, to rate the quality of the answer: the description's length, accuracy, and fit with the vignette. Two dimensions were added inductively during the coding process. Firstly, some participants answered the question with few words and therefore did not score in the quantity dimension, but were considered separately from participants who did not answer because they at least put some effort into answering the question. Secondly, some participants answered very elaborately in terms of length and content, and this effort was assigned a bonus point. Each dimension was coded as a dummy variable and an additive index was formed, ranging from zero to five. "
+                  "value": "To code the open-ended answers, three dimensions were defined preliminarily, based on the literature, to rate the quality of the answer: the description's length, accuracy, and fit with the vignette. "
+                },
+                {
+                  "type": "text",
+                  "value": "Two dimensions were added inductively during the coding process. "
+                },
+                {
+                  "type": "text",
+                  "value": "Firstly, some participants answered the question with few words and therefore did not score in the quantity dimension, but were considered separately from participants who did not answer because they at least put some effort into answering the question. "
+                },
+                {
+                  "type": "text",
+                  "value": "Secondly, some participants answered very elaborately in terms of length and content, and this effort was assigned a bonus point. "
+                },
+                {
+                  "type": "text",
+                  "value": "Each dimension was coded as a dummy variable and an additive index was formed, ranging from zero to five. "
                 }
               ]
             },
@@ -1373,7 +1803,15 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "I want to thank Lisa-Sophia Preller for serving as the second coder of this study. Both raters were asked to use different coding strategies, to avoid effects of the coding procedure: (1) one rater coded the cases one by one in order to have an eye on the complete answer, (2) another rater coded each dimension across all cases one by one in order to have an eye on the comparability of the ratings. The fifth dimension (high effort in answering) was not coded by both raters but added afterward and coded by a single rater, therefore no interrater reliability is calculated here."
+                          "value": "I want to thank Lisa-Sophia Preller for serving as the second coder of this study. "
+                        },
+                        {
+                          "type": "text",
+                          "value": "Both raters were asked to use different coding strategies, to avoid effects of the coding procedure: (1) one rater coded the cases one by one in order to have an eye on the complete answer, (2) another rater coded each dimension across all cases one by one in order to have an eye on the comparability of the ratings. "
+                        },
+                        {
+                          "type": "text",
+                          "value": "The fifth dimension (high effort in answering) was not coded by both raters but added afterward and coded by a single rater, therefore no interrater reliability is calculated here."
                         }
                       ]
                     }
@@ -1420,7 +1858,19 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Due to the fact that there was only partial agreement in the ratings of some dimensions (see Appendix C), the raters discussed differences in coding and specified coding rules. In a second step, both raters agreed on a rating. This “negotiated” rating was used for further analysis."
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Due to the fact that there was only partial agreement in the ratings of some dimensions (see Appendix C), the raters discussed differences in coding and specified coding rules. "
+                },
+                {
+                  "type": "text",
+                  "value": "In a second step, both raters agreed on a rating. "
+                },
+                {
+                  "type": "text",
+                  "value": "This “negotiated” rating was used for further analysis."
                 }
               ]
             },
@@ -1454,7 +1904,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Table 1 and Table 2 give a short overview of the descriptive statistics for the dependent variables. Examples of verbatim answers to the open-ended question on KSB and their coding are provided in Appendix D."
+                  "value": "Table 1 and Table 2 give a short overview of the descriptive statistics for the dependent variables. "
+                },
+                {
+                  "type": "text",
+                  "value": "Examples of verbatim answers to the open-ended question on KSB and their coding are provided in Appendix D."
                 }
               ]
             },
@@ -3309,7 +3763,15 @@
                 },
                 {
                   "type": "text",
-                  "value": "). Furthermore, in the second and third open-ended questions, participants often referred to their previous answers (e.g., \"see above\", \"as just described\") or answered in a significantly shorter way. Means for knowledge-sharing "
+                  "value": "). "
+                },
+                {
+                  "type": "text",
+                  "value": "Furthermore, in the second and third open-ended questions, participants often referred to their previous answers (e.g., \"see above\", \"as just described\") or answered in a significantly shorter way. "
+                },
+                {
+                  "type": "text",
+                  "value": "Means for knowledge-sharing "
                 },
                 {
                   "type": "command",
@@ -3356,7 +3818,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Data were analyzed using Wilcoxon signed-rank tests (within-analysis) and Wilcoxon rank-sum tests (between-analysis) because the data were not normally distributed. Using the closed-ended measure of knowledge-sharing "
+                  "value": "Data were analyzed using Wilcoxon signed-rank tests (within-analysis) and Wilcoxon rank-sum tests (between-analysis) because the data were not normally distributed. "
+                },
+                {
+                  "type": "text",
+                  "value": "Using the closed-ended measure of knowledge-sharing "
                 },
                 {
                   "type": "command",
@@ -3536,7 +4002,15 @@
                 },
                 {
                   "type": "text",
-                  "value": " as the dependent variable led to contradictory results, which might have been caused by a methodological problem. This issue was already identified while coding the data and inspecting the descriptive statistics: There was an order effect leading to longer answers on average for the first presented vignette compared to subsequent vignettes, independent of treatment. This result fits with the literature, as, for example, "
+                  "value": " as the dependent variable led to contradictory results, which might have been caused by a methodological problem. "
+                },
+                {
+                  "type": "text",
+                  "value": "This issue was already identified while coding the data and inspecting the descriptive statistics: There was an order effect leading to longer answers on average for the first presented vignette compared to subsequent vignettes, independent of treatment. "
+                },
+                {
+                  "type": "text",
+                  "value": "This result fits with the literature, as, for example, "
                 },
                 {
                   "type": "text",
@@ -3599,7 +4073,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " were not pronounced (Table 3). While knowledge-sharing "
+                  "value": " were not pronounced (Table 3). "
+                },
+                {
+                  "type": "text",
+                  "value": "While knowledge-sharing "
                 },
                 {
                   "type": "command",
@@ -3637,7 +4115,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " were significantly but still only moderately correlated without an incentive treatment, the correlation was weaker and insignificant when incentives were induced. As the baseline vignette was always presented as the first vignette, this result supports the assumption of an order effect. "
+                  "value": " were significantly but still only moderately correlated without an incentive treatment, the correlation was weaker and insignificant when incentives were induced. "
+                },
+                {
+                  "type": "text",
+                  "value": "As the baseline vignette was always presented as the first vignette, this result supports the assumption of an order effect. "
                 }
               ]
             },
@@ -4061,7 +4543,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " intang. Reward = 501, "
+                  "value": " intang. "
+                },
+                {
+                  "type": "text",
+                  "value": "Reward = 501, "
                 },
                 {
                   "type": "command",
@@ -4080,7 +4566,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " tang. Reward = 500. "
+                  "value": " tang. "
+                },
+                {
+                  "type": "text",
+                  "value": "Reward = 500. "
                 }
               ]
             },
@@ -4269,7 +4759,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " < .001). Contradicting the hypothesized relationships, the data show that knowledge-sharing "
+                  "value": " < .001). "
+                },
+                {
+                  "type": "text",
+                  "value": "Contradicting the hypothesized relationships, the data show that knowledge-sharing "
                 },
                 {
                   "type": "command",
@@ -4297,7 +4791,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "However, the comparison of the two treatments might not suffer from this methodological problem as they were presented in a randomly rotated order, thus either as the second or third vignette. Comparing the two treatments regardless of the kind of knowledge shared yields a significant difference. The tangible reward treatment ("
+                  "value": "However, the comparison of the two treatments might not suffer from this methodological problem as they were presented in a randomly rotated order, thus either as the second or third vignette. "
+                },
+                {
+                  "type": "text",
+                  "value": "Comparing the two treatments regardless of the kind of knowledge shared yields a significant difference. "
+                },
+                {
+                  "type": "text",
+                  "value": "The tangible reward treatment ("
                 },
                 {
                   "type": "command",
@@ -4439,7 +4941,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "These results show that open-ended measures in surveys are exposed to strong order and fatigue effects. Open-ended questions presented later in the survey result in more missing answers, shorter answers, or answers referring to previous statements. Therefore, behavior reflecting minimal instead of satisficing answers was observed. Hence, these results could not be used in this study to analyze within-subject differences. However, the open-ended measure could be used as a proxy for real behavior in analyzing between-subjects differences and within-subjects comparisons between rotated vignettes (tangible and intangible rewards)."
+                  "value": "These results show that open-ended measures in surveys are exposed to strong order and fatigue effects. "
+                },
+                {
+                  "type": "text",
+                  "value": "Open-ended questions presented later in the survey result in more missing answers, shorter answers, or answers referring to previous statements. "
+                },
+                {
+                  "type": "text",
+                  "value": "Therefore, behavior reflecting minimal instead of satisficing answers was observed. "
+                },
+                {
+                  "type": "text",
+                  "value": "Hence, these results could not be used in this study to analyze within-subject differences. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, the open-ended measure could be used as a proxy for real behavior in analyzing between-subjects differences and within-subjects comparisons between rotated vignettes (tangible and intangible rewards)."
                 }
               ]
             },
@@ -4485,7 +5003,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Using open-ended questions to measure effort as a proxy for real instead of stated behavior was not useful in a within-subjects research design. Due to an order effect, open answers could not serve as a reliable estimator of the likelihood of actual behavior. However, an advantage of verbatim answers is that they can still be used to identify behavioral patterns and modes of KSB. In further research, this strength of qualitative data should be taken into account more instead of merely quantifying qualitative data."
+                  "value": "Using open-ended questions to measure effort as a proxy for real instead of stated behavior was not useful in a within-subjects research design. "
+                },
+                {
+                  "type": "text",
+                  "value": "Due to an order effect, open answers could not serve as a reliable estimator of the likelihood of actual behavior. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, an advantage of verbatim answers is that they can still be used to identify behavioral patterns and modes of KSB. "
+                },
+                {
+                  "type": "text",
+                  "value": "In further research, this strength of qualitative data should be taken into account more instead of merely quantifying qualitative data."
                 }
               ]
             },
@@ -4494,7 +5024,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "While this approach toward operationalizing behavior in surveys might not be useful in within-subject designs, it can be used in between-subject comparisons if participants are asked to answer to a single vignette. However, as participants' knowledge and competencies might influence answers on questions designed as real-effort tasks, attention must be paid to the sampling strategy when solely using between-subjects designs. When a baseline answer for an individual is missing or not taken into account, which is the idea behind a within-subjects design, an individual cannot be matched to their own standard.The order effect that occurred in this study was not expected by the author in that magnitude. It is known in the literature that, especially regarding open-ended questions, questions asked later in a questionnaire are associated with fatigue and shorter answers "
+                  "value": "While this approach toward operationalizing behavior in surveys might not be useful in within-subject designs, it can be used in between-subject comparisons if participants are asked to answer to a single vignette. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, as participants' knowledge and competencies might influence answers on questions designed as real-effort tasks, attention must be paid to the sampling strategy when solely using between-subjects designs. "
+                },
+                {
+                  "type": "text",
+                  "value": "When a baseline answer for an individual is missing or not taken into account, which is the idea behind a within-subjects design, an individual cannot be matched to their own standard."
                 },
                 {
                   "type": "text",
@@ -4502,20 +5040,27 @@
                 },
                 {
                   "type": "text",
-                  "value": ". However, it was expected that questions directly succeeding each other within a survey would not suffer that strongly from such an order effect. Additionally, the survey was rather short and took participants between 10 and 15 minutes to complete. The author expected that fatigue effects were more likely to occur in longer surveys. Also, the study’s pretest with students and public sector professionals did not reveal such order and fatigue effects. Hence, this outcome might be due to characteristics of participants from online panels, who might be motivated to answer a questionnaire in an efficient and quick manner. "
-                }
-              ]
-            },
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "Due to the state of research on order effects in surveys, the treatment vignettes were randomized. However, I decided to exclude the baseline vignette from this randomization to avoid misunderstandings among the participants and to ensure the vignettes and questions were presented in a logical order. "
+                  "value": ". "
                 },
                 {
                   "type": "text",
-                  "value": "Future studies should, however, be aware of the occurrence of order effects in such an experimental setting, especially when data are collected with a sample of merely extrinsically motivated participants. To prevent order effects, between-subjects designs could be used instead of relying on within-subjects analyses. Apart from that, a combination of open-ended and closed questions allows one to detect order effects and should be included in case of uncertainty. Using both measures together also gives the option to analyze at least a part of the dependent variable and, therefore, minimizes risks of failure based on poor research designs. "
+                  "value": "However, it was expected that questions directly succeeding each other within a survey would not suffer that strongly from such an order effect. "
+                },
+                {
+                  "type": "text",
+                  "value": "Additionally, the survey was rather short and took participants between 10 and 15 minutes to complete. "
+                },
+                {
+                  "type": "text",
+                  "value": "The author expected that fatigue effects were more likely to occur in longer surveys. "
+                },
+                {
+                  "type": "text",
+                  "value": "Also, the study’s pretest with students and public sector professionals did not reveal such order and fatigue effects. "
+                },
+                {
+                  "type": "text",
+                  "value": "Hence, this outcome might be due to characteristics of participants from online panels, who might be motivated to answer a questionnaire in an efficient and quick manner. "
                 }
               ]
             },
@@ -4524,7 +5069,27 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Further research in this area may want to further consider the above-mentioned order and fatigue effects in answering open questions in survey experiments and how these might be prevented. Studies could, for example, experiment with rotating all vignettes instead of only rotating those with treatments to avoid an order effect. However, if the baseline vignette is not presented first, participants may have difficulties understanding the vignettes."
+                  "value": "Due to the state of research on order effects in surveys, the treatment vignettes were randomized. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, I decided to exclude the baseline vignette from this randomization to avoid misunderstandings among the participants and to ensure the vignettes and questions were presented in a logical order. "
+                },
+                {
+                  "type": "text",
+                  "value": "Future studies should, however, be aware of the occurrence of order effects in such an experimental setting, especially when data are collected with a sample of merely extrinsically motivated participants. "
+                },
+                {
+                  "type": "text",
+                  "value": "To prevent order effects, between-subjects designs could be used instead of relying on within-subjects analyses. "
+                },
+                {
+                  "type": "text",
+                  "value": "Apart from that, a combination of open-ended and closed questions allows one to detect order effects and should be included in case of uncertainty. "
+                },
+                {
+                  "type": "text",
+                  "value": "Using both measures together also gives the option to analyze at least a part of the dependent variable and, therefore, minimizes risks of failure based on poor research designs. "
                 }
               ]
             },
@@ -4533,7 +5098,32 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Furthermore, open-ended questions might be distributed throughout the survey instead of directly after one another in order to prevent participants from referring to earlier answers. However, questions asked in between may induce other treatments and thereby affect the answers. By reporting the failure of the research strategy used in this study, this article intends to serve as a step in further testing the possibility of using open-ended questions as valid measures of effort in surveys and survey experiments."
+                  "value": "Further research in this area may want to further consider the above-mentioned order and fatigue effects in answering open questions in survey experiments and how these might be prevented. "
+                },
+                {
+                  "type": "text",
+                  "value": "Studies could, for example, experiment with rotating all vignettes instead of only rotating those with treatments to avoid an order effect. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, if the baseline vignette is not presented first, participants may have difficulties understanding the vignettes."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Furthermore, open-ended questions might be distributed throughout the survey instead of directly after one another in order to prevent participants from referring to earlier answers. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, questions asked in between may induce other treatments and thereby affect the answers. "
+                },
+                {
+                  "type": "text",
+                  "value": "By reporting the failure of the research strategy used in this study, this article intends to serve as a step in further testing the possibility of using open-ended questions as valid measures of effort in surveys and survey experiments."
                 }
               ]
             },
@@ -4579,7 +5169,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Aguinis, H., & Bradley, K. J. (2014). Best practice recommendations for designing and implementing experimental vignette methodology studies. "
+                  "value": "Aguinis, H., & Bradley, K. "
+                },
+                {
+                  "type": "text",
+                  "value": "J. (2014). "
+                },
+                {
+                  "type": "text",
+                  "value": "Best practice recommendations for designing and implementing experimental vignette methodology studies. "
                 },
                 {
                   "type": "command",
@@ -4626,7 +5224,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Andersen, S., James, O., & Jilke, S. (2018). Does work effort for public versus private organizations differ? Evidence from an online work task experiment: Pre-registration. Retrieved from https://www.socialscienceregistry.org/trials/3361"
+                  "value": "Andersen, S., James, O., & Jilke, S. (2018). "
+                },
+                {
+                  "type": "text",
+                  "value": "Does work effort for public versus private organizations differ? "
+                },
+                {
+                  "type": "text",
+                  "value": "Evidence from an online work task experiment: Pre-registration. "
+                },
+                {
+                  "type": "text",
+                  "value": "Retrieved from https://www.socialscienceregistry.org/trials/3361"
                 }
               ]
             },
@@ -4635,7 +5245,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Bock, G. W., & Kim, Y. G. (2002). Breaking the myths of rewards: An exploratory study of attitudes about knowledge sharing. "
+                  "value": "Bock, G. "
+                },
+                {
+                  "type": "text",
+                  "value": "W., & Kim, Y. "
+                },
+                {
+                  "type": "text",
+                  "value": "G. (2002). "
+                },
+                {
+                  "type": "text",
+                  "value": "Breaking the myths of rewards: An exploratory study of attitudes about knowledge sharing. "
                 },
                 {
                   "type": "command",
@@ -4675,7 +5297,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Bryman, A. (2006). Integrating quantitative and qualitative research: How is it done? "
+                  "value": "Bryman, A. (2006). "
+                },
+                {
+                  "type": "text",
+                  "value": "Integrating quantitative and qualitative research: How is it done? "
                 },
                 {
                   "type": "command",
@@ -4722,7 +5348,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Charness, G., Gneezy, U., & Henderson, A. (2018). Experimental methods: Measuring effort in economics experiments. "
+                  "value": "Charness, G., Gneezy, U., & Henderson, A. (2018). "
+                },
+                {
+                  "type": "text",
+                  "value": "Experimental methods: Measuring effort in economics experiments. "
                 },
                 {
                   "type": "command",
@@ -4769,7 +5399,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Charness, G., & Grieco, D. (2018). Creativity and incentives. "
+                  "value": "Charness, G., & Grieco, D. (2018). "
+                },
+                {
+                  "type": "text",
+                  "value": "Creativity and incentives. "
                 },
                 {
                   "type": "command",
@@ -4816,7 +5450,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Christensen-Szalanski, J. J. J. (1980). A further examination of the selection of problem-solving strategies: The effects of deadlines and analytic aptitudes. "
+                  "value": "Christensen-Szalanski, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "J. "
+                },
+                {
+                  "type": "text",
+                  "value": "J. (1980). "
+                },
+                {
+                  "type": "text",
+                  "value": "A further examination of the selection of problem-solving strategies: The effects of deadlines and analytic aptitudes. "
                 },
                 {
                   "type": "command",
@@ -4863,7 +5509,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Converse, J. M. (1984). Strong arguments and weak evidence: The open/closed questioning controversy of the 1940s. "
+                  "value": "Converse, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "M. (1984). "
+                },
+                {
+                  "type": "text",
+                  "value": "Strong arguments and weak evidence: The open/closed questioning controversy of the 1940s. "
                 },
                 {
                   "type": "command",
@@ -4910,7 +5564,27 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Dewasiri, N. J., Weerakoon, Y. K. B., & Azeez, A. A. (2018). Mixed methods in finance research. "
+                  "value": "Dewasiri, N. "
+                },
+                {
+                  "type": "text",
+                  "value": "J., Weerakoon, Y. "
+                },
+                {
+                  "type": "text",
+                  "value": "K. "
+                },
+                {
+                  "type": "text",
+                  "value": "B., & Azeez, A. "
+                },
+                {
+                  "type": "text",
+                  "value": "A. (2018). "
+                },
+                {
+                  "type": "text",
+                  "value": "Mixed methods in finance research. "
                 },
                 {
                   "type": "command",
@@ -4957,7 +5631,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Dutcher, G., Salmon, T., & Saral, K. J. (2015). Is 'real' effort more real? "
+                  "value": "Dutcher, G., Salmon, T., & Saral, K. "
+                },
+                {
+                  "type": "text",
+                  "value": "J. (2015). "
+                },
+                {
+                  "type": "text",
+                  "value": "Is 'real' effort more real? "
                 },
                 {
                   "type": "command",
@@ -4985,7 +5667,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Fischer, C. (2018). Fostering Knowledge Sharing Behavior: preregistration. https://osf.io/r5jws/"
+                  "value": "Fischer, C. (2018). "
+                },
+                {
+                  "type": "text",
+                  "value": "Fostering Knowledge Sharing Behavior: preregistration. https://osf.io/r5jws/"
                 }
               ]
             },
@@ -4994,7 +5680,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Friborg, O., & Rosenvinge, J. H. (2013). A comparison of open-ended and closed questions in the prediction of mental health. "
+                  "value": "Friborg, O., & Rosenvinge, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "H. (2013). "
+                },
+                {
+                  "type": "text",
+                  "value": "A comparison of open-ended and closed questions in the prediction of mental health. "
                 },
                 {
                   "type": "command",
@@ -5041,7 +5735,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Galesic, M., & Bosnjak, M. (2009). Effects of questionnaire length on participation and indicators of response quality in a web survey. "
+                  "value": "Galesic, M., & Bosnjak, M. (2009). "
+                },
+                {
+                  "type": "text",
+                  "value": "Effects of questionnaire length on participation and indicators of response quality in a web survey. "
                 },
                 {
                   "type": "command",
@@ -5088,7 +5786,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Gneezy, U., & List, J. A. (2006). Putting behavioral economics to work: Testing for gift exchange in labor markets using field experiments. "
+                  "value": "Gneezy, U., & List, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "A. (2006). "
+                },
+                {
+                  "type": "text",
+                  "value": "Putting behavioral economics to work: Testing for gift exchange in labor markets using field experiments. "
                 },
                 {
                   "type": "command",
@@ -5135,7 +5841,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Greenfield, T. K., Nayak, M. B., Bond, J., Ye, Y., & Midanik, L. T. (2006). Maximum quantity consumed and alcohol-related problems: Assessing the most alcohol drunk with two measures. "
+                  "value": "Greenfield, T. "
+                },
+                {
+                  "type": "text",
+                  "value": "K., Nayak, M. "
+                },
+                {
+                  "type": "text",
+                  "value": "B., Bond, J., Ye, Y., & Midanik, L. "
+                },
+                {
+                  "type": "text",
+                  "value": "T. (2006). "
+                },
+                {
+                  "type": "text",
+                  "value": "Maximum quantity consumed and alcohol-related problems: Assessing the most alcohol drunk with two measures. "
                 },
                 {
                   "type": "command",
@@ -5182,7 +5904,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Gwet, K. L. [Kilem Li]. (2014). "
+                  "value": "Gwet, K. "
+                },
+                {
+                  "type": "text",
+                  "value": "L. [Kilem Li]. (2014). "
                 },
                 {
                   "type": "command",
@@ -5201,7 +5927,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " (4th ed.). Advanced Analytics, LLC. "
+                  "value": " (4th ed.). "
+                },
+                {
+                  "type": "text",
+                  "value": "Advanced Analytics, LLC. "
                 }
               ]
             },
@@ -5210,7 +5940,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "James, O., Jilke, S. R., & van Ryzin, G. G. (Eds.). (2017). "
+                  "value": "James, O., Jilke, S. "
+                },
+                {
+                  "type": "text",
+                  "value": "R., & van Ryzin, G. "
+                },
+                {
+                  "type": "text",
+                  "value": "G. (Eds.). (2017). "
                 },
                 {
                   "type": "command",
@@ -5229,7 +5967,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Cambridge University Press. "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Cambridge University Press. "
                 }
               ]
             },
@@ -5238,11 +5980,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Lin, H. F. 2007. ‘Effects of extrinsic and intrinsic motivation on employee knowledge sharing intentions’, Journal of Information Science, 33 (2), 135–49."
+                  "value": "Lin, H. "
                 },
                 {
                   "type": "text",
-                  "value": "Paulin, D., & Suneson, K. (2012). Knowledge transfer, knowledge sharing and knowledge barriers–three blurry terms in KM. "
+                  "value": "F. 2007. ‘Effects of extrinsic and intrinsic motivation on employee knowledge sharing intentions’, Journal of Information Science, 33 (2), 135–49."
+                },
+                {
+                  "type": "text",
+                  "value": "Paulin, D., & Suneson, K. (2012). "
+                },
+                {
+                  "type": "text",
+                  "value": "Knowledge transfer, knowledge sharing and knowledge barriers–three blurry terms in KM. "
                 },
                 {
                   "type": "command",
@@ -5289,7 +6039,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Rossman, G. B., & Wilson, B. L. (1985). Numbers and words. "
+                  "value": "Rossman, G. "
+                },
+                {
+                  "type": "text",
+                  "value": "B., & Wilson, B. "
+                },
+                {
+                  "type": "text",
+                  "value": "L. (1985). "
+                },
+                {
+                  "type": "text",
+                  "value": "Numbers and words. "
                 },
                 {
                   "type": "command",
@@ -5336,7 +6098,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Schuman, H., & Presser, S. (1979). The open and closed question. "
+                  "value": "Schuman, H., & Presser, S. (1979). "
+                },
+                {
+                  "type": "text",
+                  "value": "The open and closed question. "
                 },
                 {
                   "type": "command",
@@ -5383,7 +6149,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Schwarz, N. (1999). Self-reports: How the questions shape the answers. "
+                  "value": "Schwarz, N. (1999). "
+                },
+                {
+                  "type": "text",
+                  "value": "Self-reports: How the questions shape the answers. "
                 },
                 {
                   "type": "command",
@@ -5430,7 +6200,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Schwarz, N., & Oyserman, D. (2001). Asking questions about behavior: Cognition, communication, and questionnaire construction. "
+                  "value": "Schwarz, N., & Oyserman, D. (2001). "
+                },
+                {
+                  "type": "text",
+                  "value": "Asking questions about behavior: Cognition, communication, and questionnaire construction. "
                 },
                 {
                   "type": "command",
@@ -5477,7 +6251,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Singer, E., & Couper, M. P. (2017). Some methodological uses of responses to open questions and other verbatim comments in quantitative surveys. "
+                  "value": "Singer, E., & Couper, M. "
+                },
+                {
+                  "type": "text",
+                  "value": "P. (2017). "
+                },
+                {
+                  "type": "text",
+                  "value": "Some methodological uses of responses to open questions and other verbatim comments in quantitative surveys. "
                 },
                 {
                   "type": "command",
@@ -5524,7 +6306,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Wang, S., Noe, R. A., & Wang, Z. M. (2011). Motivating knowledge sharing in knowledge management systems. "
+                  "value": "Wang, S., Noe, R. "
+                },
+                {
+                  "type": "text",
+                  "value": "A., & Wang, Z. "
+                },
+                {
+                  "type": "text",
+                  "value": "M. (2011). "
+                },
+                {
+                  "type": "text",
+                  "value": "Motivating knowledge sharing in knowledge management systems. "
                 },
                 {
                   "type": "command",
@@ -5571,7 +6365,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Witherspoon, C. L., Bergner, J., Cockrell, C., & Stone, D. N. (2013). Antecedents of organizational knowledge sharing: A meta‐analysis and critique. "
+                  "value": "Witherspoon, C. "
+                },
+                {
+                  "type": "text",
+                  "value": "L., Bergner, J., Cockrell, C., & Stone, D. "
+                },
+                {
+                  "type": "text",
+                  "value": "N. (2013). "
+                },
+                {
+                  "type": "text",
+                  "value": "Antecedents of organizational knowledge sharing: A meta‐analysis and critique. "
                 },
                 {
                   "type": "command",
@@ -6296,7 +7102,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c"
+                          "value": "c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c"
                         }
                       ]
                     },
@@ -6412,7 +7218,20 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": " from several sources. This could also improve the work of your co-workers."
+                              "value": " from several sources. "
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "This could also improve the work of your co-workers."
                             }
                           ]
                         },
@@ -6537,7 +7356,20 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": " that improved your work process. This experience could also help your co-workers."
+                              "value": " that improved your work process. "
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "This experience could also help your co-workers."
                             }
                           ]
                         },
@@ -6680,7 +7512,20 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": " from several sources. This could also improve the work of your co-workers."
+                              "value": " from several sources. "
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "This could also improve the work of your co-workers."
                             }
                           ]
                         },
@@ -6826,7 +7671,20 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": " that improved your work process. This experience could also help your co-workers."
+                              "value": " that improved your work process. "
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "This experience could also help your co-workers."
                             }
                           ]
                         },
@@ -6977,7 +7835,20 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": " from several sources. This could also improve the work of your co-workers."
+                              "value": " from several sources. "
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "This could also improve the work of your co-workers."
                             }
                           ]
                         },
@@ -7123,7 +7994,20 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": " that improved your work process. This experience could also help your co-workers."
+                              "value": " that improved your work process. "
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "This experience could also help your co-workers."
                             }
                           ]
                         },
@@ -11139,7 +12023,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "In my job, information and collegiality are the foundations of our conduct. It wouldn't work any other way. "
+                  "value": "In my job, information and collegiality are the foundations of our conduct. "
+                },
+                {
+                  "type": "text",
+                  "value": "It wouldn't work any other way. "
                 }
               ]
             },
@@ -11322,7 +12210,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "If it is something very interesting in my point of view, I would forward an e-mail with the necessary documents to my colleagues. If it is an issue under the category “…just so you have heard about it…”, I would seek direct talks and elaborate on the case."
+                  "value": "If it is something very interesting in my point of view, I would forward an e-mail with the necessary documents to my colleagues. "
+                },
+                {
+                  "type": "text",
+                  "value": "If it is an issue under the category “…just so you have heard about it…”, I would seek direct talks and elaborate on the case."
                 }
               ]
             },
@@ -11582,7 +12474,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "I will share this experience in personal conversion and will passionately talk about my findings. Hopefully, they will keep thi"
+                  "value": "I will share this experience in personal conversion and will passionately talk about my findings. "
+                },
+                {
+                  "type": "text",
+                  "value": "Hopefully, they will keep thi"
                 },
                 {
                   "type": "command",
@@ -11611,7 +12507,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "I would share this with my co-workers in the first situation possible and not wait for the next team meeting. I always get excited when I discover something new that simplifies my work and I want to share this joy with others instantly. "
+                  "value": "I would share this with my co-workers in the first situation possible and not wait for the next team meeting. "
+                },
+                {
+                  "type": "text",
+                  "value": "I always get excited when I discover something new that simplifies my work and I want to share this joy with others instantly. "
                 }
               ]
             },
@@ -11620,7 +12520,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "I inform my manager and ask for permission to change something actively. When it comes to random things, which don't require official procedure instructions, I would train the new co-workers directly, which is the better way of doing things."
+                  "value": "I inform my manager and ask for permission to change something actively. "
+                },
+                {
+                  "type": "text",
+                  "value": "When it comes to random things, which don't require official procedure instructions, I would train the new co-workers directly, which is the better way of doing things."
                 }
               ]
             },

@@ -92,77 +92,99 @@ export function findCitations(
         continue
       }
 
-      try {
-        const parsedCitation: CiteOutput = parseTextCite(text.value, {
-          log: options?.log,
-        })
-        if (parsedCitation.every((item) => typeof item === 'string')) {
-          runs.push(kid)
-          continue
-        }
-        const rpr = select('w\\:rPr', kid)
+      const sentences = text.value.split(/(?<=[.?!])\s+(?=[A-Z])/)
+      // re-add the spaces that were removed by the split
+      const sentencesWithSpaces = sentences.map((s, i) => {
+        if (i === sentences.length - 1) return s
+        return s + ' '
+      })
 
-        const newNodes = parsedCitation.reduce(
-          (acc: typeof kids, curr: string | Citation) => {
-            if (typeof curr === 'string') {
-              acc.push(
-                x('w:r', {}, [
-                  ...(rpr ? [rpr] : []),
-                  x('w:t', {}, [{ type: 'text', value: curr } as Text]) as T,
-                ]) as R
-              )
-              return acc
-            }
-
-            const { instr, citation } = constructCitation(
-              curr,
-              type,
-              citationCounter,
-              options?.bibliography
-            )
-            citationCounter++
-
-            acc.push(
+      const rpr = select('w\\:rPr', kid)
+      for (const sentence of sentencesWithSpaces) {
+        try {
+          // split the text into sentences so that we can parse them individually
+          const parsedCitation: CiteOutput = parseTextCite(sentence, {
+            log: options?.log,
+          })
+          if (parsedCitation.every((item) => typeof item === 'string')) {
+            // runs.push(kid)
+            runs.push(
               x('w:r', {}, [
                 ...(rpr ? [rpr] : []),
-                x('w:instrText', {}, [
-                  { type: 'text', value: instr } as Text,
-                ]) as T,
+                x('w:t', {}, [{ type: 'text', value: sentence } as Text]) as T,
               ]) as R
             )
+            continue
+          }
 
-            // say this is an empty, clean thing, and we want to turn it into a text
-            // with mendeely citations. then we need to push the formatted citation after the main citation
-            if (citationTypesWithSuffixedForm.includes(type) && citation) {
+          const newNodes = parsedCitation.reduce(
+            (acc: typeof kids, curr: string | Citation) => {
+              if (typeof curr === 'string') {
+                acc.push(
+                  x('w:r', {}, [
+                    ...(rpr ? [rpr] : []),
+                    x('w:t', {}, [{ type: 'text', value: curr } as Text]) as T,
+                  ]) as R
+                )
+                return acc
+              }
+
+              const { instr, citation } = constructCitation(
+                curr,
+                type,
+                citationCounter,
+                options?.bibliography
+              )
+              citationCounter++
+
               acc.push(
                 x('w:r', {}, [
                   ...(rpr ? [rpr] : []),
-                  x('w:t', {}, [
-                    {
-                      type: 'text',
-                      value:
-                        type === 'mendeley'
-                          ? (citation as MendeleyCitation)?.mendeley
-                              .formattedCitation
-                          : (citation as ZoteroCitation).properties
-                              .formattedCitation,
-                    } as Text,
+                  x('w:instrText', {}, [
+                    { type: 'text', value: instr } as Text,
                   ]) as T,
                 ]) as R
               )
-            }
 
-            return acc
-          },
-          []
-        )
-        runs.push(...newNodes)
-      } catch (e) {
-        console.warn('Text unsuccesfully parsed, treating it as non-cite')
-        console.warn(text.value)
-        console.warn(e)
-        runs.push(kid)
-        continue
+              // say this is an empty, clean thing, and we want to turn it into a text
+              // with mendeely citations. then we need to push the formatted citation after the main citation
+              if (citationTypesWithSuffixedForm.includes(type) && citation) {
+                acc.push(
+                  x('w:r', {}, [
+                    ...(rpr ? [rpr] : []),
+                    x('w:t', {}, [
+                      {
+                        type: 'text',
+                        value:
+                          type === 'mendeley'
+                            ? (citation as MendeleyCitation)?.mendeley
+                                .formattedCitation
+                            : (citation as ZoteroCitation).properties
+                                .formattedCitation,
+                      } as Text,
+                    ]) as T,
+                  ]) as R
+                )
+              }
+
+              return acc
+            },
+            []
+          )
+          runs.push(...newNodes)
+        } catch (e) {
+          console.warn('Text unsuccesfully parsed, treating it as non-cite')
+          console.warn(sentence)
+          console.warn(e)
+          // runs.push(kid)
+          runs.push(
+            x('w:r', {}, [
+              ...(rpr ? [rpr] : []),
+              x('w:t', {}, [{ type: 'text', value: sentence } as Text]) as T,
+            ]) as R
+          )
+          continue
+        }
       }
     }
 

@@ -423,9 +423,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -477,9 +475,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -530,9 +526,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -584,9 +578,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -637,9 +629,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -691,9 +681,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -795,9 +783,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -849,9 +835,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -902,9 +886,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -956,9 +938,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -1009,9 +989,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -1063,9 +1041,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -1116,9 +1092,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -1170,9 +1144,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -1223,9 +1195,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -1277,9 +1247,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -1560,9 +1528,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -1768,9 +1734,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -1803,9 +1767,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -1823,9 +1785,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -1877,9 +1837,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -1930,9 +1888,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -2035,9 +1991,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -2088,9 +2042,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -2142,9 +2094,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -2195,9 +2145,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -2249,9 +2197,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -2335,9 +2281,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -2355,9 +2299,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -2409,9 +2351,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -2513,9 +2453,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -2567,9 +2505,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -2621,9 +2557,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -2674,9 +2608,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -2728,9 +2660,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -2976,13 +2906,29 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "It proved difficult to perform a subproject nested within a large investigator-initiated trial, although we expected it to be easy. We recommend keeping a nested subproject simple, maintaining active contact with study centers, and monitoring data from the beginning to resolve emerging problems immediately. "
+                          "value": "It proved difficult to perform a subproject nested within a large investigator-initiated trial, although we expected it to be easy. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "We recommend keeping a nested subproject simple, maintaining active contact with study centers, and monitoring data from the beginning to resolve emerging problems immediately. "
                         }
                       ]
                     }
@@ -3172,13 +3118,101 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "Medication adherence, which is the extent to which patients take their medication as prescribed, is essential in treating chronic inflammatory diseases such as rheumatoid arthritis (RA). Therefore, we nested a subproject in the two-year multicenter Glucocorticoid Low-dose Outcome in Rheumatoid Arthritis (GLORIA) trial to add a low-dose prednisolone (5 mg/day) or placebo to the standard care in older people (≥65 years) with RA. Adherence was measured with an electronic monitoring cap that recorded bottle openings in all patients. In the subproject, we performed an adherence intervention with an advanced cap that could communicate with an application on the smart device via Bluetooth. We randomized patients with a smart device to receive or not to receive adherence reminders on the smart device for three months. Multiple problems emerged that precluded an answer to the research question: sample size (overly optimistic estimates of older patients with a smart device), logistic issues (availability of "
+                          "value": "Medication adherence, which is the extent to which patients take their medication as prescribed, is essential in treating chronic inflammatory diseases such as rheumatoid arthritis (RA). "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Therefore, we nested a subproject in the two-year multicenter Glucocorticoid Low-dose Outcome in Rheumatoid Arthritis (GLORIA) trial to add a low-dose prednisolone (5 mg/day) or placebo to the standard care in older people (≥65 years) with RA. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Adherence was measured with an electronic monitoring cap that recorded bottle openings in all patients. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "In the subproject, we performed an adherence intervention with an advanced cap that could communicate with an application on the smart device via Bluetooth. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "We randomized patients with a smart device to receive or not to receive adherence reminders on the smart device for three months. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Multiple problems emerged that precluded an answer to the research question: sample size (overly optimistic estimates of older patients with a smart device), logistic issues (availability of "
                         }
                       ]
                     }
@@ -3226,13 +3260,29 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": ", data extraction), randomization and treatment allocation errors (despite training of personnel), and low quality of the data in the intervention group (hardware failure, discovered too late because data was read in batches). For future trials planning to include a subproject, we recommend keeping it simple, starting with a field test before the actual study starts, and monitoring data from the beginning of the study. "
+                          "value": ", data extraction), randomization and treatment allocation errors (despite training of personnel), and low quality of the data in the intervention group (hardware failure, discovered too late because data was read in batches). "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "For future trials planning to include a subproject, we recommend keeping it simple, starting with a field test before the actual study starts, and monitoring data from the beginning of the study. "
                         }
                       ]
                     }
@@ -3416,9 +3466,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -3612,7 +3660,169 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "The ongoing two-year Glucocorticoid Low-dose Outcome in Rheumatoid Arthritis (GLORIA) trial examines the addition of daily low-dose (5 mg) prednisolone or placebo to the standard care in elderly patients (65+ years) with rheumatoid arthritis; adherence is measured with electronic caps and counting returned pills. A subproject was nested within the main GLORIA trial, limited to patients with a smart device who had taken the study treatment for at least three months. The objective was to test the effectiveness of adherence reminders delivered to the smart device through Bluetooth by a special cap during a three-month period. Eligible patients were randomized to the intervention group (receiving reminders) or the control group (no reminders). In the intervention group, an application was loaded onto the smart device that communicated with the adherence-monitoring device loaded into the cap of the drug bottle. The app sent a reminder message if the patient had forgotten to take the study medication. The hypothesis was that after three months, patients in the intervention group would be more adherent compared to the patients in the control group. Multiple problems prevented us from answering our research question. This paper reflects on these problems. The research group was a part of the GLORIA consortium and was comprised of rheumatologists and researchers from the Netherlands, Germany, Italy, and Portugal, and the owner of the caps and the pharmaceutical manufacturer of the study medication from Portugal."
+                          "value": "The ongoing two-year Glucocorticoid Low-dose Outcome in Rheumatoid Arthritis (GLORIA) trial examines the addition of daily low-dose (5 mg) prednisolone or placebo to the standard care in elderly patients (65+ years) with rheumatoid arthritis; adherence is measured with electronic caps and counting returned pills. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "A subproject was nested within the main GLORIA trial, limited to patients with a smart device who had taken the study treatment for at least three months. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The objective was to test the effectiveness of adherence reminders delivered to the smart device through Bluetooth by a special cap during a three-month period. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Eligible patients were randomized to the intervention group (receiving reminders) or the control group (no reminders). "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "In the intervention group, an application was loaded onto the smart device that communicated with the adherence-monitoring device loaded into the cap of the drug bottle. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The app sent a reminder message if the patient had forgotten to take the study medication. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The hypothesis was that after three months, patients in the intervention group would be more adherent compared to the patients in the control group. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Multiple problems prevented us from answering our research question. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "This paper reflects on these problems. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The research group was a part of the GLORIA consortium and was comprised of rheumatologists and researchers from the Netherlands, Germany, Italy, and Portugal, and the owner of the caps and the pharmaceutical manufacturer of the study medication from Portugal."
                         }
                       ]
                     }
@@ -4156,7 +4366,25 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". Almost half of patients with chronic diseases are non-adherent "
+                          "value": ". "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Almost half of patients with chronic diseases are non-adherent "
                         }
                       ]
                     }
@@ -4407,13 +4635,29 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": ". Non-adherence substantially increases the risk of a disease flare in RA "
+                          "value": ". "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Non-adherence substantially increases the risk of a disease flare in RA "
                         }
                       ]
                     }
@@ -4664,9 +4908,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -4796,13 +5038,29 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "In the two-year multicenter Glucocorticoid Low-dose Outcome in Rheumatoid Arthritis (GLORIA) trial, a low-dose prednisolone (5 mg/day) or placebo was added to the standard care in older people (≥65 years) with RA. We measured adherence with electronic monitoring and pill count in all patients "
+                          "value": "In the two-year multicenter Glucocorticoid Low-dose Outcome in Rheumatoid Arthritis (GLORIA) trial, a low-dose prednisolone (5 mg/day) or placebo was added to the standard care in older people (≥65 years) with RA. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "We measured adherence with electronic monitoring and pill count in all patients "
                         }
                       ]
                     }
@@ -5053,13 +5311,29 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": ". In a subproject nested within the trial, we assessed the efficacy of an adherence intervention for the patients with a smart device.  "
+                          "value": ". "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "In a subproject nested within the trial, we assessed the efficacy of an adherence intervention for the patients with a smart device.  "
                         }
                       ]
                     }
@@ -5247,7 +5521,43 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "The eligibility criteria for the subproject were to: be in possession of a smart device (smartphone or tablet) and be an active participant in the main GLORIA trial for at least three months. We planned to include patients with a smart device from all seven participating countries of the main trial because a pilot survey indicated that a sufficient number of patients (20%) possessed a smart device in all countries. Based on this feasibility assessment, we expected to include 50 patients. "
+                          "value": "The eligibility criteria for the subproject were to: be in possession of a smart device (smartphone or tablet) and be an active participant in the main GLORIA trial for at least three months. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "We planned to include patients with a smart device from all seven participating countries of the main trial because a pilot survey indicated that a sufficient number of patients (20%) possessed a smart device in all countries. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Based on this feasibility assessment, we expected to include 50 patients. "
                         }
                       ]
                     }
@@ -5373,13 +5683,29 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "Before the training of the study personnel, it appeared that only Dutch patients had smart devices. Therefore, the training of the study personnel was only provided in the Netherlands."
+                          "value": "Before the training of the study personnel, it appeared that only Dutch patients had smart devices. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Therefore, the training of the study personnel was only provided in the Netherlands."
                         }
                       ]
                     }
@@ -5565,13 +5891,65 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "The study personnel of all participating Dutch sites received an e-mail with information about the objective of the subproject, eligibility criteria, signing of the informed consent in duplicate, and an explanation about the randomization step. In addition, the study personnel received a manual that explained the subproject procedures (assembling of the cap, installation of application) that were needed before the patient could start with the subproject. Finally, the subproject and the related procedures were explained and demonstrated during the Dutch GLORIA researchers meeting, and an English instructional movie was sent to all participating centers. One of us (LH) served as the contact person for questions about the subproject."
+                          "value": "The study personnel of all participating Dutch sites received an e-mail with information about the objective of the subproject, eligibility criteria, signing of the informed consent in duplicate, and an explanation about the randomization step. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "In addition, the study personnel received a manual that explained the subproject procedures (assembling of the cap, installation of application) that were needed before the patient could start with the subproject. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Finally, the subproject and the related procedures were explained and demonstrated during the Dutch GLORIA researchers meeting, and an English instructional movie was sent to all participating centers. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "One of us (LH) served as the contact person for questions about the subproject."
                         }
                       ]
                     }
@@ -5761,13 +6139,101 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "Eligible patients were informed about the subproject by the research nurse and were asked to participate. Patients who provided written informed consent were randomly assigned to either the intervention or control group through the electronic case record form (eCRF). All patients continued taking the study medication (one pill per day) from the pill bottle as in the main trial. The opening and closing events of the pill bottle (to measure adherence) were registered by the electronic cap for all patients. Patients in the control group continued their participation in the main study without changes. For patients in the intervention group, several actions of the study personnel were needed. "
+                          "value": "Eligible patients were informed about the subproject by the research nurse and were asked to participate. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Patients who provided written informed consent were randomly assigned to either the intervention or control group through the electronic case record form (eCRF). "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "All patients continued taking the study medication (one pill per day) from the pill bottle as in the main trial. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The opening and closing events of the pill bottle (to measure adherence) were registered by the electronic cap for all patients. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Patients in the control group continued their participation in the main study without changes. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "For patients in the intervention group, several actions of the study personnel were needed. "
                         }
                       ]
                     }
@@ -5837,9 +6303,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -5944,9 +6408,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -6051,9 +6513,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -6367,12 +6827,6 @@
                   "children": [
                     {
                       "type": "element",
-                      "name": "w:lastRenderedPageBreak",
-                      "attributes": {},
-                      "children": []
-                    },
-                    {
-                      "type": "element",
                       "name": "w:t",
                       "attributes": {},
                       "children": [
@@ -6479,13 +6933,29 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "Assemble the smart adherence cap over the plastic replacement cap on the medication bottle, correctly aligned, and press it until you reach resistance. Keep it under pressure for at least 3 seconds.  "
+                          "value": "Assemble the smart adherence cap over the plastic replacement cap on the medication bottle, correctly aligned, and press it until you reach resistance. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Keep it under pressure for at least 3 seconds.  "
                         }
                       ]
                     }
@@ -7111,9 +7581,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -7249,13 +7717,173 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "The activated app was connected to the smart adherence cap of the medication bottle via Bluetooth. For patients, no additional actions were required. The patient only had to open the medication bottle once per day, preferably in the morning. Both the regular adherence caps in the control group and the smart adherence caps in the intervention group recorded each opening and closing event of the medication bottle. The smart adherence cap repeatedly attempted to open a connection with the GLORIA app via Bluetooth to report whether the bottle had been opened. If the bottle was not opened between 08:00 a.m. and 02:00 p.m., the app posted a notification on the opening screen to remind the patient to open the medication bottle. The patients in the control group did not receive an activated smart cap nor the reminder app; they were instructed to open the medication bottle once per day, as in the main trial. At the end of the three-month period, the bottle was returned, and the remaining capsules were counted. For patients that started the trial at six months or later, the return of the bottle was delayed by three months, because clinic visits occurred every six months. The adherence of both groups based on returned pills was calculated as follows: If the number of pills dispensed is D, the treatment period in number of days is P, and the number of pills returned is R, medication adherence (%) is calculated as: ((D-R)/"
+                          "value": "The activated app was connected to the smart adherence cap of the medication bottle via Bluetooth. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "For patients, no additional actions were required. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The patient only had to open the medication bottle once per day, preferably in the morning. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Both the regular adherence caps in the control group and the smart adherence caps in the intervention group recorded each opening and closing event of the medication bottle. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The smart adherence cap repeatedly attempted to open a connection with the GLORIA app via Bluetooth to report whether the bottle had been opened. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "If the bottle was not opened between 08:00 a.m. and 02:00 p.m., the app posted a notification on the opening screen to remind the patient to open the medication bottle. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The patients in the control group did not receive an activated smart cap nor the reminder app; they were instructed to open the medication bottle once per day, as in the main trial. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "At the end of the three-month period, the bottle was returned, and the remaining capsules were counted. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "For patients that started the trial at six months or later, the return of the bottle was delayed by three months, because clinic visits occurred every six months. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The adherence of both groups based on returned pills was calculated as follows: If the number of pills dispensed is D, the treatment period in number of days is P, and the number of pills returned is R, medication adherence (%) is calculated as: ((D-R)/"
                         }
                       ]
                     }
@@ -7307,7 +7935,25 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "100. The adherence of the two groups was compared. "
+                          "value": "100. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The adherence of the two groups was compared. "
                         }
                       ]
                     }
@@ -7433,13 +8079,47 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "Social desirability could have influenced the adherence measurements with the caps and the number of returned pills. Patients might have returned the expected number of pills or opened the medication bottle as would be expected. However, we assume that most patients were as adherent as non-trial patients, because it would be difficult to maintain social desirability during the full two years of the trial. "
+                          "value": "Social desirability could have influenced the adherence measurements with the caps and the number of returned pills. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Patients might have returned the expected number of pills or opened the medication bottle as would be expected. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "However, we assume that most patients were as adherent as non-trial patients, because it would be difficult to maintain social desirability during the full two years of the trial. "
                         }
                       ]
                     }
@@ -7629,9 +8309,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -7713,13 +8391,47 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "The “pairing success” events guaranteed that the pairing of the adherence cap with the app before the study started was successful. Non-registration of this event indicated that the pairing of the cap and app was unsuccessful and that the cap was not able to communicate with the smart device during the entire three months of the study (reported by “no communication” events). Therefore, caps with no “pairing success” event at the start of the study were excluded. "
+                          "value": "The “pairing success” events guaranteed that the pairing of the adherence cap with the app before the study started was successful. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Non-registration of this event indicated that the pairing of the cap and app was unsuccessful and that the cap was not able to communicate with the smart device during the entire three months of the study (reported by “no communication” events). "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Therefore, caps with no “pairing success” event at the start of the study were excluded. "
                         }
                       ]
                     }
@@ -7915,7 +8627,115 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "“No communication” events were registered at 02:00 p.m. if the smart adherence cap had been unable to communicate with the app on the smart device between 08:00 a.m. and 02:00 p.m. on a given day. The time window from 08:00 a.m. until 02:00 p.m. was chosen to match the advice to take prednisolone in the morning. The registration of “no communication” events was independent of the successful or unsuccessful pairing between the app and the cap. The “keep alive” event was used to check if the cap still worked and if the battery was not empty. “Keep alive” events were registered one or more times per morning, indicating that the cap was functioning even if a patient did not open the medication bottle. A “reset” event was registered whenever a reset on the system was detected. This could be related to battery power being too low, or bad contacts on the battery power supply caused by faulty cables due to falls or abrupt movements of the cap. If more than one “reset” event was registered, the cap was excluded. "
+                          "value": "“No communication” events were registered at 02:00 p.m. if the smart adherence cap had been unable to communicate with the app on the smart device between 08:00 a.m. and 02:00 p.m. on a given day. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The time window from 08:00 a.m. until 02:00 p.m. was chosen to match the advice to take prednisolone in the morning. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The registration of “no communication” events was independent of the successful or unsuccessful pairing between the app and the cap. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The “keep alive” event was used to check if the cap still worked and if the battery was not empty. “Keep alive” events were registered one or more times per morning, indicating that the cap was functioning even if a patient did not open the medication bottle. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "A “reset” event was registered whenever a reset on the system was detected. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "This could be related to battery power being too low, or bad contacts on the battery power supply caused by faulty cables due to falls or abrupt movements of the cap. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "If more than one “reset” event was registered, the cap was excluded. "
                         }
                       ]
                     }
@@ -8041,9 +8861,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -8095,9 +8913,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -8149,9 +8965,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -8203,13 +9017,65 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": ", Portugal). The data of the caps were read in batches and were uploaded in data files. The data files contained the registration of the events described above. The app generated a reminder message if the cap did not transmit an opening event between 08:00 a.m. and 02:00 p.m., or if no communication was established on that day (registered in the cap).  "
+                          "value": ", Portugal). "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The data of the caps were read in batches and were uploaded in data files. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The data files contained the registration of the events described above. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The app generated a reminder message if the cap did not transmit an opening event between 08:00 a.m. and 02:00 p.m., or if no communication was established on that day (registered in the cap).  "
                         }
                       ]
                     }
@@ -8513,13 +9379,29 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "We had multiple misfortunes related to the preparations of the subproject, technical issues with the app and smart adherence cap, and the randomization step. Therefore, it was not possible to test the effectiveness of adherence reminders delivered via the smart device during the "
+                          "value": "We had multiple misfortunes related to the preparations of the subproject, technical issues with the app and smart adherence cap, and the randomization step. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Therefore, it was not possible to test the effectiveness of adherence reminders delivered via the smart device during the "
                         }
                       ]
                     }
@@ -8567,9 +9449,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -8704,20 +9584,30 @@
                   "children": [
                     {
                       "type": "element",
-                      "name": "w:lastRenderedPageBreak",
-                      "attributes": {},
-                      "children": []
-                    },
-                    {
-                      "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "We want to discuss and reflect on the problems and misfortunes that prevented us from answering our research question. All aspects that influenced the success of the subproject were discussed, and we reflected on how each aspect contributed to the subproject’s failure. "
+                          "value": "We want to discuss and reflect on the problems and misfortunes that prevented us from answering our research question. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "All aspects that influenced the success of the subproject were discussed, and we reflected on how each aspect contributed to the subproject’s failure. "
                         }
                       ]
                     }
@@ -8793,13 +9683,29 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "The discussions and reflections are mainly related to the researchers from the Netherlands, because only Dutch patients entered the subproject. The discussions were supported by the scientific advisory committee, which was set up especially for the GLORIA trial and by the developers of the adherence caps and the GLORIA app."
+                          "value": "The discussions and reflections are mainly related to the researchers from the Netherlands, because only Dutch patients entered the subproject. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The discussions were supported by the scientific advisory committee, which was set up especially for the GLORIA trial and by the developers of the adherence caps and the GLORIA app."
                         }
                       ]
                     }
@@ -8991,13 +9897,83 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "We had a contract with a company that would deliver the adherence caps and the application for the subproject, but this company went bankrupt a few months before the study would start. We had to choose another company in a very short time frame because the main trial was almost ready to start. This choice was based on expertise, the projected time for development and implementation of the smart device reminder app, and an offer with limited costs because the budget of this investigator-initiated study was limited. Unfortunately, the chosen company needed more time than expected to develop suitable smart caps. In total, this caused a delay of 1.5 years in the delivery of the smart caps."
+                          "value": "We had a contract with a company that would deliver the adherence caps and the application for the subproject, but this company went bankrupt a few months before the study would start. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "We had to choose another company in a very short time frame because the main trial was almost ready to start. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "This choice was based on expertise, the projected time for development and implementation of the smart device reminder app, and an offer with limited costs because the budget of this investigator-initiated study was limited. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Unfortunately, the chosen company needed more time than expected to develop suitable smart caps. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "In total, this caused a delay of 1.5 years in the delivery of the smart caps."
                         }
                       ]
                     }
@@ -9185,7 +10161,115 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "The number of potential patients for the subproject proved much lower than expected. From initial feasibility assessments among the trial centers, it appeared that around 20% of the elderly patients possessed a smart device. Assuming that patients with a smart device are technically interested, we expected that about 80% of them would be willing to participate. Thus, with a sample size of 450 patients in the main study, we expected around 72 patients in the subproject. As it turned out, smart device owners in this senior population were only located in the Netherlands. This resulted in a significant waste of paid and unpaid work hours: The app and instruction manual were translated from English into seven localized versions with the help of the patient panel of the main trial. To include enough patients in the subproject, we amended the protocol so that patients could start with the subproject at any moment during the trial instead of only at the three-months visit. "
+                          "value": "The number of potential patients for the subproject proved much lower than expected. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "From initial feasibility assessments among the trial centers, it appeared that around 20% of the elderly patients possessed a smart device. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Assuming that patients with a smart device are technically interested, we expected that about 80% of them would be willing to participate. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Thus, with a sample size of 450 patients in the main study, we expected around 72 patients in the subproject. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "As it turned out, smart device owners in this senior population were only located in the Netherlands. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "This resulted in a significant waste of paid and unpaid work hours: The app and instruction manual were translated from English into seven localized versions with the help of the patient panel of the main trial. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "To include enough patients in the subproject, we amended the protocol so that patients could start with the subproject at any moment during the trial instead of only at the three-months visit. "
                         }
                       ]
                     }
@@ -9445,13 +10529,47 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "Another potential source of confusion was that we now had two types of similar-looking caps: the regular adherence caps used by all patients throughout the whole main trial, and the smart adherence caps only intended for patients in the intervention group of the subproject. The only difference between the caps was the color of the magnetic label on the cap, which had to be removed to activate the cap. It proved difficult for the research nurses to remember the differences and objectives of the regular and smart adherence caps. "
+                          "value": "Another potential source of confusion was that we now had two types of similar-looking caps: the regular adherence caps used by all patients throughout the whole main trial, and the smart adherence caps only intended for patients in the intervention group of the subproject. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The only difference between the caps was the color of the magnetic label on the cap, which had to be removed to activate the cap. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "It proved difficult for the research nurses to remember the differences and objectives of the regular and smart adherence caps. "
                         }
                       ]
                     }
@@ -9581,7 +10699,43 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Also, despite the instructions outlined above, for some study personnel, it was not clear that patients had to be separately randomized for participation in the subproject and that the preparations before participation were different for the patients in the intervention and control group. For the smart adherence caps belonging to the intervention group, several manual actions were needed before the cap could be used. This involved a lot of work if a patient was randomized to the intervention group compared to control patients, where no additional actions were required.  "
+                          "value": "Also, despite the instructions outlined above, for some study personnel, it was not clear that patients had to be separately randomized for participation in the subproject and that the preparations before participation were different for the patients in the intervention and control group. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "For the smart adherence caps belonging to the intervention group, several manual actions were needed before the cap could be used. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "This involved a lot of work if a patient was randomized to the intervention group compared to control patients, where no additional actions were required.  "
                         }
                       ]
                     }
@@ -9771,7 +10925,79 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "These complexities resulted in mistakes in the randomization and treatment allocation, despite training of the sites. A total of 126 patients in the main trial were assessed for eligibility to participate in the subproject (Figure 1). Most patients were not eligible because they were not in possession of a smart device. From the non-eligible patients, three were nevertheless randomized for the subproject by mistake. The adherence data of these patients could not be used because the patients did not meet the eligibility criteria, did not give informed consent to use their data, or both."
+                          "value": "These complexities resulted in mistakes in the randomization and treatment allocation, despite training of the sites. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "A total of 126 patients in the main trial were assessed for eligibility to participate in the subproject (Figure 1). "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Most patients were not eligible because they were not in possession of a smart device. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "From the non-eligible patients, three were nevertheless randomized for the subproject by mistake. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The adherence data of these patients could not be used because the patients did not meet the eligibility criteria, did not give informed consent to use their data, or both."
                         }
                       ]
                     }
@@ -9897,13 +11123,83 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "In addition, randomization and treatment allocation failed for many patients because of mistakes at the participating sites and technical problems related to the smart adherence cap. A total of 23 patients received the intervention (smart cap). This included 16 patients that were randomized and properly allocated to the treatment, three patients originally randomized to the control group (contamination), and four patients who received the intervention without being randomized. A total of 19 patients received the control intervention (no reminder). This included 15 patients that were randomized to the control group and were properly allocated to the treatment, one patient originally randomized to the intervention (contamination, the smart adherence cap failed to activate), and three patients who received the control intervention but were not randomized.   "
+                          "value": "In addition, randomization and treatment allocation failed for many patients because of mistakes at the participating sites and technical problems related to the smart adherence cap. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "A total of 23 patients received the intervention (smart cap). "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "This included 16 patients that were randomized and properly allocated to the treatment, three patients originally randomized to the control group (contamination), and four patients who received the intervention without being randomized. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "A total of 19 patients received the control intervention (no reminder). "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "This included 15 patients that were randomized to the control group and were properly allocated to the treatment, one patient originally randomized to the intervention (contamination, the smart adherence cap failed to activate), and three patients who received the control intervention but were not randomized.   "
                         }
                       ]
                     }
@@ -10013,13 +11309,65 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "The reasons for the randomization and treatment allocation mistakes are unknown. However, we have some suggestions for changes to the randomization procedure, which might decrease the chance of mistakes. In our study, patients could have been randomized easily to the subproject by first having the patient answer a few questions in a conversation (among others about the possession of a smart device), followed by one click on a button in the eCRF. Entry of ineligible patients could probably have been prevented if the answers to the questions needed to be entered correctly on the screen before randomization and allocation could proceed."
+                          "value": "The reasons for the randomization and treatment allocation mistakes are unknown. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "However, we have some suggestions for changes to the randomization procedure, which might decrease the chance of mistakes. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "In our study, patients could have been randomized easily to the subproject by first having the patient answer a few questions in a conversation (among others about the possession of a smart device), followed by one click on a button in the eCRF. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Entry of ineligible patients could probably have been prevented if the answers to the questions needed to be entered correctly on the screen before randomization and allocation could proceed."
                         }
                       ]
                     }
@@ -10129,13 +11477,47 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "The problem of contamination, i.e., patients randomized to one group but receiving the intervention of the other group, was probably caused by confusion among the research nurses performing the allocation procedure. It is likely that the explanation given to the research nurses about the subproject was insufficient. On-site training could have been better, but this is time-consuming and costly. "
+                          "value": "The problem of contamination, i.e., patients randomized to one group but receiving the intervention of the other group, was probably caused by confusion among the research nurses performing the allocation procedure. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "It is likely that the explanation given to the research nurses about the subproject was insufficient. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "On-site training could have been better, but this is time-consuming and costly. "
                         }
                       ]
                     }
@@ -10325,7 +11707,43 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Upon delivery, we found the smart adherence caps had technical limitations, but there was no possibility to resolve this limitation by the company. The medication bottle and smart device had to be close to each other to connect and exchange information about the opening events. If the medication bottle and smart device were more than a few meters apart, they did not "
+                          "value": "Upon delivery, we found the smart adherence caps had technical limitations, but there was no possibility to resolve this limitation by the company. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The medication bottle and smart device had to be close to each other to connect and exchange information about the opening events. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "If the medication bottle and smart device were more than a few meters apart, they did not "
                         }
                       ]
                     }
@@ -10373,9 +11791,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -10453,7 +11869,25 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Of the 23 smart adherence caps applied, only two caps functioned as expected. The other adherence caps had technical errors from the start of the subproject or within 1-4 weeks after the start, or the caps were not returned (Table 1). "
+                          "value": "Of the 23 smart adherence caps applied, only two caps functioned as expected. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The other adherence caps had technical errors from the start of the subproject or within 1-4 weeks after the start, or the caps were not returned (Table 1). "
                         }
                       ]
                     }
@@ -10523,13 +11957,101 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "The malfunctioning of the smart adherence caps in the intervention group was also reflected in the satisfaction rates reported by 18 of the 23 patients. On a scale of 0-10, the mean reported satisfaction rate was 5.6 (range 0-10). Multiple patients gave a low satisfaction rate because they received a reminder despite taking their medication (i.e., opened the bottle). On the other hand, six patients reported a grade of 8 or higher. The malfunctioning of the caps could explain these high rates. The caps did not or rarely "
+                          "value": "The malfunctioning of the smart adherence caps in the intervention group was also reflected in the satisfaction rates reported by 18 of the 23 patients. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "On a scale of 0-10, the mean reported satisfaction rate was 5.6 (range 0-10). "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Multiple patients gave a low satisfaction rate because they received a reminder despite taking their medication (i.e., opened the bottle). "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "On the other hand, six patients reported a grade of 8 or higher. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The malfunctioning of the caps could explain these high rates. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The caps did not or rarely "
                         }
                       ]
                     }
@@ -10577,13 +12099,29 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": " with the app and, therefore, the app never sent reminders. This meant that these patients did not receive unnecessary reminders when they opened the bottle. "
+                          "value": " with the app and, therefore, the app never sent reminders. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "This meant that these patients did not receive unnecessary reminders when they opened the bottle. "
                         }
                       ]
                     }
@@ -10740,9 +12278,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -10925,9 +12461,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -11210,9 +12744,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -11495,9 +13027,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -11594,9 +13124,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -11622,9 +13150,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -11752,9 +13278,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -11851,9 +13375,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -11879,9 +13401,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -12008,9 +13528,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -12107,9 +13625,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -12135,9 +13651,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -12264,9 +13778,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -12363,9 +13875,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -12391,9 +13901,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -12520,9 +14028,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -12619,9 +14125,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -12647,9 +14151,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -12776,9 +14278,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -12875,9 +14375,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -13194,9 +14692,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -13222,9 +14718,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -13515,9 +15009,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -13543,9 +15035,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -13770,9 +15260,7 @@
                                 {
                                   "type": "element",
                                   "name": "w:t",
-                                  "attributes": {
-                                    "xml:space": "preserve"
-                                  },
+                                  "attributes": {},
                                   "children": [
                                     {
                                       "type": "text",
@@ -14018,13 +15506,47 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "The data extraction and interpretation had limitations. The data were read in batches when the study was almost finished because it was cheaper to send the caps in batches instead of each single cap from sites in the Netherlands to the company in Portugal. This prevented early detection of errors and malfunctioning. "
+                          "value": "The data extraction and interpretation had limitations. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The data were read in batches when the study was almost finished because it was cheaper to send the caps in batches instead of each single cap from sites in the Netherlands to the company in Portugal. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "This prevented early detection of errors and malfunctioning. "
                         }
                       ]
                     }
@@ -14150,13 +15672,101 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "The data interpretation was a complicated process. It was difficult to interpret the different events described in the methods section, and to unravel when reminders were sent by the app. This increased the risk of errors in the data interpretation. It would have been easier if the data file had only the opening and closing events, and the exact moments when reminders were sent. Additionally, we had to link the adherence data to the patient data in the eCRF. The kit number belonging to the patient had to be looked up in the eCRF, which also increased the risk of errors. "
+                          "value": "The data interpretation was a complicated process. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "It was difficult to interpret the different events described in the methods section, and to unravel when reminders were sent by the app. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "This increased the risk of errors in the data interpretation. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "It would have been easier if the data file had only the opening and closing events, and the exact moments when reminders were sent. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Additionally, we had to link the adherence data to the patient data in the eCRF. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The kit number belonging to the patient had to be looked up in the eCRF, which also increased the risk of errors. "
                         }
                       ]
                     }
@@ -14352,7 +15962,61 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "We were unable to answer our research question because of a multitude of problems. Even with the limited sample size and randomization and allocation errors, we were initially hopeful that we could compare the adherence of the two groups as a controlled trial instead of a randomized controlled trial. However, the quality of the data in the intervention group was unusable due to almost universal failure of the cap-app dyad. It turned out that it was difficult to perform a subproject nested within a large pragmatic trial, although we expected it to be easy. "
+                          "value": "We were unable to answer our research question because of a multitude of problems. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Even with the limited sample size and randomization and allocation errors, we were initially hopeful that we could compare the adherence of the two groups as a controlled trial instead of a randomized controlled trial. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "However, the quality of the data in the intervention group was unusable due to almost universal failure of the cap-app dyad. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "It turned out that it was difficult to perform a subproject nested within a large pragmatic trial, although we expected it to be easy. "
                         }
                       ]
                     }
@@ -14478,13 +16142,83 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "For future trials that test new devices or applications, we strongly recommend a clear plan regarding the requirements. For example, we recommend conducting preliminary field tests to resolve technical problems of the materials, optimize study procedures, and ensure that the plans are clear for all involved parties. The study monitor should also be in active contact with the study centers when the first patients start, to resolve emerging problems in real time and to emphasize the aspects that will help the study perform well. In addition, data stored in the device should be read during rather than after the study. It is also important to be aware that most seemingly “simple” studies are typically complex due to issues with people in different roles, technology, and processes."
+                          "value": "For future trials that test new devices or applications, we strongly recommend a clear plan regarding the requirements. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "For example, we recommend conducting preliminary field tests to resolve technical problems of the materials, optimize study procedures, and ensure that the plans are clear for all involved parties. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The study monitor should also be in active contact with the study centers when the first patients start, to resolve emerging problems in real time and to emphasize the aspects that will help the study perform well. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "In addition, data stored in the device should be read during rather than after the study. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "It is also important to be aware that most seemingly “simple” studies are typically complex due to issues with people in different roles, technology, and processes."
                         }
                       ]
                     }
@@ -14682,9 +16416,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -14715,9 +16447,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -14782,9 +16512,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -14862,7 +16590,43 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "J. W. J. "
+                          "value": "J. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "W. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "J. "
                         }
                       ]
                     }
@@ -14914,7 +16678,97 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ", R. Christensen, Y. M. Smulders and S. H. Ralston are members of the scientific advisory committee of the GLORIA trial.  "
+                          "value": ", R. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Christensen, Y. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "M. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Smulders and S. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "H. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Ralston are members of the scientific advisory committee of the GLORIA trial.  "
                         }
                       ]
                     }
@@ -15154,13 +17008,65 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "Brown, M. T. & Bussell, J. K. (2011). Medication adherence: WHO cares? "
+                          "value": "Brown, M. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "T. & Bussell, J. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "K. (2011). "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Medication adherence: WHO cares? "
                         }
                       ]
                     }
@@ -15327,10 +17233,22 @@
                   "children": [
                     {
                       "type": "element",
-                      "name": "w:lastRenderedPageBreak",
+                      "name": "w:t",
                       "attributes": {},
-                      "children": []
-                    },
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Hartman, L., Cutolo, M., Bos, R., Opris-Belinski, D., Kok, M. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
                     {
                       "type": "element",
                       "name": "w:t",
@@ -15338,7 +17256,187 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Hartman, L., Cutolo, M., Bos, R., Opris-Belinski, D., Kok, M. R., Griep-Wentink, H., Klaasen, R., Allaart, C. F., Bruyn, G. A. W., Raterman, H. G., Voshaar, M. J. H., Gomes, N., Pinto, R. M. A., Klausch, L.T., Lems, W. F., & Boers, M. (2021). Medication adherence in older people with rheumatoid arthritis is lower according to electronic monitoring than according to pill count. "
+                          "value": "R., Griep-Wentink, H., Klaasen, R., Allaart, C. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "F., Bruyn, G. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "A. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "W., Raterman, H. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "G., Voshaar, M. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "J. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "H., Gomes, N., Pinto, R. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "M. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "A., Klausch, L.T., Lems, W. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "F., & Boers, M. (2021). "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Medication adherence in older people with rheumatoid arthritis is lower according to electronic monitoring than according to pill count. "
                         }
                       ]
                     }
@@ -15467,7 +17565,25 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Jungst, C., Graber, S., Simons, S., Wedemeyer, H. & Lammert, F. (2019). Medication adherence among patients with chronic diseases: A survey-based study in pharmacies. "
+                          "value": "Jungst, C., Graber, S., Simons, S., Wedemeyer, H. & Lammert, F. (2019). "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Medication adherence among patients with chronic diseases: A survey-based study in pharmacies. "
                         }
                       ]
                     }
@@ -15635,13 +17751,65 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "Kini, V. & Ho, P. M. (2018). Interventions to improve medication adherence: A review. The "
+                          "value": "Kini, V. & Ho, P. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "M. (2018). "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Interventions to improve medication adherence: A review. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "The "
                         }
                       ]
                     }
@@ -16313,9 +18481,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",
@@ -16333,9 +18499,7 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {
-                        "xml:space": "preserve"
-                      },
+                      "attributes": {},
                       "children": [
                         {
                           "type": "text",

@@ -91,6 +91,7 @@ InputContent ->
          ParenCite {% id %}
         | NarrCite {% id %}
         | NonCiteContent {% id %}
+        | %Rp NonCiteContent {% n => n.join('') %}
 
 NonCiteContent ->
   %Year {% id %}
@@ -116,7 +117,7 @@ NonYearParenContent ->
  | %Dash {% id %}
  | %Punct {% id %}
  | %Mc {% id %}
- | %DutchPref {% id %}
+#  | %DutchPref {% id %}
  | %Cap {% id %}
  | %Lowword {% id %}
  | %NL {% id %}
@@ -358,10 +359,10 @@ ParenNameMaybeList ->  ParenNameMaybe                                  {% name=>
                      | ParenNameMaybeList %Com %__ Comp %__            {% ([name])=>([name].flat()) %}
                      | ParenNameMaybeList %__ Comp %__ NameList        {% ([name,,,,n])=>([name,n].flat()) %}
                      | ParenNameMaybeList %__ Comp %__                 {% ([name])=>([name].flat()) %}
-                     | ParenNameMaybeList %__ Etal                     {% ([name])=>([name].flat()) %}
 
 
 ParenNameMaybe ->   Name                              {% id %}
+                  | Name Etal                         {% ([n])=>n %}
                   | ParenNameMaybe %__ ParenNameMaybe {% ([n,,nn]) => ({...n,...nn,family:n.family+nn.family}) %}
                   | ParenNameMaybe %__ %Lowword       {% ([n,,nn]) => ({...n,family:n.family+nn}) %}
 
@@ -438,6 +439,8 @@ Year ->  %Year {% ([year]) => ([`${year}`.replace(/\./g,'').toUpperCase()]) %}
        | Year %Slash Year {% (content) => {const[year, sl, year2]=content
                                           return([...year2,...year])}
                              %}
+       | %Number:+ %__:* %BCE {% ([num,,rest])=> ([`${/b\.?c\.?/i.test(rest) ? '-' : ''}${num}`]) %}
+       | %Ca %__ Year {% ([ca,,year])=> ([`${year}`]) %}
 
 # Year -> Digit Digit Digit Digit {% (year)=>year.join('') %}
 #         | "n" "." "d"

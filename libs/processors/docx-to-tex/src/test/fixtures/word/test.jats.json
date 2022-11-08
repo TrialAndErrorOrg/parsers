@@ -137,7 +137,11 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Author, A. (2022, 1 1). Title of the thing. (Editor, Ed.) "
+                      "value": "Author, A. (2022, 1 1). "
+                    },
+                    {
+                      "type": "text",
+                      "value": "Title of the thing. (Editor, Ed.) "
                     },
                     {
                       "type": "element",
@@ -165,7 +169,11 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Another. (1000). Artikel. "
+                      "value": "Another. (1000). "
+                    },
+                    {
+                      "type": "text",
+                      "value": "Artikel. "
                     },
                     {
                       "type": "element",

@@ -4,6 +4,56 @@ export const tests: TestData = {
     description: 'own cases i wanna catch',
     content: [
       {
+        description: 'Just a normal fucking et al.!',
+        result: [
+          'Wow ',
+          {
+            citationId: 'CITE-X',
+            citationItems: [
+              {
+                id: 'Stephan2019',
+                itemData: {
+                  author: [{ family: 'Stephan' }],
+                  issued: { 'date-parts': [['2019']] },
+                },
+              },
+              {
+                id: 'Gerard2020',
+                itemData: {
+                  author: [{ family: 'Gerard' }],
+                  issued: { 'date-parts': [['2020']] },
+                },
+              },
+            ],
+            originalText: '(Stephan et al., 2019; Gerard et al., 2020)',
+            properties: { noteIndex: 0 },
+          },
+          '.',
+        ],
+        input: 'Wow (Stephan et al., 2019; Gerard et al., 2020).',
+      },
+
+      {
+        description: 'Just a et al!',
+        result: [
+          {
+            citationId: 'CITE-X',
+            citationItems: [
+              {
+                id: 'Stephan2019',
+                itemData: {
+                  author: [{ family: 'Stephan' }],
+                  issued: { 'date-parts': [['2019']] },
+                },
+              },
+            ],
+            originalText: '(Stephan et al., 2019)',
+            properties: { noteIndex: 0 },
+          },
+        ],
+        input: '(Stephan et al., 2019)',
+      },
+      {
         description: 'Other dang parantheses in the sentence!',
         result: [
           ') Another long sentence start with a paren ',
@@ -747,6 +797,7 @@ export const tests: TestData = {
               itemData: {
                 author: [{ family: 'Aristotle' }],
                 issued: { 'date-parts': [['1994']] },
+                'original-date': { 'date-parts': [['-350']] },
               },
               label: 'part',
               locator: 'IV',
@@ -756,6 +807,24 @@ export const tests: TestData = {
           originalText: `(Aristotle, ca. 350 B.C.E./1994, Part IV)`,
         },
         input: `(Aristotle, ca. 350 B.C.E./1994, Part IV)`,
+      },
+      {
+        description: ``,
+        result: {
+          citationId: 'CITE-X',
+          citationItems: [
+            {
+              id: 'Aristotle-350',
+              itemData: {
+                author: [{ family: 'Aristotle' }],
+                issued: { 'date-parts': [['-350']] },
+              },
+            },
+          ],
+          properties: { noteIndex: 0 },
+          originalText: `(Aristotle, 350 B.C.E.)`,
+        },
+        input: `(Aristotle, 350 B.C.E.)`,
       },
       {
         description: ``,

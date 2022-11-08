@@ -134,7 +134,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "@article{March2020,\n    author      = {March},\n    year        = {2020}\n}\n\n\n@article{Bowden2005,\n    title       = {New approaches to demystifying insight},\n    author      = {Bowden, E and Jung-Beeman, Mark and Fleck, J and Kounios, J},\n    number      = {7},\n    volume      = {9},\n    doi         = {10.1016/j.tics.2005.05.012},\n    year        = {2005-07},\n    pages       = {322-328},\n    journal     = {Trends in Cognitive Sciences}\n}\n\n\n@article{Jones2003,\n    title       = {Testing two cognitive theories of insight.},\n    author      = {Jones, Gary},\n    number      = {5},\n    volume      = {29},\n    doi         = {10.1037/0278-7393.29.5.1017},\n    year        = {2003},\n    pages       = {1017-1027},\n    journal     = {Journal of Experimental Psychology: Learning, Memory, and Cognition}\n}\n\n\n@article{Chu2011,\n    title       = {Human performance on insight problem solving: A review},\n    author      = {Chu, Yun and MacGregor, James N.},\n    number      = {2},\n    volume      = {3},\n    doi         = {10.7771/1932-6246.1094},\n    year        = {2011-02-07},\n    journal     = {The Journal of Problem Solving}\n}\n\n\n@article{Fleck2013,\n    title       = {Insight versus analysis: Evidence for diverse methods in problem solving},\n    author      = {Fleck, Jessica I. and Weisberg, Robert W.},\n    number      = {4},\n    volume      = {25},\n    doi         = {10.1080/20445911.2013.779248},\n    year        = {2013-06},\n    pages       = {436-463},\n    journal     = {Journal of Cognitive Psychology}\n}\n\n\n@article{Weisberg2015,\n    title       = {Toward an integrated theory of insight in problem solving},\n    author      = {Weisberg, Robert W.},\n    number      = {1},\n    volume      = {21},\n    doi         = {10.1080/13546783.2014.886625},\n    year        = {2015-01-02},\n    pages       = {5-39},\n    journal     = {Thinking & Reasoning}\n}\n\n\n@article{Vallée‐Tourangeau2019,\n    title       = {Insight out: Making creativity visible},\n    author      = {Vallée‐Tourangeau, Frédéric and March, Paul L.},\n    doi         = {https://doi.org/10.1002/jocb.409},\n    year        = {2019},\n    journal     = {The Journal of Creative Behavior}\n}\n\n\n@article{Vallée-Tourangeau2020,\n    title       = {Mapping systemic resources in problem solving},\n    author      = {Vallée-Tourangeau, Frédéric and Vallée-Tourangeau, Gaëlle},\n    doi         = {10.1016/j.newideapsych.2020.100812},\n    year        = {2020},\n    journal     = {New Ideas in Psychology}\n}\n\n\n@article{Vallée‐Tourangeau2014,\n    title       = {Diagrams, jars, and matchsticks: A systemicist’s toolkit},\n    author      = {Vallée‐Tourangeau, Frédéric and Vallée-Tourangeau, Gaëlle},\n    number      = {2},\n    volume      = {22},\n    doi         = {10.1075/pc.22.2.02val},\n    year        = {2014-12-31},\n    pages       = {187-205},\n    journal     = {Pragmatics & Cognition}\n}\n\n\n@article{Andriani2017,\n    title       = {Measuring exaptation and its impact on innovation, search, and problem Solving},\n    author      = {Andriani, Pierpaolo and Ali, Ayfer and Mastrogiorgio, Mariano},\n    number      = {2},\n    volume      = {28},\n    doi         = {10.1287/orsc.2017.1116},\n    year        = {2017-04},\n    pages       = {320-338},\n    journal     = {Organization Science}\n}\n\n\n@article{Kirsh1994,\n    title       = {On distinguishing epistemic from pragmatic action},\n    author      = {Kirsh, David and Maglio, Paul},\n    number      = {4},\n    volume      = {18},\n    doi         = {10.1207/s15516709cog1804_1},\n    year        = {1994-10},\n    pages       = {513-549},\n    journal     = {Cognitive Science}\n}\n\n\n@book{Glaser1967,\n    title       = {The discovery of grounded theory: Strategies for Qualitative Research},\n    author      = {Glaser, Barney and Strauss, Anslem},\n    publisher   = {Aldine Publishing Company},\n    place       = {New York},\n    year        = {1967}\n}\n\n\n@article{Vallée-Tourangeau2020a,\n    author      = {Vallée-Tourangeau and March},\n    year        = {2020}\n}\n\n\n@article{Grice1975,\n    title       = {Logic and conversation},\n    author      = {Grice, H.P},\n    publisher   = {Aacdemic Press},\n    year        = {1975},\n    pages       = {41-58},\n    journal     = {Speech acts [syntax and semantics 3]}\n}\n\n\n@article{Gozli2017,\n    title       = {Behaviour versus performance: The veiled commitment of experimental psychology},\n    author      = {Gozli, Davood G.},\n    number      = {6},\n    volume      = {27},\n    doi         = {10.1177/0959354317728130},\n    year        = {2017-12},\n    pages       = {741-758},\n    journal     = {Theory & Psychology}\n}\n\n\n@article{Arfini2019,\n    title       = {Situated ignorance: the distribution and extension of ignorance in cognitive niches},\n    author      = {Arfini, Selene},\n    doi         = {10.1007/s11229-019-02328-0},\n    year        = {2019-07-24},\n    journal     = {Synthese}\n}\n\n\n@article{MacGregor2001,\n    title       = {Information processing and insight: A process model of performance on the nine-dot and related problems.},\n    author      = {MacGregor, James N. and Ormerod, Thomas C. and Chronicle, Edward P.},\n    number      = {1},\n    volume      = {27},\n    doi         = {10.1037//0278-7393.27.1.176},\n    year        = {2001},\n    pages       = {176-201},\n    journal     = {Journal of Experimental Psychology: Learning, Memory, and Cognition}\n}\n\n\n@article{Ormerod2013,\n    title       = {Act first, think later: The presence and absence of inferential planning in problem solving},\n    author      = {Ormerod, Thomas C. and MacGregor, James N. and Chronicle, Edward P. and Dewald, Andrew D. and Chu, Yun},\n    number      = {7},\n    volume      = {41},\n    doi         = {10.3758/s13421-013-0318-5},\n    year        = {2013-10},\n    pages       = {1096-1108},\n    journal     = {Memory & Cognition}\n}\n\n\n@article{Wilson2009,\n    title       = {How to situate cognition},\n    author      = {Wilson, Robert A. and Clark, Andy},\n    publisher   = {Cambridge University Press},\n    year        = {2009},\n    pages       = {55 -78},\n    journal     = {The Cambridge handbook of situated cognition}\n}"
+                  "value": "@article{March2020,\n    author      = {March},\n    year        = {2020}\n}\n\n\n@article{Vallée-Tourangeau2020,\n    title       = {Mapping systemic resources in problem solving},\n    author      = {Vallée-Tourangeau, Frédéric and Vallée-Tourangeau, Gaëlle},\n    doi         = {10.1016/j.newideapsych.2020.100812},\n    year        = {2020},\n    journal     = {New Ideas in Psychology}\n}\n\n\n@article{Bowden2005,\n    title       = {New approaches to demystifying insight},\n    author      = {Bowden, E and Jung-Beeman, Mark and Fleck, J and Kounios, J},\n    number      = {7},\n    volume      = {9},\n    doi         = {10.1016/j.tics.2005.05.012},\n    year        = {2005-07},\n    pages       = {322-328},\n    journal     = {Trends in Cognitive Sciences}\n}\n\n\n@article{Jones2003,\n    title       = {Testing two cognitive theories of insight.},\n    author      = {Jones, Gary},\n    number      = {5},\n    volume      = {29},\n    doi         = {10.1037/0278-7393.29.5.1017},\n    year        = {2003},\n    pages       = {1017-1027},\n    journal     = {Journal of Experimental Psychology: Learning, Memory, and Cognition}\n}\n\n\n@article{Chu2011,\n    title       = {Human performance on insight problem solving: A review},\n    author      = {Chu, Yun and MacGregor, James N.},\n    number      = {2},\n    volume      = {3},\n    doi         = {10.7771/1932-6246.1094},\n    year        = {2011-02-07},\n    journal     = {The Journal of Problem Solving}\n}\n\n\n@article{Fleck2013,\n    title       = {Insight versus analysis: Evidence for diverse methods in problem solving},\n    author      = {Fleck, Jessica I. and Weisberg, Robert W.},\n    number      = {4},\n    volume      = {25},\n    doi         = {10.1080/20445911.2013.779248},\n    year        = {2013-06},\n    pages       = {436-463},\n    journal     = {Journal of Cognitive Psychology}\n}\n\n\n@article{Weisberg2015,\n    title       = {Toward an integrated theory of insight in problem solving},\n    author      = {Weisberg, Robert W.},\n    number      = {1},\n    volume      = {21},\n    doi         = {10.1080/13546783.2014.886625},\n    year        = {2015-01-02},\n    pages       = {5-39},\n    journal     = {Thinking & Reasoning}\n}\n\n\n@article{Vallée‐Tourangeau2019,\n    title       = {Insight out: Making creativity visible},\n    author      = {Vallée‐Tourangeau, Frédéric and March, Paul L.},\n    doi         = {https://doi.org/10.1002/jocb.409},\n    year        = {2019},\n    journal     = {The Journal of Creative Behavior}\n}\n\n\n@article{Vallée‐Tourangeau2014,\n    title       = {Diagrams, jars, and matchsticks: A systemicist’s toolkit},\n    author      = {Vallée‐Tourangeau, Frédéric and Vallée-Tourangeau, Gaëlle},\n    number      = {2},\n    volume      = {22},\n    doi         = {10.1075/pc.22.2.02val},\n    year        = {2014-12-31},\n    pages       = {187-205},\n    journal     = {Pragmatics & Cognition}\n}\n\n\n@article{Andriani2017,\n    title       = {Measuring exaptation and its impact on innovation, search, and problem Solving},\n    author      = {Andriani, Pierpaolo and Ali, Ayfer and Mastrogiorgio, Mariano},\n    number      = {2},\n    volume      = {28},\n    doi         = {10.1287/orsc.2017.1116},\n    year        = {2017-04},\n    pages       = {320-338},\n    journal     = {Organization Science}\n}\n\n\n@article{Kirsh1994,\n    title       = {On distinguishing epistemic from pragmatic action},\n    author      = {Kirsh, David and Maglio, Paul},\n    number      = {4},\n    volume      = {18},\n    doi         = {10.1207/s15516709cog1804_1},\n    year        = {1994-10},\n    pages       = {513-549},\n    journal     = {Cognitive Science}\n}\n\n\n@article{Vallée-Tourangeau2020a,\n    author      = {Vallée-Tourangeau and March},\n    year        = {2020}\n}\n\n\n@book{Glaser1967,\n    title       = {The discovery of grounded theory: Strategies for Qualitative Research},\n    author      = {Glaser, Barney and Strauss, Anslem},\n    publisher   = {Aldine Publishing Company},\n    place       = {New York},\n    year        = {1967}\n}\n\n\n@article{Grice1975,\n    title       = {Logic and conversation},\n    author      = {Grice, H.P},\n    publisher   = {Aacdemic Press},\n    year        = {1975},\n    pages       = {41-58},\n    journal     = {Speech acts [syntax and semantics 3]}\n}\n\n\n@article{Gozli2017,\n    title       = {Behaviour versus performance: The veiled commitment of experimental psychology},\n    author      = {Gozli, Davood G.},\n    number      = {6},\n    volume      = {27},\n    doi         = {10.1177/0959354317728130},\n    year        = {2017-12},\n    pages       = {741-758},\n    journal     = {Theory & Psychology}\n}\n\n\n@article{Arfini2019,\n    title       = {Situated ignorance: the distribution and extension of ignorance in cognitive niches},\n    author      = {Arfini, Selene},\n    doi         = {10.1007/s11229-019-02328-0},\n    year        = {2019-07-24},\n    journal     = {Synthese}\n}\n\n\n@article{MacGregor2001,\n    title       = {Information processing and insight: A process model of performance on the nine-dot and related problems.},\n    author      = {MacGregor, James N. and Ormerod, Thomas C. and Chronicle, Edward P.},\n    number      = {1},\n    volume      = {27},\n    doi         = {10.1037//0278-7393.27.1.176},\n    year        = {2001},\n    pages       = {176-201},\n    journal     = {Journal of Experimental Psychology: Learning, Memory, and Cognition}\n}\n\n\n@article{Ormerod2013,\n    title       = {Act first, think later: The presence and absence of inferential planning in problem solving},\n    author      = {Ormerod, Thomas C. and MacGregor, James N. and Chronicle, Edward P. and Dewald, Andrew D. and Chu, Yun},\n    number      = {7},\n    volume      = {41},\n    doi         = {10.3758/s13421-013-0318-5},\n    year        = {2013-10},\n    pages       = {1096-1108},\n    journal     = {Memory & Cognition}\n}\n\n\n@article{Wilson2009,\n    title       = {How to situate cognition},\n    author      = {Wilson, Robert A. and Clark, Andy},\n    publisher   = {Cambridge University Press},\n    year        = {2009},\n    pages       = {55 -78},\n    journal     = {The Cambridge handbook of situated cognition}\n}"
                 }
               ]
             }
@@ -387,7 +387,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "This report describes a failed experimental manipulation in object-supported problem-solving. Participant footage allows a granular analysis of the reason for this failure. "
+                  "value": "This report describes a failed experimental manipulation in object-supported problem-solving. "
+                },
+                {
+                  "type": "text",
+                  "value": "Participant footage allows a granular analysis of the reason for this failure. "
                 },
                 {
                   "type": "text",
@@ -421,7 +425,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Insight problems are sometimes designed to encourage an incorrect and misleading interpretation that veils a simple answer. The socks problem is one such problem: Given black socks and brown socks in a drawer mixed in a ratio of four to five, how many socks will you have to take out to make sure that you have a pair of the same color? The ratio information is misleading since, with only two colors, pulling three socks will guarantee a matching pair. Recently, Vallée-Tourangeau and "
+                  "value": "Insight problems are sometimes designed to encourage an incorrect and misleading interpretation that veils a simple answer. "
+                },
+                {
+                  "type": "text",
+                  "value": "The socks problem is one such problem: Given black socks and brown socks in a drawer mixed in a ratio of four to five, how many socks will you have to take out to make sure that you have a pair of the same color? "
+                },
+                {
+                  "type": "text",
+                  "value": "The ratio information is misleading since, with only two colors, pulling three socks will guarantee a matching pair. "
+                },
+                {
+                  "type": "text",
+                  "value": "Recently, Vallée-Tourangeau and "
                 },
                 {
                   "type": "command",
@@ -440,15 +456,31 @@
                 },
                 {
                   "type": "text",
-                  "value": " offered a distinction between first- and second-order problem-solving: The former proceeds with and through a physical model of the problem, while the latter proceeds in the absence of such interactions with the world, in other words on the basis of mental processes alone. Vallée-Tourangeau and March also proposed a thought experiment, suggesting that the ratio information in the socks problem might be quickly abandoned in a first-order environment, that is, one where participants observe the results of drawing socks out of a bag rather than imagining themselves doing so. We tested this prediction by randomly allocating participants to a low- "
+                  "value": " offered a distinction between first- and second-order problem-solving: The former proceeds with and through a physical model of the problem, while the latter proceeds in the absence of such interactions with the world, in other words on the basis of mental processes alone. "
                 },
                 {
                   "type": "text",
-                  "value": "(second-order) or high- "
+                  "value": "Vallée-Tourangeau and March also proposed a thought experiment, suggesting that the ratio information in the socks problem might be quickly abandoned in a first-order environment, that is, one where participants observe the results of drawing socks out of a bag rather than imagining themselves doing so. "
                 },
                 {
                   "type": "text",
-                  "value": "(first-order) interactivity condition. Marginally more participants announced the correct answer within a 5-minute period in the high than in the low condition, although the difference was not significant. Detailed analysis of the video recording revealed the challenges of operationalizing a second-order condition, as participants engaged in dialogical interactions with the experimenter. In addition, the manner in which the high-interactivity condition was designed appeared to encourage the physical reification of the misleading ratio, thus anchoring that information more firmly rather than defusing it through interactivity. We close the paper with some reflections on wide, or systemic, cognition in experimental research on creative problem-solving. "
+                  "value": "We tested this prediction by randomly allocating participants to a low- (second-order) or high- (first-order) interactivity condition. "
+                },
+                {
+                  "type": "text",
+                  "value": "Marginally more participants announced the correct answer within a 5-minute period in the high than in the low condition, although the difference was not significant. "
+                },
+                {
+                  "type": "text",
+                  "value": "Detailed analysis of the video recording revealed the challenges of operationalizing a second-order condition, as participants engaged in dialogical interactions with the experimenter. "
+                },
+                {
+                  "type": "text",
+                  "value": "In addition, the manner in which the high-interactivity condition was designed appeared to encourage the physical reification of the misleading ratio, thus anchoring that information more firmly rather than defusing it through interactivity. "
+                },
+                {
+                  "type": "text",
+                  "value": "We close the paper with some reflections on wide, or systemic, cognition in experimental research on creative problem-solving. "
                 }
               ]
             },
@@ -482,11 +514,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The socks problem is a riddle commonly employed in research on insight problem-solving. The riddle goes: If you have black socks and brown socks in a drawer mixed in a ratio of four to five, how many socks will you have to take out to make sure that you have a pair of the same color? The ratio information is misleading since, with only two colors, pulling three socks will guarantee a matching pair. One of us "
+                  "value": "The socks problem is a riddle commonly employed in research on insight problem-solving. "
                 },
                 {
                   "type": "text",
-                  "value": "(Vallée-Tourangeau) in Vallée-Tourangeau and "
+                  "value": "The riddle goes: If you have black socks and brown socks in a drawer mixed in a ratio of four to five, how many socks will you have to take out to make sure that you have a pair of the same color? "
+                },
+                {
+                  "type": "text",
+                  "value": "The ratio information is misleading since, with only two colors, pulling three socks will guarantee a matching pair. "
+                },
+                {
+                  "type": "text",
+                  "value": "One of us "
+                },
+                {
+                  "type": "text",
+                  "value": "(Vallée-Tourangeau) in "
                 },
                 {
                   "type": "command",
@@ -497,7 +541,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "March2020"
+                          "value": "Vallée-Tourangeau2020"
                         }
                       ]
                     }
@@ -505,7 +549,23 @@
                 },
                 {
                   "type": "text",
-                  "value": " suggested that placing a participant in a materially rich environment rather than a sequestered one—in other words, giving her socks to test her ideas—would improve the solution rate. We aimed to translate this thought experiment into a physical one. The participants were therefore placed into two experimental conditions, one in which they could draw socks out of a bag to help them discover the answer or one in which they could not, and their performance was measured in terms of success and latency to success. We predicted that interacting with actual socks would lead to a higher level of success in a faster time. The participants were also filmed to facilitate strategy coding to assess if the different material environments prompted different strategies, as also predicted by Vallée-Tourangeau and March. "
+                  "value": " suggested that placing a participant in a materially rich environment rather than a sequestered one—in other words, giving her socks to test her ideas—would improve the solution rate. "
+                },
+                {
+                  "type": "text",
+                  "value": "We aimed to translate this thought experiment into a physical one. "
+                },
+                {
+                  "type": "text",
+                  "value": "The participants were therefore placed into two experimental conditions, one in which they could draw socks out of a bag to help them discover the answer or one in which they could not, and their performance was measured in terms of success and latency to success. "
+                },
+                {
+                  "type": "text",
+                  "value": "We predicted that interacting with actual socks would lead to a higher level of success in a faster time. "
+                },
+                {
+                  "type": "text",
+                  "value": "The participants were also filmed to facilitate strategy coding to assess if the different material environments prompted different strategies, as also predicted by Vallée-Tourangeau and March. "
                 }
               ]
             },
@@ -560,7 +620,35 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Insight problems are a class of problems used to investigate non-analytical problem-solving. Some insight problems are formulated in a manner that misleads participants by directing them towards an initial incorrect interpretation, therefore resisting incremental solution strategies. The solution to these problems involves abandoning this erroneous interpretation. The sock problem is a classic insight problem. The participant is asked “If you have black socks and brown socks in a drawer mixed in a ratio of 4 to 5, how many socks will you have to take out to make sure that you have a pair of the same color?” The problem masquerades as a mathematical problem—the conversational pragmatics forefronts the 4:5—but it is misleading information. The answer is three, no matter what the ratio is. It is possible to pull a pair with the first two socks but also to pull a brown and a black, however, the third sock would necessarily have to match with one or the other. The ratio of brown socks to black socks is immaterial and a distraction designed to set the participant on the wrong path. "
+                  "value": "Insight problems are a class of problems used to investigate non-analytical problem-solving. "
+                },
+                {
+                  "type": "text",
+                  "value": "Some insight problems are formulated in a manner that misleads participants by directing them towards an initial incorrect interpretation, therefore resisting incremental solution strategies. "
+                },
+                {
+                  "type": "text",
+                  "value": "The solution to these problems involves abandoning this erroneous interpretation. "
+                },
+                {
+                  "type": "text",
+                  "value": "The sock problem is a classic insight problem. "
+                },
+                {
+                  "type": "text",
+                  "value": "The participant is asked “If you have black socks and brown socks in a drawer mixed in a ratio of 4 to 5, how many socks will you have to take out to make sure that you have a pair of the same color?” The problem masquerades as a mathematical problem—the conversational pragmatics forefronts the 4:5—but it is misleading information. "
+                },
+                {
+                  "type": "text",
+                  "value": "The answer is three, no matter what the ratio is. "
+                },
+                {
+                  "type": "text",
+                  "value": "It is possible to pull a pair with the first two socks but also to pull a brown and a black, however, the third sock would necessarily have to match with one or the other. "
+                },
+                {
+                  "type": "text",
+                  "value": "The ratio of brown socks to black socks is immaterial and a distraction designed to set the participant on the wrong path. "
                 }
               ]
             },
@@ -608,7 +696,15 @@
                 },
                 {
                   "type": "text",
-                  "value": " suggest that this problem is difficult if you approach it mathematically but easier if you use a “what if” strategy: “That is, if the solver asks, ‘What if I take out a black sock then a brown sock? I would only need one more sock of either color to have a pair of the same color’” (p. 323). Jones "
+                  "value": " suggest that this problem is difficult if you approach it mathematically but easier if you use a “what if” strategy: “That is, if the solver asks, ‘What if I take out a black sock then a brown sock? "
+                },
+                {
+                  "type": "text",
+                  "value": "I would only need one more sock of either color to have a pair of the same color’” (p. 323). "
+                },
+                {
+                  "type": "text",
+                  "value": "Jones "
                 },
                 {
                   "type": "command",
@@ -666,7 +762,11 @@
                 },
                 {
                   "type": "text",
-                  "value": "[emphasis added]” (p. 12). Again, Chu and MacGregor "
+                  "value": "[emphasis added]” (p. 12). "
+                },
+                {
+                  "type": "text",
+                  "value": "Again, Chu and MacGregor "
                 },
                 {
                   "type": "command",
@@ -705,7 +805,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " suggest “[t]he problem solver may only have to run through a couple of trials in her head before arriving at the conclusion that, at most, you only need to draw three socks to match a pair” (p. 211). In a later description of Fleck and Weisberg "
+                  "value": " suggest “[t]he problem solver may only have to run through a couple of trials in her head before arriving at the conclusion that, at most, you only need to draw three socks to match a pair” (p. 211). "
+                },
+                {
+                  "type": "text",
+                  "value": "In a later description of Fleck and Weisberg "
                 },
                 {
                   "type": "command",
@@ -772,7 +876,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "In other words, while the problem invites an initial mathematical representation, the solution not only requires the participant to see the problem non-mathematically but is likely facilitated when they see themselves in a real-world environment where they can solve it in a trial-and-error way. Already there is a bridge between mental abstraction and embodied experience being posited here—the problem is hard to solve on the basis of “pure” mental processes. Therefore, it seems almost trivial to suggest that placing participants in such a real-world situation would augment problem-solving—rather than the problem-solver imagining herself drawing socks from a bag, she could actually do that. Indeed, this is what one of us predicted in Vallée-Tourangeau and March "
+                  "value": "In other words, while the problem invites an initial mathematical representation, the solution not only requires the participant to see the problem non-mathematically but is likely facilitated when they see themselves in a real-world environment where they can solve it in a trial-and-error way. "
+                },
+                {
+                  "type": "text",
+                  "value": "Already there is a bridge between mental abstraction and embodied experience being posited here—the problem is hard to solve on the basis of “pure” mental processes. "
+                },
+                {
+                  "type": "text",
+                  "value": "Therefore, it seems almost trivial to suggest that placing participants in such a real-world situation would augment problem-solving—rather than the problem-solver imagining herself drawing socks from a bag, she could actually do that. "
+                },
+                {
+                  "type": "text",
+                  "value": "Indeed, this is what one of us predicted in Vallée-Tourangeau and March "
                 },
                 {
                   "type": "command",
@@ -841,7 +957,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "This vignette functioned as an “intuition pump”— however, it is justified both theoretically and in light of the prior theorizing on the routes to solving this particular problem. It supported the argument in the paper that, embedding the problem-solver in an environment where she can interact with objects outside of the body (a first-order environment) is preferable to the “second-order” and sequestered environments normally found in experimental psychology "
+                  "value": "This vignette functioned as an “intuition pump”— however, it is justified both theoretically and in light of the prior theorizing on the routes to solving this particular problem. "
+                },
+                {
+                  "type": "text",
+                  "value": "It supported the argument in the paper that, embedding the problem-solver in an environment where she can interact with objects outside of the body (a first-order environment) is preferable to the “second-order” and sequestered environments normally found in experimental psychology "
                 },
                 {
                   "type": "command",
@@ -884,7 +1004,27 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Much research on embedded problem-solvers has a computational focus. Under this framework, the material offloads are only seen as expanding mental workspace and so it follows that they will necessarily have an augmentative effect. However, the thought experiment outlined above introduces a novel and non-computational mechanism through which interactivity with an external representation is beneficial—that of unplanned and aimless fiddling. The sock problem does not require cognitive scaffolding, nor does it require the introduction of novel information to the system, but rather requires the repression of the distracting information. Any benefits yielded by interactivity should result from the shifting of the problem presentation through action and the transfer into a different problem space, away from an arithmetic problem towards a more mundane activity. Consequently, the evidence that could be generated by testing this would strengthen arguments that interactivity is more beneficial than simply acting as a scaffolding extension. "
+                  "value": "Much research on embedded problem-solvers has a computational focus. "
+                },
+                {
+                  "type": "text",
+                  "value": "Under this framework, the material offloads are only seen as expanding mental workspace and so it follows that they will necessarily have an augmentative effect. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, the thought experiment outlined above introduces a novel and non-computational mechanism through which interactivity with an external representation is beneficial—that of unplanned and aimless fiddling. "
+                },
+                {
+                  "type": "text",
+                  "value": "The sock problem does not require cognitive scaffolding, nor does it require the introduction of novel information to the system, but rather requires the repression of the distracting information. "
+                },
+                {
+                  "type": "text",
+                  "value": "Any benefits yielded by interactivity should result from the shifting of the problem presentation through action and the transfer into a different problem space, away from an arithmetic problem towards a more mundane activity. "
+                },
+                {
+                  "type": "text",
+                  "value": "Consequently, the evidence that could be generated by testing this would strengthen arguments that interactivity is more beneficial than simply acting as a scaffolding extension. "
                 }
               ]
             },
@@ -893,7 +1033,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "In other words, in this case, the problem-solving described above does not rely on actions that strategically exploit the environment to support the mental workspace. Rather, it relies on a series of gestures that we have labeled "
+                  "value": "In other words, in this case, the problem-solving described above does not rely on actions that strategically exploit the environment to support the mental workspace. "
+                },
+                {
+                  "type": "text",
+                  "value": "Rather, it relies on a series of gestures that we have labeled "
                 },
                 {
                   "type": "command",
@@ -912,7 +1056,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Exaptation describes the reuse of an existing artifact for a new purpose. It has been suggested that exaptation is an important driver of innovation because it allows for novelty to arise "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Exaptation describes the reuse of an existing artifact for a new purpose. "
+                },
+                {
+                  "type": "text",
+                  "value": "It has been suggested that exaptation is an important driver of innovation because it allows for novelty to arise "
                 },
                 {
                   "type": "command",
@@ -931,7 +1083,19 @@
                 },
                 {
                   "type": "text",
-                  "value": ". We borrow the term to refer to actions that have no initial purpose (for example, fiddling) but from which purpose emerges once results are seen. In other words, the purpose of the original action changes. Exaptative actions are different from epistemic or pragmatic actions "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "We borrow the term to refer to actions that have no initial purpose (for example, fiddling) but from which purpose emerges once results are seen. "
+                },
+                {
+                  "type": "text",
+                  "value": "In other words, the purpose of the original action changes. "
+                },
+                {
+                  "type": "text",
+                  "value": "Exaptative actions are different from epistemic or pragmatic actions "
                 },
                 {
                   "type": "command",
@@ -989,11 +1153,19 @@
                 },
                 {
                   "type": "text",
-                  "value": ". —and their purpose changes through action. What makes the case of the sock problem particularly interesting is that actions which have a purposeful intention (say, for example, reifying the ratio) are unlikely to be beneficial in this case. "
+                  "value": ". —and their purpose changes through action. "
                 },
                 {
                   "type": "text",
-                  "value": "Exaptative actions such as those described in the thought experiments are very different to actions intended to scaffold computations, which are normally investigated in object-supported cognition. Therefore, the claim made in the thought experiment is perhaps stronger than the authors may realize and requires further investigation."
+                  "value": "What makes the case of the sock problem particularly interesting is that actions which have a purposeful intention (say, for example, reifying the ratio) are unlikely to be beneficial in this case. "
+                },
+                {
+                  "type": "text",
+                  "value": "Exaptative actions such as those described in the thought experiments are very different to actions intended to scaffold computations, which are normally investigated in object-supported cognition. "
+                },
+                {
+                  "type": "text",
+                  "value": "Therefore, the claim made in the thought experiment is perhaps stronger than the authors may realize and requires further investigation."
                 }
               ]
             },
@@ -1023,7 +1195,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "There were two predictions made in Vallée-Tourangeau and "
+                  "value": "There were two predictions made in "
                 },
                 {
                   "type": "command",
@@ -1034,7 +1206,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "March2020"
+                          "value": "Vallée-Tourangeau2020a"
                         }
                       ]
                     }
@@ -1042,7 +1214,23 @@
                 },
                 {
                   "type": "text",
-                  "value": ". First, that the use of an actual bag of socks will lead to augmented performance, as measured by a higher solution rate. Second, that the way performance would be augmented would feature two components: The first being that the participant would forget the misleading ratio information, and the second being that the participant would be able to view the answer as she pulled socks out of the bag. This clear behavioral process hypothesis has a firm theoretical basis as outlined above. The current study aimed to test both the behavioral and performance hypotheses. "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "First, that the use of an actual bag of socks will lead to augmented performance, as measured by a higher solution rate. "
+                },
+                {
+                  "type": "text",
+                  "value": "Second, that the way performance would be augmented would feature two components: The first being that the participant would forget the misleading ratio information, and the second being that the participant would be able to view the answer as she pulled socks out of the bag. "
+                },
+                {
+                  "type": "text",
+                  "value": "This clear behavioral process hypothesis has a firm theoretical basis as outlined above. "
+                },
+                {
+                  "type": "text",
+                  "value": "The current study aimed to test both the behavioral and performance hypotheses. "
                 }
               ]
             },
@@ -1059,7 +1247,15 @@
                 },
                 {
                   "type": "text",
-                  "value": "QUAL) analysis plan, but was changed because the experimental manipulation failed. Specifically, we no longer had faith that the low-interactivity condition represented a sequestered environment. In this report, we present the quantitative method and results before moving onto the qualitative phase, which yielded more substantive conclusions. "
+                  "value": "QUAL) analysis plan, but was changed because the experimental manipulation failed. "
+                },
+                {
+                  "type": "text",
+                  "value": "Specifically, we no longer had faith that the low-interactivity condition represented a sequestered environment. "
+                },
+                {
+                  "type": "text",
+                  "value": "In this report, we present the quantitative method and results before moving onto the qualitative phase, which yielded more substantive conclusions. "
                 }
               ]
             },
@@ -1068,7 +1264,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "There were therefore two formal hypotheses: The first, a performance hypothesis: that a high-interactivity environment would augment problem-solving success. The second, a process hypothesis: that high interactivity would lead participants to (a) disregard the ratio, (b) observe the answer in their actions."
+                  "value": "There were therefore two formal hypotheses: The first, a performance hypothesis: that a high-interactivity environment would augment problem-solving success. "
+                },
+                {
+                  "type": "text",
+                  "value": "The second, a process hypothesis: that high interactivity would lead participants to (a) disregard the ratio, (b) observe the answer in their actions."
                 }
               ]
             },
@@ -1155,7 +1355,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Forty-one participants (a mix of undergraduate and postgraduate psychology students) were recruited in exchange for course credits. One participant was excluded for knowing the problem, one for not adhering to the stipulations of having English as a first language, and one because of data loss. This left 38 participants (31 women) with a mean age of 26.28 years ("
+                  "value": "Forty-one participants (a mix of undergraduate and postgraduate psychology students) were recruited in exchange for course credits. "
+                },
+                {
+                  "type": "text",
+                  "value": "One participant was excluded for knowing the problem, one for not adhering to the stipulations of having English as a first language, and one because of data loss. "
+                },
+                {
+                  "type": "text",
+                  "value": "This left 38 participants (31 women) with a mean age of 26.28 years ("
                 },
                 {
                   "type": "command",
@@ -1174,7 +1382,15 @@
                 },
                 {
                   "type": "text",
-                  "value": " = 12.14). The participants were assigned in turn to the two conditions. Eighteen participants took part in the low-interactivity condition and 20 participants took part in the high-interactivity condition. "
+                  "value": " = 12.14). "
+                },
+                {
+                  "type": "text",
+                  "value": "The participants were assigned in turn to the two conditions. "
+                },
+                {
+                  "type": "text",
+                  "value": "Eighteen participants took part in the low-interactivity condition and 20 participants took part in the high-interactivity condition. "
                 }
               ]
             },
@@ -1204,7 +1420,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Participants were filmed in a purposely-built lab with three in-built cameras to facilitate coding for the behavioral hypothesis. To minimize the differences between the conditions, both high- and low-interactivity conditions had the same initial setup: In both conditions, each participant was presented with a bag of 90 socks, among which were 50 black and 40 brown, and the only difference was that participants in the high-interactivity condition were allowed to pull socks from the bag (see Figure 1). "
+                  "value": "Participants were filmed in a purposely-built lab with three in-built cameras to facilitate coding for the behavioral hypothesis. "
+                },
+                {
+                  "type": "text",
+                  "value": "To minimize the differences between the conditions, both high- and low-interactivity conditions had the same initial setup: In both conditions, each participant was presented with a bag of 90 socks, among which were 50 black and 40 brown, and the only difference was that participants in the high-interactivity condition were allowed to pull socks from the bag (see Figure 1). "
                 }
               ]
             },
@@ -1347,7 +1567,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " Participants were given a bag with 50 black socks and 40 brown socks (panel a). The researcher stayed in the room to give instructions and make notes (panel b)."
+                  "value": " Participants were given a bag with 50 black socks and 40 brown socks (panel a). "
+                },
+                {
+                  "type": "text",
+                  "value": "The researcher stayed in the room to give instructions and make notes (panel b)."
                 }
               ]
             },
@@ -1356,7 +1580,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The original instructions ran thus: “If you have a drawer with brown socks and black socks mixed in a ratio of 4:5, how many would you have to pull out in order to guarantee a pair?” The instructions were read aloud to participants. However, after piloting, these needed to be refined and the final instructions ran thus: "
+                  "value": "The original instructions ran thus: “If you have a drawer with brown socks and black socks mixed in a ratio of 4:5, how many would you have to pull out in order to guarantee a pair?” The instructions were read aloud to participants. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, after piloting, these needed to be refined and the final instructions ran thus: "
                 }
               ]
             },
@@ -1424,7 +1652,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Participants were given 5 minutes to answer the problem and they were allowed to make multiple attempts. They were not prevented from speaking to the researcher nor, however, were they requested to follow a think-aloud protocol. The researcher would only answer questions by repeating the relevant part of the instructions. The researcher kept detailed notes while observing the participants; the participants were recorded throughout the study and the videos were later watched and coded. The participants’ performance was measured in terms of success and the latency to a correct solution. "
+                  "value": "Participants were given 5 minutes to answer the problem and they were allowed to make multiple attempts. "
+                },
+                {
+                  "type": "text",
+                  "value": "They were not prevented from speaking to the researcher nor, however, were they requested to follow a think-aloud protocol. "
+                },
+                {
+                  "type": "text",
+                  "value": "The researcher would only answer questions by repeating the relevant part of the instructions. "
+                },
+                {
+                  "type": "text",
+                  "value": "The researcher kept detailed notes while observing the participants; the participants were recorded throughout the study and the videos were later watched and coded. "
+                },
+                {
+                  "type": "text",
+                  "value": "The participants’ performance was measured in terms of success and the latency to a correct solution. "
                 }
               ]
             },
@@ -1454,7 +1698,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Performance was better in the high-interactivity condition in which 10 participants (or 50%) solved the problem compared to the low condition in which 7 participants (or 38%) did so. This difference was not significant, however ("
+                  "value": "Performance was better in the high-interactivity condition in which 10 participants (or 50%) solved the problem compared to the low condition in which 7 participants (or 38%) did so. "
+                },
+                {
+                  "type": "text",
+                  "value": "This difference was not significant, however ("
                 },
                 {
                   "type": "command",
@@ -1511,7 +1759,11 @@
                 },
                 {
                   "type": "text",
-                  "value": "= .492, Cramer’s V = 0.11). Participants were slower in the high-interactivity condition with an average latency of 116.20 seconds ("
+                  "value": "= .492, Cramer’s V = 0.11). "
+                },
+                {
+                  "type": "text",
+                  "value": "Participants were slower in the high-interactivity condition with an average latency of 116.20 seconds ("
                 },
                 {
                   "type": "command",
@@ -1625,7 +1877,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " = 0.19. Removing these two outlying participants, the mean latencies were 96.1 s ("
+                  "value": " = 0.19. "
+                },
+                {
+                  "type": "text",
+                  "value": "Removing these two outlying participants, the mean latencies were 96.1 s ("
                 },
                 {
                   "type": "command",
@@ -1908,7 +2164,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Over the course of the research, it became clear that the experimental manipulation failed and that there were significant procedural and theoretical assumptions and errors. Some were failures in experimental procedures"
+                  "value": "Over the course of the research, it became clear that the experimental manipulation failed and that there were significant procedural and theoretical assumptions and errors. "
+                },
+                {
+                  "type": "text",
+                  "value": "Some were failures in experimental procedures"
                 },
                 {
                   "type": "command",
@@ -1936,7 +2196,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Additionally, the video data suggested that there were underlying patterns from which new knowledge about this problem situation could be deduced beyond that contained within the strictures of the hypothetico-deductive model. In other words, theoretically valid reasons for the practical and experimental failure of the experiment could be seen in the behavior of participants throughout the experimental situation. A decision was made to employ a modified version of Grounded Theory Method (GTM; "
+                  "value": "Additionally, the video data suggested that there were underlying patterns from which new knowledge about this problem situation could be deduced beyond that contained within the strictures of the hypothetico-deductive model. "
+                },
+                {
+                  "type": "text",
+                  "value": "In other words, theoretically valid reasons for the practical and experimental failure of the experiment could be seen in the behavior of participants throughout the experimental situation. "
+                },
+                {
+                  "type": "text",
+                  "value": "A decision was made to employ a modified version of Grounded Theory Method (GTM; "
                 },
                 {
                   "type": "command",
@@ -1955,7 +2223,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ") with the video data to generate novel theories about problem-solving in this task. Thus, the focus of the research shifted from an experimental manipulation to an observational study assessing qualitatively how participants solve this problem. Consequently, we abandoned the original hypotheses. "
+                  "value": ") with the video data to generate novel theories about problem-solving in this task. "
+                },
+                {
+                  "type": "text",
+                  "value": "Thus, the focus of the research shifted from an experimental manipulation to an observational study assessing qualitatively how participants solve this problem. "
+                },
+                {
+                  "type": "text",
+                  "value": "Consequently, we abandoned the original hypotheses. "
                 }
               ]
             },
@@ -1985,7 +2261,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The initial observations generated in vivo were followed up by a close examination of the video data with time-stamped qualitative memos. Conversations were transcribed and time stamped. These observations were then grouped into conceptual categories before the videos were reviewed a second time to substantiate these categories. This iterative process continued through initial drafts of this paper. In tandem with the data analysis carried out through watching the videos, results were discussed between both authors and conceptual categories were refined. "
+                  "value": "The initial observations generated in vivo were followed up by a close examination of the video data with time-stamped qualitative memos. "
+                },
+                {
+                  "type": "text",
+                  "value": "Conversations were transcribed and time stamped. "
+                },
+                {
+                  "type": "text",
+                  "value": "These observations were then grouped into conceptual categories before the videos were reviewed a second time to substantiate these categories. "
+                },
+                {
+                  "type": "text",
+                  "value": "This iterative process continued through initial drafts of this paper. "
+                },
+                {
+                  "type": "text",
+                  "value": "In tandem with the data analysis carried out through watching the videos, results were discussed between both authors and conceptual categories were refined. "
                 }
               ]
             },
@@ -2015,7 +2307,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The initial hypothesis of an augmentative effect of a high-interactivity environment compared to a low-interactivity environment was not sustained. The qualitative analysis detailed below pinpoints why this might be so: Excess environmental information and the encouragement to interact with it reified unhelpful representations. Additionally, a form of "
+                  "value": "The initial hypothesis of an augmentative effect of a high-interactivity environment compared to a low-interactivity environment was not sustained. "
+                },
+                {
+                  "type": "text",
+                  "value": "The qualitative analysis detailed below pinpoints why this might be so: Excess environmental information and the encouragement to interact with it reified unhelpful representations. "
+                },
+                {
+                  "type": "text",
+                  "value": "Additionally, a form of "
                 },
                 {
                   "type": "command",
@@ -2053,7 +2353,15 @@
                 },
                 {
                   "type": "text",
-                  "value": " interactivity which focused on the instructions and the researcher replaced the object-based interactivity. The iterative process of discovery emerged more often in this linguistic space than in the space between object and person. This was a form of interactivity that was not accounted for in the rather narrow (and in hindsight naïve) high- and low-interactivity conditions outlined above, and yet it occurred in both experimental conditions and was in part the reason for the inconclusive results and the failed manipulation. "
+                  "value": " interactivity which focused on the instructions and the researcher replaced the object-based interactivity. "
+                },
+                {
+                  "type": "text",
+                  "value": "The iterative process of discovery emerged more often in this linguistic space than in the space between object and person. "
+                },
+                {
+                  "type": "text",
+                  "value": "This was a form of interactivity that was not accounted for in the rather narrow (and in hindsight naïve) high- and low-interactivity conditions outlined above, and yet it occurred in both experimental conditions and was in part the reason for the inconclusive results and the failed manipulation. "
                 }
               ]
             },
@@ -2083,7 +2391,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The socks problem is a hard one because participants get stuck on the unhelpful ratio. As suggested by "
+                  "value": "The socks problem is a hard one because participants get stuck on the unhelpful ratio. "
+                },
+                {
+                  "type": "text",
+                  "value": "As suggested by "
                 },
                 {
                   "type": "command",
@@ -2102,7 +2414,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ", ignoring the ratio should lead to participants solving the problem more often and faster because they are not tempted to use inappropriate mathematical formulae. As we have addressed above, this is not an unreasonable assumption. However, the specific hypothesis under exploration, that a high-interactivity environment would increase the number of people who disregard the ratio, was not sustained by an analysis of what people did in this condition; it appeared that the opposite was the case, that a high-interactivity reinforced the unhelpful information. "
+                  "value": ", ignoring the ratio should lead to participants solving the problem more often and faster because they are not tempted to use inappropriate mathematical formulae. "
+                },
+                {
+                  "type": "text",
+                  "value": "As we have addressed above, this is not an unreasonable assumption. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, the specific hypothesis under exploration, that a high-interactivity environment would increase the number of people who disregard the ratio, was not sustained by an analysis of what people did in this condition; it appeared that the opposite was the case, that a high-interactivity reinforced the unhelpful information. "
                 }
               ]
             },
@@ -2111,7 +2431,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "There are two ways in which a problem-solver could approach solving a problem using interactivity: The first involves the sort of exaptative actions mentioned in the initial hypothesis, while the second involves using the world to scaffold existing representations. In the case of problems designed to elicit an unhelpful representation, it is plausible that such a representation, when reified, would be harder to disregard. A high-interactivity environment can scaffold unhelpful representations as well as helpful ones."
+                  "value": "There are two ways in which a problem-solver could approach solving a problem using interactivity: The first involves the sort of exaptative actions mentioned in the initial hypothesis, while the second involves using the world to scaffold existing representations. "
+                },
+                {
+                  "type": "text",
+                  "value": "In the case of problems designed to elicit an unhelpful representation, it is plausible that such a representation, when reified, would be harder to disregard. "
+                },
+                {
+                  "type": "text",
+                  "value": "A high-interactivity environment can scaffold unhelpful representations as well as helpful ones."
                 }
               ]
             },
@@ -2120,7 +2448,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "This reification was clearly in line with evidence in the study reported here: Interactivity allowed participants to represent the ratio in a solid form. Many of them pulled five brown socks from the bag and then four black socks and used these to structure their thoughts, so the ratio became harder to disregard. This was a sensible decision; it is not unreasonable to assume that the information in the problem is important (in terms of conversational pragmatics, it would make little sense to be informed of the ratio if it was not relevant; "
+                  "value": "This reification was clearly in line with evidence in the study reported here: Interactivity allowed participants to represent the ratio in a solid form. "
+                },
+                {
+                  "type": "text",
+                  "value": "Many of them pulled five brown socks from the bag and then four black socks and used these to structure their thoughts, so the ratio became harder to disregard. "
+                },
+                {
+                  "type": "text",
+                  "value": "This was a sensible decision; it is not unreasonable to assume that the information in the problem is important (in terms of conversational pragmatics, it would make little sense to be informed of the ratio if it was not relevant; "
                 },
                 {
                   "type": "command",
@@ -2139,7 +2475,11 @@
                 },
                 {
                   "type": "text",
-                  "value": "). Therefore, the strategy of reifying the ratios is on the one hand sensible, and paradoxically, on the other hand, makes the problem harder to solve."
+                  "value": "). "
+                },
+                {
+                  "type": "text",
+                  "value": "Therefore, the strategy of reifying the ratios is on the one hand sensible, and paradoxically, on the other hand, makes the problem harder to solve."
                 }
               ]
             },
@@ -2148,7 +2488,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "However, in addition to allowing the reification of the information in the problem, the presentation of actual socks expanded the amount of information and the number of possible unproductive pathways. Problem-solving in this less controlled environment did not scaffold thought but rather created an additional distraction. Indeed, the concrete anchoring of the problem led people to look at the distribution of socks in the "
+                  "value": "However, in addition to allowing the reification of the information in the problem, the presentation of actual socks expanded the amount of information and the number of possible unproductive pathways. "
+                },
+                {
+                  "type": "text",
+                  "value": "Problem-solving in this less controlled environment did not scaffold thought but rather created an additional distraction. "
+                },
+                {
+                  "type": "text",
+                  "value": "Indeed, the concrete anchoring of the problem led people to look at the distribution of socks in the "
                 },
                 {
                   "type": "command",
@@ -2167,7 +2515,19 @@
                 },
                 {
                   "type": "text",
-                  "value": " bag that they had in front of them rather than considering it an abstracted entity. This was true even for those who were in the low-interactivity condition who tended to return their gaze to the bag when thinking. Take for example, participant 36: Figure 3 demonstrates the extent to which she was looking at and into the bag even while not interacting with the socks in it. Throughout the course of the experiment, she looked at the bag and the accompanying finger gestures and mouthing of numbers indicate that she was trying to count the socks that were in it. "
+                  "value": " bag that they had in front of them rather than considering it an abstracted entity. "
+                },
+                {
+                  "type": "text",
+                  "value": "This was true even for those who were in the low-interactivity condition who tended to return their gaze to the bag when thinking. "
+                },
+                {
+                  "type": "text",
+                  "value": "Take for example, participant 36: Figure 3 demonstrates the extent to which she was looking at and into the bag even while not interacting with the socks in it. "
+                },
+                {
+                  "type": "text",
+                  "value": "Throughout the course of the experiment, she looked at the bag and the accompanying finger gestures and mouthing of numbers indicate that she was trying to count the socks that were in it. "
                 }
               ]
             },
@@ -2176,7 +2536,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "So, rather than supporting problem-solving, the actual physical arrangements of socks added complexity. Participant 26 (low-interactivity) said “Well looking at "
+                  "value": "So, rather than supporting problem-solving, the actual physical arrangements of socks added complexity. "
+                },
+                {
+                  "type": "text",
+                  "value": "Participant 26 (low-interactivity) said “Well looking at "
                 },
                 {
                   "type": "command",
@@ -2195,7 +2559,23 @@
                 },
                 {
                   "type": "text",
-                  "value": " bag, all the black socks are at the top so it would take a while to get a brown pair” (01:36). Within a traditional problem-solving environment, participants know that they are solving a riddle and that they are in an artificial situation. In this experiment, the artificial, almost school-type problem collapsed with the far too mundane situation of finding a pair of socks. There simply is no “real-world” version of the hypothesized riddle. Somehow, the simplicity of this quotidian activity supported the intractability of the mathematical puzzle: If you want a pair of socks, you get them out of the bag."
+                  "value": " bag, all the black socks are at the top so it would take a while to get a brown pair” (01:36). "
+                },
+                {
+                  "type": "text",
+                  "value": "Within a traditional problem-solving environment, participants know that they are solving a riddle and that they are in an artificial situation. "
+                },
+                {
+                  "type": "text",
+                  "value": "In this experiment, the artificial, almost school-type problem collapsed with the far too mundane situation of finding a pair of socks. "
+                },
+                {
+                  "type": "text",
+                  "value": "There simply is no “real-world” version of the hypothesized riddle. "
+                },
+                {
+                  "type": "text",
+                  "value": "Somehow, the simplicity of this quotidian activity supported the intractability of the mathematical puzzle: If you want a pair of socks, you get them out of the bag."
                 }
               ]
             },
@@ -2351,7 +2731,43 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Additional information was deeply unhelpful in this case. When the problem is presented as a verbal riddle, the number of socks is not given; not only is there no way of knowing it, it is also irrelevant. However, when the participants are presented with a bag full of socks and a problem masquerading as a mathematical one, the total number of socks appears to take on more importance, much like the ratio information in the verbal form of the puzzle. In addition, investigating this unproductive cul-de-sac was easier for those in the high-interactivity condition and therefore harder to disregard. Take for example participant 37: After asking for clarification of the problems at 33 seconds into the task, he asked: “How many were there in total?” (00:33). After 58 seconds elapsed, he decided to empty the bag and to count the socks. It is hard to overstate what a poor decision this is (illustrated in Figure 4 where a screenshot was taken every 10 seconds over the following 220 seconds). Perhaps like participant 25, who stated “Ah, that’s what I have to do, I have to know how many are in here” (02:15) before tipping the bag out, the participant thought he had solved the “trick”. Whatever the reason, the messiness of tipping out all the socks then counting them and the high time cost meant that he made no progress. This wrong route would not have been possible in a low-interactivity or second-order problem-solving environment, yet again it is important to stress that this is not an illogical decision. "
+                  "value": "Additional information was deeply unhelpful in this case. "
+                },
+                {
+                  "type": "text",
+                  "value": "When the problem is presented as a verbal riddle, the number of socks is not given; not only is there no way of knowing it, it is also irrelevant. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, when the participants are presented with a bag full of socks and a problem masquerading as a mathematical one, the total number of socks appears to take on more importance, much like the ratio information in the verbal form of the puzzle. "
+                },
+                {
+                  "type": "text",
+                  "value": "In addition, investigating this unproductive cul-de-sac was easier for those in the high-interactivity condition and therefore harder to disregard. "
+                },
+                {
+                  "type": "text",
+                  "value": "Take for example participant 37: After asking for clarification of the problems at 33 seconds into the task, he asked: “How many were there in total?” (00:33). "
+                },
+                {
+                  "type": "text",
+                  "value": "After 58 seconds elapsed, he decided to empty the bag and to count the socks. "
+                },
+                {
+                  "type": "text",
+                  "value": "It is hard to overstate what a poor decision this is (illustrated in Figure 4 where a screenshot was taken every 10 seconds over the following 220 seconds). "
+                },
+                {
+                  "type": "text",
+                  "value": "Perhaps like participant 25, who stated “Ah, that’s what I have to do, I have to know how many are in here” (02:15) before tipping the bag out, the participant thought he had solved the “trick”. "
+                },
+                {
+                  "type": "text",
+                  "value": "Whatever the reason, the messiness of tipping out all the socks then counting them and the high time cost meant that he made no progress. "
+                },
+                {
+                  "type": "text",
+                  "value": "This wrong route would not have been possible in a low-interactivity or second-order problem-solving environment, yet again it is important to stress that this is not an illogical decision. "
                 }
               ]
             },
@@ -2363,35 +2779,8 @@
               "type": "paragraph",
               "children": [
                 {
-                  "type": "environment",
-                  "name": "figure",
-                  "children": []
-                },
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "Figure "
-                    },
-                    {
-                      "type": "text",
-                      "value": "4"
-                    }
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "children": [
-                    {
-                      "type": "text",
-                      "value": "Participant 37 Tidying Socks "
-                    }
-                  ]
-                },
-                {
-                  "type": "paragraph",
-                  "children": []
+                  "type": "text",
+                  "value": "Figure "
                 },
                 {
                   "type": "environment",
@@ -2533,7 +2922,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Additionally, the video data revealed versions of cognitive interactivity which were not related to the moving of the objects and hence did not feature in the original hypotheses but which which scaffolded the pathway to solution. For instance, "
+                  "value": "Additionally, the video data revealed versions of cognitive interactivity which were not related to the moving of the objects and hence did not feature in the original hypotheses but which which scaffolded the pathway to solution. "
+                },
+                {
+                  "type": "text",
+                  "value": "For instance, "
                 },
                 {
                   "type": "text",
@@ -2541,7 +2934,23 @@
                 },
                 {
                   "type": "text",
-                  "value": ". This was an unintended artifact of the experimental situation and, albeit subsequently serendipitous, an inelegant one. The instructions were given verbally, and the participants were allowed to ask for clarification. The clarification took the form of the experimenter repeating the relevant set of instructions. Thus, what is often unspoken (checking instructions) became a traceable experimental artifact. "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "This was an unintended artifact of the experimental situation and, albeit subsequently serendipitous, an inelegant one. "
+                },
+                {
+                  "type": "text",
+                  "value": "The instructions were given verbally, and the participants were allowed to ask for clarification. "
+                },
+                {
+                  "type": "text",
+                  "value": "The clarification took the form of the experimenter repeating the relevant set of instructions. "
+                },
+                {
+                  "type": "text",
+                  "value": "Thus, what is often unspoken (checking instructions) became a traceable experimental artifact. "
                 }
               ]
             },
@@ -2550,7 +2959,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "What this underscored was the importance of the instructions to the problem solution. Initially, there was a change made to the instructions, as outlined above, to ensure that all salient information was clearly presented, but this did not change the participants’ need for clarification. This clarification revealed two things: First, a consistent epistemic state across participants despite consistent task instructions should not be assumed; second, it was possible to use these clarifications in a trial-and-error way to structure understanding and gain new knowledge. Indeed, the nature of the task requires restructuring the instructions rather than manipulating the visuospatial field. Therefore, it is not unreasonable that the interactivity coalesces on this linguistic plane. "
+                  "value": "What this underscored was the importance of the instructions to the problem solution. "
+                },
+                {
+                  "type": "text",
+                  "value": "Initially, there was a change made to the instructions, as outlined above, to ensure that all salient information was clearly presented, but this did not change the participants’ need for clarification. "
+                },
+                {
+                  "type": "text",
+                  "value": "This clarification revealed two things: First, a consistent epistemic state across participants despite consistent task instructions should not be assumed; second, it was possible to use these clarifications in a trial-and-error way to structure understanding and gain new knowledge. "
+                },
+                {
+                  "type": "text",
+                  "value": "Indeed, the nature of the task requires restructuring the instructions rather than manipulating the visuospatial field. "
+                },
+                {
+                  "type": "text",
+                  "value": "Therefore, it is not unreasonable that the interactivity coalesces on this linguistic plane. "
                 }
               ]
             },
@@ -2559,7 +2984,31 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The verbal nature of the instructions also increased the interaction with the researcher. This was unanticipated in the original research design and invited the researcher into the experimental situation in a way normally avoided in experimental psychology. What these interactions revealed was the need for the participant to seek help from the outside world. Over the course of these interactions, the answer often revealed itself through a gradual recursive dialogical process. Taking for example participant 41 (Table 1), the last minute or so of her problem-solving involved a recursive, back-and-forth between extracting information from the socks that she had in her hand, the instructions, and the researcher through making guesses until she suggested the correct answer. Note how often she looked at the researcher and solicited feedback in the episodes selected. In this case, the playing with socks coupled with the information from the researcher and the redrawing of the epistemic map through the wrong guesses scaffolded the way to a solution. "
+                  "value": "The verbal nature of the instructions also increased the interaction with the researcher. "
+                },
+                {
+                  "type": "text",
+                  "value": "This was unanticipated in the original research design and invited the researcher into the experimental situation in a way normally avoided in experimental psychology. "
+                },
+                {
+                  "type": "text",
+                  "value": "What these interactions revealed was the need for the participant to seek help from the outside world. "
+                },
+                {
+                  "type": "text",
+                  "value": "Over the course of these interactions, the answer often revealed itself through a gradual recursive dialogical process. "
+                },
+                {
+                  "type": "text",
+                  "value": "Taking for example participant 41 (Table 1), the last minute or so of her problem-solving involved a recursive, back-and-forth between extracting information from the socks that she had in her hand, the instructions, and the researcher through making guesses until she suggested the correct answer. "
+                },
+                {
+                  "type": "text",
+                  "value": "Note how often she looked at the researcher and solicited feedback in the episodes selected. "
+                },
+                {
+                  "type": "text",
+                  "value": "In this case, the playing with socks coupled with the information from the researcher and the redrawing of the epistemic map through the wrong guesses scaffolded the way to a solution. "
                 }
               ]
             },
@@ -3536,7 +3985,31 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "This was even clearer in the low-interactivity condition where the participants sought out scaffolding more obviously. Take for example, participant 26 in Table 2. This was a low-interactivity participant who uncovered the answer through a series of guesses using the feedback as a scaffold. As she stated clearly when asked if she knows why: \"When I got to the end I did...when I said two and then I realized...\" (02:51). The act of saying the word alongside the feedback from the environment scaffolded her understanding. Knowledge was gained when the thought was in the world; even if that realization did not take material form, it was still generated in action, this time the action of guessing. To place the results from this participant in a low-interactivity environment would be misleading even if she did not carry out any actions over objects. "
+                  "value": "This was even clearer in the low-interactivity condition where the participants sought out scaffolding more obviously. "
+                },
+                {
+                  "type": "text",
+                  "value": "Take for example, participant 26 in Table 2. "
+                },
+                {
+                  "type": "text",
+                  "value": "This was a low-interactivity participant who uncovered the answer through a series of guesses using the feedback as a scaffold. "
+                },
+                {
+                  "type": "text",
+                  "value": "As she stated clearly when asked if she knows why: \"When I got to the end I did...when I said two and then I realized...\" (02:51). "
+                },
+                {
+                  "type": "text",
+                  "value": "The act of saying the word alongside the feedback from the environment scaffolded her understanding. "
+                },
+                {
+                  "type": "text",
+                  "value": "Knowledge was gained when the thought was in the world; even if that realization did not take material form, it was still generated in action, this time the action of guessing. "
+                },
+                {
+                  "type": "text",
+                  "value": "To place the results from this participant in a low-interactivity environment would be misleading even if she did not carry out any actions over objects. "
                 }
               ]
             },
@@ -3599,7 +4072,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "c  c  c"
+                          "value": "c  c  c  c"
                         }
                       ]
                     },
@@ -4676,7 +5149,20 @@
                           "children": [
                             {
                               "type": "text",
-                              "value": "\"I'd have to pick 4 socks out\". Said faster and more determined"
+                              "value": "\"I'd have to pick 4 socks out\". "
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Said faster and more determined"
                             }
                           ]
                         },
@@ -5123,7 +5609,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The quantitative results were inconclusive. It may be that if the study had reached the anticipated number of 60 participants, they would show a significant augmentative effect of interactivity, but it seems unlikely. Moreover, the cognitive messiness of the procedure would mean that it would be hard to trust that the results reflected the experimental manipulation, that is, one group of participants interacting with the physical model of the problem, and one group interacting with no features of the task environment, including with the researcher! Of course, the problems outlined above would cast the experiment as a failure by the standards of traditional experimental psychology. As argued by Gozli "
+                  "value": "The quantitative results were inconclusive. "
+                },
+                {
+                  "type": "text",
+                  "value": "It may be that if the study had reached the anticipated number of 60 participants, they would show a significant augmentative effect of interactivity, but it seems unlikely. "
+                },
+                {
+                  "type": "text",
+                  "value": "Moreover, the cognitive messiness of the procedure would mean that it would be hard to trust that the results reflected the experimental manipulation, that is, one group of participants interacting with the physical model of the problem, and one group interacting with no features of the task environment, including with the researcher! "
+                },
+                {
+                  "type": "text",
+                  "value": "Of course, the problems outlined above would cast the experiment as a failure by the standards of traditional experimental psychology. "
+                },
+                {
+                  "type": "text",
+                  "value": "As argued by Gozli "
                 },
                 {
                   "type": "command",
@@ -5142,7 +5644,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ", the experiment in psychology takes the form of rule-governed behavior. In the experiment reported here, the participants did not play by the rules of the experiment, namely to use only mental simulations in the low-interactivity, sequestered condition and to usefully employ the objects in the high-interactivity condition. Thus, the experimental manipulation and the experiment failed. "
+                  "value": ", the experiment in psychology takes the form of rule-governed behavior. "
+                },
+                {
+                  "type": "text",
+                  "value": "In the experiment reported here, the participants did not play by the rules of the experiment, namely to use only mental simulations in the low-interactivity, sequestered condition and to usefully employ the objects in the high-interactivity condition. "
+                },
+                {
+                  "type": "text",
+                  "value": "Thus, the experimental manipulation and the experiment failed. "
                 }
               ]
             },
@@ -5151,7 +5661,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "It would be possible, of course, to design a low-interactivity task environment where interaction with the experimenter was completely removed beyond the initial task instructions (e.g., the experimenter could walk away from the observation lab and take their notes from the control booth). Accordingly, the high interactivity condition could be designed to force participants to take one sock at a time, instruct them to reflect on what they see, and prompt them to provide an answer to the puzzle after each draw. Such task procedures might improve the operationalization of the levels of interactivity envisaged in Vallée-Tourangeau and March’s (2020) original thought experiment. Be that as it may, the data reported here unveil the affordances offered by the elements of the wider system, and the felicitous (such as soliciting feedback dialogically in the low-interactivity condition) and infelicitous outcomes (such as reifying the 4:5 ratio in the high-interactivity condition) that result from the participants’ actions. Such an analysis is likely to yield a greater understanding of how problem-solving unfolds in more complex situations. "
+                  "value": "It would be possible, of course, to design a low-interactivity task environment where interaction with the experimenter was completely removed beyond the initial task instructions (e.g., the experimenter could walk away from the observation lab and take their notes from the control booth). "
+                },
+                {
+                  "type": "text",
+                  "value": "Accordingly, the high interactivity condition could be designed to force participants to take one sock at a time, instruct them to reflect on what they see, and prompt them to provide an answer to the puzzle after each draw. "
+                },
+                {
+                  "type": "text",
+                  "value": "Such task procedures might improve the operationalization of the levels of interactivity envisaged in Vallée-Tourangeau and March’s (2020) original thought experiment. "
+                },
+                {
+                  "type": "text",
+                  "value": "Be that as it may, the data reported here unveil the affordances offered by the elements of the wider system, and the felicitous (such as soliciting feedback dialogically in the low-interactivity condition) and infelicitous outcomes (such as reifying the 4:5 ratio in the high-interactivity condition) that result from the participants’ actions. "
+                },
+                {
+                  "type": "text",
+                  "value": "Such an analysis is likely to yield a greater understanding of how problem-solving unfolds in more complex situations. "
                 }
               ]
             },
@@ -5160,7 +5686,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The qualitative analysis undertaken here also offers an understanding of the detrimental role that interactivity can play alongside the traditionally-theorized augmentative role. In hindsight, such an effect is theoretically more plausible given an open cognitive system and a non-computational approach. The data presented here suggest that a cognitive system forms around any problem-solver and that once we approach cognition from this systemic perspective, we necessarily introduce multiple shifting parts. Here, when interactivity with the objects proved to be unhelpful, cognition seeped out into the wider system to encompass the interaction with the researcher via the instructions. These observations license two broader comments on the nature of experimental research in interactivity: (a) on problem-solver omniscience and (b) on the inherently contingent nature of wide cognition."
+                  "value": "The qualitative analysis undertaken here also offers an understanding of the detrimental role that interactivity can play alongside the traditionally-theorized augmentative role. "
+                },
+                {
+                  "type": "text",
+                  "value": "In hindsight, such an effect is theoretically more plausible given an open cognitive system and a non-computational approach. "
+                },
+                {
+                  "type": "text",
+                  "value": "The data presented here suggest that a cognitive system forms around any problem-solver and that once we approach cognition from this systemic perspective, we necessarily introduce multiple shifting parts. "
+                },
+                {
+                  "type": "text",
+                  "value": "Here, when interactivity with the objects proved to be unhelpful, cognition seeped out into the wider system to encompass the interaction with the researcher via the instructions. "
+                },
+                {
+                  "type": "text",
+                  "value": "These observations license two broader comments on the nature of experimental research in interactivity: (a) on problem-solver omniscience and (b) on the inherently contingent nature of wide cognition."
                 }
               ]
             },
@@ -5209,7 +5751,19 @@
                 },
                 {
                   "type": "text",
-                  "value": ". There are two forms this ignorance can take, ignorance of the process of problem solution or ignorance of the answer. The most efficient pathway to a solution can only be directly and easily enacted when the solution is already known and can be traced backward without the risk of a false start or a complete divergence from the path. This requires foreknowledge of the correct answer, which is a paradoxical situation and assumes an omniscient problem-solver."
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "There are two forms this ignorance can take, ignorance of the process of problem solution or ignorance of the answer. "
+                },
+                {
+                  "type": "text",
+                  "value": "The most efficient pathway to a solution can only be directly and easily enacted when the solution is already known and can be traced backward without the risk of a false start or a complete divergence from the path. "
+                },
+                {
+                  "type": "text",
+                  "value": "This requires foreknowledge of the correct answer, which is a paradoxical situation and assumes an omniscient problem-solver."
                 }
               ]
             },
@@ -5218,7 +5772,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "For analytical problems, while the answer is unknown, the process of getting to the answer is clear and known. For example, for mental arithmetic, while the problem-solver may not know the solution, they will know the most efficient process and the simple operators to evince it."
+                  "value": "For analytical problems, while the answer is unknown, the process of getting to the answer is clear and known. "
+                },
+                {
+                  "type": "text",
+                  "value": "For example, for mental arithmetic, while the problem-solver may not know the solution, they will know the most efficient process and the simple operators to evince it."
                 },
                 {
                   "type": "command",
@@ -5229,7 +5787,11 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Indeed, the accuracy of the solution is not clear in itself but is predicated on an accurate following of the steps. We only trust an answer to a mental arithmetic problem not because of the answer itself but because we trust in the steps that led to the answer."
+                          "value": "Indeed, the accuracy of the solution is not clear in itself but is predicated on an accurate following of the steps. "
+                        },
+                        {
+                          "type": "text",
+                          "value": "We only trust an answer to a mental arithmetic problem not because of the answer itself but because we trust in the steps that led to the answer."
                         }
                       ]
                     }
@@ -5237,7 +5799,23 @@
                 },
                 {
                   "type": "text",
-                  "value": " These steps will have been predetermined culturally and through personal experience. Therefore, it is likely that the agent will select the correct objects and the correct actions over those objects. This means that an agent-centric model of interactivity should yield supportive empirical data, however, it is unclear how far such a model would extend. In many ill-structured problems or non-analytical problems, the problem-solver is in double ignorance: They do not know the correct solution or the manner of approaching the correct solution. In terms of problem-solving with and through objects, this means that they will not necessarily select the correct objects or actions over them but merely those that satisfy the needs at the time (echoing the Criterion of Satisfactory Progress Theory; "
+                  "value": " These steps will have been predetermined culturally and through personal experience. "
+                },
+                {
+                  "type": "text",
+                  "value": "Therefore, it is likely that the agent will select the correct objects and the correct actions over those objects. "
+                },
+                {
+                  "type": "text",
+                  "value": "This means that an agent-centric model of interactivity should yield supportive empirical data, however, it is unclear how far such a model would extend. "
+                },
+                {
+                  "type": "text",
+                  "value": "In many ill-structured problems or non-analytical problems, the problem-solver is in double ignorance: They do not know the correct solution or the manner of approaching the correct solution. "
+                },
+                {
+                  "type": "text",
+                  "value": "In terms of problem-solving with and through objects, this means that they will not necessarily select the correct objects or actions over them but merely those that satisfy the needs at the time (echoing the Criterion of Satisfactory Progress Theory; "
                 },
                 {
                   "type": "command",
@@ -5305,7 +5883,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The components in complex systems interact in complex ways and the results are emergent and contingent. Pre-specification of underlying causal mechanisms is difficult because adhering to a form of wide cognition (see "
+                  "value": "The components in complex systems interact in complex ways and the results are emergent and contingent. "
+                },
+                {
+                  "type": "text",
+                  "value": "Pre-specification of underlying causal mechanisms is difficult because adhering to a form of wide cognition (see "
                 },
                 {
                   "type": "command",
@@ -5324,29 +5906,73 @@
                 },
                 {
                   "type": "text",
-                  "value": ") means that such pre-specification is necessarily an under-specification: It is impossible to predict in advance which solution routes will be useful, especially if that problem solution is generated by unplanned and exaptative gestures which is more likely in materially rich environments. It suggests that in insight tasks where there is a double ignorance—ignorance of the solution and ignorance of the path to the solution—both the finding of the solution and the path taken become important. "
-                }
-              ]
-            },
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "Interactivity posits that a dynamic relationship with the external world is not only augmentative to cognition processes but necessary. However, experimental research in interactivity does so by paradoxically setting up a low-interactivity condition which admits non-interactive thinking. In this way, it assumes that there is an easy way to compare non-systemic and systemic cognition and that non-systemic cognition can be meaningfully isolated in an experimental psychologist’s lab. We suggest that the dualistic assumptions underlying this approach are misguided, as they assume an ideal type of experimental participant can be generated in sequestered experimental conditions. Rather, the evidence we present here suggests a cognitive leakage across both experimental conditions. In the process of operationalizing the so-called low-interactivity condition, the presence of the experimenter offered an external resource with which to scaffold the problem-solving process. The participant naturally transformed a solo and ostensibly unaided effort into a dyadic one. Clearly, the experimenter qua interlocutor was an unrequited conversational partner. Still, in the absence of hard physical or instructional constraints, the participant naturally availed themselves of this resource, bootstrapping the cognitive effort through a dialogue with their reluctant partner. And it is through this dialogue that the participant’s hunch underwent many different forms until it was eventually translated into the normative one. These ersatz dialogues offer a telling window on the distributed nature of thinking, in this instance, the distribution over time and the gradual sedimentation through iterative dialogical cycles. The reification of the solution was the product of interactivity despite the experimental procedure."
-                }
-              ]
-            },
-            {
-              "type": "paragraph",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "A systematic approach to cognition requires that every thoughtful "
+                  "value": ") means that such pre-specification is necessarily an under-specification: It is impossible to predict in advance which solution routes will be useful, especially if that problem solution is generated by unplanned and exaptative gestures which is more likely in materially rich environments. "
                 },
                 {
                   "type": "text",
-                  "value": "(and arguably every non-thoughtful) encounter should be analyzed as part of a system; however, what constitutes part of the system is rarely specified. Vallée-Tourangeau and "
+                  "value": "It suggests that in insight tasks where there is a double ignorance—ignorance of the solution and ignorance of the path to the solution—both the finding of the solution and the path taken become important. "
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Interactivity posits that a dynamic relationship with the external world is not only augmentative to cognition processes but necessary. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, experimental research in interactivity does so by paradoxically setting up a low-interactivity condition which admits non-interactive thinking. "
+                },
+                {
+                  "type": "text",
+                  "value": "In this way, it assumes that there is an easy way to compare non-systemic and systemic cognition and that non-systemic cognition can be meaningfully isolated in an experimental psychologist’s lab. "
+                },
+                {
+                  "type": "text",
+                  "value": "We suggest that the dualistic assumptions underlying this approach are misguided, as they assume an ideal type of experimental participant can be generated in sequestered experimental conditions. "
+                },
+                {
+                  "type": "text",
+                  "value": "Rather, the evidence we present here suggests a cognitive leakage across both experimental conditions. "
+                },
+                {
+                  "type": "text",
+                  "value": "In the process of operationalizing the so-called low-interactivity condition, the presence of the experimenter offered an external resource with which to scaffold the problem-solving process. "
+                },
+                {
+                  "type": "text",
+                  "value": "The participant naturally transformed a solo and ostensibly unaided effort into a dyadic one. "
+                },
+                {
+                  "type": "text",
+                  "value": "Clearly, the experimenter qua interlocutor was an unrequited conversational partner. "
+                },
+                {
+                  "type": "text",
+                  "value": "Still, in the absence of hard physical or instructional constraints, the participant naturally availed themselves of this resource, bootstrapping the cognitive effort through a dialogue with their reluctant partner. "
+                },
+                {
+                  "type": "text",
+                  "value": "And it is through this dialogue that the participant’s hunch underwent many different forms until it was eventually translated into the normative one. "
+                },
+                {
+                  "type": "text",
+                  "value": "These ersatz dialogues offer a telling window on the distributed nature of thinking, in this instance, the distribution over time and the gradual sedimentation through iterative dialogical cycles. "
+                },
+                {
+                  "type": "text",
+                  "value": "The reification of the solution was the product of interactivity despite the experimental procedure."
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "A systematic approach to cognition requires that every thoughtful (and arguably every non-thoughtful) encounter should be analyzed as part of a system; however, what constitutes part of the system is rarely specified. "
                 },
                 {
                   "type": "command",
@@ -5357,7 +5983,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "March2020"
+                          "value": "Vallée-Tourangeau2020a"
                         }
                       ]
                     }
@@ -5369,11 +5995,19 @@
                 },
                 {
                   "type": "text",
-                  "value": "(p. 826). We argue that the data here suggest “the action possibilities offered by the external environment” "
+                  "value": "(p. 826). "
                 },
                 {
                   "type": "text",
-                  "value": "(p. 826) are broader than whether the problem is represented in movable artifacts or not. Rather, participants actively recruit beyond the resources of interest in the experimental conditions. This means a more granular approach needs to be considered. "
+                  "value": "We argue that the data here suggest “the action possibilities offered by the external environment” (p. 826) are broader than whether the problem is represented in movable artifacts or not. "
+                },
+                {
+                  "type": "text",
+                  "value": "Rather, participants actively recruit beyond the resources of interest in the experimental conditions. "
+                },
+                {
+                  "type": "text",
+                  "value": "This means a more granular approach needs to be considered. "
                 }
               ]
             },
@@ -5403,7 +6037,27 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The data presented here are not the clean data typically seen in psychological reports of experimental situations. Over the course of the study, a more ethnographic approach to the whole experimental situation provided rich data about different types of interactions that emerged in either a so-called low- or high-interactivity condition. Some aspects are unique to the situation of an exploratory, quasi-pilot study in problem-solving and others are broader reflections on the nature of research in psychology. As we have seen above, the transformation from a sequestered condition to a more “real-life” situation does not necessarily occur without cost and the nature of that cost deserves to be explored. Additionally, it casts doubt on the possibility of creating a fully sequestered condition. Rather, the data presented here suggest that both conditions are porous. "
+                  "value": "The data presented here are not the clean data typically seen in psychological reports of experimental situations. "
+                },
+                {
+                  "type": "text",
+                  "value": "Over the course of the study, a more ethnographic approach to the whole experimental situation provided rich data about different types of interactions that emerged in either a so-called low- or high-interactivity condition. "
+                },
+                {
+                  "type": "text",
+                  "value": "Some aspects are unique to the situation of an exploratory, quasi-pilot study in problem-solving and others are broader reflections on the nature of research in psychology. "
+                },
+                {
+                  "type": "text",
+                  "value": "As we have seen above, the transformation from a sequestered condition to a more “real-life” situation does not necessarily occur without cost and the nature of that cost deserves to be explored. "
+                },
+                {
+                  "type": "text",
+                  "value": "Additionally, it casts doubt on the possibility of creating a fully sequestered condition. "
+                },
+                {
+                  "type": "text",
+                  "value": "Rather, the data presented here suggest that both conditions are porous. "
                 }
               ]
             },
@@ -5412,7 +6066,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The failure of the experimental procedure here revealed the difficulty of doing research in open cognitive systems. Traditional methods of assessing embedded or extended cognition are still rooted in a cognitive and computational model of mind and contrast low- and high-interactivity environments to demonstrate an augmentative effect of interactivity. The research presented here suggests that the reality of experimenting in an open system is more complex than is believed. The target problem here was designed as a mental riddle and its transposition to an interactive space offered a telling window onto the disconnect between first- and second-order problem-solving: The task only “works” as a second-order task."
+                  "value": "The failure of the experimental procedure here revealed the difficulty of doing research in open cognitive systems. "
+                },
+                {
+                  "type": "text",
+                  "value": "Traditional methods of assessing embedded or extended cognition are still rooted in a cognitive and computational model of mind and contrast low- and high-interactivity environments to demonstrate an augmentative effect of interactivity. "
+                },
+                {
+                  "type": "text",
+                  "value": "The research presented here suggests that the reality of experimenting in an open system is more complex than is believed. "
+                },
+                {
+                  "type": "text",
+                  "value": "The target problem here was designed as a mental riddle and its transposition to an interactive space offered a telling window onto the disconnect between first- and second-order problem-solving: The task only “works” as a second-order task."
                 }
               ]
             },
@@ -5421,7 +6087,27 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "It is tempting to question whether the mental tasks used in traditional cognitive psychology experiments are diagnostic of problem-solving outside of the sequestered laboratory environments in which they are commonly operationalized. We propose, rather, that a research program should develop in parallel to examine the solving of problems which rendered complex not because of their structure but because of their situation. When it comes to problem-solving, we need a wider range of outcome measures to even begin to understand how it unfolds across a range of contexts which requires a combination of qualitative and quantitative work. What we can see here is that the genesis of a new idea involves a transformation, which in turn involves resources; these resources come with a cost, and these transactions leave physical traces which can be mapped. To understand the transformations and transactions, that is, the process through which new ideas are constructed, the analysis must be local and granular. It is our belief that turning to the qualitative in cognitive psychology to complement the quantitative will yield great benefits."
+                  "value": "It is tempting to question whether the mental tasks used in traditional cognitive psychology experiments are diagnostic of problem-solving outside of the sequestered laboratory environments in which they are commonly operationalized. "
+                },
+                {
+                  "type": "text",
+                  "value": "We propose, rather, that a research program should develop in parallel to examine the solving of problems which rendered complex not because of their structure but because of their situation. "
+                },
+                {
+                  "type": "text",
+                  "value": "When it comes to problem-solving, we need a wider range of outcome measures to even begin to understand how it unfolds across a range of contexts which requires a combination of qualitative and quantitative work. "
+                },
+                {
+                  "type": "text",
+                  "value": "What we can see here is that the genesis of a new idea involves a transformation, which in turn involves resources; these resources come with a cost, and these transactions leave physical traces which can be mapped. "
+                },
+                {
+                  "type": "text",
+                  "value": "To understand the transformations and transactions, that is, the process through which new ideas are constructed, the analysis must be local and granular. "
+                },
+                {
+                  "type": "text",
+                  "value": "It is our belief that turning to the qualitative in cognitive psychology to complement the quantitative will yield great benefits."
                 }
               ]
             },
@@ -5467,7 +6153,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Andriani, P., Ali, A., & Mastrogiorgio, M. (2017). Measuring exaptation and its impact on innovation, search, and problem solving. "
+                  "value": "Andriani, P., Ali, A., & Mastrogiorgio, M. (2017). "
+                },
+                {
+                  "type": "text",
+                  "value": "Measuring exaptation and its impact on innovation, search, and problem solving. "
                 },
                 {
                   "type": "command",
@@ -5514,7 +6204,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Arfini, S. (2019). Situated ignorance: The distribution and extension of ignorance in cognitive niches. "
+                  "value": "Arfini, S. (2019). "
+                },
+                {
+                  "type": "text",
+                  "value": "Situated ignorance: The distribution and extension of ignorance in cognitive niches. "
                 },
                 {
                   "type": "command",
@@ -5542,7 +6236,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Bowden, E., Jung-Beeman, M., Fleck, J., & Kounios, J. (2005). New approaches to demystifying insight. "
+                  "value": "Bowden, E., Jung-Beeman, M., Fleck, J., & Kounios, J. (2005). "
+                },
+                {
+                  "type": "text",
+                  "value": "New approaches to demystifying insight. "
                 },
                 {
                   "type": "command",
@@ -5589,7 +6287,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Chu, Y., & MacGregor, J. N. (2011). Human performance on insight problem solving: A review. "
+                  "value": "Chu, Y., & MacGregor, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "N. (2011). "
+                },
+                {
+                  "type": "text",
+                  "value": "Human performance on insight problem solving: A review. "
                 },
                 {
                   "type": "command",
@@ -5636,7 +6342,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Fleck, J. I., & Weisberg, R. W. (2013). Insight versus analysis: Evidence for diverse methods in problem solving. "
+                  "value": "Fleck, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "I., & Weisberg, R. "
+                },
+                {
+                  "type": "text",
+                  "value": "W. (2013). "
+                },
+                {
+                  "type": "text",
+                  "value": "Insight versus analysis: Evidence for diverse methods in problem solving. "
                 },
                 {
                   "type": "command",
@@ -5702,7 +6420,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Aldine Publishing Company."
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Aldine Publishing Company."
                 }
               ]
             },
@@ -5711,7 +6433,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Gozli, D. G. (2017). Behaviour versus performance: The veiled commitment of experimental psychology. "
+                  "value": "Gozli, D. "
+                },
+                {
+                  "type": "text",
+                  "value": "G. (2017). "
+                },
+                {
+                  "type": "text",
+                  "value": "Behaviour versus performance: The veiled commitment of experimental psychology. "
                 },
                 {
                   "type": "command",
@@ -5758,7 +6488,27 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Grice, H. P. (1975). Logic and conversation. In P. Cole & J. Morgan (Eds.), "
+                  "value": "Grice, H. "
+                },
+                {
+                  "type": "text",
+                  "value": "P. (1975). "
+                },
+                {
+                  "type": "text",
+                  "value": "Logic and conversation. "
+                },
+                {
+                  "type": "text",
+                  "value": "In P. "
+                },
+                {
+                  "type": "text",
+                  "value": "Cole & J. "
+                },
+                {
+                  "type": "text",
+                  "value": "Morgan (Eds.), "
                 },
                 {
                   "type": "command",
@@ -5777,7 +6527,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " (pp. 41–58). Academic Press."
+                  "value": " (pp. 41–58). "
+                },
+                {
+                  "type": "text",
+                  "value": "Academic Press."
                 }
               ]
             },
@@ -5786,7 +6540,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Jones, G. (2003). Testing two cognitive theories of insight. "
+                  "value": "Jones, G. (2003). "
+                },
+                {
+                  "type": "text",
+                  "value": "Testing two cognitive theories of insight. "
                 },
                 {
                   "type": "command",
@@ -5833,7 +6591,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Kirsh, D., & Maglio, P. (1994). On distinguishing epistemic from pragmatic action. "
+                  "value": "Kirsh, D., & Maglio, P. (1994). "
+                },
+                {
+                  "type": "text",
+                  "value": "On distinguishing epistemic from pragmatic action. "
                 },
                 {
                   "type": "command",
@@ -5880,7 +6642,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "MacGregor, J. N., Ormerod, T. C., & Chronicle, E. P. (2001). Information processing and insight: A process model of performance on the nine-dot and related problems. "
+                  "value": "MacGregor, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "N., Ormerod, T. "
+                },
+                {
+                  "type": "text",
+                  "value": "C., & Chronicle, E. "
+                },
+                {
+                  "type": "text",
+                  "value": "P. (2001). "
+                },
+                {
+                  "type": "text",
+                  "value": "Information processing and insight: A process model of performance on the nine-dot and related problems. "
                 },
                 {
                   "type": "command",
@@ -5927,7 +6705,27 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Ormerod, T. C., MacGregor, J. N., Chronicle, E. P., Dewald, A. D., & Chu, Y. (2013). Act first, think later: The presence and absence of inferential planning in problem solving. "
+                  "value": "Ormerod, T. "
+                },
+                {
+                  "type": "text",
+                  "value": "C., MacGregor, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "N., Chronicle, E. "
+                },
+                {
+                  "type": "text",
+                  "value": "P., Dewald, A. "
+                },
+                {
+                  "type": "text",
+                  "value": "D., & Chu, Y. (2013). "
+                },
+                {
+                  "type": "text",
+                  "value": "Act first, think later: The presence and absence of inferential planning in problem solving. "
                 },
                 {
                   "type": "command",
@@ -5974,7 +6772,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Vallée‐Tourangeau, F., & March, P. L. (2020). Insight out: Making creativity visible. "
+                  "value": "Vallée‐Tourangeau, F., & March, P. "
+                },
+                {
+                  "type": "text",
+                  "value": "L. (2020). "
+                },
+                {
+                  "type": "text",
+                  "value": "Insight out: Making creativity visible. "
                 },
                 {
                   "type": "command",
@@ -6002,7 +6808,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Vallée‐Tourangeau, F., & Vallée-Tourangeau, G. (2014). Diagrams, jars, and matchsticks: A systemicist’s toolkit. "
+                  "value": "Vallée‐Tourangeau, F., & Vallée-Tourangeau, G. (2014). "
+                },
+                {
+                  "type": "text",
+                  "value": "Diagrams, jars, and matchsticks: A systemicist’s toolkit. "
                 },
                 {
                   "type": "command",
@@ -6053,7 +6863,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Vallée-Tourangeau, F., & Vallée-Tourangeau, G. (2020). Mapping systemic resources in problem solving. "
+                  "value": "Vallée-Tourangeau, F., & Vallée-Tourangeau, G. (2020). "
+                },
+                {
+                  "type": "text",
+                  "value": "Mapping systemic resources in problem solving. "
                 },
                 {
                   "type": "command",
@@ -6081,7 +6895,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Weisberg, R. W. (2015). Toward an integrated theory of insight in problem solving. "
+                  "value": "Weisberg, R. "
+                },
+                {
+                  "type": "text",
+                  "value": "W. (2015). "
+                },
+                {
+                  "type": "text",
+                  "value": "Toward an integrated theory of insight in problem solving. "
                 },
                 {
                   "type": "command",
@@ -6128,7 +6950,27 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Wilson, R. A., & Clark, A. (2009). How to situate cognition. In P. Robbins & M. Ayede (Eds.), "
+                  "value": "Wilson, R. "
+                },
+                {
+                  "type": "text",
+                  "value": "A., & Clark, A. (2009). "
+                },
+                {
+                  "type": "text",
+                  "value": "How to situate cognition. "
+                },
+                {
+                  "type": "text",
+                  "value": "In P. "
+                },
+                {
+                  "type": "text",
+                  "value": "Robbins & M. "
+                },
+                {
+                  "type": "text",
+                  "value": "Ayede (Eds.), "
                 },
                 {
                   "type": "command",
@@ -6147,7 +6989,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " (pp. 55–78). Cambridge University Press."
+                  "value": " (pp. 55–78). "
+                },
+                {
+                  "type": "text",
+                  "value": "Cambridge University Press."
                 }
               ]
             },

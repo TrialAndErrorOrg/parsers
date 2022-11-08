@@ -224,7 +224,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "We wanted to design a single-case experiment to test whether classical conditioning can influence pain thresholds. We settled on a customized AB phase design for which we ran pilot tests and a power study. The results indicated that this single-case design can be used to test our hypothesis."
+                  "value": "We wanted to design a single-case experiment to test whether classical conditioning can influence pain thresholds. "
+                },
+                {
+                  "type": "text",
+                  "value": "We settled on a customized AB phase design for which we ran pilot tests and a power study. "
+                },
+                {
+                  "type": "text",
+                  "value": "The results indicated that this single-case design can be used to test our hypothesis."
                 }
               ]
             },
@@ -254,7 +262,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Single-case experiments are increasingly popular in the behavioral sciences. Due to their flexibility, single-case designs can be customized to test a variety of experimental hypotheses. We were interested in using a single-case experimental approach to test whether pain thresholds can be influenced by Pavlovian classical conditioning. Following the example of earlier studies into this topic, we planned to measure whether participants would more frequently report specific "
+                  "value": "Single-case experiments are increasingly popular in the behavioral sciences. "
+                },
+                {
+                  "type": "text",
+                  "value": "Due to their flexibility, single-case designs can be customized to test a variety of experimental hypotheses. "
+                },
+                {
+                  "type": "text",
+                  "value": "We were interested in using a single-case experimental approach to test whether pain thresholds can be influenced by Pavlovian classical conditioning. "
+                },
+                {
+                  "type": "text",
+                  "value": "Following the example of earlier studies into this topic, we planned to measure whether participants would more frequently report specific "
                 },
                 {
                   "type": "text",
@@ -270,7 +290,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " stimuli. First, we decided on a mean difference effect size measure derived from the Sensation and Pain Rating Scale ratings for the "
+                  "value": " stimuli. "
+                },
+                {
+                  "type": "text",
+                  "value": "First, we decided on a mean difference effect size measure derived from the Sensation and Pain Rating Scale ratings for the "
                 },
                 {
                   "type": "text",
@@ -278,7 +302,27 @@
                 },
                 {
                   "type": "text",
-                  "value": " stimuli provided by the participants. Next, we discussed several possible single-case designs and evaluated their benefits and shortcomings. Then, we ran pilot tests with a few participants based on the possible single-case designs. We also conducted a simulation study to estimate the power of a randomization test to test our hypothesis using different values for effect size, number of participants, and number of measurements. Finally, we decided on a sequentially replicated AB phase design with 30 participants based on the results from the pilot tests and the power study. We plan to implement this single-case design in a future experiment to test our hypothesis. "
+                  "value": " stimuli provided by the participants. "
+                },
+                {
+                  "type": "text",
+                  "value": "Next, we discussed several possible single-case designs and evaluated their benefits and shortcomings. "
+                },
+                {
+                  "type": "text",
+                  "value": "Then, we ran pilot tests with a few participants based on the possible single-case designs. "
+                },
+                {
+                  "type": "text",
+                  "value": "We also conducted a simulation study to estimate the power of a randomization test to test our hypothesis using different values for effect size, number of participants, and number of measurements. "
+                },
+                {
+                  "type": "text",
+                  "value": "Finally, we decided on a sequentially replicated AB phase design with 30 participants based on the results from the pilot tests and the power study. "
+                },
+                {
+                  "type": "text",
+                  "value": "We plan to implement this single-case design in a future experiment to test our hypothesis. "
                 }
               ]
             },
@@ -316,7 +360,23 @@
                 },
                 {
                   "type": "text",
-                  "value": " approach to design a customized single-case experiment (SCE) to test the effect of classical conditioning on pain thresholds. We hope that this information helps readers who plan to implement an SCE in better understanding the steps involved and possible challenges. We wish to focus on using the flexible nature of SCEs to adapt to the requirements of the experiment. We also wish to highlight the necessity of exploring various available statistical methods and statistical power requirements for these methods prior to starting the experiment. Finally, we demonstrate how SCEs can serve as a viable avenue for pilot-testing new therapies and treatments at a small scale before implementing larger scale studies."
+                  "value": " approach to design a customized single-case experiment (SCE) to test the effect of classical conditioning on pain thresholds. "
+                },
+                {
+                  "type": "text",
+                  "value": "We hope that this information helps readers who plan to implement an SCE in better understanding the steps involved and possible challenges. "
+                },
+                {
+                  "type": "text",
+                  "value": "We wish to focus on using the flexible nature of SCEs to adapt to the requirements of the experiment. "
+                },
+                {
+                  "type": "text",
+                  "value": "We also wish to highlight the necessity of exploring various available statistical methods and statistical power requirements for these methods prior to starting the experiment. "
+                },
+                {
+                  "type": "text",
+                  "value": "Finally, we demonstrate how SCEs can serve as a viable avenue for pilot-testing new therapies and treatments at a small scale before implementing larger scale studies."
                 }
               ]
             },
@@ -446,7 +506,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". While there are key models that go some way towards explaining how pain can persist without active tissue damage "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "While there are key models that go some way towards explaining how pain can persist without active tissue damage "
                 },
                 {
                   "type": "command",
@@ -510,7 +574,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ", certain pain presentations remain unexplained. The imprecision hypothesis was proposed to address these unexplained presentations, and is founded on the idea that pain can be modulated by pain-associated cues—specifically, via “classical conditioning” "
+                  "value": ", certain pain presentations remain unexplained. "
+                },
+                {
+                  "type": "text",
+                  "value": "The imprecision hypothesis was proposed to address these unexplained presentations, and is founded on the idea that pain can be modulated by pain-associated cues—specifically, via “classical conditioning” "
                 },
                 {
                   "type": "command",
@@ -591,7 +659,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " to test whether neutral but pain-associated cues can bias a participant’s decision about whether a stimulus is painful or non-painful. In the differential classical conditioning design used here, one neutral cue is paired with a painful "
+                  "value": " to test whether neutral but pain-associated cues can bias a participant’s decision about whether a stimulus is painful or non-painful. "
+                },
+                {
+                  "type": "text",
+                  "value": "In the differential classical conditioning design used here, one neutral cue is paired with a painful "
                 },
                 {
                   "type": "text",
@@ -607,7 +679,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " stimulus. It is expected that participants form associations between each cue and painfulness, such that subsequent perception of an ambiguous electrical stimulus is modified, dependent on the simultaneous presentation of one of the neutral cues."
+                  "value": " stimulus. "
+                },
+                {
+                  "type": "text",
+                  "value": "It is expected that participants form associations between each cue and painfulness, such that subsequent perception of an ambiguous electrical stimulus is modified, dependent on the simultaneous presentation of one of the neutral cues."
                 }
               ]
             },
@@ -616,7 +692,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "We set out to design an SCE to test this hypothesis. Due to the before (conditioning) and after (conditioning) structure of multiple observations required for each participant, SCE designs are perfectly suited for testing this hypothesis."
+                  "value": "We set out to design an SCE to test this hypothesis. "
+                },
+                {
+                  "type": "text",
+                  "value": "Due to the before (conditioning) and after (conditioning) structure of multiple observations required for each participant, SCE designs are perfectly suited for testing this hypothesis."
                 }
               ]
             },
@@ -680,7 +760,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Variables of interest in the entity, which is often a single participant, are measured repeatedly over "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Variables of interest in the entity, which is often a single participant, are measured repeatedly over "
                 },
                 {
                   "type": "text",
@@ -688,7 +772,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " with the purpose of establishing a causal relationship between the independent variable, commonly referred to as the treatment condition, and the observed entity. SCEs are increasingly popular in behavioral and educational sciences due to their flexibility, low cost, and focus on effects of the intervention in individual participants "
+                  "value": " with the purpose of establishing a causal relationship between the independent variable, commonly referred to as the treatment condition, and the observed entity. "
+                },
+                {
+                  "type": "text",
+                  "value": "SCEs are increasingly popular in behavioral and educational sciences due to their flexibility, low cost, and focus on effects of the intervention in individual participants "
                 },
                 {
                   "type": "command",
@@ -707,7 +795,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". SCEs may be preferable to group-based designs, where the existence or magnitude of the effect "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "SCEs may be preferable to group-based designs, where the existence or magnitude of the effect "
                 },
                 {
                   "type": "command",
@@ -745,7 +837,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " a group of individuals. The lower cost and flexibility of SCEs also make them ideal for studying new theories and interventions, as is the case in this study "
+                  "value": " a group of individuals. "
+                },
+                {
+                  "type": "text",
+                  "value": "The lower cost and flexibility of SCEs also make them ideal for studying new theories and interventions, as is the case in this study "
                 },
                 {
                   "type": "command",
@@ -807,7 +903,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Additionally, replication using multiple participants strengthens external validity and generalizability of the results "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Additionally, replication using multiple participants strengthens external validity and generalizability of the results "
                 },
                 {
                   "type": "command",
@@ -841,7 +941,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". In our study design, we incorporated both randomization and replication to enhance internal and external validity of the experiment. "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "In our study design, we incorporated both randomization and replication to enhance internal and external validity of the experiment. "
                 }
               ]
             },
@@ -871,7 +975,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "SCEs are well suited to research questions about within-individual processes. Although group designs are historically respected, they are typically analyzed in a way that aggregates data from all individuals to estimate an effect at the group level—an effect that may be non-existent in any of the individuals within the group "
+                  "value": "SCEs are well suited to research questions about within-individual processes. "
+                },
+                {
+                  "type": "text",
+                  "value": "Although group designs are historically respected, they are typically analyzed in a way that aggregates data from all individuals to estimate an effect at the group level—an effect that may be non-existent in any of the individuals within the group "
                 },
                 {
                   "type": "command",
@@ -890,7 +998,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". This aggregation approach obscures the true, within-individual effect, and the between-individual variability of that effect (which, itself, is typically worthy of attention; "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "This aggregation approach obscures the true, within-individual effect, and the between-individual variability of that effect (which, itself, is typically worthy of attention; "
                 },
                 {
                   "type": "command",
@@ -909,7 +1021,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Of course, it is possible to consider within-individual changes in some group designs, but an SCE offers a superior approach to achieving a sufficiently powered (> 80%) examination of within-subject effects "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Of course, it is possible to consider within-individual changes in some group designs, but an SCE offers a superior approach to achieving a sufficiently powered (> 80%) examination of within-subject effects "
                 },
                 {
                   "type": "command",
@@ -943,7 +1059,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Whereas traditional group-based designs generate knowledge on the population level only, SCEs generate knowledge at the level of the individual. Finally, findings from group-based designs cannot be generalized towards individuals, while SCEs can be aggregated for insights on populations."
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Whereas traditional group-based designs generate knowledge on the population level only, SCEs generate knowledge at the level of the individual. "
+                },
+                {
+                  "type": "text",
+                  "value": "Finally, findings from group-based designs cannot be generalized towards individuals, while SCEs can be aggregated for insights on populations."
                 }
               ]
             },
@@ -1037,7 +1161,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Traditionally, visual analysis was the preferred method for analyzing SCE data, but researchers now recommend quantitative statistical analysis to complement visual analysis "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Traditionally, visual analysis was the preferred method for analyzing SCE data, but researchers now recommend quantitative statistical analysis to complement visual analysis "
                 },
                 {
                   "type": "command",
@@ -1116,7 +1244,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Specifically, for experiments involving user-reported ordinal data, such as the current experiment, nonparametric statistical methods may be best suited for analysis, as the observed data may not adhere to distributional assumptions required for popular parametric methods. "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Specifically, for experiments involving user-reported ordinal data, such as the current experiment, nonparametric statistical methods may be best suited for analysis, as the observed data may not adhere to distributional assumptions required for popular parametric methods. "
                 }
               ]
             },
@@ -1174,7 +1306,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". RTs derive their validity from the random assignment of treatment conditions to experimental units, which in the case of SCEs, are measurement occasions "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "RTs derive their validity from the random assignment of treatment conditions to experimental units, which in the case of SCEs, are measurement occasions "
                 },
                 {
                   "type": "command",
@@ -1193,7 +1329,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ". RTs do not require any distributional assumptions for the observed data. Additionally, RTs are immensely flexible, and can be adapted for any SCE design, randomization scheme, and effect size measure as the test statistic "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "RTs do not require any distributional assumptions for the observed data. "
+                },
+                {
+                  "type": "text",
+                  "value": "Additionally, RTs are immensely flexible, and can be adapted for any SCE design, randomization scheme, and effect size measure as the test statistic "
                 },
                 {
                   "type": "command",
@@ -1242,7 +1386,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". In our study design, we implemented a customized RT using a mean difference effect size measure as the test statistic. "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "In our study design, we implemented a customized RT using a mean difference effect size measure as the test statistic. "
                 }
               ]
             },
@@ -1291,7 +1439,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Several guidelines recommend a power analysis or at least a methodical description of how sample size was determined "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Several guidelines recommend a power analysis or at least a methodical description of how sample size was determined "
                 },
                 {
                   "type": "command",
@@ -1325,7 +1477,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". In the context of SCEs, power analysis can be used to determine the number of measurements necessary, and for studies with replication, the number of participants."
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "In the context of SCEs, power analysis can be used to determine the number of measurements necessary, and for studies with replication, the number of participants."
                 }
               ]
             },
@@ -1368,7 +1524,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Several studies have estimated the power of SCE RTs for various design conditions "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Several studies have estimated the power of SCE RTs for various design conditions "
                 },
                 {
                   "type": "command",
@@ -1462,7 +1622,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Although the results from these studies can be used as a reference, they are true only for the design parameters and simulated data distributions considered. Since we acquired unusual ordinal observed data, power ideally needed to be estimated using simulated data of the same type as this study would generate."
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Although the results from these studies can be used as a reference, they are true only for the design parameters and simulated data distributions considered. "
+                },
+                {
+                  "type": "text",
+                  "value": "Since we acquired unusual ordinal observed data, power ideally needed to be estimated using simulated data of the same type as this study would generate."
                 }
               ]
             },
@@ -1521,7 +1689,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " stimulation as the unconditioned stimulus (US). At first, one neutral stimulus (a vibrotactile stimulus, denoted as CS+) is paired with a painful stimulus (a high-intensity "
+                  "value": " stimulation as the unconditioned stimulus (US). "
+                },
+                {
+                  "type": "text",
+                  "value": "At first, one neutral stimulus (a vibrotactile stimulus, denoted as CS+) is paired with a painful stimulus (a high-intensity "
                 },
                 {
                   "type": "text",
@@ -1571,7 +1743,15 @@
                 },
                 {
                   "type": "text",
-                  "value": "). This procedure is expected to form an association between the CS+ and painfulness, in contrast to the CS− and non-painfulness. Later, each CS is paired with a “test stimulus” (denoted as "
+                  "value": "). "
+                },
+                {
+                  "type": "text",
+                  "value": "This procedure is expected to form an association between the CS+ and painfulness, in contrast to the CS− and non-painfulness. "
+                },
+                {
+                  "type": "text",
+                  "value": "Later, each CS is paired with a “test stimulus” (denoted as "
                 },
                 {
                   "type": "text",
@@ -1596,7 +1776,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " stimulus of an intensity calibrated such that there is a 50% chance that the participant judges it to be painful or non-painful at baseline (i.e., before the pairing). Participants are then requested to judge each trial on a scale that distinguishes painful from non-painful events "
+                  "value": " stimulus of an intensity calibrated such that there is a 50% chance that the participant judges it to be painful or non-painful at baseline (i.e., before the pairing). "
+                },
+                {
+                  "type": "text",
+                  "value": "Participants are then requested to judge each trial on a scale that distinguishes painful from non-painful events "
                 },
                 {
                   "type": "command",
@@ -1615,7 +1799,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". The trials of interest are the CS/"
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "The trials of interest are the CS/"
                 },
                 {
                   "type": "text",
@@ -1698,7 +1886,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Stimulus onset and timing are controlled using Affect 4.0 "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Stimulus onset and timing are controlled using Affect 4.0 "
                 },
                 {
                   "type": "command",
@@ -1717,7 +1909,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". A vibrotactile stimulus is delivered to the skin using tactors manufactured by Dancer Design taped to the participant’s skin "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "A vibrotactile stimulus is delivered to the skin using tactors manufactured by Dancer Design taped to the participant’s skin "
                 },
                 {
                   "type": "command",
@@ -1740,7 +1936,19 @@
                 },
                 {
                   "type": "text",
-                  "value": ". This stimulus is of fixed duration and a clearly perceptible intensity. Three tactors are used in the arrangement as the source of a CS (see Figure 1). The SIDE tactor is allocated to "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "This stimulus is of fixed duration and a clearly perceptible intensity. "
+                },
+                {
+                  "type": "text",
+                  "value": "Three tactors are used in the arrangement as the source of a CS (see Figure 1). "
+                },
+                {
+                  "type": "text",
+                  "value": "The SIDE tactor is allocated to "
                 },
                 {
                   "type": "text",
@@ -1854,7 +2062,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " stimulation is delivered by passing a current across two surface electrodes located at the midpoint between the tactors to serve as the US (Figure 1). The current is delivered using a DS7A constant current stimulator "
+                  "value": " stimulation is delivered by passing a current across two surface electrodes located at the midpoint between the tactors to serve as the US (Figure 1). "
+                },
+                {
+                  "type": "text",
+                  "value": "The current is delivered using a DS7A constant current stimulator "
                 },
                 {
                   "type": "command",
@@ -1877,7 +2089,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ". The stimulation intensity is calibrated individually. The number of pulses delivered on each stimulation occasion is varied to provide a "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "The stimulation intensity is calibrated individually. "
+                },
+                {
+                  "type": "text",
+                  "value": "The number of pulses delivered on each stimulation occasion is varied to provide a "
                 },
                 {
                   "type": "text",
@@ -1958,7 +2178,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "On arrival, participants are seated straddling a chair in front of a desk with a computer monitor, mouse, and keyboard. Participants are asked to bend backwards to identify the point at which the greatest bend is seen. A point in the upper lumbar region is marked on the back, 2cm to the left of the spine, where the electrodes are placed such that the mark lies exactly between them. Three other points—4cm above, below, and to the left side of the electrodes—are marked, and the tactors are taped in place such that the closest border of each tactor lies at a tactor mark (Figure 1). Calibration is performed by the procedure described in Traxler et al. "
+                  "value": "On arrival, participants are seated straddling a chair in front of a desk with a computer monitor, mouse, and keyboard. "
+                },
+                {
+                  "type": "text",
+                  "value": "Participants are asked to bend backwards to identify the point at which the greatest bend is seen. "
+                },
+                {
+                  "type": "text",
+                  "value": "A point in the upper lumbar region is marked on the back, 2cm to the left of the spine, where the electrodes are placed such that the mark lies exactly between them. "
+                },
+                {
+                  "type": "text",
+                  "value": "Three other points—4cm above, below, and to the left side of the electrodes—are marked, and the tactors are taped in place such that the closest border of each tactor lies at a tactor mark (Figure 1). "
+                },
+                {
+                  "type": "text",
+                  "value": "Calibration is performed by the procedure described in Traxler et al. "
                 },
                 {
                   "type": "command",
@@ -2023,7 +2259,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " is used to provide vibratory stimulation consistent with the CS+/CS− stimuli that are later presented in the experimental trials to ensure that any modulation of pain by the vibration itself is consistent across calibration and experimental trials. Ratings of "
+                  "value": " is used to provide vibratory stimulation consistent with the CS+/CS− stimuli that are later presented in the experimental trials to ensure that any modulation of pain by the vibration itself is consistent across calibration and experimental trials. "
+                },
+                {
+                  "type": "text",
+                  "value": "Ratings of "
                 },
                 {
                   "type": "text",
@@ -2079,7 +2319,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Training trials: Each training trial consists of one CS, with each of the three CS types used in different trials. There is no "
+                  "value": "Training trials: Each training trial consists of one CS, with each of the three CS types used in different trials. "
+                },
+                {
+                  "type": "text",
+                  "value": "There is no "
                 },
                 {
                   "type": "text",
@@ -2087,7 +2331,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " stimulation (i.e., US) presented. These trials are conducted to familiarize the participants with the locations of the CS tactors. "
+                  "value": " stimulation (i.e., US) presented. "
+                },
+                {
+                  "type": "text",
+                  "value": "These trials are conducted to familiarize the participants with the locations of the CS tactors. "
                 }
               ]
             },
@@ -2130,7 +2378,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". These trials are used to record baseline pain ratings of participants before they are conditioned to associate the painful US with a particular CS."
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "These trials are used to record baseline pain ratings of participants before they are conditioned to associate the painful US with a particular CS."
                 }
               ]
             },
@@ -2267,7 +2519,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " stimuli. These trials are noninformative and are included to satisfy the assumptions of the analytical approach; they are included only to achieve consistency in the time gaps between baseline or test trials. "
+                  "value": " stimuli. "
+                },
+                {
+                  "type": "text",
+                  "value": "These trials are noninformative and are included to satisfy the assumptions of the analytical approach; they are included only to achieve consistency in the time gaps between baseline or test trials. "
                 }
               ]
             },
@@ -2297,7 +2553,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The participants are requested to provide two reports on each trial. First, they rate the stimulation event on the Sensation and Pain Rating Scale "
+                  "value": "The participants are requested to provide two reports on each trial. "
+                },
+                {
+                  "type": "text",
+                  "value": "First, they rate the stimulation event on the Sensation and Pain Rating Scale "
                 },
                 {
                   "type": "command",
@@ -2351,7 +2611,19 @@
                 },
                 {
                   "type": "text",
-                  "value": ". The SPARS is anchored at -50 (no sensation), 0 (the exact point at which the feeling transitions to pain), and 50 (worst pain imaginable). The two distinct ranges for non-painful (-50 to -1) and painful (1 to 50) are clearly marked and explained to the participants. Participants are explicitly advised to make an initial decision about whether a trial was non-painful or painful before assigning a rating from the appropriate side of the scale, without selecting 0 on SPARS. "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "The SPARS is anchored at -50 (no sensation), 0 (the exact point at which the feeling transitions to pain), and 50 (worst pain imaginable). "
+                },
+                {
+                  "type": "text",
+                  "value": "The two distinct ranges for non-painful (-50 to -1) and painful (1 to 50) are clearly marked and explained to the participants. "
+                },
+                {
+                  "type": "text",
+                  "value": "Participants are explicitly advised to make an initial decision about whether a trial was non-painful or painful before assigning a rating from the appropriate side of the scale, without selecting 0 on SPARS. "
                 }
               ]
             },
@@ -2360,7 +2632,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Second, the participant indicates the location at which they feel the vibrotactile stimulus from the three options “ABOVE”, “BELOW”, and “SIDE”. This is only used to confirm that the participants are identifying the location of the stimuli correctly. Given that discrimination of the vibrotactile stimuli is necessary for differential learning, participants who fail to identify the location of the stimulus correctly in at least 75% of the trials are excluded and replaced by additional participants."
+                  "value": "Second, the participant indicates the location at which they feel the vibrotactile stimulus from the three options “ABOVE”, “BELOW”, and “SIDE”. "
+                },
+                {
+                  "type": "text",
+                  "value": "This is only used to confirm that the participants are identifying the location of the stimuli correctly. "
+                },
+                {
+                  "type": "text",
+                  "value": "Given that discrimination of the vibrotactile stimuli is necessary for differential learning, participants who fail to identify the location of the stimulus correctly in at least 75% of the trials are excluded and replaced by additional participants."
                 }
               ]
             },
@@ -2424,7 +2704,19 @@
                 },
                 {
                   "type": "text",
-                  "value": " as painful or non-painful differently for baseline and test trials. For this purpose, we first convert the SPARS ratings to a binary variable: 0 for non-painful (-50 to -1 on SPARS) and 1 for painful (1 to 50 on SPARS). A rating of 0 on SPARS can neither be classified as painful nor as non-painful, therefore these are considered indeterminate and were marked as missing. Then, we pair two trials, a CS+/ "
+                  "value": " as painful or non-painful differently for baseline and test trials. "
+                },
+                {
+                  "type": "text",
+                  "value": "For this purpose, we first convert the SPARS ratings to a binary variable: 0 for non-painful (-50 to -1 on SPARS) and 1 for painful (1 to 50 on SPARS). "
+                },
+                {
+                  "type": "text",
+                  "value": "A rating of 0 on SPARS can neither be classified as painful nor as non-painful, therefore these are considered indeterminate and were marked as missing. "
+                },
+                {
+                  "type": "text",
+                  "value": "Then, we pair two trials, a CS+/ "
                 },
                 {
                   "type": "text",
@@ -2458,7 +2750,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " and calculate the difference between the corresponding binary variables. The resulting difference indicates whether the participant is rating CS+/ "
+                  "value": " and calculate the difference between the corresponding binary variables. "
+                },
+                {
+                  "type": "text",
+                  "value": "The resulting difference indicates whether the participant is rating CS+/ "
                 },
                 {
                   "type": "text",
@@ -2492,7 +2788,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " differently. The difference can result in three different values: 1 when the CS+/ "
+                  "value": " differently. "
+                },
+                {
+                  "type": "text",
+                  "value": "The difference can result in three different values: 1 when the CS+/ "
                 },
                 {
                   "type": "text",
@@ -2594,7 +2894,19 @@
                 },
                 {
                   "type": "text",
-                  "value": " trials are rated as painful or both are rated as non-painful. This difference value, calculated from a pair of trials, constitutes one measurement in our SCE. A simple mean difference (MD) effect size measure is calculated as the difference between the means of the difference values derived from the test trial pairs and the difference values derived from the baseline trial pairs. Due to the flexibility of RTs, this effect size measure can also be used as the test statistic "
+                  "value": " trials are rated as painful or both are rated as non-painful. "
+                },
+                {
+                  "type": "text",
+                  "value": "This difference value, calculated from a pair of trials, constitutes one measurement in our SCE. "
+                },
+                {
+                  "type": "text",
+                  "value": "A simple mean difference (MD) effect size measure is calculated as the difference between the means of the difference values derived from the test trial pairs and the difference values derived from the baseline trial pairs. "
+                },
+                {
+                  "type": "text",
+                  "value": "Due to the flexibility of RTs, this effect size measure can also be used as the test statistic "
                 },
                 {
                   "type": "command",
@@ -2643,7 +2955,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "In this section, we describe our considerations regarding which SCE design to use in our experiment. We discuss several initial design possibilities that were chosen by trial and error and conclude with a final design."
+                  "value": "In this section, we describe our considerations regarding which SCE design to use in our experiment. "
+                },
+                {
+                  "type": "text",
+                  "value": "We discuss several initial design possibilities that were chosen by trial and error and conclude with a final design."
                 }
               ]
             },
@@ -2677,7 +2993,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " Since each of our measurements requires a pair of trials, we immediately considered a randomized block design (RBD) for the experiment. In an RBD SCE, similar to an RBD in traditional group designs, the measurement occasions are divided into small blocks, with each block containing administrations of all treatment conditions "
+                  "value": " Since each of our measurements requires a pair of trials, we immediately considered a randomized block design (RBD) for the experiment. "
+                },
+                {
+                  "type": "text",
+                  "value": "In an RBD SCE, similar to an RBD in traditional group designs, the measurement occasions are divided into small blocks, with each block containing administrations of all treatment conditions "
                 },
                 {
                   "type": "command",
@@ -2696,7 +3016,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". For our study, a possible block consists of the two baseline (or test) trials, a CS+/ "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "For our study, a possible block consists of the two baseline (or test) trials, a CS+/ "
                 },
                 {
                   "type": "text",
@@ -2730,7 +3054,19 @@
                 },
                 {
                   "type": "text",
-                  "value": ", in random order. Hence, the experiment for a participant can consist of several blocks of baseline trial pairs, followed by a period of acquisition trials to condition the participants, followed by several blocks of test trial pairs. However, this design is immediately rejected, as an RBD SCE requires all treatment conditions to be applied inside a block. Since the effects of conditioning are acquired over "
+                  "value": ", in random order. "
+                },
+                {
+                  "type": "text",
+                  "value": "Hence, the experiment for a participant can consist of several blocks of baseline trial pairs, followed by a period of acquisition trials to condition the participants, followed by several blocks of test trial pairs. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, this design is immediately rejected, as an RBD SCE requires all treatment conditions to be applied inside a block. "
+                },
+                {
+                  "type": "text",
+                  "value": "Since the effects of conditioning are acquired over "
                 },
                 {
                   "type": "text",
@@ -2751,7 +3087,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " When we rejected the RBD, we realized that the experiment should consist of periods of baseline trial pairs and periods of test trial pairs. The simplest method to achieve this is using an AB phase design, with an A phase as the baseline condition and a subsequent B phase as the test condition "
+                  "value": " When we rejected the RBD, we realized that the experiment should consist of periods of baseline trial pairs and periods of test trial pairs. "
+                },
+                {
+                  "type": "text",
+                  "value": "The simplest method to achieve this is using an AB phase design, with an A phase as the baseline condition and a subsequent B phase as the test condition "
                 },
                 {
                   "type": "command",
@@ -2770,7 +3110,19 @@
                 },
                 {
                   "type": "text",
-                  "value": ". In favor of internal validity, the phase transition is preferably randomized. Each phase consists of several blocks of trials, each of which yields one measurement. Each measurement block in the baseline phase consists of "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "In favor of internal validity, the phase transition is preferably randomized. "
+                },
+                {
+                  "type": "text",
+                  "value": "Each phase consists of several blocks of trials, each of which yields one measurement. "
+                },
+                {
+                  "type": "text",
+                  "value": "Each measurement block in the baseline phase consists of "
                 },
                 {
                   "type": "command",
@@ -2857,7 +3209,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " in random order). Similarly, each measurement block in the test phase consists of "
+                  "value": " in random order). "
+                },
+                {
+                  "type": "text",
+                  "value": "Similarly, each measurement block in the test phase consists of "
                 },
                 {
                   "type": "command",
@@ -2944,7 +3300,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " in random order). The number of irrelevant or acquisition trial pairs in each block, or "
+                  "value": " in random order). "
+                },
+                {
+                  "type": "text",
+                  "value": "The number of irrelevant or acquisition trial pairs in each block, or "
                 },
                 {
                   "type": "command",
@@ -2963,7 +3323,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ", is set based on the required level of acquisition. A lower "
+                  "value": ", is set based on the required level of acquisition. "
+                },
+                {
+                  "type": "text",
+                  "value": "A lower "
                 },
                 {
                   "type": "command",
@@ -3001,7 +3365,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Unfortunately, this design has low acquisition of the associations as there is no learning period. Additionally, RTs for AB phase designs require a large number of measurements to achieve sufficient statistical power "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Unfortunately, this design has low acquisition of the associations as there is no learning period. "
+                },
+                {
+                  "type": "text",
+                  "value": "Additionally, RTs for AB phase designs require a large number of measurements to achieve sufficient statistical power "
                 },
                 {
                   "type": "command",
@@ -3035,7 +3407,19 @@
                 },
                 {
                   "type": "text",
-                  "value": ". As a result, the experiment for a participant would need a very large number of trials over a significantly long time to ensure both high acquisition and enough measurements. As a result, this design is rejected in favor of a slightly modified AB phase design. A similar ABAB phase design is also rejected due to the potentially large number of trials required and possibility of carry-over effects between phases. "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "As a result, the experiment for a participant would need a very large number of trials over a significantly long time to ensure both high acquisition and enough measurements. "
+                },
+                {
+                  "type": "text",
+                  "value": "As a result, this design is rejected in favor of a slightly modified AB phase design. "
+                },
+                {
+                  "type": "text",
+                  "value": "A similar ABAB phase design is also rejected due to the potentially large number of trials required and possibility of carry-over effects between phases. "
                 }
               ]
             },
@@ -3065,7 +3449,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The final design combines elements from both previous designs: an AB phase design with both out-of-phase and in-phase learning. The baseline phase for this design contains several pairs of baseline trial pairs (a CS+/ "
+                  "value": "The final design combines elements from both previous designs: an AB phase design with both out-of-phase and in-phase learning. "
+                },
+                {
+                  "type": "text",
+                  "value": "The baseline phase for this design contains several pairs of baseline trial pairs (a CS+/ "
                 },
                 {
                   "type": "text",
@@ -3133,7 +3521,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " in random order). Finally, the test phase includes test trial pairs (a CS+/ "
+                  "value": " in random order). "
+                },
+                {
+                  "type": "text",
+                  "value": "Finally, the test phase includes test trial pairs (a CS+/ "
                 },
                 {
                   "type": "text",
@@ -3175,7 +3567,15 @@
                 },
                 {
                   "type": "text",
-                  "value": " trial pairs in between at regular intervals to reinforce the associations and hence prevent extinction. The time of onset of the test phase is randomized. The experiment starts with a few training trials before the baseline phase. "
+                  "value": " trial pairs in between at regular intervals to reinforce the associations and hence prevent extinction. "
+                },
+                {
+                  "type": "text",
+                  "value": "The time of onset of the test phase is randomized. "
+                },
+                {
+                  "type": "text",
+                  "value": "The experiment starts with a few training trials before the baseline phase. "
                 }
               ]
             },
@@ -3192,7 +3592,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " to be decided based on a power study and some pilot experiments. However, the guidelines for phase designs by "
+                  "value": " to be decided based on a power study and some pilot experiments. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, the guidelines for phase designs by "
                 },
                 {
                   "type": "text",
@@ -3219,7 +3623,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " recommend at least five measurements in both baseline and test phases. Since we are also curious about any increase or decrease in acquisition over time, we decide to include at least 15 measurements in the test phase. "
+                  "value": " recommend at least five measurements in both baseline and test phases. "
+                },
+                {
+                  "type": "text",
+                  "value": "Since we are also curious about any increase or decrease in acquisition over time, we decide to include at least 15 measurements in the test phase. "
                 }
               ]
             },
@@ -3228,7 +3636,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Due to the use of specialized equipment and individual calibration, multiple participants cannot be tested at the same time. Hence, simultaneous replication using a multiple baseline design (MBD), which is able to control for environmental confounding factors, is not possible "
+                  "value": "Due to the use of specialized equipment and individual calibration, multiple participants cannot be tested at the same time. "
+                },
+                {
+                  "type": "text",
+                  "value": "Hence, simultaneous replication using a multiple baseline design (MBD), which is able to control for environmental confounding factors, is not possible "
                 },
                 {
                   "type": "command",
@@ -3262,7 +3674,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Instead, the experiment is to be run as a sequentially replicated AB phase design experiment. "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Instead, the experiment is to be run as a sequentially replicated AB phase design experiment. "
                 }
               ]
             },
@@ -3311,7 +3727,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ". In this scheme, the total number of measurements and the minimum number of measurements in each phase is decided beforehand, and the intervention can start at any time point that satisfies these restrictions. Therefore, if the number of measurements is "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "In this scheme, the total number of measurements and the minimum number of measurements in each phase is decided beforehand, and the intervention can start at any time point that satisfies these restrictions. "
+                },
+                {
+                  "type": "text",
+                  "value": "Therefore, if the number of measurements is "
                 },
                 {
                   "type": "command",
@@ -3444,7 +3868,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " + 1. For "
+                  "value": " + 1. "
+                },
+                {
+                  "type": "text",
+                  "value": "For "
                 },
                 {
                   "type": "command",
@@ -3550,7 +3978,15 @@
                 },
                 {
                   "type": "text",
-                  "value": " randomizations. The null hypothesis for this RT is that no difference exists between the baseline phase measurements and test phase measurements for all participants. As discussed previously, the measurements represent whether participants rate CS+/ "
+                  "value": " randomizations. "
+                },
+                {
+                  "type": "text",
+                  "value": "The null hypothesis for this RT is that no difference exists between the baseline phase measurements and test phase measurements for all participants. "
+                },
+                {
+                  "type": "text",
+                  "value": "As discussed previously, the measurements represent whether participants rate CS+/ "
                 },
                 {
                   "type": "text",
@@ -3584,7 +4020,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " trials. Since the Pavlovian conditioning procedure is aimed at participants perceiving the CS+/ "
+                  "value": " trials. "
+                },
+                {
+                  "type": "text",
+                  "value": "Since the Pavlovian conditioning procedure is aimed at participants perceiving the CS+/ "
                 },
                 {
                   "type": "text",
@@ -3601,7 +4041,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " as more painful, the RT is one-sided with the alternate hypothesis being that the test phase measurements are higher than the baseline phase measurements for at least one participant. This RT can be conducted with the average (across participants) of the MD effect size measure discussed previously as the combined test statistic."
+                  "value": " as more painful, the RT is one-sided with the alternate hypothesis being that the test phase measurements are higher than the baseline phase measurements for at least one participant. "
+                },
+                {
+                  "type": "text",
+                  "value": "This RT can be conducted with the average (across participants) of the MD effect size measure discussed previously as the combined test statistic."
                 }
               ]
             },
@@ -3629,7 +4073,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Whereas this web app does not include an option for simultaneously replicated AB phase design, it does include an MBD option. The MBD option in Shiny SCDA uses the Koehler-Levin regulated randomization procedure "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Whereas this web app does not include an option for simultaneously replicated AB phase design, it does include an MBD option. "
+                },
+                {
+                  "type": "text",
+                  "value": "The MBD option in Shiny SCDA uses the Koehler-Levin regulated randomization procedure "
                 },
                 {
                   "type": "command",
@@ -3648,7 +4100,15 @@
                 },
                 {
                   "type": "text",
-                  "value": ", which, when using an identical set of possible start points for all participants, is analogous to our randomization scheme. Hence, we can both randomly select test phase start points and run the RT in Shiny SCDA. Additionally, we can plot the observed data for visual analysis in Shiny SCDA. "
+                  "value": ", which, when using an identical set of possible start points for all participants, is analogous to our randomization scheme. "
+                },
+                {
+                  "type": "text",
+                  "value": "Hence, we can both randomly select test phase start points and run the RT in Shiny SCDA. "
+                },
+                {
+                  "type": "text",
+                  "value": "Additionally, we can plot the observed data for visual analysis in Shiny SCDA. "
                 }
               ]
             },
@@ -3678,7 +4138,31 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "We ran several pilot tests to estimate possible effect sizes and to test possible design choices. We first tested nine participants under slight variations of our initial design choice. Later, after a simulated power study and adjustments to the design, we tested another four participants. We analyzed these four tests using visual analysis and an RT in Shiny SCDA. These four tests were, however, not randomized, and the test phase for all four participants started at the tenth measurement occasion. However, for the purposes of demonstration, we ignored the assumption of randomization. We will discuss the results from these pilot tests, and the final four tests "
+                  "value": "We ran several pilot tests to estimate possible effect sizes and to test possible design choices. "
+                },
+                {
+                  "type": "text",
+                  "value": "We first tested nine participants under slight variations of our initial design choice. "
+                },
+                {
+                  "type": "text",
+                  "value": "Later, after a simulated power study and adjustments to the design, we tested another four participants. "
+                },
+                {
+                  "type": "text",
+                  "value": "We analyzed these four tests using visual analysis and an RT in Shiny SCDA. "
+                },
+                {
+                  "type": "text",
+                  "value": "These four tests were, however, not randomized, and the test phase for all four participants started at the tenth measurement occasion. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, for the purposes of demonstration, we ignored the assumption of randomization. "
+                },
+                {
+                  "type": "text",
+                  "value": "We will discuss the results from these pilot tests, and the final four tests "
                 },
                 {
                   "type": "text",
@@ -3695,7 +4179,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "There were two important takeaways from the first nine pilot tests that were very useful for the design of the power study. First, the observed MD effect sizes were extremely small. The average effect size from the first nine tests was slightly negative at -0.037, with a maximum of 0.143 and a minimum of -0.400. Second, the pilot tests also revealed difficulties in running the experiment for more than 30-35 minutes for a participant. Considering each trial took around 15 seconds, this gave us a maximum of around 140 trials."
+                  "value": "There were two important takeaways from the first nine pilot tests that were very useful for the design of the power study. "
+                },
+                {
+                  "type": "text",
+                  "value": "First, the observed MD effect sizes were extremely small. "
+                },
+                {
+                  "type": "text",
+                  "value": "The average effect size from the first nine tests was slightly negative at -0.037, with a maximum of 0.143 and a minimum of -0.400. "
+                },
+                {
+                  "type": "text",
+                  "value": "Second, the pilot tests also revealed difficulties in running the experiment for more than 30-35 minutes for a participant. "
+                },
+                {
+                  "type": "text",
+                  "value": "Considering each trial took around 15 seconds, this gave us a maximum of around 140 trials."
                 }
               ]
             },
@@ -3829,7 +4329,15 @@
                 },
                 {
                   "type": "text",
-                  "value": " possible within the limits of how long an experiment can be reasonably run. This strategy presents us with two advantages. First, increasing "
+                  "value": " possible within the limits of how long an experiment can be reasonably run. "
+                },
+                {
+                  "type": "text",
+                  "value": "This strategy presents us with two advantages. "
+                },
+                {
+                  "type": "text",
+                  "value": "First, increasing "
                 },
                 {
                   "type": "command",
@@ -3848,7 +4356,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " should result in reduction in the variability of the estimate of effect size. Second, maximizing "
+                  "value": " should result in reduction in the variability of the estimate of effect size. "
+                },
+                {
+                  "type": "text",
+                  "value": "Second, maximizing "
                 },
                 {
                   "type": "command",
@@ -3914,7 +4426,23 @@
                 },
                 {
                   "type": "text",
-                  "value": " to estimate power. In this method, several datasets are simulated under a set of simulation conditions. The proportion of these simulated datasets in which the RT leads to a rejection of the null hypothesis gives an estimate of statistical power for the given set of simulation conditions. A simulation study of such complexity is both difficult to program and computationally intensive to execute. Fortunately, we were able to modify and repurpose R code used by De, Michiels, Tanious, et al. "
+                  "value": " to estimate power. "
+                },
+                {
+                  "type": "text",
+                  "value": "In this method, several datasets are simulated under a set of simulation conditions. "
+                },
+                {
+                  "type": "text",
+                  "value": "The proportion of these simulated datasets in which the RT leads to a rejection of the null hypothesis gives an estimate of statistical power for the given set of simulation conditions. "
+                },
+                {
+                  "type": "text",
+                  "value": "A simulation study of such complexity is both difficult to program and computationally intensive to execute. "
+                },
+                {
+                  "type": "text",
+                  "value": "Fortunately, we were able to modify and repurpose R code used by De, Michiels, Tanious, et al. "
                 },
                 {
                   "type": "command",
@@ -3981,7 +4509,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Number of measurements: We decided on a minimum of five measurements in the baseline phase and a minimum of 15 measurements in the test phase. As a result, the experiment needs more than 20 measurements. However, from the pilot tests it was evident that an experiment with more than 140 trials (70 trial pairs) was not feasible. Considering around 30 trials are required for the training and learning periods, and a few more acquisition trails for reinforcement during test phase, it was difficult to have more than 40 measurements (80 trials). Hence, we used 25, 30, 35, and 40 measurements for simulated data. "
+                  "value": "Number of measurements: We decided on a minimum of five measurements in the baseline phase and a minimum of 15 measurements in the test phase. "
+                },
+                {
+                  "type": "text",
+                  "value": "As a result, the experiment needs more than 20 measurements. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, from the pilot tests it was evident that an experiment with more than 140 trials (70 trial pairs) was not feasible. "
+                },
+                {
+                  "type": "text",
+                  "value": "Considering around 30 trials are required for the training and learning periods, and a few more acquisition trails for reinforcement during test phase, it was difficult to have more than 40 measurements (80 trials). "
+                },
+                {
+                  "type": "text",
+                  "value": "Hence, we used 25, 30, 35, and 40 measurements for simulated data. "
                 }
               ]
             },
@@ -4028,7 +4572,15 @@
                 },
                 {
                   "type": "text",
-                  "value": " the experiment. For the baseline, we assumed a symmetric distribution around 0 for the SPARS rating. Therefore, the painful/non-painful ratings were expected to be 0s and 1s equally for both CS+/ "
+                  "value": " the experiment. "
+                },
+                {
+                  "type": "text",
+                  "value": "For the baseline, we assumed a symmetric distribution around 0 for the SPARS rating. "
+                },
+                {
+                  "type": "text",
+                  "value": "Therefore, the painful/non-painful ratings were expected to be 0s and 1s equally for both CS+/ "
                 },
                 {
                   "type": "text",
@@ -4062,7 +4614,23 @@
                 },
                 {
                   "type": "text",
-                  "value": " trials. Hence, an observed value corresponding to a trial pair in the baseline was expected to be 1 with 25% probability, -1 with 25% probability, and 0 with 50% probability. We simulated observed values as 1, -1, and 0 with these probabilities. For the test phase, we increased the probability of 1 by half the selected effect size and decreased the probability of -1 by half the selected effect size. This resulted in an expected MD effect size equal to the selected effect size. "
+                  "value": " trials. "
+                },
+                {
+                  "type": "text",
+                  "value": "Hence, an observed value corresponding to a trial pair in the baseline was expected to be 1 with 25% probability, -1 with 25% probability, and 0 with 50% probability. "
+                },
+                {
+                  "type": "text",
+                  "value": "We simulated observed values as 1, -1, and 0 with these probabilities. "
+                },
+                {
+                  "type": "text",
+                  "value": "For the test phase, we increased the probability of 1 by half the selected effect size and decreased the probability of -1 by half the selected effect size. "
+                },
+                {
+                  "type": "text",
+                  "value": "This resulted in an expected MD effect size equal to the selected effect size. "
                 }
               ]
             },
@@ -4087,6 +4655,18 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "text",
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "For estimating power, we simulated 10000 datasets for each set of simulation conditions. "
+                },
+                {
+                  "type": "text",
+                  "value": "Finally, we used a 5% level of significance for the simulated RTs."
                 }
               ]
             },
@@ -4095,7 +4675,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The simulations were run on supercomputer nodes at the Flemish Supercomputer Center (Leuven, Belgium). This allowed testing more simulation conditions and achieve high accuracy simulating "
+                  "value": "The simulations were run on supercomputer nodes at the Flemish Supercomputer Center (Leuven, Belgium). "
+                },
+                {
+                  "type": "text",
+                  "value": "This allowed testing more simulation conditions and achieve high accuracy simulating "
                 },
                 {
                   "type": "text",
@@ -4154,7 +4738,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The results from the power study (Table 1) revealed that due to the relatively small effect sizes and restricted number of measurements, the number of participants need to be high to achieve 80% power. If we restrict the number of measurements to 30, which allows sufficient acquisition trials for learning and reinforcement within 30 minutes, 30 participants result in sufficient power even with a moderate effect size. "
+                  "value": "The results from the power study (Table 1) revealed that due to the relatively small effect sizes and restricted number of measurements, the number of participants need to be high to achieve 80% power. "
+                },
+                {
+                  "type": "text",
+                  "value": "If we restrict the number of measurements to 30, which allows sufficient acquisition trials for learning and reinforcement within 30 minutes, 30 participants result in sufficient power even with a moderate effect size. "
                 }
               ]
             },
@@ -6303,7 +6891,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Based on these results, we decided to run the final set of pilot tests with 30 measurements. We decided on six training trials (two trials for each type of CS) before the baseline phase, 24 acquisition trials between the baseline and test phases, and additionally one acquisition trial pair for reinforcement after two test trial pairs during the test phase. With a minimum of five measurements in the baseline phase, and a minimum of 15 measurements in the test phase, this design allows for 11 possible randomizations. Depending on the number of measurements in the test phase which will vary based on the test phase start point selected, the experiment could theoretically consist of 104 to 114 trials. This is the design we intend to follow in the final experiment with 30 participants (Figure 2)."
+                  "value": "Based on these results, we decided to run the final set of pilot tests with 30 measurements. "
+                },
+                {
+                  "type": "text",
+                  "value": "We decided on six training trials (two trials for each type of CS) before the baseline phase, 24 acquisition trials between the baseline and test phases, and additionally one acquisition trial pair for reinforcement after two test trial pairs during the test phase. "
+                },
+                {
+                  "type": "text",
+                  "value": "With a minimum of five measurements in the baseline phase, and a minimum of 15 measurements in the test phase, this design allows for 11 possible randomizations. "
+                },
+                {
+                  "type": "text",
+                  "value": "Depending on the number of measurements in the test phase which will vary based on the test phase start point selected, the experiment could theoretically consist of 104 to 114 trials. "
+                },
+                {
+                  "type": "text",
+                  "value": "This is the design we intend to follow in the final experiment with 30 participants (Figure 2)."
                 }
               ]
             },
@@ -6383,7 +6987,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "As mentioned previously, the initial nine pilot tests resulted in extremely small (and a few negative) effect sizes. The average MD effect size was -0.037, with a maximum of 0.143 and a minimum of -0.400. The low effect sizes indicated that the final design would need "
+                  "value": "As mentioned previously, the initial nine pilot tests resulted in extremely small (and a few negative) effect sizes. "
+                },
+                {
+                  "type": "text",
+                  "value": "The average MD effect size was -0.037, with a maximum of 0.143 and a minimum of -0.400. "
+                },
+                {
+                  "type": "text",
+                  "value": "The low effect sizes indicated that the final design would need "
                 },
                 {
                   "type": "text",
@@ -6391,7 +7003,23 @@
                 },
                 {
                   "type": "text",
-                  "value": " measurements and participants to achieve sufficient power in the RT. The first seven of these pilot tests consisted of 10-20 measurements each, which seemed too few. On the other hand, the last two pilot tests out of these consisted of 238 trials each. The feedback from both the experimenters and participants was that these tests were too long. These results influenced the decision to limit the number of trails to 140, remove irrelevant trial pairs from the baseline phase, and lower the number of acquisition trail pairs in the treatment phase. "
+                  "value": " measurements and participants to achieve sufficient power in the RT. "
+                },
+                {
+                  "type": "text",
+                  "value": "The first seven of these pilot tests consisted of 10-20 measurements each, which seemed too few. "
+                },
+                {
+                  "type": "text",
+                  "value": "On the other hand, the last two pilot tests out of these consisted of 238 trials each. "
+                },
+                {
+                  "type": "text",
+                  "value": "The feedback from both the experimenters and participants was that these tests were too long. "
+                },
+                {
+                  "type": "text",
+                  "value": "These results influenced the decision to limit the number of trails to 140, remove irrelevant trial pairs from the baseline phase, and lower the number of acquisition trail pairs in the treatment phase. "
                 }
               ]
             },
@@ -6480,7 +7108,27 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The later four pilot tests were run using the design parameters we decided on after the power study. The average MD effect size for these participants was 0.057, with a maximum of 0.476 and a minimum of -0.250. Visual analysis (Figure 4) revealed that the first, third, and fourth participant did not seem to show any sign of conditioning. However, the second participant seemed to show significant conditioning effects. This is also confirmed by the MD effect size for the second participant (0.476). Finally, a Monte Carlo RT with 1000 randomizations resulted in a "
+                  "value": "The later four pilot tests were run using the design parameters we decided on after the power study. "
+                },
+                {
+                  "type": "text",
+                  "value": "The average MD effect size for these participants was 0.057, with a maximum of 0.476 and a minimum of -0.250. "
+                },
+                {
+                  "type": "text",
+                  "value": "Visual analysis (Figure 4) revealed that the first, third, and fourth participant did not seem to show any sign of conditioning. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, the second participant seemed to show significant conditioning effects. "
+                },
+                {
+                  "type": "text",
+                  "value": "This is also confirmed by the MD effect size for the second participant (0.476). "
+                },
+                {
+                  "type": "text",
+                  "value": "Finally, a Monte Carlo RT with 1000 randomizations resulted in a "
                 },
                 {
                   "type": "command",
@@ -6499,7 +7147,11 @@
                 },
                 {
                   "type": "text",
-                  "value": "-value of 0.112. Hence, the null hypothesis of the RT could not be rejected at a 5% level of significance. "
+                  "value": "-value of 0.112. "
+                },
+                {
+                  "type": "text",
+                  "value": "Hence, the null hypothesis of the RT could not be rejected at a 5% level of significance. "
                 }
               ]
             },
@@ -6609,7 +7261,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The power analysis and pilot test results confirm that the SCE design developed for this study can be effectively used to test the effect of classical conditioning on pain thresholds. The power study provides strong evidence that this design results in sufficient power if the number of measurements and participants are chosen correctly. The results from the final four pilot tests were encouraging. Even though the RT lacked power due to the small number of participants, the "
+                  "value": "The power analysis and pilot test results confirm that the SCE design developed for this study can be effectively used to test the effect of classical conditioning on pain thresholds. "
+                },
+                {
+                  "type": "text",
+                  "value": "The power study provides strong evidence that this design results in sufficient power if the number of measurements and participants are chosen correctly. "
+                },
+                {
+                  "type": "text",
+                  "value": "The results from the final four pilot tests were encouraging. "
+                },
+                {
+                  "type": "text",
+                  "value": "Even though the RT lacked power due to the small number of participants, the "
                 },
                 {
                   "type": "command",
@@ -6628,7 +7292,11 @@
                 },
                 {
                   "type": "text",
-                  "value": "-value was low. The visual analysis also seemed to suggest a large effect for at least one participant. "
+                  "value": "-value was low. "
+                },
+                {
+                  "type": "text",
+                  "value": "The visual analysis also seemed to suggest a large effect for at least one participant. "
                 }
               ]
             },
@@ -6637,7 +7305,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The final study using this protocol was not conducted immediately, due to lack of resources at the time. However, we hope to conduct this study as soon as the opportunity arises. Meanwhile, it seemed that the discussions regarding the SCE design and preparations for the study might be useful for other researchers developing similar protocols. Therefore, we decided to prepare this manuscript."
+                  "value": "The final study using this protocol was not conducted immediately, due to lack of resources at the time. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, we hope to conduct this study as soon as the opportunity arises. "
+                },
+                {
+                  "type": "text",
+                  "value": "Meanwhile, it seemed that the discussions regarding the SCE design and preparations for the study might be useful for other researchers developing similar protocols. "
+                },
+                {
+                  "type": "text",
+                  "value": "Therefore, we decided to prepare this manuscript."
                 }
               ]
             },
@@ -6646,7 +7326,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The final design suffers from a few limitations. The first limitation is the observed variable defined by us, which only yields values of -1, 0, and 1. Unfortunately, this restricts variation in observed data and can cause duplicates in the randomization distribution, which can affect power. An alternative is to use the difference between SPARS ratings from CS+/ "
+                  "value": "The final design suffers from a few limitations. "
+                },
+                {
+                  "type": "text",
+                  "value": "The first limitation is the observed variable defined by us, which only yields values of -1, 0, and 1. "
+                },
+                {
+                  "type": "text",
+                  "value": "Unfortunately, this restricts variation in observed data and can cause duplicates in the randomization distribution, which can affect power. "
+                },
+                {
+                  "type": "text",
+                  "value": "An alternative is to use the difference between SPARS ratings from CS+/ "
                 },
                 {
                   "type": "text",
@@ -6680,7 +7372,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " trial pairs. However, this would require a slightly different hypothesis, which would not clarify whether classical conditioning can affect pain thresholds specifically."
+                  "value": " trial pairs. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, this would require a slightly different hypothesis, which would not clarify whether classical conditioning can affect pain thresholds specifically."
                 }
               ]
             },
@@ -6689,7 +7385,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The second limitation is due to the properties of the AB phase design. RTs using randomization of intervention start points in AB phase designs are known to lack power at lower sample sizes "
+                  "value": "The second limitation is due to the properties of the AB phase design. "
+                },
+                {
+                  "type": "text",
+                  "value": "RTs using randomization of intervention start points in AB phase designs are known to lack power at lower sample sizes "
                 },
                 {
                   "type": "command",
@@ -6708,7 +7408,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". AB phase designs do not satisfy the guidelines set by Kratochwill et al. "
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "AB phase designs do not satisfy the guidelines set by Kratochwill et al. "
                 },
                 {
                   "type": "command",
@@ -6727,7 +7431,23 @@
                 },
                 {
                   "type": "text",
-                  "value": " without multiple replications. Since we are not sure how quickly the effect of our conditioning is reversed, we cannot use phase designs with more phase changes, such as the ABAB phase design. Due to the requirement of specialized equipment, we cannot use an MBD. Critically, we cannot increase the number of measurements due to time constraints. Therefore, we "
+                  "value": " without multiple replications. "
+                },
+                {
+                  "type": "text",
+                  "value": "Since we are not sure how quickly the effect of our conditioning is reversed, we cannot use phase designs with more phase changes, such as the ABAB phase design. "
+                },
+                {
+                  "type": "text",
+                  "value": "Due to the requirement of specialized equipment, we cannot use an MBD. "
+                },
+                {
+                  "type": "text",
+                  "value": "Critically, we cannot increase the number of measurements due to time constraints. "
+                },
+                {
+                  "type": "text",
+                  "value": "Therefore, we "
                 },
                 {
                   "type": "text",
@@ -6744,7 +7464,27 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "The power study for this design also presents certain limitations. We used only one possible distribution of the SPARS ratings to simulate our observed data. While the assumption of a symmetric distribution around 0 is not unreasonable, with more pilot data, it might be possible to simulate using a distribution that resembles the observed data. We also did not account for any variability in effect size across participants. Instead, we simulated an equal effect size for all participants. However, we believe these are reasonable assumptions given the scope of our study. "
+                  "value": "The power study for this design also presents certain limitations. "
+                },
+                {
+                  "type": "text",
+                  "value": "We used only one possible distribution of the SPARS ratings to simulate our observed data. "
+                },
+                {
+                  "type": "text",
+                  "value": "While the assumption of a symmetric distribution around 0 is not unreasonable, with more pilot data, it might be possible to simulate using a distribution that resembles the observed data. "
+                },
+                {
+                  "type": "text",
+                  "value": "We also did not account for any variability in effect size across participants. "
+                },
+                {
+                  "type": "text",
+                  "value": "Instead, we simulated an equal effect size for all participants. "
+                },
+                {
+                  "type": "text",
+                  "value": "However, we believe these are reasonable assumptions given the scope of our study. "
                 }
               ]
             },
@@ -6753,7 +7493,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Finally, we conducted Monte Carlo RTs for both the power study and the pilot data. As discussed previously, the number of possible randomizations for this design is "
+                  "value": "Finally, we conducted Monte Carlo RTs for both the power study and the pilot data. "
+                },
+                {
+                  "type": "text",
+                  "value": "As discussed previously, the number of possible randomizations for this design is "
                 },
                 {
                   "type": "command",
@@ -6830,7 +7574,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " denotes the number of participants. Even for the smaller scale of the pilot data, computing 11"
+                  "value": " denotes the number of participants. "
+                },
+                {
+                  "type": "text",
+                  "value": "Even for the smaller scale of the pilot data, computing 11"
                 },
                 {
                   "type": "super",
@@ -6843,7 +7591,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " possible randomizations would have been extremely costly. Monte Carlo RTs present a simple alternative to this computation cost while maintaining sufficient statistical power "
+                  "value": " possible randomizations would have been extremely costly. "
+                },
+                {
+                  "type": "text",
+                  "value": "Monte Carlo RTs present a simple alternative to this computation cost while maintaining sufficient statistical power "
                 },
                 {
                   "type": "command",
@@ -6877,7 +7629,11 @@
                 },
                 {
                   "type": "text",
-                  "value": ". Hence, we intend to conduct a Monte Carlo RT in the final experiment."
+                  "value": ". "
+                },
+                {
+                  "type": "text",
+                  "value": "Hence, we intend to conduct a Monte Carlo RT in the final experiment."
                 }
               ]
             },
@@ -6886,7 +7642,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "As introduced earlier, this design presents certain advantages over traditional group study designs. Single-case designs are a better match for studying within-person changes, because they allow detailed insight into within-individual processes rather than assuming that the response of all individuals in a group is consistent. Additionally, these designs typically require a smaller number of participants. This allows for a lower overall cost and is particularly important for pain studies because it can be difficult to recruit participants."
+                  "value": "As introduced earlier, this design presents certain advantages over traditional group study designs. "
+                },
+                {
+                  "type": "text",
+                  "value": "Single-case designs are a better match for studying within-person changes, because they allow detailed insight into within-individual processes rather than assuming that the response of all individuals in a group is consistent. "
+                },
+                {
+                  "type": "text",
+                  "value": "Additionally, these designs typically require a smaller number of participants. "
+                },
+                {
+                  "type": "text",
+                  "value": "This allows for a lower overall cost and is particularly important for pain studies because it can be difficult to recruit participants."
                 }
               ]
             },
@@ -6916,7 +7684,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "In this manuscript, we described how we used trial and error to design an SCE testing whether classical conditioning can affect pain thresholds. We used a sequentially replicated AB phase design and conducted a simulated power study to determine sample size. We decided on 30 participants and 30 measurements per participant. Finally, we ran some pilot tests using our design. While the results from the pilot tests were inconclusive, they were sufficiently encouraging that we plan to conduct the full study "
+                  "value": "In this manuscript, we described how we used trial and error to design an SCE testing whether classical conditioning can affect pain thresholds. "
+                },
+                {
+                  "type": "text",
+                  "value": "We used a sequentially replicated AB phase design and conducted a simulated power study to determine sample size. "
+                },
+                {
+                  "type": "text",
+                  "value": "We decided on 30 participants and 30 measurements per participant. "
+                },
+                {
+                  "type": "text",
+                  "value": "Finally, we ran some pilot tests using our design. "
+                },
+                {
+                  "type": "text",
+                  "value": "While the results from the pilot tests were inconclusive, they were sufficiently encouraging that we plan to conduct the full study "
                 },
                 {
                   "type": "text",
@@ -7018,7 +7802,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Adams, D. C., & Anthony, C. D. (1996). Using randomization techniques to analyse behavioural data. "
+                  "value": "Adams, D. "
+                },
+                {
+                  "type": "text",
+                  "value": "C., & Anthony, C. "
+                },
+                {
+                  "type": "text",
+                  "value": "D. (1996). "
+                },
+                {
+                  "type": "text",
+                  "value": "Using randomization techniques to analyse behavioural data. "
                 },
                 {
                   "type": "command",
@@ -7065,7 +7861,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Barlow, D. H., Nock, M. K., & Hersen, M. (2009). "
+                  "value": "Barlow, D. "
+                },
+                {
+                  "type": "text",
+                  "value": "H., Nock, M. "
+                },
+                {
+                  "type": "text",
+                  "value": "K., & Hersen, M. (2009). "
                 },
                 {
                   "type": "command",
@@ -7084,7 +7888,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " (3rd ed.). Pearson/Allyn and Bacon."
+                  "value": " (3rd ed.). "
+                },
+                {
+                  "type": "text",
+                  "value": "Pearson/Allyn and Bacon."
                 }
               ]
             },
@@ -7093,7 +7901,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Bouwmeester, S., & Jongerling, J. (2020). Power of a randomization test in a single case multiple baseline AB design. "
+                  "value": "Bouwmeester, S., & Jongerling, J. (2020). "
+                },
+                {
+                  "type": "text",
+                  "value": "Power of a randomization test in a single case multiple baseline AB design. "
                 },
                 {
                   "type": "command",
@@ -7140,7 +7952,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Breivik, H., Collett, B., Ventafridda, V., Cohen, R., & Gallacher, D. (2006). Survey of chronic pain in Europe: Prevalence, impact on daily life, and treatment. "
+                  "value": "Breivik, H., Collett, B., Ventafridda, V., Cohen, R., & Gallacher, D. (2006). "
+                },
+                {
+                  "type": "text",
+                  "value": "Survey of chronic pain in Europe: Prevalence, impact on daily life, and treatment. "
                 },
                 {
                   "type": "command",
@@ -7187,7 +8003,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Busk, P. L., & Marascuilo, L. A. (1988). Autocorrelation in single-subject research: A counterargument to the myth of no autocorrelation. "
+                  "value": "Busk, P. "
+                },
+                {
+                  "type": "text",
+                  "value": "L., & Marascuilo, L. "
+                },
+                {
+                  "type": "text",
+                  "value": "A. (1988). "
+                },
+                {
+                  "type": "text",
+                  "value": "Autocorrelation in single-subject research: A counterargument to the myth of no autocorrelation. "
                 },
                 {
                   "type": "command",
@@ -7253,7 +8081,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " (2nd ed.). Routledge. https://doi.org/10.4324/9780203771587"
+                  "value": " (2nd ed.). "
+                },
+                {
+                  "type": "text",
+                  "value": "Routledge. https://doi.org/10.4324/9780203771587"
                 }
               ]
             },
@@ -7262,7 +8094,35 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Costa, L. da C. M., Maher, C. G., McAuley, J. H., Hancock, M. J., Herbert, R. D., Refshauge, K. M., & Henschke, N. (2009). Prognosis for patients with chronic low back pain: Inception cohort study. "
+                  "value": "Costa, L. da C. "
+                },
+                {
+                  "type": "text",
+                  "value": "M., Maher, C. "
+                },
+                {
+                  "type": "text",
+                  "value": "G., McAuley, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "H., Hancock, M. "
+                },
+                {
+                  "type": "text",
+                  "value": "J., Herbert, R. "
+                },
+                {
+                  "type": "text",
+                  "value": "D., Refshauge, K. "
+                },
+                {
+                  "type": "text",
+                  "value": "M., & Henschke, N. (2009). "
+                },
+                {
+                  "type": "text",
+                  "value": "Prognosis for patients with chronic low back pain: Inception cohort study. "
                 },
                 {
                   "type": "command",
@@ -7337,7 +8197,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "De, T. K., Michiels, B., Tanious, R., & Onghena, P. (2020). Handling missing data in randomization tests for single-case experiments: A simulation study. "
+                  "value": "De, T. "
+                },
+                {
+                  "type": "text",
+                  "value": "K., Michiels, B., Tanious, R., & Onghena, P. (2020). "
+                },
+                {
+                  "type": "text",
+                  "value": "Handling missing data in randomization tests for single-case experiments: A simulation study. "
                 },
                 {
                   "type": "command",
@@ -7384,7 +8252,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "De, T. K., Michiels, B., Vlaeyen, J. W. S., & Onghena, P. (2020). "
+                  "value": "De, T. "
+                },
+                {
+                  "type": "text",
+                  "value": "K., Michiels, B., Vlaeyen, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "W. "
+                },
+                {
+                  "type": "text",
+                  "value": "S., & Onghena, P. (2020). "
                 },
                 {
                   "type": "command",
@@ -7440,7 +8320,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Edgington, E. S. (1969). Approximate randomization tests. "
+                  "value": "Edgington, E. "
+                },
+                {
+                  "type": "text",
+                  "value": "S. (1969). "
+                },
+                {
+                  "type": "text",
+                  "value": "Approximate randomization tests. "
                 },
                 {
                   "type": "command",
@@ -7487,7 +8375,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Edgington, E. S. (1975). Randomization tests for one-subject operant experiments. "
+                  "value": "Edgington, E. "
+                },
+                {
+                  "type": "text",
+                  "value": "S. (1975). "
+                },
+                {
+                  "type": "text",
+                  "value": "Randomization tests for one-subject operant experiments. "
                 },
                 {
                   "type": "command",
@@ -7534,7 +8430,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Edgington, E. S., & Onghena, P. (2007). "
+                  "value": "Edgington, E. "
+                },
+                {
+                  "type": "text",
+                  "value": "S., & Onghena, P. (2007). "
                 },
                 {
                   "type": "command",
@@ -7553,7 +8453,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " (4th ed.). Chapman & Hall/CRC."
+                  "value": " (4th ed.). "
+                },
+                {
+                  "type": "text",
+                  "value": "Chapman & Hall/CRC."
                 }
               ]
             },
@@ -7562,7 +8466,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Ferron, J., & Onghena, P. (1996). The power of randomization tests for single-case phase designs. "
+                  "value": "Ferron, J., & Onghena, P. (1996). "
+                },
+                {
+                  "type": "text",
+                  "value": "The power of randomization tests for single-case phase designs. "
                 },
                 {
                   "type": "command",
@@ -7609,7 +8517,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Ferron, J., & Sentovich, C. (2002). Statistical power of randomization tests used with multiple-baseline designs. "
+                  "value": "Ferron, J., & Sentovich, C. (2002). "
+                },
+                {
+                  "type": "text",
+                  "value": "Statistical power of randomization tests used with multiple-baseline designs. "
                 },
                 {
                   "type": "command",
@@ -7656,7 +8568,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Ferron, J., & Ware, W. (1995). Analyzing single-case data: The power of randomization tests. "
+                  "value": "Ferron, J., & Ware, W. (1995). "
+                },
+                {
+                  "type": "text",
+                  "value": "Analyzing single-case data: The power of randomization tests. "
                 },
                 {
                   "type": "command",
@@ -7703,7 +8619,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Fisher, A. J., Medaglia, J. D., & Jeronimus, B. F. (2018). Lack of group-to-individual generalizability is a threat to human subjects research. "
+                  "value": "Fisher, A. "
+                },
+                {
+                  "type": "text",
+                  "value": "J., Medaglia, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "D., & Jeronimus, B. "
+                },
+                {
+                  "type": "text",
+                  "value": "F. (2018). "
+                },
+                {
+                  "type": "text",
+                  "value": "Lack of group-to-individual generalizability is a threat to human subjects research. "
                 },
                 {
                   "type": "command",
@@ -7750,7 +8682,55 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Foster, N. E., Anema, J. R., Cherkin, D., Chou, R., Cohen, S. P., Gross, D. P., Ferreira, P. H., Fritz, J. M., Koes, B. W., Peul, W., Turner, J. A., Maher, C. G., Buchbinder, R., Hartvigsen, J., Cherkin, D., Foster, N. E., Maher, C. G., Underwood, M., van Tulder, M., … Woolf, A. (2018). Prevention and treatment of low back pain: Evidence, challenges, and promising directions. "
+                  "value": "Foster, N. "
+                },
+                {
+                  "type": "text",
+                  "value": "E., Anema, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "R., Cherkin, D., Chou, R., Cohen, S. "
+                },
+                {
+                  "type": "text",
+                  "value": "P., Gross, D. "
+                },
+                {
+                  "type": "text",
+                  "value": "P., Ferreira, P. "
+                },
+                {
+                  "type": "text",
+                  "value": "H., Fritz, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "M., Koes, B. "
+                },
+                {
+                  "type": "text",
+                  "value": "W., Peul, W., Turner, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "A., Maher, C. "
+                },
+                {
+                  "type": "text",
+                  "value": "G., Buchbinder, R., Hartvigsen, J., Cherkin, D., Foster, N. "
+                },
+                {
+                  "type": "text",
+                  "value": "E., Maher, C. "
+                },
+                {
+                  "type": "text",
+                  "value": "G., Underwood, M., van Tulder, M., … Woolf, A. (2018). "
+                },
+                {
+                  "type": "text",
+                  "value": "Prevention and treatment of low back pain: Evidence, challenges, and promising directions. "
                 },
                 {
                   "type": "command",
@@ -7797,7 +8777,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Heyvaert, M., & Onghena, P. (2014a). Analysis of single-case data: Randomisation tests for measures of effect size. "
+                  "value": "Heyvaert, M., & Onghena, P. (2014a). "
+                },
+                {
+                  "type": "text",
+                  "value": "Analysis of single-case data: Randomisation tests for measures of effect size. "
                 },
                 {
                   "type": "command",
@@ -7844,7 +8828,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Heyvaert, M., & Onghena, P. (2014b). Randomization tests for single-case experiments: State of the art, state of the science, and state of the application. "
+                  "value": "Heyvaert, M., & Onghena, P. (2014b). "
+                },
+                {
+                  "type": "text",
+                  "value": "Randomization tests for single-case experiments: State of the art, state of the science, and state of the application. "
                 },
                 {
                   "type": "command",
@@ -7891,7 +8879,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Hope, A. C. A. (1968). A simplified Monte Carlo significance test procedure. "
+                  "value": "Hope, A. "
+                },
+                {
+                  "type": "text",
+                  "value": "C. "
+                },
+                {
+                  "type": "text",
+                  "value": "A. (1968). "
+                },
+                {
+                  "type": "text",
+                  "value": "A simplified Monte Carlo significance test procedure. "
                 },
                 {
                   "type": "command",
@@ -7902,7 +8902,22 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Journal of the Royal Statistical Society. Series B (Methodological)"
+                          "value": "Journal of the Royal Statistical Society. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "emph",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Series B (Methodological)"
                         }
                       ]
                     }
@@ -7938,7 +8953,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Horner, R. H., Carr, E. G., Halle, J., Mcgee, G., Odom, S., & Wolery, M. (2005). The use of single-subject research to identify evidence-based practice in special education. "
+                  "value": "Horner, R. "
+                },
+                {
+                  "type": "text",
+                  "value": "H., Carr, E. "
+                },
+                {
+                  "type": "text",
+                  "value": "G., Halle, J., Mcgee, G., Odom, S., & Wolery, M. (2005). "
+                },
+                {
+                  "type": "text",
+                  "value": "The use of single-subject research to identify evidence-based practice in special education. "
                 },
                 {
                   "type": "command",
@@ -7985,7 +9012,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Kazdin, A. E. (2011). "
+                  "value": "Kazdin, A. "
+                },
+                {
+                  "type": "text",
+                  "value": "E. (2011). "
                 },
                 {
                   "type": "command",
@@ -8004,7 +9035,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " (2nd ed.). Oxford University Press."
+                  "value": " (2nd ed.). "
+                },
+                {
+                  "type": "text",
+                  "value": "Oxford University Press."
                 }
               ]
             },
@@ -8013,7 +9048,31 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Kratochwill, T. R., Hitchcock, J., Horner, R. H., Levin, J. R., Odom, S. L., Rindskopf, D. M., & Shadish, W. R. (2010). "
+                  "value": "Kratochwill, T. "
+                },
+                {
+                  "type": "text",
+                  "value": "R., Hitchcock, J., Horner, R. "
+                },
+                {
+                  "type": "text",
+                  "value": "H., Levin, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "R., Odom, S. "
+                },
+                {
+                  "type": "text",
+                  "value": "L., Rindskopf, D. "
+                },
+                {
+                  "type": "text",
+                  "value": "M., & Shadish, W. "
+                },
+                {
+                  "type": "text",
+                  "value": "R. (2010). "
                 },
                 {
                   "type": "command",
@@ -8041,7 +9100,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Kratochwill, T. R., & Levin, J. R. (2010). Enhancing the scientific credibility of single-case intervention research: Randomization to the rescue. "
+                  "value": "Kratochwill, T. "
+                },
+                {
+                  "type": "text",
+                  "value": "R., & Levin, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "R. (2010). "
+                },
+                {
+                  "type": "text",
+                  "value": "Enhancing the scientific credibility of single-case intervention research: Randomization to the rescue. "
                 },
                 {
                   "type": "command",
@@ -8088,7 +9159,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Levin, J. R., Ferron, J. M., & Gafurov, B. S. (2018). Comparison of randomization-test procedures for single-case multiple-baseline designs. "
+                  "value": "Levin, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "R., Ferron, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "M., & Gafurov, B. "
+                },
+                {
+                  "type": "text",
+                  "value": "S. (2018). "
+                },
+                {
+                  "type": "text",
+                  "value": "Comparison of randomization-test procedures for single-case multiple-baseline designs. "
                 },
                 {
                   "type": "command",
@@ -8135,7 +9222,35 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Madden, V. J., Bellan, V., Russek, L. N., Camfferman, D., Vlaeyen, J. W. S., & Moseley, G. L. (2016). Pain by association? Experimental modulation of human pain thresholds using classical conditioning. "
+                  "value": "Madden, V. "
+                },
+                {
+                  "type": "text",
+                  "value": "J., Bellan, V., Russek, L. "
+                },
+                {
+                  "type": "text",
+                  "value": "N., Camfferman, D., Vlaeyen, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "W. "
+                },
+                {
+                  "type": "text",
+                  "value": "S., & Moseley, G. "
+                },
+                {
+                  "type": "text",
+                  "value": "L. (2016). "
+                },
+                {
+                  "type": "text",
+                  "value": "Pain by association? "
+                },
+                {
+                  "type": "text",
+                  "value": "Experimental modulation of human pain thresholds using classical conditioning. "
                 },
                 {
                   "type": "command",
@@ -8182,7 +9297,35 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Madden, V. J., Kamerman, P. R., Bellan, V., Catley, M. J., Russek, L. N., Camfferman, D., & Moseley, G. L. (2019). Was that painful or nonpainful? The Sensation and Pain Rating Scale performs well in the experimental context. "
+                  "value": "Madden, V. "
+                },
+                {
+                  "type": "text",
+                  "value": "J., Kamerman, P. "
+                },
+                {
+                  "type": "text",
+                  "value": "R., Bellan, V., Catley, M. "
+                },
+                {
+                  "type": "text",
+                  "value": "J., Russek, L. "
+                },
+                {
+                  "type": "text",
+                  "value": "N., Camfferman, D., & Moseley, G. "
+                },
+                {
+                  "type": "text",
+                  "value": "L. (2019). "
+                },
+                {
+                  "type": "text",
+                  "value": "Was that painful or nonpainful? "
+                },
+                {
+                  "type": "text",
+                  "value": "The Sensation and Pain Rating Scale performs well in the experimental context. "
                 },
                 {
                   "type": "command",
@@ -8229,7 +9372,35 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Madden, V. J., Russek, L. N., Harvie, D. S., Vlaeyen, J. W. S., & Moseley, G. L. (2017). Classical conditioning fails to elicit allodynia in an experimental study with healthy humans. "
+                  "value": "Madden, V. "
+                },
+                {
+                  "type": "text",
+                  "value": "J., Russek, L. "
+                },
+                {
+                  "type": "text",
+                  "value": "N., Harvie, D. "
+                },
+                {
+                  "type": "text",
+                  "value": "S., Vlaeyen, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "W. "
+                },
+                {
+                  "type": "text",
+                  "value": "S., & Moseley, G. "
+                },
+                {
+                  "type": "text",
+                  "value": "L. (2017). "
+                },
+                {
+                  "type": "text",
+                  "value": "Classical conditioning fails to elicit allodynia in an experimental study with healthy humans. "
                 },
                 {
                   "type": "command",
@@ -8276,7 +9447,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Manolov, R., & Moeyaert, M. (2017). Recommendations for choosing single-case data analytical techniques. "
+                  "value": "Manolov, R., & Moeyaert, M. (2017). "
+                },
+                {
+                  "type": "text",
+                  "value": "Recommendations for choosing single-case data analytical techniques. "
                 },
                 {
                   "type": "command",
@@ -8323,7 +9498,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Manolov, R., & Solanas, A. (2018). Analytical options for single-case experimental designs: Review and application to brain impairment. "
+                  "value": "Manolov, R., & Solanas, A. (2018). "
+                },
+                {
+                  "type": "text",
+                  "value": "Analytical options for single-case experimental designs: Review and application to brain impairment. "
                 },
                 {
                   "type": "command",
@@ -8370,7 +9549,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Matyas, T. A., & Greenwood, K. M. (1990). Visual analysis of single-case time series: Effects of variability, serial dependence, and magnitude of intervention effects. "
+                  "value": "Matyas, T. "
+                },
+                {
+                  "type": "text",
+                  "value": "A., & Greenwood, K. "
+                },
+                {
+                  "type": "text",
+                  "value": "M. (1990). "
+                },
+                {
+                  "type": "text",
+                  "value": "Visual analysis of single-case time series: Effects of variability, serial dependence, and magnitude of intervention effects. "
                 },
                 {
                   "type": "command",
@@ -8417,7 +9608,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Michiels, B., Heyvaert, M., & Onghena, P. (2018). The conditional power of randomization tests for single-case effect sizes in designs with randomized treatment order: A Monte Carlo simulation study. "
+                  "value": "Michiels, B., Heyvaert, M., & Onghena, P. (2018). "
+                },
+                {
+                  "type": "text",
+                  "value": "The conditional power of randomization tests for single-case effect sizes in designs with randomized treatment order: A Monte Carlo simulation study. "
                 },
                 {
                   "type": "command",
@@ -8464,7 +9659,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Michiels, B., & Onghena, P. (2019). Randomized single-case AB phase designs: Prospects and pitfalls. "
+                  "value": "Michiels, B., & Onghena, P. (2019). "
+                },
+                {
+                  "type": "text",
+                  "value": "Randomized single-case AB phase designs: Prospects and pitfalls. "
                 },
                 {
                   "type": "command",
@@ -8511,7 +9710,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Michiels, B., Tanious, R., De, T. K., & Onghena, P. (2020). A randomization test wrapper for synthesizing single-case experiments using multilevel models: A Monte Carlo simulation study. "
+                  "value": "Michiels, B., Tanious, R., De, T. "
+                },
+                {
+                  "type": "text",
+                  "value": "K., & Onghena, P. (2020). "
+                },
+                {
+                  "type": "text",
+                  "value": "A randomization test wrapper for synthesizing single-case experiments using multilevel models: A Monte Carlo simulation study. "
                 },
                 {
                   "type": "command",
@@ -8558,7 +9765,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Molenaar, P. C. M., & Campbell, C. G. (2009). The new person-specific paradigm in psychology. "
+                  "value": "Molenaar, P. "
+                },
+                {
+                  "type": "text",
+                  "value": "C. "
+                },
+                {
+                  "type": "text",
+                  "value": "M., & Campbell, C. "
+                },
+                {
+                  "type": "text",
+                  "value": "G. (2009). "
+                },
+                {
+                  "type": "text",
+                  "value": "The new person-specific paradigm in psychology. "
                 },
                 {
                   "type": "command",
@@ -8605,7 +9828,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Moseley, G. L., & Vlaeyen, J. W. S. (2015). Beyond nociception: The imprecision hypothesis of chronic pain. "
+                  "value": "Moseley, G. "
+                },
+                {
+                  "type": "text",
+                  "value": "L., & Vlaeyen, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "W. "
+                },
+                {
+                  "type": "text",
+                  "value": "S. (2015). "
+                },
+                {
+                  "type": "text",
+                  "value": "Beyond nociception: The imprecision hypothesis of chronic pain. "
                 },
                 {
                   "type": "command",
@@ -8652,7 +9891,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Onghena, P. (1992). Randomization tests for extensions and variations of ABAB single-case experimental designs: A rejoinder. "
+                  "value": "Onghena, P. (1992). "
+                },
+                {
+                  "type": "text",
+                  "value": "Randomization tests for extensions and variations of ABAB single-case experimental designs: A rejoinder. "
                 },
                 {
                   "type": "command",
@@ -8699,7 +9942,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Onghena, P. (2005). Single‐case designs. In B. Everitt & D. Howell (Eds.), "
+                  "value": "Onghena, P. (2005). "
+                },
+                {
+                  "type": "text",
+                  "value": "Single‐case designs. "
+                },
+                {
+                  "type": "text",
+                  "value": "In B. "
+                },
+                {
+                  "type": "text",
+                  "value": "Everitt & D. "
+                },
+                {
+                  "type": "text",
+                  "value": "Howell (Eds.), "
                 },
                 {
                   "type": "command",
@@ -8718,7 +9977,11 @@
                 },
                 {
                   "type": "text",
-                  "value": " (Vol. 4, pp. 1850–1854). John Wiley & Sons, Ltd. https://doi.org/10.1002/0470013192.bsa625"
+                  "value": " (Vol. 4, pp. 1850–1854). "
+                },
+                {
+                  "type": "text",
+                  "value": "John Wiley & Sons, Ltd. https://doi.org/10.1002/0470013192.bsa625"
                 }
               ]
             },
@@ -8727,7 +9990,19 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Ottenbacher, K. J. (1990). When is a picture worth a thousand p values? A comparison of visual and quantitative methods to analyze single subject data. "
+                  "value": "Ottenbacher, K. "
+                },
+                {
+                  "type": "text",
+                  "value": "J. (1990). "
+                },
+                {
+                  "type": "text",
+                  "value": "When is a picture worth a thousand p values? "
+                },
+                {
+                  "type": "text",
+                  "value": "A comparison of visual and quantitative methods to analyze single subject data. "
                 },
                 {
                   "type": "command",
@@ -8774,7 +10049,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Pavlov, I. P. (1928). "
+                  "value": "Pavlov, I. "
+                },
+                {
+                  "type": "text",
+                  "value": "P. (1928). "
                 },
                 {
                   "type": "command",
@@ -8802,7 +10081,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Smith, J. D. (2012). Single-case experimental designs: A systematic review of published research and current standards. "
+                  "value": "Smith, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "D. (2012). "
+                },
+                {
+                  "type": "text",
+                  "value": "Single-case experimental designs: A systematic review of published research and current standards. "
                 },
                 {
                   "type": "command",
@@ -8849,7 +10136,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Solomon, B. G. (2014). Violations of assumptions in school-based single-case data: Implications for the selection and interpretation of effect sizes. "
+                  "value": "Solomon, B. "
+                },
+                {
+                  "type": "text",
+                  "value": "G. (2014). "
+                },
+                {
+                  "type": "text",
+                  "value": "Violations of assumptions in school-based single-case data: Implications for the selection and interpretation of effect sizes. "
                 },
                 {
                   "type": "command",
@@ -8896,7 +10191,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Spruyt, A., Clarysse, J., Vansteenwegen, D., Baeyens, F., & Hermans, D. (2009). Affect 4.0: A free software package for implementing psychological and psychophysiological experiments. "
+                  "value": "Spruyt, A., Clarysse, J., Vansteenwegen, D., Baeyens, F., & Hermans, D. (2009). "
+                },
+                {
+                  "type": "text",
+                  "value": "Affect 4.0: A free software package for implementing psychological and psychophysiological experiments. "
                 },
                 {
                   "type": "command",
@@ -8943,7 +10242,27 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Traxler, J., Madden, V. J., Moseley, G. L., & Vlaeyen, J. W. S. (2019). Modulating pain thresholds through classical conditioning. "
+                  "value": "Traxler, J., Madden, V. "
+                },
+                {
+                  "type": "text",
+                  "value": "J., Moseley, G. "
+                },
+                {
+                  "type": "text",
+                  "value": "L., & Vlaeyen, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "W. "
+                },
+                {
+                  "type": "text",
+                  "value": "S. (2019). "
+                },
+                {
+                  "type": "text",
+                  "value": "Modulating pain thresholds through classical conditioning. "
                 },
                 {
                   "type": "command",
@@ -8990,7 +10309,35 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Treede, R. D., Rief, W., Barke, A., Aziz, Q., Bennett, M. I., Benoliel, R., Cohen, M., Evers, S., Finnerup, N. B., First, M. B., Giamberardino, M. A., Kaasa, S., Korwisi, B., Kosek, E., Lavand’Homme, P., Nicholas, M., Perrot, S., Scholz, J., Schug, S., … Wang, S. J. (2019). Chronic pain as a symptom or a disease: The IASP classification of chronic pain for the International Classification of Diseases (ICD-11). "
+                  "value": "Treede, R. "
+                },
+                {
+                  "type": "text",
+                  "value": "D., Rief, W., Barke, A., Aziz, Q., Bennett, M. "
+                },
+                {
+                  "type": "text",
+                  "value": "I., Benoliel, R., Cohen, M., Evers, S., Finnerup, N. "
+                },
+                {
+                  "type": "text",
+                  "value": "B., First, M. "
+                },
+                {
+                  "type": "text",
+                  "value": "B., Giamberardino, M. "
+                },
+                {
+                  "type": "text",
+                  "value": "A., Kaasa, S., Korwisi, B., Kosek, E., Lavand’Homme, P., Nicholas, M., Perrot, S., Scholz, J., Schug, S., … Wang, S. "
+                },
+                {
+                  "type": "text",
+                  "value": "J. (2019). "
+                },
+                {
+                  "type": "text",
+                  "value": "Chronic pain as a symptom or a disease: The IASP classification of chronic pain for the International Classification of Diseases (ICD-11). "
                 },
                 {
                   "type": "command",
@@ -9037,7 +10384,35 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Tsang, A., Von Korff, M., Lee, S., Alonso, J., Karam, E., Angermeyer, M. C., Borges, G. L. G., Bromet, E. J., Demytteneare, K., de Girolamo, G., de Graaf, R., Gureje, O., Lepine, J.-P., Haro, J. M., Levinson, D., Oakley Browne, M. A., Posada-Villa, J., Seedat, S., & Watanabe, M. (2008). Common chronic pain conditions in developed and developing countries: Gender and age differences and comorbidity with depression-anxiety disorders. "
+                  "value": "Tsang, A., Von Korff, M., Lee, S., Alonso, J., Karam, E., Angermeyer, M. "
+                },
+                {
+                  "type": "text",
+                  "value": "C., Borges, G. "
+                },
+                {
+                  "type": "text",
+                  "value": "L. "
+                },
+                {
+                  "type": "text",
+                  "value": "G., Bromet, E. "
+                },
+                {
+                  "type": "text",
+                  "value": "J., Demytteneare, K., de Girolamo, G., de Graaf, R., Gureje, O., Lepine, J.-P., Haro, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "M., Levinson, D., Oakley Browne, M. "
+                },
+                {
+                  "type": "text",
+                  "value": "A., Posada-Villa, J., Seedat, S., & Watanabe, M. (2008). "
+                },
+                {
+                  "type": "text",
+                  "value": "Common chronic pain conditions in developed and developing countries: Gender and age differences and comorbidity with depression-anxiety disorders. "
                 },
                 {
                   "type": "command",
@@ -9084,7 +10459,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Vlaeyen, J. W. S., & Linton, S. J. (2000). Fear-avoidance and its consequences in chronic musculoskeletal pain: A state of the art. "
+                  "value": "Vlaeyen, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "W. "
+                },
+                {
+                  "type": "text",
+                  "value": "S., & Linton, S. "
+                },
+                {
+                  "type": "text",
+                  "value": "J. (2000). "
+                },
+                {
+                  "type": "text",
+                  "value": "Fear-avoidance and its consequences in chronic musculoskeletal pain: A state of the art. "
                 },
                 {
                   "type": "command",
@@ -9131,7 +10522,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Vlaeyen, J. W. S., & Linton, S. J. (2012). Fear-avoidance model of chronic musculoskeletal pain: 12 years on. "
+                  "value": "Vlaeyen, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "W. "
+                },
+                {
+                  "type": "text",
+                  "value": "S., & Linton, S. "
+                },
+                {
+                  "type": "text",
+                  "value": "J. (2012). "
+                },
+                {
+                  "type": "text",
+                  "value": "Fear-avoidance model of chronic musculoskeletal pain: 12 years on. "
                 },
                 {
                   "type": "command",
@@ -9178,7 +10585,43 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Vlaeyen, J. W. S., Wicksell, R. K., Simons, L. E., Gentili, C., De, T. K., Tate, R. L., Vohra, S., Punja, S., Linton, S. J., Sniehotta, F. F., & Onghena, P. (2020). From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research. "
+                  "value": "Vlaeyen, J. "
+                },
+                {
+                  "type": "text",
+                  "value": "W. "
+                },
+                {
+                  "type": "text",
+                  "value": "S., Wicksell, R. "
+                },
+                {
+                  "type": "text",
+                  "value": "K., Simons, L. "
+                },
+                {
+                  "type": "text",
+                  "value": "E., Gentili, C., De, T. "
+                },
+                {
+                  "type": "text",
+                  "value": "K., Tate, R. "
+                },
+                {
+                  "type": "text",
+                  "value": "L., Vohra, S., Punja, S., Linton, S. "
+                },
+                {
+                  "type": "text",
+                  "value": "J., Sniehotta, F. "
+                },
+                {
+                  "type": "text",
+                  "value": "F., & Onghena, P. (2020). "
+                },
+                {
+                  "type": "text",
+                  "value": "From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research. "
                 },
                 {
                   "type": "command",
@@ -9225,7 +10668,23 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Vohra, S., Shamseer, L., Sampson, M., Bukutu, C., Schmid, C. H., Tate, R., Nikles, J., Zucker, D. R., Kravitz, R., Guyatt, G., Altman, D. G., & Moher, D. (2015). CONSORT extension for reporting N-of-1 trials (CENT) 2015 statement. "
+                  "value": "Vohra, S., Shamseer, L., Sampson, M., Bukutu, C., Schmid, C. "
+                },
+                {
+                  "type": "text",
+                  "value": "H., Tate, R., Nikles, J., Zucker, D. "
+                },
+                {
+                  "type": "text",
+                  "value": "R., Kravitz, R., Guyatt, G., Altman, D. "
+                },
+                {
+                  "type": "text",
+                  "value": "G., & Moher, D. (2015). "
+                },
+                {
+                  "type": "text",
+                  "value": "CONSORT extension for reporting N-of-1 trials (CENT) 2015 statement. "
                 },
                 {
                   "type": "command",
@@ -9272,7 +10731,11 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Willkinson, L. (1999). Statistical methods in psychology journals: Guidelines and explanations. "
+                  "value": "Willkinson, L. (1999). "
+                },
+                {
+                  "type": "text",
+                  "value": "Statistical methods in psychology journals: Guidelines and explanations. "
                 },
                 {
                   "type": "command",
@@ -9319,7 +10782,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Woolf, C. J. (1983). Evidence for a central component of post-injury pain hypersensitivity. "
+                  "value": "Woolf, C. "
+                },
+                {
+                  "type": "text",
+                  "value": "J. (1983). "
+                },
+                {
+                  "type": "text",
+                  "value": "Evidence for a central component of post-injury pain hypersensitivity. "
                 },
                 {
                   "type": "command",
@@ -9366,7 +10837,15 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Woolf, C. J. (2011). Central sensitization: Implications for the diagnosis and treatment of pain. "
+                  "value": "Woolf, C. "
+                },
+                {
+                  "type": "text",
+                  "value": "J. (2011). "
+                },
+                {
+                  "type": "text",
+                  "value": "Central sensitization: Implications for the diagnosis and treatment of pain. "
                 },
                 {
                   "type": "command",

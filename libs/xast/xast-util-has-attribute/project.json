@@ -1,4 +1,5 @@
 {
+  "name": "xast-xast-util-has-attribute",
   "sourceRoot": "libs/xast/xast-util-has-attribute/src",
   "projectType": "library",
   "targets": {
@@ -16,7 +17,11 @@
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },
       "dependsOn": [
-        { "projects": "dependencies", "target": "build", "params": "forward" }
+        {
+          "projects": "dependencies",
+          "target": "build",
+          "params": "forward"
+        }
       ]
     },
     "lint": {

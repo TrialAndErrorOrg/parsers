@@ -1,4 +1,5 @@
 {
+  "name": "ojs-ojs-relatex",
   "sourceRoot": "libs/ojs/ojs-relatex/src",
   "projectType": "library",
   "targets": {
@@ -23,7 +24,11 @@
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },
       "dependsOn": [
-        { "projects": "dependencies", "target": "build", "params": "forward" }
+        {
+          "projects": "dependencies",
+          "target": "build",
+          "params": "forward"
+        }
       ]
     },
     "deploy": {

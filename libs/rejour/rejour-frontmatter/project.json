@@ -1,4 +1,5 @@
 {
+  "name": "rejour-rejour-frontmatter",
   "sourceRoot": "libs/rejour/rejour-frontmatter/src",
   "projectType": "library",
   "targets": {
@@ -16,7 +17,11 @@
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },
       "dependsOn": [
-        { "projects": "dependencies", "target": "build", "params": "forward" }
+        {
+          "projects": "dependencies",
+          "target": "build",
+          "params": "forward"
+        }
       ]
     },
     "lint": {

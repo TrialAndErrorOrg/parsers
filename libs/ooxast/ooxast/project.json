@@ -1,4 +1,5 @@
 {
+  "name": "ooxast-ooxast",
   "sourceRoot": "libs/ooxast/ooxast/src",
   "projectType": "library",
   "targets": {
@@ -31,7 +32,11 @@
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },
       "dependsOn": [
-        { "projects": "dependencies", "target": "build", "params": "forward" }
+        {
+          "projects": "dependencies",
+          "target": "build",
+          "params": "forward"
+        }
       ]
     },
     "deploy": {

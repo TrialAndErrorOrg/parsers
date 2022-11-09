@@ -1,4 +1,5 @@
 {
+  "name": "reoff-docx-to-vfile",
   "sourceRoot": "libs/reoff/docx-to-vfile/src",
   "projectType": "library",
   "targets": {
@@ -31,7 +32,11 @@
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },
       "dependsOn": [
-        { "projects": "dependencies", "target": "build", "params": "forward" }
+        {
+          "projects": "dependencies",
+          "target": "build",
+          "params": "forward"
+        }
       ]
     },
     "deploy": {

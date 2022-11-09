@@ -1,4 +1,5 @@
 {
+  "name": "converter-frontend",
   "sourceRoot": "apps/converter-frontend",
   "projectType": "application",
   "targets": {

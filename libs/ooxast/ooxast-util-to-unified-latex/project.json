@@ -1,4 +1,5 @@
 {
+  "name": "ooxast-ooxast-util-to-unified-latex",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ooxast/ooxast-util-to-unified-latex/src",
   "projectType": "library",
@@ -17,7 +18,11 @@
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },
       "dependsOn": [
-        { "projects": "dependencies", "target": "build", "params": "forward" }
+        {
+          "projects": "dependencies",
+          "target": "build",
+          "params": "forward"
+        }
       ]
     },
     "lint": {

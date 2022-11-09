@@ -1,4 +1,5 @@
 {
+  "name": "jast-jast",
   "sourceRoot": "libs/jast/jast/src",
   "projectType": "library",
   "targets": {
@@ -16,7 +17,11 @@
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },
       "dependsOn": [
-        { "projects": "dependencies", "target": "build", "params": "forward" }
+        {
+          "projects": "dependencies",
+          "target": "build",
+          "params": "forward"
+        }
       ]
     },
     "lint": {

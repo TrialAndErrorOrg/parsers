@@ -1,4 +1,5 @@
 {
+  "name": "jote",
   "sourceRoot": "apps/jote/src",
   "projectType": "application",
   "targets": {

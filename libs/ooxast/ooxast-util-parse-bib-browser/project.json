@@ -1,4 +1,5 @@
 {
+  "name": "ooxast-ooxast-util-parse-bib-browser",
   "sourceRoot": "libs/ooxast/ooxast-util-parse-bib-browser/src",
   "projectType": "library",
   "targets": {
@@ -33,7 +34,11 @@
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },
       "dependsOn": [
-        { "projects": "dependencies", "target": "build", "params": "forward" }
+        {
+          "projects": "dependencies",
+          "target": "build",
+          "params": "forward"
+        }
       ]
     },
     "deploy": {

@@ -1,4 +1,5 @@
 {
+  "name": "reoff-reoff-parse-references-browser",
   "sourceRoot": "libs/reoff/reoff-parse-references-browser/src",
   "projectType": "library",
   "targets": {
@@ -33,7 +34,11 @@
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },
       "dependsOn": [
-        { "projects": "dependencies", "target": "build", "params": "forward" }
+        {
+          "projects": "dependencies",
+          "target": "build",
+          "params": "forward"
+        }
       ]
     },
     "deploy": {

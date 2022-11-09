@@ -1,4 +1,4 @@
-# JOTE
+# JOTE Parsers
 
 Monorepo for a suite of parsers used in the [Journal of Trial and Error](https://journal.trialanderror.org).
 
@@ -20,44 +20,9 @@ There is also an `app` directory, which contains a few apps that use the parsers
 
 See below for more info.
 
-## Graph
+# Graph
 
 ![Graph of this monorepo](./graph.png 'Graph of this monorepo')
-
-## Contents
-
-- [Projects](#projects)
-
-  - [rejour](#rejour)
-
-    - [jast](#jast)
-
-    - [Plugins](#plugins)
-
-      - [rejour](#rejour-1)
-      - [rejour-parse](#rejour-parse)
-      - [rejour-stringify](#rejour-stringify)
-      - [rejour-move-abstract](#rejour-move-abstract)
-      - [rejour-relatex](#rejour-relatex)
-
-    - [Utilities](#utilities)
-
-      - [jast-util-to-texast](#jast-util-to-texast)
-
-  - [relatex](#relatex)
-
-    - [texast](#texast)
-
-    - [Plugins](#plugins-1)
-
-      - [relatex](#relatex-1)
-      - [relatex-stringify](#relatex-stringify)
-
-    - [Utilities](#utilities-1)
-
-      - [texast-util-to-latex](#texast-util-to-latex)
-
-- [License](#license)
 
 # Overview
 

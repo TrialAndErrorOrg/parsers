@@ -1,4 +1,5 @@
 {
+  "name": "xast-xast-util-is-element",
   "sourceRoot": "libs/xast/xast-util-is-element/src",
   "projectType": "library",
   "targets": {
@@ -30,7 +31,11 @@
         "clean": true
       },
       "dependsOn": [
-        { "projects": "dependencies", "target": "build", "params": "forward" }
+        {
+          "projects": "dependencies",
+          "target": "build",
+          "params": "forward"
+        }
       ]
     },
     "deploy": {

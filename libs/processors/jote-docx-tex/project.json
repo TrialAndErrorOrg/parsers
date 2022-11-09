@@ -1,4 +1,5 @@
 {
+  "name": "processors-jote-docx-tex",
   "sourceRoot": "libs/processors/jote-docx-tex/src",
   "projectType": "library",
   "targets": {

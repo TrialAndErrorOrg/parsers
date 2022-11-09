@@ -1,4 +1,5 @@
 {
+  "name": "processors-jats-to-tex",
   "sourceRoot": "libs/processors/jats-to-tex/src",
   "projectType": "library",
   "targets": {

@@ -1,4 +1,5 @@
 {
+  "name": "processors-docx-to-jats",
   "sourceRoot": "libs/processors/docx-to-jats/src",
   "projectType": "library",
   "targets": {

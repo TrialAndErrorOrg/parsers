@@ -1,4 +1,5 @@
 {
+  "name": "utils-ojs-to-preamble",
   "sourceRoot": "libs/utils/ojs-to-preamble/src",
   "projectType": "library",
   "targets": {

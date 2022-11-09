@@ -1,4 +1,5 @@
 {
+  "name": "xast-xast-util-select",
   "sourceRoot": "libs/xast/xast-util-select/src",
   "projectType": "library",
   "targets": {
@@ -16,7 +17,11 @@
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },
       "dependsOn": [
-        { "projects": "dependencies", "target": "build", "params": "forward" }
+        {
+          "projects": "dependencies",
+          "target": "build",
+          "params": "forward"
+        }
       ]
     },
     "lint": {

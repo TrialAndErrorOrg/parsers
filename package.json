@@ -1,7 +1,7 @@
 {
   "name": "jote",
   "version": "0.0.1",
-  "license": "GPL-3-0-or-later",
+  "license": "GPL-3.0-or-later",
   "scripts": {
     "start": "nx serve",
     "build": "nx run-many --target=build --all --prod",
@@ -171,7 +171,7 @@
     "vercel": "^27.0.1"
   },
   "packageManager": "yarn@1.22.1",
-  "repository": "https://github.com/journaloftrialanderror/jote",
+  "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "description": "",
   "keywords": [
@@ -182,4 +182,3 @@
     "ast"
   ]
 }
-

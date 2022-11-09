@@ -2,10 +2,10 @@
   "name": "ooxast-util-citations",
   "version": "0.0.1",
   "type": "module",
-  "license": "GPL-3-0-or-later",
-  "repository": "https://github.com/journaloftrialanderror/jote",
+  "license": "GPL-3.0-or-later",
+  "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
-  "description": "",
+  "description": "_[ooxast][ooxast]_ util to visit in text office citations.",
   "keywords": [
     "unified",
     "abstract",

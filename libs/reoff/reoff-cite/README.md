@@ -1,6 +1,6 @@
-# reoff-reoff-cite
+# reoff-cite
 
-This library was generated with [Nx](https://nx.dev).
+Plugin for `reoff` that parses citations in the form of `@cite{key}` and `@cite[page]{key}` using `ooxast-util-parse-bib` and `ooxast-util-parse-text-cite`.
 
 ## Running unit tests
 

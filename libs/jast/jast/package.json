@@ -1,11 +1,11 @@
 {
   "name": "jast-types",
   "version": "0.0.1",
-  "license": "GPL-3-0-or-later",
-  "repository": "https://github.com/journaloftrialanderror/jote",
+  "license": "GPL-3.0-or-later",
+  "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "",
+  "description": "Type definitions for `jast` (journal article/abstract syntax tree), a syntax for abstract syntax trees representing JATS XML, specifically the \"Green\" publishing tag set.",
   "keywords": [
     "unified",
     "abstract",

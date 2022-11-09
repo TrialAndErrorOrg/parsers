@@ -1,11 +1,11 @@
 {
   "name": "ooxast-util-remove-rsid",
   "version": "0.0.1",
-  "license": "GPL-3-0-or-later",
-  "repository": "https://github.com/journaloftrialanderror/jote",
+  "license": "GPL-3.0-or-later",
+  "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "",
+  "description": "Cleans all the rsid tags from an ooxast tree, and merges `w:r` elements if they only differ by rsid values.",
   "keywords": [
     "unified",
     "abstract",

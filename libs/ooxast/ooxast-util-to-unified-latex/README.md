@@ -1,6 +1,6 @@
 # ooxast-util-to-unified-latex
 
-Convert ooxast to unified-latex instead of relatex
+Convert `ooxast` syntax tree to `unified-latex` syntax tree.
 
 ## Contents
 
@@ -55,34 +55,34 @@ npm install ooxast-util-to-unified-latex
 
 ## License
 
-GPL-3-0-or-later © Thomas F. K. Jorna
+GPL-3.0-or-later © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
 [unifiedgh]: https://github.com/unifiedjs/unified
 [xast-from-xml]: https://github.com/syntax-tree/xast-util-from-xml
 [rehype]: https://github.com/rehypejs/rehype
-[rejour]: https://github.com/journaloftrialanderror/jote/tree/main/libs/rejour
-[rejour-parse]: https://github.com/journaloftrialanderror/jote/tree/main/libs/rejour/rejour-parse
-[rejour-stringify]: https://github.com/journaloftrialanderror/jote/tree/main/libs/rejour/rejour-stringify
-[rejour-move-abstract]: https://github.com/journaloftrialanderror/jote/tree/main/libs/rejour/rejour-move-abstract
-[rejour-meta]: https://github.com/journaloftrialanderror/jote/tree/main/libs/rejour/rejour-meta
-[rejour-relatex]: https://github.com/journaloftrialanderror/jote/tree/main/libs/rejour/rejour-relatex
-[relatex]: https://github.com/journaloftrialanderror/jote/tree/main/libs/relatex
-[relatex-parse]: https://github.com/journaloftrialanderror/jote/tree/main/libs/relatex/relatex-parse
-[unifiedLatex]: https://github.com/journaloftrialanderror/jote/tree/main/libs/rejour/unifiedLatex
-[unified-latex-util-to-texast]: https://github.com/journaloftrialanderror/jote/tree/main/libs/rejour/unified-latex-util-to-texast
-[unifiedLatexscript]: https://github.com/journaloftrialanderror/jote/tree/main/libs/rejour/unifiedLatexscript
-[texast]: https://github.com/journaloftrialanderror/jote/tree/main/libs/relatex/texast
-[texast-util-to-latex]: https://github.com/journaloftrialanderror/jote/tree/main/libs/relatex/texast-util-to-latex
+[rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour
+[rejour-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-parse
+[rejour-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-stringify
+[rejour-move-abstract]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-move-abstract
+[rejour-meta]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-meta
+[rejour-relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-relatex
+[relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex
+[relatex-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/relatex-parse
+[unifiedlatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/unifiedLatex
+[unified-latex-util-to-texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/unified-latex-util-to-texast
+[unifiedlatexscript]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/unifiedLatexscript
+[texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast
+[texast-util-to-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast-util-to-latex
 [hast]: https://github.com/syntax-tree/hast
 [xast]: https://github.com/syntax-tree/xast
 [mdast]: https://github.com/syntax-tree/mdast
 [mdast-markdown]: https://github.com/syntax-tree/mdast-util-to-markdown
 [latex-utensils]: https://github.com/tamuratak/latex-utensils
 [latexjs]: https://github.com/latexjs/latexjs
-[reoff]: https://github.com/journaloftrialanderror/jote/tree/main/libs/reoff
-[reoff-parse]: https://github.com/journaloftrialanderror/jote/tree/main/libs/reoff/reoff-parse
-[reoff-rejour]: https://github.com/journaloftrialanderror/jote/tree/main/libs/reoff/reoff-rejour
-[ooxast]: https://github.com/journaloftrialanderror/jote/tree/main/libs/ooxast/ooxast
-[ooxast]: https://github.com/journaloftrialanderror/jote/tree/main/libs/ooxast/ooxast-util-to-unified-latex
-[ooxast-util-to-unified-latex]: https://github.com/journaloftrialanderror/jote/tree/main/libs/ooxast-util-to-unified-latex
+[reoff]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff
+[reoff-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse
+[reoff-rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-rejour
+[ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast
+[ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-unified-latex
+[ooxast-util-to-unified-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast-util-to-unified-latex

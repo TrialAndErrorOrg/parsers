@@ -1,6 +1,6 @@
-# reoff-reoff-parse-references
+# reoff-parse-references
 
-This library was generated with [Nx](https://nx.dev).
+Plugin for `reoff` which tries to find a bibliography in the document and parse it using `ooxast-util-parse-bib`.
 
 ## Running unit tests
 

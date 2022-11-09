@@ -2,10 +2,10 @@
   "name": "reoff-parse-references-browser",
   "version": "0.0.1",
   "type": "module",
-  "license": "GPL-3-0-or-later",
-  "repository": "https://github.com/journaloftrialanderror/jote",
+  "license": "GPL-3.0-or-later",
+  "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
-  "description": "",
+  "description": "Plugin for `reoff` which tries to find a bibliography in the document and parse it using `ooxast-util-parse-bib`.",
   "keywords": [
     "unified",
     "abstract",

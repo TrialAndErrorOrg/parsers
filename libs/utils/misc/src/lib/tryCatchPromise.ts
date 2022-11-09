@@ -1,7 +1,7 @@
-export async function tryCatchPromise(
-  promise: Promise<any>,
-  errorHandler?: (error: any) => void
-): Promise<[any, any]> {
+export async function tryCatchPromise<T = any>(
+  promise: Promise<T>,
+  errorHandler?: (error: unknown) => void
+): Promise<[T, null] | [null, unknown]> {
   try {
     const data = await promise
     return [data, null]

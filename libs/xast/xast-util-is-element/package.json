@@ -2,10 +2,10 @@
   "name": "xast-util-is-element",
   "version": "0.0.1",
   "license": "MIT",
-  "repository": "https://github.com/journaloftrialanderror/jote",
+  "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Port of hast-util-is-element for xast",
+  "description": "Port of [hast-util-is-element](https://github.com/syntax-tree/hast-util-has-property) for [xast][xast]",
   "keywords": [
     "unified",
     "abstract",

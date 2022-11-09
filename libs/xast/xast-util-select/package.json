@@ -2,10 +2,10 @@
   "name": "xast-util-select",
   "version": "0.1.6",
   "license": "MIT",
-  "repository": "https://github.com/journaloftrialanderror/jote",
+  "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Port of hast-util-select for xast syntax trees",
+  "description": "Port of `(hast-util-select)[https://github.com/syntax-tree/hast-util-select]` for use with `xast` nodes.",
   "keywords": [
     "unified",
     "abstract",

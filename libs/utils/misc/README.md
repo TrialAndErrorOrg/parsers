@@ -1,6 +1,6 @@
 # utils-misc
 
-This library was generated with [Nx](https://nx.dev).
+Miscellaneous utilities.
 
 ## Contents
 

@@ -1,5 +1,7 @@
 # relatex-add-preamble
 
+Plugin for `relatex` that adds a preamble to a `texast` syntax tree.
+
 ## Contents
 
 - [relatex-add-preamble](#relatex-add-preamble)
@@ -59,19 +61,19 @@ npm install relatex-add-preamble
 [unifiedgh]: https://github.com/unifiedjs/unified
 [xast-from-xml]: https://github.com/syntax-tree/xast-util-from-xml
 [rehype]: https://github.com/rehypejs/rehype
-[rejour]: https://github.com/journaloftrialanderror/jote/tree/main/libs/rejour
-[rejour-parse]: https://github.com/journaloftrialanderror/jote/tree/main/libs/rejour/rejour-parse
-[rejour-stringify]: https://github.com/journaloftrialanderror/jote/tree/main/libs/rejour/rejour-stringify
-[rejour-move-abstract]: https://github.com/journaloftrialanderror/jote/tree/main/libs/rejour/rejour-move-abstract
-[rejour-meta]: https://github.com/journaloftrialanderror/jote/tree/main/libs/rejour/rejour-meta
-[rejour-relatex]: https://github.com/journaloftrialanderror/jote/tree/main/libs/rejour/rejour-relatex
-[relatex]: https://github.com/journaloftrialanderror/jote/tree/main/libs/relatex
-[relatex-stringify]: https://github.com/journaloftrialanderror/jote/tree/main/libs/relatex/relatex-stringify
-[jast]: https://github.com/journaloftrialanderror/jote/tree/main/libs/rejour/jast
-[jast-util-to-texast]: https://github.com/journaloftrialanderror/jote/tree/main/libs/rejour/jast-util-to-texast
-[jastscript]: https://github.com/journaloftrialanderror/jote/tree/main/libs/rejour/jastscript
-[texast]: https://github.com/journaloftrialanderror/jote/tree/main/libs/relatex/texast
-[texast-util-to-latex]: https://github.com/journaloftrialanderror/jote/tree/main/libs/relatex/texast-util-to-latex
+[rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour
+[rejour-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-parse
+[rejour-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-stringify
+[rejour-move-abstract]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-move-abstract
+[rejour-meta]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-meta
+[rejour-relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-relatex
+[relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex
+[relatex-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/relatex-stringify
+[jast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast
+[jast-util-to-texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast-util-to-texast
+[jastscript]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jastscript
+[texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast
+[texast-util-to-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast-util-to-latex
 [hast]: https://github.com/syntax-tree/hast
 [xast]: https://github.com/syntax-tree/xast
 [mdast]: https://github.com/syntax-tree/mdast

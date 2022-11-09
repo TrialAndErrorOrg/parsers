@@ -1,11 +1,11 @@
 {
   "name": "rejour-parse",
   "version": "0.0.1",
-  "license": "GPL-3-0-or-later",
-  "repository": "https://github.com/journaloftrialanderror/jote",
+  "license": "GPL-3.0-or-later",
+  "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "",
+  "description": "Parser for `rejour` that parses the `JATS` document to a `jast` tree.",
   "keywords": [
     "unified",
     "abstract",

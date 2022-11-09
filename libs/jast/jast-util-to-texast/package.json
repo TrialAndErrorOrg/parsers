@@ -9,11 +9,11 @@
     "unist-util-is": "5.0.0",
     "unist-util-visit": "4.0.0"
   },
-  "license": "GPL-3-0-or-later",
-  "repository": "https://github.com/journaloftrialanderror/jote",
+  "license": "GPL-3.0-or-later",
+  "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "",
+  "description": "Utility to convert a [jast][jast] tree to a [texast][texast] tree.",
   "keywords": [
     "unified",
     "abstract",

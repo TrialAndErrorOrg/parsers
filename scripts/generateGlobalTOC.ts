@@ -35,7 +35,9 @@ const makeTOC = async (root: string, mainDir: string[], prefix: string) =>
       const [readme, readmeError] = await tryCatchPromise(
         readFile(readmePath, 'utf8')
       )
-      const firstNonHeader = readme?.match(/(?<= # )\w.+/)?.[0]
+
+      const firstNonHeader =
+        readme?.match(/(?<=(^|\n))\w.+?(?=#|$)/gims)?.[0] || ''
 
       // check if decription is in package.json
       // if not, use the first non-header line of the readme
@@ -45,14 +47,19 @@ const makeTOC = async (root: string, mainDir: string[], prefix: string) =>
       // and the readme description exists
 
       const readmeDescription = firstNonHeader
+        ?.match(/\w.+?(\n|$|\.(\n|\s))/g)?.[0]
+        .replace(/\n/g, '')
       const packagePath = join(dirPath, 'package.json')
-      const [packageJSON, packageJSONError] = await tryCatchPromise(
+      const [packageJSONRaw, packageJSONError] = await tryCatchPromise(
         readFile(packagePath, 'utf8')
       )
+      const packageJSON = packageJSONRaw
+        ? JSON.parse(packageJSONRaw)
+        : undefined
 
-      const packageDescription = packageJSONError
-        ? ''
-        : JSON.parse(packageJSON).description
+      const packageDescription = packageJSON
+        ? packageJSON.description
+        : undefined
 
       if (packageJSONError && readmeDescription) {
         // write the package.json file with the description
@@ -65,23 +72,20 @@ const makeTOC = async (root: string, mainDir: string[], prefix: string) =>
         await writeFile(packagePath, JSON.stringify(newPackageJSON, null, 2))
       }
 
-      const description = packageDescription || readmeDescription
+      const description = readmeDescription || packageDescription
 
-      if (packageDescription !== readmeDescription) {
-        packageJSON.description = description
-        writeFileSync(packagePath, JSON.stringify(packageJSON, null, 2))
+      if (
+        packageDescription !== undefined &&
+        readmeDescription &&
+        packageDescription !== description
+      ) {
+        packageJSON.description = readmeDescription.trim()
+        await writeFile(packagePath, JSON.stringify(packageJSON, null, 2))
       }
 
-      try {
-        const packagePath = join(dirPath, 'package.json')
-        const packageJSON = JSON.parse(await readFile(packagePath, 'utf8'))
-        const description = packageJSON.description
-        return `- [${dir}](${relativePath}): ${description}`
-      } catch (error) {
-        console.error(error)
-
-        return `- [${dir}](${relativePath})`
-      }
+      return `#### [\`${dir}\`](${
+        readme ? join(relativePath, 'README.md') : relativePath
+      })${firstNonHeader ? `\n\n${firstNonHeader}\n` : '\n'}`
     })
   )
 
@@ -94,17 +98,19 @@ const libToc = await Promise.all(
     )
     const libToc = await makeTOC(join(libs, dir), liblibDirs, `libs/${dir}`)
 
-    return `- [${dir}](${join('libs', dir)}): \n   ${libToc.join('\n   ')}`
+    return `\n### [${dir}](${join('libs', dir)})\n\n${libToc.join('\n\n')}`
   })
 )
 
-const toc = `# Table of Contents
+const toc = `# Overview
 
-- [Apps](${apps}):
-  ${appToc.join('\n  ')}
+## [Apps](${apps}):
 
-- [Libs](${libs}):
-  ${libToc.join('\n  ')}
+${appToc.join('\n\n')}
+
+## [Libs](${libs}):
+
+${libToc.join('\n\n')}
 
 `
 

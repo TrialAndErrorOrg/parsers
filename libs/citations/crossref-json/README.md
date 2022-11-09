@@ -1,7 +1,3 @@
-# citations-crossref-json
+# crossref-json
 
-This library was generated with [Nx](https://nx.dev).
-
-## Running unit tests
-
-Run `nx test citations-crossref-json` to execute the unit tests via [Jest](https://jestjs.io).
+Typings for the [Crossref JSON API](https://api.crossref.org/swagger.json)

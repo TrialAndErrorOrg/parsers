@@ -1,7 +1,3 @@
-# rejour-rejour-frontmatter
+# rejour-frontmatter
 
-This library was generated with [Nx](https://nx.dev).
-
-## Running unit tests
-
-Run `nx test rejour-rejour-frontmatter` to execute the unit tests via [Jest](https://jestjs.io).
+Plugin for `rejour` that parses the frontmatter of a `JATS` document and adds it to the processing VFile as a list of `csl` citations.

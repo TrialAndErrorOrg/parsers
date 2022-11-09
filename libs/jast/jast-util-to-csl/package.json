@@ -6,11 +6,11 @@
     "unist-util-is": "^5.1.1",
     "xast-util-to-string": "^2.0.0"
   },
-  "license": "GPL-3-0-or-later",
-  "repository": "https://github.com/journaloftrialanderror/jote",
+  "license": "GPL-3.0-or-later",
+  "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "",
+  "description": "Convert a `jast` citation syntax tree to list of `csl` objects.",
   "keywords": [
     "unified",
     "abstract",

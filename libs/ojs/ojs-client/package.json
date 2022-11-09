@@ -2,10 +2,10 @@
   "name": "ojs-client",
   "version": "0.0.1",
   "type": "module",
-  "license": "GPL-3-0-or-later",
-  "repository": "https://github.com/journaloftrialanderror/jote",
+  "license": "GPL-3.0-or-later",
+  "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
-  "description": "",
+  "description": "Small Node HTTP client for communicating with your OJS's REST API",
   "keywords": [
     "unified",
     "abstract",

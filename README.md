@@ -262,6 +262,8 @@ Port of [hast-util-is-element](https://github.com/syntax-tree/hast-util-has-prop
 
 Port of `(hast-util-select)[https://github.com/syntax-tree/hast-util-select]` for use with `xast` nodes.
 
+<!--
+
 ## Projects
 
 ### rejour
@@ -335,6 +337,7 @@ Stringifier.
 ##### [texast-util-to-latex][texast-util-to-latex]
 
 Utility for stringifying `texast` syntax trees, mostly based off of [mdast-util-to-markdown][mdast-markdown]
+-->
 
 ## License
 

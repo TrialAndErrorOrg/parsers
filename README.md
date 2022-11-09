@@ -20,8 +20,9 @@ There is also an `app` directory, which contains a few apps that use the parsers
 
 See below for more info.
 
-# Graph
+# Dependency Graph
 
+[View an interactive dependency graph here](https://trialanderrororg.github.io/parsers/https://trialanderrororg.github.io/parsers/)
 ![Graph of this monorepo](./graph.png 'Graph of this monorepo')
 
 # Overview

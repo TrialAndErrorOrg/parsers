@@ -1,6 +1,22 @@
 # JOTE
 
-Monorepo for a suite of parsers used in the [Journal of Trial and Error](https://journal.trialanderror.org), mostly used for creating a JATS XML parser at the moment.
+Monorepo for a suite of parsers used in the [Journal of Trial and Error](https://journal.trialanderror.org).
+
+Currently has 3 suites of parsers:
+
+- `ooxast`/`reoff`: Tools to parse, convert from, and create OOXML (`.docx`) XML. Currently only contains a parser and a converter to `jats`, plus some tools.
+- `jats`/`rejour`: Tools to parse, convert from, and create JATS XML. Currently contains a parser, stringifier, and a converter to `texast`, plus some tools.
+- `texast`/`relatex`: Tools to parse, convert from, and create LaTeX (DEPRECATED, use [unified-latex](https://github.com/unified-latex) instead). Only contains a way to generate LaTex from `texast` ASTs.
+
+Additionally, there are a few other tools:
+
+- `citations-`: Tools to parse and convert citations
+- `ojs-`: Things to operate on the OJS api
+- `utils-`: Various utilities
+
+Finally, there are the processors, which are basically convenient wrappers around the parsers.
+
+There is also an `app` directory, which contains a few apps that use the parsers, atm a really crappy frontend for converting from `.docx`.
 
 ![Graph of this monorepo](./graph.png 'Graph of this monorepo')
 

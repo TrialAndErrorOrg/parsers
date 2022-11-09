@@ -6,7 +6,6 @@
 import { readdirSync, readFileSync, writeFileSync, lstatSync } from 'fs'
 import { readFile, writeFile } from 'fs/promises'
 import { join, relative, resolve } from 'path'
-import { parse } from 'yaml'
 import { tryCatchPromise } from '../libs/utils/misc/src'
 // import { generateTOC } from './generateTOC';
 

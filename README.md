@@ -2,6 +2,10 @@
 
 Monorepo for a suite of parsers used in the [Journal of Trial and Error](https://journal.trialanderror.org).
 
+The goal is to automate the process of converting a manuscript from a word processor to a JATS XML file, which can then be used to generate a PDF and HTML version of the manuscript. Ideally this would allow authors to work in Word/Google Docs but still have the benefits of a modern publishing workflow.
+
+The only current implementation is found at [convert.centeroftrialanderror.com](convert.centeroftrialanderror.com) (very shodyy!).
+
 Currently has 3 suites of parsers:
 
 - `ooxast`/`reoff`: Tools to parse, convert from, and create OOXML (`.docx`) XML. Currently only contains a parser and a converter to `jats`, plus some tools.

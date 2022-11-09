@@ -6,6 +6,7 @@
     "start": "nx serve",
     "build": "nx run-many --target=build --all --prod",
     "build-dev": "nx run-many --target=build --all",
+    "generate-graph": "mkdir -p graph && nx graph --file=graph/index.html",
     "test": "NODE_OPTIONS=--experimental-vm-modules nx run-many --target=test --all",
     "clean-libs": "echo 'for i in libs/relatex/* libs/rejour/* \\n do \\n rm -f $i/yarn.lock && rm -rf $i/node_modules && yarn --cwd $i \\n done' | bash",
     "install-node": "echo 'for i in libs/relatex/* libs/rejour/* \\n do \\n rm -rf $i/node_modules && yarn --cwd $i \\n done' | bash",

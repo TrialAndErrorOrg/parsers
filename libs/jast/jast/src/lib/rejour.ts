@@ -8,9 +8,11 @@ export type NoUndefined<T> = Exclude<T, undefined>
 export type ArrayValueMaybe<T> = T extends any[]
   ? ValuesType<NoUndefined<T>>
   : NoUndefined<T>
-export type AllTypes<T> = ArrayValueMaybe<ValuesType<T>>
+export type AllTypes<T extends any[] | ArrayLike<any> | Record<any, any>> =
+  ArrayValueMaybe<ValuesType<T>>
 
-export type RequiredMap<T> = AllTypes<T>
+export type RequiredMap<T extends any[] | ArrayLike<any> | Record<any, any>> =
+  AllTypes<T>
 
 export interface Attributes {
   [name: string]: string | null | undefined | boolean | number

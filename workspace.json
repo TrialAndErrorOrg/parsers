@@ -10,16 +10,16 @@
     "converter-frontend": "apps/converter-frontend",
     "converter-frontend-e2e": "apps/converter-frontend-e2e",
     "docx-to-vfile": "libs/reoff/docx-to-vfile",
-    "jast-jast": "libs/jast/jast",
+    "jast": "libs/jast/jast",
     "jast-util-from-csl": "libs/jast/jast-util-from-csl",
     "jast-util-to-csl": "libs/jast/jast-util-to-csl",
     "jast-util-to-texast": "libs/jast/jast-util-to-texast",
     "jote": "apps/jote",
-    "ojs-ojs-client": "libs/ojs/ojs-client",
-    "ojs-ojs-relatex": "libs/ojs/ojs-relatex",
+    "ojs-client": "libs/ojs/ojs-client",
+    "ojs-relatex": "libs/ojs/ojs-relatex",
     "ooxast": "libs/ooxast/ooxast",
-    "ooxast-ooxast-util-citation-plugin": "libs/ooxast/ooxast-util-citation-plugin",
-    "ooxast-ooxast-util-to-unified-latex": "libs/ooxast/ooxast-util-to-unified-latex",
+    "ooxast-util-citation-plugin": "libs/ooxast/ooxast-util-citation-plugin",
+    "ooxast-util-to-unified-latex": "libs/ooxast/ooxast-util-to-unified-latex",
     "ooxast-util-citations": "libs/ooxast/ooxast-util-citations",
     "ooxast-util-get-style": "libs/ooxast/ooxast-util-get-style",
     "ooxast-util-parse-bib": "libs/ooxast/ooxast-util-parse-bib",
@@ -39,7 +39,7 @@
     "rejour-parse": "libs/rejour/rejour-parse",
     "rejour-relatex": "libs/rejour/rejour-relatex",
     "rejour-stringify": "libs/rejour/rejour-stringify",
-    "relatex-relatex-add-preamble": "libs/relatex/relatex-add-preamble",
+    "relatex-add-preamble": "libs/relatex/relatex-add-preamble",
     "relatex-stringify": "libs/relatex/relatex-stringify",
     "reoff-cite": "libs/reoff/reoff-cite",
     "reoff-clean": "libs/reoff/reoff-clean",
@@ -55,6 +55,6 @@
     "xast-util-has-attribute": "libs/xast/xast-util-has-attribute",
     "xast-util-is-element": "libs/xast/xast-util-is-element",
     "xast-util-select": "libs/xast/xast-util-select",
-    "ooxast-ooxast-util-to-hast": "libs/ooxast/ooxast-util-to-hast"
+    "ooxast-util-to-hast": "libs/ooxast/ooxast-util-to-hast"
   }
 }

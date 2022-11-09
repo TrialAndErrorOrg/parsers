@@ -1,12 +1,12 @@
-import { isParagraphContent } from 'hast-types'
-import { HastContent, HastP, HastParagraphContent } from '../types'
+// import { isParagraphContent } from 'hast-types'
+import { HastContent, Element } from '../types'
 //import { phrasing } from 'mdast-util-phrasing'
 
 export function wrap(nodes: Array<HastContent>) {
   return runs(nodes, onphrasing)
 
   function onphrasing(
-    nodes: Array<HastParagraphContent>
+    nodes: Array<HastContent>
   ): HastContent | Array<HastContent> {
     const head = nodes[0]
 
@@ -20,10 +20,10 @@ export function wrap(nodes: Array<HastContent>) {
 
     return {
       type: 'element',
-      name: 'p',
-      attributes: {},
+      tagName: 'p',
+      properties: {},
       children: nodes,
-    } as HastP
+    } as Element
   }
 }
 
@@ -32,7 +32,7 @@ export function wrap(nodes: Array<HastContent>) {
  * This is needed if a fragment is given, which could just be a sentence, and
  * doesn’t need a wrapper paragraph.
  *
- * @param {Array.HastContent>} nodes
+ * @param {Array<HastContent>} nodes
  * @returns {boolean}
  */
 export function wrapNeeded(nodes: Array<HastContent>): boolean {
@@ -43,10 +43,7 @@ export function wrapNeeded(nodes: Array<HastContent>): boolean {
   while (++index < nodes.length) {
     node = nodes[index]
 
-    if (
-      !isParagraphContent(node) ||
-      ('children' in node && wrapNeeded(node.children))
-    ) {
+    if ('children' in node && wrapNeeded(node.children)) {
       return true
     }
   }
@@ -59,32 +56,30 @@ export function wrapNeeded(nodes: Array<HastContent>): boolean {
  */
 function runs(
   nodes: Array<HastContent>,
-  onphrasing: (
-    nodes: Array<HastParagraphContent>
-  ) => HastContent | Array<HastContent>,
+  onphrasing: (nodes: Array<HastContent>) => HastContent | Array<HastContent>,
   onnonphrasing?: (node: HastContent) => HastContent
 ) {
   const nonphrasing = onnonphrasing || identity
   const flattened: Array<HastContent> = flatten(nodes)
   let result: Array<HastContent> = []
   let index = -1
-  let queue: Array<HastParagraphContent> | undefined
+  let queue: Array<HastContent> | undefined
   let node: HastContent
 
   while (++index < flattened.length) {
     node = flattened[index]
 
-    if (isParagraphContent(node)) {
-      if (!queue) queue = []
-      queue.push(node)
-    } else {
-      if (queue) {
-        result = result.concat(onphrasing(queue))
-        queue = undefined
-      }
-
-      result = result.concat(nonphrasing(node))
+    // if (isParagraphContent(node)) {
+    // if (!queue) queue = []
+    // queue.push(node)
+    // } else {
+    if (queue) {
+      result = result.concat(onphrasing(queue))
+      queue = undefined
     }
+
+    result = result.concat(nonphrasing(node))
+    // }
   }
 
   if (queue) {
@@ -98,7 +93,7 @@ function runs(
  * Flatten a list of nodes.
  */
 function flatten(nodes: Array<HastContent>): Array<HastContent> {
-  /** @type {Array.HastContent>} */
+  /** @type {Array<HastContent>} */
   const flattened: Array<HastContent> = []
   let index = -1
   /** @type HastContent} */
@@ -124,7 +119,7 @@ function flatten(nodes: Array<HastContent>): Array<HastContent> {
 
 /**
  * @param HastContent} node
- * @returns {Array.HastContent>}
+ * @returns {Array<HastContent>}
  */
 function split(node: HastContent): Array<HastContent> {
   // @ts-expect-error Assume parent.
@@ -143,7 +138,6 @@ function split(node: HastContent): Array<HastContent> {
       const { children, ...rest } = node
       return {
         ...child,
-        // @ts-expect-error: assume matching parent & child.
         children: [{ ...rest, children: child.children }],
       }
     }
@@ -154,10 +148,10 @@ function split(node: HastContent): Array<HastContent> {
   /**
    * Use `parent`, put the phrasing run inside it.
    *
-   * @param {Array.HastParagraphContent>} nodes
+   * @param {Array<HastParagraphContent>} nodes
    * @returns HastContent}
    */
-  function onphrasing(nodes: Array<HastParagraphContent>): HastContent {
+  function onphrasing(nodes: Array<HastContent>): HastContent {
     // @ts-expect-error: assume parent.
     const { children, ...rest } = node
     // @ts-expect-error: assume matching parent & child.

@@ -1,6 +1,6 @@
 # JOTE
 
-Monorepo for the [Journal of Trial and Error](https://jtrialerror.com), mostly used for creating a JATS XML parser at the moment.
+Monorepo for a suite of parsers used in the [Journal of Trial and Error](https://journal.trialanderror.org), mostly used for creating a JATS XML parser at the moment.
 
 ![Graph of this monorepo](./graph.png 'Graph of this monorepo')
 

@@ -38,15 +38,15 @@ export async function docxToTexConverter(
         'w:noProof',
       ],
     })
-    .use(reoffParseReferences, {
-      apiUrl:
-        process.env.NODE_ENV === 'production'
-          ? apiUrl || '/api/style'
-          : process.env.NEXT_PUBLIC_STYLE_DEV_URL || 'http://localhost:8000/api/style',
-      mailto,
-    })
+    // .use(reoffParseReferences, {
+    //   apiUrl:
+    //     process.env.NODE_ENV === 'production'
+    //       ? apiUrl || '/api/style'
+    //       : process.env.NEXT_PUBLIC_STYLE_DEV_URL || 'http://localhost:8000/api/style',
+    //   mailto,
+    // })
     // @ts-expect-error tbh idk what it's talking about
-    .use(reoffCite, { type: type || 'zotero', bibliography: undefined })
+    // .use(reoffCite, { type: type || 'zotero', bibliography: undefined })
     .use(reoffRejour)
     .use(rejourStringify)
     .use(rejourRelatex, {
@@ -58,7 +58,7 @@ export async function docxToTexConverter(
     .use(relatexAddPreamble, preamble || [])
     .use(relatexStringify)
 
-    console.log(process.env.NODE_ENV)
-    console.log(process.env.STYLE_DEV_URL)
+  console.log(process.env.NODE_ENV)
+  console.log(process.env.STYLE_DEV_URL)
   return proc.process(vfile)
 }

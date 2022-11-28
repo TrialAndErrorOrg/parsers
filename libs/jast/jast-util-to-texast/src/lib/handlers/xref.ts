@@ -54,8 +54,18 @@ export function xref(j: J, node: Xref) {
       let pre
       let post
       if (customType) {
-        const customData = JSON.parse(customType)
-        const { prefix, infix, label, locator, mode, suffix } = customData
+        const customData: Record<string, string | undefined> =
+          JSON.parse(customType)
+        const {
+          prefix,
+          infix,
+          label,
+          locator,
+          mode,
+          suffix,
+          plainCitation,
+          formattedCitation,
+        } = customData
 
         const pref = (mode ? infix : prefix) || ''
 
@@ -64,7 +74,11 @@ export function xref(j: J, node: Xref) {
             ? `${labelToText[label] || label || 'pp.'} `
             : ''
         }${locator || ''}`
-        command = mode ? 'textcite' : 'parencite'
+
+        const isParenthetical =
+          plainCitation?.startsWith && plainCitation?.endsWith(')')
+
+        command = isParenthetical ? 'parencite' : 'textcite'
 
         if (pref) pre = pref
         if (suff) post = suff
@@ -87,7 +101,7 @@ export function xref(j: J, node: Xref) {
                   node.children
                     .map((node) => {
                       //@ts-expect-error it is text, it has value
-                      const n = node.value.replace(/[[\], ]/g, '')
+                      const n = node?.value?.replace(/[[\], ]/g, '')
                       return n ? `bib${n}` : undefined
                     })
                     .filter((n) => !!n)

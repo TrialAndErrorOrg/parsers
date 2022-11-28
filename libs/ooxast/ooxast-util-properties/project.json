@@ -1,0 +1,35 @@
+{
+  "name": "ooxast-ooxast-util-properties",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ooxast/ooxast-util-properties/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:swc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ooxast/ooxast-util-properties",
+        "tsConfig": "libs/ooxast/ooxast-util-properties/tsconfig.lib.json",
+        "packageJson": "libs/ooxast/ooxast-util-properties/package.json",
+        "main": "libs/ooxast/ooxast-util-properties/src/index.ts",
+        "assets": ["libs/ooxast/ooxast-util-properties/*.md"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ooxast/ooxast-util-properties"],
+      "options": {
+        "jestConfig": "libs/ooxast/ooxast-util-properties/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ooxast/ooxast-util-properties/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

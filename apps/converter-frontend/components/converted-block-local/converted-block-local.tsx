@@ -2,11 +2,16 @@ import { Box, Button, Code, Header, Loader, Text } from '@mantine/core'
 import { useClipboard } from '@mantine/hooks'
 import React, { useEffect, useState } from 'react'
 import { VFile } from 'vfile'
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { Prism as SyntaxHighlighter } from '@mantine/prism'
 import { FaClipboard, FaClipboardList } from 'react-icons/fa'
 import { HStack } from '../stack/stack'
 import shallow from 'zustand/shallow'
 import { useStore } from '../../utils/store'
+
+import Prism from 'prism-react-renderer/prism'
+;(typeof global !== 'undefined' ? global : window).Prism = Prism
+
+require('prismjs/components/prism-latex')
 //import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 /* eslint-disable-next-line */
@@ -54,7 +59,7 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
       {/* @ts-ignore  */}
       {vfile?.messages && (
         <>
-          <Header height="20">Images extracted from doc</Header>
+          <Box height="20">Images extracted from doc</Box>
           <Box>
             {vfile?.data?.images
               ? Object.entries(
@@ -82,7 +87,7 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
       )}
       {vfile?.messages && (
         <>
-          <Header height="20">Errors and warnings</Header>
+          <Box height="20">Errors and warnings</Box>
           {vfile?.messages.map((message) => (
             <Text key={String(message)}>{String(message)} </Text>
           ))}
@@ -91,16 +96,14 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
       {vfile ? (
         <Box
           sx={{
-            overflow: 'scroll',
-            maxHeight: '70vh',
             paddingBottom: 20,
-            width: 'auto',
+            width: '100%',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'flex-end',
           }}
         >
-          <Button
+          {/* <Button
             style={{
               position: 'absolute',
               marginTop: 20,
@@ -116,12 +119,44 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
               <FaClipboardList />
               <Text>{clipboard.copied ? 'Copied!' : 'Copy'}</Text>
             </HStack>
-          </Button>
+          </Button> */}
           <SyntaxHighlighter
             //wrapLines
-            wrapLongLines
+            withLineNumbers={true}
             language="latex"
-            CodeTag={Code}
+            // CodeTag={Code}
+            sx={{}}
+            style={{
+              maxWidth: '100%',
+              // height: '100%',
+              maxHeight: '80vh',
+              overflowY: 'scroll',
+              // width: '50vw',
+            }}
+            // scrollAreaComponent="div"
+            styles={{
+              // copy: {
+              //   position: 'fixed',
+              //   top: 10,
+              //   right: 10,
+              // },
+              scrollArea: {
+                width: '100%',
+                maxHeight: '100%',
+                // overflow: 'scroll',
+              },
+              code: {
+                width: '100%',
+              },
+              lineContent: {
+                width: '100%',
+                overflowWrap: 'break-word',
+                whiteSpace: 'pre-wrap',
+              },
+              line: {
+                width: '90%',
+              },
+            }}
             //showInlineLineNumbers
             //     style={nord}
             //   maxW: '80%',

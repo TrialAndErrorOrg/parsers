@@ -196,6 +196,9 @@
       ],
       "ooxast-util-to-hast": [
         "libs/ooxast/ooxast-util-to-hast/src/index.ts"
+      ],
+      "ooxast-util-properties": [
+        "libs/ooxast/ooxast-util-properties/src/index.ts"
       ]
     }
   },

@@ -17,7 +17,7 @@ export const command: BasicHandle = (
   node: Command,
   options?: Options
 ): string => {
-  const contents = node.children.reduce(
+  const contents = node.children?.reduce(
     (acc: CommandChildren, child: CommandArg) => {
       if (isOptionalCommandArg(child)) {
         acc.optargs.push(child)

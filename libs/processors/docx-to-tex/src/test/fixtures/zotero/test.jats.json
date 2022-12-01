@@ -2807,17 +2807,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "04:53"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "04:53"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -2832,29 +2851,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image5.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image5.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -2869,17 +2895,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "05:07"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "05:07"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -2894,29 +2939,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image6.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image6.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -2931,17 +2983,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "05:08"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "05:08"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -2956,29 +3027,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image7.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image7.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -2993,17 +3071,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "05:14"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "05:14"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -3018,29 +3115,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image8.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image8.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -3055,17 +3159,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "05:21"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "05:21"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -3080,29 +3203,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image9.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image9.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -3117,23 +3247,48 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "05:23"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "05:23"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
                                                   "value": "Researcher repeats instructions"
                                                 }
                                               ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {},
+                                              "children": []
                                             }
                                           ]
                                         },
@@ -3146,17 +3301,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "05:35"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "05:35"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -3171,29 +3345,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image10.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image10.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -3208,21 +3389,51 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "05:42"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "05:42"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
                                                   "value": "Researcher repeats request for the "
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "italic",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "minimum number"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
@@ -3232,41 +3443,37 @@
                                               "attributes": {},
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "minimum number"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "td",
-                                              "attributes": {},
-                                              "children": [
-                                                {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image11.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image11.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -3281,17 +3488,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "05:45"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "05:45"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -3306,29 +3532,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image12.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image12.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -3343,17 +3576,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "05:50"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "05:50"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -3368,29 +3620,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image13.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image13.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -3405,10 +3664,40 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "05:57"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; border-top: 4px solid #auto; border-left: 4px solid #auto; border-bottom: 4px solid #auto; border-right: 4px solid #auto",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
-                                                  "value": "05:57"
+                                                  "value": "Correct explanation"
                                                 }
                                               ]
                                             },
@@ -3416,12 +3705,7 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "value": "Correct explanation"
-                                                }
-                                              ]
+                                              "children": []
                                             }
                                           ]
                                         }
@@ -3558,17 +3842,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "01:18"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "01:18"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -3583,29 +3886,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image14.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image14.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -3620,17 +3930,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "01:21"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "01:21"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -3645,29 +3974,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image15.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image15.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -3682,17 +4018,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "01:24"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "01:24"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -3707,29 +4062,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image16.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image16.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -3744,17 +4106,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "01:27"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "01:27"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -3769,29 +4150,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image17.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image17.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -3806,17 +4194,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "01:36"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "01:36"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -3831,29 +4238,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image18.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image18.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -3868,17 +4282,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "01:45"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "01:45"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -3893,29 +4326,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image19.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image19.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -3930,23 +4370,48 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "01:47"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "01:47"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
                                                   "value": "Researcher repeats instructions"
                                                 }
                                               ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {},
+                                              "children": []
                                             }
                                           ]
                                         },
@@ -3959,17 +4424,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "01:50"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "01:50"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -3984,29 +4468,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image20.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image20.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -4021,23 +4512,48 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "02:03"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "02:03"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
                                                   "value": "Researcher ends instructions"
                                                 }
                                               ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {},
+                                              "children": []
                                             }
                                           ]
                                         },
@@ -4050,17 +4566,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "02:11"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "02:11"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -4075,29 +4610,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image21.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image21.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -4112,17 +4654,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "02:17"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "02:17"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -4137,29 +4698,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image22.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image22.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -4174,17 +4742,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "02:23"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "02:23"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -4199,29 +4786,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image23.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image23.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -4236,17 +4830,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "02:32"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "02:32"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -4261,29 +4874,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image24.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image24.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -4298,10 +4918,40 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "02:41"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
-                                                  "value": "02:41"
+                                                  "value": "\"I'd have to pick 4 socks out\". Said faster and more determined"
                                                 }
                                               ]
                                             },
@@ -4311,52 +4961,37 @@
                                               "attributes": {},
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "\"I'd have to pick 4 socks out\". "
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "td",
-                                              "attributes": {},
-                                              "children": [
-                                                {
-                                                  "type": "text",
-                                                  "value": "Said faster and more determined"
-                                                }
-                                              ]
-                                            },
-                                            {
-                                              "type": "element",
-                                              "name": "td",
-                                              "attributes": {},
-                                              "children": [
-                                                {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image25.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image25.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -4371,17 +5006,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "02:44"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "02:44"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -4396,29 +5050,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image26.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image26.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -4433,17 +5094,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "02:47"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "02:47"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -4458,29 +5138,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image27.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image27.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }
@@ -4495,23 +5182,48 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "02:49"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "02:49"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
                                                   "value": "Researcher confirms"
                                                 }
                                               ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {},
+                                              "children": []
                                             }
                                           ]
                                         },
@@ -4524,23 +5236,48 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "02:50"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "02:50"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
                                                   "value": "Starts to laugh"
                                                 }
                                               ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {},
+                                              "children": []
                                             }
                                           ]
                                         },
@@ -4553,17 +5290,36 @@
                                               "type": "element",
                                               "name": "td",
                                               "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "td",
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
-                                                  "type": "text",
-                                                  "value": "02:51"
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "02:51"
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             },
                                             {
                                               "type": "element",
                                               "name": "td",
-                                              "attributes": {},
+                                              "attributes": {
+                                                "style": "background-color: auto; color: auto; ",
+                                                "valign": "center"
+                                              },
                                               "children": [
                                                 {
                                                   "type": "text",
@@ -4578,29 +5334,36 @@
                                               "children": [
                                                 {
                                                   "type": "element",
-                                                  "name": "inline-figure",
+                                                  "name": "fig",
                                                   "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "caption",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "label",
-                                                  "attributes": {},
-                                                  "children": []
-                                                },
-                                                {
-                                                  "type": "element",
-                                                  "name": "graphic",
-                                                  "attributes": {
-                                                    "xlink:href": "media/image28.png"
-                                                  },
-                                                  "children": []
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "inline-figure",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "caption",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "label",
+                                                      "attributes": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "graphic",
+                                                      "attributes": {
+                                                        "xlink:href": "media/image28.png"
+                                                      },
+                                                      "children": []
+                                                    }
+                                                  ]
                                                 }
                                               ]
                                             }

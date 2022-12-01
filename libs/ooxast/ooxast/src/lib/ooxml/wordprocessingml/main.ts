@@ -3979,7 +3979,7 @@ export type TcPr = TcPrInner & {
   children: RequiredMap<TcPrMap>[]
 }
 
-export interface TcPrMap {
+export interface TcPrMap extends TcPrBase {
   tcPrChange?: TcPrChange
 }
 

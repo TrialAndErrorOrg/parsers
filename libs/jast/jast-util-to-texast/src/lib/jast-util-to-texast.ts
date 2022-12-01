@@ -91,6 +91,9 @@ export function toTexast(
       bibname: options.bibname || 'bibliography',
       columnSeparator: !!options.columnSeparator,
       footnotes: [],
+      booktabs: options.booktabs ?? true,
+      rowNumber: 0,
+      numberOfRows: 0,
       citationAnalyzer:
         options.citationAnalyzer || ((node: Node) => 'autocite'),
     } as Context

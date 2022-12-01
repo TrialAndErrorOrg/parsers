@@ -2319,30 +2319,15 @@
                                           "attributes": {},
                                           "children": [
                                             {
-                                              "type": "text",
-                                              "value": "Functioning of smart adherence cap"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "value": "Number of patients (% of patients)"
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
-                                            {
-                                              "type": "text",
-                                              "value": "("
+                                              "type": "element",
+                                              "name": "bold",
+                                              "attributes": {},
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "Functioning of smart adherence cap"
+                                                }
+                                              ]
                                             }
                                           ]
                                         },
@@ -2358,20 +2343,49 @@
                                               "children": [
                                                 {
                                                   "type": "text",
-                                                  "value": "n"
+                                                  "value": "Number of patients (% of patients)"
                                                 }
                                               ]
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
+                                            },
                                             {
-                                              "type": "text",
-                                              "value": " = 23)"
+                                              "type": "element",
+                                              "name": "bold",
+                                              "attributes": {},
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "("
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "italic",
+                                              "attributes": {},
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "bold",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "text",
+                                                      "value": "n"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "bold",
+                                              "attributes": {},
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": " = 23)"
+                                                }
+                                              ]
                                             }
                                           ]
                                         }
@@ -2392,6 +2406,12 @@
                                               "value": "Good functioning"
                                             }
                                           ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "td",
+                                          "attributes": {},
+                                          "children": []
                                         }
                                       ]
                                     },
@@ -2419,25 +2439,11 @@
                                             {
                                               "type": "text",
                                               "value": " 2 "
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
+                                            },
                                             {
                                               "type": "text",
                                               "value": "("
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
+                                            },
                                             {
                                               "type": "text",
                                               "value": "9)"
@@ -2470,25 +2476,11 @@
                                             {
                                               "type": "text",
                                               "value": " 1 "
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
+                                            },
                                             {
                                               "type": "text",
                                               "value": "("
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
+                                            },
                                             {
                                               "type": "text",
                                               "value": "4)"
@@ -2521,25 +2513,11 @@
                                             {
                                               "type": "text",
                                               "value": " 1 "
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
+                                            },
                                             {
                                               "type": "text",
                                               "value": "("
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
+                                            },
                                             {
                                               "type": "text",
                                               "value": "4)"
@@ -2572,25 +2550,11 @@
                                             {
                                               "type": "text",
                                               "value": " 1 "
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
+                                            },
                                             {
                                               "type": "text",
                                               "value": "("
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
+                                            },
                                             {
                                               "type": "text",
                                               "value": "4)"
@@ -2623,25 +2587,11 @@
                                             {
                                               "type": "text",
                                               "value": " 2 "
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
+                                            },
                                             {
                                               "type": "text",
                                               "value": "("
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
+                                            },
                                             {
                                               "type": "text",
                                               "value": "9)"
@@ -2674,25 +2624,11 @@
                                             {
                                               "type": "text",
                                               "value": " "
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
+                                            },
                                             {
                                               "type": "text",
                                               "value": "9 ("
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
+                                            },
                                             {
                                               "type": "text",
                                               "value": "39)"
@@ -2714,14 +2650,7 @@
                                             {
                                               "type": "text",
                                               "value": "Pairing error "
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
+                                            },
                                             {
                                               "type": "text",
                                               "value": "(no pairing success event registered)"
@@ -2736,25 +2665,11 @@
                                             {
                                               "type": "text",
                                               "value": " 2 "
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
+                                            },
                                             {
                                               "type": "text",
                                               "value": "("
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
+                                            },
                                             {
                                               "type": "text",
                                               "value": "9)"
@@ -2776,14 +2691,7 @@
                                             {
                                               "type": "text",
                                               "value": "Cap technical errors "
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
+                                            },
                                             {
                                               "type": "text",
                                               "value": "(reset event registered)"
@@ -2798,25 +2706,11 @@
                                             {
                                               "type": "text",
                                               "value": " 1 "
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
+                                            },
                                             {
                                               "type": "text",
                                               "value": "("
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
+                                            },
                                             {
                                               "type": "text",
                                               "value": "4)"
@@ -2849,25 +2743,11 @@
                                             {
                                               "type": "text",
                                               "value": " "
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
+                                            },
                                             {
                                               "type": "text",
                                               "value": "4 ("
-                                            }
-                                          ]
-                                        },
-                                        {
-                                          "type": "element",
-                                          "name": "td",
-                                          "attributes": {},
-                                          "children": [
+                                            },
                                             {
                                               "type": "text",
                                               "value": "17)"

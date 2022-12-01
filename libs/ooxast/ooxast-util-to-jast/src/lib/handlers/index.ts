@@ -12,6 +12,7 @@ import { document } from './document'
 import { r } from './r'
 import { tr } from './tr'
 import { drawing } from './drawing'
+import { tc } from './tc'
 
 export const handlers = {
   p,
@@ -26,6 +27,7 @@ export const handlers = {
   instrText: citation,
   tbl,
   tr,
+  tc,
   article: ignore,
   xml: ignore,
   instruction: ignore,

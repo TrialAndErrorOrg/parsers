@@ -1,9 +1,9 @@
-import { visit } from 'unist-util-visit'
+import { visitParents } from 'unist-util-visit-parents'
 import { P, R, T, Text, Root } from 'ooxast'
 import { getPStyle } from 'ooxast-util-get-style'
 import { parseTextCite } from 'parse-text-cite'
 import { Node } from 'unist'
-import { convertElement } from 'xast-util-is-element'
+import { convertElement, isElement } from 'xast-util-is-element'
 import { select } from 'xast-util-select'
 import { toString } from 'xast-util-to-string'
 import { select as unistSelect } from 'unist-util-select'
@@ -37,8 +37,16 @@ export function findCitations(
 
   let references = false
   let citationCounter = 1
-  visit(tree, isP, (p: P) => {
-    if (references) return
+  visitParents(tree, isP, (p: P, ancestors: Node[]) => {
+    if (
+      ancestors.some((parent) => isElement(parent) && /tbl/.test(parent.name))
+    ) {
+      return
+    }
+
+    if (references) {
+      return
+    }
 
     if (getPStyle(p)?.toLowerCase()?.includes('heading')) {
       if (

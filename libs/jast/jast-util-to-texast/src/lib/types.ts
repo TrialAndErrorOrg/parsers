@@ -37,6 +37,7 @@ export interface Options {
   italics?: 'emph' | 'textit'
   bibname?: string
   columnSeparator?: boolean
+  booktabs?: boolean
   documentClass?: {
     options?: string[]
     name: string
@@ -63,6 +64,7 @@ export interface Context {
   document: boolean | undefined
   checked: string
   unchecked: string
+  booktabs: boolean
   quotes: Array<string>
   italics: string
   documentClass: {
@@ -73,6 +75,8 @@ export interface Context {
   bibname: string
   columnSeparator: boolean
   footnotes: TexastContent[]
+  rowNumber: number
+  numberOfRows: number
   citationAnalyzer: (node: Node) => string
 }
 

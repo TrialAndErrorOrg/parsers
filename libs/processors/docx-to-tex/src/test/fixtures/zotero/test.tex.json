@@ -3063,7 +3063,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "c  c  c  c"
+                          "value": "l  l  l  l"
                         }
                       ]
                     },
@@ -3072,10 +3072,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "04:53"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "04:53"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -3100,52 +3120,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image5.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image5.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -3162,10 +3188,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "05:07"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "05:07"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -3190,52 +3236,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image6.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image6.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -3252,10 +3304,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "05:08"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "05:08"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -3280,52 +3352,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image7.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image7.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -3342,10 +3420,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "05:14"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "05:14"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -3370,52 +3468,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image8.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image8.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -3432,10 +3536,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "05:21"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "05:21"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -3460,52 +3584,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image9.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image9.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -3522,10 +3652,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "05:23"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "05:23"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -3543,6 +3693,14 @@
                           ]
                         },
                         {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
                           "type": "linebreak",
                           "value": "\\"
                         }
@@ -3553,10 +3711,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "05:35"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "05:35"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -3581,52 +3759,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image10.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image10.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -3643,10 +3827,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "05:42"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "05:42"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -3660,76 +3864,84 @@
                             {
                               "type": "text",
                               "value": "Researcher repeats request for the "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "minimum number"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "command",
-                              "name": "caption",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
                             },
                             {
                               "type": "command",
-                              "name": "label",
+                              "name": "emph",
                               "children": [
                                 {
                                   "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
                                   "children": [
                                     {
                                       "type": "text",
-                                      "value": "media/image11.png"
+                                      "value": "minimum number"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "environment",
+                              "name": "figure",
+                              "children": [
+                                {
+                                  "type": "command",
+                                  "name": "includegraphics",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image11.png"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -3746,10 +3958,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "05:45"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "05:45"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -3774,52 +4006,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image12.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image12.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -3836,10 +4074,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "05:50"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "05:50"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -3864,52 +4122,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image13.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image13.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -3926,10 +4190,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "05:57"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "05:57"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -3945,6 +4229,14 @@
                               "value": "Correct explanation"
                             }
                           ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
                         },
                         {
                           "type": "linebreak",
@@ -4072,7 +4364,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "c  c  c  c"
+                          "value": "l  l  l  l"
                         }
                       ]
                     },
@@ -4081,10 +4373,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "01:18"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "01:18"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -4109,52 +4421,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image14.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image14.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -4171,10 +4489,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "01:21"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "01:21"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -4199,52 +4537,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image15.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image15.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -4261,10 +4605,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "01:24"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "01:24"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -4289,52 +4653,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image16.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image16.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -4351,10 +4721,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "01:27"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "01:27"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -4379,52 +4769,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image17.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image17.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -4441,10 +4837,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "01:36"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "01:36"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -4469,52 +4885,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image18.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image18.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -4531,10 +4953,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "01:45"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "01:45"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -4559,52 +5001,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image19.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image19.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -4621,10 +5069,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "01:47"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "01:47"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -4642,6 +5110,14 @@
                           ]
                         },
                         {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
                           "type": "linebreak",
                           "value": "\\"
                         }
@@ -4652,10 +5128,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "01:50"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "01:50"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -4680,52 +5176,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image20.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image20.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -4742,10 +5244,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "02:03"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "02:03"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -4763,6 +5285,14 @@
                           ]
                         },
                         {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
                           "type": "linebreak",
                           "value": "\\"
                         }
@@ -4773,10 +5303,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "02:11"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "02:11"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -4801,52 +5351,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image21.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image21.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -4863,10 +5419,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "02:17"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "02:17"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -4891,52 +5467,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image22.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image22.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -4953,10 +5535,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "02:23"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "02:23"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -4981,52 +5583,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image23.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image23.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -5043,10 +5651,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "02:32"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "02:32"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -5071,52 +5699,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image24.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image24.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -5133,38 +5767,7 @@
                       "children": [
                         {
                           "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "02:41"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "\"I'd have to pick 4 socks out\". "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "Said faster and more determined"
-                            }
-                          ]
+                          "children": []
                         },
                         {
                           "type": "alignmentTab",
@@ -5175,37 +5778,7 @@
                           "children": [
                             {
                               "type": "command",
-                              "name": "caption",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
+                              "name": "textbf",
                               "children": [
                                 {
                                   "type": "commandArg",
@@ -5213,13 +5786,87 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "value": "media/image25.png"
+                                      "value": "02:41"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "\"I'd have to pick 4 socks out\". Said faster and more determined"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "environment",
+                              "name": "figure",
+                              "children": [
+                                {
+                                  "type": "command",
+                                  "name": "includegraphics",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image25.png"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -5236,10 +5883,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "02:44"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "02:44"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -5264,52 +5931,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image26.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image26.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -5326,10 +5999,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "02:47"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "02:47"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -5354,52 +6047,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image27.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image27.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -5416,10 +6115,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "02:49"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "02:49"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -5437,6 +6156,14 @@
                           ]
                         },
                         {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
                           "type": "linebreak",
                           "value": "\\"
                         }
@@ -5447,10 +6174,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "02:50"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "02:50"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -5468,6 +6215,14 @@
                           ]
                         },
                         {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
                           "type": "linebreak",
                           "value": "\\"
                         }
@@ -5478,10 +6233,30 @@
                       "children": [
                         {
                           "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "02:51"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "02:51"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -5506,52 +6281,58 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "command",
-                              "name": "caption",
+                              "type": "environment",
+                              "name": "figure",
                               "children": [
                                 {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "label",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
-                                  "children": []
-                                },
-                                {
-                                  "type": "text",
-                                  "value": "\n"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "command",
-                              "name": "includegraphics",
-                              "children": [
-                                {
-                                  "type": "commandArg",
-                                  "optional": false,
+                                  "type": "command",
+                                  "name": "includegraphics",
                                   "children": [
                                     {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "media/image28.png"
+                                        }
+                                      ]
+                                    },
+                                    {
                                       "type": "text",
-                                      "value": "media/image28.png"
+                                      "value": "\n"
                                     }
                                   ]
                                 },
                                 {
-                                  "type": "text",
-                                  "value": "\n"
+                                  "type": "command",
+                                  "name": "caption",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "command",
+                                  "name": "label",
+                                  "children": [
+                                    {
+                                      "type": "commandArg",
+                                      "optional": false,
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "text",
+                                      "value": "\n"
+                                    }
+                                  ]
                                 }
                               ]
                             }

@@ -1,0 +1,465 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "text",
+      "value": " "
+    },
+    {
+      "type": "root",
+      "children": [
+        {
+          "type": "preamble",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "command",
+                  "name": "documentclass",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "article"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
+                },
+                {
+                  "type": "command",
+                  "name": "usepackage",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "style=apa"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "biblatex"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
+                },
+                {
+                  "type": "command",
+                  "name": "addbibresource",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "bibliography.bib"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "usepackage",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "graphicx"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "usepackage",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "hyperref"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "environment",
+          "name": "document",
+          "children": [
+            {
+              "type": "environment",
+              "name": "table",
+              "children": [
+                {
+                  "type": "environment",
+                  "name": "tabular",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "l  l  l  l  l  l"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableRow",
+                      "children": [
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "linebreak",
+                          "value": "\\"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableRow",
+                      "children": [
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "a"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "S"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "linebreak",
+                          "value": "\\"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableRow",
+                      "children": [
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "a"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "span": "3",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "Three merged guys"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "linebreak",
+                          "value": "\\"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableRow",
+                      "children": [
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": [
+                                    {
+                                      "type": "command",
+                                      "name": "textbf",
+                                      "children": [
+                                        {
+                                          "type": "commandArg",
+                                          "optional": false,
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "bold italic"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "linebreak",
+                          "value": "\\"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableRow",
+                      "children": [
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
+                        },
+                        {
+                          "type": "linebreak",
+                          "value": "\\"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -246,6 +246,7 @@ export interface TableRow extends UnistParent {
 }
 export interface TableCell extends UnistParent {
   type: 'tableCell'
+  span?: `${number}`
   children: ParagraphContent[]
 }
 

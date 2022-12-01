@@ -2561,6 +2561,1174 @@ B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
 "
 `;
 
+exports[`parses correctly for complete 2`] = `
+" \\\\documentclass{article}
+\\\\usepackage[style=apa]{biblatex}
+\\\\addbibresource{bibliography.bib}\\\\usepackage{graphicx}\\\\usepackage{hyperref}
+
+
+
+\\\\begin{filecontents}{bibliography.bib}
+
+  @article{Breivik2006,
+    title       = {Survey of chronic pain in Europe: Prevalence, impact on daily life, and treatment.},
+    author      = {Breivik, Harald and Collett, Beverly and Ventafridda, Vittorio and Cohen, Rob and Gallacher, Derek},
+    number      = {4},
+    volume      = {10},
+    doi         = {10.1016/j.ejpain.2005.06.009},
+    place       = {England},
+    year        = {2006-05},
+    pages       = {287-333},
+    journal     = {European journal of pain (London, England)}
+}
+
+
+@article{Tsang2008,
+    title       = {Common chronic pain conditions in developed and developing countries: Gender and age differences and comorbidity with depression-anxiety disorders.},
+    author      = {Tsang, Adley and Von Korff, Michael and Lee, Sing and Alonso, Jordi and Karam, Elie and Angermeyer, Matthias C and Borges, Guilherme Luiz Guimaraes and Bromet, Evelyn J and Demytteneare, K and de Girolamo, Giovanni and de Graaf, Ron and Gureje, Oye and Lepine, Jean-Pierre and Haro, Josep Maria and Levinson, Daphna and Oakley Browne, Mark A and Posada-Villa, Jose and Seedat, Soraya and Watanabe, Makoto},
+    number      = {10},
+    volume      = {9},
+    doi         = {10.1016/j.jpain.2008.05.005},
+    place       = {United States},
+    year        = {2008-10},
+    pages       = {883-891},
+    journal     = {The Journal of Pain}
+}
+
+
+@article{Costa2009,
+    title       = {Prognosis for patients with chronic low back pain: Inception cohort study},
+    author      = {Costa, Luciola da C Menezes and Maher, Christopher G and McAuley, James H and Hancock, Mark J and Herbert, Robert D and Refshauge, Kathryn M and Henschke, Nicholas},
+    volume      = {339},
+    doi         = {10.1136/bmj.b3829},
+    year        = {2009-10-06},
+    pages       = {b3829},
+    journal     = {BMJ}
+}
+
+
+@article{Foster2018,
+    title       = {Prevention and treatment of low back pain: Evidence, challenges, and promising directions},
+    author      = {Foster, Nadine E and Anema, Johannes R and Cherkin, Dan and Chou, Roger and Cohen, Steven P and Gross, Douglas P and Ferreira, Paulo H and Fritz, Julie M and Koes, Bart W and Peul, Wilco and Turner, Judith A and Maher, Chris G and Buchbinder, Rachelle and Hartvigsen, Jan and Cherkin, Dan and Foster, Nadine E and Maher, Chris G and Underwood, Martin and van Tulder, Maurits and Anema, Johannes R and Chou, Roger and Cohen, Stephen P and Menezes Costa, Lucíola and Croft, Peter and Ferreira, Manuela and Ferreira, Paulo H and Fritz, Julie M and Genevay, Stéphane and Gross, Douglas P and Hancock, Mark J and Hoy, Damian and Karppinen, Jaro and Koes, Bart W and Kongsted, Alice and Louw, Quinette and Öberg, Birgitta and Peul, Wilco C and Pransky, Glenn and Schoene, Mark and Sieper, Joachim and Smeets, Rob J and Turner, Judith A and Woolf, Anthony},
+    number      = {10137},
+    volume      = {391},
+    doi         = {10.1016/S0140-6736(18)30489-6},
+    publisher   = {Elsevier},
+    year        = {2018-06-09},
+    pages       = {2368-2383},
+    journal     = {The Lancet}
+}
+
+
+@article{Treede2019,
+    title       = {Chronic pain as a symptom or a disease: The IASP classification of chronic pain for the International Classification of Diseases (ICD-11)},
+    author      = {Treede, Rolf Detlef and Rief, Winfried and Barke, Antonia and Aziz, Qasim and Bennett, Michael I. and Benoliel, Rafael and Cohen, Milton and Evers, Stefan and Finnerup, Nanna B. and First, Michael B. and Giamberardino, Maria Adele and Kaasa, Stein and Korwisi, Beatrice and Kosek, Eva and Lavand'Homme, Patricia and Nicholas, Michael and Perrot, Serge and Scholz, Joachim and Schug, Stephan and Smith, Blair H. and Svensson, Peter and Vlaeyen, Johan W.S. and Wang, Shuu Jiun},
+    number      = {1},
+    volume      = {160},
+    doi         = {10.1097/j.pain.0000000000001384},
+    year        = {2019},
+    pages       = {19-27},
+    journal     = {Pain}
+}
+
+
+@article{Woolf1983,
+    title       = {Evidence for a central component of post-injury pain hypersensitivity},
+    author      = {Woolf, Clifford J},
+    number      = {5944},
+    volume      = {306},
+    doi         = {10.1038/306686a0},
+    place       = {England},
+    year        = {1983-12},
+    pages       = {686-688},
+    journal     = {Nature}
+}
+
+
+@article{Woolf2011,
+    title       = {Central sensitization: Implications for the diagnosis and treatment of pain},
+    author      = {Woolf, Clifford J},
+    number      = {3 Suppl},
+    volume      = {152},
+    doi         = {10.1016/j.pain.2010.09.030},
+    year        = {2011-03},
+    pages       = {S2-S15},
+    journal     = {Pain}
+}
+
+
+@article{Vlaeyen2000,
+    title       = {Fear-avoidance and its consequences in chronic musculoskeletal pain: A state of the art},
+    author      = {Vlaeyen, Johan W.S. and Linton, Steven J.},
+    number      = {3},
+    volume      = {85},
+    doi         = {10.1016/s0304-3959(99)00242-0},
+    place       = {United States},
+    year        = {2000-04},
+    pages       = {317-332},
+    journal     = {Pain}
+}
+
+
+@article{Vlaeyen2012,
+    title       = {Fear-avoidance model of chronic musculoskeletal pain: 12 years on},
+    author      = {Vlaeyen, Johan W S and Linton, Steven J},
+    number      = {6},
+    volume      = {153},
+    doi         = {10.1016/j.pain.2011.12.009},
+    place       = {United States},
+    year        = {2012-06},
+    pages       = {1144-1147},
+    journal     = {Pain}
+}
+
+
+@article{Moseley2015,
+    title       = {Beyond nociception: The imprecision hypothesis of chronic pain},
+    author      = {Moseley, G Lorimer and Vlaeyen, Johan W S},
+    number      = {1},
+    volume      = {156},
+    doi         = {10.1016/j.pain.0000000000000014},
+    place       = {United States},
+    year        = {2015-01},
+    pages       = {35-38},
+    journal     = {Pain}
+}
+
+
+@article{Madden2016,
+    title       = {Pain by association? Experimental modulation of human pain thresholds using classical conditioning},
+    author      = {Madden, Victoria J. and Bellan, Valeria and Russek, Leslie N. and Camfferman, Danny and Vlaeyen, Johan W.S. and Moseley, G. Lorimer},
+    number      = {10},
+    volume      = {17},
+    doi         = {10.1016/j.jpain.2016.06.012},
+    publisher   = {Elsevier Inc},
+    year        = {2016},
+    pages       = {1105-1115},
+    journal     = {Journal of Pain}
+}
+
+
+@article{Traxler2019,
+    title       = {Modulating pain thresholds through classical conditioning},
+    author      = {Traxler, Juliane and Madden, Victoria J. and Moseley, G. Lorimer and Vlaeyen, Johan W.S.},
+    number      = {3},
+    volume      = {2019},
+    doi         = {10.7717/peerj.6486},
+    year        = {2019},
+    pages       = {1-20},
+    journal     = {PeerJ}
+}
+
+
+@book{Pavlov1928,
+    title       = {Lectures on conditioned reflexes: Twenty-five years of objective study of the higher nervous activity (behaviour) of animals.},
+    author      = {Pavlov, Ivan Petrovitch},
+    doi         = {10.1037/11081-000},
+    publisher   = {Liverwright Publishing Corporation},
+    place       = {New York, NY, US},
+    year        = {1928}
+}
+
+
+@book{Barlow2009,
+    title       = {Single case experimental designs: Strategies for studying behavior change},
+    author      = {Barlow, D H and Nock, M K and Hersen, M},
+    publisher   = {Pearson/Allyn and Bacon},
+    place       = {Boston, MA},
+    year        = {2009}
+}
+
+
+@book{Kazdin2011,
+    title       = {Single-case research designs: Methods for clinical and applied settings},
+    author      = {Kazdin, Alan E},
+    publisher   = {Oxford University Press},
+    place       = {New York, NY},
+    year        = {2011}
+}
+
+
+@article{Heyvaert2014,
+    title       = {Randomization tests for single-case experiments: State of the art, state of the science, and state of the application},
+    author      = {Heyvaert, Mieke and Onghena, Patrick},
+    number      = {1},
+    volume      = {3},
+    doi         = {10.1016/j.jcbs.2013.10.002},
+    year        = {2014},
+    pages       = {51-64},
+    journal     = {Journal of Contextual Behavioral Science}
+}
+
+
+@article{Vlaeyen2020,
+    title       = {From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research},
+    author      = {Vlaeyen, Johan W S and Wicksell, Rikard K and Simons, Laura E and Gentili, Charlotte and De, Tamal Kumar and Tate, Robyn L and Vohra, Sunita and Punja, Salima and Linton, Steven J and Sniehotta, Falko F and Onghena, Patrick},
+    volume      = {70},
+    doi         = {10.1007/s40732-020-00402-5},
+    year        = {2020},
+    pages       = {659--670},
+    journal     = {The Psychological Record}
+}
+
+
+@article{Kratochwill2010,
+    title       = {Enhancing the scientific credibility of single-case intervention research: Randomization to the rescue},
+    author      = {Kratochwill, T. R. and Levin, Joel R},
+    number      = {2},
+    volume      = {15},
+    doi         = {10.1037/a0017736},
+    year        = {2010},
+    pages       = {124-144},
+    journal     = {Psychological Methods}
+}
+
+
+@article{Edgington1975,
+    title       = {Randomization tests for one-subject operant experiments},
+    author      = {Edgington, Eugene S},
+    number      = {1},
+    volume      = {90},
+    doi         = {10.1080/00223980.1975.9923926},
+    publisher   = {Journal Press, etc.},
+    place       = {Provincetown, Mass., etc.},
+    year        = {1975-05-01},
+    pages       = {57},
+    journal     = {Journal of Psychology}
+}
+
+
+@article{Horner2005,
+    title       = {The use of single-subject research to identify evidence-based practice in special education},
+    author      = {Horner, Robert H. and Carr, Edward G. and Halle, James and Mcgee, Gail and Odom, Samuel and Wolery, Mark},
+    number      = {2},
+    volume      = {71},
+    doi         = {10.1177/001440290507100203},
+    year        = {2005},
+    pages       = {165-179},
+    journal     = {Exceptional Children}
+}
+
+
+@article{Molenaar2009,
+    title       = {The new person-specific paradigm in psychology},
+    author      = {Molenaar, Peter C M and Campbell, Cynthia G},
+    number      = {2},
+    volume      = {18},
+    doi         = {10.1111/j.1467-8721.2009.01619.x},
+    publisher   = {SAGE Publications Inc},
+    year        = {2009-04-01},
+    pages       = {112-117},
+    journal     = {Current Directions in Psychological Science}
+}
+
+
+@article{Fisher2018,
+    title       = {Lack of group-to-individual generalizability is a threat to human subjects research},
+    author      = {Fisher, Aaron J and Medaglia, John D and Jeronimus, Bertus F},
+    number      = {27},
+    volume      = {115},
+    doi         = {10.1073/pnas.1711978115},
+    year        = {2018-07-03},
+    pages       = {E6106 LP - E6115},
+    journal     = {Proceedings of the National Academy of Sciences}
+}
+
+
+@article{Ferron1995,
+    title       = {Analyzing single-case data: The power of randomization tests},
+    author      = {Ferron, John and Ware, William},
+    number      = {2},
+    volume      = {63},
+    year        = {1995},
+    pages       = {167-178},
+    journal     = {The Journal of Experimental Education}
+}
+
+
+@article{Ferron1996,
+    title       = {The power of randomization tests for single-case phase designs},
+    author      = {Ferron, John and Onghena, Patrick},
+    number      = {3},
+    volume      = {64},
+    doi         = {10.1080/00220973.1996.9943805},
+    year        = {1996},
+    pages       = {231-239},
+    journal     = {Journal of Experimental Education}
+}
+
+
+@article{Busk1988,
+    title       = {Autocorrelation in single-subject research: A counterargument to the myth of no autocorrelation.},
+    author      = {Busk, Patricia L and Marascuilo, Leonard A},
+    number      = {3},
+    volume      = {10},
+    publisher   = {Pergamon Press, Inc.},
+    place       = {US},
+    year        = {1988},
+    pages       = {229-242},
+    journal     = {Behavioral Assessment}
+}
+
+
+@article{Solomon2014,
+    title       = {Violations of assumptions in school-based single-case data: Implications for the selection and interpretation of effect sizes},
+    author      = {Solomon, Benjamin George},
+    number      = {4},
+    volume      = {38},
+    doi         = {10.1177/0145445513510931},
+    year        = {2014},
+    pages       = {477-496},
+    journal     = {Behavior Modification}
+}
+
+
+@article{Adams1996,
+    title       = {Using randomization techniques to analyse behavioural data},
+    author      = {Adams, Dean C and Anthony, Carl D},
+    number      = {4},
+    volume      = {51},
+    doi         = {https://doi.org/10.1006/anbe.1996.0077},
+    year        = {1996},
+    pages       = {733-738},
+    journal     = {Animal Behaviour}
+}
+
+
+@article{Smith2012,
+    title       = {Single-case experimental designs: A systematic review of published research and current standards},
+    author      = {Smith, Justin D.},
+    number      = {4},
+    volume      = {17},
+    doi         = {10.1037/a0029312},
+    year        = {2012},
+    pages       = {510-550},
+    journal     = {Psychological Methods}
+}
+
+
+@article{Ottenbacher1990,
+    title       = {When is a picture worth a thousand p values? A comparison of visual and quantitative methods to analyze single subject data},
+    author      = {Ottenbacher, Kenneth J},
+    number      = {4},
+    volume      = {23},
+    doi         = {10.1177/002246699002300407},
+    publisher   = {SAGE Publications Inc},
+    year        = {1990-01-01},
+    pages       = {436-449},
+    journal     = {The Journal of Special Education}
+}
+
+
+@article{Matyas1990,
+    title       = {Visual analysis of single-case time series: Effects of variability, serial dependence, and magnitude of intervention effects},
+    author      = {Matyas, T A and Greenwood, K M},
+    number      = {3},
+    volume      = {23},
+    doi         = {10.1901/jaba.1990.23-341},
+    year        = {1990},
+    pages       = {341-351},
+    journal     = {Journal of applied behavior analysis}
+}
+
+
+@article{Kratochwill2010a,
+    title       = {Single-case design technical documentation},
+    author      = {Kratochwill, T. R. and Hitchcock, J and Horner, Robert H and Levin, J R and Odom, S L and Rindskopf, D M and Shadish, W R},
+    year        = {2010}
+}
+
+
+@article{Manolov2018,
+    title       = {Analytical options for single-case experimental designs: Review and application to brain impairment},
+    author      = {Manolov, Rumen and Solanas, Antonio},
+    number      = {1},
+    volume      = {19},
+    doi         = {10.1017/BrImp.2017.17},
+    year        = {2018},
+    pages       = {18-32},
+    journal     = {Brain Impairment}
+}
+
+
+@article{Manolov2017,
+    title       = {Recommendations for choosing single-case data analytical techniques},
+    author      = {Manolov, Rumen and Moeyaert, Mariola},
+    number      = {1},
+    volume      = {48},
+    doi         = {10.1016/j.beth.2016.04.008},
+    publisher   = {Elsevier B.V.},
+    year        = {2017},
+    pages       = {97-114},
+    journal     = {Behavior Therapy}
+}
+
+
+@book{Edgington2007,
+    title       = {Randomization tests},
+    author      = {Edgington, Eugene S and Onghena, Patrick},
+    publisher   = {Chapman \\\\& Hall/CRC},
+    place       = {Boca Raton, FL},
+    year        = {2007}
+}
+
+
+@article{Michiels2020,
+    title       = {A randomization test wrapper for synthesizing single-case experiments using multilevel models: A Monte Carlo simulation study},
+    author      = {Michiels, Bart and Tanious, René and De, Tamal Kumar and Onghena, Patrick},
+    number      = {2},
+    volume      = {52},
+    doi         = {10.3758/s13428-019-01266-6},
+    year        = {2020},
+    pages       = {654-666},
+    journal     = {Behavior Research Methods}
+}
+
+
+@article{Heyvaert2014a,
+    title       = {Analysis of single-case data: Randomisation tests for measures of effect size},
+    author      = {Heyvaert, Mieke and Onghena, Patrick},
+    number      = {3-4},
+    volume      = {24},
+    doi         = {10.1080/09602011.2013.818564},
+    year        = {2014},
+    pages       = {507-527},
+    journal     = {Neuropsychological Rehabilitation}
+}
+
+
+@book{Cohen1988,
+    title       = {Statistical power analysis for the behavioral sciences},
+    author      = {Cohen, Jacob},
+    doi         = {10.4324/9780203771587},
+    publisher   = {Routledge},
+    place       = {New York, NY},
+    year        = {1988}
+}
+
+
+@article{Vohra2015,
+    title       = {CONSORT extension for reporting N-of-1 trials (CENT) 2015 statement},
+    author      = {Vohra, Sunita and Shamseer, Larissa and Sampson, Margaret and Bukutu, Cecilia and Schmid, Christopher H. and Tate, Robyn and Nikles, Jane and Zucker, Deborah R. and Kravitz, Richard and Guyatt, Gordon and Altman, Douglas G. and Moher, David},
+    volume      = {350},
+    doi         = {10.1136/bmj.h1738},
+    year        = {2015},
+    pages       = {h1738},
+    journal     = {BMJ (Clinical research ed.)}
+}
+
+
+@article{Willkinson1999,
+    title       = {Statistical methods in psychology journals: Guidelines and explanations},
+    author      = {Willkinson, Leland},
+    number      = {8},
+    volume      = {54},
+    doi         = {10.1037/0003-066X.54.8.594},
+    year        = {1999},
+    pages       = {594-604},
+    journal     = {American Psychologist}
+}
+
+
+@article{Onghena1992,
+    title       = {Randomization tests for extensions and variations of ABAB single-case experimental designs: A rejoinder},
+    author      = {Onghena, Patrick},
+    number      = {2},
+    volume      = {14},
+    year        = {1992},
+    pages       = {153-171},
+    journal     = {Behavioral Assessment}
+}
+
+
+@article{Michiels2018,
+    title       = {The conditional power of randomization tests for single-case effect sizes in designs with randomized treatment order: A Monte Carlo simulation study},
+    author      = {Michiels, Bart and Heyvaert, Mieke and Onghena, Patrick},
+    number      = {2},
+    volume      = {50},
+    doi         = {10.3758/s13428-017-0885-7},
+    publisher   = {Behavior Research Methods},
+    year        = {2018},
+    pages       = {557-575},
+    journal     = {Behavior Research Methods}
+}
+
+
+@article{Bouwmeester2020,
+    title       = {Power of a randomization test in a single case multiple baseline AB design},
+    author      = {Bouwmeester, Samantha and Jongerling, Joran},
+    number      = {2},
+    volume      = {15},
+    doi         = {10.1371/journal.pone.0228355},
+    year        = {2020},
+    pages       = {1-21},
+    journal     = {PLoS ONE}
+}
+
+
+@article{Ferron2002,
+    title       = {Statistical power of randomization tests used with multiple-baseline designs},
+    author      = {Ferron, John and Sentovich, Chris},
+    number      = {2},
+    volume      = {70},
+    doi         = {10.1080/00220970209599504},
+    year        = {2002},
+    pages       = {165-178},
+    journal     = {Journal of Experimental Education}
+}
+
+
+@article{De2020,
+    title       = {Handling missing data in randomization tests for single-case experiments: A simulation study},
+    author      = {De, Tamal Kumar and Michiels, Bart and Tanious, René and Onghena, Patrick},
+    number      = {3},
+    volume      = {52},
+    doi         = {10.3758/s13428-019-01320-3},
+    year        = {2020},
+    pages       = {1355-1370},
+    journal     = {Behavior Research Methods}
+}
+
+
+@article{Madden2019,
+    title       = {Was that painful or nonpainful? The Sensation and Pain Rating Scale performs well in the experimental context},
+    author      = {Madden, Victoria J. and Kamerman, Peter R. and Bellan, Valeria and Catley, Mark J. and Russek, Leslie N. and Camfferman, Danny and Moseley, G. Lorimer},
+    number      = {4},
+    volume      = {20},
+    doi         = {10.1016/j.jpain.2018.10.006},
+    publisher   = {Elsevier Inc.},
+    year        = {2019},
+    pages       = {472.e1-472.e12},
+    journal     = {Journal of Pain}
+}
+
+
+@article{Spruyt2009,
+    title       = {Affect 4.0: A free software package for implementing psychological and psychophysiological experiments},
+    author      = {Spruyt, Adriaan and Clarysse, Jeroen and Vansteenwegen, Debora and Baeyens, Frank and Hermans, Dirk},
+    number      = {1},
+    volume      = {57},
+    doi         = {10.1027/1618-3169/a000005},
+    year        = {2009},
+    pages       = {36-45},
+    journal     = {Experimental Psychology}
+}
+
+
+@article{bib0,
+    title       = {Tactor},
+    author      = {Dancer Design},
+    place       = {St. Helens, UK},
+    year        = {00}
+}
+
+
+@article{bib0,
+    title       = {DS7A High Voltage Constant Current Stimulator},
+    author      = {Digitimer Limited},
+    place       = {Hertfordshire, UK},
+    year        = {00}
+}
+
+
+@article{Madden2017,
+    title       = {Classical conditioning fails to elicit allodynia in an experimental study with healthy humans},
+    author      = {Madden, Victoria J. and Russek, Leslie N. and Harvie, Daniel S. and Vlaeyen, Johan W.S. and Moseley, G. Lorimer},
+    number      = {7},
+    volume      = {18},
+    doi         = {10.1093/pm/pnw221},
+    year        = {2017},
+    pages       = {1314-1325},
+    journal     = {Pain Medicine}
+}
+
+
+@article{Onghena2005,
+    title       = {Single-case designs},
+    author      = {Onghena, Patrick},
+    volume      = {4},
+    doi         = {10.1002/0470013192.bsa625},
+    publisher   = {John Wiley \\\\& Sons, Ltd},
+    place       = {Hoboken, NJ},
+    year        = {2005-04-15},
+    pages       = {1850-1854},
+    journal     = {Encyclopedia of statistics in behavioral science}
+}
+
+
+@article{Michiels2019,
+    title       = {Randomized single-case AB phase designs: Prospects and pitfalls},
+    author      = {Michiels, Bart and Onghena, Patrick},
+    number      = {6},
+    volume      = {51},
+    doi         = {10.3758/s13428-018-1084-x},
+    publisher   = {Behavior Research Methods},
+    year        = {2019},
+    pages       = {2454-2476},
+    journal     = {Behavior Research Methods}
+}
+
+
+@article{De2020a,
+    title       = {Shiny SCDA},
+    author      = {De, Tamal Kumar and Michiels, Bart and Vlaeyen, Johan W S and Onghena, Patrick},
+    number      = {Version 2.7},
+    year        = {2020}
+}
+
+
+@article{Levin2018,
+    title       = {Comparison of randomization-test procedures for single-case multiple-baseline designs},
+    author      = {Levin, Joel R. and Ferron, John M. and Gafurov, Boris S.},
+    number      = {5},
+    volume      = {21},
+    doi         = {10.1080/17518423.2016.1197708},
+    publisher   = {Taylor \\\\& Francis},
+    year        = {2018},
+    pages       = {290-311},
+    journal     = {Developmental Neurorehabilitation}
+}
+
+
+@article{Edgington1969,
+    title       = {Approximate randomization tests},
+    author      = {Edgington, Eugene S},
+    number      = {2},
+    volume      = {72},
+    doi         = {10.1080/00223980.1969.10543491},
+    publisher   = {Routledge},
+    year        = {1969-07-01},
+    pages       = {143-149},
+    journal     = {The Journal of Psychology}
+}
+
+
+@article{Hope1968,
+    title       = {A simplified Monte Carlo significance test procedure},
+    author      = {Hope, Adery C A},
+    number      = {3},
+    volume      = {30},
+    publisher   = {[Royal Statistical Society, Wiley]},
+    year        = {1968},
+    pages       = {582-598},
+    journal     = {Journal of the Royal Statistical Society. Series B (Methodological)}
+}
+
+\\\\end{filecontents}
+
+\\\\begin{document}
+
+  
+
+Classical Conditioning for Pain: The Development of a Customized Single-Case Experimental Design
+
+
+
+
+
+
+
+
+
+\\\\textbf{Keywords}: single-case, classical conditioning, pain, randomization test, statistical power.
+
+\\\\section{Take-Home Message}
+
+We wanted to design a single-case experiment to test whether classical conditioning can influence pain thresholds. We settled on a customized AB phase design for which we ran pilot tests and a power study. The results indicated that this single-case design can be used to test our hypothesis.
+
+\\\\section{Abstract}
+
+Single-case experiments are increasingly popular in the behavioral sciences. Due to their flexibility, single-case designs can be customized to test a variety of experimental hypotheses. We were interested in using a single-case experimental approach to test whether pain thresholds can be influenced by Pavlovian classical conditioning. Following the example of earlier studies into this topic, we planned to measure whether participants would more frequently report specific electrocutaneous stimuli as painful when they were presented with specific vibrotactile stimuli that had previously been associated with painful electrocutaneous stimuli. First, we decided on a mean difference effect size measure derived from the Sensation and Pain Rating Scale ratings for the electrocutaneous stimuli provided by the participants. Next, we discussed several possible single-case designs and evaluated their benefits and shortcomings. Then, we ran pilot tests with a few participants based on the possible single-case designs. We also conducted a simulation study to estimate the power of a randomization test to test our hypothesis using different values for effect size, number of participants, and number of measurements. Finally, we decided on a sequentially replicated AB phase design with 30 participants based on the results from the pilot tests and the power study. We plan to implement this single-case design in a future experiment to test our hypothesis. 
+
+\\\\section{Purpose}
+
+In this manuscript, our purpose is to describe how we used a trial and error approach to design a customized single-case experiment (SCE) to test the effect of classical conditioning on pain thresholds. We hope that this information helps readers who plan to implement an SCE in better understanding the steps involved and possible challenges. We wish to focus on using the flexible nature of SCEs to adapt to the requirements of the experiment. We also wish to highlight the necessity of exploring various available statistical methods and statistical power requirements for these methods prior to starting the experiment. Finally, we demonstrate how SCEs can serve as a viable avenue for pilot-testing new therapies and treatments at a small scale before implementing larger scale studies.
+
+\\\\section{Introduction}
+
+\\\\subsection{Classical Conditioning}
+
+Persistent pain—pain that is still felt after bodily tissue has healed—is a major healthcare problem that is poorly understood and, consequently, difficult to treat effectively \\\\textcite{Breivik2006, Tsang2008, Costa2009, Foster2018, Treede2019}. While there are key models that go some way towards explaining how pain can persist without active tissue damage \\\\textcite{Woolf1983, Woolf2011, Vlaeyen2000, Vlaeyen2012}, certain pain presentations remain unexplained. The imprecision hypothesis was proposed to address these unexplained presentations, and is founded on the idea that pain can be modulated by pain-associated cues—specifically, via “classical conditioning” \\\\textcite{Moseley2015}. 
+
+Our study design builds on two previous experiments \\\\textcite{Madden2016, Traxler2019}, which followed a Pavlovian or “classical” conditioning design \\\\textcite{Pavlov1928} to test whether neutral but pain-associated cues can bias a participant's decision about whether a stimulus is painful or non-painful. In the differential classical conditioning design used here, one neutral cue is paired with a painful electrocutaneous stimulus, while another neutral cue is paired with a non-painful electrocutaneous stimulus. It is expected that participants form associations between each cue and painfulness, such that subsequent perception of an ambiguous electrical stimulus is modified, dependent on the simultaneous presentation of one of the neutral cues.
+
+We set out to design an SCE to test this hypothesis. Due to the before (conditioning) and after (conditioning) structure of multiple observations required for each participant, SCE designs are perfectly suited for testing this hypothesis.
+
+\\\\subsection{Single-Case Experiments}
+
+SCEs are experiments in which the effect of manipulating an independent variable is observed in a single entity \\\\textcite{Barlow2009, Kazdin2011}. Variables of interest in the entity, which is often a single participant, are measured repeatedly over a period of time with the purpose of establishing a causal relationship between the independent variable, commonly referred to as the treatment condition, and the observed entity. SCEs are increasingly popular in behavioral and educational sciences due to their flexibility, low cost, and focus on effects of the intervention in individual participants \\\\textcite{Heyvaert2014}. SCEs may be preferable to group-based designs, where the existence or magnitude of the effect \\\\emph{within} an individual is more relevant than the average effect \\\\emph{across} a group of individuals. The lower cost and flexibility of SCEs also make them ideal for studying new theories and interventions, as is the case in this study \\\\textcite{Vlaeyen2020}.
+
+In SCEs, assignment of the treatment conditions to measurement occasions can be randomized to strengthen internal validity \\\\textcite{Kratochwill2010, Edgington1975}. Additionally, replication using multiple participants strengthens external validity and generalizability of the results \\\\textcite{Kratochwill2010, Horner2005}. In our study design, we incorporated both randomization and replication to enhance internal and external validity of the experiment. 
+
+\\\\subsection{Advantages of SCEs for Classical Conditioning}
+
+SCEs are well suited to research questions about within-individual processes. Although group designs are historically respected, they are typically analyzed in a way that aggregates data from all individuals to estimate an effect at the group level—an effect that may be non-existent in any of the individuals within the group \\\\textcite{Molenaar2009}. This aggregation approach obscures the true, within-individual effect, and the between-individual variability of that effect (which, itself, is typically worthy of attention; \\\\textcite{Fisher2018}. Of course, it is possible to consider within-individual changes in some group designs, but an SCE offers a superior approach to achieving a sufficiently powered (> 80\\\\%) examination of within-subject effects \\\\textcite{Ferron1995, Ferron1996}. Whereas traditional group-based designs generate knowledge on the population level only, SCEs generate knowledge at the level of the individual. Finally, findings from group-based designs cannot be generalized towards individuals, while SCEs can be aggregated for insights on populations.
+
+\\\\subsection{Analyzing SCEs}
+
+SCEs are often difficult to analyze due to the presence of serial correlation in observed data and nonadherence to distributional assumptions \\\\textcite{Busk1988, Solomon2014, Adams1996, Smith2012}. Traditionally, visual analysis was the preferred method for analyzing SCE data, but researchers now recommend quantitative statistical analysis to complement visual analysis \\\\textcite{Ottenbacher1990, Matyas1990, Kratochwill2010a, Manolov2018, Manolov2017}. Specifically, for experiments involving user-reported ordinal data, such as the current experiment, nonparametric statistical methods may be best suited for analysis, as the observed data may not adhere to distributional assumptions required for popular parametric methods. 
+
+Randomization tests (RTs) are nonparametric hypothesis tests recommended for analyzing SCEs \\\\textcite{Edgington1975, Adams1996, Heyvaert2014}. RTs derive their validity from the random assignment of treatment conditions to experimental units, which in the case of SCEs, are measurement occasions \\\\textcite{Edgington2007}. RTs do not require any distributional assumptions for the observed data. Additionally, RTs are immensely flexible, and can be adapted for any SCE design, randomization scheme, and effect size measure as the test statistic \\\\textcite{Michiels2020, Heyvaert2014a, Heyvaert2014}. In our study design, we implemented a customized RT using a mean difference effect size measure as the test statistic. 
+
+\\\\subsection{Statistical Power of SCE RTs }
+
+Power analysis is an essential part of statistical hypothesis testing, particularly for determining sample size \\\\textcite{Cohen1988}. Several guidelines recommend a power analysis or at least a methodical description of how sample size was determined \\\\textcite{Vohra2015, Willkinson1999}. In the context of SCEs, power analysis can be used to determine the number of measurements necessary, and for studies with replication, the number of participants.
+
+For RTs, the randomization distribution is calculated empirically, and hence statistical power can only be estimated using computer-intensive simulations \\\\textcite{Onghena1992, Ferron1995}. Several studies have estimated the power of SCE RTs for various design conditions \\\\textcite{Ferron1996, Ferron1995, Michiels2018, Bouwmeester2020, Ferron2002, De2020}. Although the results from these studies can be used as a reference, they are true only for the design parameters and simulated data distributions considered. Since we acquired unusual ordinal observed data, power ideally needed to be estimated using simulated data of the same type as this study would generate.
+
+\\\\section{Methods}
+
+\\\\subsection{Experimental Setup}
+
+In this experiment, participants receive two different types of stimuli: a vibrotactile stimulation as the conditioned stimulus (CS) and an electrocutaneous stimulation as the unconditioned stimulus (US). At first, one neutral stimulus (a vibrotactile stimulus, denoted as CS+) is paired with a painful stimulus (a high-intensity electrocutaneous stimulus, denoted as US\\\\textsubscript{high}), whereas a different neutral stimulus (a vibrotactile stimulus, denoted as CS-, applied to a different location) is paired with a non-painful stimulus (a low-intensity electrocutaneous stimulus, denoted as US\\\\textsubscript{low}). This procedure is expected to form an association between the CS+ and painfulness, in contrast to the CS- and non-painfulness. Later, each CS is paired with a “test stimulus” (denoted as US\\\\textsubscript{test}), an electrocutaneous stimulus of an intensity calibrated such that there is a 50\\\\% chance that the participant judges it to be painful or non-painful at baseline (i.e., before the pairing). Participants are then requested to judge each trial on a scale that distinguishes painful from non-painful events \\\\textcite{Madden2019}. The trials of interest are the CS/US\\\\textsubscript{test} pairs, as the primary hypothesis is that, due to the pairings learned early in the experiment, the participant will come to judge the US\\\\textsubscript{test} stimuli to be painful more often when they are paired with the CS+ (previously paired with a painful stimulus) than when they are paired with the CS- (previously paired with a non-painful stimulus).
+
+\\\\subsection{Laboratory Setup}
+
+The participants receive two types of stimuli at the same time, replicating the procedure in Traxler et al. \\\\textcite{Traxler2019}. Stimulus onset and timing are controlled using Affect 4.0 \\\\textcite{Spruyt2009}. A vibrotactile stimulus is delivered to the skin using tactors manufactured by Dancer Design taped to the participant's skin \\\\textcite{Dancer Design0}(Dancer Design, n.d.). This stimulus is of fixed duration and a clearly perceptible intensity. Three tactors are used in the arrangement as the source of a CS (see Figure 1). The SIDE tactor is allocated to CS\\\\textsubscript{neutral}, whereas the ABOVE and BELOW tactors are assigned to CS+ and CS- in a counterbalanced way across participants.
+
+\\\\textbf{Figure 1}
+
+\\\\emph{Arrangement of Tactors and Electrodes on the Back (Adapted From Traxler et al. , Traxler2019}\\\\emph{).}
+
+[INSERT FIGURE 1 HERE]
+
+An electrocutaneous stimulation is delivered by passing a current across two surface electrodes located at the midpoint between the tactors to serve as the US (Figure 1). The current is delivered using a DS7A constant current stimulator \\\\textcite{Digitimer Limited0}(Digitimer Limited, n.d.). The stimulation intensity is calibrated individually. The number of pulses delivered on each stimulation occasion is varied to provide a US\\\\textsubscript{high} that is usually painful, a US\\\\textsubscript{low} that is usually non-painful, and a US\\\\textsubscript{test} that is calibrated to lie close to the pain threshold, the boundary between non-painful and painful.
+
+\\\\subsection{Tactor and Electrode Preparation}
+
+On arrival, participants are seated straddling a chair in front of a desk with a computer monitor, mouse, and keyboard. Participants are asked to bend backwards to identify the point at which the greatest bend is seen. A point in the upper lumbar region is marked on the back, 2cm to the left of the spine, where the electrodes are placed such that the mark lies exactly between them. Three other points—4cm above, below, and to the left side of the electrodes—are marked, and the tactors are taped in place such that the closest border of each tactor lies at a tactor mark (Figure 1). Calibration is performed by the procedure described in Traxler et al. \\\\textcite{Traxler2019}, with the CS\\\\textsubscript{neutral} paired with each electrocutaneous stimulus. The CS\\\\textsubscript{neutral} is used to provide vibratory stimulation consistent with the CS+/CS- stimuli that are later presented in the experimental trials to ensure that any modulation of pain by the vibration itself is consistent across calibration and experimental trials. Ratings of CS\\\\textsubscript{neutral} trials from the experimental phase are not relevant to the research question and are therefore not analyzed.
+
+\\\\subsection{Experimental Trials}
+
+Based on the experimental setup discussed previously, and given the pairing of CSs and USs, the experiment for a participant can theoretically consist of five different types of trials:
+
+Training trials: Each training trial consists of one CS, with each of the three CS types used in different trials. There is no electrocutaneous stimulation (i.e., US) presented. These trials are conducted to familiarize the participants with the locations of the CS tactors. 
+
+Baseline trials: The baseline trials consist of two combinations of stimulations: a CS+ with a simultaneous US\\\\textsubscript{test} and a CS- with a simultaneous US\\\\textsubscript{test}. These trials are used to record baseline pain ratings of participants before they are conditioned to associate the painful US with a particular CS.
+
+Acquisition or learning trials: These trials consist of two combinations of stimulations: a CS+ with an US\\\\textsubscript{high} and a CS- with an US\\\\textsubscript{low}, and are meant to condition participants to associate painful US to CS+ and vice versa.
+
+Test trials: These trials are the same as the two baseline trials: a CS+ with an US\\\\textsubscript{test} and a CS- with an US\\\\textsubscript{test}, and are meant to record pain ratings of participants to test whether they have associated the painful US with CS+ and vice versa.
+
+Irrelevant trials: These trials consist of a CS\\\\textsubscript{neutral} combined with an US\\\\textsubscript{test} stimuli. These trials are noninformative and are included to satisfy the assumptions of the analytical approach; they are included only to achieve consistency in the time gaps between baseline or test trials. 
+
+\\\\subsection{Observed Variables}
+
+The participants are requested to provide two reports on each trial. First, they rate the stimulation event on the Sensation and Pain Rating Scale \\\\textcite[][SPARS; previously known as FESTNRS;]{Madden2017, Madden2019}. The SPARS is anchored at -50 (no sensation), 0 (the exact point at which the feeling transitions to pain), and 50 (worst pain imaginable). The two distinct ranges for non-painful (-50 to -1) and painful (1 to 50) are clearly marked and explained to the participants. Participants are explicitly advised to make an initial decision about whether a trial was non-painful or painful before assigning a rating from the appropriate side of the scale, without selecting 0 on SPARS. 
+
+Second, the participant indicates the location at which they feel the vibrotactile stimulus from the three options “ABOVE”, “BELOW”, and “SIDE”. This is only used to confirm that the participants are identifying the location of the stimuli correctly. Given that discrimination of the vibrotactile stimuli is necessary for differential learning, participants who fail to identify the location of the stimulus correctly in at least 75\\\\% of the trials are excluded and replaced by additional participants.
+
+\\\\subsection{Effect Size Measure and Test Statistic}
+
+We are interested in calculating whether the participants judged trials of CS+/ US\\\\textsubscript{test} and CS-/ US\\\\textsubscript{test} as painful or non-painful differently for baseline and test trials. For this purpose, we first convert the SPARS ratings to a binary variable: 0 for non-painful (-50 to -1 on SPARS) and 1 for painful (1 to 50 on SPARS). A rating of 0 on SPARS can neither be classified as painful nor as non-painful, therefore these are considered indeterminate and were marked as missing. Then, we pair two trials, a CS+/ US\\\\textsubscript{test} and a CS-/ US\\\\textsubscript{test} and calculate the difference between the corresponding binary variables. The resulting difference indicates whether the participant is rating CS+/ US\\\\textsubscript{test} and CS-/ US\\\\textsubscript{test} differently. The difference can result in three different values: 1 when the CS+/ US\\\\textsubscript{test} trial is rated as painful while the corresponding CS-/ US\\\\textsubscript{test} trial is rated as non-painful; -1 when the CS+/ US\\\\textsubscript{test} trial is rated as non-painful while the corresponding CS-/ US\\\\textsubscript{test} trial is rated as painful; and finally, 0 when both CS+/ US\\\\textsubscript{test} and CS-/ US\\\\textsubscript{test} trials are rated as painful or both are rated as non-painful. This difference value, calculated from a pair of trials, constitutes one measurement in our SCE. A simple mean difference (MD) effect size measure is calculated as the difference between the means of the difference values derived from the test trial pairs and the difference values derived from the baseline trial pairs. Due to the flexibility of RTs, this effect size measure can also be used as the test statistic \\\\textcite{Heyvaert2014a}. 
+
+\\\\subsection{Single-Case Design }
+
+In this section, we describe our considerations regarding which SCE design to use in our experiment. We discuss several initial design possibilities that were chosen by trial and error and conclude with a final design.
+
+\\\\subsubsection{Initial Design Options}
+
+Randomized Block Design. Since each of our measurements requires a pair of trials, we immediately considered a randomized block design (RBD) for the experiment. In an RBD SCE, similar to an RBD in traditional group designs, the measurement occasions are divided into small blocks, with each block containing administrations of all treatment conditions \\\\textcite{Onghena2005}. For our study, a possible block consists of the two baseline (or test) trials, a CS+/ US\\\\textsubscript{test} and a CS-/ US\\\\textsubscript{test}, in random order. Hence, the experiment for a participant can consist of several blocks of baseline trial pairs, followed by a period of acquisition trials to condition the participants, followed by several blocks of test trial pairs. However, this design is immediately rejected, as an RBD SCE requires all treatment conditions to be applied inside a block. Since the effects of conditioning are acquired over a period of time and are expected to carry over to future trials, true alternation of treatment conditions is not possible in this experiment. 
+
+AB Phase Design with In-Phase Acquisition. When we rejected the RBD, we realized that the experiment should consist of periods of baseline trial pairs and periods of test trial pairs. The simplest method to achieve this is using an AB phase design, with an A phase as the baseline condition and a subsequent B phase as the test condition \\\\textcite{Barlow2009}. In favor of internal validity, the phase transition is preferably randomized. Each phase consists of several blocks of trials, each of which yields one measurement. Each measurement block in the baseline phase consists of \\\\emph{k} irrelevant trial pairs (two CS\\\\textsubscript{neutral}/ US\\\\textsubscript{test}) and a baseline trial pair (a CS+/ US\\\\textsubscript{test} and a CS-/ US\\\\textsubscript{test} in random order). Similarly, each measurement block in the test phase consists of \\\\emph{k} acquisition trial pairs (a CS+/ US\\\\textsubscript{high} and a CS-/ US\\\\textsubscript{low} in random order) followed by a test trial pair (a CS+/ US\\\\textsubscript{test} and a CS-/ US\\\\textsubscript{test} in random order). The number of irrelevant or acquisition trial pairs in each block, or \\\\emph{k}, is set based on the required level of acquisition. A lower \\\\emph{k} would mean we would need a lower number of trials to achieve a certain number of measurements, but would also typically result in weaker acquisition of associations, and vice versa for a higher \\\\emph{k}. Unfortunately, this design has low acquisition of the associations as there is no learning period. Additionally, RTs for AB phase designs require a large number of measurements to achieve sufficient statistical power \\\\textcite{Michiels2019, Ferron1995}. As a result, the experiment for a participant would need a very large number of trials over a significantly long time to ensure both high acquisition and enough measurements. As a result, this design is rejected in favor of a slightly modified AB phase design. A similar ABAB phase design is also rejected due to the potentially large number of trials required and possibility of carry-over effects between phases. 
+
+\\\\subsubsection{Final Design}
+
+The final design combines elements from both previous designs: an AB phase design with both out-of-phase and in-phase learning. The baseline phase for this design contains several pairs of baseline trial pairs (a CS+/ US\\\\textsubscript{test} and a CS-/ US\\\\textsubscript{test} in random order), followed by a period of learning with only acquisition trial pairs (a CS+/ US\\\\textsubscript{high} and a CS-/ US\\\\textsubscript{low} in random order). Finally, the test phase includes test trial pairs (a CS+/ US\\\\textsubscript{test} and a CS-/ US\\\\textsubscript{test} in random order) with a few acquisition trial pairs in between at regular intervals to reinforce the associations and hence prevent extinction. The time of onset of the test phase is randomized. The experiment starts with a few training trials before the baseline phase. 
+
+The number of trials and the number of participants are to be decided based on a power study and some pilot experiments. However, the guidelines for phase designs by Kratochwill et al. \\\\textcite{Kratochwill2010a} recommend at least five measurements in both baseline and test phases. Since we are also curious about any increase or decrease in acquisition over time, we decide to include at least 15 measurements in the test phase. 
+
+Due to the use of specialized equipment and individual calibration, multiple participants cannot be tested at the same time. Hence, simultaneous replication using a multiple baseline design (MBD), which is able to control for environmental confounding factors, is not possible \\\\textcite{Barlow2009, Kazdin2011}. Instead, the experiment is to be run as a sequentially replicated AB phase design experiment. 
+
+\\\\subsection{Randomization Scheme and RT}
+
+The design is randomized using intervention start point randomization for each participant \\\\textcite{Edgington1975}. In this scheme, the total number of measurements and the minimum number of measurements in each phase is decided beforehand, and the intervention can start at any time point that satisfies these restrictions. Therefore, if the number of measurements is \\\\emph{N}, and the minimum number of measurements in A and B phase are \\\\emph{a} and \\\\emph{b} respectively, the number of possible randomizations is \\\\emph{r} = \\\\emph{N} -- \\\\emph{a} -- \\\\emph{b} + 1. For \\\\emph{P} participants with the same randomization scheme, the total number of randomizations for the replicated experiment is \\\\emph{r}\\\\textsuperscript{\\\\emph{P}}. 
+
+We conduct a single RT for all participants combined based on these \\\\emph{r}\\\\textsuperscript{\\\\emph{P}} randomizations. The null hypothesis for this RT is that no difference exists between the baseline phase measurements and test phase measurements for all participants. As discussed previously, the measurements represent whether participants rate CS+/ US\\\\textsubscript{test} trials as painful more frequently than CS-/ US\\\\textsubscript{test} trials. Since the Pavlovian conditioning procedure is aimed at participants perceiving the CS+/ US\\\\textsubscript{test} as more painful, the RT is one-sided with the alternate hypothesis being that the test phase measurements are higher than the baseline phase measurements for at least one participant. This RT can be conducted with the average (across participants) of the MD effect size measure discussed previously as the combined test statistic.
+
+We use the Shiny SCDA (Single-Case Data Analysis) web app for SCEs to randomize and analyze the experiment \\\\textcite{De2020a}. Whereas this web app does not include an option for simultaneously replicated AB phase design, it does include an MBD option. The MBD option in Shiny SCDA uses the Koehler-Levin regulated randomization procedure \\\\textcite{Levin2018}, which, when using an identical set of possible start points for all participants, is analogous to our randomization scheme. Hence, we can both randomly select test phase start points and run the RT in Shiny SCDA. Additionally, we can plot the observed data for visual analysis in Shiny SCDA. 
+
+\\\\subsection{Pilot Tests}
+
+We ran several pilot tests to estimate possible effect sizes and to test possible design choices. We first tested nine participants under slight variations of our initial design choice. Later, after a simulated power study and adjustments to the design, we tested another four participants. We analyzed these four tests using visual analysis and an RT in Shiny SCDA. These four tests were, however, not randomized, and the test phase for all four participants started at the tenth measurement occasion. However, for the purposes of demonstration, we ignored the assumption of randomization. We will discuss the results from these pilot tests, and the final four tests in particular in the Results section. 
+
+There were two important takeaways from the first nine pilot tests that were very useful for the design of the power study. First, the observed MD effect sizes were extremely small. The average effect size from the first nine tests was slightly negative at -0.037, with a maximum of 0.143 and a minimum of -0.400. Second, the pilot tests also revealed difficulties in running the experiment for more than 30-35 minutes for a participant. Considering each trial took around 15 seconds, this gave us a maximum of around 140 trials.
+
+\\\\subsection{Power Study}
+
+To ensure sufficient statistical power for our RT, we needed to first estimate power for different values of number of measurements (\\\\emph{N}) and number of participants (\\\\emph{P}), and then choose sufficiently high values of \\\\emph{N} and \\\\emph{P} for the experiment. 
+
+Ideally, we would want to select the maximum \\\\emph{N} possible within the limits of how long an experiment can be reasonably run. This strategy presents us with two advantages. First, increasing \\\\emph{N} should result in reduction in the variability of the estimate of effect size. Second, maximizing \\\\emph{N} should allow us to achieve sufficient power with lower \\\\emph{P}, which directly equates to lower cost for the experiment.
+
+We used the Monte Carlo method used by Ferron and Onghena \\\\textcite{Ferron1996} to estimate power. In this method, several datasets are simulated under a set of simulation conditions. The proportion of these simulated datasets in which the RT leads to a rejection of the null hypothesis gives an estimate of statistical power for the given set of simulation conditions. A simulation study of such complexity is both difficult to program and computationally intensive to execute. Fortunately, we were able to modify and repurpose R code used by De, Michiels, Tanious, et al. \\\\textcite{De2020} for this study. 
+
+\\\\subsubsection{Simulation Conditions}
+
+The following three simulation conditions were varied for this power study:
+
+Effect size: Based on the low effect sizes observed in the pilot tests, we simulated MD effect sizes of 0.1, 0.2, 0.3, 0.4, and 0.5 for the simulated observed data.
+
+Number of measurements: We decided on a minimum of five measurements in the baseline phase and a minimum of 15 measurements in the test phase. As a result, the experiment needs more than 20 measurements. However, from the pilot tests it was evident that an experiment with more than 140 trials (70 trial pairs) was not feasible. Considering around 30 trials are required for the training and learning periods, and a few more acquisition trails for reinforcement during test phase, it was difficult to have more than 40 measurements (80 trials). Hence, we used 25, 30, 35, and 40 measurements for simulated data. 
+
+Number of participants: Since the pilot tests revealed a small effect size, and the number of measurements is also limited, to ensure high power we considered a large range of participant count at 10, 20, 30, 40, and 50. 
+
+\\\\subsubsection{Other Simulation Parameters}
+
+For the power study, we wanted to simulate observed values that were similar to the experiment. For the baseline, we assumed a symmetric distribution around 0 for the SPARS rating. Therefore, the painful/non-painful ratings were expected to be 0s and 1s equally for both CS+/ US\\\\textsubscript{test} and CS-/ US\\\\textsubscript{test} trials. Hence, an observed value corresponding to a trial pair in the baseline was expected to be 1 with 25\\\\% probability, -1 with 25\\\\% probability, and 0 with 50\\\\% probability. We simulated observed values as 1, -1, and 0 with these probabilities. For the test phase, we increased the probability of 1 by half the selected effect size and decreased the probability of -1 by half the selected effect size. This resulted in an expected MD effect size equal to the selected effect size. 
+
+Since the number of randomizations for the RT was huge, we simulated Monte Carlo RTs with 1000 randomizations \\\\textcite{Edgington1969}. For estimating power, we simulated 10000 datasets for each set of simulation conditions. Finally, we used a 5\\\\% level of significance for the simulated RTs.
+
+The simulations were run on supercomputer nodes at the Flemish Supercomputer Center (Leuven, Belgium). This allowed testing more simulation conditions and achieve high accuracy simulating a large number of datasets for each simulation condition; however, the simulations can also be run at a smaller scale on a personal computer. 
+
+\\\\section{Results}
+
+\\\\subsection{Power Analysis}
+
+The results from the power study (Table 1) revealed that due to the relatively small effect sizes and restricted number of measurements, the number of participants need to be high to achieve 80\\\\% power. If we restrict the number of measurements to 30, which allows sufficient acquisition trials for learning and reinforcement within 30 minutes, 30 participants result in sufficient power even with a moderate effect size. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\\\\textbf{Table 1}
+
+\\\\emph{Estimated Power Simulated Using Different Values for Effect Size, Number of Measurements, and Number of Participants.}
+
+
+\\\\begin{table}
+
+  
+\\\\begin{tabular}{c  c  c  c  c  c  c}
+
+  No. of measurements & No. of participants & Effect size\\\\\\\\
+ &  & 0.1 & 0.2 & 0.3 & 0.4 & 0.5\\\\\\\\
+25 & 10 & 10.3 & 19.0 & 32.2 & 48.6 & 66.1\\\\\\\\
+  & 20 & 13.4 & 29.3 & 51.4 & 74.4 & 90.0\\\\\\\\
+  & 30 & 16.4 & 38.8 & 66.1 & 87.9 & 97.7\\\\\\\\
+  & 40 & 18.9 & 47.5 & 77.4 & 94.8 & 99.5\\\\\\\\
+  & 50 & 22.2 & 54.7 & 85.1 & 97.9 & 99.9\\\\\\\\
+30 & 10 & 13.0 & 25.9 & 45.0 & 66.1 & 83.9\\\\\\\\
+  & 20 & 17.9 & 42.0 & 70.6 & 90.8 & 98.5\\\\\\\\
+  & 30 & 21.9 & 54.9 & 86.0 & 97.9 & 99.9\\\\\\\\
+  & 40 & 26.4 & 65.2 & 92.7 & 99.6 & 100.0\\\\\\\\
+  & 50 & 30.0 & 73.4 & 96.6 & 99.9 & 100.0\\\\\\\\
+35 & 10 & 14.3 & 31.4 & 55.0 & 77.4 & 92.7\\\\\\\\
+  & 20 & 21.0 & 51.4 & 81.0 & 96.6 & 99.7\\\\\\\\
+  & 30 & 27.4 & 65.5 & 93.3 & 99.7 & 100.0\\\\\\\\
+  & 40 & 32.8 & 77.1 & 97.5 & 99.9 & 100.0\\\\\\\\
+  & 50 & 37.4 & 84.7 & 99.1 & 100.0 & 100.0\\\\\\\\
+40 & 10 & 15.4 & 36.0 & 63.9 & 84.9 & 96.3\\\\\\\\
+  & 20 & 23.6 & 58.1 & 88.4 & 98.6 & 100.0\\\\\\\\
+  & 30 & 30.7 & 74.0 & 96.8 & 99.9 & 100.0\\\\\\\\
+  & 40 & 37.0 & 84.6 & 99.2 & 100.0 & 100.0\\\\\\\\
+  & 50 & 42.8 & 90.4 & 99.8 & 100.0 & 100.0\\\\\\\\
+
+
+\\\\end{tabular}
+
+
+\\\\end{table}
+
+
+Based on these results, we decided to run the final set of pilot tests with 30 measurements. We decided on six training trials (two trials for each type of CS) before the baseline phase, 24 acquisition trials between the baseline and test phases, and additionally one acquisition trial pair for reinforcement after two test trial pairs during the test phase. With a minimum of five measurements in the baseline phase, and a minimum of 15 measurements in the test phase, this design allows for 11 possible randomizations. Depending on the number of measurements in the test phase which will vary based on the test phase start point selected, the experiment could theoretically consist of 104 to 114 trials. This is the design we intend to follow in the final experiment with 30 participants (Figure 2).
+
+\\\\textbf{Figure 2}
+
+\\\\emph{Final Design With 30 Measurements.}
+
+[INSERT FIGURE 2 HERE]
+
+\\\\subsection{Pilot Tests}
+
+As mentioned previously, the initial nine pilot tests resulted in extremely small (and a few negative) effect sizes. The average MD effect size was -0.037, with a maximum of 0.143 and a minimum of -0.400. The low effect sizes indicated that the final design would need a large number of measurements and participants to achieve sufficient power in the RT. The first seven of these pilot tests consisted of 10-20 measurements each, which seemed too few. On the other hand, the last two pilot tests out of these consisted of 238 trials each. The feedback from both the experimenters and participants was that these tests were too long. These results influenced the decision to limit the number of trails to 140, remove irrelevant trial pairs from the baseline phase, and lower the number of acquisition trail pairs in the treatment phase. 
+
+\\\\textbf{Figure 3}
+
+\\\\emph{Plot of Observed Scores Obtained }\\\\emph{From}\\\\emph{ the Initial Nine Participants in the Pilot Tests.}
+
+[INSERT FIGURE 3 HERE]
+
+The later four pilot tests were run using the design parameters we decided on after the power study. The average MD effect size for these participants was 0.057, with a maximum of 0.476 and a minimum of -0.250. Visual analysis (Figure 4) revealed that the first, third, and fourth participant did not seem to show any sign of conditioning. However, the second participant seemed to show significant conditioning effects. This is also confirmed by the MD effect size for the second participant (0.476). Finally, a Monte Carlo RT with 1000 randomizations resulted in a \\\\emph{p}-value of 0.112. Hence, the null hypothesis of the RT could not be rejected at a 5\\\\% level of significance. 
+
+\\\\textbf{Figure 4}
+
+\\\\emph{Plot of Observed Scores Obtained }\\\\emph{From}\\\\emph{ the Final Four Participants in the Pilot Tests.}
+
+[INSERT FIGURE 4 HERE]
+
+\\\\section{Discussion}
+
+The power analysis and pilot test results confirm that the SCE design developed for this study can be effectively used to test the effect of classical conditioning on pain thresholds. The power study provides strong evidence that this design results in sufficient power if the number of measurements and participants are chosen correctly. The results from the final four pilot tests were encouraging. Even though the RT lacked power due to the small number of participants, the \\\\emph{p}-value was low. The visual analysis also seemed to suggest a large effect for at least one participant. 
+
+The final study using this protocol was not conducted immediately, due to lack of resources at the time. However, we hope to conduct this study as soon as the opportunity arises. Meanwhile, it seemed that the discussions regarding the SCE design and preparations for the study might be useful for other researchers developing similar protocols. Therefore, we decided to prepare this manuscript.
+
+The final design suffers from a few limitations. The first limitation is the observed variable defined by us, which only yields values of -1, 0, and 1. Unfortunately, this restricts variation in observed data and can cause duplicates in the randomization distribution, which can affect power. An alternative is to use the difference between SPARS ratings from CS+/ US\\\\textsubscript{test} and CS-/ US\\\\textsubscript{test} trial pairs. However, this would require a slightly different hypothesis, which would not clarify whether classical conditioning can affect pain thresholds specifically.
+
+The second limitation is due to the properties of the AB phase design. RTs using randomization of intervention start points in AB phase designs are known to lack power at lower sample sizes \\\\textcite{Michiels2019}. AB phase designs do not satisfy the guidelines set by Kratochwill et al. \\\\textcite{Kratochwill2010a} without multiple replications. Since we are not sure how quickly the effect of our conditioning is reversed, we cannot use phase designs with more phase changes, such as the ABAB phase design. Due to the requirement of specialized equipment, we cannot use an MBD. Critically, we cannot increase the number of measurements due to time constraints. Therefore, we have to rely on sequential replications for both validity and statistical power. 
+
+The power study for this design also presents certain limitations. We used only one possible distribution of the SPARS ratings to simulate our observed data. While the assumption of a symmetric distribution around 0 is not unreasonable, with more pilot data, it might be possible to simulate using a distribution that resembles the observed data. We also did not account for any variability in effect size across participants. Instead, we simulated an equal effect size for all participants. However, we believe these are reasonable assumptions given the scope of our study. 
+
+Finally, we conducted Monte Carlo RTs for both the power study and the pilot data. As discussed previously, the number of possible randomizations for this design is \\\\emph{r}\\\\textsuperscript{\\\\emph{P}}, where \\\\emph{r} denotes the number of possible randomizations for one participant, and \\\\emph{P} denotes the number of participants. Even for the smaller scale of the pilot data, computing 11\\\\textsuperscript{4} possible randomizations would have been extremely costly. Monte Carlo RTs present a simple alternative to this computation cost while maintaining sufficient statistical power \\\\textcite{Edgington1969, Hope1968}. Hence, we intend to conduct a Monte Carlo RT in the final experiment.
+
+As introduced earlier, this design presents certain advantages over traditional group study designs. Single-case designs are a better match for studying within-person changes, because they allow detailed insight into within-individual processes rather than assuming that the response of all individuals in a group is consistent. Additionally, these designs typically require a smaller number of participants. This allows for a lower overall cost and is particularly important for pain studies because it can be difficult to recruit participants.
+
+\\\\section{Conclusion}
+
+In this manuscript, we described how we used trial and error to design an SCE testing whether classical conditioning can affect pain thresholds. We used a sequentially replicated AB phase design and conducted a simulated power study to determine sample size. We decided on 30 participants and 30 measurements per participant. Finally, we ran some pilot tests using our design. While the results from the pilot tests were inconclusive, they were sufficiently encouraging that we plan to conduct the full study in the near future.
+
+\\\\section{Acknowledgements}
+
+[Deleted for anonymous review]
+
+\\\\section{Data Availability}
+
+The data and R code used in this study are openly available on Open Science Foundation at https://osf.io/d9mfn/?view\\\\_only=6b9bd4580dbf42b4952e551972f48c68.
+
+
+
+\\\\section{References}
+
+Adams, D. C., \\\\& Anthony, C. D. (1996). Using randomization techniques to analyse behavioural data. \\\\emph{Animal Behaviour}, \\\\emph{51}(4), 733--738. https://doi.org/https://doi.org/10.1006/anbe.1996.0077
+
+Barlow, D. H., Nock, M. K., \\\\& Hersen, M. (2009). \\\\emph{Single case experimental designs: Strategies for studying behavior change} (3rd ed.). Pearson/Allyn and Bacon.
+
+Bouwmeester, S., \\\\& Jongerling, J. (2020). Power of a randomization test in a single case multiple baseline AB design. \\\\emph{PLoS ONE}, \\\\emph{15}(2), 1--21. https://doi.org/10.1371/journal.pone.0228355
+
+Breivik, H., Collett, B., Ventafridda, V., Cohen, R., \\\\& Gallacher, D. (2006). Survey of chronic pain in Europe: Prevalence, impact on daily life, and treatment. \\\\emph{European Journal of Pain (London, England)}, \\\\emph{10}(4), 287--333. https://doi.org/10.1016/j.ejpain.2005.06.009
+
+Busk, P. L., \\\\& Marascuilo, L. A. (1988). Autocorrelation in single-subject research: A counterargument to the myth of no autocorrelation. \\\\emph{Behavioral Assessment}, \\\\emph{10}(3), 229--242.
+
+Cohen, J. (1988). \\\\emph{Statistical power analysis for the behavioral sciences} (2nd ed.). Routledge. https://doi.org/10.4324/9780203771587
+
+Costa, L. da C. M., Maher, C. G., McAuley, J. H., Hancock, M. J., Herbert, R. D., Refshauge, K. M., \\\\& Henschke, N. (2009). Prognosis for patients with chronic low back pain: Inception cohort study. \\\\emph{BMJ}, \\\\emph{339}, b3829. https://doi.org/10.1136/bmj.b3829
+
+Dancer Design. (n.d.). \\\\emph{Tactor}. http://www.dancerdesign.co.uk/tactor.html
+
+De, T. K., Michiels, B., Tanious, R., \\\\& Onghena, P. (2020). Handling missing data in randomization tests for single-case experiments: A simulation study. \\\\emph{Behavior Research Methods}, \\\\emph{52}(3), 1355--1370. https://doi.org/10.3758/s13428-019-01320-3
+
+De, T. K., Michiels, B., Vlaeyen, J. W. S., \\\\& Onghena, P. (2020). \\\\emph{Shiny SCDA} (Version 2.7). https://ppw.kuleuven.be/mesrg/software-and-apps/shiny-scda
+
+Digitimer Limited. (n.d.). \\\\emph{DS7A High Voltage Constant Current Stimulator}. https://www.digitimer.com/product/human-neurophysiology/peripheral-stimulators/ds7a-ds7ah-hv-current-stimulator/
+
+Edgington, E. S. (1969). Approximate randomization tests. \\\\emph{The Journal of Psychology}, \\\\emph{72}(2), 143--149. https://doi.org/10.1080/00223980.1969.10543491
+
+Edgington, E. S. (1975). Randomization tests for one-subject operant experiments. \\\\emph{Journal of Psychology}, \\\\emph{90}(1), 57. https://doi.org/10.1080/00223980.1975.9923926
+
+Edgington, E. S., \\\\& Onghena, P. (2007). \\\\emph{Randomization tests} (4th ed.). Chapman \\\\& Hall/CRC.
+
+Ferron, J., \\\\& Onghena, P. (1996). The power of randomization tests for single-case phase designs. \\\\emph{Journal of Experimental Education}, \\\\emph{64}(3), 231--239. https://doi.org/10.1080/00220973.1996.9943805
+
+Ferron, J., \\\\& Sentovich, C. (2002). Statistical power of randomization tests used with multiple-baseline designs. \\\\emph{Journal of Experimental Education}, \\\\emph{70}(2), 165--178. https://doi.org/10.1080/00220970209599504
+
+Ferron, J., \\\\& Ware, W. (1995). Analyzing single-case data: The power of randomization tests. \\\\emph{The Journal of Experimental Education}, \\\\emph{63}(2), 167--178.
+
+Fisher, A. J., Medaglia, J. D., \\\\& Jeronimus, B. F. (2018). Lack of group-to-individual generalizability is a threat to human subjects research. \\\\emph{Proceedings of the National Academy of Sciences}, \\\\emph{115}(27), E6106 LP-E6115. https://doi.org/10.1073/pnas.1711978115
+
+Foster, N. E., Anema, J. R., Cherkin, D., Chou, R., Cohen, S. P., Gross, D. P., Ferreira, P. H., Fritz, J. M., Koes, B. W., Peul, W., Turner, J. A., Maher, C. G., Buchbinder, R., Hartvigsen, J., Cherkin, D., Foster, N. E., Maher, C. G., Underwood, M., van Tulder, M., … Woolf, A. (2018). Prevention and treatment of low back pain: Evidence, challenges, and promising directions. \\\\emph{The Lancet}, \\\\emph{391}(10137), 2368--2383. https://doi.org/10.1016/S0140-6736(18)30489-6
+
+Heyvaert, M., \\\\& Onghena, P. (2014a). Analysis of single-case data: Randomisation tests for measures of effect size. \\\\emph{Neuropsychological Rehabilitation}, \\\\emph{24}(3--4), 507--527. https://doi.org/10.1080/09602011.2013.818564
+
+Heyvaert, M., \\\\& Onghena, P. (2014b). Randomization tests for single-case experiments: State of the art, state of the science, and state of the application. \\\\emph{Journal of Contextual Behavioral Science}, \\\\emph{3}(1), 51--64. https://doi.org/10.1016/j.jcbs.2013.10.002
+
+Hope, A. C. A. (1968). A simplified Monte Carlo significance test procedure. \\\\emph{Journal of the Royal Statistical Society. }\\\\emph{Series B (Methodological)}, \\\\emph{30}(3), 582--598. http://www.jstor.org/stable/2984263
+
+Horner, R. H., Carr, E. G., Halle, J., Mcgee, G., Odom, S., \\\\& Wolery, M. (2005). The use of single-subject research to identify evidence-based practice in special education. \\\\emph{Exceptional Children}, \\\\emph{71}(2), 165--179. https://doi.org/10.1177/001440290507100203
+
+Kazdin, A. E. (2011). \\\\emph{Single-case research designs: Methods for clinical and applied settings} (2nd ed.). Oxford University Press.
+
+Kratochwill, T. R., Hitchcock, J., Horner, R. H., Levin, J. R., Odom, S. L., Rindskopf, D. M., \\\\& Shadish, W. R. (2010). \\\\emph{Single-case design technical documentation}. https://ies.ed.gov/ncee/wwc/Docs/ReferenceResources/wwc\\\\_scd.pdf
+
+Kratochwill, T. R., \\\\& Levin, J. R. (2010). Enhancing the scientific credibility of single-case intervention research: Randomization to the rescue. \\\\emph{Psychological Methods}, \\\\emph{15}(2), 124--144. https://doi.org/10.1037/a0017736
+
+Levin, J. R., Ferron, J. M., \\\\& Gafurov, B. S. (2018). Comparison of randomization-test procedures for single-case multiple-baseline designs. \\\\emph{Developmental Neurorehabilitation}, \\\\emph{21}(5), 290--311. https://doi.org/10.1080/17518423.2016.1197708
+
+Madden, V. J., Bellan, V., Russek, L. N., Camfferman, D., Vlaeyen, J. W. S., \\\\& Moseley, G. L. (2016). Pain by association? Experimental modulation of human pain thresholds using classical conditioning. \\\\emph{Journal of Pain}, \\\\emph{17}(10), 1105--1115. https://doi.org/10.1016/j.jpain.2016.06.012
+
+Madden, V. J., Kamerman, P. R., Bellan, V., Catley, M. J., Russek, L. N., Camfferman, D., \\\\& Moseley, G. L. (2019). Was that painful or nonpainful? The Sensation and Pain Rating Scale performs well in the experimental context. \\\\emph{Journal of Pain}, \\\\emph{20}(4), 472.e1-472.e12. https://doi.org/10.1016/j.jpain.2018.10.006
+
+Madden, V. J., Russek, L. N., Harvie, D. S., Vlaeyen, J. W. S., \\\\& Moseley, G. L. (2017). Classical conditioning fails to elicit allodynia in an experimental study with healthy humans. \\\\emph{Pain Medicine}, \\\\emph{18}(7), 1314--1325. https://doi.org/10.1093/pm/pnw221
+
+Manolov, R., \\\\& Moeyaert, M. (2017). Recommendations for choosing single-case data analytical techniques. \\\\emph{Behavior Therapy}, \\\\emph{48}(1), 97--114. https://doi.org/10.1016/j.beth.2016.04.008
+
+Manolov, R., \\\\& Solanas, A. (2018). Analytical options for single-case experimental designs: Review and application to brain impairment. \\\\emph{Brain Impairment}, \\\\emph{19}(1), 18--32. https://doi.org/10.1017/BrImp.2017.17
+
+Matyas, T. A., \\\\& Greenwood, K. M. (1990). Visual analysis of single-case time series: Effects of variability, serial dependence, and magnitude of intervention effects. \\\\emph{Journal of Applied Behavior Analysis}, \\\\emph{23}(3), 341--351. https://doi.org/10.1901/jaba.1990.23-341
+
+Michiels, B., Heyvaert, M., \\\\& Onghena, P. (2018). The conditional power of randomization tests for single-case effect sizes in designs with randomized treatment order: A Monte Carlo simulation study. \\\\emph{Behavior Research Methods}, \\\\emph{50}(2), 557--575. https://doi.org/10.3758/s13428-017-0885-7
+
+Michiels, B., \\\\& Onghena, P. (2019). Randomized single-case AB phase designs: Prospects and pitfalls. \\\\emph{Behavior Research Methods}, \\\\emph{51}(6), 2454--2476. https://doi.org/10.3758/s13428-018-1084-x
+
+Michiels, B., Tanious, R., De, T. K., \\\\& Onghena, P. (2020). A randomization test wrapper for synthesizing single-case experiments using multilevel models: A Monte Carlo simulation study. \\\\emph{Behavior Research Methods}, \\\\emph{52}(2), 654--666. https://doi.org/10.3758/s13428-019-01266-6
+
+Molenaar, P. C. M., \\\\& Campbell, C. G. (2009). The new person-specific paradigm in psychology. \\\\emph{Current Directions in Psychological Science}, \\\\emph{18}(2), 112--117. https://doi.org/10.1111/j.1467-8721.2009.01619.x
+
+Moseley, G. L., \\\\& Vlaeyen, J. W. S. (2015). Beyond nociception: The imprecision hypothesis of chronic pain. \\\\emph{Pain}, \\\\emph{156}(1), 35--38. https://doi.org/10.1016/j.pain.0000000000000014
+
+Onghena, P. (1992). Randomization tests for extensions and variations of ABAB single-case experimental designs: A rejoinder. \\\\emph{Behavioral Assessment}, \\\\emph{14}(2), 153--171.
+
+Onghena, P. (2005). Single-case designs. In B. Everitt \\\\& D. Howell (Eds.), \\\\emph{Encyclopedia of statistics in behavioral science} (Vol. 4, pp. 1850--1854). John Wiley \\\\& Sons, Ltd. https://doi.org/10.1002/0470013192.bsa625
+
+Ottenbacher, K. J. (1990). When is a picture worth a thousand p values? A comparison of visual and quantitative methods to analyze single subject data. \\\\emph{The Journal of Special Education}, \\\\emph{23}(4), 436--449. https://doi.org/10.1177/002246699002300407
+
+Pavlov, I. P. (1928). \\\\emph{Lectures on conditioned reflexes: Twenty-five years of objective study of the higher nervous activity (behaviour) of animals.} Liverwright Publishing Corporation. https://doi.org/10.1037/11081-000
+
+Smith, J. D. (2012). Single-case experimental designs: A systematic review of published research and current standards. \\\\emph{Psychological Methods}, \\\\emph{17}(4), 510--550. https://doi.org/10.1037/a0029312
+
+Solomon, B. G. (2014). Violations of assumptions in school-based single-case data: Implications for the selection and interpretation of effect sizes. \\\\emph{Behavior Modification}, \\\\emph{38}(4), 477--496. https://doi.org/10.1177/0145445513510931
+
+Spruyt, A., Clarysse, J., Vansteenwegen, D., Baeyens, F., \\\\& Hermans, D. (2009). Affect 4.0: A free software package for implementing psychological and psychophysiological experiments. \\\\emph{Experimental Psychology}, \\\\emph{57}(1), 36--45. https://doi.org/10.1027/1618-3169/a000005
+
+Traxler, J., Madden, V. J., Moseley, G. L., \\\\& Vlaeyen, J. W. S. (2019). Modulating pain thresholds through classical conditioning. \\\\emph{PeerJ}, \\\\emph{2019}(3), 1--20. https://doi.org/10.7717/peerj.6486
+
+Treede, R. D., Rief, W., Barke, A., Aziz, Q., Bennett, M. I., Benoliel, R., Cohen, M., Evers, S., Finnerup, N. B., First, M. B., Giamberardino, M. A., Kaasa, S., Korwisi, B., Kosek, E., Lavand'Homme, P., Nicholas, M., Perrot, S., Scholz, J., Schug, S., … Wang, S. J. (2019). Chronic pain as a symptom or a disease: The IASP classification of chronic pain for the International Classification of Diseases (ICD-11). \\\\emph{Pain}, \\\\emph{160}(1), 19--27. https://doi.org/10.1097/j.pain.0000000000001384
+
+Tsang, A., Von Korff, M., Lee, S., Alonso, J., Karam, E., Angermeyer, M. C., Borges, G. L. G., Bromet, E. J., Demytteneare, K., de Girolamo, G., de Graaf, R., Gureje, O., Lepine, J.-P., Haro, J. M., Levinson, D., Oakley Browne, M. A., Posada-Villa, J., Seedat, S., \\\\& Watanabe, M. (2008). Common chronic pain conditions in developed and developing countries: Gender and age differences and comorbidity with depression-anxiety disorders. \\\\emph{The Journal of Pain}, \\\\emph{9}(10), 883--891. https://doi.org/10.1016/j.jpain.2008.05.005
+
+Vlaeyen, J. W. S., \\\\& Linton, S. J. (2000). Fear-avoidance and its consequences in chronic musculoskeletal pain: A state of the art. \\\\emph{Pain}, \\\\emph{85}(3), 317--332. https://doi.org/10.1016/s0304-3959(99)00242-0
+
+Vlaeyen, J. W. S., \\\\& Linton, S. J. (2012). Fear-avoidance model of chronic musculoskeletal pain: 12 years on. \\\\emph{Pain}, \\\\emph{153}(6), 1144--1147. https://doi.org/10.1016/j.pain.2011.12.009
+
+Vlaeyen, J. W. S., Wicksell, R. K., Simons, L. E., Gentili, C., De, T. K., Tate, R. L., Vohra, S., Punja, S., Linton, S. J., Sniehotta, F. F., \\\\& Onghena, P. (2020). From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research. \\\\emph{The Psychological Record}, \\\\emph{70}, 659--670. https://doi.org/10.1007/s40732-020-00402-5
+
+Vohra, S., Shamseer, L., Sampson, M., Bukutu, C., Schmid, C. H., Tate, R., Nikles, J., Zucker, D. R., Kravitz, R., Guyatt, G., Altman, D. G., \\\\& Moher, D. (2015). CONSORT extension for reporting N-of-1 trials (CENT) 2015 statement. \\\\emph{BMJ (Clinical Research Ed.)}, \\\\emph{350}, h1738. https://doi.org/10.1136/bmj.h1738
+
+Willkinson, L. (1999). Statistical methods in psychology journals: Guidelines and explanations. \\\\emph{American Psychologist}, \\\\emph{54}(8), 594--604. https://doi.org/10.1037/0003-066X.54.8.594
+
+Woolf, C. J. (1983). Evidence for a central component of post-injury pain hypersensitivity. \\\\emph{Nature}, \\\\emph{306}(5944), 686--688. https://doi.org/10.1038/306686a0
+
+Woolf, C. J. (2011). Central sensitization: Implications for the diagnosis and treatment of pain. \\\\emph{Pain}, \\\\emph{152}(3 Suppl), S2--S15. https://doi.org/10.1016/j.pain.2010.09.030
+
+
+
+
+
+\\\\section{Appendix}
+
+\\\\textbf{Table 2}
+
+\\\\emph{Observed Scores }\\\\emph{From}\\\\emph{ the Initial Nine Pilot Tests.}
+
+
+\\\\begin{table}
+
+  
+\\\\begin{tabular}{c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c}
+
+  P1 & V1 & P2 & V2 & P3 & V3 & P4 & V4 & P5 & V5 & P6 & V6 & P7 & V7 & P8 & V8 & P9 & V9\\\\\\\\
+A & 0 & A & 1 & A & 1 & A & 0 & A & NA & A & -1 & A & 0 & A & 1 & A & 0\\\\\\\\
+A & 1 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & 1 & A & 0\\\\\\\\
+A & 0 & A & 0 & A & 0 & A & 1 & A & 0 & A & -1 & A & 0 & A & 1 & A & 0\\\\\\\\
+A & 0 & A & 0 & A & 0 & A & 1 & A & 0 & A & 1 & A & 0 & A & 1 & A & -1\\\\\\\\
+A & 1 & A & 0 & A & 0 & A & -1 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\
+B & 1 & B & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & -1 & A & 0\\\\\\\\
+B & 1 & B & 0 & A & NA & A & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\
+B & 0 & B & 0 & A & 1 & A & 0 & A & 0 & B & 0 & B & 0 & A & 0 & A & 1\\\\\\\\
+B & 0 & B & -1 & A & 1 & A & 1 & A & 0 & B & 0 & B & 0 & A & 0 & A & 0\\\\\\\\
+B & 0 & B & 0 & A & 0 & A & -1 & A & 0 & B & 0 & B & 0 & B & 1 & B & 0\\\\\\\\
+  &   &   &   & B & 0 & B & 1 & B & -1 & B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
+  &   &   &   & B & NA & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
+  &   &   &   & B & NA & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
+  &   &   &   & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
+  &   &   &   & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 1 & B & -1\\\\\\\\
+  &   &   &   & B & 0 & B & -1 & B & 0 &   &   &   &   & B & 0 & B & 1\\\\\\\\
+  &   &   &   & B & 0 & B & 0 & B & 0 &   &   &   &   & B & 0 & B & 0\\\\\\\\
+  &   &   &   & B & 0 & B & 1 & B & 0 &   &   &   &   & B & 1 & B & 0\\\\\\\\
+  &   &   &   & B & NA & B & 0 & B & 0 &   &   &   &   & B & 1 & B & -1\\\\\\\\
+  &   &   &   & B & 1 & B & 1 & B & 0 &   &   &   &   & B & 1 & B & 0\\\\\\\\
+  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 1\\\\\\\\
+  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 1\\\\\\\\
+  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 1 & B & 0\\\\\\\\
+  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 1 & B & 0\\\\\\\\
+  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 0\\\\\\\\
+  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 1 & B & 0\\\\\\\\
+  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 0\\\\\\\\
+  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 0\\\\\\\\
+  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 0\\\\\\\\
+
+
+\\\\end{tabular}
+
+
+\\\\end{table}
+
+
+\\\\textbf{Table 3}
+
+\\\\emph{Observed Scores }\\\\emph{From}\\\\emph{ the Final Four Pilot Tests Formatted for Shiny SCDA.}
+
+
+\\\\begin{table}
+
+  
+\\\\begin{tabular}{c  c  c  c  c  c  c  c}
+
+  P10 & V10 & P11 & V11 & P12 & V12 & P13 & V13\\\\\\\\
+A & 1 & A & 0 & A & 0 & A & 0\\\\\\\\
+A & NA & A & 0 & A & 0 & A & 0\\\\\\\\
+A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\
+A & 1 & A & 0 & A & 0 & A & 0\\\\\\\\
+A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\
+A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\
+A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\
+A & 1 & A & 0 & A & 0 & A & 0\\\\\\\\
+A & -1 & A & 0 & A & 0 & A & 0\\\\\\\\
+B & NA & B & 1 & B & 0 & B & 0\\\\\\\\
+B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
+B & NA & B & 1 & B & 0 & B & 0\\\\\\\\
+B & NA & B & 0 & B & 0 & B & 0\\\\\\\\
+B & NA & B & 1 & B & 0 & B & 0\\\\\\\\
+B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
+B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\
+B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\
+B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\
+B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\
+B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\
+B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\
+B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
+B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
+B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\
+B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
+B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
+B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
+B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
+B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
+B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
+
+
+\\\\end{tabular}
+
+
+\\\\end{table}
+
+
+
+
+
+
+
+
+
+
+\\\\end{document}
+"
+`;
+
 exports[`parses correctly for endnote 1`] = `
 " \\\\documentclass{article}
 \\\\usepackage[style=apa]{biblatex}
@@ -3097,6 +4265,40 @@ Sindall, R.C., \\\\& Barrington, D.J. (2020). Fail fast, fail forward, fail open
 
 Traut, H. J., Guild, R. M., \\\\& Munakata, Y. (2021). Why does cognitive training yield inconsistent benefits? A meta-analysis of individual differences in baseline cognitive abilities and training outcomes.\\\\emph{ Frontiers in psychology, 12}, 1-20. https://doi.org/10.3389/fpsyg.2021.662139
 
+
+
+
+
+\\\\end{document}
+"
+`;
+
+exports[`parses correctly for tables 1`] = `
+" \\\\documentclass{article}
+\\\\usepackage[style=apa]{biblatex}
+\\\\addbibresource{bibliography.bib}\\\\usepackage{graphicx}\\\\usepackage{hyperref}
+
+
+
+\\\\begin{document}
+
+  
+\\\\begin{table}
+
+  
+\\\\begin{tabular}{l  l  l  l  l  l}
+
+   &  &  &  &  & \\\\\\\\
+ & a & A & A & S & \\\\\\\\
+a & Three merged guys &  & \\\\\\\\
+\\\\emph{\\\\textbf{bold italic}} &  &  &  &  & \\\\\\\\
+ &  &  &  &  & \\\\\\\\
+
+
+\\\\end{tabular}
+
+
+\\\\end{table}
 
 
 
@@ -3805,6 +5007,699 @@ Wilson, R. A., \\\\& Clark, A. (2009). How to situate cognition. In P. Robbins \
 `;
 
 exports[`parses correctly for zotero-2 1`] = `
+" \\\\documentclass{article}
+\\\\usepackage[style=apa]{biblatex}
+\\\\addbibresource{bibliography.bib}\\\\usepackage{graphicx}\\\\usepackage{hyperref}
+
+
+
+\\\\begin{filecontents}{bibliography.bib}
+
+  @article{Gladwin2017,
+    title       = {Carryover effects in spatial attentional bias tasks and their relationship to subclinical PTSD symptoms.},
+    author      = {Gladwin, Thomas E.},
+    number      = {4},
+    volume      = {23},
+    doi         = {10.1037/trm0000121},
+    year        = {2017},
+    pages       = {303},
+    journal     = {Traumatology}
+}
+
+
+@article{Gladwin2019,
+    title       = {Anticipation-specific reliability and trial-to-trial carryover of anticipatory attentional bias for threat},
+    author      = {Gladwin, Thomas E. and Figner, Bernd and Vink, Matthijs},
+    number      = {7},
+    volume      = {31},
+    doi         = {10.1080/20445911.2019.1659801},
+    year        = {2019-10-03},
+    pages       = {750-759},
+    journal     = {Journal of Cognitive Psychology}
+}
+
+
+@article{Gladwin2020,
+    title       = {Attentional bias for negative expressions depends on previous target location: replicable effect but unreliable measures},
+    author      = {Gladwin, Thomas E. and Jewiss, Matt and Vink, Matthijs},
+    doi         = {10.1080/20445911.2020.1805453},
+    year        = {2020-08-12},
+    pages       = {1-11},
+    journal     = {Journal of Cognitive Psychology}
+}
+
+
+@article{Gladwin2019a,
+    title       = {Trial-to-trial carryover effects on spatial attentional bias},
+    author      = {Gladwin, T.E. and Figner, B.},
+    volume      = {196},
+    doi         = {10.1016/j.actpsy.2019.04.006},
+    year        = {2019},
+    pages       = {51--55},
+    journal     = {Acta Psychologica}
+}
+
+
+@article{Becker2017,
+    title       = {The capture of attention and gaze in the search for emotional photographic faces},
+    author      = {Becker, Stefanie I. and Dutt, Neelam and Vromen, Joyce M. G. and Horstmann, Gernot},
+    number      = {1-3},
+    volume      = {25},
+    doi         = {10.1080/13506285.2017.1333182},
+    year        = {2017-03-16},
+    pages       = {241-261},
+    journal     = {Visual Cognition}
+}
+
+
+@article{Schubö2006,
+    title       = {Detecting emotional faces and features in a visual search paradigm: Are faces special?},
+    author      = {Schubö, Anna and Gendolla, Guido H. E. and Meinecke, Cristina and Abele, Andrea E.},
+    number      = {2},
+    volume      = {6},
+    doi         = {10.1037/1528-3542.6.2.246},
+    year        = {2006},
+    pages       = {246-256},
+    journal     = {Emotion}
+}
+
+
+@article{Desimone1995,
+    title       = {Neural Mechanisms of Selective Visual Attention},
+    author      = {Desimone, Robert and Duncan, John},
+    year        = {1995},
+    pages       = {30}
+}
+
+
+@article{Anderson2019,
+    title       = {On the automaticity of attentional orienting to threatening stimuli.},
+    author      = {Anderson, Brian A. and Britton, Mark K.},
+    doi         = {10.1037/emo0000596},
+    year        = {2019-03-14},
+    journal     = {Emotion}
+}
+
+
+@article{MacLeod1986,
+    title       = {Attentional bias in emotional disorders.},
+    author      = {MacLeod, Colin and Mathews, Andrew and Tata, Philip},
+    number      = {1},
+    volume      = {95},
+    doi         = {10.1037/0021-843X.95.1.15},
+    year        = {1986},
+    pages       = {15-20},
+    journal     = {Journal of Abnormal Psychology}
+}
+
+
+@article{Carretié2014,
+    title       = {Exogenous (automatic) attention to emotional stimuli: a review},
+    author      = {Carretié, Luis},
+    number      = {4},
+    volume      = {14},
+    doi         = {10.3758/s13415-014-0270-2},
+    year        = {2014-12},
+    pages       = {1228-1258},
+    journal     = {Cognitive, Affective, \\\\& Behavioral Neuroscience}
+}
+
+
+@article{Imhoff2019,
+    title       = {Identification and location tasks rely on different mental processes: a diffusion model account of validity effects in spatial cueing paradigms with emotional stimuli},
+    author      = {Imhoff, Roland and Lange, Jens and Germar, Markus},
+    number      = {2},
+    volume      = {33},
+    doi         = {10.1080/02699931.2018.1443433},
+    year        = {2019-02-17},
+    pages       = {231-244},
+    journal     = {Cognition and Emotion}
+}
+
+
+@article{Kruijt2018,
+    title       = {A Meta-Analysis of Bias at Baseline in RCTs of Attention Bias Modification: No Evidence for Dot-Probe Bias Towards Threat in Clinical Anxiety and PTSD},
+    author      = {Kruijt, Anne-Wil and Parsons, Sam and Fox, Elaine},
+    year        = {2018},
+    pages       = {11},
+    journal     = {Journal of Abnormal Psychology}
+}
+
+
+@article{Mogg2017,
+    title       = {Attention Bias Modification (ABM): Review of Effects of Multisession ABM Training on Anxiety and Threat-Related Attention in High-Anxious Individuals},
+    author      = {Mogg, Karin and Waters, Allison M. and Bradley, Brendan P.},
+    number      = {4},
+    volume      = {5},
+    doi         = {10.1177/2167702617696359},
+    year        = {2017-07},
+    pages       = {698-717},
+    journal     = {Clinical Psychological Science}
+}
+
+
+@article{Schmukle2005,
+    title       = {Unreliability of the dot probe task},
+    author      = {Schmukle, Stefan C.},
+    number      = {7},
+    volume      = {19},
+    doi         = {10.1002/per.554},
+    year        = {2005-12},
+    pages       = {595-605},
+    journal     = {European Journal of Personality}
+}
+
+
+@article{Staugaard2009,
+    title       = {Reliability of two versions of the dot-probe task using photographic faces},
+    author      = {Staugaard, Søren Risløv},
+    number      = {3},
+    volume      = {51},
+    year        = {2009},
+    pages       = {339-350},
+    journal     = {Psychological Science Quarterly}
+}
+
+
+@article{Hedge2018,
+    title       = {The reliability paradox: Why robust cognitive tasks do not produce reliable individual differences},
+    author      = {Hedge, Craig and Powell, Georgina and Sumner, Petroc},
+    number      = {3},
+    volume      = {50},
+    doi         = {10.3758/s13428-017-0935-1},
+    year        = {2018-06},
+    pages       = {1166-1186},
+    journal     = {Behavior Research Methods}
+}
+
+
+@article{Zvielli2015,
+    title       = {Temporal Dynamics of Attentional Bias},
+    author      = {Zvielli, Ariel and Bernstein, Amit and Koster, Ernst H. W.},
+    number      = {5},
+    volume      = {3},
+    doi         = {10.1177/2167702614551572},
+    year        = {2015-09},
+    pages       = {772-788},
+    journal     = {Clinical Psychological Science}
+}
+
+
+@article{Carlson2020,
+    title       = {The stability and reliability of attentional bias measures in the dot-probe task: Evidence from both traditional mean bias scores and trial-level bias scores},
+    author      = {Carlson, Joshua M and Fang, Lin},
+    year        = {2020},
+    pages       = {13},
+    journal     = {Motivation and Emotion}
+}
+
+
+@article{Kruijt2016,
+    title       = {Capturing Dynamics of Biased Attention: Are New Attention Variability Measures the Way Forward?},
+    author      = {Kruijt, Anne-Wil and Field, Andy P. and Fox, Elaine},
+    number      = {11},
+    volume      = {11},
+    doi         = {10.1371/journal.pone.0166600},
+    year        = {2016-11-22},
+    pages       = {e0166600},
+    journal     = {PLOS ONE}
+}
+
+
+@article{Panksepp2011,
+    title       = {What is Basic about Basic Emotions? Lasting Lessons from Affective Neuroscience},
+    author      = {Panksepp, Jaak and Watt, Douglas},
+    number      = {4},
+    volume      = {3},
+    doi         = {10.1177/1754073911410741},
+    year        = {2011-10},
+    pages       = {387-396},
+    journal     = {Emotion Review}
+}
+
+
+@article{Carlson2014,
+    title       = {Attending to the fear in your eyes: Facilitated orienting and delayed disengagement},
+    author      = {Carlson, Joshua M. and Reinke, Karen S.},
+    number      = {8},
+    volume      = {28},
+    doi         = {10.1080/02699931.2014.885410},
+    year        = {2014-11},
+    pages       = {1398-1406},
+    journal     = {Cognition and Emotion}
+}
+
+
+@article{Fox2001,
+    title       = {Do threatening stimuli draw or hold visual attention in subclinical anxiety?},
+    author      = {Fox, Elaine and Russo, Riccardo and Bowles, Robert and Dutton, Kevin},
+    number      = {4},
+    volume      = {130},
+    doi         = {10.1037/0096-3445.130.4.681},
+    year        = {2001},
+    pages       = {681-700},
+    journal     = {Journal of Experimental Psychology: General}
+}
+
+
+@article{Cane2009,
+    title       = {The addiction Stroop task: examining the fast and slow effects of smoking and marijuana-related cues},
+    author      = {Cane, Je and Sharma, D and Albery, Ip},
+    number      = {5},
+    volume      = {23},
+    doi         = {10.1177/0269881108091253},
+    year        = {2009-07},
+    pages       = {510-519},
+    journal     = {Journal of Psychopharmacology}
+}
+
+
+@article{Clarke2015,
+    title       = {Examining fast and slow effects for alcohol and negative emotion in problem and social drinkers},
+    author      = {Clarke, Simon Paul and Sharma, Dinkar and Salter, Daniel},
+    number      = {1},
+    volume      = {23},
+    doi         = {10.3109/16066359.2014.922961},
+    year        = {2015-01-30},
+    pages       = {24-33},
+    journal     = {Addiction Research \\\\& Theory}
+}
+
+
+@article{Waters2005,
+    title       = {Generalizability of carry-over effects in the emotional Stroop task},
+    author      = {Waters, Andrew J. and Sayette, Michael A. and Franken, Ingmar H.A. and Schwartz, Joseph E.},
+    number      = {6},
+    volume      = {43},
+    doi         = {10.1016/j.brat.2004.06.003},
+    year        = {2005-06},
+    pages       = {715-732},
+    journal     = {Behaviour Research and Therapy}
+}
+
+
+@article{Wilson2007,
+    title       = {Carry-over effects of smoking cue exposure on working memory performance},
+    author      = {Wilson, Stephen J. and Sayette, Michael A. and Fiez, Julie A. and Brough, Elizabeth},
+    number      = {5},
+    volume      = {9},
+    doi         = {10.1080/14622200701243144},
+    year        = {2007-05},
+    pages       = {613-619},
+    journal     = {Nicotine \\\\& Tobacco Research}
+}
+
+
+@article{Hill2016,
+    title       = {Exploring Carry-Over Effects to Elucidate Attention Bias Modification's Mixed Results},
+    author      = {Hill, Mackenna and Duval, Elizabeth},
+    publisher   = {Journal of Young Investigators},
+    year        = {2016-09-01}
+}
+
+
+@article{Hedger2016,
+    title       = {Are visual threats prioritized without awareness? A critical review and meta-analysis involving 3 behavioral paradigms and 2696 observers.},
+    author      = {Hedger, Nicholas and Gray, Katie L. H. and Garner, Matthew and Adams, Wendy J.},
+    number      = {9},
+    volume      = {142},
+    doi         = {10.1037/bul0000054},
+    year        = {2016},
+    pages       = {934-968},
+    journal     = {Psychological Bulletin}
+}
+
+
+@article{Gladwin2020a,
+    title       = {Attentional bias for negative expressions depends on previous target location: Replicable effect but unreliable measures},
+    author      = {Gladwin, T.E. and Jewiss, M. and Vink, M.},
+    doi         = {10.1080/20445911.2020.1805453},
+    year        = {2020},
+    pages       = {1--11},
+    journal     = {Journal of Cognitive Psychology}
+}
+
+
+@article{Gur2002,
+    title       = {A method for obtaining 3-dimensional facial expressions and its standardization for use in neurocognitive studies},
+    author      = {Gur, Ruben C. and Sara, Radim and Hagendoorn, Michiel and Marom, Oren and Hughett, Paul and Macy, Larry and Turner, Travis and Bajcsy, Ruzena and Posner, Aaron and Gur, Raquel E.},
+    number      = {2},
+    volume      = {115},
+    doi         = {10.1016/S0165-0270(02)00006-7},
+    year        = {2002-04},
+    pages       = {137-143},
+    journal     = {Journal of Neuroscience Methods}
+}
+
+
+@article{Lundqvist1998,
+    title       = {The Karolinska Directed Emotional Faces (KDEF)},
+    author      = {Lundqvist and Flykt, A and Ohman, A},
+    publisher   = {Stockholm : Department of Neurosciences Karolinska Hospital.},
+    year        = {1998}
+}
+
+
+@article{Lang2008,
+    title       = {International affective picture system (IAPS) : affective ratings of pictures and instruction manual},
+    author      = {Lang, PJ},
+    year        = {2008},
+    journal     = {Technical Report}
+}
+
+
+@article{Posner1985,
+    title       = {Inhibition of return: Neural basis and function},
+    author      = {Posner, Michael I. and Rafal, Robert D. and Choate, Lisa S. and Vaughan, Jonathan},
+    number      = {3},
+    volume      = {2},
+    doi         = {10.1080/02643298508252866},
+    year        = {1985-08-01},
+    pages       = {211-228},
+    journal     = {Cognitive Neuropsychology}
+}
+
+
+@article{Duthoo2014,
+    title       = {The heterogeneous world of congruency sequence effects: an update},
+    author      = {Duthoo, Wout and Abrahamse, Elger L. and Braem, Senne and Boehler, Carsten N. and Notebaert, Wim},
+    volume      = {5},
+    doi         = {10.3389/fpsyg.2014.01001},
+    year        = {2014-09-09},
+    journal     = {Frontiers in Psychology}
+}
+
+
+@article{Mogg1998,
+    title       = {A cognitive-motivational analysis of anxiety},
+    author      = {Mogg, Karin and Bradley, Brendan P.},
+    number      = {9},
+    volume      = {36},
+    doi         = {10.1016/S0005-7967(98)00063-1},
+    year        = {1998-09-01},
+    pages       = {809-848},
+    journal     = {Behaviour Research and Therapy}
+}
+
+
+@article{Gillich2019,
+    author      = {Gillich},
+    year        = {2019}
+}
+
+
+@article{Ho2019,
+    title       = {Moving beyond P values: data analysis with estimation graphics},
+    author      = {Ho, Joses and Tumkaya, Tayfun and Aryal, Sameer and Choi, Hyungwon and Claridge-Chang, Adam},
+    number      = {7},
+    volume      = {16},
+    doi         = {10.1038/s41592-019-0470-3},
+    year        = {2019-07},
+    pages       = {565-566},
+    journal     = {Nature Methods}
+}
+
+
+@article{R2020,
+    author      = {R},
+    year        = {2020}
+}
+
+
+@article{R2014,
+    author      = {R},
+    year        = {2014}
+}
+
+\\\\end{filecontents}
+
+\\\\begin{document}
+
+  \\\\section{Title}
+
+Carryover Effects for Threat in the Dot-Probe Task
+
+
+
+\\\\section{Abstract}
+
+Threatening stimuli are often thought to have sufficient potency to bias attention, relative to neutral stimuli. Researchers and clinicians opt for frequently used paradigms to measure such bias, such as the dot-probe task. Bias to threat in the dot-probe task is indicated by a congruency effect i.e., faster responses on congruent trials than incongruent trials (also referred to as attention capture). However, recent studies have found that such congruency effects are small and suffer from poor internal reliability. One explanation to low effect sizes and poor reliability is \\\\emph{carryover effects} of threat -- greater congruency effects on trials following a congruent trial relative to trials following an incongruent trial. In the current study, we investigated carryover effects of threat with two large samples of healthy undergraduate students who completed a typical dot-probe task. Although we found a small congruency effect for fearful faces (Experiment 1, \\\\emph{n} = 241, \\\\emph{d }= 0.15) and a reverse congruency effect for threatening images, (Experiment 2, \\\\emph{n }= 82, \\\\emph{d }= 0.11) whereas no carryover effects for threat were observed in either case. Bayesian analyses revealed moderate to strong evidence in favor of the null hypothesis. We conclude that carryover effects for threat do not influence attention bias for threat. 
+
+
+
+\\\\textbf{Keywords:} dot-probe, emotional cues, carryover effects, attention bias, threat
+
+
+
+
+
+
+
+\\\\section{Take-home message}
+
+How is attentional bias to threat influenced by recent events? In the current study, we tested whether bias to threat (in the dot-probe task) is greater when threat cues recently appeared in a target location, relative to when they appeared in a non-target location (otherwise known as a carryover effect for threat). While we did not find carryover effects for threat, we suspect they are possible in other paradigms and that they exist in real-life scenarios. Carryover effects for threat in the dot-probe task are not likely to influence congruency effects.
+
+
+
+\\\\section{Purpose }
+
+The objective of this study was to assess whether carryover effects for threat would be observed in the dot-probe task. Related studies have found support for carryover effects for threat \\\\parencite{Gladwin2017, Gladwin2017, Gladwin2019, Gladwin2020, Gladwin2019a}. However, there are several unique elements to the task design and procedure used in these studies that make them difficult to compare to the commonly used dot-probe task (a task often used in applied, clinical, and basic research on emotion processing). Our purpose was to extend these previous studies of carryover effects for threat to the standard dot-probe task.
+
+
+
+
+
+
+
+
+
+
+
+\\\\section{Do Carryover Effects Influence Attentional Bias to Threat in the Dot-Probe Task?}
+
+Emotional stimuli are thought to receive prioritized processing. Threatening stimuli like angry and fearful facial expressions of emotion often “beat-out” neutral or innocuous objects \\\\parencite{Becker2017, Schubö2006} in the competition over spatial attentional resources \\\\parencite{Desimone1995}. Attentional bias to threat is a topic of research that intersects many domains and is an essential function for a variety of organisms \\\\parencite{Anderson2019}.
+
+One of the most commonly used tasks to assess attentional bias to threat is the dot-probe task \\\\parencite{MacLeod1986}. In a typical dot-probe task, participants search for the location of a target dot and indicate its position (left or right side of the screen) with a corresponding keypress. Immediately prior to the presentation of the target dot, two adjacent cues (one neutral and one threatening cue) are simultaneously presented for a very brief period (e.g., 100 millisecond (ms)). On congruent trials, the dot appears at the location of the threatening cue, whereas on incongruent trials, the dot appears at the location of the neutral cue (see Figure 1A). Each cue is completely irrelevant to the current task demands. And yet, the threatening cue biases attention to a greater extent than the neutral cue, as shown by faster response times (RTs) for congruent trials relative to incongruent trials (for reviews, see \\\\parencite{Carretié2014, Imhoff2019}. This effect is known as a \\\\emph{congruency effect}, or attentional capture by threat or attentional bias to threat.
+
+While congruency effects are often assessed by the dot-probe task \\\\parencite{Kruijt2018, Mogg2017}, they have come under scrutiny for poor internal and test-retest reliability \\\\parencite{Schmukle2005, Staugaard2009}. One root cause of these issues is that difference scores are inherently unreliable \\\\parencite{Hedge2018}. However, some studies have found that attention (and congruency effects) may fluctuate towards and away from threat during the course of an experiment (\\\\parencite{Zvielli2015}. This suggests attention bias variability could be a meaningful element of attention bias. However, these trial-to-trial variability measures appear to be strongly related to general RT variability (\\\\parencite{Carlson2020, Kruijt2016}. Identifying new sources of potential variation—like carryover effects —in the dot-probe task is beneficial because they could be accounted for in future studies.
+
+\\\\section{Carryover Effects}
+
+Suppose that an individual's attention was biased towards a threatening stimulus—like a fearful face—during a congruent trial of a dot-probe task. Such bias could impact the individual's internal state \\\\parencite{Panksepp2011}, priming, or increase their association between the target and the threatening cue, which could subsequently cause them to be more biased towards threat in later trials. A persistent bias for threatening stimuli is quite plausible given that threatening cues can also bring about attentional dwelling towards themselves \\\\parencite{Carlson2014, Fox2001}. In the past, others have found carryover effects in the emotional Stroop \\\\parencite{Cane2009, Clarke2015, Waters2005, Wilson2007} and diagonalized visual probe task \\\\parencite{Gladwin2019, Gladwin2020, Gladwin2019a}. In these tasks, attentional bias to an emotional cue (i.e., difference in RTs between congruent and incongruent trials) is greater when the previous trial is congruent, otherwise known as a \\\\emph{carryover effect , Gladwin2019}.
+
+As for dot-probe studies, however, there is not yet a clear answer on this topic given the very limited number of studies. In one dot-probe study that used threatening faces, no carryover effects were observed \\\\parencite{Hill2016}. In another study, carryover effects were only observed for accuracy measures, and not RTs (for non-face stimuli, \\\\parencite{Gladwin2017}. But these two studies have serious limitations: one used a small sample \\\\parencite{Gladwin2017}, and the other measured carryover effects after attention training was administered \\\\parencite{Hill2016}. Here we improve upon these limitations by examining the same question with a large sample of healthy undergraduate students who completed a typical dot-probe task.
+
+\\\\section{The Current Study}
+
+In the current study, we sought to test carryover effects for threat in the dot-probe task. To test this question, we performed a secondary data analysis on two dot-probe experiments with fearful facial stimuli (Experiment 1) and threatening pictorial stimuli (Experiment 2; AUTHOR, 2020). We consider fearful faces and pictorial images of threat to be threatening because a recent meta-analysis on threat detection examined both of them \\\\parencite{Hedger2016}. Based on previous research \\\\parencite{Gladwin2019a, Gladwin2020a}, we hypothesized that there would be such an influence (as indicated by an interaction between previous trial congruency and current trial congruency). More specifically, we expected that current trial congruency effects would be larger when the previous trial was congruent, relative to when it was incongruent (see Figure 1B). If our hypothesis was confirmed, we would have identified an important source of variability in the dot-probe task. On the other hand, if our hypothesis was not supported, we would conclude that the influence of carryover effects on congruency effects is negligible.
+
+\\\\section{Experiment 1}
+
+\\\\subsection{Methods}
+
+\\\\emph{Participants. }Participants with an overall accuracy below 90\\\\% percent (eight in total) were removed from all analyses, leaving a final sample size of 241 (\\\\emph{M}\\\\textsubscript{\\\\emph{age}} = 21.4, \\\\emph{SD}\\\\textsubscript{\\\\emph{age}} = 4.3; 178 females). The data reported here were acquired during a screening session of a larger study on attention bias modification and brain structure, funded by the National Institute of Mental Health (NCT03092609). A portion of the current sample (\\\\emph{n} = 127) were included in Experiment 1 of \\\\parencite{Carlson2020}. The study was approved by the UNIVERSITY Institutional Review Board. Participants received monetary compensation for their participation.
+
+\\\\emph{Stimuli and Apparatus. }The procedure was administered with a PC and a 16” LCD computer monitor. Stimuli consisted of 20 fearful and neutral grayscale faces of 10 different actors (half female; \\\\parencite{Gur2002, Lundqvist1998}. Fearful faces were rated (1-9, unpleasant to pleasant) as more negative (\\\\emph{M} = 3.83, \\\\emph{SD} = 0.30) than neutral pictures (\\\\emph{M} = 4.45, \\\\emph{SD} = 0.52), \\\\emph{t}(18) = 3.23, \\\\emph{p} = .005, \\\\emph{d} = 1.48. Faces subtended a visual width and height of 5 × 7 and the distance between the center of each face subtended 14.
+
+\\\\textbf{[Insert Figure 1 here]}
+
+\\\\emph{Design. }The experiment consisted of five blocks of trials and each block consisted of 90 trials for a total of 450 trials. 30 congruent, 30 incongruent, and 30 baseline trials were randomly presented within each block. During baseline trials, two neutral faces were shown in the cue display and the dot was randomly presented in the same position as one of the two neutral faces (one third of all trials). Baseline trials were not included in our analyses. See Figure 1A for examples of incongruent and congruent trials.
+
+\\\\emph{Procedure. }Each trial started with a white fixation cross (+) in the center of a black screen for 1000 ms, which was immediately followed by the cue display. The cue display was presented for 100 ms. In the cue display, there were two bilaterally presented faces. Immediately following the cue display, a single dot (the target object) was randomly presented in the central position of one of the previously shown faces in the cue display until participants responded. Participants indicated the location of the dot (left or right side of the display) by pressing a corresponding button with the pointer or middle finger of their right hand.
+
+\\\\section{Results}
+
+All trials with an incorrect response (2.2\\\\% of trials) or a response time outside of 3 standard deviations from the individual-wise and condition means were removed from all RT analyses (0.6\\\\% of trials). Attentional bias was measured by subtracting mean RTs for congruent trials from incongruent trials. Positive values indicate the level of attentional bias for fearful faces. All analyses were not pre-registered but were pre-planned. As shown in Figure 2A, RTs for congruent trials (\\\\emph{M = }331 ms, \\\\emph{SD} of 72 ms) were significantly shorter for incongruent trials (\\\\emph{M = }342 ms, \\\\emph{SD} of 72 ms), \\\\emph{t}(240) = 20.56, \\\\emph{p} < .001, \\\\emph{d }= 0.16. A congruency effect was also found for percent correct (1.5\\\\%), \\\\emph{t}(240) = 14.31, \\\\emph{p} < .001, \\\\emph{d }= 0.11.
+
+As shown in Figure 2B, carryover effects are measured as the interaction between previous trial congruency (pre-congruent or pre-incongruent) and current trial congruency (congruent or incongruent). The location of the fearful face and the target could repeat from trial to trial, so we further separated carryover effects by target location repetition. We examined target location repetition for two reasons: (a) it is an exploratory approach to analyzing carryover effects and (b) previous studies on carryover effects \\\\parencite{Gladwin2019a} have deliberately prevented cue and target locations repetitions trial-to-trial. We tested for the presence of carryover effects by conducting a 2 × 2 × 2 Generalized Linear Mixed Model (GLMM) with the random effect of subject and the fixed effects of current trial congruency (congruent or incongruent), previous trial congruency (pre-congruent or pre-incongruent) and target location repetition (repeated or non-repeated) on single trial RTs using a Gamma probability distribution with a log link, which accounts for the slightly positive skew of the data\\\\footnote{We also tested a model with a random slope for congruency x previous congruency x target location repetition interaction. Although this model fit our data better (AIC\\\\textsubscript{without random slope} = -26903.474 whereas AIC\\\\textsubscript{with random slope} = -27133.846;models with smaller AIC values fit better), the significant levels of all the fixed effects for this model was very similar to the one reported in the main text, where there was no significant carryover effect.}. Target location repetition was included in the model because previous studies of carryover effects deliberately chose to prevent target locations repetition between trials \\\\parencite{Gladwin2019a}, which leaves open the possibility that target repetition may moderate carryover effects. Similar to the t-test reported above, there was a main effect of current trial type, \\\\emph{F}(1, 46115) = 348.91, \\\\emph{p }< .001: RTs were faster on congruent (\\\\emph{M }= 329, \\\\emph{SD}\\\\emph{ }= 68) relative to incongruent (\\\\emph{M }= 339, \\\\emph{SD }= 69) trials. There was also a main effect of target location repetition (\\\\emph{F}(1, 46115) = 222.06, \\\\emph{p }< .001) wherein RTs were faster for non-repeated target locations (\\\\emph{M }= 330, \\\\emph{SE }= 2.32) relative to repeated locations (\\\\emph{M }= 338, \\\\emph{SE }= 2.38). There was also an interaction between target location repetition and previous trial congruency (\\\\emph{F}(1, 46115) = 6.08, \\\\emph{p }= .01) such that RTs for non-repeated target locations were faster if the previous trial was congruent (\\\\emph{M }= 329, \\\\emph{SE }= 2.34) relative to incongruent (\\\\emph{M }= 331, \\\\emph{SE }= 2.36). Meanwhile, for repeated target location there was no statistically significant difference in RTs between trials where the previous trial was congruent (\\\\emph{M }= 339, \\\\emph{SE }= 2.42) relative to incongruent (\\\\emph{M }= 338, \\\\emph{SE }= 2.42). Critically, neither the 2-way interaction between current trial congruency and previous trial congruency (\\\\emph{F}(1, 46115) = 0.59, \\\\emph{p }= .44) nor the 3-way interaction (\\\\emph{F}(1, 46115) = 0.84, \\\\emph{p }= .36) were significant, indicating that no carryover effects were observed. No other effects were significant.
+
+We followed up the GLMM approach with a Bayesian analysis. Given that there were no clear prior probabilities based on previous research, a diffuse (or uninformative) prior was used in SPSS to quantify evidence for the null hypothesis that there is no carryover effect for threat. A Bayes Factor analysis on a related-sample t-test indicated moderate evidence for the null hypothesis (BF01 = 5.38). In other words, the data is 5.38 times as likely under the null hypothesis than under the alternative hypothesis (i.e., that there is an influence of previous trial congruency on current trial congruency). 
+
+\\\\section{Experiment 2}
+
+\\\\textbf{}In Experiment 2, our goal was to replicate and extend our lack of carryover effects with another category of threatening stimuli: threatening images \\\\parencite{Lang2008}. We used data from Experiment 2 of \\\\parencite{Carlson2020}. The method for Experiment 2 is the same as Experiment 1 except for the following.
+
+\\\\subsection{Method}
+
+\\\\emph{Participants. }Participants with an overall accuracy below 90\\\\% percent (4 in total) were removed from all analyses, leaving a final sample size of 82 (\\\\emph{M}\\\\textsubscript{\\\\emph{age}} = 20, \\\\emph{SD}\\\\textsubscript{\\\\emph{age}} = 2.2; 61 females). 
+
+\\\\emph{Stimuli and Apparatus. }The visual angle between the two stimuli presented in the cue display subtended a visual angle of 12°. The images used in the cue display were taken from the International Affective Picture System (IAPS; \\\\parencite[200][]{Lang2008}. 10 threatening and 10 neutral images were used, and the cue display was shown for 500 ms. 
+
+\\\\subsection{Results}
+
+Outlier RT trials were removed from all analyses (0.5\\\\% of trials). To test for carryover effects, we conducted the same 2 × 2 × 2 Generalized Linear Mixed Model on RTs as in Experiment 1. There was a main effect of current trial type (\\\\emph{F}(1, 15869) = 16.21, \\\\emph{p }< .001) wherein RTs were faster for incongruent (\\\\emph{M }= 345 , \\\\emph{SE }= 4.06) relative to congruent trials (\\\\emph{M }= 349, \\\\emph{SE }= 4.11). Note that this effect indicates attentional bias to neutral, not threatening images, (see Figure 2C) which also might indicate for threatening images. There was also a main effect of target location repetition, \\\\emph{F}(1, 15869 = 167.53, \\\\emph{p }< .001), wherein RTs were faster for trials with non-repeated target locations (\\\\emph{M }= 340, \\\\emph{SE }= 4.00) compared to repeated locations (\\\\emph{M }= 354, \\\\emph{SE }= 4.17). However, as in Experiment 1, neither the 2-way interaction between current trial congruency and previous trial congruency (\\\\emph{F}(1, 15869) = 0.53, \\\\emph{p }= .47) nor were the 3-way interactions (\\\\emph{F}(1, 15869) = 0.01, \\\\emph{p }= .92) significant (see Figure 2D). Thus, no carryover effects were observed. In addition, no other effects were significant. We again followed up the GLMM approach with the same Bayesian analysis. For Experiment 2, we found strong evidence for the null hypothesis (BF01 = 11.27) indicating that the data are 11.27 times more likely under the null hypothesis than under the hypothesized existence of a carryover effect for threat. 
+
+\\\\textbf{[Insert Figure 2 Here]}
+
+\\\\section{Discussion}
+
+In two dot-probe experiments, we assessed whether attentional bias to fearful faces (Experiment 1) or threatening images (Experiment 2) would be influenced by carryover effects. Given that threatening stimuli are especially salient, their potential trial-to-trial influence on attention is quite plausible. However, the evidence supporting carryover effects for threat has been insufficient to rule out the influence of carryover effects \\\\parencite{Gladwin2019a, Hill2016}. In Experiment 1, while we did observe a small sized congruency effect for fearful faces, we did not find an interaction between current trial congruency and previous trial congruency. Even for non-repeating target location trials (see Figure 1B), we found no such interaction. There are multiple potential explanations for faster responses on non-repeating target location trials. One is that participants strategically attend away from the emotional cue. Another possibility is that participants avoid previous target locations, as explained by inhibition of return \\\\parencite{Posner1985}. Lastly, our non-significant carryover effects for threat were replicated in Experiment 2. The results from our Bayesian analyses showed moderate to strong evidence for this null result. 
+
+The lack of carryover effects we observed is consistent with previous statistical findings from other dot-probe studies \\\\parencite{Gladwin2017, Hill2016, Hill2016}. These previous studies, when combined with the current findings, strongly suggest that attentional bias for threat in dot-probe tasks (congruent-incongruent) is unlikely to be moderated by carryover effects. Our study improved upon the limitations of these previous studies: we used a very large sample in Experiment 1, and did not administer any prior-experimental manipulations (like attentional training in \\\\parencite{Hill2016}. The current evidence suggests that previous studies and future research involving the dot-probe task do not need to consider whether congruency effects are influenced by carryover effects.
+
+Carryover effects are analogous to the congruency sequence effect commonly observed in the flanker, Simon, and Stroop tasks \\\\parencite{Duthoo2014}. One difference between the dot-probe task and these other tasks is that the distractor stimulus does not directly conflict with the target. For example, in the Stroop task, the font color of the word stimulus can be incongruent with the meaning of the word, which creates conflict when the goal is to indicate the word color. Similarly, in the arrow flanker task, conflict is created on incongruent trials; the two arrows to the left and two to the right point in the direction opposite to the direction of the center target arrow, like this: < < > < <. On congruent trials, all five of the arrows point in the same direction. However, in the dot-probe task, the target does not co-occur with the conflicting cue (they are shown in different displays); they are separated in time, and they are visually distinct categories of stimuli because the cue is a face, and the target is simply a single dot. Therefore, current trial congruency effects in the dot-probe task may stem from relatively low stimulus conflict and therefore be unaffected by previous trial congruency. In sum, carryover effects, or congruency sequence effects, may only arise for specific types of stimulus conflict.
+
+There are some notable procedural differences between the standard dot-probe task (as used here) and other studies that used a similar spatial cueing task but did observe carryover effects. For example, in the unique study design by \\\\parencite{Gladwin2019a, Gladwin2020a}, they presented their cues until the participants made a response, whereas we only presented our cues for 100 ms (Experiment 1) or 500 ms (Experiment 2). Presenting cues until a response is made increases the possibility of attentional dwelling or delayed disengagement from the cue, as opposed to the initial orienting of attention towards the cue \\\\parencite{Fox2001}. Another key difference is that \\\\parencite{Gladwin2019a, Gladwin2020a} presented a distractor (non-target object) in their search display, whereas in the classic dot-probe task, the target appears alone \\\\parencite{Mogg1998}. Inhibition of the cue that appears in the previous non-target location might explain carryover effects for the cue \\\\parencite{Gladwin2020a}. The presence of the non-target distractor might facilitate such inhibition, thereby creating a carryover effect \\\\parencite{Gillich2019, Gladwin2019a}. Future studies on carryover effects should carefully consider their task design procedure. 
+
+\\\\section{Conclusion}
+
+Researchers should carefully select their study design when examining congruency effects. As for studies involving the dot-probe task, however, carryover effects for threat do not appear to be a concern. The highly controlled and simple design of the dot-probe task adequately controls for sources of variance such as carryover effects. While threatening cues may bias attention to a greater extent than neutral cues, their residual influence on attention is limited when assessed with the dot-probe task. 
+
+Data Availability Statement:\\\\emph{ }Datasets are available here: https://osf.io/7qhsj/?view\\\\_only=07b52294c1b647829644a833fc3d4883 
+
+
+
+
+\\\\begin{figure}
+
+  \\\\includegraphics{media/image1.png}
+\\\\caption{}
+\\\\label{}
+
+
+\\\\end{figure}
+
+\\\\begin{figure}
+
+  \\\\includegraphics{media/image2.png}
+\\\\caption{}
+\\\\label{}
+
+
+\\\\end{figure}
+
+\\\\begin{figure}
+
+  \\\\includegraphics{media/image2.png}
+\\\\caption{}
+\\\\label{}
+
+
+\\\\end{figure}
+
+\\\\begin{figure}
+
+  \\\\includegraphics{media/image3.png}
+\\\\caption{}
+\\\\label{}
+
+
+\\\\end{figure}
+
+\\\\begin{figure}
+
+  \\\\includegraphics{media/image4.png}
+\\\\caption{}
+\\\\label{}
+
+
+\\\\end{figure}
+
+
+\\\\emph{Figure 1. }(A) Examples of congruent and incongruent trials in Experiment 1. (B) On the left is an example of two congruent trials—note the target (dot) appears in the location of the fearful face on the previous trial (trial \\\\emph{n-}1) and the current trial (trial \\\\emph{n}). A carryover effect occurs when there is a larger congruency effect when the current congruent trial is preceded by a congruent trial, relative to when it is preceded by an incongruent trial. On the right is an example of two sequential trials where the target appears in the same location (repeating target location). 
+
+
+\\\\begin{figure}
+
+  \\\\includegraphics{media/image5.png}
+\\\\caption{}
+\\\\label{}
+
+
+\\\\end{figure}
+
+
+\\\\emph{Figure 2. }Results from Experiment 1 are shown in A and B, Experiment 2 in C and D (\\\\emph{n} indicates participant, values are averages by participant). A and C show congruent and incongruent RTs (left) and the overall congruency effects (otherwise known as the capturing of attention, or attention bias). The top row of B and D show congruency effects by previous trial congruency and target repetition. The bottom row shows congruency effects by previous trial congruency (incongruent minus congruent), separated by target location repetition. Black error bars represent standard deviation of the mean. Gray distributions represent 95\\\\% confidence intervals \\\\parencite{Ho2019}. 
+
+
+
+\\\\section{References}
+
+AUTHO\\\\parencite{R2020}. 
+
+AUTHO\\\\parencite{R2014}. 
+
+Anderson, B. A., \\\\& Britton, M. K. (2019). On the automaticity of attentional orienting to threatening stimuli. \\\\emph{Emotion}. https://doi.org/10.1037/emo0000596
+
+Becker, S. I., Dutt, N., Vromen, J. M. G., \\\\& Horstmann, G. (2017). The capture of attention and gaze in the search for emotional photographic faces. \\\\emph{Visual Cognition}, \\\\emph{25}(1--3), 241--261. https://doi.org/10.1080/13506285.2017.1333182
+
+Cane, J., Sharma, D., \\\\& Albery, I. (2009). The addiction Stroop task: Examining the fast and slow effects of smoking and marijuana-related cues. \\\\emph{Journal of Psychopharmacology}, \\\\emph{23}(5), 510--519. https://doi.org/10.1177/0269881108091253
+
+Carlson, J. M., \\\\& Fang, L. (2020). The stability and reliability of attentional bias measures in the dot-probe task: Evidence from both traditional mean bias scores and trial-level bias scores. \\\\emph{Motivation and Emotion}, 13.
+
+Carlson, J. M., \\\\& Reinke, K. S. (2014). Attending to the fear in your eyes: Facilitated orienting and delayed disengagement. \\\\emph{Cognition and Emotion}, \\\\emph{28}(8), 1398--1406. psyh. https://doi.org/10.1080/02699931.2014.885410
+
+Carretié, L. (2014). Exogenous (automatic) attention to emotional stimuli: A review. \\\\emph{Cognitive, Affective, \\\\& Behavioral Neuroscience}, \\\\emph{14}(4), 1228--1258. https://doi.org/10.3758/s13415-014-0270-2
+
+Clarke, S. P., Sharma, D., \\\\& Salter, D. (2015). Examining fast and slow effects for alcohol and negative emotion in problem and social drinkers. \\\\emph{Addiction Research \\\\& Theory}, \\\\emph{23}(1), 24--33. https://doi.org/10.3109/16066359.2014.922961
+
+Desimone, R., \\\\& Duncan, J. (1995). \\\\emph{Neural Mechanisms of Selective Visual Attention}. 30.
+
+Duthoo, W., Abrahamse, E. L., Braem, S., Boehler, C. N., \\\\& Notebaert, W. (2014). The heterogeneous world of congruency sequence effects: An update. \\\\emph{Frontiers in Psychology}, \\\\emph{5}. https://doi.org/10.3389/fpsyg.2014.01001
+
+Fox, E., Russo, R., Bowles, R., \\\\& Dutton, K. (2001). Do threatening stimuli draw or hold visual attention in subclinical anxiety? \\\\emph{Journal of Experimental Psychology: General}, \\\\emph{130}(4), 681--700. https://doi.org/10.1037/0096-3445.130.4.681
+
+Gladwin, T. E. (2017a). Carryover effects in spatial attentional bias tasks and their relationship to subclinical PTSD symptoms. \\\\emph{Traumatology}, \\\\emph{23}(4), 303. https://doi.org/10.1037/trm0000121
+
+Gladwin, T. E. (2017b). Carryover effects in spatial attentional bias tasks and their relationship to subclinical PTSD symptoms. \\\\emph{Traumatology}, \\\\emph{23}(4), 303--308. psyh. https://doi.org/10.1037/trm0000121
+
+Gladwin, T. E., \\\\& Figner, B. (2019). Trial-to-trial carryover effects on spatial attentional bias. \\\\emph{Acta Psychologica}, \\\\emph{196}, 51--55. https://doi.org/10.1016/j.actpsy.2019.04.006
+
+Gladwin, T. E., Figner, B., \\\\& Vink, M. (2019). Anticipation-specific reliability and trial-to-trial carryover of anticipatory attentional bias for threat. \\\\emph{Journal of Cognitive Psychology}, \\\\emph{31}(7), 750--759. https://doi.org/10.1080/20445911.2019.1659801
+
+Gladwin, T. E., Jewiss, M., \\\\& Vink, M. (2020). Attentional bias for negative expressions depends on previous target location: Replicable effect but unreliable measures. \\\\emph{Journal of Cognitive Psychology}, 1--11. https://doi.org/10.1080/20445911.2020.1805453
+
+Gur, R. C., Sara, R., Hagendoorn, M., Marom, O., Hughett, P., Macy, L., Turner, T., Bajcsy, R., Posner, A., \\\\& Gur, R. E. (2002). A method for obtaining 3-dimensional facial expressions and its standardization for use in neurocognitive studies. \\\\emph{Journal of Neuroscience Methods}, \\\\emph{115}(2), 137--143. https://doi.org/10.1016/S0165-0270(02)00006-7
+
+Hedge, C., Powell, G., \\\\& Sumner, P. (2018). The reliability paradox: Why robust cognitive tasks do not produce reliable individual differences. \\\\emph{Behavior Research Methods}, \\\\emph{50}(3), 1166--1186. https://doi.org/10.3758/s13428-017-0935-1
+
+Hedger, N., Gray, K. L. H., Garner, M., \\\\& Adams, W. J. (2016). Are visual threats prioritized without awareness? A critical review and meta-analysis involving 3 behavioral paradigms and 2696 observers. \\\\emph{Psychological Bulletin}, \\\\emph{142}(9), 934--968. https://doi.org/10.1037/bul0000054
+
+Hill, M., \\\\& Duval, E. (2016). \\\\emph{Exploring Carry-Over Effects to Elucidate Attention Bias Modification's Mixed Results}. Journal of Young Investigators. https://doi.org/10.22186/jyi.31.3.9-14
+
+Ho, J., Tumkaya, T., Aryal, S., Choi, H., \\\\& Claridge-Chang, A. (2019). Moving beyond P values: Data analysis with estimation graphics. \\\\emph{Nature Methods}, \\\\emph{16}(7), 565--566. https://doi.org/10.1038/s41592-019-0470-3
+
+Imhoff, R., Lange, J., \\\\& Germar, M. (2019). Identification and location tasks rely on different mental processes: A diffusion model account of validity effects in spatial cueing paradigms with emotional stimuli. \\\\emph{Cognition and Emotion}, \\\\emph{33}(2), 231--244. https://doi.org/10.1080/02699931.2018.1443433
+
+Kruijt, A.-W., Field, A. P., \\\\& Fox, E. (2016). Capturing Dynamics of Biased Attention: Are New Attention Variability Measures the Way Forward? \\\\emph{PLOS ONE}, \\\\emph{11}(11), e0166600. https://doi.org/10.1371/journal.pone.0166600
+
+Kruijt, A.-W., Parsons, S., \\\\& Fox, E. (2018). A Meta-Analysis of Bias at Baseline in RCTs of Attention Bias Modification: No Evidence for Dot-Probe Bias Towards Threat in Clinical Anxiety and PTSD. \\\\emph{Journal of Abnormal Psychology}, 11.
+
+Lang, P. (2008). International affective picture system (IAPS): Affective ratings of pictures and instruction manual. \\\\emph{Technical Report}. https://ci.nii.ac.jp/naid/20001061266/
+
+Lundqvist, Flykt, A., \\\\& Ohman, A. (1998). \\\\emph{The Karolinska Directed Emotional Faces (KDEF)}. Stockholm : Department of Neurosciences Karolinska Hospital.
+
+MacLeod, C., Mathews, A., \\\\& Tata, P. (1986). Attentional bias in emotional disorders. \\\\emph{Journal of Abnormal Psychology}, \\\\emph{95}(1), 15--20. https://doi.org/10.1037/0021-843X.95.1.15
+
+Mogg, K., \\\\& Bradley, B. P. (1998). A cognitive-motivational analysis of anxiety. \\\\emph{Behaviour Research and Therapy}, \\\\emph{36}(9), 809--848. https://doi.org/10.1016/S0005-7967(98)00063-1
+
+Mogg, K., Waters, A. M., \\\\& Bradley, B. P. (2017). Attention Bias Modification (ABM): Review of Effects of Multisession ABM Training on Anxiety and Threat-Related Attention in High-Anxious Individuals. \\\\emph{Clinical Psychological Science}, \\\\emph{5}(4), 698--717. https://doi.org/10.1177/2167702617696359
+
+Panksepp, J., \\\\& Watt, D. (2011). What is Basic about Basic Emotions? Lasting Lessons from Affective Neuroscience. \\\\emph{Emotion Review}, \\\\emph{3}(4), 387--396. https://doi.org/10.1177/1754073911410741
+
+Posner, M. I., Rafal, R. D., Choate, L. S., \\\\& Vaughan, J. (1985). Inhibition of return: Neural basis and function. \\\\emph{Cognitive Neuropsychology}, \\\\emph{2}(3), 211--228. https://doi.org/10.1080/02643298508252866
+
+Schmukle, S. C. (2005). Unreliability of the dot probe task. \\\\emph{European Journal of Personality}, \\\\emph{19}(7), 595--605. https://doi.org/10.1002/per.554
+
+Schubö, A., Gendolla, G. H. E., Meinecke, C., \\\\& Abele, A. E. (2006). Detecting emotional faces and features in a visual search paradigm: Are faces special? \\\\emph{Emotion}, \\\\emph{6}(2), 246--256. https://doi.org/10.1037/1528-3542.6.2.246
+
+Staugaard, S. R. (2009). Reliability of two versions of the dot-probe task using photographic faces. \\\\emph{Psychological Science Quarterly}, \\\\emph{51}(3), 339--350.
+
+Waters, A. J., Sayette, M. A., Franken, I. H. A., \\\\& Schwartz, J. E. (2005). Generalizability of carry-over effects in the emotional Stroop task. \\\\emph{Behaviour Research and Therapy}, \\\\emph{43}(6), 715--732. https://doi.org/10.1016/j.brat.2004.06.003
+
+Wilson, S. J., Sayette, M. A., Fiez, J. A., \\\\& Brough, E. (2007). Carry-over effects of smoking cue exposure on working memory performance. \\\\emph{Nicotine \\\\& Tobacco Research}, \\\\emph{9}(5), 613--619. https://doi.org/10.1080/14622200701243144
+
+Zvielli, A., Bernstein, A., \\\\& Koster, E. H. W. (2015). Temporal Dynamics of Attentional Bias. \\\\emph{Clinical Psychological Science}, \\\\emph{3}(5), 772--788. https://doi.org/10.1177/2167702614551572
+
+
+
+
+
+\\\\end{document}
+"
+`;
+
+exports[`parses correctly for zotero-2 2`] = `
 " \\\\documentclass{article}
 \\\\usepackage[style=apa]{biblatex}
 \\\\addbibresource{bibliography.bib}\\\\usepackage{graphicx}\\\\usepackage{hyperref}

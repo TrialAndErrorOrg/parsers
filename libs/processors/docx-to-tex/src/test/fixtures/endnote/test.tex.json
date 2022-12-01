@@ -2141,7 +2141,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "c  c  c  c  c"
+                          "value": "l  l"
                         }
                       ]
                     },
@@ -2152,34 +2152,20 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "Functioning of smart adherence cap"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "Number of patients (% of patients)"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "("
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Functioning of smart adherence cap"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -2200,24 +2186,70 @@
                                   "children": [
                                     {
                                       "type": "text",
-                                      "value": "n"
+                                      "value": "Number of patients (% of patients)"
                                     }
                                   ]
                                 }
                               ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
-                              "type": "text",
-                              "value": " = 23)"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "("
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": [
+                                    {
+                                      "type": "command",
+                                      "name": "textbf",
+                                      "children": [
+                                        {
+                                          "type": "commandArg",
+                                          "optional": false,
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "n"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": " = 23)"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -2238,6 +2270,14 @@
                               "value": "Good functioning"
                             }
                           ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": []
                         },
                         {
                           "type": "linebreak",
@@ -2267,29 +2307,11 @@
                             {
                               "type": "text",
                               "value": " 2 "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "("
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "9)"
@@ -2324,29 +2346,11 @@
                             {
                               "type": "text",
                               "value": " 1 "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "("
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "4)"
@@ -2381,29 +2385,11 @@
                             {
                               "type": "text",
                               "value": " 1 "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "("
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "4)"
@@ -2438,29 +2424,11 @@
                             {
                               "type": "text",
                               "value": " 1 "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "("
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "4)"
@@ -2495,29 +2463,11 @@
                             {
                               "type": "text",
                               "value": " 2 "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "("
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "9)"
@@ -2552,29 +2502,11 @@
                             {
                               "type": "text",
                               "value": " "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "9 ("
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "39)"
@@ -2596,16 +2528,7 @@
                             {
                               "type": "text",
                               "value": "Pairing error "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "(no pairing success event registered)"
@@ -2622,29 +2545,11 @@
                             {
                               "type": "text",
                               "value": " 2 "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "("
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "9)"
@@ -2666,16 +2571,7 @@
                             {
                               "type": "text",
                               "value": "Cap technical errors "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "(reset event registered)"
@@ -2692,29 +2588,11 @@
                             {
                               "type": "text",
                               "value": " 1 "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "("
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "4)"
@@ -2749,29 +2627,11 @@
                             {
                               "type": "text",
                               "value": " "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "4 ("
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "17)"

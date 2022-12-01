@@ -1,4 +1,5 @@
 {
   "name": "docx-to-tex",
-  "description": "DOCX to TeX converter"
+  "description": "DOCX to TeX converter",
+  "type": "module"
 }

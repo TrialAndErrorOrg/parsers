@@ -1,0 +1,339 @@
+{
+  "type": "root",
+  "attributes": {},
+  "children": [
+    {
+      "type": "instruction",
+      "name": "xml",
+      "value": "version=\"1.0\" encoding=\"utf-8\""
+    },
+    {
+      "type": "doctype",
+      "name": "article",
+      "public": "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN",
+      "system": "https://jats.nlm.nih.gov/publishing/1.2/JATS-journalpublishing1.dtd"
+    },
+    {
+      "type": "text",
+      "value": " "
+    },
+    {
+      "type": "element",
+      "name": "article",
+      "attributes": {},
+      "children": [
+        {
+          "type": "element",
+          "name": "front",
+          "attributes": {},
+          "children": []
+        },
+        {
+          "type": "element",
+          "name": "body",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "name": "tableWrap",
+              "attributes": {},
+              "children": [
+                {
+                  "type": "element",
+                  "name": "table",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "tbody",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "tr",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "tr",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "a"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "A"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "A"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "S"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "tr",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "a"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {
+                                "colspan": "3"
+                              },
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "value": "Three merged guys"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {
+                                "style": "background-color: FF0000; color: auto; "
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {
+                                "style": "background-color: FF0000; color: auto; "
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "tr",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "italic",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "bold",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "bold italic"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "tr",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "td",
+                              "attributes": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "p",
+              "attributes": {},
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "element",
+          "name": "back",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "name": "refList",
+              "attributes": {},
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

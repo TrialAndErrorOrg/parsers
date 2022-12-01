@@ -1966,7 +1966,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "c  c  c  c  c  c"
+                          "value": "l  l  l  l  l  l"
                         }
                       ]
                     },
@@ -2878,7 +2878,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "c  c  c  c  c  c"
+                          "value": "l  l  l  l  l  l"
                         }
                       ]
                     },
@@ -4193,7 +4193,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "c  c  c  c  c  c  c  c"
+                          "value": "l  l  l  l"
                         }
                       ]
                     },
@@ -4214,29 +4214,23 @@
                             {
                               "type": "text",
                               "value": "KSI"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
-                              "type": "text",
-                              "value": " "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": " "
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
                               "value": "without treatment"
@@ -4253,16 +4247,7 @@
                             {
                               "type": "text",
                               "value": "KSI"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": " appreciation"
@@ -4279,16 +4264,7 @@
                             {
                               "type": "text",
                               "value": "KSI"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": " achievement"
@@ -4310,16 +4286,7 @@
                             {
                               "type": "text",
                               "value": "KSB"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": " without treatment"
@@ -4370,16 +4337,7 @@
                             {
                               "type": "text",
                               "value": "KSB"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": " intang. reward"
@@ -4430,16 +4388,7 @@
                             {
                               "type": "text",
                               "value": "KSB"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": " tang. reward"
@@ -6509,7 +6458,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "c  c  c  c  c  c"
+                          "value": "l  l  l  l  l  l"
                         }
                       ]
                     },
@@ -7102,7 +7051,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c"
+                          "value": "l  l  l"
                         }
                       ]
                     },
@@ -7111,18 +7060,17 @@
                       "children": [
                         {
                           "type": "tableCell",
-                          "children": []
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "Explicit knowledge "
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": []
+                                }
+                              ]
                             }
                           ]
                         },
@@ -7134,8 +7082,45 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "Implicit knowledge "
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Explicit knowledge "
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Implicit knowledge "
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -7152,8 +7137,20 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "Without treatment"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Without treatment"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -7165,130 +7162,71 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "Vignette 1"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Vignette 1"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
                               "value": " "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "During a daily routine at your workplace, you gathered "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
+                            {
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "information"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
-                              "value": "information"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": " from several sources. "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "This could also improve the work of your co-workers."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": []
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "value": " from several sources. This could also improve the work of your co-workers."
+                            },
                             {
                               "type": "text",
                               "value": "Please decide whether you will share this information with your co-workers."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "("
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
-                              "type": "text",
-                              "value": "N"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "N"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
                               "value": " = 319)"
@@ -7303,130 +7241,71 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "Vignette 4"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Vignette 4"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
                               "value": " "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "During a daily routine at your workplace, you had an "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
+                            {
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "experience"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
-                              "value": "experience"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": " that improved your work process. "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "This experience could also help your co-workers."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": []
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "value": " that improved your work process. This experience could also help your co-workers."
+                            },
                             {
                               "type": "text",
                               "value": "Please decide whether you will share your knowledge with your co-workers. "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "("
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
-                              "type": "text",
-                              "value": "N"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "N"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
                               "value": " = 310)"
@@ -7446,8 +7325,20 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "Intangible reward"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Intangible reward"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -7459,151 +7350,106 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "Vignette 2"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Vignette 2"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
                               "value": " "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "During a daily routine at your workplace, you gathered "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
+                            {
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "information"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
-                              "value": "information"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "value": " from several sources. This could also improve the work of your co-workers."
+                            },
                             {
-                              "type": "text",
-                              "value": " from several sources. "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": []
+                                }
+                              ]
+                            },
                             {
-                              "type": "text",
-                              "value": "This could also improve the work of your co-workers."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": []
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "You know that your co-workers appreciate your knowledge sharing."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
-                              "type": "text",
-                              "value": "You know that your co-workers appreciate your knowledge sharing."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": []
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": []
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
                               "value": "Please decide whether you will share this information with your co-workers."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "("
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
-                              "type": "text",
-                              "value": "N"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "N"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
                               "value": " = 319)"
@@ -7618,151 +7464,106 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "Vignette 5"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Vignette 5"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
                               "value": " "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "During a daily routine at your workplace, you had an "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
+                            {
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "experience"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
-                              "value": "experience"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "value": " that improved your work process. This experience could also help your co-workers."
+                            },
                             {
-                              "type": "text",
-                              "value": " that improved your work process. "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": []
+                                }
+                              ]
+                            },
                             {
-                              "type": "text",
-                              "value": "This experience could also help your co-workers."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": []
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "You know that your co-workers appreciate your knowledge sharing."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
-                              "type": "text",
-                              "value": "You know that your co-workers appreciate your knowledge sharing."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": []
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": []
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
                               "value": "Please decide whether you will share your knowledge with your co-workers."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "("
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
-                              "type": "text",
-                              "value": "N"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "N"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
                               "value": " = 307)"
@@ -7782,8 +7583,20 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "Tangible reward"
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Tangible reward"
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
@@ -7795,138 +7608,92 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "Vignette 3"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Vignette 3"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
                               "value": "During a daily routine at your workplace, you gathered "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
+                            {
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "information"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
-                              "value": "information"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "value": " from several sources. This could also improve the work of your co-workers."
+                            },
                             {
-                              "type": "text",
-                              "value": " from several sources. "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": []
+                                }
+                              ]
+                            },
                             {
-                              "type": "text",
-                              "value": "This could also improve the work of your co-workers."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": []
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "You know that all shared information improves your performance appraisal."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": []
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "You know that all shared information improves your performance appraisal."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
                               "value": "Please decide whether you will share this information with your co-workers."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "("
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
-                              "type": "text",
-                              "value": "N"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "N"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
                               "value": " = 317)"
@@ -7941,151 +7708,96 @@
                           "type": "tableCell",
                           "children": [
                             {
-                              "type": "text",
-                              "value": "Vignette 6"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "textbf",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "optional": false,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Vignette 6"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
                               "value": " "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "During a daily routine at your workplace, you had an "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
+                            {
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "experience"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
-                              "value": "experience"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "value": " that improved your work process. This experience could also help your co-workers."
+                            },
                             {
-                              "type": "text",
-                              "value": " that improved your work process. "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": []
+                                }
+                              ]
+                            },
                             {
-                              "type": "text",
-                              "value": "This experience could also help your co-workers."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": []
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "You know that all shared information improves your performance appraisal."
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": []
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "You know that all shared information improves your performance appraisal."
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
                               "value": "Please decide whether you will share your knowledge with your co-workers. "
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "("
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
-                              "type": "text",
-                              "value": "N"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                              "type": "command",
+                              "name": "emph",
+                              "children": [
+                                {
+                                  "type": "commandArg",
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "N"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
                             {
                               "type": "text",
                               "value": " = 309)"
@@ -8156,7 +7868,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "c  c  c  c  c  c  c"
+                          "value": "l  l  l  l  l  l"
                         }
                       ]
                     },
@@ -8869,16 +8581,7 @@
                             {
                               "type": "text",
                               "value": "Second vignette"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
+                            },
                             {
                               "type": "text",
                               "value": "(v30)"

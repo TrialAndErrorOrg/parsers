@@ -34,6 +34,13 @@ export const parser = new nearley.Parser(nearley.Grammar.fromCompiled(grammar))
 export const parseTextCite = (string: string, options?: Options) => {
   const parser = new nearley.Parser(nearley.Grammar.fromCompiled(grammar))
 
+  const splitCites = string
+    .split(')')
+    .map(
+      (c: string, idx, arr) =>
+        `${c}${arr.length > 1 && idx === arr.length - 1 ? '' : ')'}`
+    )
+
   try {
     parser.feed(string)
   } catch (err) {
@@ -71,7 +78,11 @@ function recoverOriginalCitation(cite: (string | Citation)[], ogText: string) {
   const originalCites = narrowString
     .split(')')
     .filter((c) => c)
-    .map((c: string) => c + ')')
+    .map(
+      (c: string, idx, arr) =>
+        `${c}${arr.length > 1 && idx === arr.length - 1 ? '' : ')'}`
+    )
+  console.log(originalCites)
 
   let stupidCounterYouShouldKnowBetter = 0
 

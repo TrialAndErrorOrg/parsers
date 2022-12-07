@@ -3,7 +3,7 @@ console.log(moo)
 export const lexer = moo.compile({
   __: /[ \t ]+/u,
   //_: /[ \t]*/u,
-  Year: /(?:\d{4}|n\.d\.?)/u,
+  Year: /(?:\b\d{4}(?=[a-z]|\b)|n\.d\.?)/u,
   BCE: /B\.C\.E\.|B\.C\.|C\.E\.|A\.D\.|a\.d\.|b\.c\.e\.|b\.c\.|c\.e\./u,
   //maybename: /[A-Z]\w*['-]?\w*/u,
   Number: /\d+/u,

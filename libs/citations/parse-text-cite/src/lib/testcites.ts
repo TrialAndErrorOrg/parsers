@@ -26,6 +26,38 @@ export const tests: TestData = {
         input: 'Wow (Bautista Perpinya, 2019).',
       },
       {
+        input:
+          'We used Gorilla (Anwyl, 2019) to present the visual probe task online and the task is available on the open materials page to preview or clone (https://gorilla.sc/openmaterials/85021).',
+        description: 'Complex case with a URL',
+        result: [
+          'We used Gorilla ',
+          {
+            citationId: 'CITE-X',
+            citationItems: [
+              {
+                id: 'Anwyl2019',
+                itemData: {
+                  author: [
+                    {
+                      family: 'Anwyl',
+                    },
+                  ],
+                  issued: {
+                    'date-parts': [['2019']],
+                  },
+                },
+              },
+            ],
+            originalText: '(Anwyl, 2019)',
+            properties: {
+              noteIndex: 0,
+            },
+          },
+          ' to present the visual probe task online and the task is available on the open materials page to preview or clone ',
+          '(https://gorilla.sc/openmaterials/85021).',
+        ],
+      },
+      {
         description: 'Can deal with NBSP',
         result: [
           'We considered outliers to be any response outside 2.5 times the median absolute deviation for each participant, SOA, and trial condition ',

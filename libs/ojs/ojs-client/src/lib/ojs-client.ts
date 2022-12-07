@@ -5,7 +5,7 @@ import qs from 'qs'
 import { paths } from './swagger-types'
 import { Responses } from './types'
 
-const DEFAULT_ENDPOINT = 'https://submit.jtrialerror.com'
+const DEFAULT_ENDPOINT = 'https://submit.trialanderror.org'
 
 const buildMeta = (res: Response) => {
   if (!res || !res.headers) {

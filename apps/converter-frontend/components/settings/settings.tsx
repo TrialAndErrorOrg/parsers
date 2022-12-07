@@ -1,7 +1,7 @@
 import React from 'react'
 import { HStack, VStack } from '../stack/stack'
-import { Text, Input, TextInput, InputWrapper } from '@mantine/core'
-import { useForm } from '@mantine/hooks'
+import { Text, Input, TextInput } from '@mantine/core'
+import { useForm } from '@mantine/form'
 import { PublicationsList } from '../publications-list/publications-list'
 
 /* eslint-disable-next-line */
@@ -46,13 +46,11 @@ export function Settings(props: SettingsProps) {
           alignItems: 'center',
         }}
       >
-        <InputWrapper>
-          <TextInput
-            id="token"
-            label="OJS Access token"
-            {...form.getInputProps('token')}
-          />
-        </InputWrapper>
+        <TextInput
+          id="token"
+          label="OJS Access token"
+          {...form.getInputProps('token')}
+        />
       </HStack>
       <HStack
         sx={{
@@ -61,14 +59,12 @@ export function Settings(props: SettingsProps) {
           alignItems: 'center',
         }}
       >
-        <InputWrapper>
-          <TextInput
-            id="endpoint"
-            label="OJS Api Endpoint"
-            //placeholder="https://your-ojs-instance.com/journal-name/index.php/api/v1"
-            {...form.getInputProps('endpoint')}
-          />
-        </InputWrapper>
+        <TextInput
+          id="endpoint"
+          label="OJS Api Endpoint"
+          //placeholder="https://your-ojs-instance.com/journal-name/index.php/api/v1"
+          {...form.getInputProps('endpoint')}
+        />
       </HStack>
       <HStack
         sx={{
@@ -77,13 +73,11 @@ export function Settings(props: SettingsProps) {
           alignItems: 'center',
         }}
       >
-        <InputWrapper>
-          <TextInput
-            id="search"
-            label="Search for OJS submissions"
-            {...form.getInputProps('search')}
-          />
-        </InputWrapper>
+        <TextInput
+          id="search"
+          label="Search for OJS submissions"
+          {...form.getInputProps('search')}
+        />
       </HStack>
       <HStack
         sx={{
@@ -92,13 +86,11 @@ export function Settings(props: SettingsProps) {
           alignItems: 'center',
         }}
       >
-        <InputWrapper>
-          <TextInput
-            id="crossref"
-            {...form.getInputProps('email')}
-            label="Email address for crossref check"
-          />
-        </InputWrapper>
+        <TextInput
+          id="crossref"
+          {...form.getInputProps('email')}
+          label="Email address for crossref check"
+        />
       </HStack>
       {form.values.token && form.values.endpoint && form.values.search && (
         <PublicationsList

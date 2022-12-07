@@ -39,8 +39,8 @@ export async function docxToTex(
     .use(reoffRejour)
     .use(rejourRelatex, {
       documentClass: {
-        name: 'jote-article',
-        options: ['empirical', 'author-date'],
+        name: 'jote-new-article',
+        options: ['empirical', 'authordate'],
       },
     })
     .use(relatexAddPreamble, [])

@@ -5,11 +5,10 @@ import {
   Box,
   TextInput,
   Textarea,
-  InputWrapper,
   Paper,
   Button,
 } from '@mantine/core'
-import { useForm } from '@mantine/hooks'
+import { useForm } from '@mantine/form'
 import { useStore } from '../../utils/store'
 import { paths, definitions } from 'ojs-client'
 import React, { useEffect } from 'react'
@@ -33,14 +32,14 @@ export const PublicationData = (props: {
 
   const form = useForm({
     initialValues: {
-      documentclassname: 'article',
-      documentclassopt: 'twocolumn, authordate',
+      documentclassname: 'jote-new-article',
+      documentclassopt: 'authordate, editorial',
       title: '',
       keywordsabstract: '',
       abstract: '',
       runningauthor: '',
       jname: '',
-      jyear: '2022',
+      jyear: new Date().getFullYear(),
       acknowledgments: '',
 
       funding: '',
@@ -60,7 +59,7 @@ export const PublicationData = (props: {
       ],
       paperaccepted: '',
       paperpublished: '',
-      jwebsite: 'https://jtrialerror.com',
+      jwebsite: 'https://journal.trialanderror.org',
     },
   })
 
@@ -105,11 +104,11 @@ export const PublicationData = (props: {
         },
         []
       ),
-      jname: 'Journal of Trial and Error',
-      jyear: data.copyrightYear || '2022',
+      jname: 'Journal of Trial \\& Error',
+      jyear: data.copyrightYear || new Date().getFullYear(),
       doi: data['pub-id::doi'],
-      jvolume: '2',
-      jissue: '1',
+      jvolume: '',
+      jissue: '',
       jpages: data.pages || '',
       paperreceived: pub.dateSubmitted || '',
       paperaccepted: '',
@@ -171,75 +170,71 @@ export const PublicationData = (props: {
             <VStack>
               {form?.values?.authors?.map((author, index) => {
                 return (
-                  <InputWrapper
-                    label={`Author ${index + 1}`}
-                    key={author.familyName}
+                  <Paper
+                    shadow="sm"
+                    padding="md"
+                    radius="md"
+                    key={author.givenName}
+                    sx={{
+                      display: 'flex',
+                      alignItems: 'flex-start',
+                      flexWrap: 'wrap',
+                      flexDirection: 'column',
+                    }}
                   >
-                    <Paper
-                      shadow="sm"
-                      padding="md"
-                      radius="md"
-                      sx={{
-                        display: 'flex',
-                        alignItems: 'flex-start',
-                        flexWrap: 'wrap',
-                        flexDirection: 'column',
-                      }}
-                    >
-                      <HStack spacing={10}>
-                        <TextInput
-                          labelProps={{
-                            style: { color: 'red', fontWeight: 'bold' },
-                          }}
-                          label="givenname"
-                          value={author.givenName}
-                          onChange={(value) => {
-                            const authors = form.values.authors
-                            authors[index].givenName = value.target.value
-                            form.setFieldValue('authors', authors)
-                          }}
-                        ></TextInput>
-                        <TextInput
-                          label="familyname"
-                          value={author.familyName}
-                          onChange={(value) => {
-                            const authors = form.values.authors
-                            authors[index].familyName = value.target.value
-                            form.setFieldValue('authors', authors)
-                          }}
-                        ></TextInput>
-                      </HStack>
-                      <HStack spacing={10}>
-                        <TextInput
-                          label="email"
-                          value={author.email}
-                          onChange={(value) => {
-                            const authors = form.values.authors
-                            authors[index].email = value.target.value
-                            form.setFieldValue('authors', authors)
-                          }}
-                        ></TextInput>
-                        <TextInput
-                          label="orcid"
-                          value={author.orcid}
-                          onChange={(value) => {
-                            const authors = form.values.authors
-                            authors[index].orcid = value.target.value
-                            form.setFieldValue('authors', authors)
-                          }}
-                        ></TextInput>
-                        <TextInput
-                          label="affil"
-                          value={author.affiliation}
-                          onChange={(value) => {
-                            const authors = form.values.authors
-                            authors[index].affiliation = value.target.value
-                            form.setFieldValue('authors', authors)
-                          }}
-                        ></TextInput>
-                      </HStack>
-                    </Paper>
-                  </InputWrapper>
+                    <HStack spacing={10}>
+                      <TextInput
+                        labelProps={{
+                          style: { color: 'red', fontWeight: 'bold' },
+                        }}
+                        label="givenname"
+                        value={author.givenName}
+                        onChange={(value) => {
+                          const authors = form.values.authors
+                          authors[index].givenName = value.target.value
+                          form.setFieldValue('authors', authors)
+                        }}
+                      ></TextInput>
+                      <TextInput
+                        label="familyname"
+                        value={author.familyName}
+                        onChange={(value) => {
+                          const authors = form.values.authors
+                          authors[index].familyName = value.target.value
+                          form.setFieldValue('authors', authors)
+                        }}
+                      ></TextInput>
+                    </HStack>
+                    <HStack spacing={10}>
+                      <TextInput
+                        label="email"
+                        value={author.email}
+                        onChange={(value) => {
+                          const authors = form.values.authors
+                          authors[index].email = value.target.value
+                          form.setFieldValue('authors', authors)
+                        }}
+                      ></TextInput>
+                      <TextInput
+                        label="orcid"
+                        value={author.orcid}
+                        onChange={(value) => {
+                          const authors = form.values.authors
+                          authors[index].orcid = value.target.value
+                          form.setFieldValue('authors', authors)
+                        }}
+                      ></TextInput>
+                      <TextInput
+                        label="affil"
+                        value={author.affiliation}
+                        onChange={(value) => {
+                          const authors = form.values.authors
+                          authors[index].affiliation = value.target.value
+                          form.setFieldValue('authors', authors)
+                        }}
+                      ></TextInput>
+                    </HStack>
+                  </Paper>
                 )
               })}
 

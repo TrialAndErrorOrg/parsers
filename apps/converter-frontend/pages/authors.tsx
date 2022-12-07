@@ -12,8 +12,7 @@ import Link from 'next/link'
 // //
 // }
 
-function AuthorPage(// props: AuthorPageProps
-  ) {
+function AuthorPage() { // props: AuthorPageProps
   const { data: session, status } = useSession()
   if (status !== 'authenticated') {
     return (
@@ -68,7 +67,7 @@ export function AuthAuthorPage(props: { query?: Record<string, any> }) {
             items={['title', 'subtitle', 'authors']}
           />
           <Link
-            href={`https://submit.jtrialerror.com/index.php/jote/workflow/index/${item.id}/1#publication`}
+            href={`https://submit.trialanderror.org/index.php/jote/workflow/index/${item.id}/1#publication`}
             passHref
           >
             <a style={{ marginTop: 20 }} target="_blank">

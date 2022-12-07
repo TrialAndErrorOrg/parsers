@@ -17,7 +17,8 @@ export const Citations = ({
   const url =
     process.env.NODE_ENV === 'production'
       ? '/api/style'
-      : process.env.NEXT_PUBLIC_STYLE_DEV_URL || 'http://localhost:8000/api/style'
+      : process.env.NEXT_PUBLIC_STYLE_DEV_URL ||
+        'http://localhost:8000/api/style'
   const splitextra = extra
     ?.replace(/\\r/g, '')
     ?.replace(/\n([A-Z])/gm, '\n\n\n$1')
@@ -51,31 +52,39 @@ export const Citations = ({
   const bibtex = cite.format('bibtex')
   const ris = cite.format('ris')
   const csl = data
+  console.log({
+    biblatex,
+    bibtex,
+    ris,
+    csl,
+    value,
+  })
   return (
-    <Prism.Tabs>
-      <Prism.Tab
-        withLineNumbers
-        language="actionscript"
-        label="Rich Text"
-        sx={{ whiteSpace: 'pre-wrap', maxWidth: '70vw' }}
-      >
-        {value?.join('\n')}
-        {/* {value?.map((cite) => (
-          <Text key={cite} dangerouslySetInnerHTML={{ __html: cite }} />
-        ))} */}
-      </Prism.Tab>
-      <Prism.Tab withLineNumbers language="clike" label="biblatex">
-        {biblatex}
-      </Prism.Tab>
-      <Prism.Tab withLineNumbers language="clike" label="bibtex">
-        {bibtex}
-      </Prism.Tab>
-      <Prism.Tab withLineNumbers language="jsx" label="ris">
-        {ris}
-      </Prism.Tab>
-      <Prism.Tab withLineNumbers language="json" label="csl">
-        {JSON.stringify(csl, null, 2)}
-      </Prism.Tab>
-    </Prism.Tabs>
+    // <Prism.Tabs defaultValue="Rich Text">
+    //   <Prism.Tab
+    //     withLineNumbers
+    //     language="actionscript"
+    //     value="Rich Text"
+    //     sx={{ whiteSpace: 'pre-wrap', maxWidth: '70vw' }}
+    //   >
+    //     {value?.join('\n') ?? ' '}
+    //     {/* {value?.map((cite) => (
+    //       <Text key={cite} dangerouslySetInnerHTML={{ __html: cite }} />
+    //     ))} */}
+    //   </Prism.Tab>
+    //   <Prism.Tab withLineNumbers language="clike" value="biblatex">
+    //     {biblatex ?? ' '}
+    //   </Prism.Tab>
+    //   <Prism.Tab withLineNumbers language="clike" value="bibtex">
+    //     {bibtex ?? ' '}
+    //   </Prism.Tab>
+    //   <Prism.Tab withLineNumbers language="jsx" value="ris">
+    //     {ris ?? ' '}
+    //   </Prism.Tab>
+    //   <Prism.Tab withLineNumbers language="json" value="csl">
+    //     {JSON.stringify(csl, null, 2) ?? ' '}
+    //   </Prism.Tab>
+    // </Prism.Tabs>
+    <div />
   )
 }

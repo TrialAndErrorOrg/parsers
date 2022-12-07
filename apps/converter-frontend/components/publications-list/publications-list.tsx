@@ -79,6 +79,3 @@ export function PublicationsList(props: PublicationsListProps) {
 }
 
 export default PublicationsList
-
-// https://submit.jtrialerror.com/index.php/jote/api/v1
-const Files = {}

@@ -72,7 +72,10 @@ export const FileReel = (props: {
         //console.log(stageInt)
         //console.log(data)
         return (
-          <Tabs.Tab label={stagesss[stageInt]} key={stagesss[stageInt]}>
+          <Tabs.Tab
+            value={stagesss[stageInt] ?? 'production'}
+            key={stagesss[stageInt]}
+          >
             <FileStage
               {...{
                 submissionId: id!,

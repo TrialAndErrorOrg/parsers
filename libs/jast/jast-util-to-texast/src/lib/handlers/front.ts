@@ -63,6 +63,8 @@ export function front(j: J, node: Root) {
           },
         ],
       },
+
+      { type: 'text', value: '\n' },
       {
         type: 'command',
         name: 'usepackage',
@@ -74,6 +76,8 @@ export function front(j: J, node: Root) {
           },
         ],
       },
+
+      { type: 'text', value: '\n' },
       {
         type: 'command',
         name: 'usepackage',

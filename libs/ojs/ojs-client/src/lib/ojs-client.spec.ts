@@ -2,7 +2,7 @@ import OJS from './ojs-client'
 import 'dotenv/config'
 
 const ojs = new OJS({
-  endpoint: 'https://submit.jtrialerror.com/index.php/jote/api/v1',
+  endpoint: 'https://journal.trialanderror.org/index.php/jote/api/v1',
   token: process.env.OJS_TOKEN,
 })
 describe('ojsClient', () => {

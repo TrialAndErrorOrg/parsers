@@ -38,6 +38,7 @@ export function findCitations(
   let references = false
   let citationCounter = 1
   visitParents(tree, isP, (p: P, ancestors: Node[]) => {
+    // don't parse citations in tables
     if (
       ancestors.some((parent) => isElement(parent) && /tbl/.test(parent.name))
     ) {
@@ -48,6 +49,7 @@ export function findCitations(
       return
     }
 
+    // find references section
     if (getPStyle(p)?.toLowerCase()?.includes('heading')) {
       if (
         ['references', 'citations', 'bibliography'].includes(
@@ -55,6 +57,7 @@ export function findCitations(
         )
       ) {
         references = true
+        return
       }
       references = false
       return
@@ -62,6 +65,7 @@ export function findCitations(
 
     const kids = p.children
     const runs: typeof kids = []
+    console.log(p)
 
     let skipNext = false
     for (const kid of kids) {
@@ -101,6 +105,7 @@ export function findCitations(
       }
 
       const sentences = text.value.split(/(?<=[.?!])\s+(?=[A-Z])/)
+      console.log(sentences)
       // re-add the spaces that were removed by the split
       const sentencesWithSpaces = sentences.map((s, i) => {
         if (i === sentences.length - 1) return s

@@ -1,21 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import { useState } from 'react'
 import {
-  AppShell,
-  Box,
-  Burger,
   Button,
   Code,
   Container,
   Group,
-  Header,
-  MediaQuery,
-  Navbar,
   Select,
   Text,
   Title,
-  useMantineTheme,
 } from '@mantine/core'
-import { HStack, VStack } from '../stack/stack'
+import { HStack } from '../stack/stack'
 import SelectItem from '../select-item/select-item'
 import { AiOutlineUpload } from 'react-icons/ai'
 import { JATSIcon, TexIcon, WordIcon } from '../ext-icon/ext-icon'
@@ -26,7 +19,6 @@ import ConvertedBlockLocal from '../converted-block-local/converted-block-local'
 import { jatsToTexConverter } from '../../utils/converters/jatsToTex'
 import { docxToTexConverter } from '../../utils/converters/docxToTex'
 import { docxToJatsConverter } from '../../utils/converters/docxToJats'
-import Settings from '../settings/settings'
 import { useStore } from '../../utils/store'
 
 /* eslint-disable-next-line */

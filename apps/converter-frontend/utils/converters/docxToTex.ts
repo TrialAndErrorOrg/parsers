@@ -38,27 +38,26 @@ export async function docxToTexConverter(
         'w:noProof',
       ],
     })
-    // .use(reoffParseReferences, {
-    //   apiUrl:
-    //     process.env.NODE_ENV === 'production'
-    //       ? apiUrl || '/api/style'
-    //       : process.env.NEXT_PUBLIC_STYLE_DEV_URL || 'http://localhost:8000/api/style',
-    //   mailto,
-    // })
-    // @ts-expect-error tbh idk what it's talking about
-    // .use(reoffCite, { type: type || 'zotero', bibliography: undefined })
+    .use(reoffParseReferences, {
+      apiUrl:
+        process.env.NODE_ENV === 'production'
+          ? apiUrl || '/api/style'
+          : process.env.NEXT_PUBLIC_STYLE_DEV_URL ||
+            'http://localhost:8000/api/style',
+      mailto,
+    })
+    //  @ts-expect-error tbh idk what it's talking about
+    .use(reoffCite, { type: type || 'zotero', bibliography: undefined })
     .use(reoffRejour)
     .use(rejourStringify)
     .use(rejourRelatex, {
       documentClass: {
-        name: 'jote-article',
-        options: ['empirical', 'author-date'],
+        name: 'jote-new-article',
+        options: ['empirical', 'authordate'],
       },
     })
     .use(relatexAddPreamble, preamble || [])
     .use(relatexStringify)
 
-  console.log(process.env.NODE_ENV)
-  console.log(process.env.STYLE_DEV_URL)
   return proc.process(vfile)
 }

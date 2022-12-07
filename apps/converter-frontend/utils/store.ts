@@ -1,5 +1,6 @@
 import { PreambleCommand } from 'texast-util-add-preamble'
 import create from 'zustand'
+import { format } from 'date-fns'
 import { combine } from 'zustand/middleware'
 
 export interface InitialState {
@@ -106,11 +107,18 @@ export const metaToPreamble = (form: Form): PreambleCommand[] => {
       switch (key) {
         case 'documentclassname':
         case 'documentclassopt':
-        case 'abstract':
           return acc
-        case 'title':
+        case 'abstract': {
+          acc.push({
+            type: 'abstracttext',
+            args: [value?.replace(/<\/p>/g, '')],
+          })
+          return acc
+        }
+        case 'title': {
           acc.push({ type: 'jotetitle', args: [value] })
           return acc
+        }
         case 'authors': {
           const auths = value.flatMap((auth: Author, index: number) => {
             return [
@@ -122,10 +130,10 @@ export const metaToPreamble = (form: Form): PreambleCommand[] => {
                     ? [{ type: 'orcid', args: [auth.orcid] }]
                     : []),
                 ],
-                opts: [`${index}`],
+                opts: [`${index + 1}`],
               },
               {
-                type: `author${numbers[index]}`,
+                type: `author${numbers[index + 1]}`,
                 args: [`${auth.givenName} ${auth.familyName}`],
               },
               {
@@ -153,6 +161,32 @@ export const metaToPreamble = (form: Form): PreambleCommand[] => {
           })
           console.log(auths)
           acc.push(...auths)
+          return acc
+        }
+        case 'paperreceived':
+        case 'paperaccepted': {
+          acc.push({
+            type: key,
+            args: [format(new Date(value), 'MMMM d, yyyy')],
+          })
+          return acc
+        }
+        case 'paperpublished': {
+          acc.push({
+            type: key,
+            args: [format(new Date(value), 'MMMM d, yyyy')],
+          })
+          acc.push({
+            type: 'paperpublisheddate',
+            args: [format(new Date(value), 'yyyy-MM-dd')],
+          })
+          return acc
+        }
+        case 'doi': {
+          acc.push({
+            type: 'paperdoi',
+            args: [value],
+          })
           return acc
         }
 

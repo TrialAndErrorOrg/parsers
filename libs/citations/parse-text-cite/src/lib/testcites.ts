@@ -26,6 +26,12 @@ export const tests: TestData = {
         input: 'Wow (Bautista Perpinya, 2019).',
       },
       {
+        description: 'A long et al',
+        result: [{}],
+        input:
+          'On the one hand, lighter smokers should show greater attentional bias than heavier smokers since they rarely show signs of nicotine dependence. Thus, the presence of smoking-related cues would be required to induce craving and motivate substance use. In support of this argument, some studies found that lighter smokers exhibit greater attentional bias than heavier smokers (Bradley et al., 2003; Hogarth et al., 2003; Mogg et al., 2005). ',
+      },
+      {
         description: 'Just a normal fucking et al.!',
         result: [
           'Wow ',

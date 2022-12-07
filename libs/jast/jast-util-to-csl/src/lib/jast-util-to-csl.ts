@@ -108,15 +108,22 @@ export function refToCSL(citation: ElementCitation, id: string): CSL {
         }
         case 'articleTitle':
         case 'chapterTitle':
-        case 'partTitle':
+        case 'partTitle': {
           acc.title = toString(curr)
           return acc
-        case 'publisherName':
+        }
+        case 'publisherName': {
           acc.publisher = toString(curr)
           return acc
-        case 'publisherLoc':
+        }
+        case 'publisherLoc': {
           acc['publisher-place'] = toString(curr)
           return acc
+        }
+        case 'extLink': {
+          acc.URL = toString(curr)
+          return acc
+        }
         case 'source':
           if (acc.type === 'book') {
             acc.title = toString(curr)

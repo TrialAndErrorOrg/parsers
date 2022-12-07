@@ -1,7 +1,7 @@
 import moo from 'moo'
 console.log(moo)
 export const lexer = moo.compile({
-  __: /[ \t]+/u,
+  __: /[ \t ]+/u,
   //_: /[ \t]*/u,
   Year: /(?:\d{4}|n\.d\.?)/u,
   BCE: /B\.C\.E\.|B\.C\.|C\.E\.|A\.D\.|a\.d\.|b\.c\.e\.|b\.c\.|c\.e\./u,

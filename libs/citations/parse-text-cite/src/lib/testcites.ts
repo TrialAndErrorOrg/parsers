@@ -26,10 +26,35 @@ export const tests: TestData = {
         input: 'Wow (Bautista Perpinya, 2019).',
       },
       {
-        description: 'A long et al',
-        result: [{}],
+        description: 'Can deal with NBSP',
+        result: [
+          'We considered outliers to be any response outside 2.5 times the median absolute deviation for each participant, SOA, and trial condition ',
+          {
+            citationId: 'CITE-X',
+            citationItems: [
+              {
+                id: 'Leys2013',
+                itemData: {
+                  author: [
+                    {
+                      family: 'Leys',
+                    },
+                  ],
+                  issued: {
+                    'date-parts': [['2013']],
+                  },
+                },
+              },
+            ],
+            originalText: '(Leys et al, 2013)',
+            properties: {
+              noteIndex: 0,
+            },
+          },
+          '.',
+        ],
         input:
-          'On the one hand, lighter smokers should show greater attentional bias than heavier smokers since they rarely show signs of nicotine dependence. Thus, the presence of smoking-related cues would be required to induce craving and motivate substance use. In support of this argument, some studies found that lighter smokers exhibit greater attentional bias than heavier smokers (Bradley et al., 2003; Hogarth et al., 2003; Mogg et al., 2005). ',
+          'We considered outliers to be any response outside 2.5 times the median absolute deviation for each participant, SOA, and trial condition (Leys et al., 2013).',
       },
       {
         description: 'Just a normal fucking et al.!',

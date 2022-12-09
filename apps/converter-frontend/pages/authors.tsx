@@ -6,8 +6,6 @@ import useSWR from 'swr'
 import { PublicationData } from '../components/publications-list/publication-data'
 import { VStack } from '../components/stack/stack'
 import qs from 'querystring'
-import Link from 'next/link'
-
 // export interface AuthorPageProps {
 // //
 // }
@@ -67,14 +65,13 @@ export function AuthAuthorPage(props: { query?: Record<string, any> }) {
             pub={item}
             items={['title', 'subtitle', 'authors']}
           />
-          <Link
+          <a
             href={`https://submit.trialanderror.org/index.php/jote/workflow/index/${item.id}/1#publication`}
-            passHref={true}
+            style={{ marginTop: 20 }}
+            target="_blank"
           >
-            <a style={{ marginTop: 20 }} target="_blank">
-              OJS Link
-            </a>
-          </Link>
+            OJS Link
+          </a>
         </Paper>
       ))}
 

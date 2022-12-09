@@ -1,0 +1,31 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    anystyle (1.3.14)
+      anystyle-data (~> 1.2)
+      bibtex-ruby (~> 6.0)
+      namae (~> 1.0)
+      wapiti (~> 2.0)
+    anystyle-data (1.2.0)
+    bibtex-ruby (6.0.0)
+      latex-decode (~> 0.0)
+    builder (3.2.4)
+    latex-decode (0.4.0)
+    namae (1.1.1)
+    rexml (3.2.5)
+    wapiti (2.0.0)
+      builder (~> 3.2)
+      rexml (~> 3.0)
+
+PLATFORMS
+  arm64-darwin-22
+  x86_64-linux
+
+DEPENDENCIES
+  anystyle (~> 1.3)
+
+RUBY VERSION
+   ruby 2.7.7p221
+
+BUNDLED WITH
+   2.3.26

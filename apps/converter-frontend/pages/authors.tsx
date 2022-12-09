@@ -8,7 +8,6 @@ import { VStack } from '../components/stack/stack'
 import qs from 'querystring'
 
 function AuthorPage() {
-  // props: AuthorPageProps
   const { data: session, status } = useSession()
   if (status !== 'authenticated') {
     return (

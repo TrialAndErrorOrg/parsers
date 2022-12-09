@@ -1,8 +1,6 @@
 import { cslToRefList } from './csl-to-jast'
-import path, { join } from 'path'
 
 import { readFileSync, writeFileSync } from 'fs'
-import { url } from 'inspector'
 
 const test = JSON.parse(
   readFileSync(new URL('test.json', import.meta.url), { encoding: 'utf-8' })

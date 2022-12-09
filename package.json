@@ -62,7 +62,7 @@
     "next-auth": "^4.16.4",
     "ngx-deploy-npm": "^4.2.2",
     "nth-check": "^2.1.1",
-    "openapi-typescript": "^5.2.0",
+    "openapi-typescript": "^6.1.0",
     "property-information": "^6.1.1",
     "querystring": "^0.2.1",
     "react": "18.2.0",

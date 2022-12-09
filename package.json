@@ -78,6 +78,7 @@
     "tar-stream": "^2.2.0",
     "tmp-promise": "^3.0.3",
     "tslib": "^2.4.0",
+    "unified": "^10.1.2",
     "unist-builder": "^3.0.0",
     "unist-util-filter": "^4.0.0",
     "unist-util-map": "^3.1.1",
@@ -95,6 +96,7 @@
     "zwitch": "^2.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.5",
     "@nestjs/schematics": "^8.0.0",
     "@nestjs/testing": "^8.0.0",
     "@nrwl/cli": "15.3.0",

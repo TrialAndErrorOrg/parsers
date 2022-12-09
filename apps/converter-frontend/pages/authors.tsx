@@ -9,6 +9,7 @@ import qs from 'querystring'
 
 function AuthorPage() {
   const { status } = useSession()
+
   if (status !== 'authenticated') {
     return (
       <Button onClick={() => signIn()} leftIcon={<FaMicrosoft />}>

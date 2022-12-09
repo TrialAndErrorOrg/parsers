@@ -1,7 +1,8 @@
 {
   "functions": {
-    "api/style": {
-      "includeFiles": "+(Gemfile*|api/style.rb)"
+    "api/style.rb": {
+      "includeFiles": "+(Gemfile*|api/style.rb|vendor/**/*)",
+      "excludeFiles": "+(node_modules/**/*|dist/**/*)"
     }
   }
 }

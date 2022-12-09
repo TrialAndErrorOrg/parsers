@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "api/style.rb": {
+      "includeFiles": ["Gemfile", "Gemfile.lock", "api/style.rb", "vercel.json"]
+    }
+  }
+}

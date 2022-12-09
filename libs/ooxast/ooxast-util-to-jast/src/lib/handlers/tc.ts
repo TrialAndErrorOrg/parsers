@@ -12,7 +12,7 @@ const createStyle = (
     ?.map(
       ([key, val]) =>
         `${name}${key?.at(0)?.toUpperCase()}${key?.slice(1)}: ${
-          val?.val ? val.val : `${val}`
+          typeof val === 'object' && 'val' in val ? val.val : `${val}`
         }`
     )
     .join('; ')
@@ -30,29 +30,34 @@ export function tc(j: J, node: Tc): Td {
   const borderStyle =
     tcBorders && typeof tcBorders === 'object'
       ? Object.entries(tcBorders)
-          ?.map(
-            ([border, values]) =>
-              `border-${border}: ${values.sz}px ${
-                values.val?.includes('dash') ? 'dashed' : 'solid'
-              } #${values.color}`
+          ?.map(([border, values]) =>
+            typeof values === 'object'
+              ? `border-${border}: ${values.sz}px ${
+                  typeof values.val === 'string' && values.val?.includes('dash')
+                    ? 'dashed'
+                    : 'solid'
+                } #${values.color}`
+              : ''
           )
           ?.join('; ')
       : ''
 
-  // const borderStyle =
-  //   tcBorders && typeof tcBorders === 'object'
-  //     ? createStyle('border', tcBorders)
-  //     : ''
-
   const style = [shdStyle, borderStyle].join('; ')
 
   const jatsProps = {
-    ...(gridSpan && gridSpan.val && +gridSpan.val > 1
+    ...(typeof gridSpan === 'object' &&
+    'val' in gridSpan &&
+    typeof gridSpan.val === 'string' &&
+    +gridSpan.val > 1
       ? { colspan: gridSpan.val }
       : {}),
     ...(shdStyle ?? borderStyle ? { style } : {}),
 
-    ...(vAlign && vAlign?.val !== 'top' ? { valign: vAlign.val } : {}),
+    ...(typeof vAlign === 'object' &&
+    typeof vAlign?.val === 'string' &&
+    vAlign?.val !== 'top'
+      ? { valign: vAlign.val }
+      : {}),
   }
 
   return j(node, 'td', jatsProps, all(j, node)) as Td

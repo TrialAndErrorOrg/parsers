@@ -1,6 +1,5 @@
 import { one } from './one'
 import { handlers } from './handlers/index'
-import { own } from './util/own'
 
 import {
   Context,
@@ -41,8 +40,8 @@ export function toTexast(
     ((
       node: TexastRoot | TexastContent,
       type: string,
-      props?: Attributes | string | Array<TexastContent>,
-      children?: string | Array<TexastContent>
+      props?: Attributes | string | TexastContent[],
+      children?: string | TexastContent[]
     ) => {
       let attributes: Attributes | undefined
 

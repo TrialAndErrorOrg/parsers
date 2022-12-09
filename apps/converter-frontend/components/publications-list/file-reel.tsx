@@ -20,12 +20,20 @@ export const FileReel = (props: {
       endpoint
     )}`
   )
-  if (!data) return <Loader />
-  if (error) return <Text color="red">{JSON.stringify(error)}</Text>
+  if (!data) {
+    return <Loader />
+  }
+  if (error) {
+    return <Text color="red">{JSON.stringify(error)}</Text>
+  }
 
-  if (!data.items) return <Text> No Files </Text>
+  if (!data.items) {
+    return <Text> No Files </Text>
+  }
 
-  if (!stageId) return <></>
+  if (!stageId) {
+    return <></>
+  }
 
   const getStageId = (file: definitions['SubmissionFile']): number =>
     parseInt(file?.url?.slice(-1) || '0')
@@ -58,7 +66,9 @@ export const FileReel = (props: {
         curr: definitions['SubmissionFile']
       ) => {
         const id = getStageId(curr)
-        if (!id) return
+        if (!id) {
+          return
+        }
         acc[id] = [...(acc?.[id] || []), curr]
         return acc
       },

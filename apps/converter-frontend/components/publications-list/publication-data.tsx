@@ -39,7 +39,7 @@ export const PublicationData = (props: {
       abstract: '',
       runningauthor: '',
       jname: '',
-      jyear: new Date().getFullYear(),
+      jyear: new Date().getFullYear().toString(),
       acknowledgments: '',
 
       funding: '',
@@ -81,13 +81,16 @@ export const PublicationData = (props: {
   //   )}&apiToken=${apiToken}`
   // )
   useEffect(() => {
-    if (!data || form.values.title) return
+    if (!data || form.values.title) {
+      return
+    }
 
     form.setValues({
       ...form.values,
       title: data.fullTitle.en_US,
-      documentclassopt:
-        form.values?.documentclassopt + ', ' + categories?.[pub?.sectionId],
+      documentclassopt: `${form.values?.documentclassopt}, ${
+        categories?.[pub?.sectionId]
+      }`,
       keywordsabstract: data?.keywords?.['en_US']?.join(', '),
       abstract: data.abstract?.en_US,
       runningauthor: data.authorsStringShort,
@@ -121,30 +124,31 @@ export const PublicationData = (props: {
     <>
       {error ? (
         <Text color="red">{JSON.stringify(error)}</Text>
-      ) : !data ? (
-        <Loader />
-      ) : items ? (
-        <Box>
-          {items.map((item) => {
-            if (!data[item]) return null
-            return <MetaItem key={item} datakey={item} value={data[item]} />
-          })}
-        </Box>
-      ) : (
-        <VStack sx={{ alignItems: 'flex-start' }}>
-          <Paper>
-            <Text>{categories[data.sectionId]}</Text>
-            <Text>{data['pub-id::doi']}</Text>
-            <MetaItem datakey={'title'} value={data.title} />
-            <MetaItem datakey={'authors'} value={data.authors} />
-            <MetaItem datakey={'abstract'} value={data.abstract} />
-            <MetaItem
-              datakey={'citations'}
-              value={data.citations}
-              extra={data.citationsRaw}
-            />
-            <MetaItem datakey={'keywords'} value={data.keywords} />
-            {/* {Object.entries(data).map((datum) => {
+      ) : data ? (
+        items ? (
+          <Box>
+            {items.map((item) => {
+              if (!data[item]) {
+                return null
+              }
+              return <MetaItem key={item} datakey={item} value={data[item]} />
+            })}
+          </Box>
+        ) : (
+          <VStack sx={{ alignItems: 'flex-start' }}>
+            <Paper>
+              <Text>{categories[data.sectionId]}</Text>
+              <Text>{data['pub-id::doi']}</Text>
+              <MetaItem datakey={'title'} value={data.title} />
+              <MetaItem datakey={'authors'} value={data.authors} />
+              <MetaItem datakey={'abstract'} value={data.abstract} />
+              <MetaItem
+                datakey={'citations'}
+                value={data.citations}
+                extra={data.citationsRaw}
+              />
+              <MetaItem datakey={'keywords'} value={data.keywords} />
+              {/* {Object.entries(data).map((datum) => {
             const [key, value] = datum as [
               key: keyof definitions['Publication'],
               value: definitions['Publication'][keyof definitions['Publication']]
@@ -152,167 +156,161 @@ export const PublicationData = (props: {
 
             return <MetaItem key={key} datakey={key} value={value} />
           })} */}
-          </Paper>
-          <Paper>
-            <HStack>
-              <TextInput
-                label="documentclassopt"
-                {...form.getInputProps('documentclassopt')}
-              />
-              <TextInput
-                label="documentclassname"
-                {...form.getInputProps('documentclassname')}
-              />
-            </HStack>
-            <HStack>
-              <TextInput label="title" {...form.getInputProps('title')} />
-            </HStack>
-            <VStack>
-              {form?.values?.authors?.map((author, index) => {
-                return (
-                  <Paper
-                    shadow="sm"
-                    padding="md"
-                    radius="md"
-                    key={author.givenName}
-                    sx={{
-                      display: 'flex',
-                      alignItems: 'flex-start',
-                      flexWrap: 'wrap',
-                      flexDirection: 'column',
-                    }}
-                  >
-                    <HStack spacing={10}>
-                      <TextInput
-                        labelProps={{
-                          style: { color: 'red', fontWeight: 'bold' },
-                        }}
-                        label="givenname"
-                        value={author.givenName}
-                        onChange={(value) => {
-                          const authors = form.values.authors
-                          authors[index].givenName = value.target.value
-                          form.setFieldValue('authors', authors)
-                        }}
-                      ></TextInput>
-                      <TextInput
-                        label="familyname"
-                        value={author.familyName}
-                        onChange={(value) => {
-                          const authors = form.values.authors
-                          authors[index].familyName = value.target.value
-                          form.setFieldValue('authors', authors)
-                        }}
-                      ></TextInput>
-                    </HStack>
-                    <HStack spacing={10}>
-                      <TextInput
-                        label="email"
-                        value={author.email}
-                        onChange={(value) => {
-                          const authors = form.values.authors
-                          authors[index].email = value.target.value
-                          form.setFieldValue('authors', authors)
-                        }}
-                      ></TextInput>
-                      <TextInput
-                        label="orcid"
-                        value={author.orcid}
-                        onChange={(value) => {
-                          const authors = form.values.authors
-                          authors[index].orcid = value.target.value
-                          form.setFieldValue('authors', authors)
-                        }}
-                      ></TextInput>
-                      <TextInput
-                        label="affil"
-                        value={author.affiliation}
-                        onChange={(value) => {
-                          const authors = form.values.authors
-                          authors[index].affiliation = value.target.value
-                          form.setFieldValue('authors', authors)
-                        }}
-                      ></TextInput>
-                    </HStack>
-                  </Paper>
-                )
-              })}
-
-              <HStack sx={{ width: '100%' }}>
+            </Paper>
+            <Paper>
+              <HStack>
                 <TextInput
-                  label="running"
-                  {...form.getInputProps('runningauthor')}
-                  sx={{ width: '100%' }}
+                  label="documentclassopt"
+                  {...form.getInputProps('documentclassopt')}
+                />
+                <TextInput
+                  label="documentclassname"
+                  {...form.getInputProps('documentclassname')}
                 />
               </HStack>
-              <VStack sx={{ alignItems: 'flex-start' }}>
-                <Textarea
-                  label="abstract"
-                  {...form.getInputProps('abstract')}
-                ></Textarea>
-                <TextInput
-                  label="keywords"
-                  {...form.getInputProps('keywordsabstract')}
-                ></TextInput>
+              <HStack>
+                <TextInput label="title" {...form.getInputProps('title')} />
+              </HStack>
+              <VStack>
+                {form?.values?.authors?.map((author, index) => {
+                  return (
+                    <Paper
+                      shadow="sm"
+                      // padding="md"
+                      radius="md"
+                      key={author.givenName}
+                      sx={{
+                        display: 'flex',
+                        alignItems: 'flex-start',
+                        flexWrap: 'wrap',
+                        flexDirection: 'column',
+                      }}
+                    >
+                      <HStack spacing={10}>
+                        <TextInput
+                          labelProps={{
+                            style: { color: 'red', fontWeight: 'bold' },
+                          }}
+                          label="givenname"
+                          value={author.givenName}
+                          onChange={(value) => {
+                            const authors = form.values.authors
+                            authors[index].givenName = value.target.value
+                            form.setFieldValue('authors', authors)
+                          }}
+                        />
+                        <TextInput
+                          label="familyname"
+                          value={author.familyName}
+                          onChange={(value) => {
+                            const authors = form.values.authors
+                            authors[index].familyName = value.target.value
+                            form.setFieldValue('authors', authors)
+                          }}
+                        />
+                      </HStack>
+                      <HStack spacing={10}>
+                        <TextInput
+                          label="email"
+                          value={author.email}
+                          onChange={(value) => {
+                            const authors = form.values.authors
+                            authors[index].email = value.target.value
+                            form.setFieldValue('authors', authors)
+                          }}
+                        />
+                        <TextInput
+                          label="orcid"
+                          value={author.orcid}
+                          onChange={(value) => {
+                            const authors = form.values.authors
+                            authors[index].orcid = value.target.value
+                            form.setFieldValue('authors', authors)
+                          }}
+                        />
+                        <TextInput
+                          label="affil"
+                          value={author.affiliation}
+                          onChange={(value) => {
+                            const authors = form.values.authors
+                            authors[index].affiliation = value.target.value
+                            form.setFieldValue('authors', authors)
+                          }}
+                        />
+                      </HStack>
+                    </Paper>
+                  )
+                })}
+
+                <HStack sx={{ width: '100%' }}>
+                  <TextInput
+                    label="running"
+                    {...form.getInputProps('runningauthor')}
+                    sx={{ width: '100%' }}
+                  />
+                </HStack>
+                <VStack sx={{ alignItems: 'flex-start' }}>
+                  <Textarea
+                    label="abstract"
+                    {...form.getInputProps('abstract')}
+                  />
+                  <TextInput
+                    label="keywords"
+                    {...form.getInputProps('keywordsabstract')}
+                  />
+                </VStack>
+                <HStack>
+                  <TextInput label="year" {...form.getInputProps('jyear')} />
+                </HStack>
+
+                <HStack>
+                  <Textarea
+                    label="acknowledgments"
+                    {...form.getInputProps('acknowledgments')}
+                  />
+                  <Textarea
+                    label="funding"
+                    {...form.getInputProps('funding')}
+                  />
+                </HStack>
+                <HStack>
+                  <TextInput
+                    label="volume"
+                    {...form.getInputProps('jvolume')}
+                  />
+                  <TextInput label="issue" {...form.getInputProps('jissue')} />
+                </HStack>
+
+                <HStack spacing={10} sx={{ flexWrap: 'wrap' }}>
+                  <TextInput
+                    label="received"
+                    {...form.getInputProps('paperreceived')}
+                  />
+                  <TextInput
+                    label="accepted"
+                    {...form.getInputProps('paperaccepted')}
+                  />
+                  <TextInput
+                    label="published"
+                    {...form.getInputProps('paperpublished')}
+                  />
+                </HStack>
+                <HStack>
+                  <TextInput
+                    label="website"
+                    {...form.getInputProps('jwebsite')}
+                  />
+                  <TextInput label="doi" {...form.getInputProps('doi')} />
+                </HStack>
               </VStack>
-              <HStack>
-                <TextInput
-                  label="year"
-                  {...form.getInputProps('jyear')}
-                ></TextInput>
-              </HStack>
-
-              <HStack>
-                <Textarea
-                  label="acknowledgments"
-                  {...form.getInputProps('acknowledgments')}
-                ></Textarea>
-                <Textarea
-                  label="funding"
-                  {...form.getInputProps('funding')}
-                ></Textarea>
-              </HStack>
-              <HStack>
-                <TextInput
-                  label="volume"
-                  {...form.getInputProps('jvolume')}
-                ></TextInput>
-                <TextInput
-                  label="issue"
-                  {...form.getInputProps('jissue')}
-                ></TextInput>
-              </HStack>
-
-              <HStack spacing={10} sx={{ flexWrap: 'wrap' }}>
-                <TextInput
-                  label="received"
-                  {...form.getInputProps('paperreceived')}
-                ></TextInput>
-                <TextInput
-                  label="accepted"
-                  {...form.getInputProps('paperaccepted')}
-                ></TextInput>
-                <TextInput
-                  label="published"
-                  {...form.getInputProps('paperpublished')}
-                ></TextInput>
-              </HStack>
-              <HStack>
-                <TextInput
-                  label="website"
-                  {...form.getInputProps('jwebsite')}
-                ></TextInput>
-                <TextInput
-                  label="doi"
-                  {...form.getInputProps('doi')}
-                ></TextInput>
-              </HStack>
-            </VStack>
-          </Paper>
-          <Button onClick={() => handleSubmit(form.values)}>
-            Add data to template
-          </Button>
-        </VStack>
+            </Paper>
+            <Button onClick={() => handleSubmit(form.values)}>
+              Add data to template
+            </Button>
+          </VStack>
+        )
+      ) : (
+        <Loader />
       )}
     </>
   )

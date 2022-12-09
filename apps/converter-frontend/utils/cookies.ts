@@ -12,7 +12,7 @@ export const setCookie = (
   options: CookieSerializeOptions = {}
 ) => {
   const stringValue =
-    typeof value === 'object' ? 'j:' + JSON.stringify(value) : String(value)
+    typeof value === 'object' ? `j:${JSON.stringify(value)}` : String(value)
 
   if (options.maxAge) {
     options.expires = new Date(Date.now() + options.maxAge)

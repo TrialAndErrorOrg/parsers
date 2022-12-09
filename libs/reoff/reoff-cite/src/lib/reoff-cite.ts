@@ -1,15 +1,15 @@
 import { Root } from 'ooxast'
 import { VFile } from 'vfile'
 import { Data as CSL } from 'csl-json'
-import { findCitations } from 'ooxast-util-citations'
+import { findCitations, Options } from 'ooxast-util-citations'
 
-export default function reoffCite(
-  options: {
-    bibliography?: CSL[]
-    type: 'mendeley' | 'word' | 'citavi' | 'zotero' | 'endnote'
-    log?: boolean
-  } = { type: 'zotero' }
-) {
+// export interface ReoffCiteOptions {
+//   bibliography?: CSL[]
+//   type: 'mendeley' | 'word' | 'citavi' | 'zotero' | 'endnote'
+//   log?: boolean
+// }
+
+export default function reoffCite(options: Options = { type: 'zotero' }) {
   return (tree: Root, vfile: VFile) => {
     if (options.log !== false) {
       console.log(vfile.data.bibliography)

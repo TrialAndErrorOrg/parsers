@@ -103,7 +103,9 @@ export const metaToPreamble = (form: Form): PreambleCommand[] => {
   const preamble = Object.entries(form).reduce(
     (acc: PreambleCommand[], curr: [key: string, value: any]) => {
       const [key, value] = curr
-      if (!value || typeof value === 'number') return acc
+      if (!value || typeof value === 'number') {
+        return acc
+      }
       switch (key) {
         case 'documentclassname':
         case 'documentclassopt':
@@ -137,7 +139,7 @@ export const metaToPreamble = (form: Form): PreambleCommand[] => {
                 args: [`${auth.givenName} ${auth.familyName}`],
               },
               {
-                type: `affil`,
+                type: 'affil',
                 opts: [`${index + 1}`],
                 args: [auth.affiliation],
               },

@@ -12,7 +12,8 @@ import Link from 'next/link'
 // //
 // }
 
-function AuthorPage() { // props: AuthorPageProps
+function AuthorPage() {
+  // props: AuthorPageProps
   const { data: session, status } = useSession()
   if (status !== 'authenticated') {
     return (
@@ -23,7 +24,7 @@ function AuthorPage() { // props: AuthorPageProps
   }
   return (
     <VStack spacing={60}>
-      <Paper padding="xl" shadow="xs" sx={{ width: '100%' }}>
+      <Paper p="xl" shadow="xs" sx={{ width: '100%' }}>
         <Title>Issue 2</Title>
         <AuthAuthorPage query={{ issueIds: [2] }} />
       </Paper>
@@ -61,14 +62,14 @@ export function AuthAuthorPage(props: { query?: Record<string, any> }) {
         <Box key={issue}>
           <Title>Issue {issue}</Title> */}
       {data?.items?.map((item: any) => (
-        <Paper shadow="md" padding="md" sx={{ width: 800 }} key={item.url}>
+        <Paper shadow="md" p="md" sx={{ width: 800 }} key={item.url}>
           <PublicationData
             pub={item}
             items={['title', 'subtitle', 'authors']}
           />
           <Link
             href={`https://submit.trialanderror.org/index.php/jote/workflow/index/${item.id}/1#publication`}
-            passHref
+            passHref={true}
           >
             <a style={{ marginTop: 20 }} target="_blank">
               OJS Link

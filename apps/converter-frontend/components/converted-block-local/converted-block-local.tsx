@@ -3,15 +3,13 @@ import { useClipboard } from '@mantine/hooks'
 import React, { useEffect, useState } from 'react'
 import { VFile } from 'vfile'
 import { Prism as SyntaxHighlighter } from '@mantine/prism'
-import { FaClipboard, FaClipboardList } from 'react-icons/fa'
-import { HStack } from '../stack/stack'
 import shallow from 'zustand/shallow'
 import { useStore } from '../../utils/store'
 
-import Prism from 'prism-react-renderer/prism'
-;(typeof global !== 'undefined' ? global : window).Prism = Prism
+// import Prism from 'prism-react-renderer/prism'
+// ;(typeof global !== 'undefined' ? global : window).Prism = Prism
 
-require('prismjs/components/prism-latex')
+// require('prismjs/components/prism-latex')
 //import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 /* eslint-disable-next-line */
@@ -59,7 +57,7 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
       {/* @ts-ignore  */}
       {vfile?.messages && (
         <>
-          <Box height="20">Images extracted from doc</Box>
+          <Box>Images extracted from doc</Box>
           <Box>
             {vfile?.data?.images
               ? Object.entries(
@@ -87,7 +85,7 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
       )}
       {vfile?.messages && (
         <>
-          <Box height="20">Errors and warnings</Box>
+          <Box>Errors and warnings</Box>
           {vfile?.messages.map((message) => (
             <Text key={String(message)}>{String(message)} </Text>
           ))}
@@ -121,10 +119,9 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
             </HStack>
           </Button> */}
           <SyntaxHighlighter
-            //wrapLines
             withLineNumbers={true}
+            // @ts-expect-error yeahhhh
             language="latex"
-            // CodeTag={Code}
             sx={{}}
             style={{
               maxWidth: '100%',

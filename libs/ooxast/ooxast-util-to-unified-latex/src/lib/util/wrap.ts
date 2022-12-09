@@ -1,5 +1,9 @@
 import { isParagraphContent } from 'unified-latex-types'
-import { UnifiedLatexContent, UnifiedLatexP, UnifiedLatexParagraphContent } from '../types'
+import {
+  UnifiedLatexContent,
+  UnifiedLatexP,
+  UnifiedLatexParagraphContent,
+} from '../types'
 //import { phrasing } from 'mdast-util-phrasing'
 
 export function wrap(nodes: Array<UnifiedLatexContent>) {
@@ -97,7 +101,9 @@ function runs(
 /**
  * Flatten a list of nodes.
  */
-function flatten(nodes: Array<UnifiedLatexContent>): Array<UnifiedLatexContent> {
+function flatten(
+  nodes: Array<UnifiedLatexContent>
+): Array<UnifiedLatexContent> {
   /** @type {Array.UnifiedLatexContent>} */
   const flattened: Array<UnifiedLatexContent> = []
   let index = -1
@@ -127,7 +133,6 @@ function flatten(nodes: Array<UnifiedLatexContent>): Array<UnifiedLatexContent> 
  * @returns {Array.UnifiedLatexContent>}
  */
 function split(node: UnifiedLatexContent): Array<UnifiedLatexContent> {
-  // @ts-expect-error Assume parent.
   return runs(node.children, onphrasing, onnonphrasing)
 
   /**
@@ -143,7 +148,6 @@ function split(node: UnifiedLatexContent): Array<UnifiedLatexContent> {
       const { children, ...rest } = node
       return {
         ...child,
-        // @ts-expect-error: assume matching parent & child.
         children: [{ ...rest, children: child.children }],
       }
     }
@@ -157,10 +161,10 @@ function split(node: UnifiedLatexContent): Array<UnifiedLatexContent> {
    * @param {Array.UnifiedLatexParagraphContent>} nodes
    * @returns UnifiedLatexContent}
    */
-  function onphrasing(nodes: Array<UnifiedLatexParagraphContent>): UnifiedLatexContent {
-    // @ts-expect-error: assume parent.
+  function onphrasing(
+    nodes: Array<UnifiedLatexParagraphContent>
+  ): UnifiedLatexContent {
     const { children, ...rest } = node
-    // @ts-expect-error: assume matching parent & child.
     return { ...rest, children: nodes }
   }
 }

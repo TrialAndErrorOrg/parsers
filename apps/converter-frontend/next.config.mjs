@@ -1,5 +1,8 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const withNx = require('@nrwl/next/plugins/with-nx')
+// @ts-check
+
+import { withNx } from '@nrwl/next/plugins/with-nx.js'
+import path from 'path'
 
 /**
  * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
@@ -10,6 +13,9 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  experimental: {
+    outputFileTracingRoot: new URL('../../', import.meta.url).pathname,
+  },
 }
 
-module.exports = withNx(nextConfig)
+export default withNx(nextConfig)

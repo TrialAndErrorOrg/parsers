@@ -87,7 +87,9 @@ const biblatexCSLMap = {
 
 export function refList(j: J, list: RefList): Environment | undefined {
   // we're parsing it to CSL-JSON first, lot easier to render to bib
-  if (list.children.length === 0) return
+  if (list.children.length === 0) {
+    return
+  }
 
   const csl: CSL[] = refListToCSL(list)
 
@@ -137,12 +139,14 @@ export function refList(j: J, list: RefList): Environment | undefined {
 
 function generateCiteKey(id?: string, index?: number) {
   if (!id) {
-    return `$bib{index}`
+    return `bib${index}`
   }
-  if (!id.match(/\d/)) return id
+  if (!id.match(/\d/)) {
+    return id
+  }
   if (id.slice(-4).match(/(\d{4}|\d{3}[a-z])/)) {
     return id
   }
 
-  return `bib${id.replace(/[^\d]/g, '')}`
+  return `bib${id.replace(/\D/g, '')}`
 }

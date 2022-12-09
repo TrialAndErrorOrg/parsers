@@ -26,7 +26,7 @@ interface OJSAutoCompleteProps {
 const AutoCompleteItem = forwardRef<HTMLDivElement, OJSAutoCompleteProps>(
   ({ value, authors, ...others }: OJSAutoCompleteProps, ref) => (
     <div ref={ref} {...others}>
-      <VStack noWrap>
+      <VStack noWrap={true}>
         <Text>{value}</Text>
         <Text size="xs" color="dimmed">
           {authors}

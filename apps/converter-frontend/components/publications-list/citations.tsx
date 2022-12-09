@@ -1,11 +1,9 @@
-import { Code, Container, Tabs, Text } from '@mantine/core'
+import { Container, Text } from '@mantine/core'
 import { definitions } from 'ojs-client'
-import React from 'react'
 import useSWR from 'swr'
 import { Data as CSL } from 'csl-json'
 // @ts-expect-error no types for cites
 import Cite from 'citation-js'
-import { Prism } from '@mantine/prism'
 
 export const Citations = ({
   value,
@@ -44,7 +42,9 @@ export const Citations = ({
   console.log(data)
   const cite = new Cite(
     data.map((data: CSL) => {
-      if (!data.type) data.type = 'article'
+      if (!data.type) {
+        data.type = 'article'
+      }
       return data
     })
   )

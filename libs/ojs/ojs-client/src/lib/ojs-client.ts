@@ -1,7 +1,6 @@
 import { Http2ServerResponse } from 'http2'
 import { RequestOptions } from 'https'
 import fetch from 'isomorphic-fetch'
-import qs from 'qs'
 import { paths } from './swagger-types'
 import { Responses } from './types'
 
@@ -106,7 +105,9 @@ export default class OJS {
 
     this.authenticatedFetch = async (method, path, data, query = {}) => {
       const queryWithApiToken = { ...query, apiToken: this.token }
-      const queryString = `?${qs.stringify(queryWithApiToken)}`
+      const queryString = `?${new URLSearchParams(
+        queryWithApiToken
+      ).toString()}`
 
       const uri = `${this.endpoint}${path}${queryString}`
       const opts: RequestInit = {

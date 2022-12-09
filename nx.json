@@ -39,6 +39,7 @@
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
+        "cacheDirectory": "/tmp/nx-cache",
         "cacheableOperations": ["build", "lint", "test", "e2e"]
       }
     }

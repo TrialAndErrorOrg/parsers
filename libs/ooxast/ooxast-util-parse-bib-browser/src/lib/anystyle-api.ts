@@ -20,5 +20,5 @@ export async function callAnystyleApi(
   if (error) {
     return [{ error }] as any
   }
-  return response.data
+  return response?.data ?? []
 }

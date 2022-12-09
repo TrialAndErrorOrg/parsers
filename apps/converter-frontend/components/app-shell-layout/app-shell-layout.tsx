@@ -28,9 +28,9 @@ export function AppShellLayout(props: AppShellLayoutProps) {
       // navbarOffsetBreakpoint controls when navbar should no longer be offset with padding-left
       navbarOffsetBreakpoint="sm"
       // fixed prop on AppShell will be automatically added to Header and Navbar
-      fixed
+      fixed={true}
       header={
-        <Header height={70} padding="md">
+        <Header height={70}>
           {/* Handle other responsive styles with MediaQuery component or createStyles function */}
           <div
             style={{ display: 'flex', alignItems: 'center', height: '100%' }}
@@ -59,7 +59,6 @@ export function AppShellLayout(props: AppShellLayoutProps) {
       }
       navbar={
         <Navbar
-          padding="md"
           // Breakpoint at which navbar will be hidden if hidden prop is true
           hiddenBreakpoint="sm"
           // Hides navbar when viewport size is less than value specified in hiddenBreakpoint
@@ -70,7 +69,7 @@ export function AppShellLayout(props: AppShellLayoutProps) {
           width={{ sm: 300, lg: 400 }}
         >
           <Navbar.Section>Journal of Trial and Error</Navbar.Section>
-          <Navbar.Section grow mt="lg">
+          <Navbar.Section grow={true} mt="lg">
             <VStack>
               <Link href="/">Convert</Link>
               <Link href="/ojs">OJS Integration</Link>

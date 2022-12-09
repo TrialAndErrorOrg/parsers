@@ -52,8 +52,8 @@ export async function docxToTexConverter(
     .use(rejourStringify)
     .use(rejourRelatex, {
       documentClass: {
-        name: 'jote-new-article',
-        options: ['empirical', 'authordate'],
+        name: 'jote-article',
+        options: ['empirical', 'author-date'],
       },
     })
     .use(relatexAddPreamble, preamble || [])

@@ -109,7 +109,7 @@ export function findCitations(
       // re-add the spaces that were removed by the split
       const sentencesWithSpaces = sentences.map((s, i) => {
         if (i === sentences.length - 1) return s
-        return s + ' '
+        return `${s} `
       })
 
       const rpr = select('w\\:rPr', kid)
@@ -205,7 +205,14 @@ export function findCitations(
   })
   return tree as Root
 }
-
+/**
+ * Construct a citation for Mendeley or Zotero.
+ * @param curr The citation to construct
+ * @param type The type of citation to construct
+ * @param index The index of the citation
+ * @param bibliography The bibliography to use
+ * @returns The constructed citation and instruction
+ */
 export function constructCitation(
   curr: Citation,
   type: string,
@@ -220,33 +227,13 @@ export function constructCitation(
         citation,
       }
     }
-    // case 'zotero': {
-    //   const citation = constructZoteroCitation(curr, index, bibliography)
-    //   return {
-    //     instr: `ADDIN ZOTERO_ITEM CSL_CITATION ${JSON.stringify(
-    //       constructZoteroCitation(curr, index, bibliography)
-    //     )}`,
-    //     citation,
-    //   }
-    // }
-    // case 'endnote':
-    //   return constructEndnoteCitation(curr, index)
-    // case 'native':
-    //   return constructMendeleyCitation(curr, index)
-    // case 'citavi':
-    //   return constructCitaviCitation(curr, index)
     case 'zotero':
     default: {
       const citation = constructZoteroCitation(curr, index, bibliography)
       return {
-        instr: `ADDIN ZOTERO_ITEM CSL_CITATION ${JSON.stringify(
-          constructZoteroCitation(curr, index, bibliography)
-        )}`,
+        instr: `ADDIN ZOTERO_ITEM CSL_CITATION ${JSON.stringify(citation)}`,
         citation,
       }
-      // throw new Error(
-      //   `Unknown citation type ${type}. Please select a valid type.`
-      // )
     }
   }
 }

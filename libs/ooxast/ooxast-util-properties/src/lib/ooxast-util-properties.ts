@@ -1,10 +1,10 @@
 import { Element } from 'xast'
 import { isElement } from 'xast-util-is-element'
 
-export type PrObject = Record<
-  string,
-  string | boolean | Record<string, string | boolean>
->
+export interface PrObject {
+  [key: string]: string | boolean | PrObject
+}
+
 const reducePr = (nodes: Element[] | undefined): PrObject => {
   return (nodes ?? []).reduce((acc, child) => {
     if (!isElement(child)) {

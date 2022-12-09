@@ -32,10 +32,7 @@ export async function consolidate(
 
     if (DOI) {
       const res = http.get(
-        DOI.replace(
-          /(https:\/\/(dx\.)?doi\.org\/)?(.*?)/,
-          'https://doi.org/$3'
-        ),
+        DOI.replace(/(https:\/\/(dx\.)?doi\.org\/)?(.*)/, 'https://doi.org/$3'),
         {
           headers: {
             Accept: 'application/vnd.citationstyles.csl+json',
@@ -80,10 +77,10 @@ export async function consolidate(
 
   if (error) {
     console.error(error)
-    throw new Error(error)
+    throw new Error(error as string)
   }
 
-  const datas = resolvedPromises.map((res: any, index: number) => {
+  const datas = resolvedPromises?.map((res: any, index: number) => {
     try {
       return consolidates(data[index], res.data, types[index])
     } catch (e) {
@@ -152,7 +149,9 @@ export function dateSim(ref: CSL, csl: CSL) {
   const year1 = parseInt(`${ref['issued']?.['date-parts']?.[0]?.[0] || 0}`)
   const year2 = parseInt(`${csl['issued']?.['date-parts']?.[0]?.[0] || 0}`)
   if (!year1) {
-    if (!ref['issued']) return 1
+    if (!ref['issued']) {
+      return 1
+    }
 
     const year1 = parseInt(`${ref['issued']}`)
     return simNum(year1, year2, 15)
@@ -165,20 +164,34 @@ export function dateSim(ref: CSL, csl: CSL) {
  * kinda close but 2012 and 2001 aren't.
  */
 function simNum(num1: number, num2: number, tolerance = 15) {
-  if (Math.abs(num1 - num2) > tolerance) return 0
+  if (Math.abs(num1 - num2) > tolerance) {
+    return 0
+  }
   return (1 - Math.abs(num1 - num2) / tolerance) ^ 2
 }
 
 function simMaybeString(string1?: any, string2?: any) {
-  if (!string1 && !string2) return 1
-  if (!string1) return 1
-  if (!string2) return 0
+  if (!(string1 || string2)) {
+    return 1
+  }
+  if (!string1) {
+    return 1
+  }
+  if (!string2) {
+    return 0
+  }
   return similarity(`${string1}`, `${string2}`)
 }
 function simMaybe(key: keyof CSL, csls: [CSL, CSL]): number {
-  if (!csls[0][key] && !csls[1][key]) return 0
-  if (!csls[0][key]) return 1
-  if (!csls[1][key]) return 0
+  if (!(csls[0][key] || csls[1][key])) {
+    return 0
+  }
+  if (!csls[0][key]) {
+    return 1
+  }
+  if (!csls[1][key]) {
+    return 0
+  }
 
   return similarity(`${csls[0][key]!}`, `${csls[1][key]}`)
 }
@@ -188,9 +201,15 @@ function simMaybeIndex(
   csls: [CSL, CSL],
   index: number
 ): number {
-  if (!csls[0][key]?.[index] && !csls[1][key]?.[index]) return 1
-  if (!csls[0][key]?.[index]) return 1
-  if (!csls[1][key]?.[index]) return 0
+  if (!(csls[0][key]?.[index] || csls[1][key]?.[index])) {
+    return 1
+  }
+  if (!csls[0][key]?.[index]) {
+    return 1
+  }
+  if (!csls[1][key]?.[index]) {
+    return 0
+  }
 
   return similarity(`${csls[0][key]![index]}`, `${csls[1][key]![index]}`)
 }

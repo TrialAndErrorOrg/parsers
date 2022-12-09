@@ -1,3 +1,4 @@
 {
-  "name": "converter-frontend"
+  "name": "converter-frontend",
+  "type": "module"
 }

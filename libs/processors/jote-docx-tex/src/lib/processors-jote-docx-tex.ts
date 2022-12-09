@@ -10,6 +10,7 @@ import { reoffClean } from 'reoff-clean'
 import reoffCite from 'reoff-cite'
 import reoffParseReferences from 'reoff-parse-references'
 import { VFile } from 'vfile'
+import { Options } from 'ooxast-util-citations'
 
 export async function docxToTex(
   input: Uint8Array,
@@ -35,7 +36,7 @@ export async function docxToTex(
       ],
     })
     .use(reoffParseReferences, { apiUrl, mailto })
-    .use(reoffCite, { type: type || 'mendeley' })
+    .use(reoffCite, { type: type ?? 'mendeley' } as Options)
     .use(reoffRejour)
     .use(rejourRelatex, {
       documentClass: {

@@ -6,7 +6,7 @@ import { tryCatchPromise } from './tryCatchPromise'
 import { tryCatchVoid } from './tryCatchVoid'
 
 export async function extractDocx(docx: Buffer, stream?: Stream): Promise<any> {
-  const [zipfile, zipfileError]: [ZipFile, Error] = await tryCatchPromise(
+  const [zipfile, zipfileError] = await tryCatchPromise(
     openZipFromBuffer(docx, { lazyEntries: true })
   )
   // console.log(zipfile)
@@ -36,9 +36,7 @@ export async function extractDocx(docx: Buffer, stream?: Stream): Promise<any> {
       return
     }
     //console.dir(entry, { depth: null })
-    const [stream, streamError]: [Stream, Error] = await tryCatchPromise(
-      openReadStream(entry)
-    )
+    const [stream, streamError] = await tryCatchPromise(openReadStream(entry))
 
     if (streamError) {
       console.error(streamError)

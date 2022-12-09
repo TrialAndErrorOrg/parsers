@@ -1,18 +1,15 @@
+/* eslint-disable regexp/no-unused-capturing-group */
 import AdmZip from 'adm-zip'
 import { extname } from 'path'
 import { promisify } from 'util'
 import yauzl, { Entry, ZipFile } from 'yauzl'
 
-const tab = '\t',
-  cr = '\n\n',
-  empty = ''
-const tabRegex = new RegExp('<w:tab/>', 'g')
-const tagRegex = new RegExp('(</|<)w:[^>]*>', 'g')
-const extensionRegex = new RegExp('^(.docx|.xlsx|.pptx)$')
-const paragraphRegex = new RegExp(
-  '(<w:t>|<w:t xml:space="preserve">)[^]*?(?=</w:p>)',
-  'g'
-)
+const tab = '\t'
+const cr = '\n\n'
+const tabRegex = /<w:tab\/>/g
+const tagRegex = /(<\/|<)w:[^>]*>/g
+const extensionRegex = /^(.docx|.xlsx|.pptx)$/
+const paragraphRegex = /(<w:t>|<w:t xml:space="preserve">).*?(?=<\/w:p>)/g
 
 /**
  * Get xml data from either a buffer or path,
@@ -128,10 +125,10 @@ export async function getXMLData(
  */
 export const extractText = async (path: string, xmlFilename = 'document') => {
   const xml = await getXMLData(path, { filename: xmlFilename })
-  let paragraph,
-    text = ''
+  let paragraph
+  let text = ''
   while ((paragraph = paragraphRegex.exec(xml))) {
-    text += paragraph[0].replace(tabRegex, tab).replace(tagRegex, empty) + cr
+    text += paragraph[0].replace(tabRegex, tab).replace(tagRegex, '') + cr
   }
   return text
 }

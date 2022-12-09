@@ -23,8 +23,9 @@ export function Settings(props: SettingsProps) {
       search: '',
       email: '',
     },
-    validationRules: {
-      email: (value) => /^\S+@\S+$/.test(value),
+
+    validate: {
+      email: (value) => /^\S[^\s@]*@\S+$/.test(value),
       endpoint: (value) => /^https:\/\/.*?\/api\/v1+$/?.test(value || ''),
     },
   })

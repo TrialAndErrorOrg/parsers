@@ -54,7 +54,9 @@ export const parseTextCite = (string: string, options?: Options) => {
 
   const results = parser.results
 
-  if (!results) return [string]
+  if (!results) {
+    return [string]
+  }
 
   if (options?.showAll) {
     return results
@@ -62,7 +64,9 @@ export const parseTextCite = (string: string, options?: Options) => {
 
   const narrowResults = results?.[0]
 
-  if (!narrowResults) return [string]
+  if (!narrowResults) {
+    return [string]
+  }
 
   // I'm too bad at parsing and I want the original value of the thing
 
@@ -71,7 +75,9 @@ export const parseTextCite = (string: string, options?: Options) => {
 
 function recoverOriginalCitation(cite: (string | Citation)[], ogText: string) {
   const narrowString = cite.reduce((acc: string, curr) => {
-    if (typeof curr !== 'string') return acc
+    if (typeof curr !== 'string') {
+      return acc
+    }
     return acc.replace(curr, '')
   }, ogText)
 

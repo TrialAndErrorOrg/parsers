@@ -89,32 +89,29 @@ export default function Index() {
           setThing(buf)
         }}
       >
-        {(status) => (
-          <Group
-            position="center"
-            spacing="xl"
-            style={{ minHeight: 220, pointerEvents: 'none' }}
-          >
-            <AiOutlineUpload
-              //status={status}
-              style={{
-                width: 80,
-                height: 80,
-                color: status ? 'green' : 'grey',
-              }}
-            />
+        <Group
+          position="center"
+          spacing="xl"
+          style={{ minHeight: 220, pointerEvents: 'none' }}
+        >
+          <AiOutlineUpload
+            //status={status}
+            style={{
+              width: 80,
+              height: 80,
+              // color: status ? 'green' : 'grey',
+            }}
+          />
 
-            <div>
-              <Text size="xl" inline>
-                Drag images here or click to select files
-              </Text>
-              <Text size="sm" color="dimmed" inline mt={7}>
-                Attach as many files as you like, each file should not exceed
-                5mb
-              </Text>
-            </div>
-          </Group>
-        )}
+          <div>
+            <Text size="xl" inline>
+              Drag images here or click to select files
+            </Text>
+            <Text size="sm" color="dimmed" inline mt={7}>
+              Attach as many files as you like, each file should not exceed 5mb
+            </Text>
+          </div>
+        </Group>
       </Dropzone>
       <Title>Input</Title>
       <Code

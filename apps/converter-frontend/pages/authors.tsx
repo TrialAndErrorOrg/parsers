@@ -37,7 +37,6 @@ function AuthorPage() {
 
 export function AuthAuthorPage(props: { query?: Record<string, any> }) {
   const { query } = props
-  // const { data: session, status } = useSession()
   const { data, error } = useSWR(`/api/ojs?${query ? qs.stringify(query) : ''}`)
 
   if (!data || error) {

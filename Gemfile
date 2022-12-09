@@ -2,4 +2,4 @@
 source 'https://rubygems.org'
 gem "anystyle", "~> 1.3"
 
-ruby "~> 2.7.x"
+ruby "~> 2.7.7"

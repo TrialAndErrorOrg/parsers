@@ -27,7 +27,7 @@ export const tests: TestData = {
       },
       {
         input:
-          'We used Gorilla (Anwyl, 2019) to present the visual probe task online and the task is available on the open materials page to preview or clone (https://gorilla.sc/openmaterials/85021).',
+          'We used Gorilla (Anwyl-Irvine et al., 2019) to present the visual probe task online and the task is available on the open materials page to preview or clone (https://gorilla.sc/openmaterials/85021).',
         description: 'Complex case with a URL',
         result: [
           'We used Gorilla ',
@@ -35,11 +35,11 @@ export const tests: TestData = {
             citationId: 'CITE-X',
             citationItems: [
               {
-                id: 'Anwyl2019',
+                id: 'Anwyl-Irvine2019',
                 itemData: {
                   author: [
                     {
-                      family: 'Anwyl',
+                      family: 'Anwyl-Irvine',
                     },
                   ],
                   issued: {
@@ -48,7 +48,7 @@ export const tests: TestData = {
                 },
               },
             ],
-            originalText: '(Anwyl, 2019)',
+            originalText: '(Anwyl-Irvine et al., 2019)',
             properties: {
               noteIndex: 0,
             },

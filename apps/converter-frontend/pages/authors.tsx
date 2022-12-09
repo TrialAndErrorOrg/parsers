@@ -8,7 +8,7 @@ import { VStack } from '../components/stack/stack'
 import qs from 'querystring'
 
 function AuthorPage() {
-  const { data: session, status } = useSession()
+  const { status } = useSession()
   if (status !== 'authenticated') {
     return (
       <Button onClick={() => signIn()} leftIcon={<FaMicrosoft />}>

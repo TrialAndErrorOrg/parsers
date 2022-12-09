@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/style.rb": {
+    "api/style": {
       "includeFiles": "+(Gemfile*|api/style.rb)"
     }
   }

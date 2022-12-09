@@ -6,9 +6,6 @@ import useSWR from 'swr'
 import { PublicationData } from '../components/publications-list/publication-data'
 import { VStack } from '../components/stack/stack'
 import qs from 'querystring'
-// export interface AuthorPageProps {
-// //
-// }
 
 function AuthorPage() {
   // props: AuthorPageProps

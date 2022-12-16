@@ -89,6 +89,17 @@ Convert a `jast` citation syntax tree to list of `csl` objects.
 
 Utility to convert a [jast][jast] tree to a [texast][texast] tree.
 
+### [notion](libs/notion)
+
+#### [`html-to-notion-blocks`](libs/notion/html-to-notion-blocks/README.md)
+
+Transform HTML to Notion blocks
+
+#### [`rehype-notion`](libs/notion/rehype-notion/README.md)
+
+Plugin for `rehype` to turn HTML into Notion blocks
+
+
 ### [ojs](libs/ojs)
 
 #### [`ojs-client`](libs/ojs/ojs-client/README.md)

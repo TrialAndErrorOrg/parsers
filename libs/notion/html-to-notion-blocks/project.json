@@ -1,0 +1,45 @@
+{
+  "name": "notion-html-to-notion-blocks",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/notion/html-to-notion-blocks/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:swc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/libs/notion/html-to-notion-blocks",
+        "tsConfig": "libs/notion/html-to-notion-blocks/tsconfig.lib.json",
+        "packageJson": "libs/notion/html-to-notion-blocks/package.json",
+        "main": "libs/notion/html-to-notion-blocks/src/index.ts",
+        "assets": [
+          "libs/notion/html-to-notion-blocks/*.md"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/notion/html-to-notion-blocks/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
+      "options": {
+        "jestConfig": "libs/notion/html-to-notion-blocks/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

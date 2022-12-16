@@ -30,6 +30,7 @@ import { updateWorkspace } from '@nrwl/jest/src/generators/jest-project/lib/upda
 
 export interface NormalizedSchema extends Schema {
   name: string
+  libsDir: string
   prefix: string
   fileName: string
   projectRoot: string
@@ -57,7 +58,7 @@ const normalizeOptions = (tree: Tree, options: Schema): NormalizedSchema => {
   const projectName = projectDirectory.replace(new RegExp('/', 'g'), '-')
   const fileName = getCaseAwareFileName({
     fileName: options.importPath || projectName,
-    pascalCaseFiles: options.pascalCaseFiles || false,
+    pascalCaseFiles: !!options.pascalCaseFiles,
   })
   const projectRoot = joinPathFragments(libsDir, projectDirectory)
 
@@ -77,6 +78,7 @@ const normalizeOptions = (tree: Tree, options: Schema): NormalizedSchema => {
     projectDirectory,
     parsedTags,
     importPath,
+    libsDir
   }
 }
 
@@ -113,7 +115,7 @@ const updateRootTsConfig = (host: Tree, options: NormalizedSchema) => {
   updateJson(host, 'tsconfig.base.json', (json) => {
     const c = json.compilerOptions
     c.paths = c.paths || {}
-    delete c.paths[options.name]
+    c.paths[options.name] = undefined
 
     //@ts-ignore
     if (c.paths[options.importPath]) {
@@ -127,7 +129,7 @@ const updateRootTsConfig = (host: Tree, options: NormalizedSchema) => {
       joinPathFragments(
         options.projectRoot,
         './src',
-        'index.' + (options.js ? 'js' : 'ts')
+        `index.${(options.js ? 'js' : 'ts')}`
       ),
     ]
 
@@ -136,7 +138,7 @@ const updateRootTsConfig = (host: Tree, options: NormalizedSchema) => {
 }
 
 const updateProject = (tree: Tree, options: NormalizedSchema) => {
-  if (!options.publishable && !options.buildable) {
+  if (!(options.publishable || options.buildable)) {
     return
   }
 
@@ -151,7 +153,7 @@ const updateProject = (tree: Tree, options: NormalizedSchema) => {
       outputPath: `dist/${libsDir}/${options.projectDirectory}`,
       tsConfig: `${options.projectRoot}/tsconfig.lib.json`,
       packageJson: `${options.projectRoot}/package.json`,
-      main: `${options.projectRoot}/src/index` + (options.js ? '.js' : '.ts'),
+      main: `${options.projectRoot}/src/index${(options.js ? '.js' : '.ts')}`,
       assets: [`${options.projectRoot}/*.md`],
     },
   }
@@ -182,25 +184,45 @@ const updateProject = (tree: Tree, options: NormalizedSchema) => {
 }
 
 const addProject = (tree: Tree, options: NormalizedSchema) => {
-  const projectConfiguration: ProjectConfiguration = {
+  const projectConfiguration = {
     root: options.projectRoot,
     sourceRoot: joinPathFragments(options.projectRoot, 'src'),
     projectType: 'library',
-    targets: {},
+    targets: {} as NonNullable<ProjectConfiguration['targets']>,
     tags: options.parsedTags,
-  }
+  } satisfies ProjectConfiguration
+
   if (options.buildable) {
     const { libsDir } = getWorkspaceLayout(tree)
     addDependenciesToPackageJson(tree, {}, { '@nrwl/js': nxVersion })
-    //@ts-ignore
+
     projectConfiguration.targets.build = {
       executor: `@nrwl/js:${options.compiler}`,
       outputs: ['{options.outputPath}'],
       options: {
         outputPath: `dist/${libsDir}/${options.projectDirectory}`,
-        main: `${options.projectRoot}/src/index` + (options.js ? '.js' : '.ts'),
+        main: `${options.projectRoot}/src/index${(options.js ? '.js' : '.ts')}`,
         tsConfig: `${options.projectRoot}/tsconfig.lib.json`,
         assets: [`${options.projectRoot}/*.md`],
+      },
+    }
+
+  if (options.publishable) {
+    projectConfiguration.targets.build.options = {
+      ...projectConfiguration.targets.build.options,
+      packageJson: `${options.projectRoot}/package.json`,
+    }
+  }
+  }
+
+  if (options.unitTestRunner === 'jest') {
+    projectConfiguration.targets.test = {
+      executor: '@nrwl/jest:jest',
+      outputs: ['coverage'],
+      options: {
+        jestConfig: `${options.projectRoot}/jest.config.js`,
+        tsConfig: `${options.projectRoot}/tsconfig.spec.json`,
+        passWithNoTests: true,
       },
     }
   }
@@ -224,6 +246,7 @@ const addJest = async (
     skipSerializers: true,
     testEnvironment: options.testEnvironment,
     skipFormat: true,
+     compiler: options.compiler,
   })
 }
 

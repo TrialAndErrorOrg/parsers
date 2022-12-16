@@ -1,6 +1,6 @@
 const config = {
   displayName: '<%= importPath %>',
-  preset: '<%= offsetFromRoot %>jest.preset.ts',
+  preset: '<%= offsetFromRoot %>jest.preset.js',
   globals: {
     'ts-jest': {
       tsconfig: '<rootDir>/tsconfig.spec.json',

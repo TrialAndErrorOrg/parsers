@@ -1,4 +1,4 @@
-import { isParagraphContent } from 'unified-latex-types'
+import { ContentNode } from '@unified-latex/unified-latex-types'
 import {
   UnifiedLatexContent,
   UnifiedLatexP,

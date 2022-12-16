@@ -29,6 +29,12 @@
       "options": {
         "lintFilePatterns": ["libs/ooxast/ooxast-util-properties/**/*.ts"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
   "tags": []

@@ -212,6 +212,13 @@ const addProject = (tree: Tree, options: NormalizedSchema) => {
       ...projectConfiguration.targets.build.options,
       packageJson: `${options.projectRoot}/package.json`,
     }
+
+    projectConfiguration.targets.deploy = {
+      executor: 'ngx-deploy-npm:deploy',
+      options: {
+        access: 'public'
+      }
+    }
   }
   }
 

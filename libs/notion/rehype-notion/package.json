@@ -1,5 +1,5 @@
 {
-  "name": "@jote/notion/rehype-notion",
+  "name": "rehype-notion",
   "version": "0.0.1",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",

@@ -37,7 +37,7 @@
     "@types/cookie": "^0.5.1",
     "@types/isomorphic-fetch": "^0.0.36",
     "adm-zip": "^0.5.9",
-    "axios": "^0.27.2",
+    "axios": "^1.2.3",
     "bcp-47-match": "^2.0.1",
     "citation-js": "^0.5.7",
     "comma-separated-tokens": "^2.0.2",

@@ -144,7 +144,7 @@
     "@types/xast": "^1.0.2",
     "@types/yauzl": "^2.10.0",
     "@typescript-eslint/eslint-plugin": "5.30.6",
-    "@typescript-eslint/parser": "5.30.6",
+    "@typescript-eslint/parser": "5.48.2",
     "@typescript/analyze-trace": "^0.9.0",
     "@unified-latex/unified-latex-types": "^1.0.12",
     "@vercel/remote-nx": "^1.0.1",

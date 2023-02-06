@@ -143,7 +143,7 @@
     "@types/unist": "^2.0.6",
     "@types/xast": "^1.0.2",
     "@types/yauzl": "^2.10.0",
-    "@typescript-eslint/eslint-plugin": "5.30.6",
+    "@typescript-eslint/eslint-plugin": "5.50.0",
     "@typescript-eslint/parser": "5.30.6",
     "@typescript/analyze-trace": "^0.9.0",
     "@unified-latex/unified-latex-types": "^1.0.12",

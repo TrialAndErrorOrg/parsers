@@ -11,5 +11,6 @@
   "xml.format.splitAttributes": true,
   "xml.codeLens.enabled": true,
   "importCost.timeout": 1,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "eslint.validate": ["json"]
 }

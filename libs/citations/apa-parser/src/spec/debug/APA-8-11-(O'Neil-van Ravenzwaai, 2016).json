@@ -1,0 +1,78 @@
+{
+  "type": "RootNode",
+  "children": [
+    {
+      "type": "ParagraphNode",
+      "children": [
+        {
+          "type": "SentenceNode",
+          "children": [
+            {
+              "type": "PunctuationNode",
+              "value": "("
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "O"
+                },
+                {
+                  "type": "PunctuationNode",
+                  "value": "'"
+                },
+                {
+                  "type": "TextNode",
+                  "value": "Neil"
+                },
+                {
+                  "type": "PunctuationNode",
+                  "value": "-"
+                },
+                {
+                  "type": "TextNode",
+                  "value": "van"
+                }
+              ]
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "Ravenzwaai"
+                }
+              ]
+            },
+            {
+              "type": "PunctuationNode",
+              "value": ","
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "2016"
+                }
+              ]
+            },
+            {
+              "type": "PunctuationNode",
+              "value": ")"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -71,6 +71,6 @@ export function command(j: J, node: Parents, parent: Parent) {
     firstCommandArg,
     ...requiredCommandArgs,
     ...optionalCommandArgs,
-    ...(mapEntry.needsNewline ? [{ type: 'text', value: '\n' } as Text] : []),
+    ...(mapEntry?.needsNewline ? [{ type: 'text', value: '\n' } as Text] : []),
   ])
 }

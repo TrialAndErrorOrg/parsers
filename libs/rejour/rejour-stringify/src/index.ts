@@ -1,1 +1,1 @@
-export * from './lib/rejour-stringify'
+export { default } from './lib/rejour-stringify'

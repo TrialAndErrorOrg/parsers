@@ -1,0 +1,82 @@
+{
+  "type": "RootNode",
+  "children": [
+    {
+      "type": "ParagraphNode",
+      "children": [
+        {
+          "type": "SentenceNode",
+          "children": [
+            {
+              "type": "PunctuationNode",
+              "value": "("
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "Aristotle"
+                }
+              ]
+            },
+            {
+              "type": "PunctuationNode",
+              "value": ","
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "350"
+                }
+              ]
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "B"
+                },
+                {
+                  "type": "PunctuationNode",
+                  "value": "."
+                },
+                {
+                  "type": "TextNode",
+                  "value": "C"
+                },
+                {
+                  "type": "PunctuationNode",
+                  "value": "."
+                },
+                {
+                  "type": "TextNode",
+                  "value": "E"
+                },
+                {
+                  "type": "PunctuationNode",
+                  "value": "."
+                }
+              ]
+            },
+            {
+              "type": "PunctuationNode",
+              "value": ")"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

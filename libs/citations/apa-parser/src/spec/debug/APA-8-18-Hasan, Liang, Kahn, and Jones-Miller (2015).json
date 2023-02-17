@@ -1,0 +1,117 @@
+{
+  "type": "RootNode",
+  "children": [
+    {
+      "type": "ParagraphNode",
+      "children": [
+        {
+          "type": "SentenceNode",
+          "children": [
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "Hasan"
+                }
+              ]
+            },
+            {
+              "type": "PunctuationNode",
+              "value": ","
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "Liang"
+                }
+              ]
+            },
+            {
+              "type": "PunctuationNode",
+              "value": ","
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "Kahn"
+                }
+              ]
+            },
+            {
+              "type": "PunctuationNode",
+              "value": ","
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "and"
+                }
+              ]
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "Jones"
+                },
+                {
+                  "type": "PunctuationNode",
+                  "value": "-"
+                },
+                {
+                  "type": "TextNode",
+                  "value": "Miller"
+                }
+              ]
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "PunctuationNode",
+              "value": "("
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "2015"
+                }
+              ]
+            },
+            {
+              "type": "PunctuationNode",
+              "value": ")"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

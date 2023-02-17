@@ -1,0 +1,118 @@
+{
+  "type": "RootNode",
+  "children": [
+    {
+      "type": "ParagraphNode",
+      "children": [
+        {
+          "type": "SentenceNode",
+          "children": [
+            {
+              "type": "PunctuationNode",
+              "value": "("
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "American"
+                }
+              ]
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "Educational"
+                }
+              ]
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "Research"
+                }
+              ]
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "Association"
+                }
+              ]
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "et"
+                }
+              ]
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "al"
+                },
+                {
+                  "type": "PunctuationNode",
+                  "value": "."
+                }
+              ]
+            },
+            {
+              "type": "PunctuationNode",
+              "value": ","
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "2014"
+                }
+              ]
+            },
+            {
+              "type": "PunctuationNode",
+              "value": ")"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

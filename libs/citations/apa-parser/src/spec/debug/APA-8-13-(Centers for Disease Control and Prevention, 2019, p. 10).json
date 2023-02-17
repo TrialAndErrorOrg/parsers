@@ -1,0 +1,148 @@
+{
+  "type": "RootNode",
+  "children": [
+    {
+      "type": "ParagraphNode",
+      "children": [
+        {
+          "type": "SentenceNode",
+          "children": [
+            {
+              "type": "PunctuationNode",
+              "value": "("
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "Centers"
+                }
+              ]
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "for"
+                }
+              ]
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "Disease"
+                }
+              ]
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "Control"
+                }
+              ]
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "and"
+                }
+              ]
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "Prevention"
+                }
+              ]
+            },
+            {
+              "type": "PunctuationNode",
+              "value": ","
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "2019"
+                }
+              ]
+            },
+            {
+              "type": "PunctuationNode",
+              "value": ","
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "p"
+                },
+                {
+                  "type": "PunctuationNode",
+                  "value": "."
+                }
+              ]
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "10"
+                }
+              ]
+            },
+            {
+              "type": "PunctuationNode",
+              "value": ")"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

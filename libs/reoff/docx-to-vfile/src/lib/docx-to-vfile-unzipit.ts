@@ -54,6 +54,7 @@ export async function docxToVFile(
   for (const url of mediaUrls) {
     images[url] = await entries[`word/${url}`].arrayBuffer()
   }
+  console.dir(images, { depth: null })
   vfile.data.images = images
   return vfile
 }

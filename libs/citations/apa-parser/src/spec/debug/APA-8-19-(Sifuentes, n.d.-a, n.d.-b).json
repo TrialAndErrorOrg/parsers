@@ -1,0 +1,106 @@
+{
+  "type": "RootNode",
+  "children": [
+    {
+      "type": "ParagraphNode",
+      "children": [
+        {
+          "type": "SentenceNode",
+          "children": [
+            {
+              "type": "PunctuationNode",
+              "value": "("
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "Sifuentes"
+                }
+              ]
+            },
+            {
+              "type": "PunctuationNode",
+              "value": ","
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "n"
+                },
+                {
+                  "type": "PunctuationNode",
+                  "value": "."
+                },
+                {
+                  "type": "TextNode",
+                  "value": "d"
+                },
+                {
+                  "type": "PunctuationNode",
+                  "value": "."
+                },
+                {
+                  "type": "PunctuationNode",
+                  "value": "-"
+                },
+                {
+                  "type": "TextNode",
+                  "value": "a"
+                }
+              ]
+            },
+            {
+              "type": "PunctuationNode",
+              "value": ","
+            },
+            {
+              "type": "WhiteSpaceNode",
+              "value": " "
+            },
+            {
+              "type": "WordNode",
+              "children": [
+                {
+                  "type": "TextNode",
+                  "value": "n"
+                },
+                {
+                  "type": "PunctuationNode",
+                  "value": "."
+                },
+                {
+                  "type": "TextNode",
+                  "value": "d"
+                },
+                {
+                  "type": "PunctuationNode",
+                  "value": "."
+                },
+                {
+                  "type": "PunctuationNode",
+                  "value": "-"
+                },
+                {
+                  "type": "TextNode",
+                  "value": "b"
+                }
+              ]
+            },
+            {
+              "type": "PunctuationNode",
+              "value": ")"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

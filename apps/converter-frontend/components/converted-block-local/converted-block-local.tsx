@@ -6,11 +6,50 @@ import { Prism as SyntaxHighlighter } from '@mantine/prism'
 import shallow from 'zustand/shallow'
 import { useStore } from '../../utils/store'
 
+import {
+  BlobReader,
+  BlobWriter,
+  TextReader,
+  TextWriter,
+  ZipReader,
+  ZipWriter,
+} from '@zip.js/zip.js'
 // import Prism from 'prism-react-renderer/prism'
 // ;(typeof global !== 'undefined' ? global : window).Prism = Prism
 
 // require('prismjs/components/prism-latex')
 //import { nord } from 'react-syntax-highlighter/dist/esm/styles/prism'
+
+const extensionMap: Record<string, string> = {
+  emf: 'x-emf',
+}
+
+async function downloadAll(images: { [key: string]: ArrayBuffer }) {
+  const zipWriter = new ZipWriter(new BlobWriter('application/zip'))
+
+  const addedStuff = await Promise.all(
+    Object.entries(images).map(([url, img]) => {
+      const arrayBufferView = new Uint8Array(img)
+      const rawExtension = url.split('.').pop() ?? 'jpg'
+      const fileName = url.split('/').pop() ?? 'image.jpg'
+      const extension = extensionMap[rawExtension] ?? rawExtension
+
+      const file = new Blob([arrayBufferView], {
+        type: `image/${extension}`,
+      })
+      // const blob = new Blob([arrayBufferView], {
+      //   type: `image/${extension}`,
+      // })
+      zipWriter.add(fileName, new BlobReader(file))
+    })
+  )
+  const zipFile = await zipWriter.close()
+
+  window.open(
+    (window.URL ?? window.webkitURL).createObjectURL(zipFile),
+    '_blank'
+  )
+}
 
 /* eslint-disable-next-line */
 export interface ConvertedBlockLocalProps {
@@ -55,7 +94,7 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
       )}
       {/* eslint-disable-next-line*/}
       {/* @ts-ignore  */}
-      {vfile?.messages && (
+      {vfile?.data?.images && (
         <>
           <Box>Images extracted from doc</Box>
           <Box>
@@ -64,11 +103,21 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
                   vfile?.data?.images as { [key: string]: ArrayBuffer }
                 ).map(([url, img]: [url: string, img: ArrayBuffer]) => {
                   const arrayBufferView = new Uint8Array(img)
-                  const blob = new Blob([arrayBufferView], {
-                    type: 'image/jpeg',
-                  })
+                  const rawExtension = url.split('.').pop() ?? 'jpg'
+                  const extension = extensionMap[rawExtension] ?? rawExtension
+
+                  const file = new File(
+                    [arrayBufferView],
+                    url?.split('/')?.pop() ?? url,
+                    {
+                      type: `image/${extension}`,
+                    }
+                  )
+                  // const blob = new Blob([arrayBufferView], {
+                  //   type: `image/${extension}`,
+                  // })
                   const urlCreator = window.URL || window.webkitURL
-                  const imageUrl = urlCreator.createObjectURL(blob)
+                  const imageUrl = urlCreator.createObjectURL(file)
                   // eslint-disable-next-line
                   return (
                     <img
@@ -81,6 +130,10 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
                 })
               : null}
           </Box>
+          <Button onClick={() => downloadAll(vfile.data.images)}>
+            {' '}
+            Download all ⬇️{' '}
+          </Button>
         </>
       )}
       {vfile?.messages && (

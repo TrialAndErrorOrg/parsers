@@ -1,0 +1,16 @@
+{
+  "name": "apa-parser",
+  "version": "0.0.1",
+  "license": "GPL-3.0-or-later",
+  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
+  "description": "Detect inline APA citations in text",
+  "keywords": [
+    "unified",
+    "abstract",
+    "syntax",
+    "tree",
+    "ast"
+  ]
+}

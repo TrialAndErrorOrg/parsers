@@ -5,7 +5,7 @@ import { map } from 'misc'
 import { toXml } from 'xast-util-to-xml'
 import { Root as xastRoot } from 'xast-util-to-xml/lib'
 
-export function rejourStringify() {
+export default function rejourStringify() {
   const compiler: CompilerFunction<Root, string> = (tree) => {
     const mappedTree = map(tree, (node: Root['children'][number]) => {
       if (node.type !== 'element') return node

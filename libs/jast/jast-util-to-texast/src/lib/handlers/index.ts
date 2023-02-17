@@ -23,6 +23,7 @@ import { fig } from './fig'
 import { graphic } from './graphic'
 import { extLink } from './extLink'
 import { p } from './p'
+import { dispQuote } from './disp-quote'
 export * from './italic'
 
 export const handlers = {
@@ -58,6 +59,7 @@ export const handlers = {
   inlineGraphic: graphic,
   graphic,
   back: all,
+  'disp-quote': dispQuote,
 
   refList: refList,
   tbody: all,

@@ -127,16 +127,19 @@ export function xref(j: J, node: Xref) {
       ])
     }
     case 'fn': {
-      const fnContent = j.footnotes[
-        // TODO: [rejour-relatex]: make footnote identification less arbitrary, like a counter or something
-        // @ts-expect-error it is text, it has value
-        parseInt(node.children?.[0]?.value?.replace(/[[\]]/g, '')) - 1
-      ] as any
+      const fnContent =
+        j.footnotes[
+          // prettier-ignore
+          // TODO: [rejour-relatex]: make footnote identification less arbitrary, like a counter or something
+          // @ts-expect-error it is text, it has value
+          (parseInt(node.children?.[0]?.value?.replace(/[[\]]/g, '')) - 1).toString()
+        ]
       return j(node, 'command', { name: 'footnote' }, [
         {
           type: 'commandArg',
-          children:
-            fnContent.type === 'paragraph' ? fnContent.children : [fnContent],
+          // TODO: [rejour-relatex]: texastcontenttype is not always assignable as a child of commandArg
+          // @ts-expect-error texastcontenttype is not always assignable as a child of commandArg
+          children: fnContent, //fnContent.type === 'paragraph' ? fnContent.children : [fnContent],
         },
       ])
     }

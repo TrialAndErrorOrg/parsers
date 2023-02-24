@@ -28,6 +28,7 @@ const main = async () => {
   const input = fs.readFileSync(process.argv[2])
 
   const fullpath = path.resolve(process.argv[2])
+  const filename = path.basename(fullpath)
 
   const dirname = process.argv[3]
     ? path.resolve(process.argv[3])
@@ -52,13 +53,13 @@ const main = async () => {
         path.join(dirname, 'jast.json'),
         JSON.stringify(removePosition(tree), null, 2)
       )
-      fs.writeFileSync(path.join(dirname, 'jast.xml'), toXml(tree))
+      fs.writeFileSync(path.join(dirname, `${filename}.xml`), toXml(tree))
       return tree
     })
-    .use(rejourStringify)
+    .use(rejourRelatex)
     .use(() => (tree) => {
       fs.writeFileSync(
-        path.join(dirname, 'jast.tex'),
+        path.join(dirname, 'texast.json'),
         JSON.stringify(removePosition(tree), null, 2)
       )
       return tree
@@ -69,7 +70,7 @@ const main = async () => {
 
   const res = proc.processSync(vfile)
   const tex = String(res)
-  fs.writeFileSync(path.join('texast.tex'), tex)
+  fs.writeFileSync(path.join(dirname, `${filename}.tex`), tex)
 }
 
 main()

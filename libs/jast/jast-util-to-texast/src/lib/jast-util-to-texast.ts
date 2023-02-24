@@ -89,7 +89,7 @@ export function toTexast(
       documentClass: options.documentClass || { name: 'article' },
       bibname: options.bibname || 'bibliography',
       columnSeparator: !!options.columnSeparator,
-      footnotes: [],
+      footnotes: {},
       booktabs: options.booktabs ?? true,
       rowNumber: 0,
       numberOfRows: 0,

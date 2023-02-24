@@ -74,7 +74,7 @@ export interface Context {
   sectionDepth: number
   bibname: string
   columnSeparator: boolean
-  footnotes: TexastContent[]
+  footnotes: Record<string, TexastContent[]>
   rowNumber: number
   numberOfRows: number
   citationAnalyzer: (node: Node) => string

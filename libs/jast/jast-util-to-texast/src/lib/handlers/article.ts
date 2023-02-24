@@ -11,6 +11,7 @@ import {
 import { select } from 'xast-util-select'
 import { all } from '../all'
 import { J, Node, Root } from '../types'
+import { fnGroup } from './fnGroup'
 
 export function article(j: J, node: Root) {
   const front = select('front', node)
@@ -25,9 +26,10 @@ export function article(j: J, node: Root) {
   if (refList) {
     front?.children?.push(refList)
   }
+
   const footnotes = select('fnGroup', node) as FnGroup | null
   if (footnotes) {
-    j.footnotes = all(j, footnotes)
+    j.footnotes = fnGroup(j, footnotes)
   }
   // console.log(j.footnotes)
 

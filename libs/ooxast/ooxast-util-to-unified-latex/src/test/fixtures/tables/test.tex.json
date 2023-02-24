@@ -1,0 +1,604 @@
+{
+  "type": "root",
+  "content": [
+    {
+      "type": "macro",
+      "content": "documentclass",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "article"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "caption"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "xcolor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "figurex"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "hyperref"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "[",
+          "closeMark": "]",
+          "content": [
+            {
+              "type": "string",
+              "content": "backend=biber,style=apa"
+            }
+          ]
+        },
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "biblatex"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "environment",
+      "env": "document",
+      "content": [
+        {
+          "type": "root",
+          "_renderInfo": {},
+          "content": [
+            {
+              "type": "environment",
+              "env": "table",
+              "content": [
+                {
+                  "type": "environment",
+                  "env": "tabular",
+                  "content": [
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "\\\\"
+                    },
+                    {
+                      "type": "parbreak"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "a"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "A"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "A"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "S"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "\\\\"
+                    },
+                    {
+                      "type": "parbreak"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "a"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "macro",
+                      "content": "multicolumn",
+                      "args": [
+                        {
+                          "type": "argument",
+                          "openMark": "{",
+                          "closeMark": "}",
+                          "content": [
+                            {
+                              "type": "string",
+                              "content": "3"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "argument",
+                          "openMark": "{",
+                          "closeMark": "}",
+                          "content": [
+                            {
+                              "type": "string",
+                              "content": "l"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "argument",
+                          "openMark": "{",
+                          "closeMark": "}",
+                          "content": [
+                            {
+                              "type": "string",
+                              "content": "Three merged guys"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "macro",
+                      "content": "color",
+                      "args": [
+                        {
+                          "type": "argument",
+                          "openMark": "{",
+                          "closeMark": "}",
+                          "content": [
+                            {
+                              "type": "string",
+                              "content": "FF0000"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "macro",
+                      "content": "color",
+                      "args": [
+                        {
+                          "type": "argument",
+                          "openMark": "{",
+                          "closeMark": "}",
+                          "content": [
+                            {
+                              "type": "string",
+                              "content": "FF0000"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "\\\\"
+                    },
+                    {
+                      "type": "parbreak"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "macro",
+                      "content": "emph",
+                      "args": [
+                        {
+                          "type": "argument",
+                          "openMark": "{",
+                          "closeMark": "}",
+                          "content": [
+                            {
+                              "type": "macro",
+                              "content": "textbf",
+                              "args": [
+                                {
+                                  "type": "argument",
+                                  "openMark": "{",
+                                  "closeMark": "}",
+                                  "content": [
+                                    {
+                                      "type": "string",
+                                      "content": "bold italic"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "\\\\"
+                    },
+                    {
+                      "type": "parbreak"
+                    },
+                    {
+                      "type": "macro",
+                      "content": "hline"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "&"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "\\\\"
+                    },
+                    {
+                      "type": "parbreak"
+                    }
+                  ],
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "[",
+                      "closeMark": "]",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "@{} l l l l l @{}"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -16,26 +16,36 @@ import {
   RenderInfo,
 } from './types'
 import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
+import { args, env, m, s } from '@unified-latex/unified-latex-builder'
+import { PB } from './util/PB'
+import { makePackage } from './util/make-package'
+import { cslToBiblatex } from 'csl-to-biblatex'
+import { a } from 'hast-util-to-mdast/lib/handlers/a'
 
 export { one } from './one'
 export { all } from './all'
 export { handlers as defaultHandlers }
 
-export function toUnifiedLatex(
-  tree: Root | Element | Text,
-  options: Options = {
-    newLines: false,
-    checked: '[x]',
-    unchecked: '[ ]',
-    quotes: ['"'],
-    topSection: 0,
-    columnSeparator: false,
-    documentClass: { name: 'article' },
-    bibname: 'References',
+const defaultOptions: Options = {
+  newLines: false,
+  quotes: ['"'],
+  topSection: 1,
+  columnSeparator: false,
+  documentClass: { name: 'article' },
+  bibname: 'References',
+  packages: [
+    'caption',
+    'tabularx',
+    'xcolor',
+    'figurex',
+    'hyperref',
+    { name: 'biblatex', options: ['backend=biber', 'style=apa'] },
+  ],
+}
 
-    //relations: {},
-  }
-) {
+export function toUnifiedLatex(tree: Root | Element | Text, options: Options) {
+  options = { ...defaultOptions, ...options }
+
   const whiteSpaceTransformer = rehypeMinifyWhitespace({
     newlines: options.newLines === true,
   })
@@ -86,11 +96,9 @@ export function toUnifiedLatex(
         ? { ...handlers, ...options.handlers }
         : handlers,
       document: options.document,
-      checked: options.checked || '[x]',
-      unchecked: options.unchecked || '[ ]',
       quotes: options.quotes || ['"'],
       italics: options.italics || 'emph',
-      sectionDepth: options.topSection || 1,
+      sectionDepth: options.topSection ?? 1,
       documentClass: options.documentClass || { name: 'article' },
       bibname: options.bibname || 'bibliography',
       columnSeparator: !!options.columnSeparator,
@@ -102,18 +110,89 @@ export function toUnifiedLatex(
       relations: options.relations || {},
       citeKeys: {},
       citationType: options.citationType || 'mendeley',
+      displayMath: options.displayMath || 'equation',
+      inlineMath: options.inlineMath || '$',
+      xcolor: options.xcolor ?? 'true',
+      strikethrough: options.strikethrough ?? 'sout',
+      inMath: false,
+      title: options.title,
+      footnotes: {},
+      endnotes: {},
+      defaultCol: options.defaultCol || 'l',
+      tabularx: options.tabularx
+        ? {
+            width:
+              typeof options.tabularx === 'object' &&
+              'width' in options.tabularx
+                ? options.tabularx.width
+                : '1.0\\textwidth',
+          }
+        : false,
+      simpleParagraph: false,
+      bibliography: options.bibliography || [],
+      inDisplayMath: false,
     } as Context
   )
 
   const result = one(h, tree, undefined)
 
   if (!result) {
-    unifiedLatex = { type: 'root', content: [] }
-  } else if (Array.isArray(result)) {
-    unifiedLatex = { type: 'root', content: result }
-  } else {
-    unifiedLatex = result
+    return { type: 'root', content: [] } as UnifiedLatexRoot
   }
+
+  unifiedLatex = env('document', result)
+
+  const biblatex = h.bibliography
+    ? Array.isArray(h.bibliography)
+      ? cslToBiblatex(h.bibliography)
+      : s(h.bibliography)
+    : null
+
+  const packages =
+    options.packages
+      ?.filter((p) => {
+        const name = typeof p === 'string' ? p : p.name
+        if (!h.xcolor) {
+          return name !== 'xcolor'
+        }
+
+        if (!h.tabularx) {
+          return name !== 'tabularx'
+        }
+
+        return true
+      })
+      ?.flatMap((p) => [
+        typeof p === 'string' ? makePackage(p) : makePackage(p.name, p.options),
+        PB,
+      ]) || []
+
+  const preamble = options.preamble ?? [
+    ...(h.title ? [PB, m('title', h.title), PB] : []),
+    ...(h.bibliography && h.bibliography.length
+      ? [PB, m('addbibresource', 'bibliography.bib'), PB]
+      : []),
+  ]
+
+  unifiedLatex = {
+    type: 'root',
+    content: [
+      h.documentClass.options
+        ? m(
+            'documentclass',
+            args([h.documentClass.options?.join(', '), h.documentClass.name], {
+              braces: '[]{}',
+            })
+          )
+        : m('documentclass', h.documentClass.name),
+      PB,
+      ...packages,
+      ...(typeof preamble === 'string' ? [s(preamble)] : preamble),
+      ...(biblatex ? [env('filecontents', biblatex, 'bibliography.bib')] : []),
+      PB,
+      unifiedLatex,
+    ],
+  } as UnifiedLatexRoot
 
   return unifiedLatex
 

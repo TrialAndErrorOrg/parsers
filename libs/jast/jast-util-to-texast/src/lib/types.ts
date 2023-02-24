@@ -1,4 +1,5 @@
 import { Node as UnistNode, Parent as UnistParent } from 'unist'
+import { Data as CSL } from 'csl-json'
 
 import {
   Parent as TexastParent,

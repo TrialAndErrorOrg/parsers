@@ -1,20 +1,31 @@
-INFO:  latexindent version 3.9.1, 2021-03-21, a script to indent .tex files
-       latexindent lives here: /usr/local/texlive/2021/texmf-dist/scripts/latexindent/
-       Tue Feb 15 21:40:48 2022
-       Filename: /Users/thomas/Projects/jote-monorepo/libs/processors/docx-to-tex/src/test/fixtures/footnotes/__latexindent_temp.tex
+INFO:  latexindent.pl version 3.18, 2022-06-12, a script to indent .tex files
+       latexindent.pl lives here: /opt/homebrew/Cellar/latexindent/3.18_1/libexec/bin/
+       Fri Feb 24 16:27:16 2023
+       Filename: /Volumes/SSD/Projects/jote-monorepo/libs/ooxast/ooxast-util-to-unified-latex/src/test/fixtures/math/__latexindent_temp_expected.tex
 INFO:  Processing switches:
        -y|--yaml: YAML settings specified via command line
        -c|--cruft: cruft directory
-INFO:  Directory for backup files and /Users/thomas/Projects/jote-monorepo/apps/converter-frontend-e2e/src/fixtures//indent.log: /Users/thomas/Projects/jote-monorepo/apps/converter-frontend-e2e/src/fixtures/
+INFO:  Directory for backup files and /Volumes/SSD/Projects/jote-monorepo/apps/converter-frontend-e2e/src/fixtures//indent.log:
+       /Volumes/SSD/Projects/jote-monorepo/apps/converter-frontend-e2e/src/fixtures/
+INFO:  Perl modules are being loaded from the following directories:
+       /opt/homebrew/opt/perl/lib/perl5/5.36/FindBin.pm
+       /opt/homebrew/Cellar/latexindent/3.18_1/libexec/lib/perl5/YAML/Tiny.pm
+       /opt/homebrew/opt/perl/lib/perl5/5.36/File/Copy.pm
+       /opt/homebrew/opt/perl/lib/perl5/5.36/File/Basename.pm
+       /opt/homebrew/opt/perl/lib/perl5/5.36/Getopt/Long.pm
+       /opt/homebrew/Cellar/latexindent/3.18_1/libexec/lib/perl5/File/HomeDir.pm
+INFO:  LatexIndent perl modules are being loaded from, for example:
+       /opt/homebrew/Cellar/latexindent/3.18_1/libexec/lib/perl5/LatexIndent/Document.pm
 INFO:  YAML settings read: defaultSettings.yaml
-        Reading defaultSettings.yaml from /usr/local/texlive/2021/texmf-dist/scripts/latexindent/defaultSettings.yaml
+       Reading defaultSettings.yaml from /opt/homebrew/Cellar/latexindent/3.18_1/libexec/bin/defaultSettings.yaml
 INFO:  YAML settings read: indentconfig.yaml or .indentconfig.yaml
        Home directory is /Users/thomas (didn't find either indentconfig.yaml or .indentconfig.yaml)
        To specify user settings you would put indentconfig.yaml here: /Users/thomas/indentconfig.yaml
        Alternatively, you can use the hidden file .indentconfig.yaml as: /Users/thomas/.indentconfig.yaml
 INFO:  YAML settings read: -y switch
        YAML setting: defaultIndent:'  '
-       Updating masterSettings with defaultIndent:   
+       single-quoted string found in -y switch: '  ', substitute to   
+       Updating mainSettings with defaultIndent:   
 INFO:  Phase 1: searching for objects
 INFO:  Phase 2: finding surrounding indentation
 INFO:  Phase 3: indenting objects

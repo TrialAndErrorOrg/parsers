@@ -1340,7 +1340,7 @@ export interface FtnDocPropsMap {
 
 export interface FtnEdn extends UnistNode {
   type: 'element'
-  name: 'w:ftnEdn'
+  name: 'w:footnote' | 'w:endnote'
   attributes: {
     'w:id': string
     'w:type'?: FtnEdnVal
@@ -2568,7 +2568,7 @@ export interface Rel<tag extends string = 'rel'> extends UnistNode {
 
 export interface Row extends UnistNode {
   type: 'element'
-  name: 'w:row'
+  name: 'w:tr'
   attributes: {
     'w:rsidDel': string
     'w:rsidR': string

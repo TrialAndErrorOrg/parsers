@@ -72,7 +72,7 @@ export function r(j: J, node: R) {
 
   for (let i = 0; i < props.children.length; i++) {
     const prop = props.children[i]
-    switch (prop.name.replace('w:', '')) {
+    switch (prop.name.replace(/\w+:/, '')) {
       case 'i': {
         text = x('italic', {}, text)
         continue

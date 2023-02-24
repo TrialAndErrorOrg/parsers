@@ -1,0 +1,370 @@
+{
+  "type": "root",
+  "content": [
+    {
+      "type": "macro",
+      "content": "documentclass",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "article"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "caption"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "xcolor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "figurex"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "hyperref"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "[",
+          "closeMark": "]",
+          "content": [
+            {
+              "type": "string",
+              "content": "backend=biber,style=apa"
+            }
+          ]
+        },
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "biblatex"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "environment",
+      "env": "document",
+      "content": [
+        {
+          "type": "root",
+          "_renderInfo": {},
+          "content": [
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "macro",
+              "content": "textbf",
+              "args": [
+                {
+                  "type": "argument",
+                  "openMark": "{",
+                  "closeMark": "}",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "Bold "
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "content": "not bold"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "macro",
+              "content": "emph",
+              "args": [
+                {
+                  "type": "argument",
+                  "openMark": "{",
+                  "closeMark": "}",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "Italic"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "macro",
+              "content": "underline",
+              "args": [
+                {
+                  "type": "argument",
+                  "openMark": "{",
+                  "closeMark": "}",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "Underline"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "macro",
+              "content": "sout",
+              "args": [
+                {
+                  "type": "argument",
+                  "openMark": "{",
+                  "closeMark": "}",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "Strikethrough"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "macro",
+              "content": "textsubscript",
+              "args": [
+                {
+                  "type": "argument",
+                  "openMark": "{",
+                  "closeMark": "}",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "subscript"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "macro",
+              "content": "textsuperscript",
+              "args": [
+                {
+                  "type": "argument",
+                  "openMark": "{",
+                  "closeMark": "}",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "superscript"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "macro",
+              "content": "colorbox",
+              "args": [
+                {
+                  "type": "argument",
+                  "openMark": "{",
+                  "closeMark": "}",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "yellow"
+                    }
+                  ]
+                },
+                {
+                  "type": "argument",
+                  "openMark": "{",
+                  "closeMark": "}",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "highlight yellow"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "string",
+              "content": "red text"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "macro",
+              "content": "fbox",
+              "args": [
+                {
+                  "type": "argument",
+                  "openMark": "{",
+                  "closeMark": "}",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "border"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "string",
+              "content": ""
+            },
+            {
+              "type": "parbreak"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

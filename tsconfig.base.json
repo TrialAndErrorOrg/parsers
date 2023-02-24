@@ -211,6 +211,9 @@
       ],
       "apa-parser": [
         "libs/citations/apa-parser/src/index.ts"
+      ],
+      "csl-to-biblatex": [
+        "libs/citations/csl-to-biblatex/src/index.ts"
       ]
     }
   },

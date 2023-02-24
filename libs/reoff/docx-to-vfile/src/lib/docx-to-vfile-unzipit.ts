@@ -26,6 +26,8 @@ export async function docxToVFile(
 
   const doc = await entries['word/document.xml'].text()
   const foot = (await entries?.['word/footnotes.xml']?.text()) || ''
+  const end = (await entries?.['word/endnotes.xml']?.text()) || ''
+  const styles = (await entries?.['word/styles.xml']?.text()) || ''
   const bib = (await entries?.['customXml/item1.xml']?.text()) || ''
 
   // const {
@@ -37,6 +39,8 @@ export async function docxToVFile(
   const total = `${removeCarriage(doc).slice(0, -'</w:document>'.length)}
   ${removeHeader(foot)}
   ${removeHeader(bib)}
+  ${removeHeader(end)}
+  ${removeHeader(styles)}
   </w:document>`
 
   const vfile = new VFile(total)
@@ -54,7 +58,6 @@ export async function docxToVFile(
   for (const url of mediaUrls) {
     images[url] = await entries[`word/${url}`].arrayBuffer()
   }
-  console.dir(images, { depth: null })
   vfile.data.images = images
   return vfile
 }

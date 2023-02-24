@@ -60,6 +60,7 @@
     "xast-util-has-attribute": "libs/xast/xast-util-has-attribute",
     "xast-util-is-element": "libs/xast/xast-util-is-element",
     "xast-util-select": "libs/xast/xast-util-select",
-    "citations-apa-parser": "libs/citations/apa-parser"
+    "citations-apa-parser": "libs/citations/apa-parser",
+    "citations-csl-to-biblatex": "libs/citations/csl-to-biblatex"
   }
 }

@@ -1,0 +1,378 @@
+{
+  "type": "root",
+  "content": [
+    {
+      "type": "macro",
+      "content": "documentclass",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "article"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "caption"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "xcolor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "figurex"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "hyperref"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "[",
+          "closeMark": "]",
+          "content": [
+            {
+              "type": "string",
+              "content": "backend=biber,style=apa"
+            }
+          ]
+        },
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "biblatex"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "title",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "Title"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "environment",
+      "env": "document",
+      "content": [
+        {
+          "type": "root",
+          "_renderInfo": {},
+          "content": [
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "macro",
+              "content": "section",
+              "args": [
+                {
+                  "type": "argument",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "Heading 1"
+                    }
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
+                }
+              ],
+              "_renderInfo": {
+                "breakAround": true
+              }
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "macro",
+              "content": "subsection",
+              "args": [
+                {
+                  "type": "argument",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "Heading 2"
+                    }
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
+                }
+              ],
+              "_renderInfo": {
+                "breakAround": true
+              }
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "macro",
+              "content": "subsubsection",
+              "args": [
+                {
+                  "type": "argument",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "Heading 3"
+                    }
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
+                }
+              ],
+              "_renderInfo": {
+                "breakAround": true
+              }
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "macro",
+              "content": "paragraph",
+              "args": [
+                {
+                  "type": "argument",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "Heading 4"
+                    }
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
+                }
+              ],
+              "_renderInfo": {
+                "breakAround": true
+              }
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "macro",
+              "content": "subparagraph",
+              "args": [
+                {
+                  "type": "argument",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "Heading 5"
+                    }
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
+                }
+              ],
+              "_renderInfo": {
+                "breakAround": true
+              }
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "environment",
+              "env": "quote",
+              "content": [
+                {
+                  "type": "string",
+                  "content": "A nice quote"
+                }
+              ]
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "environment",
+              "env": "quote",
+              "content": [
+                {
+                  "type": "string",
+                  "content": "An intense quote"
+                }
+              ]
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

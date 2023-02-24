@@ -22,8 +22,6 @@ const isP = (node: Element): node is P =>
   node.type === 'element' && node.name === 'w:p'
 
 export const body: Handle = (h: H, body: Body) => {
-  const bod = all(h, body)
-
   const processedBody = body.children.reduce((acc, child, index) => {
     if (child.type !== 'element') return acc
 

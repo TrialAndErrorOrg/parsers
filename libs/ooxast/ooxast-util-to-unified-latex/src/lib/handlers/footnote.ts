@@ -1,8 +1,17 @@
 import { H, Element } from '../types'
+import { m } from '@unified-latex/unified-latex-builder'
 import { all } from '../all'
 
 export function footnote(h: H, node: Element) {
-  if (node?.attributes?.type === 'separator') return
-  if (parseInt(node?.attributes?.['w:id'] || '0') < 1) return
-  return j(node, 'fn', node.attributes, all(j, node))
+  if (node?.attributes?.type === 'separator') {
+    return
+  }
+  const index = parseInt(node?.attributes?.['w:id'] || '0')
+
+  if (index < 1) {
+    return
+  }
+
+  h.footnotes[index] = all(h, node) ?? []
+  return
 }

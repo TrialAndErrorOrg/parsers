@@ -65,7 +65,6 @@ export function findCitations(
 
     const kids = p.children
     const runs: typeof kids = []
-    console.log(p)
 
     let skipNext = false
     for (const kid of kids) {
@@ -105,7 +104,6 @@ export function findCitations(
       }
 
       const sentences = text.value.split(/(?<=[.?!])\s+(?=[A-Z])/)
-      console.log(sentences)
       // re-add the spaces that were removed by the split
       const sentencesWithSpaces = sentences.map((s, i) => {
         if (i === sentences.length - 1) return s

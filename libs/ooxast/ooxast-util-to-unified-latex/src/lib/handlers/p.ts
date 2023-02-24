@@ -1,11 +1,12 @@
 import { Macro } from '@unified-latex/unified-latex-types'
 import { P } from 'ooxast'
-import { SP, m, s, arg } from '@unified-latex/unified-latex-builder'
+import { SP, m, s, arg, env } from '@unified-latex/unified-latex-builder'
 import { all } from '../all'
 import { H, Handle } from '../types'
 import { getPStyle } from '../util/get-pstyle'
 import { updateRenderInfo } from '@unified-latex/unified-latex-util-render-info'
 import { PB } from '../util/PB'
+import { toString } from 'xast-util-to-string'
 
 const headingList = [
   'part',
@@ -24,12 +25,22 @@ export function getHeadingLevel(p: P) {
 }
 
 export const p: Handle = (h: H, p: P) => {
-  if (h.inTable) {
+  if (h.inTable || h.simpleParagraph) {
     return all(h, p)
   }
+
   const style = getPStyle(p)
   // const res = h(p, 'p', { ...(style ? { style } : {}) }, all(h, p))
   if (!style) return [PB, ...all(h, p), PB]
+
+  if (style.toLowerCase().includes('quote')) {
+    return env('quote', all(h, p))
+  }
+
+  if (style.toLowerCase() === 'title') {
+    h.title = toString(p)
+    return []
+  }
 
   const headingLevel = getHeadingLevel(p)
 

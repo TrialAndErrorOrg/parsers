@@ -88,7 +88,6 @@ function recoverOriginalCitation(cite: (string | Citation)[], ogText: string) {
       (c: string, idx, arr) =>
         `${c}${arr.length > 1 && idx === arr.length - 1 ? '' : ')'}`
     )
-  console.log(originalCites)
 
   let stupidCounterYouShouldKnowBetter = 0
 

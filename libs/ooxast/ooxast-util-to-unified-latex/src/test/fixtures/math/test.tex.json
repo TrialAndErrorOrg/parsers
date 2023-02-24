@@ -1,0 +1,299 @@
+{
+  "type": "root",
+  "content": [
+    {
+      "type": "macro",
+      "content": "documentclass",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "article"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "caption"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "xcolor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "figurex"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "hyperref"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "[",
+          "closeMark": "]",
+          "content": [
+            {
+              "type": "string",
+              "content": "backend=biber,style=apa"
+            }
+          ]
+        },
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "biblatex"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "environment",
+      "env": "document",
+      "content": [
+        {
+          "type": "root",
+          "_renderInfo": {},
+          "content": [
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "environment",
+              "env": "equation",
+              "content": [
+                {
+                  "type": "string",
+                  "content": "\\"
+                },
+                {
+                  "type": "string",
+                  "content": "int"
+                },
+                {
+                  "type": "string",
+                  "content": "_{\\"
+                },
+                {
+                  "type": "string",
+                  "content": "alpha"
+                },
+                {
+                  "type": "string",
+                  "content": "}^{\\"
+                },
+                {
+                  "type": "string",
+                  "content": "beta"
+                },
+                {
+                  "type": "string",
+                  "content": "}{\\"
+                },
+                {
+                  "type": "string",
+                  "content": "frac"
+                },
+                {
+                  "type": "string",
+                  "content": "{\\"
+                },
+                {
+                  "type": "string",
+                  "content": "sum"
+                },
+                {
+                  "type": "string",
+                  "content": "{\\"
+                },
+                {
+                  "type": "string",
+                  "content": "sqrt"
+                },
+                {
+                  "type": "string",
+                  "content": "{\\"
+                },
+                {
+                  "type": "string",
+                  "content": "left"
+                },
+                {
+                  "type": "string",
+                  "content": "("
+                },
+                {
+                  "type": "string",
+                  "content": "x"
+                },
+                {
+                  "type": "string",
+                  "content": "^2\\"
+                },
+                {
+                  "type": "string",
+                  "content": "right"
+                },
+                {
+                  "type": "string",
+                  "content": ")}"
+                },
+                {
+                  "type": "string",
+                  "content": "i"
+                },
+                {
+                  "type": "string",
+                  "content": "}}{"
+                },
+                {
+                  "type": "string",
+                  "content": "dx"
+                },
+                {
+                  "type": "string",
+                  "content": "}\\ }"
+                }
+              ]
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "string",
+              "content": "Some text, then inline math ("
+            },
+            {
+              "type": "string",
+              "content": "$"
+            },
+            {
+              "type": "string",
+              "content": "\\int_a^b"
+            },
+            {
+              "type": "string",
+              "content": "$"
+            },
+            {
+              "type": "string",
+              "content": ")"
+            },
+            {
+              "type": "parbreak"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

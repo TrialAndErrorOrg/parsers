@@ -1,0 +1,238 @@
+{
+  "type": "root",
+  "content": [
+    {
+      "type": "macro",
+      "content": "documentclass",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "article"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "caption"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "xcolor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "figurex"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "hyperref"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "[",
+          "closeMark": "]",
+          "content": [
+            {
+              "type": "string",
+              "content": "backend=biber,style=apa"
+            }
+          ]
+        },
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "biblatex"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "environment",
+      "env": "document",
+      "content": [
+        {
+          "type": "root",
+          "_renderInfo": {},
+          "content": [
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "environment",
+              "env": "figure",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "caption",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": ""
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "macro",
+                  "content": "label",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "fig:rId7"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "macro",
+                  "content": "includegraphics",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "media/image1.jpg"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "string",
+              "content": "Figure "
+            },
+            {
+              "type": "string",
+              "content": "1"
+            },
+            {
+              "type": "string",
+              "content": ": A pretty pic"
+            },
+            {
+              "type": "parbreak"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

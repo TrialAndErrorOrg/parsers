@@ -17,8 +17,8 @@ export function one(
     //   return
     // }
 
-    if (own.call(h.handlers, node.name.replace('w:', ''))) {
-      fn = h.handlers[node.name.replace('w:', '')]
+    if (own.call(h.handlers, node.name.replace(/\w+:/, ''))) {
+      fn = h.handlers[node.name.replace(/\w+:/, '')]
     }
   } else if (own.call(h.handlers, node.type)) {
     fn = h.handlers[node.type]

@@ -76,7 +76,7 @@ export function xref(j: J, node: Xref) {
         }${locator || ''}`
 
         const isParenthetical =
-          plainCitation?.startsWith && plainCitation?.endsWith(')')
+          plainCitation?.startsWith('(') && plainCitation?.endsWith(')')
 
         command = isParenthetical ? 'parencite' : 'textcite'
 

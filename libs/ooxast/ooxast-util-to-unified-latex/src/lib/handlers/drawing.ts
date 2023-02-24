@@ -1,20 +1,38 @@
-import { all } from '../all'
-import { H, Node, Root } from '../types'
-import { x } from 'xastscript'
-import { Article, Front, Body, Back, Fig } from 'unified-latex-types'
+import { H, Handle } from '../types'
 import { Drawing } from 'ooxast'
 import { select } from 'xast-util-select'
+import { env, m } from '@unified-latex/unified-latex-builder'
+import { PB } from '../util/PB'
 
-export function drawing(h: H, node: Drawing): Fig {
+export const drawing: Handle = (h: H, node: Drawing) => {
   const blip = select('a\\:blip', node)
-  if (!blip) return x('fig') as Fig
-  const ref = blip?.attributes?.['r:embed']
-  if (!ref) return x('fig') as Fig
 
-  return x('fig', [
-    x('inline-figure'),
-    x('caption'),
-    x('label'),
-    x('graphic', { 'xlink:href': j.relations[ref] }, []),
-  ]) as Fig
+  if (!blip) {
+    return env('figure', [
+      m('caption', ''),
+      PB,
+      m('label', ''),
+      PB,
+      m('includegraphics', ''),
+    ])
+  }
+  const ref = blip?.attributes?.['r:embed']
+
+  if (!ref) {
+    return env('figure', [
+      m('caption', ''),
+      PB,
+      m('label', ''),
+      PB,
+      m('includegraphics', ''),
+    ])
+  }
+
+  return env('figure', [
+    m('caption', ''),
+    PB,
+    m('label', `fig:${ref}`),
+    PB,
+    m('includegraphics', h.relations[ref]),
+  ])
 }

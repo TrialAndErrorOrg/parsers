@@ -1,0 +1,278 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "root",
+      "children": [
+        {
+          "type": "preamble",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "command",
+                  "name": "documentclass",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "article"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
+                },
+                {
+                  "type": "command",
+                  "name": "usepackage",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "style=apa"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "biblatex"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
+                },
+                {
+                  "type": "command",
+                  "name": "addbibresource",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "bibliography.bib"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
+                },
+                {
+                  "type": "command",
+                  "name": "usepackage",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "graphicx"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
+                },
+                {
+                  "type": "command",
+                  "name": "usepackage",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": false,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "hyperref"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "environment",
+          "name": "document",
+          "children": [
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Number one"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Two"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Three"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Indent"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": []
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Unordered"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "List"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Items"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Indentatio"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": []
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Continuing"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Previous"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "List"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Indentation"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Going down a step again"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": [
+                {
+                  "type": "text",
+                  "value": "Immediately starting other list"
+                }
+              ]
+            },
+            {
+              "type": "paragraph",
+              "children": []
+            },
+            {
+              "type": "paragraph",
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

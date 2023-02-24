@@ -1,5 +1,5 @@
 import { Graphic, List } from 'jast-types'
-import { all } from 'jast-util-to-texast'
+import { all } from '../all'
 import { J } from '../types'
 import { wrapCommandArg } from '../util/wrap-command-arg'
 

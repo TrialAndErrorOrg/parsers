@@ -2,10 +2,6 @@
   "type": "root",
   "children": [
     {
-      "type": "text",
-      "value": " "
-    },
-    {
       "type": "root",
       "children": [
         {
@@ -81,6 +77,10 @@
                   ]
                 },
                 {
+                  "type": "text",
+                  "value": "\n"
+                },
+                {
                   "type": "command",
                   "name": "usepackage",
                   "children": [
@@ -95,6 +95,10 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
                 },
                 {
                   "type": "command",
@@ -2941,19 +2945,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Brown, M. "
-                },
-                {
-                  "type": "text",
-                  "value": "T. & Bussell, J. "
-                },
-                {
-                  "type": "text",
-                  "value": "K. (2011). "
-                },
-                {
-                  "type": "text",
-                  "value": "Medication adherence: WHO cares? "
+                  "value": "Brown, M. T. & Bussell, J. K. (2011). Medication adherence: WHO cares? "
                 },
                 {
                   "type": "command",
@@ -2996,51 +2988,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Hartman, L., Cutolo, M., Bos, R., Opris-Belinski, D., Kok, M. "
-                },
-                {
-                  "type": "text",
-                  "value": "R., Griep-Wentink, H., Klaasen, R., Allaart, C. "
-                },
-                {
-                  "type": "text",
-                  "value": "F., Bruyn, G. "
-                },
-                {
-                  "type": "text",
-                  "value": "A. "
-                },
-                {
-                  "type": "text",
-                  "value": "W., Raterman, H. "
-                },
-                {
-                  "type": "text",
-                  "value": "G., Voshaar, M. "
-                },
-                {
-                  "type": "text",
-                  "value": "J. "
-                },
-                {
-                  "type": "text",
-                  "value": "H., Gomes, N., Pinto, R. "
-                },
-                {
-                  "type": "text",
-                  "value": "M. "
-                },
-                {
-                  "type": "text",
-                  "value": "A., Klausch, L.T., Lems, W. "
-                },
-                {
-                  "type": "text",
-                  "value": "F., & Boers, M. (2021). "
-                },
-                {
-                  "type": "text",
-                  "value": "Medication adherence in older people with rheumatoid arthritis is lower according to electronic monitoring than according to pill count. "
+                  "value": "Hartman, L., Cutolo, M., Bos, R., Opris-Belinski, D., Kok, M. R., Griep-Wentink, H., Klaasen, R., Allaart, C. F., Bruyn, G. A. W., Raterman, H. G., Voshaar, M. J. H., Gomes, N., Pinto, R. M. A., Klausch, L.T., Lems, W. F., & Boers, M. (2021). Medication adherence in older people with rheumatoid arthritis is lower according to electronic monitoring than according to pill count. "
                 },
                 {
                   "type": "command",
@@ -3068,11 +3016,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Jungst, C., Graber, S., Simons, S., Wedemeyer, H. & Lammert, F. (2019). "
-                },
-                {
-                  "type": "text",
-                  "value": "Medication adherence among patients with chronic diseases: A survey-based study in pharmacies. "
+                  "value": "Jungst, C., Graber, S., Simons, S., Wedemeyer, H. & Lammert, F. (2019). Medication adherence among patients with chronic diseases: A survey-based study in pharmacies. "
                 },
                 {
                   "type": "command",
@@ -3115,19 +3059,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Kini, V. & Ho, P. "
-                },
-                {
-                  "type": "text",
-                  "value": "M. (2018). "
-                },
-                {
-                  "type": "text",
-                  "value": "Interventions to improve medication adherence: A review. "
-                },
-                {
-                  "type": "text",
-                  "value": "The "
+                  "value": "Kini, V. & Ho, P. M. (2018). Interventions to improve medication adherence: A review. The "
                 },
                 {
                   "type": "command",

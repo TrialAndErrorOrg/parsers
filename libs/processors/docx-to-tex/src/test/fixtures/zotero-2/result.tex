@@ -1,6 +1,8 @@
- \documentclass{article}
+\documentclass{article}
 \usepackage[style=apa]{biblatex}
-\addbibresource{bibliography.bib}\usepackage{graphicx}\usepackage{hyperref}
+\addbibresource{bibliography.bib}
+\usepackage{graphicx}
+\usepackage{hyperref}
 
 
 
@@ -44,6 +46,7 @@
     title       = {Trial-to-trial carryover effects on spatial attentional bias},
     author      = {Gladwin, T.E. and Figner, B.},
     volume      = {196},
+    url         = {https://doi.org/10.1016/j.actpsy.2019.04.006},
     doi         = {10.1016/j.actpsy.2019.04.006},
     year        = {2019},
     pages       = {51--55},
@@ -86,6 +89,7 @@
 @article{Anderson2019,
     title       = {On the automaticity of attentional orienting to threatening stimuli.},
     author      = {Anderson, Brian A. and Britton, Mark K.},
+    url         = {http://doi.apa.org/getdoi.cfm?doi=10.1037/emo0000596},
     doi         = {10.1037/emo0000596},
     year        = {2019-03-14},
     journal     = {Emotion}
@@ -304,6 +308,7 @@
 @article{Hill2016,
     title       = {Exploring Carry-Over Effects to Elucidate Attention Bias Modification's Mixed Results},
     author      = {Hill, Mackenna and Duval, Elizabeth},
+    url         = {https://www.jyi.org/2016-september/2017/2/18/exploring-carry-over-effects-to-elucidate-attention-bias-modifications-mixed-results},
     publisher   = {Journal of Young Investigators},
     year        = {2016-09-01}
 }
@@ -324,6 +329,7 @@
 @article{Gladwin2020a,
     title       = {Attentional bias for negative expressions depends on previous target location: Replicable effect but unreliable measures},
     author      = {Gladwin, T.E. and Jewiss, M. and Vink, M.},
+    url         = {https://doi.org/10.1080/20445911.2020.1805453},
     doi         = {10.1080/20445911.2020.1805453},
     year        = {2020},
     pages       = {1--11},
@@ -354,6 +360,7 @@
 @article{Lang2008,
     title       = {International affective picture system (IAPS) : affective ratings of pictures and instruction manual},
     author      = {Lang, PJ},
+    url         = {https://ci.nii.ac.jp/naid/20001061266/},
     year        = {2008},
     journal     = {Technical Report}
 }
@@ -375,6 +382,7 @@
     title       = {The heterogeneous world of congruency sequence effects: an update},
     author      = {Duthoo, Wout and Abrahamse, Elger L. and Braem, Senne and Boehler, Carsten N. and Notebaert, Wim},
     volume      = {5},
+    url         = {http://journal.frontiersin.org/article/10.3389/fpsyg.2014.01001/abstract},
     doi         = {10.3389/fpsyg.2014.01001},
     year        = {2014-09-09},
     journal     = {Frontiers in Psychology}
@@ -408,18 +416,6 @@
     year        = {2019-07},
     pages       = {565-566},
     journal     = {Nature Methods}
-}
-
-
-@article{R2020,
-    author      = {R},
-    year        = {2020}
-}
-
-
-@article{R2014,
-    author      = {R},
-    year        = {2014}
 }
 
 \end{filecontents}
@@ -502,7 +498,9 @@ In the current study, we sought to test carryover effects for threat in the dot-
 
 All trials with an incorrect response (2.2\% of trials) or a response time outside of 3 standard deviations from the individual-wise and condition means were removed from all RT analyses (0.6\% of trials). Attentional bias was measured by subtracting mean RTs for congruent trials from incongruent trials. Positive values indicate the level of attentional bias for fearful faces. All analyses were not pre-registered but were pre-planned. As shown in Figure 2A, RTs for congruent trials (\emph{M = }331 ms, \emph{SD} of 72 ms) were significantly shorter for incongruent trials (\emph{M = }342 ms, \emph{SD} of 72 ms), \emph{t}(240) = 20.56, \emph{p} < .001, \emph{d }= 0.16. A congruency effect was also found for percent correct (1.5\%), \emph{t}(240) = 14.31, \emph{p} < .001, \emph{d }= 0.11.
 
-As shown in Figure 2B, carryover effects are measured as the interaction between previous trial congruency (pre-congruent or pre-incongruent) and current trial congruency (congruent or incongruent). The location of the fearful face and the target could repeat from trial to trial, so we further separated carryover effects by target location repetition. We examined target location repetition for two reasons: (a) it is an exploratory approach to analyzing carryover effects and (b) previous studies on carryover effects \parencite{Gladwin2019a} have deliberately prevented cue and target locations repetitions trial-to-trial. We tested for the presence of carryover effects by conducting a 2 × 2 × 2 Generalized Linear Mixed Model (GLMM) with the random effect of subject and the fixed effects of current trial congruency (congruent or incongruent), previous trial congruency (pre-congruent or pre-incongruent) and target location repetition (repeated or non-repeated) on single trial RTs using a Gamma probability distribution with a log link, which accounts for the slightly positive skew of the data\footnote{We also tested a model with a random slope for congruency x previous congruency x target location repetition interaction. Although this model fit our data better (AIC\textsubscript{without random slope} = -26903.474 whereas AIC\textsubscript{with random slope} = -27133.846;models with smaller AIC values fit better), the significant levels of all the fixed effects for this model was very similar to the one reported in the main text, where there was no significant carryover effect.}. Target location repetition was included in the model because previous studies of carryover effects deliberately chose to prevent target locations repetition between trials \parencite{Gladwin2019a}, which leaves open the possibility that target repetition may moderate carryover effects. Similar to the t-test reported above, there was a main effect of current trial type, \emph{F}(1, 46115) = 348.91, \emph{p }< .001: RTs were faster on congruent (\emph{M }= 329, \emph{SD}\emph{ }= 68) relative to incongruent (\emph{M }= 339, \emph{SD }= 69) trials. There was also a main effect of target location repetition (\emph{F}(1, 46115) = 222.06, \emph{p }< .001) wherein RTs were faster for non-repeated target locations (\emph{M }= 330, \emph{SE }= 2.32) relative to repeated locations (\emph{M }= 338, \emph{SE }= 2.38). There was also an interaction between target location repetition and previous trial congruency (\emph{F}(1, 46115) = 6.08, \emph{p }= .01) such that RTs for non-repeated target locations were faster if the previous trial was congruent (\emph{M }= 329, \emph{SE }= 2.34) relative to incongruent (\emph{M }= 331, \emph{SE }= 2.36). Meanwhile, for repeated target location there was no statistically significant difference in RTs between trials where the previous trial was congruent (\emph{M }= 339, \emph{SE }= 2.42) relative to incongruent (\emph{M }= 338, \emph{SE }= 2.42). Critically, neither the 2-way interaction between current trial congruency and previous trial congruency (\emph{F}(1, 46115) = 0.59, \emph{p }= .44) nor the 3-way interaction (\emph{F}(1, 46115) = 0.84, \emph{p }= .36) were significant, indicating that no carryover effects were observed. No other effects were significant.
+As shown in Figure 2B, carryover effects are measured as the interaction between previous trial congruency (pre-congruent or pre-incongruent) and current trial congruency (congruent or incongruent). The location of the fearful face and the target could repeat from trial to trial, so we further separated carryover effects by target location repetition. We examined target location repetition for two reasons: (a) it is an exploratory approach to analyzing carryover effects and (b) previous studies on carryover effects \parencite{Gladwin2019a} have deliberately prevented cue and target locations repetitions trial-to-trial. We tested for the presence of carryover effects by conducting a 2 × 2 × 2 Generalized Linear Mixed Model (GLMM) with the random effect of subject and the fixed effects of current trial congruency (congruent or incongruent), previous trial congruency (pre-congruent or pre-incongruent) and target location repetition (repeated or non-repeated) on single trial RTs using a Gamma probability distribution with a log link, which accounts for the slightly positive skew of the data\footnote{We also tested a model with a random slope for congruency x previous congruency x target location repetition interaction. Although this model fit our data better (AIC\textsubscript{without random slope} = -26903.474 whereas AIC\textsubscript{with random slope} = -27133.846;models with smaller AIC values fit better), the significant levels of all the fixed effects for this model was very similar to the one reported in the main text, where there was no significant carryover effect.
+
+}. Target location repetition was included in the model because previous studies of carryover effects deliberately chose to prevent target locations repetition between trials \parencite{Gladwin2019a}, which leaves open the possibility that target repetition may moderate carryover effects. Similar to the t-test reported above, there was a main effect of current trial type, \emph{F}(1, 46115) = 348.91, \emph{p }< .001: RTs were faster on congruent (\emph{M }= 329, \emph{SD}\emph{ }= 68) relative to incongruent (\emph{M }= 339, \emph{SD }= 69) trials. There was also a main effect of target location repetition (\emph{F}(1, 46115) = 222.06, \emph{p }< .001) wherein RTs were faster for non-repeated target locations (\emph{M }= 330, \emph{SE }= 2.32) relative to repeated locations (\emph{M }= 338, \emph{SE }= 2.38). There was also an interaction between target location repetition and previous trial congruency (\emph{F}(1, 46115) = 6.08, \emph{p }= .01) such that RTs for non-repeated target locations were faster if the previous trial was congruent (\emph{M }= 329, \emph{SE }= 2.34) relative to incongruent (\emph{M }= 331, \emph{SE }= 2.36). Meanwhile, for repeated target location there was no statistically significant difference in RTs between trials where the previous trial was congruent (\emph{M }= 339, \emph{SE }= 2.42) relative to incongruent (\emph{M }= 338, \emph{SE }= 2.42). Critically, neither the 2-way interaction between current trial congruency and previous trial congruency (\emph{F}(1, 46115) = 0.59, \emph{p }= .44) nor the 3-way interaction (\emph{F}(1, 46115) = 0.84, \emph{p }= .36) were significant, indicating that no carryover effects were observed. No other effects were significant.
 
 We followed up the GLMM approach with a Bayesian analysis. Given that there were no clear prior probabilities based on previous research, a diffuse (or uninformative) prior was used in SPSS to quantify evidence for the null hypothesis that there is no carryover effect for threat. A Bayes Factor analysis on a related-sample t-test indicated moderate evidence for the null hypothesis (BF01 = 5.38). In other words, the data is 5.38 times as likely under the null hypothesis than under the alternative hypothesis (i.e., that there is an influence of previous trial congruency on current trial congruency). 
 
@@ -606,9 +604,9 @@ Data Availability Statement:\emph{ }Datasets are available here: https://osf.io/
 
 \section{References}
 
-AUTHO\parencite{R2020}. 
+AUTHOR (2020). 
 
-AUTHO\parencite{R2014}. 
+AUTHOR (2014). 
 
 Anderson, B. A., \& Britton, M. K. (2019). On the automaticity of attentional orienting to threatening stimuli. \emph{Emotion}. https://doi.org/10.1037/emo0000596
 

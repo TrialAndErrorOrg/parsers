@@ -14,10 +14,6 @@
       "system": "https://jats.nlm.nih.gov/publishing/1.2/JATS-journalpublishing1.dtd"
     },
     {
-      "type": "text",
-      "value": " "
-    },
-    {
       "type": "element",
       "name": "article",
       "attributes": {},
@@ -4076,27 +4072,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "AUTHO"
-                    },
-                    {
-                      "type": "element",
-                      "name": "xref",
-                      "attributes": {
-                        "id": "_xref-65",
-                        "refType": "bibr",
-                        "rid": "R2020",
-                        "customType": "{\"noteIndex\":0,\"formattedCitation\":\"R (2020)\",\"plainCitation\":\"R (2020)\"}"
-                      },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "R (2020)"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "value": ". "
+                      "value": "AUTHOR (2020). "
                     }
                   ]
                 },
@@ -4109,27 +4085,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "AUTHO"
-                    },
-                    {
-                      "type": "element",
-                      "name": "xref",
-                      "attributes": {
-                        "id": "_xref-66",
-                        "refType": "bibr",
-                        "rid": "R2014",
-                        "customType": "{\"noteIndex\":0,\"formattedCitation\":\"R (2014)\",\"plainCitation\":\"R (2014)\"}"
-                      },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "R (2014)"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "text",
-                      "value": ". "
+                      "value": "AUTHOR (2014). "
                     }
                   ]
                 },
@@ -4142,19 +4098,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Anderson, B. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "A., & Britton, M. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "K. (2019). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "On the automaticity of attentional orienting to threatening stimuli. "
+                      "value": "Anderson, B. A., & Britton, M. K. (2019). On the automaticity of attentional orienting to threatening stimuli. "
                     },
                     {
                       "type": "element",
@@ -4182,23 +4126,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Becker, S. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "I., Dutt, N., Vromen, J. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "M. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "G., & Horstmann, G. (2017). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "The capture of attention and gaze in the search for emotional photographic faces. "
+                      "value": "Becker, S. I., Dutt, N., Vromen, J. M. G., & Horstmann, G. (2017). The capture of attention and gaze in the search for emotional photographic faces. "
                     },
                     {
                       "type": "element",
@@ -4241,11 +4169,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Cane, J., Sharma, D., & Albery, I. (2009). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "The addiction Stroop task: Examining the fast and slow effects of smoking and marijuana-related cues. "
+                      "value": "Cane, J., Sharma, D., & Albery, I. (2009). The addiction Stroop task: Examining the fast and slow effects of smoking and marijuana-related cues. "
                     },
                     {
                       "type": "element",
@@ -4288,15 +4212,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Carlson, J. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "M., & Fang, L. (2020). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "The stability and reliability of attentional bias measures in the dot-probe task: Evidence from both traditional mean bias scores and trial-level bias scores. "
+                      "value": "Carlson, J. M., & Fang, L. (2020). The stability and reliability of attentional bias measures in the dot-probe task: Evidence from both traditional mean bias scores and trial-level bias scores. "
                     },
                     {
                       "type": "element",
@@ -4324,19 +4240,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Carlson, J. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "M., & Reinke, K. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "S. (2014). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Attending to the fear in your eyes: Facilitated orienting and delayed disengagement. "
+                      "value": "Carlson, J. M., & Reinke, K. S. (2014). Attending to the fear in your eyes: Facilitated orienting and delayed disengagement. "
                     },
                     {
                       "type": "element",
@@ -4379,11 +4283,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Carretié, L. (2014). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Exogenous (automatic) attention to emotional stimuli: A review. "
+                      "value": "Carretié, L. (2014). Exogenous (automatic) attention to emotional stimuli: A review. "
                     },
                     {
                       "type": "element",
@@ -4426,15 +4326,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Clarke, S. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "P., Sharma, D., & Salter, D. (2015). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Examining fast and slow effects for alcohol and negative emotion in problem and social drinkers. "
+                      "value": "Clarke, S. P., Sharma, D., & Salter, D. (2015). Examining fast and slow effects for alcohol and negative emotion in problem and social drinkers. "
                     },
                     {
                       "type": "element",
@@ -4505,19 +4397,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Duthoo, W., Abrahamse, E. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "L., Braem, S., Boehler, C. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "N., & Notebaert, W. (2014). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "The heterogeneous world of congruency sequence effects: An update. "
+                      "value": "Duthoo, W., Abrahamse, E. L., Braem, S., Boehler, C. N., & Notebaert, W. (2014). The heterogeneous world of congruency sequence effects: An update. "
                     },
                     {
                       "type": "element",
@@ -4560,11 +4440,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Fox, E., Russo, R., Bowles, R., & Dutton, K. (2001). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Do threatening stimuli draw or hold visual attention in subclinical anxiety? "
+                      "value": "Fox, E., Russo, R., Bowles, R., & Dutton, K. (2001). Do threatening stimuli draw or hold visual attention in subclinical anxiety? "
                     },
                     {
                       "type": "element",
@@ -4607,15 +4483,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Gladwin, T. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "E. (2017a). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Carryover effects in spatial attentional bias tasks and their relationship to subclinical PTSD symptoms. "
+                      "value": "Gladwin, T. E. (2017a). Carryover effects in spatial attentional bias tasks and their relationship to subclinical PTSD symptoms. "
                     },
                     {
                       "type": "element",
@@ -4658,15 +4526,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Gladwin, T. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "E. (2017b). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Carryover effects in spatial attentional bias tasks and their relationship to subclinical PTSD symptoms. "
+                      "value": "Gladwin, T. E. (2017b). Carryover effects in spatial attentional bias tasks and their relationship to subclinical PTSD symptoms. "
                     },
                     {
                       "type": "element",
@@ -4709,15 +4569,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Gladwin, T. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "E., & Figner, B. (2019). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Trial-to-trial carryover effects on spatial attentional bias. "
+                      "value": "Gladwin, T. E., & Figner, B. (2019). Trial-to-trial carryover effects on spatial attentional bias. "
                     },
                     {
                       "type": "element",
@@ -4760,15 +4612,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Gladwin, T. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "E., Figner, B., & Vink, M. (2019). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Anticipation-specific reliability and trial-to-trial carryover of anticipatory attentional bias for threat. "
+                      "value": "Gladwin, T. E., Figner, B., & Vink, M. (2019). Anticipation-specific reliability and trial-to-trial carryover of anticipatory attentional bias for threat. "
                     },
                     {
                       "type": "element",
@@ -4811,15 +4655,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Gladwin, T. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "E., Jewiss, M., & Vink, M. (2020). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Attentional bias for negative expressions depends on previous target location: Replicable effect but unreliable measures. "
+                      "value": "Gladwin, T. E., Jewiss, M., & Vink, M. (2020). Attentional bias for negative expressions depends on previous target location: Replicable effect but unreliable measures. "
                     },
                     {
                       "type": "element",
@@ -4847,19 +4683,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Gur, R. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "C., Sara, R., Hagendoorn, M., Marom, O., Hughett, P., Macy, L., Turner, T., Bajcsy, R., Posner, A., & Gur, R. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "E. (2002). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "A method for obtaining 3-dimensional facial expressions and its standardization for use in neurocognitive studies. "
+                      "value": "Gur, R. C., Sara, R., Hagendoorn, M., Marom, O., Hughett, P., Macy, L., Turner, T., Bajcsy, R., Posner, A., & Gur, R. E. (2002). A method for obtaining 3-dimensional facial expressions and its standardization for use in neurocognitive studies. "
                     },
                     {
                       "type": "element",
@@ -4902,11 +4726,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Hedge, C., Powell, G., & Sumner, P. (2018). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "The reliability paradox: Why robust cognitive tasks do not produce reliable individual differences. "
+                      "value": "Hedge, C., Powell, G., & Sumner, P. (2018). The reliability paradox: Why robust cognitive tasks do not produce reliable individual differences. "
                     },
                     {
                       "type": "element",
@@ -4949,27 +4769,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Hedger, N., Gray, K. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "L. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "H., Garner, M., & Adams, W. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "J. (2016). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Are visual threats prioritized without awareness? "
-                    },
-                    {
-                      "type": "text",
-                      "value": "A critical review and meta-analysis involving 3 behavioral paradigms and 2696 observers. "
+                      "value": "Hedger, N., Gray, K. L. H., Garner, M., & Adams, W. J. (2016). Are visual threats prioritized without awareness? A critical review and meta-analysis involving 3 behavioral paradigms and 2696 observers. "
                     },
                     {
                       "type": "element",
@@ -5027,11 +4827,7 @@
                     },
                     {
                       "type": "text",
-                      "value": ". "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Journal of Young Investigators. https://doi.org/10.22186/jyi.31.3.9-14"
+                      "value": ". Journal of Young Investigators. https://doi.org/10.22186/jyi.31.3.9-14"
                     }
                   ]
                 },
@@ -5044,11 +4840,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Ho, J., Tumkaya, T., Aryal, S., Choi, H., & Claridge-Chang, A. (2019). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Moving beyond P values: Data analysis with estimation graphics. "
+                      "value": "Ho, J., Tumkaya, T., Aryal, S., Choi, H., & Claridge-Chang, A. (2019). Moving beyond P values: Data analysis with estimation graphics. "
                     },
                     {
                       "type": "element",
@@ -5091,11 +4883,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Imhoff, R., Lange, J., & Germar, M. (2019). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Identification and location tasks rely on different mental processes: A diffusion model account of validity effects in spatial cueing paradigms with emotional stimuli. "
+                      "value": "Imhoff, R., Lange, J., & Germar, M. (2019). Identification and location tasks rely on different mental processes: A diffusion model account of validity effects in spatial cueing paradigms with emotional stimuli. "
                     },
                     {
                       "type": "element",
@@ -5138,15 +4926,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Kruijt, A.-W., Field, A. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "P., & Fox, E. (2016). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Capturing Dynamics of Biased Attention: Are New Attention Variability Measures the Way Forward? "
+                      "value": "Kruijt, A.-W., Field, A. P., & Fox, E. (2016). Capturing Dynamics of Biased Attention: Are New Attention Variability Measures the Way Forward? "
                     },
                     {
                       "type": "element",
@@ -5189,11 +4969,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Kruijt, A.-W., Parsons, S., & Fox, E. (2018). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "A Meta-Analysis of Bias at Baseline in RCTs of Attention Bias Modification: No Evidence for Dot-Probe Bias Towards Threat in Clinical Anxiety and PTSD. "
+                      "value": "Kruijt, A.-W., Parsons, S., & Fox, E. (2018). A Meta-Analysis of Bias at Baseline in RCTs of Attention Bias Modification: No Evidence for Dot-Probe Bias Towards Threat in Clinical Anxiety and PTSD. "
                     },
                     {
                       "type": "element",
@@ -5221,11 +4997,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Lang, P. (2008). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "International affective picture system (IAPS): Affective ratings of pictures and instruction manual. "
+                      "value": "Lang, P. (2008). International affective picture system (IAPS): Affective ratings of pictures and instruction manual. "
                     },
                     {
                       "type": "element",
@@ -5268,11 +5040,7 @@
                     },
                     {
                       "type": "text",
-                      "value": ". "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Stockholm : Department of Neurosciences Karolinska Hospital."
+                      "value": ". Stockholm : Department of Neurosciences Karolinska Hospital."
                     }
                   ]
                 },
@@ -5285,11 +5053,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "MacLeod, C., Mathews, A., & Tata, P. (1986). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Attentional bias in emotional disorders. "
+                      "value": "MacLeod, C., Mathews, A., & Tata, P. (1986). Attentional bias in emotional disorders. "
                     },
                     {
                       "type": "element",
@@ -5332,15 +5096,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Mogg, K., & Bradley, B. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "P. (1998). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "A cognitive-motivational analysis of anxiety. "
+                      "value": "Mogg, K., & Bradley, B. P. (1998). A cognitive-motivational analysis of anxiety. "
                     },
                     {
                       "type": "element",
@@ -5383,19 +5139,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Mogg, K., Waters, A. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "M., & Bradley, B. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "P. (2017). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Attention Bias Modification (ABM): Review of Effects of Multisession ABM Training on Anxiety and Threat-Related Attention in High-Anxious Individuals. "
+                      "value": "Mogg, K., Waters, A. M., & Bradley, B. P. (2017). Attention Bias Modification (ABM): Review of Effects of Multisession ABM Training on Anxiety and Threat-Related Attention in High-Anxious Individuals. "
                     },
                     {
                       "type": "element",
@@ -5438,15 +5182,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Panksepp, J., & Watt, D. (2011). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "What is Basic about Basic Emotions? "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Lasting Lessons from Affective Neuroscience. "
+                      "value": "Panksepp, J., & Watt, D. (2011). What is Basic about Basic Emotions? Lasting Lessons from Affective Neuroscience. "
                     },
                     {
                       "type": "element",
@@ -5489,23 +5225,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Posner, M. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "I., Rafal, R. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "D., Choate, L. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "S., & Vaughan, J. (1985). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Inhibition of return: Neural basis and function. "
+                      "value": "Posner, M. I., Rafal, R. D., Choate, L. S., & Vaughan, J. (1985). Inhibition of return: Neural basis and function. "
                     },
                     {
                       "type": "element",
@@ -5548,15 +5268,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Schmukle, S. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "C. (2005). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Unreliability of the dot probe task. "
+                      "value": "Schmukle, S. C. (2005). Unreliability of the dot probe task. "
                     },
                     {
                       "type": "element",
@@ -5599,23 +5311,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Schubö, A., Gendolla, G. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "H. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "E., Meinecke, C., & Abele, A. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "E. (2006). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Detecting emotional faces and features in a visual search paradigm: Are faces special? "
+                      "value": "Schubö, A., Gendolla, G. H. E., Meinecke, C., & Abele, A. E. (2006). Detecting emotional faces and features in a visual search paradigm: Are faces special? "
                     },
                     {
                       "type": "element",
@@ -5658,15 +5354,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Staugaard, S. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "R. (2009). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Reliability of two versions of the dot-probe task using photographic faces. "
+                      "value": "Staugaard, S. R. (2009). Reliability of two versions of the dot-probe task using photographic faces. "
                     },
                     {
                       "type": "element",
@@ -5709,31 +5397,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Waters, A. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "J., Sayette, M. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "A., Franken, I. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "H. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "A., & Schwartz, J. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "E. (2005). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Generalizability of carry-over effects in the emotional Stroop task. "
+                      "value": "Waters, A. J., Sayette, M. A., Franken, I. H. A., & Schwartz, J. E. (2005). Generalizability of carry-over effects in the emotional Stroop task. "
                     },
                     {
                       "type": "element",
@@ -5776,23 +5440,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Wilson, S. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "J., Sayette, M. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "A., Fiez, J. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "A., & Brough, E. (2007). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Carry-over effects of smoking cue exposure on working memory performance. "
+                      "value": "Wilson, S. J., Sayette, M. A., Fiez, J. A., & Brough, E. (2007). Carry-over effects of smoking cue exposure on working memory performance. "
                     },
                     {
                       "type": "element",
@@ -5835,19 +5483,7 @@
                   "children": [
                     {
                       "type": "text",
-                      "value": "Zvielli, A., Bernstein, A., & Koster, E. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "H. "
-                    },
-                    {
-                      "type": "text",
-                      "value": "W. (2015). "
-                    },
-                    {
-                      "type": "text",
-                      "value": "Temporal Dynamics of Attentional Bias. "
+                      "value": "Zvielli, A., Bernstein, A., & Koster, E. H. W. (2015). Temporal Dynamics of Attentional Bias. "
                     },
                     {
                       "type": "element",
@@ -13273,118 +12909,6 @@
                       ]
                     }
                   ]
-                },
-                {
-                  "type": "element",
-                  "name": "ref",
-                  "attributes": {
-                    "id": "R2020"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "elementCitation",
-                      "attributes": {
-                        "publicationType": "standard"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "year",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "2020"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "personGroup",
-                          "attributes": {
-                            "personGroupType": "author"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "name",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "surname",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "R"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "ref",
-                  "attributes": {
-                    "id": "R2014"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "elementCitation",
-                      "attributes": {
-                        "publicationType": "standard"
-                      },
-                      "children": [
-                        {
-                          "type": "element",
-                          "name": "year",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "2014"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "personGroup",
-                          "attributes": {
-                            "personGroupType": "author"
-                          },
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "name",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "surname",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "R"
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
                 }
               ]
             },
@@ -13413,11 +12937,7 @@
                         },
                         {
                           "type": "text",
-                          "value": "We also tested a model with a random slope for congruency x previous congruency x target location repetition interaction. "
-                        },
-                        {
-                          "type": "text",
-                          "value": "Although this model fit our data better (AIC"
+                          "value": "We also tested a model with a random slope for congruency x previous congruency x target location repetition interaction. Although this model fit our data better (AIC"
                         },
                         {
                           "type": "element",

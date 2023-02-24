@@ -14,10 +14,6 @@
       "system": "https://jats.nlm.nih.gov/publishing/1.2/JATS-journalpublishing1.dtd"
     },
     {
-      "type": "text",
-      "value": " "
-    },
-    {
       "type": "element",
       "name": "article",
       "attributes": {},

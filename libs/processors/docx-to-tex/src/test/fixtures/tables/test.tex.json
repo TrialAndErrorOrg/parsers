@@ -2,10 +2,6 @@
   "type": "root",
   "children": [
     {
-      "type": "text",
-      "value": " "
-    },
-    {
       "type": "root",
       "children": [
         {
@@ -81,6 +77,10 @@
                   ]
                 },
                 {
+                  "type": "text",
+                  "value": "\n"
+                },
+                {
                   "type": "command",
                   "name": "usepackage",
                   "children": [
@@ -95,6 +95,10 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
                 },
                 {
                   "type": "command",

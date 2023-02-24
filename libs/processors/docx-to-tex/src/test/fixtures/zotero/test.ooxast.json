@@ -7,10 +7,6 @@
       "value": "version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\""
     },
     {
-      "type": "text",
-      "value": "\n"
-    },
-    {
       "type": "element",
       "name": "w:document",
       "attributes": {
@@ -42945,7 +42941,7 @@
         },
         {
           "type": "text",
-          "value": "\n  \r\n"
+          "value": "\n  \n"
         },
         {
           "type": "element",

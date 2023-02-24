@@ -14,10 +14,6 @@
       "system": "https://jats.nlm.nih.gov/publishing/1.2/JATS-journalpublishing1.dtd"
     },
     {
-      "type": "text",
-      "value": " "
-    },
-    {
       "type": "element",
       "name": "article",
       "attributes": {},
@@ -418,8 +414,20 @@
                   "value": ""
                 },
                 {
-                  "type": "text",
-                  "value": "(Schwarz & Oyserman, 2001, p. 128)"
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-2",
+                    "refType": "bibr",
+                    "rid": "Schwarz2001",
+                    "customType": "{\"locator\":\"128\",\"label\":\"page\",\"noteIndex\":0,\"formattedCitation\":\"(Schwarz & Oyserman, 2001, p. 128)\",\"plainCitation\":\"(Schwarz & Oyserman, 2001, p. 128)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Schwarz & Oyserman, 2001, p. 128)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -459,8 +467,20 @@
                   "value": ""
                 },
                 {
-                  "type": "text",
-                  "value": "(James et al., 2017, p. 120)"
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-3",
+                    "refType": "bibr",
+                    "rid": "James2017",
+                    "customType": "{\"locator\":\"120\",\"label\":\"page\",\"noteIndex\":0,\"formattedCitation\":\"(James et al., 2017, p. 120)\",\"plainCitation\":\"(James et al., 2017, p. 120)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(James et al., 2017, p. 120)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -519,7 +539,7 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-2",
+                    "id": "_xref-4",
                     "refType": "bibr",
                     "rid": "Dutcher2015",
                     "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Dutcher et al., 2015)\",\"plainCitation\":\"(Dutcher et al., 2015)\"}"
@@ -547,7 +567,7 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-3",
+                    "id": "_xref-5",
                     "refType": "bibr",
                     "rid": "Charness2018",
                     "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Charness et al., 2018)\",\"plainCitation\":\"(Charness et al., 2018)\"}"
@@ -583,7 +603,7 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-4",
+                    "id": "_xref-6",
                     "refType": "bibr",
                     "rid": "Andersen2018",
                     "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Andersen et al., 2018; Gneezy & List, 2006)\",\"plainCitation\":\"(Andersen et al., 2018; Gneezy & List, 2006)\"}"
@@ -599,7 +619,7 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-5",
+                    "id": "_xref-7",
                     "refType": "bibr",
                     "rid": "Gneezy2006",
                     "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Andersen et al., 2018; Gneezy & List, 2006)\",\"plainCitation\":\"(Andersen et al., 2018; Gneezy & List, 2006)\"}"
@@ -723,8 +743,20 @@
                   "value": ""
                 },
                 {
-                  "type": "text",
-                  "value": "(Rossman & Wilson, 1985, p. 631)"
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-8",
+                    "refType": "bibr",
+                    "rid": "Rossman1985",
+                    "customType": "{\"locator\":\"631\",\"label\":\"page\",\"noteIndex\":0,\"formattedCitation\":\"(Rossman & Wilson, 1985, p. 631)\",\"plainCitation\":\"(Rossman & Wilson, 1985, p. 631)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Rossman & Wilson, 1985, p. 631)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -747,8 +779,20 @@
                   "value": ""
                 },
                 {
-                  "type": "text",
-                  "value": "(Rossman & Wilson, 1985, p. 632)"
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-9",
+                    "refType": "bibr",
+                    "rid": "Rossman1985",
+                    "customType": "{\"locator\":\"632\",\"label\":\"page\",\"noteIndex\":0,\"formattedCitation\":\"(Rossman & Wilson, 1985, p. 632)\",\"plainCitation\":\"(Rossman & Wilson, 1985, p. 632)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Rossman & Wilson, 1985, p. 632)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -767,8 +811,36 @@
                   "value": ""
                 },
                 {
-                  "type": "text",
-                  "value": "(Bryman, 2006, p. 105; Dewasiri et al., 2018)"
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-10",
+                    "refType": "bibr",
+                    "rid": "Bryman2006",
+                    "customType": "{\"locator\":\"105\",\"label\":\"page\",\"noteIndex\":0,\"formattedCitation\":\"(Bryman, 2006, p. 105; Dewasiri et al., 2018)\",\"plainCitation\":\"(Bryman, 2006, p. 105; Dewasiri et al., 2018)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Bryman, 2006, p. 105"
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-11",
+                    "refType": "bibr",
+                    "rid": "Dewasiri2018",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Bryman, 2006, p. 105; Dewasiri et al., 2018)\",\"plainCitation\":\"(Bryman, 2006, p. 105; Dewasiri et al., 2018)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": " Dewasiri et al., 2018)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -803,7 +875,7 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-6",
+                    "id": "_xref-12",
                     "refType": "bibr",
                     "rid": "Converse1984",
                     "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Converse, 1984; Greenfield et al., 2006; Schuman & Presser, 1979; Schwarz, 1999)\",\"plainCitation\":\"(Converse, 1984; Greenfield et al., 2006; Schuman & Presser, 1979; Schwarz, 1999)\"}"
@@ -819,7 +891,7 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-7",
+                    "id": "_xref-13",
                     "refType": "bibr",
                     "rid": "Greenfield2006",
                     "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Converse, 1984; Greenfield et al., 2006; Schuman & Presser, 1979; Schwarz, 1999)\",\"plainCitation\":\"(Converse, 1984; Greenfield et al., 2006; Schuman & Presser, 1979; Schwarz, 1999)\"}"
@@ -835,7 +907,7 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-8",
+                    "id": "_xref-14",
                     "refType": "bibr",
                     "rid": "Schuman1979",
                     "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Converse, 1984; Greenfield et al., 2006; Schuman & Presser, 1979; Schwarz, 1999)\",\"plainCitation\":\"(Converse, 1984; Greenfield et al., 2006; Schuman & Presser, 1979; Schwarz, 1999)\"}"
@@ -851,7 +923,7 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-9",
+                    "id": "_xref-15",
                     "refType": "bibr",
                     "rid": "Schwarz1999",
                     "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Converse, 1984; Greenfield et al., 2006; Schuman & Presser, 1979; Schwarz, 1999)\",\"plainCitation\":\"(Converse, 1984; Greenfield et al., 2006; Schuman & Presser, 1979; Schwarz, 1999)\"}"
@@ -928,8 +1000,20 @@
                   "value": ""
                 },
                 {
-                  "type": "text",
-                  "value": "(Schuman & Presser, 1979, p. 365)"
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-16",
+                    "refType": "bibr",
+                    "rid": "Schuman1979",
+                    "customType": "{\"locator\":\"365\",\"label\":\"page\",\"noteIndex\":0,\"formattedCitation\":\"(Schuman & Presser, 1979, p. 365)\",\"plainCitation\":\"(Schuman & Presser, 1979, p. 365)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Schuman & Presser, 1979, p. 365)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -991,7 +1075,7 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-10",
+                    "id": "_xref-17",
                     "refType": "bibr",
                     "rid": "Greenfield2006",
                     "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Greenfield et al., 2006)\",\"plainCitation\":\"(Greenfield et al., 2006)\"}"
@@ -1033,8 +1117,20 @@
                   "value": ""
                 },
                 {
-                  "type": "text",
-                  "value": "(Schwarz & Oyserman, 2001, p. 128)"
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-18",
+                    "refType": "bibr",
+                    "rid": "Schwarz2001",
+                    "customType": "{\"locator\":\"128\",\"label\":\"page\",\"noteIndex\":0,\"formattedCitation\":\"(Schwarz & Oyserman, 2001, p. 128)\",\"plainCitation\":\"(Schwarz & Oyserman, 2001, p. 128)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Schwarz & Oyserman, 2001, p. 128)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -1057,8 +1153,20 @@
                   "value": ""
                 },
                 {
-                  "type": "text",
-                  "value": "(Schwarz & Oyserman, 2001, p. 131)"
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-19",
+                    "refType": "bibr",
+                    "rid": "Schwarz2001",
+                    "customType": "{\"locator\":\"131\",\"label\":\"page\",\"noteIndex\":0,\"formattedCitation\":\"(Schwarz & Oyserman, 2001, p. 131)\",\"plainCitation\":\"(Schwarz & Oyserman, 2001, p. 131)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Schwarz & Oyserman, 2001, p. 131)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -1077,8 +1185,20 @@
                   "value": ""
                 },
                 {
-                  "type": "text",
-                  "value": "(Friborg & Rosenvinge, 2013)"
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-20",
+                    "refType": "bibr",
+                    "rid": "Friborg2013",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Friborg & Rosenvinge, 2013)\",\"plainCitation\":\"(Friborg & Rosenvinge, 2013)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Friborg & Rosenvinge, 2013)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -1166,7 +1286,7 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-11",
+                    "id": "_xref-21",
                     "refType": "bibr",
                     "rid": "Dutcher2015",
                     "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Dutcher et al., 2015)\",\"plainCitation\":\"(Dutcher et al., 2015)\"}"
@@ -1199,8 +1319,20 @@
                   "value": ""
                 },
                 {
-                  "type": "text",
-                  "value": "(Dutcher et al., 2015, p. 3)"
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-22",
+                    "refType": "bibr",
+                    "rid": "Dutcher2015",
+                    "customType": "{\"locator\":\"3\",\"label\":\"page\",\"noteIndex\":0,\"formattedCitation\":\"(Dutcher et al., 2015, p. 3)\",\"plainCitation\":\"(Dutcher et al., 2015, p. 3)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Dutcher et al., 2015, p. 3)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -1223,8 +1355,20 @@
                   "value": ""
                 },
                 {
-                  "type": "text",
-                  "value": "(Charness & Grieco, 2018, p. 75)"
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-23",
+                    "refType": "bibr",
+                    "rid": "Charness2018",
+                    "customType": "{\"locator\":\"75\",\"label\":\"page\",\"noteIndex\":0,\"formattedCitation\":\"(Charness & Grieco, 2018, p. 75)\",\"plainCitation\":\"(Charness & Grieco, 2018, p. 75)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Charness & Grieco, 2018, p. 75)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -1243,8 +1387,20 @@
                   "value": ""
                 },
                 {
-                  "type": "text",
-                  "value": "(Charness et al., 2018, p. 75)"
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-24",
+                    "refType": "bibr",
+                    "rid": "Charness2018",
+                    "customType": "{\"locator\":\"75\",\"label\":\"page\",\"noteIndex\":0,\"formattedCitation\":\"(Charness et al., 2018, p. 75)\",\"plainCitation\":\"(Charness et al., 2018, p. 75)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Charness et al., 2018, p. 75)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -1298,7 +1454,7 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-12",
+                    "id": "_xref-25",
                     "refType": "bibr",
                     "rid": "Christensen-Szalanski1980",
                     "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Christensen-Szalanski, 1980)\",\"plainCitation\":\"(Christensen-Szalanski, 1980)\"}"
@@ -1331,8 +1487,20 @@
                   "value": ""
                 },
                 {
-                  "type": "text",
-                  "value": "(Galesic & Bosnjak, 2009, p. 350)"
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-26",
+                    "refType": "bibr",
+                    "rid": "Galesic2009",
+                    "customType": "{\"locator\":\"350\",\"label\":\"page\",\"noteIndex\":0,\"formattedCitation\":\"(Galesic & Bosnjak, 2009, p. 350)\",\"plainCitation\":\"(Galesic & Bosnjak, 2009, p. 350)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Galesic & Bosnjak, 2009, p. 350)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -1371,8 +1539,20 @@
                   "value": ""
                 },
                 {
-                  "type": "text",
-                  "value": "(Charness et al., 2018, p. 78)"
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-27",
+                    "refType": "bibr",
+                    "rid": "Charness2018",
+                    "customType": "{\"locator\":\"78\",\"label\":\"page\",\"noteIndex\":0,\"formattedCitation\":\"(Charness et al., 2018, p. 78)\",\"plainCitation\":\"(Charness et al., 2018, p. 78)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Charness et al., 2018, p. 78)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -1560,8 +1740,20 @@
                   "value": ""
                 },
                 {
-                  "type": "text",
-                  "value": "(Charness et al., 2018, p. 82)"
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-28",
+                    "refType": "bibr",
+                    "rid": "Charness2018",
+                    "customType": "{\"locator\":\"82\",\"label\":\"page\",\"noteIndex\":0,\"formattedCitation\":\"(Charness et al., 2018, p. 82)\",\"plainCitation\":\"(Charness et al., 2018, p. 82)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Charness et al., 2018, p. 82)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -1664,7 +1856,7 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-13",
+                    "id": "_xref-29",
                     "refType": "bibr",
                     "rid": "Paulin2012",
                     "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Paulin & Suneson, 2012)\",\"plainCitation\":\"(Paulin & Suneson, 2012)\"}"
@@ -1720,7 +1912,7 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-14",
+                    "id": "_xref-30",
                     "refType": "bibr",
                     "rid": "Wang2011",
                     "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Wang et al., 2011; Witherspoon et al., 2013)\",\"plainCitation\":\"(Wang et al., 2011; Witherspoon et al., 2013)\"}"
@@ -1736,7 +1928,7 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-15",
+                    "id": "_xref-31",
                     "refType": "bibr",
                     "rid": "Witherspoon2013",
                     "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Wang et al., 2011; Witherspoon et al., 2013)\",\"plainCitation\":\"(Wang et al., 2011; Witherspoon et al., 2013)\"}"
@@ -1938,8 +2130,20 @@
                   "value": ""
                 },
                 {
-                  "type": "text",
-                  "value": "(Aguinis & Bradley, 2014, p. 361)"
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-32",
+                    "refType": "bibr",
+                    "rid": "Aguinis2014",
+                    "customType": "{\"locator\":\"361\",\"label\":\"page\",\"noteIndex\":0,\"formattedCitation\":\"(Aguinis & Bradley, 2014, p. 361)\",\"plainCitation\":\"(Aguinis & Bradley, 2014, p. 361)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Aguinis & Bradley, 2014, p. 361)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -2061,7 +2265,7 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-16",
+                    "id": "_xref-33",
                     "refType": "bibr",
                     "rid": "Bock2002",
                     "customType": "{\"noteIndex\":0,\"formattedCitation\":\"BockKim (2002)\",\"plainCitation\":\"BockKim (2002)\"}"
@@ -2081,15 +2285,15 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-17",
+                    "id": "_xref-34",
                     "refType": "bibr",
                     "rid": "Lin2007",
-                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\" and Lin (2007)\",\"plainCitation\":\" and Lin (2007)\"}"
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\" and Lin (2007\",\"plainCitation\":\" and Lin (2007\"}"
                   },
                   "children": [
                     {
                       "type": "text",
-                      "value": " and Lin (2007)"
+                      "value": " and Lin (2007"
                     }
                   ]
                 },
@@ -2202,7 +2406,7 @@
                   "type": "element",
                   "name": "xref",
                   "attributes": {
-                    "id": "_xref-18",
+                    "id": "_xref-35",
                     "refType": "bibr",
                     "rid": "Gwet2014",
                     "customType": "{\"prefix\":\"AC\",\"noteIndex\":0,\"formattedCitation\":\"(AC; Gwet, 2014)\",\"plainCitation\":\"(AC; Gwet, 2014)\"}"
@@ -5478,8 +5682,20 @@
                   "value": ""
                 },
                 {
-                  "type": "text",
-                  "value": "(Galesic & Bosnjak, 2009)"
+                  "type": "element",
+                  "name": "xref",
+                  "attributes": {
+                    "id": "_xref-36",
+                    "refType": "bibr",
+                    "rid": "Galesic2009",
+                    "customType": "{\"noteIndex\":0,\"formattedCitation\":\"(Galesic & Bosnjak, 2009)\",\"plainCitation\":\"(Galesic & Bosnjak, 2009)\"}"
+                  },
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "(Galesic & Bosnjak, 2009)"
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -13616,6 +13832,62 @@
                   "type": "element",
                   "name": "ref",
                   "attributes": {
+                    "id": "James2017"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2017"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "James"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
                     "id": "Dutcher2015"
                   },
                   "children": [
@@ -13843,6 +14115,192 @@
                                     {
                                       "type": "text",
                                       "value": "List"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Rossman1985"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1985"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Rossman"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Wilson"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Bryman2006"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2006"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Bryman"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Dewasiri2018"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2018"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Dewasiri"
                                     }
                                   ]
                                 }
@@ -14100,6 +14558,80 @@
                   "type": "element",
                   "name": "ref",
                   "attributes": {
+                    "id": "Friborg2013"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2013"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Friborg"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Rosenvinge"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
                     "id": "Christensen-Szalanski1980"
                   },
                   "children": [
@@ -14141,6 +14673,80 @@
                                     {
                                       "type": "text",
                                       "value": "Christensen-Szalanski"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Galesic2009"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2009"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Galesic"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Bosnjak"
                                     }
                                   ]
                                 }
@@ -14327,6 +14933,80 @@
                                     {
                                       "type": "text",
                                       "value": "Witherspoon"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "ref",
+                  "attributes": {
+                    "id": "Aguinis2014"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "elementCitation",
+                      "attributes": {
+                        "publicationType": "standard"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "year",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "2014"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "personGroup",
+                          "attributes": {
+                            "personGroupType": "author"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Aguinis"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "name",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "surname",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "Bradley"
                                     }
                                   ]
                                 }

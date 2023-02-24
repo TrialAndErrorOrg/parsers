@@ -43,7 +43,7 @@ export function sec(j: J, node: Parents) {
         type: 'commandArg',
         optional: false,
         // TODO: [jast-util-to-texast] Figure out how to properly nest environments and commands
-        // @ts-expect-error
+        // @ts-expect-error theres something wrong with this nesting
         children: all(j, titleElement),
       },
     ],

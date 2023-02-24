@@ -2,10 +2,6 @@
   "type": "root",
   "children": [
     {
-      "type": "text",
-      "value": " "
-    },
-    {
       "type": "root",
       "children": [
         {
@@ -81,6 +77,10 @@
                   ]
                 },
                 {
+                  "type": "text",
+                  "value": "\n"
+                },
+                {
                   "type": "command",
                   "name": "usepackage",
                   "children": [
@@ -95,6 +95,10 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
                 },
                 {
                   "type": "command",
@@ -134,7 +138,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "@article{Schwarz2001,\n    author      = {Schwarz and Oyserman},\n    year        = {2001}\n}\n\n\n@article{Dutcher2015,\n    author      = {Dutcher},\n    year        = {2015}\n}\n\n\n@article{Charness2018,\n    author      = {Charness},\n    year        = {2018}\n}\n\n\n@article{Andersen2018,\n    author      = {Andersen},\n    year        = {2018}\n}\n\n\n@article{Gneezy2006,\n    author      = {Gneezy and List},\n    year        = {2006}\n}\n\n\n@article{Converse1984,\n    author      = {Converse},\n    year        = {1984}\n}\n\n\n@article{Greenfield2006,\n    author      = {Greenfield},\n    year        = {2006}\n}\n\n\n@article{Schuman1979,\n    author      = {Schuman and Presser},\n    year        = {1979}\n}\n\n\n@article{Schwarz1999,\n    author      = {Schwarz},\n    year        = {1999}\n}\n\n\n@article{Christensen-Szalanski1980,\n    author      = {Christensen-Szalanski},\n    year        = {1980}\n}\n\n\n@article{Paulin2012,\n    author      = {Paulin and Suneson},\n    year        = {2012}\n}\n\n\n@article{Wang2011,\n    author      = {Wang},\n    year        = {2011}\n}\n\n\n@article{Witherspoon2013,\n    author      = {Witherspoon},\n    year        = {2013}\n}\n\n\n@article{Bock2002,\n    author      = {Bock and Kim},\n    year        = {2002}\n}\n\n\n@article{Lin2007,\n    author      = {Lin},\n    year        = {2007}\n}\n\n\n@article{Gwet2014,\n    author      = {Gwet},\n    year        = {2014}\n}"
+                  "value": "@article{Schwarz2001,\n    author      = {Schwarz and Oyserman},\n    year        = {2001}\n}\n\n\n@article{James2017,\n    author      = {James},\n    year        = {2017}\n}\n\n\n@article{Dutcher2015,\n    author      = {Dutcher},\n    year        = {2015}\n}\n\n\n@article{Charness2018,\n    author      = {Charness},\n    year        = {2018}\n}\n\n\n@article{Andersen2018,\n    author      = {Andersen},\n    year        = {2018}\n}\n\n\n@article{Gneezy2006,\n    author      = {Gneezy and List},\n    year        = {2006}\n}\n\n\n@article{Rossman1985,\n    author      = {Rossman and Wilson},\n    year        = {1985}\n}\n\n\n@article{Bryman2006,\n    author      = {Bryman},\n    year        = {2006}\n}\n\n\n@article{Dewasiri2018,\n    author      = {Dewasiri},\n    year        = {2018}\n}\n\n\n@article{Converse1984,\n    author      = {Converse},\n    year        = {1984}\n}\n\n\n@article{Greenfield2006,\n    author      = {Greenfield},\n    year        = {2006}\n}\n\n\n@article{Schuman1979,\n    author      = {Schuman and Presser},\n    year        = {1979}\n}\n\n\n@article{Schwarz1999,\n    author      = {Schwarz},\n    year        = {1999}\n}\n\n\n@article{Friborg2013,\n    author      = {Friborg and Rosenvinge},\n    year        = {2013}\n}\n\n\n@article{Christensen-Szalanski1980,\n    author      = {Christensen-Szalanski},\n    year        = {1980}\n}\n\n\n@article{Galesic2009,\n    author      = {Galesic and Bosnjak},\n    year        = {2009}\n}\n\n\n@article{Paulin2012,\n    author      = {Paulin and Suneson},\n    year        = {2012}\n}\n\n\n@article{Wang2011,\n    author      = {Wang},\n    year        = {2011}\n}\n\n\n@article{Witherspoon2013,\n    author      = {Witherspoon},\n    year        = {2013}\n}\n\n\n@article{Aguinis2014,\n    author      = {Aguinis and Bradley},\n    year        = {2014}\n}\n\n\n@article{Bock2002,\n    author      = {Bock and Kim},\n    year        = {2002}\n}\n\n\n@article{Lin2007,\n    author      = {Lin},\n    year        = {2007}\n}\n\n\n@article{Gwet2014,\n    author      = {Gwet},\n    year        = {2014}\n}"
                 }
               ]
             }
@@ -469,8 +473,39 @@
                   "value": "Observing behavior can also be prohibited in some cases, for instance if the behavior occurs too infrequently to be observed in a timely manner, or is not possible for others to observe "
                 },
                 {
-                  "type": "text",
-                  "value": "(Schwarz & Oyserman, 2001, p. 128)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "pp. 128"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Schwarz2001"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -498,8 +533,39 @@
                   "value": "Therefore, self-reported behavior in surveys and survey experiments is an often-used alternative "
                 },
                 {
-                  "type": "text",
-                  "value": "(James et al., 2017, p. 120)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "pp. 120"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "James2017"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -711,8 +777,39 @@
                   "value": "Combining open-ended and closed-ended questions in a survey requires a pragmatic approach of method and data triangulation "
                 },
                 {
-                  "type": "text",
-                  "value": "(Rossman & Wilson, 1985, p. 631)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "pp. 631"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Rossman1985"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -727,8 +824,39 @@
                   "value": "Due to this triangulation, \"researchers are allowed to improve the accuracy of conclusions by relying on data from more than one method\" "
                 },
                 {
-                  "type": "text",
-                  "value": "(Rossman & Wilson, 1985, p. 632)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "pp. 632"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Rossman1985"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -739,8 +867,54 @@
                   "value": "Hence, the combination of qualitative and quantitative data is used here to offset weaknesses of the latter, draw on the strengths of the former, and enhance the validity of the findings "
                 },
                 {
-                  "type": "text",
-                  "value": "(Bryman, 2006, p. 105; Dewasiri et al., 2018)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "pp. 105"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Bryman2006"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Dewasiri2018"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -856,8 +1030,39 @@
                   "value": "In contrast, some answer options were less likely to be spontaneously produced in open-ended questions than they were to be chosen when explicitly offered as an option in closed questions "
                 },
                 {
-                  "type": "text",
-                  "value": "(Schuman & Presser, 1979, p. 365)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "pp. 365"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Schuman1979"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -920,8 +1125,39 @@
                   "value": "However, self-reports, especially on past behavior, are a complex cognitive task that are highly context-dependent, and data are often seen as unreliable "
                 },
                 {
-                  "type": "text",
-                  "value": "(Schwarz & Oyserman, 2001, p. 128)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "pp. 128"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Schwarz2001"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -932,8 +1168,39 @@
                   "value": "Some authors state that it is easier for participants to understand questions and recall relevant behavior when closed-ended questions are used "
                 },
                 {
-                  "type": "text",
-                  "value": "(Schwarz & Oyserman, 2001, p. 131)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "pp. 131"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Schwarz2001"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -944,8 +1211,19 @@
                   "value": "In contrast, it is usually agreed that open-ended questions are more suited to asking about sensitive or stigmatizing information or when more in-depth information is needed "
                 },
                 {
-                  "type": "text",
-                  "value": "(Friborg & Rosenvinge, 2013)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Friborg2013"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -1021,8 +1299,39 @@
                   "value": "Results based on real-effort designs are more externally valid when \"the cost function of that task shares important characteristics with the field task\" "
                 },
                 {
-                  "type": "text",
-                  "value": "(Dutcher et al., 2015, p. 3)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "pp. 3"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Dutcher2015"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -1037,8 +1346,39 @@
                   "value": "Hence, the effort is for the most part cognitive and creative, but typing answers might also cost physical effort "
                 },
                 {
-                  "type": "text",
-                  "value": "(Charness & Grieco, 2018, p. 75)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "pp. 75"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Charness2018"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -1049,8 +1389,39 @@
                   "value": "Such a real-effort design might be a better estimator of actual behavior because \"simply choosing a number may not capture the field environment and the psychological forces involved in putting forth actual effort\" "
                 },
                 {
-                  "type": "text",
-                  "value": "(Charness et al., 2018, p. 75)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "pp. 75"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Charness2018"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -1120,8 +1491,39 @@
                   "value": "Similarly, the length of answers to open-ended questions are often used as indicators of data quality "
                 },
                 {
-                  "type": "text",
-                  "value": "(Galesic & Bosnjak, 2009, p. 350)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "pp. 350"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Galesic2009"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -1152,8 +1554,39 @@
                   "value": " can also be used to capture effort "
                 },
                 {
-                  "type": "text",
-                  "value": "(Charness et al., 2018, p. 78)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "pp. 78"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Charness2018"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -1269,8 +1702,39 @@
                   "value": "In such settings, participants' skills and abilities may strongly confound the results "
                 },
                 {
-                  "type": "text",
-                  "value": "(Charness et al., 2018, p. 82)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "pp. 82"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Charness2018"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -1561,8 +2025,39 @@
                   "value": "This decision should address the problem that vignette experiments are frequently criticized for being unrealistic and lacking external validity "
                 },
                 {
-                  "type": "text",
-                  "value": "(Aguinis & Bradley, 2014, p. 361)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "pp. 361"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "optional": true,
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ""
+                        }
+                      ]
+                    },
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Aguinis2014"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -1697,7 +2192,7 @@
                 },
                 {
                   "type": "command",
-                  "name": "parencite",
+                  "name": "textcite",
                   "children": [
                     {
                       "type": "commandArg",
@@ -1802,16 +2297,21 @@
                       "type": "commandArg",
                       "children": [
                         {
-                          "type": "text",
-                          "value": "I want to thank Lisa-Sophia Preller for serving as the second coder of this study. "
-                        },
-                        {
-                          "type": "text",
-                          "value": "Both raters were asked to use different coding strategies, to avoid effects of the coding procedure: (1) one rater coded the cases one by one in order to have an eye on the complete answer, (2) another rater coded each dimension across all cases one by one in order to have an eye on the comparability of the ratings. "
-                        },
-                        {
-                          "type": "text",
-                          "value": "The fifth dimension (high effort in answering) was not coded by both raters but added afterward and coded by a single rater, therefore no interrater reliability is calculated here."
+                          "type": "paragraph",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "I want to thank Lisa-Sophia Preller for serving as the second coder of this study. "
+                            },
+                            {
+                              "type": "text",
+                              "value": "Both raters were asked to use different coding strategies, to avoid effects of the coding procedure: (1) one rater coded the cases one by one in order to have an eye on the complete answer, (2) another rater coded each dimension across all cases one by one in order to have an eye on the comparability of the ratings. "
+                            },
+                            {
+                              "type": "text",
+                              "value": "The fifth dimension (high effort in answering) was not coded by both raters but added afterward and coded by a single rater, therefore no interrater reliability is calculated here."
+                            }
+                          ]
                         }
                       ]
                     }
@@ -1974,6 +2474,11 @@
                       "type": "tableRow",
                       "children": [
                         {
+                          "type": "command",
+                          "name": "toprule",
+                          "children": []
+                        },
+                        {
                           "type": "tableCell",
                           "children": [
                             {
@@ -2050,6 +2555,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -2548,6 +3062,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -2797,6 +3320,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "bottomrule",
+                          "children": []
                         }
                       ]
                     }
@@ -2886,6 +3418,11 @@
                       "type": "tableRow",
                       "children": [
                         {
+                          "type": "command",
+                          "name": "toprule",
+                          "children": []
+                        },
+                        {
                           "type": "tableCell",
                           "children": [
                             {
@@ -2962,6 +3499,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -3460,6 +4006,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -3709,6 +4264,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "bottomrule",
+                          "children": []
                         }
                       ]
                     }
@@ -4984,8 +5548,19 @@
                   "value": "When a baseline answer for an individual is missing or not taken into account, which is the idea behind a within-subjects design, an individual cannot be matched to their own standard."
                 },
                 {
-                  "type": "text",
-                  "value": "(Galesic & Bosnjak, 2009)"
+                  "type": "command",
+                  "name": "parencite",
+                  "children": [
+                    {
+                      "type": "commandArg",
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Galesic2009"
+                        }
+                      ]
+                    }
+                  ]
                 },
                 {
                   "type": "text",
@@ -6466,6 +7041,11 @@
                       "type": "tableRow",
                       "children": [
                         {
+                          "type": "command",
+                          "name": "toprule",
+                          "children": []
+                        },
+                        {
                           "type": "tableCell",
                           "children": [
                             {
@@ -6542,6 +7122,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -6957,6 +7546,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "bottomrule",
+                          "children": []
                         }
                       ]
                     }
@@ -7876,6 +8474,11 @@
                       "type": "tableRow",
                       "children": [
                         {
+                          "type": "command",
+                          "name": "toprule",
+                          "children": []
+                        },
+                        {
                           "type": "tableCell",
                           "children": [
                             {
@@ -7952,6 +8555,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },

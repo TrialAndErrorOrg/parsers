@@ -2,10 +2,6 @@
   "type": "root",
   "children": [
     {
-      "type": "text",
-      "value": " "
-    },
-    {
       "type": "root",
       "children": [
         {
@@ -81,6 +77,10 @@
                   ]
                 },
                 {
+                  "type": "text",
+                  "value": "\n"
+                },
+                {
                   "type": "command",
                   "name": "usepackage",
                   "children": [
@@ -95,6 +95,10 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "text",
+                  "value": "\n"
                 },
                 {
                   "type": "command",
@@ -4848,6 +4852,11 @@
                       "type": "tableRow",
                       "children": [
                         {
+                          "type": "command",
+                          "name": "toprule",
+                          "children": []
+                        },
+                        {
                           "type": "tableCell",
                           "children": [
                             {
@@ -4886,6 +4895,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -5068,6 +5086,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -5164,6 +5191,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -5260,6 +5296,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -5356,6 +5401,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -5452,6 +5506,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -5548,6 +5611,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -5644,6 +5716,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -5740,6 +5821,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -5836,6 +5926,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -5932,6 +6031,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -6028,6 +6136,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -6124,6 +6241,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -6220,6 +6346,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -6316,6 +6451,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -6412,6 +6556,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -6508,6 +6661,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -6604,6 +6766,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -6700,6 +6871,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -6796,6 +6976,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -6892,6 +7081,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "bottomrule",
+                          "children": []
                         }
                       ]
                     }
@@ -7819,19 +8017,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Adams, D. "
-                },
-                {
-                  "type": "text",
-                  "value": "C., & Anthony, C. "
-                },
-                {
-                  "type": "text",
-                  "value": "D. (1996). "
-                },
-                {
-                  "type": "text",
-                  "value": "Using randomization techniques to analyse behavioural data. "
+                  "value": "Adams, D. C., & Anthony, C. D. (1996). Using randomization techniques to analyse behavioural data. "
                 },
                 {
                   "type": "command",
@@ -7878,15 +8064,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Barlow, D. "
-                },
-                {
-                  "type": "text",
-                  "value": "H., Nock, M. "
-                },
-                {
-                  "type": "text",
-                  "value": "K., & Hersen, M. (2009). "
+                  "value": "Barlow, D. H., Nock, M. K., & Hersen, M. (2009). "
                 },
                 {
                   "type": "command",
@@ -7905,11 +8083,7 @@
                 },
                 {
                   "type": "text",
-                  "value": " (3rd ed.). "
-                },
-                {
-                  "type": "text",
-                  "value": "Pearson/Allyn and Bacon."
+                  "value": " (3rd ed.). Pearson/Allyn and Bacon."
                 }
               ]
             },
@@ -7918,11 +8092,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Bouwmeester, S., & Jongerling, J. (2020). "
-                },
-                {
-                  "type": "text",
-                  "value": "Power of a randomization test in a single case multiple baseline AB design. "
+                  "value": "Bouwmeester, S., & Jongerling, J. (2020). Power of a randomization test in a single case multiple baseline AB design. "
                 },
                 {
                   "type": "command",
@@ -7969,11 +8139,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Breivik, H., Collett, B., Ventafridda, V., Cohen, R., & Gallacher, D. (2006). "
-                },
-                {
-                  "type": "text",
-                  "value": "Survey of chronic pain in Europe: Prevalence, impact on daily life, and treatment. "
+                  "value": "Breivik, H., Collett, B., Ventafridda, V., Cohen, R., & Gallacher, D. (2006). Survey of chronic pain in Europe: Prevalence, impact on daily life, and treatment. "
                 },
                 {
                   "type": "command",
@@ -8020,19 +8186,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Busk, P. "
-                },
-                {
-                  "type": "text",
-                  "value": "L., & Marascuilo, L. "
-                },
-                {
-                  "type": "text",
-                  "value": "A. (1988). "
-                },
-                {
-                  "type": "text",
-                  "value": "Autocorrelation in single-subject research: A counterargument to the myth of no autocorrelation. "
+                  "value": "Busk, P. L., & Marascuilo, L. A. (1988). Autocorrelation in single-subject research: A counterargument to the myth of no autocorrelation. "
                 },
                 {
                   "type": "command",
@@ -8098,11 +8252,7 @@
                 },
                 {
                   "type": "text",
-                  "value": " (2nd ed.). "
-                },
-                {
-                  "type": "text",
-                  "value": "Routledge. https://doi.org/10.4324/9780203771587"
+                  "value": " (2nd ed.). Routledge. https://doi.org/10.4324/9780203771587"
                 }
               ]
             },
@@ -8111,35 +8261,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Costa, L. da C. "
-                },
-                {
-                  "type": "text",
-                  "value": "M., Maher, C. "
-                },
-                {
-                  "type": "text",
-                  "value": "G., McAuley, J. "
-                },
-                {
-                  "type": "text",
-                  "value": "H., Hancock, M. "
-                },
-                {
-                  "type": "text",
-                  "value": "J., Herbert, R. "
-                },
-                {
-                  "type": "text",
-                  "value": "D., Refshauge, K. "
-                },
-                {
-                  "type": "text",
-                  "value": "M., & Henschke, N. (2009). "
-                },
-                {
-                  "type": "text",
-                  "value": "Prognosis for patients with chronic low back pain: Inception cohort study. "
+                  "value": "Costa, L. da C. M., Maher, C. G., McAuley, J. H., Hancock, M. J., Herbert, R. D., Refshauge, K. M., & Henschke, N. (2009). Prognosis for patients with chronic low back pain: Inception cohort study. "
                 },
                 {
                   "type": "command",
@@ -8214,15 +8336,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "De, T. "
-                },
-                {
-                  "type": "text",
-                  "value": "K., Michiels, B., Tanious, R., & Onghena, P. (2020). "
-                },
-                {
-                  "type": "text",
-                  "value": "Handling missing data in randomization tests for single-case experiments: A simulation study. "
+                  "value": "De, T. K., Michiels, B., Tanious, R., & Onghena, P. (2020). Handling missing data in randomization tests for single-case experiments: A simulation study. "
                 },
                 {
                   "type": "command",
@@ -8269,19 +8383,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "De, T. "
-                },
-                {
-                  "type": "text",
-                  "value": "K., Michiels, B., Vlaeyen, J. "
-                },
-                {
-                  "type": "text",
-                  "value": "W. "
-                },
-                {
-                  "type": "text",
-                  "value": "S., & Onghena, P. (2020). "
+                  "value": "De, T. K., Michiels, B., Vlaeyen, J. W. S., & Onghena, P. (2020). "
                 },
                 {
                   "type": "command",
@@ -8337,15 +8439,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Edgington, E. "
-                },
-                {
-                  "type": "text",
-                  "value": "S. (1969). "
-                },
-                {
-                  "type": "text",
-                  "value": "Approximate randomization tests. "
+                  "value": "Edgington, E. S. (1969). Approximate randomization tests. "
                 },
                 {
                   "type": "command",
@@ -8392,15 +8486,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Edgington, E. "
-                },
-                {
-                  "type": "text",
-                  "value": "S. (1975). "
-                },
-                {
-                  "type": "text",
-                  "value": "Randomization tests for one-subject operant experiments. "
+                  "value": "Edgington, E. S. (1975). Randomization tests for one-subject operant experiments. "
                 },
                 {
                   "type": "command",
@@ -8447,11 +8533,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Edgington, E. "
-                },
-                {
-                  "type": "text",
-                  "value": "S., & Onghena, P. (2007). "
+                  "value": "Edgington, E. S., & Onghena, P. (2007). "
                 },
                 {
                   "type": "command",
@@ -8470,11 +8552,7 @@
                 },
                 {
                   "type": "text",
-                  "value": " (4th ed.). "
-                },
-                {
-                  "type": "text",
-                  "value": "Chapman & Hall/CRC."
+                  "value": " (4th ed.). Chapman & Hall/CRC."
                 }
               ]
             },
@@ -8483,11 +8561,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Ferron, J., & Onghena, P. (1996). "
-                },
-                {
-                  "type": "text",
-                  "value": "The power of randomization tests for single-case phase designs. "
+                  "value": "Ferron, J., & Onghena, P. (1996). The power of randomization tests for single-case phase designs. "
                 },
                 {
                   "type": "command",
@@ -8534,11 +8608,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Ferron, J., & Sentovich, C. (2002). "
-                },
-                {
-                  "type": "text",
-                  "value": "Statistical power of randomization tests used with multiple-baseline designs. "
+                  "value": "Ferron, J., & Sentovich, C. (2002). Statistical power of randomization tests used with multiple-baseline designs. "
                 },
                 {
                   "type": "command",
@@ -8585,11 +8655,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Ferron, J., & Ware, W. (1995). "
-                },
-                {
-                  "type": "text",
-                  "value": "Analyzing single-case data: The power of randomization tests. "
+                  "value": "Ferron, J., & Ware, W. (1995). Analyzing single-case data: The power of randomization tests. "
                 },
                 {
                   "type": "command",
@@ -8636,23 +8702,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Fisher, A. "
-                },
-                {
-                  "type": "text",
-                  "value": "J., Medaglia, J. "
-                },
-                {
-                  "type": "text",
-                  "value": "D., & Jeronimus, B. "
-                },
-                {
-                  "type": "text",
-                  "value": "F. (2018). "
-                },
-                {
-                  "type": "text",
-                  "value": "Lack of group-to-individual generalizability is a threat to human subjects research. "
+                  "value": "Fisher, A. J., Medaglia, J. D., & Jeronimus, B. F. (2018). Lack of group-to-individual generalizability is a threat to human subjects research. "
                 },
                 {
                   "type": "command",
@@ -8699,55 +8749,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Foster, N. "
-                },
-                {
-                  "type": "text",
-                  "value": "E., Anema, J. "
-                },
-                {
-                  "type": "text",
-                  "value": "R., Cherkin, D., Chou, R., Cohen, S. "
-                },
-                {
-                  "type": "text",
-                  "value": "P., Gross, D. "
-                },
-                {
-                  "type": "text",
-                  "value": "P., Ferreira, P. "
-                },
-                {
-                  "type": "text",
-                  "value": "H., Fritz, J. "
-                },
-                {
-                  "type": "text",
-                  "value": "M., Koes, B. "
-                },
-                {
-                  "type": "text",
-                  "value": "W., Peul, W., Turner, J. "
-                },
-                {
-                  "type": "text",
-                  "value": "A., Maher, C. "
-                },
-                {
-                  "type": "text",
-                  "value": "G., Buchbinder, R., Hartvigsen, J., Cherkin, D., Foster, N. "
-                },
-                {
-                  "type": "text",
-                  "value": "E., Maher, C. "
-                },
-                {
-                  "type": "text",
-                  "value": "G., Underwood, M., van Tulder, M., … Woolf, A. (2018). "
-                },
-                {
-                  "type": "text",
-                  "value": "Prevention and treatment of low back pain: Evidence, challenges, and promising directions. "
+                  "value": "Foster, N. E., Anema, J. R., Cherkin, D., Chou, R., Cohen, S. P., Gross, D. P., Ferreira, P. H., Fritz, J. M., Koes, B. W., Peul, W., Turner, J. A., Maher, C. G., Buchbinder, R., Hartvigsen, J., Cherkin, D., Foster, N. E., Maher, C. G., Underwood, M., van Tulder, M., … Woolf, A. (2018). Prevention and treatment of low back pain: Evidence, challenges, and promising directions. "
                 },
                 {
                   "type": "command",
@@ -8794,11 +8796,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Heyvaert, M., & Onghena, P. (2014a). "
-                },
-                {
-                  "type": "text",
-                  "value": "Analysis of single-case data: Randomisation tests for measures of effect size. "
+                  "value": "Heyvaert, M., & Onghena, P. (2014a). Analysis of single-case data: Randomisation tests for measures of effect size. "
                 },
                 {
                   "type": "command",
@@ -8845,11 +8843,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Heyvaert, M., & Onghena, P. (2014b). "
-                },
-                {
-                  "type": "text",
-                  "value": "Randomization tests for single-case experiments: State of the art, state of the science, and state of the application. "
+                  "value": "Heyvaert, M., & Onghena, P. (2014b). Randomization tests for single-case experiments: State of the art, state of the science, and state of the application. "
                 },
                 {
                   "type": "command",
@@ -8896,19 +8890,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Hope, A. "
-                },
-                {
-                  "type": "text",
-                  "value": "C. "
-                },
-                {
-                  "type": "text",
-                  "value": "A. (1968). "
-                },
-                {
-                  "type": "text",
-                  "value": "A simplified Monte Carlo significance test procedure. "
+                  "value": "Hope, A. C. A. (1968). A simplified Monte Carlo significance test procedure. "
                 },
                 {
                   "type": "command",
@@ -8919,22 +8901,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Journal of the Royal Statistical Society. "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "command",
-                  "name": "emph",
-                  "children": [
-                    {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Series B (Methodological)"
+                          "value": "Journal of the Royal Statistical Society. Series B (Methodological)"
                         }
                       ]
                     }
@@ -8970,19 +8937,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Horner, R. "
-                },
-                {
-                  "type": "text",
-                  "value": "H., Carr, E. "
-                },
-                {
-                  "type": "text",
-                  "value": "G., Halle, J., Mcgee, G., Odom, S., & Wolery, M. (2005). "
-                },
-                {
-                  "type": "text",
-                  "value": "The use of single-subject research to identify evidence-based practice in special education. "
+                  "value": "Horner, R. H., Carr, E. G., Halle, J., Mcgee, G., Odom, S., & Wolery, M. (2005). The use of single-subject research to identify evidence-based practice in special education. "
                 },
                 {
                   "type": "command",
@@ -9029,11 +8984,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Kazdin, A. "
-                },
-                {
-                  "type": "text",
-                  "value": "E. (2011). "
+                  "value": "Kazdin, A. E. (2011). "
                 },
                 {
                   "type": "command",
@@ -9052,11 +9003,7 @@
                 },
                 {
                   "type": "text",
-                  "value": " (2nd ed.). "
-                },
-                {
-                  "type": "text",
-                  "value": "Oxford University Press."
+                  "value": " (2nd ed.). Oxford University Press."
                 }
               ]
             },
@@ -9065,31 +9012,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Kratochwill, T. "
-                },
-                {
-                  "type": "text",
-                  "value": "R., Hitchcock, J., Horner, R. "
-                },
-                {
-                  "type": "text",
-                  "value": "H., Levin, J. "
-                },
-                {
-                  "type": "text",
-                  "value": "R., Odom, S. "
-                },
-                {
-                  "type": "text",
-                  "value": "L., Rindskopf, D. "
-                },
-                {
-                  "type": "text",
-                  "value": "M., & Shadish, W. "
-                },
-                {
-                  "type": "text",
-                  "value": "R. (2010). "
+                  "value": "Kratochwill, T. R., Hitchcock, J., Horner, R. H., Levin, J. R., Odom, S. L., Rindskopf, D. M., & Shadish, W. R. (2010). "
                 },
                 {
                   "type": "command",
@@ -9117,19 +9040,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Kratochwill, T. "
-                },
-                {
-                  "type": "text",
-                  "value": "R., & Levin, J. "
-                },
-                {
-                  "type": "text",
-                  "value": "R. (2010). "
-                },
-                {
-                  "type": "text",
-                  "value": "Enhancing the scientific credibility of single-case intervention research: Randomization to the rescue. "
+                  "value": "Kratochwill, T. R., & Levin, J. R. (2010). Enhancing the scientific credibility of single-case intervention research: Randomization to the rescue. "
                 },
                 {
                   "type": "command",
@@ -9176,23 +9087,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Levin, J. "
-                },
-                {
-                  "type": "text",
-                  "value": "R., Ferron, J. "
-                },
-                {
-                  "type": "text",
-                  "value": "M., & Gafurov, B. "
-                },
-                {
-                  "type": "text",
-                  "value": "S. (2018). "
-                },
-                {
-                  "type": "text",
-                  "value": "Comparison of randomization-test procedures for single-case multiple-baseline designs. "
+                  "value": "Levin, J. R., Ferron, J. M., & Gafurov, B. S. (2018). Comparison of randomization-test procedures for single-case multiple-baseline designs. "
                 },
                 {
                   "type": "command",
@@ -9239,35 +9134,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Madden, V. "
-                },
-                {
-                  "type": "text",
-                  "value": "J., Bellan, V., Russek, L. "
-                },
-                {
-                  "type": "text",
-                  "value": "N., Camfferman, D., Vlaeyen, J. "
-                },
-                {
-                  "type": "text",
-                  "value": "W. "
-                },
-                {
-                  "type": "text",
-                  "value": "S., & Moseley, G. "
-                },
-                {
-                  "type": "text",
-                  "value": "L. (2016). "
-                },
-                {
-                  "type": "text",
-                  "value": "Pain by association? "
-                },
-                {
-                  "type": "text",
-                  "value": "Experimental modulation of human pain thresholds using classical conditioning. "
+                  "value": "Madden, V. J., Bellan, V., Russek, L. N., Camfferman, D., Vlaeyen, J. W. S., & Moseley, G. L. (2016). Pain by association? Experimental modulation of human pain thresholds using classical conditioning. "
                 },
                 {
                   "type": "command",
@@ -9314,35 +9181,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Madden, V. "
-                },
-                {
-                  "type": "text",
-                  "value": "J., Kamerman, P. "
-                },
-                {
-                  "type": "text",
-                  "value": "R., Bellan, V., Catley, M. "
-                },
-                {
-                  "type": "text",
-                  "value": "J., Russek, L. "
-                },
-                {
-                  "type": "text",
-                  "value": "N., Camfferman, D., & Moseley, G. "
-                },
-                {
-                  "type": "text",
-                  "value": "L. (2019). "
-                },
-                {
-                  "type": "text",
-                  "value": "Was that painful or nonpainful? "
-                },
-                {
-                  "type": "text",
-                  "value": "The Sensation and Pain Rating Scale performs well in the experimental context. "
+                  "value": "Madden, V. J., Kamerman, P. R., Bellan, V., Catley, M. J., Russek, L. N., Camfferman, D., & Moseley, G. L. (2019). Was that painful or nonpainful? The Sensation and Pain Rating Scale performs well in the experimental context. "
                 },
                 {
                   "type": "command",
@@ -9389,35 +9228,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Madden, V. "
-                },
-                {
-                  "type": "text",
-                  "value": "J., Russek, L. "
-                },
-                {
-                  "type": "text",
-                  "value": "N., Harvie, D. "
-                },
-                {
-                  "type": "text",
-                  "value": "S., Vlaeyen, J. "
-                },
-                {
-                  "type": "text",
-                  "value": "W. "
-                },
-                {
-                  "type": "text",
-                  "value": "S., & Moseley, G. "
-                },
-                {
-                  "type": "text",
-                  "value": "L. (2017). "
-                },
-                {
-                  "type": "text",
-                  "value": "Classical conditioning fails to elicit allodynia in an experimental study with healthy humans. "
+                  "value": "Madden, V. J., Russek, L. N., Harvie, D. S., Vlaeyen, J. W. S., & Moseley, G. L. (2017). Classical conditioning fails to elicit allodynia in an experimental study with healthy humans. "
                 },
                 {
                   "type": "command",
@@ -9464,11 +9275,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Manolov, R., & Moeyaert, M. (2017). "
-                },
-                {
-                  "type": "text",
-                  "value": "Recommendations for choosing single-case data analytical techniques. "
+                  "value": "Manolov, R., & Moeyaert, M. (2017). Recommendations for choosing single-case data analytical techniques. "
                 },
                 {
                   "type": "command",
@@ -9515,11 +9322,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Manolov, R., & Solanas, A. (2018). "
-                },
-                {
-                  "type": "text",
-                  "value": "Analytical options for single-case experimental designs: Review and application to brain impairment. "
+                  "value": "Manolov, R., & Solanas, A. (2018). Analytical options for single-case experimental designs: Review and application to brain impairment. "
                 },
                 {
                   "type": "command",
@@ -9566,19 +9369,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Matyas, T. "
-                },
-                {
-                  "type": "text",
-                  "value": "A., & Greenwood, K. "
-                },
-                {
-                  "type": "text",
-                  "value": "M. (1990). "
-                },
-                {
-                  "type": "text",
-                  "value": "Visual analysis of single-case time series: Effects of variability, serial dependence, and magnitude of intervention effects. "
+                  "value": "Matyas, T. A., & Greenwood, K. M. (1990). Visual analysis of single-case time series: Effects of variability, serial dependence, and magnitude of intervention effects. "
                 },
                 {
                   "type": "command",
@@ -9625,11 +9416,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Michiels, B., Heyvaert, M., & Onghena, P. (2018). "
-                },
-                {
-                  "type": "text",
-                  "value": "The conditional power of randomization tests for single-case effect sizes in designs with randomized treatment order: A Monte Carlo simulation study. "
+                  "value": "Michiels, B., Heyvaert, M., & Onghena, P. (2018). The conditional power of randomization tests for single-case effect sizes in designs with randomized treatment order: A Monte Carlo simulation study. "
                 },
                 {
                   "type": "command",
@@ -9676,11 +9463,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Michiels, B., & Onghena, P. (2019). "
-                },
-                {
-                  "type": "text",
-                  "value": "Randomized single-case AB phase designs: Prospects and pitfalls. "
+                  "value": "Michiels, B., & Onghena, P. (2019). Randomized single-case AB phase designs: Prospects and pitfalls. "
                 },
                 {
                   "type": "command",
@@ -9727,15 +9510,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Michiels, B., Tanious, R., De, T. "
-                },
-                {
-                  "type": "text",
-                  "value": "K., & Onghena, P. (2020). "
-                },
-                {
-                  "type": "text",
-                  "value": "A randomization test wrapper for synthesizing single-case experiments using multilevel models: A Monte Carlo simulation study. "
+                  "value": "Michiels, B., Tanious, R., De, T. K., & Onghena, P. (2020). A randomization test wrapper for synthesizing single-case experiments using multilevel models: A Monte Carlo simulation study. "
                 },
                 {
                   "type": "command",
@@ -9782,23 +9557,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Molenaar, P. "
-                },
-                {
-                  "type": "text",
-                  "value": "C. "
-                },
-                {
-                  "type": "text",
-                  "value": "M., & Campbell, C. "
-                },
-                {
-                  "type": "text",
-                  "value": "G. (2009). "
-                },
-                {
-                  "type": "text",
-                  "value": "The new person-specific paradigm in psychology. "
+                  "value": "Molenaar, P. C. M., & Campbell, C. G. (2009). The new person-specific paradigm in psychology. "
                 },
                 {
                   "type": "command",
@@ -9845,23 +9604,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Moseley, G. "
-                },
-                {
-                  "type": "text",
-                  "value": "L., & Vlaeyen, J. "
-                },
-                {
-                  "type": "text",
-                  "value": "W. "
-                },
-                {
-                  "type": "text",
-                  "value": "S. (2015). "
-                },
-                {
-                  "type": "text",
-                  "value": "Beyond nociception: The imprecision hypothesis of chronic pain. "
+                  "value": "Moseley, G. L., & Vlaeyen, J. W. S. (2015). Beyond nociception: The imprecision hypothesis of chronic pain. "
                 },
                 {
                   "type": "command",
@@ -9908,11 +9651,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Onghena, P. (1992). "
-                },
-                {
-                  "type": "text",
-                  "value": "Randomization tests for extensions and variations of ABAB single-case experimental designs: A rejoinder. "
+                  "value": "Onghena, P. (1992). Randomization tests for extensions and variations of ABAB single-case experimental designs: A rejoinder. "
                 },
                 {
                   "type": "command",
@@ -9959,23 +9698,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Onghena, P. (2005). "
-                },
-                {
-                  "type": "text",
-                  "value": "Single‐case designs. "
-                },
-                {
-                  "type": "text",
-                  "value": "In B. "
-                },
-                {
-                  "type": "text",
-                  "value": "Everitt & D. "
-                },
-                {
-                  "type": "text",
-                  "value": "Howell (Eds.), "
+                  "value": "Onghena, P. (2005). Single‐case designs. In B. Everitt & D. Howell (Eds.), "
                 },
                 {
                   "type": "command",
@@ -9994,11 +9717,7 @@
                 },
                 {
                   "type": "text",
-                  "value": " (Vol. 4, pp. 1850–1854). "
-                },
-                {
-                  "type": "text",
-                  "value": "John Wiley & Sons, Ltd. https://doi.org/10.1002/0470013192.bsa625"
+                  "value": " (Vol. 4, pp. 1850–1854). John Wiley & Sons, Ltd. https://doi.org/10.1002/0470013192.bsa625"
                 }
               ]
             },
@@ -10007,19 +9726,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Ottenbacher, K. "
-                },
-                {
-                  "type": "text",
-                  "value": "J. (1990). "
-                },
-                {
-                  "type": "text",
-                  "value": "When is a picture worth a thousand p values? "
-                },
-                {
-                  "type": "text",
-                  "value": "A comparison of visual and quantitative methods to analyze single subject data. "
+                  "value": "Ottenbacher, K. J. (1990). When is a picture worth a thousand p values? A comparison of visual and quantitative methods to analyze single subject data. "
                 },
                 {
                   "type": "command",
@@ -10066,11 +9773,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Pavlov, I. "
-                },
-                {
-                  "type": "text",
-                  "value": "P. (1928). "
+                  "value": "Pavlov, I. P. (1928). "
                 },
                 {
                   "type": "command",
@@ -10098,15 +9801,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Smith, J. "
-                },
-                {
-                  "type": "text",
-                  "value": "D. (2012). "
-                },
-                {
-                  "type": "text",
-                  "value": "Single-case experimental designs: A systematic review of published research and current standards. "
+                  "value": "Smith, J. D. (2012). Single-case experimental designs: A systematic review of published research and current standards. "
                 },
                 {
                   "type": "command",
@@ -10153,15 +9848,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Solomon, B. "
-                },
-                {
-                  "type": "text",
-                  "value": "G. (2014). "
-                },
-                {
-                  "type": "text",
-                  "value": "Violations of assumptions in school-based single-case data: Implications for the selection and interpretation of effect sizes. "
+                  "value": "Solomon, B. G. (2014). Violations of assumptions in school-based single-case data: Implications for the selection and interpretation of effect sizes. "
                 },
                 {
                   "type": "command",
@@ -10208,11 +9895,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Spruyt, A., Clarysse, J., Vansteenwegen, D., Baeyens, F., & Hermans, D. (2009). "
-                },
-                {
-                  "type": "text",
-                  "value": "Affect 4.0: A free software package for implementing psychological and psychophysiological experiments. "
+                  "value": "Spruyt, A., Clarysse, J., Vansteenwegen, D., Baeyens, F., & Hermans, D. (2009). Affect 4.0: A free software package for implementing psychological and psychophysiological experiments. "
                 },
                 {
                   "type": "command",
@@ -10259,27 +9942,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Traxler, J., Madden, V. "
-                },
-                {
-                  "type": "text",
-                  "value": "J., Moseley, G. "
-                },
-                {
-                  "type": "text",
-                  "value": "L., & Vlaeyen, J. "
-                },
-                {
-                  "type": "text",
-                  "value": "W. "
-                },
-                {
-                  "type": "text",
-                  "value": "S. (2019). "
-                },
-                {
-                  "type": "text",
-                  "value": "Modulating pain thresholds through classical conditioning. "
+                  "value": "Traxler, J., Madden, V. J., Moseley, G. L., & Vlaeyen, J. W. S. (2019). Modulating pain thresholds through classical conditioning. "
                 },
                 {
                   "type": "command",
@@ -10326,35 +9989,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Treede, R. "
-                },
-                {
-                  "type": "text",
-                  "value": "D., Rief, W., Barke, A., Aziz, Q., Bennett, M. "
-                },
-                {
-                  "type": "text",
-                  "value": "I., Benoliel, R., Cohen, M., Evers, S., Finnerup, N. "
-                },
-                {
-                  "type": "text",
-                  "value": "B., First, M. "
-                },
-                {
-                  "type": "text",
-                  "value": "B., Giamberardino, M. "
-                },
-                {
-                  "type": "text",
-                  "value": "A., Kaasa, S., Korwisi, B., Kosek, E., Lavand’Homme, P., Nicholas, M., Perrot, S., Scholz, J., Schug, S., … Wang, S. "
-                },
-                {
-                  "type": "text",
-                  "value": "J. (2019). "
-                },
-                {
-                  "type": "text",
-                  "value": "Chronic pain as a symptom or a disease: The IASP classification of chronic pain for the International Classification of Diseases (ICD-11). "
+                  "value": "Treede, R. D., Rief, W., Barke, A., Aziz, Q., Bennett, M. I., Benoliel, R., Cohen, M., Evers, S., Finnerup, N. B., First, M. B., Giamberardino, M. A., Kaasa, S., Korwisi, B., Kosek, E., Lavand’Homme, P., Nicholas, M., Perrot, S., Scholz, J., Schug, S., … Wang, S. J. (2019). Chronic pain as a symptom or a disease: The IASP classification of chronic pain for the International Classification of Diseases (ICD-11). "
                 },
                 {
                   "type": "command",
@@ -10401,35 +10036,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Tsang, A., Von Korff, M., Lee, S., Alonso, J., Karam, E., Angermeyer, M. "
-                },
-                {
-                  "type": "text",
-                  "value": "C., Borges, G. "
-                },
-                {
-                  "type": "text",
-                  "value": "L. "
-                },
-                {
-                  "type": "text",
-                  "value": "G., Bromet, E. "
-                },
-                {
-                  "type": "text",
-                  "value": "J., Demytteneare, K., de Girolamo, G., de Graaf, R., Gureje, O., Lepine, J.-P., Haro, J. "
-                },
-                {
-                  "type": "text",
-                  "value": "M., Levinson, D., Oakley Browne, M. "
-                },
-                {
-                  "type": "text",
-                  "value": "A., Posada-Villa, J., Seedat, S., & Watanabe, M. (2008). "
-                },
-                {
-                  "type": "text",
-                  "value": "Common chronic pain conditions in developed and developing countries: Gender and age differences and comorbidity with depression-anxiety disorders. "
+                  "value": "Tsang, A., Von Korff, M., Lee, S., Alonso, J., Karam, E., Angermeyer, M. C., Borges, G. L. G., Bromet, E. J., Demytteneare, K., de Girolamo, G., de Graaf, R., Gureje, O., Lepine, J.-P., Haro, J. M., Levinson, D., Oakley Browne, M. A., Posada-Villa, J., Seedat, S., & Watanabe, M. (2008). Common chronic pain conditions in developed and developing countries: Gender and age differences and comorbidity with depression-anxiety disorders. "
                 },
                 {
                   "type": "command",
@@ -10476,23 +10083,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Vlaeyen, J. "
-                },
-                {
-                  "type": "text",
-                  "value": "W. "
-                },
-                {
-                  "type": "text",
-                  "value": "S., & Linton, S. "
-                },
-                {
-                  "type": "text",
-                  "value": "J. (2000). "
-                },
-                {
-                  "type": "text",
-                  "value": "Fear-avoidance and its consequences in chronic musculoskeletal pain: A state of the art. "
+                  "value": "Vlaeyen, J. W. S., & Linton, S. J. (2000). Fear-avoidance and its consequences in chronic musculoskeletal pain: A state of the art. "
                 },
                 {
                   "type": "command",
@@ -10539,23 +10130,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Vlaeyen, J. "
-                },
-                {
-                  "type": "text",
-                  "value": "W. "
-                },
-                {
-                  "type": "text",
-                  "value": "S., & Linton, S. "
-                },
-                {
-                  "type": "text",
-                  "value": "J. (2012). "
-                },
-                {
-                  "type": "text",
-                  "value": "Fear-avoidance model of chronic musculoskeletal pain: 12 years on. "
+                  "value": "Vlaeyen, J. W. S., & Linton, S. J. (2012). Fear-avoidance model of chronic musculoskeletal pain: 12 years on. "
                 },
                 {
                   "type": "command",
@@ -10602,43 +10177,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Vlaeyen, J. "
-                },
-                {
-                  "type": "text",
-                  "value": "W. "
-                },
-                {
-                  "type": "text",
-                  "value": "S., Wicksell, R. "
-                },
-                {
-                  "type": "text",
-                  "value": "K., Simons, L. "
-                },
-                {
-                  "type": "text",
-                  "value": "E., Gentili, C., De, T. "
-                },
-                {
-                  "type": "text",
-                  "value": "K., Tate, R. "
-                },
-                {
-                  "type": "text",
-                  "value": "L., Vohra, S., Punja, S., Linton, S. "
-                },
-                {
-                  "type": "text",
-                  "value": "J., Sniehotta, F. "
-                },
-                {
-                  "type": "text",
-                  "value": "F., & Onghena, P. (2020). "
-                },
-                {
-                  "type": "text",
-                  "value": "From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research. "
+                  "value": "Vlaeyen, J. W. S., Wicksell, R. K., Simons, L. E., Gentili, C., De, T. K., Tate, R. L., Vohra, S., Punja, S., Linton, S. J., Sniehotta, F. F., & Onghena, P. (2020). From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research. "
                 },
                 {
                   "type": "command",
@@ -10685,23 +10224,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Vohra, S., Shamseer, L., Sampson, M., Bukutu, C., Schmid, C. "
-                },
-                {
-                  "type": "text",
-                  "value": "H., Tate, R., Nikles, J., Zucker, D. "
-                },
-                {
-                  "type": "text",
-                  "value": "R., Kravitz, R., Guyatt, G., Altman, D. "
-                },
-                {
-                  "type": "text",
-                  "value": "G., & Moher, D. (2015). "
-                },
-                {
-                  "type": "text",
-                  "value": "CONSORT extension for reporting N-of-1 trials (CENT) 2015 statement. "
+                  "value": "Vohra, S., Shamseer, L., Sampson, M., Bukutu, C., Schmid, C. H., Tate, R., Nikles, J., Zucker, D. R., Kravitz, R., Guyatt, G., Altman, D. G., & Moher, D. (2015). CONSORT extension for reporting N-of-1 trials (CENT) 2015 statement. "
                 },
                 {
                   "type": "command",
@@ -10748,11 +10271,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Willkinson, L. (1999). "
-                },
-                {
-                  "type": "text",
-                  "value": "Statistical methods in psychology journals: Guidelines and explanations. "
+                  "value": "Willkinson, L. (1999). Statistical methods in psychology journals: Guidelines and explanations. "
                 },
                 {
                   "type": "command",
@@ -10799,15 +10318,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Woolf, C. "
-                },
-                {
-                  "type": "text",
-                  "value": "J. (1983). "
-                },
-                {
-                  "type": "text",
-                  "value": "Evidence for a central component of post-injury pain hypersensitivity. "
+                  "value": "Woolf, C. J. (1983). Evidence for a central component of post-injury pain hypersensitivity. "
                 },
                 {
                   "type": "command",
@@ -10854,15 +10365,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "Woolf, C. "
-                },
-                {
-                  "type": "text",
-                  "value": "J. (2011). "
-                },
-                {
-                  "type": "text",
-                  "value": "Central sensitization: Implications for the diagnosis and treatment of pain. "
+                  "value": "Woolf, C. J. (2011). Central sensitization: Implications for the diagnosis and treatment of pain. "
                 },
                 {
                   "type": "command",
@@ -11024,6 +10527,11 @@
                     {
                       "type": "tableRow",
                       "children": [
+                        {
+                          "type": "command",
+                          "name": "toprule",
+                          "children": []
+                        },
                         {
                           "type": "tableCell",
                           "children": [
@@ -11257,6 +10765,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -11496,6 +11013,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -11735,6 +11261,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -11974,6 +11509,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -12213,6 +11757,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -12452,6 +12005,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -12691,6 +12253,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -12930,6 +12501,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -13169,6 +12749,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -13408,6 +12997,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -13647,6 +13245,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -13886,6 +13493,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -14125,6 +13741,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -14364,6 +13989,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -14603,6 +14237,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -14842,6 +14485,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -15081,6 +14733,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -15320,6 +14981,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -15559,6 +15229,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -15798,6 +15477,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -16037,6 +15725,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -16276,6 +15973,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -16515,6 +16221,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -16754,6 +16469,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -16993,6 +16717,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -17232,6 +16965,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -17471,6 +17213,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -17710,6 +17461,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -17949,6 +17709,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -18188,6 +17957,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "bottomrule",
+                          "children": []
                         }
                       ]
                     }
@@ -18291,6 +18069,11 @@
                       "type": "tableRow",
                       "children": [
                         {
+                          "type": "command",
+                          "name": "toprule",
+                          "children": []
+                        },
+                        {
                           "type": "tableCell",
                           "children": [
                             {
@@ -18393,6 +18176,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -18502,6 +18294,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -18611,6 +18412,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -18720,442 +18530,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "tableRow",
-                      "children": [
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "A"
-                            }
-                          ]
                         },
                         {
-                          "type": "alignmentTab",
-                          "value": "&"
+                          "type": "text",
+                          "value": " "
                         },
                         {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "1"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "A"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "0"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "A"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "0"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "A"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "0"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "linebreak",
-                          "value": "\\"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "tableRow",
-                      "children": [
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "A"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "0"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "A"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "0"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "A"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "0"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "A"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "0"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "linebreak",
-                          "value": "\\"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "tableRow",
-                      "children": [
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "A"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "0"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "A"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "0"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "A"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "0"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "A"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "0"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "linebreak",
-                          "value": "\\"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "tableRow",
-                      "children": [
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "A"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "0"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "A"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "0"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "A"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "0"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "A"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "0"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "linebreak",
-                          "value": "\\"
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -19265,6 +18648,487 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableRow",
+                      "children": [
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "linebreak",
+                          "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableRow",
+                      "children": [
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "linebreak",
+                          "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableRow",
+                      "children": [
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "linebreak",
+                          "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableRow",
+                      "children": [
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "A"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "linebreak",
+                          "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -19374,6 +19238,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -19483,6 +19356,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -19592,224 +19474,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "tableRow",
-                      "children": [
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "B"
-                            }
-                          ]
                         },
                         {
-                          "type": "alignmentTab",
-                          "value": "&"
+                          "type": "text",
+                          "value": " "
                         },
                         {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "NA"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "B"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "1"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "B"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "0"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "B"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "0"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "linebreak",
-                          "value": "\\"
-                        }
-                      ]
-                    },
-                    {
-                      "type": "tableRow",
-                      "children": [
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "B"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "NA"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "B"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "0"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "B"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "0"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "B"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "alignmentTab",
-                          "value": "&"
-                        },
-                        {
-                          "type": "tableCell",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "0"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "linebreak",
-                          "value": "\\"
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -19919,6 +19592,251 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableRow",
+                      "children": [
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "B"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "NA"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "B"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "B"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "B"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "linebreak",
+                          "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "tableRow",
+                      "children": [
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "B"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "NA"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "B"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "B"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "B"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "alignmentTab",
+                          "value": "&"
+                        },
+                        {
+                          "type": "tableCell",
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "0"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "linebreak",
+                          "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -20028,6 +19946,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -20137,6 +20064,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -20246,6 +20182,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -20355,6 +20300,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -20464,6 +20418,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -20573,6 +20536,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -20682,6 +20654,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -20791,6 +20772,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -20900,6 +20890,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -21009,6 +21008,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -21118,6 +21126,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -21227,6 +21244,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -21336,6 +21362,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -21445,6 +21480,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -21554,6 +21598,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "midrule",
+                          "children": []
                         }
                       ]
                     },
@@ -21663,6 +21716,15 @@
                         {
                           "type": "linebreak",
                           "value": "\\"
+                        },
+                        {
+                          "type": "text",
+                          "value": " "
+                        },
+                        {
+                          "type": "command",
+                          "name": "bottomrule",
+                          "children": []
                         }
                       ]
                     }

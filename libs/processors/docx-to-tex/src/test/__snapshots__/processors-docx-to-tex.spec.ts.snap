@@ -4062,6 +4062,45 @@ Kini, V. \\\\& Ho, P. M. (2018). Interventions to improve medication adherence: 
 "
 `;
 
+exports[`parses correctly for lists 1`] = `
+"\\\\documentclass{article}
+\\\\usepackage[style=apa]{biblatex}
+\\\\addbibresource{bibliography.bib}
+\\\\usepackage{graphicx}
+\\\\usepackage{hyperref}
+
+
+
+\\\\begin{document}
+
+  Number one
+
+Two
+
+Three
+
+
+
+Unordered
+
+List
+
+Items
+
+
+
+Continuing
+
+Previous
+
+List
+
+
+
+\\\\end{document}
+"
+`;
+
 exports[`parses correctly for nocites 1`] = `
 "\\\\documentclass{article}
 \\\\usepackage[style=apa]{biblatex}

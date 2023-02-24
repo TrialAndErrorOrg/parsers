@@ -1,5 +1,7 @@
 import { x } from 'xastscript'
 import { toUnifiedLatex } from '../ooxast-util-to-unified-latex'
+import { s, SP } from '@unified-latex/unified-latex-builder'
+
 describe('p', () => {
   it('should do something', () => {
     const basicp = x('p', { id: 'ayy' }, [
@@ -9,6 +11,6 @@ describe('p', () => {
         x('w:t', {}, [{ type: 'text', value: 'lmao' }]),
       ]),
     ])
-    expect(toUnifiedLatex(basicp)).toEqual(x('p', [{ type: 'text', value: 'lmao' }]))
+    expect(toUnifiedLatex(basicp)).toEqual([SP])
   })
 })

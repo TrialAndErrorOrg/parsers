@@ -7,10 +7,6 @@
       "value": "version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\""
     },
     {
-      "type": "text",
-      "value": "\n"
-    },
-    {
       "type": "element",
       "name": "w:document",
       "attributes": {
@@ -522,29 +518,13 @@
                                     {
                                       "type": "element",
                                       "name": "w:t",
-                                      "attributes": {},
+                                      "attributes": {
+                                        "xml:space": "preserve"
+                                      },
                                       "children": [
                                         {
                                           "type": "text",
-                                          "value": "Author, A. (2022, 1 1). "
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:r",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "w:t",
-                                      "attributes": {},
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "value": "Title of the thing. (Editor, Ed.) "
+                                          "value": "Author, A. (2022, 1 1). Title of the thing. (Editor, Ed.) "
                                         }
                                       ]
                                     }
@@ -668,29 +648,13 @@
                                     {
                                       "type": "element",
                                       "name": "w:t",
-                                      "attributes": {},
+                                      "attributes": {
+                                        "xml:space": "preserve"
+                                      },
                                       "children": [
                                         {
                                           "type": "text",
-                                          "value": "Another. (1000). "
-                                        }
-                                      ]
-                                    }
-                                  ]
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:r",
-                                  "attributes": {},
-                                  "children": [
-                                    {
-                                      "type": "element",
-                                      "name": "w:t",
-                                      "attributes": {},
-                                      "children": [
-                                        {
-                                          "type": "text",
-                                          "value": "Artikel. "
+                                          "value": "Another. (1000). Artikel. "
                                         }
                                       ]
                                     }

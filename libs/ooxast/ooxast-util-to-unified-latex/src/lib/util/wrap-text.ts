@@ -1,5 +1,5 @@
-import { J } from '../types'
+import { H } from '../types'
 
-export function wrapText(j: J, value: string): string {
+export function wrapText(h: H, value: string): string {
   return j.wrapText ? value : value.replace(/\r?\n|\r/g, ' ')
 }

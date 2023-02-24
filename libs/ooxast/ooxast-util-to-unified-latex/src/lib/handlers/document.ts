@@ -1,18 +1,11 @@
 import { all } from '../all'
-import { J, Node, Root } from '../types'
-import { x } from 'xastscript'
-import { Article, Front, Body, Back } from 'unified-latex-types'
+import { H } from '../types'
 import { Document } from 'ooxast'
 import { select } from 'xast-util-select'
 
-export function document(j: J, node: Document): Article {
+export function document(h: H, node: Document) {
   const footnotes = select('w\\:footnotes', node)
-  const fngroup = footnotes ? [j(node, 'fnGroup', {}, all(j, footnotes))] : []
+  const fngroup = footnotes ? [h(node, 'fnGroup', {}, all(h, footnotes))] : []
 
-  return x('article', [
-    x('front') as Front,
-    // @ts-expect-error: hush.
-    all(j, node),
-    x('back', fngroup) as Back,
-  ]) as Article
+  return all(h, node)
 }

@@ -1,15 +1,15 @@
 import { isElement } from 'xast-util-is-element'
 import { Parent } from 'ooxast'
 import { all } from './all'
-import { Handle, J, UnifiedLatexContent, Node, Element } from './types'
+import { Handle, H, UnifiedLatexNode, Node, Element } from './types'
 import { own } from './util/own'
 import { wrapText } from './util/wrap-text'
 
 export function one(
-  j: J,
+  h: H,
   node: Node,
-  parent: Parent
-): UnifiedLatexContent | Array<UnifiedLatexContent> | void {
+  parent?: Parent
+): UnifiedLatexNode | Array<UnifiedLatexNode> | void {
   let fn: Handle | undefined
 
   if (isElement(node)) {
@@ -17,26 +17,26 @@ export function one(
     //   return
     // }
 
-    if (own.call(j.handlers, node.name.replace('w:', ''))) {
-      fn = j.handlers[node.name.replace('w:', '')]
+    if (own.call(h.handlers, node.name.replace('w:', ''))) {
+      fn = h.handlers[node.name.replace('w:', '')]
     }
-  } else if (own.call(j.handlers, node.type)) {
-    fn = j.handlers[node.type]
+  } else if (own.call(h.handlers, node.type)) {
+    fn = h.handlers[node.type]
   }
 
   if (typeof fn === 'function') {
-    return fn(j, node, parent)
+    return fn(h, node, parent)
   }
 
-  return unknown(j, node)
+  return unknown(h, node)
 }
 
-function unknown(j: J, node: Node) {
+function unknown(h: H, node: Node) {
   // @ts-expect-error: Looks like a literal.
   if (typeof node.value === 'string') {
     // @ts-expect-error: Looks like a literal.
     return j(node, 'text', wrapText(j, node.value))
   }
 
-  return all(j, node)
+  return all(h, node)
 }

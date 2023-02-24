@@ -1,3 +1,4 @@
 {
-  "name": "ooxast-util-to-unified-latex"
+  "name": "ooxast-util-to-unified-latex",
+  "type": "module"
 }

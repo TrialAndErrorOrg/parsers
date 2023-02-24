@@ -1,5 +1,5 @@
-import { J, Text } from '../types'
+import { H, Text } from '../types'
 
-export function text(j: J, node: Text) {
+export function text(h: H, node: Text) {
   return node
 }

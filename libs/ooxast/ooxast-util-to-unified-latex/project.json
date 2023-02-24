@@ -37,6 +37,14 @@
       "options": {
         "access": "public"
       }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ooxast/ooxast-util-to-unified-latex"],
+      "options": {
+        "jestConfig": "libs/ooxast/ooxast-util-to-unified-latex/jest.config.js",
+        "passWithNoTests": true
+      }
     }
   },
   "tags": []

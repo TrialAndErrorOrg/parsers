@@ -1,11 +1,11 @@
 import { all } from '../all'
-import { J, Node, Root } from '../types'
+import { H, Node, Root } from '../types'
 import { x } from 'xastscript'
 import { Article, Front, Body, Back, Fig } from 'unified-latex-types'
 import { Drawing } from 'ooxast'
 import { select } from 'xast-util-select'
 
-export function drawing(j: J, node: Drawing): Fig {
+export function drawing(h: H, node: Drawing): Fig {
   const blip = select('a\\:blip', node)
   if (!blip) return x('fig') as Fig
   const ref = blip?.attributes?.['r:embed']

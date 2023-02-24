@@ -1,11 +1,9 @@
-import * as Primitive from '../../xml-primitives'
 import * as m from '../officeDocument/math'
 import * as r from '../officeDocument/relationships'
 import * as s from '../officeDocument/sharedTypes'
 import * as sl from '../schemaLibrary/main'
 import * as wp from '../drawingml/wordprocessingDrawing'
 import { Literal as UnistLiteral, Node as UnistNode } from 'unist'
-import { Element } from 'xast'
 import { RequiredMap } from '../../ooxast'
 
 // Source files:
@@ -2357,11 +2355,11 @@ export interface PlaceholderMap {
   docPart: StringTag<'docPart'>
 }
 
-export type PPr = PPrBase & {
+export interface PPr extends UnistNode {
   type: 'element'
   name: 'w:pPr'
   attributes: Record<string, never>
-  children: RequiredMap<PPrMap>[]
+  children: (RequiredMap<PPrMap> | RequiredMap<PPrBaseMap>)[]
 }
 
 export interface PPrMap {
@@ -2372,7 +2370,6 @@ export interface PPrMap {
 
 export interface PPrBase extends UnistNode {
   type: 'element'
-  name: 'w:pPrBase'
   attributes: Record<string, never>
   children: RequiredMap<PPrBaseMap>[]
 }

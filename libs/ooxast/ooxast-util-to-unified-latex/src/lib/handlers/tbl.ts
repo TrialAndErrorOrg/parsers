@@ -1,8 +1,8 @@
-import { J } from '../types'
+import { H } from '../types'
 import { Tbl } from 'ooxast'
 import { all } from '../all'
 
-export function tbl(j: J, tbl: Tbl) {
+export function tbl(h: H, tbl: Tbl) {
   j.inTable = true
   const table = {
     type: 'element',

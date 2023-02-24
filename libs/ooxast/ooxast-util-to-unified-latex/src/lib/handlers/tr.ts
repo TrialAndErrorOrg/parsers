@@ -1,9 +1,9 @@
-import { J } from '../types'
+import { H } from '../types'
 import { Row } from 'ooxast'
 import { Td } from 'unified-latex-types'
 import { all } from '../all'
 
-export function tr(j: J, tr: Row) {
+export function tr(h: H, tr: Row) {
   const rowcontents = all(j, tr)
   const celldRowContents: Td[] = []
   for (const cell of rowcontents) {

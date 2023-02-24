@@ -1,9 +1,9 @@
 // based on https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/em
 
 import { all } from '../all'
-import { J, Node, Root } from '../types'
+import { H, Node, Root } from '../types'
 
-export function root(j: J, node: Root) {
+export function root(h: H, node: Root) {
   //  if (!article) {
   const children: any[] = [
     {

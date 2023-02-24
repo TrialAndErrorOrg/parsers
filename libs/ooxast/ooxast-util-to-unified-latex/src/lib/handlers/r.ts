@@ -2,24 +2,24 @@ import { FldChar, R, RPr, VerticalAlignRun } from 'ooxast'
 import { select } from 'xast-util-select'
 import { all } from '../all'
 import { x } from 'xastscript'
-import { J } from '../types'
-import { Italic, Bold, Underline, Strike, Sc } from 'unified-latex-types'
+import { H } from '../types'
+import { String as UnifiedLatexString } from '@unified-latex/unified-latex-types'
 import { convertElement } from 'xast-util-is-element'
 
 //const isVert = convertElement<VerticalAlignRun>('w:vertAlign')
 
-export function r(j: J, node: R) {
+export function r(h: H, node: R) {
   const instrText = select('w\\:instrText', node)
   if (instrText) {
-    j.deleteNextRun = true
-    return all(j, node)
+    h.deleteNextRun = true
+    return all(h, node)
   }
 
   const fldChar = select('w\\:fldChar', node)
   const isFldChar = convertElement<FldChar>('w:fldChar')
   if (isFldChar(fldChar)) {
     if (fldChar.attributes?.['w:fldCharType'] === 'end') {
-      j.deleteNextRun = false
+      h.deleteNextRun = false
       return
     }
     return
@@ -36,22 +36,22 @@ export function r(j: J, node: R) {
 
   const drawing = select('w\\:drawing', node)
   if (drawing) {
-    return all(j, node)
+    return all(h, node)
   }
 
-  if (j.deleteNextRun) {
-    j.deleteNextRun = false
+  if (h.deleteNextRun) {
+    h.deleteNextRun = false
     return
   }
 
   const props = select('w\\:rPr', node) as RPr
-  const mergedText = all(j, node).reduce((acc, curr) => {
+  const mergedText = all(h, node).reduce((acc, curr) => {
     if (curr.type !== 'text') return acc
     acc = acc + curr.value
     return acc
   }, '')
 
-  let text = { type: 'text', value: mergedText } as any
+  let text = { type: 'string', content: mergedText } as UnifiedLatexString
   if (!props) return text
 
   for (let i = 0; i < props.children.length; i++) {

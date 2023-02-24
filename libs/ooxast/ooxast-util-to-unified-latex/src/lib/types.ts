@@ -2,22 +2,23 @@ import { Node as UnistNode, Parent as UnistParent } from 'unist'
 
 import { Element } from 'xast'
 import {
-  Parent as UnifiedLatexParent,
-  Content as UnifiedLatexContent,
   Root as UnifiedLatexRoot,
-  P as UnifiedLatexP,
-} from 'unified-latex-types'
-type UnifiedLatexParagraphContent = UnifiedLatexP['children'][number]
+  GenericNode as UnifiedLatexGenericNode,
+  Node as UnifiedLatexNode,
+  MacroInfo,
+  EnvInfo,
+} from '@unified-latex/unified-latex-types'
 
 import {
   Attributes as OoxastProperties,
-  //Node,
   Parent,
   Body,
   Text,
   Root,
   P,
 } from 'ooxast'
+
+export type XastContent = Root['children'][number] | Root
 
 /**
  * ooxast Node
@@ -26,7 +27,9 @@ export type Node = Parent['children'][number] | Root
 type t = Extract<Node, { name: 'td' }>
 
 export type Attributes = OoxastProperties
+
 export interface Options {
+  /** Handlers for specific node types */
   handlers?: { [handle: string]: Handle }
   document?: boolean
   newLines?: boolean
@@ -34,13 +37,34 @@ export interface Options {
   unchecked?: string
   quotes?: Array<string>
   topSection?: number
+  /** Should italics be rendered as \textit or \emph?
+   * @default 'emph'
+   */
   italics?: 'emph' | 'textit'
+  /** Name of the bibliography file
+   * @default 'bibliography.bib'
+   */
   bibname?: string
+  /** Should a column separator be added to tables?
+   * @default false
+   * */
   columnSeparator?: boolean
+  /** Options for the document class
+   * @default { name: 'article' }
+   * */
   documentClass?: {
+    /** Options for the document class
+     * @default undefined
+     * */
     options?: string[]
+    /** Name of the document class
+     * @default 'article'
+     * */
     name: string
   }
+  /** What type of citation is used?
+   * @default 'zotero'
+   * */
   citationType?: 'mendeley' | 'word' | 'citavi' | 'zotero' | 'endnote'
   parseCitation?: (citation: any) => any
   collectCitation?: (citation: any, index: number | string) => any
@@ -49,10 +73,10 @@ export interface Options {
 }
 
 export type Handle = (
-  j: J,
+  h: H,
   node: any,
   parent?: Parent
-) => UnifiedLatexContent | Array<UnifiedLatexContent> | void
+) => UnifiedLatexNode | Array<UnifiedLatexNode> | void
 
 export interface Context {
   nodeById?: {
@@ -61,6 +85,7 @@ export interface Context {
   baseFound: boolean
   frozenBaseUrl: string | null
   wrapText: boolean
+  /** Whether the current node is in a table */
   inTable: boolean
   qNesting: number
   handlers: { [handler: string]: Handle }
@@ -68,11 +93,25 @@ export interface Context {
   checked: string
   unchecked: string
   quotes: Array<string>
+  /** Whether `emph` or `textit` should be used for italics
+   * @default 'emph'
+   */
   italics: string
+  /** Options for the document class
+   * @default { name: 'article' }
+   */
   documentClass: {
     options?: string[]
     name: string
   }
+  /**  The current section depth
+   *  0 = chapter
+   * 1 = section
+   * 2 = subsection
+   * 3 = subsubsection
+   * 4 = paragraph
+   * 5 = subparagraph
+   * */
   sectionDepth: number
   bibname: string
   columnSeparator: boolean
@@ -80,63 +119,44 @@ export interface Context {
   parseCitation: (citation: any) => any
   collectCitation: (citation: any, index: number | string) => any
   partialCitation: string
+  /**  Whether to delete the next w:r element
+   *  Mostly used for citations, where sometimes the next w:r element is the citation in plain text again
+   * */
   deleteNextRun: boolean
   relations: { [key: string]: string }
   citeKeys: { [key: string]: string }
   citationType?: 'mendeley' | 'native' | 'citavi' | 'zotero' | 'endnote'
 }
 
-export type JWithProps = (
-  node: Node,
+export type HWithProps = (
+  node: any,
   type: string,
   props?: Attributes,
-  children?: string | Array<UnifiedLatexContent>
-) => UnifiedLatexContent
+  content?: string | Array<UnifiedLatexNode>
+) => UnifiedLatexNode
 
-export type JWithoutProps = (
-  node: Node,
+export type HWithoutProps = (
+  node: any,
   type: string,
-  children?: string | Array<UnifiedLatexContent>
-) => UnifiedLatexContent
+  content?: string | Array<UnifiedLatexNode>
+) => UnifiedLatexNode
 
-// export type JWithPropsSpecific<TNode extends UnifiedLatexContent = UnifiedLatexContent> = (
-//   node: Node,
-//   type: TNode['type'] extends 'root' | 'text'
-//     ? TNode['type'] extends 'root'
-//       ? 'root'
-//       : 'text'
-//     : Exclude<TNode, Text | Root>['name'],
-//   props?: Attributes,
-//   children?:
-//     | string
-//     | (TNode extends UnifiedLatexParent ? TNode['children'][number][] : never)
-// ) => TNode
+export type H = HWithProps & HWithoutProps & Context
 
-// export type JWithoutPropsSpecific<TNode extends UnifiedLatexContent = UnifiedLatexContent> = (
-//   node: Node,
-//   type: TNode['type'] extends 'root' | 'text'
-//     ? TNode['type'] extends 'root'
-//       ? 'root'
-//       : 'text'
-//     : Exclude<TNode, Text | Root>['name'],
-//   children?:
-//     | string
-//     | (TNode extends UnifiedLatexParent ? TNode['children'][number][] : never)
-// ) => TNode
-
-export type J = JWithProps & JWithoutProps & Context
+export type RenderInfo = (MacroInfo['renderInfo'] | EnvInfo['renderInfo']) &
+  Record<string, unknown>
 
 export type {
   Parent,
   Root,
   Element,
-  UnifiedLatexContent,
-  UnifiedLatexParent,
+  UnifiedLatexNode,
+  UnifiedLatexGenericNode,
   UnifiedLatexRoot,
-  UnifiedLatexParagraphContent,
+  // UnifiedLatexParagraphContent,
   Text,
   P,
-  UnifiedLatexP,
+  // UnifiedLatexP,
   Body,
 }
 

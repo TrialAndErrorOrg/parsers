@@ -12,8 +12,9 @@ import { document } from './document'
 import { r } from './r'
 import { tr } from './tr'
 import { drawing } from './drawing'
+import { Context } from '../types'
 
-export const handlers = {
+export const handlers: Context['handlers'] = {
   p,
   body,
   root,

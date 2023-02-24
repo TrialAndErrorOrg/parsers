@@ -1,33 +1,25 @@
 import { one } from './one'
 import { handlers } from './handlers/index'
-import { own } from './util/own'
 import { Data as CSL } from 'csl-json'
 
 import {
   Context,
-  J,
-  JWithoutProps,
-  JWithProps,
-  UnifiedLatexContent,
+  H,
+  HWithoutProps,
+  HWithProps,
+  UnifiedLatexNode,
   UnifiedLatexRoot,
-  Node,
   Options,
-  Attributes,
   Root,
   Element,
   Text,
+  RenderInfo,
 } from './types'
-import { convert } from 'unist-util-is'
 import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
-import { select } from 'xast-util-select'
-import { x } from 'xastscript'
-import { cslToRefList } from 'unified-latex-util-from-csl'
 
 export { one } from './one'
 export { all } from './all'
 export { handlers as defaultHandlers }
-
-const block = convert(['heading', 'paragraph', 'root'])
 
 export function toUnifiedLatex(
   tree: Root | Element | Text,
@@ -44,48 +36,44 @@ export function toUnifiedLatex(
     //relations: {},
   }
 ) {
+  const whiteSpaceTransformer = rehypeMinifyWhitespace({
+    newlines: options.newLines === true,
+  })
+  if (whiteSpaceTransformer) {
+    // @ts-expect-error rehype-minify-whitespace is not typed correctly
+    whiteSpaceTransformer(tree)
+  }
+
   // const byId: { [s: string]: Element } = {}
-  let unifiedLatex: UnifiedLatexContent | UnifiedLatexRoot
+  let unifiedLatex: UnifiedLatexNode | UnifiedLatexRoot
   const citations: { [key: string | number]: CSL } = {}
 
-  const j: J = Object.assign(
+  const h: H = Object.assign(
     ((
-      node: UnifiedLatexRoot | UnifiedLatexContent,
+      node: UnifiedLatexRoot | UnifiedLatexNode,
       type: string,
-      props?: Attributes | string | Array<UnifiedLatexContent>,
-      children?: string | Array<UnifiedLatexContent>
-    ) => {
-      let attributes: Attributes | undefined
+      props?: RenderInfo | string | Array<UnifiedLatexNode>,
+      content?: string | Array<UnifiedLatexNode>
+    ): UnifiedLatexNode => {
+      let _renderInfo: RenderInfo | undefined
 
       if (typeof props === 'string' || Array.isArray(props)) {
-        children = props
-        attributes = {}
+        content = props
+        _renderInfo = {}
       } else {
-        attributes = props
+        _renderInfo = props
       }
 
-      const result: Node = Object.assign(
+      const result: UnifiedLatexNode = Object.assign(
         {},
-        ['root', 'text'].includes(type)
-          ? { type }
-          : { type: 'element', name: type },
-        { attributes }
+        { type },
+        { _renderInfo },
+        { content },
+        { position: node.position }
       )
 
-      if (typeof children === 'string') {
-        // @ts-expect-error: Looks like a literal.
-        result.value = children
-      } else if (children) {
-        // @ts-expect-error: Looks like a parent.
-        result.children = children
-      }
-
-      if (node.position) {
-        result.position = node.position
-      }
-
-      return result as UnifiedLatexContent
-    }) as JWithProps & JWithoutProps,
+      return result as UnifiedLatexNode
+    }) as HWithProps & HWithoutProps,
     {
       //  nodeById: byId,
       baseFound: false,
@@ -102,7 +90,7 @@ export function toUnifiedLatex(
       unchecked: options.unchecked || '[ ]',
       quotes: options.quotes || ['"'],
       italics: options.italics || 'emph',
-      sectionDepth: options.topSection || 0,
+      sectionDepth: options.topSection || 1,
       documentClass: options.documentClass || { name: 'article' },
       bibname: options.bibname || 'bibliography',
       columnSeparator: !!options.columnSeparator,
@@ -117,38 +105,15 @@ export function toUnifiedLatex(
     } as Context
   )
 
-  // visit(tree, 'element', (node) => {
-  //   const id =
-  //     node.attributes &&
-  //     'id' in node.attributes &&
-  //     String(node.attributes.id).toUpperCase()
-
-  //   if (id && !own.call(byId, id)) {
-  //     byId[id] = node
-  //   }
-  // })
-
-  // @ts-expect-error: does return a transformer, that does accept any node.
-  rehypeMinifyWhitespace({ newlines: options.newlines === true })(tree)
-
-  // @ts-expect-error: does return a transformer, that does accept any node.
-  const result = one(j, tree, undefined)
+  const result = one(h, tree, undefined)
 
   if (!result) {
-    unifiedLatex = { type: 'root', children: [] }
+    unifiedLatex = { type: 'root', content: [] }
   } else if (Array.isArray(result)) {
-    unifiedLatex = { type: 'root', children: result }
+    unifiedLatex = { type: 'root', content: result }
   } else {
     unifiedLatex = result
   }
-
-  // visit(mdast, 'text', ontext)
-
-  //// // // console.log(citations)
-  const back = select('back', unifiedLatex)
-  if (!back) return unifiedLatex
-
-  back.children.unshift(cslToRefList(citations))
 
   return unifiedLatex
 
@@ -161,45 +126,45 @@ export function toUnifiedLatex(
    *
    //* {import('unist-util-visit/complex-types').BuildVisitor UnifiedLatexRoot, 'text'>}
    */
-  function ontext(node: any, index: any, parent: any) {
-    /* c8 ignore next 3 */
-    if (index === null || !parent) {
-      return
-    }
+  // function ontext(node: any, index: any, parent: any) {
+  //   /* c8 ignore next 3 */
+  //   if (index === null || !parent) {
+  //     return
+  //   }
 
-    const previous = parent.children[index - 1]
+  //   const previous = parent.children[index - 1]
 
-    if (previous && previous.type === node.type) {
-      previous.value += node.value
-      parent.children.splice(index, 1)
+  //   if (previous && previous.type === node.type) {
+  //     previous.value += node.value
+  //     parent.children.splice(index, 1)
 
-      if (previous.position && node.position) {
-        previous.position.end = node.position.end
-      }
+  //     if (previous.position && node.position) {
+  //       previous.position.end = node.position.end
+  //     }
 
-      // Iterate over the previous node again, to handle its total value.
-      return index - 1
-    }
+  //     // Iterate over the previous node again, to handle its total value.
+  //     return index - 1
+  //   }
 
-    node.value = node.value.replace(/[\t ]*(\r?\n|\r)[\t ]*/, '$1')
+  //   node.value = node.value.replace(/[\t ]*(\r?\n|\r)[\t ]*/, '$1')
 
-    // We don’t care about other phrasing nodes in between (e.g., `[ asd ]()`),
-    // as there the whitespace matters.
-    if (parent && block(parent)) {
-      if (!index) {
-        node.value = node.value.replace(/^[\t ]+/, '')
-      }
+  //   // We don’t care about other phrasing nodes in between (e.g., `[ asd ]()`),
+  //   // as there the whitespace matters.
+  //   if (parent && block(parent)) {
+  //     if (!index) {
+  //       node.value = node.value.replace(/^[\t ]+/, '')
+  //     }
 
-      if (index === parent.children.length - 1) {
-        node.value = node.value.replace(/[\t ]+$/, '')
-      }
-    }
+  //     if (index === parent.content.length - 1) {
+  //       node.value = node.value.replace(/[\t ]+$/, '')
+  //     }
+  //   }
 
-    if (!node.value) {
-      parent.children.splice(index, 1)
-      return index
-    }
-  }
+  //   if (!node.value) {
+  //     parent.children.splice(index, 1)
+  //     return index
+  //   }
+  // }
   function parseCitation(citation: any) {
     //
   }

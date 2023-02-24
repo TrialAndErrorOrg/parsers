@@ -1,9 +1,9 @@
-import { J } from '../types'
+import { H } from '../types'
 import { Parent, T } from 'ooxast'
 import { Data as CSL } from 'csl-json'
 import { CitationItem, MendeleyCitationItem } from 'ooxast-util-citations'
 
-export function citation(j: J, citation: T, parent: Parent) {
+export function citation(h: H, citation: T, parent: Parent) {
   // i const t = select('', citation) as T
   //  if (!t) return
   if (!citation || !citation?.children?.length) return
@@ -124,7 +124,7 @@ export function cslCitation(text: string) {
   //
 }
 
-function generateAuthYearFromCSL(j: J, csl: CSL): string {
+function generateAuthYearFromCSL(h: H, csl: CSL): string {
   // by default Mendeley generates "ITEM-X" ids, which are bad
   if (csl?.id && typeof csl.id === 'string' && !`${csl?.id}`?.match('ITEM')) {
     return makeUniqueSuffix(j, csl.id, csl)
@@ -138,7 +138,7 @@ function generateAuthYearFromCSL(j: J, csl: CSL): string {
     csl
   )
 }
-function makeUniqueSuffix(j: J, key: string, data: CSL) {
+function makeUniqueSuffix(h: H, key: string, data: CSL) {
   while (j.citeKeys[key] && j.citeKeys[key] !== data.title) {
     key = incrementSuffix(key)
   }

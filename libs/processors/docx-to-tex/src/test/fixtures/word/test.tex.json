@@ -138,7 +138,7 @@
                 },
                 {
                   "type": "text",
-                  "value": "@article{Author2022,\n    author      = {Author},\n    year        = {2022}\n}\n\n\n@article{Another1000,\n    author      = {Another},\n    year        = {1000}\n}"
+                  "value": "@article{Author2022,\n    author      = {Author},\n    date        = {2022}\n}\n\n\n@article{Another1000,\n    author      = {Another},\n    date        = {1000}\n}"
                 }
               ]
             }

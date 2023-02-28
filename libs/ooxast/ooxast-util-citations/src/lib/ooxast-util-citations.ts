@@ -25,11 +25,7 @@ export interface Options {
   type?: 'mendeley' | 'zotero' | 'citavi' | 'word' | 'endnote'
 }
 
-export function findCitations(
-  tree: Node,
-  vfile?: VFile,
-  options?: Options
-): Root {
+export function findCitations(tree: Node, vfile?: VFile, options?: Options): Root {
   const type = detectCitePlugin(tree)
   if (vfile) {
     vfile.data.citePlugin = type
@@ -39,9 +35,7 @@ export function findCitations(
   let citationCounter = 1
   visitParents(tree, isP, (p: P, ancestors: Node[]) => {
     // don't parse citations in tables
-    if (
-      ancestors.some((parent) => isElement(parent) && /tbl/.test(parent.name))
-    ) {
+    if (ancestors.some((parent) => isElement(parent) && /tbl/.test(parent.name))) {
       return
     }
 
@@ -51,11 +45,7 @@ export function findCitations(
 
     // find references section
     if (getPStyle(p)?.toLowerCase()?.includes('heading')) {
-      if (
-        ['references', 'citations', 'bibliography'].includes(
-          toString(p)?.toLowerCase().trim()
-        )
-      ) {
+      if (['references', 'citations', 'bibliography'].includes(toString(p)?.toLowerCase().trim())) {
         references = true
         return
       }
@@ -67,21 +57,19 @@ export function findCitations(
     const runs: typeof kids = []
 
     let skipNext = false
+
     for (const kid of kids) {
       const instr = select('w\\:instrText', kid)
 
       // Check if this is a Mendeley/Zotero citation, because if so we should not try to parse it ourselves
-      if (
-        instr &&
-        isInstrT(instr) &&
-        instr?.children[0]?.value?.includes('CSL_CITATION')
-      ) {
+      if (instr && isInstrT(instr) && instr?.children[0]?.value?.includes('CSL_CITATION')) {
         skipNext = true
         runs.push(kid)
         continue
       }
 
       const t = select('w\\:t', kid)
+
       // If either one of them don't have text, don't merge them ya dummy
       if (!t) {
         runs.push(kid)
@@ -93,6 +81,7 @@ export function findCitations(
         runs.push(kid)
         continue
       }
+
       if (text.value === '') {
         continue
       }
@@ -117,71 +106,65 @@ export function findCitations(
           const parsedCitation: CiteOutput = parseTextCite(sentence, {
             log: options?.log,
           })
+
+          // if the sentence is not a citation, just add it to the runs
           if (parsedCitation.every((item) => typeof item === 'string')) {
-            // runs.push(kid)
             runs.push(
               x('w:r', {}, [
                 ...(rpr ? [rpr] : []),
                 x('w:t', {}, [{ type: 'text', value: sentence } as Text]) as T,
-              ]) as R
+              ]) as R,
             )
             continue
           }
 
-          const newNodes = parsedCitation.reduce(
-            (acc: typeof kids, curr: string | Citation) => {
-              if (typeof curr === 'string') {
-                acc.push(
-                  x('w:r', {}, [
-                    ...(rpr ? [rpr] : []),
-                    x('w:t', {}, [{ type: 'text', value: curr } as Text]) as T,
-                  ]) as R
-                )
-                return acc
-              }
-
-              const { instr, citation } = constructCitation(
-                curr,
-                type,
-                citationCounter,
-                options?.bibliography
-              )
-              citationCounter++
-
+          const newNodes = parsedCitation.reduce((acc: typeof kids, curr: string | Citation) => {
+            if (typeof curr === 'string') {
               acc.push(
                 x('w:r', {}, [
                   ...(rpr ? [rpr] : []),
-                  x('w:instrText', {}, [
-                    { type: 'text', value: instr } as Text,
-                  ]) as T,
-                ]) as R
+                  x('w:t', {}, [{ type: 'text', value: curr } as Text]) as T,
+                ]) as R,
               )
-
-              // say this is an empty, clean thing, and we want to turn it into a text
-              // with mendeely citations. then we need to push the formatted citation after the main citation
-              if (citationTypesWithSuffixedForm.includes(type) && citation) {
-                acc.push(
-                  x('w:r', {}, [
-                    ...(rpr ? [rpr] : []),
-                    x('w:t', {}, [
-                      {
-                        type: 'text',
-                        value:
-                          type === 'mendeley'
-                            ? (citation as MendeleyCitation)?.mendeley
-                                .formattedCitation
-                            : (citation as ZoteroCitation).properties
-                                .formattedCitation,
-                      } as Text,
-                    ]) as T,
-                  ]) as R
-                )
-              }
-
               return acc
-            },
-            []
-          )
+            }
+
+            const { instr, citation } = constructCitation(
+              curr,
+              type,
+              citationCounter,
+              options?.bibliography,
+            )
+            citationCounter++
+
+            acc.push(
+              x('w:r', {}, [
+                ...(rpr ? [rpr] : []),
+                x('w:instrText', {}, [{ type: 'text', value: instr } as Text]) as T,
+              ]) as R,
+            )
+
+            // say this is an empty, clean thing, and we want to turn it into a text
+            // with mendeely citations. then we need to push the formatted citation after the main citation
+            if (citationTypesWithSuffixedForm.includes(type) && citation) {
+              acc.push(
+                x('w:r', {}, [
+                  ...(rpr ? [rpr] : []),
+                  x('w:t', {}, [
+                    {
+                      type: 'text',
+                      value:
+                        type === 'mendeley'
+                          ? (citation as MendeleyCitation)?.mendeley.formattedCitation
+                          : (citation as ZoteroCitation).properties.formattedCitation,
+                    } as Text,
+                  ]) as T,
+                ]) as R,
+              )
+            }
+
+            return acc
+          }, [])
           runs.push(...newNodes)
         } catch (e) {
           console.warn('Text unsuccesfully parsed, treating it as non-cite')
@@ -192,7 +175,7 @@ export function findCitations(
             x('w:r', {}, [
               ...(rpr ? [rpr] : []),
               x('w:t', {}, [{ type: 'text', value: sentence } as Text]) as T,
-            ]) as R
+            ]) as R,
           )
           continue
         }
@@ -215,7 +198,7 @@ export function constructCitation(
   curr: Citation,
   type: string,
   index: number,
-  bibliography?: CSL[]
+  bibliography?: CSL[],
 ): { citation: MendeleyCitation | ZoteroCitation; instr: string } {
   switch (type) {
     case 'mendeley': {

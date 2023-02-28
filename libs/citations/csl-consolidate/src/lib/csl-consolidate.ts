@@ -15,7 +15,7 @@ export async function consolidate(
     mailto: string
     // name: string
     //  accept?: string
-  }
+  },
 ) {
   const http = RateLimit(axios.create(), {
     maxRequests: 20,
@@ -38,7 +38,7 @@ export async function consolidate(
             Accept: 'application/vnd.citationstyles.csl+json',
           },
           params: { mailto: options.mailto },
-        }
+        },
       )
       crossRefResponses.push(Promise.resolve(res))
       types.push('doi')
@@ -57,9 +57,7 @@ export async function consolidate(
       },
       params: {
         ['query.bibliographic']: `${
-          typeof issued === 'string'
-            ? issued
-            : issued?.['date-parts']?.[0]?.join('-')
+          typeof issued === 'string' ? issued : issued?.['date-parts']?.[0]?.join('-')
         } ${author?.[0]?.family || ''} ${title || ''}`,
         rows: 2,
         mailto: options.mailto,
@@ -71,9 +69,7 @@ export async function consolidate(
     types.push('crossref')
   }
 
-  const [resolvedPromises, error] = await tryCatchPromise(
-    Promise.all(crossRefResponses as any)
-  )
+  const [resolvedPromises, error] = await tryCatchPromise(Promise.all(crossRefResponses as any))
 
   if (error) {
     console.error(error)
@@ -131,7 +127,7 @@ function overrideCrossref(ref: CSL, res1: CrossrefJSON, res2?: CrossrefJSON) {
  * Basically if two things completely match but one doesn't, it's good.
  */
 function determineCanonical(ref: CSL, csl: CSL, sim: number) {
-  if (sim > 0.6) {
+  if (sim > 0.7) {
     return { ...ref, ...csl }
   }
   return ref
@@ -199,7 +195,7 @@ function simMaybe(key: keyof CSL, csls: [CSL, CSL]): number {
 function simMaybeIndex(
   key: keyof PickByValue<CSL, any[] | undefined>,
   csls: [CSL, CSL],
-  index: number
+  index: number,
 ): number {
   if (!(csls[0][key]?.[index] || csls[1][key]?.[index])) {
     return 1

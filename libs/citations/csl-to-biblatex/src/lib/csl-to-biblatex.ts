@@ -85,15 +85,17 @@ const biblatexCSLMap: {
 }
 
 export function cslToBiblatex(csl: CSL[]) {
-  const texEntryMap = (key: string, value?: string) =>
-    value ? `${key} = {${value}}` : []
+  const texEntryMap = (key: string, value?: string) => (value ? `${key} = {${value}}` : [])
+
   const toBibtex = (c: CSL[]) => {
     return c
       .map(
         // prettier-ignore
-        (ref,index) =>
-      [
-        `@${(biblatexCSLMap.target )[ref.type] || 'article'}{${generateCiteKey(ref.id,index)}`,
+        (ref,index) =>{
+
+    const type = (biblatexCSLMap.target )[ref.type] || 'article'
+      return [
+        `@${type}{${generateCiteKey(ref.id,index)}`,
       //  ${ref.author?.[0]?.family && ref.issued?.['date-parts']?.[0]?.[0] ? `${ref.author[0].family}${ref.issued['date-parts'][0][0]}` :ref['citation-key'] || ref.id}`,
   texEntryMap('title      ',ref.title),
   texEntryMap('author     ',ref.author
@@ -112,9 +114,10 @@ export function cslToBiblatex(csl: CSL[]) {
   texEntryMap('year       ',ref.issued?.literal ),
   texEntryMap('date       ',ref.issued?.['date-parts']?.[0]?.join('-')),
   texEntryMap('pages      ',ref.page),
-  texEntryMap('journal    ',ref.source),
+  texEntryMap(`${type === 'article' ? 'journal' : 'booktitle'}    `,ref['container-title'] ?? ref.source),
 
 ].flat().join(',\n    ')+'\n}'
+},
       )
       .join('\n\n\n') // + '\n}'
   }

@@ -15,9 +15,7 @@ import { Options } from '../lib/types'
 import { Node } from 'unist'
 import { Ast, Root } from '@unified-latex/unified-latex-types'
 
-const unifiedLatexStringify = function relatexStringify(
-  options?: Options | void
-) {
+const unifiedLatexStringify = function relatexStringify(options?: Options | void) {
   const compiler: CompilerFunction<Node, string> = (tree) => {
     // Assume options.
     const settings = this.data('settings') as Options
@@ -36,7 +34,7 @@ const unifiedLatexStringify = function relatexStringify(
 //describe('fixtures', () => {
 const fromDocx = (
   path: string,
-  citationType?: 'mendeley' | 'word' | 'citavi' | 'zotero' | 'endnote'
+  citationType?: 'mendeley' | 'word' | 'citavi' | 'zotero' | 'endnote',
 ) =>
   unified()
     .data('hey', 'ho')
@@ -53,48 +51,36 @@ const fromDocx = (
         'w:color',
       ],
     })
-    .use(
-      reoffParseReferences // { mailto: 'support@centeroftrialanderror.com' }
-    )
+    .use(reoffParseReferences, { mailto: 'support@trialanderror.org' })
     .use(reoffCite, { type: citationType || 'zotero', log: false })
     .use(() => (tree, vfile) => {
-      writeFileSync(
-        join(path, 'test.ooxast.json'),
-        JSON.stringify(removePosition(tree), null, 2)
-      )
+      writeFileSync(join(path, 'test.ooxast.json'), JSON.stringify(removePosition(tree), null, 2))
     })
     .use(
       () => (tree, vfile) =>
         toUnifiedLatex(tree, {
           relations: vfile.data.relations ?? {},
           bibliography: vfile.data.bibliography ?? [],
-        }) as Root
+        }) as Root,
     )
     .use(
       () => (tree) =>
-        writeFileSync(
-          join(path, 'test.tex.json'),
-          JSON.stringify(removePosition(tree), null, 2)
-        )
+        writeFileSync(join(path, 'test.tex.json'), JSON.stringify(removePosition(tree), null, 2)),
     )
     .use(unifiedLatexStringify)
 
 const fixtures = new URL('fixtures', import.meta.url).pathname
 const dir = readdirSync(fixtures)
 
+jest.setTimeout(20000)
 it.each(dir)('parses correctly for %s', async (name: string) => {
-  const [docx, latex] = ['index.docx', 'expected.tex'].map((ext) =>
-    join(fixtures, name, ext)
-  )
+  const [docx, latex] = ['index.docx', 'expected.tex'].map((ext) => join(fixtures, name, ext))
 
   const doccc = new Uint8Array(await readFile(docx))
   const docxIn = await docxToVFile(doccc)
 
   const result = String(
-    await fromDocx(
-      join(fixtures, name),
-      name === 'zotero' ? 'zotero' : undefined
-    ).process(docxIn)
+    await fromDocx(join(fixtures, name), name === 'zotero' ? 'zotero' : undefined).process(docxIn),
   )
   await writeFile(join(fixtures, name, 'result.tex'), result)
 

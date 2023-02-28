@@ -222,23 +222,6 @@
                   "value": "Immediately starting other list"
                 }
               ]
-            },
-            {
-              "type": "element",
-              "name": "p",
-              "attributes": {},
-              "children": []
-            },
-            {
-              "type": "element",
-              "name": "p",
-              "attributes": {},
-              "children": [
-                {
-                  "type": "text",
-                  "value": ""
-                }
-              ]
             }
           ]
         },

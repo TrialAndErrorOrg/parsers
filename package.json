@@ -12,7 +12,8 @@
     "install-node": "echo 'for i in libs/relatex/* libs/rejour/* \\n do \\n rm -rf $i/node_modules && yarn --cwd $i \\n done' | bash",
     "ruby": "ruby scripts/server.rb",
     "deploy": "echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc && nx deploy",
-    "typedoc": "typedoc --hideBreadcrumbs --hideInPageTOC --publicPath .",
+    "typedoc": "typedoc --hideBreadcrumbs --hideInPageTOC --baseUrl .",
+    "typedocc": "typedoc",
     "update-readme": "pnpm run typedoc && tsx --tsconfig tsconfig.base.json scripts/readmeAction.ts"
   },
   "type": "module",
@@ -223,7 +224,7 @@
     "ts-node": "10.9.1",
     "tsx": "^3.12.3",
     "typedoc": "^0.23.26",
-    "typedoc-plugin-markdown": "^3.14.0",
+    "typedoc-plugin-markdown": "4.0.0-next.3",
     "typescript": "4.9.5",
     "unist-util-remove-position": "4.0.2",
     "unist-util-visit-parents": "5.1.3",

@@ -1,0 +1,35 @@
+{
+  "name": "new-converter",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/new-converter/src",
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "outputs": ["apps/converter-frontent/.svelte-kit", "apps/converter-frontend/build"],
+      "options": {
+        "commands": ["vite build"],
+        "cwd": "apps/new-converter"
+      }
+    },
+    "serve": {
+      "outputs": ["apps/converter-frontent/.svelte-kit"],
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["vite dev"],
+        "cwd": "apps/new-converter"
+      }
+    },
+    "add": {
+      "executor": "@nxext/sveltekit:add"
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/new-converter/**/*.{ts,svelte,spec.ts}"]
+      }
+    }
+  },
+  "tags": []
+}

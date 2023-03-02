@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "version": 2,
+  "cli": "nx",
+  "title": "UpdateReadme executor",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "readme": {
+      "type": "string",
+      "description": "The path to the README file. By default, it is the README.md at the root of the project.",
+      "x-prompt": "What is the path to the README file?"
+    },
+    "packageJSON": {
+      "type": "string",
+      "description": "The path to the package.json file. By default, it is the package.json at the root of the project.",
+      "x-prompt": "What is the path to the package.json file?"
+    }
+  },
+  "required": []
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "executors": {
+    "update-readme": {
+      "implementation": "./src/executors/update-readme/executor",
+      "schema": "./src/executors/update-readme/schema.json",
+      "description": "update-readme executor"
+    }
+  }
+}

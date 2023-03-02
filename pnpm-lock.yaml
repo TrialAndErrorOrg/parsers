@@ -185,7 +185,7 @@ specifiers:
   tslib: ^2.3.0
   tsx: ^3.12.3
   typedoc: ^0.23.26
-  typedoc-plugin-markdown: ^3.14.0
+  typedoc-plugin-markdown: 4.0.0-next.3
   typescript: 4.9.5
   unified: ^10.1.2
   unist-builder: ^3.0.0
@@ -416,7 +416,7 @@ devDependencies:
   ts-node: 10.9.1_v3zrwtwj74lklrny5gavzpojy4
   tsx: 3.12.3
   typedoc: 0.23.26_typescript@4.9.5
-  typedoc-plugin-markdown: 3.14.0_typedoc@0.23.26
+  typedoc-plugin-markdown: 4.0.0-next.3_typedoc@0.23.26
   typescript: 4.9.5
   unist-util-remove-position: 4.0.2
   unist-util-visit-parents: 5.1.3
@@ -10086,19 +10086,6 @@ packages:
   /handle-thing/2.0.1:
     resolution: {integrity: sha512-9Qn4yBxelxoh2Ow62nP+Ka/kMnOXRi8BXnRaUwezLNhqelnN49xKz4F/dPP8OYLxLxq6JDtZb2i9XznUQbNPTg==}
 
-  /handlebars/4.7.7:
-    resolution: {integrity: sha512-aAcXm5OAfE/8IXkcZvCepKU3VzW1/39Fb5ZuqMtgI/hT8X2YgoMvBY5dLhq/cpOvw7Lk1nK/UF71aLG/ZnVYRA==}
-    engines: {node: '>=0.4.7'}
-    hasBin: true
-    dependencies:
-      minimist: 1.2.7
-      neo-async: 2.6.2
-      source-map: 0.6.1
-      wordwrap: 1.0.0
-    optionalDependencies:
-      uglify-js: 3.17.4
-    dev: true
-
   /harmony-reflect/1.6.2:
     resolution: {integrity: sha512-HIp/n38R9kQjDEziXyDTuW3vvoxxyxjxFzXLrBr18uB47GnSt+G9D29fqrpM5ZkspMcPICud3XsBJQ4Y2URg8g==}
 
@@ -16602,12 +16589,11 @@ packages:
   /typedarray/0.0.6:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
 
-  /typedoc-plugin-markdown/3.14.0_typedoc@0.23.26:
-    resolution: {integrity: sha512-UyQLkLRkfTFhLdhSf3RRpA3nNInGn+k6sll2vRXjflaMNwQAAiB61SYbisNZTg16t4K1dt1bPQMMGLrxS0GZ0Q==}
+  /typedoc-plugin-markdown/4.0.0-next.3_typedoc@0.23.26:
+    resolution: {integrity: sha512-Koim98xkXOoY8KPlMNH/cKTfqTEocVEYMa3XZgoPX/DkGp7ioB6nl38p6Snl7rEmhcbHkFktcUoOQLn04Kk3sg==}
     peerDependencies:
       typedoc: '>=0.23.0'
     dependencies:
-      handlebars: 4.7.7
       typedoc: 0.23.26_typescript@4.9.5
     dev: true
 
@@ -16639,14 +16625,6 @@ packages:
   /uc.micro/1.0.6:
     resolution: {integrity: sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==}
     dev: true
-
-  /uglify-js/3.17.4:
-    resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
-    engines: {node: '>=0.8.0'}
-    hasBin: true
-    requiresBuild: true
-    dev: true
-    optional: true
 
   /unbox-primitive/1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
@@ -17563,10 +17541,6 @@ packages:
   /word-wrap/1.2.3:
     resolution: {integrity: sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==}
     engines: {node: '>=0.10.0'}
-
-  /wordwrap/1.0.0:
-    resolution: {integrity: sha512-gvVzJFlPycKc5dZN4yPkP8w7Dc37BtP1yczEneOb4uq34pXZcvrtRTmWV8W+Ume+XCxKgbjM+nevkyFPMybd4Q==}
-    dev: true
 
   /wrap-ansi/6.2.0:
     resolution: {integrity: sha512-r6lPcBGxZXlIcymEu7InxDMhdW0KDxpLgoFLcguasxCaJ/SOIZwINatK9KY/tf+ZrlywOKU0UDj3ATXUBfxJXA==}

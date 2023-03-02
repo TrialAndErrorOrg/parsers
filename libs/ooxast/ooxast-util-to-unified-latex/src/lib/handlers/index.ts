@@ -3,10 +3,8 @@ import { body } from './body'
 import { p } from './p'
 import { root } from './root'
 import { text } from './text'
-import { wrapChildren } from '../util/wrap-children'
 import { citation } from './citation'
 import { tbl } from './tbl'
-import { notes } from './footnotes'
 import { footnote } from './footnote'
 import { document } from './document'
 import { r } from './r'
@@ -25,7 +23,7 @@ export const handlers: Context['handlers'] = {
   root,
   text,
   document,
-  footnotes: notes,
+  footnotes: all,
   footnote,
   t: all,
   oMathPara: oMathPara,

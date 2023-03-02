@@ -21,7 +21,13 @@ Convert `ooxast` syntax tree to `unified-latex` syntax tree.
 
 ## What is this?
 
+This package is a utility that takes an [ooxast] (docx) syntax tree as input and turns it into a [unified-latex] (LaTeX) syntax tree.
+
 ## When should I use this?
+
+This project is useful when you want to deal with ASTs and turn OOXML into LaTeX.
+
+The reoff plugin [reoff-unified-latex] wraps this utility to also turn markdown to HTML at a higher-level (easier) abstraction.
 
 ## Install
 
@@ -86,3 +92,4 @@ GPL-3.0-or-later © Thomas F. K. Jorna
 [ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast
 [ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-unified-latex
 [ooxast-util-to-unified-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast-util-to-unified-latex
+[unified-latex]: https://github.com/siefken/unified-latex

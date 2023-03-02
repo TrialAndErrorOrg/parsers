@@ -10,14 +10,7 @@ import {
   Macro,
 } from '@unified-latex/unified-latex-types'
 
-import {
-  Attributes as OoxastProperties,
-  Parent,
-  Body,
-  Text,
-  Root,
-  P,
-} from 'ooxast'
+import { Attributes as OoxastProperties, Parent, Body, Text, Root, P } from 'ooxast'
 
 export type XastContent = Root['children'][number] | Root
 
@@ -203,8 +196,8 @@ export interface Options {
 export type Handle = (
   h: H,
   node: any,
-  parent?: Parent
-) => UnifiedLatexNode | Array<UnifiedLatexNode> | void
+  parent?: Parent,
+) => UnifiedLatexNode | Array<UnifiedLatexNode> | void | undefined
 
 export interface Context {
   nodeById?: {
@@ -287,19 +280,18 @@ export type HWithProps = (
   node: any,
   type: string,
   props?: Attributes,
-  content?: string | Array<UnifiedLatexNode>
+  content?: string | Array<UnifiedLatexNode>,
 ) => UnifiedLatexNode
 
 export type HWithoutProps = (
   node: any,
   type: string,
-  content?: string | Array<UnifiedLatexNode>
+  content?: string | Array<UnifiedLatexNode>,
 ) => UnifiedLatexNode
 
 export type H = HWithProps & HWithoutProps & Context
 
-export type RenderInfo = (MacroInfo['renderInfo'] | EnvInfo['renderInfo']) &
-  Record<string, unknown>
+export type RenderInfo = (MacroInfo['renderInfo'] | EnvInfo['renderInfo']) & Record<string, unknown>
 
 export type {
   Parent,

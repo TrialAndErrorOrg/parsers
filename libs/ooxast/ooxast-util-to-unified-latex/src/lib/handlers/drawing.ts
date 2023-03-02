@@ -8,24 +8,12 @@ export const drawing: Handle = (h: H, node: Drawing) => {
   const blip = select('a\\:blip', node)
 
   if (!blip) {
-    return env('figure', [
-      m('caption', ''),
-      PB,
-      m('label', ''),
-      PB,
-      m('includegraphics', ''),
-    ])
+    return env('figure', [m('caption', ''), PB, m('label', ''), PB, m('includegraphics', '')])
   }
   const ref = blip?.attributes?.['r:embed']
 
   if (!ref) {
-    return env('figure', [
-      m('caption', ''),
-      PB,
-      m('label', ''),
-      PB,
-      m('includegraphics', ''),
-    ])
+    return env('figure', [m('caption', ''), PB, m('label', ''), PB, m('includegraphics', '')])
   }
 
   return env('figure', [

@@ -16,5 +16,11 @@
     "rejour",
     "jats-xml",
     "ooxast"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "ooxast-util-to-jast",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

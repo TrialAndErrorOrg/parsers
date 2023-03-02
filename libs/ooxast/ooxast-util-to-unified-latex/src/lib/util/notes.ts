@@ -1,12 +1,11 @@
 import { Endnotes, Footnotes, FtnEdn } from 'ooxast'
-import { H, UnifiedLatexNode } from '../types'
 import { all } from '../all'
+import { H, UnifiedLatexNode } from '../types'
 
-export function notes(h: H, node: Footnotes | Endnotes) {
+export const notes = (h: H, node: Footnotes | Endnotes) => {
   const children = node.children.filter<FtnEdn>(
     (child): child is FtnEdn =>
-      ('name' in child && child.name === 'w:footnote') ||
-      child.name === 'w:endnote'
+      ('name' in child && child.name === 'w:footnote') || child.name === 'w:endnote',
   )
 
   const notes = children.reduce((acc, child, idx) => {

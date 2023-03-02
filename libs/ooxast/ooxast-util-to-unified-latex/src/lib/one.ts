@@ -8,15 +8,11 @@ import { wrapText } from './util/wrap-text'
 export function one(
   h: H,
   node: Node,
-  parent?: Parent
+  parent?: Parent,
 ): UnifiedLatexNode | Array<UnifiedLatexNode> | void {
   let fn: Handle | undefined
 
   if (isElement(node)) {
-    // if (node.attributes && node.attributes.datoUnifiedLatex === 'ignore') {
-    //   return
-    // }
-
     if (own.call(h.handlers, node.name.replace(/\w+:/, ''))) {
       fn = h.handlers[node.name.replace(/\w+:/, '')]
     }

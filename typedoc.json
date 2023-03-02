@@ -1,0 +1,14 @@
+{
+  "entryPointStrategy": "packages",
+  "tsconfig": "tsconfig.base.json",
+  "entryPoints": [
+    "libs/ooxast/ooxast-util-to-unified-latex",
+    "libs/ooxast/ooxast-util-to-jast",
+    "libs/ooxast/*",
+    "libs/jast/*",
+    "libs/reoff/*",
+    "libs/rejour/*",
+    "libs/citations/*",
+    "libs/xast/*"
+  ]
+}

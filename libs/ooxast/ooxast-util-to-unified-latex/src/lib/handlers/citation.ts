@@ -1,10 +1,11 @@
-import { H } from '../types'
-import { Parent, T } from 'ooxast'
+import { H, Handle } from '../types'
+import { T } from 'ooxast'
 import { Data as CSL } from 'csl-json'
 import { CitationItem, MendeleyCitationItem } from 'ooxast-util-citations'
 import { m } from '@unified-latex/unified-latex-builder'
+import { Parent } from 'unist'
 
-export function citation(h: H, citation: T, parent: Parent) {
+export const citation: Handle = (h: H, citation: T, parent?: Parent) => {
   // i const t = select('', citation) as T
   //  if (!t) return
   if (!citation || !citation?.children?.length) return
@@ -55,9 +56,7 @@ export function citation(h: H, citation: T, parent: Parent) {
       // console.log(json)
       console.log(h.partialCitation)
 
-      console.error(
-        'Corrupt citation! This might be because the text is too long. Skipping...'
-      )
+      console.error('Corrupt citation! This might be because the text is too long. Skipping...')
       return
     }
 
@@ -70,10 +69,7 @@ export function citation(h: H, citation: T, parent: Parent) {
           ? citation.properties.formattedCitation
           : citation.mendeley.formattedCitation
 
-      const sectionedCitations = formattedCitation?.replace(
-        /(\d{4}), (\d{4})/g,
-        '$1; $2'
-      )
+      const sectionedCitations = formattedCitation?.replace(/(\d{4}), (\d{4})/g, '$1; $2')
 
       const formattedCitations = sectionedCitations.split(';')
 
@@ -81,41 +77,36 @@ export function citation(h: H, citation: T, parent: Parent) {
         h.deleteNextRun = true
       }
 
-      return citation.citationItems.map(
-        (cite: CitationItem | MendeleyCitationItem, i: number) => {
-          const itemData: CSL = cite.itemData
-          h.citationNumber++
-          // const citeKey =
-          const citeKey =
-            generateAuthYearFromCSL(h, itemData) || `bib${h.citationNumber}`
+      return citation.citationItems.map((cite: CitationItem | MendeleyCitationItem, i: number) => {
+        const itemData: CSL = cite.itemData
+        h.citationNumber++
+        // const citeKey =
+        const citeKey = generateAuthYearFromCSL(h, itemData) || `bib${h.citationNumber}`
 
-          h.collectCitation(itemData, citeKey)
+        h.collectCitation(itemData, citeKey)
 
-          const { id, itemData: itemdata, ...rest } = cite
-          const customCiteData = { ...rest, ...citation.properties }
+        const { id, itemData: itemdata, ...rest } = cite
+        const customCiteData = { ...rest, ...citation.properties }
 
-          return m('autocite', citeKey)
-          return h(
-            itemData,
-            'xref',
+        return m('autocite', citeKey)
+        return h(
+          itemData,
+          'xref',
+          {
+            id: `_xref-${h.citationNumber}`,
+            refType: 'bibr',
+            rid: citeKey,
+            // We store more value in the custom citation space, such as infix/suffix etc.
+            ...(customCiteData ? { customType: JSON.stringify(customCiteData) } : {}), // customType: JSON.stringify()
+          },
+          [
             {
-              id: `_xref-${h.citationNumber}`,
-              refType: 'bibr',
-              rid: citeKey,
-              // We store more value in the custom citation space, such as infix/suffix etc.
-              ...(customCiteData
-                ? { customType: JSON.stringify(customCiteData) }
-                : {}), // customType: JSON.stringify()
+              type: 'string',
+              content: formattedCitations?.[i] || `[${h.citationNumber}]`,
             },
-            [
-              {
-                type: 'string',
-                content: formattedCitations?.[i] || `[${h.citationNumber}]`,
-              },
-            ]
-          )
-        }
-      )
+          ],
+        )
+      })
     }
   }
   // Endnote/Citavi citation
@@ -138,7 +129,7 @@ function generateAuthYearFromCSL(h: H, csl: CSL): string {
     csl?.author?.[0]?.family && csl?.issued?.['date-parts']?.[0]?.[0]
       ? `${csl.author[0].family}${csl.issued['date-parts'][0][0]}`
       : `${csl.id}`,
-    csl
+    csl,
   )
 }
 function makeUniqueSuffix(h: H, key: string, data: CSL) {
@@ -153,8 +144,5 @@ function incrementSuffix(text: string) {
   if (!text.slice(-1).match(/[a-zA-Z]/)) {
     return `${text}a`
   }
-  return (
-    text.slice(0, -1) +
-    String.fromCharCode(text.charCodeAt(text.length - 1) + 1)
-  )
+  return text.slice(0, -1) + String.fromCharCode(text.charCodeAt(text.length - 1) + 1)
 }

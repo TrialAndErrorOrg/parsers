@@ -16,5 +16,11 @@
     "rejour",
     "latex",
     "unified-latex"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "ooxast-util-to-unified-latex",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

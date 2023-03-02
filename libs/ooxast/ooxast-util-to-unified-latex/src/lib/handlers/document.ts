@@ -1,27 +1,32 @@
 import { all } from '../all'
-import { H } from '../types'
-import { Body, Document } from 'ooxast'
+import { H, Handle } from '../types'
+import { Body, Document, Endnotes, Footnotes } from 'ooxast'
 import { select } from 'xast-util-select'
-import { notes } from './footnotes'
+import { notes } from '../util/notes'
+import { convertElement } from 'xast-util-is-element'
 
-export function document(h: H, node: Document) {
+const isFootnotes = convertElement<Footnotes>('w:footnotes')
+const isEndnotes = convertElement<Endnotes>('w:endnotes')
+
+export const document: Handle = (h: H, node: Document) => {
   h.simpleParagraph = true
   const body = select('w\\:body', node)
 
   const foots = select('w\\:footnotes', node)
-  if (foots) {
+  if (foots && isFootnotes(foots)) {
     h.footnotes = notes(h, foots)
   }
 
   const endnotes = select('w\\:endnotes', node)
-  if (endnotes) {
+  if (endnotes && isEndnotes(endnotes)) {
     h.endnotes = notes(h, endnotes)
   }
 
-  const styles = select('w\\:styles', node)
-  if (styles) {
-    h.styles = all(h, styles)
-  }
+  // TODO: [ooxast-util-to-unified-latex] do something with the styles
+  // const styles = select('w\\:styles', node)
+  // if (styles) {
+  //   h.styles = all(h, styles)
+  // }
 
   const relations = select('w\\:relationships', node)
 

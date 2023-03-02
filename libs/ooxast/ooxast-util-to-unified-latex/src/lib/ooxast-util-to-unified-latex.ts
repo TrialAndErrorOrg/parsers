@@ -20,7 +20,6 @@ import { args, env, m, s } from '@unified-latex/unified-latex-builder'
 import { PB } from './util/PB'
 import { makePackage } from './util/make-package'
 import { cslToBiblatex } from 'csl-to-biblatex'
-import { a } from 'hast-util-to-mdast/lib/handlers/a'
 
 export { one } from './one'
 export { all } from './all'
@@ -63,7 +62,7 @@ export function toUnifiedLatex(tree: Root | Element | Text, options: Options) {
       node: UnifiedLatexRoot | UnifiedLatexNode,
       type: string,
       props?: RenderInfo | string | Array<UnifiedLatexNode>,
-      content?: string | Array<UnifiedLatexNode>
+      content?: string | Array<UnifiedLatexNode>,
     ): UnifiedLatexNode => {
       let _renderInfo: RenderInfo | undefined
 
@@ -79,7 +78,7 @@ export function toUnifiedLatex(tree: Root | Element | Text, options: Options) {
         { type },
         { _renderInfo },
         { content },
-        { position: node.position }
+        { position: node.position },
       )
 
       return result as UnifiedLatexNode
@@ -92,9 +91,7 @@ export function toUnifiedLatex(tree: Root | Element | Text, options: Options) {
       /** @type {string|null} */
       frozenBaseUrl: null,
       qNesting: 0,
-      handlers: options.handlers
-        ? { ...handlers, ...options.handlers }
-        : handlers,
+      handlers: options.handlers ? { ...handlers, ...options.handlers } : handlers,
       document: options.document,
       quotes: options.quotes || ['"'],
       italics: options.italics || 'emph',
@@ -122,8 +119,7 @@ export function toUnifiedLatex(tree: Root | Element | Text, options: Options) {
       tabularx: options.tabularx
         ? {
             width:
-              typeof options.tabularx === 'object' &&
-              'width' in options.tabularx
+              typeof options.tabularx === 'object' && 'width' in options.tabularx
                 ? options.tabularx.width
                 : '1.0\\textwidth',
           }
@@ -131,7 +127,7 @@ export function toUnifiedLatex(tree: Root | Element | Text, options: Options) {
       simpleParagraph: false,
       bibliography: options.bibliography || [],
       inDisplayMath: false,
-    } as Context
+    } as Context,
   )
 
   const result = one(h, tree, undefined)
@@ -182,7 +178,7 @@ export function toUnifiedLatex(tree: Root | Element | Text, options: Options) {
             'documentclass',
             args([h.documentClass.options?.join(', '), h.documentClass.name], {
               braces: '[]{}',
-            })
+            }),
           )
         : m('documentclass', h.documentClass.name),
       PB,

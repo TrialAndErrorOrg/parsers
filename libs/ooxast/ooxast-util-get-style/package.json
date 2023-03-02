@@ -8,9 +8,8 @@
   "description": "Get style from a `w:p` element.",
   "keywords": [
     "unified",
-    "abstract",
-    "syntax",
-    "tree",
-    "ast"
+    "ooxast",
+    "docx",
+    "reoff"
   ]
 }

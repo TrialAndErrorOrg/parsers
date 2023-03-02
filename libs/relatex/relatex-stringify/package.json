@@ -8,8 +8,8 @@
   "description": "Plugin for `relatex` that stringifies a `texast` syntax tree to a LaTeX file.",
   "keywords": [
     "unified",
-    "abstract",
-    "syntax",
+    "latex",
+    "relatex",
     "tree",
     "ast"
   ]

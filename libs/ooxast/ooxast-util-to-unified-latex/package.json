@@ -1,4 +1,20 @@
 {
   "name": "ooxast-util-to-unified-latex",
-  "type": "module"
+  "version": "0.0.1",
+  "license": "GPL-3.0-or-later",
+  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
+  "description": "Util to convert `ooxast` syntax tree to `unified-latex` syntax tree, allowing for `.docx` to `.tex` conversion.",
+  "keywords": [
+    "unified",
+    "word",
+    "docx",
+    "office",
+    "jats",
+    "reoff",
+    "rejour",
+    "latex",
+    "unified-latex"
+  ]
 }

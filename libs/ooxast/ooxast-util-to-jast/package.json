@@ -8,9 +8,13 @@
   "description": "Util to convert `ooxast` syntax tree to `jast` syntax tree, allowing for `.docx` to `JATS XML` conversion.",
   "keywords": [
     "unified",
-    "abstract",
-    "syntax",
-    "tree",
-    "ast"
+    "word",
+    "docx",
+    "office",
+    "jats",
+    "reoff",
+    "rejour",
+    "jats-xml",
+    "ooxast"
   ]
 }

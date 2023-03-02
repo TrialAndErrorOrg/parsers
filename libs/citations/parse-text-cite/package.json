@@ -7,10 +7,10 @@
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "description": "Small tool that parses a string of text containing APA style in text citations, e.g.",
   "keywords": [
-    "unified",
-    "abstract",
-    "syntax",
-    "tree",
-    "ast"
+    "citations",
+    "apa",
+    "references",
+    "bibliography",
+    "parser"
   ]
 }

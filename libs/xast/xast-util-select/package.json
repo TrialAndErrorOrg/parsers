@@ -8,9 +8,7 @@
   "description": "Port of `(hast-util-select)[https://github.com/syntax-tree/hast-util-select]` for use with `xast` nodes.",
   "keywords": [
     "unified",
-    "abstract",
-    "syntax",
-    "tree",
-    "ast"
+    "xast",
+    "hast"
   ]
 }

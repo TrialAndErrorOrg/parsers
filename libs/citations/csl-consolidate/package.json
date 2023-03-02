@@ -7,10 +7,12 @@
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "description": "Small utility script which checks a list of CSL references against the Crossref doi.",
   "keywords": [
-    "unified",
-    "abstract",
-    "syntax",
-    "tree",
-    "ast"
+    "csl",
+    "crossref",
+    "doi",
+    "typescript",
+    "references",
+    "citations",
+    "metadata"
   ]
 }

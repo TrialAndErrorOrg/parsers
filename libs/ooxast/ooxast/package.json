@@ -5,12 +5,13 @@
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Type definitions for `ooxast` (Open Office XML abstract syntax tree), a syntax for abstract syntax trees representing Open Office XML documents in the [`unist`](https://github.com/syntax-tree/unist) format.",
+  "description": "Type definitions for `ooxast` (Open Office XML abstract syntax tree), a unified-compatible syntax for abstract syntax trees representing Open Office XML documents in the [`unist`](https://github.com/syntax-tree/unist) format.",
   "keywords": [
     "unified",
-    "abstract",
-    "syntax",
-    "tree",
+    "syntax-tree",
+    "docx",
+    "ooxast",
+    "reoff",
     "ast"
   ]
 }

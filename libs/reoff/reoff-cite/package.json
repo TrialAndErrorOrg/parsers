@@ -7,10 +7,12 @@
   "type": "module",
   "description": "Plugin for `reoff` that parses citations in the form of `@cite{key}` and `@cite[page]{key}` using `ooxast-util-parse-bib` and `ooxast-util-parse-text-cite`.",
   "keywords": [
-    "unified",
-    "abstract",
-    "syntax",
-    "tree",
-    "ast"
+    "reoff",
+    "plugin",
+    "citation",
+    "bibliography",
+    "ooxast",
+    "docx",
+    "unified"
   ]
 }

@@ -8,9 +8,11 @@
   "description": "Plugin for `rejour` that transforms a `jast` syntax tree into a `texast` syntax tree, allowing for conversion between JATS XML and LaTeX.",
   "keywords": [
     "unified",
-    "abstract",
-    "syntax",
-    "tree",
-    "ast"
+    "rejour",
+    "relatex",
+    "texast",
+    "latex",
+    "jats",
+    "jats-xml"
   ]
 }

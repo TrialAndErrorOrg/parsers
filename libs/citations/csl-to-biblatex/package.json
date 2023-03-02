@@ -7,10 +7,11 @@
   "type": "module",
   "description": "Somewhat jank CSL-JSON to biblatex converter",
   "keywords": [
-    "unified",
-    "abstract",
-    "syntax",
-    "tree",
-    "ast"
+    "csl",
+    "biblatex",
+    "converter",
+    "references",
+    "csl-json",
+    "bibliography"
   ]
 }

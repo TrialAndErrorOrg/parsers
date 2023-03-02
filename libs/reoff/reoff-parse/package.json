@@ -8,9 +8,9 @@
   "description": "Plugin for [reoff][reoff] to parse a `.docx` XML file into an `ooxast` AST. ",
   "keywords": [
     "unified",
-    "abstract",
-    "syntax",
-    "tree",
-    "ast"
+    "reoff",
+    "ooxast",
+    "word",
+    "docx"
   ]
 }

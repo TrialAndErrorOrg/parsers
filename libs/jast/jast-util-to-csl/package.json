@@ -1,26 +1,17 @@
 {
   "name": "jast-util-to-csl",
   "version": "0.0.1",
-  "dependencies": {
-    "csl-json": "^0.1.0",
-    "unist-util-is": "^5.1.1",
-    "xast-util-to-string": "^2.0.0"
-  },
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
   "description": "Convert a `jast` citation syntax tree to list of `csl` objects.",
   "keywords": [
-    "unified",
-    "abstract",
-    "syntax",
-    "tree",
-    "ast"
-  ],
-  "devDependencies": {
-    "to-vfile": "^7.2.3",
-    "unified": "^10.1.1",
-    "vfile": "^5.3.0"
-  }
+    "jast",
+    "jats-xml",
+    "csl-json",
+    "converter",
+    "ast",
+    "unified"
+  ]
 }

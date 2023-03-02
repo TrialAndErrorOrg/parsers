@@ -5,10 +5,14 @@
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Cleans all the rsid tags from an ooxast tree, and merges `w:r` elements if they only differ by rsid values.",
+  "description": "Cleans all the rsid tags from an ooxast tree, and merges `w:r` elements if they only differ by rsid values. This helps e.g. when a text is edited by multiple people",
   "keywords": [
     "unified",
-    "abstract",
+    "ooxast",
+    "reoff",
+    "word",
+    "docx",
+    "office",
     "syntax",
     "tree",
     "ast"

@@ -8,9 +8,11 @@
   "description": "Reads a `.docx` file and stores its components in vfile format to be processed by other tools, like [`reoff-parse`](https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse).",
   "keywords": [
     "unified",
-    "abstract",
-    "syntax",
-    "tree",
-    "ast"
+    "docx",
+    "vfile",
+    "ooxast",
+    "ooxml",
+    "office",
+    "word"
   ]
 }

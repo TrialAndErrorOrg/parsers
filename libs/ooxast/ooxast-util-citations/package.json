@@ -8,9 +8,8 @@
   "description": "_[ooxast][ooxast]_ util to visit in text office citations.",
   "keywords": [
     "unified",
-    "abstract",
-    "syntax",
-    "tree",
+    "ooxast",
+    "docx",
     "ast"
   ]
 }

@@ -8,10 +8,11 @@
   "description": "Find and convert raw references to CSL-JSON using `anystyle`.",
   "keywords": [
     "unified",
-    "abstract",
-    "syntax",
-    "tree",
-    "ast"
+    "ooxast",
+    "bibliography",
+    "references",
+    "citations",
+    "anystyle"
   ],
   "dependencies": {}
 }

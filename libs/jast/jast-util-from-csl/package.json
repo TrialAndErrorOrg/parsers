@@ -12,9 +12,9 @@
   "type": "module",
   "description": "Transform a CSL list or object to a [jast][jast] node.",
   "keywords": [
-    "unified",
-    "abstract",
-    "syntax",
+    "csl",
+    "jats-xml",
+    "conversion",
     "tree",
     "ast"
   ],

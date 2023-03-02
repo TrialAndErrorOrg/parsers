@@ -11,6 +11,8 @@
     "abstract",
     "syntax",
     "tree",
-    "ast"
+    "jast",
+    "jats-xml",
+    "rejour"
   ]
 }

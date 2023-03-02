@@ -8,9 +8,10 @@
   "description": "Plugin for [reoff][reoff] to clean the ooxast tree.",
   "keywords": [
     "unified",
-    "abstract",
-    "syntax",
-    "tree",
+    "ooxast",
+    "docx",
+    "word",
+    "reoff",
     "ast"
   ]
 }

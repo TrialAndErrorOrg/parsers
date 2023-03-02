@@ -11,13 +11,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Split monorepo
         uses: tefkah/monorepo-split@main
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           org: TrialAndErrorOrg
-          match: './libs/jast/* ./libs/reoff ./libs/ooxast/* ./libs/rejour/* ./libs/xast/* ./libs/notion/* ./libs/citations/*'
+          match: "./libs/jast/* ./libs/reoff/* ./libs/ooxast/* ./libs/rejour/* ./libs/xast/* ./libs/notion/* ./libs/citations/*"
           package-json: true
           description: true
           name: true
           topics: true
+          force: true

@@ -1,3 +1,6 @@
+> **Note**
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+
 # ooxast-util-to-hast
 
 Convert docx to html (Not working)
@@ -25,16 +28,14 @@ Convert docx to html (Not working)
 
 ## Install
 
-This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, or 16.0+), install with [yarn](https://classic.yarnpkg.com/en/docs/cli/add)
+This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, 18.0+), install as
 
-```sh
-yarn add ooxast-util-to-hast
-```
-
-or with [npm](https://docs.npmjs.com/cli/install)
-
-```sh
-npm install ooxast-util-to-hast
+```bash
+pnpm add ooxast-util-to-hast
+# or with yarn
+# yarn add ooxast-util-to-hast
+# or with npm
+# npm install ooxast-util-to-hast
 ```
 
 ## Use
@@ -55,7 +56,7 @@ npm install ooxast-util-to-hast
 
 ## License
 
-GPL-3.0-or-later © Thomas F. K. Jorna
+[GPL-3.0-or-later](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
 [unifiedgh]: https://github.com/unifiedjs/unified

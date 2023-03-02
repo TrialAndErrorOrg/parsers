@@ -1,3 +1,6 @@
+> **Note**
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+
 # html-to-notion-blocks
 
 [![npm version](https://img.shields.io/npm/v/html-to-notion-blocks.svg)](https://www.npmjs.com/package/html-to-notion-blocks)
@@ -32,13 +35,13 @@ You want a simple way to convert HTML to Notion blocks. If you want to control t
 
 ## Install
 
-This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, or 18.0+).
+This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, 18.0+), install as
 
-```sh
+```bash
 pnpm add html-to-notion-blocks
-# or
+# or with yarn
 # yarn add html-to-notion-blocks
-# or
+# or with npm
 # npm install html-to-notion-blocks
 ```
 
@@ -105,19 +108,19 @@ See [rehype-to-notion][rehype-to-notion] for the full list of options.
 
 ## Security
 
-Use of `html-to-notion-blocks` can open you up to a [cross-site scripting (XSS)][xss] attack. If you are processing user input, be sure to use a HTML sanitizer, such as [rehype-sanitize][rehype-sanitize].
+Use of `html-to-notion-blocks` can open you up to a \[cross-site scripting (XSS)]\[xss] attack. If you are processing user input, be sure to use a HTML sanitizer, such as \[rehype-sanitize]\[rehype-sanitize].
 
 ## Related
 
 - [rehype-to-notion][rehype-to-notion]
   — Transform HTML to Notion blocks
-- [rehype-sanitize][rehype-sanitize]
+- \[rehype-sanitize]\[rehype-sanitize]
 - [rehype][rehype]
   — HTML processor powered by plugins part of the [unified][unified] collective
 
 ## License
 
-GPL-3.0-or-later © Thomas F. K. Jorna
+[GPL-3.0-or-later](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
 [unifiedgh]: https://github.com/unifiedjs/unified

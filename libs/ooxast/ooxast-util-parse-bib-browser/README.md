@@ -1,3 +1,6 @@
+> **Note**
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+
 # ooxast-util-parse-bib
 
 Find and convert raw references to CSL-JSON.
@@ -32,23 +35,15 @@ You need to either: set up an anystyle API on your own (very easy to do, just cl
 
 ## Install
 
-This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, or 16.0+), install with [yarn](https://classic.yarnpkg.com/en/docs/cli/add)
+This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, 18.0+), install as
 
-```sh
-yarn add ooxast-util-parse-bib
+```bash
+pnpm add ooxast-util-parse-bib-browser
+# or with yarn
+# yarn add ooxast-util-parse-bib-browser
+# or with npm
+# npm install ooxast-util-parse-bib-browser
 ```
-
-or with [npm](https://docs.npmjs.com/cli/install)
-
-```sh
-npm install ooxast-util-parse-bib
-```
-
-### Web API
-
-### Locally
-
-You can install anystyle by first installing Ruby and then doing `gem install anystyle`.
 
 ## Use
 
@@ -66,41 +61,98 @@ If no options are provided it will try to use Anystyle on your path, and probabl
 
 ## API
 
-You can call it like so. You probably want to first parse a .docx file to an `ooxast`-tree like so:
+### Module: ooxast-util-parse-bib-browser
 
-```ts
-import { docxToVFile } from 'docx-to-vfile'
-import reoffParse from 'reoff-parse'
-import { readFile } from 'fs/promises'
-import { unified } from 'unified'
-import { parseBib } from 'ooxast-util-parse-bib'
+#### Interfaces
 
-async function main() {
-  // If in node, get the correct docx uintarray like so
-  const docxBuff = await readFile('some/path/to/a/file.docx')
-  const docxArr = new Uint8Array(docxBuff)
+- [Options](.interfaces/ooxast_util_parse_bib_browser.Options.md)
 
-  // if in the browser, find some way
-  // to read and convert a docxfile to uintarray
+#### Functions
 
-  const docxVFile = await docxToVFile(docxArr)
+##### parseBib
 
-  const processor = unified().use(reoffParse)
+▸ **parseBib**(`tree`, `options`): `Promise`<`undefined` | `Data`\[]>
 
-  const docxTree = processor.parse(docxVFile)
+###### Parameters
 
-  return parseBib(docxTree, {
-    // when using your own web api
-    apiUrl: 'https://someapiyousetup.vercel.app/api',
-    //apiParams: {...}
+\| Name | Type |
+\| :------ | :------ |
+\| `tree` | `Node`<`Data`> |
+\| `options` | [`Options`](.interfaces/ooxast_util_parse_bib_browser.Options.md) |
 
-    // when using it locally
-    // if no options are entered, it will try to use
-    // anystyle on your path, and will probably fail
-    anyStylePath: '/usr/bin/anystyle',
-  })
-}
-```
+###### Returns
+
+`Promise`<`undefined` | `Data`\[]>
+
+###### Defined in
+
+[src/lib/ooxast-util-parse-bib-browser.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-parse-bib-browser/src/lib/ooxast-util-parse-bib-browser.ts#L12)
+
+### Interface: Options
+
+[ooxast-util-parse-bib-browser](.modules).Options
+
+#### Properties
+
+##### apiParams
+
+• `Optional` **apiParams**: `Object`
+
+###### Type declaration
+
+\| Name | Type |
+\| :------ | :------ |
+\| `param` | `string` |
+
+###### Defined in
+
+[src/lib/ooxast-util-parse-bib-browser.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-parse-bib-browser/src/lib/ooxast-util-parse-bib-browser.ts#L6)
+
+---
+
+##### apiUrl
+
+• **apiUrl**: `string`
+
+###### Defined in
+
+[src/lib/ooxast-util-parse-bib-browser.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-parse-bib-browser/src/lib/ooxast-util-parse-bib-browser.ts#L5)
+
+---
+
+##### headers
+
+• `Optional` **headers**: `Object`
+
+###### Type declaration
+
+\| Name | Type |
+\| :------ | :------ |
+\| `header` | `string` |
+
+###### Defined in
+
+[src/lib/ooxast-util-parse-bib-browser.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-parse-bib-browser/src/lib/ooxast-util-parse-bib-browser.ts#L7)
+
+---
+
+##### mailto
+
+• `Optional` **mailto**: `string`
+
+###### Defined in
+
+[src/lib/ooxast-util-parse-bib-browser.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-parse-bib-browser/src/lib/ooxast-util-parse-bib-browser.ts#L8)
+
+---
+
+##### overrideId
+
+• `Optional` **overrideId**: `boolean`
+
+###### Defined in
+
+[src/lib/ooxast-util-parse-bib-browser.ts:9](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-parse-bib-browser/src/lib/ooxast-util-parse-bib-browser.ts#L9)
 
 ## Syntax tree
 
@@ -116,7 +168,7 @@ async function main() {
 
 ## License
 
-GPL-3.0-or-later © Thomas F. K. Jorna
+[GPL-3.0-or-later](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
 [unifiedgh]: https://github.com/unifiedjs/unified

@@ -1,3 +1,6 @@
+> **Note**
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+
 # rejour-stringify
 
 Plugin for `rejour` that stringifies a `jast` syntax tree to a `JATS XML` document.
@@ -25,21 +28,35 @@ Plugin for `rejour` that stringifies a `jast` syntax tree to a `JATS XML` docume
 
 ## Install
 
-This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, or 16.0+), install with [yarn](https://classic.yarnpkg.com/en/docs/cli/add)
+This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, 18.0+), install as
 
-```sh
-yarn add rejour-stringify
-```
-
-or with [npm](https://docs.npmjs.com/cli/install)
-
-```sh
-npm install rejour-stringify
+```bash
+pnpm add rejour-stringify
+# or with yarn
+# yarn add rejour-stringify
+# or with npm
+# npm install rejour-stringify
 ```
 
 ## Use
 
 ## API
+
+### Module: rejour-stringify
+
+#### Functions
+
+##### default
+
+▸ **default**(): `void`
+
+###### Returns
+
+`void`
+
+###### Defined in
+
+[src/lib/rejour-stringify.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/rejour/rejour-stringify/src/lib/rejour-stringify.ts#L8)
 
 ## Syntax tree
 
@@ -55,7 +72,7 @@ npm install rejour-stringify
 
 ## License
 
-[GPL-3.0-or-later](https://www.gnu.org/licenses/gpl-3.0-standalone.html) © Thomas F. K. Jorna
+[GPL-3.0-or-later](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
 [unifiedgh]: https://github.com/unifiedjs/unified

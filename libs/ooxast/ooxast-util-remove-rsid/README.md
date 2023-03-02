@@ -1,3 +1,6 @@
+> **Note**
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+
 # ooxast-util-remove-rsid
 
 Cleans all the rsid tags from an ooxast tree, and merges `w:r` elements if they only differ by rsid values.
@@ -27,21 +30,77 @@ Rsid's are Word's way of keeping track of edits, but when you are converting or 
 
 ## Install
 
-This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, or 16.0+), install with [yarn](https://classic.yarnpkg.com/en/docs/cli/add)
+This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, 18.0+), install as
 
-```sh
-yarn add ooxast-util-to-jast
-```
-
-or with [npm](https://docs.npmjs.com/cli/install)
-
-```sh
-npm install ooxast-util-to-jast
+```bash
+pnpm add ooxast-util-remove-rsid
+# or with yarn
+# yarn add ooxast-util-remove-rsid
+# or with npm
+# npm install ooxast-util-remove-rsid
 ```
 
 ## Use
 
 ## API
+
+### Module: ooxast-util-remove-rsid
+
+#### Interfaces
+
+- [Options](.interfaces/ooxast_util_remove_rsid.Options.md)
+
+#### Functions
+
+##### ooxastUtilRemoveRsid
+
+▸ **ooxastUtilRemoveRsid**(`tree`, `options?`): `Root`
+
+###### Parameters
+
+\| Name | Type |
+\| :------ | :------ |
+\| `tree` | `Root` |
+\| `options?` | [`Options`](.interfaces/ooxast_util_remove_rsid.Options.md) |
+
+###### Returns
+
+`Root`
+
+###### Defined in
+
+[src/lib/ooxast-util-remove-rsid.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-remove-rsid/src/lib/ooxast-util-remove-rsid.ts#L16)
+
+▸ **ooxastUtilRemoveRsid**(`tree`, `options?`): `Node`
+
+###### Parameters
+
+\| Name | Type |
+\| :------ | :------ |
+\| `tree` | `Node`<`Data`> |
+\| `options?` | [`Options`](.interfaces/ooxast_util_remove_rsid.Options.md) |
+
+###### Returns
+
+`Node`
+
+###### Defined in
+
+[src/lib/ooxast-util-remove-rsid.ts:17](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-remove-rsid/src/lib/ooxast-util-remove-rsid.ts#L17)
+
+### Interface: Options
+
+[ooxast-util-remove-rsid](.modules).Options
+
+#### Properties
+
+##### rPrRemoveList
+
+• `Optional` **rPrRemoveList**: `string`\[]
+
+###### Defined in
+
+[src/lib/ooxast-util-remove-rsid.ts:13](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-remove-rsid/src/lib/ooxast-util-remove-rsid.ts#L13)
 
 ## Syntax tree
 
@@ -57,7 +116,7 @@ npm install ooxast-util-to-jast
 
 ## License
 
-GPL-3.0-or-later © Thomas F. K. Jorna
+[GPL-3.0-or-later](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
 [unifiedgh]: https://github.com/unifiedjs/unified

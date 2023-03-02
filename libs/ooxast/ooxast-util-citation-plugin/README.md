@@ -1,3 +1,6 @@
+> **Note**
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+
 # ooxast-util-citation-plugin
 
 Small ooxast utility which scans the text to identify the citation plugin used, either Mendely, Zotero, EndNote, Citavi, native word citations or none at all. It is used to feed into other things.
@@ -27,21 +30,41 @@ Not completely accurate, as it just identifies the first citation plugin it find
 
 ## Install
 
-This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, or 16.0+), install with [yarn](https://classic.yarnpkg.com/en/docs/cli/add)
+This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, 18.0+), install as
 
-```sh
-yarn add ooxast-util-citation-plugin
-```
-
-or with [npm](https://docs.npmjs.com/cli/install)
-
-```sh
-npm install ooxast-util-citation-plugin
+```bash
+pnpm add ooxast-util-citation-plugin
+# or with yarn
+# yarn add ooxast-util-citation-plugin
+# or with npm
+# npm install ooxast-util-citation-plugin
 ```
 
 ## Use
 
 ## API
+
+### Module: ooxast-util-citation-plugin
+
+#### Functions
+
+##### detectCitePlugin
+
+▸ **detectCitePlugin**(`node`): `string`
+
+###### Parameters
+
+\| Name | Type |
+\| :------ | :------ |
+\| `node` | `Node`<`Data`> |
+
+###### Returns
+
+`string`
+
+###### Defined in
+
+[src/lib/ooxast-util-citation-plugin.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-citation-plugin/src/lib/ooxast-util-citation-plugin.ts#L8)
 
 ## Syntax tree
 
@@ -57,7 +80,7 @@ npm install ooxast-util-citation-plugin
 
 ## License
 
-GPL-3.0-or-later © Thomas F. K. Jorna
+[GPL-3.0-or-later](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
 [unifiedgh]: https://github.com/unifiedjs/unified

@@ -1,3 +1,6 @@
+> **Note**
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+
 # xast-util-has-attribute
 
 Port of [hast-util-has-property](https://github.com/syntax-tree/hast-util-has-property) for [xast][xast]
@@ -25,21 +28,44 @@ Port of [hast-util-has-property](https://github.com/syntax-tree/hast-util-has-pr
 
 ## Install
 
-This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, or 16.0+), install with [yarn](https://classic.yarnpkg.com/en/docs/cli/add)
+This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, 18.0+), install as
 
-```sh
-yarn add xast-util-has-attribute
-```
-
-or with [npm](https://docs.npmjs.com/cli/install)
-
-```sh
-npm install xast-util-has-attribute
+```bash
+pnpm add xast-util-has-attribute
+# or with yarn
+# yarn add xast-util-has-attribute
+# or with npm
+# npm install xast-util-has-attribute
 ```
 
 ## Use
 
 ## API
+
+### Module: xast-util-has-attribute
+
+#### Functions
+
+##### hasAttribute
+
+▸ **hasAttribute**(`node`, `name`): `boolean`
+
+Check if `node` has a set `name` property.
+
+###### Parameters
+
+\| Name | Type |
+\| :------ | :------ |
+\| `node` | `unknown` |
+\| `name` | `string` |
+
+###### Returns
+
+`boolean`
+
+###### Defined in
+
+[src/lib/xast-util-has-attribute.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/xast/xast-util-has-attribute/src/lib/xast-util-has-attribute.ts#L10)
 
 ## Syntax tree
 
@@ -55,7 +81,7 @@ npm install xast-util-has-attribute
 
 ## License
 
-GPL-3.0-or-later © Thomas F. K. Jorna
+[MIT](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
 [unifiedgh]: https://github.com/unifiedjs/unified

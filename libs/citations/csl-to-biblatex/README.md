@@ -1,3 +1,6 @@
+> **Note**
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+
 # csl-to-biblatex
 
 Somewhat jank CSL-JSON to biblatex converter
@@ -25,21 +28,41 @@ Somewhat jank CSL-JSON to biblatex converter
 
 ## Install
 
-This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, or 16.0+), install with [yarn](https://classic.yarnpkg.com/en/docs/cli/add)
+This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, 18.0+), install as
 
-```sh
-yarn add csl-to-biblatex
-```
-
-or with [npm](https://docs.npmjs.com/cli/install)
-
-```sh
-npm install csl-to-biblatex
+```bash
+pnpm add csl-to-biblatex
+# or with yarn
+# yarn add csl-to-biblatex
+# or with npm
+# npm install csl-to-biblatex
 ```
 
 ## Use
 
 ## API
+
+### Module: csl-to-biblatex
+
+#### Functions
+
+##### cslToBiblatex
+
+▸ **cslToBiblatex**(`csl`): `string`
+
+###### Parameters
+
+\| Name | Type |
+\| :------ | :------ |
+\| `csl` | `Data`\[] |
+
+###### Returns
+
+`string`
+
+###### Defined in
+
+[src/lib/csl-to-biblatex.ts:87](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/csl-to-biblatex/src/lib/csl-to-biblatex.ts#L87)
 
 ## Syntax tree
 
@@ -55,7 +78,7 @@ npm install csl-to-biblatex
 
 ## License
 
-GPL-3.0-or-later © Thomas F. K. Jorna
+[GPL-3.0-or-later](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
 [unifiedgh]: https://github.com/unifiedjs/unified

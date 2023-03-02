@@ -1,3 +1,6 @@
+> **Note**
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+
 # docx-to-vfile
 
 Reads a `.docx` file and stores its components in vfile format to be processed by other tools, like [`reoff-parse`](https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse).
@@ -30,21 +33,60 @@ Based on [docxtract](https://github.com/sorleone/doxtract/)
 
 ## Install
 
-This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, or 16.0+), install with [yarn](https://classic.yarnpkg.com/en/docs/cli/add)
+This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, 18.0+), install as
 
-```sh
-yarn add docx-to-vfile
-```
-
-or with [npm](https://docs.npmjs.com/cli/install)
-
-```sh
-npm install docx-to-vfile
+```bash
+pnpm add docx-to-vfile
+# or with yarn
+# yarn add docx-to-vfile
+# or with npm
+# npm install docx-to-vfile
 ```
 
 ## Use
 
 ## API
+
+### Module: docx-to-vfile
+
+#### Interfaces
+
+- [Options](.interfaces/docx_to_vfile.Options.md)
+
+#### Functions
+
+##### docxToVFile
+
+▸ **docxToVFile**(`file`, `options?`): `Promise`<`VFile`>
+
+###### Parameters
+
+\| Name | Type |
+\| :------ | :------ |
+\| `file` | `ArrayBuffer` |
+\| `options` | [`Options`](.interfaces/docx_to_vfile.Options.md) |
+
+###### Returns
+
+`Promise`<`VFile`>
+
+###### Defined in
+
+[src/lib/docx-to-vfile-unzipit.ts:14](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L14)
+
+### Interface: Options
+
+[docx-to-vfile](.modules).Options
+
+#### Properties
+
+##### withoutImages
+
+• **withoutImages**: `boolean`
+
+###### Defined in
+
+[src/lib/docx-to-vfile-unzipit.ts:11](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L11)
 
 ## Syntax tree
 
@@ -60,7 +102,7 @@ npm install docx-to-vfile
 
 ## License
 
-GPL-3.0-or-later © Thomas F. K. Jorna
+[GPL-3.0-or-later](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
 [unifiedgh]: https://github.com/unifiedjs/unified

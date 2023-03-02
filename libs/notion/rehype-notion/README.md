@@ -1,3 +1,6 @@
+> **Note**
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+
 # rehype-notion
 
 [![npm version](https://img.shields.io/npm/v/rehype-notion.svg)](https://www.npmjs.com/package/rehype-notion)
@@ -34,14 +37,14 @@ You want to convert HTML to Notion blocks but want control over the conversion p
 
 ## Install
 
-This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, or 18.0+).
+This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, 18.0+), install as
 
-```sh
+```bash
 pnpm add rehype-notion
-# or
-# yarn add html-to-notion-blocks
-# or
-# npm install html-to-notion-blocks
+# or with yarn
+# yarn add rehype-notion
+# or with npm
+# npm install rehype-notion
 ```
 
 ## Use
@@ -262,7 +265,7 @@ interface MarkdownToNotionOptions {
 
 ## Security
 
-Use of `rehypeNotion` can open you up to a [cross-site scripting (XSS)][xss] attack. If you are processing user input, be sure to use a HTML sanitizer, such as [rehype-sanitize][rehype-sanitize].
+Use of `rehypeNotion` can open you up to a \[cross-site scripting (XSS)]\[xss] attack. If you are processing user input, be sure to use a HTML sanitizer, such as [rehype-sanitize][rehype-sanitize].
 
 ## Related
 
@@ -276,7 +279,7 @@ Use of `rehypeNotion` can open you up to a [cross-site scripting (XSS)][xss] att
 
 ## License
 
-GPL-3.0-or-later © Thomas F. K. Jorna
+[GPL-3.0-or-later](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
 [unifiedgh]: https://github.com/unifiedjs/unified

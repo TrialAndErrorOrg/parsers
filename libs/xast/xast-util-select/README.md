@@ -1,4 +1,9 @@
+> **Note**
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+
 # xast-util-select
+
+[![npm version](https://badge.fury.io/js/xast-util-select.svg)](https://badge.fury.io/js/xast-util-select) [![npm downloads](https://img.shields.io/npm/dm/xast-util-select.svg)](https://www.npmjs.com/package/xast-util-select)
 
 Port of `(hast-util-select)[https://github.com/syntax-tree/hast-util-select]` for use with `xast` nodes.
 
@@ -39,17 +44,87 @@ You are doing something low level with `xast` trees.
 
 ## Install
 
-This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, or 16.0+), install with [yarn](https://classic.yarnpkg.com/en/docs/cli/add)
+This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, 18.0+), install as
 
-```sh
-yarn add xast-util-select
-# pnpm i xast-util-select
-# npm i xast-util-select
+```bash
+pnpm add xast-util-select
+# or with yarn
+# yarn add xast-util-select
+# or with npm
+# npm install xast-util-select
 ```
 
 ## Use
 
 ## API
+
+### Module: xast-util-select
+
+#### Functions
+
+##### matches
+
+▸ **matches**(`selector`, `node?`, `space?`): `boolean`
+
+###### Parameters
+
+\| Name | Type |
+\| :------ | :------ |
+\| `selector` | `string` |
+\| `node?` | `XastNode` |
+\| `space?` | `Space` |
+
+###### Returns
+
+`boolean`
+
+###### Defined in
+
+[src/index.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/xast/xast-util-select/src/index.ts#L6)
+
+---
+
+##### select
+
+▸ **select**(`selector`, `node?`, `space?`): `Element` | `null`
+
+###### Parameters
+
+\| Name | Type |
+\| :------ | :------ |
+\| `selector` | `string` |
+\| `node?` | `XastNode` |
+\| `space?` | `Space` |
+
+###### Returns
+
+`Element` | `null`
+
+###### Defined in
+
+[src/index.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/xast/xast-util-select/src/index.ts#L16)
+
+---
+
+##### selectAll
+
+▸ **selectAll**(`selector`, `node?`, `space?`): `Element`\[]
+
+###### Parameters
+
+\| Name | Type |
+\| :------ | :------ |
+\| `selector` | `string` |
+\| `node?` | `XastNode` |
+\| `space?` | `Space` |
+
+###### Returns
+
+`Element`\[]
+
+###### Defined in
+
+[src/index.ts:24](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/xast/xast-util-select/src/index.ts#L24)
 
 ## Compatibility
 
@@ -59,7 +134,7 @@ yarn add xast-util-select
 
 ## License
 
-MIT © Thomas F. K. Jorna
+[MIT](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
 [unifiedgh]: https://github.com/unifiedjs/unified

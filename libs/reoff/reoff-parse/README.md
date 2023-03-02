@@ -1,3 +1,6 @@
+> **Note**
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+
 # reoff-parse
 
 Plugin for [reoff][reoff] to parse a `.docx` XML file into an `ooxast` AST. Ideally use `docx-to-vfile` to get to a parseable state.
@@ -25,21 +28,41 @@ Plugin for [reoff][reoff] to parse a `.docx` XML file into an `ooxast` AST. Idea
 
 ## Install
 
-This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, or 16.0+), install with [yarn](https://classic.yarnpkg.com/en/docs/cli/add)
+This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, 18.0+), install as
 
-```sh
-yarn add reoff-parse
-```
-
-or with [npm](https://docs.npmjs.com/cli/install)
-
-```sh
-npm install reoff-parse
+```bash
+pnpm add reoff-parse
+# or with yarn
+# yarn add reoff-parse
+# or with npm
+# npm install reoff-parse
 ```
 
 ## Use
 
 ## API
+
+### Module: reoff-parse
+
+#### Functions
+
+##### default
+
+▸ **default**(`options?`): `void`
+
+###### Parameters
+
+\| Name | Type |
+\| :------ | :------ |
+\| `options` | `Settings` |
+
+###### Returns
+
+`void`
+
+###### Defined in
+
+[src/lib/reoff-parse.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/reoff/reoff-parse/src/lib/reoff-parse.ts#L12)
 
 ## Syntax tree
 
@@ -55,7 +78,7 @@ npm install reoff-parse
 
 ## License
 
-GPL-3.0-or-later © Thomas F. K. Jorna
+[GPL-3.0-or-later](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
 [unifiedgh]: https://github.com/unifiedjs/unified

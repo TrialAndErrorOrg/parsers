@@ -1,3 +1,6 @@
+> **Note**
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+
 # rejour-move-abstract
 
 Really simple plugin for `rejour` that moves the abstract from the `body` to the `front` of a `JATS` document.
@@ -25,16 +28,14 @@ Really simple plugin for `rejour` that moves the abstract from the `body` to the
 
 ## Install
 
-This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, or 16.0+), install with [yarn](https://classic.yarnpkg.com/en/docs/cli/add)
+This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, 18.0+), install as
 
-```sh
-yarn add rejour-move-abstract
-```
-
-or with [npm](https://docs.npmjs.com/cli/install)
-
-```sh
-npm install rejour-move-abstract
+```bash
+pnpm add rejour-move-abstract
+# or with yarn
+# yarn add rejour-move-abstract
+# or with npm
+# npm install rejour-move-abstract
 ```
 
 ## Use
@@ -55,7 +56,7 @@ npm install rejour-move-abstract
 
 ## License
 
-[GPL-3.0-or-later](https://www.gnu.org/licenses/gpl-3.0-standalone.html) © Thomas F. K. Jorna
+[GPL-3.0-or-later](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
 [unifiedgh]: https://github.com/unifiedjs/unified

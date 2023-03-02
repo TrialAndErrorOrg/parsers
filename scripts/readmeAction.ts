@@ -56,6 +56,8 @@ const spliceBetweenHeadings = ({
   title: string
   level?: number
 }) => {
+  if (!content) return tree
+
   let installationHeadingIndex = -1
   visit(tree, (node, index, parent) => {
     if (node.type === 'heading' && node.depth === level && toString(node) === title) {
@@ -65,6 +67,8 @@ const spliceBetweenHeadings = ({
           return child.type === 'heading' && child.depth <= level && idx > (index ?? -1)
         }, index) ?? -1
 
+      console.log(parent)
+      if (!Array.isArray(parent?.children) || !content) return EXIT
       parent?.children.splice((index ?? -1) + 1, nextHeadingIndex - (index ?? -1) - 1, ...content)
 
       return EXIT
@@ -109,22 +113,32 @@ const findTypeDocFilesAndInterfaces = async (
   const interfaceFiles = await Promise.all(
     interfaces.map(async (interfaceFile) => {
       const interfaceFilePath = join(typeDocPath, 'interfaces', interfaceFile)
-      const interfaceFileContent = await readFile(interfaceFilePath, 'utf-8')
-      return interfaceFileContent
+      try {
+        const interfaceFileContent = await readFile(interfaceFilePath, 'utf-8')
+        return interfaceFileContent
+      } catch (e) {
+        console.log(e)
+        return ''
+      }
     }),
   )
 
-  const moduleFileContent = await readFile(typeDocModuleFilePath, 'utf-8')
+  try {
+    const moduleFileContent = await readFile(typeDocModuleFilePath, 'utf-8')
 
-  const newModuleFileContent =
-    moduleFileContent.replace(/^# .*?\n.*$/, '') + interfaceFiles.join('\n')
+    const newModuleFileContent =
+      moduleFileContent.replace(/^# .*?\n.*$/, '') + interfaceFiles.join('\n')
 
-  const downshiftedContent = newModuleFileContent
-    .replace(/((^|\n)#+) /g, '$1## ')
-    .replace(new RegExp(`.${moduleName}\\.md`, 'g'), '')
-    .replace(new RegExp(`\\[libs/.*?/${packageName}/`, 'g'), '[')
+    const downshiftedContent = newModuleFileContent
+      .replace(/((^|\n)#+) /g, '$1## ')
+      .replace(new RegExp(`.${moduleName}\\.md`, 'g'), '')
+      .replace(new RegExp(`\\[libs/.*?/${packageName}/`, 'g'), '[')
 
-  return fromMarkdown(downshiftedContent)
+    return fromMarkdown(downshiftedContent)
+  } catch (e) {
+    console.log(e)
+    return []
+  }
 }
 
 const prependBadges = (readme: string, packageJSON: any) => {
@@ -158,7 +172,7 @@ const addAdmonition = (readme: string) => {
   if (readme.startsWith('>')) {
     return readme
   }
-  return `>***Note***
+  return `> **Note**
 > This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
 
 ${readme}`
@@ -214,12 +228,11 @@ loopOverDirs(
       packageName: packageJSON.name,
     })
 
-    // await writeFile(readmePath, newReadme.toString())
-    console.log(prependBadges(addAdmonition(String(newReadme)), packageJSON))
+    await writeFile(readmePath, prependBadges(addAdmonition(newReadme.toString()), packageJSON))
   },
   {
     rootDir: root,
-    dirs: ['libs/ooxast/ooxast-util-to-unified-latex'],
+    dirs: ['libs'],
     files: ['package.json', 'README.md'],
   },
 )

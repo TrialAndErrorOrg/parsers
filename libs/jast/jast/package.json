@@ -13,5 +13,11 @@
     "tree",
     "ast",
     "unified"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "jast-types",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

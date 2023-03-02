@@ -10,5 +10,11 @@
     "ooxast",
     "properties",
     "json"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "ooxast-util-properties",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

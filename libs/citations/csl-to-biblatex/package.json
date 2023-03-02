@@ -13,5 +13,11 @@
     "references",
     "csl-json",
     "bibliography"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "csl-to-biblatex",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

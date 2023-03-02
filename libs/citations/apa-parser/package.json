@@ -12,5 +12,11 @@
     "syntax",
     "tree",
     "ast"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "apa-parser",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

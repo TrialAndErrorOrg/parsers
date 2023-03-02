@@ -14,5 +14,11 @@
     "citations",
     "anystyle"
   ],
-  "dependencies": {}
+  "dependencies": {},
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "ooxast-util-parse-bib",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

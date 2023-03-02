@@ -14,5 +14,11 @@
     "references",
     "citations",
     "metadata"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "csl-consolidate",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

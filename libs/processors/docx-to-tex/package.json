@@ -1,5 +1,11 @@
 {
   "name": "docx-to-tex",
   "description": "DOCX to TeX converter",
-  "type": "module"
+  "type": "module",
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "docx-to-tex",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

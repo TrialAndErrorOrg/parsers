@@ -12,5 +12,11 @@
     "references",
     "bibliography",
     "parser"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "parse-text-cite",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

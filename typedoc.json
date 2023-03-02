@@ -10,5 +10,6 @@
     "libs/rejour/*",
     "libs/citations/*",
     "libs/xast/*"
-  ]
+  ],
+  "exclude": ["libs/citations/apa-parser", "libs/ooxast/ooxast-util-to-hast"]
 }

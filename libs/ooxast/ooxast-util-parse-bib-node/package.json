@@ -13,5 +13,11 @@
     "tree",
     "ast"
   ],
-  "dependencies": {}
+  "dependencies": {},
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "ooxast-util-parse-bib-node",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

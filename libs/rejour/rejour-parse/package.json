@@ -14,5 +14,11 @@
     "jast",
     "jats-xml",
     "rejour"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "rejour-parse",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

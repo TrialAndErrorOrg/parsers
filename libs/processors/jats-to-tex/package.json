@@ -1,4 +1,10 @@
 {
   "name": "jats-to-tex",
-  "description": "JATS XML to TeX converter"
+  "description": "JATS XML to TeX converter",
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "jats-to-tex",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

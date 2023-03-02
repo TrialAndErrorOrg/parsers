@@ -19,5 +19,11 @@
   ],
   "devDependencies": {
     "@types/unist": "^2.0.6"
+  },
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "texast-util-to-latex",
+    "tsconfig": "./tsconfig.lib.json"
   }
 }

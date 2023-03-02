@@ -17,5 +17,11 @@
     "ooxml",
     "word",
     "docx"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "reoff-rejour",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

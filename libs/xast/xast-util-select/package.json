@@ -10,5 +10,11 @@
     "unified",
     "xast",
     "hast"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "xast-util-select",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

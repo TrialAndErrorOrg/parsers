@@ -11,5 +11,11 @@
     "open-journal-systems",
     "pkp",
     "typescript"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "ojs-api",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

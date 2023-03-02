@@ -14,5 +14,11 @@
     "ooxml",
     "office",
     "word"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "docx-to-vfile",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

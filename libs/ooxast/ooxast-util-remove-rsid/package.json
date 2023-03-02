@@ -16,5 +16,11 @@
     "syntax",
     "tree",
     "ast"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "ooxast-util-remove-rsid",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

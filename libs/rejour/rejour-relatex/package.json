@@ -14,5 +14,11 @@
     "latex",
     "jats",
     "jats-xml"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "rejour-relatex",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

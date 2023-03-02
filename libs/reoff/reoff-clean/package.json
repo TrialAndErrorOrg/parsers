@@ -13,5 +13,11 @@
     "word",
     "reoff",
     "ast"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "reoff-clean",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

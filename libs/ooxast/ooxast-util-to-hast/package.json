@@ -16,5 +16,11 @@
     "html",
     "ooxast",
     "hast"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "ooxast-util-to-hast",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

@@ -10,7 +10,10 @@ import { toString } from 'mdast-util-to-string'
 import { BlockContent, Heading } from 'mdast'
 import { heading } from 'mdast-builder'
 import remarkParse from 'remark-parse'
-import { readFile } from 'fs/promises'
+import { appendFile, readdir, readFile, writeFile } from 'fs/promises'
+import { gfmFromMarkdown } from 'mdast-util-gfm'
+import { fromMarkdown } from 'mdast-util-from-markdown'
+import remarkGfm from 'remark-gfm'
 
 const __dirname = new URL('.', import.meta.url).pathname
 
@@ -36,25 +39,33 @@ pnpm add ${dev ? '-D ' : ''}${name}
 `
 
 const installationInstructions = (name: string, dev = false) =>
-  unified().use(remarkParse).parse(installationString(name, dev))
+  fromMarkdown(installationString(name, dev))
 
 // find the installation heading in the readme
 // if it doesn't exist, create it as the second second level heading
 // replace all the content between the installation heading and the next second level or higher heading with the instructions
 
-const addInstallationInstructions = (tree: Root, instructions: BlockContent[]) => {
+const spliceBetweenHeadings = ({
+  tree,
+  content,
+  title,
+  level = 2,
+}: {
+  tree: Root
+  content: BlockContent[]
+  title: string
+  level?: number
+}) => {
   let installationHeadingIndex = -1
-  console.log(instructions)
   visit(tree, (node, index, parent) => {
-    if (node.type === 'heading' && node.depth === 2 && toString(node) === 'Install') {
+    if (node.type === 'heading' && node.depth === level && toString(node) === title) {
       installationHeadingIndex = index ?? 0
-      const nextHeadingIndex = parent?.children?.findIndex((child, idx) => {
-        console.log(child, idx)
-        return child.type === 'heading' && child.depth <= 2 && idx > index
-      }, index)
+      const nextHeadingIndex =
+        parent?.children?.findIndex((child, idx) => {
+          return child.type === 'heading' && child.depth <= level && idx > (index ?? -1)
+        }, index) ?? -1
 
-      console.log(index, nextHeadingIndex)
-      parent?.children.splice(index + 1, nextHeadingIndex - index - 1, ...instructions)
+      parent?.children.splice((index ?? -1) + 1, nextHeadingIndex - (index ?? -1) - 1, ...content)
 
       return EXIT
     }
@@ -63,21 +74,94 @@ const addInstallationInstructions = (tree: Root, instructions: BlockContent[]) =
   if (installationHeadingIndex === -1) {
     const heading = {
       type: 'heading',
-      depth: 2,
+      depth: level,
       children: [
         {
           type: 'text',
-          value: 'Install',
+          value: title,
         },
       ],
     } as Heading
 
     const nextHeadingIndex = tree.children.findIndex(
-      (child) => child.type === 'heading' && child.depth <= 2,
+      (child) => child.type === 'heading' && child.depth <= level,
     )
 
-    tree.children.splice(nextHeadingIndex, 0, heading, ...instructions)
+    tree.children.splice(nextHeadingIndex, 0, heading, ...content)
   }
+}
+
+const findTypeDocFilesAndInterfaces = async (
+  packageName: string,
+  root: string,
+  typeDocFolder: string,
+) => {
+  const typeDocPath = join(root, typeDocFolder)
+  const moduleName = packageName.replace('@', '').replace(/-/g, '_')
+  const moduleFile = `${moduleName}.md`
+  const typeDocModuleFilePath = join(typeDocPath, 'modules', moduleFile)
+
+  const interfaceDir = await readdir(join(typeDocPath, 'interfaces'))
+
+  const interfaces = interfaceDir.filter((file) => new RegExp(`^${moduleName}\\.`).test(file))
+
+  // asynchroneously read the interface files and append them to the module file in order
+  const interfaceFiles = await Promise.all(
+    interfaces.map(async (interfaceFile) => {
+      const interfaceFilePath = join(typeDocPath, 'interfaces', interfaceFile)
+      const interfaceFileContent = await readFile(interfaceFilePath, 'utf-8')
+      return interfaceFileContent
+    }),
+  )
+
+  const moduleFileContent = await readFile(typeDocModuleFilePath, 'utf-8')
+
+  const newModuleFileContent =
+    moduleFileContent.replace(/^# .*?\n.*$/, '') + interfaceFiles.join('\n')
+
+  const downshiftedContent = newModuleFileContent
+    .replace(/((^|\n)#+) /g, '$1## ')
+    .replace(new RegExp(`.${moduleName}\\.md`, 'g'), '')
+    .replace(new RegExp(`\\[libs/.*?/${packageName}/`, 'g'), '[')
+
+  return fromMarkdown(downshiftedContent)
+}
+
+const prependBadges = (readme: string, packageJSON: any) => {
+  if (!packageJSON.version || packageJSON.version === '0.0.1') {
+    return readme
+  }
+
+  const badges = [
+    `[![npm version](https://badge.fury.io/js/${packageJSON.name}.svg)](https://badge.fury.io/js/${packageJSON.name})`,
+    `[![npm downloads](https://img.shields.io/npm/dm/${packageJSON.name}.svg)](https://www.npmjs.com/package/${packageJSON.name})`,
+  ]
+
+  // check if badges
+  const hasBadges = badges.every((badge) => readme.includes(badge))
+  // add badges after the first heading if they don't exist
+
+  if (hasBadges) {
+    return readme
+  }
+
+  return readme.replace(/\n# .*?\n/, (match) => {
+    return `${match}${badges.join(' ')}
+`
+  })
+}
+
+const addAdmonition = (readme: string) => {
+  // if the first child of the root is not a blockquote, add one
+  // with a warning admonition
+
+  if (readme.startsWith('>')) {
+    return readme
+  }
+  return `>***Note***
+> This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
+
+${readme}`
 }
 
 const proc = (
@@ -88,22 +172,32 @@ const proc = (
     dev,
   }: {
     license?: string
-    packageName?: string
+    packageName: string
     dev?: boolean
   },
 ) =>
   remark()
+    .use(remarkGfm)
     .use(remarkLicense, {
-      license: 'GPLv3-or-later',
+      license,
+    })
+    .use(() => async (tree) => {
+      spliceBetweenHeadings({
+        tree,
+        content: installationInstructions(packageName, dev)?.children as BlockContent[],
+        title: 'Install',
+      })
+
+      spliceBetweenHeadings({
+        tree,
+        content: (await findTypeDocFilesAndInterfaces(packageName, root, 'docs'))
+          ?.children as BlockContent[],
+        title: 'API',
+      })
+
+      return tree
     })
     .use(remarkToc)
-    .use(
-      () => (tree) =>
-        addInstallationInstructions(
-          tree,
-          installationInstructions(packageName, dev)?.children as BlockContent[],
-        ),
-    )
     .process(readme)
 
 loopOverDirs(
@@ -119,11 +213,13 @@ loopOverDirs(
       license: packageJSON.license,
       packageName: packageJSON.name,
     })
-    console.log(String(newReadme))
+
+    // await writeFile(readmePath, newReadme.toString())
+    console.log(prependBadges(addAdmonition(String(newReadme)), packageJSON))
   },
   {
     rootDir: root,
-    dirs: ['libs/ooxast/ooxast'],
+    dirs: ['libs/ooxast/ooxast-util-to-unified-latex'],
     files: ['package.json', 'README.md'],
   },
 )

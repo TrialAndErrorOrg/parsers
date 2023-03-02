@@ -11,5 +11,11 @@
     "ooxast",
     "docx",
     "reoff"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "ooxast-util-get-style",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

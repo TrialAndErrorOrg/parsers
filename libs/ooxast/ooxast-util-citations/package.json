@@ -11,5 +11,11 @@
     "ooxast",
     "docx",
     "ast"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "ooxast-util-citations",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

@@ -14,5 +14,11 @@
     "ooxast",
     "docx",
     "unified"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "reoff-cite",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

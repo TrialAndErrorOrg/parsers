@@ -12,5 +12,11 @@
     "rejour",
     "xml",
     "ast"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "rejour-stringify",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

@@ -25,5 +25,11 @@
     "csl-json": "^0.1.0",
     "unist-util-remove-position": "4.0.0",
     "unist-util-visit-parents": "5.0.0"
+  },
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "jast-util-to-texast",
+    "tsconfig": "./tsconfig.lib.json"
   }
 }

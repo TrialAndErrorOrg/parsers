@@ -13,5 +13,11 @@
     "converter",
     "ast",
     "unified"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "jast-util-to-csl",
+    "tsconfig": "./tsconfig.lib.json"
+  }
 }

@@ -7,20 +7,20 @@ Add a preamble to a texast syntax tree.
 
 ## Contents
 
-- [texast-util-add-preamble](#texast-util-add-preamble)
-  - [Contents](#contents)
-  - [What is this?](#what-is-this)
-  - [When should I use this?](#when-should-i-use-this)
-  - [Install](#install)
-  - [Use](#use)
-  - [API](#api)
-  - [Syntax tree](#syntax-tree)
-  - [Types](#types)
-  - [Compatibility](#compatibility)
-  - [Security](#security)
-  - [Related](#related)
-  - [Contribute](#contribute)
-  - [License](#license)
+*   [texast-util-add-preamble](#texast-util-add-preamble)
+    *   [Contents](#contents)
+    *   [What is this?](#what-is-this)
+    *   [When should I use this?](#when-should-i-use-this)
+    *   [Install](#install)
+    *   [Use](#use)
+    *   [API](#api)
+    *   [Syntax tree](#syntax-tree)
+    *   [Types](#types)
+    *   [Compatibility](#compatibility)
+    *   [Security](#security)
+    *   [Related](#related)
+    *   [Contribute](#contribute)
+    *   [License](#license)
 
 ## What is this?
 
@@ -42,6 +42,53 @@ pnpm add texast-util-add-preamble
 
 ## API
 
+***
+
+### `addPreamble()`
+
+#### Signature
+
+```ts
+addPreamble(tree: Root, commands: PreambleCommand[]): Root;
+```
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `tree` | `Root` |
+| `commands` | [`PreambleCommand`](modules.md#preamblecommand)[] |
+
+#### Returns
+
+`Root`
+
+Defined in:  [lib/texast-util-add-preamble.ts:11](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/texast/texast-util-add-preamble/src/lib/texast-util-add-preamble.ts#L11)
+
+***
+
+### `PreambleCommand`
+
+#### Properties
+
+##### `args?`
+
+> (`string` | [`PreambleCommand`](modules.md#preamblecommand))[]
+
+Defined in:  [lib/texast-util-add-preamble.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/texast/texast-util-add-preamble/src/lib/texast-util-add-preamble.ts#L8)
+
+##### `opts?`
+
+> (`string` | [`PreambleCommand`](modules.md#preamblecommand))[]
+
+Defined in:  [lib/texast-util-add-preamble.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/texast/texast-util-add-preamble/src/lib/texast-util-add-preamble.ts#L7)
+
+##### `type`
+
+> `string`
+
+Defined in:  [lib/texast-util-add-preamble.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/texast/texast-util-add-preamble/src/lib/texast-util-add-preamble.ts#L6)
+
 ## Syntax tree
 
 ## Types
@@ -59,25 +106,47 @@ pnpm add texast-util-add-preamble
 [GPL-3.0-or-later](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
+
 [unifiedgh]: https://github.com/unifiedjs/unified
+
 [xast-from-xml]: https://github.com/syntax-tree/xast-util-from-xml
+
 [rehype]: https://github.com/rehypejs/rehype
+
 [rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour
+
 [rejour-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-parse
+
 [rejour-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-stringify
+
 [rejour-move-abstract]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-move-abstract
+
 [rejour-meta]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-meta
+
 [rejour-relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-relatex
+
 [relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex
+
 [relatex-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/relatex-stringify
+
 [jast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast
+
 [jast-util-to-texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast-util-to-texast
+
 [jastscript]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jastscript
+
 [texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast
+
 [texast-util-to-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast-util-to-latex
+
 [hast]: https://github.com/syntax-tree/hast
+
 [xast]: https://github.com/syntax-tree/xast
+
 [mdast]: https://github.com/syntax-tree/mdast
+
 [mdast-markdown]: https://github.com/syntax-tree/mdast-util-to-markdown
+
 [latex-utensils]: https://github.com/tamuratak/latex-utensils
+
 [latexjs]: https://github.com/latexjs/latexjs

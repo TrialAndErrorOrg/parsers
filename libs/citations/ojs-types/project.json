@@ -4,6 +4,13 @@
   "sourceRoot": "libs/citations/ojs-types/src",
   "projectType": "library",
   "targets": {
+    "readme": {
+      "executor": "@jote/utils/readme:update-readme",
+      "options": {
+        "readme": "libs/citations/ojs-types/README.md",
+        "packageJSON": "libs/citations/ojs-types/package.json"
+      }
+    },
     "build": {
       "executor": "@nrwl/js:swc",
       "outputs": ["{options.outputPath}"],

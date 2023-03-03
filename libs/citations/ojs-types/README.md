@@ -7,20 +7,20 @@ Some typescript types for OJS api responses
 
 ## Contents
 
-- [ojs-types](#ojs-types)
-  - [Contents](#contents)
-  - [What is this?](#what-is-this)
-  - [When should I use this?](#when-should-i-use-this)
-  - [Install](#install)
-  - [Use](#use)
-  - [API](#api)
-  - [Syntax tree](#syntax-tree)
-  - [Types](#types)
-  - [Compatibility](#compatibility)
-  - [Security](#security)
-  - [Related](#related)
-  - [Contribute](#contribute)
-  - [License](#license)
+*   [ojs-types](#ojs-types)
+    *   [Contents](#contents)
+    *   [What is this?](#what-is-this)
+    *   [When should I use this?](#when-should-i-use-this)
+    *   [Install](#install)
+    *   [Use](#use)
+    *   [API](#api)
+    *   [Syntax tree](#syntax-tree)
+    *   [Types](#types)
+    *   [Compatibility](#compatibility)
+    *   [Security](#security)
+    *   [Related](#related)
+    *   [Contribute](#contribute)
+    *   [License](#license)
 
 ## What is this?
 
@@ -42,2245 +42,1580 @@ pnpm add ojs-api
 
 ## API
 
-### Module: ojs-api
+***
 
-#### Interfaces
-
-- [Announcement](.interfaces/ojs_api.Announcement.md)
-- [AnnouncementEditable](.interfaces/ojs_api.AnnouncementEditable.md)
-- [AnnouncementSummary](.interfaces/ojs_api.AnnouncementSummary.md)
-- [Author](.interfaces/ojs_api.Author.md)
-- [AuthorEditable](.interfaces/ojs_api.AuthorEditable.md)
-- [AuthorSummary](.interfaces/ojs_api.AuthorSummary.md)
-- [Context](.interfaces/ojs_api.Context.md)
-- [ContextEditable](.interfaces/ojs_api.ContextEditable.md)
-- [ContextSummary](.interfaces/ojs_api.ContextSummary.md)
-- [EmailTemplate](.interfaces/ojs_api.EmailTemplate.md)
-- [EmailTemplateEditable](.interfaces/ojs_api.EmailTemplateEditable.md)
-- [EmailTemplateSummary](.interfaces/ojs_api.EmailTemplateSummary.md)
-- [ErrorResponse](.interfaces/ojs_api.ErrorResponse.md)
-- [Galley](.interfaces/ojs_api.Galley.md)
-- [GalleyEditable](.interfaces/ojs_api.GalleyEditable.md)
-- [GalleySummary](.interfaces/ojs_api.GalleySummary.md)
-- [InvalidParametersResponse](.interfaces/ojs_api.InvalidParametersResponse.md)
-- [Issue](.interfaces/ojs_api.Issue.md)
-- [IssueEditable](.interfaces/ojs_api.IssueEditable.md)
-- [IssueSummary](.interfaces/ojs_api.IssueSummary.md)
-- [LocaleObject](.interfaces/ojs_api.LocaleObject.md)
-- [Publication](.interfaces/ojs_api.Publication.md)
-- [PublicationEditable](.interfaces/ojs_api.PublicationEditable.md)
-- [PublicationStats](.interfaces/ojs_api.PublicationStats.md)
-- [PublicationSummary](.interfaces/ojs_api.PublicationSummary.md)
-- [ReviewRound](.interfaces/ojs_api.ReviewRound.md)
-- [ReviewRoundEditable](.interfaces/ojs_api.ReviewRoundEditable.md)
-- [ReviewerSummary](.interfaces/ojs_api.ReviewerSummary.md)
-- [Section](.interfaces/ojs_api.Section.md)
-- [SectionEditable](.interfaces/ojs_api.SectionEditable.md)
-- [SectionSummary](.interfaces/ojs_api.SectionSummary.md)
-- [Site](.interfaces/ojs_api.Site.md)
-- [SiteEditable](.interfaces/ojs_api.SiteEditable.md)
-- [Submission](.interfaces/ojs_api.Submission.md)
-- [SubmissionEditable](.interfaces/ojs_api.SubmissionEditable.md)
-- [SubmissionFile](.interfaces/ojs_api.SubmissionFile.md)
-- [SubmissionFileEditable](.interfaces/ojs_api.SubmissionFileEditable.md)
-- [SubmissionFileSummary](.interfaces/ojs_api.SubmissionFileSummary.md)
-- [SubmissionSummary](.interfaces/ojs_api.SubmissionSummary.md)
-- [ThemeOptions](.interfaces/ojs_api.ThemeOptions.md)
-- [TimelineInterval](.interfaces/ojs_api.TimelineInterval.md)
-- [User](.interfaces/ojs_api.User.md)
-- [UserEditable](.interfaces/ojs_api.UserEditable.md)
-- [UserGroup](.interfaces/ojs_api.UserGroup.md)
-- [UserGroupEditable](.interfaces/ojs_api.UserGroupEditable.md)
-- [UserInterest](.interfaces/ojs_api.UserInterest.md)
-- [UserSummary](.interfaces/ojs_api.UserSummary.md)
-
-### Interface: Announcement
-
-[ojs-api](.modules).Announcement
+### `Announcement`
 
 #### Properties
 
-##### \_href
+##### `\_href?`
 
-• `Optional` **\_href**: `string`
+> `string`
 
 Format: uri
 
-**`Description`**
+###### Description
 
 The URL to this announcement in the REST API.
 
-###### Defined in
+Defined in:  [lib/types.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L6)
 
-[libs/citations/ojs-types/src/lib/types.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L6)
+##### `assocId?`
 
----
+> `number`
 
-##### assocId
-
-• `Optional` **assocId**: `number`
-
-**`Description`**
+###### Description
 
 The journal, press or preprint server ID.
 
-###### Defined in
+Defined in:  [lib/types.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L8)
 
-[libs/citations/ojs-types/src/lib/types.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L8)
+##### `assocType?`
 
----
+> `number`
 
-##### assocType
-
-• `Optional` **assocType**: `number`
-
-**`Description`**
+###### Description
 
 The assoc object. This should always be `ASSOC_TYPE_JOURNAL` (OJS), `ASSOC_TYPE_PRESS` (OMP) or `ASSOC_TYPE_SERVER` (OPS).
 
-###### Defined in
+Defined in:  [lib/types.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L10)
 
-[libs/citations/ojs-types/src/lib/types.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L10)
+##### `dateExpire?`
 
----
+> `string`
 
-##### dateExpire
-
-• `Optional` **dateExpire**: `string`
-
-**`Description`**
+###### Description
 
 (Optional) The date that this announcement expires, if one is set. This is typically used to express closing dates for calls for papers.
 
-###### Defined in
+Defined in:  [lib/types.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L12)
 
-[libs/citations/ojs-types/src/lib/types.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L12)
+##### `datePosted?`
 
----
+> `string`
 
-##### datePosted
-
-• `Optional` **datePosted**: `string`
-
-**`Description`**
+###### Description
 
 The date this announcement was posted.
 
-###### Defined in
+Defined in:  [lib/types.ts:14](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L14)
 
-[libs/citations/ojs-types/src/lib/types.ts:14](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L14)
+##### `description?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### description
+Defined in:  [lib/types.ts:15](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L15)
 
-• `Optional` **description**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `descriptionShort?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:15](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L15)
+Defined in:  [lib/types.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L16)
 
----
+##### `id?`
 
-##### descriptionShort
+> `number`
 
-• `Optional` **descriptionShort**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:17](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L17)
 
-###### Defined in
+##### `title?`
 
-[libs/citations/ojs-types/src/lib/types.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L16)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:18](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L18)
 
-##### id
+##### `typeId?`
 
-• `Optional` **id**: `number`
+> `number`
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:17](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L17)
-
----
-
-##### title
-
-• `Optional` **title**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:18](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L18)
-
----
-
-##### typeId
-
-• `Optional` **typeId**: `number`
-
-**`Description`**
+###### Description
 
 (Optional) One of the announcement type ids.
 
-###### Defined in
+Defined in:  [lib/types.ts:20](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L20)
 
-[libs/citations/ojs-types/src/lib/types.ts:20](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L20)
+***
 
-### Interface: AnnouncementEditable
-
-[ojs-api](.modules).AnnouncementEditable
+### `AnnouncementEditable`
 
 #### Properties
 
-##### assocId
+##### `assocId?`
 
-• `Optional` **assocId**: `number`
+> `number`
 
-**`Description`**
+###### Description
 
 The journal, press or preprint server ID.
 
-###### Defined in
+Defined in:  [lib/types.ts:781](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L781)
 
-[libs/citations/ojs-types/src/lib/types.ts:781](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L781)
+##### `assocType?`
 
----
+> `number`
 
-##### assocType
-
-• `Optional` **assocType**: `number`
-
-**`Description`**
+###### Description
 
 The assoc object. This should always be `ASSOC_TYPE_JOURNAL` (OJS), `ASSOC_TYPE_PRESS` (OMP) or `ASSOC_TYPE_SERVER` (OPS).
 
-###### Defined in
+Defined in:  [lib/types.ts:783](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L783)
 
-[libs/citations/ojs-types/src/lib/types.ts:783](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L783)
+##### `dateExpire?`
 
----
+> `string`
 
-##### dateExpire
-
-• `Optional` **dateExpire**: `string`
-
-**`Description`**
+###### Description
 
 (Optional) The date that this announcement expires, if one is set. This is typically used to express closing dates for calls for papers.
 
-###### Defined in
+Defined in:  [lib/types.ts:785](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L785)
 
-[libs/citations/ojs-types/src/lib/types.ts:785](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L785)
+##### `datePosted?`
 
----
+> `string`
 
-##### datePosted
-
-• `Optional` **datePosted**: `string`
-
-**`Description`**
+###### Description
 
 The date this announcement was posted.
 
-###### Defined in
+Defined in:  [lib/types.ts:787](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L787)
 
-[libs/citations/ojs-types/src/lib/types.ts:787](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L787)
+##### `description?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### description
+Defined in:  [lib/types.ts:788](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L788)
 
-• `Optional` **description**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `descriptionShort?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:788](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L788)
+Defined in:  [lib/types.ts:789](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L789)
 
----
+##### `id?`
 
-##### descriptionShort
+> `number`
 
-• `Optional` **descriptionShort**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:790](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L790)
 
-###### Defined in
+##### `title?`
 
-[libs/citations/ojs-types/src/lib/types.ts:789](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L789)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:791](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L791)
 
-##### id
+##### `typeId?`
 
-• `Optional` **id**: `number`
+> `number`
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:790](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L790)
-
----
-
-##### title
-
-• `Optional` **title**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:791](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L791)
-
----
-
-##### typeId
-
-• `Optional` **typeId**: `number`
-
-**`Description`**
+###### Description
 
 (Optional) One of the announcement type ids.
 
-###### Defined in
+Defined in:  [lib/types.ts:793](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L793)
 
-[libs/citations/ojs-types/src/lib/types.ts:793](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L793)
+***
 
-### Interface: AnnouncementSummary
-
-[ojs-api](.modules).AnnouncementSummary
+### `AnnouncementSummary`
 
 #### Properties
 
-##### \_href
+##### `\_href?`
 
-• `Optional` **\_href**: `string`
+> `string`
 
 Format: uri
 
-**`Description`**
+###### Description
 
 The URL to this announcement in the REST API.
 
-###### Defined in
+Defined in:  [lib/types.ts:800](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L800)
 
-[libs/citations/ojs-types/src/lib/types.ts:800](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L800)
+##### `assocId?`
 
----
+> `number`
 
-##### assocId
-
-• `Optional` **assocId**: `number`
-
-**`Description`**
+###### Description
 
 The journal, press or preprint server ID.
 
-###### Defined in
+Defined in:  [lib/types.ts:802](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L802)
 
-[libs/citations/ojs-types/src/lib/types.ts:802](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L802)
+##### `assocType?`
 
----
+> `number`
 
-##### assocType
-
-• `Optional` **assocType**: `number`
-
-**`Description`**
+###### Description
 
 The assoc object. This should always be `ASSOC_TYPE_JOURNAL` (OJS), `ASSOC_TYPE_PRESS` (OMP) or `ASSOC_TYPE_SERVER` (OPS).
 
-###### Defined in
+Defined in:  [lib/types.ts:804](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L804)
 
-[libs/citations/ojs-types/src/lib/types.ts:804](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L804)
+##### `dateExpire?`
 
----
+> `string`
 
-##### dateExpire
-
-• `Optional` **dateExpire**: `string`
-
-**`Description`**
+###### Description
 
 (Optional) The date that this announcement expires, if one is set. This is typically used to express closing dates for calls for papers.
 
-###### Defined in
+Defined in:  [lib/types.ts:806](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L806)
 
-[libs/citations/ojs-types/src/lib/types.ts:806](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L806)
+##### `datePosted?`
 
----
+> `string`
 
-##### datePosted
-
-• `Optional` **datePosted**: `string`
-
-**`Description`**
+###### Description
 
 The date this announcement was posted.
 
-###### Defined in
+Defined in:  [lib/types.ts:808](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L808)
 
-[libs/citations/ojs-types/src/lib/types.ts:808](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L808)
+##### `description?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### description
+Defined in:  [lib/types.ts:809](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L809)
 
-• `Optional` **description**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `descriptionShort?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:809](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L809)
+Defined in:  [lib/types.ts:810](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L810)
 
----
+##### `id?`
 
-##### descriptionShort
+> `number`
 
-• `Optional` **descriptionShort**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:811](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L811)
 
-###### Defined in
+##### `title?`
 
-[libs/citations/ojs-types/src/lib/types.ts:810](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L810)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:812](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L812)
 
-##### id
+##### `typeId?`
 
-• `Optional` **id**: `number`
+> `number`
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:811](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L811)
-
----
-
-##### title
-
-• `Optional` **title**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:812](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L812)
-
----
-
-##### typeId
-
-• `Optional` **typeId**: `number`
-
-**`Description`**
+###### Description
 
 (Optional) One of the announcement type ids.
 
-###### Defined in
+Defined in:  [lib/types.ts:814](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L814)
 
-[libs/citations/ojs-types/src/lib/types.ts:814](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L814)
+***
 
-### Interface: Author
-
-[ojs-api](.modules).Author
+### `Author`
 
 #### Properties
 
-##### affiliation
+##### `affiliation?`
 
-• `Optional` **affiliation**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:23](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L23)
 
-[libs/citations/ojs-types/src/lib/types.ts:23](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L23)
+##### `biography?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### biography
+Defined in:  [lib/types.ts:24](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L24)
 
-• `Optional` **biography**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `country?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:24](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L24)
+Defined in:  [lib/types.ts:25](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L25)
 
----
+##### `email?`
 
-##### country
+> `string`
 
-• `Optional` **country**: `string`
+Defined in:  [lib/types.ts:26](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L26)
 
-###### Defined in
+##### `familyName?`
 
-[libs/citations/ojs-types/src/lib/types.ts:25](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L25)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:27](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L27)
 
-##### email
+##### `givenName?`
 
-• `Optional` **email**: `string`
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:28](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L28)
 
-[libs/citations/ojs-types/src/lib/types.ts:26](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L26)
+##### `id?`
 
----
+> `number`
 
-##### familyName
+Defined in:  [lib/types.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L29)
 
-• `Optional` **familyName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `includeInBrowse?`
 
-###### Defined in
+> `boolean`
 
-[libs/citations/ojs-types/src/lib/types.ts:27](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L27)
-
----
-
-##### givenName
-
-• `Optional` **givenName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:28](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L28)
-
----
-
-##### id
-
-• `Optional` **id**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L29)
-
----
-
-##### includeInBrowse
-
-• `Optional` **includeInBrowse**: `boolean`
-
-**`Description`**
+###### Description
 
 Whether or not to include this contributor in author lists when the publication appears in search results, tables of content and catalog entries.
 
-**`Default`**
+###### Default
 
 true
 
-###### Defined in
+Defined in:  [lib/types.ts:34](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L34)
 
-[libs/citations/ojs-types/src/lib/types.ts:34](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L34)
+##### `orcid?`
 
----
+> `string`
 
-##### orcid
-
-• `Optional` **orcid**: `string`
-
-**`Description`**
+###### Description
 
 The ORCID of this contributor. See: https\://orcid.org/
 
-###### Defined in
+Defined in:  [lib/types.ts:36](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L36)
 
-[libs/citations/ojs-types/src/lib/types.ts:36](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L36)
+##### `preferredPublicName?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### preferredPublicName
+Defined in:  [lib/types.ts:37](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L37)
 
-• `Optional` **preferredPublicName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `publicationId?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:37](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L37)
+Defined in:  [lib/types.ts:38](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L38)
 
----
+##### `seq?`
 
-##### publicationId
+> `number`
 
-• `Optional` **publicationId**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:38](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L38)
-
----
-
-##### seq
-
-• `Optional` **seq**: `number`
-
-**`Description`**
+###### Description
 
 The order in which this contributor should appear in a list of contriibutors.
 
-###### Defined in
+Defined in:  [lib/types.ts:40](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L40)
 
-[libs/citations/ojs-types/src/lib/types.ts:40](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L40)
+##### `submissionLocale?`
 
----
+> `string`
 
-##### submissionLocale
-
-• `Optional` **submissionLocale**: `string`
-
-**`Description`**
+###### Description
 
 The primary locale of the submission this author is attached to. This locale is used as the fallback when a language is missing from a multilingual property.
 
-###### Defined in
+Defined in:  [lib/types.ts:42](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L42)
 
-[libs/citations/ojs-types/src/lib/types.ts:42](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L42)
+##### `url?`
 
----
+> `string`
 
-##### url
-
-• `Optional` **url**: `string`
-
-**`Description`**
+###### Description
 
 An optional URL to this contributor's webpage.
 
-###### Defined in
+Defined in:  [lib/types.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L44)
 
-[libs/citations/ojs-types/src/lib/types.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L44)
+##### `userGroupId?`
 
----
+> `number`
 
-##### userGroupId
-
-• `Optional` **userGroupId**: `number`
-
-**`Description`**
+###### Description
 
 in which user group should this contributor be identified. Usually one of the author roles, such as Author or Translator.
 
-###### Defined in
+Defined in:  [lib/types.ts:46](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L46)
 
-[libs/citations/ojs-types/src/lib/types.ts:46](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L46)
+***
 
-### Interface: AuthorEditable
-
-[ojs-api](.modules).AuthorEditable
+### `AuthorEditable`
 
 #### Properties
 
-##### affiliation
+##### `affiliation?`
 
-• `Optional` **affiliation**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:817](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L817)
 
-[libs/citations/ojs-types/src/lib/types.ts:817](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L817)
+##### `biography?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### biography
+Defined in:  [lib/types.ts:818](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L818)
 
-• `Optional` **biography**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `country?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:818](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L818)
+Defined in:  [lib/types.ts:819](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L819)
 
----
+##### `email?`
 
-##### country
+> `string`
 
-• `Optional` **country**: `string`
+Defined in:  [lib/types.ts:820](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L820)
 
-###### Defined in
+##### `familyName?`
 
-[libs/citations/ojs-types/src/lib/types.ts:819](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L819)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:821](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L821)
 
-##### email
+##### `givenName?`
 
-• `Optional` **email**: `string`
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:822](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L822)
 
-[libs/citations/ojs-types/src/lib/types.ts:820](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L820)
+##### `id?`
 
----
+> `number`
 
-##### familyName
+Defined in:  [lib/types.ts:823](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L823)
 
-• `Optional` **familyName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `includeInBrowse?`
 
-###### Defined in
+> `boolean`
 
-[libs/citations/ojs-types/src/lib/types.ts:821](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L821)
-
----
-
-##### givenName
-
-• `Optional` **givenName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:822](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L822)
-
----
-
-##### id
-
-• `Optional` **id**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:823](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L823)
-
----
-
-##### includeInBrowse
-
-• `Optional` **includeInBrowse**: `boolean`
-
-**`Description`**
+###### Description
 
 Whether or not to include this contributor in author lists when the publication appears in search results, tables of content and catalog entries.
 
-**`Default`**
+###### Default
 
 true
 
-###### Defined in
+Defined in:  [lib/types.ts:828](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L828)
 
-[libs/citations/ojs-types/src/lib/types.ts:828](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L828)
+##### `orcid?`
 
----
+> `string`
 
-##### orcid
-
-• `Optional` **orcid**: `string`
-
-**`Description`**
+###### Description
 
 The ORCID of this contributor. See: https\://orcid.org/
 
-###### Defined in
+Defined in:  [lib/types.ts:830](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L830)
 
-[libs/citations/ojs-types/src/lib/types.ts:830](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L830)
+##### `preferredPublicName?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### preferredPublicName
+Defined in:  [lib/types.ts:831](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L831)
 
-• `Optional` **preferredPublicName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `publicationId?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:831](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L831)
+Defined in:  [lib/types.ts:832](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L832)
 
----
+##### `seq?`
 
-##### publicationId
+> `number`
 
-• `Optional` **publicationId**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:832](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L832)
-
----
-
-##### seq
-
-• `Optional` **seq**: `number`
-
-**`Description`**
+###### Description
 
 The order in which this contributor should appear in a list of contriibutors.
 
-###### Defined in
+Defined in:  [lib/types.ts:834](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L834)
 
-[libs/citations/ojs-types/src/lib/types.ts:834](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L834)
+##### `url?`
 
----
+> `string`
 
-##### url
-
-• `Optional` **url**: `string`
-
-**`Description`**
+###### Description
 
 An optional URL to this contributor's webpage.
 
-###### Defined in
+Defined in:  [lib/types.ts:836](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L836)
 
-[libs/citations/ojs-types/src/lib/types.ts:836](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L836)
+##### `userGroupId?`
 
----
+> `number`
 
-##### userGroupId
-
-• `Optional` **userGroupId**: `number`
-
-**`Description`**
+###### Description
 
 in which user group should this contributor be identified. Usually one of the author roles, such as Author or Translator.
 
-###### Defined in
+Defined in:  [lib/types.ts:838](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L838)
 
-[libs/citations/ojs-types/src/lib/types.ts:838](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L838)
+***
 
-### Interface: AuthorSummary
-
-[ojs-api](.modules).AuthorSummary
+### `AuthorSummary`
 
 #### Properties
 
-##### affiliation
+##### `affiliation?`
 
-• `Optional` **affiliation**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:841](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L841)
 
-[libs/citations/ojs-types/src/lib/types.ts:841](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L841)
+##### `email?`
 
----
+> `string`
 
-##### email
+Defined in:  [lib/types.ts:842](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L842)
 
-• `Optional` **email**: `string`
+##### `familyName?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:842](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L842)
+Defined in:  [lib/types.ts:843](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L843)
 
----
+##### `givenName?`
 
-##### familyName
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **familyName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:844](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L844)
 
-###### Defined in
+##### `id?`
 
-[libs/citations/ojs-types/src/lib/types.ts:843](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L843)
+> `number`
 
----
+Defined in:  [lib/types.ts:845](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L845)
 
-##### givenName
+##### `includeInBrowse?`
 
-• `Optional` **givenName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> `boolean`
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:844](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L844)
-
----
-
-##### id
-
-• `Optional` **id**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:845](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L845)
-
----
-
-##### includeInBrowse
-
-• `Optional` **includeInBrowse**: `boolean`
-
-**`Description`**
+###### Description
 
 Whether or not to include this contributor in author lists when the publication appears in search results, tables of content and catalog entries.
 
-**`Default`**
+###### Default
 
 true
 
-###### Defined in
+Defined in:  [lib/types.ts:850](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L850)
 
-[libs/citations/ojs-types/src/lib/types.ts:850](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L850)
+##### `orcid?`
 
----
+> `string`
 
-##### orcid
-
-• `Optional` **orcid**: `string`
-
-**`Description`**
+###### Description
 
 The ORCID of this contributor. See: https\://orcid.org/
 
-###### Defined in
+Defined in:  [lib/types.ts:852](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L852)
 
-[libs/citations/ojs-types/src/lib/types.ts:852](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L852)
+##### `preferredPublicName?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### preferredPublicName
+Defined in:  [lib/types.ts:853](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L853)
 
-• `Optional` **preferredPublicName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `publicationId?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:853](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L853)
+Defined in:  [lib/types.ts:854](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L854)
 
----
+##### `seq?`
 
-##### publicationId
+> `number`
 
-• `Optional` **publicationId**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:854](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L854)
-
----
-
-##### seq
-
-• `Optional` **seq**: `number`
-
-**`Description`**
+###### Description
 
 The order in which this contributor should appear in a list of contriibutors.
 
-###### Defined in
+Defined in:  [lib/types.ts:856](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L856)
 
-[libs/citations/ojs-types/src/lib/types.ts:856](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L856)
+##### `submissionLocale?`
 
----
+> `string`
 
-##### submissionLocale
-
-• `Optional` **submissionLocale**: `string`
-
-**`Description`**
+###### Description
 
 The primary locale of the submission this author is attached to. This locale is used as the fallback when a language is missing from a multilingual property.
 
-###### Defined in
+Defined in:  [lib/types.ts:858](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L858)
 
-[libs/citations/ojs-types/src/lib/types.ts:858](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L858)
+##### `userGroupId?`
 
----
+> `number`
 
-##### userGroupId
-
-• `Optional` **userGroupId**: `number`
-
-**`Description`**
+###### Description
 
 in which user group should this contributor be identified. Usually one of the author roles, such as Author or Translator.
 
-###### Defined in
+Defined in:  [lib/types.ts:860](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L860)
 
-[libs/citations/ojs-types/src/lib/types.ts:860](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L860)
+***
 
-### Interface: Context
-
-[ojs-api](.modules).Context
+### `Context`
 
 #### Properties
 
-##### \_href
+##### `\_href?`
 
-• `Optional` **\_href**: `string`
+> `string`
 
 Format: uri
 
-###### Defined in
+Defined in:  [lib/types.ts:50](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L50)
 
-[libs/citations/ojs-types/src/lib/types.ts:50](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L50)
+##### `abbreviation?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### abbreviation
+Defined in:  [lib/types.ts:51](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L51)
 
-• `Optional` **abbreviation**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `about?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:51](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L51)
+Defined in:  [lib/types.ts:52](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L52)
 
----
+##### `acronym?`
 
-##### about
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **about**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:53](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L53)
 
-###### Defined in
+##### `additionalHomeContent?`
 
-[libs/citations/ojs-types/src/lib/types.ts:52](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L52)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:54](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L54)
 
-##### acronym
+##### `agencies?`
 
-• `Optional` **acronym**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> `string`
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:53](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L53)
-
----
-
-##### additionalHomeContent
-
-• `Optional` **additionalHomeContent**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:54](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L54)
-
----
-
-##### agencies
-
-• `Optional` **agencies**: `string`
-
-**`Description`**
+###### Description
 
 Enable agencies metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:56](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L56)
 
-[libs/citations/ojs-types/src/lib/types.ts:56](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L56)
+##### `announcementsIntroduction?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### announcementsIntroduction
+Defined in:  [lib/types.ts:57](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L57)
 
-• `Optional` **announcementsIntroduction**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `authorGuidelines?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:57](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L57)
+Defined in:  [lib/types.ts:58](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L58)
 
----
+##### `authorInformation?`
 
-##### authorGuidelines
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **authorGuidelines**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:59](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L59)
 
-###### Defined in
+##### `citations?`
 
-[libs/citations/ojs-types/src/lib/types.ts:58](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L58)
+> `string`
 
----
-
-##### authorInformation
-
-• `Optional` **authorInformation**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:59](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L59)
-
----
-
-##### citations
-
-• `Optional` **citations**: `string`
-
-**`Description`**
+###### Description
 
 Enable citations metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:61](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L61)
 
-[libs/citations/ojs-types/src/lib/types.ts:61](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L61)
+##### `clockssLicense?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### clockssLicense
+Defined in:  [lib/types.ts:62](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L62)
 
-• `Optional` **clockssLicense**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `competingInterests?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:62](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L62)
+Defined in:  [lib/types.ts:63](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L63)
 
----
+##### `contactAffiliation?`
 
-##### competingInterests
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **competingInterests**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:64](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L64)
 
-###### Defined in
+##### `contactEmail?`
 
-[libs/citations/ojs-types/src/lib/types.ts:63](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L63)
+> `string`
 
----
+Defined in:  [lib/types.ts:65](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L65)
 
-##### contactAffiliation
+##### `contactName?`
 
-• `Optional` **contactAffiliation**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:66](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L66)
 
-[libs/citations/ojs-types/src/lib/types.ts:64](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L64)
+##### `contactPhone?`
 
----
+> `string`
 
-##### contactEmail
+Defined in:  [lib/types.ts:67](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L67)
 
-• `Optional` **contactEmail**: `string`
+##### `copyrightHolderOther?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:65](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L65)
+Defined in:  [lib/types.ts:68](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L68)
 
----
+##### `copyrightHolderType?`
 
-##### contactName
+> `string`
 
-• `Optional` **contactName**: `string`
+Defined in:  [lib/types.ts:69](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L69)
 
-###### Defined in
+##### `copyrightNotice?`
 
-[libs/citations/ojs-types/src/lib/types.ts:66](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L66)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:70](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L70)
 
-##### contactPhone
+##### `copyrightYearBasis?`
 
-• `Optional` **contactPhone**: `string`
+> `string`
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:67](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L67)
-
----
-
-##### copyrightHolderOther
-
-• `Optional` **copyrightHolderOther**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:68](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L68)
-
----
-
-##### copyrightHolderType
-
-• `Optional` **copyrightHolderType**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:69](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L69)
-
----
-
-##### copyrightNotice
-
-• `Optional` **copyrightNotice**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:70](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L70)
-
----
-
-##### copyrightYearBasis
-
-• `Optional` **copyrightYearBasis**: `string`
-
-**`Default`**
+###### Default
 
 issue
 
-###### Defined in
+Defined in:  [lib/types.ts:72](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L72)
 
-[libs/citations/ojs-types/src/lib/types.ts:72](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L72)
+##### `coverage?`
 
----
+> `string`
 
-##### coverage
-
-• `Optional` **coverage**: `string`
-
-**`Description`**
+###### Description
 
 Enable coverage metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:74](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L74)
 
-[libs/citations/ojs-types/src/lib/types.ts:74](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L74)
+##### `currency?`
 
----
+> `string`
 
-##### currency
+Defined in:  [lib/types.ts:75](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L75)
 
-• `Optional` **currency**: `string`
+##### `customHeaders?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:75](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L75)
+Defined in:  [lib/types.ts:76](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L76)
 
----
+##### `dateFormatLong?`
 
-##### customHeaders
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **customHeaders**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:77](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L77)
 
-###### Defined in
+##### `dateFormatShort?`
 
-[libs/citations/ojs-types/src/lib/types.ts:76](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L76)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:78](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L78)
 
-##### dateFormatLong
+##### `datetimeFormatLong?`
 
-• `Optional` **dateFormatLong**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:79](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L79)
 
-[libs/citations/ojs-types/src/lib/types.ts:77](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L77)
+##### `datetimeFormatShort?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### dateFormatShort
+Defined in:  [lib/types.ts:80](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L80)
 
-• `Optional` **dateFormatShort**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `defaultMetricType?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:78](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L78)
+Defined in:  [lib/types.ts:81](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L81)
 
----
+##### `defaultReviewMode?`
 
-##### datetimeFormatLong
+> `number`
 
-• `Optional` **datetimeFormatLong**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:79](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L79)
-
----
-
-##### datetimeFormatShort
-
-• `Optional` **datetimeFormatShort**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:80](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L80)
-
----
-
-##### defaultMetricType
-
-• `Optional` **defaultMetricType**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:81](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L81)
-
----
-
-##### defaultReviewMode
-
-• `Optional` **defaultReviewMode**: `number`
-
-**`Default`**
+###### Default
 
 2
 
-###### Defined in
+Defined in:  [lib/types.ts:83](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L83)
 
-[libs/citations/ojs-types/src/lib/types.ts:83](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L83)
+##### `delayedOpenAccessDuration?`
 
----
+> `number`
 
-##### delayedOpenAccessDuration
+Defined in:  [lib/types.ts:84](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L84)
 
-• `Optional` **delayedOpenAccessDuration**: `number`
+##### `delayedOpenAccessPolicy?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:84](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L84)
+Defined in:  [lib/types.ts:85](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L85)
 
----
+##### `description?`
 
-##### delayedOpenAccessPolicy
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **delayedOpenAccessPolicy**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:86](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L86)
 
-###### Defined in
+##### `disableBulkEmailUserGroups?`
 
-[libs/citations/ojs-types/src/lib/types.ts:85](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L85)
+> `number`[]
 
----
-
-##### description
-
-• `Optional` **description**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:86](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L86)
-
----
-
-##### disableBulkEmailUserGroups
-
-• `Optional` **disableBulkEmailUserGroups**: `number`\[]
-
-**`Description`**
+###### Description
 
 User groups that a manager will be prevented from sending bulk email to using the notify feature. Only the admin may edit this property.
 
-###### Defined in
+Defined in:  [lib/types.ts:88](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L88)
 
-[libs/citations/ojs-types/src/lib/types.ts:88](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L88)
+##### `disableSubmissions?`
 
----
+> `boolean`
 
-##### disableSubmissions
-
-• `Optional` **disableSubmissions**: `boolean`
-
-**`Default`**
+###### Default
 
 false
 
-###### Defined in
+Defined in:  [lib/types.ts:90](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L90)
 
-[libs/citations/ojs-types/src/lib/types.ts:90](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L90)
+##### `disableUserReg?`
 
----
+> `boolean`
 
-##### disableUserReg
+Defined in:  [lib/types.ts:91](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L91)
 
-• `Optional` **disableUserReg**: `boolean`
+##### `disciplines?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:91](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L91)
-
----
-
-##### disciplines
-
-• `Optional` **disciplines**: `string`
-
-**`Description`**
+###### Description
 
 Enable disciplines metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:93](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L93)
 
-[libs/citations/ojs-types/src/lib/types.ts:93](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L93)
+##### `editorialTeam?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### editorialTeam
+Defined in:  [lib/types.ts:94](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L94)
 
-• `Optional` **editorialTeam**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `emailSignature?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:94](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L94)
+Defined in:  [lib/types.ts:95](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L95)
 
----
+##### `enableAnnouncements?`
 
-##### emailSignature
+> `boolean`
 
-• `Optional` **emailSignature**: `string`
+Defined in:  [lib/types.ts:96](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L96)
 
-###### Defined in
+##### `enableClockss?`
 
-[libs/citations/ojs-types/src/lib/types.ts:95](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L95)
+> `boolean`
 
----
+Defined in:  [lib/types.ts:97](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L97)
 
-##### enableAnnouncements
+##### `enableLockss?`
 
-• `Optional` **enableAnnouncements**: `boolean`
+> `boolean`
 
-###### Defined in
+Defined in:  [lib/types.ts:98](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L98)
 
-[libs/citations/ojs-types/src/lib/types.ts:96](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L96)
+##### `enableOai?`
 
----
+> `boolean`
 
-##### enableClockss
-
-• `Optional` **enableClockss**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:97](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L97)
-
----
-
-##### enableLockss
-
-• `Optional` **enableLockss**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:98](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L98)
-
----
-
-##### enableOai
-
-• `Optional` **enableOai**: `boolean`
-
-**`Default`**
+###### Default
 
 1
 
-###### Defined in
+Defined in:  [lib/types.ts:100](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L100)
 
-[libs/citations/ojs-types/src/lib/types.ts:100](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L100)
+##### `enableOpenAccessNotification?`
 
----
+> `boolean`
 
-##### enableOpenAccessNotification
+Defined in:  [lib/types.ts:101](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L101)
 
-• `Optional` **enableOpenAccessNotification**: `boolean`
+##### `enablePublisherId?`
 
-###### Defined in
+> `string`[]
 
-[libs/citations/ojs-types/src/lib/types.ts:101](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L101)
+Defined in:  [lib/types.ts:102](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L102)
 
----
+##### `enableSubscriptionOnlinePaymentNotificationPurchaseIndividual?`
 
-##### enablePublisherId
+> `boolean`
 
-• `Optional` **enablePublisherId**: `string`\[]
+Defined in:  [lib/types.ts:103](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L103)
 
-###### Defined in
+##### `enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional?`
 
-[libs/citations/ojs-types/src/lib/types.ts:102](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L102)
+> `boolean`
 
----
+Defined in:  [lib/types.ts:104](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L104)
 
-##### enableSubscriptionOnlinePaymentNotificationPurchaseIndividual
+##### `enableSubscriptionOnlinePaymentNotificationRenewIndividual?`
 
-• `Optional` **enableSubscriptionOnlinePaymentNotificationPurchaseIndividual**: `boolean`
+> `boolean`
 
-###### Defined in
+Defined in:  [lib/types.ts:105](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L105)
 
-[libs/citations/ojs-types/src/lib/types.ts:103](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L103)
+##### `enableSubscriptionOnlinePaymentNotificationRenewInstitutional?`
 
----
+> `boolean`
 
-##### enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional
+Defined in:  [lib/types.ts:106](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L106)
 
-• `Optional` **enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional**: `boolean`
+##### `enabled?`
 
-###### Defined in
+> `boolean`
 
-[libs/citations/ojs-types/src/lib/types.ts:104](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L104)
+Defined in:  [lib/types.ts:107](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L107)
 
----
+##### `envelopeSender?`
 
-##### enableSubscriptionOnlinePaymentNotificationRenewIndividual
+> `string`
 
-• `Optional` **enableSubscriptionOnlinePaymentNotificationRenewIndividual**: `boolean`
+Defined in:  [lib/types.ts:108](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L108)
 
-###### Defined in
+##### `favicon?`
 
-[libs/citations/ojs-types/src/lib/types.ts:105](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L105)
+> `object`
 
----
-
-##### enableSubscriptionOnlinePaymentNotificationRenewInstitutional
-
-• `Optional` **enableSubscriptionOnlinePaymentNotificationRenewInstitutional**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:106](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L106)
-
----
-
-##### enabled
-
-• `Optional` **enabled**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:107](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L107)
-
----
-
-##### envelopeSender
-
-• `Optional` **envelopeSender**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:108](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L108)
-
----
-
-##### favicon
-
-• `Optional` **favicon**: `Object`
+```ts
+{
+    en_US?: {
+        altText?: string;
+        dateUploaded?: string;
+        height?: number;
+        name?: string;
+        uploadName?: string;
+        width?: number;
+    };
+    fr_CA?: {
+        altText?: string;
+        dateUploaded?: string;
+        height?: number;
+        name?: string;
+        uploadName?: string;
+        width?: number;
+    };
+    properties?: unknown;
+    type?: unknown;
+}
+```
 
 ###### Type declaration
 
-\| Name | Type |
-\| :------ | :------ |
-\| `en_US?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `height?`: `number` ; `name?`: `string` ; `uploadName?`: `string` ; `width?`: `number` } |
-\| `en_US.altText?` | `string` |
-\| `en_US.dateUploaded?` | `string` |
-\| `en_US.height?` | `number` |
-\| `en_US.name?` | `string` |
-\| `en_US.uploadName?` | `string` |
-\| `en_US.width?` | `number` |
-\| `fr_CA?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `height?`: `number` ; `name?`: `string` ; `uploadName?`: `string` ; `width?`: `number` } |
-\| `fr_CA.altText?` | `string` |
-\| `fr_CA.dateUploaded?` | `string` |
-\| `fr_CA.height?` | `number` |
-\| `fr_CA.name?` | `string` |
-\| `fr_CA.uploadName?` | `string` |
-\| `fr_CA.width?` | `number` |
-\| `properties?` | `unknown` |
-\| `type?` | `unknown` |
+| Member | Type |
+| :------ | :------ |
+| `en_US`? | `object` |
+| `en_US.altText`? | `string` |
+| `en_US.dateUploaded`? | `string` |
+| `en_US.height`? | `number` |
+| `en_US.name`? | `string` |
+| `en_US.uploadName`? | `string` |
+| `en_US.width`? | `number` |
+| `fr_CA`? | `object` |
+| `fr_CA.altText`? | `string` |
+| `fr_CA.dateUploaded`? | `string` |
+| `fr_CA.height`? | `number` |
+| `fr_CA.name`? | `string` |
+| `fr_CA.uploadName`? | `string` |
+| `fr_CA.width`? | `number` |
+| `properties`? | `unknown` |
+| `type`? | `unknown` |
 
-###### Defined in
+Defined in:  [lib/types.ts:109](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L109)
 
-[libs/citations/ojs-types/src/lib/types.ts:109](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L109)
+##### `homepageImage?`
 
----
+> `object`
 
-##### homepageImage
-
-• `Optional` **homepageImage**: `Object`
+```ts
+{
+    en_US?: {
+        altText?: string;
+        dateUploaded?: string;
+        height?: number;
+        name?: string;
+        uploadName?: string;
+        width?: number;
+    };
+    fr_CA?: {
+        altText?: string;
+        dateUploaded?: string;
+        height?: number;
+        name?: string;
+        uploadName?: string;
+        width?: number;
+    };
+    properties?: unknown;
+    type?: unknown;
+}
+```
 
 ###### Type declaration
 
-\| Name | Type |
-\| :------ | :------ |
-\| `en_US?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `height?`: `number` ; `name?`: `string` ; `uploadName?`: `string` ; `width?`: `number` } |
-\| `en_US.altText?` | `string` |
-\| `en_US.dateUploaded?` | `string` |
-\| `en_US.height?` | `number` |
-\| `en_US.name?` | `string` |
-\| `en_US.uploadName?` | `string` |
-\| `en_US.width?` | `number` |
-\| `fr_CA?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `height?`: `number` ; `name?`: `string` ; `uploadName?`: `string` ; `width?`: `number` } |
-\| `fr_CA.altText?` | `string` |
-\| `fr_CA.dateUploaded?` | `string` |
-\| `fr_CA.height?` | `number` |
-\| `fr_CA.name?` | `string` |
-\| `fr_CA.uploadName?` | `string` |
-\| `fr_CA.width?` | `number` |
-\| `properties?` | `unknown` |
-\| `type?` | `unknown` |
+| Member | Type |
+| :------ | :------ |
+| `en_US`? | `object` |
+| `en_US.altText`? | `string` |
+| `en_US.dateUploaded`? | `string` |
+| `en_US.height`? | `number` |
+| `en_US.name`? | `string` |
+| `en_US.uploadName`? | `string` |
+| `en_US.width`? | `number` |
+| `fr_CA`? | `object` |
+| `fr_CA.altText`? | `string` |
+| `fr_CA.dateUploaded`? | `string` |
+| `fr_CA.height`? | `number` |
+| `fr_CA.name`? | `string` |
+| `fr_CA.uploadName`? | `string` |
+| `fr_CA.width`? | `number` |
+| `properties`? | `unknown` |
+| `type`? | `unknown` |
 
-###### Defined in
+Defined in:  [lib/types.ts:129](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L129)
 
-[libs/citations/ojs-types/src/lib/types.ts:129](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L129)
+##### `id?`
 
----
+> `number`
 
-##### id
+Defined in:  [lib/types.ts:149](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L149)
 
-• `Optional` **id**: `number`
+##### `itemsPerPage?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:149](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L149)
-
----
-
-##### itemsPerPage
-
-• `Optional` **itemsPerPage**: `number`
-
-**`Default`**
+###### Default
 
 25
 
-###### Defined in
+Defined in:  [lib/types.ts:151](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L151)
 
-[libs/citations/ojs-types/src/lib/types.ts:151](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L151)
+##### `journalThumbnail?`
 
----
+> `object`
 
-##### journalThumbnail
-
-• `Optional` **journalThumbnail**: `Object`
+```ts
+{
+    en_US?: {
+        altText?: string;
+        dateUploaded?: string;
+        height?: number;
+        name?: string;
+        uploadName?: string;
+        width?: number;
+    };
+    fr_CA?: {
+        altText?: string;
+        dateUploaded?: string;
+        height?: number;
+        name?: string;
+        uploadName?: string;
+        width?: number;
+    };
+    properties?: unknown;
+    type?: unknown;
+}
+```
 
 ###### Type declaration
 
-\| Name | Type |
-\| :------ | :------ |
-\| `en_US?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `height?`: `number` ; `name?`: `string` ; `uploadName?`: `string` ; `width?`: `number` } |
-\| `en_US.altText?` | `string` |
-\| `en_US.dateUploaded?` | `string` |
-\| `en_US.height?` | `number` |
-\| `en_US.name?` | `string` |
-\| `en_US.uploadName?` | `string` |
-\| `en_US.width?` | `number` |
-\| `fr_CA?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `height?`: `number` ; `name?`: `string` ; `uploadName?`: `string` ; `width?`: `number` } |
-\| `fr_CA.altText?` | `string` |
-\| `fr_CA.dateUploaded?` | `string` |
-\| `fr_CA.height?` | `number` |
-\| `fr_CA.name?` | `string` |
-\| `fr_CA.uploadName?` | `string` |
-\| `fr_CA.width?` | `number` |
-\| `properties?` | `unknown` |
-\| `type?` | `unknown` |
+| Member | Type |
+| :------ | :------ |
+| `en_US`? | `object` |
+| `en_US.altText`? | `string` |
+| `en_US.dateUploaded`? | `string` |
+| `en_US.height`? | `number` |
+| `en_US.name`? | `string` |
+| `en_US.uploadName`? | `string` |
+| `en_US.width`? | `number` |
+| `fr_CA`? | `object` |
+| `fr_CA.altText`? | `string` |
+| `fr_CA.dateUploaded`? | `string` |
+| `fr_CA.height`? | `number` |
+| `fr_CA.name`? | `string` |
+| `fr_CA.uploadName`? | `string` |
+| `fr_CA.width`? | `number` |
+| `properties`? | `unknown` |
+| `type`? | `unknown` |
 
-###### Defined in
+Defined in:  [lib/types.ts:152](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L152)
 
-[libs/citations/ojs-types/src/lib/types.ts:152](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L152)
+##### `keywords?`
 
----
+> `string`
 
-##### keywords
-
-• `Optional` **keywords**: `string`
-
-**`Description`**
+###### Description
 
 Enable keywords metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.
 
-**`Default`**
+###### Default
 
 request
 
-###### Defined in
+Defined in:  [lib/types.ts:176](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L176)
 
-[libs/citations/ojs-types/src/lib/types.ts:176](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L176)
+##### `languages?`
 
----
+> `string`
 
-##### languages
-
-• `Optional` **languages**: `string`
-
-**`Description`**
+###### Description
 
 Enable languages metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:178](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L178)
 
-[libs/citations/ojs-types/src/lib/types.ts:178](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L178)
+##### `librarianInformation?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### librarianInformation
+Defined in:  [lib/types.ts:179](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L179)
 
-• `Optional` **librarianInformation**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `licenseTerms?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:179](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L179)
+Defined in:  [lib/types.ts:180](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L180)
 
----
+##### `licenseUrl?`
 
-##### licenseTerms
+> `string`
 
-• `Optional` **licenseTerms**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:181](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L181)
 
-###### Defined in
+##### `lockssLicense?`
 
-[libs/citations/ojs-types/src/lib/types.ts:180](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L180)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:182](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L182)
 
-##### licenseUrl
+##### `mailingAddress?`
 
-• `Optional` **licenseUrl**: `string`
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:183](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L183)
 
-[libs/citations/ojs-types/src/lib/types.ts:181](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L181)
+##### `membershipFee?`
 
----
+> `number`
 
-##### lockssLicense
-
-• `Optional` **lockssLicense**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:182](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L182)
-
----
-
-##### mailingAddress
-
-• `Optional` **mailingAddress**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:183](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L183)
-
----
-
-##### membershipFee
-
-• `Optional` **membershipFee**: `number`
-
-**`Default`**
+###### Default
 
 0
 
-###### Defined in
+Defined in:  [lib/types.ts:185](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L185)
 
-[libs/citations/ojs-types/src/lib/types.ts:185](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L185)
+##### `membershipFeeDescription?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### membershipFeeDescription
+Defined in:  [lib/types.ts:186](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L186)
 
-• `Optional` **membershipFeeDescription**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `membershipFeeName?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:186](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L186)
+Defined in:  [lib/types.ts:187](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L187)
 
----
+##### `name?`
 
-##### membershipFeeName
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **membershipFeeName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:188](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L188)
 
-###### Defined in
+##### `numAnnouncementsHomepage?`
 
-[libs/citations/ojs-types/src/lib/types.ts:187](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L187)
+> `number`
 
----
+Defined in:  [lib/types.ts:189](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L189)
 
-##### name
+##### `numDaysBeforeInviteReminder?`
 
-• `Optional` **name**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> `number`
 
-###### Defined in
+Defined in:  [lib/types.ts:190](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L190)
 
-[libs/citations/ojs-types/src/lib/types.ts:188](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L188)
+##### `numDaysBeforeSubmitReminder?`
 
----
+> `number`
 
-##### numAnnouncementsHomepage
+Defined in:  [lib/types.ts:191](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L191)
 
-• `Optional` **numAnnouncementsHomepage**: `number`
+##### `numMonthsAfterSubscriptionExpiryReminder?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:189](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L189)
+Defined in:  [lib/types.ts:192](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L192)
 
----
+##### `numMonthsBeforeSubscriptionExpiryReminder?`
 
-##### numDaysBeforeInviteReminder
+> `number`
 
-• `Optional` **numDaysBeforeInviteReminder**: `number`
+Defined in:  [lib/types.ts:193](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L193)
 
-###### Defined in
+##### `numPageLinks?`
 
-[libs/citations/ojs-types/src/lib/types.ts:190](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L190)
+> `number`
 
----
-
-##### numDaysBeforeSubmitReminder
-
-• `Optional` **numDaysBeforeSubmitReminder**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:191](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L191)
-
----
-
-##### numMonthsAfterSubscriptionExpiryReminder
-
-• `Optional` **numMonthsAfterSubscriptionExpiryReminder**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:192](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L192)
-
----
-
-##### numMonthsBeforeSubscriptionExpiryReminder
-
-• `Optional` **numMonthsBeforeSubscriptionExpiryReminder**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:193](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L193)
-
----
-
-##### numPageLinks
-
-• `Optional` **numPageLinks**: `number`
-
-**`Default`**
+###### Default
 
 10
 
-###### Defined in
+Defined in:  [lib/types.ts:195](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L195)
 
-[libs/citations/ojs-types/src/lib/types.ts:195](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L195)
+##### `numWeeksAfterSubscriptionExpiryReminder?`
 
----
+> `number`
 
-##### numWeeksAfterSubscriptionExpiryReminder
+Defined in:  [lib/types.ts:196](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L196)
 
-• `Optional` **numWeeksAfterSubscriptionExpiryReminder**: `number`
+##### `numWeeksBeforeSubscriptionExpiryReminder?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:196](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L196)
+Defined in:  [lib/types.ts:197](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L197)
 
----
+##### `numWeeksPerResponse?`
 
-##### numWeeksBeforeSubscriptionExpiryReminder
+> `number`
 
-• `Optional` **numWeeksBeforeSubscriptionExpiryReminder**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:197](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L197)
-
----
-
-##### numWeeksPerResponse
-
-• `Optional` **numWeeksPerResponse**: `number`
-
-**`Default`**
+###### Default
 
 4
 
-###### Defined in
+Defined in:  [lib/types.ts:199](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L199)
 
-[libs/citations/ojs-types/src/lib/types.ts:199](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L199)
+##### `numWeeksPerReview?`
 
----
+> `number`
 
-##### numWeeksPerReview
-
-• `Optional` **numWeeksPerReview**: `number`
-
-**`Default`**
+###### Default
 
 4
 
-###### Defined in
+Defined in:  [lib/types.ts:201](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L201)
 
-[libs/citations/ojs-types/src/lib/types.ts:201](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L201)
+##### `onlineIssn?`
 
----
+> `string`
 
-##### onlineIssn
+Defined in:  [lib/types.ts:202](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L202)
 
-• `Optional` **onlineIssn**: `string`
+##### `openAccessPolicy?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:202](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L202)
+Defined in:  [lib/types.ts:203](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L203)
 
----
+##### `pageFooter?`
 
-##### openAccessPolicy
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **openAccessPolicy**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:204](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L204)
 
-###### Defined in
+##### `pageHeaderLogoImage?`
 
-[libs/citations/ojs-types/src/lib/types.ts:203](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L203)
+> `object`
 
----
-
-##### pageFooter
-
-• `Optional` **pageFooter**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:204](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L204)
-
----
-
-##### pageHeaderLogoImage
-
-• `Optional` **pageHeaderLogoImage**: `Object`
+```ts
+{
+    en_US?: {
+        altText?: string;
+        dateUploaded?: string;
+        height?: number;
+        name?: string;
+        uploadName?: string;
+        width?: number;
+    };
+    fr_CA?: {
+        altText?: string;
+        dateUploaded?: string;
+        height?: number;
+        name?: string;
+        uploadName?: string;
+        width?: number;
+    };
+    properties?: unknown;
+    type?: unknown;
+}
+```
 
 ###### Type declaration
 
-\| Name | Type |
-\| :------ | :------ |
-\| `en_US?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `height?`: `number` ; `name?`: `string` ; `uploadName?`: `string` ; `width?`: `number` } |
-\| `en_US.altText?` | `string` |
-\| `en_US.dateUploaded?` | `string` |
-\| `en_US.height?` | `number` |
-\| `en_US.name?` | `string` |
-\| `en_US.uploadName?` | `string` |
-\| `en_US.width?` | `number` |
-\| `fr_CA?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `height?`: `number` ; `name?`: `string` ; `uploadName?`: `string` ; `width?`: `number` } |
-\| `fr_CA.altText?` | `string` |
-\| `fr_CA.dateUploaded?` | `string` |
-\| `fr_CA.height?` | `number` |
-\| `fr_CA.name?` | `string` |
-\| `fr_CA.uploadName?` | `string` |
-\| `fr_CA.width?` | `number` |
-\| `properties?` | `unknown` |
-\| `type?` | `unknown` |
+| Member | Type |
+| :------ | :------ |
+| `en_US`? | `object` |
+| `en_US.altText`? | `string` |
+| `en_US.dateUploaded`? | `string` |
+| `en_US.height`? | `number` |
+| `en_US.name`? | `string` |
+| `en_US.uploadName`? | `string` |
+| `en_US.width`? | `number` |
+| `fr_CA`? | `object` |
+| `fr_CA.altText`? | `string` |
+| `fr_CA.dateUploaded`? | `string` |
+| `fr_CA.height`? | `number` |
+| `fr_CA.name`? | `string` |
+| `fr_CA.uploadName`? | `string` |
+| `fr_CA.width`? | `number` |
+| `properties`? | `unknown` |
+| `type`? | `unknown` |
 
-###### Defined in
+Defined in:  [lib/types.ts:205](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L205)
 
-[libs/citations/ojs-types/src/lib/types.ts:205](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L205)
+##### `paymentPluginName?`
 
----
+> `string`
 
-##### paymentPluginName
+Defined in:  [lib/types.ts:225](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L225)
 
-• `Optional` **paymentPluginName**: `string`
+##### `paymentsEnabled?`
 
-###### Defined in
+> `boolean`
 
-[libs/citations/ojs-types/src/lib/types.ts:225](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L225)
+Defined in:  [lib/types.ts:226](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L226)
 
----
+##### `primaryLocale?`
 
-##### paymentsEnabled
+> `string`
 
-• `Optional` **paymentsEnabled**: `boolean`
+Defined in:  [lib/types.ts:227](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L227)
 
-###### Defined in
+##### `printIssn?`
 
-[libs/citations/ojs-types/src/lib/types.ts:226](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L226)
+> `string`
 
----
+Defined in:  [lib/types.ts:228](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L228)
 
-##### primaryLocale
+##### `privacyStatement?`
 
-• `Optional` **primaryLocale**: `string`
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:229](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L229)
 
-[libs/citations/ojs-types/src/lib/types.ts:227](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L227)
+##### `publicationFee?`
 
----
+> `number`
 
-##### printIssn
-
-• `Optional` **printIssn**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:228](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L228)
-
----
-
-##### privacyStatement
-
-• `Optional` **privacyStatement**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:229](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L229)
-
----
-
-##### publicationFee
-
-• `Optional` **publicationFee**: `number`
-
-**`Default`**
+###### Default
 
 0
 
-###### Defined in
+Defined in:  [lib/types.ts:231](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L231)
 
-[libs/citations/ojs-types/src/lib/types.ts:231](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L231)
+##### `publicationFeeDescription?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### publicationFeeDescription
+Defined in:  [lib/types.ts:232](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L232)
 
-• `Optional` **publicationFeeDescription**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `publicationFeeName?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:232](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L232)
+Defined in:  [lib/types.ts:233](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L233)
 
----
+##### `publisherInstitution?`
 
-##### publicationFeeName
+> `string`
 
-• `Optional` **publicationFeeName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:234](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L234)
 
-###### Defined in
+##### `publishingMode?`
 
-[libs/citations/ojs-types/src/lib/types.ts:233](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L233)
+> `number`
 
----
+Defined in:  [lib/types.ts:235](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L235)
 
-##### publisherInstitution
+##### `purchaseArticleFee?`
 
-• `Optional` **publisherInstitution**: `string`
+> `number`
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:234](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L234)
-
----
-
-##### publishingMode
-
-• `Optional` **publishingMode**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:235](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L235)
-
----
-
-##### purchaseArticleFee
-
-• `Optional` **purchaseArticleFee**: `number`
-
-**`Default`**
+###### Default
 
 0
 
-###### Defined in
+Defined in:  [lib/types.ts:237](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L237)
 
-[libs/citations/ojs-types/src/lib/types.ts:237](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L237)
+##### `purchaseArticleFeeDescription?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### purchaseArticleFeeDescription
+Defined in:  [lib/types.ts:238](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L238)
 
-• `Optional` **purchaseArticleFeeDescription**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `purchaseArticleFeeEnabled?`
 
-###### Defined in
+> `boolean`
 
-[libs/citations/ojs-types/src/lib/types.ts:238](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L238)
+Defined in:  [lib/types.ts:239](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L239)
 
----
+##### `purchaseArticleFeeName?`
 
-##### purchaseArticleFeeEnabled
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **purchaseArticleFeeEnabled**: `boolean`
+Defined in:  [lib/types.ts:240](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L240)
 
-###### Defined in
+##### `purchaseIssueFee?`
 
-[libs/citations/ojs-types/src/lib/types.ts:239](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L239)
+> `number`
 
----
+Defined in:  [lib/types.ts:241](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L241)
 
-##### purchaseArticleFeeName
+##### `purchaseIssueFeeEnabled?`
 
-• `Optional` **purchaseArticleFeeName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> `boolean`
 
-###### Defined in
+Defined in:  [lib/types.ts:242](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L242)
 
-[libs/citations/ojs-types/src/lib/types.ts:240](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L240)
+##### `rateReviewerOnQuality?`
 
----
+> `boolean`
 
-##### purchaseIssueFee
+Defined in:  [lib/types.ts:243](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L243)
 
-• `Optional` **purchaseIssueFee**: `number`
+##### `readerInformation?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:241](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L241)
+Defined in:  [lib/types.ts:244](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L244)
 
----
+##### `restrictArticleAccess?`
 
-##### purchaseIssueFeeEnabled
+> `boolean`
 
-• `Optional` **purchaseIssueFeeEnabled**: `boolean`
+Defined in:  [lib/types.ts:245](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L245)
 
-###### Defined in
+##### `restrictOnlyPdf?`
 
-[libs/citations/ojs-types/src/lib/types.ts:242](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L242)
+> `boolean`
 
----
+Defined in:  [lib/types.ts:246](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L246)
 
-##### rateReviewerOnQuality
+##### `restrictReviewerFileAccess?`
 
-• `Optional` **rateReviewerOnQuality**: `boolean`
+> `boolean`
 
-###### Defined in
+Defined in:  [lib/types.ts:247](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L247)
 
-[libs/citations/ojs-types/src/lib/types.ts:243](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L243)
+##### `restrictSiteAccess?`
 
----
+> `boolean`
 
-##### readerInformation
+Defined in:  [lib/types.ts:248](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L248)
 
-• `Optional` **readerInformation**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `reviewGuidelines?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:244](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L244)
+Defined in:  [lib/types.ts:249](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L249)
 
----
+##### `reviewerAccessKeysEnabled?`
 
-##### restrictArticleAccess
+> `boolean`
 
-• `Optional` **restrictArticleAccess**: `boolean`
+Defined in:  [lib/types.ts:250](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L250)
 
-###### Defined in
+##### `rights?`
 
-[libs/citations/ojs-types/src/lib/types.ts:245](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L245)
+> `string`
 
----
-
-##### restrictOnlyPdf
-
-• `Optional` **restrictOnlyPdf**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:246](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L246)
-
----
-
-##### restrictReviewerFileAccess
-
-• `Optional` **restrictReviewerFileAccess**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:247](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L247)
-
----
-
-##### restrictSiteAccess
-
-• `Optional` **restrictSiteAccess**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:248](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L248)
-
----
-
-##### reviewGuidelines
-
-• `Optional` **reviewGuidelines**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:249](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L249)
-
----
-
-##### reviewerAccessKeysEnabled
-
-• `Optional` **reviewerAccessKeysEnabled**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:250](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L250)
-
----
-
-##### rights
-
-• `Optional` **rights**: `string`
-
-**`Description`**
+###### Description
 
 Enable rights metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:252](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L252)
 
-[libs/citations/ojs-types/src/lib/types.ts:252](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L252)
+##### `searchDescription?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### searchDescription
+Defined in:  [lib/types.ts:253](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L253)
 
-• `Optional` **searchDescription**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `seq?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:253](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L253)
+Defined in:  [lib/types.ts:254](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L254)
 
----
+##### `showEnsuringLink?`
 
-##### seq
+> `boolean`
 
-• `Optional` **seq**: `number`
+Defined in:  [lib/types.ts:255](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L255)
 
-###### Defined in
+##### `sidebar?`
 
-[libs/citations/ojs-types/src/lib/types.ts:254](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L254)
+> `string`[]
 
----
+Defined in:  [lib/types.ts:256](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L256)
 
-##### showEnsuringLink
+##### `source?`
 
-• `Optional` **showEnsuringLink**: `boolean`
+> `string`
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:255](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L255)
-
----
-
-##### sidebar
-
-• `Optional` **sidebar**: `string`\[]
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:256](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L256)
-
----
-
-##### source
-
-• `Optional` **source**: `string`
-
-**`Description`**
+###### Description
 
 Enable source metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:258](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L258)
 
-[libs/citations/ojs-types/src/lib/types.ts:258](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L258)
+##### `styleSheet?`
 
----
+> `object`
 
-##### styleSheet
-
-• `Optional` **styleSheet**: `Object`
+```ts
+{
+    dateUploaded?: string;
+    name?: string;
+    uploadName?: string;
+}
+```
 
 ###### Type declaration
 
-\| Name | Type |
-\| :------ | :------ |
-\| `dateUploaded?` | `string` |
-\| `name?` | `string` |
-\| `uploadName?` | `string` |
+| Member | Type |
+| :------ | :------ |
+| `dateUploaded`? | `string` |
+| `name`? | `string` |
+| `uploadName`? | `string` |
 
-###### Defined in
+Defined in:  [lib/types.ts:259](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L259)
 
-[libs/citations/ojs-types/src/lib/types.ts:259](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L259)
+##### `subjects?`
 
----
+> `string`
 
-##### subjects
-
-• `Optional` **subjects**: `string`
-
-**`Description`**
+###### Description
 
 Enable subjects metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:265](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L265)
 
-[libs/citations/ojs-types/src/lib/types.ts:265](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L265)
+##### `submissionChecklist?`
 
----
+> {
+> `content`?: `string`;
+> `order`?: `number`;
+> }[]
 
-##### submissionChecklist
+###### Default
 
-• `Optional` **submissionChecklist**: { `content?`: `string` ; `order?`: `number` }\[]
-
-**`Default`**
-
-\[
+[
 {
 "order": 1,
 "content": {
@@ -2313,1520 +1648,1110 @@ Enable subjects metadata. `0` is disabled. `enable` will make it available in th
 }
 ]
 
-###### Defined in
+Defined in:  [lib/types.ts:300](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L300)
 
-[libs/citations/ojs-types/src/lib/types.ts:300](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L300)
+##### `submissionFee?`
 
----
+> `number`
 
-##### submissionFee
+Defined in:  [lib/types.ts:304](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L304)
 
-• `Optional` **submissionFee**: `number`
+##### `submissionFeeDescription?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:304](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L304)
+Defined in:  [lib/types.ts:305](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L305)
 
----
+##### `submissionFeeName?`
 
-##### submissionFeeDescription
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **submissionFeeDescription**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:306](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L306)
 
-###### Defined in
+##### `subscriptionAdditionalInformation?`
 
-[libs/citations/ojs-types/src/lib/types.ts:305](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L305)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:307](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L307)
 
-##### submissionFeeName
+##### `subscriptionEmail?`
 
-• `Optional` **submissionFeeName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:308](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L308)
 
-[libs/citations/ojs-types/src/lib/types.ts:306](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L306)
+##### `subscriptionExpiryPartial?`
 
----
+> `boolean`
 
-##### subscriptionAdditionalInformation
+Defined in:  [lib/types.ts:309](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L309)
 
-• `Optional` **subscriptionAdditionalInformation**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `subscriptionMailingAddress?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:307](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L307)
+Defined in:  [lib/types.ts:310](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L310)
 
----
+##### `subscriptionName?`
 
-##### subscriptionEmail
+> `string`
 
-• `Optional` **subscriptionEmail**: `string`
+Defined in:  [lib/types.ts:311](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L311)
 
-###### Defined in
+##### `subscriptionPhone?`
 
-[libs/citations/ojs-types/src/lib/types.ts:308](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L308)
+> `string`
 
----
+Defined in:  [lib/types.ts:312](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L312)
 
-##### subscriptionExpiryPartial
+##### `supportEmail?`
 
-• `Optional` **subscriptionExpiryPartial**: `boolean`
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:313](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L313)
 
-[libs/citations/ojs-types/src/lib/types.ts:309](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L309)
+##### `supportName?`
 
----
+> `string`
 
-##### subscriptionMailingAddress
+Defined in:  [lib/types.ts:314](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L314)
 
-• `Optional` **subscriptionMailingAddress**: `string`
+##### `supportPhone?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:310](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L310)
+Defined in:  [lib/types.ts:315](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L315)
 
----
+##### `supportedFormLocales?`
 
-##### subscriptionName
+> `string`[]
 
-• `Optional` **subscriptionName**: `string`
+Defined in:  [lib/types.ts:316](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L316)
 
-###### Defined in
+##### `supportedLocales?`
 
-[libs/citations/ojs-types/src/lib/types.ts:311](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L311)
+> `string`[]
 
----
+Defined in:  [lib/types.ts:317](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L317)
 
-##### subscriptionPhone
+##### `supportedSubmissionLocales?`
 
-• `Optional` **subscriptionPhone**: `string`
+> `string`[]
 
-###### Defined in
+Defined in:  [lib/types.ts:318](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L318)
 
-[libs/citations/ojs-types/src/lib/types.ts:312](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L312)
+##### `themePluginPath?`
 
----
+> `string`
 
-##### supportEmail
-
-• `Optional` **supportEmail**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:313](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L313)
-
----
-
-##### supportName
-
-• `Optional` **supportName**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:314](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L314)
-
----
-
-##### supportPhone
-
-• `Optional` **supportPhone**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:315](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L315)
-
----
-
-##### supportedFormLocales
-
-• `Optional` **supportedFormLocales**: `string`\[]
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:316](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L316)
-
----
-
-##### supportedLocales
-
-• `Optional` **supportedLocales**: `string`\[]
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:317](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L317)
-
----
-
-##### supportedSubmissionLocales
-
-• `Optional` **supportedSubmissionLocales**: `string`\[]
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:318](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L318)
-
----
-
-##### themePluginPath
-
-• `Optional` **themePluginPath**: `string`
-
-**`Default`**
+###### Default
 
 default
 
-###### Defined in
+Defined in:  [lib/types.ts:320](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L320)
 
-[libs/citations/ojs-types/src/lib/types.ts:320](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L320)
+##### `timeFormat?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### timeFormat
+Defined in:  [lib/types.ts:321](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L321)
 
-• `Optional` **timeFormat**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `type?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:321](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L321)
-
----
-
-##### type
-
-• `Optional` **type**: `string`
-
-**`Description`**
+###### Description
 
 Enable types metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:323](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L323)
 
-[libs/citations/ojs-types/src/lib/types.ts:323](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L323)
+##### `url?`
 
----
+> `string`
 
-##### url
+Defined in:  [lib/types.ts:324](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L324)
 
-• `Optional` **url**: `string`
+##### `urlPath?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:324](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L324)
+Defined in:  [lib/types.ts:325](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L325)
 
----
+***
 
-##### urlPath
-
-• `Optional` **urlPath**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:325](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L325)
-
-### Interface: ContextEditable
-
-[ojs-api](.modules).ContextEditable
+### `ContextEditable`
 
 #### Properties
 
-##### abbreviation
+##### `abbreviation?`
 
-• `Optional` **abbreviation**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:863](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L863)
 
-[libs/citations/ojs-types/src/lib/types.ts:863](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L863)
+##### `about?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### about
+Defined in:  [lib/types.ts:864](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L864)
 
-• `Optional` **about**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `acronym?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:864](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L864)
+Defined in:  [lib/types.ts:865](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L865)
 
----
+##### `additionalHomeContent?`
 
-##### acronym
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **acronym**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:866](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L866)
 
-###### Defined in
+##### `agencies?`
 
-[libs/citations/ojs-types/src/lib/types.ts:865](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L865)
+> `string`
 
----
-
-##### additionalHomeContent
-
-• `Optional` **additionalHomeContent**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:866](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L866)
-
----
-
-##### agencies
-
-• `Optional` **agencies**: `string`
-
-**`Description`**
+###### Description
 
 Enable agencies metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:868](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L868)
 
-[libs/citations/ojs-types/src/lib/types.ts:868](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L868)
+##### `announcementsIntroduction?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### announcementsIntroduction
+Defined in:  [lib/types.ts:869](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L869)
 
-• `Optional` **announcementsIntroduction**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `authorGuidelines?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:869](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L869)
+Defined in:  [lib/types.ts:870](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L870)
 
----
+##### `authorInformation?`
 
-##### authorGuidelines
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **authorGuidelines**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:871](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L871)
 
-###### Defined in
+##### `citations?`
 
-[libs/citations/ojs-types/src/lib/types.ts:870](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L870)
+> `string`
 
----
-
-##### authorInformation
-
-• `Optional` **authorInformation**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:871](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L871)
-
----
-
-##### citations
-
-• `Optional` **citations**: `string`
-
-**`Description`**
+###### Description
 
 Enable citations metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:873](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L873)
 
-[libs/citations/ojs-types/src/lib/types.ts:873](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L873)
+##### `clockssLicense?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### clockssLicense
+Defined in:  [lib/types.ts:874](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L874)
 
-• `Optional` **clockssLicense**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `competingInterests?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:874](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L874)
+Defined in:  [lib/types.ts:875](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L875)
 
----
+##### `contactAffiliation?`
 
-##### competingInterests
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **competingInterests**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:876](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L876)
 
-###### Defined in
+##### `contactEmail?`
 
-[libs/citations/ojs-types/src/lib/types.ts:875](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L875)
+> `string`
 
----
+Defined in:  [lib/types.ts:877](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L877)
 
-##### contactAffiliation
+##### `contactName?`
 
-• `Optional` **contactAffiliation**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:878](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L878)
 
-[libs/citations/ojs-types/src/lib/types.ts:876](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L876)
+##### `contactPhone?`
 
----
+> `string`
 
-##### contactEmail
+Defined in:  [lib/types.ts:879](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L879)
 
-• `Optional` **contactEmail**: `string`
+##### `copyrightHolderOther?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:877](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L877)
+Defined in:  [lib/types.ts:880](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L880)
 
----
+##### `copyrightHolderType?`
 
-##### contactName
+> `string`
 
-• `Optional` **contactName**: `string`
+Defined in:  [lib/types.ts:881](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L881)
 
-###### Defined in
+##### `copyrightNotice?`
 
-[libs/citations/ojs-types/src/lib/types.ts:878](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L878)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:882](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L882)
 
-##### contactPhone
+##### `copyrightYearBasis?`
 
-• `Optional` **contactPhone**: `string`
+> `string`
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:879](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L879)
-
----
-
-##### copyrightHolderOther
-
-• `Optional` **copyrightHolderOther**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:880](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L880)
-
----
-
-##### copyrightHolderType
-
-• `Optional` **copyrightHolderType**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:881](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L881)
-
----
-
-##### copyrightNotice
-
-• `Optional` **copyrightNotice**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:882](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L882)
-
----
-
-##### copyrightYearBasis
-
-• `Optional` **copyrightYearBasis**: `string`
-
-**`Default`**
+###### Default
 
 issue
 
-###### Defined in
+Defined in:  [lib/types.ts:884](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L884)
 
-[libs/citations/ojs-types/src/lib/types.ts:884](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L884)
+##### `coverage?`
 
----
+> `string`
 
-##### coverage
-
-• `Optional` **coverage**: `string`
-
-**`Description`**
+###### Description
 
 Enable coverage metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:886](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L886)
 
-[libs/citations/ojs-types/src/lib/types.ts:886](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L886)
+##### `currency?`
 
----
+> `string`
 
-##### currency
+Defined in:  [lib/types.ts:887](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L887)
 
-• `Optional` **currency**: `string`
+##### `customHeaders?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:887](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L887)
+Defined in:  [lib/types.ts:888](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L888)
 
----
+##### `dateFormatLong?`
 
-##### customHeaders
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **customHeaders**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:889](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L889)
 
-###### Defined in
+##### `dateFormatShort?`
 
-[libs/citations/ojs-types/src/lib/types.ts:888](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L888)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:890](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L890)
 
-##### dateFormatLong
+##### `datetimeFormatLong?`
 
-• `Optional` **dateFormatLong**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:891](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L891)
 
-[libs/citations/ojs-types/src/lib/types.ts:889](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L889)
+##### `datetimeFormatShort?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### dateFormatShort
+Defined in:  [lib/types.ts:892](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L892)
 
-• `Optional` **dateFormatShort**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `defaultMetricType?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:890](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L890)
+Defined in:  [lib/types.ts:893](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L893)
 
----
+##### `defaultReviewMode?`
 
-##### datetimeFormatLong
+> `number`
 
-• `Optional` **datetimeFormatLong**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:891](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L891)
-
----
-
-##### datetimeFormatShort
-
-• `Optional` **datetimeFormatShort**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:892](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L892)
-
----
-
-##### defaultMetricType
-
-• `Optional` **defaultMetricType**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:893](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L893)
-
----
-
-##### defaultReviewMode
-
-• `Optional` **defaultReviewMode**: `number`
-
-**`Default`**
+###### Default
 
 2
 
-###### Defined in
+Defined in:  [lib/types.ts:895](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L895)
 
-[libs/citations/ojs-types/src/lib/types.ts:895](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L895)
+##### `delayedOpenAccessDuration?`
 
----
+> `number`
 
-##### delayedOpenAccessDuration
+Defined in:  [lib/types.ts:896](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L896)
 
-• `Optional` **delayedOpenAccessDuration**: `number`
+##### `delayedOpenAccessPolicy?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:896](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L896)
+Defined in:  [lib/types.ts:897](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L897)
 
----
+##### `description?`
 
-##### delayedOpenAccessPolicy
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **delayedOpenAccessPolicy**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:898](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L898)
 
-###### Defined in
+##### `disableBulkEmailUserGroups?`
 
-[libs/citations/ojs-types/src/lib/types.ts:897](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L897)
+> `number`[]
 
----
-
-##### description
-
-• `Optional` **description**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:898](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L898)
-
----
-
-##### disableBulkEmailUserGroups
-
-• `Optional` **disableBulkEmailUserGroups**: `number`\[]
-
-**`Description`**
+###### Description
 
 User groups that a manager will be prevented from sending bulk email to using the notify feature. Only the admin may edit this property.
 
-###### Defined in
+Defined in:  [lib/types.ts:900](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L900)
 
-[libs/citations/ojs-types/src/lib/types.ts:900](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L900)
+##### `disableSubmissions?`
 
----
+> `boolean`
 
-##### disableSubmissions
-
-• `Optional` **disableSubmissions**: `boolean`
-
-**`Default`**
+###### Default
 
 false
 
-###### Defined in
+Defined in:  [lib/types.ts:902](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L902)
 
-[libs/citations/ojs-types/src/lib/types.ts:902](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L902)
+##### `disableUserReg?`
 
----
+> `boolean`
 
-##### disableUserReg
+Defined in:  [lib/types.ts:903](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L903)
 
-• `Optional` **disableUserReg**: `boolean`
+##### `disciplines?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:903](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L903)
-
----
-
-##### disciplines
-
-• `Optional` **disciplines**: `string`
-
-**`Description`**
+###### Description
 
 Enable disciplines metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:905](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L905)
 
-[libs/citations/ojs-types/src/lib/types.ts:905](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L905)
+##### `editorialTeam?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### editorialTeam
+Defined in:  [lib/types.ts:906](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L906)
 
-• `Optional` **editorialTeam**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `emailSignature?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:906](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L906)
+Defined in:  [lib/types.ts:907](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L907)
 
----
+##### `enableAnnouncements?`
 
-##### emailSignature
+> `boolean`
 
-• `Optional` **emailSignature**: `string`
+Defined in:  [lib/types.ts:908](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L908)
 
-###### Defined in
+##### `enableClockss?`
 
-[libs/citations/ojs-types/src/lib/types.ts:907](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L907)
+> `boolean`
 
----
+Defined in:  [lib/types.ts:909](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L909)
 
-##### enableAnnouncements
+##### `enableLockss?`
 
-• `Optional` **enableAnnouncements**: `boolean`
+> `boolean`
 
-###### Defined in
+Defined in:  [lib/types.ts:910](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L910)
 
-[libs/citations/ojs-types/src/lib/types.ts:908](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L908)
+##### `enableOai?`
 
----
+> `boolean`
 
-##### enableClockss
-
-• `Optional` **enableClockss**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:909](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L909)
-
----
-
-##### enableLockss
-
-• `Optional` **enableLockss**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:910](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L910)
-
----
-
-##### enableOai
-
-• `Optional` **enableOai**: `boolean`
-
-**`Default`**
+###### Default
 
 1
 
-###### Defined in
+Defined in:  [lib/types.ts:912](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L912)
 
-[libs/citations/ojs-types/src/lib/types.ts:912](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L912)
+##### `enableOpenAccessNotification?`
 
----
+> `boolean`
 
-##### enableOpenAccessNotification
+Defined in:  [lib/types.ts:913](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L913)
 
-• `Optional` **enableOpenAccessNotification**: `boolean`
+##### `enablePublisherId?`
 
-###### Defined in
+> `string`[]
 
-[libs/citations/ojs-types/src/lib/types.ts:913](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L913)
+Defined in:  [lib/types.ts:914](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L914)
 
----
+##### `enableSubscriptionOnlinePaymentNotificationPurchaseIndividual?`
 
-##### enablePublisherId
+> `boolean`
 
-• `Optional` **enablePublisherId**: `string`\[]
+Defined in:  [lib/types.ts:915](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L915)
 
-###### Defined in
+##### `enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional?`
 
-[libs/citations/ojs-types/src/lib/types.ts:914](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L914)
+> `boolean`
 
----
+Defined in:  [lib/types.ts:916](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L916)
 
-##### enableSubscriptionOnlinePaymentNotificationPurchaseIndividual
+##### `enableSubscriptionOnlinePaymentNotificationRenewIndividual?`
 
-• `Optional` **enableSubscriptionOnlinePaymentNotificationPurchaseIndividual**: `boolean`
+> `boolean`
 
-###### Defined in
+Defined in:  [lib/types.ts:917](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L917)
 
-[libs/citations/ojs-types/src/lib/types.ts:915](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L915)
+##### `enableSubscriptionOnlinePaymentNotificationRenewInstitutional?`
 
----
+> `boolean`
 
-##### enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional
+Defined in:  [lib/types.ts:918](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L918)
 
-• `Optional` **enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional**: `boolean`
+##### `enabled?`
 
-###### Defined in
+> `boolean`
 
-[libs/citations/ojs-types/src/lib/types.ts:916](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L916)
+Defined in:  [lib/types.ts:919](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L919)
 
----
+##### `envelopeSender?`
 
-##### enableSubscriptionOnlinePaymentNotificationRenewIndividual
+> `string`
 
-• `Optional` **enableSubscriptionOnlinePaymentNotificationRenewIndividual**: `boolean`
+Defined in:  [lib/types.ts:920](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L920)
 
-###### Defined in
+##### `favicon?`
 
-[libs/citations/ojs-types/src/lib/types.ts:917](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L917)
+> `object`
 
----
-
-##### enableSubscriptionOnlinePaymentNotificationRenewInstitutional
-
-• `Optional` **enableSubscriptionOnlinePaymentNotificationRenewInstitutional**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:918](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L918)
-
----
-
-##### enabled
-
-• `Optional` **enabled**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:919](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L919)
-
----
-
-##### envelopeSender
-
-• `Optional` **envelopeSender**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:920](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L920)
-
----
-
-##### favicon
-
-• `Optional` **favicon**: `Object`
+```ts
+{
+    en_US?: {
+        altText?: string;
+        dateUploaded?: string;
+        height?: number;
+        name?: string;
+        temporaryFileId?: number;
+        uploadName?: string;
+        width?: number;
+    };
+    fr_CA?: {
+        altText?: string;
+        dateUploaded?: string;
+        height?: number;
+        name?: string;
+        temporaryFileId?: number;
+        uploadName?: string;
+        width?: number;
+    };
+    properties?: unknown;
+    type?: unknown;
+}
+```
 
 ###### Type declaration
 
-\| Name | Type |
-\| :------ | :------ |
-\| `en_US?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `height?`: `number` ; `name?`: `string` ; `temporaryFileId?`: `number` ; `uploadName?`: `string` ; `width?`: `number` } |
-\| `en_US.altText?` | `string` |
-\| `en_US.dateUploaded?` | `string` |
-\| `en_US.height?` | `number` |
-\| `en_US.name?` | `string` |
-\| `en_US.temporaryFileId?` | `number` |
-\| `en_US.uploadName?` | `string` |
-\| `en_US.width?` | `number` |
-\| `fr_CA?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `height?`: `number` ; `name?`: `string` ; `temporaryFileId?`: `number` ; `uploadName?`: `string` ; `width?`: `number` } |
-\| `fr_CA.altText?` | `string` |
-\| `fr_CA.dateUploaded?` | `string` |
-\| `fr_CA.height?` | `number` |
-\| `fr_CA.name?` | `string` |
-\| `fr_CA.temporaryFileId?` | `number` |
-\| `fr_CA.uploadName?` | `string` |
-\| `fr_CA.width?` | `number` |
-\| `properties?` | `unknown` |
-\| `type?` | `unknown` |
+| Member | Type |
+| :------ | :------ |
+| `en_US`? | `object` |
+| `en_US.altText`? | `string` |
+| `en_US.dateUploaded`? | `string` |
+| `en_US.height`? | `number` |
+| `en_US.name`? | `string` |
+| `en_US.temporaryFileId`? | `number` |
+| `en_US.uploadName`? | `string` |
+| `en_US.width`? | `number` |
+| `fr_CA`? | `object` |
+| `fr_CA.altText`? | `string` |
+| `fr_CA.dateUploaded`? | `string` |
+| `fr_CA.height`? | `number` |
+| `fr_CA.name`? | `string` |
+| `fr_CA.temporaryFileId`? | `number` |
+| `fr_CA.uploadName`? | `string` |
+| `fr_CA.width`? | `number` |
+| `properties`? | `unknown` |
+| `type`? | `unknown` |
 
-###### Defined in
+Defined in:  [lib/types.ts:921](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L921)
 
-[libs/citations/ojs-types/src/lib/types.ts:921](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L921)
+##### `homepageImage?`
 
----
+> `object`
 
-##### homepageImage
-
-• `Optional` **homepageImage**: `Object`
+```ts
+{
+    en_US?: {
+        altText?: string;
+        dateUploaded?: string;
+        height?: number;
+        name?: string;
+        temporaryFileId?: number;
+        uploadName?: string;
+        width?: number;
+    };
+    fr_CA?: {
+        altText?: string;
+        dateUploaded?: string;
+        height?: number;
+        name?: string;
+        temporaryFileId?: number;
+        uploadName?: string;
+        width?: number;
+    };
+    properties?: unknown;
+    type?: unknown;
+}
+```
 
 ###### Type declaration
 
-\| Name | Type |
-\| :------ | :------ |
-\| `en_US?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `height?`: `number` ; `name?`: `string` ; `temporaryFileId?`: `number` ; `uploadName?`: `string` ; `width?`: `number` } |
-\| `en_US.altText?` | `string` |
-\| `en_US.dateUploaded?` | `string` |
-\| `en_US.height?` | `number` |
-\| `en_US.name?` | `string` |
-\| `en_US.temporaryFileId?` | `number` |
-\| `en_US.uploadName?` | `string` |
-\| `en_US.width?` | `number` |
-\| `fr_CA?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `height?`: `number` ; `name?`: `string` ; `temporaryFileId?`: `number` ; `uploadName?`: `string` ; `width?`: `number` } |
-\| `fr_CA.altText?` | `string` |
-\| `fr_CA.dateUploaded?` | `string` |
-\| `fr_CA.height?` | `number` |
-\| `fr_CA.name?` | `string` |
-\| `fr_CA.temporaryFileId?` | `number` |
-\| `fr_CA.uploadName?` | `string` |
-\| `fr_CA.width?` | `number` |
-\| `properties?` | `unknown` |
-\| `type?` | `unknown` |
+| Member | Type |
+| :------ | :------ |
+| `en_US`? | `object` |
+| `en_US.altText`? | `string` |
+| `en_US.dateUploaded`? | `string` |
+| `en_US.height`? | `number` |
+| `en_US.name`? | `string` |
+| `en_US.temporaryFileId`? | `number` |
+| `en_US.uploadName`? | `string` |
+| `en_US.width`? | `number` |
+| `fr_CA`? | `object` |
+| `fr_CA.altText`? | `string` |
+| `fr_CA.dateUploaded`? | `string` |
+| `fr_CA.height`? | `number` |
+| `fr_CA.name`? | `string` |
+| `fr_CA.temporaryFileId`? | `number` |
+| `fr_CA.uploadName`? | `string` |
+| `fr_CA.width`? | `number` |
+| `properties`? | `unknown` |
+| `type`? | `unknown` |
 
-###### Defined in
+Defined in:  [lib/types.ts:943](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L943)
 
-[libs/citations/ojs-types/src/lib/types.ts:943](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L943)
+##### `itemsPerPage?`
 
----
+> `number`
 
-##### itemsPerPage
-
-• `Optional` **itemsPerPage**: `number`
-
-**`Default`**
+###### Default
 
 25
 
-###### Defined in
+Defined in:  [lib/types.ts:966](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L966)
 
-[libs/citations/ojs-types/src/lib/types.ts:966](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L966)
+##### `journalThumbnail?`
 
----
+> `object`
 
-##### journalThumbnail
-
-• `Optional` **journalThumbnail**: `Object`
+```ts
+{
+    en_US?: {
+        altText?: string;
+        dateUploaded?: string;
+        height?: number;
+        name?: string;
+        temporaryFileId?: number;
+        uploadName?: string;
+        width?: number;
+    };
+    fr_CA?: {
+        altText?: string;
+        dateUploaded?: string;
+        height?: number;
+        name?: string;
+        temporaryFileId?: number;
+        uploadName?: string;
+        width?: number;
+    };
+    properties?: unknown;
+    type?: unknown;
+}
+```
 
 ###### Type declaration
 
-\| Name | Type |
-\| :------ | :------ |
-\| `en_US?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `height?`: `number` ; `name?`: `string` ; `temporaryFileId?`: `number` ; `uploadName?`: `string` ; `width?`: `number` } |
-\| `en_US.altText?` | `string` |
-\| `en_US.dateUploaded?` | `string` |
-\| `en_US.height?` | `number` |
-\| `en_US.name?` | `string` |
-\| `en_US.temporaryFileId?` | `number` |
-\| `en_US.uploadName?` | `string` |
-\| `en_US.width?` | `number` |
-\| `fr_CA?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `height?`: `number` ; `name?`: `string` ; `temporaryFileId?`: `number` ; `uploadName?`: `string` ; `width?`: `number` } |
-\| `fr_CA.altText?` | `string` |
-\| `fr_CA.dateUploaded?` | `string` |
-\| `fr_CA.height?` | `number` |
-\| `fr_CA.name?` | `string` |
-\| `fr_CA.temporaryFileId?` | `number` |
-\| `fr_CA.uploadName?` | `string` |
-\| `fr_CA.width?` | `number` |
-\| `properties?` | `unknown` |
-\| `type?` | `unknown` |
+| Member | Type |
+| :------ | :------ |
+| `en_US`? | `object` |
+| `en_US.altText`? | `string` |
+| `en_US.dateUploaded`? | `string` |
+| `en_US.height`? | `number` |
+| `en_US.name`? | `string` |
+| `en_US.temporaryFileId`? | `number` |
+| `en_US.uploadName`? | `string` |
+| `en_US.width`? | `number` |
+| `fr_CA`? | `object` |
+| `fr_CA.altText`? | `string` |
+| `fr_CA.dateUploaded`? | `string` |
+| `fr_CA.height`? | `number` |
+| `fr_CA.name`? | `string` |
+| `fr_CA.temporaryFileId`? | `number` |
+| `fr_CA.uploadName`? | `string` |
+| `fr_CA.width`? | `number` |
+| `properties`? | `unknown` |
+| `type`? | `unknown` |
 
-###### Defined in
+Defined in:  [lib/types.ts:967](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L967)
 
-[libs/citations/ojs-types/src/lib/types.ts:967](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L967)
+##### `keywords?`
 
----
+> `string`
 
-##### keywords
-
-• `Optional` **keywords**: `string`
-
-**`Description`**
+###### Description
 
 Enable keywords metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.
 
-**`Default`**
+###### Default
 
 request
 
-###### Defined in
+Defined in:  [lib/types.ts:993](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L993)
 
-[libs/citations/ojs-types/src/lib/types.ts:993](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L993)
+##### `languages?`
 
----
+> `string`
 
-##### languages
-
-• `Optional` **languages**: `string`
-
-**`Description`**
+###### Description
 
 Enable languages metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:995](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L995)
 
-[libs/citations/ojs-types/src/lib/types.ts:995](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L995)
+##### `librarianInformation?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### librarianInformation
+Defined in:  [lib/types.ts:996](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L996)
 
-• `Optional` **librarianInformation**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `licenseTerms?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:996](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L996)
+Defined in:  [lib/types.ts:997](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L997)
 
----
+##### `licenseUrl?`
 
-##### licenseTerms
+> `string`
 
-• `Optional` **licenseTerms**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:998](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L998)
 
-###### Defined in
+##### `lockssLicense?`
 
-[libs/citations/ojs-types/src/lib/types.ts:997](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L997)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:999](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L999)
 
-##### licenseUrl
+##### `mailingAddress?`
 
-• `Optional` **licenseUrl**: `string`
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:1000](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1000)
 
-[libs/citations/ojs-types/src/lib/types.ts:998](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L998)
+##### `membershipFee?`
 
----
+> `number`
 
-##### lockssLicense
-
-• `Optional` **lockssLicense**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:999](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L999)
-
----
-
-##### mailingAddress
-
-• `Optional` **mailingAddress**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1000](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1000)
-
----
-
-##### membershipFee
-
-• `Optional` **membershipFee**: `number`
-
-**`Default`**
+###### Default
 
 0
 
-###### Defined in
+Defined in:  [lib/types.ts:1002](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1002)
 
-[libs/citations/ojs-types/src/lib/types.ts:1002](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1002)
+##### `membershipFeeDescription?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### membershipFeeDescription
+Defined in:  [lib/types.ts:1003](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1003)
 
-• `Optional` **membershipFeeDescription**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `membershipFeeName?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:1003](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1003)
+Defined in:  [lib/types.ts:1004](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1004)
 
----
+##### `name?`
 
-##### membershipFeeName
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **membershipFeeName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:1005](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1005)
 
-###### Defined in
+##### `numAnnouncementsHomepage?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1004](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1004)
+> `number`
 
----
+Defined in:  [lib/types.ts:1006](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1006)
 
-##### name
+##### `numDaysBeforeInviteReminder?`
 
-• `Optional` **name**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> `number`
 
-###### Defined in
+Defined in:  [lib/types.ts:1007](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1007)
 
-[libs/citations/ojs-types/src/lib/types.ts:1005](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1005)
+##### `numDaysBeforeSubmitReminder?`
 
----
+> `number`
 
-##### numAnnouncementsHomepage
+Defined in:  [lib/types.ts:1008](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1008)
 
-• `Optional` **numAnnouncementsHomepage**: `number`
+##### `numMonthsAfterSubscriptionExpiryReminder?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1006](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1006)
+Defined in:  [lib/types.ts:1009](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1009)
 
----
+##### `numMonthsBeforeSubscriptionExpiryReminder?`
 
-##### numDaysBeforeInviteReminder
+> `number`
 
-• `Optional` **numDaysBeforeInviteReminder**: `number`
+Defined in:  [lib/types.ts:1010](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1010)
 
-###### Defined in
+##### `numPageLinks?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1007](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1007)
+> `number`
 
----
-
-##### numDaysBeforeSubmitReminder
-
-• `Optional` **numDaysBeforeSubmitReminder**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1008](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1008)
-
----
-
-##### numMonthsAfterSubscriptionExpiryReminder
-
-• `Optional` **numMonthsAfterSubscriptionExpiryReminder**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1009](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1009)
-
----
-
-##### numMonthsBeforeSubscriptionExpiryReminder
-
-• `Optional` **numMonthsBeforeSubscriptionExpiryReminder**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1010](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1010)
-
----
-
-##### numPageLinks
-
-• `Optional` **numPageLinks**: `number`
-
-**`Default`**
+###### Default
 
 10
 
-###### Defined in
+Defined in:  [lib/types.ts:1012](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1012)
 
-[libs/citations/ojs-types/src/lib/types.ts:1012](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1012)
+##### `numWeeksAfterSubscriptionExpiryReminder?`
 
----
+> `number`
 
-##### numWeeksAfterSubscriptionExpiryReminder
+Defined in:  [lib/types.ts:1013](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1013)
 
-• `Optional` **numWeeksAfterSubscriptionExpiryReminder**: `number`
+##### `numWeeksBeforeSubscriptionExpiryReminder?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1013](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1013)
+Defined in:  [lib/types.ts:1014](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1014)
 
----
+##### `numWeeksPerResponse?`
 
-##### numWeeksBeforeSubscriptionExpiryReminder
+> `number`
 
-• `Optional` **numWeeksBeforeSubscriptionExpiryReminder**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1014](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1014)
-
----
-
-##### numWeeksPerResponse
-
-• `Optional` **numWeeksPerResponse**: `number`
-
-**`Default`**
+###### Default
 
 4
 
-###### Defined in
+Defined in:  [lib/types.ts:1016](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1016)
 
-[libs/citations/ojs-types/src/lib/types.ts:1016](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1016)
+##### `numWeeksPerReview?`
 
----
+> `number`
 
-##### numWeeksPerReview
-
-• `Optional` **numWeeksPerReview**: `number`
-
-**`Default`**
+###### Default
 
 4
 
-###### Defined in
+Defined in:  [lib/types.ts:1018](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1018)
 
-[libs/citations/ojs-types/src/lib/types.ts:1018](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1018)
+##### `onlineIssn?`
 
----
+> `string`
 
-##### onlineIssn
+Defined in:  [lib/types.ts:1019](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1019)
 
-• `Optional` **onlineIssn**: `string`
+##### `openAccessPolicy?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:1019](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1019)
+Defined in:  [lib/types.ts:1020](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1020)
 
----
+##### `pageFooter?`
 
-##### openAccessPolicy
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **openAccessPolicy**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:1021](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1021)
 
-###### Defined in
+##### `pageHeaderLogoImage?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1020](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1020)
+> `object`
 
----
-
-##### pageFooter
-
-• `Optional` **pageFooter**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1021](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1021)
-
----
-
-##### pageHeaderLogoImage
-
-• `Optional` **pageHeaderLogoImage**: `Object`
+```ts
+{
+    en_US?: {
+        altText?: string;
+        dateUploaded?: string;
+        height?: number;
+        name?: string;
+        temporaryFileId?: number;
+        uploadName?: string;
+        width?: number;
+    };
+    fr_CA?: {
+        altText?: string;
+        dateUploaded?: string;
+        height?: number;
+        name?: string;
+        temporaryFileId?: number;
+        uploadName?: string;
+        width?: number;
+    };
+    properties?: unknown;
+    type?: unknown;
+}
+```
 
 ###### Type declaration
 
-\| Name | Type |
-\| :------ | :------ |
-\| `en_US?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `height?`: `number` ; `name?`: `string` ; `temporaryFileId?`: `number` ; `uploadName?`: `string` ; `width?`: `number` } |
-\| `en_US.altText?` | `string` |
-\| `en_US.dateUploaded?` | `string` |
-\| `en_US.height?` | `number` |
-\| `en_US.name?` | `string` |
-\| `en_US.temporaryFileId?` | `number` |
-\| `en_US.uploadName?` | `string` |
-\| `en_US.width?` | `number` |
-\| `fr_CA?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `height?`: `number` ; `name?`: `string` ; `temporaryFileId?`: `number` ; `uploadName?`: `string` ; `width?`: `number` } |
-\| `fr_CA.altText?` | `string` |
-\| `fr_CA.dateUploaded?` | `string` |
-\| `fr_CA.height?` | `number` |
-\| `fr_CA.name?` | `string` |
-\| `fr_CA.temporaryFileId?` | `number` |
-\| `fr_CA.uploadName?` | `string` |
-\| `fr_CA.width?` | `number` |
-\| `properties?` | `unknown` |
-\| `type?` | `unknown` |
+| Member | Type |
+| :------ | :------ |
+| `en_US`? | `object` |
+| `en_US.altText`? | `string` |
+| `en_US.dateUploaded`? | `string` |
+| `en_US.height`? | `number` |
+| `en_US.name`? | `string` |
+| `en_US.temporaryFileId`? | `number` |
+| `en_US.uploadName`? | `string` |
+| `en_US.width`? | `number` |
+| `fr_CA`? | `object` |
+| `fr_CA.altText`? | `string` |
+| `fr_CA.dateUploaded`? | `string` |
+| `fr_CA.height`? | `number` |
+| `fr_CA.name`? | `string` |
+| `fr_CA.temporaryFileId`? | `number` |
+| `fr_CA.uploadName`? | `string` |
+| `fr_CA.width`? | `number` |
+| `properties`? | `unknown` |
+| `type`? | `unknown` |
 
-###### Defined in
+Defined in:  [lib/types.ts:1022](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1022)
 
-[libs/citations/ojs-types/src/lib/types.ts:1022](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1022)
+##### `paymentPluginName?`
 
----
+> `string`
 
-##### paymentPluginName
+Defined in:  [lib/types.ts:1044](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1044)
 
-• `Optional` **paymentPluginName**: `string`
+##### `paymentsEnabled?`
 
-###### Defined in
+> `boolean`
 
-[libs/citations/ojs-types/src/lib/types.ts:1044](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1044)
+Defined in:  [lib/types.ts:1045](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1045)
 
----
+##### `primaryLocale?`
 
-##### paymentsEnabled
+> `string`
 
-• `Optional` **paymentsEnabled**: `boolean`
+Defined in:  [lib/types.ts:1046](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1046)
 
-###### Defined in
+##### `printIssn?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1045](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1045)
+> `string`
 
----
+Defined in:  [lib/types.ts:1047](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1047)
 
-##### primaryLocale
+##### `privacyStatement?`
 
-• `Optional` **primaryLocale**: `string`
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:1048](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1048)
 
-[libs/citations/ojs-types/src/lib/types.ts:1046](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1046)
+##### `publicationFee?`
 
----
+> `number`
 
-##### printIssn
-
-• `Optional` **printIssn**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1047](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1047)
-
----
-
-##### privacyStatement
-
-• `Optional` **privacyStatement**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1048](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1048)
-
----
-
-##### publicationFee
-
-• `Optional` **publicationFee**: `number`
-
-**`Default`**
+###### Default
 
 0
 
-###### Defined in
+Defined in:  [lib/types.ts:1050](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1050)
 
-[libs/citations/ojs-types/src/lib/types.ts:1050](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1050)
+##### `publicationFeeDescription?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### publicationFeeDescription
+Defined in:  [lib/types.ts:1051](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1051)
 
-• `Optional` **publicationFeeDescription**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `publicationFeeName?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:1051](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1051)
+Defined in:  [lib/types.ts:1052](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1052)
 
----
+##### `publisherInstitution?`
 
-##### publicationFeeName
+> `string`
 
-• `Optional` **publicationFeeName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:1053](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1053)
 
-###### Defined in
+##### `publishingMode?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1052](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1052)
+> `number`
 
----
+Defined in:  [lib/types.ts:1054](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1054)
 
-##### publisherInstitution
+##### `purchaseArticleFee?`
 
-• `Optional` **publisherInstitution**: `string`
+> `number`
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1053](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1053)
-
----
-
-##### publishingMode
-
-• `Optional` **publishingMode**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1054](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1054)
-
----
-
-##### purchaseArticleFee
-
-• `Optional` **purchaseArticleFee**: `number`
-
-**`Default`**
+###### Default
 
 0
 
-###### Defined in
+Defined in:  [lib/types.ts:1056](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1056)
 
-[libs/citations/ojs-types/src/lib/types.ts:1056](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1056)
+##### `purchaseArticleFeeDescription?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### purchaseArticleFeeDescription
+Defined in:  [lib/types.ts:1057](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1057)
 
-• `Optional` **purchaseArticleFeeDescription**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `purchaseArticleFeeEnabled?`
 
-###### Defined in
+> `boolean`
 
-[libs/citations/ojs-types/src/lib/types.ts:1057](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1057)
+Defined in:  [lib/types.ts:1058](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1058)
 
----
+##### `purchaseArticleFeeName?`
 
-##### purchaseArticleFeeEnabled
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **purchaseArticleFeeEnabled**: `boolean`
+Defined in:  [lib/types.ts:1059](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1059)
 
-###### Defined in
+##### `purchaseIssueFee?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1058](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1058)
+> `number`
 
----
+Defined in:  [lib/types.ts:1060](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1060)
 
-##### purchaseArticleFeeName
+##### `purchaseIssueFeeEnabled?`
 
-• `Optional` **purchaseArticleFeeName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> `boolean`
 
-###### Defined in
+Defined in:  [lib/types.ts:1061](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1061)
 
-[libs/citations/ojs-types/src/lib/types.ts:1059](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1059)
+##### `rateReviewerOnQuality?`
 
----
+> `boolean`
 
-##### purchaseIssueFee
+Defined in:  [lib/types.ts:1062](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1062)
 
-• `Optional` **purchaseIssueFee**: `number`
+##### `readerInformation?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:1060](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1060)
+Defined in:  [lib/types.ts:1063](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1063)
 
----
+##### `restrictArticleAccess?`
 
-##### purchaseIssueFeeEnabled
+> `boolean`
 
-• `Optional` **purchaseIssueFeeEnabled**: `boolean`
+Defined in:  [lib/types.ts:1064](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1064)
 
-###### Defined in
+##### `restrictOnlyPdf?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1061](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1061)
+> `boolean`
 
----
+Defined in:  [lib/types.ts:1065](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1065)
 
-##### rateReviewerOnQuality
+##### `restrictReviewerFileAccess?`
 
-• `Optional` **rateReviewerOnQuality**: `boolean`
+> `boolean`
 
-###### Defined in
+Defined in:  [lib/types.ts:1066](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1066)
 
-[libs/citations/ojs-types/src/lib/types.ts:1062](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1062)
+##### `restrictSiteAccess?`
 
----
+> `boolean`
 
-##### readerInformation
+Defined in:  [lib/types.ts:1067](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1067)
 
-• `Optional` **readerInformation**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `reviewGuidelines?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:1063](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1063)
+Defined in:  [lib/types.ts:1068](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1068)
 
----
+##### `reviewerAccessKeysEnabled?`
 
-##### restrictArticleAccess
+> `boolean`
 
-• `Optional` **restrictArticleAccess**: `boolean`
+Defined in:  [lib/types.ts:1069](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1069)
 
-###### Defined in
+##### `rights?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1064](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1064)
+> `string`
 
----
-
-##### restrictOnlyPdf
-
-• `Optional` **restrictOnlyPdf**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1065](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1065)
-
----
-
-##### restrictReviewerFileAccess
-
-• `Optional` **restrictReviewerFileAccess**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1066](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1066)
-
----
-
-##### restrictSiteAccess
-
-• `Optional` **restrictSiteAccess**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1067](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1067)
-
----
-
-##### reviewGuidelines
-
-• `Optional` **reviewGuidelines**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1068](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1068)
-
----
-
-##### reviewerAccessKeysEnabled
-
-• `Optional` **reviewerAccessKeysEnabled**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1069](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1069)
-
----
-
-##### rights
-
-• `Optional` **rights**: `string`
-
-**`Description`**
+###### Description
 
 Enable rights metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:1071](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1071)
 
-[libs/citations/ojs-types/src/lib/types.ts:1071](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1071)
+##### `searchDescription?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### searchDescription
+Defined in:  [lib/types.ts:1072](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1072)
 
-• `Optional` **searchDescription**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `seq?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1072](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1072)
+Defined in:  [lib/types.ts:1073](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1073)
 
----
+##### `showEnsuringLink?`
 
-##### seq
+> `boolean`
 
-• `Optional` **seq**: `number`
+Defined in:  [lib/types.ts:1074](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1074)
 
-###### Defined in
+##### `sidebar?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1073](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1073)
+> `string`[]
 
----
+Defined in:  [lib/types.ts:1075](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1075)
 
-##### showEnsuringLink
+##### `source?`
 
-• `Optional` **showEnsuringLink**: `boolean`
+> `string`
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1074](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1074)
-
----
-
-##### sidebar
-
-• `Optional` **sidebar**: `string`\[]
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1075](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1075)
-
----
-
-##### source
-
-• `Optional` **source**: `string`
-
-**`Description`**
+###### Description
 
 Enable source metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:1077](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1077)
 
-[libs/citations/ojs-types/src/lib/types.ts:1077](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1077)
+##### `styleSheet?`
 
----
+> `object`
 
-##### styleSheet
-
-• `Optional` **styleSheet**: `Object`
+```ts
+{
+    dateUploaded?: string;
+    name?: string;
+    temporaryFileId?: number;
+    uploadName?: string;
+}
+```
 
 ###### Type declaration
 
-\| Name | Type |
-\| :------ | :------ |
-\| `dateUploaded?` | `string` |
-\| `name?` | `string` |
-\| `temporaryFileId?` | `number` |
-\| `uploadName?` | `string` |
+| Member | Type |
+| :------ | :------ |
+| `dateUploaded`? | `string` |
+| `name`? | `string` |
+| `temporaryFileId`? | `number` |
+| `uploadName`? | `string` |
 
-###### Defined in
+Defined in:  [lib/types.ts:1078](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1078)
 
-[libs/citations/ojs-types/src/lib/types.ts:1078](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1078)
+##### `subjects?`
 
----
+> `string`
 
-##### subjects
-
-• `Optional` **subjects**: `string`
-
-**`Description`**
+###### Description
 
 Enable subjects metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:1085](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1085)
 
-[libs/citations/ojs-types/src/lib/types.ts:1085](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1085)
+##### `submissionChecklist?`
 
----
+> {
+> `content`?: `string`;
+> `order`?: `number`;
+> }[]
 
-##### submissionChecklist
+###### Default
 
-• `Optional` **submissionChecklist**: { `content?`: `string` ; `order?`: `number` }\[]
-
-**`Default`**
-
-\[
+[
 {
 "order": 1,
 "content": {
@@ -3859,1188 +2784,833 @@ Enable subjects metadata. `0` is disabled. `enable` will make it available in th
 }
 ]
 
-###### Defined in
+Defined in:  [lib/types.ts:1120](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1120)
 
-[libs/citations/ojs-types/src/lib/types.ts:1120](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1120)
+##### `submissionFee?`
 
----
+> `number`
 
-##### submissionFee
+Defined in:  [lib/types.ts:1124](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1124)
 
-• `Optional` **submissionFee**: `number`
+##### `submissionFeeDescription?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:1124](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1124)
+Defined in:  [lib/types.ts:1125](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1125)
 
----
+##### `submissionFeeName?`
 
-##### submissionFeeDescription
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **submissionFeeDescription**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:1126](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1126)
 
-###### Defined in
+##### `subscriptionAdditionalInformation?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1125](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1125)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:1127](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1127)
 
-##### submissionFeeName
+##### `subscriptionEmail?`
 
-• `Optional` **submissionFeeName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:1128](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1128)
 
-[libs/citations/ojs-types/src/lib/types.ts:1126](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1126)
+##### `subscriptionExpiryPartial?`
 
----
+> `boolean`
 
-##### subscriptionAdditionalInformation
+Defined in:  [lib/types.ts:1129](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1129)
 
-• `Optional` **subscriptionAdditionalInformation**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `subscriptionMailingAddress?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:1127](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1127)
+Defined in:  [lib/types.ts:1130](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1130)
 
----
+##### `subscriptionName?`
 
-##### subscriptionEmail
+> `string`
 
-• `Optional` **subscriptionEmail**: `string`
+Defined in:  [lib/types.ts:1131](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1131)
 
-###### Defined in
+##### `subscriptionPhone?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1128](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1128)
+> `string`
 
----
+Defined in:  [lib/types.ts:1132](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1132)
 
-##### subscriptionExpiryPartial
+##### `supportEmail?`
 
-• `Optional` **subscriptionExpiryPartial**: `boolean`
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:1133](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1133)
 
-[libs/citations/ojs-types/src/lib/types.ts:1129](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1129)
+##### `supportName?`
 
----
+> `string`
 
-##### subscriptionMailingAddress
+Defined in:  [lib/types.ts:1134](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1134)
 
-• `Optional` **subscriptionMailingAddress**: `string`
+##### `supportPhone?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:1130](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1130)
+Defined in:  [lib/types.ts:1135](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1135)
 
----
+##### `supportedFormLocales?`
 
-##### subscriptionName
+> `string`[]
 
-• `Optional` **subscriptionName**: `string`
+Defined in:  [lib/types.ts:1136](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1136)
 
-###### Defined in
+##### `supportedLocales?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1131](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1131)
+> `string`[]
 
----
+Defined in:  [lib/types.ts:1137](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1137)
 
-##### subscriptionPhone
+##### `supportedSubmissionLocales?`
 
-• `Optional` **subscriptionPhone**: `string`
+> `string`[]
 
-###### Defined in
+Defined in:  [lib/types.ts:1138](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1138)
 
-[libs/citations/ojs-types/src/lib/types.ts:1132](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1132)
+##### `themePluginPath?`
 
----
+> `string`
 
-##### supportEmail
-
-• `Optional` **supportEmail**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1133](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1133)
-
----
-
-##### supportName
-
-• `Optional` **supportName**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1134](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1134)
-
----
-
-##### supportPhone
-
-• `Optional` **supportPhone**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1135](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1135)
-
----
-
-##### supportedFormLocales
-
-• `Optional` **supportedFormLocales**: `string`\[]
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1136](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1136)
-
----
-
-##### supportedLocales
-
-• `Optional` **supportedLocales**: `string`\[]
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1137](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1137)
-
----
-
-##### supportedSubmissionLocales
-
-• `Optional` **supportedSubmissionLocales**: `string`\[]
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1138](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1138)
-
----
-
-##### themePluginPath
-
-• `Optional` **themePluginPath**: `string`
-
-**`Default`**
+###### Default
 
 default
 
-###### Defined in
+Defined in:  [lib/types.ts:1140](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1140)
 
-[libs/citations/ojs-types/src/lib/types.ts:1140](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1140)
+##### `timeFormat?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### timeFormat
+Defined in:  [lib/types.ts:1141](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1141)
 
-• `Optional` **timeFormat**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `type?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:1141](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1141)
-
----
-
-##### type
-
-• `Optional` **type**: `string`
-
-**`Description`**
+###### Description
 
 Enable types metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:1143](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1143)
 
-[libs/citations/ojs-types/src/lib/types.ts:1143](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1143)
+##### `urlPath?`
 
----
+> `string`
 
-##### urlPath
+Defined in:  [lib/types.ts:1144](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1144)
 
-• `Optional` **urlPath**: `string`
+***
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1144](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1144)
-
-### Interface: ContextSummary
-
-[ojs-api](.modules).ContextSummary
+### `ContextSummary`
 
 #### Properties
 
-##### \_href
+##### `\_href?`
 
-• `Optional` **\_href**: `string`
+> `string`
 
 Format: uri
 
-###### Defined in
+Defined in:  [lib/types.ts:1148](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1148)
 
-[libs/citations/ojs-types/src/lib/types.ts:1148](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1148)
+##### `abbreviation?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### abbreviation
+Defined in:  [lib/types.ts:1149](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1149)
 
-• `Optional` **abbreviation**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `acronym?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:1149](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1149)
+Defined in:  [lib/types.ts:1150](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1150)
 
----
+##### `description?`
 
-##### acronym
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **acronym**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:1151](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1151)
 
-###### Defined in
+##### `enabled?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1150](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1150)
+> `boolean`
 
----
+Defined in:  [lib/types.ts:1152](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1152)
 
-##### description
+##### `id?`
 
-• `Optional` **description**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> `number`
 
-###### Defined in
+Defined in:  [lib/types.ts:1153](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1153)
 
-[libs/citations/ojs-types/src/lib/types.ts:1151](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1151)
+##### `journalThumbnail?`
 
----
+> `object`
 
-##### enabled
-
-• `Optional` **enabled**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1152](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1152)
-
----
-
-##### id
-
-• `Optional` **id**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1153](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1153)
-
----
-
-##### journalThumbnail
-
-• `Optional` **journalThumbnail**: `Object`
+```ts
+{
+    en_US?: {
+    };
+    fr_CA?: {
+    };
+    properties?: unknown;
+    type?: unknown;
+}
+```
 
 ###### Type declaration
 
-\| Name | Type |
-\| :------ | :------ |
-\| `en_US?` | { `[key: string]`: `unknown`; } |
-\| `fr_CA?` | { `[key: string]`: `unknown`; } |
-\| `properties?` | `unknown` |
-\| `type?` | `unknown` |
+| Member | Type |
+| :------ | :------ |
+| `en_US`? | {  } |
+| `fr_CA`? | {  } |
+| `properties`? | `unknown` |
+| `type`? | `unknown` |
 
-###### Defined in
+Defined in:  [lib/types.ts:1154](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1154)
 
-[libs/citations/ojs-types/src/lib/types.ts:1154](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1154)
+##### `name?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### name
+Defined in:  [lib/types.ts:1160](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1160)
 
-• `Optional` **name**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `seq?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1160](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1160)
+Defined in:  [lib/types.ts:1161](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1161)
 
----
+##### `url?`
 
-##### seq
+> `string`
 
-• `Optional` **seq**: `number`
+Defined in:  [lib/types.ts:1162](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1162)
 
-###### Defined in
+##### `urlPath?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1161](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1161)
+> `string`
 
----
+Defined in:  [lib/types.ts:1163](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1163)
 
-##### url
+***
 
-• `Optional` **url**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1162](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1162)
-
----
-
-##### urlPath
-
-• `Optional` **urlPath**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1163](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1163)
-
-### Interface: EmailTemplate
-
-[ojs-api](.modules).EmailTemplate
+### `EmailTemplate`
 
 #### Properties
 
-##### \_href
+##### `\_href?`
 
-• `Optional` **\_href**: `string`
+> `string`
 
 Format: uri
 
-###### Defined in
+Defined in:  [lib/types.ts:334](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L334)
 
-[libs/citations/ojs-types/src/lib/types.ts:334](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L334)
+##### `body?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### body
+Defined in:  [lib/types.ts:335](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L335)
 
-• `Optional` **body**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `canDisable?`
 
-###### Defined in
+> `boolean`
 
-[libs/citations/ojs-types/src/lib/types.ts:335](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L335)
-
----
-
-##### canDisable
-
-• `Optional` **canDisable**: `boolean`
-
-**`Description`**
+###### Description
 
 Can this email template be disabled in the context settings area? Default is `true`.
 
-###### Defined in
+Defined in:  [lib/types.ts:337](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L337)
 
-[libs/citations/ojs-types/src/lib/types.ts:337](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L337)
+##### `canEdit?`
 
----
+> `boolean`
 
-##### canEdit
-
-• `Optional` **canEdit**: `boolean`
-
-**`Description`**
+###### Description
 
 Can this email template be edited in the context settings area? Default is `true`.
 
-###### Defined in
+Defined in:  [lib/types.ts:339](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L339)
 
-[libs/citations/ojs-types/src/lib/types.ts:339](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L339)
+##### `contextId?`
 
----
+> `number`
 
-##### contextId
-
-• `Optional` **contextId**: `number`
-
-**`Description`**
+###### Description
 
 The ID of the context (journal/press) this email is related to. Only used for custom email templates. Default is `null`.
 
-###### Defined in
+Defined in:  [lib/types.ts:341](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L341)
 
-[libs/citations/ojs-types/src/lib/types.ts:341](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L341)
+##### `description?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### description
+Defined in:  [lib/types.ts:342](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L342)
 
-• `Optional` **description**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `enabled?`
 
-###### Defined in
+> `boolean`
 
-[libs/citations/ojs-types/src/lib/types.ts:342](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L342)
-
----
-
-##### enabled
-
-• `Optional` **enabled**: `boolean`
-
-**`Description`**
+###### Description
 
 Is this email template enabled? Default is `true`.
 
-###### Defined in
+Defined in:  [lib/types.ts:344](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L344)
 
-[libs/citations/ojs-types/src/lib/types.ts:344](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L344)
+##### `fromRoleId?`
 
----
+> `number`
 
-##### fromRoleId
-
-• `Optional` **fromRoleId**: `number`
-
-**`Description`**
+###### Description
 
 The `ROLE_ID_*` of the user who will send this email.
 
-###### Defined in
+Defined in:  [lib/types.ts:346](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L346)
 
-[libs/citations/ojs-types/src/lib/types.ts:346](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L346)
+##### `id?`
 
----
+> `number`
 
-##### id
-
-• `Optional` **id**: `number`
-
-**`Description`**
+###### Description
 
 The email template ID.
 
-###### Defined in
+Defined in:  [lib/types.ts:348](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L348)
 
-[libs/citations/ojs-types/src/lib/types.ts:348](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L348)
+##### `key?`
 
----
+> `string`
 
-##### key
-
-• `Optional` **key**: `string`
-
-**`Description`**
+###### Description
 
 A unique key for this email template.
 
-###### Defined in
+Defined in:  [lib/types.ts:350](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L350)
 
-[libs/citations/ojs-types/src/lib/types.ts:350](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L350)
+##### `stageId?`
 
----
+> `number`
 
-##### stageId
-
-• `Optional` **stageId**: `number`
-
-**`Description`**
+###### Description
 
 The `WORKFLOW_STAGE_ID_*` that email template is associated with or `null` if it is not associated with a stage.
 
-###### Defined in
+Defined in:  [lib/types.ts:352](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L352)
 
-[libs/citations/ojs-types/src/lib/types.ts:352](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L352)
+##### `subject?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### subject
+Defined in:  [lib/types.ts:353](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L353)
 
-• `Optional` **subject**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `toRoleId?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:353](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L353)
-
----
-
-##### toRoleId
-
-• `Optional` **toRoleId**: `number`
-
-**`Description`**
+###### Description
 
 The `ROLE_ID_*` of the user who will receive this email.
 
-###### Defined in
+Defined in:  [lib/types.ts:355](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L355)
 
-[libs/citations/ojs-types/src/lib/types.ts:355](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L355)
+***
 
-### Interface: EmailTemplateEditable
-
-[ojs-api](.modules).EmailTemplateEditable
+### `EmailTemplateEditable`
 
 #### Properties
 
-##### body
+##### `body?`
 
-• `Optional` **body**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:1166](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1166)
 
-[libs/citations/ojs-types/src/lib/types.ts:1166](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1166)
+##### `contextId?`
 
----
+> `number`
 
-##### contextId
-
-• `Optional` **contextId**: `number`
-
-**`Description`**
+###### Description
 
 The ID of the context (journal/press) this email is related to. Only used for custom email templates. Default is `null`.
 
-###### Defined in
+Defined in:  [lib/types.ts:1168](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1168)
 
-[libs/citations/ojs-types/src/lib/types.ts:1168](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1168)
+##### `enabled?`
 
----
+> `boolean`
 
-##### enabled
-
-• `Optional` **enabled**: `boolean`
-
-**`Description`**
+###### Description
 
 Is this email template enabled? Default is `true`.
 
-###### Defined in
+Defined in:  [lib/types.ts:1170](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1170)
 
-[libs/citations/ojs-types/src/lib/types.ts:1170](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1170)
+##### `key?`
 
----
+> `string`
 
-##### key
-
-• `Optional` **key**: `string`
-
-**`Description`**
+###### Description
 
 A unique key for this email template.
 
-###### Defined in
+Defined in:  [lib/types.ts:1172](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1172)
 
-[libs/citations/ojs-types/src/lib/types.ts:1172](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1172)
+##### `subject?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### subject
+Defined in:  [lib/types.ts:1173](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1173)
 
-• `Optional` **subject**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+***
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1173](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1173)
-
-### Interface: EmailTemplateSummary
-
-[ojs-api](.modules).EmailTemplateSummary
+### `EmailTemplateSummary`
 
 #### Properties
 
-##### \_href
+##### `\_href?`
 
-• `Optional` **\_href**: `string`
+> `string`
 
 Format: uri
 
-###### Defined in
+Defined in:  [lib/types.ts:1177](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1177)
 
-[libs/citations/ojs-types/src/lib/types.ts:1177](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1177)
+##### `body?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### body
+Defined in:  [lib/types.ts:1178](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1178)
 
-• `Optional` **body**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `canDisable?`
 
-###### Defined in
+> `boolean`
 
-[libs/citations/ojs-types/src/lib/types.ts:1178](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1178)
-
----
-
-##### canDisable
-
-• `Optional` **canDisable**: `boolean`
-
-**`Description`**
+###### Description
 
 Can this email template be disabled in the context settings area? Default is `true`.
 
-###### Defined in
+Defined in:  [lib/types.ts:1180](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1180)
 
-[libs/citations/ojs-types/src/lib/types.ts:1180](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1180)
+##### `canEdit?`
 
----
+> `boolean`
 
-##### canEdit
-
-• `Optional` **canEdit**: `boolean`
-
-**`Description`**
+###### Description
 
 Can this email template be edited in the context settings area? Default is `true`.
 
-###### Defined in
+Defined in:  [lib/types.ts:1182](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1182)
 
-[libs/citations/ojs-types/src/lib/types.ts:1182](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1182)
+##### `contextId?`
 
----
+> `number`
 
-##### contextId
-
-• `Optional` **contextId**: `number`
-
-**`Description`**
+###### Description
 
 The ID of the context (journal/press) this email is related to. Only used for custom email templates. Default is `null`.
 
-###### Defined in
+Defined in:  [lib/types.ts:1184](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1184)
 
-[libs/citations/ojs-types/src/lib/types.ts:1184](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1184)
+##### `description?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### description
+Defined in:  [lib/types.ts:1185](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1185)
 
-• `Optional` **description**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `enabled?`
 
-###### Defined in
+> `boolean`
 
-[libs/citations/ojs-types/src/lib/types.ts:1185](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1185)
-
----
-
-##### enabled
-
-• `Optional` **enabled**: `boolean`
-
-**`Description`**
+###### Description
 
 Is this email template enabled? Default is `true`.
 
-###### Defined in
+Defined in:  [lib/types.ts:1187](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1187)
 
-[libs/citations/ojs-types/src/lib/types.ts:1187](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1187)
+##### `fromRoleId?`
 
----
+> `number`
 
-##### fromRoleId
-
-• `Optional` **fromRoleId**: `number`
-
-**`Description`**
+###### Description
 
 The `ROLE_ID_*` of the user who will send this email.
 
-###### Defined in
+Defined in:  [lib/types.ts:1189](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1189)
 
-[libs/citations/ojs-types/src/lib/types.ts:1189](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1189)
+##### `id?`
 
----
+> `number`
 
-##### id
-
-• `Optional` **id**: `number`
-
-**`Description`**
+###### Description
 
 The email template ID.
 
-###### Defined in
+Defined in:  [lib/types.ts:1191](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1191)
 
-[libs/citations/ojs-types/src/lib/types.ts:1191](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1191)
+##### `key?`
 
----
+> `string`
 
-##### key
-
-• `Optional` **key**: `string`
-
-**`Description`**
+###### Description
 
 A unique key for this email template.
 
-###### Defined in
+Defined in:  [lib/types.ts:1193](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1193)
 
-[libs/citations/ojs-types/src/lib/types.ts:1193](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1193)
+##### `stageId?`
 
----
+> `number`
 
-##### stageId
-
-• `Optional` **stageId**: `number`
-
-**`Description`**
+###### Description
 
 The `WORKFLOW_STAGE_ID_*` that email template is associated with or `null` if it is not associated with a stage.
 
-###### Defined in
+Defined in:  [lib/types.ts:1195](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1195)
 
-[libs/citations/ojs-types/src/lib/types.ts:1195](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1195)
+##### `subject?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### subject
+Defined in:  [lib/types.ts:1196](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1196)
 
-• `Optional` **subject**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `toRoleId?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1196](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1196)
-
----
-
-##### toRoleId
-
-• `Optional` **toRoleId**: `number`
-
-**`Description`**
+###### Description
 
 The `ROLE_ID_*` of the user who will receive this email.
 
-###### Defined in
+Defined in:  [lib/types.ts:1198](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1198)
 
-[libs/citations/ojs-types/src/lib/types.ts:1198](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1198)
+***
 
-### Interface: ErrorResponse
+### `ErrorResponse`
 
-[ojs-api](.modules).ErrorResponse
-
-**`Description`**
+#### Description
 
 A response object that will be returned when the request could not be fulfilled.
 
 #### Properties
 
-##### error
+##### `error?`
 
-• `Optional` **error**: `string`
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:329](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L329)
 
-[libs/citations/ojs-types/src/lib/types.ts:329](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L329)
+##### `errorMessage?`
 
----
+> `string`
 
-##### errorMessage
+Defined in:  [lib/types.ts:330](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L330)
 
-• `Optional` **errorMessage**: `string`
+***
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:330](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L330)
-
-### Interface: Galley
-
-[ojs-api](.modules).Galley
+### `Galley`
 
 #### Properties
 
-##### file
+##### `file?`
 
-• `Optional` **file**: [`SubmissionFile`](.interfaces/ojs_api.SubmissionFile.md)
+> [`SubmissionFile`](modules.md#submissionfile)
 
-###### Defined in
+Defined in:  [lib/types.ts:358](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L358)
 
-[libs/citations/ojs-types/src/lib/types.ts:358](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L358)
+##### `id?`
 
----
+> `number`
 
-##### id
+Defined in:  [lib/types.ts:359](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L359)
 
-• `Optional` **id**: `number`
+##### `isApproved?`
 
-###### Defined in
+> `boolean`
 
-[libs/citations/ojs-types/src/lib/types.ts:359](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L359)
+Defined in:  [lib/types.ts:360](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L360)
 
----
+##### `label?`
 
-##### isApproved
+> `string`
 
-• `Optional` **isApproved**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:360](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L360)
-
----
-
-##### label
-
-• `Optional` **label**: `string`
-
-**`Description`**
+###### Description
 
 A human-readable label for this galley. For the primary article, it is usually indicates the format like PDF, ePub or full text. For supplementary files it often indicates the content, such as source data or interview transcripts.
 
-###### Defined in
+Defined in:  [lib/types.ts:362](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L362)
 
-[libs/citations/ojs-types/src/lib/types.ts:362](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L362)
+##### `locale?`
 
----
+> `string`
 
-##### locale
-
-• `Optional` **locale**: `string`
-
-**`Description`**
+###### Description
 
 The primary locale of this galley.
 
-###### Defined in
+Defined in:  [lib/types.ts:364](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L364)
 
-[libs/citations/ojs-types/src/lib/types.ts:364](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L364)
+##### `pub-id::publisher-id?`
 
----
+> `string`
 
-##### pub-id::publisher-id
-
-• `Optional` **pub-id::publisher-id**: `string`
-
-**`Description`**
+###### Description
 
 A unique ID provided by the publisher. It will be used in the publication's URL path instead of the `id` when present.
 
-###### Defined in
+Defined in:  [lib/types.ts:366](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L366)
 
-[libs/citations/ojs-types/src/lib/types.ts:366](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L366)
+##### `publicationId?`
 
----
+> `number`
 
-##### publicationId
+Defined in:  [lib/types.ts:367](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L367)
 
-• `Optional` **publicationId**: `number`
+##### `seq?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:367](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L367)
-
----
-
-##### seq
-
-• `Optional` **seq**: `number`
-
-**`Description`**
+###### Description
 
 In what order this galley should appear in lists of galleys for this publication.
 
-###### Defined in
+Defined in:  [lib/types.ts:369](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L369)
 
-[libs/citations/ojs-types/src/lib/types.ts:369](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L369)
+##### `submissionFileId?`
 
----
+> `number`
 
-##### submissionFileId
+Defined in:  [lib/types.ts:370](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L370)
 
-• `Optional` **submissionFileId**: `number`
+##### `urlPath?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:370](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L370)
-
----
-
-##### urlPath
-
-• `Optional` **urlPath**: `string`
-
-**`Description`**
+###### Description
 
 An optional path to use in the URL instead of the ID.
 
-###### Defined in
+Defined in:  [lib/types.ts:372](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L372)
 
-[libs/citations/ojs-types/src/lib/types.ts:372](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L372)
+##### `urlPublished?`
 
----
+> `string`
 
-##### urlPublished
-
-• `Optional` **urlPublished**: `string`
-
-**`Description`**
+###### Description
 
 The URL where this galley can be viewed or downloaded.
 
-###### Defined in
+Defined in:  [lib/types.ts:374](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L374)
 
-[libs/citations/ojs-types/src/lib/types.ts:374](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L374)
+##### `urlRemote?`
 
----
+> `string`
 
-##### urlRemote
-
-• `Optional` **urlRemote**: `string`
-
-**`Description`**
+###### Description
 
 An optional URL where the galley can be viewed or downloaded.
 
-###### Defined in
+Defined in:  [lib/types.ts:376](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L376)
 
-[libs/citations/ojs-types/src/lib/types.ts:376](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L376)
+***
 
-### Interface: GalleyEditable
-
-[ojs-api](.modules).GalleyEditable
+### `GalleyEditable`
 
 #### Properties
 
-##### isApproved
+##### `isApproved?`
 
-• `Optional` **isApproved**: `boolean`
+> `boolean`
 
-###### Defined in
+Defined in:  [lib/types.ts:1201](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1201)
 
-[libs/citations/ojs-types/src/lib/types.ts:1201](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1201)
+##### `label?`
 
----
+> `string`
 
-##### label
-
-• `Optional` **label**: `string`
-
-**`Description`**
+###### Description
 
 A human-readable label for this galley. For the primary article, it is usually indicates the format like PDF, ePub or full text. For supplementary files it often indicates the content, such as source data or interview transcripts.
 
-###### Defined in
+Defined in:  [lib/types.ts:1203](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1203)
 
-[libs/citations/ojs-types/src/lib/types.ts:1203](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1203)
+##### `locale?`
 
----
+> `string`
 
-##### locale
-
-• `Optional` **locale**: `string`
-
-**`Description`**
+###### Description
 
 The primary locale of this galley.
 
-###### Defined in
+Defined in:  [lib/types.ts:1205](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1205)
 
-[libs/citations/ojs-types/src/lib/types.ts:1205](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1205)
+##### `pub-id::publisher-id?`
 
----
+> `string`
 
-##### pub-id::publisher-id
-
-• `Optional` **pub-id::publisher-id**: `string`
-
-**`Description`**
+###### Description
 
 A unique ID provided by the publisher. It will be used in the publication's URL path instead of the `id` when present.
 
-###### Defined in
+Defined in:  [lib/types.ts:1207](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1207)
 
-[libs/citations/ojs-types/src/lib/types.ts:1207](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1207)
+##### `publicationId?`
 
----
+> `number`
 
-##### publicationId
+Defined in:  [lib/types.ts:1208](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1208)
 
-• `Optional` **publicationId**: `number`
+##### `seq?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1208](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1208)
-
----
-
-##### seq
-
-• `Optional` **seq**: `number`
-
-**`Description`**
+###### Description
 
 In what order this galley should appear in lists of galleys for this publication.
 
-###### Defined in
+Defined in:  [lib/types.ts:1210](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1210)
 
-[libs/citations/ojs-types/src/lib/types.ts:1210](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1210)
+##### `submissionFileId?`
 
----
+> `number`
 
-##### submissionFileId
+Defined in:  [lib/types.ts:1211](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1211)
 
-• `Optional` **submissionFileId**: `number`
+##### `urlPath?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:1211](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1211)
-
----
-
-##### urlPath
-
-• `Optional` **urlPath**: `string`
-
-**`Description`**
+###### Description
 
 An optional path to use in the URL instead of the ID.
 
-###### Defined in
+Defined in:  [lib/types.ts:1213](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1213)
 
-[libs/citations/ojs-types/src/lib/types.ts:1213](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1213)
+##### `urlRemote?`
 
----
+> `string`
 
-##### urlRemote
-
-• `Optional` **urlRemote**: `string`
-
-**`Description`**
+###### Description
 
 An optional URL where the galley can be viewed or downloaded.
 
-###### Defined in
+Defined in:  [lib/types.ts:1215](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1215)
 
-[libs/citations/ojs-types/src/lib/types.ts:1215](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1215)
+***
 
-### Interface: GalleySummary
-
-[ojs-api](.modules).GalleySummary
+### `GalleySummary`
 
 #### Properties
 
-##### file
+##### `file?`
 
-• `Optional` **file**: [`SubmissionFile`](.interfaces/ojs_api.SubmissionFile.md)
+> [`SubmissionFile`](modules.md#submissionfile)
 
-###### Defined in
+Defined in:  [lib/types.ts:1218](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1218)
 
-[libs/citations/ojs-types/src/lib/types.ts:1218](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1218)
+##### `id?`
 
----
+> `number`
 
-##### id
+Defined in:  [lib/types.ts:1219](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1219)
 
-• `Optional` **id**: `number`
+##### `isApproved?`
 
-###### Defined in
+> `boolean`
 
-[libs/citations/ojs-types/src/lib/types.ts:1219](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1219)
+Defined in:  [lib/types.ts:1220](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1220)
 
----
+##### `label?`
 
-##### isApproved
+> `string`
 
-• `Optional` **isApproved**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1220](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1220)
-
----
-
-##### label
-
-• `Optional` **label**: `string`
-
-**`Description`**
+###### Description
 
 A human-readable label for this galley. For the primary article, it is usually indicates the format like PDF, ePub or full text. For supplementary files it often indicates the content, such as source data or interview transcripts.
 
-###### Defined in
+Defined in:  [lib/types.ts:1222](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1222)
 
-[libs/citations/ojs-types/src/lib/types.ts:1222](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1222)
+##### `locale?`
 
----
+> `string`
 
-##### locale
-
-• `Optional` **locale**: `string`
-
-**`Description`**
+###### Description
 
 The primary locale of this galley.
 
-###### Defined in
+Defined in:  [lib/types.ts:1224](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1224)
 
-[libs/citations/ojs-types/src/lib/types.ts:1224](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1224)
+##### `pub-id::publisher-id?`
 
----
+> `string`
 
-##### pub-id::publisher-id
-
-• `Optional` **pub-id::publisher-id**: `string`
-
-**`Description`**
+###### Description
 
 A unique ID provided by the publisher. It will be used in the publication's URL path instead of the `id` when present.
 
-###### Defined in
+Defined in:  [lib/types.ts:1226](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1226)
 
-[libs/citations/ojs-types/src/lib/types.ts:1226](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1226)
+##### `publicationId?`
 
----
+> `number`
 
-##### publicationId
+Defined in:  [lib/types.ts:1227](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1227)
 
-• `Optional` **publicationId**: `number`
+##### `seq?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1227](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1227)
-
----
-
-##### seq
-
-• `Optional` **seq**: `number`
-
-**`Description`**
+###### Description
 
 In what order this galley should appear in lists of galleys for this publication.
 
-###### Defined in
+Defined in:  [lib/types.ts:1229](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1229)
 
-[libs/citations/ojs-types/src/lib/types.ts:1229](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1229)
+##### `submissionFileId?`
 
----
+> `number`
 
-##### submissionFileId
+Defined in:  [lib/types.ts:1230](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1230)
 
-• `Optional` **submissionFileId**: `number`
+##### `urlPublished?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:1230](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1230)
-
----
-
-##### urlPublished
-
-• `Optional` **urlPublished**: `string`
-
-**`Description`**
+###### Description
 
 The URL where this galley can be viewed or downloaded.
 
-###### Defined in
+Defined in:  [lib/types.ts:1232](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1232)
 
-[libs/citations/ojs-types/src/lib/types.ts:1232](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1232)
+##### `urlRemote?`
 
----
+> `string`
 
-##### urlRemote
-
-• `Optional` **urlRemote**: `string`
-
-**`Description`**
+###### Description
 
 An optional URL where the galley can be viewed or downloaded.
 
-###### Defined in
+Defined in:  [lib/types.ts:1234](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1234)
 
-[libs/citations/ojs-types/src/lib/types.ts:1234](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1234)
+***
 
-### Interface: InvalidParametersResponse
+### `InvalidParametersResponse`
 
-[ojs-api](.modules).InvalidParametersResponse
-
-**`Description`**
+#### Description
 
 A response object that will be returned when there are validation errors for the request parameters. Typically used with forms.
 
-**`Example`**
+#### Example
 
 ```ts
 {
@@ -5055,507 +3625,325 @@ A response object that will be returned when there are validation errors for the
 
 #### Indexable
 
-▪ \[key: `string`]: `unknown`
+[`key`: `string`]: `unknown`
 
-### Interface: Issue
+***
 
-[ojs-api](.modules).Issue
+### `Issue`
 
 #### Properties
 
-##### \_href
+##### `\_href?`
 
-• `Optional` **\_href**: `string`
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:393](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L393)
 
-[libs/citations/ojs-types/src/lib/types.ts:393](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L393)
+##### `articles?`
 
----
+> [`SubmissionSummary`](modules.md#submissionsummary)[]
 
-##### articles
+Defined in:  [lib/types.ts:394](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L394)
 
-• `Optional` **articles**: [`SubmissionSummary`](.interfaces/ojs_api.SubmissionSummary.md)\[]
+##### `coverImageAltText?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:394](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L394)
+Defined in:  [lib/types.ts:395](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L395)
 
----
+##### `coverImageUrl?`
 
-##### coverImageAltText
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **coverImageAltText**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:396](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L396)
 
-###### Defined in
+##### `dateNotified?`
 
-[libs/citations/ojs-types/src/lib/types.ts:395](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L395)
+> `string`
 
----
+Defined in:  [lib/types.ts:397](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L397)
 
-##### coverImageUrl
+##### `datePublished?`
 
-• `Optional` **coverImageUrl**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:398](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L398)
 
-[libs/citations/ojs-types/src/lib/types.ts:396](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L396)
+##### `description?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### dateNotified
+Defined in:  [lib/types.ts:399](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L399)
 
-• `Optional` **dateNotified**: `string`
+##### `doi?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:397](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L397)
+Defined in:  [lib/types.ts:400](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L400)
 
----
+##### `galleys?`
 
-##### datePublished
+> [`Galley`](modules.md#galley)[]
 
-• `Optional` **datePublished**: `string`
+Defined in:  [lib/types.ts:401](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L401)
 
-###### Defined in
+##### `id?`
 
-[libs/citations/ojs-types/src/lib/types.ts:398](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L398)
+> `number`
 
----
+Defined in:  [lib/types.ts:402](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L402)
 
-##### description
+##### `identification?`
 
-• `Optional` **description**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:403](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L403)
 
-[libs/citations/ojs-types/src/lib/types.ts:399](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L399)
+##### `isCurrent?`
 
----
+> `boolean`
 
-##### doi
+Defined in:  [lib/types.ts:404](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L404)
 
-• `Optional` **doi**: `string`
+##### `lastModified?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:400](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L400)
+Defined in:  [lib/types.ts:405](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L405)
 
----
+##### `number?`
 
-##### galleys
+> `string`
 
-• `Optional` **galleys**: [`Galley`](.interfaces/ojs_api.Galley.md)\[]
+Defined in:  [lib/types.ts:406](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L406)
 
-###### Defined in
+##### `publishedUrl?`
 
-[libs/citations/ojs-types/src/lib/types.ts:401](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L401)
+> `string`
 
----
+Defined in:  [lib/types.ts:407](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L407)
 
-##### id
+##### `sections?`
 
-• `Optional` **id**: `number`
+> [`SectionSummary`](modules.md#sectionsummary)[]
 
-###### Defined in
+Defined in:  [lib/types.ts:408](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L408)
 
-[libs/citations/ojs-types/src/lib/types.ts:402](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L402)
+##### `title?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### identification
+Defined in:  [lib/types.ts:409](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L409)
 
-• `Optional` **identification**: `string`
+##### `urlPath?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:403](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L403)
-
----
-
-##### isCurrent
-
-• `Optional` **isCurrent**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:404](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L404)
-
----
-
-##### lastModified
-
-• `Optional` **lastModified**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:405](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L405)
-
----
-
-##### number
-
-• `Optional` **number**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:406](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L406)
-
----
-
-##### publishedUrl
-
-• `Optional` **publishedUrl**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:407](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L407)
-
----
-
-##### sections
-
-• `Optional` **sections**: [`SectionSummary`](.interfaces/ojs_api.SectionSummary.md)\[]
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:408](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L408)
-
----
-
-##### title
-
-• `Optional` **title**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:409](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L409)
-
----
-
-##### urlPath
-
-• `Optional` **urlPath**: `string`
-
-**`Description`**
+###### Description
 
 An optional path to use in the URL instead of the ID.
 
-###### Defined in
+Defined in:  [lib/types.ts:411](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L411)
 
-[libs/citations/ojs-types/src/lib/types.ts:411](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L411)
+##### `volume?`
 
----
+> `number`
 
-##### volume
+Defined in:  [lib/types.ts:412](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L412)
 
-• `Optional` **volume**: `number`
+##### `year?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:412](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L412)
+Defined in:  [lib/types.ts:413](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L413)
 
----
+***
 
-##### year
-
-• `Optional` **year**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:413](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L413)
-
-### Interface: IssueEditable
-
-[ojs-api](.modules).IssueEditable
+### `IssueEditable`
 
 #### Properties
 
-##### coverImageAltText
+##### `coverImageAltText?`
 
-• `Optional` **coverImageAltText**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:1237](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1237)
 
-[libs/citations/ojs-types/src/lib/types.ts:1237](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1237)
+##### `coverImageUrl?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### coverImageUrl
+Defined in:  [lib/types.ts:1238](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1238)
 
-• `Optional` **coverImageUrl**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `dateNotified?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:1238](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1238)
+Defined in:  [lib/types.ts:1239](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1239)
 
----
+##### `datePublished?`
 
-##### dateNotified
+> `string`
 
-• `Optional` **dateNotified**: `string`
+Defined in:  [lib/types.ts:1240](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1240)
 
-###### Defined in
+##### `description?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1239](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1239)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:1241](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1241)
 
-##### datePublished
+##### `doi?`
 
-• `Optional` **datePublished**: `string`
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:1242](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1242)
 
-[libs/citations/ojs-types/src/lib/types.ts:1240](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1240)
+##### `id?`
 
----
+> `number`
 
-##### description
+Defined in:  [lib/types.ts:1243](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1243)
 
-• `Optional` **description**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `lastModified?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:1241](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1241)
+Defined in:  [lib/types.ts:1244](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1244)
 
----
+##### `number?`
 
-##### doi
+> `string`
 
-• `Optional` **doi**: `string`
+Defined in:  [lib/types.ts:1245](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1245)
 
-###### Defined in
+##### `publishedUrl?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1242](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1242)
+> `string`
 
----
+Defined in:  [lib/types.ts:1246](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1246)
 
-##### id
+##### `title?`
 
-• `Optional` **id**: `number`
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:1247](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1247)
 
-[libs/citations/ojs-types/src/lib/types.ts:1243](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1243)
+##### `urlPath?`
 
----
+> `string`
 
-##### lastModified
-
-• `Optional` **lastModified**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1244](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1244)
-
----
-
-##### number
-
-• `Optional` **number**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1245](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1245)
-
----
-
-##### publishedUrl
-
-• `Optional` **publishedUrl**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1246](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1246)
-
----
-
-##### title
-
-• `Optional` **title**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1247](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1247)
-
----
-
-##### urlPath
-
-• `Optional` **urlPath**: `string`
-
-**`Description`**
+###### Description
 
 An optional path to use in the URL instead of the ID.
 
-###### Defined in
+Defined in:  [lib/types.ts:1249](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1249)
 
-[libs/citations/ojs-types/src/lib/types.ts:1249](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1249)
+##### `volume?`
 
----
+> `number`
 
-##### volume
+Defined in:  [lib/types.ts:1250](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1250)
 
-• `Optional` **volume**: `number`
+##### `year?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1250](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1250)
+Defined in:  [lib/types.ts:1251](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1251)
 
----
+***
 
-##### year
-
-• `Optional` **year**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1251](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1251)
-
-### Interface: IssueSummary
-
-[ojs-api](.modules).IssueSummary
+### `IssueSummary`
 
 #### Properties
 
-##### \_href
+##### `\_href?`
 
-• `Optional` **\_href**: `string`
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:1254](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1254)
 
-[libs/citations/ojs-types/src/lib/types.ts:1254](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1254)
+##### `coverImageAltText?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### coverImageAltText
+Defined in:  [lib/types.ts:1255](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1255)
 
-• `Optional` **coverImageAltText**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `coverImageUrl?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:1255](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1255)
+Defined in:  [lib/types.ts:1256](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1256)
 
----
+##### `datePublished?`
 
-##### coverImageUrl
+> `string`
 
-• `Optional` **coverImageUrl**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:1257](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1257)
 
-###### Defined in
+##### `description?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1256](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1256)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:1258](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1258)
 
-##### datePublished
+##### `galleys?`
 
-• `Optional` **datePublished**: `string`
+> [`Galley`](modules.md#galley)[]
 
-###### Defined in
+Defined in:  [lib/types.ts:1259](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1259)
 
-[libs/citations/ojs-types/src/lib/types.ts:1257](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1257)
+##### `id?`
 
----
+> `number`
 
-##### description
+Defined in:  [lib/types.ts:1260](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1260)
 
-• `Optional` **description**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `identification?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:1258](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1258)
+Defined in:  [lib/types.ts:1261](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1261)
 
----
+##### `number?`
 
-##### galleys
+> `string`
 
-• `Optional` **galleys**: [`Galley`](.interfaces/ojs_api.Galley.md)\[]
+Defined in:  [lib/types.ts:1262](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1262)
 
-###### Defined in
+##### `publishedUrl?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1259](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1259)
+> `string`
 
----
+Defined in:  [lib/types.ts:1263](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1263)
 
-##### id
+##### `title?`
 
-• `Optional` **id**: `number`
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:1264](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1264)
 
-[libs/citations/ojs-types/src/lib/types.ts:1260](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1260)
+##### `volume?`
 
----
+> `number`
 
-##### identification
+Defined in:  [lib/types.ts:1265](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1265)
 
-• `Optional` **identification**: `string`
+##### `year?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1261](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1261)
+Defined in:  [lib/types.ts:1266](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1266)
 
----
+***
 
-##### number
+### `LocaleObject`
 
-• `Optional` **number**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1262](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1262)
-
----
-
-##### publishedUrl
-
-• `Optional` **publishedUrl**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1263](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1263)
-
----
-
-##### title
-
-• `Optional` **title**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1264](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1264)
-
----
-
-##### volume
-
-• `Optional` **volume**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1265](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1265)
-
----
-
-##### year
-
-• `Optional` **year**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1266](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1266)
-
-### Interface: LocaleObject
-
-[ojs-api](.modules).LocaleObject
-
-**`Description`**
+#### Description
 
 Key/value pairs containing data stored by locale key.
 
-**`Example`**
+#### Example
 
 ```ts
 {
@@ -5566,4660 +3954,3321 @@ Key/value pairs containing data stored by locale key.
 
 #### Indexable
 
-▪ \[key: `string`]: `unknown`
+[`key`: `string`]: `unknown`
 
-### Interface: Publication
+***
 
-[ojs-api](.modules).Publication
+### `Publication`
 
 #### Properties
 
-##### \_href
+##### `\_href?`
 
-• `Optional` **\_href**: `string`
+> `string`
 
 Format: uri
 
-###### Defined in
+Defined in:  [lib/types.ts:427](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L427)
 
-[libs/citations/ojs-types/src/lib/types.ts:427](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L427)
+##### `abstract?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### abstract
+Defined in:  [lib/types.ts:428](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L428)
 
-• `Optional` **abstract**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `accessStatus?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:428](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L428)
-
----
-
-##### accessStatus
-
-• `Optional` **accessStatus**: `number`
-
-**`Default`**
+###### Default
 
 0
 
-###### Defined in
+Defined in:  [lib/types.ts:430](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L430)
 
-[libs/citations/ojs-types/src/lib/types.ts:430](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L430)
+##### `authors?`
 
----
+> [`Author`](modules.md#author)[]
 
-##### authors
-
-• `Optional` **authors**: [`Author`](.interfaces/ojs_api.Author.md)\[]
-
-**`Description`**
+###### Description
 
 A list of the authors for this publication.
 
-###### Defined in
+Defined in:  [lib/types.ts:432](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L432)
 
-[libs/citations/ojs-types/src/lib/types.ts:432](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L432)
+##### `authorsString?`
 
----
+> `string`
 
-##### authorsString
-
-• `Optional` **authorsString**: `string`
-
-**`Description`**
+###### Description
 
 All of the authors rendered with the appropriate separators according to the locale.
 
-###### Defined in
+Defined in:  [lib/types.ts:434](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L434)
 
-[libs/citations/ojs-types/src/lib/types.ts:434](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L434)
+##### `authorsStringShort?`
 
----
+> `string`
 
-##### authorsStringShort
-
-• `Optional` **authorsStringShort**: `string`
-
-**`Description`**
+###### Description
 
 A shortened version of the authors rendered with the appropriate separators according to the locale.
 
-###### Defined in
+Defined in:  [lib/types.ts:436](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L436)
 
-[libs/citations/ojs-types/src/lib/types.ts:436](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L436)
+##### `categoryIds?`
 
----
+> `number`[]
 
-##### categoryIds
+Defined in:  [lib/types.ts:437](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L437)
 
-• `Optional` **categoryIds**: `number`\[]
+##### `citations?`
 
-###### Defined in
+> `string`[]
 
-[libs/citations/ojs-types/src/lib/types.ts:437](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L437)
-
----
-
-##### citations
-
-• `Optional` **citations**: `string`\[]
-
-**`Description`**
+###### Description
 
 Optional metadata that contains an array of references for works cited in this submission. References have been split and parsed from the raw text.
 
-###### Defined in
+Defined in:  [lib/types.ts:439](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L439)
 
-[libs/citations/ojs-types/src/lib/types.ts:439](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L439)
+##### `citationsRaw?`
 
----
+> `string`
 
-##### citationsRaw
-
-• `Optional` **citationsRaw**: `string`
-
-**`Description`**
+###### Description
 
 Optional metadata that contains references for works cited in this submission as raw text.
 
-###### Defined in
+Defined in:  [lib/types.ts:441](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L441)
 
-[libs/citations/ojs-types/src/lib/types.ts:441](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L441)
+##### `copyrightHolder?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### copyrightHolder
+Defined in:  [lib/types.ts:442](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L442)
 
-• `Optional` **copyrightHolder**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `copyrightYear?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:442](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L442)
-
----
-
-##### copyrightYear
-
-• `Optional` **copyrightYear**: `number`
-
-**`Description`**
+###### Description
 
 The copyright year for this publication.
 
-###### Defined in
+Defined in:  [lib/types.ts:444](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L444)
 
-[libs/citations/ojs-types/src/lib/types.ts:444](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L444)
+##### `coverImage?`
 
----
+> `object`
 
-##### coverImage
-
-• `Optional` **coverImage**: `Object`
+```ts
+{
+    en_US?: {
+        altText?: string;
+        dateUploaded?: string;
+        uploadName?: string;
+    };
+    fr_CA?: {
+        altText?: string;
+        dateUploaded?: string;
+        uploadName?: string;
+    };
+    properties?: unknown;
+    type?: unknown;
+}
+```
 
 ###### Type declaration
 
-\| Name | Type |
-\| :------ | :------ |
-\| `en_US?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `uploadName?`: `string` } |
-\| `en_US.altText?` | `string` |
-\| `en_US.dateUploaded?` | `string` |
-\| `en_US.uploadName?` | `string` |
-\| `fr_CA?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `uploadName?`: `string` } |
-\| `fr_CA.altText?` | `string` |
-\| `fr_CA.dateUploaded?` | `string` |
-\| `fr_CA.uploadName?` | `string` |
-\| `properties?` | `unknown` |
-\| `type?` | `unknown` |
+| Member | Type |
+| :------ | :------ |
+| `en_US`? | `object` |
+| `en_US.altText`? | `string` |
+| `en_US.dateUploaded`? | `string` |
+| `en_US.uploadName`? | `string` |
+| `fr_CA`? | `object` |
+| `fr_CA.altText`? | `string` |
+| `fr_CA.dateUploaded`? | `string` |
+| `fr_CA.uploadName`? | `string` |
+| `properties`? | `unknown` |
+| `type`? | `unknown` |
 
-###### Defined in
+Defined in:  [lib/types.ts:445](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L445)
 
-[libs/citations/ojs-types/src/lib/types.ts:445](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L445)
+##### `coverage?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### coverage
+Defined in:  [lib/types.ts:459](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L459)
 
-• `Optional` **coverage**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `datePublished?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:459](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L459)
+Defined in:  [lib/types.ts:460](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L460)
 
----
+##### `disciplines?`
 
-##### datePublished
+> `string`[]
 
-• `Optional` **datePublished**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:460](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L460)
-
----
-
-##### disciplines
-
-• `Optional` **disciplines**: `string`\[]
-
-**`Description`**
+###### Description
 
 Optional metadata that describes the submission's types of study or branches of knowledge.
 
-###### Defined in
+Defined in:  [lib/types.ts:462](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L462)
 
-[libs/citations/ojs-types/src/lib/types.ts:462](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L462)
+##### `fullTitle?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### fullTitle
+Defined in:  [lib/types.ts:463](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L463)
 
-• `Optional` **fullTitle**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `galleys?`
 
-###### Defined in
+> [`Galley`](modules.md#galley)[]
 
-[libs/citations/ojs-types/src/lib/types.ts:463](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L463)
+Defined in:  [lib/types.ts:464](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L464)
 
----
+##### `hideAuthor?`
 
-##### galleys
+> `boolean`
 
-• `Optional` **galleys**: [`Galley`](.interfaces/ojs_api.Galley.md)\[]
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:464](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L464)
-
----
-
-##### hideAuthor
-
-• `Optional` **hideAuthor**: `boolean`
-
-**`Description`**
+###### Description
 
 Whether the contributor details should be displayed for this publication. Commonly used for editorial statements without individual authorship.
 
-**`Default`**
+###### Default
 
 false
 
-###### Defined in
+Defined in:  [lib/types.ts:469](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L469)
 
-[libs/citations/ojs-types/src/lib/types.ts:469](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L469)
+##### `id?`
 
----
+> `number`
 
-##### id
+Defined in:  [lib/types.ts:470](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L470)
 
-• `Optional` **id**: `number`
+##### `issueId?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:470](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L470)
+Defined in:  [lib/types.ts:471](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L471)
 
----
+##### `keywords?`
 
-##### issueId
+> `string`[]
 
-• `Optional` **issueId**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:471](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L471)
-
----
-
-##### keywords
-
-• `Optional` **keywords**: `string`\[]
-
-**`Description`**
+###### Description
 
 Optional metadata, usually one- to three-word phrases that are used to indicate the main topics of a submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:473](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L473)
 
-[libs/citations/ojs-types/src/lib/types.ts:473](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L473)
+##### `languages?`
 
----
+> `string`[]
 
-##### languages
-
-• `Optional` **languages**: `string`\[]
-
-**`Description`**
+###### Description
 
 Optional metadata that identifies the submission's primary language.
 
-###### Defined in
+Defined in:  [lib/types.ts:475](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L475)
 
-[libs/citations/ojs-types/src/lib/types.ts:475](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L475)
+##### `lastModified?`
 
----
+> `string`
 
-##### lastModified
+Defined in:  [lib/types.ts:476](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L476)
 
-• `Optional` **lastModified**: `string`
+##### `licenseUrl?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:476](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L476)
-
----
-
-##### licenseUrl
-
-• `Optional` **licenseUrl**: `string`
-
-**`Description`**
+###### Description
 
 A URL to a webpage describing the license terms for this publication.
 
-###### Defined in
+Defined in:  [lib/types.ts:478](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L478)
 
-[libs/citations/ojs-types/src/lib/types.ts:478](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L478)
+##### `locale?`
 
----
+> `string`
 
-##### locale
-
-• `Optional` **locale**: `string`
-
-**`Description`**
+###### Description
 
 The primary locale of the submission this publication is attached to. This locale is used as the fallback when a language is missing from a multilingual property.
 
-###### Defined in
+Defined in:  [lib/types.ts:480](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L480)
 
-[libs/citations/ojs-types/src/lib/types.ts:480](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L480)
+##### `pages?`
 
----
+> `string`
 
-##### pages
-
-• `Optional` **pages**: `string`
-
-**`Description`**
+###### Description
 
 The pages of the issue in which this article appears if it is published in a physical format.
 
-###### Defined in
+Defined in:  [lib/types.ts:482](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L482)
 
-[libs/citations/ojs-types/src/lib/types.ts:482](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L482)
+##### `prefix?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### prefix
+Defined in:  [lib/types.ts:483](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L483)
 
-• `Optional` **prefix**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `primaryContactId?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:483](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L483)
-
----
-
-##### primaryContactId
-
-• `Optional` **primaryContactId**: `number`
-
-**`Description`**
+###### Description
 
 Which `contributor` is the primary contact for this publication.
 
-###### Defined in
+Defined in:  [lib/types.ts:485](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L485)
 
-[libs/citations/ojs-types/src/lib/types.ts:485](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L485)
+##### `pub-id::publisher-id?`
 
----
+> `string`
 
-##### pub-id::publisher-id
-
-• `Optional` **pub-id::publisher-id**: `string`
-
-**`Description`**
+###### Description
 
 A unique ID provided by the publisher. It will be used in the publication's URL path instead of the `id` when present.
 
-###### Defined in
+Defined in:  [lib/types.ts:487](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L487)
 
-[libs/citations/ojs-types/src/lib/types.ts:487](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L487)
+##### `rights?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### rights
+Defined in:  [lib/types.ts:488](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L488)
 
-• `Optional` **rights**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `sectionId?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:488](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L488)
+Defined in:  [lib/types.ts:489](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L489)
 
----
+##### `seq?`
 
-##### sectionId
+> `number`
 
-• `Optional` **sectionId**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:489](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L489)
-
----
-
-##### seq
-
-• `Optional` **seq**: `number`
-
-**`Default`**
+###### Default
 
 0
 
-###### Defined in
+Defined in:  [lib/types.ts:491](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L491)
 
-[libs/citations/ojs-types/src/lib/types.ts:491](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L491)
+##### `source?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### source
+Defined in:  [lib/types.ts:492](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L492)
 
-• `Optional` **source**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `status?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:492](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L492)
-
----
-
-##### status
-
-• `Optional` **status**: `number`
-
-**`Description`**
+###### Description
 
 Whether the publication is Queued (not yet scheduled for publication), Declined, Published or Scheduled (scheduled for publication at a future date). One of the `STATUS_*` constants. Default is `STATUS_QUEUED`.
 
-**`Default`**
+###### Default
 
 1
 
-###### Defined in
+Defined in:  [lib/types.ts:497](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L497)
 
-[libs/citations/ojs-types/src/lib/types.ts:497](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L497)
+##### `subjects?`
 
----
+> `string`[]
 
-##### subjects
-
-• `Optional` **subjects**: `string`\[]
-
-**`Description`**
+###### Description
 
 Optional metadata that consists of keywords, key phrases or classification codes that describe the submission's topics.
 
-###### Defined in
+Defined in:  [lib/types.ts:499](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L499)
 
-[libs/citations/ojs-types/src/lib/types.ts:499](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L499)
+##### `submissionId?`
 
----
+> `number`
 
-##### submissionId
+Defined in:  [lib/types.ts:500](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L500)
 
-• `Optional` **submissionId**: `number`
+##### `subtitle?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:500](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L500)
+Defined in:  [lib/types.ts:501](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L501)
 
----
+##### `supportingAgencies?`
 
-##### subtitle
+> `string`[]
 
-• `Optional` **subtitle**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:501](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L501)
-
----
-
-##### supportingAgencies
-
-• `Optional` **supportingAgencies**: `string`\[]
-
-**`Description`**
+###### Description
 
 Optional metadata that indicates the source of research funding or other institutional support.
 
-###### Defined in
+Defined in:  [lib/types.ts:503](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L503)
 
-[libs/citations/ojs-types/src/lib/types.ts:503](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L503)
+##### `title?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### title
+Defined in:  [lib/types.ts:504](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L504)
 
-• `Optional` **title**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `type?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:504](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L504)
+Defined in:  [lib/types.ts:505](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L505)
 
----
+##### `urlPath?`
 
-##### type
+> `string`
 
-• `Optional` **type**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:505](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L505)
-
----
-
-##### urlPath
-
-• `Optional` **urlPath**: `string`
-
-**`Description`**
+###### Description
 
 An optional path to use in the URL instead of the ID.
 
-###### Defined in
+Defined in:  [lib/types.ts:507](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L507)
 
-[libs/citations/ojs-types/src/lib/types.ts:507](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L507)
+##### `urlPublished?`
 
----
+> `string`
 
-##### urlPublished
-
-• `Optional` **urlPublished**: `string`
-
-**`Description`**
+###### Description
 
 The public URL for this publication or where it will be available if it has not yet been published.
 
-###### Defined in
+Defined in:  [lib/types.ts:509](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L509)
 
-[libs/citations/ojs-types/src/lib/types.ts:509](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L509)
+##### `version?`
 
----
+> `number`
 
-##### version
-
-• `Optional` **version**: `number`
-
-**`Description`**
+###### Description
 
 The version number of this publication. Version numbers should increment by one so that the third publication of a submission will have the version number `3`. Version numbers should typically be set automatically and editorial staff should not be encouraged to modify them.
 
-###### Defined in
+Defined in:  [lib/types.ts:511](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L511)
 
-[libs/citations/ojs-types/src/lib/types.ts:511](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L511)
+***
 
-### Interface: PublicationEditable
-
-[ojs-api](.modules).PublicationEditable
+### `PublicationEditable`
 
 #### Properties
 
-##### abstract
+##### `abstract?`
 
-• `Optional` **abstract**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:1269](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1269)
 
-[libs/citations/ojs-types/src/lib/types.ts:1269](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1269)
+##### `accessStatus?`
 
----
+> `number`
 
-##### accessStatus
-
-• `Optional` **accessStatus**: `number`
-
-**`Default`**
+###### Default
 
 0
 
-###### Defined in
+Defined in:  [lib/types.ts:1271](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1271)
 
-[libs/citations/ojs-types/src/lib/types.ts:1271](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1271)
+##### `categoryIds?`
 
----
+> `number`[]
 
-##### categoryIds
+Defined in:  [lib/types.ts:1272](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1272)
 
-• `Optional` **categoryIds**: `number`\[]
+##### `citationsRaw?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:1272](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1272)
-
----
-
-##### citationsRaw
-
-• `Optional` **citationsRaw**: `string`
-
-**`Description`**
+###### Description
 
 Optional metadata that contains references for works cited in this submission as raw text.
 
-###### Defined in
+Defined in:  [lib/types.ts:1274](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1274)
 
-[libs/citations/ojs-types/src/lib/types.ts:1274](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1274)
+##### `copyrightHolder?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### copyrightHolder
+Defined in:  [lib/types.ts:1275](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1275)
 
-• `Optional` **copyrightHolder**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `copyrightYear?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1275](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1275)
-
----
-
-##### copyrightYear
-
-• `Optional` **copyrightYear**: `number`
-
-**`Description`**
+###### Description
 
 The copyright year for this publication.
 
-###### Defined in
+Defined in:  [lib/types.ts:1277](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1277)
 
-[libs/citations/ojs-types/src/lib/types.ts:1277](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1277)
+##### `coverImage?`
 
----
+> `object`
 
-##### coverImage
-
-• `Optional` **coverImage**: `Object`
+```ts
+{
+    en_US?: {
+        altText?: string;
+        dateUploaded?: string;
+        temporaryFileId?: number;
+        uploadName?: string;
+    };
+    fr_CA?: {
+        altText?: string;
+        dateUploaded?: string;
+        temporaryFileId?: number;
+        uploadName?: string;
+    };
+    properties?: unknown;
+    type?: unknown;
+}
+```
 
 ###### Type declaration
 
-\| Name | Type |
-\| :------ | :------ |
-\| `en_US?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `temporaryFileId?`: `number` ; `uploadName?`: `string` } |
-\| `en_US.altText?` | `string` |
-\| `en_US.dateUploaded?` | `string` |
-\| `en_US.temporaryFileId?` | `number` |
-\| `en_US.uploadName?` | `string` |
-\| `fr_CA?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `temporaryFileId?`: `number` ; `uploadName?`: `string` } |
-\| `fr_CA.altText?` | `string` |
-\| `fr_CA.dateUploaded?` | `string` |
-\| `fr_CA.temporaryFileId?` | `number` |
-\| `fr_CA.uploadName?` | `string` |
-\| `properties?` | `unknown` |
-\| `type?` | `unknown` |
+| Member | Type |
+| :------ | :------ |
+| `en_US`? | `object` |
+| `en_US.altText`? | `string` |
+| `en_US.dateUploaded`? | `string` |
+| `en_US.temporaryFileId`? | `number` |
+| `en_US.uploadName`? | `string` |
+| `fr_CA`? | `object` |
+| `fr_CA.altText`? | `string` |
+| `fr_CA.dateUploaded`? | `string` |
+| `fr_CA.temporaryFileId`? | `number` |
+| `fr_CA.uploadName`? | `string` |
+| `properties`? | `unknown` |
+| `type`? | `unknown` |
 
-###### Defined in
+Defined in:  [lib/types.ts:1278](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1278)
 
-[libs/citations/ojs-types/src/lib/types.ts:1278](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1278)
+##### `coverage?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### coverage
+Defined in:  [lib/types.ts:1294](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1294)
 
-• `Optional` **coverage**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `datePublished?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:1294](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1294)
+Defined in:  [lib/types.ts:1295](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1295)
 
----
+##### `disciplines?`
 
-##### datePublished
+> `string`[]
 
-• `Optional` **datePublished**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1295](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1295)
-
----
-
-##### disciplines
-
-• `Optional` **disciplines**: `string`\[]
-
-**`Description`**
+###### Description
 
 Optional metadata that describes the submission's types of study or branches of knowledge.
 
-###### Defined in
+Defined in:  [lib/types.ts:1297](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1297)
 
-[libs/citations/ojs-types/src/lib/types.ts:1297](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1297)
+##### `hideAuthor?`
 
----
+> `boolean`
 
-##### hideAuthor
-
-• `Optional` **hideAuthor**: `boolean`
-
-**`Description`**
+###### Description
 
 Whether the contributor details should be displayed for this publication. Commonly used for editorial statements without individual authorship.
 
-**`Default`**
+###### Default
 
 false
 
-###### Defined in
+Defined in:  [lib/types.ts:1302](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1302)
 
-[libs/citations/ojs-types/src/lib/types.ts:1302](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1302)
+##### `issueId?`
 
----
+> `number`
 
-##### issueId
+Defined in:  [lib/types.ts:1303](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1303)
 
-• `Optional` **issueId**: `number`
+##### `keywords?`
 
-###### Defined in
+> `string`[]
 
-[libs/citations/ojs-types/src/lib/types.ts:1303](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1303)
-
----
-
-##### keywords
-
-• `Optional` **keywords**: `string`\[]
-
-**`Description`**
+###### Description
 
 Optional metadata, usually one- to three-word phrases that are used to indicate the main topics of a submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:1305](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1305)
 
-[libs/citations/ojs-types/src/lib/types.ts:1305](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1305)
+##### `languages?`
 
----
+> `string`[]
 
-##### languages
-
-• `Optional` **languages**: `string`\[]
-
-**`Description`**
+###### Description
 
 Optional metadata that identifies the submission's primary language.
 
-###### Defined in
+Defined in:  [lib/types.ts:1307](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1307)
 
-[libs/citations/ojs-types/src/lib/types.ts:1307](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1307)
+##### `lastModified?`
 
----
+> `string`
 
-##### lastModified
+Defined in:  [lib/types.ts:1308](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1308)
 
-• `Optional` **lastModified**: `string`
+##### `licenseUrl?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:1308](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1308)
-
----
-
-##### licenseUrl
-
-• `Optional` **licenseUrl**: `string`
-
-**`Description`**
+###### Description
 
 A URL to a webpage describing the license terms for this publication.
 
-###### Defined in
+Defined in:  [lib/types.ts:1310](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1310)
 
-[libs/citations/ojs-types/src/lib/types.ts:1310](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1310)
+##### `pages?`
 
----
+> `string`
 
-##### pages
-
-• `Optional` **pages**: `string`
-
-**`Description`**
+###### Description
 
 The pages of the issue in which this article appears if it is published in a physical format.
 
-###### Defined in
+Defined in:  [lib/types.ts:1312](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1312)
 
-[libs/citations/ojs-types/src/lib/types.ts:1312](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1312)
+##### `prefix?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### prefix
+Defined in:  [lib/types.ts:1313](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1313)
 
-• `Optional` **prefix**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `primaryContactId?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1313](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1313)
-
----
-
-##### primaryContactId
-
-• `Optional` **primaryContactId**: `number`
-
-**`Description`**
+###### Description
 
 Which `contributor` is the primary contact for this publication.
 
-###### Defined in
+Defined in:  [lib/types.ts:1315](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1315)
 
-[libs/citations/ojs-types/src/lib/types.ts:1315](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1315)
+##### `pub-id::publisher-id?`
 
----
+> `string`
 
-##### pub-id::publisher-id
-
-• `Optional` **pub-id::publisher-id**: `string`
-
-**`Description`**
+###### Description
 
 A unique ID provided by the publisher. It will be used in the publication's URL path instead of the `id` when present.
 
-###### Defined in
+Defined in:  [lib/types.ts:1317](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1317)
 
-[libs/citations/ojs-types/src/lib/types.ts:1317](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1317)
+##### `rights?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### rights
+Defined in:  [lib/types.ts:1318](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1318)
 
-• `Optional` **rights**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `sectionId?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1318](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1318)
+Defined in:  [lib/types.ts:1319](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1319)
 
----
+##### `seq?`
 
-##### sectionId
+> `number`
 
-• `Optional` **sectionId**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1319](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1319)
-
----
-
-##### seq
-
-• `Optional` **seq**: `number`
-
-**`Default`**
+###### Default
 
 0
 
-###### Defined in
+Defined in:  [lib/types.ts:1321](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1321)
 
-[libs/citations/ojs-types/src/lib/types.ts:1321](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1321)
+##### `source?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### source
+Defined in:  [lib/types.ts:1322](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1322)
 
-• `Optional` **source**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `status?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1322](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1322)
-
----
-
-##### status
-
-• `Optional` **status**: `number`
-
-**`Description`**
+###### Description
 
 Whether the publication is Queued (not yet scheduled for publication), Declined, Published or Scheduled (scheduled for publication at a future date). One of the `STATUS_*` constants. Default is `STATUS_QUEUED`.
 
-**`Default`**
+###### Default
 
 1
 
-###### Defined in
+Defined in:  [lib/types.ts:1327](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1327)
 
-[libs/citations/ojs-types/src/lib/types.ts:1327](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1327)
+##### `subjects?`
 
----
+> `string`[]
 
-##### subjects
-
-• `Optional` **subjects**: `string`\[]
-
-**`Description`**
+###### Description
 
 Optional metadata that consists of keywords, key phrases or classification codes that describe the submission's topics.
 
-###### Defined in
+Defined in:  [lib/types.ts:1329](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1329)
 
-[libs/citations/ojs-types/src/lib/types.ts:1329](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1329)
+##### `submissionId?`
 
----
+> `number`
 
-##### submissionId
+Defined in:  [lib/types.ts:1330](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1330)
 
-• `Optional` **submissionId**: `number`
+##### `subtitle?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:1330](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1330)
+Defined in:  [lib/types.ts:1331](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1331)
 
----
+##### `supportingAgencies?`
 
-##### subtitle
+> `string`[]
 
-• `Optional` **subtitle**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1331](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1331)
-
----
-
-##### supportingAgencies
-
-• `Optional` **supportingAgencies**: `string`\[]
-
-**`Description`**
+###### Description
 
 Optional metadata that indicates the source of research funding or other institutional support.
 
-###### Defined in
+Defined in:  [lib/types.ts:1333](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1333)
 
-[libs/citations/ojs-types/src/lib/types.ts:1333](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1333)
+##### `title?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### title
+Defined in:  [lib/types.ts:1334](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1334)
 
-• `Optional` **title**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `type?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:1334](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1334)
+Defined in:  [lib/types.ts:1335](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1335)
 
----
+##### `urlPath?`
 
-##### type
+> `string`
 
-• `Optional` **type**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1335](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1335)
-
----
-
-##### urlPath
-
-• `Optional` **urlPath**: `string`
-
-**`Description`**
+###### Description
 
 An optional path to use in the URL instead of the ID.
 
-###### Defined in
+Defined in:  [lib/types.ts:1337](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1337)
 
-[libs/citations/ojs-types/src/lib/types.ts:1337](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1337)
+##### `version?`
 
----
+> `number`
 
-##### version
-
-• `Optional` **version**: `number`
-
-**`Description`**
+###### Description
 
 The version number of this publication. Version numbers should increment by one so that the third publication of a submission will have the version number `3`. Version numbers should typically be set automatically and editorial staff should not be encouraged to modify them.
 
-###### Defined in
+Defined in:  [lib/types.ts:1339](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1339)
 
-[libs/citations/ojs-types/src/lib/types.ts:1339](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1339)
+***
 
-### Interface: PublicationStats
+### `PublicationStats`
 
-[ojs-api](.modules).PublicationStats
-
-**`Description`**
+#### Description
 
 The total abstract and galley views for a published submission.
 
 #### Properties
 
-##### abstractViews
+##### `abstractViews?`
 
-• `Optional` **abstractViews**: `number`
+> `number`
 
-###### Defined in
+Defined in:  [lib/types.ts:515](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L515)
 
-[libs/citations/ojs-types/src/lib/types.ts:515](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L515)
+##### `galleyViews?`
 
----
+> `number`
 
-##### galleyViews
+Defined in:  [lib/types.ts:516](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L516)
 
-• `Optional` **galleyViews**: `number`
+##### `htmlViews?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:516](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L516)
+Defined in:  [lib/types.ts:518](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L518)
 
----
+##### `otherViews?`
 
-##### htmlViews
+> `number`
 
-• `Optional` **htmlViews**: `number`
+Defined in:  [lib/types.ts:519](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L519)
 
-###### Defined in
+##### `pdfViews?`
 
-[libs/citations/ojs-types/src/lib/types.ts:518](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L518)
+> `number`
 
----
+Defined in:  [lib/types.ts:517](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L517)
 
-##### otherViews
+##### `publication?`
 
-• `Optional` **otherViews**: `number`
+> `object`
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:519](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L519)
-
----
-
-##### pdfViews
-
-• `Optional` **pdfViews**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:517](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L517)
-
----
-
-##### publication
-
-• `Optional` **publication**: `Object`
+```ts
+{
+    _href?: string;
+    fullTitle?: LocaleObject;
+    id?: number;
+    shortAuthorString?: string;
+    urlPublished?: string;
+    urlWorkflow?: string;
+}
+```
 
 ###### Type declaration
 
-\| Name | Type |
-\| :------ | :------ |
-\| `_href?` | `string` |
-\| `fullTitle?` | [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md) |
-\| `id?` | `number` |
-\| `shortAuthorString?` | `string` |
-\| `urlPublished?` | `string` |
-\| `urlWorkflow?` | `string` |
+| Member | Type |
+| :------ | :------ |
+| `_href`? | `string` |
+| `fullTitle`? | [`LocaleObject`](modules.md#localeobject) |
+| `id`? | `number` |
+| `shortAuthorString`? | `string` |
+| `urlPublished`? | `string` |
+| `urlWorkflow`? | `string` |
 
-###### Defined in
+Defined in:  [lib/types.ts:520](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L520)
 
-[libs/citations/ojs-types/src/lib/types.ts:520](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L520)
+***
 
-### Interface: PublicationSummary
-
-[ojs-api](.modules).PublicationSummary
+### `PublicationSummary`
 
 #### Properties
 
-##### \_href
+##### `\_href?`
 
-• `Optional` **\_href**: `string`
+> `string`
 
 Format: uri
 
-###### Defined in
+Defined in:  [lib/types.ts:1343](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1343)
 
-[libs/citations/ojs-types/src/lib/types.ts:1343](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1343)
+##### `authorsString?`
 
----
+> `string`
 
-##### authorsString
-
-• `Optional` **authorsString**: `string`
-
-**`Description`**
+###### Description
 
 All of the authors rendered with the appropriate separators according to the locale.
 
-###### Defined in
+Defined in:  [lib/types.ts:1345](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1345)
 
-[libs/citations/ojs-types/src/lib/types.ts:1345](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1345)
+##### `authorsStringShort?`
 
----
+> `string`
 
-##### authorsStringShort
-
-• `Optional` **authorsStringShort**: `string`
-
-**`Description`**
+###### Description
 
 A shortened version of the authors rendered with the appropriate separators according to the locale.
 
-###### Defined in
+Defined in:  [lib/types.ts:1347](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1347)
 
-[libs/citations/ojs-types/src/lib/types.ts:1347](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1347)
+##### `categoryIds?`
 
----
+> `number`[]
 
-##### categoryIds
+Defined in:  [lib/types.ts:1348](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1348)
 
-• `Optional` **categoryIds**: `number`\[]
+##### `coverImage?`
 
-###### Defined in
+> `object`
 
-[libs/citations/ojs-types/src/lib/types.ts:1348](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1348)
-
----
-
-##### coverImage
-
-• `Optional` **coverImage**: `Object`
+```ts
+{
+    en_US?: {
+    };
+    fr_CA?: {
+    };
+    properties?: unknown;
+    type?: unknown;
+}
+```
 
 ###### Type declaration
 
-\| Name | Type |
-\| :------ | :------ |
-\| `en_US?` | { `[key: string]`: `unknown`; } |
-\| `fr_CA?` | { `[key: string]`: `unknown`; } |
-\| `properties?` | `unknown` |
-\| `type?` | `unknown` |
+| Member | Type |
+| :------ | :------ |
+| `en_US`? | {  } |
+| `fr_CA`? | {  } |
+| `properties`? | `unknown` |
+| `type`? | `unknown` |
 
-###### Defined in
+Defined in:  [lib/types.ts:1349](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1349)
 
-[libs/citations/ojs-types/src/lib/types.ts:1349](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1349)
+##### `datePublished?`
 
----
+> `string`
 
-##### datePublished
+Defined in:  [lib/types.ts:1355](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1355)
 
-• `Optional` **datePublished**: `string`
+##### `fullTitle?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:1355](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1355)
+Defined in:  [lib/types.ts:1356](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1356)
 
----
+##### `galleys?`
 
-##### fullTitle
+> [`Galley`](modules.md#galley)[]
 
-• `Optional` **fullTitle**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:1357](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1357)
 
-###### Defined in
+##### `id?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1356](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1356)
+> `number`
 
----
+Defined in:  [lib/types.ts:1358](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1358)
 
-##### galleys
+##### `locale?`
 
-• `Optional` **galleys**: [`Galley`](.interfaces/ojs_api.Galley.md)\[]
+> `string`
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1357](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1357)
-
----
-
-##### id
-
-• `Optional` **id**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1358](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1358)
-
----
-
-##### locale
-
-• `Optional` **locale**: `string`
-
-**`Description`**
+###### Description
 
 The primary locale of the submission this publication is attached to. This locale is used as the fallback when a language is missing from a multilingual property.
 
-###### Defined in
+Defined in:  [lib/types.ts:1360](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1360)
 
-[libs/citations/ojs-types/src/lib/types.ts:1360](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1360)
+##### `pages?`
 
----
+> `string`
 
-##### pages
-
-• `Optional` **pages**: `string`
-
-**`Description`**
+###### Description
 
 The pages of the issue in which this article appears if it is published in a physical format.
 
-###### Defined in
+Defined in:  [lib/types.ts:1362](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1362)
 
-[libs/citations/ojs-types/src/lib/types.ts:1362](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1362)
+##### `prefix?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### prefix
+Defined in:  [lib/types.ts:1363](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1363)
 
-• `Optional` **prefix**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `primaryContactId?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1363](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1363)
-
----
-
-##### primaryContactId
-
-• `Optional` **primaryContactId**: `number`
-
-**`Description`**
+###### Description
 
 Which `contributor` is the primary contact for this publication.
 
-###### Defined in
+Defined in:  [lib/types.ts:1365](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1365)
 
-[libs/citations/ojs-types/src/lib/types.ts:1365](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1365)
+##### `pub-id::publisher-id?`
 
----
+> `string`
 
-##### pub-id::publisher-id
-
-• `Optional` **pub-id::publisher-id**: `string`
-
-**`Description`**
+###### Description
 
 A unique ID provided by the publisher. It will be used in the publication's URL path instead of the `id` when present.
 
-###### Defined in
+Defined in:  [lib/types.ts:1367](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1367)
 
-[libs/citations/ojs-types/src/lib/types.ts:1367](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1367)
+##### `sectionId?`
 
----
+> `number`
 
-##### sectionId
+Defined in:  [lib/types.ts:1368](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1368)
 
-• `Optional` **sectionId**: `number`
+##### `status?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1368](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1368)
-
----
-
-##### status
-
-• `Optional` **status**: `number`
-
-**`Description`**
+###### Description
 
 Whether the publication is Queued (not yet scheduled for publication), Declined, Published or Scheduled (scheduled for publication at a future date). One of the `STATUS_*` constants. Default is `STATUS_QUEUED`.
 
-**`Default`**
+###### Default
 
 1
 
-###### Defined in
+Defined in:  [lib/types.ts:1373](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1373)
 
-[libs/citations/ojs-types/src/lib/types.ts:1373](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1373)
+##### `submissionId?`
 
----
+> `number`
 
-##### submissionId
+Defined in:  [lib/types.ts:1374](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1374)
 
-• `Optional` **submissionId**: `number`
+##### `subtitle?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:1374](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1374)
+Defined in:  [lib/types.ts:1375](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1375)
 
----
+##### `title?`
 
-##### subtitle
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **subtitle**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:1376](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1376)
 
-###### Defined in
+##### `urlPublished?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1375](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1375)
+> `string`
 
----
-
-##### title
-
-• `Optional` **title**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1376](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1376)
-
----
-
-##### urlPublished
-
-• `Optional` **urlPublished**: `string`
-
-**`Description`**
+###### Description
 
 The public URL for this publication or where it will be available if it has not yet been published.
 
-###### Defined in
+Defined in:  [lib/types.ts:1378](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1378)
 
-[libs/citations/ojs-types/src/lib/types.ts:1378](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1378)
+##### `version?`
 
----
+> `number`
 
-##### version
-
-• `Optional` **version**: `number`
-
-**`Description`**
+###### Description
 
 The version number of this publication. Version numbers should increment by one so that the third publication of a submission will have the version number `3`. Version numbers should typically be set automatically and editorial staff should not be encouraged to modify them.
 
-###### Defined in
+Defined in:  [lib/types.ts:1380](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1380)
 
-[libs/citations/ojs-types/src/lib/types.ts:1380](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1380)
+***
 
-### Interface: ReviewRound
-
-[ojs-api](.modules).ReviewRound
+### `ReviewRound`
 
 #### Properties
 
-##### id
+##### `id?`
 
-• `Optional` **id**: `number`
+> `number`
 
-###### Defined in
+Defined in:  [lib/types.ts:530](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L530)
 
-[libs/citations/ojs-types/src/lib/types.ts:530](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L530)
+##### `round?`
 
----
+> `number`
 
-##### round
+Defined in:  [lib/types.ts:531](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L531)
 
-• `Optional` **round**: `number`
+##### `stageId?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:531](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L531)
+Defined in:  [lib/types.ts:532](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L532)
 
----
+##### `status?`
 
-##### stageId
+> `string`
 
-• `Optional` **stageId**: `number`
+Defined in:  [lib/types.ts:533](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L533)
 
-###### Defined in
+##### `statusId?`
 
-[libs/citations/ojs-types/src/lib/types.ts:532](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L532)
+> `number`
 
----
+Defined in:  [lib/types.ts:534](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L534)
 
-##### status
+***
 
-• `Optional` **status**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:533](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L533)
-
----
-
-##### statusId
-
-• `Optional` **statusId**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:534](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L534)
-
-### Interface: ReviewRoundEditable
-
-[ojs-api](.modules).ReviewRoundEditable
+### `ReviewRoundEditable`
 
 #### Properties
 
-##### id
+##### `id?`
 
-• `Optional` **id**: `number`
+> `number`
 
-###### Defined in
+Defined in:  [lib/types.ts:1383](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1383)
 
-[libs/citations/ojs-types/src/lib/types.ts:1383](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1383)
+##### `round?`
 
----
+> `number`
 
-##### round
+Defined in:  [lib/types.ts:1384](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1384)
 
-• `Optional` **round**: `number`
+##### `stageId?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1384](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1384)
+Defined in:  [lib/types.ts:1385](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1385)
 
----
+##### `statusId?`
 
-##### stageId
+> `number`
 
-• `Optional` **stageId**: `number`
+Defined in:  [lib/types.ts:1386](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1386)
 
-###### Defined in
+***
 
-[libs/citations/ojs-types/src/lib/types.ts:1385](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1385)
+### `ReviewerSummary`
 
----
-
-##### statusId
-
-• `Optional` **statusId**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1386](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1386)
-
-### Interface: ReviewerSummary
-
-[ojs-api](.modules).ReviewerSummary
-
-**`Description`**
+#### Description
 
 A special representation of a User assigned to a reviewer group. This model presents specific details about review activity.
 
 #### Properties
 
-##### \_href
+##### `\_href?`
 
-• `Optional` **\_href**: `string`
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:538](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L538)
 
-[libs/citations/ojs-types/src/lib/types.ts:538](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L538)
+##### `affiliation?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### affiliation
+Defined in:  [lib/types.ts:539](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L539)
 
-• `Optional` **affiliation**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `averageReviewCompletionDays?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:539](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L539)
+Defined in:  [lib/types.ts:540](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L540)
 
----
+##### `dateLastReviewAssignment?`
 
-##### averageReviewCompletionDays
+> `string`
 
-• `Optional` **averageReviewCompletionDays**: `number`
+Defined in:  [lib/types.ts:541](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L541)
 
-###### Defined in
+##### `disabled?`
 
-[libs/citations/ojs-types/src/lib/types.ts:540](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L540)
+> `boolean`
 
----
+Defined in:  [lib/types.ts:542](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L542)
 
-##### dateLastReviewAssignment
+##### `fullName?`
 
-• `Optional` **dateLastReviewAssignment**: `string`
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:543](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L543)
 
-[libs/citations/ojs-types/src/lib/types.ts:541](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L541)
+##### `gossip?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### disabled
+Defined in:  [lib/types.ts:544](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L544)
 
-• `Optional` **disabled**: `boolean`
+##### `groups?`
 
-###### Defined in
+> [`UserGroup`](modules.md#usergroup)[]
 
-[libs/citations/ojs-types/src/lib/types.ts:542](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L542)
+Defined in:  [lib/types.ts:545](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L545)
 
----
+##### `id?`
 
-##### fullName
+> `number`
 
-• `Optional` **fullName**: `string`
+Defined in:  [lib/types.ts:546](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L546)
 
-###### Defined in
+##### `interests?`
 
-[libs/citations/ojs-types/src/lib/types.ts:543](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L543)
+> [`UserInterest`](modules.md#userinterest)[]
 
----
+Defined in:  [lib/types.ts:547](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L547)
 
-##### gossip
+##### `reviewsActive?`
 
-• `Optional` **gossip**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> `number`
 
-###### Defined in
+Defined in:  [lib/types.ts:548](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L548)
 
-[libs/citations/ojs-types/src/lib/types.ts:544](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L544)
+##### `reviewsCancelled?`
 
----
+> `number`
 
-##### groups
+Defined in:  [lib/types.ts:550](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L550)
 
-• `Optional` **groups**: [`UserGroup`](.interfaces/ojs_api.UserGroup.md)\[]
+##### `reviewsCompleted?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:545](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L545)
+Defined in:  [lib/types.ts:549](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L549)
 
----
+##### `reviewsDeclined?`
 
-##### id
+> `number`
 
-• `Optional` **id**: `number`
+Defined in:  [lib/types.ts:551](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L551)
 
-###### Defined in
+##### `userName?`
 
-[libs/citations/ojs-types/src/lib/types.ts:546](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L546)
+> `string`
 
----
+Defined in:  [lib/types.ts:552](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L552)
 
-##### interests
+***
 
-• `Optional` **interests**: [`UserInterest`](.interfaces/ojs_api.UserInterest.md)\[]
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:547](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L547)
-
----
-
-##### reviewsActive
-
-• `Optional` **reviewsActive**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:548](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L548)
-
----
-
-##### reviewsCancelled
-
-• `Optional` **reviewsCancelled**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:550](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L550)
-
----
-
-##### reviewsCompleted
-
-• `Optional` **reviewsCompleted**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:549](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L549)
-
----
-
-##### reviewsDeclined
-
-• `Optional` **reviewsDeclined**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:551](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L551)
-
----
-
-##### userName
-
-• `Optional` **userName**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:552](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L552)
-
-### Interface: Section
-
-[ojs-api](.modules).Section
+### `Section`
 
 #### Properties
 
-##### abbrev
+##### `abbrev?`
 
-• `Optional` **abbrev**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:555](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L555)
 
-[libs/citations/ojs-types/src/lib/types.ts:555](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L555)
+##### `id?`
 
----
+> `number`
 
-##### id
+Defined in:  [lib/types.ts:556](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L556)
 
-• `Optional` **id**: `number`
+##### `seq?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:556](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L556)
+Defined in:  [lib/types.ts:557](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L557)
 
----
+##### `title?`
 
-##### seq
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **seq**: `number`
+Defined in:  [lib/types.ts:558](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L558)
 
-###### Defined in
+***
 
-[libs/citations/ojs-types/src/lib/types.ts:557](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L557)
-
----
-
-##### title
-
-• `Optional` **title**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:558](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L558)
-
-### Interface: SectionEditable
-
-[ojs-api](.modules).SectionEditable
+### `SectionEditable`
 
 #### Properties
 
-##### abbrev
+##### `abbrev?`
 
-• `Optional` **abbrev**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:1389](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1389)
 
-[libs/citations/ojs-types/src/lib/types.ts:1389](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1389)
+##### `id?`
 
----
+> `number`
 
-##### id
+Defined in:  [lib/types.ts:1390](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1390)
 
-• `Optional` **id**: `number`
+##### `seq?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1390](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1390)
+Defined in:  [lib/types.ts:1391](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1391)
 
----
+##### `title?`
 
-##### seq
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **seq**: `number`
+Defined in:  [lib/types.ts:1392](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1392)
 
-###### Defined in
+***
 
-[libs/citations/ojs-types/src/lib/types.ts:1391](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1391)
-
----
-
-##### title
-
-• `Optional` **title**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1392](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1392)
-
-### Interface: SectionSummary
-
-[ojs-api](.modules).SectionSummary
+### `SectionSummary`
 
 #### Properties
 
-##### abbrev
+##### `abbrev?`
 
-• `Optional` **abbrev**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:1395](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1395)
 
-[libs/citations/ojs-types/src/lib/types.ts:1395](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1395)
+##### `id?`
 
----
+> `number`
 
-##### id
+Defined in:  [lib/types.ts:1396](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1396)
 
-• `Optional` **id**: `number`
+##### `seq?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1396](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1396)
+Defined in:  [lib/types.ts:1397](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1397)
 
----
+##### `title?`
 
-##### seq
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **seq**: `number`
+Defined in:  [lib/types.ts:1398](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1398)
 
-###### Defined in
+***
 
-[libs/citations/ojs-types/src/lib/types.ts:1397](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1397)
-
----
-
-##### title
-
-• `Optional` **title**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1398](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1398)
-
-### Interface: Site
-
-[ojs-api](.modules).Site
+### `Site`
 
 #### Properties
 
-##### about
+##### `about?`
 
-• `Optional` **about**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:561](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L561)
 
-[libs/citations/ojs-types/src/lib/types.ts:561](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L561)
+##### `contactEmail?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### contactEmail
+Defined in:  [lib/types.ts:562](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L562)
 
-• `Optional` **contactEmail**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `contactName?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:562](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L562)
+Defined in:  [lib/types.ts:563](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L563)
 
----
+##### `enableBulkEmails?`
 
-##### contactName
+> `number`[]
 
-• `Optional` **contactName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:563](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L563)
-
----
-
-##### enableBulkEmails
-
-• `Optional` **enableBulkEmails**: `number`\[]
-
-**`Description`**
+###### Description
 
 Which hosted journals, presses or preprint servers are allowed to send bulk emails.
 
-###### Defined in
+Defined in:  [lib/types.ts:565](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L565)
 
-[libs/citations/ojs-types/src/lib/types.ts:565](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L565)
+##### `installedLocales?`
 
----
+> `string`[]
 
-##### installedLocales
+Defined in:  [lib/types.ts:566](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L566)
 
-• `Optional` **installedLocales**: `string`\[]
+##### `minPasswordLength?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:566](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L566)
+Defined in:  [lib/types.ts:567](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L567)
 
----
+##### `pageFooter?`
 
-##### minPasswordLength
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **minPasswordLength**: `number`
+Defined in:  [lib/types.ts:568](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L568)
 
-###### Defined in
+##### `pageHeaderTitleImage?`
 
-[libs/citations/ojs-types/src/lib/types.ts:567](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L567)
+> `object`
 
----
-
-##### pageFooter
-
-• `Optional` **pageFooter**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:568](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L568)
-
----
-
-##### pageHeaderTitleImage
-
-• `Optional` **pageHeaderTitleImage**: `Object`
-
-###### Type declaration
-
-\| Name | Type |
-\| :------ | :------ |
-\| `en_US?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `height?`: `number` ; `name?`: `string` ; `uploadName?`: `string` ; `width?`: `number` } |
-\| `en_US.altText?` | `string` |
-\| `en_US.dateUploaded?` | `string` |
-\| `en_US.height?` | `number` |
-\| `en_US.name?` | `string` |
-\| `en_US.uploadName?` | `string` |
-\| `en_US.width?` | `number` |
-\| `fr_CA?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `height?`: `number` ; `name?`: `string` ; `uploadName?`: `string` ; `width?`: `number` } |
-\| `fr_CA.altText?` | `string` |
-\| `fr_CA.dateUploaded?` | `string` |
-\| `fr_CA.height?` | `number` |
-\| `fr_CA.name?` | `string` |
-\| `fr_CA.uploadName?` | `string` |
-\| `fr_CA.width?` | `number` |
-\| `properties?` | `unknown` |
-\| `type?` | `unknown` |
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:569](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L569)
-
----
-
-##### primaryLocale
-
-• `Optional` **primaryLocale**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:589](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L589)
-
----
-
-##### privacyStatement
-
-• `Optional` **privacyStatement**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:590](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L590)
-
----
-
-##### redirect
-
-• `Optional` **redirect**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:591](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L591)
-
----
-
-##### sidebar
-
-• `Optional` **sidebar**: `string`\[]
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:592](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L592)
-
----
-
-##### styleSheet
-
-• `Optional` **styleSheet**: `Object`
+```ts
+{
+    en_US?: {
+        altText?: string;
+        dateUploaded?: string;
+        height?: number;
+        name?: string;
+        uploadName?: string;
+        width?: number;
+    };
+    fr_CA?: {
+        altText?: string;
+        dateUploaded?: string;
+        height?: number;
+        name?: string;
+        uploadName?: string;
+        width?: number;
+    };
+    properties?: unknown;
+    type?: unknown;
+}
+```
 
 ###### Type declaration
 
-\| Name | Type |
-\| :------ | :------ |
-\| `dateUploaded?` | `string` |
-\| `name?` | `string` |
-\| `uploadName?` | `string` |
+| Member | Type |
+| :------ | :------ |
+| `en_US`? | `object` |
+| `en_US.altText`? | `string` |
+| `en_US.dateUploaded`? | `string` |
+| `en_US.height`? | `number` |
+| `en_US.name`? | `string` |
+| `en_US.uploadName`? | `string` |
+| `en_US.width`? | `number` |
+| `fr_CA`? | `object` |
+| `fr_CA.altText`? | `string` |
+| `fr_CA.dateUploaded`? | `string` |
+| `fr_CA.height`? | `number` |
+| `fr_CA.name`? | `string` |
+| `fr_CA.uploadName`? | `string` |
+| `fr_CA.width`? | `number` |
+| `properties`? | `unknown` |
+| `type`? | `unknown` |
 
-###### Defined in
+Defined in:  [lib/types.ts:569](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L569)
 
-[libs/citations/ojs-types/src/lib/types.ts:593](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L593)
+##### `primaryLocale?`
 
----
+> `string`
 
-##### supportedLocales
+Defined in:  [lib/types.ts:589](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L589)
 
-• `Optional` **supportedLocales**: `string`\[]
+##### `privacyStatement?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:598](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L598)
+Defined in:  [lib/types.ts:590](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L590)
 
----
+##### `redirect?`
 
-##### themePluginPath
+> `number`
 
-• `Optional` **themePluginPath**: `string`
+Defined in:  [lib/types.ts:591](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L591)
 
-**`Default`**
+##### `sidebar?`
+
+> `string`[]
+
+Defined in:  [lib/types.ts:592](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L592)
+
+##### `styleSheet?`
+
+> `object`
+
+```ts
+{
+    dateUploaded?: string;
+    name?: string;
+    uploadName?: string;
+}
+```
+
+###### Type declaration
+
+| Member | Type |
+| :------ | :------ |
+| `dateUploaded`? | `string` |
+| `name`? | `string` |
+| `uploadName`? | `string` |
+
+Defined in:  [lib/types.ts:593](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L593)
+
+##### `supportedLocales?`
+
+> `string`[]
+
+Defined in:  [lib/types.ts:598](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L598)
+
+##### `themePluginPath?`
+
+> `string`
+
+###### Default
 
 default
 
-###### Defined in
+Defined in:  [lib/types.ts:600](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L600)
 
-[libs/citations/ojs-types/src/lib/types.ts:600](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L600)
+##### `title?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### title
+Defined in:  [lib/types.ts:601](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L601)
 
-• `Optional` **title**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+***
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:601](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L601)
-
-### Interface: SiteEditable
-
-[ojs-api](.modules).SiteEditable
+### `SiteEditable`
 
 #### Properties
 
-##### about
+##### `about?`
 
-• `Optional` **about**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:1401](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1401)
 
-[libs/citations/ojs-types/src/lib/types.ts:1401](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1401)
+##### `contactEmail?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### contactEmail
+Defined in:  [lib/types.ts:1402](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1402)
 
-• `Optional` **contactEmail**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `contactName?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:1402](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1402)
+Defined in:  [lib/types.ts:1403](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1403)
 
----
+##### `enableBulkEmails?`
 
-##### contactName
+> `number`[]
 
-• `Optional` **contactName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1403](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1403)
-
----
-
-##### enableBulkEmails
-
-• `Optional` **enableBulkEmails**: `number`\[]
-
-**`Description`**
+###### Description
 
 Which hosted journals, presses or preprint servers are allowed to send bulk emails.
 
-###### Defined in
+Defined in:  [lib/types.ts:1405](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1405)
 
-[libs/citations/ojs-types/src/lib/types.ts:1405](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1405)
+##### `installedLocales?`
 
----
+> `string`[]
 
-##### installedLocales
+Defined in:  [lib/types.ts:1406](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1406)
 
-• `Optional` **installedLocales**: `string`\[]
+##### `minPasswordLength?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1406](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1406)
+Defined in:  [lib/types.ts:1407](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1407)
 
----
+##### `pageFooter?`
 
-##### minPasswordLength
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **minPasswordLength**: `number`
+Defined in:  [lib/types.ts:1408](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1408)
 
-###### Defined in
+##### `pageHeaderTitleImage?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1407](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1407)
+> `object`
 
----
-
-##### pageFooter
-
-• `Optional` **pageFooter**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1408](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1408)
-
----
-
-##### pageHeaderTitleImage
-
-• `Optional` **pageHeaderTitleImage**: `Object`
-
-###### Type declaration
-
-\| Name | Type |
-\| :------ | :------ |
-\| `en_US?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `height?`: `number` ; `name?`: `string` ; `temporaryFileId?`: `number` ; `uploadName?`: `string` ; `width?`: `number` } |
-\| `en_US.altText?` | `string` |
-\| `en_US.dateUploaded?` | `string` |
-\| `en_US.height?` | `number` |
-\| `en_US.name?` | `string` |
-\| `en_US.temporaryFileId?` | `number` |
-\| `en_US.uploadName?` | `string` |
-\| `en_US.width?` | `number` |
-\| `fr_CA?` | { `altText?`: `string` ; `dateUploaded?`: `string` ; `height?`: `number` ; `name?`: `string` ; `temporaryFileId?`: `number` ; `uploadName?`: `string` ; `width?`: `number` } |
-\| `fr_CA.altText?` | `string` |
-\| `fr_CA.dateUploaded?` | `string` |
-\| `fr_CA.height?` | `number` |
-\| `fr_CA.name?` | `string` |
-\| `fr_CA.temporaryFileId?` | `number` |
-\| `fr_CA.uploadName?` | `string` |
-\| `fr_CA.width?` | `number` |
-\| `properties?` | `unknown` |
-\| `type?` | `unknown` |
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1409](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1409)
-
----
-
-##### primaryLocale
-
-• `Optional` **primaryLocale**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1431](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1431)
-
----
-
-##### privacyStatement
-
-• `Optional` **privacyStatement**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1432](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1432)
-
----
-
-##### redirect
-
-• `Optional` **redirect**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1433](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1433)
-
----
-
-##### sidebar
-
-• `Optional` **sidebar**: `string`\[]
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1434](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1434)
-
----
-
-##### styleSheet
-
-• `Optional` **styleSheet**: `Object`
+```ts
+{
+    en_US?: {
+        altText?: string;
+        dateUploaded?: string;
+        height?: number;
+        name?: string;
+        temporaryFileId?: number;
+        uploadName?: string;
+        width?: number;
+    };
+    fr_CA?: {
+        altText?: string;
+        dateUploaded?: string;
+        height?: number;
+        name?: string;
+        temporaryFileId?: number;
+        uploadName?: string;
+        width?: number;
+    };
+    properties?: unknown;
+    type?: unknown;
+}
+```
 
 ###### Type declaration
 
-\| Name | Type |
-\| :------ | :------ |
-\| `dateUploaded?` | `string` |
-\| `name?` | `string` |
-\| `temporaryFileId?` | `number` |
-\| `uploadName?` | `string` |
+| Member | Type |
+| :------ | :------ |
+| `en_US`? | `object` |
+| `en_US.altText`? | `string` |
+| `en_US.dateUploaded`? | `string` |
+| `en_US.height`? | `number` |
+| `en_US.name`? | `string` |
+| `en_US.temporaryFileId`? | `number` |
+| `en_US.uploadName`? | `string` |
+| `en_US.width`? | `number` |
+| `fr_CA`? | `object` |
+| `fr_CA.altText`? | `string` |
+| `fr_CA.dateUploaded`? | `string` |
+| `fr_CA.height`? | `number` |
+| `fr_CA.name`? | `string` |
+| `fr_CA.temporaryFileId`? | `number` |
+| `fr_CA.uploadName`? | `string` |
+| `fr_CA.width`? | `number` |
+| `properties`? | `unknown` |
+| `type`? | `unknown` |
 
-###### Defined in
+Defined in:  [lib/types.ts:1409](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1409)
 
-[libs/citations/ojs-types/src/lib/types.ts:1435](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1435)
+##### `primaryLocale?`
 
----
+> `string`
 
-##### supportedLocales
+Defined in:  [lib/types.ts:1431](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1431)
 
-• `Optional` **supportedLocales**: `string`\[]
+##### `privacyStatement?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:1441](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1441)
+Defined in:  [lib/types.ts:1432](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1432)
 
----
+##### `redirect?`
 
-##### themePluginPath
+> `number`
 
-• `Optional` **themePluginPath**: `string`
+Defined in:  [lib/types.ts:1433](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1433)
 
-**`Default`**
+##### `sidebar?`
+
+> `string`[]
+
+Defined in:  [lib/types.ts:1434](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1434)
+
+##### `styleSheet?`
+
+> `object`
+
+```ts
+{
+    dateUploaded?: string;
+    name?: string;
+    temporaryFileId?: number;
+    uploadName?: string;
+}
+```
+
+###### Type declaration
+
+| Member | Type |
+| :------ | :------ |
+| `dateUploaded`? | `string` |
+| `name`? | `string` |
+| `temporaryFileId`? | `number` |
+| `uploadName`? | `string` |
+
+Defined in:  [lib/types.ts:1435](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1435)
+
+##### `supportedLocales?`
+
+> `string`[]
+
+Defined in:  [lib/types.ts:1441](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1441)
+
+##### `themePluginPath?`
+
+> `string`
+
+###### Default
 
 default
 
-###### Defined in
+Defined in:  [lib/types.ts:1443](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1443)
 
-[libs/citations/ojs-types/src/lib/types.ts:1443](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1443)
+##### `title?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### title
+Defined in:  [lib/types.ts:1444](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1444)
 
-• `Optional` **title**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+***
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1444](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1444)
-
-### Interface: Submission
-
-[ojs-api](.modules).Submission
+### `Submission`
 
 #### Properties
 
-##### \_href
+##### `\_href?`
 
-• `Optional` **\_href**: `string`
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:604](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L604)
 
-[libs/citations/ojs-types/src/lib/types.ts:604](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L604)
+##### `contextId?`
 
----
+> `number`
 
-##### contextId
+Defined in:  [lib/types.ts:605](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L605)
 
-• `Optional` **contextId**: `number`
+##### `currentPublicationId?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:605](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L605)
-
----
-
-##### currentPublicationId
-
-• `Optional` **currentPublicationId**: `number`
-
-**`Description`**
+###### Description
 
 Which publication is the latest published version.
 
-###### Defined in
+Defined in:  [lib/types.ts:607](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L607)
 
-[libs/citations/ojs-types/src/lib/types.ts:607](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L607)
+##### `dateLastActivity?`
 
----
+> `string`
 
-##### dateLastActivity
-
-• `Optional` **dateLastActivity**: `string`
-
-**`Description`**
+###### Description
 
 The last time activity was recorded related to this submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:609](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L609)
 
-[libs/citations/ojs-types/src/lib/types.ts:609](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L609)
+##### `dateSubmitted?`
 
----
+> `string`
 
-##### dateSubmitted
+Defined in:  [lib/types.ts:610](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L610)
 
-• `Optional` **dateSubmitted**: `string`
+##### `id?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:610](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L610)
+Defined in:  [lib/types.ts:611](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L611)
 
----
+##### `lastModified?`
 
-##### id
+> `string`
 
-• `Optional` **id**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:611](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L611)
-
----
-
-##### lastModified
-
-• `Optional` **lastModified**: `string`
-
-**`Description`**
+###### Description
 
 The last time a modification was made to this submission or any of its associated objects.
 
-###### Defined in
+Defined in:  [lib/types.ts:613](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L613)
 
-[libs/citations/ojs-types/src/lib/types.ts:613](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L613)
+##### `locale?`
 
----
+> `string`
 
-##### locale
-
-• `Optional` **locale**: `string`
-
-**`Description`**
+###### Description
 
 The primary language of this submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:615](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L615)
 
-[libs/citations/ojs-types/src/lib/types.ts:615](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L615)
+##### `publications?`
 
----
+> [`Publication`](modules.md#publication)[]
 
-##### publications
-
-• `Optional` **publications**: [`Publication`](.interfaces/ojs_api.Publication.md)\[]
-
-**`Description`**
+###### Description
 
 A list of publications that have been created for this submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:617](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L617)
 
-[libs/citations/ojs-types/src/lib/types.ts:617](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L617)
+##### `reviewAssignments?`
 
----
+> {
+> `dateDue`?: `number`;
+> `dateResponseDue`?: `number`;
+> `id`?: `number`;
+> `isCurrentUserAssigned`?: `number`;
+> `reviewRoundId`?: `number`;
+> `round`?: `number`;
+> `status`?: `number`;
+> `statusLabel`?: `number`;
+> }[]
 
-##### reviewAssignments
-
-• `Optional` **reviewAssignments**: { `dateDue?`: `number` ; `dateResponseDue?`: `number` ; `id?`: `number` ; `isCurrentUserAssigned?`: `number` ; `reviewRoundId?`: `number` ; `round?`: `number` ; `status?`: `number` ; `statusLabel?`: `number` }\[]
-
-**`Description`**
+###### Description
 
 Information about pending and completed review assignments.
 
-###### Defined in
+Defined in:  [lib/types.ts:619](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L619)
 
-[libs/citations/ojs-types/src/lib/types.ts:619](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L619)
+##### `reviewRounds?`
 
----
+> [`ReviewRound`](modules.md#reviewround)[]
 
-##### reviewRounds
-
-• `Optional` **reviewRounds**: [`ReviewRound`](.interfaces/ojs_api.ReviewRound.md)\[]
-
-**`Description`**
+###### Description
 
 A list of review rounds that have been opened for this submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:630](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L630)
 
-[libs/citations/ojs-types/src/lib/types.ts:630](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L630)
+##### `stageId?`
 
----
+> `number`
 
-##### stageId
-
-• `Optional` **stageId**: `number`
-
-**`Description`**
+###### Description
 
 The stage of the editorial workflow that this submission is currently in. One of the `WORKFLOW_STAGE_` constants. Default is `WORKFLOW_STAGE_SUBMISSION`.
 
-**`Default`**
+###### Default
 
 1
 
-###### Defined in
+Defined in:  [lib/types.ts:635](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L635)
 
-[libs/citations/ojs-types/src/lib/types.ts:635](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L635)
+##### `stages?`
 
----
+> {
+> `currentUserAssignedRoles`?: `number`[];
+> `files`?: {
+> `count`?: `number`;
+> };
+> `id`?: `number`;
+> `isActiveStage`?: `boolean`;
+> `label`?: `string`;
+> `queries`?: `unknown`[];
+> `status`?: `string`;
+> `statusId`?: `number`;
+> }[]
 
-##### stages
-
-• `Optional` **stages**: { `currentUserAssignedRoles?`: `number`\[] ; `files?`: { `count?`: `number` } ; `id?`: `number` ; `isActiveStage?`: `boolean` ; `label?`: `string` ; `queries?`: `unknown`\[] ; `status?`: `string` ; `statusId?`: `number` }\[]
-
-**`Description`**
+###### Description
 
 Key data about the status, files and discussions of each stage.
 
-###### Defined in
+Defined in:  [lib/types.ts:637](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L637)
 
-[libs/citations/ojs-types/src/lib/types.ts:637](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L637)
+##### `status?`
 
----
+> `number`
 
-##### status
-
-• `Optional` **status**: `number`
-
-**`Description`**
+###### Description
 
 Whether the submission is Published, Declined, Scheduled or Queued (still in the workflow). One of the `STATUS_*` constants. Default is `STATUS_QUEUED`.
 
-**`Default`**
+###### Default
 
 1
 
-###### Defined in
+Defined in:  [lib/types.ts:653](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L653)
 
-[libs/citations/ojs-types/src/lib/types.ts:653](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L653)
+##### `statusLabel?`
 
----
+> `string`
 
-##### statusLabel
-
-• `Optional` **statusLabel**: `string`
-
-**`Description`**
+###### Description
 
 A human-readable version of the submission's status. It will be Published, Declined, Queued (still in the workflow) or Scheduled.
 
-###### Defined in
+Defined in:  [lib/types.ts:655](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L655)
 
-[libs/citations/ojs-types/src/lib/types.ts:655](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L655)
+##### `submissionProgress?`
 
----
+> `number`
 
-##### submissionProgress
-
-• `Optional` **submissionProgress**: `number`
-
-**`Description`**
+###### Description
 
 This number tracks a submission's progress before it is submitted to the journal or press. After submission, it will be set to `0`, indicating it is ready for an editor's consideration.
 
-**`Default`**
+###### Default
 
 1
 
-###### Defined in
+Defined in:  [lib/types.ts:660](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L660)
 
-[libs/citations/ojs-types/src/lib/types.ts:660](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L660)
+##### `urlAuthorWorkflow?`
 
----
+> `string`
 
-##### urlAuthorWorkflow
-
-• `Optional` **urlAuthorWorkflow**: `string`
-
-**`Description`**
+###### Description
 
 A URL to the author's editorial workflow.
 
-###### Defined in
+Defined in:  [lib/types.ts:662](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L662)
 
-[libs/citations/ojs-types/src/lib/types.ts:662](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L662)
+##### `urlEditorialWorkflow?`
 
----
+> `string`
 
-##### urlEditorialWorkflow
-
-• `Optional` **urlEditorialWorkflow**: `string`
-
-**`Description`**
+###### Description
 
 A URL to the editors' and assistants' editorial workflow.
 
-###### Defined in
+Defined in:  [lib/types.ts:664](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L664)
 
-[libs/citations/ojs-types/src/lib/types.ts:664](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L664)
+##### `urlPublished?`
 
----
+> `string`
 
-##### urlPublished
-
-• `Optional` **urlPublished**: `string`
-
-**`Description`**
+###### Description
 
 A URL to the current publication or where it will be published.
 
-###### Defined in
+Defined in:  [lib/types.ts:666](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L666)
 
-[libs/citations/ojs-types/src/lib/types.ts:666](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L666)
+##### `urlWorkflow?`
 
----
+> `string`
 
-##### urlWorkflow
-
-• `Optional` **urlWorkflow**: `string`
-
-**`Description`**
+###### Description
 
 A URL to the workflow most appropriate for the current user. It will match the `urlAuthorWorkflow` or \`urlEditorialWorkflow.
 
-###### Defined in
+Defined in:  [lib/types.ts:668](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L668)
 
-[libs/citations/ojs-types/src/lib/types.ts:668](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L668)
+***
 
-### Interface: SubmissionEditable
-
-[ojs-api](.modules).SubmissionEditable
+### `SubmissionEditable`
 
 #### Properties
 
-##### contextId
+##### `contextId?`
 
-• `Optional` **contextId**: `number`
+> `number`
 
-###### Defined in
+Defined in:  [lib/types.ts:1447](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1447)
 
-[libs/citations/ojs-types/src/lib/types.ts:1447](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1447)
+##### `currentPublicationId?`
 
----
+> `number`
 
-##### currentPublicationId
-
-• `Optional` **currentPublicationId**: `number`
-
-**`Description`**
+###### Description
 
 Which publication is the latest published version.
 
-###### Defined in
+Defined in:  [lib/types.ts:1449](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1449)
 
-[libs/citations/ojs-types/src/lib/types.ts:1449](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1449)
+##### `dateLastActivity?`
 
----
+> `string`
 
-##### dateLastActivity
-
-• `Optional` **dateLastActivity**: `string`
-
-**`Description`**
+###### Description
 
 The last time activity was recorded related to this submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:1451](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1451)
 
-[libs/citations/ojs-types/src/lib/types.ts:1451](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1451)
+##### `dateSubmitted?`
 
----
+> `string`
 
-##### dateSubmitted
+Defined in:  [lib/types.ts:1452](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1452)
 
-• `Optional` **dateSubmitted**: `string`
+##### `id?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1452](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1452)
+Defined in:  [lib/types.ts:1453](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1453)
 
----
+##### `lastModified?`
 
-##### id
+> `string`
 
-• `Optional` **id**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1453](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1453)
-
----
-
-##### lastModified
-
-• `Optional` **lastModified**: `string`
-
-**`Description`**
+###### Description
 
 The last time a modification was made to this submission or any of its associated objects.
 
-###### Defined in
+Defined in:  [lib/types.ts:1455](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1455)
 
-[libs/citations/ojs-types/src/lib/types.ts:1455](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1455)
+##### `locale?`
 
----
+> `string`
 
-##### locale
-
-• `Optional` **locale**: `string`
-
-**`Description`**
+###### Description
 
 The primary language of this submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:1457](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1457)
 
-[libs/citations/ojs-types/src/lib/types.ts:1457](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1457)
+##### `stageId?`
 
----
+> `number`
 
-##### stageId
-
-• `Optional` **stageId**: `number`
-
-**`Description`**
+###### Description
 
 The stage of the editorial workflow that this submission is currently in. One of the `WORKFLOW_STAGE_` constants. Default is `WORKFLOW_STAGE_SUBMISSION`.
 
-**`Default`**
+###### Default
 
 1
 
-###### Defined in
+Defined in:  [lib/types.ts:1462](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1462)
 
-[libs/citations/ojs-types/src/lib/types.ts:1462](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1462)
+##### `status?`
 
----
+> `number`
 
-##### status
-
-• `Optional` **status**: `number`
-
-**`Description`**
+###### Description
 
 Whether the submission is Published, Declined, Scheduled or Queued (still in the workflow). One of the `STATUS_*` constants. Default is `STATUS_QUEUED`.
 
-**`Default`**
+###### Default
 
 1
 
-###### Defined in
+Defined in:  [lib/types.ts:1467](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1467)
 
-[libs/citations/ojs-types/src/lib/types.ts:1467](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1467)
+##### `submissionProgress?`
 
----
+> `number`
 
-##### submissionProgress
-
-• `Optional` **submissionProgress**: `number`
-
-**`Description`**
+###### Description
 
 This number tracks a submission's progress before it is submitted to the journal or press. After submission, it will be set to `0`, indicating it is ready for an editor's consideration.
 
-**`Default`**
+###### Default
 
 1
 
-###### Defined in
+Defined in:  [lib/types.ts:1472](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1472)
 
-[libs/citations/ojs-types/src/lib/types.ts:1472](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1472)
+***
 
-### Interface: SubmissionFile
-
-[ojs-api](.modules).SubmissionFile
+### `SubmissionFile`
 
 #### Properties
 
-##### \_href
+##### `\_href?`
 
-• `Optional` **\_href**: `string`
+> `string`
 
 Format: uri
 
-###### Defined in
+Defined in:  [lib/types.ts:672](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L672)
 
-[libs/citations/ojs-types/src/lib/types.ts:672](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L672)
+##### `assocId?`
 
----
+> `number`
 
-##### assocId
-
-• `Optional` **assocId**: `number`
-
-**`Description`**
+###### Description
 
 Used with `assocType` to associate this file with an object such as a galley.
 
-###### Defined in
+Defined in:  [lib/types.ts:674](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L674)
 
-[libs/citations/ojs-types/src/lib/types.ts:674](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L674)
+##### `assocType?`
 
----
+> `number`
 
-##### assocType
-
-• `Optional` **assocType**: `number`
-
-**`Description`**
+###### Description
 
 Used with `assocId` to associate this file with an object such as a galley. One of the following constants: `ASSOC_TYPE_SUBMISSION_FILE` (dependent files), `ASSOC_TYPE_REVIEW_ASSIGNMENT` (files uploaded by a reviewer), `ASSOC_TYPE_NOTE` (files uploaded with a discussion), `ASSOC_TYPE_REPRESENTATION` (files uploaded to a galley or publication format), `ASSOC_TYPE_REVIEW_ROUND` (review files and revisions for a particular review round).
 
-###### Defined in
+Defined in:  [lib/types.ts:676](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L676)
 
-[libs/citations/ojs-types/src/lib/types.ts:676](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L676)
+##### `caption?`
 
----
+> `string`
 
-##### caption
-
-• `Optional` **caption**: `string`
-
-**`Description`**
+###### Description
 
 A caption for this file. Used with artwork such as images.
 
-###### Defined in
+Defined in:  [lib/types.ts:678](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L678)
 
-[libs/citations/ojs-types/src/lib/types.ts:678](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L678)
+##### `copyrightOwner?`
 
----
+> `string`
 
-##### copyrightOwner
-
-• `Optional` **copyrightOwner**: `string`
-
-**`Description`**
+###### Description
 
 The copyright owner of this file. Used with artwork such as images.
 
-###### Defined in
+Defined in:  [lib/types.ts:680](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L680)
 
-[libs/citations/ojs-types/src/lib/types.ts:680](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L680)
+##### `createdAt?`
 
----
+> `string`
 
-##### createdAt
-
-• `Optional` **createdAt**: `string`
-
-**`Description`**
+###### Description
 
 The date this submission file object was created in the system. Set automatically by the software.
 
-###### Defined in
+Defined in:  [lib/types.ts:682](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L682)
 
-[libs/citations/ojs-types/src/lib/types.ts:682](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L682)
+##### `creator?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### creator
+Defined in:  [lib/types.ts:683](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L683)
 
-• `Optional` **creator**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `credit?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:683](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L683)
-
----
-
-##### credit
-
-• `Optional` **credit**: `string`
-
-**`Description`**
+###### Description
 
 An attribution for this file, such as a photographer's name. Used with artwork such as images.
 
-###### Defined in
+Defined in:  [lib/types.ts:685](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L685)
 
-[libs/citations/ojs-types/src/lib/types.ts:685](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L685)
+##### `dateCreated?`
 
----
+> `string`
 
-##### dateCreated
-
-• `Optional` **dateCreated**: `string`
-
-**`Description`**
+###### Description
 
 Public metadata about when this content was created. Used with supplementary files.
 
-###### Defined in
+Defined in:  [lib/types.ts:687](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L687)
 
-[libs/citations/ojs-types/src/lib/types.ts:687](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L687)
+##### `dependentFiles?`
 
----
+> [`SubmissionFile`](modules.md#submissionfile)[]
 
-##### dependentFiles
-
-• `Optional` **dependentFiles**: [`SubmissionFile`](.interfaces/ojs_api.SubmissionFile.md)\[]
-
-**`Description`**
+###### Description
 
 Any dependent files, typically images or audio files that are loaded by an HTML file.
 
-###### Defined in
+Defined in:  [lib/types.ts:689](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L689)
 
-[libs/citations/ojs-types/src/lib/types.ts:689](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L689)
+##### `description?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### description
+Defined in:  [lib/types.ts:690](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L690)
 
-• `Optional` **description**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `documentType?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:690](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L690)
+Defined in:  [lib/types.ts:691](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L691)
 
----
+##### `fileId?`
 
-##### documentType
+> `number`
 
-• `Optional` **documentType**: `string`
+Defined in:  [lib/types.ts:692](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L692)
 
-###### Defined in
+##### `fileStage?`
 
-[libs/citations/ojs-types/src/lib/types.ts:691](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L691)
+> `number`
 
----
+Defined in:  [lib/types.ts:693](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L693)
 
-##### fileId
+##### `genreId?`
 
-• `Optional` **fileId**: `number`
+> `number`
 
-###### Defined in
+Defined in:  [lib/types.ts:694](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L694)
 
-[libs/citations/ojs-types/src/lib/types.ts:692](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L692)
+##### `id?`
 
----
+> `number`
 
-##### fileStage
+Defined in:  [lib/types.ts:695](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L695)
 
-• `Optional` **fileStage**: `number`
+##### `language?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:693](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L693)
-
----
-
-##### genreId
-
-• `Optional` **genreId**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:694](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L694)
-
----
-
-##### id
-
-• `Optional` **id**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:695](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L695)
-
----
-
-##### language
-
-• `Optional` **language**: `string`
-
-**`Description`**
+###### Description
 
 The language of this file if it contains text. Used with supplementary files.
 
-###### Defined in
+Defined in:  [lib/types.ts:697](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L697)
 
-[libs/citations/ojs-types/src/lib/types.ts:697](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L697)
+##### `locale?`
 
----
+> `string`
 
-##### locale
-
-• `Optional` **locale**: `string`
-
-**`Description`**
+###### Description
 
 The primary locale of the submission this file is attached to. This locale is used as the fallback when a language is missing from a multilingual property.
 
-###### Defined in
+Defined in:  [lib/types.ts:699](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L699)
 
-[libs/citations/ojs-types/src/lib/types.ts:699](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L699)
+##### `mimetype?`
 
----
+> `string`
 
-##### mimetype
+Defined in:  [lib/types.ts:700](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L700)
 
-• `Optional` **mimetype**: `string`
+##### `name?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:700](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L700)
+Defined in:  [lib/types.ts:701](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L701)
 
----
+##### `path?`
 
-##### name
+> `string`
 
-• `Optional` **name**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:702](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L702)
 
-###### Defined in
+##### `publisher?`
 
-[libs/citations/ojs-types/src/lib/types.ts:701](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L701)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:703](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L703)
 
-##### path
+##### `revisions?`
 
-• `Optional` **path**: `string`
+> {
+> `documentType`?: `string`;
+> `fileId`?: `number`;
+> `mimetype`?: `string`;
+> `path`?: `string`;
+> `url`?: `string`;
+> }[]
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:702](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L702)
-
----
-
-##### publisher
-
-• `Optional` **publisher**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:703](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L703)
-
----
-
-##### revisions
-
-• `Optional` **revisions**: { `documentType?`: `string` ; `fileId?`: `number` ; `mimetype?`: `string` ; `path?`: `string` ; `url?`: `string` }\[]
-
-**`Description`**
+###### Description
 
 Previous versions of this file.
 
-###### Defined in
+Defined in:  [lib/types.ts:705](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L705)
 
-[libs/citations/ojs-types/src/lib/types.ts:705](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L705)
+##### `source?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### source
+Defined in:  [lib/types.ts:712](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L712)
 
-• `Optional` **source**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `sourceSubmissionFileId?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:712](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L712)
-
----
-
-##### sourceSubmissionFileId
-
-• `Optional` **sourceSubmissionFileId**: `number`
-
-**`Description`**
+###### Description
 
 When a submission file is promoted from one stage to another, this property identifies the source file from which this file was promoted. Default: `null`.
 
-###### Defined in
+Defined in:  [lib/types.ts:714](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L714)
 
-[libs/citations/ojs-types/src/lib/types.ts:714](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L714)
+##### `sponsor?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### sponsor
+Defined in:  [lib/types.ts:715](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L715)
 
-• `Optional` **sponsor**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `subject?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:715](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L715)
+Defined in:  [lib/types.ts:716](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L716)
 
----
+##### `submissionId?`
 
-##### subject
+> `number`
 
-• `Optional` **subject**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:717](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L717)
 
-###### Defined in
+##### `terms?`
 
-[libs/citations/ojs-types/src/lib/types.ts:716](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L716)
+> `string`
 
----
-
-##### submissionId
-
-• `Optional` **submissionId**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:717](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L717)
-
----
-
-##### terms
-
-• `Optional` **terms**: `string`
-
-**`Description`**
+###### Description
 
 Licensing terms for this file. Used with artwork such as images.
 
-###### Defined in
+Defined in:  [lib/types.ts:719](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L719)
 
-[libs/citations/ojs-types/src/lib/types.ts:719](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L719)
+##### `updatedAt?`
 
----
+> `string`
 
-##### updatedAt
-
-• `Optional` **updatedAt**: `string`
-
-**`Description`**
+###### Description
 
 When this object was last updated.
 
-###### Defined in
+Defined in:  [lib/types.ts:721](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L721)
 
-[libs/citations/ojs-types/src/lib/types.ts:721](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L721)
+##### `uploaderUserId?`
 
----
+> `number`
 
-##### uploaderUserId
+Defined in:  [lib/types.ts:722](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L722)
 
-• `Optional` **uploaderUserId**: `number`
+##### `url?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:722](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L722)
+Defined in:  [lib/types.ts:723](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L723)
 
----
+##### `viewable?`
 
-##### url
+> `boolean`
 
-• `Optional` **url**: `string`
+Defined in:  [lib/types.ts:724](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L724)
 
-###### Defined in
+***
 
-[libs/citations/ojs-types/src/lib/types.ts:723](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L723)
-
----
-
-##### viewable
-
-• `Optional` **viewable**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:724](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L724)
-
-### Interface: SubmissionFileEditable
-
-[ojs-api](.modules).SubmissionFileEditable
+### `SubmissionFileEditable`
 
 #### Properties
 
-##### assocId
+##### `assocId?`
 
-• `Optional` **assocId**: `number`
+> `number`
 
-**`Description`**
+###### Description
 
 Used with `assocType` to associate this file with an object such as a galley.
 
-###### Defined in
+Defined in:  [lib/types.ts:1517](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1517)
 
-[libs/citations/ojs-types/src/lib/types.ts:1517](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1517)
+##### `assocType?`
 
----
+> `number`
 
-##### assocType
-
-• `Optional` **assocType**: `number`
-
-**`Description`**
+###### Description
 
 Used with `assocId` to associate this file with an object such as a galley. One of the following constants: `ASSOC_TYPE_SUBMISSION_FILE` (dependent files), `ASSOC_TYPE_REVIEW_ASSIGNMENT` (files uploaded by a reviewer), `ASSOC_TYPE_NOTE` (files uploaded with a discussion), `ASSOC_TYPE_REPRESENTATION` (files uploaded to a galley or publication format), `ASSOC_TYPE_REVIEW_ROUND` (review files and revisions for a particular review round).
 
-###### Defined in
+Defined in:  [lib/types.ts:1519](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1519)
 
-[libs/citations/ojs-types/src/lib/types.ts:1519](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1519)
+##### `caption?`
 
----
+> `string`
 
-##### caption
-
-• `Optional` **caption**: `string`
-
-**`Description`**
+###### Description
 
 A caption for this file. Used with artwork such as images.
 
-###### Defined in
+Defined in:  [lib/types.ts:1521](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1521)
 
-[libs/citations/ojs-types/src/lib/types.ts:1521](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1521)
+##### `copyrightOwner?`
 
----
+> `string`
 
-##### copyrightOwner
-
-• `Optional` **copyrightOwner**: `string`
-
-**`Description`**
+###### Description
 
 The copyright owner of this file. Used with artwork such as images.
 
-###### Defined in
+Defined in:  [lib/types.ts:1523](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1523)
 
-[libs/citations/ojs-types/src/lib/types.ts:1523](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1523)
+##### `createdAt?`
 
----
+> `string`
 
-##### createdAt
-
-• `Optional` **createdAt**: `string`
-
-**`Description`**
+###### Description
 
 The date this submission file object was created in the system. Set automatically by the software.
 
-###### Defined in
+Defined in:  [lib/types.ts:1525](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1525)
 
-[libs/citations/ojs-types/src/lib/types.ts:1525](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1525)
+##### `creator?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### creator
+Defined in:  [lib/types.ts:1526](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1526)
 
-• `Optional` **creator**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `credit?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:1526](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1526)
-
----
-
-##### credit
-
-• `Optional` **credit**: `string`
-
-**`Description`**
+###### Description
 
 An attribution for this file, such as a photographer's name. Used with artwork such as images.
 
-###### Defined in
+Defined in:  [lib/types.ts:1528](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1528)
 
-[libs/citations/ojs-types/src/lib/types.ts:1528](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1528)
+##### `dateCreated?`
 
----
+> `string`
 
-##### dateCreated
-
-• `Optional` **dateCreated**: `string`
-
-**`Description`**
+###### Description
 
 Public metadata about when this content was created. Used with supplementary files.
 
-###### Defined in
+Defined in:  [lib/types.ts:1530](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1530)
 
-[libs/citations/ojs-types/src/lib/types.ts:1530](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1530)
+##### `description?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### description
+Defined in:  [lib/types.ts:1531](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1531)
 
-• `Optional` **description**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `file?`
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1531](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1531)
-
----
-
-##### file
-
-• `Optional` **file**: `string`
+> `string`
 
 Format: binary
 
-###### Defined in
+Defined in:  [lib/types.ts:1533](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1533)
 
-[libs/citations/ojs-types/src/lib/types.ts:1533](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1533)
+##### `fileId?`
 
----
+> `number`
 
-##### fileId
+Defined in:  [lib/types.ts:1534](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1534)
 
-• `Optional` **fileId**: `number`
+##### `fileStage?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1534](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1534)
+Defined in:  [lib/types.ts:1535](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1535)
 
----
+##### `genreId?`
 
-##### fileStage
+> `number`
 
-• `Optional` **fileStage**: `number`
+Defined in:  [lib/types.ts:1536](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1536)
 
-###### Defined in
+##### `language?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1535](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1535)
+> `string`
 
----
-
-##### genreId
-
-• `Optional` **genreId**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1536](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1536)
-
----
-
-##### language
-
-• `Optional` **language**: `string`
-
-**`Description`**
+###### Description
 
 The language of this file if it contains text. Used with supplementary files.
 
-###### Defined in
+Defined in:  [lib/types.ts:1538](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1538)
 
-[libs/citations/ojs-types/src/lib/types.ts:1538](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1538)
+##### `name?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### name
+Defined in:  [lib/types.ts:1539](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1539)
 
-• `Optional` **name**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `publisher?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:1539](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1539)
+Defined in:  [lib/types.ts:1540](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1540)
 
----
+##### `source?`
 
-##### publisher
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **publisher**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:1541](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1541)
 
-###### Defined in
+##### `sourceSubmissionFileId?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1540](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1540)
+> `number`
 
----
-
-##### source
-
-• `Optional` **source**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1541](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1541)
-
----
-
-##### sourceSubmissionFileId
-
-• `Optional` **sourceSubmissionFileId**: `number`
-
-**`Description`**
+###### Description
 
 When a submission file is promoted from one stage to another, this property identifies the source file from which this file was promoted. Default: `null`.
 
-###### Defined in
+Defined in:  [lib/types.ts:1543](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1543)
 
-[libs/citations/ojs-types/src/lib/types.ts:1543](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1543)
+##### `sponsor?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### sponsor
+Defined in:  [lib/types.ts:1544](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1544)
 
-• `Optional` **sponsor**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `subject?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:1544](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1544)
+Defined in:  [lib/types.ts:1545](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1545)
 
----
+##### `submissionId?`
 
-##### subject
+> `number`
 
-• `Optional` **subject**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:1546](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1546)
 
-###### Defined in
+##### `terms?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1545](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1545)
+> `string`
 
----
-
-##### submissionId
-
-• `Optional` **submissionId**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1546](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1546)
-
----
-
-##### terms
-
-• `Optional` **terms**: `string`
-
-**`Description`**
+###### Description
 
 Licensing terms for this file. Used with artwork such as images.
 
-###### Defined in
+Defined in:  [lib/types.ts:1548](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1548)
 
-[libs/citations/ojs-types/src/lib/types.ts:1548](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1548)
+##### `updatedAt?`
 
----
+> `string`
 
-##### updatedAt
-
-• `Optional` **updatedAt**: `string`
-
-**`Description`**
+###### Description
 
 When this object was last updated.
 
-###### Defined in
+Defined in:  [lib/types.ts:1550](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1550)
 
-[libs/citations/ojs-types/src/lib/types.ts:1550](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1550)
+##### `uploaderUserId?`
 
----
+> `number`
 
-##### uploaderUserId
+Defined in:  [lib/types.ts:1551](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1551)
 
-• `Optional` **uploaderUserId**: `number`
+##### `viewable?`
 
-###### Defined in
+> `boolean`
 
-[libs/citations/ojs-types/src/lib/types.ts:1551](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1551)
+Defined in:  [lib/types.ts:1552](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1552)
 
----
+***
 
-##### viewable
-
-• `Optional` **viewable**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1552](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1552)
-
-### Interface: SubmissionFileSummary
-
-[ojs-api](.modules).SubmissionFileSummary
+### `SubmissionFileSummary`
 
 #### Properties
 
-##### \_href
+##### `\_href?`
 
-• `Optional` **\_href**: `string`
+> `string`
 
 Format: uri
 
-###### Defined in
+Defined in:  [lib/types.ts:1556](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1556)
 
-[libs/citations/ojs-types/src/lib/types.ts:1556](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1556)
+##### `assocId?`
 
----
+> `number`
 
-##### assocId
-
-• `Optional` **assocId**: `number`
-
-**`Description`**
+###### Description
 
 Used with `assocType` to associate this file with an object such as a galley.
 
-###### Defined in
+Defined in:  [lib/types.ts:1558](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1558)
 
-[libs/citations/ojs-types/src/lib/types.ts:1558](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1558)
+##### `assocType?`
 
----
+> `number`
 
-##### assocType
-
-• `Optional` **assocType**: `number`
-
-**`Description`**
+###### Description
 
 Used with `assocId` to associate this file with an object such as a galley. One of the following constants: `ASSOC_TYPE_SUBMISSION_FILE` (dependent files), `ASSOC_TYPE_REVIEW_ASSIGNMENT` (files uploaded by a reviewer), `ASSOC_TYPE_NOTE` (files uploaded with a discussion), `ASSOC_TYPE_REPRESENTATION` (files uploaded to a galley or publication format), `ASSOC_TYPE_REVIEW_ROUND` (review files and revisions for a particular review round).
 
-###### Defined in
+Defined in:  [lib/types.ts:1560](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1560)
 
-[libs/citations/ojs-types/src/lib/types.ts:1560](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1560)
+##### `caption?`
 
----
+> `string`
 
-##### caption
-
-• `Optional` **caption**: `string`
-
-**`Description`**
+###### Description
 
 A caption for this file. Used with artwork such as images.
 
-###### Defined in
+Defined in:  [lib/types.ts:1562](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1562)
 
-[libs/citations/ojs-types/src/lib/types.ts:1562](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1562)
+##### `copyrightOwner?`
 
----
+> `string`
 
-##### copyrightOwner
-
-• `Optional` **copyrightOwner**: `string`
-
-**`Description`**
+###### Description
 
 The copyright owner of this file. Used with artwork such as images.
 
-###### Defined in
+Defined in:  [lib/types.ts:1564](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1564)
 
-[libs/citations/ojs-types/src/lib/types.ts:1564](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1564)
+##### `createdAt?`
 
----
+> `string`
 
-##### createdAt
-
-• `Optional` **createdAt**: `string`
-
-**`Description`**
+###### Description
 
 The date this submission file object was created in the system. Set automatically by the software.
 
-###### Defined in
+Defined in:  [lib/types.ts:1566](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1566)
 
-[libs/citations/ojs-types/src/lib/types.ts:1566](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1566)
+##### `creator?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### creator
+Defined in:  [lib/types.ts:1567](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1567)
 
-• `Optional` **creator**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `credit?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:1567](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1567)
-
----
-
-##### credit
-
-• `Optional` **credit**: `string`
-
-**`Description`**
+###### Description
 
 An attribution for this file, such as a photographer's name. Used with artwork such as images.
 
-###### Defined in
+Defined in:  [lib/types.ts:1569](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1569)
 
-[libs/citations/ojs-types/src/lib/types.ts:1569](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1569)
+##### `dateCreated?`
 
----
+> `string`
 
-##### dateCreated
-
-• `Optional` **dateCreated**: `string`
-
-**`Description`**
+###### Description
 
 Public metadata about when this content was created. Used with supplementary files.
 
-###### Defined in
+Defined in:  [lib/types.ts:1571](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1571)
 
-[libs/citations/ojs-types/src/lib/types.ts:1571](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1571)
+##### `description?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### description
+Defined in:  [lib/types.ts:1572](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1572)
 
-• `Optional` **description**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `documentType?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:1572](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1572)
+Defined in:  [lib/types.ts:1573](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1573)
 
----
+##### `fileId?`
 
-##### documentType
+> `number`
 
-• `Optional` **documentType**: `string`
+Defined in:  [lib/types.ts:1574](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1574)
 
-###### Defined in
+##### `fileStage?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1573](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1573)
+> `number`
 
----
+Defined in:  [lib/types.ts:1575](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1575)
 
-##### fileId
+##### `genreId?`
 
-• `Optional` **fileId**: `number`
+> `number`
 
-###### Defined in
+Defined in:  [lib/types.ts:1576](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1576)
 
-[libs/citations/ojs-types/src/lib/types.ts:1574](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1574)
+##### `id?`
 
----
+> `number`
 
-##### fileStage
+Defined in:  [lib/types.ts:1577](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1577)
 
-• `Optional` **fileStage**: `number`
+##### `language?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:1575](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1575)
-
----
-
-##### genreId
-
-• `Optional` **genreId**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1576](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1576)
-
----
-
-##### id
-
-• `Optional` **id**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1577](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1577)
-
----
-
-##### language
-
-• `Optional` **language**: `string`
-
-**`Description`**
+###### Description
 
 The language of this file if it contains text. Used with supplementary files.
 
-###### Defined in
+Defined in:  [lib/types.ts:1579](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1579)
 
-[libs/citations/ojs-types/src/lib/types.ts:1579](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1579)
+##### `locale?`
 
----
+> `string`
 
-##### locale
-
-• `Optional` **locale**: `string`
-
-**`Description`**
+###### Description
 
 The primary locale of the submission this file is attached to. This locale is used as the fallback when a language is missing from a multilingual property.
 
-###### Defined in
+Defined in:  [lib/types.ts:1581](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1581)
 
-[libs/citations/ojs-types/src/lib/types.ts:1581](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1581)
+##### `mimetype?`
 
----
+> `string`
 
-##### mimetype
+Defined in:  [lib/types.ts:1582](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1582)
 
-• `Optional` **mimetype**: `string`
+##### `name?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:1582](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1582)
+Defined in:  [lib/types.ts:1583](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1583)
 
----
+##### `path?`
 
-##### name
+> `string`
 
-• `Optional` **name**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:1584](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1584)
 
-###### Defined in
+##### `publisher?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1583](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1583)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:1585](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1585)
 
-##### path
+##### `source?`
 
-• `Optional` **path**: `string`
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:1586](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1586)
 
-[libs/citations/ojs-types/src/lib/types.ts:1584](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1584)
+##### `sourceSubmissionFileId?`
 
----
+> `number`
 
-##### publisher
-
-• `Optional` **publisher**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1585](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1585)
-
----
-
-##### source
-
-• `Optional` **source**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1586](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1586)
-
----
-
-##### sourceSubmissionFileId
-
-• `Optional` **sourceSubmissionFileId**: `number`
-
-**`Description`**
+###### Description
 
 When a submission file is promoted from one stage to another, this property identifies the source file from which this file was promoted. Default: `null`.
 
-###### Defined in
+Defined in:  [lib/types.ts:1588](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1588)
 
-[libs/citations/ojs-types/src/lib/types.ts:1588](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1588)
+##### `sponsor?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### sponsor
+Defined in:  [lib/types.ts:1589](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1589)
 
-• `Optional` **sponsor**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `subject?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:1589](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1589)
+Defined in:  [lib/types.ts:1590](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1590)
 
----
+##### `submissionId?`
 
-##### subject
+> `number`
 
-• `Optional` **subject**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:1591](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1591)
 
-###### Defined in
+##### `terms?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1590](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1590)
+> `string`
 
----
-
-##### submissionId
-
-• `Optional` **submissionId**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1591](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1591)
-
----
-
-##### terms
-
-• `Optional` **terms**: `string`
-
-**`Description`**
+###### Description
 
 Licensing terms for this file. Used with artwork such as images.
 
-###### Defined in
+Defined in:  [lib/types.ts:1593](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1593)
 
-[libs/citations/ojs-types/src/lib/types.ts:1593](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1593)
+##### `updatedAt?`
 
----
+> `string`
 
-##### updatedAt
-
-• `Optional` **updatedAt**: `string`
-
-**`Description`**
+###### Description
 
 When this object was last updated.
 
-###### Defined in
+Defined in:  [lib/types.ts:1595](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1595)
 
-[libs/citations/ojs-types/src/lib/types.ts:1595](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1595)
+##### `uploaderUserId?`
 
----
+> `number`
 
-##### uploaderUserId
+Defined in:  [lib/types.ts:1596](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1596)
 
-• `Optional` **uploaderUserId**: `number`
+##### `url?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:1596](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1596)
+Defined in:  [lib/types.ts:1597](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1597)
 
----
+##### `viewable?`
 
-##### url
+> `boolean`
 
-• `Optional` **url**: `string`
+Defined in:  [lib/types.ts:1598](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1598)
 
-###### Defined in
+***
 
-[libs/citations/ojs-types/src/lib/types.ts:1597](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1597)
-
----
-
-##### viewable
-
-• `Optional` **viewable**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1598](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1598)
-
-### Interface: SubmissionSummary
-
-[ojs-api](.modules).SubmissionSummary
+### `SubmissionSummary`
 
 #### Properties
 
-##### \_href
+##### `\_href?`
 
-• `Optional` **\_href**: `string`
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:1475](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1475)
 
-[libs/citations/ojs-types/src/lib/types.ts:1475](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1475)
+##### `contextId?`
 
----
+> `number`
 
-##### contextId
+Defined in:  [lib/types.ts:1476](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1476)
 
-• `Optional` **contextId**: `number`
+##### `currentPublicationId?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1476](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1476)
-
----
-
-##### currentPublicationId
-
-• `Optional` **currentPublicationId**: `number`
-
-**`Description`**
+###### Description
 
 Which publication is the latest published version.
 
-###### Defined in
+Defined in:  [lib/types.ts:1478](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1478)
 
-[libs/citations/ojs-types/src/lib/types.ts:1478](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1478)
+##### `dateLastActivity?`
 
----
+> `string`
 
-##### dateLastActivity
-
-• `Optional` **dateLastActivity**: `string`
-
-**`Description`**
+###### Description
 
 The last time activity was recorded related to this submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:1480](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1480)
 
-[libs/citations/ojs-types/src/lib/types.ts:1480](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1480)
+##### `dateSubmitted?`
 
----
+> `string`
 
-##### dateSubmitted
+Defined in:  [lib/types.ts:1481](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1481)
 
-• `Optional` **dateSubmitted**: `string`
+##### `id?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:1481](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1481)
+Defined in:  [lib/types.ts:1482](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1482)
 
----
+##### `lastModified?`
 
-##### id
+> `string`
 
-• `Optional` **id**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1482](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1482)
-
----
-
-##### lastModified
-
-• `Optional` **lastModified**: `string`
-
-**`Description`**
+###### Description
 
 The last time a modification was made to this submission or any of its associated objects.
 
-###### Defined in
+Defined in:  [lib/types.ts:1484](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1484)
 
-[libs/citations/ojs-types/src/lib/types.ts:1484](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1484)
+##### `locale?`
 
----
+> `string`
 
-##### locale
-
-• `Optional` **locale**: `string`
-
-**`Description`**
+###### Description
 
 The primary language of this submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:1486](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1486)
 
-[libs/citations/ojs-types/src/lib/types.ts:1486](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1486)
+##### `publications?`
 
----
+> [`Publication`](modules.md#publication)[]
 
-##### publications
-
-• `Optional` **publications**: [`Publication`](.interfaces/ojs_api.Publication.md)\[]
-
-**`Description`**
+###### Description
 
 A list of publications that have been created for this submission.
 
-###### Defined in
+Defined in:  [lib/types.ts:1488](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1488)
 
-[libs/citations/ojs-types/src/lib/types.ts:1488](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1488)
+##### `stageId?`
 
----
+> `number`
 
-##### stageId
-
-• `Optional` **stageId**: `number`
-
-**`Description`**
+###### Description
 
 The stage of the editorial workflow that this submission is currently in. One of the `WORKFLOW_STAGE_` constants. Default is `WORKFLOW_STAGE_SUBMISSION`.
 
-**`Default`**
+###### Default
 
 1
 
-###### Defined in
+Defined in:  [lib/types.ts:1493](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1493)
 
-[libs/citations/ojs-types/src/lib/types.ts:1493](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1493)
+##### `status?`
 
----
+> `number`
 
-##### status
-
-• `Optional` **status**: `number`
-
-**`Description`**
+###### Description
 
 Whether the submission is Published, Declined, Scheduled or Queued (still in the workflow). One of the `STATUS_*` constants. Default is `STATUS_QUEUED`.
 
-**`Default`**
+###### Default
 
 1
 
-###### Defined in
+Defined in:  [lib/types.ts:1498](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1498)
 
-[libs/citations/ojs-types/src/lib/types.ts:1498](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1498)
+##### `statusLabel?`
 
----
+> `string`
 
-##### statusLabel
-
-• `Optional` **statusLabel**: `string`
-
-**`Description`**
+###### Description
 
 A human-readable version of the submission's status. It will be Published, Declined, Queued (still in the workflow) or Scheduled.
 
-###### Defined in
+Defined in:  [lib/types.ts:1500](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1500)
 
-[libs/citations/ojs-types/src/lib/types.ts:1500](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1500)
+##### `submissionProgress?`
 
----
+> `number`
 
-##### submissionProgress
-
-• `Optional` **submissionProgress**: `number`
-
-**`Description`**
+###### Description
 
 This number tracks a submission's progress before it is submitted to the journal or press. After submission, it will be set to `0`, indicating it is ready for an editor's consideration.
 
-**`Default`**
+###### Default
 
 1
 
-###### Defined in
+Defined in:  [lib/types.ts:1505](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1505)
 
-[libs/citations/ojs-types/src/lib/types.ts:1505](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1505)
+##### `urlAuthorWorkflow?`
 
----
+> `string`
 
-##### urlAuthorWorkflow
-
-• `Optional` **urlAuthorWorkflow**: `string`
-
-**`Description`**
+###### Description
 
 A URL to the author's editorial workflow.
 
-###### Defined in
+Defined in:  [lib/types.ts:1507](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1507)
 
-[libs/citations/ojs-types/src/lib/types.ts:1507](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1507)
+##### `urlEditorialWorkflow?`
 
----
+> `string`
 
-##### urlEditorialWorkflow
-
-• `Optional` **urlEditorialWorkflow**: `string`
-
-**`Description`**
+###### Description
 
 A URL to the editors' and assistants' editorial workflow.
 
-###### Defined in
+Defined in:  [lib/types.ts:1509](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1509)
 
-[libs/citations/ojs-types/src/lib/types.ts:1509](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1509)
+##### `urlPublished?`
 
----
+> `string`
 
-##### urlPublished
-
-• `Optional` **urlPublished**: `string`
-
-**`Description`**
+###### Description
 
 A URL to the current publication or where it will be published.
 
-###### Defined in
+Defined in:  [lib/types.ts:1511](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1511)
 
-[libs/citations/ojs-types/src/lib/types.ts:1511](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1511)
+##### `urlWorkflow?`
 
----
+> `string`
 
-##### urlWorkflow
-
-• `Optional` **urlWorkflow**: `string`
-
-**`Description`**
+###### Description
 
 A URL to the workflow most appropriate for the current user. It will match the `urlAuthorWorkflow` or \`urlEditorialWorkflow.
 
-###### Defined in
+Defined in:  [lib/types.ts:1513](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1513)
 
-[libs/citations/ojs-types/src/lib/types.ts:1513](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1513)
+***
 
-### Interface: ThemeOptions
+### `ThemeOptions`
 
-[ojs-api](.modules).ThemeOptions
-
-**`Description`**
+#### Description
 
 A theme with values for any of its theme options. The theme is provided in the `themePluginPath` key. Other keys may or may not exist depending on what options have been defined by that theme.
 
 #### Properties
 
-##### ...
+##### `...?`
 
-• `Optional` **...**: `string`
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:729](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L729)
 
-[libs/citations/ojs-types/src/lib/types.ts:729](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L729)
+##### `themePluginPath?`
 
----
+> `string`
 
-##### themePluginPath
+Defined in:  [lib/types.ts:728](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L728)
 
-• `Optional` **themePluginPath**: `string`
+***
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:728](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L728)
-
-### Interface: TimelineInterval
-
-[ojs-api](.modules).TimelineInterval
+### `TimelineInterval`
 
 #### Properties
 
-##### date
+##### `date?`
 
-• `Optional` **date**: `string`
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:732](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L732)
 
-[libs/citations/ojs-types/src/lib/types.ts:732](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L732)
+##### `label?`
 
----
+> `string`
 
-##### label
+Defined in:  [lib/types.ts:733](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L733)
 
-• `Optional` **label**: `string`
+##### `value?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:733](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L733)
+Defined in:  [lib/types.ts:734](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L734)
 
----
+***
 
-##### value
-
-• `Optional` **value**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:734](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L734)
-
-### Interface: User
-
-[ojs-api](.modules).User
+### `User`
 
 #### Properties
 
-##### \_href
+##### `\_href?`
 
-• `Optional` **\_href**: `string`
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:737](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L737)
 
-[libs/citations/ojs-types/src/lib/types.ts:737](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L737)
+##### `affiliation?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### affiliation
+Defined in:  [lib/types.ts:738](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L738)
 
-• `Optional` **affiliation**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `authId?`
 
-###### Defined in
+> `number`
 
-[libs/citations/ojs-types/src/lib/types.ts:738](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L738)
+Defined in:  [lib/types.ts:739](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L739)
 
----
+##### `authString?`
 
-##### authId
+> `string`
 
-• `Optional` **authId**: `number`
+Defined in:  [lib/types.ts:740](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L740)
 
-###### Defined in
+##### `billingAddress?`
 
-[libs/citations/ojs-types/src/lib/types.ts:739](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L739)
+> `string`
 
----
+Defined in:  [lib/types.ts:741](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L741)
 
-##### authString
+##### `biography?`
 
-• `Optional` **authString**: `string`
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:742](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L742)
 
-[libs/citations/ojs-types/src/lib/types.ts:740](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L740)
+##### `country?`
 
----
+> `string`
 
-##### billingAddress
+Defined in:  [lib/types.ts:743](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L743)
 
-• `Optional` **billingAddress**: `string`
+##### `dateLastRegistered?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:741](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L741)
+Defined in:  [lib/types.ts:744](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L744)
 
----
+##### `dateRegistered?`
 
-##### biography
+> `string`
 
-• `Optional` **biography**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:745](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L745)
 
-###### Defined in
+##### `dateValidated?`
 
-[libs/citations/ojs-types/src/lib/types.ts:742](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L742)
+> `string`
 
----
+Defined in:  [lib/types.ts:746](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L746)
 
-##### country
+##### `disabled?`
 
-• `Optional` **country**: `string`
+> `boolean`
 
-###### Defined in
+Defined in:  [lib/types.ts:747](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L747)
 
-[libs/citations/ojs-types/src/lib/types.ts:743](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L743)
+##### `disabledReason?`
 
----
+> `string`
 
-##### dateLastRegistered
+Defined in:  [lib/types.ts:748](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L748)
 
-• `Optional` **dateLastRegistered**: `string`
+##### `email?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:744](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L744)
+Defined in:  [lib/types.ts:749](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L749)
 
----
+##### `familyName?`
 
-##### dateRegistered
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **dateRegistered**: `string`
+Defined in:  [lib/types.ts:750](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L750)
 
-###### Defined in
+##### `fullName?`
 
-[libs/citations/ojs-types/src/lib/types.ts:745](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L745)
+> `string`
 
----
+Defined in:  [lib/types.ts:751](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L751)
 
-##### dateValidated
+##### `givenName?`
 
-• `Optional` **dateValidated**: `string`
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:752](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L752)
 
-[libs/citations/ojs-types/src/lib/types.ts:746](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L746)
+##### `gossip?`
 
----
+> [`LocaleObject`](modules.md#localeobject)
 
-##### disabled
+Defined in:  [lib/types.ts:753](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L753)
 
-• `Optional` **disabled**: `boolean`
+##### `groups?`
 
-###### Defined in
+> [`UserGroup`](modules.md#usergroup)[]
 
-[libs/citations/ojs-types/src/lib/types.ts:747](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L747)
+Defined in:  [lib/types.ts:754](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L754)
 
----
+##### `id?`
 
-##### disabledReason
+> `number`
 
-• `Optional` **disabledReason**: `string`
+Defined in:  [lib/types.ts:755](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L755)
 
-###### Defined in
+##### `interests?`
 
-[libs/citations/ojs-types/src/lib/types.ts:748](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L748)
+> [`UserInterest`](modules.md#userinterest)[]
 
----
+Defined in:  [lib/types.ts:756](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L756)
 
-##### email
+##### `mailingAddress?`
 
-• `Optional` **email**: `string`
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:757](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L757)
 
-[libs/citations/ojs-types/src/lib/types.ts:749](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L749)
+##### `mustChangePassword?`
 
----
+> `boolean`
 
-##### familyName
+Defined in:  [lib/types.ts:758](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L758)
 
-• `Optional` **familyName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `orcid?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:750](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L750)
+Defined in:  [lib/types.ts:759](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L759)
 
----
+##### `phone?`
 
-##### fullName
+> `string`
 
-• `Optional` **fullName**: `string`
+Defined in:  [lib/types.ts:760](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L760)
 
-###### Defined in
+##### `signature?`
 
-[libs/citations/ojs-types/src/lib/types.ts:751](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L751)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:761](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L761)
 
-##### givenName
+##### `url?`
 
-• `Optional` **givenName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:762](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L762)
 
-[libs/citations/ojs-types/src/lib/types.ts:752](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L752)
+##### `userName?`
 
----
+> `string`
 
-##### gossip
+Defined in:  [lib/types.ts:763](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L763)
 
-• `Optional` **gossip**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+***
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:753](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L753)
-
----
-
-##### groups
-
-• `Optional` **groups**: [`UserGroup`](.interfaces/ojs_api.UserGroup.md)\[]
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:754](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L754)
-
----
-
-##### id
-
-• `Optional` **id**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:755](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L755)
-
----
-
-##### interests
-
-• `Optional` **interests**: [`UserInterest`](.interfaces/ojs_api.UserInterest.md)\[]
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:756](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L756)
-
----
-
-##### mailingAddress
-
-• `Optional` **mailingAddress**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:757](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L757)
-
----
-
-##### mustChangePassword
-
-• `Optional` **mustChangePassword**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:758](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L758)
-
----
-
-##### orcid
-
-• `Optional` **orcid**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:759](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L759)
-
----
-
-##### phone
-
-• `Optional` **phone**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:760](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L760)
-
----
-
-##### signature
-
-• `Optional` **signature**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:761](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L761)
-
----
-
-##### url
-
-• `Optional` **url**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:762](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L762)
-
----
-
-##### userName
-
-• `Optional` **userName**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:763](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L763)
-
-### Interface: UserEditable
-
-[ojs-api](.modules).UserEditable
+### `UserEditable`
 
 #### Properties
 
-##### affiliation
+##### `affiliation?`
 
-• `Optional` **affiliation**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:1601](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1601)
 
-[libs/citations/ojs-types/src/lib/types.ts:1601](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1601)
+##### `authId?`
 
----
+> `number`
 
-##### authId
+Defined in:  [lib/types.ts:1602](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1602)
 
-• `Optional` **authId**: `number`
+##### `authString?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:1602](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1602)
+Defined in:  [lib/types.ts:1603](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1603)
 
----
+##### `billingAddress?`
 
-##### authString
+> `string`
 
-• `Optional` **authString**: `string`
+Defined in:  [lib/types.ts:1604](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1604)
 
-###### Defined in
+##### `biography?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1603](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1603)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:1605](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1605)
 
-##### billingAddress
+##### `country?`
 
-• `Optional` **billingAddress**: `string`
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:1606](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1606)
 
-[libs/citations/ojs-types/src/lib/types.ts:1604](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1604)
+##### `dateLastRegistered?`
 
----
+> `string`
 
-##### biography
+Defined in:  [lib/types.ts:1607](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1607)
 
-• `Optional` **biography**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+##### `dateRegistered?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:1605](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1605)
+Defined in:  [lib/types.ts:1608](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1608)
 
----
+##### `dateValidated?`
 
-##### country
+> `string`
 
-• `Optional` **country**: `string`
+Defined in:  [lib/types.ts:1609](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1609)
 
-###### Defined in
+##### `disabled?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1606](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1606)
+> `boolean`
 
----
+Defined in:  [lib/types.ts:1610](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1610)
 
-##### dateLastRegistered
+##### `disabledReason?`
 
-• `Optional` **dateLastRegistered**: `string`
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:1611](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1611)
 
-[libs/citations/ojs-types/src/lib/types.ts:1607](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1607)
+##### `email?`
 
----
+> `string`
 
-##### dateRegistered
+Defined in:  [lib/types.ts:1612](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1612)
 
-• `Optional` **dateRegistered**: `string`
+##### `familyName?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:1608](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1608)
+Defined in:  [lib/types.ts:1613](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1613)
 
----
+##### `givenName?`
 
-##### dateValidated
+> [`LocaleObject`](modules.md#localeobject)
 
-• `Optional` **dateValidated**: `string`
+Defined in:  [lib/types.ts:1614](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1614)
 
-###### Defined in
+##### `gossip?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1609](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1609)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:1615](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1615)
 
-##### disabled
+##### `mailingAddress?`
 
-• `Optional` **disabled**: `boolean`
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:1616](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1616)
 
-[libs/citations/ojs-types/src/lib/types.ts:1610](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1610)
+##### `mustChangePassword?`
 
----
+> `boolean`
 
-##### disabledReason
+Defined in:  [lib/types.ts:1617](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1617)
 
-• `Optional` **disabledReason**: `string`
+##### `orcid?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:1611](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1611)
+Defined in:  [lib/types.ts:1618](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1618)
 
----
+##### `phone?`
 
-##### email
+> `string`
 
-• `Optional` **email**: `string`
+Defined in:  [lib/types.ts:1619](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1619)
 
-###### Defined in
+##### `signature?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1612](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1612)
+> [`LocaleObject`](modules.md#localeobject)
 
----
+Defined in:  [lib/types.ts:1620](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1620)
 
-##### familyName
+##### `url?`
 
-• `Optional` **familyName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:1621](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1621)
 
-[libs/citations/ojs-types/src/lib/types.ts:1613](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1613)
+##### `userName?`
 
----
+> `string`
 
-##### givenName
+Defined in:  [lib/types.ts:1622](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1622)
 
-• `Optional` **givenName**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+***
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1614](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1614)
-
----
-
-##### gossip
-
-• `Optional` **gossip**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1615](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1615)
-
----
-
-##### mailingAddress
-
-• `Optional` **mailingAddress**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1616](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1616)
-
----
-
-##### mustChangePassword
-
-• `Optional` **mustChangePassword**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1617](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1617)
-
----
-
-##### orcid
-
-• `Optional` **orcid**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1618](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1618)
-
----
-
-##### phone
-
-• `Optional` **phone**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1619](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1619)
-
----
-
-##### signature
-
-• `Optional` **signature**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1620](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1620)
-
----
-
-##### url
-
-• `Optional` **url**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1621](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1621)
-
----
-
-##### userName
-
-• `Optional` **userName**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1622](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1622)
-
-### Interface: UserGroup
-
-[ojs-api](.modules).UserGroup
+### `UserGroup`
 
 #### Properties
 
-##### abbrev
+##### `abbrev?`
 
-• `Optional` **abbrev**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:766](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L766)
 
-[libs/citations/ojs-types/src/lib/types.ts:766](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L766)
+##### `id?`
 
----
+> `number`
 
-##### id
+Defined in:  [lib/types.ts:767](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L767)
 
-• `Optional` **id**: `number`
+##### `name?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:767](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L767)
+Defined in:  [lib/types.ts:768](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L768)
 
----
+##### `permitSelfRegistration?`
 
-##### name
+> `boolean`
 
-• `Optional` **name**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:769](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L769)
 
-###### Defined in
+##### `recommendOnly?`
 
-[libs/citations/ojs-types/src/lib/types.ts:768](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L768)
+> `boolean`
 
----
+Defined in:  [lib/types.ts:770](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L770)
 
-##### permitSelfRegistration
+##### `roleId?`
 
-• `Optional` **permitSelfRegistration**: `boolean`
+> `number`
 
-###### Defined in
+Defined in:  [lib/types.ts:771](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L771)
 
-[libs/citations/ojs-types/src/lib/types.ts:769](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L769)
+##### `showTitle?`
 
----
+> `boolean`
 
-##### recommendOnly
+Defined in:  [lib/types.ts:772](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L772)
 
-• `Optional` **recommendOnly**: `boolean`
+***
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:770](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L770)
-
----
-
-##### roleId
-
-• `Optional` **roleId**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:771](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L771)
-
----
-
-##### showTitle
-
-• `Optional` **showTitle**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:772](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L772)
-
-### Interface: UserGroupEditable
-
-[ojs-api](.modules).UserGroupEditable
+### `UserGroupEditable`
 
 #### Properties
 
-##### abbrev
+##### `abbrev?`
 
-• `Optional` **abbrev**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+> [`LocaleObject`](modules.md#localeobject)
 
-###### Defined in
+Defined in:  [lib/types.ts:1635](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1635)
 
-[libs/citations/ojs-types/src/lib/types.ts:1635](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1635)
+##### `id?`
 
----
+> `number`
 
-##### id
+Defined in:  [lib/types.ts:1636](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1636)
 
-• `Optional` **id**: `number`
+##### `name?`
 
-###### Defined in
+> [`LocaleObject`](modules.md#localeobject)
 
-[libs/citations/ojs-types/src/lib/types.ts:1636](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1636)
+Defined in:  [lib/types.ts:1637](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1637)
 
----
+##### `permitSelfRegistration?`
 
-##### name
+> `boolean`
 
-• `Optional` **name**: [`LocaleObject`](.interfaces/ojs_api.LocaleObject.md)
+Defined in:  [lib/types.ts:1638](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1638)
 
-###### Defined in
+##### `recommendOnly?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1637](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1637)
+> `boolean`
 
----
+Defined in:  [lib/types.ts:1639](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1639)
 
-##### permitSelfRegistration
+##### `roleId?`
 
-• `Optional` **permitSelfRegistration**: `boolean`
+> `number`
 
-###### Defined in
+Defined in:  [lib/types.ts:1640](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1640)
 
-[libs/citations/ojs-types/src/lib/types.ts:1638](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1638)
+##### `showTitle?`
 
----
+> `boolean`
 
-##### recommendOnly
+Defined in:  [lib/types.ts:1641](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1641)
 
-• `Optional` **recommendOnly**: `boolean`
+***
 
-###### Defined in
+### `UserInterest`
 
-[libs/citations/ojs-types/src/lib/types.ts:1639](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1639)
-
----
-
-##### roleId
-
-• `Optional` **roleId**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1640](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1640)
-
----
-
-##### showTitle
-
-• `Optional` **showTitle**: `boolean`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1641](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1641)
-
-### Interface: UserInterest
-
-[ojs-api](.modules).UserInterest
-
-**`Description`**
+#### Description
 
 A user's review interests.
 
 #### Properties
 
-##### id
+##### `id?`
 
-• `Optional` **id**: `number`
+> `number`
 
-###### Defined in
+Defined in:  [lib/types.ts:776](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L776)
 
-[libs/citations/ojs-types/src/lib/types.ts:776](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L776)
+##### `interest?`
 
----
+> `string`
 
-##### interest
+Defined in:  [lib/types.ts:777](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L777)
 
-• `Optional` **interest**: `string`
+***
 
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:777](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L777)
-
-### Interface: UserSummary
-
-[ojs-api](.modules).UserSummary
+### `UserSummary`
 
 #### Properties
 
-##### \_href
+##### `\_href?`
 
-• `Optional` **\_href**: `string`
+> `string`
 
-###### Defined in
+Defined in:  [lib/types.ts:1625](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1625)
 
-[libs/citations/ojs-types/src/lib/types.ts:1625](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1625)
+##### `disabled?`
 
----
+> `boolean`
 
-##### disabled
+Defined in:  [lib/types.ts:1626](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1626)
 
-• `Optional` **disabled**: `boolean`
+##### `email?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:1626](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1626)
+Defined in:  [lib/types.ts:1627](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1627)
 
----
+##### `fullName?`
 
-##### email
+> `string`
 
-• `Optional` **email**: `string`
+Defined in:  [lib/types.ts:1628](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1628)
 
-###### Defined in
+##### `groups?`
 
-[libs/citations/ojs-types/src/lib/types.ts:1627](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1627)
+> [`UserGroup`](modules.md#usergroup)[]
 
----
+Defined in:  [lib/types.ts:1629](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1629)
 
-##### fullName
+##### `id?`
 
-• `Optional` **fullName**: `string`
+> `number`
 
-###### Defined in
+Defined in:  [lib/types.ts:1630](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1630)
 
-[libs/citations/ojs-types/src/lib/types.ts:1628](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1628)
+##### `orcid?`
 
----
+> `string`
 
-##### groups
+Defined in:  [lib/types.ts:1631](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1631)
 
-• `Optional` **groups**: [`UserGroup`](.interfaces/ojs_api.UserGroup.md)\[]
+##### `userName?`
 
-###### Defined in
+> `string`
 
-[libs/citations/ojs-types/src/lib/types.ts:1629](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1629)
-
----
-
-##### id
-
-• `Optional` **id**: `number`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1630](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1630)
-
----
-
-##### orcid
-
-• `Optional` **orcid**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1631](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1631)
-
----
-
-##### userName
-
-• `Optional` **userName**: `string`
-
-###### Defined in
-
-[libs/citations/ojs-types/src/lib/types.ts:1632](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/ojs-types/src/lib/types.ts#L1632)
+Defined in:  [lib/types.ts:1632](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/ojs-types/src/lib/types.ts#L1632)
 
 ## Syntax tree
 
@@ -10238,31 +7287,59 @@ A user's review interests.
 [GPL-3.0-or-later](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
+
 [unifiedgh]: https://github.com/unifiedjs/unified
+
 [xast-from-xml]: https://github.com/syntax-tree/xast-util-from-xml
+
 [rehype]: https://github.com/rehypejs/rehype
+
 [rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour
+
 [rejour-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-parse
+
 [rejour-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-stringify
+
 [rejour-move-abstract]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-move-abstract
+
 [rejour-meta]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-meta
+
 [rejour-relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-relatex
+
 [relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex
+
 [relatex-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/relatex-parse
+
 [jast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast
+
 [jast-util-to-texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast-util-to-texast
+
 [jastscript]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jastscript
+
 [texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast
+
 [texast-util-to-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast-util-to-latex
+
 [hast]: https://github.com/syntax-tree/hast
+
 [xast]: https://github.com/syntax-tree/xast
+
 [mdast]: https://github.com/syntax-tree/mdast
+
 [mdast-markdown]: https://github.com/syntax-tree/mdast-util-to-markdown
+
 [latex-utensils]: https://github.com/tamuratak/latex-utensils
+
 [latexjs]: https://github.com/latexjs/latexjs
+
 [reoff]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff
+
 [reoff-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse
+
 [reoff-rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-rejour
+
 [ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast
+
 [ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-jast
+
 [ojs-types]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ojs-types

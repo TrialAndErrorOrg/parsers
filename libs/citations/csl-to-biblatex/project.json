@@ -4,19 +4,22 @@
   "sourceRoot": "libs/citations/csl-to-biblatex/src",
   "projectType": "library",
   "targets": {
+    "readme": {
+      "executor": "@jote/utils/readme:update-readme",
+      "options": {
+        "readme": "libs/citations/csl-to-biblatex/README.md",
+        "packageJSON": "libs/citations/csl-to-biblatex/package.json"
+      }
+    },
     "build": {
       "executor": "@nrwl/js:swc",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/citations/csl-to-biblatex",
         "tsConfig": "libs/citations/csl-to-biblatex/tsconfig.lib.json",
         "packageJson": "libs/citations/csl-to-biblatex/package.json",
         "main": "libs/citations/csl-to-biblatex/src/index.ts",
-        "assets": [
-          "libs/citations/csl-to-biblatex/*.md"
-        ]
+        "assets": ["libs/citations/csl-to-biblatex/*.md"]
       }
     },
     "deploy": {
@@ -27,20 +30,14 @@
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": [
-        "{options.outputFile}"
-      ],
+      "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "libs/citations/csl-to-biblatex/**/*.ts"
-        ]
+        "lintFilePatterns": ["libs/citations/csl-to-biblatex/**/*.ts"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "libs/citations/csl-to-biblatex/jest.config.ts",
         "passWithNoTests": true

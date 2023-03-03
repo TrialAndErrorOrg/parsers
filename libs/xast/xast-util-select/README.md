@@ -9,18 +9,18 @@ Port of `(hast-util-select)[https://github.com/syntax-tree/hast-util-select]` fo
 
 ## Contents
 
-- [xast-util-select](#xast-util-select)
-  - [Contents](#contents)
-  - [What is this?](#what-is-this)
-    - [Caveats](#caveats)
-  - [When should I use this?](#when-should-i-use-this)
-  - [Install](#install)
-  - [Use](#use)
-  - [API](#api)
-  - [Compatibility](#compatibility)
-  - [Related](#related)
-  - [Contribute](#contribute)
-  - [License](#license)
+*   [xast-util-select](#xast-util-select)
+    *   [Contents](#contents)
+    *   [What is this?](#what-is-this)
+        *   [Caveats](#caveats)
+    *   [When should I use this?](#when-should-i-use-this)
+    *   [Install](#install)
+    *   [Use](#use)
+    *   [API](#api)
+    *   [Compatibility](#compatibility)
+    *   [Related](#related)
+    *   [Contribute](#contribute)
+    *   [License](#license)
 
 ## What is this?
 
@@ -58,73 +58,77 @@ pnpm add xast-util-select
 
 ## API
 
-### Module: xast-util-select
+***
 
-#### Functions
+### `matches()`
 
-##### matches
+#### Signature
 
-▸ **matches**(`selector`, `node?`, `space?`): `boolean`
+```ts
+matches(selector: string, node?: XastNode, space?: Space): boolean;
+```
 
-###### Parameters
+#### Parameters
 
-\| Name | Type |
-\| :------ | :------ |
-\| `selector` | `string` |
-\| `node?` | `XastNode` |
-\| `space?` | `Space` |
+| Name | Type |
+| :------ | :------ |
+| `selector` | `string` |
+| `node?` | `XastNode` |
+| `space?` | `Space` |
 
-###### Returns
+#### Returns
 
 `boolean`
 
-###### Defined in
+Defined in:  [index.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/xast/xast-util-select/src/index.ts#L6)
 
-[src/index.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/xast/xast-util-select/src/index.ts#L6)
+***
 
----
+### `select()`
 
-##### select
+#### Signature
 
-▸ **select**(`selector`, `node?`, `space?`): `Element` | `null`
+```ts
+select(selector: string, node?: XastNode, space?: Space): Element | null;
+```
 
-###### Parameters
+#### Parameters
 
-\| Name | Type |
-\| :------ | :------ |
-\| `selector` | `string` |
-\| `node?` | `XastNode` |
-\| `space?` | `Space` |
+| Name | Type |
+| :------ | :------ |
+| `selector` | `string` |
+| `node?` | `XastNode` |
+| `space?` | `Space` |
 
-###### Returns
+#### Returns
 
 `Element` | `null`
 
-###### Defined in
+Defined in:  [index.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/xast/xast-util-select/src/index.ts#L16)
 
-[src/index.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/xast/xast-util-select/src/index.ts#L16)
+***
 
----
+### `selectAll()`
 
-##### selectAll
+#### Signature
 
-▸ **selectAll**(`selector`, `node?`, `space?`): `Element`\[]
+```ts
+selectAll(selector: string, node?: XastNode, space?: Space): Element[];
+```
 
-###### Parameters
+#### Parameters
 
-\| Name | Type |
-\| :------ | :------ |
-\| `selector` | `string` |
-\| `node?` | `XastNode` |
-\| `space?` | `Space` |
+| Name | Type |
+| :------ | :------ |
+| `selector` | `string` |
+| `node?` | `XastNode` |
+| `space?` | `Space` |
 
-###### Returns
+#### Returns
 
-`Element`\[]
+`Element`[]
 
-###### Defined in
-
-[src/index.ts:24](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/xast/xast-util-select/src/index.ts#L24)
+Defined in:  [index.ts:24](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/xast/xast-util-select/src/index.ts#L24)
 
 ## Compatibility
 
@@ -137,30 +141,57 @@ pnpm add xast-util-select
 [MIT](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
+
 [unifiedgh]: https://github.com/unifiedjs/unified
+
 [xast-from-xml]: https://github.com/syntax-tree/xast-util-from-xml
+
 [rehype]: https://github.com/rehypejs/rehype
+
 [rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour
+
 [rejour-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-parse
+
 [rejour-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-stringify
+
 [rejour-move-abstract]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-move-abstract
+
 [rejour-meta]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-meta
+
 [rejour-relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-relatex
+
 [relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex
+
 [reoff-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/reoff-parse
+
 [jast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast
+
 [jast-util-to-texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast-util-to-texast
+
 [jastscript]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jastscript
+
 [texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast
+
 [texast-util-to-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast-util-to-latex
+
 [hast]: https://github.com/syntax-tree/hast
+
 [xast]: https://github.com/syntax-tree/xast
+
 [mdast]: https://github.com/syntax-tree/mdast
+
 [mdast-markdown]: https://github.com/syntax-tree/mdast-util-to-markdown
+
 [latex-utensils]: https://github.com/tamuratak/latex-utensils
+
 [latexjs]: https://github.com/latexjs/latexjs
+
 [reoff]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff
+
 [reoff-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse
+
 [reoff-rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-rejour
+
 [ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast
+
 [ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-jast

@@ -3,34 +3,38 @@
 
 ## API
 
-### Module: rejour-frontmatter
+***
 
-#### Functions
+### `rejourFrontmatter()`
 
-##### rejourFrontmatter
+#### Signature
 
-▸ **rejourFrontmatter**(): (`tree`: `Root`, `file`: `VFile`) => `void`
+```ts
+rejourFrontmatter(): Function;
+```
 
-###### Returns
+#### Returns
 
-`fn`
+`Function`
 
-▸ (`tree`, `file`): `void`
+##### `Signature`
 
-\####### Parameters
+```ts
+(tree: Root, file: VFile): void;
+```
 
-\| Name | Type |
-\| :------ | :------ |
-\| `tree` | `Root` |
-\| `file` | `VFile` |
+##### `Parameters`
 
-\####### Returns
+| Name | Type |
+| :------ | :------ |
+| `tree` | `Root` |
+| `file` | `VFile` |
+
+##### `Returns`
 
 `void`
 
-###### Defined in
-
-[src/lib/rejour-frontmatter.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/rejour/rejour-frontmatter/src/lib/rejour-frontmatter.ts#L8)
+Defined in:  [lib/rejour-frontmatter.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/rejour/rejour-frontmatter/src/lib/rejour-frontmatter.ts#L8)
 
 ## Install
 

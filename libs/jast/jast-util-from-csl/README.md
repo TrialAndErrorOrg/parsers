@@ -3,88 +3,96 @@
 
 ## API
 
-### Module: jast-util-from-csl
+***
 
-#### Functions
+### `cslToFront()`
 
-##### cslToFront
+#### Signature
 
-▸ **cslToFront**(`data`): `void`
+```ts
+cslToFront(data: Data): void;
+```
 
-###### Parameters
+#### Parameters
 
-\| Name | Type |
-\| :------ | :------ |
-\| `data` | `Data` |
+| Name | Type |
+| :------ | :------ |
+| `data` | `Data` |
 
-###### Returns
+#### Returns
 
 `void`
 
-###### Defined in
+Defined in:  [lib/csl-to-jast.ts:27](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L27)
 
-[src/lib/csl-to-jast.ts:27](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L27)
+***
 
----
+### `cslToJats()`
 
-##### cslToJats
+#### Signature
 
-▸ **cslToJats**(`data`): `void` | `RefList`
+```ts
+cslToJats(data: Data | Data[]): void | RefList;
+```
 
-###### Parameters
+#### Parameters
 
-\| Name | Type |
-\| :------ | :------ |
-\| `data` | `Data` | `Data`\[] |
+| Name | Type |
+| :------ | :------ |
+| `data` | `Data` | `Data`[] |
 
-###### Returns
+#### Returns
 
 `void` | `RefList`
 
-###### Defined in
+Defined in:  [lib/csl-to-jast.ts:19](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L19)
 
-[src/lib/csl-to-jast.ts:19](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L19)
+***
 
----
+### `cslToRef()`
 
-##### cslToRef
+#### Signature
 
-▸ **cslToRef**(`data`, `index`): `Ref`
+```ts
+cslToRef(data: Data, index: string | number): Ref;
+```
 
-###### Parameters
+#### Parameters
 
-\| Name | Type |
-\| :------ | :------ |
-\| `data` | `Data` |
-\| `index` | `string` | `number` |
+| Name | Type |
+| :------ | :------ |
+| `data` | `Data` |
+| `index` | `string` | `number` |
 
-###### Returns
+#### Returns
 
 `Ref`
 
-###### Defined in
+Defined in:  [lib/csl-to-jast.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L44)
 
-[src/lib/csl-to-jast.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L44)
+***
 
----
+### `cslToRefList()`
 
-##### cslToRefList
+#### Signature
 
-▸ **cslToRefList**(`data`): `RefList`
+```ts
+cslToRefList(data: Data[] | {
 
-###### Parameters
+}): RefList;
+```
 
-\| Name | Type |
-\| :------ | :------ |
-\| `data` | `Data`\[] | { `[key: string | number]`: `CSL`; } |
+#### Parameters
 
-###### Returns
+| Name | Type |
+| :------ | :------ |
+| `data` | `Data`[] | {  } |
+
+#### Returns
 
 `RefList`
 
-###### Defined in
-
-[src/lib/csl-to-jast.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L31)
+Defined in:  [lib/csl-to-jast.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L31)
 
 ## Install
 
@@ -100,4 +108,4 @@ pnpm add jast-util-from-csl
 
 # csl-util-to-jast
 
-Transform a CSL list or object to a \[jast]\[jast] node.
+Transform a CSL list or object to a [jast][jast] node.

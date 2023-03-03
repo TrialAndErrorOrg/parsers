@@ -1,8 +1,16 @@
 {
-  "name": "reoff-reoff-rejour",
+  "name": "reoff-rejour",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/reoff/reoff-rejour/src",
   "projectType": "library",
   "targets": {
+    "readme": {
+      "executor": "@jote/utils/readme:update-readme",
+      "options": {
+        "readme": "libs/reoff/reoff-rejour/README.md",
+        "packageJSON": "libs/reoff/reoff-rejour/package.json"
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],

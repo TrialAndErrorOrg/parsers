@@ -9,20 +9,20 @@ Rsid's are Word's way of keeping track of edits, but when you are converting or 
 
 ## Contents
 
-- [ooxast-util-remove-rsid](#ooxast-util-remove-rsid)
-  - [Contents](#contents)
-  - [What is this?](#what-is-this)
-  - [When should I use this?](#when-should-i-use-this)
-  - [Install](#install)
-  - [Use](#use)
-  - [API](#api)
-  - [Syntax tree](#syntax-tree)
-  - [Types](#types)
-  - [Compatibility](#compatibility)
-  - [Security](#security)
-  - [Related](#related)
-  - [Contribute](#contribute)
-  - [License](#license)
+*   [ooxast-util-remove-rsid](#ooxast-util-remove-rsid)
+    *   [Contents](#contents)
+    *   [What is this?](#what-is-this)
+    *   [When should I use this?](#when-should-i-use-this)
+    *   [Install](#install)
+    *   [Use](#use)
+    *   [API](#api)
+    *   [Syntax tree](#syntax-tree)
+    *   [Types](#types)
+    *   [Compatibility](#compatibility)
+    *   [Security](#security)
+    *   [Related](#related)
+    *   [Contribute](#contribute)
+    *   [License](#license)
 
 ## What is this?
 
@@ -44,63 +44,59 @@ pnpm add ooxast-util-remove-rsid
 
 ## API
 
-### Module: ooxast-util-remove-rsid
+***
 
-#### Interfaces
+### `ooxastUtilRemoveRsid()`
 
-- [Options](.interfaces/ooxast_util_remove_rsid.Options.md)
+#### Signature
 
-#### Functions
+```ts
+ooxastUtilRemoveRsid(tree: Root, options?: Options): Root;
+```
 
-##### ooxastUtilRemoveRsid
+#### Parameters
 
-▸ **ooxastUtilRemoveRsid**(`tree`, `options?`): `Root`
+| Name | Type |
+| :------ | :------ |
+| `tree` | `Root` |
+| `options?` | [`Options`](modules.md#options) |
 
-###### Parameters
-
-\| Name | Type |
-\| :------ | :------ |
-\| `tree` | `Root` |
-\| `options?` | [`Options`](.interfaces/ooxast_util_remove_rsid.Options.md) |
-
-###### Returns
+#### Returns
 
 `Root`
 
-###### Defined in
+Defined in:  [lib/ooxast-util-remove-rsid.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-remove-rsid/src/lib/ooxast-util-remove-rsid.ts#L16)
 
-[src/lib/ooxast-util-remove-rsid.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-remove-rsid/src/lib/ooxast-util-remove-rsid.ts#L16)
+#### Signature
 
-▸ **ooxastUtilRemoveRsid**(`tree`, `options?`): `Node`
+```ts
+ooxastUtilRemoveRsid(tree: Node<Data>, options?: Options): Node;
+```
 
-###### Parameters
+#### Parameters
 
-\| Name | Type |
-\| :------ | :------ |
-\| `tree` | `Node`<`Data`> |
-\| `options?` | [`Options`](.interfaces/ooxast_util_remove_rsid.Options.md) |
+| Name | Type |
+| :------ | :------ |
+| `tree` | `Node`<`Data`> |
+| `options?` | [`Options`](modules.md#options) |
 
-###### Returns
+#### Returns
 
 `Node`
 
-###### Defined in
+Defined in:  [lib/ooxast-util-remove-rsid.ts:17](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-remove-rsid/src/lib/ooxast-util-remove-rsid.ts#L17)
 
-[src/lib/ooxast-util-remove-rsid.ts:17](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-remove-rsid/src/lib/ooxast-util-remove-rsid.ts#L17)
+***
 
-### Interface: Options
-
-[ooxast-util-remove-rsid](.modules).Options
+### `Options`
 
 #### Properties
 
-##### rPrRemoveList
+##### `rPrRemoveList?`
 
-• `Optional` **rPrRemoveList**: `string`\[]
+> `string`[]
 
-###### Defined in
-
-[src/lib/ooxast-util-remove-rsid.ts:13](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-remove-rsid/src/lib/ooxast-util-remove-rsid.ts#L13)
+Defined in:  [lib/ooxast-util-remove-rsid.ts:13](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-remove-rsid/src/lib/ooxast-util-remove-rsid.ts#L13)
 
 ## Syntax tree
 
@@ -119,30 +115,57 @@ pnpm add ooxast-util-remove-rsid
 [GPL-3.0-or-later](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
+
 [unifiedgh]: https://github.com/unifiedjs/unified
+
 [xast-from-xml]: https://github.com/syntax-tree/xast-util-from-xml
+
 [rehype]: https://github.com/rehypejs/rehype
+
 [rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour
+
 [rejour-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-parse
+
 [rejour-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-stringify
+
 [rejour-move-abstract]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-move-abstract
+
 [rejour-meta]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-meta
+
 [rejour-relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-relatex
+
 [relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex
+
 [ooxast-util-to-jast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/ooxast-util-to-jast
+
 [jast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast
+
 [jast-util-to-texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast-util-to-texast
+
 [jastscript]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jastscript
+
 [texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast
+
 [texast-util-to-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast-util-to-latex
+
 [hast]: https://github.com/syntax-tree/hast
+
 [xast]: https://github.com/syntax-tree/xast
+
 [mdast]: https://github.com/syntax-tree/mdast
+
 [mdast-markdown]: https://github.com/syntax-tree/mdast-util-to-markdown
+
 [latex-utensils]: https://github.com/tamuratak/latex-utensils
+
 [latexjs]: https://github.com/latexjs/latexjs
+
 [reoff]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff
+
 [reoff-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse
+
 [reoff-rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-rejour
+
 [ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast
+
 [ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-jast

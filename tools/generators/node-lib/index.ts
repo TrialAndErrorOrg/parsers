@@ -233,6 +233,15 @@ const addProject = (tree: Tree, options: NormalizedSchema) => {
       },
     }
   }
+
+  projectConfiguration.targets.readme = {
+    executor: '@jote/readme:update-readme',
+    options: {
+      readme: `${options.projectRoot}/README.md`,
+      packageJSON: `${options.projectRoot}/package.json`,
+    }
+  }
+
   addProjectConfiguration(
     tree,
     options.name,

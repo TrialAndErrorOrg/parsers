@@ -27,13 +27,27 @@ export default async function runExecutor(
   console.log(packagePath)
 
   const packageName = JSON.parse(await readFile(packagePath, 'utf-8')).name
+  console.log(packageName)
 
   // execute typedoc in the project root
-  await execa(`typedoc --out ${path.join('docs', packageName)} --entryPoints ${projectRoot}`, {
-    cwd: workspaceRoot,
-  })
+  const { stdout, stderr } = await execa(
+    `NODE_OPTIONS='' ${path.join(
+      workspaceRoot,
+      'node_modules',
+      '.bin',
+      'typedoc',
+    )} --out ${path.join(
+      'docs',
+      packageName,
+    )} --entryPoints ${projectRoot} --hideBreadcrumbs --hideInPageTOC --baseUrl`,
+    {
+      cwd: workspaceRoot,
+    },
+  )
+  console.log(stdout)
+  console.log(stderr)
 
-  await readmeAction(readmePath, packageName)
+  await readmeAction(readmePath, packagePath)
 
   return {
     success: true,

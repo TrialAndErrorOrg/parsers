@@ -10,7 +10,7 @@ const config = {
   // },
   testEnvironment: 'node',
   transform: {
-    '^.+\\.[tj]sx?$': ['@swc/jest'],
+    '^.+\\.[tj]sx?$': ['esbuild-jest'],
     '^.+\\.ne$': 'jest-transform-nearley',
   },
   transformIgnorePatterns: [],

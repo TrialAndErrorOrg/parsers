@@ -35,9 +35,14 @@
     "nx.json": "*"
   },
   "defaultProject": "jote",
+  "targetDefaults": {
+    "lint": {
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"]
+    }
+  },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@vercel/remote-nx",
+      "runner": "nx/tasks-runners/default",
       "options": {
         "cacheableOperations": ["build", "lint", "test", "e2e"]
       }

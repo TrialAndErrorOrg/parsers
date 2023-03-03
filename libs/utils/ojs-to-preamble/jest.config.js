@@ -2,11 +2,7 @@
 export default {
   displayName: 'utils-ojs-to-preamble',
   preset: '../../../jest.preset.js',
-  globals: {
-    'ts-jest': {
-      tsconfig: '<rootDir>/tsconfig.spec.json',
-    },
-  },
+  globals: {},
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]sx?$': ['@swc/jest'],

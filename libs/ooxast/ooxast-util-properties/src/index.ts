@@ -1,1 +1,1 @@
-export * from './lib/ooxast-util-properties'
+export { getPr, PrObject } from './lib/ooxast-util-properties'

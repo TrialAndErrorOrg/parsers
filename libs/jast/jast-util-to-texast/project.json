@@ -1,8 +1,16 @@
 {
-  "name": "jast-jast-util-to-texast",
+  "name": "jast-util-to-texast",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/jast/jast-util-to-texast/src",
   "projectType": "library",
   "targets": {
+    "readme": {
+      "executor": "@jote/utils/readme:update-readme",
+      "options": {
+        "readme": "libs/jast/jast-util-to-texast/README.md",
+        "packageJSON": "libs/jast/jast-util-to-texast/package.json"
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],

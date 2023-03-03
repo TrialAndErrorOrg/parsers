@@ -3,40 +3,44 @@
 
 ## API
 
-### Module: reoff-parse-references-browser
+***
 
-#### Functions
+### `default()`
 
-##### default
+#### Signature
 
-▸ **default**(`options`): (`tree`: `Root`, `vfile`: `VFile`) => `Promise`<`Root`>
+```ts
+default(options: Options): Function;
+```
 
-###### Parameters
+#### Parameters
 
-\| Name | Type |
-\| :------ | :------ |
-\| `options` | `Options` |
+| Name | Type |
+| :------ | :------ |
+| `options` | `Options` |
 
-###### Returns
+#### Returns
 
-`fn`
+`Function`
 
-▸ (`tree`, `vfile`): `Promise`<`Root`>
+##### `Signature`
 
-\####### Parameters
+```ts
+(tree: Root, vfile: VFile): Promise<Root>;
+```
 
-\| Name | Type |
-\| :------ | :------ |
-\| `tree` | `Root` |
-\| `vfile` | `VFile` |
+##### `Parameters`
 
-\####### Returns
+| Name | Type |
+| :------ | :------ |
+| `tree` | `Root` |
+| `vfile` | `VFile` |
+
+##### `Returns`
 
 `Promise`<`Root`>
 
-###### Defined in
-
-[src/lib/reoff-parse-references.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/reoff/reoff-parse-references-browser/src/lib/reoff-parse-references.ts#L5)
+Defined in:  [lib/reoff-parse-references.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/reoff/reoff-parse-references-browser/src/lib/reoff-parse-references.ts#L5)
 
 ## Install
 

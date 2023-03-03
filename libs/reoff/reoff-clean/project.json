@@ -1,8 +1,16 @@
 {
-  "name": "reoff-reoff-clean",
+  "name": "reoff-clean",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/reoff/reoff-clean/src",
   "projectType": "library",
   "targets": {
+    "readme": {
+      "executor": "@jote/utils/readme:update-readme",
+      "options": {
+        "readme": "libs/reoff/reoff-clean/README.md",
+        "packageJSON": "libs/reoff/reoff-clean/package.json"
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],

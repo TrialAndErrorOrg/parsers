@@ -1,2 +1,2 @@
-export * from './lib/ooxast-util-to-jast'
-export * from './lib/types'
+export { toJast, defaultHandlers } from './lib/ooxast-util-to-jast'
+export { Options } from './lib/types'

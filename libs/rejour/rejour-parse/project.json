@@ -1,8 +1,16 @@
 {
-  "name": "rejour-rejour-parse",
+  "name": "rejour-parse",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/rejour/rejour-parse/src",
   "projectType": "library",
   "targets": {
+    "readme": {
+      "executor": "@jote/utils/readme:update-readme",
+      "options": {
+        "readme": "libs/rejour/rejour-parse/README.md",
+        "packageJSON": "libs/rejour/rejour-parse/package.json"
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],

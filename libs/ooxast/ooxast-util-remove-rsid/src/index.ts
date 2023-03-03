@@ -1,1 +1,1 @@
-export * from './lib/ooxast-util-remove-rsid'
+export { Options, ooxastUtilRemoveRsid } from './lib/ooxast-util-remove-rsid'

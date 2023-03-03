@@ -3,805 +3,491 @@
 
 ## API
 
-### Module: crossref-json
+***
 
-#### Interfaces
-
-- [CrossrefJSON](.interfaces/crossref_json.CrossrefJSON.md)
-- [CrossrefResponse](.interfaces/crossref_json.CrossrefResponse.md)
-- [Message](.interfaces/crossref_json.Message.md)
-
-### Interface: CrossrefJSON
-
-[crossref-json](.modules).CrossrefJSON
+### `CrossrefJSON`
 
 #### Properties
 
-##### DOI
+##### `DOI`
 
-• **DOI**: `string`
+> `string`
 
-###### Defined in
+Defined in:  [index.ts:38](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L38)
 
-[src/index.ts:38](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L38)
+##### `ISBN`
 
----
+> `string`[]
 
-##### ISBN
+Defined in:  [index.ts:70](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L70)
 
-• **ISBN**: `string`\[]
+##### `ISSN`
 
-###### Defined in
+> `string`[]
 
-[src/index.ts:70](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L70)
+Defined in:  [index.ts:78](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L78)
 
----
+##### `URL`
 
-##### ISSN
+> `string`
 
-• **ISSN**: `string`\[]
+Defined in:  [index.ts:75](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L75)
 
-###### Defined in
+##### `abstract`
 
-[src/index.ts:78](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L78)
+> `string`
 
----
+Defined in:  [index.ts:37](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L37)
 
-##### URL
+##### `accepted`
 
-• **URL**: `string`
+> `Posted`
 
-###### Defined in
+Defined in:  [index.ts:34](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L34)
 
-[src/index.ts:75](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L75)
+##### `alternative-id`
 
----
+> `string`[]
 
-##### abstract
+Defined in:  [index.ts:74](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L74)
 
-• **abstract**: `string`
+##### `approved`
 
-###### Defined in
+> `Posted`
 
-[src/index.ts:37](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L37)
+Defined in:  [index.ts:41](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L41)
 
----
+##### `archive`
 
-##### accepted
+> `string`[]
 
-• **accepted**: `Posted`
+Defined in:  [index.ts:76](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L76)
 
-###### Defined in
+##### `article-number`
 
-[src/index.ts:34](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L34)
+> `string`
 
----
+Defined in:  [index.ts:85](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L85)
 
-##### alternative-id
+##### `assertion`
 
-• **alternative-id**: `string`\[]
+> `Assertion`[]
 
-###### Defined in
+Defined in:  [index.ts:83](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L83)
 
-[src/index.ts:74](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L74)
+##### `author`
 
----
+> `Chair`[]
 
-##### approved
+Defined in:  [index.ts:50](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L50)
 
-• **approved**: `Posted`
+##### `chair`
 
-###### Defined in
+> `Chair`[]
 
-[src/index.ts:41](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L41)
+Defined in:  [index.ts:32](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L32)
 
----
+##### `clinical-trial-number`
 
-##### archive
+> `Clinicaltrialnumber`[]
 
-• **archive**: `string`\[]
+Defined in:  [index.ts:49](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L49)
 
-###### Defined in
+##### `component-number`
 
-[src/index.ts:76](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L76)
+> `string`
 
----
+Defined in:  [index.ts:67](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L67)
 
-##### article-number
+##### `container-title`
 
-• **article-number**: `string`
+> `string`[]
 
-###### Defined in
+Defined in:  [index.ts:55](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L55)
 
-[src/index.ts:85](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L85)
+##### `content-created`
 
----
+> `Posted`
 
-##### assertion
+Defined in:  [index.ts:52](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L52)
 
-• **assertion**: `Assertion`\[]
+##### `content-domain`
 
-###### Defined in
+> `Contentdomain`
 
-[src/index.ts:83](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L83)
+Defined in:  [index.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L31)
 
----
+##### `content-updated`
 
-##### author
+> `Posted`
 
-• **author**: `Chair`\[]
+Defined in:  [index.ts:35](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L35)
 
-###### Defined in
+##### `created`
 
-[src/index.ts:50](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L50)
+> `Indexed`
 
----
+Defined in:  [index.ts:40](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L40)
 
-##### chair
+##### `degree`
 
-• **chair**: `Chair`\[]
+> `string`
 
-###### Defined in
+Defined in:  [index.ts:62](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L62)
 
-[src/index.ts:32](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L32)
+##### `deposited`
 
----
+> `Indexed`
 
-##### clinical-trial-number
+Defined in:  [index.ts:60](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L60)
 
-• **clinical-trial-number**: `Clinicaltrialnumber`\[]
+##### `edition-number`
 
-###### Defined in
+> `string`
 
-[src/index.ts:49](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L49)
+Defined in:  [index.ts:23](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L23)
 
----
+##### `editor`
 
-##### component-number
+> `Chair`[]
 
-• **component-number**: `string`
+Defined in:  [index.ts:66](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L66)
 
-###### Defined in
+##### `free-to-read`
 
-[src/index.ts:67](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L67)
+> `Freetoread`
 
----
+Defined in:  [index.ts:65](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L65)
 
-##### container-title
+##### `funder`
 
-• **container-title**: `string`\[]
+> `Funder`[]
 
-###### Defined in
+Defined in:  [index.ts:30](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L30)
 
-[src/index.ts:55](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L55)
+##### `group-title`
 
----
+> `string`[]
 
-##### content-created
+Defined in:  [index.ts:24](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L24)
 
-• **content-created**: `Posted`
+##### `indexed`
 
-###### Defined in
+> `Indexed`
 
-[src/index.ts:52](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L52)
+Defined in:  [index.ts:18](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L18)
 
----
+##### `institution`
 
-##### content-domain
+> `Institution`
 
-• **content-domain**: `Contentdomain`
+Defined in:  [index.ts:17](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L17)
 
-###### Defined in
+##### `is-referenced-by-count`
 
-[src/index.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L31)
+> `number`
 
----
+Defined in:  [index.ts:45](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L45)
 
-##### content-updated
+##### `isbn-type`
 
-• **content-updated**: `Posted`
+> `Isbntype`[]
 
-###### Defined in
+Defined in:  [index.ts:28](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L28)
 
-[src/index.ts:35](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L35)
+##### `issn-type`
 
----
+> `Isbntype`[]
 
-##### created
+Defined in:  [index.ts:79](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L79)
 
-• **created**: `Indexed`
+##### `issue`
 
-###### Defined in
+> `string`
 
-[src/index.ts:40](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L40)
+Defined in:  [index.ts:27](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L27)
 
----
+##### `issued`
 
-##### degree
+> `Posted`
 
-• **degree**: `string`
+Defined in:  [index.ts:69](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L69)
 
-###### Defined in
+##### `journal-issue`
 
-[src/index.ts:62](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L62)
+> `Journalissue`
 
----
+Defined in:  [index.ts:73](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L73)
 
-##### deposited
+##### `language`
 
-• **deposited**: `Indexed`
+> `string`
 
-###### Defined in
+Defined in:  [index.ts:58](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L58)
 
-[src/index.ts:60](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L60)
+##### `license`
 
----
+> `License`[]
 
-##### edition-number
+Defined in:  [index.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L29)
 
-• **edition-number**: `string`
+##### `link`
 
-###### Defined in
+> `Link`[]
 
-[src/index.ts:23](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L23)
+Defined in:  [index.ts:59](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L59)
 
----
+##### `member`
 
-##### editor
+> `string`
 
-• **editor**: `Chair`\[]
+Defined in:  [index.ts:51](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L51)
 
-###### Defined in
+##### `original-title`
 
-[src/index.ts:66](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L66)
+> `string`[]
 
----
+Defined in:  [index.ts:57](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L57)
 
-##### free-to-read
+##### `page`
 
-• **free-to-read**: `Freetoread`
+> `string`
 
-###### Defined in
+Defined in:  [index.ts:42](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L42)
 
-[src/index.ts:65](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L65)
+##### `part-number`
 
----
+> `string`
 
-##### funder
+Defined in:  [index.ts:72](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L72)
 
-• **funder**: `Funder`\[]
+##### `posted`
 
-###### Defined in
+> `Posted`
 
-[src/index.ts:30](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L30)
+Defined in:  [index.ts:19](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L19)
 
----
+##### `prefix`
 
-##### group-title
+> `string`
 
-• **group-title**: `string`\[]
+Defined in:  [index.ts:47](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L47)
 
-###### Defined in
+##### `published`
 
-[src/index.ts:24](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L24)
+> `Posted`
 
----
+Defined in:  [index.ts:82](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L82)
 
-##### indexed
+##### `published-online`
 
-• **indexed**: `Indexed`
+> `Posted`
 
-###### Defined in
+Defined in:  [index.ts:53](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L53)
 
-[src/index.ts:18](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L18)
+##### `published-other`
 
----
+> `Posted`
 
-##### institution
+Defined in:  [index.ts:81](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L81)
 
-• **institution**: `Institution`
+##### `published-print`
 
-###### Defined in
+> `Posted`
 
-[src/index.ts:17](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L17)
+Defined in:  [index.ts:36](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L36)
 
----
+##### `publisher`
 
-##### is-referenced-by-count
+> `string`
 
-• **is-referenced-by-count**: `number`
+Defined in:  [index.ts:26](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L26)
 
-###### Defined in
+##### `publisher-location`
 
-[src/index.ts:45](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L45)
+> `string`
 
----
+Defined in:  [index.ts:20](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L20)
 
-##### isbn-type
+##### `reference`
 
-• **isbn-type**: `Isbntype`\[]
+> `Reference`
 
-###### Defined in
+Defined in:  [index.ts:54](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L54)
 
-[src/index.ts:28](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L28)
+##### `reference-count`
 
----
+> `number`
 
-##### issn-type
+Defined in:  [index.ts:25](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L25)
 
-• **issn-type**: `Isbntype`\[]
+##### `references-count`
 
-###### Defined in
+> `number`
 
-[src/index.ts:79](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L79)
+Defined in:  [index.ts:71](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L71)
 
----
+##### `relation`
 
-##### issue
+> `Relation`
 
-• **issue**: `string`
+Defined in:  [index.ts:77](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L77)
 
-###### Defined in
+##### `review`
 
-[src/index.ts:27](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L27)
+> `Review`
 
----
+Defined in:  [index.ts:56](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L56)
 
-##### issued
+##### `score`
 
-• **issued**: `Posted`
+> `number`
 
-###### Defined in
+Defined in:  [index.ts:61](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L61)
 
-[src/index.ts:69](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L69)
+##### `short-container-title`
 
----
+> `string`
 
-##### journal-issue
+Defined in:  [index.ts:33](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L33)
 
-• **journal-issue**: `Journalissue`
+##### `short-title`
 
-###### Defined in
+> `string`[]
 
-[src/index.ts:73](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L73)
+Defined in:  [index.ts:68](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L68)
 
----
+##### `source`
 
-##### language
+> `string`
 
-• **language**: `string`
+Defined in:  [index.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L44)
 
-###### Defined in
+##### `standards-body`
 
-[src/index.ts:58](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L58)
+> `Standardsbody`[]
 
----
+Defined in:  [index.ts:22](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L22)
 
-##### license
+##### `subject`
 
-• **license**: `License`\[]
+> `string`[]
 
-###### Defined in
+Defined in:  [index.ts:80](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L80)
 
-[src/index.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L29)
+##### `subtitle`
 
----
+> `string`[]
 
-##### link
+Defined in:  [index.ts:63](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L63)
 
-• **link**: `Link`\[]
+##### `subtype`
 
-###### Defined in
+> `string`
 
-[src/index.ts:59](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L59)
+Defined in:  [index.ts:84](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L84)
 
----
+##### `title`
 
-##### member
+> `string`[]
 
-• **member**: `string`
+Defined in:  [index.ts:46](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L46)
 
-###### Defined in
+##### `translator`
 
-[src/index.ts:51](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L51)
+> `Chair`[]
 
----
+Defined in:  [index.ts:64](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L64)
 
-##### original-title
+##### `type`
 
-• **original-title**: `string`\[]
+> `string`
 
-###### Defined in
+Defined in:  [index.ts:39](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L39)
 
-[src/index.ts:57](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L57)
+##### `update-policy`
 
----
+> `string`
 
-##### page
+Defined in:  [index.ts:43](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L43)
 
-• **page**: `string`
+##### `update-to`
 
-###### Defined in
+> `Updateto`[]
 
-[src/index.ts:42](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L42)
+Defined in:  [index.ts:21](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L21)
 
----
+##### `volume`
 
-##### part-number
+> `string`
 
-• **part-number**: `string`
+Defined in:  [index.ts:48](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L48)
 
-###### Defined in
+***
 
-[src/index.ts:72](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L72)
-
----
-
-##### posted
-
-• **posted**: `Posted`
-
-###### Defined in
-
-[src/index.ts:19](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L19)
-
----
-
-##### prefix
-
-• **prefix**: `string`
-
-###### Defined in
-
-[src/index.ts:47](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L47)
-
----
-
-##### published
-
-• **published**: `Posted`
-
-###### Defined in
-
-[src/index.ts:82](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L82)
-
----
-
-##### published-online
-
-• **published-online**: `Posted`
-
-###### Defined in
-
-[src/index.ts:53](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L53)
-
----
-
-##### published-other
-
-• **published-other**: `Posted`
-
-###### Defined in
-
-[src/index.ts:81](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L81)
-
----
-
-##### published-print
-
-• **published-print**: `Posted`
-
-###### Defined in
-
-[src/index.ts:36](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L36)
-
----
-
-##### publisher
-
-• **publisher**: `string`
-
-###### Defined in
-
-[src/index.ts:26](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L26)
-
----
-
-##### publisher-location
-
-• **publisher-location**: `string`
-
-###### Defined in
-
-[src/index.ts:20](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L20)
-
----
-
-##### reference
-
-• **reference**: `Reference`
-
-###### Defined in
-
-[src/index.ts:54](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L54)
-
----
-
-##### reference-count
-
-• **reference-count**: `number`
-
-###### Defined in
-
-[src/index.ts:25](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L25)
-
----
-
-##### references-count
-
-• **references-count**: `number`
-
-###### Defined in
-
-[src/index.ts:71](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L71)
-
----
-
-##### relation
-
-• **relation**: `Relation`
-
-###### Defined in
-
-[src/index.ts:77](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L77)
-
----
-
-##### review
-
-• **review**: `Review`
-
-###### Defined in
-
-[src/index.ts:56](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L56)
-
----
-
-##### score
-
-• **score**: `number`
-
-###### Defined in
-
-[src/index.ts:61](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L61)
-
----
-
-##### short-container-title
-
-• **short-container-title**: `string`
-
-###### Defined in
-
-[src/index.ts:33](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L33)
-
----
-
-##### short-title
-
-• **short-title**: `string`\[]
-
-###### Defined in
-
-[src/index.ts:68](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L68)
-
----
-
-##### source
-
-• **source**: `string`
-
-###### Defined in
-
-[src/index.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L44)
-
----
-
-##### standards-body
-
-• **standards-body**: `Standardsbody`\[]
-
-###### Defined in
-
-[src/index.ts:22](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L22)
-
----
-
-##### subject
-
-• **subject**: `string`\[]
-
-###### Defined in
-
-[src/index.ts:80](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L80)
-
----
-
-##### subtitle
-
-• **subtitle**: `string`\[]
-
-###### Defined in
-
-[src/index.ts:63](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L63)
-
----
-
-##### subtype
-
-• **subtype**: `string`
-
-###### Defined in
-
-[src/index.ts:84](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L84)
-
----
-
-##### title
-
-• **title**: `string`\[]
-
-###### Defined in
-
-[src/index.ts:46](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L46)
-
----
-
-##### translator
-
-• **translator**: `Chair`\[]
-
-###### Defined in
-
-[src/index.ts:64](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L64)
-
----
-
-##### type
-
-• **type**: `string`
-
-###### Defined in
-
-[src/index.ts:39](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L39)
-
----
-
-##### update-policy
-
-• **update-policy**: `string`
-
-###### Defined in
-
-[src/index.ts:43](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L43)
-
----
-
-##### update-to
-
-• **update-to**: `Updateto`\[]
-
-###### Defined in
-
-[src/index.ts:21](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L21)
-
----
-
-##### volume
-
-• **volume**: `string`
-
-###### Defined in
-
-[src/index.ts:48](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L48)
-
-### Interface: CrossrefResponse
-
-[crossref-json](.modules).CrossrefResponse
+### `CrossrefResponse`
 
 #### Properties
 
-##### message
+##### `message`
 
-• **message**: [`Message`](.interfaces/crossref_json.Message.md)
+> [`Message`](modules.md#message)
 
-###### Defined in
+Defined in:  [index.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L5)
 
-[src/index.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L5)
+##### `message-type`
 
----
+> `string`
 
-##### message-type
+Defined in:  [index.ts:3](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L3)
 
-• **message-type**: `string`
+##### `message-version`
 
-###### Defined in
+> `string`
 
-[src/index.ts:3](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L3)
+Defined in:  [index.ts:4](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L4)
 
----
+##### `status`
 
-##### message-version
+> `string`
 
-• **message-version**: `string`
+Defined in:  [index.ts:2](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L2)
 
-###### Defined in
+***
 
-[src/index.ts:4](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L4)
-
----
-
-##### status
-
-• **status**: `string`
-
-###### Defined in
-
-[src/index.ts:2](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L2)
-
-### Interface: Message
-
-[crossref-json](.modules).Message
+### `Message`
 
 #### Properties
 
-##### items
+##### `items`
 
-• **items**: [`CrossrefJSON`](.interfaces/crossref_json.CrossrefJSON.md)\[]
+> [`CrossrefJSON`](modules.md#crossrefjson)[]
 
-###### Defined in
+Defined in:  [index.ts:13](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L13)
 
-[src/index.ts:13](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L13)
+##### `items-per-page`
 
----
+> `number`
 
-##### items-per-page
+Defined in:  [index.ts:9](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L9)
 
-• **items-per-page**: `number`
+##### `next-cursor`
 
-###### Defined in
+> `string`
 
-[src/index.ts:9](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L9)
+Defined in:  [index.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L12)
 
----
+##### `query`
 
-##### next-cursor
+> `Query`
 
-• **next-cursor**: `string`
+Defined in:  [index.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L10)
 
-###### Defined in
+##### `total-results`
 
-[src/index.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L12)
+> `number`
 
----
-
-##### query
-
-• **query**: `Query`
-
-###### Defined in
-
-[src/index.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L10)
-
----
-
-##### total-results
-
-• **total-results**: `number`
-
-###### Defined in
-
-[src/index.ts:11](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-json/src/index.ts#L11)
+Defined in:  [index.ts:11](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-json/src/index.ts#L11)
 
 ## Install
 

@@ -1,8 +1,16 @@
 {
-  "name": "ooxast-ooxast",
+  "name": "ooxast",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ooxast/ooxast/src",
   "projectType": "library",
   "targets": {
+    "readme": {
+      "executor": "@jote/utils/readme:update-readme",
+      "options": {
+        "readme": "libs/ooxast/ooxast/README.md",
+        "packageJSON": "libs/ooxast/ooxast/package.json"
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],

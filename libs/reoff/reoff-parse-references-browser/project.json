@@ -1,15 +1,21 @@
 {
-  "name": "reoff-reoff-parse-references-browser",
+  "name": "reoff-parse-references-browser",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/reoff/reoff-parse-references-browser/src",
   "projectType": "library",
   "targets": {
+    "readme": {
+      "executor": "@jote/utils/readme:update-readme",
+      "options": {
+        "readme": "libs/reoff/reoff-parse-references-browser/README.md",
+        "packageJSON": "libs/reoff/reoff-parse-references-browser/package.json"
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": [
-          "libs/reoff/reoff-parse-references-browser/**/*.ts"
-        ]
+        "lintFilePatterns": ["libs/reoff/reoff-parse-references-browser/**/*.ts"]
       }
     },
     "test": {

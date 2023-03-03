@@ -1,8 +1,16 @@
 {
-  "name": "texast-texast",
+  "name": "texast",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/texast/texast/src",
   "projectType": "library",
   "targets": {
+    "readme": {
+      "executor": "@jote/utils/readme:update-readme",
+      "options": {
+        "readme": "libs/texast/texast/README.md",
+        "packageJSON": "libs/texast/texast/package.json"
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],

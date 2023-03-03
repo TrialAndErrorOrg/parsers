@@ -3,27 +3,27 @@
 
 ## API
 
-### Module: crossref-to-csl
+***
 
-#### Functions
+### `crossrefToCsl()`
 
-##### crossrefToCsl
+#### Signature
 
-▸ **crossrefToCsl**(`item`): `CSL`
+```ts
+crossrefToCsl(item: CrossrefJSON): CSL;
+```
 
-###### Parameters
+#### Parameters
 
-\| Name | Type |
-\| :------ | :------ |
-\| `item` | `CrossrefJSON` |
+| Name | Type |
+| :------ | :------ |
+| `item` | `CrossrefJSON` |
 
-###### Returns
+#### Returns
 
 `CSL`
 
-###### Defined in
-
-[src/lib/crossref-to-csl.ts:52](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/crossref-to-csl/src/lib/crossref-to-csl.ts#L52)
+Defined in:  [lib/crossref-to-csl.ts:52](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/crossref-to-csl/src/lib/crossref-to-csl.ts#L52)
 
 ## Install
 

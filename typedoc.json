@@ -14,5 +14,31 @@
   ],
   "exclude": ["libs/citations/apa-parser", "libs/ooxast/ooxast-util-to-hast"],
   "hideBreadcrumbs": true,
-  "hideInPageTOC": true
+  "hideInPageTOC": true,
+  "kindSortOrder": [
+    "Reference",
+    "Project",
+    "Module",
+    "Namespace",
+    "Enum",
+    "EnumMember",
+    "Function",
+    "Variable",
+    "Class",
+    "Interface",
+    "TypeAlias",
+    "Constructor",
+    "Property",
+    "Accessor",
+    "Method",
+    "ObjectLiteral",
+    "Parameter",
+    "TypeParameter",
+    "TypeLiteral",
+    "CallSignature",
+    "ConstructorSignature",
+    "IndexSignature",
+    "GetSignature",
+    "SetSignature"
+  ]
 }

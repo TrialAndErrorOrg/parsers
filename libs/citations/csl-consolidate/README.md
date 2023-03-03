@@ -3,52 +3,54 @@
 
 ## API
 
-### Module: csl-consolidate
+***
 
-#### Functions
-
-##### consolidate
-
-▸ **consolidate**(`data`, `options`): `Promise`<`undefined` | `Data`\[]>
+### `consolidate()`
 
 Try to resolve a list of CSL data with crossref metadata
 
-###### Parameters
+#### Signature
 
-\| Name | Type |
-\| :------ | :------ |
-\| `data` | `Data`\[] |
-\| `options` | `Object` |
-\| `options.mailto` | `string` |
+```ts
+consolidate(data: Data[], options: object): Promise<undefined | Data[]>;
+```
 
-###### Returns
+#### Parameters
 
-`Promise`<`undefined` | `Data`\[]>
+| Name | Type |
+| :------ | :------ |
+| `data` | `Data`[] |
+| `options` | `object` |
+| `options.mailto` | `string` |
 
-###### Defined in
+#### Returns
 
-[src/lib/csl-consolidate.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/csl-consolidate/src/lib/csl-consolidate.ts#L12)
+`Promise`<`undefined` | `Data`[]>
 
----
+Defined in:  [lib/csl-consolidate.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/csl-consolidate/src/lib/csl-consolidate.ts#L12)
 
-##### dateSim
+***
 
-▸ **dateSim**(`ref`, `csl`): `number`
+### `dateSim()`
 
-###### Parameters
+#### Signature
 
-\| Name | Type |
-\| :------ | :------ |
-\| `ref` | `Data` |
-\| `csl` | `Data` |
+```ts
+dateSim(ref: Data, csl: Data): number;
+```
 
-###### Returns
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `ref` | `Data` |
+| `csl` | `Data` |
+
+#### Returns
 
 `number`
 
-###### Defined in
-
-[src/lib/csl-consolidate.ts:144](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/citations/csl-consolidate/src/lib/csl-consolidate.ts#L144)
+Defined in:  [lib/csl-consolidate.ts:144](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/csl-consolidate/src/lib/csl-consolidate.ts#L144)
 
 ## Install
 

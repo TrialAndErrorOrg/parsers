@@ -1,5 +1,5 @@
 {
-  "name": "ooxast-ooxast-util-to-hast",
+  "name": "ooxast-util-to-hast",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ooxast/ooxast-util-to-hast/src",
   "projectType": "library",

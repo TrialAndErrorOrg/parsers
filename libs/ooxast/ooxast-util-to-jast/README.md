@@ -7,20 +7,20 @@ Util to convert `ooxast` syntax tree to `jast` syntax tree, allowing for `.docx`
 
 ## Contents
 
-- [ooxast-util-to-jast](#ooxast-util-to-jast)
-  - [Contents](#contents)
-  - [What is this?](#what-is-this)
-  - [When should I use this?](#when-should-i-use-this)
-  - [Install](#install)
-  - [Use](#use)
-  - [API](#api)
-  - [Syntax tree](#syntax-tree)
-  - [Types](#types)
-  - [Compatibility](#compatibility)
-  - [Security](#security)
-  - [Related](#related)
-  - [Contribute](#contribute)
-  - [License](#license)
+*   [ooxast-util-to-jast](#ooxast-util-to-jast)
+    *   [Contents](#contents)
+    *   [What is this?](#what-is-this)
+    *   [When should I use this?](#when-should-i-use-this)
+    *   [Install](#install)
+    *   [Use](#use)
+    *   [API](#api)
+    *   [Syntax tree](#syntax-tree)
+    *   [Types](#types)
+    *   [Compatibility](#compatibility)
+    *   [Security](#security)
+    *   [Related](#related)
+    *   [Contribute](#contribute)
+    *   [License](#license)
 
 ## What is this?
 
@@ -42,1418 +42,1136 @@ pnpm add ooxast-util-to-jast
 
 ## API
 
-### Module: ooxast-util-to-jast
+***
 
-#### Interfaces
-
-- [Body](.interfaces/ooxast_util_to_jast.Body.md)
-- [Context](.interfaces/ooxast_util_to_jast.Context.md)
-- [Element](.interfaces/ooxast_util_to_jast.Element.md)
-- [JastP](.interfaces/ooxast_util_to_jast.JastP.md)
-- [JastParent](.interfaces/ooxast_util_to_jast.JastParent.md)
-- [JastRoot](.interfaces/ooxast_util_to_jast.JastRoot.md)
-- [Options](.interfaces/ooxast_util_to_jast.Options.md)
-- [P](.interfaces/ooxast_util_to_jast.P.md)
-- [Parent](.interfaces/ooxast_util_to_jast.Parent.md)
-
-#### Type Aliases
-
-##### Attributes
-
-Ƭ **Attributes**: `OoxastProperties`
-
-###### Defined in
-
-[src/lib/types.ts:28](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L28)
-
----
-
-##### Handle
-
-Ƭ **Handle**: (`j`: [`J`](.modules#j), `node`: `any`, `parent?`: [`Parent`](.interfaces/ooxast_util_to_jast.Parent.md)) => [`JastContent`](.modules#jastcontent) | [`JastContent`](.modules#jastcontent)\[] | `void`
-
-###### Type declaration
-
-▸ (`j`, `node`, `parent?`): [`JastContent`](.modules#jastcontent) | [`JastContent`](.modules#jastcontent)\[] | `void`
-
-\####### Parameters
-
-\| Name | Type |
-\| :------ | :------ |
-\| `j` | [`J`](.modules#j) |
-\| `node` | `any` |
-\| `parent?` | [`Parent`](.interfaces/ooxast_util_to_jast.Parent.md) |
-
-\####### Returns
-
-[`JastContent`](.modules#jastcontent) | [`JastContent`](.modules#jastcontent)\[] | `void`
-
-###### Defined in
-
-[src/lib/types.ts:50](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L50)
-
----
-
-##### J
-
-Ƭ **J**: [`JWithProps`](.modules#jwithprops) & [`JWithoutProps`](.modules#jwithoutprops) & [`Context`](.interfaces/ooxast_util_to_jast.Context.md)
-
-###### Defined in
-
-[src/lib/types.ts:136](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L136)
-
----
-
-##### JWithProps
-
-Ƭ **JWithProps**: (`node`: [`Node`](.modules#node), `type`: `string`, `props?`: [`Attributes`](.modules#attributes), `children?`: `string` | [`JastContent`](.modules#jastcontent)\[]) => [`JastContent`](.modules#jastcontent)
-
-###### Type declaration
-
-▸ (`node`, `type`, `props?`, `children?`): [`JastContent`](.modules#jastcontent)
-
-\####### Parameters
-
-\| Name | Type |
-\| :------ | :------ |
-\| `node` | [`Node`](.modules#node) |
-\| `type` | `string` |
-\| `props?` | [`Attributes`](.modules#attributes) |
-\| `children?` | `string` | [`JastContent`](.modules#jastcontent)\[] |
-
-\####### Returns
-
-[`JastContent`](.modules#jastcontent)
-
-###### Defined in
-
-[src/lib/types.ts:98](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L98)
-
----
-
-##### JWithoutProps
-
-Ƭ **JWithoutProps**: (`node`: [`Node`](.modules#node), `type`: `string`, `children?`: `string` | [`JastContent`](.modules#jastcontent)\[]) => [`JastContent`](.modules#jastcontent)
-
-###### Type declaration
-
-▸ (`node`, `type`, `children?`): [`JastContent`](.modules#jastcontent)
-
-\####### Parameters
-
-\| Name | Type |
-\| :------ | :------ |
-\| `node` | [`Node`](.modules#node) |
-\| `type` | `string` |
-\| `children?` | `string` | [`JastContent`](.modules#jastcontent)\[] |
-
-\####### Returns
-
-[`JastContent`](.modules#jastcontent)
-
-###### Defined in
-
-[src/lib/types.ts:105](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L105)
-
----
-
-##### JastContent
-
-Ƭ **JastContent**: `ValuesType`<`documentMap`>
-
-###### Defined in
-
-[libs/jast/jast/src/lib/jats.ts:13717](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/jast/jast/src/lib/jats.ts#L13717)
-
----
-
-##### JastParagraphContent
-
-Ƭ **JastParagraphContent**: [`JastP`](.interfaces/ooxast_util_to_jast.JastP.md)\[`"children"`]\[`number`]
-
-###### Defined in
-
-[src/lib/types.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L10)
-
----
-
-##### Node
-
-Ƭ **Node**: [`Parent`](.interfaces/ooxast_util_to_jast.Parent.md)\[`"children"`]\[`number`] | [`Root`](.modules#root)
-
-ooxast Node
-
-###### Defined in
-
-[src/lib/types.ts:25](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L25)
-
----
-
-##### Parents
-
-Ƭ **Parents**: `Extract`<`Exclude`<[`Node`](.modules#node), [`Text`](.modules#text) | [`Root`](.modules#root)>, { `children`: `any`\[] }>
-
-###### Defined in
-
-[src/lib/types.ts:152](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L152)
-
----
-
-##### Root
-
-Ƭ **Root**: `XastRoot` & { `children`: (`RequiredMap`<`document`> | `Doctype` | `Instruction` | [`Text`](.modules#text))\[] }
-
-###### Defined in
-
-[libs/ooxast/ooxast/src/lib/ooxast.ts:21](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast/src/lib/ooxast.ts#L21)
-
----
-
-##### Text
-
-Ƭ **Text**: `UnistLiteral` & { `type`: `"text"` ; `value`: `string` }
-
-###### Defined in
-
-[libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts:4038](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts#L4038)
-
-#### Variables
-
-##### defaultHandlers
-
-• `Const` **defaultHandlers**: `Object`
-
-###### Type declaration
-
-\| Name | Type |
-\| :------ | :------ |
-\| `article` | () => `void` |
-\| `body` | (`j`: [`J`](.modules#j), `body`: [`Body`](.interfaces/ooxast_util_to_jast.Body.md)) => `Sec` | `Body` |
-\| `doctype` | () => `void` |
-\| `document` | (`j`: [`J`](.modules#j), `node`: `Document`) => `Article` |
-\| `drawing` | (`j`: [`J`](.modules#j), `node`: `Drawing`) => `Fig` |
-\| `footnote` | (`j`: [`J`](.modules#j), `node`: [`Element`](.interfaces/ooxast_util_to_jast.Element.md)) => `undefined` | `Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `AbbrevJournaltitle` | `Abbrev` | `Def` | `Abstract` | [`JastP`](.interfaces/ooxast_util_to_jast.JastP.md) | `Label` | `Title` | `ObjectId` | `Sec` | `AccessDate` | `Ack` | `KwdGroup` | `RefList` | `SubjGroup` | `Address` | `Email` | `Fax` | `AddrLine` | `City` | `Country` | `ExtLink` | `Institution` | `InstitutionWrap` | `Phone` | `PostalCode` | `State` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `AffAlternatives` | `Aff` | `Break` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Graphic` | `Table` | `Array` | `Code` | `Media` | `Preformat` | `SupplementaryMaterial` | `TexMath` | `TextualForm` | `AltText` | `AltTitle` | `Annotation` | `Anonymous` | `AnswerSet` | `Answer` | `Explanation` | `Subtitle` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `FnGroup` | `Glossary` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AppGroup` | `App` | `Permissions` | `SecMeta` | `LongDesc` | `Attrib` | `Tbody` | `ArticleCategories` | `SeriesText` | `SeriesTitle` | `ArticleId` | `ArticleMeta` | `Isbn` | `ArticleVersion` | `ArticleVersionalternatives` | `AuthorNotes` | `Conference` | `ContribGroup` | `Counts` | `CustomMetagroup` | `ElocationId` | `Fpage` | `FundingGroup` | `History` | `Issue` | `IssueId` | `IssuePart` | `IssueSponsor` | `IssueTitle` | `IssueTitlegroup` | `Lpage` | `PageRange` | `Product` | `PubDate` | `PubDatenotavailable` | `PubHistory` | `SelfUri` | `Supplement` | `SupportGroup` | `TitleGroup` | `TransAbstract` | `Volume` | `VolumeId` | `VolumeIssuegroup` | `VolumeSeries` | `ArticleTitle` | `Article` | `Body` | `Front` | `Back` | `FloatsGroup` | `ProcessingMeta` | `Response` | `SubArticle` | `AuthorComment` | `Corresp` | `AwardDesc` | `AwardGroup` | `AwardId` | `AwardName` | `FundingSource` | `PrincipalAwardrecipient` | `PrincipalInvestigator` | `SupportSource` | `Bio` | `Notes` | `SigBlock` | `Caption` | `ChapterTitle` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `Colgroup` | `Col` | `CollabAlternatives` | `Collab` | `OnBehalfof` | `Role` | `Comment` | `CompoundKwdpart` | `CompoundKwd` | `CompoundSubjectpart` | `CompoundSubject` | `ConfAcronym` | `ConfDate` | `ConfLoc` | `ConfName` | `ConfNum` | `ConfSponsor` | `ConfTheme` | `Contrib` | `ContribId` | `Name` | `Degrees` | `NameAlternatives` | `StringName` | `ContributedResourcegroup` | `ResourceGroup` | `SupportDescription` | `CopyrightHolder` | `CopyrightStatement` | `CopyrightYear` | `Count` | `EquationCount` | `FigCount` | `PageCount` | `RefCount` | `TableCount` | `WordCount` | `CustomMeta` | `MetaName` | `MetaValue` | `DataTitle` | `DateIncitation` | `Day` | `Era` | `Month` | `Season` | `Year` | `Date` | `DefHead` | `DefItem` | `Term` | `TermHead` | `Edition` | `Series` | `Size` | `Etal` | `Gov` | `Issn` | `IssnL` | `PartTitle` | `Patent` | `PersonGroup` | `PubId` | `PublisherLoc` | `PublisherName` | `Source` | `Std` | `StringDate` | `TransSource` | `TransTitle` | `Version` | `EventDesc` | `Event` | `ExtendedBy` | `FrontStub` | `JournalMeta` | `FundingStatement` | `OpenAccess` | `GivenNames` | `GlyphData` | `GlyphRef` | `Hr` | `See` | `SeeAlso` | `InstitutionId` | `IssueSubtitle` | `TransTitlegroup` | `JournalId` | `JournalTitlegroup` | `Publisher` | `JournalSubtitle` | `JournalTitle` | `Kwd` | `NestedKwd` | `LicenseP` | `Price` | `License` | `ListItem` | `Prefix` | `Suffix` | `Surname` | `TimeStamp` | `Note` | `Option` | `OverlineEnd` | `OverlineStart` | `RestrictedBy` | `QuestionPreamble` | `Rb` | `Ref` | `ResourceName` | `ResourceWrap` | `ResourceId` | `Rp` | `Rt` | `Sig` | `Speaker` | `StdOrganization` | `StringConf` | `Subject` | `Tr` | `Tfoot` | `Thead` | `TableWrapfoot` | `Td` | `Th` | `TransSubtitle` | `UnderlineEnd` | `UnderlineStart` | `UnstructuredKwdgroup` | `VerseLine` | `X` |
-\| `footnotes` | (`j`: [`J`](.modules#j), `node`: `Footnotes`) => `void` |
-\| `instrText` | (`j`: [`J`](.modules#j), `citation`: `T`, `parent`: [`Parent`](.interfaces/ooxast_util_to_jast.Parent.md)<`Node`<`Data`>, `Data`>) => `any` |
-\| `instruction` | () => `void` |
-\| `p` | (`j`: [`J`](.modules#j), `p`: [`P`](.interfaces/ooxast_util_to_jast.P.md), `parent`: [`Parent`](.interfaces/ooxast_util_to_jast.Parent.md)<`Node`<`Data`>, `Data`>) => `Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `AbbrevJournaltitle` | `Abbrev` | `Def` | `Abstract` | [`JastP`](.interfaces/ooxast_util_to_jast.JastP.md) | `Label` | `Title` | `ObjectId` | `Sec` | `AccessDate` | `Ack` | `KwdGroup` | `RefList` | `SubjGroup` | `Address` | `Email` | `Fax` | `AddrLine` | `City` | `Country` | `ExtLink` | `Institution` | `InstitutionWrap` | `Phone` | `PostalCode` | `State` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `AffAlternatives` | `Aff` | `Break` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Graphic` | `Table` | `Array` | `Code` | `Media` | `Preformat` | `SupplementaryMaterial` | `TexMath` | `TextualForm` | `AltText` | `AltTitle` | `Annotation` | `Anonymous` | `AnswerSet` | `Answer` | `Explanation` | `Subtitle` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `FnGroup` | `Glossary` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AppGroup` | `App` | `Permissions` | `SecMeta` | `LongDesc` | `Attrib` | `Tbody` | `ArticleCategories` | `SeriesText` | `SeriesTitle` | `ArticleId` | `ArticleMeta` | `Isbn` | `ArticleVersion` | `ArticleVersionalternatives` | `AuthorNotes` | `Conference` | `ContribGroup` | `Counts` | `CustomMetagroup` | `ElocationId` | `Fpage` | `FundingGroup` | `History` | `Issue` | `IssueId` | `IssuePart` | `IssueSponsor` | `IssueTitle` | `IssueTitlegroup` | `Lpage` | `PageRange` | `Product` | `PubDate` | `PubDatenotavailable` | `PubHistory` | `SelfUri` | `Supplement` | `SupportGroup` | `TitleGroup` | `TransAbstract` | `Volume` | `VolumeId` | `VolumeIssuegroup` | `VolumeSeries` | `ArticleTitle` | `Article` | `Body` | `Front` | `Back` | `FloatsGroup` | `ProcessingMeta` | `Response` | `SubArticle` | `AuthorComment` | `Corresp` | `AwardDesc` | `AwardGroup` | `AwardId` | `AwardName` | `FundingSource` | `PrincipalAwardrecipient` | `PrincipalInvestigator` | `SupportSource` | `Bio` | `Notes` | `SigBlock` | `Caption` | `ChapterTitle` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `Colgroup` | `Col` | `CollabAlternatives` | `Collab` | `OnBehalfof` | `Role` | `Comment` | `CompoundKwdpart` | `CompoundKwd` | `CompoundSubjectpart` | `CompoundSubject` | `ConfAcronym` | `ConfDate` | `ConfLoc` | `ConfName` | `ConfNum` | `ConfSponsor` | `ConfTheme` | `Contrib` | `ContribId` | `Name` | `Degrees` | `NameAlternatives` | `StringName` | `ContributedResourcegroup` | `ResourceGroup` | `SupportDescription` | `CopyrightHolder` | `CopyrightStatement` | `CopyrightYear` | `Count` | `EquationCount` | `FigCount` | `PageCount` | `RefCount` | `TableCount` | `WordCount` | `CustomMeta` | `MetaName` | `MetaValue` | `DataTitle` | `DateIncitation` | `Day` | `Era` | `Month` | `Season` | `Year` | `Date` | `DefHead` | `DefItem` | `Term` | `TermHead` | `Edition` | `Series` | `Size` | `Etal` | `Gov` | `Issn` | `IssnL` | `PartTitle` | `Patent` | `PersonGroup` | `PubId` | `PublisherLoc` | `PublisherName` | `Source` | `Std` | `StringDate` | `TransSource` | `TransTitle` | `Version` | `EventDesc` | `Event` | `ExtendedBy` | `FrontStub` | `JournalMeta` | `FundingStatement` | `OpenAccess` | `GivenNames` | `GlyphData` | `GlyphRef` | `Hr` | `See` | `SeeAlso` | `InstitutionId` | `IssueSubtitle` | `TransTitlegroup` | `JournalId` | `JournalTitlegroup` | `Publisher` | `JournalSubtitle` | `JournalTitle` | `Kwd` | `NestedKwd` | `LicenseP` | `Price` | `License` | `ListItem` | `Prefix` | `Suffix` | `Surname` | `TimeStamp` | `Note` | `Option` | `OverlineEnd` | `OverlineStart` | `RestrictedBy` | `QuestionPreamble` | `Rb` | `Ref` | `ResourceName` | `ResourceWrap` | `ResourceId` | `Rp` | `Rt` | `Sig` | `Speaker` | `StdOrganization` | `StringConf` | `Subject` | `Tr` | `Tfoot` | `Thead` | `TableWrapfoot` | `Td` | `Th` | `TransSubtitle` | `UnderlineEnd` | `UnderlineStart` | `UnstructuredKwdgroup` | `VerseLine` | `X` | (`Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `AbbrevJournaltitle` | `Abbrev` | `Def` | `Abstract` | [`JastP`](.interfaces/ooxast_util_to_jast.JastP.md) | `Label` | `Title` | `ObjectId` | `Sec` | `AccessDate` | `Ack` | `KwdGroup` | `RefList` | `SubjGroup` | `Address` | `Email` | `Fax` | `AddrLine` | `City` | `Country` | `ExtLink` | `Institution` | `InstitutionWrap` | `Phone` | `PostalCode` | `State` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `AffAlternatives` | `Aff` | `Break` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Graphic` | `Table` | `Array` | `Code` | `Media` | `Preformat` | `SupplementaryMaterial` | `TexMath` | `TextualForm` | `AltText` | `AltTitle` | `Annotation` | `Anonymous` | `AnswerSet` | `Answer` | `Explanation` | `Subtitle` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `FnGroup` | `Glossary` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AppGroup` | `App` | `Permissions` | `SecMeta` | `LongDesc` | `Attrib` | `Tbody` | `ArticleCategories` | `SeriesText` | `SeriesTitle` | `ArticleId` | `ArticleMeta` | `Isbn` | `ArticleVersion` | `ArticleVersionalternatives` | `AuthorNotes` | `Conference` | `ContribGroup` | `Counts` | `CustomMetagroup` | `ElocationId` | `Fpage` | `FundingGroup` | `History` | `Issue` | `IssueId` | `IssuePart` | `IssueSponsor` | `IssueTitle` | `IssueTitlegroup` | `Lpage` | `PageRange` | `Product` | `PubDate` | `PubDatenotavailable` | `PubHistory` | `SelfUri` | `Supplement` | `SupportGroup` | `TitleGroup` | `TransAbstract` | `Volume` | `VolumeId` | `VolumeIssuegroup` | `VolumeSeries` | `ArticleTitle` | `Article` | `Body` | `Front` | `Back` | `FloatsGroup` | `ProcessingMeta` | `Response` | `SubArticle` | `AuthorComment` | `Corresp` | `AwardDesc` | `AwardGroup` | `AwardId` | `AwardName` | `FundingSource` | `PrincipalAwardrecipient` | `PrincipalInvestigator` | `SupportSource` | `Bio` | `Notes` | `SigBlock` | `Caption` | `ChapterTitle` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `Colgroup` | `Col` | `CollabAlternatives` | `Collab` | `OnBehalfof` | `Role` | `Comment` | `CompoundKwdpart` | `CompoundKwd` | `CompoundSubjectpart` | `CompoundSubject` | `ConfAcronym` | `ConfDate` | `ConfLoc` | `ConfName` | `ConfNum` | `ConfSponsor` | `ConfTheme` | `Contrib` | `ContribId` | `Name` | `Degrees` | `NameAlternatives` | `StringName` | `ContributedResourcegroup` | `ResourceGroup` | `SupportDescription` | `CopyrightHolder` | `CopyrightStatement` | `CopyrightYear` | `Count` | `EquationCount` | `FigCount` | `PageCount` | `RefCount` | `TableCount` | `WordCount` | `CustomMeta` | `MetaName` | `MetaValue` | `DataTitle` | `DateIncitation` | `Day` | `Era` | `Month` | `Season` | `Year` | `Date` | `DefHead` | `DefItem` | `Term` | `TermHead` | `Edition` | `Series` | `Size` | `Etal` | `Gov` | `Issn` | `IssnL` | `PartTitle` | `Patent` | `PersonGroup` | `PubId` | `PublisherLoc` | `PublisherName` | `Source` | `Std` | `StringDate` | `TransSource` | `TransTitle` | `Version` | `EventDesc` | `Event` | `ExtendedBy` | `FrontStub` | `JournalMeta` | `FundingStatement` | `OpenAccess` | `GivenNames` | `GlyphData` | `GlyphRef` | `Hr` | `See` | `SeeAlso` | `InstitutionId` | `IssueSubtitle` | `TransTitlegroup` | `JournalId` | `JournalTitlegroup` | `Publisher` | `JournalSubtitle` | `JournalTitle` | `Kwd` | `NestedKwd` | `LicenseP` | `Price` | `License` | `ListItem` | `Prefix` | `Suffix` | `Surname` | `TimeStamp` | `Note` | `Option` | `OverlineEnd` | `OverlineStart` | `RestrictedBy` | `QuestionPreamble` | `Rb` | `Ref` | `ResourceName` | `ResourceWrap` | `ResourceId` | `Rp` | `Rt` | `Sig` | `Speaker` | `StdOrganization` | `StringConf` | `Subject` | `Tr` | `Tfoot` | `Thead` | `TableWrapfoot` | `Td` | `Th` | `TransSubtitle` | `UnderlineEnd` | `UnderlineStart` | `UnstructuredKwdgroup` | `VerseLine` | `X`)\[] |
-\| `r` | (`j`: [`J`](.modules#j), `node`: `R`) => `any` |
-\| `root` | (`j`: [`J`](.modules#j), `node`: [`Root`](.modules#root)) => `Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `AbbrevJournaltitle` | `Abbrev` | `Def` | `Abstract` | [`JastP`](.interfaces/ooxast_util_to_jast.JastP.md) | `Label` | `Title` | `ObjectId` | `Sec` | `AccessDate` | `Ack` | `KwdGroup` | `RefList` | `SubjGroup` | `Address` | `Email` | `Fax` | `AddrLine` | `City` | `Country` | `ExtLink` | `Institution` | `InstitutionWrap` | `Phone` | `PostalCode` | `State` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `AffAlternatives` | `Aff` | `Break` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Graphic` | `Table` | `Array` | `Code` | `Media` | `Preformat` | `SupplementaryMaterial` | `TexMath` | `TextualForm` | `AltText` | `AltTitle` | `Annotation` | `Anonymous` | `AnswerSet` | `Answer` | `Explanation` | `Subtitle` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `FnGroup` | `Glossary` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AppGroup` | `App` | `Permissions` | `SecMeta` | `LongDesc` | `Attrib` | `Tbody` | `ArticleCategories` | `SeriesText` | `SeriesTitle` | `ArticleId` | `ArticleMeta` | `Isbn` | `ArticleVersion` | `ArticleVersionalternatives` | `AuthorNotes` | `Conference` | `ContribGroup` | `Counts` | `CustomMetagroup` | `ElocationId` | `Fpage` | `FundingGroup` | `History` | `Issue` | `IssueId` | `IssuePart` | `IssueSponsor` | `IssueTitle` | `IssueTitlegroup` | `Lpage` | `PageRange` | `Product` | `PubDate` | `PubDatenotavailable` | `PubHistory` | `SelfUri` | `Supplement` | `SupportGroup` | `TitleGroup` | `TransAbstract` | `Volume` | `VolumeId` | `VolumeIssuegroup` | `VolumeSeries` | `ArticleTitle` | `Article` | `Body` | `Front` | `Back` | `FloatsGroup` | `ProcessingMeta` | `Response` | `SubArticle` | `AuthorComment` | `Corresp` | `AwardDesc` | `AwardGroup` | `AwardId` | `AwardName` | `FundingSource` | `PrincipalAwardrecipient` | `PrincipalInvestigator` | `SupportSource` | `Bio` | `Notes` | `SigBlock` | `Caption` | `ChapterTitle` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `Colgroup` | `Col` | `CollabAlternatives` | `Collab` | `OnBehalfof` | `Role` | `Comment` | `CompoundKwdpart` | `CompoundKwd` | `CompoundSubjectpart` | `CompoundSubject` | `ConfAcronym` | `ConfDate` | `ConfLoc` | `ConfName` | `ConfNum` | `ConfSponsor` | `ConfTheme` | `Contrib` | `ContribId` | `Name` | `Degrees` | `NameAlternatives` | `StringName` | `ContributedResourcegroup` | `ResourceGroup` | `SupportDescription` | `CopyrightHolder` | `CopyrightStatement` | `CopyrightYear` | `Count` | `EquationCount` | `FigCount` | `PageCount` | `RefCount` | `TableCount` | `WordCount` | `CustomMeta` | `MetaName` | `MetaValue` | `DataTitle` | `DateIncitation` | `Day` | `Era` | `Month` | `Season` | `Year` | `Date` | `DefHead` | `DefItem` | `Term` | `TermHead` | `Edition` | `Series` | `Size` | `Etal` | `Gov` | `Issn` | `IssnL` | `PartTitle` | `Patent` | `PersonGroup` | `PubId` | `PublisherLoc` | `PublisherName` | `Source` | `Std` | `StringDate` | `TransSource` | `TransTitle` | `Version` | `EventDesc` | `Event` | `ExtendedBy` | `FrontStub` | `JournalMeta` | `FundingStatement` | `OpenAccess` | `GivenNames` | `GlyphData` | `GlyphRef` | `Hr` | `See` | `SeeAlso` | `InstitutionId` | `IssueSubtitle` | `TransTitlegroup` | `JournalId` | `JournalTitlegroup` | `Publisher` | `JournalSubtitle` | `JournalTitle` | `Kwd` | `NestedKwd` | `LicenseP` | `Price` | `License` | `ListItem` | `Prefix` | `Suffix` | `Surname` | `TimeStamp` | `Note` | `Option` | `OverlineEnd` | `OverlineStart` | `RestrictedBy` | `QuestionPreamble` | `Rb` | `Ref` | `ResourceName` | `ResourceWrap` | `ResourceId` | `Rp` | `Rt` | `Sig` | `Speaker` | `StdOrganization` | `StringConf` | `Subject` | `Tr` | `Tfoot` | `Thead` | `TableWrapfoot` | `Td` | `Th` | `TransSubtitle` | `UnderlineEnd` | `UnderlineStart` | `UnstructuredKwdgroup` | `VerseLine` | `X` |
-\| `t` | (`j`: [`J`](.modules#j), `parent`: [`Node`](.modules#node)) => [`JastContent`](.modules#jastcontent)\[] |
-\| `tbl` | (`j`: [`J`](.modules#j), `tbl`: `Tbl`) => { `attributes`: {} = {}; `children`: (`Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `AbbrevJournaltitle` | `Abbrev` | `Def` | `Abstract` | [`JastP`](.interfaces/ooxast_util_to_jast.JastP.md) | `Label` | `Title` | `ObjectId` | `Sec` | `AccessDate` | `Ack` | `KwdGroup` | `RefList` | `SubjGroup` | `Address` | `Email` | `Fax` | `AddrLine` | `City` | `Country` | `ExtLink` | `Institution` | `InstitutionWrap` | `Phone` | `PostalCode` | `State` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `AffAlternatives` | `Aff` | `Break` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Graphic` | `Table` | `Array` | `Code` | `Media` | `Preformat` | `SupplementaryMaterial` | `TexMath` | `TextualForm` | `AltText` | `AltTitle` | `Annotation` | `Anonymous` | `AnswerSet` | `Answer` | `Explanation` | `Subtitle` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `FnGroup` | `Glossary` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AppGroup` | `App` | `Permissions` | `SecMeta` | `LongDesc` | `Attrib` | `Tbody` | `ArticleCategories` | `SeriesText` | `SeriesTitle` | `ArticleId` | `ArticleMeta` | `Isbn` | `ArticleVersion` | `ArticleVersionalternatives` | `AuthorNotes` | `Conference` | `ContribGroup` | `Counts` | `CustomMetagroup` | `ElocationId` | `Fpage` | `FundingGroup` | `History` | `Issue` | `IssueId` | `IssuePart` | `IssueSponsor` | `IssueTitle` | `IssueTitlegroup` | `Lpage` | `PageRange` | `Product` | `PubDate` | `PubDatenotavailable` | `PubHistory` | `SelfUri` | `Supplement` | `SupportGroup` | `TitleGroup` | `TransAbstract` | `Volume` | `VolumeId` | `VolumeIssuegroup` | `VolumeSeries` | `ArticleTitle` | `Article` | `Body` | `Front` | `Back` | `FloatsGroup` | `ProcessingMeta` | `Response` | `SubArticle` | `AuthorComment` | `Corresp` | `AwardDesc` | `AwardGroup` | `AwardId` | `AwardName` | `FundingSource` | `PrincipalAwardrecipient` | `PrincipalInvestigator` | `SupportSource` | `Bio` | `Notes` | `SigBlock` | `Caption` | `ChapterTitle` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `Colgroup` | `Col` | `CollabAlternatives` | `Collab` | `OnBehalfof` | `Role` | `Comment` | `CompoundKwdpart` | `CompoundKwd` | `CompoundSubjectpart` | `CompoundSubject` | `ConfAcronym` | `ConfDate` | `ConfLoc` | `ConfName` | `ConfNum` | `ConfSponsor` | `ConfTheme` | `Contrib` | `ContribId` | `Name` | `Degrees` | `NameAlternatives` | `StringName` | `ContributedResourcegroup` | `ResourceGroup` | `SupportDescription` | `CopyrightHolder` | `CopyrightStatement` | `CopyrightYear` | `Count` | `EquationCount` | `FigCount` | `PageCount` | `RefCount` | `TableCount` | `WordCount` | `CustomMeta` | `MetaName` | `MetaValue` | `DataTitle` | `DateIncitation` | `Day` | `Era` | `Month` | `Season` | `Year` | `Date` | `DefHead` | `DefItem` | `Term` | `TermHead` | `Edition` | `Series` | `Size` | `Etal` | `Gov` | `Issn` | `IssnL` | `PartTitle` | `Patent` | `PersonGroup` | `PubId` | `PublisherLoc` | `PublisherName` | `Source` | `Std` | `StringDate` | `TransSource` | `TransTitle` | `Version` | `EventDesc` | `Event` | `ExtendedBy` | `FrontStub` | `JournalMeta` | `FundingStatement` | `OpenAccess` | `GivenNames` | `GlyphData` | `GlyphRef` | `Hr` | `See` | `SeeAlso` | `InstitutionId` | `IssueSubtitle` | `TransTitlegroup` | `JournalId` | `JournalTitlegroup` | `Publisher` | `JournalSubtitle` | `JournalTitle` | `Kwd` | `NestedKwd` | `LicenseP` | `Price` | `License` | `ListItem` | `Prefix` | `Suffix` | `Surname` | `TimeStamp` | `Note` | `Option` | `OverlineEnd` | `OverlineStart` | `RestrictedBy` | `QuestionPreamble` | `Rb` | `Ref` | `ResourceName` | `ResourceWrap` | `ResourceId` | `Rp` | `Rt` | `Sig` | `Speaker` | `StdOrganization` | `StringConf` | `Subject` | `Tr` | `Tfoot` | `Thead` | `TableWrapfoot` | `Td` | `Th` | `TransSubtitle` | `UnderlineEnd` | `UnderlineStart` | `UnstructuredKwdgroup` | `VerseLine` | `X`)\[] ; `name`: `string` = 'tableWrap'; `type`: `string` = 'element' } |
-\| `tc` | (`j`: [`J`](.modules#j), `node`: `Tc`) => `Td` |
-\| `text` | (`j`: [`J`](.modules#j), `node`: [`Text`](.modules#text)) => [`Text`](.modules#text) |
-\| `tr` | (`j`: [`J`](.modules#j), `tr`: `Row`) => `Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `AbbrevJournaltitle` | `Abbrev` | `Def` | `Abstract` | [`JastP`](.interfaces/ooxast_util_to_jast.JastP.md) | `Label` | `Title` | `ObjectId` | `Sec` | `AccessDate` | `Ack` | `KwdGroup` | `RefList` | `SubjGroup` | `Address` | `Email` | `Fax` | `AddrLine` | `City` | `Country` | `ExtLink` | `Institution` | `InstitutionWrap` | `Phone` | `PostalCode` | `State` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `AffAlternatives` | `Aff` | `Break` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Graphic` | `Table` | `Array` | `Code` | `Media` | `Preformat` | `SupplementaryMaterial` | `TexMath` | `TextualForm` | `AltText` | `AltTitle` | `Annotation` | `Anonymous` | `AnswerSet` | `Answer` | `Explanation` | `Subtitle` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `FnGroup` | `Glossary` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AppGroup` | `App` | `Permissions` | `SecMeta` | `LongDesc` | `Attrib` | `Tbody` | `ArticleCategories` | `SeriesText` | `SeriesTitle` | `ArticleId` | `ArticleMeta` | `Isbn` | `ArticleVersion` | `ArticleVersionalternatives` | `AuthorNotes` | `Conference` | `ContribGroup` | `Counts` | `CustomMetagroup` | `ElocationId` | `Fpage` | `FundingGroup` | `History` | `Issue` | `IssueId` | `IssuePart` | `IssueSponsor` | `IssueTitle` | `IssueTitlegroup` | `Lpage` | `PageRange` | `Product` | `PubDate` | `PubDatenotavailable` | `PubHistory` | `SelfUri` | `Supplement` | `SupportGroup` | `TitleGroup` | `TransAbstract` | `Volume` | `VolumeId` | `VolumeIssuegroup` | `VolumeSeries` | `ArticleTitle` | `Article` | `Body` | `Front` | `Back` | `FloatsGroup` | `ProcessingMeta` | `Response` | `SubArticle` | `AuthorComment` | `Corresp` | `AwardDesc` | `AwardGroup` | `AwardId` | `AwardName` | `FundingSource` | `PrincipalAwardrecipient` | `PrincipalInvestigator` | `SupportSource` | `Bio` | `Notes` | `SigBlock` | `Caption` | `ChapterTitle` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `Colgroup` | `Col` | `CollabAlternatives` | `Collab` | `OnBehalfof` | `Role` | `Comment` | `CompoundKwdpart` | `CompoundKwd` | `CompoundSubjectpart` | `CompoundSubject` | `ConfAcronym` | `ConfDate` | `ConfLoc` | `ConfName` | `ConfNum` | `ConfSponsor` | `ConfTheme` | `Contrib` | `ContribId` | `Name` | `Degrees` | `NameAlternatives` | `StringName` | `ContributedResourcegroup` | `ResourceGroup` | `SupportDescription` | `CopyrightHolder` | `CopyrightStatement` | `CopyrightYear` | `Count` | `EquationCount` | `FigCount` | `PageCount` | `RefCount` | `TableCount` | `WordCount` | `CustomMeta` | `MetaName` | `MetaValue` | `DataTitle` | `DateIncitation` | `Day` | `Era` | `Month` | `Season` | `Year` | `Date` | `DefHead` | `DefItem` | `Term` | `TermHead` | `Edition` | `Series` | `Size` | `Etal` | `Gov` | `Issn` | `IssnL` | `PartTitle` | `Patent` | `PersonGroup` | `PubId` | `PublisherLoc` | `PublisherName` | `Source` | `Std` | `StringDate` | `TransSource` | `TransTitle` | `Version` | `EventDesc` | `Event` | `ExtendedBy` | `FrontStub` | `JournalMeta` | `FundingStatement` | `OpenAccess` | `GivenNames` | `GlyphData` | `GlyphRef` | `Hr` | `See` | `SeeAlso` | `InstitutionId` | `IssueSubtitle` | `TransTitlegroup` | `JournalId` | `JournalTitlegroup` | `Publisher` | `JournalSubtitle` | `JournalTitle` | `Kwd` | `NestedKwd` | `LicenseP` | `Price` | `License` | `ListItem` | `Prefix` | `Suffix` | `Surname` | `TimeStamp` | `Note` | `Option` | `OverlineEnd` | `OverlineStart` | `RestrictedBy` | `QuestionPreamble` | `Rb` | `Ref` | `ResourceName` | `ResourceWrap` | `ResourceId` | `Rp` | `Rt` | `Sig` | `Speaker` | `StdOrganization` | `StringConf` | `Subject` | `Tr` | `Tfoot` | `Thead` | `TableWrapfoot` | `Td` | `Th` | `TransSubtitle` | `UnderlineEnd` | `UnderlineStart` | `UnstructuredKwdgroup` | `VerseLine` | `X` |
-\| `xml` | () => `void` |
-
-###### Defined in
-
-[src/lib/handlers/index.ts:17](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/handlers/index.ts#L17)
-
-#### Functions
-
-##### all
-
-▸ **all**(`j`, `parent`): [`JastContent`](.modules#jastcontent)\[]
+### `all()`
 
 Convert all nodes in tree using j
 
-###### Parameters
+#### Signature
 
-\| Name | Type | Description |
-\| :------ | :------ | :------ |
-\| `j` | [`J`](.modules#j) | ooxast constructor function |
-\| `parent` | [`Node`](.modules#node) | |
+```ts
+all(j: J, parent: Node): JastContent[];
+```
 
-###### Returns
+#### Parameters
 
-[`JastContent`](.modules#jastcontent)\[]
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `j` | [`J`](modules.md#j) | ooxast constructor function |
+| `parent` | [`Node`](modules.md#node) |  |
 
-###### Defined in
+#### Returns
 
-[src/lib/all.ts:11](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/all.ts#L11)
+[`JastContent`](modules.md#jastcontent)[]
 
----
+Defined in:  [src/lib/all.ts:11](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/all.ts#L11)
 
-##### one
+***
 
-▸ **one**(`j`, `node`, `parent`): [`JastContent`](.modules#jastcontent) | [`JastContent`](.modules#jastcontent)\[] | `void`
+### `one()`
 
-###### Parameters
+#### Signature
 
-\| Name | Type |
-\| :------ | :------ |
-\| `j` | [`J`](.modules#j) |
-\| `node` | [`Node`](.modules#node) |
-\| `parent` | [`Parent`](.interfaces/ooxast_util_to_jast.Parent.md)<`Node`<`Data`>, `Data`> |
+```ts
+one(j: J, node: Node, parent: Parent<Node<Data>, Data>): JastContent | JastContent[] | void;
+```
 
-###### Returns
+#### Parameters
 
-[`JastContent`](.modules#jastcontent) | [`JastContent`](.modules#jastcontent)\[] | `void`
+| Name | Type |
+| :------ | :------ |
+| `j` | [`J`](modules.md#j) |
+| `node` | [`Node`](modules.md#node) |
+| `parent` | [`Parent`](modules.md#parent)<`Node`<`Data`>, `Data`> |
 
-###### Defined in
+#### Returns
 
-[src/lib/one.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/one.ts#L8)
+[`JastContent`](modules.md#jastcontent) | [`JastContent`](modules.md#jastcontent)[] | `void`
 
----
+Defined in:  [src/lib/one.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/one.ts#L8)
 
-##### toJast
+***
 
-▸ **toJast**(`tree`, `options?`): `Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `AbbrevJournaltitle` | `Abbrev` | `Def` | `Abstract` | [`JastP`](.interfaces/ooxast_util_to_jast.JastP.md) | `Label` | `Title` | `ObjectId` | `Sec` | `AccessDate` | `Ack` | `KwdGroup` | `RefList` | `SubjGroup` | `Address` | `Email` | `Fax` | `AddrLine` | `City` | `Country` | `ExtLink` | `Institution` | `InstitutionWrap` | `Phone` | `PostalCode` | `State` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `AffAlternatives` | `Aff` | `Break` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Graphic` | `Table` | `Array` | `Code` | `Media` | `Preformat` | `SupplementaryMaterial` | `TexMath` | `TextualForm` | `AltText` | `AltTitle` | `Annotation` | `Anonymous` | `AnswerSet` | `Answer` | `Explanation` | `Subtitle` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `FnGroup` | `Glossary` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AppGroup` | `App` | `Permissions` | `SecMeta` | `LongDesc` | `Attrib` | `Tbody` | `ArticleCategories` | `SeriesText` | `SeriesTitle` | `ArticleId` | `ArticleMeta` | `Isbn` | `ArticleVersion` | `ArticleVersionalternatives` | `AuthorNotes` | `Conference` | `ContribGroup` | `Counts` | `CustomMetagroup` | `ElocationId` | `Fpage` | `FundingGroup` | `History` | `Issue` | `IssueId` | `IssuePart` | `IssueSponsor` | `IssueTitle` | `IssueTitlegroup` | `Lpage` | `PageRange` | `Product` | `PubDate` | `PubDatenotavailable` | `PubHistory` | `SelfUri` | `Supplement` | `SupportGroup` | `TitleGroup` | `TransAbstract` | `Volume` | `VolumeId` | `VolumeIssuegroup` | `VolumeSeries` | `ArticleTitle` | `Article` | `Body` | `Front` | `Back` | `FloatsGroup` | `ProcessingMeta` | `Response` | `SubArticle` | `AuthorComment` | `Corresp` | `AwardDesc` | `AwardGroup` | `AwardId` | `AwardName` | `FundingSource` | `PrincipalAwardrecipient` | `PrincipalInvestigator` | `SupportSource` | `Bio` | `Notes` | `SigBlock` | `Caption` | `ChapterTitle` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `Colgroup` | `Col` | `CollabAlternatives` | `Collab` | `OnBehalfof` | `Role` | `Comment` | `CompoundKwdpart` | `CompoundKwd` | `CompoundSubjectpart` | `CompoundSubject` | `ConfAcronym` | `ConfDate` | `ConfLoc` | `ConfName` | `ConfNum` | `ConfSponsor` | `ConfTheme` | `Contrib` | `ContribId` | `Name` | `Degrees` | `NameAlternatives` | `StringName` | `ContributedResourcegroup` | `ResourceGroup` | `SupportDescription` | `CopyrightHolder` | `CopyrightStatement` | `CopyrightYear` | `Count` | `EquationCount` | `FigCount` | `PageCount` | `RefCount` | `TableCount` | `WordCount` | `CustomMeta` | `MetaName` | `MetaValue` | `DataTitle` | `DateIncitation` | `Day` | `Era` | `Month` | `Season` | `Year` | `Date` | `DefHead` | `DefItem` | `Term` | `TermHead` | `Edition` | `Series` | `Size` | `Etal` | `Gov` | `Issn` | `IssnL` | `PartTitle` | `Patent` | `PersonGroup` | `PubId` | `PublisherLoc` | `PublisherName` | `Source` | `Std` | `StringDate` | `TransSource` | `TransTitle` | `Version` | `EventDesc` | `Event` | `ExtendedBy` | `FrontStub` | `JournalMeta` | `FundingStatement` | `OpenAccess` | `GivenNames` | `GlyphData` | `GlyphRef` | `Hr` | `See` | `SeeAlso` | `InstitutionId` | `IssueSubtitle` | `TransTitlegroup` | `JournalId` | `JournalTitlegroup` | `Publisher` | `JournalSubtitle` | `JournalTitle` | `Kwd` | `NestedKwd` | `LicenseP` | `Price` | `License` | `ListItem` | `Prefix` | `Suffix` | `Surname` | `TimeStamp` | `Note` | `Option` | `OverlineEnd` | `OverlineStart` | `RestrictedBy` | `QuestionPreamble` | `Rb` | `Ref` | `ResourceName` | `ResourceWrap` | `ResourceId` | `Rp` | `Rt` | `Sig` | `Speaker` | `StdOrganization` | `StringConf` | `Subject` | `Tr` | `Tfoot` | `Thead` | `TableWrapfoot` | `Td` | `Th` | `TransSubtitle` | `UnderlineEnd` | `UnderlineStart` | `UnstructuredKwdgroup` | `VerseLine` | `X` | [`JastRoot`](.interfaces/ooxast_util_to_jast.JastRoot.md)
+### `toJast()`
 
-###### Parameters
+#### Signature
 
-\| Name | Type |
-\| :------ | :------ |
-\| `tree` | [`Element`](.interfaces/ooxast_util_to_jast.Element.md) | [`Text`](.modules#text) | [`Root`](.modules#root) |
-\| `options` | [`Options`](.interfaces/ooxast_util_to_jast.Options.md) |
+```ts
+toJast(tree: Element | Text | Root, options: Options = ...): Text | Bold | FixedCase | Italic | Monospace | NamedContent | Overline | Roman | Ruby | SansSerif | Sc | Strike | StyledContent | Sub | Sup | Underline | AbbrevJournaltitle | Abbrev | Def | Abstract | JastP | Label | Title | ObjectId | Sec | AccessDate | Ack | KwdGroup | RefList | SubjGroup | Address | Email | Fax | AddrLine | City | Country | ExtLink | Institution | InstitutionWrap | Phone | PostalCode | State | Uri | Alternatives | ChemStruct | IndexTerm | IndexTermrangeend | InlineFormula | InlineGraphic | InlineMedia | MilestoneEnd | MilestoneStart | PrivateChar | AffAlternatives | Aff | Break | Fn | InlineSupplementarymaterial | RelatedArticle | RelatedObject | Target | Xref | Graphic | Table | Array | Code | Media | Preformat | SupplementaryMaterial | TexMath | TextualForm | AltText | AltTitle | Annotation | Anonymous | AnswerSet | Answer | Explanation | Subtitle | BlockAlternatives | BoxedText | ChemStructwrap | DefList | DispFormula | DispFormulagroup | DispQuote | Fig | FigGroup | FnGroup | Glossary | List | Question | QuestionWrap | QuestionWrapgroup | Speech | Statement | TableWrap | TableWrapgroup | VerseGroup | AppGroup | App | Permissions | SecMeta | LongDesc | Attrib | Tbody | ArticleCategories | SeriesText | SeriesTitle | ArticleId | ArticleMeta | Isbn | ArticleVersion | ArticleVersionalternatives | AuthorNotes | Conference | ContribGroup | Counts | CustomMetagroup | ElocationId | Fpage | FundingGroup | History | Issue | IssueId | IssuePart | IssueSponsor | IssueTitle | IssueTitlegroup | Lpage | PageRange | Product | PubDate | PubDatenotavailable | PubHistory | SelfUri | Supplement | SupportGroup | TitleGroup | TransAbstract | Volume | VolumeId | VolumeIssuegroup | VolumeSeries | ArticleTitle | Article | Body | Front | Back | FloatsGroup | ProcessingMeta | Response | SubArticle | AuthorComment | Corresp | AwardDesc | AwardGroup | AwardId | AwardName | FundingSource | PrincipalAwardrecipient | PrincipalInvestigator | SupportSource | Bio | Notes | SigBlock | Caption | ChapterTitle | CitationAlternatives | ElementCitation | MixedCitation | NlmCitation | Colgroup | Col | CollabAlternatives | Collab | OnBehalfof | Role | Comment | CompoundKwdpart | CompoundKwd | CompoundSubjectpart | CompoundSubject | ConfAcronym | ConfDate | ConfLoc | ConfName | ConfNum | ConfSponsor | ConfTheme | Contrib | ContribId | Name | Degrees | NameAlternatives | StringName | ContributedResourcegroup | ResourceGroup | SupportDescription | CopyrightHolder | CopyrightStatement | CopyrightYear | Count | EquationCount | FigCount | PageCount | RefCount | TableCount | WordCount | CustomMeta | MetaName | MetaValue | DataTitle | DateIncitation | Day | Era | Month | Season | Year | Date | DefHead | DefItem | Term | TermHead | Edition | Series | Size | Etal | Gov | Issn | IssnL | PartTitle | Patent | PersonGroup | PubId | PublisherLoc | PublisherName | Source | Std | StringDate | TransSource | TransTitle | Version | EventDesc | Event | ExtendedBy | FrontStub | JournalMeta | FundingStatement | OpenAccess | GivenNames | GlyphData | GlyphRef | Hr | See | SeeAlso | InstitutionId | IssueSubtitle | TransTitlegroup | JournalId | JournalTitlegroup | Publisher | JournalSubtitle | JournalTitle | Kwd | NestedKwd | LicenseP | Price | License | ListItem | Prefix | Suffix | Surname | TimeStamp | Note | Option | OverlineEnd | OverlineStart | RestrictedBy | QuestionPreamble | Rb | Ref | ResourceName | ResourceWrap | ResourceId | Rp | Rt | Sig | Speaker | StdOrganization | StringConf | Subject | Tr | Tfoot | Thead | TableWrapfoot | Td | Th | TransSubtitle | UnderlineEnd | UnderlineStart | UnstructuredKwdgroup | VerseLine | X | JastRoot;
+```
 
-###### Returns
+#### Parameters
 
-`Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `AbbrevJournaltitle` | `Abbrev` | `Def` | `Abstract` | [`JastP`](.interfaces/ooxast_util_to_jast.JastP.md) | `Label` | `Title` | `ObjectId` | `Sec` | `AccessDate` | `Ack` | `KwdGroup` | `RefList` | `SubjGroup` | `Address` | `Email` | `Fax` | `AddrLine` | `City` | `Country` | `ExtLink` | `Institution` | `InstitutionWrap` | `Phone` | `PostalCode` | `State` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `AffAlternatives` | `Aff` | `Break` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Graphic` | `Table` | `Array` | `Code` | `Media` | `Preformat` | `SupplementaryMaterial` | `TexMath` | `TextualForm` | `AltText` | `AltTitle` | `Annotation` | `Anonymous` | `AnswerSet` | `Answer` | `Explanation` | `Subtitle` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `FnGroup` | `Glossary` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AppGroup` | `App` | `Permissions` | `SecMeta` | `LongDesc` | `Attrib` | `Tbody` | `ArticleCategories` | `SeriesText` | `SeriesTitle` | `ArticleId` | `ArticleMeta` | `Isbn` | `ArticleVersion` | `ArticleVersionalternatives` | `AuthorNotes` | `Conference` | `ContribGroup` | `Counts` | `CustomMetagroup` | `ElocationId` | `Fpage` | `FundingGroup` | `History` | `Issue` | `IssueId` | `IssuePart` | `IssueSponsor` | `IssueTitle` | `IssueTitlegroup` | `Lpage` | `PageRange` | `Product` | `PubDate` | `PubDatenotavailable` | `PubHistory` | `SelfUri` | `Supplement` | `SupportGroup` | `TitleGroup` | `TransAbstract` | `Volume` | `VolumeId` | `VolumeIssuegroup` | `VolumeSeries` | `ArticleTitle` | `Article` | `Body` | `Front` | `Back` | `FloatsGroup` | `ProcessingMeta` | `Response` | `SubArticle` | `AuthorComment` | `Corresp` | `AwardDesc` | `AwardGroup` | `AwardId` | `AwardName` | `FundingSource` | `PrincipalAwardrecipient` | `PrincipalInvestigator` | `SupportSource` | `Bio` | `Notes` | `SigBlock` | `Caption` | `ChapterTitle` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `Colgroup` | `Col` | `CollabAlternatives` | `Collab` | `OnBehalfof` | `Role` | `Comment` | `CompoundKwdpart` | `CompoundKwd` | `CompoundSubjectpart` | `CompoundSubject` | `ConfAcronym` | `ConfDate` | `ConfLoc` | `ConfName` | `ConfNum` | `ConfSponsor` | `ConfTheme` | `Contrib` | `ContribId` | `Name` | `Degrees` | `NameAlternatives` | `StringName` | `ContributedResourcegroup` | `ResourceGroup` | `SupportDescription` | `CopyrightHolder` | `CopyrightStatement` | `CopyrightYear` | `Count` | `EquationCount` | `FigCount` | `PageCount` | `RefCount` | `TableCount` | `WordCount` | `CustomMeta` | `MetaName` | `MetaValue` | `DataTitle` | `DateIncitation` | `Day` | `Era` | `Month` | `Season` | `Year` | `Date` | `DefHead` | `DefItem` | `Term` | `TermHead` | `Edition` | `Series` | `Size` | `Etal` | `Gov` | `Issn` | `IssnL` | `PartTitle` | `Patent` | `PersonGroup` | `PubId` | `PublisherLoc` | `PublisherName` | `Source` | `Std` | `StringDate` | `TransSource` | `TransTitle` | `Version` | `EventDesc` | `Event` | `ExtendedBy` | `FrontStub` | `JournalMeta` | `FundingStatement` | `OpenAccess` | `GivenNames` | `GlyphData` | `GlyphRef` | `Hr` | `See` | `SeeAlso` | `InstitutionId` | `IssueSubtitle` | `TransTitlegroup` | `JournalId` | `JournalTitlegroup` | `Publisher` | `JournalSubtitle` | `JournalTitle` | `Kwd` | `NestedKwd` | `LicenseP` | `Price` | `License` | `ListItem` | `Prefix` | `Suffix` | `Surname` | `TimeStamp` | `Note` | `Option` | `OverlineEnd` | `OverlineStart` | `RestrictedBy` | `QuestionPreamble` | `Rb` | `Ref` | `ResourceName` | `ResourceWrap` | `ResourceId` | `Rp` | `Rt` | `Sig` | `Speaker` | `StdOrganization` | `StringConf` | `Subject` | `Tr` | `Tfoot` | `Thead` | `TableWrapfoot` | `Td` | `Th` | `TransSubtitle` | `UnderlineEnd` | `UnderlineStart` | `UnstructuredKwdgroup` | `VerseLine` | `X` | [`JastRoot`](.interfaces/ooxast_util_to_jast.JastRoot.md)
+| Name | Type |
+| :------ | :------ |
+| `tree` | [`Element`](modules.md#element) | [`Text`](modules.md#text) | [`Root`](modules.md#root) |
+| `options` | [`Options`](modules.md#options) |
 
-###### Defined in
+#### Returns
 
-[src/lib/ooxast-util-to-jast.ts:32](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/ooxast-util-to-jast.ts#L32)
+`Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `AbbrevJournaltitle` | `Abbrev` | `Def` | `Abstract` | [`JastP`](modules.md#jastp) | `Label` | `Title` | `ObjectId` | `Sec` | `AccessDate` | `Ack` | `KwdGroup` | `RefList` | `SubjGroup` | `Address` | `Email` | `Fax` | `AddrLine` | `City` | `Country` | `ExtLink` | `Institution` | `InstitutionWrap` | `Phone` | `PostalCode` | `State` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `AffAlternatives` | `Aff` | `Break` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Graphic` | `Table` | `Array` | `Code` | `Media` | `Preformat` | `SupplementaryMaterial` | `TexMath` | `TextualForm` | `AltText` | `AltTitle` | `Annotation` | `Anonymous` | `AnswerSet` | `Answer` | `Explanation` | `Subtitle` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `FnGroup` | `Glossary` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AppGroup` | `App` | `Permissions` | `SecMeta` | `LongDesc` | `Attrib` | `Tbody` | `ArticleCategories` | `SeriesText` | `SeriesTitle` | `ArticleId` | `ArticleMeta` | `Isbn` | `ArticleVersion` | `ArticleVersionalternatives` | `AuthorNotes` | `Conference` | `ContribGroup` | `Counts` | `CustomMetagroup` | `ElocationId` | `Fpage` | `FundingGroup` | `History` | `Issue` | `IssueId` | `IssuePart` | `IssueSponsor` | `IssueTitle` | `IssueTitlegroup` | `Lpage` | `PageRange` | `Product` | `PubDate` | `PubDatenotavailable` | `PubHistory` | `SelfUri` | `Supplement` | `SupportGroup` | `TitleGroup` | `TransAbstract` | `Volume` | `VolumeId` | `VolumeIssuegroup` | `VolumeSeries` | `ArticleTitle` | `Article` | `Body` | `Front` | `Back` | `FloatsGroup` | `ProcessingMeta` | `Response` | `SubArticle` | `AuthorComment` | `Corresp` | `AwardDesc` | `AwardGroup` | `AwardId` | `AwardName` | `FundingSource` | `PrincipalAwardrecipient` | `PrincipalInvestigator` | `SupportSource` | `Bio` | `Notes` | `SigBlock` | `Caption` | `ChapterTitle` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `Colgroup` | `Col` | `CollabAlternatives` | `Collab` | `OnBehalfof` | `Role` | `Comment` | `CompoundKwdpart` | `CompoundKwd` | `CompoundSubjectpart` | `CompoundSubject` | `ConfAcronym` | `ConfDate` | `ConfLoc` | `ConfName` | `ConfNum` | `ConfSponsor` | `ConfTheme` | `Contrib` | `ContribId` | `Name` | `Degrees` | `NameAlternatives` | `StringName` | `ContributedResourcegroup` | `ResourceGroup` | `SupportDescription` | `CopyrightHolder` | `CopyrightStatement` | `CopyrightYear` | `Count` | `EquationCount` | `FigCount` | `PageCount` | `RefCount` | `TableCount` | `WordCount` | `CustomMeta` | `MetaName` | `MetaValue` | `DataTitle` | `DateIncitation` | `Day` | `Era` | `Month` | `Season` | `Year` | `Date` | `DefHead` | `DefItem` | `Term` | `TermHead` | `Edition` | `Series` | `Size` | `Etal` | `Gov` | `Issn` | `IssnL` | `PartTitle` | `Patent` | `PersonGroup` | `PubId` | `PublisherLoc` | `PublisherName` | `Source` | `Std` | `StringDate` | `TransSource` | `TransTitle` | `Version` | `EventDesc` | `Event` | `ExtendedBy` | `FrontStub` | `JournalMeta` | `FundingStatement` | `OpenAccess` | `GivenNames` | `GlyphData` | `GlyphRef` | `Hr` | `See` | `SeeAlso` | `InstitutionId` | `IssueSubtitle` | `TransTitlegroup` | `JournalId` | `JournalTitlegroup` | `Publisher` | `JournalSubtitle` | `JournalTitle` | `Kwd` | `NestedKwd` | `LicenseP` | `Price` | `License` | `ListItem` | `Prefix` | `Suffix` | `Surname` | `TimeStamp` | `Note` | `Option` | `OverlineEnd` | `OverlineStart` | `RestrictedBy` | `QuestionPreamble` | `Rb` | `Ref` | `ResourceName` | `ResourceWrap` | `ResourceId` | `Rp` | `Rt` | `Sig` | `Speaker` | `StdOrganization` | `StringConf` | `Subject` | `Tr` | `Tfoot` | `Thead` | `TableWrapfoot` | `Td` | `Th` | `TransSubtitle` | `UnderlineEnd` | `UnderlineStart` | `UnstructuredKwdgroup` | `VerseLine` | `X` | [`JastRoot`](modules.md#jastroot)
 
-### Interface: Body
+Defined in:  [src/lib/ooxast-util-to-jast.ts:32](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/ooxast-util-to-jast.ts#L32)
 
-[ooxast-util-to-jast](.modules).Body
+***
+
+### `defaultHandlers`
+
+> **`Const`** `object`
+
+```ts
+{
+    article: () => void;
+    body: (j: J, body: Body) => Sec | Body;
+    doctype: () => void;
+    document: (j: J, node: Document) => Article;
+    drawing: (j: J, node: Drawing) => Fig;
+    footnote: (j: J, node: Element) => undefined | Text | Bold | FixedCase | Italic | Monospace | NamedContent | Overline | Roman | Ruby | SansSerif | Sc | Strike | StyledContent | Sub | Sup | Underline | AbbrevJournaltitle | Abbrev | Def | Abstract | JastP | Label | Title | ObjectId | Sec | AccessDate | Ack | KwdGroup | RefList | SubjGroup | Address | Email | Fax | AddrLine | City | Country | ExtLink | Institution | InstitutionWrap | Phone | PostalCode | State | Uri | Alternatives | ChemStruct | IndexTerm | IndexTermrangeend | InlineFormula | InlineGraphic | InlineMedia | MilestoneEnd | MilestoneStart | PrivateChar | AffAlternatives | Aff | Break | Fn | InlineSupplementarymaterial | RelatedArticle | RelatedObject | Target | Xref | Graphic | Table | Array | Code | Media | Preformat | SupplementaryMaterial | TexMath | TextualForm | AltText | AltTitle | Annotation | Anonymous | AnswerSet | Answer | Explanation | Subtitle | BlockAlternatives | BoxedText | ChemStructwrap | DefList | DispFormula | DispFormulagroup | DispQuote | Fig | FigGroup | FnGroup | Glossary | List | Question | QuestionWrap | QuestionWrapgroup | Speech | Statement | TableWrap | TableWrapgroup | VerseGroup | AppGroup | App | Permissions | SecMeta | LongDesc | Attrib | Tbody | ArticleCategories | SeriesText | SeriesTitle | ArticleId | ArticleMeta | Isbn | ArticleVersion | ArticleVersionalternatives | AuthorNotes | Conference | ContribGroup | Counts | CustomMetagroup | ElocationId | Fpage | FundingGroup | History | Issue | IssueId | IssuePart | IssueSponsor | IssueTitle | IssueTitlegroup | Lpage | PageRange | Product | PubDate | PubDatenotavailable | PubHistory | SelfUri | Supplement | SupportGroup | TitleGroup | TransAbstract | Volume | VolumeId | VolumeIssuegroup | VolumeSeries | ArticleTitle | Article | Body | Front | Back | FloatsGroup | ProcessingMeta | Response | SubArticle | AuthorComment | Corresp | AwardDesc | AwardGroup | AwardId | AwardName | FundingSource | PrincipalAwardrecipient | PrincipalInvestigator | SupportSource | Bio | Notes | SigBlock | Caption | ChapterTitle | CitationAlternatives | ElementCitation | MixedCitation | NlmCitation | Colgroup | Col | CollabAlternatives | Collab | OnBehalfof | Role | Comment | CompoundKwdpart | CompoundKwd | CompoundSubjectpart | CompoundSubject | ConfAcronym | ConfDate | ConfLoc | ConfName | ConfNum | ConfSponsor | ConfTheme | Contrib | ContribId | Name | Degrees | NameAlternatives | StringName | ContributedResourcegroup | ResourceGroup | SupportDescription | CopyrightHolder | CopyrightStatement | CopyrightYear | Count | EquationCount | FigCount | PageCount | RefCount | TableCount | WordCount | CustomMeta | MetaName | MetaValue | DataTitle | DateIncitation | Day | Era | Month | Season | Year | Date | DefHead | DefItem | Term | TermHead | Edition | Series | Size | Etal | Gov | Issn | IssnL | PartTitle | Patent | PersonGroup | PubId | PublisherLoc | PublisherName | Source | Std | StringDate | TransSource | TransTitle | Version | EventDesc | Event | ExtendedBy | FrontStub | JournalMeta | FundingStatement | OpenAccess | GivenNames | GlyphData | GlyphRef | Hr | See | SeeAlso | InstitutionId | IssueSubtitle | TransTitlegroup | JournalId | JournalTitlegroup | Publisher | JournalSubtitle | JournalTitle | Kwd | NestedKwd | LicenseP | Price | License | ListItem | Prefix | Suffix | Surname | TimeStamp | Note | Option | OverlineEnd | OverlineStart | RestrictedBy | QuestionPreamble | Rb | Ref | ResourceName | ResourceWrap | ResourceId | Rp | Rt | Sig | Speaker | StdOrganization | StringConf | Subject | Tr | Tfoot | Thead | TableWrapfoot | Td | Th | TransSubtitle | UnderlineEnd | UnderlineStart | UnstructuredKwdgroup | VerseLine | X;
+    footnotes: (j: J, node: Footnotes) => void;
+    instrText: (j: J, citation: T, parent: Parent<Node<Data>, Data>) => any;
+    instruction: () => void;
+    p: (j: J, p: P, parent: Parent<Node<Data>, Data>) => Text | Bold | FixedCase | Italic | Monospace | NamedContent | Overline | Roman | Ruby | SansSerif | Sc | Strike | StyledContent | Sub | Sup | Underline | AbbrevJournaltitle | Abbrev | Def | Abstract | JastP | Label | Title | ObjectId | Sec | AccessDate | Ack | KwdGroup | RefList | SubjGroup | Address | Email | Fax | AddrLine | City | Country | ExtLink | Institution | InstitutionWrap | Phone | PostalCode | State | Uri | Alternatives | ChemStruct | IndexTerm | IndexTermrangeend | InlineFormula | InlineGraphic | InlineMedia | MilestoneEnd | MilestoneStart | PrivateChar | AffAlternatives | Aff | Break | Fn | InlineSupplementarymaterial | RelatedArticle | RelatedObject | Target | Xref | Graphic | Table | Array | Code | Media | Preformat | SupplementaryMaterial | TexMath | TextualForm | AltText | AltTitle | Annotation | Anonymous | AnswerSet | Answer | Explanation | Subtitle | BlockAlternatives | BoxedText | ChemStructwrap | DefList | DispFormula | DispFormulagroup | DispQuote | Fig | FigGroup | FnGroup | Glossary | List | Question | QuestionWrap | QuestionWrapgroup | Speech | Statement | TableWrap | TableWrapgroup | VerseGroup | AppGroup | App | Permissions | SecMeta | LongDesc | Attrib | Tbody | ArticleCategories | SeriesText | SeriesTitle | ArticleId | ArticleMeta | Isbn | ArticleVersion | ArticleVersionalternatives | AuthorNotes | Conference | ContribGroup | Counts | CustomMetagroup | ElocationId | Fpage | FundingGroup | History | Issue | IssueId | IssuePart | IssueSponsor | IssueTitle | IssueTitlegroup | Lpage | PageRange | Product | PubDate | PubDatenotavailable | PubHistory | SelfUri | Supplement | SupportGroup | TitleGroup | TransAbstract | Volume | VolumeId | VolumeIssuegroup | VolumeSeries | ArticleTitle | Article | Body | Front | Back | FloatsGroup | ProcessingMeta | Response | SubArticle | AuthorComment | Corresp | AwardDesc | AwardGroup | AwardId | AwardName | FundingSource | PrincipalAwardrecipient | PrincipalInvestigator | SupportSource | Bio | Notes | SigBlock | Caption | ChapterTitle | CitationAlternatives | ElementCitation | MixedCitation | NlmCitation | Colgroup | Col | CollabAlternatives | Collab | OnBehalfof | Role | Comment | CompoundKwdpart | CompoundKwd | CompoundSubjectpart | CompoundSubject | ConfAcronym | ConfDate | ConfLoc | ConfName | ConfNum | ConfSponsor | ConfTheme | Contrib | ContribId | Name | Degrees | NameAlternatives | StringName | ContributedResourcegroup | ResourceGroup | SupportDescription | CopyrightHolder | CopyrightStatement | CopyrightYear | Count | EquationCount | FigCount | PageCount | RefCount | TableCount | WordCount | CustomMeta | MetaName | MetaValue | DataTitle | DateIncitation | Day | Era | Month | Season | Year | Date | DefHead | DefItem | Term | TermHead | Edition | Series | Size | Etal | Gov | Issn | IssnL | PartTitle | Patent | PersonGroup | PubId | PublisherLoc | PublisherName | Source | Std | StringDate | TransSource | TransTitle | Version | EventDesc | Event | ExtendedBy | FrontStub | JournalMeta | FundingStatement | OpenAccess | GivenNames | GlyphData | GlyphRef | Hr | See | SeeAlso | InstitutionId | IssueSubtitle | TransTitlegroup | JournalId | JournalTitlegroup | Publisher | JournalSubtitle | JournalTitle | Kwd | NestedKwd | LicenseP | Price | License | ListItem | Prefix | Suffix | Surname | TimeStamp | Note | Option | OverlineEnd | OverlineStart | RestrictedBy | QuestionPreamble | Rb | Ref | ResourceName | ResourceWrap | ResourceId | Rp | Rt | Sig | Speaker | StdOrganization | StringConf | Subject | Tr | Tfoot | Thead | TableWrapfoot | Td | Th | TransSubtitle | UnderlineEnd | UnderlineStart | UnstructuredKwdgroup | VerseLine | X | (Text | Bold | FixedCase | Italic | Monospace | NamedContent | Overline | Roman | Ruby | SansSerif | Sc | Strike | StyledContent | Sub | Sup | Underline | AbbrevJournaltitle | Abbrev | Def | Abstract | JastP | Label | Title | ObjectId | Sec | AccessDate | Ack | KwdGroup | RefList | SubjGroup | Address | Email | Fax | AddrLine | City | Country | ExtLink | Institution | InstitutionWrap | Phone | PostalCode | State | Uri | Alternatives | ChemStruct | IndexTerm | IndexTermrangeend | InlineFormula | InlineGraphic | InlineMedia | MilestoneEnd | MilestoneStart | PrivateChar | AffAlternatives | Aff | Break | Fn | InlineSupplementarymaterial | RelatedArticle | RelatedObject | Target | Xref | Graphic | Table | Array | Code | Media | Preformat | SupplementaryMaterial | TexMath | TextualForm | AltText | AltTitle | Annotation | Anonymous | AnswerSet | Answer | Explanation | Subtitle | BlockAlternatives | BoxedText | ChemStructwrap | DefList | DispFormula | DispFormulagroup | DispQuote | Fig | FigGroup | FnGroup | Glossary | List | Question | QuestionWrap | QuestionWrapgroup | Speech | Statement | TableWrap | TableWrapgroup | VerseGroup | AppGroup | App | Permissions | SecMeta | LongDesc | Attrib | Tbody | ArticleCategories | SeriesText | SeriesTitle | ArticleId | ArticleMeta | Isbn | ArticleVersion | ArticleVersionalternatives | AuthorNotes | Conference | ContribGroup | Counts | CustomMetagroup | ElocationId | Fpage | FundingGroup | History | Issue | IssueId | IssuePart | IssueSponsor | IssueTitle | IssueTitlegroup | Lpage | PageRange | Product | PubDate | PubDatenotavailable | PubHistory | SelfUri | Supplement | SupportGroup | TitleGroup | TransAbstract | Volume | VolumeId | VolumeIssuegroup | VolumeSeries | ArticleTitle | Article | Body | Front | Back | FloatsGroup | ProcessingMeta | Response | SubArticle | AuthorComment | Corresp | AwardDesc | AwardGroup | AwardId | AwardName | FundingSource | PrincipalAwardrecipient | PrincipalInvestigator | SupportSource | Bio | Notes | SigBlock | Caption | ChapterTitle | CitationAlternatives | ElementCitation | MixedCitation | NlmCitation | Colgroup | Col | CollabAlternatives | Collab | OnBehalfof | Role | Comment | CompoundKwdpart | CompoundKwd | CompoundSubjectpart | CompoundSubject | ConfAcronym | ConfDate | ConfLoc | ConfName | ConfNum | ConfSponsor | ConfTheme | Contrib | ContribId | Name | Degrees | NameAlternatives | StringName | ContributedResourcegroup | ResourceGroup | SupportDescription | CopyrightHolder | CopyrightStatement | CopyrightYear | Count | EquationCount | FigCount | PageCount | RefCount | TableCount | WordCount | CustomMeta | MetaName | MetaValue | DataTitle | DateIncitation | Day | Era | Month | Season | Year | Date | DefHead | DefItem | Term | TermHead | Edition | Series | Size | Etal | Gov | Issn | IssnL | PartTitle | Patent | PersonGroup | PubId | PublisherLoc | PublisherName | Source | Std | StringDate | TransSource | TransTitle | Version | EventDesc | Event | ExtendedBy | FrontStub | JournalMeta | FundingStatement | OpenAccess | GivenNames | GlyphData | GlyphRef | Hr | See | SeeAlso | InstitutionId | IssueSubtitle | TransTitlegroup | JournalId | JournalTitlegroup | Publisher | JournalSubtitle | JournalTitle | Kwd | NestedKwd | LicenseP | Price | License | ListItem | Prefix | Suffix | Surname | TimeStamp | Note | Option | OverlineEnd | OverlineStart | RestrictedBy | QuestionPreamble | Rb | Ref | ResourceName | ResourceWrap | ResourceId | Rp | Rt | Sig | Speaker | StdOrganization | StringConf | Subject | Tr | Tfoot | Thead | TableWrapfoot | Td | Th | TransSubtitle | UnderlineEnd | UnderlineStart | UnstructuredKwdgroup | VerseLine | X)[];
+    r: (j: J, node: R) => any;
+    root: (j: J, node: Root) => Text | Bold | FixedCase | Italic | Monospace | NamedContent | Overline | Roman | Ruby | SansSerif | Sc | Strike | StyledContent | Sub | Sup | Underline | AbbrevJournaltitle | Abbrev | Def | Abstract | JastP | Label | Title | ObjectId | Sec | AccessDate | Ack | KwdGroup | RefList | SubjGroup | Address | Email | Fax | AddrLine | City | Country | ExtLink | Institution | InstitutionWrap | Phone | PostalCode | State | Uri | Alternatives | ChemStruct | IndexTerm | IndexTermrangeend | InlineFormula | InlineGraphic | InlineMedia | MilestoneEnd | MilestoneStart | PrivateChar | AffAlternatives | Aff | Break | Fn | InlineSupplementarymaterial | RelatedArticle | RelatedObject | Target | Xref | Graphic | Table | Array | Code | Media | Preformat | SupplementaryMaterial | TexMath | TextualForm | AltText | AltTitle | Annotation | Anonymous | AnswerSet | Answer | Explanation | Subtitle | BlockAlternatives | BoxedText | ChemStructwrap | DefList | DispFormula | DispFormulagroup | DispQuote | Fig | FigGroup | FnGroup | Glossary | List | Question | QuestionWrap | QuestionWrapgroup | Speech | Statement | TableWrap | TableWrapgroup | VerseGroup | AppGroup | App | Permissions | SecMeta | LongDesc | Attrib | Tbody | ArticleCategories | SeriesText | SeriesTitle | ArticleId | ArticleMeta | Isbn | ArticleVersion | ArticleVersionalternatives | AuthorNotes | Conference | ContribGroup | Counts | CustomMetagroup | ElocationId | Fpage | FundingGroup | History | Issue | IssueId | IssuePart | IssueSponsor | IssueTitle | IssueTitlegroup | Lpage | PageRange | Product | PubDate | PubDatenotavailable | PubHistory | SelfUri | Supplement | SupportGroup | TitleGroup | TransAbstract | Volume | VolumeId | VolumeIssuegroup | VolumeSeries | ArticleTitle | Article | Body | Front | Back | FloatsGroup | ProcessingMeta | Response | SubArticle | AuthorComment | Corresp | AwardDesc | AwardGroup | AwardId | AwardName | FundingSource | PrincipalAwardrecipient | PrincipalInvestigator | SupportSource | Bio | Notes | SigBlock | Caption | ChapterTitle | CitationAlternatives | ElementCitation | MixedCitation | NlmCitation | Colgroup | Col | CollabAlternatives | Collab | OnBehalfof | Role | Comment | CompoundKwdpart | CompoundKwd | CompoundSubjectpart | CompoundSubject | ConfAcronym | ConfDate | ConfLoc | ConfName | ConfNum | ConfSponsor | ConfTheme | Contrib | ContribId | Name | Degrees | NameAlternatives | StringName | ContributedResourcegroup | ResourceGroup | SupportDescription | CopyrightHolder | CopyrightStatement | CopyrightYear | Count | EquationCount | FigCount | PageCount | RefCount | TableCount | WordCount | CustomMeta | MetaName | MetaValue | DataTitle | DateIncitation | Day | Era | Month | Season | Year | Date | DefHead | DefItem | Term | TermHead | Edition | Series | Size | Etal | Gov | Issn | IssnL | PartTitle | Patent | PersonGroup | PubId | PublisherLoc | PublisherName | Source | Std | StringDate | TransSource | TransTitle | Version | EventDesc | Event | ExtendedBy | FrontStub | JournalMeta | FundingStatement | OpenAccess | GivenNames | GlyphData | GlyphRef | Hr | See | SeeAlso | InstitutionId | IssueSubtitle | TransTitlegroup | JournalId | JournalTitlegroup | Publisher | JournalSubtitle | JournalTitle | Kwd | NestedKwd | LicenseP | Price | License | ListItem | Prefix | Suffix | Surname | TimeStamp | Note | Option | OverlineEnd | OverlineStart | RestrictedBy | QuestionPreamble | Rb | Ref | ResourceName | ResourceWrap | ResourceId | Rp | Rt | Sig | Speaker | StdOrganization | StringConf | Subject | Tr | Tfoot | Thead | TableWrapfoot | Td | Th | TransSubtitle | UnderlineEnd | UnderlineStart | UnstructuredKwdgroup | VerseLine | X;
+    t: (j: J, parent: Node) => JastContent[];
+    tbl: (j: J, tbl: Tbl) => {
+        attributes: {};
+        children: (Text | Bold | FixedCase | Italic | Monospace | NamedContent | Overline | Roman | Ruby | SansSerif | Sc | Strike | StyledContent | Sub | Sup | Underline | AbbrevJournaltitle | Abbrev | Def | Abstract | JastP | Label | Title | ObjectId | Sec | AccessDate | Ack | KwdGroup | RefList | SubjGroup | Address | Email | Fax | AddrLine | City | Country | ExtLink | Institution | InstitutionWrap | Phone | PostalCode | State | Uri | Alternatives | ChemStruct | IndexTerm | IndexTermrangeend | InlineFormula | InlineGraphic | InlineMedia | MilestoneEnd | MilestoneStart | PrivateChar | AffAlternatives | Aff | Break | Fn | InlineSupplementarymaterial | RelatedArticle | RelatedObject | Target | Xref | Graphic | Table | Array | Code | Media | Preformat | SupplementaryMaterial | TexMath | TextualForm | AltText | AltTitle | Annotation | Anonymous | AnswerSet | Answer | Explanation | Subtitle | BlockAlternatives | BoxedText | ChemStructwrap | DefList | DispFormula | DispFormulagroup | DispQuote | Fig | FigGroup | FnGroup | Glossary | List | Question | QuestionWrap | QuestionWrapgroup | Speech | Statement | TableWrap | TableWrapgroup | VerseGroup | AppGroup | App | Permissions | SecMeta | LongDesc | Attrib | Tbody | ArticleCategories | SeriesText | SeriesTitle | ArticleId | ArticleMeta | Isbn | ArticleVersion | ArticleVersionalternatives | AuthorNotes | Conference | ContribGroup | Counts | CustomMetagroup | ElocationId | Fpage | FundingGroup | History | Issue | IssueId | IssuePart | IssueSponsor | IssueTitle | IssueTitlegroup | Lpage | PageRange | Product | PubDate | PubDatenotavailable | PubHistory | SelfUri | Supplement | SupportGroup | TitleGroup | TransAbstract | Volume | VolumeId | VolumeIssuegroup | VolumeSeries | ArticleTitle | Article | Body | Front | Back | FloatsGroup | ProcessingMeta | Response | SubArticle | AuthorComment | Corresp | AwardDesc | AwardGroup | AwardId | AwardName | FundingSource | PrincipalAwardrecipient | PrincipalInvestigator | SupportSource | Bio | Notes | SigBlock | Caption | ChapterTitle | CitationAlternatives | ElementCitation | MixedCitation | NlmCitation | Colgroup | Col | CollabAlternatives | Collab | OnBehalfof | Role | Comment | CompoundKwdpart | CompoundKwd | CompoundSubjectpart | CompoundSubject | ConfAcronym | ConfDate | ConfLoc | ConfName | ConfNum | ConfSponsor | ConfTheme | Contrib | ContribId | Name | Degrees | NameAlternatives | StringName | ContributedResourcegroup | ResourceGroup | SupportDescription | CopyrightHolder | CopyrightStatement | CopyrightYear | Count | EquationCount | FigCount | PageCount | RefCount | TableCount | WordCount | CustomMeta | MetaName | MetaValue | DataTitle | DateIncitation | Day | Era | Month | Season | Year | Date | DefHead | DefItem | Term | TermHead | Edition | Series | Size | Etal | Gov | Issn | IssnL | PartTitle | Patent | PersonGroup | PubId | PublisherLoc | PublisherName | Source | Std | StringDate | TransSource | TransTitle | Version | EventDesc | Event | ExtendedBy | FrontStub | JournalMeta | FundingStatement | OpenAccess | GivenNames | GlyphData | GlyphRef | Hr | See | SeeAlso | InstitutionId | IssueSubtitle | TransTitlegroup | JournalId | JournalTitlegroup | Publisher | JournalSubtitle | JournalTitle | Kwd | NestedKwd | LicenseP | Price | License | ListItem | Prefix | Suffix | Surname | TimeStamp | Note | Option | OverlineEnd | OverlineStart | RestrictedBy | QuestionPreamble | Rb | Ref | ResourceName | ResourceWrap | ResourceId | Rp | Rt | Sig | Speaker | StdOrganization | StringConf | Subject | Tr | Tfoot | Thead | TableWrapfoot | Td | Th | TransSubtitle | UnderlineEnd | UnderlineStart | UnstructuredKwdgroup | VerseLine | X)[];
+        name: string;
+        type: string;
+    };
+    tc: (j: J, node: Tc) => Td;
+    text: (j: J, node: Text) => Text;
+    tr: (j: J, tr: Row) => Text | Bold | FixedCase | Italic | Monospace | NamedContent | Overline | Roman | Ruby | SansSerif | Sc | Strike | StyledContent | Sub | Sup | Underline | AbbrevJournaltitle | Abbrev | Def | Abstract | JastP | Label | Title | ObjectId | Sec | AccessDate | Ack | KwdGroup | RefList | SubjGroup | Address | Email | Fax | AddrLine | City | Country | ExtLink | Institution | InstitutionWrap | Phone | PostalCode | State | Uri | Alternatives | ChemStruct | IndexTerm | IndexTermrangeend | InlineFormula | InlineGraphic | InlineMedia | MilestoneEnd | MilestoneStart | PrivateChar | AffAlternatives | Aff | Break | Fn | InlineSupplementarymaterial | RelatedArticle | RelatedObject | Target | Xref | Graphic | Table | Array | Code | Media | Preformat | SupplementaryMaterial | TexMath | TextualForm | AltText | AltTitle | Annotation | Anonymous | AnswerSet | Answer | Explanation | Subtitle | BlockAlternatives | BoxedText | ChemStructwrap | DefList | DispFormula | DispFormulagroup | DispQuote | Fig | FigGroup | FnGroup | Glossary | List | Question | QuestionWrap | QuestionWrapgroup | Speech | Statement | TableWrap | TableWrapgroup | VerseGroup | AppGroup | App | Permissions | SecMeta | LongDesc | Attrib | Tbody | ArticleCategories | SeriesText | SeriesTitle | ArticleId | ArticleMeta | Isbn | ArticleVersion | ArticleVersionalternatives | AuthorNotes | Conference | ContribGroup | Counts | CustomMetagroup | ElocationId | Fpage | FundingGroup | History | Issue | IssueId | IssuePart | IssueSponsor | IssueTitle | IssueTitlegroup | Lpage | PageRange | Product | PubDate | PubDatenotavailable | PubHistory | SelfUri | Supplement | SupportGroup | TitleGroup | TransAbstract | Volume | VolumeId | VolumeIssuegroup | VolumeSeries | ArticleTitle | Article | Body | Front | Back | FloatsGroup | ProcessingMeta | Response | SubArticle | AuthorComment | Corresp | AwardDesc | AwardGroup | AwardId | AwardName | FundingSource | PrincipalAwardrecipient | PrincipalInvestigator | SupportSource | Bio | Notes | SigBlock | Caption | ChapterTitle | CitationAlternatives | ElementCitation | MixedCitation | NlmCitation | Colgroup | Col | CollabAlternatives | Collab | OnBehalfof | Role | Comment | CompoundKwdpart | CompoundKwd | CompoundSubjectpart | CompoundSubject | ConfAcronym | ConfDate | ConfLoc | ConfName | ConfNum | ConfSponsor | ConfTheme | Contrib | ContribId | Name | Degrees | NameAlternatives | StringName | ContributedResourcegroup | ResourceGroup | SupportDescription | CopyrightHolder | CopyrightStatement | CopyrightYear | Count | EquationCount | FigCount | PageCount | RefCount | TableCount | WordCount | CustomMeta | MetaName | MetaValue | DataTitle | DateIncitation | Day | Era | Month | Season | Year | Date | DefHead | DefItem | Term | TermHead | Edition | Series | Size | Etal | Gov | Issn | IssnL | PartTitle | Patent | PersonGroup | PubId | PublisherLoc | PublisherName | Source | Std | StringDate | TransSource | TransTitle | Version | EventDesc | Event | ExtendedBy | FrontStub | JournalMeta | FundingStatement | OpenAccess | GivenNames | GlyphData | GlyphRef | Hr | See | SeeAlso | InstitutionId | IssueSubtitle | TransTitlegroup | JournalId | JournalTitlegroup | Publisher | JournalSubtitle | JournalTitle | Kwd | NestedKwd | LicenseP | Price | License | ListItem | Prefix | Suffix | Surname | TimeStamp | Note | Option | OverlineEnd | OverlineStart | RestrictedBy | QuestionPreamble | Rb | Ref | ResourceName | ResourceWrap | ResourceId | Rp | Rt | Sig | Speaker | StdOrganization | StringConf | Subject | Tr | Tfoot | Thead | TableWrapfoot | Td | Th | TransSubtitle | UnderlineEnd | UnderlineStart | UnstructuredKwdgroup | VerseLine | X;
+    xml: () => void;
+}
+```
+
+#### Type declaration
+
+| Member | Type |
+| :------ | :------ |
+| `article` | () => `void` |
+| `body` | (`j`: [`J`](modules.md#j), `body`: [`Body`](modules.md#body)) => `Sec` | `Body` |
+| `doctype` | () => `void` |
+| `document` | (`j`: [`J`](modules.md#j), `node`: `Document`) => `Article` |
+| `drawing` | (`j`: [`J`](modules.md#j), `node`: `Drawing`) => `Fig` |
+| `footnote` | (`j`: [`J`](modules.md#j), `node`: [`Element`](modules.md#element)) => `undefined` | `Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `AbbrevJournaltitle` | `Abbrev` | `Def` | `Abstract` | [`JastP`](modules.md#jastp) | `Label` | `Title` | `ObjectId` | `Sec` | `AccessDate` | `Ack` | `KwdGroup` | `RefList` | `SubjGroup` | `Address` | `Email` | `Fax` | `AddrLine` | `City` | `Country` | `ExtLink` | `Institution` | `InstitutionWrap` | `Phone` | `PostalCode` | `State` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `AffAlternatives` | `Aff` | `Break` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Graphic` | `Table` | `Array` | `Code` | `Media` | `Preformat` | `SupplementaryMaterial` | `TexMath` | `TextualForm` | `AltText` | `AltTitle` | `Annotation` | `Anonymous` | `AnswerSet` | `Answer` | `Explanation` | `Subtitle` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `FnGroup` | `Glossary` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AppGroup` | `App` | `Permissions` | `SecMeta` | `LongDesc` | `Attrib` | `Tbody` | `ArticleCategories` | `SeriesText` | `SeriesTitle` | `ArticleId` | `ArticleMeta` | `Isbn` | `ArticleVersion` | `ArticleVersionalternatives` | `AuthorNotes` | `Conference` | `ContribGroup` | `Counts` | `CustomMetagroup` | `ElocationId` | `Fpage` | `FundingGroup` | `History` | `Issue` | `IssueId` | `IssuePart` | `IssueSponsor` | `IssueTitle` | `IssueTitlegroup` | `Lpage` | `PageRange` | `Product` | `PubDate` | `PubDatenotavailable` | `PubHistory` | `SelfUri` | `Supplement` | `SupportGroup` | `TitleGroup` | `TransAbstract` | `Volume` | `VolumeId` | `VolumeIssuegroup` | `VolumeSeries` | `ArticleTitle` | `Article` | `Body` | `Front` | `Back` | `FloatsGroup` | `ProcessingMeta` | `Response` | `SubArticle` | `AuthorComment` | `Corresp` | `AwardDesc` | `AwardGroup` | `AwardId` | `AwardName` | `FundingSource` | `PrincipalAwardrecipient` | `PrincipalInvestigator` | `SupportSource` | `Bio` | `Notes` | `SigBlock` | `Caption` | `ChapterTitle` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `Colgroup` | `Col` | `CollabAlternatives` | `Collab` | `OnBehalfof` | `Role` | `Comment` | `CompoundKwdpart` | `CompoundKwd` | `CompoundSubjectpart` | `CompoundSubject` | `ConfAcronym` | `ConfDate` | `ConfLoc` | `ConfName` | `ConfNum` | `ConfSponsor` | `ConfTheme` | `Contrib` | `ContribId` | `Name` | `Degrees` | `NameAlternatives` | `StringName` | `ContributedResourcegroup` | `ResourceGroup` | `SupportDescription` | `CopyrightHolder` | `CopyrightStatement` | `CopyrightYear` | `Count` | `EquationCount` | `FigCount` | `PageCount` | `RefCount` | `TableCount` | `WordCount` | `CustomMeta` | `MetaName` | `MetaValue` | `DataTitle` | `DateIncitation` | `Day` | `Era` | `Month` | `Season` | `Year` | `Date` | `DefHead` | `DefItem` | `Term` | `TermHead` | `Edition` | `Series` | `Size` | `Etal` | `Gov` | `Issn` | `IssnL` | `PartTitle` | `Patent` | `PersonGroup` | `PubId` | `PublisherLoc` | `PublisherName` | `Source` | `Std` | `StringDate` | `TransSource` | `TransTitle` | `Version` | `EventDesc` | `Event` | `ExtendedBy` | `FrontStub` | `JournalMeta` | `FundingStatement` | `OpenAccess` | `GivenNames` | `GlyphData` | `GlyphRef` | `Hr` | `See` | `SeeAlso` | `InstitutionId` | `IssueSubtitle` | `TransTitlegroup` | `JournalId` | `JournalTitlegroup` | `Publisher` | `JournalSubtitle` | `JournalTitle` | `Kwd` | `NestedKwd` | `LicenseP` | `Price` | `License` | `ListItem` | `Prefix` | `Suffix` | `Surname` | `TimeStamp` | `Note` | `Option` | `OverlineEnd` | `OverlineStart` | `RestrictedBy` | `QuestionPreamble` | `Rb` | `Ref` | `ResourceName` | `ResourceWrap` | `ResourceId` | `Rp` | `Rt` | `Sig` | `Speaker` | `StdOrganization` | `StringConf` | `Subject` | `Tr` | `Tfoot` | `Thead` | `TableWrapfoot` | `Td` | `Th` | `TransSubtitle` | `UnderlineEnd` | `UnderlineStart` | `UnstructuredKwdgroup` | `VerseLine` | `X` |
+| `footnotes` | (`j`: [`J`](modules.md#j), `node`: `Footnotes`) => `void` |
+| `instrText` | (`j`: [`J`](modules.md#j), `citation`: `T`, `parent`: [`Parent`](modules.md#parent)<`Node`<`Data`>, `Data`>) => `any` |
+| `instruction` | () => `void` |
+| `p` | (`j`: [`J`](modules.md#j), `p`: [`P`](modules.md#p), `parent`: [`Parent`](modules.md#parent)<`Node`<`Data`>, `Data`>) => `Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `AbbrevJournaltitle` | `Abbrev` | `Def` | `Abstract` | [`JastP`](modules.md#jastp) | `Label` | `Title` | `ObjectId` | `Sec` | `AccessDate` | `Ack` | `KwdGroup` | `RefList` | `SubjGroup` | `Address` | `Email` | `Fax` | `AddrLine` | `City` | `Country` | `ExtLink` | `Institution` | `InstitutionWrap` | `Phone` | `PostalCode` | `State` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `AffAlternatives` | `Aff` | `Break` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Graphic` | `Table` | `Array` | `Code` | `Media` | `Preformat` | `SupplementaryMaterial` | `TexMath` | `TextualForm` | `AltText` | `AltTitle` | `Annotation` | `Anonymous` | `AnswerSet` | `Answer` | `Explanation` | `Subtitle` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `FnGroup` | `Glossary` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AppGroup` | `App` | `Permissions` | `SecMeta` | `LongDesc` | `Attrib` | `Tbody` | `ArticleCategories` | `SeriesText` | `SeriesTitle` | `ArticleId` | `ArticleMeta` | `Isbn` | `ArticleVersion` | `ArticleVersionalternatives` | `AuthorNotes` | `Conference` | `ContribGroup` | `Counts` | `CustomMetagroup` | `ElocationId` | `Fpage` | `FundingGroup` | `History` | `Issue` | `IssueId` | `IssuePart` | `IssueSponsor` | `IssueTitle` | `IssueTitlegroup` | `Lpage` | `PageRange` | `Product` | `PubDate` | `PubDatenotavailable` | `PubHistory` | `SelfUri` | `Supplement` | `SupportGroup` | `TitleGroup` | `TransAbstract` | `Volume` | `VolumeId` | `VolumeIssuegroup` | `VolumeSeries` | `ArticleTitle` | `Article` | `Body` | `Front` | `Back` | `FloatsGroup` | `ProcessingMeta` | `Response` | `SubArticle` | `AuthorComment` | `Corresp` | `AwardDesc` | `AwardGroup` | `AwardId` | `AwardName` | `FundingSource` | `PrincipalAwardrecipient` | `PrincipalInvestigator` | `SupportSource` | `Bio` | `Notes` | `SigBlock` | `Caption` | `ChapterTitle` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `Colgroup` | `Col` | `CollabAlternatives` | `Collab` | `OnBehalfof` | `Role` | `Comment` | `CompoundKwdpart` | `CompoundKwd` | `CompoundSubjectpart` | `CompoundSubject` | `ConfAcronym` | `ConfDate` | `ConfLoc` | `ConfName` | `ConfNum` | `ConfSponsor` | `ConfTheme` | `Contrib` | `ContribId` | `Name` | `Degrees` | `NameAlternatives` | `StringName` | `ContributedResourcegroup` | `ResourceGroup` | `SupportDescription` | `CopyrightHolder` | `CopyrightStatement` | `CopyrightYear` | `Count` | `EquationCount` | `FigCount` | `PageCount` | `RefCount` | `TableCount` | `WordCount` | `CustomMeta` | `MetaName` | `MetaValue` | `DataTitle` | `DateIncitation` | `Day` | `Era` | `Month` | `Season` | `Year` | `Date` | `DefHead` | `DefItem` | `Term` | `TermHead` | `Edition` | `Series` | `Size` | `Etal` | `Gov` | `Issn` | `IssnL` | `PartTitle` | `Patent` | `PersonGroup` | `PubId` | `PublisherLoc` | `PublisherName` | `Source` | `Std` | `StringDate` | `TransSource` | `TransTitle` | `Version` | `EventDesc` | `Event` | `ExtendedBy` | `FrontStub` | `JournalMeta` | `FundingStatement` | `OpenAccess` | `GivenNames` | `GlyphData` | `GlyphRef` | `Hr` | `See` | `SeeAlso` | `InstitutionId` | `IssueSubtitle` | `TransTitlegroup` | `JournalId` | `JournalTitlegroup` | `Publisher` | `JournalSubtitle` | `JournalTitle` | `Kwd` | `NestedKwd` | `LicenseP` | `Price` | `License` | `ListItem` | `Prefix` | `Suffix` | `Surname` | `TimeStamp` | `Note` | `Option` | `OverlineEnd` | `OverlineStart` | `RestrictedBy` | `QuestionPreamble` | `Rb` | `Ref` | `ResourceName` | `ResourceWrap` | `ResourceId` | `Rp` | `Rt` | `Sig` | `Speaker` | `StdOrganization` | `StringConf` | `Subject` | `Tr` | `Tfoot` | `Thead` | `TableWrapfoot` | `Td` | `Th` | `TransSubtitle` | `UnderlineEnd` | `UnderlineStart` | `UnstructuredKwdgroup` | `VerseLine` | `X` | (`Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `AbbrevJournaltitle` | `Abbrev` | `Def` | `Abstract` | [`JastP`](modules.md#jastp) | `Label` | `Title` | `ObjectId` | `Sec` | `AccessDate` | `Ack` | `KwdGroup` | `RefList` | `SubjGroup` | `Address` | `Email` | `Fax` | `AddrLine` | `City` | `Country` | `ExtLink` | `Institution` | `InstitutionWrap` | `Phone` | `PostalCode` | `State` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `AffAlternatives` | `Aff` | `Break` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Graphic` | `Table` | `Array` | `Code` | `Media` | `Preformat` | `SupplementaryMaterial` | `TexMath` | `TextualForm` | `AltText` | `AltTitle` | `Annotation` | `Anonymous` | `AnswerSet` | `Answer` | `Explanation` | `Subtitle` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `FnGroup` | `Glossary` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AppGroup` | `App` | `Permissions` | `SecMeta` | `LongDesc` | `Attrib` | `Tbody` | `ArticleCategories` | `SeriesText` | `SeriesTitle` | `ArticleId` | `ArticleMeta` | `Isbn` | `ArticleVersion` | `ArticleVersionalternatives` | `AuthorNotes` | `Conference` | `ContribGroup` | `Counts` | `CustomMetagroup` | `ElocationId` | `Fpage` | `FundingGroup` | `History` | `Issue` | `IssueId` | `IssuePart` | `IssueSponsor` | `IssueTitle` | `IssueTitlegroup` | `Lpage` | `PageRange` | `Product` | `PubDate` | `PubDatenotavailable` | `PubHistory` | `SelfUri` | `Supplement` | `SupportGroup` | `TitleGroup` | `TransAbstract` | `Volume` | `VolumeId` | `VolumeIssuegroup` | `VolumeSeries` | `ArticleTitle` | `Article` | `Body` | `Front` | `Back` | `FloatsGroup` | `ProcessingMeta` | `Response` | `SubArticle` | `AuthorComment` | `Corresp` | `AwardDesc` | `AwardGroup` | `AwardId` | `AwardName` | `FundingSource` | `PrincipalAwardrecipient` | `PrincipalInvestigator` | `SupportSource` | `Bio` | `Notes` | `SigBlock` | `Caption` | `ChapterTitle` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `Colgroup` | `Col` | `CollabAlternatives` | `Collab` | `OnBehalfof` | `Role` | `Comment` | `CompoundKwdpart` | `CompoundKwd` | `CompoundSubjectpart` | `CompoundSubject` | `ConfAcronym` | `ConfDate` | `ConfLoc` | `ConfName` | `ConfNum` | `ConfSponsor` | `ConfTheme` | `Contrib` | `ContribId` | `Name` | `Degrees` | `NameAlternatives` | `StringName` | `ContributedResourcegroup` | `ResourceGroup` | `SupportDescription` | `CopyrightHolder` | `CopyrightStatement` | `CopyrightYear` | `Count` | `EquationCount` | `FigCount` | `PageCount` | `RefCount` | `TableCount` | `WordCount` | `CustomMeta` | `MetaName` | `MetaValue` | `DataTitle` | `DateIncitation` | `Day` | `Era` | `Month` | `Season` | `Year` | `Date` | `DefHead` | `DefItem` | `Term` | `TermHead` | `Edition` | `Series` | `Size` | `Etal` | `Gov` | `Issn` | `IssnL` | `PartTitle` | `Patent` | `PersonGroup` | `PubId` | `PublisherLoc` | `PublisherName` | `Source` | `Std` | `StringDate` | `TransSource` | `TransTitle` | `Version` | `EventDesc` | `Event` | `ExtendedBy` | `FrontStub` | `JournalMeta` | `FundingStatement` | `OpenAccess` | `GivenNames` | `GlyphData` | `GlyphRef` | `Hr` | `See` | `SeeAlso` | `InstitutionId` | `IssueSubtitle` | `TransTitlegroup` | `JournalId` | `JournalTitlegroup` | `Publisher` | `JournalSubtitle` | `JournalTitle` | `Kwd` | `NestedKwd` | `LicenseP` | `Price` | `License` | `ListItem` | `Prefix` | `Suffix` | `Surname` | `TimeStamp` | `Note` | `Option` | `OverlineEnd` | `OverlineStart` | `RestrictedBy` | `QuestionPreamble` | `Rb` | `Ref` | `ResourceName` | `ResourceWrap` | `ResourceId` | `Rp` | `Rt` | `Sig` | `Speaker` | `StdOrganization` | `StringConf` | `Subject` | `Tr` | `Tfoot` | `Thead` | `TableWrapfoot` | `Td` | `Th` | `TransSubtitle` | `UnderlineEnd` | `UnderlineStart` | `UnstructuredKwdgroup` | `VerseLine` | `X`)[] |
+| `r` | (`j`: [`J`](modules.md#j), `node`: `R`) => `any` |
+| `root` | (`j`: [`J`](modules.md#j), `node`: [`Root`](modules.md#root)) => `Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `AbbrevJournaltitle` | `Abbrev` | `Def` | `Abstract` | [`JastP`](modules.md#jastp) | `Label` | `Title` | `ObjectId` | `Sec` | `AccessDate` | `Ack` | `KwdGroup` | `RefList` | `SubjGroup` | `Address` | `Email` | `Fax` | `AddrLine` | `City` | `Country` | `ExtLink` | `Institution` | `InstitutionWrap` | `Phone` | `PostalCode` | `State` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `AffAlternatives` | `Aff` | `Break` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Graphic` | `Table` | `Array` | `Code` | `Media` | `Preformat` | `SupplementaryMaterial` | `TexMath` | `TextualForm` | `AltText` | `AltTitle` | `Annotation` | `Anonymous` | `AnswerSet` | `Answer` | `Explanation` | `Subtitle` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `FnGroup` | `Glossary` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AppGroup` | `App` | `Permissions` | `SecMeta` | `LongDesc` | `Attrib` | `Tbody` | `ArticleCategories` | `SeriesText` | `SeriesTitle` | `ArticleId` | `ArticleMeta` | `Isbn` | `ArticleVersion` | `ArticleVersionalternatives` | `AuthorNotes` | `Conference` | `ContribGroup` | `Counts` | `CustomMetagroup` | `ElocationId` | `Fpage` | `FundingGroup` | `History` | `Issue` | `IssueId` | `IssuePart` | `IssueSponsor` | `IssueTitle` | `IssueTitlegroup` | `Lpage` | `PageRange` | `Product` | `PubDate` | `PubDatenotavailable` | `PubHistory` | `SelfUri` | `Supplement` | `SupportGroup` | `TitleGroup` | `TransAbstract` | `Volume` | `VolumeId` | `VolumeIssuegroup` | `VolumeSeries` | `ArticleTitle` | `Article` | `Body` | `Front` | `Back` | `FloatsGroup` | `ProcessingMeta` | `Response` | `SubArticle` | `AuthorComment` | `Corresp` | `AwardDesc` | `AwardGroup` | `AwardId` | `AwardName` | `FundingSource` | `PrincipalAwardrecipient` | `PrincipalInvestigator` | `SupportSource` | `Bio` | `Notes` | `SigBlock` | `Caption` | `ChapterTitle` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `Colgroup` | `Col` | `CollabAlternatives` | `Collab` | `OnBehalfof` | `Role` | `Comment` | `CompoundKwdpart` | `CompoundKwd` | `CompoundSubjectpart` | `CompoundSubject` | `ConfAcronym` | `ConfDate` | `ConfLoc` | `ConfName` | `ConfNum` | `ConfSponsor` | `ConfTheme` | `Contrib` | `ContribId` | `Name` | `Degrees` | `NameAlternatives` | `StringName` | `ContributedResourcegroup` | `ResourceGroup` | `SupportDescription` | `CopyrightHolder` | `CopyrightStatement` | `CopyrightYear` | `Count` | `EquationCount` | `FigCount` | `PageCount` | `RefCount` | `TableCount` | `WordCount` | `CustomMeta` | `MetaName` | `MetaValue` | `DataTitle` | `DateIncitation` | `Day` | `Era` | `Month` | `Season` | `Year` | `Date` | `DefHead` | `DefItem` | `Term` | `TermHead` | `Edition` | `Series` | `Size` | `Etal` | `Gov` | `Issn` | `IssnL` | `PartTitle` | `Patent` | `PersonGroup` | `PubId` | `PublisherLoc` | `PublisherName` | `Source` | `Std` | `StringDate` | `TransSource` | `TransTitle` | `Version` | `EventDesc` | `Event` | `ExtendedBy` | `FrontStub` | `JournalMeta` | `FundingStatement` | `OpenAccess` | `GivenNames` | `GlyphData` | `GlyphRef` | `Hr` | `See` | `SeeAlso` | `InstitutionId` | `IssueSubtitle` | `TransTitlegroup` | `JournalId` | `JournalTitlegroup` | `Publisher` | `JournalSubtitle` | `JournalTitle` | `Kwd` | `NestedKwd` | `LicenseP` | `Price` | `License` | `ListItem` | `Prefix` | `Suffix` | `Surname` | `TimeStamp` | `Note` | `Option` | `OverlineEnd` | `OverlineStart` | `RestrictedBy` | `QuestionPreamble` | `Rb` | `Ref` | `ResourceName` | `ResourceWrap` | `ResourceId` | `Rp` | `Rt` | `Sig` | `Speaker` | `StdOrganization` | `StringConf` | `Subject` | `Tr` | `Tfoot` | `Thead` | `TableWrapfoot` | `Td` | `Th` | `TransSubtitle` | `UnderlineEnd` | `UnderlineStart` | `UnstructuredKwdgroup` | `VerseLine` | `X` |
+| `t` | (`j`: [`J`](modules.md#j), `parent`: [`Node`](modules.md#node)) => [`JastContent`](modules.md#jastcontent)[] |
+| `tbl` | (`j`: [`J`](modules.md#j), `tbl`: `Tbl`) => {     `attributes`: {};     `children`: (`Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `AbbrevJournaltitle` | `Abbrev` | `Def` | `Abstract` | [`JastP`](modules.md#jastp) | `Label` | `Title` | `ObjectId` | `Sec` | `AccessDate` | `Ack` | `KwdGroup` | `RefList` | `SubjGroup` | `Address` | `Email` | `Fax` | `AddrLine` | `City` | `Country` | `ExtLink` | `Institution` | `InstitutionWrap` | `Phone` | `PostalCode` | `State` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `AffAlternatives` | `Aff` | `Break` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Graphic` | `Table` | `Array` | `Code` | `Media` | `Preformat` | `SupplementaryMaterial` | `TexMath` | `TextualForm` | `AltText` | `AltTitle` | `Annotation` | `Anonymous` | `AnswerSet` | `Answer` | `Explanation` | `Subtitle` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `FnGroup` | `Glossary` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AppGroup` | `App` | `Permissions` | `SecMeta` | `LongDesc` | `Attrib` | `Tbody` | `ArticleCategories` | `SeriesText` | `SeriesTitle` | `ArticleId` | `ArticleMeta` | `Isbn` | `ArticleVersion` | `ArticleVersionalternatives` | `AuthorNotes` | `Conference` | `ContribGroup` | `Counts` | `CustomMetagroup` | `ElocationId` | `Fpage` | `FundingGroup` | `History` | `Issue` | `IssueId` | `IssuePart` | `IssueSponsor` | `IssueTitle` | `IssueTitlegroup` | `Lpage` | `PageRange` | `Product` | `PubDate` | `PubDatenotavailable` | `PubHistory` | `SelfUri` | `Supplement` | `SupportGroup` | `TitleGroup` | `TransAbstract` | `Volume` | `VolumeId` | `VolumeIssuegroup` | `VolumeSeries` | `ArticleTitle` | `Article` | `Body` | `Front` | `Back` | `FloatsGroup` | `ProcessingMeta` | `Response` | `SubArticle` | `AuthorComment` | `Corresp` | `AwardDesc` | `AwardGroup` | `AwardId` | `AwardName` | `FundingSource` | `PrincipalAwardrecipient` | `PrincipalInvestigator` | `SupportSource` | `Bio` | `Notes` | `SigBlock` | `Caption` | `ChapterTitle` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `Colgroup` | `Col` | `CollabAlternatives` | `Collab` | `OnBehalfof` | `Role` | `Comment` | `CompoundKwdpart` | `CompoundKwd` | `CompoundSubjectpart` | `CompoundSubject` | `ConfAcronym` | `ConfDate` | `ConfLoc` | `ConfName` | `ConfNum` | `ConfSponsor` | `ConfTheme` | `Contrib` | `ContribId` | `Name` | `Degrees` | `NameAlternatives` | `StringName` | `ContributedResourcegroup` | `ResourceGroup` | `SupportDescription` | `CopyrightHolder` | `CopyrightStatement` | `CopyrightYear` | `Count` | `EquationCount` | `FigCount` | `PageCount` | `RefCount` | `TableCount` | `WordCount` | `CustomMeta` | `MetaName` | `MetaValue` | `DataTitle` | `DateIncitation` | `Day` | `Era` | `Month` | `Season` | `Year` | `Date` | `DefHead` | `DefItem` | `Term` | `TermHead` | `Edition` | `Series` | `Size` | `Etal` | `Gov` | `Issn` | `IssnL` | `PartTitle` | `Patent` | `PersonGroup` | `PubId` | `PublisherLoc` | `PublisherName` | `Source` | `Std` | `StringDate` | `TransSource` | `TransTitle` | `Version` | `EventDesc` | `Event` | `ExtendedBy` | `FrontStub` | `JournalMeta` | `FundingStatement` | `OpenAccess` | `GivenNames` | `GlyphData` | `GlyphRef` | `Hr` | `See` | `SeeAlso` | `InstitutionId` | `IssueSubtitle` | `TransTitlegroup` | `JournalId` | `JournalTitlegroup` | `Publisher` | `JournalSubtitle` | `JournalTitle` | `Kwd` | `NestedKwd` | `LicenseP` | `Price` | `License` | `ListItem` | `Prefix` | `Suffix` | `Surname` | `TimeStamp` | `Note` | `Option` | `OverlineEnd` | `OverlineStart` | `RestrictedBy` | `QuestionPreamble` | `Rb` | `Ref` | `ResourceName` | `ResourceWrap` | `ResourceId` | `Rp` | `Rt` | `Sig` | `Speaker` | `StdOrganization` | `StringConf` | `Subject` | `Tr` | `Tfoot` | `Thead` | `TableWrapfoot` | `Td` | `Th` | `TransSubtitle` | `UnderlineEnd` | `UnderlineStart` | `UnstructuredKwdgroup` | `VerseLine` | `X`)[];     `name`: `string`;     `type`: `string`; } |
+| `tc` | (`j`: [`J`](modules.md#j), `node`: `Tc`) => `Td` |
+| `text` | (`j`: [`J`](modules.md#j), `node`: [`Text`](modules.md#text)) => [`Text`](modules.md#text) |
+| `tr` | (`j`: [`J`](modules.md#j), `tr`: `Row`) => `Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `AbbrevJournaltitle` | `Abbrev` | `Def` | `Abstract` | [`JastP`](modules.md#jastp) | `Label` | `Title` | `ObjectId` | `Sec` | `AccessDate` | `Ack` | `KwdGroup` | `RefList` | `SubjGroup` | `Address` | `Email` | `Fax` | `AddrLine` | `City` | `Country` | `ExtLink` | `Institution` | `InstitutionWrap` | `Phone` | `PostalCode` | `State` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `AffAlternatives` | `Aff` | `Break` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Graphic` | `Table` | `Array` | `Code` | `Media` | `Preformat` | `SupplementaryMaterial` | `TexMath` | `TextualForm` | `AltText` | `AltTitle` | `Annotation` | `Anonymous` | `AnswerSet` | `Answer` | `Explanation` | `Subtitle` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `FnGroup` | `Glossary` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AppGroup` | `App` | `Permissions` | `SecMeta` | `LongDesc` | `Attrib` | `Tbody` | `ArticleCategories` | `SeriesText` | `SeriesTitle` | `ArticleId` | `ArticleMeta` | `Isbn` | `ArticleVersion` | `ArticleVersionalternatives` | `AuthorNotes` | `Conference` | `ContribGroup` | `Counts` | `CustomMetagroup` | `ElocationId` | `Fpage` | `FundingGroup` | `History` | `Issue` | `IssueId` | `IssuePart` | `IssueSponsor` | `IssueTitle` | `IssueTitlegroup` | `Lpage` | `PageRange` | `Product` | `PubDate` | `PubDatenotavailable` | `PubHistory` | `SelfUri` | `Supplement` | `SupportGroup` | `TitleGroup` | `TransAbstract` | `Volume` | `VolumeId` | `VolumeIssuegroup` | `VolumeSeries` | `ArticleTitle` | `Article` | `Body` | `Front` | `Back` | `FloatsGroup` | `ProcessingMeta` | `Response` | `SubArticle` | `AuthorComment` | `Corresp` | `AwardDesc` | `AwardGroup` | `AwardId` | `AwardName` | `FundingSource` | `PrincipalAwardrecipient` | `PrincipalInvestigator` | `SupportSource` | `Bio` | `Notes` | `SigBlock` | `Caption` | `ChapterTitle` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `Colgroup` | `Col` | `CollabAlternatives` | `Collab` | `OnBehalfof` | `Role` | `Comment` | `CompoundKwdpart` | `CompoundKwd` | `CompoundSubjectpart` | `CompoundSubject` | `ConfAcronym` | `ConfDate` | `ConfLoc` | `ConfName` | `ConfNum` | `ConfSponsor` | `ConfTheme` | `Contrib` | `ContribId` | `Name` | `Degrees` | `NameAlternatives` | `StringName` | `ContributedResourcegroup` | `ResourceGroup` | `SupportDescription` | `CopyrightHolder` | `CopyrightStatement` | `CopyrightYear` | `Count` | `EquationCount` | `FigCount` | `PageCount` | `RefCount` | `TableCount` | `WordCount` | `CustomMeta` | `MetaName` | `MetaValue` | `DataTitle` | `DateIncitation` | `Day` | `Era` | `Month` | `Season` | `Year` | `Date` | `DefHead` | `DefItem` | `Term` | `TermHead` | `Edition` | `Series` | `Size` | `Etal` | `Gov` | `Issn` | `IssnL` | `PartTitle` | `Patent` | `PersonGroup` | `PubId` | `PublisherLoc` | `PublisherName` | `Source` | `Std` | `StringDate` | `TransSource` | `TransTitle` | `Version` | `EventDesc` | `Event` | `ExtendedBy` | `FrontStub` | `JournalMeta` | `FundingStatement` | `OpenAccess` | `GivenNames` | `GlyphData` | `GlyphRef` | `Hr` | `See` | `SeeAlso` | `InstitutionId` | `IssueSubtitle` | `TransTitlegroup` | `JournalId` | `JournalTitlegroup` | `Publisher` | `JournalSubtitle` | `JournalTitle` | `Kwd` | `NestedKwd` | `LicenseP` | `Price` | `License` | `ListItem` | `Prefix` | `Suffix` | `Surname` | `TimeStamp` | `Note` | `Option` | `OverlineEnd` | `OverlineStart` | `RestrictedBy` | `QuestionPreamble` | `Rb` | `Ref` | `ResourceName` | `ResourceWrap` | `ResourceId` | `Rp` | `Rt` | `Sig` | `Speaker` | `StdOrganization` | `StringConf` | `Subject` | `Tr` | `Tfoot` | `Thead` | `TableWrapfoot` | `Td` | `Th` | `TransSubtitle` | `UnderlineEnd` | `UnderlineStart` | `UnstructuredKwdgroup` | `VerseLine` | `X` |
+| `xml` | () => `void` |
+
+Defined in:  [src/lib/handlers/index.ts:17](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/handlers/index.ts#L17)
+
+***
+
+### `Body`
 
 #### Hierarchy
 
-- `Node`
-
-  ↳ **`Body`**
+*   `Node`.**Body**
 
 #### Properties
 
-##### attributes
+##### `attributes`
 
-• **attributes**: `Record`<`string`, `never`>
+> `Record`<`string`, `never`>
 
-###### Defined in
+Defined in:  [libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts:151](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts#L151)
 
-[libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts:151](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts#L151)
+##### `children`
 
----
+> (`OMath` | `RunTrackChange`<`"del"`> | `RunTrackChange`<`"ins"`> | `MarkupRange`<`"bookmarkEnd"`> | `never` | `MarkupRange`<`"commentRangeEnd"`> | `MarkupRange`<`"commentRangeStart"`> | `Markup`<`"customXmlDelRangeEnd"`> | `TrackChange`<`"customXmlDelRangeStart"`> | `Markup`<`"customXmlInsRangeEnd"`> | `TrackChange`<`"customXmlInsRangeStart"`> | `Markup`<`"customXmlMoveFromRangeEnd"`> | `TrackChange`<`"customXmlMoveFromRangeStart"`> | `Markup`<`"customXmlMoveToRangeEnd"`> | `TrackChange`<`"customXmlMoveToRangeStart"`> | `RunTrackChange`<`"moveFrom"`> | `MarkupRange`<`"moveFromRangeEnd"`> | `never` | `RunTrackChange`<`"moveTo"`> | `MarkupRange`<`"moveToRangeEnd"`> | `OMathPara` | `Perm` | `never` | `ProofErr` | `CustomXmlBlock` | `SdtBlock` | [`P`](modules.md#p) | `AltChunk` | `Tbl` | `SectPr`)[]
 
-##### children
+Defined in:  [libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts:152](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts#L152)
 
-• **children**: (`OMath` | `RunTrackChange`<`"del"`> | `RunTrackChange`<`"ins"`> | `MarkupRange`<`"bookmarkEnd"`> | `never` | `MarkupRange`<`"commentRangeEnd"`> | `MarkupRange`<`"commentRangeStart"`> | `Markup`<`"customXmlDelRangeEnd"`> | `TrackChange`<`"customXmlDelRangeStart"`> | `Markup`<`"customXmlInsRangeEnd"`> | `TrackChange`<`"customXmlInsRangeStart"`> | `Markup`<`"customXmlMoveFromRangeEnd"`> | `TrackChange`<`"customXmlMoveFromRangeStart"`> | `Markup`<`"customXmlMoveToRangeEnd"`> | `TrackChange`<`"customXmlMoveToRangeStart"`> | `RunTrackChange`<`"moveFrom"`> | `MarkupRange`<`"moveFromRangeEnd"`> | `never` | `RunTrackChange`<`"moveTo"`> | `MarkupRange`<`"moveToRangeEnd"`> | `OMathPara` | `Perm` | `never` | `ProofErr` | `CustomXmlBlock` | `SdtBlock` | [`P`](.interfaces/ooxast_util_to_jast.P.md) | `AltChunk` | `Tbl` | `SectPr`)\[]
+##### `data?`
 
-###### Defined in
-
-[libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts:152](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts#L152)
-
----
-
-##### data
-
-• `Optional` **data**: `Data`
+> `Data`
 
 Information from the ecosystem.
 
-###### Inherited from
+Inherited from: UnistNode.data
 
-UnistNode.data
+Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/index.d.ts:27
 
-###### Defined in
+##### `name`
 
-node_modules/.pnpm/@types+unist\@2.0.6/node_modules/@types/unist/index.d.ts:27
+> `"w:body"`
 
----
+Defined in:  [libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts:150](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts#L150)
 
-##### name
+##### `position?`
 
-• **name**: `"w:body"`
-
-###### Defined in
-
-[libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts:150](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts#L150)
-
----
-
-##### position
-
-• `Optional` **position**: `Position`
+> `Position`
 
 Location of a node in a source document.
 Must not be present if a node is generated.
 
-###### Inherited from
+Inherited from: UnistNode.position
 
-UnistNode.position
+Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/index.d.ts:33
 
-###### Defined in
+##### `type`
 
-node_modules/.pnpm/@types+unist\@2.0.6/node_modules/@types/unist/index.d.ts:33
+> `"element"`
 
----
+Overrides: UnistNode.type
 
-##### type
+Defined in:  [libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts:149](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts#L149)
 
-• **type**: `"element"`
+***
 
-###### Overrides
-
-UnistNode.type
-
-###### Defined in
-
-[libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts:149](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts#L149)
-
-### Interface: Context
-
-[ooxast-util-to-jast](.modules).Context
+### `Context`
 
 #### Properties
 
-##### baseFound
+##### `baseFound`
 
-• **baseFound**: `boolean`
+> `boolean`
 
-###### Defined in
+Defined in:  [src/lib/types.ts:60](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L60)
 
-[src/lib/types.ts:60](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L60)
+##### `bibname`
 
----
+> `string`
 
-##### bibname
+Defined in:  [src/lib/types.ts:76](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L76)
 
-• **bibname**: `string`
+##### `checked`
 
-###### Defined in
+> `string`
 
-[src/lib/types.ts:76](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L76)
+Defined in:  [src/lib/types.ts:67](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L67)
 
----
+##### `citationNumber`
 
-##### checked
+> `number`
 
-• **checked**: `string`
+Defined in:  [src/lib/types.ts:78](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L78)
 
-###### Defined in
+##### `citationType?`
 
-[src/lib/types.ts:67](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L67)
+> `"endnote"` | `"native"` | `"mendeley"` | `"citavi"` | `"zotero"`
 
----
+Defined in:  [src/lib/types.ts:85](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L85)
 
-##### citationNumber
+##### `citeKeys`
 
-• **citationNumber**: `number`
-
-###### Defined in
-
-[src/lib/types.ts:78](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L78)
-
----
-
-##### citationType
-
-• `Optional` **citationType**: `"endnote"` | `"native"` | `"mendeley"` | `"citavi"` | `"zotero"`
-
-###### Defined in
-
-[src/lib/types.ts:85](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L85)
-
----
-
-##### citeKeys
-
-• **citeKeys**: `Object`
+> `object`
 
 ###### Index signature
 
-▪ \[key: `string`]: `string`
-
-###### Defined in
-
-[src/lib/types.ts:84](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L84)
-
----
-
-##### collectCitation
-
-• **collectCitation**: (`citation`: `any`, `index`: `string` | `number`) => `any`
+[`key`: `string`]: `string`
 
 ###### Type declaration
 
-▸ (`citation`, `index`): `any`
+Defined in:  [src/lib/types.ts:84](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L84)
 
-\####### Parameters
+##### `collectCitation`
 
-\| Name | Type |
-\| :------ | :------ |
-\| `citation` | `any` |
-\| `index` | `string` | `number` |
+> `Function`
 
-\####### Returns
+###### Type declaration
+
+*Signature\`*
+
+```ts
+(citation: any, index: string | number): any;
+```
+
+*Parameters\`*
+
+| Name | Type |
+| :------ | :------ |
+| `citation` | `any` |
+| `index` | `string` | `number` |
+
+*Returns\`*
 
 `any`
 
-###### Defined in
+Defined in:  [src/lib/types.ts:80](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L80)
 
-[src/lib/types.ts:80](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L80)
+##### `columnSeparator`
 
----
+> `boolean`
 
-##### columnSeparator
+Defined in:  [src/lib/types.ts:77](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L77)
 
-• **columnSeparator**: `boolean`
+##### `deleteNextRun`
 
-###### Defined in
+> `boolean`
 
-[src/lib/types.ts:77](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L77)
+Defined in:  [src/lib/types.ts:82](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L82)
 
----
+##### `document`
 
-##### deleteNextRun
+> `undefined` | `boolean`
 
-• **deleteNextRun**: `boolean`
+Defined in:  [src/lib/types.ts:66](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L66)
 
-###### Defined in
+##### `documentClass`
 
-[src/lib/types.ts:82](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L82)
+> `object`
 
----
-
-##### document
-
-• **document**: `undefined` | `boolean`
-
-###### Defined in
-
-[src/lib/types.ts:66](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L66)
-
----
-
-##### documentClass
-
-• **documentClass**: `Object`
+```ts
+{
+    name: string;
+    options?: string[];
+}
+```
 
 ###### Type declaration
 
-\| Name | Type |
-\| :------ | :------ |
-\| `name` | `string` |
-\| `options?` | `string`\[] |
+| Member | Type |
+| :------ | :------ |
+| `name` | `string` |
+| `options`? | `string`[] |
 
-###### Defined in
+Defined in:  [src/lib/types.ts:71](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L71)
 
-[src/lib/types.ts:71](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L71)
+##### `frozenBaseUrl`
 
----
+> `null` | `string`
 
-##### frozenBaseUrl
+Defined in:  [src/lib/types.ts:61](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L61)
 
-• **frozenBaseUrl**: `null` | `string`
+##### `handlers`
 
-###### Defined in
-
-[src/lib/types.ts:61](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L61)
-
----
-
-##### handlers
-
-• **handlers**: `Object`
+> `object`
 
 ###### Index signature
 
-▪ \[handler: `string`]: [`Handle`](.modules#handle)
+[`handler`: `string`]: [`Handle`](modules.md#handle)
 
-###### Defined in
+###### Type declaration
 
-[src/lib/types.ts:65](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L65)
+Defined in:  [src/lib/types.ts:65](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L65)
 
----
+##### `inTable`
 
-##### inTable
+> `boolean`
 
-• **inTable**: `boolean`
+Defined in:  [src/lib/types.ts:63](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L63)
 
-###### Defined in
+##### `italics`
 
-[src/lib/types.ts:63](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L63)
+> `string`
 
----
+Defined in:  [src/lib/types.ts:70](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L70)
 
-##### italics
+##### `lastFormattedCitation?`
 
-• **italics**: `string`
-
-###### Defined in
-
-[src/lib/types.ts:70](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L70)
-
----
-
-##### lastFormattedCitation
-
-• `Optional` **lastFormattedCitation**: `string`
+> `string`
 
 Sometimes Zotero/Mendeley will add the formatted citation after the structured
 citation. This is a flag to indicate that the next run should be deleted.
 
-###### Defined in
+Defined in:  [src/lib/types.ts:90](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L90)
 
-[src/lib/types.ts:90](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L90)
+##### `lastPlainCitation?`
 
----
-
-##### lastPlainCitation
-
-• `Optional` **lastPlainCitation**: `string`
+> `string`
 
 Sometimes Zotero/Mendeley will add the plain citation after the structured
 citation. This is a flag to indicate that the next run should be deleted.
 
-###### Defined in
+Defined in:  [src/lib/types.ts:95](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L95)
 
-[src/lib/types.ts:95](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L95)
+##### `nodeById?`
 
----
-
-##### nodeById
-
-• `Optional` **nodeById**: `Object`
+> `object`
 
 ###### Index signature
 
-▪ \[id: `string`]: [`Parent`](.interfaces/ooxast_util_to_jast.Parent.md)
-
-###### Defined in
-
-[src/lib/types.ts:57](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L57)
-
----
-
-##### parseCitation
-
-• **parseCitation**: (`citation`: `any`) => `any`
+[`id`: `string`]: [`Parent`](modules.md#parent)
 
 ###### Type declaration
 
-▸ (`citation`): `any`
+Defined in:  [src/lib/types.ts:57](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L57)
 
-\####### Parameters
+##### `parseCitation`
 
-\| Name | Type |
-\| :------ | :------ |
-\| `citation` | `any` |
+> `Function`
 
-\####### Returns
+###### Type declaration
+
+*Signature\`*
+
+```ts
+(citation: any): any;
+```
+
+*Parameters\`*
+
+| Name | Type |
+| :------ | :------ |
+| `citation` | `any` |
+
+*Returns\`*
 
 `any`
 
-###### Defined in
+Defined in:  [src/lib/types.ts:79](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L79)
 
-[src/lib/types.ts:79](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L79)
+##### `partialCitation`
 
----
+> `string`
 
-##### partialCitation
+Defined in:  [src/lib/types.ts:81](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L81)
 
-• **partialCitation**: `string`
+##### `qNesting`
 
-###### Defined in
+> `number`
 
-[src/lib/types.ts:81](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L81)
+Defined in:  [src/lib/types.ts:64](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L64)
 
----
+##### `quotes`
 
-##### qNesting
+> `string`[]
 
-• **qNesting**: `number`
+Defined in:  [src/lib/types.ts:69](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L69)
 
-###### Defined in
+##### `relations`
 
-[src/lib/types.ts:64](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L64)
-
----
-
-##### quotes
-
-• **quotes**: `string`\[]
-
-###### Defined in
-
-[src/lib/types.ts:69](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L69)
-
----
-
-##### relations
-
-• **relations**: `Object`
+> `object`
 
 ###### Index signature
 
-▪ \[key: `string`]: `string`
+[`key`: `string`]: `string`
 
-###### Defined in
+###### Type declaration
 
-[src/lib/types.ts:83](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L83)
+Defined in:  [src/lib/types.ts:83](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L83)
 
----
+##### `sectionDepth`
 
-##### sectionDepth
+> `number`
 
-• **sectionDepth**: `number`
+Defined in:  [src/lib/types.ts:75](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L75)
 
-###### Defined in
+##### `unchecked`
 
-[src/lib/types.ts:75](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L75)
+> `string`
 
----
+Defined in:  [src/lib/types.ts:68](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L68)
 
-##### unchecked
+##### `wrapText`
 
-• **unchecked**: `string`
+> `boolean`
 
-###### Defined in
+Defined in:  [src/lib/types.ts:62](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L62)
 
-[src/lib/types.ts:68](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L68)
+***
 
----
-
-##### wrapText
-
-• **wrapText**: `boolean`
-
-###### Defined in
-
-[src/lib/types.ts:62](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L62)
-
-### Interface: Element
-
-[ooxast-util-to-jast](.modules).Element
+### `Element`
 
 An XML element.
 
 #### Hierarchy
 
-- [`Parent`](.interfaces/ooxast_util_to_jast.Parent.md)
-
-  ↳ **`Element`**
+*   [`Parent`](modules.md#parent).**Element**
 
 #### Properties
 
-##### attributes
+##### `attributes?`
 
-• `Optional` **attributes**: `Attributes`
+> `Attributes`
 
 Information associated with the element.
 
-###### Defined in
+Defined in:  node\_modules/.pnpm/@types+xast\@1.0.2/node\_modules/@types/xast/index.d.ts:98
 
-node_modules/.pnpm/@types+xast\@1.0.2/node_modules/@types/xast/index.d.ts:98
+##### `children`
 
----
-
-##### children
-
-• **children**: ([`Element`](.interfaces/ooxast_util_to_jast.Element.md) | `Instruction` | `Text` | `Comment` | `Cdata`)\[]
+> ([`Element`](modules.md#element) | `Instruction` | `Text` | `Comment` | `Cdata`)[]
 
 List representing the children of a node.
 
-###### Overrides
+Overrides: [Parent](modules.md#parent).[children](modules.md#children)
 
-[Parent](.interfaces/ooxast_util_to_jast.Parent.md).[children](.interfaces/ooxast_util_to_jast.Parent.md#children)
+Defined in:  node\_modules/.pnpm/@types+xast\@1.0.2/node\_modules/@types/xast/index.d.ts:99
 
-###### Defined in
+##### `data?`
 
-node_modules/.pnpm/@types+xast\@1.0.2/node_modules/@types/xast/index.d.ts:99
-
----
-
-##### data
-
-• `Optional` **data**: `Data`
+> `Data`
 
 Information from the ecosystem.
 
-###### Inherited from
+Inherited from: [Parent](modules.md#parent).[data](modules.md#data)
 
-[Parent](.interfaces/ooxast_util_to_jast.Parent.md).[data](.interfaces/ooxast_util_to_jast.Parent.md#data)
+Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/index.d.ts:27
 
-###### Defined in
+##### `name`
 
-node_modules/.pnpm/@types+unist\@2.0.6/node_modules/@types/unist/index.d.ts:27
-
----
-
-##### name
-
-• **name**: `string`
+> `string`
 
 The element's qualified name.
 
-###### Defined in
+Defined in:  node\_modules/.pnpm/@types+xast\@1.0.2/node\_modules/@types/xast/index.d.ts:94
 
-node_modules/.pnpm/@types+xast\@1.0.2/node_modules/@types/xast/index.d.ts:94
+##### `position?`
 
----
-
-##### position
-
-• `Optional` **position**: `Position`
+> `Position`
 
 Location of a node in a source document.
 Must not be present if a node is generated.
 
-###### Inherited from
+Inherited from: [Parent](modules.md#parent).[position](modules.md#position)
 
-[Parent](.interfaces/ooxast_util_to_jast.Parent.md).[position](.interfaces/ooxast_util_to_jast.Parent.md#position)
+Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/index.d.ts:33
 
-###### Defined in
+##### `type`
 
-node_modules/.pnpm/@types+unist\@2.0.6/node_modules/@types/unist/index.d.ts:33
-
----
-
-##### type
-
-• **type**: `"element"`
+> `"element"`
 
 The variant of a node.
 
-###### Overrides
+Overrides: [Parent](modules.md#parent).[type](modules.md#type)
 
-[Parent](.interfaces/ooxast_util_to_jast.Parent.md).[type](.interfaces/ooxast_util_to_jast.Parent.md#type)
+Defined in:  node\_modules/.pnpm/@types+xast\@1.0.2/node\_modules/@types/xast/index.d.ts:90
 
-###### Defined in
+***
 
-node_modules/.pnpm/@types+xast\@1.0.2/node_modules/@types/xast/index.d.ts:90
-
-### Interface: JastP
-
-[ooxast-util-to-jast](.modules).JastP
+### `JastP`
 
 #### Hierarchy
 
-- `Node`
-
-  ↳ **`JastP`**
+*   `Node`.**JastP**
 
 #### Properties
 
-##### attributes
+##### `attributes`
 
-• **attributes**: `Object`
+> `object`
+
+```ts
+{
+    id?: string;
+    specificUse?: string;
+}
+```
 
 ###### Type declaration
 
-\| Name | Type |
-\| :------ | :------ |
-\| `id?` | `string` |
-\| `specificUse?` | `string` |
+| Member | Type |
+| :------ | :------ |
+| `id`? | `string` |
+| `specificUse`? | `string` |
 
-###### Defined in
+Defined in:  [libs/jast/jast/src/lib/jats.ts:7969](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/jast/jast/src/lib/jats.ts#L7969)
 
-[libs/jast/jast/src/lib/jats.ts:7969](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/jast/jast/src/lib/jats.ts#L7969)
+##### `children`
 
----
+> (`Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `Abbrev` | `Address` | `Email` | `ExtLink` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Graphic` | `Array` | `Code` | `Media` | `Preformat` | `SupplementaryMaterial` | `TexMath` | `AnswerSet` | `Answer` | `Explanation` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AwardId` | `FundingSource` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `OpenAccess`)[]
 
-##### children
+Defined in:  [libs/jast/jast/src/lib/jats.ts:7974](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/jast/jast/src/lib/jats.ts#L7974)
 
-• **children**: (`Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `Abbrev` | `Address` | `Email` | `ExtLink` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Graphic` | `Array` | `Code` | `Media` | `Preformat` | `SupplementaryMaterial` | `TexMath` | `AnswerSet` | `Answer` | `Explanation` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AwardId` | `FundingSource` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `OpenAccess`)\[]
+##### `data?`
 
-###### Defined in
-
-[libs/jast/jast/src/lib/jats.ts:7974](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/jast/jast/src/lib/jats.ts#L7974)
-
----
-
-##### data
-
-• `Optional` **data**: `Data`
+> `Data`
 
 Information from the ecosystem.
 
-###### Inherited from
+Inherited from: UnistNode.data
 
-UnistNode.data
+Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/index.d.ts:27
 
-###### Defined in
+##### `name`
 
-node_modules/.pnpm/@types+unist\@2.0.6/node_modules/@types/unist/index.d.ts:27
+> `"p"`
 
----
+Defined in:  [libs/jast/jast/src/lib/jats.ts:7968](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/jast/jast/src/lib/jats.ts#L7968)
 
-##### name
+##### `position?`
 
-• **name**: `"p"`
-
-###### Defined in
-
-[libs/jast/jast/src/lib/jats.ts:7968](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/jast/jast/src/lib/jats.ts#L7968)
-
----
-
-##### position
-
-• `Optional` **position**: `Position`
+> `Position`
 
 Location of a node in a source document.
 Must not be present if a node is generated.
 
-###### Inherited from
+Inherited from: UnistNode.position
 
-UnistNode.position
+Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/index.d.ts:33
 
-###### Defined in
+##### `type`
 
-node_modules/.pnpm/@types+unist\@2.0.6/node_modules/@types/unist/index.d.ts:33
+> `"element"`
 
----
+Overrides: UnistNode.type
 
-##### type
+Defined in:  [libs/jast/jast/src/lib/jats.ts:7967](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/jast/jast/src/lib/jats.ts#L7967)
 
-• **type**: `"element"`
+***
 
-###### Overrides
-
-UnistNode.type
-
-###### Defined in
-
-[libs/jast/jast/src/lib/jats.ts:7967](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/jast/jast/src/lib/jats.ts#L7967)
-
-### Interface: JastParent
-
-[ooxast-util-to-jast](.modules).JastParent
+### `JastParent`
 
 Nodes containing other nodes.
 
 #### Hierarchy
 
-- [`Parent`](.interfaces/ooxast_util_to_jast.Parent.md)
-
-  ↳ **`JastParent`**
+*   [`Parent`](modules.md#parent).**JastParent**
 
 #### Properties
 
-##### children
+##### `children`
 
-• **children**: (`Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `AbbrevJournaltitle` | `Abbrev` | `Def` | `Abstract` | [`JastP`](.interfaces/ooxast_util_to_jast.JastP.md) | `Label` | `Title` | `ObjectId` | `Sec` | `AccessDate` | `Ack` | `KwdGroup` | `RefList` | `SubjGroup` | `Address` | `Email` | `Fax` | `AddrLine` | `City` | `Country` | `ExtLink` | `Institution` | `InstitutionWrap` | `Phone` | `PostalCode` | `State` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `AffAlternatives` | `Aff` | `Break` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Graphic` | `Table` | `Array` | `Code` | `Media` | `Preformat` | `SupplementaryMaterial` | `TexMath` | `TextualForm` | `AltText` | `AltTitle` | `Annotation` | `Anonymous` | `AnswerSet` | `Answer` | `Explanation` | `Subtitle` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `FnGroup` | `Glossary` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AppGroup` | `App` | `Permissions` | `SecMeta` | `LongDesc` | `Attrib` | `Tbody` | `ArticleCategories` | `SeriesText` | `SeriesTitle` | `ArticleId` | `ArticleMeta` | `Isbn` | `ArticleVersion` | `ArticleVersionalternatives` | `AuthorNotes` | `Conference` | `ContribGroup` | `Counts` | `CustomMetagroup` | `ElocationId` | `Fpage` | `FundingGroup` | `History` | `Issue` | `IssueId` | `IssuePart` | `IssueSponsor` | `IssueTitle` | `IssueTitlegroup` | `Lpage` | `PageRange` | `Product` | `PubDate` | `PubDatenotavailable` | `PubHistory` | `SelfUri` | `Supplement` | `SupportGroup` | `TitleGroup` | `TransAbstract` | `Volume` | `VolumeId` | `VolumeIssuegroup` | `VolumeSeries` | `ArticleTitle` | `Article` | `Body` | `Front` | `Back` | `FloatsGroup` | `ProcessingMeta` | `Response` | `SubArticle` | `AuthorComment` | `Corresp` | `AwardDesc` | `AwardGroup` | `AwardId` | `AwardName` | `FundingSource` | `PrincipalAwardrecipient` | `PrincipalInvestigator` | `SupportSource` | `Bio` | `Notes` | `SigBlock` | `Caption` | `ChapterTitle` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `Colgroup` | `Col` | `CollabAlternatives` | `Collab` | `OnBehalfof` | `Role` | `Comment` | `CompoundKwdpart` | `CompoundKwd` | `CompoundSubjectpart` | `CompoundSubject` | `ConfAcronym` | `ConfDate` | `ConfLoc` | `ConfName` | `ConfNum` | `ConfSponsor` | `ConfTheme` | `Contrib` | `ContribId` | `Name` | `Degrees` | `NameAlternatives` | `StringName` | `ContributedResourcegroup` | `ResourceGroup` | `SupportDescription` | `CopyrightHolder` | `CopyrightStatement` | `CopyrightYear` | `Count` | `EquationCount` | `FigCount` | `PageCount` | `RefCount` | `TableCount` | `WordCount` | `CustomMeta` | `MetaName` | `MetaValue` | `DataTitle` | `DateIncitation` | `Day` | `Era` | `Month` | `Season` | `Year` | `Date` | `DefHead` | `DefItem` | `Term` | `TermHead` | `Edition` | `Series` | `Size` | `Etal` | `Gov` | `Issn` | `IssnL` | `PartTitle` | `Patent` | `PersonGroup` | `PubId` | `PublisherLoc` | `PublisherName` | `Source` | `Std` | `StringDate` | `TransSource` | `TransTitle` | `Version` | `EventDesc` | `Event` | `ExtendedBy` | `FrontStub` | `JournalMeta` | `FundingStatement` | `OpenAccess` | `GivenNames` | `GlyphData` | `GlyphRef` | `Hr` | `See` | `SeeAlso` | `InstitutionId` | `IssueSubtitle` | `TransTitlegroup` | `JournalId` | `JournalTitlegroup` | `Publisher` | `JournalSubtitle` | `JournalTitle` | `Kwd` | `NestedKwd` | `LicenseP` | `Price` | `License` | `ListItem` | `Prefix` | `Suffix` | `Surname` | `TimeStamp` | `Note` | `Option` | `OverlineEnd` | `OverlineStart` | `RestrictedBy` | `QuestionPreamble` | `Rb` | `Ref` | `ResourceName` | `ResourceWrap` | `ResourceId` | `Rp` | `Rt` | `Sig` | `Speaker` | `StdOrganization` | `StringConf` | `Subject` | `Tr` | `Tfoot` | `Thead` | `TableWrapfoot` | `Td` | `Th` | `TransSubtitle` | `UnderlineEnd` | `UnderlineStart` | `UnstructuredKwdgroup` | `VerseLine` | `X`)\[]
+> (`Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `AbbrevJournaltitle` | `Abbrev` | `Def` | `Abstract` | [`JastP`](modules.md#jastp) | `Label` | `Title` | `ObjectId` | `Sec` | `AccessDate` | `Ack` | `KwdGroup` | `RefList` | `SubjGroup` | `Address` | `Email` | `Fax` | `AddrLine` | `City` | `Country` | `ExtLink` | `Institution` | `InstitutionWrap` | `Phone` | `PostalCode` | `State` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `AffAlternatives` | `Aff` | `Break` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Graphic` | `Table` | `Array` | `Code` | `Media` | `Preformat` | `SupplementaryMaterial` | `TexMath` | `TextualForm` | `AltText` | `AltTitle` | `Annotation` | `Anonymous` | `AnswerSet` | `Answer` | `Explanation` | `Subtitle` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `FnGroup` | `Glossary` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AppGroup` | `App` | `Permissions` | `SecMeta` | `LongDesc` | `Attrib` | `Tbody` | `ArticleCategories` | `SeriesText` | `SeriesTitle` | `ArticleId` | `ArticleMeta` | `Isbn` | `ArticleVersion` | `ArticleVersionalternatives` | `AuthorNotes` | `Conference` | `ContribGroup` | `Counts` | `CustomMetagroup` | `ElocationId` | `Fpage` | `FundingGroup` | `History` | `Issue` | `IssueId` | `IssuePart` | `IssueSponsor` | `IssueTitle` | `IssueTitlegroup` | `Lpage` | `PageRange` | `Product` | `PubDate` | `PubDatenotavailable` | `PubHistory` | `SelfUri` | `Supplement` | `SupportGroup` | `TitleGroup` | `TransAbstract` | `Volume` | `VolumeId` | `VolumeIssuegroup` | `VolumeSeries` | `ArticleTitle` | `Article` | `Body` | `Front` | `Back` | `FloatsGroup` | `ProcessingMeta` | `Response` | `SubArticle` | `AuthorComment` | `Corresp` | `AwardDesc` | `AwardGroup` | `AwardId` | `AwardName` | `FundingSource` | `PrincipalAwardrecipient` | `PrincipalInvestigator` | `SupportSource` | `Bio` | `Notes` | `SigBlock` | `Caption` | `ChapterTitle` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `Colgroup` | `Col` | `CollabAlternatives` | `Collab` | `OnBehalfof` | `Role` | `Comment` | `CompoundKwdpart` | `CompoundKwd` | `CompoundSubjectpart` | `CompoundSubject` | `ConfAcronym` | `ConfDate` | `ConfLoc` | `ConfName` | `ConfNum` | `ConfSponsor` | `ConfTheme` | `Contrib` | `ContribId` | `Name` | `Degrees` | `NameAlternatives` | `StringName` | `ContributedResourcegroup` | `ResourceGroup` | `SupportDescription` | `CopyrightHolder` | `CopyrightStatement` | `CopyrightYear` | `Count` | `EquationCount` | `FigCount` | `PageCount` | `RefCount` | `TableCount` | `WordCount` | `CustomMeta` | `MetaName` | `MetaValue` | `DataTitle` | `DateIncitation` | `Day` | `Era` | `Month` | `Season` | `Year` | `Date` | `DefHead` | `DefItem` | `Term` | `TermHead` | `Edition` | `Series` | `Size` | `Etal` | `Gov` | `Issn` | `IssnL` | `PartTitle` | `Patent` | `PersonGroup` | `PubId` | `PublisherLoc` | `PublisherName` | `Source` | `Std` | `StringDate` | `TransSource` | `TransTitle` | `Version` | `EventDesc` | `Event` | `ExtendedBy` | `FrontStub` | `JournalMeta` | `FundingStatement` | `OpenAccess` | `GivenNames` | `GlyphData` | `GlyphRef` | `Hr` | `See` | `SeeAlso` | `InstitutionId` | `IssueSubtitle` | `TransTitlegroup` | `JournalId` | `JournalTitlegroup` | `Publisher` | `JournalSubtitle` | `JournalTitle` | `Kwd` | `NestedKwd` | `LicenseP` | `Price` | `License` | `ListItem` | `Prefix` | `Suffix` | `Surname` | `TimeStamp` | `Note` | `Option` | `OverlineEnd` | `OverlineStart` | `RestrictedBy` | `QuestionPreamble` | `Rb` | `Ref` | `ResourceName` | `ResourceWrap` | `ResourceId` | `Rp` | `Rt` | `Sig` | `Speaker` | `StdOrganization` | `StringConf` | `Subject` | `Tr` | `Tfoot` | `Thead` | `TableWrapfoot` | `Td` | `Th` | `TransSubtitle` | `UnderlineEnd` | `UnderlineStart` | `UnstructuredKwdgroup` | `VerseLine` | `X`)[]
 
 List representing the children of a node.
 
-###### Overrides
+Overrides: [Parent](modules.md#parent).[children](modules.md#children)
 
-[Parent](.interfaces/ooxast_util_to_jast.Parent.md).[children](.interfaces/ooxast_util_to_jast.Parent.md#children)
+Defined in:  [libs/jast/jast/src/lib/rejour.ts:27](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/jast/jast/src/lib/rejour.ts#L27)
 
-###### Defined in
+##### `data?`
 
-[libs/jast/jast/src/lib/rejour.ts:27](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/jast/jast/src/lib/rejour.ts#L27)
-
----
-
-##### data
-
-• `Optional` **data**: `Data`
+> `Data`
 
 Information from the ecosystem.
 
-###### Inherited from
+Inherited from: [Parent](modules.md#parent).[data](modules.md#data)
 
-[Parent](.interfaces/ooxast_util_to_jast.Parent.md).[data](.interfaces/ooxast_util_to_jast.Parent.md#data)
+Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/index.d.ts:27
 
-###### Defined in
+##### `position?`
 
-node_modules/.pnpm/@types+unist\@2.0.6/node_modules/@types/unist/index.d.ts:27
-
----
-
-##### position
-
-• `Optional` **position**: `Position`
+> `Position`
 
 Location of a node in a source document.
 Must not be present if a node is generated.
 
-###### Inherited from
+Inherited from: [Parent](modules.md#parent).[position](modules.md#position)
 
-[Parent](.interfaces/ooxast_util_to_jast.Parent.md).[position](.interfaces/ooxast_util_to_jast.Parent.md#position)
+Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/index.d.ts:33
 
-###### Defined in
+##### `type`
 
-node_modules/.pnpm/@types+unist\@2.0.6/node_modules/@types/unist/index.d.ts:33
-
----
-
-##### type
-
-• **type**: `string`
+> `string`
 
 The variant of a node.
 
-###### Inherited from
+Inherited from: [Parent](modules.md#parent).[type](modules.md#type)
 
-[Parent](.interfaces/ooxast_util_to_jast.Parent.md).[type](.interfaces/ooxast_util_to_jast.Parent.md#type)
+Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/index.d.ts:22
 
-###### Defined in
+***
 
-node_modules/.pnpm/@types+unist\@2.0.6/node_modules/@types/unist/index.d.ts:22
-
-### Interface: JastRoot
-
-[ooxast-util-to-jast](.modules).JastRoot
+### `JastRoot`
 
 Nodes containing other nodes.
 
 #### Hierarchy
 
-- [`Parent`](.interfaces/ooxast_util_to_jast.Parent.md)
-
-  ↳ **`JastRoot`**
+*   [`Parent`](modules.md#parent).**JastRoot**
 
 #### Properties
 
-##### children
+##### `children`
 
-• **children**: (`Doctype` | `Instruction` | `Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `AbbrevJournaltitle` | `Abbrev` | `Def` | `Abstract` | [`JastP`](.interfaces/ooxast_util_to_jast.JastP.md) | `Label` | `Title` | `ObjectId` | `Sec` | `AccessDate` | `Ack` | `KwdGroup` | `RefList` | `SubjGroup` | `Address` | `Email` | `Fax` | `AddrLine` | `City` | `Country` | `ExtLink` | `Institution` | `InstitutionWrap` | `Phone` | `PostalCode` | `State` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `AffAlternatives` | `Aff` | `Break` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Graphic` | `Table` | `Array` | `Code` | `Media` | `Preformat` | `SupplementaryMaterial` | `TexMath` | `TextualForm` | `AltText` | `AltTitle` | `Annotation` | `Anonymous` | `AnswerSet` | `Answer` | `Explanation` | `Subtitle` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `FnGroup` | `Glossary` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AppGroup` | `App` | `Permissions` | `SecMeta` | `LongDesc` | `Attrib` | `Tbody` | `ArticleCategories` | `SeriesText` | `SeriesTitle` | `ArticleId` | `ArticleMeta` | `Isbn` | `ArticleVersion` | `ArticleVersionalternatives` | `AuthorNotes` | `Conference` | `ContribGroup` | `Counts` | `CustomMetagroup` | `ElocationId` | `Fpage` | `FundingGroup` | `History` | `Issue` | `IssueId` | `IssuePart` | `IssueSponsor` | `IssueTitle` | `IssueTitlegroup` | `Lpage` | `PageRange` | `Product` | `PubDate` | `PubDatenotavailable` | `PubHistory` | `SelfUri` | `Supplement` | `SupportGroup` | `TitleGroup` | `TransAbstract` | `Volume` | `VolumeId` | `VolumeIssuegroup` | `VolumeSeries` | `ArticleTitle` | `Article` | `Body` | `Front` | `Back` | `FloatsGroup` | `ProcessingMeta` | `Response` | `SubArticle` | `AuthorComment` | `Corresp` | `AwardDesc` | `AwardGroup` | `AwardId` | `AwardName` | `FundingSource` | `PrincipalAwardrecipient` | `PrincipalInvestigator` | `SupportSource` | `Bio` | `Notes` | `SigBlock` | `Caption` | `ChapterTitle` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `Colgroup` | `Col` | `CollabAlternatives` | `Collab` | `OnBehalfof` | `Role` | `Comment` | `CompoundKwdpart` | `CompoundKwd` | `CompoundSubjectpart` | `CompoundSubject` | `ConfAcronym` | `ConfDate` | `ConfLoc` | `ConfName` | `ConfNum` | `ConfSponsor` | `ConfTheme` | `Contrib` | `ContribId` | `Name` | `Degrees` | `NameAlternatives` | `StringName` | `ContributedResourcegroup` | `ResourceGroup` | `SupportDescription` | `CopyrightHolder` | `CopyrightStatement` | `CopyrightYear` | `Count` | `EquationCount` | `FigCount` | `PageCount` | `RefCount` | `TableCount` | `WordCount` | `CustomMeta` | `MetaName` | `MetaValue` | `DataTitle` | `DateIncitation` | `Day` | `Era` | `Month` | `Season` | `Year` | `Date` | `DefHead` | `DefItem` | `Term` | `TermHead` | `Edition` | `Series` | `Size` | `Etal` | `Gov` | `Issn` | `IssnL` | `PartTitle` | `Patent` | `PersonGroup` | `PubId` | `PublisherLoc` | `PublisherName` | `Source` | `Std` | `StringDate` | `TransSource` | `TransTitle` | `Version` | `EventDesc` | `Event` | `ExtendedBy` | `FrontStub` | `JournalMeta` | `FundingStatement` | `OpenAccess` | `GivenNames` | `GlyphData` | `GlyphRef` | `Hr` | `See` | `SeeAlso` | `InstitutionId` | `IssueSubtitle` | `TransTitlegroup` | `JournalId` | `JournalTitlegroup` | `Publisher` | `JournalSubtitle` | `JournalTitle` | `Kwd` | `NestedKwd` | `LicenseP` | `Price` | `License` | `ListItem` | `Prefix` | `Suffix` | `Surname` | `TimeStamp` | `Note` | `Option` | `OverlineEnd` | `OverlineStart` | `RestrictedBy` | `QuestionPreamble` | `Rb` | `Ref` | `ResourceName` | `ResourceWrap` | `ResourceId` | `Rp` | `Rt` | `Sig` | `Speaker` | `StdOrganization` | `StringConf` | `Subject` | `Tr` | `Tfoot` | `Thead` | `TableWrapfoot` | `Td` | `Th` | `TransSubtitle` | `UnderlineEnd` | `UnderlineStart` | `UnstructuredKwdgroup` | `VerseLine` | `X`)\[]
+> (`Doctype` | `Instruction` | `Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `AbbrevJournaltitle` | `Abbrev` | `Def` | `Abstract` | [`JastP`](modules.md#jastp) | `Label` | `Title` | `ObjectId` | `Sec` | `AccessDate` | `Ack` | `KwdGroup` | `RefList` | `SubjGroup` | `Address` | `Email` | `Fax` | `AddrLine` | `City` | `Country` | `ExtLink` | `Institution` | `InstitutionWrap` | `Phone` | `PostalCode` | `State` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `AffAlternatives` | `Aff` | `Break` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Graphic` | `Table` | `Array` | `Code` | `Media` | `Preformat` | `SupplementaryMaterial` | `TexMath` | `TextualForm` | `AltText` | `AltTitle` | `Annotation` | `Anonymous` | `AnswerSet` | `Answer` | `Explanation` | `Subtitle` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `FnGroup` | `Glossary` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AppGroup` | `App` | `Permissions` | `SecMeta` | `LongDesc` | `Attrib` | `Tbody` | `ArticleCategories` | `SeriesText` | `SeriesTitle` | `ArticleId` | `ArticleMeta` | `Isbn` | `ArticleVersion` | `ArticleVersionalternatives` | `AuthorNotes` | `Conference` | `ContribGroup` | `Counts` | `CustomMetagroup` | `ElocationId` | `Fpage` | `FundingGroup` | `History` | `Issue` | `IssueId` | `IssuePart` | `IssueSponsor` | `IssueTitle` | `IssueTitlegroup` | `Lpage` | `PageRange` | `Product` | `PubDate` | `PubDatenotavailable` | `PubHistory` | `SelfUri` | `Supplement` | `SupportGroup` | `TitleGroup` | `TransAbstract` | `Volume` | `VolumeId` | `VolumeIssuegroup` | `VolumeSeries` | `ArticleTitle` | `Article` | `Body` | `Front` | `Back` | `FloatsGroup` | `ProcessingMeta` | `Response` | `SubArticle` | `AuthorComment` | `Corresp` | `AwardDesc` | `AwardGroup` | `AwardId` | `AwardName` | `FundingSource` | `PrincipalAwardrecipient` | `PrincipalInvestigator` | `SupportSource` | `Bio` | `Notes` | `SigBlock` | `Caption` | `ChapterTitle` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `Colgroup` | `Col` | `CollabAlternatives` | `Collab` | `OnBehalfof` | `Role` | `Comment` | `CompoundKwdpart` | `CompoundKwd` | `CompoundSubjectpart` | `CompoundSubject` | `ConfAcronym` | `ConfDate` | `ConfLoc` | `ConfName` | `ConfNum` | `ConfSponsor` | `ConfTheme` | `Contrib` | `ContribId` | `Name` | `Degrees` | `NameAlternatives` | `StringName` | `ContributedResourcegroup` | `ResourceGroup` | `SupportDescription` | `CopyrightHolder` | `CopyrightStatement` | `CopyrightYear` | `Count` | `EquationCount` | `FigCount` | `PageCount` | `RefCount` | `TableCount` | `WordCount` | `CustomMeta` | `MetaName` | `MetaValue` | `DataTitle` | `DateIncitation` | `Day` | `Era` | `Month` | `Season` | `Year` | `Date` | `DefHead` | `DefItem` | `Term` | `TermHead` | `Edition` | `Series` | `Size` | `Etal` | `Gov` | `Issn` | `IssnL` | `PartTitle` | `Patent` | `PersonGroup` | `PubId` | `PublisherLoc` | `PublisherName` | `Source` | `Std` | `StringDate` | `TransSource` | `TransTitle` | `Version` | `EventDesc` | `Event` | `ExtendedBy` | `FrontStub` | `JournalMeta` | `FundingStatement` | `OpenAccess` | `GivenNames` | `GlyphData` | `GlyphRef` | `Hr` | `See` | `SeeAlso` | `InstitutionId` | `IssueSubtitle` | `TransTitlegroup` | `JournalId` | `JournalTitlegroup` | `Publisher` | `JournalSubtitle` | `JournalTitle` | `Kwd` | `NestedKwd` | `LicenseP` | `Price` | `License` | `ListItem` | `Prefix` | `Suffix` | `Surname` | `TimeStamp` | `Note` | `Option` | `OverlineEnd` | `OverlineStart` | `RestrictedBy` | `QuestionPreamble` | `Rb` | `Ref` | `ResourceName` | `ResourceWrap` | `ResourceId` | `Rp` | `Rt` | `Sig` | `Speaker` | `StdOrganization` | `StringConf` | `Subject` | `Tr` | `Tfoot` | `Thead` | `TableWrapfoot` | `Td` | `Th` | `TransSubtitle` | `UnderlineEnd` | `UnderlineStart` | `UnstructuredKwdgroup` | `VerseLine` | `X`)[]
 
 List representing the children of a node.
 
-###### Overrides
+Overrides: [Parent](modules.md#parent).[children](modules.md#children)
 
-[Parent](.interfaces/ooxast_util_to_jast.Parent.md).[children](.interfaces/ooxast_util_to_jast.Parent.md#children)
+Defined in:  [libs/jast/jast/src/lib/rejour.ts:22](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/jast/jast/src/lib/rejour.ts#L22)
 
-###### Defined in
+##### `data?`
 
-[libs/jast/jast/src/lib/rejour.ts:22](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/jast/jast/src/lib/rejour.ts#L22)
-
----
-
-##### data
-
-• `Optional` **data**: `Data`
+> `Data`
 
 Information from the ecosystem.
 
-###### Inherited from
+Inherited from: [Parent](modules.md#parent).[data](modules.md#data)
 
-[Parent](.interfaces/ooxast_util_to_jast.Parent.md).[data](.interfaces/ooxast_util_to_jast.Parent.md#data)
+Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/index.d.ts:27
 
-###### Defined in
+##### `position?`
 
-node_modules/.pnpm/@types+unist\@2.0.6/node_modules/@types/unist/index.d.ts:27
-
----
-
-##### position
-
-• `Optional` **position**: `Position`
+> `Position`
 
 Location of a node in a source document.
 Must not be present if a node is generated.
 
-###### Inherited from
+Inherited from: [Parent](modules.md#parent).[position](modules.md#position)
 
-[Parent](.interfaces/ooxast_util_to_jast.Parent.md).[position](.interfaces/ooxast_util_to_jast.Parent.md#position)
+Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/index.d.ts:33
 
-###### Defined in
+##### `type`
 
-node_modules/.pnpm/@types+unist\@2.0.6/node_modules/@types/unist/index.d.ts:33
-
----
-
-##### type
-
-• **type**: `"root"`
+> `"root"`
 
 The variant of a node.
 
-###### Overrides
+Overrides: [Parent](modules.md#parent).[type](modules.md#type)
 
-[Parent](.interfaces/ooxast_util_to_jast.Parent.md).[type](.interfaces/ooxast_util_to_jast.Parent.md#type)
+Defined in:  [libs/jast/jast/src/lib/rejour.ts:21](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/jast/jast/src/lib/rejour.ts#L21)
 
-###### Defined in
+***
 
-[libs/jast/jast/src/lib/rejour.ts:21](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/jast/jast/src/lib/rejour.ts#L21)
-
-### Interface: Options
-
-[ooxast-util-to-jast](.modules).Options
+### `Options`
 
 #### Properties
 
-##### bibname
+##### `bibname?`
 
-• `Optional` **bibname**: `string`
+> `string`
 
-###### Defined in
+Defined in:  [src/lib/types.ts:38](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L38)
 
-[src/lib/types.ts:38](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L38)
+##### `checked?`
 
----
+> `string`
 
-##### checked
+Defined in:  [src/lib/types.ts:33](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L33)
 
-• `Optional` **checked**: `string`
+##### `citationType?`
 
-###### Defined in
+> `"endnote"` | `"mendeley"` | `"word"` | `"citavi"` | `"zotero"`
 
-[src/lib/types.ts:33](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L33)
+Defined in:  [src/lib/types.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L44)
 
----
+##### `collectCitation?`
 
-##### citationType
-
-• `Optional` **citationType**: `"endnote"` | `"mendeley"` | `"word"` | `"citavi"` | `"zotero"`
-
-###### Defined in
-
-[src/lib/types.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L44)
-
----
-
-##### collectCitation
-
-• `Optional` **collectCitation**: (`citation`: `any`, `index`: `string` | `number`) => `any`
+> `Function`
 
 ###### Type declaration
 
-▸ (`citation`, `index`): `any`
+*Signature\`*
 
-\####### Parameters
+```ts
+(citation: any, index: string | number): any;
+```
 
-\| Name | Type |
-\| :------ | :------ |
-\| `citation` | `any` |
-\| `index` | `string` | `number` |
+*Parameters\`*
 
-\####### Returns
+| Name | Type |
+| :------ | :------ |
+| `citation` | `any` |
+| `index` | `string` | `number` |
+
+*Returns\`*
 
 `any`
 
-###### Defined in
+Defined in:  [src/lib/types.ts:46](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L46)
 
-[src/lib/types.ts:46](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L46)
+##### `columnSeparator?`
 
----
+> `boolean`
 
-##### columnSeparator
+Defined in:  [src/lib/types.ts:39](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L39)
 
-• `Optional` **columnSeparator**: `boolean`
+##### `document?`
 
-###### Defined in
+> `boolean`
 
-[src/lib/types.ts:39](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L39)
+Defined in:  [src/lib/types.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L31)
 
----
+##### `documentClass?`
 
-##### document
+> `object`
 
-• `Optional` **document**: `boolean`
-
-###### Defined in
-
-[src/lib/types.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L31)
-
----
-
-##### documentClass
-
-• `Optional` **documentClass**: `Object`
+```ts
+{
+    name: string;
+    options?: string[];
+}
+```
 
 ###### Type declaration
 
-\| Name | Type |
-\| :------ | :------ |
-\| `name` | `string` |
-\| `options?` | `string`\[] |
+| Member | Type |
+| :------ | :------ |
+| `name` | `string` |
+| `options`? | `string`[] |
 
-###### Defined in
+Defined in:  [src/lib/types.ts:40](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L40)
 
-[src/lib/types.ts:40](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L40)
+##### `handlers?`
 
----
-
-##### handlers
-
-• `Optional` **handlers**: `Object`
+> `object`
 
 ###### Index signature
 
-▪ \[handle: `string`]: [`Handle`](.modules#handle)
-
-###### Defined in
-
-[src/lib/types.ts:30](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L30)
-
----
-
-##### italics
-
-• `Optional` **italics**: `"emph"` | `"textit"`
-
-###### Defined in
-
-[src/lib/types.ts:37](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L37)
-
----
-
-##### newLines
-
-• `Optional` **newLines**: `boolean`
-
-###### Defined in
-
-[src/lib/types.ts:32](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L32)
-
----
-
-##### parseCitation
-
-• `Optional` **parseCitation**: (`citation`: `any`) => `any`
+[`handle`: `string`]: [`Handle`](modules.md#handle)
 
 ###### Type declaration
 
-▸ (`citation`): `any`
+Defined in:  [src/lib/types.ts:30](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L30)
 
-\####### Parameters
+##### `italics?`
 
-\| Name | Type |
-\| :------ | :------ |
-\| `citation` | `any` |
+> `"emph"` | `"textit"`
 
-\####### Returns
+Defined in:  [src/lib/types.ts:37](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L37)
+
+##### `newLines?`
+
+> `boolean`
+
+Defined in:  [src/lib/types.ts:32](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L32)
+
+##### `parseCitation?`
+
+> `Function`
+
+###### Type declaration
+
+*Signature\`*
+
+```ts
+(citation: any): any;
+```
+
+*Parameters\`*
+
+| Name | Type |
+| :------ | :------ |
+| `citation` | `any` |
+
+*Returns\`*
 
 `any`
 
-###### Defined in
+Defined in:  [src/lib/types.ts:45](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L45)
 
-[src/lib/types.ts:45](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L45)
+##### `quotes?`
 
----
+> `string`[]
 
-##### quotes
+Defined in:  [src/lib/types.ts:35](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L35)
 
-• `Optional` **quotes**: `string`\[]
+##### `relations?`
 
-###### Defined in
-
-[src/lib/types.ts:35](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L35)
-
----
-
-##### relations
-
-• `Optional` **relations**: `Object`
+> `object`
 
 ###### Index signature
 
-▪ \[key: `string`]: `string`
+[`key`: `string`]: `string`
 
-###### Defined in
+###### Type declaration
 
-[src/lib/types.ts:47](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L47)
+Defined in:  [src/lib/types.ts:47](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L47)
 
----
+##### `topSection?`
 
-##### topSection
+> `number`
 
-• `Optional` **topSection**: `number`
+Defined in:  [src/lib/types.ts:36](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L36)
 
-###### Defined in
+##### `unchecked?`
 
-[src/lib/types.ts:36](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L36)
+> `string`
 
----
+Defined in:  [src/lib/types.ts:34](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L34)
 
-##### unchecked
+***
 
-• `Optional` **unchecked**: `string`
-
-###### Defined in
-
-[src/lib/types.ts:34](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L34)
-
-### Interface: P
-
-[ooxast-util-to-jast](.modules).P
+### `P`
 
 #### Hierarchy
 
-- `Node`
-
-  ↳ **`P`**
+*   `Node`.**P**
 
 #### Properties
 
-##### attributes
+##### `attributes`
 
-• **attributes**: `Object`
+> `object`
+
+```ts
+{
+    w:rsidDel: string;
+    w:rsidP: string;
+    w:rsidR: string;
+    w:rsidRDefault: string;
+    w:rsidRPr: string;
+}
+```
 
 ###### Type declaration
 
-\| Name | Type |
-\| :------ | :------ |
-\| `w:rsidDel` | `string` |
-\| `w:rsidP` | `string` |
-\| `w:rsidR` | `string` |
-\| `w:rsidRDefault` | `string` |
-\| `w:rsidRPr` | `string` |
+| Member | Type |
+| :------ | :------ |
+| `w:rsidDel` | `string` |
+| `w:rsidP` | `string` |
+| `w:rsidR` | `string` |
+| `w:rsidRDefault` | `string` |
+| `w:rsidRPr` | `string` |
 
-###### Defined in
+Defined in:  [libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts:2050](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts#L2050)
 
-[libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts:2050](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts#L2050)
+##### `children`
 
----
+> (`OMath` | `RunTrackChange`<`"del"`> | `RunTrackChange`<`"ins"`> | `MarkupRange`<`"bookmarkEnd"`> | `never` | `MarkupRange`<`"commentRangeEnd"`> | `MarkupRange`<`"commentRangeStart"`> | `CustomXmlRun` | `Markup`<`"customXmlDelRangeEnd"`> | `TrackChange`<`"customXmlDelRangeStart"`> | `Markup`<`"customXmlInsRangeEnd"`> | `TrackChange`<`"customXmlInsRangeStart"`> | `Markup`<`"customXmlMoveFromRangeEnd"`> | `TrackChange`<`"customXmlMoveFromRangeStart"`> | `Markup`<`"customXmlMoveToRangeEnd"`> | `TrackChange`<`"customXmlMoveToRangeStart"`> | `SimpleField` | `Hyperlink` | `RunTrackChange`<`"moveFrom"`> | `MarkupRange`<`"moveFromRangeEnd"`> | `never` | `RunTrackChange`<`"moveTo"`> | `MarkupRange`<`"moveToRangeEnd"`> | `OMathPara` | `Perm` | `never` | `ProofErr` | `SdtRun` | `SmartTagRun` | `BdoContentRun` | `R` | `DirContentRun` | `Rel`<`"subDoc"`> | `PPr`)[]
 
-##### children
+Defined in:  [libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts:2057](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts#L2057)
 
-• **children**: (`OMath` | `RunTrackChange`<`"del"`> | `RunTrackChange`<`"ins"`> | `MarkupRange`<`"bookmarkEnd"`> | `never` | `MarkupRange`<`"commentRangeEnd"`> | `MarkupRange`<`"commentRangeStart"`> | `CustomXmlRun` | `Markup`<`"customXmlDelRangeEnd"`> | `TrackChange`<`"customXmlDelRangeStart"`> | `Markup`<`"customXmlInsRangeEnd"`> | `TrackChange`<`"customXmlInsRangeStart"`> | `Markup`<`"customXmlMoveFromRangeEnd"`> | `TrackChange`<`"customXmlMoveFromRangeStart"`> | `Markup`<`"customXmlMoveToRangeEnd"`> | `TrackChange`<`"customXmlMoveToRangeStart"`> | `SimpleField` | `Hyperlink` | `RunTrackChange`<`"moveFrom"`> | `MarkupRange`<`"moveFromRangeEnd"`> | `never` | `RunTrackChange`<`"moveTo"`> | `MarkupRange`<`"moveToRangeEnd"`> | `OMathPara` | `Perm` | `never` | `ProofErr` | `SdtRun` | `SmartTagRun` | `BdoContentRun` | `R` | `DirContentRun` | `Rel`<`"subDoc"`> | `PPr`)\[]
+##### `data?`
 
-###### Defined in
-
-[libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts:2057](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts#L2057)
-
----
-
-##### data
-
-• `Optional` **data**: `Data`
+> `Data`
 
 Information from the ecosystem.
 
-###### Inherited from
+Inherited from: UnistNode.data
 
-UnistNode.data
+Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/index.d.ts:27
 
-###### Defined in
+##### `name`
 
-node_modules/.pnpm/@types+unist\@2.0.6/node_modules/@types/unist/index.d.ts:27
+> `"w:p"`
 
----
+Defined in:  [libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts:2049](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts#L2049)
 
-##### name
+##### `position?`
 
-• **name**: `"w:p"`
-
-###### Defined in
-
-[libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts:2049](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts#L2049)
-
----
-
-##### position
-
-• `Optional` **position**: `Position`
+> `Position`
 
 Location of a node in a source document.
 Must not be present if a node is generated.
 
-###### Inherited from
+Inherited from: UnistNode.position
 
-UnistNode.position
+Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/index.d.ts:33
 
-###### Defined in
+##### `type`
 
-node_modules/.pnpm/@types+unist\@2.0.6/node_modules/@types/unist/index.d.ts:33
+> `"element"`
 
----
+Overrides: UnistNode.type
 
-##### type
+Defined in:  [libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts:2048](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts#L2048)
 
-• **type**: `"element"`
+***
 
-###### Overrides
-
-UnistNode.type
-
-###### Defined in
-
-[libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts:2048](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts#L2048)
-
-### Interface: Parent\<ChildNode, TData>
-
-[ooxast-util-to-jast](.modules).Parent
+### `Parent`
 
 Nodes containing other nodes.
 
 #### Type parameters
 
-\| Name | Type | Description |
-\| :------ | :------ | :------ |
-\| `ChildNode` | extends `Node`<`object`> = `Node` | Node item of [children](.interfaces/ooxast_util_to_jast.Parent.md#children) |
-\| `TData` | extends `object` = `NodeData`<`ChildNode`> | - |
+*   `ChildNode` *extends* `Node`<`object`> = `Node`Node item of [children](modules.md#children)
+*   `TData` *extends* `object` = `NodeData`<`ChildNode`>
 
 #### Hierarchy
 
-- `Node`<`TData`>
-
-  ↳ **`Parent`**
-
-  ↳↳ [`Element`](.interfaces/ooxast_util_to_jast.Element.md)
-
-  ↳↳ [`JastParent`](.interfaces/ooxast_util_to_jast.JastParent.md)
-
-  ↳↳ [`JastRoot`](.interfaces/ooxast_util_to_jast.JastRoot.md)
+*   `Node`<`TData`>.**Parent**
 
 #### Properties
 
-##### children
+##### `children`
 
-• **children**: `ChildNode`\[]
+> `ChildNode`[]
 
 List representing the children of a node.
 
-###### Defined in
+Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/index.d.ts:104
 
-node_modules/.pnpm/@types+unist\@2.0.6/node_modules/@types/unist/index.d.ts:104
+##### `data?`
 
----
-
-##### data
-
-• `Optional` **data**: `TData`
+> `TData`
 
 Information from the ecosystem.
 
-###### Inherited from
+Inherited from: Node.data
 
-Node.data
+Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/index.d.ts:27
 
-###### Defined in
+##### `position?`
 
-node_modules/.pnpm/@types+unist\@2.0.6/node_modules/@types/unist/index.d.ts:27
-
----
-
-##### position
-
-• `Optional` **position**: `Position`
+> `Position`
 
 Location of a node in a source document.
 Must not be present if a node is generated.
 
-###### Inherited from
+Inherited from: Node.position
 
-Node.position
+Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/index.d.ts:33
 
-###### Defined in
+##### `type`
 
-node_modules/.pnpm/@types+unist\@2.0.6/node_modules/@types/unist/index.d.ts:33
-
----
-
-##### type
-
-• **type**: `string`
+> `string`
 
 The variant of a node.
 
-###### Inherited from
+Inherited from: Node.type
 
-Node.type
+Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/index.d.ts:22
 
-###### Defined in
+***
 
-node_modules/.pnpm/@types+unist\@2.0.6/node_modules/@types/unist/index.d.ts:22
+### `Attributes`
+
+> `OoxastProperties`
+
+Defined in:  [src/lib/types.ts:28](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L28)
+
+***
+
+### `Handle`
+
+> `Function`
+
+#### Type declaration
+
+##### `Signature`
+
+```ts
+(j: J, node: any, parent?: Parent): JastContent | JastContent[] | void;
+```
+
+##### `Parameters`
+
+| Name | Type |
+| :------ | :------ |
+| `j` | [`J`](modules.md#j) |
+| `node` | `any` |
+| `parent?` | [`Parent`](modules.md#parent) |
+
+##### `Returns`
+
+[`JastContent`](modules.md#jastcontent) | [`JastContent`](modules.md#jastcontent)[] | `void`
+
+Defined in:  [src/lib/types.ts:50](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L50)
+
+***
+
+### `J`
+
+> [`JWithProps`](modules.md#jwithprops) & [`JWithoutProps`](modules.md#jwithoutprops) & [`Context`](modules.md#context)
+
+Defined in:  [src/lib/types.ts:136](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L136)
+
+***
+
+### `JWithProps`
+
+> `Function`
+
+#### Type declaration
+
+##### `Signature`
+
+```ts
+(
+  node: Node, 
+  type: string, 
+  props?: Attributes, 
+  children?: string | JastContent[]): JastContent;
+```
+
+##### `Parameters`
+
+| Name | Type |
+| :------ | :------ |
+| `node` | [`Node`](modules.md#node) |
+| `type` | `string` |
+| `props?` | [`Attributes`](modules.md#attributes) |
+| `children?` | `string` | [`JastContent`](modules.md#jastcontent)[] |
+
+##### `Returns`
+
+[`JastContent`](modules.md#jastcontent)
+
+Defined in:  [src/lib/types.ts:98](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L98)
+
+***
+
+### `JWithoutProps`
+
+> `Function`
+
+#### Type declaration
+
+##### `Signature`
+
+```ts
+(node: Node, type: string, children?: string | JastContent[]): JastContent;
+```
+
+##### `Parameters`
+
+| Name | Type |
+| :------ | :------ |
+| `node` | [`Node`](modules.md#node) |
+| `type` | `string` |
+| `children?` | `string` | [`JastContent`](modules.md#jastcontent)[] |
+
+##### `Returns`
+
+[`JastContent`](modules.md#jastcontent)
+
+Defined in:  [src/lib/types.ts:105](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L105)
+
+***
+
+### `JastContent`
+
+> `ValuesType`<`documentMap`>
+
+Defined in:  [libs/jast/jast/src/lib/jats.ts:13717](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/jast/jast/src/lib/jats.ts#L13717)
+
+***
+
+### `JastParagraphContent`
+
+> [`JastP`](modules.md#jastp)[`"children"`][`number`]
+
+Defined in:  [src/lib/types.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L10)
+
+***
+
+### `Node`
+
+> [`Parent`](modules.md#parent)[`"children"`][`number`] | [`Root`](modules.md#root)
+
+ooxast Node
+
+Defined in:  [src/lib/types.ts:25](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L25)
+
+***
+
+### `Parents`
+
+> `Extract`<`Exclude`<[`Node`](modules.md#node), [`Text`](modules.md#text) | [`Root`](modules.md#root)>, {
+> `children`: `any`[];
+> }>
+
+Defined in:  [src/lib/types.ts:152](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-jast/src/lib/types.ts#L152)
+
+***
+
+### `Root`
+
+> `XastRoot` & {
+> `children`: (`RequiredMap`<`document`> | `Doctype` | `Instruction` | [`Text`](modules.md#text))[];
+> }
+
+Defined in:  [libs/ooxast/ooxast/src/lib/ooxast.ts:21](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast/src/lib/ooxast.ts#L21)
+
+***
+
+### `Text`
+
+> `UnistLiteral` & {
+> `type`: `"text"`;
+> `value`: `string`;
+> }
+
+Defined in:  [libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts:4038](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast/src/lib/ooxml/wordprocessingml/main.ts#L4038)
 
 ## Syntax tree
 
@@ -1472,30 +1190,57 @@ node_modules/.pnpm/@types+unist\@2.0.6/node_modules/@types/unist/index.d.ts:22
 [GPL-3.0-or-later](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
+
 [unifiedgh]: https://github.com/unifiedjs/unified
+
 [xast-from-xml]: https://github.com/syntax-tree/xast-util-from-xml
+
 [rehype]: https://github.com/rehypejs/rehype
+
 [rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour
+
 [rejour-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-parse
+
 [rejour-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-stringify
+
 [rejour-move-abstract]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-move-abstract
+
 [rejour-meta]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-meta
+
 [rejour-relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-relatex
+
 [relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex
+
 [ooxast-util-to-jast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/ooxast-util-to-jast
+
 [jast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast
+
 [jast-util-to-texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast-util-to-texast
+
 [jastscript]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jastscript
+
 [texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast
+
 [texast-util-to-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast-util-to-latex
+
 [hast]: https://github.com/syntax-tree/hast
+
 [xast]: https://github.com/syntax-tree/xast
+
 [mdast]: https://github.com/syntax-tree/mdast
+
 [mdast-markdown]: https://github.com/syntax-tree/mdast-util-to-markdown
+
 [latex-utensils]: https://github.com/tamuratak/latex-utensils
+
 [latexjs]: https://github.com/latexjs/latexjs
+
 [reoff]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff
+
 [reoff-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse
+
 [reoff-rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-rejour
+
 [ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast
+
 [ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-jast

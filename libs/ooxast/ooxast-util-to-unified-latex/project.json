@@ -1,11 +1,11 @@
 {
-  "name": "ooxast-ooxast-util-to-unified-latex",
+  "name": "ooxast-util-to-unified-latex",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ooxast/ooxast-util-to-unified-latex/src",
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/esbuild:esbuild",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/ooxast/ooxast-util-to-unified-latex",

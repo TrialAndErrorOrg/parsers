@@ -1,1 +1,1 @@
-export * from './lib/ooxast-util-to-hast'
+export { toHast } from './lib/ooxast-util-to-hast'

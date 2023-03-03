@@ -1,8 +1,16 @@
 {
-  "name": "reoff-docx-to-vfile",
+  "name": "docx-to-vfile",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/reoff/docx-to-vfile/src",
   "projectType": "library",
   "targets": {
+    "readme": {
+      "executor": "@jote/utils/readme:update-readme",
+      "options": {
+        "readme": "libs/reoff/docx-to-vfile/README.md",
+        "packageJSON": "libs/reoff/docx-to-vfile/package.json"
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],

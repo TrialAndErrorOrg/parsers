@@ -3,40 +3,44 @@
 
 ## API
 
-### Module: reoff-cite
+***
 
-#### Functions
+### `default()`
 
-##### default
+#### Signature
 
-▸ **default**(`options?`): (`tree`: `Root`, `vfile`: `VFile`) => `Root`
+```ts
+default(options: Options = ...): Function;
+```
 
-###### Parameters
+#### Parameters
 
-\| Name | Type |
-\| :------ | :------ |
-\| `options` | `Options` |
+| Name | Type |
+| :------ | :------ |
+| `options` | `Options` |
 
-###### Returns
+#### Returns
 
-`fn`
+`Function`
 
-▸ (`tree`, `vfile`): `Root`
+##### `Signature`
 
-\####### Parameters
+```ts
+(tree: Root, vfile: VFile): Root;
+```
 
-\| Name | Type |
-\| :------ | :------ |
-\| `tree` | `Root` |
-\| `vfile` | `VFile` |
+##### `Parameters`
 
-\####### Returns
+| Name | Type |
+| :------ | :------ |
+| `tree` | `Root` |
+| `vfile` | `VFile` |
+
+##### `Returns`
 
 `Root`
 
-###### Defined in
-
-[src/lib/reoff-cite.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/586a0d2/libs/reoff/reoff-cite/src/lib/reoff-cite.ts#L12)
+Defined in:  [lib/reoff-cite.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/reoff/reoff-cite/src/lib/reoff-cite.ts#L12)
 
 ## Install
 

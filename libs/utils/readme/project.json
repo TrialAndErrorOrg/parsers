@@ -5,12 +5,15 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nrwl/esbuild:esbuild",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/utils/readme",
+
         "main": "libs/utils/readme/src/index.ts",
         "tsConfig": "libs/utils/readme/tsconfig.lib.json",
+        "format": ["esm"],
+        "skipTypeCheck": true,
         "assets": [
           "libs/utils/readme/*.md",
           {

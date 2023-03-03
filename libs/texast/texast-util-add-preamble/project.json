@@ -1,8 +1,16 @@
 {
-  "name": "texast-texast-util-add-preamble",
+  "name": "texast-util-add-preamble",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/texast/texast-util-add-preamble/src",
   "projectType": "library",
   "targets": {
+    "readme": {
+      "executor": "@jote/utils/readme:update-readme",
+      "options": {
+        "readme": "libs/texast/texast-util-add-preamble/README.md",
+        "packageJSON": "libs/texast/texast-util-add-preamble/package.json"
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],

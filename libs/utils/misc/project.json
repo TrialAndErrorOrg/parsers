@@ -1,8 +1,16 @@
 {
   "name": "utils-misc",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/utils/misc/src",
   "projectType": "library",
   "targets": {
+    "readme": {
+      "executor": "@jote/utils/readme:update-readme",
+      "options": {
+        "readme": "libs/utils/misc/README.md",
+        "packageJSON": "libs/utils/misc/package.json"
+      }
+    },
     "build": {
       "executor": "@nrwl/js:swc",
       "outputs": ["{options.outputPath}"],

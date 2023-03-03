@@ -1,8 +1,16 @@
 {
-  "name": "ooxast-ooxast-util-parse-bib",
+  "name": "ooxast-util-parse-bib",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ooxast/ooxast-util-parse-bib/src",
   "projectType": "library",
   "targets": {
+    "readme": {
+      "executor": "@jote/utils/readme:update-readme",
+      "options": {
+        "readme": "libs/ooxast/ooxast-util-parse-bib/README.md",
+        "packageJSON": "libs/ooxast/ooxast-util-parse-bib/package.json"
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],

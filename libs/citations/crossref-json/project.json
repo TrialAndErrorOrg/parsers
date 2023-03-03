@@ -1,8 +1,16 @@
 {
   "name": "citations-crossref-json",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/citations/crossref-json/src",
   "projectType": "library",
   "targets": {
+    "readme": {
+      "executor": "@jote/utils/readme:update-readme",
+      "options": {
+        "readme": "libs/citations/crossref-json/README.md",
+        "packageJSON": "libs/citations/crossref-json/package.json"
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
@@ -11,7 +19,7 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/esbuild:esbuild",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/citations/crossref-json",
@@ -21,7 +29,8 @@
         "assets": ["libs/citations/crossref-json/*.md"],
         "updateBuildableProjectDepsInPackageJson": true,
         "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "buildableProjectDepsInPackageJsonType": "dependencies",
+        "format": ["esm", "cjs"]
       },
       "dependsOn": [
         {

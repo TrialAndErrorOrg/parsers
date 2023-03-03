@@ -1,8 +1,16 @@
 {
-  "name": "rejour-rejour-meta",
+  "name": "rejour-meta",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/rejour/rejour-meta/src",
   "projectType": "library",
   "targets": {
+    "readme": {
+      "executor": "@jote/utils/readme:update-readme",
+      "options": {
+        "readme": "libs/rejour/rejour-meta/README.md",
+        "packageJSON": "libs/rejour/rejour-meta/package.json"
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],

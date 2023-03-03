@@ -100,36 +100,45 @@ const findTypeDocFilesAndInterfaces = async (
   const typeDocPath = join(root, typeDocFolder)
   const moduleName = packageName.replace('@', '').replace(/-/g, '_')
   const moduleFile = `${moduleName}.md`
-  const typeDocModuleFilePath = join(typeDocPath, 'modules', moduleFile)
+  // const typeDocModuleFilePath = join(typeDocPath, 'modules', moduleFile)
 
-  const interfaceDir = await readdir(join(typeDocPath, 'interfaces'))
+  // const interfaceDir = await readdir(join(typeDocPath, 'interfaces'))
 
-  const interfaces = interfaceDir.filter((file) => new RegExp(`^${moduleName}\\.`).test(file))
+  // const interfaces = interfaceDir.filter((file) => new RegExp(`^${moduleName}\\.`).test(file))
 
-  // asynchroneously read the interface files and append them to the module file in order
-  const interfaceFiles = await Promise.all(
-    interfaces.map(async (interfaceFile) => {
-      const interfaceFilePath = join(typeDocPath, 'interfaces', interfaceFile)
-      try {
-        const interfaceFileContent = await readFile(interfaceFilePath, 'utf-8')
-        return interfaceFileContent
-      } catch (e) {
-        console.log(e)
-        return ''
-      }
-    }),
-  )
+  // // asynchroneously read the interface files and append them to the module file in order
+  // const interfaceFiles = await Promise.all(
+  //   interfaces.map(async (interfaceFile) => {
+  //     const interfaceFilePath = join(typeDocPath, 'interfaces', interfaceFile)
+  //     try {
+  //       const interfaceFileContent = await readFile(interfaceFilePath, 'utf-8')
+  //       return interfaceFileContent
+  //     } catch (e) {
+  //       console.log(e)
+  //       return ''
+  //     }
+  //   }),
+  // )
+  const typeDocModuleFilePath = join(typeDocPath, packageName, `modules.md`)
 
   try {
     const moduleFileContent = await readFile(typeDocModuleFilePath, 'utf-8')
 
-    const newModuleFileContent =
-      moduleFileContent.replace(/^# .*?\n.*$/, '') + interfaceFiles.join('\n')
+    const newModuleFileContent = moduleFileContent.replace(/^# .*?\n.*$/, '') //+ interfaceFiles.join('\n')
 
     const downshiftedContent = newModuleFileContent
-      .replace(/((^|\n)#+) /g, '$1## ')
+      // .replace(/((^|\n)#+) /g, '$1## ')
       .replace(new RegExp(`.${moduleName}\\.md`, 'g'), '')
       .replace(new RegExp(`\\[libs/.*?/${packageName}/`, 'g'), '[')
+      .replace(/\[Readme\]\(README.md\)\n\n# jote/, '')
+      .replace(/## Type aliases/i, '***')
+      .replace(/## Interfaces/i, '***')
+      .replace(/## Variables/i, '***')
+      .replace(/## Functions/i, '***')
+      .replace(/## Classes/i, '***')
+      .replace(/\n### (.*)/g, '\n### `$1`')
+      .replace(/\n##### (.*)/g, '\n##### `$1`')
+      .replace(/\n####### (.*)/g, '\n*$1`*')
 
     return fromMarkdown(downshiftedContent)
   } catch (e) {
@@ -211,14 +220,23 @@ const proc = (
     .use(remarkToc)
     .process(readme)
 
+function clean(readme: string) {
+  return readme.replace(/\\\[/g, '[').replace(/\\#/g, '#').replace(/\\\|/g, '|')
+}
+
 export async function readmeAction(readmePath: string, packagePath: string) {
+  console.log('readmePath', readmePath)
   const readme = await readFile(readmePath, 'utf-8')
+
   const packageJSON = JSON.parse(await readFile(packagePath, 'utf-8'))
+  console.log(readme)
 
   const newReadme = await proc(readme, {
     license: packageJSON.license,
     packageName: packageJSON.name,
   })
 
-  await writeFile(readmePath, prependBadges(addAdmonition(newReadme.toString()), packageJSON))
+  const newReadmeString = clean(prependBadges(addAdmonition(newReadme.toString()), packageJSON))
+  // console.log(newReadmeString)
+  await writeFile(readmePath, newReadmeString, packageJSON)
 }

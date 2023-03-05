@@ -68,9 +68,7 @@
     "deploy": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public",
-
-        "dryRun": "${dryRun}"
+        "access": "public"
       }
     },
     "version": {
@@ -89,8 +87,7 @@
     "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public",
-        "dryRun": "${dryRun}"
+        "access": "public"
       }
     }
   },

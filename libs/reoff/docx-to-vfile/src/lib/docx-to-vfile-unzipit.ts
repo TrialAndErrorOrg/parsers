@@ -1,27 +1,20 @@
 import { VFile } from 'vfile'
 import { unzip } from 'unzipit'
 
-const removeHeader = (text: string | undefined) =>
-  text ? text.replace(/<\?xml.*?\?>/, '') : ''
+const removeHeader = (text: string | undefined) => (text ? text.replace(/<\?xml.*?\?>/, '') : '')
 
-const removeCarriage = (text: string | undefined) =>
-  text ? text.replace(/\r/, '') : ''
+const removeCarriage = (text: string | undefined) => (text ? text.replace(/\r/g, '') : '')
 
 export interface Options {
   withoutImages: boolean
 }
 
-export async function docxToVFile(
-  file: ArrayBuffer,
-  options: Options = { withoutImages: false }
-) {
+export async function docxToVFile(file: ArrayBuffer, options: Options = { withoutImages: false }) {
   const { entries } = await unzip(file)
+  console.log(entries)
   const rels = await entries['word/_rels/document.xml.rels'].text()
   const relations = Object.fromEntries(
-    [...rels.matchAll(/Id="(.*?)".*?Target="(.*?)"/g)].map((match) => [
-      match[1],
-      match[2],
-    ])
+    [...rels.matchAll(/Id="(.*?)".*?Target="(.*?)"/g)].map((match) => [match[1], match[2]]),
   )
 
   const doc = await entries['word/document.xml'].text()
@@ -51,9 +44,7 @@ export async function docxToVFile(
     return vfile
   }
 
-  const mediaUrls = Object.values(relations).filter((rel: string) =>
-    rel.includes('media/')
-  )
+  const mediaUrls = Object.values(relations).filter((rel: string) => rel.includes('media/'))
   const images = {} as { [key: string]: ArrayBuffer }
   for (const url of mediaUrls) {
     images[url] = await entries[`word/${url}`].arrayBuffer()

@@ -5,7 +5,7 @@ export default {
   globals: {},
   testEnvironment: 'node',
   transform: {
-    '^.+\\.[tj]sx?$': ['@swc/jest'],
+    '^.+\\.[tj]sx?$': ['@swc/jest', { swcrc: false }],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../../coverage/libs/processors/docx-to-jats',

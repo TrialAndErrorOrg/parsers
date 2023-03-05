@@ -5,7 +5,7 @@ export default {
   globals: {},
   testEnvironment: 'node',
   transform: {
-    '^.+\\.[tj]s$': ['@swc/jest'],
+    '^.+\\.[tj]s$': ['@swc/jest', { swcrc: false }],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
   coverageDirectory: '../../coverage/apps/jote',

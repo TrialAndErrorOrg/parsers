@@ -1,8 +1,9 @@
 {
   "$schema": "https://json.schemastore.org/swcrc",
   "jsc": {
-    "target": "es2020",
+    "target": "es2022",
     "parser": {
+      "dts": true,
       "syntax": "typescript",
       "decorators": true,
       "dynamicImport": true
@@ -17,10 +18,8 @@
   },
   "module": {
     "type": "es6",
-    "strict": true,
-    "noInterop": true
+    "strict": true
   },
-  "sourceMaps": true,
   "exclude": [
     "jest.config.ts",
     ".*.spec.tsx?$",
@@ -28,5 +27,6 @@
     "./src/jest-setup.ts$",
     "./**/jest-setup.ts$",
     ".*.js$"
-  ]
+  ],
+  "isModule": true
 }

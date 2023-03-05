@@ -26,18 +26,36 @@
         "passWithNoTests": true
       }
     },
+    "tsc": {
+      "executor": "@nrwl/js:tsc",
+      "options": {
+        "tsConfig": "libs/reoff/docx-to-vfile/tsconfig.publish.json",
+        "clean": false,
+        "outputPath": "dist/libs/reoff/docx-to-vfile",
+        "main": "libs/reoff/docx-to-vfile/src/index.ts",
+        "parallel": false
+      }
+    },
     "build": {
       "executor": "@nrwl/js:swc",
       "outputs": ["{options.outputPath}"],
+
       "options": {
         "outputPath": "dist/libs/reoff/docx-to-vfile",
         "tsConfig": "libs/reoff/docx-to-vfile/tsconfig.lib.json",
-        "packageJson": "libs/reoff/docx-to-vfile/package.json",
         "main": "libs/reoff/docx-to-vfile/src/index.ts",
         "assets": ["libs/reoff/docx-to-vfile/*.md"],
+        "platform": "node",
         "updateBuildableProjectDepsInPackageJson": true,
-        "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "buildableProjectDepsInPackageJsonType": "dependencies",
+        "thirdParty": false,
+        "format": ["esm"]
+      },
+      "configurations": {
+        "cjs": {
+          "swcrc": "libs/reoff/docx-to-vfile/.cjs.swcrc",
+          "clean": false
+        }
       },
       "dependsOn": [
         {
@@ -50,7 +68,29 @@
     "deploy": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
-        "access": "public"
+        "access": "public",
+
+        "dryRun": "${dryRun}"
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "postTargets": ["docx-to-vfile:npm", "docx-to-vfile:github"]
+      }
+    },
+    "github": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}"
+      }
+    },
+    "npm": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public",
+        "dryRun": "${dryRun}"
       }
     }
   },

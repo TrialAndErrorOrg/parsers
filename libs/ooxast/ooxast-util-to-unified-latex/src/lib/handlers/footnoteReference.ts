@@ -1,5 +1,5 @@
 import { H, Element } from '../types'
-import { m } from '@unified-latex/unified-latex-builder'
+import { arg, m } from '@unified-latex/unified-latex-builder'
 
 export function footnoteReference(h: H, node: Element) {
   if (node?.attributes?.type === 'separator') {
@@ -11,5 +11,5 @@ export function footnoteReference(h: H, node: Element) {
     return
   }
 
-  return m('footnote', h.footnotes[index])
+  return m('footnote', arg(h.footnotes[index]))
 }

@@ -2349,20 +2349,95 @@
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
-                      "type": "string",
-                      "content": "We also tested a model with a random slope for congruency x previous congruency x target location repetition interaction. Although this model fit our data better (AIC"
-                    }
-                  ]
-                },
-                {
-                  "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
+                      "type": "group",
+                      "content": [
+                        {
+                          "type": "macro",
+                          "content": "color",
+                          "args": [
+                            {
+                              "type": "argument",
+                              "openMark": "{",
+                              "closeMark": "}",
+                              "content": [
+                                {
+                                  "type": "string",
+                                  "content": " "
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "group",
+                      "content": [
+                        {
+                          "type": "macro",
+                          "content": "color",
+                          "args": [
+                            {
+                              "type": "argument",
+                              "openMark": "{",
+                              "closeMark": "}",
+                              "content": [
+                                {
+                                  "type": "string",
+                                  "content": "We also tested a model with a random slope for congruency x previous congruency x target location repetition interaction. Although "
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "group",
+                      "content": [
+                        {
+                          "type": "macro",
+                          "content": "color",
+                          "args": [
+                            {
+                              "type": "argument",
+                              "openMark": "{",
+                              "closeMark": "}",
+                              "content": [
+                                {
+                                  "type": "string",
+                                  "content": "this"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "group",
+                      "content": [
+                        {
+                          "type": "macro",
+                          "content": "color",
+                          "args": [
+                            {
+                              "type": "argument",
+                              "openMark": "{",
+                              "closeMark": "}",
+                              "content": [
+                                {
+                                  "type": "string",
+                                  "content": " model fit our data better (AIC"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
                     {
                       "type": "macro",
                       "content": "textsubscript",
@@ -2373,31 +2448,53 @@
                           "closeMark": "}",
                           "content": [
                             {
-                              "type": "string",
-                              "content": "without random slope"
+                              "type": "group",
+                              "content": [
+                                {
+                                  "type": "macro",
+                                  "content": "color",
+                                  "args": [
+                                    {
+                                      "type": "argument",
+                                      "openMark": "{",
+                                      "closeMark": "}",
+                                      "content": [
+                                        {
+                                          "type": "string",
+                                          "content": "without random slope"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
+                    },
                     {
-                      "type": "string",
-                      "content": " = -26903.474 whereas AIC"
-                    }
-                  ]
-                },
-                {
-                  "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
+                      "type": "group",
+                      "content": [
+                        {
+                          "type": "macro",
+                          "content": "color",
+                          "args": [
+                            {
+                              "type": "argument",
+                              "openMark": "{",
+                              "closeMark": "}",
+                              "content": [
+                                {
+                                  "type": "string",
+                                  "content": " = -26903.474 whereas AIC"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
                     {
                       "type": "macro",
                       "content": "textsubscript",
@@ -2408,25 +2505,144 @@
                           "closeMark": "}",
                           "content": [
                             {
-                              "type": "string",
-                              "content": "with random slope"
+                              "type": "group",
+                              "content": [
+                                {
+                                  "type": "macro",
+                                  "content": "color",
+                                  "args": [
+                                    {
+                                      "type": "argument",
+                                      "openMark": "{",
+                                      "closeMark": "}",
+                                      "content": [
+                                        {
+                                          "type": "string",
+                                          "content": "with random slope"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "group",
+                      "content": [
+                        {
+                          "type": "macro",
+                          "content": "color",
+                          "args": [
+                            {
+                              "type": "argument",
+                              "openMark": "{",
+                              "closeMark": "}",
+                              "content": [
+                                {
+                                  "type": "string",
+                                  "content": " = -27133.846"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "group",
+                      "content": [
+                        {
+                          "type": "macro",
+                          "content": "color",
+                          "args": [
+                            {
+                              "type": "argument",
+                              "openMark": "{",
+                              "closeMark": "}",
+                              "content": [
+                                {
+                                  "type": "string",
+                                  "content": ";"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "group",
+                      "content": [
+                        {
+                          "type": "macro",
+                          "content": "color",
+                          "args": [
+                            {
+                              "type": "argument",
+                              "openMark": "{",
+                              "closeMark": "}",
+                              "content": [
+                                {
+                                  "type": "string",
+                                  "content": "models with smaller AIC values fit better), the significant levels of all the fixed effect"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "group",
+                      "content": [
+                        {
+                          "type": "macro",
+                          "content": "color",
+                          "args": [
+                            {
+                              "type": "argument",
+                              "openMark": "{",
+                              "closeMark": "}",
+                              "content": [
+                                {
+                                  "type": "string",
+                                  "content": "s"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "group",
+                      "content": [
+                        {
+                          "type": "macro",
+                          "content": "color",
+                          "args": [
+                            {
+                              "type": "argument",
+                              "openMark": "{",
+                              "closeMark": "}",
+                              "content": [
+                                {
+                                  "type": "string",
+                                  "content": " for this model was very similar to the one reported in the main text, where there was no significant carryover effect."
+                                }
+                              ]
                             }
                           ]
                         }
                       ]
                     }
-                  ]
-                },
-                {
-                  "type": "argument",
+                  ],
                   "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": " = -27133.846;models with smaller AIC values fit better), the significant levels of all the fixed effects for this model was very similar to the one reported in the main text, where there was no significant carryover effect."
-                    }
-                  ]
+                  "closeMark": "}"
                 }
               ]
             },

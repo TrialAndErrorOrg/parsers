@@ -20,6 +20,8 @@ import { args, env, m, s } from '@unified-latex/unified-latex-builder'
 import { PB } from './util/PB'
 import { makePackage } from './util/make-package'
 import { cslToBiblatex } from 'csl-to-biblatex'
+import { VFile } from 'vfile'
+import { notes } from './util/notes.js'
 
 export { one } from './one'
 export { all } from './all'
@@ -42,12 +44,32 @@ const defaultOptions: Options = {
   ],
 }
 
-export function toUnifiedLatex(tree: Root | Element | Text, options: Options) {
-  options = { ...defaultOptions, ...options }
+export function toUnifiedLatex(
+  tree: Root | Element | Text,
+  file: VFile,
+  options: Options,
+): UnifiedLatexRoot
+export function toUnifiedLatex(tree: Root | Element | Text, options: Options): UnifiedLatexRoot
+export function toUnifiedLatex(
+  tree: Root | Element | Text,
+  optionsOrVFile: Options | VFile,
+  maybeOptions?: Options,
+): UnifiedLatexRoot {
+  const options = {
+    ...defaultOptions,
+    ...(optionsOrVFile instanceof VFile ? maybeOptions : optionsOrVFile),
+  }
+
+  const vfile = optionsOrVFile instanceof VFile ? optionsOrVFile : undefined
+
+  const [unparsedFootnotes, unparsedEndnotes] = vfile
+    ? [vfile?.data?.parsed?.['word/footnotes.xml'], vfile?.data?.parsed?.['word/endnotes.xml']]
+    : []
 
   const whiteSpaceTransformer = rehypeMinifyWhitespace({
     newlines: options.newLines === true,
   })
+
   if (whiteSpaceTransformer) {
     // @ts-expect-error rehype-minify-whitespace is not typed correctly
     whiteSpaceTransformer(tree)
@@ -130,7 +152,20 @@ export function toUnifiedLatex(tree: Root | Element | Text, options: Options) {
     } as Context,
   )
 
+  h.simpleParagraph = true
+  if (unparsedFootnotes) {
+    whiteSpaceTransformer!(unparsedFootnotes)
+    h.footnotes = notes(h, unparsedFootnotes)
+  }
+
+  if (unparsedEndnotes) {
+    whiteSpaceTransformer!(unparsedEndnotes)
+    h.endnotes = notes(h, unparsedEndnotes)
+  }
+  h.simpleParagraph = false
+
   const result = one(h, tree, undefined)
+  console.log('result', result)
 
   if (!result) {
     return { type: 'root', content: [] } as UnifiedLatexRoot

@@ -12,16 +12,6 @@ export const document: Handle = (h: H, node: Document) => {
   h.simpleParagraph = true
   const body = select('w\\:body', node)
 
-  const foots = select('w\\:footnotes', node)
-  if (foots && isFootnotes(foots)) {
-    h.footnotes = notes(h, foots)
-  }
-
-  const endnotes = select('w\\:endnotes', node)
-  if (endnotes && isEndnotes(endnotes)) {
-    h.endnotes = notes(h, endnotes)
-  }
-
   // TODO: [ooxast-util-to-unified-latex] do something with the styles
   // const styles = select('w\\:styles', node)
   // if (styles) {

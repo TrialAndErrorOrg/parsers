@@ -58,11 +58,10 @@ const fromDocx = (
     })
     .use(
       () => (tree, vfile) =>
-       return toUnifiedLatex(tree, {
+        toUnifiedLatex(tree, vfile, {
           relations: vfile.data.relations ?? {},
           bibliography: vfile.data.bibliography ?? [],
-        }) as Root
-      }
+        }) as Root,
     )
     .use(
       () => (tree) =>

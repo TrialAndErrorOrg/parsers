@@ -156,14 +156,18 @@
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
+                    {
+                      "type": "string",
+                      "content": " "
+                    },
                     {
                       "type": "string",
                       "content": "A footnote."
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },

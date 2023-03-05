@@ -10,7 +10,7 @@ const config = {
   },
   testEnvironment: 'node',
   transform: {
-    '^.+.[tj]sx?$': ['@swc/jest', { 'exclude': [] }],
+    '^.+.[tj]sx?$': ['@swc/jest', { 'swcrc': false }],
   },
   transformIgnorePatterns: [],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],

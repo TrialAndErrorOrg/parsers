@@ -31,7 +31,7 @@ function unknown(h: H, node: Node) {
   // @ts-expect-error: Looks like a literal.
   if (typeof node.value === 'string') {
     // @ts-expect-error: Looks like a literal.
-    return j(node, 'text', wrapText(j, node.value))
+    return h(node, 'text', wrapText(h, node.value))
   }
 
   return all(h, node)

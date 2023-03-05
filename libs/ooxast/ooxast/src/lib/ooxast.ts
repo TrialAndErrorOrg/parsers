@@ -19,6 +19,14 @@ export type {
 import { document, Text } from './ooxml/wordprocessingml/main'
 
 export type Root = XastRoot & {
+  /**
+   * The name of the source file for this document.
+   *
+   * This is used for stringifying the document.
+   *
+   * @example 'word/document.xml'
+   */
+  source?: string
   children: (RequiredMap<document> | Doctype | Instruction | Text)[]
 }
 export interface TagLiteral extends XastElement {
@@ -209,11 +217,11 @@ export type {
 
 */
 export type NoUndefined<T> = Exclude<T, undefined>
-export type ArrayValueMaybe<
-  T extends any[] | ArrayLike<any> | Record<any, any>
-> = T extends any[] ? ValuesType<NoUndefined<T>> : NoUndefined<T>
-export type AllTypes<T extends any[] | ArrayLike<any> | Record<any, any>> =
-  ArrayValueMaybe<ValuesType<T>>
+export type ArrayValueMaybe<T extends any[] | ArrayLike<any> | Record<any, any>> = T extends any[]
+  ? ValuesType<NoUndefined<T>>
+  : NoUndefined<T>
+export type AllTypes<T extends any[] | ArrayLike<any> | Record<any, any>> = ArrayValueMaybe<
+  ValuesType<T>
+>
 
-export type RequiredMap<T extends any[] | ArrayLike<any> | Record<any, any>> =
-  AllTypes<T>
+export type RequiredMap<T extends any[] | ArrayLike<any> | Record<any, any>> = AllTypes<T>

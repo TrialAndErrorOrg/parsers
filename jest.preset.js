@@ -24,7 +24,7 @@ export default {
   },
   transform: {
     '^.+\\.ne$': 'jest-transform-nearley',
-    '^.+\\.[jt]sx?$': ['@swc/jest'], // swcConfig],
+    '^.+\\.[jt]sx?$': ['@swc/jest', { swcrc: false }], // swcConfig],
   },
   testEnvironment: 'node',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],

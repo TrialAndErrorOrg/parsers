@@ -21910,50 +21910,6 @@
           ]
         },
         {
-          "type": "text",
-          "value": " "
-        },
-        {
-          "type": "element",
-          "name": "p",
-          "attributes": {},
-          "children": [
-            {
-              "type": "text",
-              "value": ""
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "p",
-          "attributes": {},
-          "children": []
-        },
-        {
-          "type": "element",
-          "name": "p",
-          "attributes": {},
-          "children": [
-            {
-              "type": "text",
-              "value": ""
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "p",
-          "attributes": {},
-          "children": []
-        },
-        {
-          "type": "element",
-          "name": "p",
-          "attributes": {},
-          "children": []
-        },
-        {
           "type": "element",
           "name": "back",
           "attributes": {},
@@ -35631,29 +35587,6 @@
                           ]
                         }
                       ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "fnGroup",
-              "attributes": {},
-              "children": [
-                {
-                  "type": "element",
-                  "name": "fn",
-                  "attributes": {
-                    "w:type": "continuationNotice",
-                    "w:id": "1"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "p",
-                      "attributes": {},
-                      "children": []
                     }
                   ]
                 }

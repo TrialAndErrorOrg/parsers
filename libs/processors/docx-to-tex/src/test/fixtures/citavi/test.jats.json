@@ -13741,10 +13741,6 @@
           ]
         },
         {
-          "type": "text",
-          "value": " "
-        },
-        {
           "type": "element",
           "name": "back",
           "attributes": {},
@@ -15199,68 +15195,6 @@
                               ]
                             }
                           ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "fnGroup",
-              "attributes": {},
-              "children": [
-                {
-                  "type": "element",
-                  "name": "fn",
-                  "attributes": {
-                    "w:id": "1",
-                    "w:type": "continuationSeparator"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "p",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": ""
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "fn",
-                  "attributes": {
-                    "w:id": "2"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "p",
-                      "attributes": {
-                        "style": "Footnote"
-                      },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "I want to thank Lisa-Sophia Preller for serving as the second coder of this study. "
-                        },
-                        {
-                          "type": "text",
-                          "value": "Both raters were asked to use different coding strategies, to avoid effects of the coding procedure: (1) one rater coded the cases one by one in order to have an eye on the complete answer, (2) another rater coded each dimension across all cases one by one in order to have an eye on the comparability of the ratings. "
-                        },
-                        {
-                          "type": "text",
-                          "value": "The fifth dimension (high effort in answering) was not coded by both raters but added afterward and coded by a single rater, therefore no interrater reliability is calculated here."
                         }
                       ]
                     }

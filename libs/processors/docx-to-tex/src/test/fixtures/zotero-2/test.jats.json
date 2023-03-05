@@ -5528,48 +5528,6 @@
           ]
         },
         {
-          "type": "text",
-          "value": " "
-        },
-        {
-          "type": "text",
-          "value": " "
-        },
-        {
-          "type": "text",
-          "value": "DocumentLibraryForm"
-        },
-        {
-          "type": "text",
-          "value": "DocumentLibraryForm"
-        },
-        {
-          "type": "text",
-          "value": "DocumentLibraryForm"
-        },
-        {
-          "type": "element",
-          "name": "p",
-          "attributes": {},
-          "children": [
-            {
-              "type": "text",
-              "value": ""
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "p",
-          "attributes": {},
-          "children": [
-            {
-              "type": "text",
-              "value": ""
-            }
-          ]
-        },
-        {
           "type": "element",
           "name": "back",
           "attributes": {},
@@ -12927,69 +12885,6 @@
                               "value": "16"
                             }
                           ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "element",
-              "name": "fnGroup",
-              "attributes": {},
-              "children": [
-                {
-                  "type": "element",
-                  "name": "fn",
-                  "attributes": {
-                    "w:id": "1"
-                  },
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "p",
-                      "attributes": {
-                        "style": "FootnoteText"
-                      },
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": ""
-                        },
-                        {
-                          "type": "text",
-                          "value": "We also tested a model with a random slope for congruency x previous congruency x target location repetition interaction. Although this model fit our data better (AIC"
-                        },
-                        {
-                          "type": "element",
-                          "name": "sub",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "without random slope"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " = -26903.474 whereas AIC"
-                        },
-                        {
-                          "type": "element",
-                          "name": "sub",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "with random slope"
-                            }
-                          ]
-                        },
-                        {
-                          "type": "text",
-                          "value": " = -27133.846;models with smaller AIC values fit better), the significant levels of all the fixed effects for this model was very similar to the one reported in the main text, where there was no significant carryover effect."
                         }
                       ]
                     }

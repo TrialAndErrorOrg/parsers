@@ -1338,18 +1338,7 @@
                           "name": "footnote",
                           "children": [
                             {
-                              "type": "commandArg",
-                              "children": [
-                                {
-                                  "type": "paragraph",
-                                  "children": [
-                                    {
-                                      "type": "text",
-                                      "value": "The initial target participant number was 60 to produce an adequate sample size. However, data collection was stopped owing to Covid-19 and the ban on in-person human psychological testing. The decision was made to analyze the quantitative data although it was still underpowered. The subsequent analysis suggests that the quantitative results would have remained broadly the same. "
-                                    }
-                                  ]
-                                }
-                              ]
+                              "type": "commandArg"
                             }
                           ]
                         }
@@ -2184,18 +2173,7 @@
                   "name": "footnote",
                   "children": [
                     {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "paragraph",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "In this respect, filming the experimental situation is a useful tool to ensure adherence to a set experimental procedure. In this instance, there was only one researcher but in other cases there may be multiple researchers. Given that we are still unclear of the contextual variables that may influence results (Leonelli, 2018), generating open-ended data is necessary to understand the complexity. "
-                            }
-                          ]
-                        }
-                      ]
+                      "type": "commandArg"
                     }
                   ]
                 },
@@ -6578,22 +6556,7 @@
                   "name": "footnote",
                   "children": [
                     {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "paragraph",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "Indeed, the accuracy of the solution is not clear in itself but is predicated on an accurate following of the steps. "
-                            },
-                            {
-                              "type": "text",
-                              "value": "We only trust an answer to a mental arithmetic problem not because of the answer itself but because we trust in the steps that led to the answer."
-                            }
-                          ]
-                        }
-                      ]
+                      "type": "commandArg"
                     }
                   ]
                 },

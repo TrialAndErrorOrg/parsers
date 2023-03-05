@@ -21,7 +21,7 @@ import reoffParseReferences from 'reoff-parse-references'
 //describe('fixtures', () => {
 const fromDocx = (
   path: string,
-  citationType?: 'mendeley' | 'word' | 'citavi' | 'zotero' | 'endnote'
+  citationType?: 'mendeley' | 'word' | 'citavi' | 'zotero' | 'endnote',
 ) =>
   unified()
     .data('hey', 'ho')
@@ -39,30 +39,21 @@ const fromDocx = (
       ],
     })
     .use(
-      reoffParseReferences // { mailto: 'support@centeroftrialanderror.com' }
+      reoffParseReferences, // { mailto: 'support@centeroftrialanderror.com' }
     )
     .use(reoffCite, { type: citationType || 'zotero', log: false })
     .use(() => (tree, vfile) => {
-      writeFileSync(
-        join(path, 'test.ooxast.json'),
-        JSON.stringify(removePosition(tree), null, 2)
-      )
+      writeFileSync(join(path, 'test.ooxast.json'), JSON.stringify(removePosition(tree), null, 2))
     })
     .use(reoffRejour, { citationType: citationType || 'zotero' || '' })
     .use(
       () => (tree) =>
-        writeFileSync(
-          join(path, 'test.jats.json'),
-          JSON.stringify(removePosition(tree), null, 2)
-        )
+        writeFileSync(join(path, 'test.jats.json'), JSON.stringify(removePosition(tree), null, 2)),
     )
     .use(rejourRelatex)
     .use(
       () => (tree) =>
-        writeFileSync(
-          join(path, 'test.tex.json'),
-          JSON.stringify(removePosition(tree), null, 2)
-        )
+        writeFileSync(join(path, 'test.tex.json'), JSON.stringify(removePosition(tree), null, 2)),
     )
     .use(relatexStringify)
 
@@ -70,18 +61,14 @@ const fixtures = new URL('fixtures', import.meta.url).pathname
 const dir = readdirSync(fixtures)
 
 it.each(dir)('parses correctly for %s', async (name: string) => {
-  const [docx, latex, jats, json] = ['index.docx'].map((ext) =>
-    join(fixtures, name, ext)
-  )
+  const [docx, latex, jats, json] = ['index.docx'].map((ext) => join(fixtures, name, ext))
 
   const doccc = new Uint8Array(await readFile(docx))
   const docxIn = await docxToVFile(doccc)
+  // console.log(docxIn)
 
   const result = String(
-    await fromDocx(
-      join(fixtures, name),
-      name === 'zotero' ? 'zotero' : undefined
-    ).process(docxIn)
+    await fromDocx(join(fixtures, name), name === 'zotero' ? 'zotero' : undefined).process(docxIn),
   )
   await writeFile(join(fixtures, name, 'result.tex'), result)
 

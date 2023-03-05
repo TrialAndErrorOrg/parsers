@@ -2194,44 +2194,7 @@
                   "name": "footnote",
                   "children": [
                     {
-                      "type": "commandArg",
-                      "children": [
-                        {
-                          "type": "paragraph",
-                          "children": [
-                            {
-                              "type": "text",
-                              "value": "We also tested a model with a random slope for congruency x previous congruency x target location repetition interaction. Although this model fit our data better (AIC"
-                            },
-                            {
-                              "type": "sub",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "without random slope"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "value": " = -26903.474 whereas AIC"
-                            },
-                            {
-                              "type": "sub",
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "with random slope"
-                                }
-                              ]
-                            },
-                            {
-                              "type": "text",
-                              "value": " = -27133.846;models with smaller AIC values fit better), the significant levels of all the fixed effects for this model was very similar to the one reported in the main text, where there was no significant carryover effect."
-                            }
-                          ]
-                        }
-                      ]
+                      "type": "commandArg"
                     }
                   ]
                 },

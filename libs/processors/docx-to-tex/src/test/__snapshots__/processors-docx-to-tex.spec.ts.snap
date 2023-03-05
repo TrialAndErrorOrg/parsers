@@ -1,9 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`parses correctly for citationparagraph 1`] = `
-" \\\\documentclass{article}
+"\\\\documentclass{article}
 \\\\usepackage[style=apa]{biblatex}
-\\\\addbibresource{bibliography.bib}\\\\usepackage{graphicx}\\\\usepackage{hyperref}
+\\\\addbibresource{bibliography.bib}
+\\\\usepackage{graphicx}
+\\\\usepackage{hyperref}
 
 
 
@@ -15,7 +17,7 @@ exports[`parses correctly for citationparagraph 1`] = `
     number      = {1},
     volume      = {45},
     doi         = {10.1177/0149206318793196},
-    year        = {2019},
+    date        = {2019},
     pages       = {70--95},
     journal     = {Journal of Management}
 }
@@ -25,7 +27,7 @@ exports[`parses correctly for citationparagraph 1`] = `
     title       = {Social entrepreneurship: taking stock and looking ahead},
     author      = {Mair, J.},
     publisher   = {Edward Elgar Publishing Limited},
-    year        = {2010},
+    date        = {2010},
     pages       = {15--28},
     journal     = {Handbook of Research on Social Entrepreneurship}
 }
@@ -37,7 +39,7 @@ exports[`parses correctly for citationparagraph 1`] = `
     number      = {3},
     volume      = {29},
     doi         = {10.1016/j.jbusvent.2013.05.001},
-    year        = {2014},
+    date        = {2014},
     pages       = {363--376},
     journal     = {Journal of Business Venturing}
 }
@@ -49,7 +51,7 @@ exports[`parses correctly for citationparagraph 1`] = `
     number      = {2},
     volume      = {8},
     doi         = {10.1080/19420676.2017.1371631},
-    year        = {2017},
+    date        = {2017},
     pages       = {248--264},
     journal     = {Journal of Social Entrepreneurship}
 }
@@ -61,7 +63,7 @@ exports[`parses correctly for citationparagraph 1`] = `
     number      = {3},
     volume      = {46},
     doi         = {10.1057/jibs.2014.38},
-    year        = {2015},
+    date        = {2015},
     pages       = {308--331},
     journal     = {Journal of International Business Studies}
 }
@@ -73,7 +75,7 @@ exports[`parses correctly for citationparagraph 1`] = `
     number      = {7},
     volume      = {10},
     doi         = {10.1371/journal.pone.0133193},
-    year        = {2015},
+    date        = {2015},
     journal     = {PloS ONE}
 }
 
@@ -84,7 +86,7 @@ exports[`parses correctly for citationparagraph 1`] = `
     number      = {1},
     volume      = {41},
     doi         = {10.1016/j.jwb.2005.09.002},
-    year        = {2006},
+    date        = {2006},
     pages       = {36--44},
     journal     = {Journal of World Business}
 }
@@ -96,7 +98,7 @@ exports[`parses correctly for citationparagraph 1`] = `
     number      = {6},
     volume      = {27},
     doi         = {10.1108/IJEBR-07-2020-0461},
-    year        = {2021},
+    date        = {2021},
     pages       = {1381--1402},
     journal     = {International Journal of Entrepreneurial Behavior \\\\& Research}
 }
@@ -107,7 +109,7 @@ exports[`parses correctly for citationparagraph 1`] = `
     author      = {Inglehart, R.},
     publisher   = {Princeton University Press},
     place       = {Princeton, NJ},
-    year        = {1977}
+    date        = {1977}
 }
 
 
@@ -117,7 +119,7 @@ exports[`parses correctly for citationparagraph 1`] = `
     number      = {3},
     volume      = {119},
     doi         = {10.1037/a0028756},
-    year        = {2012},
+    date        = {2012},
     pages       = {546--572},
     journal     = {Psychological Review}
 }
@@ -129,7 +131,7 @@ exports[`parses correctly for citationparagraph 1`] = `
     number      = {3},
     volume      = {94},
     doi         = {10.1111/j.1540-6237.2012.00903.x},
-    year        = {2013},
+    date        = {2013},
     pages       = {637--659},
     journal     = {Social Science Quarterly}
 }
@@ -141,16 +143,104 @@ exports[`parses correctly for citationparagraph 1`] = `
     number      = {S1},
     volume      = {54},
     doi         = {10.1111/jsbm.12289},
-    year        = {2016},
+    date        = {2016},
     pages       = {168--188},
     journal     = {Journal of Small Business Management}
+}
+
+
+@article{Lepoutre2013,
+    title       = {Designing a global standardized methodology for measuring social entrepreneurship activity: the Global Entrepreneurship Monitor social entrepreneurship study},
+    author      = {Lepoutre, J. and Justo, R. and Terjesen, S. and Bosma, N.},
+    number      = {3},
+    volume      = {40},
+    doi         = {10.1007/s11187-011-9398-4},
+    date        = {2013},
+    pages       = {693--714},
+    journal     = {Small Business Economics}
+}
+
+
+@article{Defourny2010,
+    title       = {Social enterprise in Europe: At the crossroads of market, public policies and third sector},
+    author      = {Defourny, J. and Nyssens, M.},
+    number      = {3},
+    volume      = {29},
+    doi         = {10.1016/j.polsoc.2010.07.002},
+    date        = {2010},
+    pages       = {231--242},
+    journal     = {Policy and Society}
+}
+
+
+@article{Haigh2015,
+    title       = {Hybrid organizations: origins, strategies, impacts, and implications},
+    author      = {Haigh, N. and Walker, J. and Bacq, S. and Kickul, J.},
+    number      = {3},
+    volume      = {57},
+    doi         = {10.1525/cmr.2015.57.3.5},
+    date        = {2015},
+    pages       = {5--12},
+    journal     = {California Management Review}
+}
+
+
+@article{Weerawardena2006,
+    title       = {Investigating social entrepreneurship: A multidimensional model},
+    author      = {Weerawardena, J. and Mort, G.S.},
+    number      = {1},
+    volume      = {41},
+    doi         = {10.1016/j.jwb.2005.09.001},
+    date        = {2006},
+    pages       = {21--35},
+    journal     = {Journal of World Business}
+}
+
+
+@article{Battilana2014,
+    title       = {Advancing research on hybrid organizing--Insights from the study of social enterprises},
+    author      = {Battilana, J. and Lee, M.},
+    number      = {1},
+    volume      = {8},
+    doi         = {10.1080/19416520.2014.893615},
+    date        = {2014},
+    pages       = {397--441},
+    journal     = {The Academy of Management Annals}
+}
+
+
+@article{Bacq2016,
+    title       = {Beyond the moral portrayal of social entrepreneurs: An empirical approach to who they are and what drives them},
+    author      = {Bacq, S. and Hartog, C. and Hoogendoorn, B.},
+    number      = {4},
+    volume      = {133},
+    doi         = {10.1007/s10551-014-2446-7},
+    date        = {2016},
+    pages       = {703--718},
+    journal     = {Journal of Business Ethics}
+}
+
+
+@article{Zahra2014,
+    title       = {On the frontiers: The implications of social entrepreneurship for international entrepreneurship},
+    author      = {Zahra, S. and Newey, L. and Li, Y.},
+    number      = {1},
+    volume      = {38},
+    doi         = {10.1111/etap.12061},
+    date        = {2014},
+    pages       = {137--158},
+    journal     = {Entrepreneurship Theory and Practice}
 }
 
 \\\\end{filecontents}
 
 \\\\begin{document}
 
-  Despite the ongoing public and scholarly attention on social entrepreneurship, definitional debates seem far from settled \\\\parencite{Saebi2019}. On the one hand, some scholars argue that defining social entrepreneurship is problematic because it means different things to different people and differs between contexts \\\\parencite{Mair2010}. Hence making it a ‘fuzzy' \\\\parencite{Choi2014} or an ‘unclear and contested' concept \\\\parencite{Saebi2019}. On the other hand, others argue that a widespread consensus exists within the academic community on what defines social entrepreneurship, social entrepreneur and social enterprise \\\\parencite{Alegre2017}. Wiw \\\\parencite{Stephan2015}. Next to the motivations that serve the self-interest of individuals, a desire to help others by contributing to the greater good may also translate into self-employed entrepreneurship. Pro-social behaviour is often enabled by more financial and human capital \\\\parencite{Korndörfer2015}. This enables people to start a social enterprise to benefit their local community \\\\parencite{Stephan2015}, especially when people feel an ethical desire to contribute to society \\\\parencite{Mair2006, Stirzaker2021}. Such interests, and individual-related immaterial goals, are evoked by relatively higher levels of financial capital \\\\parencite{Inglehart1977, Kraus2012}. This is in line with the argument made by \\\\parencite{Inglehart1977}, who argues that higher levels of financial capital may provide the basis for caring and pro-actively protecting the ecological environment \\\\parencite{Franzen2013}. Furthermore, higher levels of human capital are associated with the propensity to start a \\\\emph{social }enterprise \\\\parencite{Pathak2016, Stephan2015}. 
+  Despite the ongoing public and scholarly attention on social entrepreneurship, definitional debates seem far from settled \\\\parencite{Saebi2019}. On the one hand, some scholars argue that defining social entrepreneurship is problematic because it means different things to different people and differs between contexts \\\\parencite{Mair2010}. Hence making it a ‘fuzzy' \\\\parencite{Choi2014} or an ‘unclear and contested' concept \\\\textcite{Saebi2019}. On the other hand, others argue that a widespread consensus exists within the academic community on what defines social entrepreneurship, social entrepreneur and social enterprise \\\\parencite{Alegre2017}. 
+
+Wiw \\\\parencite{Stephan2015}. Next to the motivations that serve the self-interest of individuals, a desire to help others by contributing to the greater good may also translate into self-employed entrepreneurship. Pro-social behaviour is often enabled by more financial and human capital \\\\parencite{Korndörfer2015}. This enables people to start a social enterprise to benefit their local community \\\\parencite{Stephan2015}, especially when people feel an ethical desire to contribute to society \\\\textcite{Mair2006, Stirzaker2021}. Such interests, and individual-related immaterial goals, are evoked by relatively higher levels of financial capital \\\\parencite{Inglehart1977, Kraus2012}. This is in line with the argument made by \\\\textcite{Inglehart1977}, who argues that higher levels of financial capital may provide the basis for caring and pro-actively protecting the ecological environment \\\\textcite{Franzen2013}. Furthermore, higher levels of human capital are associated with the propensity to start a \\\\emph{social }enterprise \\\\parencite{Pathak2016, Stephan2015}. 
+
+Social enterprises are the tangible form of social entrepreneurship \\\\parencite{Mair2006}. However, the population of social enterprises is not homogeneous. \\\\textcite{Lepoutre2013} differentiate between \\\\emph{explicit }and \\\\emph{implicit} organizational forms of social entrepreneurship. The difference is that a social or environmental objective is part of the core mission or identity of the explicit organizational form, which is not present for the implicit social enterprises. Whether or not they receive additional financial support, the social and entrepreneurial dimensions are present among \\\\emph{explicit }social enterprises (or hybrid enterprises) \\\\parencite{Defourny2010}. The entrepreneurial dimension is manifested through a business logic \\\\parencite[][at, ,least, ,to, ,some, ,extent, ,--see]{Lepoutre2013} to generate revenue by selling products and services via the market. Despite the idea that business logic is incompatible with the core ideals of social value creation, once intertwined, they create the necessary conditions for classifying social entrepreneurship \\\\parencite{Defourny2010, Haigh2015, Weerawardena2006}. Thus, the related ideal-typical organizational form may focus on the alleviation of a particular social or environmental problem, apply a business logic, and may attract financial capital in ways consistent with either - or both - for-profit and non-profit models \\\\parencite{Battilana2014, Lepoutre2013}. \\\\emph{Implicit }social organizational forms include a broader spectrum of socially committed enterprises \\\\parencite{Lepoutre2013}. Information on the relative importance of social value creation goals compared to financial value creation goals is useful to classify the degree of social entrepreneurship among these organizational forms \\\\parencite{Bacq2016, Zahra2014}. Although not explicitly addressing a social mission statement, these organizations prioritize non-financial goals in their business operations \\\\parencite{Lepoutre2013}. These organizations may focus on economic sustainability and on creating a positive impact on society and ecology.\\\\emph{ }For example, such organizations may apply a ‘triple bottom line' or ‘people-planet-profit' logic. Whether explicit or implicit, social entrepreneurship manifests itself in a heterogeneous population of organizations. Furthermore, non-profits or NGOs are other examples of organizational forms that primarily aim for social or environmental value creation. Although an exclusive social value creation mission characterizes these organizations, they do not use a business logic to attain social or environmental impact. For example, these organizational forms are mostly dependent on governmental subsidies, membership fees or donations and cannot be observed as an organizational form of social entrepreneurship. Nevertheless, their funding enables those organizations to commit themselves exclusively to social impact goals. 
 
 
 
@@ -224,7 +314,7 @@ Block, J., Thurik, R., Van der Zwan, P., \\\\& Walter, S. (2013). Business takeo
 
 Boden Jr, R. J. (1999). Flexible working hours, family responsibilities, and female self-employment: Gender differences in self-employment selection. \\\\emph{American Journal of Economics and Sociology, 58}(1), 71-83. doi:10.1111/j.1536-7150.1999.tb03285.x
 
-Borzaga, C., \\\\& Defourny, J. (2001). \\\\emph{Conclusions. }\\\\emph{Social enterprises in Europe: a diversity of initiatives and prospects}. In Borzaga, C., \\\\& Defourny, J. (Eds). \\\\emph{The Emergence of Social Enterprise. }(pp.350-370). London: Routledge.
+Borzaga, C., \\\\& Defourny, J. (2001). \\\\emph{Conclusions. Social enterprises in Europe: a diversity of initiatives and prospects}. In Borzaga, C., \\\\& Defourny, J. (Eds). \\\\emph{The Emergence of Social Enterprise. }(pp.350-370). London: Routledge.
 
 Bosma, N. (2013). The Global Entrepreneurship Monitor (GEM) and its impact on entrepreneurship research. \\\\emph{Foundations and Trends in Entrepreneurship, 9}(2). doi:10.1561/0300000033
 
@@ -350,11 +440,11 @@ Esping-Andersen, G. (1999). \\\\emph{Social foundations of }\\\\emph{postindustr
 
 Estrin, S., Mickiewicz, T., \\\\& Stephan, U. (2013). Entrepreneurship, social capital, and institutions: Social and commercial entrepreneurship across nations. \\\\emph{Entrepreneurship Theory and Practice, 37}(3), 479-504. doi:10.1111/etap.12019
 
-European Commission. (2011). \\\\emph{Flash Eurobarometer 283 (Entrepreneurship in the EU and beyond)}. \\\\emph{GESIS Data Archive, Cologne. }\\\\emph{ZA5439 Data file Version 1.0.0, }doi:10.4232/1.10210
+European Commission. (2011). \\\\emph{Flash Eurobarometer 283 (Entrepreneurship in the EU and beyond)}. \\\\emph{GESIS Data Archive, Cologne. ZA5439 Data file Version 1.0.0, }doi:10.4232/1.10210
 
-European Commission. (2013). \\\\emph{Flash Eurobarometer 354 (Entrepreneurship in the EU and beyond)}. \\\\emph{GESIS Data Archive, Cologne. }\\\\emph{ZA5789 Data file Version 1.0.0, }doi:10.4232/1.11590
+European Commission. (2013). \\\\emph{Flash Eurobarometer 354 (Entrepreneurship in the EU and beyond)}. \\\\emph{GESIS Data Archive, Cologne. ZA5789 Data file Version 1.0.0, }doi:10.4232/1.11590
 
-EVS. (2016). \\\\emph{European Values Study 2008: Integrated Dataset (EVS 2008). }\\\\emph{GESIS Data Archive, Cologne. }\\\\emph{ZA4800 Data file Version 4.0.0}\\\\emph{, }. 
+EVS. (2016). \\\\emph{European Values Study 2008: Integrated Dataset (EVS 2008). GESIS Data Archive, Cologne. ZA4800 Data file Version 4.0.0}\\\\emph{, }. 
 
 Fagan, E. J., Jones, B. D., \\\\& Wlezien, C. (2017). Representative systems and policy punctuations. \\\\emph{Journal of European Public Policy, 24}(6), 809-831. doi:10.1080/13501763.2017.1296483
 
@@ -782,7 +872,7 @@ Wennekers, S., Van Wennekers, A., Thurik, R., \\\\& Reynolds, P. (2005). Nascent
 
 Wilkinson, C., Medhurst, J., Henry, N., Wihlborg, M., \\\\& Braithwaite, B. W. (2015). \\\\emph{A map of social enterprises and their eco-systems in Europe: Synthesis Report}. Retrieved from https://ec.europa.eu/social/BlobServlet?docId=12987\\\\&langId=en
 
-WVS. (2014). \\\\emph{World Values Survey: Round Five - Country-Pooled Datafile Version: www.worldvaluessurvey.org/WVSDocumentationWV5.jsp. }\\\\emph{Madrid: JD Systems Institute.} 
+WVS. (2014). \\\\emph{World Values Survey: Round Five - Country-Pooled Datafile Version: www.worldvaluessurvey.org/WVSDocumentationWV5.jsp. Madrid: JD Systems Institute.} 
 
 Yitshaki, R., \\\\& Kropp, F. (2016). Motivations and opportunity recognition of social entrepreneurs. \\\\emph{Journal of Small Business Management, 54}(2), 546-565. doi:10.1111/jsbm.12157
 
@@ -1394,9 +1484,11 @@ I inform my manager and ask for permission to change something actively. When it
 `;
 
 exports[`parses correctly for complete 1`] = `
-" \\\\documentclass{article}
+"\\\\documentclass{article}
 \\\\usepackage[style=apa]{biblatex}
-\\\\addbibresource{bibliography.bib}\\\\usepackage{graphicx}\\\\usepackage{hyperref}
+\\\\addbibresource{bibliography.bib}
+\\\\usepackage{graphicx}
+\\\\usepackage{hyperref}
 
 
 
@@ -1409,7 +1501,7 @@ exports[`parses correctly for complete 1`] = `
     volume      = {10},
     doi         = {10.1016/j.ejpain.2005.06.009},
     place       = {England},
-    year        = {2006-05},
+    date        = {2006-05},
     pages       = {287-333},
     journal     = {European journal of pain (London, England)}
 }
@@ -1422,7 +1514,7 @@ exports[`parses correctly for complete 1`] = `
     volume      = {9},
     doi         = {10.1016/j.jpain.2008.05.005},
     place       = {United States},
-    year        = {2008-10},
+    date        = {2008-10},
     pages       = {883-891},
     journal     = {The Journal of Pain}
 }
@@ -1433,7 +1525,7 @@ exports[`parses correctly for complete 1`] = `
     author      = {Costa, Luciola da C Menezes and Maher, Christopher G and McAuley, James H and Hancock, Mark J and Herbert, Robert D and Refshauge, Kathryn M and Henschke, Nicholas},
     volume      = {339},
     doi         = {10.1136/bmj.b3829},
-    year        = {2009-10-06},
+    date        = {2009-10-06},
     pages       = {b3829},
     journal     = {BMJ}
 }
@@ -1446,7 +1538,7 @@ exports[`parses correctly for complete 1`] = `
     volume      = {391},
     doi         = {10.1016/S0140-6736(18)30489-6},
     publisher   = {Elsevier},
-    year        = {2018-06-09},
+    date        = {2018-06-09},
     pages       = {2368-2383},
     journal     = {The Lancet}
 }
@@ -1458,7 +1550,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {1},
     volume      = {160},
     doi         = {10.1097/j.pain.0000000000001384},
-    year        = {2019},
+    date        = {2019},
     pages       = {19-27},
     journal     = {Pain}
 }
@@ -1471,7 +1563,7 @@ exports[`parses correctly for complete 1`] = `
     volume      = {306},
     doi         = {10.1038/306686a0},
     place       = {England},
-    year        = {1983-12},
+    date        = {1983-12},
     pages       = {686-688},
     journal     = {Nature}
 }
@@ -1483,7 +1575,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {3 Suppl},
     volume      = {152},
     doi         = {10.1016/j.pain.2010.09.030},
-    year        = {2011-03},
+    date        = {2011-03},
     pages       = {S2-S15},
     journal     = {Pain}
 }
@@ -1496,7 +1588,7 @@ exports[`parses correctly for complete 1`] = `
     volume      = {85},
     doi         = {10.1016/s0304-3959(99)00242-0},
     place       = {United States},
-    year        = {2000-04},
+    date        = {2000-04},
     pages       = {317-332},
     journal     = {Pain}
 }
@@ -1509,7 +1601,7 @@ exports[`parses correctly for complete 1`] = `
     volume      = {153},
     doi         = {10.1016/j.pain.2011.12.009},
     place       = {United States},
-    year        = {2012-06},
+    date        = {2012-06},
     pages       = {1144-1147},
     journal     = {Pain}
 }
@@ -1522,7 +1614,7 @@ exports[`parses correctly for complete 1`] = `
     volume      = {156},
     doi         = {10.1016/j.pain.0000000000000014},
     place       = {United States},
-    year        = {2015-01},
+    date        = {2015-01},
     pages       = {35-38},
     journal     = {Pain}
 }
@@ -1535,7 +1627,7 @@ exports[`parses correctly for complete 1`] = `
     volume      = {17},
     doi         = {10.1016/j.jpain.2016.06.012},
     publisher   = {Elsevier Inc},
-    year        = {2016},
+    date        = {2016},
     pages       = {1105-1115},
     journal     = {Journal of Pain}
 }
@@ -1547,7 +1639,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {3},
     volume      = {2019},
     doi         = {10.7717/peerj.6486},
-    year        = {2019},
+    date        = {2019},
     pages       = {1-20},
     journal     = {PeerJ}
 }
@@ -1559,7 +1651,7 @@ exports[`parses correctly for complete 1`] = `
     doi         = {10.1037/11081-000},
     publisher   = {Liverwright Publishing Corporation},
     place       = {New York, NY, US},
-    year        = {1928}
+    date        = {1928}
 }
 
 
@@ -1568,7 +1660,7 @@ exports[`parses correctly for complete 1`] = `
     author      = {Barlow, D H and Nock, M K and Hersen, M},
     publisher   = {Pearson/Allyn and Bacon},
     place       = {Boston, MA},
-    year        = {2009}
+    date        = {2009}
 }
 
 
@@ -1577,7 +1669,7 @@ exports[`parses correctly for complete 1`] = `
     author      = {Kazdin, Alan E},
     publisher   = {Oxford University Press},
     place       = {New York, NY},
-    year        = {2011}
+    date        = {2011}
 }
 
 
@@ -1587,7 +1679,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {1},
     volume      = {3},
     doi         = {10.1016/j.jcbs.2013.10.002},
-    year        = {2014},
+    date        = {2014},
     pages       = {51-64},
     journal     = {Journal of Contextual Behavioral Science}
 }
@@ -1598,7 +1690,7 @@ exports[`parses correctly for complete 1`] = `
     author      = {Vlaeyen, Johan W S and Wicksell, Rikard K and Simons, Laura E and Gentili, Charlotte and De, Tamal Kumar and Tate, Robyn L and Vohra, Sunita and Punja, Salima and Linton, Steven J and Sniehotta, Falko F and Onghena, Patrick},
     volume      = {70},
     doi         = {10.1007/s40732-020-00402-5},
-    year        = {2020},
+    date        = {2020},
     pages       = {659--670},
     journal     = {The Psychological Record}
 }
@@ -1610,7 +1702,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {2},
     volume      = {15},
     doi         = {10.1037/a0017736},
-    year        = {2010},
+    date        = {2010},
     pages       = {124-144},
     journal     = {Psychological Methods}
 }
@@ -1624,7 +1716,7 @@ exports[`parses correctly for complete 1`] = `
     doi         = {10.1080/00223980.1975.9923926},
     publisher   = {Journal Press, etc.},
     place       = {Provincetown, Mass., etc.},
-    year        = {1975-05-01},
+    date        = {1975-05-01},
     pages       = {57},
     journal     = {Journal of Psychology}
 }
@@ -1636,7 +1728,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {2},
     volume      = {71},
     doi         = {10.1177/001440290507100203},
-    year        = {2005},
+    date        = {2005},
     pages       = {165-179},
     journal     = {Exceptional Children}
 }
@@ -1649,7 +1741,7 @@ exports[`parses correctly for complete 1`] = `
     volume      = {18},
     doi         = {10.1111/j.1467-8721.2009.01619.x},
     publisher   = {SAGE Publications Inc},
-    year        = {2009-04-01},
+    date        = {2009-04-01},
     pages       = {112-117},
     journal     = {Current Directions in Psychological Science}
 }
@@ -1661,7 +1753,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {27},
     volume      = {115},
     doi         = {10.1073/pnas.1711978115},
-    year        = {2018-07-03},
+    date        = {2018-07-03},
     pages       = {E6106 LP - E6115},
     journal     = {Proceedings of the National Academy of Sciences}
 }
@@ -1672,7 +1764,7 @@ exports[`parses correctly for complete 1`] = `
     author      = {Ferron, John and Ware, William},
     number      = {2},
     volume      = {63},
-    year        = {1995},
+    date        = {1995},
     pages       = {167-178},
     journal     = {The Journal of Experimental Education}
 }
@@ -1684,7 +1776,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {3},
     volume      = {64},
     doi         = {10.1080/00220973.1996.9943805},
-    year        = {1996},
+    date        = {1996},
     pages       = {231-239},
     journal     = {Journal of Experimental Education}
 }
@@ -1697,7 +1789,7 @@ exports[`parses correctly for complete 1`] = `
     volume      = {10},
     publisher   = {Pergamon Press, Inc.},
     place       = {US},
-    year        = {1988},
+    date        = {1988},
     pages       = {229-242},
     journal     = {Behavioral Assessment}
 }
@@ -1709,7 +1801,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {4},
     volume      = {38},
     doi         = {10.1177/0145445513510931},
-    year        = {2014},
+    date        = {2014},
     pages       = {477-496},
     journal     = {Behavior Modification}
 }
@@ -1721,7 +1813,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {4},
     volume      = {51},
     doi         = {https://doi.org/10.1006/anbe.1996.0077},
-    year        = {1996},
+    date        = {1996},
     pages       = {733-738},
     journal     = {Animal Behaviour}
 }
@@ -1733,7 +1825,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {4},
     volume      = {17},
     doi         = {10.1037/a0029312},
-    year        = {2012},
+    date        = {2012},
     pages       = {510-550},
     journal     = {Psychological Methods}
 }
@@ -1746,7 +1838,7 @@ exports[`parses correctly for complete 1`] = `
     volume      = {23},
     doi         = {10.1177/002246699002300407},
     publisher   = {SAGE Publications Inc},
-    year        = {1990-01-01},
+    date        = {1990-01-01},
     pages       = {436-449},
     journal     = {The Journal of Special Education}
 }
@@ -1758,7 +1850,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {3},
     volume      = {23},
     doi         = {10.1901/jaba.1990.23-341},
-    year        = {1990},
+    date        = {1990},
     pages       = {341-351},
     journal     = {Journal of applied behavior analysis}
 }
@@ -1767,7 +1859,7 @@ exports[`parses correctly for complete 1`] = `
 @article{Kratochwill2010a,
     title       = {Single-case design technical documentation},
     author      = {Kratochwill, T. R. and Hitchcock, J and Horner, Robert H and Levin, J R and Odom, S L and Rindskopf, D M and Shadish, W R},
-    year        = {2010}
+    date        = {2010}
 }
 
 
@@ -1777,7 +1869,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {1},
     volume      = {19},
     doi         = {10.1017/BrImp.2017.17},
-    year        = {2018},
+    date        = {2018},
     pages       = {18-32},
     journal     = {Brain Impairment}
 }
@@ -1790,7 +1882,7 @@ exports[`parses correctly for complete 1`] = `
     volume      = {48},
     doi         = {10.1016/j.beth.2016.04.008},
     publisher   = {Elsevier B.V.},
-    year        = {2017},
+    date        = {2017},
     pages       = {97-114},
     journal     = {Behavior Therapy}
 }
@@ -1801,7 +1893,7 @@ exports[`parses correctly for complete 1`] = `
     author      = {Edgington, Eugene S and Onghena, Patrick},
     publisher   = {Chapman \\\\& Hall/CRC},
     place       = {Boca Raton, FL},
-    year        = {2007}
+    date        = {2007}
 }
 
 
@@ -1811,7 +1903,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {2},
     volume      = {52},
     doi         = {10.3758/s13428-019-01266-6},
-    year        = {2020},
+    date        = {2020},
     pages       = {654-666},
     journal     = {Behavior Research Methods}
 }
@@ -1823,7 +1915,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {3-4},
     volume      = {24},
     doi         = {10.1080/09602011.2013.818564},
-    year        = {2014},
+    date        = {2014},
     pages       = {507-527},
     journal     = {Neuropsychological Rehabilitation}
 }
@@ -1835,7 +1927,7 @@ exports[`parses correctly for complete 1`] = `
     doi         = {10.4324/9780203771587},
     publisher   = {Routledge},
     place       = {New York, NY},
-    year        = {1988}
+    date        = {1988}
 }
 
 
@@ -1844,7 +1936,7 @@ exports[`parses correctly for complete 1`] = `
     author      = {Vohra, Sunita and Shamseer, Larissa and Sampson, Margaret and Bukutu, Cecilia and Schmid, Christopher H. and Tate, Robyn and Nikles, Jane and Zucker, Deborah R. and Kravitz, Richard and Guyatt, Gordon and Altman, Douglas G. and Moher, David},
     volume      = {350},
     doi         = {10.1136/bmj.h1738},
-    year        = {2015},
+    date        = {2015},
     pages       = {h1738},
     journal     = {BMJ (Clinical research ed.)}
 }
@@ -1856,7 +1948,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {8},
     volume      = {54},
     doi         = {10.1037/0003-066X.54.8.594},
-    year        = {1999},
+    date        = {1999},
     pages       = {594-604},
     journal     = {American Psychologist}
 }
@@ -1867,7 +1959,7 @@ exports[`parses correctly for complete 1`] = `
     author      = {Onghena, Patrick},
     number      = {2},
     volume      = {14},
-    year        = {1992},
+    date        = {1992},
     pages       = {153-171},
     journal     = {Behavioral Assessment}
 }
@@ -1880,7 +1972,7 @@ exports[`parses correctly for complete 1`] = `
     volume      = {50},
     doi         = {10.3758/s13428-017-0885-7},
     publisher   = {Behavior Research Methods},
-    year        = {2018},
+    date        = {2018},
     pages       = {557-575},
     journal     = {Behavior Research Methods}
 }
@@ -1892,7 +1984,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {2},
     volume      = {15},
     doi         = {10.1371/journal.pone.0228355},
-    year        = {2020},
+    date        = {2020},
     pages       = {1-21},
     journal     = {PLoS ONE}
 }
@@ -1904,7 +1996,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {2},
     volume      = {70},
     doi         = {10.1080/00220970209599504},
-    year        = {2002},
+    date        = {2002},
     pages       = {165-178},
     journal     = {Journal of Experimental Education}
 }
@@ -1916,7 +2008,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {3},
     volume      = {52},
     doi         = {10.3758/s13428-019-01320-3},
-    year        = {2020},
+    date        = {2020},
     pages       = {1355-1370},
     journal     = {Behavior Research Methods}
 }
@@ -1929,7 +2021,7 @@ exports[`parses correctly for complete 1`] = `
     volume      = {20},
     doi         = {10.1016/j.jpain.2018.10.006},
     publisher   = {Elsevier Inc.},
-    year        = {2019},
+    date        = {2019},
     pages       = {472.e1-472.e12},
     journal     = {Journal of Pain}
 }
@@ -1941,7 +2033,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {1},
     volume      = {57},
     doi         = {10.1027/1618-3169/a000005},
-    year        = {2009},
+    date        = {2009},
     pages       = {36-45},
     journal     = {Experimental Psychology}
 }
@@ -1951,7 +2043,7 @@ exports[`parses correctly for complete 1`] = `
     title       = {Tactor},
     author      = {Dancer Design},
     place       = {St. Helens, UK},
-    year        = {00}
+    date        = {00}
 }
 
 
@@ -1959,7 +2051,7 @@ exports[`parses correctly for complete 1`] = `
     title       = {DS7A High Voltage Constant Current Stimulator},
     author      = {Digitimer Limited},
     place       = {Hertfordshire, UK},
-    year        = {00}
+    date        = {00}
 }
 
 
@@ -1969,7 +2061,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {7},
     volume      = {18},
     doi         = {10.1093/pm/pnw221},
-    year        = {2017},
+    date        = {2017},
     pages       = {1314-1325},
     journal     = {Pain Medicine}
 }
@@ -1982,7 +2074,7 @@ exports[`parses correctly for complete 1`] = `
     doi         = {10.1002/0470013192.bsa625},
     publisher   = {John Wiley \\\\& Sons, Ltd},
     place       = {Hoboken, NJ},
-    year        = {2005-04-15},
+    date        = {2005-04-15},
     pages       = {1850-1854},
     journal     = {Encyclopedia of statistics in behavioral science}
 }
@@ -1995,7 +2087,7 @@ exports[`parses correctly for complete 1`] = `
     volume      = {51},
     doi         = {10.3758/s13428-018-1084-x},
     publisher   = {Behavior Research Methods},
-    year        = {2019},
+    date        = {2019},
     pages       = {2454-2476},
     journal     = {Behavior Research Methods}
 }
@@ -2005,7 +2097,7 @@ exports[`parses correctly for complete 1`] = `
     title       = {Shiny SCDA},
     author      = {De, Tamal Kumar and Michiels, Bart and Vlaeyen, Johan W S and Onghena, Patrick},
     number      = {Version 2.7},
-    year        = {2020}
+    date        = {2020}
 }
 
 
@@ -2016,7 +2108,7 @@ exports[`parses correctly for complete 1`] = `
     volume      = {21},
     doi         = {10.1080/17518423.2016.1197708},
     publisher   = {Taylor \\\\& Francis},
-    year        = {2018},
+    date        = {2018},
     pages       = {290-311},
     journal     = {Developmental Neurorehabilitation}
 }
@@ -2029,7 +2121,7 @@ exports[`parses correctly for complete 1`] = `
     volume      = {72},
     doi         = {10.1080/00223980.1969.10543491},
     publisher   = {Routledge},
-    year        = {1969-07-01},
+    date        = {1969-07-01},
     pages       = {143-149},
     journal     = {The Journal of Psychology}
 }
@@ -2041,1175 +2133,7 @@ exports[`parses correctly for complete 1`] = `
     number      = {3},
     volume      = {30},
     publisher   = {[Royal Statistical Society, Wiley]},
-    year        = {1968},
-    pages       = {582-598},
-    journal     = {Journal of the Royal Statistical Society. Series B (Methodological)}
-}
-
-\\\\end{filecontents}
-
-\\\\begin{document}
-
-  
-
-Classical Conditioning for Pain: The Development of a Customized Single-Case Experimental Design
-
-
-
-
-
-
-
-
-
-\\\\textbf{Keywords}: single-case, classical conditioning, pain, randomization test, statistical power.
-
-\\\\section{Take-Home Message}
-
-We wanted to design a single-case experiment to test whether classical conditioning can influence pain thresholds. We settled on a customized AB phase design for which we ran pilot tests and a power study. The results indicated that this single-case design can be used to test our hypothesis.
-
-\\\\section{Abstract}
-
-Single-case experiments are increasingly popular in the behavioral sciences. Due to their flexibility, single-case designs can be customized to test a variety of experimental hypotheses. We were interested in using a single-case experimental approach to test whether pain thresholds can be influenced by Pavlovian classical conditioning. Following the example of earlier studies into this topic, we planned to measure whether participants would more frequently report specific electrocutaneous stimuli as painful when they were presented with specific vibrotactile stimuli that had previously been associated with painful electrocutaneous stimuli. First, we decided on a mean difference effect size measure derived from the Sensation and Pain Rating Scale ratings for the electrocutaneous stimuli provided by the participants. Next, we discussed several possible single-case designs and evaluated their benefits and shortcomings. Then, we ran pilot tests with a few participants based on the possible single-case designs. We also conducted a simulation study to estimate the power of a randomization test to test our hypothesis using different values for effect size, number of participants, and number of measurements. Finally, we decided on a sequentially replicated AB phase design with 30 participants based on the results from the pilot tests and the power study. We plan to implement this single-case design in a future experiment to test our hypothesis. 
-
-\\\\section{Purpose}
-
-In this manuscript, our purpose is to describe how we used a trial and error approach to design a customized single-case experiment (SCE) to test the effect of classical conditioning on pain thresholds. We hope that this information helps readers who plan to implement an SCE in better understanding the steps involved and possible challenges. We wish to focus on using the flexible nature of SCEs to adapt to the requirements of the experiment. We also wish to highlight the necessity of exploring various available statistical methods and statistical power requirements for these methods prior to starting the experiment. Finally, we demonstrate how SCEs can serve as a viable avenue for pilot-testing new therapies and treatments at a small scale before implementing larger scale studies.
-
-\\\\section{Introduction}
-
-\\\\subsection{Classical Conditioning}
-
-Persistent pain—pain that is still felt after bodily tissue has healed—is a major healthcare problem that is poorly understood and, consequently, difficult to treat effectively \\\\parencite{Breivik2006, Tsang2008, Costa2009, Foster2018, Treede2019}. While there are key models that go some way towards explaining how pain can persist without active tissue damage \\\\parencite{Woolf1983, Woolf2011, Vlaeyen2000, Vlaeyen2012}, certain pain presentations remain unexplained. The imprecision hypothesis was proposed to address these unexplained presentations, and is founded on the idea that pain can be modulated by pain-associated cues—specifically, via “classical conditioning” \\\\parencite{Moseley2015}. 
-
-Our study design builds on two previous experiments \\\\parencite{Madden2016, Traxler2019}, which followed a Pavlovian or “classical” conditioning design \\\\parencite{Pavlov1928} to test whether neutral but pain-associated cues can bias a participant's decision about whether a stimulus is painful or non-painful. In the differential classical conditioning design used here, one neutral cue is paired with a painful electrocutaneous stimulus, while another neutral cue is paired with a non-painful electrocutaneous stimulus. It is expected that participants form associations between each cue and painfulness, such that subsequent perception of an ambiguous electrical stimulus is modified, dependent on the simultaneous presentation of one of the neutral cues.
-
-We set out to design an SCE to test this hypothesis. Due to the before (conditioning) and after (conditioning) structure of multiple observations required for each participant, SCE designs are perfectly suited for testing this hypothesis.
-
-\\\\subsection{Single-Case Experiments}
-
-SCEs are experiments in which the effect of manipulating an independent variable is observed in a single entity \\\\parencite{Barlow2009, Kazdin2011}. Variables of interest in the entity, which is often a single participant, are measured repeatedly over a period of time with the purpose of establishing a causal relationship between the independent variable, commonly referred to as the treatment condition, and the observed entity. SCEs are increasingly popular in behavioral and educational sciences due to their flexibility, low cost, and focus on effects of the intervention in individual participants \\\\parencite{Heyvaert2014}. SCEs may be preferable to group-based designs, where the existence or magnitude of the effect \\\\emph{within} an individual is more relevant than the average effect \\\\emph{across} a group of individuals. The lower cost and flexibility of SCEs also make them ideal for studying new theories and interventions, as is the case in this study \\\\parencite{Vlaeyen2020}.
-
-In SCEs, assignment of the treatment conditions to measurement occasions can be randomized to strengthen internal validity \\\\parencite{Kratochwill2010, Edgington1975}. Additionally, replication using multiple participants strengthens external validity and generalizability of the results \\\\parencite{Kratochwill2010, Horner2005}. In our study design, we incorporated both randomization and replication to enhance internal and external validity of the experiment. 
-
-\\\\subsection{Advantages of SCEs for Classical Conditioning}
-
-SCEs are well suited to research questions about within-individual processes. Although group designs are historically respected, they are typically analyzed in a way that aggregates data from all individuals to estimate an effect at the group level—an effect that may be non-existent in any of the individuals within the group \\\\parencite{Molenaar2009}. This aggregation approach obscures the true, within-individual effect, and the between-individual variability of that effect (which, itself, is typically worthy of attention; \\\\parencite{Fisher2018}. Of course, it is possible to consider within-individual changes in some group designs, but an SCE offers a superior approach to achieving a sufficiently powered (> 80\\\\%) examination of within-subject effects \\\\parencite{Ferron1995, Ferron1996}. Whereas traditional group-based designs generate knowledge on the population level only, SCEs generate knowledge at the level of the individual. Finally, findings from group-based designs cannot be generalized towards individuals, while SCEs can be aggregated for insights on populations.
-
-\\\\subsection{Analyzing SCEs}
-
-SCEs are often difficult to analyze due to the presence of serial correlation in observed data and nonadherence to distributional assumptions \\\\parencite{Busk1988, Solomon2014, Adams1996, Smith2012}. Traditionally, visual analysis was the preferred method for analyzing SCE data, but researchers now recommend quantitative statistical analysis to complement visual analysis \\\\parencite{Ottenbacher1990, Matyas1990, Kratochwill2010a, Manolov2018, Manolov2017}. Specifically, for experiments involving user-reported ordinal data, such as the current experiment, nonparametric statistical methods may be best suited for analysis, as the observed data may not adhere to distributional assumptions required for popular parametric methods. 
-
-Randomization tests (RTs) are nonparametric hypothesis tests recommended for analyzing SCEs \\\\parencite{Edgington1975, Adams1996, Heyvaert2014}. RTs derive their validity from the random assignment of treatment conditions to experimental units, which in the case of SCEs, are measurement occasions \\\\parencite{Edgington2007}. RTs do not require any distributional assumptions for the observed data. Additionally, RTs are immensely flexible, and can be adapted for any SCE design, randomization scheme, and effect size measure as the test statistic \\\\parencite{Michiels2020, Heyvaert2014a, Heyvaert2014}. In our study design, we implemented a customized RT using a mean difference effect size measure as the test statistic. 
-
-\\\\subsection{Statistical Power of SCE RTs }
-
-Power analysis is an essential part of statistical hypothesis testing, particularly for determining sample size \\\\parencite{Cohen1988}. Several guidelines recommend a power analysis or at least a methodical description of how sample size was determined \\\\parencite{Vohra2015, Willkinson1999}. In the context of SCEs, power analysis can be used to determine the number of measurements necessary, and for studies with replication, the number of participants.
-
-For RTs, the randomization distribution is calculated empirically, and hence statistical power can only be estimated using computer-intensive simulations \\\\parencite{Onghena1992, Ferron1995}. Several studies have estimated the power of SCE RTs for various design conditions \\\\parencite{Ferron1996, Ferron1995, Michiels2018, Bouwmeester2020, Ferron2002, De2020}. Although the results from these studies can be used as a reference, they are true only for the design parameters and simulated data distributions considered. Since we acquired unusual ordinal observed data, power ideally needed to be estimated using simulated data of the same type as this study would generate.
-
-\\\\section{Methods}
-
-\\\\subsection{Experimental Setup}
-
-In this experiment, participants receive two different types of stimuli: a vibrotactile stimulation as the conditioned stimulus (CS) and an electrocutaneous stimulation as the unconditioned stimulus (US). At first, one neutral stimulus (a vibrotactile stimulus, denoted as CS+) is paired with a painful stimulus (a high-intensity electrocutaneous stimulus, denoted as US\\\\textsubscript{high}), whereas a different neutral stimulus (a vibrotactile stimulus, denoted as CS-, applied to a different location) is paired with a non-painful stimulus (a low-intensity electrocutaneous stimulus, denoted as US\\\\textsubscript{low}). This procedure is expected to form an association between the CS+ and painfulness, in contrast to the CS- and non-painfulness. Later, each CS is paired with a “test stimulus” (denoted as US\\\\textsubscript{test}), an electrocutaneous stimulus of an intensity calibrated such that there is a 50\\\\% chance that the participant judges it to be painful or non-painful at baseline (i.e., before the pairing). Participants are then requested to judge each trial on a scale that distinguishes painful from non-painful events \\\\parencite{Madden2019}. The trials of interest are the CS/US\\\\textsubscript{test} pairs, as the primary hypothesis is that, due to the pairings learned early in the experiment, the participant will come to judge the US\\\\textsubscript{test} stimuli to be painful more often when they are paired with the CS+ (previously paired with a painful stimulus) than when they are paired with the CS- (previously paired with a non-painful stimulus).
-
-\\\\subsection{Laboratory Setup}
-
-The participants receive two types of stimuli at the same time, replicating the procedure in Traxler et al. \\\\parencite{Traxler2019}. Stimulus onset and timing are controlled using Affect 4.0 \\\\parencite{Spruyt2009}. A vibrotactile stimulus is delivered to the skin using tactors manufactured by Dancer Design taped to the participant's skin \\\\parencite{Dancer Design0}(Dancer Design, n.d.). This stimulus is of fixed duration and a clearly perceptible intensity. Three tactors are used in the arrangement as the source of a CS (see Figure 1). The SIDE tactor is allocated to CS\\\\textsubscript{neutral}, whereas the ABOVE and BELOW tactors are assigned to CS+ and CS- in a counterbalanced way across participants.
-
-\\\\textbf{Figure 1}
-
-\\\\emph{Arrangement of Tactors and Electrodes on the Back (Adapted From Traxler et al. , Traxler2019}\\\\emph{).}
-
-[INSERT FIGURE 1 HERE]
-
-An electrocutaneous stimulation is delivered by passing a current across two surface electrodes located at the midpoint between the tactors to serve as the US (Figure 1). The current is delivered using a DS7A constant current stimulator \\\\parencite{Digitimer Limited0}(Digitimer Limited, n.d.). The stimulation intensity is calibrated individually. The number of pulses delivered on each stimulation occasion is varied to provide a US\\\\textsubscript{high} that is usually painful, a US\\\\textsubscript{low} that is usually non-painful, and a US\\\\textsubscript{test} that is calibrated to lie close to the pain threshold, the boundary between non-painful and painful.
-
-\\\\subsection{Tactor and Electrode Preparation}
-
-On arrival, participants are seated straddling a chair in front of a desk with a computer monitor, mouse, and keyboard. Participants are asked to bend backwards to identify the point at which the greatest bend is seen. A point in the upper lumbar region is marked on the back, 2cm to the left of the spine, where the electrodes are placed such that the mark lies exactly between them. Three other points—4cm above, below, and to the left side of the electrodes—are marked, and the tactors are taped in place such that the closest border of each tactor lies at a tactor mark (Figure 1). Calibration is performed by the procedure described in Traxler et al. \\\\parencite{Traxler2019}, with the CS\\\\textsubscript{neutral} paired with each electrocutaneous stimulus. The CS\\\\textsubscript{neutral} is used to provide vibratory stimulation consistent with the CS+/CS- stimuli that are later presented in the experimental trials to ensure that any modulation of pain by the vibration itself is consistent across calibration and experimental trials. Ratings of CS\\\\textsubscript{neutral} trials from the experimental phase are not relevant to the research question and are therefore not analyzed.
-
-\\\\subsection{Experimental Trials}
-
-Based on the experimental setup discussed previously, and given the pairing of CSs and USs, the experiment for a participant can theoretically consist of five different types of trials:
-
-Training trials: Each training trial consists of one CS, with each of the three CS types used in different trials. There is no electrocutaneous stimulation (i.e., US) presented. These trials are conducted to familiarize the participants with the locations of the CS tactors. 
-
-Baseline trials: The baseline trials consist of two combinations of stimulations: a CS+ with a simultaneous US\\\\textsubscript{test} and a CS- with a simultaneous US\\\\textsubscript{test}. These trials are used to record baseline pain ratings of participants before they are conditioned to associate the painful US with a particular CS.
-
-Acquisition or learning trials: These trials consist of two combinations of stimulations: a CS+ with an US\\\\textsubscript{high} and a CS- with an US\\\\textsubscript{low}, and are meant to condition participants to associate painful US to CS+ and vice versa.
-
-Test trials: These trials are the same as the two baseline trials: a CS+ with an US\\\\textsubscript{test} and a CS- with an US\\\\textsubscript{test}, and are meant to record pain ratings of participants to test whether they have associated the painful US with CS+ and vice versa.
-
-Irrelevant trials: These trials consist of a CS\\\\textsubscript{neutral} combined with an US\\\\textsubscript{test} stimuli. These trials are noninformative and are included to satisfy the assumptions of the analytical approach; they are included only to achieve consistency in the time gaps between baseline or test trials. 
-
-\\\\subsection{Observed Variables}
-
-The participants are requested to provide two reports on each trial. First, they rate the stimulation event on the Sensation and Pain Rating Scale \\\\parencite[][SPARS; previously known as FESTNRS;]{Madden2017, Madden2019}. The SPARS is anchored at -50 (no sensation), 0 (the exact point at which the feeling transitions to pain), and 50 (worst pain imaginable). The two distinct ranges for non-painful (-50 to -1) and painful (1 to 50) are clearly marked and explained to the participants. Participants are explicitly advised to make an initial decision about whether a trial was non-painful or painful before assigning a rating from the appropriate side of the scale, without selecting 0 on SPARS. 
-
-Second, the participant indicates the location at which they feel the vibrotactile stimulus from the three options “ABOVE”, “BELOW”, and “SIDE”. This is only used to confirm that the participants are identifying the location of the stimuli correctly. Given that discrimination of the vibrotactile stimuli is necessary for differential learning, participants who fail to identify the location of the stimulus correctly in at least 75\\\\% of the trials are excluded and replaced by additional participants.
-
-\\\\subsection{Effect Size Measure and Test Statistic}
-
-We are interested in calculating whether the participants judged trials of CS+/ US\\\\textsubscript{test} and CS-/ US\\\\textsubscript{test} as painful or non-painful differently for baseline and test trials. For this purpose, we first convert the SPARS ratings to a binary variable: 0 for non-painful (-50 to -1 on SPARS) and 1 for painful (1 to 50 on SPARS). A rating of 0 on SPARS can neither be classified as painful nor as non-painful, therefore these are considered indeterminate and were marked as missing. Then, we pair two trials, a CS+/ US\\\\textsubscript{test} and a CS-/ US\\\\textsubscript{test} and calculate the difference between the corresponding binary variables. The resulting difference indicates whether the participant is rating CS+/ US\\\\textsubscript{test} and CS-/ US\\\\textsubscript{test} differently. The difference can result in three different values: 1 when the CS+/ US\\\\textsubscript{test} trial is rated as painful while the corresponding CS-/ US\\\\textsubscript{test} trial is rated as non-painful; -1 when the CS+/ US\\\\textsubscript{test} trial is rated as non-painful while the corresponding CS-/ US\\\\textsubscript{test} trial is rated as painful; and finally, 0 when both CS+/ US\\\\textsubscript{test} and CS-/ US\\\\textsubscript{test} trials are rated as painful or both are rated as non-painful. This difference value, calculated from a pair of trials, constitutes one measurement in our SCE. A simple mean difference (MD) effect size measure is calculated as the difference between the means of the difference values derived from the test trial pairs and the difference values derived from the baseline trial pairs. Due to the flexibility of RTs, this effect size measure can also be used as the test statistic \\\\parencite{Heyvaert2014a}. 
-
-\\\\subsection{Single-Case Design }
-
-In this section, we describe our considerations regarding which SCE design to use in our experiment. We discuss several initial design possibilities that were chosen by trial and error and conclude with a final design.
-
-\\\\subsubsection{Initial Design Options}
-
-Randomized Block Design. Since each of our measurements requires a pair of trials, we immediately considered a randomized block design (RBD) for the experiment. In an RBD SCE, similar to an RBD in traditional group designs, the measurement occasions are divided into small blocks, with each block containing administrations of all treatment conditions \\\\parencite{Onghena2005}. For our study, a possible block consists of the two baseline (or test) trials, a CS+/ US\\\\textsubscript{test} and a CS-/ US\\\\textsubscript{test}, in random order. Hence, the experiment for a participant can consist of several blocks of baseline trial pairs, followed by a period of acquisition trials to condition the participants, followed by several blocks of test trial pairs. However, this design is immediately rejected, as an RBD SCE requires all treatment conditions to be applied inside a block. Since the effects of conditioning are acquired over a period of time and are expected to carry over to future trials, true alternation of treatment conditions is not possible in this experiment. 
-
-AB Phase Design with In-Phase Acquisition. When we rejected the RBD, we realized that the experiment should consist of periods of baseline trial pairs and periods of test trial pairs. The simplest method to achieve this is using an AB phase design, with an A phase as the baseline condition and a subsequent B phase as the test condition \\\\parencite{Barlow2009}. In favor of internal validity, the phase transition is preferably randomized. Each phase consists of several blocks of trials, each of which yields one measurement. Each measurement block in the baseline phase consists of \\\\emph{k} irrelevant trial pairs (two CS\\\\textsubscript{neutral}/ US\\\\textsubscript{test}) and a baseline trial pair (a CS+/ US\\\\textsubscript{test} and a CS-/ US\\\\textsubscript{test} in random order). Similarly, each measurement block in the test phase consists of \\\\emph{k} acquisition trial pairs (a CS+/ US\\\\textsubscript{high} and a CS-/ US\\\\textsubscript{low} in random order) followed by a test trial pair (a CS+/ US\\\\textsubscript{test} and a CS-/ US\\\\textsubscript{test} in random order). The number of irrelevant or acquisition trial pairs in each block, or \\\\emph{k}, is set based on the required level of acquisition. A lower \\\\emph{k} would mean we would need a lower number of trials to achieve a certain number of measurements, but would also typically result in weaker acquisition of associations, and vice versa for a higher \\\\emph{k}. Unfortunately, this design has low acquisition of the associations as there is no learning period. Additionally, RTs for AB phase designs require a large number of measurements to achieve sufficient statistical power \\\\parencite{Michiels2019, Ferron1995}. As a result, the experiment for a participant would need a very large number of trials over a significantly long time to ensure both high acquisition and enough measurements. As a result, this design is rejected in favor of a slightly modified AB phase design. A similar ABAB phase design is also rejected due to the potentially large number of trials required and possibility of carry-over effects between phases. 
-
-\\\\subsubsection{Final Design}
-
-The final design combines elements from both previous designs: an AB phase design with both out-of-phase and in-phase learning. The baseline phase for this design contains several pairs of baseline trial pairs (a CS+/ US\\\\textsubscript{test} and a CS-/ US\\\\textsubscript{test} in random order), followed by a period of learning with only acquisition trial pairs (a CS+/ US\\\\textsubscript{high} and a CS-/ US\\\\textsubscript{low} in random order). Finally, the test phase includes test trial pairs (a CS+/ US\\\\textsubscript{test} and a CS-/ US\\\\textsubscript{test} in random order) with a few acquisition trial pairs in between at regular intervals to reinforce the associations and hence prevent extinction. The time of onset of the test phase is randomized. The experiment starts with a few training trials before the baseline phase. 
-
-The number of trials and the number of participants are to be decided based on a power study and some pilot experiments. However, the guidelines for phase designs by Kratochwill et al. \\\\parencite{Kratochwill2010a} recommend at least five measurements in both baseline and test phases. Since we are also curious about any increase or decrease in acquisition over time, we decide to include at least 15 measurements in the test phase. 
-
-Due to the use of specialized equipment and individual calibration, multiple participants cannot be tested at the same time. Hence, simultaneous replication using a multiple baseline design (MBD), which is able to control for environmental confounding factors, is not possible \\\\parencite{Barlow2009, Kazdin2011}. Instead, the experiment is to be run as a sequentially replicated AB phase design experiment. 
-
-\\\\subsection{Randomization Scheme and RT}
-
-The design is randomized using intervention start point randomization for each participant \\\\parencite{Edgington1975}. In this scheme, the total number of measurements and the minimum number of measurements in each phase is decided beforehand, and the intervention can start at any time point that satisfies these restrictions. Therefore, if the number of measurements is \\\\emph{N}, and the minimum number of measurements in A and B phase are \\\\emph{a} and \\\\emph{b} respectively, the number of possible randomizations is \\\\emph{r} = \\\\emph{N} -- \\\\emph{a} -- \\\\emph{b} + 1. For \\\\emph{P} participants with the same randomization scheme, the total number of randomizations for the replicated experiment is \\\\emph{r}\\\\textsuperscript{\\\\emph{P}}. 
-
-We conduct a single RT for all participants combined based on these \\\\emph{r}\\\\textsuperscript{\\\\emph{P}} randomizations. The null hypothesis for this RT is that no difference exists between the baseline phase measurements and test phase measurements for all participants. As discussed previously, the measurements represent whether participants rate CS+/ US\\\\textsubscript{test} trials as painful more frequently than CS-/ US\\\\textsubscript{test} trials. Since the Pavlovian conditioning procedure is aimed at participants perceiving the CS+/ US\\\\textsubscript{test} as more painful, the RT is one-sided with the alternate hypothesis being that the test phase measurements are higher than the baseline phase measurements for at least one participant. This RT can be conducted with the average (across participants) of the MD effect size measure discussed previously as the combined test statistic.
-
-We use the Shiny SCDA (Single-Case Data Analysis) web app for SCEs to randomize and analyze the experiment \\\\parencite{De2020a}. Whereas this web app does not include an option for simultaneously replicated AB phase design, it does include an MBD option. The MBD option in Shiny SCDA uses the Koehler-Levin regulated randomization procedure \\\\parencite{Levin2018}, which, when using an identical set of possible start points for all participants, is analogous to our randomization scheme. Hence, we can both randomly select test phase start points and run the RT in Shiny SCDA. Additionally, we can plot the observed data for visual analysis in Shiny SCDA. 
-
-\\\\subsection{Pilot Tests}
-
-We ran several pilot tests to estimate possible effect sizes and to test possible design choices. We first tested nine participants under slight variations of our initial design choice. Later, after a simulated power study and adjustments to the design, we tested another four participants. We analyzed these four tests using visual analysis and an RT in Shiny SCDA. These four tests were, however, not randomized, and the test phase for all four participants started at the tenth measurement occasion. However, for the purposes of demonstration, we ignored the assumption of randomization. We will discuss the results from these pilot tests, and the final four tests in particular in the Results section. 
-
-There were two important takeaways from the first nine pilot tests that were very useful for the design of the power study. First, the observed MD effect sizes were extremely small. The average effect size from the first nine tests was slightly negative at -0.037, with a maximum of 0.143 and a minimum of -0.400. Second, the pilot tests also revealed difficulties in running the experiment for more than 30-35 minutes for a participant. Considering each trial took around 15 seconds, this gave us a maximum of around 140 trials.
-
-\\\\subsection{Power Study}
-
-To ensure sufficient statistical power for our RT, we needed to first estimate power for different values of number of measurements (\\\\emph{N}) and number of participants (\\\\emph{P}), and then choose sufficiently high values of \\\\emph{N} and \\\\emph{P} for the experiment. 
-
-Ideally, we would want to select the maximum \\\\emph{N} possible within the limits of how long an experiment can be reasonably run. This strategy presents us with two advantages. First, increasing \\\\emph{N} should result in reduction in the variability of the estimate of effect size. Second, maximizing \\\\emph{N} should allow us to achieve sufficient power with lower \\\\emph{P}, which directly equates to lower cost for the experiment.
-
-We used the Monte Carlo method used by Ferron and Onghena \\\\parencite{Ferron1996} to estimate power. In this method, several datasets are simulated under a set of simulation conditions. The proportion of these simulated datasets in which the RT leads to a rejection of the null hypothesis gives an estimate of statistical power for the given set of simulation conditions. A simulation study of such complexity is both difficult to program and computationally intensive to execute. Fortunately, we were able to modify and repurpose R code used by De, Michiels, Tanious, et al. \\\\parencite{De2020} for this study. 
-
-\\\\subsubsection{Simulation Conditions}
-
-The following three simulation conditions were varied for this power study:
-
-Effect size: Based on the low effect sizes observed in the pilot tests, we simulated MD effect sizes of 0.1, 0.2, 0.3, 0.4, and 0.5 for the simulated observed data.
-
-Number of measurements: We decided on a minimum of five measurements in the baseline phase and a minimum of 15 measurements in the test phase. As a result, the experiment needs more than 20 measurements. However, from the pilot tests it was evident that an experiment with more than 140 trials (70 trial pairs) was not feasible. Considering around 30 trials are required for the training and learning periods, and a few more acquisition trails for reinforcement during test phase, it was difficult to have more than 40 measurements (80 trials). Hence, we used 25, 30, 35, and 40 measurements for simulated data. 
-
-Number of participants: Since the pilot tests revealed a small effect size, and the number of measurements is also limited, to ensure high power we considered a large range of participant count at 10, 20, 30, 40, and 50. 
-
-\\\\subsubsection{Other Simulation Parameters}
-
-For the power study, we wanted to simulate observed values that were similar to the experiment. For the baseline, we assumed a symmetric distribution around 0 for the SPARS rating. Therefore, the painful/non-painful ratings were expected to be 0s and 1s equally for both CS+/ US\\\\textsubscript{test} and CS-/ US\\\\textsubscript{test} trials. Hence, an observed value corresponding to a trial pair in the baseline was expected to be 1 with 25\\\\% probability, -1 with 25\\\\% probability, and 0 with 50\\\\% probability. We simulated observed values as 1, -1, and 0 with these probabilities. For the test phase, we increased the probability of 1 by half the selected effect size and decreased the probability of -1 by half the selected effect size. This resulted in an expected MD effect size equal to the selected effect size. 
-
-Since the number of randomizations for the RT was huge, we simulated Monte Carlo RTs with 1000 randomizations \\\\parencite{Edgington1969}. For estimating power, we simulated 10000 datasets for each set of simulation conditions. Finally, we used a 5\\\\% level of significance for the simulated RTs.
-
-The simulations were run on supercomputer nodes at the Flemish Supercomputer Center (Leuven, Belgium). This allowed testing more simulation conditions and achieve high accuracy simulating a large number of datasets for each simulation condition; however, the simulations can also be run at a smaller scale on a personal computer. 
-
-\\\\section{Results}
-
-\\\\subsection{Power Analysis}
-
-The results from the power study (Table 1) revealed that due to the relatively small effect sizes and restricted number of measurements, the number of participants need to be high to achieve 80\\\\% power. If we restrict the number of measurements to 30, which allows sufficient acquisition trials for learning and reinforcement within 30 minutes, 30 participants result in sufficient power even with a moderate effect size. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\\\\textbf{Table 1}
-
-\\\\emph{Estimated Power Simulated Using Different Values for Effect Size, Number of Measurements, and Number of Participants.}
-
-
-\\\\begin{table}
-
-  
-\\\\begin{tabular}{c  c  c  c  c  c  c}
-
-  No. of measurements & No. of participants & Effect size\\\\\\\\
-0.1 & 0.2 & 0.3 & 0.4 & 0.5\\\\\\\\
-25 & 10 & 10.3 & 19.0 & 32.2 & 48.6 & 66.1\\\\\\\\
-  & 20 & 13.4 & 29.3 & 51.4 & 74.4 & 90.0\\\\\\\\
-  & 30 & 16.4 & 38.8 & 66.1 & 87.9 & 97.7\\\\\\\\
-  & 40 & 18.9 & 47.5 & 77.4 & 94.8 & 99.5\\\\\\\\
-  & 50 & 22.2 & 54.7 & 85.1 & 97.9 & 99.9\\\\\\\\
-30 & 10 & 13.0 & 25.9 & 45.0 & 66.1 & 83.9\\\\\\\\
-  & 20 & 17.9 & 42.0 & 70.6 & 90.8 & 98.5\\\\\\\\
-  & 30 & 21.9 & 54.9 & 86.0 & 97.9 & 99.9\\\\\\\\
-  & 40 & 26.4 & 65.2 & 92.7 & 99.6 & 100.0\\\\\\\\
-  & 50 & 30.0 & 73.4 & 96.6 & 99.9 & 100.0\\\\\\\\
-35 & 10 & 14.3 & 31.4 & 55.0 & 77.4 & 92.7\\\\\\\\
-  & 20 & 21.0 & 51.4 & 81.0 & 96.6 & 99.7\\\\\\\\
-  & 30 & 27.4 & 65.5 & 93.3 & 99.7 & 100.0\\\\\\\\
-  & 40 & 32.8 & 77.1 & 97.5 & 99.9 & 100.0\\\\\\\\
-  & 50 & 37.4 & 84.7 & 99.1 & 100.0 & 100.0\\\\\\\\
-40 & 10 & 15.4 & 36.0 & 63.9 & 84.9 & 96.3\\\\\\\\
-  & 20 & 23.6 & 58.1 & 88.4 & 98.6 & 100.0\\\\\\\\
-  & 30 & 30.7 & 74.0 & 96.8 & 99.9 & 100.0\\\\\\\\
-  & 40 & 37.0 & 84.6 & 99.2 & 100.0 & 100.0\\\\\\\\
-  & 50 & 42.8 & 90.4 & 99.8 & 100.0 & 100.0\\\\\\\\
-
-
-\\\\end{tabular}
-
-
-\\\\end{table}
-
-
-Based on these results, we decided to run the final set of pilot tests with 30 measurements. We decided on six training trials (two trials for each type of CS) before the baseline phase, 24 acquisition trials between the baseline and test phases, and additionally one acquisition trial pair for reinforcement after two test trial pairs during the test phase. With a minimum of five measurements in the baseline phase, and a minimum of 15 measurements in the test phase, this design allows for 11 possible randomizations. Depending on the number of measurements in the test phase which will vary based on the test phase start point selected, the experiment could theoretically consist of 104 to 114 trials. This is the design we intend to follow in the final experiment with 30 participants (Figure 2).
-
-\\\\textbf{Figure 2}
-
-\\\\emph{Final Design With 30 Measurements.}
-
-[INSERT FIGURE 2 HERE]
-
-\\\\subsection{Pilot Tests}
-
-As mentioned previously, the initial nine pilot tests resulted in extremely small (and a few negative) effect sizes. The average MD effect size was -0.037, with a maximum of 0.143 and a minimum of -0.400. The low effect sizes indicated that the final design would need a large number of measurements and participants to achieve sufficient power in the RT. The first seven of these pilot tests consisted of 10-20 measurements each, which seemed too few. On the other hand, the last two pilot tests out of these consisted of 238 trials each. The feedback from both the experimenters and participants was that these tests were too long. These results influenced the decision to limit the number of trails to 140, remove irrelevant trial pairs from the baseline phase, and lower the number of acquisition trail pairs in the treatment phase. 
-
-\\\\textbf{Figure 3}
-
-\\\\emph{Plot of Observed Scores Obtained }\\\\emph{From}\\\\emph{ the Initial Nine Participants in the Pilot Tests.}
-
-[INSERT FIGURE 3 HERE]
-
-The later four pilot tests were run using the design parameters we decided on after the power study. The average MD effect size for these participants was 0.057, with a maximum of 0.476 and a minimum of -0.250. Visual analysis (Figure 4) revealed that the first, third, and fourth participant did not seem to show any sign of conditioning. However, the second participant seemed to show significant conditioning effects. This is also confirmed by the MD effect size for the second participant (0.476). Finally, a Monte Carlo RT with 1000 randomizations resulted in a \\\\emph{p}-value of 0.112. Hence, the null hypothesis of the RT could not be rejected at a 5\\\\% level of significance. 
-
-\\\\textbf{Figure 4}
-
-\\\\emph{Plot of Observed Scores Obtained }\\\\emph{From}\\\\emph{ the Final Four Participants in the Pilot Tests.}
-
-[INSERT FIGURE 4 HERE]
-
-\\\\section{Discussion}
-
-The power analysis and pilot test results confirm that the SCE design developed for this study can be effectively used to test the effect of classical conditioning on pain thresholds. The power study provides strong evidence that this design results in sufficient power if the number of measurements and participants are chosen correctly. The results from the final four pilot tests were encouraging. Even though the RT lacked power due to the small number of participants, the \\\\emph{p}-value was low. The visual analysis also seemed to suggest a large effect for at least one participant. 
-
-The final study using this protocol was not conducted immediately, due to lack of resources at the time. However, we hope to conduct this study as soon as the opportunity arises. Meanwhile, it seemed that the discussions regarding the SCE design and preparations for the study might be useful for other researchers developing similar protocols. Therefore, we decided to prepare this manuscript.
-
-The final design suffers from a few limitations. The first limitation is the observed variable defined by us, which only yields values of -1, 0, and 1. Unfortunately, this restricts variation in observed data and can cause duplicates in the randomization distribution, which can affect power. An alternative is to use the difference between SPARS ratings from CS+/ US\\\\textsubscript{test} and CS-/ US\\\\textsubscript{test} trial pairs. However, this would require a slightly different hypothesis, which would not clarify whether classical conditioning can affect pain thresholds specifically.
-
-The second limitation is due to the properties of the AB phase design. RTs using randomization of intervention start points in AB phase designs are known to lack power at lower sample sizes \\\\parencite{Michiels2019}. AB phase designs do not satisfy the guidelines set by Kratochwill et al. \\\\parencite{Kratochwill2010a} without multiple replications. Since we are not sure how quickly the effect of our conditioning is reversed, we cannot use phase designs with more phase changes, such as the ABAB phase design. Due to the requirement of specialized equipment, we cannot use an MBD. Critically, we cannot increase the number of measurements due to time constraints. Therefore, we have to rely on sequential replications for both validity and statistical power. 
-
-The power study for this design also presents certain limitations. We used only one possible distribution of the SPARS ratings to simulate our observed data. While the assumption of a symmetric distribution around 0 is not unreasonable, with more pilot data, it might be possible to simulate using a distribution that resembles the observed data. We also did not account for any variability in effect size across participants. Instead, we simulated an equal effect size for all participants. However, we believe these are reasonable assumptions given the scope of our study. 
-
-Finally, we conducted Monte Carlo RTs for both the power study and the pilot data. As discussed previously, the number of possible randomizations for this design is \\\\emph{r}\\\\textsuperscript{\\\\emph{P}}, where \\\\emph{r} denotes the number of possible randomizations for one participant, and \\\\emph{P} denotes the number of participants. Even for the smaller scale of the pilot data, computing 11\\\\textsuperscript{4} possible randomizations would have been extremely costly. Monte Carlo RTs present a simple alternative to this computation cost while maintaining sufficient statistical power \\\\parencite{Edgington1969, Hope1968}. Hence, we intend to conduct a Monte Carlo RT in the final experiment.
-
-As introduced earlier, this design presents certain advantages over traditional group study designs. Single-case designs are a better match for studying within-person changes, because they allow detailed insight into within-individual processes rather than assuming that the response of all individuals in a group is consistent. Additionally, these designs typically require a smaller number of participants. This allows for a lower overall cost and is particularly important for pain studies because it can be difficult to recruit participants.
-
-\\\\section{Conclusion}
-
-In this manuscript, we described how we used trial and error to design an SCE testing whether classical conditioning can affect pain thresholds. We used a sequentially replicated AB phase design and conducted a simulated power study to determine sample size. We decided on 30 participants and 30 measurements per participant. Finally, we ran some pilot tests using our design. While the results from the pilot tests were inconclusive, they were sufficiently encouraging that we plan to conduct the full study in the near future.
-
-\\\\section{Acknowledgements}
-
-[Deleted for anonymous review]
-
-\\\\section{Data Availability}
-
-The data and R code used in this study are openly available on Open Science Foundation at https://osf.io/d9mfn/?view\\\\_only=6b9bd4580dbf42b4952e551972f48c68.
-
-
-
-\\\\section{References}
-
-Adams, D. C., \\\\& Anthony, C. D. (1996). Using randomization techniques to analyse behavioural data. \\\\emph{Animal Behaviour}, \\\\emph{51}(4), 733--738. https://doi.org/https://doi.org/10.1006/anbe.1996.0077
-
-Barlow, D. H., Nock, M. K., \\\\& Hersen, M. (2009). \\\\emph{Single case experimental designs: Strategies for studying behavior change} (3rd ed.). Pearson/Allyn and Bacon.
-
-Bouwmeester, S., \\\\& Jongerling, J. (2020). Power of a randomization test in a single case multiple baseline AB design. \\\\emph{PLoS ONE}, \\\\emph{15}(2), 1--21. https://doi.org/10.1371/journal.pone.0228355
-
-Breivik, H., Collett, B., Ventafridda, V., Cohen, R., \\\\& Gallacher, D. (2006). Survey of chronic pain in Europe: Prevalence, impact on daily life, and treatment. \\\\emph{European Journal of Pain (London, England)}, \\\\emph{10}(4), 287--333. https://doi.org/10.1016/j.ejpain.2005.06.009
-
-Busk, P. L., \\\\& Marascuilo, L. A. (1988). Autocorrelation in single-subject research: A counterargument to the myth of no autocorrelation. \\\\emph{Behavioral Assessment}, \\\\emph{10}(3), 229--242.
-
-Cohen, J. (1988). \\\\emph{Statistical power analysis for the behavioral sciences} (2nd ed.). Routledge. https://doi.org/10.4324/9780203771587
-
-Costa, L. da C. M., Maher, C. G., McAuley, J. H., Hancock, M. J., Herbert, R. D., Refshauge, K. M., \\\\& Henschke, N. (2009). Prognosis for patients with chronic low back pain: Inception cohort study. \\\\emph{BMJ}, \\\\emph{339}, b3829. https://doi.org/10.1136/bmj.b3829
-
-Dancer Design. (n.d.). \\\\emph{Tactor}. http://www.dancerdesign.co.uk/tactor.html
-
-De, T. K., Michiels, B., Tanious, R., \\\\& Onghena, P. (2020). Handling missing data in randomization tests for single-case experiments: A simulation study. \\\\emph{Behavior Research Methods}, \\\\emph{52}(3), 1355--1370. https://doi.org/10.3758/s13428-019-01320-3
-
-De, T. K., Michiels, B., Vlaeyen, J. W. S., \\\\& Onghena, P. (2020). \\\\emph{Shiny SCDA} (Version 2.7). https://ppw.kuleuven.be/mesrg/software-and-apps/shiny-scda
-
-Digitimer Limited. (n.d.). \\\\emph{DS7A High Voltage Constant Current Stimulator}. https://www.digitimer.com/product/human-neurophysiology/peripheral-stimulators/ds7a-ds7ah-hv-current-stimulator/
-
-Edgington, E. S. (1969). Approximate randomization tests. \\\\emph{The Journal of Psychology}, \\\\emph{72}(2), 143--149. https://doi.org/10.1080/00223980.1969.10543491
-
-Edgington, E. S. (1975). Randomization tests for one-subject operant experiments. \\\\emph{Journal of Psychology}, \\\\emph{90}(1), 57. https://doi.org/10.1080/00223980.1975.9923926
-
-Edgington, E. S., \\\\& Onghena, P. (2007). \\\\emph{Randomization tests} (4th ed.). Chapman \\\\& Hall/CRC.
-
-Ferron, J., \\\\& Onghena, P. (1996). The power of randomization tests for single-case phase designs. \\\\emph{Journal of Experimental Education}, \\\\emph{64}(3), 231--239. https://doi.org/10.1080/00220973.1996.9943805
-
-Ferron, J., \\\\& Sentovich, C. (2002). Statistical power of randomization tests used with multiple-baseline designs. \\\\emph{Journal of Experimental Education}, \\\\emph{70}(2), 165--178. https://doi.org/10.1080/00220970209599504
-
-Ferron, J., \\\\& Ware, W. (1995). Analyzing single-case data: The power of randomization tests. \\\\emph{The Journal of Experimental Education}, \\\\emph{63}(2), 167--178.
-
-Fisher, A. J., Medaglia, J. D., \\\\& Jeronimus, B. F. (2018). Lack of group-to-individual generalizability is a threat to human subjects research. \\\\emph{Proceedings of the National Academy of Sciences}, \\\\emph{115}(27), E6106 LP-E6115. https://doi.org/10.1073/pnas.1711978115
-
-Foster, N. E., Anema, J. R., Cherkin, D., Chou, R., Cohen, S. P., Gross, D. P., Ferreira, P. H., Fritz, J. M., Koes, B. W., Peul, W., Turner, J. A., Maher, C. G., Buchbinder, R., Hartvigsen, J., Cherkin, D., Foster, N. E., Maher, C. G., Underwood, M., van Tulder, M., … Woolf, A. (2018). Prevention and treatment of low back pain: Evidence, challenges, and promising directions. \\\\emph{The Lancet}, \\\\emph{391}(10137), 2368--2383. https://doi.org/10.1016/S0140-6736(18)30489-6
-
-Heyvaert, M., \\\\& Onghena, P. (2014a). Analysis of single-case data: Randomisation tests for measures of effect size. \\\\emph{Neuropsychological Rehabilitation}, \\\\emph{24}(3--4), 507--527. https://doi.org/10.1080/09602011.2013.818564
-
-Heyvaert, M., \\\\& Onghena, P. (2014b). Randomization tests for single-case experiments: State of the art, state of the science, and state of the application. \\\\emph{Journal of Contextual Behavioral Science}, \\\\emph{3}(1), 51--64. https://doi.org/10.1016/j.jcbs.2013.10.002
-
-Hope, A. C. A. (1968). A simplified Monte Carlo significance test procedure. \\\\emph{Journal of the Royal Statistical Society. }\\\\emph{Series B (Methodological)}, \\\\emph{30}(3), 582--598. http://www.jstor.org/stable/2984263
-
-Horner, R. H., Carr, E. G., Halle, J., Mcgee, G., Odom, S., \\\\& Wolery, M. (2005). The use of single-subject research to identify evidence-based practice in special education. \\\\emph{Exceptional Children}, \\\\emph{71}(2), 165--179. https://doi.org/10.1177/001440290507100203
-
-Kazdin, A. E. (2011). \\\\emph{Single-case research designs: Methods for clinical and applied settings} (2nd ed.). Oxford University Press.
-
-Kratochwill, T. R., Hitchcock, J., Horner, R. H., Levin, J. R., Odom, S. L., Rindskopf, D. M., \\\\& Shadish, W. R. (2010). \\\\emph{Single-case design technical documentation}. https://ies.ed.gov/ncee/wwc/Docs/ReferenceResources/wwc\\\\_scd.pdf
-
-Kratochwill, T. R., \\\\& Levin, J. R. (2010). Enhancing the scientific credibility of single-case intervention research: Randomization to the rescue. \\\\emph{Psychological Methods}, \\\\emph{15}(2), 124--144. https://doi.org/10.1037/a0017736
-
-Levin, J. R., Ferron, J. M., \\\\& Gafurov, B. S. (2018). Comparison of randomization-test procedures for single-case multiple-baseline designs. \\\\emph{Developmental Neurorehabilitation}, \\\\emph{21}(5), 290--311. https://doi.org/10.1080/17518423.2016.1197708
-
-Madden, V. J., Bellan, V., Russek, L. N., Camfferman, D., Vlaeyen, J. W. S., \\\\& Moseley, G. L. (2016). Pain by association? Experimental modulation of human pain thresholds using classical conditioning. \\\\emph{Journal of Pain}, \\\\emph{17}(10), 1105--1115. https://doi.org/10.1016/j.jpain.2016.06.012
-
-Madden, V. J., Kamerman, P. R., Bellan, V., Catley, M. J., Russek, L. N., Camfferman, D., \\\\& Moseley, G. L. (2019). Was that painful or nonpainful? The Sensation and Pain Rating Scale performs well in the experimental context. \\\\emph{Journal of Pain}, \\\\emph{20}(4), 472.e1-472.e12. https://doi.org/10.1016/j.jpain.2018.10.006
-
-Madden, V. J., Russek, L. N., Harvie, D. S., Vlaeyen, J. W. S., \\\\& Moseley, G. L. (2017). Classical conditioning fails to elicit allodynia in an experimental study with healthy humans. \\\\emph{Pain Medicine}, \\\\emph{18}(7), 1314--1325. https://doi.org/10.1093/pm/pnw221
-
-Manolov, R., \\\\& Moeyaert, M. (2017). Recommendations for choosing single-case data analytical techniques. \\\\emph{Behavior Therapy}, \\\\emph{48}(1), 97--114. https://doi.org/10.1016/j.beth.2016.04.008
-
-Manolov, R., \\\\& Solanas, A. (2018). Analytical options for single-case experimental designs: Review and application to brain impairment. \\\\emph{Brain Impairment}, \\\\emph{19}(1), 18--32. https://doi.org/10.1017/BrImp.2017.17
-
-Matyas, T. A., \\\\& Greenwood, K. M. (1990). Visual analysis of single-case time series: Effects of variability, serial dependence, and magnitude of intervention effects. \\\\emph{Journal of Applied Behavior Analysis}, \\\\emph{23}(3), 341--351. https://doi.org/10.1901/jaba.1990.23-341
-
-Michiels, B., Heyvaert, M., \\\\& Onghena, P. (2018). The conditional power of randomization tests for single-case effect sizes in designs with randomized treatment order: A Monte Carlo simulation study. \\\\emph{Behavior Research Methods}, \\\\emph{50}(2), 557--575. https://doi.org/10.3758/s13428-017-0885-7
-
-Michiels, B., \\\\& Onghena, P. (2019). Randomized single-case AB phase designs: Prospects and pitfalls. \\\\emph{Behavior Research Methods}, \\\\emph{51}(6), 2454--2476. https://doi.org/10.3758/s13428-018-1084-x
-
-Michiels, B., Tanious, R., De, T. K., \\\\& Onghena, P. (2020). A randomization test wrapper for synthesizing single-case experiments using multilevel models: A Monte Carlo simulation study. \\\\emph{Behavior Research Methods}, \\\\emph{52}(2), 654--666. https://doi.org/10.3758/s13428-019-01266-6
-
-Molenaar, P. C. M., \\\\& Campbell, C. G. (2009). The new person-specific paradigm in psychology. \\\\emph{Current Directions in Psychological Science}, \\\\emph{18}(2), 112--117. https://doi.org/10.1111/j.1467-8721.2009.01619.x
-
-Moseley, G. L., \\\\& Vlaeyen, J. W. S. (2015). Beyond nociception: The imprecision hypothesis of chronic pain. \\\\emph{Pain}, \\\\emph{156}(1), 35--38. https://doi.org/10.1016/j.pain.0000000000000014
-
-Onghena, P. (1992). Randomization tests for extensions and variations of ABAB single-case experimental designs: A rejoinder. \\\\emph{Behavioral Assessment}, \\\\emph{14}(2), 153--171.
-
-Onghena, P. (2005). Single-case designs. In B. Everitt \\\\& D. Howell (Eds.), \\\\emph{Encyclopedia of statistics in behavioral science} (Vol. 4, pp. 1850--1854). John Wiley \\\\& Sons, Ltd. https://doi.org/10.1002/0470013192.bsa625
-
-Ottenbacher, K. J. (1990). When is a picture worth a thousand p values? A comparison of visual and quantitative methods to analyze single subject data. \\\\emph{The Journal of Special Education}, \\\\emph{23}(4), 436--449. https://doi.org/10.1177/002246699002300407
-
-Pavlov, I. P. (1928). \\\\emph{Lectures on conditioned reflexes: Twenty-five years of objective study of the higher nervous activity (behaviour) of animals.} Liverwright Publishing Corporation. https://doi.org/10.1037/11081-000
-
-Smith, J. D. (2012). Single-case experimental designs: A systematic review of published research and current standards. \\\\emph{Psychological Methods}, \\\\emph{17}(4), 510--550. https://doi.org/10.1037/a0029312
-
-Solomon, B. G. (2014). Violations of assumptions in school-based single-case data: Implications for the selection and interpretation of effect sizes. \\\\emph{Behavior Modification}, \\\\emph{38}(4), 477--496. https://doi.org/10.1177/0145445513510931
-
-Spruyt, A., Clarysse, J., Vansteenwegen, D., Baeyens, F., \\\\& Hermans, D. (2009). Affect 4.0: A free software package for implementing psychological and psychophysiological experiments. \\\\emph{Experimental Psychology}, \\\\emph{57}(1), 36--45. https://doi.org/10.1027/1618-3169/a000005
-
-Traxler, J., Madden, V. J., Moseley, G. L., \\\\& Vlaeyen, J. W. S. (2019). Modulating pain thresholds through classical conditioning. \\\\emph{PeerJ}, \\\\emph{2019}(3), 1--20. https://doi.org/10.7717/peerj.6486
-
-Treede, R. D., Rief, W., Barke, A., Aziz, Q., Bennett, M. I., Benoliel, R., Cohen, M., Evers, S., Finnerup, N. B., First, M. B., Giamberardino, M. A., Kaasa, S., Korwisi, B., Kosek, E., Lavand'Homme, P., Nicholas, M., Perrot, S., Scholz, J., Schug, S., … Wang, S. J. (2019). Chronic pain as a symptom or a disease: The IASP classification of chronic pain for the International Classification of Diseases (ICD-11). \\\\emph{Pain}, \\\\emph{160}(1), 19--27. https://doi.org/10.1097/j.pain.0000000000001384
-
-Tsang, A., Von Korff, M., Lee, S., Alonso, J., Karam, E., Angermeyer, M. C., Borges, G. L. G., Bromet, E. J., Demytteneare, K., de Girolamo, G., de Graaf, R., Gureje, O., Lepine, J.-P., Haro, J. M., Levinson, D., Oakley Browne, M. A., Posada-Villa, J., Seedat, S., \\\\& Watanabe, M. (2008). Common chronic pain conditions in developed and developing countries: Gender and age differences and comorbidity with depression-anxiety disorders. \\\\emph{The Journal of Pain}, \\\\emph{9}(10), 883--891. https://doi.org/10.1016/j.jpain.2008.05.005
-
-Vlaeyen, J. W. S., \\\\& Linton, S. J. (2000). Fear-avoidance and its consequences in chronic musculoskeletal pain: A state of the art. \\\\emph{Pain}, \\\\emph{85}(3), 317--332. https://doi.org/10.1016/s0304-3959(99)00242-0
-
-Vlaeyen, J. W. S., \\\\& Linton, S. J. (2012). Fear-avoidance model of chronic musculoskeletal pain: 12 years on. \\\\emph{Pain}, \\\\emph{153}(6), 1144--1147. https://doi.org/10.1016/j.pain.2011.12.009
-
-Vlaeyen, J. W. S., Wicksell, R. K., Simons, L. E., Gentili, C., De, T. K., Tate, R. L., Vohra, S., Punja, S., Linton, S. J., Sniehotta, F. F., \\\\& Onghena, P. (2020). From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research. \\\\emph{The Psychological Record}, \\\\emph{70}, 659--670. https://doi.org/10.1007/s40732-020-00402-5
-
-Vohra, S., Shamseer, L., Sampson, M., Bukutu, C., Schmid, C. H., Tate, R., Nikles, J., Zucker, D. R., Kravitz, R., Guyatt, G., Altman, D. G., \\\\& Moher, D. (2015). CONSORT extension for reporting N-of-1 trials (CENT) 2015 statement. \\\\emph{BMJ (Clinical Research Ed.)}, \\\\emph{350}, h1738. https://doi.org/10.1136/bmj.h1738
-
-Willkinson, L. (1999). Statistical methods in psychology journals: Guidelines and explanations. \\\\emph{American Psychologist}, \\\\emph{54}(8), 594--604. https://doi.org/10.1037/0003-066X.54.8.594
-
-Woolf, C. J. (1983). Evidence for a central component of post-injury pain hypersensitivity. \\\\emph{Nature}, \\\\emph{306}(5944), 686--688. https://doi.org/10.1038/306686a0
-
-Woolf, C. J. (2011). Central sensitization: Implications for the diagnosis and treatment of pain. \\\\emph{Pain}, \\\\emph{152}(3 Suppl), S2--S15. https://doi.org/10.1016/j.pain.2010.09.030
-
-
-
-
-
-\\\\section{Appendix}
-
-\\\\textbf{Table 2}
-
-\\\\emph{Observed Scores }\\\\emph{From}\\\\emph{ the Initial Nine Pilot Tests.}
-
-
-\\\\begin{table}
-
-  
-\\\\begin{tabular}{c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c}
-
-  P1 & V1 & P2 & V2 & P3 & V3 & P4 & V4 & P5 & V5 & P6 & V6 & P7 & V7 & P8 & V8 & P9 & V9\\\\\\\\
-A & 0 & A & 1 & A & 1 & A & 0 & A & NA & A & -1 & A & 0 & A & 1 & A & 0\\\\\\\\
-A & 1 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & 1 & A & 0\\\\\\\\
-A & 0 & A & 0 & A & 0 & A & 1 & A & 0 & A & -1 & A & 0 & A & 1 & A & 0\\\\\\\\
-A & 0 & A & 0 & A & 0 & A & 1 & A & 0 & A & 1 & A & 0 & A & 1 & A & -1\\\\\\\\
-A & 1 & A & 0 & A & 0 & A & -1 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\
-B & 1 & B & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & -1 & A & 0\\\\\\\\
-B & 1 & B & 0 & A & NA & A & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\
-B & 0 & B & 0 & A & 1 & A & 0 & A & 0 & B & 0 & B & 0 & A & 0 & A & 1\\\\\\\\
-B & 0 & B & -1 & A & 1 & A & 1 & A & 0 & B & 0 & B & 0 & A & 0 & A & 0\\\\\\\\
-B & 0 & B & 0 & A & 0 & A & -1 & A & 0 & B & 0 & B & 0 & B & 1 & B & 0\\\\\\\\
-  &   &   &   & B & 0 & B & 1 & B & -1 & B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-  &   &   &   & B & NA & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-  &   &   &   & B & NA & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-  &   &   &   & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-  &   &   &   & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 1 & B & -1\\\\\\\\
-  &   &   &   & B & 0 & B & -1 & B & 0 &   &   &   &   & B & 0 & B & 1\\\\\\\\
-  &   &   &   & B & 0 & B & 0 & B & 0 &   &   &   &   & B & 0 & B & 0\\\\\\\\
-  &   &   &   & B & 0 & B & 1 & B & 0 &   &   &   &   & B & 1 & B & 0\\\\\\\\
-  &   &   &   & B & NA & B & 0 & B & 0 &   &   &   &   & B & 1 & B & -1\\\\\\\\
-  &   &   &   & B & 1 & B & 1 & B & 0 &   &   &   &   & B & 1 & B & 0\\\\\\\\
-  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 1\\\\\\\\
-  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 1\\\\\\\\
-  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 1 & B & 0\\\\\\\\
-  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 1 & B & 0\\\\\\\\
-  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 0\\\\\\\\
-  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 1 & B & 0\\\\\\\\
-  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 0\\\\\\\\
-  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 0\\\\\\\\
-  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 0\\\\\\\\
-
-
-\\\\end{tabular}
-
-
-\\\\end{table}
-
-
-\\\\textbf{Table 3}
-
-\\\\emph{Observed Scores }\\\\emph{From}\\\\emph{ the Final Four Pilot Tests Formatted for Shiny SCDA.}
-
-
-\\\\begin{table}
-
-  
-\\\\begin{tabular}{c  c  c  c  c  c  c  c}
-
-  P10 & V10 & P11 & V11 & P12 & V12 & P13 & V13\\\\\\\\
-A & 1 & A & 0 & A & 0 & A & 0\\\\\\\\
-A & NA & A & 0 & A & 0 & A & 0\\\\\\\\
-A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\
-A & 1 & A & 0 & A & 0 & A & 0\\\\\\\\
-A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\
-A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\
-A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\
-A & 1 & A & 0 & A & 0 & A & 0\\\\\\\\
-A & -1 & A & 0 & A & 0 & A & 0\\\\\\\\
-B & NA & B & 1 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-B & NA & B & 1 & B & 0 & B & 0\\\\\\\\
-B & NA & B & 0 & B & 0 & B & 0\\\\\\\\
-B & NA & B & 1 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-
-
-\\\\end{tabular}
-
-
-\\\\end{table}
-
-
-
-
-
-
-
-
-
-
-\\\\end{document}
-"
-`;
-
-exports[`parses correctly for complete 2`] = `
-" \\\\documentclass{article}
-\\\\usepackage[style=apa]{biblatex}
-\\\\addbibresource{bibliography.bib}\\\\usepackage{graphicx}\\\\usepackage{hyperref}
-
-
-
-\\\\begin{filecontents}{bibliography.bib}
-
-  @article{Breivik2006,
-    title       = {Survey of chronic pain in Europe: Prevalence, impact on daily life, and treatment.},
-    author      = {Breivik, Harald and Collett, Beverly and Ventafridda, Vittorio and Cohen, Rob and Gallacher, Derek},
-    number      = {4},
-    volume      = {10},
-    doi         = {10.1016/j.ejpain.2005.06.009},
-    place       = {England},
-    year        = {2006-05},
-    pages       = {287-333},
-    journal     = {European journal of pain (London, England)}
-}
-
-
-@article{Tsang2008,
-    title       = {Common chronic pain conditions in developed and developing countries: Gender and age differences and comorbidity with depression-anxiety disorders.},
-    author      = {Tsang, Adley and Von Korff, Michael and Lee, Sing and Alonso, Jordi and Karam, Elie and Angermeyer, Matthias C and Borges, Guilherme Luiz Guimaraes and Bromet, Evelyn J and Demytteneare, K and de Girolamo, Giovanni and de Graaf, Ron and Gureje, Oye and Lepine, Jean-Pierre and Haro, Josep Maria and Levinson, Daphna and Oakley Browne, Mark A and Posada-Villa, Jose and Seedat, Soraya and Watanabe, Makoto},
-    number      = {10},
-    volume      = {9},
-    doi         = {10.1016/j.jpain.2008.05.005},
-    place       = {United States},
-    year        = {2008-10},
-    pages       = {883-891},
-    journal     = {The Journal of Pain}
-}
-
-
-@article{Costa2009,
-    title       = {Prognosis for patients with chronic low back pain: Inception cohort study},
-    author      = {Costa, Luciola da C Menezes and Maher, Christopher G and McAuley, James H and Hancock, Mark J and Herbert, Robert D and Refshauge, Kathryn M and Henschke, Nicholas},
-    volume      = {339},
-    doi         = {10.1136/bmj.b3829},
-    year        = {2009-10-06},
-    pages       = {b3829},
-    journal     = {BMJ}
-}
-
-
-@article{Foster2018,
-    title       = {Prevention and treatment of low back pain: Evidence, challenges, and promising directions},
-    author      = {Foster, Nadine E and Anema, Johannes R and Cherkin, Dan and Chou, Roger and Cohen, Steven P and Gross, Douglas P and Ferreira, Paulo H and Fritz, Julie M and Koes, Bart W and Peul, Wilco and Turner, Judith A and Maher, Chris G and Buchbinder, Rachelle and Hartvigsen, Jan and Cherkin, Dan and Foster, Nadine E and Maher, Chris G and Underwood, Martin and van Tulder, Maurits and Anema, Johannes R and Chou, Roger and Cohen, Stephen P and Menezes Costa, Lucíola and Croft, Peter and Ferreira, Manuela and Ferreira, Paulo H and Fritz, Julie M and Genevay, Stéphane and Gross, Douglas P and Hancock, Mark J and Hoy, Damian and Karppinen, Jaro and Koes, Bart W and Kongsted, Alice and Louw, Quinette and Öberg, Birgitta and Peul, Wilco C and Pransky, Glenn and Schoene, Mark and Sieper, Joachim and Smeets, Rob J and Turner, Judith A and Woolf, Anthony},
-    number      = {10137},
-    volume      = {391},
-    doi         = {10.1016/S0140-6736(18)30489-6},
-    publisher   = {Elsevier},
-    year        = {2018-06-09},
-    pages       = {2368-2383},
-    journal     = {The Lancet}
-}
-
-
-@article{Treede2019,
-    title       = {Chronic pain as a symptom or a disease: The IASP classification of chronic pain for the International Classification of Diseases (ICD-11)},
-    author      = {Treede, Rolf Detlef and Rief, Winfried and Barke, Antonia and Aziz, Qasim and Bennett, Michael I. and Benoliel, Rafael and Cohen, Milton and Evers, Stefan and Finnerup, Nanna B. and First, Michael B. and Giamberardino, Maria Adele and Kaasa, Stein and Korwisi, Beatrice and Kosek, Eva and Lavand'Homme, Patricia and Nicholas, Michael and Perrot, Serge and Scholz, Joachim and Schug, Stephan and Smith, Blair H. and Svensson, Peter and Vlaeyen, Johan W.S. and Wang, Shuu Jiun},
-    number      = {1},
-    volume      = {160},
-    doi         = {10.1097/j.pain.0000000000001384},
-    year        = {2019},
-    pages       = {19-27},
-    journal     = {Pain}
-}
-
-
-@article{Woolf1983,
-    title       = {Evidence for a central component of post-injury pain hypersensitivity},
-    author      = {Woolf, Clifford J},
-    number      = {5944},
-    volume      = {306},
-    doi         = {10.1038/306686a0},
-    place       = {England},
-    year        = {1983-12},
-    pages       = {686-688},
-    journal     = {Nature}
-}
-
-
-@article{Woolf2011,
-    title       = {Central sensitization: Implications for the diagnosis and treatment of pain},
-    author      = {Woolf, Clifford J},
-    number      = {3 Suppl},
-    volume      = {152},
-    doi         = {10.1016/j.pain.2010.09.030},
-    year        = {2011-03},
-    pages       = {S2-S15},
-    journal     = {Pain}
-}
-
-
-@article{Vlaeyen2000,
-    title       = {Fear-avoidance and its consequences in chronic musculoskeletal pain: A state of the art},
-    author      = {Vlaeyen, Johan W.S. and Linton, Steven J.},
-    number      = {3},
-    volume      = {85},
-    doi         = {10.1016/s0304-3959(99)00242-0},
-    place       = {United States},
-    year        = {2000-04},
-    pages       = {317-332},
-    journal     = {Pain}
-}
-
-
-@article{Vlaeyen2012,
-    title       = {Fear-avoidance model of chronic musculoskeletal pain: 12 years on},
-    author      = {Vlaeyen, Johan W S and Linton, Steven J},
-    number      = {6},
-    volume      = {153},
-    doi         = {10.1016/j.pain.2011.12.009},
-    place       = {United States},
-    year        = {2012-06},
-    pages       = {1144-1147},
-    journal     = {Pain}
-}
-
-
-@article{Moseley2015,
-    title       = {Beyond nociception: The imprecision hypothesis of chronic pain},
-    author      = {Moseley, G Lorimer and Vlaeyen, Johan W S},
-    number      = {1},
-    volume      = {156},
-    doi         = {10.1016/j.pain.0000000000000014},
-    place       = {United States},
-    year        = {2015-01},
-    pages       = {35-38},
-    journal     = {Pain}
-}
-
-
-@article{Madden2016,
-    title       = {Pain by association? Experimental modulation of human pain thresholds using classical conditioning},
-    author      = {Madden, Victoria J. and Bellan, Valeria and Russek, Leslie N. and Camfferman, Danny and Vlaeyen, Johan W.S. and Moseley, G. Lorimer},
-    number      = {10},
-    volume      = {17},
-    doi         = {10.1016/j.jpain.2016.06.012},
-    publisher   = {Elsevier Inc},
-    year        = {2016},
-    pages       = {1105-1115},
-    journal     = {Journal of Pain}
-}
-
-
-@article{Traxler2019,
-    title       = {Modulating pain thresholds through classical conditioning},
-    author      = {Traxler, Juliane and Madden, Victoria J. and Moseley, G. Lorimer and Vlaeyen, Johan W.S.},
-    number      = {3},
-    volume      = {2019},
-    doi         = {10.7717/peerj.6486},
-    year        = {2019},
-    pages       = {1-20},
-    journal     = {PeerJ}
-}
-
-
-@book{Pavlov1928,
-    title       = {Lectures on conditioned reflexes: Twenty-five years of objective study of the higher nervous activity (behaviour) of animals.},
-    author      = {Pavlov, Ivan Petrovitch},
-    doi         = {10.1037/11081-000},
-    publisher   = {Liverwright Publishing Corporation},
-    place       = {New York, NY, US},
-    year        = {1928}
-}
-
-
-@book{Barlow2009,
-    title       = {Single case experimental designs: Strategies for studying behavior change},
-    author      = {Barlow, D H and Nock, M K and Hersen, M},
-    publisher   = {Pearson/Allyn and Bacon},
-    place       = {Boston, MA},
-    year        = {2009}
-}
-
-
-@book{Kazdin2011,
-    title       = {Single-case research designs: Methods for clinical and applied settings},
-    author      = {Kazdin, Alan E},
-    publisher   = {Oxford University Press},
-    place       = {New York, NY},
-    year        = {2011}
-}
-
-
-@article{Heyvaert2014,
-    title       = {Randomization tests for single-case experiments: State of the art, state of the science, and state of the application},
-    author      = {Heyvaert, Mieke and Onghena, Patrick},
-    number      = {1},
-    volume      = {3},
-    doi         = {10.1016/j.jcbs.2013.10.002},
-    year        = {2014},
-    pages       = {51-64},
-    journal     = {Journal of Contextual Behavioral Science}
-}
-
-
-@article{Vlaeyen2020,
-    title       = {From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research},
-    author      = {Vlaeyen, Johan W S and Wicksell, Rikard K and Simons, Laura E and Gentili, Charlotte and De, Tamal Kumar and Tate, Robyn L and Vohra, Sunita and Punja, Salima and Linton, Steven J and Sniehotta, Falko F and Onghena, Patrick},
-    volume      = {70},
-    doi         = {10.1007/s40732-020-00402-5},
-    year        = {2020},
-    pages       = {659--670},
-    journal     = {The Psychological Record}
-}
-
-
-@article{Kratochwill2010,
-    title       = {Enhancing the scientific credibility of single-case intervention research: Randomization to the rescue},
-    author      = {Kratochwill, T. R. and Levin, Joel R},
-    number      = {2},
-    volume      = {15},
-    doi         = {10.1037/a0017736},
-    year        = {2010},
-    pages       = {124-144},
-    journal     = {Psychological Methods}
-}
-
-
-@article{Edgington1975,
-    title       = {Randomization tests for one-subject operant experiments},
-    author      = {Edgington, Eugene S},
-    number      = {1},
-    volume      = {90},
-    doi         = {10.1080/00223980.1975.9923926},
-    publisher   = {Journal Press, etc.},
-    place       = {Provincetown, Mass., etc.},
-    year        = {1975-05-01},
-    pages       = {57},
-    journal     = {Journal of Psychology}
-}
-
-
-@article{Horner2005,
-    title       = {The use of single-subject research to identify evidence-based practice in special education},
-    author      = {Horner, Robert H. and Carr, Edward G. and Halle, James and Mcgee, Gail and Odom, Samuel and Wolery, Mark},
-    number      = {2},
-    volume      = {71},
-    doi         = {10.1177/001440290507100203},
-    year        = {2005},
-    pages       = {165-179},
-    journal     = {Exceptional Children}
-}
-
-
-@article{Molenaar2009,
-    title       = {The new person-specific paradigm in psychology},
-    author      = {Molenaar, Peter C M and Campbell, Cynthia G},
-    number      = {2},
-    volume      = {18},
-    doi         = {10.1111/j.1467-8721.2009.01619.x},
-    publisher   = {SAGE Publications Inc},
-    year        = {2009-04-01},
-    pages       = {112-117},
-    journal     = {Current Directions in Psychological Science}
-}
-
-
-@article{Fisher2018,
-    title       = {Lack of group-to-individual generalizability is a threat to human subjects research},
-    author      = {Fisher, Aaron J and Medaglia, John D and Jeronimus, Bertus F},
-    number      = {27},
-    volume      = {115},
-    doi         = {10.1073/pnas.1711978115},
-    year        = {2018-07-03},
-    pages       = {E6106 LP - E6115},
-    journal     = {Proceedings of the National Academy of Sciences}
-}
-
-
-@article{Ferron1995,
-    title       = {Analyzing single-case data: The power of randomization tests},
-    author      = {Ferron, John and Ware, William},
-    number      = {2},
-    volume      = {63},
-    year        = {1995},
-    pages       = {167-178},
-    journal     = {The Journal of Experimental Education}
-}
-
-
-@article{Ferron1996,
-    title       = {The power of randomization tests for single-case phase designs},
-    author      = {Ferron, John and Onghena, Patrick},
-    number      = {3},
-    volume      = {64},
-    doi         = {10.1080/00220973.1996.9943805},
-    year        = {1996},
-    pages       = {231-239},
-    journal     = {Journal of Experimental Education}
-}
-
-
-@article{Busk1988,
-    title       = {Autocorrelation in single-subject research: A counterargument to the myth of no autocorrelation.},
-    author      = {Busk, Patricia L and Marascuilo, Leonard A},
-    number      = {3},
-    volume      = {10},
-    publisher   = {Pergamon Press, Inc.},
-    place       = {US},
-    year        = {1988},
-    pages       = {229-242},
-    journal     = {Behavioral Assessment}
-}
-
-
-@article{Solomon2014,
-    title       = {Violations of assumptions in school-based single-case data: Implications for the selection and interpretation of effect sizes},
-    author      = {Solomon, Benjamin George},
-    number      = {4},
-    volume      = {38},
-    doi         = {10.1177/0145445513510931},
-    year        = {2014},
-    pages       = {477-496},
-    journal     = {Behavior Modification}
-}
-
-
-@article{Adams1996,
-    title       = {Using randomization techniques to analyse behavioural data},
-    author      = {Adams, Dean C and Anthony, Carl D},
-    number      = {4},
-    volume      = {51},
-    doi         = {https://doi.org/10.1006/anbe.1996.0077},
-    year        = {1996},
-    pages       = {733-738},
-    journal     = {Animal Behaviour}
-}
-
-
-@article{Smith2012,
-    title       = {Single-case experimental designs: A systematic review of published research and current standards},
-    author      = {Smith, Justin D.},
-    number      = {4},
-    volume      = {17},
-    doi         = {10.1037/a0029312},
-    year        = {2012},
-    pages       = {510-550},
-    journal     = {Psychological Methods}
-}
-
-
-@article{Ottenbacher1990,
-    title       = {When is a picture worth a thousand p values? A comparison of visual and quantitative methods to analyze single subject data},
-    author      = {Ottenbacher, Kenneth J},
-    number      = {4},
-    volume      = {23},
-    doi         = {10.1177/002246699002300407},
-    publisher   = {SAGE Publications Inc},
-    year        = {1990-01-01},
-    pages       = {436-449},
-    journal     = {The Journal of Special Education}
-}
-
-
-@article{Matyas1990,
-    title       = {Visual analysis of single-case time series: Effects of variability, serial dependence, and magnitude of intervention effects},
-    author      = {Matyas, T A and Greenwood, K M},
-    number      = {3},
-    volume      = {23},
-    doi         = {10.1901/jaba.1990.23-341},
-    year        = {1990},
-    pages       = {341-351},
-    journal     = {Journal of applied behavior analysis}
-}
-
-
-@article{Kratochwill2010a,
-    title       = {Single-case design technical documentation},
-    author      = {Kratochwill, T. R. and Hitchcock, J and Horner, Robert H and Levin, J R and Odom, S L and Rindskopf, D M and Shadish, W R},
-    year        = {2010}
-}
-
-
-@article{Manolov2018,
-    title       = {Analytical options for single-case experimental designs: Review and application to brain impairment},
-    author      = {Manolov, Rumen and Solanas, Antonio},
-    number      = {1},
-    volume      = {19},
-    doi         = {10.1017/BrImp.2017.17},
-    year        = {2018},
-    pages       = {18-32},
-    journal     = {Brain Impairment}
-}
-
-
-@article{Manolov2017,
-    title       = {Recommendations for choosing single-case data analytical techniques},
-    author      = {Manolov, Rumen and Moeyaert, Mariola},
-    number      = {1},
-    volume      = {48},
-    doi         = {10.1016/j.beth.2016.04.008},
-    publisher   = {Elsevier B.V.},
-    year        = {2017},
-    pages       = {97-114},
-    journal     = {Behavior Therapy}
-}
-
-
-@book{Edgington2007,
-    title       = {Randomization tests},
-    author      = {Edgington, Eugene S and Onghena, Patrick},
-    publisher   = {Chapman \\\\& Hall/CRC},
-    place       = {Boca Raton, FL},
-    year        = {2007}
-}
-
-
-@article{Michiels2020,
-    title       = {A randomization test wrapper for synthesizing single-case experiments using multilevel models: A Monte Carlo simulation study},
-    author      = {Michiels, Bart and Tanious, René and De, Tamal Kumar and Onghena, Patrick},
-    number      = {2},
-    volume      = {52},
-    doi         = {10.3758/s13428-019-01266-6},
-    year        = {2020},
-    pages       = {654-666},
-    journal     = {Behavior Research Methods}
-}
-
-
-@article{Heyvaert2014a,
-    title       = {Analysis of single-case data: Randomisation tests for measures of effect size},
-    author      = {Heyvaert, Mieke and Onghena, Patrick},
-    number      = {3-4},
-    volume      = {24},
-    doi         = {10.1080/09602011.2013.818564},
-    year        = {2014},
-    pages       = {507-527},
-    journal     = {Neuropsychological Rehabilitation}
-}
-
-
-@book{Cohen1988,
-    title       = {Statistical power analysis for the behavioral sciences},
-    author      = {Cohen, Jacob},
-    doi         = {10.4324/9780203771587},
-    publisher   = {Routledge},
-    place       = {New York, NY},
-    year        = {1988}
-}
-
-
-@article{Vohra2015,
-    title       = {CONSORT extension for reporting N-of-1 trials (CENT) 2015 statement},
-    author      = {Vohra, Sunita and Shamseer, Larissa and Sampson, Margaret and Bukutu, Cecilia and Schmid, Christopher H. and Tate, Robyn and Nikles, Jane and Zucker, Deborah R. and Kravitz, Richard and Guyatt, Gordon and Altman, Douglas G. and Moher, David},
-    volume      = {350},
-    doi         = {10.1136/bmj.h1738},
-    year        = {2015},
-    pages       = {h1738},
-    journal     = {BMJ (Clinical research ed.)}
-}
-
-
-@article{Willkinson1999,
-    title       = {Statistical methods in psychology journals: Guidelines and explanations},
-    author      = {Willkinson, Leland},
-    number      = {8},
-    volume      = {54},
-    doi         = {10.1037/0003-066X.54.8.594},
-    year        = {1999},
-    pages       = {594-604},
-    journal     = {American Psychologist}
-}
-
-
-@article{Onghena1992,
-    title       = {Randomization tests for extensions and variations of ABAB single-case experimental designs: A rejoinder},
-    author      = {Onghena, Patrick},
-    number      = {2},
-    volume      = {14},
-    year        = {1992},
-    pages       = {153-171},
-    journal     = {Behavioral Assessment}
-}
-
-
-@article{Michiels2018,
-    title       = {The conditional power of randomization tests for single-case effect sizes in designs with randomized treatment order: A Monte Carlo simulation study},
-    author      = {Michiels, Bart and Heyvaert, Mieke and Onghena, Patrick},
-    number      = {2},
-    volume      = {50},
-    doi         = {10.3758/s13428-017-0885-7},
-    publisher   = {Behavior Research Methods},
-    year        = {2018},
-    pages       = {557-575},
-    journal     = {Behavior Research Methods}
-}
-
-
-@article{Bouwmeester2020,
-    title       = {Power of a randomization test in a single case multiple baseline AB design},
-    author      = {Bouwmeester, Samantha and Jongerling, Joran},
-    number      = {2},
-    volume      = {15},
-    doi         = {10.1371/journal.pone.0228355},
-    year        = {2020},
-    pages       = {1-21},
-    journal     = {PLoS ONE}
-}
-
-
-@article{Ferron2002,
-    title       = {Statistical power of randomization tests used with multiple-baseline designs},
-    author      = {Ferron, John and Sentovich, Chris},
-    number      = {2},
-    volume      = {70},
-    doi         = {10.1080/00220970209599504},
-    year        = {2002},
-    pages       = {165-178},
-    journal     = {Journal of Experimental Education}
-}
-
-
-@article{De2020,
-    title       = {Handling missing data in randomization tests for single-case experiments: A simulation study},
-    author      = {De, Tamal Kumar and Michiels, Bart and Tanious, René and Onghena, Patrick},
-    number      = {3},
-    volume      = {52},
-    doi         = {10.3758/s13428-019-01320-3},
-    year        = {2020},
-    pages       = {1355-1370},
-    journal     = {Behavior Research Methods}
-}
-
-
-@article{Madden2019,
-    title       = {Was that painful or nonpainful? The Sensation and Pain Rating Scale performs well in the experimental context},
-    author      = {Madden, Victoria J. and Kamerman, Peter R. and Bellan, Valeria and Catley, Mark J. and Russek, Leslie N. and Camfferman, Danny and Moseley, G. Lorimer},
-    number      = {4},
-    volume      = {20},
-    doi         = {10.1016/j.jpain.2018.10.006},
-    publisher   = {Elsevier Inc.},
-    year        = {2019},
-    pages       = {472.e1-472.e12},
-    journal     = {Journal of Pain}
-}
-
-
-@article{Spruyt2009,
-    title       = {Affect 4.0: A free software package for implementing psychological and psychophysiological experiments},
-    author      = {Spruyt, Adriaan and Clarysse, Jeroen and Vansteenwegen, Debora and Baeyens, Frank and Hermans, Dirk},
-    number      = {1},
-    volume      = {57},
-    doi         = {10.1027/1618-3169/a000005},
-    year        = {2009},
-    pages       = {36-45},
-    journal     = {Experimental Psychology}
-}
-
-
-@article{bib0,
-    title       = {Tactor},
-    author      = {Dancer Design},
-    place       = {St. Helens, UK},
-    year        = {00}
-}
-
-
-@article{bib0,
-    title       = {DS7A High Voltage Constant Current Stimulator},
-    author      = {Digitimer Limited},
-    place       = {Hertfordshire, UK},
-    year        = {00}
-}
-
-
-@article{Madden2017,
-    title       = {Classical conditioning fails to elicit allodynia in an experimental study with healthy humans},
-    author      = {Madden, Victoria J. and Russek, Leslie N. and Harvie, Daniel S. and Vlaeyen, Johan W.S. and Moseley, G. Lorimer},
-    number      = {7},
-    volume      = {18},
-    doi         = {10.1093/pm/pnw221},
-    year        = {2017},
-    pages       = {1314-1325},
-    journal     = {Pain Medicine}
-}
-
-
-@article{Onghena2005,
-    title       = {Single-case designs},
-    author      = {Onghena, Patrick},
-    volume      = {4},
-    doi         = {10.1002/0470013192.bsa625},
-    publisher   = {John Wiley \\\\& Sons, Ltd},
-    place       = {Hoboken, NJ},
-    year        = {2005-04-15},
-    pages       = {1850-1854},
-    journal     = {Encyclopedia of statistics in behavioral science}
-}
-
-
-@article{Michiels2019,
-    title       = {Randomized single-case AB phase designs: Prospects and pitfalls},
-    author      = {Michiels, Bart and Onghena, Patrick},
-    number      = {6},
-    volume      = {51},
-    doi         = {10.3758/s13428-018-1084-x},
-    publisher   = {Behavior Research Methods},
-    year        = {2019},
-    pages       = {2454-2476},
-    journal     = {Behavior Research Methods}
-}
-
-
-@article{De2020a,
-    title       = {Shiny SCDA},
-    author      = {De, Tamal Kumar and Michiels, Bart and Vlaeyen, Johan W S and Onghena, Patrick},
-    number      = {Version 2.7},
-    year        = {2020}
-}
-
-
-@article{Levin2018,
-    title       = {Comparison of randomization-test procedures for single-case multiple-baseline designs},
-    author      = {Levin, Joel R. and Ferron, John M. and Gafurov, Boris S.},
-    number      = {5},
-    volume      = {21},
-    doi         = {10.1080/17518423.2016.1197708},
-    publisher   = {Taylor \\\\& Francis},
-    year        = {2018},
-    pages       = {290-311},
-    journal     = {Developmental Neurorehabilitation}
-}
-
-
-@article{Edgington1969,
-    title       = {Approximate randomization tests},
-    author      = {Edgington, Eugene S},
-    number      = {2},
-    volume      = {72},
-    doi         = {10.1080/00223980.1969.10543491},
-    publisher   = {Routledge},
-    year        = {1969-07-01},
-    pages       = {143-149},
-    journal     = {The Journal of Psychology}
-}
-
-
-@article{Hope1968,
-    title       = {A simplified Monte Carlo significance test procedure},
-    author      = {Hope, Adery C A},
-    number      = {3},
-    volume      = {30},
-    publisher   = {[Royal Statistical Society, Wiley]},
-    year        = {1968},
+    date        = {1968},
     pages       = {582-598},
     journal     = {Journal of the Royal Statistical Society. Series B (Methodological)}
 }
@@ -3414,30 +2338,30 @@ The results from the power study (Table 1) revealed that due to the relatively s
 \\\\begin{table}
 
   
-\\\\begin{tabular}{c  c  c  c  c  c  c}
+\\\\begin{tabular}{l  l  l  l  l  l  l}
 
-  No. of measurements & No. of participants & Effect size\\\\\\\\
+  \\\\topruleNo. of measurements & No. of participants & \\\\multicolumn{5}{@{} l @{}}{Effect size}\\\\\\\\ \\\\midrule
  &  & 0.1 & 0.2 & 0.3 & 0.4 & 0.5\\\\\\\\
-25 & 10 & 10.3 & 19.0 & 32.2 & 48.6 & 66.1\\\\\\\\
-  & 20 & 13.4 & 29.3 & 51.4 & 74.4 & 90.0\\\\\\\\
-  & 30 & 16.4 & 38.8 & 66.1 & 87.9 & 97.7\\\\\\\\
-  & 40 & 18.9 & 47.5 & 77.4 & 94.8 & 99.5\\\\\\\\
-  & 50 & 22.2 & 54.7 & 85.1 & 97.9 & 99.9\\\\\\\\
-30 & 10 & 13.0 & 25.9 & 45.0 & 66.1 & 83.9\\\\\\\\
-  & 20 & 17.9 & 42.0 & 70.6 & 90.8 & 98.5\\\\\\\\
-  & 30 & 21.9 & 54.9 & 86.0 & 97.9 & 99.9\\\\\\\\
-  & 40 & 26.4 & 65.2 & 92.7 & 99.6 & 100.0\\\\\\\\
-  & 50 & 30.0 & 73.4 & 96.6 & 99.9 & 100.0\\\\\\\\
-35 & 10 & 14.3 & 31.4 & 55.0 & 77.4 & 92.7\\\\\\\\
-  & 20 & 21.0 & 51.4 & 81.0 & 96.6 & 99.7\\\\\\\\
-  & 30 & 27.4 & 65.5 & 93.3 & 99.7 & 100.0\\\\\\\\
-  & 40 & 32.8 & 77.1 & 97.5 & 99.9 & 100.0\\\\\\\\
-  & 50 & 37.4 & 84.7 & 99.1 & 100.0 & 100.0\\\\\\\\
-40 & 10 & 15.4 & 36.0 & 63.9 & 84.9 & 96.3\\\\\\\\
-  & 20 & 23.6 & 58.1 & 88.4 & 98.6 & 100.0\\\\\\\\
-  & 30 & 30.7 & 74.0 & 96.8 & 99.9 & 100.0\\\\\\\\
-  & 40 & 37.0 & 84.6 & 99.2 & 100.0 & 100.0\\\\\\\\
-  & 50 & 42.8 & 90.4 & 99.8 & 100.0 & 100.0\\\\\\\\
+25 & 10 & 10.3 & 19.0 & 32.2 & 48.6 & 66.1\\\\\\\\ \\\\midrule
+  & 20 & 13.4 & 29.3 & 51.4 & 74.4 & 90.0\\\\\\\\ \\\\midrule
+  & 30 & 16.4 & 38.8 & 66.1 & 87.9 & 97.7\\\\\\\\ \\\\midrule
+  & 40 & 18.9 & 47.5 & 77.4 & 94.8 & 99.5\\\\\\\\ \\\\midrule
+  & 50 & 22.2 & 54.7 & 85.1 & 97.9 & 99.9\\\\\\\\ \\\\midrule
+30 & 10 & 13.0 & 25.9 & 45.0 & 66.1 & 83.9\\\\\\\\ \\\\midrule
+  & 20 & 17.9 & 42.0 & 70.6 & 90.8 & 98.5\\\\\\\\ \\\\midrule
+  & 30 & 21.9 & 54.9 & 86.0 & 97.9 & 99.9\\\\\\\\ \\\\midrule
+  & 40 & 26.4 & 65.2 & 92.7 & 99.6 & 100.0\\\\\\\\ \\\\midrule
+  & 50 & 30.0 & 73.4 & 96.6 & 99.9 & 100.0\\\\\\\\ \\\\midrule
+35 & 10 & 14.3 & 31.4 & 55.0 & 77.4 & 92.7\\\\\\\\ \\\\midrule
+  & 20 & 21.0 & 51.4 & 81.0 & 96.6 & 99.7\\\\\\\\ \\\\midrule
+  & 30 & 27.4 & 65.5 & 93.3 & 99.7 & 100.0\\\\\\\\ \\\\midrule
+  & 40 & 32.8 & 77.1 & 97.5 & 99.9 & 100.0\\\\\\\\ \\\\midrule
+  & 50 & 37.4 & 84.7 & 99.1 & 100.0 & 100.0\\\\\\\\ \\\\midrule
+40 & 10 & 15.4 & 36.0 & 63.9 & 84.9 & 96.3\\\\\\\\ \\\\midrule
+  & 20 & 23.6 & 58.1 & 88.4 & 98.6 & 100.0\\\\\\\\ \\\\midrule
+  & 30 & 30.7 & 74.0 & 96.8 & 99.9 & 100.0\\\\\\\\ \\\\midrule
+  & 40 & 37.0 & 84.6 & 99.2 & 100.0 & 100.0\\\\\\\\ \\\\midrule
+  & 50 & 42.8 & 90.4 & 99.8 & 100.0 & 100.0\\\\\\\\ \\\\bottomrule
 
 
 \\\\end{tabular}
@@ -3546,7 +2470,7 @@ Heyvaert, M., \\\\& Onghena, P. (2014a). Analysis of single-case data: Randomisa
 
 Heyvaert, M., \\\\& Onghena, P. (2014b). Randomization tests for single-case experiments: State of the art, state of the science, and state of the application. \\\\emph{Journal of Contextual Behavioral Science}, \\\\emph{3}(1), 51--64. https://doi.org/10.1016/j.jcbs.2013.10.002
 
-Hope, A. C. A. (1968). A simplified Monte Carlo significance test procedure. \\\\emph{Journal of the Royal Statistical Society. }\\\\emph{Series B (Methodological)}, \\\\emph{30}(3), 582--598. http://www.jstor.org/stable/2984263
+Hope, A. C. A. (1968). A simplified Monte Carlo significance test procedure. \\\\emph{Journal of the Royal Statistical Society. Series B (Methodological)}, \\\\emph{30}(3), 582--598. http://www.jstor.org/stable/2984263
 
 Horner, R. H., Carr, E. G., Halle, J., Mcgee, G., Odom, S., \\\\& Wolery, M. (2005). The use of single-subject research to identify evidence-based practice in special education. \\\\emph{Exceptional Children}, \\\\emph{71}(2), 165--179. https://doi.org/10.1177/001440290507100203
 
@@ -3628,38 +2552,38 @@ Woolf, C. J. (2011). Central sensitization: Implications for the diagnosis and t
 \\\\begin{table}
 
   
-\\\\begin{tabular}{c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c  c}
+\\\\begin{tabular}{l  l  l  l  l  l  l  l  l  l  l  l  l  l  l  l  l  l}
 
-  P1 & V1 & P2 & V2 & P3 & V3 & P4 & V4 & P5 & V5 & P6 & V6 & P7 & V7 & P8 & V8 & P9 & V9\\\\\\\\
-A & 0 & A & 1 & A & 1 & A & 0 & A & NA & A & -1 & A & 0 & A & 1 & A & 0\\\\\\\\
-A & 1 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & 1 & A & 0\\\\\\\\
-A & 0 & A & 0 & A & 0 & A & 1 & A & 0 & A & -1 & A & 0 & A & 1 & A & 0\\\\\\\\
-A & 0 & A & 0 & A & 0 & A & 1 & A & 0 & A & 1 & A & 0 & A & 1 & A & -1\\\\\\\\
-A & 1 & A & 0 & A & 0 & A & -1 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\
-B & 1 & B & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & -1 & A & 0\\\\\\\\
-B & 1 & B & 0 & A & NA & A & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\
-B & 0 & B & 0 & A & 1 & A & 0 & A & 0 & B & 0 & B & 0 & A & 0 & A & 1\\\\\\\\
-B & 0 & B & -1 & A & 1 & A & 1 & A & 0 & B & 0 & B & 0 & A & 0 & A & 0\\\\\\\\
-B & 0 & B & 0 & A & 0 & A & -1 & A & 0 & B & 0 & B & 0 & B & 1 & B & 0\\\\\\\\
-  &   &   &   & B & 0 & B & 1 & B & -1 & B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-  &   &   &   & B & NA & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-  &   &   &   & B & NA & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-  &   &   &   & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-  &   &   &   & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 1 & B & -1\\\\\\\\
-  &   &   &   & B & 0 & B & -1 & B & 0 &   &   &   &   & B & 0 & B & 1\\\\\\\\
-  &   &   &   & B & 0 & B & 0 & B & 0 &   &   &   &   & B & 0 & B & 0\\\\\\\\
-  &   &   &   & B & 0 & B & 1 & B & 0 &   &   &   &   & B & 1 & B & 0\\\\\\\\
-  &   &   &   & B & NA & B & 0 & B & 0 &   &   &   &   & B & 1 & B & -1\\\\\\\\
-  &   &   &   & B & 1 & B & 1 & B & 0 &   &   &   &   & B & 1 & B & 0\\\\\\\\
-  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 1\\\\\\\\
-  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 1\\\\\\\\
-  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 1 & B & 0\\\\\\\\
-  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 1 & B & 0\\\\\\\\
-  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 0\\\\\\\\
-  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 1 & B & 0\\\\\\\\
-  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 0\\\\\\\\
-  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 0\\\\\\\\
-  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 0\\\\\\\\
+  \\\\topruleP1 & V1 & P2 & V2 & P3 & V3 & P4 & V4 & P5 & V5 & P6 & V6 & P7 & V7 & P8 & V8 & P9 & V9\\\\\\\\ \\\\midrule
+A & 0 & A & 1 & A & 1 & A & 0 & A & NA & A & -1 & A & 0 & A & 1 & A & 0\\\\\\\\ \\\\midrule
+A & 1 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & 1 & A & 0\\\\\\\\ \\\\midrule
+A & 0 & A & 0 & A & 0 & A & 1 & A & 0 & A & -1 & A & 0 & A & 1 & A & 0\\\\\\\\ \\\\midrule
+A & 0 & A & 0 & A & 0 & A & 1 & A & 0 & A & 1 & A & 0 & A & 1 & A & -1\\\\\\\\ \\\\midrule
+A & 1 & A & 0 & A & 0 & A & -1 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\ \\\\midrule
+B & 1 & B & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & -1 & A & 0\\\\\\\\ \\\\midrule
+B & 1 & B & 0 & A & NA & A & 0 & A & 0 & A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\ \\\\midrule
+B & 0 & B & 0 & A & 1 & A & 0 & A & 0 & B & 0 & B & 0 & A & 0 & A & 1\\\\\\\\ \\\\midrule
+B & 0 & B & -1 & A & 1 & A & 1 & A & 0 & B & 0 & B & 0 & A & 0 & A & 0\\\\\\\\ \\\\midrule
+B & 0 & B & 0 & A & 0 & A & -1 & A & 0 & B & 0 & B & 0 & B & 1 & B & 0\\\\\\\\ \\\\midrule
+  &   &   &   & B & 0 & B & 1 & B & -1 & B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+  &   &   &   & B & NA & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+  &   &   &   & B & NA & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+  &   &   &   & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+  &   &   &   & B & 0 & B & 0 & B & 0 & B & 0 & B & 0 & B & 1 & B & -1\\\\\\\\ \\\\midrule
+  &   &   &   & B & 0 & B & -1 & B & 0 &   &   &   &   & B & 0 & B & 1\\\\\\\\ \\\\midrule
+  &   &   &   & B & 0 & B & 0 & B & 0 &   &   &   &   & B & 0 & B & 0\\\\\\\\ \\\\midrule
+  &   &   &   & B & 0 & B & 1 & B & 0 &   &   &   &   & B & 1 & B & 0\\\\\\\\ \\\\midrule
+  &   &   &   & B & NA & B & 0 & B & 0 &   &   &   &   & B & 1 & B & -1\\\\\\\\ \\\\midrule
+  &   &   &   & B & 1 & B & 1 & B & 0 &   &   &   &   & B & 1 & B & 0\\\\\\\\ \\\\midrule
+  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 1\\\\\\\\ \\\\midrule
+  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 1\\\\\\\\ \\\\midrule
+  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 1 & B & 0\\\\\\\\ \\\\midrule
+  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 1 & B & 0\\\\\\\\ \\\\midrule
+  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 0\\\\\\\\ \\\\midrule
+  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 1 & B & 0\\\\\\\\ \\\\midrule
+  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 0\\\\\\\\ \\\\midrule
+  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 0\\\\\\\\ \\\\midrule
+  &   &   &   &   &   &   &   &   &   &   &   &   &   & B & 0 & B & 0\\\\\\\\ \\\\bottomrule
 
 
 \\\\end{tabular}
@@ -3676,39 +2600,39 @@ B & 0 & B & 0 & A & 0 & A & -1 & A & 0 & B & 0 & B & 0 & B & 1 & B & 0\\\\\\\\
 \\\\begin{table}
 
   
-\\\\begin{tabular}{c  c  c  c  c  c  c  c}
+\\\\begin{tabular}{l  l  l  l  l  l  l  l}
 
-  P10 & V10 & P11 & V11 & P12 & V12 & P13 & V13\\\\\\\\
-A & 1 & A & 0 & A & 0 & A & 0\\\\\\\\
-A & NA & A & 0 & A & 0 & A & 0\\\\\\\\
-A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\
-A & 1 & A & 0 & A & 0 & A & 0\\\\\\\\
-A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\
-A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\
-A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\
-A & 1 & A & 0 & A & 0 & A & 0\\\\\\\\
-A & -1 & A & 0 & A & 0 & A & 0\\\\\\\\
-B & NA & B & 1 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-B & NA & B & 1 & B & 0 & B & 0\\\\\\\\
-B & NA & B & 0 & B & 0 & B & 0\\\\\\\\
-B & NA & B & 1 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
-B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
+  \\\\topruleP10 & V10 & P11 & V11 & P12 & V12 & P13 & V13\\\\\\\\ \\\\midrule
+A & 1 & A & 0 & A & 0 & A & 0\\\\\\\\ \\\\midrule
+A & NA & A & 0 & A & 0 & A & 0\\\\\\\\ \\\\midrule
+A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\ \\\\midrule
+A & 1 & A & 0 & A & 0 & A & 0\\\\\\\\ \\\\midrule
+A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\ \\\\midrule
+A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\ \\\\midrule
+A & 0 & A & 0 & A & 0 & A & 0\\\\\\\\ \\\\midrule
+A & 1 & A & 0 & A & 0 & A & 0\\\\\\\\ \\\\midrule
+A & -1 & A & 0 & A & 0 & A & 0\\\\\\\\ \\\\midrule
+B & NA & B & 1 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+B & NA & B & 1 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+B & NA & B & 0 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+B & NA & B & 1 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+B & 0 & B & 1 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\ \\\\midrule
+B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\ \\\\bottomrule
 
 
 \\\\end{tabular}
@@ -3730,339 +2654,6 @@ B & 0 & B & 0 & B & 0 & B & 0\\\\\\\\
 `;
 
 exports[`parses correctly for endnote 1`] = `
-" \\\\documentclass{article}
-\\\\usepackage[style=apa]{biblatex}
-\\\\addbibresource{bibliography.bib}\\\\usepackage{graphicx}\\\\usepackage{hyperref}
-
-
-
-\\\\begin{filecontents}{bibliography.bib}
-
-  @article{Brown2011,
-    title       = {Medication adherence: WHO cares?},
-    author      = {Brown, A.D.D.I.N.E.N.R.E.F.L.I.S.T. and T., M. and Bussell, J.K.},
-    number      = {4},
-    volume      = {86},
-    year        = {2011},
-    pages       = {304--314},
-    journal     = {Mayo Clinical Proceedings}
-}
-
-
-@article{Jungst2019,
-    title       = {Medication adherence among patients with chronic diseases: A survey-based study in pharmacies},
-    author      = {Jungst, C. and Graber, S. and Simons, S. and Wedemeyer, H. and Lammert, F.},
-    number      = {7},
-    volume      = {112},
-    year        = {2019},
-    pages       = {505--512},
-    journal     = {QJM: An International Journal of Medicine}
-}
-
-
-@article{Kini2018,
-    title       = {Interventions to improve medication adherence: A review},
-    author      = {Kini, V. and Ho, P.M.},
-    number      = {23},
-    volume      = {320},
-    year        = {2018},
-    pages       = {2461--2473},
-    journal     = {The Journal of the American Medical Association}
-}
-
-
-@article{Hartman2021,
-    title       = {Medication adherence in older people with rheumatoid arthritis is lower according to electronic monitoring than according to pill count},
-    author      = {Hartman, L. and Cutolo, M. and Bos, R. and Opris-Belinski, D. and Kok, M.R. and Griep-Wentink, H. and Klaasen, R. and Allaart, C.F. and Bruyn, G.A.W. and Raterman, H.G. and Voshaar, M.J.H. and Gomes, N. and Pinto, R.M.A. and Klausch, L.T. and Lems, W.F. and Boers, M.},
-    year        = {2021},
-    journal     = {Rheumatology}
-}
-
-\\\\end{filecontents}
-
-\\\\begin{document}
-
-  \\\\section{The GLORIA adherence subproject: problems and randomization mistakes}
-
-Hartman L\\\\textsuperscript{1, 2}, Kok MR\\\\textsuperscript{3}, Molenaar E\\\\textsuperscript{4}, Griep EN\\\\textsuperscript{5}, Van Laar JM\\\\textsuperscript{6}, Van Woerkom JM\\\\textsuperscript{7}, Allaart CF\\\\textsuperscript{8}, Raterman HG\\\\textsuperscript{9}, Ruiterman YPM\\\\textsuperscript{10}, Voshaar MJH\\\\textsuperscript{11}, Redol J\\\\textsuperscript{12}, Pinto RMA\\\\textsuperscript{13}, Klausch LT\\\\textsuperscript{2}, Lems WF\\\\textsuperscript{1}, Boers M\\\\textsuperscript{1, 2}.
-
-
-
-\\\\textsuperscript{1}Amsterdam Rheumatology and Immunology Center, Amsterdam UMC, location VUmc, Amsterdam, Netherlands; \\\\textsuperscript{2}Epidemiology \\\\& Data Science, Amsterdam UMC, Vrije Universiteit, Amsterdam, Netherlands; \\\\textsuperscript{3}Department of Rheumatology and Clinical immunology, Maasstad Hospital, Rotterdam, Netherlands;\\\\textsuperscript{ 4} Department of Rheumatology, Groene Hart Hospital, Gouda, Netherlands; \\\\textsuperscript{5}Department of Rheumatology, Antonius Hospital, Sneek, Netherlands; \\\\textsuperscript{6}Department of Rheumatology and Clinical Immunology, University Medical Center Utrecht, Utrecht, Netherlands; \\\\textsuperscript{7}Department of Rheumatology, Gelre Hospitals, Apeldoorn, Netherlands; \\\\textsuperscript{8}Department of Rheumatology, Leids University Medical Center, Leiden, Netherlands; \\\\textsuperscript{9}Department of Rheumatology, Northwest Clinics, Alkmaar, Netherlands;\\\\textsuperscript{ 10}Department of Rheumatology, Haga Hospital, Den Haag, Netherlands; \\\\textsuperscript{11}Tools Patient Empowerment, Amsterdam, Netherlands; \\\\textsuperscript{12}BeyonDevices LDA, Sobral de Monte Agraço, Portugal; \\\\textsuperscript{13}Bluepharma, Indústria Farmacêutica, S.A., Coimbra, Portugal.
-
-
-
-\\\\subsection{Take-home message}
-
-It proved difficult to perform a subproject nested within a large investigator-initiated trial, although we expected it to be easy. We recommend keeping a nested subproject simple, maintaining active contact with study centers, and monitoring data from the beginning to resolve emerging problems immediately. 
-
-
-
-\\\\subsection{Abstract }
-
-Medication adherence, which is the extent to which patients take their medication as prescribed, is essential in treating chronic inflammatory diseases such as rheumatoid arthritis (RA). Therefore, we nested a subproject in the two-year multicenter Glucocorticoid Low-dose Outcome in Rheumatoid Arthritis (GLORIA) trial to add a low-dose prednisolone (5 mg/day) or placebo to the standard care in older people (≥65 years) with RA. Adherence was measured with an electronic monitoring cap that recorded bottle openings in all patients. In the subproject, we performed an adherence intervention with an advanced cap that could communicate with an application on the smart device via Bluetooth. We randomized patients with a smart device to receive or not to receive adherence reminders on the smart device for three months. Multiple problems emerged that precluded an answer to the research question: sample size (overly optimistic estimates of older patients with a smart device), logistic issues (availability of smartcaps, data extraction), randomization and treatment allocation errors (despite training of personnel), and low quality of the data in the intervention group (hardware failure, discovered too late because data was read in batches). For future trials planning to include a subproject, we recommend keeping it simple, starting with a field test before the actual study starts, and monitoring data from the beginning of the study. 
-
-
-
-\\\\subsubsection{Keywords}
-
-Medication adherence, electronic caps, rheumatoid arthritis, nested trial, randomization 
-
-
-
-\\\\subsection{Purpose }
-
-The ongoing two-year Glucocorticoid Low-dose Outcome in Rheumatoid Arthritis (GLORIA) trial examines the addition of daily low-dose (5 mg) prednisolone or placebo to the standard care in elderly patients (65+ years) with rheumatoid arthritis; adherence is measured with electronic caps and counting returned pills. A subproject was nested within the main GLORIA trial, limited to patients with a smart device who had taken the study treatment for at least three months. The objective was to test the effectiveness of adherence reminders delivered to the smart device through Bluetooth by a special cap during a three-month period. Eligible patients were randomized to the intervention group (receiving reminders) or the control group (no reminders). In the intervention group, an application was loaded onto the smart device that communicated with the adherence-monitoring device loaded into the cap of the drug bottle. The app sent a reminder message if the patient had forgotten to take the study medication. The hypothesis was that after three months, patients in the intervention group would be more adherent compared to the patients in the control group. Multiple problems prevented us from answering our research question. This paper reflects on these problems. The research group was a part of the GLORIA consortium and was comprised of rheumatologists and researchers from the Netherlands, Germany, Italy, and Portugal, and the owner of the caps and the pharmaceutical manufacturer of the study medication from Portugal.
-
-
-
-\\\\subsection{Introduction}
-
-Medication adherence, which is the extent to which patients take their medication as prescribed \\\\parencite{Brown2011}, is essential to treat chronic inflammatory diseases, such as rheumatoid arthritis (RA; Jungst et al., 2019). Almost half of patients with chronic diseases are non-adherent \\\\parencite{Jungst2019, Kini2018}. Non-adherence substantially increases the risk of a disease flare in RA \\\\parencite{Jungst2019}. 
-
-
-
-In the two-year multicenter Glucocorticoid Low-dose Outcome in Rheumatoid Arthritis (GLORIA) trial, a low-dose prednisolone (5 mg/day) or placebo was added to the standard care in older people (≥65 years) with RA. We measured adherence with electronic monitoring and pill count in all patients \\\\parencite{Hartman2021}. In a subproject nested within the trial, we assessed the efficacy of an adherence intervention for the patients with a smart device. 
-
-
-
-\\\\subsection{Methods}
-
-The eligibility criteria for the subproject were to: be in possession of a smart device (smartphone or tablet) and be an active participant in the main GLORIA trial for at least three months. We planned to include patients with a smart device from all seven participating countries of the main trial because a pilot survey indicated that a sufficient number of patients (20\\\\%) possessed a smart device in all countries. Based on this feasibility assessment, we expected to include 50 patients. 
-
-
-
-Before the training of the study personnel, it appeared that only Dutch patients had smart devices. Therefore, the training of the study personnel was only provided in the Netherlands.
-
-
-
-\\\\subsubsection{Training of study personnel}
-
-The study personnel of all participating Dutch sites received an e-mail with information about the objective of the subproject, eligibility criteria, signing of the informed consent in duplicate, and an explanation about the randomization step. In addition, the study personnel received a manual that explained the subproject procedures (assembling of the cap, installation of application) that were needed before the patient could start with the subproject. Finally, the subproject and the related procedures were explained and demonstrated during the Dutch GLORIA researchers meeting, and an English instructional movie was sent to all participating centers. One of us (LH) served as the contact person for questions about the subproject.
-
-
-
-\\\\subsubsection{Subproject procedure}
-
-Eligible patients were informed about the subproject by the research nurse and were asked to participate. Patients who provided written informed consent were randomly assigned to either the intervention or control group through the electronic case record form (eCRF). All patients continued taking the study medication (one pill per day) from the pill bottle as in the main trial. The opening and closing events of the pill bottle (to measure adherence) were registered by the electronic cap for all patients. Patients in the control group continued their participation in the main study without changes. For patients in the intervention group, several actions of the study personnel were needed. 
-
-The instructions given to study personnel were as follows:
-
-Assembling of smart adherence cap: 
-
-Remove the regular cap from the medication bottle. 
-
-Close the pill bottle with the plastic replacement cap.
-
-Write the kit number of the medication bottle on a label and stick the label inside the smart adherence cap.
-
-Remove the cover of the double-tape on the interior of the smart adherence cap.
-
-Assemble the smart adherence cap over the plastic replacement cap on the medication bottle, correctly aligned, and press it until you reach resistance. Keep it under pressure for at least 3 seconds. 
-
-Installation of the GLORIA app on the smart device of the patient:
-
-Open the Google play store (Android)/AppStore (iOS) application
-
-Search for ‘'GLORIA adherence cap''
-
-Install the app and wait until the installation process has been finished
-
-Open the GLORIA application
-
-Connecting the smart adherence cap and the GLORIA app via Bluetooth by going through multiple steps in the app. (see page 13-19 of appendix for the detailed instruction)
-
-
-
-The activated app was connected to the smart adherence cap of the medication bottle via Bluetooth. For patients, no additional actions were required. The patient only had to open the medication bottle once per day, preferably in the morning. Both the regular adherence caps in the control group and the smart adherence caps in the intervention group recorded each opening and closing event of the medication bottle. The smart adherence cap repeatedly attempted to open a connection with the GLORIA app via Bluetooth to report whether the bottle had been opened. If the bottle was not opened between 08:00 a.m. and 02:00 p.m., the app posted a notification on the opening screen to remind the patient to open the medication bottle. The patients in the control group did not receive an activated smart cap nor the reminder app; they were instructed to open the medication bottle once per day, as in the main trial. At the end of the three-month period, the bottle was returned, and the remaining capsules were counted. For patients that started the trial at six months or later, the return of the bottle was delayed by three months, because clinic visits occurred every six months. The adherence of both groups based on returned pills was calculated as follows: If the number of pills dispensed is D, the treatment period in number of days is P, and the number of pills returned is R, medication adherence (\\\\%) is calculated as: ((D-R)/P)*100. The adherence of the two groups was compared. 
-
-
-
-Social desirability could have influenced the adherence measurements with the caps and the number of returned pills. Patients might have returned the expected number of pills or opened the medication bottle as would be expected. However, we assume that most patients were as adherent as non-trial patients, because it would be difficult to maintain social desirability during the full two years of the trial. 
-
-
-
-\\\\subsubsection{Data registration and extraction}
-
-Apart from the bottle closing and opening events, which were always registered if the medication bottle was opened, the smart adherence caps also registered “pairing success” events, “no communication” events, “keep alive” events and “reset” events. 
-
-The “pairing success” events guaranteed that the pairing of the adherence cap with the app before the study started was successful. Non-registration of this event indicated that the pairing of the cap and app was unsuccessful and that the cap was not able to communicate with the smart device during the entire three months of the study (reported by “no communication” events). Therefore, caps with no “pairing success” event at the start of the study were excluded. 
-
-
-
-\\\\subsubsection{“Opening events”}
-
-“No communication” events were registered at 02:00 p.m. if the smart adherence cap had been unable to communicate with the app on the smart device between 08:00 a.m. and 02:00 p.m. on a given day. The time window from 08:00 a.m. until 02:00 p.m. was chosen to match the advice to take prednisolone in the morning. The registration of “no communication” events was independent of the successful or unsuccessful pairing between the app and the cap. The “keep alive” event was used to check if the cap still worked and if the battery was not empty. “Keep alive” events were registered one or more times per morning, indicating that the cap was functioning even if a patient did not open the medication bottle. A “reset” event was registered whenever a reset on the system was detected. This could be related to battery power being too low, or bad contacts on the battery power supply caused by faulty cables due to falls or abrupt movements of the cap. If more than one “reset” event was registered, the cap was excluded. 
-
-
-
-The patients returned the regular caps and adherence caps to the research nurse, and the caps of each site were sent to the owner of the caps (BeyonDevices LDA, Sobral de Monte Agraço, Portugal). The data of the caps were read in batches and were uploaded in data files. The data files contained the registration of the events described above. The app generated a reminder message if the cap did not transmit an opening event between 08:00 a.m. and 02:00 p.m., or if no communication was established on that day (registered in the cap). 
-
-
-
-\\\\subsection{Discussion}
-
-
-
-\\\\subsubsection{Problems in the preparation and execution of the trial}
-
-We had multiple misfortunes related to the preparations of the subproject, technical issues with the app and smart adherence cap, and the randomization step. Therefore, it was not possible to test the effectiveness of adherence reminders delivered via the smart device during the three month trial period. 
-
-
-
-We want to discuss and reflect on the problems and misfortunes that prevented us from answering our research question. All aspects that influenced the success of the subproject were discussed, and we reflected on how each aspect contributed to the subproject's failure. 
-
-The discussions and reflections are mainly related to the researchers from the Netherlands, because only Dutch patients entered the subproject. The discussions were supported by the scientific advisory committee, which was set up especially for the GLORIA trial and by the developers of the adherence caps and the GLORIA app.
-
-
-
-\\\\subsubsection{1. Preparations}
-
-We had a contract with a company that would deliver the adherence caps and the application for the subproject, but this company went bankrupt a few months before the study would start. We had to choose another company in a very short time frame because the main trial was almost ready to start. This choice was based on expertise, the projected time for development and implementation of the smart device reminder app, and an offer with limited costs because the budget of this investigator-initiated study was limited. Unfortunately, the chosen company needed more time than expected to develop suitable smart caps. In total, this caused a delay of 1.5 years in the delivery of the smart caps.
-
-
-
-\\\\subsubsection{2. Sample size}
-
-The number of potential patients for the subproject proved much lower than expected. From initial feasibility assessments among the trial centers, it appeared that around 20\\\\% of the elderly patients possessed a smart device. Assuming that patients with a smart device are technically interested, we expected that about 80\\\\% of them would be willing to participate. Thus, with a sample size of 450 patients in the main study, we expected around 72 patients in the subproject. As it turned out, smart device owners in this senior population were only located in the Netherlands. This resulted in a significant waste of paid and unpaid work hours: The app and instruction manual were translated from English into seven localized versions with the help of the patient panel of the main trial. To include enough patients in the subproject, we amended the protocol so that patients could start with the subproject at any moment during the trial instead of only at the three-months visit. 
-
-
-
-\\\\subsubsection{3. Complexities for the participating sites}
-
-The changed inclusion moment for the subproject (as described above) made the inclusion procedure more complex for the participating sites. 
-
-Another potential source of confusion was that we now had two types of similar-looking caps: the regular adherence caps used by all patients throughout the whole main trial, and the smart adherence caps only intended for patients in the intervention group of the subproject. The only difference between the caps was the color of the magnetic label on the cap, which had to be removed to activate the cap. It proved difficult for the research nurses to remember the differences and objectives of the regular and smart adherence caps. 
-
-
-
-Also, despite the instructions outlined above, for some study personnel, it was not clear that patients had to be separately randomized for participation in the subproject and that the preparations before participation were different for the patients in the intervention and control group. For the smart adherence caps belonging to the intervention group, several manual actions were needed before the cap could be used. This involved a lot of work if a patient was randomized to the intervention group compared to control patients, where no additional actions were required. 
-
-
-
-\\\\subsubsection{4. Randomization and treatment allocation mistakes}
-
-These complexities resulted in mistakes in the randomization and treatment allocation, despite training of the sites. A total of 126 patients in the main trial were assessed for eligibility to participate in the subproject (Figure 1). Most patients were not eligible because they were not in possession of a smart device. From the non-eligible patients, three were nevertheless randomized for the subproject by mistake. The adherence data of these patients could not be used because the patients did not meet the eligibility criteria, did not give informed consent to use their data, or both.
-
-
-
-In addition, randomization and treatment allocation failed for many patients because of mistakes at the participating sites and technical problems related to the smart adherence cap. A total of 23 patients received the intervention (smart cap). This included 16 patients that were randomized and properly allocated to the treatment, three patients originally randomized to the control group (contamination), and four patients who received the intervention without being randomized. A total of 19 patients received the control intervention (no reminder). This included 15 patients that were randomized to the control group and were properly allocated to the treatment, one patient originally randomized to the intervention (contamination, the smart adherence cap failed to activate), and three patients who received the control intervention but were not randomized. 
-
-
-
-The reasons for the randomization and treatment allocation mistakes are unknown. However, we have some suggestions for changes to the randomization procedure, which might decrease the chance of mistakes. In our study, patients could have been randomized easily to the subproject by first having the patient answer a few questions in a conversation (among others about the possession of a smart device), followed by one click on a button in the eCRF. Entry of ineligible patients could probably have been prevented if the answers to the questions needed to be entered correctly on the screen before randomization and allocation could proceed.
-
-
-
-The problem of contamination, i.e., patients randomized to one group but receiving the intervention of the other group, was probably caused by confusion among the research nurses performing the allocation procedure. It is likely that the explanation given to the research nurses about the subproject was insufficient. On-site training could have been better, but this is time-consuming and costly. 
-
-
-
-\\\\subsubsection{5. Functioning of smart adherence caps in the intervention group}
-
-Upon delivery, we found the smart adherence caps had technical limitations, but there was no possibility to resolve this limitation by the company. The medication bottle and smart device had to be close to each other to connect and exchange information about the opening events. If the medication bottle and smart device were more than a few meters apart, they did not connect and the patient received a reminder to open the bottle as a consequence. 
-
-Of the 23 smart adherence caps applied, only two caps functioned as expected. The other adherence caps had technical errors from the start of the subproject or within 1-4 weeks after the start, or the caps were not returned (Table 1). 
-
-The malfunctioning of the smart adherence caps in the intervention group was also reflected in the satisfaction rates reported by 18 of the 23 patients. On a scale of 0-10, the mean reported satisfaction rate was 5.6 (range 0-10). Multiple patients gave a low satisfaction rate because they received a reminder despite taking their medication (i.e., opened the bottle). On the other hand, six patients reported a grade of 8 or higher. The malfunctioning of the caps could explain these high rates. The caps did not or rarely communicated with the app and, therefore, the app never sent reminders. This meant that these patients did not receive unnecessary reminders when they opened the bottle. 
-
-
-
-\\\\textbf{Table 1.} Functioning of the smart adherence caps in the intervention group of the GLORIA subproject. 
-
-
-\\\\begin{table}
-
-  
-\\\\begin{tabular}{c  c  c  c  c}
-
-  Functioning of smart adherence cap & Number of patients (\\\\% of patients) & ( & \\\\textbf{n} &  = 23)\\\\\\\\
-Good functioning\\\\\\\\
- full 12 weeks &  2  & ( & 9)\\\\\\\\
- 6 weeks &  1  & ( & 4)\\\\\\\\
- 3-4 weeks &  1  & ( & 4)\\\\\\\\
- 2-3 weeks &  1  & ( & 4)\\\\\\\\
- 1-2 weeks &  2  & ( & 9)\\\\\\\\
- < 1 week &   & 9 ( & 39)\\\\\\\\
-Pairing error  & (no pairing success event registered) &  2  & ( & 9)\\\\\\\\
-Cap technical errors  & (reset event registered) &  1  & ( & 4)\\\\\\\\
-Cap not returned &   & 4 ( & 17)\\\\\\\\
-
-
-\\\\end{tabular}
-
-
-\\\\end{table}
-
-
-\\\\subsubsection{Data extraction and interpretation}
-
-The data extraction and interpretation had limitations. The data were read in batches when the study was almost finished because it was cheaper to send the caps in batches instead of each single cap from sites in the Netherlands to the company in Portugal. This prevented early detection of errors and malfunctioning. 
-
-
-
-The data interpretation was a complicated process. It was difficult to interpret the different events described in the methods section, and to unravel when reminders were sent by the app. This increased the risk of errors in the data interpretation. It would have been easier if the data file had only the opening and closing events, and the exact moments when reminders were sent. Additionally, we had to link the adherence data to the patient data in the eCRF. The kit number belonging to the patient had to be looked up in the eCRF, which also increased the risk of errors. 
-
-
-
-\\\\subsection{Conclusion }
-
-We were unable to answer our research question because of a multitude of problems. Even with the limited sample size and randomization and allocation errors, we were initially hopeful that we could compare the adherence of the two groups as a controlled trial instead of a randomized controlled trial. However, the quality of the data in the intervention group was unusable due to almost universal failure of the cap-app dyad. It turned out that it was difficult to perform a subproject nested within a large pragmatic trial, although we expected it to be easy. 
-
-
-
-For future trials that test new devices or applications, we strongly recommend a clear plan regarding the requirements. For example, we recommend conducting preliminary field tests to resolve technical problems of the materials, optimize study procedures, and ensure that the plans are clear for all involved parties. The study monitor should also be in active contact with the study centers when the first patients start, to resolve emerging problems in real time and to emphasize the aspects that will help the study perform well. In addition, data stored in the device should be read during rather than after the study. It is also important to be aware that most seemingly “simple” studies are typically complex due to issues with people in different roles, technology, and processes.
-
-
-
-\\\\subsection{Acknowledgements}
-
-The GLORIA project was funded by the \\\\emph{European Union's Horizon 2020 Research and Innovation }\\\\emph{Programme} under the topic ‘'Personalizing Health and Care'' (grant number 634886). 
-
-J. W. J. Bijlsma, R. Christensen, Y. M. Smulders and S. H. Ralston are members of the scientific advisory committee of the GLORIA trial. 
-
-
-
-\\\\subsection{References}
-
-Brown, M. T. \\\\& Bussell, J. K. (2011). Medication adherence: WHO cares? \\\\emph{Mayo Clinical Proceedings, }\\\\emph{86}(4), 304-314.
-
-Hartman, L., Cutolo, M., Bos, R., Opris-Belinski, D., Kok, M. R., Griep-Wentink, H., Klaasen, R., Allaart, C. F., Bruyn, G. A. W., Raterman, H. G., Voshaar, M. J. H., Gomes, N., Pinto, R. M. A., Klausch, L.T., Lems, W. F., \\\\& Boers, M. (2021). Medication adherence in older people with rheumatoid arthritis is lower according to electronic monitoring than according to pill count. \\\\emph{Rheumatology}.
-
-Jungst, C., Graber, S., Simons, S., Wedemeyer, H. \\\\& Lammert, F. (2019). Medication adherence among patients with chronic diseases: A survey-based study in pharmacies. \\\\emph{QJM: An International Journal of Medicine, }\\\\emph{112}(7), 505-512.
-
-Kini, V. \\\\& Ho, P. M. (2018). Interventions to improve medication adherence: A review. The \\\\emph{Journal of the American Medical Association, }\\\\emph{320}(23), 2461-2473.
-
-
-
-\\\\subsection{Appendix}
-
-
-\\\\begin{figure}
-
-  \\\\includegraphics{media/image1.jpg}
-\\\\caption{}
-\\\\label{}
-
-
-\\\\end{figure}
-
-
-\\\\textbf{Figure}\\\\textbf{ 1.} Flow diagram
-
-
-
-
-
-
-
-
-
-\\\\end{document}
-"
-`;
-
-exports[`parses correctly for endnote 2`] = `
 "\\\\documentclass{article}
 \\\\usepackage[style=apa]{biblatex}
 \\\\addbibresource{bibliography.bib}
@@ -4463,6 +3054,8 @@ Two
 
 Three
 
+Indent
+
 
 
 Unordered
@@ -4471,6 +3064,8 @@ List
 
 Items
 
+Indentatio
+
 
 
 Continuing
@@ -4478,6 +3073,12 @@ Continuing
 Previous
 
 List
+
+Indentation
+
+Going down a step again
+
+Immediately starting other list
 
 
 
@@ -4488,7 +3089,9 @@ List
 exports[`parses correctly for nocites 1`] = `
 "\\\\documentclass{article}
 \\\\usepackage[style=apa]{biblatex}
-\\\\addbibresource{bibliography.bib}\\\\usepackage{graphicx}\\\\usepackage{hyperref}
+\\\\addbibresource{bibliography.bib}
+\\\\usepackage{graphicx}
+\\\\usepackage{hyperref}
 
 
 
@@ -4496,7 +3099,7 @@ exports[`parses correctly for nocites 1`] = `
 
   @article{Barrington2020,
     author      = {Barrington},
-    year        = {2020}
+    date        = {2020}
 }
 
 
@@ -4505,8 +3108,9 @@ exports[`parses correctly for nocites 1`] = `
     author      = {Sindall, R.C. and Barrington, D.J.},
     number      = {1},
     volume      = {1},
+    url         = {https://doi.org/10.36850/ed2},
     doi         = {10.36850/ed2},
-    year        = {2020},
+    date        = {2020},
     pages       = {6--8},
     journal     = {Journal of Trial and Error}
 }
@@ -4517,7 +3121,7 @@ exports[`parses correctly for nocites 1`] = `
     author      = {Holden, R.J.},
     number      = {12},
     volume      = {54},
-    year        = {2009},
+    date        = {2009},
     pages       = {34--41},
     journal     = {Professional safety}
 }
@@ -4528,8 +3132,9 @@ exports[`parses correctly for nocites 1`] = `
     author      = {Gilson, R.D. and Deaton, J.E. and Mouloua, M.},
     number      = {4},
     volume      = {4},
+    url         = {https://doi.org/10.1177/106480469600400404},
     doi         = {10.1177/106480469600400404},
-    year        = {1996},
+    date        = {1996},
     pages       = {12--18},
     journal     = {Ergonomics in Design: The Quarterly of Human Factors Applications}
 }
@@ -4538,7 +3143,8 @@ exports[`parses correctly for nocites 1`] = `
 @article{Levin2019,
     title       = {Boeing failed to predict that slew of 737 Max warning alarms would confuse pilots, investigators say},
     author      = {Levin, A.},
-    year        = {2019-09-26}
+    url         = {https://time.com/5687473/boeing-737-alarm-system/},
+    date        = {2019-09-26}
 }
 
 
@@ -4546,8 +3152,9 @@ exports[`parses correctly for nocites 1`] = `
     title       = {Who would benefit from memory training? A pilot study examining the ceiling effect of concurrent cognitive stimulation},
     author      = {Kwok, T.C. and Chau, W.W. and Yuen, K.S. and Wong, A.Y. and Li, J.C. and Shiu, R.Y. and Ho, F.K.},
     volume      = {6},
+    url         = {https://doi.org/10.2147/CIA.S16802},
     doi         = {10.2147/CIA.S16802},
-    year        = {2011},
+    date        = {2011},
     pages       = {83--88},
     journal     = {Clinical Interventions in Aging}
 }
@@ -4557,8 +3164,9 @@ exports[`parses correctly for nocites 1`] = `
     title       = {Why does cognitive training yield inconsistent benefits? A meta-analysis of individual differences in baseline cognitive abilities and training outcomes},
     author      = {Traut, H.J. and Guild, R.M. and Munakata, Y.},
     volume      = {12},
+    url         = {https://doi.org/10.3389/fpsyg.2021.662139},
     doi         = {10.3389/fpsyg.2021.662139},
-    year        = {2021},
+    date        = {2021},
     pages       = {1--20},
     journal     = {Frontiers in psychology}
 }
@@ -4568,8 +3176,9 @@ exports[`parses correctly for nocites 1`] = `
     title       = {Human factor risk management in the process industry: A case study},
     author      = {Bevilacqua, M. and Ciarapica, F.E.},
     volume      = {169},
+    url         = {https://doi.org/10.1016/j.ress.2017.08.013},
     doi         = {10.1016/j.ress.2017.08.013},
-    year        = {2018},
+    date        = {2018},
     pages       = {149--159},
     journal     = {Reliability Engineering \\\\& System Safety}
 }
@@ -4584,11 +3193,11 @@ exports[`parses correctly for nocites 1`] = `
 
 It will come as no surprise to readers of this journal that failure is systematically ignored in academia. The entire culture of academia revolves around a notion of linear progress made in leaps and bounds by great thinkers, rather than the more realistic image of science as an ongoing process of trial and error. For those already convinced that error deserves a place in scientific discussion, it is often tempting to treat the dismissal of failure as a moral failure on the part of researchers and publishers—if only we were more courageous to do the work that science demands of us, we would publish our failures all the time; if it was not for journals rejecting my work because it is not “innovative” enough, I would tell everyone of my important failures. This perspective, while understandable, misses the mark. Specifically, it neglects the \\\\emph{structure }of modern academia that perpetuates an ideal of “success-first” science on all fronts—a structure, like any structure, that severely limits researchers' and journals' ability to change it. 
 
-This point is described superbly in a recent editorial piece by public health researchers Rebecca Sindall and Dani \\\\parencite{Barrington2020}, who point out the many barriers to sharing and promoting scholarly understandings of failure in the public health interventionist field of Water, Sanitation, and Hygiene (WASH), which they experienced personally as well. 
+This point is described superbly in a recent editorial piece by public health researchers Rebecca Sindall and Dani \\\\textcite{Barrington2020}, who point out the many barriers to sharing and promoting scholarly understandings of failure in the public health interventionist field of Water, Sanitation, and Hygiene (WASH), which they experienced personally as well. 
 
 In their  in the Journal of Trial and Error's (JOTE) first issue, the authors argue not only for the role of researchers themselves in pursuing submission and publication of reports of what went wrong, but also of funding partners in sharing information about projects that did not \\"turn out as planned,\\" and importantly, for the responsibility of journals in welcoming such sort of publications. Critically, they argue that the widespread fixation on “novelty” contributes to a \\"culture of success-ism\\" that is \\"highly unscientific\\". In short, the outward-facing sheen of scientific success—propagated by scientists, funders, and stakeholders alike—challenges the very foundations scientific development is built on: transparency, collaboration, and trial and error.
 
-\\\\parencite{Sindall2020} paint a compelling picture of an academic system that struggles to find a place for failure and the “multitude of sins” such a system necessarily perpetuates. Rightly so, they place the responsibility for change not only on researchers, but also funders and publication bodies. 
+\\\\textcite{Sindall2020} paint a compelling picture of an academic system that struggles to find a place for failure and the “multitude of sins” such a system necessarily perpetuates. Rightly so, they place the responsibility for change not only on researchers, but also funders and publication bodies. 
 
 But the buck doesn't stop here. The same culture of success-ism that limits researchers limits individual publishers as well. The problem is diffuse and the blame cannot be laid on a single “bad actor”. Accordingly, we feel it pertinent to extend Sindall \\\\& Barrington's argument by highlighting the structural barriers that restrict the spread of failure in the sciences, even at the editorial level. To do so, we use systems theory to frame three limitations journals face when publishing failure and how these limitations cannot simply be solved by good agents engaging in good science. 
 
@@ -4634,7 +3243,7 @@ Increasing the prestige of failure would contribute to an increased willingness 
 
 At the same time, those researchers that do already want to publish about failure often encounter unexpected hurdles in the publication process. If the journal is subscription-based, the readership of an already niche topic—failure within some field of science—is reduced further, rendering the whole exercise much less appealing to the open-minded researcher who wants their failure to be read and understood. Conversely, if the journal is open-access, it is likely to rely on APCs, requiring researchers that send in an article to a journal to pay a fee upon submission. As discussed in the previous section (3.1), with the increasing trend towards open science, APCs are sometimes seen as necessary by open access journals to cover costs. However, these charges selectively disadvantage researchers at less financially prosperous institutions. Often funding to cover high article processing charges is simply not available. This, in turn, prevents researchers in less financially secure situations from sharing their failures.
 
-\\\\parencite{Sindall2020} provide several examples from humanitarian aid projects which went wrong. Two relevant cases in South Africa are mentioned, where failures led to a waste of money and physical injuries. Publishing about failure could prevent this from happening again in the future, but only if the relevant people are able to access these publications. In countries with a lower quality of life, the relative difference that can be made to improving quality of life by preventing waste of money and physical injuries is larger. 
+\\\\textcite{Sindall2020} provide several examples from humanitarian aid projects which went wrong. Two relevant cases in South Africa are mentioned, where failures led to a waste of money and physical injuries. Publishing about failure could prevent this from happening again in the future, but only if the relevant people are able to access these publications. In countries with a lower quality of life, the relative difference that can be made to improving quality of life by preventing waste of money and physical injuries is larger. 
 
 It is not only at the submission phase, however, that the culture of success-ism rears its head. Peer reviewers may also be reluctant to contribute their expertise to results that do not reveal some great discovery about their area of study. On the one hand, this is reasonable because experts are busy and unsolicited requests for reviews are often perceived as a nuisance. On the other hand, reviewers' increased willingness to respond to larger-scale positive-publishing journals over smaller-scale negative-publishing ones reflects again the equating of experimental success with prestige—a relationship that undergirds the philosophy of success-ism that journals like JOTE seek to overturn. 
 
@@ -4697,9 +3306,11 @@ Traut, H. J., Guild, R. M., \\\\& Munakata, Y. (2021). Why does cognitive traini
 `;
 
 exports[`parses correctly for tables 1`] = `
-" \\\\documentclass{article}
+"\\\\documentclass{article}
 \\\\usepackage[style=apa]{biblatex}
-\\\\addbibresource{bibliography.bib}\\\\usepackage{graphicx}\\\\usepackage{hyperref}
+\\\\addbibresource{bibliography.bib}
+\\\\usepackage{graphicx}
+\\\\usepackage{hyperref}
 
 
 
@@ -4713,7 +3324,7 @@ exports[`parses correctly for tables 1`] = `
 
    &  &  &  &  & \\\\\\\\
  & a & A & A & S & \\\\\\\\
-a & Three merged guys &  & \\\\\\\\
+a & \\\\multicolumn{3}{@{} l @{}}{Three merged guys} &  & \\\\\\\\
 \\\\emph{\\\\textbf{bold italic}} &  &  &  &  & \\\\\\\\
  &  &  &  &  & \\\\\\\\
 
@@ -4731,9 +3342,11 @@ a & Three merged guys &  & \\\\\\\\
 `;
 
 exports[`parses correctly for word 1`] = `
-" \\\\documentclass{article}
+"\\\\documentclass{article}
 \\\\usepackage[style=apa]{biblatex}
-\\\\addbibresource{bibliography.bib}\\\\usepackage{graphicx}\\\\usepackage{hyperref}
+\\\\addbibresource{bibliography.bib}
+\\\\usepackage{graphicx}
+\\\\usepackage{hyperref}
 
 
 
@@ -4741,13 +3354,13 @@ exports[`parses correctly for word 1`] = `
 
   @article{Author2022,
     author      = {Author},
-    year        = {2022}
+    date        = {2022}
 }
 
 
 @article{Another1000,
     author      = {Another},
-    year        = {1000}
+    date        = {1000}
 }
 
 \\\\end{filecontents}

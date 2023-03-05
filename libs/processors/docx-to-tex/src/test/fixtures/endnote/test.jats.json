@@ -3340,28 +3340,6 @@
         },
         {
           "type": "element",
-          "name": "p",
-          "attributes": {},
-          "children": [
-            {
-              "type": "text",
-              "value": ""
-            }
-          ]
-        },
-        {
-          "type": "element",
-          "name": "p",
-          "attributes": {},
-          "children": [
-            {
-              "type": "text",
-              "value": ""
-            }
-          ]
-        },
-        {
-          "type": "element",
           "name": "back",
           "attributes": {},
           "children": [
@@ -4464,12 +4442,6 @@
                   ]
                 }
               ]
-            },
-            {
-              "type": "element",
-              "name": "fnGroup",
-              "attributes": {},
-              "children": []
             }
           ]
         }

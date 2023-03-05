@@ -1,6 +1,6 @@
 {
   "name": "docx-to-vfile",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
@@ -20,5 +20,13 @@
     "readmeFile": "./README.md",
     "displayName": "docx-to-vfile",
     "tsconfig": "./tsconfig.lib.json"
+  },
+  "exports": {
+    ".": {
+      "import": "./index.js",
+      "require": "./index.cjs",
+      "types": "./index.d.ts"
+    },
+    "./package.json": "./package.json"
   }
 }

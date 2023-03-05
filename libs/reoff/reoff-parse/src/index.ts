@@ -1,1 +1,1 @@
-export { default } from './lib/reoff-parse'
+export { default } from './lib/reoff-parse.js'

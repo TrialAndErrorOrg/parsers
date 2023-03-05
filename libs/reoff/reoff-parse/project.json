@@ -36,6 +36,13 @@
         "main": "libs/reoff/reoff-parse/src/index.ts",
         "assets": ["libs/reoff/reoff-parse/*.md"],
         "updateBuildableProjectDepsInPackageJson": true,
+        "swcExclude": [
+          "./src/**/.*.spec.ts$",
+          "./**/.*.spec.ts$",
+          "./src/**/jest-setup.ts$",
+          "./**/jest-setup.ts$",
+          "./**/.*.js$"
+        ],
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

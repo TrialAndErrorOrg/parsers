@@ -18,5 +18,18 @@
     "readmeFile": "./README.md",
     "displayName": "reoff-parse",
     "tsconfig": "./tsconfig.lib.json"
+  },
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "types": "./src/index.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "devDependencies": {
+    "unified": "^10.1.2",
+    "unist-util-filter": "^4.0.1",
+    "xast": "^0.0.87",
+    "xast-util-from-xml": "^3.0.0"
   }
 }

@@ -25,7 +25,14 @@ describe('reoffDocxToVfile', () => {
     const vfile = await docxToVFile(new Uint8Array(docimg))
     const url = new URL('../fixtures/testimages.xml', import.meta.url)
     fs.writeFileSync(url, String(vfile))
+    console.dir(vfile.data, { depth: null })
 
-    expect(vfile.data.images).toBeDefined()
+    expect(vfile.data.media).toBeDefined()
   })
 })
+
+interface Data {
+  [key: `${string}.xml` | `${string}.rels`]: string | undefined
+  media: { [key: string]: ArrayBuffer }
+  relations: { [key: string]: string }
+}

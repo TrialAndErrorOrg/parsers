@@ -26,7 +26,7 @@ See below for more info.
 
 # Dependency Graph
 
-[View an interactive dependency graph here](https://trialanderrororg.github.io/parsers/https://trialanderrororg.github.io/parsers/)
+[View an interactive dependency graph here](https://trialanderrororg.github.io/parsers/)
 ![Graph of this monorepo](./graph.png 'Graph of this monorepo')
 
 # Overview
@@ -98,7 +98,6 @@ Transform HTML to Notion blocks
 #### [`rehype-notion`](libs/notion/rehype-notion/README.md)
 
 Plugin for `rehype` to turn HTML into Notion blocks
-
 
 ### [ojs](libs/ojs)
 

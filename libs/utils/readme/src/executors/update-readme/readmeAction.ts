@@ -1,26 +1,16 @@
-import { loopOverDirs } from './loopOverDirs'
 import { remark } from 'remark'
 import remarkLicense from 'remark-license'
 import remarkToc, { Root } from 'remark-toc'
-import { join, resolve } from 'path'
-import { unified } from 'unified'
+import { join } from 'path'
 import { visit } from 'unist-util-visit'
-import { SKIP, EXIT } from 'unist-util-visit'
+import { EXIT } from 'unist-util-visit'
 import { toString } from 'mdast-util-to-string'
 import { BlockContent, Heading } from 'mdast'
-import { heading } from 'mdast-builder'
 import remarkParse from 'remark-parse'
-import { appendFile, readdir, readFile, writeFile } from 'fs/promises'
-import { gfmFromMarkdown } from 'mdast-util-gfm'
+import { readFile, writeFile } from 'fs/promises'
 import { fromMarkdown } from 'mdast-util-from-markdown'
 import remarkGfm from 'remark-gfm'
 import { workspaceRoot } from '@nrwl/devkit'
-
-const apps = join(workspaceRoot, 'apps')
-const libs = join(workspaceRoot, 'libs')
-
-// const installationInstructions = [
-//   heading(2, 'Installation'),
 
 const installationString = (
   name: string,
@@ -99,26 +89,7 @@ const findTypeDocFilesAndInterfaces = async (
 ) => {
   const typeDocPath = join(root, typeDocFolder)
   const moduleName = packageName.replace('@', '').replace(/-/g, '_')
-  const moduleFile = `${moduleName}.md`
-  // const typeDocModuleFilePath = join(typeDocPath, 'modules', moduleFile)
 
-  // const interfaceDir = await readdir(join(typeDocPath, 'interfaces'))
-
-  // const interfaces = interfaceDir.filter((file) => new RegExp(`^${moduleName}\\.`).test(file))
-
-  // // asynchroneously read the interface files and append them to the module file in order
-  // const interfaceFiles = await Promise.all(
-  //   interfaces.map(async (interfaceFile) => {
-  //     const interfaceFilePath = join(typeDocPath, 'interfaces', interfaceFile)
-  //     try {
-  //       const interfaceFileContent = await readFile(interfaceFilePath, 'utf-8')
-  //       return interfaceFileContent
-  //     } catch (e) {
-  //       console.log(e)
-  //       return ''
-  //     }
-  //   }),
-  // )
   const typeDocModuleFilePath = join(typeDocPath, packageName, `modules.md`)
 
   try {

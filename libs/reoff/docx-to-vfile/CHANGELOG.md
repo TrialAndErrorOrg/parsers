@@ -2,6 +2,20 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [0.4.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.3.0...docx-to-vfile-0.4.0) (2023-03-05)
+
+
+### Bug Fixes
+
+* **docx-to-vfile:** set known data attributes on VFile DataMap interface instead of extending the filetype and breaking everything ([0afe6e5](https://github.com/TrialAndErrorOrg/parsers/commit/0afe6e5c51f6374856a1267e6895717998e72330))
+
+
+### Features
+
+* **docx-to-vfile:** finalize api ([7c14a6d](https://github.com/TrialAndErrorOrg/parsers/commit/7c14a6db76322c1e380f043b5742fa2abf289a0d))
+
+
+
 # [0.3.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.2.0...docx-to-vfile-0.3.0) (2023-03-05)
 
 

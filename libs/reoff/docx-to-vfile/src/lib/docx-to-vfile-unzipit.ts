@@ -27,6 +27,10 @@ export interface Options {
   include?: string[] | RegExp[] | ((key: string) => boolean) | 'all' | 'allWithDocumentXML'
 }
 
+/**
+ * The data attribute of a VFile
+ * Is set to the DataMap interface in the vfile module
+ **/
 export interface DocxData extends Data {
   /**
    * The textcontent of .xml files in the .docx file
@@ -40,6 +44,25 @@ export interface DocxData extends Data {
    * The relations between the .xml files in the .docx file
    */
   relations: { [key: string]: string }
+}
+
+declare module 'vfile' {
+  interface DataMap {
+    /**
+     * The textcontent of .xml files in the .docx file
+     */
+    [key: `${string}.xml` | `${string}.rels`]: string | undefined
+    /**
+     * The media files in the .docx file
+     * Possibly undefined only to be compatible with the VFile interface
+     */
+    media?: { [key: string]: ArrayBuffer }
+    /**
+     * The relations between the .xml files in the .docx file
+     * Possibly undefined only to be compatible with the VFile interface
+     */
+    relations?: { [key: string]: string }
+  }
 }
 
 /**
@@ -56,10 +79,7 @@ export interface DocxVFile extends VFile {
  * @param options Options
  * @returns A VFile with the contents of the document.xml file as the root, and the contents of the other xml files as data.
  */
-export async function docxToVFile(
-  file: ArrayBuffer,
-  userOptions: Options = {},
-): Promise<DocxVFile> {
+export async function docxToVFile(file: ArrayBuffer, userOptions: Options = {}): Promise<VFile> {
   const options: Options = {
     withoutMedia: false,
     include: 'all',
@@ -114,7 +134,7 @@ export async function docxToVFile(
   // vfile.data = vfileData
 
   if (options.withoutMedia) {
-    return new VFile({ value: removeCarriage(doc), data: vfileData }) as DocxVFile
+    return new VFile({ value: removeCarriage(doc), data: vfileData })
   }
 
   const mediaUrls = Object.values(relations).filter((rel: string) => rel.includes('media/'))
@@ -123,5 +143,5 @@ export async function docxToVFile(
     media[url] = await entries[`word/${url}`].arrayBuffer()
   }
   vfileData.media = media
-  return new VFile({ value: removeCarriage(doc), data: vfileData }) as DocxVFile
+  return new VFile({ value: removeCarriage(doc), data: vfileData })
 }

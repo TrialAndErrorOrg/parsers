@@ -2,6 +2,20 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+# [0.3.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.2.0...docx-to-vfile-0.3.0) (2023-03-05)
+
+
+### Bug Fixes
+
+* make tests run again ([4621f7d](https://github.com/TrialAndErrorOrg/parsers/commit/4621f7df2454b9a4220d2eabcf6a3dbf8f61cae8))
+
+
+### Features
+
+* **docx-to-vfile:** be less prescriptive about which files are to be included in the vfile, defer that to `reoff-parse` ([5ec48a5](https://github.com/TrialAndErrorOrg/parsers/commit/5ec48a5e51a0c83dd24b65847950138a46049307))
+
+
+
 # [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.1.0...docx-to-vfile-0.2.0) (2023-03-05)
 
 

@@ -47,11 +47,7 @@ export interface Options {
   relations?: { [key: string]: string }
 }
 
-export type Handle = (
-  j: J,
-  node: any,
-  parent?: Parent
-) => JastContent | Array<JastContent> | void
+export type Handle = (j: J, node: any, parent?: Parent) => JastContent | Array<JastContent> | void
 
 export interface Context {
   nodeById?: {
@@ -93,19 +89,20 @@ export interface Context {
    * citation. This is a flag to indicate that the next run should be deleted.
    */
   lastPlainCitation?: string
+  footnotes?: Root
 }
 
 export type JWithProps = (
   node: Node,
   type: string,
   props?: Attributes,
-  children?: string | Array<JastContent>
+  children?: string | Array<JastContent>,
 ) => JastContent
 
 export type JWithoutProps = (
   node: Node,
   type: string,
-  children?: string | Array<JastContent>
+  children?: string | Array<JastContent>,
 ) => JastContent
 
 // export type JWithPropsSpecific<TNode extends JastContent = JastContent> = (

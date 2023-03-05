@@ -22,6 +22,8 @@ import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
 import { select } from 'xast-util-select'
 import { x } from 'xastscript'
 import { cslToRefList } from 'jast-util-from-csl'
+import { DocxVFile } from 'docx-to-vfile'
+import { VFile } from 'vfile'
 
 export { one } from './one'
 export { all } from './all'
@@ -29,24 +31,27 @@ export { handlers as defaultHandlers }
 
 const block = convert(['heading', 'paragraph', 'root'])
 
-export function toJast(
-  tree: Root | Element | Text,
-  options: Options = {
-    newLines: false,
-    checked: '[x]',
-    unchecked: '[ ]',
-    quotes: ['"'],
-    topSection: 0,
-    columnSeparator: false,
-    documentClass: { name: 'article' },
-    bibname: 'References',
+const defaultOptions: Options = {
+  newLines: false,
+  checked: '[x]',
+  unchecked: '[ ]',
+  quotes: ['"'],
+  topSection: 0,
+  columnSeparator: false,
+  documentClass: { name: 'article' },
+  bibname: 'References',
 
-    //relations: {},
-  },
-) {
+  //relations: {},
+}
+
+export function toJast(input: VFile, userOptions: Options): JastRoot
+export function toJast(input: Root | Element | Text | VFile, userOptions: Options) {
+  const options: Options = { ...defaultOptions, ...userOptions }
   // const byId: { [s: string]: Element } = {}
   let jast: JastContent | JastRoot
   const citations: { [key: string | number]: CSL } = {}
+
+  const footnotes = input instanceof VFile ? input?.data?.parsed?.['word/footnotes.xml'] : undefined
 
   const j: J = Object.assign(
     ((
@@ -107,9 +112,13 @@ export function toJast(
       parseCitation: options.parseCitation || parseCitation,
       partialCitation: '',
       deleteNextRun: false,
-      relations: options.relations || {},
+      relations:
+        input instanceof VFile
+          ? options.relations || input.data.relations || {}
+          : options.relations || {},
       citeKeys: {},
       citationType: options.citationType || 'mendeley',
+      footnotes: footnotes,
     } as Context,
   )
 
@@ -125,10 +134,10 @@ export function toJast(
   // })
 
   // @ts-expect-error: does return a transformer, that does accept any node.
-  rehypeMinifyWhitespace({ newlines: options.newlines === true })(tree)
+  rehypeMinifyWhitespace({ newlines: options.newlines === true })(input)
 
   // @ts-expect-error: does return a transformer, that does accept any node.
-  const result = one(j, tree, undefined)
+  const result = one(j, input, undefined)
 
   if (!result) {
     jast = { type: 'root', children: [] }

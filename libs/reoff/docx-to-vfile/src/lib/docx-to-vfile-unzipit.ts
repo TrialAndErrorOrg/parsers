@@ -16,13 +16,16 @@ export interface Options {
   withoutMedia?: boolean
   /**
    * Include only the specified files on the `data` attribute of the VFile.
+   * This may be useful if you want to only do something with a subset of the files in the docx file, and don't intend to use 'reoff-stringify' to turn the VFile back into a docx file.
    *
    * - If an array of strings or regexps is passed, only files that match one of the values will be included.
    * - If a function is passed, it will be called for each file and should return true to include the file.
    * - If the value is 'all', almost all files will be included, except for 'word/document.xml', as that already is the root of the VFile.
    * - If the value is 'allWithDocumentXML', all files will be included, including `word/document.xml`, even though that is already the root of the VFile. Useful if you really want to mimic the original docx file.
    *
-   * @default ["word/footnotes.xml", "word/endnotes.xml", "word/styles.xml", "customXml/item1.xml", "word/glossary/document.xml"]
+   * You should keep it at the default value if you intend to use 'reoff-stringify' to turn the VFile back into a docx file.
+   *
+   * @default 'all'
    */
   include?: string[] | RegExp[] | ((key: string) => boolean) | 'all' | 'allWithDocumentXML'
 }
@@ -35,7 +38,7 @@ export interface DocxData extends Data {
   /**
    * The textcontent of .xml files in the .docx file
    */
-  [key: `${string}.xml` | `${string}.rels`]: string | undefined
+  [key: XMLOrRelsString]: string | undefined
   /**
    * The media files in the .docx file
    */
@@ -51,22 +54,27 @@ declare module 'vfile' {
     /**
      * The textcontent of .xml files in the .docx file
      */
-    [key: `${string}.xml` | `${string}.rels`]: string | undefined
+    [key: XMLOrRelsString]: string | undefined
     /**
      * The media files in the .docx file
      * Possibly undefined only to be compatible with the VFile interface
      */
-    media?: { [key: string]: ArrayBuffer }
+    media: { [key: string]: ArrayBuffer }
     /**
      * The relations between the .xml files in the .docx file
      * Possibly undefined only to be compatible with the VFile interface
      */
-    relations?: { [key: string]: string }
+    relations: { [key: string]: string }
   }
 }
 
+export type XMLOrRelsString = `${string}.xml` | `${string}.rels`
+
 /**
  * Extends VFile with a custom data attribute
+ *
+ * This information should be on the VFile interface, this is just used in contexts where you only want to know the type of the data attribute,
+ * e.g. when writing a library that does something with the output of `docxToVFile`.
  */
 export interface DocxVFile extends VFile {
   data: DocxData

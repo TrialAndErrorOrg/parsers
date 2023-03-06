@@ -27,22 +27,16 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "rootDir": "libs/reoff/reoff-parse/src",
         "outputPath": "dist/libs/reoff/reoff-parse",
         "tsConfig": "libs/reoff/reoff-parse/tsconfig.lib.json",
         "packageJson": "libs/reoff/reoff-parse/package.json",
         "main": "libs/reoff/reoff-parse/src/index.ts",
         "assets": ["libs/reoff/reoff-parse/*.md"],
         "updateBuildableProjectDepsInPackageJson": true,
-        "swcExclude": [
-          "./src/**/.*.spec.ts$",
-          "./**/.*.spec.ts$",
-          "./src/**/jest-setup.ts$",
-          "./**/jest-setup.ts$",
-          "./**/.*.js$"
-        ],
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

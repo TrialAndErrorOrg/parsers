@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/swcrc",
   "jsc": {
-    "target": "es2020",
+    "target": "es2022",
     "parser": {
       "syntax": "typescript",
       "decorators": true,
@@ -11,16 +11,14 @@
       "decoratorMetadata": true,
       "legacyDecorator": true
     },
-
     "externalHelpers": true,
-    "loose": true
+    "loose": true,
+    "baseUrl": "../../.."
   },
   "module": {
     "type": "es6",
-    "strict": true,
-    "noInterop": true
+    "strict": true
   },
-  "sourceMaps": false,
   "exclude": [
     "jest.config.ts",
     ".*.spec.tsx?$",

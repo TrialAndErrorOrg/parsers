@@ -4,7 +4,7 @@ import { ParserFunction } from 'unified'
 import { Root, Node as XastNode } from 'xast'
 import { filter } from 'unist-util-filter'
 import { VFile } from 'vfile'
-import { DocxVFile, XMLOrRelsString } from 'docx-to-vfile'
+import { XMLOrRelsString } from 'docx-to-vfile'
 
 export interface Settings {
   removeWhiteSpace?: boolean
@@ -60,17 +60,8 @@ export default function reoffParse(options: Settings = {}) {
   const parser: ParserFunction<Root> = (doc, file) => {
     // Assume options.
     const settings: Settings = this.data('settings')
-    // console.log(file.data)
-    // console.log(file)
-    // console.log(this.data())
 
-    const configuration = Object.assign({}, settings, options, {
-      // Note: these options are not in the readme.
-      // The goal is for them to be set by plugins on `data` instead of being
-      // passed by users.
-      //extensions: this.data('micromarkExtensions') || [],
-      //mdastExtensions: this.data('fromMarkdownExtensions') || [],
-    })
+    const configuration = Object.assign({}, settings, options, {})
     return unify(doc, file, configuration)
   }
 

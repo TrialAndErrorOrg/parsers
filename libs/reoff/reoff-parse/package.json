@@ -21,15 +21,10 @@
   },
   "exports": {
     ".": {
-      "import": "./src/index.js",
-      "types": "./src/index.d.ts"
-    },
-    "./package.json": "./package.json"
+      "import": "./index.js",
+      "types": "./index.d.ts"
+    }
   },
-  "devDependencies": {
-    "unified": "^10.1.2",
-    "unist-util-filter": "^4.0.1",
-    "xast": "^0.0.87",
-    "xast-util-from-xml": "^3.0.0"
-  }
+  "main": "./index.js",
+  "types": "./index.d.ts"
 }

@@ -23,10 +23,14 @@
   },
   "exports": {
     ".": {
-      "import": "./index.js",
-      "require": "./index.cjs",
-      "types": "./index.d.ts"
-    },
-    "./package.json": "./package.json"
-  }
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    }
+  },
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "./"
+  ]
 }

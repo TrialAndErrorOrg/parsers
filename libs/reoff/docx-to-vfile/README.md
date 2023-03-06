@@ -2,6 +2,7 @@
 > This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
 
 # docx-to-vfile
+
 [![npm version](https://badge.fury.io/js/docx-to-vfile.svg)](https://badge.fury.io/js/docx-to-vfile) [![npm downloads](https://img.shields.io/npm/dm/docx-to-vfile.svg)](https://www.npmjs.com/package/docx-to-vfile)
 
 Reads a `.docx` file and stores its components in vfile format to be processed by other tools, like [`reoff-parse`](https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse).
@@ -57,7 +58,7 @@ Takes a docx file as an ArrayBuffer and returns a VFile with the contents of the
 #### Signature
 
 ```ts
-docxToVFile(file: ArrayBuffer, userOptions: Options = {}): Promise<DocxVFile>;
+docxToVFile(file: ArrayBuffer, userOptions: Options = {}): Promise<VFile>;
 ```
 
 #### Parameters
@@ -69,15 +70,18 @@ docxToVFile(file: ArrayBuffer, userOptions: Options = {}): Promise<DocxVFile>;
 
 #### Returns
 
-`Promise`<[`DocxVFile`](modules.md#docxvfile)>
+`Promise`<`VFile`>
 
 A VFile with the contents of the document.xml file as the root, and the contents of the other xml files as data.
 
-Defined in:  [src/lib/docx-to-vfile-unzipit.ts:59](https://github.com/TrialAndErrorOrg/parsers/blob/5ec48a5/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L59)
+Defined in:  [src/lib/docx-to-vfile-unzipit.ts:90](https://github.com/TrialAndErrorOrg/parsers/blob/934a9b2/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L90)
 
 ***
 
 ### `DocxData`
+
+The data attribute of a VFile
+Is set to the DataMap interface in the vfile module
 
 #### Hierarchy
 
@@ -85,7 +89,7 @@ Defined in:  [src/lib/docx-to-vfile-unzipit.ts:59](https://github.com/TrialAndEr
 
 #### Indexable
 
-[`key`: `${string}.xml` | `${string}.rels`]: `string` | `undefined`
+[`key`: [`XMLOrRelsString`](modules.md#xmlorrelsstring)]: `string` | `undefined`
 
 #### Properties
 
@@ -101,7 +105,9 @@ The media files in the .docx file
 
 ###### Type declaration
 
-Defined in:  [src/lib/docx-to-vfile-unzipit.ts:38](https://github.com/TrialAndErrorOrg/parsers/blob/5ec48a5/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L38)
+Overrides: Data.media
+
+Defined in:  [src/lib/docx-to-vfile-unzipit.ts:45](https://github.com/TrialAndErrorOrg/parsers/blob/934a9b2/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L45)
 
 ##### `relations`
 
@@ -115,13 +121,18 @@ The relations between the .xml files in the .docx file
 
 ###### Type declaration
 
-Defined in:  [src/lib/docx-to-vfile-unzipit.ts:42](https://github.com/TrialAndErrorOrg/parsers/blob/5ec48a5/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L42)
+Overrides: Data.relations
+
+Defined in:  [src/lib/docx-to-vfile-unzipit.ts:49](https://github.com/TrialAndErrorOrg/parsers/blob/934a9b2/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L49)
 
 ***
 
 ### `DocxVFile`
 
 Extends VFile with a custom data attribute
+
+This information should be on the VFile interface, this is just used in contexts where you only want to know the type of the data attribute,
+e.g. when writing a library that does something with the output of `docxToVFile`.
 
 #### Hierarchy
 
@@ -145,7 +156,7 @@ Defined in:  node\_modules/.pnpm/vfile\@5.3.7/node\_modules/vfile/lib/index.d.ts
 
 Overrides: VFile.data
 
-Defined in:  [src/lib/docx-to-vfile-unzipit.ts:49](https://github.com/TrialAndErrorOrg/parsers/blob/5ec48a5/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L49)
+Defined in:  [src/lib/docx-to-vfile-unzipit.ts:80](https://github.com/TrialAndErrorOrg/parsers/blob/934a9b2/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L80)
 
 ##### `history`
 
@@ -595,17 +606,20 @@ Defined in:  node\_modules/.pnpm/vfile\@5.3.7/node\_modules/vfile/lib/index.d.ts
 > `string`[] | `RegExp`[] | (`key`: `string`) => `boolean` | `"all"` | `"allWithDocumentXML"`
 
 Include only the specified files on the `data` attribute of the VFile.
+This may be useful if you want to only do something with a subset of the files in the docx file, and don't intend to use 'reoff-stringify' to turn the VFile back into a docx file.
 
 *   If an array of strings or regexps is passed, only files that match one of the values will be included.
 *   If a function is passed, it will be called for each file and should return true to include the file.
 *   If the value is 'all', almost all files will be included, except for 'word/document.xml', as that already is the root of the VFile.
 *   If the value is 'allWithDocumentXML', all files will be included, including `word/document.xml`, even though that is already the root of the VFile. Useful if you really want to mimic the original docx file.
 
+You should keep it at the default value if you intend to use 'reoff-stringify' to turn the VFile back into a docx file.
+
 ###### Default
 
-["word/footnotes.xml", "word/endnotes.xml", "word/styles.xml", "customXml/item1.xml", "word/glossary/document.xml"]
+'all'
 
-Defined in:  [src/lib/docx-to-vfile-unzipit.ts:27](https://github.com/TrialAndErrorOrg/parsers/blob/5ec48a5/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L27)
+Defined in:  [src/lib/docx-to-vfile-unzipit.ts:30](https://github.com/TrialAndErrorOrg/parsers/blob/934a9b2/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L30)
 
 ##### `withoutMedia?`
 
@@ -619,7 +633,15 @@ By default, images are included on the `data.media` attribute of the VFile as an
 
 false
 
-Defined in:  [src/lib/docx-to-vfile-unzipit.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/5ec48a5/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L16)
+Defined in:  [src/lib/docx-to-vfile-unzipit.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/934a9b2/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L16)
+
+***
+
+### `XMLOrRelsString`
+
+> `${string}.xml` | `${string}.rels`
+
+Defined in:  [src/lib/docx-to-vfile-unzipit.ts:71](https://github.com/TrialAndErrorOrg/parsers/blob/934a9b2/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L71)
 
 ## Syntax tree
 

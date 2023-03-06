@@ -1,4 +1,4 @@
-import { docxToVFile } from './docx-to-vfile-unzipit'
+import { docxToVFile } from './docx-to-vfile-unzipit.js'
 import fs from 'fs'
 import path from 'path'
 

@@ -3,7 +3,6 @@
   "jsc": {
     "target": "es2022",
     "parser": {
-      "dts": true,
       "syntax": "typescript",
       "decorators": true,
       "dynamicImport": true
@@ -27,6 +26,5 @@
     "./src/jest-setup.ts$",
     "./**/jest-setup.ts$",
     ".*.js$"
-  ],
-  "isModule": true
+  ]
 }

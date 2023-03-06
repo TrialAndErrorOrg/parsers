@@ -26,30 +26,19 @@
         "passWithNoTests": true
       }
     },
-    "tsc": {
-      "executor": "@nrwl/js:tsc",
-      "options": {
-        "tsConfig": "libs/reoff/docx-to-vfile/tsconfig.publish.json",
-        "clean": false,
-        "outputPath": "dist/libs/reoff/docx-to-vfile",
-        "main": "libs/reoff/docx-to-vfile/src/index.ts",
-        "parallel": false
-      }
-    },
+
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
 
       "options": {
-        "outputPath": "dist/libs/reoff/docx-to-vfile",
+        "rootDir": "libs/reoff/docx-to-vfile/src",
+        "outputPath": "dist/libs/reoff/docx-to-vfile/",
         "tsConfig": "libs/reoff/docx-to-vfile/tsconfig.lib.json",
         "main": "libs/reoff/docx-to-vfile/src/index.ts",
         "assets": ["libs/reoff/docx-to-vfile/*.md"],
-        "platform": "node",
         "updateBuildableProjectDepsInPackageJson": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies",
-        "thirdParty": false,
-        "format": ["esm"]
+        "buildableProjectDepsInPackageJsonType": "dependencies"
       },
       "configurations": {
         "cjs": {

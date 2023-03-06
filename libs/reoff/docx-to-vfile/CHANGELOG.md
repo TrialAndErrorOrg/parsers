@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.4.1](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.4.0...docx-to-vfile-0.4.1) (2023-03-06)
+
+
+### Bug Fixes
+
+* it builds, oh my god ([62ff1e3](https://github.com/TrialAndErrorOrg/parsers/commit/62ff1e37c3c778b56e7f889cc33fbd5c6aa522fd))
+
+
+
 # [0.4.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.3.0...docx-to-vfile-0.4.0) (2023-03-05)
 
 

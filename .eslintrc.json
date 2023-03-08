@@ -1,12 +1,13 @@
 {
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nrwl/nx", "eslint-plugin-unicorn", "regexp"],
+  "plugins": ["@nrwl/nx", "eslint-plugin-unicorn", "regexp", "import"],
   "extends": ["plugin:regexp/recommended"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
+        "import/extensions": ["error", "ignorePackages"],
         "@nrwl/nx/enforce-module-boundaries": [
           "error",
           {

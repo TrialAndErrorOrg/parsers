@@ -356,3 +356,5 @@ thebiggestfile.ts
 .env.*
 graph
 docs
+
+.sveltekit

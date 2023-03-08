@@ -7,7 +7,7 @@
     "strict": true,
     "sourceMap": true,
     "declaration": true,
-    "moduleResolution": "nodenext",
+    "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "allowUnusedLabels": true,
     "experimentalDecorators": true,
@@ -16,7 +16,7 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "allowJs": true,
-    "module": "NodeNext",
+    "module": "ESNext",
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
@@ -89,5 +89,5 @@
       "xast-util-select": ["libs/xast/xast-util-select/src/index.ts"]
     }
   },
-  "exclude": ["node_modules", "tmp", "**/example.js"]
+  "exclude": ["node_modules", "tmp", "**/example.js", "dist"]
 }

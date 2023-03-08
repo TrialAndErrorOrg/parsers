@@ -250,12 +250,20 @@ const addProject = (tree: Tree, options: NormalizedSchema) => {
       const version: TargetConfiguration<Partial<VersionBuilderSchema>> = {
         executor: '@jscutlery/semver:version',
         options: {
+          trackDeps: true,
           postTargets: [
             `${options.name}:npm`,
             `${options.name}:github`,
             `${options.name}:github-standalone`,
           ],
         },
+        dependsOn: [
+          {
+            target: 'version',
+            projects: 'dependencies',
+            params: 'forward',
+          },
+        ],
       }
 
       projectConfiguration.targets.version = version
@@ -281,8 +289,6 @@ const addProject = (tree: Tree, options: NormalizedSchema) => {
       }
 
       projectConfiguration.targets['github-standalone'] = githubStandalone
-
-      projectConfiguration.targets.version = version
     }
   }
 

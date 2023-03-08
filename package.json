@@ -217,7 +217,7 @@
     "jsonc-eslint-parser": "^2.1.0",
     "nx": "15.8.5",
     "postcss": "8.4.19",
-    "prettier": "2.7.1",
+    "prettier": "2.8.4",
     "prettier-plugin-svelte": "^2.9.0",
     "prettier-plugin-tailwindcss": "^0.2.3",
     "react-test-renderer": "18.2.0",

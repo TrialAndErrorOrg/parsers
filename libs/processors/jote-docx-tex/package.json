@@ -1,10 +1,23 @@
 {
   "name": "jote-docx-tex",
   "description": "Can't really remember what this is lmao",
+  "type": "module",
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "jote-docx-tex",
     "tsconfig": "./tsconfig.lib.json"
-  }
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    }
+  },
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "./"
+  ]
 }

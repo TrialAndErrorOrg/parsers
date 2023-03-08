@@ -19,5 +19,17 @@
     "readmeFile": "./README.md",
     "displayName": "ooxast",
     "tsconfig": "./tsconfig.lib.json"
-  }
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    }
+  },
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "./"
+  ]
 }

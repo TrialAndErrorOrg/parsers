@@ -1,0 +1,154 @@
+diff --git a/src/utilities/buildable-libs-utils.js b/src/utilities/buildable-libs-utils.js
+index 1ec6eb948138ebb4ea2b86cf286a6ca99d38fc38..ac23420a413f324ea81ae2d1ec79c7788d577d0e 100644
+--- a/src/utilities/buildable-libs-utils.js
++++ b/src/utilities/buildable-libs-utils.js
+@@ -33,42 +33,42 @@ function calculateProjectDependencies(projGraph, root, projectName, targetName,
+     }
+     const dependencies = collectedDeps
+         .map(({ name: dep, isTopLevel }) => {
+-        let project = null;
+-        const depNode = projGraph.nodes[dep] || projGraph.externalNodes[dep];
+-        if (depNode.type === 'lib') {
+-            if (isBuildable(targetName, depNode)) {
+-                const libPackageJsonPath = (0, path_1.join)(root, depNode.data.root, 'package.json');
++            let project = null;
++            const depNode = projGraph.nodes[dep] || projGraph.externalNodes[dep];
++            if (depNode.type === 'lib') {
++                if (isBuildable(targetName, depNode)) {
++                    const libPackageJsonPath = (0, path_1.join)(root, depNode.data.root, 'package.json');
++                    project = {
++                        name: (0, fileutils_1.fileExists)(libPackageJsonPath)
++                            ? (0, devkit_1.readJsonFile)(libPackageJsonPath).name // i.e. @workspace/mylib
++                            : dep,
++                        outputs: (0, devkit_1.getOutputsForTargetAndConfiguration)({
++                            overrides: {},
++                            target: {
++                                project: projectName,
++                                target: targetName,
++                                configuration: configurationName,
++                            },
++                        }, depNode),
++                        node: depNode,
++                    };
++                }
++                else {
++                    nonBuildableDependencies.push(dep);
++                }
++            }
++            else if (depNode.type === 'npm') {
+                 project = {
+-                    name: (0, fileutils_1.fileExists)(libPackageJsonPath)
+-                        ? (0, devkit_1.readJsonFile)(libPackageJsonPath).name // i.e. @workspace/mylib
+-                        : dep,
+-                    outputs: (0, devkit_1.getOutputsForTargetAndConfiguration)({
+-                        overrides: {},
+-                        target: {
+-                            project: projectName,
+-                            target: targetName,
+-                            configuration: configurationName,
+-                        },
+-                    }, depNode),
++                    name: depNode.data.packageName,
++                    outputs: [],
+                     node: depNode,
+                 };
+             }
+-            else {
+-                nonBuildableDependencies.push(dep);
++            if (project && isTopLevel) {
++                topLevelDependencies.push(project);
+             }
+-        }
+-        else if (depNode.type === 'npm') {
+-            project = {
+-                name: depNode.data.packageName,
+-                outputs: [],
+-                node: depNode,
+-            };
+-        }
+-        if (project && isTopLevel) {
+-            topLevelDependencies.push(project);
+-        }
+-        return project;
+-    })
++            return project;
++        })
+         .filter((x) => !!x);
+     dependencies.sort((a, b) => (a.name > b.name ? 1 : b.name > a.name ? -1 : 0));
+     return {
+@@ -116,10 +116,37 @@ function readTsConfigWithRemappedPaths(tsConfig, generatedTsConfigPath, dependen
+  */
+ function computeCompilerOptionsPaths(tsConfig, dependencies) {
+     const paths = readPaths(tsConfig) || {};
+-    updatePaths(dependencies, paths);
++    const moduleResolution = readModule(tsConfig) || 0
++    const needsDirectResolution = moduleResolution > 2
++    updatePaths(dependencies, paths, needsDirectResolution);
+     return paths;
+ }
+ exports.computeCompilerOptionsPaths = computeCompilerOptionsPaths;
++function readModule(tsConfig) {
++    var _a;
++    if (!tsModule) {
++        tsModule = (0, typescript_1.ensureTypescript)();
++    }
++    try {
++        let config;
++        if (typeof tsConfig === 'string') {
++            const configFile = tsModule.readConfigFile(tsConfig, tsModule.sys.readFile);
++            config = tsModule.parseJsonConfigFileContent(configFile.config, tsModule.sys, (0, path_1.dirname)(tsConfig));
++        }
++        else {
++            config = tsConfig;
++        }
++        if ((_a = config.options) === null || _a === void 0 ? void 0 : _a.moduleResolution) {
++            return config.options.moduleResolution;
++        }
++        else {
++            return null;
++        }
++    }
++    catch (e) {
++        return null;
++    }
++}
+ function readPaths(tsConfig) {
+     var _a;
+     if (!tsModule) {
+@@ -164,7 +191,7 @@ function cleanupTmpTsConfigFile(tmpTsConfigPath) {
+ function checkDependentProjectsHaveBeenBuilt(root, projectName, targetName, projectDependencies) {
+     const missing = findMissingBuildDependencies(root, projectName, targetName, projectDependencies);
+     if (missing.length > 0) {
+-        console.error((0, devkit_1.stripIndents) `
++        console.error((0, devkit_1.stripIndents)`
+       It looks like all of ${projectName}'s dependencies have not been built yet:
+       ${missing.map((x) => ` - ${x.node.name}`).join('\n')}
+ 
+@@ -193,15 +220,24 @@ function findMissingBuildDependencies(root, projectName, targetName, projectDepe
+     return depLibsToBuildFirst;
+ }
+ exports.findMissingBuildDependencies = findMissingBuildDependencies;
+-function updatePaths(dependencies, paths) {
++function updatePaths(dependencies, paths, moduleResolution) {
+     const pathsKeys = Object.keys(paths);
+     // For each registered dependency
+     dependencies.forEach((dep) => {
+         var _a;
+         // If there are outputs
+         if (dep.outputs && dep.outputs.length > 0) {
+-            // Directly map the dependency name to the output paths (dist/packages/..., etc.)
+-            paths[dep.name] = dep.outputs;
++            // if moduleResolution is node16 or nodenext, we need to add a direct path to the output file
++            // we do this by looking at the main entry of the package.json file of the already compiled package, as its the most reliable way
++            if (moduleResolution) {
++                const outputPackageJSON = (0, path_1.join)(dep.outputs[0], 'package.json')
++                const { main, module, exports } = (0, devkit_1.readJsonFile)(outputPackageJSON)
++                const entry = exports?.['.']?.['import'] ?? module ?? main ?? './index.js'
++                paths[dep.name] = [(0, path_1.join)(dep.outputs[0], entry)]
++            } else {
++                // Directly map the dependency name to the output paths (dist/packages/..., etc.)
++                paths[dep.name] = dep.outputs;
++            }
+             // check for secondary entrypoints
+             // For each registered path
+             for (const path of pathsKeys) {

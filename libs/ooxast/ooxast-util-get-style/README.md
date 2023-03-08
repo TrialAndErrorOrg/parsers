@@ -62,7 +62,7 @@ getPStyle(p: P): string | null | undefined;
 
 `string` | `null` | `undefined`
 
-Defined in:  [lib/ooxast-util-get-pstyle.ts:4](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-get-style/src/lib/ooxast-util-get-pstyle.ts#L4)
+Defined in:  [lib/ooxast-util-get-pstyle.ts:4](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-get-style/src/lib/ooxast-util-get-pstyle.ts#L4)
 
 ***
 
@@ -84,7 +84,7 @@ getRStyle(r: R): RPrJSON;
 
 [`RPrJSON`](modules.md#rprjson)
 
-Defined in:  [lib/ooxast-util-get-rstyle.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-get-style/src/lib/ooxast-util-get-rstyle.ts#L16)
+Defined in:  [lib/ooxast-util-get-rstyle.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-get-style/src/lib/ooxast-util-get-rstyle.ts#L16)
 
 ***
 
@@ -92,7 +92,7 @@ Defined in:  [lib/ooxast-util-get-rstyle.ts:16](https://github.com/TrialAndError
 
 > keyof `RPrMap`
 
-Defined in:  [lib/ooxast-util-get-rstyle.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-get-style/src/lib/ooxast-util-get-rstyle.ts#L6)
+Defined in:  [lib/ooxast-util-get-rstyle.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-get-style/src/lib/ooxast-util-get-rstyle.ts#L6)
 
 ***
 
@@ -102,7 +102,7 @@ Defined in:  [lib/ooxast-util-get-rstyle.ts:6](https://github.com/TrialAndErrorO
 > `w:val`?: `boolean`;
 > }>> : `never`
 
-Defined in:  [lib/ooxast-util-get-rstyle.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-get-style/src/lib/ooxast-util-get-rstyle.ts#L7)
+Defined in:  [lib/ooxast-util-get-rstyle.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-get-style/src/lib/ooxast-util-get-rstyle.ts#L7)
 
 ## Syntax tree
 

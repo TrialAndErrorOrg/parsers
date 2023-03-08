@@ -107,7 +107,7 @@ htmlToNotion(html: string, options?: Options): BlockObjectRequest[];
 
 `BlockObjectRequest`[]
 
-Defined in:  [lib/html-to-notion-blocks.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/notion/html-to-notion-blocks/src/lib/html-to-notion-blocks.ts#L5)
+Defined in:  [lib/html-to-notion-blocks.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/notion/html-to-notion-blocks/src/lib/html-to-notion-blocks.ts#L5)
 
 ## Security
 

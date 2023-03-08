@@ -62,7 +62,7 @@ getPr(node: Element): PrObject;
 
 [`PrObject`](modules.md#probject)
 
-Defined in:  [lib/ooxast-util-properties.ts:35](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-properties/src/lib/ooxast-util-properties.ts#L35)
+Defined in:  [lib/ooxast-util-properties.ts:35](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-properties/src/lib/ooxast-util-properties.ts#L35)
 
 ***
 

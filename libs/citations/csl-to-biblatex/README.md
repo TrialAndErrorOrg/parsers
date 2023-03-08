@@ -62,7 +62,7 @@ cslToBiblatex(csl: Data[]): string;
 
 `string`
 
-Defined in:  [lib/csl-to-biblatex.ts:87](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/citations/csl-to-biblatex/src/lib/csl-to-biblatex.ts#L87)
+Defined in:  [lib/csl-to-biblatex.ts:87](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/citations/csl-to-biblatex/src/lib/csl-to-biblatex.ts#L87)
 
 ## Syntax tree
 

@@ -172,19 +172,19 @@ Defined in:  node\_modules/.pnpm/unified\@10.1.2/node\_modules/unified/index.d.t
 
 > `Options`
 
-Defined in:  [src/lib/rehype-notion.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/notion/rehype-notion/src/lib/rehype-notion.ts#L29)
+Defined in:  [src/lib/rehype-notion.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/notion/rehype-notion/src/lib/rehype-notion.ts#L29)
 
 ##### `markdownToNotionOptions?`
 
 > `BlocksOptions`
 
-Defined in:  [src/lib/rehype-notion.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/notion/rehype-notion/src/lib/rehype-notion.ts#L31)
+Defined in:  [src/lib/rehype-notion.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/notion/rehype-notion/src/lib/rehype-notion.ts#L31)
 
 ##### `mdastToMarkdownOptions?`
 
 > `MdastToMarkdownOptions`
 
-Defined in:  [src/lib/rehype-notion.ts:30](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/notion/rehype-notion/src/lib/rehype-notion.ts#L30)
+Defined in:  [src/lib/rehype-notion.ts:30](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/notion/rehype-notion/src/lib/rehype-notion.ts#L30)
 
 ***
 
@@ -192,7 +192,7 @@ Defined in:  [src/lib/rehype-notion.ts:30](https://github.com/TrialAndErrorOrg/p
 
 > `AppendBlockChildrenParameters`[`"children"`][`number`]
 
-Defined in:  [src/lib/rehype-notion.ts:13](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/notion/rehype-notion/src/lib/rehype-notion.ts#L13)
+Defined in:  [src/lib/rehype-notion.ts:13](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/notion/rehype-notion/src/lib/rehype-notion.ts#L13)
 
 ## Security
 

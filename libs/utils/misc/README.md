@@ -28,7 +28,7 @@ tryCatchPromise<T>(promise: Promise<T>, errorHandler?: Function): Promise<[T | n
 
 `Promise`<[`T` | `null`, `unknown` | `null`]>
 
-Defined in:  [lib/tryCatchPromise.ts:1](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/utils/misc/src/lib/tryCatchPromise.ts#L1)
+Defined in:  [lib/tryCatchPromise.ts:1](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/utils/misc/src/lib/tryCatchPromise.ts#L1)
 
 ***
 
@@ -51,7 +51,7 @@ tryCatchVoid(func: any, errorHandler?: Function): unknown | void;
 
 `unknown` | `void`
 
-Defined in:  [lib/tryCatchVoid.ts:1](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/utils/misc/src/lib/tryCatchVoid.ts#L1)
+Defined in:  [lib/tryCatchVoid.ts:1](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/utils/misc/src/lib/tryCatchVoid.ts#L1)
 
 ***
 
@@ -67,7 +67,7 @@ utils(): string;
 
 `string`
 
-Defined in:  [lib/utils.ts:1](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/utils/misc/src/lib/utils.ts#L1)
+Defined in:  [lib/utils.ts:1](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/utils/misc/src/lib/utils.ts#L1)
 
 ***
 
@@ -75,7 +75,7 @@ Defined in:  [lib/utils.ts:1](https://github.com/TrialAndErrorOrg/parsers/blob/3
 
 > **`Const`** `any`
 
-Defined in:  [lib/unistMap.ts:3](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/utils/misc/src/lib/unistMap.ts#L3)
+Defined in:  [lib/unistMap.ts:3](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/utils/misc/src/lib/unistMap.ts#L3)
 
 ***
 
@@ -83,7 +83,7 @@ Defined in:  [lib/unistMap.ts:3](https://github.com/TrialAndErrorOrg/parsers/blo
 
 > **`Const`** `any`
 
-Defined in:  [lib/unistRemove.ts:3](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/utils/misc/src/lib/unistRemove.ts#L3)
+Defined in:  [lib/unistRemove.ts:3](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/utils/misc/src/lib/unistRemove.ts#L3)
 
 ***
 
@@ -91,7 +91,7 @@ Defined in:  [lib/unistRemove.ts:3](https://github.com/TrialAndErrorOrg/parsers/
 
 > **`Const`** `any`
 
-Defined in:  [lib/unistVisit.ts:3](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/utils/misc/src/lib/unistVisit.ts#L3)
+Defined in:  [lib/unistVisit.ts:3](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/utils/misc/src/lib/unistVisit.ts#L3)
 
 ## Install
 

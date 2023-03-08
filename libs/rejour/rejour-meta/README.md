@@ -78,7 +78,7 @@ rejourMoveAbstract(options: ArticleMeta): Function;
 
 `void`
 
-Defined in:  [lib/rejour-meta.ts:4](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/rejour/rejour-meta/src/lib/rejour-meta.ts#L4)
+Defined in:  [lib/rejour-meta.ts:4](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/rejour/rejour-meta/src/lib/rejour-meta.ts#L4)
 
 ***
 
@@ -86,7 +86,7 @@ Defined in:  [lib/rejour-meta.ts:4](https://github.com/TrialAndErrorOrg/parsers/
 
 > `Record`\<keyof `ArticleMeta`, `Element` | `Text`>
 
-Defined in:  [lib/rejour-meta.ts:3](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/rejour/rejour-meta/src/lib/rejour-meta.ts#L3)
+Defined in:  [lib/rejour-meta.ts:3](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/rejour/rejour-meta/src/lib/rejour-meta.ts#L3)
 
 ## Syntax tree
 

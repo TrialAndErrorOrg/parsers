@@ -63,7 +63,7 @@ addPreamble(tree: Root, commands: PreambleCommand[]): Root;
 
 `Root`
 
-Defined in:  [lib/texast-util-add-preamble.ts:11](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/texast/texast-util-add-preamble/src/lib/texast-util-add-preamble.ts#L11)
+Defined in:  [lib/texast-util-add-preamble.ts:11](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/texast/texast-util-add-preamble/src/lib/texast-util-add-preamble.ts#L11)
 
 ***
 
@@ -75,19 +75,19 @@ Defined in:  [lib/texast-util-add-preamble.ts:11](https://github.com/TrialAndErr
 
 > (`string` | [`PreambleCommand`](modules.md#preamblecommand))[]
 
-Defined in:  [lib/texast-util-add-preamble.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/texast/texast-util-add-preamble/src/lib/texast-util-add-preamble.ts#L8)
+Defined in:  [lib/texast-util-add-preamble.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/texast/texast-util-add-preamble/src/lib/texast-util-add-preamble.ts#L8)
 
 ##### `opts?`
 
 > (`string` | [`PreambleCommand`](modules.md#preamblecommand))[]
 
-Defined in:  [lib/texast-util-add-preamble.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/texast/texast-util-add-preamble/src/lib/texast-util-add-preamble.ts#L7)
+Defined in:  [lib/texast-util-add-preamble.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/texast/texast-util-add-preamble/src/lib/texast-util-add-preamble.ts#L7)
 
 ##### `type`
 
 > `string`
 
-Defined in:  [lib/texast-util-add-preamble.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/texast/texast-util-add-preamble/src/lib/texast-util-add-preamble.ts#L6)
+Defined in:  [lib/texast-util-add-preamble.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/texast/texast-util-add-preamble/src/lib/texast-util-add-preamble.ts#L6)
 
 ## Syntax tree
 

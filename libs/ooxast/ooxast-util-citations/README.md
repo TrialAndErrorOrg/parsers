@@ -78,7 +78,7 @@ The constructed citation and instruction
 | `citation` | [`MendeleyCitation`](modules.md#mendeleycitation) | [`ZoteroCitation`](modules.md#zoterocitation) |
 | `instr` | `string` |
 
-Defined in:  [lib/ooxast-util-citations.ts:197](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/ooxast-util-citations.ts#L197)
+Defined in:  [lib/ooxast-util-citations.ts:197](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/ooxast-util-citations.ts#L197)
 
 ***
 
@@ -102,7 +102,7 @@ findCitations(tree: Node<Data>, vfile?: VFile, options?: Options): Root;
 
 `Root`
 
-Defined in:  [lib/ooxast-util-citations.ts:28](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/ooxast-util-citations.ts#L28)
+Defined in:  [lib/ooxast-util-citations.ts:28](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/ooxast-util-citations.ts#L28)
 
 ***
 
@@ -110,7 +110,7 @@ Defined in:  [lib/ooxast-util-citations.ts:28](https://github.com/TrialAndErrorO
 
 > **`Const`** `string`[]
 
-Defined in:  [lib/ooxast-util-citations.ts:21](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/ooxast-util-citations.ts#L21)
+Defined in:  [lib/ooxast-util-citations.ts:21](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/ooxast-util-citations.ts#L21)
 
 ***
 
@@ -122,25 +122,25 @@ Defined in:  [lib/ooxast-util-citations.ts:21](https://github.com/TrialAndErrorO
 
 > `string`
 
-Defined in:  [lib/types.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L6)
+Defined in:  [lib/types.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L6)
 
 ##### `citationItems`
 
 > [`CitationItem`](modules.md#citationitem)[]
 
-Defined in:  [lib/types.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L7)
+Defined in:  [lib/types.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L7)
 
 ##### `originalText?`
 
 > `string`
 
-Defined in:  [lib/types.ts:9](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L9)
+Defined in:  [lib/types.ts:9](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L9)
 
 ##### `properties`
 
 > [`Properties`](modules.md#properties)
 
-Defined in:  [lib/types.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L8)
+Defined in:  [lib/types.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L8)
 
 ***
 
@@ -152,43 +152,43 @@ Defined in:  [lib/types.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/3
 
 > `string`
 
-Defined in:  [lib/types.ts:18](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L18)
+Defined in:  [lib/types.ts:18](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L18)
 
 ##### `infix?`
 
 > `string`
 
-Defined in:  [lib/types.ts:22](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L22)
+Defined in:  [lib/types.ts:22](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L22)
 
 ##### `itemData`
 
 > `Data`
 
-Defined in:  [lib/types.ts:19](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L19)
+Defined in:  [lib/types.ts:19](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L19)
 
 ##### `label?`
 
 > `string`
 
-Defined in:  [lib/types.ts:23](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L23)
+Defined in:  [lib/types.ts:23](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L23)
 
 ##### `locator?`
 
 > `string`
 
-Defined in:  [lib/types.ts:24](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L24)
+Defined in:  [lib/types.ts:24](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L24)
 
 ##### `prefix?`
 
 > `string`
 
-Defined in:  [lib/types.ts:20](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L20)
+Defined in:  [lib/types.ts:20](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L20)
 
 ##### `suffix?`
 
 > `string`
 
-Defined in:  [lib/types.ts:21](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L21)
+Defined in:  [lib/types.ts:21](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L21)
 
 ***
 
@@ -200,19 +200,19 @@ Defined in:  [lib/types.ts:21](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 > `string`
 
-Defined in:  [lib/types.ts:52](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L52)
+Defined in:  [lib/types.ts:52](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L52)
 
 ##### `plainTextFormattedCitation`
 
 > `string`
 
-Defined in:  [lib/types.ts:53](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L53)
+Defined in:  [lib/types.ts:53](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L53)
 
 ##### `previouslyFormattedCitation`
 
 > `string`
 
-Defined in:  [lib/types.ts:54](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L54)
+Defined in:  [lib/types.ts:54](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L54)
 
 ***
 
@@ -224,31 +224,31 @@ Defined in:  [lib/types.ts:54](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 > `string`
 
-Defined in:  [lib/types.ts:40](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L40)
+Defined in:  [lib/types.ts:40](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L40)
 
 ##### `citationItems`
 
 > [`MendeleyCitationItem`](modules.md#mendeleycitationitem)[]
 
-Defined in:  [lib/types.ts:41](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L41)
+Defined in:  [lib/types.ts:41](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L41)
 
 ##### `mendeley`
 
 > [`Mendeley`](modules.md#mendeley)
 
-Defined in:  [lib/types.ts:42](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L42)
+Defined in:  [lib/types.ts:42](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L42)
 
 ##### `properties`
 
 > [`MendeleyProperties`](modules.md#mendeleyproperties)
 
-Defined in:  [lib/types.ts:43](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L43)
+Defined in:  [lib/types.ts:43](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L43)
 
 ##### `schema`
 
 > `string`
 
-Defined in:  [lib/types.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L44)
+Defined in:  [lib/types.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L44)
 
 ***
 
@@ -260,19 +260,19 @@ Defined in:  [lib/types.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 > `string`
 
-Defined in:  [lib/types.ts:58](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L58)
+Defined in:  [lib/types.ts:58](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L58)
 
 ##### `itemData`
 
 > `Data`
 
-Defined in:  [lib/types.ts:59](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L59)
+Defined in:  [lib/types.ts:59](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L59)
 
 ##### `uris`
 
 > `string`[]
 
-Defined in:  [lib/types.ts:60](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L60)
+Defined in:  [lib/types.ts:60](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L60)
 
 ***
 
@@ -284,7 +284,7 @@ Defined in:  [lib/types.ts:60](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 > `number`
 
-Defined in:  [lib/types.ts:48](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L48)
+Defined in:  [lib/types.ts:48](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L48)
 
 ***
 
@@ -296,19 +296,19 @@ Defined in:  [lib/types.ts:48](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 > `Data`[]
 
-Defined in:  [lib/ooxast-util-citations.ts:23](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/ooxast-util-citations.ts#L23)
+Defined in:  [lib/ooxast-util-citations.ts:23](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/ooxast-util-citations.ts#L23)
 
 ##### `log?`
 
 > `boolean`
 
-Defined in:  [lib/ooxast-util-citations.ts:24](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/ooxast-util-citations.ts#L24)
+Defined in:  [lib/ooxast-util-citations.ts:24](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/ooxast-util-citations.ts#L24)
 
 ##### `type?`
 
 > `"endnote"` | `"citavi"` | `"mendeley"` | `"word"` | `"zotero"`
 
-Defined in:  [lib/ooxast-util-citations.ts:25](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/ooxast-util-citations.ts#L25)
+Defined in:  [lib/ooxast-util-citations.ts:25](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/ooxast-util-citations.ts#L25)
 
 ***
 
@@ -320,13 +320,13 @@ Defined in:  [lib/ooxast-util-citations.ts:25](https://github.com/TrialAndErrorO
 
 > `string`
 
-Defined in:  [lib/types.ts:14](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L14)
+Defined in:  [lib/types.ts:14](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L14)
 
 ##### `noteIndex`
 
 > `number`
 
-Defined in:  [lib/types.ts:13](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L13)
+Defined in:  [lib/types.ts:13](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L13)
 
 ***
 
@@ -338,25 +338,25 @@ Defined in:  [lib/types.ts:13](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 > `string`
 
-Defined in:  [lib/types.ts:28](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L28)
+Defined in:  [lib/types.ts:28](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L28)
 
 ##### `citationItems`
 
 > [`MendeleyCitationItem`](modules.md#mendeleycitationitem)[]
 
-Defined in:  [lib/types.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L29)
+Defined in:  [lib/types.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L29)
 
 ##### `properties`
 
 > [`ZoteroProperties`](modules.md#zoteroproperties)
 
-Defined in:  [lib/types.ts:30](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L30)
+Defined in:  [lib/types.ts:30](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L30)
 
 ##### `schema`
 
 > `string`
 
-Defined in:  [lib/types.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L31)
+Defined in:  [lib/types.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L31)
 
 ***
 
@@ -368,19 +368,19 @@ Defined in:  [lib/types.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 > `string`
 
-Defined in:  [lib/types.ts:36](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L36)
+Defined in:  [lib/types.ts:36](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L36)
 
 ##### `noteIndex`
 
 > `number`
 
-Defined in:  [lib/types.ts:35](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L35)
+Defined in:  [lib/types.ts:35](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L35)
 
 ##### `plainCitation`
 
 > `string`
 
-Defined in:  [lib/types.ts:37](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L37)
+Defined in:  [lib/types.ts:37](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L37)
 
 ***
 
@@ -388,7 +388,7 @@ Defined in:  [lib/types.ts:37](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 > (`string` | [`Citation`](modules.md#citation))[]
 
-Defined in:  [lib/types.ts:3](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L3)
+Defined in:  [lib/types.ts:3](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citations/src/lib/types.ts#L3)
 
 ## Syntax tree
 

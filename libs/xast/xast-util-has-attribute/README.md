@@ -65,7 +65,7 @@ hasAttribute(node: unknown, name: string): boolean;
 
 `boolean`
 
-Defined in:  [lib/xast-util-has-attribute.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/xast/xast-util-has-attribute/src/lib/xast-util-has-attribute.ts#L10)
+Defined in:  [lib/xast-util-has-attribute.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/xast/xast-util-has-attribute/src/lib/xast-util-has-attribute.ts#L10)
 
 ## Syntax tree
 

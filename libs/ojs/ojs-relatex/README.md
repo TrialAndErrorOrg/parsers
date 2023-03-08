@@ -62,7 +62,7 @@ ojsRelatex(node: Node<Data>): void;
 
 `void`
 
-Defined in:  [lib/ojs-relatex.ts:3](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ojs/ojs-relatex/src/lib/ojs-relatex.ts#L3)
+Defined in:  [lib/ojs-relatex.ts:3](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-relatex/src/lib/ojs-relatex.ts#L3)
 
 ## Syntax tree
 

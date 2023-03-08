@@ -74,7 +74,7 @@ docxToVFile(file: ArrayBuffer, userOptions: Options = {}): Promise<VFile>;
 
 A VFile with the contents of the document.xml file as the root, and the contents of the other xml files as data.
 
-Defined in:  [src/lib/docx-to-vfile-unzipit.ts:90](https://github.com/TrialAndErrorOrg/parsers/blob/934a9b2/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L90)
+Defined in:  [src/lib/docx-to-vfile-unzipit.ts:90](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L90)
 
 ***
 
@@ -107,7 +107,7 @@ The media files in the .docx file
 
 Overrides: Data.media
 
-Defined in:  [src/lib/docx-to-vfile-unzipit.ts:45](https://github.com/TrialAndErrorOrg/parsers/blob/934a9b2/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L45)
+Defined in:  [src/lib/docx-to-vfile-unzipit.ts:45](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L45)
 
 ##### `relations`
 
@@ -123,7 +123,7 @@ The relations between the .xml files in the .docx file
 
 Overrides: Data.relations
 
-Defined in:  [src/lib/docx-to-vfile-unzipit.ts:49](https://github.com/TrialAndErrorOrg/parsers/blob/934a9b2/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L49)
+Defined in:  [src/lib/docx-to-vfile-unzipit.ts:49](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L49)
 
 ***
 
@@ -156,7 +156,7 @@ Defined in:  node\_modules/.pnpm/vfile\@5.3.7/node\_modules/vfile/lib/index.d.ts
 
 Overrides: VFile.data
 
-Defined in:  [src/lib/docx-to-vfile-unzipit.ts:80](https://github.com/TrialAndErrorOrg/parsers/blob/934a9b2/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L80)
+Defined in:  [src/lib/docx-to-vfile-unzipit.ts:80](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L80)
 
 ##### `history`
 
@@ -619,7 +619,7 @@ You should keep it at the default value if you intend to use 'reoff-stringify' t
 
 'all'
 
-Defined in:  [src/lib/docx-to-vfile-unzipit.ts:30](https://github.com/TrialAndErrorOrg/parsers/blob/934a9b2/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L30)
+Defined in:  [src/lib/docx-to-vfile-unzipit.ts:30](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L30)
 
 ##### `withoutMedia?`
 
@@ -633,7 +633,7 @@ By default, images are included on the `data.media` attribute of the VFile as an
 
 false
 
-Defined in:  [src/lib/docx-to-vfile-unzipit.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/934a9b2/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L16)
+Defined in:  [src/lib/docx-to-vfile-unzipit.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L16)
 
 ***
 
@@ -641,7 +641,7 @@ Defined in:  [src/lib/docx-to-vfile-unzipit.ts:16](https://github.com/TrialAndEr
 
 > `${string}.xml` | `${string}.rels`
 
-Defined in:  [src/lib/docx-to-vfile-unzipit.ts:71](https://github.com/TrialAndErrorOrg/parsers/blob/934a9b2/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L71)
+Defined in:  [src/lib/docx-to-vfile-unzipit.ts:71](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/reoff/docx-to-vfile/src/lib/docx-to-vfile-unzipit.ts#L71)
 
 ## Syntax tree
 

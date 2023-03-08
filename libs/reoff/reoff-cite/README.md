@@ -40,7 +40,7 @@ default(options: Options = ...): Function;
 
 `Root`
 
-Defined in:  [lib/reoff-cite.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/reoff/reoff-cite/src/lib/reoff-cite.ts#L12)
+Defined in:  [lib/reoff-cite.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/reoff/reoff-cite/src/lib/reoff-cite.ts#L12)
 
 ## Install
 

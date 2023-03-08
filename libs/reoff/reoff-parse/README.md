@@ -3,6 +3,8 @@
 
 # reoff-parse
 
+[![npm version](https://badge.fury.io/js/reoff-parse.svg)](https://badge.fury.io/js/reoff-parse) [![npm downloads](https://img.shields.io/npm/dm/reoff-parse.svg)](https://www.npmjs.com/package/reoff-parse)
+
 Plugin for [reoff][reoff] to parse a `.docx` XML file into an `ooxast` AST. Ideally use `docx-to-vfile` to get to a parseable state.
 
 ## Contents
@@ -56,13 +58,152 @@ default(options: Settings = {}): void;
 
 | Name | Type |
 | :------ | :------ |
-| `options` | `Settings` |
+| `options` | [`Settings`](modules.md#settings) |
 
 #### Returns
 
 `void`
 
-Defined in:  [lib/reoff-parse.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/reoff/reoff-parse/src/lib/reoff-parse.ts#L12)
+Defined in:  [src/lib/reoff-parse.ts:59](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/reoff/reoff-parse/src/lib/reoff-parse.ts#L59)
+
+***
+
+### `Parsed`
+
+The parsed content of .xml files in the .docx file
+
+#### Indexable
+
+[`key`: `XMLOrRelsString`]: `Root` | `undefined`
+
+***
+
+### `RootWithSource`
+
+#### Hierarchy
+
+*   `Root`.**RootWithSource**
+
+#### Properties
+
+##### `children`
+
+> (`Cdata` | `Comment` | `Doctype` | `Element` | `Instruction` | `Text`)[]
+
+Inherited from: Root.children
+
+Defined in:  node\_modules/.pnpm/@types+xast\@1.0.2/node\_modules/@types/xast/index.d.ts:58
+
+##### `data?`
+
+> `Data`
+
+Information from the ecosystem.
+
+Inherited from: Root.data
+
+Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/index.d.ts:27
+
+##### `position?`
+
+> `Position`
+
+Location of a node in a source document.
+Must not be present if a node is generated.
+
+Inherited from: Root.position
+
+Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/index.d.ts:33
+
+##### `source?`
+
+> `string`
+
+The key of the file in the VFile's `data` attribute.
+Used to identify the file in the VFile and where to put it when stringifying.
+
+Defined in:  [src/lib/reoff-parse.ts:99](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/reoff/reoff-parse/src/lib/reoff-parse.ts#L99)
+
+##### `type`
+
+> `"root"`
+
+Inherited from: Root.type
+
+Defined in:  node\_modules/.pnpm/@types+xast\@1.0.2/node\_modules/@types/xast/index.d.ts:57
+
+***
+
+### `Settings`
+
+#### Properties
+
+##### `fragment?`
+
+> `boolean`
+
+Defined in:  [src/lib/reoff-parse.ts:11](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/reoff/reoff-parse/src/lib/reoff-parse.ts#L11)
+
+##### `include?`
+
+> `string`[] | `RegExp`[] | `"all"` | (`key`: `string`) => `boolean` | `"allXML"`
+
+Which files on the `data` attribute of the VFile to parse and turn into `ooxast` trees.
+
+*   `allXML` parses and appends all files that end with `.xml`.
+*   `all` parses and appends all files that end with `.xml` or `.rels`.
+*   if a string array is passed, it parses and appends all files that match the strings in the array.
+*   if a regexp array is passed, it parses and appends all files that match the regexps in the array.
+*   if a function is passed, it parses and appends all files that match the function.
+
+###### Default
+
+['word/footnotes.xml', 'word/endnotes.xml', 'customXml/item1.xml', 'word/glossary/document.xml']
+
+Use of 'all' or 'allXML' is discouraged, as it will greatly increase the size of the VFile and generally be slower.
+You can always manually parse the files you need later. For example, if you want to find out what fonts are used in the document, you can do something like this:
+
+```ts
+import { docxToVFile } from 'docx-to-vfile'
+import { fromXml } from 'xast-util-from-xml'
+import { unified } from 'unified'
+import { reoffParse } from 'reoff-parse'
+
+const file = await docxToVFile(docx)
+
+const processor = unified()
+ .use(reoffParse)
+ .use(() => (tree, vfile) => {
+   const fontTable = fromXml(vfile.data['word/fontTable.xml'])
+   // do something with the fontTable
+
+   return tree
+ })
+```
+
+Defined in:  [src/lib/reoff-parse.ts:56](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/reoff/reoff-parse/src/lib/reoff-parse.ts#L56)
+
+##### `leaveRaw?`
+
+> `boolean`
+
+Whether to leave the raw XML on the data attribute of the VFile.
+The raw XML is not needed in most cases, but can be useful for debugging.
+
+By default, all XML files that match the include option are parsed and added to the `data.parsed` attribute of the VFile.
+All XML are then removed from the VFile.
+
+###### Default
+
+false
+
+Defined in:  [src/lib/reoff-parse.ts:22](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/reoff/reoff-parse/src/lib/reoff-parse.ts#L22)
+
+##### `removeWhiteSpace?`
+
+> `boolean`
+
+Defined in:  [src/lib/reoff-parse.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/reoff/reoff-parse/src/lib/reoff-parse.ts#L10)
 
 ## Syntax tree
 

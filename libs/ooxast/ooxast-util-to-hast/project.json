@@ -5,9 +5,10 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "rootDir": "libs/ooxast/ooxast-util-to-hast/src",
         "outputPath": "dist/libs/ooxast/ooxast-util-to-hast",
         "tsConfig": "libs/ooxast/ooxast-util-to-hast/tsconfig.lib.json",
         "packageJson": "libs/ooxast/ooxast-util-to-hast/package.json",

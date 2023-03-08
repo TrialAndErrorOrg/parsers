@@ -1,5 +1,5 @@
 {
-  "name": "jast",
+  "name": "jast-types",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/jast/jast/src",
   "projectType": "library",
@@ -12,9 +12,10 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "rootDir": "libs/jast/jast/src",
         "outputPath": "dist/libs/jast/jast",
         "tsConfig": "libs/jast/jast/tsconfig.lib.json",
         "packageJson": "libs/jast/jast/package.json",
@@ -29,6 +30,10 @@
           "projects": "dependencies",
           "target": "build",
           "params": "forward"
+        },
+        {
+          "projects": "self",
+          "target": "lint"
         }
       ]
     },
@@ -48,6 +53,42 @@
       }
     },
     "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventional",
+        "trackDeps": true,
+        "postTargets": ["jast-types:npm", "jast-types:github", "jast-types:github-standalone"]
+      },
+      "dependsOn": [
+        {
+          "projects": "dependencies",
+          "target": "version",
+          "params": "forward"
+        }
+      ]
+    },
+    "github": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}"
+      }
+    },
+    "github-standalone": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}",
+        "repo": "TrialAndErrorOrg/jast-types"
+      }
+    },
+    "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
         "access": "public"

@@ -27,9 +27,10 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "rootDir": "libs/texast/texast-util-to-latex/src",
         "outputPath": "dist/libs/texast/texast-util-to-latex",
         "tsConfig": "libs/texast/texast-util-to-latex/tsconfig.lib.json",
         "packageJson": "libs/texast/texast-util-to-latex/package.json",
@@ -44,6 +45,10 @@
           "projects": "dependencies",
           "target": "build",
           "params": "forward"
+        },
+        {
+          "projects": "self",
+          "target": "lint"
         }
       ]
     },

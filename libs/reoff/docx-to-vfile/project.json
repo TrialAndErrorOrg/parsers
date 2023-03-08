@@ -30,7 +30,6 @@
     "build": {
       "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
-
       "options": {
         "rootDir": "libs/reoff/docx-to-vfile/src",
         "outputPath": "dist/libs/reoff/docx-to-vfile/",
@@ -51,6 +50,10 @@
           "projects": "dependencies",
           "target": "build",
           "params": "forward"
+        },
+        {
+          "projects": "self",
+          "target": "lint"
         }
       ]
     },
@@ -63,8 +66,19 @@
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {
-        "postTargets": ["docx-to-vfile:npm", "docx-to-vfile:github"]
-      }
+        "postTargets": [
+          "docx-to-vfile:npm",
+          "docx-to-vfile:github",
+          "docx-to-vfile:github-standalone"
+        ]
+      },
+      "dependsOn": [
+        {
+          "target": "version",
+          "projects": "dependencies",
+          "params": "forward"
+        }
+      ]
     },
     "github": {
       "executor": "@jscutlery/semver:github",
@@ -77,6 +91,15 @@
       "executor": "ngx-deploy-npm:deploy",
       "options": {
         "access": "public"
+      }
+    },
+
+    "github-standalone": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}",
+        "repo": "TrialAndErrorOrg/docx-to-vfile"
       }
     }
   },

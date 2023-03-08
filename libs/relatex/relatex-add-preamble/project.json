@@ -27,9 +27,10 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "rootDir": "libs/relatex/relatex-add-preamble/src",
         "outputPath": "dist/libs/relatex/relatex-add-preamble",
         "tsConfig": "libs/relatex/relatex-add-preamble/tsconfig.lib.json",
         "packageJson": "libs/relatex/relatex-add-preamble/package.json",
@@ -44,6 +45,10 @@
           "projects": "dependencies",
           "target": "build",
           "params": "forward"
+        },
+        {
+          "projects": "self",
+          "target": "lint"
         }
       ]
     },

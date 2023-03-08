@@ -12,9 +12,10 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "rootDir": "libs/rejour/rejour-frontmatter/src",
         "outputPath": "dist/libs/rejour/rejour-frontmatter",
         "tsConfig": "libs/rejour/rejour-frontmatter/tsconfig.lib.json",
         "packageJson": "libs/rejour/rejour-frontmatter/package.json",
@@ -29,6 +30,10 @@
           "projects": "dependencies",
           "target": "build",
           "params": "forward"
+        },
+        {
+          "projects": "self",
+          "target": "lint"
         }
       ]
     },

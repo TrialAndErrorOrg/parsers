@@ -12,9 +12,10 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "rootDir": "libs/citations/apa-parser/src",
         "outputPath": "dist/libs/citations/apa-parser",
         "tsConfig": "libs/citations/apa-parser/tsconfig.lib.json",
         "packageJson": "libs/citations/apa-parser/package.json",

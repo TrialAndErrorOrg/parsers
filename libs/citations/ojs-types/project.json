@@ -1,5 +1,5 @@
 {
-  "name": "citations-ojs-types",
+  "name": "ojs-types",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/citations/ojs-types/src",
   "projectType": "library",
@@ -12,9 +12,10 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "rootDir": "libs/citations/ojs-types/src",
         "outputPath": "dist/libs/citations/ojs-types",
         "tsConfig": "libs/citations/ojs-types/tsconfig.lib.json",
         "packageJson": "libs/citations/ojs-types/package.json",

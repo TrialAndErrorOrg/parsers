@@ -27,9 +27,10 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "rootDir": "libs/reoff/reoff-parse-references-browser/src",
         "outputPath": "dist/libs/reoff/reoff-parse-references-browser",
         "tsConfig": "libs/reoff/reoff-parse-references-browser/tsconfig.lib.json",
         "packageJson": "libs/reoff/reoff-parse-references-browser/package.json",
@@ -44,6 +45,10 @@
           "projects": "dependencies",
           "target": "build",
           "params": "forward"
+        },
+        {
+          "projects": "self",
+          "target": "lint"
         }
       ]
     },

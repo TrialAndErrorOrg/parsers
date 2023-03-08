@@ -27,9 +27,10 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "rootDir": "libs/jast/jast-util-to-texast/src",
         "outputPath": "dist/libs/jast/jast-util-to-texast",
         "tsConfig": "libs/jast/jast-util-to-texast/tsconfig.lib.json",
         "packageJson": "libs/jast/jast-util-to-texast/package.json",
@@ -44,10 +45,54 @@
           "projects": "dependencies",
           "target": "build",
           "params": "forward"
+        },
+        {
+          "projects": "self",
+          "target": "lint"
         }
       ]
     },
     "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventional",
+        "trackDeps": true,
+        "postTargets": [
+          "jast-util-to-texast:npm",
+          "jast-util-to-texast:github",
+          "jast-util-to-texast:github-standalone"
+        ]
+      },
+      "dependsOn": [
+        {
+          "projects": "dependencies",
+          "target": "version",
+          "params": "forward"
+        }
+      ]
+    },
+    "github": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}"
+      }
+    },
+    "github-standalone": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}",
+        "repo": "TrialAndErrorOrg/jast-util-to-texast"
+      }
+    },
+    "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
         "access": "public"

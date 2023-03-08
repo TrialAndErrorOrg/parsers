@@ -36,6 +36,8 @@
   "module": "./index.js",
   "types": "./index.d.ts",
   "files": [
-    "./"
+    "index.d.ts",
+    "index.js",
+    "/lib"
   ]
 }

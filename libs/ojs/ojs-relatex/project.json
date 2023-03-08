@@ -19,9 +19,10 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "rootDir": "libs/ojs/ojs-relatex/src",
         "outputPath": "dist/libs/ojs/ojs-relatex",
         "tsConfig": "libs/ojs/ojs-relatex/tsconfig.lib.json",
         "packageJson": "libs/ojs/ojs-relatex/package.json",
@@ -36,6 +37,10 @@
           "projects": "dependencies",
           "target": "build",
           "params": "forward"
+        },
+        {
+          "projects": "self",
+          "target": "lint"
         }
       ]
     },

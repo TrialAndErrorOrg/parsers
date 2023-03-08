@@ -27,9 +27,10 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "rootDir": "libs/rejour/rejour-relatex/src",
         "outputPath": "dist/libs/rejour/rejour-relatex",
         "tsConfig": "libs/rejour/rejour-relatex/tsconfig.lib.json",
         "packageJson": "libs/rejour/rejour-relatex/package.json",
@@ -44,6 +45,10 @@
           "projects": "dependencies",
           "target": "build",
           "params": "forward"
+        },
+        {
+          "projects": "self",
+          "target": "lint"
         }
       ]
     },

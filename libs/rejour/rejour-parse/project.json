@@ -27,9 +27,10 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "rootDir": "libs/rejour/rejour-parse/src",
         "outputPath": "dist/libs/rejour/rejour-parse",
         "tsConfig": "libs/rejour/rejour-parse/tsconfig.lib.json",
         "packageJson": "libs/rejour/rejour-parse/package.json",
@@ -44,10 +45,50 @@
           "projects": "dependencies",
           "target": "build",
           "params": "forward"
+        },
+        {
+          "projects": "self",
+          "target": "lint"
         }
       ]
     },
     "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventional",
+        "trackDeps": true,
+        "postTargets": ["rejour-parse:npm", "rejour-parse:github", "rejour-parse:github-standalone"]
+      },
+      "dependsOn": [
+        {
+          "projects": "dependencies",
+          "target": "version",
+          "params": "forward"
+        }
+      ]
+    },
+    "github": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}"
+      }
+    },
+    "github-standalone": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}",
+        "repo": "TrialAndErrorOrg/rejour-parse"
+      }
+    },
+    "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
         "access": "public"

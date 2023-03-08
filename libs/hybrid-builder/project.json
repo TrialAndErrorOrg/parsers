@@ -8,6 +8,7 @@
       "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "rootDir": "libs/hybrid-builder/src",
         "outputPath": "dist/libs/hybrid-builder",
         "main": "libs/hybrid-builder/src/index.ts",
         "tsConfig": "libs/hybrid-builder/tsconfig.lib.json",

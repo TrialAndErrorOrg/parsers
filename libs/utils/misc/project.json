@@ -12,9 +12,10 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "rootDir": "libs/utils/misc/src",
         "outputPath": "dist/libs/utils/misc",
         "tsConfig": "libs/utils/misc/tsconfig.lib.json",
         "packageJson": "libs/utils/misc/package.json",
@@ -29,6 +30,10 @@
           "projects": "dependencies",
           "target": "build",
           "params": "forward"
+        },
+        {
+          "projects": "self",
+          "target": "lint"
         }
       ]
     },

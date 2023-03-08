@@ -5,9 +5,10 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/esbuild:esbuild",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "rootDir": "libs/ooxast/ooxast-util-to-unified-latex/src",
         "outputPath": "dist/libs/ooxast/ooxast-util-to-unified-latex",
         "tsConfig": "libs/ooxast/ooxast-util-to-unified-latex/tsconfig.lib.json",
         "packageJson": "libs/ooxast/ooxast-util-to-unified-latex/package.json",
@@ -15,13 +16,18 @@
         "assets": ["libs/ooxast/ooxast-util-to-unified-latex/*.md"],
         "updateBuildableProjectDepsInPackageJson": true,
         "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "buildableProjectDepsInPackageJsonType": "dependencies",
+        "shallowDependencies": true
       },
       "dependsOn": [
         {
           "projects": "dependencies",
           "target": "build",
           "params": "forward"
+        },
+        {
+          "projects": "self",
+          "target": "lint"
         }
       ]
     },
@@ -51,6 +57,46 @@
       "options": {
         "readme": "libs/ooxast/ooxast-util-to-unified-latex/README.md",
         "packageJSON": "libs/ooxast/ooxast-util-to-unified-latex/package.json"
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventional",
+        "trackDeps": true,
+        "postTargets": [
+          "ooxast-util-to-unified-latex:npm",
+          "ooxast-util-to-unified-latex:github",
+          "ooxast-util-to-unified-latex:github-standalone"
+        ]
+      },
+      "dependsOn": [
+        {
+          "projects": "dependencies",
+          "target": "version",
+          "params": "forward"
+        }
+      ]
+    },
+    "github": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}"
+      }
+    },
+    "github-standalone": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}",
+        "repo": "TrialAndErrorOrg/ooxast-util-to-unified-latex"
+      }
+    },
+    "npm": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
       }
     }
   },

@@ -27,9 +27,10 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "rootDir": "libs/ooxast/ooxast-util-parse-bib-node/src",
         "outputPath": "dist/libs/ooxast/ooxast-util-parse-bib-node",
         "tsConfig": "libs/ooxast/ooxast-util-parse-bib-node/tsconfig.lib.json",
         "packageJson": "libs/ooxast/ooxast-util-parse-bib-node/package.json",
@@ -44,6 +45,10 @@
           "projects": "dependencies",
           "target": "build",
           "params": "forward"
+        },
+        {
+          "projects": "self",
+          "target": "lint"
         }
       ]
     },

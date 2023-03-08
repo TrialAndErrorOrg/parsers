@@ -12,9 +12,10 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:swc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "rootDir": "libs/xast/xast-util-select/src",
         "outputPath": "dist/libs/xast/xast-util-select",
         "tsConfig": "libs/xast/xast-util-select/tsconfig.lib.json",
         "packageJson": "libs/xast/xast-util-select/package.json",
@@ -29,6 +30,10 @@
           "projects": "dependencies",
           "target": "build",
           "params": "forward"
+        },
+        {
+          "projects": "self",
+          "target": "lint"
         }
       ]
     },
@@ -48,6 +53,46 @@
       }
     },
     "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventional",
+        "trackDeps": true,
+        "postTargets": [
+          "xast-util-select:npm",
+          "xast-util-select:github",
+          "xast-util-select:github-standalone"
+        ]
+      },
+      "dependsOn": [
+        {
+          "projects": "dependencies",
+          "target": "version",
+          "params": "forward"
+        }
+      ]
+    },
+    "github": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}"
+      }
+    },
+    "github-standalone": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}",
+        "repo": "TrialAndErrorOrg/xast-util-select"
+      }
+    },
+    "npm": {
       "executor": "ngx-deploy-npm:deploy",
       "options": {
         "access": "public"

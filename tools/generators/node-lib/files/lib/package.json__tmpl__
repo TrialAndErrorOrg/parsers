@@ -2,7 +2,8 @@
   "name": "<%= importPath %>",
   "version": "0.0.1",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": "https://github.com/TrialAndErrorOrg/<%= importPath %>",
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "<%= author %> <<%= email %>>",
   "type": "module",
   "description": "<%= description %>",
@@ -12,5 +13,24 @@
     "syntax",
     "tree",
     "ast"
-  ]
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "<%= importPath %>",
+    "tsconfig": "./tsconfig.lib.json"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    }
+  },
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "./index.js",
+    "./index.d.ts",
+    "./lib"
+  ],
 }

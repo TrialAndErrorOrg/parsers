@@ -1,1 +1,1 @@
-export * from './lib/<%= importPath %>'
+export * from './lib/<%= importPath %>.js'

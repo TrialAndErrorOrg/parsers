@@ -15,17 +15,23 @@ import {
   Tree,
   updateJson,
   updateProjectConfiguration,
+  TargetConfiguration,
   updateTsConfigsToJs,
 } from '@nrwl/devkit'
+import { ExecutorOptions } from '@nrwl/js/src/utils/schema'
+import { VersionBuilderSchema } from '@jscutlery/semver/src/executors/version/schema'
+import { GithubExecutorSchema } from '@jscutlery/semver/src/executors/github/schema'
 
 import { Schema } from './schema'
 import { join } from 'path'
 import { nxVersion } from '@nrwl/workspace/src/utils/versions'
 import { addLint } from '@nrwl/workspace/src/generators/library/library'
+import { Schema as LintExecutorOptions } from '@nrwl/workspace/src/generators/library/schema'
 import { runTasksInSerial } from '@nrwl/workspace/src/utilities/run-tasks-in-serial'
 import { jestProjectGenerator } from '@nrwl/jest'
 import { updateTsConfig } from '@nrwl/jest/src/generators/jest-project/lib/update-tsconfig'
 import { updateJestConfig } from '@nrwl/jest/src/generators/jest-project/lib/update-jestconfig'
+import { JestExecutorOptions } from '@nrwl/jest/src/executors/jest/schema'
 import { updateWorkspace } from '@nrwl/jest/src/generators/jest-project/lib/update-workspace'
 
 export interface NormalizedSchema extends Schema {
@@ -38,10 +44,7 @@ export interface NormalizedSchema extends Schema {
   parsedTags: string[]
 }
 
-const getCaseAwareFileName = (options: {
-  pascalCaseFiles: boolean
-  fileName: string
-}) => {
+const getCaseAwareFileName = (options: { pascalCaseFiles: boolean; fileName: string }) => {
   const normalized = names(options.fileName)
 
   return options.pascalCaseFiles ? normalized.className : normalized.fileName
@@ -51,9 +54,7 @@ const normalizeOptions = (tree: Tree, options: Schema): NormalizedSchema => {
   const { npmScope, libsDir } = getWorkspaceLayout(tree)
   const defaultPrefix = npmScope
   const name = names(options.name).fileName
-  const projectDirectory = options.directory
-    ? `${names(options.directory).fileName}/${name}`
-    : name
+  const projectDirectory = options.directory ? `${names(options.directory).fileName}/${name}` : name
 
   const projectName = projectDirectory.replace(new RegExp('/', 'g'), '-')
   const fileName = getCaseAwareFileName({
@@ -62,12 +63,9 @@ const normalizeOptions = (tree: Tree, options: Schema): NormalizedSchema => {
   })
   const projectRoot = joinPathFragments(libsDir, projectDirectory)
 
-  const parsedTags = options.tags
-    ? options.tags.split(',').map((s) => s.trim())
-    : []
+  const parsedTags = options.tags ? options.tags.split(',').map((s) => s.trim()) : []
 
-  const importPath =
-    options.importPath || `@${defaultPrefix}/${projectDirectory}`
+  const importPath = options.importPath || `@${defaultPrefix}/${projectDirectory}`
 
   return {
     ...options,
@@ -78,7 +76,7 @@ const normalizeOptions = (tree: Tree, options: Schema): NormalizedSchema => {
     projectDirectory,
     parsedTags,
     importPath,
-    libsDir
+    libsDir,
   }
 }
 
@@ -120,17 +118,13 @@ const updateRootTsConfig = (host: Tree, options: NormalizedSchema) => {
     //@ts-ignore
     if (c.paths[options.importPath]) {
       throw new Error(
-        `You already have a library using the import path "${options.importPath}". Make sure to specify a unique one.`
+        `You already have a library using the import path "${options.importPath}". Make sure to specify a unique one.`,
       )
     }
 
     //@ts-ignore
     c.paths[options.importPath] = [
-      joinPathFragments(
-        options.projectRoot,
-        './src',
-        `index.${(options.js ? 'js' : 'ts')}`
-      ),
+      joinPathFragments(options.projectRoot, './src', `index.${options.js ? 'js' : 'ts'}`),
     ]
 
     return json
@@ -146,16 +140,31 @@ const updateProject = (tree: Tree, options: NormalizedSchema) => {
   const { libsDir } = getWorkspaceLayout(tree)
 
   project.targets = project.targets || {}
-  project.targets.build = {
+  const buildOptions: TargetConfiguration<ExecutorOptions> = {
     executor: `@nrwl/js:${options.compiler}`,
     outputs: ['{options.outputPath}'],
     options: {
+      rootDir: `${options.projectRoot}/src`,
       outputPath: `dist/${libsDir}/${options.projectDirectory}`,
       tsConfig: `${options.projectRoot}/tsconfig.lib.json`,
       packageJson: `${options.projectRoot}/package.json`,
-      main: `${options.projectRoot}/src/index${(options.js ? '.js' : '.ts')}`,
+      main: `${options.projectRoot}/src/index${options.js ? '.js' : '.ts'}`,
       assets: [`${options.projectRoot}/*.md`],
+      updateBuildableProjectDepsInPackageJson: true,
+      clean: true,
+      buildableProjectDepsInPackageJsonType: 'dependencies',
     },
+    dependsOn: [
+      {
+        projects: 'dependencies',
+        target: 'build',
+        params: 'forward',
+      },
+      {
+        projects: 'self',
+        target: 'lint',
+      },
+    ],
   }
 
   if (options.rootDir) {
@@ -169,7 +178,6 @@ const updateProject = (tree: Tree, options: NormalizedSchema) => {
       project: options.name,
       setupFile: 'none',
       supportTsx: true,
-      babelJest: options.babelJest,
       skipSerializers: true,
       testEnvironment: options.testEnvironment,
       skipFormat: true,
@@ -196,34 +204,90 @@ const addProject = (tree: Tree, options: NormalizedSchema) => {
     const { libsDir } = getWorkspaceLayout(tree)
     addDependenciesToPackageJson(tree, {}, { '@nrwl/js': nxVersion })
 
-    projectConfiguration.targets.build = {
+    const build: TargetConfiguration<ExecutorOptions> = {
       executor: `@nrwl/js:${options.compiler}`,
       outputs: ['{options.outputPath}'],
       options: {
+        rootDir: `${options.projectRoot}/src`,
         outputPath: `dist/${libsDir}/${options.projectDirectory}`,
-        main: `${options.projectRoot}/src/index${(options.js ? '.js' : '.ts')}`,
         tsConfig: `${options.projectRoot}/tsconfig.lib.json`,
+        // @ts-expect-error i want it there
+        packageJson: `${options.projectRoot}/package.json`,
+        main: `${options.projectRoot}/src/index${options.js ? '.js' : '.ts'}`,
         assets: [`${options.projectRoot}/*.md`],
+        updateBuildableProjectDepsInPackageJson: true,
+        clean: true,
+        buildableProjectDepsInPackageJsonType: 'dependencies',
       },
+      dependsOn: [
+        {
+          projects: 'dependencies',
+          target: 'build',
+          params: 'forward',
+        },
+        {
+          projects: 'self',
+          target: 'lint',
+        },
+      ],
     }
 
-  if (options.publishable) {
-    projectConfiguration.targets.build.options = {
-      ...projectConfiguration.targets.build.options,
-      packageJson: `${options.projectRoot}/package.json`,
-    }
+    projectConfiguration.targets.build = build
 
-    projectConfiguration.targets.deploy = {
-      executor: 'ngx-deploy-npm:deploy',
-      options: {
-        access: 'public'
+    if (options.publishable) {
+      projectConfiguration.targets.build.options = {
+        ...projectConfiguration.targets.build.options,
+        packageJson: `${options.projectRoot}/package.json`,
       }
+
+      projectConfiguration.targets.npm = {
+        executor: 'ngx-deploy-npm:deploy',
+        options: {
+          access: 'public',
+        },
+      }
+
+      const version: TargetConfiguration<Partial<VersionBuilderSchema>> = {
+        executor: '@jscutlery/semver:version',
+        options: {
+          postTargets: [
+            `${options.name}:npm`,
+            `${options.name}:github`,
+            `${options.name}:github-standalone`,
+          ],
+        },
+      }
+
+      projectConfiguration.targets.version = version
+
+      const github: TargetConfiguration<GithubExecutorSchema> = {
+        executor: '@jscutlery/semver:github',
+        options: {
+          tag: '${tag}',
+          notes: '${notes}',
+          repo: 'TrialAndErrorOrg/docx-to-vfile',
+        },
+      }
+
+      projectConfiguration.targets.github = github
+
+      const githubStandalone: TargetConfiguration<GithubExecutorSchema> = {
+        executor: '@jscutlery/semver:github',
+        options: {
+          tag: '${tag}',
+          notes: '${notes}',
+          repo: `TrialAndErrorOrg/${name}`,
+        },
+      }
+
+      projectConfiguration.targets['github-standalone'] = githubStandalone
+
+      projectConfiguration.targets.version = version
     }
-  }
   }
 
   if (options.unitTestRunner === 'jest') {
-    projectConfiguration.targets.test = {
+    const test: TargetConfiguration<JestExecutorOptions> = {
       executor: '@nrwl/jest:jest',
       outputs: ['coverage'],
       options: {
@@ -239,21 +303,13 @@ const addProject = (tree: Tree, options: NormalizedSchema) => {
     options: {
       readme: `${options.projectRoot}/README.md`,
       packageJSON: `${options.projectRoot}/package.json`,
-    }
+    },
   }
 
-  addProjectConfiguration(
-    tree,
-    options.name,
-    projectConfiguration,
-    options.standaloneConfig
-  )
+  addProjectConfiguration(tree, options.name, projectConfiguration, options.standaloneConfig)
 }
 
-const addJest = async (
-  tree: Tree,
-  options: NormalizedSchema
-): Promise<GeneratorCallback> => {
+const addJest = async (tree: Tree, options: NormalizedSchema): Promise<GeneratorCallback> => {
   return await jestProjectGenerator(tree, {
     project: options.name,
     setupFile: 'none',
@@ -262,7 +318,7 @@ const addJest = async (
     skipSerializers: true,
     testEnvironment: options.testEnvironment,
     skipFormat: true,
-     compiler: options.compiler,
+    compiler: options.compiler,
   })
 }
 
@@ -301,7 +357,7 @@ export const libraryGenerator = async (tree: Tree, schema: Schema) => {
 
     if (options.publishable === true && !schema.importPath) {
       throw new Error(
-        `For publishable libs you have to provide a proper "--importPath" which needs to be a valid npm package name (e.g. my-awesome-lib or @myorg/my-lib)`
+        `For publishable libs you have to provide a proper "--importPath" which needs to be a valid npm package name (e.g. my-awesome-lib or @myorg/my-lib)`,
       )
     }
 

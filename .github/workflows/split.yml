@@ -1,8 +1,9 @@
 name: split
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ['release']
+    types:
+      - completed
   workflow_dispatch:
 
 jobs:
@@ -18,9 +19,9 @@ jobs:
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           org: TrialAndErrorOrg
-          match: "./libs/jast/* ./libs/reoff/* ./libs/ooxast/* ./libs/rejour/* ./libs/xast/* ./libs/notion/* ./libs/citations/*"
+          match: './libs/jast/* ./libs/reoff/* ./libs/ooxast/* ./libs/rejour/* ./libs/xast/* ./libs/notion/* ./libs/citations/*'
           package-json: true
           description: true
           name: true
           topics: true
-          force: true
+          # force: true

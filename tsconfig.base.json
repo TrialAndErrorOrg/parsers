@@ -32,6 +32,7 @@
       "@jote/utils/readme": ["libs/utils/readme/src/index.ts"],
       "apa-parser": ["libs/citations/apa-parser/src/index.ts"],
       "ast-stringify": ["libs/ast-stringify/src/index.ts"],
+      "better-nx-tsc": ["libs/plugins/better-nx-tsc/src/index.ts"],
       "crossref-json": ["libs/citations/crossref-json/src/index.ts"],
       "crossref-json-xml": ["libs/citations/crossref-json-xml/src/index.ts"],
       "crossref-to-csl": ["libs/citations/crossref-to-csl/src/index.ts"],

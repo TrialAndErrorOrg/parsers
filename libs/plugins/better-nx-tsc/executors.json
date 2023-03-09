@@ -1,0 +1,16 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "executors": {
+    "tsc": {
+      "implementation": "./src/executors/tsc/executor",
+      "schema": "./src/executors/tsc/schema.json",
+      "description": "TSC executor"
+    },
+    "execute": {
+      "implementation": "./src/executors/execute/executor",
+      "schema": "./src/executors/execute/schema.json",
+      "description": "execute executor",
+      "hasher": "./src/executors/execute/hasher"
+    }
+  }
+}

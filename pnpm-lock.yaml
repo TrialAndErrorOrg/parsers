@@ -1,5 +1,10 @@
 lockfileVersion: 5.4
 
+patchedDependencies:
+  nx@15.8.5:
+    hash: 62nhpdjrzsw4jqndsfuvm4euhy
+    path: patches/nx@15.8.5.patch
+
 specifiers:
   '@angular-devkit/schematics': ^13.0.0
   '@auth/core': ^0.5.0
@@ -417,7 +422,7 @@ devDependencies:
   jest-transform-nearley: 2.0.0_nearley@2.20.1
   jsdoc: 4.0.2
   jsonc-eslint-parser: 2.1.0
-  nx: 15.8.5_ndjiwv35gp2jphtwrka5u7dnfe
+  nx: 15.8.5_62nhpdjrzsw4jqndsfuvm4euhy_ndjiwv35gp2jphtwrka5u7dnfe
   postcss: 8.4.19
   prettier: 2.8.4
   prettier-plugin-svelte: 2.9.0_jrsxveqmsx2uadbqiuq74wlc4u
@@ -3806,12 +3811,12 @@ packages:
   /@nrwl/cli/15.8.5:
     resolution: {integrity: sha512-voy16nUO1MxRMRqCpLlhDB9U4KyPfGHZABXtfMEIQk+W3alncatFMMSVvMQZmi8HXwubM8LxWSOnPtTtOCKBrQ==}
     dependencies:
-      nx: 15.8.5_ndjiwv35gp2jphtwrka5u7dnfe
+      nx: 15.8.5_62nhpdjrzsw4jqndsfuvm4euhy_ndjiwv35gp2jphtwrka5u7dnfe
 
   /@nrwl/cli/15.8.5_ndjiwv35gp2jphtwrka5u7dnfe:
     resolution: {integrity: sha512-voy16nUO1MxRMRqCpLlhDB9U4KyPfGHZABXtfMEIQk+W3alncatFMMSVvMQZmi8HXwubM8LxWSOnPtTtOCKBrQ==}
     dependencies:
-      nx: 15.8.5_ndjiwv35gp2jphtwrka5u7dnfe
+      nx: 15.8.5_62nhpdjrzsw4jqndsfuvm4euhy_ndjiwv35gp2jphtwrka5u7dnfe
     transitivePeerDependencies:
       - '@swc-node/register'
       - '@swc/core'
@@ -3852,7 +3857,7 @@ packages:
       '@phenomnomnominal/tsquery': 4.1.1_typescript@4.9.5
       ejs: 3.1.8
       ignore: 5.2.4
-      nx: 15.8.5_ndjiwv35gp2jphtwrka5u7dnfe
+      nx: 15.8.5_62nhpdjrzsw4jqndsfuvm4euhy_ndjiwv35gp2jphtwrka5u7dnfe
       tslib: 2.5.0
     transitivePeerDependencies:
       - typescript
@@ -3866,7 +3871,7 @@ packages:
       '@phenomnomnominal/tsquery': 4.1.1_typescript@4.9.5
       ejs: 3.1.8
       ignore: 5.2.4
-      nx: 15.8.5_ndjiwv35gp2jphtwrka5u7dnfe
+      nx: 15.8.5_62nhpdjrzsw4jqndsfuvm4euhy_ndjiwv35gp2jphtwrka5u7dnfe
       semver: 7.3.4
       tmp: 0.2.1
       tslib: 2.5.0
@@ -4377,7 +4382,7 @@ packages:
     resolution: {integrity: sha512-pb/hUprOOv2vgvbevGz9hiu8LLOtK7KKuBe4JLSXrFxfHEQjMFsK/2aymnts0ZQrA83QlIG2Mr0tuSKj6/iWvg==}
     hasBin: true
     dependencies:
-      nx: 15.8.5_ndjiwv35gp2jphtwrka5u7dnfe
+      nx: 15.8.5_62nhpdjrzsw4jqndsfuvm4euhy_ndjiwv35gp2jphtwrka5u7dnfe
     transitivePeerDependencies:
       - '@swc-node/register'
       - '@swc/core'
@@ -4506,7 +4511,7 @@ packages:
       ignore: 5.2.4
       minimatch: 3.0.5
       npm-run-path: 4.0.1
-      nx: 15.8.5_ndjiwv35gp2jphtwrka5u7dnfe
+      nx: 15.8.5_62nhpdjrzsw4jqndsfuvm4euhy_ndjiwv35gp2jphtwrka5u7dnfe
       open: 8.4.2
       prettier: 2.8.4
       rxjs: 6.6.7
@@ -14990,7 +14995,7 @@ packages:
     dependencies:
       '@nrwl/devkit': 15.8.5_nx@15.8.5+typescript@4.9.5
       '@nrwl/workspace': 15.8.5_pzl47simdzn3rzy25rfh37ybzi
-      nx: 15.8.5_ndjiwv35gp2jphtwrka5u7dnfe
+      nx: 15.8.5_62nhpdjrzsw4jqndsfuvm4euhy_ndjiwv35gp2jphtwrka5u7dnfe
     dev: false
 
   /nice-try/1.0.5:
@@ -15152,7 +15157,7 @@ packages:
       tar: 6.1.11
     dev: true
 
-  /nx/15.8.5_ndjiwv35gp2jphtwrka5u7dnfe:
+  /nx/15.8.5_62nhpdjrzsw4jqndsfuvm4euhy_ndjiwv35gp2jphtwrka5u7dnfe:
     resolution: {integrity: sha512-1c6Y3rPSzzlqQVJPo33Ej0HY/3t9ykeaPs074HpYxXH0+GU1BSIv/9EfXKQGvmBzjs5yAx6asGIv+H3QDrFt3A==}
     hasBin: true
     requiresBuild: true
@@ -15214,6 +15219,7 @@ packages:
       '@nrwl/nx-win32-x64-msvc': 15.8.5
     transitivePeerDependencies:
       - debug
+    patched: true
 
   /oauth/0.9.15:
     resolution: {integrity: sha512-a5ERWK1kh38ExDEfoO6qUHJb32rd7aYmPHuyCu3Fta/cnICvYmgd2uhuKXvPD+PXB+gCEYYEaQdIRAjCOwAKNA==}

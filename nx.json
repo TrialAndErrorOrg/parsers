@@ -20,9 +20,17 @@
       }
     }
   },
+
   "namedInputs": {
-    "default": ["{projectRoot}/**/*"],
-    "prod": ["!{projectRoot}/**/*.spec.tsx"]
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "production": [
+      "default",
+      "!{projectRoot}/.eslintrc.json",
+      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+      "!{projectRoot}/tsconfig.spec.json",
+      "!{projectRoot}/jest.config.[jt]s"
+    ],
+    "sharedGlobals": []
   },
   "implicitDependencies": {
     "workspace.json": "*",
@@ -38,6 +46,17 @@
   "targetDefaults": {
     "lint": {
       "inputs": ["default", "{workspaceRoot}/.eslintrc.json"]
+    },
+    "build": {
+      "dependsOn": ["^build", "lint"],
+      "inputs": ["production", "^production"]
+    },
+    "version": {
+      "dependsOn": ["^version"],
+      "options": {
+        "preset": "conventional",
+        "trackDeps": true
+      }
     }
   },
   "tasksRunnerOptions": {

@@ -1,0 +1,66 @@
+{
+  "name": "better-nx-tsc",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/better-nx-tsc/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "better-nx-tsc:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/better-nx-tsc",
+        "main": "packages/better-nx-tsc/src/index.ts",
+        "tsConfig": "packages/better-nx-tsc/tsconfig.lib.json",
+        "assets": [
+          {
+            "input": "./packages/better-nx-tsc/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/better-nx-tsc/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/better-nx-tsc",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./packages/better-nx-tsc",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/better-nx-tsc/**/*.ts",
+          "packages/better-nx-tsc/generators.json",
+          "packages/better-nx-tsc/executors.json",
+          "packages/better-nx-tsc/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/better-nx-tsc/jest.config.ts",
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    }
+  },
+  "tags": []
+}

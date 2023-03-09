@@ -16,6 +16,13 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 * make small fixes ([3c87afc](https://github.com/TrialAndErrorOrg/parsers/commit/3c87afc5afd38971bba9157b41eb6ee83f7482c2))
 
+## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/jast-types-0.1.0...jast-types-0.1.1) (2023-03-09)
+
+
+### Bug Fixes
+
+* make small fixes ([3c87afc](https://github.com/TrialAndErrorOrg/parsers/commit/3c87afc5afd38971bba9157b41eb6ee83f7482c2))
+
 ## 0.1.0 (2023-03-09)
 
 

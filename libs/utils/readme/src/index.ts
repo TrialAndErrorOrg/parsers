@@ -1,1 +1,1 @@
-export * from './executors/update-readme/executor'
+export * from './executors/update-readme/executor.js'

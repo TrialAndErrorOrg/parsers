@@ -1,5 +1,5 @@
 {
-  "name": "@jote/utils/readme",
+  "name": "utils-readme",
   "version": "0.0.1",
   "main": "src/index.js",
   "generators": "./generators.json",

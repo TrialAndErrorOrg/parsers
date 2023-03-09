@@ -1,5 +1,5 @@
 import { UpdateReadmeExecutorSchema } from './schema'
-import { ExecutorContext, readProjectConfiguration, workspaceRoot } from '@nrwl/devkit'
+import { ExecutorContext, workspaceRoot } from '@nrwl/devkit'
 import { readmeAction } from './readmeAction'
 import path from 'path'
 import { exec } from 'child_process'
@@ -9,8 +9,8 @@ import { readFile } from 'fs/promises'
 const execa = promisify(exec)
 
 const getProjectRoot = (context: ExecutorContext) => {
-  if (!context.projectName) return context.cwd
-  const projectRoot = context.workspace.projects[context.projectName].root
+  if (!context.projectName || !context.workspace) return context.cwd
+  const projectRoot = context?.workspace.projects[context.projectName].root
   return projectRoot
 }
 

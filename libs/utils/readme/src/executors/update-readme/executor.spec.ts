@@ -1,5 +1,5 @@
-import { UpdateReadmeExecutorSchema } from './schema'
-import executor from './executor'
+import { UpdateReadmeExecutorSchema } from './schema.d'
+import executor from './executor.js'
 
 const options: UpdateReadmeExecutorSchema = {}
 

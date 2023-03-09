@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.3](https://github.com/TrialAndErrorOrg/parsers/compare/xast-util-is-element-0.1.2...xast-util-is-element-0.1.3) (2023-03-09)
+
 ## [0.1.2](https://github.com/TrialAndErrorOrg/parsers/compare/xast-util-is-element-0.1.1...xast-util-is-element-0.1.2) (2023-03-09)
 
 ## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/xast-util-is-element-0.1.0...xast-util-is-element-0.1.1) (2023-03-09)

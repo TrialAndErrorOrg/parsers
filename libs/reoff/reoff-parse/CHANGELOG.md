@@ -4,6 +4,8 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ## [0.2.2](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-parse-0.2.1...reoff-parse-0.2.2) (2023-03-09)
 
+## [0.2.2](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-parse-0.2.1...reoff-parse-0.2.2) (2023-03-09)
+
 ## [0.2.1](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-parse-0.2.0...reoff-parse-0.2.1) (2023-03-09)
 
 ### Dependency Updates

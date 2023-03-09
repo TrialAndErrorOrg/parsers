@@ -1,16 +1,13 @@
 import { dateSim } from 'csl-consolidate'
-import { CitationItem } from './types'
+import { CitationItem } from './types.js'
 import similarity from 'similarity'
 import { Data as CSL } from 'csl-json'
 
-export function findRef(
-  citeItem: CitationItem,
-  bibliography: CSL[]
-): CitationItem {
+export function findRef(citeItem: CitationItem, bibliography: CSL[]): CitationItem {
   // we'll take it if it has 90% match with the author and the year, except if there are multiple thiingies
   const cite = citeItem.itemData
   const gottemInOne = bibliography.find(
-    (bib) => bib.id && (bib.id === cite.id || bib.id === citeItem.id)
+    (bib) => bib.id && (bib.id === cite.id || bib.id === citeItem.id),
   )
   // console.dir(citeItem, { depth: null })
   // console.dir(gottemInOne, { depth: null })
@@ -30,10 +27,7 @@ export function findRef(
       cite.author.reduce((acc, curr, index) => {
         if (!csl?.author?.[index]) return acc
 
-        acc += similarity(
-          curr?.family || '',
-          csl?.author?.[index]?.family || 'aipugbbrwshotnat'
-        )
+        acc += similarity(curr?.family || '', csl?.author?.[index]?.family || 'aipugbbrwshotnat')
 
         return acc
       }, 0) / (cite?.author?.length || 100)

@@ -1,7 +1,4 @@
-import { Selector } from './types'
-import { Selectors } from './types'
-import { RuleSet } from './types'
-import { Rule } from './types'
+import { Selector, Selectors, RuleSet, Rule } from './types.js'
 
 import { CssSelectorParser } from 'css-selector-parser'
 import fauxEsmNthCheck from 'nth-check'
@@ -11,12 +8,7 @@ import { zwitch } from 'zwitch'
 
 const nthCheck = fauxEsmNthCheck
 
-const nth = new Set([
-  'nth-child',
-  'nth-last-child',
-  'nth-of-type',
-  'nth-last-of-type',
-])
+const nth = new Set(['nth-child', 'nth-last-child', 'nth-of-type', 'nth-last-of-type'])
 
 const parser = new CssSelectorParser()
 

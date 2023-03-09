@@ -1,8 +1,8 @@
 import { unified } from 'unified'
 import rejourParse, { Settings } from 'rejour-parse'
 import { astStringify } from 'ast-stringify'
-import rejourMoveAbstract from './rejour-move-abstract'
-import { rejourStringify } from 'rejour-stringify'
+import rejourMoveAbstract from './rejour-move-abstract.js'
+import rejourStringify from 'rejour-stringify'
 import { map } from 'unist-util-map'
 import { reporter } from 'vfile-reporter'
 

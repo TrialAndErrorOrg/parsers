@@ -1,6 +1,6 @@
-import * as Primitive from '../../xml-primitives'
+import * as Primitive from '../../xml-primitives.js'
 
-import { RequiredMap } from '../../ooxast'
+import { RequiredMap } from '../../ooxast.js'
 // Source files:
 // http://localhost:3000/shared-relationshipReference.xsd
 

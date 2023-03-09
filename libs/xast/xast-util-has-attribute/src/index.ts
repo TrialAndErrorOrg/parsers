@@ -1,1 +1,1 @@
-export * from './lib/xast-util-has-attribute'
+export * from './lib/xast-util-has-attribute.js'

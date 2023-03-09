@@ -1,3 +1,3 @@
-export * from './lib/ooxast'
-export * from './lib/ooxml/wordprocessingml/main'
-export * as Math from './lib/ooxml/officeDocument/math'
+export * from './lib/ooxast.js'
+export * from './lib/ooxml/wordprocessingml/main.js'
+export * as Math from './lib/ooxml/officeDocument/math.js'

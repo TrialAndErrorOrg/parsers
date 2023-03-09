@@ -1,11 +1,11 @@
-import * as Primitive from '../../xml-primitives'
-import * as a from './main'
-import * as dpct from './picture'
-import * as m from '../officeDocument/math'
-import * as r from '../officeDocument/relationships'
-import * as w from '../wordprocessingml/main'
+import * as Primitive from '../../xml-primitives.js'
+import * as a from './main.js'
+import * as dpct from './picture.js'
+import * as m from '../officeDocument/math.js'
+import * as r from '../officeDocument/relationships.js'
+import * as w from '../wordprocessingml/main.js'
 
-import { RequiredMap } from '../../ooxast'
+import { RequiredMap } from '../../ooxast.js'
 // Source files:
 // http://localhost:3000/dml-wordprocessingDrawing.xsd
 

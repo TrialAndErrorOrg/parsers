@@ -1,11 +1,11 @@
-import { Rule, XastNode, XastParent as Parent, SelectState } from './types'
+import { Rule, XastNode, XastParent as Parent, SelectState } from './types.js'
 
-import { attribute } from './attribute'
+import { attribute } from './attribute.js'
 //import {className} from './class-name.js'
-import { id } from './id'
-import { name } from './name'
-import { pseudo } from './pseudo'
-import { element } from './util'
+import { id } from './id.js'
+import { name } from './name.js'
+import { pseudo } from './pseudo.js'
+import { element } from './util.js'
 
 /**
  * @param {Rule} query
@@ -20,7 +20,7 @@ export function test(
   node: XastNode,
   index: number | null,
   parent: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): boolean {
   return Boolean(
     element(node) &&
@@ -29,6 +29,6 @@ export function test(
       //    (!query.classNames || className(query, node)) &&
       (!query.id || id(query, node)) &&
       (!query.attrs || attribute(query, node, state.schema)) &&
-      (!query.pseudos || pseudo(query, node, index, parent, state))
+      (!query.pseudos || pseudo(query, node, index, parent, state)),
   )
 }

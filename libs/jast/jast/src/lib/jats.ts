@@ -1,6 +1,6 @@
-import * as Primitive from './xml-primitives'
+import * as Primitive from './xml-primitives.js'
 import type { Literal as UnistLiteral, Node as UnistNode } from 'unist'
-import type { RequiredMap } from './rejour'
+import type { RequiredMap } from './rejour.js'
 import type { ValuesType } from 'utility-types'
 // Source files:
 // http://localhost:3001/jats.xsd
@@ -7749,10 +7749,7 @@ export interface ProcessingMetaChildrenMap {
   restrictedBy?: RestrictedBy[]
 }
 
-type ProcessingMetaTypeUnistNodeTagset =
-  | 'archiving'
-  | 'authoring'
-  | 'publishing'
+type ProcessingMetaTypeUnistNodeTagset = 'archiving' | 'authoring' | 'publishing'
 
 type ProcessingMetaTypeMathmlVersion = '2.0' | '3.0'
 
@@ -11081,11 +11078,7 @@ export interface SupplementaryMaterialChildrenMap {
 
 type SupplementaryMaterialTypeOrientation = 'landscape' | 'portrait'
 
-type SupplementaryMaterialTypePosition =
-  | 'anchor'
-  | 'background'
-  | 'float'
-  | 'margin'
+type SupplementaryMaterialTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
 export interface Supplement extends UnistNode {
   type: 'element'

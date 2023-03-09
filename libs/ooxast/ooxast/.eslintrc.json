@@ -4,7 +4,10 @@
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "rules": {}
+      "rules": {
+        "no-var": "warn",
+        "@typescript-eslint/no-empty-interface": "warn"
+      }
     },
     {
       "files": ["*.ts", "*.tsx"],

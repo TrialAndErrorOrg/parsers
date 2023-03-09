@@ -1,1 +1,1 @@
-export * from './lib/processors-docx-to-tex'
+export * from './lib/processors-docx-to-tex.js'

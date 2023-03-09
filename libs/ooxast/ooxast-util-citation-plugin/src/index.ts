@@ -1,1 +1,1 @@
-export * from './lib/ooxast-util-citation-plugin'
+export * from './lib/ooxast-util-citation-plugin.js'

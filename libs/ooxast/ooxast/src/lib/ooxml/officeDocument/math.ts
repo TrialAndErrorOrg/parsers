@@ -1,7 +1,7 @@
-import * as Primitive from '../../xml-primitives'
-import * as s from './sharedTypes'
-import * as w from '../wordprocessingml/main'
-import { RequiredMap } from '../../ooxast'
+import * as Primitive from '../../xml-primitives.js'
+import * as s from './sharedTypes.js'
+import * as w from '../wordprocessingml/main.js'
+import { RequiredMap } from '../../ooxast.js'
 
 // Source files:
 // http://localhost:3000/shared-math.xsd
@@ -406,7 +406,7 @@ export interface MathPrMap {
   intLim?: LimLoc
   intraSp?: TwipsMeasure
   lMargin?: TwipsMeasure
-  mathFont?: String
+  mathFont?: MString
   naryLim?: LimLoc
   postSp?: TwipsMeasure
   preSp?: TwipsMeasure
@@ -924,7 +924,7 @@ export interface SSupPrMap {
   ctrlPr?: CtrlPr
 }
 
-export interface String extends UnistNode {
+export interface MString extends UnistNode {
   type: 'element'
   name: 'm:string'
   attributes: {

@@ -6,14 +6,14 @@ import {
   XastNode as Node,
   XastParent as Parent,
   SelectState,
-} from './types'
+} from './types.js'
 
 import { html, svg } from 'property-information'
 import { zwitch } from 'zwitch'
-import { enterState } from './enter-state'
-import { nest } from './nest'
-import { pseudo } from './pseudo'
-import { test } from './test-node'
+import { enterState } from './enter-state.js'
+import { nest } from './nest.js'
+import { pseudo } from './pseudo.js'
+import { test } from './test-node.js'
 
 const type = zwitch('type', {
   /**
@@ -33,7 +33,7 @@ const type = zwitch('type', {
 export function any(
   query: Selectors | RuleSet | Rule,
   node: Node | undefined,
-  state: SelectState
+  state: SelectState,
 ): Array<Element> {
   return query && node ? type(query, node, state) : []
 }
@@ -44,11 +44,7 @@ export function any(
  * @param {SelectState} state
  * @returns {Array.<Element>}
  */
-function selectors(
-  query: Selectors,
-  node: Node,
-  state: SelectState
-): Array<Element> {
+function selectors(query: Selectors, node: Node, state: SelectState): Array<Element> {
   const collector = new Collector(state.one)
   let index = -1
 
@@ -65,11 +61,7 @@ function selectors(
  * @param {SelectState} state
  * @returns {Array.<Element>}
  */
-function ruleSet(
-  query: RuleSet,
-  node: Node,
-  state: SelectState
-): Array<Element> {
+function ruleSet(query: RuleSet, node: Node, state: SelectState): Array<Element> {
   return rule(query.rule, node, state)
 }
 
@@ -101,7 +93,7 @@ function rule(query: Rule, tree: Node, state: SelectState): Array<Element> {
       iterator,
       one: state.one,
       shallow: state.shallow,
-    })
+    }),
   )
 
   return collector.result
@@ -112,7 +104,7 @@ function rule(query: Rule, tree: Node, state: SelectState): Array<Element> {
     node: Node,
     index: number,
     parent: Parent | null,
-    state: SelectState
+    state: SelectState,
   ) {
     const exit = enterState(state, node)
 

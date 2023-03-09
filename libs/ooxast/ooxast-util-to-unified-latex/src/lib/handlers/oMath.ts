@@ -1,8 +1,7 @@
 import { s } from '@unified-latex/unified-latex-builder'
 import { Math } from 'ooxast'
-import { all } from '../all'
-import { H, Handle } from '../types'
-import { PB } from '../util/PB'
+import { all } from '../all.js'
+import { H, Handle } from '../types.js'
 
 export const oMath: Handle = (h: H, node: Math.OMath) => {
   h.inMath = true

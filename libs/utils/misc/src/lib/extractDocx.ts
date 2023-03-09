@@ -1,13 +1,13 @@
 import { Stream } from 'stream'
 import { promisify } from 'util'
 import { ZipFile } from 'yauzl'
-import openZipFromBuffer from './openZipFromBuffer'
-import { tryCatchPromise } from './tryCatchPromise'
-import { tryCatchVoid } from './tryCatchVoid'
+import openZipFromBuffer from './openZipFromBuffer.js'
+import { tryCatchPromise } from './tryCatchPromise.js'
+import { tryCatchVoid } from './tryCatchVoid.js'
 
 export async function extractDocx(docx: Buffer, stream?: Stream): Promise<any> {
   const [zipfile, zipfileError] = await tryCatchPromise(
-    openZipFromBuffer(docx, { lazyEntries: true })
+    openZipFromBuffer(docx, { lazyEntries: true }),
   )
   // console.log(zipfile)
   if (zipfileError) {

@@ -1,14 +1,13 @@
-import { Citation, CitationItem, Mendeley, MendeleyCitation } from './types'
+import { Citation, CitationItem, Mendeley, MendeleyCitation } from './types.js'
 import { Data as CSL } from 'csl-json'
-import { findRef } from './findRefInBib'
+import { findRef } from './findRefInBib.js'
 
 export function constructMendeleyCitation(
   curr: Citation,
   index: number,
-  bibliography?: CSL[]
+  bibliography?: CSL[],
 ): MendeleyCitation {
-  const schema =
-    'https://github.com/citation-style-language/schema/raw/master/csl-citation.json'
+  const schema = 'https://github.com/citation-style-language/schema/raw/master/csl-citation.json'
 
   const mendeley: Mendeley = {
     formattedCitation: curr.originalText || '',

@@ -1,21 +1,9 @@
-import {
-  Color,
-  FldChar,
-  Highlight,
-  R,
-  RPr,
-  Shd,
-  VerticalAlignRun,
-} from 'ooxast'
+import { Color, FldChar, Highlight, R, RPr, Shd, VerticalAlignRun } from 'ooxast'
 import { select } from 'xast-util-select'
-import { all } from '../all'
+import { all } from '../all.js'
 import { x } from 'xastscript'
-import { H, UnifiedLatexNode } from '../types'
-import {
-  Group,
-  Macro,
-  String as UnifiedLatexString,
-} from '@unified-latex/unified-latex-types'
+import { H, UnifiedLatexNode } from '../types.js'
+import { Group, Macro, String as UnifiedLatexString } from '@unified-latex/unified-latex-types'
 import { convertElement } from 'xast-util-is-element'
 import { m, s } from '@unified-latex/unified-latex-builder'
 
@@ -38,10 +26,7 @@ export function r(h: H, node: R) {
     return
   }
 
-  const dontProc = select(
-    'w\\:footnoteReference, w\\:endnoteReference, w\\:drawing',
-    node
-  )
+  const dontProc = select('w\\:footnoteReference, w\\:endnoteReference, w\\:drawing', node)
 
   if (dontProc) {
     const content = all(h, node)

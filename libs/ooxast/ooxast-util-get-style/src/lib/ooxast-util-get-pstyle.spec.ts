@@ -1,5 +1,5 @@
 import { P, PPr, R } from 'ooxast'
-import { getPStyle } from './ooxast-util-get-pstyle'
+import { getPStyle } from './ooxast-util-get-pstyle.js'
 
 export const test: any = {
   type: 'element',

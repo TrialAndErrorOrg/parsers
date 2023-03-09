@@ -24,7 +24,7 @@ import { graphic } from './graphic'
 import { extLink } from './extLink'
 import { p } from './p'
 import { dispQuote } from './disp-quote'
-export * from './italic'
+export * from './italic.js'
 
 export const handlers = {
   root,

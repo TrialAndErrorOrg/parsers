@@ -1,9 +1,8 @@
-import { H, Handle, UnifiedLatexNode } from '../types'
+import { H, Handle, UnifiedLatexNode } from '../types.js'
 import { Row, Tc } from 'ooxast'
-import { all } from '../all'
-import { PB } from '../util/PB'
+import { PB } from '../util/PB.js'
 import { select } from 'xast-util-select'
-import { tc } from './tc'
+import { tc } from './tc.js'
 import { m, s, SP } from '@unified-latex/unified-latex-builder'
 
 export const tr: Handle = (h: H, tr: Row, parent) => {

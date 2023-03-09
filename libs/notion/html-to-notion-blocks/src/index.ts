@@ -1,1 +1,1 @@
-export * from './lib/html-to-notion-blocks'
+export * from './lib/html-to-notion-blocks.js'

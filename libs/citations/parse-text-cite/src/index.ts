@@ -1,1 +1,1 @@
-export * from './lib/parse-text-cite'
+export * from './lib/parse-text-cite.js'

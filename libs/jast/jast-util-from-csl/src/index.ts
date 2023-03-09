@@ -1,1 +1,1 @@
-export * from './lib/csl-to-jast'
+export * from './lib/csl-to-jast.js'

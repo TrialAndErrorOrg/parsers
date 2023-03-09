@@ -1,1 +1,1 @@
-export * from './lib/rejour-move-abstract'
+export * from './lib/rejour-move-abstract.js'

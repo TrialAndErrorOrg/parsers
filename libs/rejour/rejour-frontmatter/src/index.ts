@@ -1,1 +1,1 @@
-export * from './lib/rejour-frontmatter'
+export * from './lib/rejour-frontmatter.js'

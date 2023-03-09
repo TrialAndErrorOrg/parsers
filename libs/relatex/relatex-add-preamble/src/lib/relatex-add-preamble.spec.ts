@@ -1,4 +1,4 @@
-import { relatexAddPreamble } from './relatex-add-preamble'
+import { relatexAddPreamble } from './relatex-add-preamble.js'
 
 describe('relatexRelatexAddPreamble', () => {
   it('should work', () => {

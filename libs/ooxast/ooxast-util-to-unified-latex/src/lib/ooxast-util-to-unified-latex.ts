@@ -1,6 +1,7 @@
-import { one } from './one'
-import { handlers } from './handlers/index'
+import { one } from './one.js'
+import { handlers } from './handlers/index.js'
 import { Data as CSL } from 'csl-json'
+// import { Parsed } from 'reoff-parse'
 
 import {
   Context,
@@ -14,17 +15,20 @@ import {
   Element,
   Text,
   RenderInfo,
-} from './types'
+} from './types.js'
 import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
+
 import { args, env, m, s } from '@unified-latex/unified-latex-builder'
-import { PB } from './util/PB'
-import { makePackage } from './util/make-package'
+
+import { PB } from './util/PB.js'
+
+import { makePackage } from './util/make-package.js'
 import { cslToBiblatex } from 'csl-to-biblatex'
 import { VFile } from 'vfile'
 import { notes } from './util/notes.js'
 
-export { one } from './one'
-export { all } from './all'
+export { one } from './one.js'
+export { all } from './all.js'
 export { handlers as defaultHandlers }
 
 const defaultOptions: Options = {
@@ -32,6 +36,7 @@ const defaultOptions: Options = {
   quotes: ['"'],
   topSection: 1,
   columnSeparator: false,
+
   documentClass: { name: 'article' },
   bibname: 'References',
   packages: [
@@ -44,15 +49,23 @@ const defaultOptions: Options = {
   ],
 }
 
+declare module 'vfile' {
+  interface DataMap {
+    parsed: {
+      [key: `${string}.xml` | `${string}.rels`]: Root
+    }
+  }
+}
+
 export function toUnifiedLatex(
   tree: Root | Element | Text,
   file: VFile,
-  options: Options,
+  options?: Options,
 ): UnifiedLatexRoot
-export function toUnifiedLatex(tree: Root | Element | Text, options: Options): UnifiedLatexRoot
+export function toUnifiedLatex(tree: Root | Element | Text, options?: Options): UnifiedLatexRoot
 export function toUnifiedLatex(
   tree: Root | Element | Text,
-  optionsOrVFile: Options | VFile,
+  optionsOrVFile?: Options | VFile,
   maybeOptions?: Options,
 ): UnifiedLatexRoot {
   const options = {
@@ -154,11 +167,13 @@ export function toUnifiedLatex(
 
   h.simpleParagraph = true
   if (unparsedFootnotes) {
+    //@ts-expect-error shhh
     whiteSpaceTransformer!(unparsedFootnotes)
     h.footnotes = notes(h, unparsedFootnotes)
   }
 
   if (unparsedEndnotes) {
+    //@ts-expect-error shhh
     whiteSpaceTransformer!(unparsedEndnotes)
     h.endnotes = notes(h, unparsedEndnotes)
   }

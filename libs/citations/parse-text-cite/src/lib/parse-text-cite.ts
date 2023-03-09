@@ -1,5 +1,5 @@
 import nearley from 'nearley'
-import grammar from './apa'
+import grammar from './apa.js'
 import { Data as CSL } from 'csl-json'
 
 export interface Citation {
@@ -36,10 +36,7 @@ export const parseTextCite = (string: string, options?: Options) => {
 
   const splitCites = string
     .split(')')
-    .map(
-      (c: string, idx, arr) =>
-        `${c}${arr.length > 1 && idx === arr.length - 1 ? '' : ')'}`
-    )
+    .map((c: string, idx, arr) => `${c}${arr.length > 1 && idx === arr.length - 1 ? '' : ')'}`)
 
   try {
     parser.feed(string)
@@ -84,10 +81,7 @@ function recoverOriginalCitation(cite: (string | Citation)[], ogText: string) {
   const originalCites = narrowString
     .split(')')
     .filter((c) => c)
-    .map(
-      (c: string, idx, arr) =>
-        `${c}${arr.length > 1 && idx === arr.length - 1 ? '' : ')'}`
-    )
+    .map((c: string, idx, arr) => `${c}${arr.length > 1 && idx === arr.length - 1 ? '' : ')'}`)
 
   let stupidCounterYouShouldKnowBetter = 0
 

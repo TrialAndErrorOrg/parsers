@@ -7,7 +7,6 @@ import {
   Node as UnifiedLatexNode,
   MacroInfo,
   EnvInfo,
-  Macro,
 } from '@unified-latex/unified-latex-types'
 
 import { Attributes as OoxastProperties, Parent, Body, Text, Root, P } from 'ooxast'
@@ -18,7 +17,6 @@ export type XastContent = Root['children'][number] | Root
  * ooxast Node
  */
 export type Node = Parent['children'][number] | Root
-type t = Extract<Node, { name: 'td' }>
 
 export type Attributes = OoxastProperties
 

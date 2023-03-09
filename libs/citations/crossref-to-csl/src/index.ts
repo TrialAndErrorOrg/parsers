@@ -1,1 +1,1 @@
-export * from './lib/crossref-to-csl'
+export * from './lib/crossref-to-csl.js'

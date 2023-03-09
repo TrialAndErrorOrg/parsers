@@ -1,4 +1,4 @@
-import { reoffClean } from './reoff-clean'
+import { reoffClean } from './reoff-clean.js'
 
 describe('reoffReoffClean', () => {
   it('should work', () => {

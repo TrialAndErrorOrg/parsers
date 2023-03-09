@@ -1,12 +1,7 @@
 import { toTexast, Options } from 'jast-util-to-texast'
 import { Root as JastRoot } from 'jast-types'
 import { Root as TexastRoot } from 'texast'
-import {
-  Plugin,
-  Processor as UnifiedProcessor,
-  TransformCallback,
-  Transformer,
-} from 'unified'
+import { Plugin, Processor as UnifiedProcessor, TransformCallback, Transformer } from 'unified'
 import { VFile } from 'vfile'
 type Processor = UnifiedProcessor<any, any, any, any>
 
@@ -15,10 +10,7 @@ type Processor = UnifiedProcessor<any, any, any, any>
  * Runs the destination with the new mdast tree.
  *
  */
-function bridge(
-  destination: Processor,
-  options?: Options
-): void | Transformer<JastRoot, JastRoot> {
+function bridge(destination: Processor, options?: Options): void | Transformer<JastRoot, JastRoot> {
   return (node, file, next) => {
     //@ts-expect-error there should be a better way to cast this
     destination.run(toTexast(node, options), file, (error) => {
@@ -32,7 +24,7 @@ function bridge(
  * Further transformers run on the texast tree.
  */
 function mutate(
-  options: void | Options | undefined = {}
+  options: void | Options | undefined = {},
 ): ReturnType<Plugin<[Options?] | void[], JastRoot, TexastRoot>> {
   //Transformer<JastRoot, JastRoot> | void {
   return (node) => {
@@ -44,11 +36,11 @@ function mutate(
 }
 
 /**
- * Plugin to bridge or mutate to rehype.
+ * Plugin to bridge or mutate to relatex
  *
- * If a destination is given, runs the destination with the new mdast
+ * If a destination is given, runs the destination with the new jast
  * tree (bridge-mode).
- * Without destination, returns the mdast tree: further plugins run on that
+ * Without destination, returns the jast tree: further plugins run on that
  * tree (mutate-mode).
  *
  * @param destination
@@ -56,10 +48,7 @@ function mutate(
  * @param options
  *   Options passed to `jast-util-to-texast`.
  */
-const rejourRelatex = function (
-  destination?: Processor | Options,
-  options?: Options
-) {
+const rejourRelatex = function (destination?: Processor | Options, options?: Options) {
   let settings: Options | undefined
   let processor: Processor | undefined
 
@@ -75,7 +64,6 @@ const rejourRelatex = function (
   }
 
   return processor ? bridge(processor, settings) : mutate(settings)
-} as Plugin<[Processor, Options?], JastRoot> &
-  Plugin<[Options?] | void[], JastRoot, TexastRoot>
+} as Plugin<[Processor, Options?], JastRoot> & Plugin<[Options?] | void[], JastRoot, TexastRoot>
 
 export default rejourRelatex

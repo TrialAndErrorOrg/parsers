@@ -1,2 +1,2 @@
-export * from './lib/ooxast-util-get-pstyle'
-export * from './lib/ooxast-util-get-rstyle'
+export * from './lib/ooxast-util-get-pstyle.js'
+export * from './lib/ooxast-util-get-rstyle.js'

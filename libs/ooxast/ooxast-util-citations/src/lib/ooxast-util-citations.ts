@@ -9,11 +9,11 @@ import { toString } from 'xast-util-to-string'
 import { select as unistSelect } from 'unist-util-select'
 import { x } from 'xastscript'
 import { Data as CSL } from 'csl-json'
-import { CiteOutput, Citation, MendeleyCitation, ZoteroCitation } from './types'
+import { CiteOutput, Citation, MendeleyCitation, ZoteroCitation } from './types.js'
 import { detectCitePlugin } from 'ooxast-util-citation-plugin'
 import { VFile } from 'vfile'
-import { constructMendeleyCitation } from './constructMendeleyCitation'
-import { constructZoteroCitation } from './constructZoteroCitation'
+import { constructMendeleyCitation } from './constructMendeleyCitation.js'
+import { constructZoteroCitation } from './constructZoteroCitation.js'
 
 const isInstrT = convertElement<T>('w:instrText')
 const isP = convertElement<P>('w:p')

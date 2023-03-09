@@ -1,10 +1,5 @@
 {
   "name": "misc",
-  "version": "0.0.1",
-  "dependencies": {
-    "@types/yauzl": "^2.9.2",
-    "yauzl": "^2.10.0"
-  },
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
@@ -22,19 +17,5 @@
     "readmeFile": "./README.md",
     "displayName": "misc",
     "tsconfig": "./tsconfig.lib.json"
-  },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ]
+  }
 }

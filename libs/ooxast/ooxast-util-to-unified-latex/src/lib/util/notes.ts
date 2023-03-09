@@ -1,6 +1,6 @@
 import { Endnotes, Footnotes, FtnEdn } from 'ooxast'
-import { all } from '../all'
-import { H, UnifiedLatexNode } from '../types'
+import { all } from '../all.js'
+import { H, UnifiedLatexNode } from '../types.js'
 import { selectAll } from 'xast-util-select'
 import { Root } from 'xast'
 

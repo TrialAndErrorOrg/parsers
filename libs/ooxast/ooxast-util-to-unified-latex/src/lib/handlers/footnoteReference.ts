@@ -1,4 +1,4 @@
-import { H, Element } from '../types'
+import { H, Element } from '../types.js'
 import { arg, m } from '@unified-latex/unified-latex-builder'
 
 export function footnoteReference(h: H, node: Element) {

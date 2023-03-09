@@ -1,6 +1,6 @@
 import { Node } from 'ooxast'
 import { consolidate } from 'csl-consolidate'
-import { bibToCSLBrowser } from './bib-to-csl-browser'
+import { bibToCSLBrowser } from './bib-to-csl-browser.js'
 export interface Options {
   apiUrl: string
   apiParams?: { param: string }

@@ -1,11 +1,11 @@
 import { Macro } from '@unified-latex/unified-latex-types'
 import { P } from 'ooxast'
 import { SP, m, s, arg, env } from '@unified-latex/unified-latex-builder'
-import { all } from '../all'
-import { H, Handle } from '../types'
-import { getPStyle } from '../util/get-pstyle'
+import { all } from '../all.js'
+import { H, Handle } from '../types.js'
+import { getPStyle } from '../util/get-pstyle.js'
 import { updateRenderInfo } from '@unified-latex/unified-latex-util-render-info'
-import { PB } from '../util/PB'
+import { PB } from '../util/PB.js'
 import { toString } from 'xast-util-to-string'
 
 const headingList = [

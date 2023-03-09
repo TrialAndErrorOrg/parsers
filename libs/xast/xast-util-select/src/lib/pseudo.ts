@@ -9,7 +9,7 @@ import {
   SelectState,
   Element,
   ElementChild,
-} from './types'
+} from './types.js'
 
 import { extendedFilter } from 'bcp-47-match'
 import { parse as commas } from 'comma-separated-tokens'
@@ -17,7 +17,7 @@ import { hasAttribute } from 'xast-util-has-attribute'
 import { isElement } from 'xast-util-is-element'
 import { whitespace } from 'hast-util-whitespace'
 import { zwitch } from 'zwitch'
-import { any } from './any'
+import { any } from './any.js'
 
 const handle = zwitch('name', {
   //// @ts-expect-error: hush.
@@ -81,7 +81,7 @@ export function pseudo(
   element: Element,
   index: number | null,
   parent: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): boolean {
   const pseudos = query.pseudos
   let offset = -1
@@ -106,7 +106,7 @@ function matches(
   element: Element,
   _1: number | null,
   _2: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): boolean {
   const shallow = state.shallow
   const one = state.one
@@ -135,7 +135,7 @@ function not(
   element: Element,
   index: number | null,
   parent: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): boolean {
   return !matches(query, element, index, parent, state)
 }
@@ -146,9 +146,7 @@ function not(
  * @returns {boolean}
  */
 function anyLink(_: RulePseudo, element: Element): boolean {
-  return (
-    isElement(element, ['a', 'area', 'link']) && hasAttribute(element, 'href')
-  )
+  return isElement(element, ['a', 'area', 'link']) && hasAttribute(element, 'href')
 }
 
 /**
@@ -160,9 +158,8 @@ function checked(_: RulePseudo, element: Element): boolean {
   if (isElement(element, ['input', 'menuitem'])) {
     return Boolean(
       element.attributes &&
-        (element.attributes.type === 'checkbox' ||
-          element.attributes.type === 'radio') &&
-        hasAttribute(element, 'checked')
+        (element.attributes.type === 'checkbox' || element.attributes.type === 'radio') &&
+        hasAttribute(element, 'checked'),
     )
   }
 
@@ -186,7 +183,7 @@ function dir(
   _1: Element,
   _2: number | null,
   _3: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): boolean {
   return state.direction === query.value
 }
@@ -226,10 +223,7 @@ function enabled(query: RulePseudo, element: Element): boolean {
  * @returns {boolean}
  */
 function required(_: RulePseudo, element: Element): boolean {
-  return (
-    isElement(element, ['input', 'textarea', 'select']) &&
-    hasAttribute(element, 'required')
-  )
+  return isElement(element, ['input', 'textarea', 'select']) && hasAttribute(element, 'required')
 }
 
 /**
@@ -254,7 +248,7 @@ function readWrite(
   element: Element,
   _1: number | null,
   _2: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): boolean {
   return isElement(element, ['input', 'textarea'])
     ? !hasAttribute(element, 'readOnly') && !hasAttribute(element, 'disabled')
@@ -274,7 +268,7 @@ function readOnly(
   element: Element,
   index: number | null,
   parent: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): boolean {
   return !readWrite(query, element, index, parent, state)
 }
@@ -292,13 +286,13 @@ function root(
   element: Element,
   _1: number | null,
   parent: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): boolean {
   return Boolean(
     (!parent || parent.type === 'root') &&
       state.schema &&
       (state.schema.space === 'html' || state.schema.space === 'svg') &&
-      isElement(element, ['html', 'svg'])
+      isElement(element, ['html', 'svg']),
   )
 }
 
@@ -315,13 +309,9 @@ function scope(
   element: Element,
   _1: number | null,
   _2: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): boolean {
-  return Boolean(
-    isElement(element) &&
-      state.scopeElements &&
-      state.scopeElements.includes(element)
-  )
+  return Boolean(isElement(element) && state.scopeElements && state.scopeElements.includes(element))
 }
 
 /**
@@ -354,9 +344,7 @@ function blank(_: RulePseudo, element: Element): boolean {
    * @returns {boolean}
    */
   function check(child: ElementChild): boolean {
-    return (
-      child.type === 'element' || (child.type === 'text' && !whitespace(child))
-    )
+    return child.type === 'element' || (child.type === 'text' && !whitespace(child))
   }
 }
 
@@ -373,7 +361,7 @@ function firstChild(
   _1: Element,
   _2: number | null,
   _3: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): boolean {
   assertDeep(state, query)
   return state.elementIndex === 0
@@ -392,7 +380,7 @@ function lang(
   _1: Element,
   _2: number | null,
   _3: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): boolean {
   return (
     state.language !== '' &&
@@ -416,12 +404,10 @@ function lastChild(
   _1: Element,
   _2: number | null,
   _3: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): boolean {
   assertDeep(state, query)
-  return Boolean(
-    state.elementCount && state.elementIndex === state.elementCount - 1
-  )
+  return Boolean(state.elementCount && state.elementIndex === state.elementCount - 1)
 }
 
 /**
@@ -437,7 +423,7 @@ function onlyChild(
   _1: Element,
   _2: number | null,
   _3: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): boolean {
   assertDeep(state, query)
   return state.elementCount === 1
@@ -456,12 +442,10 @@ function nthChild(
   _1: Element,
   _2: number | null,
   _3: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): boolean {
   assertDeep(state, query)
-  return (
-    typeof state.elementIndex === 'number' && query.value(state.elementIndex)
-  )
+  return typeof state.elementIndex === 'number' && query.value(state.elementIndex)
 }
 
 /**
@@ -477,13 +461,13 @@ function nthLastChild(
   _1: Element,
   _2: number | null,
   _3: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): boolean {
   assertDeep(state, query)
   return Boolean(
     typeof state.elementCount === 'number' &&
       typeof state.elementIndex === 'number' &&
-      query.value(state.elementCount - state.elementIndex - 1)
+      query.value(state.elementCount - state.elementIndex - 1),
   )
 }
 
@@ -500,7 +484,7 @@ function nthOfType(
   _1: Element,
   _2: number | null,
   _3: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): boolean {
   assertDeep(state, query)
   return typeof state.typeIndex === 'number' && query.value(state.typeIndex)
@@ -519,7 +503,7 @@ function nthLastOfType(
   _1: Element,
   _2: number | null,
   _3: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): boolean {
   assertDeep(state, query)
   return (
@@ -542,7 +526,7 @@ function firstOfType(
   _1: Element,
   _2: number | null,
   _3: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): boolean {
   assertDeep(state, query)
   return state.typeIndex === 0
@@ -561,7 +545,7 @@ function lastOfType(
   _1: Element,
   _2: number | null,
   _3: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): boolean {
   assertDeep(state, query)
   return (
@@ -584,7 +568,7 @@ function onlyOfType(
   _1: Element,
   _2: number | null,
   _3: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): boolean {
   assertDeep(state, query)
   return state.typeCount === 1
@@ -595,10 +579,7 @@ function onlyOfType(
  * @param {(child: ElementChild) => boolean} check
  * @returns {boolean}
  */
-function someChildren(
-  element: Element,
-  check: (child: ElementChild) => boolean
-): boolean {
+function someChildren(element: Element, check: (child: ElementChild) => boolean): boolean {
   const children = element.children
   let index = -1
 
@@ -649,7 +630,7 @@ function has(
   element: Element,
   _2: number | null,
   _3: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): boolean {
   const shallow = state.shallow
   const one = state.one
@@ -683,11 +664,7 @@ function appendScope(value: Selector): Selectors {
     const rule = selector.selectors[index].rule
     rule.nestingOperator = null
 
-    if (
-      !rule.pseudos ||
-      rule.pseudos.length !== 1 ||
-      rule.pseudos[0].name !== 'scope'
-    ) {
+    if (!rule.pseudos || rule.pseudos.length !== 1 || rule.pseudos[0].name !== 'scope') {
       selector.selectors[index] = {
         type: 'ruleSet',
         // @ts-expect-error pseudos are fine w/ just a name!

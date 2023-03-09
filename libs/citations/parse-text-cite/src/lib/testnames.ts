@@ -1,4 +1,4 @@
-import { TestData } from './parse-text-cite.spec'
+import { TestData } from './parse-text-cite.spec.js'
 
 export const names: TestData = {
   'Boring names': {

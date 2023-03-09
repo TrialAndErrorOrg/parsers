@@ -1,1 +1,1 @@
-export { default, Settings } from './lib/reoff-parse.js'
+export { default, Settings, Parsed, RootWithSource } from './lib/reoff-parse.js'

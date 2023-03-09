@@ -1,1 +1,1 @@
-export * from './lib/apa-parser'
+export * from './lib/apa-parser.js'

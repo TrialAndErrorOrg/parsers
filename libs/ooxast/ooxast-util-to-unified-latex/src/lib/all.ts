@@ -1,8 +1,8 @@
-import { one } from './one'
-import { H, UnifiedLatexNode, Node, Parent, Handle } from './types'
+import { one } from './one.js'
+import { H, UnifiedLatexNode, Node, Parent } from './types.js'
 
 /**
- * Convert all nodes in tree using j
+ * Convert all nodes in tree using h
  * @param h ooxast constructor function
  * @param parent
  * @returns

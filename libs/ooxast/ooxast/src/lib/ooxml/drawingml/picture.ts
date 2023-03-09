@@ -1,5 +1,5 @@
-import * as a from './main'
-import { RequiredMap } from '../../ooxast'
+import * as a from './main.js'
+import { RequiredMap } from '../../ooxast.js'
 
 // Source files:
 // http://localhost:3000/dml-picture.xsd

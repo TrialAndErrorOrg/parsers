@@ -2,21 +2,13 @@ import { docxToVFile } from 'docx-to-vfile'
 import reoffParse from 'reoff-parse'
 import { readFile } from 'fs/promises'
 import { unified } from 'unified'
-import {
-  callAnystyleApi,
-  callAnystyleCLI,
-  findBib,
-  bibToCSL,
-  parseBib,
-} from './ooxast-util-parse-bib'
-import { toString } from 'xast-util-to-string'
-import { writeFileSync } from 'fs'
+import { parseBib } from './ooxast-util-parse-bib.js'
+import { findBib } from './find-bib.js'
+import { bibToCSL } from './bib-to-csl-node.js'
 
 async function getTree() {
   // If in node, get the correct docx uintarray like so
-  const docxBuff = await readFile(
-    new URL('/../fixtures/index.docx', import.meta.url)
-  )
+  const docxBuff = await readFile(new URL('/../fixtures/index.docx', import.meta.url))
   const docxArr = new Uint8Array(docxBuff)
 
   // if in the browser, find some way

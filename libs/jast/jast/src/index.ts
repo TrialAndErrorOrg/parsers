@@ -1,2 +1,2 @@
-export * from './lib/rejour'
-export * from './lib/jats'
+export * from './lib/rejour.js'
+export * from './lib/jats.js'

@@ -1,8 +1,8 @@
 import { m } from '@unified-latex/unified-latex-builder'
 import { Tc } from 'ooxast'
 import { select } from 'xast-util-select'
-import { all } from '../all'
-import { H, Handle, UnifiedLatexNode } from '../types'
+import { all } from '../all.js'
+import { H, Handle, UnifiedLatexNode } from '../types.js'
 
 export const tc: Handle = (h: H, node: Tc): UnifiedLatexNode[] => {
   const gridSpan = select('w\\:gridSpan', node)?.attributes?.['w:val']

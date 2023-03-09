@@ -33,8 +33,6 @@
   "files": [
     "index.d.ts",
     "index.js",
-    "/libindex.js",
-    "./index.d.ts",
     "./lib"
   ]
 }

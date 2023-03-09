@@ -1,4 +1,4 @@
-import reoffCite from './reoff-cite'
+import reoffCite from './reoff-cite.js'
 
 describe('reoffReoffCite', () => {
   it('should work', () => {

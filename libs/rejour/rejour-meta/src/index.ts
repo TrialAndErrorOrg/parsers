@@ -1,1 +1,1 @@
-export * from './lib/rejour-meta'
+export * from './lib/rejour-meta.js'

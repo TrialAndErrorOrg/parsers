@@ -1,2 +1,2 @@
-export * from './lib/rejour-parse'
-export { default } from './lib/rejour-parse'
+export * from './lib/rejour-parse.js'
+export { default } from './lib/rejour-parse.js'

@@ -1,2 +1,2 @@
-export * from './lib/jast-util-to-texast'
-export * from './lib/types'
+export * from './lib/jast-util-to-texast.js'
+export * from './lib/types.js'

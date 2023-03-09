@@ -6,11 +6,11 @@ import {
   SelectState,
   SelectIterator,
   Handler,
-} from './types'
+} from './types.js'
 
 import { zwitch } from 'zwitch'
-import { enterState } from './enter-state'
-import { parent, element } from './util'
+import { enterState } from './enter-state.js'
+import { parent, element } from './util.js'
 
 const own = {}.hasOwnProperty
 
@@ -33,7 +33,7 @@ export function nest(
   node: Node,
   index: number | null,
   parent: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): void {
   handle(query, node, index, parent, state)
 }
@@ -53,7 +53,7 @@ function topScan(
   node: Node,
   index: number | null,
   parent: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): void {
   // Shouldn’t happen.
   /* c8 ignore next 3 */
@@ -77,7 +77,7 @@ function descendant(
   node: Node,
   index: number | null,
   parent: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): void {
   const previous = state.iterator
 
@@ -90,7 +90,7 @@ function descendant(
     node: Node,
     index: number,
     parent: Parent | null,
-    state: SelectState
+    state: SelectState,
   ): void {
     // Shouldn’t happen.
     /* c8 ignore next 3 */
@@ -114,7 +114,7 @@ function child(
   node: Node,
   _1: number | null,
   _2: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): void {
   if (!parent(node)) return
   if (node.children.length === 0) return
@@ -127,7 +127,7 @@ function adjacentSibling(
   _: Node,
   index: number | null,
   parent: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): void {
   // Shouldn’t happen.
   /* c8 ignore next */
@@ -141,7 +141,7 @@ function generalSibling(
   _: Node,
   index: number | null,
   parent: Parent | null,
-  state: SelectState
+  state: SelectState,
 ): void {
   // Shouldn’t happen.
   /* c8 ignore next */
@@ -163,7 +163,7 @@ function indexedSearch(
   parent: Parent,
   state: SelectState,
   from = 0,
-  firstElementOnly = false
+  firstElementOnly = false,
 ) {
   const handle = state.index ? delay : add
   const children = parent.children
@@ -219,9 +219,7 @@ function indexedSearch(
    */
   function delay(node: Element, childIndex: number) {
     const elementsBefore = elements
-    const elementsByTypeBefore = own.call(types, node.name)
-      ? types[node.name]
-      : 0
+    const elementsByTypeBefore = own.call(types, node.name) ? types[node.name] : 0
 
     count(node.name)
 

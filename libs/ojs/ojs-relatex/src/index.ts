@@ -1,1 +1,1 @@
-export * from './lib/ojs-relatex'
+export * from './lib/ojs-relatex.js'

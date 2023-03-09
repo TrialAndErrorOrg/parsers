@@ -16,7 +16,7 @@ export type {
   XastLiteral as Literal,
   XastAttributes as Attributes,
 }
-import { document, Text } from './ooxml/wordprocessingml/main'
+import { document, Text } from './ooxml/wordprocessingml/main.js'
 
 export type Root = XastRoot & {
   /**

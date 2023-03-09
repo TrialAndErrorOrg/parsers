@@ -3,10 +3,8 @@ import { SelectState, XastNode, ElementChild, Direction } from './types.js'
 
 import { direction } from 'direction'
 import { isElement } from 'xast-util-is-element'
-import { toString } from 'xast-util-to-string'
-import { svg } from 'property-information'
 import { visit, EXIT, SKIP } from 'unist-util-visit'
-import { element } from './util'
+import { element } from './util.js'
 import { Parent } from 'xast'
 
 /**
@@ -102,15 +100,12 @@ export function enterState(state: SelectState, node: XastNode): () => void {
   // manually writing this out due to bug with unist-util-visit
   type Action = boolean | 'skip'
   type Index = number
-  type ActionTuple = [
-    Action | null | undefined | void,
-    Index | null | undefined
-  ]
+  type ActionTuple = [Action | null | undefined | void, Index | null | undefined]
   /** @type {Visitor} */
   function inferDirectionality(
     child: ElementChild,
     index: number | null,
-    parent: Parent | null
+    parent: Parent | null,
   ): null | undefined | Index | Action | ActionTuple | void | [] {
     if (child.type === 'text') {
       dirInferred = dirBidi(child.value)
@@ -119,8 +114,7 @@ export function enterState(state: SelectState, node: XastNode): () => void {
 
     if (
       child !== node &&
-      (isElement(child, ['bdi', 'script', 'style', 'textare']) ||
-        dirAttribute(child))
+      (isElement(child, ['bdi', 'script', 'style', 'textare']) || dirAttribute(child))
     ) {
       return SKIP
     }
@@ -146,9 +140,7 @@ function dirAttribute(node: ElementChild): Direction | undefined {
       ? node.attributes.dir.toLowerCase()
       : undefined
 
-  return value === 'auto' || value === 'ltr' || value === 'rtl'
-    ? value
-    : undefined
+  return value === 'auto' || value === 'ltr' || value === 'rtl' ? value : undefined
 }
 
 function noop() {

@@ -1,1 +1,1 @@
-export * from './lib/csl-to-biblatex'
+export * from './lib/csl-to-biblatex.js'

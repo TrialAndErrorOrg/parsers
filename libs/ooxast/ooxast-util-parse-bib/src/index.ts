@@ -1,1 +1,1 @@
-export * from './lib/ooxast-util-parse-bib'
+export * from './lib/ooxast-util-parse-bib.js'

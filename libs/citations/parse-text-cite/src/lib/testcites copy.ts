@@ -1,4 +1,4 @@
-import type { TestData } from './parse-text-cite.spec'
+import type { TestData } from './parse-text-cite.spec.js'
 export const tests: TestData = {
   'APA-8-6': {
     description: `which use a semi-colon`,

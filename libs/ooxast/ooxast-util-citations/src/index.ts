@@ -1,2 +1,2 @@
-export * from './lib/ooxast-util-citations'
-export * from './lib/types'
+export * from './lib/ooxast-util-citations.js'
+export * from './lib/types.js'

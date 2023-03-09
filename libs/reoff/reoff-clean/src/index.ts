@@ -1,1 +1,1 @@
-export * from './lib/reoff-clean'
+export * from './lib/reoff-clean.js'

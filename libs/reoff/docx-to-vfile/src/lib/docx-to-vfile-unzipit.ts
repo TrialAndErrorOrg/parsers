@@ -97,6 +97,7 @@ export async function docxToVFile(file: ArrayBuffer, userOptions: Options = {}):
   const { entries } = await unzip(file)
   const rels = await entries['word/_rels/document.xml.rels'].text()
   const relations = Object.fromEntries(
+    // eslint-disable-next-line regexp/no-super-linear-backtracking
     [...rels.matchAll(/Id="(.*?)".*?Target="(.*?)"/g)].map((match) => [match[1], match[2]]),
   )
 

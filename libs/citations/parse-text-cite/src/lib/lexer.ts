@@ -1,6 +1,7 @@
 import moo from 'moo'
 console.log(moo)
 export const lexer = moo.compile({
+  // eslint-disable-next-line
   __: /[ \t ]+/u,
   //_: /[ \t]*/u,
   Year: /(?:\b\d{4}(?=[a-z]|\b)|n\.d\.?)/u,

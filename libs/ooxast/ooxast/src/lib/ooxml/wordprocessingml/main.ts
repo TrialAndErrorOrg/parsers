@@ -1,10 +1,10 @@
-import * as m from '../officeDocument/math'
-import * as r from '../officeDocument/relationships'
-import * as s from '../officeDocument/sharedTypes'
-import * as sl from '../schemaLibrary/main'
-import * as wp from '../drawingml/wordprocessingDrawing'
+import * as m from '../officeDocument/math.js'
+import * as r from '../officeDocument/relationships.js'
+import * as s from '../officeDocument/sharedTypes.js'
+import * as sl from '../schemaLibrary/main.js'
+import * as wp from '../drawingml/wordprocessingDrawing.js'
 import { Literal as UnistLiteral, Node as UnistNode } from 'unist'
-import { RequiredMap } from '../../ooxast'
+import { RequiredMap } from '../../ooxast.js'
 
 // Source files:
 // http://localhost:3000/wml.xsd
@@ -185,16 +185,15 @@ export type Bookmark<tag extends string = 'bookmark'> = BookmarkRange & {
   children: []
 }
 
-export type BookmarkRange<tag extends string = 'bookmarkRange'> =
-  MarkupRange & {
-    type: 'element'
-    name: `w:${tag}`
-    attributes: {
-      'w:colFirst'?: string
-      'w:colLast'?: string
-    }
-    children: []
+export type BookmarkRange<tag extends string = 'bookmarkRange'> = MarkupRange & {
+  type: 'element'
+  name: `w:${tag}`
+  attributes: {
+    'w:colFirst'?: string
+    'w:colLast'?: string
   }
+  children: []
+}
 
 export interface Border extends UnistNode {
   type: 'element'
@@ -1502,8 +1501,7 @@ export interface Highlight extends UnistNode {
   children: []
 }
 
-export interface HpsMeasure<tag extends string = 'hpsMeasure'>
-  extends UnistNode {
+export interface HpsMeasure<tag extends string = 'hpsMeasure'> extends UnistNode {
   type: 'element'
   name: `w:${tag}`
   attributes: {
@@ -1812,8 +1810,7 @@ export interface Markup<tag extends string = 'markup'> extends UnistNode {
   children: any[]
 }
 
-export interface MarkupRange<tag extends string = 'markupRange'>
-  extends Markup<tag> {
+export interface MarkupRange<tag extends string = 'markupRange'> extends Markup<tag> {
   name: `w:${tag}`
   attributes: {
     'w:id': string
@@ -2794,8 +2791,7 @@ export interface RubyPrMap {
   rubyAlign: RubyAlign
 }
 
-export interface RunTrackChange<tag extends string = 'runTrackChange'>
-  extends TrackChange<tag> {
+export interface RunTrackChange<tag extends string = 'runTrackChange'> extends TrackChange<tag> {
   type: 'element'
   name: `w:${tag}`
   attributes: {
@@ -4094,8 +4090,7 @@ export type TopPageBorder = PageBorder & {
   }
 }
 
-export interface TrackChange<tag extends string = 'trackChange'>
-  extends Markup<tag> {
+export interface TrackChange<tag extends string = 'trackChange'> extends Markup<tag> {
   type: 'element'
   name: `w:${tag}`
   attributes: {
@@ -4575,12 +4570,7 @@ export type DocPartTypeVal =
   | 'formFld'
   | 'bbPlcHdr'
 
-export type DocProtectVal =
-  | 'none'
-  | 'readOnly'
-  | 'comments'
-  | 'trackedChanges'
-  | 'forms'
+export type DocProtectVal = 'none' | 'readOnly' | 'comments' | 'trackedChanges' | 'forms'
 
 export type DocTypeVal = string
 
@@ -4617,23 +4607,13 @@ export type FFTextTypeVal =
 
 export type FldCharTypeVal = 'begin' | 'separate' | 'end'
 
-export type FontFamilyVal =
-  | 'decorative'
-  | 'modern'
-  | 'roman'
-  | 'script'
-  | 'swiss'
-  | 'auto'
+export type FontFamilyVal = 'decorative' | 'modern' | 'roman' | 'script' | 'swiss' | 'auto'
 
 export type FrameLayoutVal = 'rows' | 'cols' | 'none'
 
 export type FrameScrollbarVal = 'on' | 'off' | 'auto'
 
-export type FtnEdnVal =
-  | 'normal'
-  | 'separator'
-  | 'continuationSeparator'
-  | 'continuationNotice'
+export type FtnEdnVal = 'normal' | 'separator' | 'continuationSeparator' | 'continuationNotice'
 
 export type FtnPosVal = 'pageBottom' | 'beneathText' | 'sectEnd' | 'docEnd'
 
@@ -4692,11 +4672,7 @@ export type LineNumberRestartVal = 'newPage' | 'newSection' | 'continuous'
 
 export type LineSpacingRuleVal = 'auto' | 'exact' | 'atLeast'
 
-export type LockVal =
-  | 'sdtLocked'
-  | 'contentLocked'
-  | 'unlocked'
-  | 'sdtContentLocked'
+export type LockVal = 'sdtLocked' | 'contentLocked' | 'unlocked' | 'sdtContentLocked'
 
 export type LongHexNumberVal = string
 
@@ -4731,10 +4707,7 @@ export type MeasurementOrPercentVal = string
 
 export type MergeVal = 'continue' | 'restart'
 
-export type MultiLevelTypeVal =
-  | 'singleLevel'
-  | 'multilevel'
-  | 'hybridMultilevel'
+export type MultiLevelTypeVal = 'singleLevel' | 'multilevel' | 'hybridMultilevel'
 
 export type NumberFormatVal =
   | 'decimal'
@@ -4825,12 +4798,7 @@ export type ProofErrVal = 'spellStart' | 'spellEnd' | 'gramStart' | 'gramEnd'
 
 export type PTabAlignmentVal = 'left' | 'center' | 'right'
 
-export type PTabLeaderVal =
-  | 'none'
-  | 'dot'
-  | 'hyphen'
-  | 'underscore'
-  | 'middleDot'
+export type PTabLeaderVal = 'none' | 'dot' | 'hyphen' | 'underscore' | 'middleDot'
 
 export type PTabRelativeToVal = 'margin' | 'indent'
 
@@ -4846,12 +4814,7 @@ export type RubyAlignVal =
 
 export type SdtDateMappingTypeVal = 'text' | 'date' | 'dateTime'
 
-export type SectionMarkVal =
-  | 'nextPage'
-  | 'nextColumn'
-  | 'continuous'
-  | 'evenPage'
-  | 'oddPage'
+export type SectionMarkVal = 'nextPage' | 'nextColumn' | 'continuous' | 'evenPage' | 'oddPage'
 
 export type ShdVal =
   | 'nil'
@@ -4899,32 +4862,13 @@ export type SignedHpsMeasureVal = string
 
 export type SignedTwipsMeasureVal = string
 
-export type StyleSortVal =
-  | 'name'
-  | 'priority'
-  | 'default'
-  | 'font'
-  | 'basedOn'
-  | 'type'
+export type StyleSortVal = 'name' | 'priority' | 'default' | 'font' | 'basedOn' | 'type'
 
 export type StyleTypeVal = 'paragraph' | 'character' | 'table' | 'numbering'
 
-export type TabJcVal =
-  | 'clear'
-  | 'start'
-  | 'center'
-  | 'end'
-  | 'decimal'
-  | 'bar'
-  | 'num'
+export type TabJcVal = 'clear' | 'start' | 'center' | 'end' | 'decimal' | 'bar' | 'num'
 
-export type TabTlcVal =
-  | 'none'
-  | 'dot'
-  | 'hyphen'
-  | 'underscore'
-  | 'heavy'
-  | 'middleDot'
+export type TabTlcVal = 'none' | 'dot' | 'hyphen' | 'underscore' | 'heavy' | 'middleDot'
 
 export type TargetScreenSzVal =
   | '544x376'
@@ -5039,13 +4983,7 @@ export type VAnchorVal = 'text' | 'margin' | 'page'
 
 export type VerticalJcVal = 'top' | 'center' | 'both' | 'bottom'
 
-export type ViewVal =
-  | 'none'
-  | 'print'
-  | 'outline'
-  | 'masterPages'
-  | 'normal'
-  | 'web'
+export type ViewVal = 'none' | 'print' | 'outline' | 'masterPages' | 'normal' | 'web'
 
 export type WmlColorSchemeIndexVal =
   | 'dark1'
@@ -5061,13 +4999,7 @@ export type WmlColorSchemeIndexVal =
   | 'hyperlink'
   | 'followedHyperlink'
 
-export type WrapVal =
-  | 'auto'
-  | 'notBeside'
-  | 'around'
-  | 'tight'
-  | 'through'
-  | 'none'
+export type WrapVal = 'auto' | 'notBeside' | 'around' | 'tight' | 'through' | 'none'
 
 export type ZoomVal = 'none' | 'fullPage' | 'bestFit' | 'textFit'
 

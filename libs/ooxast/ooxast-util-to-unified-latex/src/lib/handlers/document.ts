@@ -1,8 +1,7 @@
-import { all } from '../all'
-import { H, Handle } from '../types'
+import { all } from '../all.js'
+import { H, Handle } from '../types.js'
 import { Body, Document, Endnotes, Footnotes } from 'ooxast'
 import { select } from 'xast-util-select'
-import { notes } from '../util/notes'
 import { convertElement } from 'xast-util-is-element'
 
 const isFootnotes = convertElement<Footnotes>('w:footnotes')

@@ -1,1 +1,1 @@
-export { default } from './lib/reoff-cite'
+export { default } from './lib/reoff-cite.js'

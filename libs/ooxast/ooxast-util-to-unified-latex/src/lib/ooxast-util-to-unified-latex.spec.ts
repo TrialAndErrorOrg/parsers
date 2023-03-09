@@ -1,11 +1,11 @@
 import { Document, P, Root } from 'ooxast'
 import { Macro } from '@unified-latex/unified-latex-types'
-import { p } from './handlers/p'
-import { toUnifiedLatex } from './ooxast-util-to-unified-latex'
+import { p } from './handlers/p.js'
+import { toUnifiedLatex } from './ooxast-util-to-unified-latex.js'
 import { toString } from '@unified-latex/unified-latex-util-to-string'
 import { m } from '@unified-latex/unified-latex-builder'
 import { updateRenderInfo } from '@unified-latex/unified-latex-util-render-info'
-import { PB } from './util/PB'
+import { PB } from './util/PB.js'
 import listTree from '../lib/test/list.json'
 
 // test whether a ooxast p node with style 'Heading1' is converted to a macro with name 'section'
@@ -67,9 +67,7 @@ describe('ooxast-util-to-unified-latex', () => {
 
     const res = { type: 'root', content: [PB, sec, PB] }
 
-    expect(toString(toUnifiedLatex(ooxastParagraph))).toEqual(
-      `\n\n\\section{Hello World}\n\n`
-    )
+    expect(toString(toUnifiedLatex(ooxastParagraph))).toEqual(`\n\n\\section{Hello World}\n\n`)
     expect(toUnifiedLatex(ooxastParagraph)).toEqual(res)
   })
 

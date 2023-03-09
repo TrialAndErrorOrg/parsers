@@ -1,6 +1,6 @@
-import { tests } from './testcites'
-import { names } from './testnames'
-import { parseTextCite } from './parse-text-cite'
+import { tests } from './testcites.js'
+import { names } from './testnames.js'
+import { parseTextCite } from './parse-text-cite.js'
 import nearley, { Parser } from 'nearley'
 
 const MODE: 'dev' | 'test' = 'test'
@@ -11,7 +11,7 @@ const MODE: 'dev' | 'test' = 'test'
 type ContentArr = [
   description: string,
   input: string,
-  result: string | boolean | Record<string, any>
+  result: string | boolean | Record<string, any>,
 ]
 
 type Table = [apa: string, desc: string, content: ContentArr[]][]
@@ -28,13 +28,7 @@ type Content = {
 
 const tableReducer = (testdata: TestData) =>
   Object.entries(testdata).reduce(
-    (
-      acc: Table,
-      [apa, val]: [
-        apa: string,
-        val: { description: string; content: Content[] }
-      ]
-    ) => {
+    (acc: Table, [apa, val]: [apa: string, val: { description: string; content: Content[] }]) => {
       const { description, content } = val
 
       const contarr: ContentArr[] = content.map((c: Content) => {
@@ -47,22 +41,18 @@ const tableReducer = (testdata: TestData) =>
       acc.push(tableEntry)
       return acc
     },
-    []
+    [],
   )
 
 const citeTable = tableReducer(tests)
 const nameTable = tableReducer(names)
 
-//@ts-ignore
+//@ts-expect-error shhh
 if (MODE === 'dev') {
   describe.each(nameTable)('%s: %s', (apa, desc, content) => {
     it.each(content)(
       '%s %s',
-      (
-        desc: string,
-        inp: string,
-        res: boolean | string | Record<string, any>
-      ) => {
+      (desc: string, inp: string, res: boolean | string | Record<string, any>) => {
         const parser =
           // eslint-disable-next-line
           // @ts-ignore
@@ -81,28 +71,25 @@ if (MODE === 'dev') {
         } catch (e) {
           expect(res).toBeFalsy()
         }
-      }
+      },
     )
   })
 }
 
-describe.each(citeTable)(
-  '%s: %s',
-  (apa: string, desc: string, content: ContentArr[]) => {
-    it.each(content)('%s %s', (desc, inp, res) => {
-      const parser =
-        // eslint-disable-next-line
-        // @ts-ignore
-        MODE === 'dev'
-          ? // eslint-disable-next-line
-            // @ts-ignore
-            new nearley.Parser(nearley.Grammar.fromCompiled(grammar))
-          : null
-      parser && parser.feed(inp)
-      const results = parser ? parser.results : parseTextCite(inp)
-      // console.dir(results, { depth: null })
-      const expectancy = Array.isArray(res) ? res : [res]
-      expect(results).toEqual(expectancy)
-    })
-  }
-)
+describe.each(citeTable)('%s: %s', (apa: string, desc: string, content: ContentArr[]) => {
+  it.each(content)('%s %s', (desc, inp, res) => {
+    const parser =
+      // eslint-disable-next-line
+      // @ts-ignore
+      MODE === 'dev'
+        ? // eslint-disable-next-line
+          // @ts-ignore
+          new nearley.Parser(nearley.Grammar.fromCompiled(grammar))
+        : null
+    parser && parser.feed(inp)
+    const results = parser ? parser.results : parseTextCite(inp)
+    // console.dir(results, { depth: null })
+    const expectancy = Array.isArray(res) ? res : [res]
+    expect(results).toEqual(expectancy)
+  })
+})

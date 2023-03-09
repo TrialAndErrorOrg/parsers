@@ -1,6 +1,4 @@
-import { Node } from './types.js'
-import { Element } from './types.js'
-import { Parent } from './types.js'
+import { Node, Element, Parent } from './types.js'
 import { AssertPredicate } from 'xast-util-is-element'
 export type IsElement = AssertPredicate<Element>
 

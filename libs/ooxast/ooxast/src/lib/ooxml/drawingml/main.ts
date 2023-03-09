@@ -1,7 +1,7 @@
-import * as Primitive from '../../xml-primitives'
-import * as r from '../officeDocument/relationships'
-import * as s from '../officeDocument/sharedTypes'
-import { RequiredMap } from '../../ooxast'
+import * as Primitive from '../../xml-primitives.js'
+import * as r from '../officeDocument/relationships.js'
+import * as s from '../officeDocument/sharedTypes.js'
+import { RequiredMap } from '../../ooxast.js'
 
 // Source files:
 // http://localhost:3000/dml-main.xsd
@@ -3316,11 +3316,7 @@ export type AnimationBuildTypeVal = 'allAtOnce'
 
 export type AnimationChartBuildTypeVal = string
 
-export type AnimationChartOnlyBuildTypeVal =
-  | 'series'
-  | 'category'
-  | 'seriesEl'
-  | 'categoryEl'
+export type AnimationChartOnlyBuildTypeVal = 'series' | 'category' | 'seriesEl' | 'categoryEl'
 
 export type AnimationDgmBuildTypeVal = string
 
@@ -3355,12 +3351,7 @@ export type BlackWhiteModeVal =
 
 export type BlendModeVal = 'over' | 'mult' | 'screen' | 'darken' | 'lighten'
 
-export type BlipCompressionVal =
-  | 'email'
-  | 'screen'
-  | 'print'
-  | 'hqprint'
-  | 'none'
+export type BlipCompressionVal = 'email' | 'screen' | 'print' | 'hqprint' | 'none'
 
 export type ChartBuildStepVal =
   | 'category'
@@ -3412,15 +3403,7 @@ export type GeomGuideFormulaVal = string
 
 export type GeomGuideNameVal = string
 
-export type LightRigDirectionVal =
-  | 'tl'
-  | 't'
-  | 'tr'
-  | 'l'
-  | 'r'
-  | 'bl'
-  | 'b'
-  | 'br'
+export type LightRigDirectionVal = 'tl' | 't' | 'tr' | 'l' | 'r' | 'bl' | 'b' | 'br'
 
 export type LightRigTypeVal =
   | 'legacyFlat1'
@@ -3455,13 +3438,7 @@ export type LineCapVal = 'rnd' | 'sq' | 'flat'
 
 export type LineEndLengthVal = 'sm' | 'med' | 'lg'
 
-export type LineEndTypeVal =
-  | 'none'
-  | 'triangle'
-  | 'stealth'
-  | 'diamond'
-  | 'oval'
-  | 'arrow'
+export type LineEndTypeVal = 'none' | 'triangle' | 'stealth' | 'diamond' | 'oval' | 'arrow'
 
 export type LineEndWidthVal = 'sm' | 'med' | 'lg'
 
@@ -3469,13 +3446,7 @@ export type LineWidthVal = number
 
 export type OnOffStyleTypeVal = 'on' | 'off' | 'def'
 
-export type PathFillModeVal =
-  | 'none'
-  | 'norm'
-  | 'lighten'
-  | 'lightenLess'
-  | 'darken'
-  | 'darkenLess'
+export type PathFillModeVal = 'none' | 'norm' | 'lighten' | 'lightenLess' | 'darken' | 'darkenLess'
 
 export type PathShadeTypeVal = 'shape' | 'circle' | 'rect'
 
@@ -3877,16 +3848,7 @@ export type PresetShadowValVal =
   | 'shdw19'
   | 'shdw20'
 
-export type RectAlignmentVal =
-  | 'tl'
-  | 't'
-  | 'tr'
-  | 'l'
-  | 'ctr'
-  | 'r'
-  | 'bl'
-  | 'b'
-  | 'br'
+export type RectAlignmentVal = 'tl' | 't' | 'tr' | 'l' | 'ctr' | 'r' | 'bl' | 'b' | 'br'
 
 export type SchemeColorValVal =
   | 'bg1'
@@ -4132,14 +4094,7 @@ export type SystemColorValVal =
   | 'menuHighlight'
   | 'menuBar'
 
-export type TextAlignTypeVal =
-  | 'l'
-  | 'ctr'
-  | 'r'
-  | 'just'
-  | 'justLow'
-  | 'dist'
-  | 'thaiDist'
+export type TextAlignTypeVal = 'l' | 'ctr' | 'r' | 'just' | 'justLow' | 'dist' | 'thaiDist'
 
 export type TextAnchoringTypeVal = 't' | 'ctr' | 'b' | 'just' | 'dist'
 

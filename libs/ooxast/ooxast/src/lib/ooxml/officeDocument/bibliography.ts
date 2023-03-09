@@ -1,6 +1,6 @@
-import * as s from './sharedTypes'
-import { Text } from '../wordprocessingml/main'
-import { RequiredMap } from '../../ooxast'
+import * as s from './sharedTypes.js'
+import { Text } from '../wordprocessingml/main.js'
+import { RequiredMap } from '../../ooxast.js'
 import { Node as UnistNode } from 'unist'
 
 // Source files:
@@ -43,8 +43,7 @@ export interface NameListMap {
   Person: Person[]
 }
 
-export interface NameOrCorporate<name extends string = 'NameOrCorporate'>
-  extends UnistNode {
+export interface NameOrCorporate<name extends string = 'NameOrCorporate'> extends UnistNode {
   type: 'element'
   name: `b:${name}`
   attributes: Record<string, never>

@@ -1,10 +1,8 @@
-import { Node } from 'unist'
-import { detectCitePlugin } from './ooxast-util-citation-plugin'
+import { detectCitePlugin } from './ooxast-util-citation-plugin.js'
 import fs from 'fs'
 import { docxToVFile } from 'docx-to-vfile'
 import reoffParse from 'reoff-parse'
 import { unified } from 'unified'
-import path from 'path'
 
 const fromDocx = async (file: string) => {
   const arr = new Uint8Array(await fs.promises.readFile(file))
@@ -18,7 +16,7 @@ const fromDocx = async (file: string) => {
 const testfile = (type: string) =>
   new URL(
     `../../../../processors/docx-to-tex/src/test/fixtures/${type}/index.docx`,
-    import.meta.url
+    import.meta.url,
   ).pathname
 
 describe('ooxast-util-citation-plugin', () => {

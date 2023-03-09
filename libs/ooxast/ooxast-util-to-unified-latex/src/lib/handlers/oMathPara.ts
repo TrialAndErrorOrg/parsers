@@ -1,7 +1,7 @@
 import { env, s } from '@unified-latex/unified-latex-builder'
-import { all } from '../all'
-import { H, Handle, Node, Parent } from '../types'
-import { PB } from '../util/PB'
+import { all } from '../all.js'
+import { H, Handle, Node, Parent } from '../types.js'
+import { PB } from '../util/PB.js'
 
 export const oMathPara: Handle = (h: H, node: Node, parent?: Parent) => {
   h.inDisplayMath = true

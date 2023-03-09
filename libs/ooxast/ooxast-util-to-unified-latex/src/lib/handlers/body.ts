@@ -1,25 +1,17 @@
 // based on https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/em
 
-import { H, Body, Handle, P, UnifiedLatexNode } from '../types'
-import { all } from '../all'
-import { getPStyle } from '../util/get-pstyle'
-import { getListInfo } from '../util/get-listinfo'
-import { one } from '../one'
+import { H, Body, Handle, P, UnifiedLatexNode } from '../types.js'
+import { all } from '../all.js'
+import { getPStyle } from '../util/get-pstyle.js'
+import { getListInfo } from '../util/get-listinfo.js'
+import { one } from '../one.js'
 import { Element } from 'xast-util-to-string/lib'
-import {
-  Argument,
-  Environment,
-  Macro,
-  Verb,
-  Whitespace,
-} from '@unified-latex/unified-latex-types'
-import { WhiteSpace } from 'nlcst'
-import { arg, m, SP } from '@unified-latex/unified-latex-builder'
-import { PB } from '../util/PB'
+import { Environment, Macro } from '@unified-latex/unified-latex-types'
+import { m, SP } from '@unified-latex/unified-latex-builder'
+import { PB } from '../util/PB.js'
 import { updateRenderInfo } from '@unified-latex/unified-latex-util-render-info'
 
-const isP = (node: Element): node is P =>
-  node.type === 'element' && node.name === 'w:p'
+const isP = (node: Element): node is P => node.type === 'element' && node.name === 'w:p'
 
 export const body: Handle = (h: H, body: Body) => {
   const processedBody = body.children.reduce((acc, child, index) => {
@@ -46,11 +38,9 @@ export const body: Handle = (h: H, body: Body) => {
 
     const prevChild = body.children[index - 1]
 
-    const isPrevListItem =
-      prevChild && isP(prevChild) && getPStyle(prevChild) === 'ListParagraph'
+    const isPrevListItem = prevChild && isP(prevChild) && getPStyle(prevChild) === 'ListParagraph'
 
-    const { ilvl: prevIlvl, numId: prevNumId } =
-      (isPrevListItem && getListInfo(prevChild)) || {}
+    const { ilvl: prevIlvl, numId: prevNumId } = (isPrevListItem && getListInfo(prevChild)) || {}
 
     const listItem = makeItem(h, child)
 
@@ -107,8 +97,7 @@ export const body: Handle = (h: H, body: Body) => {
     if (isPrevListItem && ilvl < prevIlvl) {
       const mainEnv = acc[acc.length - 1] as Environment
       const embeddedEnvs = findEmbeddedEnvs(mainEnv)
-      const toBeEmbeddedEnv =
-        embeddedEnvs[embeddedEnvs.length - (prevIlvl - ilvl) - 1]
+      const toBeEmbeddedEnv = embeddedEnvs[embeddedEnvs.length - (prevIlvl - ilvl) - 1]
 
       const env: Environment = {
         type: 'environment',
@@ -159,10 +148,7 @@ export const body: Handle = (h: H, body: Body) => {
   return processedBody
 }
 
-function makeItem(
-  h: H,
-  item: P
-): [typeof PB, Macro, typeof SP, ...UnifiedLatexNode[], typeof PB] {
+function makeItem(h: H, item: P): [typeof PB, Macro, typeof SP, ...UnifiedLatexNode[], typeof PB] {
   const mIte = m('item')
   updateRenderInfo(mIte, {
     hangingIndent: true,

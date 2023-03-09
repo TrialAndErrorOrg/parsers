@@ -1,1 +1,1 @@
-export * from './lib/csl-consolidate'
+export * from './lib/csl-consolidate.js'

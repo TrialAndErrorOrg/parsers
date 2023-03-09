@@ -1,8 +1,11 @@
-import { H, Handle } from '../types'
+import { H, Handle } from '../types.js'
 import { T } from 'ooxast'
 import { Data as CSL } from 'csl-json'
+
 import { CitationItem, MendeleyCitationItem } from 'ooxast-util-citations'
+
 import { m } from '@unified-latex/unified-latex-builder'
+
 import { Parent } from 'unist'
 
 export const citation: Handle = (h: H, citation: T, parent?: Parent) => {

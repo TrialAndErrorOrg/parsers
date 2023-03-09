@@ -1,6 +1,6 @@
 import { Node } from 'ooxast'
 import { consolidate } from 'csl-consolidate'
-import { bibToCSL } from './bib-to-csl-node'
+import { bibToCSL } from './bib-to-csl-node.js'
 export interface Options {
   apiUrl?: string
   apiParams?: { param: string }

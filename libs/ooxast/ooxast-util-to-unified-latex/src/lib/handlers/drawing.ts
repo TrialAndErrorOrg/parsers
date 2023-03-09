@@ -1,8 +1,8 @@
-import { H, Handle } from '../types'
+import { H, Handle } from '../types.js'
 import { Drawing } from 'ooxast'
 import { select } from 'xast-util-select'
 import { env, m } from '@unified-latex/unified-latex-builder'
-import { PB } from '../util/PB'
+import { PB } from '../util/PB.js'
 
 export const drawing: Handle = (h: H, node: Drawing) => {
   const blip = select('a\\:blip', node)

@@ -1,1 +1,1 @@
-export * from './lib/processors-jote-docx-tex'
+export * from './lib/processors-jote-docx-tex.js'

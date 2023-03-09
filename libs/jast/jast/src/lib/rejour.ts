@@ -1,18 +1,16 @@
 import { Instruction, Doctype, Attributes as XastAttributes } from 'xast'
 import { Node as UnistNode, Parent as UnistParent } from 'unist'
-import { Text, Article, Content, Glossary, P, pMap } from './jats'
+import { Text, Article, Content, Glossary, P, pMap } from './jats.js'
 import { RequiredKeys, ValuesType } from 'utility-types'
-import { names } from './names'
+import { names } from './names.js'
 
 export type NoUndefined<T> = Exclude<T, undefined>
-export type ArrayValueMaybe<T> = T extends any[]
-  ? ValuesType<NoUndefined<T>>
-  : NoUndefined<T>
-export type AllTypes<T extends any[] | ArrayLike<any> | Record<any, any>> =
-  ArrayValueMaybe<ValuesType<T>>
+export type ArrayValueMaybe<T> = T extends any[] ? ValuesType<NoUndefined<T>> : NoUndefined<T>
+export type AllTypes<T extends any[] | ArrayLike<any> | Record<any, any>> = ArrayValueMaybe<
+  ValuesType<T>
+>
 
-export type RequiredMap<T extends any[] | ArrayLike<any> | Record<any, any>> =
-  AllTypes<T>
+export type RequiredMap<T extends any[] | ArrayLike<any> | Record<any, any>> = AllTypes<T>
 
 export interface Attributes {
   [name: string]: string | null | undefined | boolean | number
@@ -38,9 +36,7 @@ export function isElement(node: UnistNode): node is Element {
   return node.hasOwnProperty('name') && node.hasOwnProperty('attributes')
 }
 
-export function isParagraphContent(
-  node: UnistNode
-): node is P['children'][number] {
+export function isParagraphContent(node: UnistNode): node is P['children'][number] {
   return node.type === 'text' || (isElement(node) && node.name in pMap)
 }
 

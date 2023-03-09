@@ -254,10 +254,5 @@
     "syntax",
     "tree",
     "ast"
-  ],
-  "pnpm": {
-    "patchedDependencies": {
-      "nx@15.8.5": "patches/nx@15.8.5.patch"
-    }
-  }
+  ]
 }

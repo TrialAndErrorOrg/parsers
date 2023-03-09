@@ -3,6 +3,8 @@
 
 # ooxast-util-citation-plugin
 
+[![npm version](https://badge.fury.io/js/ooxast-util-citation-plugin.svg)](https://badge.fury.io/js/ooxast-util-citation-plugin) [![npm downloads](https://img.shields.io/npm/dm/ooxast-util-citation-plugin.svg)](https://www.npmjs.com/package/ooxast-util-citation-plugin)
+
 Small ooxast utility which scans the text to identify the citation plugin used, either Mendely, Zotero, EndNote, Citavi, native word citations or none at all. It is used to feed into other things.
 
 Not completely accurate, as it just identifies the first citation plugin it finds, but it's good enough for our purposes.
@@ -64,7 +66,7 @@ detectCitePlugin(node: Node<Data>): string;
 
 `string`
 
-Defined in:  [lib/ooxast-util-citation-plugin.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-citation-plugin/src/lib/ooxast-util-citation-plugin.ts#L8)
+Defined in:  [lib/ooxast-util-citation-plugin.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-citation-plugin/src/lib/ooxast-util-citation-plugin.ts#L8)
 
 ## Syntax tree
 

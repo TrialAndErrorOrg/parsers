@@ -3,6 +3,8 @@
 
 # ooxast-util-properties
 
+[![npm version](https://badge.fury.io/js/ooxast-util-properties.svg)](https://badge.fury.io/js/ooxast-util-properties) [![npm downloads](https://img.shields.io/npm/dm/ooxast-util-properties.svg)](https://www.npmjs.com/package/ooxast-util-properties)
+
 Return the properties of an `ooxast` node as a JSON object
 
 ## Contents
@@ -62,7 +64,7 @@ getPr(node: Element): PrObject;
 
 [`PrObject`](modules.md#probject)
 
-Defined in:  [lib/ooxast-util-properties.ts:35](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-properties/src/lib/ooxast-util-properties.ts#L35)
+Defined in:  [lib/ooxast-util-properties.ts:35](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-properties/src/lib/ooxast-util-properties.ts#L35)
 
 ***
 

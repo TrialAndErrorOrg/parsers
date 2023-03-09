@@ -3,6 +3,8 @@
 
 # reoff-clean
 
+[![npm version](https://badge.fury.io/js/reoff-clean.svg)](https://badge.fury.io/js/reoff-clean) [![npm downloads](https://img.shields.io/npm/dm/reoff-clean.svg)](https://www.npmjs.com/package/reoff-clean)
+
 Plugin for [reoff][reoff] to clean the ooxast tree.
 
 ## Contents
@@ -62,7 +64,7 @@ reoffClean(options: Options = ...): ReturnType<Plugin<[Options?] | void[], Root,
 
 `ReturnType`<`Plugin`<[`Options?`] | `void`[], `Root`, `Root`>>
 
-Defined in:  [lib/reoff-clean.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/reoff/reoff-clean/src/lib/reoff-clean.ts#L5)
+Defined in:  [lib/reoff-clean.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/reoff/reoff-clean/src/lib/reoff-clean.ts#L5)
 
 ## Syntax tree
 

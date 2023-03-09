@@ -34,7 +34,7 @@ rejourFrontmatter(): Function;
 
 `void`
 
-Defined in:  [lib/rejour-frontmatter.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/rejour/rejour-frontmatter/src/lib/rejour-frontmatter.ts#L8)
+Defined in:  [lib/rejour-frontmatter.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/rejour/rejour-frontmatter/src/lib/rejour-frontmatter.ts#L8)
 
 ## Install
 

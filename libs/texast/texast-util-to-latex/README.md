@@ -63,7 +63,7 @@ default(node: Node, options: Options = {}): string;
 
 `string`
 
-Defined in:  [lib/texast-util-to-latex.ts:41](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/texast-util-to-latex.ts#L41)
+Defined in:  [lib/texast-util-to-latex.ts:35](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/texast-util-to-latex.ts#L35)
 
 ***
 
@@ -86,7 +86,7 @@ toLatex(node: Node | Node[], options: Options = {}): string;
 
 `string`
 
-Defined in:  [lib/texast-util-to-latex.ts:34](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/texast-util-to-latex.ts#L34)
+Defined in:  [lib/texast-util-to-latex.ts:28](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/texast-util-to-latex.ts#L28)
 
 ***
 
@@ -98,61 +98,61 @@ Defined in:  [lib/texast-util-to-latex.ts:34](https://github.com/TrialAndErrorOr
 
 > `boolean`
 
-Defined in:  [lib/types.ts:30](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L30)
+Defined in:  [lib/types.ts:30](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L30)
 
 ##### `enter`
 
 > [`Enter`](modules.md#enter)
 
-Defined in:  [lib/types.ts:23](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L23)
+Defined in:  [lib/types.ts:23](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L23)
 
 ##### `handle`
 
 > [`Handle`](modules.md#handle)
 
-Defined in:  [lib/types.ts:27](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L27)
+Defined in:  [lib/types.ts:27](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L27)
 
 ##### `handlers`
 
 > [`Handlers`](modules.md#handlers)
 
-Defined in:  [lib/types.ts:28](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L28)
+Defined in:  [lib/types.ts:28](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L28)
 
 ##### `indexStack`
 
 > `number`[]
 
-Defined in:  [lib/types.ts:22](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L22)
+Defined in:  [lib/types.ts:22](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L22)
 
 ##### `join`
 
 > [`Join`](modules.md#join)[]
 
-Defined in:  [lib/types.ts:26](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L26)
+Defined in:  [lib/types.ts:26](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L26)
 
 ##### `math`
 
 > `boolean`
 
-Defined in:  [lib/types.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L29)
+Defined in:  [lib/types.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L29)
 
 ##### `options`
 
 > [`Options`](modules.md#options)
 
-Defined in:  [lib/types.ts:24](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L24)
+Defined in:  [lib/types.ts:24](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L24)
 
 ##### `stack`
 
 > `string`[]
 
-Defined in:  [lib/types.ts:21](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L21)
+Defined in:  [lib/types.ts:21](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L21)
 
 ##### `unsafe`
 
 > [`Unsafe`](modules.md#unsafe)[]
 
-Defined in:  [lib/types.ts:25](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L25)
+Defined in:  [lib/types.ts:25](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L25)
 
 ***
 
@@ -164,55 +164,55 @@ Defined in:  [lib/types.ts:25](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 > `"$$"` | `"[]"`
 
-Defined in:  [lib/types.ts:71](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L71)
+Defined in:  [lib/types.ts:71](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L71)
 
 ##### `emph?`
 
 > `"textit"` | `"emph"`
 
-Defined in:  [lib/types.ts:69](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L69)
+Defined in:  [lib/types.ts:69](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L69)
 
 ##### `extensions?`
 
 > [`Options`](modules.md#options)[]
 
-Defined in:  [lib/types.ts:73](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L73)
+Defined in:  [lib/types.ts:73](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L73)
 
 ##### `handlers?`
 
 > [`Handlers`](modules.md#handlers)
 
-Defined in:  [lib/types.ts:72](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L72)
+Defined in:  [lib/types.ts:72](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L72)
 
 ##### `inlineMathDelimiters?`
 
 > `"$"` | `"()"`
 
-Defined in:  [lib/types.ts:70](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L70)
+Defined in:  [lib/types.ts:70](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L70)
 
 ##### `join?`
 
 > [`Join`](modules.md#join)[]
 
-Defined in:  [lib/types.ts:74](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L74)
+Defined in:  [lib/types.ts:74](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L74)
 
 ##### `parbreak?`
 
 > `"par"` | `"newline"`
 
-Defined in:  [lib/types.ts:68](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L68)
+Defined in:  [lib/types.ts:68](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L68)
 
 ##### `unsafe?`
 
 > [`Unsafe`](modules.md#unsafe)[]
 
-Defined in:  [lib/types.ts:75](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L75)
+Defined in:  [lib/types.ts:75](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L75)
 
 ##### `wrapDocument?`
 
 > `boolean`
 
-Defined in:  [lib/types.ts:67](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L67)
+Defined in:  [lib/types.ts:67](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L67)
 
 ***
 
@@ -224,13 +224,13 @@ Defined in:  [lib/types.ts:67](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 > `string`
 
-Defined in:  [lib/types.ts:13](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L13)
+Defined in:  [lib/types.ts:13](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L13)
 
 ##### `before`
 
 > `string`
 
-Defined in:  [lib/types.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L12)
+Defined in:  [lib/types.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L12)
 
 ***
 
@@ -242,13 +242,13 @@ Defined in:  [lib/types.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 > `number`
 
-Defined in:  [lib/types.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L8)
+Defined in:  [lib/types.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L8)
 
 ##### `now`
 
 > `Point`
 
-Defined in:  [lib/types.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L7)
+Defined in:  [lib/types.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L7)
 
 ***
 
@@ -260,43 +260,43 @@ Defined in:  [lib/types.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/d
 
 > `RegExp`
 
-Defined in:  [lib/types.ts:64](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L64)
+Defined in:  [lib/types.ts:64](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L64)
 
 ##### `after?`
 
 > `string`
 
-Defined in:  [lib/types.ts:61](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L61)
+Defined in:  [lib/types.ts:61](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L61)
 
 ##### `atBreak?`
 
 > `boolean`
 
-Defined in:  [lib/types.ts:63](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L63)
+Defined in:  [lib/types.ts:63](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L63)
 
 ##### `before?`
 
 > `string`
 
-Defined in:  [lib/types.ts:62](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L62)
+Defined in:  [lib/types.ts:62](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L62)
 
 ##### `character`
 
 > `string`
 
-Defined in:  [lib/types.ts:58](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L58)
+Defined in:  [lib/types.ts:58](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L58)
 
 ##### `inConstruct?`
 
 > `string` | `string`[]
 
-Defined in:  [lib/types.ts:59](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L59)
+Defined in:  [lib/types.ts:59](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L59)
 
 ##### `notInConstruct?`
 
 > `string` | `string`[]
 
-Defined in:  [lib/types.ts:60](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L60)
+Defined in:  [lib/types.ts:60](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L60)
 
 ***
 
@@ -320,7 +320,7 @@ Defined in:  [lib/types.ts:60](https://github.com/TrialAndErrorOrg/parsers/blob/
 | `math` | `boolean` |
 | `options` | [`Options`](modules.md#options) |
 
-Defined in:  [lib/types.ts:33](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L33)
+Defined in:  [lib/types.ts:33](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L33)
 
 ***
 
@@ -347,7 +347,7 @@ Defined in:  [lib/types.ts:33](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 `string`
 
-Defined in:  [lib/types.ts:39](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L39)
+Defined in:  [lib/types.ts:39](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L39)
 
 ***
 
@@ -373,7 +373,7 @@ Defined in:  [lib/types.ts:39](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 [`Exit`](modules.md#exit)
 
-Defined in:  [lib/types.ts:18](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L18)
+Defined in:  [lib/types.ts:18](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L18)
 
 ***
 
@@ -393,7 +393,7 @@ Defined in:  [lib/types.ts:18](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 `void`
 
-Defined in:  [lib/types.ts:19](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L19)
+Defined in:  [lib/types.ts:19](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L19)
 
 ***
 
@@ -426,7 +426,7 @@ Defined in:  [lib/types.ts:19](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 `string`
 
-Defined in:  [lib/types.ts:41](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L41)
+Defined in:  [lib/types.ts:41](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L41)
 
 ***
 
@@ -434,7 +434,7 @@ Defined in:  [lib/types.ts:41](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 > `Record`<`string`, [`Handle`](modules.md#handle)>
 
-Defined in:  [lib/types.ts:48](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L48)
+Defined in:  [lib/types.ts:48](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L48)
 
 ***
 
@@ -467,7 +467,7 @@ Defined in:  [lib/types.ts:48](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 `boolean` | `null` | `void` | `number`
 
-Defined in:  [lib/types.ts:50](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L50)
+Defined in:  [lib/types.ts:50](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L50)
 
 ***
 
@@ -475,7 +475,7 @@ Defined in:  [lib/types.ts:50](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 > `Root` | `Content`
 
-Defined in:  [lib/types.ts:3](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L3)
+Defined in:  [lib/types.ts:3](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L3)
 
 ***
 
@@ -483,7 +483,7 @@ Defined in:  [lib/types.ts:3](https://github.com/TrialAndErrorOrg/parsers/blob/d
 
 > `Extract`<[`Node`](modules.md#node), `UnistParent`>
 
-Defined in:  [lib/types.ts:4](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L4)
+Defined in:  [lib/types.ts:4](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L4)
 
 ***
 
@@ -491,7 +491,7 @@ Defined in:  [lib/types.ts:4](https://github.com/TrialAndErrorOrg/parsers/blob/d
 
 > [`TrackFields`](modules.md#trackfields) | [`SafeFields`](modules.md#safefields)
 
-Defined in:  [lib/types.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast-util-to-latex/src/lib/types.ts#L16)
+Defined in:  [lib/types.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast-util-to-latex/src/lib/types.ts#L16)
 
 ## Syntax tree
 

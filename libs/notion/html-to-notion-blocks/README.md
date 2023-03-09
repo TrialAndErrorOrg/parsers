@@ -3,6 +3,8 @@
 
 # html-to-notion-blocks
 
+[![npm version](https://badge.fury.io/js/html-to-notion-blocks.svg)](https://badge.fury.io/js/html-to-notion-blocks) [![npm downloads](https://img.shields.io/npm/dm/html-to-notion-blocks.svg)](https://www.npmjs.com/package/html-to-notion-blocks)
+
 [![npm version](https://img.shields.io/npm/v/html-to-notion-blocks.svg)](https://www.npmjs.com/package/html-to-notion-blocks)
 [![npm downloads](https://img.shields.io/npm/dm/html-to-notion-blocks.svg)](https://www.npmjs.com/package/html-to-notion-blocks)
 
@@ -107,7 +109,7 @@ htmlToNotion(html: string, options?: Options): BlockObjectRequest[];
 
 `BlockObjectRequest`[]
 
-Defined in:  [lib/html-to-notion-blocks.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/notion/html-to-notion-blocks/src/lib/html-to-notion-blocks.ts#L5)
+Defined in:  [lib/html-to-notion-blocks.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/notion/html-to-notion-blocks/src/lib/html-to-notion-blocks.ts#L5)
 
 ## Security
 

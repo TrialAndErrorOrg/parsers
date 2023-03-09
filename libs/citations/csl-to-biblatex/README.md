@@ -3,6 +3,8 @@
 
 # csl-to-biblatex
 
+[![npm version](https://badge.fury.io/js/csl-to-biblatex.svg)](https://badge.fury.io/js/csl-to-biblatex) [![npm downloads](https://img.shields.io/npm/dm/csl-to-biblatex.svg)](https://www.npmjs.com/package/csl-to-biblatex)
+
 Somewhat jank CSL-JSON to biblatex converter
 
 ## Contents
@@ -62,7 +64,7 @@ cslToBiblatex(csl: Data[]): string;
 
 `string`
 
-Defined in:  [lib/csl-to-biblatex.ts:87](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/csl-to-biblatex/src/lib/csl-to-biblatex.ts#L87)
+Defined in:  [lib/csl-to-biblatex.ts:87](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/csl-to-biblatex/src/lib/csl-to-biblatex.ts#L87)
 
 ## Syntax tree
 

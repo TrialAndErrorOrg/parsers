@@ -3,6 +3,8 @@
 
 # xast-util-has-attribute
 
+[![npm version](https://badge.fury.io/js/xast-util-has-attribute.svg)](https://badge.fury.io/js/xast-util-has-attribute) [![npm downloads](https://img.shields.io/npm/dm/xast-util-has-attribute.svg)](https://www.npmjs.com/package/xast-util-has-attribute)
+
 Port of [hast-util-has-property](https://github.com/syntax-tree/hast-util-has-property) for [xast][xast]
 
 ## Contents
@@ -65,7 +67,7 @@ hasAttribute(node: unknown, name: string): boolean;
 
 `boolean`
 
-Defined in:  [lib/xast-util-has-attribute.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/xast/xast-util-has-attribute/src/lib/xast-util-has-attribute.ts#L10)
+Defined in:  [lib/xast-util-has-attribute.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-has-attribute/src/lib/xast-util-has-attribute.ts#L10)
 
 ## Syntax tree
 

@@ -62,7 +62,7 @@ default(settings: PreambleCommand[]): ReturnType<Plugin<[PreambleCommand[]] | vo
 
 `ReturnType`<`Plugin`<[`PreambleCommand`[]] | `void`[], `Root`, `Root`>>
 
-Defined in:  [lib/relatex-add-preamble.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/relatex/relatex-add-preamble/src/lib/relatex-add-preamble.ts#L6)
+Defined in:  [lib/relatex-add-preamble.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/relatex/relatex-add-preamble/src/lib/relatex-add-preamble.ts#L6)
 
 ## Syntax tree
 

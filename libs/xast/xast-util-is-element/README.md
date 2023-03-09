@@ -3,6 +3,8 @@
 
 # xast-util-is-element
 
+[![npm version](https://badge.fury.io/js/xast-util-is-element.svg)](https://badge.fury.io/js/xast-util-is-element) [![npm downloads](https://img.shields.io/npm/dm/xast-util-is-element.svg)](https://www.npmjs.com/package/xast-util-is-element)
+
 Port of [hast-util-is-element](https://github.com/syntax-tree/hast-util-has-property) for [xast][xast]
 
 ## Contents
@@ -66,7 +68,7 @@ convertElement<T>(test: T["name"] | TestFunctionPredicate<T>): AssertPredicate<T
 
 [`AssertPredicate`](modules.md#assertpredicate)<`T`>
 
-Defined in:  [lib/xast-util-is-element.ts:174](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L174)
+Defined in:  [lib/xast-util-is-element.ts:174](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L174)
 
 #### Signature
 
@@ -84,7 +86,7 @@ convertElement(test?: Test): AssertAnything;
 
 [`AssertAnything`](modules.md#assertanything)
 
-Defined in:  [lib/xast-util-is-element.ts:177](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L177)
+Defined in:  [lib/xast-util-is-element.ts:177](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L177)
 
 ***
 
@@ -100,7 +102,7 @@ isElement(): false;
 
 `false`
 
-Defined in:  [lib/xast-util-is-element.ts:123](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L123)
+Defined in:  [lib/xast-util-is-element.ts:123](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L123)
 
 #### Signature
 
@@ -131,7 +133,7 @@ isElement<T>(
 
 `node is T`
 
-Defined in:  [lib/xast-util-is-element.ts:124](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L124)
+Defined in:  [lib/xast-util-is-element.ts:124](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L124)
 
 #### Signature
 
@@ -158,7 +160,7 @@ isElement(
 
 `boolean`
 
-Defined in:  [lib/xast-util-is-element.ts:131](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L131)
+Defined in:  [lib/xast-util-is-element.ts:131](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L131)
 
 ***
 
@@ -188,7 +190,7 @@ Check if a node is an element and passes a certain node test
 
 `boolean`
 
-Defined in:  [lib/xast-util-is-element.ts:40](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L40)
+Defined in:  [lib/xast-util-is-element.ts:40](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L40)
 
 ***
 
@@ -222,7 +224,7 @@ Check if a node is an element and passes a certain node test
 
 `node is Y`
 
-Defined in:  [lib/xast-util-is-element.ts:50](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L50)
+Defined in:  [lib/xast-util-is-element.ts:50](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L50)
 
 ***
 
@@ -230,7 +232,7 @@ Defined in:  [lib/xast-util-is-element.ts:50](https://github.com/TrialAndErrorOr
 
 > `string`
 
-Defined in:  [lib/xast-util-is-element.ts:4](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L4)
+Defined in:  [lib/xast-util-is-element.ts:4](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L4)
 
 ***
 
@@ -242,7 +244,7 @@ Defined in:  [lib/xast-util-is-element.ts:4](https://github.com/TrialAndErrorOrg
 
 *   `T` *extends* `Element`
 
-Defined in:  [lib/xast-util-is-element.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L12)
+Defined in:  [lib/xast-util-is-element.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L12)
 
 ***
 
@@ -250,7 +252,7 @@ Defined in:  [lib/xast-util-is-element.ts:12](https://github.com/TrialAndErrorOr
 
 > `null` | `undefined` | [`Name`](modules.md#name) | [`TestFunctionAnything`](modules.md#testfunctionanything) | ([`Name`](modules.md#name) | [`TestFunctionAnything`](modules.md#testfunctionanything))[]
 
-Defined in:  [lib/xast-util-is-element.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L5)
+Defined in:  [lib/xast-util-is-element.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L5)
 
 ***
 
@@ -280,7 +282,7 @@ Check if an element passes a test
 
 `boolean` | `void`
 
-Defined in:  [lib/xast-util-is-element.ts:22](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L22)
+Defined in:  [lib/xast-util-is-element.ts:22](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L22)
 
 ***
 
@@ -314,7 +316,7 @@ Check if an element passes a certain node test
 
 `element is X`
 
-Defined in:  [lib/xast-util-is-element.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L31)
+Defined in:  [lib/xast-util-is-element.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/xast/xast-util-is-element/src/lib/xast-util-is-element.ts#L31)
 
 ## Syntax tree
 

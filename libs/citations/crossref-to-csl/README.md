@@ -23,7 +23,7 @@ crossrefToCsl(item: CrossrefJSON): CSL;
 
 `CSL`
 
-Defined in:  [lib/crossref-to-csl.ts:52](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/crossref-to-csl/src/lib/crossref-to-csl.ts#L52)
+Defined in:  [lib/crossref-to-csl.ts:52](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/crossref-to-csl/src/lib/crossref-to-csl.ts#L52)
 
 ## Install
 
@@ -32,6 +32,7 @@ This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908
 ```bash
 pnpm add crossref-to-csl
 # or with yarn
+[![npm version](https://badge.fury.io/js/crossref-to-csl.svg)](https://badge.fury.io/js/crossref-to-csl) [![npm downloads](https://img.shields.io/npm/dm/crossref-to-csl.svg)](https://www.npmjs.com/package/crossref-to-csl)
 # yarn add crossref-to-csl
 # or with npm
 # npm install crossref-to-csl

@@ -3,6 +3,8 @@
 
 # rejour-stringify
 
+[![npm version](https://badge.fury.io/js/rejour-stringify.svg)](https://badge.fury.io/js/rejour-stringify) [![npm downloads](https://img.shields.io/npm/dm/rejour-stringify.svg)](https://www.npmjs.com/package/rejour-stringify)
+
 Plugin for `rejour` that stringifies a `jast` syntax tree to a `JATS XML` document.
 
 ## Contents
@@ -56,7 +58,7 @@ default(): void;
 
 `void`
 
-Defined in:  [lib/rejour-stringify.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/rejour/rejour-stringify/src/lib/rejour-stringify.ts#L8)
+Defined in:  [lib/rejour-stringify.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/rejour/rejour-stringify/src/lib/rejour-stringify.ts#L8)
 
 ## Syntax tree
 

@@ -3,6 +3,8 @@
 
 # jast-jast-util-to-texast
 
+[![npm version](https://badge.fury.io/js/jast-util-to-texast.svg)](https://badge.fury.io/js/jast-util-to-texast) [![npm downloads](https://img.shields.io/npm/dm/jast-util-to-texast.svg)](https://www.npmjs.com/package/jast-util-to-texast)
+
 Utility to convert a [jast][jast] tree to a [texast][texast] tree.
 
 ## Contents
@@ -63,7 +65,7 @@ all(j: J, parent: Node): TexastContent[];
 
 [`TexastContent`](modules.md#texastcontent)[]
 
-Defined in:  [src/lib/all.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/all.ts#L10)
+Defined in:  [src/lib/all.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/all.ts#L10)
 
 ***
 
@@ -87,7 +89,7 @@ one(j: J, node: Node, parent: Parent): TexastContent | TexastContent[] | void;
 
 [`TexastContent`](modules.md#texastcontent) | [`TexastContent`](modules.md#texastcontent)[] | `void`
 
-Defined in:  [src/lib/one.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/one.ts#L7)
+Defined in:  [src/lib/one.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/one.ts#L7)
 
 ***
 
@@ -110,7 +112,7 @@ toTexast(tree: TexastContent | TexastRoot, options: Options = ...): TexastConten
 
 [`TexastContent`](modules.md#texastcontent) | [`TexastRoot`](modules.md#texastroot)
 
-Defined in:  [src/lib/jast-util-to-texast.ts:24](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/jast-util-to-texast.ts#L24)
+Defined in:  [src/lib/jast-util-to-texast.ts:24](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/jast-util-to-texast.ts#L24)
 
 ***
 
@@ -774,7 +776,7 @@ Defined in:  [src/lib/jast-util-to-texast.ts:24](https://github.com/TrialAndErro
 | `xref` | (`j`: [`J`](modules.md#j), `node`: `Xref`) => [`TexastContent`](modules.md#texastcontent) |
 | `year` | () => `void` |
 
-Defined in:  [src/lib/handlers/index.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/handlers/index.ts#L29)
+Defined in:  [src/lib/handlers/index.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/handlers/index.ts#L29)
 
 ***
 
@@ -786,25 +788,25 @@ Defined in:  [src/lib/handlers/index.ts:29](https://github.com/TrialAndErrorOrg/
 
 > `boolean`
 
-Defined in:  [src/lib/types.ts:59](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L59)
+Defined in:  [src/lib/types.ts:59](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L59)
 
 ##### `bibname`
 
 > `string`
 
-Defined in:  [src/lib/types.ts:76](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L76)
+Defined in:  [src/lib/types.ts:76](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L76)
 
 ##### `booktabs`
 
 > `boolean`
 
-Defined in:  [src/lib/types.ts:68](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L68)
+Defined in:  [src/lib/types.ts:68](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L68)
 
 ##### `checked`
 
 > `string`
 
-Defined in:  [src/lib/types.ts:66](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L66)
+Defined in:  [src/lib/types.ts:66](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L66)
 
 ##### `citationAnalyzer`
 
@@ -828,19 +830,19 @@ Defined in:  [src/lib/types.ts:66](https://github.com/TrialAndErrorOrg/parsers/b
 
 `string`
 
-Defined in:  [src/lib/types.ts:81](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L81)
+Defined in:  [src/lib/types.ts:81](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L81)
 
 ##### `columnSeparator`
 
 > `boolean`
 
-Defined in:  [src/lib/types.ts:77](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L77)
+Defined in:  [src/lib/types.ts:77](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L77)
 
 ##### `document`
 
 > `undefined` | `boolean`
 
-Defined in:  [src/lib/types.ts:65](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L65)
+Defined in:  [src/lib/types.ts:65](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L65)
 
 ##### `documentClass`
 
@@ -860,19 +862,19 @@ Defined in:  [src/lib/types.ts:65](https://github.com/TrialAndErrorOrg/parsers/b
 | `name` | `string` |
 | `options`? | `string`[] |
 
-Defined in:  [src/lib/types.ts:71](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L71)
+Defined in:  [src/lib/types.ts:71](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L71)
 
 ##### `footnotes`
 
 > `Record`<`string`, [`TexastContent`](modules.md#texastcontent)[]>
 
-Defined in:  [src/lib/types.ts:78](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L78)
+Defined in:  [src/lib/types.ts:78](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L78)
 
 ##### `frozenBaseUrl`
 
 > `null` | `string`
 
-Defined in:  [src/lib/types.ts:60](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L60)
+Defined in:  [src/lib/types.ts:60](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L60)
 
 ##### `handlers`
 
@@ -884,19 +886,19 @@ Defined in:  [src/lib/types.ts:60](https://github.com/TrialAndErrorOrg/parsers/b
 
 ###### Type declaration
 
-Defined in:  [src/lib/types.ts:64](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L64)
+Defined in:  [src/lib/types.ts:64](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L64)
 
 ##### `inTable`
 
 > `boolean`
 
-Defined in:  [src/lib/types.ts:62](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L62)
+Defined in:  [src/lib/types.ts:62](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L62)
 
 ##### `italics`
 
 > `string`
 
-Defined in:  [src/lib/types.ts:70](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L70)
+Defined in:  [src/lib/types.ts:70](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L70)
 
 ##### `nodeById?`
 
@@ -908,49 +910,49 @@ Defined in:  [src/lib/types.ts:70](https://github.com/TrialAndErrorOrg/parsers/b
 
 ###### Type declaration
 
-Defined in:  [src/lib/types.ts:56](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L56)
+Defined in:  [src/lib/types.ts:56](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L56)
 
 ##### `numberOfRows`
 
 > `number`
 
-Defined in:  [src/lib/types.ts:80](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L80)
+Defined in:  [src/lib/types.ts:80](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L80)
 
 ##### `qNesting`
 
 > `number`
 
-Defined in:  [src/lib/types.ts:63](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L63)
+Defined in:  [src/lib/types.ts:63](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L63)
 
 ##### `quotes`
 
 > `string`[]
 
-Defined in:  [src/lib/types.ts:69](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L69)
+Defined in:  [src/lib/types.ts:69](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L69)
 
 ##### `rowNumber`
 
 > `number`
 
-Defined in:  [src/lib/types.ts:79](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L79)
+Defined in:  [src/lib/types.ts:79](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L79)
 
 ##### `sectionDepth`
 
 > `number`
 
-Defined in:  [src/lib/types.ts:75](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L75)
+Defined in:  [src/lib/types.ts:75](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L75)
 
 ##### `unchecked`
 
 > `string`
 
-Defined in:  [src/lib/types.ts:67](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L67)
+Defined in:  [src/lib/types.ts:67](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L67)
 
 ##### `wrapText`
 
 > `boolean`
 
-Defined in:  [src/lib/types.ts:61](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L61)
+Defined in:  [src/lib/types.ts:61](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L61)
 
 ***
 
@@ -982,13 +984,13 @@ Defined in:  [src/lib/types.ts:61](https://github.com/TrialAndErrorOrg/parsers/b
 | `nameStyle`? | `NameTypeNameStyle` |
 | `specificUse`? | `string` |
 
-Defined in:  [libs/jast/jast/src/lib/jats.ts:6790](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast/src/lib/jats.ts#L6790)
+Defined in:  [libs/jast/jast/src/lib/jats.ts:6790](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L6790)
 
 ##### `children`
 
 > ([`Text`](modules.md#text) | `GivenNames` | `Prefix` | `Suffix` | `Surname`)[]
 
-Defined in:  [libs/jast/jast/src/lib/jats.ts:6796](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast/src/lib/jats.ts#L6796)
+Defined in:  [libs/jast/jast/src/lib/jats.ts:6796](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L6796)
 
 ##### `data?`
 
@@ -1004,7 +1006,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 > `"name"`
 
-Defined in:  [libs/jast/jast/src/lib/jats.ts:6789](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast/src/lib/jats.ts#L6789)
+Defined in:  [libs/jast/jast/src/lib/jats.ts:6789](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L6789)
 
 ##### `position?`
 
@@ -1023,7 +1025,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 Overrides: UnistNode.type
 
-Defined in:  [libs/jast/jast/src/lib/jats.ts:6788](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast/src/lib/jats.ts#L6788)
+Defined in:  [libs/jast/jast/src/lib/jats.ts:6788](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L6788)
 
 ***
 
@@ -1035,19 +1037,19 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:6788](https://github.com/TrialAndEr
 
 > `string`
 
-Defined in:  [src/lib/types.ts:39](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L39)
+Defined in:  [src/lib/types.ts:39](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L39)
 
 ##### `booktabs?`
 
 > `boolean`
 
-Defined in:  [src/lib/types.ts:41](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L41)
+Defined in:  [src/lib/types.ts:41](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L41)
 
 ##### `checked?`
 
 > `string`
 
-Defined in:  [src/lib/types.ts:34](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L34)
+Defined in:  [src/lib/types.ts:34](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L34)
 
 ##### `citationAnalyzer?`
 
@@ -1071,19 +1073,19 @@ Defined in:  [src/lib/types.ts:34](https://github.com/TrialAndErrorOrg/parsers/b
 
 `string`
 
-Defined in:  [src/lib/types.ts:46](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L46)
+Defined in:  [src/lib/types.ts:46](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L46)
 
 ##### `columnSeparator?`
 
 > `boolean`
 
-Defined in:  [src/lib/types.ts:40](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L40)
+Defined in:  [src/lib/types.ts:40](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L40)
 
 ##### `document?`
 
 > `boolean`
 
-Defined in:  [src/lib/types.ts:32](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L32)
+Defined in:  [src/lib/types.ts:32](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L32)
 
 ##### `documentClass?`
 
@@ -1103,7 +1105,7 @@ Defined in:  [src/lib/types.ts:32](https://github.com/TrialAndErrorOrg/parsers/b
 | `name` | `string` |
 | `options`? | `string`[] |
 
-Defined in:  [src/lib/types.ts:42](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L42)
+Defined in:  [src/lib/types.ts:42](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L42)
 
 ##### `handlers?`
 
@@ -1115,37 +1117,37 @@ Defined in:  [src/lib/types.ts:42](https://github.com/TrialAndErrorOrg/parsers/b
 
 ###### Type declaration
 
-Defined in:  [src/lib/types.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L31)
+Defined in:  [src/lib/types.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L31)
 
 ##### `italics?`
 
 > `"emph"` | `"textit"`
 
-Defined in:  [src/lib/types.ts:38](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L38)
+Defined in:  [src/lib/types.ts:38](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L38)
 
 ##### `newLines?`
 
 > `boolean`
 
-Defined in:  [src/lib/types.ts:33](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L33)
+Defined in:  [src/lib/types.ts:33](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L33)
 
 ##### `quotes?`
 
 > `string`[]
 
-Defined in:  [src/lib/types.ts:36](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L36)
+Defined in:  [src/lib/types.ts:36](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L36)
 
 ##### `topSection?`
 
 > `number`
 
-Defined in:  [src/lib/types.ts:37](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L37)
+Defined in:  [src/lib/types.ts:37](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L37)
 
 ##### `unchecked?`
 
 > `string`
 
-Defined in:  [src/lib/types.ts:35](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L35)
+Defined in:  [src/lib/types.ts:35](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L35)
 
 ***
 
@@ -1163,7 +1165,7 @@ Defined in:  [src/lib/types.ts:35](https://github.com/TrialAndErrorOrg/parsers/b
 
 Overrides: UnistParent.children
 
-Defined in:  [libs/jast/jast/src/lib/rejour.ts:25](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast/src/lib/rejour.ts#L25)
+Defined in:  [libs/jast/jast/src/lib/rejour.ts:25](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/rejour.ts#L25)
 
 ##### `data?`
 
@@ -1212,7 +1214,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 Overrides: UnistParent.children
 
-Defined in:  [libs/jast/jast/src/lib/rejour.ts:20](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast/src/lib/rejour.ts#L20)
+Defined in:  [libs/jast/jast/src/lib/rejour.ts:20](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/rejour.ts#L20)
 
 ##### `data?`
 
@@ -1241,7 +1243,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 Overrides: UnistParent.type
 
-Defined in:  [libs/jast/jast/src/lib/rejour.ts:19](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast/src/lib/rejour.ts#L19)
+Defined in:  [libs/jast/jast/src/lib/rejour.ts:19](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/rejour.ts#L19)
 
 ***
 
@@ -1313,7 +1315,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 Overrides: UnistParent.children
 
-Defined in:  [libs/texast/texast/src/lib/texast.ts:106](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L106)
+Defined in:  [libs/texast/texast/src/lib/texast.ts:106](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L106)
 
 ##### `data?`
 
@@ -1362,7 +1364,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 Inherited from: [TexastParent](modules.md#texastparent).[children](modules.md#children)
 
-Defined in:  [libs/texast/texast/src/lib/texast.ts:106](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L106)
+Defined in:  [libs/texast/texast/src/lib/texast.ts:106](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L106)
 
 ##### `data?`
 
@@ -1393,7 +1395,7 @@ The variant of a node.
 
 Overrides: [TexastParent](modules.md#texastparent).[type](modules.md#type)
 
-Defined in:  [libs/texast/texast/src/lib/texast.ts:86](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L86)
+Defined in:  [libs/texast/texast/src/lib/texast.ts:86](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L86)
 
 ***
 
@@ -1436,7 +1438,7 @@ The variant of a node.
 
 Overrides: [TexastLiteral](modules.md#texastliteral).[type](modules.md#type)
 
-Defined in:  [libs/jast/jast/src/lib/jats.ts:43](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast/src/lib/jats.ts#L43)
+Defined in:  [libs/jast/jast/src/lib/jats.ts:43](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L43)
 
 ##### `value`
 
@@ -1444,7 +1446,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:43](https://github.com/TrialAndErro
 
 Overrides: [TexastLiteral](modules.md#texastliteral).[value](modules.md#value)
 
-Defined in:  [libs/jast/jast/src/lib/jats.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast/src/lib/jats.ts#L44)
+Defined in:  [libs/jast/jast/src/lib/jats.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L44)
 
 ***
 
@@ -1452,7 +1454,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:44](https://github.com/TrialAndErro
 
 > `JastProperties`
 
-Defined in:  [src/lib/types.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L29)
+Defined in:  [src/lib/types.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L29)
 
 ***
 
@@ -1460,7 +1462,7 @@ Defined in:  [src/lib/types.ts:29](https://github.com/TrialAndErrorOrg/parsers/b
 
 > `ValuesType`<`documentMap`>
 
-Defined in:  [libs/jast/jast/src/lib/jats.ts:13710](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast/src/lib/jats.ts#L13710)
+Defined in:  [libs/jast/jast/src/lib/jats.ts:13710](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L13710)
 
 ***
 
@@ -1470,7 +1472,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:13710](https://github.com/TrialAndE
 > `type`: `"element"`;
 > }>
 
-Defined in:  [libs/jast/jast/src/lib/jats.ts:13711](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast/src/lib/jats.ts#L13711)
+Defined in:  [libs/jast/jast/src/lib/jats.ts:13711](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L13711)
 
 ***
 
@@ -1498,7 +1500,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:13711](https://github.com/TrialAndE
 
 [`TexastContent`](modules.md#texastcontent) | [`TexastContent`](modules.md#texastcontent)[] | `void`
 
-Defined in:  [src/lib/types.ts:49](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L49)
+Defined in:  [src/lib/types.ts:49](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L49)
 
 ***
 
@@ -1506,7 +1508,7 @@ Defined in:  [src/lib/types.ts:49](https://github.com/TrialAndErrorOrg/parsers/b
 
 > [`JWithProps`](modules.md#jwithprops) & [`JWithoutProps`](modules.md#jwithoutprops) & [`Context`](modules.md#context)
 
-Defined in:  [src/lib/types.ts:106](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L106)
+Defined in:  [src/lib/types.ts:106](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L106)
 
 ***
 
@@ -1539,7 +1541,7 @@ Defined in:  [src/lib/types.ts:106](https://github.com/TrialAndErrorOrg/parsers/
 
 [`TexastContent`](modules.md#texastcontent)
 
-Defined in:  [src/lib/types.ts:84](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L84)
+Defined in:  [src/lib/types.ts:84](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L84)
 
 ***
 
@@ -1576,7 +1578,7 @@ Defined in:  [src/lib/types.ts:84](https://github.com/TrialAndErrorOrg/parsers/b
 
 `TNode`
 
-Defined in:  [src/lib/types.ts:97](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L97)
+Defined in:  [src/lib/types.ts:97](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L97)
 
 ***
 
@@ -1604,7 +1606,7 @@ Defined in:  [src/lib/types.ts:97](https://github.com/TrialAndErrorOrg/parsers/b
 
 [`TexastContent`](modules.md#texastcontent)
 
-Defined in:  [src/lib/types.ts:91](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L91)
+Defined in:  [src/lib/types.ts:91](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L91)
 
 ***
 
@@ -1614,7 +1616,7 @@ Defined in:  [src/lib/types.ts:91](https://github.com/TrialAndErrorOrg/parsers/b
 
 jast Node
 
-Defined in:  [src/lib/types.ts:26](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L26)
+Defined in:  [src/lib/types.ts:26](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L26)
 
 ***
 
@@ -1624,7 +1626,7 @@ Defined in:  [src/lib/types.ts:26](https://github.com/TrialAndErrorOrg/parsers/b
 > `children`: `any`[];
 > }>
 
-Defined in:  [src/lib/types.ts:122](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-texast/src/lib/types.ts#L122)
+Defined in:  [src/lib/types.ts:122](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-texast/src/lib/types.ts#L122)
 
 ***
 
@@ -1632,7 +1634,7 @@ Defined in:  [src/lib/types.ts:122](https://github.com/TrialAndErrorOrg/parsers/
 
 > `TopLevelDocumentContent` | `PreambleContent` | `AlignmentContent` | `MathContent` | `CommandContent` | [`TexastParagraphContent`](modules.md#texastparagraphcontent) | `CommandArg` | `ListContent` | `Text` | `Comment` | `TabularContent` | `TableRowContent`
 
-Defined in:  [libs/texast/texast/src/lib/texast.ts:32](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L32)
+Defined in:  [libs/texast/texast/src/lib/texast.ts:32](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L32)
 
 ***
 
@@ -1640,7 +1642,7 @@ Defined in:  [libs/texast/texast/src/lib/texast.ts:32](https://github.com/TrialA
 
 > `Text` | `InlineMath` | `Command` | `Comment`
 
-Defined in:  [libs/texast/texast/src/lib/texast.ts:75](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L75)
+Defined in:  [libs/texast/texast/src/lib/texast.ts:75](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L75)
 
 ## Syntax tree
 

@@ -3,6 +3,8 @@
 
 # unified-latex-stringify
 
+[![npm version](https://badge.fury.io/js/unified-latex-stringify.svg)](https://badge.fury.io/js/unified-latex-stringify) [![npm downloads](https://img.shields.io/npm/dm/unified-latex-stringify.svg)](https://www.npmjs.com/package/unified-latex-stringify)
+
 Plugin for `unified-latex` that takes an `unified-latex` tree and turns it into LaTeX
 
 ## Contents

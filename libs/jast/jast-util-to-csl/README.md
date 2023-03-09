@@ -23,7 +23,7 @@ all(node: Bold | FixedCase | Italic | Monospace | NamedContent | Overline | Roma
 
 `any`[]
 
-Defined in:  [lib/jast-util-to-csl.ts:250](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L250)
+Defined in:  [lib/jast-util-to-csl.ts:252](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L252)
 
 ***
 
@@ -45,7 +45,7 @@ one(node: Text | Bold | FixedCase | Italic | Monospace | NamedContent | Overline
 
 `any`
 
-Defined in:  [lib/jast-util-to-csl.ts:264](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L264)
+Defined in:  [lib/jast-util-to-csl.ts:266](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L266)
 
 ***
 
@@ -67,7 +67,7 @@ refListToCSL(list: RefList): CSL[];
 
 `CSL`[]
 
-Defined in:  [lib/jast-util-to-csl.ts:28](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L28)
+Defined in:  [lib/jast-util-to-csl.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L31)
 
 ***
 
@@ -90,7 +90,7 @@ refToCSL(citation: ElementCitation, id: string): CSL;
 
 `CSL`
 
-Defined in:  [lib/jast-util-to-csl.ts:42](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L42)
+Defined in:  [lib/jast-util-to-csl.ts:45](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L45)
 
 ***
 
@@ -118,7 +118,7 @@ toCSL<T>(root: T): CSLConditional<T>;
 
 `CSLConditional`<`T`>
 
-Defined in:  [lib/jast-util-to-csl.ts:219](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L219)
+Defined in:  [lib/jast-util-to-csl.ts:220](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L220)
 
 ***
 
@@ -140,7 +140,7 @@ toCSLBack(node: Back): CSL[] | undefined;
 
 `CSL`[] | `undefined`
 
-Defined in:  [lib/jast-util-to-csl.ts:197](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L197)
+Defined in:  [lib/jast-util-to-csl.ts:192](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L192)
 
 ***
 
@@ -162,7 +162,7 @@ toCSLFront(node: Front): CSL | undefined;
 
 `CSL` | `undefined`
 
-Defined in:  [lib/jast-util-to-csl.ts:189](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L189)
+Defined in:  [lib/jast-util-to-csl.ts:184](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L184)
 
 ## Install
 
@@ -171,6 +171,7 @@ This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908
 ```bash
 pnpm add jast-util-to-csl
 # or with yarn
+[![npm version](https://badge.fury.io/js/jast-util-to-csl.svg)](https://badge.fury.io/js/jast-util-to-csl) [![npm downloads](https://img.shields.io/npm/dm/jast-util-to-csl.svg)](https://www.npmjs.com/package/jast-util-to-csl)
 # yarn add jast-util-to-csl
 # or with npm
 # npm install jast-util-to-csl

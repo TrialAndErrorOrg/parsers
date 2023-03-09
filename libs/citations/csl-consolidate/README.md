@@ -27,7 +27,7 @@ consolidate(data: Data[], options: object): Promise<undefined | Data[]>;
 
 `Promise`<`undefined` | `Data`[]>
 
-Defined in:  [lib/csl-consolidate.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/csl-consolidate/src/lib/csl-consolidate.ts#L12)
+Defined in:  [lib/csl-consolidate.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/csl-consolidate/src/lib/csl-consolidate.ts#L12)
 
 ***
 
@@ -50,7 +50,7 @@ dateSim(ref: Data, csl: Data): number;
 
 `number`
 
-Defined in:  [lib/csl-consolidate.ts:144](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/csl-consolidate/src/lib/csl-consolidate.ts#L144)
+Defined in:  [lib/csl-consolidate.ts:144](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/csl-consolidate/src/lib/csl-consolidate.ts#L144)
 
 ## Install
 
@@ -59,6 +59,7 @@ This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908
 ```bash
 pnpm add csl-consolidate
 # or with yarn
+[![npm version](https://badge.fury.io/js/csl-consolidate.svg)](https://badge.fury.io/js/csl-consolidate) [![npm downloads](https://img.shields.io/npm/dm/csl-consolidate.svg)](https://www.npmjs.com/package/csl-consolidate)
 # yarn add csl-consolidate
 # or with npm
 # npm install csl-consolidate

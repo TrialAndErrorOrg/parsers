@@ -40,7 +40,7 @@ default(options: Options): Function;
 
 `Promise`<`Root`>
 
-Defined in:  [lib/reoff-parse-references.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/reoff/reoff-parse-references-browser/src/lib/reoff-parse-references.ts#L5)
+Defined in:  [lib/reoff-parse-references.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/reoff/reoff-parse-references-browser/src/lib/reoff-parse-references.ts#L5)
 
 ## Install
 

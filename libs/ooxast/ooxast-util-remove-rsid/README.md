@@ -3,6 +3,8 @@
 
 # ooxast-util-remove-rsid
 
+[![npm version](https://badge.fury.io/js/ooxast-util-remove-rsid.svg)](https://badge.fury.io/js/ooxast-util-remove-rsid) [![npm downloads](https://img.shields.io/npm/dm/ooxast-util-remove-rsid.svg)](https://www.npmjs.com/package/ooxast-util-remove-rsid)
+
 Cleans all the rsid tags from an ooxast tree, and merges `w:r` elements if they only differ by rsid values.
 
 Rsid's are Word's way of keeping track of edits, but when you are converting or manipulating the ooxast tree you usually do not want to keep this information around anyway. Rsids end up being incredibly annoying as they split up elements which do not need to be split up for the purposes of creating and manipulating the AST.
@@ -65,7 +67,7 @@ ooxastUtilRemoveRsid(tree: Root, options?: Options): Root;
 
 `Root`
 
-Defined in:  [lib/ooxast-util-remove-rsid.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-remove-rsid/src/lib/ooxast-util-remove-rsid.ts#L16)
+Defined in:  [lib/ooxast-util-remove-rsid.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-remove-rsid/src/lib/ooxast-util-remove-rsid.ts#L16)
 
 #### Signature
 
@@ -84,7 +86,7 @@ ooxastUtilRemoveRsid(tree: Node<Data>, options?: Options): Node;
 
 `Node`
 
-Defined in:  [lib/ooxast-util-remove-rsid.ts:17](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-remove-rsid/src/lib/ooxast-util-remove-rsid.ts#L17)
+Defined in:  [lib/ooxast-util-remove-rsid.ts:17](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-remove-rsid/src/lib/ooxast-util-remove-rsid.ts#L17)
 
 ***
 
@@ -96,7 +98,7 @@ Defined in:  [lib/ooxast-util-remove-rsid.ts:17](https://github.com/TrialAndErro
 
 > `string`[]
 
-Defined in:  [lib/ooxast-util-remove-rsid.ts:13](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-remove-rsid/src/lib/ooxast-util-remove-rsid.ts#L13)
+Defined in:  [lib/ooxast-util-remove-rsid.ts:13](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-remove-rsid/src/lib/ooxast-util-remove-rsid.ts#L13)
 
 ## Syntax tree
 

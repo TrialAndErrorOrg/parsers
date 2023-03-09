@@ -15,6 +15,7 @@
   "exclude": ["libs/citations/apa-parser", "libs/ooxast/ooxast-util-to-hast"],
   "hideBreadcrumbs": true,
   "hideInPageTOC": true,
+  "gitRevision": "main",
   "kindSortOrder": [
     "Reference",
     "Project",

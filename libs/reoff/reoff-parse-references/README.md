@@ -40,7 +40,7 @@ default(options: Options = {}): Function;
 
 `Promise`<`Root`>
 
-Defined in:  [lib/reoff-parse-references.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/reoff/reoff-parse-references/src/lib/reoff-parse-references.ts#L5)
+Defined in:  [lib/reoff-parse-references.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/reoff/reoff-parse-references/src/lib/reoff-parse-references.ts#L5)
 
 ## Install
 
@@ -49,6 +49,7 @@ This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908
 ```bash
 pnpm add reoff-parse-references
 # or with yarn
+[![npm version](https://badge.fury.io/js/reoff-parse-references.svg)](https://badge.fury.io/js/reoff-parse-references) [![npm downloads](https://img.shields.io/npm/dm/reoff-parse-references.svg)](https://www.npmjs.com/package/reoff-parse-references)
 # yarn add reoff-parse-references
 # or with npm
 # npm install reoff-parse-references

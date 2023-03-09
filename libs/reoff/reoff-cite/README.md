@@ -40,7 +40,7 @@ default(options: Options = ...): Function;
 
 `Root`
 
-Defined in:  [lib/reoff-cite.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/reoff/reoff-cite/src/lib/reoff-cite.ts#L12)
+Defined in:  [lib/reoff-cite.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/reoff/reoff-cite/src/lib/reoff-cite.ts#L12)
 
 ## Install
 
@@ -49,6 +49,7 @@ This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908
 ```bash
 pnpm add reoff-cite
 # or with yarn
+[![npm version](https://badge.fury.io/js/reoff-cite.svg)](https://badge.fury.io/js/reoff-cite) [![npm downloads](https://img.shields.io/npm/dm/reoff-cite.svg)](https://www.npmjs.com/package/reoff-cite)
 # yarn add reoff-cite
 # or with npm
 # npm install reoff-cite

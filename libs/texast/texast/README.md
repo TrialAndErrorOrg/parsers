@@ -62,7 +62,7 @@ isCommandArg(node: TexastContent | Root): node is CommandArg;
 
 `node is CommandArg`
 
-Defined in:  [src/lib/texast.ts:124](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L124)
+Defined in:  [src/lib/texast.ts:124](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L124)
 
 ***
 
@@ -84,7 +84,7 @@ isKnownNode(node: Node<Data>): node is TexastContent;
 
 `node is TexastContent`
 
-Defined in:  [src/lib/texast.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L7)
+Defined in:  [src/lib/texast.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L7)
 
 ***
 
@@ -106,7 +106,7 @@ isOptionalCommandArg(node: TexastContent): node is CommandArgOpt;
 
 `node is CommandArgOpt`
 
-Defined in:  [src/lib/texast.ts:129](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L129)
+Defined in:  [src/lib/texast.ts:129](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L129)
 
 ***
 
@@ -128,7 +128,7 @@ isParagraphContent(content: TexastContent): content is ParagraphContent;
 
 `content is ParagraphContent`
 
-Defined in:  [src/lib/texast.ts:76](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L76)
+Defined in:  [src/lib/texast.ts:76](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L76)
 
 ***
 
@@ -171,7 +171,7 @@ The variant of a node.
 
 Overrides: [Literal](modules.md#literal).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:186](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L186)
+Defined in:  [src/lib/texast.ts:186](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L186)
 
 ##### `value`
 
@@ -179,7 +179,7 @@ Defined in:  [src/lib/texast.ts:186](https://github.com/TrialAndErrorOrg/parsers
 
 Overrides: [Literal](modules.md#literal).[value](modules.md#value)
 
-Defined in:  [src/lib/texast.ts:187](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L187)
+Defined in:  [src/lib/texast.ts:187](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L187)
 
 ***
 
@@ -197,7 +197,7 @@ Defined in:  [src/lib/texast.ts:187](https://github.com/TrialAndErrorOrg/parsers
 
 Overrides: [Parent](modules.md#parent).[children](modules.md#children)
 
-Defined in:  [src/lib/texast.ts:117](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L117)
+Defined in:  [src/lib/texast.ts:117](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L117)
 
 ##### `data?`
 
@@ -213,7 +213,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 > `string`
 
-Defined in:  [src/lib/texast.ts:116](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L116)
+Defined in:  [src/lib/texast.ts:116](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L116)
 
 ##### `position?`
 
@@ -234,7 +234,7 @@ The variant of a node.
 
 Overrides: [Parent](modules.md#parent).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:115](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L115)
+Defined in:  [src/lib/texast.ts:115](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L115)
 
 ***
 
@@ -252,7 +252,7 @@ Defined in:  [src/lib/texast.ts:115](https://github.com/TrialAndErrorOrg/parsers
 
 Overrides: [Parent](modules.md#parent).[children](modules.md#children)
 
-Defined in:  [src/lib/texast.ts:122](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L122)
+Defined in:  [src/lib/texast.ts:122](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L122)
 
 ##### `data?`
 
@@ -268,7 +268,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 > `boolean`
 
-Defined in:  [src/lib/texast.ts:121](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L121)
+Defined in:  [src/lib/texast.ts:121](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L121)
 
 ##### `position?`
 
@@ -289,7 +289,7 @@ The variant of a node.
 
 Overrides: [Parent](modules.md#parent).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:120](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L120)
+Defined in:  [src/lib/texast.ts:120](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L120)
 
 ***
 
@@ -307,7 +307,7 @@ Defined in:  [src/lib/texast.ts:120](https://github.com/TrialAndErrorOrg/parsers
 
 Inherited from: [CommandArg](modules.md#commandarg).[children](modules.md#children)
 
-Defined in:  [src/lib/texast.ts:122](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L122)
+Defined in:  [src/lib/texast.ts:122](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L122)
 
 ##### `data?`
 
@@ -325,7 +325,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 Overrides: [CommandArg](modules.md#commandarg).[optional](modules.md#optional)
 
-Defined in:  [src/lib/texast.ts:127](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L127)
+Defined in:  [src/lib/texast.ts:127](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L127)
 
 ##### `position?`
 
@@ -346,7 +346,7 @@ The variant of a node.
 
 Inherited from: [CommandArg](modules.md#commandarg).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:120](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L120)
+Defined in:  [src/lib/texast.ts:120](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L120)
 
 ***
 
@@ -389,7 +389,7 @@ The variant of a node.
 
 Overrides: [Literal](modules.md#literal).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:200](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L200)
+Defined in:  [src/lib/texast.ts:200](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L200)
 
 ##### `value`
 
@@ -397,7 +397,7 @@ Defined in:  [src/lib/texast.ts:200](https://github.com/TrialAndErrorOrg/parsers
 
 Overrides: [Literal](modules.md#literal).[value](modules.md#value)
 
-Defined in:  [src/lib/texast.ts:201](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L201)
+Defined in:  [src/lib/texast.ts:201](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L201)
 
 ***
 
@@ -415,7 +415,7 @@ Defined in:  [src/lib/texast.ts:201](https://github.com/TrialAndErrorOrg/parsers
 
 Inherited from: [MathContainer](modules.md#mathcontainer).[children](modules.md#children)
 
-Defined in:  [src/lib/texast.ts:165](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L165)
+Defined in:  [src/lib/texast.ts:165](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L165)
 
 ##### `data?`
 
@@ -431,7 +431,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 > `"$$"` | `"[]"`
 
-Defined in:  [src/lib/texast.ts:173](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L173)
+Defined in:  [src/lib/texast.ts:173](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L173)
 
 ##### `name`
 
@@ -439,7 +439,7 @@ Defined in:  [src/lib/texast.ts:173](https://github.com/TrialAndErrorOrg/parsers
 
 Overrides: [MathContainer](modules.md#mathcontainer).[name](modules.md#name)
 
-Defined in:  [src/lib/texast.ts:172](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L172)
+Defined in:  [src/lib/texast.ts:172](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L172)
 
 ##### `position?`
 
@@ -460,7 +460,7 @@ The variant of a node.
 
 Inherited from: [MathContainer](modules.md#mathcontainer).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:163](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L163)
+Defined in:  [src/lib/texast.ts:163](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L163)
 
 ***
 
@@ -478,7 +478,7 @@ Defined in:  [src/lib/texast.ts:163](https://github.com/TrialAndErrorOrg/parsers
 
 Overrides: [Parent](modules.md#parent).[children](modules.md#children)
 
-Defined in:  [src/lib/texast.ts:95](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L95)
+Defined in:  [src/lib/texast.ts:95](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L95)
 
 ##### `data?`
 
@@ -509,7 +509,7 @@ The variant of a node.
 
 Overrides: [Parent](modules.md#parent).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:94](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L94)
+Defined in:  [src/lib/texast.ts:94](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L94)
 
 ***
 
@@ -531,7 +531,7 @@ Defined in:  [src/lib/texast.ts:94](https://github.com/TrialAndErrorOrg/parsers/
 
 Overrides: [Parent](modules.md#parent).[children](modules.md#children)
 
-Defined in:  [src/lib/texast.ts:137](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L137)
+Defined in:  [src/lib/texast.ts:137](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L137)
 
 ##### `data?`
 
@@ -547,7 +547,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 > `string`
 
-Defined in:  [src/lib/texast.ts:136](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L136)
+Defined in:  [src/lib/texast.ts:136](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L136)
 
 ##### `position?`
 
@@ -568,7 +568,7 @@ The variant of a node.
 
 Overrides: [Parent](modules.md#parent).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:135](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L135)
+Defined in:  [src/lib/texast.ts:135](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L135)
 
 ***
 
@@ -586,7 +586,7 @@ Defined in:  [src/lib/texast.ts:135](https://github.com/TrialAndErrorOrg/parsers
 
 Inherited from: [Environment](modules.md#environment).[children](modules.md#children)
 
-Defined in:  [src/lib/texast.ts:137](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L137)
+Defined in:  [src/lib/texast.ts:137](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L137)
 
 ##### `data?`
 
@@ -602,7 +602,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 > `boolean`
 
-Defined in:  [src/lib/texast.ts:233](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L233)
+Defined in:  [src/lib/texast.ts:233](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L233)
 
 ##### `name`
 
@@ -610,7 +610,7 @@ Defined in:  [src/lib/texast.ts:233](https://github.com/TrialAndErrorOrg/parsers
 
 Overrides: [Environment](modules.md#environment).[name](modules.md#name)
 
-Defined in:  [src/lib/texast.ts:232](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L232)
+Defined in:  [src/lib/texast.ts:232](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L232)
 
 ##### `position?`
 
@@ -631,7 +631,7 @@ The variant of a node.
 
 Inherited from: [Environment](modules.md#environment).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:135](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L135)
+Defined in:  [src/lib/texast.ts:135](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L135)
 
 ***
 
@@ -653,7 +653,7 @@ Defined in:  [src/lib/texast.ts:135](https://github.com/TrialAndErrorOrg/parsers
 
 Overrides: [Parent](modules.md#parent).[children](modules.md#children)
 
-Defined in:  [src/lib/texast.ts:112](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L112)
+Defined in:  [src/lib/texast.ts:112](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L112)
 
 ##### `data?`
 
@@ -684,7 +684,7 @@ The variant of a node.
 
 Overrides: [Parent](modules.md#parent).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:111](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L111)
+Defined in:  [src/lib/texast.ts:111](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L111)
 
 ***
 
@@ -702,7 +702,7 @@ Defined in:  [src/lib/texast.ts:111](https://github.com/TrialAndErrorOrg/parsers
 
 Inherited from: [MathContainer](modules.md#mathcontainer).[children](modules.md#children)
 
-Defined in:  [src/lib/texast.ts:165](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L165)
+Defined in:  [src/lib/texast.ts:165](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L165)
 
 ##### `data?`
 
@@ -718,7 +718,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 > `"$"` | `"()"`
 
-Defined in:  [src/lib/texast.ts:169](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L169)
+Defined in:  [src/lib/texast.ts:169](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L169)
 
 ##### `name`
 
@@ -726,7 +726,7 @@ Defined in:  [src/lib/texast.ts:169](https://github.com/TrialAndErrorOrg/parsers
 
 Overrides: [MathContainer](modules.md#mathcontainer).[name](modules.md#name)
 
-Defined in:  [src/lib/texast.ts:168](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L168)
+Defined in:  [src/lib/texast.ts:168](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L168)
 
 ##### `position?`
 
@@ -747,7 +747,7 @@ The variant of a node.
 
 Inherited from: [MathContainer](modules.md#mathcontainer).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:163](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L163)
+Defined in:  [src/lib/texast.ts:163](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L163)
 
 ***
 
@@ -775,7 +775,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 > `string`
 
-Defined in:  [src/lib/texast.ts:211](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L211)
+Defined in:  [src/lib/texast.ts:211](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L211)
 
 ##### `position?`
 
@@ -796,7 +796,7 @@ The variant of a node.
 
 Overrides: [Node](modules.md#node).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:210](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L210)
+Defined in:  [src/lib/texast.ts:210](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L210)
 
 ***
 
@@ -814,7 +814,7 @@ Defined in:  [src/lib/texast.ts:210](https://github.com/TrialAndErrorOrg/parsers
 
 Inherited from: [Environment](modules.md#environment).[children](modules.md#children)
 
-Defined in:  [src/lib/texast.ts:137](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L137)
+Defined in:  [src/lib/texast.ts:137](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L137)
 
 ##### `data?`
 
@@ -832,7 +832,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 Overrides: [Environment](modules.md#environment).[name](modules.md#name)
 
-Defined in:  [src/lib/texast.ts:254](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L254)
+Defined in:  [src/lib/texast.ts:254](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L254)
 
 ##### `position?`
 
@@ -853,7 +853,7 @@ The variant of a node.
 
 Inherited from: [Environment](modules.md#environment).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:135](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L135)
+Defined in:  [src/lib/texast.ts:135](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L135)
 
 ***
 
@@ -871,7 +871,7 @@ Defined in:  [src/lib/texast.ts:135](https://github.com/TrialAndErrorOrg/parsers
 
 Overrides: UnistParent.children
 
-Defined in:  [src/lib/texast.ts:258](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L258)
+Defined in:  [src/lib/texast.ts:258](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L258)
 
 ##### `data?`
 
@@ -900,7 +900,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 Overrides: UnistParent.type
 
-Defined in:  [src/lib/texast.ts:257](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L257)
+Defined in:  [src/lib/texast.ts:257](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L257)
 
 ***
 
@@ -997,7 +997,7 @@ The variant of a node.
 
 Overrides: [Literal](modules.md#literal).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:181](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L181)
+Defined in:  [src/lib/texast.ts:181](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L181)
 
 ##### `value`
 
@@ -1005,7 +1005,7 @@ Defined in:  [src/lib/texast.ts:181](https://github.com/TrialAndErrorOrg/parsers
 
 Overrides: [Literal](modules.md#literal).[value](modules.md#value)
 
-Defined in:  [src/lib/texast.ts:182](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L182)
+Defined in:  [src/lib/texast.ts:182](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L182)
 
 ***
 
@@ -1023,7 +1023,7 @@ Defined in:  [src/lib/texast.ts:182](https://github.com/TrialAndErrorOrg/parsers
 
 Overrides: [Parent](modules.md#parent).[children](modules.md#children)
 
-Defined in:  [src/lib/texast.ts:165](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L165)
+Defined in:  [src/lib/texast.ts:165](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L165)
 
 ##### `data?`
 
@@ -1039,7 +1039,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 > `string`
 
-Defined in:  [src/lib/texast.ts:164](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L164)
+Defined in:  [src/lib/texast.ts:164](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L164)
 
 ##### `position?`
 
@@ -1060,7 +1060,7 @@ The variant of a node.
 
 Overrides: [Parent](modules.md#parent).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:163](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L163)
+Defined in:  [src/lib/texast.ts:163](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L163)
 
 ***
 
@@ -1078,7 +1078,7 @@ Defined in:  [src/lib/texast.ts:163](https://github.com/TrialAndErrorOrg/parsers
 
 Inherited from: [Environment](modules.md#environment).[children](modules.md#children)
 
-Defined in:  [src/lib/texast.ts:137](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L137)
+Defined in:  [src/lib/texast.ts:137](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L137)
 
 ##### `data?`
 
@@ -1096,7 +1096,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 Overrides: [Environment](modules.md#environment).[name](modules.md#name)
 
-Defined in:  [src/lib/texast.ts:149](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L149)
+Defined in:  [src/lib/texast.ts:149](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L149)
 
 ##### `position?`
 
@@ -1117,7 +1117,7 @@ The variant of a node.
 
 Overrides: [Environment](modules.md#environment).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:148](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L148)
+Defined in:  [src/lib/texast.ts:148](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L148)
 
 ***
 
@@ -1135,7 +1135,7 @@ Defined in:  [src/lib/texast.ts:148](https://github.com/TrialAndErrorOrg/parsers
 
 Inherited from: [MathEnvironment](modules.md#mathenvironment).[children](modules.md#children)
 
-Defined in:  [src/lib/texast.ts:137](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L137)
+Defined in:  [src/lib/texast.ts:137](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L137)
 
 ##### `data?`
 
@@ -1153,7 +1153,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 Overrides: [MathEnvironment](modules.md#mathenvironment).[name](modules.md#name)
 
-Defined in:  [src/lib/texast.ts:160](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L160)
+Defined in:  [src/lib/texast.ts:160](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L160)
 
 ##### `position?`
 
@@ -1174,7 +1174,7 @@ The variant of a node.
 
 Inherited from: [MathEnvironment](modules.md#mathenvironment).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:148](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L148)
+Defined in:  [src/lib/texast.ts:148](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L148)
 
 ***
 
@@ -1234,7 +1234,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 Overrides: [Parent](modules.md#parent).[children](modules.md#children)
 
-Defined in:  [src/lib/texast.ts:192](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L192)
+Defined in:  [src/lib/texast.ts:192](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L192)
 
 ##### `data?`
 
@@ -1265,7 +1265,7 @@ The variant of a node.
 
 Overrides: [Parent](modules.md#parent).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:191](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L191)
+Defined in:  [src/lib/texast.ts:191](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L191)
 
 ***
 
@@ -1283,7 +1283,7 @@ Defined in:  [src/lib/texast.ts:191](https://github.com/TrialAndErrorOrg/parsers
 
 Overrides: UnistParent.children
 
-Defined in:  [src/lib/texast.ts:106](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L106)
+Defined in:  [src/lib/texast.ts:106](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L106)
 
 ##### `data?`
 
@@ -1332,7 +1332,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 Overrides: [Parent](modules.md#parent).[children](modules.md#children)
 
-Defined in:  [src/lib/texast.ts:91](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L91)
+Defined in:  [src/lib/texast.ts:91](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L91)
 
 ##### `data?`
 
@@ -1363,7 +1363,7 @@ The variant of a node.
 
 Overrides: [Parent](modules.md#parent).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:90](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L90)
+Defined in:  [src/lib/texast.ts:90](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L90)
 
 ***
 
@@ -1381,7 +1381,7 @@ Defined in:  [src/lib/texast.ts:90](https://github.com/TrialAndErrorOrg/parsers/
 
 Inherited from: [Parent](modules.md#parent).[children](modules.md#children)
 
-Defined in:  [src/lib/texast.ts:106](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L106)
+Defined in:  [src/lib/texast.ts:106](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L106)
 
 ##### `data?`
 
@@ -1412,7 +1412,7 @@ The variant of a node.
 
 Overrides: [Parent](modules.md#parent).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:86](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L86)
+Defined in:  [src/lib/texast.ts:86](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L86)
 
 ***
 
@@ -1430,7 +1430,7 @@ Defined in:  [src/lib/texast.ts:86](https://github.com/TrialAndErrorOrg/parsers/
 
 Overrides: [Parent](modules.md#parent).[children](modules.md#children)
 
-Defined in:  [src/lib/texast.ts:177](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L177)
+Defined in:  [src/lib/texast.ts:177](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L177)
 
 ##### `data?`
 
@@ -1461,7 +1461,7 @@ The variant of a node.
 
 Overrides: [Parent](modules.md#parent).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:176](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L176)
+Defined in:  [src/lib/texast.ts:176](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L176)
 
 ***
 
@@ -1504,7 +1504,7 @@ The variant of a node.
 
 Overrides: [Literal](modules.md#literal).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:195](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L195)
+Defined in:  [src/lib/texast.ts:195](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L195)
 
 ##### `value`
 
@@ -1512,7 +1512,7 @@ Defined in:  [src/lib/texast.ts:195](https://github.com/TrialAndErrorOrg/parsers
 
 Overrides: [Literal](modules.md#literal).[value](modules.md#value)
 
-Defined in:  [src/lib/texast.ts:196](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L196)
+Defined in:  [src/lib/texast.ts:196](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L196)
 
 ***
 
@@ -1530,7 +1530,7 @@ Defined in:  [src/lib/texast.ts:196](https://github.com/TrialAndErrorOrg/parsers
 
 Inherited from: [Environment](modules.md#environment).[children](modules.md#children)
 
-Defined in:  [src/lib/texast.ts:137](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L137)
+Defined in:  [src/lib/texast.ts:137](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L137)
 
 ##### `data?`
 
@@ -1546,7 +1546,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 > `boolean`
 
-Defined in:  [src/lib/texast.ts:237](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L237)
+Defined in:  [src/lib/texast.ts:237](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L237)
 
 ##### `name`
 
@@ -1554,7 +1554,7 @@ Defined in:  [src/lib/texast.ts:237](https://github.com/TrialAndErrorOrg/parsers
 
 Overrides: [Environment](modules.md#environment).[name](modules.md#name)
 
-Defined in:  [src/lib/texast.ts:236](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L236)
+Defined in:  [src/lib/texast.ts:236](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L236)
 
 ##### `position?`
 
@@ -1575,7 +1575,7 @@ The variant of a node.
 
 Inherited from: [Environment](modules.md#environment).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:135](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L135)
+Defined in:  [src/lib/texast.ts:135](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L135)
 
 ***
 
@@ -1593,7 +1593,7 @@ Defined in:  [src/lib/texast.ts:135](https://github.com/TrialAndErrorOrg/parsers
 
 Overrides: UnistParent.children
 
-Defined in:  [src/lib/texast.ts:250](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L250)
+Defined in:  [src/lib/texast.ts:250](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L250)
 
 ##### `data?`
 
@@ -1620,7 +1620,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 > `${number}`
 
-Defined in:  [src/lib/texast.ts:249](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L249)
+Defined in:  [src/lib/texast.ts:249](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L249)
 
 ##### `type`
 
@@ -1628,7 +1628,7 @@ Defined in:  [src/lib/texast.ts:249](https://github.com/TrialAndErrorOrg/parsers
 
 Overrides: UnistParent.type
 
-Defined in:  [src/lib/texast.ts:248](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L248)
+Defined in:  [src/lib/texast.ts:248](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L248)
 
 ***
 
@@ -1646,7 +1646,7 @@ Defined in:  [src/lib/texast.ts:248](https://github.com/TrialAndErrorOrg/parsers
 
 Overrides: UnistParent.children
 
-Defined in:  [src/lib/texast.ts:245](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L245)
+Defined in:  [src/lib/texast.ts:245](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L245)
 
 ##### `data?`
 
@@ -1675,7 +1675,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 Overrides: UnistParent.type
 
-Defined in:  [src/lib/texast.ts:244](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L244)
+Defined in:  [src/lib/texast.ts:244](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L244)
 
 ***
 
@@ -1693,7 +1693,7 @@ Defined in:  [src/lib/texast.ts:244](https://github.com/TrialAndErrorOrg/parsers
 
 Inherited from: [Environment](modules.md#environment).[children](modules.md#children)
 
-Defined in:  [src/lib/texast.ts:137](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L137)
+Defined in:  [src/lib/texast.ts:137](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L137)
 
 ##### `data?`
 
@@ -1711,13 +1711,13 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 
 Overrides: [Environment](modules.md#environment).[name](modules.md#name)
 
-Defined in:  [src/lib/texast.ts:240](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L240)
+Defined in:  [src/lib/texast.ts:240](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L240)
 
 ##### `package?`
 
 > `"plain"` | `"tabularx"` | `"tabulary"` | `"tabu"`
 
-Defined in:  [src/lib/texast.ts:241](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L241)
+Defined in:  [src/lib/texast.ts:241](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L241)
 
 ##### `position?`
 
@@ -1738,7 +1738,7 @@ The variant of a node.
 
 Inherited from: [Environment](modules.md#environment).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:135](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L135)
+Defined in:  [src/lib/texast.ts:135](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L135)
 
 ***
 
@@ -1781,7 +1781,7 @@ The variant of a node.
 
 Overrides: [Literal](modules.md#literal).[type](modules.md#type)
 
-Defined in:  [src/lib/texast.ts:205](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L205)
+Defined in:  [src/lib/texast.ts:205](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L205)
 
 ##### `value`
 
@@ -1789,7 +1789,7 @@ Defined in:  [src/lib/texast.ts:205](https://github.com/TrialAndErrorOrg/parsers
 
 Overrides: [Literal](modules.md#literal).[value](modules.md#value)
 
-Defined in:  [src/lib/texast.ts:206](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L206)
+Defined in:  [src/lib/texast.ts:206](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L206)
 
 ***
 
@@ -1797,7 +1797,7 @@ Defined in:  [src/lib/texast.ts:206](https://github.com/TrialAndErrorOrg/parsers
 
 > [`MathEnvironmentAligned`](modules.md#mathenvironmentaligned) | [`TabularContent`](modules.md#tabularcontent)
 
-Defined in:  [src/lib/texast.ts:56](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L56)
+Defined in:  [src/lib/texast.ts:56](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L56)
 
 ***
 
@@ -1805,7 +1805,7 @@ Defined in:  [src/lib/texast.ts:56](https://github.com/TrialAndErrorOrg/parsers/
 
 > [`Command`](modules.md#command) | [`Text`](modules.md#text) | [`Comment`](modules.md#comment)
 
-Defined in:  [src/lib/texast.ts:73](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L73)
+Defined in:  [src/lib/texast.ts:73](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L73)
 
 ***
 
@@ -1813,7 +1813,7 @@ Defined in:  [src/lib/texast.ts:73](https://github.com/TrialAndErrorOrg/parsers/
 
 > [`TopLevelDocumentContent`](modules.md#topleveldocumentcontent)
 
-Defined in:  [src/lib/texast.ts:71](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L71)
+Defined in:  [src/lib/texast.ts:71](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L71)
 
 ***
 
@@ -1821,7 +1821,7 @@ Defined in:  [src/lib/texast.ts:71](https://github.com/TrialAndErrorOrg/parsers/
 
 > [`ListItem`](modules.md#listitem)
 
-Defined in:  [src/lib/texast.ts:82](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L82)
+Defined in:  [src/lib/texast.ts:82](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L82)
 
 ***
 
@@ -1829,7 +1829,7 @@ Defined in:  [src/lib/texast.ts:82](https://github.com/TrialAndErrorOrg/parsers/
 
 > [`AlignmentTab`](modules.md#alignmenttab) | [`MathCharacter`](modules.md#mathcharacter) | [`Script`](modules.md#script) | [`Command`](modules.md#command)
 
-Defined in:  [src/lib/texast.ts:64](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L64)
+Defined in:  [src/lib/texast.ts:64](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L64)
 
 ***
 
@@ -1837,7 +1837,7 @@ Defined in:  [src/lib/texast.ts:64](https://github.com/TrialAndErrorOrg/parsers/
 
 > `"array"` | `"matrix"` | `"pmatrix"` | `"vmatrix"` | `"Vmatrix"` | `"bmatrix"` | `"Bmatrix"`
 
-Defined in:  [src/lib/texast.ts:139](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L139)
+Defined in:  [src/lib/texast.ts:139](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L139)
 
 ***
 
@@ -1845,7 +1845,7 @@ Defined in:  [src/lib/texast.ts:139](https://github.com/TrialAndErrorOrg/parsers
 
 > `"&"`
 
-Defined in:  [src/lib/texast.ts:84](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L84)
+Defined in:  [src/lib/texast.ts:84](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L84)
 
 ***
 
@@ -1853,7 +1853,7 @@ Defined in:  [src/lib/texast.ts:84](https://github.com/TrialAndErrorOrg/parsers/
 
 > [`Text`](modules.md#text) | [`InlineMath`](modules.md#inlinemath) | [`Command`](modules.md#command) | [`Comment`](modules.md#comment)
 
-Defined in:  [src/lib/texast.ts:75](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L75)
+Defined in:  [src/lib/texast.ts:75](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L75)
 
 ***
 
@@ -1861,7 +1861,7 @@ Defined in:  [src/lib/texast.ts:75](https://github.com/TrialAndErrorOrg/parsers/
 
 > [`Command`](modules.md#command) | [`Comment`](modules.md#comment)
 
-Defined in:  [src/lib/texast.ts:54](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L54)
+Defined in:  [src/lib/texast.ts:54](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L54)
 
 ***
 
@@ -1869,7 +1869,7 @@ Defined in:  [src/lib/texast.ts:54](https://github.com/TrialAndErrorOrg/parsers/
 
 > [`TableCell`](modules.md#tablecell) | [`AlignmentTab`](modules.md#alignmenttab)
 
-Defined in:  [src/lib/texast.ts:60](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L60)
+Defined in:  [src/lib/texast.ts:60](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L60)
 
 ***
 
@@ -1877,7 +1877,7 @@ Defined in:  [src/lib/texast.ts:60](https://github.com/TrialAndErrorOrg/parsers/
 
 > [`Linebreak`](modules.md#linebreak) | [`TableRow`](modules.md#tablerow)
 
-Defined in:  [src/lib/texast.ts:58](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L58)
+Defined in:  [src/lib/texast.ts:58](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L58)
 
 ***
 
@@ -1885,7 +1885,7 @@ Defined in:  [src/lib/texast.ts:58](https://github.com/TrialAndErrorOrg/parsers/
 
 > [`TopLevelDocumentContent`](modules.md#topleveldocumentcontent) | [`PreambleContent`](modules.md#preamblecontent) | [`AlignmentContent`](modules.md#alignmentcontent) | [`MathContent`](modules.md#mathcontent) | [`CommandContent`](modules.md#commandcontent) | [`ParagraphContent`](modules.md#paragraphcontent) | [`CommandArg`](modules.md#commandarg) | [`ListContent`](modules.md#listcontent) | [`Text`](modules.md#text) | [`Comment`](modules.md#comment) | [`TabularContent`](modules.md#tabularcontent) | [`TableRowContent`](modules.md#tablerowcontent)
 
-Defined in:  [src/lib/texast.ts:32](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L32)
+Defined in:  [src/lib/texast.ts:32](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L32)
 
 ***
 
@@ -1893,7 +1893,7 @@ Defined in:  [src/lib/texast.ts:32](https://github.com/TrialAndErrorOrg/parsers/
 
 > [`Environment`](modules.md#environment) | [`Paragraph`](modules.md#paragraph) | [`MathContainer`](modules.md#mathcontainer) | [`Command`](modules.md#command) | [`Comment`](modules.md#comment) | [`TopLevelMathContent`](modules.md#toplevelmathcontent)
 
-Defined in:  [src/lib/texast.ts:46](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L46)
+Defined in:  [src/lib/texast.ts:46](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L46)
 
 ***
 
@@ -1901,7 +1901,7 @@ Defined in:  [src/lib/texast.ts:46](https://github.com/TrialAndErrorOrg/parsers/
 
 > [`MathContainer`](modules.md#mathcontainer) | [`InlineMath`](modules.md#inlinemath) | [`DisplayMath`](modules.md#displaymath)
 
-Defined in:  [src/lib/texast.ts:62](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/texast/texast/src/lib/texast.ts#L62)
+Defined in:  [src/lib/texast.ts:62](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/texast/texast/src/lib/texast.ts#L62)
 
 ## Syntax tree
 

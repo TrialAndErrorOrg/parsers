@@ -3,6 +3,8 @@
 
 # ooxast-util-get-style
 
+[![npm version](https://badge.fury.io/js/ooxast-util-get-style.svg)](https://badge.fury.io/js/ooxast-util-get-style) [![npm downloads](https://img.shields.io/npm/dm/ooxast-util-get-style.svg)](https://www.npmjs.com/package/ooxast-util-get-style)
+
 Get style from a `w:p` element.
 
 ## Contents
@@ -62,7 +64,7 @@ getPStyle(p: P): string | null | undefined;
 
 `string` | `null` | `undefined`
 
-Defined in:  [lib/ooxast-util-get-pstyle.ts:4](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-get-style/src/lib/ooxast-util-get-pstyle.ts#L4)
+Defined in:  [lib/ooxast-util-get-pstyle.ts:4](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-get-style/src/lib/ooxast-util-get-pstyle.ts#L4)
 
 ***
 
@@ -84,7 +86,7 @@ getRStyle(r: R): RPrJSON;
 
 [`RPrJSON`](modules.md#rprjson)
 
-Defined in:  [lib/ooxast-util-get-rstyle.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-get-style/src/lib/ooxast-util-get-rstyle.ts#L16)
+Defined in:  [lib/ooxast-util-get-rstyle.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-get-style/src/lib/ooxast-util-get-rstyle.ts#L16)
 
 ***
 
@@ -92,7 +94,7 @@ Defined in:  [lib/ooxast-util-get-rstyle.ts:16](https://github.com/TrialAndError
 
 > keyof `RPrMap`
 
-Defined in:  [lib/ooxast-util-get-rstyle.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-get-style/src/lib/ooxast-util-get-rstyle.ts#L6)
+Defined in:  [lib/ooxast-util-get-rstyle.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-get-style/src/lib/ooxast-util-get-rstyle.ts#L6)
 
 ***
 
@@ -102,7 +104,7 @@ Defined in:  [lib/ooxast-util-get-rstyle.ts:6](https://github.com/TrialAndErrorO
 > `w:val`?: `boolean`;
 > }>> : `never`
 
-Defined in:  [lib/ooxast-util-get-rstyle.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-get-style/src/lib/ooxast-util-get-rstyle.ts#L7)
+Defined in:  [lib/ooxast-util-get-rstyle.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-get-style/src/lib/ooxast-util-get-rstyle.ts#L7)
 
 ## Syntax tree
 

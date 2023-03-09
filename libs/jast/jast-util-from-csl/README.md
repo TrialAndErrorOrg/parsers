@@ -23,7 +23,7 @@ cslToFront(data: Data): void;
 
 `void`
 
-Defined in:  [lib/csl-to-jast.ts:27](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L27)
+Defined in:  [lib/csl-to-jast.ts:27](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L27)
 
 ***
 
@@ -45,7 +45,7 @@ cslToJats(data: Data | Data[]): void | RefList;
 
 `void` | `RefList`
 
-Defined in:  [lib/csl-to-jast.ts:19](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L19)
+Defined in:  [lib/csl-to-jast.ts:19](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L19)
 
 ***
 
@@ -68,7 +68,7 @@ cslToRef(data: Data, index: string | number): Ref;
 
 `Ref`
 
-Defined in:  [lib/csl-to-jast.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L44)
+Defined in:  [lib/csl-to-jast.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L44)
 
 ***
 
@@ -92,7 +92,7 @@ cslToRefList(data: Data[] | {
 
 `RefList`
 
-Defined in:  [lib/csl-to-jast.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L31)
+Defined in:  [lib/csl-to-jast.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L31)
 
 ## Install
 
@@ -101,6 +101,7 @@ This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908
 ```bash
 pnpm add jast-util-from-csl
 # or with yarn
+[![npm version](https://badge.fury.io/js/jast-util-from-csl.svg)](https://badge.fury.io/js/jast-util-from-csl) [![npm downloads](https://img.shields.io/npm/dm/jast-util-from-csl.svg)](https://www.npmjs.com/package/jast-util-from-csl)
 # yarn add jast-util-from-csl
 # or with npm
 # npm install jast-util-from-csl

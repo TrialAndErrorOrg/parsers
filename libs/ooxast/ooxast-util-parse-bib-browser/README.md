@@ -82,7 +82,7 @@ parseBib(tree: Node<Data>, options: Options): Promise<undefined | Data[]>;
 
 `Promise`<`undefined` | `Data`[]>
 
-Defined in:  [lib/ooxast-util-parse-bib-browser.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-parse-bib-browser/src/lib/ooxast-util-parse-bib-browser.ts#L12)
+Defined in:  [lib/ooxast-util-parse-bib-browser.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-parse-bib-browser/src/lib/ooxast-util-parse-bib-browser.ts#L12)
 
 ***
 
@@ -106,13 +106,13 @@ Defined in:  [lib/ooxast-util-parse-bib-browser.ts:12](https://github.com/TrialA
 | :------ | :------ |
 | `param` | `string` |
 
-Defined in:  [lib/ooxast-util-parse-bib-browser.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-parse-bib-browser/src/lib/ooxast-util-parse-bib-browser.ts#L6)
+Defined in:  [lib/ooxast-util-parse-bib-browser.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-parse-bib-browser/src/lib/ooxast-util-parse-bib-browser.ts#L6)
 
 ##### `apiUrl`
 
 > `string`
 
-Defined in:  [lib/ooxast-util-parse-bib-browser.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-parse-bib-browser/src/lib/ooxast-util-parse-bib-browser.ts#L5)
+Defined in:  [lib/ooxast-util-parse-bib-browser.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-parse-bib-browser/src/lib/ooxast-util-parse-bib-browser.ts#L5)
 
 ##### `headers?`
 
@@ -130,19 +130,19 @@ Defined in:  [lib/ooxast-util-parse-bib-browser.ts:5](https://github.com/TrialAn
 | :------ | :------ |
 | `header` | `string` |
 
-Defined in:  [lib/ooxast-util-parse-bib-browser.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-parse-bib-browser/src/lib/ooxast-util-parse-bib-browser.ts#L7)
+Defined in:  [lib/ooxast-util-parse-bib-browser.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-parse-bib-browser/src/lib/ooxast-util-parse-bib-browser.ts#L7)
 
 ##### `mailto?`
 
 > `string`
 
-Defined in:  [lib/ooxast-util-parse-bib-browser.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-parse-bib-browser/src/lib/ooxast-util-parse-bib-browser.ts#L8)
+Defined in:  [lib/ooxast-util-parse-bib-browser.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-parse-bib-browser/src/lib/ooxast-util-parse-bib-browser.ts#L8)
 
 ##### `overrideId?`
 
 > `boolean`
 
-Defined in:  [lib/ooxast-util-parse-bib-browser.ts:9](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-parse-bib-browser/src/lib/ooxast-util-parse-bib-browser.ts#L9)
+Defined in:  [lib/ooxast-util-parse-bib-browser.ts:9](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-parse-bib-browser/src/lib/ooxast-util-parse-bib-browser.ts#L9)
 
 ## Syntax tree
 

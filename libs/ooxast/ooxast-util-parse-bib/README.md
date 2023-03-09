@@ -3,6 +3,8 @@
 
 # ooxast-util-parse-bib
 
+[![npm version](https://badge.fury.io/js/ooxast-util-parse-bib.svg)](https://badge.fury.io/js/ooxast-util-parse-bib) [![npm downloads](https://img.shields.io/npm/dm/ooxast-util-parse-bib.svg)](https://www.npmjs.com/package/ooxast-util-parse-bib)
+
 Find and convert raw references to CSL-JSON using `anystyle`.
 
 Takes a bibliography array (usually of `w:p`s) and parses it using `anystyle` to CSL.
@@ -82,7 +84,7 @@ parseBib(tree: Node<Data>, options: Options): Promise<undefined | Data[]>;
 
 `Promise`<`undefined` | `Data`[]>
 
-Defined in:  [lib/ooxast-util-parse-bib.ts:13](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L13)
+Defined in:  [lib/ooxast-util-parse-bib.ts:13](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L13)
 
 ***
 
@@ -94,7 +96,7 @@ Defined in:  [lib/ooxast-util-parse-bib.ts:13](https://github.com/TrialAndErrorO
 
 > `string`
 
-Defined in:  [lib/ooxast-util-parse-bib.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L8)
+Defined in:  [lib/ooxast-util-parse-bib.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L8)
 
 ##### `apiParams?`
 
@@ -112,13 +114,13 @@ Defined in:  [lib/ooxast-util-parse-bib.ts:8](https://github.com/TrialAndErrorOr
 | :------ | :------ |
 | `param` | `string` |
 
-Defined in:  [lib/ooxast-util-parse-bib.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L6)
+Defined in:  [lib/ooxast-util-parse-bib.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L6)
 
 ##### `apiUrl?`
 
 > `string`
 
-Defined in:  [lib/ooxast-util-parse-bib.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L5)
+Defined in:  [lib/ooxast-util-parse-bib.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L5)
 
 ##### `headers?`
 
@@ -136,19 +138,19 @@ Defined in:  [lib/ooxast-util-parse-bib.ts:5](https://github.com/TrialAndErrorOr
 | :------ | :------ |
 | `header` | `string` |
 
-Defined in:  [lib/ooxast-util-parse-bib.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L7)
+Defined in:  [lib/ooxast-util-parse-bib.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L7)
 
 ##### `mailto?`
 
 > `string`
 
-Defined in:  [lib/ooxast-util-parse-bib.ts:9](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L9)
+Defined in:  [lib/ooxast-util-parse-bib.ts:9](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L9)
 
 ##### `overrideId?`
 
 > `boolean`
 
-Defined in:  [lib/ooxast-util-parse-bib.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L10)
+Defined in:  [lib/ooxast-util-parse-bib.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-parse-bib/src/lib/ooxast-util-parse-bib.ts#L10)
 
 ## Syntax tree
 

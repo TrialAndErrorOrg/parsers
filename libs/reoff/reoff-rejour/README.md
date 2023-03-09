@@ -3,6 +3,8 @@
 
 # reoff-rejour
 
+[![npm version](https://badge.fury.io/js/reoff-rejour.svg)](https://badge.fury.io/js/reoff-rejour) [![npm downloads](https://img.shields.io/npm/dm/reoff-rejour.svg)](https://www.npmjs.com/package/reoff-rejour)
+
 Plugin for `reoff` that transforms an `ooxast` syntax tree into a `jats` syntax tree, i.e. converting `.docx` to `JATS XML`.
 
 ## Contents

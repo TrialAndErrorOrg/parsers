@@ -2,14 +2,6 @@ name: release
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - 'libs/**'
-      - '.github/workflows/release.yml'
-      - 'package.json'
-      - 'tsconfig.base.json'
 
 jobs:
   release:

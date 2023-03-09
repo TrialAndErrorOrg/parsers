@@ -1,9 +1,8 @@
 import { FldChar, R, RPr, Text, VerticalAlignRun } from 'ooxast'
 import { select } from 'xast-util-select'
-import { all } from '../all'
+import { all } from '../all.js'
 import { x } from 'xastscript'
-import { J } from '../types'
-import { Italic, Bold, Underline, Strike, Sc, Element } from 'jast-types'
+import { J } from '../types.js'
 import { convertElement } from 'xast-util-is-element'
 
 //const isVert = convertElement<VerticalAlignRun>('w:vertAlign')
@@ -29,7 +28,7 @@ export function r(j: J, node: R) {
     return x(
       'xref',
       { refType: 'fn' },
-      { type: 'text', value: `[${footnoteReference.attributes?.['w:id']}]` }
+      { type: 'text', value: `[${footnoteReference.attributes?.['w:id']}]` },
     )
   }
 
@@ -58,9 +57,7 @@ export function r(j: J, node: R) {
   if (j.lastFormattedCitation || j.lastPlainCitation) {
     // check if this run looks "citey", which we just define as having a year looking string in it,
     // which looks like a string of 4 digits or like B.C.E. or A.D.
-    if (
-      /\d{4}|\d+ ?([Bb]\.? ?[Cc]\.? ?[Ee]\.?|[Aa]\.? ?[Dd]\.?)/.test(mergedText)
-    ) {
+    if (/\d{4}|\d+ ?(?:[Bb]\.? ?[Cc]\.? ?[Ee]\.?|[Aa]\.? ?[Dd]\.?)/.test(mergedText)) {
       return
     }
     j.lastFormattedCitation = undefined

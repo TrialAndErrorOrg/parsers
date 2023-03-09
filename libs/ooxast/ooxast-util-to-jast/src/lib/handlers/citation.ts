@@ -1,4 +1,4 @@
-import { J } from '../types'
+import { J } from '../types.js'
 import { Parent, T } from 'ooxast'
 import { Data as CSL } from 'csl-json'
 import { CitationItem, MendeleyCitationItem } from 'ooxast-util-citations'
@@ -54,9 +54,7 @@ export function citation(j: J, citation: T, parent: Parent) {
       // console.log(json)
       console.log(j.partialCitation)
 
-      console.error(
-        'Corrupt citation! This might be because the text is too long. Skipping...'
-      )
+      console.error('Corrupt citation! This might be because the text is too long. Skipping...')
       return
     }
 
@@ -74,17 +72,12 @@ export function citation(j: J, citation: T, parent: Parent) {
           : citation.mendeley.formattedCitation
 
       const plainCitation =
-        citetype === 'zotero'
-          ? citation.properties.plainCitation
-          : citation.mendeley.plainCitation
+        citetype === 'zotero' ? citation.properties.plainCitation : citation.mendeley.plainCitation
 
       j.lastFormattedCitation = formattedCitation
       j.lastPlainCitation = plainCitation
 
-      const sectionedCitations = formattedCitation?.replace(
-        /(\d{4}), (\d{4})/g,
-        '$1; $2'
-      )
+      const sectionedCitations = formattedCitation?.replace(/(\d{4}), (\d{4})/g, '$1; $2')
 
       const formattedCitations = sectionedCitations.split(';')
 
@@ -92,39 +85,34 @@ export function citation(j: J, citation: T, parent: Parent) {
       //   j.deleteNextRun = true
       // }
 
-      return citation.citationItems.map(
-        (cite: CitationItem | MendeleyCitationItem, i: number) => {
-          const itemData: CSL = cite.itemData
-          j.citationNumber++
-          // const citeKey =
-          const citeKey =
-            generateAuthYearFromCSL(j, itemData) || `bib${j.citationNumber}`
+      return citation.citationItems.map((cite: CitationItem | MendeleyCitationItem, i: number) => {
+        const itemData: CSL = cite.itemData
+        j.citationNumber++
+        // const citeKey =
+        const citeKey = generateAuthYearFromCSL(j, itemData) || `bib${j.citationNumber}`
 
-          j.collectCitation(itemData, citeKey)
+        j.collectCitation(itemData, citeKey)
 
-          const { id, itemData: itemdata, ...rest } = cite
-          const customCiteData = { ...rest, ...citation.properties }
-          return j(
-            itemData,
-            'xref',
+        const { id, itemData: itemdata, ...rest } = cite
+        const customCiteData = { ...rest, ...citation.properties }
+        return j(
+          itemData,
+          'xref',
+          {
+            id: `_xref-${j.citationNumber}`,
+            refType: 'bibr',
+            rid: citeKey,
+            // We store more value in the custom citation space, such as infix/suffix etc.
+            ...(customCiteData ? { customType: JSON.stringify(customCiteData) } : {}), // customType: JSON.stringify()
+          },
+          [
             {
-              id: `_xref-${j.citationNumber}`,
-              refType: 'bibr',
-              rid: citeKey,
-              // We store more value in the custom citation space, such as infix/suffix etc.
-              ...(customCiteData
-                ? { customType: JSON.stringify(customCiteData) }
-                : {}), // customType: JSON.stringify()
+              type: 'text',
+              value: formattedCitations?.[i] || `[${j.citationNumber}]`,
             },
-            [
-              {
-                type: 'text',
-                value: formattedCitations?.[i] || `[${j.citationNumber}]`,
-              },
-            ]
-          )
-        }
-      )
+          ],
+        )
+      })
     }
   }
   // Endnote/Citavi citation
@@ -147,7 +135,7 @@ function generateAuthYearFromCSL(j: J, csl: CSL): string {
     csl?.author?.[0]?.family && csl?.issued?.['date-parts']?.[0]?.[0]
       ? `${csl.author[0].family}${csl.issued['date-parts'][0][0]}`
       : `${csl.id}`,
-    csl
+    csl,
   )
 }
 function makeUniqueSuffix(j: J, key: string, data: CSL) {
@@ -162,8 +150,5 @@ function incrementSuffix(text: string) {
   if (!text.slice(-1).match(/[a-zA-Z]/)) {
     return `${text}a`
   }
-  return (
-    text.slice(0, -1) +
-    String.fromCharCode(text.charCodeAt(text.length - 1) + 1)
-  )
+  return text.slice(0, -1) + String.fromCharCode(text.charCodeAt(text.length - 1) + 1)
 }

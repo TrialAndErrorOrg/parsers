@@ -1,5 +1,5 @@
-import { one } from './one'
-import { J, JastContent, Node, Parent, Handle, JastParent } from './types'
+import { one } from './one.js'
+import { J, JastContent, Node, Parent, Handle, JastParent } from './types.js'
 
 /**
  * Convert all nodes in tree using j
@@ -11,7 +11,7 @@ import { J, JastContent, Node, Parent, Handle, JastParent } from './types'
 export function all(
   //<T extends JastContent = JastContent>
   j: J,
-  parent: Node
+  parent: Node,
 ): // Array<T extends JastParent ? T['children'][number] : JastContent>
 JastContent[] {
   // @ts-expect-error Assume `parent` is a parent.

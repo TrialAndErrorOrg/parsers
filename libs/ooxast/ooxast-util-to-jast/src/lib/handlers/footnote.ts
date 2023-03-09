@@ -1,5 +1,5 @@
-import { J, Element } from '../types'
-import { all } from '../all'
+import { J, Element } from '../types.js'
+import { all } from '../all.js'
 
 export function footnote(j: J, node: Element) {
   if (node?.attributes?.type === 'separator') return

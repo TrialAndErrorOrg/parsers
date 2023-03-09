@@ -1,18 +1,17 @@
-import { all } from '../all'
-import { body } from './body'
-import { p } from './p'
-import { root } from './root'
-import { text } from './text'
-import { wrapChildren } from '../util/wrap-children'
-import { citation } from './citation'
-import { tbl } from './tbl'
-import { footnotes } from './footnotes'
-import { footnote } from './footnote'
-import { document } from './document'
-import { r } from './r'
-import { tr } from './tr'
-import { drawing } from './drawing'
-import { tc } from './tc'
+import { all } from '../all.js'
+import { body } from './body.js'
+import { p } from './p.js'
+import { root } from './root.js'
+import { text } from './text.js'
+import { citation } from './citation.js'
+import { tbl } from './tbl.js'
+import { footnotes } from './footnotes.js'
+import { footnote } from './footnote.js'
+import { document } from './document.js'
+import { r } from './r.js'
+import { tr } from './tr.js'
+import { drawing } from './drawing.js'
+import { tc } from './tc.js'
 
 export const handlers = {
   p,
@@ -35,4 +34,6 @@ export const handlers = {
   drawing,
 }
 
-function ignore() {}
+function ignore() {
+  //
+}

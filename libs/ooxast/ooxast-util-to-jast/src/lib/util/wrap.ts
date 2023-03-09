@@ -1,20 +1,14 @@
 import { isParagraphContent } from 'jast-types'
-import { JastContent, JastP, JastParagraphContent } from '../types'
+import { JastContent, JastP, JastParagraphContent } from '../types.js'
 //import { phrasing } from 'mdast-util-phrasing'
 
 export function wrap(nodes: Array<JastContent>) {
   return runs(nodes, onphrasing)
 
-  function onphrasing(
-    nodes: Array<JastParagraphContent>
-  ): JastContent | Array<JastContent> {
+  function onphrasing(nodes: Array<JastParagraphContent>): JastContent | Array<JastContent> {
     const head = nodes[0]
 
-    if (
-      nodes.length === 1 &&
-      head.type === 'text' &&
-      (head.value === ' ' || head.value === '\n')
-    ) {
+    if (nodes.length === 1 && head.type === 'text' && (head.value === ' ' || head.value === '\n')) {
       return []
     }
 
@@ -43,10 +37,7 @@ export function wrapNeeded(nodes: Array<JastContent>): boolean {
   while (++index < nodes.length) {
     node = nodes[index]
 
-    if (
-      !isParagraphContent(node) ||
-      ('children' in node && wrapNeeded(node.children))
-    ) {
+    if (!isParagraphContent(node) || ('children' in node && wrapNeeded(node.children))) {
       return true
     }
   }
@@ -59,10 +50,8 @@ export function wrapNeeded(nodes: Array<JastContent>): boolean {
  */
 function runs(
   nodes: Array<JastContent>,
-  onphrasing: (
-    nodes: Array<JastParagraphContent>
-  ) => JastContent | Array<JastContent>,
-  onnonphrasing?: (node: JastContent) => JastContent
+  onphrasing: (nodes: Array<JastParagraphContent>) => JastContent | Array<JastContent>,
+  onnonphrasing?: (node: JastContent) => JastContent,
 ) {
   const nonphrasing = onnonphrasing || identity
   const flattened: Array<JastContent> = flatten(nodes)

@@ -1,19 +1,19 @@
-import { all } from '../all'
-import { J } from '../types'
+import { all } from '../all.js'
+import { J } from '../types.js'
 import { Tc } from 'ooxast'
 import { Td } from 'jast-types'
 import { getPr } from 'ooxast-util-properties'
 
 const createStyle = (
   name: string,
-  style: Record<string, boolean | string | Record<string, string>>
+  style: Record<string, boolean | string | Record<string, string>>,
 ) =>
   Object.entries(style)
     ?.map(
       ([key, val]) =>
         `${name}${key?.at(0)?.toUpperCase()}${key?.slice(1)}: ${
           typeof val === 'object' && 'val' in val ? val.val : `${val}`
-        }`
+        }`,
     )
     .join('; ')
 
@@ -23,9 +23,7 @@ export function tc(j: J, node: Tc): Td {
   const { tcBorders, gridSpan, vAlign, shd } = properties
 
   const shdStyle =
-    shd && typeof shd === 'object'
-      ? `background-color: ${shd.fill}; color: ${shd.color}`
-      : ''
+    shd && typeof shd === 'object' ? `background-color: ${shd.fill}; color: ${shd.color}` : ''
 
   const borderStyle =
     tcBorders && typeof tcBorders === 'object'
@@ -37,7 +35,7 @@ export function tc(j: J, node: Tc): Td {
                     ? 'dashed'
                     : 'solid'
                 } #${values.color}`
-              : ''
+              : '',
           )
           ?.join('; ')
       : ''
@@ -53,9 +51,7 @@ export function tc(j: J, node: Tc): Td {
       : {}),
     ...(shdStyle ?? borderStyle ? { style } : {}),
 
-    ...(typeof vAlign === 'object' &&
-    typeof vAlign?.val === 'string' &&
-    vAlign?.val !== 'top'
+    ...(typeof vAlign === 'object' && typeof vAlign?.val === 'string' && vAlign?.val !== 'top'
       ? { valign: vAlign.val }
       : {}),
   }

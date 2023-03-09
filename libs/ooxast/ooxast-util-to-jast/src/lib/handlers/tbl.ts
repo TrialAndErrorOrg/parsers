@@ -1,6 +1,6 @@
-import { J } from '../types'
+import { J } from '../types.js'
 import { Tbl } from 'ooxast'
-import { all } from '../all'
+import { all } from '../all.js'
 
 export function tbl(j: J, tbl: Tbl) {
   j.inTable = true

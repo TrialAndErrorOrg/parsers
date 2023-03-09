@@ -1,9 +1,7 @@
 import { P, Parent } from 'ooxast'
-import { P as JastP } from 'jast-types'
-import { all } from '../all'
-import { J, Text } from '../types'
-import { wrapChildren } from '../util/wrap-children'
-import { getPStyle } from '../util/get-pstyle'
+import { all } from '../all.js'
+import { J } from '../types.js'
+import { getPStyle } from '../util/get-pstyle.js'
 
 export function p(j: J, p: P, parent: Parent) {
   if (j.inTable) return all(j, p)

@@ -1,10 +1,8 @@
-import { J } from '../types'
+import { J } from '../types.js'
 import { convertElement, isElement } from 'xast-util-is-element'
-import { Parent, Element, P, Node, Body } from '../types'
-import { getPStyle } from './get-pstyle'
+import { Parent, Element, P, Node, Body } from '../types.js'
+import { getPStyle } from './get-pstyle.js'
 import { Sec, Body as JastBody } from 'jast-types'
-import { all } from '../all'
-import { one } from '../one'
 
 function parseDepth(str: string) {
   return parseInt(str.slice(-1), 10)
@@ -19,7 +17,7 @@ export function wrapSec(
   j: J,
   sectionCounter: number[],
   child: Element | null,
-  parent?: Parent
+  parent?: Parent,
 ): Sec | JastBody {
   const parentSec: Element = {
     type: 'element',
@@ -57,9 +55,7 @@ export function getJastHeadingLevel(p: Element) {
   return parseInt(p?.attributes?.style?.slice(-1) || '0') || 0
 }
 export function currentWrapperDepth(wrapperStack: any[]) {
-  return wrapperStack[wrapperStack.length - 1]?.attributes?.id
-    ?.replace('sec-')
-    ?.split('-')?.length
+  return wrapperStack[wrapperStack.length - 1]?.attributes?.id?.replace('sec-')?.split('-')?.length
 }
 
 export function wrapSections(j: J, bodyChildren: Element[]) {

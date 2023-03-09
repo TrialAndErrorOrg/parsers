@@ -1,9 +1,8 @@
-import { all } from '../all'
-import { J } from '../types'
+import { all } from '../all.js'
+import { J } from '../types.js'
 import { x } from 'xastscript'
 import { Article, Front, Back } from 'jast-types'
 import { Document } from 'ooxast'
-import { select } from 'xast-util-select'
 
 export function document(j: J, node: Document): Article {
   const fngroup = j.footnotes ? [j(node, 'fnGroup', {}, all(j, j.footnotes))] : []

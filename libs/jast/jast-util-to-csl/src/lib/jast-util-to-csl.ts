@@ -3,6 +3,7 @@ import {
   ElementCitation,
   Element,
   isElement,
+  Ref,
   RefList,
   Content,
   Root,
@@ -11,27 +12,29 @@ import {
 } from 'jast-types'
 import { Data as CSL, LooseNumber, Person } from 'csl-json'
 import { toString } from 'xast-util-to-string'
-import { convert } from 'unist-util-is'
-import { visit } from 'misc'
+import { convert as unistConvert } from 'unist-util-is'
+import { convertElement } from 'xast-util-is-element'
+import { select } from 'xast-util-select'
+// import { visit } from 'unist-util-visit'
+const isRefList = convertElement<RefList>('refList')
+const isRef = convertElement<Ref>('ref')
+const isElementCitation = convertElement<ElementCitation>('elementCitation')
 
 type Date = [
   [LooseNumber, (LooseNumber | undefined)?, (LooseNumber | undefined)?],
-  (
-    | [LooseNumber, (LooseNumber | undefined)?, (LooseNumber | undefined)?]
-    | undefined
-  )?
+  ([LooseNumber, (LooseNumber | undefined)?, (LooseNumber | undefined)?] | undefined)?,
 ]
 
-const isElementCitation = (element: Element): element is ElementCitation =>
-  element.name === 'elementCitation'
+// const isElementCitation = (element: Element): element is ElementCitation =>
+//   element.name === 'elementCitation'
 
 export function refListToCSL(list: RefList): CSL[] {
   const cslList: CSL[] = []
   for (const ref of list.children) {
-    if (!(isElement(ref) && ref.name === 'ref')) continue
+    if (!isRef(ref)) continue
 
     for (const citation of ref.children) {
-      if (!(isElement(citation) && isElementCitation(citation))) continue
+      if (!isElementCitation(citation)) continue
       const entry = refToCSL(citation, ref.attributes.id!)
       cslList.push(entry)
     }
@@ -148,7 +151,7 @@ export function refToCSL(citation: ElementCitation, id: string): CSL {
           ? 'article-journal'
           : citation.attributes.publicationType,
       author: [],
-    } as CSL
+    } as CSL,
   )
 
   entry.issued = {
@@ -161,30 +164,22 @@ export function refToCSL(citation: ElementCitation, id: string): CSL {
   return entry
 }
 
-const isText = convert<Text>('text')
+const isText = unistConvert<Text>('text')
 type Node = Content
 
-const merge = (
-  array: ({ [key: string]: any | any[] } | any)[]
-): { [key: string]: any | any[] } =>
-  array.reduce(
-    (
-      acc: { [key: string]: any },
-      curr: { [key: string]: any | any[] } | any
-    ) => {
-      if (typeof curr !== 'object') {
-        return acc
-      }
+const merge = (array: ({ [key: string]: any | any[] } | any)[]): { [key: string]: any | any[] } =>
+  array.reduce((acc: { [key: string]: any }, curr: { [key: string]: any | any[] } | any) => {
+    if (typeof curr !== 'object') {
+      return acc
+    }
 
-      const [key, val] = Object.entries(curr)[0]
-      if (!Array.isArray(val)) {
-        acc[key] = val
-        return acc
-      }
-      return { ...acc, [key]: [...(acc[key] || []), ...val] }
-    },
-    {}
-  )
+    const [key, val] = Object.entries(curr)[0]
+    if (!Array.isArray(val)) {
+      acc[key] = val
+      return acc
+    }
+    return { ...acc, [key]: [...(acc[key] || []), ...val] }
+  }, {})
 
 export function toCSLFront(node: Front): CSL | undefined {
   const csl = merge(one(node))
@@ -195,14 +190,17 @@ export function toCSLFront(node: Front): CSL | undefined {
 }
 
 export function toCSLBack(node: Back): CSL[] | undefined {
-  let back: CSL[] | undefined
-  visit(
-    node,
-    (element: Content) => isElement(element) && element.name === 'refList',
-    (node: RefList) => {
-      back = refListToCSL(node)
-    }
-  )
+  const reflist = select('refList', node)
+  if (!isRefList(reflist)) throw new Error('reflist is not a reflist')
+
+  const back = reflist ? refListToCSL(reflist) : undefined
+  // visit(
+  //   node,
+  //   (element: Content): element is RefList => isElement(element) && element.name === 'refList',
+  //   (node: RefList) => {
+  //     back = refListToCSL(node)
+  //   },
+  // )
   return back
 }
 
@@ -213,31 +211,35 @@ type CSLConditional<T extends Root | Front | Back> = T extends Root
   ? CSL
   : CSL[]
 
+const isFront = convertElement<Front>('front')
+const isBack = convertElement<Back>('back')
+
 /**
  * Parses either Root, Front, or Back jast-element and returns CSL JSON
  */
-export function toCSL<T extends Root | Front | Back>(
-  root: T
-): CSLConditional<T> {
+export function toCSL<T extends Root | Front | Back>(root: T): CSLConditional<T> {
   if (root.type === 'root') {
-    let front: CSL | undefined
-    let back: CSL[] | undefined
+    const frontElement = select('front', root)
+    const backElement = select('back', root)
 
-    visit(
-      root,
-      (element: Content) => isElement(element) && element.name === 'front',
-      (node: Front) => {
-        front = toCSLFront(node)
-      }
-    )
+    const front = isFront(frontElement) ? toCSLFront(frontElement) : undefined
+    const back = isBack(backElement) ? toCSLBack(backElement) : undefined
+    // (element: Content): element is Front => isElement(element) && element.name === 'front',
+    // visit(
+    //   root,
+    //   (node: Node) => {
 
-    visit(
-      root,
-      (element: Content) => isElement(element) && element.name === 'back',
-      (node: Back) => {
-        back = toCSLBack(node)
-      }
-    )
+    //     front = toCSLFront(node)
+    //   },
+    // )
+
+    // visit(
+    //   root,
+    //   (element: Content): element is Back => isElement(element) && element.name === 'back',
+    //   (node: Back) => {
+    //     back = toCSLBack(node)
+    //   },
+    // )
 
     return { front, back } as CSLConditional<T>
   }
@@ -290,9 +292,7 @@ export function one(node: Node) {
           return {
             issued: {
               'date-parts': [all(node)],
-              ...(node.attributes.iso8601Date
-                ? { literal: node.attributes.iso8601Date }
-                : {}),
+              ...(node.attributes.iso8601Date ? { literal: node.attributes.iso8601Date } : {}),
             },
           }
         }
@@ -302,9 +302,7 @@ export function one(node: Node) {
               {
                 accepted: {
                   'date-parts': [all(node)],
-                  ...(node.attributes.iso8601Date
-                    ? { literal: node.attributes.iso8601Date }
-                    : {}),
+                  ...(node.attributes.iso8601Date ? { literal: node.attributes.iso8601Date } : {}),
                 },
               },
             ],
@@ -315,9 +313,7 @@ export function one(node: Node) {
               {
                 received: {
                   'date-parts': [all(node)],
-                  ...(node.attributes.iso8601Date
-                    ? { literal: node.attributes.iso8601Date }
-                    : {}),
+                  ...(node.attributes.iso8601Date ? { literal: node.attributes.iso8601Date } : {}),
                 },
               },
             ],

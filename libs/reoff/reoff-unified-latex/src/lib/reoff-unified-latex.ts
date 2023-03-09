@@ -29,7 +29,7 @@ function mutate(
 ): ReturnType<Plugin<[Options?] | void[], OoxastRoot, Root>> {
   //Transformer<JastRoot, JastRoot> | void {
   return (node, file) => {
-    const result = toUnifiedLatex(node, options)
+    const result = toUnifiedLatex(node, file, options)
     return result
   }
 }

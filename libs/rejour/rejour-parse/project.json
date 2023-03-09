@@ -63,6 +63,8 @@
       "options": {
         "preset": "conventional",
         "trackDeps": true,
+        "push": true,
+        "baseBranch": "main",
         "postTargets": ["rejour-parse:npm", "rejour-parse:github", "rejour-parse:github-standalone"]
       },
       "dependsOn": [

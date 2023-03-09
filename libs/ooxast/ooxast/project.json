@@ -63,6 +63,8 @@
       "options": {
         "preset": "conventional",
         "trackDeps": true,
+        "push": true,
+        "baseBranch": "main",
         "postTargets": ["ooxast:npm", "ooxast:github", "ooxast:github-standalone"]
       },
       "dependsOn": [

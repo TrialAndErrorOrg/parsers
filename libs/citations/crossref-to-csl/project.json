@@ -63,6 +63,8 @@
       "options": {
         "preset": "conventional",
         "trackDeps": true,
+        "push": true,
+        "baseBranch": "main",
         "postTargets": [
           "crossref-to-csl:npm",
           "crossref-to-csl:github",

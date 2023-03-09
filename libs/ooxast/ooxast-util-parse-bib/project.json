@@ -63,6 +63,8 @@
       "options": {
         "preset": "conventional",
         "trackDeps": true,
+        "push": true,
+        "baseBranch": "main",
         "postTargets": [
           "ooxast-util-parse-bib:npm",
           "ooxast-util-parse-bib:github",

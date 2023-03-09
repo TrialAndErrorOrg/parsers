@@ -64,6 +64,8 @@
       "options": {
         "preset": "conventional",
         "trackDeps": true,
+        "push": true,
+        "baseBranch": "main",
         "postTargets": [
           "ooxast-util-to-unified-latex:npm",
           "ooxast-util-to-unified-latex:github",

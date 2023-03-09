@@ -63,6 +63,8 @@
       "options": {
         "preset": "conventional",
         "trackDeps": true,
+        "push": true,
+        "baseBranch": "main",
         "postTargets": [
           "xast-util-has-attribute:npm",
           "xast-util-has-attribute:github",

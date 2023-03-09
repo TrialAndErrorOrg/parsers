@@ -49,6 +49,8 @@
       "options": {
         "preset": "conventional",
         "trackDeps": true,
+        "push": true,
+        "baseBranch": "main",
         "postTargets": [
           "html-to-notion-blocks:npm",
           "html-to-notion-blocks:github",

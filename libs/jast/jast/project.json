@@ -63,6 +63,8 @@
       "options": {
         "preset": "conventional",
         "trackDeps": true,
+        "push": true,
+        "baseBranch": "main",
         "postTargets": ["jast-types:npm", "jast-types:github", "jast-types:github-standalone"]
       },
       "dependsOn": [

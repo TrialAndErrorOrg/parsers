@@ -63,6 +63,8 @@
       "options": {
         "preset": "conventional",
         "trackDeps": true,
+        "push": true,
+        "baseBranch": "main",
         "postTargets": ["reoff-clean:npm", "reoff-clean:github", "reoff-clean:github-standalone"]
       },
       "dependsOn": [

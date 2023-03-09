@@ -63,6 +63,8 @@
       "options": {
         "preset": "conventional",
         "trackDeps": true,
+        "push": true,
+        "baseBranch": "main",
         "postTargets": [
           "ooxast-util-to-jast:npm",
           "ooxast-util-to-jast:github",

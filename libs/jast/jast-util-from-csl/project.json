@@ -59,6 +59,8 @@
       "options": {
         "preset": "conventional",
         "trackDeps": true,
+        "push": true,
+        "baseBranch": "main",
         "postTargets": [
           "jast-util-from-csl:npm",
           "jast-util-from-csl:github",

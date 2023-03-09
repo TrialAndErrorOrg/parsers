@@ -40,6 +40,8 @@
       "executor": "@jscutlery/semver:version",
       "options": {
         "trackDeps": true,
+        "push": true,
+        "baseBranch": "main",
         "postTargets": [
           "unified-latex-stringify:npm",
           "unified-latex-stringify:github",

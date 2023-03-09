@@ -63,6 +63,8 @@
       "options": {
         "preset": "conventional",
         "trackDeps": true,
+        "push": true,
+        "baseBranch": "main",
         "postTargets": [
           "ooxast-util-remove-rsid:npm",
           "ooxast-util-remove-rsid:github",

@@ -12,7 +12,7 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "better-nx-tsc:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "rootDir": "libs/utils/misc/src",
@@ -50,12 +50,6 @@
       "options": {
         "jestConfig": "libs/utils/misc/jest.config.js",
         "passWithNoTests": true
-      }
-    },
-    "deploy": {
-      "executor": "ngx-deploy-npm:deploy",
-      "options": {
-        "access": "public"
       }
     }
   },

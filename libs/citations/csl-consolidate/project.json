@@ -27,7 +27,7 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "better-nx-tsc:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "rootDir": "libs/citations/csl-consolidate/src",
@@ -38,6 +38,7 @@
         "assets": ["libs/citations/csl-consolidate/*.md"],
         "updateBuildableProjectDepsInPackageJson": true,
         "clean": true,
+
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },
       "dependsOn": [

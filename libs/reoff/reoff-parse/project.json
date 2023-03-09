@@ -27,7 +27,7 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "better-nx-tsc:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "rootDir": "libs/reoff/reoff-parse/src",
@@ -56,6 +56,7 @@
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {
+        "preset": "conventionalcommits",
         "postTargets": ["reoff-parse:npm", "reoff-parse:github", "reoff-parse:github-standalone"],
         "trackDeps": true
       },

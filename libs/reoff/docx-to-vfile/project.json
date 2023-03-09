@@ -28,7 +28,7 @@
     },
 
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "better-nx-tsc:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "rootDir": "libs/reoff/docx-to-vfile/src",
@@ -66,6 +66,8 @@
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {
+        "preset": "conventionalcommits",
+        "trackDeps": true,
         "postTargets": [
           "docx-to-vfile:npm",
           "docx-to-vfile:github",

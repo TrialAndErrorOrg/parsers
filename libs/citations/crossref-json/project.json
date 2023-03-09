@@ -19,7 +19,7 @@
       }
     },
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "better-nx-tsc:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "rootDir": "libs/citations/crossref-json/src",
@@ -55,7 +55,11 @@
       "options": {
         "preset": "conventional",
         "trackDeps": true,
-        "postTargets": ["crossref-json:npm", "crossref-json:github", "crossref-json:github-standalone"]
+        "postTargets": [
+          "crossref-json:npm",
+          "crossref-json:github",
+          "crossref-json:github-standalone"
+        ]
       },
       "dependsOn": [
         {

@@ -1,6 +1,6 @@
 {
   "name": "jast-util-to-texast",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "dependencies": {
     "biblatex-csl-converter": "^2.0.4",
     "hast-util-is-element": "^2.1.2",

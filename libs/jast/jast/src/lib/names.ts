@@ -312,4 +312,6 @@ export const names = [
   'year',
 ]
 
-function ignore() {}
+function ignore() {
+  //
+}

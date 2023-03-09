@@ -1,4 +1,4 @@
-import { Options, Context } from './types'
+import { Options, Context } from './types.js'
 
 export function configure(base: Context, extension: Options): Context {
   let index = -1

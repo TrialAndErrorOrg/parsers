@@ -1,4 +1,4 @@
-import { Context, SafeOptions } from '../types'
+import { Context, SafeOptions } from '../types.js'
 
 /**
  * @param {Context} context
@@ -9,7 +9,7 @@ import { Context, SafeOptions } from '../types'
 export function safe(
   context: Context,
   input: string | null | undefined,
-  config: SafeOptions & { encode?: Array<string> }
+  config: SafeOptions & { encode?: Array<string> },
 ): string {
   return input || ''
 }

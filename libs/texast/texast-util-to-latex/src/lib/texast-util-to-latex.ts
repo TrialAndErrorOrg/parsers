@@ -1,7 +1,5 @@
-import { handle } from './handle'
-import { zwitch } from 'zwitch'
-import { configure } from './configure'
-import { Options, Context, Node, Handle, Join, Unsafe } from './types'
+import { handle } from './handle/index.js'
+import { Options, Node } from './types.js'
 import { isKnownNode } from 'texast'
 
 const invalid = (value: unknown) => {
@@ -11,11 +9,7 @@ const unknown = (node: Node) => {
   throw new Error(`Unknown type ${node.type}, skipping...`)
 }
 
-const handleNodeProperly = (
-  type: string,
-  node: Node,
-  options: Options = {}
-) => {
+const handleNodeProperly = (type: string, node: Node, options: Options = {}) => {
   // @ts-expect-error No it's fine we can throw everything into it
   const handleFunction = handle?.[type]
 

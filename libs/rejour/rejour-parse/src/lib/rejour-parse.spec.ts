@@ -1,5 +1,5 @@
 import { unified } from 'unified'
-import rejourParse from './rejour-parse'
+import rejourParse from './rejour-parse.js'
 import { removePosition } from 'unist-util-remove-position'
 
 describe('parser', () => {
@@ -26,7 +26,7 @@ describe('parser', () => {
 
 
     </article>`),
-      true
+      true,
     )
     console.dir(tree, { depth: null })
     expect(tree).toEqual({
@@ -48,7 +48,7 @@ describe('parser', () => {
 
 
     </article>`),
-      true
+      true,
     )
     console.dir(tree, { depth: null })
     expect(tree).toEqual({

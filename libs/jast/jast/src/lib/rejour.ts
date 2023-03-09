@@ -33,7 +33,7 @@ export interface Element extends UnistNode {
 }
 
 export function isElement(node: UnistNode): node is Element {
-  return node.hasOwnProperty('name') && node.hasOwnProperty('attributes')
+  return 'name' in node && 'attributes' in node
 }
 
 export function isParagraphContent(node: UnistNode): node is P['children'][number] {

@@ -43,7 +43,7 @@ parseTextCite(string: string, options?: Options): any[];
 
 `any`[]
 
-Defined in:  [lib/parse-text-cite.ts:34](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L34)
+Defined in:  [lib/parse-text-cite.ts:34](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L34)
 
 ***
 
@@ -51,7 +51,7 @@ Defined in:  [lib/parse-text-cite.ts:34](https://github.com/TrialAndErrorOrg/par
 
 > **`Const`** `Parser`
 
-Defined in:  [lib/parse-text-cite.ts:32](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L32)
+Defined in:  [lib/parse-text-cite.ts:32](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L32)
 
 ***
 
@@ -63,25 +63,25 @@ Defined in:  [lib/parse-text-cite.ts:32](https://github.com/TrialAndErrorOrg/par
 
 > `string`
 
-Defined in:  [lib/parse-text-cite.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L6)
+Defined in:  [lib/parse-text-cite.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L6)
 
 ##### `citationItems`
 
 > [`CitationItem`](modules.md#citationitem)[]
 
-Defined in:  [lib/parse-text-cite.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L7)
+Defined in:  [lib/parse-text-cite.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L7)
 
 ##### `originalText?`
 
 > `string`
 
-Defined in:  [lib/parse-text-cite.ts:9](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L9)
+Defined in:  [lib/parse-text-cite.ts:9](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L9)
 
 ##### `properties`
 
 > [`Properties`](modules.md#properties)
 
-Defined in:  [lib/parse-text-cite.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L8)
+Defined in:  [lib/parse-text-cite.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L8)
 
 ***
 
@@ -93,43 +93,43 @@ Defined in:  [lib/parse-text-cite.ts:8](https://github.com/TrialAndErrorOrg/pars
 
 > `string`
 
-Defined in:  [lib/parse-text-cite.ts:19](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L19)
+Defined in:  [lib/parse-text-cite.ts:19](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L19)
 
 ##### `infix?`
 
 > `string`
 
-Defined in:  [lib/parse-text-cite.ts:22](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L22)
+Defined in:  [lib/parse-text-cite.ts:22](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L22)
 
 ##### `itemData`
 
 > `Data`
 
-Defined in:  [lib/parse-text-cite.ts:18](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L18)
+Defined in:  [lib/parse-text-cite.ts:18](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L18)
 
 ##### `label?`
 
 > `string`
 
-Defined in:  [lib/parse-text-cite.ts:23](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L23)
+Defined in:  [lib/parse-text-cite.ts:23](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L23)
 
 ##### `locator?`
 
 > `string`
 
-Defined in:  [lib/parse-text-cite.ts:24](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L24)
+Defined in:  [lib/parse-text-cite.ts:24](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L24)
 
 ##### `prefix?`
 
 > `string`
 
-Defined in:  [lib/parse-text-cite.ts:20](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L20)
+Defined in:  [lib/parse-text-cite.ts:20](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L20)
 
 ##### `suffix?`
 
 > `string`
 
-Defined in:  [lib/parse-text-cite.ts:21](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L21)
+Defined in:  [lib/parse-text-cite.ts:21](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L21)
 
 ***
 
@@ -141,13 +141,13 @@ Defined in:  [lib/parse-text-cite.ts:21](https://github.com/TrialAndErrorOrg/par
 
 > `string`
 
-Defined in:  [lib/parse-text-cite.ts:14](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L14)
+Defined in:  [lib/parse-text-cite.ts:14](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L14)
 
 ##### `noteIndex`
 
 > `number`
 
-Defined in:  [lib/parse-text-cite.ts:13](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L13)
+Defined in:  [lib/parse-text-cite.ts:13](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L13)
 
 ## License
 

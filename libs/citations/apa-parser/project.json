@@ -5,7 +5,7 @@
   "projectType": "library",
   "targets": {
     "readme": {
-      "executor": "@jote/utils/readme:update-readme",
+      "executor": "utils-readme:update-readme",
       "options": {
         "readme": "libs/citations/apa-parser/README.md",
         "packageJSON": "libs/citations/apa-parser/package.json"

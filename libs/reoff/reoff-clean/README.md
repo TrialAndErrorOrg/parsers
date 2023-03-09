@@ -62,7 +62,7 @@ reoffClean(options: Options = ...): ReturnType<Plugin<[Options?] | void[], Root,
 
 `ReturnType`<`Plugin`<[`Options?`] | `void`[], `Root`, `Root`>>
 
-Defined in:  [lib/reoff-clean.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/reoff/reoff-clean/src/lib/reoff-clean.ts#L5)
+Defined in:  [lib/reoff-clean.ts:5](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/reoff/reoff-clean/src/lib/reoff-clean.ts#L5)
 
 ## Syntax tree
 

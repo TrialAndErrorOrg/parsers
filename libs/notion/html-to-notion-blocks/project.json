@@ -5,7 +5,7 @@
   "projectType": "library",
   "targets": {
     "readme": {
-      "executor": "@jote/utils/readme:update-readme",
+      "executor": "utils-readme:update-readme",
       "options": {
         "readme": "libs/notion/html-to-notion-blocks/README.md",
         "packageJSON": "libs/notion/html-to-notion-blocks/package.json"

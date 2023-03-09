@@ -31,7 +31,7 @@ new default(«destructured»: object = {}): default;
 
 [`default`](modules.md#default)
 
-Defined in:  [lib/ojs-client.ts:83](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L83)
+Defined in:  [lib/ojs-client.ts:83](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L83)
 
 #### Properties
 
@@ -64,19 +64,19 @@ Defined in:  [lib/ojs-client.ts:83](https://github.com/TrialAndErrorOrg/parsers/
 
 `Promise`<`any`>
 
-Defined in:  [lib/ojs-client.ts:77](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L77)
+Defined in:  [lib/ojs-client.ts:77](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L77)
 
 ##### `cookie`
 
 > `string`
 
-Defined in:  [lib/ojs-client.ts:75](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L75)
+Defined in:  [lib/ojs-client.ts:75](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L75)
 
 ##### `endpoint`
 
 > `string`
 
-Defined in:  [lib/ojs-client.ts:63](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L63)
+Defined in:  [lib/ojs-client.ts:63](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L63)
 
 ##### `headers`
 
@@ -100,13 +100,13 @@ Defined in:  [lib/ojs-client.ts:63](https://github.com/TrialAndErrorOrg/parsers/
 | `Cookie` | `string` |
 | `accept-version` | `string` |
 
-Defined in:  [lib/ojs-client.ts:67](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L67)
+Defined in:  [lib/ojs-client.ts:67](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L67)
 
 ##### `token`
 
 > `string`
 
-Defined in:  [lib/ojs-client.ts:65](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L65)
+Defined in:  [lib/ojs-client.ts:65](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L65)
 
 #### Methods
 
@@ -170,7 +170,7 @@ createFile(submissionId: string, body: object): Promise<unknown>;
 
 `Promise`<`unknown`>
 
-Defined in:  [lib/ojs-client.ts:359](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L359)
+Defined in:  [lib/ojs-client.ts:359](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L359)
 
 ##### `createSubmission()`
 
@@ -231,7 +231,7 @@ createSubmission(body: object): Promise<unknown>;
 
 `Promise`<`unknown`>
 
-Defined in:  [lib/ojs-client.ts:224](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L224)
+Defined in:  [lib/ojs-client.ts:224](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L224)
 
 ##### `delete()`
 
@@ -252,7 +252,7 @@ delete(path: string, query: Record<string, any> = {}): Promise<any>;
 
 `Promise`<`any`>
 
-Defined in:  [lib/ojs-client.ts:158](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L158)
+Defined in:  [lib/ojs-client.ts:158](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L158)
 
 ##### `deleteFile()`
 
@@ -277,7 +277,7 @@ deleteFile(submissionId: string, submissionFileId: string, query: object): Promi
 
 `Promise`<`unknown`>
 
-Defined in:  [lib/ojs-client.ts:387](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L387)
+Defined in:  [lib/ojs-client.ts:387](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L387)
 
 ##### `deleteSubmission()`
 
@@ -299,7 +299,7 @@ deleteSubmission(id: number): Promise<unknown>;
 
 `Promise`<`unknown`>
 
-Defined in:  [lib/ojs-client.ts:257](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L257)
+Defined in:  [lib/ojs-client.ts:257](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L257)
 
 ##### `editFile()`
 
@@ -368,7 +368,7 @@ editFile(
 
 `Promise`<`unknown`>
 
-Defined in:  [lib/ojs-client.ts:370](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L370)
+Defined in:  [lib/ojs-client.ts:370](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L370)
 
 ##### `editPublication()`
 
@@ -436,7 +436,7 @@ editPublication(submissionId: number, publicationId: number, body: object): Prom
 
 `Promise`<`unknown`>
 
-Defined in:  [lib/ojs-client.ts:312](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L312)
+Defined in:  [lib/ojs-client.ts:312](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L312)
 
 ##### `editSubmission()`
 
@@ -498,7 +498,7 @@ editSubmission(id: number, body: object): Promise<unknown>;
 
 `Promise`<`unknown`>
 
-Defined in:  [lib/ojs-client.ts:245](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L245)
+Defined in:  [lib/ojs-client.ts:245](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L245)
 
 ##### `file()`
 
@@ -523,7 +523,7 @@ file(submissionId: string, submissionFileId: string, query?: object): Promise<un
 
 `Promise`<`unknown`>
 
-Defined in:  [lib/ojs-client.ts:342](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L342)
+Defined in:  [lib/ojs-client.ts:342](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L342)
 
 ##### `files()`
 
@@ -548,7 +548,7 @@ files(submissionId: string, query?: object): Promise<unknown>;
 
 `Promise`<`unknown`>
 
-Defined in:  [lib/ojs-client.ts:331](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L331)
+Defined in:  [lib/ojs-client.ts:331](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L331)
 
 ##### `get()`
 
@@ -569,7 +569,7 @@ get(path: string, query: Record<string, any> = {}): Promise<any>;
 
 `Promise`<`any`>
 
-Defined in:  [lib/ojs-client.ts:130](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L130)
+Defined in:  [lib/ojs-client.ts:130](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L130)
 
 ##### `info()`
 
@@ -589,7 +589,7 @@ info(query: object = {}): Promise<any>;
 
 `Promise`<`any`>
 
-Defined in:  [lib/ojs-client.ts:164](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L164)
+Defined in:  [lib/ojs-client.ts:164](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L164)
 
 ##### `patch()`
 
@@ -611,7 +611,7 @@ patch(path: string, data: Record<string, any>, query: Record<string, any> = {}):
 
 `Promise`<`any`>
 
-Defined in:  [lib/ojs-client.ts:150](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L150)
+Defined in:  [lib/ojs-client.ts:150](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L150)
 
 ##### `post()`
 
@@ -633,7 +633,7 @@ post(path: string, data: Record<string, any>, query: Record<string, any> = {}): 
 
 `Promise`<`any`>
 
-Defined in:  [lib/ojs-client.ts:134](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L134)
+Defined in:  [lib/ojs-client.ts:134](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L134)
 
 ##### `postPublication()`
 
@@ -700,7 +700,7 @@ postPublication(submissionId: number, body: object): Promise<unknown>;
 
 `Promise`<`unknown`>
 
-Defined in:  [lib/ojs-client.ts:268](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L268)
+Defined in:  [lib/ojs-client.ts:268](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L268)
 
 ##### `publication()`
 
@@ -723,7 +723,7 @@ publication(submissionId: number, publicationId: number): Promise<unknown>;
 
 `Promise`<`unknown`>
 
-Defined in:  [lib/ojs-client.ts:296](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L296)
+Defined in:  [lib/ojs-client.ts:296](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L296)
 
 ##### `publications()`
 
@@ -745,7 +745,7 @@ publications(submissionId: number): Promise<unknown>;
 
 `Promise`<`unknown`>
 
-Defined in:  [lib/ojs-client.ts:283](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L283)
+Defined in:  [lib/ojs-client.ts:283](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L283)
 
 ##### `put()`
 
@@ -767,7 +767,7 @@ put(path: string, data: Record<string, any>, query: Record<string, any> = {}): P
 
 `Promise`<`any`>
 
-Defined in:  [lib/ojs-client.ts:142](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L142)
+Defined in:  [lib/ojs-client.ts:142](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L142)
 
 ##### `submission()`
 
@@ -789,7 +789,7 @@ submission(id: number): Promise<unknown>;
 
 `Promise`<`unknown`>
 
-Defined in:  [lib/ojs-client.ts:234](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L234)
+Defined in:  [lib/ojs-client.ts:234](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L234)
 
 ##### `submissions()`
 
@@ -823,7 +823,7 @@ submissions(query: object = {}): Promise<unknown>;
 
 `Promise`<`unknown`>
 
-Defined in:  [lib/ojs-client.ts:214](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/ojs-client.ts#L214)
+Defined in:  [lib/ojs-client.ts:214](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/ojs-client.ts#L214)
 
 ***
 
@@ -873,7 +873,7 @@ An announcement or news item.
 | `typeId`? | `number` | `Description`  (Optional) One of the announcement type ids. |
 | `url`? | `string` | Format: uri  `Description`  The URL to the published announcement. |
 
-Defined in:  [lib/swagger-types.ts:1859](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1859)
+Defined in:  [lib/swagger-types.ts:1859](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1859)
 
 ##### `AnnouncementSummary`
 
@@ -911,7 +911,7 @@ Defined in:  [lib/swagger-types.ts:1859](https://github.com/TrialAndErrorOrg/par
 | `typeId`? | `number` | `Description`  (Optional) One of the announcement type ids. |
 | `url`? | `string` | Format: uri  `Description`  The URL to the published announcement. |
 
-Defined in:  [lib/swagger-types.ts:1887](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1887)
+Defined in:  [lib/swagger-types.ts:1887](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1887)
 
 ##### `Author`
 
@@ -967,7 +967,7 @@ An author of a publication.
 | `userGroupId` | `number` | `Description`  The ID of this contributor's assigned user group. See userGroupName. |
 | `userGroupName`? | `string` | `Description`  The name of this contributor's role in the publication, such as 'Author' or 'Translator'. |
 
-Defined in:  [lib/swagger-types.ts:1892](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1892)
+Defined in:  [lib/swagger-types.ts:1892](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1892)
 
 ##### `Context`
 
@@ -1240,7 +1240,7 @@ A journal or press.
 | `url`? | `string` | - |
 | `urlPath` | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:1929](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1929)
+Defined in:  [lib/swagger-types.ts:1929](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1929)
 
 ##### `ContextSummary`
 
@@ -1507,7 +1507,7 @@ Defined in:  [lib/swagger-types.ts:1929](https://github.com/TrialAndErrorOrg/par
 | `url`? | `string` | - |
 | `urlPath` | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:2089](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2089)
+Defined in:  [lib/swagger-types.ts:2089](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2089)
 
 ##### `Contributor`
 
@@ -1563,7 +1563,7 @@ An author of a publication.
 | `userGroupId` | `number` | `Description`  The ID of this contributor's assigned user group. See userGroupName. |
 | `userGroupName`? | `string` | `Description`  The name of this contributor's role in the publication, such as 'Author' or 'Translator'. |
 
-Defined in:  [lib/swagger-types.ts:2263](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2263)
+Defined in:  [lib/swagger-types.ts:2263](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2263)
 
 ##### `Doi`
 
@@ -1595,7 +1595,7 @@ The Digital Object Identifier (DOI) is a persistent ID assigned to published ite
 | `resolvingUrl`? | `string` | `Description`  DOI URL that resolves to the indicated item |
 | `status`? | `number` | `Description`  Persistent identifier status  `Default`  1 |
 
-Defined in:  [lib/swagger-types.ts:2094](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2094)
+Defined in:  [lib/swagger-types.ts:2094](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2094)
 
 ##### `EmailTemplate`
 
@@ -1643,13 +1643,13 @@ A saved email message that can be sent by the application during registration, s
 | `subject` | `string` | `Description`  The subject of the email to be used in the email's subject header. |
 | `toRoleId`? | `number` | `Description`  The `ROLE_ID_*` of the user who will receive this email. |
 
-Defined in:  [lib/swagger-types.ts:2117](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2117)
+Defined in:  [lib/swagger-types.ts:2117](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2117)
 
 ##### `EmailTemplateSummary`
 
 > [`"EmailTemplate"`]
 
-Defined in:  [lib/swagger-types.ts:2145](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2145)
+Defined in:  [lib/swagger-types.ts:2145](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2145)
 
 ##### `ErrorResponse`
 
@@ -1673,13 +1673,13 @@ A response object that will be returned when the request could not be fulfilled.
 | `error`? | `string` |
 | `errorMessage`? | `string` |
 
-Defined in:  [lib/swagger-types.ts:2109](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2109)
+Defined in:  [lib/swagger-types.ts:2109](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2109)
 
 ##### `Galley`
 
 > `unknown`
 
-Defined in:  [lib/swagger-types.ts:2146](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2146)
+Defined in:  [lib/swagger-types.ts:2146](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2146)
 
 ##### `InvalidParametersResponse`
 
@@ -1701,19 +1701,19 @@ A response object that will be returned when there are validation errors for the
 
 ###### Type declaration
 
-Defined in:  [lib/swagger-types.ts:2151](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2151)
+Defined in:  [lib/swagger-types.ts:2151](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2151)
 
 ##### `Issue`
 
 > `unknown`
 
-Defined in:  [lib/swagger-types.ts:2152](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2152)
+Defined in:  [lib/swagger-types.ts:2152](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2152)
 
 ##### `IssueSummary`
 
 > `unknown`
 
-Defined in:  [lib/swagger-types.ts:2153](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2153)
+Defined in:  [lib/swagger-types.ts:2153](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2153)
 
 ##### `LocaleObject`
 
@@ -1735,7 +1735,7 @@ Key/value pairs containing data stored by locale key.
 
 ###### Type declaration
 
-Defined in:  [lib/swagger-types.ts:2158](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2158)
+Defined in:  [lib/swagger-types.ts:2158](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2158)
 
 ##### `Publication`
 
@@ -1872,7 +1872,7 @@ A published version of a submission.
 | `urlPublished`? | `string` | `Description`  The public URL for this publication or where it will be available if it has not yet been published. |
 | `version` | `number` | `Description`  The version number of this publication. Version numbers should increment by one so that the third publication of a submission will have the version number `3`. Version numbers should typically be set automatically and editorial staff should not be encouraged to modify them. |
 
-Defined in:  [lib/swagger-types.ts:2163](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2163)
+Defined in:  [lib/swagger-types.ts:2163](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2163)
 
 ##### `PublicationStats`
 
@@ -1918,7 +1918,7 @@ The total abstract and galley views for a published submission.
 | `publication.urlPublished`? | `string` |
 | `publication.urlWorkflow`? | `string` |
 
-Defined in:  [lib/swagger-types.ts:2244](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2244)
+Defined in:  [lib/swagger-types.ts:2244](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2244)
 
 ##### `ReviewRound`
 
@@ -1950,7 +1950,7 @@ A round of review assignments in the review stage.
 | `status`? | `string` |
 | `statusId`? | `number` |
 
-Defined in:  [lib/swagger-types.ts:2300](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2300)
+Defined in:  [lib/swagger-types.ts:2300](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2300)
 
 ##### `ReviewerSummary`
 
@@ -2015,13 +2015,13 @@ A special representation of a User assigned to a reviewer group. This model pres
 | `reviewsDeclined`? | `number` |
 | `userName`? | `string` |
 
-Defined in:  [lib/swagger-types.ts:2308](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2308)
+Defined in:  [lib/swagger-types.ts:2308](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2308)
 
 ##### `Section`
 
 > `unknown`
 
-Defined in:  [lib/swagger-types.ts:2325](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2325)
+Defined in:  [lib/swagger-types.ts:2325](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2325)
 
 ##### `Site`
 
@@ -2099,7 +2099,7 @@ The overall site hosting one or more contexts (journals/presses).
 | `themePluginPath`? | `string` | `Default`  default |
 | `title` | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:2330](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2330)
+Defined in:  [lib/swagger-types.ts:2330](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2330)
 
 ##### `Submission`
 
@@ -2261,7 +2261,7 @@ A submission to the journal or press.
 | `urlPublished`? | `string` | `Description`  A URL to the current publication or where it will be published. |
 | `urlWorkflow`? | `string` | `Description`  A URL to the workflow most appropriate for the current user. It will match the `urlAuthorWorkflow` or \`urlEditorialWorkflow. |
 
-Defined in:  [lib/swagger-types.ts:2367](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2367)
+Defined in:  [lib/swagger-types.ts:2367](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2367)
 
 ##### `SubmissionFile`
 
@@ -2369,7 +2369,7 @@ A submission file including associated metadata.
 | `url`? | `string` | - |
 | `viewable`? | `boolean` | - |
 
-Defined in:  [lib/swagger-types.ts:2440](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2440)
+Defined in:  [lib/swagger-types.ts:2440](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2440)
 
 ##### `ThemeOptions`
 
@@ -2393,7 +2393,7 @@ A theme with values for any of its theme options. The theme is provided in the `
 | `...`? | `string` |
 | `themePluginPath`? | `string` |
 
-Defined in:  [lib/swagger-types.ts:2514](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2514)
+Defined in:  [lib/swagger-types.ts:2514](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2514)
 
 ##### `TimelineInterval`
 
@@ -2415,7 +2415,7 @@ Defined in:  [lib/swagger-types.ts:2514](https://github.com/TrialAndErrorOrg/par
 | `label`? | `string` |
 | `value`? | `number` |
 
-Defined in:  [lib/swagger-types.ts:2518](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2518)
+Defined in:  [lib/swagger-types.ts:2518](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2518)
 
 ##### `User`
 
@@ -2531,7 +2531,7 @@ A registered user.
 | `url`? | `string` | - |
 | `userName`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:2527](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2527)
+Defined in:  [lib/swagger-types.ts:2527](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2527)
 
 ##### `UserGroup`
 
@@ -2569,7 +2569,7 @@ A user group assigned to one of the allowed roles.
 | `roleId`? | `number` |
 | `showTitle`? | `boolean` |
 
-Defined in:  [lib/swagger-types.ts:2576](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2576)
+Defined in:  [lib/swagger-types.ts:2576](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2576)
 
 ##### `UserInterest`
 
@@ -2593,7 +2593,7 @@ A user's review interests.
 | `id`? | `number` |
 | `interest`? | `string` |
 
-Defined in:  [lib/swagger-types.ts:2586](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2586)
+Defined in:  [lib/swagger-types.ts:2586](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2586)
 
 ##### `UserSummary`
 
@@ -2703,7 +2703,7 @@ Defined in:  [lib/swagger-types.ts:2586](https://github.com/TrialAndErrorOrg/par
 | `url`? | `string` | - |
 | `userName`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:2571](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2571)
+Defined in:  [lib/swagger-types.ts:2571](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L2571)
 
 ***
 
@@ -2752,7 +2752,7 @@ Do not make direct changes to the file.
 | `put.responses.400` | {     `schema`: {     }; } | The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation. |
 | `put.responses.400.schema` | {  } | - |
 
-Defined in:  [lib/swagger-types.ts:1772](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1772)
+Defined in:  [lib/swagger-types.ts:1772](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1772)
 
 ##### `/\_submissions`
 
@@ -2778,7 +2778,7 @@ Defined in:  [lib/swagger-types.ts:1772](https://github.com/TrialAndErrorOrg/par
 | `get.responses` | {     `200`: `unknown`; } | - |
 | `get.responses.200` | `unknown` | List of submissions. |
 
-Defined in:  [lib/swagger-types.ts:1842](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1842)
+Defined in:  [lib/swagger-types.ts:1842](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1842)
 
 ##### `/\_uploadPublicFile`
 
@@ -2874,7 +2874,7 @@ Defined in:  [lib/swagger-types.ts:1842](https://github.com/TrialAndErrorOrg/par
 | `post.responses.500.schema.error`? | `string` | - |
 | `post.responses.500.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:1786](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1786)
+Defined in:  [lib/swagger-types.ts:1786](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1786)
 
 ##### `/announcements`
 
@@ -2984,7 +2984,7 @@ Defined in:  [lib/swagger-types.ts:1786](https://github.com/TrialAndErrorOrg/par
 | `post.responses.400` | {     `schema`: {     }; } | The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation. |
 | `post.responses.400.schema` | {  } | - |
 
-Defined in:  [lib/swagger-types.ts:1150](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1150)
+Defined in:  [lib/swagger-types.ts:1150](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1150)
 
 ##### `/announcements/\{announcementId}`
 
@@ -3192,7 +3192,7 @@ Defined in:  [lib/swagger-types.ts:1150](https://github.com/TrialAndErrorOrg/par
 | `put.responses.404.schema.error`? | `string` | - |
 | `put.responses.404.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:1193](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1193)
+Defined in:  [lib/swagger-types.ts:1193](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1193)
 
 ##### `/contexts`
 
@@ -3649,7 +3649,7 @@ Defined in:  [lib/swagger-types.ts:1193](https://github.com/TrialAndErrorOrg/par
 | `post.responses.400` | {     `schema`: {     }; } | The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation. |
 | `post.responses.400.schema` | {  } | - |
 
-Defined in:  [lib/swagger-types.ts:928](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L928)
+Defined in:  [lib/swagger-types.ts:928](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L928)
 
 ##### `/contexts/\{contextId}`
 
@@ -4544,7 +4544,7 @@ Defined in:  [lib/swagger-types.ts:928](https://github.com/TrialAndErrorOrg/pars
 | `put.responses.404.schema.error`? | `string` | - |
 | `put.responses.404.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:972](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L972)
+Defined in:  [lib/swagger-types.ts:972](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L972)
 
 ##### `/contexts/\{contextId}/theme`
 
@@ -4654,7 +4654,7 @@ Defined in:  [lib/swagger-types.ts:972](https://github.com/TrialAndErrorOrg/pars
 | `put.responses.404.schema.error`? | `string` | - |
 | `put.responses.404.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:1046](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1046)
+Defined in:  [lib/swagger-types.ts:1046](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1046)
 
 ##### `/emailTemplates`
 
@@ -4760,7 +4760,7 @@ Defined in:  [lib/swagger-types.ts:1046](https://github.com/TrialAndErrorOrg/par
 | `post.responses.400` | {     `schema`: {     }; } |
 | `post.responses.400.schema` | {  } |
 
-Defined in:  [lib/swagger-types.ts:1267](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1267)
+Defined in:  [lib/swagger-types.ts:1267](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1267)
 
 ##### `/emailTemplates/restoreDefaults`
 
@@ -4787,7 +4787,7 @@ Defined in:  [lib/swagger-types.ts:1267](https://github.com/TrialAndErrorOrg/par
 | `delete.responses.200` | {     `schema`: `string`[]; } | A list of template keys which were deleted or reset. |
 | `delete.responses.200.schema` | `string`[] | - |
 
-Defined in:  [lib/swagger-types.ts:1387](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1387)
+Defined in:  [lib/swagger-types.ts:1387](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1387)
 
 ##### `/emailTemplates/\{key}`
 
@@ -5007,7 +5007,7 @@ Defined in:  [lib/swagger-types.ts:1387](https://github.com/TrialAndErrorOrg/par
 | `put.responses.404.schema.error`? | `string` | - |
 | `put.responses.404.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:1313](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1313)
+Defined in:  [lib/swagger-types.ts:1313](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1313)
 
 ##### `/issues`
 
@@ -5068,7 +5068,7 @@ Defined in:  [lib/swagger-types.ts:1313](https://github.com/TrialAndErrorOrg/par
 | `get.responses.400.schema.error`? | `string` | - |
 | `get.responses.400.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:754](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L754)
+Defined in:  [lib/swagger-types.ts:754](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L754)
 
 ##### `/issues/current`
 
@@ -5105,7 +5105,7 @@ Defined in:  [lib/swagger-types.ts:754](https://github.com/TrialAndErrorOrg/pars
 | `get.responses.404.schema.error`? | `string` |
 | `get.responses.404.schema.errorMessage`? | `string` |
 
-Defined in:  [lib/swagger-types.ts:791](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L791)
+Defined in:  [lib/swagger-types.ts:791](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L791)
 
 ##### `/issues/\{issueId}`
 
@@ -5150,7 +5150,7 @@ Defined in:  [lib/swagger-types.ts:791](https://github.com/TrialAndErrorOrg/pars
 | `get.responses.404.schema.error`? | `string` | - |
 | `get.responses.404.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:805](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L805)
+Defined in:  [lib/swagger-types.ts:805](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L805)
 
 ##### `/site`
 
@@ -5310,7 +5310,7 @@ Defined in:  [lib/swagger-types.ts:805](https://github.com/TrialAndErrorOrg/pars
 | `put.responses.400` | {     `schema`: {     }; } |
 | `put.responses.400.schema` | {  } |
 
-Defined in:  [lib/swagger-types.ts:1098](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1098)
+Defined in:  [lib/swagger-types.ts:1098](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1098)
 
 ##### `/site/theme`
 
@@ -5376,7 +5376,7 @@ Defined in:  [lib/swagger-types.ts:1098](https://github.com/TrialAndErrorOrg/par
 | `put.responses.400` | {     `schema`: {     }; } | The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation. |
 | `put.responses.400.schema` | {  } | - |
 
-Defined in:  [lib/swagger-types.ts:1121](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1121)
+Defined in:  [lib/swagger-types.ts:1121](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1121)
 
 ##### `/stats/editorial`
 
@@ -5445,7 +5445,7 @@ Defined in:  [lib/swagger-types.ts:1121](https://github.com/TrialAndErrorOrg/par
 | `get.responses.404.schema.error`? | `string` | - |
 | `get.responses.404.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:1398](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1398)
+Defined in:  [lib/swagger-types.ts:1398](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1398)
 
 ##### `/stats/editorial/averages`
 
@@ -5500,7 +5500,7 @@ Defined in:  [lib/swagger-types.ts:1398](https://github.com/TrialAndErrorOrg/par
 | `get.responses.404.schema.error`? | `string` | - |
 | `get.responses.404.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:1431](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1431)
+Defined in:  [lib/swagger-types.ts:1431](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1431)
 
 ##### `/stats/publications`
 
@@ -5594,7 +5594,7 @@ Defined in:  [lib/swagger-types.ts:1431](https://github.com/TrialAndErrorOrg/par
 | `get.responses.404.schema.error`? | `string` | - |
 | `get.responses.404.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:1456](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1456)
+Defined in:  [lib/swagger-types.ts:1456](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1456)
 
 ##### `/stats/publications/abstract`
 
@@ -5673,7 +5673,7 @@ Defined in:  [lib/swagger-types.ts:1456](https://github.com/TrialAndErrorOrg/par
 | `get.responses.404.schema.error`? | `string` | - |
 | `get.responses.404.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:1499](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1499)
+Defined in:  [lib/swagger-types.ts:1499](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1499)
 
 ##### `/stats/publications/galley`
 
@@ -5752,7 +5752,7 @@ Defined in:  [lib/swagger-types.ts:1499](https://github.com/TrialAndErrorOrg/par
 | `get.responses.404.schema.error`? | `string` | - |
 | `get.responses.404.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:1538](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1538)
+Defined in:  [lib/swagger-types.ts:1538](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1538)
 
 ##### `/stats/publications/\{submissionId}`
 
@@ -5846,7 +5846,7 @@ Defined in:  [lib/swagger-types.ts:1538](https://github.com/TrialAndErrorOrg/par
 | `get.responses.404.schema.error`? | `string` | - |
 | `get.responses.404.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:1577](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1577)
+Defined in:  [lib/swagger-types.ts:1577](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1577)
 
 ##### `/stats/publications/\{submissionId}/abstract`
 
@@ -5919,7 +5919,7 @@ Defined in:  [lib/swagger-types.ts:1577](https://github.com/TrialAndErrorOrg/par
 | `get.responses.404.schema.error`? | `string` | - |
 | `get.responses.404.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:1608](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1608)
+Defined in:  [lib/swagger-types.ts:1608](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1608)
 
 ##### `/stats/publications/\{submissionId}/galley`
 
@@ -5992,7 +5992,7 @@ Defined in:  [lib/swagger-types.ts:1608](https://github.com/TrialAndErrorOrg/par
 | `get.responses.404.schema.error`? | `string` | - |
 | `get.responses.404.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:1641](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1641)
+Defined in:  [lib/swagger-types.ts:1641](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1641)
 
 ##### `/stats/users`
 
@@ -6061,7 +6061,7 @@ Defined in:  [lib/swagger-types.ts:1641](https://github.com/TrialAndErrorOrg/par
 | `get.responses.404.schema.error`? | `string` | - |
 | `get.responses.404.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:1674](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1674)
+Defined in:  [lib/swagger-types.ts:1674](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1674)
 
 ##### `/submissions`
 
@@ -6504,7 +6504,7 @@ Defined in:  [lib/swagger-types.ts:1674](https://github.com/TrialAndErrorOrg/par
 | `post.responses.200.schema.urlPublished`? | `string` | `Description`  A URL to the current publication or where it will be published. |
 | `post.responses.200.schema.urlWorkflow`? | `string` | `Description`  A URL to the workflow most appropriate for the current user. It will match the `urlAuthorWorkflow` or `urlEditorialWorkflow. | | `post.responses.400`| {    `schema`: {     }; } | The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation. | | `post.responses.400.schema\` | {  } | - |
 
-Defined in:  [lib/swagger-types.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L7)
+Defined in:  [lib/swagger-types.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L7)
 
 ##### `/submissions/\{submissionId}`
 
@@ -7141,7 +7141,7 @@ Defined in:  [lib/swagger-types.ts:7](https://github.com/TrialAndErrorOrg/parser
 |`put.responses.404`| {    `schema`: {         `error`?: `string`;         `errorMessage`?: `string`;     }; } | The submission could not be found. | | `put.responses.404.schema`| {    `error`?: `string`;     `errorMessage`?: `string`; } | - | | `put.responses.404.schema.error`? | `string`| - |
 |`put.responses.404.schema.errorMessage`? | `string\` | - |
 
-Defined in:  [lib/swagger-types.ts:74](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L74)
+Defined in:  [lib/swagger-types.ts:74](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L74)
 
 ##### `/submissions/\{submissionId}/files`
 
@@ -7455,7 +7455,7 @@ Defined in:  [lib/swagger-types.ts:74](https://github.com/TrialAndErrorOrg/parse
 | `post.responses.403.schema.error`? | `string` | - |
 | `post.responses.403.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:160](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L160)
+Defined in:  [lib/swagger-types.ts:160](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L160)
 
 ##### `/submissions/\{submissionId}/files/\{submissionFileId}`
 
@@ -7938,7 +7938,7 @@ Defined in:  [lib/swagger-types.ts:160](https://github.com/TrialAndErrorOrg/pars
 | `put.responses.403.schema.error`? | `string` | - |
 | `put.responses.403.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:224](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L224)
+Defined in:  [lib/swagger-types.ts:224](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L224)
 
 ##### `/submissions/\{submissionId}/participants`
 
@@ -8038,7 +8038,7 @@ Defined in:  [lib/swagger-types.ts:224](https://github.com/TrialAndErrorOrg/pars
 | `get.responses.404.schema.error`? | `string` | - |
 | `get.responses.404.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:308](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L308)
+Defined in:  [lib/swagger-types.ts:308](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L308)
 
 ##### `/submissions/\{submissionId}/participants/\{stageId}`
 
@@ -8140,7 +8140,7 @@ Defined in:  [lib/swagger-types.ts:308](https://github.com/TrialAndErrorOrg/pars
 | `get.responses.404.schema.error`? | `string` | - |
 | `get.responses.404.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:329](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L329)
+Defined in:  [lib/swagger-types.ts:329](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L329)
 
 ##### `/submissions/\{submissionId}/publications`
 
@@ -8521,7 +8521,7 @@ Defined in:  [lib/swagger-types.ts:329](https://github.com/TrialAndErrorOrg/pars
 | `post.responses.400` | {     `schema`: {     }; } | The values you sent with the request did not pass validation. The response will contain information about which parameters failed validation. |
 | `post.responses.400.schema` | {  } | - |
 
-Defined in:  [lib/swagger-types.ts:352](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L352)
+Defined in:  [lib/swagger-types.ts:352](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L352)
 
 ##### `/submissions/\{submissionId}/publications/\{publicationId}`
 
@@ -9125,7 +9125,7 @@ Defined in:  [lib/swagger-types.ts:352](https://github.com/TrialAndErrorOrg/pars
 | `put.responses.404.schema.error`? | `string` | - |
 | `put.responses.404.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:396](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L396)
+Defined in:  [lib/swagger-types.ts:396](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L396)
 
 ##### `/submissions/\{submissionId}/publications/\{publicationId}/contributors`
 
@@ -9282,7 +9282,7 @@ Defined in:  [lib/swagger-types.ts:396](https://github.com/TrialAndErrorOrg/pars
 | `post.responses.404.schema.error`? | `string` | - |
 | `post.responses.404.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:573](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L573)
+Defined in:  [lib/swagger-types.ts:573](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L573)
 
 ##### `/submissions/\{submissionId}/publications/\{publicationId}/contributors/saveOrder`
 
@@ -9455,7 +9455,7 @@ Defined in:  [lib/swagger-types.ts:573](https://github.com/TrialAndErrorOrg/pars
 | `put.responses.404.schema.error`? | `string` |
 | `put.responses.404.schema.errorMessage`? | `string` |
 
-Defined in:  [lib/swagger-types.ts:723](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L723)
+Defined in:  [lib/swagger-types.ts:723](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L723)
 
 ##### `/submissions/\{submissionId}/publications/\{publicationId}/contributors/\{contributorId}`
 
@@ -9711,7 +9711,7 @@ Defined in:  [lib/swagger-types.ts:723](https://github.com/TrialAndErrorOrg/pars
 | `put.responses.404.schema.error`? | `string` | - |
 | `put.responses.404.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:628](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L628)
+Defined in:  [lib/swagger-types.ts:628](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L628)
 
 ##### `/submissions/\{submissionId}/publications/\{publicationId}/publish`
 
@@ -9890,7 +9890,7 @@ Defined in:  [lib/swagger-types.ts:628](https://github.com/TrialAndErrorOrg/pars
 | `put.responses.404.schema.error`? | `string` | - |
 | `put.responses.404.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:512](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L512)
+Defined in:  [lib/swagger-types.ts:512](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L512)
 
 ##### `/submissions/\{submissionId}/publications/\{publicationId}/unpublish`
 
@@ -10063,7 +10063,7 @@ Defined in:  [lib/swagger-types.ts:512](https://github.com/TrialAndErrorOrg/pars
 | `put.responses.404.schema.error`? | `string` |
 | `put.responses.404.schema.errorMessage`? | `string` |
 
-Defined in:  [lib/swagger-types.ts:547](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L547)
+Defined in:  [lib/swagger-types.ts:547](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L547)
 
 ##### `/submissions/\{submissionId}/publications/\{publicationId}/version`
 
@@ -10236,7 +10236,7 @@ Defined in:  [lib/swagger-types.ts:547](https://github.com/TrialAndErrorOrg/pars
 | `post.responses.404.schema.error`? | `string` | - |
 | `post.responses.404.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:485](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L485)
+Defined in:  [lib/swagger-types.ts:485](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L485)
 
 ##### `/temporaryFiles`
 
@@ -10298,7 +10298,7 @@ Defined in:  [lib/swagger-types.ts:485](https://github.com/TrialAndErrorOrg/pars
 | `post.responses.400.schema.error`? | `string` | - |
 | `post.responses.400.schema.errorMessage`? | `string` | - |
 
-Defined in:  [lib/swagger-types.ts:1739](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1739)
+Defined in:  [lib/swagger-types.ts:1739](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1739)
 
 ##### `/users`
 
@@ -10421,7 +10421,7 @@ Defined in:  [lib/swagger-types.ts:1739](https://github.com/TrialAndErrorOrg/par
 | `get.responses.403.schema.error`? | `string` |
 | `get.responses.403.schema.errorMessage`? | `string` |
 
-Defined in:  [lib/swagger-types.ts:826](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L826)
+Defined in:  [lib/swagger-types.ts:826](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L826)
 
 ##### `/users/reviewers`
 
@@ -10524,7 +10524,7 @@ Defined in:  [lib/swagger-types.ts:826](https://github.com/TrialAndErrorOrg/pars
 | `get.responses.403.schema.error`? | `string` |
 | `get.responses.403.schema.errorMessage`? | `string` |
 
-Defined in:  [lib/swagger-types.ts:883](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L883)
+Defined in:  [lib/swagger-types.ts:883](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L883)
 
 ##### `/users/\{userId}`
 
@@ -10654,7 +10654,7 @@ Defined in:  [lib/swagger-types.ts:883](https://github.com/TrialAndErrorOrg/pars
 | `get.responses.200.schema.url`? | `string` |
 | `get.responses.200.schema.userName`? | `string` |
 
-Defined in:  [lib/swagger-types.ts:867](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L867)
+Defined in:  [lib/swagger-types.ts:867](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L867)
 
 ##### `/vocabs`
 
@@ -10711,7 +10711,7 @@ Defined in:  [lib/swagger-types.ts:867](https://github.com/TrialAndErrorOrg/pars
 | `get.responses.404.schema.error`? | `string` |
 | `get.responses.404.schema.errorMessage`? | `string` |
 
-Defined in:  [lib/swagger-types.ts:1713](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1713)
+Defined in:  [lib/swagger-types.ts:1713](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/swagger-types.ts#L1713)
 
 ***
 
@@ -10726,7 +10726,7 @@ Defined in:  [lib/swagger-types.ts:1713](https://github.com/TrialAndErrorOrg/par
 *   `path` *extends* keyof [`paths`](modules.md#paths)
 *   `method` *extends* keyof [`paths`](modules.md#paths)[`path`]
 
-Defined in:  [lib/types.ts:70](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/types.ts#L70)
+Defined in:  [lib/types.ts:70](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/types.ts#L70)
 
 ***
 
@@ -10768,7 +10768,7 @@ Defined in:  [lib/types.ts:70](https://github.com/TrialAndErrorOrg/parsers/blob/
 | `sectionIds` | `number`[] | Filter the results by those with one or more publications assigned to a section. |
 | `status` | (`1` | `2` | `3` | `4` | `5`)[] | Filter results by one or more submission statuses. Must match the value of one of the STATUS\_QUEUED, STATUS\_SCHEDULED, STATUS\_PUBLISHED or STATUS\_DECLINED constants. |
 
-Defined in:  [lib/types.ts:3](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ojs/ojs-client/src/lib/types.ts#L3)
+Defined in:  [lib/types.ts:3](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ojs/ojs-client/src/lib/types.ts#L3)
 
 ## Install
 

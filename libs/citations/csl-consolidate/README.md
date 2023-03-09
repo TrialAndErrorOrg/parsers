@@ -27,7 +27,7 @@ consolidate(data: Data[], options: object): Promise<undefined | Data[]>;
 
 `Promise`<`undefined` | `Data`[]>
 
-Defined in:  [lib/csl-consolidate.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/citations/csl-consolidate/src/lib/csl-consolidate.ts#L12)
+Defined in:  [lib/csl-consolidate.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/csl-consolidate/src/lib/csl-consolidate.ts#L12)
 
 ***
 
@@ -50,7 +50,7 @@ dateSim(ref: Data, csl: Data): number;
 
 `number`
 
-Defined in:  [lib/csl-consolidate.ts:144](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/citations/csl-consolidate/src/lib/csl-consolidate.ts#L144)
+Defined in:  [lib/csl-consolidate.ts:144](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/csl-consolidate/src/lib/csl-consolidate.ts#L144)
 
 ## Install
 

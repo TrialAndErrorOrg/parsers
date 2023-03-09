@@ -64,7 +64,7 @@ default(options: Settings = {}): void;
 
 `void`
 
-Defined in:  [src/lib/reoff-parse.ts:59](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/reoff/reoff-parse/src/lib/reoff-parse.ts#L59)
+Defined in:  [src/lib/reoff-parse.ts:59](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/reoff/reoff-parse/src/lib/reoff-parse.ts#L59)
 
 ***
 
@@ -122,7 +122,7 @@ Defined in:  node\_modules/.pnpm/@types+unist\@2.0.6/node\_modules/@types/unist/
 The key of the file in the VFile's `data` attribute.
 Used to identify the file in the VFile and where to put it when stringifying.
 
-Defined in:  [src/lib/reoff-parse.ts:99](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/reoff/reoff-parse/src/lib/reoff-parse.ts#L99)
+Defined in:  [src/lib/reoff-parse.ts:99](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/reoff/reoff-parse/src/lib/reoff-parse.ts#L99)
 
 ##### `type`
 
@@ -142,7 +142,7 @@ Defined in:  node\_modules/.pnpm/@types+xast\@1.0.2/node\_modules/@types/xast/in
 
 > `boolean`
 
-Defined in:  [src/lib/reoff-parse.ts:11](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/reoff/reoff-parse/src/lib/reoff-parse.ts#L11)
+Defined in:  [src/lib/reoff-parse.ts:11](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/reoff/reoff-parse/src/lib/reoff-parse.ts#L11)
 
 ##### `include?`
 
@@ -181,7 +181,7 @@ const processor = unified()
  })
 ```
 
-Defined in:  [src/lib/reoff-parse.ts:56](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/reoff/reoff-parse/src/lib/reoff-parse.ts#L56)
+Defined in:  [src/lib/reoff-parse.ts:56](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/reoff/reoff-parse/src/lib/reoff-parse.ts#L56)
 
 ##### `leaveRaw?`
 
@@ -197,13 +197,13 @@ All XML are then removed from the VFile.
 
 false
 
-Defined in:  [src/lib/reoff-parse.ts:22](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/reoff/reoff-parse/src/lib/reoff-parse.ts#L22)
+Defined in:  [src/lib/reoff-parse.ts:22](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/reoff/reoff-parse/src/lib/reoff-parse.ts#L22)
 
 ##### `removeWhiteSpace?`
 
 > `boolean`
 
-Defined in:  [src/lib/reoff-parse.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/reoff/reoff-parse/src/lib/reoff-parse.ts#L10)
+Defined in:  [src/lib/reoff-parse.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/reoff/reoff-parse/src/lib/reoff-parse.ts#L10)
 
 ## Syntax tree
 

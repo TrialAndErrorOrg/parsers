@@ -1,6 +1,5 @@
-import { one } from './one'
-import { handlers } from './handlers/index'
-import { own } from './util/own'
+import { one } from './one.js'
+import { handlers } from './handlers/index.js'
 import { Data as CSL } from 'csl-json'
 
 import {
@@ -16,17 +15,15 @@ import {
   Root,
   Element,
   Text,
-} from './types'
+} from './types.js'
 import { convert } from 'unist-util-is'
 import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
 import { select } from 'xast-util-select'
-import { x } from 'xastscript'
 import { cslToRefList } from 'jast-util-from-csl'
-import { DocxVFile } from 'docx-to-vfile'
 import { VFile } from 'vfile'
 
-export { one } from './one'
-export { all } from './all'
+// export { one } from './one'
+// export { all } from './all'
 export { handlers as defaultHandlers }
 
 const block = convert(['heading', 'paragraph', 'root'])
@@ -40,18 +37,63 @@ const defaultOptions: Options = {
   columnSeparator: false,
   documentClass: { name: 'article' },
   bibname: 'References',
-
-  //relations: {},
 }
 
-export function toJast(input: VFile, userOptions: Options): JastRoot
-export function toJast(input: Root | Element | Text | VFile, userOptions: Options) {
-  const options: Options = { ...defaultOptions, ...userOptions }
+declare module 'vfile' {
+  interface DataMap {
+    parsed: {
+      [key: `${string}.xml` | `${string}.rels`]: Root
+    }
+  }
+}
+
+export function toJast(tree: Root | Element | Text, file: VFile, userOptions?: Options): JastRoot
+export function toJast(tree: Root | Element | Text, userOptions?: Options): JastRoot
+export function toJast(
+  tree: Root | Element | Text,
+  optionsOrVFile?: Options | VFile,
+  maybeOptions?: Options,
+) {
+  const options: Options = {
+    ...defaultOptions,
+    ...(optionsOrVFile instanceof VFile ? maybeOptions : optionsOrVFile),
+  }
   // const byId: { [s: string]: Element } = {}
   let jast: JastContent | JastRoot
   const citations: { [key: string | number]: CSL } = {}
 
-  const footnotes = input instanceof VFile ? input?.data?.parsed?.['word/footnotes.xml'] : undefined
+  const footnotes = tree instanceof VFile ? tree?.data?.parsed?.['word/footnotes.xml'] : undefined
+
+  const context = {
+    //  nodeById: byId,
+    baseFound: false,
+    inTable: false,
+    wrapText: true,
+    /** @type {string|null} */
+    frozenBaseUrl: null,
+    qNesting: 0,
+    handlers: options.handlers ? { ...handlers, ...options.handlers } : handlers,
+    document: options.document,
+    checked: options.checked || '[x]',
+    unchecked: options.unchecked || '[ ]',
+    quotes: options.quotes || ['"'],
+    italics: options.italics || 'emph',
+    sectionDepth: options.topSection || 0,
+    documentClass: options.documentClass || { name: 'article' },
+    bibname: options.bibname || 'bibliography',
+    columnSeparator: !!options.columnSeparator,
+    citationNumber: 0,
+    collectCitation: options.collectCitation || collectCitation,
+    parseCitation: options.parseCitation || parseCitation,
+    partialCitation: '',
+    deleteNextRun: false,
+    relations: (tree instanceof VFile
+      ? options.relations || tree.data.relations || {}
+      : options.relations || {}) as { [key: string]: string },
+    citeKeys: {},
+    citationType: options.citationType || 'mendeley',
+    footnotes: footnotes,
+  } as Context
 
   const j: J = Object.assign(
     ((
@@ -89,37 +131,7 @@ export function toJast(input: Root | Element | Text | VFile, userOptions: Option
 
       return result as JastContent
     }) as JWithProps & JWithoutProps,
-    {
-      //  nodeById: byId,
-      baseFound: false,
-      inTable: false,
-      wrapText: true,
-      /** @type {string|null} */
-      frozenBaseUrl: null,
-      qNesting: 0,
-      handlers: options.handlers ? { ...handlers, ...options.handlers } : handlers,
-      document: options.document,
-      checked: options.checked || '[x]',
-      unchecked: options.unchecked || '[ ]',
-      quotes: options.quotes || ['"'],
-      italics: options.italics || 'emph',
-      sectionDepth: options.topSection || 0,
-      documentClass: options.documentClass || { name: 'article' },
-      bibname: options.bibname || 'bibliography',
-      columnSeparator: !!options.columnSeparator,
-      citationNumber: 0,
-      collectCitation: options.collectCitation || collectCitation,
-      parseCitation: options.parseCitation || parseCitation,
-      partialCitation: '',
-      deleteNextRun: false,
-      relations:
-        input instanceof VFile
-          ? options.relations || input.data.relations || {}
-          : options.relations || {},
-      citeKeys: {},
-      citationType: options.citationType || 'mendeley',
-      footnotes: footnotes,
-    } as Context,
+    context,
   )
 
   // visit(tree, 'element', (node) => {
@@ -134,10 +146,10 @@ export function toJast(input: Root | Element | Text | VFile, userOptions: Option
   // })
 
   // @ts-expect-error: does return a transformer, that does accept any node.
-  rehypeMinifyWhitespace({ newlines: options.newlines === true })(input)
+  rehypeMinifyWhitespace({ newlines: options.newlines === true })(tree)
 
   // @ts-expect-error: does return a transformer, that does accept any node.
-  const result = one(j, input, undefined)
+  const result = one(j, tree, undefined)
 
   if (!result) {
     jast = { type: 'root', children: [] }

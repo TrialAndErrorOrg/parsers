@@ -64,7 +64,7 @@ detectCitePlugin(node: Node<Data>): string;
 
 `string`
 
-Defined in:  [lib/ooxast-util-citation-plugin.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/ooxast/ooxast-util-citation-plugin/src/lib/ooxast-util-citation-plugin.ts#L8)
+Defined in:  [lib/ooxast-util-citation-plugin.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/ooxast/ooxast-util-citation-plugin/src/lib/ooxast-util-citation-plugin.ts#L8)
 
 ## Syntax tree
 

@@ -5,7 +5,7 @@
   "projectType": "library",
   "targets": {
     "readme": {
-      "executor": "@jote/utils/readme:update-readme",
+      "executor": "utils-readme:update-readme",
       "options": {
         "readme": "libs/ooxast/ooxast/README.md",
         "packageJSON": "libs/ooxast/ooxast/package.json"

@@ -46,11 +46,11 @@ pnpm add rejour-relatex
 
 ### `default()`
 
-Plugin to bridge or mutate to rehype.
+Plugin to bridge or mutate to relatex
 
-If a destination is given, runs the destination with the new mdast
+If a destination is given, runs the destination with the new jast
 tree (bridge-mode).
-Without destination, returns the mdast tree: further plugins run on that
+Without destination, returns the jast tree: further plugins run on that
 tree (mutate-mode).
 
 #### Signature
@@ -72,11 +72,11 @@ default(this: Processor<void, Root, void, void>, ...settings: [Processor, Option
 
 Defined in:  node\_modules/.pnpm/unified\@10.1.2/node\_modules/unified/index.d.ts:531
 
-Plugin to bridge or mutate to rehype.
+Plugin to bridge or mutate to relatex
 
-If a destination is given, runs the destination with the new mdast
+If a destination is given, runs the destination with the new jast
 tree (bridge-mode).
-Without destination, returns the mdast tree: further plugins run on that
+Without destination, returns the jast tree: further plugins run on that
 tree (mutate-mode).
 
 #### Signature

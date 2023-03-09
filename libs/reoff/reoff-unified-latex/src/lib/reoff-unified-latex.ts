@@ -6,7 +6,7 @@ import { Root } from '@unified-latex/unified-latex-types'
 type Processor = UnifiedProcessor<any, any, any, any>
 /**
  * Bridge-mode.
- * Runs the destination with the new mdast tree.
+ * Runs the destination with the new unified-latex tree.
  *
  */
 function bridge(
@@ -22,7 +22,7 @@ function bridge(
 
 /**
  * Mutate-mode.
- * Further transformers run on the texast tree.
+ * Further transformers run on the unified-latex tree.
  */
 function mutate(
   options: void | Options | undefined = {},
@@ -35,12 +35,14 @@ function mutate(
 }
 
 /**
- * Plugin to bridge or mutate to relatex
+ * Plugin to bridge or mutate to unified-latex
  *
  * If a destination is given, runs the destination with the new jast
  * tree (bridge-mode).
  * Without destination, returns the jast tree: further plugins run on that
  * tree (mutate-mode).
+ *
+ * This is done so that you can use this plugin as either the plugin before the stringify plugin, or the plugin before another mutate plugin
  *
  * @param destination
  *   Optional unified processor.

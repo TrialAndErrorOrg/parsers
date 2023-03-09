@@ -56,7 +56,7 @@ default(): void;
 
 `void`
 
-Defined in:  [lib/rejour-stringify.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/rejour/rejour-stringify/src/lib/rejour-stringify.ts#L8)
+Defined in:  [lib/rejour-stringify.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/rejour/rejour-stringify/src/lib/rejour-stringify.ts#L8)
 
 ## Syntax tree
 

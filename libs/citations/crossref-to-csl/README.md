@@ -23,7 +23,7 @@ crossrefToCsl(item: CrossrefJSON): CSL;
 
 `CSL`
 
-Defined in:  [lib/crossref-to-csl.ts:52](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/citations/crossref-to-csl/src/lib/crossref-to-csl.ts#L52)
+Defined in:  [lib/crossref-to-csl.ts:52](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/citations/crossref-to-csl/src/lib/crossref-to-csl.ts#L52)
 
 ## Install
 

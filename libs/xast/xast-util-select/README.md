@@ -80,7 +80,7 @@ matches(selector: string, node?: XastNode, space?: Space): boolean;
 
 `boolean`
 
-Defined in:  [index.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/xast/xast-util-select/src/index.ts#L6)
+Defined in:  [index.ts:6](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/xast/xast-util-select/src/index.ts#L6)
 
 ***
 
@@ -104,7 +104,7 @@ select(selector: string, node?: XastNode, space?: Space): Element | null;
 
 `Element` | `null`
 
-Defined in:  [index.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/xast/xast-util-select/src/index.ts#L10)
+Defined in:  [index.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/xast/xast-util-select/src/index.ts#L10)
 
 ***
 
@@ -128,7 +128,7 @@ selectAll(selector: string, node?: XastNode, space?: Space): Element[];
 
 `Element`[]
 
-Defined in:  [index.ts:14](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/xast/xast-util-select/src/index.ts#L14)
+Defined in:  [index.ts:14](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/xast/xast-util-select/src/index.ts#L14)
 
 ## Compatibility
 

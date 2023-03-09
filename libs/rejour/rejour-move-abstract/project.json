@@ -5,7 +5,7 @@
   "projectType": "library",
   "targets": {
     "readme": {
-      "executor": "@jote/utils/readme:update-readme",
+      "executor": "utils-readme:update-readme",
       "options": {
         "readme": "libs/rejour/rejour-move-abstract/README.md",
         "packageJSON": "libs/rejour/rejour-move-abstract/package.json"

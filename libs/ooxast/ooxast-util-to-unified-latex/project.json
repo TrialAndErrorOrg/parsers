@@ -53,7 +53,7 @@
       }
     },
     "readme": {
-      "executor": "@jote/utils/readme:update-readme",
+      "executor": "utils-readme:update-readme",
       "options": {
         "readme": "libs/ooxast/ooxast-util-to-unified-latex/README.md",
         "packageJSON": "libs/ooxast/ooxast-util-to-unified-latex/package.json"

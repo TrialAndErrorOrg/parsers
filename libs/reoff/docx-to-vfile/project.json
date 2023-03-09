@@ -5,7 +5,7 @@
   "projectType": "library",
   "targets": {
     "readme": {
-      "executor": "@jote/utils/readme:update-readme",
+      "executor": "utils-readme:update-readme",
       "options": {
         "readme": "libs/reoff/docx-to-vfile/README.md",
         "packageJSON": "libs/reoff/docx-to-vfile/package.json"

@@ -62,7 +62,7 @@ default(options: Settings = {}): void;
 
 `void`
 
-Defined in:  [lib/rejour-parse.ts:18](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/rejour/rejour-parse/src/lib/rejour-parse.ts#L18)
+Defined in:  [lib/rejour-parse.ts:18](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/rejour/rejour-parse/src/lib/rejour-parse.ts#L18)
 
 ***
 
@@ -74,13 +74,13 @@ Defined in:  [lib/rejour-parse.ts:18](https://github.com/TrialAndErrorOrg/parser
 
 > `boolean`
 
-Defined in:  [lib/rejour-parse.ts:15](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/rejour/rejour-parse/src/lib/rejour-parse.ts#L15)
+Defined in:  [lib/rejour-parse.ts:15](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/rejour/rejour-parse/src/lib/rejour-parse.ts#L15)
 
 ##### `removeWhiteSpace?`
 
 > `boolean`
 
-Defined in:  [lib/rejour-parse.ts:14](https://github.com/TrialAndErrorOrg/parsers/blob/5af9c17/libs/rejour/rejour-parse/src/lib/rejour-parse.ts#L14)
+Defined in:  [lib/rejour-parse.ts:14](https://github.com/TrialAndErrorOrg/parsers/blob/d1cc864/libs/rejour/rejour-parse/src/lib/rejour-parse.ts#L14)
 
 ## Syntax tree
 

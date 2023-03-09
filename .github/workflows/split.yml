@@ -19,7 +19,7 @@ jobs:
         with:
           token: ${{ secrets.ACCESS_TOKEN }}
           org: TrialAndErrorOrg
-          match: './libs/jast/* ./libs/reoff/* ./libs/ooxast/* ./libs/rejour/* ./libs/xast/* ./libs/notion/* ./libs/citations/*'
+          match: './libs/unified-latex/* ./libs/jast/* ./libs/reoff/* ./libs/ooxast/* ./libs/rejour/* ./libs/xast/* ./libs/notion/* ./libs/citations/*'
           package-json: true
           description: true
           name: true

@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/jast-util-to-csl-0.1.0...jast-util-to-csl-0.1.1) (2023-03-09)
+
+
+### Bug Fixes
+
+* **jast-util-to-csl:** remove slow visit dependency ([936345f](https://github.com/TrialAndErrorOrg/parsers/commit/936345f4baf354bc676d9c005378720699b53eb9))
+
 ## 0.1.0 (2023-03-09)
 
 ### Dependency Updates

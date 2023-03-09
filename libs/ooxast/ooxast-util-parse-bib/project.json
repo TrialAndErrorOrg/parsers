@@ -71,13 +71,9 @@
           "ooxast-util-parse-bib:github-standalone"
         ]
       },
-      "dependsOn": [
-        {
-          "projects": "dependencies",
-          "target": "version",
-          "params": "forward"
-        }
-      ]
+      "trackDeps": true,
+      "push": true,
+      "baseBranch": "main"
     },
     "github": {
       "executor": "@jscutlery/semver:github",

@@ -67,13 +67,9 @@
         "baseBranch": "main",
         "postTargets": ["ooxast:npm", "ooxast:github", "ooxast:github-standalone"]
       },
-      "dependsOn": [
-        {
-          "projects": "dependencies",
-          "target": "version",
-          "params": "forward"
-        }
-      ]
+      "trackDeps": true,
+      "push": true,
+      "baseBranch": "main"
     },
     "github": {
       "executor": "@jscutlery/semver:github",

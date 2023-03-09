@@ -52,7 +52,7 @@
       "inputs": ["production", "^production"]
     },
     "version": {
-      "dependsOn": ["^version"],
+      "dependsOn": ["^version", "build"],
       "options": {
         "preset": "conventional",
         "trackDeps": true

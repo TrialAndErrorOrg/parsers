@@ -67,13 +67,9 @@
         "baseBranch": "main",
         "postTargets": ["reoff-rejour:npm", "reoff-rejour:github", "reoff-rejour:github-standalone"]
       },
-      "dependsOn": [
-        {
-          "projects": "dependencies",
-          "target": "version",
-          "params": "forward"
-        }
-      ]
+      "trackDeps": true,
+      "push": true,
+      "baseBranch": "main"
     },
     "github": {
       "executor": "@jscutlery/semver:github",

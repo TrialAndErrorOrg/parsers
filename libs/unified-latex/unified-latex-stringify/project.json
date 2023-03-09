@@ -41,9 +41,9 @@
       "options": {
         "trackDeps": true,
         "postTargets": [
-          "unified-latex-unified-latex-stringify:npm",
-          "unified-latex-unified-latex-stringify:github",
-          "unified-latex-unified-latex-stringify:github-standalone"
+          "unified-latex-stringify:npm",
+          "unified-latex-stringify:github",
+          "unified-latex-stringify:github-standalone"
         ]
       },
       "dependsOn": [
@@ -67,7 +67,7 @@
       "options": {
         "tag": "${tag}",
         "notes": "${notes}",
-        "repo": "TrialAndErrorOrg/unified-latex-unified-latex-stringify"
+        "repo": "TrialAndErrorOrg/unified-latex-stringify"
       }
     },
     "readme": {

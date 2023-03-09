@@ -1,7 +1,6 @@
-import {htmlToNotion} from './html-to-notion-blocks'
+import { htmlToNotion } from './html-to-notion-blocks.js'
 
 const testText = `<ul><li>Experience with working in an academic journal or publishing context.</li><li>Comfortable with reference managers (Zotero, Mendeley).</li><li>Strong opinions on how documents should look, or what makes things look pretty in general. Most academic articles range from boring to bad-looking, but it doesn't need to be that way!</li><li>Eye for detail. While it's not the typesetters job to correct the manuscript, it's almost inevitable that some small errors make their way through both peer reviewers and copy-editors.</li><li><s>Burning hatred for the Elsevier Industrial Complex.</s> Passion for Open Science.</li></ul><p><a href="hey">this is a link</a></p><p>This is <strong>bold</strong> and <em>italic</em></p><p>This is nested <code><strong><i>code and bold and italic</i></strong></code> and <strong>bold and italic</strong> and <em>italic and bold</em> and <strong><em>bold and italic and bold</em></strong></p><pre><code>const a = 1\\nconst b = 2\\nconst c = 3</code></pre>`
-
 
 describe('rehypeToNotion', () => {
   it('should work', async () => {
@@ -21,8 +20,7 @@ describe('rehypeToNotion', () => {
                 underline: false,
               },
               text: {
-                content:
-                  'Experience with working in an academic journal or publishing context.',
+                content: 'Experience with working in an academic journal or publishing context.',
                 link: undefined,
               },
               type: 'text',
@@ -46,8 +44,7 @@ describe('rehypeToNotion', () => {
                 underline: false,
               },
               text: {
-                content:
-                  'Comfortable with reference managers (Zotero, Mendeley).',
+                content: 'Comfortable with reference managers (Zotero, Mendeley).',
                 link: undefined,
               },
               type: 'text',

@@ -58,7 +58,9 @@
       "options": {
         "preset": "conventional",
         "postTargets": ["reoff-parse:npm", "reoff-parse:github", "reoff-parse:github-standalone"],
-        "trackDeps": true
+        "trackDeps": true,
+        "push": true,
+        "origin": "main"
       },
       "dependsOn": [
         {

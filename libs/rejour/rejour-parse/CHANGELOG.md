@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/rejour-parse-0.1.0...rejour-parse-0.1.1) (2023-03-09)
+
+### Dependency Updates
+
+* `jast-types` updated to version `0.1.2`
+
+### Bug Fixes
+
+* make small fixes ([3c87afc](https://github.com/TrialAndErrorOrg/parsers/commit/3c87afc5afd38971bba9157b41eb6ee83f7482c2))
+
 ## 0.1.0 (2023-03-09)
 
 ### Dependency Updates

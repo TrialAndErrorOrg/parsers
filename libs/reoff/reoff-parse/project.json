@@ -56,7 +56,7 @@
     "version": {
       "executor": "@jscutlery/semver:version",
       "options": {
-        "preset": "conventionalcommits",
+        "preset": "conventional",
         "postTargets": ["reoff-parse:npm", "reoff-parse:github", "reoff-parse:github-standalone"],
         "trackDeps": true
       },

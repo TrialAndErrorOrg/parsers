@@ -71,7 +71,7 @@
       }
     },
     "readme": {
-      "executor": "@jote/readme:update-readme",
+      "executor": "utils-readme:update-readme",
       "options": {
         "readme": "libs/unified-latex/unified-latex-stringify/README.md",
         "packageJSON": "libs/unified-latex/unified-latex-stringify/package.json"

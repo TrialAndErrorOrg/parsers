@@ -28,6 +28,19 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 * correct preset ([c2079ba](https://github.com/TrialAndErrorOrg/parsers/commit/c2079ba3a0121a5c3a2b9017a3d53214953b2c98))
 * enter a new era ([9c2a0e5](https://github.com/TrialAndErrorOrg/parsers/commit/9c2a0e505472c43d384f3cc78543ad90877b7c3d))
 
+## [0.5.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.4.1...docx-to-vfile-0.5.0) (2023-03-09)
+
+
+### Features
+
+* brand spanking new project.json ([32e19eb](https://github.com/TrialAndErrorOrg/parsers/commit/32e19ebf3f71c80336f637297d8f4db274d098bf))
+
+
+### Bug Fixes
+
+* correct preset ([c2079ba](https://github.com/TrialAndErrorOrg/parsers/commit/c2079ba3a0121a5c3a2b9017a3d53214953b2c98))
+* enter a new era ([9c2a0e5](https://github.com/TrialAndErrorOrg/parsers/commit/9c2a0e505472c43d384f3cc78543ad90877b7c3d))
+
 ## [0.4.1](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.4.0...docx-to-vfile-0.4.1) (2023-03-06)
 
 

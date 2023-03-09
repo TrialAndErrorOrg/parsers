@@ -141,12 +141,13 @@ const updateProject = (tree: Tree, options: NormalizedSchema) => {
 
   project.targets = project.targets || {}
   const buildOptions: TargetConfiguration<ExecutorOptions> = {
-    executor: `@nrwl/js:${options.compiler}`,
+    executor: `better-nx-tsc:tsc`,
     outputs: ['{options.outputPath}'],
     options: {
       rootDir: `${options.projectRoot}/src`,
       outputPath: `dist/${libsDir}/${options.projectDirectory}`,
       tsConfig: `${options.projectRoot}/tsconfig.lib.json`,
+      // @ts-expect-error i just want one man
       packageJson: `${options.projectRoot}/package.json`,
       main: `${options.projectRoot}/src/index${options.js ? '.js' : '.ts'}`,
       assets: [`${options.projectRoot}/*.md`],
@@ -205,7 +206,7 @@ const addProject = (tree: Tree, options: NormalizedSchema) => {
     addDependenciesToPackageJson(tree, {}, { '@nrwl/js': nxVersion })
 
     const build: TargetConfiguration<ExecutorOptions> = {
-      executor: `@nrwl/js:${options.compiler}`,
+      executor: `better-nx-tsc:tsc`,
       outputs: ['{options.outputPath}'],
       options: {
         rootDir: `${options.projectRoot}/src`,
@@ -298,10 +299,12 @@ const addProject = (tree: Tree, options: NormalizedSchema) => {
       outputs: ['coverage'],
       options: {
         jestConfig: `${options.projectRoot}/jest.config.js`,
+        // @ts-expect-error i want it there
         tsConfig: `${options.projectRoot}/tsconfig.spec.json`,
         passWithNoTests: true,
       },
     }
+    projectConfiguration.targets.test = test
   }
 
   projectConfiguration.targets.readme = {

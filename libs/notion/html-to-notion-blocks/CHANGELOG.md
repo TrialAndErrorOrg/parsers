@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/html-to-notion-blocks-0.1.0...html-to-notion-blocks-0.1.1) (2023-03-09)
+
+### Dependency Updates
+
+* `rehype-notion` updated to version `0.1.1`
+
+### Bug Fixes
+
+* **notion:** update notion libs to new format ([7a6f218](https://github.com/TrialAndErrorOrg/parsers/commit/7a6f21865c8889652b2e234002a4789fe6626c3b))
+
 ## 0.1.0 (2023-03-09)
 
 ### Dependency Updates

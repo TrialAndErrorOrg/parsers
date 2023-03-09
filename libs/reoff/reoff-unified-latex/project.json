@@ -1,0 +1,103 @@
+{
+  "name": "reoff-unified-latex",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/reoff/reoff-unified-latex/src",
+  "projectType": "library",
+  "targets": {
+    "readme": {
+      "executor": "@jote/utils/readme:update-readme",
+      "options": {
+        "readme": "libs/reoff/reoff-unified-latex/README.md",
+        "packageJSON": "libs/reoff/reoff-unified-latex/package.json"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/reoff/reoff-unified-latex/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/reoff/reoff-unified-latex"],
+      "options": {
+        "jestConfig": "libs/reoff/reoff-unified-latex/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "better-nx-tsc:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "rootDir": "libs/reoff/reoff-unified-latex/src",
+        "outputPath": "dist/libs/reoff/reoff-unified-latex",
+        "tsConfig": "libs/reoff/reoff-unified-latex/tsconfig.lib.json",
+        "packageJson": "libs/reoff/reoff-unified-latex/package.json",
+        "main": "libs/reoff/reoff-unified-latex/src/index.ts",
+        "assets": ["libs/reoff/reoff-unified-latex/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "clean": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      },
+      "dependsOn": [
+        {
+          "projects": "dependencies",
+          "target": "build",
+          "params": "forward"
+        },
+        {
+          "projects": "self",
+          "target": "lint"
+        }
+      ]
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventional",
+        "trackDeps": true,
+        "postTargets": [
+          "reoff-unified-latex:npm",
+          "reoff-unified-latex:github",
+          "reoff-unified-latex:github-standalone"
+        ]
+      },
+      "dependsOn": [
+        {
+          "projects": "dependencies",
+          "target": "version",
+          "params": "forward"
+        }
+      ]
+    },
+    "github": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}"
+      }
+    },
+    "github-standalone": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}",
+        "repo": "TrialAndErrorOrg/reoff-unified-latex"
+      }
+    },
+    "npm": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    }
+  },
+  "tags": []
+}

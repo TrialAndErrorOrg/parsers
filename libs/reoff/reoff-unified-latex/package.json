@@ -1,0 +1,39 @@
+{
+  "name": "reoff-unified-latex",
+  "version": "0.0.1",
+  "license": "GPL-3.0-or-later",
+  "repository": "https://github.com/TrialAndErrorOrg/reoff-unified-latex",
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
+  "description": "Plugin for `reoff` that takes an `ooxast` tree and turns it into a `unified-latex` tree, allowing for .docx to .tex conversion",
+  "keywords": [
+    "unified",
+    "reoff",
+    "ooxast",
+    "latex",
+    "docx",
+    "converter",
+    "unified-latex",
+    "ast"
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "reoff-unified-latex",
+    "tsconfig": "./tsconfig.lib.json"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    }
+  },
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "./lib"
+  ]
+}

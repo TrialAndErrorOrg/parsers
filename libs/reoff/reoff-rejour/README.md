@@ -46,12 +46,14 @@ pnpm add reoff-rejour
 
 ### `default()`
 
-Plugin to bridge or mutate to rehype.
+Plugin to bridge or mutate to jast.
 
 If a destination is given, runs the destination with the new mdast
 tree (bridge-mode).
 Without destination, returns the mdast tree: further plugins run on that
 tree (mutate-mode).
+
+This is done so that you can use this plugin as either the plugin before the stringify plugin, or the plugin before another mutate plugin
 
 #### Signature
 
@@ -72,12 +74,14 @@ default(this: Processor<void, Root, void, void>, ...settings: [Processor, Option
 
 Defined in:  node\_modules/.pnpm/unified\@10.1.2/node\_modules/unified/index.d.ts:531
 
-Plugin to bridge or mutate to rehype.
+Plugin to bridge or mutate to jast.
 
 If a destination is given, runs the destination with the new mdast
 tree (bridge-mode).
 Without destination, returns the mdast tree: further plugins run on that
 tree (mutate-mode).
+
+This is done so that you can use this plugin as either the plugin before the stringify plugin, or the plugin before another mutate plugin
 
 #### Signature
 

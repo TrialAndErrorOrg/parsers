@@ -1,5 +1,5 @@
 {
-  "name": "ooxast-ooxast-util-properties",
+  "name": "ooxast-util-properties",
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ooxast/ooxast-util-properties/src",
   "projectType": "library",
@@ -52,14 +52,11 @@
         "push": true,
         "baseBranch": "main",
         "postTargets": [
-          "ooxast-ooxast-util-properties:npm",
-          "ooxast-ooxast-util-properties:github",
-          "ooxast-ooxast-util-properties:github-standalone"
+          "ooxast-util-properties:npm",
+          "ooxast-util-properties:github",
+          "ooxast-util-properties:github-standalone"
         ]
-      },
-      "trackDeps": true,
-      "push": true,
-      "baseBranch": "main"
+      }
     },
     "github": {
       "executor": "@jscutlery/semver:github",

@@ -1,0 +1,82 @@
+{
+  "name": "unified-latex-stringify",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/unified-latex/unified-latex-stringify/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "better-nx-tsc:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "rootDir": "libs/unified-latex/unified-latex-stringify/src",
+        "outputPath": "dist/libs/unified-latex/unified-latex-stringify",
+        "tsConfig": "libs/unified-latex/unified-latex-stringify/tsconfig.lib.json",
+        "packageJson": "libs/unified-latex/unified-latex-stringify/package.json",
+        "main": "libs/unified-latex/unified-latex-stringify/src/index.ts",
+        "assets": ["libs/unified-latex/unified-latex-stringify/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "clean": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      },
+      "dependsOn": [
+        {
+          "projects": "dependencies",
+          "target": "build",
+          "params": "forward"
+        },
+        {
+          "projects": "self",
+          "target": "lint"
+        }
+      ]
+    },
+    "npm": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "trackDeps": true,
+        "postTargets": [
+          "unified-latex-unified-latex-stringify:npm",
+          "unified-latex-unified-latex-stringify:github",
+          "unified-latex-unified-latex-stringify:github-standalone"
+        ]
+      },
+      "dependsOn": [
+        {
+          "target": "version",
+          "projects": "dependencies",
+          "params": "forward"
+        }
+      ]
+    },
+    "github": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}",
+        "repo": "TrialAndErrorOrg/docx-to-vfile"
+      }
+    },
+    "github-standalone": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}",
+        "repo": "TrialAndErrorOrg/unified-latex-unified-latex-stringify"
+      }
+    },
+    "readme": {
+      "executor": "@jote/readme:update-readme",
+      "options": {
+        "readme": "libs/unified-latex/unified-latex-stringify/README.md",
+        "packageJSON": "libs/unified-latex/unified-latex-stringify/package.json"
+      }
+    }
+  },
+  "tags": []
+}

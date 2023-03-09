@@ -201,96 +201,94 @@ const addProject = (tree: Tree, options: NormalizedSchema) => {
     tags: options.parsedTags,
   } satisfies ProjectConfiguration
 
-  if (options.buildable) {
-    const { libsDir } = getWorkspaceLayout(tree)
-    addDependenciesToPackageJson(tree, {}, { '@nrwl/js': nxVersion })
+  const { libsDir } = getWorkspaceLayout(tree)
+  addDependenciesToPackageJson(tree, {}, { '@nrwl/js': nxVersion })
 
-    const build: TargetConfiguration<ExecutorOptions> = {
-      executor: `better-nx-tsc:tsc`,
-      outputs: ['{options.outputPath}'],
+  const build: TargetConfiguration<ExecutorOptions> = {
+    executor: `better-nx-tsc:tsc`,
+    outputs: ['{options.outputPath}'],
+    options: {
+      rootDir: `${options.projectRoot}/src`,
+      outputPath: `dist/${libsDir}/${options.projectDirectory}`,
+      tsConfig: `${options.projectRoot}/tsconfig.lib.json`,
+      // @ts-expect-error i want it there
+      packageJson: `${options.projectRoot}/package.json`,
+      main: `${options.projectRoot}/src/index${options.js ? '.js' : '.ts'}`,
+      assets: [`${options.projectRoot}/*.md`],
+      updateBuildableProjectDepsInPackageJson: true,
+      clean: true,
+      buildableProjectDepsInPackageJsonType: 'dependencies',
+    },
+    dependsOn: [
+      {
+        projects: 'dependencies',
+        target: 'build',
+        params: 'forward',
+      },
+      {
+        projects: 'self',
+        target: 'lint',
+      },
+    ],
+  }
+
+  projectConfiguration.targets.build = build
+
+  if (options.publishable) {
+    projectConfiguration.targets.build.options = {
+      ...projectConfiguration.targets.build.options,
+      packageJson: `${options.projectRoot}/package.json`,
+    }
+
+    projectConfiguration.targets.npm = {
+      executor: 'ngx-deploy-npm:deploy',
       options: {
-        rootDir: `${options.projectRoot}/src`,
-        outputPath: `dist/${libsDir}/${options.projectDirectory}`,
-        tsConfig: `${options.projectRoot}/tsconfig.lib.json`,
-        // @ts-expect-error i want it there
-        packageJson: `${options.projectRoot}/package.json`,
-        main: `${options.projectRoot}/src/index${options.js ? '.js' : '.ts'}`,
-        assets: [`${options.projectRoot}/*.md`],
-        updateBuildableProjectDepsInPackageJson: true,
-        clean: true,
-        buildableProjectDepsInPackageJsonType: 'dependencies',
+        access: 'public',
+      },
+    }
+
+    const version: TargetConfiguration<Partial<VersionBuilderSchema>> = {
+      executor: '@jscutlery/semver:version',
+      options: {
+        trackDeps: true,
+        postTargets: [
+          `${options.name}:npm`,
+          `${options.name}:github`,
+          `${options.name}:github-standalone`,
+        ],
       },
       dependsOn: [
         {
+          target: 'version',
           projects: 'dependencies',
-          target: 'build',
           params: 'forward',
-        },
-        {
-          projects: 'self',
-          target: 'lint',
         },
       ],
     }
 
-    projectConfiguration.targets.build = build
+    projectConfiguration.targets.version = version
 
-    if (options.publishable) {
-      projectConfiguration.targets.build.options = {
-        ...projectConfiguration.targets.build.options,
-        packageJson: `${options.projectRoot}/package.json`,
-      }
-
-      projectConfiguration.targets.npm = {
-        executor: 'ngx-deploy-npm:deploy',
-        options: {
-          access: 'public',
-        },
-      }
-
-      const version: TargetConfiguration<Partial<VersionBuilderSchema>> = {
-        executor: '@jscutlery/semver:version',
-        options: {
-          trackDeps: true,
-          postTargets: [
-            `${options.name}:npm`,
-            `${options.name}:github`,
-            `${options.name}:github-standalone`,
-          ],
-        },
-        dependsOn: [
-          {
-            target: 'version',
-            projects: 'dependencies',
-            params: 'forward',
-          },
-        ],
-      }
-
-      projectConfiguration.targets.version = version
-
-      const github: TargetConfiguration<GithubExecutorSchema> = {
-        executor: '@jscutlery/semver:github',
-        options: {
-          tag: '${tag}',
-          notes: '${notes}',
-          repo: 'TrialAndErrorOrg/docx-to-vfile',
-        },
-      }
-
-      projectConfiguration.targets.github = github
-
-      const githubStandalone: TargetConfiguration<GithubExecutorSchema> = {
-        executor: '@jscutlery/semver:github',
-        options: {
-          tag: '${tag}',
-          notes: '${notes}',
-          repo: `TrialAndErrorOrg/${name}`,
-        },
-      }
-
-      projectConfiguration.targets['github-standalone'] = githubStandalone
+    const github: TargetConfiguration<GithubExecutorSchema> = {
+      executor: '@jscutlery/semver:github',
+      options: {
+        tag: '${tag}',
+        notes: '${notes}',
+        repo: 'TrialAndErrorOrg/docx-to-vfile',
+      },
     }
+
+    projectConfiguration.targets.github = github
+
+    const githubStandalone: TargetConfiguration<GithubExecutorSchema> = {
+      executor: '@jscutlery/semver:github',
+      options: {
+        tag: '${tag}',
+        notes: '${notes}',
+        repo: `TrialAndErrorOrg/${name}`,
+      },
+    }
+
+    projectConfiguration.targets['github-standalone'] = githubStandalone
   }
 
   if (options.unitTestRunner === 'jest') {
@@ -315,7 +313,7 @@ const addProject = (tree: Tree, options: NormalizedSchema) => {
     },
   }
 
-  addProjectConfiguration(tree, options.name, projectConfiguration, options.standaloneConfig)
+  addProjectConfiguration(tree, options.name, projectConfiguration, true)
 }
 
 const addJest = async (tree: Tree, options: NormalizedSchema): Promise<GeneratorCallback> => {

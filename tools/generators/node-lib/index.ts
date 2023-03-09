@@ -168,6 +168,8 @@ const updateProject = (tree: Tree, options: NormalizedSchema) => {
     ],
   }
 
+  project.targets.build = buildOptions
+
   if (options.rootDir) {
     project.targets.build.options.srcRootForCompilationRoot = options.rootDir
   }
@@ -202,7 +204,7 @@ const addProject = (tree: Tree, options: NormalizedSchema) => {
   } satisfies ProjectConfiguration
 
   const { libsDir } = getWorkspaceLayout(tree)
-  addDependenciesToPackageJson(tree, {}, { '@nrwl/js': nxVersion })
+  // addDependenciesToPackageJson(tree, {}, { '@nrwl/js': nxVersion })
 
   const build: TargetConfiguration<ExecutorOptions> = {
     executor: `better-nx-tsc:tsc`,
@@ -284,7 +286,7 @@ const addProject = (tree: Tree, options: NormalizedSchema) => {
       options: {
         tag: '${tag}',
         notes: '${notes}',
-        repo: `TrialAndErrorOrg/${name}`,
+        repo: `TrialAndErrorOrg/${options.name}`,
       },
     }
 
@@ -306,7 +308,7 @@ const addProject = (tree: Tree, options: NormalizedSchema) => {
   }
 
   projectConfiguration.targets.readme = {
-    executor: '@jote/readme:update-readme',
+    executor: 'utils-readme:update-readme',
     options: {
       readme: `${options.projectRoot}/README.md`,
       packageJSON: `${options.projectRoot}/package.json`,

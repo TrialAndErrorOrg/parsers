@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-properties-0.1.0...ooxast-util-properties-0.1.1) (2023-03-09)
+
+
+### Bug Fixes
+
+* **ooxast-util-properties:** actually fix project.json config ([caf0e79](https://github.com/TrialAndErrorOrg/parsers/commit/caf0e79b0e2383f2053f7db5678be56d793348dd))
+
 ## 0.1.0 (2023-03-09)
 
 ### Dependency Updates

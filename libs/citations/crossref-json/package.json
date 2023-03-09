@@ -1,13 +1,13 @@
 {
   "name": "crossref-json",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
   "description": "Typings for the [Crossref JSON API](https://api.crossref.org/swagger.json)",
-  "types": "./src/index.d.ts",
-  "main": "./src/index.d.ts",
+  "types": "./index.d.ts",
+  "main": "./index.js",
   "keywords": [
     "unified",
     "abstract",
@@ -27,9 +27,7 @@
       "import": "./index.js"
     }
   },
-  "main": "./index.js",
   "module": "./index.js",
-  "types": "./index.d.ts",
   "files": [
     "index.d.ts",
     "index.js",

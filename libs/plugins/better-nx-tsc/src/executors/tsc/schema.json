@@ -80,6 +80,21 @@
         }
       ]
     },
+    "format": {
+      "description": "esm or cjs. Never really used outiside of building the package.json, where it affects the exports field. Default esm",
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": ["esm", "cjs"]
+        },
+        {
+          "type": "array",
+          "items": {
+            "enum": ["esm", "cjs"]
+          }
+        }
+      ]
+    },
     "internal": {
       "description": "Opposite of external. A list projects to be treated as internal. This feature is experimental, meaning that they will get inlined instead of referenced. Just supply a list of project names, if you want to set all projects as internal, use 'none' on external, and vice versa.",
       "oneOf": [

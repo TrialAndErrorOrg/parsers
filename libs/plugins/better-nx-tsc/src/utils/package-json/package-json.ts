@@ -1,105 +1,90 @@
-import { existsSync } from 'fs';
-import { dirname, join } from 'path';
-import {
-  InputDefinition,
-  TargetConfiguration,
-} from 'nx/src/config/workspace-json-project-json';
-import { readJsonFile } from 'nx/src/utils/fileutils';
-import { getNxRequirePaths } from 'nx/src/utils/installation-directory';
-import { workspaceRoot } from 'nx/src/utils/workspace-root';
+import { existsSync } from 'fs'
+import { dirname, join } from 'path'
+import { InputDefinition, TargetConfiguration } from 'nx/src/config/workspace-json-project-json'
+import { readJsonFile } from 'nx/src/utils/fileutils'
+import { getNxRequirePaths } from 'nx/src/utils/installation-directory'
+import { workspaceRoot } from 'nx/src/utils/workspace-root'
 
-export type PackageJsonTargetConfiguration = Omit<
-  TargetConfiguration,
-  'executor'
->;
+export type PackageJsonTargetConfiguration = Omit<TargetConfiguration, 'executor'>
 
 export interface NxProjectPackageJsonConfiguration {
-  implicitDependencies?: string[];
-  tags?: string[];
-  namedInputs?: { [inputName: string]: (string | InputDefinition)[] };
-  targets?: Record<string, PackageJsonTargetConfiguration>;
-  includedScripts?: string[];
+  implicitDependencies?: string[]
+  tags?: string[]
+  namedInputs?: { [inputName: string]: (string | InputDefinition)[] }
+  targets?: Record<string, PackageJsonTargetConfiguration>
+  includedScripts?: string[]
 }
 
-export type ArrayPackageGroup = { package: string; version: string }[];
+export type ArrayPackageGroup = { package: string; version: string }[]
 export type MixedPackageGroup =
   | (string | { package: string; version: string })[]
-  | Record<string, string>;
-export type PackageGroup = MixedPackageGroup | ArrayPackageGroup;
+  | Record<string, string>
+export type PackageGroup = MixedPackageGroup | ArrayPackageGroup
 
 export interface NxMigrationsConfiguration {
-  migrations?: string;
-  packageGroup?: PackageGroup;
+  migrations?: string
+  packageGroup?: PackageGroup
 }
 
-type PackageOverride = { [key: string]: string | PackageOverride };
+type PackageOverride = { [key: string]: string | PackageOverride }
 
 export interface PackageJson {
   // Generic Package.Json Configuration
-  name: string;
-  version: string;
-  license?: string;
-  scripts?: Record<string, string>;
-  type?: 'module' | 'commonjs';
-  main?: string;
-  types?: string;
-  module?: string;
-  exports?:
-    | string
-    | Record<
-        string,
-        string | { types?: string; require?: string; import?: string }
-      >;
-  dependencies?: Record<string, string>;
-  devDependencies?: Record<string, string>;
-  optionalDependencies?: Record<string, string>;
-  peerDependencies?: Record<string, string>;
-  peerDependenciesMeta?: Record<string, { optional: boolean }>;
-  resolutions?: Record<string, string>;
-  overrides?: PackageOverride;
-  bin?: Record<string, string>;
+  name: string
+  version: string
+  license?: string
+  scripts?: Record<string, string>
+  type?: 'module' | 'commonjs'
+  main?: string
+  types?: string
+  module?: string
+  exports?: string | Record<string, string | { types?: string; require?: string; import?: string }>
+  dependencies?: Record<string, string>
+  devDependencies?: Record<string, string>
+  optionalDependencies?: Record<string, string>
+  peerDependencies?: Record<string, string>
+  peerDependenciesMeta?: Record<string, { optional: boolean }>
+  resolutions?: Record<string, string>
+  overrides?: PackageOverride
+  bin?: Record<string, string>
   workspaces?:
     | string[]
     | {
-        packages: string[];
-      };
+        packages: string[]
+      }
 
   // Nx Project Configuration
-  nx?: NxProjectPackageJsonConfiguration;
+  nx?: NxProjectPackageJsonConfiguration
 
   // Nx Plugin Configuration
-  generators?: string;
-  schematics?: string;
-  builders?: string;
-  executors?: string;
-  'nx-migrations'?: string | NxMigrationsConfiguration;
-  'ng-update'?: string | NxMigrationsConfiguration;
+  generators?: string
+  schematics?: string
+  builders?: string
+  executors?: string
+  'nx-migrations'?: string | NxMigrationsConfiguration
+  'ng-update'?: string | NxMigrationsConfiguration
 }
 
-export function normalizePackageGroup(
-  packageGroup: PackageGroup
-): ArrayPackageGroup {
+export function normalizePackageGroup(packageGroup: PackageGroup): ArrayPackageGroup {
   return Array.isArray(packageGroup)
-    ? packageGroup.map((x) =>
-        typeof x === 'string' ? { package: x, version: '*' } : x
-      )
+    ? packageGroup.map((x) => (typeof x === 'string' ? { package: x, version: '*' } : x))
     : Object.entries(packageGroup).map(([pkg, version]) => ({
         package: pkg,
         version,
-      }));
+      }))
 }
 
 export function readNxMigrateConfig(
-  json: Partial<PackageJson>
+  json: Partial<PackageJson>,
 ): NxMigrationsConfiguration & { packageGroup?: ArrayPackageGroup } {
   const parseNxMigrationsConfig = (
-    fromJson?: string | NxMigrationsConfiguration
+    fromJson?: string | NxMigrationsConfiguration,
   ): NxMigrationsConfiguration & { packageGroup?: ArrayPackageGroup } => {
     if (!fromJson) {
-      return {};
+      return {}
     }
     if (typeof fromJson === 'string') {
-      return { migrations: fromJson, packageGroup: [] };
+      return { migrations: fromJson, packageGroup: [] }
     }
 
     return {
@@ -107,22 +92,22 @@ export function readNxMigrateConfig(
       ...(fromJson.packageGroup
         ? { packageGroup: normalizePackageGroup(fromJson.packageGroup) }
         : {}),
-    };
-  };
+    }
+  }
 
   return {
     ...parseNxMigrationsConfig(json['ng-update']),
     ...parseNxMigrationsConfig(json['nx-migrations']),
     // In case there's a `migrations` field in `package.json`
     ...parseNxMigrationsConfig(json as any),
-  };
+  }
 }
 
 export function buildTargetFromScript(
   script: string,
-  nx: NxProjectPackageJsonConfiguration
+  nx: NxProjectPackageJsonConfiguration,
 ): TargetConfiguration {
-  const nxTargetConfiguration = nx?.targets?.[script] || {};
+  const nxTargetConfiguration = nx?.targets?.[script] || {}
 
   return {
     ...nxTargetConfiguration,
@@ -131,7 +116,7 @@ export function buildTargetFromScript(
       ...(nxTargetConfiguration.options || {}),
       script,
     },
-  };
+  }
 }
 
 /**
@@ -143,23 +128,20 @@ export function buildTargetFromScript(
  */
 export function readModulePackageJsonWithoutFallbacks(
   moduleSpecifier: string,
-  requirePaths = getNxRequirePaths()
+  requirePaths = getNxRequirePaths(),
 ): {
-  packageJson: PackageJson;
-  path: string;
+  packageJson: PackageJson
+  path: string
 } {
-  const packageJsonPath: string = require.resolve(
-    `${moduleSpecifier}/package.json`,
-    {
-      paths: requirePaths,
-    }
-  );
-  const packageJson: PackageJson = readJsonFile(packageJsonPath);
+  const packageJsonPath: string = require.resolve(`${moduleSpecifier}/package.json`, {
+    paths: requirePaths,
+  })
+  const packageJson: PackageJson = readJsonFile(packageJsonPath)
 
   return {
     path: packageJsonPath,
     packageJson,
-  };
+  }
 }
 
 /**
@@ -178,40 +160,42 @@ export function readModulePackageJsonWithoutFallbacks(
  */
 export function readModulePackageJson(
   moduleSpecifier: string,
-  requirePaths = getNxRequirePaths()
+  requirePaths = getNxRequirePaths(),
 ): {
-  packageJson: PackageJson;
-  path: string;
+  packageJson: PackageJson
+  path: string
 } {
-  let packageJsonPath: string;
-  let packageJson: PackageJson;
+  let packageJsonPath: string
+  let packageJson: PackageJson
 
   try {
-    ({ path: packageJsonPath, packageJson } =
-      readModulePackageJsonWithoutFallbacks(moduleSpecifier, requirePaths));
+    ;({ path: packageJsonPath, packageJson } = readModulePackageJsonWithoutFallbacks(
+      moduleSpecifier,
+      requirePaths,
+    ))
   } catch {
     const entryPoint = require.resolve(moduleSpecifier, {
       paths: requirePaths,
-    });
+    })
 
-    let moduleRootPath = dirname(entryPoint);
-    packageJsonPath = join(moduleRootPath, 'package.json');
+    let moduleRootPath = dirname(entryPoint)
+    packageJsonPath = join(moduleRootPath, 'package.json')
 
     while (!existsSync(packageJsonPath)) {
-      moduleRootPath = dirname(moduleRootPath);
-      packageJsonPath = join(moduleRootPath, 'package.json');
+      moduleRootPath = dirname(moduleRootPath)
+      packageJsonPath = join(moduleRootPath, 'package.json')
     }
 
-    packageJson = readJsonFile(packageJsonPath);
+    packageJson = readJsonFile(packageJsonPath)
     if (packageJson.name && packageJson.name !== moduleSpecifier) {
       throw new Error(
-        `Found module ${packageJson.name} while trying to locate ${moduleSpecifier}/package.json`
-      );
+        `Found module ${packageJson.name} while trying to locate ${moduleSpecifier}/package.json`,
+      )
     }
   }
 
   return {
     packageJson,
     path: packageJsonPath,
-  };
+  }
 }

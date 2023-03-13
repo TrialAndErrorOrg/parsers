@@ -1,47 +1,39 @@
-import { ExecutorContext } from '@nrwl/devkit';
-import {
-  assetGlobsToFiles,
-  FileInputOutput,
-} from '@nrwl/workspace/src/utilities/assets';
-import type { TypeScriptCompilationOptions } from '@nrwl/workspace/src/utilities/typescript/compilation';
-import { join, resolve } from 'path';
-import {
-  CustomTransformers,
-  Program,
-  SourceFile,
-  TransformerFactory,
-} from 'typescript';
-import { CopyAssetsHandler } from '@nrwl/js/src/utils/assets/copy-assets-handler';
-import { checkDependencies } from '../../utils/check-dependencies';
+import { ExecutorContext } from '@nrwl/devkit'
+import { assetGlobsToFiles, FileInputOutput } from '@nrwl/workspace/src/utilities/assets'
+import type { TypeScriptCompilationOptions } from '@nrwl/workspace/src/utilities/typescript/compilation'
+import { join, resolve } from 'path'
+import { CustomTransformers, Program, SourceFile, TransformerFactory } from 'typescript'
+import { CopyAssetsHandler } from '@nrwl/js/src/utils/assets/copy-assets-handler'
+import { checkDependencies } from '../../utils/check-dependencies'
 import {
   getHelperDependency,
   HelperDependency,
-} from '@nrwl/js/src/utils/compiler-helper-dependency';
+} from '@nrwl/js/src/utils/compiler-helper-dependency'
 import {
   handleInliningBuild,
   isInlineGraphEmpty,
   postProcessInlinedDependencies,
-} from '../../utils/inline';
-import { updatePackageJson } from '../../utils/package-json/update-package-json';
-import { ExecutorOptions, NormalizedExecutorOptions } from './schema';
-import { compileTypeScriptFiles } from '@nrwl/js/src/utils/typescript/compile-typescript-files';
-import { loadTsTransformers } from '@nrwl/js/src/utils/typescript/load-ts-transformers';
-import { watchForSingleFileChanges } from '@nrwl/js/src/utils/watch-for-single-file-changes';
+} from '../../utils/inline'
+import { updatePackageJson } from '../../utils/package-json/update-package-json'
+import { ExecutorOptions, NormalizedExecutorOptions } from './schema'
+import { compileTypeScriptFiles } from '@nrwl/js/src/utils/typescript/compile-typescript-files'
+import { loadTsTransformers } from '@nrwl/js/src/utils/typescript/load-ts-transformers'
+import { watchForSingleFileChanges } from '@nrwl/js/src/utils/watch-for-single-file-changes'
 
 export function normalizeOptions(
   options: ExecutorOptions,
   contextRoot: string,
   sourceRoot: string,
-  projectRoot: string
+  projectRoot: string,
 ): NormalizedExecutorOptions {
-  const outputPath = join(contextRoot, options.outputPath);
-  const rootDir = options.rootDir
-    ? join(contextRoot, options.rootDir)
-    : projectRoot;
+  const outputPath = join(contextRoot, options.outputPath)
+  const rootDir = options.rootDir ? join(contextRoot, options.rootDir) : projectRoot
 
   if (options.watch == null) {
-    options.watch = false;
+    options.watch = false
   }
+
+  options.format &&= 'esm'
 
   // TODO: put back when inlining story is more stable
   // if (options.external == null) {
@@ -51,17 +43,13 @@ export function normalizeOptions(
   // }
 
   if (Array.isArray(options.external) && options.external.length > 0) {
-    const firstItem = options.external[0];
+    const firstItem = options.external[0]
     if (firstItem === 'all' || firstItem === 'none') {
-      options.external = firstItem;
+      options.external = firstItem
     }
   }
 
-  const files: FileInputOutput[] = assetGlobsToFiles(
-    options.assets,
-    contextRoot,
-    outputPath
-  );
+  const files: FileInputOutput[] = assetGlobsToFiles(options.assets, contextRoot, outputPath)
 
   return {
     ...options,
@@ -74,29 +62,27 @@ export function normalizeOptions(
     rootDir,
     mainOutputPath: resolve(
       outputPath,
-      options.main.replace(`${projectRoot}/`, '').replace('.ts', '.js')
+      options.main.replace(`${projectRoot}/`, '').replace('.ts', '.js'),
     ),
-  };
+  }
 }
 
 export function createTypeScriptCompilationOptions(
   normalizedOptions: NormalizedExecutorOptions,
-  context: ExecutorContext
+  context: ExecutorContext,
 ): TypeScriptCompilationOptions {
-  const { compilerPluginHooks } = loadTsTransformers(
-    normalizedOptions.transformers
-  );
+  const { compilerPluginHooks } = loadTsTransformers(normalizedOptions.transformers)
   const getCustomTransformers = (program: Program): CustomTransformers => ({
     before: compilerPluginHooks.beforeHooks.map(
-      (hook) => hook(program) as TransformerFactory<SourceFile>
+      (hook) => hook(program) as TransformerFactory<SourceFile>,
     ),
     after: compilerPluginHooks.afterHooks.map(
-      (hook) => hook(program) as TransformerFactory<SourceFile>
+      (hook) => hook(program) as TransformerFactory<SourceFile>,
     ),
     afterDeclarations: compilerPluginHooks.afterDeclarationsHooks.map(
-      (hook) => hook(program) as TransformerFactory<SourceFile>
+      (hook) => hook(program) as TransformerFactory<SourceFile>,
     ),
-  });
+  })
 
   return {
     outputPath: normalizedOptions.outputPath,
@@ -107,35 +93,31 @@ export function createTypeScriptCompilationOptions(
     watch: normalizedOptions.watch,
     deleteOutputPath: normalizedOptions.clean,
     getCustomTransformers,
-  };
+  }
 }
 
-export async function* tscExecutor(
-  _options: ExecutorOptions,
-  context: ExecutorContext
-) {
-  const { sourceRoot, root } =
-    context.projectsConfigurations.projects[context.projectName];
-  const options = normalizeOptions(_options, context.root, sourceRoot, root);
+export async function* tscExecutor(_options: ExecutorOptions, context: ExecutorContext) {
+  const { sourceRoot, root } = context.projectsConfigurations.projects[context.projectName]
+  const options = normalizeOptions(_options, context.root, sourceRoot, root)
 
   const { projectRoot, tmpTsConfig, target, dependencies } = checkDependencies(
     context,
-    _options.tsConfig
-  );
+    _options.tsConfig,
+  )
 
   if (tmpTsConfig) {
-    options.tsConfig = tmpTsConfig;
+    options.tsConfig = tmpTsConfig
   }
 
   const tsLibDependency = getHelperDependency(
     HelperDependency.tsc,
     options.tsConfig,
     dependencies,
-    context.projectGraph
-  );
+    context.projectGraph,
+  )
 
   if (tsLibDependency) {
-    dependencies.push(tsLibDependency);
+    dependencies.push(tsLibDependency)
   }
 
   const assetHandler = new CopyAssetsHandler({
@@ -143,58 +125,46 @@ export async function* tscExecutor(
     rootDir: context.root,
     outputDir: _options.outputPath,
     assets: _options.assets,
-  });
+  })
 
-  const tsCompilationOptions = createTypeScriptCompilationOptions(
-    options,
-    context
-  );
+  const tsCompilationOptions = createTypeScriptCompilationOptions(options, context)
 
-  const inlineProjectGraph = handleInliningBuild(
-    context,
-    options,
-    tsCompilationOptions.tsConfig
-  );
+  const inlineProjectGraph = handleInliningBuild(context, options, tsCompilationOptions.tsConfig)
 
   if (!isInlineGraphEmpty(inlineProjectGraph)) {
-    tsCompilationOptions.rootDir = '.';
+    tsCompilationOptions.rootDir = '.'
   }
 
-  const typescriptCompilation = compileTypeScriptFiles(
-    options,
-    tsCompilationOptions,
-    async () => {
-      await assetHandler.processAllAssetsOnce();
-      updatePackageJson(options, context, target, dependencies);
+  const typescriptCompilation = compileTypeScriptFiles(options, tsCompilationOptions, async () => {
+    await assetHandler.processAllAssetsOnce()
+    updatePackageJson(options, context, target, dependencies)
 
-      postProcessInlinedDependencies(
-        tsCompilationOptions.outputPath,
-        tsCompilationOptions.projectRoot,
-        inlineProjectGraph
-      );
-    }
-  );
+    postProcessInlinedDependencies(
+      tsCompilationOptions.outputPath,
+      tsCompilationOptions.projectRoot,
+      inlineProjectGraph,
+    )
+  })
 
   if (options.watch) {
-    const disposeWatchAssetChanges =
-      await assetHandler.watchAndProcessOnAssetChange();
+    const disposeWatchAssetChanges = await assetHandler.watchAndProcessOnAssetChange()
     const disposePackageJsonChanges = await watchForSingleFileChanges(
       context.projectName,
       options.projectRoot,
       'package.json',
-      () => updatePackageJson(options, context, target, dependencies)
-    );
+      () => updatePackageJson(options, context, target, dependencies),
+    )
     const handleTermination = async (exitCode: number) => {
-      await typescriptCompilation.close();
-      disposeWatchAssetChanges();
-      disposePackageJsonChanges();
-      process.exit(exitCode);
-    };
-    process.on('SIGINT', () => handleTermination(128 + 2));
-    process.on('SIGTERM', () => handleTermination(128 + 15));
+      await typescriptCompilation.close()
+      disposeWatchAssetChanges()
+      disposePackageJsonChanges()
+      process.exit(exitCode)
+    }
+    process.on('SIGINT', () => handleTermination(128 + 2))
+    process.on('SIGTERM', () => handleTermination(128 + 15))
   }
 
-  return yield* typescriptCompilation.iterator;
+  return yield* typescriptCompilation.iterator
 }
 
-export default tscExecutor;
+export default tscExecutor

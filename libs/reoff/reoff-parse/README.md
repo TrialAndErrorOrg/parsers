@@ -16,8 +16,29 @@ Plugin for [reoff][reoff] to parse a `.docx` XML file into an `ooxast` AST. Idea
     *   [Install](#install)
     *   [Use](#use)
     *   [API](#api)
+        *   [`default()`](#default)
+            *   [Signature](#signature)
+            *   [Parameters](#parameters)
+            *   [Returns](#returns)
+        *   [`Parsed`](#parsed)
+            *   [Indexable](#indexable)
+        *   [`RootWithSource`](#rootwithsource)
+            *   [Hierarchy](#hierarchy)
+            *   [Properties](#properties)
+                *   [`children`](#children)
+                *   [`data?`](#data)
+                *   [`position?`](#position)
+                *   [`source?`](#source)
+                *   [`type`](#type)
+        *   [`Settings`](#settings)
+            *   [Properties](#properties-1)
+                *   [`fragment?`](#fragment)
+                *   [`include?`](#include)
+                    *   [Default](#default-1)
+                *   [`leaveRaw?`](#leaveraw)
+                    *   [Default](#default-2)
+                *   [`removeWhiteSpace?`](#removewhitespace)
     *   [Syntax tree](#syntax-tree)
-    *   [Types](#types)
     *   [Compatibility](#compatibility)
     *   [Security](#security)
     *   [Related](#related)
@@ -41,6 +62,24 @@ pnpm add reoff-parse
 ```
 
 ## Use
+
+```ts
+import { unified } from 'unified'
+import { docxToVfile } from 'docx-to-vfile'
+import reoffParse from 'reoff-parse'
+
+const vfile = await docxToVfile('example.docx')
+
+const processor = unified().use(reoffParse)
+
+```
+
+Parse the document into a tree
+
+```ts
+const tree = processor.parse(vfile)
+
+```
 
 ## API
 
@@ -207,13 +246,24 @@ Defined in:  [src/lib/reoff-parse.ts:10](https://github.com/TrialAndErrorOrg/par
 
 ## Syntax tree
 
-## Types
+`reoff-parse` creates an `[ooxast][ooxast]` syntax tree, which is a subset of the `[xast][xast]` syntax tree specifically for Open Office XML files.
 
 ## Compatibility
 
+`reoff-parse` parses everything in the `.docx` file in a rather naive way, so most things (except for scripts) are "supported." However, by default only the footnotes, endnotes, customXML and glossary are parsed and therefore easy to use by plugins such as `[reoff-unified-latex][reoff-unified-latex]`.
+If you want to use other parts of the `.docx` file, such as the `styles`, you can use the `include` option to parse and add them to the VFile.
+
+Note that all parts of the `.docx` file are included as a raw XML string in the VFile using the default settings of `docx-to-vfile`, so you can always parse them yourself using `xast-util-from-xml`, see the documentation of `Settings` above.
+
 ## Security
 
+`reoff-parse` does not parse scripts, but in the future it will be able to be converted into HTML using `[ooxast-util-to-hast][ooxast-util-to-hast]`, which might allow for XSS attacks.
+Use `[rehype-raw][rehype-raw]` to be certain that no raw HTML is present in the output when converting to HTML.
+
 ## Related
+
+*   [xast-util-from-xml][xast-util-from-xml]: tool used to convert XML to `[xast][xast]`
+*   [docx-to-vfile][docx-to-vfile]: tool used to convert `.docx` files to VFiles which can be fed into `reoff-parse`
 
 ## Contribute
 
@@ -225,7 +275,7 @@ Defined in:  [src/lib/reoff-parse.ts:10](https://github.com/TrialAndErrorOrg/par
 
 [unifiedgh]: https://github.com/unifiedjs/unified
 
-[xast-from-xml]: https://github.com/syntax-tree/xast-util-from-xml
+[xast-util-from-xml]: https://github.com/syntax-tree/xast-util-from-xml
 
 [rehype]: https://github.com/rehypejs/rehype
 
@@ -275,4 +325,12 @@ Defined in:  [src/lib/reoff-parse.ts:10](https://github.com/TrialAndErrorOrg/par
 
 [ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast
 
-[ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-jast
+[ooxast-util-to-jast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-jast
+
+[ooxast-util-to-hast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-hast
+
+[rehype-raw]: https://github.com/rehypejs/rehype-raw
+
+[reoff-unifed-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-unified-latex
+
+[docx-to-vfile]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/docx-to-vfile

@@ -1,15 +1,17 @@
 import { remark } from 'remark'
 import remarkLicense from 'remark-license'
 import remarkToc, { Root } from 'remark-toc'
-import { join } from 'path'
+import { join, resolve } from 'path'
 import { visit } from 'unist-util-visit'
 import { EXIT } from 'unist-util-visit'
 import { toString } from 'mdast-util-to-string'
-import { BlockContent, Heading } from 'mdast'
+import { BlockContent, Code, Content, Heading } from 'mdast'
 import { readFile, writeFile } from 'fs/promises'
 import { fromMarkdown } from 'mdast-util-from-markdown'
 import remarkGfm from 'remark-gfm'
 import { workspaceRoot } from '@nrwl/devkit'
+import remarkUsage from 'remark-usage'
+import { execSync } from 'child_process'
 
 const installationString = (
   name: string,
@@ -39,7 +41,7 @@ const spliceBetweenHeadings = ({
   level = 2,
 }: {
   tree: Root
-  content: BlockContent[]
+  content: Content[]
   title: string
   level?: number
 }) => {
@@ -141,7 +143,7 @@ const prependBadges = (readme: string, packageJSON: any) => {
   })
 }
 
-const addAdmonition = (readme: string) => {
+function addAdmonition(readme: string) {
   // if the first child of the root is not a blockquote, add one
   // with a warning admonition
 
@@ -154,14 +156,86 @@ const addAdmonition = (readme: string) => {
 ${readme}`
 }
 
+async function createUsage(tree: Root, examplePath: string, heading = 'Use') {
+  try {
+    const example = await readFile(examplePath, 'utf-8')
+    const lines = example.split('\n')
+    const firstLine = lines[0]
+
+    const shouldEval = firstLine?.startsWith('// eval')
+    const evalLangugage = firstLine?.replace('// eval ', '')
+
+    // remove the first line if it's an eval line
+    shouldEval && lines.shift()
+    const commentRegex = /^\s*\/\//
+
+    // go over each line, if it starts with //, turn it verbatim into mdast, otherwise, turn it into a typescript code block
+    const content = lines.reduce((acc, line) => {
+      if (commentRegex.test(line)) {
+        acc.push(fromMarkdown(line.replace(commentRegex, ''))?.children?.[0])
+        return acc
+      }
+
+      const last = acc[acc.length - 1]
+      if (last?.type === 'code') {
+        last.value = `${last.value}\n${line}`
+        return acc
+      }
+
+      acc.push({
+        type: 'code',
+        lang: 'ts',
+        value: line,
+      } as Code)
+      return acc
+    }, [] as Content[])
+
+    if (!shouldEval) {
+      spliceBetweenHeadings({
+        tree,
+        content,
+        title: heading,
+      })
+      return tree
+    }
+
+    try {
+      const evalContent = shouldEval ? execSync(`tsx ${examplePath}`) : ''
+
+      const finalContent = [
+        ...content,
+        { type: 'code', value: `${evalContent}`, lang: evalLangugage } as Code,
+      ]
+
+      spliceBetweenHeadings({
+        tree,
+        content: finalContent,
+        title: heading,
+      })
+
+      return tree
+    } catch (e) {
+      console.log(e)
+      console.log('Could not run tsx, skipping eval section')
+      return null
+    }
+  } catch (e) {
+    console.log(e)
+    console.log('Could not find example file, skipping usage section')
+    return null
+  }
+}
+
 const proc = (
   readme: string,
   {
     license = 'GPLv3-or-later',
     packageName,
+    projectRoot,
     dev,
   }: {
     license?: string
+    projectRoot: string
     packageName: string
     dev?: boolean
   },
@@ -187,6 +261,10 @@ const proc = (
 
       return tree
     })
+    .use(
+      () => async (tree) =>
+        (await createUsage(tree, join(projectRoot, 'docs', 'example.ts'))) ?? tree,
+    )
     .use(remarkToc)
     .process(readme)
 
@@ -194,19 +272,28 @@ function clean(readme: string) {
   return readme.replace(/\\\[/g, '[').replace(/\\#/g, '#').replace(/\\\|/g, '|')
 }
 
-export async function readmeAction(readmePath: string, packagePath: string) {
-  console.log('readmePath', readmePath)
+export async function readmeAction({
+  packagePath,
+  readmePath,
+  projectRoot,
+}: {
+  packagePath: string
+  readmePath: string
+  projectRoot: string
+}) {
   const readme = await readFile(readmePath, 'utf-8')
 
   const packageJSON = JSON.parse(await readFile(packagePath, 'utf-8'))
-  console.log(readme)
+  const example = join(projectRoot, 'doc', 'example.js')
+  console.log(example)
 
   const newReadme = await proc(readme, {
     license: packageJSON.license,
     packageName: packageJSON.name,
+    projectRoot,
   })
 
   const newReadmeString = clean(prependBadges(addAdmonition(newReadme.toString()), packageJSON))
-  // console.log(newReadmeString)
+
   await writeFile(readmePath, newReadmeString, packageJSON)
 }

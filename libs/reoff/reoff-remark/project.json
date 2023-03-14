@@ -1,0 +1,97 @@
+{
+  "name": "reoff-remark",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/reoff/reoff-remark/src",
+  "projectType": "library",
+  "targets": {
+    "readme": {
+      "executor": "utils-readme:update-readme",
+      "options": {
+        "readme": "libs/reoff/reoff-remark/README.md",
+        "packageJSON": "libs/reoff/reoff-remark/package.json"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/reoff/reoff-remark/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/reoff/reoff-remark"],
+      "options": {
+        "jestConfig": "libs/reoff/reoff-remark/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "build": {
+      "executor": "better-nx-tsc:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "rootDir": "libs/reoff/reoff-remark/src",
+        "outputPath": "dist/libs/reoff/reoff-remark",
+        "tsConfig": "libs/reoff/reoff-remark/tsconfig.lib.json",
+        "packageJson": "libs/reoff/reoff-remark/package.json",
+        "main": "libs/reoff/reoff-remark/src/index.ts",
+        "assets": ["libs/reoff/reoff-remark/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "clean": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      },
+      "dependsOn": [
+        {
+          "projects": "dependencies",
+          "target": "build",
+          "params": "forward"
+        },
+        {
+          "projects": "self",
+          "target": "lint"
+        }
+      ]
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventional",
+        "trackDeps": true,
+        "push": true,
+        "baseBranch": "main",
+        "postTargets": ["reoff-remark:npm", "reoff-remark:github", "reoff-remark:github-standalone"]
+      },
+      "trackDeps": true,
+      "push": true,
+      "baseBranch": "main"
+    },
+    "github": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}"
+      }
+    },
+    "github-standalone": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}",
+        "repo": "TrialAndErrorOrg/reoff-remark"
+      }
+    },
+    "npm": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    }
+  },
+  "tags": []
+}

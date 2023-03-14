@@ -1,6 +1,6 @@
 {
   "private": true,
-  "description": "An example project for Auth.js with SvelteKit",
+  "description": "This is the official SvelteKit Auth example for [Auth.js](https://sveltekit.authjs.dev).",
   "repository": "https://github.com/nextauthjs/sveltekit-auth-example",
   "bugs": {
     "url": "https://github.com/nextauthjs/next-auth/issues"

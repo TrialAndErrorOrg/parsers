@@ -1,6 +1,6 @@
 {
   "name": "jats-to-tex",
-  "description": "JATS XML to TeX converter",
+  "description": "jatsToTex(jats: string): Promise<VFile>;",
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",

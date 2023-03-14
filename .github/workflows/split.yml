@@ -24,4 +24,4 @@ jobs:
           description: true
           name: true
           topics: true
-          # force: true
+          force: true

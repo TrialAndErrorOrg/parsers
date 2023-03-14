@@ -5,7 +5,7 @@
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Detect inline APA citations in text",
+  "description": "This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).",
   "keywords": [
     "unified",
     "abstract",

@@ -5,7 +5,7 @@
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Util to convert `ooxast` syntax tree to `mdast` syntax tree, allowing for `.docx` to `.md` conversion.",
+  "description": "Convert `ooxast` syntax tree to `mdast` syntax tree.",
   "keywords": [
     "unified",
     "word",

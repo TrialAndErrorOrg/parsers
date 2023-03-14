@@ -1,6 +1,6 @@
 {
   "name": "jote-docx-tex",
-  "description": "Can't really remember what this is lmao",
+  "description": "docxToTex(input: Uint8Array, options: object = {}): Promise<VFile>;",
   "type": "module",
   "typedoc": {
     "entryPoint": "./src/index.ts",

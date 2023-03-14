@@ -5,7 +5,7 @@
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Typings for the [Crossref JSON API](https://api.crossref.org/swagger.json)",
+  "description": "Defined in:  [index.ts:38](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/crossref-json/src/index.ts",
   "types": "./index.d.ts",
   "main": "./index.js",
   "keywords": [

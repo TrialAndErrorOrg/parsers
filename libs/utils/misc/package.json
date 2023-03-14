@@ -4,7 +4,7 @@
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Miscellaneous utilities.",
+  "description": "tryCatchPromise<T>(promise: Promise<T>, errorHandler?: Function): Promise<[T | null, unknown | null]>;",
   "keywords": [
     "unified",
     "abstract",

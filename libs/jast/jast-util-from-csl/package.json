@@ -10,7 +10,7 @@
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Transform a CSL list or object to a [jast][jast] node.",
+  "description": "cslToFront(data: Data): void;",
   "keywords": [
     "csl",
     "jats-xml",

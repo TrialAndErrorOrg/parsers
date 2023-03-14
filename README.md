@@ -43,25 +43,23 @@ See below for more info.
 
 #### [`react-pdf-e2e`](apps/react-pdf-e2e)
 
-## [Libs](/Volumes/SSD/Projects/jote-monorepo/libs):
-
-### [ast-stringify](libs/ast-stringify)
-
-#### [`src`](libs/ast-stringify/src)
-
 ### [citations](libs/citations)
 
 #### [`crossref-json`](libs/citations/crossref-json/README.md)
 
-Typings for the [Crossref JSON API](https://api.crossref.org/swagger.json)
+Type definitions for crossref api responses
 
 #### [`crossref-to-csl`](libs/citations/crossref-to-csl/README.md)
 
-Tiny utitity to convert an Crossref API resonponse JSON item to CSL.
+Convert crossref metadata to CSL
 
 #### [`csl-consolidate`](libs/citations/csl-consolidate/README.md)
 
-Small utility script which checks a list of CSL references against the Crossref doi.
+Try to resolve a list of CSL data with crossref metadata
+
+#### [`csl-to-biblatex`](libs/citations/csl-to-biblatex/README.md)
+
+Somewhat jank CSL-JSON to biblatex converter
 
 #### [`ojs-types`](libs/citations/ojs-types/README.md)
 
@@ -71,13 +69,15 @@ Some typescript types for OJS api responses
 
 Small tool that parses a string of text containing APA style in text citations, e.g. Jones (2020), and returns a rudimentary AST with the thing parsed.
 
+### [hybrid-builder](libs/hybrid-builder)
+
+#### [`src`](libs/hybrid-builder/src)
+
 ### [jast](libs/jast)
 
 #### [`jast`](libs/jast/jast/README.md)
 
 Type definitions for `jast` (journal article/abstract syntax tree), a syntax for abstract syntax trees representing JATS XML, specifically the "Green" publishing tag set.
-
-#### [`jast-util-from-csl`](libs/jast/jast-util-from-csl/README.md)
 
 Transform a CSL list or object to a [jast][jast] node.
 
@@ -103,7 +103,7 @@ Plugin for `rehype` to turn HTML into Notion blocks
 
 #### [`ojs-client`](libs/ojs/ojs-client/README.md)
 
-Small Node HTTP client for communicating with your OJS's REST API
+new default(«destructured»: object = {}): default;
 
 #### [`ojs-relatex`](libs/ojs/ojs-relatex/README.md)
 
@@ -121,7 +121,7 @@ Small ooxast utility which scans the text to identify the citation plugin used, 
 
 #### [`ooxast-util-citations`](libs/ooxast/ooxast-util-citations/README.md)
 
-_[ooxast][ooxast]_ util to visit in text office citations.
+This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, 18.0+), install as
 
 #### [`ooxast-util-get-style`](libs/ooxast/ooxast-util-get-style/README.md)
 
@@ -139,6 +139,10 @@ Find and convert raw references to CSL-JSON.
 
 Find and convert raw references to CSL-JSON.
 
+#### [`ooxast-util-properties`](libs/ooxast/ooxast-util-properties/README.md)
+
+Return the properties of an `ooxast` node as a JSON object
+
 #### [`ooxast-util-remove-rsid`](libs/ooxast/ooxast-util-remove-rsid/README.md)
 
 Cleans all the rsid tags from an ooxast tree, and merges `w:r` elements if they only differ by rsid values.
@@ -151,15 +155,23 @@ Convert docx to html (Not working)
 
 Util to convert `ooxast` syntax tree to `jast` syntax tree, allowing for `.docx` to `JATS XML` conversion.
 
+#### [`ooxast-util-to-mdast`](libs/ooxast/ooxast-util-to-mdast/README.md)
+
+Convert `ooxast` syntax tree to `mdast` syntax tree.
+
 #### [`ooxast-util-to-unified-latex`](libs/ooxast/ooxast-util-to-unified-latex/README.md)
 
 Convert `ooxast` syntax tree to `unified-latex` syntax tree.
+
+### [plugins](libs/plugins)
+
+#### [`better-nx-tsc`](libs/plugins/better-nx-tsc)
 
 ### [processors](libs/processors)
 
 #### [`docx-to-jats`](libs/processors/docx-to-jats/README.md)
 
-DOCX to JATS XML converter
+processorsDocxToJats(): string;
 
 #### [`docx-to-tex`](libs/processors/docx-to-tex/README.md)
 
@@ -167,17 +179,17 @@ DOCX to TeX converter
 
 #### [`jats-to-tex`](libs/processors/jats-to-tex/README.md)
 
-JATS XML to TeX converter
+jatsToTex(jats: string): Promise<VFile>;
 
 #### [`jote-docx-tex`](libs/processors/jote-docx-tex/README.md)
 
-Can't really remember what this is lmao
+docxToTex(input: Uint8Array, options: object = {}): Promise<VFile>;
 
 ### [rejour](libs/rejour)
 
 #### [`rejour-frontmatter`](libs/rejour/rejour-frontmatter/README.md)
 
-Plugin for `rejour` that parses the frontmatter of a `JATS` document and adds it to the processing VFile as a list of `csl` citations.
+rejourFrontmatter(): Function;
 
 #### [`rejour-meta`](libs/rejour/rejour-meta/README.md)
 
@@ -239,6 +251,14 @@ Plugin for `reoff` which tries to find a bibliography in the document and parse 
 
 Plugin for `reoff` that transforms an `ooxast` syntax tree into a `jats` syntax tree, i.e. converting `.docx` to `JATS XML`.
 
+#### [`reoff-remark`](libs/reoff/reoff-remark/README.md)
+
+Plugin for `reoff` that takes an `ooxast` tree and turns it into a `remark` tree, allowing for .docx to .tex conversion
+
+#### [`reoff-unified-latex`](libs/reoff/reoff-unified-latex/README.md)
+
+Plugin for `reoff` that takes an `ooxast` tree and turns it into a `unified-latex` tree, allowing for .docx to .tex conversion
+
 ### [texast](libs/texast)
 
 #### [`texast`](libs/texast/texast/README.md)
@@ -253,15 +273,31 @@ Add a preamble to a texast syntax tree.
 
 Convert a `texast` syntax tree to LaTeX.
 
+### [unified-latex](libs/unified-latex)
+
+#### [`unified-latex-stringify`](libs/unified-latex/unified-latex-stringify/README.md)
+
+Plugin for `unified-latex` that takes an `unified-latex` tree and turns it into LaTeX
+
+### [update-readme](libs/update-readme)
+
+#### [`src`](libs/update-readme/src)
+
 ### [utils](libs/utils)
 
 #### [`misc`](libs/utils/misc/README.md)
 
-Miscellaneous utilities.
+tryCatchPromise<T>(promise: Promise<T>, errorHandler?: Function): Promise<[T | null, unknown | null]>;
 
 #### [`ojs-to-preamble`](libs/utils/ojs-to-preamble/README.md)
 
-Utility (extremely shoddy) to convert Open Journal Systems (OJS) metadata to a texast preamble.
+This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, 18.0+), install as
+
+#### [`readme`](libs/utils/readme/README.md)
+
+This library was generated with [Nx](https://nx.dev).
+
+#### [`update-readme`](libs/utils/update-readme)
 
 ### [xast](libs/xast)
 

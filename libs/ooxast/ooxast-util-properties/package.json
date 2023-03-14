@@ -5,7 +5,7 @@
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Return the attributes of an `ooxast` node as a JSON object",
+  "description": "Return the properties of an `ooxast` node as a JSON object",
   "keywords": [
     "ooxast",
     "properties",

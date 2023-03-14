@@ -5,7 +5,7 @@
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
-  "description": "Small utility script which checks a list of CSL references against the Crossref doi.",
+  "description": "Try to resolve a list of CSL data with crossref metadata",
   "keywords": [
     "csl",
     "crossref",

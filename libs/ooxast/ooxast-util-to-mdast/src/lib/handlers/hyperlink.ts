@@ -17,8 +17,9 @@ export const hyperlink: Handle = (state: State, node: Hyperlink) => {
     return result
   }
 
-  if (rel.startsWith('http')) {
-  }
+  // if (rel.startsWith('http')) {
+  //   //
+  // }
 
   const result = link(rel, undefined, contents) as Link
   state.patch(node, result)

@@ -26,6 +26,7 @@ export interface AbstractNumMap {
   numStyleLink?: StringTag<'numStyleLink'>
   styleLink?: StringTag<'styleLink'>
   tmpl?: LongHexNumber
+  start?: StringTag<'start'>
 }
 
 export interface AltChunk extends UnistNode {
@@ -1517,7 +1518,7 @@ export interface Hyperlink extends UnistNode {
     'w:anchor'?: string
     'w:docLocation'?: string
     'w:history'?: string
-    'w:id': string
+    'r:id': string
     'w:tgtFrame'?: string
     'w:tooltip'?: string
   }
@@ -1644,7 +1645,7 @@ export interface LevelSuffix extends UnistNode {
 
 export interface LevelText extends UnistNode {
   type: 'element'
-  name: 'w:levelText'
+  name: 'w:lvlText'
   attributes: {
     'w:null'?: string
     'w:val'?: string

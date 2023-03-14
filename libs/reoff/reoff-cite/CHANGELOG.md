@@ -2,6 +2,12 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-cite-0.1.0...reoff-cite-0.1.1) (2023-03-14)
+
+### Dependency Updates
+
+* `ooxast` updated to version `0.1.3`
+* `ooxast-util-citations` updated to version `0.1.1`
 ## 0.1.0 (2023-03-09)
 
 ### Dependency Updates

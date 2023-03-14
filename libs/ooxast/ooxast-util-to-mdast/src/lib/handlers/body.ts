@@ -1,13 +1,7 @@
-// based on https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/em
-
 import { Body, Handle, P, MdastNode } from '../types.js'
 import { getPStyle } from '../util/get-pstyle.js'
 import { getListInfo } from '../util/get-listinfo.js'
 import { Element } from 'xast-util-to-string/lib'
-import { Environment, Macro } from '@unified-latex/unified-latex-types'
-import { m, SP } from '@unified-latex/unified-latex-builder'
-import { PB } from '../util/PB.js'
-import { updateRenderInfo } from '@unified-latex/unified-latex-util-render-info'
 import { State } from '../state.js'
 import { list, listItem } from 'mdast-builder'
 import { List, ListItem } from 'mdast'
@@ -94,7 +88,7 @@ export const body: Handle = (state: State, body: Body) => {
         return acc
       }
 
-      if (toBeEmbeddedList._renderInfo?.ilvl !== ilvl) {
+      if (toBeEmbeddedList.data?.ilvl !== ilvl) {
         toBeEmbeddedList.children[toBeEmbeddedList.children.length - 1].children.push(list)
         return acc
       }
@@ -140,9 +134,9 @@ const orderedMap = {
 function makeList(state: State, item: P, numId: number, ilvl: number): List {
   const result = state.all(item)
   if (!state.listNumbering) {
-    const result = list('ordered', listItem(result) as ListItem) as List
-    state.patch(item, result)
-    return result
+    const res = list('ordered', listItem(result) as ListItem) as List
+    state.patch(item, res)
+    return res
   }
 
   const num = state.listNumbering?.numIds[numId.toString()]

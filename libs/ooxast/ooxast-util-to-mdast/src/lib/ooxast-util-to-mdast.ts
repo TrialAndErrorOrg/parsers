@@ -18,8 +18,9 @@ const defaultOptions: Options = {
 
 declare module 'vfile' {
   interface DataMap {
+    [xml: `${string}.xml` | `${string}.rels`]: string | undefined
     parsed: {
-      [key: `${string}.xml` | `${string}.rels`]: Root
+      [key: `${string}.xml` | `${string}.rels`]: Root | undefined
     }
   }
 }
@@ -49,9 +50,10 @@ export function toMdast(
   const options_ = options || {}
   const state = createState(options_)
 
-  const listNumbering = vfile?.data?.['word/numbering.xml']
-    ? findListNumbering(vfile.data['word/numbering.xml'])
-    : undefined
+  const numberingXml =
+    vfile?.data?.parsed?.['word/numbering.xml'] ?? vfile?.data?.['word/numbering.xml']
+
+  const listNumbering = numberingXml ? findListNumbering(numberingXml) : undefined
 
   state.listNumbering = listNumbering
 

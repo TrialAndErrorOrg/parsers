@@ -1,0 +1,44 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "children": [
+            {
+              "type": "text",
+              "value": "A link to some website"
+            }
+          ],
+          "url": "https://github.com/TrialAndErrorOrg/parsers",
+          "title": ""
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "children": [
+        {
+          "type": "text",
+          "value": "Heading"
+        }
+      ],
+      "depth": 1
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Link to heading: "
+        },
+        {
+          "type": "text",
+          "value": "Heading"
+        }
+      ]
+    }
+  ]
+}

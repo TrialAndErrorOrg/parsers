@@ -58,7 +58,7 @@ export interface Options {
 
 export type Handle = (
   state: State,
-  node: Node,
+  node: any,
   parent?: Parent,
 ) => MdastNode | Array<MdastNode> | void | undefined
 

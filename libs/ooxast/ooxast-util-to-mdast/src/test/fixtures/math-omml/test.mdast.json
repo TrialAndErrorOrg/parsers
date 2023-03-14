@@ -14,6 +14,48 @@
       "type": "paragraph",
       "children": [
         {
+          "type": "math",
+          "value": "ssatnashtasht"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": ""
+        },
+        {
+          "type": "text",
+          "value": ""
+        },
+        {
+          "type": "text",
+          "value": ""
+        },
+        {
+          "type": "text",
+          "value": ""
+        },
+        {
+          "type": "text",
+          "value": ""
+        },
+        {
+          "type": "text",
+          "value": ""
+        },
+        {
+          "type": "inlineMath",
+          "value": "tst"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
           "type": "text",
           "value": "Some text, then inline math ("
         },

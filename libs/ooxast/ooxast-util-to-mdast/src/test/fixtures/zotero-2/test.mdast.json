@@ -2250,8 +2250,15 @@
           "value": "Datasets are available here: "
         },
         {
-          "type": "text",
-          "value": "https://osf.io/7qhsj/?view_only=07b52294c1b647829644a833fc3d4883"
+          "type": "link",
+          "children": [
+            {
+              "type": "text",
+              "value": "https://osf.io/7qhsj/?view_only=07b52294c1b647829644a833fc3d4883"
+            }
+          ],
+          "url": "https://osf.io/7qhsj/?view_only=07b52294c1b647829644a833fc3d4883",
+          "title": ""
         },
         {
           "type": "text",

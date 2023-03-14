@@ -108,23 +108,23 @@ export const citation: Handle = (state: State, node: T, parent?: Parent) => {
 
         state.patch(node, inlineCiteNode)
         return inlineCiteNode
-        return h(
-          itemData,
-          'xref',
-          {
-            id: `_xref-${state.citationNumber}`,
-            refType: 'bibr',
-            rid: citeKey,
-            // We store more value in the custom citation space, such as infix/suffix etc.
-            ...(customCiteData ? { customType: JSON.stringify(customCiteData) } : {}), // customType: JSON.stringify()
-          },
-          [
-            {
-              type: 'string',
-              content: formattedCitations?.[i] || `[${state.citationNumber}]`,
-            },
-          ],
-        )
+        // return h(
+        //   itemData,
+        //   'xref',
+        //   {
+        //     id: `_xref-${state.citationNumber}`,
+        //     refType: 'bibr',
+        //     rid: citeKey,
+        //     // We store more value in the custom citation space, such as infix/suffix etc.
+        //     ...(customCiteData ? { customType: JSON.stringify(customCiteData) } : {}), // customType: JSON.stringify()
+        //   },
+        //   [
+        //     {
+        //       type: 'string',
+        //       content: formattedCitations?.[i] || `[${state.citationNumber}]`,
+        //     },
+        //   ],
+        // )
       })
     }
   }

@@ -6,6 +6,7 @@ import { toString } from 'xast-util-to-string'
 import { strong, emphasis, strike, html } from 'mdast-builder'
 import { Emphasis, HTML, Strong, Text } from 'mdast'
 import { Delete } from 'mdast'
+import { Handle } from '../types.js'
 
 //const isVert = convertElement<VerticalAlignRun>('w:vertAlign')
 

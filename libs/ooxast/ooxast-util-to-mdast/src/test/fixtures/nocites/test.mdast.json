@@ -60,8 +60,15 @@
           "value": "In their "
         },
         {
-          "type": "html",
-          "value": "<u>[object Object]</u>"
+          "type": "link",
+          "children": [
+            {
+              "type": "html",
+              "value": "<u>[object Object]</u>"
+            }
+          ],
+          "url": "https://archive.jtrialerror.com/pub/failfast/release/3",
+          "title": ""
         },
         {
           "type": "text",
@@ -704,8 +711,15 @@
           "value": ", 149-159. DOI: "
         },
         {
-          "type": "text",
-          "value": "https://doi.org/10.1016/j.ress.2017.08.013"
+          "type": "link",
+          "children": [
+            {
+              "type": "text",
+              "value": "https://doi.org/10.1016/j.ress.2017.08.013"
+            }
+          ],
+          "url": "https://doi.org/10.1016/j.ress.2017.08.013",
+          "title": ""
         },
         {
           "type": "text",
@@ -743,8 +757,15 @@
           "value": "(4), 12-18. "
         },
         {
-          "type": "text",
-          "value": "https://doi.org/10.1177/106480469600400404"
+          "type": "link",
+          "children": [
+            {
+              "type": "text",
+              "value": "https://doi.org/10.1177/106480469600400404"
+            }
+          ],
+          "url": "https://doi.org/10.1177%2F106480469600400404",
+          "title": ""
         },
         {
           "type": "text",
@@ -826,8 +847,15 @@
           "value": ". TIME. "
         },
         {
-          "type": "html",
-          "value": "<u>[object Object]</u>"
+          "type": "link",
+          "children": [
+            {
+              "type": "html",
+              "value": "<u>[object Object]</u>"
+            }
+          ],
+          "url": "https://time.com/5687473/boeing-737-alarm-system/",
+          "title": ""
         },
         {
           "type": "text",
@@ -860,8 +888,15 @@
           "value": "(1), 6-8. "
         },
         {
-          "type": "text",
-          "value": "https://doi.org/10.36850/ed2"
+          "type": "link",
+          "children": [
+            {
+              "type": "text",
+              "value": "https://doi.org/10.36850/ed2"
+            }
+          ],
+          "url": "https://doi.org/10.36850/ed2",
+          "title": ""
         },
         {
           "type": "text",

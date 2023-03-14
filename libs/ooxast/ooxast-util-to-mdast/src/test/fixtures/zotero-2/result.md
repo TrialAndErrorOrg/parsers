@@ -86,7 +86,7 @@ Conclusion
 
 Researchers should carefully select their study design when examining congruency effects. As for studies involving the dot-probe task, however, carryover effects for threat do not appear to be a concern. The highly controlled and simple design of the dot-probe task adequately controls for sources of variance such as carryover effects. While threatening cues may bias attention to a greater extent than neutral cues, their residual influence on attention is limited when assessed with the dot-probe task.&#x20;
 
-Data Availability Statement:* *Datasets are available here: https\://osf.io/7qhsj/?view\_only=07b52294c1b647829644a833fc3d4883&#x20;
+Data Availability Statement:* *Datasets are available here: <https://osf.io/7qhsj/?view_only=07b52294c1b647829644a833fc3d4883>&#x20;
 
 ![](media/image1.png)![](media/image2.png)![](media/image2.png)![](media/image3.png)![](media/image4.png)
 

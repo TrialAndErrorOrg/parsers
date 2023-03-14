@@ -1,9 +1,9 @@
-import { DecimalNumber, Jc, LevelText, NumFmt, StringTag } from 'ooxast'
+import { DecimalNumber, Jc, LevelText, NumFmt, Root, StringTag } from 'ooxast'
 import { fromXml } from 'xast-util-from-xml'
 import { ListNumbering } from '../types.js'
 
-export function findListNumbering(numbering: string) {
-  const parsedNumbering = fromXml(numbering)
+export function findListNumbering(numbering: string | Root) {
+  const parsedNumbering = typeof numbering === 'string' ? fromXml(numbering) : numbering
 
   const numberingElement = parsedNumbering.children.find(
     (child) => child.type === 'element' && child.name === 'w:numbering',

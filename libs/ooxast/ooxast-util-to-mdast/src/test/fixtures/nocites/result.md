@@ -6,7 +6,7 @@ It will come as no surprise to readers of this journal that failure is systemati
 
 This point is described superbly in a recent editorial piece by public health researchers Rebecca Sindall and Dani Barrington (2020), who point out the many barriers to sharing and promoting scholarly understandings of failure in the public health interventionist field of Water, Sanitation, and Hygiene (WASH), which they experienced personally as well.&#x20;
 
-In their <u>[object Object]</u> in the Journal of Trial and Error’s (JOTE) first issue, the authors argue not only for the role of researchers themselves in pursuing submission and publication of reports of what went wrong, but also of funding partners in sharing information about projects that did not "turn out as planned," and importantly, for the responsibility of journals in welcoming such sort of publications. Critically, they argue that the widespread fixation on “novelty” contributes to a "culture of success-ism" that is "highly unscientific". In short, the outward-facing sheen of scientific success—propagated by scientists, funders, and stakeholders alike—challenges the very foundations scientific development is built on: transparency, collaboration, and trial and error.
+In their [<u>[object Object]</u>](https://archive.jtrialerror.com/pub/failfast/release/3) in the Journal of Trial and Error’s (JOTE) first issue, the authors argue not only for the role of researchers themselves in pursuing submission and publication of reports of what went wrong, but also of funding partners in sharing information about projects that did not "turn out as planned," and importantly, for the responsibility of journals in welcoming such sort of publications. Critically, they argue that the widespread fixation on “novelty” contributes to a "culture of success-ism" that is "highly unscientific". In short, the outward-facing sheen of scientific success—propagated by scientists, funders, and stakeholders alike—challenges the very foundations scientific development is built on: transparency, collaboration, and trial and error.
 
 Sindall and Barrington (2020) paint a compelling picture of an academic system that struggles to find a place for failure and the “multitude of sins” such a system necessarily perpetuates. Rightly so, they place the responsibility for change not only on researchers, but also funders and publication bodies.&#x20;
 
@@ -90,11 +90,11 @@ Therefore, while we are flattered by Sindall’s and Barrington’s (2020) hope 
 
 # References&#x20;
 
-Bevilacqua, M., & Ciarapica, F. E. (2018). Human factor risk management in the process industry: A case study. *Reliability Engineering & System Safety, 169*, 149-159. DOI: https\://doi.org/10.1016/j.ress.2017.08.013
+Bevilacqua, M., & Ciarapica, F. E. (2018). Human factor risk management in the process industry: A case study. *Reliability Engineering & System Safety, 169*, 149-159. DOI: <https://doi.org/10.1016/j.ress.2017.08.013>
 
 
 
-Gilson, R.D., Deaton, J.E., & Mouloua, M. (1996). Coping with complex alarms: Sophisticated aircraft cockpit alarm systems demand a shift in training strategies. *Ergonomics in Design: The Quarterly of Human Factors Applications, 4*(4), 12-18. https\://doi.org/10.1177/106480469600400404
+Gilson, R.D., Deaton, J.E., & Mouloua, M. (1996). Coping with complex alarms: Sophisticated aircraft cockpit alarm systems demand a shift in training strategies. *Ergonomics in Design: The Quarterly of Human Factors Applications, 4*(4), 12-18. [https://doi.org/10.1177/106480469600400404](https://doi.org/10.1177%2F106480469600400404)
 
 
 
@@ -102,9 +102,9 @@ Holden, R. J. (2009). People or systems? To blame is human. The fix is to engine
 
 Kwok, T. C., Chau, W. W., Yuen, K. S., Wong, A. Y., Li, J. C., Shiu, R. Y., & Ho, F. K. (2011). Who would benefit from memory training? A pilot study examining the ceiling effect of concurrent cognitive stimulation. *Clinical Interventions in Aging, 6*, 83-88. https\://doi.org/10.2147/CIA.S16802
 
-Levin, A. (2019, September 26). *Boeing failed to predict that slew of 737 Max warning alarms would confuse pilots, investigators say*. TIME. <u>[object Object]</u> 
+Levin, A. (2019, September 26). *Boeing failed to predict that slew of 737 Max warning alarms would confuse pilots, investigators say*. TIME. [<u>[object Object]</u>](https://time.com/5687473/boeing-737-alarm-system/) 
 
-Sindall, R.C., & Barrington, D.J. (2020). Fail fast, fail forward, fail openly: The need to share failures in development. *Journal of Trial and Error, 1*(1), 6-8. https\://doi.org/10.36850/ed2&#x20;
+Sindall, R.C., & Barrington, D.J. (2020). Fail fast, fail forward, fail openly: The need to share failures in development. *Journal of Trial and Error, 1*(1), 6-8. <https://doi.org/10.36850/ed2>&#x20;
 
 Traut, H. J., Guild, R. M., & Munakata, Y. (2021). Why does cognitive training yield inconsistent benefits? A meta-analysis of individual differences in baseline cognitive abilities and training outcomes.* Frontiers in psychology, 12*, 1-20. https\://doi.org/10.3389/fpsyg.2021.662139
 

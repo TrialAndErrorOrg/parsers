@@ -15,6 +15,7 @@ import { tc } from './tc.js'
 import { footnoteReference } from './footnoteReference.js'
 import { oMath } from './oMath.js'
 import { State } from '../state.js'
+import { hyperlink } from './hyperlink.js'
 
 export const handlers: Context['handlers'] = {
   p,
@@ -26,6 +27,7 @@ export const handlers: Context['handlers'] = {
   footnote,
   t: all,
   oMathPara,
+  hyperlink,
   oMath,
   r,
   instrText: citation,

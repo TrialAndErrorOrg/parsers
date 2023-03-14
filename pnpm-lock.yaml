@@ -5,6 +5,9 @@ specifiers:
   '@auth/core': ^0.5.0
   '@auth/sveltekit': ^0.2.2
   '@babel/core': ^7.20.5
+  '@benrbray/mdast-util-cite': ^1.1.0
+  '@benrbray/micromark-extension-cite': ^1.0.0
+  '@benrbray/remark-cite': ^1.1.0
   '@commitlint/cli': ^17.0.0
   '@commitlint/config-conventional': ^17.0.0
   '@emotion/react': 11.10.5
@@ -181,6 +184,7 @@ specifiers:
   remark: ^14.0.2
   remark-gfm: ^3.0.1
   remark-license: ^6.1.0
+  remark-math: ^5.1.1
   remark-parse: ^10.0.1
   remark-stringify: ^10.0.2
   remark-toc: ^8.0.1
@@ -232,6 +236,9 @@ specifiers:
 dependencies:
   '@auth/core': 0.5.0
   '@auth/sveltekit': 0.2.2_kzjl3zuew2h2f37dskx3b4xkae
+  '@benrbray/mdast-util-cite': 1.1.0
+  '@benrbray/micromark-extension-cite': 1.0.0
+  '@benrbray/remark-cite': 1.1.0
   '@emotion/react': 11.10.5_hebjedjhazelsvuzebr6t7ng24
   '@enio.ai/typedoc': 1.0.6_vwit5hpo6vso422ucksni2bvai
   '@hokify/axios-rate-limit': 2.0.5_axios@0.27.2
@@ -323,6 +330,7 @@ dependencies:
   rehype-parse: 8.0.4
   rehype-remark: 9.1.2
   remark-gfm: 3.0.1
+  remark-math: 5.1.1
   remark-parse: 10.0.1
   remark-stringify: 10.0.2
   retext-english: 4.1.0
@@ -1917,6 +1925,31 @@ packages:
 
   /@bcoe/v8-coverage/0.2.3:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
+
+  /@benrbray/mdast-util-cite/1.1.0:
+    resolution: {integrity: sha512-jJL69PwjdgD+p479e3AkIG/6GNfRigyfgA/iXZiV8I0PIXWv4fdonpncIthvDnyXV6+KTrKKObJ4s59qUZocBw==}
+    dependencies:
+      '@benrbray/micromark-extension-cite': 1.0.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@benrbray/micromark-extension-cite/1.0.0:
+    resolution: {integrity: sha512-MiqLxAr6/+sslKOgsuAGOHIWFUyw9umL5GzBijPqMp/pcidOgeCzC1Sb8KT3pq0XyB3gYuQQjgEnXNDjQrJ/Wg==}
+    dependencies:
+      micromark: 2.11.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
+  /@benrbray/remark-cite/1.1.0:
+    resolution: {integrity: sha512-UOeh0JOyO6JaCGgWimFtBCjXOabLLbGxT72KgQvIQH9MPX3DYGQtks0QAuGRz00raMV5UOK1uL12xMkh4MIlzA==}
+    dependencies:
+      '@benrbray/mdast-util-cite': 1.1.0
+      '@benrbray/micromark-extension-cite': 1.0.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
 
   /@citation-js/cli/0.5.7:
     resolution: {integrity: sha512-bU9Z8zyMZEU5PpoD3y+5YYCqH4GHoGsH+dKTmLH1eX+HMYRVstM+jttJymTf0lJA9w6T+weUrRv/S5By0qcMbg==}
@@ -5797,6 +5830,10 @@ packages:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
     dev: true
 
+  /@types/katex/0.11.1:
+    resolution: {integrity: sha512-DUlIj2nk0YnJdlWgsFuVKcX27MLW0KbKmGVoUHmFr+74FYYNUDAaj9ZqTADvsbE8rfxuVmSFc7KczYn5Y09ozg==}
+    dev: false
+
   /@types/keyv/3.1.4:
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
     dependencies:
@@ -8277,6 +8314,11 @@ packages:
   /commander/7.2.0:
     resolution: {integrity: sha512-QrWXB+ZQSVPmIWIhtEO9H+gwHaMGYiF5ChvoJ+K9ZGHG/sVsa6yiesAD1GC/x46sET00Xlwo1u49RVVVzvcSkw==}
     engines: {node: '>= 10'}
+
+  /commander/8.3.0:
+    resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==}
+    engines: {node: '>= 12'}
+    dev: false
 
   /commander/9.4.0:
     resolution: {integrity: sha512-sRPT+umqkz90UA8M1yqYfnHlZA7fF6nSphDtxeywPZ49ysjxDQybzk13CL+mXekDRG92skbcqCLVovuCusNmFw==}
@@ -13554,6 +13596,13 @@ packages:
       commander: 2.20.3
     dev: false
 
+  /katex/0.13.24:
+    resolution: {integrity: sha512-jZxYuKCma3VS5UuxOx/rFV1QyGSl3Uy/i0kTJF3HgQ5xMinCQVF8Zd4bMY/9aI9b9A2pjIBOsjSSm68ykTAr8w==}
+    hasBin: true
+    dependencies:
+      commander: 8.3.0
+    dev: false
+
   /keyv/3.1.0:
     resolution: {integrity: sha512-9ykJ/46SN/9KPM/sichzQ7OvXyGDYKGTaDlKMGCAlg2UK8KRy4jb0d8sFc+0Tt0YYnThq8X2RZgCg74RPxgcVA==}
     dependencies:
@@ -14529,6 +14578,18 @@ packages:
       micromark: 2.11.4
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /micromark-extension-math/2.0.2:
+    resolution: {integrity: sha512-cFv2B/E4pFPBBFuGgLHkkNiFAIQv08iDgPH2HCuR2z3AUgMLecES5Cq7AVtwOtZeRrbA80QgMUk8VVW0Z+D2FA==}
+    dependencies:
+      '@types/katex': 0.11.1
+      katex: 0.13.24
+      micromark-factory-space: 1.0.0
+      micromark-util-character: 1.1.0
+      micromark-util-symbol: 1.0.1
+      micromark-util-types: 1.0.2
+      uvu: 0.5.6
     dev: false
 
   /micromark-factory-destination/1.0.0:
@@ -16994,6 +17055,15 @@ packages:
       micromark-extension-math: 0.1.2
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /remark-math/5.1.1:
+    resolution: {integrity: sha512-cE5T2R/xLVtfFI4cCePtiRn+e6jKMtFDR3P8V3qpv8wpKjwvHoBA4eJzvX+nVrnlNy0911bdGmuspCSwetfYHw==}
+    dependencies:
+      '@types/mdast': 3.0.10
+      mdast-util-math: 2.0.2
+      micromark-extension-math: 2.0.2
+      unified: 10.1.2
     dev: false
 
   /remark-parse/10.0.1:

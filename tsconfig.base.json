@@ -63,6 +63,7 @@
       "ooxast-util-remove-rsid": ["libs/ooxast/ooxast-util-remove-rsid/src/index.ts"],
       "ooxast-util-to-hast": ["libs/ooxast/ooxast-util-to-hast/src/index.ts"],
       "ooxast-util-to-jast": ["libs/ooxast/ooxast-util-to-jast/src/index.ts"],
+      "ooxast-util-to-mdast": ["libs/ooxast/ooxast-util-to-mdast/src/index.ts"],
       "ooxast-util-to-unified-latex": ["libs/ooxast/ooxast-util-to-unified-latex/src/index.ts"],
       "parse-text-cite": ["libs/citations/parse-text-cite/src/index.ts"],
       "rehype-notion": ["libs/notion/rehype-notion/src/index.ts"],

@@ -25,6 +25,9 @@
   "dependencies": {
     "@auth/core": "^0.5.0",
     "@auth/sveltekit": "^0.2.2",
+    "@benrbray/mdast-util-cite": "^1.1.0",
+    "@benrbray/micromark-extension-cite": "^1.0.0",
+    "@benrbray/remark-cite": "^1.1.0",
     "@emotion/react": "11.10.5",
     "@enio.ai/typedoc": "^1.0.6",
     "@hokify/axios-rate-limit": "^2.0.5",
@@ -116,6 +119,7 @@
     "rehype-parse": "^8.0.4",
     "rehype-remark": "^9.1.2",
     "remark-gfm": "^3.0.1",
+    "remark-math": "^5.1.1",
     "remark-parse": "^10.0.1",
     "remark-stringify": "^10.0.2",
     "retext-english": "^4.1.0",

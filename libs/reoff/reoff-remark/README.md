@@ -9,20 +9,20 @@ Plugin for `reoff` that takes an `ooxast` tree and turns it into a `remark` tree
 
 ## Contents
 
-- [reoff-remark](#reoff-remark)
-  - [Contents](#contents)
-  - [What is this?](#what-is-this)
-  - [When should I use this?](#when-should-i-use-this)
-  - [Install](#install)
-  - [Use](#use)
-  - [API](#api)
-  - [Syntax tree](#syntax-tree)
-  - [Types](#types)
-  - [Compatibility](#compatibility)
-  - [Security](#security)
-  - [Related](#related)
-  - [Contribute](#contribute)
-  - [License](#license)
+*   [reoff-remark](#reoff-remark)
+    *   [Contents](#contents)
+    *   [What is this?](#what-is-this)
+    *   [When should I use this?](#when-should-i-use-this)
+    *   [Install](#install)
+    *   [Use](#use)
+    *   [API](#api)
+    *   [Syntax tree](#syntax-tree)
+    *   [Types](#types)
+    *   [Compatibility](#compatibility)
+    *   [Security](#security)
+    *   [Related](#related)
+    *   [Contribute](#contribute)
+    *   [License](#license)
 
 ## What is this?
 
@@ -44,13 +44,13 @@ pnpm add reoff-remark
 
 ## API
 
----
+***
 
 ### `default()`
 
 Plugin to bridge or mutate to remark
 
-If a destination is given, runs the destination with the new jast
+If a destination is given, runs the destination with the new mdast
 tree (bridge-mode).
 Without destination, returns the jast tree: further plugins run on that
 tree (mutate-mode).
@@ -65,20 +65,20 @@ default(this: Processor<void, Root, void, void>, ...settings: [Processor, Option
 
 #### Parameters
 
-| Name          | Type                                        |
-| :------------ | :------------------------------------------ |
-| `this`        | `Processor`<`void`, `Root`, `void`, `void`> |
-| `...settings` | [`Processor`, `Options?`]                   |
+| Name | Type |
+| :------ | :------ |
+| `this` | `Processor`<`void`, `Root`, `void`, `void`> |
+| `...settings` | [`Processor`, `Options?`] |
 
 #### Returns
 
 `void` | `Transformer`<`Root`, `Root`>
 
-Defined in: node_modules/.pnpm/unified\@10.1.2/node_modules/unified/index.d.ts:531
+Defined in:  node\_modules/.pnpm/unified\@10.1.2/node\_modules/unified/index.d.ts:531
 
 Plugin to bridge or mutate to remark
 
-If a destination is given, runs the destination with the new jast
+If a destination is given, runs the destination with the new mdast
 tree (bridge-mode).
 Without destination, returns the jast tree: further plugins run on that
 tree (mutate-mode).
@@ -93,18 +93,18 @@ default(this: Processor<void, Root, void, void>, ...settings: [Options?] | void[
 
 #### Parameters
 
-| Name          | Type                                        |
-| :------------ | :------------------------------------------ | -------- |
-| `this`        | `Processor`<`void`, `Root`, `void`, `void`> |
-| `...settings` | [`Options?`]                                | `void`[] |
+| Name | Type |
+| :------ | :------ |
+| `this` | `Processor`<`void`, `Root`, `void`, `void`> |
+| `...settings` | [`Options?`] | `void`[] |
 
 #### Returns
 
 `void` | `Transformer`<`Root`, `Root`>
 
-Defined in: node_modules/.pnpm/unified\@10.1.2/node_modules/unified/index.d.ts:531
+Defined in:  node\_modules/.pnpm/unified\@10.1.2/node\_modules/unified/index.d.ts:531
 
----
+***
 
 ### `Options`
 
@@ -118,7 +118,7 @@ A bibliography you can add manually
 
 Needs to be in CSL format, which will be converted to BibTeX, or in BibTeX format
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:145](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L145)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:146](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L146)
 
 ##### `bibname?`
 
@@ -130,11 +130,11 @@ Name of the bibliography file
 
 'bibliography.bib'
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:46](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L46)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:47](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L47)
 
 ##### `citationType?`
 
-> `"endnote"` | `"mendeley"` | `"word"` | `"citavi"` | `"zotero"`
+> `"endnote"` | `"mendeley"` | `"citavi"` | `"zotero"` | `"word"`
 
 What type of citation is used?
 
@@ -142,7 +142,7 @@ What type of citation is used?
 
 'zotero'
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:69](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L69)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:70](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L70)
 
 ##### `collectCitation?`
 
@@ -150,24 +150,24 @@ Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:69](https://gith
 
 ###### Type declaration
 
-_Signature\`_
+*Signature\`*
 
 ```ts
 (citation: any, index: string | number): any;
 ```
 
-_Parameters\`_
+*Parameters\`*
 
-| Name       | Type     |
-| :--------- | :------- | -------- |
-| `citation` | `any`    |
-| `index`    | `string` | `number` |
+| Name | Type |
+| :------ | :------ |
+| `citation` | `any` |
+| `index` | `string` | `number` |
 
-_Returns\`_
+*Returns\`*
 
 `any`
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:71](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L71)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:72](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L72)
 
 ##### `columnSeparator?`
 
@@ -180,7 +180,7 @@ i.e. should `|` be added to the beginning and end of each row?
 
 false
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:51](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L51)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:52](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L52)
 
 ##### `defaultCol?`
 
@@ -194,7 +194,7 @@ e.g `l` for left, `r` for right, `c` for center
 
 'l'
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:126](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L126)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:127](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L127)
 
 ##### `displayMath?`
 
@@ -212,13 +212,13 @@ What type of display math should be used?
 
 'equation'
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:85](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L85)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:86](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L86)
 
 ##### `document?`
 
 > `boolean`
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:26](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L26)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:27](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L27)
 
 ##### `documentClass?`
 
@@ -237,12 +237,12 @@ Options for the document class
 
 ###### Type declaration
 
-| Member     | Type       | Description                                        |
-| :--------- | :--------- | :------------------------------------------------- |
-| `name`     | `string`   | Name of the document class `Default` 'article'     |
-| `options`? | `string`[] | Options for the document class `Default` undefined |
+| Member | Type | Description |
+| :------ | :------ | :------ |
+| `name` | `string` | Name of the document class  `Default`  'article' |
+| `options`? | `string`[] | Options for the document class  `Default`  undefined |
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:55](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L55)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:56](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L56)
 
 ##### `handlers?`
 
@@ -256,19 +256,21 @@ Handlers for specific node types
 
 ###### Type declaration
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:25](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L25)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:26](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L26)
 
 ##### `inlineMath?`
 
 > `"$"` | `"()"`
 
-What type of inline math should be used? -`$`: `$ ... $` -`()` : `\(...\)`
+What type of inline math should be used?
+-`$`: `$ ... $`
+-`()` : `\(...\)`
 
 ###### Default
 
 '$'
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:101](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L101)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:102](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L102)
 
 ##### `italics?`
 
@@ -280,13 +282,13 @@ Should italics be rendered as \textit or \emph?
 
 'emph'
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:42](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L42)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:43](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L43)
 
 ##### `newLines?`
 
 > `boolean`
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:27](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L27)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:28](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L28)
 
 ##### `packages?`
 
@@ -299,13 +301,13 @@ A list of packages to add to the preamble
 
 by default, the following packages are added:
 
-- `xcolor` (if `xcolor` is enabled)
-- `hyperref`
-- `graphicx`
-- `caption`
-- `tabularx` (if `tabularx` is enabled)
+*   `xcolor` (if `xcolor` is enabled)
+*   `hyperref`
+*   `graphicx`
+*   `caption`
+*   `tabularx` (if `tabularx` is enabled)
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:157](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L157)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:158](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L158)
 
 ##### `parseCitation?`
 
@@ -313,23 +315,23 @@ Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:157](https://git
 
 ###### Type declaration
 
-_Signature\`_
+*Signature\`*
 
 ```ts
 (citation: any): any;
 ```
 
-_Parameters\`_
+*Parameters\`*
 
-| Name       | Type  |
-| :--------- | :---- |
+| Name | Type |
+| :------ | :------ |
 | `citation` | `any` |
 
-_Returns\`_
+*Returns\`*
 
 `any`
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:70](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L70)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:71](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L71)
 
 ##### `preamble?`
 
@@ -340,7 +342,7 @@ A list of commands and other stuff to add to the preamble
 You are responsible for making sure that the commands are valid LaTeX
 and that they can be used in the preamble.
 
-You need to directly use the remark types here,
+You need to directly use the unified-latex types here,
 or you can just put it in raw
 
 ###### Default
@@ -350,30 +352,33 @@ or you can just put it in raw
 ###### Example
 
 ```ts
-import { m, args } from '@remark/remark-types'
+import { m, args } from '@unified-latex/unified-latex-types'
 
 const options = {
-  preamble: [
-    // \author{Leeroy Jenkins}
-    m('author', 'Leeroy Jenkins'),
-    // \title{The Adventures of Leeroy Jenkins}
-    m('title', 'The Adventures of Leeroy Jenkins'),
-    // \somemacrowithoptions[optional1][optional2]{firstArg}{secondArg}
-    m(
-      'somemacrowithoptions',
-      args(['optional1', 'optional2', 'firstArg', 'secondArg'], { braces: '[][]{}{}' }),
-    ),
-  ],
+ preamble: [
+  // \author{Leeroy Jenkins}
+  m('author', 'Leeroy Jenkins'),
+  // \title{The Adventures of Leeroy Jenkins}
+  m('title', 'The Adventures of Leeroy Jenkins'),
+  // \somemacrowithoptions[optional1][optional2]{firstArg}{secondArg}
+  m(
+     'somemacrowithoptions',
+     args(
+        ['optional1', 'optional2', 'firstArg', 'secondArg'],
+       { braces: '[][]{}{}'}
+      )
+   ),
+  ]
 }
 ```
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:191](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L191)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:192](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L192)
 
 ##### `quotes?`
 
 > `string`[]
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:28](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L28)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L29)
 
 ##### `relations?`
 
@@ -385,13 +390,13 @@ Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:28](https://gith
 
 ###### Type declaration
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:73](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L73)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:74](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L74)
 
 ##### `strikethrough?`
 
-> `"st"` | `"sout"` | `"s"`
+> `"st"` | `"s"` | `"sout"`
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:102](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L102)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:103](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L103)
 
 ##### `tabularx?`
 
@@ -405,7 +410,7 @@ Should tabularx be used instead of tabular?
 
 false
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:131](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L131)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:132](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L132)
 
 ##### `title?`
 
@@ -419,7 +424,7 @@ If this is not set, the title will be taken from the heading with the "Title" st
 
 undefined
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:118](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L118)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:119](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L119)
 
 ##### `topSection?`
 
@@ -434,7 +439,7 @@ What the top section should be
 4 = paragraph
 5 = subparagraph
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:38](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L38)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:39](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L39)
 
 ##### `xcolor?`
 
@@ -449,7 +454,7 @@ and remove color related commands from the output.
 
 true
 
-Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:110](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-remark/src/lib/types.ts#L110)
+Defined in:  [libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts:111](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L111)
 
 ## Syntax tree
 
@@ -468,31 +473,59 @@ Defined in: [libs/ooxast/ooxast-util-to-remark/src/lib/types.ts:110](https://git
 [GPL-3.0-or-later](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
+
 [unifiedgh]: https://github.com/unifiedjs/unified
+
 [xast-from-xml]: https://github.com/syntax-tree/xast-util-from-xml
+
 [rehype]: https://github.com/rehypejs/rehype
+
 [rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour
+
 [rejour-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-parse
+
 [rejour-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-stringify
+
 [rejour-move-abstract]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-move-abstract
+
 [rejour-meta]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-meta
+
 [rejour-relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-relatex
+
 [relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex
+
 [relatex-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/relatex-parse
+
 [jast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast
+
 [jast-util-to-texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast-util-to-texast
+
 [jastscript]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jastscript
+
 [texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast
+
 [texast-util-to-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast-util-to-latex
+
 [hast]: https://github.com/syntax-tree/hast
+
 [xast]: https://github.com/syntax-tree/xast
+
 [mdast]: https://github.com/syntax-tree/mdast
+
 [mdast-markdown]: https://github.com/syntax-tree/mdast-util-to-markdown
+
 [latex-utensils]: https://github.com/tamuratak/latex-utensils
+
 [latexjs]: https://github.com/latexjs/latexjs
+
 [reoff]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff
+
 [reoff-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse
+
 [reoff-rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-rejour
+
 [ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast
+
 [ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-jast
+
 [reoff-remark]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff-remark

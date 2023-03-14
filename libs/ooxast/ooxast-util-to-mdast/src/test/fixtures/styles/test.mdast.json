@@ -1,0 +1,73 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "children": [
+        {
+          "type": "text",
+          "value": "Heading 1"
+        }
+      ],
+      "depth": 1
+    },
+    {
+      "type": "heading",
+      "children": [
+        {
+          "type": "text",
+          "value": "Heading 2"
+        }
+      ],
+      "depth": 2
+    },
+    {
+      "type": "heading",
+      "children": [
+        {
+          "type": "text",
+          "value": "Heading 3"
+        }
+      ],
+      "depth": 3
+    },
+    {
+      "type": "heading",
+      "children": [
+        {
+          "type": "text",
+          "value": "Heading 4"
+        }
+      ],
+      "depth": 4
+    },
+    {
+      "type": "heading",
+      "children": [
+        {
+          "type": "text",
+          "value": "Heading 5"
+        }
+      ],
+      "depth": 5
+    },
+    {
+      "type": "blockquote",
+      "children": [
+        {
+          "type": "text",
+          "value": "A nice quote"
+        }
+      ]
+    },
+    {
+      "type": "blockquote",
+      "children": [
+        {
+          "type": "text",
+          "value": "An intense quote"
+        }
+      ]
+    }
+  ]
+}

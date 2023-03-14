@@ -9,23 +9,12 @@ import { reoffClean } from 'reoff-clean'
 import reoffCite from 'reoff-cite'
 import reoffParseReferences from 'reoff-parse-references'
 import { toMdast } from '../lib/ooxast-util-to-mdast.js'
-import { toString } from '@unified-latex/unified-latex-util-to-string'
+import remarkGfm from 'remark-gfm'
+import remarkCite from '@benrbray/remark-cite'
 
 import { MdastNode, Options } from '../lib/types.js'
 import remarkStringify from 'remark-stringify'
 import { Node } from 'unist'
-import { Ast, Root } from '@unified-latex/unified-latex-types'
-
-const mdastStringify = function relatexStringify(options?: Options | void) {
-  const compiler: CompilerFunction<Node, string> = (tree) => {
-    // Assume options.
-    const settings = this.data('settings') as Options
-
-    return toString(tree as Ast)
-  }
-
-  Object.assign(this, { Compiler: compiler })
-} as Plugin<[Options] | void[], Root, string>
 
 // import path from 'path'
 // import { fileURLToPath } from 'url'
@@ -52,11 +41,13 @@ const fromDocx = (
         'w:color',
       ],
     })
-    .use(reoffParseReferences, { mailto: 'support@trialanderror.org' })
-    .use(reoffCite, { type: citationType || 'zotero', log: false })
-    .use(() => (tree, vfile) => {
-      writeFileSync(join(path, 'test.ooxast.json'), JSON.stringify(removePosition(tree), null, 2))
-    })
+    // .use(reoffParseReferences) // { mailto: 'support@trialanderror.org' })
+    // .use(reoffCite, { type: citationType || 'zotero', log: false })
+    // .use(() => (tree, vfile) => {
+    //   writeFileSync(join(path, 'test.ooxast.json'), JSON.stringify(removePosition(tree), null, 2))
+    // })
+    .use(remarkGfm)
+    .use(remarkCite, {})
     .use(
       () => (tree, vfile) =>
         toMdast(tree, vfile, {
@@ -66,7 +57,7 @@ const fromDocx = (
     )
     .use(
       () => (tree) =>
-        writeFileSync(join(path, 'test.tex.json'), JSON.stringify(removePosition(tree), null, 2)),
+        writeFileSync(join(path, 'test.mdast.json'), JSON.stringify(removePosition(tree), null, 2)),
     )
     .use(remarkStringify)
 

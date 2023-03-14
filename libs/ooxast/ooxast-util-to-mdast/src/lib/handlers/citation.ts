@@ -5,16 +5,16 @@ import { Data as CSL } from 'csl-json'
 
 import { CitationItem, MendeleyCitationItem } from 'ooxast-util-citations'
 
-import { m } from '@unified-latex/unified-latex-builder'
-
 import { Parent } from 'unist'
+import {} from '@benrbray/micromark-extension-cite'
+import { InlineCiteNode } from '@benrbray/mdast-util-cite'
 
-export const citation: Handle = (state: State, citation: T, parent?: Parent) => {
+export const citation: Handle = (state: State, node: T, parent?: Parent) => {
   // i const t = select('', citation) as T
   //  if (!t) return
-  if (!citation || !citation?.children?.length) return
+  if (!node || !node?.children?.length) return
 
-  const text = citation.children[0].value
+  const text = node.children[0].value
 
   if (text.includes('PAGE \\* MERGEFORMAT')) return
 
@@ -92,7 +92,22 @@ export const citation: Handle = (state: State, citation: T, parent?: Parent) => 
         const { id, itemData: itemdata, ...rest } = cite
         const customCiteData = { ...rest, ...citation.properties }
 
-        return m('autocite', citeKey)
+        const inlineCiteNode: InlineCiteNode = {
+          type: 'cite',
+          value: '',
+          data: {
+            citeItems: [
+              {
+                key: citeKey,
+                prefix: customCiteData.prefix,
+                suffix: `${customCiteData.locator}${customCiteData.suffix}`,
+              },
+            ],
+          },
+        }
+
+        state.patch(node, inlineCiteNode)
+        return inlineCiteNode
         return h(
           itemData,
           'xref',

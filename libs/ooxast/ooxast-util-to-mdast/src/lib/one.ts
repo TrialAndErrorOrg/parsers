@@ -5,11 +5,7 @@ import { Handle, state, MdastNode, Node } from './types.js'
 import { own } from './util/own.js'
 import { wrapText } from './util/wrap-text.js'
 
-export function one(
-  state: State,
-  node: Node,
-  parent?: Parent,
-): MdastNode | Array<MdastNode> | void {
+function one(state: State, node: Node, parent?: Parent): MdastNode | Array<MdastNode> | void {
   let fn: Handle | undefined
 
   if (isElement(node)) {

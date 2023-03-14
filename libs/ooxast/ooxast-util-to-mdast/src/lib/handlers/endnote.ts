@@ -1,6 +1,6 @@
 import { State } from '../state.js'
 import { Element } from '../types.js'
-import { all } from '../all.js'
+import { FootnoteDefinition } from 'mdast'
 
 export function footnote(state: State, node: Element) {
   if (node?.attributes?.type === 'separator') {
@@ -12,6 +12,12 @@ export function footnote(state: State, node: Element) {
     return
   }
 
-  state.endnotes[index] = state.all(node) ?? []
+  const result = {
+    type: 'footnoteDefinition',
+    identifier: index.toString(),
+    children: state.all(node),
+  } as FootnoteDefinition
+
+  state.patch(node, result)
   return
 }

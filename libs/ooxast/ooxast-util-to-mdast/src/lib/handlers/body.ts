@@ -14,6 +14,12 @@ import { List, ListItem } from 'mdast'
 
 const isP = (node: Element): node is P => node.type === 'element' && node.name === 'w:p'
 
+declare module 'mdast' {
+  interface ListItemContentMap {
+    list: List
+  }
+}
+
 export const body: Handle = (state: State, body: Body) => {
   const processedBody = body.children.reduce((acc, child, index) => {
     if (child.type !== 'element') return acc
@@ -47,7 +53,7 @@ export const body: Handle = (state: State, body: Body) => {
 
     // there's no previous list item, we need to create a new environment
     if (!isPrevListItem || prevIlvl == null || prevNumId == null) {
-      const lst = list('ordered', listItem) as List
+      const lst = makeList(state, listItem, numId, ilvl) as List
 
       acc.push(lst)
       return acc
@@ -56,10 +62,6 @@ export const body: Handle = (state: State, body: Body) => {
     // there is a previous list item, and it's the same level, so we need to add it to the previous environment
     if (isPrevListItem && ilvl === prevIlvl && numId === prevNumId) {
       const mainList = acc[acc.length - 1] as List
-
-      if (!mainList.ordered) {
-        throw new Error('prevEnv.env !== ordered')
-      }
 
       const embeddedLists = findEmbeddedLists(mainList)
       const lastList = embeddedLists[embeddedLists.length - 1]
@@ -73,7 +75,9 @@ export const body: Handle = (state: State, body: Body) => {
       const mainList = acc[acc.length - 1] as List
       const embeddedLists = findEmbeddedLists(mainList)
       const lastList = embeddedLists[embeddedLists.length - 1]
-      lastList.children?.push(makeItemList(state, listItem))
+      lastList.children[lastList.children.length - 1].children.push(
+        makeList(state, listItem, numId, ilvl),
+      )
       return acc
     }
 
@@ -83,21 +87,21 @@ export const body: Handle = (state: State, body: Body) => {
       const embeddedLists = findEmbeddedLists(mainList)
       const toBeEmbeddedList = embeddedLists[embeddedLists.length - (prevIlvl - ilvl) - 1]
 
-      const list = makeItemList(state, listItem)
+      const list = makeList(state, listItem, numId, ilvl)
 
       if (!toBeEmbeddedList) {
         acc.push(list)
         return acc
       }
 
-      if (oBeEmbeddedList._renderInfo?.ilvl !== ilvl) {
-        toBeEmbeddedList.content.push(env)
+      if (toBeEmbeddedList._renderInfo?.ilvl !== ilvl) {
+        toBeEmbeddedList.children[toBeEmbeddedList.children.length - 1].children.push(list)
         return acc
       }
 
       const item = makeItem(state, child)
 
-      toBeEmbeddedList.content.push(...item)
+      toBeEmbeddedList.children.push(item)
       return acc
     }
 
@@ -107,7 +111,9 @@ export const body: Handle = (state: State, body: Body) => {
       const embeddedLists = findEmbeddedLists(mainList)
       const lastList = embeddedLists[embeddedLists.length - 1]
       // const lst = list('ordered', listItem) as List
-      lastList.children.push(makeItemList(state, listItem))
+      lastList.children[lastList.children.length - 1].children.push(
+        makeList(state, listItem, numId, ilvl),
+      )
       return acc
     }
 
@@ -123,12 +129,39 @@ function makeItem(state: State, item: P): ListItem {
   return mIte
 }
 
-function makeItemList(state: State, item: P): ListItem {
+const orderedMap = {
+  decimal: true,
+  lowerLetter: true,
+  upperLetter: true,
+  lowerRoman: true,
+  upperRoman: true,
+} as const
+
+function makeList(state: State, item: P, numId: number, ilvl: number): List {
   const result = state.all(item)
-  const lst = list('ordered', listItem(result)) as List
-  const mIte = listItem(lst) as ListItem
-  state.patch(item, mIte)
-  return mIte
+  if (!state.listNumbering) {
+    const result = list('ordered', listItem(result) as ListItem) as List
+    state.patch(item, result)
+    return result
+  }
+
+  const num = state.listNumbering?.numIds[numId.toString()]
+  const { lvlJc, numFmt, lvlText, start } = num[ilvl.toString()]
+  const ordered = numFmt in orderedMap
+
+  const lst: List = {
+    type: 'list',
+    ordered,
+    start: start ? parseInt(start, 10) : undefined,
+    data: {
+      numFmt,
+      ilvl,
+      numId,
+    },
+    children: [listItem(result) as ListItem],
+  }
+  state.patch(item, lst)
+  return lst
 }
 
 function findEmbeddedLists(lists: List[] | List): List[] {

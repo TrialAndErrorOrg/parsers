@@ -1,23 +1,17 @@
-import { env, s } from '@unified-latex/unified-latex-builder'
-import { all } from '../all.js'
 import { State } from '../state.js'
-import { Handle, Node, Parent } from '../types.js'
-import { PB } from '../util/PB.js'
+import { Handle } from '../types.js'
+import { Math } from 'mdast-util-math'
+import { Math as OoxastMath } from 'ooxast'
+import { toString } from 'mdast-util-to-string'
 
-export const oMathPara: Handle = (state: State, node: Node, parent?: Parent) => {
-  state.inDisplayMath = true
-  const content = state.all(node)
-  state.inDisplayMath = false
-
-  if (['[]', '$$'].includes(state.displayMath)) {
-    return [
-      PB,
-      state.displayMath === '[]' ? s('\\[') : s('$$'),
-      ...content,
-      state.displayMath === '[]' ? s('\\]') : s('$$'),
-      PB,
-    ]
+export const oMathPara: Handle = (state: State, node: OoxastMath.OMathPara): Math => {
+  state.inMath = true
+  const content: Math = {
+    type: 'math',
+    value: toString(state.all(node)?.[0]),
   }
+  state.patch(node, content)
 
-  return env(state.displayMath, content)
+  state.inMath = false
+  return content
 }

@@ -1,0 +1,290 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 1,
+      "data": {
+        "numFmt": "decimal",
+        "ilvl": 0,
+        "numId": 1
+      },
+      "children": [
+        {
+          "type": "listItem",
+          "children": [
+            {
+              "type": "text",
+              "value": "Number one"
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "children": [
+            {
+              "type": "text",
+              "value": "Two"
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "children": [
+            {
+              "type": "text",
+              "value": "Three"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "start": 1,
+              "data": {
+                "numFmt": "lowerLetter",
+                "ilvl": 1,
+                "numId": 1
+              },
+              "children": [
+                {
+                  "type": "listItem",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Indent"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "start": 9,
+      "data": {
+        "numFmt": "bullet",
+        "ilvl": 0,
+        "numId": 2
+      },
+      "children": [
+        {
+          "type": "listItem",
+          "children": [
+            {
+              "type": "text",
+              "value": "Unordered"
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "children": [
+            {
+              "type": "text",
+              "value": "List"
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "children": [
+            {
+              "type": "text",
+              "value": "Items"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": 1,
+              "data": {
+                "numFmt": "bullet",
+                "ilvl": 1,
+                "numId": 2
+              },
+              "children": [
+                {
+                  "type": "listItem",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Indentatio"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 1,
+      "data": {
+        "numFmt": "decimal",
+        "ilvl": 0,
+        "numId": 1
+      },
+      "children": [
+        {
+          "type": "listItem",
+          "children": [
+            {
+              "type": "text",
+              "value": "Continuing"
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "children": [
+            {
+              "type": "text",
+              "value": "Previous"
+            }
+          ]
+        },
+        {
+          "type": "listItem",
+          "children": [
+            {
+              "type": "text",
+              "value": "List"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "start": 1,
+              "data": {
+                "numFmt": "decimal",
+                "ilvl": 3,
+                "numId": 1
+              },
+              "children": [
+                {
+                  "type": "listItem",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Indenting 4 "
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 1,
+      "data": {
+        "numFmt": "lowerLetter",
+        "ilvl": 1,
+        "numId": 1
+      },
+      "children": [
+        {
+          "type": "listItem",
+          "children": [
+            {
+              "type": "text",
+              "value": "Going down to b"
+            },
+            {
+              "type": "list",
+              "ordered": true,
+              "start": 1,
+              "data": {
+                "numFmt": "lowerRoman",
+                "ilvl": 2,
+                "numId": 1
+              },
+              "children": [
+                {
+                  "type": "listItem",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "Indenting 1"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 1,
+      "data": {
+        "numFmt": "lowerLetter",
+        "ilvl": 1,
+        "numId": 1
+      },
+      "children": [
+        {
+          "type": "listItem",
+          "children": [
+            {
+              "type": "text",
+              "value": "Going back to c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "list",
+      "ordered": true,
+      "start": 1,
+      "data": {
+        "numFmt": "decimal",
+        "ilvl": 0,
+        "numId": 8
+      },
+      "children": [
+        {
+          "type": "listItem",
+          "children": [
+            {
+              "type": "text",
+              "value": "Immediately starting other list"
+            },
+            {
+              "type": "list",
+              "ordered": false,
+              "start": 1,
+              "data": {
+                "numFmt": "bullet",
+                "ilvl": 0,
+                "numId": 10
+              },
+              "children": [
+                {
+                  "type": "listItem",
+                  "children": [
+                    {
+                      "type": "text",
+                      "value": "And another list"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

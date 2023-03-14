@@ -5,7 +5,6 @@ import { text } from './text.js'
 import { citation } from './citation.js'
 import { tbl } from './tbl.js'
 import { footnote } from './footnote.js'
-import { document } from './document.js'
 import { r } from './r.js'
 import { tr } from './tr.js'
 import { drawing } from './drawing.js'
@@ -22,7 +21,7 @@ export const handlers: Context['handlers'] = {
   body,
   root,
   text,
-  document,
+  document: all,
   footnotes: all,
   footnote,
   t: all,

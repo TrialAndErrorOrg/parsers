@@ -4,12 +4,14 @@ import { Element } from 'xast'
 import { Root as MdastRoot, Content } from 'mdast'
 
 import { Attributes as OoxastProperties, Parent, Body, Text, Root, P } from 'ooxast'
+import { Math, InlineMath } from 'mdast-util-math'
+import { InlineCiteNode } from '@benrbray/mdast-util-cite'
 
 export type XastContent = Root['children'][number] | Root
 
 export type Node = Element | Root | Text
 
-export type MdastNode = Content | MdastRoot
+export type MdastNode = Content | MdastRoot | Math | InlineMath | InlineCiteNode
 
 export interface MdastStrikeThrough extends Parent {
   type: 'strikethrough'
@@ -54,9 +56,9 @@ export interface Options {
   bibliography?: CSL[]
 }
 
-export type Handle<T extends Element = Element> = (
+export type Handle = (
   state: State,
-  node: T,
+  node: Node,
   parent?: Parent,
 ) => MdastNode | Array<MdastNode> | void | undefined
 
@@ -102,3 +104,20 @@ export type {
 }
 
 export type Parents = Extract<Exclude<Node, Text | Root>, { children: any[] }>
+
+type NumId = Record<
+  string,
+  {
+    [lvlId: string]: {
+      lvlText: string
+      lvlJc: string
+      numFmt: string
+      start: string
+    }
+  }
+>
+
+export type ListNumbering = {
+  numIds: NumId
+  abstractNumIds: NumId
+}

@@ -1,0 +1,60 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Some text"
+        },
+        {
+          "type": "footnoteReference",
+          "identifier": "1",
+          "label": "1"
+        }
+      ]
+    },
+    {
+      "type": "footnoteDefinition",
+      "identifier": "1",
+      "children": [
+        {
+          "type": "paragraph",
+          "children": [
+            {
+              "type": "text",
+              "value": ""
+            },
+            {
+              "type": "text",
+              "value": " "
+            },
+            {
+              "type": "text",
+              "value": "A footnote."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": ""
+        }
+      ]
+    }
+  ]
+}

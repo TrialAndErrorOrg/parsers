@@ -9,6 +9,7 @@ import {
   MdastNode,
   MdastParent,
   MdastContent,
+  ListNumbering,
 } from './types.js'
 
 /*   Info passed around about the current state.*/
@@ -80,6 +81,7 @@ export interface State {
   citations: { [key: string | number]: CSL }
   relations: { [key: string]: string }
   bibliography: CSL[]
+  listNumbering?: ListNumbering
 }
 
 /**
@@ -120,7 +122,7 @@ type ToFlow = (nodes: Array<MdastContent>) => Array<MdastFlowContent>
  * @returns {MdastNode | Array<MdastNode> | void}
  *   mdast result.
  */
-type One = (node: Node, parent?: Parent) => MdastNode | Array<MdastNode> | void
+type One = ((node: Node, parent?: Parent) => MdastNode | Array<MdastNode> | void) & ThisType<State>
 
 /*   Resolve a URL relative to a base. */
 type Resolve = (
@@ -133,6 +135,7 @@ import { position } from 'unist-util-position'
 import { handlers } from './handlers/index.js'
 // import { MdastNode, Node, Parent } from './types.js'
 import { wrap } from './util/wrap.js'
+import { isElement } from 'xast-util-is-element'
 
 const own = {}.hasOwnProperty
 
@@ -209,17 +212,18 @@ function patch(origin: Node, node: MdastNode): void {
  * @returns {MdastNode | Array<MdastNode> | void}
  *   mdast result.
  */
-function one(node: Node, parent: Parent | undefined): MdastNode | Array<MdastNode> | void {
-  if (node.type === 'element') {
-    if (node.attributes && node.attributes.dataMdast === 'ignore') {
-      return
+function one(this: State, node: Node, parent?: Parent): MdastNode | Array<MdastNode> | void {
+  let fn: Handle | undefined
+  if (isElement(node)) {
+    if (own.call(this.handlers, node.name.replace(/\w+:/, ''))) {
+      fn = this.handlers[node.name.replace(/\w+:/, '')]
     }
+  } else if (own.call(this.handlers, node.type)) {
+    fn = this.handlers[node.type]
+  }
 
-    if (own.call(this.handlers, node.name)) {
-      return this.handlers[node.name](this, node, parent)
-    }
-  } else if (own.call(this.nodeHandlers, node.type)) {
-    return this.nodeHandlers[node.type](this, node, parent)
+  if (typeof fn === 'function') {
+    return fn(this, node, parent)
   }
 
   // Unknown literal.

@@ -72,7 +72,7 @@
           "content": [
             {
               "type": "string",
-              "content": "figurex"
+              "content": "graphicx"
             }
           ]
         }
@@ -238,13 +238,21 @@
                   ],
                   "_renderInfo": {
                     "ilvl": 1,
-                    "numId": 1
+                    "numId": 1,
+                    "numFmt": "lowerLetter",
+                    "lvlText": "%2.",
+                    "lvlJc": "left",
+                    "start": "1"
                   }
                 }
               ],
               "_renderInfo": {
                 "ilvl": 0,
-                "numId": 1
+                "numId": 1,
+                "numFmt": "decimal",
+                "lvlText": "%1.",
+                "lvlJc": "left",
+                "start": "1"
               }
             },
             {
@@ -255,7 +263,7 @@
             },
             {
               "type": "environment",
-              "env": "enumerate",
+              "env": "itemize",
               "content": [
                 {
                   "type": "parbreak"
@@ -322,7 +330,7 @@
                 },
                 {
                   "type": "environment",
-                  "env": "enumerate",
+                  "env": "itemize",
                   "content": [
                     {
                       "type": "parbreak"
@@ -348,13 +356,21 @@
                   ],
                   "_renderInfo": {
                     "ilvl": 1,
-                    "numId": 2
+                    "numId": 2,
+                    "numFmt": "bullet",
+                    "lvlText": "o",
+                    "lvlJc": "left",
+                    "start": "1"
                   }
                 }
               ],
               "_renderInfo": {
                 "ilvl": 0,
-                "numId": 2
+                "numId": 2,
+                "numFmt": "bullet",
+                "lvlText": "-",
+                "lvlJc": "left",
+                "start": "9"
               }
             },
             {
@@ -458,13 +474,21 @@
                   ],
                   "_renderInfo": {
                     "ilvl": 3,
-                    "numId": 1
+                    "numId": 1,
+                    "numFmt": "decimal",
+                    "lvlText": "%4.",
+                    "lvlJc": "left",
+                    "start": "1"
                   }
                 }
               ],
               "_renderInfo": {
                 "ilvl": 0,
-                "numId": 1
+                "numId": 1,
+                "numFmt": "decimal",
+                "lvlText": "%1.",
+                "lvlJc": "left",
+                "start": "1"
               }
             },
             {
@@ -520,7 +544,11 @@
                   ],
                   "_renderInfo": {
                     "ilvl": 2,
-                    "numId": 1
+                    "numId": 1,
+                    "numFmt": "lowerRoman",
+                    "lvlText": "%3.",
+                    "lvlJc": "right",
+                    "start": "1"
                   }
                 },
                 {
@@ -547,7 +575,11 @@
               ],
               "_renderInfo": {
                 "ilvl": 1,
-                "numId": 1
+                "numId": 1,
+                "numFmt": "lowerLetter",
+                "lvlText": "%2.",
+                "lvlJc": "left",
+                "start": "1"
               }
             },
             {
@@ -578,12 +610,16 @@
               ],
               "_renderInfo": {
                 "ilvl": 0,
-                "numId": 8
+                "numId": 8,
+                "numFmt": "decimal",
+                "lvlText": "%1.",
+                "lvlJc": "left",
+                "start": "1"
               }
             },
             {
               "type": "environment",
-              "env": "enumerate",
+              "env": "itemize",
               "content": [
                 {
                   "type": "parbreak"
@@ -609,7 +645,11 @@
               ],
               "_renderInfo": {
                 "ilvl": 0,
-                "numId": 10
+                "numId": 10,
+                "numFmt": "bullet",
+                "lvlText": "",
+                "lvlJc": "left",
+                "start": "1"
               }
             }
           ]

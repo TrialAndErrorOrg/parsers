@@ -26,6 +26,7 @@ import { makePackage } from './util/make-package.js'
 import { cslToBiblatex } from 'csl-to-biblatex'
 import { VFile } from 'vfile'
 import { notes } from './util/notes.js'
+import { findListNumbering } from './util/find-list-numbering.js'
 
 export { one } from './one.js'
 export { all } from './all.js'
@@ -162,6 +163,11 @@ export function toUnifiedLatex(
       simpleParagraph: false,
       bibliography: options.bibliography || [],
       inDisplayMath: false,
+      listNumbering: vfile?.data?.['word/numbering.xml']
+        ? findListNumbering(vfile.data['word/numbering.xml'])
+        : vfile?.data?.parsed?.['word/numbering.xml']
+        ? findListNumbering(vfile.data.parsed['word/numbering.xml'])
+        : undefined,
     } as Context,
   )
 

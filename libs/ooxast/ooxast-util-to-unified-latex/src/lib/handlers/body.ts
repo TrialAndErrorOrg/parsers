@@ -46,15 +46,7 @@ export const body: Handle = (h: H, body: Body) => {
 
     // there's no previous list item, we need to create a new environment
     if (!isPrevListItem || prevIlvl == null || prevNumId == null) {
-      const env: Environment = {
-        type: 'environment',
-        env: 'enumerate',
-        content: listItem,
-        _renderInfo: {
-          ilvl,
-          numId,
-        },
-      }
+      const env = makeEnv(h, child, numId, ilvl)
 
       acc.push(env)
       return acc
@@ -64,7 +56,7 @@ export const body: Handle = (h: H, body: Body) => {
     if (isPrevListItem && ilvl === prevIlvl && numId === prevNumId) {
       const mainEnv = acc[acc.length - 1] as Environment
 
-      if (mainEnv.env !== 'enumerate') {
+      if (!['enumerate', 'itemize'].includes(mainEnv.env)) {
         throw new Error('prevEnv.env !== enumerate')
       }
 
@@ -80,15 +72,8 @@ export const body: Handle = (h: H, body: Body) => {
       const mainEnv = acc[acc.length - 1] as Environment
       const embeddedEnvs = findEmbeddedEnvs(mainEnv)
       const lastEnv = embeddedEnvs[embeddedEnvs.length - 1]
-      const env: Environment = {
-        type: 'environment',
-        env: 'enumerate',
-        content: listItem,
-        _renderInfo: {
-          ilvl,
-          numId,
-        },
-      }
+      const env = makeEnv(h, child, numId, ilvl)
+
       lastEnv.content.push(env)
       return acc
     }
@@ -99,15 +84,7 @@ export const body: Handle = (h: H, body: Body) => {
       const embeddedEnvs = findEmbeddedEnvs(mainEnv)
       const toBeEmbeddedEnv = embeddedEnvs[embeddedEnvs.length - (prevIlvl - ilvl) - 1]
 
-      const env: Environment = {
-        type: 'environment',
-        env: 'enumerate',
-        content: listItem,
-        _renderInfo: {
-          ilvl,
-          numId,
-        },
-      }
+      const env = makeEnv(h, child, numId, ilvl)
 
       if (!toBeEmbeddedEnv) {
         acc.push(env)
@@ -130,15 +107,8 @@ export const body: Handle = (h: H, body: Body) => {
       const mainEnv = acc[acc.length - 1] as Environment
       const embeddedEnvs = findEmbeddedEnvs(mainEnv)
       const toBeEmbeddedEnv = embeddedEnvs[embeddedEnvs.length - (prevIlvl - ilvl) - 1]
-      const env: Environment = {
-        type: 'environment',
-        env: 'enumerate',
-        content: listItem,
-        _renderInfo: {
-          ilvl,
-          numId,
-        },
-      }
+      const env = makeEnv(h, child, numId, ilvl)
+
       if (!toBeEmbeddedEnv) {
         acc.push(env)
         return acc
@@ -146,6 +116,7 @@ export const body: Handle = (h: H, body: Body) => {
 
       if (toBeEmbeddedEnv._renderInfo?.ilvl !== ilvl) {
         toBeEmbeddedEnv.content.push(env)
+
         return acc
       }
 
@@ -166,6 +137,49 @@ function makeItem(h: H, item: P): [typeof PB, Macro, typeof SP, ...UnifiedLatexN
   })
 
   return [PB, mIte, SP, ...all(h, item), PB]
+}
+
+const enumerateMap = {
+  decimal: true,
+  lowerRoman: true,
+  upperRoman: true,
+  lowerLetter: true,
+  upperLetter: true,
+} as const
+
+function makeEnv(h: H, item: P, numId: number, ilvl: number): Environment {
+  if (!h.listNumbering) {
+    return {
+      type: 'environment',
+      env: 'enumerate',
+      content: makeItem(h, item),
+      _renderInfo: {
+        ilvl,
+        numId,
+      },
+    }
+  }
+
+  const { numFmt, lvlText, lvlJc, start } =
+    h.listNumbering?.numIds?.[numId.toString()]?.[ilvl?.toString()] ?? {}
+
+  const enumerate = numFmt in enumerateMap ? 'enumerate' : 'itemize'
+
+  const env: Environment = {
+    type: 'environment',
+    env: enumerate,
+    content: makeItem(h, item),
+    _renderInfo: {
+      ilvl,
+      numId,
+      numFmt,
+      lvlText,
+      lvlJc,
+      start,
+    },
+  }
+
+  return env
 }
 
 function findEmbeddedEnvs(envs: Environment[] | Environment): Environment[] {

@@ -10,6 +10,7 @@ import {
 } from '@unified-latex/unified-latex-types'
 
 import { Attributes as OoxastProperties, Parent, Body, Text, Root, P } from 'ooxast'
+import { ListNumbering } from './util/find-list-numbering'
 
 export type XastContent = Root['children'][number] | Root
 
@@ -272,6 +273,7 @@ export interface Context {
    * Needs to be in CSL format, which will be converted to BibTeX, or in BibTeX format
    */
   bibliography?: CSL[] | string
+  listNumbering?: ListNumbering
 }
 
 export type HWithProps = (

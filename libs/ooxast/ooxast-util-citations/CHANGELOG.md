@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-citations-0.1.0...ooxast-util-citations-0.1.1) (2023-03-14)
+
+### Dependency Updates
+
+* `csl-consolidate` updated to version `0.1.1`
+* `ooxast` updated to version `0.1.3`
+* `ooxast-util-get-style` updated to version `0.1.2`
+* `parse-text-cite` updated to version `0.1.3`
+* `xast-util-is-element` updated to version `0.1.4`
+* `xast-util-select` updated to version `0.1.2`
+* `ooxast-util-citation-plugin` updated to version `0.1.1`
 ## 0.1.0 (2023-03-09)
 
 ### Dependency Updates

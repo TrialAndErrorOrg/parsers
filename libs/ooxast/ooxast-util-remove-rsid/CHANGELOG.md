@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.2](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-remove-rsid-0.1.1...ooxast-util-remove-rsid-0.1.2) (2023-03-14)
+
+### Dependency Updates
+
+* `xast-util-select` updated to version `0.1.2`
+* `ooxast` updated to version `0.1.3`
+* `utils-misc` updated to version `0.1.0`
+* `xast-util-is-element` updated to version `0.1.4`
 ## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-remove-rsid-0.1.0...ooxast-util-remove-rsid-0.1.1) (2023-03-09)
 
 ### Dependency Updates

@@ -2,6 +2,11 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.5](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-parse-0.2.4...reoff-parse-0.2.5) (2023-03-14)
+
+### Dependency Updates
+
+* `docx-to-vfile` updated to version `0.5.3`
 ## [0.2.4](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-parse-0.2.3...reoff-parse-0.2.4) (2023-03-13)
 
 ## [0.2.3](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-parse-0.2.2...reoff-parse-0.2.3) (2023-03-13)

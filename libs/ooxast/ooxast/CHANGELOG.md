@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.3](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-0.1.2...ooxast-0.1.3) (2023-03-14)
+
+
+### Bug Fixes
+
+* update types ([1149014](https://github.com/TrialAndErrorOrg/parsers/commit/11490147f93c78274c2432a9f2077bdebec00fca))
+
 ## [0.1.2](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-0.1.1...ooxast-0.1.2) (2023-03-09)
 
 ## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-0.1.0...ooxast-0.1.1) (2023-03-09)

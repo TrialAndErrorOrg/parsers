@@ -206,8 +206,8 @@ export function getUpdatedPackageJsonContent(
     if (typeof exports !== 'string') {
       if (typeof exports['.'] !== 'string') {
         if (!hasEsmFormat) {
-          console.log('!HAS ESM FORMAT')
-          exports['.']['require'] ??= cjsMain
+          // TODO: [better-nx-tsc]{ figure out a more elgegant solution for package.json exports than just removing the require field
+          // exports['.']['require'] ??= cjsMain
         }
       } else if (!hasEsmFormat) {
         exports['.'] ??= cjsMain

@@ -1,0 +1,620 @@
+{
+  "type": "root",
+  "content": [
+    {
+      "type": "macro",
+      "content": "documentclass",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "article"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "caption"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "xcolor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "figurex"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "hyperref"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "macro",
+      "content": "usepackage",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "[",
+          "closeMark": "]",
+          "content": [
+            {
+              "type": "string",
+              "content": "backend=biber,style=apa"
+            }
+          ]
+        },
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "biblatex"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "environment",
+      "env": "document",
+      "content": [
+        {
+          "type": "root",
+          "_renderInfo": {},
+          "content": [
+            {
+              "type": "environment",
+              "env": "enumerate",
+              "content": [
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "macro",
+                  "content": "item",
+                  "_renderInfo": {
+                    "hangingIndent": true,
+                    "inParMode": true
+                  }
+                },
+                {
+                  "type": "whitespace"
+                },
+                {
+                  "type": "string",
+                  "content": "Number one"
+                },
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "macro",
+                  "content": "item",
+                  "_renderInfo": {
+                    "hangingIndent": true,
+                    "inParMode": true
+                  }
+                },
+                {
+                  "type": "whitespace"
+                },
+                {
+                  "type": "string",
+                  "content": "Two"
+                },
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "macro",
+                  "content": "item",
+                  "_renderInfo": {
+                    "hangingIndent": true,
+                    "inParMode": true
+                  }
+                },
+                {
+                  "type": "whitespace"
+                },
+                {
+                  "type": "string",
+                  "content": "Three"
+                },
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "environment",
+                  "env": "enumerate",
+                  "content": [
+                    {
+                      "type": "parbreak"
+                    },
+                    {
+                      "type": "macro",
+                      "content": "item",
+                      "_renderInfo": {
+                        "hangingIndent": true,
+                        "inParMode": true
+                      }
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "Indent"
+                    },
+                    {
+                      "type": "parbreak"
+                    }
+                  ],
+                  "_renderInfo": {
+                    "ilvl": 1,
+                    "numId": 1
+                  }
+                }
+              ],
+              "_renderInfo": {
+                "ilvl": 0,
+                "numId": 1
+              }
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "environment",
+              "env": "enumerate",
+              "content": [
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "macro",
+                  "content": "item",
+                  "_renderInfo": {
+                    "hangingIndent": true,
+                    "inParMode": true
+                  }
+                },
+                {
+                  "type": "whitespace"
+                },
+                {
+                  "type": "string",
+                  "content": "Unordered"
+                },
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "macro",
+                  "content": "item",
+                  "_renderInfo": {
+                    "hangingIndent": true,
+                    "inParMode": true
+                  }
+                },
+                {
+                  "type": "whitespace"
+                },
+                {
+                  "type": "string",
+                  "content": "List"
+                },
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "macro",
+                  "content": "item",
+                  "_renderInfo": {
+                    "hangingIndent": true,
+                    "inParMode": true
+                  }
+                },
+                {
+                  "type": "whitespace"
+                },
+                {
+                  "type": "string",
+                  "content": "Items"
+                },
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "environment",
+                  "env": "enumerate",
+                  "content": [
+                    {
+                      "type": "parbreak"
+                    },
+                    {
+                      "type": "macro",
+                      "content": "item",
+                      "_renderInfo": {
+                        "hangingIndent": true,
+                        "inParMode": true
+                      }
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "Indentatio"
+                    },
+                    {
+                      "type": "parbreak"
+                    }
+                  ],
+                  "_renderInfo": {
+                    "ilvl": 1,
+                    "numId": 2
+                  }
+                }
+              ],
+              "_renderInfo": {
+                "ilvl": 0,
+                "numId": 2
+              }
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "environment",
+              "env": "enumerate",
+              "content": [
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "macro",
+                  "content": "item",
+                  "_renderInfo": {
+                    "hangingIndent": true,
+                    "inParMode": true
+                  }
+                },
+                {
+                  "type": "whitespace"
+                },
+                {
+                  "type": "string",
+                  "content": "Continuing"
+                },
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "macro",
+                  "content": "item",
+                  "_renderInfo": {
+                    "hangingIndent": true,
+                    "inParMode": true
+                  }
+                },
+                {
+                  "type": "whitespace"
+                },
+                {
+                  "type": "string",
+                  "content": "Previous"
+                },
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "macro",
+                  "content": "item",
+                  "_renderInfo": {
+                    "hangingIndent": true,
+                    "inParMode": true
+                  }
+                },
+                {
+                  "type": "whitespace"
+                },
+                {
+                  "type": "string",
+                  "content": "List"
+                },
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "environment",
+                  "env": "enumerate",
+                  "content": [
+                    {
+                      "type": "parbreak"
+                    },
+                    {
+                      "type": "macro",
+                      "content": "item",
+                      "_renderInfo": {
+                        "hangingIndent": true,
+                        "inParMode": true
+                      }
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "Indenting 4 "
+                    },
+                    {
+                      "type": "parbreak"
+                    }
+                  ],
+                  "_renderInfo": {
+                    "ilvl": 3,
+                    "numId": 1
+                  }
+                }
+              ],
+              "_renderInfo": {
+                "ilvl": 0,
+                "numId": 1
+              }
+            },
+            {
+              "type": "environment",
+              "env": "enumerate",
+              "content": [
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "macro",
+                  "content": "item",
+                  "_renderInfo": {
+                    "hangingIndent": true,
+                    "inParMode": true
+                  }
+                },
+                {
+                  "type": "whitespace"
+                },
+                {
+                  "type": "string",
+                  "content": "Going down to b"
+                },
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "environment",
+                  "env": "enumerate",
+                  "content": [
+                    {
+                      "type": "parbreak"
+                    },
+                    {
+                      "type": "macro",
+                      "content": "item",
+                      "_renderInfo": {
+                        "hangingIndent": true,
+                        "inParMode": true
+                      }
+                    },
+                    {
+                      "type": "whitespace"
+                    },
+                    {
+                      "type": "string",
+                      "content": "Indenting 1"
+                    },
+                    {
+                      "type": "parbreak"
+                    }
+                  ],
+                  "_renderInfo": {
+                    "ilvl": 2,
+                    "numId": 1
+                  }
+                },
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "macro",
+                  "content": "item",
+                  "_renderInfo": {
+                    "hangingIndent": true,
+                    "inParMode": true
+                  }
+                },
+                {
+                  "type": "whitespace"
+                },
+                {
+                  "type": "string",
+                  "content": "Going back to c"
+                },
+                {
+                  "type": "parbreak"
+                }
+              ],
+              "_renderInfo": {
+                "ilvl": 1,
+                "numId": 1
+              }
+            },
+            {
+              "type": "environment",
+              "env": "enumerate",
+              "content": [
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "macro",
+                  "content": "item",
+                  "_renderInfo": {
+                    "hangingIndent": true,
+                    "inParMode": true
+                  }
+                },
+                {
+                  "type": "whitespace"
+                },
+                {
+                  "type": "string",
+                  "content": "Immediately starting other list"
+                },
+                {
+                  "type": "parbreak"
+                }
+              ],
+              "_renderInfo": {
+                "ilvl": 0,
+                "numId": 8
+              }
+            },
+            {
+              "type": "environment",
+              "env": "enumerate",
+              "content": [
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "macro",
+                  "content": "item",
+                  "_renderInfo": {
+                    "hangingIndent": true,
+                    "inParMode": true
+                  }
+                },
+                {
+                  "type": "whitespace"
+                },
+                {
+                  "type": "string",
+                  "content": "And another list"
+                },
+                {
+                  "type": "parbreak"
+                }
+              ],
+              "_renderInfo": {
+                "ilvl": 0,
+                "numId": 10
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -43,7 +43,7 @@ const defaultOptions: Options = {
     'caption',
     'tabularx',
     'xcolor',
-    'figurex',
+    'graphicx',
     'hyperref',
     { name: 'biblatex', options: ['backend=biber', 'style=apa'] },
   ],

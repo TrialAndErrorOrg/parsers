@@ -1,6 +1,6 @@
 /* eslint-disable */
 const config = {
-  displayName: 'ooxast-util-to-jast',
+  displayName: 'ooxast-util-to-unified-latex',
   preset: '../../../jest.preset.js',
   globals: {
     'ts-jest': {
@@ -14,7 +14,7 @@ const config = {
   },
   transformIgnorePatterns: [],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../../coverage/libs/ooxast-util-to-jast',
+  coverageDirectory: '../../../coverage/libs/ooxast-util-to-unified-latex',
   extensionsToTreatAsEsm: ['.ts'],
   moduleNameMapper: {
     '^(.{1,2}/.*).js$': '$1',

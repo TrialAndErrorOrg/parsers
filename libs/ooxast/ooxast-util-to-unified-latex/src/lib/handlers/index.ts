@@ -22,7 +22,7 @@ export const handlers: Context['handlers'] = {
   body,
   root,
   text,
-  document,
+  document: all,
   footnotes: all,
   footnote,
   t: all,

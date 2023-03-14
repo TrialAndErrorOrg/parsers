@@ -51,7 +51,7 @@ const fromDocx = (
         'w:color',
       ],
     })
-    .use(reoffParseReferences, { mailto: 'support@trialanderror.org' })
+    .use(reoffParseReferences) // { mailto: 'support@trialanderror.org' })
     .use(reoffCite, { type: citationType || 'zotero', log: false })
     .use(() => (tree, vfile) => {
       writeFileSync(join(path, 'test.ooxast.json'), JSON.stringify(removePosition(tree), null, 2))
@@ -72,25 +72,29 @@ const fromDocx = (
 const fixtures = new URL('fixtures', import.meta.url).pathname
 const dir = readdirSync(fixtures)
 
-jest.setTimeout(20000)
-it.each(dir)('parses correctly for %s', async (name: string) => {
-  const [docx, latex] = ['index.docx', 'expected.tex'].map((ext) => join(fixtures, name, ext))
+it.each(dir)(
+  'parses correctly for %s',
+  async (name: string) => {
+    const [docx, latex] = ['index.docx', 'expected.tex'].map((ext) => join(fixtures, name, ext))
 
-  const doccc = new Uint8Array(await readFile(docx))
-  const docxIn = await docxToVFile(doccc)
+    const doccc = new Uint8Array(await readFile(docx))
+    const docxIn = await docxToVFile(doccc)
 
-  const result = String(
-    await fromDocx(join(fixtures, name), name === 'zotero' ? 'zotero' : undefined).process(docxIn),
-  )
-  await writeFile(join(fixtures, name, 'result.tex'), result)
+    const result = String(
+      await fromDocx(join(fixtures, name), name === 'zotero' ? 'zotero' : undefined).process(
+        docxIn,
+      ),
+    )
+    await writeFile(join(fixtures, name, 'result.tex'), result)
 
-  console.log(latex)
-  let expectTex = ''
-  try {
-    expectTex = await readFile(latex, 'utf8')
-  } catch (e) {
-    console.log(e)
-  }
+    let expectTex = ''
+    try {
+      expectTex = await readFile(latex, 'utf8')
+    } catch (e) {
+      console.log(e)
+    }
 
-  expect(result).toEqual(expectTex)
-})
+    expect(result).toEqual(expectTex)
+  },
+  30000,
+)

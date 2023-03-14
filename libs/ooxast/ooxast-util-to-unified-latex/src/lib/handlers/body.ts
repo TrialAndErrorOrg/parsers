@@ -129,7 +129,7 @@ export const body: Handle = (h: H, body: Body) => {
     if (isPrevListItem && ilvl === prevIlvl && numId !== prevNumId) {
       const mainEnv = acc[acc.length - 1] as Environment
       const embeddedEnvs = findEmbeddedEnvs(mainEnv)
-      const lastEnv = embeddedEnvs[embeddedEnvs.length - 1]
+      const toBeEmbeddedEnv = embeddedEnvs[embeddedEnvs.length - (prevIlvl - ilvl) - 1]
       const env: Environment = {
         type: 'environment',
         env: 'enumerate',
@@ -139,7 +139,17 @@ export const body: Handle = (h: H, body: Body) => {
           numId,
         },
       }
-      lastEnv.content.push(env)
+      if (!toBeEmbeddedEnv) {
+        acc.push(env)
+        return acc
+      }
+
+      if (toBeEmbeddedEnv._renderInfo?.ilvl !== ilvl) {
+        toBeEmbeddedEnv.content.push(env)
+        return acc
+      }
+
+      acc.push(env)
       return acc
     }
 

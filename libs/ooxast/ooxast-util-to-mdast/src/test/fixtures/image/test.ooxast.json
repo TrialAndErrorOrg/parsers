@@ -1,0 +1,463 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "instruction",
+      "name": "xml",
+      "value": "version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\""
+    },
+    {
+      "type": "element",
+      "name": "w:document",
+      "attributes": {
+        "xmlns:wpc": "http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas",
+        "xmlns:cx": "http://schemas.microsoft.com/office/drawing/2014/chartex",
+        "xmlns:cx1": "http://schemas.microsoft.com/office/drawing/2015/9/8/chartex",
+        "xmlns:cx2": "http://schemas.microsoft.com/office/drawing/2015/10/21/chartex",
+        "xmlns:cx3": "http://schemas.microsoft.com/office/drawing/2016/5/9/chartex",
+        "xmlns:cx4": "http://schemas.microsoft.com/office/drawing/2016/5/10/chartex",
+        "xmlns:cx5": "http://schemas.microsoft.com/office/drawing/2016/5/11/chartex",
+        "xmlns:cx6": "http://schemas.microsoft.com/office/drawing/2016/5/12/chartex",
+        "xmlns:cx7": "http://schemas.microsoft.com/office/drawing/2016/5/13/chartex",
+        "xmlns:cx8": "http://schemas.microsoft.com/office/drawing/2016/5/14/chartex",
+        "xmlns:mc": "http://schemas.openxmlformats.org/markup-compatibility/2006",
+        "xmlns:aink": "http://schemas.microsoft.com/office/drawing/2016/ink",
+        "xmlns:am3d": "http://schemas.microsoft.com/office/drawing/2017/model3d",
+        "xmlns:o": "urn:schemas-microsoft-com:office:office",
+        "xmlns:r": "http://schemas.openxmlformats.org/officeDocument/2006/relationships",
+        "xmlns:m": "http://schemas.openxmlformats.org/officeDocument/2006/math",
+        "xmlns:v": "urn:schemas-microsoft-com:vml",
+        "xmlns:wp14": "http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing",
+        "xmlns:wp": "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing",
+        "xmlns:w10": "urn:schemas-microsoft-com:office:word",
+        "xmlns:w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main",
+        "xmlns:w14": "http://schemas.microsoft.com/office/word/2010/wordml",
+        "xmlns:w15": "http://schemas.microsoft.com/office/word/2012/wordml",
+        "xmlns:w16cex": "http://schemas.microsoft.com/office/word/2018/wordml/cex",
+        "xmlns:w16cid": "http://schemas.microsoft.com/office/word/2016/wordml/cid",
+        "xmlns:w16": "http://schemas.microsoft.com/office/word/2018/wordml",
+        "xmlns:w16sdtdh": "http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash",
+        "xmlns:w16se": "http://schemas.microsoft.com/office/word/2015/wordml/symex",
+        "xmlns:wpg": "http://schemas.microsoft.com/office/word/2010/wordprocessingGroup",
+        "xmlns:wpi": "http://schemas.microsoft.com/office/word/2010/wordprocessingInk",
+        "xmlns:wne": "http://schemas.microsoft.com/office/word/2006/wordml",
+        "xmlns:wps": "http://schemas.microsoft.com/office/word/2010/wordprocessingShape",
+        "mc:Ignorable": "w14 w15 w16se w16cid w16 w16cex w16sdtdh wp14"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "w:body",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "16E68BE2",
+                "w14:textId": "77777777"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:keepNext",
+                      "attributes": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:drawing",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "wp:inline",
+                          "attributes": {
+                            "distT": "0",
+                            "distB": "0",
+                            "distL": "0",
+                            "distR": "0",
+                            "wp14:anchorId": "7672CEA3",
+                            "wp14:editId": "2B7C9FB1"
+                          },
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "wp:extent",
+                              "attributes": {
+                                "cx": "5731510",
+                                "cy": "8589010"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "wp:effectExtent",
+                              "attributes": {
+                                "l": "0",
+                                "t": "0",
+                                "r": "0",
+                                "b": "0"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "wp:docPr",
+                              "attributes": {
+                                "id": "1",
+                                "name": "Picture 1",
+                                "descr": "A picture containing text\n\nDescription automatically generated"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "wp:cNvGraphicFramePr",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "a:graphicFrameLocks",
+                                  "attributes": {
+                                    "xmlns:a": "http://schemas.openxmlformats.org/drawingml/2006/main",
+                                    "noChangeAspect": "1"
+                                  },
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "a:graphic",
+                              "attributes": {
+                                "xmlns:a": "http://schemas.openxmlformats.org/drawingml/2006/main"
+                              },
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "a:graphicData",
+                                  "attributes": {
+                                    "uri": "http://schemas.openxmlformats.org/drawingml/2006/picture"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "pic:pic",
+                                      "attributes": {
+                                        "xmlns:pic": "http://schemas.openxmlformats.org/drawingml/2006/picture"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "pic:nvPicPr",
+                                          "attributes": {},
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "pic:cNvPr",
+                                              "attributes": {
+                                                "id": "1",
+                                                "name": "Picture 1",
+                                                "descr": "A picture containing text\n\nDescription automatically generated"
+                                              },
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "pic:cNvPicPr",
+                                              "attributes": {},
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "pic:blipFill",
+                                          "attributes": {},
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "a:blip",
+                                              "attributes": {
+                                                "r:embed": "rId7"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "a:extLst",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "a:ext",
+                                                      "attributes": {
+                                                        "uri": "{28A0092B-C50C-407E-A947-70E740481C1C}"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "type": "element",
+                                                          "name": "a14:useLocalDpi",
+                                                          "attributes": {
+                                                            "xmlns:a14": "http://schemas.microsoft.com/office/drawing/2010/main",
+                                                            "val": "0"
+                                                          },
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "a:stretch",
+                                              "attributes": {},
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "a:fillRect",
+                                                  "attributes": {},
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "pic:spPr",
+                                          "attributes": {},
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "a:xfrm",
+                                              "attributes": {},
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "a:off",
+                                                  "attributes": {
+                                                    "x": "0",
+                                                    "y": "0"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "a:ext",
+                                                  "attributes": {
+                                                    "cx": "5731510",
+                                                    "cy": "8589010"
+                                                  },
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "a:prstGeom",
+                                              "attributes": {
+                                                "prst": "rect"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "a:avLst",
+                                                  "attributes": {},
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "7D19CC40",
+                "w14:textId": "5C36155A"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:pStyle",
+                      "attributes": {
+                        "w:val": "Caption"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:lang",
+                          "attributes": {
+                            "w:val": "en-US"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Figure "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:noProof",
+                          "attributes": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "1"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ": A pretty pic"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:sectPr",
+              "attributes": {
+                "w:rsidR": "00C76856",
+                "w:rsidRPr": "007213B7"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pgSz",
+                  "attributes": {
+                    "w:w": "11906",
+                    "w:h": "16838"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "element",
+                  "name": "w:pgMar",
+                  "attributes": {
+                    "w:top": "1440",
+                    "w:right": "1440",
+                    "w:bottom": "1440",
+                    "w:left": "1440",
+                    "w:header": "708",
+                    "w:footer": "708",
+                    "w:gutter": "0"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "element",
+                  "name": "w:cols",
+                  "attributes": {
+                    "w:space": "708"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "element",
+                  "name": "w:docGrid",
+                  "attributes": {
+                    "w:linePitch": "360"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "source": "word/document.xml"
+}

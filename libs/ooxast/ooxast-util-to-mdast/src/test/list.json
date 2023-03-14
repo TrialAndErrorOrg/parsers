@@ -1,0 +1,1912 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "instruction",
+      "name": "xml",
+      "value": "version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\""
+    },
+    {
+      "type": "element",
+      "name": "w:document",
+      "attributes": {
+        "xmlns:wpc": "http://schemas.microsoft.com/office/word/2010/wordprocessingCanvas",
+        "xmlns:cx": "http://schemas.microsoft.com/office/drawing/2014/chartex",
+        "xmlns:cx1": "http://schemas.microsoft.com/office/drawing/2015/9/8/chartex",
+        "xmlns:cx2": "http://schemas.microsoft.com/office/drawing/2015/10/21/chartex",
+        "xmlns:cx3": "http://schemas.microsoft.com/office/drawing/2016/5/9/chartex",
+        "xmlns:cx4": "http://schemas.microsoft.com/office/drawing/2016/5/10/chartex",
+        "xmlns:cx5": "http://schemas.microsoft.com/office/drawing/2016/5/11/chartex",
+        "xmlns:cx6": "http://schemas.microsoft.com/office/drawing/2016/5/12/chartex",
+        "xmlns:cx7": "http://schemas.microsoft.com/office/drawing/2016/5/13/chartex",
+        "xmlns:cx8": "http://schemas.microsoft.com/office/drawing/2016/5/14/chartex",
+        "xmlns:mc": "http://schemas.openxmlformats.org/markup-compatibility/2006",
+        "xmlns:aink": "http://schemas.microsoft.com/office/drawing/2016/ink",
+        "xmlns:am3d": "http://schemas.microsoft.com/office/drawing/2017/model3d",
+        "xmlns:o": "urn:schemas-microsoft-com:office:office",
+        "xmlns:oel": "http://schemas.microsoft.com/office/2019/extlst",
+        "xmlns:r": "http://schemas.openxmlformats.org/officeDocument/2006/relationships",
+        "xmlns:m": "http://schemas.openxmlformats.org/officeDocument/2006/math",
+        "xmlns:v": "urn:schemas-microsoft-com:vml",
+        "xmlns:wp14": "http://schemas.microsoft.com/office/word/2010/wordprocessingDrawing",
+        "xmlns:wp": "http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing",
+        "xmlns:w10": "urn:schemas-microsoft-com:office:word",
+        "xmlns:w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main",
+        "xmlns:w14": "http://schemas.microsoft.com/office/word/2010/wordml",
+        "xmlns:w15": "http://schemas.microsoft.com/office/word/2012/wordml",
+        "xmlns:w16cex": "http://schemas.microsoft.com/office/word/2018/wordml/cex",
+        "xmlns:w16cid": "http://schemas.microsoft.com/office/word/2016/wordml/cid",
+        "xmlns:w16": "http://schemas.microsoft.com/office/word/2018/wordml",
+        "xmlns:w16sdtdh": "http://schemas.microsoft.com/office/word/2020/wordml/sdtdatahash",
+        "xmlns:w16se": "http://schemas.microsoft.com/office/word/2015/wordml/symex",
+        "xmlns:wpg": "http://schemas.microsoft.com/office/word/2010/wordprocessingGroup",
+        "xmlns:wpi": "http://schemas.microsoft.com/office/word/2010/wordprocessingInk",
+        "xmlns:wne": "http://schemas.microsoft.com/office/word/2006/wordml",
+        "xmlns:wps": "http://schemas.microsoft.com/office/word/2010/wordprocessingShape",
+        "mc:Ignorable": "w14 w15 w16se w16cid w16 w16cex w16sdtdh wp14"
+      },
+      "children": [
+        {
+          "type": "element",
+          "name": "w:body",
+          "attributes": {},
+          "children": [
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "00000038",
+                "w14:textId": "6B869F40"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:pStyle",
+                      "attributes": {
+                        "w:val": "ListParagraph"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:numPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:ilvl",
+                          "attributes": {
+                            "w:val": "0"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:numId",
+                          "attributes": {
+                            "w:val": "1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:spacing",
+                      "attributes": {
+                        "w:line": "480",
+                        "w:lineRule": "auto"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rFonts",
+                          "attributes": {
+                            "w:ascii": "Times New Roman",
+                            "w:eastAsia": "Times New Roman",
+                            "w:hAnsi": "Times New Roman",
+                            "w:cs": "Times New Roman"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:sz",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:szCs",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Number one"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "269843FA",
+                "w14:textId": "166AC0E8"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:pStyle",
+                      "attributes": {
+                        "w:val": "ListParagraph"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:numPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:ilvl",
+                          "attributes": {
+                            "w:val": "0"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:numId",
+                          "attributes": {
+                            "w:val": "1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:spacing",
+                      "attributes": {
+                        "w:line": "480",
+                        "w:lineRule": "auto"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rFonts",
+                          "attributes": {
+                            "w:ascii": "Times New Roman",
+                            "w:eastAsia": "Times New Roman",
+                            "w:hAnsi": "Times New Roman",
+                            "w:cs": "Times New Roman"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:sz",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:szCs",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Two"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "15C5D5AC",
+                "w14:textId": "5EA5BFB5"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:pStyle",
+                      "attributes": {
+                        "w:val": "ListParagraph"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:numPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:ilvl",
+                          "attributes": {
+                            "w:val": "0"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:numId",
+                          "attributes": {
+                            "w:val": "1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:spacing",
+                      "attributes": {
+                        "w:line": "480",
+                        "w:lineRule": "auto"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rFonts",
+                          "attributes": {
+                            "w:ascii": "Times New Roman",
+                            "w:eastAsia": "Times New Roman",
+                            "w:hAnsi": "Times New Roman",
+                            "w:cs": "Times New Roman"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:sz",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:szCs",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Three"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "17B86177",
+                "w14:textId": "434C5D34"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:pStyle",
+                      "attributes": {
+                        "w:val": "ListParagraph"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:numPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:ilvl",
+                          "attributes": {
+                            "w:val": "1"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:numId",
+                          "attributes": {
+                            "w:val": "1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:spacing",
+                      "attributes": {
+                        "w:line": "480",
+                        "w:lineRule": "auto"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rFonts",
+                          "attributes": {
+                            "w:ascii": "Times New Roman",
+                            "w:eastAsia": "Times New Roman",
+                            "w:hAnsi": "Times New Roman",
+                            "w:cs": "Times New Roman"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:sz",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:szCs",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Indent"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "612CF7ED",
+                "w14:textId": "58624A29"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:spacing",
+                      "attributes": {
+                        "w:line": "480",
+                        "w:lineRule": "auto"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rFonts",
+                          "attributes": {
+                            "w:ascii": "Times New Roman",
+                            "w:eastAsia": "Times New Roman",
+                            "w:hAnsi": "Times New Roman",
+                            "w:cs": "Times New Roman"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:sz",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:szCs",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "4DC3F231",
+                "w14:textId": "778961F7"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:pStyle",
+                      "attributes": {
+                        "w:val": "ListParagraph"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:numPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:ilvl",
+                          "attributes": {
+                            "w:val": "0"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:numId",
+                          "attributes": {
+                            "w:val": "2"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:spacing",
+                      "attributes": {
+                        "w:line": "480",
+                        "w:lineRule": "auto"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rFonts",
+                          "attributes": {
+                            "w:ascii": "Times New Roman",
+                            "w:eastAsia": "Times New Roman",
+                            "w:hAnsi": "Times New Roman",
+                            "w:cs": "Times New Roman"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:sz",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:szCs",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Unordered"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "6C802894",
+                "w14:textId": "77F4A49C"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:pStyle",
+                      "attributes": {
+                        "w:val": "ListParagraph"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:numPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:ilvl",
+                          "attributes": {
+                            "w:val": "0"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:numId",
+                          "attributes": {
+                            "w:val": "2"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:spacing",
+                      "attributes": {
+                        "w:line": "480",
+                        "w:lineRule": "auto"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rFonts",
+                          "attributes": {
+                            "w:ascii": "Times New Roman",
+                            "w:eastAsia": "Times New Roman",
+                            "w:hAnsi": "Times New Roman",
+                            "w:cs": "Times New Roman"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:sz",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:szCs",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "List"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "7F5BFA91",
+                "w14:textId": "090F042B"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:pStyle",
+                      "attributes": {
+                        "w:val": "ListParagraph"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:numPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:ilvl",
+                          "attributes": {
+                            "w:val": "0"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:numId",
+                          "attributes": {
+                            "w:val": "2"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:spacing",
+                      "attributes": {
+                        "w:line": "480",
+                        "w:lineRule": "auto"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rFonts",
+                          "attributes": {
+                            "w:ascii": "Times New Roman",
+                            "w:eastAsia": "Times New Roman",
+                            "w:hAnsi": "Times New Roman",
+                            "w:cs": "Times New Roman"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:sz",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:szCs",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Items"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "201F8E89",
+                "w14:textId": "186465E5"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:pStyle",
+                      "attributes": {
+                        "w:val": "ListParagraph"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:numPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:ilvl",
+                          "attributes": {
+                            "w:val": "1"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:numId",
+                          "attributes": {
+                            "w:val": "2"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:spacing",
+                      "attributes": {
+                        "w:line": "480",
+                        "w:lineRule": "auto"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rFonts",
+                          "attributes": {
+                            "w:ascii": "Times New Roman",
+                            "w:eastAsia": "Times New Roman",
+                            "w:hAnsi": "Times New Roman",
+                            "w:cs": "Times New Roman"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:sz",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:szCs",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:proofErr",
+                  "attributes": {
+                    "w:type": "spellStart"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Indentatio"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:proofErr",
+                  "attributes": {
+                    "w:type": "spellEnd"
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "74DA1500",
+                "w14:textId": "77777777"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:spacing",
+                      "attributes": {
+                        "w:line": "480",
+                        "w:lineRule": "auto"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rFonts",
+                          "attributes": {
+                            "w:ascii": "Times New Roman",
+                            "w:eastAsia": "Times New Roman",
+                            "w:hAnsi": "Times New Roman",
+                            "w:cs": "Times New Roman"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:sz",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:szCs",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "122BB57B",
+                "w14:textId": "77777777"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:pStyle",
+                      "attributes": {
+                        "w:val": "ListParagraph"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:numPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:ilvl",
+                          "attributes": {
+                            "w:val": "0"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:numId",
+                          "attributes": {
+                            "w:val": "1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:spacing",
+                      "attributes": {
+                        "w:line": "480",
+                        "w:lineRule": "auto"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rFonts",
+                          "attributes": {
+                            "w:ascii": "Times New Roman",
+                            "w:eastAsia": "Times New Roman",
+                            "w:hAnsi": "Times New Roman",
+                            "w:cs": "Times New Roman"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:sz",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:szCs",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Continuing"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "3A50AEAD",
+                "w14:textId": "77777777"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:pStyle",
+                      "attributes": {
+                        "w:val": "ListParagraph"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:numPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:ilvl",
+                          "attributes": {
+                            "w:val": "0"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:numId",
+                          "attributes": {
+                            "w:val": "1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:spacing",
+                      "attributes": {
+                        "w:line": "480",
+                        "w:lineRule": "auto"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rFonts",
+                          "attributes": {
+                            "w:ascii": "Times New Roman",
+                            "w:eastAsia": "Times New Roman",
+                            "w:hAnsi": "Times New Roman",
+                            "w:cs": "Times New Roman"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:sz",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:szCs",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Previous"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "529B08DF",
+                "w14:textId": "4C91B643"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:pStyle",
+                      "attributes": {
+                        "w:val": "ListParagraph"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:numPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:ilvl",
+                          "attributes": {
+                            "w:val": "0"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:numId",
+                          "attributes": {
+                            "w:val": "1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:spacing",
+                      "attributes": {
+                        "w:line": "480",
+                        "w:lineRule": "auto"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rFonts",
+                          "attributes": {
+                            "w:ascii": "Times New Roman",
+                            "w:eastAsia": "Times New Roman",
+                            "w:hAnsi": "Times New Roman",
+                            "w:cs": "Times New Roman"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:sz",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:szCs",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "List"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "0D0A0BFF",
+                "w14:textId": "77C363E9"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:pStyle",
+                      "attributes": {
+                        "w:val": "ListParagraph"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:numPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:ilvl",
+                          "attributes": {
+                            "w:val": "1"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:numId",
+                          "attributes": {
+                            "w:val": "1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:spacing",
+                      "attributes": {
+                        "w:line": "480",
+                        "w:lineRule": "auto"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rFonts",
+                          "attributes": {
+                            "w:ascii": "Times New Roman",
+                            "w:eastAsia": "Times New Roman",
+                            "w:hAnsi": "Times New Roman",
+                            "w:cs": "Times New Roman"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:sz",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:szCs",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Indentation"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "1DDCE5D2",
+                "w14:textId": "2039F829"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:pStyle",
+                      "attributes": {
+                        "w:val": "ListParagraph"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:numPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:ilvl",
+                          "attributes": {
+                            "w:val": "0"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:numId",
+                          "attributes": {
+                            "w:val": "1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:spacing",
+                      "attributes": {
+                        "w:line": "480",
+                        "w:lineRule": "auto"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rFonts",
+                          "attributes": {
+                            "w:ascii": "Times New Roman",
+                            "w:eastAsia": "Times New Roman",
+                            "w:hAnsi": "Times New Roman",
+                            "w:cs": "Times New Roman"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:sz",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:szCs",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Going down a step again"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "6AF1F2C4",
+                "w14:textId": "2E8A00A6"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:pStyle",
+                      "attributes": {
+                        "w:val": "ListParagraph"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:numPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:ilvl",
+                          "attributes": {
+                            "w:val": "0"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:numId",
+                          "attributes": {
+                            "w:val": "6"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:spacing",
+                      "attributes": {
+                        "w:line": "480",
+                        "w:lineRule": "auto"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rFonts",
+                          "attributes": {
+                            "w:ascii": "Times New Roman",
+                            "w:eastAsia": "Times New Roman",
+                            "w:hAnsi": "Times New Roman",
+                            "w:cs": "Times New Roman"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:sz",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:szCs",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Immediately starting other list"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "4CAE0F67",
+                "w14:textId": "77777777"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:spacing",
+                      "attributes": {
+                        "w:line": "480",
+                        "w:lineRule": "auto"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rFonts",
+                          "attributes": {
+                            "w:ascii": "Times New Roman",
+                            "w:eastAsia": "Times New Roman",
+                            "w:hAnsi": "Times New Roman",
+                            "w:cs": "Times New Roman"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:sz",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:szCs",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "276A4D2D",
+                "w14:textId": "69D5DDE2"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:spacing",
+                      "attributes": {
+                        "w:line": "480",
+                        "w:lineRule": "auto"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rFonts",
+                          "attributes": {
+                            "w:ascii": "Times New Roman",
+                            "w:eastAsia": "Times New Roman",
+                            "w:hAnsi": "Times New Roman",
+                            "w:cs": "Times New Roman"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:sz",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:szCs",
+                          "attributes": {
+                            "w:val": "24"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " "
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:sectPr",
+              "attributes": {
+                "w:rsidR": "006A1E28",
+                "w:rsidRPr": "00606091"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pgSz",
+                  "attributes": {
+                    "w:w": "12240",
+                    "w:h": "15840"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "element",
+                  "name": "w:pgMar",
+                  "attributes": {
+                    "w:top": "1440",
+                    "w:right": "1440",
+                    "w:bottom": "1440",
+                    "w:left": "1440",
+                    "w:header": "720",
+                    "w:footer": "720",
+                    "w:gutter": "0"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "element",
+                  "name": "w:pgNumType",
+                  "attributes": {
+                    "w:start": "1"
+                  },
+                  "children": []
+                },
+                {
+                  "type": "element",
+                  "name": "w:cols",
+                  "attributes": {
+                    "w:space": "720"
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "value": "\n  \n  \n  "
+        }
+      ]
+    }
+  ]
+}

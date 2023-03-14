@@ -82,6 +82,7 @@
       "reoff-parse-references": ["libs/reoff/reoff-parse-references/src/index.ts"],
       "reoff-parse-references-browser": ["libs/reoff/reoff-parse-references-browser/src/index.ts"],
       "reoff-rejour": ["libs/reoff/reoff-rejour/src/index.ts"],
+      "reoff-remark": ["libs/reoff/reoff-remark/src/index.ts"],
       "test": ["libs/test/src/index.ts"],
       "texast": ["libs/texast/texast/src/index.ts"],
       "texast-util-add-preamble": ["libs/texast/texast-util-add-preamble/src/index.ts"],

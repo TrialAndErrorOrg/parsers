@@ -10,7 +10,7 @@ import {
 } from '@unified-latex/unified-latex-types'
 
 import { Attributes as OoxastProperties, Parent, Body, Text, Root, P } from 'ooxast'
-import { ListNumbering } from './util/find-list-numbering'
+import { ListNumbering } from './util/find-list-numbering.js'
 
 export type XastContent = Root['children'][number] | Root
 

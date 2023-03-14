@@ -52,8 +52,9 @@ const defaultOptions: Options = {
 
 declare module 'vfile' {
   interface DataMap {
+    [key: `${string}.xml` | `${string}.rels`]: string | undefined
     parsed: {
-      [key: `${string}.xml` | `${string}.rels`]: Root
+      [key: `${string}.xml` | `${string}.rels`]: Root | undefined
     }
   }
 }

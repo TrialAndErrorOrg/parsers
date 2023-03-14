@@ -25,13 +25,13 @@ declare module 'vfile' {
   }
 }
 
-export function toMdast(tree: Root | Element | Text, file: VFile, options?: Options): MdastNode
-export function toMdast(tree: Root | Element | Text, options?: Options): MdastNode
+export function toMdast(tree: Root | Element | Text, file: VFile, options?: Options): MdastRoot
+export function toMdast(tree: Root | Element | Text, options?: Options): MdastRoot
 export function toMdast(
   tree: Root | Element | Text,
   optionsOrVFile?: Options | VFile,
   maybeOptions?: Options,
-): MdastNode {
+): MdastRoot {
   const options = {
     ...defaultOptions,
     ...(optionsOrVFile instanceof VFile ? maybeOptions : optionsOrVFile),

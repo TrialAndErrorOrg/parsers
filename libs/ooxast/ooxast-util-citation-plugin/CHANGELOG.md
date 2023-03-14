@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-citation-plugin-0.1.0...ooxast-util-citation-plugin-0.1.1) (2023-03-14)
+
+### Dependency Updates
+
+* `docx-to-vfile` updated to version `0.5.3`
+* `reoff-parse` updated to version `0.2.5`
+* `ooxast` updated to version `0.1.3`
+* `xast-util-is-element` updated to version `0.1.4`
 ## 0.1.0 (2023-03-09)
 
 ### Dependency Updates

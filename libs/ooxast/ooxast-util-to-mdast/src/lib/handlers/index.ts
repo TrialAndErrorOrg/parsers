@@ -25,7 +25,7 @@ export const handlers: Context['handlers'] = {
   footnotes: all,
   footnote,
   t: all,
-  oMathPara: oMathPara,
+  oMathPara,
   oMath,
   r,
   instrText: citation,

@@ -8,6 +8,7 @@ export const displayMath: Handle = (state: State, node: OoxastMath.OMathPara): M
   state.inMath = true
   const content: Math = {
     type: 'math',
+    meta: 'latex',
     value: toString(state.all(node)?.[0]),
   }
   state.patch(node, content)

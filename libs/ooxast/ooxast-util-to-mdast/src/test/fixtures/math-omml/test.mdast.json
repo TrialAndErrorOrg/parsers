@@ -1,0 +1,31 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "math",
+          "value": "αβ∑x2idx"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Some text, then inline math ("
+        },
+        {
+          "type": "inlineMath",
+          "value": "αβ"
+        },
+        {
+          "type": "text",
+          "value": ")"
+        }
+      ]
+    }
+  ]
+}

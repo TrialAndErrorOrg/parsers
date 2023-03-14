@@ -10,7 +10,8 @@ import reoffCite from 'reoff-cite'
 import reoffParseReferences from 'reoff-parse-references'
 import { toMdast } from '../lib/ooxast-util-to-mdast.js'
 import remarkGfm from 'remark-gfm'
-import remarkCite from '@benrbray/remark-cite'
+import { citePlugin as remarkCite } from '@benrbray/remark-cite'
+import remarkMath from 'remark-math'
 
 import { MdastNode, Options } from '../lib/types.js'
 import remarkStringify from 'remark-stringify'
@@ -47,6 +48,7 @@ const fromDocx = (
     //   writeFileSync(join(path, 'test.ooxast.json'), JSON.stringify(removePosition(tree), null, 2))
     // })
     .use(remarkGfm)
+    .use(remarkMath)
     .use(remarkCite, {})
     .use(
       () => (tree, vfile) =>

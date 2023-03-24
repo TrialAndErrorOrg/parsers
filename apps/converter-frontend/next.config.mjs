@@ -5,7 +5,7 @@ import { withNx } from '@nrwl/next/plugins/with-nx.js'
 import path from 'path'
 
 /**
- * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
+ * @type {import('@nrwl/next/plugins/with-nx.js').WithNxOptions}
  **/
 const nextConfig = {
   nx: {

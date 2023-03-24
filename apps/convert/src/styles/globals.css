@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+p,
+div,
+a {
+  @apply font-sans;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-overpass;
+}
+
+.lettrine {
+  @apply float-left mr-2 text-8xl font-bold leading-none;
+}
+/*
+.key {
+  align-items: center;
+  background: var(--docsearch-key-gradient);
+  border-radius: 3px;
+  box-shadow: var(--docsearch-key-shadow);
+  color: var(--docsearch-muted-color);
+  display: flex;
+  height: 18px;
+  justify-content: center;
+  margin-right: 0.4em;
+  position: relative;
+  padding: 0px 0px 2px 0px;
+  border: 0px;
+  top: -1px;
+  width: 20px;
+}*/
+
+.link-overlay {
+  position: static;
+}
+
+.link-overlay::before {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  zindex: 0;
+  content: '';
+  height: 100%;
+  width: 100%;
+  cursor: inherit;
+}
+
+.sleek-underline {
+  @apply relative after:absolute after:bottom-0 after:left-0 after:flex after:h-[2px] after:w-0 after:bg-black after:transition-all after:duration-200 hover:after:w-full dark:after:bg-white;
+}
+
+.sleek-underline-blue {
+  @apply relative after:absolute after:bottom-0 after:left-0 after:flex after:h-[2px] after:w-0 after:bg-blue-500 after:transition-all after:duration-200 hover:after:w-full dark:after:bg-white;
+}

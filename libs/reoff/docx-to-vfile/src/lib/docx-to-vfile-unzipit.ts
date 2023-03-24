@@ -1,5 +1,6 @@
 import { Data, VFile } from 'vfile'
 import { unzip } from 'unzipit'
+import { ReadStream } from 'fs'
 
 const removeHeader = (text: string | undefined) => (text ? text.replace(/<\?xml.*?\?>/, '') : '')
 
@@ -83,18 +84,23 @@ export interface DocxVFile extends VFile {
 /**
  * Takes a docx file as an ArrayBuffer and returns a VFile with the contents of the document.xml file as the root, and the contents of the other xml files as data.
  *
- * @param file The docx file as an ArrayBuffer
+ * @param file The docx file as an ArrayBuffer or Blob
  * @param options Options
  * @returns A VFile with the contents of the document.xml file as the root, and the contents of the other xml files as data.
  */
-export async function docxToVFile(file: ArrayBuffer, userOptions: Options = {}): Promise<VFile> {
+export async function docxToVFile(
+  file: ArrayBuffer | Blob | Buffer,
+  userOptions: Options = {},
+): Promise<VFile> {
   const options: Options = {
     withoutMedia: false,
     include: 'all',
     ...userOptions,
   }
 
-  const { entries } = await unzip(file)
+  const blb = file instanceof Blob ? file : new Blob([file])
+
+  const { entries } = await unzip(blb)
   const rels = await entries['word/_rels/document.xml.rels'].text()
   const relations = Object.fromEntries(
     // eslint-disable-next-line regexp/no-super-linear-backtracking

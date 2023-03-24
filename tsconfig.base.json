@@ -29,7 +29,6 @@
       "@jote/processors/jats-to-tex": ["libs/processors/jats-to-tex/src/index.ts"],
       "@jote/processors/jote-docx-tex": ["libs/processors/jote-docx-tex/src/index.ts"],
       "@jote/utils/ojs-to-preamble": ["libs/utils/ojs-to-preamble/src/index.ts"],
-      "utils-readme": ["libs/utils/readme/src/index.ts"],
       "apa-parser": ["libs/citations/apa-parser/src/index.ts"],
       "ast-stringify": ["libs/ast-stringify/src/index.ts"],
       "better-nx-tsc": ["libs/plugins/better-nx-tsc/src/index.ts"],
@@ -83,15 +82,16 @@
       "reoff-parse-references-browser": ["libs/reoff/reoff-parse-references-browser/src/index.ts"],
       "reoff-rejour": ["libs/reoff/reoff-rejour/src/index.ts"],
       "reoff-remark": ["libs/reoff/reoff-remark/src/index.ts"],
+      "reoff-unified-latex": ["libs/reoff/reoff-unified-latex/src/index.ts"],
       "test": ["libs/test/src/index.ts"],
       "texast": ["libs/texast/texast/src/index.ts"],
       "texast-util-add-preamble": ["libs/texast/texast-util-add-preamble/src/index.ts"],
       "texast-util-to-latex": ["libs/texast/texast-util-to-latex/src/index.ts"],
+      "unified-latex-stringify": ["libs/unified-latex/unified-latex-stringify/src/index.ts"],
+      "utils-readme": ["libs/utils/readme/src/index.ts"],
       "xast-util-has-attribute": ["libs/xast/xast-util-has-attribute/src/index.ts"],
       "xast-util-is-element": ["libs/xast/xast-util-is-element/src/index.ts"],
-      "xast-util-select": ["libs/xast/xast-util-select/src/index.ts"],
-      "reoff-unified-latex": ["libs/reoff/reoff-unified-latex/src/index.ts"],
-      "unified-latex-stringify": ["libs/unified-latex/unified-latex-stringify/src/index.ts"]
+      "xast-util-select": ["libs/xast/xast-util-select/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp", "**/example.js", "dist"]

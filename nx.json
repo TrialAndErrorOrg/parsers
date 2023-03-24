@@ -20,7 +20,6 @@
       }
     }
   },
-
   "namedInputs": {
     "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "production": [
@@ -42,7 +41,6 @@
     "tsconfig.base.json": "*",
     "nx.json": "*"
   },
-  "defaultProject": "jote",
   "targetDefaults": {
     "lint": {
       "inputs": ["default", "{workspaceRoot}/.eslintrc.json"]
@@ -57,13 +55,16 @@
         "preset": "conventional",
         "trackDeps": true
       }
+    },
+    "e2e": {
+      "inputs": ["default", "^production"]
     }
   },
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": ["build", "lint", "test", "e2e", "npm", "readme", "version"]
       }
     }
   }

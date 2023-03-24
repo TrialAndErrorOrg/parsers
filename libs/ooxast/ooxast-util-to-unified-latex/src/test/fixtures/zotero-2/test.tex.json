@@ -488,86 +488,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gladwin2017"
+                      "content": "Gladwin2017, Gladwin2017, Gladwin2019, Gladwin2020, Gladwin2019a"
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
+                  ],
                   "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Gladwin2017"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Gladwin2019"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Gladwin2020"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Gladwin2019a"
-                    }
-                  ]
+                  "closeMark": "}"
                 }
               ]
             },
@@ -639,35 +571,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Becker2017"
+                      "content": "Becker2017, Schubö2006"
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
+                  ],
                   "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Schubö2006"
-                    }
-                  ]
+                  "closeMark": "}"
                 }
               ]
             },
@@ -677,18 +592,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Desimone1995"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -702,18 +617,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Anderson2019"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -733,18 +648,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "MacLeod1986"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -774,35 +689,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Carretié2014"
+                      "content": "Carretié2014, Imhoff2019"
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
+                  ],
                   "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Imhoff2019"
-                    }
-                  ]
+                  "closeMark": "}"
                 }
               ]
             },
@@ -847,35 +745,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Kruijt2018"
+                      "content": "Kruijt2018, Mogg2017"
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
+                  ],
                   "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Mogg2017"
-                    }
-                  ]
+                  "closeMark": "}"
                 }
               ]
             },
@@ -885,35 +766,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Schmukle2005"
+                      "content": "Schmukle2005, Staugaard2009"
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
+                  ],
                   "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Staugaard2009"
-                    }
-                  ]
+                  "closeMark": "}"
                 }
               ]
             },
@@ -927,18 +791,29 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "for an explanation, see"
+                    }
+                  ],
+                  "openMark": "[",
+                  "closeMark": "]"
+                },
+                {
+                  "type": "argument",
                   "content": [
                     {
                       "type": "string",
                       "content": "Hedge2018"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -952,18 +827,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Zvielli2015"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -981,35 +856,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Carlson2020"
+                      "content": "Carlson2020, Kruijt2016"
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
+                  ],
                   "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Kruijt2016"
-                    }
-                  ]
+                  "closeMark": "}"
                 }
               ]
             },
@@ -1047,18 +905,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Panksepp2011"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -1072,35 +930,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Carlson2014"
+                      "content": "Carlson2014, Fox2001"
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
+                  ],
                   "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Fox2001"
-                    }
-                  ]
+                  "closeMark": "}"
                 }
               ]
             },
@@ -1114,69 +955,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Cane2009"
+                      "content": "Cane2009, Clarke2015, Waters2005, Wilson2007"
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
+                  ],
                   "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Clarke2015"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Waters2005"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Wilson2007"
-                    }
-                  ]
+                  "closeMark": "}"
                 }
               ]
             },
@@ -1186,52 +976,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gladwin2019"
+                      "content": "Gladwin2019, Gladwin2020, Gladwin2019a"
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
+                  ],
                   "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Gladwin2020"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Gladwin2019a"
-                    }
-                  ]
+                  "closeMark": "}"
                 }
               ]
             },
@@ -1262,18 +1018,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Gladwin2019"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -1297,18 +1053,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Hill2016"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -1322,18 +1078,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Gladwin2017"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -1347,18 +1103,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Gladwin2017"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -1368,18 +1124,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Hill2016"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -1421,18 +1177,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Hedger2016"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -1446,35 +1202,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gladwin2019a"
+                      "content": "Gladwin2019a, Gladwin2020a"
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
+                  ],
                   "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Gladwin2020a"
-                    }
-                  ]
+                  "closeMark": "}"
                 }
               ]
             },
@@ -1694,18 +1433,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Carlson2020"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -1754,35 +1493,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gur2002"
+                      "content": "Gur2002, Lundqvist1998"
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
+                  ],
                   "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Lundqvist1998"
-                    }
-                  ]
+                  "closeMark": "}"
                 }
               ]
             },
@@ -2320,18 +2042,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Gladwin2019a"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -2656,18 +2378,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Gladwin2019a"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -3306,18 +3028,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Lang2008"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -3331,18 +3053,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Carlson2020"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -3542,18 +3264,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Lang2008"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -4054,35 +3776,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gladwin2019a"
+                      "content": "Gladwin2019a, Hill2016"
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
+                  ],
                   "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Hill2016"
-                    }
-                  ]
+                  "closeMark": "}"
                 }
               ]
             },
@@ -4112,18 +3817,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Posner1985"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -4151,52 +3856,35 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gladwin2017"
+                      "content": "Gladwin2017, Hill2016"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Hill2016"
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
+                  ],
                   "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Hill2016"
-                    }
-                  ]
+                  "closeMark": "}"
                 }
               ]
             },
@@ -4206,18 +3894,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Hill2016"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -4241,18 +3929,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Duthoo2014"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -4304,35 +3992,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gladwin2019a"
+                      "content": "Gladwin2019a, Gladwin2020a"
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
+                  ],
                   "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Gladwin2020a"
-                    }
-                  ]
+                  "closeMark": "}"
                 }
               ]
             },
@@ -4354,18 +4025,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Fox2001"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -4379,35 +4050,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gladwin2019a"
+                      "content": "Gladwin2019a, Gladwin2020a"
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
+                  ],
                   "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Gladwin2020a"
-                    }
-                  ]
+                  "closeMark": "}"
                 }
               ]
             },
@@ -4421,18 +4075,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Mogg1998"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -4446,18 +4100,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Gladwin2020a"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -4471,35 +4125,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gillich2019"
+                      "content": "Gillich2019, Gladwin2019a"
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
+                  ],
                   "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Gladwin2019a"
-                    }
-                  ]
+                  "closeMark": "}"
                 }
               ]
             },
@@ -5125,18 +4762,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Ho2019"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },

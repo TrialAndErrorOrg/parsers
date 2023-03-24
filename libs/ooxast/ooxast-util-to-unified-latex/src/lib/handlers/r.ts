@@ -1,19 +1,21 @@
-import { Color, FldChar, Highlight, R, RPr, Shd, VerticalAlignRun } from 'ooxast'
+import { Color, FldChar, Highlight, R, RPr, Shd, VerticalAlignRun, Parent } from 'ooxast'
 import { select } from 'xast-util-select'
 import { all } from '../all.js'
-import { x } from 'xastscript'
 import { H, UnifiedLatexNode } from '../types.js'
 import { Group, Macro, String as UnifiedLatexString } from '@unified-latex/unified-latex-types'
 import { convertElement } from 'xast-util-is-element'
 import { m, s } from '@unified-latex/unified-latex-builder'
+import { citation } from './citation.js'
 
 //const isVert = convertElement<VerticalAlignRun>('w:vertAlign')
 
-export function r(h: H, node: R) {
+export function r(h: H, node: R, parent?: Parent) {
   const instrText = select('w\\:instrText', node)
   if (instrText) {
+    // is citation
+    console.log({ instrText, parent })
     h.deleteNextRun = true
-    return all(h, node)
+    return citation(h, instrText, parent)
   }
 
   const fldChar = select('w\\:fldChar', node)

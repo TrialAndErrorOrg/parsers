@@ -297,18 +297,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Barrington2020"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -381,18 +381,29 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Sindall2020\",\"itemData\":{\"author\":[{\"family\":\"Sindall\",\"given\":\"R.C.\"},{\"family\":\"Barrington\",\"given\":\"D.J.\"}],\"title\":\"Fail fast, fail forward, fail openly: The need to share failures in development\",\"volume\":\"1\",\"type\":\"article-journal\",\"container-title\":\"Journal of Trial and Error\",\"issue\":\"1\",\"issued\":{\"date-parts\":[[\"2020\"]]},\"page\":\"6–8\",\"URL\":\"https://doi.org/10.36850/ed2\",\"DOI\":\"10.36850/ed2\",\"id\":\"Sindall2020\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\""
+                    }
+                  ],
+                  "openMark": "[",
+                  "closeMark": "]"
+                },
+                {
+                  "type": "argument",
                   "content": [
                     {
                       "type": "string",
                       "content": "Sindall2020"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -502,18 +513,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Holden2009"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -579,18 +590,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Gilson1996"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -616,18 +627,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Levin2019"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -663,35 +674,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Kwok2011"
+                      "content": "Kwok2011, Traut2021"
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "macro",
-              "content": "autocite",
-              "args": [
-                {
-                  "type": "argument",
+                  ],
                   "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Traut2021"
-                    }
-                  ]
+                  "closeMark": "}"
                 }
               ]
             },
@@ -1255,18 +1249,29 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Sindall2020\",\"itemData\":{\"author\":[{\"family\":\"Sindall\",\"given\":\"R.C.\"},{\"family\":\"Barrington\",\"given\":\"D.J.\"}],\"title\":\"Fail fast, fail forward, fail openly: The need to share failures in development\",\"volume\":\"1\",\"type\":\"article-journal\",\"container-title\":\"Journal of Trial and Error\",\"issue\":\"1\",\"issued\":{\"date-parts\":[[\"2020\"]]},\"page\":\"6–8\",\"URL\":\"https://doi.org/10.36850/ed2\",\"DOI\":\"10.36850/ed2\",\"id\":\"Sindall2020\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\""
+                    }
+                  ],
+                  "openMark": "[",
+                  "closeMark": "]"
+                },
+                {
+                  "type": "argument",
                   "content": [
                     {
                       "type": "string",
                       "content": "Sindall2020"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -1422,18 +1427,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "parencite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Bevilacqua2018"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },
@@ -1574,18 +1579,18 @@
             },
             {
               "type": "macro",
-              "content": "autocite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
                       "type": "string",
                       "content": "Sindall2020"
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
               ]
             },

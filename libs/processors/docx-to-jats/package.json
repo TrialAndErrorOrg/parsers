@@ -1,5 +1,6 @@
 {
   "name": "docx-to-jats",
+  "type": "module",
   "description": "processorsDocxToJats(): string;",
   "typedoc": {
     "entryPoint": "./src/index.ts",

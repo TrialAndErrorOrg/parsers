@@ -1,4 +1,4 @@
-import { jatsToTex } from './processors-jats-to-tex'
+import { jatsToTex } from './processors-jats-to-tex.js'
 
 describe('processorsJatsToTex', () => {
   it('should work', () => {

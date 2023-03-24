@@ -1,5 +1,6 @@
 {
   "name": "jats-to-tex",
+  "type": "module",
   "description": "jatsToTex(jats: string): Promise<VFile>;",
   "typedoc": {
     "entryPoint": "./src/index.ts",

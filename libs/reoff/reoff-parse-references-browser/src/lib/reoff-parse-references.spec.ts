@@ -1,4 +1,4 @@
-import reoffReoffParseReferences from './reoff-parse-references'
+import reoffReoffParseReferences from './reoff-parse-references.js'
 
 describe('reoffReoffParseReferences', () => {
   it('should work', () => {

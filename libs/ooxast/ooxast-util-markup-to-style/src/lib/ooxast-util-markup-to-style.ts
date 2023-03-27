@@ -7,7 +7,7 @@ import { x } from 'xastscript'
 import { Element } from 'xast'
 import { toString } from 'xast-util-to-string'
 
-export type Options = {
+export interface Option {
   /**
    * The markup to look for.
    * If no namespace is specified, the default namespace (`w:`) is assumed.
@@ -32,7 +32,7 @@ export type Options = {
    *
    * If false, the style is applied if any of the markup elements are present.
    *
-   * #### Example
+   * _Example_
    * If `['b', 'i']` is specified with `matchAll: true`, the style will only be applied if the text is bold *and* italic.
    *
    * If `['b', 'i']` is specified with `matchAll: false`, the style will be applied if the text is bold *or* italic.
@@ -57,7 +57,27 @@ export type Options = {
    * @default true
    */
   ignorePunctuation?: boolean
-}[]
+}
+;[]
+
+/**
+ * @example
+ * ```ts
+ * const options: Options = [
+ * // find all paragraphs that are bold and larger than 24pt and make it a Title
+ *  {
+ *   markup: (rPr) => rPr['w:b'] && rPr['w:sz'] && rPr['w:sz']['w:val'] > 24,
+ *   style: 'Title',
+ *  },
+ * // find all paragraphs that are strikethrough text and make it a Comment
+ *  {
+ *   markup: 'w:strike',
+ *   style: 'Comment',
+ *  },
+ * ]
+ * ```
+ * */
+export type Options = Option[]
 
 const isRPr = convertElement<RPr>('w:rPr')
 const isR = convertElement<R>('w:r')

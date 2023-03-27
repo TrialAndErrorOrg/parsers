@@ -19,14 +19,12 @@
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nrwl/vite:test",
       "outputs": ["coverage/libs/reoff/docx-to-vfile"],
       "options": {
-        "jestConfig": "libs/reoff/docx-to-vfile/jest.config.js",
         "passWithNoTests": true
       }
     },
-
     "build": {
       "executor": "better-nx-tsc:tsc",
       "outputs": ["{options.outputPath}"],
@@ -97,7 +95,6 @@
         "access": "public"
       }
     },
-
     "github-standalone": {
       "executor": "@jscutlery/semver:github",
       "options": {

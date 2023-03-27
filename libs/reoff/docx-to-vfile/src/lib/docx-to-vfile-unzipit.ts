@@ -96,26 +96,19 @@ export interface DocxVFile extends VFile {
  * @returns A VFile with the contents of the document.xml file as the root, and the contents of the other xml files as data.
  */
 export async function docxToVFile(
-  file: ArrayBuffer | File | Blob | Buffer | ReadStream | string,
+  file: ArrayBuffer | File | Blob | Buffer | string,
   userOptions?: Options,
 ): Promise<VFile> {
   let input = file
 
   // node code
-  if (typeof window === 'undefined') {
-    const { createReadStream, ReadStream } = await import('fs')
-    const { blob } = await import('stream/consumers')
-    const { Blob: NodeBlob } = await import('buffer')
+  if (process.env) {
+    const { readFile } = await import('fs/promises')
+    const { Buffer } = await import('buffer')
 
-    const inp = typeof file === 'string' ? createReadStream(file) : file
+    const inp = typeof file === 'string' ? await readFile(file) : file
 
-    input = (
-      inp instanceof ReadStream
-        ? await blob(inp)
-        : inp instanceof ArrayBuffer
-        ? new NodeBlob([Buffer.from(inp)])
-        : inp
-    ) as Blob
+    input = Buffer.isBuffer(inp) ? new Blob([inp]) : file
   }
 
   const options: Options = {
@@ -124,7 +117,10 @@ export async function docxToVFile(
     ...userOptions,
   }
 
-  const { entries } = await unzip(input as Blob)
+  console.log(input)
+  console.log(input instanceof Blob)
+
+  const { entries } = await unzip(input)
   const rels = await entries['word/_rels/document.xml.rels'].text()
   const relations = Object.fromEntries(
     // eslint-disable-next-line regexp/no-super-linear-backtracking

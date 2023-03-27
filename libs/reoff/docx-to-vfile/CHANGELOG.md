@@ -2,6 +2,19 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.6.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.5.3...docx-to-vfile-0.6.0) (2023-03-27)
+
+
+### Features
+
+* **docx-to-vfile:** allow for Buffer input ([3e22847](https://github.com/TrialAndErrorOrg/parsers/commit/3e22847ddde6a3a129f846149d2148462e90cd40))
+* **docx-to-vfile:** make more isomorphic ([41ed5e8](https://github.com/TrialAndErrorOrg/parsers/commit/41ed5e8f89bfe1b2e58ef6573ec5ae530fda9645))
+
+
+### Bug Fixes
+
+* **docx-to-vfile:** add vitest and make sure it works in vite ([39e53bb](https://github.com/TrialAndErrorOrg/parsers/commit/39e53bb4129e4c005798cb03322ab380290de41c))
+
 ## [0.5.3](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.5.2...docx-to-vfile-0.5.3) (2023-03-14)
 
 ## [0.5.2](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.5.1...docx-to-vfile-0.5.2) (2023-03-13)

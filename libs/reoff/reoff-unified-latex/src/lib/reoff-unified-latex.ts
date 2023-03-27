@@ -9,10 +9,7 @@ type Processor = UnifiedProcessor<any, any, any, any>
  * Runs the destination with the new unified-latex tree.
  *
  */
-function bridge(
-  destination: Processor,
-  options?: Options,
-): void | Transformer<OoxastRoot, OoxastRoot> {
+const bridge: Plugin<[Processor, Options?], OoxastRoot> = function (destination, options) {
   return (node, file, next) => {
     destination.run(toUnifiedLatex(node, options), file, (error) => {
       next(error)
@@ -24,10 +21,7 @@ function bridge(
  * Mutate-mode.
  * Further transformers run on the unified-latex tree.
  */
-function mutate(
-  options: void | Options | undefined = {},
-): ReturnType<Plugin<[Options?] | void[], OoxastRoot, Root>> {
-  //Transformer<JastRoot, JastRoot> | void {
+const mutate: Plugin<[Options | void | undefined], OoxastRoot, Root> = function (options = {}) {
   return (node, file) => {
     const result = toUnifiedLatex(node, file, options)
     return result
@@ -49,7 +43,10 @@ function mutate(
  * @param options
  *   Options passed to `ooxast-util-to-unified-latex`.
  */
-const reoffUnifiedLatex = function (destination?: Processor | Options, options?: Options) {
+const reoffUnifiedLatex: ThisType<Processor> = function (
+  destination: Processor | Options,
+  options?: Options,
+) {
   let settings: Options | undefined
   let processor: Processor | undefined
 
@@ -64,7 +61,7 @@ const reoffUnifiedLatex = function (destination?: Processor | Options, options?:
     settings = Object.assign({}, settings, { document: true })
   }
 
-  return processor ? bridge(processor, settings) : mutate(settings)
-} as Plugin<[Processor, Options?], OoxastRoot> & Plugin<[Options?] | void[], OoxastRoot, Root>
+  return processor ? bridge.call(this, processor, settings) : mutate.call(this, settings)
+}
 
 export default reoffUnifiedLatex

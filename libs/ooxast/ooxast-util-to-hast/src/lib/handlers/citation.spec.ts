@@ -1,4 +1,5 @@
 import { T, Text } from 'ooxast'
+
 const mendeleyCitation: T = {
   type: 'element',
   name: 'w:instrText',
@@ -30,6 +31,6 @@ it('should return mendeley citation', () => {
   expect(csl).toBeDefined()
   expect(
     csl.title ===
-      'From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research'
+      'From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research',
   )
 })

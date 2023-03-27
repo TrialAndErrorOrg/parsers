@@ -14,6 +14,8 @@ import { toString } from '@unified-latex/unified-latex-util-to-string'
 import { Options } from '../lib/types.js'
 import { Node } from 'unist'
 import { Ast, Root } from '@unified-latex/unified-latex-types'
+import { describe, it, expect } from 'vitest'
+import { blob } from 'stream/consumers'
 
 const unifiedLatexStringify = function relatexStringify(options?: Options | void) {
   const compiler: CompilerFunction<Node, string> = (tree) => {
@@ -77,7 +79,8 @@ it.each(dir)(
   async (name: string) => {
     const [docx, latex] = ['index.docx', 'expected.tex'].map((ext) => join(fixtures, name, ext))
 
-    const doccc = new Uint8Array(await readFile(docx))
+    const doccc = await readFile(docx)
+
     const docxIn = await docxToVFile(doccc)
 
     const result = String(

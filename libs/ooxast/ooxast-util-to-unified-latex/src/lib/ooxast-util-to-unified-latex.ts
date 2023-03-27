@@ -36,8 +36,8 @@ const defaultOptions: Options = {
   newLines: false,
   quotes: ['"'],
   topSection: 1,
+  document: true,
   columnSeparator: false,
-
   documentClass: { name: 'article' },
   bibname: 'References',
   packages: [
@@ -187,7 +187,10 @@ export function toUnifiedLatex(
   h.simpleParagraph = false
 
   const result = one(h, tree, undefined)
-  console.log('result', result)
+
+  if(!h.document){
+    return result
+  }
 
   if (!result) {
     return { type: 'root', content: [] } as UnifiedLatexRoot

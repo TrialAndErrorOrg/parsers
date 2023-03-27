@@ -109,7 +109,7 @@ export function r(h: H, node: R, parent?: Parent) {
         }
         text = {
           type: 'group',
-          content: [m('color', [...(Array.isArray(text) ? text : [text])])],
+          content: [m('color', color), [...(Array.isArray(text) ? text : [text])]],
         } as Group
         return text
       }

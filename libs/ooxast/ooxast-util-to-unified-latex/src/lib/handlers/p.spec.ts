@@ -1,6 +1,7 @@
 import { x } from 'xastscript'
 import { toUnifiedLatex } from '../ooxast-util-to-unified-latex.js'
 import { s, SP } from '@unified-latex/unified-latex-builder'
+import { describe, it, expect } from 'vitest'
 
 describe('p', () => {
   it('should do something', () => {

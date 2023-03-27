@@ -45,10 +45,9 @@
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nrwl/vite:test",
       "outputs": ["coverage/libs/ooxast/ooxast-util-to-unified-latex"],
       "options": {
-        "jestConfig": "libs/ooxast/ooxast-util-to-unified-latex/jest.config.js",
         "passWithNoTests": true
       }
     },

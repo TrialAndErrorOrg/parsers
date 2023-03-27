@@ -24,6 +24,11 @@ export type Attributes = OoxastProperties
 export interface Options {
   /** Handlers for specific node types */
   handlers?: { [handle: string]: Handle }
+  /**
+   * Whether to add a preamble and document environment
+   * 
+   * @default true
+   */
   document?: boolean
   newLines?: boolean
   quotes?: Array<string>

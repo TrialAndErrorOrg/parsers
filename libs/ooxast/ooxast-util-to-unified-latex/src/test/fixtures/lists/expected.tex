@@ -4,6 +4,7 @@
 
 \usepackage{xcolor}
 
+\usepackage{graphicx}
 
 \usepackage{hyperref}
 
@@ -12,83 +13,104 @@
 
 
 \begin{document}
-\begin{enumerate}
+	\begin{enumerate}
 
 
-  \item Number one
-
-
-
-  \item Two
+		\item Number one
 
 
 
-  \item Three
-
-        \begin{enumerate}
-
-
-          \item Indent
-
-
-        \end{enumerate}
-\end{enumerate}
+		\item Two
 
 
 
-\begin{enumerate}
+		\item Three
+
+		\begin{enumerate}
 
 
-  \item Unordered
+			\item Indent
 
 
-
-  \item List
-
-
-
-  \item Items
-
-        \begin{enumerate}
-
-
-          \item Indentatio
-
-
-        \end{enumerate}
-\end{enumerate}
+		\end{enumerate}
+	\end{enumerate}
 
 
 
-\begin{enumerate}
+	\begin{itemize}
 
 
-  \item Continuing
-
-
-
-  \item Previous
+		\item Unordered
 
 
 
-  \item List
-
-        \begin{enumerate}
+		\item List
 
 
-          \item Indentation
+
+		\item Items
+
+		\begin{itemize}
 
 
-        \end{enumerate}
-
-  \item Going down a step again
-
-        \begin{enumerate}
+			\item Indentatio
 
 
-          \item Immediately starting other list
+		\end{itemize}
+	\end{itemize}
 
 
-        \end{enumerate}
-\end{enumerate}
+
+	\begin{enumerate}
+
+
+		\item Continuing
+
+
+
+		\item Previous
+
+
+
+		\item List
+
+		\begin{enumerate}
+
+
+			\item Indenting 4
+
+
+		\end{enumerate}
+	\end{enumerate}
+	\begin{enumerate}
+
+
+		\item Going down to b
+
+		\begin{enumerate}
+
+
+			\item Indenting 1
+
+
+		\end{enumerate}
+
+		\item Going back to c
+
+
+	\end{enumerate}
+	\begin{enumerate}
+
+
+		\item Immediately starting other list
+
+
+	\end{enumerate}
+	\begin{itemize}
+
+
+		\item And another list
+
+
+	\end{itemize}
 \end{document}

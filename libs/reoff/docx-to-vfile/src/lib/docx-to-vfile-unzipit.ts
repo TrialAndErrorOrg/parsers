@@ -1,6 +1,5 @@
 import { Data, VFile } from 'vfile'
 import { unzip } from 'unzipit'
-import type { ReadStream } from 'fs'
 
 const removeHeader = (text: string | undefined) => (text ? text.replace(/<\?xml.*?\?>/, '') : '')
 
@@ -102,10 +101,8 @@ export async function docxToVFile(
   let input = file
 
   // node code
-  if (process.env) {
+  if (typeof window === 'undefined') {
     const { readFile } = await import('fs/promises')
-    const { Buffer } = await import('buffer')
-
     const inp = typeof file === 'string' ? await readFile(file) : file
 
     input = Buffer.isBuffer(inp) ? new Blob([inp]) : file
@@ -116,9 +113,6 @@ export async function docxToVFile(
     include: 'all',
     ...userOptions,
   }
-
-  console.log(input)
-  console.log(input instanceof Blob)
 
   const { entries } = await unzip(input)
   const rels = await entries['word/_rels/document.xml.rels'].text()

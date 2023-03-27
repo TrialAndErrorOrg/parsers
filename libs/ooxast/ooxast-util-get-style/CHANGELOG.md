@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-get-style-0.1.2...ooxast-util-get-style-0.2.0) (2023-03-27)
+
+
+### Features
+
+* **ooxast-util-get-style:** improve ([27612f2](https://github.com/TrialAndErrorOrg/parsers/commit/27612f22da9f25a3c6a120b7b1d929f3da6bc28e))
+
 ## [0.1.2](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-get-style-0.1.1...ooxast-util-get-style-0.1.2) (2023-03-14)
 
 ### Dependency Updates

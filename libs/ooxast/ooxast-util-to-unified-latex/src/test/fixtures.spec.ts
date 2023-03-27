@@ -16,8 +16,9 @@ import { Node } from 'unist'
 import { Ast, Root } from '@unified-latex/unified-latex-types'
 import { describe, it, expect } from 'vitest'
 import { blob } from 'stream/consumers'
+import unifiedLatexStringify from 'unified-latex-stringify'
 
-const unifiedLatexStringify = function relatexStringify(options?: Options | void) {
+const unifieddLatexStringify = function relatexStringify(options?: Options | void) {
   const compiler: CompilerFunction<Node, string> = (tree) => {
     // Assume options.
     const settings = this.data('settings') as Options

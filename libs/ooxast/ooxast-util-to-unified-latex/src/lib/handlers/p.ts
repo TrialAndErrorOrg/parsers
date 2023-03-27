@@ -19,8 +19,10 @@ const headingList = [
   'textbf',
 ]
 
-export function getHeadingLevel(p: P) {
-  const lastNumber = getPStyle(p)?.toLowerCase()?.slice(-1)
+export function getHeadingLevel(style: string) {
+  const lowerCaseStyle = style.toLowerCase()
+  if (lowerCaseStyle === 'heading') return 1
+  const lastNumber = lowerCaseStyle.slice(-1)
   return !lastNumber ? null : parseInt(lastNumber, 10)
 }
 
@@ -42,7 +44,7 @@ export const p: Handle = (h: H, p: P) => {
     return []
   }
 
-  const headingLevel = getHeadingLevel(p)
+  const headingLevel = getHeadingLevel(style)
 
   if (!headingLevel) return [PB, ...all(h, p), PB]
 

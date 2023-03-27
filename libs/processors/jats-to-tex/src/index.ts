@@ -1,1 +1,1 @@
-export * from './lib/processors-jats-to-tex.js'
+export * from './lib/processors-jats-to-tex'

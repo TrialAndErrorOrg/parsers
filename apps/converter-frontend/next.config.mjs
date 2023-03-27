@@ -13,6 +13,13 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  webpack: (config) => {
+    config.resolve.extensionAlias = {
+      ".js": [".ts", ".tsx", ".js"],
+    };
+
+    return config;
+  },
   experimental: {
     outputFileTracingRoot: new URL('../../', import.meta.url).pathname,
   },

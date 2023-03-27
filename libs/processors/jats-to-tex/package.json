@@ -1,5 +1,5 @@
 {
-  "name": "jats-to-tex",
+  "name": "processors-jats-to-tex",
   "type": "module",
   "description": "jatsToTex(jats: string): Promise<VFile>;",
   "typedoc": {

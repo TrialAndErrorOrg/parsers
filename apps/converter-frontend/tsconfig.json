@@ -12,7 +12,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "incremental": true,
-    "moduleResolution": "node",
+    "moduleResolution": "nodenext",
     "module": "ESNext",
     "target": "ESNext"
   },

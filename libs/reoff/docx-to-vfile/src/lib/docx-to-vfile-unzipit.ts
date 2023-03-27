@@ -1,6 +1,6 @@
 import { Data, VFile } from 'vfile'
 import { unzip } from 'unzipit'
-import { ReadStream } from 'fs'
+import type { ReadStream } from 'fs'
 
 const removeHeader = (text: string | undefined) => (text ? text.replace(/<\?xml.*?\?>/, '') : '')
 
@@ -10,7 +10,7 @@ export interface Options {
   /**
    * Whether or not to include media in the VFile.
    *
-   * By default, images are included on the `data.media` attribute of the VFile as an object of ArrayBuffers, which are accessible both client and serverside.
+   * By default, images are included on the `data.media` attribute of the VFile as an object of Blobs, which are accessible both client and serverside.
    *
    * @default false
    */
@@ -31,6 +31,13 @@ export interface Options {
   include?: string[] | RegExp[] | ((key: string) => boolean) | 'all' | 'allWithDocumentXML'
 }
 
+export interface OptionsWithFetchConfig extends Options {
+  /**
+   * The config to pass to fetch, for e.g. authorization headers.
+   */
+  fetchConfig?: RequestInit
+}
+
 /**
  * The data attribute of a VFile
  * Is set to the DataMap interface in the vfile module
@@ -43,7 +50,7 @@ export interface DocxData extends Data {
   /**
    * The media files in the .docx file
    */
-  media: { [key: string]: ArrayBuffer }
+  media: { [key: string]: Blob }
   /**
    * The relations between the .xml files in the .docx file
    */
@@ -60,7 +67,7 @@ declare module 'vfile' {
      * The media files in the .docx file
      * Possibly undefined only to be compatible with the VFile interface
      */
-    media: { [key: string]: ArrayBuffer }
+    media: { [key: string]: Blob }
     /**
      * The relations between the .xml files in the .docx file
      * Possibly undefined only to be compatible with the VFile interface
@@ -82,25 +89,42 @@ export interface DocxVFile extends VFile {
 }
 
 /**
- * Takes a docx file as an ArrayBuffer and returns a VFile with the contents of the document.xml file as the root, and the contents of the other xml files as data.
+ * Takes a docx file as a Blob or File and returns a VFile with the contents of the document.xml file as the root, and the contents of the other xml files as data.
  *
- * @param file The docx file as an ArrayBuffer or Blob
+ * @param file The docx file as a Blob or File
  * @param options Options
  * @returns A VFile with the contents of the document.xml file as the root, and the contents of the other xml files as data.
  */
 export async function docxToVFile(
-  file: ArrayBuffer | Blob | Buffer,
-  userOptions: Options = {},
+  file: ArrayBuffer | File | Blob | Buffer | ReadStream | string,
+  userOptions?: Options,
 ): Promise<VFile> {
+  let input = file
+
+  // node code
+  if (typeof window === 'undefined') {
+    const { createReadStream, ReadStream } = await import('fs')
+    const { blob } = await import('stream/consumers')
+    const { Blob: NodeBlob } = await import('buffer')
+
+    const inp = typeof file === 'string' ? createReadStream(file) : file
+
+    input = (
+      inp instanceof ReadStream
+        ? await blob(inp)
+        : inp instanceof ArrayBuffer
+        ? new NodeBlob([Buffer.from(inp)])
+        : inp
+    ) as Blob
+  }
+
   const options: Options = {
     withoutMedia: false,
     include: 'all',
     ...userOptions,
   }
 
-  const blb = file instanceof Blob ? file : new Blob([file])
-
-  const { entries } = await unzip(blb)
+  const { entries } = await unzip(input as Blob)
   const rels = await entries['word/_rels/document.xml.rels'].text()
   const relations = Object.fromEntries(
     // eslint-disable-next-line regexp/no-super-linear-backtracking
@@ -144,7 +168,7 @@ export async function docxToVFile(
 
   const vfileData: DocxData = textEntriesObject
   vfileData.relations = relations
-  vfileData.media = {} as { [key: string]: ArrayBuffer }
+  vfileData.media = {} as { [key: string]: Blob }
 
   // vfile.data = vfileData
 
@@ -153,9 +177,9 @@ export async function docxToVFile(
   }
 
   const mediaUrls = Object.values(relations).filter((rel: string) => rel.includes('media/'))
-  const media = {} as { [key: string]: ArrayBuffer }
+  const media = {} as { [key: string]: Blob }
   for (const url of mediaUrls) {
-    media[url] = await entries[`word/${url}`].arrayBuffer()
+    media[url] = await entries[`word/${url}`].blob()
   }
   vfileData.media = media
   return new VFile({ value: removeCarriage(doc), data: vfileData })

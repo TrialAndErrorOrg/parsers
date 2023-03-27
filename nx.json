@@ -58,6 +58,9 @@
     },
     "e2e": {
       "inputs": ["default", "^production"]
+    },
+    "test": {
+      "inputs": ["default", "^production"]
     }
   },
   "tasksRunnerOptions": {

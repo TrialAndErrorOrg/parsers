@@ -1,6 +1,5 @@
 import { docxToVFile } from './docx-to-vfile-unzipit.js'
 import fs from 'fs'
-import path from 'path'
 
 describe('reoffDocxToVfile', () => {
   const doc = fs.readFileSync(

@@ -28,6 +28,11 @@
     }
   },
   "main": "./index.js",
+  "browser": {
+    "fs": false,
+    "stream": false,
+    "buffer": false
+  },
   "types": "./index.d.ts",
   "files": [
     "index.d.ts",

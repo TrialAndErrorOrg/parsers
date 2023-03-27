@@ -4,18 +4,14 @@
 
 \usepackage{xcolor}
 
-\usepackage{figurex}
+\usepackage{graphicx}
 
 \usepackage{hyperref}
 
 \usepackage[backend=biber,style=apa]{biblatex}
 
-
-
 \begin{document}
 
-
-	Some text\footnote{A footnote.}
-
+    Some text\footnote{A footnote.}
 
 \end{document}

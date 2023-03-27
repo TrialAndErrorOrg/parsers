@@ -66,25 +66,32 @@ const fromDocx = (
 const fixtures = new URL('fixtures', import.meta.url).pathname
 const dir = readdirSync(fixtures)
 
-jest.setTimeout(20000)
-it.each(dir)('parses correctly for %s', async (name: string) => {
-  const [docx, latex] = ['index.docx', 'expected.md'].map((ext) => join(fixtures, name, ext))
+describe('fixtures', () => {
+  it.each(dir)(
+    'parses correctly for %s',
+    async (name: string) => {
+      const [docx, latex] = ['index.docx', 'expected.md'].map((ext) => join(fixtures, name, ext))
 
-  const doccc = new Uint8Array(await readFile(docx))
-  const docxIn = await docxToVFile(doccc)
+      const doccc = new Uint8Array(await readFile(docx))
+      const docxIn = await docxToVFile(doccc)
 
-  const result = String(
-    await fromDocx(join(fixtures, name), name === 'zotero' ? 'zotero' : undefined).process(docxIn),
+      const result = String(
+        await fromDocx(join(fixtures, name), name === 'zotero' ? 'zotero' : undefined).process(
+          docxIn,
+        ),
+      )
+      await writeFile(join(fixtures, name, 'result.md'), result)
+
+      console.log(latex)
+      let expectTex = ''
+      try {
+        expectTex = await readFile(latex, 'utf8')
+      } catch (e) {
+        console.log(e)
+      }
+
+      expect(result).toEqual(expectTex)
+    },
+    20000,
   )
-  await writeFile(join(fixtures, name, 'result.md'), result)
-
-  console.log(latex)
-  let expectTex = ''
-  try {
-    expectTex = await readFile(latex, 'utf8')
-  } catch (e) {
-    console.log(e)
-  }
-
-  expect(result).toEqual(expectTex)
 })

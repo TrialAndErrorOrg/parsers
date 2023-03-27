@@ -13,6 +13,7 @@
   "importCost.timeout": 1,
   "editor.formatOnSave": true,
   "eslint.validate": ["json"],
+
   "typescript.disableAutomaticTypeAcquisition": true,
   "typescript.enablePromptUseWorkspaceTsdk": true
 }

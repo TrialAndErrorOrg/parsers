@@ -29,6 +29,7 @@ import { addLint } from '@nrwl/workspace/src/generators/library/library'
 import { Schema as LintExecutorOptions } from '@nrwl/workspace/src/generators/library/schema'
 import { runTasksInSerial } from '@nrwl/workspace/src/utilities/run-tasks-in-serial'
 import { jestProjectGenerator } from '@nrwl/jest'
+import { VitestExecutorOptions } from '@nrwl/vite/executors'
 import { updateTsConfig } from '@nrwl/jest/src/generators/jest-project/lib/update-tsconfig'
 import { updateJestConfig } from '@nrwl/jest/src/generators/jest-project/lib/update-jestconfig'
 import { JestExecutorOptions } from '@nrwl/jest/src/executors/jest/schema'
@@ -203,6 +204,9 @@ const addProject = (tree: Tree, options: NormalizedSchema) => {
     tags: options.parsedTags,
   } satisfies ProjectConfiguration
 
+  // remove repeating name at the start, like 'ooxast-ooxast' from options.name
+  options.name = options.name.replace(/^((\w+)-\2)/, '$2')
+
   const { libsDir } = getWorkspaceLayout(tree)
   // addDependenciesToPackageJson(tree, {}, { '@nrwl/js': nxVersion })
 
@@ -292,6 +296,22 @@ const addProject = (tree: Tree, options: NormalizedSchema) => {
 
     projectConfiguration.targets['github-standalone'] = githubStandalone
   }
+
+  const test: TargetConfiguration<VitestExecutorOptions> = {
+    executor: '@nrwl/vite:test',
+    outputs: ['{workspaceRoot}/coverage/{projectRoot}'],
+    options: {
+      passWithNoTests: true,
+    },
+    configurations: {
+      ci: {
+        ci: true,
+        codeCoverage: true,
+      },
+    },
+  }
+
+  projectConfiguration.targets.test = test
 
   if (options.unitTestRunner === 'jest') {
     const test: TargetConfiguration<JestExecutorOptions> = {

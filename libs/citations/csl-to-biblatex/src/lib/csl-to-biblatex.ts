@@ -102,7 +102,7 @@ export function cslToBiblatex(csl: CSL[]) {
     ?.map(
       (auth) =>
         (auth.literal ||
-        `${(auth['dropping-particle'] || auth['non-dropping-particle'] || '')} ${auth.family}${auth.given ? `, ${auth.given}` : ''}${auth.suffix || ''}`).trim()
+        `${(auth['dropping-particle'] || auth['non-dropping-particle'] || auth['particle'] || '')} ${auth.family}${auth.given ? `, ${auth.given}` : ''}${auth.suffix || ''}`).trim()
     )
     .join(' and ')),
   texEntryMap('number     ',`${ref.number||ref.issue||''}`),

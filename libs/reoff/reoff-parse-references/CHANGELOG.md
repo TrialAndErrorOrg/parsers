@@ -2,6 +2,11 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.2](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-parse-references-0.1.1...reoff-parse-references-0.1.2) (2023-03-29)
+
+### Dependency Updates
+
+* `ooxast-util-parse-bib` updated to version `0.1.2`
 ## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-parse-references-0.1.0...reoff-parse-references-0.1.1) (2023-03-14)
 
 ### Dependency Updates

@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/csl-to-biblatex-0.1.1...csl-to-biblatex-0.2.0) (2023-03-29)
+
+
+### Features
+
+* **csl-to-biblatex:** add support for editors ([015b9dd](https://github.com/TrialAndErrorOrg/parsers/commit/015b9ddb852267ec7bd0f2b39cc6963d271bbf0f))
+
+
+### Bug Fixes
+
+* **csl-to-biblatex:** also look for incorrect particle item for author last names ([62d89b8](https://github.com/TrialAndErrorOrg/parsers/commit/62d89b8c6fa97b3911fc20b2597df6ae01e5e5c9))
+
 ## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/csl-to-biblatex-0.1.0...csl-to-biblatex-0.1.1) (2023-03-09)
 
 ## 0.1.0 (2023-03-09)

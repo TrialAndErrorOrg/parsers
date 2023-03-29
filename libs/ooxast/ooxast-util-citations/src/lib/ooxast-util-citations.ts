@@ -108,9 +108,9 @@ export function findCitations(tree: Node, vfile?: VFile, options?: Options): Roo
       for (const sentence of sentencesWithSpaces) {
         try {
           // split the text into sentences so that we can parse them individually
-          const parsedCitation: CiteOutput = parseTextCite(sentence, {
+          const parsedCitation = parseTextCite(sentence, {
             log: options?.log,
-          })
+          }) as CiteOutput
 
           // if the sentence is not a citation, just add it to the runs
           if (parsedCitation.every((item) => typeof item === 'string')) {

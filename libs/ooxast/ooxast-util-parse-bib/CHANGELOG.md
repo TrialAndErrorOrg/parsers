@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.2](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-parse-bib-0.1.1...ooxast-util-parse-bib-0.1.2) (2023-03-29)
+
+### Dependency Updates
+
+* `ooxast-util-get-style` updated to version `0.2.0`
+* `docx-to-vfile` updated to version `0.6.1`
+* `reoff-parse` updated to version `0.2.7`
+
+### Bug Fixes
+
+* **ooxast-util-parse-bib:** split the initials in the csl from anystyle ([4b8e567](https://github.com/TrialAndErrorOrg/parsers/commit/4b8e5673a7ca43022206b2562762f4c8c8f285bd))
+
 ## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-parse-bib-0.1.0...ooxast-util-parse-bib-0.1.1) (2023-03-14)
 
 ### Dependency Updates

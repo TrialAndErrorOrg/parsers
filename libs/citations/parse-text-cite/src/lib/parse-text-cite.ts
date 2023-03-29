@@ -47,16 +47,12 @@ export const parseTextCite = (string: string, options?: Options) => {
 
   const results = parser.results as unknown[][]
 
-  if (string.includes('Whitaker')) {
-    console.log({ results })
-  }
-
   if (!results) {
     return [string]
   }
 
   if (options?.showAll) {
-    return results
+    return results as (Citation | string)[][]
   }
 
   // find the item that has the smallest total length of strings

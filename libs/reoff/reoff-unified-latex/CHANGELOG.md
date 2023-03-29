@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-unified-latex-0.1.0...reoff-unified-latex-0.1.1) (2023-03-29)
+
+### Dependency Updates
+
+* `ooxast-util-to-unified-latex` updated to version `0.2.0`
+* `ooxast` updated to version `0.1.3`
+
+### Bug Fixes
+
+* **reoff-unified-latex:** set the types correctly ([4178515](https://github.com/TrialAndErrorOrg/parsers/commit/417851598ddcc2b51292874328a26d3caf98ad2b))
+
 ## 0.1.0 (2023-03-09)
 
 ### Dependency Updates

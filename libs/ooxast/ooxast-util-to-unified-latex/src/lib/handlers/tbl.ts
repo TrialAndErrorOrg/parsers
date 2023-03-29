@@ -1,7 +1,7 @@
 import { H, Handle } from '../types.js'
 import { Tbl } from 'ooxast'
 import { all } from '../all.js'
-import { env } from '@unified-latex/unified-latex-builder'
+import { arg, args, env } from '@unified-latex/unified-latex-builder'
 
 export const tbl: Handle = (h: H, tbl: Tbl) => {
   h.inTable = true
@@ -12,12 +12,12 @@ export const tbl: Handle = (h: H, tbl: Tbl) => {
 
   const columns = tableRows.map(() => `${h.defaultCol}${h.columnSeparator ? ' |' : ''}`).join(' ')
 
-  const colArg = [`@{} ${h.columnSeparator ? '| ' : ''}${columns} @{}`]
+  const colArg = `@{} ${h.columnSeparator ? '| ' : ''}${columns} @{}`
   const table = env(
     'table',
     h.tabularx?.width
-      ? env('tabularx', contents, [h.tabularx.width, ...colArg])
-      : env('tabular', contents, colArg),
+      ? env('tabularx', contents, args([h.tabularx.width, colArg], { braces: '{}' }))
+      : env('tabular', contents, arg(colArg)),
   )
   return table
 }

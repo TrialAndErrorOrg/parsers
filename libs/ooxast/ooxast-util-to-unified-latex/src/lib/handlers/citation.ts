@@ -1,13 +1,20 @@
-import { H, Handle, Parent } from '../types.js'
+import { H, Handle, Node, Parent } from '../types.js'
 import { T } from 'ooxast'
 import { Data as CSL } from 'csl-json'
 
-import { CitationItem, MendeleyCitationItem } from 'ooxast-util-citations'
+import {
+  CitationItem,
+  MendeleyCitation,
+  MendeleyCitationItem,
+  ZoteroCitation,
+} from 'ooxast-util-citations'
 
 import { arg, m } from '@unified-latex/unified-latex-builder'
 
 import { Argument } from '@unified-latex/unified-latex-types'
 import { toString } from 'xast-util-to-string'
+import { convertElement, isElement } from 'xast-util-is-element'
+import { s } from '@unified-latex/unified-latex-builder'
 
 export const citation: Handle = (h: H, citationNode: T, parent?: Parent) => {
   // i const t = select('', citation) as T
@@ -22,7 +29,7 @@ export const citation: Handle = (h: H, citationNode: T, parent?: Parent) => {
 
   // Zotero/mendely citation: easy
   if (type && !text?.includes('Bibliography')) {
-    let citation: { [key: string]: any }
+    let citation: ZoteroCitation | MendeleyCitation
     const json = text.replace(/ADDIN .*?CSL_CITATION/, '')
 
     try {
@@ -58,26 +65,19 @@ export const citation: Handle = (h: H, citationNode: T, parent?: Parent) => {
         console.log('Success!')
       }
       // console.log(json)
-      console.log(h.partialCitation)
-
       console.error('Corrupt citation! This might be because the text is too long. Skipping...')
       return
     }
 
-    if (citation.mendeley || citation.properties) {
+    if ('mendeley' in citation || citation.properties) {
       const citetype = text.match('ZOTERO') ? 'zotero' : 'mendeley'
       // I want to create a link for each citation,
       // and want to catch things like (Person, 2020, 2021; Other 2020)
-      const { formattedCitation, plainCitation, prefix, suffix } =
-        citetype === 'zotero' ? citation.properties : citation.mendeley
+      const { formattedCitation } = 'mendeley' in citation ? citation.mendeley : citation.properties
 
       const sectionedCitations = formattedCitation?.replace(/(\d{4}), (\d{4})/g, '$1; $2')
 
       const formattedCitations = sectionedCitations.split(';')
-
-      if (citetype === 'mendeley') {
-        h.deleteNextRun = true
-      }
 
       const citations = citation.citationItems.map(
         (cite: CitationItem | MendeleyCitationItem, i: number) => {
@@ -89,35 +89,54 @@ export const citation: Handle = (h: H, citationNode: T, parent?: Parent) => {
           h.collectCitation(itemData, citeKey)
 
           const { id, itemData: itemdata, ...rest } = cite
-          // const customCiteData = { ...rest, ...citation.properties }
-
-          return citeKey
-          // return m('autocite', citeKey)
-          // return h(
-          //   itemData,
-          //   'xref',
-          //   {
-          //     id: `_xref-${h.citationNumber}`,
-          //     refType: 'bibr',
-          //     rid: citeKey,
-          //     // We store more value in the custom citation space, such as infix/suffix etc.
-          //     ...(customCiteData ? { customType: JSON.stringify(customCiteData) } : {}), // customType: JSON.stringify()
-          //   },
-          //   [
-          //     {
-          //       type: 'string',
-          //       content: formattedCitations?.[i] || `[${h.citationNumber}]`,
-          //     },
-          //   ],
-          // )
+          const data = 'uris' in rest ? {} : rest
+          return { citeKey, ...data, formattedCitation: formattedCitations[i]?.trim() }
         },
       )
 
+      // this is a very hacky check to see whether we constructed this citation or whether it was already there
+      // actual mendeley citations do not have a citationID, and Zotero ones are a random string by default
+      if ('citationID' in citation && citation.citationID.startsWith('CITE-')) {
+        if (!formattedCitation.startsWith('(')) {
+          const narrativeCitation = m('textcite', arg(citations.map((c) => c.citeKey).join(', ')))
+          // sometimes authors like to do things like "Smith's (2020) says...", which translates to "\citeauthor{Smith2020}'s (\citeyear{Smith2020}) says..."
+          return 'possessive' in citation.properties
+            ? [
+                m('citeauthor', arg(citations.map((c) => c.citeKey).join(', '))),
+                s("'s ("),
+                m('citeyear', arg(citations.map((c) => c.citeKey).join(', '))),
+                s(')'),
+              ]
+            : narrativeCitation
+        }
+
+        return m(
+          'parencites',
+          citations.flatMap(({ citeKey, prefix, suffix: literalSuffix, label, locator }) => {
+            const suffix = literalSuffix ?? `${label ? `${label} ` : ''}${locator ?? ''}`
+            return [
+              ...(prefix ? [arg(prefix.trim(), { braces: '[]' })] : []),
+              ...(suffix
+                ? [arg(suffix.trim(), { braces: '[]' })]
+                : prefix
+                ? [arg('', { braces: '[]' })]
+                : []),
+              arg(citeKey),
+            ]
+          }),
+        )
+      }
+
+      h.deleteNextRun = true
       // we need to find the next child in order to accurately determine prefix and suffixes
-      const nextChildIndex = parent?.children?.findIndex((c) => {
+      const nextChildIndex = parent?.children?.findIndex((c: Node | Parent) => {
+        if (!('children' in c) || !c.children?.length) {
+          return false
+        }
+
         const possibleInstr = c.children?.[0]
 
-        if (possibleInstr.name !== 'w:instrText') {
+        if (!convertElement<T>('w:instrText')(possibleInstr)) {
           return false
         }
 
@@ -128,35 +147,27 @@ export const citation: Handle = (h: H, citationNode: T, parent?: Parent) => {
       const nextChild = parent?.children?.[(nextChildIndex ?? -2) + 1]
 
       // determine the prefix and the suffix by comparing the textvalue of the nextchild to the formatted citation
-      const nextChildText = nextChild ? toString(nextChild) : ''
+      const nextChildText = isElement(nextChild) ? toString(nextChild) : ''
+
       const nextNextChild = parent?.children?.[(nextChildIndex ?? -3) + 2]
 
-      const nextNextChildText = nextChildText || toString(nextNextChild)
+      const nextNextChildText =
+        nextChildText || (nextNextChild && isElement(nextNextChild) ? toString(nextNextChild) : '')
 
       // cut off parentheses and see what's left in front
-      const citationWithoutParens = (formattedCitation || plainCitation)?.replace(/[()]/g, '')
+      const citationWithoutParens = formattedCitation?.replace(/[()]/g, '')
       const possiblePrefix = nextNextChildText
         .replace(/[()]/g, '')
         .trim()
         ?.match(new RegExp(`(.*?)${citationWithoutParens}(.*?)`))
 
-      if (citationWithoutParens.includes('Hedge')) {
-        console.log({
-          possiblePrefix,
-          citationWithoutParens,
-          nextNextChildText,
-          nextChild: nextChild.children,
-          nextNextChild: nextNextChild.children,
-        })
-      }
-
       const maybePrefix = possiblePrefix?.[1]?.trim()
       const maybeSuffix = possiblePrefix?.[2]?.trim()
 
       const actualPrefix =
-        maybePrefix && maybePrefix !== citationWithoutParens ? maybePrefix : prefix
+        maybePrefix && maybePrefix !== citationWithoutParens ? maybePrefix : undefined
       const actualSuffix =
-        maybeSuffix && maybeSuffix !== citationWithoutParens ? maybeSuffix : suffix
+        maybeSuffix && maybeSuffix !== citationWithoutParens ? maybeSuffix : undefined
 
       const args: Argument[] = [
         ...(actualPrefix ? [arg(actualPrefix, { braces: '[]' })] : []),
@@ -164,7 +175,7 @@ export const citation: Handle = (h: H, citationNode: T, parent?: Parent) => {
         arg(citations.join(', ')),
       ]
 
-      return m((formattedCitation ?? plainCitation)?.[0] !== '(' ? 'textcite' : 'parencite', args)
+      return m(formattedCitation.startsWith('(') ? 'textcite' : 'parencite', args)
     }
   }
   // Endnote/Citavi citation

@@ -18,7 +18,7 @@ import {
 } from './types.js'
 import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
 
-import { args, env, m, s } from '@unified-latex/unified-latex-builder'
+import { arg, args, env, m, s } from '@unified-latex/unified-latex-builder'
 
 import { PB } from './util/PB.js'
 
@@ -162,7 +162,7 @@ export function toUnifiedLatex(
           }
         : false,
       simpleParagraph: false,
-      bibliography: options.bibliography || [],
+      bibliography: options.bibliography || vfile?.data?.bibliography || [],
       inDisplayMath: false,
       listNumbering: vfile?.data?.['word/numbering.xml']
         ? findListNumbering(vfile.data['word/numbering.xml'])
@@ -188,7 +188,7 @@ export function toUnifiedLatex(
 
   const result = one(h, tree, undefined)
 
-  if(!h.document){
+  if (!h.document) {
     return result
   }
 
@@ -198,6 +198,7 @@ export function toUnifiedLatex(
 
   unifiedLatex = env('document', result)
 
+  console.log({ bib: h.bibliography })
   const biblatex = h.bibliography
     ? Array.isArray(h.bibliography)
       ? cslToBiblatex(h.bibliography)
@@ -244,7 +245,7 @@ export function toUnifiedLatex(
       PB,
       ...packages,
       ...(typeof preamble === 'string' ? [s(preamble)] : preamble),
-      ...(biblatex ? [env('filecontents', biblatex, 'bibliography.bib')] : []),
+      ...(biblatex ? [env('filecontents', biblatex, arg('bibliography.bib'))] : []),
       PB,
       unifiedLatex,
     ],

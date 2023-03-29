@@ -22,12 +22,12 @@ export const body: Handle = (h: H, body: Body) => {
       return acc
     }
 
-    const isListItem = getPStyle(child) === 'ListParagraph'
+    // const isListItem = getPStyle(child) === 'ListParagraph'
 
-    if (!isListItem) {
-      acc.push(...makeOne(h, child, body))
-      return acc
-    }
+    // if (!isListItem) {
+    //   acc.push(...makeOne(h, child, body))
+    //   return acc
+    // }
 
     const { ilvl, numId } = getListInfo(child) ?? {}
 

@@ -13,8 +13,6 @@ export function r(h: H, node: R, parent?: Parent) {
   const instrText = select('w\\:instrText', node)
   if (instrText) {
     // is citation
-    console.log({ instrText, parent })
-    h.deleteNextRun = true
     return citation(h, instrText, parent)
   }
 

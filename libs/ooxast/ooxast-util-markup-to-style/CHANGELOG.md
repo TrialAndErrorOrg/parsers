@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-markup-to-style-0.0.2...ooxast-util-markup-to-style-0.1.0) (2023-03-29)
+
+
+### Features
+
+* **ooxast-util-markup-to-style:** actually traverse trees lmao ([954233a](https://github.com/TrialAndErrorOrg/parsers/commit/954233a5237c1f2afa0fceabbe923655174698fb))
+
 ## [0.0.2](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-markup-to-style-0.0.1...ooxast-util-markup-to-style-0.0.2) (2023-03-27)
 
 ### Dependency Updates

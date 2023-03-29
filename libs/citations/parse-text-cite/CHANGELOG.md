@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/parse-text-cite-0.1.3...parse-text-cite-0.2.0) (2023-03-29)
+
+
+### Features
+
+* **parse-text-cite:** big improvement, less crashes, and can recognize possessives ([6db3f88](https://github.com/TrialAndErrorOrg/parsers/commit/6db3f882b72455d90f9f805d30057cfdbeab2422))
+
+
+### Bug Fixes
+
+* **parse-text-cite:** allow implicit any ([0c28a2f](https://github.com/TrialAndErrorOrg/parsers/commit/0c28a2ffcdeba6c4776525a29cbb4c7ccfd6582d))
+
 ## [0.1.3](https://github.com/TrialAndErrorOrg/parsers/compare/parse-text-cite-0.1.2...parse-text-cite-0.1.3) (2023-03-14)
 
 ## [0.1.2](https://github.com/TrialAndErrorOrg/parsers/compare/parse-text-cite-0.1.1...parse-text-cite-0.1.2) (2023-03-09)

@@ -5,10 +5,7 @@
 import {lexer} from './lexer'
 
 // TODO: [parser] It's currently extremely slow for large sentences, not good.
-const getFullName = (name: {family:string,
-                            'non-dropping-particle':string
-                           }
-                    ) => `${name?.['non-dropping-particle']
+const getFullName = (name) => `${name?.['non-dropping-particle']
                               ? name?.['non-dropping-particle']+' '
                             :''}${name.family}`
 
@@ -55,6 +52,7 @@ const labelMap: {[key:string]:string}= {
   'paras': 'paragraph',
   "vol": 'volume',
   'app':'appendix',
+  'tab':'table',
 }
 %}
 
@@ -62,7 +60,7 @@ const labelMap: {[key:string]:string}= {
 
 
 
-Input -> InputContent:+ {% (inp: any[])=>{
+Input -> InputContent:+ {% (inp)=>{
                           const [content] = inp
                           return content
                                 .reduce((acc: any[],
@@ -74,8 +72,8 @@ Input -> InputContent:+ {% (inp: any[])=>{
                                   return acc
                                 }
 
-                                if(typeof acc[acc.length-1] ==='string'){
-                                  acc[acc.length-1]+=curr.value
+                                if(typeof acc[acc.length - 1] === 'string'){
+                                  acc[acc.length - 1] += curr.value
                                   return acc
                                 }
 
@@ -91,15 +89,14 @@ InputContent ->
          ParenCite {% id %}
         | NarrCite {% id %}
         | NonCiteContent {% id %}
-        | %Rp NonCiteContent {% n => n.join('') %}
+        | %Rp {% id %}
+		    | %Lp {% id %}
 
 NonCiteContent ->
   %Year {% id %}
  | NonYearParenContent {% id %}
- | %Lp NonYearParenContent:+ %Rp {% ([l,c,r]) => l+c.join('')+r %}
-# | %Lp NonYearParenContent:+  {% ([l,c]) => l+c.join('') %}
-#  |  NonYearParenContent:+ %Rp {% ([c,r]) => c.join('')+r%}
-#  | %Year %Rp {% ([l,c]) => l+c%}
+ | %Lp NonYearParenContent:+ %Rp {% ([l,c,r]) => l + c.join('') + r %}
+
 
 NonYearParenContent ->
    %__ {% id %}
@@ -117,7 +114,7 @@ NonYearParenContent ->
  | %Dash {% id %}
  | %Punct {% id %}
  | %Mc {% id %}
-#  | %DutchPref {% id %}
+ | %DutchPref {% id %}
  | %Cap {% id %}
  | %Lowword {% id %}
  | %NL {% id %}
@@ -129,11 +126,11 @@ NarrCite -> NameList %__ %Lp YearList Loc:? %Rp {% ([name,,,yearlist])=>(
                                                            {
                                                              citationId: 'CITE-X',
                                                               citationItems:
-                                                              yearlist.map((y:string[])=>({
-                                                                  "id":getFullName(name[0])
+                                                                yearlist.map((y)=>({
+                                                                  "id": getFullName(name[0])
                                                                                           .replace(/ /g,'')+y[0],
-                                                                  itemData:{
-                                                                  author: name,
+                                                                  itemData: {
+                                                                  author: name.filter(name=>typeof name === 'object'),
                                                                   issued: {
                                                                     'date-parts': [[y[0]
                                                                                         .replace(/(\d|.-?)[a-z]/,'$1')]]
@@ -145,7 +142,7 @@ NarrCite -> NameList %__ %Lp YearList Loc:? %Rp {% ([name,,,yearlist])=>(
                                                                   }:{})
                                                                   }
                                                               })),
-                                                              properties: {noteIndex: 0,mode: "composite"}
+                                                              properties: {noteIndex: 0, mode: "composite", ...( name.includes("'s") ? {possessive: true} : {}) }
                                                            }
                                                                    )
                                                 %}
@@ -170,10 +167,10 @@ ParenContent ->   SingleParenEntry {% id %}
                                                                 ]
                                                               %}
                 | ParenContent PreAuthsMiddle SingleParenEntry {%
-                                                            ([content, pre,single])=>{
+                                                            ([content, pre, single])=>{
                                                                //const sing = single[0]
                                                                if(pre){
-                                                               single[0].prefix = pre.join('')
+                                                                 single[0].prefix = pre.join('')
                                                                }
                                                                return [
                                                                  ...(content.flat()),
@@ -206,19 +203,14 @@ SingleParenEntry -> PreAuthsPre:* ParenCiteAuthYear Loc:? {%
                                                           }
                                                       %}
 
-# Loc -> %Com %__ GenericContent:+ {% content => {
-#                                                 return content.join('')
-#                                              }
-#                                 %}
+
 
 # Stuff like (someone said something weird; Allegreya, 2021)
 PreAuthsPre ->   GenericContent:+ %Sem %__    {%
-                                                 content=> {
-                                                             return content[0]
-                                                           }
+                                                 content => content[0]?.join('')
                                               %}
-                | GenericContent:+ %Com %__ {% content=> content[0]%}
-                | GenericContent:+ %__ {%content=>content[0]%}
+                | GenericContent:+ %Com %__ {% content => content[0]?.join('') %}
+                | GenericContent:+ %__ {%content => content[0]?.join('') %}
 
 # Things like (...; see also Gooden, 2021; Kant, 1800)
 # Extremely inefficient
@@ -262,19 +254,24 @@ LocContent ->
                                                             }
                                                    }
                                 %}
-              | LocGenericContent:+ {% ([loc]) => ({locator: loc.join(''),label:'none'}) %}
+              | LocGenericContent:+ {% ([loc]) => {
+                            const [maybeLabel, ...locator] = loc?.join('')?.split(' ')
+                            const labelMaybe = maybeLabel.trim()?.toLowerCase()?.replace(/\./g,'')
+                            if(!labelMaybe || (!labelMap[labelMaybe] && !locators.includes(labelMaybe))){
+                                return {locator: loc.join(''),label:'none'}
+                            }
+                            
+                            return {label: labelMap[labelMaybe] || labelMaybe, locator: locator?.join('') || loc.join('') }
+                          }
+		                    %}
 
 LocGenericContent -> GenericContent {% content => content %}
                     | %Cap %Lowword LocGenericContent {% ([cap,low,rest])=> [cap+low+rest.join('')] %}
                     | %Cap %Lowword {% ([cap,low])=> [cap+low] %}
-# %Loc %__:? GenericContent:+ {% ([loc,,cont]) => {
-#                                                                   const locator = cont.join('').trim()
-#                                                                   if(loc.value.includes('p.')){
-#                                                                     return {locator: locator, label: 'page'}
-#                                                                   }
-#                                                                   return {locator: locator,label:loc.value}
-#                                                                 }
-#                                              %}
+                    # Needs to be here otherwise things like p. 1604 do not get picked up
+                    # Kind of dangerous tho, could lead to very large search times
+                    | LocGenericContent Year {% ([content, year]) => `${content}${year}` %}
+
 
 GenericContent ->   %Lowword                                 {% id %}
                   | %Cap %Cap:+                              {% ([cap,caps]) => cap+caps.join('') %}
@@ -286,27 +283,21 @@ GenericContent ->   %Lowword                                 {% id %}
                   | %Dot                                     {% id %}
                   | %Dash                                    {% id %}
                   | %Com {% id %}
+                  | %Quote                                   {% id %}
                   | %__                                      {% id %}
+        				  # I don't put "Comp" here because hard
+				          | "and"                                     {% id %}
                #   | %Misc {% id %}
 
 
-# ParenCiteMulti-> %Lp NameList %Com %__ %YearList %Rp {% ([,name,,,,nametwo,,,year]) => (
-#                                                               {
-#                                                                citationId:"CITE-X",
-#                                                                citationItems: [{
-#                                                                   "id":getFullName(name).replace(/ /g,'')+year
-#                                                                }],
-#                                                                properties: {"noteIndex":0}
-#                                                               }
-#                                                             )
-#                                       %}
+
 
 ParenCiteAuthYear ->  ParenNameMaybeList
                       %Com
                       %__
                       YearList  {% (content) => {
                                                   const [name,,,yearlist] = content
-                                                  return yearlist.map((y:string[])=>({
+                                                  return yearlist.map((y)=>({
                                                       "id":getFullName(name[0]).replace(/ /g,'')+y[0],
                                                       itemData:{
                                                       author: name,
@@ -329,33 +320,21 @@ YearList ->   Year {% year=>year %}
                                                               return [...list,year]
                                                            }
                                                            %}
-# YearList ->   Year {% (y)=>(y) %}
 
-#             | YearList %Com %__ Year {% ([[list],,,year])=> {
-#                                                               const yl=[list.flat(),year]
-#                                                               return yl
-#                                                            }
-#                                       %}
-#             | YearList %Com %__ YearList {% ([[list],,,year])=> {
-#                                                               const yl=[list.flat(),...year]
-#                                                               return yl
-#                                                            }
-#                                       %}
-
-#NameList -> NameListOne:+ Etal:? {% ([namelist,etal])=>namelist[0] %}
 
 
 NameList ->   Name                                           {% name=>name %}
-            | NameList %Com %__ Name                         {% ([name,,,n])=>([name,n].flat()) %}
-            | NameList %Com %__ NameList                     {% ([name,,,n])=>([name,n].flat()) %}
+            | Name %Com %__ Name %Com %__ Name %Com:? %__ Comp %__ NameList {% ([name,,,nametwo,,,namethree,,,,,namefour])=>([name,nametwo,namethree,namefour].flat()) %}
+            | Name %Com %__ Name %Com:? %__ Comp %__ NameList {% ([name,,,n,,,,,nn])=>([name,n,nn].flat()) %}
             | NameList %Com %__ Comp %__ NameList            {% ([name,,,,,n])=>([name,n].flat()) %}
             | NameList %Com %__ Comp %__                     {% ([name,,,,])=>([name].flat()) %}
-            | NameList %__ Comp %__ NameList                 {% ([name,_,and,__,n])=>([name,n].flat()) %}
-            | NameList %__ Comp %__ Name                     {% ([name,_,and,__,n])=>([name,n].flat()) %}
+            | NameList Comp %__ NameList                    {% ([name,,,,])=>([name].flat()) %}
+            | NameList %__ Comp %__ Name                     {% ([name,_,and,,n])=>([name,n].flat()) %}
             | NameList %__ Comp %__                          {% ([name])=>([name].flat()) %}
             | NameList %Com %__ Etal                         {% ([name])=>([name].flat()) %}
             | NameList Etal                                  {% ([name])=>([name].flat()) %}
-
+       			| NameList %Apo "s"                              {% ([name])=>([name, "'s"].flat()) %}
+   
 ParenNameMaybeList ->  ParenNameMaybe                                  {% name=>name %}
                      | ParenNameMaybeList %Com %__ Name                {% ([name,,,n])=>([name,n].flat()) %}
                      | ParenNameMaybeList %Com %__ NameList            {% ([name,,,n])=>([name,n].flat()) %}
@@ -403,7 +382,6 @@ Initials ->   Initial
 
 Initial -> %Cap %Dot {% id %}
 
-#             | SpanishName
 
 # Spanish names are by far the most difficult to parse, because there's really know way to  correctly get the last names from
 # "Bautista Perpinya (2020) said", "Since Locke (1996) said...", and "John Johnson (2999) said" to be
@@ -451,43 +429,3 @@ Year ->  %Year {% ([year]) => ([`${year}`.replace(/\./g,'').toUpperCase()]) %}
        | %Number:+ %__:* %BCE {% ([num,,rest])=> ([`${/b\.?c\.?/i.test(rest) ? '-' : ''}${num}`]) %}
        | %Ca %__ Year {% ([ca,,year])=> ([`${year}`]) %}
 
-# Year -> Digit Digit Digit Digit {% (year)=>year.join('') %}
-#         | "n" "." "d"
-
-# Digit -> [0-9] {% id %}
-
-# Lower -> [a-z] {% id %}
-
-# Cap -> [A-Z] {% id %}
-
-# Hyphen -> [\-]{% id %}
-
-# Apo -> ['’]{% id %}
-
-# Etal -> "et al" Dot:? # Sometimes authors are just bad
-
-# Conj ->  And
-#        | Amp
-
-# Rp -> ")"{% id %}
-
-# Lp -> "("{% id %}
-
-# And -> "and"{% id %}
-
-# Amp -> [&]{% id %}
-
-# Dot -> "."{% id %}
-
-# Com -> ","{% id %}
-
-# Sem -> ";"{% id %}
-
-# SentEnd -> [?!]{% id %}
-#           | Dot {% id %}
-
-# Misc -> [\[\]{}<>] {% id %}
-
-# _ -> [ \t]:* {% id %} # Optional Whitespace
-
-# __ -> [ \t]:+ {% id %}# Mandatory Whitespace

@@ -34,10 +34,6 @@ export const parser = new nearley.Parser(nearley.Grammar.fromCompiled(grammar))
 export const parseTextCite = (string: string, options?: Options) => {
   const parser = new nearley.Parser(nearley.Grammar.fromCompiled(grammar))
 
-  const splitCites = string
-    .split(')')
-    .map((c: string, idx, arr) => `${c}${arr.length > 1 && idx === arr.length - 1 ? '' : ')'}`)
-
   try {
     parser.feed(string)
   } catch (err) {
@@ -49,7 +45,11 @@ export const parseTextCite = (string: string, options?: Options) => {
     }
   }
 
-  const results = parser.results
+  const results = parser.results as unknown[][]
+
+  if (string.includes('Whitaker')) {
+    console.log({ results })
+  }
 
   if (!results) {
     return [string]
@@ -59,7 +59,27 @@ export const parseTextCite = (string: string, options?: Options) => {
     return results
   }
 
-  const narrowResults = results?.[0]
+  // find the item that has the smallest total length of strings
+  let narrowResults = results[0]
+  for (let i = 0; i < results.length; i++) {
+    let accLength = 0
+    for (let j = 0; j < results[i].length; j++) {
+      const curr = results[i][j]
+      if (typeof curr === 'string') {
+        accLength += curr.length
+      }
+    }
+    let currLength = 0
+    for (let j = 0; j < narrowResults.length; j++) {
+      const curr = narrowResults[j]
+      if (typeof curr === 'string') {
+        currLength += curr.length
+      }
+    }
+    if (currLength > accLength) {
+      narrowResults = results[i]
+    }
+  }
 
   if (!narrowResults) {
     return [string]
@@ -67,7 +87,7 @@ export const parseTextCite = (string: string, options?: Options) => {
 
   // I'm too bad at parsing and I want the original value of the thing
 
-  return recoverOriginalCitation(narrowResults, string)
+  return recoverOriginalCitation(narrowResults as (Citation | string)[], string)
 }
 
 function recoverOriginalCitation(cite: (string | Citation)[], ogText: string) {

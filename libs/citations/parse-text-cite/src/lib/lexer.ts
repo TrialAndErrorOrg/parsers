@@ -1,5 +1,4 @@
 import moo from 'moo'
-console.log(moo)
 export const lexer = moo.compile({
   // eslint-disable-next-line
   __: /[ \t ]+/u,
@@ -18,7 +17,7 @@ export const lexer = moo.compile({
   Amp: '&',
   And: /\band\b/u,
   Ca: ['ca.'],
-  Quote: /["'](?:\\['"\\]|[^\n"'\\])*["']/u,
+  Quote: /["'“”‘’](?:\\['"“”‘’\\]|[^\n"'“”‘’\\])*["'“”‘’]/u,
   Apo: /['’]/u,
   Slash: '/',
   Dash: /[—−–-]/u,

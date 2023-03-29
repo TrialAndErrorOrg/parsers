@@ -9,7 +9,6 @@ export default function reoffReoffParseReferences(options: Options) {
     await bib
     vfile.data.bibliography = bib
 
-    console.log(bib)
     return tree
   }
 }

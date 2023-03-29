@@ -62,7 +62,7 @@ export function findCitations(tree: Node, vfile?: VFile, options?: Options): Roo
       const instr = select('w\\:instrText', kid)
 
       // Check if this is a Mendeley/Zotero citation, because if so we should not try to parse it ourselves
-      if (instr && isInstrT(instr) && instr?.children[0]?.value?.includes('CSL_CITATION')) {
+      if (instr && isInstrT(instr) && toString(instr).includes('CSL_CITATION')) {
         skipNext = true
         runs.push(kid)
         continue
@@ -76,13 +76,17 @@ export function findCitations(tree: Node, vfile?: VFile, options?: Options): Roo
         continue
       }
 
-      const text = unistSelect('text', t) as Text
-      if (!text?.value) {
-        runs.push(kid)
+      const text = toString(t)
+
+      /**
+       * We dont care about empty runs
+       */
+      if (text === '') {
         continue
       }
 
-      if (text.value === '') {
+      if (!text) {
+        runs.push(kid)
         continue
       }
 
@@ -92,12 +96,13 @@ export function findCitations(tree: Node, vfile?: VFile, options?: Options): Roo
         continue
       }
 
-      const sentences = text.value.split(/(?<=[.?!])\s+(?=[A-Z])/)
+      const sentences = text.split(/(?<=[.?!])\s+(?=[A-Z])/)
       // re-add the spaces that were removed by the split
       const sentencesWithSpaces = sentences.map((s, i) => {
         if (i === sentences.length - 1) return s
         return `${s} `
       })
+      // const sentencesWithSpaces = [text]
 
       const rpr = select('w\\:rPr', kid)
       for (const sentence of sentencesWithSpaces) {

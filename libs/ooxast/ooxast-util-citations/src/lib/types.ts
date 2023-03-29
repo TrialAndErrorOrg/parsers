@@ -33,6 +33,8 @@ export interface ZoteroCitation {
 
 export interface ZoteroProperties {
   noteIndex: number
+  mode?: string
+  possessive?: true
   formattedCitation: string
   plainCitation: string
 }

@@ -6,9 +6,17 @@ import { Data as CSL } from 'csl-json'
 export function findRef(citeItem: CitationItem, bibliography: CSL[]): CitationItem {
   // we'll take it if it has 90% match with the author and the year, except if there are multiple thiingies
   const cite = citeItem.itemData
+  if (citeItem.id === 'Bail2022') {
+    console.log({ citeItem: JSON.parse(JSON.stringify(citeItem)) })
+  }
+
   const gottemInOne = bibliography.find(
     (bib) => bib.id && (bib.id === cite.id || bib.id === citeItem.id),
   )
+
+  if (citeItem.id === 'Bail2022') {
+    console.log({ gottemInOne })
+  }
   // console.dir(citeItem, { depth: null })
   // console.dir(gottemInOne, { depth: null })
   if (gottemInOne) {
@@ -16,7 +24,9 @@ export function findRef(citeItem: CitationItem, bibliography: CSL[]): CitationIt
     return citeItem
   }
 
+  // just give up if there's no author or year
   if (!cite.author || !cite.issued) return citeItem
+
   let lastDig = alphaToNum(citeItem.id.slice(-1))
   let theOne: CSL | null = null
 

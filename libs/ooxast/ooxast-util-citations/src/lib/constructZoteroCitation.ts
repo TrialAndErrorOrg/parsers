@@ -10,6 +10,7 @@ export function constructZoteroCitation(
   const schema = 'https://github.com/citation-style-language/schema/raw/master/csl-citation.json'
 
   const properties: ZoteroProperties = {
+    ...curr.properties,
     noteIndex: 0,
     formattedCitation: curr.originalText || '',
     plainCitation: curr.originalText || '',
@@ -35,6 +36,4 @@ export function constructZoteroCitation(
     citationID: curr.citationId,
   }
   return mend
-
-  //const citationItems
 }

@@ -84,6 +84,22 @@ const biblatexCSLMap: {
   },
 }
 
+const mapPersons = (persons: CSL.Person[]) =>
+  persons
+    .map((auth) =>
+      (
+        auth.literal ||
+        `${
+          auth['dropping-particle'] ||
+          auth['non-dropping-particle'] ||
+          // @ts-expect-error - particle is not in the type definition
+          auth['particle'] ||
+          ''
+        } ${auth.family}${auth.given ? `, ${auth.given}` : ''}${auth.suffix || ''}`
+      ).trim(),
+    )
+    ?.join(' and ')
+
 export function cslToBiblatex(csl: CSL[]) {
   const texEntryMap = (key: string, value?: string) => (value ? `${key} = {${value}}` : [])
 
@@ -95,16 +111,10 @@ export function cslToBiblatex(csl: CSL[]) {
 
     const type = (biblatexCSLMap.target )[ref.type] || 'article'
       return [
-        `@${type}{${generateCiteKey(ref.id,index)}`,
-      //  ${ref.author?.[0]?.family && ref.issued?.['date-parts']?.[0]?.[0] ? `${ref.author[0].family}${ref.issued['date-parts'][0][0]}` :ref['citation-key'] || ref.id}`,
+        `@${type}{${generateCiteKey(ref,index)?.replace(/\s/g, '')}`,
   texEntryMap('title      ',ref.title),
-  texEntryMap('author     ',ref.author
-    ?.map(
-      (auth) =>
-        (auth.literal ||
-        `${(auth['dropping-particle'] || auth['non-dropping-particle'] || auth['particle'] || '')} ${auth.family}${auth.given ? `, ${auth.given}` : ''}${auth.suffix || ''}`).trim()
-    )
-    .join(' and ')),
+  texEntryMap('author     ', mapPersons(ref.author || [])),
+  texEntryMap('editor     ', mapPersons(ref.editor || [])),
   texEntryMap('number     ',`${ref.number||ref.issue||''}`),
   texEntryMap('volume     ',`${ref.volume||''}`),
   texEntryMap('url        ',ref.URL),
@@ -126,8 +136,22 @@ export function cslToBiblatex(csl: CSL[]) {
   return bibtex
 }
 
-function generateCiteKey(id?: string, index?: number) {
+function generateCiteKey(ref?: CSL, index?: number) {
+  if (!ref) {
+    return `bib${index ?? 'X'}`
+  }
+
+  const { id, author, issued, editor } = ref
+
   if (!id) {
+    if (author?.[0]?.family) {
+      return `${author[0].family}${issued?.literal || issued?.['date-parts']?.[0]?.[0] || ''}`
+    }
+
+    if (editor?.[0]?.family) {
+      return `${editor[0].family}${issued?.literal || issued?.['date-parts']?.[0]?.[0] || ''}`
+    }
+
     return `bib${index}`
   }
   if (!id.match(/\d/)) {

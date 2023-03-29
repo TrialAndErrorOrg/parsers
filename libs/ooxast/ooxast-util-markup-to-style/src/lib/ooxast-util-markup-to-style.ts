@@ -1,5 +1,5 @@
 import { P, PPr, R, RPr, RPrMap, Root, StringTag, Style } from 'ooxast'
-import { visit, SKIP } from 'unist-util-visit'
+import { visit, SKIP, CONTINUE } from 'unist-util-visit'
 import { convertElement, isElement } from 'xast-util-is-element'
 import { RPrJSON, getRStyle } from 'ooxast-util-get-style'
 import { select, selectAll } from 'xast-util-select'
@@ -96,9 +96,10 @@ export function markupToStyle<I extends Root | P = Root>(
   // visit all paragraphs
   // check if the conditions set in options are met
   // if so, add the style to the paragraph
+
   visit(tree as any, (node) => {
     if (!convertElement<P>('w:p')(node)) {
-      return SKIP
+      return CONTINUE
     }
 
     let style: string | undefined = undefined

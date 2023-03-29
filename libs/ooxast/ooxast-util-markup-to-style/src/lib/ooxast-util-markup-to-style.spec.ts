@@ -1,12 +1,12 @@
 import { describe, it, expect } from 'vitest'
 import { markupToStyle } from './ooxast-util-markup-to-style.js'
 import { x } from 'xastscript'
-import { P, R, RPr, RPrMap, T } from 'ooxast'
+import { P, PPr, R, RPr, RPrMap, T } from 'ooxast'
 import { Element } from 'xast'
 
 const makeP = (els: (keyof RPrMap | (keyof RPrMap)[] | Element)[]) =>
   x('w:p', [
-    x('w:pPr'),
+    x('w:pPr', [x('w:pStyle', { 'w:val': 'Normal' })]),
     ...els.flatMap((el) =>
       Array.isArray(el) || typeof el === 'string'
         ? (x('w:r', [
@@ -131,6 +131,24 @@ describe('ooxast-util-markup-to-style', () => {
       },
     ])
     expect(result).toEqual(p)
+  })
+
+  it('should overwrite any existing styles', () => {
+    const p = makeP(['b'])
+    const result = markupToStyle(p, [
+      {
+        markup: 'w:b',
+        style: 'Heading 1',
+      },
+    ])
+    console.dir(result, { depth: null })
+    expect(result).toEqual(
+      x('w:p', [
+        x('w:pPr', [x('w:pStyle', { 'w:val': 'Heading 1' })]),
+
+        x('w:r', [x('w:rPr', [x('w:b')]), x('w:t', 'Some text with b styling')]),
+      ]),
+    )
   })
 
   it.todo('should work in a realistic enviroment')

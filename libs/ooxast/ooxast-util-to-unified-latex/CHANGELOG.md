@@ -2,6 +2,35 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-to-unified-latex-0.1.0...ooxast-util-to-unified-latex-0.2.0) (2023-03-29)
+
+### Dependency Updates
+
+* `csl-to-biblatex` updated to version `0.2.0`
+* `ooxast` updated to version `0.1.3`
+* `ooxast-util-citations` updated to version `0.1.2`
+* `xast-util-is-element` updated to version `0.1.4`
+* `xast-util-select` updated to version `0.1.2`
+* `reoff-parse` updated to version `0.2.7`
+* `docx-to-vfile` updated to version `0.6.1`
+* `reoff-clean` updated to version `0.1.1`
+* `reoff-cite` updated to version `0.1.2`
+* `reoff-parse-references` updated to version `0.1.2`
+* `unified-latex-stringify` updated to version `0.1.2`
+
+### Features
+
+* **ooxast-util-to-unified-latex:** add better list parsing ([3441a02](https://github.com/TrialAndErrorOrg/parsers/commit/3441a026a313d6d00eb3693da55a9f947ed10fc8))
+* **ooxast-util-to-unified-latex:** improve citation output ([5b4fe11](https://github.com/TrialAndErrorOrg/parsers/commit/5b4fe11bdf9b8a5e07a72da40f03bd6a05e02e48))
+* **ooxast-util-to-unified-latex:** improve citation output ([f2a5f2c](https://github.com/TrialAndErrorOrg/parsers/commit/f2a5f2c70c8c3ac33a89c1cbe9e2b0bcaf738a77))
+
+
+### Bug Fixes
+
+* **ooxast-util-to-unified-latex:** fix list rendering ([c423e1b](https://github.com/TrialAndErrorOrg/parsers/commit/c423e1b06e5d7e8a4181c3b70587f62845431252))
+* **ooxast-util-to-unified-latex:** remove 'bare' option for now ([5745e16](https://github.com/TrialAndErrorOrg/parsers/commit/5745e1634f4259ede8ed42489fc51f99cdb72c9e))
+* **ooxast-util-to-unified-latex:** set vfile types ([848e72a](https://github.com/TrialAndErrorOrg/parsers/commit/848e72aa5c618455fb8e9fab4f3c1149d7f938a4))
+
 ## 0.1.0 (2023-03-09)
 
 ### Dependency Updates

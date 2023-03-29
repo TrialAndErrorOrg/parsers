@@ -188,9 +188,9 @@ export function toUnifiedLatex(
 
   const result = one(h, tree, undefined)
 
-  if (!h.document) {
-    return result
-  }
+  // if (!h.document) {
+  //   return result
+  // }
 
   if (!result) {
     return { type: 'root', content: [] } as UnifiedLatexRoot

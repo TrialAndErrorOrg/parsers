@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.1](https://github.com/TrialAndErrorOrg/parsers/compare/parse-text-cite-0.2.0...parse-text-cite-0.2.1) (2023-03-29)
+
+
+### Bug Fixes
+
+* **parse-text-cite:** fix output types ([5162696](https://github.com/TrialAndErrorOrg/parsers/commit/516269614c5a0be853f262af371409f3b6ab1bd8))
+
 ## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/parse-text-cite-0.1.3...parse-text-cite-0.2.0) (2023-03-29)
 
 

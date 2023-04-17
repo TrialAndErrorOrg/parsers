@@ -411,6 +411,8 @@ McConnel -> %Mc BoringNameMaybe {% (name) =>({family:name.join('')}) %}
 
 # Eg James, fuck you Jimmy
 BoringNameMaybe -> %Cap %Lowword:*  {% ([cap, rest]) =>( `${cap}${rest.join('')}`) %}
+                 | %Cap %Lowword:+ %Cap %Lowword:* {% ([cap, low, capp, loww]) =>( `${cap}${low.join('')}${capp}${loww.join('')}`) %}
+
 
 # Just a regular word. I've decided that these cant be names, sorry bell hooks
 BoringWord -> %Low:+  {% (word) =>(word.join('')) %}

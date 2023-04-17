@@ -34,10 +34,7 @@ declare var BCE: any;
 import {lexer} from './lexer'
 
 // TODO: [parser] It's currently extremely slow for large sentences, not good.
-const getFullName = (name: {family:string,
-                            'non-dropping-particle':string
-                           }
-                    ) => `${name?.['non-dropping-particle']
+const getFullName = (name) => `${name?.['non-dropping-particle']
                               ? name?.['non-dropping-particle']+' '
                             :''}${name.family}`
 
@@ -84,6 +81,7 @@ const labelMap: {[key:string]:string}= {
   'paras': 'paragraph',
   "vol": 'volume',
   'app':'appendix',
+  'tab':'table',
 }
 
 interface NearleyToken {
@@ -429,6 +427,11 @@ const grammar: Grammar = {
     {"name": "BoringNameMaybe$ebnf$1", "symbols": []},
     {"name": "BoringNameMaybe$ebnf$1", "symbols": ["BoringNameMaybe$ebnf$1", (lexer.has("Lowword") ? {type: "Lowword"} : Lowword)], "postprocess": (d) => d[0].concat([d[1]])},
     {"name": "BoringNameMaybe", "symbols": [(lexer.has("Cap") ? {type: "Cap"} : Cap), "BoringNameMaybe$ebnf$1"], "postprocess": ([cap, rest]) =>( `${cap}${rest.join('')}`)},
+    {"name": "BoringNameMaybe$ebnf$2", "symbols": [(lexer.has("Lowword") ? {type: "Lowword"} : Lowword)]},
+    {"name": "BoringNameMaybe$ebnf$2", "symbols": ["BoringNameMaybe$ebnf$2", (lexer.has("Lowword") ? {type: "Lowword"} : Lowword)], "postprocess": (d) => d[0].concat([d[1]])},
+    {"name": "BoringNameMaybe$ebnf$3", "symbols": []},
+    {"name": "BoringNameMaybe$ebnf$3", "symbols": ["BoringNameMaybe$ebnf$3", (lexer.has("Lowword") ? {type: "Lowword"} : Lowword)], "postprocess": (d) => d[0].concat([d[1]])},
+    {"name": "BoringNameMaybe", "symbols": [(lexer.has("Cap") ? {type: "Cap"} : Cap), "BoringNameMaybe$ebnf$2", (lexer.has("Cap") ? {type: "Cap"} : Cap), "BoringNameMaybe$ebnf$3"], "postprocess": ([cap, low, capp, loww]) =>( `${cap}${low.join('')}${capp}${loww.join('')}`)},
     {"name": "BoringWord$ebnf$1", "symbols": [(lexer.has("Low") ? {type: "Low"} : Low)]},
     {"name": "BoringWord$ebnf$1", "symbols": ["BoringWord$ebnf$1", (lexer.has("Low") ? {type: "Low"} : Low)], "postprocess": (d) => d[0].concat([d[1]])},
     {"name": "BoringWord", "symbols": ["BoringWord$ebnf$1"], "postprocess": (word) =>(word.join(''))},

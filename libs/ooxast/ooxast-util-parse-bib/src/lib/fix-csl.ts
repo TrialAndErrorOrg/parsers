@@ -57,7 +57,9 @@ export function fixCSLGiven(cslWId: CSL) {
       return a
     }
 
-    const splitGiven = a.given.replace(/([A-Z])\.([A-Z])/g, '$1. $2')
+    const splitGiven = a.given
+      .replace(/([A-Z])\.([A-Z])/g, '$1. $2')
+      .replace(/([A-Z])\.([A-Z])/g, '$1. $2')
 
     return {
       ...a,

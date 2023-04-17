@@ -73,18 +73,18 @@ Defined in:  [lib/ooxast-util-get-pstyle.ts:4](https://github.com/TrialAndErrorO
 #### Signature
 
 ```ts
-getRStyle(r: R): RPrJSON;
+getRStyle(r: P | R): RPrJSON | undefined;
 ```
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
-| `r` | `R` |
+| `r` | `P` | `R` |
 
 #### Returns
 
-[`RPrJSON`](modules.md#rprjson)
+[`RPrJSON`](modules.md#rprjson) | `undefined`
 
 Defined in:  [lib/ooxast-util-get-rstyle.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-get-style/src/lib/ooxast-util-get-rstyle.ts#L16)
 
@@ -100,8 +100,8 @@ Defined in:  [lib/ooxast-util-get-rstyle.ts:6](https://github.com/TrialAndErrorO
 
 ### `RPrJSON`
 
-> [`RPrAttributes`](modules.md#rprattributes) *extends* keyof `RPrMap` ? `Partial`<`Record`<`w:${RPrAttributes}`, `RPrMap`[[`RPrAttributes`](modules.md#rprattributes)] | {
-> `w:val`?: `boolean`;
+> [`RPrAttributes`](modules.md#rprattributes) *extends* keyof `RPrMap` ? `Partial`<`Record`<`w:${RPrAttributes}`, `NonNullable`<`RPrMap`[[`RPrAttributes`](modules.md#rprattributes)]>[`number`][`"attributes"`] | {
+> `w:val`?: `string`;
 > }>> : `never`
 
 Defined in:  [lib/ooxast-util-get-rstyle.ts:7](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-get-style/src/lib/ooxast-util-get-rstyle.ts#L7)

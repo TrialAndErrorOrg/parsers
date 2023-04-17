@@ -15,12 +15,7 @@ describe('reoffDocxToVfile', () => {
     fs.writeFileSync(url, String(vfile))
     expect(vfile).toMatchSnapshot()
   })
-  it('should contain vfile with relations data object', async () => {
-    const vfile = await docxToVFile(doc)
-    const url = new URL('../fixtures/testrelations.xml', import.meta.url)
-    fs.writeFileSync(url, String(vfile))
-    expect(vfile.data.relations).toBeDefined()
-  })
+
   it('should contain images', async () => {
     const vfile = await docxToVFile(docimg)
     const url = new URL('../fixtures/testimages.xml', import.meta.url)

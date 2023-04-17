@@ -1,7 +1,6 @@
-import { Data, VFile } from 'vfile'
+import { VFile } from 'vfile'
 import { unzip } from 'unzipit'
-
-const removeHeader = (text: string | undefined) => (text ? text.replace(/<\?xml.*?\?>/, '') : '')
+import { Root } from 'xast'
 
 const removeCarriage = (text: string | undefined) => (text ? text.replace(/\r/g, '') : '')
 
@@ -38,54 +37,49 @@ export interface OptionsWithFetchConfig extends Options {
 }
 
 /**
- * The data attribute of a VFile
- * Is set to the DataMap interface in the vfile module
- **/
-export interface DocxData extends Data {
+ * The data attribute of the VFile will contain the following:
+ */
+export interface DocxVFileData {
   /**
    * The textcontent of .xml files in the .docx file
    */
   [key: XMLOrRelsString]: string | undefined
   /**
    * The media files in the .docx file
+   * Possibly undefined only to be compatible with the VFile interface
+   *
+   * @since 0.5.0 - Added media, removed images
    */
   media: { [key: string]: Blob }
   /**
    * The relations between the .xml files in the .docx file
+   * Possibly undefined only to be compatible with the VFile interface
+   *
+   * @since 0.7.0 - Added relations.footnotes and relations.endnotes. `relations.document` is now an alias for `relations`. This now gets added by `reoff-parse`.
+   *
    */
-  relations: { [key: string]: string }
-}
+  relations?: {
+    document: { [key: string]: string }
+    footnotes?: { [key: string]: string }
+    endnotes?: { [key: string]: string }
+  }
 
-declare module 'vfile' {
-  interface DataMap {
-    /**
-     * The textcontent of .xml files in the .docx file
-     */
-    [key: XMLOrRelsString]: string | undefined
-    /**
-     * The media files in the .docx file
-     * Possibly undefined only to be compatible with the VFile interface
-     */
-    media: { [key: string]: Blob }
-    /**
-     * The relations between the .xml files in the .docx file
-     * Possibly undefined only to be compatible with the VFile interface
-     */
-    relations: { [key: string]: string }
+  /**
+   * The parsed .xml files in the .docx file
+   *
+   * Usually added by `reoff-parse`
+   */
+  parsed?: {
+    [key: XMLOrRelsString]: Root | undefined
   }
 }
 
-export type XMLOrRelsString = `${string}.xml` | `${string}.rels`
-
-/**
- * Extends VFile with a custom data attribute
- *
- * This information should be on the VFile interface, this is just used in contexts where you only want to know the type of the data attribute,
- * e.g. when writing a library that does something with the output of `docxToVFile`.
- */
-export interface DocxVFile extends VFile {
-  data: DocxData
+declare module 'vfile' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface DataMap extends DocxVFileData {}
 }
+
+export type XMLOrRelsString = `${string}.xml` | `${string}.rels`
 
 /**
  * Takes a docx file as a Blob or File and returns a VFile with the contents of the document.xml file as the root, and the contents of the other xml files as data.
@@ -100,10 +94,12 @@ export async function docxToVFile(
 ): Promise<VFile> {
   let input = file
 
+  let path: string | undefined
   // node code
   if (typeof window === 'undefined') {
     const { readFile } = await import('fs/promises')
     const inp = typeof file === 'string' ? await readFile(file) : file
+    path = typeof file === 'string' ? file : undefined
 
     input = Buffer.isBuffer(inp) ? new Blob([inp]) : file
   }
@@ -115,11 +111,6 @@ export async function docxToVFile(
   }
 
   const { entries } = await unzip(input)
-  const rels = await entries['word/_rels/document.xml.rels'].text()
-  const relations = Object.fromEntries(
-    // eslint-disable-next-line regexp/no-super-linear-backtracking
-    [...rels.matchAll(/Id="(.*?)".*?Target="(.*?)"/g)].map((match) => [match[1], match[2]]),
-  )
 
   const doc = await entries['word/document.xml'].text()
 
@@ -130,12 +121,15 @@ export async function docxToVFile(
         if (options.include === 'all') {
           return key !== 'word/document.xml'
         }
+
         if (options.include === 'allWithDocumentXML') {
           return true
         }
+
         if (typeof options.include === 'function') {
           return options.include(key)
         }
+
         if (Array.isArray(options.include)) {
           return options.include.some((include) => {
             if (typeof include === 'string') {
@@ -149,28 +143,25 @@ export async function docxToVFile(
         }
         return false
       })
-      .map(async ([key, value]) => [key, removeCarriage(await value.text())]),
+      .map(async ([key, value]) => [key, removeCarriage(await value.text())] as const),
   )
 
-  const textEntriesObject = Object.fromEntries(textEntriesObjectEntries)
+  const textEntriesObject = Object.fromEntries<string>(textEntriesObjectEntries)
 
-  // const vfile = new VFile(removeCarriage(doc))
-
-  const vfileData: DocxData = textEntriesObject
-  vfileData.relations = relations
+  const vfileData = textEntriesObject as VFile['data']
   vfileData.media = {} as { [key: string]: Blob }
 
-  // vfile.data = vfileData
-
   if (options.withoutMedia) {
-    return new VFile({ value: removeCarriage(doc), data: vfileData })
+    return new VFile({ value: removeCarriage(doc), data: vfileData, path, extname: '.docx' })
   }
 
-  const mediaUrls = Object.values(relations).filter((rel: string) => rel.includes('media/'))
-  const media = {} as { [key: string]: Blob }
-  for (const url of mediaUrls) {
-    media[url] = await entries[`word/${url}`].blob()
-  }
+  const mediaEntries = Object.entries(entries).filter(([key]) => /word\/media/.test(key))
+
+  const media = Object.fromEntries<Blob>(
+    await Promise.all(mediaEntries.map(async ([key, value]) => [key, await value.blob()] as const)),
+  )
+
   vfileData.media = media
+
   return new VFile({ value: removeCarriage(doc), data: vfileData })
 }

@@ -105,22 +105,32 @@ export function markupToStyle<I extends Root | P = Root>(
     let style: string | undefined = undefined
 
     for (const option of options) {
+      // stop at the first style that matches
       if (style) {
         break
       }
 
-      const rs = selectAll('w\\:r', node)
+      const rs = selectAll('w\\:r', node) as R[]
       if (!rs.length) {
-        continue
+        break
+      }
+
+      const rsWithoutPunctuation =
+        option.ignorePunctuation !== false ? rs.filter((r) => !isPunctuation(r)) : rs
+
+      if (!rsWithoutPunctuation.length) {
+        break
       }
 
       const shouldStyle =
         option.matchFull === false
-          ? rs.some((r) => shouldApplyStyle(r, { ...option, ignorePunctuation: false }))
-          : rs.every((r) => shouldApplyStyle(r, option))
+          ? rsWithoutPunctuation.some((r) =>
+              shouldApplyStyle(r, { ...option, ignorePunctuation: false }),
+            )
+          : rsWithoutPunctuation.every((r) => shouldApplyStyle(r, option))
 
       if (!shouldStyle) {
-        break
+        continue
       }
 
       style = option.style
@@ -157,9 +167,9 @@ function shouldApplyStyle(r: Element, option: Options[number]) {
     return false
   }
 
-  if (option.ignorePunctuation !== false && isPunctuation(r)) {
-    return true
-  }
+  // if (option.ignorePunctuation !== false && isPunctuation(r)) {
+  //   return true
+  // }
 
   const rPrJson = getRStyle(r)
 

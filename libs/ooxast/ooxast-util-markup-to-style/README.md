@@ -2,6 +2,7 @@
 > This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
 
 # ooxast-util-markup-to-style
+[![npm version](https://badge.fury.io/js/ooxast-util-markup-to-style.svg)](https://badge.fury.io/js/ooxast-util-markup-to-style) [![npm downloads](https://img.shields.io/npm/dm/ooxast-util-markup-to-style.svg)](https://www.npmjs.com/package/ooxast-util-markup-to-style)
 
 Find certain markup in an ooxast tree and turn it into styles.
 
@@ -117,8 +118,82 @@ Defined in:  [ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts
 
 ##### `markup`
 
-> `"w:rPrChange"` | `"w:bdr"` | `"w:color"` | `"w:eastAsianLayout"` | `"w:em"` | `"w:fitText"` | `"w:rFonts"` | `"w:highlight"` | `"w:lang"` | `"w:shd"` | `"w:position"` | `"w:spacing"` | `"w:effect"` | `"w:w"` | `"w:u"` | `"w:vertAlign"` | `"w:shadow"` | `"w:sz"` | `"w:snapToGrid"` | `"w:cs"` | `"w:oMath"` | `"w:b"` | `"w:i"` | `"w:rtl"` | `"w:bCs"` | `"w:caps"` | `"w:dstrike"` | `"w:emboss"` | `"w:iCs"` | `"w:imprint"` | `"w:kern"` | `"w:noProof"` | `"w:outline"` | `"w:rStyle"` | `"w:smallCaps"` | `"w:specVanish"` | `"w:strike"` | `"w:szCs"` | `"w:vanish"` | `"w:webHidden"` | (`"w:rPrChange"` | `"w:bdr"` | `"w:color"` | `"w:eastAsianLayout"` | `"w:em"` | `"w:fitText"` | `"w:rFonts"` | `"w:highlight"` | `"w:lang"` | `"w:shd"` | `"w:position"` | `"w:spacing"` | `"w:effect"` | `"w:w"` | `"w:u"` | `"w:vertAlign"` | `"w:shadow"` | `"w:sz"` | `"w:snapToGrid"` | `"w:cs"` | `"w:oMath"` | `"w:b"` | `"w:i"` | `"w:rtl"` | `"w:bCs"` | `"w:caps"` | `"w:dstrike"` | `"w:emboss"` | `"w:iCs"` | `"w:imprint"` | `"w:kern"` | `"w:noProof"` | `"w:outline"` | `"w:rStyle"` | `"w:smallCaps"` | `"w:specVanish"` | `"w:strike"` | `"w:szCs"` | `"w:vanish"` | `"w:webHidden"`)[] | (`rPr`: `Partial`<`Record`<`"w:rPrChange"` | `"w:bdr"` | `"w:color"` | `"w:eastAsianLayout"` | `"w:em"` | `"w:fitText"` | `"w:rFonts"` | `"w:highlight"` | `"w:lang"` | `"w:shd"` | `"w:position"` | `"w:spacing"` | `"w:effect"` | `"w:w"` | `"w:u"` | `"w:vertAlign"` | `"w:shadow"` | `"w:sz"` | `"w:snapToGrid"` | `"w:cs"` | `"w:oMath"` | `"w:b"` | `"w:i"` | `"w:rtl"` | `"w:bCs"` | `"w:caps"` | `"w:dstrike"` | `"w:emboss"` | `"w:iCs"` | `"w:imprint"` | `"w:kern"` | `"w:noProof"` | `"w:outline"` | `"w:rStyle"` | `"w:smallCaps"` | `"w:specVanish"` | `"w:strike"` | `"w:szCs"` | `"w:vanish"` | `"w:webHidden"`, `undefined` | `never` | `Border`[] | `OnOff`<`"oMath"`>[] | `OnOff`<`"b"`>[] | `OnOff`<`"i"`>[] | `TextEffect`[] | `OnOff`<`"cs"`>[] | `Highlight`[] | `OnOff`<`"rtl"`>[] | `HpsMeasure`<`"sz"`>[] | `Color`[] | `TextScale`[] | `Shd`[] | `OnOff`<`"snapToGrid"`>[] | `SignedTwipsMeasure`[] | `OnOff`<`"bCs"`>[] | `OnOff`<`"caps"`>[] | `OnOff`<`"dstrike"`>[] | `EastAsianLayout`[] | `Em`[] | `OnOff`<`"emboss"`>[] | `FitText`[] | `OnOff`<`"iCs"`>[] | `OnOff`<`"imprint"`>[] | `HpsMeasure`<`"kern"`>[] | `Language`[] | `OnOff`<`"noProof"`>[] | `OnOff`<`"outline"`>[] | `SignedHpsMeasure`[] | `Fonts`[] | `StringTag`<`"rStyle"`>[] | `OnOff`<`"shadow"`>[] | `OnOff`<`"smallCaps"`>[] | `OnOff`<`"specVanish"`>[] | `OnOff`<`"strike"`>[] | `HpsMeasure`<`"szCs"`>[] | `Underline`[] | `OnOff`<`"vanish"`>[] | `VerticalAlignRun`[] | `OnOff`<`"webHidden"`>[] | {
-> `w:val`?: `boolean`;
+> `"w:rPrChange"` | `"w:bdr"` | `"w:color"` | `"w:eastAsianLayout"` | `"w:em"` | `"w:fitText"` | `"w:rFonts"` | `"w:highlight"` | `"w:lang"` | `"w:shd"` | `"w:position"` | `"w:spacing"` | `"w:effect"` | `"w:w"` | `"w:u"` | `"w:vertAlign"` | `"w:shadow"` | `"w:sz"` | `"w:snapToGrid"` | `"w:cs"` | `"w:oMath"` | `"w:b"` | `"w:i"` | `"w:rtl"` | `"w:bCs"` | `"w:caps"` | `"w:dstrike"` | `"w:emboss"` | `"w:iCs"` | `"w:imprint"` | `"w:kern"` | `"w:noProof"` | `"w:outline"` | `"w:rStyle"` | `"w:smallCaps"` | `"w:specVanish"` | `"w:strike"` | `"w:szCs"` | `"w:vanish"` | `"w:webHidden"` | (`"w:rPrChange"` | `"w:bdr"` | `"w:color"` | `"w:eastAsianLayout"` | `"w:em"` | `"w:fitText"` | `"w:rFonts"` | `"w:highlight"` | `"w:lang"` | `"w:shd"` | `"w:position"` | `"w:spacing"` | `"w:effect"` | `"w:w"` | `"w:u"` | `"w:vertAlign"` | `"w:shadow"` | `"w:sz"` | `"w:snapToGrid"` | `"w:cs"` | `"w:oMath"` | `"w:b"` | `"w:i"` | `"w:rtl"` | `"w:bCs"` | `"w:caps"` | `"w:dstrike"` | `"w:emboss"` | `"w:iCs"` | `"w:imprint"` | `"w:kern"` | `"w:noProof"` | `"w:outline"` | `"w:rStyle"` | `"w:smallCaps"` | `"w:specVanish"` | `"w:strike"` | `"w:szCs"` | `"w:vanish"` | `"w:webHidden"`)[] | (`rPr`: `Partial`<`Record`<`"w:rPrChange"` | `"w:bdr"` | `"w:color"` | `"w:eastAsianLayout"` | `"w:em"` | `"w:fitText"` | `"w:rFonts"` | `"w:highlight"` | `"w:lang"` | `"w:shd"` | `"w:position"` | `"w:spacing"` | `"w:effect"` | `"w:w"` | `"w:u"` | `"w:vertAlign"` | `"w:shadow"` | `"w:sz"` | `"w:snapToGrid"` | `"w:cs"` | `"w:oMath"` | `"w:b"` | `"w:i"` | `"w:rtl"` | `"w:bCs"` | `"w:caps"` | `"w:dstrike"` | `"w:emboss"` | `"w:iCs"` | `"w:imprint"` | `"w:kern"` | `"w:noProof"` | `"w:outline"` | `"w:rStyle"` | `"w:smallCaps"` | `"w:specVanish"` | `"w:strike"` | `"w:szCs"` | `"w:vanish"` | `"w:webHidden"`, {
+> `w:color`?: `string`;
+> `w:frame`?: `string`;
+> `w:shadow`?: `string`;
+> `w:space`?: `string`;
+> `w:sz`?: `string`;
+> `w:themeColor`?: `ThemeColorVal`;
+> `w:themeShade`?: `string`;
+> `w:themeTint`?: `string`;
+> `w:val`: `BorderVal`;
+> } | {
+> `w:themeColor`?: `ThemeColorVal`;
+> `w:themeShade`?: `string`;
+> `w:themeTint`?: `string`;
+> `w:val`: `string`;
+> } | {
+> `w:combine`?: `string`;
+> `w:combineBrackets`?: `CombineBracketsVal`;
+> `w:id`?: `string`;
+> `w:vert`?: `string`;
+> `w:vertCompress`?: `string`;
+> } | {
+> `w:val`: `EmVal`;
+> } | {
+> `w:id`?: `string`;
+> `w:val`: `string`;
+> } | {
+> `w:ascii`: `string`;
+> `w:asciiTheme`: `ThemeVal`;
+> `w:cs`: `string`;
+> `w:cstheme`: `ThemeVal`;
+> `w:eastAsia`: `string`;
+> `w:eastAsiaTheme`: `ThemeVal`;
+> `w:hAnsi`: `string`;
+> `w:hAnsiTheme`: `ThemeVal`;
+> `w:hint`: `HintVal`;
+> } | {
+> `w:val`: `HighlightColorVal`;
+> } | {
+> `w:val`: `string`;
+> } | {
+> `w:bidi`?: `string`;
+> `w:eastAsia`?: `string`;
+> `w:val`?: `string`;
+> } | {
+> `w:val`: `string`;
+> } | {
+> `w:color`?: `string`;
+> `w:fill`?: `string`;
+> `w:themeColor`?: `ThemeColorVal`;
+> `w:themeFill`?: `ThemeColorVal`;
+> `w:themeFillShade`?: `string`;
+> `w:themeFillTint`?: `string`;
+> `w:themeShade`?: `string`;
+> `w:themeTint`?: `string`;
+> `w:val`: `ShdVal`;
+> } | {
+> `w:val`: `string`;
+> } | {
+> `w:val`: `string`;
+> } | {
+> `w:val`: `string`;
+> } | {
+> `w:val`: `TextEffectVal`;
+> } | {
+> `w:val`: `string`;
+> } | {
+> `w:color`?: `string`;
+> `w:themeColor`?: `ThemeColorVal`;
+> `w:themeShade`?: `string`;
+> `w:themeTint`?: `string`;
+> `w:val`?: `UnderlineVal`;
+> } | {
+> `w:val`: `VerticalAlignRunVal`;
+> } | {
+> `w:val`?: `string`;
 > }>>) => `boolean`
 
 The markup to look for.

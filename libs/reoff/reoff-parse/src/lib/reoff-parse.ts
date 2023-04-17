@@ -4,7 +4,11 @@ import { ParserFunction } from 'unified'
 import { Root, Node as XastNode } from 'xast'
 import { filter } from 'unist-util-filter'
 import { VFile } from 'vfile'
-import { XMLOrRelsString } from 'docx-to-vfile'
+import {} from 'vfile-message'
+import { DocxVFileData, XMLOrRelsString } from 'docx-to-vfile'
+
+export const mainRelations = ['document', 'footnotes', 'endnotes'] as const
+export type MainRelations = (typeof mainRelations)[number]
 
 export interface Settings {
   removeWhiteSpace?: boolean
@@ -99,20 +103,23 @@ export interface RootWithSource extends Root {
   source?: string
 }
 
+export const defaultSettings = {
+  include: [
+    'word/footnotes.xml',
+    'word/endnotes.xml',
+    'customXml/item1.xml',
+    'word/glossary/document.xml',
+    'word/_rels/document.xml.rels',
+    'word/_rels/footnotes.xml.rels',
+    'word/_rels/endnotes.xml.rels',
+  ],
+}
+
 function unify(doc: string, file: VFile, userSettings: Settings) {
   let tree = treeifyMabye(doc, 'word/document.xml')
 
   if (!tree) {
     throw new Error('Could not parse document.xml')
-  }
-
-  const defaultSettings = {
-    include: [
-      'word/footnotes.xml',
-      'word/endnotes.xml',
-      'customXml/item1.xml',
-      'word/glossary/document.xml',
-    ],
   }
 
   const settings = { ...defaultSettings, ...userSettings }
@@ -166,23 +173,45 @@ function unify(doc: string, file: VFile, userSettings: Settings) {
       }
 
       console.log(`File ${key} is not a string, skipping...`)
+      console.log(value)
       file.message(`File ${key} is not a string, skipping...`)
       return false
     })
+
+  const relations = file.data.relations ?? ({} as NonNullable<DocxVFileData['relations']>)
 
   filesToParse.forEach(([key, value]) => {
     if (!file.data.parsed) {
       file.data.parsed = {} as Parsed
     }
 
-    file.data.parsed[key] = treeifyMabye(value, key)
-
     if (settings.leaveRaw) {
       return
     }
 
-    file.data[key] = undefined
+    if (!key.endsWith('.rels')) {
+      file.data.parsed[key] = treeifyMabye(value, key)
+
+      file.data[key] = undefined
+      return
+    }
+
+    const newKey = key.split('/').pop()?.replace('.xml.rels', '')
+
+    if (!newKey) {
+      console.error('Could not parse relations key', key)
+      file.message(`Could not parse relations key ${key}`)
+      return
+    }
+
+    if (!isAllowedRelation(newKey)) {
+      return
+    }
+
+    relations[newKey] = relToJSON(value)
   })
+
+  file.data.relations = relations
 
   return tree
 }
@@ -195,7 +224,18 @@ export interface Parsed {
 }
 
 declare module 'vfile' {
-  interface DataMap {
+  interface DataMap extends DocxVFileData {
     parsed: Parsed
   }
+}
+
+export function relToJSON(rels: string) {
+  return Object.fromEntries(
+    // eslint-disable-next-line regexp/no-super-linear-backtracking
+    [...rels.matchAll(/Id="(.*?)".*?Target="(.*?)"/g)].map((match) => [match[1], match[2]]),
+  )
+}
+
+function isAllowedRelation(key: string): key is MainRelations {
+  return mainRelations.includes(key as any)
 }

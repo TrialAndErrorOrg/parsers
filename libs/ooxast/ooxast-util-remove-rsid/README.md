@@ -67,7 +67,7 @@ ooxastUtilRemoveRsid(tree: Root, options?: Options): Root;
 
 `Root`
 
-Defined in:  [lib/ooxast-util-remove-rsid.ts:16](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-remove-rsid/src/lib/ooxast-util-remove-rsid.ts#L16)
+Defined in:  [lib/ooxast-util-remove-rsid.ts:17](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-remove-rsid/src/lib/ooxast-util-remove-rsid.ts#L17)
 
 #### Signature
 
@@ -86,7 +86,7 @@ ooxastUtilRemoveRsid(tree: Node<Data>, options?: Options): Node;
 
 `Node`
 
-Defined in:  [lib/ooxast-util-remove-rsid.ts:17](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-remove-rsid/src/lib/ooxast-util-remove-rsid.ts#L17)
+Defined in:  [lib/ooxast-util-remove-rsid.ts:18](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-remove-rsid/src/lib/ooxast-util-remove-rsid.ts#L18)
 
 ***
 
@@ -98,7 +98,7 @@ Defined in:  [lib/ooxast-util-remove-rsid.ts:17](https://github.com/TrialAndErro
 
 > `string`[]
 
-Defined in:  [lib/ooxast-util-remove-rsid.ts:13](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-remove-rsid/src/lib/ooxast-util-remove-rsid.ts#L13)
+Defined in:  [lib/ooxast-util-remove-rsid.ts:14](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-remove-rsid/src/lib/ooxast-util-remove-rsid.ts#L14)
 
 ## Syntax tree
 

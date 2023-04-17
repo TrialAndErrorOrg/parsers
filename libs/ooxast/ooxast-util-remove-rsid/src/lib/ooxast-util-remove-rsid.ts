@@ -4,6 +4,7 @@ import { convertElement, isElement } from 'xast-util-is-element'
 import { select } from 'xast-util-select'
 import { removePosition } from 'unist-util-remove-position'
 import { select as unistSelect } from 'unist-util-select'
+import { getRStyle } from 'ooxast-util-get-style'
 
 // Check to see if node is a paragraph, because we want to merge elements in a paragraph
 const isP = convertElement<P>('w:p')
@@ -15,10 +16,7 @@ export interface Options {
 
 export function ooxastUtilRemoveRsid(tree: Root, options?: Options): Root
 export function ooxastUtilRemoveRsid(tree: Node, options?: Options): Node
-export function ooxastUtilRemoveRsid(
-  tree: Root | Node,
-  options?: Options
-): Root | Node {
+export function ooxastUtilRemoveRsid(tree: Root | Node, options?: Options): Root | Node {
   visit(tree, isP, (node: P) => {
     // Clean rsid props from P
     const {
@@ -45,7 +43,7 @@ export function ooxastUtilRemoveRsid(
 
       el = maybeRemoveRunProperties(el, options?.rPrRemoveList)
 
-      if (lastEl?.name !== 'w:r') {
+      if (!isR(lastEl)) {
         runs.push(el)
         continue
       }
@@ -58,30 +56,28 @@ export function ooxastUtilRemoveRsid(
         continue
       }
 
-      const pr = select('w\\:rPr', el)
-      const lastRPr = select('w\\:rPr', lastEl)
+      const pr = getRStyle(el)
+      const lastRPr = getRStyle(lastEl)
       //null case
       if (!lastRPr && !pr) {
         lastEl = merge(lastEl, el)
         continue
       }
 
-      // one of them has props while the other doesn't, don't merge
-      // TODO: remove unnecssary properties first, that way this will equal more often
-      if ((!lastRPr && pr) || (lastRPr && !pr)) {
+      if (JSON.stringify(lastRPr) !== JSON.stringify(pr)) {
         runs.push(el)
         continue
       }
 
+      // // one of them has props while the other doesn't, don't merge
+      // // TODO: remove unnecssary properties first, that way this will equal more often
+      // if ((!lastRPr && pr) || (lastRPr && !pr)) {
+      //   runs.push(el)
+      //   continue
+      // }
+
       // they both have properties but they differ, e.g. one is italic, the other bold. Should not merge
       // string check otherwise === don't work
-      if (
-        JSON.stringify(removePosition(lastRPr!, true)) !==
-        JSON.stringify(removePosition(pr!, true))
-      ) {
-        runs.push(el)
-        continue
-      }
 
       lastEl = merge(lastEl, el)
     }
@@ -98,8 +94,7 @@ function maybeRemoveRunProperties(r: R, options: string[] | undefined): R {
 
   remove(
     r,
-    (element: R['children'][number]) =>
-      isElement(element) && options.includes(element.name)
+    (element: R['children'][number]) => isElement(element) && options.includes(element.name),
   )
   return r
 }

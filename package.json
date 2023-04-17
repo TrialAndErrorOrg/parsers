@@ -148,6 +148,7 @@
     "unzipit": "^1.4.2",
     "utility-types": "^3.10.0",
     "vfile": "^5.3.7",
+    "vfile-message": "^3.1.4",
     "vfile-reporter": "^7.0.5",
     "vite": "^4.2.1",
     "xast-util-from-xml": "^3.0.0",

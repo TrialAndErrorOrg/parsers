@@ -194,6 +194,9 @@
       "reoff-infer-headings": [
         "libs/reoff/reoff-infer-headings/src/index.ts"
       ],
+      "reoff-markup-to-style": [
+        "libs/reoff/reoff-markup-to-style/src/index.ts"
+      ],
       "reoff-parse": [
         "libs/reoff/reoff-parse/src/index.ts"
       ],
@@ -239,8 +242,8 @@
       "xast-util-select": [
         "libs/xast/xast-util-select/src/index.ts"
       ],
-      "reoff-markup-to-style": [
-        "libs/reoff/reoff-markup-to-style/src/index.ts"
+      "reoff-compile": [
+        "libs/reoff/reoff-compile/src/index.ts"
       ]
     }
   },

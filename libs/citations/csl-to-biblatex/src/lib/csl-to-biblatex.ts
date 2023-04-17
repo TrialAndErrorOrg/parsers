@@ -122,7 +122,7 @@ export function cslToBiblatex(csl: CSL[]) {
   texEntryMap('publisher  ',ref.publisher),
   texEntryMap('place      ',ref['publisher-place']),
   texEntryMap('year       ',ref.issued?.literal ),
-  texEntryMap('date       ',ref.issued?.['date-parts']?.[0]?.join('-')),
+  texEntryMap('date       ',ref.issued?.['date-parts']?.[0]?.filter(Boolean).map(part=>(typeof part === 'string' ? part.length === 1 : part! < 10) ? `0${part}` : part).join('-')),
   texEntryMap('pages      ',ref.page),
   texEntryMap(`${type === 'article' ? 'journal' : 'booktitle'}    `,ref['container-title'] ?? ref.source),
 

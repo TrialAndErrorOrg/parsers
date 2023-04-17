@@ -18,9 +18,9 @@ export async function consolidate(
   },
 ) {
   const http = RateLimit(axios.create(), {
-    maxRequests: 20,
-    perMilliseconds: 1000,
-    maxRPS: 20,
+    // maxRequests: 20,
+    // perMilliseconds: 1000,
+    maxRPS: 50,
   })
 
   const crossRefResponses: (Promise<AxiosResponse<any, any>> | CSL)[] = []

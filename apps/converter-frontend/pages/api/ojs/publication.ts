@@ -24,10 +24,8 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
   try {
     const response = await axios.get(
-      `${decodeURIComponent(
-        Array.isArray(url) ? url[0] : url
-      )}?apiToken=${apiToken}`,
-      { headers: { cookie: `OJSSID=${req.cookies.OJSSID}` } }
+      `${decodeURIComponent(Array.isArray(url) ? url[0] : url)}?apiToken=${apiToken}`,
+      { headers: { cookie: `OJSSID=${req.cookies.OJSSID}` } },
     )
     const result = response.data
 

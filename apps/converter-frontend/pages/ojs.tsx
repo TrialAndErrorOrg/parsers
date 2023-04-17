@@ -1,7 +1,7 @@
 import React from 'react'
 import { Title } from '@mantine/core'
-import Settings from '../components/settings/settings'
-import Conversion from '../components/conversion/conversion'
+import Settings from '../components/settings/settings.js'
+import Conversion from '../components/conversion/conversion.js'
 
 export default function Index() {
   // const [thing, setThing] = useState<ArrayBuffer>()

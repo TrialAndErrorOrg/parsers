@@ -28,7 +28,16 @@ export async function docxToTexConverter(
   const proc = unified()
     .use(reoffParse)
     .use(reoffClean, {
-      rPrRemoveList: ['w:lang', 'w:shd', 'w:szCs', 'w:kern', 'w:rFonts', 'w:noProof'],
+      rPrRemoveList: [
+        'w:lang',
+        'w:shd',
+        'w:szCs',
+        'w:kern',
+        'w:rFonts',
+        'w:noProof',
+        'w:iCs',
+        'w:color',
+      ],
     })
     .use(() => (tree) => {
       console.log({ prevTree: JSON.parse(JSON.stringify(tree)) })
@@ -38,13 +47,17 @@ export async function docxToTexConverter(
         markup: ['w:b'],
         style: 'Heading 1',
       },
+      {
+        markup: ['w:i'],
+        style: 'Heading 2',
+      },
     ])
     .use(reoffParseReferences, {
       apiUrl:
         process.env.NODE_ENV === 'production'
           ? apiUrl || '/api/style'
           : process.env.NEXT_PUBLIC_STYLE_DEV_URL || 'http://localhost:8000/api/style',
-      mailto,
+      mailto: 'support@trialanderror.org',
     })
     .use(reoffCite, { type: type ?? 'zotero' })
     .use(() => (tree, vfile) => {

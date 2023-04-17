@@ -3,11 +3,9 @@ import { definitions, paths } from 'ojs-client'
 import OJS from 'ojs-client'
 import React, { forwardRef, useState } from 'react'
 import useSWR from 'swr'
-import { HStack, VStack } from '../stack/stack'
-// @ts-expect-error there are no types here
-import Cite from 'citation-js'
-import { FileReel } from './file-reel'
-import { PublicationData } from './publication-data'
+import { HStack, VStack } from '../stack/stack.js'
+import { FileReel } from './file-reel.js'
+import { PublicationData } from './publication-data.js'
 
 /* eslint-disable-next-line */
 export interface PublicationsListProps {
@@ -33,7 +31,7 @@ const AutoCompleteItem = forwardRef<HTMLDivElement, OJSAutoCompleteProps>(
         </Text>
       </VStack>
     </div>
-  )
+  ),
 )
 
 AutoCompleteItem.displayName = 'AutoCompleteItem'
@@ -44,7 +42,7 @@ export function PublicationsList(props: PublicationsListProps) {
 
   const [val, setVal] = useState<OJSAutoCompleteProps>()
   const { data, error } = useSWR(
-    `/api/ojs/?endpoint=${endpoint}&apiToken=${token}&searchPhrase=${search}`
+    `/api/ojs/?endpoint=${endpoint}&apiToken=${token}&searchPhrase=${search}`,
   )
   // const { data, error } = useSWR('', (thing: string, thong: RequestInit) =>
   //   ojs.submissions({ searchPhrase: search || '' })

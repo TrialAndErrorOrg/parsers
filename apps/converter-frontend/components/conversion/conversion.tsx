@@ -1,25 +1,17 @@
 import { useState } from 'react'
-import {
-  Button,
-  Code,
-  Container,
-  Group,
-  Select,
-  Text,
-  Title,
-} from '@mantine/core'
-import { HStack } from '../stack/stack'
-import SelectItem from '../select-item/select-item'
+import { Button, Code, Container, Group, Select, Text, Title } from '@mantine/core'
+import { HStack } from '../stack/stack.js'
+import SelectItem from '../select-item/select-item.js'
 import { AiOutlineUpload } from 'react-icons/ai'
-import { JATSIcon, TexIcon, WordIcon } from '../ext-icon/ext-icon'
+import { JATSIcon, TexIcon, WordIcon } from '../ext-icon/ext-icon.js'
 import shallow from 'zustand/shallow'
 
 import { Dropzone } from '@mantine/dropzone'
-import ConvertedBlockLocal from '../converted-block-local/converted-block-local'
-import { jatsToTexConverter } from '../../utils/converters/jatsToTex'
-import { docxToTexConverter } from '../../utils/converters/docxToTex'
-import { docxToJatsConverter } from '../../utils/converters/docxToJats'
-import { useStore } from '../../utils/store'
+import ConvertedBlockLocal from '../converted-block-local/converted-block-local.js'
+import { jatsToTexConverter } from '../../utils/converters/jatsToTex.js'
+import { docxToTexConverter } from '../../utils/converters/docxToTex.js'
+import { docxToJatsConverter } from '../../utils/converters/docxToJats.js'
+import { useStore } from '../../utils/store.js'
 
 /* eslint-disable-next-line */
 export interface ConversionProps {}
@@ -27,10 +19,7 @@ export interface ConversionProps {}
 export function Conversion(props: ConversionProps) {
   //const [thing, setThing] = useState<ArrayBuffer>()
 
-  const [input, setInput] = useStore(
-    (state) => [state.input, state.setInput],
-    shallow
-  )
+  const [input, setInput] = useStore((state) => [state.input, state.setInput], shallow)
 
   //console.log(input)
 
@@ -84,11 +73,7 @@ export function Conversion(props: ConversionProps) {
           setInput(buf)
         }}
       >
-        <Group
-          position="center"
-          spacing="xl"
-          style={{ minHeight: 220, pointerEvents: 'none' }}
-        >
+        <Group position="center" spacing="xl" style={{ minHeight: 220, pointerEvents: 'none' }}>
           <AiOutlineUpload
             //status={status}
             style={{

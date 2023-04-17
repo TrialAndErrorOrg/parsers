@@ -1,13 +1,4 @@
-import {
-  Container,
-  Text,
-  Loader,
-  Box,
-  TextInput,
-  Textarea,
-  Paper,
-  Button,
-} from '@mantine/core'
+import { Container, Text, Loader, Box, TextInput, Textarea, Paper, Button } from '@mantine/core'
 import { useForm } from '@mantine/form'
 import { useStore } from '../../utils/store'
 import { paths, definitions } from 'ojs-client'
@@ -33,15 +24,14 @@ export const PublicationData = (props: {
   const form = useForm({
     initialValues: {
       documentclassname: 'jote-new-article',
-      documentclassopt: 'authordate, editorial',
+      documentclassopt: 'author-date, editorial',
       title: '',
       keywordsabstract: '',
       abstract: '',
       runningauthor: '',
-      jname: '',
+      jname: 'Journal of Trial \\& Error',
       jyear: new Date().getFullYear().toString(),
       acknowledgments: '',
-
       funding: '',
       doi: '',
       jvolume: '',
@@ -63,23 +53,21 @@ export const PublicationData = (props: {
     },
   })
 
-  const handleSubmit = (values: typeof form['values']) => {
-    console.log(values)
-
+  const handleSubmit = (values: (typeof form)['values']) => {
     setPreamble(values)
   }
 
   // inital load does not give us that much data
   const { data, error } = useSWR(
-    `/api/ojs/publication?url=${encodeURIComponent(
-      url || ''
-    )}&apiToken=${apiToken}`
+    `/api/ojs/publication?url=${encodeURIComponent(url || '')}&apiToken=${apiToken}`,
   )
   // const { data: sub, error: suberror } = useSWR(
   //   `/api/ojs/submission?url=${encodeURIComponent(
   //     data?._href || ''
   //   )}&apiToken=${apiToken}`
   // )
+  console.log({ data })
+
   useEffect(() => {
     if (!data || form.values.title) {
       return
@@ -88,14 +76,12 @@ export const PublicationData = (props: {
     form.setValues({
       ...form.values,
       title: data.fullTitle.en_US,
-      documentclassopt: `${form.values?.documentclassopt}, ${
-        categories?.[pub?.sectionId]
-      }`,
+      documentclassopt: `${form.values?.documentclassopt}, ${categories?.[pub?.sectionId]}`,
       keywordsabstract: data?.keywords?.['en_US']?.join(', '),
       abstract: data.abstract?.en_US,
       runningauthor: data.authorsStringShort,
       authors: data.authors.reduce(
-        (acc: typeof data.authors, curr: typeof data.authors[number]) => {
+        (acc: typeof data.authors, curr: (typeof data.authors)[number]) => {
           acc.push({
             givenName: curr.givenName?.en_US,
             familyName: curr.familyName?.en_US,
@@ -105,7 +91,7 @@ export const PublicationData = (props: {
           })
           return acc
         },
-        []
+        [],
       ),
       jname: 'Journal of Trial \\& Error',
       jyear: data.copyrightYear || new Date().getFullYear(),
@@ -115,7 +101,8 @@ export const PublicationData = (props: {
       jpages: data.pages || '',
       paperreceived: pub.dateSubmitted || '',
       paperaccepted: '',
-      funding: data?.supportingAgencies?.en_US || '',
+      // funding: data?.supportingAgencies?.en_US || '',
+
       paperpublished: data.published || '',
     })
   }, [data])
@@ -142,11 +129,7 @@ export const PublicationData = (props: {
               <MetaItem datakey={'title'} value={data.title} />
               <MetaItem datakey={'authors'} value={data.authors} />
               <MetaItem datakey={'abstract'} value={data.abstract} />
-              <MetaItem
-                datakey={'citations'}
-                value={data.citations}
-                extra={data.citationsRaw}
-              />
+              <MetaItem datakey={'citations'} value={data.citations} extra={data.citationsRaw} />
               <MetaItem datakey={'keywords'} value={data.keywords} />
               {/* {Object.entries(data).map((datum) => {
             const [key, value] = datum as [
@@ -159,14 +142,8 @@ export const PublicationData = (props: {
             </Paper>
             <Paper>
               <HStack>
-                <TextInput
-                  label="documentclassopt"
-                  {...form.getInputProps('documentclassopt')}
-                />
-                <TextInput
-                  label="documentclassname"
-                  {...form.getInputProps('documentclassname')}
-                />
+                <TextInput label="documentclassopt" {...form.getInputProps('documentclassopt')} />
+                <TextInput label="documentclassname" {...form.getInputProps('documentclassname')} />
               </HStack>
               <HStack>
                 <TextInput label="title" {...form.getInputProps('title')} />
@@ -250,63 +227,34 @@ export const PublicationData = (props: {
                   />
                 </HStack>
                 <VStack sx={{ alignItems: 'flex-start' }}>
-                  <Textarea
-                    label="abstract"
-                    {...form.getInputProps('abstract')}
-                  />
-                  <TextInput
-                    label="keywords"
-                    {...form.getInputProps('keywordsabstract')}
-                  />
+                  <Textarea label="abstract" {...form.getInputProps('abstract')} />
+                  <TextInput label="keywords" {...form.getInputProps('keywordsabstract')} />
                 </VStack>
                 <HStack>
                   <TextInput label="year" {...form.getInputProps('jyear')} />
                 </HStack>
 
                 <HStack>
-                  <Textarea
-                    label="acknowledgments"
-                    {...form.getInputProps('acknowledgments')}
-                  />
-                  <Textarea
-                    label="funding"
-                    {...form.getInputProps('funding')}
-                  />
+                  <Textarea label="acknowledgments" {...form.getInputProps('acknowledgments')} />
+                  <Textarea label="funding" {...form.getInputProps('funding')} />
                 </HStack>
                 <HStack>
-                  <TextInput
-                    label="volume"
-                    {...form.getInputProps('jvolume')}
-                  />
+                  <TextInput label="volume" {...form.getInputProps('jvolume')} />
                   <TextInput label="issue" {...form.getInputProps('jissue')} />
                 </HStack>
 
                 <HStack spacing={10} sx={{ flexWrap: 'wrap' }}>
-                  <TextInput
-                    label="received"
-                    {...form.getInputProps('paperreceived')}
-                  />
-                  <TextInput
-                    label="accepted"
-                    {...form.getInputProps('paperaccepted')}
-                  />
-                  <TextInput
-                    label="published"
-                    {...form.getInputProps('paperpublished')}
-                  />
+                  <TextInput label="received" {...form.getInputProps('paperreceived')} />
+                  <TextInput label="accepted" {...form.getInputProps('paperaccepted')} />
+                  <TextInput label="published" {...form.getInputProps('paperpublished')} />
                 </HStack>
                 <HStack>
-                  <TextInput
-                    label="website"
-                    {...form.getInputProps('jwebsite')}
-                  />
+                  <TextInput label="website" {...form.getInputProps('jwebsite')} />
                   <TextInput label="doi" {...form.getInputProps('doi')} />
                 </HStack>
               </VStack>
             </Paper>
-            <Button onClick={() => handleSubmit(form.values)}>
-              Add data to template
-            </Button>
+            <Button onClick={() => handleSubmit(form.values)}>Add data to template</Button>
           </VStack>
         )
       ) : (
@@ -316,11 +264,4 @@ export const PublicationData = (props: {
   )
 }
 
-export const categories = [
-  '',
-  'empirical',
-  'meta',
-  'reflection',
-  'rga',
-  'editorial',
-]
+export const categories = ['', 'empirical', 'meta', 'reflection', 'rga', 'editorial']

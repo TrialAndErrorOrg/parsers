@@ -24,40 +24,33 @@ const extensionMap: Record<string, string> = {
   emf: 'x-emf',
 }
 
-async function downloadAll(images: { [key: string]: ArrayBuffer }) {
+async function downloadAll(images: { [key: string]: Blob }) {
   const zipWriter = new ZipWriter(new BlobWriter('application/zip'))
 
   const addedStuff = await Promise.all(
     Object.entries(images).map(([url, img]) => {
-      const arrayBufferView = new Uint8Array(img)
       const rawExtension = url.split('.').pop() ?? 'jpg'
       const fileName = url.split('/').pop() ?? 'image.jpg'
       const extension = extensionMap[rawExtension] ?? rawExtension
 
-      const file = new Blob([arrayBufferView], {
+      const file = new Blob([img], {
         type: `image/${extension}`,
       })
       // const blob = new Blob([arrayBufferView], {
       //   type: `image/${extension}`,
       // })
       zipWriter.add(fileName, new BlobReader(file))
-    })
+    }),
   )
   const zipFile = await zipWriter.close()
 
-  window.open(
-    (window.URL ?? window.webkitURL).createObjectURL(zipFile),
-    '_blank'
-  )
+  window.open((window.URL ?? window.webkitURL).createObjectURL(zipFile), '_blank')
 }
 
 /* eslint-disable-next-line */
 export interface ConvertedBlockLocalProps {
   input: ArrayBuffer
-  converter: (
-    input: ArrayBuffer,
-    options: { [key: string]: any | any[] }
-  ) => Promise<VFile>
+  converter: (input: ArrayBuffer, options: { [key: string]: any | any[] }) => Promise<VFile>
   options?: { [key: string]: any | any[] }
 }
 
@@ -94,46 +87,28 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
       )}
       {/* eslint-disable-next-line*/}
       {/* @ts-ignore  */}
-      {vfile?.data?.images && (
+      {vfile?.data?.media && (
         <>
           <Box>Images extracted from doc</Box>
           <Box>
-            {vfile?.data?.images
-              ? Object.entries(
-                  vfile?.data?.images as { [key: string]: ArrayBuffer }
-                ).map(([url, img]: [url: string, img: ArrayBuffer]) => {
-                  const arrayBufferView = new Uint8Array(img)
-                  const rawExtension = url.split('.').pop() ?? 'jpg'
-                  const extension = extensionMap[rawExtension] ?? rawExtension
+            {vfile?.data?.media
+              ? Object.entries(vfile?.data?.media as { [key: string]: Blob }).map(
+                  ([url, img]: [url: string, img: Blob]) => {
+                    const rawExtension = url.split('.').pop() ?? 'jpg'
+                    const extension = extensionMap[rawExtension] ?? rawExtension
 
-                  const file = new File(
-                    [arrayBufferView],
-                    url?.split('/')?.pop() ?? url,
-                    {
+                    const blob = new Blob([img], {
                       type: `image/${extension}`,
-                    }
-                  )
-                  // const blob = new Blob([arrayBufferView], {
-                  //   type: `image/${extension}`,
-                  // })
-                  const urlCreator = window.URL || window.webkitURL
-                  const imageUrl = urlCreator.createObjectURL(file)
-                  // eslint-disable-next-line
-                  return (
-                    <img
-                      width="30%"
-                      alt="alternative image"
-                      src={imageUrl}
-                      key={url}
-                    />
-                  )
-                })
+                    })
+                    const urlCreator = window.URL || window.webkitURL
+                    const imageUrl = urlCreator.createObjectURL(blob)
+                    // eslint-disable-next-line
+                    return <img width="30%" alt="alternative image" src={imageUrl} key={url} />
+                  },
+                )
               : null}
           </Box>
-          <Button onClick={() => downloadAll(vfile.data.images)}>
-            {' '}
-            Download all ⬇️{' '}
-          </Button>
+          <Button onClick={() => downloadAll(vfile.data.media)}> Download all ⬇️ </Button>
         </>
       )}
       {vfile?.messages && (

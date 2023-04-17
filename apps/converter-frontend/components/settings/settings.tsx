@@ -1,8 +1,8 @@
 import React from 'react'
-import { HStack, VStack } from '../stack/stack'
+import { HStack, VStack } from '../stack/stack.js'
 import { Text, Input, TextInput } from '@mantine/core'
 import { useForm } from '@mantine/form'
-import { PublicationsList } from '../publications-list/publications-list'
+import { PublicationsList } from '../publications-list/publications-list.js'
 
 /* eslint-disable-next-line */
 export interface SettingsProps {}
@@ -12,14 +12,8 @@ export function Settings(props: SettingsProps) {
   //console.log(process.env.NEXT_PUBLIC_OJS_TOKEN)
   const form = useForm({
     initialValues: {
-      token:
-        process.env.NODE_ENV === 'production'
-          ? ''
-          : process.env.NEXT_PUBLIC_OJS_TOKEN,
-      endpoint:
-        process.env.NODE_ENV === 'production'
-          ? ''
-          : process.env.NEXT_PUBLIC_OJS_API,
+      token: process.env.NODE_ENV === 'production' ? '' : process.env.NEXT_PUBLIC_OJS_TOKEN,
+      endpoint: process.env.NODE_ENV === 'production' ? '' : process.env.NEXT_PUBLIC_OJS_API,
       search: '',
       email: '',
     },
@@ -47,11 +41,7 @@ export function Settings(props: SettingsProps) {
           alignItems: 'center',
         }}
       >
-        <TextInput
-          id="token"
-          label="OJS Access token"
-          {...form.getInputProps('token')}
-        />
+        <TextInput id="token" label="OJS Access token" {...form.getInputProps('token')} />
       </HStack>
       <HStack
         sx={{

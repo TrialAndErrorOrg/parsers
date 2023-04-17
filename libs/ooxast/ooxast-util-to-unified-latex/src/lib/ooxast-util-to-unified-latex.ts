@@ -27,6 +27,7 @@ import { cslToBiblatex } from 'csl-to-biblatex'
 import { VFile } from 'vfile'
 import { notes } from './util/notes.js'
 import { findListNumbering } from './util/find-list-numbering.js'
+import { DocxVFileData } from 'docx-to-vfile'
 
 export { one } from './one.js'
 export { all } from './all.js'
@@ -51,12 +52,8 @@ const defaultOptions: Options = {
 }
 
 declare module 'vfile' {
-  interface DataMap {
-    [key: `${string}.xml` | `${string}.rels`]: string | undefined
-    parsed: {
-      [key: `${string}.xml` | `${string}.rels`]: Root | undefined
-    }
-  }
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface DataMap extends DocxVFileData {}
 }
 
 export function toUnifiedLatex(
@@ -141,7 +138,7 @@ export function toUnifiedLatex(
       parseCitation: options.parseCitation || parseCitation,
       partialCitation: '',
       deleteNextRun: false,
-      relations: options.relations || {},
+      relations: vfile?.data?.relations?.document || {},
       citeKeys: {},
       citationType: options.citationType || 'mendeley',
       displayMath: options.displayMath || 'equation',
@@ -173,24 +170,26 @@ export function toUnifiedLatex(
   )
 
   h.simpleParagraph = true
+  const ogRelations = h.relations
   if (unparsedFootnotes) {
+    h.relations = vfile?.data?.relations?.footnotes || {}
     //@ts-expect-error shhh
     whiteSpaceTransformer!(unparsedFootnotes)
     h.footnotes = notes(h, unparsedFootnotes)
   }
 
   if (unparsedEndnotes) {
+    h.relations = vfile?.data?.relations?.endnotes || {}
     //@ts-expect-error shhh
     whiteSpaceTransformer!(unparsedEndnotes)
     h.endnotes = notes(h, unparsedEndnotes)
   }
+
+  h.relations = ogRelations
+
   h.simpleParagraph = false
 
   const result = one(h, tree, undefined)
-
-  // if (!h.document) {
-  //   return result
-  // }
 
   if (!result) {
     return { type: 'root', content: [] } as UnifiedLatexRoot
@@ -198,7 +197,6 @@ export function toUnifiedLatex(
 
   unifiedLatex = env('document', result)
 
-  console.log({ bib: h.bibliography })
   const biblatex = h.bibliography
     ? Array.isArray(h.bibliography)
       ? cslToBiblatex(h.bibliography)

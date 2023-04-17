@@ -17,6 +17,7 @@ import { Ast, Root } from '@unified-latex/unified-latex-types'
 import { describe, it, expect } from 'vitest'
 import { blob } from 'stream/consumers'
 import unifiedLatexStringify from 'unified-latex-stringify'
+import reoffMarkupToStyle from 'libs/reoff/reoff-markup-to-style/src/lib/reoff-markup-to-style.js'
 
 const unifieddLatexStringify = function relatexStringify(options?: Options | void) {
   const compiler: CompilerFunction<Node, string> = (tree) => {
@@ -29,12 +30,6 @@ const unifieddLatexStringify = function relatexStringify(options?: Options | voi
   Object.assign(this, { Compiler: compiler })
 } as Plugin<[Options] | void[], Root, string>
 
-// import path from 'path'
-// import { fileURLToPath } from 'url'
-
-// const __filename = fileURLToPath(import.meta.url)
-// const __dirname = path.dirname(__filename)
-//describe('fixtures', () => {
 const fromDocx = (
   path: string,
   citationType?: 'mendeley' | 'word' | 'citavi' | 'zotero' | 'endnote',
@@ -43,17 +38,9 @@ const fromDocx = (
     .data('hey', 'ho')
     .use(reoffParse)
     .use(reoffClean, {
-      rPrRemoveList: [
-        'w:lang',
-        'w:shd',
-        'w:szCs',
-        'w:sz',
-        'w:kern',
-        'w:rFonts',
-        'w:noProof',
-        'w:color',
-      ],
+      rPrRemoveList: ['w:lang', 'w:shd', 'w:szCs', 'w:sz', 'w:kern', 'w:rFonts', 'w:noProof'],
     })
+    .use(reoffMarkupToStyle)
     .use(reoffParseReferences) // { mailto: 'support@trialanderror.org' })
     .use(reoffCite, { type: citationType || 'zotero', log: false })
     .use(() => (tree, vfile) => {

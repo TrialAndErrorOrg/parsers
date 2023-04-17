@@ -426,21 +426,8 @@
                           "closeMark": "}",
                           "content": [
                             {
-                              "type": "macro",
-                              "content": "textbf",
-                              "args": [
-                                {
-                                  "type": "argument",
-                                  "openMark": "{",
-                                  "closeMark": "}",
-                                  "content": [
-                                    {
-                                      "type": "string",
-                                      "content": "bold italic"
-                                    }
-                                  ]
-                                }
-                              ]
+                              "type": "string",
+                              "content": "bold italic"
                             }
                           ]
                         }
@@ -577,14 +564,14 @@
                   "args": [
                     {
                       "type": "argument",
-                      "openMark": "[",
-                      "closeMark": "]",
                       "content": [
                         {
                           "type": "string",
                           "content": "@{} l l l l l @{}"
                         }
-                      ]
+                      ],
+                      "openMark": "{",
+                      "closeMark": "}"
                     }
                   ]
                 }

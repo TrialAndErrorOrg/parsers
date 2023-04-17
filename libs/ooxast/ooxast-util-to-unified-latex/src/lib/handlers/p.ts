@@ -21,7 +21,10 @@ const headingList = [
 
 export function getHeadingLevel(style: string) {
   const lowerCaseStyle = style.toLowerCase()
-  if (lowerCaseStyle === 'heading') return 1
+  if (lowerCaseStyle === 'heading') {
+    return 1
+  }
+
   const lastNumber = lowerCaseStyle.slice(-1)
   return !lastNumber ? null : parseInt(lastNumber, 10)
 }
@@ -33,7 +36,9 @@ export const p: Handle = (h: H, p: P) => {
 
   const style = getPStyle(p)
   // const res = h(p, 'p', { ...(style ? { style } : {}) }, all(h, p))
-  if (!style) return [PB, ...all(h, p), PB]
+  if (!style) {
+    return [PB, ...all(h, p), PB]
+  }
 
   if (style.toLowerCase().includes('quote')) {
     return env('quote', all(h, p))
@@ -46,7 +51,9 @@ export const p: Handle = (h: H, p: P) => {
 
   const headingLevel = getHeadingLevel(style)
 
-  if (!headingLevel) return [PB, ...all(h, p), PB]
+  if (!headingLevel) {
+    return [PB, ...all(h, p), PB]
+  }
 
   const headingMacroName =
     headingList[Math.min(headingLevel + h.sectionDepth, headingList.length - 1)]

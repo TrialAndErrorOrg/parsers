@@ -192,20 +192,7 @@
                 },
                 {
                   "type": "macro",
-                  "content": "includegraphics",
-                  "args": [
-                    {
-                      "type": "argument",
-                      "openMark": "{",
-                      "closeMark": "}",
-                      "content": [
-                        {
-                          "type": "string",
-                          "content": "media/image1.jpg"
-                        }
-                      ]
-                    }
-                  ]
+                  "content": "includegraphics"
                 }
               ]
             },

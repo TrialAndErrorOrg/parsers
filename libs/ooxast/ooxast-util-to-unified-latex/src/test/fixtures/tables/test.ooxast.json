@@ -1528,6 +1528,14 @@
                               "children": [
                                 {
                                   "type": "element",
+                                  "name": "w:pStyle",
+                                  "attributes": {
+                                    "w:val": "Heading 1"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "type": "element",
                                   "name": "w:rPr",
                                   "attributes": {},
                                   "children": [

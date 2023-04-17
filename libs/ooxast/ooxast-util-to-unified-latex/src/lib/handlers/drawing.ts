@@ -7,6 +7,7 @@ import { PB } from '../util/PB.js'
 export const drawing: Handle = (h: H, node: Drawing) => {
   const blip = select('a\\:blip', node)
 
+  console.log(h.relations)
   if (!blip) {
     return env('figure', [m('caption', ''), PB, m('label', ''), PB, m('includegraphics', '')])
   }

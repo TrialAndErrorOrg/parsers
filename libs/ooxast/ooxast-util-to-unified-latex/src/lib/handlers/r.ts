@@ -6,6 +6,7 @@ import { Group, Macro, String as UnifiedLatexString } from '@unified-latex/unifi
 import { convertElement } from 'xast-util-is-element'
 import { m, s } from '@unified-latex/unified-latex-builder'
 import { citation } from './citation.js'
+import { getRStyle } from 'ooxast-util-get-style'
 
 //const isVert = convertElement<VerticalAlignRun>('w:vertAlign')
 
@@ -43,7 +44,7 @@ export function r(h: H, node: R, parent?: Parent) {
     return
   }
 
-  const props = select('w\\:rPr', node) as RPr
+  const props = getRStyle(node)
   const mergedText = all(h, node).reduce((acc, curr) => {
     if (curr.type !== 'string') return acc
     acc = acc + curr.content
@@ -55,8 +56,11 @@ export function r(h: H, node: R, parent?: Parent) {
 
   if (!mergedText) return
 
-  const formattedText = props.children.reduce((text, prop) => {
-    switch (prop.name.replace(/\w+:/, '')) {
+  const formattedText = Object.entries(props).reduce((text, [name, prop]) => {
+    if (!prop || !('w:val' in prop) || !prop['w:val'] || prop['w:val'] === '0') {
+      return text
+    }
+    switch (name.replace(/\w+:/, '')) {
       case 'i':
         text = m(h.italics, text)
         return text
@@ -72,13 +76,11 @@ export function r(h: H, node: R, parent?: Parent) {
         return text
       case 'vertAlign':
         //if (!isVert(prop)) continue
-        // @ts-expect-error aaaa
-        if (prop.attributes['w:val'] === 'superscript') {
+        if (prop['w:val'] === 'superscript') {
           text = m('textsuperscript', text)
           return text
         }
-        // @ts-expect-error aaaa
-        if (prop.attributes['w:val'] === 'subscript') {
+        if (prop['w:val'] === 'subscript') {
           text = m('textsubscript', text)
           return text
         }
@@ -90,24 +92,21 @@ export function r(h: H, node: R, parent?: Parent) {
         if (!h.xcolor) {
           return text
         }
-        text = m('colorbox', [
-          (prop as Highlight).attributes['w:val'],
-          ...(Array.isArray(text) ? text : [text]),
-        ])
+        text = m('colorbox', [`${prop['w:val']}`, ...(Array.isArray(text) ? text : [text])])
         return text
       }
       case 'color': {
         if (!h.xcolor) {
           return text
         }
-        const color = (prop as Color).attributes['w:val']
+        const color = prop['w:val']
 
         if (color === 'auto' || color === '000000') {
           return text
         }
         text = {
           type: 'group',
-          content: [m('color', color), [...(Array.isArray(text) ? text : [text])]],
+          content: [m('color', `${color}`), [...(Array.isArray(text) ? text : [text])]],
         } as Group
         return text
       }
@@ -119,11 +118,11 @@ export function r(h: H, node: R, parent?: Parent) {
         return text
       }
       case 'shd': {
-        if (h.inMath) {
+        if (h.inMath || !('w:fill' in prop)) {
           return text
         }
 
-        const shdColor = (prop as Shd).attributes['w:fill']
+        const shdColor = prop['w:fill']
 
         if (!shdColor || shdColor === 'auto' || shdColor === '000000') {
           return text

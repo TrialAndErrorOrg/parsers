@@ -356,30 +356,39 @@
                 },
                 {
                   "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
+                  "name": "w:fldSimple",
+                  "attributes": {
+                    "w:instr": " SEQ Figure \\* ARABIC "
+                  },
                   "children": [
                     {
                       "type": "element",
-                      "name": "w:rPr",
+                      "name": "w:r",
                       "attributes": {},
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:noProof",
+                          "name": "w:rPr",
                           "attributes": {},
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "w:noProof",
+                              "attributes": {},
+                              "children": []
+                            }
+                          ]
+                        },
                         {
-                          "type": "text",
-                          "value": "1"
+                          "type": "element",
+                          "name": "w:t",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "1"
+                            }
+                          ]
                         }
                       ]
                     }

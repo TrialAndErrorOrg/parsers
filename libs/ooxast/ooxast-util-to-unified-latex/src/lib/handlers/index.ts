@@ -16,6 +16,7 @@ import { oMathPara } from './oMathPara.js'
 import { tc } from './tc.js'
 import { footnoteReference } from './footnoteReference.js'
 import { oMath } from './oMath.js'
+import { hyperlink } from './hyperlink.js'
 
 export const handlers: Context['handlers'] = {
   p,
@@ -24,6 +25,7 @@ export const handlers: Context['handlers'] = {
   text,
   document: all,
   footnotes: all,
+  hyperlink,
   footnote,
   t: all,
   oMathPara: oMathPara,

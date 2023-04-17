@@ -175,20 +175,36 @@
             },
             {
               "type": "macro",
-              "content": "emph",
+              "content": "subsection",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
-                      "type": "string",
-                      "content": "Italic"
+                      "type": "macro",
+                      "content": "emph",
+                      "args": [
+                        {
+                          "type": "argument",
+                          "openMark": "{",
+                          "closeMark": "}",
+                          "content": [
+                            {
+                              "type": "string",
+                              "content": "Italic"
+                            }
+                          ]
+                        }
+                      ]
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
-              ]
+              ],
+              "_renderInfo": {
+                "breakAround": true
+              }
             },
             {
               "type": "parbreak"
@@ -323,8 +339,32 @@
               "type": "parbreak"
             },
             {
-              "type": "string",
-              "content": "red text"
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "FF0000"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "red text"
+                  }
+                ]
+              ]
             },
             {
               "type": "parbreak"
@@ -356,8 +396,129 @@
               "type": "parbreak"
             },
             {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "macro",
+              "content": "href",
+              "args": [
+                {
+                  "type": "argument",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "https://hyperlink.com/"
+                    }
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
+                },
+                {
+                  "type": "argument",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "hyperlink"
+                    }
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
+                }
+              ]
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "macro",
+              "content": "subsection",
+              "args": [
+                {
+                  "type": "argument",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "Data Preparation"
+                    }
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
+                }
+              ],
+              "_renderInfo": {
+                "breakAround": true
+              }
+            },
+            {
+              "type": "parbreak"
+            },
+            {
+              "type": "parbreak"
+            },
+            {
               "type": "string",
-              "content": ""
+              "content": "All data preparation steps and statistical analyses were performed in R "
+            },
+            {
+              "type": "macro",
+              "content": "parencites",
+              "args": [
+                {
+                  "type": "argument",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "RCore Team2019"
+                    }
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
+                }
+              ]
+            },
+            {
+              "type": "string",
+              "content": " and can be retrieved from the OSF page: "
+            },
+            {
+              "type": "macro",
+              "content": "href",
+              "args": [
+                {
+                  "type": "argument",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "https://osf.io/twg9r/"
+                    }
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
+                },
+                {
+                  "type": "argument",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "osf.io/twg9r/"
+                    }
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
+                }
+              ]
             },
             {
               "type": "parbreak"

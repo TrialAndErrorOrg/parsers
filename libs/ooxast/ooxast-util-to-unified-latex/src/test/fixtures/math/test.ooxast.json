@@ -1613,6 +1613,22 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "000000",
+                            "w:themeColor": "text1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:t",
                       "attributes": {},
                       "children": [
@@ -1687,6 +1703,22 @@
                   "name": "w:r",
                   "attributes": {},
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "000000",
+                            "w:themeColor": "text1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "w:t",

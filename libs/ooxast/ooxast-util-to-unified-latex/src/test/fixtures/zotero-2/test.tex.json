@@ -136,6 +136,52 @@
       "type": "parbreak"
     },
     {
+      "type": "macro",
+      "content": "addbibresource",
+      "args": [
+        {
+          "type": "argument",
+          "openMark": "{",
+          "closeMark": "}",
+          "content": [
+            {
+              "type": "string",
+              "content": "bibliography.bib"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
+      "type": "environment",
+      "env": "filecontents",
+      "content": [
+        {
+          "type": "string",
+          "content": "@article{bib0,\n    author      = {undefined, A. U. T. H. O. R.},\n    date        = {2020}\n}\n\n\n@article{bib1,\n    author      = {undefined, A. U. T. H. O. R.},\n    date        = {2014}\n}\n\n\n@article{CSL_BIBLIOGRAPHYAnderson2019,\n    title       = {On the automaticity of attentional orienting to threatening stimuli},\n    author      = {CSL_BIBLIOGRAPHYAnderson, A. D. D. I. N. ZOTERO_BIBL {\"uncited\",],\"omitted\",],\"custom\",]} and A., B. and Britton, M. K.},\n    url         = {https://doi.org/10.1037/emo0000596},\n    doi         = {10.1037/emo0000596},\n    date        = {2019}\n}\n\n\n@article{Becker2017,\n    title       = {The capture of attention and gaze in the search for emotional photographic faces},\n    author      = {Becker, S. I. and Dutt, N. and Vromen, J. M. G. and Horstmann, G.},\n    number      = {1–3},\n    volume      = {25},\n    url         = {https://doi.org/10.1080/13506285.2017.1333182},\n    doi         = {10.1080/13506285.2017.1333182},\n    date        = {2017},\n    pages       = {241–261},\n    journal     = {Visual Cognition}\n}\n\n\n@article{Cane2009,\n    title       = {The addiction Stroop task: Examining the fast and slow effects of smoking and marijuana-related cues},\n    author      = {Cane, J. and Sharma, D. and Albery, I.},\n    number      = {5},\n    volume      = {23},\n    url         = {https://doi.org/10.1177/0269881108091253},\n    doi         = {10.1177/0269881108091253},\n    date        = {2009},\n    pages       = {510–519},\n    journal     = {Journal of Psychopharmacology}\n}\n\n\n@article{Carlson2020,\n    title       = {The stability and reliability of attentional bias measures in the dot-probe task: Evidence from both traditional mean bias scores and trial-level bias scores},\n    author      = {Carlson, J. M. and Fang, L.},\n    volume      = {13},\n    date        = {2020},\n    journal     = {Motivation and Emotion}\n}\n\n\n@article{Carlson2014,\n    title       = {Attending to the fear in your eyes: Facilitated orienting and delayed disengagement},\n    author      = {Carlson, J. M. and Reinke, K. S.},\n    number      = {8},\n    volume      = {28},\n    url         = {https://doi.org/10.1080/02699931.2014.885410},\n    doi         = {10.1080/02699931.2014.885410},\n    date        = {2014},\n    pages       = {1398–1406},\n    journal     = {Cognition and Emotion}\n}\n\n\n@article{Carretié2014,\n    title       = {Exogenous (automatic) attention to emotional stimuli: A review},\n    author      = {Carretié, L.},\n    number      = {4},\n    volume      = {14},\n    url         = {https://doi.org/10.3758/s13415-014-0270-2},\n    doi         = {10.3758/s13415-014-0270-2},\n    date        = {2014},\n    pages       = {1228–1258},\n    journal     = {Cognitive, Affective, & Behavioral Neuroscience}\n}\n\n\n@article{Clarke2015,\n    title       = {Examining fast and slow effects for alcohol and negative emotion in problem and social drinkers},\n    author      = {Clarke, S. P. and Sharma, D. and Salter, D.},\n    number      = {1},\n    volume      = {23},\n    url         = {https://doi.org/10.3109/16066359.2014.922961},\n    doi         = {10.3109/16066359.2014.922961},\n    date        = {2015},\n    pages       = {24–33},\n    journal     = {Addiction Research & Theory}\n}\n\n\n@article{Desimone1995,\n    title       = {Neural Mechanisms of Selective Visual Attention},\n    author      = {Desimone, R. and Duncan, J.},\n    date        = {1995}\n}\n\n\n@article{Duthoo2014,\n    title       = {The heterogeneous world of congruency sequence effects: An update},\n    author      = {Duthoo, W. and Abrahamse, E. L. and Braem, S. and Boehler, C. N. and Notebaert, W.},\n    volume      = {5},\n    url         = {https://doi.org/10.3389/fpsyg.2014.01001},\n    doi         = {10.3389/fpsyg.2014.01001},\n    date        = {2014},\n    journal     = {Frontiers in Psychology}\n}\n\n\n@article{Fox2001,\n    title       = {Do threatening stimuli draw or hold visual attention in subclinical anxiety?},\n    author      = {Fox, E. and Russo, R. and Bowles, R. and Dutton, K.},\n    number      = {4},\n    volume      = {130},\n    url         = {https://doi.org/10.1037/0096-3445.130.4.681},\n    doi         = {10.1037/0096-3445.130.4.681},\n    date        = {2001},\n    pages       = {681–700},\n    journal     = {Journal of Experimental Psychology: General}\n}\n\n\n@article{Gladwin2017,\n    title       = {Carryover effects in spatial attentional bias tasks and their relationship to subclinical PTSD symptoms},\n    author      = {Gladwin, T. E.},\n    number      = {4},\n    volume      = {23},\n    url         = {https://doi.org/10.1037/trm0000121},\n    doi         = {10.1037/trm0000121},\n    date        = {2017},\n    pages       = {303},\n    journal     = {Traumatology}\n}\n\n\n@article{Gladwin2017,\n    title       = {Carryover effects in spatial attentional bias tasks and their relationship to subclinical PTSD symptoms},\n    author      = {Gladwin, T. E.},\n    number      = {4},\n    volume      = {23},\n    url         = {https://doi.org/10.1037/trm0000121},\n    doi         = {10.1037/trm0000121},\n    date        = {2017},\n    pages       = {303–308},\n    journal     = {Traumatology}\n}\n\n\n@article{Gladwin2019,\n    title       = {Trial-to-trial carryover effects on spatial attentional bias},\n    author      = {Gladwin, T. E. and Figner, B.},\n    volume      = {196},\n    url         = {https://doi.org/10.1016/j.actpsy.2019.04.006},\n    doi         = {10.1016/j.actpsy.2019.04.006},\n    date        = {2019},\n    pages       = {51–55},\n    journal     = {Acta Psychologica}\n}\n\n\n@article{Gladwin2019,\n    title       = {Anticipation-specific reliability and trial-to-trial carryover of anticipatory attentional bias for threat},\n    author      = {Gladwin, T. E. and Figner, B. and Vink, M.},\n    number      = {7},\n    volume      = {31},\n    url         = {https://doi.org/10.1080/20445911.2019.1659801},\n    doi         = {10.1080/20445911.2019.1659801},\n    date        = {2019},\n    pages       = {750–759},\n    journal     = {Journal of Cognitive Psychology}\n}\n\n\n@article{Gladwin2020,\n    title       = {Attentional bias for negative expressions depends on previous target location: Replicable effect but unreliable measures},\n    author      = {Gladwin, T. E. and Jewiss, M. and Vink, M.},\n    url         = {https://doi.org/10.1080/20445911.2020.1805453},\n    doi         = {10.1080/20445911.2020.1805453},\n    date        = {2020},\n    pages       = {1–11},\n    journal     = {Journal of Cognitive Psychology}\n}\n\n\n@article{Gur2002,\n    title       = {A method for obtaining 3-dimensional facial expressions and its standardization for use in neurocognitive studies},\n    author      = {Gur, R. C. and Sara, R. and Hagendoorn, M. and Marom, O. and Hughett, P. and Macy, L. and Turner, T. and Bajcsy, R. and Posner, A. and Gur, R. E.},\n    number      = {2},\n    volume      = {115},\n    url         = {https://doi.org/10.1016/S0165-0270(02)00006-7},\n    doi         = {10.1016/S0165-0270(02)00006-7},\n    date        = {2002},\n    pages       = {137–143},\n    journal     = {Journal of Neuroscience Methods}\n}\n\n\n@article{Hedge2018,\n    title       = {The reliability paradox: Why robust cognitive tasks do not produce reliable individual differences},\n    author      = {Hedge, C. and Powell, G. and Sumner, P.},\n    number      = {3},\n    volume      = {50},\n    url         = {https://doi.org/10.3758/s13428-017-0935-1},\n    doi         = {10.3758/s13428-017-0935-1},\n    date        = {2018},\n    pages       = {1166–1186},\n    journal     = {Behavior Research Methods}\n}\n\n\n@article{Hedger2016,\n    title       = {Are visual threats prioritized without awareness? A critical review and meta-analysis involving 3 behavioral paradigms and 2696 observers},\n    author      = {Hedger, N. and Gray, K. L. H. and Garner, M. and Adams, W. J.},\n    number      = {9},\n    volume      = {142},\n    url         = {https://doi.org/10.1037/bul0000054},\n    doi         = {10.1037/bul0000054},\n    date        = {2016},\n    pages       = {934–968},\n    journal     = {Psychological Bulletin}\n}\n\n\n@article{Hill2016,\n    title       = {Exploring Carry-Over Effects to Elucidate Attention Bias Modification’s Mixed Results},\n    author      = {Hill, M. and Duval, E.},\n    url         = {https://doi.org/10.22186/jyi.31.3.9-14},\n    doi         = {10.22186/jyi.31.3.9-14},\n    date        = {2016},\n    journal     = {Journal of Young Investigators}\n}\n\n\n@article{Ho2019,\n    title       = {Moving beyond P values: Data analysis with estimation graphics},\n    author      = {Ho, J. and Tumkaya, T. and Aryal, S. and Choi, H. and Claridge-Chang, A.},\n    number      = {7},\n    volume      = {16},\n    url         = {https://doi.org/10.1038/s41592-019-0470-3},\n    doi         = {10.1038/s41592-019-0470-3},\n    date        = {2019},\n    pages       = {565–566},\n    journal     = {Nature Methods}\n}\n\n\n@article{Imhoff2019,\n    title       = {Identification and location tasks rely on different mental processes: A diffusion model account of validity effects in spatial cueing paradigms with emotional stimuli},\n    author      = {Imhoff, R. and Lange, J. and Germar, M.},\n    number      = {2},\n    volume      = {33},\n    url         = {https://doi.org/10.1080/02699931.2018.1443433},\n    doi         = {10.1080/02699931.2018.1443433},\n    date        = {2019},\n    pages       = {231–244},\n    journal     = {Cognition and Emotion}\n}\n\n\n@article{Kruijt2016,\n    title       = {Capturing Dynamics of Biased Attention: Are New Attention Variability Measures the Way Forward?},\n    author      = {Kruijt, A.-W. and Field, A. P. and Fox, E.},\n    number      = {11},\n    volume      = {11},\n    url         = {https://doi.org/10.1371/journal.pone.0166600},\n    doi         = {10.1371/journal.pone.0166600},\n    date        = {2016},\n    pages       = {0166600},\n    journal     = {PLOS ONE}\n}\n\n\n@article{Kruijt2018,\n    title       = {A Meta-Analysis of Bias at Baseline in RCTs of Attention Bias Modification: No Evidence for Dot-Probe Bias Towards Threat in Clinical Anxiety and PTSD},\n    author      = {Kruijt, A.-W. and Parsons, S. and Fox, E.},\n    volume      = {11},\n    date        = {2018},\n    journal     = {Journal of Abnormal Psychology}\n}\n\n\n@report{Lang2008,\n    title       = {International affective picture system (IAPS): Affective ratings of pictures and instruction manual},\n    author      = {Lang, P.},\n    url         = {https://ci.nii.ac.jp/naid/20001061266/},\n    date        = {2008}\n}\n\n\n@book{Lundqvist1998,\n    title       = {The Karolinska Directed Emotional Faces (KDEF},\n    author      = {Lundqvist, Flykt and A. and Ohman, A.},\n    publisher   = {Department of Neurosciences Karolinska Hospital},\n    place       = {Stockholm},\n    date        = {1998}\n}\n\n\n@article{MacLeod1986,\n    title       = {Attentional bias in emotional disorders},\n    author      = {MacLeod, C. and Mathews, A. and Tata, P.},\n    number      = {1},\n    volume      = {95},\n    url         = {https://doi.org/10.1037/0021-843X.95.1.15},\n    doi         = {10.1037/0021-843X.95.1.15},\n    date        = {1986},\n    pages       = {15–20},\n    journal     = {Journal of Abnormal Psychology}\n}\n\n\n@article{Mogg1998,\n    title       = {A cognitive-motivational analysis of anxiety},\n    author      = {Mogg, K. and Bradley, B. P.},\n    number      = {9},\n    volume      = {36},\n    url         = {https://doi.org/10.1016/S0005-7967(98)00063-1},\n    doi         = {10.1016/S0005-7967(98)00063-1},\n    date        = {1998},\n    pages       = {809–848},\n    journal     = {Behaviour Research and Therapy}\n}\n\n\n@article{Mogg2017,\n    title       = {Attention Bias Modification (ABM): Review of Effects of Multisession ABM Training on Anxiety and Threat-Related Attention in High-Anxious Individuals},\n    author      = {Mogg, K. and Waters, A. M. and Bradley, B. P.},\n    number      = {4},\n    volume      = {5},\n    url         = {https://doi.org/10.1177/2167702617696359},\n    doi         = {10.1177/2167702617696359},\n    date        = {2017},\n    pages       = {698–717},\n    journal     = {Clinical Psychological Science}\n}\n\n\n@article{Panksepp2011,\n    title       = {What is Basic about Basic Emotions? Lasting Lessons from Affective Neuroscience},\n    author      = {Panksepp, J. and Watt, D.},\n    number      = {4},\n    volume      = {3},\n    url         = {https://doi.org/10.1177/1754073911410741},\n    doi         = {10.1177/1754073911410741},\n    date        = {2011},\n    pages       = {387–396},\n    journal     = {Emotion Review}\n}\n\n\n@article{Posner1985,\n    title       = {Inhibition of return: Neural basis and function},\n    author      = {Posner, M. I. and Rafal, R. D. and Choate, L. S. and Vaughan, J.},\n    number      = {3},\n    volume      = {2},\n    url         = {https://doi.org/10.1080/02643298508252866},\n    doi         = {10.1080/02643298508252866},\n    date        = {1985},\n    pages       = {211–228},\n    journal     = {Cognitive Neuropsychology}\n}\n\n\n@article{Schmukle2005,\n    title       = {Unreliability of the dot probe task},\n    author      = {Schmukle, S. C.},\n    number      = {7},\n    volume      = {19},\n    url         = {https://doi.org/10.1002/per.554},\n    doi         = {10.1002/per.554},\n    date        = {2005},\n    pages       = {595–605},\n    journal     = {European Journal of Personality}\n}\n\n\n@article{Schubö2006,\n    title       = {Detecting emotional faces and features in a visual search paradigm: Are faces special?},\n    author      = {Schubö, A. and Gendolla, G. H. E. and Meinecke, C. and Abele, A. E.},\n    number      = {2},\n    volume      = {6},\n    url         = {https://doi.org/10.1037/1528-3542.6.2.246},\n    doi         = {10.1037/1528-3542.6.2.246},\n    date        = {2006},\n    pages       = {246–256},\n    journal     = {Emotion}\n}\n\n\n@article{Staugaard2009,\n    title       = {Reliability of two versions of the dot-probe task using photographic faces},\n    author      = {Staugaard, S. R.},\n    number      = {3},\n    volume      = {51},\n    date        = {2009},\n    pages       = {339–350},\n    journal     = {Psychological Science Quarterly}\n}\n\n\n@article{Waters2005,\n    title       = {Generalizability of carry-over effects in the emotional Stroop task},\n    author      = {Waters, A. J. and Sayette, M. A. and Franken, I. H. A. and Schwartz, J. E.},\n    number      = {6},\n    volume      = {43},\n    url         = {https://doi.org/10.1016/j.brat.2004.06.003},\n    doi         = {10.1016/j.brat.2004.06.003},\n    date        = {2005},\n    pages       = {715–732},\n    journal     = {Behaviour Research and Therapy}\n}\n\n\n@article{Wilson2007,\n    title       = {Carry-over effects of smoking cue exposure on working memory performance},\n    author      = {Wilson, S. J. and Sayette, M. A. and Fiez, J. A. and Brough, E.},\n    number      = {5},\n    volume      = {9},\n    url         = {https://doi.org/10.1080/14622200701243144},\n    doi         = {10.1080/14622200701243144},\n    date        = {2007},\n    pages       = {613–619},\n    journal     = {Nicotine & Tobacco Research}\n}\n\n\n@article{Zvielli2015,\n    title       = {Temporal Dynamics of Attentional Bias},\n    author      = {Zvielli, A. and Bernstein, A. and Koster, E. H. W.},\n    number      = {5},\n    volume      = {3},\n    url         = {https://doi.org/10.1177/2167702614551572},\n    doi         = {10.1177/2167702614551572},\n    date        = {2015},\n    pages       = {772–788},\n    journal     = {Clinical Psychological Science}\n}"
+        }
+      ],
+      "args": [
+        {
+          "type": "argument",
+          "content": [
+            {
+              "type": "string",
+              "content": "bibliography.bib"
+            }
+          ],
+          "openMark": "{",
+          "closeMark": "}"
+        }
+      ]
+    },
+    {
+      "type": "parbreak"
+    },
+    {
       "type": "environment",
       "env": "document",
       "content": [
@@ -173,8 +219,32 @@
               "type": "parbreak"
             },
             {
-              "type": "string",
-              "content": "Carryover Effects for Threat in the Dot-Probe Task"
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "Carryover Effects for Threat in the Dot-Probe Task"
+                  }
+                ]
+              ]
             },
             {
               "type": "parbreak"
@@ -253,7 +323,39 @@
             },
             {
               "type": "string",
-              "content": " of threat – greater congruency effects on trials following a congruent trial relative to trials following an incongruent trial. "
+              "content": " of threat – greater congruency effects on trials "
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "following "
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "string",
+              "content": "a congruent trial relative to trials following an incongruent trial. "
             },
             {
               "type": "string",
@@ -443,20 +545,116 @@
               "type": "parbreak"
             },
             {
-              "type": "string",
-              "content": "How is attentional bias to threat influenced by recent events? "
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "How is attentional bias to threat influenced by recent events? "
+                  }
+                ]
+              ]
             },
             {
-              "type": "string",
-              "content": "In the current study, we tested whether bias to threat (in the dot-probe task) is greater when threat cues recently appeared in a target location, relative to when they appeared in a non-target location (otherwise known as a carryover effect for threat). "
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "In the current study, we tested whether bias to threat (in the dot-probe task) is greater when threat cues recently appeared in a target location, relative to when they appeared in a non-target location (otherwise known as a carryover effect for threat). "
+                  }
+                ]
+              ]
             },
             {
-              "type": "string",
-              "content": "While we did not find carryover effects for threat, we suspect they are possible in other paradigms and that they exist in real-life scenarios. "
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "While we did not find carryover effects for threat, we suspect they are possible in other paradigms and that they exist in real-life scenarios. "
+                  }
+                ]
+              ]
             },
             {
-              "type": "string",
-              "content": "Carryover effects for threat in the dot-probe task are not likely to influence congruency effects."
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "Carryover effects for threat in the dot-probe task are not likely to influence congruency effects."
+                  }
+                ]
+              ]
             },
             {
               "type": "parbreak"
@@ -506,14 +704,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gladwin2017, Gladwin2017, Gladwin2019, Gladwin2020, Gladwin2019a"
+                      "content": "[object Object], [object Object], [object Object], [object Object], [object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -601,18 +799,50 @@
             },
             {
               "type": "string",
-              "content": "Threatening stimuli like angry and fearful facial expressions of emotion often “beat-out” neutral or innocuous objects "
+              "content": "Threatening stimuli like "
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "angry and fearful facial "
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "string",
+              "content": "expressions of emotion often “beat-out” neutral or innocuous objects "
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Becker2017, Schubö2006"
+                      "content": "[object Object], [object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -626,14 +856,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Desimone1995"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -651,14 +881,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Anderson2019"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -682,14 +912,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "MacLeod1986"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -718,19 +948,43 @@
               "content": "Each cue is completely irrelevant to the current task demands. "
             },
             {
-              "type": "string",
-              "content": "And yet, the threatening cue biases attention to a greater extent than the neutral cue, as shown by faster response times (RTs) for congruent trials relative to incongruent trials (for reviews, see "
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "And yet, the threatening cue biases attention to a greater extent than the neutral cue, as shown by faster response times (RTs) for congruent trials relative to incongruent trials (for reviews, see "
+                  }
+                ]
+              ]
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Carretié2014, Imhoff2019"
+                      "content": "[object Object], [object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -739,8 +993,32 @@
               ]
             },
             {
-              "type": "string",
-              "content": ". "
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": ". "
+                  }
+                ]
+              ]
             },
             {
               "type": "string",
@@ -779,14 +1057,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Kruijt2018, Mogg2017"
+                      "content": "[object Object], [object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -800,14 +1078,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Schmukle2005, Staugaard2009"
+                      "content": "[object Object], [object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -825,31 +1103,52 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "for an explanation, see"
-                    }
-                  ],
-                  "openMark": "[",
-                  "closeMark": "]"
-                },
-                {
-                  "type": "argument",
-                  "content": [
-                    {
-                      "type": "string",
-                      "content": "Hedge2018"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
                   "closeMark": "}"
                 }
               ]
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "for an explanation, see"
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "string",
+              "content": " Hedge et al., 2018)"
             },
             {
               "type": "string",
@@ -861,14 +1160,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Zvielli2015"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -890,14 +1189,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Carlson2020, Kruijt2016"
+                      "content": "[object Object], [object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -951,18 +1250,46 @@
             },
             {
               "type": "string",
-              "content": "Such bias could impact the individual’s internal state "
+              "content": "Such bias could impact the "
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "individual’s internal state "
+                  }
+                ]
+              ]
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Panksepp2011"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -972,7 +1299,39 @@
             },
             {
               "type": "string",
-              "content": ", priming, or increase their association between the target and the threatening cue, which could subsequently cause them to be more biased towards threat in later trials. "
+              "content": ", priming,"
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": " or increase their association between the target and the threatening cue, which could subsequently cause "
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "string",
+              "content": "them to be more biased towards threat in later trials. "
             },
             {
               "type": "string",
@@ -980,14 +1339,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Carlson2014, Fox2001"
+                      "content": "[object Object], [object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -1005,14 +1364,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Cane2009, Clarke2015, Waters2005, Wilson2007"
+                      "content": "[object Object], [object Object], [object Object], [object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -1026,14 +1385,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gladwin2019, Gladwin2020, Gladwin2019a"
+                      "content": "[object Object], [object Object], [object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -1068,14 +1427,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gladwin2019"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -1095,7 +1454,35 @@
             },
             {
               "type": "string",
-              "content": "As for dot-probe studies, however, there is not yet a clear answer on this topic given the very limited number of studies. "
+              "content": "As for dot-probe studies,"
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": " however, there is not yet a clear answer on this topic given the very limited number of studies. "
+                  }
+                ]
+              ]
             },
             {
               "type": "string",
@@ -1103,14 +1490,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Hill2016"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -1128,14 +1515,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gladwin2017"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -1153,14 +1540,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gladwin2017"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -1174,14 +1561,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Hill2016"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -1231,26 +1618,82 @@
             },
             {
               "type": "string",
-              "content": "In the current study, we sought to test carryover effects for threat in the dot-probe task. "
+              "content": "In the current study, we sought to test "
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "carryover effects for threat in the "
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "string",
+              "content": "dot-probe task. "
             },
             {
               "type": "string",
               "content": "To test this question, we performed a secondary data analysis on two dot-probe experiments with fearful facial stimuli (Experiment 1) and threatening pictorial stimuli (Experiment 2; AUTHOR, 2020). "
             },
             {
-              "type": "string",
-              "content": "We consider fearful faces and pictorial images of threat to be threatening because a recent meta-analysis on threat detection examined both of them "
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "We consider fearful faces and pictorial images of threat to be threatening because a recent meta-analysis on threat detection examined both of them "
+                  }
+                ]
+              ]
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Hedger2016"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -1259,8 +1702,32 @@
               ]
             },
             {
-              "type": "string",
-              "content": ". "
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": ". "
+                  }
+                ]
+              ]
             },
             {
               "type": "string",
@@ -1268,14 +1735,25 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "parencites",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gladwin2019b, Gladwin2020a"
+                      "content": "Gladwin2019a"
+                    }
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
+                },
+                {
+                  "type": "argument",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "Gladwin2020a"
                     }
                   ],
                   "openMark": "{",
@@ -1285,11 +1763,11 @@
             },
             {
               "type": "string",
-              "content": ", we hypothesized that there would be such an influence "
+              "content": "(Gladwin et al., 2019, 2020)"
             },
             {
               "type": "string",
-              "content": "(as indicated by an interaction between previous trial congruency and current trial congruency). "
+              "content": ", we hypothesized that there would be such an influence (as indicated by an interaction between previous trial congruency and current trial congruency). "
             },
             {
               "type": "string",
@@ -1301,7 +1779,35 @@
             },
             {
               "type": "string",
-              "content": "On the other hand, if our hypothesis was not supported, we would conclude that the influence of carryover effects on congruency effects is negligible."
+              "content": "On the other hand, if our hypothesis was not supported, "
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "we would conclude that the influence of carryover effects on congruency effects is negligible."
+                  }
+                ]
+              ]
             },
             {
               "type": "parbreak"
@@ -1515,14 +2021,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Carlson2020"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -1575,14 +2081,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gur2002, Lundqvist1998"
+                      "content": "[object Object], [object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -1596,7 +2102,39 @@
             },
             {
               "type": "string",
-              "content": "Fearful faces were rated (1-9, unpleasant to pleasant) as more negative ("
+              "content": "Fearful faces were rated "
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "(1-9, unpleasant to pleasant) "
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "string",
+              "content": "as more negative ("
             },
             {
               "type": "macro",
@@ -1725,25 +2263,77 @@
               "content": " = .005, "
             },
             {
-              "type": "macro",
-              "content": "emph",
-              "args": [
+              "type": "group",
+              "content": [
                 {
-                  "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
                     {
-                      "type": "string",
-                      "content": "d"
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
                     }
                   ]
-                }
+                },
+                [
+                  {
+                    "type": "macro",
+                    "content": "emph",
+                    "args": [
+                      {
+                        "type": "argument",
+                        "openMark": "{",
+                        "closeMark": "}",
+                        "content": [
+                          {
+                            "type": "string",
+                            "content": "d"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": " = 1.48"
+                  }
+                ]
               ]
             },
             {
               "type": "string",
-              "content": " = 1.48. "
+              "content": ". "
             },
             {
               "type": "string",
@@ -1757,20 +2347,36 @@
             },
             {
               "type": "macro",
-              "content": "textbf",
+              "content": "section",
               "args": [
                 {
                   "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
                   "content": [
                     {
-                      "type": "string",
-                      "content": "[Insert Figure 1 here]"
+                      "type": "macro",
+                      "content": "textbf",
+                      "args": [
+                        {
+                          "type": "argument",
+                          "openMark": "{",
+                          "closeMark": "}",
+                          "content": [
+                            {
+                              "type": "string",
+                              "content": "[Insert Figure 1 here]"
+                            }
+                          ]
+                        }
+                      ]
                     }
-                  ]
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
                 }
-              ]
+              ],
+              "_renderInfo": {
+                "breakAround": true
+              }
             },
             {
               "type": "parbreak"
@@ -1888,19 +2494,111 @@
             },
             {
               "type": "string",
-              "content": "All trials with an incorrect response (2.2% of trials) or a response time outside of 3 standard deviations from the individual-wise and condition means were removed from all RT analyses (0.6% of trials). "
+              "content": "All trials with an incorrect response (2.2% of trials) or a response time outside of 3 standard deviations from "
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "the individual-wise and condition means "
+                  }
+                ]
+              ]
             },
             {
               "type": "string",
-              "content": "Attentional bias was measured by subtracting mean RTs for congruent trials from incongruent trials. "
+              "content": "were removed from all RT analyses (0.6% of trials). "
+            },
+            {
+              "type": "string",
+              "content": "Attentional bias was measured by subtracting "
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "mean"
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "string",
+              "content": " RTs for congruent trials from incongruent trials. "
             },
             {
               "type": "string",
               "content": "Positive values indicate the level of attentional bias for fearful faces. "
             },
             {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "All analyses were not pre-registered but were pre-planned"
+                  }
+                ]
+              ]
+            },
+            {
               "type": "string",
-              "content": "All analyses were not pre-registered but were pre-planned. "
+              "content": ". "
             },
             {
               "type": "string",
@@ -2135,19 +2833,43 @@
               "content": "The location of the fearful face and the target could repeat from trial to trial, so we further separated carryover effects by target location repetition. "
             },
             {
-              "type": "string",
-              "content": "We examined target location repetition for two reasons: (a) it is an exploratory approach to analyzing carryover effects and (b) previous studies on carryover effects "
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "We examined target location repetition for two reasons: (a) it is an exploratory approach to analyzing carryover effects and (b) previous studies on carryover effects "
+                  }
+                ]
+              ]
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gladwin2019a"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -2156,12 +2878,100 @@
               ]
             },
             {
-              "type": "string",
-              "content": " have deliberately prevented cue and target locations repetitions trial-to-trial. "
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": " have deliberately prevented cue and target locations repetitions trial-to-trial. "
+                  }
+                ]
+              ]
             },
             {
               "type": "string",
-              "content": "We tested for the presence of carryover effects by conducting a 2 × 2 × 2 Generalized Linear Mixed Model (GLMM) with the random effect of subject and the fixed effects of current trial congruency (congruent or incongruent), previous trial congruency (pre-congruent or pre-incongruent) and target location repetition (repeated or non-repeated) on single trial RTs using a Gamma probability distribution with a log link, which accounts for the slightly positive skew of the data"
+              "content": "We tested for the presence of carryover effects by conducting a 2 × 2 × 2 Generalized Linear Mixed Model (GLMM) "
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "with the random effect of subject"
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "string",
+              "content": " and the fixed effects of current trial congruency (congruent or incongruent), previous trial congruency (pre-congruent or pre-incongruent) and target location repetition (repeated or non-repeated) on "
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "single trial"
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "string",
+              "content": " RTs using a Gamma probability distribution with a log link, which accounts for the slightly positive skew of the data"
             },
             {
               "type": "macro",
@@ -2548,14 +3358,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gladwin2019a"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -2761,6 +3571,47 @@
               "content": "< .001) wherein RTs were faster for non-repeated target locations ("
             },
             {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "macro",
+                    "content": "emph",
+                    "args": [
+                      {
+                        "type": "argument",
+                        "openMark": "{",
+                        "closeMark": "}",
+                        "content": [
+                          {
+                            "type": "string",
+                            "content": "M"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              ]
+            },
+            {
               "type": "macro",
               "content": "emph",
               "args": [
@@ -2771,7 +3622,7 @@
                   "content": [
                     {
                       "type": "string",
-                      "content": "M "
+                      "content": " "
                     }
                   ]
                 }
@@ -2803,6 +3654,47 @@
               "content": "= 2.32) relative to repeated locations ("
             },
             {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "macro",
+                    "content": "emph",
+                    "args": [
+                      {
+                        "type": "argument",
+                        "openMark": "{",
+                        "closeMark": "}",
+                        "content": [
+                          {
+                            "type": "string",
+                            "content": "M"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              ]
+            },
+            {
               "type": "macro",
               "content": "emph",
               "args": [
@@ -2813,7 +3705,7 @@
                   "content": [
                     {
                       "type": "string",
-                      "content": "M "
+                      "content": " "
                     }
                   ]
                 }
@@ -2976,7 +3868,39 @@
             },
             {
               "type": "string",
-              "content": "Meanwhile, for repeated target location there was no statistically significant difference in RTs between trials where the previous trial was congruent ("
+              "content": "Meanwhile, for repeated target location there was "
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "no statistically significant difference "
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "string",
+              "content": "in RTs between trials where the previous trial was congruent ("
             },
             {
               "type": "macro",
@@ -3162,11 +4086,131 @@
             },
             {
               "type": "string",
-              "content": "We followed up the GLMM approach with a Bayesian analysis. "
+              "content": "We followed up the GLMM approach with a Bayesian analysis"
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": ". "
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "Given that"
+                  }
+                ]
+              ]
             },
             {
               "type": "string",
-              "content": "Given that there were no clear prior probabilities based on previous research, a diffuse (or uninformative) prior was used in SPSS to quantify evidence for the null hypothesis that there is no carryover effect for threat. "
+              "content": " "
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "there were no clear prior probabilities based on previous research, a diffuse (or uninformative) prior was used"
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "string",
+              "content": " "
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "in SPSS "
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "string",
+              "content": "to quantify evidence for the null hypothesis that there is no carryover effect for threat. "
             },
             {
               "type": "string",
@@ -3214,14 +4258,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Lang2008"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -3239,14 +4283,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Carlson2020"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -3450,14 +4494,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Lang2008"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -3509,8 +4553,36 @@
                   "type": "argument",
                   "content": [
                     {
+                      "type": "group",
+                      "content": [
+                        {
+                          "type": "macro",
+                          "content": "color",
+                          "args": [
+                            {
+                              "type": "argument",
+                              "openMark": "{",
+                              "closeMark": "}",
+                              "content": [
+                                {
+                                  "type": "string",
+                                  "content": "4472C4"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        [
+                          {
+                            "type": "string",
+                            "content": "Outlier RT trials were removed from all analyses "
+                          }
+                        ]
+                      ]
+                    },
+                    {
                       "type": "string",
-                      "content": "Outlier RT trials were removed from all analyses (0.5% of trials). "
+                      "content": "(0.5% of trials). "
                     },
                     {
                       "type": "string",
@@ -3866,7 +4938,35 @@
                     },
                     {
                       "type": "string",
-                      "content": "= .92) significant (see Figure 2D). "
+                      "content": "= .92) significant "
+                    },
+                    {
+                      "type": "group",
+                      "content": [
+                        {
+                          "type": "macro",
+                          "content": "color",
+                          "args": [
+                            {
+                              "type": "argument",
+                              "openMark": "{",
+                              "closeMark": "}",
+                              "content": [
+                                {
+                                  "type": "string",
+                                  "content": "4472C4"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        [
+                          {
+                            "type": "string",
+                            "content": "(see Figure 2D). "
+                          }
+                        ]
+                      ]
                     },
                     {
                       "type": "string",
@@ -3901,7 +5001,7 @@
             },
             {
               "type": "macro",
-              "content": "subsection",
+              "content": "section",
               "args": [
                 {
                   "type": "argument",
@@ -3978,14 +5078,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gladwin2019a, Hill2016"
+                      "content": "[object Object], [object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -4006,27 +5106,99 @@
               "content": "Even for non-repeating target location trials (see Figure 1B), we found no such interaction. "
             },
             {
-              "type": "string",
-              "content": "There are multiple potential explanations for faster responses on non-repeating target location trials. "
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "There are multiple potential explanations for faster responses on non-repeating target location trials. "
+                  }
+                ]
+              ]
             },
             {
-              "type": "string",
-              "content": "One is that participants strategically attend away from the emotional cue. "
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "One is that participants strategically attend away from the emotional cue. "
+                  }
+                ]
+              ]
             },
             {
-              "type": "string",
-              "content": "Another possibility is that participants avoid previous target locations, as explained by inhibition of return "
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "Another possibility is that participants avoid previous target locations, as explained by inhibition of return "
+                  }
+                ]
+              ]
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Posner1985"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -4035,8 +5207,32 @@
               ]
             },
             {
-              "type": "string",
-              "content": ". "
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": ". "
+                  }
+                ]
+              ]
             },
             {
               "type": "string",
@@ -4054,18 +5250,50 @@
             },
             {
               "type": "string",
-              "content": "The lack of carryover effects we observed is consistent with previous statistical findings from other dot-probe studies "
+              "content": "The lack of carryover effects we observed is consistent with "
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "previous statistical findings from other dot"
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "string",
+              "content": "-probe studies "
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gladwin2017, Hill2016"
+                      "content": "[object Object], [object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -4075,14 +5303,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Hill2016"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -4096,14 +5324,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Hill2016"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -4131,14 +5359,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Duthoo2014"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -4160,15 +5388,91 @@
             },
             {
               "type": "string",
-              "content": "Similarly, in the arrow flanker task, conflict is created on incongruent trials; the two arrows to the left and two to the right point in the direction opposite to the direction of the center target arrow, like this: < < > < <. "
+              "content": "Similarly, in the arrow flanker task, c"
             },
             {
-              "type": "string",
-              "content": "On congruent trials, all five of the arrows point in the same direction. "
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "onflict is created on incongruent trials; the two arrows to the left and two to the right point in the direction opposite to the direction of the center target arrow, like this: < < > < <. "
+                  }
+                ]
+              ]
             },
             {
-              "type": "string",
-              "content": "However, in the dot-probe task, the target does not co-occur with the conflicting cue (they are shown in different displays); they are separated in time, and they are visually distinct categories of stimuli because the cue is a face, and the target is simply a single dot. "
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "On congruent trials, all five of the arrows point in the same direction. "
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "However, in the dot-probe task, the target does not co-occur with the conflicting cue (they are shown in different displays); they are separated in time, and they are visually distinct categories of stimuli because the cue is a face, and the target is simply a single dot. "
+                  }
+                ]
+              ]
             },
             {
               "type": "string",
@@ -4201,7 +5505,7 @@
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gladwin2019b, Gladwin2020a"
+                      "content": "Gladwin2019a, Gladwin2020a"
                     }
                   ],
                   "openMark": "{",
@@ -4211,15 +5515,15 @@
             },
             {
               "type": "string",
+              "content": "Gladwin et al. (2019, 2020)"
+            },
+            {
+              "type": "string",
               "content": ", they presented their cues until the participants made a response, whereas we only presented our cues for 100 ms "
             },
             {
               "type": "string",
-              "content": "(Experiment 1) or 500 ms "
-            },
-            {
-              "type": "string",
-              "content": "(Experiment 2). "
+              "content": "(Experiment 1) or 500 ms (Experiment 2). "
             },
             {
               "type": "string",
@@ -4227,14 +5531,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Fox2001"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -4259,13 +5563,17 @@
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gladwin2019b, Gladwin2020a"
+                      "content": "Gladwin2019a, Gladwin2020a"
                     }
                   ],
                   "openMark": "{",
                   "closeMark": "}"
                 }
               ]
+            },
+            {
+              "type": "string",
+              "content": "Gladwin et al. (2019, 2020)"
             },
             {
               "type": "string",
@@ -4277,14 +5585,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Mogg1998"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -4302,7 +5610,7 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "parencites",
               "args": [
                 {
                   "type": "argument",
@@ -4319,6 +5627,10 @@
             },
             {
               "type": "string",
+              "content": "(Gladwin et al., 2020)"
+            },
+            {
+              "type": "string",
               "content": ". "
             },
             {
@@ -4327,20 +5639,35 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "parencites",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Gillich2019, Moorselaar2019"
+                      "content": "Gillich2019"
+                    }
+                  ],
+                  "openMark": "{",
+                  "closeMark": "}"
+                },
+                {
+                  "type": "argument",
+                  "content": [
+                    {
+                      "type": "string",
+                      "content": "Moorselaar2019"
                     }
                   ],
                   "openMark": "{",
                   "closeMark": "}"
                 }
               ]
+            },
+            {
+              "type": "string",
+              "content": "(Gillich et al., 2019; van Moorselaar & Slagter, 2019)"
             },
             {
               "type": "string",
@@ -4495,20 +5822,7 @@
                 },
                 {
                   "type": "macro",
-                  "content": "includegraphics",
-                  "args": [
-                    {
-                      "type": "argument",
-                      "openMark": "{",
-                      "closeMark": "}",
-                      "content": [
-                        {
-                          "type": "string",
-                          "content": "media/image1.png"
-                        }
-                      ]
-                    }
-                  ]
+                  "content": "includegraphics"
                 }
               ]
             },
@@ -4558,20 +5872,7 @@
                 },
                 {
                   "type": "macro",
-                  "content": "includegraphics",
-                  "args": [
-                    {
-                      "type": "argument",
-                      "openMark": "{",
-                      "closeMark": "}",
-                      "content": [
-                        {
-                          "type": "string",
-                          "content": "media/image2.png"
-                        }
-                      ]
-                    }
-                  ]
+                  "content": "includegraphics"
                 }
               ]
             },
@@ -4621,20 +5922,7 @@
                 },
                 {
                   "type": "macro",
-                  "content": "includegraphics",
-                  "args": [
-                    {
-                      "type": "argument",
-                      "openMark": "{",
-                      "closeMark": "}",
-                      "content": [
-                        {
-                          "type": "string",
-                          "content": "media/image2.png"
-                        }
-                      ]
-                    }
-                  ]
+                  "content": "includegraphics"
                 }
               ]
             },
@@ -4684,20 +5972,7 @@
                 },
                 {
                   "type": "macro",
-                  "content": "includegraphics",
-                  "args": [
-                    {
-                      "type": "argument",
-                      "openMark": "{",
-                      "closeMark": "}",
-                      "content": [
-                        {
-                          "type": "string",
-                          "content": "media/image3.png"
-                        }
-                      ]
-                    }
-                  ]
+                  "content": "includegraphics"
                 }
               ]
             },
@@ -4747,20 +6022,7 @@
                 },
                 {
                   "type": "macro",
-                  "content": "includegraphics",
-                  "args": [
-                    {
-                      "type": "argument",
-                      "openMark": "{",
-                      "closeMark": "}",
-                      "content": [
-                        {
-                          "type": "string",
-                          "content": "media/image4.png"
-                        }
-                      ]
-                    }
-                  ]
+                  "content": "includegraphics"
                 }
               ]
             },
@@ -4789,7 +6051,39 @@
             },
             {
               "type": "string",
-              "content": "(A) Examples of congruent and incongruent trials in Experiment 1. (B) On the left is an example of two congruent trials—note the target (dot) appears in the location of the fearful face on the previous trial (trial "
+              "content": "(A) Examples of congruent and incongruent trials in Experiment 1. (B) On the left is an"
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": " example of "
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "string",
+              "content": "two congruent trials—note the target (dot) appears in the location of the fearful face on the previous trial (trial "
             },
             {
               "type": "macro",
@@ -4893,20 +6187,7 @@
                 },
                 {
                   "type": "macro",
-                  "content": "includegraphics",
-                  "args": [
-                    {
-                      "type": "argument",
-                      "openMark": "{",
-                      "closeMark": "}",
-                      "content": [
-                        {
-                          "type": "string",
-                          "content": "media/image5.png"
-                        }
-                      ]
-                    }
-                  ]
+                  "content": "includegraphics"
                 }
               ]
             },
@@ -4935,28 +6216,108 @@
             },
             {
               "type": "string",
-              "content": "Results from Experiment 1 are shown in A and B, Experiment 2 in C and D ("
+              "content": "Results from Experiment 1 are shown in A and B, Experiment 2 in C and D "
             },
             {
-              "type": "macro",
-              "content": "emph",
-              "args": [
+              "type": "group",
+              "content": [
                 {
-                  "type": "argument",
-                  "openMark": "{",
-                  "closeMark": "}",
-                  "content": [
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
                     {
-                      "type": "string",
-                      "content": "n"
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
                     }
                   ]
-                }
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": "("
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "macro",
+                    "content": "emph",
+                    "args": [
+                      {
+                        "type": "argument",
+                        "openMark": "{",
+                        "closeMark": "}",
+                        "content": [
+                          {
+                            "type": "string",
+                            "content": "n"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              ]
+            },
+            {
+              "type": "group",
+              "content": [
+                {
+                  "type": "macro",
+                  "content": "color",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "4472C4"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                [
+                  {
+                    "type": "string",
+                    "content": " indicates participant, values are averages by participant)"
+                  }
+                ]
               ]
             },
             {
               "type": "string",
-              "content": " indicates participant, values are averages by participant). "
+              "content": ". "
             },
             {
               "type": "string",
@@ -4980,14 +6341,14 @@
             },
             {
               "type": "macro",
-              "content": "parencite",
+              "content": "textcite",
               "args": [
                 {
                   "type": "argument",
                   "content": [
                     {
                       "type": "string",
-                      "content": "Ho2019"
+                      "content": "[object Object]"
                     }
                   ],
                   "openMark": "{",
@@ -5060,6 +6421,10 @@
             },
             {
               "type": "parbreak"
+            },
+            {
+              "type": "string",
+              "content": "Anderson, B. A., & Britton, M. K. (2019). On the automaticity of attentional orienting to threatening stimuli. "
             },
             {
               "type": "macro",

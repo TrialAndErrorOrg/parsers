@@ -26,7 +26,7 @@ export interface Options {
   handlers?: { [handle: string]: Handle }
   /**
    * Whether to add a preamble and document environment
-   * 
+   *
    * @default true
    */
   document?: boolean

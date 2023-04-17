@@ -153,6 +153,14 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:pStyle",
+                      "attributes": {
+                        "w:val": "Heading 2"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
                       "name": "w:rPr",
                       "attributes": {},
                       "children": [
@@ -617,6 +625,21 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "FF0000"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:t",
                       "attributes": {},
                       "children": [
@@ -692,6 +715,15 @@
                       "children": [
                         {
                           "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "000000",
+                            "w:themeColor": "text1"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
                           "name": "w:bdr",
                           "attributes": {
                             "w:val": "single",
@@ -722,8 +754,8 @@
               "type": "element",
               "name": "w:p",
               "attributes": {
-                "w14:paraId": "3B32B320",
-                "w14:textId": "356F4524"
+                "w14:paraId": "638CE0AA",
+                "w14:textId": "39C7C6F6"
               },
               "children": [
                 {
@@ -747,12 +779,262 @@
                         },
                         {
                           "type": "element",
-                          "name": "w:bdr",
+                          "name": "w:lang",
                           "attributes": {
-                            "w:val": "single",
-                            "w:sz": "4",
-                            "w:space": "0",
-                            "w:color": "auto"
+                            "w:val": "en-US"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "000000",
+                            "w:themeColor": "text1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:tab",
+                      "attributes": {},
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "4028A428",
+                "w14:textId": "55729016"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "000000",
+                            "w:themeColor": "text1"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:lang",
+                          "attributes": {
+                            "w:val": "en-US"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:hyperlink",
+                  "attributes": {
+                    "r:id": "rId4",
+                    "w:history": "1"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:r",
+                      "attributes": {
+                        "w:rsidRPr": "007663ED"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rPr",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "w:rStyle",
+                              "attributes": {
+                                "w:val": "Hyperlink"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "w:lang",
+                              "attributes": {
+                                "w:val": "en-US"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:t",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "hyperlink"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "270E6D84",
+                "w14:textId": "6F8C2C67"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "000000",
+                            "w:themeColor": "text1"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:lang",
+                          "attributes": {
+                            "w:val": "en-US"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "11FC2A68",
+                "w14:textId": "77777777"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:pStyle",
+                      "attributes": {
+                        "w:val": "Heading2"
+                      },
+                      "children": []
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:noProof",
+                          "attributes": {},
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Data Preparation"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "6F90683F",
+                "w14:textId": "11F39274"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "000000",
+                            "w:themeColor": "text1"
                           },
                           "children": []
                         },
@@ -785,9 +1067,157 @@
                   "children": [
                     {
                       "type": "element",
-                      "name": "w:tab",
+                      "name": "w:rPr",
                       "attributes": {},
-                      "children": []
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "000000",
+                            "w:themeColor": "text1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "All data preparation steps and statistical analyses were performed in R "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "000000",
+                            "w:themeColor": "text1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:instrText",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"RCoreTeam2019\",\"itemData\":{\"author\":[{\"family\":\"RCore Team\"}],\"issued\":{\"date-parts\":[[\"2019\"]]}}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(R Core Team, 2019)\",\"plainCitation\":\"(R Core Team, 2019)\"},\"citationID\":\"CITE-1\"}"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "000000",
+                            "w:themeColor": "text1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " and can be retrieved from the OSF page: "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:hyperlink",
+                  "attributes": {
+                    "r:id": "rId5",
+                    "w:history": "1"
+                  },
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:r",
+                      "attributes": {
+                        "w:rsidRPr": "002F2D2B"
+                      },
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:rPr",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "w:rStyle",
+                              "attributes": {
+                                "w:val": "Hyperlink"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "w:noProof",
+                              "attributes": {},
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "w:lang",
+                              "attributes": {
+                                "w:val": "en-US"
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:t",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "osf.io/twg9r/"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   ]
                 }
@@ -797,8 +1227,8 @@
               "type": "element",
               "name": "w:sectPr",
               "attributes": {
-                "w:rsidR": "0094264E",
-                "w:rsidRPr": "00780E15"
+                "w:rsidR": "00F016FB",
+                "w:rsidRPr": "007663ED"
               },
               "children": [
                 {

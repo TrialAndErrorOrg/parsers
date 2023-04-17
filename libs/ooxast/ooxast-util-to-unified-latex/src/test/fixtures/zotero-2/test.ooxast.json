@@ -180,6 +180,22 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:t",
                       "attributes": {},
                       "children": [
@@ -523,7 +539,59 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": " of threat – greater congruency effects on trials following a congruent trial relative to trials following an incongruent trial. "
+                          "value": " of threat – greater congruency effects on trials "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "following "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "a congruent trial relative to trials following an incongruent trial. "
                         }
                       ]
                     }
@@ -1360,6 +1428,22 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:t",
                       "attributes": {},
                       "children": [
@@ -1376,6 +1460,22 @@
                   "name": "w:r",
                   "attributes": {},
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "w:t",
@@ -1396,6 +1496,22 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:t",
                       "attributes": {},
                       "children": [
@@ -1412,6 +1528,22 @@
                   "name": "w:r",
                   "attributes": {},
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "w:t",
@@ -2270,7 +2402,59 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Threatening stimuli like angry and fearful facial expressions of emotion often “beat-out” neutral or innocuous objects "
+                          "value": "Threatening stimuli like "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "angry and fearful facial "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "expressions of emotion often “beat-out” neutral or innocuous objects "
                         }
                       ]
                     }
@@ -2847,7 +3031,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Each cue is completely irrelevant to the current task demands. "
+                          "value": "Each cue is completely irrelevant to the current task demands.  "
                         }
                       ]
                     }
@@ -2858,6 +3042,22 @@
                   "name": "w:r",
                   "attributes": {},
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "w:t",
@@ -2878,6 +3078,22 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:fldChar",
                       "attributes": {
                         "w:fldCharType": "begin"
@@ -2891,6 +3107,22 @@
                   "name": "w:r",
                   "attributes": {},
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "w:instrText",
@@ -2911,6 +3143,22 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:fldChar",
                       "attributes": {
                         "w:fldCharType": "separate"
@@ -2924,6 +3172,22 @@
                   "name": "w:r",
                   "attributes": {},
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "w:t",
@@ -2944,6 +3208,22 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:fldChar",
                       "attributes": {
                         "w:fldCharType": "end"
@@ -2959,12 +3239,28 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:t",
                       "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
+                          "value": ".  "
                         }
                       ]
                     }
@@ -3412,7 +3708,59 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "(for an explanation, see Hedge et al., 2018)"
+                          "value": "("
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "for an explanation, see"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " Hedge et al., 2018)"
                         }
                       ]
                     }
@@ -3869,7 +4217,41 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Such bias could impact the individual’s internal state "
+                          "value": "Such bias could impact the "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "individual’s internal state "
                         }
                       ]
                     }
@@ -3968,7 +4350,59 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ", priming, or increase their association between the target and the threatening cue, which could subsequently cause them to be more biased towards threat in later trials. "
+                          "value": ", priming,"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " or increase their association between the target and the threatening cue, which could subsequently cause "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "them to be more biased towards threat in later trials. "
                         }
                       ]
                     }
@@ -4579,7 +5013,41 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "As for dot-probe studies, however, there is not yet a clear answer on this topic given the very limited number of studies. "
+                          "value": "As for dot-probe studies,"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " however, there is not yet a clear answer on this topic given the very limited number of studies. "
                         }
                       ]
                     }
@@ -5181,7 +5649,41 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "In the current study, we sought to test carryover effects for threat in the dot-probe task. "
+                          "value": "In the current study, we sought to test "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "carryover effects for threat in the "
                         }
                       ]
                     }
@@ -5199,7 +5701,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "To test this question, we performed a secondary data analysis on two dot-probe experiments with fearful facial stimuli (Experiment 1) and threatening pictorial stimuli (Experiment 2; AUTHOR, 2020). "
+                          "value": "dot-probe task. "
                         }
                       ]
                     }
@@ -5210,6 +5712,40 @@
                   "name": "w:r",
                   "attributes": {},
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "To test this question, we performed a secondary data analysis on two dot-probe experiments with fearful facial stimuli (Experiment 1) and threatening pictorial stimuli (Experiment 2; AUTHOR, 2020).  "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "w:t",
@@ -5230,6 +5766,22 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:fldChar",
                       "attributes": {
                         "w:fldCharType": "begin"
@@ -5243,6 +5795,22 @@
                   "name": "w:r",
                   "attributes": {},
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "w:instrText",
@@ -5263,6 +5831,22 @@
                   "name": "w:r",
                   "attributes": {},
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "w:fldChar",
@@ -5298,6 +5882,22 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:fldChar",
                       "attributes": {
                         "w:fldCharType": "end"
@@ -5311,6 +5911,22 @@
                   "name": "w:r",
                   "attributes": {},
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "w:t",
@@ -5354,7 +5970,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Gladwin2019\",\"itemData\":{\"author\":[{\"family\":\"Gladwin\"}],\"issued\":{\"date-parts\":[[\"2019\"]]}}},{\"id\":\"Gladwin2020\",\"itemData\":{\"author\":[{\"family\":\"Gladwin\"}],\"issued\":{\"date-parts\":[[\"2020\"]]}}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Gladwin et al., 2019, 2020)\",\"plainCitation\":\"(Gladwin et al., 2019, 2020)\"},\"citationID\":\"CITE-1\"}"
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Gladwin2019\",\"itemData\":{\"author\":[{\"family\":\"Gladwin\",\"given\":\"T. E.\"},{\"family\":\"Figner\",\"given\":\"B.\"}],\"title\":\"Trial-to-trial carryover effects on spatial attentional bias\",\"volume\":\"196\",\"type\":\"article-journal\",\"container-title\":\"Acta Psychologica\",\"issued\":{\"date-parts\":[[\"2019\"]]},\"page\":\"51–55\",\"URL\":\"https://doi.org/10.1016/j.actpsy.2019.04.006\",\"DOI\":\"10.1016/j.actpsy.2019.04.006\",\"id\":\"Gladwin2019\"}},{\"id\":\"Gladwin2020\",\"itemData\":{\"author\":[{\"family\":\"Gladwin\",\"given\":\"T. E.\"},{\"family\":\"Jewiss\",\"given\":\"M.\"},{\"family\":\"Vink\",\"given\":\"M.\"}],\"title\":\"Attentional bias for negative expressions depends on previous target location: Replicable effect but unreliable measures\",\"type\":\"article-journal\",\"container-title\":\"Journal of Cognitive Psychology\",\"issued\":{\"date-parts\":[[\"2020\"]]},\"page\":\"1–11\",\"URL\":\"https://doi.org/10.1080/20445911.2020.1805453\",\"DOI\":\"10.1080/20445911.2020.1805453\",\"id\":\"Gladwin2020\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Gladwin et al., 2019, 2020)\",\"plainCitation\":\"(Gladwin et al., 2019, 2020)\"},\"citationID\":\"CITE-1\"}"
                         }
                       ]
                     }
@@ -5390,25 +6006,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ", we hypothesized that there would be such an influence "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "(as indicated by an interaction between previous trial congruency and current trial congruency). "
+                          "value": ", we hypothesized that there would be such an influence (as indicated by an interaction between previous trial congruency and current trial congruency). "
                         }
                       ]
                     }
@@ -5462,7 +6060,41 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "On the other hand, if our hypothesis was not supported, we would conclude that the influence of carryover effects on congruency effects is negligible."
+                          "value": "On the other hand, if our hypothesis was not supported, "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "we would conclude that the influence of carryover effects on congruency effects is negligible."
                         }
                       ]
                     }
@@ -6391,7 +7023,59 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Fearful faces were rated (1-9, unpleasant to pleasant) as more negative ("
+                          "value": "Fearful faces were rated "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "(1-9, unpleasant to pleasant) "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "as more negative ("
                         }
                       ]
                     }
@@ -6712,6 +7396,15 @@
                           "name": "w:iCs",
                           "attributes": {},
                           "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
                         }
                       ]
                     },
@@ -6735,12 +7428,46 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:t",
                       "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": " = 1.48. "
+                          "value": " = 1.48"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ". "
                         }
                       ]
                     }
@@ -6779,6 +7506,14 @@
                   "name": "w:pPr",
                   "attributes": {},
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "w:pStyle",
+                      "attributes": {
+                        "w:val": "Heading 1"
+                      },
+                      "children": []
+                    },
                     {
                       "type": "element",
                       "name": "w:spacing",
@@ -7392,7 +8127,41 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "All trials with an incorrect response (2.2% of trials) or a response time outside of 3 standard deviations from the individual-wise and condition means were removed from all RT analyses (0.6% of trials). "
+                          "value": "All trials with an incorrect response (2.2% of trials) or a response time outside of 3 standard deviations from "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "the individual-wise and condition means "
                         }
                       ]
                     }
@@ -7410,7 +8179,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Attentional bias was measured by subtracting mean RTs for congruent trials from incongruent trials. "
+                          "value": "were removed from all RT analyses (0.6% of trials). "
                         }
                       ]
                     }
@@ -7428,7 +8197,41 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Positive values indicate the level of attentional bias for fearful faces. "
+                          "value": "Attentional bias was measured by subtracting "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "mean"
                         }
                       ]
                     }
@@ -7446,7 +8249,77 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "All analyses were not pre-registered but were pre-planned. "
+                          "value": " RTs for congruent trials from incongruent trials. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Positive values indicate the level of attentional bias for fearful faces.  "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "All analyses were not pre-registered but were pre-planned"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ". "
                         }
                       ]
                     }
@@ -8142,7 +9015,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "The location of the fearful face and the target could repeat from trial to trial, so we further separated carryover effects by target location repetition. "
+                          "value": "The location of the fearful face and the target could repeat from trial to trial, so we further separated carryover effects by target location repetition.  "
                         }
                       ]
                     }
@@ -8153,6 +9026,22 @@
                   "name": "w:r",
                   "attributes": {},
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "w:t",
@@ -8173,6 +9062,22 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:fldChar",
                       "attributes": {
                         "w:fldCharType": "begin"
@@ -8186,6 +9091,22 @@
                   "name": "w:r",
                   "attributes": {},
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "w:instrText",
@@ -8208,6 +9129,22 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:fldChar",
                       "attributes": {
                         "w:fldCharType": "separate"
@@ -8221,6 +9158,22 @@
                   "name": "w:r",
                   "attributes": {},
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "w:t",
@@ -8241,6 +9194,22 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:fldChar",
                       "attributes": {
                         "w:fldCharType": "end"
@@ -8254,6 +9223,22 @@
                   "name": "w:r",
                   "attributes": {},
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "w:t",
@@ -8279,7 +9264,111 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "We tested for the presence of carryover effects by conducting a 2 × 2 × 2 Generalized Linear Mixed Model (GLMM) with the random effect of subject and the fixed effects of current trial congruency (congruent or incongruent), previous trial congruency (pre-congruent or pre-incongruent) and target location repetition (repeated or non-repeated) on single trial RTs using a Gamma probability distribution with a log link, which accounts for the slightly positive skew of the data"
+                          "value": "We tested for the presence of carryover effects by conducting a 2 × 2 × 2 Generalized Linear Mixed Model (GLMM) "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "with the random effect of subject"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " and the fixed effects of current trial congruency (congruent or incongruent), previous trial congruency (pre-congruent or pre-incongruent) and target location repetition (repeated or non-repeated) on "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "single trial"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " RTs using a Gamma probability distribution with a log link, which accounts for the slightly positive skew of the data"
                         }
                       ]
                     }
@@ -8930,6 +10019,15 @@
                           "name": "w:i",
                           "attributes": {},
                           "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
                         }
                       ]
                     },
@@ -8940,7 +10038,38 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "M "
+                          "value": "M"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:i",
+                          "attributes": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " "
                         }
                       ]
                     }
@@ -9028,6 +10157,15 @@
                           "name": "w:i",
                           "attributes": {},
                           "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
                         }
                       ]
                     },
@@ -9038,7 +10176,38 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "M "
+                          "value": "M"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:i",
+                          "attributes": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " "
                         }
                       ]
                     }
@@ -9435,7 +10604,59 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Meanwhile, for repeated target location there was no statistically significant difference in RTs between trials where the previous trial was congruent ("
+                          "value": "Meanwhile, for repeated target location there was "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "no statistically significant difference "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "in RTs between trials where the previous trial was congruent ("
                         }
                       ]
                     }
@@ -9955,7 +11176,75 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "We followed up the GLMM approach with a Bayesian analysis. "
+                          "value": "We followed up the GLMM approach with a Bayesian analysis"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ". "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "Given that"
                         }
                       ]
                     }
@@ -9973,7 +11262,111 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Given that there were no clear prior probabilities based on previous research, a diffuse (or uninformative) prior was used in SPSS to quantify evidence for the null hypothesis that there is no carryover effect for threat. "
+                          "value": " "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "there were no clear prior probabilities based on previous research, a diffuse (or uninformative) prior was used"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "in SPSS "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "to quantify evidence for the null hypothesis that there is no carryover effect for threat. "
                         }
                       ]
                     }
@@ -11094,12 +12487,46 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:t",
                       "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "Outlier RT trials were removed from all analyses (0.5% of trials). "
+                          "value": "Outlier RT trials were removed from all analyses "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "(0.5% of trials). "
                         }
                       ]
                     }
@@ -11973,7 +13400,41 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "= .92) significant (see Figure 2D). "
+                          "value": "= .92) significant "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "(see Figure 2D). "
                         }
                       ]
                     }
@@ -12070,7 +13531,7 @@
                       "type": "element",
                       "name": "w:pStyle",
                       "attributes": {
-                        "w:val": "BodyText2"
+                        "w:val": "Heading 1"
                       },
                       "children": []
                     },
@@ -12429,7 +13890,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Even for non-repeating target location trials (see Figure 1B), we found no such interaction. "
+                          "value": "Even for non-repeating target location trials (see Figure 1B), we found no such interaction.  "
                         }
                       ]
                     }
@@ -12440,6 +13901,22 @@
                   "name": "w:r",
                   "attributes": {},
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "w:t",
@@ -12460,6 +13937,22 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:t",
                       "attributes": {},
                       "children": [
@@ -12476,6 +13969,22 @@
                   "name": "w:r",
                   "attributes": {},
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "w:t",
@@ -12496,6 +14005,22 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:fldChar",
                       "attributes": {
                         "w:fldCharType": "begin"
@@ -12509,6 +14034,22 @@
                   "name": "w:r",
                   "attributes": {},
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "w:instrText",
@@ -12531,6 +14072,22 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:fldChar",
                       "attributes": {
                         "w:fldCharType": "separate"
@@ -12544,6 +14101,22 @@
                   "name": "w:r",
                   "attributes": {},
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "w:t",
@@ -12564,6 +14137,22 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:fldChar",
                       "attributes": {
                         "w:fldCharType": "end"
@@ -12577,6 +14166,22 @@
                   "name": "w:r",
                   "attributes": {},
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "w:t",
@@ -12711,7 +14316,59 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "The lack of carryover effects we observed is consistent with previous statistical findings from other dot-probe studies "
+                          "value": "The lack of carryover effects we observed is consistent with "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "previous statistical findings from other dot"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "-probe studies "
                         }
                       ]
                     }
@@ -13219,7 +14876,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Similarly, in the arrow flanker task, conflict is created on incongruent trials; the two arrows to the left and two to the right point in the direction opposite to the direction of the center target arrow, like this: < < > < <. "
+                          "value": "Similarly, in the arrow flanker task, c"
                         }
                       ]
                     }
@@ -13230,6 +14887,56 @@
                   "name": "w:r",
                   "attributes": {},
                   "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "onflict is created on incongruent trials; the two arrows to the left and two to the right point in the direction opposite to the direction of the center target arrow, like this: < < > < <. "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
                     {
                       "type": "element",
                       "name": "w:t",
@@ -13250,12 +14957,28 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:t",
                       "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": "However, in the dot-probe task, the target does not co-occur with the conflicting cue (they are shown in different displays); they are separated in time, and they are visually distinct categories of stimuli because the cue is a face, and the target is simply a single dot. "
+                          "value": "However, in the dot-probe task, the target does not co-occur with the conflicting cue (they are shown in different displays); they are separated in time, and they are visually distinct categories of stimuli because the cue is a face, and the target is simply a single dot.  "
                         }
                       ]
                     }
@@ -13418,7 +15141,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Gladwin2019\",\"itemData\":{\"author\":[{\"family\":\"Gladwin\"}],\"issued\":{\"date-parts\":[[\"2019\"]]}}},{\"id\":\"Gladwin2020\",\"itemData\":{\"author\":[{\"family\":\"Gladwin\"}],\"issued\":{\"date-parts\":[[\"2020\"]]}}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"Gladwin et al. (2019, 2020)\",\"plainCitation\":\"Gladwin et al. (2019, 2020)\"},\"citationID\":\"CITE-2\"}"
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Gladwin2019\",\"itemData\":{\"author\":[{\"family\":\"Gladwin\",\"given\":\"T. E.\"},{\"family\":\"Figner\",\"given\":\"B.\"}],\"title\":\"Trial-to-trial carryover effects on spatial attentional bias\",\"volume\":\"196\",\"type\":\"article-journal\",\"container-title\":\"Acta Psychologica\",\"issued\":{\"date-parts\":[[\"2019\"]]},\"page\":\"51–55\",\"URL\":\"https://doi.org/10.1016/j.actpsy.2019.04.006\",\"DOI\":\"10.1016/j.actpsy.2019.04.006\",\"id\":\"Gladwin2019\"}},{\"id\":\"Gladwin2020\",\"itemData\":{\"author\":[{\"family\":\"Gladwin\",\"given\":\"T. E.\"},{\"family\":\"Jewiss\",\"given\":\"M.\"},{\"family\":\"Vink\",\"given\":\"M.\"}],\"title\":\"Attentional bias for negative expressions depends on previous target location: Replicable effect but unreliable measures\",\"type\":\"article-journal\",\"container-title\":\"Journal of Cognitive Psychology\",\"issued\":{\"date-parts\":[[\"2020\"]]},\"page\":\"1–11\",\"URL\":\"https://doi.org/10.1080/20445911.2020.1805453\",\"DOI\":\"10.1080/20445911.2020.1805453\",\"id\":\"Gladwin2020\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"mode\":\"composite\",\"formattedCitation\":\"Gladwin et al. (2019, 2020)\",\"plainCitation\":\"Gladwin et al. (2019, 2020)\"},\"citationID\":\"CITE-2\"}"
                         }
                       ]
                     }
@@ -13472,25 +15195,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "(Experiment 1) or 500 ms "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "(Experiment 2). "
+                          "value": "(Experiment 1) or 500 ms (Experiment 2). "
                         }
                       ]
                     }
@@ -13643,7 +15348,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Gladwin2019\",\"itemData\":{\"author\":[{\"family\":\"Gladwin\"}],\"issued\":{\"date-parts\":[[\"2019\"]]}}},{\"id\":\"Gladwin2020\",\"itemData\":{\"author\":[{\"family\":\"Gladwin\"}],\"issued\":{\"date-parts\":[[\"2020\"]]}}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"Gladwin et al. (2019, 2020)\",\"plainCitation\":\"Gladwin et al. (2019, 2020)\"},\"citationID\":\"CITE-3\"}"
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Gladwin2019\",\"itemData\":{\"author\":[{\"family\":\"Gladwin\",\"given\":\"T. E.\"},{\"family\":\"Figner\",\"given\":\"B.\"}],\"title\":\"Trial-to-trial carryover effects on spatial attentional bias\",\"volume\":\"196\",\"type\":\"article-journal\",\"container-title\":\"Acta Psychologica\",\"issued\":{\"date-parts\":[[\"2019\"]]},\"page\":\"51–55\",\"URL\":\"https://doi.org/10.1016/j.actpsy.2019.04.006\",\"DOI\":\"10.1016/j.actpsy.2019.04.006\",\"id\":\"Gladwin2019\"}},{\"id\":\"Gladwin2020\",\"itemData\":{\"author\":[{\"family\":\"Gladwin\",\"given\":\"T. E.\"},{\"family\":\"Jewiss\",\"given\":\"M.\"},{\"family\":\"Vink\",\"given\":\"M.\"}],\"title\":\"Attentional bias for negative expressions depends on previous target location: Replicable effect but unreliable measures\",\"type\":\"article-journal\",\"container-title\":\"Journal of Cognitive Psychology\",\"issued\":{\"date-parts\":[[\"2020\"]]},\"page\":\"1–11\",\"URL\":\"https://doi.org/10.1080/20445911.2020.1805453\",\"DOI\":\"10.1080/20445911.2020.1805453\",\"id\":\"Gladwin2020\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"mode\":\"composite\",\"formattedCitation\":\"Gladwin et al. (2019, 2020)\",\"plainCitation\":\"Gladwin et al. (2019, 2020)\"},\"citationID\":\"CITE-3\"}"
                         }
                       ]
                     }
@@ -13832,7 +15537,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Gladwin2020\",\"itemData\":{\"author\":[{\"family\":\"Gladwin\"}],\"issued\":{\"date-parts\":[[\"2020\"]]}}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Gladwin et al., 2020)\",\"plainCitation\":\"(Gladwin et al., 2020)\"},\"citationID\":\"CITE-4\"}"
+                          "value": "ADDIN ZOTERO_ITEM CSL_CITATION {\"citationItems\":[{\"id\":\"Gladwin2020\",\"itemData\":{\"author\":[{\"family\":\"Gladwin\",\"given\":\"T. E.\"},{\"family\":\"Jewiss\",\"given\":\"M.\"},{\"family\":\"Vink\",\"given\":\"M.\"}],\"title\":\"Attentional bias for negative expressions depends on previous target location: Replicable effect but unreliable measures\",\"type\":\"article-journal\",\"container-title\":\"Journal of Cognitive Psychology\",\"issued\":{\"date-parts\":[[\"2020\"]]},\"page\":\"1–11\",\"URL\":\"https://doi.org/10.1080/20445911.2020.1805453\",\"DOI\":\"10.1080/20445911.2020.1805453\",\"id\":\"Gladwin2020\"}}],\"schema\":\"https://github.com/citation-style-language/schema/raw/master/csl-citation.json\",\"properties\":{\"noteIndex\":0,\"formattedCitation\":\"(Gladwin et al., 2020)\",\"plainCitation\":\"(Gladwin et al., 2020)\"},\"citationID\":\"CITE-4\"}"
                         }
                       ]
                     }
@@ -14307,58 +16012,71 @@
                 },
                 {
                   "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
+                  "name": "w:hyperlink",
+                  "attributes": {
+                    "r:id": "rId10",
+                    "w:history": "1"
+                  },
                   "children": [
                     {
                       "type": "element",
-                      "name": "w:rPr",
-                      "attributes": {},
+                      "name": "w:r",
+                      "attributes": {
+                        "w:rsidR": "0039230F",
+                        "w:rsidRPr": "00305D87"
+                      },
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:rStyle",
-                          "attributes": {
-                            "w:val": "Hyperlink"
-                          },
-                          "children": []
+                          "name": "w:rPr",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "w:rStyle",
+                              "attributes": {
+                                "w:val": "Hyperlink"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "w:rFonts",
+                              "attributes": {
+                                "w:ascii": "Times New Roman",
+                                "w:hAnsi": "Times New Roman",
+                                "w:cs": "Times New Roman"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "w:sz",
+                              "attributes": {
+                                "w:val": "24"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "w:szCs",
+                              "attributes": {
+                                "w:val": "24"
+                              },
+                              "children": []
+                            }
+                          ]
                         },
                         {
                           "type": "element",
-                          "name": "w:rFonts",
-                          "attributes": {
-                            "w:ascii": "Times New Roman",
-                            "w:hAnsi": "Times New Roman",
-                            "w:cs": "Times New Roman"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:sz",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        },
-                        {
-                          "type": "element",
-                          "name": "w:szCs",
-                          "attributes": {
-                            "w:val": "24"
-                          },
-                          "children": []
-                        }
-                      ]
-                    },
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "https://osf.io/7qhsj/?view_only=07b52294c1b647829644a833fc3d4883"
+                          "name": "w:t",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "text",
+                              "value": "https://osf.io/7qhsj/?view_only=07b52294c1b647829644a833fc3d4883"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -16211,7 +17929,59 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "(A) Examples of congruent and incongruent trials in Experiment 1.  (B) On the left is an example of two congruent trials—note the target (dot) appears in the location of the fearful face on the previous trial (trial "
+                          "value": "(A) Examples of congruent and incongruent trials in Experiment 1.  (B) On the left is an"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": " example of "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "two congruent trials—note the target (dot) appears in the location of the fearful face on the previous trial (trial "
                         }
                       ]
                     }
@@ -16771,7 +18541,41 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Results from Experiment 1 are shown in A and B, Experiment 2 in C and D ("
+                          "value": "Results from Experiment 1 are shown in A and B, Experiment 2 in C and D "
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": "("
                         }
                       ]
                     }
@@ -16798,6 +18602,15 @@
                           "name": "w:iCs",
                           "attributes": {},
                           "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
                         }
                       ]
                     },
@@ -16821,12 +18634,46 @@
                   "children": [
                     {
                       "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "4472C4",
+                            "w:themeColor": "accent1"
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "element",
                       "name": "w:t",
                       "attributes": {},
                       "children": [
                         {
                           "type": "text",
-                          "value": " indicates participant, values are averages by participant). "
+                          "value": " indicates participant, values are averages by participant)"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:t",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "text",
+                          "value": ". "
                         }
                       ]
                     }

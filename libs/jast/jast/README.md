@@ -75,7 +75,7 @@ Defined in:  [libs/jast/jast/src/lib/rejour.ts:35](https://github.com/TrialAndEr
 #### Signature
 
 ```ts
-isParagraphContent(node: Node<Data>): node is Text | Bold | FixedCase | Italic | Monospace | NamedContent | Overline | Roman | Ruby | SansSerif | Sc | Strike | StyledContent | Sub | Sup | Underline | Abbrev | Address | Email | ExtLink | Uri | Alternatives | ChemStruct | IndexTerm | IndexTermrangeend | InlineFormula | InlineGraphic | InlineMedia | MilestoneEnd | MilestoneStart | PrivateChar | Fn | InlineSupplementarymaterial | RelatedArticle | RelatedObject | Target | Xref | Array | Code | Graphic | Media | Preformat | SupplementaryMaterial | TexMath | AnswerSet | Answer | Explanation | BlockAlternatives | BoxedText | ChemStructwrap | DefList | DispFormula | DispFormulagroup | DispQuote | Fig | FigGroup | List | Question | QuestionWrap | QuestionWrapgroup | Speech | Statement | TableWrap | TableWrapgroup | VerseGroup | AwardId | FundingSource | CitationAlternatives | ElementCitation | MixedCitation | NlmCitation | OpenAccess;
+isParagraphContent(node: Node<Data>): node is RequiredMap<PChildrenMap>;
 ```
 
 #### Parameters
@@ -86,7 +86,7 @@ isParagraphContent(node: Node<Data>): node is Text | Bold | FixedCase | Italic |
 
 #### Returns
 
-`node is Text | Bold | FixedCase | Italic | Monospace | NamedContent | Overline | Roman | Ruby | SansSerif | Sc | Strike | StyledContent | Sub | Sup | Underline | Abbrev | Address | Email | ExtLink | Uri | Alternatives | ChemStruct | IndexTerm | IndexTermrangeend | InlineFormula | InlineGraphic | InlineMedia | MilestoneEnd | MilestoneStart | PrivateChar | Fn | InlineSupplementarymaterial | RelatedArticle | RelatedObject | Target | Xref | Array | Code | Graphic | Media | Preformat | SupplementaryMaterial | TexMath | AnswerSet | Answer | Explanation | BlockAlternatives | BoxedText | ChemStructwrap | DefList | DispFormula | DispFormulagroup | DispQuote | Fig | FigGroup | List | Question | QuestionWrap | QuestionWrapgroup | Speech | Statement | TableWrap | TableWrapgroup | VerseGroup | AwardId | FundingSource | CitationAlternatives | ElementCitation | MixedCitation | NlmCitation | OpenAccess`
+`node is RequiredMap<PChildrenMap>`
 
 Defined in:  [libs/jast/jast/src/lib/rejour.ts:39](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/rejour.ts#L39)
 
@@ -166,7 +166,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:60](https://github.com/TrialAndErro
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Def`](modules.md#def))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`AbbrevChildrenMap`](modules.md#abbrevchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:67](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L67)
 
@@ -338,7 +338,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:79](https://github.com/TrialAndErro
 
 ##### `children`
 
-> ([`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`P`](modules.md#p) | [`Sec`](modules.md#sec) | [`Title`](modules.md#title))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`AbstractChildrenMap`](modules.md#abstractchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:85](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L85)
 
@@ -540,7 +540,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:120](https://github.com/TrialAndErr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Abstract`](modules.md#abstract) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`P`](modules.md#p) | [`Sec`](modules.md#sec) | [`Title`](modules.md#title) | [`KwdGroup`](modules.md#kwdgroup) | [`RefList`](modules.md#reflist) | [`SubjGroup`](modules.md#subjgroup))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`AckChildrenMap`](modules.md#ackchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:125](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L125)
 
@@ -681,7 +681,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:191](https://github.com/TrialAndErr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`City`](modules.md#city) | [`Country`](modules.md#country) | [`Fax`](modules.md#fax) | [`Institution`](modules.md#institution) | [`InstitutionWrap`](modules.md#institutionwrap) | [`Phone`](modules.md#phone) | [`PostalCode`](modules.md#postalcode) | [`State`](modules.md#state) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`AddrLineChildrenMap`](modules.md#addrlinechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:196](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L196)
 
@@ -972,7 +972,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:152](https://github.com/TrialAndErr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`AddrLine`](modules.md#addrline) | [`City`](modules.md#city) | [`Country`](modules.md#country) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Fax`](modules.md#fax) | [`Institution`](modules.md#institution) | [`InstitutionWrap`](modules.md#institutionwrap) | [`Phone`](modules.md#phone) | [`PostalCode`](modules.md#postalcode) | [`State`](modules.md#state) | [`Uri`](modules.md#uri))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`AddressChildrenMap`](modules.md#addresschildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:157](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L157)
 
@@ -1133,7 +1133,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:288](https://github.com/TrialAndErr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Label`](modules.md#label) | [`AddrLine`](modules.md#addrline) | [`City`](modules.md#city) | [`Country`](modules.md#country) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Fax`](modules.md#fax) | [`Institution`](modules.md#institution) | [`InstitutionWrap`](modules.md#institutionwrap) | [`Phone`](modules.md#phone) | [`PostalCode`](modules.md#postalcode) | [`State`](modules.md#state) | [`Uri`](modules.md#uri) | [`Break`](modules.md#break) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`AffChildrenMap`](modules.md#affchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:294](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L294)
 
@@ -1592,7 +1592,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:427](https://github.com/TrialAndErr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Break`](modules.md#break) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`AltTitleChildrenMap`](modules.md#alttitlechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:433](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L433)
 
@@ -1893,7 +1893,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:370](https://github.com/TrialAndErr
 
 ##### `children`
 
-> ([`ObjectId`](modules.md#objectid) | [`ChemStruct`](modules.md#chemstruct) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`PrivateChar`](modules.md#privatechar) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`Table`](modules.md#table) | [`TexMath`](modules.md#texmath) | [`TextualForm`](modules.md#textualform))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`AlternativesChildrenMap`](modules.md#alternativeschildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:374](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L374)
 
@@ -2064,7 +2064,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:515](https://github.com/TrialAndErr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`P`](modules.md#p))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`AnnotationChildrenMap`](modules.md#annotationchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:520](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L520)
 
@@ -2234,7 +2234,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:573](https://github.com/TrialAndErr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`P`](modules.md#p) | [`Sec`](modules.md#sec) | [`Title`](modules.md#title) | [`RefList`](modules.md#reflist) | [`Address`](modules.md#address) | [`Alternatives`](modules.md#alternatives) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`TexMath`](modules.md#texmath) | [`AltTitle`](modules.md#alttitle) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`Subtitle`](modules.md#subtitle) | [`BlockAlternatives`](modules.md#blockalternatives) | [`BoxedText`](modules.md#boxedtext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`Fig`](modules.md#fig) | [`FigGroup`](modules.md#figgroup) | [`FnGroup`](modules.md#fngroup) | [`Glossary`](modules.md#glossary) | [`List`](modules.md#list) | [`Question`](modules.md#question) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionWrapgroup`](modules.md#questionwrapgroup) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`TableWrap`](modules.md#tablewrap) | [`TableWrapgroup`](modules.md#tablewrapgroup) | [`VerseGroup`](modules.md#versegroup))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`AnswerChildrenMap`](modules.md#answerchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:579](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L579)
 
@@ -2573,7 +2573,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:542](https://github.com/TrialAndErr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`P`](modules.md#p) | [`Title`](modules.md#title) | [`AltTitle`](modules.md#alttitle) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`Subtitle`](modules.md#subtitle))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`AnswerSetChildrenMap`](modules.md#answersetchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:547](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L547)
 
@@ -2708,7 +2708,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:769](https://github.com/TrialAndErr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Label`](modules.md#label) | [`P`](modules.md#p) | [`Sec`](modules.md#sec) | [`Title`](modules.md#title) | [`RefList`](modules.md#reflist) | [`Address`](modules.md#address) | [`Alternatives`](modules.md#alternatives) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`TexMath`](modules.md#texmath) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`BlockAlternatives`](modules.md#blockalternatives) | [`BoxedText`](modules.md#boxedtext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`Fig`](modules.md#fig) | [`FigGroup`](modules.md#figgroup) | [`FnGroup`](modules.md#fngroup) | [`Glossary`](modules.md#glossary) | [`List`](modules.md#list) | [`Question`](modules.md#question) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionWrapgroup`](modules.md#questionwrapgroup) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`TableWrap`](modules.md#tablewrap) | [`TableWrapgroup`](modules.md#tablewrapgroup) | [`VerseGroup`](modules.md#versegroup) | [`Permissions`](modules.md#permissions) | [`SecMeta`](modules.md#secmeta))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`AppChildrenMap`](modules.md#appchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:774](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L774)
 
@@ -3041,7 +3041,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:673](https://github.com/TrialAndErr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Abstract`](modules.md#abstract) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`P`](modules.md#p) | [`Title`](modules.md#title) | [`KwdGroup`](modules.md#kwdgroup) | [`RefList`](modules.md#reflist) | [`SubjGroup`](modules.md#subjgroup) | [`Address`](modules.md#address) | [`Alternatives`](modules.md#alternatives) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`TexMath`](modules.md#texmath) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`BlockAlternatives`](modules.md#blockalternatives) | [`BoxedText`](modules.md#boxedtext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`Fig`](modules.md#fig) | [`FigGroup`](modules.md#figgroup) | [`List`](modules.md#list) | [`Question`](modules.md#question) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionWrapgroup`](modules.md#questionwrapgroup) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`TableWrap`](modules.md#tablewrap) | [`TableWrapgroup`](modules.md#tablewrapgroup) | [`VerseGroup`](modules.md#versegroup) | [`App`](modules.md#app))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`AppGroupChildrenMap`](modules.md#appgroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:678](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L678)
 
@@ -3376,7 +3376,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:866](https://github.com/TrialAndErr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`AltText`](modules.md#alttext) | [`Permissions`](modules.md#permissions) | [`Attrib`](modules.md#attrib) | [`LongDesc`](modules.md#longdesc) | [`Tbody`](modules.md#tbody))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ArrayChildrenMap`](modules.md#arraychildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:872](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L872)
 
@@ -3533,7 +3533,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:1153](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Back`](modules.md#back) | [`Body`](modules.md#body) | [`FloatsGroup`](modules.md#floatsgroup) | [`Front`](modules.md#front) | [`ProcessingMeta`](modules.md#processingmeta) | [`Response`](modules.md#response) | [`SubArticle`](modules.md#subarticle))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ArticleChildrenMap`](modules.md#articlechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:1160](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L1160)
 
@@ -3606,7 +3606,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:904](https://github.com/TrialAndErr
 
 ##### `children`
 
-> ([`SubjGroup`](modules.md#subjgroup) | [`SeriesText`](modules.md#seriestext) | [`SeriesTitle`](modules.md#seriestitle))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ArticleCategoriesChildrenMap`](modules.md#articlecategorieschildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:908](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L908)
 
@@ -3842,7 +3842,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:963](https://github.com/TrialAndErr
 
 ##### `children`
 
-> ([`Abstract`](modules.md#abstract) | [`KwdGroup`](modules.md#kwdgroup) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`AffAlternatives`](modules.md#affalternatives) | [`Aff`](modules.md#aff) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`Permissions`](modules.md#permissions) | [`ArticleCategories`](modules.md#articlecategories) | [`ArticleId`](modules.md#articleid) | [`Isbn`](modules.md#isbn) | [`ArticleVersion`](modules.md#articleversion) | [`ArticleVersionalternatives`](modules.md#articleversionalternatives) | [`AuthorNotes`](modules.md#authornotes) | [`Conference`](modules.md#conference) | [`ContribGroup`](modules.md#contribgroup) | [`Counts`](modules.md#counts) | [`CustomMetagroup`](modules.md#custommetagroup) | [`ElocationId`](modules.md#elocationid) | [`Fpage`](modules.md#fpage) | [`FundingGroup`](modules.md#fundinggroup) | [`History`](modules.md#history) | [`Issue`](modules.md#issue) | [`IssueId`](modules.md#issueid) | [`IssuePart`](modules.md#issuepart) | [`IssueSponsor`](modules.md#issuesponsor) | [`IssueTitle`](modules.md#issuetitle) | [`IssueTitlegroup`](modules.md#issuetitlegroup) | [`Lpage`](modules.md#lpage) | [`PageRange`](modules.md#pagerange) | [`Product`](modules.md#product) | [`PubDate`](modules.md#pubdate) | [`PubDatenotavailable`](modules.md#pubdatenotavailable) | [`PubHistory`](modules.md#pubhistory) | [`SelfUri`](modules.md#selfuri) | [`Supplement`](modules.md#supplement) | [`SupportGroup`](modules.md#supportgroup) | [`TitleGroup`](modules.md#titlegroup) | [`TransAbstract`](modules.md#transabstract) | [`Volume`](modules.md#volume) | [`VolumeId`](modules.md#volumeid) | [`VolumeIssuegroup`](modules.md#volumeissuegroup) | [`VolumeSeries`](modules.md#volumeseries))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ArticleMetaChildrenMap`](modules.md#articlemetachildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:967](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L967)
 
@@ -4197,7 +4197,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:1067](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Break`](modules.md#break) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ArticleTitleChildrenMap`](modules.md#articletitlechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:1071](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L1071)
 
@@ -4690,7 +4690,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:1234](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`AttribChildrenMap`](modules.md#attribchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:1239](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L1239)
 
@@ -4995,7 +4995,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:1319](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`P`](modules.md#p) | [`Title`](modules.md#title))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`AuthorCommentChildrenMap`](modules.md#authorcommentchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:1324](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L1324)
 
@@ -5096,7 +5096,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:1338](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Label`](modules.md#label) | [`P`](modules.md#p) | [`Title`](modules.md#title) | [`Fn`](modules.md#fn) | [`Corresp`](modules.md#corresp))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`AuthorNotesChildrenMap`](modules.md#authornoteschildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:1344](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L1344)
 
@@ -5288,7 +5288,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:1372](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`AwardDesc`](modules.md#awarddesc) | [`AwardId`](modules.md#awardid) | [`AwardName`](modules.md#awardname) | [`FundingSource`](modules.md#fundingsource) | [`PrincipalAwardrecipient`](modules.md#principalawardrecipient) | [`PrincipalInvestigator`](modules.md#principalinvestigator) | [`SupportSource`](modules.md#supportsource))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`AwardGroupChildrenMap`](modules.md#awardgroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:1380](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L1380)
 
@@ -5421,7 +5421,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:1402](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`AwardIdChildrenMap`](modules.md#awardidchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:1412](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L1412)
 
@@ -5731,7 +5731,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:1482](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Label`](modules.md#label) | [`Sec`](modules.md#sec) | [`Title`](modules.md#title) | [`Ack`](modules.md#ack) | [`RefList`](modules.md#reflist) | [`FnGroup`](modules.md#fngroup) | [`Glossary`](modules.md#glossary) | [`AppGroup`](modules.md#appgroup) | [`Bio`](modules.md#bio) | [`Notes`](modules.md#notes))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`BackChildrenMap`](modules.md#backchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:1486](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L1486)
 
@@ -5876,7 +5876,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:1514](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Label`](modules.md#label) | [`P`](modules.md#p) | [`Sec`](modules.md#sec) | [`Title`](modules.md#title) | [`RefList`](modules.md#reflist) | [`Address`](modules.md#address) | [`Alternatives`](modules.md#alternatives) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`TexMath`](modules.md#texmath) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`BlockAlternatives`](modules.md#blockalternatives) | [`BoxedText`](modules.md#boxedtext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`Fig`](modules.md#fig) | [`FigGroup`](modules.md#figgroup) | [`FnGroup`](modules.md#fngroup) | [`Glossary`](modules.md#glossary) | [`List`](modules.md#list) | [`Question`](modules.md#question) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionWrapgroup`](modules.md#questionwrapgroup) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`TableWrap`](modules.md#tablewrap) | [`TableWrapgroup`](modules.md#tablewrapgroup) | [`VerseGroup`](modules.md#versegroup) | [`SecMeta`](modules.md#secmeta))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`BioChildrenMap`](modules.md#biochildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:1521](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L1521)
 
@@ -6201,7 +6201,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:1611](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`ObjectId`](modules.md#objectid) | [`BoxedText`](modules.md#boxedtext) | [`Fig`](modules.md#fig) | [`FigGroup`](modules.md#figgroup) | [`TableWrap`](modules.md#tablewrap) | [`TableWrapgroup`](modules.md#tablewrapgroup))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`BlockAlternativesChildrenMap`](modules.md#blockalternativeschildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:1615](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L1615)
 
@@ -6318,7 +6318,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:1635](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`P`](modules.md#p) | [`Sec`](modules.md#sec) | [`Address`](modules.md#address) | [`Alternatives`](modules.md#alternatives) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`TexMath`](modules.md#texmath) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`BlockAlternatives`](modules.md#blockalternatives) | [`BoxedText`](modules.md#boxedtext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`Fig`](modules.md#fig) | [`FigGroup`](modules.md#figgroup) | [`List`](modules.md#list) | [`Question`](modules.md#question) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionWrapgroup`](modules.md#questionwrapgroup) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`TableWrap`](modules.md#tablewrap) | [`TableWrapgroup`](modules.md#tablewrapgroup) | [`VerseGroup`](modules.md#versegroup) | [`SigBlock`](modules.md#sigblock))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`BodyChildrenMap`](modules.md#bodychildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:1640](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L1640)
 
@@ -6611,7 +6611,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:1718](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`BoldChildrenMap`](modules.md#boldchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:1725](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L1725)
 
@@ -6912,7 +6912,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:1807](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`P`](modules.md#p) | [`Sec`](modules.md#sec) | [`RefList`](modules.md#reflist) | [`Address`](modules.md#address) | [`Alternatives`](modules.md#alternatives) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`TexMath`](modules.md#texmath) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`BlockAlternatives`](modules.md#blockalternatives) | [`BoxedText`](modules.md#boxedtext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`Fig`](modules.md#fig) | [`FigGroup`](modules.md#figgroup) | [`FnGroup`](modules.md#fngroup) | [`Glossary`](modules.md#glossary) | [`List`](modules.md#list) | [`Question`](modules.md#question) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionWrapgroup`](modules.md#questionwrapgroup) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`TableWrap`](modules.md#tablewrap) | [`TableWrapgroup`](modules.md#tablewrapgroup) | [`VerseGroup`](modules.md#versegroup) | [`Permissions`](modules.md#permissions) | [`SecMeta`](modules.md#secmeta) | [`Attrib`](modules.md#attrib) | [`Caption`](modules.md#caption))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`BoxedTextChildrenMap`](modules.md#boxedtextchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:1814](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L1814)
 
@@ -7332,7 +7332,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:1922](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`P`](modules.md#p) | [`Title`](modules.md#title))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`CaptionChildrenMap`](modules.md#captionchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:1928](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L1928)
 
@@ -7431,7 +7431,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:1942](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ChapterTitleChildrenMap`](modules.md#chaptertitlechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:1947](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L1947)
 
@@ -7688,7 +7688,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:2013](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Label`](modules.md#label) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`Break`](modules.md#break) | [`Fn`](modules.md#fn) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`TexMath`](modules.md#texmath) | [`AltText`](modules.md#alttext) | [`DefList`](modules.md#deflist) | [`List`](modules.md#list) | [`LongDesc`](modules.md#longdesc))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ChemStructChildrenMap`](modules.md#chemstructchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:2019](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L2019)
 
@@ -7983,7 +7983,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:2097](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Abstract`](modules.md#abstract) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`KwdGroup`](modules.md#kwdgroup) | [`SubjGroup`](modules.md#subjgroup) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`TextualForm`](modules.md#textualform) | [`AltText`](modules.md#alttext) | [`Permissions`](modules.md#permissions) | [`Attrib`](modules.md#attrib) | [`LongDesc`](modules.md#longdesc) | [`Caption`](modules.md#caption))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ChemStructwrapChildrenMap`](modules.md#chemstructwrapchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:2104](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L2104)
 
@@ -8188,7 +8188,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:2156](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`ObjectId`](modules.md#objectid) | [`ElementCitation`](modules.md#elementcitation) | [`MixedCitation`](modules.md#mixedcitation) | [`NlmCitation`](modules.md#nlmcitation))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`CitationAlternativesChildrenMap`](modules.md#citationalternativeschildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:2160](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L2160)
 
@@ -8396,7 +8396,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:2191](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`CodeChildrenMap`](modules.md#codechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:2205](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L2205)
 
@@ -8762,7 +8762,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:2277](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Col`](modules.md#col))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ColgroupChildrenMap`](modules.md#colgroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:2288](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L2288)
 
@@ -8861,7 +8861,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:2317](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Address`](modules.md#address) | [`AddrLine`](modules.md#addrline) | [`City`](modules.md#city) | [`Country`](modules.md#country) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Fax`](modules.md#fax) | [`Institution`](modules.md#institution) | [`InstitutionWrap`](modules.md#institutionwrap) | [`Phone`](modules.md#phone) | [`PostalCode`](modules.md#postalcode) | [`State`](modules.md#state) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`AffAlternatives`](modules.md#affalternatives) | [`Aff`](modules.md#aff) | [`Fn`](modules.md#fn) | [`Xref`](modules.md#xref) | [`ContribGroup`](modules.md#contribgroup) | [`AuthorComment`](modules.md#authorcomment) | [`Bio`](modules.md#bio) | [`OnBehalfof`](modules.md#onbehalfof) | [`Role`](modules.md#role))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`CollabChildrenMap`](modules.md#collabchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:2325](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L2325)
 
@@ -9315,7 +9315,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:2454](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`CommentChildrenMap`](modules.md#commentchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:2459](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L2459)
 
@@ -9626,7 +9626,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:2603](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`CompoundKwdpart`](modules.md#compoundkwdpart))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`CompoundKwdChildrenMap`](modules.md#compoundkwdchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:2612](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L2612)
 
@@ -9717,7 +9717,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:2541](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`CompoundKwdpartChildrenMap`](modules.md#compoundkwdpartchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:2545](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L2545)
 
@@ -9956,7 +9956,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:2680](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`CompoundSubjectpart`](modules.md#compoundsubjectpart))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`CompoundSubjectChildrenMap`](modules.md#compoundsubjectchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:2689](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L2689)
 
@@ -10047,7 +10047,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:2624](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`PrivateChar`](modules.md#privatechar))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`CompoundSubjectpartChildrenMap`](modules.md#compoundsubjectpartchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:2628](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L2628)
 
@@ -10438,7 +10438,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:2763](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`AddrLine`](modules.md#addrline) | [`City`](modules.md#city) | [`Country`](modules.md#country) | [`Fax`](modules.md#fax) | [`Institution`](modules.md#institution) | [`InstitutionWrap`](modules.md#institutionwrap) | [`Phone`](modules.md#phone) | [`PostalCode`](modules.md#postalcode) | [`State`](modules.md#state))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ConfLocChildrenMap`](modules.md#conflocchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:2768](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L2768)
 
@@ -10753,7 +10753,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:2826](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Institution`](modules.md#institution) | [`InstitutionWrap`](modules.md#institutionwrap))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ConfSponsorChildrenMap`](modules.md#confsponsorchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:2831](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L2831)
 
@@ -10852,7 +10852,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:2845](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ConfThemeChildrenMap`](modules.md#confthemechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:2850](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L2850)
 
@@ -11097,7 +11097,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:2733](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`ConfAcronym`](modules.md#confacronym) | [`ConfDate`](modules.md#confdate) | [`ConfLoc`](modules.md#confloc) | [`ConfName`](modules.md#confname) | [`ConfNum`](modules.md#confnum) | [`ConfSponsor`](modules.md#confsponsor) | [`ConfTheme`](modules.md#conftheme))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ConferenceChildrenMap`](modules.md#conferencechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:2739](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L2739)
 
@@ -11238,7 +11238,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:2970](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Address`](modules.md#address) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`AffAlternatives`](modules.md#affalternatives) | [`Aff`](modules.md#aff) | [`Xref`](modules.md#xref) | [`Anonymous`](modules.md#anonymous) | [`AuthorComment`](modules.md#authorcomment) | [`Bio`](modules.md#bio) | [`CollabAlternatives`](modules.md#collabalternatives) | [`Collab`](modules.md#collab) | [`OnBehalfof`](modules.md#onbehalfof) | [`Role`](modules.md#role) | [`ContribId`](modules.md#contribid) | [`Degrees`](modules.md#degrees) | [`Name`](modules.md#name) | [`NameAlternatives`](modules.md#namealternatives) | [`StringName`](modules.md#stringname))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ContribChildrenMap`](modules.md#contribchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:2982](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L2982)
 
@@ -11435,7 +11435,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:2912](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Address`](modules.md#address) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`AffAlternatives`](modules.md#affalternatives) | [`Aff`](modules.md#aff) | [`Xref`](modules.md#xref) | [`AuthorComment`](modules.md#authorcomment) | [`Bio`](modules.md#bio) | [`OnBehalfof`](modules.md#onbehalfof) | [`Role`](modules.md#role) | [`Contrib`](modules.md#contrib))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ContribGroupChildrenMap`](modules.md#contribgroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:2918](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L2918)
 
@@ -11683,7 +11683,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:3034](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`AwardGroup`](modules.md#awardgroup) | [`ResourceGroup`](modules.md#resourcegroup) | [`SupportDescription`](modules.md#supportdescription))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ContributedResourcegroupChildrenMap`](modules.md#contributedresourcegroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:3040](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L3040)
 
@@ -11782,7 +11782,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:3054](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Institution`](modules.md#institution) | [`InstitutionWrap`](modules.md#institutionwrap))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`CopyrightHolderChildrenMap`](modules.md#copyrightholderchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:3059](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L3059)
 
@@ -11893,7 +11893,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:3077](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`CopyrightStatementChildrenMap`](modules.md#copyrightstatementchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:3082](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L3082)
 
@@ -12175,7 +12175,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:3143](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Label`](modules.md#label) | [`AddrLine`](modules.md#addrline) | [`City`](modules.md#city) | [`Country`](modules.md#country) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Fax`](modules.md#fax) | [`Institution`](modules.md#institution) | [`InstitutionWrap`](modules.md#institutionwrap) | [`Phone`](modules.md#phone) | [`PostalCode`](modules.md#postalcode) | [`State`](modules.md#state) | [`Uri`](modules.md#uri))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`CorrespChildrenMap`](modules.md#correspchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:3148](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L3148)
 
@@ -12594,7 +12594,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:3230](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Count`](modules.md#count) | [`EquationCount`](modules.md#equationcount) | [`FigCount`](modules.md#figcount) | [`PageCount`](modules.md#pagecount) | [`RefCount`](modules.md#refcount) | [`TableCount`](modules.md#tablecount) | [`WordCount`](modules.md#wordcount))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`CountsChildrenMap`](modules.md#countschildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:3234](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L3234)
 
@@ -12729,7 +12729,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:3284](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`MetaName`](modules.md#metaname) | [`MetaValue`](modules.md#metavalue))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`CustomMetaChildrenMap`](modules.md#custommetachildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:3295](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L3295)
 
@@ -12822,7 +12822,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:3267](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`CustomMeta`](modules.md#custommeta))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`CustomMetagroupChildrenMap`](modules.md#custommetagroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:3272](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L3272)
 
@@ -12915,7 +12915,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:3307](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`PrivateChar`](modules.md#privatechar))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`DataTitleChildrenMap`](modules.md#datatitlechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:3312](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L3312)
 
@@ -13136,7 +13136,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:3391](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Day`](modules.md#day) | [`Era`](modules.md#era) | [`Month`](modules.md#month) | [`Season`](modules.md#season) | [`Year`](modules.md#year))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`DateChildrenMap`](modules.md#datechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:3400](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L3400)
 
@@ -13251,7 +13251,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:3364](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Day`](modules.md#day) | [`Era`](modules.md#era) | [`Month`](modules.md#month) | [`Season`](modules.md#season) | [`Year`](modules.md#year))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`DateIncitationChildrenMap`](modules.md#dateincitationchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:3371](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L3371)
 
@@ -13542,7 +13542,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:3433](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`DefHeadChildrenMap`](modules.md#defheadchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:3437](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L3437)
 
@@ -13839,7 +13839,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:3517](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Def`](modules.md#def) | [`Term`](modules.md#term))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`DefItemChildrenMap`](modules.md#defitemchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:3522](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L3522)
 
@@ -13940,7 +13940,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:3534](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Label`](modules.md#label) | [`Title`](modules.md#title) | [`DefList`](modules.md#deflist) | [`DefHead`](modules.md#defhead) | [`DefItem`](modules.md#defitem) | [`TermHead`](modules.md#termhead))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`DefListChildrenMap`](modules.md#deflistchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:3543](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L3543)
 
@@ -14144,7 +14144,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:3634](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abstract`](modules.md#abstract) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`KwdGroup`](modules.md#kwdgroup) | [`SubjGroup`](modules.md#subjgroup) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`PrivateChar`](modules.md#privatechar) | [`Break`](modules.md#break) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`TexMath`](modules.md#texmath) | [`AltText`](modules.md#alttext) | [`LongDesc`](modules.md#longdesc) | [`Caption`](modules.md#caption))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`DispFormulaChildrenMap`](modules.md#dispformulachildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:3639](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L3639)
 
@@ -14465,7 +14465,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:3594](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Abstract`](modules.md#abstract) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`KwdGroup`](modules.md#kwdgroup) | [`SubjGroup`](modules.md#subjgroup) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`AltText`](modules.md#alttext) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`LongDesc`](modules.md#longdesc) | [`Caption`](modules.md#caption))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`DispFormulagroupChildrenMap`](modules.md#dispformulagroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:3599](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L3599)
 
@@ -14630,7 +14630,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:3726](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Label`](modules.md#label) | [`P`](modules.md#p) | [`Title`](modules.md#title) | [`Address`](modules.md#address) | [`Alternatives`](modules.md#alternatives) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`TexMath`](modules.md#texmath) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`BlockAlternatives`](modules.md#blockalternatives) | [`BoxedText`](modules.md#boxedtext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`Fig`](modules.md#fig) | [`FigGroup`](modules.md#figgroup) | [`List`](modules.md#list) | [`Question`](modules.md#question) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionWrapgroup`](modules.md#questionwrapgroup) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`TableWrap`](modules.md#tablewrap) | [`TableWrapgroup`](modules.md#tablewrapgroup) | [`VerseGroup`](modules.md#versegroup) | [`Permissions`](modules.md#permissions) | [`Attrib`](modules.md#attrib))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`DispQuoteChildrenMap`](modules.md#dispquotechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:3731](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L3731)
 
@@ -14941,7 +14941,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:3815](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`EditionChildrenMap`](modules.md#editionchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:3821](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L3821)
 
@@ -15111,7 +15111,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:3835](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Institution`](modules.md#institution) | [`InstitutionWrap`](modules.md#institutionwrap) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Annotation`](modules.md#annotation) | [`Isbn`](modules.md#isbn) | [`ElocationId`](modules.md#elocationid) | [`Fpage`](modules.md#fpage) | [`Issue`](modules.md#issue) | [`IssueId`](modules.md#issueid) | [`IssuePart`](modules.md#issuepart) | [`IssueTitle`](modules.md#issuetitle) | [`Lpage`](modules.md#lpage) | [`PageRange`](modules.md#pagerange) | [`Supplement`](modules.md#supplement) | [`Volume`](modules.md#volume) | [`VolumeId`](modules.md#volumeid) | [`VolumeSeries`](modules.md#volumeseries) | [`ArticleTitle`](modules.md#articletitle) | [`ChapterTitle`](modules.md#chaptertitle) | [`CollabAlternatives`](modules.md#collabalternatives) | [`Collab`](modules.md#collab) | [`Role`](modules.md#role) | [`Comment`](modules.md#comment) | [`ConfAcronym`](modules.md#confacronym) | [`ConfDate`](modules.md#confdate) | [`ConfLoc`](modules.md#confloc) | [`ConfName`](modules.md#confname) | [`ConfSponsor`](modules.md#confsponsor) | [`Name`](modules.md#name) | [`NameAlternatives`](modules.md#namealternatives) | [`StringName`](modules.md#stringname) | [`DataTitle`](modules.md#datatitle) | [`DateIncitation`](modules.md#dateincitation) | [`Day`](modules.md#day) | [`Month`](modules.md#month) | [`Season`](modules.md#season) | [`Year`](modules.md#year) | [`Date`](modules.md#date) | [`Edition`](modules.md#edition) | [`Etal`](modules.md#etal) | [`Gov`](modules.md#gov) | [`Issn`](modules.md#issn) | [`IssnL`](modules.md#issnl) | [`PartTitle`](modules.md#parttitle) | [`Patent`](modules.md#patent) | [`PersonGroup`](modules.md#persongroup) | [`PubId`](modules.md#pubid) | [`PublisherLoc`](modules.md#publisherloc) | [`PublisherName`](modules.md#publishername) | [`Series`](modules.md#series) | [`Size`](modules.md#size) | [`Source`](modules.md#source) | [`Std`](modules.md#std) | [`StringDate`](modules.md#stringdate) | [`TransSource`](modules.md#transsource) | [`TransTitle`](modules.md#transtitle) | [`Version`](modules.md#version))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ElementCitationChildrenMap`](modules.md#elementcitationchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:3845](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L3845)
 
@@ -16131,7 +16131,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:4133](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Permissions`](modules.md#permissions) | [`ArticleId`](modules.md#articleid) | [`Isbn`](modules.md#isbn) | [`ArticleVersion`](modules.md#articleversion) | [`ArticleVersionalternatives`](modules.md#articleversionalternatives) | [`PubDate`](modules.md#pubdate) | [`PubDatenotavailable`](modules.md#pubdatenotavailable) | [`SelfUri`](modules.md#selfuri) | [`Notes`](modules.md#notes) | [`Date`](modules.md#date) | [`Issn`](modules.md#issn) | [`IssnL`](modules.md#issnl) | [`EventDesc`](modules.md#eventdesc))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`EventChildrenMap`](modules.md#eventchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:4139](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L4139)
 
@@ -16290,7 +16290,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:4094](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`ArticleId`](modules.md#articleid) | [`Isbn`](modules.md#isbn) | [`ArticleVersion`](modules.md#articleversion) | [`ArticleVersionalternatives`](modules.md#articleversionalternatives) | [`PubDate`](modules.md#pubdate) | [`PubDatenotavailable`](modules.md#pubdatenotavailable) | [`Date`](modules.md#date) | [`Issn`](modules.md#issn) | [`IssnL`](modules.md#issnl) | [`StringDate`](modules.md#stringdate))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`EventDescChildrenMap`](modules.md#eventdescchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:4099](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L4099)
 
@@ -16451,7 +16451,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:4173](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`P`](modules.md#p) | [`Sec`](modules.md#sec) | [`Title`](modules.md#title) | [`RefList`](modules.md#reflist) | [`Address`](modules.md#address) | [`Alternatives`](modules.md#alternatives) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`TexMath`](modules.md#texmath) | [`AltTitle`](modules.md#alttitle) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Subtitle`](modules.md#subtitle) | [`BlockAlternatives`](modules.md#blockalternatives) | [`BoxedText`](modules.md#boxedtext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`Fig`](modules.md#fig) | [`FigGroup`](modules.md#figgroup) | [`FnGroup`](modules.md#fngroup) | [`Glossary`](modules.md#glossary) | [`List`](modules.md#list) | [`Question`](modules.md#question) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionWrapgroup`](modules.md#questionwrapgroup) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`TableWrap`](modules.md#tablewrap) | [`TableWrapgroup`](modules.md#tablewrapgroup) | [`VerseGroup`](modules.md#versegroup))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ExplanationChildrenMap`](modules.md#explanationchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:4179](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L4179)
 
@@ -16792,7 +16792,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:4287](https://github.com/TrialAndEr
 
 ##### `children`
 
-> [`SimpleTextContent`](modules.md#simpletextcontent)[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ExtLinkChildrenMap`](modules.md#extlinkchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:4296](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L4296)
 
@@ -17065,7 +17065,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:4385](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Abstract`](modules.md#abstract) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`P`](modules.md#p) | [`KwdGroup`](modules.md#kwdgroup) | [`SubjGroup`](modules.md#subjgroup) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`Xref`](modules.md#xref) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`AltText`](modules.md#alttext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`List`](modules.md#list) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`TableWrap`](modules.md#tablewrap) | [`VerseGroup`](modules.md#versegroup) | [`Permissions`](modules.md#permissions) | [`Attrib`](modules.md#attrib) | [`LongDesc`](modules.md#longdesc) | [`Caption`](modules.md#caption))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`FigChildrenMap`](modules.md#figchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:4393](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L4393)
 
@@ -17411,7 +17411,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:4332](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Abstract`](modules.md#abstract) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`KwdGroup`](modules.md#kwdgroup) | [`SubjGroup`](modules.md#subjgroup) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`Xref`](modules.md#xref) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`AltText`](modules.md#alttext) | [`BlockAlternatives`](modules.md#blockalternatives) | [`Fig`](modules.md#fig) | [`LongDesc`](modules.md#longdesc) | [`Caption`](modules.md#caption))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`FigGroupChildrenMap`](modules.md#figgroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:4339](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L4339)
 
@@ -17600,7 +17600,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:4466](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`FixedCaseChildrenMap`](modules.md#fixedcasechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:4471](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L4471)
 
@@ -17901,7 +17901,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:4553](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Alternatives`](modules.md#alternatives) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`BlockAlternatives`](modules.md#blockalternatives) | [`BoxedText`](modules.md#boxedtext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`Fig`](modules.md#fig) | [`FigGroup`](modules.md#figgroup) | [`TableWrap`](modules.md#tablewrap) | [`TableWrapgroup`](modules.md#tablewrapgroup))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`FloatsGroupChildrenMap`](modules.md#floatsgroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:4557](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L4557)
 
@@ -18064,7 +18064,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:4612](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Label`](modules.md#label) | [`P`](modules.md#p))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`FnChildrenMap`](modules.md#fnchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:4619](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L4619)
 
@@ -18163,7 +18163,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:4591](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Label`](modules.md#label) | [`Title`](modules.md#title) | [`Fn`](modules.md#fn))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`FnGroupChildrenMap`](modules.md#fngroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:4596](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L4596)
 
@@ -18355,7 +18355,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:4776](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`ArticleMeta`](modules.md#articlemeta) | [`Notes`](modules.md#notes) | [`JournalMeta`](modules.md#journalmeta))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`FrontChildrenMap`](modules.md#frontchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:4780](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L4780)
 
@@ -18452,7 +18452,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:4672](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Abstract`](modules.md#abstract) | [`KwdGroup`](modules.md#kwdgroup) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`AffAlternatives`](modules.md#affalternatives) | [`Aff`](modules.md#aff) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`Permissions`](modules.md#permissions) | [`ArticleCategories`](modules.md#articlecategories) | [`ArticleId`](modules.md#articleid) | [`Isbn`](modules.md#isbn) | [`ArticleVersion`](modules.md#articleversion) | [`ArticleVersionalternatives`](modules.md#articleversionalternatives) | [`AuthorNotes`](modules.md#authornotes) | [`Conference`](modules.md#conference) | [`ContribGroup`](modules.md#contribgroup) | [`Counts`](modules.md#counts) | [`CustomMetagroup`](modules.md#custommetagroup) | [`ElocationId`](modules.md#elocationid) | [`Fpage`](modules.md#fpage) | [`FundingGroup`](modules.md#fundinggroup) | [`History`](modules.md#history) | [`Issue`](modules.md#issue) | [`IssueId`](modules.md#issueid) | [`IssuePart`](modules.md#issuepart) | [`IssueSponsor`](modules.md#issuesponsor) | [`IssueTitle`](modules.md#issuetitle) | [`IssueTitlegroup`](modules.md#issuetitlegroup) | [`Lpage`](modules.md#lpage) | [`PageRange`](modules.md#pagerange) | [`Product`](modules.md#product) | [`PubDate`](modules.md#pubdate) | [`PubDatenotavailable`](modules.md#pubdatenotavailable) | [`PubHistory`](modules.md#pubhistory) | [`SelfUri`](modules.md#selfuri) | [`Supplement`](modules.md#supplement) | [`SupportGroup`](modules.md#supportgroup) | [`TitleGroup`](modules.md#titlegroup) | [`TransAbstract`](modules.md#transabstract) | [`Volume`](modules.md#volume) | [`VolumeId`](modules.md#volumeid) | [`VolumeIssuegroup`](modules.md#volumeissuegroup) | [`VolumeSeries`](modules.md#volumeseries))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`FrontStubChildrenMap`](modules.md#frontstubchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:4676](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L4676)
 
@@ -18809,7 +18809,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:4794](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`AwardGroup`](modules.md#awardgroup) | [`FundingStatement`](modules.md#fundingstatement) | [`OpenAccess`](modules.md#openaccess))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`FundingGroupChildrenMap`](modules.md#fundinggroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:4799](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L4799)
 
@@ -18916,7 +18916,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:4813](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Institution`](modules.md#institution) | [`InstitutionWrap`](modules.md#institutionwrap) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`FundingSourceChildrenMap`](modules.md#fundingsourcechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:4822](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L4822)
 
@@ -19167,7 +19167,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:4886](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`FundingStatementChildrenMap`](modules.md#fundingstatementchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:4892](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L4892)
 
@@ -19431,7 +19431,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:4946](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`P`](modules.md#p) | [`Title`](modules.md#title) | [`Address`](modules.md#address) | [`Alternatives`](modules.md#alternatives) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`TexMath`](modules.md#texmath) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`BlockAlternatives`](modules.md#blockalternatives) | [`BoxedText`](modules.md#boxedtext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`Fig`](modules.md#fig) | [`FigGroup`](modules.md#figgroup) | [`Glossary`](modules.md#glossary) | [`List`](modules.md#list) | [`Question`](modules.md#question) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionWrapgroup`](modules.md#questionwrapgroup) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`TableWrap`](modules.md#tablewrap) | [`TableWrapgroup`](modules.md#tablewrapgroup) | [`VerseGroup`](modules.md#versegroup))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`GlossaryChildrenMap`](modules.md#glossarychildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:4951](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L4951)
 
@@ -19900,7 +19900,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:5060](https://github.com/TrialAndEr
 
 ##### `children`
 
-> [`SimpleTextContent`](modules.md#simpletextcontent)[]
+> [`RequiredMap`](modules.md#requiredmap)<[`GovChildrenMap`](modules.md#govchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:5065](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L5065)
 
@@ -20005,7 +20005,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:5077](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Abstract`](modules.md#abstract) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`KwdGroup`](modules.md#kwdgroup) | [`SubjGroup`](modules.md#subjgroup) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Xref`](modules.md#xref) | [`AltText`](modules.md#alttext) | [`Permissions`](modules.md#permissions) | [`Attrib`](modules.md#attrib) | [`LongDesc`](modules.md#longdesc) | [`Caption`](modules.md#caption))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`GraphicChildrenMap`](modules.md#graphicchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:5088](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L5088)
 
@@ -20344,7 +20344,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:5161](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`IndexTerm`](modules.md#indexterm) | [`Term`](modules.md#term) | [`See`](modules.md#see) | [`SeeAlso`](modules.md#seealso))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`IndexTermChildrenMap`](modules.md#indextermchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:5171](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L5171)
 
@@ -20530,7 +20530,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:5189](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`PrivateChar`](modules.md#privatechar) | [`TexMath`](modules.md#texmath) | [`AltText`](modules.md#alttext) | [`LongDesc`](modules.md#longdesc))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`InlineFormulaChildrenMap`](modules.md#inlineformulachildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:5194](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L5194)
 
@@ -20771,7 +20771,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:5252](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`AltText`](modules.md#alttext) | [`LongDesc`](modules.md#longdesc))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`InlineGraphicChildrenMap`](modules.md#inlinegraphicchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:5262](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L5262)
 
@@ -20884,7 +20884,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:5276](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`AltText`](modules.md#alttext) | [`LongDesc`](modules.md#longdesc))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`InlineMediaChildrenMap`](modules.md#inlinemediachildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:5288](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L5288)
 
@@ -21097,7 +21097,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:5338](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`AltText`](modules.md#alttext) | [`LongDesc`](modules.md#longdesc))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`InlineSupplementarymaterialChildrenMap`](modules.md#inlinesupplementarymaterialchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:5346](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L5346)
 
@@ -21306,7 +21306,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:5415](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`InstitutionChildrenMap`](modules.md#institutionchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:5421](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L5421)
 
@@ -21498,7 +21498,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:5435](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Institution`](modules.md#institution) | [`InstitutionId`](modules.md#institutionid))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`InstitutionWrapChildrenMap`](modules.md#institutionwrapchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:5439](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L5439)
 
@@ -22382,7 +22382,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:5560](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`IssueTitle`](modules.md#issuetitle) | [`IssueSubtitle`](modules.md#issuesubtitle) | [`TransTitlegroup`](modules.md#transtitlegroup))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`IssueTitlegroupChildrenMap`](modules.md#issuetitlegroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:5565](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L5565)
 
@@ -22489,7 +22489,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:5612](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ItalicChildrenMap`](modules.md#italicchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:5618](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L5618)
 
@@ -22863,7 +22863,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:5712](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`AffAlternatives`](modules.md#affalternatives) | [`Aff`](modules.md#aff) | [`Isbn`](modules.md#isbn) | [`ContribGroup`](modules.md#contribgroup) | [`SelfUri`](modules.md#selfuri) | [`Notes`](modules.md#notes) | [`Issn`](modules.md#issn) | [`IssnL`](modules.md#issnl) | [`JournalId`](modules.md#journalid) | [`JournalTitlegroup`](modules.md#journaltitlegroup) | [`Publisher`](modules.md#publisher))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`JournalMetaChildrenMap`](modules.md#journalmetachildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:5716](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L5716)
 
@@ -23182,7 +23182,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:5761](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`AbbrevJournaltitle`](modules.md#abbrevjournaltitle) | [`TransTitlegroup`](modules.md#transtitlegroup) | [`JournalSubtitle`](modules.md#journalsubtitle) | [`JournalTitle`](modules.md#journaltitle))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`JournalTitlegroupChildrenMap`](modules.md#journaltitlegroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:5765](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L5765)
 
@@ -23301,7 +23301,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:5825](https://github.com/TrialAndEr
 
 ##### `children`
 
-> [`SimpleTextContent`](modules.md#simpletextcontent)[]
+> [`RequiredMap`](modules.md#requiredmap)<[`KwdChildrenMap`](modules.md#kwdchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:5834](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L5834)
 
@@ -23402,7 +23402,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:5798](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Label`](modules.md#label) | [`Title`](modules.md#title) | [`CompoundKwd`](modules.md#compoundkwd) | [`Kwd`](modules.md#kwd) | [`NestedKwd`](modules.md#nestedkwd))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`KwdGroupChildrenMap`](modules.md#kwdgroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:5807](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L5807)
 
@@ -23513,7 +23513,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:5846](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`PrivateChar`](modules.md#privatechar))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`LabelChildrenMap`](modules.md#labelchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:5851](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L5851)
 
@@ -23799,7 +23799,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:5897](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Address`](modules.md#address) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`TexMath`](modules.md#texmath) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`BlockAlternatives`](modules.md#blockalternatives) | [`BoxedText`](modules.md#boxedtext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`Fig`](modules.md#fig) | [`FigGroup`](modules.md#figgroup) | [`List`](modules.md#list) | [`Question`](modules.md#question) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionWrapgroup`](modules.md#questionwrapgroup) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`TableWrap`](modules.md#tablewrap) | [`TableWrapgroup`](modules.md#tablewrapgroup) | [`VerseGroup`](modules.md#versegroup) | [`AwardId`](modules.md#awardid) | [`FundingSource`](modules.md#fundingsource) | [`CitationAlternatives`](modules.md#citationalternatives) | [`ElementCitation`](modules.md#elementcitation) | [`MixedCitation`](modules.md#mixedcitation) | [`NlmCitation`](modules.md#nlmcitation) | [`OpenAccess`](modules.md#openaccess) | [`Price`](modules.md#price))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`LicensePChildrenMap`](modules.md#licensepchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:5902](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L5902)
 
@@ -24326,7 +24326,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:6096](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`Title`](modules.md#title) | [`ListItem`](modules.md#listitem))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ListChildrenMap`](modules.md#listchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:6105](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L6105)
 
@@ -24431,7 +24431,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:6073](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Label`](modules.md#label) | [`P`](modules.md#p) | [`Title`](modules.md#title) | [`DefList`](modules.md#deflist) | [`List`](modules.md#list))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ListItemChildrenMap`](modules.md#listitemchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:6078](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L6078)
 
@@ -24728,7 +24728,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:6152](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Abstract`](modules.md#abstract) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`KwdGroup`](modules.md#kwdgroup) | [`SubjGroup`](modules.md#subjgroup) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Xref`](modules.md#xref) | [`AltText`](modules.md#alttext) | [`Permissions`](modules.md#permissions) | [`Attrib`](modules.md#attrib) | [`LongDesc`](modules.md#longdesc) | [`Caption`](modules.md#caption))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`MediaChildrenMap`](modules.md#mediachildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:6163](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L6163)
 
@@ -24970,7 +24970,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:6212](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`MetaValueChildrenMap`](modules.md#metavaluechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:6216](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L6216)
 
@@ -25459,7 +25459,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:6330](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Institution`](modules.md#institution) | [`InstitutionWrap`](modules.md#institutionwrap) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Annotation`](modules.md#annotation) | [`Isbn`](modules.md#isbn) | [`ElocationId`](modules.md#elocationid) | [`Fpage`](modules.md#fpage) | [`Issue`](modules.md#issue) | [`IssueId`](modules.md#issueid) | [`IssuePart`](modules.md#issuepart) | [`IssueTitle`](modules.md#issuetitle) | [`Lpage`](modules.md#lpage) | [`PageRange`](modules.md#pagerange) | [`Supplement`](modules.md#supplement) | [`Volume`](modules.md#volume) | [`VolumeId`](modules.md#volumeid) | [`VolumeSeries`](modules.md#volumeseries) | [`ArticleTitle`](modules.md#articletitle) | [`ChapterTitle`](modules.md#chaptertitle) | [`CollabAlternatives`](modules.md#collabalternatives) | [`Collab`](modules.md#collab) | [`Role`](modules.md#role) | [`Comment`](modules.md#comment) | [`ConfAcronym`](modules.md#confacronym) | [`ConfDate`](modules.md#confdate) | [`ConfLoc`](modules.md#confloc) | [`ConfName`](modules.md#confname) | [`ConfSponsor`](modules.md#confsponsor) | [`Name`](modules.md#name) | [`NameAlternatives`](modules.md#namealternatives) | [`StringName`](modules.md#stringname) | [`DataTitle`](modules.md#datatitle) | [`DateIncitation`](modules.md#dateincitation) | [`Day`](modules.md#day) | [`Month`](modules.md#month) | [`Season`](modules.md#season) | [`Year`](modules.md#year) | [`Date`](modules.md#date) | [`Edition`](modules.md#edition) | [`Etal`](modules.md#etal) | [`Gov`](modules.md#gov) | [`Issn`](modules.md#issn) | [`IssnL`](modules.md#issnl) | [`PartTitle`](modules.md#parttitle) | [`Patent`](modules.md#patent) | [`PersonGroup`](modules.md#persongroup) | [`PubId`](modules.md#pubid) | [`PublisherLoc`](modules.md#publisherloc) | [`PublisherName`](modules.md#publishername) | [`Series`](modules.md#series) | [`Size`](modules.md#size) | [`Source`](modules.md#source) | [`Std`](modules.md#std) | [`StringDate`](modules.md#stringdate) | [`TransSource`](modules.md#transsource) | [`TransTitle`](modules.md#transtitle) | [`Version`](modules.md#version))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`MixedCitationChildrenMap`](modules.md#mixedcitationchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:6340](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L6340)
 
@@ -26064,7 +26064,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:6522](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`MonospaceChildrenMap`](modules.md#monospacechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:6528](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L6528)
 
@@ -26450,7 +26450,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:6790](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`GivenNames`](modules.md#givennames) | [`Prefix`](modules.md#prefix) | [`Suffix`](modules.md#suffix) | [`Surname`](modules.md#surname))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`NameChildrenMap`](modules.md#namechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:6796](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L6796)
 
@@ -26523,7 +26523,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:6625](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Name`](modules.md#name) | [`StringName`](modules.md#stringname))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`NameAlternativesChildrenMap`](modules.md#namealternativeschildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:6629](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L6629)
 
@@ -26666,7 +26666,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:6641](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Address`](modules.md#address) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`TexMath`](modules.md#texmath) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`BlockAlternatives`](modules.md#blockalternatives) | [`BoxedText`](modules.md#boxedtext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`Fig`](modules.md#fig) | [`FigGroup`](modules.md#figgroup) | [`List`](modules.md#list) | [`Question`](modules.md#question) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionWrapgroup`](modules.md#questionwrapgroup) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`TableWrap`](modules.md#tablewrap) | [`TableWrapgroup`](modules.md#tablewrapgroup) | [`VerseGroup`](modules.md#versegroup))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`NamedContentChildrenMap`](modules.md#namedcontentchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:6653](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L6653)
 
@@ -27145,7 +27145,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:6815](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`CompoundKwd`](modules.md#compoundkwd) | [`Kwd`](modules.md#kwd) | [`NestedKwd`](modules.md#nestedkwd))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`NestedKwdChildrenMap`](modules.md#nestedkwdchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:6824](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L6824)
 
@@ -27258,7 +27258,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:6840](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`AccessDate`](modules.md#accessdate) | [`Annotation`](modules.md#annotation) | [`Fpage`](modules.md#fpage) | [`Issue`](modules.md#issue) | [`Lpage`](modules.md#lpage) | [`Supplement`](modules.md#supplement) | [`Volume`](modules.md#volume) | [`ArticleTitle`](modules.md#articletitle) | [`Collab`](modules.md#collab) | [`Comment`](modules.md#comment) | [`ConfDate`](modules.md#confdate) | [`ConfLoc`](modules.md#confloc) | [`ConfName`](modules.md#confname) | [`PageCount`](modules.md#pagecount) | [`Day`](modules.md#day) | [`Month`](modules.md#month) | [`Season`](modules.md#season) | [`Year`](modules.md#year) | [`Edition`](modules.md#edition) | [`Patent`](modules.md#patent) | [`PersonGroup`](modules.md#persongroup) | [`PubId`](modules.md#pubid) | [`PublisherLoc`](modules.md#publisherloc) | [`PublisherName`](modules.md#publishername) | [`Series`](modules.md#series) | [`Source`](modules.md#source) | [`TransSource`](modules.md#transsource) | [`TransTitle`](modules.md#transtitle) | [`TimeStamp`](modules.md#timestamp))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`NlmCitationChildrenMap`](modules.md#nlmcitationchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:6849](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L6849)
 
@@ -27857,7 +27857,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:7009](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Label`](modules.md#label) | [`P`](modules.md#p) | [`Product`](modules.md#product))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`NoteChildrenMap`](modules.md#notechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:7014](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L7014)
 
@@ -27964,7 +27964,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:6915](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Label`](modules.md#label) | [`P`](modules.md#p) | [`Sec`](modules.md#sec) | [`Title`](modules.md#title) | [`RefList`](modules.md#reflist) | [`Address`](modules.md#address) | [`Alternatives`](modules.md#alternatives) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`TexMath`](modules.md#texmath) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`BlockAlternatives`](modules.md#blockalternatives) | [`BoxedText`](modules.md#boxedtext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`Fig`](modules.md#fig) | [`FigGroup`](modules.md#figgroup) | [`FnGroup`](modules.md#fngroup) | [`Glossary`](modules.md#glossary) | [`List`](modules.md#list) | [`Question`](modules.md#question) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionWrapgroup`](modules.md#questionwrapgroup) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`TableWrap`](modules.md#tablewrap) | [`TableWrapgroup`](modules.md#tablewrapgroup) | [`VerseGroup`](modules.md#versegroup) | [`SecMeta`](modules.md#secmeta))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`NotesChildrenMap`](modules.md#noteschildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:6921](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L6921)
 
@@ -28376,7 +28376,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:7047](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Institution`](modules.md#institution) | [`InstitutionWrap`](modules.md#institutionwrap) | [`Fn`](modules.md#fn) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`OnBehalfofChildrenMap`](modules.md#onbehalfofchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:7052](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L7052)
 
@@ -28666,7 +28666,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:7115](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`P`](modules.md#p) | [`Sec`](modules.md#sec) | [`Title`](modules.md#title) | [`RefList`](modules.md#reflist) | [`Address`](modules.md#address) | [`Alternatives`](modules.md#alternatives) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`TexMath`](modules.md#texmath) | [`AltTitle`](modules.md#alttitle) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`Subtitle`](modules.md#subtitle) | [`BlockAlternatives`](modules.md#blockalternatives) | [`BoxedText`](modules.md#boxedtext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`Fig`](modules.md#fig) | [`FigGroup`](modules.md#figgroup) | [`FnGroup`](modules.md#fngroup) | [`Glossary`](modules.md#glossary) | [`List`](modules.md#list) | [`Question`](modules.md#question) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionWrapgroup`](modules.md#questionwrapgroup) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`TableWrap`](modules.md#tablewrap) | [`TableWrapgroup`](modules.md#tablewrapgroup) | [`VerseGroup`](modules.md#versegroup))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`OptionChildrenMap`](modules.md#optionchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:7121](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L7121)
 
@@ -29007,7 +29007,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:7237](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`OverlineChildrenMap`](modules.md#overlinechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:7243](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L7243)
 
@@ -29456,7 +29456,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:7966](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Address`](modules.md#address) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`TexMath`](modules.md#texmath) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`BlockAlternatives`](modules.md#blockalternatives) | [`BoxedText`](modules.md#boxedtext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`Fig`](modules.md#fig) | [`FigGroup`](modules.md#figgroup) | [`List`](modules.md#list) | [`Question`](modules.md#question) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionWrapgroup`](modules.md#questionwrapgroup) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`TableWrap`](modules.md#tablewrap) | [`TableWrapgroup`](modules.md#tablewrapgroup) | [`VerseGroup`](modules.md#versegroup) | [`AwardId`](modules.md#awardid) | [`FundingSource`](modules.md#fundingsource) | [`CitationAlternatives`](modules.md#citationalternatives) | [`ElementCitation`](modules.md#elementcitation) | [`MixedCitation`](modules.md#mixedcitation) | [`NlmCitation`](modules.md#nlmcitation) | [`OpenAccess`](modules.md#openaccess))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`PChildrenMap`](modules.md#pchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:7971](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L7971)
 
@@ -30180,7 +30180,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:7350](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`PartTitleChildrenMap`](modules.md#parttitlechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:7355](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L7355)
 
@@ -30522,7 +30522,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:7437](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`CopyrightHolder`](modules.md#copyrightholder) | [`CopyrightStatement`](modules.md#copyrightstatement) | [`CopyrightYear`](modules.md#copyrightyear) | [`License`](modules.md#license))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`PermissionsChildrenMap`](modules.md#permissionschildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:7441](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L7441)
 
@@ -30629,7 +30629,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:7457](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`AffAlternatives`](modules.md#affalternatives) | [`Aff`](modules.md#aff) | [`Anonymous`](modules.md#anonymous) | [`CollabAlternatives`](modules.md#collabalternatives) | [`Collab`](modules.md#collab) | [`Role`](modules.md#role) | [`Name`](modules.md#name) | [`NameAlternatives`](modules.md#namealternatives) | [`StringName`](modules.md#stringname) | [`Etal`](modules.md#etal))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`PersonGroupChildrenMap`](modules.md#persongroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:7463](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L7463)
 
@@ -31043,7 +31043,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:7553](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`AltText`](modules.md#alttext) | [`Permissions`](modules.md#permissions) | [`Attrib`](modules.md#attrib) | [`LongDesc`](modules.md#longdesc))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`PreformatChildrenMap`](modules.md#preformatchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:7561](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L7561)
 
@@ -31288,7 +31288,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:7627](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`Underline`](modules.md#underline))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`PriceChildrenMap`](modules.md#pricechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:7633](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L7633)
 
@@ -31441,7 +31441,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:7665](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Institution`](modules.md#institution) | [`InstitutionWrap`](modules.md#institutionwrap) | [`ContribId`](modules.md#contribid) | [`Name`](modules.md#name) | [`NameAlternatives`](modules.md#namealternatives) | [`StringName`](modules.md#stringname))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`PrincipalAwardrecipientChildrenMap`](modules.md#principalawardrecipientchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:7670](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L7670)
 
@@ -31558,7 +31558,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:7690](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`ContribId`](modules.md#contribid) | [`Name`](modules.md#name) | [`NameAlternatives`](modules.md#namealternatives) | [`StringName`](modules.md#stringname))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`PrincipalInvestigatorChildrenMap`](modules.md#principalinvestigatorchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:7695](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L7695)
 
@@ -31667,7 +31667,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:7711](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`InlineGraphic`](modules.md#inlinegraphic) | [`GlyphData`](modules.md#glyphdata) | [`GlyphRef`](modules.md#glyphref))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`PrivateCharChildrenMap`](modules.md#privatecharchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:7718](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L7718)
 
@@ -31774,7 +31774,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:7732](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`CustomMetagroup`](modules.md#custommetagroup) | [`ExtendedBy`](modules.md#extendedby) | [`RestrictedBy`](modules.md#restrictedby))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ProcessingMetaChildrenMap`](modules.md#processingmetachildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:7741](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L7741)
 
@@ -31877,7 +31877,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:7763](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`ObjectId`](modules.md#objectid) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Institution`](modules.md#institution) | [`InstitutionWrap`](modules.md#institutionwrap) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Break`](modules.md#break) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`Annotation`](modules.md#annotation) | [`Isbn`](modules.md#isbn) | [`ElocationId`](modules.md#elocationid) | [`Fpage`](modules.md#fpage) | [`Issue`](modules.md#issue) | [`IssueId`](modules.md#issueid) | [`IssuePart`](modules.md#issuepart) | [`IssueTitle`](modules.md#issuetitle) | [`Lpage`](modules.md#lpage) | [`PageRange`](modules.md#pagerange) | [`Supplement`](modules.md#supplement) | [`Volume`](modules.md#volume) | [`VolumeId`](modules.md#volumeid) | [`VolumeSeries`](modules.md#volumeseries) | [`ArticleTitle`](modules.md#articletitle) | [`ChapterTitle`](modules.md#chaptertitle) | [`CollabAlternatives`](modules.md#collabalternatives) | [`Collab`](modules.md#collab) | [`Role`](modules.md#role) | [`Comment`](modules.md#comment) | [`ConfAcronym`](modules.md#confacronym) | [`ConfDate`](modules.md#confdate) | [`ConfLoc`](modules.md#confloc) | [`ConfName`](modules.md#confname) | [`ConfSponsor`](modules.md#confsponsor) | [`Name`](modules.md#name) | [`NameAlternatives`](modules.md#namealternatives) | [`StringName`](modules.md#stringname) | [`DataTitle`](modules.md#datatitle) | [`DateIncitation`](modules.md#dateincitation) | [`Day`](modules.md#day) | [`Month`](modules.md#month) | [`Season`](modules.md#season) | [`Year`](modules.md#year) | [`Date`](modules.md#date) | [`Edition`](modules.md#edition) | [`Etal`](modules.md#etal) | [`Gov`](modules.md#gov) | [`Issn`](modules.md#issn) | [`IssnL`](modules.md#issnl) | [`PartTitle`](modules.md#parttitle) | [`Patent`](modules.md#patent) | [`PersonGroup`](modules.md#persongroup) | [`PubId`](modules.md#pubid) | [`PublisherLoc`](modules.md#publisherloc) | [`PublisherName`](modules.md#publishername) | [`Series`](modules.md#series) | [`Size`](modules.md#size) | [`Source`](modules.md#source) | [`Std`](modules.md#std) | [`StringDate`](modules.md#stringdate) | [`TransSource`](modules.md#transsource) | [`TransTitle`](modules.md#transtitle) | [`Version`](modules.md#version) | [`Price`](modules.md#price))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ProductChildrenMap`](modules.md#productchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:7770](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L7770)
 
@@ -32532,7 +32532,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:8133](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Day`](modules.md#day) | [`Era`](modules.md#era) | [`Month`](modules.md#month) | [`Season`](modules.md#season) | [`Year`](modules.md#year))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`PubDateChildrenMap`](modules.md#pubdatechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:8143](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L8143)
 
@@ -32894,7 +32894,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:8272](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`PublisherLoc`](modules.md#publisherloc) | [`PublisherName`](modules.md#publishername))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`PublisherChildrenMap`](modules.md#publisherchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:8276](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L8276)
 
@@ -32993,7 +32993,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:8218](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`AddrLine`](modules.md#addrline) | [`City`](modules.md#city) | [`Country`](modules.md#country) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Fax`](modules.md#fax) | [`Institution`](modules.md#institution) | [`InstitutionWrap`](modules.md#institutionwrap) | [`Phone`](modules.md#phone) | [`PostalCode`](modules.md#postalcode) | [`State`](modules.md#state) | [`Uri`](modules.md#uri))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`PublisherLocChildrenMap`](modules.md#publisherlocchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:8223](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L8223)
 
@@ -33146,7 +33146,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:8255](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Institution`](modules.md#institution) | [`InstitutionWrap`](modules.md#institutionwrap))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`PublisherNameChildrenMap`](modules.md#publishernamechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:8260](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L8260)
 
@@ -33241,7 +33241,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:8383](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`P`](modules.md#p) | [`Sec`](modules.md#sec) | [`Title`](modules.md#title) | [`RefList`](modules.md#reflist) | [`Address`](modules.md#address) | [`Alternatives`](modules.md#alternatives) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`TexMath`](modules.md#texmath) | [`AltTitle`](modules.md#alttitle) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`Subtitle`](modules.md#subtitle) | [`BlockAlternatives`](modules.md#blockalternatives) | [`BoxedText`](modules.md#boxedtext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`Fig`](modules.md#fig) | [`FigGroup`](modules.md#figgroup) | [`FnGroup`](modules.md#fngroup) | [`Glossary`](modules.md#glossary) | [`List`](modules.md#list) | [`Question`](modules.md#question) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionWrapgroup`](modules.md#questionwrapgroup) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`TableWrap`](modules.md#tablewrap) | [`TableWrapgroup`](modules.md#tablewrapgroup) | [`VerseGroup`](modules.md#versegroup) | [`SecMeta`](modules.md#secmeta) | [`Option`](modules.md#option))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`QuestionChildrenMap`](modules.md#questionchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:8389](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L8389)
 
@@ -33592,7 +33592,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:8290](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`P`](modules.md#p) | [`Sec`](modules.md#sec) | [`Title`](modules.md#title) | [`Address`](modules.md#address) | [`Alternatives`](modules.md#alternatives) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`TexMath`](modules.md#texmath) | [`AltTitle`](modules.md#alttitle) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`Subtitle`](modules.md#subtitle) | [`BlockAlternatives`](modules.md#blockalternatives) | [`BoxedText`](modules.md#boxedtext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`Fig`](modules.md#fig) | [`FigGroup`](modules.md#figgroup) | [`List`](modules.md#list) | [`Question`](modules.md#question) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionWrapgroup`](modules.md#questionwrapgroup) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`TableWrap`](modules.md#tablewrap) | [`TableWrapgroup`](modules.md#tablewrapgroup) | [`VerseGroup`](modules.md#versegroup))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`QuestionPreambleChildrenMap`](modules.md#questionpreamblechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:8295](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L8295)
 
@@ -33915,7 +33915,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:8524](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`ObjectId`](modules.md#objectid) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`Question`](modules.md#question))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`QuestionWrapChildrenMap`](modules.md#questionwrapchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:8530](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L8530)
 
@@ -34034,7 +34034,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:8494](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`Title`](modules.md#title) | [`AltTitle`](modules.md#alttitle) | [`Subtitle`](modules.md#subtitle) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionPreamble`](modules.md#questionpreamble))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`QuestionWrapgroupChildrenMap`](modules.md#questionwrapgroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:8500](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L8500)
 
@@ -34163,7 +34163,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:8550](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`Underline`](modules.md#underline))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`RbChildrenMap`](modules.md#rbchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:8555](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L8555)
 
@@ -34312,7 +34312,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:8686](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Label`](modules.md#label) | [`CitationAlternatives`](modules.md#citationalternatives) | [`ElementCitation`](modules.md#elementcitation) | [`MixedCitation`](modules.md#mixedcitation) | [`NlmCitation`](modules.md#nlmcitation) | [`Note`](modules.md#note))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`RefChildrenMap`](modules.md#refchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:8692](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L8692)
 
@@ -34510,7 +34510,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:8595](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`P`](modules.md#p) | [`Title`](modules.md#title) | [`RefList`](modules.md#reflist) | [`Address`](modules.md#address) | [`Alternatives`](modules.md#alternatives) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`TexMath`](modules.md#texmath) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`BlockAlternatives`](modules.md#blockalternatives) | [`BoxedText`](modules.md#boxedtext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`Fig`](modules.md#fig) | [`FigGroup`](modules.md#figgroup) | [`List`](modules.md#list) | [`Question`](modules.md#question) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionWrapgroup`](modules.md#questionwrapgroup) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`TableWrap`](modules.md#tablewrap) | [`TableWrapgroup`](modules.md#tablewrapgroup) | [`VerseGroup`](modules.md#versegroup) | [`Ref`](modules.md#ref))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`RefListChildrenMap`](modules.md#reflistchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:8600](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L8600)
 
@@ -34843,7 +34843,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:8714](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`ObjectId`](modules.md#objectid) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Institution`](modules.md#institution) | [`InstitutionWrap`](modules.md#institutionwrap) | [`Uri`](modules.md#uri) | [`Annotation`](modules.md#annotation) | [`Isbn`](modules.md#isbn) | [`ElocationId`](modules.md#elocationid) | [`Fpage`](modules.md#fpage) | [`Issue`](modules.md#issue) | [`IssueId`](modules.md#issueid) | [`IssuePart`](modules.md#issuepart) | [`IssueTitle`](modules.md#issuetitle) | [`Lpage`](modules.md#lpage) | [`PageRange`](modules.md#pagerange) | [`Supplement`](modules.md#supplement) | [`Volume`](modules.md#volume) | [`VolumeId`](modules.md#volumeid) | [`VolumeSeries`](modules.md#volumeseries) | [`ArticleTitle`](modules.md#articletitle) | [`ChapterTitle`](modules.md#chaptertitle) | [`CollabAlternatives`](modules.md#collabalternatives) | [`Collab`](modules.md#collab) | [`Role`](modules.md#role) | [`Comment`](modules.md#comment) | [`ConfAcronym`](modules.md#confacronym) | [`ConfDate`](modules.md#confdate) | [`ConfLoc`](modules.md#confloc) | [`ConfName`](modules.md#confname) | [`ConfSponsor`](modules.md#confsponsor) | [`Name`](modules.md#name) | [`NameAlternatives`](modules.md#namealternatives) | [`StringName`](modules.md#stringname) | [`DataTitle`](modules.md#datatitle) | [`DateIncitation`](modules.md#dateincitation) | [`Day`](modules.md#day) | [`Month`](modules.md#month) | [`Season`](modules.md#season) | [`Year`](modules.md#year) | [`Date`](modules.md#date) | [`Edition`](modules.md#edition) | [`Etal`](modules.md#etal) | [`Gov`](modules.md#gov) | [`Issn`](modules.md#issn) | [`IssnL`](modules.md#issnl) | [`PartTitle`](modules.md#parttitle) | [`Patent`](modules.md#patent) | [`PersonGroup`](modules.md#persongroup) | [`PubId`](modules.md#pubid) | [`PublisherLoc`](modules.md#publisherloc) | [`PublisherName`](modules.md#publishername) | [`Series`](modules.md#series) | [`Size`](modules.md#size) | [`Source`](modules.md#source) | [`Std`](modules.md#std) | [`StringDate`](modules.md#stringdate) | [`TransSource`](modules.md#transsource) | [`TransTitle`](modules.md#transtitle) | [`Version`](modules.md#version) | [`JournalId`](modules.md#journalid))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`RelatedArticleChildrenMap`](modules.md#relatedarticlechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:8728](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L8728)
 
@@ -35404,7 +35404,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:8888](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`ObjectId`](modules.md#objectid) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Institution`](modules.md#institution) | [`InstitutionWrap`](modules.md#institutionwrap) | [`Uri`](modules.md#uri) | [`Annotation`](modules.md#annotation) | [`Isbn`](modules.md#isbn) | [`ElocationId`](modules.md#elocationid) | [`Fpage`](modules.md#fpage) | [`Issue`](modules.md#issue) | [`IssueId`](modules.md#issueid) | [`IssuePart`](modules.md#issuepart) | [`IssueTitle`](modules.md#issuetitle) | [`Lpage`](modules.md#lpage) | [`PageRange`](modules.md#pagerange) | [`Supplement`](modules.md#supplement) | [`Volume`](modules.md#volume) | [`VolumeId`](modules.md#volumeid) | [`VolumeSeries`](modules.md#volumeseries) | [`ArticleTitle`](modules.md#articletitle) | [`ChapterTitle`](modules.md#chaptertitle) | [`CollabAlternatives`](modules.md#collabalternatives) | [`Collab`](modules.md#collab) | [`Role`](modules.md#role) | [`Comment`](modules.md#comment) | [`ConfAcronym`](modules.md#confacronym) | [`ConfDate`](modules.md#confdate) | [`ConfLoc`](modules.md#confloc) | [`ConfName`](modules.md#confname) | [`ConfSponsor`](modules.md#confsponsor) | [`Name`](modules.md#name) | [`NameAlternatives`](modules.md#namealternatives) | [`StringName`](modules.md#stringname) | [`DataTitle`](modules.md#datatitle) | [`DateIncitation`](modules.md#dateincitation) | [`Day`](modules.md#day) | [`Month`](modules.md#month) | [`Season`](modules.md#season) | [`Year`](modules.md#year) | [`Date`](modules.md#date) | [`Edition`](modules.md#edition) | [`Etal`](modules.md#etal) | [`Gov`](modules.md#gov) | [`Issn`](modules.md#issn) | [`IssnL`](modules.md#issnl) | [`PartTitle`](modules.md#parttitle) | [`Patent`](modules.md#patent) | [`PersonGroup`](modules.md#persongroup) | [`PubId`](modules.md#pubid) | [`PublisherLoc`](modules.md#publisherloc) | [`PublisherName`](modules.md#publishername) | [`Series`](modules.md#series) | [`Size`](modules.md#size) | [`Source`](modules.md#source) | [`Std`](modules.md#std) | [`StringDate`](modules.md#stringdate) | [`TransSource`](modules.md#transsource) | [`TransTitle`](modules.md#transtitle) | [`Version`](modules.md#version))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`RelatedObjectChildrenMap`](modules.md#relatedobjectchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:8904](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L8904)
 
@@ -35941,7 +35941,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:9062](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`ResourceName`](modules.md#resourcename) | [`ResourceWrap`](modules.md#resourcewrap))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ResourceGroupChildrenMap`](modules.md#resourcegroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:9067](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L9067)
 
@@ -36131,7 +36131,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:9098](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ResourceNameChildrenMap`](modules.md#resourcenamechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:9104](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L9104)
 
@@ -36288,7 +36288,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:9138](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`ResourceName`](modules.md#resourcename) | [`ResourceId`](modules.md#resourceid))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ResourceWrapChildrenMap`](modules.md#resourcewrapchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:9142](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L9142)
 
@@ -36383,7 +36383,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:9154](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Back`](modules.md#back) | [`Body`](modules.md#body) | [`FloatsGroup`](modules.md#floatsgroup) | [`Front`](modules.md#front) | [`ProcessingMeta`](modules.md#processingmeta) | [`FrontStub`](modules.md#frontstub))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ResponseChildrenMap`](modules.md#responsechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:9160](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L9160)
 
@@ -36599,7 +36599,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:9196](https://github.com/TrialAndEr
 
 ##### `children`
 
-> [`SimpleTextContent`](modules.md#simpletextcontent)[]
+> [`RequiredMap`](modules.md#requiredmap)<[`RoleChildrenMap`](modules.md#rolechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:9207](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L9207)
 
@@ -36694,7 +36694,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:9219](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`RomanChildrenMap`](modules.md#romanchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:9225](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L9225)
 
@@ -37198,7 +37198,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:9331](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Rb`](modules.md#rb) | [`Rt`](modules.md#rt))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`RubyChildrenMap`](modules.md#rubychildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:9336](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L9336)
 
@@ -37299,7 +37299,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:9350](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SansSerifChildrenMap`](modules.md#sansserifchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:9356](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L9356)
 
@@ -37598,7 +37598,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:9438](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ScChildrenMap`](modules.md#scchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:9444](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L9444)
 
@@ -37984,7 +37984,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:9564](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Label`](modules.md#label) | [`P`](modules.md#p) | [`Sec`](modules.md#sec) | [`Title`](modules.md#title) | [`RefList`](modules.md#reflist) | [`Address`](modules.md#address) | [`Alternatives`](modules.md#alternatives) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`TexMath`](modules.md#texmath) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`BlockAlternatives`](modules.md#blockalternatives) | [`BoxedText`](modules.md#boxedtext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`Fig`](modules.md#fig) | [`FigGroup`](modules.md#figgroup) | [`FnGroup`](modules.md#fngroup) | [`Glossary`](modules.md#glossary) | [`List`](modules.md#list) | [`Question`](modules.md#question) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionWrapgroup`](modules.md#questionwrapgroup) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`TableWrap`](modules.md#tablewrap) | [`TableWrapgroup`](modules.md#tablewrapgroup) | [`VerseGroup`](modules.md#versegroup) | [`SecMeta`](modules.md#secmeta))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SecChildrenMap`](modules.md#secchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:9570](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L9570)
 
@@ -38303,7 +38303,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:9541](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Abstract`](modules.md#abstract) | [`ObjectId`](modules.md#objectid) | [`KwdGroup`](modules.md#kwdgroup) | [`SubjGroup`](modules.md#subjgroup) | [`Permissions`](modules.md#permissions) | [`ContribGroup`](modules.md#contribgroup))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SecMetaChildrenMap`](modules.md#secmetachildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:9545](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L9545)
 
@@ -38422,7 +38422,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:9764](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`TexMath`](modules.md#texmath) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SeeChildrenMap`](modules.md#seechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:9770](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L9770)
 
@@ -38507,7 +38507,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:9658](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`TexMath`](modules.md#texmath) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SeeAlsoChildrenMap`](modules.md#seealsochildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:9668](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L9668)
 
@@ -39213,7 +39213,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:9917](https://github.com/TrialAndEr
 
 ##### `children`
 
-> [`SimpleTextContent`](modules.md#simpletextcontent)[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SeriesChildrenMap`](modules.md#serieschildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:9922](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L9922)
 
@@ -39306,7 +39306,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:9883](https://github.com/TrialAndEr
 
 ##### `children`
 
-> [`SimpleTextContent`](modules.md#simpletextcontent)[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SeriesTextChildrenMap`](modules.md#seriestextchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:9888](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L9888)
 
@@ -39399,7 +39399,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:9900](https://github.com/TrialAndEr
 
 ##### `children`
 
-> [`SimpleTextContent`](modules.md#simpletextcontent)[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SeriesTitleChildrenMap`](modules.md#seriestitlechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:9905](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L9905)
 
@@ -39494,7 +39494,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:9996](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`PrivateChar`](modules.md#privatechar) | [`Break`](modules.md#break) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SigChildrenMap`](modules.md#sigchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:10002](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L10002)
 
@@ -39571,7 +39571,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:9934](https://github.com/TrialAndEr
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Alternatives`](modules.md#alternatives) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`PrivateChar`](modules.md#privatechar) | [`Break`](modules.md#break) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Sig`](modules.md#sig))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SigBlockChildrenMap`](modules.md#sigblockchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:9940](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L9940)
 
@@ -40011,7 +40011,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:10065](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SourceChildrenMap`](modules.md#sourcechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:10070](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L10070)
 
@@ -40272,7 +40272,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:10138](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Fn`](modules.md#fn) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`Degrees`](modules.md#degrees) | [`GivenNames`](modules.md#givennames) | [`Prefix`](modules.md#prefix) | [`Suffix`](modules.md#suffix) | [`Surname`](modules.md#surname))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SpeakerChildrenMap`](modules.md#speakerchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:10143](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L10143)
 
@@ -40407,7 +40407,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:10169](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`ObjectId`](modules.md#objectid) | [`P`](modules.md#p) | [`Speaker`](modules.md#speaker))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SpeechChildrenMap`](modules.md#speechchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:10174](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L10174)
 
@@ -40599,7 +40599,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:10190](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Abstract`](modules.md#abstract) | [`Label`](modules.md#label) | [`P`](modules.md#p) | [`Title`](modules.md#title) | [`KwdGroup`](modules.md#kwdgroup) | [`SubjGroup`](modules.md#subjgroup) | [`Statement`](modules.md#statement) | [`Permissions`](modules.md#permissions) | [`Attrib`](modules.md#attrib))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`StatementChildrenMap`](modules.md#statementchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:10195](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L10195)
 
@@ -40740,7 +40740,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:10260](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`PrivateChar`](modules.md#privatechar) | [`Day`](modules.md#day) | [`Month`](modules.md#month) | [`Year`](modules.md#year) | [`PubId`](modules.md#pubid) | [`Source`](modules.md#source) | [`StdOrganization`](modules.md#stdorganization))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`StdChildrenMap`](modules.md#stdchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:10265](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L10265)
 
@@ -40971,7 +40971,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:10237](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Institution`](modules.md#institution) | [`InstitutionWrap`](modules.md#institutionwrap))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`StdOrganizationChildrenMap`](modules.md#stdorganizationchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:10242](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L10242)
 
@@ -41084,7 +41084,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:10323](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`StrikeChildrenMap`](modules.md#strikechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:10329](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L10329)
 
@@ -41381,7 +41381,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:10411](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`ConfAcronym`](modules.md#confacronym) | [`ConfDate`](modules.md#confdate) | [`ConfLoc`](modules.md#confloc) | [`ConfName`](modules.md#confname) | [`ConfNum`](modules.md#confnum) | [`ConfSponsor`](modules.md#confsponsor) | [`ConfTheme`](modules.md#conftheme) | [`StringConf`](modules.md#stringconf))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`StringConfChildrenMap`](modules.md#stringconfchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:10416](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L10416)
 
@@ -41676,7 +41676,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:10494](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Day`](modules.md#day) | [`Era`](modules.md#era) | [`Month`](modules.md#month) | [`Season`](modules.md#season) | [`Year`](modules.md#year))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`StringDateChildrenMap`](modules.md#stringdatechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:10501](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L10501)
 
@@ -41795,7 +41795,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:10522](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Degrees`](modules.md#degrees) | [`GivenNames`](modules.md#givennames) | [`Prefix`](modules.md#prefix) | [`Suffix`](modules.md#suffix) | [`Surname`](modules.md#surname))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`StringNameChildrenMap`](modules.md#stringnamechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:10528](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L10528)
 
@@ -41922,7 +41922,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:10548](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Address`](modules.md#address) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`SupplementaryMaterial`](modules.md#supplementarymaterial) | [`TexMath`](modules.md#texmath) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`BlockAlternatives`](modules.md#blockalternatives) | [`BoxedText`](modules.md#boxedtext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`Fig`](modules.md#fig) | [`FigGroup`](modules.md#figgroup) | [`List`](modules.md#list) | [`Question`](modules.md#question) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionWrapgroup`](modules.md#questionwrapgroup) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`TableWrap`](modules.md#tablewrap) | [`TableWrapgroup`](modules.md#tablewrapgroup) | [`VerseGroup`](modules.md#versegroup))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`StyledContentChildrenMap`](modules.md#styledcontentchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:10558](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L10558)
 
@@ -42389,7 +42389,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:10898](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SubChildrenMap`](modules.md#subchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:10904](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L10904)
 
@@ -42466,7 +42466,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:10696](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Back`](modules.md#back) | [`Body`](modules.md#body) | [`FloatsGroup`](modules.md#floatsgroup) | [`Front`](modules.md#front) | [`ProcessingMeta`](modules.md#processingmeta) | [`Response`](modules.md#response) | [`SubArticle`](modules.md#subarticle) | [`FrontStub`](modules.md#frontstub))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SubArticleChildrenMap`](modules.md#subarticlechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:10702](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L10702)
 
@@ -42831,7 +42831,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:10787](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`SubjGroup`](modules.md#subjgroup) | [`CompoundSubject`](modules.md#compoundsubject) | [`Subject`](modules.md#subject))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SubjGroupChildrenMap`](modules.md#subjgroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:10796](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L10796)
 
@@ -42938,7 +42938,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:10726](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`PrivateChar`](modules.md#privatechar))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SubjectChildrenMap`](modules.md#subjectchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:10735](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L10735)
 
@@ -43151,7 +43151,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:10809](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Break`](modules.md#break) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SubtitleChildrenMap`](modules.md#subtitlechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:10814](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L10814)
 
@@ -43549,7 +43549,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:11262](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SupChildrenMap`](modules.md#supchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:11268](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L11268)
 
@@ -43848,7 +43848,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:11086](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Title`](modules.md#title) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`ContribGroup`](modules.md#contribgroup))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SupplementChildrenMap`](modules.md#supplementchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:11092](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L11092)
 
@@ -44107,7 +44107,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:11002](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Abstract`](modules.md#abstract) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`P`](modules.md#p) | [`KwdGroup`](modules.md#kwdgroup) | [`SubjGroup`](modules.md#subjgroup) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`Xref`](modules.md#xref) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`AltText`](modules.md#alttext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`List`](modules.md#list) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`TableWrap`](modules.md#tablewrap) | [`VerseGroup`](modules.md#versegroup) | [`Permissions`](modules.md#permissions) | [`Attrib`](modules.md#attrib) | [`LongDesc`](modules.md#longdesc) | [`Caption`](modules.md#caption))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SupplementaryMaterialChildrenMap`](modules.md#supplementarymaterialchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:11012](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L11012)
 
@@ -44469,7 +44469,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:11172](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`FundingGroup`](modules.md#fundinggroup) | [`ContributedResourcegroup`](modules.md#contributedresourcegroup))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SupportGroupChildrenMap`](modules.md#supportgroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:11177](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L11177)
 
@@ -44570,7 +44570,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:11189](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Institution`](modules.md#institution) | [`InstitutionWrap`](modules.md#institutionwrap) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`SupportSourceChildrenMap`](modules.md#supportsourcechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:11198](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L11198)
 
@@ -44910,7 +44910,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:11370](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Tbody`](modules.md#tbody) | [`Colgroup`](modules.md#colgroup) | [`Col`](modules.md#col) | [`Tfoot`](modules.md#tfoot) | [`Thead`](modules.md#thead) | [`Tr`](modules.md#tr))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`TableChildrenMap`](modules.md#tablechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:11383](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L11383)
 
@@ -45112,7 +45112,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:11480](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Abstract`](modules.md#abstract) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`KwdGroup`](modules.md#kwdgroup) | [`SubjGroup`](modules.md#subjgroup) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`Xref`](modules.md#xref) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`Table`](modules.md#table) | [`AltText`](modules.md#alttext) | [`ChemStructwrap`](modules.md#chemstructwrap) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispQuote`](modules.md#dispquote) | [`List`](modules.md#list) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`VerseGroup`](modules.md#versegroup) | [`Permissions`](modules.md#permissions) | [`Attrib`](modules.md#attrib) | [`LongDesc`](modules.md#longdesc) | [`Caption`](modules.md#caption) | [`TableWrapfoot`](modules.md#tablewrapfoot))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`TableWrapChildrenMap`](modules.md#tablewrapchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:11487](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L11487)
 
@@ -45371,7 +45371,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:11411](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`P`](modules.md#p) | [`Title`](modules.md#title) | [`Fn`](modules.md#fn) | [`FnGroup`](modules.md#fngroup) | [`Permissions`](modules.md#permissions) | [`Attrib`](modules.md#attrib))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`TableWrapfootChildrenMap`](modules.md#tablewrapfootchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:11415](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L11415)
 
@@ -45492,7 +45492,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:11435](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Abstract`](modules.md#abstract) | [`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`KwdGroup`](modules.md#kwdgroup) | [`SubjGroup`](modules.md#subjgroup) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Xref`](modules.md#xref) | [`AltText`](modules.md#alttext) | [`TableWrap`](modules.md#tablewrap) | [`LongDesc`](modules.md#longdesc) | [`Caption`](modules.md#caption))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`TableWrapgroupChildrenMap`](modules.md#tablewrapgroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:11442](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L11442)
 
@@ -45754,7 +45754,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:11573](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Tr`](modules.md#tr))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`TbodyChildrenMap`](modules.md#tbodychildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:11582](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L11582)
 
@@ -45867,7 +45867,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:11597](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`P`](modules.md#p) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Break`](modules.md#break) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`TexMath`](modules.md#texmath) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`List`](modules.md#list) | [`Question`](modules.md#question) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionWrapgroup`](modules.md#questionwrapgroup) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`VerseGroup`](modules.md#versegroup) | [`CitationAlternatives`](modules.md#citationalternatives) | [`ElementCitation`](modules.md#elementcitation) | [`MixedCitation`](modules.md#mixedcitation) | [`NlmCitation`](modules.md#nlmcitation) | [`Hr`](modules.md#hr))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`TdChildrenMap`](modules.md#tdchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:11613](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L11613)
 
@@ -46340,7 +46340,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:11836](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`TexMath`](modules.md#texmath) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`TermChildrenMap`](modules.md#termchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:11848](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L11848)
 
@@ -46677,7 +46677,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:11752](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`TermHeadChildrenMap`](modules.md#termheadchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:11756](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L11756)
 
@@ -47112,7 +47112,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:11961](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`PrivateChar`](modules.md#privatechar) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`TextualFormChildrenMap`](modules.md#textualformchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:11966](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L11966)
 
@@ -47319,7 +47319,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:12013](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Tr`](modules.md#tr))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`TfootChildrenMap`](modules.md#tfootchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:12021](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L12021)
 
@@ -47432,7 +47432,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:12060](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`P`](modules.md#p) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Break`](modules.md#break) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`Array`](modules.md#array) | [`Code`](modules.md#code) | [`Graphic`](modules.md#graphic) | [`Media`](modules.md#media) | [`Preformat`](modules.md#preformat) | [`TexMath`](modules.md#texmath) | [`AnswerSet`](modules.md#answerset) | [`Answer`](modules.md#answer) | [`Explanation`](modules.md#explanation) | [`DefList`](modules.md#deflist) | [`DispFormula`](modules.md#dispformula) | [`DispFormulagroup`](modules.md#dispformulagroup) | [`DispQuote`](modules.md#dispquote) | [`List`](modules.md#list) | [`Question`](modules.md#question) | [`QuestionWrap`](modules.md#questionwrap) | [`QuestionWrapgroup`](modules.md#questionwrapgroup) | [`Speech`](modules.md#speech) | [`Statement`](modules.md#statement) | [`VerseGroup`](modules.md#versegroup) | [`CitationAlternatives`](modules.md#citationalternatives) | [`ElementCitation`](modules.md#elementcitation) | [`MixedCitation`](modules.md#mixedcitation) | [`NlmCitation`](modules.md#nlmcitation) | [`Hr`](modules.md#hr))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`ThChildrenMap`](modules.md#thchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:12077](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L12077)
 
@@ -47899,7 +47899,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:12036](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Tr`](modules.md#tr))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`TheadChildrenMap`](modules.md#theadchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:12045](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L12045)
 
@@ -48079,7 +48079,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:12253](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Break`](modules.md#break) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath) | [`CitationAlternatives`](modules.md#citationalternatives) | [`ElementCitation`](modules.md#elementcitation) | [`MixedCitation`](modules.md#mixedcitation) | [`NlmCitation`](modules.md#nlmcitation))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`TitleChildrenMap`](modules.md#titlechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:12258](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L12258)
 
@@ -48410,7 +48410,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:12231](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`AltTitle`](modules.md#alttitle) | [`Subtitle`](modules.md#subtitle) | [`FnGroup`](modules.md#fngroup) | [`ArticleTitle`](modules.md#articletitle) | [`TransTitlegroup`](modules.md#transtitlegroup))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`TitleGroupChildrenMap`](modules.md#titlegroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:12235](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L12235)
 
@@ -48529,7 +48529,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:12642](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Td`](modules.md#td) | [`Th`](modules.md#th))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`TrChildrenMap`](modules.md#trchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:12651](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L12651)
 
@@ -48630,7 +48630,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:12350](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Label`](modules.md#label) | [`ObjectId`](modules.md#objectid) | [`P`](modules.md#p) | [`Sec`](modules.md#sec) | [`Title`](modules.md#title))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`TransAbstractChildrenMap`](modules.md#transabstractchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:12356](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L12356)
 
@@ -48741,7 +48741,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:12374](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`TransSourceChildrenMap`](modules.md#transsourcechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:12379](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L12379)
 
@@ -49002,7 +49002,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:12447](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Break`](modules.md#break) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`TransSubtitleChildrenMap`](modules.md#transsubtitlechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:12452](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L12452)
 
@@ -49305,7 +49305,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:12553](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Break`](modules.md#break) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`TransTitleChildrenMap`](modules.md#transtitlechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:12558](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L12558)
 
@@ -49614,7 +49614,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:12534](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`TransTitle`](modules.md#transtitle) | [`TransSubtitle`](modules.md#transsubtitle))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`TransTitlegroupChildrenMap`](modules.md#transtitlegroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:12539](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L12539)
 
@@ -49717,7 +49717,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:12688](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Email`](modules.md#email) | [`ExtLink`](modules.md#extlink) | [`Uri`](modules.md#uri) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`InlineSupplementarymaterial`](modules.md#inlinesupplementarymaterial) | [`RelatedArticle`](modules.md#relatedarticle) | [`RelatedObject`](modules.md#relatedobject) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref) | [`TexMath`](modules.md#texmath))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`UnderlineChildrenMap`](modules.md#underlinechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:12696](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L12696)
 
@@ -50346,7 +50346,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:12809](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Label`](modules.md#label) | [`Title`](modules.md#title) | [`Subtitle`](modules.md#subtitle) | [`VerseGroup`](modules.md#versegroup) | [`Permissions`](modules.md#permissions) | [`Attrib`](modules.md#attrib) | [`VerseLine`](modules.md#verseline))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`VerseGroupChildrenMap`](modules.md#versegroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:12817](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L12817)
 
@@ -50483,7 +50483,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:12841](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Bold`](modules.md#bold) | [`FixedCase`](modules.md#fixedcase) | [`Italic`](modules.md#italic) | [`Monospace`](modules.md#monospace) | [`NamedContent`](modules.md#namedcontent) | [`Overline`](modules.md#overline) | [`Roman`](modules.md#roman) | [`Ruby`](modules.md#ruby) | [`SansSerif`](modules.md#sansserif) | [`Sc`](modules.md#sc) | [`Strike`](modules.md#strike) | [`StyledContent`](modules.md#styledcontent) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup) | [`Underline`](modules.md#underline) | [`Abbrev`](modules.md#abbrev) | [`Alternatives`](modules.md#alternatives) | [`ChemStruct`](modules.md#chemstruct) | [`IndexTerm`](modules.md#indexterm) | [`IndexTermrangeend`](modules.md#indextermrangeend) | [`InlineFormula`](modules.md#inlineformula) | [`InlineGraphic`](modules.md#inlinegraphic) | [`InlineMedia`](modules.md#inlinemedia) | [`MilestoneEnd`](modules.md#milestoneend) | [`MilestoneStart`](modules.md#milestonestart) | [`PrivateChar`](modules.md#privatechar) | [`Fn`](modules.md#fn) | [`Target`](modules.md#target) | [`Xref`](modules.md#xref))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`VerseLineChildrenMap`](modules.md#verselinechildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:12850](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L12850)
 
@@ -50746,7 +50746,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:12918](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Sub`](modules.md#sub) | [`Sup`](modules.md#sup))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`VersionChildrenMap`](modules.md#versionchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:12924](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L12924)
 
@@ -51027,7 +51027,7 @@ Defined in:  [libs/jast/jast/src/lib/jats.ts:12956](https://github.com/TrialAndE
 
 ##### `children`
 
-> ([`Text`](modules.md#text) | [`Issue`](modules.md#issue) | [`IssueId`](modules.md#issueid) | [`IssuePart`](modules.md#issuepart) | [`IssueSponsor`](modules.md#issuesponsor) | [`IssueTitle`](modules.md#issuetitle) | [`IssueTitlegroup`](modules.md#issuetitlegroup) | [`Volume`](modules.md#volume) | [`VolumeId`](modules.md#volumeid) | [`VolumeSeries`](modules.md#volumeseries))[]
+> [`RequiredMap`](modules.md#requiredmap)<[`VolumeIssuegroupChildrenMap`](modules.md#volumeissuegroupchildrenmap)>[]
 
 Defined in:  [libs/jast/jast/src/lib/jats.ts:12961](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast/src/lib/jats.ts#L12961)
 

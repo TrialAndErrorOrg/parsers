@@ -31,7 +31,7 @@ pnpm add parse-text-cite
 #### Signature
 
 ```ts
-parseTextCite(string: string, options?: Options): any[];
+parseTextCite(string: string, options?: Options): (string | Citation)[] | (string | Citation)[][];
 ```
 
 #### Parameters
@@ -43,7 +43,7 @@ parseTextCite(string: string, options?: Options): any[];
 
 #### Returns
 
-`any`[]
+(`string` | [`Citation`](modules.md#citation))[] | (`string` | [`Citation`](modules.md#citation))[][]
 
 Defined in:  [lib/parse-text-cite.ts:34](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/parse-text-cite/src/lib/parse-text-cite.ts#L34)
 

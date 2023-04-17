@@ -2,30 +2,31 @@
 > This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
 
 # reoff-markup-to-style
+[![npm version](https://badge.fury.io/js/reoff-markup-to-style.svg)](https://badge.fury.io/js/reoff-markup-to-style) [![npm downloads](https://img.shields.io/npm/dm/reoff-markup-to-style.svg)](https://www.npmjs.com/package/reoff-markup-to-style)
 
 Plugin for `reoff` that is able to change the styles of paragraphs based on the markup of the underlying text
 
 ## Contents
 
-- [reoff-markup-to-style](#reoff-markup-to-style)
-  - [Contents](#contents)
-  - [What is this?](#what-is-this)
-  - [When should I use this?](#when-should-i-use-this)
-  - [Install](#install)
-  - [Use](#use)
-  - [API](#api)
-    - [`default()`](#default)
-      - [Example](#example)
-      - [Signature](#signature)
-      - [Parameters](#parameters)
-      - [Returns](#returns)
-    - [`Options`](#options)
-      - [Example](#example-1)
-  - [Syntax tree](#syntax-tree)
-  - [Security](#security)
-  - [Related](#related)
-  - [Contribute](#contribute)
-  - [License](#license)
+*   [reoff-markup-to-style](#reoff-markup-to-style)
+    *   [Contents](#contents)
+    *   [What is this?](#what-is-this)
+    *   [When should I use this?](#when-should-i-use-this)
+    *   [Install](#install)
+    *   [Use](#use)
+    *   [API](#api)
+        *   [`default()`](#default)
+            *   [Example](#example)
+            *   [Signature](#signature)
+            *   [Parameters](#parameters)
+            *   [Returns](#returns)
+        *   [`Options`](#options)
+            *   [Example](#example-1)
+    *   [Syntax tree](#syntax-tree)
+    *   [Security](#security)
+    *   [Related](#related)
+    *   [Contribute](#contribute)
+    *   [License](#license)
 
 ## What is this?
 
@@ -53,7 +54,7 @@ pnpm add reoff-markup-to-style
 
 ## API
 
----
+***
 
 ### `default()`
 
@@ -61,8 +62,8 @@ pnpm add reoff-markup-to-style
 
 By default, this plugin will infer the following styles:
 
-- `w:b` -> `Heading 1`
-- `w:i` -> `Heading 2`
+*   `w:b` -> `Heading 1`
+*   `w:i` -> `Heading 2`
 
 This plugin can be configured to infer other styles as well.
 
@@ -70,16 +71,16 @@ This plugin can be configured to infer other styles as well.
 
 ```ts
 const options: Options = [
-  // find all paragraphs that are bold and larger than 24pt and make it a Title
-  {
-    markup: (rPr) => rPr['w:b'] && rPr['w:sz'] && rPr['w:sz']['w:val'] > 24,
-    style: 'Title',
-  },
-  // find all paragraphs that are strikethrough text and make it a Comment
-  {
-    markup: 'w:strike',
-    style: 'Comment',
-  },
+// find all paragraphs that are bold and larger than 24pt and make it a Title
+ {
+  markup: (rPr) => rPr['w:b'] && rPr['w:sz'] && rPr['w:sz']['w:val'] > 24,
+  style: 'Title',
+ },
+// find all paragraphs that are strikethrough text and make it a Comment
+ {
+  markup: 'w:strike',
+  style: 'Comment',
+ },
 ]
 ```
 
@@ -91,8 +92,8 @@ default(options: Options = ...): ReturnType<Plugin<[Options?] | void[], Root, Ro
 
 #### Parameters
 
-| Name      | Type                            | Description     |
-| :-------- | :------------------------------ | :-------------- |
+| Name | Type | Description |
+| :------ | :------ | :------ |
 | `options` | [`Options`](modules.md#options) | Plugin options. |
 
 #### Returns
@@ -101,9 +102,9 @@ default(options: Options = ...): ReturnType<Plugin<[Options?] | void[], Root, Ro
 
 A reoff plugin.
 
-Defined in: reoff/reoff-markup-to-style/src/lib/reoff-markup-to-style.ts:35
+Defined in:  [reoff/reoff-markup-to-style/src/lib/reoff-markup-to-style.ts:35](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/reoff/reoff-markup-to-style/src/lib/reoff-markup-to-style.ts#L35)
 
----
+***
 
 ### `Options`
 
@@ -113,20 +114,20 @@ Defined in: reoff/reoff-markup-to-style/src/lib/reoff-markup-to-style.ts:35
 
 ```ts
 const options: Options = [
-  // find all paragraphs that are bold and larger than 24pt and make it a Title
-  {
-    markup: (rPr) => rPr['w:b'] && rPr['w:sz'] && rPr['w:sz']['w:val'] > 24,
-    style: 'Title',
-  },
-  // find all paragraphs that are strikethrough text and make it a Comment
-  {
-    markup: 'w:strike',
-    style: 'Comment',
-  },
+// find all paragraphs that are bold and larger than 24pt and make it a Title
+ {
+  markup: (rPr) => rPr['w:b'] && rPr['w:sz'] && rPr['w:sz']['w:val'] > 24,
+  style: 'Title',
+ },
+// find all paragraphs that are strikethrough text and make it a Comment
+ {
+  markup: 'w:strike',
+  style: 'Comment',
+ },
 ]
 ```
 
-Defined in: [ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:80](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L80)
+Defined in:  [ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts:80](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-markup-to-style/src/lib/ooxast-util-markup-to-style.ts#L80)
 
 ## Syntax tree
 
@@ -136,7 +137,7 @@ Uses the `[ooxast][ooxast]` syntax tree.
 
 ## Related
 
-- [ooxast-util-markup-to-style](https://github.com/TrialAndErrorOrg/ooxast-util-markup-to-style)
+*   [ooxast-util-markup-to-style](https://github.com/TrialAndErrorOrg/ooxast-util-markup-to-style)
 
 ## Contribute
 
@@ -145,31 +146,59 @@ Uses the `[ooxast][ooxast]` syntax tree.
 [GPL-3.0-or-later](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
+
 [unifiedgh]: https://github.com/unifiedjs/unified
+
 [xast-from-xml]: https://github.com/syntax-tree/xast-util-from-xml
+
 [rehype]: https://github.com/rehypejs/rehype
+
 [rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour
+
 [rejour-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-parse
+
 [rejour-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-stringify
+
 [rejour-move-abstract]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-move-abstract
+
 [rejour-meta]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-meta
+
 [rejour-relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-relatex
+
 [relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex
+
 [relatex-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/relatex-parse
+
 [jast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast
+
 [jast-util-to-texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jast-util-to-texast
+
 [jastscript]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/jastscript
+
 [texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast
+
 [texast-util-to-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast-util-to-latex
+
 [hast]: https://github.com/syntax-tree/hast
+
 [xast]: https://github.com/syntax-tree/xast
+
 [mdast]: https://github.com/syntax-tree/mdast
+
 [mdast-markdown]: https://github.com/syntax-tree/mdast-util-to-markdown
+
 [latex-utensils]: https://github.com/tamuratak/latex-utensils
+
 [latexjs]: https://github.com/latexjs/latexjs
+
 [reoff]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff
+
 [reoff-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse
+
 [reoff-rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-rejour
+
 [ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast
+
 [ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-jast
+
 [reoff-markup-to-style]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff-markup-to-style

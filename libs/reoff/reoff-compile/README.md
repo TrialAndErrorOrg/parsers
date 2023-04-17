@@ -1,15 +1,13 @@
 > **Note**
 > This repository is automatically generated from the [main parser monorepo](https://github.com/TrialAndErrorOrg/parsers). Please submit any issues or pull requests there.
 
-# csl-to-biblatex
+# reoff-compile
 
-[![npm version](https://badge.fury.io/js/csl-to-biblatex.svg)](https://badge.fury.io/js/csl-to-biblatex) [![npm downloads](https://img.shields.io/npm/dm/csl-to-biblatex.svg)](https://www.npmjs.com/package/csl-to-biblatex)
-
-Somewhat jank CSL-JSON to biblatex converter
+Compile a reoff-compatible VFile or bare ooxast syntax tree to a .docx document
 
 ## Contents
 
-*   [csl-to-biblatex](#csl-to-biblatex)
+*   [reoff-compile](#reoff-compile)
     *   [Contents](#contents)
     *   [What is this?](#what-is-this)
     *   [When should I use this?](#when-should-i-use-this)
@@ -33,38 +31,16 @@ Somewhat jank CSL-JSON to biblatex converter
 This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, 18.0+), install as
 
 ```bash
-pnpm add csl-to-biblatex
+pnpm add reoff-compile
 # or with yarn
-# yarn add csl-to-biblatex
+# yarn add reoff-compile
 # or with npm
-# npm install csl-to-biblatex
+# npm install reoff-compile
 ```
 
 ## Use
 
 ## API
-
-***
-
-### `cslToBiblatex()`
-
-#### Signature
-
-```ts
-cslToBiblatex(csl: Data[]): string;
-```
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `csl` | `Data`[] |
-
-#### Returns
-
-`string`
-
-Defined in:  [lib/csl-to-biblatex.ts:103](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/csl-to-biblatex/src/lib/csl-to-biblatex.ts#L103)
 
 ## Syntax tree
 
@@ -138,4 +114,4 @@ Defined in:  [lib/csl-to-biblatex.ts:103](https://github.com/TrialAndErrorOrg/pa
 
 [ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-jast
 
-[csl-to-biblatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/csl-to-biblatex
+[reoff-compile]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff-compile

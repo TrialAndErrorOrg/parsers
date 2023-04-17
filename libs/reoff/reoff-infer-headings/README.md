@@ -106,7 +106,7 @@ default(options: Options = ...): ReturnType<Plugin<[Options?] | void[], Root, Ro
 
 A reoff plugin.
 
-Defined in:  reoff/reoff-markup-to-style/src/lib/reoff-markup-to-style.ts:35
+Defined in:  [reoff/reoff-markup-to-style/src/lib/reoff-markup-to-style.ts:35](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/reoff/reoff-markup-to-style/src/lib/reoff-markup-to-style.ts#L35)
 
 ***
 

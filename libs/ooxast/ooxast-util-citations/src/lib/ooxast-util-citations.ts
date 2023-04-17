@@ -1,4 +1,4 @@
-import { visitParents } from 'unist-util-visit-parents'
+import { SKIP, visitParents } from 'unist-util-visit-parents'
 import { P, R, T, Text, Root } from 'ooxast'
 import { getPStyle } from 'ooxast-util-get-style'
 import { parseTextCite } from 'parse-text-cite'
@@ -6,7 +6,6 @@ import { Node } from 'unist'
 import { convertElement, isElement } from 'xast-util-is-element'
 import { select } from 'xast-util-select'
 import { toString } from 'xast-util-to-string'
-import { select as unistSelect } from 'unist-util-select'
 import { x } from 'xastscript'
 import { Data as CSL } from 'csl-json'
 import { CiteOutput, Citation, MendeleyCitation, ZoteroCitation } from './types.js'
@@ -58,7 +57,15 @@ export function findCitations(tree: Node, vfile?: VFile, options?: Options): Roo
 
     let skipNext = false
 
-    for (const kid of kids) {
+    // loop over runs
+    for (let idx = 0; idx < kids.length; idx++) {
+      const kid = kids[idx]
+
+      if (!convertElement<R>('w:r')(kid)) {
+        runs.push(kid)
+        continue
+      }
+
       const instr = select('w\\:instrText', kid)
 
       // Check if this is a Mendeley/Zotero citation, because if so we should not try to parse it ourselves
@@ -102,7 +109,6 @@ export function findCitations(tree: Node, vfile?: VFile, options?: Options): Roo
         if (i === sentences.length - 1) return s
         return `${s} `
       })
-      // const sentencesWithSpaces = [text]
 
       const rpr = select('w\\:rPr', kid)
       for (const sentence of sentencesWithSpaces) {
@@ -172,6 +178,13 @@ export function findCitations(tree: Node, vfile?: VFile, options?: Options): Roo
           }, [])
           runs.push(...newNodes)
         } catch (e) {
+          vfile?.message(
+            `Text unsuccesfully parsed, treating it as non-cite.
+            Sentence: ${sentence}
+            Error: ${e}`,
+            kid,
+            'ooxast-util-citations',
+          )
           console.warn('Text unsuccesfully parsed, treating it as non-cite')
           console.warn(sentence)
           console.warn(e)
@@ -188,6 +201,7 @@ export function findCitations(tree: Node, vfile?: VFile, options?: Options): Roo
     }
 
     p.children = runs
+    return SKIP
   })
   return tree as Root
 }
@@ -204,10 +218,11 @@ export function constructCitation(
   type: string,
   index: number,
   bibliography?: CSL[],
+  message?: VFile['message'],
 ): { citation: MendeleyCitation | ZoteroCitation; instr: string } {
   switch (type) {
     case 'mendeley': {
-      const citation = constructMendeleyCitation(curr, index, bibliography)
+      const citation = constructMendeleyCitation(curr, index, bibliography, message)
       return {
         instr: `ADDIN CSL_CITATION ${JSON.stringify(citation)}`,
         citation,
@@ -215,7 +230,7 @@ export function constructCitation(
     }
     case 'zotero':
     default: {
-      const citation = constructZoteroCitation(curr, index, bibliography)
+      const citation = constructZoteroCitation(curr, index, bibliography, message)
       return {
         instr: `ADDIN ZOTERO_ITEM CSL_CITATION ${JSON.stringify(citation)}`,
         citation,

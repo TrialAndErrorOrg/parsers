@@ -407,7 +407,8 @@ DutchName -> DutchPrefix %__ BoringNameMaybe {% ([pref,space, rest]) => (
 
 OReilly-> BoringNameMaybe "'" BoringNameMaybe {% ([o, a, name]) =>({family:o+a+name })%}
 
-McConnel -> %Mc BoringNameMaybe {% (name) =>({family:name.join('')}) %}
+McConnel ->  %Mc BoringNameMaybe {% (name) =>({family:name.join('')}) %}
+  | %Mc %Lowword:+ {% ([mac, low]) =>({family:[mac, low.join('')].join('')}) %}
 
 # Eg James, fuck you Jimmy
 BoringNameMaybe -> %Cap %Lowword:*  {% ([cap, rest]) =>( `${cap}${rest.join('')}`) %}

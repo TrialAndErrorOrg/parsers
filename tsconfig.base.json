@@ -244,6 +244,9 @@
       ],
       "reoff-compile": [
         "libs/reoff/reoff-compile/src/index.ts"
+      ],
+      "reference-parser-chatgpt": [
+        "libs/citations/reference-parser-chatgpt/src/index.ts"
       ]
     }
   },

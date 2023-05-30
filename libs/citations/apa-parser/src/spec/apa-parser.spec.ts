@@ -16,7 +16,7 @@ const MODE: 'dev' | 'test' = 'test'
 type ContentArr = [
   description: string,
   input: string,
-  result: string | boolean | Record<string, any>
+  result: string | boolean | Record<string, any>,
 ]
 
 type Table = [apa: string, desc: string, content: ContentArr[]][]
@@ -33,13 +33,7 @@ type Content = {
 
 const tableReducer = (testdata: TestData) =>
   Object.entries(testdata).reduce(
-    (
-      acc: Table,
-      [apa, val]: [
-        apa: string,
-        val: { description: string; content: Content[] }
-      ]
-    ) => {
+    (acc: Table, [apa, val]: [apa: string, val: { description: string; content: Content[] }]) => {
       const { description, content } = val
 
       const contarr: ContentArr[] = content.map((c: Content) => {
@@ -52,7 +46,7 @@ const tableReducer = (testdata: TestData) =>
       acc.push(tableEntry)
       return acc
     },
-    []
+    [],
   )
 
 const citeTable = tableReducer(tests)
@@ -62,11 +56,7 @@ if (MODE === 'dev') {
   describe.each(nameTable)('%s: %s', (apa, desc, content) => {
     it.each(content)(
       '%s %s',
-      (
-        desc: string,
-        inp: string,
-        res: boolean | string | Record<string, any>
-      ) => {
+      (desc: string, inp: string, res: boolean | string | Record<string, any>) => {
         const parser =
           // eslint-disable-next-line
           // @ts-ignore
@@ -85,7 +75,7 @@ if (MODE === 'dev') {
         } catch (e) {
           expect(res).toBeFalsy()
         }
-      }
+      },
     )
   })
 }
@@ -97,35 +87,28 @@ const proc = (apa: string, desc: string) =>
     .use(
       () => (tree) =>
         fs.writeFileSync(
-          new URL(
-            `./debug/${apa}-${desc}.json`,
-            import.meta.url
-          ).pathname.replace(/%20/g, ' '),
-          JSON.stringify(removePosition(tree), null, 2)
-        )
+          new URL(`./debug/${apa}-${desc}.json`, import.meta.url).pathname.replace(/%20/g, ' '),
+          JSON.stringify(removePosition(tree), null, 2),
+        ),
     )
 
-describe.each(citeTable)(
-  '%s: %s',
-  (apa: string, desc: string, content: ContentArr[]) => {
-    it.each(content)('%s %s', (desc, inp, res) => {
-      // const parser =
-      //   // eslint-disable-next-line
-      //   // @ts-ignore
-      //   MODE === 'dev'
-      //     ? // eslint-disable-next-line
-      //       // @ts-ignore
-      //       new nearley.Parser(nearley.Grammar.fromCompiled(grammar))
-      //     : null
-      // parser && parser.feed(inp)
-      const parser = proc(apa, inp)
-      const parseRes = parser.parse(inp)
+describe.each(citeTable)('%s: %s', (apa: string, desc: string, content: ContentArr[]) => {
+  it.each(content)('%s %s', (desc, inp, res) => {
+    // const parser =
+    //   // eslint-disable-next-line
+    //   // @ts-ignore
+    //   MODE === 'dev'
+    //     ? // eslint-disable-next-line
+    //       // @ts-ignore
+    //       new nearley.Parser(nearley.Grammar.fromCompiled(grammar))
+    //     : null
+    // parser && parser.feed(inp)
+    const parser = proc(apa, inp)
+    const parseRes = parser.parse(inp)
 
-      const results = parser.runSync(parseRes)
+    const results = parser.runSync(parseRes)
 
-      // console.dir(results, { depth: null })
-      const expectancy = Array.isArray(res) ? res : [res]
-      expect(results).toEqual(expectancy)
-    })
-  }
-)
+    const expectancy = Array.isArray(res) ? res : [res]
+    expect(results).toEqual(expectancy)
+  })
+})

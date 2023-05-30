@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.1](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-get-style-0.2.0...ooxast-util-get-style-0.2.1) (2023-05-30)
+
+
+### Bug Fixes
+
+* **ooxast-util-get-style:** change 'w:val' property type from boolean to string in RPrJSON ([bb93a1f](https://github.com/TrialAndErrorOrg/parsers/commit/bb93a1f9b5b5d4ea216a04d80514fe1c80d54001))
+
 ## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-get-style-0.1.2...ooxast-util-get-style-0.2.0) (2023-03-27)
 
 

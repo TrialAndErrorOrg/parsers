@@ -5,6 +5,7 @@ import { select } from 'xast-util-select'
 import { removePosition } from 'unist-util-remove-position'
 import { select as unistSelect } from 'unist-util-select'
 import { getRStyle } from 'ooxast-util-get-style'
+import { toString } from 'xast-util-to-string'
 
 // Check to see if node is a paragraph, because we want to merge elements in a paragraph
 const isP = convertElement<P>('w:p')

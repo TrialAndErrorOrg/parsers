@@ -4,7 +4,7 @@ import { Root, Node } from '@unified-latex/unified-latex-types/'
 import { CompilerFunction, Plugin } from 'unified'
 
 const unifiedLatexStringify: Plugin<void[], Root, string> = function unifiedLatexStringify() {
-  const compiler: CompilerFunction<Node, string> = (tree) => {
+  const compiler: CompilerFunction<Root, string> = (tree) => {
     // Assume options.
     return toString(tree)
   }

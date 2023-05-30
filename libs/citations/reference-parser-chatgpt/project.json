@@ -1,0 +1,102 @@
+{
+  "name": "reference-parser-chatgpt",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/citations/reference-parser-chatgpt/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "better-nx-tsc:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "rootDir": "libs/citations/reference-parser-chatgpt/src",
+        "outputPath": "dist/libs/citations/reference-parser-chatgpt",
+        "tsConfig": "libs/citations/reference-parser-chatgpt/tsconfig.lib.json",
+        "packageJson": "libs/citations/reference-parser-chatgpt/package.json",
+        "main": "libs/citations/reference-parser-chatgpt/src/index.ts",
+        "assets": ["libs/citations/reference-parser-chatgpt/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "clean": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      },
+      "dependsOn": [
+        {
+          "projects": "dependencies",
+          "target": "build",
+          "params": "forward"
+        },
+        {
+          "projects": "self",
+          "target": "lint"
+        }
+      ]
+    },
+    "npm": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "trackDeps": true,
+        "postTargets": [
+          "reference-parser-chatgpt:npm",
+          "reference-parser-chatgpt:github",
+          "reference-parser-chatgpt:github-standalone"
+        ]
+      },
+      "dependsOn": [
+        {
+          "target": "version",
+          "projects": "dependencies",
+          "params": "forward"
+        }
+      ]
+    },
+    "github": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}",
+        "repo": "TrialAndErrorOrg/docx-to-vfile"
+      }
+    },
+    "github-standalone": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}",
+        "repo": "TrialAndErrorOrg/reference-parser-chatgpt"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "readme": {
+      "executor": "utils-readme:update-readme",
+      "options": {
+        "readme": "libs/citations/reference-parser-chatgpt/README.md",
+        "packageJSON": "libs/citations/reference-parser-chatgpt/package.json"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/citations/reference-parser-chatgpt/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

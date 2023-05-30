@@ -2,6 +2,11 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-markup-to-style-0.1.0...ooxast-util-markup-to-style-0.1.1) (2023-05-30)
+
+### Dependency Updates
+
+* `ooxast-util-get-style` updated to version `0.2.1`
 ## [0.1.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-markup-to-style-0.0.2...ooxast-util-markup-to-style-0.1.0) (2023-03-29)
 
 

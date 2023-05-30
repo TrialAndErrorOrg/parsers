@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.2](https://github.com/TrialAndErrorOrg/parsers/compare/parse-text-cite-0.2.1...parse-text-cite-0.2.2) (2023-05-30)
+
+
+### Bug Fixes
+
+* add support for abbreviated last names ([04ec487](https://github.com/TrialAndErrorOrg/parsers/commit/04ec4879a0bdf80fcac29c21070b1a264b227698))
+
 ## [0.2.1](https://github.com/TrialAndErrorOrg/parsers/compare/parse-text-cite-0.2.0...parse-text-cite-0.2.1) (2023-03-29)
 
 

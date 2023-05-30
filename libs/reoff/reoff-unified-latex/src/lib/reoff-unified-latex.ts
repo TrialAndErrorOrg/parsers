@@ -21,7 +21,7 @@ const bridge: Plugin<[Processor, Options?], OoxastRoot> = function (destination,
  * Mutate-mode.
  * Further transformers run on the unified-latex tree.
  */
-const mutate: Plugin<[Options | void | undefined], OoxastRoot, Root> = function (options = {}) {
+const mutate: Plugin<(Options | undefined | void)[], OoxastRoot, Root> = function (options = {}) {
   return (node, file) => {
     const result = toUnifiedLatex(node, file, options)
     return result
@@ -43,10 +43,7 @@ const mutate: Plugin<[Options | void | undefined], OoxastRoot, Root> = function 
  * @param options
  *   Options passed to `ooxast-util-to-unified-latex`.
  */
-const reoffUnifiedLatex: ThisType<Processor> = function (
-  destination: Processor | Options,
-  options?: Options,
-) {
+const reoffUnifiedLatex = function (destination: Processor | Options, options?: Options) {
   let settings: Options | undefined
   let processor: Processor | undefined
 

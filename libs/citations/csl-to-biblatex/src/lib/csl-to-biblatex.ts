@@ -95,13 +95,18 @@ const mapPersons = (persons: CSL.Person[]) =>
           // @ts-expect-error - particle is not in the type definition
           auth['particle'] ||
           ''
-        } ${auth.family}${auth.given ? `, ${auth.given}` : ''}${auth.suffix || ''}`
+        } ${
+          auth.family
+            ? `${auth.family}${auth.given ? `, ${auth.given}` : ''}${auth.suffix || ''}`
+            : `${`{${auth.literal ?? auth.given ?? ''}}`}`
+        }`
       ).trim(),
     )
     ?.join(' and ')
 
 export function cslToBiblatex(csl: CSL[]) {
-  const texEntryMap = (key: string, value?: string) => (value ? `${key} = {${value}}` : [])
+  const texEntryMap = (key: string, value?: string) =>
+    value ? `${key} = {${value?.replace(/(%&)/g, '\\$1')}}` : []
 
   const toBibtex = (c: CSL[]) => {
     return c
@@ -112,7 +117,7 @@ export function cslToBiblatex(csl: CSL[]) {
     const type = (biblatexCSLMap.target )[ref.type] || 'article'
       return [
         `@${type}{${generateCiteKey(ref,index)?.replace(/\s/g, '')}`,
-  texEntryMap('title      ',ref.title),
+  texEntryMap('title      ',ref.title?.replace(/([A-Z][A-Z\d]+)/g, '{$1}')?.replace(/: ([A-Z])/g, ': {$1}')),
   texEntryMap('author     ', mapPersons(ref.author || [])),
   texEntryMap('editor     ', mapPersons(ref.editor || [])),
   texEntryMap('number     ',`${ref.number||ref.issue||''}`),
@@ -124,7 +129,7 @@ export function cslToBiblatex(csl: CSL[]) {
   texEntryMap('year       ',ref.issued?.literal ),
   texEntryMap('date       ',ref.issued?.['date-parts']?.[0]?.filter(Boolean).map(part=>(typeof part === 'string' ? part.length === 1 : part! < 10) ? `0${part}` : part).join('-')),
   texEntryMap('pages      ',ref.page),
-  texEntryMap(`${type === 'article' ? 'journal' : 'booktitle'}    `,ref['container-title'] ?? ref.source),
+  texEntryMap(`${type === 'article' ? 'journal' : 'booktitle'}    `,ref['container-title'] ?? ref.source ?? ref.genre?.replace(/\./g,'')),
 
 ].flat().join(',\n    ')+'\n}'
 },
@@ -145,15 +150,27 @@ function generateCiteKey(ref?: CSL, index?: number) {
 
   if (!id) {
     if (author?.[0]?.family) {
-      return `${author[0].family}${issued?.literal || issued?.['date-parts']?.[0]?.[0] || ''}`
+      const prefix =
+        author[0]['non-dropping-particle'] ??
+        author[0]['dropping-particle'] ??
+        author[0].particle ??
+        ''
+      return `${prefix}${author[0].family}${
+        issued?.literal || issued?.['date-parts']?.[0]?.[0] || ''
+      }`
     }
 
     if (editor?.[0]?.family) {
       return `${editor[0].family}${issued?.literal || issued?.['date-parts']?.[0]?.[0] || ''}`
     }
 
+    if (author?.[0]?.given) {
+      return `${author[0].given}${issued?.literal || issued?.['date-parts']?.[0]?.[0] || ''}`
+    }
+
     return `bib${index}`
   }
+
   if (!id.match(/\d/)) {
     return id
   }

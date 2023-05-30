@@ -1,0 +1,112 @@
+{
+  "name": "reoff-compile",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/reoff/reoff-compile/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "better-nx-tsc:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "rootDir": "libs/reoff/reoff-compile/src",
+        "outputPath": "dist/libs/reoff/reoff-compile",
+        "tsConfig": "libs/reoff/reoff-compile/tsconfig.lib.json",
+        "packageJson": "libs/reoff/reoff-compile/package.json",
+        "main": "libs/reoff/reoff-compile/src/index.ts",
+        "assets": [
+          "libs/reoff/reoff-compile/*.md"
+        ],
+        "updateBuildableProjectDepsInPackageJson": true,
+        "clean": true,
+        "buildableProjectDepsInPackageJsonType": "dependencies"
+      },
+      "dependsOn": [
+        {
+          "projects": "dependencies",
+          "target": "build",
+          "params": "forward"
+        },
+        {
+          "projects": "self",
+          "target": "lint"
+        }
+      ]
+    },
+    "npm": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "trackDeps": true,
+        "postTargets": [
+          "reoff-compile:npm",
+          "reoff-compile:github",
+          "reoff-compile:github-standalone"
+        ]
+      },
+      "dependsOn": [
+        {
+          "target": "version",
+          "projects": "dependencies",
+          "params": "forward"
+        }
+      ]
+    },
+    "github": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}",
+        "repo": "TrialAndErrorOrg/docx-to-vfile"
+      }
+    },
+    "github-standalone": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}",
+        "repo": "TrialAndErrorOrg/reoff-compile"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/vite:test",
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
+      "options": {
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "readme": {
+      "executor": "utils-readme:update-readme",
+      "options": {
+        "readme": "libs/reoff/reoff-compile/README.md",
+        "packageJSON": "libs/reoff/reoff-compile/package.json"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/reoff/reoff-compile/**/*.ts"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

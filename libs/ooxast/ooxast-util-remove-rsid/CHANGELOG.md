@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-remove-rsid-0.1.2...ooxast-util-remove-rsid-0.2.0) (2023-05-30)
+
+### Dependency Updates
+
+* `ooxast-util-get-style` updated to version `0.2.1`
+
+### Features
+
+* **ooxast-util-remove-rsid.ts:** import xast-util-to-string to be able to convert nodes to string ([5d03a25](https://github.com/TrialAndErrorOrg/parsers/commit/5d03a25bdbae077af4222bee4920e9c4b5533273))
+
 ## [0.1.2](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-remove-rsid-0.1.1...ooxast-util-remove-rsid-0.1.2) (2023-03-14)
 
 ### Dependency Updates

@@ -88,7 +88,6 @@ describe.each(citeTable)('%s: %s', (apa: string, desc: string, content: ContentA
         : null
     parser && parser.feed(inp)
     const results = parser ? parser.results : parseTextCite(inp)
-    // console.dir(results, { depth: null })
     const expectancy = Array.isArray(res) ? res : [res]
     expect(results).toEqual(expectancy)
   })

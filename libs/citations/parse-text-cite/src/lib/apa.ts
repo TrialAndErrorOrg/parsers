@@ -232,8 +232,9 @@ const grammar: Grammar = {
         ([pre, content, loc]) => {
           const l = Object.assign({},loc)
           const p = pre.length
-                     ? {prefix: pre?.join('')}
+                     ? {prefix: pre?.join('')?.replace(/ $/,'')}
                     : {}
+        
         
           if(content.length===1){
             content[0] = {...content[0],
@@ -251,14 +252,17 @@ const grammar: Grammar = {
     {"name": "PreAuthsPre$ebnf$1", "symbols": ["GenericContent"]},
     {"name": "PreAuthsPre$ebnf$1", "symbols": ["PreAuthsPre$ebnf$1", "GenericContent"], "postprocess": (d) => d[0].concat([d[1]])},
     {"name": "PreAuthsPre", "symbols": ["PreAuthsPre$ebnf$1", (lexer.has("Sem") ? {type: "Sem"} : Sem), (lexer.has("__") ? {type: "__"} : __)], "postprocess": 
-        content => content[0]?.join('')
+        ([content, sem, space]) => content?.join('') + sem + space
                                                       },
     {"name": "PreAuthsPre$ebnf$2", "symbols": ["GenericContent"]},
     {"name": "PreAuthsPre$ebnf$2", "symbols": ["PreAuthsPre$ebnf$2", "GenericContent"], "postprocess": (d) => d[0].concat([d[1]])},
-    {"name": "PreAuthsPre", "symbols": ["PreAuthsPre$ebnf$2", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __)], "postprocess": content => content[0]?.join('')},
+    {"name": "PreAuthsPre", "symbols": ["PreAuthsPre$ebnf$2", (lexer.has("Com") ? {type: "Com"} : Com), (lexer.has("__") ? {type: "__"} : __)], "postprocess": ([content, com, space]) => content?.join('') + com + space},
     {"name": "PreAuthsPre$ebnf$3", "symbols": ["GenericContent"]},
     {"name": "PreAuthsPre$ebnf$3", "symbols": ["PreAuthsPre$ebnf$3", "GenericContent"], "postprocess": (d) => d[0].concat([d[1]])},
-    {"name": "PreAuthsPre", "symbols": ["PreAuthsPre$ebnf$3", (lexer.has("__") ? {type: "__"} : __)], "postprocess": content => content[0]?.join('')},
+    {"name": "PreAuthsPre", "symbols": ["PreAuthsPre$ebnf$3", (lexer.has("__") ? {type: "__"} : __)], "postprocess":  ([content, space]) => {
+            return content?.join('') + space
+        } 
+        },
     {"name": "PreAuthsMiddle$ebnf$1", "symbols": ["GenericContent"]},
     {"name": "PreAuthsMiddle$ebnf$1", "symbols": ["PreAuthsMiddle$ebnf$1", "GenericContent"], "postprocess": (d) => d[0].concat([d[1]])},
     {"name": "PreAuthsMiddle", "symbols": [(lexer.has("Sem") ? {type: "Sem"} : Sem), (lexer.has("__") ? {type: "__"} : __), "PreAuthsMiddle$ebnf$1"], "postprocess": 
@@ -390,6 +394,10 @@ const grammar: Grammar = {
     {"name": "Name", "symbols": ["LastName"], "postprocess": id},
     {"name": "LastName", "symbols": ["SingleName"], "postprocess": id},
     {"name": "LastName", "symbols": ["HyphenName"], "postprocess": id},
+    {"name": "LastName", "symbols": ["AbbrevName"], "postprocess": id},
+    {"name": "AbbrevName$ebnf$1", "symbols": [(lexer.has("Cap") ? {type: "Cap"} : Cap)]},
+    {"name": "AbbrevName$ebnf$1", "symbols": ["AbbrevName$ebnf$1", (lexer.has("Cap") ? {type: "Cap"} : Cap)], "postprocess": (d) => d[0].concat([d[1]])},
+    {"name": "AbbrevName", "symbols": ["AbbrevName$ebnf$1", (lexer.has("Cap") ? {type: "Cap"} : Cap)], "postprocess": ([caps,cap])=> ({family: `${caps.join('')}${cap}`})},
     {"name": "Comp", "symbols": [(lexer.has("And") ? {type: "And"} : And)], "postprocess": id},
     {"name": "Comp", "symbols": [(lexer.has("Amp") ? {type: "Amp"} : Amp)], "postprocess": id},
     {"name": "HyphenName", "symbols": ["SingleName", (lexer.has("Dash") ? {type: "Dash"} : Dash), "SingleName"], "postprocess":  ([first,d,last])=> ( {
@@ -414,15 +422,16 @@ const grammar: Grammar = {
             family: `${first} ${last}`
         })
                                                            },
-    {"name": "DutchName", "symbols": ["DutchPrefix", (lexer.has("__") ? {type: "__"} : __), "BoringNameMaybe"], "postprocess":  ([pref,space, rest]) => (
-          {
+    {"name": "DutchName", "symbols": ["DutchPrefix", (lexer.has("__") ? {type: "__"} : __), "BoringNameMaybe"], "postprocess":  ([pref,space, rest]) => {
+        return  {
            family: rest,
            'non-dropping-particle': pref
                                       .join('')
           }
-        )
+        }
                                                       },
     {"name": "OReilly", "symbols": ["BoringNameMaybe", {"literal":"'"}, "BoringNameMaybe"], "postprocess": ([o, a, name]) =>({family:o+a+name })},
+    {"name": "OReilly", "symbols": ["BoringNameMaybe", {"literal":"’"}, "BoringNameMaybe"], "postprocess": ([o, a, name]) =>({family:o+a+name })},
     {"name": "McConnel", "symbols": [(lexer.has("Mc") ? {type: "Mc"} : Mc), "BoringNameMaybe"], "postprocess": (name) =>({family:name.join('')})},
     {"name": "McConnel$ebnf$1", "symbols": [(lexer.has("Lowword") ? {type: "Lowword"} : Lowword)]},
     {"name": "McConnel$ebnf$1", "symbols": ["McConnel$ebnf$1", (lexer.has("Lowword") ? {type: "Lowword"} : Lowword)], "postprocess": (d) => d[0].concat([d[1]])},

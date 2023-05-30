@@ -186,8 +186,9 @@ SingleParenEntry -> PreAuthsPre:* ParenCiteAuthYear Loc:? {%
                                                           ([pre, content, loc]) => {
                                                             const l = Object.assign({},loc)
                                                             const p = pre.length
-                                                                       ? {prefix: pre?.join('')}
+                                                                       ? {prefix: pre?.join('')?.replace(/ $/,'')}
                                                                       : {}
+
 
                                                             if(content.length===1){
                                                               content[0] = {...content[0],
@@ -207,10 +208,13 @@ SingleParenEntry -> PreAuthsPre:* ParenCiteAuthYear Loc:? {%
 
 # Stuff like (someone said something weird; Allegreya, 2021)
 PreAuthsPre ->   GenericContent:+ %Sem %__    {%
-                                                 content => content[0]?.join('')
+                                                 ([content, sem, space]) => content?.join('') + sem + space
                                               %}
-                | GenericContent:+ %Com %__ {% content => content[0]?.join('') %}
-                | GenericContent:+ %__ {%content => content[0]?.join('') %}
+                | GenericContent:+ %Com %__ {% ([content, com, space]) => content?.join('') + com + space %}
+                | GenericContent:+ %__ {% ([content, space]) => {
+                                              return content?.join('') + space
+                                          } 
+                                          %}
 
 # Things like (...; see also Gooden, 2021; Kant, 1800)
 # Extremely inefficient
@@ -356,6 +360,10 @@ Name -> Initials %__ LastName {% ([initials, ,name])=> ({given: initials.join(''
 
 LastName ->  SingleName {% id %}
            | HyphenName {% id %}
+           | AbbrevName {% id %}
+
+AbbrevName -> %Cap:+ %Cap {% ([caps,cap])=> ({family: `${caps.join('')}${cap}`}) %}
+
 
 Comp ->  %And {% id %}
        | %Amp {% id %}
@@ -396,16 +404,17 @@ SpanishName -> BoringNameMaybe %__ BoringNameMaybe {%
                                                     })
                                                    %}
 
-DutchName -> DutchPrefix %__ BoringNameMaybe {% ([pref,space, rest]) => (
-                                                                          {
+DutchName -> DutchPrefix %__ BoringNameMaybe {% ([pref,space, rest]) => {
+                                                                        return  {
                                                                            family: rest,
                                                                            'non-dropping-particle': pref
                                                                                                       .join('')
                                                                           }
-                                                                        )
+                                                                        }
                                               %}
 
 OReilly-> BoringNameMaybe "'" BoringNameMaybe {% ([o, a, name]) =>({family:o+a+name })%}
+        | BoringNameMaybe "’" BoringNameMaybe {% ([o, a, name]) =>({family:o+a+name })%}
 
 McConnel ->  %Mc BoringNameMaybe {% (name) =>({family:name.join('')}) %}
   | %Mc %Lowword:+ {% ([mac, low]) =>({family:[mac, low.join('')].join('')}) %}

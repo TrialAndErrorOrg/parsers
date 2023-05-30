@@ -38,7 +38,6 @@ AutoCompleteItem.displayName = 'AutoCompleteItem'
 
 export function PublicationsList(props: PublicationsListProps) {
   const { token, endpoint, search } = props
-  const ojs = new OJS({ token, endpoint })
 
   const [val, setVal] = useState<OJSAutoCompleteProps>()
   const { data, error } = useSWR(
@@ -57,7 +56,6 @@ export function PublicationsList(props: PublicationsListProps) {
 
   //console.log(error)
   //console.log(data)
-  console.log(data)
   return (
     <Box>
       {data && (
@@ -70,7 +68,7 @@ export function PublicationsList(props: PublicationsListProps) {
           //  {JSON.stringify(data) || (error && JSON.stringify(error)) || <Loader />}
         />
       )}
-      {val && <PublicationData pub={val.data} apiToken={token} />}
+      {val && <PublicationData pub={val.data} endpoint={endpoint} apiToken={token} />}
       {val && <FileReel endpoint={endpoint} data={val.data} apiToken={token} />}
     </Box>
   )

@@ -9,27 +9,25 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { endpoint, apiToken, submissionId, stageId } = req.query
   //console.log(req)
   req.statusCode = 200
-  console.dir(req, { depth: null })
 
   if (!apiToken) {
     res.status(403).send('No token included')
     return
   }
-  if(!endpoint) {
+  if (!endpoint) {
     res.status(400).send('No ENDPOINT included')
     return
   }
 
-
   try {
     const response = await axios.get(
       `${decodeURIComponent(
-        Array.isArray(endpoint) ? endpoint[0] : endpoint
+        Array.isArray(endpoint) ? endpoint[0] : endpoint,
       )}/submissions/${submissionId}/files?${qs.stringify({
         apiToken: apiToken,
         //     fileStages: [11],
       })}`,
-      { headers: { cookie: `OJSSID=${req.cookies.OJSSID}` } }
+      { headers: { cookie: `OJSSID=${req.cookies.OJSSID}` } },
     )
     const result = response.data
 

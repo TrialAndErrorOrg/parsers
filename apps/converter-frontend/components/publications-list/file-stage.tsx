@@ -1,10 +1,10 @@
 import { Box, Button, Text } from '@mantine/core'
-import { useStore } from '../../utils/store'
+import { useStore } from '../../utils/store.js'
 import { definitions } from 'ojs-client'
 import React from 'react'
 import { FaDownload, FaFileDownload } from 'react-icons/fa'
 import { ImShuffle } from 'react-icons/im'
-import shallow from 'zustand/shallow'
+import { shallow } from 'zustand/shallow'
 import { GenericIcon } from '../ext-icon/ext-icon'
 import qs from 'querystring'
 import { HStack } from '../stack/stack'
@@ -17,16 +17,10 @@ export const FileStage = (props: {
   data: definitions['SubmissionFile'][]
 }) => {
   const { submissionId, stageId, apiToken, endpoint, data } = props
-  const { setInput } = useStore(
-    (state) => ({ setInput: state.setInput }),
-    shallow
-  )
+  const { setInput } = useStore((state) => ({ setInput: state.setInput }), shallow)
 
-  console.log(data)
   const fetchFile = async (url: string) => {
-    setInput(
-      await (await fetch(`/api/ojs/file?url=${encodeURIComponent(url)}`)).json()
-    )
+    setInput(await (await fetch(`/api/ojs/file?url=${encodeURIComponent(url)}`)).json())
   }
   return (
     <HStack

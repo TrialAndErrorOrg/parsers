@@ -1,10 +1,11 @@
+/* eslint-disable import/extensions */
 import { useState } from 'react'
 import { Button, Code, Container, Group, Select, Text, Title } from '@mantine/core'
 import { HStack } from '../stack/stack.js'
 import SelectItem from '../select-item/select-item.js'
 import { AiOutlineUpload } from 'react-icons/ai'
 import { JATSIcon, TexIcon, WordIcon } from '../ext-icon/ext-icon.js'
-import shallow from 'zustand/shallow'
+import { shallow } from 'zustand/shallow'
 
 import { Dropzone } from '@mantine/dropzone'
 import ConvertedBlockLocal from '../converted-block-local/converted-block-local.js'
@@ -19,9 +20,10 @@ export interface ConversionProps {}
 export function Conversion(props: ConversionProps) {
   //const [thing, setThing] = useState<ArrayBuffer>()
 
-  const [input, setInput] = useStore((state) => [state.input, state.setInput], shallow)
-
-  //console.log(input)
+  const [input, setInput, preamble] = useStore(
+    (state) => [state.input, state.setInput, state.preamble],
+    shallow,
+  )
 
   const [from, setFrom] = useState<'docx' | 'jats'>('docx')
   const [to, setTo] = useState<'jats' | 'tex'>('tex')
@@ -117,6 +119,9 @@ export function Conversion(props: ConversionProps) {
       {input && (
         <ConvertedBlockLocal
           input={input}
+          options={{
+            preamble,
+          }}
           converter={
             from === 'docx'
               ? to === 'tex'

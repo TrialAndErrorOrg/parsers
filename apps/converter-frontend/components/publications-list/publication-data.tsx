@@ -1,15 +1,18 @@
 import { Container, Text, Loader, Box, TextInput, Textarea, Paper, Button } from '@mantine/core'
 import { useForm } from '@mantine/form'
-import { useStore } from '../../utils/store'
+import { useStore } from '../../utils/store.js'
 import { paths, definitions } from 'ojs-client'
 import React, { useEffect } from 'react'
 import useSWR from 'swr'
-import shallow from 'zustand/shallow'
-import { HStack, VStack } from '../stack/stack'
-import { MetaItem } from './meta-item'
+import { shallow } from 'zustand/shallow'
+import { HStack, VStack } from '../stack/stack.js'
+import { MetaItem } from './meta-item.js'
+import { Publication } from '../../utils/types.js'
+import { addDays } from 'date-fns'
 
 type PubTypes = keyof definitions['Publication']
 export const PublicationData = (props: {
+  endpoint?: string
   pub: Exclude<
     paths['/submissions']['get']['responses']['200']['schema']['items'],
     undefined
@@ -17,9 +20,10 @@ export const PublicationData = (props: {
   apiToken?: string
   items?: PubTypes[]
 }) => {
-  const { pub, apiToken, items } = props
+  console.log({ props })
+  const { pub, apiToken, endpoint, items } = props
   const url = pub.publications?.[0]?._href
-  const [setPreamble] = useStore((state) => [state.setPreamble], shallow)
+  const [setPreamble, preamble] = useStore((state) => [state.setPreamble, state.preamble], shallow)
 
   const form = useForm({
     initialValues: {
@@ -58,16 +62,30 @@ export const PublicationData = (props: {
   }
 
   // inital load does not give us that much data
-  const { data, error } = useSWR(
+  const { data, error }: { data: Publication; error: unknown } = useSWR(
     `/api/ojs/publication?url=${encodeURIComponent(url || '')}&apiToken=${apiToken}`,
   )
-  // const { data: sub, error: suberror } = useSWR(
-  //   `/api/ojs/submission?url=${encodeURIComponent(
-  //     data?._href || ''
-  //   )}&apiToken=${apiToken}`
-  // )
-  console.log({ data })
 
+  const { data: files } = useSWR(
+    `/api/ojs/files?apiToken=${apiToken}&submissionId=${pub.id}&stageId=${
+      pub.stageId
+    }&endpoint=${encodeURIComponent(endpoint)}`,
+  )
+  console.log({ files })
+  // the accepted date is the date where the item has been moved to copyediting, which is the file with fileStage 9 with the lowest date
+  const acceptedDate = files?.items?.reduce((acc, curr) => {
+    console.log({ acc, curr })
+    if (curr.fileStage === 9) {
+      if (!acc) {
+        return curr.createdAt
+      }
+      return Math.min(acc, curr.createdAt)
+    }
+    return acc
+  }, 0)
+
+  // set default publishedDate as two week after acceptedDate
+  const publishedDate = acceptedDate ? addDays(acceptedDate, 14) : undefined
   useEffect(() => {
     if (!data || form.values.title) {
       return
@@ -81,7 +99,7 @@ export const PublicationData = (props: {
       abstract: data.abstract?.en_US,
       runningauthor: data.authorsStringShort,
       authors: data.authors.reduce(
-        (acc: typeof data.authors, curr: (typeof data.authors)[number]) => {
+        (acc, curr: (typeof data.authors)[number]) => {
           acc.push({
             givenName: curr.givenName?.en_US,
             familyName: curr.familyName?.en_US,
@@ -91,7 +109,13 @@ export const PublicationData = (props: {
           })
           return acc
         },
-        [],
+        [] as {
+          givenName: string
+          familyName: string
+          orcid?: string
+          email?: string
+          affiliation?: string
+        }[],
       ),
       jname: 'Journal of Trial \\& Error',
       jyear: data.copyrightYear || new Date().getFullYear(),
@@ -100,12 +124,12 @@ export const PublicationData = (props: {
       jissue: '',
       jpages: data.pages || '',
       paperreceived: pub.dateSubmitted || '',
-      paperaccepted: '',
+      paperaccepted: acceptedDate || '',
       // funding: data?.supportingAgencies?.en_US || '',
 
-      paperpublished: data.published || '',
+      paperpublished: publishedDate || '',
     })
-  }, [data])
+  }, [data, files])
 
   return (
     <>

@@ -15,8 +15,7 @@ export const Citations = ({
   const url =
     process.env.NODE_ENV === 'production'
       ? '/api/style'
-      : process.env.NEXT_PUBLIC_STYLE_DEV_URL ||
-        'http://localhost:8000/api/style'
+      : process.env.NEXT_PUBLIC_STYLE_DEV_URL || 'http://localhost:8000/api/style'
   const splitextra = extra
     ?.replace(/\\r/g, '')
     ?.replace(/\n([A-Z])/gm, '\n\n\n$1')
@@ -26,7 +25,7 @@ export const Citations = ({
     fetch(url, {
       method: 'post',
       body: splitextra,
-    }).then((response) => response.json())
+    }).then((response) => response.json()),
   )
   if (error || !data) {
     return (
@@ -37,28 +36,20 @@ export const Citations = ({
       </Container>
     )
   }
-  //console.log(data)
 
-  console.log(data)
   const cite = new Cite(
     data.map((data: CSL) => {
       if (!data.type) {
         data.type = 'article'
       }
       return data
-    })
+    }),
   )
   const biblatex = cite.format('biblatex')
   const bibtex = cite.format('bibtex')
   const ris = cite.format('ris')
   const csl = data
-  console.log({
-    biblatex,
-    bibtex,
-    ris,
-    csl,
-    value,
-  })
+
   return (
     // <Prism.Tabs defaultValue="Rich Text">
     //   <Prism.Tab

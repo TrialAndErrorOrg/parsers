@@ -3,8 +3,8 @@ import { useClipboard } from '@mantine/hooks'
 import React, { useEffect, useState } from 'react'
 import { VFile } from 'vfile'
 import { Prism as SyntaxHighlighter } from '@mantine/prism'
-import shallow from 'zustand/shallow'
-import { useStore } from '../../utils/store'
+import { shallow } from 'zustand/shallow'
+import { useStore } from '../../utils/store.js'
 
 import {
   BlobReader,
@@ -61,6 +61,7 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
   const clipboard = useClipboard({ timeout: 2000 })
 
   if (preamble) {
+    console.log({ preamble })
     options['preamble'] = preamble
   }
   useEffect(() => {
@@ -129,23 +130,6 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
             alignItems: 'flex-end',
           }}
         >
-          {/* <Button
-            style={{
-              position: 'absolute',
-              marginTop: 20,
-              marginRight: 10,
-              marginBottom: -200,
-            }}
-            sx={{
-              width: 100,
-            }}
-            onClick={() => clipboard.copy(String(vfile))}
-          >
-            <HStack spacing={5}>
-              <FaClipboardList />
-              <Text>{clipboard.copied ? 'Copied!' : 'Copy'}</Text>
-            </HStack>
-          </Button> */}
           <SyntaxHighlighter
             withLineNumbers={true}
             // @ts-expect-error yeahhhh
@@ -153,22 +137,13 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
             sx={{}}
             style={{
               maxWidth: '100%',
-              // height: '100%',
               maxHeight: '80vh',
               overflowY: 'scroll',
-              // width: '50vw',
             }}
-            // scrollAreaComponent="div"
             styles={{
-              // copy: {
-              //   position: 'fixed',
-              //   top: 10,
-              //   right: 10,
-              // },
               scrollArea: {
                 width: '100%',
                 maxHeight: '100%',
-                // overflow: 'scroll',
               },
               code: {
                 width: '100%',
@@ -182,12 +157,6 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
                 width: '90%',
               },
             }}
-            //showInlineLineNumbers
-            //     style={nord}
-            //   maxW: '80%',
-            //   maxH: 200,
-            //   overflowX: 'auto',
-            //   whiteSpace: 'pre-wrap',
           >
             {String(vfile)}
           </SyntaxHighlighter>

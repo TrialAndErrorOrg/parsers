@@ -11,7 +11,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
   req.statusCode = 200
 
-  console.dir(req.cookies)
   try {
     const response = await axios.get(`${Array.isArray(url) ? url[0] : url}`, {
       headers: {
@@ -25,7 +24,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       },
     })
 
-    console.log(response)
     const result = response.data
 
     const cookie = replaceCookieRes(response, req.headers.host || '')

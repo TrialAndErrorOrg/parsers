@@ -8,6 +8,7 @@ import { docxToVFile } from 'docx-to-vfile'
 import reoffUnifiedLatex from 'reoff-unified-latex'
 import unifedLatexStringify from 'unified-latex-stringify'
 import reoffMarkupToStyle from 'reoff-markup-to-style'
+import unifiedLatexStringify from 'libs/unified-latex/unified-latex-stringify/src/lib/unified-latex-stringify.js'
 
 export async function docxToTexConverter(
   input: ArrayBuffer,
@@ -15,7 +16,7 @@ export async function docxToTexConverter(
     citationType?: 'mendeley' | 'word' | 'citavi' | 'zotero' | 'endnote'
     url?: string
     mailto?: string
-    // preamble?: PreambleCommand[]
+    preamble?: string
   } = {},
 ): Promise<VFile> {
   const { citationType: type, url: apiUrl, mailto, preamble } = options
@@ -23,14 +24,13 @@ export async function docxToTexConverter(
   const uint = new Uint8Array(input)
   const vfile = await docxToVFile(uint)
 
-  let before
-  let after
   const proc = unified()
     .use(reoffParse)
     .use(reoffClean, {
       rPrRemoveList: [
         'w:lang',
         'w:shd',
+        'w:sz',
         'w:szCs',
         'w:kern',
         'w:rFonts',
@@ -57,14 +57,20 @@ export async function docxToTexConverter(
         process.env.NODE_ENV === 'production'
           ? apiUrl || '/api/style'
           : process.env.NEXT_PUBLIC_STYLE_DEV_URL || 'http://localhost:8000/api/style',
-      mailto: 'support@trialanderror.org',
+      // mailto: 'support@trialanderror.org',
     })
     .use(reoffCite, { type: type ?? 'zotero' })
     .use(() => (tree, vfile) => {
       console.log({ tree: JSON.parse(JSON.stringify(tree)) })
     })
-    .use(reoffUnifiedLatex)
-    .use(unifedLatexStringify)
+    .use(reoffUnifiedLatex, {
+      xcolor: false,
+      tabularx: {
+        width: '\\linewidth',
+      },
+      preamble: `\\addbibresource{bibliography.bib}\n\n${preamble}`,
+    })
+    .use(unifiedLatexStringify)
 
   return proc.process(vfile)
 }

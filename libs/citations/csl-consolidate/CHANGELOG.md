@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.2](https://github.com/TrialAndErrorOrg/parsers/compare/csl-consolidate-0.1.1...csl-consolidate-0.1.2) (2023-05-30)
+
 ## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/csl-consolidate-0.1.0...csl-consolidate-0.1.1) (2023-03-14)
 
 ### Dependency Updates

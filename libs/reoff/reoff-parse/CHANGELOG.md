@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.0](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-parse-0.2.7...reoff-parse-0.3.0) (2023-05-30)
+
+### Dependency Updates
+
+* `docx-to-vfile` updated to version `0.7.0`
+
+### Features
+
+* **reoff-parse:** handle foot and endnote relations ([c79cfb4](https://github.com/TrialAndErrorOrg/parsers/commit/c79cfb4fa7e68c27c1b478b4b2402f85db4a4995))
+
 ## [0.2.7](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-parse-0.2.6...reoff-parse-0.2.7) (2023-03-29)
 
 ### Dependency Updates

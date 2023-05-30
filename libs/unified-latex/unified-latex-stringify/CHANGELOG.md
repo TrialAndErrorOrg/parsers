@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.3](https://github.com/TrialAndErrorOrg/parsers/compare/unified-latex-stringify-0.1.2...unified-latex-stringify-0.1.3) (2023-05-30)
+
+
+### Bug Fixes
+
+* try to fix unified latex but no work ([5336c78](https://github.com/TrialAndErrorOrg/parsers/commit/5336c78bbdd5495df35ee8cef050aefb55311bd5))
+
 ## [0.1.2](https://github.com/TrialAndErrorOrg/parsers/compare/unified-latex-stringify-0.1.1...unified-latex-stringify-0.1.2) (2023-03-29)
 
 ## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/unified-latex-stringify-0.1.0...unified-latex-stringify-0.1.1) (2023-03-09)

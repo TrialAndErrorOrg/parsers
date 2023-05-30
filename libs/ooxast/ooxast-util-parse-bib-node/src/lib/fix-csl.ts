@@ -3,10 +3,38 @@ export function fixBib(parsedBib: CSL[], overrideId = true): CSL[] {
   return parsedBib.map((bib) => fixCSL(bib, overrideId))
 }
 export function fixCSL(csl: CSL, overrideId = true): CSL {
-  const cslWithCorrectIssued = fixCSLIssued(csl)
+  const cslWithCorrectParticleName = fixCSLParticleName(csl)
+  const cslWithCorrectIssued = fixCSLIssued(cslWithCorrectParticleName)
   const cslWId = addCSLId(cslWithCorrectIssued, overrideId)
   const clsWithGivenProperlySplit = fixCSLGiven(cslWId)
   return clsWithGivenProperlySplit
+}
+
+// AnyStyle assigns things as "particle" instead of "non-dropping-particle"
+export function fixCSLParticleName(csl: CSL): CSL {
+  if (!csl.author) {
+    return csl
+  }
+
+  csl.author = csl.author.map((auth) => {
+    if (auth.literal) {
+      return auth
+    }
+
+    // @ts-expect-error we are doing the case of "CSL bad"
+    if (!auth?.particle) {
+      return auth
+    }
+
+    // @ts-expect-error again, anystyle incorrectly assigns things as "particle" instead of "non-dropping-particle"
+    const { particle, ...rest } = auth
+
+    rest['non-dropping-particle'] = particle
+
+    return rest
+  })
+
+  return csl
 }
 
 export function fixCSLIssued(csl: CSL) {
@@ -36,7 +64,13 @@ export function makeCSLIdAuthYear(csl: CSL): CSL {
     return csl
   }
 
-  const newId = csl?.author?.[0]?.family + (csl.issued['date-parts']?.[0]?.[0] || csl.issued)
+  const prefix = csl?.author?.[0]?.['non-dropping-particle']
+    ? `${csl?.author?.[0]?.['non-dropping-particle']} `
+    : ``
+
+  const newId = `${prefix}${csl?.author?.[0]?.family}${
+    csl.issued['date-parts']?.[0]?.[0] || csl.issued
+  }`?.replace(/ /g, '')
 
   csl.id = newId
   return csl
@@ -57,7 +91,9 @@ export function fixCSLGiven(cslWId: CSL) {
       return a
     }
 
-    const splitGiven = a.given.replace(/([A-Z])\.([A-Z])/g, '$1. $2')
+    const splitGiven = a.given
+      .replace(/([A-Z])\.([A-Z])/g, '$1. $2')
+      .replace(/([A-Z])\.([A-Z])/g, '$1. $2')
 
     return {
       ...a,

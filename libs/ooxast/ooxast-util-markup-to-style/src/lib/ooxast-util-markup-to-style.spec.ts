@@ -141,7 +141,6 @@ describe('ooxast-util-markup-to-style', () => {
         style: 'Heading 1',
       },
     ])
-    console.dir(result, { depth: null })
     expect(result).toEqual(
       x('w:p', [
         x('w:pPr', [x('w:pStyle', { 'w:val': 'Heading 1' })]),

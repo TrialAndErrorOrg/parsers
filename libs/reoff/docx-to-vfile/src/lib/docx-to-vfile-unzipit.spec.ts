@@ -20,7 +20,6 @@ describe('reoffDocxToVfile', () => {
     const vfile = await docxToVFile(docimg)
     const url = new URL('../fixtures/testimages.xml', import.meta.url)
     fs.writeFileSync(url, String(vfile))
-    console.dir(vfile.data, { depth: null })
 
     expect(vfile.data.media).toBeDefined()
   })

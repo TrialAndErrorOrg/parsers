@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.7.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.6.1...docx-to-vfile-0.7.0) (2023-05-30)
+
+
+### Features
+
+* **docx-to-vfile:** move relations mapping to reoff-parse ([e0e4334](https://github.com/TrialAndErrorOrg/parsers/commit/e0e43345fcba201be8d3bc52615dbf422c2c6f64))
+
 ## [0.6.1](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.6.0...docx-to-vfile-0.6.1) (2023-03-27)
 
 

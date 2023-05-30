@@ -28,6 +28,7 @@ import { VFile } from 'vfile'
 import { notes } from './util/notes.js'
 import { findListNumbering } from './util/find-list-numbering.js'
 import { DocxVFileData } from 'docx-to-vfile'
+import { escapeLatex } from './util/escape.js'
 
 export { one } from './one.js'
 export { all } from './all.js'
@@ -199,8 +200,8 @@ export function toUnifiedLatex(
 
   const biblatex = h.bibliography
     ? Array.isArray(h.bibliography)
-      ? cslToBiblatex(h.bibliography)
-      : s(h.bibliography)
+      ? escapeLatex(cslToBiblatex(h.bibliography))
+      : s(escapeLatex(h.bibliography))
     : null
 
   const packages =

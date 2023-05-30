@@ -37,7 +37,6 @@ export const citation: Handle = (h: H, citationNode: T, parent?: Parent) => {
         console.log('Attemping to combine incomplete citation with new one...')
         citation = JSON.parse(h.partialCitation + json)
         console.log('Success!')
-        console.dir(citation, { depth: null })
         h.partialCitation = ''
       } else {
         citation = JSON.parse(json)

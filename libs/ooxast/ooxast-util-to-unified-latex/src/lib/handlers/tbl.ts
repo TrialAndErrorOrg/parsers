@@ -13,10 +13,11 @@ export const tbl: Handle = (h: H, tbl: Tbl) => {
   const columns = tableRows.map(() => `${h.defaultCol}${h.columnSeparator ? ' |' : ''}`).join(' ')
 
   const colArg = `@{} ${h.columnSeparator ? '| ' : ''}${columns} @{}`
+  console.log(h.tabularx)
   const table = env(
     'table',
     h.tabularx?.width
-      ? env('tabularx', contents, args([h.tabularx.width, colArg], { braces: '{}' }))
+      ? env('tabularx', contents, args([h.tabularx.width, colArg], { braces: '{}{}' }))
       : env('tabular', contents, arg(colArg)),
   )
   return table

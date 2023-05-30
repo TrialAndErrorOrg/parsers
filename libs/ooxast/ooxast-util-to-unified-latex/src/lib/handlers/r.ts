@@ -118,6 +118,9 @@ export function r(h: H, node: R, parent?: Parent) {
         return text
       }
       case 'shd': {
+        if (!h.xcolor) {
+          return text
+        }
         if (h.inMath || !('w:fill' in prop)) {
           return text
         }

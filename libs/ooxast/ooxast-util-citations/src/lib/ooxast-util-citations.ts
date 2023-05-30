@@ -103,7 +103,9 @@ export function findCitations(tree: Node, vfile?: VFile, options?: Options): Roo
         continue
       }
 
-      const sentences = text.split(/(?<=[.?!])\s+(?=[A-Z])/)
+      // split the sentences to improve parsing performance
+      const sentences = text.split(/(?<=[a-z)][.?!])\s+(?=[A-Z]\w)/)
+
       // re-add the spaces that were removed by the split
       const sentencesWithSpaces = sentences.map((s, i) => {
         if (i === sentences.length - 1) return s
@@ -117,6 +119,16 @@ export function findCitations(tree: Node, vfile?: VFile, options?: Options): Roo
           const parsedCitation = parseTextCite(sentence, {
             log: options?.log,
           }) as CiteOutput
+
+          parsedCitation.forEach((item) => {
+            if (typeof item === 'string') {
+              return
+            }
+
+            if (item?.citationItems?.[0]?.prefix) {
+              console.log({ item })
+            }
+          })
 
           // if the sentence is not a citation, just add it to the runs
           if (parsedCitation.every((item) => typeof item === 'string')) {

@@ -25,7 +25,7 @@ export function constructZoteroCitation(
   }
 
   const zotCites = curr.citationItems.reduce((acc: CitationItem[], curr) => {
-    const betterCSL = findRef(curr, bibliography)
+    const betterCSL = curr // findRef(curr, bibliography)
 
     acc.push(betterCSL)
     return acc

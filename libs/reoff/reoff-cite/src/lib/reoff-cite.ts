@@ -11,10 +11,36 @@ export default function reoffCite(
     if (options.log !== false) {
       console.log(vfile.data.bibliography)
     }
-    return findCitations(tree, vfile, {
+    const treeCitations = findCitations(tree, vfile, {
       bibliography: options.bibliography || (vfile.data.bibliography as CSL[]),
       type: options.type,
       log: options.log,
     })
+
+    if (vfile.data.parsed?.['word/footnotes.xml']) {
+      vfile.data.parsed['word/footnotes.xml'] = findCitations(
+        vfile.data.parsed['word/footnotes.xml'],
+        vfile,
+        {
+          bibliography: options.bibliography || (vfile.data.bibliography as CSL[]),
+          type: options.type,
+          log: options.log,
+        },
+      )
+    }
+
+    if (vfile.data.parsed?.['word/endnotes.xml']) {
+      vfile.data.parsed['word/endnotes.xml'] = findCitations(
+        vfile.data.parsed['word/endnotes.xml'],
+        vfile,
+        {
+          bibliography: options.bibliography || (vfile.data.bibliography as CSL[]),
+          type: options.type,
+          log: options.log,
+        },
+      )
+    }
+
+    return treeCitations
   }
 }

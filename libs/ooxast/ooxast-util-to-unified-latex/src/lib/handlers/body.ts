@@ -1,15 +1,10 @@
 // based on https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/em
 
+import { getPStyle } from 'ooxast-util-get-style'
 import { H, Body, Handle, P, UnifiedLatexNode } from '../types.js'
-import { all } from '../all.js'
-import { getPStyle } from '../util/get-pstyle.js'
-import { getListInfo } from '../util/get-listinfo.js'
-import { one } from '../one.js'
 import { Element } from 'xast-util-to-string/lib'
-import { Environment, Macro } from '@unified-latex/unified-latex-types'
-import { m, SP } from '@unified-latex/unified-latex-builder'
-import { PB } from '../util/PB.js'
-import { updateRenderInfo } from '@unified-latex/unified-latex-util-render-info'
+import { one } from '../one.js'
+// import { getPStyle } from '../util/get-pstyle.js'
 
 const isP = (node: Element): node is P => node.type === 'element' && node.name === 'w:p'
 
@@ -18,193 +13,60 @@ export const body: Handle = (h: H, body: Body) => {
     if (child.type !== 'element') return acc
 
     if (!isP(child)) {
-      acc.push(...makeOne(h, child, body))
+      const res = one(h, child, body)
+      res && acc.push(...(Array.isArray(res) ? res : [res]))
       return acc
     }
 
-    // const isListItem = getPStyle(child) === 'ListParagraph'
+    const style = getPStyle(child)
 
-    // if (!isListItem) {
-    //   acc.push(...makeOne(h, child, body))
-    //   return acc
-    // }
+    let matched = false
 
-    const { ilvl, numId } = getListInfo(child) ?? {}
+    let res: UnifiedLatexNode | Array<UnifiedLatexNode> | void | null = null
 
-    if (ilvl == null || numId == null) {
-      acc.push(...makeOne(h, child, body))
-      return acc
-    }
-
-    const prevChild = body.children[index - 1]
-
-    const isPrevListItem = prevChild && isP(prevChild) && getPStyle(prevChild) === 'ListParagraph'
-
-    const { ilvl: prevIlvl, numId: prevNumId } = (isPrevListItem && getListInfo(prevChild)) || {}
-
-    const listItem = makeItem(h, child)
-
-    // there's no previous list item, we need to create a new environment
-    if (!isPrevListItem || prevIlvl == null || prevNumId == null) {
-      const env = makeEnv(h, child, numId, ilvl)
-
-      acc.push(env)
-      return acc
-    }
-
-    // there is a previous list item, and it's the same level, so we need to add it to the previous environment
-    if (isPrevListItem && ilvl === prevIlvl && numId === prevNumId) {
-      const mainEnv = acc[acc.length - 1] as Environment
-
-      if (!['enumerate', 'itemize'].includes(mainEnv.env)) {
-        throw new Error('prevEnv.env !== enumerate')
+    for (const { handler, matcher } of h.paragraphHandlers) {
+      if (matched) {
+        break
       }
 
-      const embeddedEnvs = findEmbeddedEnvs(mainEnv)
-      const lastEnv = embeddedEnvs[embeddedEnvs.length - 1]
+      const handle = (func: typeof handler) => {
+        matched = true
+        return func(h, child, {
+          styleName: style === null ? undefined : style,
+          previousElement: body.children[index - 1] as Element,
+          alreadyProcessedBody: acc,
+          body,
+        })
+      }
 
-      lastEnv.content.push(...listItem)
+      if (typeof matcher === 'string' && style === matcher) {
+        res = handle(handler)
+        continue
+      }
+
+      if (Array.isArray(matcher) && style && matcher.includes(style)) {
+        res = handle(handler)
+        continue
+      }
+
+      if (typeof matcher === 'function' && matcher(child, style === null ? undefined : style)) {
+        res = handle(handler)
+      }
+    }
+
+    if (!matched) {
+      const res = one(h, child, body)
+      res && acc.push(...(Array.isArray(res) ? res : [res]))
       return acc
     }
 
-    // there is a previous list item, and it's a lower level, so we need to add a new environment inside the previous environment
-    if (isPrevListItem && ilvl > prevIlvl) {
-      const mainEnv = acc[acc.length - 1] as Environment
-      const embeddedEnvs = findEmbeddedEnvs(mainEnv)
-      const lastEnv = embeddedEnvs[embeddedEnvs.length - 1]
-      const env = makeEnv(h, child, numId, ilvl)
-
-      lastEnv.content.push(env)
+    if (!res) {
       return acc
     }
 
-    // there is a previous list item, and it's a higher level, so we need to close the previous environment and create a new one
-    if (isPrevListItem && ilvl < prevIlvl) {
-      const mainEnv = acc[acc.length - 1] as Environment
-      const embeddedEnvs = findEmbeddedEnvs(mainEnv)
-      const toBeEmbeddedEnv = embeddedEnvs[embeddedEnvs.length - (prevIlvl - ilvl) - 1]
-
-      const env = makeEnv(h, child, numId, ilvl)
-
-      if (!toBeEmbeddedEnv) {
-        acc.push(env)
-        return acc
-      }
-
-      if (toBeEmbeddedEnv._renderInfo?.ilvl !== ilvl) {
-        toBeEmbeddedEnv.content.push(env)
-        return acc
-      }
-
-      const item = makeItem(h, child)
-
-      toBeEmbeddedEnv.content.push(...item)
-      return acc
-    }
-
-    // if we are immediately starting a new, but different list after a previous list, we need to close the previous list and start a new one
-    if (isPrevListItem && ilvl === prevIlvl && numId !== prevNumId) {
-      const mainEnv = acc[acc.length - 1] as Environment
-      const embeddedEnvs = findEmbeddedEnvs(mainEnv)
-      const toBeEmbeddedEnv = embeddedEnvs[embeddedEnvs.length - (prevIlvl - ilvl) - 1]
-      const env = makeEnv(h, child, numId, ilvl)
-
-      if (!toBeEmbeddedEnv) {
-        acc.push(env)
-        return acc
-      }
-
-      if (toBeEmbeddedEnv._renderInfo?.ilvl !== ilvl) {
-        toBeEmbeddedEnv.content.push(env)
-
-        return acc
-      }
-
-      acc.push(env)
-      return acc
-    }
+    acc.push(...(Array.isArray(res) ? res : [res]))
 
     return acc
   }, [] as UnifiedLatexNode[])
   return processedBody
-}
-
-function makeItem(h: H, item: P): [typeof PB, Macro, typeof SP, ...UnifiedLatexNode[], typeof PB] {
-  const mIte = m('item')
-  updateRenderInfo(mIte, {
-    hangingIndent: true,
-    inParMode: true,
-  })
-
-  return [PB, mIte, SP, ...all(h, item), PB]
-}
-
-const enumerateMap = {
-  decimal: true,
-  lowerRoman: true,
-  upperRoman: true,
-  lowerLetter: true,
-  upperLetter: true,
-} as const
-
-function makeEnv(h: H, item: P, numId: number, ilvl: number): Environment {
-  if (!h.listNumbering) {
-    return {
-      type: 'environment',
-      env: 'enumerate',
-      content: makeItem(h, item),
-      _renderInfo: {
-        ilvl,
-        numId,
-      },
-    }
-  }
-
-  const { numFmt, lvlText, lvlJc, start } =
-    h.listNumbering?.numIds?.[numId.toString()]?.[ilvl?.toString()] ?? {}
-
-  const enumerate = numFmt in enumerateMap ? 'enumerate' : 'itemize'
-
-  const env: Environment = {
-    type: 'environment',
-    env: enumerate,
-    content: makeItem(h, item),
-    _renderInfo: {
-      ilvl,
-      numId,
-      numFmt,
-      lvlText,
-      lvlJc,
-      start,
-    },
-  }
-
-  return env
-}
-
-function findEmbeddedEnvs(envs: Environment[] | Environment): Environment[] {
-  envs = Array.isArray(envs) ? envs : [envs]
-
-  if (envs.length === 0) return []
-  const env = envs[envs.length - 1]
-  if (env.content.length === 0) return envs
-
-  const last = env.content[env.content.length - 1]
-
-  if (last.type !== 'environment') return envs
-
-  return findEmbeddedEnvs([...envs, last])
-}
-
-function makeOne(h: H, node: Element, body: Body): UnifiedLatexNode[] {
-  const res = one(h, node, body)
-  if (!res) {
-    return []
-  }
-
-  if (Array.isArray(res)) {
-    return res
-  }
-
-  return [res]
 }

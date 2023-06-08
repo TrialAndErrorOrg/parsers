@@ -8,12 +8,8 @@ export function getListInfo(p: P) {
     const ilvl = select('w\\:ilvl', numPr)
     const numId = select('w\\:numId', numPr)
     return {
-      ilvl: ilvl?.attributes?.['w:val']
-        ? parseInt(ilvl.attributes['w:val'])
-        : undefined,
-      numId: numId?.attributes?.['w:val']
-        ? parseInt(numId.attributes['w:val'])
-        : undefined,
+      ilvl: ilvl?.attributes?.['w:val'] ? parseInt(ilvl.attributes['w:val']) : undefined,
+      numId: numId?.attributes?.['w:val'] ? parseInt(numId.attributes['w:val']) : undefined,
     }
   }
 

@@ -152,6 +152,37 @@
               "content": [
                 {
                   "type": "macro",
+                  "content": "includegraphics",
+                  "args": [
+                    {
+                      "type": "argument",
+                      "openMark": "[",
+                      "closeMark": "]",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "width=\\linewidth"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "argument",
+                      "openMark": "{",
+                      "closeMark": "}",
+                      "content": [
+                        {
+                          "type": "string",
+                          "content": "media/image1.jpg"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "parbreak"
+                },
+                {
+                  "type": "macro",
                   "content": "caption",
                   "args": [
                     {
@@ -189,10 +220,6 @@
                 },
                 {
                   "type": "parbreak"
-                },
-                {
-                  "type": "macro",
-                  "content": "includegraphics"
                 }
               ]
             },

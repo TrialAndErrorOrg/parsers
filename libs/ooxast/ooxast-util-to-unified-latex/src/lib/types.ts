@@ -21,9 +21,46 @@ export type Node = Parent['children'][number] | Root
 
 export type Attributes = OoxastProperties
 
+export type ParagraphHandler = (
+  h: H,
+  node: P,
+  {
+    styleName,
+    previousElement,
+    alreadyProcessedBody,
+    body,
+  }: {
+    styleName?: string
+    previousElement?: Element
+    alreadyProcessedBody: UnifiedLatexNode[]
+    body: Body
+  },
+) => UnifiedLatexNode | Array<UnifiedLatexNode> | void
+
+/**
+ * A function which returns true if the handler should be used for the paragraph
+ */
+export type ParagraphMatcher = (paragraph: P, style?: string) => boolean | undefined | null | void
+
 export interface Options {
   /** Handlers for specific node types */
   handlers?: { [handle: string]: Handle }
+  /**
+   * Handlers for specific paragraph styles, e.g what to do when a paragraph has the "Heading 1" style
+   *
+   * You get access to the previous node, the current paragraph, the style of the paragraph (if any), the body, and the already processed body
+   *
+   * Provide an array of handlers to run them in order.
+   * You specify the handler and the matcher, which can be a string, an array of strings, or a function which returns a truthy value if the handler should be used.
+   *
+   * By default there are handlers for lists and headings.
+   */
+  paragraphHandlers?: [
+    {
+      handler: ParagraphHandler
+      matcher: ParagraphMatcher | string | string[]
+    },
+  ]
   /**
    * Whether to add a preamble and document environment
    *
@@ -204,6 +241,22 @@ export type Handle = (
 ) => UnifiedLatexNode | Array<UnifiedLatexNode> | void | undefined
 
 export interface Context {
+  /**
+   * Handlers for specific paragraph styles, e.g what to do when a paragraph has the "Heading 1" style
+   *
+   * You get access to the previous node, the current paragraph, the style of the paragraph (if any), the body, and the already processed body
+   *
+   * Provide an array of handlers to run them in order.
+   * You specify the handler and the matcher, which can be a string, an array of strings, or a function which returns a truthy value if the handler should be used.
+   *
+   * By default there are handlers for lists and headings.
+   */
+  paragraphHandlers: [
+    {
+      handler: ParagraphHandler
+      matcher: ParagraphMatcher | string | string[]
+    },
+  ]
   nodeById?: {
     [id: string]: Parent
   }

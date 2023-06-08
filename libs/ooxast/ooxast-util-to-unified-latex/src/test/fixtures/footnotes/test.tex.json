@@ -159,11 +159,7 @@
                   "content": [
                     {
                       "type": "string",
-                      "content": " "
-                    },
-                    {
-                      "type": "string",
-                      "content": "A footnote."
+                      "content": " A footnote."
                     }
                   ],
                   "openMark": "{",

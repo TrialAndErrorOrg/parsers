@@ -17,7 +17,7 @@ import { Ast, Root } from '@unified-latex/unified-latex-types'
 import { describe, it, expect } from 'vitest'
 import { blob } from 'stream/consumers'
 import unifiedLatexStringify from 'unified-latex-stringify'
-import reoffMarkupToStyle from 'libs/reoff/reoff-markup-to-style/src/lib/reoff-markup-to-style.js'
+import reoffMarkupToStyle from 'reoff-markup-to-style'
 
 const unifieddLatexStringify = function relatexStringify(options?: Options | void) {
   const compiler: CompilerFunction<Node, string> = (tree) => {

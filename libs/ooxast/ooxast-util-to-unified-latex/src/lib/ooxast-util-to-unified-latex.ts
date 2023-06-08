@@ -29,12 +29,20 @@ import { notes } from './util/notes.js'
 import { findListNumbering } from './util/find-list-numbering.js'
 import { DocxVFileData } from 'docx-to-vfile'
 import { escapeLatex } from './util/escape.js'
+import { listMatcher, listStyleHandler } from './handlers/paragraph/list.js'
 
 export { one } from './one.js'
 export { all } from './all.js'
 export { handlers as defaultHandlers }
 
-const defaultOptions: Options = {
+export const defaultParagraphHandlers: Options['paragraphHandlers'] = [
+  {
+    matcher: listMatcher,
+    handler: listStyleHandler,
+  },
+]
+
+export const defaultOptions: Options = {
   newLines: false,
   quotes: ['"'],
   topSection: 1,
@@ -50,6 +58,7 @@ const defaultOptions: Options = {
     'hyperref',
     { name: 'biblatex', options: ['backend=biber', 'style=apa'] },
   ],
+  paragraphHandlers: defaultParagraphHandlers,
 }
 
 declare module 'vfile' {
@@ -167,6 +176,7 @@ export function toUnifiedLatex(
         : vfile?.data?.parsed?.['word/numbering.xml']
         ? findListNumbering(vfile.data.parsed['word/numbering.xml'])
         : undefined,
+      paragraphHandlers: options.paragraphHandlers || defaultParagraphHandlers,
     } as Context,
   )
 
@@ -194,6 +204,10 @@ export function toUnifiedLatex(
 
   if (!result) {
     return { type: 'root', content: [] } as UnifiedLatexRoot
+  }
+
+  if (options.document === false) {
+    return result
   }
 
   unifiedLatex = env('document', result)

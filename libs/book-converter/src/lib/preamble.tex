@@ -1,0 +1,106 @@
+\usepackage[dutch]{babel}
+
+\usepackage{tikz}
+\usepackage{wallpaper}
+
+\newfloat{bookboxfloat}{th!}{bbxf}
+
+
+\newtcolorbox{bookboxf}[1]{
+  sharp corners,
+  enhanced,
+  before skip = {\baselineskip},
+  toptitle = {.5\baselineskip},
+  bottom = \baselineskip,
+  right = \baselineskip,
+  colframe = gray!5,
+  coltitle = black,
+  colback = white,
+  colbacktitle = white,
+}
+
+\newtcolorbox{bookbox}[1]{
+  title = {\textsc{#1}},
+  sharp corners,
+  enhanced,
+  before skip = {\baselineskip},
+  toptitle = {.5\baselineskip},
+  bottom = \baselineskip,
+  right = \baselineskip,
+  colframe = gray!5,
+  titlerule=0pt,
+  coltitle = black,
+  colback = white,
+  colbacktitle = white,
+  breakable,
+}
+
+\newtcolorbox{bookboxnotitle}{
+  sharp corners,
+  enhanced,
+  before skip = {\baselineskip},
+  toptitle = {.5\baselineskip},
+  bottom = \baselineskip,
+  right = \baselineskip,
+  colframe = gray!5,
+  coltitle = black,
+  colback = white,
+  colbacktitle = white,
+  breakable,
+}
+
+\newtcolorbox[auto counter]{briefcolorbox}{
+  enhanced ,
+  breakable,
+  sharp corners,
+  frame hidden,
+  pad at break*=1mm,
+  colback=white,
+  title={\centering\textbf{\textit{\Large Chapter in Brief\vspace*{2\baselineskip}}}},
+  fonttitle=\bfseries,
+  colframe=gray!5,
+  coltitle=gray!50!black,
+  subtitle style={bottomrule=.5pt,
+      toprule=0pt,
+      colback=gray!5,
+      coltext=gray!70!black},
+  width=.9\linewidth
+}
+
+
+\booktitle{De Universiteit in Transitie}
+\booksubtitle{}
+\bookauthor{Manon Kluijtmans, Henk Kummeling, Frank Miedema}
+\pagecolor{white}
+\bookkeywords{Open Science}
+\bookpublisher{Publishers of Trial and Error}
+\booksubject{Open}
+\bookyear{2023}
+\bookcopyrightholder{Manon Kluijtmans, Henk Kummeling, Frank Miedema}
+\bookcopyright{This work is licensed under a Creative Commons Attribution 4.0 (CC BY 4.0) license, which means that you are free to copy and distribute this work in any medium or format, granted that you give appropriate credit to the author(s).\\
+  For more information, see\\\mbox{\url{https://www.creativecommons.org/licenses/by/4.0/legalcode}}.}
+
+\booklicenseurl{https://www.creativecommons.org/licenses/by/4.0/legalcode}
+\bookcontactemail{publishers@trialanderror.org}
+\bookcontacturl{https://trialanderror.org}
+\bookisbn{}
+\bookurl{https://uu.trialanderror.org/book}
+\bookdoi{}
+\bookpublisherlogo{logo.png}
+\bookpublisherlocation{Utrecht, the Netherlands}
+\othercredits{\noindent Design and Typesetting by \href{https://github.com/tefkah}{Thomas F. K. Jorna}\\
+  \noindent Coordination by \href{https://www.linkedin.com/in/violet-zagt/}{Violet S. Zagt}}
+
+\bookversion{Web Version}
+
+\NewEnviron{references}{
+  {
+      \RaggedRight
+      \small
+      \setlength{\leftskip}{1em}
+      \setlength{\parindent}{-1em}
+      \noindent\BODY
+    }
+}
+
+\makeindex

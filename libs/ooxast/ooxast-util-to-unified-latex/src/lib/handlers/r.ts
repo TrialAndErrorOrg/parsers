@@ -60,83 +60,19 @@ export function r(h: H, node: R, parent?: Parent) {
     if (!prop || !('w:val' in prop) || !prop['w:val'] || prop['w:val'] === '0') {
       return text
     }
-    switch (name.replace(/\w+:/, '')) {
-      case 'i':
-        text = m(h.italics, text)
-        return text
-      case 'b':
-        text = m(h.inMath ? 'mathbf' : 'textbf', text)
-        return text
-      case 'u':
-        text = m('underline', text)
-        return text
-      case 'strike':
-      case 'dstrike':
-        text = m(h.strikethrough, text)
-        return text
-      case 'vertAlign':
-        //if (!isVert(prop)) continue
-        if (prop['w:val'] === 'superscript') {
-          text = m('textsuperscript', text)
-          return text
-        }
-        if (prop['w:val'] === 'subscript') {
-          text = m('textsubscript', text)
-          return text
-        }
-        return text
-      case 'smallCaps':
-        text = m('textsc', text)
-        return text
-      case 'highlight': {
-        if (!h.xcolor) {
-          return text
-        }
-        text = m('colorbox', [`${prop['w:val']}`, ...(Array.isArray(text) ? text : [text])])
-        return text
-      }
-      case 'color': {
-        if (!h.xcolor) {
-          return text
-        }
-        const color = prop['w:val']
 
-        if (color === 'auto' || color === '000000') {
-          return text
-        }
-        text = {
-          type: 'group',
-          content: [m('color', `${color}`), [...(Array.isArray(text) ? text : [text])]],
-        } as Group
-        return text
-      }
-      case 'bdr': {
-        if (h.inMath) {
-          return text
-        }
-        text = m('fbox', text)
-        return text
-      }
-      case 'shd': {
-        if (!h.xcolor) {
-          return text
-        }
-        if (h.inMath || !('w:fill' in prop)) {
-          return text
-        }
-
-        const shdColor = prop['w:fill']
-
-        if (!shdColor || shdColor === 'auto' || shdColor === '000000') {
-          return text
-        }
-
-        text = m('colorbox', ['gray', ...(Array.isArray(text) ? text : [text])])
-        return text
-      }
-      default:
-        return text
+    const tagName = name.replace(/\w+:/, '') as keyof typeof h.formattingHandlers
+    const handler = h.formattingHandlers[tagName]
+    if (handler) {
+      text = handler(
+        h,
+        text,
+        // @ts-expect-error TODO: Fix types for formattingHanlder
+        prop,
+        node,
+      )
     }
+    return text
   }, text as UnifiedLatexNode | UnifiedLatexNode[])
   return formattedText
 }

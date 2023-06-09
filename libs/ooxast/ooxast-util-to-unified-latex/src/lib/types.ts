@@ -9,8 +9,10 @@ import {
   EnvInfo,
 } from '@unified-latex/unified-latex-types'
 
-import { Attributes as OoxastProperties, Parent, Body, Text, Root, P } from 'ooxast'
+import { Attributes as OoxastProperties, Parent, Body, Text, Root, P, R, RPr, RPrMap } from 'ooxast'
 import { ListNumbering } from './util/find-list-numbering.js'
+import { defaultFormattingHandlers } from './handlers/defaultFormattingHandlers.js'
+import { RPrJSON } from 'ooxast-util-get-style'
 
 export type XastContent = Root['children'][number] | Root
 
@@ -43,6 +45,14 @@ export type ParagraphHandler = (
 export type ParagraphMatcher = (paragraph: P, style?: string) => boolean | undefined | null | void
 
 export interface Options {
+  /**
+   * Handlers for specific formatting styles, e.g what to do when a run has the "Bold" style
+   *
+   * Provide an object with the name of the style as the key and a function as the value.
+   *
+   * Don't include the `w:` prefix, e.g. `w:b` should be `b`
+   */
+  formattingHandlers?: FormattingHandlers
   /** Handlers for specific node types */
   handlers?: { [handle: string]: Handle }
   /**
@@ -240,7 +250,34 @@ export type Handle = (
   parent?: Parent,
 ) => UnifiedLatexNode | Array<UnifiedLatexNode> | void | undefined
 
+export type RProps<N extends RChildNamesWithoutW = RChildNamesWithoutW> = NonNullable<
+  RPrMap[N]
+>[number]['attributes']
+
+export type FormattingHandler<T extends RProps> = (
+  h: H,
+  text: UnifiedLatexNode | UnifiedLatexNode[],
+  prop: T,
+  node: R,
+) => UnifiedLatexNode | UnifiedLatexNode[]
+
+type RChildNamesWithoutW = RPr['children'][number]['name'] extends `w:${infer T}`
+  ? T
+  : { 'w:val': string }
+
+export type FormattingHandlers = {
+  [K in RChildNamesWithoutW]?: FormattingHandler<RProps<K>>
+}
+
 export interface Context {
+  /**
+   * Handlers for specific formatting styles, e.g what to do when a run has the "Bold" style
+   *
+   * Provide an object with the name of the style as the key and a function as the value.
+   *
+   * Don't include the `w:` prefix, e.g. `w:b` should be `b`
+   */
+  formattingHandlers: FormattingHandlers
   /**
    * Handlers for specific paragraph styles, e.g what to do when a paragraph has the "Heading 1" style
    *

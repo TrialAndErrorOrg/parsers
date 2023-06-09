@@ -30,12 +30,13 @@ import { findListNumbering } from './util/find-list-numbering.js'
 import { DocxVFileData } from 'docx-to-vfile'
 import { escapeLatex } from './util/escape.js'
 import { listMatcher, listStyleHandler } from './handlers/paragraph/list.js'
+import { defaultFormattingHandlers } from './handlers/defaultFormattingHandlers.js'
 
 export { one } from './one.js'
 export { all } from './all.js'
 export { handlers as defaultHandlers }
 
-export const defaultParagraphHandlers: Options['paragraphHandlers'] = [
+export const defaultParagraphHandlers: NonNullable<Options['paragraphHandlers']> = [
   {
     matcher: listMatcher,
     handler: listStyleHandler,
@@ -59,6 +60,7 @@ export const defaultOptions: Options = {
     { name: 'biblatex', options: ['backend=biber', 'style=apa'] },
   ],
   paragraphHandlers: defaultParagraphHandlers,
+  formattingHandlers: defaultFormattingHandlers,
 }
 
 declare module 'vfile' {
@@ -80,6 +82,18 @@ export function toUnifiedLatex(
   const options = {
     ...defaultOptions,
     ...(optionsOrVFile instanceof VFile ? maybeOptions : optionsOrVFile),
+    paragraphHandlers: [
+      ...defaultParagraphHandlers,
+      ...(optionsOrVFile instanceof VFile
+        ? maybeOptions?.paragraphHandlers ?? []
+        : optionsOrVFile?.paragraphHandlers ?? []),
+    ],
+    formattingHandlers: {
+      ...defaultFormattingHandlers,
+      ...(optionsOrVFile instanceof VFile
+        ? maybeOptions?.formattingHandlers ?? {}
+        : optionsOrVFile?.formattingHandlers ?? {}),
+    },
   }
 
   const vfile = optionsOrVFile instanceof VFile ? optionsOrVFile : undefined
@@ -177,6 +191,7 @@ export function toUnifiedLatex(
         ? findListNumbering(vfile.data.parsed['word/numbering.xml'])
         : undefined,
       paragraphHandlers: options.paragraphHandlers || defaultParagraphHandlers,
+      formattingHandlers: options.formattingHandlers || defaultFormattingHandlers,
     } as Context,
   )
 

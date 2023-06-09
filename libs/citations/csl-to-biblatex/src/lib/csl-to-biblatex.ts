@@ -153,6 +153,7 @@ function generateCiteKey(ref?: CSL, index?: number) {
       const prefix =
         author[0]['non-dropping-particle'] ??
         author[0]['dropping-particle'] ??
+        // @ts-expect-error - particle is not in the type definition
         author[0].particle ??
         ''
       return `${prefix}${author[0].family}${

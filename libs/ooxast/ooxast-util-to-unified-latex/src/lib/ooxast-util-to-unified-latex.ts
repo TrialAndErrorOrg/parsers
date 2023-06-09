@@ -31,6 +31,7 @@ import { DocxVFileData } from 'docx-to-vfile'
 import { escapeLatex } from './util/escape.js'
 import { listMatcher, listStyleHandler } from './handlers/paragraph/list.js'
 import { defaultFormattingHandlers } from './handlers/defaultFormattingHandlers.js'
+import { x } from 'xastscript'
 
 export { one } from './one.js'
 export { all } from './all.js'
@@ -222,7 +223,7 @@ export function toUnifiedLatex(
   }
 
   if (options.document === false) {
-    return result
+    return { type: 'root', content: result } as UnifiedLatexRoot
   }
 
   unifiedLatex = env('document', result)

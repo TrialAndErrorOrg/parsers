@@ -1,7 +1,15 @@
-import { Root } from 'ooxast'
 import { ooxastUtilRemoveRsid, Options } from 'ooxast-util-remove-rsid'
-import { Plugin } from 'unified'
-import { VFile } from 'vfile'
+import type { DocxVFileData } from 'docx-to-vfile'
+import type { Root } from 'ooxast'
+import type { Parsed } from 'reoff-parse'
+import type { Plugin } from 'unified'
+import type { VFile } from 'vfile'
+
+declare module 'vfile' {
+  interface DataMap extends DocxVFileData {
+    parsed: Parsed
+  }
+}
 
 export function reoffClean(
   options: Options = {

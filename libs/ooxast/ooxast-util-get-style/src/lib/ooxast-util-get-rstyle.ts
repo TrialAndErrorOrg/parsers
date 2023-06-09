@@ -1,4 +1,4 @@
-import { P, R, RPr, RPrMap } from 'ooxast'
+import type { P, R, RPr, RPrMap } from 'ooxast'
 import { select } from 'xast-util-select'
 import { convertElement } from 'xast-util-is-element'
 
@@ -23,7 +23,9 @@ export function getRStyle(r: R | P): RPrJSON | undefined {
 
 function rPrToJson(style: RPr) {
   return style.children.reduce((acc, curr) => {
-    if (!curr.name) return acc
+    if (!curr.name) {
+      return acc
+    }
 
     acc[curr.name] = { 'w:val': 'true', ...curr?.attributes }
 

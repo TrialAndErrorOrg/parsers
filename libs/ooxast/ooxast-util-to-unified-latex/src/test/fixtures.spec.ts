@@ -17,7 +17,7 @@ import { Ast, Root } from '@unified-latex/unified-latex-types'
 import { describe, it, expect } from 'vitest'
 import { blob } from 'stream/consumers'
 import unifiedLatexStringify from 'unified-latex-stringify'
-import reoffMarkupToStyle from 'reoff-markup-to-style'
+// import reoffMarkupToStyle from 'reoff-markup-to-style'
 
 const unifieddLatexStringify = function relatexStringify(options?: Options | void) {
   const compiler: CompilerFunction<Node, string> = (tree) => {
@@ -40,7 +40,7 @@ const fromDocx = (
     .use(reoffClean, {
       rPrRemoveList: ['w:lang', 'w:shd', 'w:szCs', 'w:sz', 'w:kern', 'w:rFonts', 'w:noProof'],
     })
-    .use(reoffMarkupToStyle)
+    //  .use(reoffMarkupToStyle)
     .use(reoffParseReferences) // { mailto: 'support@trialanderror.org' })
     .use(reoffCite, { type: citationType || 'zotero', log: false })
     .use(() => (tree, vfile) => {

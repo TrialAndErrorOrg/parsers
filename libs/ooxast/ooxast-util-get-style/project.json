@@ -31,7 +31,7 @@
       "outputs": ["{options.outputPath}"],
       "options": {
         "rootDir": "libs/ooxast/ooxast-util-get-style/src",
-        "outputPath": "dist/libs/ooxast/ooxast-util-get-style",
+        "outputPath": "dist/libs/ooxast/ooxast-util-get-style/",
         "tsConfig": "libs/ooxast/ooxast-util-get-style/tsconfig.lib.json",
         "packageJson": "libs/ooxast/ooxast-util-get-style/package.json",
         "main": "libs/ooxast/ooxast-util-get-style/src/index.ts",

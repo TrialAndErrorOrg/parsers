@@ -87,6 +87,23 @@ export function updatePackageJson(
   // update package specific settings
   packageJson = getUpdatedPackageJsonContent(packageJson, options)
 
+  // fix things like "@fabric": "martian@4" to "@fabric/martian": "^4"
+  const { dependencies: maybeWrongDeps } = packageJson
+
+  const fixedDeps = Object.entries(maybeWrongDeps ?? {}).reduce((acc, [key, value]) => {
+    console.log({ key, value })
+    if (key.startsWith('@') && !key.includes('/')) {
+      const [pkg, version] = value.split('@')
+      acc[`${key}/${pkg}`] = `^${version}`
+      return acc
+    }
+
+    acc[key] = value
+    return acc
+  }, {} as Record<string, string>)
+
+  packageJson.dependencies = fixedDeps
+
   // save files
   writeJsonFile(`${options.outputPath}/package.json`, packageJson)
 

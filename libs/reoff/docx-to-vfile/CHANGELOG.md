@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.8.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.7.0...docx-to-vfile-0.8.0) (2023-07-11)
+
 ## [0.7.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.6.1...docx-to-vfile-0.7.0) (2023-05-30)
 
 

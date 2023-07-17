@@ -1,9 +1,11 @@
 \usepackage[dutch]{babel}
 
-\usepackage{tikz}
-\usepackage{wallpaper}
-
 \newfloat{bookboxfloat}{th!}{bbxf}
+
+\counterwithout{footnote}{chapter}
+\definecolor{orcidlogocol}{HTML}{A6CE39}
+\RequirePackage{academicons}
+\newcommand{\orcid}[1]{ \href{https://orcid.org/#1}{\textcolor{orcidlogocol}{\kern -0.2em \aiOrcid \kern -0.2em}} }
 
 
 \newtcolorbox{bookboxf}[1]{
@@ -30,8 +32,8 @@
   colframe = gray!5,
   titlerule=0pt,
   coltitle = black,
-  colback = white,
-  colbacktitle = white,
+  colback = gray!5,
+  colbacktitle = gray!5,
   breakable,
 }
 
@@ -70,28 +72,31 @@
 
 \booktitle{De Universiteit in Transitie}
 \booksubtitle{}
-\bookauthor{Manon Kluijtmans, Henk Kummeling, Frank Miedema}
+\bookauthor{Henk Kummeling\orcid{0009-0001-0052-3990}, Manon Kluijtmans\orcid{0000-0001-6601-7639}, Frank Miedema\orcid{0000-0002-8063-5799}}
 \pagecolor{white}
 \bookkeywords{Open Science}
 \bookpublisher{Publishers of Trial and Error}
 \booksubject{Open}
 \bookyear{2023}
 \bookcopyrightholder{Manon Kluijtmans, Henk Kummeling, Frank Miedema}
-\bookcopyright{This work is licensed under a Creative Commons Attribution 4.0 (CC BY 4.0) license, which means that you are free to copy and distribute this work in any medium or format, granted that you give appropriate credit to the author(s).\\
-  For more information, see\\\mbox{\url{https://www.creativecommons.org/licenses/by/4.0/legalcode}}.}
+\bookcopyright{\noindent Dit boek en al het materiaal dat het bevat zijn gelicentieerd onder het Creative Commons 4.0 Internationaal (CC BY-NC 4.0) licentie, wat betekent dat je vrij bent om het werk te kopiëren, verspreiden, en remixen, zolang je de maker van het werk \href{https://creativecommons.org/licenses/by-nc/4.0/deed.nl}{vermeldt}, een link naar de licentie plaatst en aangeeft of het werk veranderd is.
+  Voor meer informatie, zie \\\mbox{\url{https://www.creativecommons.org/licenses/by/4.0/legalcode}}.}
 
 \booklicenseurl{https://www.creativecommons.org/licenses/by/4.0/legalcode}
 \bookcontactemail{publishers@trialanderror.org}
 \bookcontacturl{https://trialanderror.org}
 \bookisbn{}
 \bookurl{https://uu.trialanderror.org/book}
-\bookdoi{}
+\bookdoi{10.36850/9pv6-n457}
 \bookpublisherlogo{logo.png}
-\bookpublisherlocation{Utrecht, the Netherlands}
-\othercredits{\noindent Design and Typesetting by \href{https://github.com/tefkah}{Thomas F. K. Jorna}\\
-  \noindent Coordination by \href{https://www.linkedin.com/in/violet-zagt/}{Violet S. Zagt}}
+\bookpublisherlocation{Utrecht, Nederland}
+\othercredits{\noindent Design and Typesetting by \href{https://tefkah.com}{Thomas F. K. Jorna}\\
+  \noindent Cover design by \href{https://morlumbroso.com}{Mor Lumbroso}\\
+  \noindent Coordination by \href{https://www.linkedin.com/in/violet-zagt/}{Violet S. Zagt}\\
 
-\bookversion{Web Version}
+  In samenwerking met Universiteit Utrecht \hspace*{10em} \raisebox{-2em}{\includegraphics[height=5em]{uu.png}}\\}
+
+\bookversion{Preprint Versie}
 
 \NewEnviron{references}{
   {

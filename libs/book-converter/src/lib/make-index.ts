@@ -4,8 +4,9 @@ type FinalItem = {
 }
 export function makeIndex(csvString: string, latexString: string, outputPath?: string) {
   // makeIndex(csvString, latexString)
+  // everything to lowercase except for acronyms
   const parsedCSV = csvString
-    .toLowerCase()
+    .replace(/[A-Z][a-z]/g, (match) => match.toLowerCase())
     .split(/\r?\n/)
     .map((row) => row.split(';'))
 
@@ -44,7 +45,14 @@ function parseCsvRow(row: string[]) {
 }
 
 function processLatexString(latexString: string, parsed: FinalItem[]) {
-  const latexCommands = ['\\section', '\\chapter', '\\part', '\\subsection', '\\subsubsection']
+  const latexCommands = [
+    '\\section',
+    '\\chapter',
+    '\\part',
+    '\\subsection',
+    '\\subsubsection',
+    '\\href',
+  ]
   const latexCommandsRegex = new RegExp(
     `(${latexCommands.join('|')})({[^}]*)\\index\{.*?\}(.*?})`,
     'g',
@@ -65,7 +73,16 @@ function processLatexString(latexString: string, parsed: FinalItem[]) {
   }
 
   latexString = latexString.replace(
-    /(\\(?:section|subsection|subsubsection|chapter|part))({.*?)\\index\{.*?\}(.*?})/g,
+    /(\\(?:section|subsection|subsubsection|chapter|part|href))({.*?)\\index\{.*?\}(.*?})/g,
+    (match, command, content1, content2) => {
+      console.log(match, command, content1, content2)
+      return `${command}${content1}${content2}`
+    },
+  )
+
+  // remove nested indexes
+  latexString = latexString.replace(
+    /(\\index)({[^}]*?)\\index\{.*?\}(.*?})/g,
     (match, command, content1, content2) => {
       console.log(match, command, content1, content2)
       return `${command}${content1}${content2}`

@@ -11,7 +11,6 @@ export const paragraphHandlers: (typeof defaultParagraphHandlers)[number][] = [
     matcher: 'Caption',
     handler: (h, node, { previousElement, alreadyProcessedBody }) => {
       const prevThree = alreadyProcessedBody.slice(-3)
-      console.log({ prevThree })
       const prev = prevThree.find((n) => n.type === 'environment' && n.env === 'figure')
 
       if (prev && prev.type === 'environment' && prev.env === 'figure') {
@@ -49,7 +48,7 @@ export const paragraphHandlers: (typeof defaultParagraphHandlers)[number][] = [
       const prev = alreadyProcessedBody[alreadyProcessedBody.length - 1]
 
       if (prev && prev.type === 'environment' && prev.env === 'quote') {
-        prev.content.push(PB, m('vspace*', m('baselineskip')), PB, ...all(h, node))
+        prev.content.push(PB, ...all(h, node))
         return
       }
 
@@ -80,6 +79,24 @@ export const paragraphHandlers: (typeof defaultParagraphHandlers)[number][] = [
     matcher: 'noindent',
     handler: (h, node) => {
       return [m('noindent'), s(' '), ...all(h, node)]
+    },
+  },
+  {
+    matcher: 'RemoveOneLineFromPage',
+    handler: (h, node) => {
+      return [m('enlargethispage', arg('-\\baselineskip')), m('checkandfixthelayout')]
+    },
+  },
+  {
+    matcher: 'AddOneLineToPage',
+    handler: (h, node) => {
+      return [m('enlargethispage', arg('\\baselineskip')), m('checkandfixthelayout')]
+    },
+  },
+  {
+    matcher: 'NewPage',
+    handler: (h, node) => {
+      return [m('clearpage')]
     },
   },
 ]

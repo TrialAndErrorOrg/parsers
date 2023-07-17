@@ -17,6 +17,6 @@ describe('makeIndex', () => {
       "A directe democratie requires adaptive capability.
       \\\\section{Covid capability}"
     `)
-    expect(totalMatches).toMatchInlineSnapshot('1')
+    expect(totalMatches).toMatchInlineSnapshot('0')
   })
 })

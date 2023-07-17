@@ -43,7 +43,7 @@ export async function bookConverter(book: string, indexCSV?: string): Promise<st
         documentClass: {
           name: 'jote-book',
           options: [
-            'smallauthor, chapterhaspagenum, nochapterinheader, pagenuminheader,  bigchapnum,medium2, tocpages,  garamond, titleinheader',
+            'smallauthor, chapterhaspagenum, nochapterinheader, pagenuminheader,  bigchapnum,medium2, tocpages, garamond, titleinheader',
           ],
         },
         topSection: 0,

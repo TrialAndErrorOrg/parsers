@@ -1,27 +1,27 @@
-INFO:  latexindent.pl version 3.18, 2022-06-12, a script to indent .tex files
-       latexindent.pl lives here: /opt/homebrew/Cellar/latexindent/3.18_1/libexec/bin/
-       Fri Feb 24 16:27:16 2023
-       Filename: /Volumes/SSD/Projects/jote-monorepo/libs/ooxast/ooxast-util-to-unified-latex/src/test/fixtures/math/__latexindent_temp_expected.tex
+INFO:  latexindent.pl version 3.22, 2023-06-01, a script to indent .tex files
+       latexindent.pl lives here: /opt/homebrew/Cellar/latexindent/3.22/libexec/bin/
+       Thu Jun 29 12:33:45 2023
+       Filename: /Users/thomas/Projects/jote-monorepo/libs/book-converter/src/lib/__latexindent_temp_preamble.tex
 INFO:  Processing switches:
        -y|--yaml: YAML settings specified via command line
        -c|--cruft: cruft directory
-INFO:  Directory for backup files and /Volumes/SSD/Projects/jote-monorepo/apps/converter-frontend-e2e/src/fixtures//indent.log:
-       /Volumes/SSD/Projects/jote-monorepo/apps/converter-frontend-e2e/src/fixtures/
+INFO:  Directory for backup files and /Users/thomas/Projects/jote-monorepo/apps/converter-frontend-e2e/src/fixtures//indent.log:
+       /Users/thomas/Projects/jote-monorepo/apps/converter-frontend-e2e/src/fixtures/
 INFO:  Perl modules are being loaded from the following directories:
        /opt/homebrew/opt/perl/lib/perl5/5.36/FindBin.pm
-       /opt/homebrew/Cellar/latexindent/3.18_1/libexec/lib/perl5/YAML/Tiny.pm
+       /opt/homebrew/Cellar/latexindent/3.22/libexec/lib/perl5/YAML/Tiny.pm
        /opt/homebrew/opt/perl/lib/perl5/5.36/File/Copy.pm
        /opt/homebrew/opt/perl/lib/perl5/5.36/File/Basename.pm
        /opt/homebrew/opt/perl/lib/perl5/5.36/Getopt/Long.pm
-       /opt/homebrew/Cellar/latexindent/3.18_1/libexec/lib/perl5/File/HomeDir.pm
+       /opt/homebrew/Cellar/latexindent/3.22/libexec/lib/perl5/File/HomeDir.pm
 INFO:  LatexIndent perl modules are being loaded from, for example:
-       /opt/homebrew/Cellar/latexindent/3.18_1/libexec/lib/perl5/LatexIndent/Document.pm
+       /opt/homebrew/Cellar/latexindent/3.22/libexec/lib/perl5/LatexIndent/Document.pm
 INFO:  YAML settings read: defaultSettings.yaml
-       Reading defaultSettings.yaml from /opt/homebrew/Cellar/latexindent/3.18_1/libexec/bin/defaultSettings.yaml
-INFO:  YAML settings read: indentconfig.yaml or .indentconfig.yaml
-       Home directory is /Users/thomas (didn't find either indentconfig.yaml or .indentconfig.yaml)
-       To specify user settings you would put indentconfig.yaml here: /Users/thomas/indentconfig.yaml
-       Alternatively, you can use the hidden file .indentconfig.yaml as: /Users/thomas/.indentconfig.yaml
+       Reading defaultSettings.yaml from /opt/homebrew/Cellar/latexindent/3.22/libexec/bin/defaultSettings.yaml
+INFO:  YAML reading settings
+       Home directory is /Users/thomas
+       latexindent.pl didn't find indentconfig.yaml or .indentconfig.yaml
+       see all possible locations: https://latexindentpl.readthedocs.io/en/latest/sec-appendices.html#indentconfig-options)
 INFO:  YAML settings read: -y switch
        YAML setting: defaultIndent:'  '
        single-quoted string found in -y switch: '  ', substitute to   

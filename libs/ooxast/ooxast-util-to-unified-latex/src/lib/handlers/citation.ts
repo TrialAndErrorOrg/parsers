@@ -168,13 +168,33 @@ export const citation: Handle = (h: H, citationNode: T, parent?: Parent) => {
       const actualSuffix =
         maybeSuffix && maybeSuffix !== citationWithoutParens ? maybeSuffix : undefined
 
+      const mappedCitations = citations.flatMap(
+        ({ citeKey, prefix, suffix: literalSuffix, label, locator }) => {
+          const suffix = literalSuffix ?? `${label ? `${label} ` : ''}${locator ?? ''}`
+          return [
+            ...(prefix ? [arg(prefix.trim(), { braces: '[]' })] : []),
+            ...(suffix
+              ? [arg(suffix.trim(), { braces: '[]' })]
+              : prefix
+              ? [arg('', { braces: '[]' })]
+              : []),
+            arg(citeKey),
+          ]
+        },
+      )
+
       const args: Argument[] = [
         ...(actualPrefix ? [arg(actualPrefix, { braces: '[]' })] : []),
         ...(actualSuffix ? [arg(actualSuffix, { braces: '[]' })] : []),
-        arg(citations.join(', ')),
+        ...mappedCitations,
       ]
+      console.log({
+        args,
+        formattedCitation,
+        citations,
+      })
 
-      return m(formattedCitation.startsWith('(') ? 'textcite' : 'parencite', args)
+      return m(formattedCitation.startsWith('(') ? 'parencites' : 'textcites', args)
     }
   }
   // Endnote/Citavi citation

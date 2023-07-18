@@ -11,6 +11,7 @@
         "root": "apps/converter-frontend",
         "outputPath": "dist/apps/converter-frontend"
       },
+      "dependsOn": ["^build"],
       "configurations": {
         "production": {},
         "development": {}

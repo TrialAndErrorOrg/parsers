@@ -26,9 +26,6 @@
       "import": "./index.js"
     }
   },
-  "dependencies": {
-    "xast-util-select": "latest"
-  },
   "main": "./index.js",
   "module": "./index.js",
   "types": "./index.d.ts",

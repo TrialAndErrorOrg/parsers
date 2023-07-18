@@ -541,6 +541,9 @@ devDependencies:
   '@types/express':
     specifier: 4.17.14
     version: 4.17.14
+  '@types/fs-extra':
+    specifier: ^11.0.1
+    version: 11.0.1
   '@types/jest':
     specifier: 29.5.0
     version: 29.5.0
@@ -607,6 +610,9 @@ devDependencies:
   '@vitest/ui':
     specifier: ^0.29.8
     version: 0.29.8
+  '@vscode/ripgrep':
+    specifier: ^1.15.5
+    version: 1.15.5
   autoprefixer:
     specifier: 10.4.13
     version: 10.4.13(postcss@8.4.19)
@@ -664,6 +670,9 @@ devDependencies:
   eslint-plugin-unicorn:
     specifier: ^41.0.0
     version: 41.0.1(eslint@8.36.0)
+  fs-extra:
+    specifier: ^11.1.1
+    version: 11.1.1
   husky:
     specifier: ^8.0.0
     version: 8.0.3
@@ -3196,7 +3205,7 @@ packages:
       collect-v8-coverage: 1.0.1
       exit: 0.1.2
       glob: 7.2.3
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       istanbul-lib-coverage: 3.2.0
       istanbul-lib-instrument: 5.2.1
       istanbul-lib-report: 3.0.0
@@ -3361,7 +3370,7 @@ packages:
       chalk: 4.1.2
       convert-source-map: 1.9.0
       fast-json-stable-stringify: 2.1.0
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       jest-haste-map: 28.1.3
       jest-regex-util: 28.0.2
       jest-util: 28.1.3
@@ -4180,7 +4189,7 @@ packages:
       dotenv: 10.0.0
       esbuild: 0.17.14
       fast-glob: 3.2.7
-      fs-extra: 11.1.0
+      fs-extra: 11.1.1
       tsconfig-paths: 4.1.2
       tslib: 2.5.0
     transitivePeerDependencies:
@@ -4266,7 +4275,7 @@ packages:
       babel-plugin-transform-typescript-metadata: 0.3.2(@babel/core@7.20.5)
       chalk: 4.1.2
       fast-glob: 3.2.7
-      fs-extra: 11.1.0
+      fs-extra: 11.1.1
       ignore: 5.2.4
       js-tokens: 4.0.0
       minimatch: 3.0.5
@@ -4302,7 +4311,7 @@ packages:
       babel-plugin-transform-typescript-metadata: 0.3.2(@babel/core@7.20.5)
       chalk: 4.1.2
       fast-glob: 3.2.7
-      fs-extra: 11.1.0
+      fs-extra: 11.1.1
       ignore: 5.2.4
       js-tokens: 4.0.0
       minimatch: 3.0.5
@@ -4506,7 +4515,7 @@ packages:
       '@svgr/webpack': 6.5.1
       chalk: 4.1.2
       dotenv: 10.0.0
-      fs-extra: 11.1.0
+      fs-extra: 11.1.1
       ignore: 5.2.4
       next: 13.2.4(@babel/core@7.20.5)(react-dom@18.2.0)(react@18.2.0)
       semver: 7.3.4
@@ -4769,7 +4778,7 @@ packages:
       '@nrwl/js': 15.8.5(@swc-node/register@1.6.2)(@swc/core@1.3.37)(eslint@8.36.0)(nx@15.8.7)(prettier@2.8.4)(typescript@5.1.3)
       '@nrwl/linter': 15.8.5(@swc-node/register@1.6.2)(@swc/core@1.3.37)(eslint@8.36.0)(nx@15.8.7)(prettier@2.8.4)(typescript@5.1.3)
       dotenv: 10.0.0
-      fs-extra: 11.1.0
+      fs-extra: 11.1.1
       tslib: 2.5.0
     transitivePeerDependencies:
       - '@babel/traverse'
@@ -6331,6 +6340,13 @@ packages:
   /@types/extend@3.0.1:
     resolution: {integrity: sha512-R1g/VyKFFI2HLC1QGAeTtCBWCo6n75l41OnsVYNbmKG+kempOESaodf6BeJyUM3Q0rKa/NQcTHbB2+66lNnxLw==}
 
+  /@types/fs-extra@11.0.1:
+    resolution: {integrity: sha512-MxObHvNl4A69ofaTRU8DFqvgzzv8s9yRtaPPm5gud9HDNvpB3GPQFvNuTWAI59B9huVGV5jXYJwbCsmBsOGYWA==}
+    dependencies:
+      '@types/jsonfile': 6.1.1
+      '@types/node': 18.15.11
+    dev: true
+
   /@types/fs-extra@8.1.2:
     resolution: {integrity: sha512-SvSrYXfWSc7R4eqnOzbQF4TZmfpNSM9FrSWLU3EUnWBuyZqNBOrv1B1JA3byUDPUl9z4Ab3jeZG2eDdySlgNMg==}
     dependencies:
@@ -6409,6 +6425,12 @@ packages:
 
   /@types/json5@0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: true
+
+  /@types/jsonfile@6.1.1:
+    resolution: {integrity: sha512-GSgiRCVeapDN+3pqA35IkQwasaCh/0YFH5dEF6S88iDvEn901DjOeH3/QPY+XYP1DFzDZPvIvfeEgk+7br5png==}
+    dependencies:
+      '@types/node': 18.15.11
     dev: true
 
   /@types/katex@0.11.1:
@@ -7340,6 +7362,16 @@ packages:
       diff: 5.1.0
       loupe: 2.3.6
       pretty-format: 27.5.1
+    dev: true
+
+  /@vscode/ripgrep@1.15.5:
+    resolution: {integrity: sha512-PVvKNEmtnlek3i4MJMaB910dz46CKQqcIY2gKR3PSlfz/ZPlSYuSuyQMS7iK20KL4hGUdSbWt964B5S5EIojqw==}
+    requiresBuild: true
+    dependencies:
+      https-proxy-agent: 5.0.1
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /@webassemblyjs/ast@1.11.1:
@@ -12050,7 +12082,7 @@ packages:
     resolution: {integrity: sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==}
     engines: {node: '>=12'}
     dependencies:
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       jsonfile: 6.1.0
       universalify: 2.0.0
 
@@ -12058,9 +12090,10 @@ packages:
     resolution: {integrity: sha512-0rcTq621PD5jM/e0a3EJoGC/1TC5ZBCERW82LQuwfGnCa1V8w7dpYH1yNu+SLb6E5dkeCBzKEyLGlFrnr+dUyw==}
     engines: {node: '>=14.14'}
     dependencies:
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       jsonfile: 6.1.0
       universalify: 2.0.0
+    dev: true
 
   /fs-extra@11.1.1:
     resolution: {integrity: sha512-MGIE4HOvQCeUCzmlHs0vXpih4ysz4wg9qiSAu6cd42lVwPbTM1TjV7RusoyQqMmk/95gdQZX72u+YW+c3eEpFQ==}
@@ -12459,6 +12492,7 @@ packages:
 
   /graceful-fs@4.2.10:
     resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==}
+    dev: true
 
   /graceful-fs@4.2.11:
     resolution: {integrity: sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==}
@@ -13756,7 +13790,7 @@ packages:
       ci-info: 3.8.0
       deepmerge: 4.3.0
       glob: 7.2.3
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       jest-circus: 28.1.3
       jest-environment-node: 28.1.3
       jest-get-type: 28.0.2
@@ -13963,7 +13997,7 @@ packages:
       '@types/node': 18.15.11
       anymatch: 3.1.3
       fb-watchman: 2.0.2
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       jest-regex-util: 28.0.2
       jest-util: 28.1.3
       jest-worker: 28.1.3
@@ -14033,7 +14067,7 @@ packages:
       '@jest/types': 28.1.3
       '@types/stack-utils': 2.0.1
       chalk: 4.1.2
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       micromatch: 4.0.5
       pretty-format: 28.1.3
       slash: 3.0.0
@@ -14148,7 +14182,7 @@ packages:
     engines: {node: ^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0}
     dependencies:
       chalk: 4.1.2
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       jest-haste-map: 28.1.3
       jest-pnp-resolver: 1.2.3(jest-resolve@28.1.1)
       jest-util: 28.1.3
@@ -14400,7 +14434,7 @@ packages:
       '@types/node': 18.15.11
       chalk: 4.1.2
       ci-info: 3.8.0
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       picomatch: 2.3.1
 
   /jest-util@28.1.3:
@@ -14411,7 +14445,7 @@ packages:
       '@types/node': 18.15.11
       chalk: 4.1.2
       ci-info: 3.8.0
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
       picomatch: 2.3.1
 
   /jest-util@29.4.3:

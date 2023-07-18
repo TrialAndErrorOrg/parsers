@@ -1,6 +1,4 @@
-import { Document, P, Root } from 'ooxast'
-import { Macro } from '@unified-latex/unified-latex-types'
-import { p } from './handlers/p.js'
+import { P, Root } from 'ooxast'
 import { toUnifiedLatex } from './ooxast-util-to-unified-latex.js'
 import { toString } from '@unified-latex/unified-latex-util-to-string'
 import { m } from '@unified-latex/unified-latex-builder'

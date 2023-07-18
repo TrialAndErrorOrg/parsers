@@ -31,7 +31,6 @@ import { DocxVFileData } from 'docx-to-vfile'
 import { escapeLatex } from './util/escape.js'
 import { listMatcher, listStyleHandler } from './handlers/paragraph/list.js'
 import { defaultFormattingHandlers } from './handlers/defaultFormattingHandlers.js'
-import { x } from 'xastscript'
 
 export { one } from './one.js'
 export { all } from './all.js'

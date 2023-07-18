@@ -5,12 +5,14 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "better-nx-tsc:tsc",
+      // "executor": "better-nx-tsc:tsc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "rootDir": "libs/reoff/reoff-markup-to-style/src",
-        "outputPath": "dist/libs/reoff/reoff-markup-to-style/",
+        "outputPath": "dist/libs/reoff/reoff-markup-to-style",
         "tsConfig": "libs/reoff/reoff-markup-to-style/tsconfig.lib.json",
+        "packageJson": "libs/reoff/reoff-markup-to-style/package.json",
         "main": "libs/reoff/reoff-markup-to-style/src/index.ts",
         "assets": ["libs/reoff/reoff-markup-to-style/*.md"],
         "updateBuildableProjectDepsInPackageJson": true,

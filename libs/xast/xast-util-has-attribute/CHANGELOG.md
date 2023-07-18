@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.5](https://github.com/TrialAndErrorOrg/parsers/compare/xast-util-has-attribute-0.1.4...xast-util-has-attribute-0.1.5) (2023-07-18)
+
+
+### Bug Fixes
+
+* **ooxast-util-to-unified-latex:** just give up on infer heading for now ([4709f1c](https://github.com/TrialAndErrorOrg/parsers/commit/4709f1cbe5fe8bb3e6fbc3ade8f5c92c8c71afb1))
+
 ## [0.1.4](https://github.com/TrialAndErrorOrg/parsers/compare/xast-util-has-attribute-0.1.3...xast-util-has-attribute-0.1.4) (2023-03-14)
 
 ## [0.1.3](https://github.com/TrialAndErrorOrg/parsers/compare/xast-util-has-attribute-0.1.2...xast-util-has-attribute-0.1.3) (2023-03-09)

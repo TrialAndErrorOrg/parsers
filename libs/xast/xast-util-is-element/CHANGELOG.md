@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.5](https://github.com/TrialAndErrorOrg/parsers/compare/xast-util-is-element-0.1.4...xast-util-is-element-0.1.5) (2023-07-18)
+
+
+### Bug Fixes
+
+* make citations work ([67993d3](https://github.com/TrialAndErrorOrg/parsers/commit/67993d33150e05024be7e8df676e59d4cd9c57b1))
+
 ## [0.1.4](https://github.com/TrialAndErrorOrg/parsers/compare/xast-util-is-element-0.1.3...xast-util-is-element-0.1.4) (2023-03-14)
 
 ## [0.1.3](https://github.com/TrialAndErrorOrg/parsers/compare/xast-util-is-element-0.1.2...xast-util-is-element-0.1.3) (2023-03-09)

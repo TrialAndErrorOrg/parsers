@@ -24,13 +24,16 @@ const extensionMap: Record<string, string> = {
   emf: 'x-emf',
 }
 
-async function downloadAll(images: { [key: string]: Blob }) {
+async function downloadAll(images: { [key: string]: Blob }, text: string) {
   const zipWriter = new ZipWriter(new BlobWriter('application/zip'))
 
+  await zipWriter.add('media', undefined, {
+    directory: true,
+  })
   const addedStuff = await Promise.all(
     Object.entries(images).map(([url, img]) => {
       const rawExtension = url.split('.').pop() ?? 'jpg'
-      const fileName = url.split('/').pop() ?? 'image.jpg'
+      const fileName = `media/` + url.split('/').pop() ?? 'image.jpg'
       const extension = extensionMap[rawExtension] ?? rawExtension
 
       const file = new Blob([img], {
@@ -39,9 +42,11 @@ async function downloadAll(images: { [key: string]: Blob }) {
       // const blob = new Blob([arrayBufferView], {
       //   type: `image/${extension}`,
       // })
-      zipWriter.add(fileName, new BlobReader(file))
+      zipWriter.add(fileName, new BlobReader(file), {})
     }),
   )
+
+  await zipWriter.add('main.tex', new TextReader(text))
   const zipFile = await zipWriter.close()
 
   window.open((window.URL ?? window.webkitURL).createObjectURL(zipFile), '_blank')
@@ -54,16 +59,34 @@ export interface ConvertedBlockLocalProps {
   options?: { [key: string]: any | any[] }
 }
 
+function superJankMakeTexBetterReplace(text: string) {
+  return text.replace(
+    '\\begin{document}\n',
+    `\\begin{document}
+\\begin{frontmatter}
+  \\maketitle
+  \\begin{abstract}
+    \\printabstracttext
+  \\end{abstract}
+\\end{frontmatter}
+`,
+  )
+}
+
 export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
   const { input, options = {}, converter } = props
   const [vfile, setVFile] = useState<VFile | null>(null)
-  const [preamble] = useStore((state) => [state.preamble], shallow)
+  const [preamble, parseCitations] = useStore(
+    (state) => [state.preamble, state.parseCitations, state.setParseCitations],
+    shallow,
+  )
   const clipboard = useClipboard({ timeout: 2000 })
 
   if (preamble) {
     console.log({ preamble })
     options['preamble'] = preamble
   }
+  options.parseCitations = parseCitations
   useEffect(() => {
     ;(async () => {
       setVFile(await converter(input, options))
@@ -109,7 +132,14 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
                 )
               : null}
           </Box>
-          <Button onClick={() => downloadAll(vfile.data.media)}> Download all ⬇️ </Button>
+          <Button
+            onClick={() =>
+              downloadAll(vfile.data.media, superJankMakeTexBetterReplace(String(vfile)))
+            }
+          >
+            {' '}
+            Download all ⬇️{' '}
+          </Button>
         </>
       )}
       {vfile?.messages && (
@@ -158,7 +188,7 @@ export function ConvertedBlockLocal(props: ConvertedBlockLocalProps) {
               },
             }}
           >
-            {String(vfile)}
+            {superJankMakeTexBetterReplace(String(vfile))}
           </SyntaxHighlighter>
         </Box>
       ) : (

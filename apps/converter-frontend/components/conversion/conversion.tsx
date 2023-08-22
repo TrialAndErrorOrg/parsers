@@ -1,6 +1,6 @@
 /* eslint-disable import/extensions */
 import { useState } from 'react'
-import { Button, Code, Container, Group, Select, Text, Title } from '@mantine/core'
+import { Button, Checkbox, Code, Container, Group, Select, Text, Title } from '@mantine/core'
 import { HStack } from '../stack/stack.js'
 import SelectItem from '../select-item/select-item.js'
 import { AiOutlineUpload } from 'react-icons/ai'
@@ -20,8 +20,14 @@ export interface ConversionProps {}
 export function Conversion(props: ConversionProps) {
   //const [thing, setThing] = useState<ArrayBuffer>()
 
-  const [input, setInput, preamble] = useStore(
-    (state) => [state.input, state.setInput, state.preamble],
+  const [input, setInput, preamble, parseCitations, setParseCitations] = useStore(
+    (state) => [
+      state.input,
+      state.setInput,
+      state.preamble,
+      state.parseCitations,
+      state.setParseCitations,
+    ],
     shallow,
   )
 
@@ -66,6 +72,13 @@ export function Conversion(props: ConversionProps) {
             ]}
           />
           <Button radius="md">Lets gooo</Button>
+        </HStack>
+        <HStack>
+          <Text>Parse citations</Text>
+          <Checkbox
+            checked={parseCitations}
+            onChange={(event) => setParseCitations(event.currentTarget.checked)}
+          />
         </HStack>
       </Container>
       <Dropzone

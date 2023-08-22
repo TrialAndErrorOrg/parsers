@@ -8,12 +8,14 @@ export interface InitialState {
   output: string | null
   meta: Form | null
   preamble: string
+  parseCitations: boolean
 }
 export interface Set {
   setInput: (doc: ArrayBuffer) => void
   setOutput: (doc: string) => void
   setMeta: (form: Form) => void
   setPreamble: (form: Form) => void
+  setParseCitations: (val: boolean) => void
 }
 
 export const useStore = create(
@@ -23,12 +25,14 @@ export const useStore = create(
       output: null,
       meta: null,
       preamble: '',
+      parseCitations: true,
     },
     (set) => ({
       setInput: (val: ArrayBuffer) => set((state) => ({ ...state, input: val })),
       setOutput: (val: string) => set((state) => ({ ...state, output: val })),
       setMeta: (form: Form) => set((state) => ({ ...state, meta: form })),
       setPreamble: (form: Form) => set((state) => ({ ...state, preamble: metaToPreamble(form) })),
+      setParseCitations: (val: boolean) => set((state) => ({ ...state, parseCitations: val })),
     }),
   ),
 )
@@ -102,8 +106,8 @@ export const metaToPreamble = (form: Form): string => {
           case 'authors': {
             const auths = value.flatMap((auth: Author, index: number) => {
               return [
-                `\\author[${index + 1}]{${auth.givenName} ${auth.familyName}${
-                  auth.orcid ? `\\orcid{${auth.orcid?.split('/').pop()}}` : ''
+                `\\author[${index + 1}]{\\mbox{${auth.givenName} ${auth.familyName}${
+                  auth.orcid ? `\\orcid{${auth.orcid?.split('/').pop()}}}` : ''
                 }}`,
                 `\\affil[${index + 1}]{${auth.affiliation}}`,
                 ...(index === 0
@@ -145,6 +149,7 @@ export const metaToPreamble = (form: Form): string => {
             return acc
           }
 
+          case 'yjear':
           case 'year': {
             acc.push(`\\jyear{${value}}`)
             return acc

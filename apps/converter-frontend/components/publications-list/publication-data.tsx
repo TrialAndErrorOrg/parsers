@@ -35,6 +35,7 @@ export const PublicationData = (props: {
       runningauthor: '',
       jname: 'Journal of Trial \\& Error',
       jyear: new Date().getFullYear().toString(),
+      year: new Date().getFullYear().toString(),
       acknowledgments: '',
       funding: '',
       doi: '',

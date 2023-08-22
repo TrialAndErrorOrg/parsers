@@ -6,9 +6,9 @@ import { VFile } from 'vfile'
 import { unified } from 'unified'
 import { docxToVFile } from 'docx-to-vfile'
 import reoffUnifiedLatex from 'reoff-unified-latex'
-import unifedLatexStringify from 'unified-latex-stringify'
+import unifiedLatexStringify from 'unified-latex-stringify'
 import reoffMarkupToStyle from 'reoff-markup-to-style'
-import unifiedLatexStringify from 'libs/unified-latex/unified-latex-stringify/src/lib/unified-latex-stringify.js'
+// import unifiedLatexStringify from 'libs/unified-latex/unified-latex-stringify/src/lib/unified-latex-stringify.js'
 
 export async function docxToTexConverter(
   input: ArrayBuffer,
@@ -17,6 +17,7 @@ export async function docxToTexConverter(
     url?: string
     mailto?: string
     preamble?: string
+    parseCitations?: boolean
   } = {},
 ): Promise<VFile> {
   const { citationType: type, url: apiUrl, mailto, preamble } = options
@@ -59,9 +60,17 @@ export async function docxToTexConverter(
           : process.env.NEXT_PUBLIC_STYLE_DEV_URL || 'http://localhost:8000/api/style',
       // mailto: 'support@trialanderror.org',
     })
-    .use(reoffCite, { type: type ?? 'zotero' })
+    .use(
+      options.parseCitations
+        ? reoffCite
+        : () => (tree) => {
+            return tree
+          },
+      { type: type ?? 'zotero' },
+    )
     .use(() => (tree, vfile) => {
       console.log({ tree: JSON.parse(JSON.stringify(tree)) })
+      return tree
     })
     .use(reoffUnifiedLatex, {
       xcolor: false,
@@ -69,6 +78,10 @@ export async function docxToTexConverter(
         width: '\\linewidth',
       },
       preamble: `\\addbibresource{bibliography.bib}\n\n${preamble}`,
+      documentClass: {
+        name: 'jote-new-article',
+        options: ['authordate', 'empirical'],
+      },
     })
     .use(unifiedLatexStringify)
 

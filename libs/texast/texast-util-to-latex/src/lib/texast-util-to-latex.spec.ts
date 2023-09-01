@@ -1,12 +1,5 @@
-import {
-  Text,
-  Command,
-  CommandArg,
-  CommandArgOpt,
-  Environment,
-  InlineMath,
-} from 'texast'
-import { toLatex } from './texast-util-to-latex'
+import { Text, Command, CommandArg, CommandArgOpt, Environment, InlineMath } from 'texast'
+import { toLatex } from './texast-util-to-latex.js'
 const text: Text = { type: 'text', value: 'hello world!' }
 
 const commandWithNoArgs: Command = {
@@ -58,7 +51,9 @@ describe('text', () => {
 })
 
 describe('paragraph', () => {
-  it('should stringify paragraph', () => {})
+  it('should stringify paragraph', () => {
+    //
+  })
 })
 
 describe('command', () => {
@@ -69,17 +64,15 @@ describe('command', () => {
     expect(toLatex(commandWithOneArgs)).toEqual('\\includepackage{biblatex}')
   })
   it('should render command with one argument', () => {
-    expect(toLatex(commandWith3Args)).toEqual(
-      '\\includepackage{biblatex}{biblatex}{biblatex}'
-    )
+    expect(toLatex(commandWith3Args)).toEqual('\\includepackage{biblatex}{biblatex}{biblatex}')
   })
   it('should render command with one argument', () => {
-    expect(toLatex(commandWithArgAndOptArg)).toEqual(
-      '\\includepackage[style=apa]{biblatex}'
-    )
+    expect(toLatex(commandWithArgAndOptArg)).toEqual('\\includepackage[style=apa]{biblatex}')
   })
 
-  it('should render italics', () => {})
+  it('should render italics', () => {
+    //
+  })
 })
 describe('environment', () => {
   const basicEnv: Environment = {
@@ -110,7 +103,7 @@ describe('environment', () => {
 
       hello world!
 
-  \\end{basic}`
+  \\end{basic}`,
     )
   })
 
@@ -120,7 +113,7 @@ describe('environment', () => {
 
       hello world!
 
-  \\end{basic}`
+  \\end{basic}`,
     )
   })
   it('should stringify environment with manadatory arg', () => {
@@ -129,7 +122,7 @@ describe('environment', () => {
 
       hello world!
 
-  \\end{basic}`
+  \\end{basic}`,
     )
   })
   it('should stringify both necessary and opt args', () => {
@@ -138,7 +131,7 @@ describe('environment', () => {
 
       hello world!
 
-  \\end{basic}`
+  \\end{basic}`,
     )
   })
 })
@@ -188,16 +181,14 @@ describe('math', () => {
       ...inlineMath,
       delimiters: '()',
     }
-    expect(toLatex(inlineMathWithDelimiters)).toEqual(
-      ` \\( 8 + 9 = \\frac{8}{8} \\) `
-    )
+    expect(toLatex(inlineMathWithDelimiters)).toEqual(` \\( 8 + 9 = \\frac{8}{8} \\) `)
   })
   it('should change delimiters based on global options', () => {
     const inlineMathWithDelimiters = {
       ...inlineMath,
     }
-    expect(
-      toLatex(inlineMathWithDelimiters, { inlineMathDelimiters: '()' })
-    ).toEqual(` \\( 8 + 9 = \\frac{8}{8} \\) `)
+    expect(toLatex(inlineMathWithDelimiters, { inlineMathDelimiters: '()' })).toEqual(
+      ` \\( 8 + 9 = \\frac{8}{8} \\) `,
+    )
   })
 })

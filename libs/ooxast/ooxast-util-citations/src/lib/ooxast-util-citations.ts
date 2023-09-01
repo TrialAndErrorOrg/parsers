@@ -234,7 +234,7 @@ export function constructCitation(
 ): { citation: MendeleyCitation | ZoteroCitation; instr: string } {
   switch (type) {
     case 'mendeley': {
-      const citation = constructMendeleyCitation(curr, index, bibliography, message)
+      const citation = constructMendeleyCitation(curr, index, bibliography)
       return {
         instr: `ADDIN CSL_CITATION ${JSON.stringify(citation)}`,
         citation,

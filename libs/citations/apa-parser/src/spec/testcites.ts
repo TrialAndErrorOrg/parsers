@@ -1,4 +1,4 @@
-import type { TestData } from './apa-parser.spec'
+import type { TestData } from './apa-parser.spec.js'
 export const tests: TestData = {
   'Custom-Shit': {
     description: 'own cases i wanna catch',
@@ -299,9 +299,7 @@ export const tests: TestData = {
             {
               id: 'vanRavenzwaai2016',
               itemData: {
-                author: [
-                  { family: 'Ravenzwaai', 'non-dropping-particle': 'van' },
-                ],
+                author: [{ family: 'Ravenzwaai', 'non-dropping-particle': 'van' }],
                 issued: { 'date-parts': [['2016']] },
               },
             },
@@ -390,11 +388,9 @@ export const tests: TestData = {
             },
           ],
           properties: { noteIndex: 0 },
-          originalText:
-            '(Adams et al., 2019; Shumway & Shulman, 2015; Westinghouse, 2017)',
+          originalText: '(Adams et al., 2019; Shumway & Shulman, 2015; Westinghouse, 2017)',
         },
-        input:
-          '(Adams et al., 2019; Shumway & Shulman, 2015; Westinghouse, 2017)',
+        input: '(Adams et al., 2019; Shumway & Shulman, 2015; Westinghouse, 2017)',
       },
       {
         description: 'tough for some reason',
@@ -421,8 +417,7 @@ export const tests: TestData = {
           ],
           properties: { noteIndex: 0 },
 
-          originalText:
-            '(Gillich et al., 2019; van Moorselaar & Slagter, 2019)',
+          originalText: '(Gillich et al., 2019; van Moorselaar & Slagter, 2019)',
         },
         input: '(Gillich et al., 2019; van Moorselaar & Slagter, 2019)',
       },
@@ -436,10 +431,7 @@ export const tests: TestData = {
               {
                 id: 'Vallée-Tourangeau2020',
                 itemData: {
-                  author: [
-                    { family: 'Vallée-Tourangeau' },
-                    { family: 'March' },
-                  ],
+                  author: [{ family: 'Vallée-Tourangeau' }, { family: 'March' }],
                   issued: { 'date-parts': [['2020']] },
                 },
               },
@@ -478,8 +470,7 @@ export const tests: TestData = {
             ],
             properties: { noteIndex: 0 },
 
-            originalText:
-              '(Gillich et al., 2019; van Moorselaar & Slagter, 2019)',
+            originalText: '(Gillich et al., 2019; van Moorselaar & Slagter, 2019)',
           },
         ],
         input:
@@ -561,33 +552,21 @@ export const tests: TestData = {
             {
               id: 'Carraway2013',
               itemData: {
-                author: [
-                  { family: 'Carraway' },
-                  { family: 'Guy' },
-                  { family: 'Man' },
-                ],
+                author: [{ family: 'Carraway' }, { family: 'Guy' }, { family: 'Man' }],
                 issued: { 'date-parts': [['2013']] },
               },
             },
             {
               id: 'Carraway2014',
               itemData: {
-                author: [
-                  { family: 'Carraway' },
-                  { family: 'Guy' },
-                  { family: 'Man' },
-                ],
+                author: [{ family: 'Carraway' }, { family: 'Guy' }, { family: 'Man' }],
                 issued: { 'date-parts': [['2014']] },
               },
             },
             {
               id: 'Carraway2019',
               itemData: {
-                author: [
-                  { family: 'Carraway' },
-                  { family: 'Guy' },
-                  { family: 'Man' },
-                ],
+                author: [{ family: 'Carraway' }, { family: 'Guy' }, { family: 'Man' }],
                 issued: { 'date-parts': [['2019']] },
               },
             },
@@ -729,8 +708,7 @@ export const tests: TestData = {
             },
           ],
           properties: { noteIndex: 0 },
-          originalText:
-            '(Centers for Disease Control and Prevention, 2019, p. 10)',
+          originalText: '(Centers for Disease Control and Prevention, 2019, p. 10)',
         },
         input: '(Centers for Disease Control and Prevention, 2019, p. 10)',
       },
@@ -842,9 +820,7 @@ export const tests: TestData = {
             {
               id: 'BeckInstituteforCognitiveBehaviourTherapy2012',
               itemData: {
-                author: [
-                  { family: 'BeckInstituteforCognitiveBehaviourTherapy' },
-                ],
+                author: [{ family: 'BeckInstituteforCognitiveBehaviourTherapy' }],
                 issued: { 'date-parts': [['2012']] },
               },
               label: 'none',
@@ -852,11 +828,9 @@ export const tests: TestData = {
             },
           ],
           properties: { noteIndex: 0 },
-          originalText:
-            '(Beck Institute for Cognitive Behaviour Therapy, 2012, 1:30:40)',
+          originalText: '(Beck Institute for Cognitive Behaviour Therapy, 2012, 1:30:40)',
         },
-        input:
-          '(Beck Institute for Cognitive Behaviour Therapy, 2012, 1:30:40)',
+        input: '(Beck Institute for Cognitive Behaviour Therapy, 2012, 1:30:40)',
       },
       {
         description: '',
@@ -965,8 +939,7 @@ export const tests: TestData = {
             },
           ],
           properties: { noteIndex: 0 },
-          originalText:
-            '(Shakespeare, 1623/1995, 1.3.36–37; Johnson, 2021, p. 1)',
+          originalText: '(Shakespeare, 1623/1995, 1.3.36–37; Johnson, 2021, p. 1)',
         },
         input: '(Shakespeare, 1623/1995, 1.3.36–37; Johnson, 2021, p. 1)',
       },
@@ -1100,8 +1073,7 @@ export const tests: TestData = {
             },
           ],
           properties: { noteIndex: 0 },
-          originalText:
-            '(American Educational Research Association et al., 2014)',
+          originalText: '(American Educational Research Association et al., 2014)',
         },
         input: '(American Educational Research Association et al., 2014)',
       },
@@ -1119,11 +1091,7 @@ export const tests: TestData = {
             {
               id: 'Kapoor2017',
               itemData: {
-                author: [
-                  { family: 'Kapoor' },
-                  { family: 'Bloom' },
-                  { family: 'Montez' },
-                ],
+                author: [{ family: 'Kapoor' }, { family: 'Bloom' }, { family: 'Montez' }],
                 issued: { 'date-parts': [['2017']] },
               },
             },
@@ -1141,11 +1109,7 @@ export const tests: TestData = {
             {
               id: 'Kapoor2017',
               itemData: {
-                author: [
-                  { family: 'Kapoor' },
-                  { family: 'Bloom' },
-                  { family: 'Zucker' },
-                ],
+                author: [{ family: 'Kapoor' }, { family: 'Bloom' }, { family: 'Zucker' }],
                 issued: { 'date-parts': [['2017']] },
               },
             },
@@ -1341,10 +1305,7 @@ export const tests: TestData = {
             {
               id: 'Taylor2015',
               itemData: {
-                author: [
-                  { family: 'Taylor', given: 'J M' },
-                  { family: 'Neimeyer' },
-                ],
+                author: [{ family: 'Taylor', given: 'J M' }, { family: 'Neimeyer' }],
                 issued: { 'date-parts': [['2015']] },
               },
             },
@@ -1362,8 +1323,7 @@ export const tests: TestData = {
         input: '(J. M. Taylor & Neimeyer, 2015; T. Taylor, 2014)',
       },
       {
-        description:
-          'When initials are also the same, revert to standard format',
+        description: 'When initials are also the same, revert to standard format',
         result: {
           citationId: 'CITE-X',
           citationItems: [

@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 
-import Settings from './settings'
+import Settings from './settings.js'
 
 describe('Settings', () => {
   it('should render successfully', () => {

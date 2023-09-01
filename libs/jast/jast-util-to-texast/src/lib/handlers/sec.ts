@@ -1,10 +1,10 @@
 import { isElement, Title } from 'jast-types'
 import { CommandArg, CommandArgOpt, EnvironmentContent } from 'texast'
-import { all } from '../all'
-import { J, Parents, Name, Node } from '../types'
-import { wrap } from '../util/wrap'
-import { wrapChildren } from '../util/wrap-children'
-import { wrapCommandArg } from '../util/wrap-command-arg'
+import { all } from '../all.js'
+import { J, Parents, Name, Node } from '../types.js'
+import { wrap } from '../util/wrap.js'
+import { wrapChildren } from '../util/wrap-children.js'
+import { wrapCommandArg } from '../util/wrap-command-arg.js'
 
 export const sectionDepth = [
   'part',

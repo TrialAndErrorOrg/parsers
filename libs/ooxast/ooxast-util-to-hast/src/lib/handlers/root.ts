@@ -1,7 +1,7 @@
 // based on https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/em
 
-import { all } from '../all'
-import { H, Node, Root } from '../types'
+import { all } from '../all.js'
+import { H, Node, Root } from '../types.js'
 
 export function root(h: H, node: Root) {
   //  if (!article) {
@@ -14,10 +14,8 @@ export function root(h: H, node: Root) {
     {
       type: 'doctype',
       name: 'article',
-      public:
-        '-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN',
-      system:
-        'https://jats.nlm.nih.gov/publishing/1.2/JATS-journalpublishing1.dtd',
+      public: '-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN',
+      system: 'https://jats.nlm.nih.gov/publishing/1.2/JATS-journalpublishing1.dtd',
     },
   ]
 

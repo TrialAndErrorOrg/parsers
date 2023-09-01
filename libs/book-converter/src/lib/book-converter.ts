@@ -3,11 +3,11 @@ import reoffParse from 'reoff-parse'
 import reoffUnifiedLatex from 'reoff-unified-latex'
 import unifiedLatexStringify from 'unified-latex-stringify'
 import { docxToVFile } from 'docx-to-vfile'
-import { paragraphHandlers } from './paragraph'
+import { paragraphHandlers } from './paragraph.js'
 import { readFile, writeFile } from 'fs/promises'
 import { s } from '@unified-latex/unified-latex-builder'
 import { existsSync, mkdirSync, writeFileSync } from 'fs'
-import { Output, makeIndex } from './make-index'
+import { Output, makeIndex } from './make-index.js'
 
 export async function bookConverter(book: string): Promise<string>
 export async function bookConverter(book: string, indexCSV: string): Promise<Output>

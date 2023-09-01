@@ -2,8 +2,8 @@
 
 import { Td } from 'jast-types'
 import { TableCell } from 'texast'
-import { all } from '../all'
-import { J, Node } from '../types'
+import { all } from '../all.js'
+import { J, Node } from '../types.js'
 
 export function td(j: J, node: Td) {
   const { colspan, style, valign } = node.attributes

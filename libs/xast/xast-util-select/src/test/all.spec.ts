@@ -2,7 +2,7 @@ import { u } from 'unist-builder'
 import { x } from 'xastscript'
 import { selectAll } from '../index.js'
 
-test('all together now', (t) => {
+test('all together now', () => {
   expect(
     selectAll(
       'dl > dt.foo:nth-of-type(odd)',
@@ -22,8 +22,8 @@ test('all together now', (t) => {
           x('dd', 'Foxtrot'),
           '\n',
         ]),
-      ])
-    )
+      ]),
+    ),
   ).toEqual([x('dt.foo', 'Alpha')])
 
   expect(
@@ -49,8 +49,8 @@ test('all together now', (t) => {
           x('dd', 'Hotel'),
           '\n',
         ]),
-      ])
-    )
+      ]),
+    ),
   ).toEqual([x('dd', 'Delta'), x('dd', 'Hotel')])
 
   expect(
@@ -76,8 +76,8 @@ test('all together now', (t) => {
           x('dd', 'Hotel'),
           '\n',
         ]),
-      ])
-    )
+      ]),
+    ),
   ).toEqual([x('dd', 'Delta')])
 
   expect(
@@ -94,8 +94,8 @@ test('all together now', (t) => {
           x('dt', 'Golf'),
           x('dd', 'Hotel'),
         ]),
-      ])
-    )
+      ]),
+    ),
   ).toEqual([
     x('dt.foo', 'Charlie'),
     x('dd.foo', { title: 'baz' }, 'Foxtrot'),

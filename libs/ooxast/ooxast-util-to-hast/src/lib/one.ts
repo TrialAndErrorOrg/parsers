@@ -1,15 +1,11 @@
 import { isElement } from 'xast-util-is-element'
 import { Parent } from 'ooxast'
-import { all } from './all'
-import { Handle, H, HastContent, Node, Element } from './types'
-import { own } from './util/own'
-import { wrapText } from './util/wrap-text'
+import { all } from './all.js'
+import { Handle, H, HastContent, Node, Element } from './types.js'
+import { own } from './util/own.js'
+import { wrapText } from './util/wrap-text.js'
 
-export function one(
-  h: H,
-  node: Node,
-  parent: Parent
-): HastContent | Array<HastContent> | void {
+export function one(h: H, node: Node, parent: Parent): HastContent | Array<HastContent> | void {
   let fn: Handle | undefined
 
   if (isElement(node)) {

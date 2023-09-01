@@ -1,4 +1,4 @@
-import { loopOverDirs } from './loopOverDirs'
+import { loopOverDirs } from './loopOverDirs.js'
 import { remark } from 'remark'
 import remarkLicense from 'remark-license'
 import remarkToc, { Root } from 'remark-toc'

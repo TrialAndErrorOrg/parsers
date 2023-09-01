@@ -1,20 +1,14 @@
 // import { isParagraphContent } from 'hast-types'
-import { HastContent, Element } from '../types'
+import { HastContent, Element } from '../types.js'
 //import { phrasing } from 'mdast-util-phrasing'
 
 export function wrap(nodes: Array<HastContent>) {
   return runs(nodes, onphrasing)
 
-  function onphrasing(
-    nodes: Array<HastContent>
-  ): HastContent | Array<HastContent> {
+  function onphrasing(nodes: Array<HastContent>): HastContent | Array<HastContent> {
     const head = nodes[0]
 
-    if (
-      nodes.length === 1 &&
-      head.type === 'text' &&
-      (head.value === ' ' || head.value === '\n')
-    ) {
+    if (nodes.length === 1 && head.type === 'text' && (head.value === ' ' || head.value === '\n')) {
       return []
     }
 
@@ -57,7 +51,7 @@ export function wrapNeeded(nodes: Array<HastContent>): boolean {
 function runs(
   nodes: Array<HastContent>,
   onphrasing: (nodes: Array<HastContent>) => HastContent | Array<HastContent>,
-  onnonphrasing?: (node: HastContent) => HastContent
+  onnonphrasing?: (node: HastContent) => HastContent,
 ) {
   const nonphrasing = onnonphrasing || identity
   const flattened: Array<HastContent> = flatten(nodes)

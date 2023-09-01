@@ -1,8 +1,6 @@
 import type {
-  LatexAst as UtensilRoot,
   Node as UtensilNodesWithMisspelledInlienMath,
   InlienMath,
-  Command,
   AmsMathTextCommand as AmsMathTextCommandWithoutName,
   MathEnvAligned,
   MathEnv,
@@ -17,9 +15,7 @@ import { Position } from 'unist'
 
 // More extensivelf type the Utensil nodes
 type InlineMath = InlienMath
-export type UtensilNodes =
-  | Exclude<UtensilNodesWithMisspelledInlienMath, InlienMath>
-  | InlineMath
+export type UtensilNodes = Exclude<UtensilNodesWithMisspelledInlienMath, InlienMath> | InlineMath
 
 export type AmsMathTextCommand = AmsMathTextCommandWithoutName & {
   name: 'text'
@@ -47,10 +43,7 @@ export interface UtensilCommandNode extends UtensilNode {
 }
 
 export type UtensilParents = Extract<UtensilNodes, UtensilParent>
-export type UtensilLiterals =
-  | Extract<UtensilNodes, UtensilLiteral>
-  | Space
-  | AlignmentTab
+export type UtensilLiterals = Extract<UtensilNodes, UtensilLiteral> | Space | AlignmentTab
 export type UtensilCommands = Extract<UtensilNodes, UtensilCommandNode>
 export type UtensilBreaks = Softbreak | Linebreak | Parbreak
 

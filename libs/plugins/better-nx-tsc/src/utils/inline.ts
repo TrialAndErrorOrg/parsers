@@ -1,123 +1,108 @@
-import type { ExecutorContext, ProjectGraphProjectNode } from '@nrwl/devkit';
-import { normalizePath, readJsonFile } from '@nrwl/devkit';
-import {
-  copySync,
-  readdirSync,
-  readFileSync,
-  removeSync,
-  writeFileSync,
-} from 'fs-extra';
-import { join, relative } from 'path';
-import type { NormalizedExecutorOptions } from '../executors/tsc/schema';
-import { existsSync } from 'fs';
+import type { ExecutorContext, ProjectGraphProjectNode } from '@nrwl/devkit'
+import { normalizePath, readJsonFile } from '@nrwl/devkit'
+import { copySync, readdirSync, readFileSync, removeSync, writeFileSync } from 'fs-extra'
+import { join, relative } from 'path'
+import type { NormalizedExecutorOptions } from '../executors/tsc/schema'
+import { existsSync } from 'fs'
 
 interface InlineProjectNode {
-  name: string;
-  root: string;
-  sourceRoot: string;
-  pathAlias: string;
-  buildOutputPath?: string;
+  name: string
+  root: string
+  sourceRoot: string
+  pathAlias: string
+  buildOutputPath?: string
 }
 
 export interface InlineProjectGraph {
-  nodes: Record<string, InlineProjectNode>;
-  externals: Record<string, InlineProjectNode>;
-  dependencies: Record<string, string[]>;
+  nodes: Record<string, InlineProjectNode>
+  externals: Record<string, InlineProjectNode>
+  dependencies: Record<string, string[]>
 }
 
 export function isInlineGraphEmpty(inlineGraph: InlineProjectGraph): boolean {
-  return Object.keys(inlineGraph.nodes).length === 0;
+  return Object.keys(inlineGraph.nodes).length === 0
 }
 
 export function handleInliningBuild(
   context: ExecutorContext,
   options: NormalizedExecutorOptions,
-  tsConfigPath: string
+  tsConfigPath: string,
 ): InlineProjectGraph {
-  const tsConfigJson = readJsonFile(tsConfigPath);
-  const pathAliases =
-    tsConfigJson['compilerOptions']['paths'] || readBasePathAliases(context);
-  const inlineGraph = createInlineGraph(context, options, pathAliases);
+  const tsConfigJson = readJsonFile(tsConfigPath)
+  const pathAliases = tsConfigJson['compilerOptions']['paths'] || readBasePathAliases(context)
+  const inlineGraph = createInlineGraph(context, options, pathAliases)
 
   if (isInlineGraphEmpty(inlineGraph)) {
-    return inlineGraph;
+    return inlineGraph
   }
 
-  buildInlineGraphExternals(context, inlineGraph, pathAliases);
+  buildInlineGraphExternals(context, inlineGraph, pathAliases)
 
-  return inlineGraph;
+  return inlineGraph
 }
 
 export function postProcessInlinedDependencies(
   outputPath: string,
   parentOutputPath: string,
-  inlineGraph: InlineProjectGraph
+  inlineGraph: InlineProjectGraph,
 ) {
   if (isInlineGraphEmpty(inlineGraph)) {
-    return;
+    return
   }
 
-  const parentDistPath = join(outputPath, parentOutputPath);
+  const parentDistPath = join(outputPath, parentOutputPath)
 
   // move parentOutput
-  movePackage(parentDistPath, outputPath);
+  movePackage(parentDistPath, outputPath)
 
-  const inlinedDepsDestOutputRecord: Record<string, string> = {};
+  const inlinedDepsDestOutputRecord: Record<string, string> = {}
   // move inlined outputs
 
-  for (const inlineDependenciesNames of Object.values(
-    inlineGraph.dependencies
-  )) {
+  for (const inlineDependenciesNames of Object.values(inlineGraph.dependencies)) {
     for (const inlineDependenciesName of inlineDependenciesNames) {
-      const inlineDependency = inlineGraph.nodes[inlineDependenciesName];
+      const inlineDependency = inlineGraph.nodes[inlineDependenciesName]
       const depOutputPath =
-        inlineDependency.buildOutputPath ||
-        join(outputPath, inlineDependency.root);
-      const destDepOutputPath = join(outputPath, inlineDependency.name);
-      const isBuildable = !!inlineDependency.buildOutputPath;
+        inlineDependency.buildOutputPath || join(outputPath, inlineDependency.root)
+      const destDepOutputPath = join(outputPath, inlineDependency.name)
+      const isBuildable = !!inlineDependency.buildOutputPath
 
       if (isBuildable) {
-        copySync(depOutputPath, destDepOutputPath, { overwrite: true });
+        copySync(depOutputPath, destDepOutputPath, { overwrite: true })
       } else {
-        movePackage(depOutputPath, destDepOutputPath);
+        movePackage(depOutputPath, destDepOutputPath)
       }
 
       // TODO: hard-coded "src"
-      inlinedDepsDestOutputRecord[inlineDependency.pathAlias] =
-        destDepOutputPath + '/src';
+      inlinedDepsDestOutputRecord[inlineDependency.pathAlias] = destDepOutputPath + '/src'
     }
   }
 
-  updateImports(outputPath, inlinedDepsDestOutputRecord);
+  updateImports(outputPath, inlinedDepsDestOutputRecord)
 }
 
 function readBasePathAliases(context: ExecutorContext) {
-  return readJsonFile(getRootTsConfigPath(context))?.['compilerOptions'][
-    'paths'
-  ];
+  return readJsonFile(getRootTsConfigPath(context))?.['compilerOptions']['paths']
 }
 
 export function getRootTsConfigPath(context: ExecutorContext): string | null {
   for (const tsConfigName of ['tsconfig.base.json', 'tsconfig.json']) {
-    const tsConfigPath = join(context.root, tsConfigName);
+    const tsConfigPath = join(context.root, tsConfigName)
     if (existsSync(tsConfigPath)) {
-      return tsConfigPath;
+      return tsConfigPath
     }
   }
 
-  throw new Error(
-    'Could not find a root tsconfig.json or tsconfig.base.json file.'
-  );
+  throw new Error('Could not find a root tsconfig.json or tsconfig.base.json file.')
 }
 
 function emptyInlineGraph(): InlineProjectGraph {
-  return { nodes: {}, externals: {}, dependencies: {} };
+  return { nodes: {}, externals: {}, dependencies: {} }
 }
 
 function projectNodeToInlineProjectNode(
   projectNode: ProjectGraphProjectNode,
   pathAlias = '',
-  buildOutputPath = ''
+  buildOutputPath = '',
 ): InlineProjectNode {
   return {
     name: projectNode.name,
@@ -125,7 +110,7 @@ function projectNodeToInlineProjectNode(
     sourceRoot: projectNode.data.sourceRoot,
     pathAlias,
     buildOutputPath,
-  };
+  }
 }
 
 function createInlineGraph(
@@ -133,45 +118,40 @@ function createInlineGraph(
   options: NormalizedExecutorOptions,
   pathAliases: Record<string, string[]>,
   projectName: string = context.projectName,
-  inlineGraph: InlineProjectGraph = emptyInlineGraph()
+  inlineGraph: InlineProjectGraph = emptyInlineGraph(),
 ) {
-  if (options.external == null && options.internal == null) return inlineGraph;
+  if (options.external == null && options.internal == null) return inlineGraph
 
-  const projectDependencies =
-    context.projectGraph.dependencies[projectName] || [];
+  const projectDependencies = context.projectGraph.dependencies[projectName] || []
 
-  if (projectDependencies.length === 0) return inlineGraph;
+  if (projectDependencies.length === 0) return inlineGraph
 
   if (!inlineGraph.nodes[projectName]) {
     inlineGraph.nodes[projectName] = projectNodeToInlineProjectNode(
-      context.projectGraph.nodes[projectName]
-    );
+      context.projectGraph.nodes[projectName],
+    )
   }
 
   const implicitDependencies =
-    context.projectGraph.nodes[projectName].data.implicitDependencies || [];
+    context.projectGraph.nodes[projectName].data.implicitDependencies || []
 
   for (const projectDependency of projectDependencies) {
     // skip npm packages
     if (projectDependency.target.startsWith('npm')) {
-      continue;
+      continue
     }
 
     // skip implicitDependencies
     if (implicitDependencies.includes(projectDependency.target)) {
-      continue;
+      continue
     }
 
     const pathAlias = getPathAliasForPackage(
       context.projectGraph.nodes[projectDependency.target],
-      pathAliases
-    );
+      pathAliases,
+    )
 
-    const buildOutputPath = getBuildOutputPath(
-      projectDependency.target,
-      context,
-      options
-    );
+    const buildOutputPath = getBuildOutputPath(projectDependency.target, context, options)
 
     const shouldInline =
       /**
@@ -195,162 +175,145 @@ function createInlineGraph(
       (Array.isArray(options.external) &&
         options.external.length > 0 &&
         !options.external.includes(projectDependency.target)) ||
-      !buildOutputPath;
+      !buildOutputPath
 
-    console.log(shouldInline, projectDependency.target);
     if (shouldInline) {
-      inlineGraph.dependencies[projectName] ??= [];
-      inlineGraph.dependencies[projectName].push(projectDependency.target);
+      inlineGraph.dependencies[projectName] ??= []
+      inlineGraph.dependencies[projectName].push(projectDependency.target)
     }
 
-    inlineGraph.nodes[projectDependency.target] =
-      projectNodeToInlineProjectNode(
-        context.projectGraph.nodes[projectDependency.target],
-        pathAlias,
-        buildOutputPath
-      );
+    inlineGraph.nodes[projectDependency.target] = projectNodeToInlineProjectNode(
+      context.projectGraph.nodes[projectDependency.target],
+      pathAlias,
+      buildOutputPath,
+    )
 
-    if (
-      context.projectGraph.dependencies[projectDependency.target].length > 0
-    ) {
+    if (context.projectGraph.dependencies[projectDependency.target].length > 0) {
       inlineGraph = createInlineGraph(
         context,
         options,
         pathAliases,
         projectDependency.target,
-        inlineGraph
-      );
+        inlineGraph,
+      )
     }
   }
 
-  return inlineGraph;
+  return inlineGraph
 }
 
 function buildInlineGraphExternals(
   context: ExecutorContext,
   inlineProjectGraph: InlineProjectGraph,
-  pathAliases: Record<string, string[]>
+  pathAliases: Record<string, string[]>,
 ) {
-  const allNodes = { ...context.projectGraph.nodes };
+  const allNodes = { ...context.projectGraph.nodes }
 
-  for (const [parent, dependencies] of Object.entries(
-    inlineProjectGraph.dependencies
-  )) {
+  for (const [parent, dependencies] of Object.entries(inlineProjectGraph.dependencies)) {
     if (allNodes[parent]) {
-      delete allNodes[parent];
+      delete allNodes[parent]
     }
 
     for (const dependencyName of dependencies) {
-      const dependencyNode = inlineProjectGraph.nodes[dependencyName];
+      const dependencyNode = inlineProjectGraph.nodes[dependencyName]
 
       // buildable is still external even if it is a dependency
       if (dependencyNode.buildOutputPath) {
-        continue;
+        continue
       }
 
       if (allNodes[dependencyName]) {
-        delete allNodes[dependencyName];
+        delete allNodes[dependencyName]
       }
     }
   }
 
   for (const [projectName, projectNode] of Object.entries(allNodes)) {
     if (!inlineProjectGraph.externals[projectName]) {
-      inlineProjectGraph.externals[projectName] =
-        projectNodeToInlineProjectNode(
-          projectNode,
-          getPathAliasForPackage(projectNode, pathAliases)
-        );
+      inlineProjectGraph.externals[projectName] = projectNodeToInlineProjectNode(
+        projectNode,
+        getPathAliasForPackage(projectNode, pathAliases),
+      )
     }
   }
 }
 
 function movePackage(from: string, to: string) {
-  if (from === to) return;
-  copySync(from, to, { overwrite: true });
-  removeSync(from);
+  if (from === to) return
+  copySync(from, to, { overwrite: true })
+  removeSync(from)
 }
 
 function updateImports(
   destOutputPath: string,
-  inlinedDepsDestOutputRecord: Record<string, string>
+  inlinedDepsDestOutputRecord: Record<string, string>,
 ) {
   const importRegex = new RegExp(
     Object.keys(inlinedDepsDestOutputRecord)
       .map((pathAlias) => `["'](${pathAlias})["']`)
       .join('|'),
-    'g'
-  );
-  recursiveUpdateImport(
-    destOutputPath,
-    importRegex,
-    inlinedDepsDestOutputRecord
-  );
+    'g',
+  )
+  recursiveUpdateImport(destOutputPath, importRegex, inlinedDepsDestOutputRecord)
 }
 
 function recursiveUpdateImport(
   dirPath: string,
   importRegex: RegExp,
   inlinedDepsDestOutputRecord: Record<string, string>,
-  rootParentDir?: string
+  rootParentDir?: string,
 ) {
-  const files = readdirSync(dirPath, { withFileTypes: true });
+  const files = readdirSync(dirPath, { withFileTypes: true })
   for (const file of files) {
     // only check .js and .d.ts files
-    if (
-      file.isFile() &&
-      (file.name.endsWith('.js') || file.name.endsWith('.d.ts'))
-    ) {
-      const filePath = join(dirPath, file.name);
-      const fileContent = readFileSync(filePath, 'utf-8');
+    if (file.isFile() && (file.name.endsWith('.js') || file.name.endsWith('.d.ts'))) {
+      const filePath = join(dirPath, file.name)
+      const fileContent = readFileSync(filePath, 'utf-8')
       const updatedContent = fileContent.replace(importRegex, (matched) => {
-        const result = matched.replace(/['"]/g, '');
+        const result = matched.replace(/['"]/g, '')
         // If a match is the same as the rootParentDir, we're checking its own files so we return the matched as in no changes.
-        if (result === rootParentDir) return matched;
-        const importPath = `"${relative(
-          dirPath,
-          inlinedDepsDestOutputRecord[result]
-        )}"`;
-        return normalizePath(importPath);
-      });
-      writeFileSync(filePath, updatedContent);
+        if (result === rootParentDir) return matched
+        const importPath = `"${relative(dirPath, inlinedDepsDestOutputRecord[result])}"`
+        return normalizePath(importPath)
+      })
+      writeFileSync(filePath, updatedContent)
     } else if (file.isDirectory()) {
       recursiveUpdateImport(
         join(dirPath, file.name),
         importRegex,
         inlinedDepsDestOutputRecord,
-        rootParentDir || file.name
-      );
+        rootParentDir || file.name,
+      )
     }
   }
 }
 
 function getPathAliasForPackage(
   packageNode: ProjectGraphProjectNode,
-  pathAliases: Record<string, string[]>
+  pathAliases: Record<string, string[]>,
 ): string {
-  if (!packageNode) return '';
+  if (!packageNode) return ''
 
   for (const [alias, paths] of Object.entries(pathAliases)) {
     if (paths.some((path) => path.includes(packageNode.data.root))) {
-      return alias;
+      return alias
     }
   }
 
-  return '';
+  return ''
 }
 
 function getBuildOutputPath(
   projectName: string,
   context: ExecutorContext,
-  options: NormalizedExecutorOptions
+  options: NormalizedExecutorOptions,
 ): string {
-  const projectTargets = context.projectGraph.nodes[projectName]?.data?.targets;
-  if (!projectTargets) return '';
+  const projectTargets = context.projectGraph.nodes[projectName]?.data?.targets
+  if (!projectTargets) return ''
 
   const buildTarget = options.externalBuildTargets.find(
-    (buildTarget) => projectTargets[buildTarget]
-  );
+    (buildTarget) => projectTargets[buildTarget],
+  )
 
-  return buildTarget ? projectTargets[buildTarget].options['outputPath'] : '';
+  return buildTarget ? projectTargets[buildTarget].options['outputPath'] : ''
 }

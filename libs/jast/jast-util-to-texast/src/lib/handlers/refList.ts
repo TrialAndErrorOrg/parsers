@@ -1,8 +1,8 @@
-import { J } from '../types'
+import { J } from '../types.js'
 import { RefList } from 'jast-types'
 import { Data as CSL } from 'csl-json'
 import { Environment } from 'texast'
-import { wrapCommandArg } from '../util/wrap-command-arg'
+import { wrapCommandArg } from '../util/wrap-command-arg.js'
 import { refListToCSL } from 'jast-util-to-csl'
 import { cslToBiblatex } from 'csl-to-biblatex'
 

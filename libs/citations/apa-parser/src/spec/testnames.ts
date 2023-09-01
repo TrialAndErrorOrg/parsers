@@ -1,4 +1,4 @@
-import { TestData } from './apa-parser.spec'
+import { TestData } from './apa-parser.spec.js'
 
 export const names: TestData = {
   'Boring names': {

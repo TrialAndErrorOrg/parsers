@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 
-import Stack from './stack'
+import Stack from './stack.js'
 
 describe('Stack', () => {
   it('should render successfully', () => {

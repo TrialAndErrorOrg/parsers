@@ -1,8 +1,8 @@
 // based on https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/em
 
 import { Table, isElement, Element, Tr, Col } from 'jast-types'
-import { all } from '../all'
-import { J, Node } from '../types'
+import { all } from '../all.js'
+import { J, Node } from '../types.js'
 import { visit as origVisit } from 'unist-util-visit'
 import { CommandArg } from 'texast'
 
@@ -42,7 +42,11 @@ export function table(j: J, table: Table) {
 
         if (child.name !== 'td') return
 
-        for (let i = 0; i < (child?.attributes?.colspan ?? 1); i++) {
+        for (
+          let i = 0;
+          i < (child?.attributes?.colspan ? parseInt(child?.attributes?.colspan) : 1);
+          i++
+        ) {
           tempCols.push('l')
         }
       })
@@ -51,7 +55,7 @@ export function table(j: J, table: Table) {
       if (tempCols.length > columns.length) columns = tempCols
       tempCols = []
       return
-    }
+    },
   )
 
   const colAlignment = columns.join(` ${j.columnSeparator ? '|' : ''} `)

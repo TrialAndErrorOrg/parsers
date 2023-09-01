@@ -1,6 +1,6 @@
 import { isElement, P, Xref } from 'jast-types'
-import { all } from '../all'
-import { J, Text } from '../types'
+import { all } from '../all.js'
+import { J, Text } from '../types.js'
 
 export function p(j: J, p: P) {
   return j(p, 'paragraph', all(j, p))
@@ -12,12 +12,8 @@ const combineCitations = (p: P): P => {
   p.children = p.children.reduce((acc: typeof p.children, node, index) => {
     if (
       !(
-        (isElement(node) &&
-          node.name === 'xref' &&
-          node.attributes.refType === 'bibr') ||
-        (stack.length > 0 &&
-          node.type === 'text' &&
-          node.value.replace(/[ ,]+/g, '') === '')
+        (isElement(node) && node.name === 'xref' && node.attributes.refType === 'bibr') ||
+        (stack.length > 0 && node.type === 'text' && node.value.replace(/[ ,]+/g, '') === '')
       )
     ) {
       stack.length > 1 ? acc.push(...combineStack(stack)) : acc.push(...stack)
@@ -40,10 +36,7 @@ const combineStack = (nodes: (Text | Xref)[]): (Xref | Text)[] => {
     lastXref = index + 1
   })
 
-  const [rawCitations, stragglers] = [
-    nodes.slice(0, lastXref),
-    nodes.slice(lastXref, -1),
-  ]
+  const [rawCitations, stragglers] = [nodes.slice(0, lastXref), nodes.slice(lastXref, -1)]
 
   const combinedCitation: Xref = {
     type: 'element',

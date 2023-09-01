@@ -1,7 +1,7 @@
 import { P, Parent } from 'ooxast'
-import { all } from '../all'
-import { H, Text } from '../types'
-import { getPStyle } from '../util/get-pstyle'
+import { all } from '../all.js'
+import { H, Text } from '../types.js'
+import { getPStyle } from '../util/get-pstyle.js'
 
 export function p(h: H, p: P, parent: Parent) {
   if (h.inTable) return all(h, p)

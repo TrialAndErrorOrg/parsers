@@ -1,10 +1,10 @@
 import { Names } from 'jast-types'
 import { CommandArg, CommandArgOpt } from 'texast'
-import { all } from '../all'
-import { one } from '../one'
-import { J, Node, Parent, Parents, Root, Text } from '../types'
-import { wrap } from '../util/wrap'
-import { wrapCommandArg } from '../util/wrap-command-arg'
+import { all } from '../all.js'
+import { one } from '../one.js'
+import { J, Node, Parent, Parents, Root, Text } from '../types.js'
+import { wrap } from '../util/wrap.js'
+import { wrapCommandArg } from '../util/wrap-command-arg.js'
 
 const typeCommandMap: {
   [key: string]: {
@@ -39,32 +39,26 @@ export function command(j: J, node: Parents, parent: Parent) {
   }
   const firstCommandArg = wrapCommandArg(
     j,
-    node?.children
-      // @ts-expect-error dude just chill
-      ?.filter(
-        (child: Node) =>
-          mapEntry?.first?.includes(
-            // @ts-expect-error dude just chill
-            child.name
-          ) || child?.type === 'text'
-      )
+    // @ts-expect-error dude just chill
+    node?.children?.filter(
+      (child: Node) =>
+        ('name' in child && mapEntry?.first?.includes(child.name)) || child?.type === 'text',
+    ),
   )
 
   const requiredCommandArgs: CommandArg[] = node?.children
-    // @ts-expect-error dude just chill
     ?.filter((child: Node) =>
       mapEntry?.required?.includes(
         // @ts-expect-error dude just chill
-        child.name
-      )
+        child.name,
+      ),
     )
     .map((child: any) => {
       return wrapCommandArg(j, [child])
     })
 
-  const optionalCommandArgs: CommandArgOpt[] = node?.children
-    // @ts-expect-error dude just chill
-    ?.filter((child: Parents) => mapEntry?.optional?.includes(child.name))
+  const optionalCommandArgs = node?.children
+    ?.filter((child) => mapEntry?.optional?.some((opt) => 'name' in child && opt === child.name))
     .map((child: any) => wrapCommandArg(j, [child], true))
 
   return j(node, 'command', { name: commandName }, [

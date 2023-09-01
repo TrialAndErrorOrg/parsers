@@ -1,5 +1,5 @@
-import { one } from './one'
-import { J, TexastContent, Node, Parent, Handle } from './types'
+import { one } from './one.js'
+import { J, TexastContent, Node, Parent, Handle } from './types.js'
 
 /**
  * Convert all nodes in tree using j
@@ -12,8 +12,8 @@ export function all(j: J, parent: Node): Array<TexastContent> {
   const nodes: Array<Node> = parent.children || []
   const values: Array<TexastContent> = []
   let index = -1
-  let length = nodes.length
-  let child = nodes[index + 1]
+  const length = nodes.length
+  // let child = nodes[index + 1]
 
   // Trim initial and final `<br>`s.
   // They’re not semantic per HTML, and they can’t be made in markdown things

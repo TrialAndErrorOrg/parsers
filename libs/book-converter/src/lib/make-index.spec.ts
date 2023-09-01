@@ -1,5 +1,5 @@
 import { readFile } from 'fs/promises'
-import { makeIndex } from './make-index'
+import { makeIndex } from './make-index.js'
 import { describe, expect, it } from 'vitest'
 
 describe('makeIndex', () => {

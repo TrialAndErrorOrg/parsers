@@ -1,5 +1,5 @@
-import { all } from '../all'
-import { H, HastContent, Node, Root } from '../types'
+import { all } from '../all.js'
+import { H, HastContent, Node, Root } from '../types.js'
 import { h as hast } from 'hastscript'
 // import { Article, Front, Body, Back, Fig } from 'jast-types'
 import { Drawing } from 'ooxast'

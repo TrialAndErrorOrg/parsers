@@ -22,8 +22,8 @@ import { select } from 'xast-util-select'
 import { cslToRefList } from 'jast-util-from-csl'
 import { VFile } from 'vfile'
 
-// export { one } from './one'
-// export { all } from './all'
+// export { one } from './one.js'
+// export { all } from './all.js'
 export { handlers as defaultHandlers }
 
 const block = convert(['heading', 'paragraph', 'root'])

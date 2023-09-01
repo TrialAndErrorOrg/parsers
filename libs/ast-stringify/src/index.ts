@@ -1,1 +1,1 @@
-export { default } from './lib/ast-stringify'
+export { default } from './lib/ast-stringify.js'

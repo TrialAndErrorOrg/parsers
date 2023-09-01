@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 
-import Conversion from './conversion'
+import Conversion from './conversion.js'
 
 describe('Conversion', () => {
   it('should render successfully', () => {

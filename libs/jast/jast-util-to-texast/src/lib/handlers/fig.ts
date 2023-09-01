@@ -1,8 +1,8 @@
 // based on https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/em
 
 import { Fig, isElement } from 'jast-types'
-import { all } from '../all'
-import { J } from '../types'
+import { all } from '../all.js'
+import { J } from '../types.js'
 
 // try to turn of typechecking for visit as it it bugged
 // https://github.com/syntax-tree/unist-util-visit/issues/33

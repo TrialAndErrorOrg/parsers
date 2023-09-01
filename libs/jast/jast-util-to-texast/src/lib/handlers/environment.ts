@@ -1,8 +1,8 @@
 import { isElement, Names } from 'jast-types'
-import { J, Parents, Name, Node } from '../types'
-import { wrap } from '../util/wrap'
-import { wrapChildren } from '../util/wrap-children'
-import { wrapCommandArg } from '../util/wrap-command-arg'
+import { J, Parents, Name, Node, TexastContent, Text } from '../types.js'
+import { wrap } from '../util/wrap.js'
+import { wrapChildren } from '../util/wrap-children.js'
+import { wrapCommandArg } from '../util/wrap-command-arg.js'
 
 const typeEnvArgMap: {
   [key: string]: {
@@ -26,39 +26,45 @@ export function environment(j: J, node: Parents) {
     return j(node, 'environment', { name: envName }, wrapChildren(j, node))
   }
 
-  const things = node.children
-    // @ts-expect-error dude just chill
-    .reduce(
-      (
-        acc: {
-          req: Node[]
-          opt: Node
-          children: Node[]
-        },
-        child: Node
-      ) => {
-        if (isElement(child)) {
-          if (mapEntry?.optional?.includes(child.name)) {
-            acc.opt = child
+  const things = node.children.reduce(
+    (
+      acc: {
+        req: Parents['children']
+        opt: Parents['children']
+        children: Text[]
+      },
+      child,
+    ) => {
+      if (isElement(child)) {
+        if (mapEntry?.optional?.includes(child.name)) {
+          // @ts-expect-error bruh
+          acc.opt = [child]
+          return acc
+        }
+        mapEntry?.required?.forEach((arg, i) => {
+          if (arg.includes(child.name)) {
+            // @ts-expect-error bruh
+            acc.req.push(child)
             return acc
           }
-          mapEntry?.required?.forEach((arg, i) => {
-            if (arg.includes(child.name)) {
-              acc.req.push(child)
-              return acc
-            }
-          })
-        }
-        acc.children.push(child)
-        return acc
-      },
+        })
+      }
 
-      { req: [], opt: [], children: [] }
-    )
+      if (child.type === 'text') {
+        acc.children.push(child)
+      }
+
+      return acc
+    },
+
+    { req: [], opt: [], children: [] },
+  )
 
   return j(node, 'environment', { name: envName }, [
-    wrapCommandArg(j, [things.opt], true),
+    // @ts-expect-error bruh
+    wrapCommandArg(j, things.opt, true),
+    // @ts-expect-error bruh
     wrapCommandArg(j, things.req),
-    ...wrap(things.children),
+    ...wrap('children' in things ? things.children : [things]),
   ])
 }

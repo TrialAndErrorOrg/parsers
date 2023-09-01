@@ -22,7 +22,7 @@ import { ExecutorOptions } from '@nrwl/js/src/utils/schema'
 import { VersionBuilderSchema } from '@jscutlery/semver/src/executors/version/schema'
 import { GithubExecutorSchema } from '@jscutlery/semver/src/executors/github/schema'
 
-import { Schema } from './schema'
+import { Schema } from './schema.js'
 import { join } from 'path'
 import { nxVersion } from '@nrwl/workspace/src/utils/versions'
 import { addLint } from '@nrwl/workspace/src/generators/library/library'

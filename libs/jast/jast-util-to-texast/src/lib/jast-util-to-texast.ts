@@ -1,5 +1,5 @@
-import { one } from './one'
-import { handlers } from './handlers/index'
+import { one } from './one.js'
+import { handlers } from './handlers/index.js'
 
 import {
   Context,
@@ -11,12 +11,12 @@ import {
   Node,
   Options,
   Attributes,
-} from './types'
+} from './types.js'
 import { convert } from 'unist-util-is'
 import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
 
-export { one } from './one'
-export { all } from './all'
+export { one } from './one.js'
+export { all } from './all.js'
 export { handlers as defaultHandlers }
 
 const block = convert(['heading', 'paragraph', 'root'])

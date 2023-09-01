@@ -1,7 +1,7 @@
-import { H, HastContent } from '../types'
+import { H, HastContent } from '../types.js'
 import { Row } from 'ooxast'
 // import { Td } from 'hast-types'
-import { all } from '../all'
+import { all } from '../all.js'
 
 export function tr(h: H, tr: Row) {
   const rowcontents = all(h, tr)

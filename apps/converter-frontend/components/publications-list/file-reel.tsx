@@ -2,7 +2,7 @@ import { Loader, Tabs, Text } from '@mantine/core'
 import { paths, definitions } from 'ojs-client'
 import React from 'react'
 import useSWR from 'swr'
-import { FileStage } from './file-stage'
+import { FileStage } from './file-stage.js'
 
 export const FileReel = (props: {
   data: Exclude<
@@ -17,8 +17,8 @@ export const FileReel = (props: {
 
   const { data, error } = useSWR(
     `/api/ojs/files?apiToken=${apiToken}&submissionId=${id}&stageId=${stageId}&endpoint=${encodeURIComponent(
-      endpoint
-    )}`
+      endpoint,
+    )}`,
   )
   if (!data) {
     return <Loader />
@@ -59,21 +59,20 @@ export const FileReel = (props: {
     'Production',
   ]
 
-  const sortedFiles: { [key: number]: definitions['SubmissionFile'][] } =
-    data.items.reduce(
-      (
-        acc: { [key: number]: definitions['SubmissionFile'][] },
-        curr: definitions['SubmissionFile']
-      ) => {
-        const id = getStageId(curr)
-        if (!id) {
-          return
-        }
-        acc[id] = [...(acc?.[id] || []), curr]
-        return acc
-      },
-      {} as { [key: number]: definitions['SubmissionFile'][] }
-    )
+  const sortedFiles: { [key: number]: definitions['SubmissionFile'][] } = data.items.reduce(
+    (
+      acc: { [key: number]: definitions['SubmissionFile'][] },
+      curr: definitions['SubmissionFile'],
+    ) => {
+      const id = getStageId(curr)
+      if (!id) {
+        return
+      }
+      acc[id] = [...(acc?.[id] || []), curr]
+      return acc
+    },
+    {} as { [key: number]: definitions['SubmissionFile'][] },
+  )
 
   return (
     <Tabs defaultValue={'production'}>
@@ -82,10 +81,7 @@ export const FileReel = (props: {
         //console.log(stageInt)
         //console.log(data)
         return (
-          <Tabs.Tab
-            value={stagesss[stageInt] ?? 'production'}
-            key={stagesss[stageInt]}
-          >
+          <Tabs.Tab value={stagesss[stageInt] ?? 'production'} key={stagesss[stageInt]}>
             <FileStage
               {...{
                 submissionId: id!,

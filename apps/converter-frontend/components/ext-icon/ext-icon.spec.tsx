@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 
-import ExtIcon from './ext-icon'
+import ExtIcon from './ext-icon.js'
 
 describe('ExtIcon', () => {
   it('should render successfully', () => {

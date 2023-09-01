@@ -4,8 +4,11 @@
   "sourceRoot": "packages/better-nx-tsc/src",
   "projectType": "library",
   "targets": {
+    "make-publishable": {
+      "executor": "better-nx-tsc:publishable"
+    },
     "build": {
-      "executor": "better-nx-tsc:tsc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/packages/better-nx-tsc",

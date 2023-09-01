@@ -91,7 +91,6 @@ export function updatePackageJson(
   const { dependencies: maybeWrongDeps } = packageJson
 
   const fixedDeps = Object.entries(maybeWrongDeps ?? {}).reduce((acc, [key, value]) => {
-    console.log({ key, value })
     if (key.startsWith('@') && !key.includes('/')) {
       const [pkg, version] = value.split('@')
       acc[`${key}/${pkg}`] = `^${version}`
@@ -203,7 +202,6 @@ export function getUpdatedPackageJsonContent(
     if (typeof exports !== 'string') {
       if (typeof exports['.'] !== 'string') {
         if (hasCjsFormat) {
-          console.log('HAS CJS FORMAT')
           exports['.']['import'] ??= mainJsFile
         }
       } else if (!hasCjsFormat) {
@@ -212,7 +210,6 @@ export function getUpdatedPackageJsonContent(
     }
   }
 
-  console.log({ hasCjsFormat, hasEsmFormat })
   // CJS output may have .cjs or .js file extensions.
   // Bundlers like rollup and esbuild supports .cjs for CJS and .js for ESM.
   // Bundlers/Compilers like webpack, tsc, swc do not have different file extensions.

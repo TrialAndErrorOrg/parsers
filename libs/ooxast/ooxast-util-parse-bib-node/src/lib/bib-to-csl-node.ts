@@ -1,7 +1,7 @@
-import { callAnystyleApi } from './anystyle-api'
-import { findBib } from './find-bib'
-import { fixBib } from './fix-csl'
-import { Options } from './ooxast-util-parse-bib'
+import { callAnystyleApi } from './anystyle-api.js'
+import { findBib } from './find-bib.js'
+import { fixBib } from './fix-csl.js'
+import { Options } from './ooxast-util-parse-bib.js'
 import { Data as CSL } from 'csl-json'
 import { Node } from 'ooxast'
 

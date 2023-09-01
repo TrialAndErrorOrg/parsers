@@ -1,6 +1,6 @@
-import { replaceCookieRes, getSID } from '../../../utils/forgeCookie'
+import { replaceCookieRes, getSID } from '../../../utils/forgeCookie.js'
 
-import { setCookie } from '../../../utils/cookies'
+import { setCookie } from '../../../utils/cookies.js'
 import axios from 'axios'
 import { NextApiRequest, NextApiResponse } from 'next'
 import { getSession } from 'next-auth/react'

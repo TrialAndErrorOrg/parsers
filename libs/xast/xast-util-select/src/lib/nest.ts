@@ -1,12 +1,4 @@
-import {
-  Rule,
-  XastNode as Node,
-  Element,
-  XastParent as Parent,
-  SelectState,
-  SelectIterator,
-  Handler,
-} from './types.js'
+import { Rule, XastNode as Node, Element, XastParent as Parent, SelectState } from './types.js'
 
 import { zwitch } from 'zwitch'
 import { enterState } from './enter-state.js'

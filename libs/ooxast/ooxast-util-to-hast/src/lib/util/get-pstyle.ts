@@ -1,5 +1,5 @@
 import { P, BdoContentRun } from 'ooxast'
-import { Element } from '../types'
+import { Element } from '../types.js'
 import { select, selectAll } from 'xast-util-select'
 
 export function getPStyle(p: P): string | null | undefined {

@@ -1,18 +1,18 @@
-import { ExecutorContext, ProjectGraphProjectNode } from '@nrwl/devkit';
+import { ExecutorContext, ProjectGraphProjectNode } from '@nrwl/devkit'
 import {
   calculateProjectDependencies,
   createTmpTsConfig,
   DependentBuildableProjectNode,
-} from '@nrwl/workspace/src/utilities/buildable-libs-utils';
+} from '@nrwl/workspace/src/utilities/buildable-libs-utils'
 
 export function checkDependencies(
   context: ExecutorContext,
-  tsConfigPath: string
+  tsConfigPath: string,
 ): {
-  tmpTsConfig: string | null;
-  projectRoot: string;
-  target: ProjectGraphProjectNode;
-  dependencies: DependentBuildableProjectNode[];
+  tmpTsConfig: string | null
+  projectRoot: string
+  target: ProjectGraphProjectNode
+  dependencies: DependentBuildableProjectNode[]
 } {
   const { target, dependencies } = calculateProjectDependencies(
     context.projectGraph,
@@ -20,24 +20,18 @@ export function checkDependencies(
     context.projectName,
     context.targetName,
     context.configurationName,
-    true
-  );
+    true,
+  )
 
-  console.log({ dependencies });
-  const projectRoot = target.data.root;
+  const projectRoot = target.data.root
 
   if (dependencies.length > 0) {
     return {
-      tmpTsConfig: createTmpTsConfig(
-        tsConfigPath,
-        context.root,
-        projectRoot,
-        dependencies
-      ),
+      tmpTsConfig: createTmpTsConfig(tsConfigPath, context.root, projectRoot, dependencies),
       projectRoot,
       target,
       dependencies,
-    };
+    }
   }
 
   return {
@@ -45,5 +39,5 @@ export function checkDependencies(
     projectRoot,
     target,
     dependencies,
-  };
+  }
 }

@@ -1,4 +1,4 @@
-import { Processor as UnifiedProcessor, Transformer, Plugin } from 'unified'
+import { Processor as UnifiedProcessor, Plugin } from 'unified'
 import { toUnifiedLatex, Options } from 'ooxast-util-to-unified-latex'
 import { Root as OoxastRoot } from 'ooxast'
 import { Root } from '@unified-latex/unified-latex-types'

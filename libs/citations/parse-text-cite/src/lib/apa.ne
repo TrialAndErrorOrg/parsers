@@ -2,7 +2,7 @@
 @preprocessor typescript
 
 @{%
-import {lexer} from './lexer'
+import {lexer} from './lexer.js'
 
 // TODO: [parser] It's currently extremely slow for large sentences, not good.
 const getFullName = (name) => `${name?.['non-dropping-particle']
@@ -213,7 +213,7 @@ PreAuthsPre ->   GenericContent:+ %Sem %__    {%
                 | GenericContent:+ %Com %__ {% ([content, com, space]) => content?.join('') + com + space %}
                 | GenericContent:+ %__ {% ([content, space]) => {
                                               return content?.join('') + space
-                                          } 
+                                          }
                                           %}
 
 # Things like (...; see also Gooden, 2021; Kant, 1800)
@@ -264,7 +264,7 @@ LocContent ->
                             if(!labelMaybe || (!labelMap[labelMaybe] && !locators.includes(labelMaybe))){
                                 return {locator: loc.join(''),label:'none'}
                             }
-                            
+
                             return {label: labelMap[labelMaybe] || labelMaybe, locator: locator?.join('') || loc.join('') }
                           }
 		                    %}
@@ -338,7 +338,7 @@ NameList ->   Name                                           {% name=>name %}
             | NameList %Com %__ Etal                         {% ([name])=>([name].flat()) %}
             | NameList Etal                                  {% ([name])=>([name].flat()) %}
        			| NameList %Apo "s"                              {% ([name])=>([name, "'s"].flat()) %}
-   
+
 ParenNameMaybeList ->  ParenNameMaybe                                  {% name=>name %}
                      | ParenNameMaybeList %Com %__ Name                {% ([name,,,n])=>([name,n].flat()) %}
                      | ParenNameMaybeList %Com %__ NameList            {% ([name,,,n])=>([name,n].flat()) %}

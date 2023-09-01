@@ -30,7 +30,6 @@ export function createPackageJson(
   } = {},
 ): PackageJson {
   const projectNode = graph.nodes[projectName]
-  console.dir({ projectNode, options }, { depth: null })
 
   const { selfInputs, dependencyInputs } = options.target
     ? getTargetInputs(readNxJson(), projectNode, options.target)
@@ -70,7 +69,6 @@ export function createPackageJson(
       }
     } catch (e) {}
   }
-  console.dir({ npmDeps }, { depth: null })
 
   const rootPackageJson = readJsonFile(`${options.root || workspaceRoot}/package.json`)
 
@@ -144,15 +142,11 @@ function findAllNpmDeps(
     rootPatterns ?? dependencyPatterns,
   )
 
-  console.dir(projectNode.data.files, { depth: null })
-
   const projectDependencies = new Set<string>()
 
   projectFiles.forEach((fileData) =>
     fileData.dependencies?.forEach((dep) => projectDependencies.add(dep.target)),
   )
-
-  console.dir([...projectDependencies], { depth: null })
 
   for (const dep of projectDependencies) {
     const node = graph.externalNodes[dep]

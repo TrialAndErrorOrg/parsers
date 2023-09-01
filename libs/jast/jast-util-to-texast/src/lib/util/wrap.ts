@@ -1,20 +1,14 @@
 import { isParagraphContent } from 'texast'
-import { TexastContent, TexastParagraphContent } from '../types'
+import { TexastContent, TexastParagraphContent } from '../types.js'
 //import { phrasing } from 'mdast-util-phrasing'
 
 export function wrap(nodes: Array<TexastContent>) {
   return runs(nodes, onphrasing)
 
-  function onphrasing(
-    nodes: Array<TexastParagraphContent>
-  ): TexastContent | Array<TexastContent> {
+  function onphrasing(nodes: Array<TexastParagraphContent>): TexastContent | Array<TexastContent> {
     const head = nodes[0]
 
-    if (
-      nodes.length === 1 &&
-      head.type === 'text' &&
-      (head.value === ' ' || head.value === '\n')
-    ) {
+    if (nodes.length === 1 && head.type === 'text' && (head.value === ' ' || head.value === '\n')) {
       return []
     }
 
@@ -38,10 +32,7 @@ export function wrapNeeded(nodes: Array<TexastContent>): boolean {
   while (++index < nodes.length) {
     node = nodes[index]
 
-    if (
-      !isParagraphContent(node) ||
-      ('children' in node && wrapNeeded(node.children))
-    ) {
+    if (!isParagraphContent(node) || ('children' in node && wrapNeeded(node.children))) {
       return true
     }
   }
@@ -54,10 +45,8 @@ export function wrapNeeded(nodes: Array<TexastContent>): boolean {
  */
 function runs(
   nodes: Array<TexastContent>,
-  onphrasing: (
-    nodes: Array<TexastParagraphContent>
-  ) => TexastContent | Array<TexastContent>,
-  onnonphrasing?: (node: TexastContent) => TexastContent
+  onphrasing: (nodes: Array<TexastParagraphContent>) => TexastContent | Array<TexastContent>,
+  onnonphrasing?: (node: TexastContent) => TexastContent,
 ) {
   const nonphrasing = onnonphrasing || identity
   const flattened: Array<TexastContent> = flatten(nodes)
@@ -94,7 +83,7 @@ function runs(
  */
 function flatten(nodes: Array<TexastContent>): Array<TexastContent> {
   /** @type {Array.TexastContent>} */
-  let flattened: Array<TexastContent> = []
+  const flattened: Array<TexastContent> = []
   let index = -1
   /** @type TexastContent} */
   let node: TexastContent

@@ -3,10 +3,12 @@ import { SelectState, XastNode, ElementChild, Direction } from './types.js'
 
 import { direction } from 'direction'
 import { isElement } from 'xast-util-is-element'
-import { visit, EXIT, SKIP } from 'unist-util-visit'
+// import { visit, EXIT, SKIP } from 'unist-util-visit'
 import { element } from './util.js'
 import { Parent } from 'xast'
 
+const EXIT = true
+const SKIP = 'skip'
 /**
  * @param {SelectState} state
  * @param {HastNode} node

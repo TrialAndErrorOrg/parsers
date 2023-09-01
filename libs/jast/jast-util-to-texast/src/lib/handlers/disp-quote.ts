@@ -1,8 +1,8 @@
 import { DispQuote, Graphic, List } from 'jast-types'
 import { Environment } from 'texast'
-import { all } from '../all'
-import { J } from '../types'
-import { wrapCommandArg } from '../util/wrap-command-arg'
+import { all } from '../all.js'
+import { J } from '../types.js'
+import { wrapCommandArg } from '../util/wrap-command-arg.js'
 
 export function dispQuote(j: J, node: DispQuote): Environment {
   return {

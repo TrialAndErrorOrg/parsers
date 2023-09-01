@@ -1,4 +1,4 @@
-import { processorsDocxToJats } from './processors-docx-to-jats'
+import { processorsDocxToJats } from './processors-docx-to-jats.js'
 
 describe('processorsDocxToJats', () => {
   it('should work', () => {

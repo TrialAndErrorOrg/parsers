@@ -1,6 +1,6 @@
 import React from 'react'
 import { Title } from '@mantine/core'
-import Conversion from '../components/conversion/conversion'
+import Conversion from '../components/conversion/conversion.js'
 
 export default function Index() {
   // useEffect(() => {

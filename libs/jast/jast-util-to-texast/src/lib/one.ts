@@ -1,14 +1,10 @@
 import { Parent } from 'jast-types'
-import { all } from './all'
-import { Handle, J, TexastContent, Node, Element } from './types'
-import { own } from './util/own'
-import { wrapText } from './util/wrap-text'
+import { all } from './all.js'
+import { Handle, J, TexastContent, Node, Element } from './types.js'
+import { own } from './util/own.js'
+import { wrapText } from './util/wrap-text.js'
 
-export function one(
-  j: J,
-  node: Node,
-  parent: Parent
-): TexastContent | Array<TexastContent> | void {
+export function one(j: J, node: Node, parent: Parent): TexastContent | Array<TexastContent> | void {
   let fn: Handle | undefined
 
   if (node.type === 'element') {

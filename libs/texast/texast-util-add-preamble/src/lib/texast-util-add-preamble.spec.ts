@@ -1,4 +1,4 @@
-import { addPreamble } from './texast-util-add-preamble'
+import { addPreamble } from './texast-util-add-preamble.js'
 import { u } from 'unist-builder'
 import { Preamble, Root } from 'texast'
 
@@ -21,7 +21,7 @@ describe('texastTexastUtilAddPreamble', () => {
           { type: 'text', value: '\\n' },
         ]),
         u('document', []),
-      ])
+      ]),
     )
   })
 })

@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "version": 2,
+  "cli": "nx",
+  "title": "Publishable executor",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "dist": {
+      "type": "string",
+      "description": "The path to the dist directory",
+      "x-completion-type": "directory"
+    },
+    "dryRun": {
+      "type": "boolean",
+      "description": "Run through all the steps without actually publishing"
+    }
+  },
+  "required": ["dist"]
+}

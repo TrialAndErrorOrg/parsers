@@ -5,9 +5,9 @@ import React from 'react'
 import { FaDownload, FaFileDownload } from 'react-icons/fa'
 import { ImShuffle } from 'react-icons/im'
 import { shallow } from 'zustand/shallow'
-import { GenericIcon } from '../ext-icon/ext-icon'
+import { GenericIcon } from '../ext-icon/ext-icon.js'
 import qs from 'querystring'
-import { HStack } from '../stack/stack'
+import { HStack } from '../stack/stack.js'
 
 export const FileStage = (props: {
   submissionId: number

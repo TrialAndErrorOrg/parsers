@@ -1,10 +1,10 @@
 // based on https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/em
 
 import { Article, Parent, TagHavers } from 'jast-types'
-import { all } from '../all'
-import { J, Node, Root } from '../types'
-import { wrapCommandArg } from '../util/wrap-command-arg'
-import { wrap } from '../util/wrap'
+import { all } from '../all.js'
+import { J, Node, Root } from '../types.js'
+import { wrapCommandArg } from '../util/wrap-command-arg.js'
+import { wrap } from '../util/wrap.js'
 import { CommandArg } from 'texast'
 
 export function front(j: J, node: Root) {
@@ -26,9 +26,7 @@ export function front(j: J, node: Root) {
                 {
                   type: 'commandArg',
                   optional: true,
-                  children: [
-                    { type: 'text', value: j.documentClass.options.join(', ') },
-                  ],
+                  children: [{ type: 'text', value: j.documentClass.options.join(', ') }],
                 } as CommandArg,
               ]
             : []),
@@ -91,6 +89,6 @@ export function front(j: J, node: Root) {
       },
       { type: 'text', value: '\n' },
       ...all(j, node),
-    ])
+    ]),
   )
 }

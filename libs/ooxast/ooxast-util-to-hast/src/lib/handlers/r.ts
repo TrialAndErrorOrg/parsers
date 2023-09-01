@@ -1,8 +1,8 @@
 import { FldChar, R, RPr, VerticalAlignRun } from 'ooxast'
 import { select } from 'xast-util-select'
-import { all } from '../all'
+import { all } from '../all.js'
 import { x } from 'xastscript'
-import { H } from '../types'
+import { H } from '../types.js'
 import { convertElement } from 'xast-util-is-element'
 
 //const isVert = convertElement<VerticalAlignRun>('w:vertAlign')
@@ -29,7 +29,7 @@ export function r(h: H, node: R) {
     return x(
       'xref',
       { refType: 'fn' },
-      { type: 'text', value: `[${footnoteReference.attributes?.['w:id']}]` }
+      { type: 'text', value: `[${footnoteReference.attributes?.['w:id']}]` },
     )
   }
 

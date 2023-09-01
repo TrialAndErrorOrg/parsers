@@ -1,11 +1,11 @@
 'use client'
 import { z } from 'zod'
 import { useState } from 'react'
-import { SelectFormat } from './components/SelectFormat'
+import { SelectFormat } from './components/SelectFormat.js'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
-import { Form } from './components/Form'
-import { SelectFormatNative } from './components/SelectFormatNative'
+import { Form } from './components/Form.js'
+import { SelectFormatNative } from './components/SelectFormatNative.js'
 
 function onSubmit() {}
 

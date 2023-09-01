@@ -1,6 +1,6 @@
-import { tests } from './testcites'
-import { names } from './testnames'
-import { apaParser } from '../lib/apa-parser'
+import { tests } from './testcites.js'
+import { names } from './testnames.js'
+import { apaParser } from '../lib/apa-parser.js'
 import nearley, { Parser } from 'nearley'
 import { unified } from 'unified'
 import fs from 'fs'
@@ -11,7 +11,7 @@ import { removePosition } from 'unist-util-remove-position'
 const MODE: 'dev' | 'test' = 'test'
 // eslint-disable-next-line
 //@ts-ignore it's there sweaty
-//import grammar from './apa.ne'
+//import grammar from './apa.ne.js'
 
 type ContentArr = [
   description: string,

@@ -4,8 +4,8 @@ import type { Metadata } from 'next'
 import '../styles/globals.css'
 import Script from 'next/script'
 import { env } from '../env/server.mjs'
-import { AnalyticsWrapper } from './Analytics'
-import { Shell } from './components/Shell'
+import { AnalyticsWrapper } from './Analytics.js'
+import { Shell } from './components/Shell.js'
 // If loading a variable font, you don't need to specify the font weight
 const overpass = Overpass({
   //weight: ['600', '900'],

@@ -1,21 +1,13 @@
-import {
-  CommandArg,
-  Environment,
-  isCommandArg,
-  isOptionalCommandArg,
-} from 'texast'
-import { toLatex } from '../texast-util-to-latex'
-import { BasicHandle, Handle, Node, Options } from '../types'
+import { CommandArg, Environment, isCommandArg, isOptionalCommandArg } from 'texast'
+import { toLatex } from '../texast-util-to-latex.js'
+import { BasicHandle, Handle, Node, Options } from '../types.js'
 
 interface EnvChildren {
   children: Node[]
   optargs: CommandArg[]
   args: CommandArg[]
 }
-export const environment: BasicHandle = (
-  node: Environment,
-  options: Options = {}
-) => {
+export const environment: BasicHandle = (node: Environment, options: Options = {}) => {
   const contents: EnvChildren = node.children.reduce(
     (acc: EnvChildren, child: Node) => {
       if (isCommandArg(child)) {
@@ -31,7 +23,7 @@ export const environment: BasicHandle = (
       acc.children.push(child)
       return acc
     },
-    { children: [], optargs: [], args: [] }
+    { children: [], optargs: [], args: [] },
   )
 
   // prettier-ignore

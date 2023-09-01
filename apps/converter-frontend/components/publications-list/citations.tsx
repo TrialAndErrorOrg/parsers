@@ -18,7 +18,7 @@ export const Citations = ({
       : process.env.NEXT_PUBLIC_STYLE_DEV_URL || 'http://localhost:8000/api/style'
   const splitextra = extra
     ?.replace(/\\r/g, '')
-    ?.replace(/\n([A-Z])/gm, '\n\n\n$1')
+    ?.replace(/\n([A-Z])/g, '\n\n\n$1')
     ?.replace(/\n([^A-Z])/g, '$1')
   //console.log(splitextra)
   const { data, error } = useSWR(url, (resource: string, init: any) =>

@@ -6,8 +6,8 @@
 import { readdirSync, readFileSync, writeFileSync, lstatSync } from 'fs'
 import { readFile, writeFile } from 'fs/promises'
 import { join, relative, resolve } from 'path'
-import { tryCatchPromise } from '../libs/utils/misc/src'
-// import { generateTOC } from './generateTOC';
+import { tryCatchPromise } from '../libs/utils/misc/src.js'
+// import { generateTOC } from './generateTOC.js';
 
 const __dirname = new URL('.', import.meta.url).pathname
 
@@ -15,12 +15,8 @@ const root = resolve(__dirname, '..')
 const apps = join(root, 'apps')
 const libs = join(root, 'libs')
 
-const appsDirs = readdirSync(apps).filter(
-  (dir) => dir && lstatSync(join(apps, dir))?.isDirectory()
-)
-const libsDirs = readdirSync(libs).filter(
-  (dir) => dir && lstatSync(join(libs, dir))?.isDirectory()
-)
+const appsDirs = readdirSync(apps).filter((dir) => dir && lstatSync(join(apps, dir))?.isDirectory())
+const libsDirs = readdirSync(libs).filter((dir) => dir && lstatSync(join(libs, dir))?.isDirectory())
 
 const makeTOC = async (root: string, mainDir: string[], prefix: string) =>
   await Promise.all(
@@ -31,12 +27,9 @@ const makeTOC = async (root: string, mainDir: string[], prefix: string) =>
 
       const relativePath = join(prefix, dir)
       const readmePath = join(dirPath, 'README.md')
-      const [readme, readmeError] = await tryCatchPromise(
-        readFile(readmePath, 'utf8')
-      )
+      const [readme, readmeError] = await tryCatchPromise(readFile(readmePath, 'utf8'))
 
-      const firstNonHeader =
-        readme?.match(/(?<=(^|\n))\w.+?(?=#|$)/gims)?.[0] || ''
+      const firstNonHeader = readme?.match(/(?<=(^|\n))\w.+?(?=#|$)/gims)?.[0] || ''
 
       // check if decription is in package.json
       // if not, use the first non-header line of the readme
@@ -50,15 +43,11 @@ const makeTOC = async (root: string, mainDir: string[], prefix: string) =>
         .replace(/\n/g, '')
       const packagePath = join(dirPath, 'package.json')
       const [packageJSONRaw, packageJSONError] = await tryCatchPromise(
-        readFile(packagePath, 'utf8')
+        readFile(packagePath, 'utf8'),
       )
-      const packageJSON = packageJSONRaw
-        ? JSON.parse(packageJSONRaw)
-        : undefined
+      const packageJSON = packageJSONRaw ? JSON.parse(packageJSONRaw) : undefined
 
-      const packageDescription = packageJSON
-        ? packageJSON.description
-        : undefined
+      const packageDescription = packageJSON ? packageJSON.description : undefined
 
       if (packageJSONError && readmeDescription) {
         // write the package.json file with the description
@@ -82,10 +71,10 @@ const makeTOC = async (root: string, mainDir: string[], prefix: string) =>
         await writeFile(packagePath, JSON.stringify(packageJSON, null, 2))
       }
 
-      return `#### [\`${dir}\`](${
-        readme ? join(relativePath, 'README.md') : relativePath
-      })${firstNonHeader ? `\n\n${firstNonHeader}\n` : '\n'}`
-    })
+      return `#### [\`${dir}\`](${readme ? join(relativePath, 'README.md') : relativePath})${
+        firstNonHeader ? `\n\n${firstNonHeader}\n` : '\n'
+      }`
+    }),
   )
 
 const appToc = await makeTOC(apps, appsDirs, 'apps')
@@ -93,12 +82,12 @@ const appToc = await makeTOC(apps, appsDirs, 'apps')
 const libToc = await Promise.all(
   libsDirs.map(async (dir) => {
     const liblibDirs = readdirSync(join(libs, dir)).filter((dirr) =>
-      lstatSync(join(libs, dir, dirr)).isDirectory()
+      lstatSync(join(libs, dir, dirr)).isDirectory(),
     )
     const libToc = await makeTOC(join(libs, dir), liblibDirs, `libs/${dir}`)
 
     return `\n### [${dir}](${join('libs', dir)})\n\n${libToc.join('\n\n')}`
-  })
+  }),
 )
 
 const toc = `# Overview

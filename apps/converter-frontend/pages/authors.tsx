@@ -3,8 +3,8 @@ import { signIn, useSession } from 'next-auth/react'
 import React from 'react'
 import { FaMicrosoft } from 'react-icons/fa'
 import useSWR from 'swr'
-import { PublicationData } from '../components/publications-list/publication-data'
-import { VStack } from '../components/stack/stack'
+import { PublicationData } from '../components/publications-list/publication-data.js'
+import { VStack } from '../components/stack/stack.js'
 import qs from 'querystring'
 
 function AuthorPage() {
@@ -57,10 +57,7 @@ export function AuthAuthorPage(props: { query?: Record<string, any> }) {
           <Title>Issue {issue}</Title> */}
       {data?.items?.map((item: any) => (
         <Paper shadow="md" p="md" sx={{ width: 800 }} key={item.url}>
-          <PublicationData
-            pub={item}
-            items={['title', 'subtitle', 'authors']}
-          />
+          <PublicationData pub={item} items={['title', 'subtitle', 'authors']} />
           <a
             href={`https://submit.trialanderror.org/index.php/jote/workflow/index/${item.id}/1#publication`}
             style={{ marginTop: 20 }}

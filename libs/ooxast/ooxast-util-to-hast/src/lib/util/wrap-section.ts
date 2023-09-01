@@ -1,10 +1,10 @@
-import { H } from '../types'
+import { H } from '../types.js'
 import { convertElement, isElement } from 'xast-util-is-element'
-import { Parent, Element, P, Node, Body } from '../types'
-import { getPStyle } from './get-pstyle'
+import { Parent, Element, P, Node, Body } from '../types.js'
+import { getPStyle } from './get-pstyle.js'
 import { Sec, Body as HastBody } from 'hast-types'
-import { all } from '../all'
-import { one } from '../one'
+import { all } from '../all.js'
+import { one } from '../one.js'
 
 function parseDepth(str: string) {
   return parseInt(str.slice(-1), 10)
@@ -19,7 +19,7 @@ export function wrapSec(
   h: H,
   sectionCounter: number[],
   child: Element | null,
-  parent?: Parent
+  parent?: Parent,
 ): Sec | HastBody {
   const parentSec: Element = {
     type: 'element',
@@ -56,9 +56,7 @@ export function getHastHeadingLevel(p: Element) {
   return parseInt(p?.attributes?.style?.slice(-1) || '0') || 0
 }
 export function currentWrapperDepth(wrapperStack: any[]) {
-  return wrapperStack[wrapperStack.length - 1]?.attributes?.id
-    ?.replace('sec-')
-    ?.split('-')?.length
+  return wrapperStack[wrapperStack.length - 1]?.attributes?.id?.replace('sec-')?.split('-')?.length
 }
 
 export function wrapSections(h: H, bodyChildren: Element[]) {

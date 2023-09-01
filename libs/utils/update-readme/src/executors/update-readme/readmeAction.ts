@@ -1,4 +1,4 @@
-import { loopOverDirs } from './loopOverDirs'
+import { loopOverDirs } from './loopOverDirs.js'
 import { remark } from 'remark'
 import remarkLicense from 'remark-license'
 import remarkToc, { Root } from 'remark-toc'
@@ -212,7 +212,6 @@ const proc = (
     .process(readme)
 
 export async function readmeAction(readmePath: string, packagePath: string, dev?: boolean) {
-
   const readme = await readFile(readmePath, 'utf-8')
   const packageJSON = JSON.parse(await readFile(packagePath, 'utf-8'))
 

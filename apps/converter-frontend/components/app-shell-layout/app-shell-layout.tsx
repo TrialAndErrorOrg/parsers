@@ -9,7 +9,7 @@ import {
   useMantineTheme,
 } from '@mantine/core'
 import React, { useState } from 'react'
-import { HStack, VStack } from '../stack/stack'
+import { HStack, VStack } from '../stack/stack.js'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -32,9 +32,7 @@ export function AppShellLayout(props: AppShellLayoutProps) {
       header={
         <Header height={70}>
           {/* Handle other responsive styles with MediaQuery component or createStyles function */}
-          <div
-            style={{ display: 'flex', alignItems: 'center', height: '100%' }}
-          >
+          <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
             <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
               <Burger
                 opened={opened}
@@ -45,12 +43,7 @@ export function AppShellLayout(props: AppShellLayoutProps) {
               />
             </MediaQuery>
             <HStack spacing={10}>
-              <Image
-                src="/favicon.png"
-                alt="Journal of Trial and Error"
-                width={40}
-                height={40}
-              />
+              <Image src="/favicon.png" alt="Journal of Trial and Error" width={40} height={40} />
 
               <Text>Convert</Text>
             </HStack>

@@ -2,8 +2,8 @@
 
 import { Xref, Text } from 'jast-types'
 import { CommandArg } from 'texast'
-import { J } from '../types'
-import { wrapCommandArg } from '../util/wrap-command-arg'
+import { J } from '../types.js'
+import { wrapCommandArg } from '../util/wrap-command-arg.js'
 
 export function xref(j: J, node: Xref) {
   //  if (!article) {
@@ -54,29 +54,17 @@ export function xref(j: J, node: Xref) {
       let pre
       let post
       if (customType) {
-        const customData: Record<string, string | undefined> =
-          JSON.parse(customType)
-        const {
-          prefix,
-          infix,
-          label,
-          locator,
-          mode,
-          suffix,
-          plainCitation,
-          formattedCitation,
-        } = customData
+        const customData: Record<string, string | undefined> = JSON.parse(customType)
+        const { prefix, infix, label, locator, mode, suffix, plainCitation, formattedCitation } =
+          customData
 
         const pref = (mode ? infix : prefix) || ''
 
         const suff = `${
-          label && label !== 'none'
-            ? `${labelToText[label] || label || 'pp.'} `
-            : ''
+          label && label !== 'none' ? `${labelToText[label] || label || 'pp.'} ` : ''
         }${locator || ''}`
 
-        const isParenthetical =
-          plainCitation?.startsWith('(') && plainCitation?.endsWith(')')
+        const isParenthetical = plainCitation?.startsWith('(') && plainCitation?.endsWith(')')
 
         command = isParenthetical ? 'parencite' : 'textcite'
 
@@ -85,32 +73,27 @@ export function xref(j: J, node: Xref) {
       }
 
       const optCommandArgs = createOptCiteArgs(pre, post)
-      return j(
-        node,
-        'command',
-        { name: command || j.citationAnalyzer(node) || 'autocite' },
-        [
-          ...optCommandArgs,
-          {
-            type: 'commandArg',
-            children: [
-              {
-                type: 'text',
-                value:
-                  node.attributes.rid ||
-                  node.children
-                    .map((node) => {
-                      //@ts-expect-error it is text, it has value
-                      const n = node?.value?.replace(/[[\], ]/g, '')
-                      return n ? `bib${n}` : undefined
-                    })
-                    .filter((n) => !!n)
-                    .join(','),
-              },
-            ],
-          },
-        ]
-      )
+      return j(node, 'command', { name: command || j.citationAnalyzer(node) || 'autocite' }, [
+        ...optCommandArgs,
+        {
+          type: 'commandArg',
+          children: [
+            {
+              type: 'text',
+              value:
+                node.attributes.rid ||
+                node.children
+                  .map((node) => {
+                    //@ts-expect-error it is text, it has value
+                    const n = node?.value?.replace(/[[\], ]/g, '')
+                    return n ? `bib${n}` : undefined
+                  })
+                  .filter((n) => !!n)
+                  .join(','),
+            },
+          ],
+        },
+      ])
     }
     case 'fig': {
       return j(node, 'command', { name: 'autocite' }, [
@@ -148,7 +131,7 @@ export function xref(j: J, node: Xref) {
         node,
         'command',
         { name: refTypeMap[node.attributes.refType || 'default'] || 'ref' },
-        [wrapCommandArg(j, node.children)]
+        [wrapCommandArg(j, node.children)],
       )
   }
   //  }

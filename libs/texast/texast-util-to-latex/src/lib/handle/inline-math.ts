@@ -1,13 +1,9 @@
 import { InlineMath } from 'texast'
-import { toLatex } from '../texast-util-to-latex'
-import { BasicHandle, Options } from '../types'
+import { toLatex } from '../texast-util-to-latex.js'
+import { BasicHandle, Options } from '../types.js'
 
-export const inlineMath: BasicHandle = (
-  node: InlineMath,
-  options: Options = {}
-) => {
-  const builtInDelimiters =
-    node.delimiters === '()' ? ['\\(', '\\)'] : ['$', '$']
+export const inlineMath: BasicHandle = (node: InlineMath, options: Options = {}) => {
+  const builtInDelimiters = node.delimiters === '()' ? ['\\(', '\\)'] : ['$', '$']
   // console.log(node.delimiters)
 
   // TODO: Clean up delimiter picking for math env

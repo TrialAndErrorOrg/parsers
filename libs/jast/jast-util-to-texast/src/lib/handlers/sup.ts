@@ -1,5 +1,5 @@
-import { all } from '../all'
-import { J, Node } from '../types'
+import { all } from '../all.js'
+import { J, Node } from '../types.js'
 
 export function sup(j: J, node: Node) {
   return j(node, 'super', all(j, node))

@@ -96,7 +96,7 @@ const findTypeDocFilesAndInterfaces = async (
   try {
     const moduleFileContent = await readFile(typeDocModuleFilePath, 'utf-8')
 
-    const newModuleFileContent = moduleFileContent.replace(/^# .*?\n.*$/, '') //+ interfaceFiles.join('\n')
+    const newModuleFileContent = moduleFileContent.replace(/^# .*\n.*$/, '') //+ interfaceFiles.join('\n')
 
     const downshiftedContent = newModuleFileContent
       // .replace(/((^|\n)#+) /g, '$1## ')

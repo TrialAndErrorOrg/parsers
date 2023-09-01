@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 
-import PublicationsList from './publications-list'
+import PublicationsList from './publications-list.js'
 
 describe('PublicationsList', () => {
   it('should render successfully', () => {

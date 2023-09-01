@@ -4,8 +4,11 @@
   "sourceRoot": "libs/ooxast/ooxast-util-to-mdast/src",
   "projectType": "library",
   "targets": {
+    "make-publishable": {
+      "executor": "better-nx-tsc:publishable"
+    },
     "build": {
-      "executor": "better-nx-tsc:tsc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "rootDir": "libs/ooxast/ooxast-util-to-mdast/src",

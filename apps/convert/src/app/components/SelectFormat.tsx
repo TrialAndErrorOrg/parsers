@@ -3,7 +3,7 @@
 import { Fragment, useState } from 'react'
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
-import { GenericIcon } from './ExtIcon'
+import { GenericIcon } from './ExtIcon.js'
 
 // const options = [
 //   { id: 1, name: 'Wade Cooper', online: true },

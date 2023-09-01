@@ -50,8 +50,18 @@
       "dependsOn": ["^build", "lint"],
       "inputs": ["production", "^production"]
     },
+    "make-publishable": {
+      "dependsOn": ["^build", "lint"],
+      "inputs": ["production", "^production"],
+      "executor": "better-nx-tsc:publishable"
+    },
+    "better-nx-tsc:publishable": {
+      "options": {
+        "dist": "dist/{projectRoot}"
+      }
+    },
     "version": {
-      "dependsOn": ["^version", "build"],
+      "dependsOn": ["^version", "make-publishable"],
       "options": {
         "preset": "conventional",
         "trackDeps": true
@@ -68,7 +78,16 @@
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e", "npm", "readme", "version"]
+        "cacheableOperations": [
+          "build",
+          "make-publishable",
+          "lint",
+          "test",
+          "e2e",
+          "npm",
+          "readme",
+          "version"
+        ]
       }
     }
   }

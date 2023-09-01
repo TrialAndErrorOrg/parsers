@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 
-import ConvertedBlock from './converted-block'
+import ConvertedBlock from './converted-block.js'
 
 describe('ConvertedBlock', () => {
   it('should render successfully', () => {

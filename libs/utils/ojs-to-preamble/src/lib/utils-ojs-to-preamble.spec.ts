@@ -1,4 +1,4 @@
-import { utilsOjsToPreamble } from './utils-ojs-to-preamble'
+import { utilsOjsToPreamble } from './utils-ojs-to-preamble.js'
 
 describe('utilsOjsToPreamble', () => {
   it('should work', () => {

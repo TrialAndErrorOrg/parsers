@@ -28,7 +28,7 @@ export function fixCSLAbbreviations(csl: CSL): CSL {
       return auth
     }
 
-    if (/^([A-Z]\.)+$/.test(auth.given)) {
+    if (/^(?:[A-Z]\.)+$/.test(auth.given)) {
       auth.given = auth.given.replace(/\./g, '')
     }
 

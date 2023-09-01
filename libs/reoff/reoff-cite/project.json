@@ -26,8 +26,11 @@
         "passWithNoTests": true
       }
     },
+    "make-publishable": {
+      "executor": "better-nx-tsc:publishable"
+    },
     "build": {
-      "executor": "better-nx-tsc:tsc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "rootDir": "libs/reoff/reoff-cite/src",

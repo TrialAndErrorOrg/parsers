@@ -7,6 +7,6 @@
     "target": "esnext",
     "lib": ["ES2022"]
   },
-  "include": ["src/**/*.ts"],
+  "include": ["**/*.ts"],
   "exclude": ["jest.config.ts", "src/**/*.spec.ts", "src/**/*.test.ts"]
 }

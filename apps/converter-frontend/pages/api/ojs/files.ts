@@ -1,9 +1,9 @@
 import axios from 'axios'
 import { NextApiRequest, NextApiResponse } from 'next'
 import qs from 'querystring'
-import { replaceCookieRes, getSID } from '../../../utils/forgeCookie'
+import { replaceCookieRes, getSID } from '../../../utils/forgeCookie.js'
 
-import { setCookie } from '../../../utils/cookies'
+import { setCookie } from '../../../utils/cookies.js'
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { endpoint, apiToken, submissionId, stageId } = req.query

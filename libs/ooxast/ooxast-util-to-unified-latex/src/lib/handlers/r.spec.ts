@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest'
 
 import { arg, m, s } from '@unified-latex/unified-latex-builder'
 import { R } from 'ooxast'
-// import { r } from './r'
+// import { r } from './r.js'
 import { toUnifiedLatex } from '../ooxast-util-to-unified-latex.js'
 
 const makeR = (text: string, styles: string[]) =>

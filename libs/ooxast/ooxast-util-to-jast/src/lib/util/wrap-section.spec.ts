@@ -1,6 +1,6 @@
 import { wrapSec, getHeadingLevel } from './wrap-section.js'
 
-import { test } from './get-pstyle.spec'
+import { test } from './get-pstyle.spec.js'
 
 it('should get heading level', () => {
   expect(getHeadingLevel(test)).toEqual(1)

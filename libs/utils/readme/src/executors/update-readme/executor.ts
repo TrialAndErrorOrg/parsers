@@ -1,6 +1,6 @@
-import { UpdateReadmeExecutorSchema } from './schema'
+import { UpdateReadmeExecutorSchema } from './schema.js'
 import { ExecutorContext, workspaceRoot } from '@nrwl/devkit'
-import { readmeAction } from './readmeAction'
+import { readmeAction } from './readmeAction.js'
 import path from 'path'
 import { exec } from 'child_process'
 import { promisify } from 'util'

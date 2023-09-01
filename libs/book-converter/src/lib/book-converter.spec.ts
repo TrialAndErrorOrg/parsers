@@ -1,5 +1,5 @@
 import { writeFile } from 'fs/promises'
-import { bookConverter } from './book-converter'
+import { bookConverter } from './book-converter.js'
 import { describe, expect, it } from 'vitest'
 
 describe('bookConverter', () => {

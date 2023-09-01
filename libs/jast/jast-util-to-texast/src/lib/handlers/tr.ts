@@ -2,8 +2,8 @@
 
 import { Tr } from 'jast-types'
 import { AlignmentTab, Command, Linebreak, Text } from 'texast'
-import { all } from '../all'
-import { J, Node } from '../types'
+import { all } from '../all.js'
+import { J, Node } from '../types.js'
 
 export function tr(j: J, node: Tr) {
   j.rowNumber += 1
@@ -11,10 +11,7 @@ export function tr(j: J, node: Tr) {
   // too many alignment tabs
   const contents = contentsNoTabs
     .filter((node) => node.type === 'tableCell')
-    .flatMap((cell) => [
-      { type: 'alignmentTab', value: '&' } as AlignmentTab,
-      cell,
-    ])
+    .flatMap((cell) => [{ type: 'alignmentTab', value: '&' } as AlignmentTab, cell])
     .slice(1)
 
   contents.push({ type: 'linebreak', value: '\\' } as Linebreak)
@@ -23,7 +20,7 @@ export function tr(j: J, node: Tr) {
       (child) =>
         child.type === 'element' &&
         child.name === 'td' &&
-        child.attributes.style?.includes('border-bottom')
+        child.attributes.style?.includes('border-bottom'),
     )
   ) {
     const commandName = j.booktabs
@@ -39,7 +36,7 @@ export function tr(j: J, node: Tr) {
           name: commandName,
           children: [],
         } as Command,
-      ]
+      ],
     )
   }
 
@@ -49,7 +46,7 @@ export function tr(j: J, node: Tr) {
       (child) =>
         child.type === 'element' &&
         child.name === 'td' &&
-        child.attributes.style?.includes('border-top')
+        child.attributes.style?.includes('border-top'),
     )
   ) {
     const commandName = j.booktabs ? 'toprule' : 'hline'

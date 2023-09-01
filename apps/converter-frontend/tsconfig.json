@@ -12,7 +12,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "incremental": true,
-    "moduleResolution": "nodenext",
     "module": "ESNext",
     "target": "ESNext"
   },

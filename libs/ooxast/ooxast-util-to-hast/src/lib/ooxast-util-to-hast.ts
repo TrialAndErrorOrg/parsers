@@ -1,5 +1,5 @@
-import { one } from './one'
-import { handlers } from './handlers/index'
+import { one } from './one.js'
+import { handlers } from './handlers/index.js'
 import { Data as CSL } from 'csl-json'
 
 import {
@@ -15,15 +15,15 @@ import {
   Root,
   Element,
   Text,
-} from './types'
+} from './types.js'
 import { convert } from 'unist-util-is'
 import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
 import { select } from 'xast-util-select'
 // import { h } from 'hastscript'
 import { cslToRefList } from 'jast-util-from-csl'
 
-export { one } from './one'
-export { all } from './all'
+export { one } from './one.js'
+export { all } from './all.js'
 export { handlers as defaultHandlers }
 
 const block = convert(['heading', 'paragraph', 'root'])
@@ -41,7 +41,7 @@ export function toHast(
     bibname: 'References',
 
     //relations: {},
-  }
+  },
 ) {
   // const byId: { [s: string]: Element } = {}
   let hast: HastContent | HastRoot
@@ -52,7 +52,7 @@ export function toHast(
       node: HastRoot | HastContent,
       type: string,
       props?: Attributes | string | Array<HastContent>,
-      children?: string | Array<HastContent>
+      children?: string | Array<HastContent>,
     ): HastContent => {
       let attributes: Attributes | undefined
 
@@ -65,10 +65,8 @@ export function toHast(
 
       const result: Node = Object.assign(
         {},
-        ['root', 'text'].includes(type)
-          ? { type }
-          : { type: 'element', tagName: type },
-        { properties: attributes }
+        ['root', 'text'].includes(type) ? { type } : { type: 'element', tagName: type },
+        { properties: attributes },
       )
 
       if (typeof children === 'string') {
@@ -93,9 +91,7 @@ export function toHast(
       /** @type {string|null} */
       frozenBaseUrl: null,
       qNesting: 0,
-      handlers: options.handlers
-        ? { ...handlers, ...options.handlers }
-        : handlers,
+      handlers: options.handlers ? { ...handlers, ...options.handlers } : handlers,
       document: options.document,
       checked: options.checked || '[x]',
       unchecked: options.unchecked || '[ ]',
@@ -114,7 +110,7 @@ export function toHast(
       citeKeys: {},
       citationType: options.citationType || 'mendeley',
       pHandlers: options.pHandlers || [],
-    } as Context
+    } as Context,
   )
 
   // visit(tree, 'element', (node) => {

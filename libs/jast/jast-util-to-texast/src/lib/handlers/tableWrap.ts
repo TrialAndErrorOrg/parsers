@@ -1,8 +1,8 @@
 // based on https://github.com/syntax-tree/hast-util-to-mdast/blob/main/lib/handlers/em
 
 import { Article, isElement, Parent, TableWrap, TagHavers } from 'jast-types'
-import { all } from '../all'
-import { J, Node, Root } from '../types'
+import { all } from '../all.js'
+import { J, Node, Root } from '../types.js'
 
 const relativeOrderTable = (element: TableWrap['children'][number]) => {
   if (!isElement(element)) return 4

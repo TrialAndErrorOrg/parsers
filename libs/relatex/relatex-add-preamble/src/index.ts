@@ -1,1 +1,1 @@
-export { default } from './lib/relatex-add-preamble'
+export { default } from './lib/relatex-add-preamble.js'

@@ -1,5 +1,5 @@
 import {Node} from 'unist'
-import { ojs-relatex } from './ojs-relatex';
+import { ojs-relatex } from './ojs-relatex.js';
 
 describe('ojs-relatex', () => {
 

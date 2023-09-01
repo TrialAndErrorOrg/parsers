@@ -1,10 +1,10 @@
 import { readdirSync, readFileSync, writeFileSync } from 'fs'
 import { join } from 'path'
 import rejourParse from 'rejour-parse'
-import { toTexast } from '../jast-util-to-texast'
+import { toTexast } from '../jast-util-to-texast.js'
 import relatexStringify from 'relatex-stringify'
 import { unified } from 'unified'
-import { TexastContent, Options, TexastRoot } from '../types'
+import { TexastContent, Options, TexastRoot } from '../types.js'
 import { removePosition } from 'unist-util-remove-position'
 import { toLatex } from 'texast-util-to-latex'
 
@@ -25,14 +25,14 @@ const fixtures = new URL('fixtures', import.meta.url)
 const dir = readdirSync(fixtures)
 const arrDir = dir.map((f) => f)
 const doubleDir = dir.map((f) => [
-  join(fixtures, f, 'index.jats.xml'),
-  join(fixtures, f, 'index.tex'),
-  join(fixtures, f, 'indexon'),
+  join(fixtures.pathname, f, 'index.jats.xml'),
+  join(fixtures.pathname, f, 'index.tex'),
+  join(fixtures.pathname, f, 'indexon'),
 ])
 
 describe.each(dir)('parses correctly for %s', (name: string) => {
-  const [jats, latex, json] = ['index.jats.xml', 'index.tex', 'index.json'].map(
-    (ext) => join(fixtures, name, ext)
+  const [jats, latex, json] = ['index.jats.xml', 'index.tex', 'index.json'].map((ext) =>
+    join(fixtures.pathname, name, ext),
   )
 
   const jatsIn = String(readFileSync(jats))
@@ -51,7 +51,6 @@ describe.each(dir)('parses correctly for %s', (name: string) => {
 
   let tree: TexastRoot = { type: 'root', children: [] }
   try {
-    //@ts-expect-error
     tree = removePosition(proc.runSync(xmlTree), true)
   } catch (e) {
     console.error('woops')
@@ -69,11 +68,11 @@ describe.each(dir)('parses correctly for %s', (name: string) => {
   if (name === 'complete') {
     writeFileSync(
       join('libs', 'rejour', 'jast-util-to-texast', 'jasttree'),
-      JSON.stringify(xmlTree, null, 2)
+      JSON.stringify(xmlTree, null, 2),
     )
     writeFileSync(
       join('libs', 'rejour', 'jast-util-to-texast', 'texasttree'),
-      JSON.stringify(tree, null, 2)
+      JSON.stringify(tree, null, 2),
     )
     writeFileSync(
       join(
@@ -85,9 +84,9 @@ describe.each(dir)('parses correctly for %s', (name: string) => {
         'test',
         'fixtures',
         'complete',
-        'test.tex'
+        'test.tex',
       ),
-      lx
+      lx,
     )
   }
   test('should match snapshot', () => {

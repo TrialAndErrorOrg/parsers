@@ -3,7 +3,7 @@ import tar from 'tar-stream'
 import { Writable } from 'stream'
 import axios from 'axios'
 import FormData from 'form-data'
-import { cls } from '../../public/jote-article'
+import { cls } from '../../public/jote-article.js'
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   req.statusCode = 200
@@ -49,7 +49,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
             ...formdata.getHeaders(),
             Accept: 'application/pdf',
           },
-        }
+        },
       )
       .then(async (result) => {
         console.log('PDF Received!')

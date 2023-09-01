@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { definitions } from 'ojs-client'
 import React from 'react'
 import { FaOrcid } from 'react-icons/fa'
-import { HStack } from '../stack/stack'
-import { Citations } from './citations'
+import { HStack } from '../stack/stack.js'
+import { Citations } from './citations.js'
 
 export type PublicationKeys = keyof definitions['Publication']
 export type PublicationTypes = definitions['Publication'][PublicationKeys]
@@ -39,25 +39,23 @@ export const RenderPubMeta = ({
       return (
         <HStack>
           {/*@ts-expect-error booo*/}
-          {(value as definitions['Publication']['keywords'])?.en_US?.map(
-            (keyw: string) => (
-              <Box
-                sx={{
-                  borderRadius: 10,
-                  borderWidth: 1,
-                  padding: 4,
-                  paddingLeft: 8,
-                  paddingRight: 8,
-                  backgroundColor: 'darkblue',
-                  color: 'white',
-                  fontWeight: 'bold',
-                }}
-                key={keyw}
-              >
-                <Text size="sm">{keyw}</Text>
-              </Box>
-            )
-          )}
+          {(value as definitions['Publication']['keywords'])?.en_US?.map((keyw: string) => (
+            <Box
+              sx={{
+                borderRadius: 10,
+                borderWidth: 1,
+                padding: 4,
+                paddingLeft: 8,
+                paddingRight: 8,
+                backgroundColor: 'darkblue',
+                color: 'white',
+                fontWeight: 'bold',
+              }}
+              key={keyw}
+            >
+              <Text size="sm">{keyw}</Text>
+            </Box>
+          ))}
         </HStack>
       )
     case 'title':
@@ -75,9 +73,7 @@ export const RenderPubMeta = ({
   }
 }
 
-export const AuthorsContainer = (props: {
-  authors: definitions['Publication']['authors']
-}) => {
+export const AuthorsContainer = (props: { authors: definitions['Publication']['authors'] }) => {
   const { authors } = props
   return (
     <Container

@@ -18,5 +18,5 @@ export interface _number extends UnistNode {
   content: number
 }
 
-export interface document extends UnistNode {}
+export type document = UnistNode
 export var document: document

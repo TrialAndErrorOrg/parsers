@@ -62,5 +62,5 @@ export type XstringVal = string
 
 export type YAlignVal = 'inline' | 'top' | 'center' | 'bottom' | 'inside' | 'outside'
 
-export interface document extends UnistNode {}
+export type document = UnistNode
 export var document: document

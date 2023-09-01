@@ -2,10 +2,8 @@ import { visit, remove } from 'misc'
 import { Text, Root, Node, P, R } from 'ooxast'
 import { convertElement, isElement } from 'xast-util-is-element'
 import { select } from 'xast-util-select'
-import { removePosition } from 'unist-util-remove-position'
 import { select as unistSelect } from 'unist-util-select'
 import { getRStyle } from 'ooxast-util-get-style'
-import { toString } from 'xast-util-to-string'
 
 // Check to see if node is a paragraph, because we want to merge elements in a paragraph
 const isP = convertElement<P>('w:p')
@@ -21,9 +19,13 @@ export function ooxastUtilRemoveRsid(tree: Root | Node, options?: Options): Root
   visit(tree, isP, (node: P) => {
     // Clean rsid props from P
     const {
-      'w:rsidR': rr,
-      'w:rsidRPr': rpr,
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      'w:rsidR': _rr,
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      'w:rsidRPr': _rpr,
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       'w:rsidRDefault': rd,
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       'w:rsidP': rp,
       ...rest
     } = node.attributes
@@ -121,6 +123,7 @@ function merge(prev: R, curr: R): R {
 }
 
 function removeRsid(node: R): R {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { 'w:rsidRPr': rp, 'w:rsidR': r, ...rest } = node.attributes
   node.attributes = rest as any
   return node

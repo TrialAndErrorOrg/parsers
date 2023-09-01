@@ -1,11 +1,7 @@
 import { fromXml } from 'xast-util-from-xml'
 
 import { ParserFunction } from 'unified'
-import {
-  Root as xastRoot,
-  Node as XastNode,
-  Element as XastElement,
-} from 'xast'
+import { Node as XastNode, Element as XastElement } from 'xast'
 import { Root } from 'jast-types'
 import { filter } from 'unist-util-filter'
 import { map } from 'misc'
@@ -57,14 +53,11 @@ export default function rejourParse(options: Settings = {}) {
 
       const attributes = element.attributes
         ? Object.entries(element.attributes).reduce(
-            (
-              acc: { [key: string]: any },
-              [key, value]: [key: string, value: any]
-            ) => {
+            (acc: { [key: string]: any }, [key, value]: [key: string, value: any]) => {
               acc[pascalToCamelCase(key)] = value
               return acc
             },
-            {}
+            {},
           )
         : {}
       return {
@@ -87,7 +80,5 @@ export default function rejourParse(options: Settings = {}) {
  * Necessary because working with pascal-case in js is annoying.
  */
 function pascalToCamelCase(input: string): string {
-  return input.replace(/-(\w)/g, (string, lowercaseLetter) =>
-    lowercaseLetter.toUpperCase()
-  )
+  return input.replace(/-(\w)/g, (string, lowercaseLetter) => lowercaseLetter.toUpperCase())
 }

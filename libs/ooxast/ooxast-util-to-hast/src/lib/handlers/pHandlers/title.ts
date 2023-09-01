@@ -1,5 +1,5 @@
-import { all } from '../../all'
-import { H, P, StyleHandle } from '../../types'
+import { all } from '../../all.js'
+import { H, P, StyleHandle } from '../../types.js'
 
 const headingHandler: StyleHandle = (h: H, node: P) => {
   return h(node, `h1`, all(h, node))

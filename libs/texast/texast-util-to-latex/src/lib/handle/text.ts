@@ -1,6 +1,6 @@
 import { Text } from 'texast'
-import { Handle, Context, Options, SafeOptions, Parent, BasicHandle } from '../types'
-import { safe } from '../util/safe'
+import { Handle, Context, Options, SafeOptions, Parent, BasicHandle } from '../types.js'
+import { safe } from '../util/safe.js'
 //@ts-expect-error escape-latex is not typed correctly
 import lxescape from 'escape-latex'
 

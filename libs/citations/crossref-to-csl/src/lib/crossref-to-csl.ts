@@ -2,7 +2,6 @@ import { CrossrefJSON } from 'crossref-json'
 import { Data as CSL } from 'csl-json'
 import { PickByValue } from 'utility-types'
 
-type I = keyof CrossrefJSON & keyof CSL
 type CRArraylike = keyof PickByValue<CrossrefJSON, any[]>
 type CRSinglets = Exclude<keyof CrossrefJSON, CRArraylike>
 type CSLArraylike = keyof PickByValue<CSL, any[] | undefined>
@@ -35,14 +34,7 @@ const sames: Same[] = [
   //'source',
   //'type',
 ]
-const arrs: Arr[] = [
-  'ISBN',
-  'ISSN',
-  'archive',
-  'container-title',
-  'original-title',
-  'title',
-]
+const arrs: Arr[] = ['ISBN', 'ISSN', 'archive', 'container-title', 'original-title', 'title']
 
 const maps: [key1: keyof CSL, key2: keyof CrossrefJSON][] = [
   ['publisher-place', 'publisher-location'],
@@ -52,7 +44,6 @@ const maps: [key1: keyof CSL, key2: keyof CrossrefJSON][] = [
 export function crossrefToCsl(item: CrossrefJSON): CSL {
   const map = (key: keyof CSL, newkey: keyof CrossrefJSON) =>
     item[newkey] ? { [key]: item[newkey] } : {}
-  const cond = (key: keyof CSL, value: any) => (value ? { [key]: value } : {})
   const same = (key: Same) => (item[key] ? { [key]: item[key] } : {})
   const arr = (key: Arr) => (item[key] ? { [key]: item[key][0] } : {})
 

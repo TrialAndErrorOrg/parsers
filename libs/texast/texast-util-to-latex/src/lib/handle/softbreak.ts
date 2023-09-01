@@ -1,10 +1,6 @@
 import { Softbreak } from 'texast'
-import { toLatex } from '../texast-util-to-latex'
-import { BasicHandle, Options } from '../types'
+import { BasicHandle, Options } from '../types.js'
 
-export const softbreak: BasicHandle = (
-  node: Softbreak,
-  options: Options = {}
-) => {
+export const softbreak: BasicHandle = (node: Softbreak, options: Options = {}) => {
   return `\n`
 }

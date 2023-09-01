@@ -72,6 +72,7 @@ export async function docxToTexConverter(
       console.log({ tree: JSON.parse(JSON.stringify(tree)) })
       return tree
     })
+    // @ts-expect-error yes valid concern
     .use(reoffUnifiedLatex, {
       xcolor: false,
       tabularx: {

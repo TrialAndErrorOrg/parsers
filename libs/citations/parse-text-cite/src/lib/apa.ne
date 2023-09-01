@@ -5,7 +5,7 @@
 import {lexer} from './lexer.js'
 
 // TODO: [parser] It's currently extremely slow for large sentences, not good.
-const getFullName = (name) => `${name?.['non-dropping-particle']
+const getFullName = (name: any) => `${name?.['non-dropping-particle']
                               ? name?.['non-dropping-particle']+' '
                             :''}${name.family}`
 

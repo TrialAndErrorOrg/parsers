@@ -1,3 +1,3 @@
 export { toMdast } from './lib/ooxast-util-to-mdast.js'
-export { Options, Handle } from './lib/types.js'
-export { State } from './lib/state.js'
+export type { Options, Handle } from './lib/types.js'
+export type { State } from './lib/state.js'

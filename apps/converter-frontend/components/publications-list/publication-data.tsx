@@ -63,18 +63,18 @@ export const PublicationData = (props: {
   }
 
   // inital load does not give us that much data
-  const { data, error }: { data: Publication; error: unknown } = useSWR(
+  const { data, error }: { data?: Publication; error: unknown } = useSWR(
     `/api/ojs/publication?url=${encodeURIComponent(url || '')}&apiToken=${apiToken}`,
   )
 
   const { data: files } = useSWR(
     `/api/ojs/files?apiToken=${apiToken}&submissionId=${pub.id}&stageId=${
       pub.stageId
-    }&endpoint=${encodeURIComponent(endpoint)}`,
+    }&endpoint=${encodeURIComponent(endpoint!)}`,
   )
   console.log({ files })
   // the accepted date is the date where the item has been moved to copyediting, which is the file with fileStage 9 with the lowest date
-  const acceptedDate = files?.items?.reduce((acc, curr) => {
+  const acceptedDate = files?.items?.reduce((acc: any, curr: any) => {
     console.log({ acc, curr })
     if (curr.fileStage === 9) {
       if (!acc) {
@@ -99,6 +99,7 @@ export const PublicationData = (props: {
       keywordsabstract: data?.keywords?.['en_US']?.join(', '),
       abstract: data.abstract?.en_US,
       runningauthor: data.authorsStringShort,
+      // @ts-expect-error AAA
       authors: data.authors.reduce(
         (acc, curr: (typeof data.authors)[number]) => {
           acc.push({
@@ -128,7 +129,7 @@ export const PublicationData = (props: {
       paperaccepted: acceptedDate || '',
       // funding: data?.supportingAgencies?.en_US || '',
 
-      paperpublished: publishedDate || '',
+      paperpublished: publishedDate?.toISOString() || '',
     })
   }, [data, files])
 
@@ -140,10 +141,10 @@ export const PublicationData = (props: {
         items ? (
           <Box>
             {items.map((item) => {
-              if (!data[item]) {
+              if (!data[item as keyof Publication]) {
                 return null
               }
-              return <MetaItem key={item} datakey={item} value={data[item]} />
+              return <MetaItem key={item} datakey={item} value={data[item as keyof Publication]} />
             })}
           </Box>
         ) : (
@@ -151,11 +152,11 @@ export const PublicationData = (props: {
             <Paper>
               <Text>{categories[data.sectionId]}</Text>
               <Text>{data['pub-id::doi']}</Text>
-              <MetaItem datakey={'title'} value={data.title} />
-              <MetaItem datakey={'authors'} value={data.authors} />
-              <MetaItem datakey={'abstract'} value={data.abstract} />
+              <MetaItem datakey={'title'} value={data.title.en_US} />
+              <MetaItem datakey={'authors'} value={data.authors as any} />
+              <MetaItem datakey={'abstract'} value={data.abstract?.en_US} />
               <MetaItem datakey={'citations'} value={data.citations} extra={data.citationsRaw} />
-              <MetaItem datakey={'keywords'} value={data.keywords} />
+              <MetaItem datakey={'keywords'} value={data.keywords.en_US} />
               {/* {Object.entries(data).map((datum) => {
             const [key, value] = datum as [
               key: keyof definitions['Publication'],

@@ -1,2 +1,2 @@
 export { default } from './lib/reoff-remark.js'
-export { Options } from 'ooxast-util-to-mdast'
+export type { Options } from 'ooxast-util-to-mdast'

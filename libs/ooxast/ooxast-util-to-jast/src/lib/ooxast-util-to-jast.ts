@@ -21,6 +21,7 @@ import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
 import { select } from 'xast-util-select'
 import { cslToRefList } from 'jast-util-from-csl'
 import { VFile } from 'vfile'
+import { Parsed } from 'reoff-parse'
 
 // export { one } from './one.js'
 // export { all } from './all.js'
@@ -41,9 +42,7 @@ const defaultOptions: Options = {
 
 declare module 'vfile' {
   interface DataMap {
-    parsed: {
-      [key: `${string}.xml` | `${string}.rels`]: Root
-    }
+    parsed: Parsed
   }
 }
 

@@ -1,1 +1,1 @@
-export { default, Options } from './lib/reoff-infer-headings.js'
+export { default, type Options } from './lib/reoff-infer-headings.js'

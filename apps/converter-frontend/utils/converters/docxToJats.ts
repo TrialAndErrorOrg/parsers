@@ -1,5 +1,5 @@
 import reoffParseReferences from 'reoff-parse-references-browser'
-import { rejourStringify } from 'rejour-stringify'
+import rejourStringify from 'rejour-stringify'
 import reoffCite from 'reoff-cite'
 import { reoffClean } from 'reoff-clean'
 import reoffParse from 'reoff-parse'
@@ -14,7 +14,7 @@ export async function docxToJatsConverter(
     citationType?: 'mendeley' | 'native' | 'citavi' | 'zotero' | 'endnote'
     url?: string
     mailto?: string
-  } = {}
+  } = {},
 ): Promise<VFile> {
   const { citationType: type, url: apiUrl, mailto } = options
 
@@ -26,21 +26,13 @@ export async function docxToJatsConverter(
   const proc = unified()
     .use(reoffParse)
     .use(reoffClean, {
-      rPrRemoveList: [
-        'w:lang',
-        'w:shd',
-        'w:szCs',
-        'w:kern',
-        'w:rFonts',
-        'w:noProof',
-      ],
+      rPrRemoveList: ['w:lang', 'w:shd', 'w:szCs', 'w:kern', 'w:rFonts', 'w:noProof'],
     })
     .use(reoffParseReferences, {
       apiUrl:
         process.env.NODE_ENV === 'production'
           ? apiUrl || '/api/style'
-          : process.env.NEXT_PUBLIC_STYLE_DEV_URL ||
-            'http://localhost:8000/api/style',
+          : process.env.NEXT_PUBLIC_STYLE_DEV_URL || 'http://localhost:8000/api/style',
       mailto,
     })
     // @ts-expect-error tbh idk what it's talking about

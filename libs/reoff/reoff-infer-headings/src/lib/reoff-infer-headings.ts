@@ -1,6 +1,6 @@
 import reoffInferHeadings, { Options } from 'reoff-markup-to-style'
 
-export { Options }
+export type { Options }
 /**
  * `reoff` plugin for inferring headings from the markup of the underlying text.
  *

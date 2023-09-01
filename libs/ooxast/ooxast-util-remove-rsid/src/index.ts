@@ -1,1 +1,1 @@
-export { Options, ooxastUtilRemoveRsid } from './lib/ooxast-util-remove-rsid.js'
+export { type Options, ooxastUtilRemoveRsid } from './lib/ooxast-util-remove-rsid.js'

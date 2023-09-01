@@ -1,1 +1,1 @@
-export { getPr, PrObject } from './lib/ooxast-util-properties.js'
+export { getPr, type PrObject } from './lib/ooxast-util-properties.js'

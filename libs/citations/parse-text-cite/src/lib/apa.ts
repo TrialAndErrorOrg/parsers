@@ -1,7 +1,7 @@
 // Generated automatically by nearley, version 2.20.1
 // http://github.com/Hardmath123/nearley
 // Bypasses TS6133. Allow declared but unused functions.
-// @ts-ignore
+// @ts-nocheck
 function id(d: any[]): any {
   return d[0]
 }
@@ -36,7 +36,7 @@ declare var BCE: any
 import { lexer } from './lexer.js'
 
 // TODO: [parser] It's currently extremely slow for large sentences, not good.
-const getFullName = (name) =>
+const getFullName = (name: any) =>
   `${name?.['non-dropping-particle'] ? name?.['non-dropping-particle'] + ' ' : ''}${name.family}`
 
 const locators = [
@@ -286,10 +286,10 @@ const grammar: Grammar = {
       ],
       postprocess: ([name, , , yearlist]) => ({
         citationId: 'CITE-X',
-        citationItems: yearlist.map((y) => ({
+        citationItems: yearlist.map((y: any) => ({
           id: getFullName(name[0]).replace(/ /g, '') + y[0],
           itemData: {
-            author: name.filter((name) => typeof name === 'object'),
+            author: name.filter((name: any) => typeof name === 'object'),
             issued: {
               'date-parts': [[y[0].replace(/(\d|.-?)[a-z]/, '$1')]],
             },

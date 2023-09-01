@@ -24,27 +24,29 @@ const extensionMap: Record<string, string> = {
   emf: 'x-emf',
 }
 
-async function downloadAll(images: { [key: string]: Blob }, text: string) {
+async function downloadAll(images: { [key: string]: Blob } | undefined, text: string) {
   const zipWriter = new ZipWriter(new BlobWriter('application/zip'))
 
   await zipWriter.add('media', undefined, {
     directory: true,
   })
-  const addedStuff = await Promise.all(
-    Object.entries(images).map(([url, img]) => {
-      const rawExtension = url.split('.').pop() ?? 'jpg'
-      const fileName = `media/` + url.split('/').pop() ?? 'image.jpg'
-      const extension = extensionMap[rawExtension] ?? rawExtension
+  if (images) {
+    const addedStuff = await Promise.all(
+      Object.entries(images).map(([url, img]) => {
+        const rawExtension = url.split('.').pop() ?? 'jpg'
+        const fileName = `media/` + url.split('/').pop() ?? 'image.jpg'
+        const extension = extensionMap[rawExtension] ?? rawExtension
 
-      const file = new Blob([img], {
-        type: `image/${extension}`,
-      })
-      // const blob = new Blob([arrayBufferView], {
-      //   type: `image/${extension}`,
-      // })
-      zipWriter.add(fileName, new BlobReader(file), {})
-    }),
-  )
+        const file = new Blob([img], {
+          type: `image/${extension}`,
+        })
+        // const blob = new Blob([arrayBufferView], {
+        //   type: `image/${extension}`,
+        // })
+        zipWriter.add(fileName, new BlobReader(file), {})
+      }),
+    )
+  }
 
   await zipWriter.add('main.tex', new TextReader(text))
   const zipFile = await zipWriter.close()

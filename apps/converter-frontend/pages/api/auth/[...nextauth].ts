@@ -2,6 +2,7 @@ import NextAuth from 'next-auth'
 import AzureADProvider from 'next-auth/providers/azure-ad'
 
 export default NextAuth({
+  secret: process.env.SECRET,
   providers: [
     // OAuth authentication providers...
     AzureADProvider({

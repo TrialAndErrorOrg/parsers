@@ -13,9 +13,10 @@ export const Citations = ({
   extra: string
 }) => {
   const url =
-    process.env.NODE_ENV === 'production'
-      ? '/api/style'
-      : process.env.NEXT_PUBLIC_STYLE_DEV_URL || 'http://localhost:8000/api/style'
+    // process.env.NODE_ENV === 'production'
+    //   ? '/api/style'
+    // :
+    process.env.NEXT_PUBLIC_STYLE_DEV_URL || 'http://localhost:8000/api/style'
   const splitextra = extra
     ?.replace(/\\r/g, '')
     ?.replace(/\n([A-Z])/g, '\n\n\n$1')

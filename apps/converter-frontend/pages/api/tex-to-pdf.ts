@@ -3,7 +3,7 @@ import tar from 'tar-stream'
 import { Writable } from 'stream'
 import axios from 'axios'
 import FormData from 'form-data'
-import { cls } from '../../public/jote-article.js'
+import { cls } from '../../public/jote-article'
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   req.statusCode = 200

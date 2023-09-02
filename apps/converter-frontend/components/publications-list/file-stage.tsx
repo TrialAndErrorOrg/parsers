@@ -1,13 +1,13 @@
 import { Box, Button, Text } from '@mantine/core'
-import { useStore } from '../../utils/store.js'
+import { useStore } from '../../utils/store'
 import { definitions } from 'ojs-client'
 import React from 'react'
 import { FaDownload, FaFileDownload } from 'react-icons/fa'
 import { ImShuffle } from 'react-icons/im'
 import { shallow } from 'zustand/shallow'
-import { GenericIcon } from '../ext-icon/ext-icon.js'
+import { GenericIcon } from '../ext-icon/ext-icon'
 import qs from 'querystring'
-import { HStack } from '../stack/stack.js'
+import { HStack } from '../stack/stack'
 
 export const FileStage = (props: {
   submissionId: number

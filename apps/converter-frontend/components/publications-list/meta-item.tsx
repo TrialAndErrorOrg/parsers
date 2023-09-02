@@ -1,8 +1,8 @@
 import { definitions } from 'ojs-client'
 import React from 'react'
 import { Text } from '@mantine/core'
-import { VStack } from '../stack/stack.js'
-import { RenderPubMeta } from './render-pub-meta.js'
+import { VStack } from '../stack/stack'
+import { RenderPubMeta } from './render-pub-meta'
 
 export const MetaItem = ({
   datakey,

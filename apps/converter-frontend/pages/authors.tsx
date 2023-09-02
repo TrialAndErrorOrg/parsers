@@ -3,8 +3,8 @@ import { signIn, useSession } from 'next-auth/react'
 import React from 'react'
 import { FaMicrosoft } from 'react-icons/fa'
 import useSWR from 'swr'
-import { PublicationData } from '../components/publications-list/publication-data.js'
-import { VStack } from '../components/stack/stack.js'
+import { PublicationData } from '../components/publications-list/publication-data'
+import { VStack } from '../components/stack/stack'
 import qs from 'querystring'
 
 function AuthorPage() {

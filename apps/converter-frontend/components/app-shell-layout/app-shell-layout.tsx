@@ -9,7 +9,7 @@ import {
   useMantineTheme,
 } from '@mantine/core'
 import React, { useState } from 'react'
-import { HStack, VStack } from '../stack/stack.js'
+import { HStack, VStack } from '../stack/stack'
 import Image from 'next/image'
 import Link from 'next/link'
 

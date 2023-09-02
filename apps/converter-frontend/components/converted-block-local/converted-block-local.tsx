@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { VFile } from 'vfile'
 import { Prism as SyntaxHighlighter } from '@mantine/prism'
 import { shallow } from 'zustand/shallow'
-import { useStore } from '../../utils/store.js'
+import { useStore } from '../../utils/store'
 
 import {
   BlobReader,

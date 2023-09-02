@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Code, Container, Group, Select, Text, Title, useMantineTheme } from '@mantine/core'
-import { HStack } from '../components/stack/stack.js'
-import SelectItem from '../components/select-item/select-item.js'
+import { HStack } from '../components/stack/stack'
+import SelectItem from '../components/select-item/select-item'
 import { AiOutlineUpload } from 'react-icons/ai'
-import { JATSIcon, TexIcon, WordIcon } from '../components/ext-icon/ext-icon.js'
+import { JATSIcon, TexIcon, WordIcon } from '../components/ext-icon/ext-icon'
 
 import { Dropzone } from '@mantine/dropzone'
-import ConvertedBlock from '../components/converted-block/converted-block.js'
+import ConvertedBlock from '../components/converted-block/converted-block'
 export default function Index() {
   const [thing, setThing] = useState<ArrayBuffer>()
   const [tex, setTex] = useState('')

@@ -3,9 +3,9 @@ import { definitions, paths } from 'ojs-client'
 import OJS from 'ojs-client'
 import React, { forwardRef, useState } from 'react'
 import useSWR from 'swr'
-import { HStack, VStack } from '../stack/stack.js'
-import { FileReel } from './file-reel.js'
-import { PublicationData } from './publication-data.js'
+import { HStack, VStack } from '../stack/stack'
+import { FileReel } from './file-reel'
+import { PublicationData } from './publication-data'
 
 /* eslint-disable-next-line */
 export interface PublicationsListProps {

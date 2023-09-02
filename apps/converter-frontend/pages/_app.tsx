@@ -2,8 +2,8 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { MantineProvider } from '@mantine/core'
 import { SWRConfig } from 'swr'
-import { fetcher } from '../utils/fetcher.js'
-import { AppShellLayout } from '../components/app-shell-layout/app-shell-layout.js'
+import { fetcher } from '../utils/fetcher'
+import { AppShellLayout } from '../components/app-shell-layout/app-shell-layout'
 import { SessionProvider } from 'next-auth/react'
 
 export default function App(props: AppProps) {

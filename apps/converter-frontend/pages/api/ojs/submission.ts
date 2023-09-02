@@ -1,8 +1,8 @@
-import { getSID, replaceCookieRes } from '../../../utils/forgeCookie.js'
+import { getSID, replaceCookieRes } from '../../../utils/forgeCookie'
 import axios from 'axios'
 import { NextApiRequest, NextApiResponse } from 'next'
 import { getSession } from 'next-auth/react'
-import { setCookie } from '../../../utils/cookies.js'
+import { setCookie } from '../../../utils/cookies'
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { url, apiToken: token } = req.query

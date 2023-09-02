@@ -1,8 +1,8 @@
 import React from 'react'
-import { HStack, VStack } from '../stack/stack.js'
+import { HStack, VStack } from '../stack/stack'
 import { Text, Input, TextInput } from '@mantine/core'
 import { useForm } from '@mantine/form'
-import { PublicationsList } from '../publications-list/publications-list.js'
+import { PublicationsList } from '../publications-list/publications-list'
 
 /* eslint-disable-next-line */
 export interface SettingsProps {}

@@ -2,7 +2,7 @@ import { Loader, Tabs, Text } from '@mantine/core'
 import { paths, definitions } from 'ojs-client'
 import React from 'react'
 import useSWR from 'swr'
-import { FileStage } from './file-stage.js'
+import { FileStage } from './file-stage'
 
 export const FileReel = (props: {
   data: Exclude<

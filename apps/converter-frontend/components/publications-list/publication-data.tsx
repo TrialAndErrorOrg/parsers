@@ -1,13 +1,13 @@
 import { Container, Text, Loader, Box, TextInput, Textarea, Paper, Button } from '@mantine/core'
 import { useForm } from '@mantine/form'
-import { useStore } from '../../utils/store.js'
+import { useStore } from '../../utils/store'
 import { paths, definitions } from 'ojs-client'
 import React, { useEffect } from 'react'
 import useSWR from 'swr'
 import { shallow } from 'zustand/shallow'
-import { HStack, VStack } from '../stack/stack.js'
-import { MetaItem } from './meta-item.js'
-import { Publication } from '../../utils/types.js'
+import { HStack, VStack } from '../stack/stack'
+import { MetaItem } from './meta-item'
+import { Publication } from '../../utils/types'
 import { addDays } from 'date-fns'
 
 type PubTypes = keyof definitions['Publication']

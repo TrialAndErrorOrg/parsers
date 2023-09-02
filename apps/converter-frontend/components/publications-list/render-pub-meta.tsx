@@ -3,8 +3,8 @@ import Link from 'next/link'
 import { definitions } from 'ojs-client'
 import React from 'react'
 import { FaOrcid } from 'react-icons/fa'
-import { HStack } from '../stack/stack.js'
-import { Citations } from './citations.js'
+import { HStack } from '../stack/stack'
+import { Citations } from './citations'
 
 export type PublicationKeys = keyof definitions['Publication']
 export type PublicationTypes = definitions['Publication'][PublicationKeys]

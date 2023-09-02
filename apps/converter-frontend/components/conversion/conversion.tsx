@@ -1,18 +1,18 @@
 /* eslint-disable import/extensions */
 import { useState } from 'react'
 import { Button, Checkbox, Code, Container, Group, Select, Text, Title } from '@mantine/core'
-import { HStack } from '../stack/stack.js'
-import SelectItem from '../select-item/select-item.js'
+import { HStack } from '../stack/stack'
+import SelectItem from '../select-item/select-item'
 import { AiOutlineUpload } from 'react-icons/ai'
-import { JATSIcon, TexIcon, WordIcon } from '../ext-icon/ext-icon.js'
+import { JATSIcon, TexIcon, WordIcon } from '../ext-icon/ext-icon'
 import { shallow } from 'zustand/shallow'
 
 import { Dropzone } from '@mantine/dropzone'
-import ConvertedBlockLocal from '../converted-block-local/converted-block-local.js'
-import { jatsToTexConverter } from '../../utils/converters/jatsToTex.js'
-import { docxToTexConverter } from '../../utils/converters/docxToTex.js'
-import { docxToJatsConverter } from '../../utils/converters/docxToJats.js'
-import { useStore } from '../../utils/store.js'
+import ConvertedBlockLocal from '../converted-block-local/converted-block-local'
+// import { jatsToTexConverter } from '../../utils/converters/jatsToTex.js'
+import { docxToTexConverter } from '../../utils/converters/docxToTex'
+import { docxToJatsConverter } from '../../utils/converters/docxToJats'
+import { useStore } from '../../utils/store'
 
 /* eslint-disable-next-line */
 export interface ConversionProps {}
@@ -135,13 +135,7 @@ export function Conversion(props: ConversionProps) {
           options={{
             preamble,
           }}
-          converter={
-            from === 'docx'
-              ? to === 'tex'
-                ? docxToTexConverter
-                : docxToJatsConverter
-              : jatsToTexConverter
-          }
+          converter={to === 'tex' ? docxToTexConverter : docxToJatsConverter}
         />
       )}
     </>

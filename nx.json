@@ -76,8 +76,10 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "nx/tasks-runners/default",
+      "runner": "@vercel/remote-nx",
       "options": {
+        "verbose": true,
+        "cacheDirectory": "/tmp/nx-cache",
         "cacheableOperations": [
           "build",
           "make-publishable",

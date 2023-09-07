@@ -129,7 +129,8 @@ export const PublicationData = (props: {
       paperaccepted: acceptedDate || '',
       // funding: data?.supportingAgencies?.en_US || '',
 
-      paperpublished: publishedDate?.toISOString() || '',
+      // @ts-expect-error AAA
+      paperpublished: publishedDate || '',
     })
   }, [data, files])
 

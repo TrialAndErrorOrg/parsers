@@ -58,7 +58,6 @@ export interface Option {
    */
   ignorePunctuation?: boolean
 }
-;[]
 
 /**
  * @example

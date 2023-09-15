@@ -1,8 +1,8 @@
 import { all, defaultParagraphHandlers } from 'ooxast-util-to-unified-latex'
 import { textboxhandler } from './textbox.js'
 import { arg, args, env, m, s } from '@unified-latex/unified-latex-builder'
-import { PB } from 'libs/ooxast/ooxast-util-to-unified-latex/src/lib/util/PB'
 import { toString } from 'xast-util-to-string'
+import { PB } from '../util/PB.js'
 
 export const paragraphHandlers: (typeof defaultParagraphHandlers)[number][] = [
   ...defaultParagraphHandlers,
@@ -53,6 +53,7 @@ export const paragraphHandlers: (typeof defaultParagraphHandlers)[number][] = [
       }
 
       // prettier-ignore
+      // eslint-disable-next-line no-useless-escape
       return env('quote', [m('\itshape'), PB, ...all(h, node)])
     },
   },

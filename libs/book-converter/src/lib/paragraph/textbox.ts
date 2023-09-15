@@ -1,9 +1,10 @@
 import { arg, env, m, s } from '@unified-latex/unified-latex-builder'
-import { PB } from 'libs/ooxast/ooxast-util-to-unified-latex/src/lib/util/PB'
+
 import { P } from 'ooxast'
 import { getPStyle } from 'ooxast-util-get-style'
-import { ParagraphHandler, all, one } from 'ooxast-util-to-unified-latex'
+import { ParagraphHandler, all } from 'ooxast-util-to-unified-latex'
 import { toString } from 'xast-util-to-string'
+import { PB } from '../util/PB.js'
 
 export const textboxhandler: {
   matcher: string

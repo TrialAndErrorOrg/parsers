@@ -1,10 +1,10 @@
 import { writeFile } from 'fs/promises'
-import { bookConverter } from './book-converter.js'
+import { docxConverter } from './book-converter.js'
 import { describe, expect, it } from 'vitest'
 
 describe('bookConverter', () => {
   it('should work', async () => {
-    const { latexString, totalMatches, unmatchedWords } = await bookConverter(
+    const { latexString, totalMatches, unmatchedWords } = await docxConverter(
       new URL('./source.docx', import.meta.url).pathname,
       new URL('./index.csv', import.meta.url).pathname,
     )

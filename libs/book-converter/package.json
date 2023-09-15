@@ -5,8 +5,10 @@
   "repository": "https://github.com/TrialAndErrorOrg/book-converter",
   "homepage": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
-  "type": "module",
   "description": "convert books",
+  "bin": {
+    "book-converter": "./lib/bin/cli.js"
+  },
   "keywords": [
     "unified",
     "abstract",

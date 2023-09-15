@@ -11,8 +11,6 @@ import {
 
 import { Attributes as OoxastProperties, Parent, Body, Text, Root, P, R, RPr, RPrMap } from 'ooxast'
 import { ListNumbering } from './util/find-list-numbering.js'
-import { defaultFormattingHandlers } from './handlers/defaultFormattingHandlers.js'
-import { RPrJSON } from 'ooxast-util-get-style'
 
 export type XastContent = Root['children'][number] | Root
 

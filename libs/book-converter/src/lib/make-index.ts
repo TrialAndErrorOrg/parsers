@@ -54,7 +54,8 @@ function processLatexString(latexString: string, parsed: FinalItem[]) {
     '\\href',
   ]
   const latexCommandsRegex = new RegExp(
-    `(${latexCommands.join('|')})({[^}]*)\\index\{.*?\}(.*?})`,
+    // eslint-disable-next-line regexp/no-useless-escape, regexp/strict
+    `(${latexCommands.join('|')})({[^}]*)\\index{.*?}(.*?})`,
     'g',
   )
 
@@ -73,7 +74,7 @@ function processLatexString(latexString: string, parsed: FinalItem[]) {
   }
 
   latexString = latexString.replace(
-    /(\\(?:section|subsection|subsubsection|chapter|part|href))({.*?)\\index\{.*?\}(.*?})/g,
+    /(\\(?:section|subsection|subsubsection|chapter|part|href))(\{.*?)\\index\{.*?\}(.*?\})/g,
     (match, command, content1, content2) => {
       console.log(match, command, content1, content2)
       return `${command}${content1}${content2}`
@@ -82,7 +83,7 @@ function processLatexString(latexString: string, parsed: FinalItem[]) {
 
   // remove nested indexes
   latexString = latexString.replace(
-    /(\\index)({[^}]*?)\\index\{.*?\}(.*?})/g,
+    /(\\index)(\{[^}]*?)\\index\{.*?\}(.*?\})/g,
     (match, command, content1, content2) => {
       console.log(match, command, content1, content2)
       return `${command}${content1}${content2}`
@@ -93,6 +94,8 @@ function processLatexString(latexString: string, parsed: FinalItem[]) {
 
 export type Output = {
   latexString: string
-  totalMatches: number
-  unmatchedWords: Map<string, true>
+  index?: {
+    totalMatches: number
+    unmatchedWords: Map<string, true>
+  }
 }

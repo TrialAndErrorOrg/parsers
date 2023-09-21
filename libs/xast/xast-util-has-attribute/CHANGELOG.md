@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.6](https://github.com/TrialAndErrorOrg/parsers/compare/xast-util-has-attribute-0.1.5...xast-util-has-attribute-0.1.6) (2023-09-21)
+
+
+### Bug Fixes
+
+* don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
+
 ## [0.1.5](https://github.com/TrialAndErrorOrg/parsers/compare/xast-util-has-attribute-0.1.4...xast-util-has-attribute-0.1.5) (2023-07-18)
 
 

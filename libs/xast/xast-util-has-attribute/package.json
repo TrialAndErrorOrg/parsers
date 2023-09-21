@@ -1,6 +1,6 @@
 {
   "name": "xast-util-has-attribute",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "license": "MIT",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",

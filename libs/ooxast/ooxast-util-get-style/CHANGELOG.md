@@ -2,6 +2,20 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.2](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-get-style-0.2.1...ooxast-util-get-style-0.2.2) (2023-09-21)
+
+### Dependency Updates
+
+* `ooxast` updated to version `0.1.4`
+* `xast-util-select` updated to version `0.1.3`
+* `xast-util-is-element` updated to version `0.1.5`
+
+### Bug Fixes
+
+* don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
+* **ooxast-util-get-style:** correct tsconfig.lib.json include ([203f185](https://github.com/TrialAndErrorOrg/parsers/commit/203f18532c1142f6c425d057ce71eda90112b974))
+* **ooxast-util-to-unified-latex:** just give up on infer heading for now ([4709f1c](https://github.com/TrialAndErrorOrg/parsers/commit/4709f1cbe5fe8bb3e6fbc3ade8f5c92c8c71afb1))
+
 ## [0.2.1](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-get-style-0.2.0...ooxast-util-get-style-0.2.1) (2023-05-30)
 
 

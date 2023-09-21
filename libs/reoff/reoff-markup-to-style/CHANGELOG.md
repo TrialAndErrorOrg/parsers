@@ -2,6 +2,20 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.0.5](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-markup-to-style-0.0.4...reoff-markup-to-style-0.0.5) (2023-09-21)
+
+### Dependency Updates
+
+* `ooxast-util-markup-to-style` updated to version `0.2.0`
+* `ooxast` updated to version `0.1.4`
+
+### Bug Fixes
+
+* don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
+* make citations work ([67993d3](https://github.com/TrialAndErrorOrg/parsers/commit/67993d33150e05024be7e8df676e59d4cd9c57b1))
+* make typecheck work sort of ([d6a2eb6](https://github.com/TrialAndErrorOrg/parsers/commit/d6a2eb690a06d376043309f8bea6f418a4ff16ec))
+* **ooxast-util-to-unified-latex:** just give up on infer heading for now ([4709f1c](https://github.com/TrialAndErrorOrg/parsers/commit/4709f1cbe5fe8bb3e6fbc3ade8f5c92c8c71afb1))
+
 ## [0.0.4](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-markup-to-style-0.0.3...reoff-markup-to-style-0.0.4) (2023-05-30)
 
 ### Dependency Updates

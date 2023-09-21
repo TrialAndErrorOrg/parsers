@@ -9,6 +9,13 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 * don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
 
+## [0.8.2](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.8.1...docx-to-vfile-0.8.2) (2023-09-21)
+
+
+### Bug Fixes
+
+* don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
+
 ## [0.8.1](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.8.0...docx-to-vfile-0.8.1) (2023-07-18)
 
 

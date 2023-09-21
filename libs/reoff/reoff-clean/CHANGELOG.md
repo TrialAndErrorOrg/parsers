@@ -2,6 +2,21 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.2](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-clean-0.1.1...reoff-clean-0.1.2) (2023-09-21)
+
+### Dependency Updates
+
+* `ooxast-util-remove-rsid` updated to version `0.2.1`
+* `docx-to-vfile` updated to version `0.8.2`
+* `ooxast` updated to version `0.1.4`
+* `reoff-parse` updated to version `0.3.0`
+
+### Bug Fixes
+
+* don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
+* **ooxast-util-to-unified-latex:** just give up on infer heading for now ([4709f1c](https://github.com/TrialAndErrorOrg/parsers/commit/4709f1cbe5fe8bb3e6fbc3ade8f5c92c8c71afb1))
+* **reoff-clean:** also process footnotes and endnotes ([81d36d7](https://github.com/TrialAndErrorOrg/parsers/commit/81d36d76c081a6181078e3aa8d7533ef2f2006f9))
+
 ## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-clean-0.1.0...reoff-clean-0.1.1) (2023-03-14)
 
 ### Dependency Updates

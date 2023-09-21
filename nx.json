@@ -67,6 +67,13 @@
         "trackDeps": true
       }
     },
+    "npm": {
+      "dependsOn": ["make-publishable"],
+      "options": {
+        "access": "public",
+        "noBuild": true
+      }
+    },
     "e2e": {
       "inputs": ["default", "^production"]
     },

@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.1](https://github.com/TrialAndErrorOrg/parsers/compare/csl-to-biblatex-0.2.0...csl-to-biblatex-0.2.1) (2023-09-21)
+
+
+### Bug Fixes
+
+* **csl-to-biblatex.ts:** escape special characters in title and add curly braces to words with all caps ([cc13e4a](https://github.com/TrialAndErrorOrg/parsers/commit/cc13e4a1daa3c289e848f665b81fcac25e339ff5))
+* don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
+* **ooxast-util-to-unified-latex:** just give up on infer heading for now ([4709f1c](https://github.com/TrialAndErrorOrg/parsers/commit/4709f1cbe5fe8bb3e6fbc3ade8f5c92c8c71afb1))
+
 ## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/csl-to-biblatex-0.1.1...csl-to-biblatex-0.2.0) (2023-03-29)
 
 

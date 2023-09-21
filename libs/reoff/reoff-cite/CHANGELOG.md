@@ -2,6 +2,25 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-cite-0.1.2...reoff-cite-0.2.0) (2023-09-21)
+
+### Dependency Updates
+
+* `ooxast` updated to version `0.1.4`
+* `reoff-parse` updated to version `0.3.0`
+* `docx-to-vfile` updated to version `0.8.2`
+* `ooxast-util-citations` updated to version `0.2.0`
+
+### Features
+
+* **reoff-cite.ts:** add support for finding citations in footnotes and endnotes in Word documents ([3657304](https://github.com/TrialAndErrorOrg/parsers/commit/365730473056bc954da0376d1871bda5528a8eff))
+
+
+### Bug Fixes
+
+* don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
+* **ooxast-util-to-unified-latex:** just give up on infer heading for now ([4709f1c](https://github.com/TrialAndErrorOrg/parsers/commit/4709f1cbe5fe8bb3e6fbc3ade8f5c92c8c71afb1))
+
 ## [0.1.2](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-cite-0.1.1...reoff-cite-0.1.2) (2023-03-29)
 
 ### Dependency Updates

@@ -31,13 +31,16 @@ async function runConverterWithOptions(
   // Validate finalOptions with Zod
   const parsedOptions = converterOptionsSchema.parse(finalOptions)
 
+  console.log('Running with options:', parsedOptions)
   const output = await converterFunction(parsedOptions)
+
   const outputPath = path.join(
     parsedOptions.out!,
     path.basename(parsedOptions.docx).replace('.docx', '.tex'),
   )
 
   await writeFile(outputPath, output.latexString)
+  console.log(`✅ Conversion succesful! Output written to ${outputPath}`)
 
   // Run any post-conversion command
   if (parsedOptions.onSuccess) {
@@ -84,10 +87,9 @@ const argv = converterCLIOptionsDefaultSchemaInput.parse(cliArgs)
   process.stdin.resume()
   process.stdin.setEncoding('utf8')
 
-  console.log('Press "r" to rerun, "q" to quit')
+  console.log('Press "r + Enter" to rerun, "q + Enter" to quit')
 
   process.stdin.on('data', async (choice) => {
-    console.log(choice)
     const choiceString = choice.toString('utf-8').trim()
 
     if (choiceString === 'q') {

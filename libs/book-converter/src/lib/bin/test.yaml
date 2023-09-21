@@ -1,8 +1,10 @@
 # yaml-language-server: $schema=file:///Users/thomas/Projects/jote-monorepo/libs/book-converter/src/public/schema.json
 
 docx: './../_cleanup/book.docx'
-out: 'dist'
+media: './../_cleanup/media'
+out: './../_cleanup/dist'
 
 latexOptions:
   documentClass: new-jote-article
   citeStyle: 'authordate'
+  article: 'reflection'

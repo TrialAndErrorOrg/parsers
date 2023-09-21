@@ -14,7 +14,7 @@ import { reoffClean } from 'reoff-clean'
 import reoffMarkupToStyle from 'reoff-markup-to-style'
 import reoffParseReferences from 'reoff-parse-references'
 import reoffCite from 'reoff-cite'
-import { join } from 'path'
+import { dirname, join } from 'path'
 
 export async function docxConverter(
   options: ConverterOptions,
@@ -57,19 +57,23 @@ export async function docxConverter(
         { type: options.citationType ?? 'zotero' },
       )
       .use(() => async (tree, vfile) => {
+        if (!existsSync(out!)) {
+          mkdirSync(out!)
+        }
+
         if (vfile.data.media) {
           // write them to ./media
 
-          console.log({
-            media,
-            out,
-            docx,
-          })
+          console.log(media)
           if (!existsSync(join(media!, 'media'))) {
             mkdirSync(join(media!, 'media'))
           }
           for (const [key, value] of Object.entries(vfile.data.media)) {
             const path = join(out!, `${key.replace('word/', '')}`)
+            if (!existsSync(dirname(path))) {
+              mkdirSync(dirname(path))
+            }
+
             const buff = await value.arrayBuffer()
 
             const writtenfile = await writeFile(path, Buffer.from(buff))
@@ -81,7 +85,7 @@ export async function docxConverter(
       .use(reoffUnifiedLatex, {
         documentClass: {
           name: options.latexOptions.documentClass,
-          options: documentClassOptions,
+          options: [documentClassOptions],
         },
         topSection: 0,
         paragraphHandlers,

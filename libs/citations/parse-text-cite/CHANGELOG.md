@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.3](https://github.com/TrialAndErrorOrg/parsers/compare/parse-text-cite-0.2.2...parse-text-cite-0.2.3) (2023-09-21)
+
+
+### Bug Fixes
+
+* don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
+* make typecheck work sort of ([d6a2eb6](https://github.com/TrialAndErrorOrg/parsers/commit/d6a2eb690a06d376043309f8bea6f418a4ff16ec))
+
 ## [0.2.2](https://github.com/TrialAndErrorOrg/parsers/compare/parse-text-cite-0.2.1...parse-text-cite-0.2.2) (2023-05-30)
 
 

@@ -47,13 +47,14 @@
       "inputs": ["default", "{workspaceRoot}/.eslintrc.json"]
     },
     "build": {
-      "dependsOn": ["^build", "lint"],
+      "dependsOn": [],
       "inputs": ["production", "^production"]
     },
     "make-publishable": {
-      "dependsOn": ["build", "^build", "lint"],
+      "dependsOn": ["build", "^make-publishable", "lint"],
       "inputs": ["production", "^production"],
-      "executor": "better-nx-tsc:publishable"
+      "executor": "better-nx-tsc:publishable",
+      "outputs": ["dist/{projectRoot}"]
     },
     "better-nx-tsc:publishable": {
       "options": {

@@ -13,24 +13,20 @@ function getNonTestDependencies(context: ExecutorContext) {
   )
 }
 
-function correctBadNxScopeDep(deps: [dep: string, version: unknown][]) {
-  const correctedDeps = deps.map(([dep, version]) => {
-    const stringVersion = String(version)
-    console.log(dep, stringVersion)
-    if (/@\w+/.test(dep)) {
-      const match = stringVersion.match(/(.*?)@((?:\d+|\.)+)/)
-      console.log({ match })
-      const depNextName = match?.[1]
-      const depVersion = match?.[2]
+function fixDependencies(dependencies: Record<string, any>) {
+  return Object.entries(dependencies).reduce((acc, [key, value]) => {
+    const match = value.match(/^([\w-]+)@([\d.]+)/)
+    console.log(match)
 
-      const newDep = [`${dep}/${depNextName}`, `^${depVersion}`]
-
-      return newDep
+    if (match) {
+      const [, name, version] = match
+      acc[`${key}/${name}`] = `^${version}`
+    } else {
+      acc[key] = value
     }
-    return [dep, version]
-  })
 
-  return correctedDeps
+    return acc
+  }, {} as typeof dependencies)
 }
 
 function updatePackageJson(packageJson: any, nonTestDependencies: Set<string>, distDir: string) {
@@ -39,19 +35,19 @@ function updatePackageJson(packageJson: any, nonTestDependencies: Set<string>, d
   console.log(packageJson)
 
   console.log(nonTestDependencies)
-  const newDependencies = Object.entries(dependencies).filter(([dep]) =>
-    nonTestDependencies.has(dep),
+  const newDependencies = Object.fromEntries(
+    Object.entries(dependencies).filter(([dep]) => nonTestDependencies.has(dep)),
   )
 
-  const newDevDependencies = Object.entries(devDependencies).filter(([dep]) =>
-    nonTestDependencies.has(dep),
+  const newDevDependencies = Object.fromEntries(
+    Object.entries(devDependencies).filter(([dep]) => nonTestDependencies.has(dep)),
   )
   console.log(newDependencies)
 
   return {
     ...packageJson,
-    dependencies: Object.fromEntries(correctBadNxScopeDep(newDependencies)),
-    devDependencies: Object.fromEntries(correctBadNxScopeDep(newDevDependencies)),
+    dependencies: fixDependencies(newDependencies),
+    devDependencies: fixDependencies(newDevDependencies),
   }
 }
 

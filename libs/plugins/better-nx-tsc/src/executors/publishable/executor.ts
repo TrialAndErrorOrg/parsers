@@ -16,7 +16,6 @@ function getNonTestDependencies(context: ExecutorContext) {
 function fixDependencies(dependencies: Record<string, any>) {
   return Object.entries(dependencies).reduce((acc, [key, value]) => {
     const match = value.match(/^([\w-]+)@([\d.]+)/)
-    console.log(match)
 
     if (match) {
       const [, name, version] = match
@@ -32,9 +31,9 @@ function fixDependencies(dependencies: Record<string, any>) {
 function updatePackageJson(packageJson: any, nonTestDependencies: Set<string>, distDir: string) {
   const dependencies = packageJson.dependencies ?? {}
   const devDependencies = packageJson.devDependencies ?? {}
-  console.log(packageJson)
+  console.log('old package json', packageJson)
 
-  console.log(nonTestDependencies)
+  console.log('non test deps', nonTestDependencies)
   const newDependencies = Object.fromEntries(
     Object.entries(dependencies).filter(([dep]) => nonTestDependencies.has(dep)),
   )
@@ -42,7 +41,7 @@ function updatePackageJson(packageJson: any, nonTestDependencies: Set<string>, d
   const newDevDependencies = Object.fromEntries(
     Object.entries(devDependencies).filter(([dep]) => nonTestDependencies.has(dep)),
   )
-  console.log(newDependencies)
+  console.log('new unfiexd deps', newDependencies)
 
   return {
     ...packageJson,

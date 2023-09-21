@@ -63,8 +63,6 @@ export async function docxConverter(
 
         if (vfile.data.media) {
           // write them to ./media
-
-          console.log(media)
           if (!existsSync(join(media!, 'media'))) {
             mkdirSync(join(media!, 'media'))
           }

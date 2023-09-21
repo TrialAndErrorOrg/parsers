@@ -5,21 +5,11 @@ import viteTsConfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
   cacheDir: '../../node_modules/.vite/book-converter',
-
   plugins: [
     viteTsConfigPaths({
       root: '../..',
     }),
   ],
-
-  // Uncomment this if you are using workers.
-  // worker: {
-  //  plugins: [
-  //    viteTsConfigPaths({
-  //      root: '../../../',
-  //    }),
-  //  ],
-  // },
 
   test: {
     globals: true,

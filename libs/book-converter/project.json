@@ -53,7 +53,52 @@
       "options": {
         "lintFilePatterns": ["libs/book-converter/**/*.ts"]
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    },
+    "version": {
+      "executor": "@jscutlery/semver:version",
+      "options": {
+        "preset": "conventional",
+        "trackDeps": true,
+        "push": true,
+        "baseBranch": "main",
+        "postTargets": [
+          "book-converter:npm",
+          "book-converter:github",
+          "book-converter:github-standalone"
+        ]
+      },
+      "trackDeps": true,
+      "push": true,
+      "baseBranch": "main"
+    },
+    "github": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}"
+      }
+    },
+    "github-standalone": {
+      "executor": "@jscutlery/semver:github",
+      "options": {
+        "tag": "${tag}",
+        "notes": "${notes}",
+        "repo": "TrialAndErrorOrg/reoff-cite"
+      }
+    },
+    "npm": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
     }
   },
+
   "tags": []
 }

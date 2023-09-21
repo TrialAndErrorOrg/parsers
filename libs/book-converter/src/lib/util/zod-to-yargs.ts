@@ -6,10 +6,11 @@ export const zodToYargsOptions = (zodSchema: typeof converterCLIOptionsDefaultSc
   const shape = zodSchema.shape
   const yargsOptions: Record<string, Options> = {}
 
+  // eslint-disable-next-line prefer-const
   for (let [key, value] of Object.entries(shape)) {
     let type: Options['type']
 
-    let description = value.description
+    const description = value.description
     if (value instanceof z.ZodDefault) {
       // @ts-expect-error aaa
       value = value._def.innerType

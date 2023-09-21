@@ -33,7 +33,7 @@
       "apa-parser": ["libs/citations/apa-parser/src/index.ts"],
       "ast-stringify": ["libs/ast-stringify/src/index.ts"],
       "better-nx-tsc": ["libs/plugins/better-nx-tsc/src/index.ts"],
-      "book-converter": ["libs/book-converter/src/index.ts"],
+      "@trialanderror/converter-cli": ["libs/book-converter/src/index.ts"],
       "crossref-json": ["libs/citations/crossref-json/src/index.ts"],
       "crossref-json-xml": ["libs/citations/crossref-json-xml/src/index.ts"],
       "crossref-to-csl": ["libs/citations/crossref-to-csl/src/index.ts"],

@@ -1,25 +1,25 @@
 {
-  "name": "book-converter",
+  "name": "@trialanderorr/converter-cli",
   "version": "0.0.1",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/book-converter",
+  "repository": "https://github.com/TrialAndErrorOrg/converter-cli",
   "homepage": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "description": "convert books",
+  "type": "module",
   "bin": {
-    "book-converter": "./lib/bin/cli.js"
+    "cote-conv": "./lib/bin/cli.js"
   },
   "keywords": [
     "unified",
-    "abstract",
-    "syntax",
-    "tree",
-    "ast"
+    "word",
+    "cli",
+    "latex"
   ],
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
-    "displayName": "book-converter",
+    "displayName": "@trialanderror/converter-cli",
     "tsconfig": "./tsconfig.lib.json"
   },
   "exports": {

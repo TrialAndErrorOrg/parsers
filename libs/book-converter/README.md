@@ -7,35 +7,32 @@ convert books
 - [book-converter](#book-converter)
   - [Contents](#contents)
   - [What is this?](#what-is-this)
-  - [When should I use this?](#when-should-i-use-this)
   - [Install](#install)
   - [Use](#use)
-  - [API](#api)
-  - [Syntax tree](#syntax-tree)
-  - [Types](#types)
-  - [Compatibility](#compatibility)
-  - [Security](#security)
   - [Related](#related)
   - [Contribute](#contribute)
   - [License](#license)
 
 ## What is this?
 
-## When should I use this?
+This is a CLI for more easily converting Word documents to LaTeX using the parsers developed by the Center of Trial and Error
 
 ## Install
 
+```sh
+npm i -g @trialanderror/converter-cli
+
+```
+
 ## Use
 
-## API
+The most basic usage is
 
-## Syntax tree
+```sh
+cote-conv --docx <path-to-docx-file>
+```
 
-## Types
-
-## Compatibility
-
-## Security
+which will convert your word file to LaTeX using the most basic settings.
 
 ## Related
 

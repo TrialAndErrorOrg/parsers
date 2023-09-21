@@ -2,6 +2,15 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.5](https://github.com/TrialAndErrorOrg/parsers/compare/xast-util-is-element-0.1.4...xast-util-is-element-0.1.5) (2023-09-21)
+
+
+### Bug Fixes
+
+* don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
+* make citations work ([67993d3](https://github.com/TrialAndErrorOrg/parsers/commit/67993d33150e05024be7e8df676e59d4cd9c57b1))
+* something xast ([576964c](https://github.com/TrialAndErrorOrg/parsers/commit/576964c7f1cfb0d0ad3741fb4fb0d17d063d69a3))
+
 ## [0.1.5](https://github.com/TrialAndErrorOrg/parsers/compare/xast-util-is-element-0.1.4...xast-util-is-element-0.1.5) (2023-07-18)
 
 

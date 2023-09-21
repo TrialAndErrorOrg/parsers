@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.4](https://github.com/TrialAndErrorOrg/parsers/compare/unified-latex-stringify-0.1.3...unified-latex-stringify-0.1.4) (2023-09-21)
+
+
+### Bug Fixes
+
+* don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
+* stupid package.json issue ([e27ee3e](https://github.com/TrialAndErrorOrg/parsers/commit/e27ee3ed91619e8adb0de6ed96af99da0ec79198))
+
 ## [0.1.3](https://github.com/TrialAndErrorOrg/parsers/compare/unified-latex-stringify-0.1.2...unified-latex-stringify-0.1.3) (2023-05-30)
 
 

@@ -2,6 +2,38 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-to-unified-latex-0.2.0...ooxast-util-to-unified-latex-0.3.0) (2023-09-21)
+
+### Dependency Updates
+
+* `ooxast-util-get-style` updated to version `0.2.2`
+* `ooxast` updated to version `0.1.4`
+* `ooxast-util-citations` updated to version `0.2.0`
+* `xast-util-is-element` updated to version `0.1.5`
+* `xast-util-select` updated to version `0.1.3`
+* `csl-to-biblatex` updated to version `0.2.1`
+* `docx-to-vfile` updated to version `0.8.2`
+* `reoff-parse` updated to version `0.3.0`
+* `reoff-clean` updated to version `0.1.2`
+* `reoff-cite` updated to version `0.2.0`
+* `reoff-parse-references` updated to version `0.1.3`
+* `unified-latex-stringify` updated to version `0.1.4`
+
+### Features
+
+* add escaping ([bfc6f3c](https://github.com/TrialAndErrorOrg/parsers/commit/bfc6f3c69601bb192977a3e0238f564fcdbe19df))
+* book-converter! ([f2f74cb](https://github.com/TrialAndErrorOrg/parsers/commit/f2f74cb3f6d9a2ccee2e7fa8f08a435c8cf313a4))
+* **ooxast-util-to-unified-latex:** add support for hyperlink handler ([51f188e](https://github.com/TrialAndErrorOrg/parsers/commit/51f188e6ad5f4637f1518ca83ca98670e9d69f99))
+* **ooxast-util-to-unified-latex:** allow user to specify custom handlers for formatting ([e3bdcdc](https://github.com/TrialAndErrorOrg/parsers/commit/e3bdcdc0e6b4972d26f7c566f0992d77b2775f39))
+* **ooxast-util-to-unified-latex:** allow user to specify custom handlers per paragraph ([4b7e202](https://github.com/TrialAndErrorOrg/parsers/commit/4b7e2026b63fe555d68c41ee78c8729591e98353))
+
+
+### Bug Fixes
+
+* don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
+* make citations work ([67993d3](https://github.com/TrialAndErrorOrg/parsers/commit/67993d33150e05024be7e8df676e59d4cd9c57b1))
+* **ooxast-util-to-unified-latex:** just give up on infer heading for now ([4709f1c](https://github.com/TrialAndErrorOrg/parsers/commit/4709f1cbe5fe8bb3e6fbc3ade8f5c92c8c71afb1))
+
 ## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-to-unified-latex-0.1.0...ooxast-util-to-unified-latex-0.2.0) (2023-03-29)
 
 ### Dependency Updates

@@ -2,6 +2,27 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-citations-0.1.2...ooxast-util-citations-0.2.0) (2023-09-21)
+
+### Dependency Updates
+
+* `csl-consolidate` updated to version `0.1.3`
+* `ooxast` updated to version `0.1.4`
+* `ooxast-util-get-style` updated to version `0.2.2`
+* `parse-text-cite` updated to version `0.2.3`
+* `xast-util-is-element` updated to version `0.1.5`
+* `xast-util-select` updated to version `0.1.3`
+* `ooxast-util-citation-plugin` updated to version `0.1.3`
+
+### Features
+
+* **ooxast-util-citations:** add optional VFile message parameter to findRef and constructCitation functions ([801ae49](https://github.com/TrialAndErrorOrg/parsers/commit/801ae49550c529cb79b2652fdb6da18456e37e31))
+
+
+### Bug Fixes
+
+* don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
+
 ## [0.1.2](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-citations-0.1.1...ooxast-util-citations-0.1.2) (2023-03-29)
 
 ### Dependency Updates

@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.3](https://github.com/TrialAndErrorOrg/parsers/compare/xast-util-select-0.1.2...xast-util-select-0.1.3) (2023-09-21)
+
+### Dependency Updates
+
+* `xast-util-has-attribute` updated to version `0.1.6`
+* `xast-util-is-element` updated to version `0.1.5`
+
+### Bug Fixes
+
+* don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
+* **ooxast-util-to-unified-latex:** just give up on infer heading for now ([4709f1c](https://github.com/TrialAndErrorOrg/parsers/commit/4709f1cbe5fe8bb3e6fbc3ade8f5c92c8c71afb1))
+
 ## [0.1.2](https://github.com/TrialAndErrorOrg/parsers/compare/xast-util-select-0.1.1...xast-util-select-0.1.2) (2023-03-14)
 
 ### Dependency Updates

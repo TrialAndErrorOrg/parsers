@@ -13,21 +13,45 @@ function getNonTestDependencies(context: ExecutorContext) {
   )
 }
 
+function correctBadNxScopeDep(deps: [dep: string, version: unknown][]) {
+  const correctedDeps = deps.map(([dep, version]) => {
+    const stringVersion = String(version)
+    console.log(dep, stringVersion)
+    if (/@\w+/.test(dep)) {
+      const match = stringVersion.match(/(.*?)@((?:\d+|\.)+)/)
+      console.log({ match })
+      const depNextName = match?.[1]
+      const depVersion = match?.[2]
+
+      const newDep = [`${dep}/${depNextName}`, `^${depVersion}`]
+
+      return newDep
+    }
+    return [dep, version]
+  })
+
+  return correctedDeps
+}
+
 function updatePackageJson(packageJson: any, nonTestDependencies: Set<string>, distDir: string) {
   const dependencies = packageJson.dependencies ?? {}
   const devDependencies = packageJson.devDependencies ?? {}
+  console.log(packageJson)
 
-  const newDependencies = Object.fromEntries(
-    Object.entries(dependencies).filter(([dep]) => nonTestDependencies.has(dep)),
+  console.log(nonTestDependencies)
+  const newDependencies = Object.entries(dependencies).filter(([dep]) =>
+    nonTestDependencies.has(dep),
   )
-  const newDevDependencies = Object.fromEntries(
-    Object.entries(devDependencies).filter(([dep]) => nonTestDependencies.has(dep)),
+
+  const newDevDependencies = Object.entries(devDependencies).filter(([dep]) =>
+    nonTestDependencies.has(dep),
   )
+  console.log(newDependencies)
 
   return {
     ...packageJson,
-    dependencies: newDependencies,
-    devDependencies: newDevDependencies,
+    dependencies: Object.fromEntries(correctBadNxScopeDep(newDependencies)),
+    devDependencies: Object.fromEntries(correctBadNxScopeDep(newDevDependencies)),
   }
 }
 
@@ -97,6 +121,7 @@ export default async function runExecutor(
     nonTestDependencies,
     distDir,
   )
+  console.log(newPackageJson)
 
   if (JSON.stringify(newPackageJson) === JSON.stringify(packageJson)) {
     console.log('No changes to package.json')

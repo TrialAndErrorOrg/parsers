@@ -51,7 +51,7 @@
       "inputs": ["production", "^production"]
     },
     "make-publishable": {
-      "dependsOn": ["^build", "lint"],
+      "dependsOn": ["build", "^build", "lint"],
       "inputs": ["production", "^production"],
       "executor": "better-nx-tsc:publishable"
     },

@@ -2,6 +2,23 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.1.3](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-parse-bib-0.1.2...ooxast-util-parse-bib-0.1.3) (2023-09-21)
+
+### Dependency Updates
+
+* `ooxast` updated to version `0.1.4`
+* `ooxast-util-get-style` updated to version `0.2.2`
+* `xast-util-is-element` updated to version `0.1.5`
+* `xast-util-select` updated to version `0.1.3`
+* `csl-consolidate` updated to version `0.1.3`
+* `docx-to-vfile` updated to version `0.8.2`
+* `reoff-parse` updated to version `0.3.0`
+
+### Bug Fixes
+
+* better ([a60c242](https://github.com/TrialAndErrorOrg/parsers/commit/a60c242eae08664e8c1f8976d27ac6d294d2becf))
+* don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
+
 ## [0.1.2](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-parse-bib-0.1.1...ooxast-util-parse-bib-0.1.2) (2023-03-29)
 
 ### Dependency Updates

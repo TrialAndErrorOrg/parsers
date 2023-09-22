@@ -36,7 +36,7 @@
         "packageJson": "libs/ooxast/ooxast-util-to-jast/package.json",
         "main": "libs/ooxast/ooxast-util-to-jast/src/index.ts",
         "assets": ["libs/ooxast/ooxast-util-to-jast/*.md"],
-        "updateBuildableProjectDepsInPackageJson": true,
+
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

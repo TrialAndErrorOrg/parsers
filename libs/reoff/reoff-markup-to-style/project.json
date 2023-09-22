@@ -14,7 +14,7 @@
         "packageJson": "libs/reoff/reoff-markup-to-style/package.json",
         "main": "libs/reoff/reoff-markup-to-style/src/index.ts",
         "assets": ["libs/reoff/reoff-markup-to-style/*.md"],
-        "updateBuildableProjectDepsInPackageJson": true,
+
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

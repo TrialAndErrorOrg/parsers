@@ -36,7 +36,7 @@
         "packageJson": "libs/relatex/relatex-add-preamble/package.json",
         "main": "libs/relatex/relatex-add-preamble/src/index.ts",
         "assets": ["libs/relatex/relatex-add-preamble/*.md"],
-        "updateBuildableProjectDepsInPackageJson": true,
+
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

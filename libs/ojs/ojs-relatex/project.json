@@ -28,7 +28,7 @@
         "packageJson": "libs/ojs/ojs-relatex/package.json",
         "main": "libs/ojs/ojs-relatex/src/index.ts",
         "assets": ["libs/ojs/ojs-relatex/*.md"],
-        "updateBuildableProjectDepsInPackageJson": true,
+
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

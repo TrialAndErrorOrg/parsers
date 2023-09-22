@@ -34,7 +34,7 @@
         "tsConfig": "libs/reoff/docx-to-vfile/tsconfig.lib.json",
         "main": "libs/reoff/docx-to-vfile/src/index.ts",
         "assets": ["libs/reoff/docx-to-vfile/*.md"],
-        "updateBuildableProjectDepsInPackageJson": true,
+
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },
       "dependsOn": [

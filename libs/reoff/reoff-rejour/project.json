@@ -36,7 +36,7 @@
         "packageJson": "libs/reoff/reoff-rejour/package.json",
         "main": "libs/reoff/reoff-rejour/src/index.ts",
         "assets": ["libs/reoff/reoff-rejour/*.md"],
-        "updateBuildableProjectDepsInPackageJson": true,
+
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

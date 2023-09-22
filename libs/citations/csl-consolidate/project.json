@@ -36,7 +36,7 @@
         "packageJson": "libs/citations/csl-consolidate/package.json",
         "main": "libs/citations/csl-consolidate/src/index.ts",
         "assets": ["libs/citations/csl-consolidate/*.md"],
-        "updateBuildableProjectDepsInPackageJson": true,
+
         "clean": true,
 
         "buildableProjectDepsInPackageJsonType": "dependencies"

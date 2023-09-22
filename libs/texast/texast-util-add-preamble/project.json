@@ -36,7 +36,7 @@
         "packageJson": "libs/texast/texast-util-add-preamble/package.json",
         "main": "libs/texast/texast-util-add-preamble/src/index.ts",
         "assets": ["libs/texast/texast-util-add-preamble/*.md"],
-        "updateBuildableProjectDepsInPackageJson": true,
+
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

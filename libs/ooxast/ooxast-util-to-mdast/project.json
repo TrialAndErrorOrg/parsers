@@ -17,7 +17,7 @@
         "packageJson": "libs/ooxast/ooxast-util-to-mdast/package.json",
         "main": "libs/ooxast/ooxast-util-to-mdast/src/index.ts",
         "assets": ["libs/ooxast/ooxast-util-to-mdast/*.md"],
-        "updateBuildableProjectDepsInPackageJson": true,
+
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies",
         "shallowDependencies": true

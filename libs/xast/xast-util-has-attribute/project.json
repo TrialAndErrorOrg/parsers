@@ -24,7 +24,7 @@
         "packageJson": "libs/xast/xast-util-has-attribute/package.json",
         "main": "libs/xast/xast-util-has-attribute/src/index.ts",
         "assets": ["libs/xast/xast-util-has-attribute/*.md"],
-        "updateBuildableProjectDepsInPackageJson": true,
+
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

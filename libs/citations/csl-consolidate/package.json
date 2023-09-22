@@ -34,5 +34,15 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "axios": "^0.27.2",
+    "csl-json": "0.1.0",
+    "@hokify/axios-rate-limit": "^2.0.5",
+    "similarity": "^1.2.1",
+    "crossref-to-csl": "*",
+    "crossref-json": "*",
+    "utility-types": "^3.10.0",
+    "flatry": "^1.0.14"
+  }
 }

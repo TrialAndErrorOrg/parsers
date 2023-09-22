@@ -84,6 +84,7 @@
     "eventsource-parser": "^1.0.0",
     "execa": "^6.1.0",
     "extend": "^3.0.2",
+    "flatry": "^1.0.14",
     "form-data": "^4.0.0",
     "hast-util-from-html": "^1.0.2",
     "hast-util-phrasing": "^2.0.2",

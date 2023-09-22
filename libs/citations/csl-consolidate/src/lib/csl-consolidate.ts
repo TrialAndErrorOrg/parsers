@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios'
 import { Data as CSL } from 'csl-json'
 import RateLimit from '@hokify/axios-rate-limit'
-import { tryCatchPromise } from 'misc'
+import flatTry from 'flatry'
 import similarity from 'similarity'
 import { crossrefToCsl } from 'crossref-to-csl'
 import { CrossrefJSON, CrossrefResponse } from 'crossref-json'
@@ -69,7 +69,7 @@ export async function consolidate(
     types.push('crossref')
   }
 
-  const [resolvedPromises, error] = await tryCatchPromise(Promise.all(crossRefResponses as any))
+  const [error, resolvedPromises] = await flatTry(Promise.all(crossRefResponses as any))
 
   if (error) {
     console.error(error)

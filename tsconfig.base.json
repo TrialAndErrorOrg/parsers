@@ -50,7 +50,6 @@
       "jast-util-to-csl": ["libs/jast/jast-util-to-csl/src/index.ts"],
       "jast-util-to-texast": ["libs/jast/jast-util-to-texast/src/index.ts"],
       "jastscript": ["libs/rejour/jastscript/src/index.ts"],
-      "misc": ["libs/utils/misc/src/index.ts"],
       "ojs-client": ["libs/ojs/ojs-client/src/index.ts"],
       "ojs-relatex": ["libs/ojs/ojs-relatex/src/index.ts"],
       "ojs-types": ["libs/citations/ojs-types/src/index.ts"],

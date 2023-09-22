@@ -188,6 +188,9 @@ dependencies:
   extend:
     specifier: ^3.0.2
     version: 3.0.2
+  flatry:
+    specifier: ^1.0.14
+    version: 1.0.14
   form-data:
     specifier: ^4.0.0
     version: 4.0.0
@@ -11339,6 +11342,10 @@ packages:
   /flat@5.0.2:
     resolution: {integrity: sha512-b6suED+5/3rTpUBdG1gupIl8MPFCAMA0QXwmljLhvCUKcUvdE4gWky9zpuGCcXHOsz4J9wPGNWq6OKpmIzz3hQ==}
     hasBin: true
+
+  /flatry@1.0.14:
+    resolution: {integrity: sha512-6YW4uLahZdZusQNNJQfcYD+I8I89Zu7CjM39T2ZlEc6RDOEUfJY0AYmCvckuRZmPtCg5WRnLBn/+6jN3FoLmTA==}
+    dev: false
 
   /flatted@3.2.7:
     resolution: {integrity: sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==}

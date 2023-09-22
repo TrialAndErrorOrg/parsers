@@ -1,6 +1,3 @@
-import { Http2ServerResponse } from 'http2'
-import { RequestOptions } from 'https'
-import fetch from 'isomorphic-fetch'
 import { paths } from './swagger-types.js'
 import { Responses } from './types.js'
 

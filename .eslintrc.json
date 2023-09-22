@@ -5,6 +5,13 @@
   "extends": ["plugin:regexp/recommended"],
   "overrides": [
     {
+      "files": ["{package,project}.json"],
+      "parser": "jsonc-eslint-parser",
+      "rules": {
+        "@nx/dependency-checks": "error"
+      }
+    },
+    {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
         "import/extensions": ["error", "ignorePackages"],

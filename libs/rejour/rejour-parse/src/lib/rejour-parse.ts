@@ -4,7 +4,8 @@ import { ParserFunction } from 'unified'
 import { Node as XastNode, Element as XastElement } from 'xast'
 import { Root } from 'jast-types'
 import { filter } from 'unist-util-filter'
-import { map } from 'misc'
+import { map as unistMap } from 'unist-util-map'
+const map = unistMap as any
 
 export interface Settings {
   removeWhiteSpace?: boolean

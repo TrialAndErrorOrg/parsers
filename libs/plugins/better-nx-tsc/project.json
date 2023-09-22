@@ -1,6 +1,6 @@
 {
   "name": "better-nx-tsc",
-  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "packages/better-nx-tsc/src",
   "projectType": "library",
   "targets": {

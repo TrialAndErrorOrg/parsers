@@ -12,15 +12,15 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/citations/csl-consolidate/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/libs/citations/csl-consolidate"],
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/citations/csl-consolidate"],
       "options": {
         "jestConfig": "libs/citations/csl-consolidate/jest.config.js",
         "passWithNoTests": true
@@ -30,7 +30,7 @@
       "executor": "better-nx-tsc:publishable"
     },
     "build": {
-      "executor": "@nx/js:tsc",
+      "executor": "@nrwl/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "rootDir": "libs/citations/csl-consolidate/src",
@@ -41,15 +41,17 @@
         "assets": ["libs/citations/csl-consolidate/*.md"],
         "updateBuildableProjectDepsInPackageJson": true,
         "clean": true,
+
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },
       "dependsOn": [
         {
+          "projects": "dependencies",
           "target": "build",
-          "params": "forward",
-          "dependencies": true
+          "params": "forward"
         },
         {
+          "projects": "self",
           "target": "lint"
         }
       ]

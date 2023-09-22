@@ -1,6 +1,13 @@
 import { Node, Element, isElement, Root, Text, Abstract } from 'jast-types'
-import { visit, remove } from 'misc'
+import { visit as unistVis } from 'unist-util-visit'
+import { remove as unistRemove } from 'unist-util-remove'
 import { filter } from 'unist-util-filter'
+
+/**
+ * these cause too deep type instantiations
+ */
+const visit = unistVis as any
+const remove = unistRemove as any
 
 // console.log(Node)
 // fix for typescript bug
@@ -24,7 +31,7 @@ const findAbstractNode = (tree: Root): Abstract | null => {
     (node: Node) => isElement(node) && node.name === 'sec',
     (node: Element) => {
       if (containsAbstract(node as Element)) abstractNode = node as Element
-    }
+    },
   )
   return abstractNode
 }
@@ -41,10 +48,7 @@ export default function rejourMoveAbstract() {
 
     if (!abstractNode) return
 
-    const abstractBody = filter(
-      abstractNode,
-      (node) => !(isElement(node) && node.name === 'title')
-    )
+    const abstractBody = filter(abstractNode, (node) => !(isElement(node) && node.name === 'title'))
 
     if (abstractBody === null) return
 
@@ -60,7 +64,7 @@ export default function rejourMoveAbstract() {
       (node: Node) => isElement(node) && node.name === 'article-meta',
       (articleMetaDataNode: Element) => {
         articleMetaDataNode?.children?.push(abstract)
-      }
+      },
     )
   }
 }

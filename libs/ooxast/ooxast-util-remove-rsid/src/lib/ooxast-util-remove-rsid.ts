@@ -1,9 +1,16 @@
-import { visit, remove } from 'misc'
 import { Text, Root, Node, P, R } from 'ooxast'
 import { convertElement, isElement } from 'xast-util-is-element'
 import { select } from 'xast-util-select'
 import { select as unistSelect } from 'unist-util-select'
 import { getRStyle } from 'ooxast-util-get-style'
+import { visit as unistVisit } from 'unist-util-visit'
+import { remove as unistRemove } from 'unist-util-remove'
+
+/**
+ * these cause too deep type instantiations
+ */
+const visit = unistVisit as any
+const remove = unistRemove as any
 
 // Check to see if node is a paragraph, because we want to merge elements in a paragraph
 const isP = convertElement<P>('w:p')

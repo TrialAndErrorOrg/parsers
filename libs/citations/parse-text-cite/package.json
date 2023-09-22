@@ -1,6 +1,6 @@
 {
   "name": "parse-text-cite",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "type": "module",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",

@@ -80,6 +80,9 @@
         "readme": "libs/unified-latex/unified-latex-stringify/README.md",
         "packageJSON": "libs/unified-latex/unified-latex-stringify/package.json"
       }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint"
     }
   },
   "tags": []

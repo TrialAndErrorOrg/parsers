@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.9.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.8.2...docx-to-vfile-0.9.0) (2023-09-22)
+
+
+### Features
+
+* giant prettier + eslint run ([6becd94](https://github.com/TrialAndErrorOrg/parsers/commit/6becd9492006b9a7f7f91b60db440bb31d9140c8))
+
 ## [0.8.2](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.8.1...docx-to-vfile-0.8.2) (2023-09-21)
 
 ### Bug Fixes

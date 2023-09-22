@@ -2,6 +2,19 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-citation-plugin-0.1.3...ooxast-util-citation-plugin-0.2.0) (2023-09-22)
+
+### Dependency Updates
+
+* `ooxast` updated to version `0.2.0`
+* `xast-util-is-element` updated to version `0.2.0`
+* `docx-to-vfile` updated to version `0.9.0`
+* `reoff-parse` updated to version `0.4.0`
+
+### Features
+
+* giant prettier + eslint run ([6becd94](https://github.com/TrialAndErrorOrg/parsers/commit/6becd9492006b9a7f7f91b60db440bb31d9140c8))
+
 ## [0.1.3](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-citation-plugin-0.1.2...ooxast-util-citation-plugin-0.1.3) (2023-09-21)
 
 ### Dependency Updates

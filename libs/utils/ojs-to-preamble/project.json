@@ -1,5 +1,6 @@
 {
   "name": "utils-ojs-to-preamble",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/utils/ojs-to-preamble/src",
   "projectType": "library",
   "targets": {
@@ -11,15 +12,15 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/utils/ojs-to-preamble/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/utils/ojs-to-preamble"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/utils/ojs-to-preamble"],
       "options": {
         "jestConfig": "libs/utils/ojs-to-preamble/jest.config.js",
         "passWithNoTests": true

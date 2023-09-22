@@ -1,5 +1,5 @@
 import { UpdateReadmeExecutorSchema } from './schema.js'
-import { ExecutorContext, workspaceRoot } from '@nrwl/devkit'
+import { ExecutorContext, workspaceRoot } from '@nx/devkit'
 import { readmeAction } from './readmeAction.js'
 import path from 'path'
 import { exec } from 'child_process'

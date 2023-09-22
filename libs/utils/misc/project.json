@@ -15,7 +15,7 @@
       "executor": "better-nx-tsc:publishable"
     },
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "rootDir": "libs/utils/misc/src",
@@ -30,26 +30,25 @@
       },
       "dependsOn": [
         {
-          "projects": "dependencies",
           "target": "build",
-          "params": "forward"
+          "params": "forward",
+          "dependencies": true
         },
         {
-          "projects": "self",
           "target": "lint"
         }
       ]
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/utils/misc/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/utils/misc"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/utils/misc"],
       "options": {
         "jestConfig": "libs/utils/misc/jest.config.js",
         "passWithNoTests": true

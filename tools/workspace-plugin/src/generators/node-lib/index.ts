@@ -17,23 +17,23 @@ import {
   updateProjectConfiguration,
   TargetConfiguration,
   updateTsConfigsToJs,
-} from '@nrwl/devkit'
-import { ExecutorOptions } from '@nrwl/js/src/utils/schema'
+} from '@nx/devkit'
+import { ExecutorOptions } from '@nx/js/src/utils/schema'
 import { VersionBuilderSchema } from '@jscutlery/semver/src/executors/version/schema'
 import { GithubExecutorSchema } from '@jscutlery/semver/src/executors/github/schema'
 
 import { Schema } from './schema.js'
 import { join } from 'path'
-import { nxVersion } from '@nrwl/workspace/src/utils/versions'
-import { addLint } from '@nrwl/workspace/src/generators/library/library'
-import { Schema as LintExecutorOptions } from '@nrwl/workspace/src/generators/library/schema'
-import { runTasksInSerial } from '@nrwl/workspace/src/utilities/run-tasks-in-serial'
-import { jestProjectGenerator } from '@nrwl/jest'
-import { VitestExecutorOptions } from '@nrwl/vite/executors'
-import { updateTsConfig } from '@nrwl/jest/src/generators/jest-project/lib/update-tsconfig'
-import { updateJestConfig } from '@nrwl/jest/src/generators/jest-project/lib/update-jestconfig'
-import { JestExecutorOptions } from '@nrwl/jest/src/executors/jest/schema'
-import { updateWorkspace } from '@nrwl/jest/src/generators/jest-project/lib/update-workspace'
+import { nxVersion } from '@nx/workspace/src/utils/versions'
+import { addLint } from '@nx/workspace/src/generators/library/library'
+import { Schema as LintExecutorOptions } from '@nx/workspace/src/generators/library/schema'
+import { runTasksInSerial } from '@nx/workspace/src/utilities/run-tasks-in-serial'
+import { jestProjectGenerator } from '@nx/jest'
+import { VitestExecutorOptions } from '@nx/vite/executors'
+import { updateTsConfig } from '@nx/jest/src/generators/jest-project/lib/update-tsconfig'
+import { updateJestConfig } from '@nx/jest/src/generators/jest-project/lib/update-jestconfig'
+import { JestExecutorOptions } from '@nx/jest/src/executors/jest/schema'
+import { updateWorkspace } from '@nx/jest/src/generators/jest-project/lib/update-workspace'
 
 export interface NormalizedSchema extends Schema {
   name: string
@@ -208,7 +208,7 @@ const addProject = (tree: Tree, options: NormalizedSchema) => {
   options.name = options.name.replace(/^((\w+)-\2)/, '$2')
 
   const { libsDir } = getWorkspaceLayout(tree)
-  // addDependenciesToPackageJson(tree, {}, { '@nrwl/js': nxVersion })
+  // addDependenciesToPackageJson(tree, {}, { '@nx/js': nxVersion })
 
   const build: TargetConfiguration<ExecutorOptions> = {
     executor: `better-nx-tsc:tsc`,
@@ -298,7 +298,7 @@ const addProject = (tree: Tree, options: NormalizedSchema) => {
   }
 
   const test: TargetConfiguration<VitestExecutorOptions> = {
-    executor: '@nrwl/vite:test',
+    executor: '@nx/vite:test',
     outputs: ['{workspaceRoot}/coverage/{projectRoot}'],
     options: {
       passWithNoTests: true,
@@ -315,7 +315,7 @@ const addProject = (tree: Tree, options: NormalizedSchema) => {
 
   if (options.unitTestRunner === 'jest') {
     const test: TargetConfiguration<JestExecutorOptions> = {
-      executor: '@nrwl/jest:jest',
+      executor: '@nx/jest:jest',
       outputs: ['coverage'],
       options: {
         jestConfig: `${options.projectRoot}/jest.config.js`,

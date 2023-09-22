@@ -8,7 +8,7 @@
       "executor": "better-nx-tsc:publishable"
     },
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "rootDir": "libs/ooxast/ooxast-util-to-unified-latex/src",
@@ -24,18 +24,17 @@
       },
       "dependsOn": [
         {
-          "projects": "dependencies",
           "target": "build",
-          "params": "forward"
+          "params": "forward",
+          "dependencies": true
         },
         {
-          "projects": "self",
           "target": "lint"
         }
       ]
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/ooxast/ooxast-util-to-unified-latex/**/*.ts"]
@@ -48,8 +47,8 @@
       }
     },
     "test": {
-      "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/libs/ooxast/ooxast-util-to-unified-latex"],
+      "executor": "@nx/vite:test",
+      "outputs": ["{workspaceRoot}/coverage/libs/ooxast/ooxast-util-to-unified-latex"],
       "options": {
         "passWithNoTests": true
       }

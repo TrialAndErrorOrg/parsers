@@ -6,8 +6,8 @@ import {
   UpdatePackageJsonOption,
 } from './update-package-json.js'
 import { vol } from 'memfs'
-import { DependencyType, ExecutorContext, ProjectGraph } from '@nrwl/devkit'
-import { DependentBuildableProjectNode } from '@nrwl/workspace/src/utilities/buildable-libs-utils'
+import { DependencyType, ExecutorContext, ProjectGraph } from '@nx/devkit'
+import { DependentBuildableProjectNode } from '@nx/workspace/src/utilities/buildable-libs-utils'
 
 jest.mock('nx/src/utils/workspace-root', () => ({
   workspaceRoot: '/root',

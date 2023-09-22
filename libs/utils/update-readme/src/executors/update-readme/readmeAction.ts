@@ -14,7 +14,7 @@ import { appendFile, readdir, readFile, writeFile } from 'fs/promises'
 import { gfmFromMarkdown } from 'mdast-util-gfm'
 import { fromMarkdown } from 'mdast-util-from-markdown'
 import remarkGfm from 'remark-gfm'
-import { workspaceRoot } from '@nrwl/devkit'
+import { workspaceRoot } from '@nx/devkit'
 
 const apps = join(workspaceRoot, 'apps')
 const libs = join(workspaceRoot, 'libs')

@@ -1,7 +1,7 @@
 import {
   ExecutorOptions as NrwlExecutorOptions,
   NormalizedExecutorOptions as NrwlNormalizedExecutorOptions,
-} from '@nrwl/js/src/utils/schema'
+} from '@nx/js/src/utils/schema'
 
 export interface ExecutorOptions extends NrwlExecutorOptions {
   internal?: string[]

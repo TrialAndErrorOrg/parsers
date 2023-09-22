@@ -1,19 +1,24 @@
 {
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "npmScope": "trialanderror",
+  "workspaceLayout": {
+    "appsDir": "apps",
+    "libsDir": "libs"
+  },
   "affected": {
     "defaultBase": "main"
   },
   "cli": {
-    "defaultCollection": "@nrwl/next"
+    "defaultCollection": "@nx/next"
   },
   "generators": {
-    "@nrwl/node:library": {},
-    "@nrwl/react": {
+    "@nx/node:library": {},
+    "@nx/react": {
       "application": {
         "babel": true
       }
     },
-    "@nrwl/next": {
+    "@nx/next": {
       "application": {
         "style": "css",
         "linter": "eslint"
@@ -28,7 +33,8 @@
       "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
       "!{projectRoot}/tsconfig.spec.json",
       "!{projectRoot}/jest.config.[jt]s",
-      "!{projectRoot}/vite.config.[jt]s"
+      "!{projectRoot}/vite.config.[jt]s",
+      "!{projectRoot}/src/test-setup.[jt]s"
     ],
     "sharedGlobals": []
   },
@@ -54,7 +60,7 @@
       "dependsOn": ["build", "^make-publishable", "lint"],
       "inputs": ["production", "^production"],
       "executor": "better-nx-tsc:publishable",
-      "outputs": ["dist/{projectRoot}"]
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"]
     },
     "better-nx-tsc:publishable": {
       "options": {

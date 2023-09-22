@@ -5,8 +5,7 @@
   "projectType": "library",
   "targets": {
     "build": {
-      // "executor": "@nrwl/js:tsc",
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "rootDir": "libs/reoff/reoff-markup-to-style/src",
@@ -21,12 +20,11 @@
       },
       "dependsOn": [
         {
-          "projects": "dependencies",
           "target": "build",
-          "params": "forward"
+          "params": "forward",
+          "dependencies": true
         },
         {
-          "projects": "self",
           "target": "lint"
         }
       ]
@@ -50,8 +48,8 @@
       "dependsOn": [
         {
           "target": "version",
-          "projects": "dependencies",
-          "params": "forward"
+          "params": "forward",
+          "dependencies": true
         }
       ]
     },
@@ -72,7 +70,7 @@
       }
     },
     "test": {
-      "executor": "@nrwl/vite:test",
+      "executor": "@nx/vite:test",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "passWithNoTests": true
@@ -92,7 +90,7 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/reoff/reoff-markup-to-style/**/*.ts"]

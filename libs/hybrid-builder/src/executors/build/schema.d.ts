@@ -1,5 +1,5 @@
-import { SwcExecutorOptions } from "@nrwl/js/src/utils/schema";
+import { SwcExecutorOptions } from '@nx/js/src/utils/schema'
 export interface BuildExecutorSchema extends SwcExecutorOptions {
-  tsConfigESM: string;
-  tsConfigCJS: string;
-} 
+  tsConfigESM: string
+  tsConfigCJS: string
+}

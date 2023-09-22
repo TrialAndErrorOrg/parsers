@@ -1,6 +1,5 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "cli": "nx",
   "$id": "NxMyNodeLibrary",
   "title": "Create an ESM Node Library for Nx",
   "type": "object",
@@ -33,12 +32,19 @@
     "linter": {
       "description": "The tool to use for running lint checks.",
       "type": "string",
-      "enum": ["eslint", "tslint"],
+      "enum": [
+        "eslint",
+        "tslint"
+      ],
       "default": "eslint"
     },
     "unitTestRunner": {
       "type": "string",
-      "enum": ["jest", "vitest", "none"],
+      "enum": [
+        "jest",
+        "vitest",
+        "none"
+      ],
       "description": "Test runner to use for unit tests",
       "default": "vitest"
     },
@@ -70,7 +76,10 @@
     "importPath": {
       "type": "string",
       "description": "The library name used to import it, like @myorg/my-awesome-lib. Must be a valid npm name.",
-      "$default": { "$source": "argv", "index": 1 }
+      "$default": {
+        "$source": "argv",
+        "index": 1
+      }
     },
     "rootDir": {
       "type": "string",
@@ -79,7 +88,10 @@
     },
     "testEnvironment": {
       "type": "string",
-      "enum": ["jsdom", "node"],
+      "enum": [
+        "jsdom",
+        "node"
+      ],
       "description": "The test environment to use if unitTestRunner is set to jest",
       "default": "jsdom"
     },
@@ -129,10 +141,16 @@
     },
     "compiler": {
       "type": "string",
-      "enum": ["tsc", "swc"],
+      "enum": [
+        "tsc",
+        "swc"
+      ],
       "default": "swc",
       "description": "The compiler used by the build and test targets."
     }
   },
-  "required": ["name", "description"]
+  "required": [
+    "name",
+    "description"
+  ]
 }

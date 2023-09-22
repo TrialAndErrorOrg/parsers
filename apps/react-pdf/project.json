@@ -5,11 +5,12 @@
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/next:build",
-      "outputs": ["{options.outputPath}"],
+      "executor": "@nx/next:build",
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "defaultConfiguration": "production",
       "options": {
-        "root": "apps/react-pdf",
         "outputPath": "dist/apps/react-pdf"
       },
       "configurations": {
@@ -18,7 +19,7 @@
       }
     },
     "serve": {
-      "executor": "@nrwl/next:server",
+      "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "react-pdf:build",
@@ -36,24 +37,30 @@
       }
     },
     "export": {
-      "executor": "@nrwl/next:export",
+      "executor": "@nx/next:export",
       "options": {
         "buildTarget": "react-pdf:build:production"
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/react-pdf"],
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/apps/react-pdf"
+      ],
       "options": {
         "jestConfig": "apps/react-pdf/jest.config.js",
         "passWithNoTests": true
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "executor": "@nx/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["apps/react-pdf/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "apps/react-pdf/**/*.{ts,tsx,js,jsx}"
+        ]
       }
     }
   },

@@ -12,15 +12,15 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/ojs/ojs-client/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ojs/ojs-client"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/ojs/ojs-client"],
       "options": {
         "jestConfig": "libs/ojs/ojs-client/jest.config.js",
         "passWithNoTests": true
@@ -42,12 +42,11 @@
       },
       "dependsOn": [
         {
-          "projects": "dependencies",
           "target": "build",
-          "params": "forward"
+          "params": "forward",
+          "dependencies": true
         },
         {
-          "projects": "self",
           "target": "lint"
         }
       ]

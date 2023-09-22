@@ -12,15 +12,15 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/rejour/rejour-stringify/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/rejour/rejour-stringify"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/rejour/rejour-stringify"],
       "options": {
         "jestConfig": "libs/rejour/rejour-stringify/jest.config.js",
         "passWithNoTests": true
@@ -30,7 +30,7 @@
       "executor": "better-nx-tsc:publishable"
     },
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "rootDir": "libs/rejour/rejour-stringify/src",
@@ -45,12 +45,11 @@
       },
       "dependsOn": [
         {
-          "projects": "dependencies",
           "target": "build",
-          "params": "forward"
+          "params": "forward",
+          "dependencies": true
         },
         {
-          "projects": "self",
           "target": "lint"
         }
       ]
@@ -100,6 +99,5 @@
       }
     }
   },
-
   "tags": []
 }

@@ -1,7 +1,7 @@
 import { BuildExecutorSchema } from './schema.js'
 import fs from 'fs'
-import { swcExecutor, normalizeOptions } from '@nrwl/js/src/executors/swc/swc.impl'
-import { ExecutorContext } from '@nrwl/devkit'
+import { swcExecutor, normalizeOptions } from '@nx/js/src/executors/swc/swc.impl'
+import { ExecutorContext } from '@nx/devkit'
 import { Config as SWCrc } from '@swc/core'
 
 function getSwcOptions(

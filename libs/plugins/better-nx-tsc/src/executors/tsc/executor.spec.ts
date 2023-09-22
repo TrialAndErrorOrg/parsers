@@ -1,5 +1,5 @@
-import { ExecutorContext } from '@nrwl/devkit'
-import { ExecutorOptions } from '@nrwl/js/src/utils/schema'
+import { ExecutorContext } from '@nx/devkit'
+import { ExecutorOptions } from '@nx/js/src/utils/schema'
 import { createTypeScriptCompilationOptions, normalizeOptions } from './executor.js'
 
 describe('tscExecutor', () => {

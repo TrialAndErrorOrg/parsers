@@ -2,7 +2,6 @@
   "version": 2,
   "outputCapture": "direct-nodejs",
   "$schema": "http://json-schema.org/schema",
-  "cli": "nx",
   "title": "Hybrid ESM and CJS build using SWC",
   "description": "Builds using SWC.",
   "type": "object",
@@ -78,7 +77,10 @@
     "buildableProjectDepsInPackageJsonType": {
       "type": "string",
       "description": "When `updateBuildableProjectDepsInPackageJson` is `true`, this adds dependencies to either `peerDependencies` or `dependencies`.",
-      "enum": ["dependencies", "peerDependencies"],
+      "enum": [
+        "dependencies",
+        "peerDependencies"
+      ],
       "default": "peerDependencies"
     },
     "external": {
@@ -86,7 +88,10 @@
       "oneOf": [
         {
           "type": "string",
-          "enum": ["all", "none"]
+          "enum": [
+            "all",
+            "none"
+          ]
         },
         {
           "type": "array",
@@ -102,10 +107,16 @@
         "type": "string"
       },
       "description": "List of target names that annotate a build target for a project",
-      "default": ["build"]
+      "default": [
+        "build"
+      ]
     }
   },
-  "required": ["main", "outputPath", "tsConfig"],
+  "required": [
+    "main",
+    "outputPath",
+    "tsConfig"
+  ],
   "definitions": {
     "assetPattern": {
       "oneOf": [
@@ -133,7 +144,11 @@
             }
           },
           "additionalProperties": false,
-          "required": ["glob", "input", "output"]
+          "required": [
+            "glob",
+            "input",
+            "output"
+          ]
         },
         {
           "type": "string"

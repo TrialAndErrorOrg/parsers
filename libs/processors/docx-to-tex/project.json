@@ -1,18 +1,19 @@
 {
   "name": "processors-docx-to-tex",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/processors/docx-to-tex/src",
   "projectType": "library",
   "targets": {
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/processors/docx-to-tex/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/processors/docx-to-tex"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/processors/docx-to-tex"],
       "options": {
         "jestConfig": "libs/processors/docx-to-tex/jest.config.js",
         "passWithNoTests": true

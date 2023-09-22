@@ -15,7 +15,7 @@
       "executor": "better-nx-tsc:publishable"
     },
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "rootDir": "libs/citations/csl-to-biblatex/src",
@@ -23,7 +23,8 @@
         "tsConfig": "libs/citations/csl-to-biblatex/tsconfig.lib.json",
         "packageJson": "libs/citations/csl-to-biblatex/package.json",
         "main": "libs/citations/csl-to-biblatex/src/index.ts",
-        "assets": ["libs/citations/csl-to-biblatex/*.md"]
+        "assets": ["libs/citations/csl-to-biblatex/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true
       }
     },
     "deploy": {
@@ -33,14 +34,14 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/citations/csl-to-biblatex/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "libs/citations/csl-to-biblatex/jest.config.ts",

@@ -1,7 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema",
   "version": 2,
-  "cli": "nx",
   "title": "Publishable executor",
   "description": "",
   "type": "object",
@@ -16,5 +15,7 @@
       "description": "Run through all the steps without actually publishing"
     }
   },
-  "required": ["dist"]
+  "required": [
+    "dist"
+  ]
 }

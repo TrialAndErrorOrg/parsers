@@ -1,5 +1,5 @@
 // @ts-check
-import nxPreset from '@nrwl/jest/preset/index.js'
+import nxPreset from '@nx/jest/preset/index.js'
 import { pathsToModuleNameMapper } from 'ts-jest'
 
 import path from 'path'

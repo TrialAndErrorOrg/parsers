@@ -15,7 +15,7 @@
       "executor": "better-nx-tsc:publishable"
     },
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "rootDir": "libs/citations/apa-parser/src",
@@ -23,7 +23,8 @@
         "tsConfig": "libs/citations/apa-parser/tsconfig.lib.json",
         "packageJson": "libs/citations/apa-parser/package.json",
         "main": "libs/citations/apa-parser/src/index.ts",
-        "assets": ["libs/citations/apa-parser/*.md"]
+        "assets": ["libs/citations/apa-parser/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true
       }
     },
     "deploy": {
@@ -33,14 +34,14 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/citations/apa-parser/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "libs/citations/apa-parser/jest.config.js",

@@ -8,7 +8,7 @@
       "executor": "better-nx-tsc:publishable"
     },
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "rootDir": "libs/book-converter/src",
@@ -23,19 +23,18 @@
       },
       "dependsOn": [
         {
-          "projects": "dependencies",
           "target": "build",
-          "params": "forward"
+          "params": "forward",
+          "dependencies": true
         },
         {
-          "projects": "self",
           "target": "lint"
         }
       ]
     },
     "test": {
-      "executor": "@nrwl/vite:test",
-      "outputs": ["coverage/libs/book-converter"],
+      "executor": "@nx/vite:test",
+      "outputs": ["{workspaceRoot}/coverage/libs/book-converter"],
       "options": {
         "passWithNoTests": true
       }
@@ -48,7 +47,7 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/book-converter/**/*.ts"]
@@ -99,6 +98,5 @@
       }
     }
   },
-
   "tags": []
 }

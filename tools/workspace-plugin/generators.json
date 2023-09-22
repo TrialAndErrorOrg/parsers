@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "node-lib": {
+      "implementation": "./src/generators/node-lib",
+      "schema": "./src/generators/node-lib/schema.json",
+      "description": "Generator node-lib"
+    }
+  }
+}

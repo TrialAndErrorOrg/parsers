@@ -1,4 +1,4 @@
-import { DependentBuildableProjectNode } from '@nrwl/workspace/src/utilities/buildable-libs-utils'
+import { DependentBuildableProjectNode } from '@nx/workspace/src/utilities/buildable-libs-utils'
 import { readNxJson } from 'nx/src/config/configuration'
 import { ProjectGraphProjectNode } from 'nx/src/config/project-graph'
 import { filterUsingGlobPatterns, getTargetInputs } from '../../executors/tsc/hasher'

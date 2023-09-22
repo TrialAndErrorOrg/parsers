@@ -1,5 +1,6 @@
 {
   "name": "converter-frontend",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/converter-frontend",
   "projectType": "application",
   "targets": {
@@ -18,7 +19,7 @@
       }
     },
     "serve": {
-      "executor": "@nrwl/next:server",
+      "executor": "@nx/next:server",
       "options": {
         "buildTarget": "converter-frontend:build",
         "dev": true
@@ -36,21 +37,21 @@
       "defaultConfiguration": "development"
     },
     "export": {
-      "executor": "@nrwl/next:export",
+      "executor": "@nx/next:export",
       "options": {
         "buildTarget": "converter-frontend:build:production"
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/converter-frontend"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/converter-frontend"],
       "options": {
         "jestConfig": "apps/converter-frontend/jest.config.js",
         "passWithNoTests": true
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["apps/converter-frontend/**/*.{ts,tsx,js,jsx}"]

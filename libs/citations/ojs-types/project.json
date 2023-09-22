@@ -15,7 +15,7 @@
       "executor": "better-nx-tsc:publishable"
     },
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "rootDir": "libs/citations/ojs-types/src",
@@ -23,11 +23,12 @@
         "tsConfig": "libs/citations/ojs-types/tsconfig.lib.json",
         "packageJson": "libs/citations/ojs-types/package.json",
         "main": "libs/citations/ojs-types/src/index.ts",
-        "assets": ["libs/citations/ojs-types/*.md"]
+        "assets": ["libs/citations/ojs-types/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/citations/ojs-types/**/*.ts"]

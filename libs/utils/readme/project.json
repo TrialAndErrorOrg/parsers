@@ -5,12 +5,11 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nrwl/esbuild:esbuild",
+      "executor": "@nx/esbuild:esbuild",
       "outputs": ["{options.outputPath}"],
       "options": {
         "rootDir": "libs/utils/readme/src",
         "outputPath": "dist/libs/utils/readme",
-
         "main": "libs/utils/readme/src/index.ts",
         "tsConfig": "libs/utils/readme/tsconfig.lib.json",
         "format": ["esm"],
@@ -37,11 +36,13 @@
             "glob": "executors.json",
             "output": "."
           }
-        ]
+        ],
+        "generatePackageJson": true,
+        "thirdParty": true
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
@@ -53,7 +54,7 @@
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "libs/utils/readme/jest.config.ts",

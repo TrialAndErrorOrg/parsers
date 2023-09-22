@@ -3,7 +3,6 @@
   "outputCapture": "direct-nodejs",
   "title": "Typescript Build Target",
   "description": "Builds using TypeScript.",
-  "cli": "nx",
   "type": "object",
   "properties": {
     "main": {
@@ -62,7 +61,10 @@
     "buildableProjectDepsInPackageJsonType": {
       "type": "string",
       "description": "When `updateBuildableProjectDepsInPackageJson` is `true`, this adds dependencies to either `peerDependencies` or `dependencies`.",
-      "enum": ["dependencies", "peerDependencies"],
+      "enum": [
+        "dependencies",
+        "peerDependencies"
+      ],
       "default": "peerDependencies"
     },
     "external": {
@@ -70,7 +72,10 @@
       "oneOf": [
         {
           "type": "string",
-          "enum": ["all", "none"]
+          "enum": [
+            "all",
+            "none"
+          ]
         },
         {
           "type": "array",
@@ -85,12 +90,18 @@
       "oneOf": [
         {
           "type": "string",
-          "enum": ["esm", "cjs"]
+          "enum": [
+            "esm",
+            "cjs"
+          ]
         },
         {
           "type": "array",
           "items": {
-            "enum": ["esm", "cjs"]
+            "enum": [
+              "esm",
+              "cjs"
+            ]
           }
         }
       ]
@@ -112,7 +123,9 @@
         "type": "string"
       },
       "description": "List of target names that annotate a build target for a project",
-      "default": ["build"]
+      "default": [
+        "build"
+      ]
     },
     "generateLockfile": {
       "type": "boolean",
@@ -121,7 +134,11 @@
       "x-priority": "internal"
     }
   },
-  "required": ["main", "outputPath", "tsConfig"],
+  "required": [
+    "main",
+    "outputPath",
+    "tsConfig"
+  ],
   "definitions": {
     "assetPattern": {
       "oneOf": [
@@ -149,7 +166,11 @@
             }
           },
           "additionalProperties": false,
-          "required": ["glob", "input", "output"]
+          "required": [
+            "glob",
+            "input",
+            "output"
+          ]
         },
         {
           "type": "string"
@@ -173,7 +194,9 @@
             }
           },
           "additionalProperties": false,
-          "required": ["name"]
+          "required": [
+            "name"
+          ]
         }
       ]
     }

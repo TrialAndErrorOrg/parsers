@@ -1,18 +1,19 @@
 {
   "name": "processors-jats-to-tex",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/processors/jats-to-tex/src",
   "projectType": "library",
   "targets": {
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/processors/jats-to-tex/**/*.ts"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/processors/jats-to-tex"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/processors/jats-to-tex"],
       "options": {
         "jestConfig": "libs/processors/jats-to-tex/jest.config.js",
         "passWithNoTests": true

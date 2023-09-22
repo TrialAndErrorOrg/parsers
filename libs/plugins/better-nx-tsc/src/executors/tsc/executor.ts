@@ -1,14 +1,11 @@
-import { ExecutorContext } from '@nrwl/devkit'
-import { assetGlobsToFiles, FileInputOutput } from '@nrwl/workspace/src/utilities/assets'
-import type { TypeScriptCompilationOptions } from '@nrwl/workspace/src/utilities/typescript/compilation'
+import { ExecutorContext } from '@nx/devkit'
+import { assetGlobsToFiles, FileInputOutput } from '@nx/workspace/src/utilities/assets'
+import type { TypeScriptCompilationOptions } from '@nx/workspace/src/utilities/typescript/compilation'
 import { join, resolve } from 'path'
 import { CustomTransformers, Program, SourceFile, TransformerFactory } from 'typescript'
-import { CopyAssetsHandler } from '@nrwl/js/src/utils/assets/copy-assets-handler'
+import { CopyAssetsHandler } from '@nx/js/src/utils/assets/copy-assets-handler'
 import { checkDependencies } from '../../utils/check-dependencies'
-import {
-  getHelperDependency,
-  HelperDependency,
-} from '@nrwl/js/src/utils/compiler-helper-dependency'
+import { getHelperDependency, HelperDependency } from '@nx/js/src/utils/compiler-helper-dependency'
 import {
   handleInliningBuild,
   isInlineGraphEmpty,
@@ -16,9 +13,9 @@ import {
 } from '../../utils/inline'
 import { updatePackageJson } from '../../utils/package-json/update-package-json'
 import { ExecutorOptions, NormalizedExecutorOptions } from './schema'
-import { compileTypeScriptFiles } from '@nrwl/js/src/utils/typescript/compile-typescript-files'
-import { loadTsTransformers } from '@nrwl/js/src/utils/typescript/load-ts-transformers'
-import { watchForSingleFileChanges } from '@nrwl/js/src/utils/watch-for-single-file-changes'
+import { compileTypeScriptFiles } from '@nx/js/src/utils/typescript/compile-typescript-files'
+import { loadTsTransformers } from '@nx/js/src/utils/typescript/load-ts-transformers'
+import { watchForSingleFileChanges } from '@nx/js/src/utils/watch-for-single-file-changes'
 
 export function normalizeOptions(
   options: ExecutorOptions,

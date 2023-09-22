@@ -1,8 +1,8 @@
 import { join } from 'path'
-import { ExecutorContext } from '@nrwl/devkit'
-import { DependentBuildableProjectNode } from '@nrwl/workspace/src/utilities/buildable-libs-utils'
+import { ExecutorContext } from '@nx/devkit'
+import { DependentBuildableProjectNode } from '@nx/workspace/src/utilities/buildable-libs-utils'
 
-import { watchForSingleFileChanges } from '@nrwl/js/src/utils/watch-for-single-file-changes'
+import { watchForSingleFileChanges } from '@nx/js/src/utils/watch-for-single-file-changes'
 import type { UpdatePackageJsonOption } from './update-package-json.js'
 import { updatePackageJson } from './update-package-json.js'
 import { checkDependencies } from '../check-dependencies.js'

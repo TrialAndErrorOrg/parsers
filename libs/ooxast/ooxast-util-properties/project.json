@@ -15,7 +15,7 @@
       "executor": "better-nx-tsc:publishable"
     },
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "rootDir": "libs/ooxast/ooxast-util-properties/src",
@@ -23,19 +23,20 @@
         "tsConfig": "libs/ooxast/ooxast-util-properties/tsconfig.lib.json",
         "packageJson": "libs/ooxast/ooxast-util-properties/package.json",
         "main": "libs/ooxast/ooxast-util-properties/src/index.ts",
-        "assets": ["libs/ooxast/ooxast-util-properties/*.md"]
+        "assets": ["libs/ooxast/ooxast-util-properties/*.md"],
+        "updateBuildableProjectDepsInPackageJson": true
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ooxast/ooxast-util-properties"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/ooxast/ooxast-util-properties"],
       "options": {
         "jestConfig": "libs/ooxast/ooxast-util-properties/jest.config.js",
         "passWithNoTests": true
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": ["libs/ooxast/ooxast-util-properties/**/*.ts"]

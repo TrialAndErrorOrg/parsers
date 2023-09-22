@@ -9,7 +9,7 @@ import { BlockContent, Code, Content, Heading } from 'mdast'
 import { readFile, writeFile } from 'fs/promises'
 import { fromMarkdown } from 'mdast-util-from-markdown'
 import remarkGfm from 'remark-gfm'
-import { workspaceRoot } from '@nrwl/devkit'
+import { workspaceRoot } from '@nx/devkit'
 import remarkUsage from 'remark-usage'
 import { execSync } from 'child_process'
 

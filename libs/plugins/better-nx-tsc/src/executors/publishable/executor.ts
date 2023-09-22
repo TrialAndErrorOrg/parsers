@@ -1,14 +1,14 @@
-import { ExecutorContext } from '@nrwl/devkit'
+import { ExecutorContext } from '@nx/devkit'
 import { PublishableExecutorSchema } from './schema'
 import { readFile, writeFile } from 'fs/promises'
 
 function getNonTestDependencies(context: ExecutorContext) {
-  const dependencies = context.projectGraph?.nodes[context.projectName!].data.files
+  const dependencies = context.projectGraph?.dependencies[context.projectName!]
   return new Set(
     (dependencies ?? [])
-      .filter((dep) => !/.*\.(test|spec).ts/.test(dep.file))
-      .filter((dep) => !/(vite.config|jest.config).*/.test(dep.file))
-      .flatMap((dep) => dep.dependencies?.map((d) => d.target.replace('npm:', '')))
+      .filter((dep) => !/.*\.(test|spec).ts/.test(dep.source))
+      .filter((dep) => !/(vite.config|jest.config).*/.test(dep.source))
+      .map((dep) => dep.target.replace('npm:', ''))
       .filter(Boolean) as string[],
   )
 }

@@ -1,10 +1,10 @@
 //@ts-check
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-import { withNx } from '@nrwl/next/plugins/with-nx.js'
+import { withNx } from '@nx/next/plugins/with-nx.js'
 
 /**
- * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
+ * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
  **/
 const nextConfig = {
   swcMinify: true,
@@ -12,17 +12,14 @@ const nextConfig = {
     appDir: true,
     newNextLinkBehavior: true,
     forceSwcTransforms: true,
-    fontLoaders: [
-      { loader: '@next/font/google', options: { subsets: ['latin'] } },
-
-    ]
+    fontLoaders: [{ loader: '@next/font/google', options: { subsets: ['latin'] } }],
   },
   images: {
     domains: [
-      "avatars.githubusercontent.com",
-      "cote.azureedge.net",
-      "res.cloudinary.com",
-      "tailwindui.com",
+      'avatars.githubusercontent.com',
+      'cote.azureedge.net',
+      'res.cloudinary.com',
+      'tailwindui.com',
     ],
   },
   nx: {

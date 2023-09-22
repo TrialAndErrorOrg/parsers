@@ -9,8 +9,8 @@ import {
   readJsonFile,
   workspaceRoot,
   writeJsonFile,
-} from '@nrwl/devkit'
-import { DependentBuildableProjectNode } from '@nrwl/workspace/src/utilities/buildable-libs-utils'
+} from '@nx/devkit'
+import { DependentBuildableProjectNode } from '@nx/workspace/src/utilities/buildable-libs-utils'
 import { basename, dirname, join, parse, relative } from 'path'
 import { getLockFileName } from 'nx/src/lock-file/lock-file'
 import { writeFileSync } from 'fs-extra'

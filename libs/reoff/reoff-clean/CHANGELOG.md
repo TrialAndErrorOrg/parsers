@@ -2,6 +2,19 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-clean-0.1.2...reoff-clean-0.2.0) (2023-09-22)
+
+### Dependency Updates
+
+* `ooxast-util-remove-rsid` updated to version `0.3.0`
+* `docx-to-vfile` updated to version `0.9.0`
+* `ooxast` updated to version `0.2.0`
+* `reoff-parse` updated to version `0.4.0`
+
+### Features
+
+* giant prettier + eslint run ([6becd94](https://github.com/TrialAndErrorOrg/parsers/commit/6becd9492006b9a7f7f91b60db440bb31d9140c8))
+
 ## [0.1.2](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-clean-0.1.1...reoff-clean-0.1.2) (2023-09-21)
 
 ### Dependency Updates

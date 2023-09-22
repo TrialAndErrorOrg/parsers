@@ -2,6 +2,24 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-remove-rsid-0.2.1...ooxast-util-remove-rsid-0.3.0) (2023-09-22)
+
+### Dependency Updates
+
+* `ooxast` updated to version `0.2.0`
+* `xast-util-is-element` updated to version `0.2.0`
+* `xast-util-select` updated to version `0.2.0`
+* `ooxast-util-get-style` updated to version `0.3.0`
+
+### Features
+
+* giant prettier + eslint run ([6becd94](https://github.com/TrialAndErrorOrg/parsers/commit/6becd9492006b9a7f7f91b60db440bb31d9140c8))
+
+
+### Bug Fixes
+
+* remove misc dependency ([dc33f05](https://github.com/TrialAndErrorOrg/parsers/commit/dc33f053cacdfb632d0a44e573f8d84fe5382520))
+
 ## [0.2.1](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-remove-rsid-0.2.0...ooxast-util-remove-rsid-0.2.1) (2023-09-21)
 
 ### Dependency Updates

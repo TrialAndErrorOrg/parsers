@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.4.0](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-parse-0.3.0...reoff-parse-0.4.0) (2023-09-22)
+
+### Dependency Updates
+
+* `docx-to-vfile` updated to version `0.9.0`
+
+### Features
+
+* giant prettier + eslint run ([6becd94](https://github.com/TrialAndErrorOrg/parsers/commit/6becd9492006b9a7f7f91b60db440bb31d9140c8))
+
 ## [0.3.0](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-parse-0.2.7...reoff-parse-0.3.0) (2023-09-21)
 
 ### Dependency Updates

@@ -2,6 +2,22 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/csl-consolidate-0.1.3...csl-consolidate-0.2.0) (2023-09-22)
+
+### Dependency Updates
+
+* `crossref-to-csl` updated to version `0.2.0`
+* `crossref-json` updated to version `0.2.1`
+
+### Features
+
+* giant prettier + eslint run ([6becd94](https://github.com/TrialAndErrorOrg/parsers/commit/6becd9492006b9a7f7f91b60db440bb31d9140c8))
+
+
+### Bug Fixes
+
+* remove misc dependency ([dc33f05](https://github.com/TrialAndErrorOrg/parsers/commit/dc33f053cacdfb632d0a44e573f8d84fe5382520))
+
 ## [0.1.3](https://github.com/TrialAndErrorOrg/parsers/compare/csl-consolidate-0.1.2...csl-consolidate-0.1.3) (2023-09-21)
 
 ### Dependency Updates

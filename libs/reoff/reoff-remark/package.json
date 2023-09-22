@@ -35,5 +35,10 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "ooxast-util-to-mdast": "*",
+    "ooxast": "*",
+    "unified": "^10.1.2"
+  }
 }

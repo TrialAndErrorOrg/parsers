@@ -23,7 +23,5 @@
       "description": "A directory where the project is placed"
     }
   },
-  "required": [
-    "name"
-  ]
+  "required": ["name"]
 }

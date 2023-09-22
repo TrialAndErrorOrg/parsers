@@ -12,7 +12,7 @@ export async function bibToCSL(tree: Node, options: Options): Promise<CSL[]> {
   const refs = bib.join('\n')
 
   if (!apiUrl || (!apiUrl && typeof window !== 'undefined')) {
-    const { callAnystyleCLI } = await import('./anystyle-cli')
+    const { callAnystyleCLI } = await import('./anystyle-cli.js')
     const parsedBib = await callAnystyleCLI(refs, anyStylePath)
     return fixBib(parsedBib)
   }

@@ -49,32 +49,28 @@ export interface Options {
   pHandlers?: { matcher: string | RegExp; handler: StyleHandle }[]
 }
 
-export type Handle = (
-  h: H,
-  node: any,
-  parent?: Parent
-) => HastContent | Array<HastContent> | void
+export type Handle = (h: H, node: any, parent?: Parent) => HastContent | Array<HastContent> | void
 
 export type StyleHandleWithParent = (
   h: H,
   node: any,
-  parent: Parent
+  parent: Parent,
 ) => HastContent | Array<HastContent> | void
 export type StyleHandleWithParentWithStyle = (
   h: H,
   node: any,
   parent: Parent,
-  style: string
+  style: string,
 ) => HastContent | Array<HastContent> | void
 
 export type StyleHandleWithoutParentWithStyle = (
   h: H,
   node: any,
-  style: string
+  style: string,
 ) => HastContent | Array<HastContent> | void
 export type StyleHandleWithoutParentWithoutStyle = (
   h: H,
-  node: any
+  node: any,
 ) => HastContent | Array<HastContent> | void
 
 export type StyleHandle =
@@ -120,13 +116,13 @@ export type HWithProps = (
   node: Node,
   type: string,
   props?: Attributes,
-  children?: string | Array<HastContent>
+  children?: string | Array<HastContent>,
 ) => HastContent
 
 export type HWithoutProps = (
   node: Node,
   type: string,
-  children?: string | Array<HastContent>
+  children?: string | Array<HastContent>,
 ) => HastContent
 
 // export type JWithPropsSpecific<TNode extends HastContent = HastContent> = (

@@ -32,5 +32,10 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "moo": "^0.5.1",
+    "nearley": "^2.20.1",
+    "csl-json": "0.1.0"
+  }
 }

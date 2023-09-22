@@ -35,5 +35,11 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "ooxast-util-to-unified-latex": "*",
+    "ooxast": "*",
+    "unified": "^10.1.2",
+    "@unified-latex/unified-latex-types": "^1.3.1"
+  }
 }

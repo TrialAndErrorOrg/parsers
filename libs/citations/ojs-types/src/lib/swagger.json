@@ -77,9 +77,7 @@
   "paths": {
     "/submissions": {
       "get": {
-        "tags": [
-          "Submissions"
-        ],
+        "tags": ["Submissions"],
         "summary": "Get a list of submissions.",
         "description": "See `/submissions/{submissionId}` for notes about submission properties.",
         "parameters": [
@@ -94,12 +92,7 @@
               "type": "array",
               "items": {
                 "type": "integer",
-                "enum": [
-                  1,
-                  3,
-                  4,
-                  5
-                ]
+                "enum": [1, 3, 4, 5]
               }
             }
           },
@@ -143,12 +136,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": [
-                "dateSubmitted",
-                "dateLastActivity",
-                "lastModified",
-                "title"
-              ],
+              "enum": ["dateSubmitted", "dateLastActivity", "lastModified", "title"],
               "default": "dateSubmitted"
             }
           },
@@ -159,10 +147,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": [
-                "ASC",
-                "DESC"
-              ],
+              "enum": ["ASC", "DESC"],
               "default": "DESC"
             }
           },
@@ -268,9 +253,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Submissions"
-        ],
+        "tags": ["Submissions"],
         "summary": "Create a new submission.",
         "requestBody": {
           "content": {
@@ -310,9 +293,7 @@
     },
     "/submissions/{submissionId}": {
       "get": {
-        "tags": [
-          "Submissions"
-        ],
+        "tags": ["Submissions"],
         "summary": "Get a submission by ID.",
         "description": "* Unpublished submissions are only returned for assigned participants, editors and admins.\n* `abstract` includes HTML markup.\n* `pages` is usually a `string`. But in some cases it may return an array of arrays. Each array contains two items: the start and end page. Example: `[[25, 31], [45, 62]]`.\n* `submissionProgress` will be > 0 if the submission is incomplete.\n* `stages`, `reviewRounds` and `reviewAssignments` should only be returned for participants assigned to the submission.\n* `reviewAssignments` should only expose user-identifying information for editors and admins.",
         "parameters": [
@@ -363,9 +344,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Submissions"
-        ],
+        "tags": ["Submissions"],
         "summary": "Edit a submission.",
         "parameters": [
           {
@@ -436,9 +415,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Submissions"
-        ],
+        "tags": ["Submissions"],
         "summary": "Delete a submission.",
         "description": "Only journal managers and subeditors can make a request to this endpoint.",
         "parameters": [
@@ -491,9 +468,7 @@
     },
     "/submissions/{submissionId}/files": {
       "get": {
-        "tags": [
-          "Submissions / Files"
-        ],
+        "tags": ["Submissions / Files"],
         "summary": "Get a submission's files.",
         "description": "This will return all of a submission's files that the user is allowed to access, except review attachments and discussion files. A user is allowed to access different file stages depending on their stage assignment.\n* Managers, subeditors and assistants can access all file stages if they are assigned to the matching workflow stage. For example, an assistant assigned to the copyediting stage can access files in `SUBMISSION_FILE_COPYEDIT` and `SUBMISSION_FILE_FINAL`.\n* Authors are restricted to the `SUBMISSION_FILE_SUBMISSION`, `SUBMISSION_FILE_REVIEW_REVISION`, `SUBMISSION_FILE_COPYEDIT` and `SUBMISSION_FILE_PROOF` file stages. For example, an author with access to the copyediting stage will have access to `SUBMISSION_FILE_COPYEDIT` (copyedited files) but not `SUBMISSION_FILE_FINAL` (draft files).\n* Reviewers and readers are not allowed to access this endpoint.\n* Managers who are not assigned to the submission are allowed to access all file stages as though they are assigned to every workflow stage.",
         "parameters": [
@@ -564,9 +539,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Submissions / Files"
-        ],
+        "tags": ["Submissions / Files"],
         "summary": "Create a new submission file.",
         "description": "A user is allowed to upload to different file stages depending on their stage assignments. See the description for `GET /submission/{submissionId}/files` above. Once a submission has been completed, authors are no longer allowed to upload to `SUBMISSION_FILE_SUBMISSION`. Authors are not allowed to upload to `SUBMISSION_FILE_REVIEW_REVISION` until revisions have been requested.",
         "requestBody": {
@@ -618,9 +591,7 @@
     },
     "/submissions/{submissionId}/files/{submissionFileId}": {
       "get": {
-        "tags": [
-          "Submissions / Files"
-        ],
+        "tags": ["Submissions / Files"],
         "summary": "Get a submission file.",
         "description": "You must pass the correct `stageId` when requesting a file.",
         "parameters": [
@@ -678,9 +649,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Submissions / Files"
-        ],
+        "tags": ["Submissions / Files"],
         "summary": "Edit a submission file.",
         "description": "You must pass the correct `stageId` when editing a file.",
         "parameters": [
@@ -759,9 +728,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Submissions / Files"
-        ],
+        "tags": ["Submissions / Files"],
         "summary": "Delete a submission file.",
         "description": "You must pass the correct `stageId` when deleting a file.",
         "parameters": [
@@ -821,9 +788,7 @@
     },
     "/submissions/{submissionId}/participants": {
       "get": {
-        "tags": [
-          "Submissions / Participants"
-        ],
+        "tags": ["Submissions / Participants"],
         "summary": "Get assigned participants.",
         "description": "Get the participants assigned to a submisssion.",
         "parameters": [
@@ -868,9 +833,7 @@
     },
     "/submissions/{submissionId}/participants/{stageId}": {
       "get": {
-        "tags": [
-          "Submissions / Participants"
-        ],
+        "tags": ["Submissions / Participants"],
         "summary": "Get assigned participants by stage.",
         "description": "Get all participants assigned to a submission for a specific workflow stage, such as the review or copyediting stage.",
         "parameters": [
@@ -924,9 +887,7 @@
     },
     "/submissions/{submissionId}/publications": {
       "get": {
-        "tags": [
-          "Submissions / Publications"
-        ],
+        "tags": ["Submissions / Publications"],
         "summary": "Get a submission's publications.",
         "parameters": [
           {
@@ -968,9 +929,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Submissions / Publications"
-        ],
+        "tags": ["Submissions / Publications"],
         "summary": "Create a publication.",
         "description": "Create a new publication for a submission.",
         "parameters": [
@@ -1031,9 +990,7 @@
     },
     "/submissions/{submissionId}/publications/{publicationId}": {
       "get": {
-        "tags": [
-          "Submissions / Publications"
-        ],
+        "tags": ["Submissions / Publications"],
         "summary": "Get a publication.",
         "parameters": [
           {
@@ -1081,9 +1038,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Submissions / Publications"
-        ],
+        "tags": ["Submissions / Publications"],
         "summary": "Edit a publication.",
         "parameters": [
           {
@@ -1163,9 +1118,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Submissions / Publications"
-        ],
+        "tags": ["Submissions / Publications"],
         "summary": "Delete a publication.",
         "description": "Only journal managers and subeditors can make a request to this endpoint.",
         "parameters": [
@@ -1227,9 +1180,7 @@
     },
     "/submissions/{submissionId}/publications/{publicationId}/version": {
       "post": {
-        "tags": [
-          "Submissions / Publications"
-        ],
+        "tags": ["Submissions / Publications"],
         "summary": "Create a new version of a publication.",
         "description": "Duplicate a publication, including author and galley records, in order to create a new version of a publication that can be edited.",
         "parameters": [
@@ -1291,9 +1242,7 @@
     },
     "/submissions/{submissionId}/publications/{publicationId}/publish": {
       "put": {
-        "tags": [
-          "Submissions / Publications"
-        ],
+        "tags": ["Submissions / Publications"],
         "summary": "Publish a publication.",
         "description": "If the publication is assigned to an issue that is not yet published, it will be scheduled for publication and the `status` will be set to `STATUS_SCHEDULED`. If the issue is already published, it will be published immediately and the `status` will be set to `STATUS_PUBLISHED`.\n\nThe publication will be validated against any publishing requirements before it is published and a `400` response will be returned if it fails validation.",
         "parameters": [
@@ -1366,9 +1315,7 @@
     },
     "/submissions/{submissionId}/publications/{publicationId}/unpublish": {
       "put": {
-        "tags": [
-          "Submissions / Publications"
-        ],
+        "tags": ["Submissions / Publications"],
         "summary": "Unpublish a publication.",
         "parameters": [
           {
@@ -1429,9 +1376,7 @@
     },
     "/issues": {
       "get": {
-        "tags": [
-          "Issues"
-        ],
+        "tags": ["Issues"],
         "summary": "Get a list of issues.",
         "description": "Results are eordered by `datePublished`.",
         "parameters": [
@@ -1461,11 +1406,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": [
-                "datePublished",
-                "lastModified",
-                "seq"
-              ],
+              "enum": ["datePublished", "lastModified", "seq"],
               "default": "datePublished"
             }
           },
@@ -1476,10 +1417,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": [
-                "ASC",
-                "DESC"
-              ],
+              "enum": ["ASC", "DESC"],
               "default": "DESC"
             }
           },
@@ -1560,9 +1498,7 @@
     },
     "/issues/current": {
       "get": {
-        "tags": [
-          "Issues"
-        ],
+        "tags": ["Issues"],
         "summary": "Get the current issue.",
         "responses": {
           "200": {
@@ -1592,9 +1528,7 @@
     },
     "/issues/{issueId}": {
       "get": {
-        "tags": [
-          "Issues"
-        ],
+        "tags": ["Issues"],
         "summary": "Get an issue by ID.",
         "description": "If the issue has a custom section order, the `seq` property of each `SectionSummary` will reflect the sequence for that issue.",
         "parameters": [
@@ -1636,9 +1570,7 @@
     },
     "/users": {
       "get": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "summary": "Get a list of users.",
         "parameters": [
           {
@@ -1662,11 +1594,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": [
-                "active",
-                "disabled",
-                "all"
-              ],
+              "enum": ["active", "disabled", "all"],
               "default": "active"
             }
           },
@@ -1723,11 +1651,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": [
-                "id",
-                "familyName",
-                "givenName"
-              ],
+              "enum": ["id", "familyName", "givenName"],
               "default": "id"
             }
           },
@@ -1738,10 +1662,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": [
-                "ASC",
-                "DESC"
-              ],
+              "enum": ["ASC", "DESC"],
               "default": "DESC"
             }
           },
@@ -1794,9 +1715,7 @@
     },
     "/users/{userId}": {
       "get": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "summary": "Get a user by ID.",
         "parameters": [
           {
@@ -1826,9 +1745,7 @@
     },
     "/users/reviewers": {
       "get": {
-        "tags": [
-          "Users"
-        ],
+        "tags": ["Users"],
         "summary": "Get a list of reviewers.",
         "parameters": [
           {
@@ -1838,11 +1755,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": [
-                "active",
-                "disabled",
-                "all"
-              ],
+              "enum": ["active", "disabled", "all"],
               "default": "active"
             }
           },
@@ -1926,11 +1839,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": [
-                "id",
-                "familyName",
-                "givenName"
-              ],
+              "enum": ["id", "familyName", "givenName"],
               "default": "id"
             }
           },
@@ -1941,10 +1850,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": [
-                "ASC",
-                "DESC"
-              ],
+              "enum": ["ASC", "DESC"],
               "default": "DESC"
             }
           },
@@ -1997,9 +1903,7 @@
     },
     "/contexts": {
       "get": {
-        "tags": [
-          "Contexts"
-        ],
+        "tags": ["Contexts"],
         "summary": "Get a list of contexts.",
         "description": "Get an array of the journals (OJS), presses (OMP) or preprint servers (OPS) hosted on this site.",
         "parameters": [
@@ -2078,9 +1982,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Contexts"
-        ],
+        "tags": ["Contexts"],
         "summary": "Create a new context.",
         "description": "Create a new journal (OJS), press (OMP) or preprint server (OPS).",
         "requestBody": {
@@ -2121,9 +2023,7 @@
     },
     "/contexts/{contextId}": {
       "get": {
-        "tags": [
-          "Contexts"
-        ],
+        "tags": ["Contexts"],
         "summary": "Get a context.",
         "parameters": [
           {
@@ -2173,9 +2073,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Contexts"
-        ],
+        "tags": ["Contexts"],
         "summary": "Edit a context.",
         "description": "Edit a journal (OJS), press (OMP) or preprint server (OPS).",
         "parameters": [
@@ -2247,9 +2145,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Contexts"
-        ],
+        "tags": ["Contexts"],
         "summary": "Delete a context.",
         "description": "Delete a journal (OJS), press (OMP) or preprint server (OPS).",
         "parameters": [
@@ -2302,9 +2198,7 @@
     },
     "/contexts/{contextId}/theme": {
       "get": {
-        "tags": [
-          "Contexts"
-        ],
+        "tags": ["Contexts"],
         "summary": "Get the active theme.",
         "description": "Get the active theme and theme options for any journal (OJS), press (OMP) or preprint server (OPS).",
         "parameters": [
@@ -2355,9 +2249,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Contexts"
-        ],
+        "tags": ["Contexts"],
         "summary": "Edit the active theme.",
         "description": "Edit the active theme and theme options for any journal (OJS), press (OMP) or preprint server (OPS).",
         "parameters": [
@@ -2424,9 +2316,7 @@
     },
     "/site": {
       "get": {
-        "tags": [
-          "Site"
-        ],
+        "tags": ["Site"],
         "summary": "Get the site.",
         "responses": {
           "200": {
@@ -2443,9 +2333,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Site"
-        ],
+        "tags": ["Site"],
         "summary": "Edit the site.",
         "requestBody": {
           "content": {
@@ -2485,9 +2373,7 @@
     },
     "/site/theme": {
       "get": {
-        "tags": [
-          "Site"
-        ],
+        "tags": ["Site"],
         "summary": "Get the theme.",
         "description": "Get the active theme and theme options for the site.",
         "responses": {
@@ -2516,9 +2402,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Site"
-        ],
+        "tags": ["Site"],
         "summary": "Edit the theme.",
         "description": "Get the active theme and theme options for the site.",
         "requestBody": {
@@ -2552,9 +2436,7 @@
     },
     "/announcements": {
       "get": {
-        "tags": [
-          "Announcements"
-        ],
+        "tags": ["Announcements"],
         "summary": "Get a collection of announcements.",
         "parameters": [
           {
@@ -2637,9 +2519,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Announcements"
-        ],
+        "tags": ["Announcements"],
         "summary": "Create a new announcement.",
         "description": "Create and publish a new announcement in this context.",
         "requestBody": {
@@ -2680,9 +2560,7 @@
     },
     "/announcements/{announcementId}": {
       "get": {
-        "tags": [
-          "Announcements"
-        ],
+        "tags": ["Announcements"],
         "summary": "Get an announcement.",
         "parameters": [
           {
@@ -2732,9 +2610,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Announcements"
-        ],
+        "tags": ["Announcements"],
         "summary": "Edit an announcement.",
         "description": "Edit an announcement.",
         "parameters": [
@@ -2806,9 +2682,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Announcements"
-        ],
+        "tags": ["Announcements"],
         "summary": "Delete an announcement.",
         "description": "Delete an announcement.",
         "parameters": [
@@ -2861,9 +2735,7 @@
     },
     "/emailTemplates": {
       "get": {
-        "tags": [
-          "Email Templates"
-        ],
+        "tags": ["Email Templates"],
         "summary": "Get email templates.",
         "parameters": [
           {
@@ -2973,9 +2845,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Email Templates"
-        ],
+        "tags": ["Email Templates"],
         "summary": "Create an email template.",
         "requestBody": {
           "content": {
@@ -3015,9 +2885,7 @@
     },
     "/emailTemplates/{key}": {
       "get": {
-        "tags": [
-          "Email Templates"
-        ],
+        "tags": ["Email Templates"],
         "summary": "Get an email template by key.",
         "description": "Email templates are fetched by their key, rather than ID, so that a default template is retrieved if it has not been customized. See the [documentation](https://docs.pkp.sfu.ca/dev/documentation/en/email-templates).",
         "parameters": [
@@ -3068,9 +2936,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Email Templates"
-        ],
+        "tags": ["Email Templates"],
         "summary": "Edit an email template.",
         "parameters": [
           {
@@ -3141,9 +3007,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Email Templates"
-        ],
+        "tags": ["Email Templates"],
         "summary": "Delete an email template.",
         "description": "Default templates that have not been modified can not be deleted.",
         "parameters": [
@@ -3196,9 +3060,7 @@
     },
     "/emailTemplates/restoreDefaults": {
       "delete": {
-        "tags": [
-          "Email Templates"
-        ],
+        "tags": ["Email Templates"],
         "summary": "Restore default email templates.",
         "description": "Delete custom templates and reset all templates to their default settings.",
         "responses": {
@@ -3221,9 +3083,7 @@
     },
     "/stats/editorial": {
       "get": {
-        "tags": [
-          "Stats / Editorial"
-        ],
+        "tags": ["Stats / Editorial"],
         "summary": "Get editorial activity stats.",
         "description": "Returns information about editorial activity such as the number of submissions accepted and declined, the number of days to reach editorial decisions, and the acceptance and rejection rates.",
         "parameters": [
@@ -3378,9 +3238,7 @@
     },
     "/stats/editorial/averages": {
       "get": {
-        "tags": [
-          "Stats / Editorial"
-        ],
+        "tags": ["Stats / Editorial"],
         "summary": "Get yearly averages of editorial stats.",
         "description": "Returns yearly averages of editorial activity. To ensure averages are calculated fairly, partial years are not included in the averages. For example, if the first submission was received in October 2017 and the last submission was received in the current calendar year, only submissions from 2018 up until the end of the previous calendar year will be used to calculate the average.",
         "parameters": [
@@ -3447,9 +3305,7 @@
     },
     "/stats/publications": {
       "get": {
-        "tags": [
-          "Stats / Publications"
-        ],
+        "tags": ["Stats / Publications"],
         "summary": "Get the views of a publication.",
         "description": "Returns a list of publications ordered by their total abstract views. Includes total views by abstract, all galleys, PDF galleys, HTML galleys and other galleys.",
         "parameters": [
@@ -3529,10 +3385,7 @@
             "required": false,
             "schema": {
               "type": "integer",
-              "enum": [
-                "ASC",
-                "DESC"
-              ],
+              "enum": ["ASC", "DESC"],
               "default": "DESC"
             }
           }
@@ -3590,9 +3443,7 @@
     },
     "/stats/publications/abstract": {
       "get": {
-        "tags": [
-          "Stats / Publications"
-        ],
+        "tags": ["Stats / Publications"],
         "summary": "Get abstract views by day or month.",
         "description": "Returns a monthly or daily timeline of abstract views for the publications which match the request parameters.",
         "parameters": [
@@ -3603,10 +3454,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": [
-                "day",
-                "month"
-              ],
+              "enum": ["day", "month"],
               "default": "month"
             }
           },
@@ -3719,9 +3567,7 @@
     },
     "/stats/publications/galley": {
       "get": {
-        "tags": [
-          "Stats / Publications"
-        ],
+        "tags": ["Stats / Publications"],
         "summary": "Get galley views by day or month.",
         "description": "Returns a monthly or daily timeline of galley views for the publications which match the request parameters.",
         "parameters": [
@@ -3732,10 +3578,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": [
-                "day",
-                "month"
-              ],
+              "enum": ["day", "month"],
               "default": "month"
             }
           },
@@ -3848,9 +3691,7 @@
     },
     "/stats/publications/{submissionId}": {
       "get": {
-        "tags": [
-          "Stats / Publications"
-        ],
+        "tags": ["Stats / Publications"],
         "summary": "Get one publication's views by type.",
         "description": "Returns a publication's total views by abstract, all galleys, PDF galleys, HTML galleys and other galleys.",
         "parameters": [
@@ -3923,9 +3764,7 @@
     },
     "/stats/publications/{submissionId}/abstract": {
       "get": {
-        "tags": [
-          "Stats / Publications"
-        ],
+        "tags": ["Stats / Publications"],
         "summary": "Get onne publication's abstract views by day or month.",
         "description": "Returns a monthly or daily timeline of abstract views for the requested publication.",
         "parameters": [
@@ -3936,10 +3775,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": [
-                "day",
-                "month"
-              ],
+              "enum": ["day", "month"],
               "default": "month"
             }
           },
@@ -4015,9 +3851,7 @@
     },
     "/stats/publications/{submissionId}/galley": {
       "get": {
-        "tags": [
-          "Stats / Publications"
-        ],
+        "tags": ["Stats / Publications"],
         "summary": "Get one publication's galley views by day or month.",
         "description": "Returns a monthly or daily timeline of galley views for the requested publication.",
         "parameters": [
@@ -4028,10 +3862,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": [
-                "day",
-                "month"
-              ],
+              "enum": ["day", "month"],
               "default": "month"
             }
           },
@@ -4107,9 +3938,7 @@
     },
     "/stats/users": {
       "get": {
-        "tags": [
-          "Stats / Users"
-        ],
+        "tags": ["Stats / Users"],
         "summary": "Get user statistics.",
         "description": "Returns a count of the number of user registrations broken down by roles.\n\nPlease note when using the `registeredBefore` and `registeredAfter` parameters that role counts reflect current user roles.\n\nA user who registered as an author in January, 2019 but was later appointed to subeditor will be counted as a subeditor when the registration date range includes January, 2019.",
         "parameters": [
@@ -4138,10 +3967,7 @@
             "required": false,
             "schema": {
               "type": "string",
-              "enum": [
-                "active",
-                "disabled"
-              ],
+              "enum": ["active", "disabled"],
               "default": "active"
             }
           }
@@ -4238,9 +4064,7 @@
     },
     "/vocabs": {
       "get": {
-        "tags": [
-          "Vocabs"
-        ],
+        "tags": ["Vocabs"],
         "summary": "Get controlled vocab entries.",
         "parameters": [
           {
@@ -4304,9 +4128,7 @@
     },
     "/temporaryFiles": {
       "options": {
-        "tags": [
-          "Temporary Files"
-        ],
+        "tags": ["Temporary Files"],
         "summary": "Get headers for file uploads.",
         "description": "Responds with the appopriate headers to indicate file uploads maybe be sent, required by some file upload utilities which send a preflight request.",
         "responses": {
@@ -4317,9 +4139,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Temporary Files"
-        ],
+        "tags": ["Temporary Files"],
         "summary": "Upload a file.",
         "description": "Upload a file to the temporary file storage area and receive a temporary file ID.",
         "requestBody": {
@@ -4363,9 +4183,7 @@
     },
     "/_payments": {
       "put": {
-        "tags": [
-          "Backend"
-        ],
+        "tags": ["Backend"],
         "summary": "Save payment settings.",
         "description": "This endpoint is used on the settings page to save payment plugin settings alongside the general journal settings for enabling payments and setting the currency.",
         "requestBody": {
@@ -4410,9 +4228,7 @@
     },
     "/_uploadPublicFile": {
       "options": {
-        "tags": [
-          "Backend"
-        ],
+        "tags": ["Backend"],
         "summary": "Get headers for file uploads.",
         "description": "Responds with the appopriate headers to indicate file uploads maybe be sent, required by some file upload utilities which send a preflight request.",
         "responses": {
@@ -4423,9 +4239,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Backend"
-        ],
+        "tags": ["Backend"],
         "summary": "Upload a file.",
         "description": "The user's public file directory supports files uploaded through the TinyMCE rich text editor. This is commonly used in context settings but is also available to all registered users through their profile biography.",
         "requestBody": {
@@ -4510,9 +4324,7 @@
     },
     "/_submissions": {
       "get": {
-        "tags": [
-          "Backend"
-        ],
+        "tags": ["Backend"],
         "summary": "Get submissions.",
         "description": "This endpoint delivers a little bit of extra information about each submission that is used in the submissions list. This private endpoint saves a few extra HTTP requests, but it is more database-intensive for each query.",
         "parameters": [
@@ -4567,19 +4379,13 @@
             "type": "string",
             "description": "(Optional) The date that this announcement expires, if one is set. This is typically used to express closing dates for calls for papers.",
             "apiSummary": true,
-            "validation": [
-              "nullable",
-              "date_format:Y-m-d"
-            ]
+            "validation": ["nullable", "date_format:Y-m-d"]
           },
           "datePosted": {
             "type": "string",
             "description": "The date this announcement was posted.",
             "apiSummary": true,
-            "validation": [
-              "nullable",
-              "date_format:Y-m-d H:i:s"
-            ]
+            "validation": ["nullable", "date_format:Y-m-d H:i:s"]
           },
           "description": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -4598,9 +4404,7 @@
             "type": "integer",
             "description": "(Optional) One of the announcement type ids.",
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           }
         }
       },
@@ -4619,9 +4423,7 @@
           "email": {
             "type": "string",
             "apiSummary": true,
-            "validation": [
-              "email_or_localhost"
-            ]
+            "validation": ["email_or_localhost"]
           },
           "familyName": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -4643,9 +4445,7 @@
             "type": "string",
             "description": "The ORCID of this contributor. See: https://orcid.org/",
             "apiSummary": true,
-            "validation": [
-              "orcid"
-            ]
+            "validation": ["orcid"]
           },
           "preferredPublicName": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -4668,9 +4468,7 @@
           "url": {
             "type": "string",
             "description": "An optional URL to this contributor's webpage.",
-            "validation": [
-              "url"
-            ]
+            "validation": ["url"]
           },
           "userGroupId": {
             "type": "integer",
@@ -4703,10 +4501,7 @@
           "agencies": {
             "type": "string",
             "description": "Enable agencies metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.",
-            "validation": [
-              "nullable",
-              "in:0,enable,request,require"
-            ]
+            "validation": ["nullable", "in:0,enable,request,require"]
           },
           "announcementsIntroduction": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -4720,10 +4515,7 @@
           "citations": {
             "type": "string",
             "description": "Enable citations metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.",
-            "validation": [
-              "nullable",
-              "in:0,enable,request,require"
-            ]
+            "validation": ["nullable", "in:0,enable,request,require"]
           },
           "clockssLicense": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -4736,32 +4528,22 @@
           },
           "contactEmail": {
             "type": "string",
-            "validation": [
-              "nullable",
-              "email_or_localhost"
-            ]
+            "validation": ["nullable", "email_or_localhost"]
           },
           "contactName": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "contactPhone": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "copyrightHolderOther": {
             "$ref": "#/components/schemas/LocaleObject"
           },
           "copyrightHolderType": {
             "type": "string",
-            "validation": [
-              "nullable",
-              "in:author,context,other"
-            ]
+            "validation": ["nullable", "in:author,context,other"]
           },
           "copyrightNotice": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -4769,24 +4551,16 @@
           "copyrightYearBasis": {
             "type": "string",
             "default": "issue",
-            "validation": [
-              "in:issue,submission"
-            ]
+            "validation": ["in:issue,submission"]
           },
           "coverage": {
             "type": "string",
             "description": "Enable coverage metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.",
-            "validation": [
-              "nullable",
-              "in:0,enable,request,require"
-            ]
+            "validation": ["nullable", "in:0,enable,request,require"]
           },
           "currency": {
             "type": "string",
-            "validation": [
-              "nullable",
-              "currency"
-            ]
+            "validation": ["nullable", "currency"]
           },
           "customHeaders": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -4805,23 +4579,16 @@
           },
           "defaultMetricType": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "defaultReviewMode": {
             "type": "integer",
             "default": 2,
-            "validation": [
-              "nullable",
-              "in:1,2,3"
-            ]
+            "validation": ["nullable", "in:1,2,3"]
           },
           "delayedOpenAccessDuration": {
             "type": "integer",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "delayedOpenAccessPolicy": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -4839,23 +4606,16 @@
           "disableSubmissions": {
             "type": "boolean",
             "default": false,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "disableUserReg": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "disciplines": {
             "type": "string",
             "description": "Enable disciplines metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.",
-            "validation": [
-              "nullable",
-              "in:0,enable,request,require"
-            ]
+            "validation": ["nullable", "in:0,enable,request,require"]
           },
           "editorialTeam": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -4863,73 +4623,51 @@
           "emailSignature": {
             "type": "string",
             "defaultLocaleKey": "default.contextSettings.emailSignature",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "enableAnnouncements": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "enableClockss": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "enableLockss": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "enableOai": {
             "type": "boolean",
             "default": 1,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "enableOpenAccessNotification": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "enablePublisherId": {
             "type": "array",
             "items": {
               "type": "string",
-              "validation": [
-                "in:publication,galley,issue,issueGalley"
-              ]
+              "validation": ["in:publication,galley,issue,issueGalley"]
             }
           },
           "enableSubscriptionOnlinePaymentNotificationPurchaseIndividual": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "enableSubscriptionOnlinePaymentNotificationRenewIndividual": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "enableSubscriptionOnlinePaymentNotificationRenewInstitutional": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "enabled": {
             "type": "boolean",
@@ -4937,17 +4675,12 @@
           },
           "envelopeSender": {
             "type": "string",
-            "validation": [
-              "nullable",
-              "email_or_localhost"
-            ]
+            "validation": ["nullable", "email_or_localhost"]
           },
           "favicon": {
             "type": "object",
             "multilingual": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "properties": {
               "type": "object",
               "properties": [],
@@ -5000,9 +4733,7 @@
           "homepageImage": {
             "type": "object",
             "multilingual": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "properties": {
               "type": "object",
               "properties": [],
@@ -5060,18 +4791,13 @@
           "itemsPerPage": {
             "type": "integer",
             "default": 25,
-            "validation": [
-              "nullable",
-              "min:1"
-            ]
+            "validation": ["nullable", "min:1"]
           },
           "journalThumbnail": {
             "type": "object",
             "multilingual": true,
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "properties": {
               "type": "object",
               "properties": [],
@@ -5091,9 +4817,7 @@
                   },
                   "dateUploaded": {
                     "type": "string",
-                    "validation": [
-                      "date_format:Y-m-d H:i:s"
-                    ]
+                    "validation": ["date_format:Y-m-d H:i:s"]
                   },
                   "altText": {
                     "type": "string"
@@ -5116,9 +4840,7 @@
                   },
                   "dateUploaded": {
                     "type": "string",
-                    "validation": [
-                      "date_format:Y-m-d H:i:s"
-                    ]
+                    "validation": ["date_format:Y-m-d H:i:s"]
                   },
                   "altText": {
                     "type": "string"
@@ -5131,18 +4853,12 @@
             "type": "string",
             "default": "request",
             "description": "Enable keywords metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.",
-            "validation": [
-              "nullable",
-              "in:0,enable,request,require"
-            ]
+            "validation": ["nullable", "in:0,enable,request,require"]
           },
           "languages": {
             "type": "string",
             "description": "Enable languages metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.",
-            "validation": [
-              "nullable",
-              "in:0,enable,request,require"
-            ]
+            "validation": ["nullable", "in:0,enable,request,require"]
           },
           "librarianInformation": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -5152,26 +4868,19 @@
           },
           "licenseUrl": {
             "type": "string",
-            "validation": [
-              "nullable",
-              "url"
-            ]
+            "validation": ["nullable", "url"]
           },
           "lockssLicense": {
             "$ref": "#/components/schemas/LocaleObject"
           },
           "mailingAddress": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "membershipFee": {
             "type": "number",
             "default": 0,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "membershipFeeDescription": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -5184,79 +4893,50 @@
           },
           "numAnnouncementsHomepage": {
             "type": "integer",
-            "validation": [
-              "nullable",
-              "min:0"
-            ]
+            "validation": ["nullable", "min:0"]
           },
           "numDaysBeforeInviteReminder": {
             "type": "integer",
-            "validation": [
-              "nullable",
-              "min:0"
-            ]
+            "validation": ["nullable", "min:0"]
           },
           "numDaysBeforeSubmitReminder": {
             "type": "integer",
-            "validation": [
-              "nullable",
-              "min:0"
-            ]
+            "validation": ["nullable", "min:0"]
           },
           "numMonthsAfterSubscriptionExpiryReminder": {
             "type": "integer",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "numMonthsBeforeSubscriptionExpiryReminder": {
             "type": "integer",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "numPageLinks": {
             "type": "integer",
             "default": 10,
-            "validation": [
-              "nullable",
-              "min:1"
-            ]
+            "validation": ["nullable", "min:1"]
           },
           "numWeeksAfterSubscriptionExpiryReminder": {
             "type": "integer",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "numWeeksBeforeSubscriptionExpiryReminder": {
             "type": "integer",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "numWeeksPerResponse": {
             "type": "integer",
             "default": 4,
-            "validation": [
-              "nullable",
-              "min:0"
-            ]
+            "validation": ["nullable", "min:0"]
           },
           "numWeeksPerReview": {
             "type": "integer",
             "default": 4,
-            "validation": [
-              "nullable",
-              "min:0"
-            ]
+            "validation": ["nullable", "min:0"]
           },
           "onlineIssn": {
             "type": "string",
-            "validation": [
-              "nullable",
-              "issn"
-            ]
+            "validation": ["nullable", "issn"]
           },
           "openAccessPolicy": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -5267,9 +4947,7 @@
           "pageHeaderLogoImage": {
             "type": "object",
             "multilingual": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "properties": {
               "type": "object",
               "properties": [],
@@ -5321,28 +4999,19 @@
           },
           "paymentPluginName": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "paymentsEnabled": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "primaryLocale": {
             "type": "string",
-            "validation": [
-              "regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"
-            ]
+            "validation": ["regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"]
           },
           "printIssn": {
             "type": "string",
-            "validation": [
-              "nullable",
-              "issn"
-            ]
+            "validation": ["nullable", "issn"]
           },
           "privacyStatement": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -5350,9 +5019,7 @@
           "publicationFee": {
             "type": "number",
             "default": 0,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "publicationFeeDescription": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -5362,97 +5029,69 @@
           },
           "publisherInstitution": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "publishingMode": {
             "type": "integer",
-            "validation": [
-              "nullable",
-              "in:0,1,2"
-            ]
+            "validation": ["nullable", "in:0,1,2"]
           },
           "purchaseArticleFee": {
             "type": "number",
             "default": 0,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "purchaseArticleFeeDescription": {
             "$ref": "#/components/schemas/LocaleObject"
           },
           "purchaseArticleFeeEnabled": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "purchaseArticleFeeName": {
             "$ref": "#/components/schemas/LocaleObject"
           },
           "purchaseIssueFee": {
             "type": "number",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "purchaseIssueFeeEnabled": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "rateReviewerOnQuality": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "readerInformation": {
             "$ref": "#/components/schemas/LocaleObject"
           },
           "restrictArticleAccess": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "restrictOnlyPdf": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "restrictReviewerFileAccess": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "restrictSiteAccess": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "reviewGuidelines": {
             "$ref": "#/components/schemas/LocaleObject"
           },
           "reviewerAccessKeysEnabled": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "rights": {
             "type": "string",
             "description": "Enable rights metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.",
-            "validation": [
-              "nullable",
-              "in:0,enable,request,require"
-            ]
+            "validation": ["nullable", "in:0,enable,request,require"]
           },
           "searchDescription": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -5460,41 +5099,28 @@
           "seq": {
             "type": "integer",
             "apiSummary": true,
-            "validation": [
-              "min:0"
-            ]
+            "validation": ["min:0"]
           },
           "showEnsuringLink": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "sidebar": {
             "type": "array",
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "items": {
               "type": "string",
-              "validation": [
-                "alpha_dash"
-              ]
+              "validation": ["alpha_dash"]
             }
           },
           "source": {
             "type": "string",
             "description": "Enable source metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.",
-            "validation": [
-              "nullable",
-              "in:0,enable,request,require"
-            ]
+            "validation": ["nullable", "in:0,enable,request,require"]
           },
           "styleSheet": {
             "type": "object",
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "properties": {
               "name": {
                 "type": "string"
@@ -5510,26 +5136,18 @@
           "subjects": {
             "type": "string",
             "description": "Enable subjects metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.",
-            "validation": [
-              "nullable",
-              "in:0,enable,request,require"
-            ]
+            "validation": ["nullable", "in:0,enable,request,require"]
           },
           "submissionChecklist": {
             "type": "array",
             "multilingual": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "items": {
               "type": "object",
               "properties": {
                 "order": {
                   "type": "integer",
-                  "validation": [
-                    "nullable",
-                    "min:0"
-                  ]
+                  "validation": ["nullable", "min:0"]
                 },
                 "content": {
                   "type": "string"
@@ -5574,10 +5192,7 @@
                 "properties": {
                   "order": {
                     "type": "integer",
-                    "validation": [
-                      "nullable",
-                      "min:0"
-                    ]
+                    "validation": ["nullable", "min:0"]
                   },
                   "content": {
                     "type": "string"
@@ -5589,10 +5204,7 @@
                 "properties": {
                   "order": {
                     "type": "integer",
-                    "validation": [
-                      "nullable",
-                      "min:0"
-                    ]
+                    "validation": ["nullable", "min:0"]
                   },
                   "content": {
                     "type": "string"
@@ -5603,9 +5215,7 @@
           },
           "submissionFee": {
             "type": "number",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "submissionFeeDescription": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -5618,79 +5228,55 @@
           },
           "subscriptionEmail": {
             "type": "string",
-            "validation": [
-              "nullable",
-              "email_or_localhost"
-            ]
+            "validation": ["nullable", "email_or_localhost"]
           },
           "subscriptionExpiryPartial": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "subscriptionMailingAddress": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "subscriptionName": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "subscriptionPhone": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "supportEmail": {
             "type": "string",
-            "validation": [
-              "nullable",
-              "email_or_localhost"
-            ]
+            "validation": ["nullable", "email_or_localhost"]
           },
           "supportName": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "supportPhone": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "supportedFormLocales": {
             "type": "array",
             "items": {
               "type": "string",
-              "validation": [
-                "regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"
-              ]
+              "validation": ["regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"]
             }
           },
           "supportedLocales": {
             "type": "array",
             "items": {
               "type": "string",
-              "validation": [
-                "regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"
-              ]
+              "validation": ["regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"]
             }
           },
           "supportedSubmissionLocales": {
             "type": "array",
             "items": {
               "type": "string",
-              "validation": [
-                "regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"
-              ]
+              "validation": ["regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"]
             }
           },
           "themePluginPath": {
@@ -5703,10 +5289,7 @@
           "type": {
             "type": "string",
             "description": "Enable types metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.",
-            "validation": [
-              "nullable",
-              "in:0,enable,request,require"
-            ]
+            "validation": ["nullable", "in:0,enable,request,require"]
           },
           "url": {
             "type": "string",
@@ -5715,9 +5298,7 @@
           },
           "urlPath": {
             "type": "string",
-            "validation": [
-              "regex:/^[a-zA-Z0-9]+([\\-_][a-zA-Z0-9]+)*$/"
-            ],
+            "validation": ["regex:/^[a-zA-Z0-9]+([\\-_][a-zA-Z0-9]+)*$/"],
             "apiSummary": true
           }
         }
@@ -5762,10 +5343,7 @@
             "type": "integer",
             "description": "The ID of the context (journal/press) this email is related to. Only used for custom email templates. Default is `null`.",
             "apiSummary": "true",
-            "validation": [
-              "nullable",
-              "min:0"
-            ]
+            "validation": ["nullable", "min:0"]
           },
           "description": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -5791,9 +5369,7 @@
             "type": "string",
             "description": "A unique key for this email template.",
             "apiSummary": true,
-            "validation": [
-              "alpha_dash"
-            ]
+            "validation": ["alpha_dash"]
           },
           "stageId": {
             "type": "integer",
@@ -5836,9 +5412,7 @@
             "type": "string",
             "description": "The primary locale of this galley.",
             "apiSummary": true,
-            "validation": [
-              "regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"
-            ]
+            "validation": ["regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"]
           },
           "pub-id::publisher-id": {
             "type": "string",
@@ -5857,17 +5431,12 @@
           "submissionFileId": {
             "type": "integer",
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "urlPath": {
             "type": "string",
             "description": "An optional path to use in the URL instead of the ID.",
-            "validation": [
-              "nullable",
-              "regex:/^[-_a-z0-9]*$/"
-            ]
+            "validation": ["nullable", "regex:/^[-_a-z0-9]*$/"]
           },
           "urlPublished": {
             "type": "string",
@@ -5879,9 +5448,7 @@
             "type": "string",
             "description": "An optional URL where the galley can be viewed or downloaded.",
             "apiSummary": true,
-            "validation": [
-              "url"
-            ]
+            "validation": ["url"]
           }
         }
       },
@@ -5889,12 +5456,8 @@
         "type": "object",
         "description": "A response object that will be returned when there are validation errors for the request parameters. Typically used with forms.",
         "example": {
-          "name": [
-            "You must provide a name to create a new user."
-          ],
-          "roles": [
-            "You must assign the user to one or more roles."
-          ]
+          "name": ["You must provide a name to create a new user."],
+          "roles": ["You must assign the user to one or more roles."]
         }
       },
       "Issue": {
@@ -5920,16 +5483,12 @@
           },
           "dateNotified": {
             "type": "string",
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "datePublished": {
             "type": "string",
             "apiSummary": true,
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "description": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -5960,9 +5519,7 @@
           },
           "lastModified": {
             "type": "string",
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "number": {
             "type": "string",
@@ -5971,9 +5528,7 @@
           "publishedUrl": {
             "type": "string",
             "apiSummary": true,
-            "validation": [
-              "url"
-            ]
+            "validation": ["url"]
           },
           "sections": {
             "type": "array",
@@ -5988,10 +5543,7 @@
           "urlPath": {
             "type": "string",
             "description": "An optional path to use in the URL instead of the ID.",
-            "validation": [
-              "nullable",
-              "regex:/^[-_a-z0-9]*$/"
-            ]
+            "validation": ["nullable", "regex:/^[-_a-z0-9]*$/"]
           },
           "volume": {
             "type": "integer",
@@ -6026,9 +5578,7 @@
           "accessStatus": {
             "type": "integer",
             "default": 0,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "authors": {
             "type": "array",
@@ -6068,9 +5618,7 @@
           "citationsRaw": {
             "type": "string",
             "description": "Optional metadata that contains references for works cited in this submission as raw text.",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "copyrightHolder": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -6078,17 +5626,13 @@
           "copyrightYear": {
             "type": "integer",
             "description": "The copyright year for this publication.",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "coverImage": {
             "type": "object",
             "multilingual": true,
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "properties": {
               "type": "object",
               "properties": [],
@@ -6126,18 +5670,13 @@
           "datePublished": {
             "type": "string",
             "apiSummary": true,
-            "validation": [
-              "nullable",
-              "date_format:Y-m-d"
-            ]
+            "validation": ["nullable", "date_format:Y-m-d"]
           },
           "disciplines": {
             "type": "array",
             "description": "Optional metadata that describes the submission's types of study or branches of knowledge.",
             "multilingual": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "items": {
               "type": "string"
             },
@@ -6165,9 +5704,7 @@
             "type": "boolean",
             "description": "Whether the contributor details should be displayed for this publication. Commonly used for editorial statements without individual authorship.",
             "default": false,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "id": {
             "type": "integer",
@@ -6176,17 +5713,13 @@
           },
           "issueId": {
             "type": "integer",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "keywords": {
             "type": "array",
             "description": "Optional metadata, usually one- to three-word phrases that are used to indicate the main topics of a submission.",
             "multilingual": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "items": {
               "type": "string"
             },
@@ -6203,9 +5736,7 @@
             "type": "array",
             "description": "Optional metadata that identifies the submission's primary language.",
             "multilingual": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "items": {
               "type": "string"
             },
@@ -6220,17 +5751,12 @@
           },
           "lastModified": {
             "type": "string",
-            "validation": [
-              "date_format:Y-m-d H:i:s"
-            ]
+            "validation": ["date_format:Y-m-d H:i:s"]
           },
           "licenseUrl": {
             "type": "string",
             "description": "A URL to a webpage describing the license terms for this publication.",
-            "validation": [
-              "nullable",
-              "url"
-            ]
+            "validation": ["nullable", "url"]
           },
           "locale": {
             "type": "string",
@@ -6242,9 +5768,7 @@
             "type": "string",
             "description": "The pages of the issue in which this article appears if it is published in a physical format.",
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "prefix": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -6258,9 +5782,7 @@
             "type": "string",
             "description": "A unique ID provided by the publisher. It will be used in the publication's URL path instead of the `id` when present.",
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "rights": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -6272,9 +5794,7 @@
           "seq": {
             "type": "integer",
             "default": 0,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "source": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -6284,17 +5804,13 @@
             "description": "Whether the publication is Queued (not yet scheduled for publication), Declined, Published or Scheduled (scheduled for publication at a future date). One of the `STATUS_*` constants. Default is `STATUS_QUEUED`.",
             "apiSummary": true,
             "default": 1,
-            "validation": [
-              "in:1,3,4,5"
-            ]
+            "validation": ["in:1,3,4,5"]
           },
           "subjects": {
             "type": "array",
             "description": "Optional metadata that consists of keywords, key phrases or classification codes that describe the submission's topics.",
             "multilingual": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "items": {
               "type": "string"
             },
@@ -6318,9 +5834,7 @@
             "type": "array",
             "description": "Optional metadata that indicates the source of research funding or other institutional support.",
             "multilingual": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "items": {
               "type": "string"
             },
@@ -6342,10 +5856,7 @@
           "urlPath": {
             "type": "string",
             "description": "An optional path to use in the URL instead of the ID.",
-            "validation": [
-              "nullable",
-              "regex:/^[-_a-z0-9]*$/"
-            ]
+            "validation": ["nullable", "regex:/^[-_a-z0-9]*$/"]
           },
           "urlPublished": {
             "type": "string",
@@ -6357,9 +5868,7 @@
             "type": "integer",
             "description": "The version number of this publication. Version numbers should increment by one so that the third publication of a submission will have the version number `3`. Version numbers should typically be set automatically and editorial staff should not be encouraged to modify them.",
             "apiSummary": true,
-            "validation": [
-              "min:1"
-            ]
+            "validation": ["min:1"]
           }
         }
       },
@@ -6527,16 +6036,12 @@
             "type": "array",
             "items": {
               "type": "string",
-              "validation": [
-                "regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"
-              ]
+              "validation": ["regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"]
             }
           },
           "minPasswordLength": {
             "type": "integer",
-            "validation": [
-              "min:4"
-            ]
+            "validation": ["min:4"]
           },
           "pageFooter": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -6544,9 +6049,7 @@
           "pageHeaderTitleImage": {
             "type": "object",
             "multilingual": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "properties": {
               "type": "object",
               "properties": [],
@@ -6598,33 +6101,25 @@
           },
           "primaryLocale": {
             "type": "string",
-            "validation": [
-              "regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"
-            ]
+            "validation": ["regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"]
           },
           "privacyStatement": {
             "$ref": "#/components/schemas/LocaleObject"
           },
           "redirect": {
             "type": "integer",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "sidebar": {
             "type": "array",
             "items": {
               "type": "string",
-              "validation": [
-                "alpha_num"
-              ]
+              "validation": ["alpha_num"]
             }
           },
           "styleSheet": {
             "type": "object",
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "properties": {
               "name": {
                 "type": "string"
@@ -6641,9 +6136,7 @@
             "type": "array",
             "items": {
               "type": "string",
-              "validation": [
-                "regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"
-              ]
+              "validation": ["regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"]
             }
           },
           "themePluginPath": {
@@ -6676,16 +6169,12 @@
             "type": "string",
             "description": "The last time activity was recorded related to this submission.",
             "apiSummary": true,
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "dateSubmitted": {
             "type": "string",
             "apiSummary": true,
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "id": {
             "type": "integer",
@@ -6695,17 +6184,13 @@
             "type": "string",
             "description": "The last time a modification was made to this submission or any of its associated objects.",
             "apiSummary": true,
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "locale": {
             "type": "string",
             "description": "The primary language of this submission.",
             "apiSummary": true,
-            "validation": [
-              "regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"
-            ]
+            "validation": ["regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"]
           },
           "publications": {
             "type": "array",
@@ -6740,15 +6225,11 @@
                 },
                 "dateDue": {
                   "type": "integer",
-                  "validation": [
-                    "date|Y-m-d H:i:s"
-                  ]
+                  "validation": ["date|Y-m-d H:i:s"]
                 },
                 "dateResponseDue": {
                   "type": "integer",
-                  "validation": [
-                    "date|Y-m-d H:i:s"
-                  ]
+                  "validation": ["date|Y-m-d H:i:s"]
                 },
                 "round": {
                   "type": "integer"
@@ -6772,10 +6253,7 @@
             "description": "The stage of the editorial workflow that this submission is currently in. One of the `WORKFLOW_STAGE_` constants. Default is `WORKFLOW_STAGE_SUBMISSION`.",
             "apiSummary": true,
             "default": 1,
-            "validation": [
-              "min:1",
-              "max:5"
-            ]
+            "validation": ["min:1", "max:5"]
           },
           "stages": {
             "type": "array",
@@ -6844,9 +6322,7 @@
             "description": "Whether the submission is Published, Declined, Scheduled or Queued (still in the workflow). One of the `STATUS_*` constants. Default is `STATUS_QUEUED`.",
             "apiSummary": true,
             "default": 1,
-            "validation": [
-              "in:1,2,3,4,5"
-            ]
+            "validation": ["in:1,2,3,4,5"]
           },
           "statusLabel": {
             "type": "string",
@@ -6859,9 +6335,7 @@
             "description": "This number tracks a submission's progress before it is submitted to the journal or press. After submission, it will be set to `0`, indicating it is ready for an editor's consideration.",
             "apiSummary": true,
             "default": 1,
-            "validation": [
-              "in:0,1,2,3,4"
-            ]
+            "validation": ["in:0,1,2,3,4"]
           },
           "urlAuthorWorkflow": {
             "type": "string",
@@ -6902,41 +6376,31 @@
             "type": "integer",
             "apiSummary": true,
             "description": "Used with `assocType` to associate this file with an object such as a galley.",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "assocType": {
             "type": "integer",
             "apiSummary": true,
             "description": "Used with `assocId` to associate this file with an object such as a galley. One of the following constants: `ASSOC_TYPE_SUBMISSION_FILE` (dependent files), `ASSOC_TYPE_REVIEW_ASSIGNMENT` (files uploaded by a reviewer), `ASSOC_TYPE_NOTE` (files uploaded with a discussion), `ASSOC_TYPE_REPRESENTATION` (files uploaded to a galley or publication format), `ASSOC_TYPE_REVIEW_ROUND` (review files and revisions for a particular review round).",
-            "validation": [
-              "in:515,517,520,521,523"
-            ]
+            "validation": ["in:515,517,520,521,523"]
           },
           "caption": {
             "type": "string",
             "apiSummary": true,
             "description": "A caption for this file. Used with artwork such as images.",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "copyrightOwner": {
             "type": "string",
             "apiSummary": true,
             "description": "The copyright owner of this file. Used with artwork such as images.",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "createdAt": {
             "type": "string",
             "apiSummary": true,
             "description": "The date this submission file object was created in the system. Set automatically by the software.",
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "creator": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -6945,17 +6409,13 @@
             "type": "string",
             "description": "An attribution for this file, such as a photographer's name. Used with artwork such as images.",
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "dateCreated": {
             "type": "string",
             "description": "Public metadata about when this content was created. Used with supplementary files.",
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "dependentFiles": {
             "type": "array",
@@ -6980,9 +6440,7 @@
           "fileStage": {
             "type": "integer",
             "apiSummary": true,
-            "validation": [
-              "in:2,3,4,5,6,7,8,9,10,11,13,15,17,18"
-            ]
+            "validation": ["in:2,3,4,5,6,7,8,9,10,11,13,15,17,18"]
           },
           "genreId": {
             "type": "integer",
@@ -6997,9 +6455,7 @@
             "type": "string",
             "apiSummary": true,
             "description": "The language of this file if it contains text. Used with supplementary files.",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "locale": {
             "type": "string",
@@ -7075,9 +6531,7 @@
             "type": "string",
             "apiSummary": true,
             "description": "When this object was last updated.",
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "uploaderUserId": {
             "type": "integer",
@@ -7148,21 +6602,15 @@
           },
           "dateLastRegistered": {
             "type": "string",
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "dateRegistered": {
             "type": "string",
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "dateValidated": {
             "type": "string",
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "disabled": {
             "type": "boolean",
@@ -7174,9 +6622,7 @@
           "email": {
             "type": "string",
             "apiSummary": true,
-            "validation": [
-              "email_or_localhost"
-            ]
+            "validation": ["email_or_localhost"]
           },
           "familyName": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -7221,9 +6667,7 @@
           "orcid": {
             "type": "string",
             "apiSummary": true,
-            "validation": [
-              "orcid"
-            ]
+            "validation": ["orcid"]
           },
           "phone": {
             "type": "string"
@@ -7233,9 +6677,7 @@
           },
           "url": {
             "type": "string",
-            "validation": [
-              "url"
-            ]
+            "validation": ["url"]
           },
           "userName": {
             "type": "string",
@@ -7263,9 +6705,7 @@
           },
           "roleId": {
             "type": "integer",
-            "validation": [
-              "in:16,1,17,65536,4096,4097,1048576,209715"
-            ]
+            "validation": ["in:16,1,17,65536,4096,4097,1048576,209715"]
           },
           "showTitle": {
             "type": "boolean"
@@ -7301,19 +6741,13 @@
             "type": "string",
             "description": "(Optional) The date that this announcement expires, if one is set. This is typically used to express closing dates for calls for papers.",
             "apiSummary": true,
-            "validation": [
-              "nullable",
-              "date_format:Y-m-d"
-            ]
+            "validation": ["nullable", "date_format:Y-m-d"]
           },
           "datePosted": {
             "type": "string",
             "description": "The date this announcement was posted.",
             "apiSummary": true,
-            "validation": [
-              "nullable",
-              "date_format:Y-m-d H:i:s"
-            ]
+            "validation": ["nullable", "date_format:Y-m-d H:i:s"]
           },
           "description": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -7332,9 +6766,7 @@
             "type": "integer",
             "description": "(Optional) One of the announcement type ids.",
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           }
         }
       },
@@ -7362,19 +6794,13 @@
             "type": "string",
             "description": "(Optional) The date that this announcement expires, if one is set. This is typically used to express closing dates for calls for papers.",
             "apiSummary": true,
-            "validation": [
-              "nullable",
-              "date_format:Y-m-d"
-            ]
+            "validation": ["nullable", "date_format:Y-m-d"]
           },
           "datePosted": {
             "type": "string",
             "description": "The date this announcement was posted.",
             "apiSummary": true,
-            "validation": [
-              "nullable",
-              "date_format:Y-m-d H:i:s"
-            ]
+            "validation": ["nullable", "date_format:Y-m-d H:i:s"]
           },
           "description": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -7393,9 +6819,7 @@
             "type": "integer",
             "description": "(Optional) One of the announcement type ids.",
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           }
         }
       },
@@ -7414,9 +6838,7 @@
           "email": {
             "type": "string",
             "apiSummary": true,
-            "validation": [
-              "email_or_localhost"
-            ]
+            "validation": ["email_or_localhost"]
           },
           "familyName": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -7438,9 +6860,7 @@
             "type": "string",
             "description": "The ORCID of this contributor. See: https://orcid.org/",
             "apiSummary": true,
-            "validation": [
-              "orcid"
-            ]
+            "validation": ["orcid"]
           },
           "preferredPublicName": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -7457,9 +6877,7 @@
           "url": {
             "type": "string",
             "description": "An optional URL to this contributor's webpage.",
-            "validation": [
-              "url"
-            ]
+            "validation": ["url"]
           },
           "userGroupId": {
             "type": "integer",
@@ -7477,9 +6895,7 @@
           "email": {
             "type": "string",
             "apiSummary": true,
-            "validation": [
-              "email_or_localhost"
-            ]
+            "validation": ["email_or_localhost"]
           },
           "familyName": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -7501,9 +6917,7 @@
             "type": "string",
             "description": "The ORCID of this contributor. See: https://orcid.org/",
             "apiSummary": true,
-            "validation": [
-              "orcid"
-            ]
+            "validation": ["orcid"]
           },
           "preferredPublicName": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -7548,10 +6962,7 @@
           "agencies": {
             "type": "string",
             "description": "Enable agencies metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.",
-            "validation": [
-              "nullable",
-              "in:0,enable,request,require"
-            ]
+            "validation": ["nullable", "in:0,enable,request,require"]
           },
           "announcementsIntroduction": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -7565,10 +6976,7 @@
           "citations": {
             "type": "string",
             "description": "Enable citations metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.",
-            "validation": [
-              "nullable",
-              "in:0,enable,request,require"
-            ]
+            "validation": ["nullable", "in:0,enable,request,require"]
           },
           "clockssLicense": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -7581,32 +6989,22 @@
           },
           "contactEmail": {
             "type": "string",
-            "validation": [
-              "nullable",
-              "email_or_localhost"
-            ]
+            "validation": ["nullable", "email_or_localhost"]
           },
           "contactName": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "contactPhone": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "copyrightHolderOther": {
             "$ref": "#/components/schemas/LocaleObject"
           },
           "copyrightHolderType": {
             "type": "string",
-            "validation": [
-              "nullable",
-              "in:author,context,other"
-            ]
+            "validation": ["nullable", "in:author,context,other"]
           },
           "copyrightNotice": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -7614,24 +7012,16 @@
           "copyrightYearBasis": {
             "type": "string",
             "default": "issue",
-            "validation": [
-              "in:issue,submission"
-            ]
+            "validation": ["in:issue,submission"]
           },
           "coverage": {
             "type": "string",
             "description": "Enable coverage metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.",
-            "validation": [
-              "nullable",
-              "in:0,enable,request,require"
-            ]
+            "validation": ["nullable", "in:0,enable,request,require"]
           },
           "currency": {
             "type": "string",
-            "validation": [
-              "nullable",
-              "currency"
-            ]
+            "validation": ["nullable", "currency"]
           },
           "customHeaders": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -7650,23 +7040,16 @@
           },
           "defaultMetricType": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "defaultReviewMode": {
             "type": "integer",
             "default": 2,
-            "validation": [
-              "nullable",
-              "in:1,2,3"
-            ]
+            "validation": ["nullable", "in:1,2,3"]
           },
           "delayedOpenAccessDuration": {
             "type": "integer",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "delayedOpenAccessPolicy": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -7684,23 +7067,16 @@
           "disableSubmissions": {
             "type": "boolean",
             "default": false,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "disableUserReg": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "disciplines": {
             "type": "string",
             "description": "Enable disciplines metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.",
-            "validation": [
-              "nullable",
-              "in:0,enable,request,require"
-            ]
+            "validation": ["nullable", "in:0,enable,request,require"]
           },
           "editorialTeam": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -7708,73 +7084,51 @@
           "emailSignature": {
             "type": "string",
             "defaultLocaleKey": "default.contextSettings.emailSignature",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "enableAnnouncements": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "enableClockss": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "enableLockss": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "enableOai": {
             "type": "boolean",
             "default": 1,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "enableOpenAccessNotification": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "enablePublisherId": {
             "type": "array",
             "items": {
               "type": "string",
-              "validation": [
-                "in:publication,galley,issue,issueGalley"
-              ]
+              "validation": ["in:publication,galley,issue,issueGalley"]
             }
           },
           "enableSubscriptionOnlinePaymentNotificationPurchaseIndividual": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "enableSubscriptionOnlinePaymentNotificationPurchaseInstitutional": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "enableSubscriptionOnlinePaymentNotificationRenewIndividual": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "enableSubscriptionOnlinePaymentNotificationRenewInstitutional": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "enabled": {
             "type": "boolean",
@@ -7782,17 +7136,12 @@
           },
           "envelopeSender": {
             "type": "string",
-            "validation": [
-              "nullable",
-              "email_or_localhost"
-            ]
+            "validation": ["nullable", "email_or_localhost"]
           },
           "favicon": {
             "type": "object",
             "multilingual": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "properties": {
               "type": "object",
               "properties": [],
@@ -7853,9 +7202,7 @@
           "homepageImage": {
             "type": "object",
             "multilingual": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "properties": {
               "type": "object",
               "properties": [],
@@ -7916,18 +7263,13 @@
           "itemsPerPage": {
             "type": "integer",
             "default": 25,
-            "validation": [
-              "nullable",
-              "min:1"
-            ]
+            "validation": ["nullable", "min:1"]
           },
           "journalThumbnail": {
             "type": "object",
             "multilingual": true,
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "properties": {
               "type": "object",
               "properties": [],
@@ -7951,9 +7293,7 @@
                   },
                   "dateUploaded": {
                     "type": "string",
-                    "validation": [
-                      "date_format:Y-m-d H:i:s"
-                    ]
+                    "validation": ["date_format:Y-m-d H:i:s"]
                   },
                   "altText": {
                     "type": "string"
@@ -7980,9 +7320,7 @@
                   },
                   "dateUploaded": {
                     "type": "string",
-                    "validation": [
-                      "date_format:Y-m-d H:i:s"
-                    ]
+                    "validation": ["date_format:Y-m-d H:i:s"]
                   },
                   "altText": {
                     "type": "string"
@@ -7995,18 +7333,12 @@
             "type": "string",
             "default": "request",
             "description": "Enable keywords metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.",
-            "validation": [
-              "nullable",
-              "in:0,enable,request,require"
-            ]
+            "validation": ["nullable", "in:0,enable,request,require"]
           },
           "languages": {
             "type": "string",
             "description": "Enable languages metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.",
-            "validation": [
-              "nullable",
-              "in:0,enable,request,require"
-            ]
+            "validation": ["nullable", "in:0,enable,request,require"]
           },
           "librarianInformation": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -8016,26 +7348,19 @@
           },
           "licenseUrl": {
             "type": "string",
-            "validation": [
-              "nullable",
-              "url"
-            ]
+            "validation": ["nullable", "url"]
           },
           "lockssLicense": {
             "$ref": "#/components/schemas/LocaleObject"
           },
           "mailingAddress": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "membershipFee": {
             "type": "number",
             "default": 0,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "membershipFeeDescription": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -8048,79 +7373,50 @@
           },
           "numAnnouncementsHomepage": {
             "type": "integer",
-            "validation": [
-              "nullable",
-              "min:0"
-            ]
+            "validation": ["nullable", "min:0"]
           },
           "numDaysBeforeInviteReminder": {
             "type": "integer",
-            "validation": [
-              "nullable",
-              "min:0"
-            ]
+            "validation": ["nullable", "min:0"]
           },
           "numDaysBeforeSubmitReminder": {
             "type": "integer",
-            "validation": [
-              "nullable",
-              "min:0"
-            ]
+            "validation": ["nullable", "min:0"]
           },
           "numMonthsAfterSubscriptionExpiryReminder": {
             "type": "integer",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "numMonthsBeforeSubscriptionExpiryReminder": {
             "type": "integer",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "numPageLinks": {
             "type": "integer",
             "default": 10,
-            "validation": [
-              "nullable",
-              "min:1"
-            ]
+            "validation": ["nullable", "min:1"]
           },
           "numWeeksAfterSubscriptionExpiryReminder": {
             "type": "integer",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "numWeeksBeforeSubscriptionExpiryReminder": {
             "type": "integer",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "numWeeksPerResponse": {
             "type": "integer",
             "default": 4,
-            "validation": [
-              "nullable",
-              "min:0"
-            ]
+            "validation": ["nullable", "min:0"]
           },
           "numWeeksPerReview": {
             "type": "integer",
             "default": 4,
-            "validation": [
-              "nullable",
-              "min:0"
-            ]
+            "validation": ["nullable", "min:0"]
           },
           "onlineIssn": {
             "type": "string",
-            "validation": [
-              "nullable",
-              "issn"
-            ]
+            "validation": ["nullable", "issn"]
           },
           "openAccessPolicy": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -8131,9 +7427,7 @@
           "pageHeaderLogoImage": {
             "type": "object",
             "multilingual": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "properties": {
               "type": "object",
               "properties": [],
@@ -8193,28 +7487,19 @@
           },
           "paymentPluginName": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "paymentsEnabled": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "primaryLocale": {
             "type": "string",
-            "validation": [
-              "regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"
-            ]
+            "validation": ["regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"]
           },
           "printIssn": {
             "type": "string",
-            "validation": [
-              "nullable",
-              "issn"
-            ]
+            "validation": ["nullable", "issn"]
           },
           "privacyStatement": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -8222,9 +7507,7 @@
           "publicationFee": {
             "type": "number",
             "default": 0,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "publicationFeeDescription": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -8234,97 +7517,69 @@
           },
           "publisherInstitution": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "publishingMode": {
             "type": "integer",
-            "validation": [
-              "nullable",
-              "in:0,1,2"
-            ]
+            "validation": ["nullable", "in:0,1,2"]
           },
           "purchaseArticleFee": {
             "type": "number",
             "default": 0,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "purchaseArticleFeeDescription": {
             "$ref": "#/components/schemas/LocaleObject"
           },
           "purchaseArticleFeeEnabled": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "purchaseArticleFeeName": {
             "$ref": "#/components/schemas/LocaleObject"
           },
           "purchaseIssueFee": {
             "type": "number",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "purchaseIssueFeeEnabled": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "rateReviewerOnQuality": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "readerInformation": {
             "$ref": "#/components/schemas/LocaleObject"
           },
           "restrictArticleAccess": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "restrictOnlyPdf": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "restrictReviewerFileAccess": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "restrictSiteAccess": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "reviewGuidelines": {
             "$ref": "#/components/schemas/LocaleObject"
           },
           "reviewerAccessKeysEnabled": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "rights": {
             "type": "string",
             "description": "Enable rights metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.",
-            "validation": [
-              "nullable",
-              "in:0,enable,request,require"
-            ]
+            "validation": ["nullable", "in:0,enable,request,require"]
           },
           "searchDescription": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -8332,41 +7587,28 @@
           "seq": {
             "type": "integer",
             "apiSummary": true,
-            "validation": [
-              "min:0"
-            ]
+            "validation": ["min:0"]
           },
           "showEnsuringLink": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "sidebar": {
             "type": "array",
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "items": {
               "type": "string",
-              "validation": [
-                "alpha_dash"
-              ]
+              "validation": ["alpha_dash"]
             }
           },
           "source": {
             "type": "string",
             "description": "Enable source metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.",
-            "validation": [
-              "nullable",
-              "in:0,enable,request,require"
-            ]
+            "validation": ["nullable", "in:0,enable,request,require"]
           },
           "styleSheet": {
             "type": "object",
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "properties": {
               "temporaryFileId": {
                 "type": "integer",
@@ -8386,26 +7628,18 @@
           "subjects": {
             "type": "string",
             "description": "Enable subjects metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.",
-            "validation": [
-              "nullable",
-              "in:0,enable,request,require"
-            ]
+            "validation": ["nullable", "in:0,enable,request,require"]
           },
           "submissionChecklist": {
             "type": "array",
             "multilingual": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "items": {
               "type": "object",
               "properties": {
                 "order": {
                   "type": "integer",
-                  "validation": [
-                    "nullable",
-                    "min:0"
-                  ]
+                  "validation": ["nullable", "min:0"]
                 },
                 "content": {
                   "type": "string"
@@ -8450,10 +7684,7 @@
                 "properties": {
                   "order": {
                     "type": "integer",
-                    "validation": [
-                      "nullable",
-                      "min:0"
-                    ]
+                    "validation": ["nullable", "min:0"]
                   },
                   "content": {
                     "type": "string"
@@ -8465,10 +7696,7 @@
                 "properties": {
                   "order": {
                     "type": "integer",
-                    "validation": [
-                      "nullable",
-                      "min:0"
-                    ]
+                    "validation": ["nullable", "min:0"]
                   },
                   "content": {
                     "type": "string"
@@ -8479,9 +7707,7 @@
           },
           "submissionFee": {
             "type": "number",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "submissionFeeDescription": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -8494,79 +7720,55 @@
           },
           "subscriptionEmail": {
             "type": "string",
-            "validation": [
-              "nullable",
-              "email_or_localhost"
-            ]
+            "validation": ["nullable", "email_or_localhost"]
           },
           "subscriptionExpiryPartial": {
             "type": "boolean",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "subscriptionMailingAddress": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "subscriptionName": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "subscriptionPhone": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "supportEmail": {
             "type": "string",
-            "validation": [
-              "nullable",
-              "email_or_localhost"
-            ]
+            "validation": ["nullable", "email_or_localhost"]
           },
           "supportName": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "supportPhone": {
             "type": "string",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "supportedFormLocales": {
             "type": "array",
             "items": {
               "type": "string",
-              "validation": [
-                "regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"
-              ]
+              "validation": ["regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"]
             }
           },
           "supportedLocales": {
             "type": "array",
             "items": {
               "type": "string",
-              "validation": [
-                "regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"
-              ]
+              "validation": ["regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"]
             }
           },
           "supportedSubmissionLocales": {
             "type": "array",
             "items": {
               "type": "string",
-              "validation": [
-                "regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"
-              ]
+              "validation": ["regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"]
             }
           },
           "themePluginPath": {
@@ -8579,16 +7781,11 @@
           "type": {
             "type": "string",
             "description": "Enable types metadata. `0` is disabled. `enable` will make it available in the workflow. `request` will allow an author to enter a value during submission. `require` will require that the author enter a value during submission.",
-            "validation": [
-              "nullable",
-              "in:0,enable,request,require"
-            ]
+            "validation": ["nullable", "in:0,enable,request,require"]
           },
           "urlPath": {
             "type": "string",
-            "validation": [
-              "regex:/^[a-zA-Z0-9]+([\\-_][a-zA-Z0-9]+)*$/"
-            ],
+            "validation": ["regex:/^[a-zA-Z0-9]+([\\-_][a-zA-Z0-9]+)*$/"],
             "apiSummary": true
           }
         }
@@ -8624,9 +7821,7 @@
             "type": "object",
             "multilingual": true,
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "properties": {
               "type": "object",
               "properties": [],
@@ -8644,9 +7839,7 @@
           "seq": {
             "type": "integer",
             "apiSummary": true,
-            "validation": [
-              "min:0"
-            ]
+            "validation": ["min:0"]
           },
           "url": {
             "type": "string",
@@ -8655,9 +7848,7 @@
           },
           "urlPath": {
             "type": "string",
-            "validation": [
-              "regex:/^[a-zA-Z0-9]+([\\-_][a-zA-Z0-9]+)*$/"
-            ],
+            "validation": ["regex:/^[a-zA-Z0-9]+([\\-_][a-zA-Z0-9]+)*$/"],
             "apiSummary": true
           }
         }
@@ -8672,10 +7863,7 @@
             "type": "integer",
             "description": "The ID of the context (journal/press) this email is related to. Only used for custom email templates. Default is `null`.",
             "apiSummary": "true",
-            "validation": [
-              "nullable",
-              "min:0"
-            ]
+            "validation": ["nullable", "min:0"]
           },
           "enabled": {
             "type": "boolean",
@@ -8686,9 +7874,7 @@
             "type": "string",
             "description": "A unique key for this email template.",
             "apiSummary": true,
-            "validation": [
-              "alpha_dash"
-            ]
+            "validation": ["alpha_dash"]
           },
           "subject": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -8723,10 +7909,7 @@
             "type": "integer",
             "description": "The ID of the context (journal/press) this email is related to. Only used for custom email templates. Default is `null`.",
             "apiSummary": "true",
-            "validation": [
-              "nullable",
-              "min:0"
-            ]
+            "validation": ["nullable", "min:0"]
           },
           "description": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -8752,9 +7935,7 @@
             "type": "string",
             "description": "A unique key for this email template.",
             "apiSummary": true,
-            "validation": [
-              "alpha_dash"
-            ]
+            "validation": ["alpha_dash"]
           },
           "stageId": {
             "type": "integer",
@@ -8789,9 +7970,7 @@
             "type": "string",
             "description": "The primary locale of this galley.",
             "apiSummary": true,
-            "validation": [
-              "regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"
-            ]
+            "validation": ["regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"]
           },
           "pub-id::publisher-id": {
             "type": "string",
@@ -8810,25 +7989,18 @@
           "submissionFileId": {
             "type": "integer",
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "urlPath": {
             "type": "string",
             "description": "An optional path to use in the URL instead of the ID.",
-            "validation": [
-              "nullable",
-              "regex:/^[-_a-z0-9]*$/"
-            ]
+            "validation": ["nullable", "regex:/^[-_a-z0-9]*$/"]
           },
           "urlRemote": {
             "type": "string",
             "description": "An optional URL where the galley can be viewed or downloaded.",
             "apiSummary": true,
-            "validation": [
-              "url"
-            ]
+            "validation": ["url"]
           }
         }
       },
@@ -8856,9 +8028,7 @@
             "type": "string",
             "description": "The primary locale of this galley.",
             "apiSummary": true,
-            "validation": [
-              "regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"
-            ]
+            "validation": ["regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"]
           },
           "pub-id::publisher-id": {
             "type": "string",
@@ -8877,9 +8047,7 @@
           "submissionFileId": {
             "type": "integer",
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "urlPublished": {
             "type": "string",
@@ -8891,9 +8059,7 @@
             "type": "string",
             "description": "An optional URL where the galley can be viewed or downloaded.",
             "apiSummary": true,
-            "validation": [
-              "url"
-            ]
+            "validation": ["url"]
           }
         }
       },
@@ -8908,16 +8074,12 @@
           },
           "dateNotified": {
             "type": "string",
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "datePublished": {
             "type": "string",
             "apiSummary": true,
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "description": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -8931,9 +8093,7 @@
           },
           "lastModified": {
             "type": "string",
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "number": {
             "type": "string",
@@ -8942,9 +8102,7 @@
           "publishedUrl": {
             "type": "string",
             "apiSummary": true,
-            "validation": [
-              "url"
-            ]
+            "validation": ["url"]
           },
           "title": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -8952,10 +8110,7 @@
           "urlPath": {
             "type": "string",
             "description": "An optional path to use in the URL instead of the ID.",
-            "validation": [
-              "nullable",
-              "regex:/^[-_a-z0-9]*$/"
-            ]
+            "validation": ["nullable", "regex:/^[-_a-z0-9]*$/"]
           },
           "volume": {
             "type": "integer",
@@ -8984,9 +8139,7 @@
           "datePublished": {
             "type": "string",
             "apiSummary": true,
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "description": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -9015,9 +8168,7 @@
           "publishedUrl": {
             "type": "string",
             "apiSummary": true,
-            "validation": [
-              "url"
-            ]
+            "validation": ["url"]
           },
           "title": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -9041,9 +8192,7 @@
           "accessStatus": {
             "type": "integer",
             "default": 0,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "categoryIds": {
             "type": "array",
@@ -9055,9 +8204,7 @@
           "citationsRaw": {
             "type": "string",
             "description": "Optional metadata that contains references for works cited in this submission as raw text.",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "copyrightHolder": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -9065,17 +8212,13 @@
           "copyrightYear": {
             "type": "integer",
             "description": "The copyright year for this publication.",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "coverImage": {
             "type": "object",
             "multilingual": true,
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "properties": {
               "type": "object",
               "properties": [],
@@ -9121,18 +8264,13 @@
           "datePublished": {
             "type": "string",
             "apiSummary": true,
-            "validation": [
-              "nullable",
-              "date_format:Y-m-d"
-            ]
+            "validation": ["nullable", "date_format:Y-m-d"]
           },
           "disciplines": {
             "type": "array",
             "description": "Optional metadata that describes the submission's types of study or branches of knowledge.",
             "multilingual": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "items": {
               "type": "string"
             },
@@ -9149,23 +8287,17 @@
             "type": "boolean",
             "description": "Whether the contributor details should be displayed for this publication. Commonly used for editorial statements without individual authorship.",
             "default": false,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "issueId": {
             "type": "integer",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "keywords": {
             "type": "array",
             "description": "Optional metadata, usually one- to three-word phrases that are used to indicate the main topics of a submission.",
             "multilingual": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "items": {
               "type": "string"
             },
@@ -9182,9 +8314,7 @@
             "type": "array",
             "description": "Optional metadata that identifies the submission's primary language.",
             "multilingual": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "items": {
               "type": "string"
             },
@@ -9199,25 +8329,18 @@
           },
           "lastModified": {
             "type": "string",
-            "validation": [
-              "date_format:Y-m-d H:i:s"
-            ]
+            "validation": ["date_format:Y-m-d H:i:s"]
           },
           "licenseUrl": {
             "type": "string",
             "description": "A URL to a webpage describing the license terms for this publication.",
-            "validation": [
-              "nullable",
-              "url"
-            ]
+            "validation": ["nullable", "url"]
           },
           "pages": {
             "type": "string",
             "description": "The pages of the issue in which this article appears if it is published in a physical format.",
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "prefix": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -9231,9 +8354,7 @@
             "type": "string",
             "description": "A unique ID provided by the publisher. It will be used in the publication's URL path instead of the `id` when present.",
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "rights": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -9245,9 +8366,7 @@
           "seq": {
             "type": "integer",
             "default": 0,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "source": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -9257,17 +8376,13 @@
             "description": "Whether the publication is Queued (not yet scheduled for publication), Declined, Published or Scheduled (scheduled for publication at a future date). One of the `STATUS_*` constants. Default is `STATUS_QUEUED`.",
             "apiSummary": true,
             "default": 1,
-            "validation": [
-              "in:1,3,4,5"
-            ]
+            "validation": ["in:1,3,4,5"]
           },
           "subjects": {
             "type": "array",
             "description": "Optional metadata that consists of keywords, key phrases or classification codes that describe the submission's topics.",
             "multilingual": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "items": {
               "type": "string"
             },
@@ -9291,9 +8406,7 @@
             "type": "array",
             "description": "Optional metadata that indicates the source of research funding or other institutional support.",
             "multilingual": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "items": {
               "type": "string"
             },
@@ -9315,18 +8428,13 @@
           "urlPath": {
             "type": "string",
             "description": "An optional path to use in the URL instead of the ID.",
-            "validation": [
-              "nullable",
-              "regex:/^[-_a-z0-9]*$/"
-            ]
+            "validation": ["nullable", "regex:/^[-_a-z0-9]*$/"]
           },
           "version": {
             "type": "integer",
             "description": "The version number of this publication. Version numbers should increment by one so that the third publication of a submission will have the version number `3`. Version numbers should typically be set automatically and editorial staff should not be encouraged to modify them.",
             "apiSummary": true,
-            "validation": [
-              "min:1"
-            ]
+            "validation": ["min:1"]
           }
         }
       },
@@ -9362,9 +8470,7 @@
             "type": "object",
             "multilingual": true,
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "properties": {
               "type": "object",
               "properties": [],
@@ -9379,10 +8485,7 @@
           "datePublished": {
             "type": "string",
             "apiSummary": true,
-            "validation": [
-              "nullable",
-              "date_format:Y-m-d"
-            ]
+            "validation": ["nullable", "date_format:Y-m-d"]
           },
           "fullTitle": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -9410,9 +8513,7 @@
             "type": "string",
             "description": "The pages of the issue in which this article appears if it is published in a physical format.",
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "prefix": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -9426,9 +8527,7 @@
             "type": "string",
             "description": "A unique ID provided by the publisher. It will be used in the publication's URL path instead of the `id` when present.",
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "sectionId": {
             "type": "integer",
@@ -9439,9 +8538,7 @@
             "description": "Whether the publication is Queued (not yet scheduled for publication), Declined, Published or Scheduled (scheduled for publication at a future date). One of the `STATUS_*` constants. Default is `STATUS_QUEUED`.",
             "apiSummary": true,
             "default": 1,
-            "validation": [
-              "in:1,3,4,5"
-            ]
+            "validation": ["in:1,3,4,5"]
           },
           "submissionId": {
             "type": "integer",
@@ -9463,9 +8560,7 @@
             "type": "integer",
             "description": "The version number of this publication. Version numbers should increment by one so that the third publication of a submission will have the version number `3`. Version numbers should typically be set automatically and editorial staff should not be encouraged to modify them.",
             "apiSummary": true,
-            "validation": [
-              "min:1"
-            ]
+            "validation": ["min:1"]
           }
         }
       },
@@ -9547,16 +8642,12 @@
             "type": "array",
             "items": {
               "type": "string",
-              "validation": [
-                "regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"
-              ]
+              "validation": ["regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"]
             }
           },
           "minPasswordLength": {
             "type": "integer",
-            "validation": [
-              "min:4"
-            ]
+            "validation": ["min:4"]
           },
           "pageFooter": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -9564,9 +8655,7 @@
           "pageHeaderTitleImage": {
             "type": "object",
             "multilingual": true,
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "properties": {
               "type": "object",
               "properties": [],
@@ -9626,33 +8715,25 @@
           },
           "primaryLocale": {
             "type": "string",
-            "validation": [
-              "regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"
-            ]
+            "validation": ["regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"]
           },
           "privacyStatement": {
             "$ref": "#/components/schemas/LocaleObject"
           },
           "redirect": {
             "type": "integer",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "sidebar": {
             "type": "array",
             "items": {
               "type": "string",
-              "validation": [
-                "alpha_num"
-              ]
+              "validation": ["alpha_num"]
             }
           },
           "styleSheet": {
             "type": "object",
-            "validation": [
-              "nullable"
-            ],
+            "validation": ["nullable"],
             "properties": {
               "temporaryFileId": {
                 "type": "integer",
@@ -9673,9 +8754,7 @@
             "type": "array",
             "items": {
               "type": "string",
-              "validation": [
-                "regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"
-              ]
+              "validation": ["regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"]
             }
           },
           "themePluginPath": {
@@ -9703,16 +8782,12 @@
             "type": "string",
             "description": "The last time activity was recorded related to this submission.",
             "apiSummary": true,
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "dateSubmitted": {
             "type": "string",
             "apiSummary": true,
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "id": {
             "type": "integer",
@@ -9722,45 +8797,34 @@
             "type": "string",
             "description": "The last time a modification was made to this submission or any of its associated objects.",
             "apiSummary": true,
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "locale": {
             "type": "string",
             "description": "The primary language of this submission.",
             "apiSummary": true,
-            "validation": [
-              "regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"
-            ]
+            "validation": ["regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"]
           },
           "stageId": {
             "type": "integer",
             "description": "The stage of the editorial workflow that this submission is currently in. One of the `WORKFLOW_STAGE_` constants. Default is `WORKFLOW_STAGE_SUBMISSION`.",
             "apiSummary": true,
             "default": 1,
-            "validation": [
-              "min:1",
-              "max:5"
-            ]
+            "validation": ["min:1", "max:5"]
           },
           "status": {
             "type": "integer",
             "description": "Whether the submission is Published, Declined, Scheduled or Queued (still in the workflow). One of the `STATUS_*` constants. Default is `STATUS_QUEUED`.",
             "apiSummary": true,
             "default": 1,
-            "validation": [
-              "in:1,2,3,4,5"
-            ]
+            "validation": ["in:1,2,3,4,5"]
           },
           "submissionProgress": {
             "type": "integer",
             "description": "This number tracks a submission's progress before it is submitted to the journal or press. After submission, it will be set to `0`, indicating it is ready for an editor's consideration.",
             "apiSummary": true,
             "default": 1,
-            "validation": [
-              "in:0,1,2,3,4"
-            ]
+            "validation": ["in:0,1,2,3,4"]
           }
         }
       },
@@ -9785,16 +8849,12 @@
             "type": "string",
             "description": "The last time activity was recorded related to this submission.",
             "apiSummary": true,
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "dateSubmitted": {
             "type": "string",
             "apiSummary": true,
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "id": {
             "type": "integer",
@@ -9804,17 +8864,13 @@
             "type": "string",
             "description": "The last time a modification was made to this submission or any of its associated objects.",
             "apiSummary": true,
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "locale": {
             "type": "string",
             "description": "The primary language of this submission.",
             "apiSummary": true,
-            "validation": [
-              "regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"
-            ]
+            "validation": ["regex:/^[a-z]{2}_[A-Z]{2}(@[a-z]{0,})?$/"]
           },
           "publications": {
             "type": "array",
@@ -9830,19 +8886,14 @@
             "description": "The stage of the editorial workflow that this submission is currently in. One of the `WORKFLOW_STAGE_` constants. Default is `WORKFLOW_STAGE_SUBMISSION`.",
             "apiSummary": true,
             "default": 1,
-            "validation": [
-              "min:1",
-              "max:5"
-            ]
+            "validation": ["min:1", "max:5"]
           },
           "status": {
             "type": "integer",
             "description": "Whether the submission is Published, Declined, Scheduled or Queued (still in the workflow). One of the `STATUS_*` constants. Default is `STATUS_QUEUED`.",
             "apiSummary": true,
             "default": 1,
-            "validation": [
-              "in:1,2,3,4,5"
-            ]
+            "validation": ["in:1,2,3,4,5"]
           },
           "statusLabel": {
             "type": "string",
@@ -9855,9 +8906,7 @@
             "description": "This number tracks a submission's progress before it is submitted to the journal or press. After submission, it will be set to `0`, indicating it is ready for an editor's consideration.",
             "apiSummary": true,
             "default": 1,
-            "validation": [
-              "in:0,1,2,3,4"
-            ]
+            "validation": ["in:0,1,2,3,4"]
           },
           "urlAuthorWorkflow": {
             "type": "string",
@@ -9892,41 +8941,31 @@
             "type": "integer",
             "apiSummary": true,
             "description": "Used with `assocType` to associate this file with an object such as a galley.",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "assocType": {
             "type": "integer",
             "apiSummary": true,
             "description": "Used with `assocId` to associate this file with an object such as a galley. One of the following constants: `ASSOC_TYPE_SUBMISSION_FILE` (dependent files), `ASSOC_TYPE_REVIEW_ASSIGNMENT` (files uploaded by a reviewer), `ASSOC_TYPE_NOTE` (files uploaded with a discussion), `ASSOC_TYPE_REPRESENTATION` (files uploaded to a galley or publication format), `ASSOC_TYPE_REVIEW_ROUND` (review files and revisions for a particular review round).",
-            "validation": [
-              "in:515,517,520,521,523"
-            ]
+            "validation": ["in:515,517,520,521,523"]
           },
           "caption": {
             "type": "string",
             "apiSummary": true,
             "description": "A caption for this file. Used with artwork such as images.",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "copyrightOwner": {
             "type": "string",
             "apiSummary": true,
             "description": "The copyright owner of this file. Used with artwork such as images.",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "createdAt": {
             "type": "string",
             "apiSummary": true,
             "description": "The date this submission file object was created in the system. Set automatically by the software.",
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "creator": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -9935,17 +8974,13 @@
             "type": "string",
             "description": "An attribution for this file, such as a photographer's name. Used with artwork such as images.",
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "dateCreated": {
             "type": "string",
             "description": "Public metadata about when this content was created. Used with supplementary files.",
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "description": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -9962,9 +8997,7 @@
           "fileStage": {
             "type": "integer",
             "apiSummary": true,
-            "validation": [
-              "in:2,3,4,5,6,7,8,9,10,11,13,15,17,18"
-            ]
+            "validation": ["in:2,3,4,5,6,7,8,9,10,11,13,15,17,18"]
           },
           "genreId": {
             "type": "integer",
@@ -9974,9 +9007,7 @@
             "type": "string",
             "apiSummary": true,
             "description": "The language of this file if it contains text. Used with supplementary files.",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "name": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -10011,9 +9042,7 @@
             "type": "string",
             "apiSummary": true,
             "description": "When this object was last updated.",
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "uploaderUserId": {
             "type": "integer",
@@ -10038,41 +9067,31 @@
             "type": "integer",
             "apiSummary": true,
             "description": "Used with `assocType` to associate this file with an object such as a galley.",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "assocType": {
             "type": "integer",
             "apiSummary": true,
             "description": "Used with `assocId` to associate this file with an object such as a galley. One of the following constants: `ASSOC_TYPE_SUBMISSION_FILE` (dependent files), `ASSOC_TYPE_REVIEW_ASSIGNMENT` (files uploaded by a reviewer), `ASSOC_TYPE_NOTE` (files uploaded with a discussion), `ASSOC_TYPE_REPRESENTATION` (files uploaded to a galley or publication format), `ASSOC_TYPE_REVIEW_ROUND` (review files and revisions for a particular review round).",
-            "validation": [
-              "in:515,517,520,521,523"
-            ]
+            "validation": ["in:515,517,520,521,523"]
           },
           "caption": {
             "type": "string",
             "apiSummary": true,
             "description": "A caption for this file. Used with artwork such as images.",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "copyrightOwner": {
             "type": "string",
             "apiSummary": true,
             "description": "The copyright owner of this file. Used with artwork such as images.",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "createdAt": {
             "type": "string",
             "apiSummary": true,
             "description": "The date this submission file object was created in the system. Set automatically by the software.",
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "creator": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -10081,17 +9100,13 @@
             "type": "string",
             "description": "An attribution for this file, such as a photographer's name. Used with artwork such as images.",
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "dateCreated": {
             "type": "string",
             "description": "Public metadata about when this content was created. Used with supplementary files.",
             "apiSummary": true,
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "description": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -10108,9 +9123,7 @@
           "fileStage": {
             "type": "integer",
             "apiSummary": true,
-            "validation": [
-              "in:2,3,4,5,6,7,8,9,10,11,13,15,17,18"
-            ]
+            "validation": ["in:2,3,4,5,6,7,8,9,10,11,13,15,17,18"]
           },
           "genreId": {
             "type": "integer",
@@ -10125,9 +9138,7 @@
             "type": "string",
             "apiSummary": true,
             "description": "The language of this file if it contains text. Used with supplementary files.",
-            "validation": [
-              "nullable"
-            ]
+            "validation": ["nullable"]
           },
           "locale": {
             "type": "string",
@@ -10178,9 +9189,7 @@
             "type": "string",
             "apiSummary": true,
             "description": "When this object was last updated.",
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "uploaderUserId": {
             "type": "integer",
@@ -10220,21 +9229,15 @@
           },
           "dateLastRegistered": {
             "type": "string",
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "dateRegistered": {
             "type": "string",
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "dateValidated": {
             "type": "string",
-            "validation": [
-              "date:Y-m-d H:i:s"
-            ]
+            "validation": ["date:Y-m-d H:i:s"]
           },
           "disabled": {
             "type": "boolean",
@@ -10246,9 +9249,7 @@
           "email": {
             "type": "string",
             "apiSummary": true,
-            "validation": [
-              "email_or_localhost"
-            ]
+            "validation": ["email_or_localhost"]
           },
           "familyName": {
             "$ref": "#/components/schemas/LocaleObject"
@@ -10268,9 +9269,7 @@
           "orcid": {
             "type": "string",
             "apiSummary": true,
-            "validation": [
-              "orcid"
-            ]
+            "validation": ["orcid"]
           },
           "phone": {
             "type": "string"
@@ -10280,9 +9279,7 @@
           },
           "url": {
             "type": "string",
-            "validation": [
-              "url"
-            ]
+            "validation": ["url"]
           },
           "userName": {
             "type": "string",
@@ -10305,9 +9302,7 @@
           "email": {
             "type": "string",
             "apiSummary": true,
-            "validation": [
-              "email_or_localhost"
-            ]
+            "validation": ["email_or_localhost"]
           },
           "fullName": {
             "type": "string",
@@ -10330,9 +9325,7 @@
           "orcid": {
             "type": "string",
             "apiSummary": true,
-            "validation": [
-              "orcid"
-            ]
+            "validation": ["orcid"]
           },
           "userName": {
             "type": "string",
@@ -10360,9 +9353,7 @@
           },
           "roleId": {
             "type": "integer",
-            "validation": [
-              "in:16,1,17,65536,4096,4097,1048576,209715"
-            ]
+            "validation": ["in:16,1,17,65536,4096,4097,1048576,209715"]
           },
           "showTitle": {
             "type": "boolean"

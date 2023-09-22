@@ -14,7 +14,18 @@
     "citations",
     "anystyle"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.27.2",
+    "csl-json": "0.1.0",
+    "execa": "^6.1.0",
+    "tmp-promise": "^3.0.3",
+    "ooxast": "*",
+    "ooxast-util-get-style": "*",
+    "xast-util-is-element": "*",
+    "xast-util-select": "*",
+    "xast-util-to-string": "^2.0.1",
+    "csl-consolidate": "*"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",

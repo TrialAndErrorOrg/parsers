@@ -1,5 +1,3 @@
-import {Node} from 'unist'
+import { Node } from 'unist'
 
-export function ojsRelatex(node: Node){
-
-}
+export function ojsRelatex(node: Node) {}

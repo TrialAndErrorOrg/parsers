@@ -29,10 +29,7 @@
     },
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/citations/ojs-types/**/*.ts"]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "deploy": {
       "executor": "ngx-deploy-npm:deploy",

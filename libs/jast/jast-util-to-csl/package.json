@@ -33,5 +33,13 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "jast-types": "*",
+    "xast-util-is-element": "*",
+    "xast-util-select": "*",
+    "csl-json": "0.1.0",
+    "xast-util-to-string": "^2.0.1",
+    "unist-util-is": "^5.2.1"
+  }
 }

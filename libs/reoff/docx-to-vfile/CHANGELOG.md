@@ -4,53 +4,46 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ## [0.8.2](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.8.1...docx-to-vfile-0.8.2) (2023-09-21)
 
-
 ### Bug Fixes
 
-* don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
+- don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
 
 ## [0.8.2](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.8.1...docx-to-vfile-0.8.2) (2023-09-21)
 
-
 ### Bug Fixes
 
-* don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
+- don't use shady custom builder, just run a script that fixes the package.json ([def3c18](https://github.com/TrialAndErrorOrg/parsers/commit/def3c1844ae0a0d547de2b0a01689a302b58ab61))
 
 ## [0.8.1](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.8.0...docx-to-vfile-0.8.1) (2023-07-18)
 
-
 ### Bug Fixes
 
-* stupid package.json issue ([e27ee3e](https://github.com/TrialAndErrorOrg/parsers/commit/e27ee3ed91619e8adb0de6ed96af99da0ec79198))
+- stupid package.json issue ([e27ee3e](https://github.com/TrialAndErrorOrg/parsers/commit/e27ee3ed91619e8adb0de6ed96af99da0ec79198))
 
 ## [0.8.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.7.0...docx-to-vfile-0.8.0) (2023-07-11)
 
 ## [0.7.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.6.1...docx-to-vfile-0.7.0) (2023-05-30)
 
-
 ### Features
 
-* **docx-to-vfile:** move relations mapping to reoff-parse ([e0e4334](https://github.com/TrialAndErrorOrg/parsers/commit/e0e43345fcba201be8d3bc52615dbf422c2c6f64))
+- **docx-to-vfile:** move relations mapping to reoff-parse ([e0e4334](https://github.com/TrialAndErrorOrg/parsers/commit/e0e43345fcba201be8d3bc52615dbf422c2c6f64))
 
 ## [0.6.1](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.6.0...docx-to-vfile-0.6.1) (2023-03-27)
 
-
 ### Bug Fixes
 
-* **docx-to-vfile:** fix imports ([8fbd4d1](https://github.com/TrialAndErrorOrg/parsers/commit/8fbd4d19fe0eedd8f22514e7da6e86e54453cca9))
+- **docx-to-vfile:** fix imports ([8fbd4d1](https://github.com/TrialAndErrorOrg/parsers/commit/8fbd4d19fe0eedd8f22514e7da6e86e54453cca9))
 
 ## [0.6.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.5.3...docx-to-vfile-0.6.0) (2023-03-27)
 
-
 ### Features
 
-* **docx-to-vfile:** allow for Buffer input ([3e22847](https://github.com/TrialAndErrorOrg/parsers/commit/3e22847ddde6a3a129f846149d2148462e90cd40))
-* **docx-to-vfile:** make more isomorphic ([41ed5e8](https://github.com/TrialAndErrorOrg/parsers/commit/41ed5e8f89bfe1b2e58ef6573ec5ae530fda9645))
-
+- **docx-to-vfile:** allow for Buffer input ([3e22847](https://github.com/TrialAndErrorOrg/parsers/commit/3e22847ddde6a3a129f846149d2148462e90cd40))
+- **docx-to-vfile:** make more isomorphic ([41ed5e8](https://github.com/TrialAndErrorOrg/parsers/commit/41ed5e8f89bfe1b2e58ef6573ec5ae530fda9645))
 
 ### Bug Fixes
 
-* **docx-to-vfile:** add vitest and make sure it works in vite ([39e53bb](https://github.com/TrialAndErrorOrg/parsers/commit/39e53bb4129e4c005798cb03322ab380290de41c))
+- **docx-to-vfile:** add vitest and make sure it works in vite ([39e53bb](https://github.com/TrialAndErrorOrg/parsers/commit/39e53bb4129e4c005798cb03322ab380290de41c))
 
 ## [0.5.3](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.5.2...docx-to-vfile-0.5.3) (2023-03-14)
 
@@ -60,107 +53,85 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ## [0.5.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.4.1...docx-to-vfile-0.5.0) (2023-03-09)
 
-
 ### Features
 
-* brand spanking new project.json ([32e19eb](https://github.com/TrialAndErrorOrg/parsers/commit/32e19ebf3f71c80336f637297d8f4db274d098bf))
-
+- brand spanking new project.json ([32e19eb](https://github.com/TrialAndErrorOrg/parsers/commit/32e19ebf3f71c80336f637297d8f4db274d098bf))
 
 ### Bug Fixes
 
-* correct preset ([c2079ba](https://github.com/TrialAndErrorOrg/parsers/commit/c2079ba3a0121a5c3a2b9017a3d53214953b2c98))
-* enter a new era ([9c2a0e5](https://github.com/TrialAndErrorOrg/parsers/commit/9c2a0e505472c43d384f3cc78543ad90877b7c3d))
+- correct preset ([c2079ba](https://github.com/TrialAndErrorOrg/parsers/commit/c2079ba3a0121a5c3a2b9017a3d53214953b2c98))
+- enter a new era ([9c2a0e5](https://github.com/TrialAndErrorOrg/parsers/commit/9c2a0e505472c43d384f3cc78543ad90877b7c3d))
 
 ## [0.5.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.4.1...docx-to-vfile-0.5.0) (2023-03-09)
 
-
 ### Features
 
-* brand spanking new project.json ([32e19eb](https://github.com/TrialAndErrorOrg/parsers/commit/32e19ebf3f71c80336f637297d8f4db274d098bf))
-
+- brand spanking new project.json ([32e19eb](https://github.com/TrialAndErrorOrg/parsers/commit/32e19ebf3f71c80336f637297d8f4db274d098bf))
 
 ### Bug Fixes
 
-* correct preset ([c2079ba](https://github.com/TrialAndErrorOrg/parsers/commit/c2079ba3a0121a5c3a2b9017a3d53214953b2c98))
-* enter a new era ([9c2a0e5](https://github.com/TrialAndErrorOrg/parsers/commit/9c2a0e505472c43d384f3cc78543ad90877b7c3d))
+- correct preset ([c2079ba](https://github.com/TrialAndErrorOrg/parsers/commit/c2079ba3a0121a5c3a2b9017a3d53214953b2c98))
+- enter a new era ([9c2a0e5](https://github.com/TrialAndErrorOrg/parsers/commit/9c2a0e505472c43d384f3cc78543ad90877b7c3d))
 
 ## [0.5.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.4.1...docx-to-vfile-0.5.0) (2023-03-09)
 
-
 ### Features
 
-* brand spanking new project.json ([32e19eb](https://github.com/TrialAndErrorOrg/parsers/commit/32e19ebf3f71c80336f637297d8f4db274d098bf))
-
+- brand spanking new project.json ([32e19eb](https://github.com/TrialAndErrorOrg/parsers/commit/32e19ebf3f71c80336f637297d8f4db274d098bf))
 
 ### Bug Fixes
 
-* correct preset ([c2079ba](https://github.com/TrialAndErrorOrg/parsers/commit/c2079ba3a0121a5c3a2b9017a3d53214953b2c98))
-* enter a new era ([9c2a0e5](https://github.com/TrialAndErrorOrg/parsers/commit/9c2a0e505472c43d384f3cc78543ad90877b7c3d))
+- correct preset ([c2079ba](https://github.com/TrialAndErrorOrg/parsers/commit/c2079ba3a0121a5c3a2b9017a3d53214953b2c98))
+- enter a new era ([9c2a0e5](https://github.com/TrialAndErrorOrg/parsers/commit/9c2a0e505472c43d384f3cc78543ad90877b7c3d))
 
 ## [0.4.1](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.4.0...docx-to-vfile-0.4.1) (2023-03-06)
 
-
 ### Bug Fixes
 
-* it builds, oh my god ([62ff1e3](https://github.com/TrialAndErrorOrg/parsers/commit/62ff1e37c3c778b56e7f889cc33fbd5c6aa522fd))
-
-
+- it builds, oh my god ([62ff1e3](https://github.com/TrialAndErrorOrg/parsers/commit/62ff1e37c3c778b56e7f889cc33fbd5c6aa522fd))
 
 # [0.4.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.3.0...docx-to-vfile-0.4.0) (2023-03-05)
 
-
 ### Bug Fixes
 
-* **docx-to-vfile:** set known data attributes on VFile DataMap interface instead of extending the filetype and breaking everything ([0afe6e5](https://github.com/TrialAndErrorOrg/parsers/commit/0afe6e5c51f6374856a1267e6895717998e72330))
-
+- **docx-to-vfile:** set known data attributes on VFile DataMap interface instead of extending the filetype and breaking everything ([0afe6e5](https://github.com/TrialAndErrorOrg/parsers/commit/0afe6e5c51f6374856a1267e6895717998e72330))
 
 ### Features
 
-* **docx-to-vfile:** finalize api ([7c14a6d](https://github.com/TrialAndErrorOrg/parsers/commit/7c14a6db76322c1e380f043b5742fa2abf289a0d))
-
-
+- **docx-to-vfile:** finalize api ([7c14a6d](https://github.com/TrialAndErrorOrg/parsers/commit/7c14a6db76322c1e380f043b5742fa2abf289a0d))
 
 # [0.3.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.2.0...docx-to-vfile-0.3.0) (2023-03-05)
 
-
 ### Bug Fixes
 
-* make tests run again ([4621f7d](https://github.com/TrialAndErrorOrg/parsers/commit/4621f7df2454b9a4220d2eabcf6a3dbf8f61cae8))
-
+- make tests run again ([4621f7d](https://github.com/TrialAndErrorOrg/parsers/commit/4621f7df2454b9a4220d2eabcf6a3dbf8f61cae8))
 
 ### Features
 
-* **docx-to-vfile:** be less prescriptive about which files are to be included in the vfile, defer that to `reoff-parse` ([5ec48a5](https://github.com/TrialAndErrorOrg/parsers/commit/5ec48a5e51a0c83dd24b65847950138a46049307))
-
-
+- **docx-to-vfile:** be less prescriptive about which files are to be included in the vfile, defer that to `reoff-parse` ([5ec48a5](https://github.com/TrialAndErrorOrg/parsers/commit/5ec48a5e51a0c83dd24b65847950138a46049307))
 
 # [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.1.0...docx-to-vfile-0.2.0) (2023-03-05)
 
-
 ### Features
 
-* **docx-to-vfile:** setup auto versioning/deployment ([d643888](https://github.com/TrialAndErrorOrg/parsers/commit/d64388820517b4a584a7e34f7fce93c590ecc5de))
-
-
+- **docx-to-vfile:** setup auto versioning/deployment ([d643888](https://github.com/TrialAndErrorOrg/parsers/commit/d64388820517b4a584a7e34f7fce93c590ecc5de))
 
 # 0.1.0 (2023-03-05)
 
-
 ### Bug Fixes
 
-* **frontend:** make 3 extra packages just so webpack doesn't import fs ugh ([bed432a](https://github.com/TrialAndErrorOrg/parsers/commit/bed432acf70a7950d981fff2a5bce4a98a4440ff))
-* **types:** fixing types ([2893172](https://github.com/TrialAndErrorOrg/parsers/commit/2893172ccf37ad1d12a35fea3ef61700bd24dafb))
-
+- **frontend:** make 3 extra packages just so webpack doesn't import fs ugh ([bed432a](https://github.com/TrialAndErrorOrg/parsers/commit/bed432acf70a7950d981fff2a5bce4a98a4440ff))
+- **types:** fixing types ([2893172](https://github.com/TrialAndErrorOrg/parsers/commit/2893172ccf37ad1d12a35fea3ef61700bd24dafb))
 
 ### Features
 
-* add relationmapping for vfile ([e4662b5](https://github.com/TrialAndErrorOrg/parsers/commit/e4662b5d38337ea06d97763ab32d0fd88ac95bad))
-* added eslint and changed tsignore to expect ([95083c0](https://github.com/TrialAndErrorOrg/parsers/commit/95083c07fc19aeb3a4dc2fa0ecbb2597a86c11fa))
-* better unzip lib that's browser compatible ([0646a95](https://github.com/TrialAndErrorOrg/parsers/commit/0646a95d32f7128dad3275b98892305136480bf6))
-* citations from word to latex works ([1582e25](https://github.com/TrialAndErrorOrg/parsers/commit/1582e2553843505e3ddc2355676e0702418bbfdc))
-* figure parsing in reoff ([fe2b9f8](https://github.com/TrialAndErrorOrg/parsers/commit/fe2b9f8e9eb1fb2421e3272dcc60fe2b871f2392))
-* it working ([53f8f03](https://github.com/TrialAndErrorOrg/parsers/commit/53f8f038f89a6e64a64600b3e6cb8deb1717cda7))
-* **pdf:** pdf compilation baybee ([f3cf107](https://github.com/TrialAndErrorOrg/parsers/commit/f3cf107193e3e015da3dc950736aa38e5803b5cd))
-* **reoff:** parse docx to unist ([7dcdb70](https://github.com/TrialAndErrorOrg/parsers/commit/7dcdb7016a639e8af4eaeb25eaa3ff9927d21952))
-* **reoff:** parse more async ([7d76e79](https://github.com/TrialAndErrorOrg/parsers/commit/7d76e7971401c5e89f742730dda3f4f780e3e093))
-* **reoff:** read file more async ([fed7aa9](https://github.com/TrialAndErrorOrg/parsers/commit/fed7aa97af458404b04d805250ad5bfc348ee52c))
+- add relationmapping for vfile ([e4662b5](https://github.com/TrialAndErrorOrg/parsers/commit/e4662b5d38337ea06d97763ab32d0fd88ac95bad))
+- added eslint and changed tsignore to expect ([95083c0](https://github.com/TrialAndErrorOrg/parsers/commit/95083c07fc19aeb3a4dc2fa0ecbb2597a86c11fa))
+- better unzip lib that's browser compatible ([0646a95](https://github.com/TrialAndErrorOrg/parsers/commit/0646a95d32f7128dad3275b98892305136480bf6))
+- citations from word to latex works ([1582e25](https://github.com/TrialAndErrorOrg/parsers/commit/1582e2553843505e3ddc2355676e0702418bbfdc))
+- figure parsing in reoff ([fe2b9f8](https://github.com/TrialAndErrorOrg/parsers/commit/fe2b9f8e9eb1fb2421e3272dcc60fe2b871f2392))
+- it working ([53f8f03](https://github.com/TrialAndErrorOrg/parsers/commit/53f8f038f89a6e64a64600b3e6cb8deb1717cda7))
+- **pdf:** pdf compilation baybee ([f3cf107](https://github.com/TrialAndErrorOrg/parsers/commit/f3cf107193e3e015da3dc950736aa38e5803b5cd))
+- **reoff:** parse docx to unist ([7dcdb70](https://github.com/TrialAndErrorOrg/parsers/commit/7dcdb7016a639e8af4eaeb25eaa3ff9927d21952))
+- **reoff:** parse more async ([7d76e79](https://github.com/TrialAndErrorOrg/parsers/commit/7d76e7971401c5e89f742730dda3f4f780e3e093))
+- **reoff:** read file more async ([fed7aa9](https://github.com/TrialAndErrorOrg/parsers/commit/fed7aa97af458404b04d805250ad5bfc348ee52c))

@@ -7,7 +7,7 @@ export function makePackage(name: string, options: string[] = []): Macro {
         'usepackage',
         args([options.join(','), name], {
           braces: '[]{}',
-        })
+        }),
       )
     : m('usepackage', name)
 }

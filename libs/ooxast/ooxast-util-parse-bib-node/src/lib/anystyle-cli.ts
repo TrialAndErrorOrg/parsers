@@ -1,8 +1,5 @@
 import { Data as CSL } from 'csl-json'
-export async function callAnystyleCLI(
-  refs: string,
-  path?: string
-): Promise<CSL[]> {
+export async function callAnystyleCLI(refs: string, path?: string): Promise<CSL[]> {
   if (typeof window === 'undefined') {
     const { execa } = await import('execa')
     //@ts-expect error tmp has types, tmp promise does not

@@ -3,7 +3,7 @@
 
 ## API
 
-***
+---
 
 ### `all()`
 
@@ -15,17 +15,17 @@ all(node: Bold | FixedCase | Italic | Monospace | NamedContent | Overline | Roma
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type   |
+| :----- | :----- | ----------- | -------- | ----------- | -------------- | ---------- | ------- | ------ | ----------- | ---- | -------- | --------------- | ----- | ----- | ----------- | -------------------- | -------- | ----- | ---------- | ------- | ---------- | --- | ----- | ------- | ------------ | ----- | ---------- | --------- | ----------- | --------- | ---------- | ------ | --------- | ------- | --------- | ----- | ------------- | ----------------- | ------- | ------------ | ------- | ----- | -------------- | ------------ | ----------- | ------------------- | --------------- | --------------- | ------------- | -------------- | ---------------- | ------------- | ----------------- | ----- | ------- | ---- | ----------------------------- | ---------------- | --------------- | -------- | ------ | ------- | ------ | --------- | ------- | ----------- | ----------------------- | ------- | --------- | ------------- | --------- | ---------- | ------------ | ----------- | ----------- | -------- | ------------- | ---------- | ------------------- | ----------- | ---------------- | --------- | ------------- | ------------------ | ----------- | ----- | ---------- | --------- | ---------- | ------ | ---------- | -------------- | ------------------- | -------- | ----------- | ----------- | ---------------- | ------------ | ---------- | ----- | ------------- | --------- | -------- | ---------- | ------- | ------------------- | ------------ | ------------- | ----------- | ------------- | ------ | ---------------- | ---------------------------- | ------------- | ------------ | -------------- | -------- | ----------------- | ------------- | ------- | -------------- | --------- | ------- | --------- | ----------- | -------------- | ------------ | ----------------- | ------- | ----------- | --------- | --------- | --------------------- | ------------ | --------- | ------------ | -------------- | ------------ | --------------- | -------- | ---------- | ------------------ | -------------- | -------------- | --------- | ------ | ------ | ------------- | ------- | ---------------- | ---------- | ------------ | --------------- | --------- | ----------- | ------------ | --------- | ----------- | --------------- | ------------------------- | ----------------------- | --------------- | ----- | ------- | ---------- | --------- | -------------- | ---------------------- | ----------------- | --------------- | ------------- | ---------- | ----- | -------------------- | -------- | ------------ | ------ | --------- | ----------------- | ------------- | --------------------- | ----------------- | ------------- | ---------- | --------- | ---------- | --------- | ------------- | ----------- | --------- | ----------- | --------- | ------ | ------------------ | ------------ | -------------------------- | --------------- | -------------------- | ----------------- | -------------------- | --------------- | ------- | --------------- | ---------- | ----------- | ---------- | ------------ | ----------- | ------------ | ---------- | ----------- | ----------- | ---------------- | ----- | ----- | ------- | -------- | ------ | ------ | --------- | --------- | ------ | ---------- | --------- | ------ | ----- | ------ | ------- | ----------- | -------- | ------------- | ------- | -------------- | --------------- | -------- | ------ | -------- | ----- | ------------ | ------------- | ------------ | --------- | ----------- | ------- | ------------ | ----------- | ------------- | ------------------ | ------------ | ------------ | ----------- | ---------- | ---- | ----- | --------- | --------------- | --------------- | ----------------- | ----------- | ------------------- | ----------- | ----------------- | -------------- | ----- | ----------- | ---------- | ------- | --------- | ---------- | -------- | -------- | --------- | ----------- | ------ | -------- | ------------- | --------------- | -------------- | ------------------ | ---- | ----- | -------------- | -------------- | ------------ | ---- | ---- | ----- | --------- | ----------------- | ------------ | --------- | ------- | ------- | ---- | --------------- | ---- | ---- | --------------- | -------------- | ---------------- | ---------------------- | ----------- | --- |
 | `node` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `AbbrevJournaltitle` | `Abbrev` | `Def` | `Abstract` | `Label` | `ObjectId` | `P` | `Sec` | `Title` | `AccessDate` | `Ack` | `KwdGroup` | `RefList` | `SubjGroup` | `Address` | `AddrLine` | `City` | `Country` | `Email` | `ExtLink` | `Fax` | `Institution` | `InstitutionWrap` | `Phone` | `PostalCode` | `State` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `AffAlternatives` | `Aff` | `Break` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Array` | `Code` | `Graphic` | `Media` | `Preformat` | `SupplementaryMaterial` | `Table` | `TexMath` | `TextualForm` | `AltText` | `AltTitle` | `Annotation` | `Anonymous` | `AnswerSet` | `Answer` | `Explanation` | `Subtitle` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `FnGroup` | `Glossary` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AppGroup` | `App` | `Permissions` | `SecMeta` | `Attrib` | `LongDesc` | `Tbody` | `ArticleCategories` | `SeriesText` | `SeriesTitle` | `ArticleId` | `ArticleMeta` | `Isbn` | `ArticleVersion` | `ArticleVersionalternatives` | `AuthorNotes` | `Conference` | `ContribGroup` | `Counts` | `CustomMetagroup` | `ElocationId` | `Fpage` | `FundingGroup` | `History` | `Issue` | `IssueId` | `IssuePart` | `IssueSponsor` | `IssueTitle` | `IssueTitlegroup` | `Lpage` | `PageRange` | `Product` | `PubDate` | `PubDatenotavailable` | `PubHistory` | `SelfUri` | `Supplement` | `SupportGroup` | `TitleGroup` | `TransAbstract` | `Volume` | `VolumeId` | `VolumeIssuegroup` | `VolumeSeries` | `ArticleTitle` | `Article` | `Back` | `Body` | `FloatsGroup` | `Front` | `ProcessingMeta` | `Response` | `SubArticle` | `AuthorComment` | `Corresp` | `AwardDesc` | `AwardGroup` | `AwardId` | `AwardName` | `FundingSource` | `PrincipalAwardrecipient` | `PrincipalInvestigator` | `SupportSource` | `Bio` | `Notes` | `SigBlock` | `Caption` | `ChapterTitle` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `Colgroup` | `Col` | `CollabAlternatives` | `Collab` | `OnBehalfof` | `Role` | `Comment` | `CompoundKwdpart` | `CompoundKwd` | `CompoundSubjectpart` | `CompoundSubject` | `ConfAcronym` | `ConfDate` | `ConfLoc` | `ConfName` | `ConfNum` | `ConfSponsor` | `ConfTheme` | `Contrib` | `ContribId` | `Degrees` | `Name` | `NameAlternatives` | `StringName` | `ContributedResourcegroup` | `ResourceGroup` | `SupportDescription` | `CopyrightHolder` | `CopyrightStatement` | `CopyrightYear` | `Count` | `EquationCount` | `FigCount` | `PageCount` | `RefCount` | `TableCount` | `WordCount` | `CustomMeta` | `MetaName` | `MetaValue` | `DataTitle` | `DateIncitation` | `Day` | `Era` | `Month` | `Season` | `Year` | `Date` | `DefHead` | `DefItem` | `Term` | `TermHead` | `Edition` | `Etal` | `Gov` | `Issn` | `IssnL` | `PartTitle` | `Patent` | `PersonGroup` | `PubId` | `PublisherLoc` | `PublisherName` | `Series` | `Size` | `Source` | `Std` | `StringDate` | `TransSource` | `TransTitle` | `Version` | `EventDesc` | `Event` | `ExtendedBy` | `FrontStub` | `JournalMeta` | `FundingStatement` | `OpenAccess` | `GivenNames` | `GlyphData` | `GlyphRef` | `Hr` | `See` | `SeeAlso` | `InstitutionId` | `IssueSubtitle` | `TransTitlegroup` | `JournalId` | `JournalTitlegroup` | `Publisher` | `JournalSubtitle` | `JournalTitle` | `Kwd` | `NestedKwd` | `LicenseP` | `Price` | `License` | `ListItem` | `Prefix` | `Suffix` | `Surname` | `TimeStamp` | `Note` | `Option` | `OverlineEnd` | `OverlineStart` | `RestrictedBy` | `QuestionPreamble` | `Rb` | `Ref` | `ResourceName` | `ResourceWrap` | `ResourceId` | `Rp` | `Rt` | `Sig` | `Speaker` | `StdOrganization` | `StringConf` | `Subject` | `Tfoot` | `Thead` | `Tr` | `TableWrapfoot` | `Td` | `Th` | `TransSubtitle` | `UnderlineEnd` | `UnderlineStart` | `UnstructuredKwdgroup` | `VerseLine` | `X` |
 
 #### Returns
 
 `any`[]
 
-Defined in:  [lib/jast-util-to-csl.ts:252](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L252)
+Defined in: [lib/jast-util-to-csl.ts:252](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L252)
 
-***
+---
 
 ### `one()`
 
@@ -37,17 +37,17 @@ one(node: Text | Bold | FixedCase | Italic | Monospace | NamedContent | Overline
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type   |
+| :----- | :----- | ------ | ----------- | -------- | ----------- | -------------- | ---------- | ------- | ------ | ----------- | ---- | -------- | --------------- | ----- | ----- | ----------- | -------------------- | -------- | ----- | ---------- | ------- | ---------- | --- | ----- | ------- | ------------ | ----- | ---------- | --------- | ----------- | --------- | ---------- | ------ | --------- | ------- | --------- | ----- | ------------- | ----------------- | ------- | ------------ | ------- | ----- | -------------- | ------------ | ----------- | ------------------- | --------------- | --------------- | ------------- | -------------- | ---------------- | ------------- | ----------------- | ----- | ------- | ---- | ----------------------------- | ---------------- | --------------- | -------- | ------ | ------- | ------ | --------- | ------- | ----------- | ----------------------- | ------- | --------- | ------------- | --------- | ---------- | ------------ | ----------- | ----------- | -------- | ------------- | ---------- | ------------------- | ----------- | ---------------- | --------- | ------------- | ------------------ | ----------- | ----- | ---------- | --------- | ---------- | ------ | ---------- | -------------- | ------------------- | -------- | ----------- | ----------- | ---------------- | ------------ | ---------- | ----- | ------------- | --------- | -------- | ---------- | ------- | ------------------- | ------------ | ------------- | ----------- | ------------- | ------ | ---------------- | ---------------------------- | ------------- | ------------ | -------------- | -------- | ----------------- | ------------- | ------- | -------------- | --------- | ------- | --------- | ----------- | -------------- | ------------ | ----------------- | ------- | ----------- | --------- | --------- | --------------------- | ------------ | --------- | ------------ | -------------- | ------------ | --------------- | -------- | ---------- | ------------------ | -------------- | -------------- | --------- | ------ | ------ | ------------- | ------- | ---------------- | ---------- | ------------ | --------------- | --------- | ----------- | ------------ | --------- | ----------- | --------------- | ------------------------- | ----------------------- | --------------- | ----- | ------- | ---------- | --------- | -------------- | ---------------------- | ----------------- | --------------- | ------------- | ---------- | ----- | -------------------- | -------- | ------------ | ------ | --------- | ----------------- | ------------- | --------------------- | ----------------- | ------------- | ---------- | --------- | ---------- | --------- | ------------- | ----------- | --------- | ----------- | --------- | ------ | ------------------ | ------------ | -------------------------- | --------------- | -------------------- | ----------------- | -------------------- | --------------- | ------- | --------------- | ---------- | ----------- | ---------- | ------------ | ----------- | ------------ | ---------- | ----------- | ----------- | ---------------- | ----- | ----- | ------- | -------- | ------ | ------ | --------- | --------- | ------ | ---------- | --------- | ------ | ----- | ------ | ------- | ----------- | -------- | ------------- | ------- | -------------- | --------------- | -------- | ------ | -------- | ----- | ------------ | ------------- | ------------ | --------- | ----------- | ------- | ------------ | ----------- | ------------- | ------------------ | ------------ | ------------ | ----------- | ---------- | ---- | ----- | --------- | --------------- | --------------- | ----------------- | ----------- | ------------------- | ----------- | ----------------- | -------------- | ----- | ----------- | ---------- | ------- | --------- | ---------- | -------- | -------- | --------- | ----------- | ------ | -------- | ------------- | --------------- | -------------- | ------------------ | ---- | ----- | -------------- | -------------- | ------------ | ---- | ---- | ----- | --------- | ----------------- | ------------ | --------- | ------- | ------- | ---- | --------------- | ---- | ---- | --------------- | -------------- | ---------------- | ---------------------- | ----------- | --- |
 | `node` | `Text` | `Bold` | `FixedCase` | `Italic` | `Monospace` | `NamedContent` | `Overline` | `Roman` | `Ruby` | `SansSerif` | `Sc` | `Strike` | `StyledContent` | `Sub` | `Sup` | `Underline` | `AbbrevJournaltitle` | `Abbrev` | `Def` | `Abstract` | `Label` | `ObjectId` | `P` | `Sec` | `Title` | `AccessDate` | `Ack` | `KwdGroup` | `RefList` | `SubjGroup` | `Address` | `AddrLine` | `City` | `Country` | `Email` | `ExtLink` | `Fax` | `Institution` | `InstitutionWrap` | `Phone` | `PostalCode` | `State` | `Uri` | `Alternatives` | `ChemStruct` | `IndexTerm` | `IndexTermrangeend` | `InlineFormula` | `InlineGraphic` | `InlineMedia` | `MilestoneEnd` | `MilestoneStart` | `PrivateChar` | `AffAlternatives` | `Aff` | `Break` | `Fn` | `InlineSupplementarymaterial` | `RelatedArticle` | `RelatedObject` | `Target` | `Xref` | `Array` | `Code` | `Graphic` | `Media` | `Preformat` | `SupplementaryMaterial` | `Table` | `TexMath` | `TextualForm` | `AltText` | `AltTitle` | `Annotation` | `Anonymous` | `AnswerSet` | `Answer` | `Explanation` | `Subtitle` | `BlockAlternatives` | `BoxedText` | `ChemStructwrap` | `DefList` | `DispFormula` | `DispFormulagroup` | `DispQuote` | `Fig` | `FigGroup` | `FnGroup` | `Glossary` | `List` | `Question` | `QuestionWrap` | `QuestionWrapgroup` | `Speech` | `Statement` | `TableWrap` | `TableWrapgroup` | `VerseGroup` | `AppGroup` | `App` | `Permissions` | `SecMeta` | `Attrib` | `LongDesc` | `Tbody` | `ArticleCategories` | `SeriesText` | `SeriesTitle` | `ArticleId` | `ArticleMeta` | `Isbn` | `ArticleVersion` | `ArticleVersionalternatives` | `AuthorNotes` | `Conference` | `ContribGroup` | `Counts` | `CustomMetagroup` | `ElocationId` | `Fpage` | `FundingGroup` | `History` | `Issue` | `IssueId` | `IssuePart` | `IssueSponsor` | `IssueTitle` | `IssueTitlegroup` | `Lpage` | `PageRange` | `Product` | `PubDate` | `PubDatenotavailable` | `PubHistory` | `SelfUri` | `Supplement` | `SupportGroup` | `TitleGroup` | `TransAbstract` | `Volume` | `VolumeId` | `VolumeIssuegroup` | `VolumeSeries` | `ArticleTitle` | `Article` | `Back` | `Body` | `FloatsGroup` | `Front` | `ProcessingMeta` | `Response` | `SubArticle` | `AuthorComment` | `Corresp` | `AwardDesc` | `AwardGroup` | `AwardId` | `AwardName` | `FundingSource` | `PrincipalAwardrecipient` | `PrincipalInvestigator` | `SupportSource` | `Bio` | `Notes` | `SigBlock` | `Caption` | `ChapterTitle` | `CitationAlternatives` | `ElementCitation` | `MixedCitation` | `NlmCitation` | `Colgroup` | `Col` | `CollabAlternatives` | `Collab` | `OnBehalfof` | `Role` | `Comment` | `CompoundKwdpart` | `CompoundKwd` | `CompoundSubjectpart` | `CompoundSubject` | `ConfAcronym` | `ConfDate` | `ConfLoc` | `ConfName` | `ConfNum` | `ConfSponsor` | `ConfTheme` | `Contrib` | `ContribId` | `Degrees` | `Name` | `NameAlternatives` | `StringName` | `ContributedResourcegroup` | `ResourceGroup` | `SupportDescription` | `CopyrightHolder` | `CopyrightStatement` | `CopyrightYear` | `Count` | `EquationCount` | `FigCount` | `PageCount` | `RefCount` | `TableCount` | `WordCount` | `CustomMeta` | `MetaName` | `MetaValue` | `DataTitle` | `DateIncitation` | `Day` | `Era` | `Month` | `Season` | `Year` | `Date` | `DefHead` | `DefItem` | `Term` | `TermHead` | `Edition` | `Etal` | `Gov` | `Issn` | `IssnL` | `PartTitle` | `Patent` | `PersonGroup` | `PubId` | `PublisherLoc` | `PublisherName` | `Series` | `Size` | `Source` | `Std` | `StringDate` | `TransSource` | `TransTitle` | `Version` | `EventDesc` | `Event` | `ExtendedBy` | `FrontStub` | `JournalMeta` | `FundingStatement` | `OpenAccess` | `GivenNames` | `GlyphData` | `GlyphRef` | `Hr` | `See` | `SeeAlso` | `InstitutionId` | `IssueSubtitle` | `TransTitlegroup` | `JournalId` | `JournalTitlegroup` | `Publisher` | `JournalSubtitle` | `JournalTitle` | `Kwd` | `NestedKwd` | `LicenseP` | `Price` | `License` | `ListItem` | `Prefix` | `Suffix` | `Surname` | `TimeStamp` | `Note` | `Option` | `OverlineEnd` | `OverlineStart` | `RestrictedBy` | `QuestionPreamble` | `Rb` | `Ref` | `ResourceName` | `ResourceWrap` | `ResourceId` | `Rp` | `Rt` | `Sig` | `Speaker` | `StdOrganization` | `StringConf` | `Subject` | `Tfoot` | `Thead` | `Tr` | `TableWrapfoot` | `Td` | `Th` | `TransSubtitle` | `UnderlineEnd` | `UnderlineStart` | `UnstructuredKwdgroup` | `VerseLine` | `X` |
 
 #### Returns
 
 `any`
 
-Defined in:  [lib/jast-util-to-csl.ts:266](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L266)
+Defined in: [lib/jast-util-to-csl.ts:266](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L266)
 
-***
+---
 
 ### `refListToCSL()`
 
@@ -59,17 +59,17 @@ refListToCSL(list: RefList): CSL[];
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type      |
+| :----- | :-------- |
 | `list` | `RefList` |
 
 #### Returns
 
 `CSL`[]
 
-Defined in:  [lib/jast-util-to-csl.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L31)
+Defined in: [lib/jast-util-to-csl.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L31)
 
-***
+---
 
 ### `refToCSL()`
 
@@ -81,18 +81,18 @@ refToCSL(citation: ElementCitation, id: string): CSL;
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type              |
+| :--------- | :---------------- |
 | `citation` | `ElementCitation` |
-| `id` | `string` |
+| `id`       | `string`          |
 
 #### Returns
 
 `CSL`
 
-Defined in:  [lib/jast-util-to-csl.ts:45](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L45)
+Defined in: [lib/jast-util-to-csl.ts:45](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L45)
 
-***
+---
 
 ### `toCSL()`
 
@@ -106,21 +106,21 @@ toCSL<T>(root: T): CSLConditional<T>;
 
 #### Type parameters
 
-*   `T` *extends* `Back` | `Front` | `Root`
+- `T` _extends_ `Back` | `Front` | `Root`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `root` | `T` |
+| Name   | Type |
+| :----- | :--- |
+| `root` | `T`  |
 
 #### Returns
 
 `CSLConditional`<`T`>
 
-Defined in:  [lib/jast-util-to-csl.ts:220](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L220)
+Defined in: [lib/jast-util-to-csl.ts:220](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L220)
 
-***
+---
 
 ### `toCSLBack()`
 
@@ -132,17 +132,17 @@ toCSLBack(node: Back): CSL[] | undefined;
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type   |
+| :----- | :----- |
 | `node` | `Back` |
 
 #### Returns
 
 `CSL`[] | `undefined`
 
-Defined in:  [lib/jast-util-to-csl.ts:192](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L192)
+Defined in: [lib/jast-util-to-csl.ts:192](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L192)
 
-***
+---
 
 ### `toCSLFront()`
 
@@ -154,15 +154,15 @@ toCSLFront(node: Front): CSL | undefined;
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type    |
+| :----- | :------ |
 | `node` | `Front` |
 
 #### Returns
 
 `CSL` | `undefined`
 
-Defined in:  [lib/jast-util-to-csl.ts:184](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L184)
+Defined in: [lib/jast-util-to-csl.ts:184](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-to-csl/src/lib/jast-util-to-csl.ts#L184)
 
 ## Install
 

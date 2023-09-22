@@ -50,35 +50,26 @@
   },
   "targetDefaults": {
     "lint": {
-      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"]
-    },
-    "build": {
-      "dependsOn": [],
-      "inputs": ["production", "^production"]
-    },
-    "make-publishable": {
-      "dependsOn": ["build", "^make-publishable", "lint"],
-      "inputs": ["production", "^production"],
-      "executor": "better-nx-tsc:publishable",
-      "outputs": ["{workspaceRoot}/dist/{projectRoot}"]
-    },
-    "better-nx-tsc:publishable": {
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
       "options": {
-        "dist": "dist/{projectRoot}"
+        "fix": true,
+        "lintFilePatterns": ["{projectRoot}/**/*.{js,jsx,ts,tsx}", "{projectRoot}/package.json"]
       }
     },
+    "build": {
+      "dependsOn": ["^build", "lint"],
+      "inputs": ["production", "^production"]
+    },
     "version": {
-      "dependsOn": ["^version", "make-publishable"],
+      "dependsOn": ["^version", "build"],
       "options": {
         "preset": "conventional",
         "trackDeps": true
       }
     },
     "npm": {
-      "dependsOn": ["make-publishable"],
       "options": {
-        "access": "public",
-        "noBuild": true
+        "access": "public"
       }
     },
     "e2e": {
@@ -94,16 +85,7 @@
       "options": {
         "verbose": true,
         "cacheDirectory": "/tmp/nx-cache",
-        "cacheableOperations": [
-          "build",
-          "make-publishable",
-          "lint",
-          "test",
-          "e2e",
-          "npm",
-          "readme",
-          "version"
-        ]
+        "cacheableOperations": ["build", "lint", "test", "e2e", "npm", "readme", "version"]
       }
     }
   }

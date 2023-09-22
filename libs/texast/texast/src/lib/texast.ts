@@ -1,8 +1,4 @@
-import {
-  Node as UnistNode,
-  Literal as UnistLiteral,
-  Parent as UnistParent,
-} from 'unist'
+import { Node as UnistNode, Literal as UnistLiteral, Parent as UnistParent } from 'unist'
 
 export function isKnownNode(node: UnistNode): node is TexastContent {
   return [
@@ -73,9 +69,7 @@ export type EnvironmentContent = TopLevelDocumentContent
 export type CommandContent = Command | Text | Comment
 
 export type ParagraphContent = Text | InlineMath | Command | Comment
-export function isParagraphContent(
-  content: TexastContent
-): content is ParagraphContent {
+export function isParagraphContent(content: TexastContent): content is ParagraphContent {
   return ['text', 'inlineMath', 'command', 'comment'].includes(content.type)
 }
 
@@ -106,8 +100,7 @@ export interface Parent extends UnistParent {
   children: TexastContent[]
 }
 
-export interface Group<Child extends TexastContent = EnvironmentContent>
-  extends Parent {
+export interface Group<Child extends TexastContent = EnvironmentContent> extends Parent {
   type: Pick<Child, 'type'> extends string ? Pick<Child, 'type'> : string
   children: Child[]
 }
@@ -126,12 +119,10 @@ export const isCommandArg = (node: Root | TexastContent): node is CommandArg =>
 export interface CommandArgOpt extends CommandArg {
   optional: true
 }
-export const isOptionalCommandArg = (
-  node: TexastContent
-): node is CommandArgOpt => isCommandArg(node) && !!node.optional
+export const isOptionalCommandArg = (node: TexastContent): node is CommandArgOpt =>
+  isCommandArg(node) && !!node.optional
 
-export interface Environment<TNode extends TexastContent = TexastContent>
-  extends Parent {
+export interface Environment<TNode extends TexastContent = TexastContent> extends Parent {
   type: 'environment'
   name: string
   children: Array<CommandArg | TNode>

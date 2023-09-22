@@ -32,19 +32,12 @@
     "linter": {
       "description": "The tool to use for running lint checks.",
       "type": "string",
-      "enum": [
-        "eslint",
-        "tslint"
-      ],
+      "enum": ["eslint", "tslint"],
       "default": "eslint"
     },
     "unitTestRunner": {
       "type": "string",
-      "enum": [
-        "jest",
-        "vitest",
-        "none"
-      ],
+      "enum": ["jest", "vitest", "none"],
       "description": "Test runner to use for unit tests",
       "default": "vitest"
     },
@@ -88,10 +81,7 @@
     },
     "testEnvironment": {
       "type": "string",
-      "enum": [
-        "jsdom",
-        "node"
-      ],
+      "enum": ["jsdom", "node"],
       "description": "The test environment to use if unitTestRunner is set to jest",
       "default": "jsdom"
     },
@@ -141,16 +131,10 @@
     },
     "compiler": {
       "type": "string",
-      "enum": [
-        "tsc",
-        "swc"
-      ],
+      "enum": ["tsc", "swc"],
       "default": "swc",
       "description": "The compiler used by the build and test targets."
     }
   },
-  "required": [
-    "name",
-    "description"
-  ]
+  "required": ["name", "description"]
 }

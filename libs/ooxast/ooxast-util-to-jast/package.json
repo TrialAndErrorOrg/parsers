@@ -36,5 +36,20 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "ooxast": "*",
+    "xast-util-is-element": "*",
+    "ooxast-util-citations": "*",
+    "jast-types": "*",
+    "xast-util-select": "*",
+    "ooxast-util-properties": "*",
+    "jast-util-from-csl": "*",
+    "reoff-parse": "*",
+    "csl-json": "0.1.0",
+    "xastscript": "^3.1.1",
+    "unist-util-is": "^5.2.1",
+    "rehype-minify-whitespace": "^5.0.0",
+    "vfile": "^5.3.7"
+  }
 }

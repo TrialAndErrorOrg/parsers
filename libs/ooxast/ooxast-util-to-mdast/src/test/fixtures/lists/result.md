@@ -6,13 +6,13 @@
 
     1.  Indent
 
-*   Unordered
+- Unordered
 
-*   List
+- List
 
-*   Items
+- Items
 
-    *   Indentatio
+  - Indentatio
 
 1.  Continuing
 
@@ -20,7 +20,7 @@
 
 3.  List
 
-    1.  Indenting 4 
+    1.  Indenting 4
 
 <!---->
 
@@ -36,4 +36,4 @@
 
 1.  Immediately starting other list
 
-    *   And another list
+    - And another list

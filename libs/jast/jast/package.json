@@ -33,5 +33,8 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "utility-types": "^3.10.0"
+  }
 }

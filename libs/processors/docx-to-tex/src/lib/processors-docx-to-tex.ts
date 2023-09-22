@@ -17,7 +17,7 @@ export async function docxToTex(
     url?: string
     mailto?: string
     log?: boolean
-  } = {}
+  } = {},
 ): Promise<VFile> {
   const vfile = await docxToVFile(input)
   const { citationType: type, url: apiUrl, mailto } = options
@@ -25,14 +25,7 @@ export async function docxToTex(
   const proc = unified()
     .use(reoffParse)
     .use(reoffClean, {
-      rPrRemoveList: [
-        'w:lang',
-        'w:shd',
-        'w:szCs',
-        'w:kern',
-        'w:rFonts',
-        'w:noProof',
-      ],
+      rPrRemoveList: ['w:lang', 'w:shd', 'w:szCs', 'w:kern', 'w:rFonts', 'w:noProof'],
     })
     .use(reoffParseReferences, { apiUrl, mailto })
     .use(reoffCite, { type: type || 'mendeley' })

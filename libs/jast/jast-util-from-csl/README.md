@@ -3,7 +3,7 @@
 
 ## API
 
-***
+---
 
 ### `cslToFront()`
 
@@ -15,17 +15,17 @@ cslToFront(data: Data): void;
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type   |
+| :----- | :----- |
 | `data` | `Data` |
 
 #### Returns
 
 `void`
 
-Defined in:  [lib/csl-to-jast.ts:27](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L27)
+Defined in: [lib/csl-to-jast.ts:27](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L27)
 
-***
+---
 
 ### `cslToJats()`
 
@@ -37,17 +37,17 @@ cslToJats(data: Data | Data[]): void | RefList;
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name   | Type   |
+| :----- | :----- | -------- |
 | `data` | `Data` | `Data`[] |
 
 #### Returns
 
 `void` | `RefList`
 
-Defined in:  [lib/csl-to-jast.ts:19](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L19)
+Defined in: [lib/csl-to-jast.ts:19](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L19)
 
-***
+---
 
 ### `cslToRef()`
 
@@ -59,18 +59,18 @@ cslToRef(data: Data, index: string | number): Ref;
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `Data` |
+| Name    | Type     |
+| :------ | :------- | -------- |
+| `data`  | `Data`   |
 | `index` | `string` | `number` |
 
 #### Returns
 
 `Ref`
 
-Defined in:  [lib/csl-to-jast.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L44)
+Defined in: [lib/csl-to-jast.ts:44](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L44)
 
-***
+---
 
 ### `cslToRefList()`
 
@@ -84,15 +84,15 @@ cslToRefList(data: Data[] | {
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `Data`[] | {  } |
+| Name   | Type     |
+| :----- | :------- | --- |
+| `data` | `Data`[] | { } |
 
 #### Returns
 
 `RefList`
 
-Defined in:  [lib/csl-to-jast.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L31)
+Defined in: [lib/csl-to-jast.ts:31](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/jast/jast-util-from-csl/src/lib/csl-to-jast.ts#L31)
 
 ## Install
 

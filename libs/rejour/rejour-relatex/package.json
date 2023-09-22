@@ -34,5 +34,14 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "rejour-parse": "*",
+    "relatex-stringify": "*",
+    "jast-util-to-texast": "*",
+    "jast-types": "*",
+    "texast": "*",
+    "unified": "^10.1.2",
+    "vfile": "^5.3.7"
+  }
 }

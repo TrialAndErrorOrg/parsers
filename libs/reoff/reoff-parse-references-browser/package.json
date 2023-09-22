@@ -32,5 +32,10 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "ooxast": "*",
+    "ooxast-util-parse-bib-browser": "*",
+    "vfile": "^5.3.7"
+  }
 }

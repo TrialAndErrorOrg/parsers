@@ -6,27 +6,10 @@ export type XastNode = XXastParent['children'][number] | Root
 
 export type ElementChild = Element['children'][number]
 export type AttributeValue = Attribute[string]
-import {
-  RuleSet,
-  Rule,
-  Selector,
-  Selectors,
-  RulePseudo,
-  AttrValueType,
-} from 'css-selector-parser'
+import { RuleSet, Rule, Selector, Selectors, RulePseudo, AttrValueType } from 'css-selector-parser'
 import { html } from 'property-information'
 
-export type {
-  Element,
-  AttrValueType,
-  Selector,
-  Selectors,
-  RuleSet,
-  Rule,
-  RulePseudo,
-  Parent,
-  Node,
-}
+export type { Element, AttrValueType, Selector, Selectors, RuleSet, Rule, RulePseudo, Parent, Node }
 /**
  *  Fix for types.
  */
@@ -83,7 +66,7 @@ export type SelectIterator = (
   node: XastNode,
   index: number,
   parent: XastParent | null,
-  state: SelectState
+  state: SelectState,
 ) => void
 
 export type Handler = (
@@ -91,7 +74,7 @@ export type Handler = (
   node: XastNode,
   index: number | null,
   parent: Parent | null,
-  state: SelectState
+  state: SelectState,
 ) => void
 
 export {}

@@ -9,20 +9,20 @@ Convert `ooxast` syntax tree to `mdast` syntax tree.
 
 ## Contents
 
-*   [ooxast-util-to-unified-latex](#ooxast-util-to-unified-latex)
-    *   [Contents](#contents)
-    *   [What is this?](#what-is-this)
-    *   [When should I use this?](#when-should-i-use-this)
-    *   [Install](#install)
-    *   [Use](#use)
-    *   [API](#api)
-    *   [Syntax tree](#syntax-tree)
-    *   [Types](#types)
-    *   [Compatibility](#compatibility)
-    *   [Security](#security)
-    *   [Related](#related)
-    *   [Contribute](#contribute)
-    *   [License](#license)
+- [ooxast-util-to-unified-latex](#ooxast-util-to-unified-latex)
+  - [Contents](#contents)
+  - [What is this?](#what-is-this)
+  - [When should I use this?](#when-should-i-use-this)
+  - [Install](#install)
+  - [Use](#use)
+  - [API](#api)
+  - [Syntax tree](#syntax-tree)
+  - [Types](#types)
+  - [Compatibility](#compatibility)
+  - [Security](#security)
+  - [Related](#related)
+  - [Contribute](#contribute)
+  - [License](#license)
 
 ## What is this?
 
@@ -48,7 +48,7 @@ pnpm add ooxast-util-to-mdast
 
 ## API
 
-***
+---
 
 ### `toMdast()`
 
@@ -60,17 +60,17 @@ toMdast(tree: Text | Root | Element, file: VFile, options?: Options): MdastRoot;
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tree` | `Text` | `Root` | `Element` |
-| `file` | `VFile` |
+| Name       | Type                            |
+| :--------- | :------------------------------ | ------ | --------- |
+| `tree`     | `Text`                          | `Root` | `Element` |
+| `file`     | `VFile`                         |
 | `options?` | [`Options`](modules.md#options) |
 
 #### Returns
 
 `MdastRoot`
 
-Defined in:  [lib/ooxast-util-to-mdast.ts:28](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/ooxast-util-to-mdast.ts#L28)
+Defined in: [lib/ooxast-util-to-mdast.ts:28](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/ooxast-util-to-mdast.ts#L28)
 
 #### Signature
 
@@ -80,18 +80,18 @@ toMdast(tree: Text | Root | Element, options?: Options): MdastRoot;
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `tree` | `Text` | `Root` | `Element` |
+| Name       | Type                            |
+| :--------- | :------------------------------ | ------ | --------- |
+| `tree`     | `Text`                          | `Root` | `Element` |
 | `options?` | [`Options`](modules.md#options) |
 
 #### Returns
 
 `MdastRoot`
 
-Defined in:  [lib/ooxast-util-to-mdast.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/ooxast-util-to-mdast.ts#L29)
+Defined in: [lib/ooxast-util-to-mdast.ts:29](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/ooxast-util-to-mdast.ts#L29)
 
-***
+---
 
 ### `Options`
 
@@ -101,7 +101,7 @@ Defined in:  [lib/ooxast-util-to-mdast.ts:29](https://github.com/TrialAndErrorOr
 
 > `Data`[]
 
-Defined in:  [lib/types.ts:56](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L56)
+Defined in: [lib/types.ts:56](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L56)
 
 ##### `bold?`
 
@@ -113,7 +113,7 @@ Should bold be rendered with `*` or `_`?
 
 '\*\*'
 
-Defined in:  [lib/types.ts:46](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L46)
+Defined in: [lib/types.ts:46](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L46)
 
 ##### `citationType?`
 
@@ -125,7 +125,7 @@ What type of citation is used?
 
 'zotero'
 
-Defined in:  [lib/types.ts:51](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L51)
+Defined in: [lib/types.ts:51](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L51)
 
 ##### `collectCitation?`
 
@@ -133,30 +133,30 @@ Defined in:  [lib/types.ts:51](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 ###### Type declaration
 
-*Signature\`*
+_Signature\`_
 
 ```ts
 (citation: any, index: string | number): any;
 ```
 
-*Parameters\`*
+_Parameters\`_
 
-| Name | Type |
-| :------ | :------ |
-| `citation` | `any` |
-| `index` | `string` | `number` |
+| Name       | Type     |
+| :--------- | :------- | -------- |
+| `citation` | `any`    |
+| `index`    | `string` | `number` |
 
-*Returns\`*
+_Returns\`_
 
 `any`
 
-Defined in:  [lib/types.ts:53](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L53)
+Defined in: [lib/types.ts:53](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L53)
 
 ##### `document?`
 
 > `boolean`
 
-Defined in:  [lib/types.ts:36](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L36)
+Defined in: [lib/types.ts:36](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L36)
 
 ##### `handlers?`
 
@@ -170,7 +170,7 @@ Handlers for specific node types
 
 ###### Type declaration
 
-Defined in:  [lib/types.ts:35](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L35)
+Defined in: [lib/types.ts:35](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L35)
 
 ##### `italics?`
 
@@ -182,13 +182,13 @@ Should italics be rendered with `*` or `_`?
 
 '\*'
 
-Defined in:  [lib/types.ts:42](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L42)
+Defined in: [lib/types.ts:42](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L42)
 
 ##### `newLines?`
 
 > `boolean`
 
-Defined in:  [lib/types.ts:37](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L37)
+Defined in: [lib/types.ts:37](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L37)
 
 ##### `parseCitation?`
 
@@ -196,29 +196,29 @@ Defined in:  [lib/types.ts:37](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 ###### Type declaration
 
-*Signature\`*
+_Signature\`_
 
 ```ts
 (citation: any): any;
 ```
 
-*Parameters\`*
+_Parameters\`_
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type  |
+| :--------- | :---- |
 | `citation` | `any` |
 
-*Returns\`*
+_Returns\`_
 
 `any`
 
-Defined in:  [lib/types.ts:52](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L52)
+Defined in: [lib/types.ts:52](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L52)
 
 ##### `quotes?`
 
 > `string`[]
 
-Defined in:  [lib/types.ts:38](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L38)
+Defined in: [lib/types.ts:38](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L38)
 
 ##### `relations?`
 
@@ -230,15 +230,15 @@ Defined in:  [lib/types.ts:38](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 ###### Type declaration
 
-Defined in:  [lib/types.ts:54](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L54)
+Defined in: [lib/types.ts:54](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L54)
 
 ##### `title?`
 
 > `string`
 
-Defined in:  [lib/types.ts:55](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L55)
+Defined in: [lib/types.ts:55](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L55)
 
-***
+---
 
 ### `State`
 
@@ -248,25 +248,25 @@ Defined in:  [lib/types.ts:55](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 > `All`
 
-Defined in:  [lib/state.ts:22](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L22)
+Defined in: [lib/state.ts:22](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L22)
 
 ##### `baseFound`
 
 > `boolean`
 
-Defined in:  [lib/state.ts:51](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L51)
+Defined in: [lib/state.ts:51](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L51)
 
 ##### `bibliography`
 
 > `Data`[]
 
-Defined in:  [lib/state.ts:83](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L83)
+Defined in: [lib/state.ts:83](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L83)
 
 ##### `citationNumber`
 
 > `number`
 
-Defined in:  [lib/state.ts:59](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L59)
+Defined in: [lib/state.ts:59](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L59)
 
 ##### `citations`
 
@@ -282,7 +282,7 @@ Needs to be in CSL format, which will be converted to BibTeX, or in BibTeX forma
 
 ###### Type declaration
 
-Defined in:  [lib/state.ts:81](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L81)
+Defined in: [lib/state.ts:81](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L81)
 
 ##### `citeKeys`
 
@@ -294,7 +294,7 @@ Defined in:  [lib/state.ts:81](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 ###### Type declaration
 
-Defined in:  [lib/state.ts:67](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L67)
+Defined in: [lib/state.ts:67](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L67)
 
 ##### `collectCitation`
 
@@ -302,24 +302,24 @@ Defined in:  [lib/state.ts:67](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 ###### Type declaration
 
-*Signature\`*
+_Signature\`_
 
 ```ts
 (citation: any, index: string | number): any;
 ```
 
-*Parameters\`*
+_Parameters\`_
 
-| Name | Type |
-| :------ | :------ |
-| `citation` | `any` |
-| `index` | `string` | `number` |
+| Name       | Type     |
+| :--------- | :------- | -------- |
+| `citation` | `any`    |
+| `index`    | `string` | `number` |
 
-*Returns\`*
+_Returns\`_
 
 `any`
 
-Defined in:  [lib/state.ts:61](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L61)
+Defined in: [lib/state.ts:61](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L61)
 
 ##### `deleteNextRun`
 
@@ -328,73 +328,73 @@ Defined in:  [lib/state.ts:61](https://github.com/TrialAndErrorOrg/parsers/blob/
 Whether to delete the next w:r element
 Mostly used for citations, where sometimes the next w:r element is the citation in plain text again
 
-Defined in:  [lib/state.ts:66](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L66)
+Defined in: [lib/state.ts:66](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L66)
 
 ##### `elementById`
 
 > `Map`<`string`, `Element`>
 
-Defined in:  [lib/state.ts:45](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L45)
+Defined in: [lib/state.ts:45](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L45)
 
 ##### `endnotes`
 
 > `Record`<`string`, `MdastNode`[]>
 
-Defined in:  [lib/state.ts:71](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L71)
+Defined in: [lib/state.ts:71](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L71)
 
 ##### `footnotes`
 
 > `Record`<`string`, `MdastNode`[]>
 
-Defined in:  [lib/state.ts:70](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L70)
+Defined in: [lib/state.ts:70](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L70)
 
 ##### `frozenBaseUrl`
 
 > `undefined` | `string`
 
-Defined in:  [lib/state.ts:53](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L53)
+Defined in: [lib/state.ts:53](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L53)
 
 ##### `handlers`
 
 > `Record`<`string`, [`Handle`](modules.md#handle)>
 
-Defined in:  [lib/state.ts:47](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L47)
+Defined in: [lib/state.ts:47](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L47)
 
 ##### `inDisplayMath`
 
 > `boolean`
 
-Defined in:  [lib/state.ts:68](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L68)
+Defined in: [lib/state.ts:68](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L68)
 
 ##### `inMath`
 
 > `boolean`
 
-Defined in:  [lib/state.ts:69](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L69)
+Defined in: [lib/state.ts:69](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L69)
 
 ##### `inTable`
 
 > `boolean`
 
-Defined in:  [lib/state.ts:55](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L55)
+Defined in: [lib/state.ts:55](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L55)
 
 ##### `listNumbering?`
 
 > `ListNumbering`
 
-Defined in:  [lib/state.ts:84](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L84)
+Defined in: [lib/state.ts:84](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L84)
 
 ##### `one`
 
 > `One`
 
-Defined in:  [lib/state.ts:20](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L20)
+Defined in: [lib/state.ts:20](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L20)
 
 ##### `options`
 
 > [`Options`](modules.md#options)
 
-Defined in:  [lib/state.ts:43](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L43)
+Defined in: [lib/state.ts:43](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L43)
 
 ##### `parseCitation`
 
@@ -402,41 +402,41 @@ Defined in:  [lib/state.ts:43](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 ###### Type declaration
 
-*Signature\`*
+_Signature\`_
 
 ```ts
 (citation: any): any;
 ```
 
-*Parameters\`*
+_Parameters\`_
 
-| Name | Type |
-| :------ | :------ |
+| Name       | Type  |
+| :--------- | :---- |
 | `citation` | `any` |
 
-*Returns\`*
+_Returns\`_
 
 `any`
 
-Defined in:  [lib/state.ts:60](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L60)
+Defined in: [lib/state.ts:60](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L60)
 
 ##### `partialCitation`
 
 > `string`
 
-Defined in:  [lib/state.ts:62](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L62)
+Defined in: [lib/state.ts:62](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L62)
 
 ##### `patch`
 
 > `Patch`
 
-Defined in:  [lib/state.ts:18](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L18)
+Defined in: [lib/state.ts:18](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L18)
 
 ##### `qNesting`
 
 > `number`
 
-Defined in:  [lib/state.ts:57](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L57)
+Defined in: [lib/state.ts:57](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L57)
 
 ##### `relations`
 
@@ -448,13 +448,13 @@ Defined in:  [lib/state.ts:57](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 ###### Type declaration
 
-Defined in:  [lib/state.ts:82](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L82)
+Defined in: [lib/state.ts:82](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L82)
 
 ##### `resolve`
 
 > `Resolve`
 
-Defined in:  [lib/state.ts:41](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L41)
+Defined in: [lib/state.ts:41](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L41)
 
 ##### `simpleParagraph`
 
@@ -463,13 +463,13 @@ Defined in:  [lib/state.ts:41](https://github.com/TrialAndErrorOrg/parsers/blob/
 This makes it so that a paragraph is processed with `all` instead of more custom.
 Useful for e.g. footnotes or tables
 
-Defined in:  [lib/state.ts:75](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L75)
+Defined in: [lib/state.ts:75](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L75)
 
 ##### `toFlow`
 
 > `ToFlow`
 
-Defined in:  [lib/state.ts:24](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L24)
+Defined in: [lib/state.ts:24](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L24)
 
 ##### `toSpecificContent`
 
@@ -477,31 +477,31 @@ Defined in:  [lib/state.ts:24](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 ###### Type declaration
 
-*Signature\`*
+_Signature\`_
 
 ```ts
 <ChildType, ParentType>(nodes: Content[], build: Function): ParentType[];
 ```
 
-*Type parameters\`*
+_Type parameters\`_
 
-*   `ChildType` *extends* `MdastNode`
-*   `ParentType` *extends* `Object`
+- `ChildType` _extends_ `MdastNode`
+- `ParentType` _extends_ `Object`
 
-*Parameters\`*
+_Parameters\`_
 
-| Name | Type |
-| :------ | :------ |
-| `nodes` | `Content`[] |
+| Name    | Type               |
+| :------ | :----------------- |
+| `nodes` | `Content`[]        |
 | `build` | () => `ParentType` |
 
-*Returns\`*
+_Returns\`_
 
 `ParentType`[]
 
-Defined in:  [lib/state.ts:33](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L33)
+Defined in: [lib/state.ts:33](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/state.ts#L33)
 
-***
+---
 
 ### `Handle`
 
@@ -517,21 +517,21 @@ Defined in:  [lib/state.ts:33](https://github.com/TrialAndErrorOrg/parsers/blob/
 
 ##### `Parameters`
 
-| Name | Type |
-| :------ | :------ |
-| `state` | [`State`](modules.md#state) |
-| `node` | `any` |
-| `parent?` | `Parent` |
+| Name      | Type                        |
+| :-------- | :-------------------------- |
+| `state`   | [`State`](modules.md#state) |
+| `node`    | `any`                       |
+| `parent?` | `Parent`                    |
 
 ##### `Returns`
 
 `MdastNode` | `MdastNode`[] | `void` | `undefined`
 
-Defined in:  [lib/types.ts:59](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L59)
+Defined in: [lib/types.ts:59](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/ooxast/ooxast-util-to-mdast/src/lib/types.ts#L59)
 
 # jote
 
-***
+---
 
 ### `all()`
 
@@ -545,10 +545,10 @@ state.all(: State, parent: Parent<Node<Data>, Data> | Node): MdastNode[];
 
 #### Parameters
 
-| Name     | Type                             | Description                 |   |
-| :------- | :------------------------------- | :-------------------------- | - |
-| `h`      | [`H`](modules.md#h)              | ooxast constructor function |   |
-| `parent` | `Parent`<`Node`<`Data`>, `Data`> | `Node`                      |   |
+| Name     | Type                             | Description                 |     |
+| :------- | :------------------------------- | :-------------------------- | --- |
+| `h`      | [`H`](modules.md#h)              | ooxast constructor function |     |
+| `parent` | `Parent`<`Node`<`Data`>, `Data`> | `Node`                      |     |
 
 #### Returns
 
@@ -556,7 +556,7 @@ state.all(: State, parent: Parent<Node<Data>, Data> | Node): MdastNode[];
 
 Defined in: [src/lib/all.ts:10](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/all.ts#L10)
 
-***
+---
 
 ### `one()`
 
@@ -580,7 +580,7 @@ state.one(: State, node: Node, parent?: Parent<Node<Data>, Data>): MdastNode | M
 
 Defined in: [src/lib/one.ts:8](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/one.ts#L8)
 
-***
+---
 
 ### `toMdast()`
 
@@ -603,7 +603,7 @@ toMdast(tree: Element | Text | Root, options: Options): Root;
 
 Defined in: [src/lib/ooxast-util-to-unified-latex.ts:45](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/ooxast-util-to-unified-latex.ts#L45)
 
-***
+---
 
 ### `defaultHandlers`
 
@@ -611,7 +611,7 @@ Defined in: [src/lib/ooxast-util-to-unified-latex.ts:45](https://github.com/Tria
 
 Defined in: [src/lib/handlers/index.ts:20](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/handlers/index.ts#L20)
 
-***
+---
 
 ### `Options`
 
@@ -657,20 +657,20 @@ Defined in: [src/lib/types.ts:71](https://github.com/TrialAndErrorOrg/parsers/bl
 
 ###### Type declaration
 
-*Signature\`*
+_Signature\`_
 
 ```ts
 (citation: any, index: string | number): any;
 ```
 
-*Parameters\`*
+_Parameters\`_
 
 | Name       | Type     |          |
 | :--------- | :------- | -------- |
 | `citation` | `any`    |          |
 | `index`    | `string` | `number` |
 
-*Returns\`*
+_Returns\`_
 
 `any`
 
@@ -744,9 +744,9 @@ Options for the document class
 
 ###### Type declaration
 
-| Member     | Type        | Description                                        |
-| :--------- | :---------- | :------------------------------------------------- |
-| `name`     | `string`    | Name of the document class `Default` 'article'     |
+| Member     | Type       | Description                                        |
+| :--------- | :--------- | :------------------------------------------------- |
+| `name`     | `string`   | Name of the document class `Default` 'article'     |
 | `options`? | `string`[] | Options for the document class `Default` undefined |
 
 Defined in: [src/lib/types.ts:57](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L57)
@@ -806,11 +806,11 @@ A list of packages to add to the preamble
 
 by default, the following packages are added:
 
-*   `xcolor` (if `xcolor` is enabled)
-*   `hyperref`
-*   `graphicx`
-*   `caption`
-*   `tabularx` (if `tabularx` is enabled)
+- `xcolor` (if `xcolor` is enabled)
+- `hyperref`
+- `graphicx`
+- `caption`
+- `tabularx` (if `tabularx` is enabled)
 
 Defined in: [src/lib/types.ts:159](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L159)
 
@@ -820,19 +820,19 @@ Defined in: [src/lib/types.ts:159](https://github.com/TrialAndErrorOrg/parsers/b
 
 ###### Type declaration
 
-*Signature\`*
+_Signature\`_
 
 ```ts
 (citation: any): any;
 ```
 
-*Parameters\`*
+_Parameters\`_
 
 | Name       | Type  |
 | :--------- | :---- |
 | `citation` | `any` |
 
-*Returns\`*
+_Returns\`_
 
 `any`
 
@@ -958,7 +958,7 @@ true
 
 Defined in: [src/lib/types.ts:112](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L112)
 
-***
+---
 
 ### `H`
 
@@ -966,7 +966,7 @@ Defined in: [src/lib/types.ts:112](https://github.com/TrialAndErrorOrg/parsers/b
 
 Defined in: [src/lib/types.ts:292](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L292)
 
-***
+---
 
 ### `Handle`
 
@@ -994,43 +994,43 @@ Defined in: [src/lib/types.ts:292](https://github.com/TrialAndErrorOrg/parsers/b
 
 Defined in: [src/lib/types.ts:196](https://github.com/TrialAndErrorOrg/parsers/blob/34b3326/libs/ooxast/ooxast-util-to-unified-latex/src/lib/types.ts#L196)
 
-***
+---
 
 ### `MdastNode`
 
 > `Root` | `String` | `Whitespace` | `Parbreak` | `Comment` | `Macro` | `Environment` | `VerbatimEnvironment` | `InlineMath` | `DisplayMath` | `Group` | `Verb`
 
-Defined in: node\_modules/.pnpm/@unified-latex+unified-latex-types\@1.3.0/node\_modules/@unified-latex/unified-latex-types/libs/ast-types.d.ts:83
+Defined in: node_modules/.pnpm/@unified-latex+unified-latex-types\@1.3.0/node_modules/@unified-latex/unified-latex-types/libs/ast-types.d.ts:83
 
 ## Support
 
-*   [x] Paragraphs
-*   [x] Headings
-*   [x] Blockquotes
-*   [x] Lists
-    *   [x] Ordered and unordered
-    *   [x] Starting at a number other than 1
-    *   [ ] Using a different bullet/number character (would require heavy HTML)
-*   [ ] Math (with [remark-math])
-    *   [x] LaTeX (you need to convert all the math in the Word Document to `linear` for this to work properly)
-    *   [ ] OMML
-*   [ ] Citations (with [remark-cite])
-*   [x] Tables (with [remark-gfm])
-*   [x] Images
-*   [x] Footnotes
-*   [x] Endnotes
-*   [ ] Links
-    *   [x] External hyperlinks
-    *   [ ] Crossreferences
-*   [ ] Formatting
-    *   [x] Strikethrough (with [remark-gfm])
-    *   [x] Emphasis
-    *   [x] Strong
-    *   [x] Superscript
-    *   [x] Subscript
-    *   [ ] Underline
-    *   [ ] Highlight
-    *   [ ] Color
+- [x] Paragraphs
+- [x] Headings
+- [x] Blockquotes
+- [x] Lists
+  - [x] Ordered and unordered
+  - [x] Starting at a number other than 1
+  - [ ] Using a different bullet/number character (would require heavy HTML)
+- [ ] Math (with [remark-math])
+  - [x] LaTeX (you need to convert all the math in the Word Document to `linear` for this to work properly)
+  - [ ] OMML
+- [ ] Citations (with [remark-cite])
+- [x] Tables (with [remark-gfm])
+- [x] Images
+- [x] Footnotes
+- [x] Endnotes
+- [ ] Links
+  - [x] External hyperlinks
+  - [ ] Crossreferences
+- [ ] Formatting
+  - [x] Strikethrough (with [remark-gfm])
+  - [x] Emphasis
+  - [x] Strong
+  - [x] Superscript
+  - [x] Subscript
+  - [ ] Underline
+  - [ ] Highlight
+  - [ ] Color
 
 ## Types
 
@@ -1047,61 +1047,32 @@ Defined in: node\_modules/.pnpm/@unified-latex+unified-latex-types\@1.3.0/node\_
 [GPL-3.0-or-later](LICENSE) © Thomas F. K. Jorna
 
 [unified]: https://unifiedjs.com
-
 [unifiedgh]: https://github.com/unifiedjs/unified
-
 [xast-from-xml]: https://github.com/syntax-tree/xast-util-from-xml
-
 [rehype]: https://github.com/rehypejs/rehype
-
 [rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour
-
 [rejour-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-parse
-
 [rejour-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-stringify
-
 [rejour-move-abstract]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-move-abstract
-
 [rejour-meta]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-meta
-
 [rejour-relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-relatex
-
 [relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex
-
 [relatex-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/relatex-parse
-
 [mdast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/mdast
-
 [unified-latex-util-to-texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/unified-latex-util-to-texast
-
 [mdastscript]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/mdastscript
-
 [texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast
-
 [texast-util-to-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex/texast-util-to-latex
-
 [hast]: https://github.com/syntax-tree/hast
-
 [xast]: https://github.com/syntax-tree/xast
-
 [mdast]: https://github.com/syntax-tree/mdast
-
 [mdast-markdown]: https://github.com/syntax-tree/mdast-util-to-markdown
-
 [latex-utensils]: https://github.com/tamuratak/latex-utensils
-
 [latexjs]: https://github.com/latexjs/latexjs
-
 [reoff]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff
-
 [reoff-parse]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse
-
 [reoff-rejour]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-rejour
-
 [ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast
-
 [ooxast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-unified-latex
-
 [ooxast-util-to-unified-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast-util-to-unified-latex
-
 [unified-latex]: https://github.com/siefken/unified-latex

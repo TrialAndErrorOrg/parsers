@@ -26,5 +26,13 @@
     }
   },
   "main": "./index.js",
-  "types": "./index.d.ts"
+  "types": "./index.d.ts",
+  "dependencies": {
+    "docx-to-vfile": "*",
+    "xast-util-from-xml": "^3.0.0",
+    "unified": "^10.1.2",
+    "unist-util-filter": "^4.0.1",
+    "vfile": "^5.3.7",
+    "vfile-message": "^3.1.4"
+  }
 }

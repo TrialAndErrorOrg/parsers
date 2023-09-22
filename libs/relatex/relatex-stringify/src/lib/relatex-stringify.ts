@@ -17,9 +17,8 @@ const relatexStringify = function relatexStringify(options?: Options | void) {
         // Note: this option is not in the readme.
         // The goal is for it to be set by plugins on `data` instead of being
         // passed by users.
-        extensions: (this.data('toLatexExtensions') ||
-          []) as ToLatexOptions['extensions'],
-      })
+        extensions: (this.data('toLatexExtensions') || []) as ToLatexOptions['extensions'],
+      }),
     )
   }
 

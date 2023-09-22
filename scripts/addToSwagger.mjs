@@ -6,20 +6,9 @@ main()
 
 async function main() {
   const swagger = JSON.parse(
-    readFileSync(
-      join(
-        __dirname,
-        'libs',
-        'ojs',
-        'ojs-client',
-        'src',
-        'lib',
-        'swagger.json'
-      ),
-      {
-        encoding: 'utf-8',
-      }
-    )
+    readFileSync(join(__dirname, 'libs', 'ojs', 'ojs-client', 'src', 'lib', 'swagger.json'), {
+      encoding: 'utf-8',
+    }),
   )
 
   const defs = swagger.definitions
@@ -33,20 +22,11 @@ async function main() {
       const betterVal = JSON.parse(
         // readFileSync(new URL('..', import.meta.url, 'schemas', val), {
         readFileSync(
-          join(
-            __dirname,
-            'libs',
-            'ojs',
-            'ojs-client',
-            'src',
-            'lib',
-            'schemas',
-            `${val}.json`
-          ),
+          join(__dirname, 'libs', 'ojs', 'ojs-client', 'src', 'lib', 'schemas', `${val}.json`),
           {
             encoding: 'utf-8',
-          }
-        )
+          },
+        ),
       )
       acc[key] = betterVal
       return acc
@@ -63,15 +43,7 @@ async function main() {
 
   // writeFileSync(join(__dirname, '..', 'swagger-types.ts'), output)
   writeFileSync(
-    join(
-      __dirname,
-      'libs',
-      'ojs',
-      'ojs-client',
-      'src',
-      'lib',
-      'swagger-types.ts'
-    ),
-    output
+    join(__dirname, 'libs', 'ojs', 'ojs-client', 'src', 'lib', 'swagger-types.ts'),
+    output,
   )
 }

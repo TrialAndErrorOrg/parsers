@@ -32,5 +32,10 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "crossref-json": "*",
+    "csl-json": "0.1.0",
+    "utility-types": "^3.10.0"
+  }
 }

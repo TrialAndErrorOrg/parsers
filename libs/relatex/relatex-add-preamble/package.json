@@ -32,5 +32,11 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "texast": "*",
+    "texast-util-add-preamble": "*",
+    "vfile": "^5.3.7",
+    "unified": "^10.1.2"
+  }
 }

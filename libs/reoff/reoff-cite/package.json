@@ -34,5 +34,14 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "ooxast": "*",
+    "reoff-parse": "*",
+    "docx-to-vfile": "*",
+    "ooxast-util-citations": "*",
+    "vfile": "^5.3.7",
+    "csl-json": "0.1.0",
+    "unified": "^10.1.2"
+  }
 }

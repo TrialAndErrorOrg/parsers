@@ -3,7 +3,7 @@
 
 ## API
 
-***
+---
 
 ### `consolidate()`
 
@@ -17,19 +17,19 @@ consolidate(data: Data[], options: object): Promise<undefined | Data[]>;
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `Data`[] |
-| `options` | `object` |
+| Name             | Type     |
+| :--------------- | :------- |
+| `data`           | `Data`[] |
+| `options`        | `object` |
 | `options.mailto` | `string` |
 
 #### Returns
 
 `Promise`<`undefined` | `Data`[]>
 
-Defined in:  [lib/csl-consolidate.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/csl-consolidate/src/lib/csl-consolidate.ts#L12)
+Defined in: [lib/csl-consolidate.ts:12](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/csl-consolidate/src/lib/csl-consolidate.ts#L12)
 
-***
+---
 
 ### `dateSim()`
 
@@ -41,8 +41,8 @@ dateSim(ref: Data, csl: Data): number;
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
+| Name  | Type   |
+| :---- | :----- |
 | `ref` | `Data` |
 | `csl` | `Data` |
 
@@ -50,7 +50,7 @@ dateSim(ref: Data, csl: Data): number;
 
 `number`
 
-Defined in:  [lib/csl-consolidate.ts:144](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/csl-consolidate/src/lib/csl-consolidate.ts#L144)
+Defined in: [lib/csl-consolidate.ts:144](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/csl-consolidate/src/lib/csl-consolidate.ts#L144)
 
 ## Install
 

@@ -4,9 +4,7 @@ import { defaultStyles, FileIcon } from 'react-file-icon'
 /* eslint-disable-next-line */
 export interface ExtIconProps {}
 
-export const WordIcon = () => (
-  <FileIcon extension="docx" {...defaultStyles.docx} />
-)
+export const WordIcon = () => <FileIcon extension="docx" {...defaultStyles.docx} />
 
 export const JATSIcon = () => (
   <FileIcon

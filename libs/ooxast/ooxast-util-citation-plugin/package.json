@@ -32,5 +32,11 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "ooxast": "*",
+    "xast-util-is-element": "*",
+    "unist-util-visit": "^4.1.2",
+    "xast-util-to-string": "^2.0.1"
+  }
 }

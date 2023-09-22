@@ -5,7 +5,7 @@ export async function callAnystyleApi(
   refs: string,
   apiUrl: string,
   params?: { [param: string]: string },
-  headers?: { [key: string]: string }
+  headers?: { [key: string]: string },
 ): Promise<CSL[]> {
   const response = await axios.post(apiUrl, refs, {
     headers: {

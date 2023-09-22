@@ -1,6 +1,6 @@
 **Bold **not bold
 
-*Italic*
+_Italic_
 
 <u>[object Object]</u>
 
@@ -15,4 +15,3 @@ highlight yellow
 red text
 
 border
-

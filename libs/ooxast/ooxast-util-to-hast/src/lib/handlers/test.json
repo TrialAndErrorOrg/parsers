@@ -28,9 +28,7 @@
         "type": "article-journal",
         "volume": "306"
       },
-      "uris": [
-        "http://www.mendeley.com/documents/?uuid=2ff72fa7-d045-4f16-b5a4-27d849b07504"
-      ]
+      "uris": ["http://www.mendeley.com/documents/?uuid=2ff72fa7-d045-4f16-b5a4-27d849b07504"]
     },
     {
       "id": "ITEM-2",
@@ -59,9 +57,7 @@
         "type": "article-journal",
         "volume": "152"
       },
-      "uris": [
-        "http://www.mendeley.com/documents/?uuid=5004bfd7-ce98-49c3-a1d7-db69173c7609"
-      ]
+      "uris": ["http://www.mendeley.com/documents/?uuid=5004bfd7-ce98-49c3-a1d7-db69173c7609"]
     },
     {
       "id": "ITEM-3",
@@ -99,9 +95,7 @@
         "type": "article-journal",
         "volume": "85"
       },
-      "uris": [
-        "http://www.mendeley.com/documents/?uuid=d17914e5-d158-4b59-bf0c-02cc8d5847d7"
-      ]
+      "uris": ["http://www.mendeley.com/documents/?uuid=d17914e5-d158-4b59-bf0c-02cc8d5847d7"]
     },
     {
       "id": "ITEM-4",
@@ -138,9 +132,7 @@
         "type": "article-journal",
         "volume": "153"
       },
-      "uris": [
-        "http://www.mendeley.com/documents/?uuid=915562a7-fdd4-4e8b-af71-f03a2d817e80"
-      ]
+      "uris": ["http://www.mendeley.com/documents/?uuid=915562a7-fdd4-4e8b-af71-f03a2d817e80"]
     }
   ],
   "mendeley": {

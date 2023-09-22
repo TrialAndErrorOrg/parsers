@@ -17,7 +17,7 @@ export function addPreamble(tree: Root, commands: PreambleCommand[]) {
           preambleCommandToCommand(c),
           { type: 'text', value: '\n' } as any,
         ]),
-      ]
+      ],
     )
   })
 
@@ -37,7 +37,7 @@ function preambleCommandToCommand(precom: PreambleCommand): Command {
                 ? ({ type: 'text', value: arg } as Text)
                 : preambleCommandToCommand(arg),
             ],
-          } as CommandArg)
+          } as CommandArg),
       )
     : []
   const args: CommandArg[] = precom.args?.length
@@ -50,7 +50,7 @@ function preambleCommandToCommand(precom: PreambleCommand): Command {
                 ? ({ type: 'text', value: arg } as Text)
                 : preambleCommandToCommand(arg),
             ],
-          } as CommandArg)
+          } as CommandArg),
       )
     : []
 

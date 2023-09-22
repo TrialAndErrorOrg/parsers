@@ -32,5 +32,8 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "reoff-markup-to-style": "*"
+  }
 }

@@ -1,6 +1,3 @@
 Some text[^1]
 
-[^1]:  A footnote.
-
-
-
+[^1]: A footnote.

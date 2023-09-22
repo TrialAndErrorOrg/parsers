@@ -1,6 +1,3 @@
-import { Node as UnistNode, Parent as UnistParent } from 'unist'
-import { Data as CSL } from 'csl-json'
-
 import {
   Parent as TexastParent,
   TexastContent,
@@ -49,7 +46,7 @@ export interface Options {
 export type Handle = (
   j: J,
   node: any,
-  parent?: Parent
+  parent?: Parent,
 ) => TexastContent | Array<TexastContent> | void
 
 export interface Context {
@@ -85,13 +82,13 @@ export type JWithProps = (
   node: Node,
   type: string,
   props?: Attributes,
-  children?: string | Array<TexastContent>
+  children?: string | Array<TexastContent>,
 ) => TexastContent
 
 export type JWithoutProps = (
   node: Node,
   type: string,
-  children?: string | Array<TexastContent>
+  children?: string | Array<TexastContent>,
 ) => TexastContent
 
 export type JWithPropsSpecific<TNode extends TexastContent = TexastContent> = (
@@ -100,7 +97,7 @@ export type JWithPropsSpecific<TNode extends TexastContent = TexastContent> = (
   props?: Attributes,
   //@ts-expect-error yeah i know butttt
   // TODO: Make this not error
-  children?: Pick<TNode, 'children'>
+  children?: Pick<TNode, 'children'>,
 ) => TNode
 
 export type J = JWithProps & JWithoutProps & Context

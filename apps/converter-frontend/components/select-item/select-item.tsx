@@ -1,10 +1,5 @@
 import React, { forwardRef } from 'react'
-import {
-  Text,
-  Group,
-  Avatar,
-  SelectItemProps as OldSelectItemProps,
-} from '@mantine/core'
+import { Text, Group, Avatar, SelectItemProps as OldSelectItemProps } from '@mantine/core'
 /* eslint-disable-next-line */
 export interface SelectItemProps extends OldSelectItemProps {
   description: string
@@ -24,7 +19,7 @@ export const SelectItem = forwardRef<HTMLDivElement, SelectItemProps>(
         </div>
       </Group>
     </div>
-  )
+  ),
 )
 
 export default SelectItem

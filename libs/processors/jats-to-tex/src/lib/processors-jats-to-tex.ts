@@ -5,10 +5,7 @@ import { unified } from 'unified'
 import { VFile } from 'vfile'
 
 export const jatsToTex = async (jats: string): Promise<VFile> => {
-  const proc = unified()
-    .use(rejourParse)
-    .use(rejourRelatex)
-    .use(relatexStringify)
+  const proc = unified().use(rejourParse).use(rejourRelatex).use(relatexStringify)
 
   // console.log(jats)
   // console.log(proc)

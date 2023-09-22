@@ -30,5 +30,8 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "xast-util-is-element": "*"
+  }
 }

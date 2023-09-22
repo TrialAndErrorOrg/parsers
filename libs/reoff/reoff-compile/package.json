@@ -32,5 +32,12 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "ooxast": "*",
+    "docx-to-vfile": "*",
+    "@zip.js/zip.js": "^2.6.83",
+    "unified": "^10.1.2",
+    "xast-util-to-xml": "^3.0.2"
+  }
 }

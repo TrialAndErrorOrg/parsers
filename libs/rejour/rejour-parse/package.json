@@ -34,5 +34,12 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "jast-types": "*",
+    "xast-util-from-xml": "^3.0.0",
+    "unified": "^10.1.2",
+    "unist-util-filter": "^4.0.1",
+    "unist-util-map": "^3.1.3"
+  }
 }

@@ -32,5 +32,12 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "jast-types": "*",
+    "jast-util-to-csl": "*",
+    "unist-util-visit": "^4.1.2",
+    "unist-util-is": "^5.2.1",
+    "vfile": "^5.3.7"
+  }
 }

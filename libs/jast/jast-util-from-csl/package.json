@@ -3,8 +3,8 @@
   "version": "0.1.1",
   "dependencies": {
     "csl-json": "^0.1.0",
-    "unist-util-is": "^5.1.1",
-    "xast-util-to-string": "^2.0.0"
+    "jast-types": "*",
+    "xastscript": "^3.1.1"
   },
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",

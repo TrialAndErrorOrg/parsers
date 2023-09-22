@@ -37,5 +37,11 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "ooxast-util-to-jast": "*",
+    "jast-types": "*",
+    "ooxast": "*",
+    "unified": "^10.1.2"
+  }
 }

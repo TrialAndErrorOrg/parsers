@@ -6,15 +6,7 @@ import {
   PDFViewer,
   // Document,
 } from '@react-pdf/renderer/lib/react-pdf.browser.cjs'
-import {
-  StyleSheet,
-  Page,
-  View,
-  Text,
-  Image,
-  Font,
-  Document,
-} from '@react-pdf/renderer'
+import { StyleSheet, Page, View, Text, Image, Font, Document } from '@react-pdf/renderer'
 import { unified } from 'unified'
 import reoffParse from 'reoff-parse'
 import { docxToVFile } from 'docx-to-vfile'
@@ -112,12 +104,12 @@ const isHeading = (child: Node) => {
 export const Index = (props: IndexProps) => {
   const { parsedDocx } = props
 
-  return <div style={{ width: '100vw', height: '100vh' }}>
+  return (
+    <div style={{ width: '100vw', height: '100vh' }}>
       <PDFViewer width="100%" height="100%">
         <Document>
           <Page style={styles.body}>
             {parsedDocx.children.map((child, index) => {
-
               const h = isHeading(child)
 
               // return (
@@ -126,21 +118,34 @@ export const Index = (props: IndexProps) => {
               //     style={styles[h.heading] ?? styles.text}
               //   >
               // @ts-expect-error yeah it's fine
-                 return child?.children?.map((run: any, idx: number) => {
-                    if (!isR(run)) return null
+              return child?.children?.map((run: any, idx: number) => {
+                if (!isR(run)) return null
 
-                    const attrs = getRStyle(run)
-                    // const style = attrs['w:b'] ? styles.
+                const attrs = getRStyle(run)
+                // const style = attrs['w:b'] ? styles.
 
-                    return (
-                      <Text key={`${toString(run)}${idx}`} style={styles[h.heading] ?? {...styles.text,...(attrs['w:b'] ? {fontFamily: 'Roman-Bold'} : attrs['w:i'] ? {fontFamily: 'Roman-Italic'} : {})}}>
-                        {toString(run)}
-                      </Text>
-                    )
-                  })
-                  {/* {toString(child)} */}
-                // </View>
-
+                return (
+                  <Text
+                    key={`${toString(run)}${idx}`}
+                    style={
+                      styles[h.heading] ?? {
+                        ...styles.text,
+                        ...(attrs['w:b']
+                          ? { fontFamily: 'Roman-Bold' }
+                          : attrs['w:i']
+                          ? { fontFamily: 'Roman-Italic' }
+                          : {}),
+                      }
+                    }
+                  >
+                    {toString(run)}
+                  </Text>
+                )
+              })
+              {
+                /* {toString(child)} */
+              }
+              // </View>
             })}
             {/* <Text style={styles.header} fixed>
             ~ Created with react-pdf ~
@@ -326,7 +331,7 @@ export const Index = (props: IndexProps) => {
         </Document>
       </PDFViewer>
     </div>
-
+  )
 }
 
 Font.register({
@@ -342,7 +347,7 @@ export default Index
 
 export const getStaticProps = async () => {
   const docxBuff = await readFile(
-    join(process.cwd(), 'apps', 'react-pdf', 'public', 'Critical.docx')
+    join(process.cwd(), 'apps', 'react-pdf', 'public', 'Critical.docx'),
   )
   const docxArrayBuffer = new Uint8Array(docxBuff)
 

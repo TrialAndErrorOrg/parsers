@@ -22,7 +22,7 @@ export type PredicateTest<T extends Element> =
 export type TestFunctionAnything = (
   element: Element,
   index?: number | null | undefined,
-  parent?: Parent | null | undefined
+  parent?: Parent | null | undefined,
 ) => boolean | void
 
 /**
@@ -31,7 +31,7 @@ export type TestFunctionAnything = (
 export type TestFunctionPredicate<X extends Element> = (
   element: Element,
   index?: number | null | undefined,
-  parent?: Parent | null | undefined
+  parent?: Parent | null | undefined,
 ) => element is X
 
 /**
@@ -40,7 +40,7 @@ export type TestFunctionPredicate<X extends Element> = (
 export type AssertAnything = (
   node?: unknown,
   index?: number | null | undefined,
-  parent?: Parent | null | undefined
+  parent?: Parent | null | undefined,
 ) => boolean
 
 /**
@@ -50,7 +50,7 @@ export type AssertAnything = (
 export type AssertPredicate<Y extends Element> = (
   node?: unknown,
   index?: number | null | undefined,
-  parent?: Parent | null | undefined
+  parent?: Parent | null | undefined,
 ) => node is Y
 
 // Check if `node` is an `element` and whether it passes the given test.
@@ -85,25 +85,19 @@ export const isElement =
     test?: Test,
     index?: number,
     parent?: Parent,
-    context?: unknown
+    context?: unknown,
   ): boolean {
     const check = convertElement(test)
 
     if (
       index !== undefined &&
       index !== null &&
-      (typeof index !== 'number' ||
-        index < 0 ||
-        index === Number.POSITIVE_INFINITY)
+      (typeof index !== 'number' || index < 0 || index === Number.POSITIVE_INFINITY)
     ) {
       throw new Error('Expected positive finite index for child node')
     }
 
-    if (
-      parent !== undefined &&
-      parent !== null &&
-      (!parent.type || !parent.children)
-    ) {
+    if (parent !== undefined && parent !== null && (!parent.type || !parent.children)) {
       throw new Error('Expected parent node')
     }
 
@@ -112,10 +106,7 @@ export const isElement =
       return false
     }
 
-    if (
-      (parent === undefined || parent === null) !==
-      (index === undefined || index === null)
-    ) {
+    if ((parent === undefined || parent === null) !== (index === undefined || index === null)) {
       throw new Error('Expected both parent and index')
     }
 
@@ -126,15 +117,9 @@ export const isElement =
       test?: PredicateTest<T>,
       index?: number,
       parent?: Parent,
-      context?: unknown
+      context?: unknown,
     ) => node is T) &
-    ((
-      node: unknown,
-      test: Test,
-      index?: number,
-      parent?: Parent,
-      context?: unknown
-    ) => boolean)
+    ((node: unknown, test: Test, index?: number, parent?: Parent, context?: unknown) => boolean)
 
 export const convertElement =
   /**
@@ -171,9 +156,7 @@ export const convertElement =
     }
 
     throw new Error('Expected function, string, or array as test')
-  } as (<T extends Element>(
-    test: T['name'] | TestFunctionPredicate<T>
-  ) => AssertPredicate<T>) &
+  } as (<T extends Element>(test: T['name'] | TestFunctionPredicate<T>) => AssertPredicate<T>) &
     ((test?: Test) => AssertAnything)
 
 /**
@@ -241,15 +224,8 @@ function castFactory(check: TestFunctionAnything): AssertAnything {
    * parameters: Array.<unknown>
    * => boolean
    */
-  function assertion(
-    this: unknown,
-    node: unknown,
-    ...parameters: Array<unknown>
-  ): boolean {
-    return (
-      element(node) &&
-      Boolean(check.call(this, node, ...(parameters as number[])))
-    )
+  function assertion(this: unknown, node: unknown, ...parameters: Array<unknown>): boolean {
+    return element(node) && Boolean(check.call(this, node, ...(parameters as number[])))
   }
 }
 
@@ -265,7 +241,7 @@ function element(node: unknown): node is Element {
       // @ts-expect-error Looks like a node.
       node.type === 'element' &&
       // @ts-expect-error Looks like an element.
-      typeof node.name === 'string'
+      typeof node.name === 'string',
   )
 }
 

@@ -13,10 +13,7 @@
     },
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/citations/crossref-json/**/*.ts"]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "make-publishable": {
       "executor": "better-nx-tsc:publishable"

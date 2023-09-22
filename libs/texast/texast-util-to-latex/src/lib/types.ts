@@ -42,7 +42,7 @@ export type Handle = (
   node: any,
   parent: Parent | null | undefined,
   context: Context,
-  safeOptions: SafeOptions
+  safeOptions: SafeOptions,
 ) => string
 
 export type Handlers = Record<string, Handle>
@@ -51,7 +51,7 @@ export type Join = (
   left: Node,
   right: Node,
   parent: Parent,
-  context: Context
+  context: Context,
 ) => boolean | null | void | number
 
 export interface Unsafe {

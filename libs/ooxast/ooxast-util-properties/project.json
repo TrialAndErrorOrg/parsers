@@ -37,10 +37,7 @@
     },
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["libs/ooxast/ooxast-util-properties/**/*.ts"]
-      }
+      "outputs": ["{options.outputFile}"]
     },
     "deploy": {
       "executor": "ngx-deploy-npm:deploy",

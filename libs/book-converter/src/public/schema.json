@@ -31,13 +31,7 @@
     },
     "citationType": {
       "type": "string",
-      "enum": [
-        "mendeley",
-        "word",
-        "citavi",
-        "zotero",
-        "endnote"
-      ],
+      "enum": ["mendeley", "word", "citavi", "zotero", "endnote"],
       "default": "zotero",
       "description": "The type of citation you want to parse."
     },
@@ -121,10 +115,7 @@
             "default": true
           }
         },
-        "required": [
-          "markup",
-          "style"
-        ],
+        "required": ["markup", "style"],
         "additionalProperties": false
       },
       "description": "Markup style options",
@@ -145,10 +136,7 @@
             "description": "Output LaTeX code. Use $1 for the text of the paragraph. E.g. '\\textbf{$1}'"
           }
         },
-        "required": [
-          "style",
-          "output"
-        ],
+        "required": ["style", "output"],
         "additionalProperties": false
       },
       "description": "Paragraph style handlers"
@@ -184,10 +172,7 @@
               "description": "Path to the index CSV file to use"
             }
           },
-          "required": [
-            "documentClass",
-            "options"
-          ],
+          "required": ["documentClass", "options"],
           "additionalProperties": false
         },
         {
@@ -199,21 +184,12 @@
             },
             "article": {
               "type": "string",
-              "enum": [
-                "empirical",
-                "reflection",
-                "meta",
-                "rga",
-                "editorial"
-              ],
+              "enum": ["empirical", "reflection", "meta", "rga", "editorial"],
               "default": "empirical"
             },
             "citeStyle": {
               "type": "string",
-              "enum": [
-                "authordate",
-                "numeric"
-              ],
+              "enum": ["authordate", "numeric"],
               "default": "authordate"
             },
             "issued": {
@@ -221,19 +197,14 @@
               "const": "issued"
             }
           },
-          "required": [
-            "documentClass"
-          ],
+          "required": ["documentClass"],
           "additionalProperties": false
         }
       ],
       "description": "Options dealiing with latex"
     }
   },
-  "required": [
-    "docx",
-    "latexOptions"
-  ],
+  "required": ["docx", "latexOptions"],
   "additionalProperties": false,
   "$schema": "http://json-schema.org/draft-07/schema#"
 }

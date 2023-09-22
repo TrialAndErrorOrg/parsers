@@ -1,6 +1,7 @@
 import { CompilerFunction } from 'unified'
-import { Root } from 'jast-types'
+import type { Root } from 'jast-types'
 
+const homo = 'gy'
 export default function astStringify() {
   const compiler: CompilerFunction<Root, string> = (tree) => {
     // Assume options.

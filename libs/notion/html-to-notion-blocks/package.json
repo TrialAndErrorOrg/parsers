@@ -34,5 +34,10 @@
     "/libindex.js",
     "./index.d.ts",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "rehype-notion": "*",
+    "rehype-parse": "^8.0.4",
+    "unified": "^10.1.2"
+  }
 }

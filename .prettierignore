@@ -6,3 +6,7 @@
 /docs
 /.bundle
 /.git
+.next
+dist
+
+README.md

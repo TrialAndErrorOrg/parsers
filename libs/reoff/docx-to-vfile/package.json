@@ -38,5 +38,9 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "vfile": "^5.3.7",
+    "unzipit": "^1.4.2"
+  }
 }

@@ -31,5 +31,10 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "ooxast": "*",
+    "xast-util-select": "*",
+    "xast-util-is-element": "*"
+  }
 }

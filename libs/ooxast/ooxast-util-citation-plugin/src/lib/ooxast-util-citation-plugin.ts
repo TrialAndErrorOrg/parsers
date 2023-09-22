@@ -26,9 +26,7 @@ export function detectCitePlugin(node: Node) {
       return
     }
 
-    if (
-      Buffer.from(text, 'base64').toString().toLowerCase().includes('citavi')
-    ) {
+    if (Buffer.from(text, 'base64').toString().toLowerCase().includes('citavi')) {
       counter.citavi++
       return
     }

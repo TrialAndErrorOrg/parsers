@@ -33,5 +33,13 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "ooxast-util-remove-rsid": "*",
+    "docx-to-vfile": "*",
+    "ooxast": "*",
+    "reoff-parse": "*",
+    "unified": "^10.1.2",
+    "vfile": "^5.3.7"
+  }
 }

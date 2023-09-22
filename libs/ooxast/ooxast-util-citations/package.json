@@ -31,5 +31,20 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "csl-consolidate": "*",
+    "ooxast": "*",
+    "ooxast-util-get-style": "*",
+    "parse-text-cite": "*",
+    "xast-util-is-element": "*",
+    "xast-util-select": "*",
+    "ooxast-util-citation-plugin": "*",
+    "csl-json": "0.1.0",
+    "vfile": "^5.3.7",
+    "similarity": "^1.2.1",
+    "unist-util-visit-parents": "5.1.3",
+    "xast-util-to-string": "^2.0.1",
+    "xastscript": "^3.1.1"
+  }
 }

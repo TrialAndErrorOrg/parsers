@@ -28,16 +28,12 @@ export function cslToFront(data: CSL) {
   //TODO: [csl-to-jast] write a function that converts CSL to JAST frontmatter
 }
 
-export function cslToRefList(
-  data: CSL[] | { [key: string | number]: CSL }
-): RefList {
+export function cslToRefList(data: CSL[] | { [key: string | number]: CSL }): RefList {
   if (Array.isArray(data)) {
     const reflist = data.map((csl, index) => cslToRef(csl, index))
     return x('refList', reflist) as RefList
   }
-  const reflist = Object.entries(data).map(([index, csl]) =>
-    cslToRef(csl, index)
-  )
+  const reflist = Object.entries(data).map(([index, csl]) => cslToRef(csl, index))
   return x('refList', reflist) as RefList
 }
 
@@ -53,30 +49,28 @@ export function cslToRef(data: CSL, index: number | string): Ref {
           (x('pubId', { pubIdType: id.toLowerCase() }, [
             { type: 'text', value: data[id] },
           ]) as PubId)
-        : []
+        : [],
   )
 
   const names = data.author?.map((person) => {
     return x(
       'name',
-      Object.entries(person).flatMap(
-        ([name, val]: [name: string, val: string]) => {
-          switch (name) {
-            case 'family':
-              return nameMap('surname', val)
-            case 'given':
-              return nameMap('givenNames', val)
-            case 'suffix':
-              return nameMap('suffix', val)
-            case 'dropping-particle':
-              return nameMap('prefix', val)
-            case 'non-dropping-particle':
-              return nameMap('prefix', val)
-            default:
-              return []
-          }
+      Object.entries(person).flatMap(([name, val]: [name: string, val: string]) => {
+        switch (name) {
+          case 'family':
+            return nameMap('surname', val)
+          case 'given':
+            return nameMap('givenNames', val)
+          case 'suffix':
+            return nameMap('suffix', val)
+          case 'dropping-particle':
+            return nameMap('prefix', val)
+          case 'non-dropping-particle':
+            return nameMap('prefix', val)
+          default:
+            return []
         }
-      )
+      }),
     )
   })
 
@@ -112,11 +106,7 @@ export function cslToRef(data: CSL, index: number | string): Ref {
   ].flat()
 
   return x('ref', { id: typeof index === 'string' ? index : `bib${index}` }, [
-    x(
-      'elementCitation',
-      { publicationType: getPublicationType(data) },
-      elementCitationChildren
-    ),
+    x('elementCitation', { publicationType: getPublicationType(data) }, elementCitationChildren),
   ]) as Ref
 }
 function nameMap(name: string, value: string | undefined) {

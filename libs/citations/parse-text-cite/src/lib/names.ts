@@ -3,17 +3,11 @@ const parencite = [
   '(see Koehler, 2016, for more detail)',
   '(e.g., falsely balanced news coverage; Koehler, 2016)',
 ]
-const narrCiteWParen = [
-  'Koehler (2016) noted the dangers of falsely balanced news coverage.',
-]
-const narrCiteWOParen = [
-  'In 2016, Koehler noted the dangers of falsely balanced news coverage.',
-]
+const narrCiteWParen = ['Koehler (2016) noted the dangers of falsely balanced news coverage.']
+const narrCiteWOParen = ['In 2016, Koehler noted the dangers of falsely balanced news coverage.']
 
 // 8.12 Citing multiple works
-const multipleWorks = [
-  '(Adams et al., 2019; Shumway & Shulman, 2015; Westinghouse, 2017)',
-]
+const multipleWorks = ['(Adams et al., 2019; Shumway & Shulman, 2015; Westinghouse, 2017)']
 const multipleWorksSameauthor = [
   '(Department of Veterans Affairs, n.d., 2017a, 2017b, 2019)',
   'Zhou (n.d., 2000, 2016, in press)',
@@ -24,9 +18,7 @@ const multipleWorksHighlight = [
   'Sampson & Hughes, 2020; see also Augustine, 2017; Melara et al., 2018; Pérez, 2014)',
 ]
 
-const multipleWorksNarr = [
-  'Suliman (2018), Gutiérrez (2012, 2017), and Medina and Reyes (2019)',
-]
+const multipleWorksNarr = ['Suliman (2018), Gutiérrez (2012, 2017), and Medina and Reyes (2019)']
 
 const specificPart = [
   '(Centers for Disease Control and Prevention, 2019, p. 10)',

@@ -15,7 +15,5 @@
       "description": "Run through all the steps without actually publishing"
     }
   },
-  "required": [
-    "dist"
-  ]
+  "required": ["dist"]
 }

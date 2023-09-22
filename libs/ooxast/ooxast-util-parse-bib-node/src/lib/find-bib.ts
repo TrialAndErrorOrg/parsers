@@ -18,11 +18,7 @@ export function findBib(tree: Node): string[] | null {
     const child = doc.children[i]
     if (isP(child) && getPStyle(child)?.toLowerCase()?.includes('heading')) {
       const p = toString(child)
-      if (
-        ['references', 'bibliography', 'citations'].includes(
-          p.toLowerCase().trim()
-        )
-      ) {
+      if (['references', 'bibliography', 'citations'].includes(p.toLowerCase().trim())) {
         appendixToggle = true
         continue
       }
@@ -30,12 +26,7 @@ export function findBib(tree: Node): string[] | null {
       continue
     }
     appendixToggle &&
-      stack.push(
-        toString(child).replace(
-          'ADDIN Mendeley Bibliography CSL_BIBLIOGRAPHY',
-          ''
-        )
-      )
+      stack.push(toString(child).replace('ADDIN Mendeley Bibliography CSL_BIBLIOGRAPHY', ''))
   }
   return stack
   // visit(

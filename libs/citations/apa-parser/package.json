@@ -32,5 +32,11 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "vfile-reporter": "^7.0.5",
+    "unified": "^10.1.2",
+    "retext-english": "^4.1.0",
+    "unist-util-visit": "^4.1.2"
+  }
 }

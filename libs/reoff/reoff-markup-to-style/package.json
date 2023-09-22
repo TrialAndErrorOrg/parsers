@@ -33,5 +33,10 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "ooxast-util-markup-to-style": "*",
+    "ooxast": "*",
+    "unified": "^10.1.2"
+  }
 }

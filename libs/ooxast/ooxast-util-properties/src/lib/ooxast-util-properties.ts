@@ -24,8 +24,7 @@ const reducePr = (nodes: Element[] | undefined): PrObject => {
     return {
       ...acc,
       [patchedName]:
-        Object.keys(patchedAttrs)?.length ||
-        Object.keys(patchedChildren)?.length
+        Object.keys(patchedAttrs)?.length || Object.keys(patchedChildren)?.length
           ? { ...patchedAttrs, ...patchedChildren }
           : true,
     }
@@ -35,9 +34,7 @@ const reducePr = (nodes: Element[] | undefined): PrObject => {
 export function getPr(node: Element): PrObject {
   const prName = `${node.name}Pr`
 
-  const pr = node.children.find(
-    (child) => child.type === 'element' && child.name.includes(prName)
-  )
+  const pr = node.children.find((child) => child.type === 'element' && child.name.includes(prName))
 
   if (!(pr && isElement(pr))) {
     return {}

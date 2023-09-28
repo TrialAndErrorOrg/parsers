@@ -1,0 +1,37 @@
+{
+  "name": "utils-better-check-dependencies",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/utils/better-check-dependencies/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/utils/better-check-dependencies",
+        "main": "libs/utils/better-check-dependencies/src/index.ts",
+        "tsConfig": "libs/utils/better-check-dependencies/tsconfig.lib.json",
+        "assets": ["libs/utils/better-check-dependencies/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/utils/better-check-dependencies/**/*.ts",
+          "libs/utils/better-check-dependencies/package.json"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{options.reportsDirectory}"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../../coverage/libs/utils/better-check-dependencies"
+      }
+    }
+  },
+  "tags": []
+}

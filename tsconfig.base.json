@@ -23,7 +23,6 @@
     "noImplicitThis": false,
     "noErrorTruncation": true,
     "baseUrl": ".",
-    "verbatimModuleSyntax": true,
     "paths": {
       "@jote/hybrid-builder": ["libs/hybrid-builder/src/index.ts"],
       "@jote/processors/docx-to-jats": ["libs/processors/docx-to-jats/src/index.ts"],
@@ -32,6 +31,9 @@
       "@jote/processors/jote-docx-tex": ["libs/processors/jote-docx-tex/src/index.ts"],
       "@jote/utils/ojs-to-preamble": ["libs/utils/ojs-to-preamble/src/index.ts"],
       "@trialanderror/converter-cli": ["libs/book-converter/src/index.ts"],
+      "@trialanderror/utils/better-check-dependencies": [
+        "libs/utils/better-check-dependencies/src/index.ts"
+      ],
       "@trialanderror/workspace-plugin": ["tools/workspace-plugin/src/index.ts"],
       "apa-parser": ["libs/citations/apa-parser/src/index.ts"],
       "ast-stringify": ["libs/ast-stringify/src/index.ts"],

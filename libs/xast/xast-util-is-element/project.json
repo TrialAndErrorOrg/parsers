@@ -13,7 +13,10 @@
     },
     "lint": {
       "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"]
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "hasTypeAwareRules": true
+      }
     },
     "test": {
       "executor": "@nx/jest:jest",
@@ -24,7 +27,10 @@
       }
     },
     "make-publishable": {
-      "executor": "better-nx-tsc:publishable"
+      "executor": "better-nx-tsc:publishable",
+      "options": {
+        "dist": "dist/libs/xast/xast-util-is-element"
+      }
     },
     "build": {
       "executor": "@nx/js:tsc",
@@ -36,7 +42,7 @@
         "packageJson": "libs/xast/xast-util-is-element/package.json",
         "main": "libs/xast/xast-util-is-element/src/index.ts",
         "assets": ["libs/xast/xast-util-is-element/*.md"],
-
+        "updateBuildableProjectDepsInPackageJson": true,
         "buildableProjectDepsInPackageJsonType": "dependencies",
         "clean": true
       },

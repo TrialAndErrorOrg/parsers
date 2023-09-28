@@ -1,5 +1,5 @@
-import { Parent } from 'unist'
-import { Element } from 'xast'
+import type { Parent } from 'unist'
+import type { Element } from 'xast'
 
 export type Name = string
 export type Test =
@@ -243,11 +243,4 @@ function element(node: unknown): node is Element {
       // @ts-expect-error Looks like an element.
       typeof node.name === 'string',
   )
-}
-
-const func = (node: unknown) => {
-  const el = isElement(node, 'textinput')
-  if (!el) {
-    const bel = isElement(node, 'button')
-  }
 }

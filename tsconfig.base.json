@@ -23,6 +23,7 @@
     "noImplicitThis": false,
     "noErrorTruncation": true,
     "baseUrl": ".",
+    "verbatimModuleSyntax": true,
     "paths": {
       "@jote/hybrid-builder": ["libs/hybrid-builder/src/index.ts"],
       "@jote/processors/docx-to-jats": ["libs/processors/docx-to-jats/src/index.ts"],

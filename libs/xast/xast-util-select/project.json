@@ -12,7 +12,10 @@
       }
     },
     "make-publishable": {
-      "executor": "better-nx-tsc:publishable"
+      "executor": "better-nx-tsc:publishable",
+      "options": {
+        "dist": "dist/libs/xast/xast-util-select"
+      }
     },
     "build": {
       "executor": "@nx/js:tsc",

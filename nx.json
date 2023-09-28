@@ -88,5 +88,10 @@
         "cacheableOperations": ["build", "lint", "test", "e2e", "npm", "readme", "version"]
       }
     }
+  },
+  "pluginsConfig": {
+    "@nx/js": {
+      "analyzeSourceFiles": true
+    }
   }
 }

@@ -1,4 +1,14 @@
-import { ExecutorContext } from '@nx/devkit'
+import {
+  ExecutorContext,
+  createProjectFileMapUsingProjectGraph,
+  readRootPackageJson,
+} from '@nx/devkit'
+
+import {
+  calculateProjectBuildableDependencies,
+  calculateProjectDependencies,
+} from '@nx/js/src/utils/buildable-libs-utils'
+import { findProjectsNpmDependencies } from 'nx/src/plugins/js/package-json/create-package-json'
 import { PublishableExecutorSchema } from './schema'
 import { readFile, writeFile } from 'fs/promises'
 
@@ -103,6 +113,40 @@ export default async function runExecutor(
   options: PublishableExecutorSchema,
   context: ExecutorContext,
 ) {
+  const filemap = await createProjectFileMapUsingProjectGraph(context.projectGraph!)
+  // console.dir(filemap[context.projectName!], { depth: 10 })
+  const deps = findProjectsNpmDependencies(
+    context.projectGraph?.nodes[context.projectName!]!,
+    context.projectGraph!,
+    'build',
+    // @ts-expect-error ashts
+    await readRootPackageJson(),
+    {
+      isProduction: true,
+      includeTransitiveDependencies: true,
+    },
+  )
+  const projectDeps = calculateProjectDependencies(
+    context.projectGraph!,
+    context.projectGraph?.nodes[context.projectName!].data.root,
+    context.projectName,
+    'build',
+    'production',
+    true,
+  )
+
+  const buildprojectDeps = calculateProjectBuildableDependencies(
+    context.taskGraph,
+    context.projectGraph!,
+    context.projectGraph?.nodes[context.projectName!].data.root!,
+    context.projectName!,
+    'build',
+    'production',
+    true,
+  )
+
+  console.dir(projectDeps)
+  console.log(deps)
   const distDir = options.dist
 
   const packageJson = JSON.parse(await readFile(`${distDir}/package.json`, 'utf-8'))

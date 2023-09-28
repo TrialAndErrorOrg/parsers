@@ -30,5 +30,6 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {}
 }

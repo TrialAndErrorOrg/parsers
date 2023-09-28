@@ -16,8 +16,7 @@
     "baseUrl": "../../.."
   },
   "module": {
-    "type": "es6",
-    "strict": true
+    "type": "es6"
   },
   "exclude": [
     "jest.config.ts",

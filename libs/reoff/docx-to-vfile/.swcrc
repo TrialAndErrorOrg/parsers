@@ -11,13 +11,11 @@
       "decoratorMetadata": true,
       "legacyDecorator": true
     },
-
     "externalHelpers": true,
     "loose": true
   },
   "module": {
-    "type": "es6",
-    "strict": true
+    "type": "es6"
   },
   "exclude": [
     "jest.config.ts",

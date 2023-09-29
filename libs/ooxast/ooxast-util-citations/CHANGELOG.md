@@ -2,6 +2,22 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.4.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-citations-0.3.0...ooxast-util-citations-0.4.0) (2023-09-29)
+
+### Dependency Updates
+
+* `csl-consolidate` updated to version `0.3.0`
+* `ooxast` updated to version `0.3.0`
+* `ooxast-util-get-style` updated to version `0.4.0`
+* `parse-text-cite` updated to version `0.3.1`
+* `xast-util-is-element` updated to version `0.3.1`
+* `xast-util-select` updated to version `0.3.0`
+* `ooxast-util-citation-plugin` updated to version `0.3.0`
+
+### Features
+
+* update all package.json ([d4070e5](https://github.com/TrialAndErrorOrg/parsers/commit/d4070e53ab3389db11fed978f3f74bcfe6808f5e))
+
 ## [0.3.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-citations-0.2.0...ooxast-util-citations-0.3.0) (2023-09-22)
 
 ### Dependency Updates

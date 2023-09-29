@@ -1,6 +1,6 @@
 {
   "name": "ooxast-util-citations",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "type": "module",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
@@ -33,13 +33,13 @@
     "/lib"
   ],
   "dependencies": {
-    "csl-consolidate": "0.2.0",
-    "ooxast": "0.2.0",
-    "ooxast-util-get-style": "0.3.0",
-    "parse-text-cite": "0.3.0",
-    "xast-util-is-element": "0.2.0",
-    "xast-util-select": "0.2.0",
-    "ooxast-util-citation-plugin": "0.2.0",
+    "csl-consolidate": "0.3.0",
+    "ooxast": "0.3.0",
+    "ooxast-util-get-style": "0.4.0",
+    "parse-text-cite": "0.3.1",
+    "xast-util-is-element": "0.3.1",
+    "xast-util-select": "0.3.0",
+    "ooxast-util-citation-plugin": "0.3.0",
     "csl-json": "0.1.0",
     "vfile": "^5.3.7",
     "similarity": "^1.2.1",

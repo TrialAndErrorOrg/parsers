@@ -2,6 +2,28 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/book-converter-0.1.0...book-converter-0.2.0) (2023-09-29)
+
+### Dependency Updates
+
+* `ooxast-util-markup-to-style` updated to version `0.4.0`
+* `reoff-unified-latex` updated to version `0.3.0`
+* `unified-latex-stringify` updated to version `0.2.1`
+* `docx-to-vfile` updated to version `0.10.0`
+* `reoff-clean` updated to version `0.3.0`
+* `reoff-markup-to-style` updated to version `0.2.0`
+* `reoff-parse-references` updated to version `0.3.0`
+* `reoff-cite` updated to version `0.4.0`
+* `ooxast` updated to version `0.3.0`
+* `ooxast-util-get-style` updated to version `0.4.0`
+* `reoff-parse` updated to version `0.5.0`
+* `ooxast-util-to-unified-latex` updated to version `0.5.0`
+
+### Features
+
+* add modified package check eslint rule ([aec2486](https://github.com/TrialAndErrorOrg/parsers/commit/aec2486cf5196a1c370c5575b5f6fae405b7b5de))
+* update all package.json ([d4070e5](https://github.com/TrialAndErrorOrg/parsers/commit/d4070e53ab3389db11fed978f3f74bcfe6808f5e))
+
 ## 0.1.0 (2023-09-22)
 
 ### Dependency Updates

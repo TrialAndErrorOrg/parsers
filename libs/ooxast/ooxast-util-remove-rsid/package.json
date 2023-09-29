@@ -1,6 +1,6 @@
 {
   "name": "ooxast-util-remove-rsid",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
@@ -38,10 +38,10 @@
     "/lib"
   ],
   "dependencies": {
-    "ooxast": "0.2.0",
-    "xast-util-is-element": "0.2.0",
-    "xast-util-select": "0.2.0",
-    "ooxast-util-get-style": "0.3.0",
+    "ooxast": "0.3.0",
+    "xast-util-is-element": "0.3.1",
+    "xast-util-select": "0.3.0",
+    "ooxast-util-get-style": "0.4.0",
     "unist-util-select": "^4.0.3",
     "unist-util-visit": "^4.1.2",
     "unist-util-remove": "^3.1.1"

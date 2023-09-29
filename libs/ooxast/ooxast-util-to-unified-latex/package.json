@@ -54,7 +54,6 @@
     "vfile": "^6.0.1",
     "escape-latex": "1.2.0",
     "xast-util-from-xml": "^4.0.0",
-    "@types/xast": "^2.0.1",
-    "@types/unist": "^3.0.0"
+    "@types/xast": "^2.0.1"
   }
 }

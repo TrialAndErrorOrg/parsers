@@ -3,32 +3,15 @@ import { docxToVFile } from 'docx-to-vfile'
 import { readdirSync, writeFileSync } from 'fs'
 import { readFile, writeFile } from 'fs/promises'
 import { join } from 'path'
-import { Plugin, CompilerFunction, unified } from 'unified'
+import { unified } from 'unified'
 import { removePosition } from 'unist-util-remove-position'
 import { reoffClean } from 'reoff-clean'
 import reoffCite from 'reoff-cite'
 import reoffParseReferences from 'reoff-parse-references'
 import { toUnifiedLatex } from '../lib/ooxast-util-to-unified-latex.js'
-import { toString } from '@unified-latex/unified-latex-util-to-string'
-
-import { Options } from '../lib/types.js'
-import { Node } from 'unist'
-import { Ast, Root } from '@unified-latex/unified-latex-types'
-import { describe, it, expect } from 'vitest'
-import { blob } from 'stream/consumers'
+import { Root } from '@unified-latex/unified-latex-types'
+import { it, expect } from 'vitest'
 import unifiedLatexStringify from 'unified-latex-stringify'
-// import reoffMarkupToStyle from 'reoff-markup-to-style'
-
-const unifieddLatexStringify = function relatexStringify(options?: Options | void) {
-  const compiler: CompilerFunction<Node, string> = (tree) => {
-    // Assume options.
-    const settings = this.data('settings') as Options
-
-    return toString(tree as Ast)
-  }
-
-  Object.assign(this, { Compiler: compiler })
-} as Plugin<[Options] | void[], Root, string>
 
 const fromDocx = (
   path: string,

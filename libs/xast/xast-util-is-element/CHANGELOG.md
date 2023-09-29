@@ -2,6 +2,18 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.0](https://github.com/TrialAndErrorOrg/parsers/compare/xast-util-is-element-0.2.0...xast-util-is-element-0.3.0) (2023-09-29)
+
+
+### Features
+
+* add modified package check eslint rule ([aec2486](https://github.com/TrialAndErrorOrg/parsers/commit/aec2486cf5196a1c370c5575b5f6fae405b7b5de))
+
+
+### Bug Fixes
+
+* improve things, I think ([0497a58](https://github.com/TrialAndErrorOrg/parsers/commit/0497a58640e74de5779e3c6d429ae528bda738a9))
+
 ## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/xast-util-is-element-0.1.5...xast-util-is-element-0.2.0) (2023-09-22)
 
 

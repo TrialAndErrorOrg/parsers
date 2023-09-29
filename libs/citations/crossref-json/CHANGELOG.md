@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.2.2](https://github.com/TrialAndErrorOrg/parsers/compare/crossref-json-0.2.1...crossref-json-0.2.2) (2023-09-29)
+
 ## [0.2.1](https://github.com/TrialAndErrorOrg/parsers/compare/crossref-json-0.2.0...crossref-json-0.2.1) (2023-09-22)
 
 ## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/crossref-json-0.1.4...crossref-json-0.2.0) (2023-09-22)

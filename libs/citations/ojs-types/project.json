@@ -24,7 +24,7 @@
         "packageJson": "libs/citations/ojs-types/package.json",
         "main": "libs/citations/ojs-types/src/index.ts",
         "assets": ["libs/citations/ojs-types/*.md"],
-        "updateBuildableProjectDepsInPackageJson": true
+        "
       }
     },
     "lint": {

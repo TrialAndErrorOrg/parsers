@@ -42,7 +42,7 @@
         "packageJson": "libs/xast/xast-util-is-element/package.json",
         "main": "libs/xast/xast-util-is-element/src/index.ts",
         "assets": ["libs/xast/xast-util-is-element/*.md"],
-        "updateBuildableProjectDepsInPackageJson": true,
+        "
         "buildableProjectDepsInPackageJsonType": "dependencies",
         "clean": true
       },

@@ -24,7 +24,7 @@
         "packageJson": "libs/notion/rehype-notion/package.json",
         "main": "libs/notion/rehype-notion/src/index.ts",
         "assets": ["libs/notion/rehype-notion/*.md"],
-        "updateBuildableProjectDepsInPackageJson": true
+        "
       }
     },
     "lint": {

@@ -24,7 +24,7 @@
         "packageJson": "libs/notion/html-to-notion-blocks/package.json",
         "main": "libs/notion/html-to-notion-blocks/src/index.ts",
         "assets": ["libs/notion/html-to-notion-blocks/*.md"],
-        "updateBuildableProjectDepsInPackageJson": true
+        "
       }
     },
     "lint": {

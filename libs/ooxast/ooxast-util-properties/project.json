@@ -24,7 +24,7 @@
         "packageJson": "libs/ooxast/ooxast-util-properties/package.json",
         "main": "libs/ooxast/ooxast-util-properties/src/index.ts",
         "assets": ["libs/ooxast/ooxast-util-properties/*.md"],
-        "updateBuildableProjectDepsInPackageJson": true
+        "
       }
     },
     "test": {

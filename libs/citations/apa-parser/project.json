@@ -24,7 +24,7 @@
         "packageJson": "libs/citations/apa-parser/package.json",
         "main": "libs/citations/apa-parser/src/index.ts",
         "assets": ["libs/citations/apa-parser/*.md"],
-        "updateBuildableProjectDepsInPackageJson": true
+        "
       }
     },
     "deploy": {

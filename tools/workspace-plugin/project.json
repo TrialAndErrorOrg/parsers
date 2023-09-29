@@ -33,7 +33,7 @@
             "output": "."
           }
         ],
-        "updateBuildableProjectDepsInPackageJson": true
+        "
       }
     },
     "lint": {

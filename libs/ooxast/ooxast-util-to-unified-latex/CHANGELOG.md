@@ -2,6 +2,27 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.5.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-to-unified-latex-0.4.0...ooxast-util-to-unified-latex-0.5.0) (2023-09-29)
+
+### Dependency Updates
+
+* `ooxast-util-get-style` updated to version `0.4.0`
+* `ooxast` updated to version `0.3.0`
+* `ooxast-util-citations` updated to version `0.4.0`
+* `xast-util-is-element` updated to version `0.3.1`
+* `xast-util-select` updated to version `0.3.0`
+* `csl-to-biblatex` updated to version `0.3.1`
+* `docx-to-vfile` updated to version `0.10.0`
+* `reoff-parse` updated to version `0.5.0`
+* `reoff-clean` updated to version `0.3.0`
+* `reoff-cite` updated to version `0.4.0`
+* `reoff-parse-references` updated to version `0.3.0`
+* `unified-latex-stringify` updated to version `0.2.1`
+
+### Features
+
+* update all package.json ([d4070e5](https://github.com/TrialAndErrorOrg/parsers/commit/d4070e53ab3389db11fed978f3f74bcfe6808f5e))
+
 ## [0.4.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-util-to-unified-latex-0.3.0...ooxast-util-to-unified-latex-0.4.0) (2023-09-22)
 
 ### Dependency Updates

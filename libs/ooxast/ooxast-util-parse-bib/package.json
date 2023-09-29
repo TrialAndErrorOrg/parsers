@@ -1,6 +1,6 @@
 {
   "name": "ooxast-util-parse-bib",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
@@ -19,12 +19,12 @@
     "csl-json": "0.1.0",
     "execa": "^6.1.0",
     "tmp-promise": "^3.0.3",
-    "ooxast": "0.2.0",
-    "ooxast-util-get-style": "0.3.0",
-    "xast-util-is-element": "0.2.0",
-    "xast-util-select": "0.2.0",
+    "ooxast": "0.3.0",
+    "ooxast-util-get-style": "0.4.0",
+    "xast-util-is-element": "0.3.1",
+    "xast-util-select": "0.3.0",
     "xast-util-to-string": "^2.0.1",
-    "csl-consolidate": "0.2.0"
+    "csl-consolidate": "0.3.0"
   },
   "typedoc": {
     "entryPoint": "./src/index.ts",

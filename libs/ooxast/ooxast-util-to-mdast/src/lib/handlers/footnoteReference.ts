@@ -1,7 +1,7 @@
 import { State } from '../state.js'
 import { Element } from '../types.js'
 import { arg, m } from '@unified-latex/unified-latex-builder'
-import { FootnoteDefinition, Footnote, FootnoteReference } from 'mdast'
+import { FootnoteReference } from 'mdast'
 
 export function footnoteReference(state: State, node: Element) {
   if (node?.attributes?.type === 'separator') {

@@ -47,7 +47,7 @@ export function wrap(nodes: Array<Content>): Array<BlockContent> {
    * @returns {Array<Paragraph>}
    */
   function onphrasing(nodes: Array<PhrasingContent>): Array<Paragraph> {
-    return nodes.every((d) => whitespace(d)) ? [] : [{ type: 'paragraph', children: nodes }]
+    return nodes.every((d) => whitespace(d as any)) ? [] : [{ type: 'paragraph', children: nodes }]
   }
 }
 

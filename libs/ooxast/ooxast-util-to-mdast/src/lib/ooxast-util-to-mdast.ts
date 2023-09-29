@@ -8,6 +8,7 @@ import { MdastNode, MdastRoot, Options, Root, Element, Text, Node } from './type
 import { VFile } from 'vfile'
 import { findListNumbering } from './util/find-list-numbering.js'
 import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
+import { DocxVFileData } from 'docx-to-vfile'
 
 export { handlers as defaultHandlers }
 
@@ -17,12 +18,7 @@ const defaultOptions: Options = {
 }
 
 declare module 'vfile' {
-  interface DataMap {
-    [xml: `${string}.xml` | `${string}.rels`]: string | undefined
-    parsed: {
-      [key: `${string}.xml` | `${string}.rels`]: Root | undefined
-    }
-  }
+  interface DataMap extends DocxVFileData {}
 }
 
 export function toMdast(tree: Root | Element | Text, file: VFile, options?: Options): MdastRoot

@@ -65,11 +65,31 @@
       ]
     },
     "build": {
-      "dependsOn": ["^build", "lint"],
+      "dependsOn": [
+        {
+          "target": "lint",
+          "params": "forward"
+        },
+        {
+          "dependencies": true,
+          "target": "build",
+          "params": "forward"
+        }
+      ],
       "inputs": ["production", "^production"]
     },
     "version": {
-      "dependsOn": ["^version", "build"],
+      "dependsOn": [
+        {
+          "dependencies": true,
+          "target": "version",
+          "params": "forward"
+        },
+        {
+          "target": "build",
+          "params": "forward"
+        }
+      ],
       "options": {
         "preset": "conventional",
         "trackDeps": true

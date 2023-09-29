@@ -1,10 +1,10 @@
 import { toString } from '@unified-latex/unified-latex-util-to-string'
-import { Root, Node } from '@unified-latex/unified-latex-types/'
+import { Root } from '@unified-latex/unified-latex-types/'
 
-import { CompilerFunction, Plugin } from 'unified'
+import { Compiler, Plugin } from 'unified'
 
 const unifiedLatexStringify: Plugin<void[], Root, string> = function unifiedLatexStringify() {
-  const compiler: CompilerFunction<Root, string> = (tree) => {
+  const compiler: Compiler<Root, string> = (tree) => {
     // Assume options.
     return toString(tree)
   }

@@ -2,7 +2,7 @@
 
 import { getPStyle } from 'ooxast-util-get-style'
 import { H, Body, Handle, P, UnifiedLatexNode } from '../types.js'
-import { Element } from 'xast-util-to-string/lib'
+import { Element } from 'xast'
 import { one } from '../one.js'
 // import { getPStyle } from '../util/get-pstyle.js'
 

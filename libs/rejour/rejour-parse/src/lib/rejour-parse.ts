@@ -1,6 +1,6 @@
 import { fromXml } from 'xast-util-from-xml'
 
-import { ParserFunction } from 'unified'
+import { Parser } from 'unified'
 import { Node as XastNode, Element as XastElement } from 'xast'
 import { Root } from 'jast-types'
 import { filter } from 'unist-util-filter'
@@ -13,7 +13,7 @@ export interface Settings {
 }
 
 export default function rejourParse(options: Settings = {}) {
-  const parser: ParserFunction<Root> = (doc) => {
+  const parser: Parser<Root> = (doc) => {
     // Assume options.
     const settings: Settings = this.data('settings')
 

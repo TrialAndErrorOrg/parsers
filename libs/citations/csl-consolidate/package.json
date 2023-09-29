@@ -1,6 +1,6 @@
 {
   "name": "csl-consolidate",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "type": "module",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
@@ -40,8 +40,8 @@
     "csl-json": "0.1.0",
     "@hokify/axios-rate-limit": "^2.0.5",
     "similarity": "^1.2.1",
-    "crossref-to-csl": "0.2.0",
-    "crossref-json": "0.2.1",
+    "crossref-to-csl": "0.3.0",
+    "crossref-json": "0.2.2",
     "utility-types": "^3.10.0",
     "flatry": "^1.0.14"
   }

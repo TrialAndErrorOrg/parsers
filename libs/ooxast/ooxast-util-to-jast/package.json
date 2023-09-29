@@ -47,11 +47,11 @@
     "jast-util-from-csl": "0.1.1",
     "reoff-parse": "0.5.0",
     "csl-json": "0.1.0",
-    "xastscript": "^3.1.1",
-    "unist-util-is": "^5.2.1",
-    "rehype-minify-whitespace": "^5.0.0",
-    "vfile": "^5.3.7",
-    "@types/unist": "^2.0.6",
-    "@types/xast": "^1.0.2"
+    "xastscript": "^4.0.0",
+    "unist-util-is": "^6.0.0",
+    "rehype-minify-whitespace": "^6.0.0",
+    "vfile": "^6.0.1",
+    "@types/unist": "^3.0.0",
+    "@types/xast": "^2.0.1"
   }
 }

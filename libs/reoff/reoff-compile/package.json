@@ -34,10 +34,10 @@
     "/lib"
   ],
   "dependencies": {
-    "ooxast": "0.2.0",
-    "docx-to-vfile": "0.9.0",
+    "ooxast": "0.3.0",
+    "docx-to-vfile": "0.10.0",
     "@zip.js/zip.js": "^2.6.83",
-    "unified": "^10.1.2",
-    "xast-util-to-xml": "^3.0.2"
+    "unified": "^11.0.3",
+    "xast-util-to-xml": "^4.0.0"
   }
 }

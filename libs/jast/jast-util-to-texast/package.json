@@ -2,9 +2,9 @@
   "name": "jast-util-to-texast",
   "version": "0.1.0",
   "dependencies": {
-    "rehype-minify-whitespace": "^5.0.0",
-    "unist-util-is": "^5.2.1",
-    "unist-util-visit": "^4.1.2",
+    "rehype-minify-whitespace": "^6.0.0",
+    "unist-util-is": "^6.0.0",
+    "unist-util-visit": "^5.0.0",
     "jast-types": "0.1.2",
     "xast-util-select": "0.3.0",
     "texast": "0.0.1",

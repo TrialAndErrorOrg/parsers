@@ -5,6 +5,6 @@
     "declaration": true,
     "types": ["node"]
   },
-  "exclude": ["**/*.spec.ts", "**/*.test.ts", "jest.config.ts", "vite.config.ts"],
+  "exclude": ["**/*.spec.ts", "**/*.test.ts", "jest.config.ts", "vite.config.js"],
   "include": ["src/**/*.ts", "src/lib/util/generate-json-schema.cts", "src/lib/cli/**.ts"]
 }

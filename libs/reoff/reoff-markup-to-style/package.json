@@ -37,6 +37,6 @@
   "dependencies": {
     "ooxast-util-markup-to-style": "0.4.0",
     "ooxast": "0.3.0",
-    "unified": "^10.1.2"
+    "unified": "^11.0.3"
   }
 }

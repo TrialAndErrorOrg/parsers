@@ -34,6 +34,6 @@
     "/lib"
   ],
   "dependencies": {
-    "reoff-markup-to-style": "0.1.0"
+    "reoff-markup-to-style": "0.2.0"
   }
 }

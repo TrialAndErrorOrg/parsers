@@ -40,8 +40,8 @@
     "reoff-parse": "0.5.0",
     "docx-to-vfile": "0.10.0",
     "ooxast-util-citations": "0.4.0",
-    "vfile": "^5.3.7",
+    "vfile": "^6.0.1",
     "csl-json": "0.1.0",
-    "unified": "^10.1.2"
+    "unified": "^11.0.3"
   }
 }

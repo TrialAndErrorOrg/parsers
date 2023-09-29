@@ -35,6 +35,6 @@
   ],
   "dependencies": {
   
-    "@types/unist": "^2.0.6"
+    "@types/unist": "^3.0.0"
   }
 }

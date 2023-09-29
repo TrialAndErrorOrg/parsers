@@ -42,6 +42,6 @@
     "flatry": "^1.0.14",
     "axios": "^0.27.2",
     "csl-json": "0.1.0",
-    "xast-util-to-string": "^2.0.1"
+    "xast-util-to-string": "^3.0.0"
   }
 }

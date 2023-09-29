@@ -38,8 +38,8 @@
   ],
   "dependencies": {
     "ooxast-util-to-mdast": "0.2.0",
-    "ooxast": "0.2.0",
-    "unified": "^10.1.2",
-    "@types/mdast": "^3.0.11"
+    "ooxast": "0.3.0",
+    "unified": "^11.0.3",
+    "@types/mdast": "^4.0.1"
   }
 }

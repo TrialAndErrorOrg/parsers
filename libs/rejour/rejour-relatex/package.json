@@ -41,7 +41,7 @@
     "jast-util-to-texast": "0.1.0",
     "jast-types": "0.1.2",
     "texast": "0.0.1",
-    "unified": "^10.1.2",
-    "vfile": "^5.3.7"
+    "unified": "^11.0.3",
+    "vfile": "^6.0.1"
   }
 }

@@ -42,6 +42,6 @@
     "ooxast-util-to-jast": "0.1.0",
     "jast-types": "0.1.2",
     "ooxast": "0.3.0",
-    "unified": "^10.1.2"
+    "unified": "^11.0.3"
   }
 }

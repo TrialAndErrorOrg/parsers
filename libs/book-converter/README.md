@@ -34,6 +34,9 @@ cote-conv --docx <path-to-docx-file>
 
 which will convert your word file to LaTeX using the most basic settings.
 
+
+### Configuration
+
 ## Related
 
 ## Contribute

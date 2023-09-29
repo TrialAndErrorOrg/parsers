@@ -36,7 +36,7 @@
   ],
   "dependencies": {
     "utility-types": "^3.10.0",
-    "@types/unist": "^2.0.6",
-    "@types/xast": "^1.0.2"
+    "@types/unist": "^3.0.0",
+    "@types/xast": "^2.0.1"
   }
 }

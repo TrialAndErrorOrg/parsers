@@ -4,7 +4,7 @@
   "dependencies": {
     "escape-latex": "^1.2.0",
     "texast": "0.0.1",
-    "@types/unist": "^2.0.6"
+    "@types/unist": "^3.0.0"
   },
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",

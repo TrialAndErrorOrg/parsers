@@ -36,6 +36,6 @@
   "dependencies": {
     "ooxast": "0.3.0",
     "ooxast-util-parse-bib-browser": "0.0.1",
-    "vfile": "^5.3.7"
+    "vfile": "^6.0.1"
   }
 }

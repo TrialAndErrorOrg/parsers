@@ -4,7 +4,7 @@
   "dependencies": {
     "csl-json": "^0.1.0",
     "jast-types": "0.1.2",
-    "xastscript": "^3.1.1"
+    "xastscript": "^4.0.0"
   },
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",

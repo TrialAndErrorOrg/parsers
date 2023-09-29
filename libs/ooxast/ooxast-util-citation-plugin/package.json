@@ -36,8 +36,8 @@
   "dependencies": {
     "ooxast": "0.3.0",
     "xast-util-is-element": "0.3.1",
-    "unist-util-visit": "^4.1.2",
-    "xast-util-to-string": "^2.0.1",
-    "@types/unist": "^2.0.6"
+    "unist-util-visit": "^5.0.0",
+    "xast-util-to-string": "^3.0.0",
+    "@types/unist": "^3.0.0"
   }
 }

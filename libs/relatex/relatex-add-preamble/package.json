@@ -36,7 +36,7 @@
   "dependencies": {
     "texast": "0.0.1",
     "texast-util-add-preamble": "0.0.1",
-    "vfile": "^5.3.7",
-    "unified": "^10.1.2"
+    "vfile": "^6.0.1",
+    "unified": "^11.0.3"
   }
 }

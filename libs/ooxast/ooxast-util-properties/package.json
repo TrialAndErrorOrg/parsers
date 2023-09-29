@@ -33,6 +33,6 @@
   ],
   "dependencies": {
     "xast-util-is-element": "0.3.1",
-    "@types/xast": "^1.0.2"
+    "@types/xast": "^2.0.1"
   }
 }

@@ -19,12 +19,12 @@
     "csl-json": "0.1.0",
     "execa": "^6.1.0",
     "tmp-promise": "^3.0.3",
-    "ooxast": "*",
-    "ooxast-util-get-style": "*",
-    "xast-util-is-element": "*",
-    "xast-util-select": "*",
+    "ooxast": "0.2.0",
+    "ooxast-util-get-style": "0.3.0",
+    "xast-util-is-element": "0.2.0",
+    "xast-util-select": "0.2.0",
     "xast-util-to-string": "^2.0.1",
-    "csl-consolidate": "*"
+    "csl-consolidate": "0.2.0"
   },
   "typedoc": {
     "entryPoint": "./src/index.ts",

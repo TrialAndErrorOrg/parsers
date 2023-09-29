@@ -37,8 +37,9 @@
     "/lib"
   ],
   "dependencies": {
-    "ooxast-util-to-mdast": "*",
-    "ooxast": "*",
-    "unified": "^10.1.2"
+    "ooxast-util-to-mdast": "0.2.0",
+    "ooxast": "0.2.0",
+    "unified": "^10.1.2",
+    "@types/mdast": "^3.0.11"
   }
 }

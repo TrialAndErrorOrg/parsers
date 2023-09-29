@@ -39,9 +39,9 @@
     "/lib"
   ],
   "dependencies": {
-    "ooxast-util-to-jast": "*",
-    "jast-types": "*",
-    "ooxast": "*",
+    "ooxast-util-to-jast": "0.1.0",
+    "jast-types": "0.1.2",
+    "ooxast": "0.2.0",
     "unified": "^10.1.2"
   }
 }

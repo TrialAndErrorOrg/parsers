@@ -34,8 +34,8 @@
     "/lib"
   ],
   "dependencies": {
-    "texast": "*",
-    "texast-util-add-preamble": "*",
+    "texast": "0.0.1",
+    "texast-util-add-preamble": "0.0.1",
     "vfile": "^5.3.7",
     "unified": "^10.1.2"
   }

@@ -33,8 +33,8 @@
     "/lib"
   ],
   "dependencies": {
-    "ooxast": "*",
-    "xast-util-select": "*",
-    "xast-util-is-element": "*"
+    "ooxast": "0.2.0",
+    "xast-util-select": "0.2.0",
+    "xast-util-is-element": "0.2.0"
   }
 }

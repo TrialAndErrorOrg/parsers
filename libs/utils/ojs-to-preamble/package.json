@@ -1,3 +1,4 @@
 {
-  "name": "ojs-to-preamble"
+  "name": "ojs-to-preamble",
+  "type": "module"
 }

@@ -28,11 +28,12 @@
   "main": "./index.js",
   "types": "./index.d.ts",
   "dependencies": {
-    "docx-to-vfile": "*",
+    "docx-to-vfile": "0.9.0",
     "xast-util-from-xml": "^3.0.0",
     "unified": "^10.1.2",
     "unist-util-filter": "^4.0.1",
     "vfile": "^5.3.7",
-    "vfile-message": "^3.1.4"
+    "vfile-message": "^3.1.4",
+    "@types/xast": "^1.0.2"
   }
 }

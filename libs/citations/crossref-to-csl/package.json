@@ -34,7 +34,7 @@
     "/lib"
   ],
   "dependencies": {
-    "crossref-json": "*",
+    "crossref-json": "0.2.1",
     "csl-json": "0.1.0",
     "utility-types": "^3.10.0"
   }

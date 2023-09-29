@@ -14,6 +14,7 @@ import {
   getProductionDependencies,
 } from './package-json-utils.js'
 import { findTypeDependencies } from './find-type-dependencies.js'
+import { converterOptionsDefaultSchemaInput } from 'libs/book-converter/src/lib/bin/schema.js'
 
 export type Options = [
   {
@@ -134,6 +135,30 @@ export default createESLintRule<Options, MessageIds>({
       },
     )
 
+    const npmDepsWithLocalDepedenciesVersion = Object.entries(npmDependencies).reduce(
+      (acc, [name, version]) => {
+        if (version !== '*') {
+          acc[name] = version
+          return acc
+        }
+
+        try {
+          const localPackageJson = getPackageJson(
+            join(workspaceRoot, projectGraph.nodes[name].data.root, 'package.json'),
+          )
+
+          acc[name] = localPackageJson.version
+
+          return acc
+        } catch (e) {
+          console.error(name, version, e)
+          acc[name] = version
+          return acc
+        }
+      },
+      {},
+    )
+
     const typeDeps = findTypeDependencies(
       workspaceRoot,
       sourceProject,
@@ -147,7 +172,7 @@ export default createESLintRule<Options, MessageIds>({
     )
 
     npmDependencies = {
-      ...npmDependencies,
+      ...npmDepsWithLocalDepedenciesVersion,
       ...typeDeps,
     }
 
@@ -207,7 +232,9 @@ export default createESLintRule<Options, MessageIds>({
       if (!checkVersionMismatches) {
         return
       }
-      if (
+      if (packageRange === '*' && npmDependencies[packageName] !== '*') {
+        // this is not good, should be fixed,
+      } else if (
         npmDependencies[packageName] === '*' ||
         packageRange === '*' ||
         satisfies(npmDependencies[packageName], packageRange, {

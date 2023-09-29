@@ -25,14 +25,4 @@ export default [
     ],
     rules: {},
   },
-  ...compat.config({ parser: 'jsonc-eslint-parser' }).map((config) => ({
-    ...config,
-    files: ['libs/utils/better-check-dependencies/**/*.json'],
-    rules: {
-      '@nx/dependency-checks': [
-        'error',
-        { ignoredFiles: ['{projectRoot}/vite.config.{js,ts,mjs,mts}'] },
-      ],
-    },
-  })),
 ]

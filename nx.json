@@ -55,7 +55,14 @@
       "options": {
         "fix": true,
         "lintFilePatterns": ["{projectRoot}/**/*.{js,jsx,ts,tsx}", "{projectRoot}/package.json"]
-      }
+      },
+      "dependsOn": [
+        {
+          "projects": ["utils-better-check-dependencies"],
+          "target": "build",
+          "params": "ignore"
+        }
+      ]
     },
     "build": {
       "dependsOn": ["^build", "lint"],

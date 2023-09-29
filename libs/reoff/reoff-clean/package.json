@@ -35,10 +35,10 @@
     "/lib"
   ],
   "dependencies": {
-    "ooxast-util-remove-rsid": "*",
-    "docx-to-vfile": "*",
-    "ooxast": "*",
-    "reoff-parse": "*",
+    "ooxast-util-remove-rsid": "0.3.0",
+    "docx-to-vfile": "0.9.0",
+    "ooxast": "0.2.0",
+    "reoff-parse": "0.4.0",
     "unified": "^10.1.2",
     "vfile": "^5.3.7"
   }

@@ -32,5 +32,10 @@
     "index.d.ts",
     "index.js",
     "/lib"
-  ]
+  ],
+  "dependencies": {
+    "texast": "*",
+    "texast-util-to-latex": "*",
+    "unified": "^10.1.2"
+  }
 }

@@ -32,8 +32,8 @@
     "/lib"
   ],
   "dependencies": {
-    "xast-util-has-attribute": "*",
-    "xast-util-is-element": "*",
+    "xast-util-has-attribute": "0.2.0",
+    "xast-util-is-element": "0.2.0",
     "property-information": "^6.1.1",
     "zwitch": "^2.0.2",
     "comma-separated-tokens": "^2.0.2",
@@ -42,6 +42,8 @@
     "css-selector-parser": "^1.4.1",
     "nth-check": "^2.1.1",
     "bcp-47-match": "^2.0.1",
-    "hast-util-whitespace": "^2.0.1"
+    "hast-util-whitespace": "^2.0.1",
+    "@types/xast": "^1.0.2",
+    "@types/unist": "^2.0.6"
   }
 }

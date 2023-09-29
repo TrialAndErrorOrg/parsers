@@ -34,7 +34,7 @@
     "/lib"
   ],
   "dependencies": {
-    "jast-types": "*",
+    "jast-types": "0.1.2",
     "unist-util-visit": "^4.1.2",
     "unist-util-remove": "^3.1.1",
     "unist-util-filter": "^4.0.1"

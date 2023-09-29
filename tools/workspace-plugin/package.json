@@ -2,9 +2,16 @@
   "name": "@trialanderror/workspace-plugin",
   "version": "0.0.1",
   "dependencies": {
-    "tslib": "^2.3.0"
+    "tslib": "^2.3.0",
+    "@nx/devkit": "16.9.1",
+    "@nx/js": "16.9.1",
+    "@jscutlery/semver": "^3.1.0",
+    "@nx/workspace": "16.9.1",
+    "@nx/jest": "16.9.1",
+    "@nx/vite": "16.9.1",
+    "@nx/linter": "16.9.1"
   },
-  "type": "commonjs",
+  "type": "module",
   "main": "./src/index.js",
   "typings": "./src/index.d.ts",
   "generators": "./generators.json"

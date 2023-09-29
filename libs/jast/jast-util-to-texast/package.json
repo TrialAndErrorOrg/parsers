@@ -5,12 +5,12 @@
     "rehype-minify-whitespace": "^5.0.0",
     "unist-util-is": "^5.2.1",
     "unist-util-visit": "^4.1.2",
-    "jast-types": "*",
-    "xast-util-select": "*",
-    "texast": "*",
+    "jast-types": "0.1.2",
+    "xast-util-select": "0.2.0",
+    "texast": "0.0.1",
     "csl-json": "0.1.0",
-    "jast-util-to-csl": "*",
-    "csl-to-biblatex": "*"
+    "jast-util-to-csl": "0.1.2",
+    "csl-to-biblatex": "0.3.0"
   },
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",

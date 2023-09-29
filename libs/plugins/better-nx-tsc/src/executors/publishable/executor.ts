@@ -1,23 +1,19 @@
-import {
-  ExecutorContext,
-  createProjectFileMapUsingProjectGraph,
-  readRootPackageJson,
-} from '@nx/devkit'
+import { ExecutorContext, createProjectFileMapUsingProjectGraph, readJsonFile } from '@nx/devkit'
 
 import {
   calculateProjectBuildableDependencies,
   calculateProjectDependencies,
 } from '@nx/js/src/utils/buildable-libs-utils'
 import { findProjectsNpmDependencies } from 'nx/src/plugins/js/package-json/create-package-json'
-import { PublishableExecutorSchema } from './schema'
+import { PublishableExecutorSchema } from './schema.d'
 import { readFile, writeFile } from 'fs/promises'
 
 function getNonTestDependencies(context: ExecutorContext) {
   const dependencies = context.projectGraph?.dependencies[context.projectName!]
   return new Set(
     (dependencies ?? [])
-      .filter((dep) => !/.*\.(test|spec).ts/.test(dep.source))
-      .filter((dep) => !/(vite.config|jest.config).*/.test(dep.source))
+      .filter((dep) => !/.*\.(?:test|spec).ts/.test(dep.source))
+      .filter((dep) => !/(?:vite.config|jest.config).*/.test(dep.source))
       .map((dep) => dep.target.replace('npm:', ''))
       .filter(Boolean) as string[],
   )
@@ -123,13 +119,12 @@ export default async function runExecutor(
     await readRootPackageJson(),
     {
       isProduction: true,
-      includeTransitiveDependencies: true,
     },
   )
   const projectDeps = calculateProjectDependencies(
     context.projectGraph!,
-    context.projectGraph?.nodes[context.projectName!].data.root,
-    context.projectName,
+    context.projectGraph?.nodes[context.projectName!].data.root!,
+    context.projectName!,
     'build',
     'production',
     true,

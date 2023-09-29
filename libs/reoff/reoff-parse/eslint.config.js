@@ -24,4 +24,7 @@ export default [
     files: ['libs/reoff/reoff-parse/**/*.js', 'libs/reoff/reoff-parse/**/*.jsx'],
     rules: {},
   },
+  {
+    ignores: ['libs/reoff/reoff-parse/docs/**/*'],
+  },
 ]

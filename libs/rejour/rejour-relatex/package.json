@@ -36,11 +36,11 @@
     "/lib"
   ],
   "dependencies": {
-    "rejour-parse": "*",
-    "relatex-stringify": "*",
-    "jast-util-to-texast": "*",
-    "jast-types": "*",
-    "texast": "*",
+    "rejour-parse": "0.1.1",
+    "relatex-stringify": "0.0.1",
+    "jast-util-to-texast": "0.1.0",
+    "jast-types": "0.1.2",
+    "texast": "0.0.1",
     "unified": "^10.1.2",
     "vfile": "^5.3.7"
   }

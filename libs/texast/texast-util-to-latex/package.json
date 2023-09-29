@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "dependencies": {
     "escape-latex": "^1.2.0",
-    "texast": "*"
+    "texast": "0.0.1",
+    "@types/unist": "^2.0.6"
   },
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",

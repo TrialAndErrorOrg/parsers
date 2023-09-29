@@ -35,8 +35,8 @@
     "/lib"
   ],
   "dependencies": {
-    "ooxast-util-markup-to-style": "*",
-    "ooxast": "*",
+    "ooxast-util-markup-to-style": "0.3.0",
+    "ooxast": "0.2.0",
     "unified": "^10.1.2"
   }
 }

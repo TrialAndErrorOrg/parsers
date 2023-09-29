@@ -34,11 +34,11 @@
     "/lib"
   ],
   "dependencies": {
-    "ooxast": "*",
-    "ooxast-util-get-style": "*",
-    "xast-util-is-element": "*",
-    "xast-util-select": "*",
-    "csl-consolidate": "*",
+    "ooxast": "0.2.0",
+    "ooxast-util-get-style": "0.3.0",
+    "xast-util-is-element": "0.2.0",
+    "xast-util-select": "0.2.0",
+    "csl-consolidate": "0.2.0",
     "flatry": "^1.0.14",
     "axios": "^0.27.2",
     "csl-json": "0.1.0",

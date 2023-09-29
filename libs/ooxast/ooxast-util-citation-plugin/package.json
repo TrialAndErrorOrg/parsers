@@ -34,9 +34,10 @@
     "/lib"
   ],
   "dependencies": {
-    "ooxast": "*",
-    "xast-util-is-element": "*",
+    "ooxast": "0.2.0",
+    "xast-util-is-element": "0.2.0",
     "unist-util-visit": "^4.1.2",
-    "xast-util-to-string": "^2.0.1"
+    "xast-util-to-string": "^2.0.1",
+    "@types/unist": "^2.0.6"
   }
 }

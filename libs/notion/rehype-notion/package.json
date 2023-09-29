@@ -40,6 +40,7 @@
     "@notionhq/client": "^2.2.2",
     "mdast-util-gfm": "^2.0.2",
     "mdast-util-to-markdown": "^1.5.0",
-    "hast-util-to-mdast": "^9.0.0"
+    "hast-util-to-mdast": "^9.0.0",
+    "@types/hast": "^2.3.4"
   }
 }

@@ -1,4 +1,4 @@
-import base from '../../../.eslintrc.js'
+import base from '../../../eslint.config.js'
 export default [
   ...base,
   {

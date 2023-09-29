@@ -38,10 +38,10 @@
     "/lib"
   ],
   "dependencies": {
-    "ooxast": "*",
-    "xast-util-is-element": "*",
-    "xast-util-select": "*",
-    "ooxast-util-get-style": "*",
+    "ooxast": "0.2.0",
+    "xast-util-is-element": "0.2.0",
+    "xast-util-select": "0.2.0",
+    "ooxast-util-get-style": "0.3.0",
     "unist-util-select": "^4.0.3",
     "unist-util-visit": "^4.1.2",
     "unist-util-remove": "^3.1.1"

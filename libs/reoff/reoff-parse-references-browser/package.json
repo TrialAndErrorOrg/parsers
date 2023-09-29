@@ -34,8 +34,8 @@
     "/lib"
   ],
   "dependencies": {
-    "ooxast": "*",
-    "ooxast-util-parse-bib-browser": "*",
+    "ooxast": "0.2.0",
+    "ooxast-util-parse-bib-browser": "0.0.1",
     "vfile": "^5.3.7"
   }
 }

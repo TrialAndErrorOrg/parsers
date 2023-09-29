@@ -37,10 +37,10 @@
     "/lib"
   ],
   "dependencies": {
-    "ooxast": "*",
-    "ooxast-util-citations": "*",
-    "xast-util-select": "*",
-    "xast-util-is-element": "*",
+    "ooxast": "0.2.0",
+    "ooxast-util-citations": "0.3.0",
+    "xast-util-select": "0.2.0",
+    "xast-util-is-element": "0.2.0",
     "xast-util-to-string": "^2.0.1",
     "mdast-builder": "^1.1.1",
     "csl-json": "0.1.0",
@@ -55,6 +55,10 @@
     "unist-util-position": "^4.0.4",
     "extend": "^3.0.2",
     "mdast-util-phrasing": "^3.0.1",
-    "hast-util-whitespace": "^2.0.1"
+    "hast-util-whitespace": "^2.0.1",
+    "@types/mdast": "^3.0.11",
+    "@types/unist": "^2.0.6",
+    "@types/xast": "^1.0.2",
+    "@types/extend": "^3.0.1"
   }
 }

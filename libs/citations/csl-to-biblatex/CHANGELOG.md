@@ -2,6 +2,8 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.1](https://github.com/TrialAndErrorOrg/parsers/compare/csl-to-biblatex-0.3.0...csl-to-biblatex-0.3.1) (2023-09-29)
+
 ## [0.3.0](https://github.com/TrialAndErrorOrg/parsers/compare/csl-to-biblatex-0.2.1...csl-to-biblatex-0.3.0) (2023-09-22)
 
 

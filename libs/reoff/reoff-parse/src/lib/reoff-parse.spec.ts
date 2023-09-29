@@ -13,10 +13,13 @@ describe('reoffParse', () => {
     fs.writeFileSync(new URL('../test/xml.xml', import.meta.url), String(file))
 
     const res = proc.parse(file)
+    console.log(res)
+    removePosition(res, { force: true })
+    console.log({ res })
 
     fs.writeFileSync(
       new URL('../test/ooxasttree.json', import.meta.url),
-      JSON.stringify(removePosition(res, true), null, 2),
+      JSON.stringify(res, null, 2),
     )
     expect(res).toBeDefined()
   })
@@ -31,6 +34,6 @@ describe('reoffParse', () => {
     expect(vfile.data.relations).toBeDefined()
     console.log(vfile.data.relations)
 
-    expect(vfile.data.relations.document).toBeDefined()
+    expect(vfile.data.relations?.document).toBeDefined()
   })
 })

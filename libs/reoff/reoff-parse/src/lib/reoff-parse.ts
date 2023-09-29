@@ -1,6 +1,6 @@
 import { fromXml } from 'xast-util-from-xml'
 
-import { ParserFunction } from 'unified'
+import { Parser } from 'unified'
 import { Root, Node as XastNode } from 'xast'
 import { filter } from 'unist-util-filter'
 import { VFile } from 'vfile'
@@ -61,7 +61,7 @@ export interface Settings {
 }
 
 export default function reoffParse(options: Settings = {}) {
-  const parser: ParserFunction<Root> = (doc, file) => {
+  const parser: Parser<Root> = (doc, file) => {
     // Assume options.
     const settings: Settings = this.data('settings')
 

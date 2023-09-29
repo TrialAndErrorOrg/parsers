@@ -1,6 +1,6 @@
 {
   "name": "crossref-to-csl",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
@@ -34,7 +34,7 @@
     "/lib"
   ],
   "dependencies": {
-    "crossref-json": "0.2.1",
+    "crossref-json": "0.2.2",
     "csl-json": "0.1.0",
     "utility-types": "^3.10.0"
   }

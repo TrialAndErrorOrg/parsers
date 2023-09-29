@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.0](https://github.com/TrialAndErrorOrg/parsers/compare/crossref-to-csl-0.2.0...crossref-to-csl-0.3.0) (2023-09-29)
+
+### Dependency Updates
+
+* `crossref-json` updated to version `0.2.2`
+
+### Features
+
+* update all package.json ([d4070e5](https://github.com/TrialAndErrorOrg/parsers/commit/d4070e53ab3389db11fed978f3f74bcfe6808f5e))
+
 ## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/crossref-to-csl-0.1.4...crossref-to-csl-0.2.0) (2023-09-22)
 
 ### Dependency Updates

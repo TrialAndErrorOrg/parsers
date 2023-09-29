@@ -310,7 +310,7 @@ export const names = [
   'xref',
   'x',
   'year',
-]
+] as const
 
 function ignore() {
   //

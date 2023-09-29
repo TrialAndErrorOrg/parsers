@@ -1,5 +1,6 @@
 import * as Primitive from './xml-primitives.js'
-import type { Literal as UnistLiteral, Node as UnistNode } from 'unist'
+import type { Literal as UnistLiteral } from 'unist'
+import type { Element } from 'xast'
 import type { RequiredMap } from './rejour.js'
 import type { ValuesType } from 'utility-types'
 // Source files:
@@ -43,7 +44,7 @@ export interface Text extends UnistLiteral {
   type: 'text'
   value: string
 }
-export interface AbbrevJournaltitle extends UnistNode {
+export interface AbbrevJournaltitle extends Element {
   type: 'element'
   name: 'abbrevJournaltitle'
   attributes: {
@@ -54,7 +55,7 @@ export interface AbbrevJournaltitle extends UnistNode {
   children: []
 }
 
-export interface Abbrev extends UnistNode {
+export interface Abbrev extends Element {
   type: 'element'
   name: 'abbrev'
   attributes: {
@@ -73,7 +74,7 @@ export interface AbbrevChildrenMap {
   def?: Def[]
 }
 
-export interface Abstract extends UnistNode {
+export interface Abstract extends Element {
   type: 'element'
   name: 'abstract'
   attributes: {
@@ -97,7 +98,7 @@ export interface AbstractChildrenMap {
   title?: Title
 }
 
-export interface AccessDate extends UnistNode {
+export interface AccessDate extends Element {
   type: 'element'
   name: 'accessDate'
   attributes: {
@@ -114,7 +115,7 @@ export interface AccessDateChildrenMap {
   text?: Text
 }
 
-export interface Ack extends UnistNode {
+export interface Ack extends Element {
   type: 'element'
   name: 'ack'
   attributes: {
@@ -146,7 +147,7 @@ export interface AckChildrenMap {
   title?: Title
 }
 
-export interface Address extends UnistNode {
+export interface Address extends Element {
   type: 'element'
   name: 'address'
   attributes: {
@@ -185,7 +186,7 @@ export interface AddressChildrenMap {
   uri?: Uri[]
 }
 
-export interface AddrLine extends UnistNode {
+export interface AddrLine extends Element {
   type: 'element'
   name: 'addrLine'
   attributes: {
@@ -268,7 +269,7 @@ export interface AddrLineChildrenMap {
   underline?: Underline[]
 }
 
-export interface AffAlternatives extends UnistNode {
+export interface AffAlternatives extends Element {
   type: 'element'
   name: 'affAlternatives'
   attributes: {
@@ -282,7 +283,7 @@ export interface AffAlternativesChildrenMap {
   aff: Aff[]
 }
 
-export interface Aff extends UnistNode {
+export interface Aff extends Element {
   type: 'element'
   name: 'aff'
   attributes: {
@@ -364,7 +365,7 @@ export interface AffChildrenMap {
   xref?: Xref[]
 }
 
-export interface Alternatives extends UnistNode {
+export interface Alternatives extends Element {
   type: 'element'
   name: 'alternatives'
   attributes: {
@@ -406,7 +407,7 @@ export interface AlternativesChildrenMap {
   textualForm: TextualForm[]
 }
 
-export interface AltText extends UnistNode {
+export interface AltText extends Element {
   type: 'element'
   name: 'altText'
   attributes: {
@@ -421,7 +422,7 @@ export interface AltTextChildrenMap {
   text?: Text
 }
 
-export interface AltTitle extends UnistNode {
+export interface AltTitle extends Element {
   type: 'element'
   name: 'altTitle'
   attributes: {
@@ -509,7 +510,7 @@ export interface AltTitleChildrenMap {
   xref?: Xref[]
 }
 
-export interface Annotation extends UnistNode {
+export interface Annotation extends Element {
   type: 'element'
   name: 'annotation'
   attributes: {
@@ -526,7 +527,7 @@ export interface AnnotationChildrenMap {
   p: P[]
 }
 
-export interface Anonymous extends UnistNode {
+export interface Anonymous extends Element {
   type: 'element'
   name: 'anonymous'
   attributes: {
@@ -536,7 +537,7 @@ export interface Anonymous extends UnistNode {
   children: []
 }
 
-export interface AnswerSet extends UnistNode {
+export interface AnswerSet extends Element {
   type: 'element'
   name: 'answerSet'
   attributes: {
@@ -567,7 +568,7 @@ export interface AnswerSetChildrenMap {
   title?: Title
 }
 
-export interface Answer extends UnistNode {
+export interface Answer extends Element {
   type: 'element'
   name: 'answer'
   attributes: {
@@ -667,7 +668,7 @@ export interface AnswerChildrenMap {
   verseGroup: VerseGroup[]
 }
 
-export interface AppGroup extends UnistNode {
+export interface AppGroup extends Element {
   type: 'element'
   name: 'appGroup'
   attributes: {
@@ -763,7 +764,7 @@ export interface AppGroupChildrenMap {
   verseGroup?: VerseGroup[]
 }
 
-export interface App extends UnistNode {
+export interface App extends Element {
   type: 'element'
   name: 'app'
   attributes: {
@@ -860,7 +861,7 @@ export interface AppChildrenMap {
   verseGroup?: VerseGroup[]
 }
 
-export interface Array extends UnistNode {
+export interface Array extends Element {
   type: 'element'
   name: 'array'
   attributes: {
@@ -898,7 +899,7 @@ export interface ArrayChildrenMap {
 
 type ArrayTypeOrientation = 'landscape' | 'portrait'
 
-export interface ArticleCategories extends UnistNode {
+export interface ArticleCategories extends Element {
   type: 'element'
   name: 'articleCategories'
   attributes: {
@@ -915,7 +916,7 @@ export interface ArticleCategoriesChildrenMap {
   subjGroup?: SubjGroup[]
 }
 
-export interface ArticleId extends UnistNode {
+export interface ArticleId extends Element {
   type: 'element'
   name: 'articleId'
   attributes: {
@@ -957,7 +958,7 @@ type ArticleIdTypePubIdtype =
   | 'std-designation'
   | 'zbl'
 
-export interface ArticleMeta extends UnistNode {
+export interface ArticleMeta extends Element {
   type: 'element'
   name: 'articleMeta'
   attributes: {
@@ -1061,7 +1062,7 @@ export interface ArticleMetaChildrenMap {
   volumeSeries?: VolumeSeries
 }
 
-export interface ArticleTitle extends UnistNode {
+export interface ArticleTitle extends Element {
   type: 'element'
   name: 'articleTitle'
   attributes: {
@@ -1147,7 +1148,7 @@ export interface ArticleTitleChildrenMap {
   xref?: Xref[]
 }
 
-export interface Article extends UnistNode {
+export interface Article extends Element {
   type: 'element'
   name: 'article'
   attributes: {
@@ -1190,7 +1191,7 @@ type ArticleTypeDtdVersion =
   | '1.3d2'
   | '3.0'
 
-export interface ArticleVersionalternatives extends UnistNode {
+export interface ArticleVersionalternatives extends Element {
   type: 'element'
   name: 'articleVersionalternatives'
   attributes: {
@@ -1204,7 +1205,7 @@ export interface ArticleVersionalternativesChildrenMap {
   articleVersion: ArticleVersion[]
 }
 
-export interface ArticleVersion extends UnistNode {
+export interface ArticleVersion extends Element {
   type: 'element'
   name: 'articleVersion'
   attributes: {
@@ -1228,7 +1229,7 @@ export interface ArticleVersionChildrenMap {
   text?: Text
 }
 
-export interface Attrib extends UnistNode {
+export interface Attrib extends Element {
   type: 'element'
   name: 'attrib'
   attributes: {
@@ -1313,7 +1314,7 @@ export interface AttribChildrenMap {
   xref?: Xref[]
 }
 
-export interface AuthorComment extends UnistNode {
+export interface AuthorComment extends Element {
   type: 'element'
   name: 'authorComment'
   attributes: {
@@ -1332,7 +1333,7 @@ export interface AuthorCommentChildrenMap {
   title?: Title
 }
 
-export interface AuthorNotes extends UnistNode {
+export interface AuthorNotes extends Element {
   type: 'element'
   name: 'authorNotes'
   attributes: {
@@ -1356,7 +1357,7 @@ export interface AuthorNotesChildrenMap {
   title?: Title
 }
 
-export interface AwardDesc extends UnistNode {
+export interface AwardDesc extends Element {
   type: 'element'
   name: 'awardDesc'
   attributes: {
@@ -1366,7 +1367,7 @@ export interface AwardDesc extends UnistNode {
   children: []
 }
 
-export interface AwardGroup extends UnistNode {
+export interface AwardGroup extends Element {
   type: 'element'
   name: 'awardGroup'
   attributes: {
@@ -1396,7 +1397,7 @@ export interface AwardGroupChildrenMap {
   supportSource?: SupportSource[]
 }
 
-export interface AwardId extends UnistNode {
+export interface AwardId extends Element {
   type: 'element'
   name: 'awardId'
   attributes: {
@@ -1466,7 +1467,7 @@ export interface AwardIdChildrenMap {
   underline?: Underline[]
 }
 
-export interface AwardName extends UnistNode {
+export interface AwardName extends Element {
   type: 'element'
   name: 'awardName'
   attributes: {
@@ -1476,7 +1477,7 @@ export interface AwardName extends UnistNode {
   children: []
 }
 
-export interface Back extends UnistNode {
+export interface Back extends Element {
   type: 'element'
   name: 'back'
   attributes: {
@@ -1508,7 +1509,7 @@ export interface BackChildrenMap {
   title?: Title[]
 }
 
-export interface Bio extends UnistNode {
+export interface Bio extends Element {
   type: 'element'
   name: 'bio'
   attributes: {
@@ -1605,7 +1606,7 @@ export interface BioChildrenMap {
   verseGroup?: VerseGroup[]
 }
 
-export interface BlockAlternatives extends UnistNode {
+export interface BlockAlternatives extends Element {
   type: 'element'
   name: 'blockAlternatives'
   attributes: {
@@ -1629,7 +1630,7 @@ export interface BlockAlternativesChildrenMap {
   tableWrapgroup: TableWrapgroup[]
 }
 
-export interface Body extends UnistNode {
+export interface Body extends Element {
   type: 'element'
   name: 'body'
   attributes: {
@@ -1712,7 +1713,7 @@ export interface BodyChildrenMap {
   verseGroup?: VerseGroup[]
 }
 
-export interface Bold extends UnistNode {
+export interface Bold extends Element {
   type: 'element'
   name: 'bold'
   attributes: {
@@ -1801,7 +1802,7 @@ export interface BoldChildrenMap {
 
 type BoldTypeToggle = 'no' | 'yes'
 
-export interface BoxedText extends UnistNode {
+export interface BoxedText extends Element {
   type: 'element'
   name: 'boxedText'
   attributes: {
@@ -1907,7 +1908,7 @@ type BoxedTextTypeOrientation = 'landscape' | 'portrait'
 
 type BoxedTextTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
-export interface Break extends UnistNode {
+export interface Break extends Element {
   type: 'element'
   name: 'break'
   attributes: {
@@ -1916,7 +1917,7 @@ export interface Break extends UnistNode {
   children: []
 }
 
-export interface Caption extends UnistNode {
+export interface Caption extends Element {
   type: 'element'
   name: 'caption'
   attributes: {
@@ -1936,7 +1937,7 @@ export interface CaptionChildrenMap {
   title?: Title
 }
 
-export interface ChapterTitle extends UnistNode {
+export interface ChapterTitle extends Element {
   type: 'element'
   name: 'chapterTitle'
   attributes: {
@@ -2007,7 +2008,7 @@ export interface ChapterTitleChildrenMap {
   xref?: Xref[]
 }
 
-export interface ChemStruct extends UnistNode {
+export interface ChemStruct extends Element {
   type: 'element'
   name: 'chemStruct'
   attributes: {
@@ -2091,7 +2092,7 @@ export interface ChemStructChildrenMap {
   xref?: Xref[]
 }
 
-export interface ChemStructwrap extends UnistNode {
+export interface ChemStructwrap extends Element {
   type: 'element'
   name: 'chemStructwrap'
   attributes: {
@@ -2150,7 +2151,7 @@ type ChemStructwrapTypeOrientation = 'landscape' | 'portrait'
 
 type ChemStructwrapTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
-export interface CitationAlternatives extends UnistNode {
+export interface CitationAlternatives extends Element {
   type: 'element'
   name: 'citationAlternatives'
   attributes: {
@@ -2170,7 +2171,7 @@ export interface CitationAlternativesChildrenMap {
   objectId?: ObjectId[]
 }
 
-export interface City extends UnistNode {
+export interface City extends Element {
   type: 'element'
   name: 'city'
   attributes: {
@@ -2185,7 +2186,7 @@ export interface CityChildrenMap {
   text?: Text
 }
 
-export interface Code extends UnistNode {
+export interface Code extends Element {
   type: 'element'
   name: 'code'
   attributes: {
@@ -2271,7 +2272,7 @@ type CodeTypeOrientation = 'landscape' | 'portrait'
 
 type CodeTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
-export interface Colgroup extends UnistNode {
+export interface Colgroup extends Element {
   type: 'element'
   name: 'colgroup'
   attributes: {
@@ -2295,9 +2296,9 @@ export interface ColgroupChildrenMap {
 
 type ColgroupTypeAlign = 'center' | 'char' | 'justify' | 'left' | 'right'
 
-type ColgroupTypeValign = 'UnistNodeline' | 'bottom' | 'middle' | 'top'
+type ColgroupTypeValign = 'Elementline' | 'bottom' | 'middle' | 'top'
 
-export interface CollabAlternatives extends UnistNode {
+export interface CollabAlternatives extends Element {
   type: 'element'
   name: 'collabAlternatives'
   attributes: {
@@ -2311,7 +2312,7 @@ export interface CollabAlternativesChildrenMap {
   collab: Collab[]
 }
 
-export interface Collab extends UnistNode {
+export interface Collab extends Element {
   type: 'element'
   name: 'collab'
   attributes: {
@@ -2423,7 +2424,7 @@ export interface CollabChildrenMap {
   xref?: Xref[]
 }
 
-export interface Col extends UnistNode {
+export interface Col extends Element {
   type: 'element'
   name: 'col'
   attributes: {
@@ -2446,9 +2447,9 @@ export interface ColChildrenMap {
 
 type ColTypeAlign = 'center' | 'char' | 'justify' | 'left' | 'right'
 
-type ColTypeValign = 'UnistNodeline' | 'bottom' | 'middle' | 'top'
+type ColTypeValign = 'Elementline' | 'bottom' | 'middle' | 'top'
 
-export interface Comment extends UnistNode {
+export interface Comment extends Element {
   type: 'element'
   name: 'comment'
   attributes: {
@@ -2535,7 +2536,7 @@ export interface CommentChildrenMap {
   xref?: Xref[]
 }
 
-export interface CompoundKwdpart extends UnistNode {
+export interface CompoundKwdpart extends Element {
   type: 'element'
   name: 'compoundKwdpart'
   attributes: {
@@ -2597,7 +2598,7 @@ export interface CompoundKwdpartChildrenMap {
   xref?: Xref[]
 }
 
-export interface CompoundKwd extends UnistNode {
+export interface CompoundKwd extends Element {
   type: 'element'
   name: 'compoundKwd'
   attributes: {
@@ -2618,7 +2619,7 @@ export interface CompoundKwdChildrenMap {
   compoundKwdpart: CompoundKwdpart[]
 }
 
-export interface CompoundSubjectpart extends UnistNode {
+export interface CompoundSubjectpart extends Element {
   type: 'element'
   name: 'compoundSubjectpart'
   attributes: {
@@ -2674,7 +2675,7 @@ export interface CompoundSubjectpartChildrenMap {
   underline?: Underline[]
 }
 
-export interface CompoundSubject extends UnistNode {
+export interface CompoundSubject extends Element {
   type: 'element'
   name: 'compoundSubject'
   attributes: {
@@ -2695,7 +2696,7 @@ export interface CompoundSubjectChildrenMap {
   compoundSubjectpart: CompoundSubjectpart[]
 }
 
-export interface ConfAcronym extends UnistNode {
+export interface ConfAcronym extends Element {
   type: 'element'
   name: 'confAcronym'
   attributes: {
@@ -2710,7 +2711,7 @@ export interface ConfAcronymChildrenMap {
   text?: Text
 }
 
-export interface ConfDate extends UnistNode {
+export interface ConfDate extends Element {
   type: 'element'
   name: 'confDate'
   attributes: {
@@ -2727,7 +2728,7 @@ export interface ConfDateChildrenMap {
   text?: Text
 }
 
-export interface Conference extends UnistNode {
+export interface Conference extends Element {
   type: 'element'
   name: 'conference'
   attributes: {
@@ -2757,7 +2758,7 @@ export interface ConferenceChildrenMap {
   confTheme?: ConfTheme
 }
 
-export interface ConfLoc extends UnistNode {
+export interface ConfLoc extends Element {
   type: 'element'
   name: 'confLoc'
   attributes: {
@@ -2790,7 +2791,7 @@ export interface ConfLocChildrenMap {
   state?: State[]
 }
 
-export interface ConfName extends UnistNode {
+export interface ConfName extends Element {
   type: 'element'
   name: 'confName'
   attributes: {
@@ -2805,7 +2806,7 @@ export interface ConfNameChildrenMap {
   text?: Text
 }
 
-export interface ConfNum extends UnistNode {
+export interface ConfNum extends Element {
   type: 'element'
   name: 'confNum'
   attributes: {
@@ -2820,7 +2821,7 @@ export interface ConfNumChildrenMap {
   text?: Text
 }
 
-export interface ConfSponsor extends UnistNode {
+export interface ConfSponsor extends Element {
   type: 'element'
   name: 'confSponsor'
   attributes: {
@@ -2839,7 +2840,7 @@ export interface ConfSponsorChildrenMap {
   institutionWrap?: InstitutionWrap[]
 }
 
-export interface ConfTheme extends UnistNode {
+export interface ConfTheme extends Element {
   type: 'element'
   name: 'confTheme'
   attributes: {
@@ -2906,7 +2907,7 @@ export interface ConfThemeChildrenMap {
   underline?: Underline[]
 }
 
-export interface ContribGroup extends UnistNode {
+export interface ContribGroup extends Element {
   type: 'element'
   name: 'contribGroup'
   attributes: {
@@ -2944,7 +2945,7 @@ export interface ContribGroupChildrenMap {
   xref?: Xref[]
 }
 
-export interface ContribId extends UnistNode {
+export interface ContribId extends Element {
   type: 'element'
   name: 'contribId'
   attributes: {
@@ -2964,7 +2965,7 @@ export interface ContribIdChildrenMap {
 
 type ContribIdTypeAuthenticated = 'false' | 'true'
 
-export interface Contrib extends UnistNode {
+export interface Contrib extends Element {
   type: 'element'
   name: 'contrib'
   attributes: {
@@ -3028,7 +3029,7 @@ type ContribTypeDeceased = 'no' | 'yes'
 
 type ContribTypeEqualContrib = 'no' | 'yes'
 
-export interface ContributedResourcegroup extends UnistNode {
+export interface ContributedResourcegroup extends Element {
   type: 'element'
   name: 'contributedResourcegroup'
   attributes: {
@@ -3048,7 +3049,7 @@ export interface ContributedResourcegroupChildrenMap {
   supportDescription?: SupportDescription[]
 }
 
-export interface CopyrightHolder extends UnistNode {
+export interface CopyrightHolder extends Element {
   type: 'element'
   name: 'copyrightHolder'
   attributes: {
@@ -3071,7 +3072,7 @@ export interface CopyrightHolderChildrenMap {
   sup?: Sup[]
 }
 
-export interface CopyrightStatement extends UnistNode {
+export interface CopyrightStatement extends Element {
   type: 'element'
   name: 'copyrightStatement'
   attributes: {
@@ -3122,7 +3123,7 @@ export interface CopyrightStatementChildrenMap {
   uri?: Uri[]
 }
 
-export interface CopyrightYear extends UnistNode {
+export interface CopyrightYear extends Element {
   type: 'element'
   name: 'copyrightYear'
   attributes: {
@@ -3137,7 +3138,7 @@ export interface CopyrightYearChildrenMap {
   text?: Text
 }
 
-export interface Corresp extends UnistNode {
+export interface Corresp extends Element {
   type: 'element'
   name: 'corresp'
   attributes: {
@@ -3208,7 +3209,7 @@ export interface CorrespChildrenMap {
   uri?: Uri[]
 }
 
-export interface Country extends UnistNode {
+export interface Country extends Element {
   type: 'element'
   name: 'country'
   attributes: {
@@ -3224,7 +3225,7 @@ export interface CountryChildrenMap {
   text?: Text
 }
 
-export interface Counts extends UnistNode {
+export interface Counts extends Element {
   type: 'element'
   name: 'counts'
   attributes: {
@@ -3250,7 +3251,7 @@ export interface CountsChildrenMap {
   wordCount?: WordCount
 }
 
-export interface Count extends UnistNode {
+export interface Count extends Element {
   type: 'element'
   name: 'count'
   attributes: {
@@ -3261,7 +3262,7 @@ export interface Count extends UnistNode {
   children: []
 }
 
-export interface CustomMetagroup extends UnistNode {
+export interface CustomMetagroup extends Element {
   type: 'element'
   name: 'customMetagroup'
   attributes: {
@@ -3278,7 +3279,7 @@ export interface CustomMetagroupChildrenMap {
   customMeta: CustomMeta[]
 }
 
-export interface CustomMeta extends UnistNode {
+export interface CustomMeta extends Element {
   type: 'element'
   name: 'customMeta'
   attributes: {
@@ -3301,7 +3302,7 @@ export interface CustomMetaChildrenMap {
   metaValue: MetaValue
 }
 
-export interface DataTitle extends UnistNode {
+export interface DataTitle extends Element {
   type: 'element'
   name: 'dataTitle'
   attributes: {
@@ -3358,7 +3359,7 @@ export interface DataTitleChildrenMap {
   uri?: Uri[]
 }
 
-export interface DateIncitation extends UnistNode {
+export interface DateIncitation extends Element {
   type: 'element'
   name: 'dateIncitation'
   attributes: {
@@ -3385,7 +3386,7 @@ export interface DateIncitationChildrenMap {
   year?: Year[]
 }
 
-export interface Date extends UnistNode {
+export interface Date extends Element {
   type: 'element'
   name: 'date'
   attributes: {
@@ -3412,7 +3413,7 @@ export interface DateChildrenMap {
   year: Year
 }
 
-export interface Day extends UnistNode {
+export interface Day extends Element {
   type: 'element'
   name: 'day'
   attributes: {
@@ -3427,7 +3428,7 @@ export interface DayChildrenMap {
   text?: Text
 }
 
-export interface DefHead extends UnistNode {
+export interface DefHead extends Element {
   type: 'element'
   name: 'defHead'
   attributes: {
@@ -3511,7 +3512,7 @@ export interface DefHeadChildrenMap {
   xref?: Xref[]
 }
 
-export interface DefItem extends UnistNode {
+export interface DefItem extends Element {
   type: 'element'
   name: 'defItem'
   attributes: {
@@ -3528,7 +3529,7 @@ export interface DefItemChildrenMap {
   term: Term
 }
 
-export interface DefList extends UnistNode {
+export interface DefList extends Element {
   type: 'element'
   name: 'defList'
   attributes: {
@@ -3557,7 +3558,7 @@ export interface DefListChildrenMap {
   title?: Title
 }
 
-export interface Def extends UnistNode {
+export interface Def extends Element {
   type: 'element'
   name: 'def'
   attributes: {
@@ -3573,7 +3574,7 @@ export interface DefChildrenMap {
   p: P[]
 }
 
-export interface Degrees extends UnistNode {
+export interface Degrees extends Element {
   type: 'element'
   name: 'degrees'
   attributes: {
@@ -3588,7 +3589,7 @@ export interface DegreesChildrenMap {
   text?: Text
 }
 
-export interface DispFormulagroup extends UnistNode {
+export interface DispFormulagroup extends Element {
   type: 'element'
   name: 'dispFormulagroup'
   attributes: {
@@ -3628,7 +3629,7 @@ export interface DispFormulagroupChildrenMap {
   uri?: Uri[]
 }
 
-export interface DispFormula extends UnistNode {
+export interface DispFormula extends Element {
   type: 'element'
   name: 'dispFormula'
   attributes: {
@@ -3720,7 +3721,7 @@ export interface DispFormulaChildrenMap {
   uri?: Uri[]
 }
 
-export interface DispQuote extends UnistNode {
+export interface DispQuote extends Element {
   type: 'element'
   name: 'dispQuote'
   attributes: {
@@ -3809,7 +3810,7 @@ export interface DispQuoteChildrenMap {
   verseGroup?: VerseGroup[]
 }
 
-export interface Edition extends UnistNode {
+export interface Edition extends Element {
   type: 'element'
   name: 'edition'
   attributes: {
@@ -3829,7 +3830,7 @@ export interface EditionChildrenMap {
   sup?: Sup[]
 }
 
-export interface ElementCitation extends UnistNode {
+export interface ElementCitation extends Element {
   type: 'element'
   name: 'elementCitation'
   attributes: {
@@ -4021,7 +4022,7 @@ export interface ElementCitationChildrenMap {
   year: Year[]
 }
 
-export interface ElocationId extends UnistNode {
+export interface ElocationId extends Element {
   type: 'element'
   name: 'elocationId'
   attributes: {
@@ -4037,7 +4038,7 @@ export interface ElocationIdChildrenMap {
   text?: Text
 }
 
-export interface Email extends UnistNode {
+export interface Email extends Element {
   type: 'element'
   name: 'email'
   attributes: {
@@ -4053,7 +4054,7 @@ export interface EmailChildrenMap {
   text?: Text
 }
 
-export interface EquationCount extends UnistNode {
+export interface EquationCount extends Element {
   type: 'element'
   name: 'equationCount'
   attributes: {
@@ -4063,7 +4064,7 @@ export interface EquationCount extends UnistNode {
   children: []
 }
 
-export interface Era extends UnistNode {
+export interface Era extends Element {
   type: 'element'
   name: 'era'
   attributes: {
@@ -4078,7 +4079,7 @@ export interface EraChildrenMap {
   text?: Text
 }
 
-export interface Etal extends UnistNode {
+export interface Etal extends Element {
   type: 'element'
   name: 'etal'
   attributes: {
@@ -4088,7 +4089,7 @@ export interface Etal extends UnistNode {
   children: []
 }
 
-export interface EventDesc extends UnistNode {
+export interface EventDesc extends Element {
   type: 'element'
   name: 'eventDesc'
   attributes: {
@@ -4127,7 +4128,7 @@ export interface EventDescChildrenMap {
   uri?: Uri[]
 }
 
-export interface Event extends UnistNode {
+export interface Event extends Element {
   type: 'element'
   name: 'event'
   attributes: {
@@ -4167,7 +4168,7 @@ export interface EventChildrenMap {
   selfUri?: SelfUri[]
 }
 
-export interface Explanation extends UnistNode {
+export interface Explanation extends Element {
   type: 'element'
   name: 'explanation'
   attributes: {
@@ -4265,7 +4266,7 @@ export interface ExplanationChildrenMap {
   verseGroup: VerseGroup[]
 }
 
-export interface ExtendedBy extends UnistNode {
+export interface ExtendedBy extends Element {
   type: 'element'
   name: 'extendedBy'
   attributes: {
@@ -4281,7 +4282,7 @@ export interface ExtendedBy extends UnistNode {
   children: []
 }
 
-export interface ExtLink extends UnistNode {
+export interface ExtLink extends Element {
   type: 'element'
   name: 'extLink'
   attributes: {
@@ -4301,7 +4302,7 @@ export interface ExtLinkChildrenMap {
   content: SimpleTextContent[]
 }
 
-export interface Fax extends UnistNode {
+export interface Fax extends Element {
   type: 'element'
   name: 'fax'
   attributes: {
@@ -4316,7 +4317,7 @@ export interface FaxChildrenMap {
   text?: Text
 }
 
-export interface FigCount extends UnistNode {
+export interface FigCount extends Element {
   type: 'element'
   name: 'figCount'
   attributes: {
@@ -4326,7 +4327,7 @@ export interface FigCount extends UnistNode {
   children: []
 }
 
-export interface FigGroup extends UnistNode {
+export interface FigGroup extends Element {
   type: 'element'
   name: 'figGroup'
   attributes: {
@@ -4379,7 +4380,7 @@ type FigGroupTypeOrientation = 'landscape' | 'portrait'
 
 type FigGroupTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
-export interface Fig extends UnistNode {
+export interface Fig extends Element {
   type: 'element'
   name: 'fig'
   attributes: {
@@ -4460,7 +4461,7 @@ type FigTypeOrientation = 'landscape' | 'portrait'
 
 type FigTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
-export interface FixedCase extends UnistNode {
+export interface FixedCase extends Element {
   type: 'element'
   name: 'fixedCase'
   attributes: {
@@ -4547,7 +4548,7 @@ export interface FixedCaseChildrenMap {
   xref?: Xref[]
 }
 
-export interface FloatsGroup extends UnistNode {
+export interface FloatsGroup extends Element {
   type: 'element'
   name: 'floatsGroup'
   attributes: {
@@ -4585,7 +4586,7 @@ export interface FloatsGroupChildrenMap {
   tableWrapgroup?: TableWrapgroup[]
 }
 
-export interface FnGroup extends UnistNode {
+export interface FnGroup extends Element {
   type: 'element'
   name: 'fnGroup'
   attributes: {
@@ -4606,7 +4607,7 @@ export interface FnGroupChildrenMap {
   title?: Title
 }
 
-export interface Fn extends UnistNode {
+export interface Fn extends Element {
   type: 'element'
   name: 'fn'
   attributes: {
@@ -4650,7 +4651,7 @@ type FnTypeFnType =
   | 'supplementary-material'
   | 'supported-by'
 
-export interface Fpage extends UnistNode {
+export interface Fpage extends Element {
   type: 'element'
   name: 'fpage'
   attributes: {
@@ -4666,7 +4667,7 @@ export interface FpageChildrenMap {
   text?: Text
 }
 
-export interface FrontStub extends UnistNode {
+export interface FrontStub extends Element {
   type: 'element'
   name: 'frontStub'
   attributes: {
@@ -4770,7 +4771,7 @@ export interface FrontStubChildrenMap {
   volumeSeries?: VolumeSeries
 }
 
-export interface Front extends UnistNode {
+export interface Front extends Element {
   type: 'element'
   name: 'front'
   attributes: {
@@ -4788,7 +4789,7 @@ export interface FrontChildrenMap {
   notes?: Notes
 }
 
-export interface FundingGroup extends UnistNode {
+export interface FundingGroup extends Element {
   type: 'element'
   name: 'fundingGroup'
   attributes: {
@@ -4807,7 +4808,7 @@ export interface FundingGroupChildrenMap {
   openAccess?: OpenAccess[]
 }
 
-export interface FundingSource extends UnistNode {
+export interface FundingSource extends Element {
   type: 'element'
   name: 'fundingSource'
   attributes: {
@@ -4880,7 +4881,7 @@ export interface FundingSourceChildrenMap {
   underline?: Underline[]
 }
 
-export interface FundingStatement extends UnistNode {
+export interface FundingStatement extends Element {
   type: 'element'
   name: 'fundingStatement'
   attributes: {
@@ -4930,7 +4931,7 @@ export interface FundingStatementChildrenMap {
   uri?: Uri[]
 }
 
-export interface GivenNames extends UnistNode {
+export interface GivenNames extends Element {
   type: 'element'
   name: 'givenNames'
   attributes: {
@@ -4940,7 +4941,7 @@ export interface GivenNames extends UnistNode {
   children: Text[]
 }
 
-export interface Glossary extends UnistNode {
+export interface Glossary extends Element {
   type: 'element'
   name: 'glossary'
   attributes: {
@@ -5029,7 +5030,7 @@ export interface GlossaryChildrenMap {
   verseGroup?: VerseGroup[]
 }
 
-export interface GlyphData extends UnistNode {
+export interface GlyphData extends Element {
   type: 'element'
   name: 'glyphData'
   attributes: {
@@ -5044,7 +5045,7 @@ export interface GlyphData extends UnistNode {
   children: []
 }
 
-export interface GlyphRef extends UnistNode {
+export interface GlyphRef extends Element {
   type: 'element'
   name: 'glyphRef'
   attributes: {
@@ -5054,7 +5055,7 @@ export interface GlyphRef extends UnistNode {
   children: []
 }
 
-export interface Gov extends UnistNode {
+export interface Gov extends Element {
   type: 'element'
   name: 'gov'
   attributes: {
@@ -5071,7 +5072,7 @@ export interface GovChildrenMap {
   content: SimpleTextContent[]
 }
 
-export interface Graphic extends UnistNode {
+export interface Graphic extends Element {
   type: 'element'
   name: 'graphic'
   attributes: {
@@ -5122,7 +5123,7 @@ type GraphicTypeOrientation = 'landscape' | 'portrait'
 
 type GraphicTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
-export interface History extends UnistNode {
+export interface History extends Element {
   type: 'element'
   name: 'history'
   attributes: {
@@ -5136,7 +5137,7 @@ export interface HistoryChildrenMap {
   date: Date[]
 }
 
-export interface Hr extends UnistNode {
+export interface Hr extends Element {
   type: 'element'
   name: 'hr'
   attributes: {
@@ -5145,7 +5146,7 @@ export interface Hr extends UnistNode {
   children: []
 }
 
-export interface IndexTermrangeend extends UnistNode {
+export interface IndexTermrangeend extends Element {
   type: 'element'
   name: 'indexTermrangeend'
   attributes: {
@@ -5155,7 +5156,7 @@ export interface IndexTermrangeend extends UnistNode {
   children: []
 }
 
-export interface IndexTerm extends UnistNode {
+export interface IndexTerm extends Element {
   type: 'element'
   name: 'indexTerm'
   attributes: {
@@ -5183,7 +5184,7 @@ export interface IndexTermChildrenMap {
   term: Term
 }
 
-export interface InlineFormula extends UnistNode {
+export interface InlineFormula extends Element {
   type: 'element'
   name: 'inlineFormula'
   attributes: {
@@ -5246,11 +5247,11 @@ export interface InlineFormulaChildrenMap {
   underline?: Underline[]
 }
 
-export interface InlineGraphic extends UnistNode {
+export interface InlineGraphic extends Element {
   type: 'element'
   name: 'inlineGraphic'
   attributes: {
-    UnistNodelineShift?: string
+    ElementlineShift?: string
     hreflang?: string
     id?: string
     mimeSubtype?: string
@@ -5270,7 +5271,7 @@ export interface InlineGraphicChildrenMap {
   longDesc?: LongDesc[]
 }
 
-export interface InlineMedia extends UnistNode {
+export interface InlineMedia extends Element {
   type: 'element'
   name: 'inlineMedia'
   attributes: {
@@ -5332,7 +5333,7 @@ export interface InlineMediaChildrenMap {
   uri?: Uri[]
 }
 
-export interface InlineSupplementarymaterial extends UnistNode {
+export interface InlineSupplementarymaterial extends Element {
   type: 'element'
   name: 'inlineSupplementarymaterial'
   attributes: {
@@ -5390,7 +5391,7 @@ export interface InlineSupplementarymaterialChildrenMap {
   uri?: Uri[]
 }
 
-export interface InstitutionId extends UnistNode {
+export interface InstitutionId extends Element {
   type: 'element'
   name: 'institutionId'
   attributes: {
@@ -5409,7 +5410,7 @@ export interface InstitutionIdChildrenMap {
   text?: Text
 }
 
-export interface Institution extends UnistNode {
+export interface Institution extends Element {
   type: 'element'
   name: 'institution'
   attributes: {
@@ -5429,7 +5430,7 @@ export interface InstitutionChildrenMap {
   sup?: Sup[]
 }
 
-export interface InstitutionWrap extends UnistNode {
+export interface InstitutionWrap extends Element {
   type: 'element'
   name: 'institutionWrap'
   attributes: {
@@ -5445,7 +5446,7 @@ export interface InstitutionWrapChildrenMap {
   institutionId?: InstitutionId[]
 }
 
-export interface Isbn extends UnistNode {
+export interface Isbn extends Element {
   type: 'element'
   name: 'isbn'
   attributes: {
@@ -5462,7 +5463,7 @@ export interface IsbnChildrenMap {
   text?: Text
 }
 
-export interface IssnL extends UnistNode {
+export interface IssnL extends Element {
   type: 'element'
   name: 'issnL'
   attributes: {
@@ -5473,7 +5474,7 @@ export interface IssnL extends UnistNode {
   children: []
 }
 
-export interface Issn extends UnistNode {
+export interface Issn extends Element {
   type: 'element'
   name: 'issn'
   attributes: {
@@ -5491,7 +5492,7 @@ export interface IssnChildrenMap {
   text?: Text
 }
 
-export interface IssueId extends UnistNode {
+export interface IssueId extends Element {
   type: 'element'
   name: 'issueId'
   attributes: {
@@ -5509,7 +5510,7 @@ export interface IssueIdChildrenMap {
   text?: Text
 }
 
-export interface IssuePart extends UnistNode {
+export interface IssuePart extends Element {
   type: 'element'
   name: 'issuePart'
   attributes: {
@@ -5524,7 +5525,7 @@ export interface IssuePartChildrenMap {
   text?: Text
 }
 
-export interface IssueSponsor extends UnistNode {
+export interface IssueSponsor extends Element {
   type: 'element'
   name: 'issueSponsor'
   attributes: {
@@ -5539,7 +5540,7 @@ export interface IssueSponsorChildrenMap {
   text?: Text
 }
 
-export interface IssueSubtitle extends UnistNode {
+export interface IssueSubtitle extends Element {
   type: 'element'
   name: 'issueSubtitle'
   attributes: {
@@ -5554,7 +5555,7 @@ export interface IssueSubtitleChildrenMap {
   text?: Text
 }
 
-export interface IssueTitlegroup extends UnistNode {
+export interface IssueTitlegroup extends Element {
   type: 'element'
   name: 'issueTitlegroup'
   attributes: {
@@ -5575,7 +5576,7 @@ export interface IssueTitlegroupChildrenMap {
   transTitlegroup?: TransTitlegroup[]
 }
 
-export interface IssueTitle extends UnistNode {
+export interface IssueTitle extends Element {
   type: 'element'
   name: 'issueTitle'
   attributes: {
@@ -5590,7 +5591,7 @@ export interface IssueTitleChildrenMap {
   text?: Text
 }
 
-export interface Issue extends UnistNode {
+export interface Issue extends Element {
   type: 'element'
   name: 'issue'
   attributes: {
@@ -5606,7 +5607,7 @@ export interface IssueChildrenMap {
   text?: Text
 }
 
-export interface Italic extends UnistNode {
+export interface Italic extends Element {
   type: 'element'
   name: 'italic'
   attributes: {
@@ -5694,7 +5695,7 @@ export interface ItalicChildrenMap {
 
 type ItalicTypeToggle = 'no' | 'yes'
 
-export interface JournalId extends UnistNode {
+export interface JournalId extends Element {
   type: 'element'
   name: 'journalId'
   attributes: {
@@ -5706,7 +5707,7 @@ export interface JournalId extends UnistNode {
   children: []
 }
 
-export interface JournalMeta extends UnistNode {
+export interface JournalMeta extends Element {
   type: 'element'
   name: 'journalMeta'
   attributes: {
@@ -5740,7 +5741,7 @@ export interface JournalMetaChildrenMap {
   selfUri?: SelfUri[]
 }
 
-export interface JournalSubtitle extends UnistNode {
+export interface JournalSubtitle extends Element {
   type: 'element'
   name: 'journalSubtitle'
   attributes: {
@@ -5755,7 +5756,7 @@ export interface JournalSubtitleChildrenMap {
   text?: Text
 }
 
-export interface JournalTitlegroup extends UnistNode {
+export interface JournalTitlegroup extends Element {
   type: 'element'
   name: 'journalTitlegroup'
   attributes: {
@@ -5777,7 +5778,7 @@ export interface JournalTitlegroupChildrenMap {
   transTitlegroup?: TransTitlegroup[]
 }
 
-export interface JournalTitle extends UnistNode {
+export interface JournalTitle extends Element {
   type: 'element'
   name: 'journalTitle'
   attributes: {
@@ -5792,7 +5793,7 @@ export interface JournalTitleChildrenMap {
   text?: Text
 }
 
-export interface KwdGroup extends UnistNode {
+export interface KwdGroup extends Element {
   type: 'element'
   name: 'kwdGroup'
   attributes: {
@@ -5819,7 +5820,7 @@ export interface KwdGroupChildrenMap {
   title?: Title
 }
 
-export interface Kwd extends UnistNode {
+export interface Kwd extends Element {
   type: 'element'
   name: 'kwd'
   attributes: {
@@ -5840,7 +5841,7 @@ export interface KwdChildrenMap {
   content: SimpleTextContent[]
 }
 
-export interface Label extends UnistNode {
+export interface Label extends Element {
   type: 'element'
   name: 'label'
   attributes: {
@@ -5891,7 +5892,7 @@ export interface LabelChildrenMap {
   underline?: Underline[]
 }
 
-export interface LicenseP extends UnistNode {
+export interface LicenseP extends Element {
   type: 'element'
   name: 'licenseP'
   attributes: {
@@ -6050,7 +6051,7 @@ export interface LicensePChildrenMap {
   xref?: Xref[]
 }
 
-export interface License extends UnistNode {
+export interface License extends Element {
   type: 'element'
   name: 'license'
   attributes: {
@@ -6067,7 +6068,7 @@ export interface LicenseChildrenMap {
   licenseP: LicenseP[]
 }
 
-export interface ListItem extends UnistNode {
+export interface ListItem extends Element {
   type: 'element'
   name: 'listItem'
   attributes: {
@@ -6090,7 +6091,7 @@ export interface ListItemChildrenMap {
   title?: Title
 }
 
-export interface List extends UnistNode {
+export interface List extends Element {
   type: 'element'
   name: 'list'
   attributes: {
@@ -6115,7 +6116,7 @@ export interface ListChildrenMap {
   title?: Title
 }
 
-export interface LongDesc extends UnistNode {
+export interface LongDesc extends Element {
   type: 'element'
   name: 'longDesc'
   attributes: {
@@ -6131,7 +6132,7 @@ export interface LongDescChildrenMap {
   text?: Text
 }
 
-export interface Lpage extends UnistNode {
+export interface Lpage extends Element {
   type: 'element'
   name: 'lpage'
   attributes: {
@@ -6146,7 +6147,7 @@ export interface LpageChildrenMap {
   text?: Text
 }
 
-export interface Media extends UnistNode {
+export interface Media extends Element {
   type: 'element'
   name: 'media'
   attributes: {
@@ -6197,7 +6198,7 @@ type MediaTypeOrientation = 'landscape' | 'portrait'
 
 type MediaTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
-export interface MetaName extends UnistNode {
+export interface MetaName extends Element {
   type: 'element'
   name: 'metaName'
   attributes: {
@@ -6206,7 +6207,7 @@ export interface MetaName extends UnistNode {
   children: []
 }
 
-export interface MetaValue extends UnistNode {
+export interface MetaValue extends Element {
   type: 'element'
   name: 'metaValue'
   attributes: {
@@ -6290,7 +6291,7 @@ export interface MetaValueChildrenMap {
   xref?: Xref[]
 }
 
-export interface MilestoneEnd extends UnistNode {
+export interface MilestoneEnd extends Element {
   type: 'element'
   name: 'milestoneEnd'
   attributes: {
@@ -6307,7 +6308,7 @@ export interface MilestoneEndChildrenMap {
   text?: Text
 }
 
-export interface MilestoneStart extends UnistNode {
+export interface MilestoneStart extends Element {
   type: 'element'
   name: 'milestoneStart'
   attributes: {
@@ -6324,7 +6325,7 @@ export interface MilestoneStartChildrenMap {
   text?: Text
 }
 
-export interface MixedCitation extends UnistNode {
+export interface MixedCitation extends Element {
   type: 'element'
   name: 'mixedCitation'
   attributes: {
@@ -6516,7 +6517,7 @@ export interface MixedCitationChildrenMap {
   year?: Year[]
 }
 
-export interface Monospace extends UnistNode {
+export interface Monospace extends Element {
   type: 'element'
   name: 'monospace'
   attributes: {
@@ -6604,7 +6605,7 @@ export interface MonospaceChildrenMap {
 
 type MonospaceTypeToggle = 'no' | 'yes'
 
-export interface Month extends UnistNode {
+export interface Month extends Element {
   type: 'element'
   name: 'month'
   attributes: {
@@ -6619,7 +6620,7 @@ export interface MonthChildrenMap {
   text?: Text
 }
 
-export interface NameAlternatives extends UnistNode {
+export interface NameAlternatives extends Element {
   type: 'element'
   name: 'nameAlternatives'
   attributes: {
@@ -6635,7 +6636,7 @@ export interface NameAlternativesChildrenMap {
   stringName: StringName[]
 }
 
-export interface NamedContent extends UnistNode {
+export interface NamedContent extends Element {
   type: 'element'
   name: 'namedContent'
   attributes: {
@@ -6784,7 +6785,7 @@ export interface NamedContentChildrenMap {
   xref?: Xref[]
 }
 
-export interface Name extends UnistNode {
+export interface Name extends Element {
   type: 'element'
   name: 'name'
   attributes: {
@@ -6809,7 +6810,7 @@ export interface NameChildrenMap {
 
 type NameTypeNameStyle = 'eastern' | 'given-only' | 'islensk' | 'western'
 
-export interface NestedKwd extends UnistNode {
+export interface NestedKwd extends Element {
   type: 'element'
   name: 'nestedKwd'
   attributes: {
@@ -6834,7 +6835,7 @@ export interface NestedKwdChildrenMap {
   nestedKwd?: NestedKwd[]
 }
 
-export interface NlmCitation extends UnistNode {
+export interface NlmCitation extends Element {
   type: 'element'
   name: 'nlmCitation'
   attributes: {
@@ -6909,7 +6910,7 @@ export interface NlmCitationChildrenMap {
   year?: Year
 }
 
-export interface Notes extends UnistNode {
+export interface Notes extends Element {
   type: 'element'
   name: 'notes'
   attributes: {
@@ -7003,7 +7004,7 @@ export interface NotesChildrenMap {
   verseGroup?: VerseGroup[]
 }
 
-export interface Note extends UnistNode {
+export interface Note extends Element {
   type: 'element'
   name: 'note'
   attributes: {
@@ -7024,7 +7025,7 @@ export interface NoteChildrenMap {
   product: Product[]
 }
 
-export interface ObjectId extends UnistNode {
+export interface ObjectId extends Element {
   type: 'element'
   name: 'objectId'
   attributes: {
@@ -7041,7 +7042,7 @@ export interface ObjectIdChildrenMap {
   text?: Text
 }
 
-export interface OnBehalfof extends UnistNode {
+export interface OnBehalfof extends Element {
   type: 'element'
   name: 'onBehalfof'
   attributes: {
@@ -7094,7 +7095,7 @@ export interface OnBehalfofChildrenMap {
   xref?: Xref[]
 }
 
-export interface OpenAccess extends UnistNode {
+export interface OpenAccess extends Element {
   type: 'element'
   name: 'openAccess'
   attributes: {
@@ -7109,7 +7110,7 @@ export interface OpenAccessChildrenMap {
   p: P[]
 }
 
-export interface Option extends UnistNode {
+export interface Option extends Element {
   type: 'element'
   name: 'option'
   attributes: {
@@ -7210,7 +7211,7 @@ export interface OptionChildrenMap {
 
 type OptionTypeCorrect = 'no' | 'yes'
 
-export interface OverlineEnd extends UnistNode {
+export interface OverlineEnd extends Element {
   type: 'element'
   name: 'overlineEnd'
   attributes: {
@@ -7221,7 +7222,7 @@ export interface OverlineEnd extends UnistNode {
   children: []
 }
 
-export interface OverlineStart extends UnistNode {
+export interface OverlineStart extends Element {
   type: 'element'
   name: 'overlineStart'
   attributes: {
@@ -7231,7 +7232,7 @@ export interface OverlineStart extends UnistNode {
   children: []
 }
 
-export interface Overline extends UnistNode {
+export interface Overline extends Element {
   type: 'element'
   name: 'overline'
   attributes: {
@@ -7319,7 +7320,7 @@ export interface OverlineChildrenMap {
 
 type OverlineTypeToggle = 'no' | 'yes'
 
-export interface PageCount extends UnistNode {
+export interface PageCount extends Element {
   type: 'element'
   name: 'pageCount'
   attributes: {
@@ -7329,7 +7330,7 @@ export interface PageCount extends UnistNode {
   children: []
 }
 
-export interface PageRange extends UnistNode {
+export interface PageRange extends Element {
   type: 'element'
   name: 'pageRange'
   attributes: {
@@ -7344,7 +7345,7 @@ export interface PageRangeChildrenMap {
   text?: Text
 }
 
-export interface PartTitle extends UnistNode {
+export interface PartTitle extends Element {
   type: 'element'
   name: 'partTitle'
   attributes: {
@@ -7415,7 +7416,7 @@ export interface PartTitleChildrenMap {
   xref?: Xref[]
 }
 
-export interface Patent extends UnistNode {
+export interface Patent extends Element {
   type: 'element'
   name: 'patent'
   attributes: {
@@ -7431,7 +7432,7 @@ export interface PatentChildrenMap {
   text?: Text
 }
 
-export interface Permissions extends UnistNode {
+export interface Permissions extends Element {
   type: 'element'
   name: 'permissions'
   attributes: {
@@ -7451,7 +7452,7 @@ export interface PermissionsChildrenMap {
   license?: License[]
 }
 
-export interface PersonGroup extends UnistNode {
+export interface PersonGroup extends Element {
   type: 'element'
   name: 'personGroup'
   attributes: {
@@ -7502,7 +7503,7 @@ type PersonGroupTypePersonGrouptype =
   | 'transed'
   | 'translator'
 
-export interface Phone extends UnistNode {
+export interface Phone extends Element {
   type: 'element'
   name: 'phone'
   attributes: {
@@ -7517,7 +7518,7 @@ export interface PhoneChildrenMap {
   text?: Text
 }
 
-export interface PostalCode extends UnistNode {
+export interface PostalCode extends Element {
   type: 'element'
   name: 'postalCode'
   attributes: {
@@ -7532,7 +7533,7 @@ export interface PostalCodeChildrenMap {
   text?: Text
 }
 
-export interface Prefix extends UnistNode {
+export interface Prefix extends Element {
   type: 'element'
   name: 'prefix'
   attributes: {
@@ -7547,7 +7548,7 @@ export interface PrefixChildrenMap {
   text?: Text
 }
 
-export interface Preformat extends UnistNode {
+export interface Preformat extends Element {
   type: 'element'
   name: 'preformat'
   attributes: {
@@ -7621,7 +7622,7 @@ type PreformatTypeOrientation = 'landscape' | 'portrait'
 
 type PreformatTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
-export interface Price extends UnistNode {
+export interface Price extends Element {
   type: 'element'
   name: 'price'
   attributes: {
@@ -7659,7 +7660,7 @@ export interface PriceChildrenMap {
   underline?: Underline[]
 }
 
-export interface PrincipalAwardrecipient extends UnistNode {
+export interface PrincipalAwardrecipient extends Element {
   type: 'element'
   name: 'principalAwardrecipient'
   attributes: {
@@ -7684,7 +7685,7 @@ export interface PrincipalAwardrecipientChildrenMap {
   stringName?: StringName[]
 }
 
-export interface PrincipalInvestigator extends UnistNode {
+export interface PrincipalInvestigator extends Element {
   type: 'element'
   name: 'principalInvestigator'
   attributes: {
@@ -7705,7 +7706,7 @@ export interface PrincipalInvestigatorChildrenMap {
   stringName?: StringName[]
 }
 
-export interface PrivateChar extends UnistNode {
+export interface PrivateChar extends Element {
   type: 'element'
   name: 'privateChar'
   attributes: {
@@ -7726,13 +7727,13 @@ export interface PrivateCharChildrenMap {
   inlineGraphic?: InlineGraphic[]
 }
 
-export interface ProcessingMeta extends UnistNode {
+export interface ProcessingMeta extends Element {
   type: 'element'
   name: 'processingMeta'
   attributes: {
     id?: string
     mathRepresentation?: string
-    BaseTagSet?: ProcessingMetaTypeUnistNodeTagset
+    BaseTagSet?: ProcessingMetaTypeElementTagset
     mathmlVersion?: ProcessingMetaTypeMathmlVersion
     tableModel?: ProcessingMetaTypeTableModel
     tagsetFamily?: ProcessingMetaTypeTagsetFamily
@@ -7749,7 +7750,7 @@ export interface ProcessingMetaChildrenMap {
   restrictedBy?: RestrictedBy[]
 }
 
-type ProcessingMetaTypeUnistNodeTagset = 'archiving' | 'authoring' | 'publishing'
+type ProcessingMetaTypeElementTagset = 'archiving' | 'authoring' | 'publishing'
 
 type ProcessingMetaTypeMathmlVersion = '2.0' | '3.0'
 
@@ -7757,7 +7758,7 @@ type ProcessingMetaTypeTableModel = 'both' | 'none' | 'oasis' | 'xhtml'
 
 type ProcessingMetaTypeTagsetFamily = 'bits' | 'jats' | 'sts'
 
-export interface Product extends UnistNode {
+export interface Product extends Element {
   type: 'element'
   name: 'product'
   attributes: {
@@ -7960,7 +7961,7 @@ export interface ProductChildrenMap {
   year?: Year[]
 }
 
-export interface P extends UnistNode {
+export interface P extends Element {
   type: 'element'
   name: 'p'
   attributes: {
@@ -8117,7 +8118,7 @@ export interface PChildrenMap {
   xref?: Xref[]
 }
 
-export interface PubDatenotavailable extends UnistNode {
+export interface PubDatenotavailable extends Element {
   type: 'element'
   name: 'pubDatenotavailable'
   attributes: {
@@ -8127,7 +8128,7 @@ export interface PubDatenotavailable extends UnistNode {
   children: []
 }
 
-export interface PubDate extends UnistNode {
+export interface PubDate extends Element {
   type: 'element'
   name: 'pubDate'
   attributes: {
@@ -8155,7 +8156,7 @@ export interface PubDateChildrenMap {
   year: Year
 }
 
-export interface PubHistory extends UnistNode {
+export interface PubHistory extends Element {
   type: 'element'
   name: 'pubHistory'
   attributes: {
@@ -8169,7 +8170,7 @@ export interface PubHistoryChildrenMap {
   event: Event[]
 }
 
-export interface PubId extends UnistNode {
+export interface PubId extends Element {
   type: 'element'
   name: 'pubId'
   attributes: {
@@ -8212,7 +8213,7 @@ type PubIdTypePubIdtype =
   | 'std-designation'
   | 'zbl'
 
-export interface PublisherLoc extends UnistNode {
+export interface PublisherLoc extends Element {
   type: 'element'
   name: 'publisherLoc'
   attributes: {
@@ -8249,7 +8250,7 @@ export interface PublisherLocChildrenMap {
   uri?: Uri[]
 }
 
-export interface PublisherName extends UnistNode {
+export interface PublisherName extends Element {
   type: 'element'
   name: 'publisherName'
   attributes: {
@@ -8266,7 +8267,7 @@ export interface PublisherNameChildrenMap {
   institutionWrap?: InstitutionWrap[]
 }
 
-export interface Publisher extends UnistNode {
+export interface Publisher extends Element {
   type: 'element'
   name: 'publisher'
   attributes: {
@@ -8284,7 +8285,7 @@ export interface PublisherChildrenMap {
   publisherName: PublisherName[]
 }
 
-export interface QuestionPreamble extends UnistNode {
+export interface QuestionPreamble extends Element {
   type: 'element'
   name: 'questionPreamble'
   attributes: {
@@ -8377,7 +8378,7 @@ export interface QuestionPreambleChildrenMap {
   verseGroup?: VerseGroup[]
 }
 
-export interface Question extends UnistNode {
+export interface Question extends Element {
   type: 'element'
   name: 'question'
   attributes: {
@@ -8488,7 +8489,7 @@ type QuestionTypeQuestionResponsetype =
   | 'short-answer'
   | 'true-false'
 
-export interface QuestionWrapgroup extends UnistNode {
+export interface QuestionWrapgroup extends Element {
   type: 'element'
   name: 'questionWrapgroup'
   attributes: {
@@ -8518,7 +8519,7 @@ export interface QuestionWrapgroupChildrenMap {
   title?: Title
 }
 
-export interface QuestionWrap extends UnistNode {
+export interface QuestionWrap extends Element {
   type: 'element'
   name: 'questionWrap'
   attributes: {
@@ -8544,7 +8545,7 @@ export interface QuestionWrapChildrenMap {
   question: Question
 }
 
-export interface Rb extends UnistNode {
+export interface Rb extends Element {
   type: 'element'
   name: 'rb'
   attributes: {
@@ -8579,7 +8580,7 @@ export interface RbChildrenMap {
   underline?: Underline[]
 }
 
-export interface RefCount extends UnistNode {
+export interface RefCount extends Element {
   type: 'element'
   name: 'refCount'
   attributes: {
@@ -8589,7 +8590,7 @@ export interface RefCount extends UnistNode {
   children: []
 }
 
-export interface RefList extends UnistNode {
+export interface RefList extends Element {
   type: 'element'
   name: 'refList'
   attributes: {
@@ -8680,7 +8681,7 @@ export interface RefListChildrenMap {
   verseGroup?: VerseGroup[]
 }
 
-export interface Ref extends UnistNode {
+export interface Ref extends Element {
   type: 'element'
   name: 'ref'
   attributes: {
@@ -8708,7 +8709,7 @@ export interface RefChildrenMap {
   note: Note[]
 }
 
-export interface RelatedArticle extends UnistNode {
+export interface RelatedArticle extends Element {
   type: 'element'
   name: 'relatedArticle'
   attributes: {
@@ -8882,7 +8883,7 @@ export interface RelatedArticleChildrenMap {
   year?: Year[]
 }
 
-export interface RelatedObject extends UnistNode {
+export interface RelatedObject extends Element {
   type: 'element'
   name: 'relatedObject'
   attributes: {
@@ -9056,7 +9057,7 @@ export interface RelatedObjectChildrenMap {
   year?: Year[]
 }
 
-export interface ResourceGroup extends UnistNode {
+export interface ResourceGroup extends Element {
   type: 'element'
   name: 'resourceGroup'
   attributes: {
@@ -9073,7 +9074,7 @@ export interface ResourceGroupChildrenMap {
   resourceWrap: ResourceWrap[]
 }
 
-export interface ResourceId extends UnistNode {
+export interface ResourceId extends Element {
   type: 'element'
   name: 'resourceId'
   attributes: {
@@ -9092,7 +9093,7 @@ export interface ResourceIdChildrenMap {
   text?: Text
 }
 
-export interface ResourceName extends UnistNode {
+export interface ResourceName extends Element {
   type: 'element'
   name: 'resourceName'
   attributes: {
@@ -9132,7 +9133,7 @@ export interface ResourceNameChildrenMap {
   underline?: Underline[]
 }
 
-export interface ResourceWrap extends UnistNode {
+export interface ResourceWrap extends Element {
   type: 'element'
   name: 'resourceWrap'
   attributes: {
@@ -9148,7 +9149,7 @@ export interface ResourceWrapChildrenMap {
   resourceName: ResourceName
 }
 
-export interface Response extends UnistNode {
+export interface Response extends Element {
   type: 'element'
   name: 'response'
   attributes: {
@@ -9174,7 +9175,7 @@ export interface ResponseChildrenMap {
   processingMeta?: ProcessingMeta
 }
 
-export interface RestrictedBy extends UnistNode {
+export interface RestrictedBy extends Element {
   type: 'element'
   name: 'restrictedBy'
   attributes: {
@@ -9190,7 +9191,7 @@ export interface RestrictedBy extends UnistNode {
   children: []
 }
 
-export interface Role extends UnistNode {
+export interface Role extends Element {
   type: 'element'
   name: 'role'
   attributes: {
@@ -9213,7 +9214,7 @@ export interface RoleChildrenMap {
   content: SimpleTextContent[]
 }
 
-export interface Roman extends UnistNode {
+export interface Roman extends Element {
   type: 'element'
   name: 'roman'
   attributes: {
@@ -9301,7 +9302,7 @@ export interface RomanChildrenMap {
 
 type RomanTypeToggle = 'no' | 'yes'
 
-export interface Rp extends UnistNode {
+export interface Rp extends Element {
   type: 'element'
   name: 'rp'
   attributes: {
@@ -9310,7 +9311,7 @@ export interface Rp extends UnistNode {
   children: []
 }
 
-export interface Rt extends UnistNode {
+export interface Rt extends Element {
   type: 'element'
   name: 'rt'
   attributes: {
@@ -9325,7 +9326,7 @@ export interface RtChildrenMap {
   text?: Text
 }
 
-export interface Ruby extends UnistNode {
+export interface Ruby extends Element {
   type: 'element'
   name: 'ruby'
   attributes: {
@@ -9344,7 +9345,7 @@ export interface RubyChildrenMap {
   rt: Rt
 }
 
-export interface SansSerif extends UnistNode {
+export interface SansSerif extends Element {
   type: 'element'
   name: 'sansSerif'
   attributes: {
@@ -9432,7 +9433,7 @@ export interface SansSerifChildrenMap {
 
 type SansSerifTypeToggle = 'no' | 'yes'
 
-export interface Sc extends UnistNode {
+export interface Sc extends Element {
   type: 'element'
   name: 'sc'
   attributes: {
@@ -9520,7 +9521,7 @@ export interface ScChildrenMap {
 
 type ScTypeToggle = 'no' | 'yes'
 
-export interface Season extends UnistNode {
+export interface Season extends Element {
   type: 'element'
   name: 'season'
   attributes: {
@@ -9535,7 +9536,7 @@ export interface SeasonChildrenMap {
   text?: Text
 }
 
-export interface SecMeta extends UnistNode {
+export interface SecMeta extends Element {
   type: 'element'
   name: 'secMeta'
   attributes: {
@@ -9558,7 +9559,7 @@ export interface SecMetaChildrenMap {
   subjGroup?: SubjGroup[]
 }
 
-export interface Sec extends UnistNode {
+export interface Sec extends Element {
   type: 'element'
   name: 'sec'
   attributes: {
@@ -9652,7 +9653,7 @@ export interface SecChildrenMap {
   verseGroup?: VerseGroup[]
 }
 
-export interface SeeAlso extends UnistNode {
+export interface SeeAlso extends Element {
   type: 'element'
   name: 'seeAlso'
   attributes: {
@@ -9758,7 +9759,7 @@ export interface SeeAlsoChildrenMap {
   xref?: Xref[]
 }
 
-export interface See extends UnistNode {
+export interface See extends Element {
   type: 'element'
   name: 'see'
   attributes: {
@@ -9860,7 +9861,7 @@ export interface SeeChildrenMap {
   xref?: Xref[]
 }
 
-export interface SelfUri extends UnistNode {
+export interface SelfUri extends Element {
   type: 'element'
   name: 'selfUri'
   attributes: {
@@ -9877,7 +9878,7 @@ export interface SelfUriChildrenMap {
   text?: Text
 }
 
-export interface SeriesText extends UnistNode {
+export interface SeriesText extends Element {
   type: 'element'
   name: 'seriesText'
   attributes: {
@@ -9894,7 +9895,7 @@ export interface SeriesTextChildrenMap {
   content: SimpleTextContent[]
 }
 
-export interface SeriesTitle extends UnistNode {
+export interface SeriesTitle extends Element {
   type: 'element'
   name: 'seriesTitle'
   attributes: {
@@ -9911,7 +9912,7 @@ export interface SeriesTitleChildrenMap {
   content: SimpleTextContent[]
 }
 
-export interface Series extends UnistNode {
+export interface Series extends Element {
   type: 'element'
   name: 'series'
   attributes: {
@@ -9928,7 +9929,7 @@ export interface SeriesChildrenMap {
   content: SimpleTextContent[]
 }
 
-export interface SigBlock extends UnistNode {
+export interface SigBlock extends Element {
   type: 'element'
   name: 'sigBlock'
   attributes: {
@@ -9990,7 +9991,7 @@ export interface SigBlockChildrenMap {
   underline?: Underline[]
 }
 
-export interface Sig extends UnistNode {
+export interface Sig extends Element {
   type: 'element'
   name: 'sig'
   attributes: {
@@ -10048,7 +10049,7 @@ export interface SigChildrenMap {
   underline?: Underline[]
 }
 
-export interface Size extends UnistNode {
+export interface Size extends Element {
   type: 'element'
   name: 'size'
   attributes: {
@@ -10059,7 +10060,7 @@ export interface Size extends UnistNode {
   children: []
 }
 
-export interface Source extends UnistNode {
+export interface Source extends Element {
   type: 'element'
   name: 'source'
   attributes: {
@@ -10132,7 +10133,7 @@ export interface SourceChildrenMap {
   xref?: Xref[]
 }
 
-export interface Speaker extends UnistNode {
+export interface Speaker extends Element {
   type: 'element'
   name: 'speaker'
   attributes: {
@@ -10163,7 +10164,7 @@ export interface SpeakerChildrenMap {
   xref?: Xref[]
 }
 
-export interface Speech extends UnistNode {
+export interface Speech extends Element {
   type: 'element'
   name: 'speech'
   attributes: {
@@ -10184,7 +10185,7 @@ export interface SpeechChildrenMap {
   speaker: Speaker
 }
 
-export interface Statement extends UnistNode {
+export interface Statement extends Element {
   type: 'element'
   name: 'statement'
   attributes: {
@@ -10216,7 +10217,7 @@ export interface StatementChildrenMap {
   title?: Title
 }
 
-export interface State extends UnistNode {
+export interface State extends Element {
   type: 'element'
   name: 'state'
   attributes: {
@@ -10231,7 +10232,7 @@ export interface StateChildrenMap {
   text?: Text
 }
 
-export interface StdOrganization extends UnistNode {
+export interface StdOrganization extends Element {
   type: 'element'
   name: 'stdOrganization'
   attributes: {
@@ -10254,7 +10255,7 @@ export interface StdOrganizationChildrenMap {
   sup?: Sup[]
 }
 
-export interface Std extends UnistNode {
+export interface Std extends Element {
   type: 'element'
   name: 'std'
   attributes: {
@@ -10317,7 +10318,7 @@ export interface StdChildrenMap {
   year?: Year[]
 }
 
-export interface Strike extends UnistNode {
+export interface Strike extends Element {
   type: 'element'
   name: 'strike'
   attributes: {
@@ -10405,7 +10406,7 @@ export interface StrikeChildrenMap {
 
 type StrikeTypeToggle = 'no' | 'yes'
 
-export interface StringConf extends UnistNode {
+export interface StringConf extends Element {
   type: 'element'
   name: 'stringConf'
   attributes: {
@@ -10488,7 +10489,7 @@ export interface StringConfChildrenMap {
   underline?: Underline[]
 }
 
-export interface StringDate extends UnistNode {
+export interface StringDate extends Element {
   type: 'element'
   name: 'stringDate'
   attributes: {
@@ -10515,7 +10516,7 @@ export interface StringDateChildrenMap {
   year?: Year[]
 }
 
-export interface StringName extends UnistNode {
+export interface StringName extends Element {
   type: 'element'
   name: 'stringName'
   text?: Text
@@ -10542,7 +10543,7 @@ export interface StringNameChildrenMap {
 
 type StringNameTypeNameStyle = 'eastern' | 'given-only' | 'islensk' | 'western'
 
-export interface StyledContent extends UnistNode {
+export interface StyledContent extends Element {
   type: 'element'
   name: 'styledContent'
   attributes: {
@@ -10690,7 +10691,7 @@ export interface StyledContentChildrenMap {
 
 type StyledtextToggle = 'no' | 'yes'
 
-export interface SubArticle extends UnistNode {
+export interface SubArticle extends Element {
   type: 'element'
   name: 'subArticle'
   attributes: {
@@ -10720,7 +10721,7 @@ export interface SubArticleChildrenMap {
   subArticle?: SubArticle[]
 }
 
-export interface Subject extends UnistNode {
+export interface Subject extends Element {
   type: 'element'
   name: 'subject'
   attributes: {
@@ -10781,7 +10782,7 @@ export interface SubjectChildrenMap {
   underline?: Underline[]
 }
 
-export interface SubjGroup extends UnistNode {
+export interface SubjGroup extends Element {
   type: 'element'
   name: 'subjGroup'
   attributes: {
@@ -10803,7 +10804,7 @@ export interface SubjGroupChildrenMap {
   subject: Subject[]
 }
 
-export interface Subtitle extends UnistNode {
+export interface Subtitle extends Element {
   type: 'element'
   name: 'subtitle'
   attributes: {
@@ -10892,7 +10893,7 @@ export interface SubtitleChildrenMap {
   xref?: Xref[]
 }
 
-export interface Sub extends UnistNode {
+export interface Sub extends Element {
   type: 'element'
   name: 'sub'
   attributes: {
@@ -10981,7 +10982,7 @@ export interface SubChildrenMap {
 
 type SubTypeArrange = 'stack' | 'stagger'
 
-export interface Suffix extends UnistNode {
+export interface Suffix extends Element {
   type: 'element'
   name: 'suffix'
   attributes: {
@@ -10996,7 +10997,7 @@ export interface SuffixChildrenMap {
   text?: Text
 }
 
-export interface SupplementaryMaterial extends UnistNode {
+export interface SupplementaryMaterial extends Element {
   type: 'element'
   name: 'supplementaryMaterial'
   attributes: {
@@ -11080,7 +11081,7 @@ type SupplementaryMaterialTypeOrientation = 'landscape' | 'portrait'
 
 type SupplementaryMaterialTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
-export interface Supplement extends UnistNode {
+export interface Supplement extends Element {
   type: 'element'
   name: 'supplement'
   attributes: {
@@ -11150,7 +11151,7 @@ export interface SupplementChildrenMap {
   underline?: Underline[]
 }
 
-export interface SupportDescription extends UnistNode {
+export interface SupportDescription extends Element {
   type: 'element'
   name: 'supportDescription'
   attributes: {
@@ -11166,7 +11167,7 @@ export interface SupportDescriptionChildrenMap {
   p: P[]
 }
 
-export interface SupportGroup extends UnistNode {
+export interface SupportGroup extends Element {
   type: 'element'
   name: 'supportGroup'
   attributes: {
@@ -11183,7 +11184,7 @@ export interface SupportGroupChildrenMap {
   fundingGroup?: FundingGroup[]
 }
 
-export interface SupportSource extends UnistNode {
+export interface SupportSource extends Element {
   type: 'element'
   name: 'supportSource'
   attributes: {
@@ -11256,7 +11257,7 @@ export interface SupportSourceChildrenMap {
   underline?: Underline[]
 }
 
-export interface Sup extends UnistNode {
+export interface Sup extends Element {
   type: 'element'
   name: 'sup'
   attributes: {
@@ -11343,7 +11344,7 @@ export interface SupChildrenMap {
 }
 
 type SupTypeArrange = 'stack' | 'stagger'
-export interface Surname extends UnistNode {
+export interface Surname extends Element {
   type: 'element'
   name: 'surname'
   attributes: {
@@ -11353,7 +11354,7 @@ export interface Surname extends UnistNode {
   children: Text[]
 }
 
-export interface TableCount extends UnistNode {
+export interface TableCount extends Element {
   type: 'element'
   name: 'tableCount'
   attributes: {
@@ -11363,7 +11364,7 @@ export interface TableCount extends UnistNode {
   children: []
 }
 
-export interface Table extends UnistNode {
+export interface Table extends Element {
   type: 'element'
   name: 'table'
   text?: Text
@@ -11405,7 +11406,7 @@ type TableTypeFrame =
 
 type TableTypeRules = 'all' | 'cols' | 'groups' | 'none' | 'rows'
 
-export interface TableWrapfoot extends UnistNode {
+export interface TableWrapfoot extends Element {
   type: 'element'
   name: 'tableWrapfoot'
   attributes: {
@@ -11429,7 +11430,7 @@ export interface TableWrapfootChildrenMap {
   title?: Title
 }
 
-export interface TableWrapgroup extends UnistNode {
+export interface TableWrapgroup extends Element {
   type: 'element'
   name: 'tableWrapgroup'
   attributes: {
@@ -11474,7 +11475,7 @@ type TableWrapgroupTypeOrientation = 'landscape' | 'portrait'
 
 type TableWrapgroupTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
-export interface TableWrap extends UnistNode {
+export interface TableWrap extends Element {
   type: 'element'
   name: 'tableWrap'
   attributes: {
@@ -11551,7 +11552,7 @@ type TableWrapTypeOrientation = 'landscape' | 'portrait'
 
 type TableWrapTypePosition = 'anchor' | 'background' | 'float' | 'margin'
 
-export interface Target extends UnistNode {
+export interface Target extends Element {
   type: 'element'
   name: 'target'
   attributes: {
@@ -11567,7 +11568,7 @@ export interface TargetChildrenMap {
   content: SimpleTextContent[]
 }
 
-export interface Tbody extends UnistNode {
+export interface Tbody extends Element {
   type: 'element'
   name: 'tbody'
   attributes: {
@@ -11589,9 +11590,9 @@ export interface TbodyChildrenMap {
 
 type TbodyTypeAlign = 'center' | 'char' | 'justify' | 'left' | 'right'
 
-type TbodyTypeValign = 'UnistNodeline' | 'bottom' | 'middle' | 'top'
+type TbodyTypeValign = 'Elementline' | 'bottom' | 'middle' | 'top'
 
-export interface Td extends UnistNode {
+export interface Td extends Element {
   type: 'element'
   name: 'td'
   attributes: {
@@ -11744,9 +11745,9 @@ type TdTypeAlign = 'center' | 'char' | 'justify' | 'left' | 'right'
 
 type TdTypeScope = 'col' | 'colgroup' | 'row' | 'rowgroup'
 
-type TdTypeValign = 'UnistNodeline' | 'bottom' | 'middle' | 'top'
+type TdTypeValign = 'Elementline' | 'bottom' | 'middle' | 'top'
 
-export interface TermHead extends UnistNode {
+export interface TermHead extends Element {
   type: 'element'
   name: 'termHead'
   attributes: {
@@ -11830,7 +11831,7 @@ export interface TermHeadChildrenMap {
   xref?: Xref[]
 }
 
-export interface Term extends UnistNode {
+export interface Term extends Element {
   type: 'element'
   name: 'term'
   attributes: {
@@ -11936,7 +11937,7 @@ export interface TermChildrenMap {
   xref?: Xref[]
 }
 
-export interface TexMath extends UnistNode {
+export interface TexMath extends Element {
   type: 'element'
   name: 'texMath'
   attributes: {
@@ -11955,7 +11956,7 @@ export interface TexMathChildrenMap {
 
 type TexMathTypeNotation = 'LaTeX' | 'TEX' | 'TeX' | 'tex'
 
-export interface TextualForm extends UnistNode {
+export interface TextualForm extends Element {
   type: 'element'
   name: 'textualForm'
   attributes: {
@@ -12006,7 +12007,7 @@ export interface TextualFormChildrenMap {
   underline?: Underline[]
 }
 
-export interface Tfoot extends UnistNode {
+export interface Tfoot extends Element {
   type: 'element'
   name: 'tfoot'
   align?: TfootTypeAlign
@@ -12028,9 +12029,9 @@ export interface TfootChildrenMap {
 
 type TfootTypeAlign = 'center' | 'char' | 'justify' | 'left' | 'right'
 
-type TfootTypeValign = 'UnistNodeline' | 'bottom' | 'middle' | 'top'
+type TfootTypeValign = 'Elementline' | 'bottom' | 'middle' | 'top'
 
-export interface Thead extends UnistNode {
+export interface Thead extends Element {
   type: 'element'
   name: 'thead'
   attributes: {
@@ -12052,9 +12053,9 @@ export interface TheadChildrenMap {
 
 type TheadTypeAlign = 'center' | 'char' | 'justify' | 'left' | 'right'
 
-type TheadTypeValign = 'UnistNodeline' | 'bottom' | 'middle' | 'top'
+type TheadTypeValign = 'Elementline' | 'bottom' | 'middle' | 'top'
 
-export interface Th extends UnistNode {
+export interface Th extends Element {
   type: 'element'
   name: 'th'
   attributes: {
@@ -12208,9 +12209,9 @@ type ThTypeAlign = 'center' | 'char' | 'justify' | 'left' | 'right'
 
 type ThTypeScope = 'col' | 'colgroup' | 'row' | 'rowgroup'
 
-type ThTypeValign = 'UnistNodeline' | 'bottom' | 'middle' | 'top'
+type ThTypeValign = 'Elementline' | 'bottom' | 'middle' | 'top'
 
-export interface TimeStamp extends UnistNode {
+export interface TimeStamp extends Element {
   type: 'element'
   name: 'timeStamp'
   attributes: {
@@ -12225,7 +12226,7 @@ export interface TimeStampChildrenMap {
   text?: Text
 }
 
-export interface TitleGroup extends UnistNode {
+export interface TitleGroup extends Element {
   type: 'element'
   name: 'titleGroup'
   attributes: {
@@ -12247,7 +12248,7 @@ export interface TitleGroupChildrenMap {
   transTitlegroup?: TransTitlegroup[]
 }
 
-export interface Title extends UnistNode {
+export interface Title extends Element {
   type: 'element'
   name: 'title'
   attributes: {
@@ -12344,7 +12345,7 @@ export interface TitleChildrenMap {
   xref?: Xref[]
 }
 
-export interface TransAbstract extends UnistNode {
+export interface TransAbstract extends Element {
   type: 'element'
   name: 'transAbstract'
   attributes: {
@@ -12368,7 +12369,7 @@ export interface TransAbstractChildrenMap {
   title?: Title
 }
 
-export interface TransSource extends UnistNode {
+export interface TransSource extends Element {
   type: 'element'
   name: 'transSource'
   attributes: {
@@ -12441,7 +12442,7 @@ export interface TransSourceChildrenMap {
   xref?: Xref[]
 }
 
-export interface TransSubtitle extends UnistNode {
+export interface TransSubtitle extends Element {
   type: 'element'
   name: 'transSubtitle'
   attributes: {
@@ -12528,7 +12529,7 @@ export interface TransSubtitleChildrenMap {
   xref?: Xref[]
 }
 
-export interface TransTitlegroup extends UnistNode {
+export interface TransTitlegroup extends Element {
   type: 'element'
   name: 'transTitlegroup'
   attributes: {
@@ -12547,7 +12548,7 @@ export interface TransTitlegroupChildrenMap {
   transTitle: TransTitle
 }
 
-export interface TransTitle extends UnistNode {
+export interface TransTitle extends Element {
   type: 'element'
   name: 'transTitle'
   attributes: {
@@ -12636,7 +12637,7 @@ export interface TransTitleChildrenMap {
   xref?: Xref[]
 }
 
-export interface Tr extends UnistNode {
+export interface Tr extends Element {
   type: 'element'
   name: 'tr'
   attributes: {
@@ -12659,9 +12660,9 @@ export interface TrChildrenMap {
 
 type TrTypeAlign = 'center' | 'char' | 'justify' | 'left' | 'right'
 
-type TrTypeValign = 'UnistNodeline' | 'bottom' | 'middle' | 'top'
+type TrTypeValign = 'Elementline' | 'bottom' | 'middle' | 'top'
 
-export interface UnderlineEnd extends UnistNode {
+export interface UnderlineEnd extends Element {
   type: 'element'
   name: 'underlineEnd'
   attributes: {
@@ -12672,7 +12673,7 @@ export interface UnderlineEnd extends UnistNode {
   children: []
 }
 
-export interface UnderlineStart extends UnistNode {
+export interface UnderlineStart extends Element {
   type: 'element'
   name: 'underlineStart'
   attributes: {
@@ -12682,7 +12683,7 @@ export interface UnderlineStart extends UnistNode {
   children: []
 }
 
-export interface Underline extends UnistNode {
+export interface Underline extends Element {
   type: 'element'
   name: 'underline'
   attributes: {
@@ -12772,7 +12773,7 @@ export interface UnderlineChildrenMap {
 
 type UnderlineTypeToggle = 'no' | 'yes'
 
-export interface UnstructuredKwdgroup extends UnistNode {
+export interface UnstructuredKwdgroup extends Element {
   type: 'element'
   name: 'unstructuredKwdgroup'
   attributes: {
@@ -12786,7 +12787,7 @@ export interface UnstructuredKwdgroup extends UnistNode {
   children: []
 }
 
-export interface Uri extends UnistNode {
+export interface Uri extends Element {
   type: 'element'
   name: 'uri'
   attributes: {
@@ -12803,7 +12804,7 @@ export interface UriChildrenMap {
   text?: Text
 }
 
-export interface VerseGroup extends UnistNode {
+export interface VerseGroup extends Element {
   type: 'element'
   name: 'verseGroup'
   attributes: {
@@ -12835,7 +12836,7 @@ export interface VerseGroupChildrenMap {
   verseLine: VerseLine[]
 }
 
-export interface VerseLine extends UnistNode {
+export interface VerseLine extends Element {
   type: 'element'
   name: 'verseLine'
   attributes: {
@@ -12912,7 +12913,7 @@ export interface VerseLineChildrenMap {
   xref?: Xref[]
 }
 
-export interface Version extends UnistNode {
+export interface Version extends Element {
   type: 'element'
   name: 'version'
   attributes: {
@@ -12932,7 +12933,7 @@ export interface VersionChildrenMap {
   sup?: Sup[]
 }
 
-export interface VolumeId extends UnistNode {
+export interface VolumeId extends Element {
   type: 'element'
   name: 'volumeId'
   attributes: {
@@ -12950,7 +12951,7 @@ export interface VolumeIdChildrenMap {
   text?: Text
 }
 
-export interface VolumeIssuegroup extends UnistNode {
+export interface VolumeIssuegroup extends Element {
   type: 'element'
   name: 'volumeIssuegroup'
   attributes: {
@@ -12983,7 +12984,7 @@ export interface VolumeIssuegroupChildrenMap {
   volumeSeries?: VolumeSeries
 }
 
-export interface VolumeSeries extends UnistNode {
+export interface VolumeSeries extends Element {
   type: 'element'
   name: 'volumeSeries'
   attributes: {
@@ -12998,7 +12999,7 @@ export interface VolumeSeriesChildrenMap {
   text?: Text
 }
 
-export interface Volume extends UnistNode {
+export interface Volume extends Element {
   type: 'element'
   name: 'volume'
   attributes: {
@@ -13014,7 +13015,7 @@ export interface VolumeChildrenMap {
   text?: Text
 }
 
-export interface WordCount extends UnistNode {
+export interface WordCount extends Element {
   type: 'element'
   name: 'wordCount'
   attributes: {
@@ -13024,7 +13025,7 @@ export interface WordCount extends UnistNode {
   children: []
 }
 
-export interface Xref extends UnistNode {
+export interface Xref extends Element {
   type: 'element'
   name: 'xref'
   attributes: {
@@ -13071,7 +13072,7 @@ type XrefTypeRefType =
   | 'table'
   | 'table-fn'
 
-export interface X extends UnistNode {
+export interface X extends Element {
   type: 'element'
   name: 'x'
   attributes: {
@@ -13086,7 +13087,7 @@ export interface XChildrenMap {
   text?: Text
 }
 
-export interface Year extends UnistNode {
+export interface Year extends Element {
   type: 'element'
   name: 'year'
   attributes: {

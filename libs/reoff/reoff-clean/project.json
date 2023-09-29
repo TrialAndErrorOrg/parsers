@@ -36,7 +36,6 @@
         "packageJson": "libs/reoff/reoff-clean/package.json",
         "main": "libs/reoff/reoff-clean/src/index.ts",
         "assets": ["libs/reoff/reoff-clean/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

@@ -17,7 +17,6 @@
         "packageJson": "libs/reoff/reoff-infer-headings/package.json",
         "main": "libs/reoff/reoff-infer-headings/src/index.ts",
         "assets": ["libs/reoff/reoff-infer-headings/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

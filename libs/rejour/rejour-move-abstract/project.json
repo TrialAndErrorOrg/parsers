@@ -36,7 +36,6 @@
         "packageJson": "libs/rejour/rejour-move-abstract/package.json",
         "main": "libs/rejour/rejour-move-abstract/src/index.ts",
         "assets": ["libs/rejour/rejour-move-abstract/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

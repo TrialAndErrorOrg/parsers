@@ -36,7 +36,6 @@
         "packageJson": "libs/citations/parse-text-cite/package.json",
         "main": "libs/citations/parse-text-cite/src/index.ts",
         "assets": ["libs/citations/parse-text-cite/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

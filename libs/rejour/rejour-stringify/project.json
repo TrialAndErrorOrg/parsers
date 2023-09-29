@@ -36,7 +36,6 @@
         "packageJson": "libs/rejour/rejour-stringify/package.json",
         "main": "libs/rejour/rejour-stringify/src/index.ts",
         "assets": ["libs/rejour/rejour-stringify/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

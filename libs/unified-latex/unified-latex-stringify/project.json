@@ -17,7 +17,6 @@
         "packageJson": "libs/unified-latex/unified-latex-stringify/package.json",
         "main": "libs/unified-latex/unified-latex-stringify/src/index.ts",
         "assets": ["libs/unified-latex/unified-latex-stringify/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

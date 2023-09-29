@@ -36,7 +36,6 @@
         "packageJson": "libs/reoff/reoff-unified-latex/package.json",
         "main": "libs/reoff/reoff-unified-latex/src/index.ts",
         "assets": ["libs/reoff/reoff-unified-latex/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

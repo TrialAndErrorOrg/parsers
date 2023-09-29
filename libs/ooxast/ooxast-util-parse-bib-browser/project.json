@@ -36,7 +36,6 @@
         "packageJson": "libs/ooxast/ooxast-util-parse-bib-browser/package.json",
         "main": "libs/ooxast/ooxast-util-parse-bib-browser/src/index.ts",
         "assets": ["libs/ooxast/ooxast-util-parse-bib-browser/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

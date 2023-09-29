@@ -36,7 +36,6 @@
         "packageJson": "libs/jast/jast-util-to-texast/package.json",
         "main": "libs/jast/jast-util-to-texast/src/index.ts",
         "assets": ["libs/jast/jast-util-to-texast/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

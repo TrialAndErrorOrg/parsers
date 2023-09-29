@@ -5,14 +5,34 @@
   "projectType": "library",
   "targets": {
     "build": {
-      "executor": "@nx/js:esbuild",
+      "executor": "@nx/esbuild:esbuild",
       "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/libs/utils/better-check-dependencies",
         "main": "libs/utils/better-check-dependencies/src/index.ts",
+        "outputPath": "dist/libs/utils/better-check-dependencies",
+        "outputFileName": "index.js",
+        "format": ["esm"],
+        "minify": false,
         "tsConfig": "libs/utils/better-check-dependencies/tsconfig.lib.json",
-        "assets": ["libs/utils/better-check-dependencies/*.md"]
-      }
+        "assets": [
+          {
+            "glob": "libs/utils/better-check-dependencies/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ],
+        "platform": "node"
+      },
+      "configurations": {
+        "development": {
+          "minify": false
+        },
+        "production": {
+          "minify": false
+        }
+      },
+      "dependsOn": []
     },
     "lint": {
       "executor": "@nx/linter:eslint",

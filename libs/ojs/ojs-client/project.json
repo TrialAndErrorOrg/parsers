@@ -33,7 +33,6 @@
         "packageJson": "libs/ojs/ojs-client/package.json",
         "main": "libs/ojs/ojs-client/src/index.ts",
         "assets": ["libs/ojs/ojs-client/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

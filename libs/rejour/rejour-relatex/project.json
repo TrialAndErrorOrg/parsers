@@ -36,7 +36,6 @@
         "packageJson": "libs/rejour/rejour-relatex/package.json",
         "main": "libs/rejour/rejour-relatex/src/index.ts",
         "assets": ["libs/rejour/rejour-relatex/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

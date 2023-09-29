@@ -36,7 +36,6 @@
         "packageJson": "libs/ooxast/ooxast-util-get-style/package.json",
         "main": "libs/ooxast/ooxast-util-get-style/src/index.ts",
         "assets": ["libs/ooxast/ooxast-util-get-style/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

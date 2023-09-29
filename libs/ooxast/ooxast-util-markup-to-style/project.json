@@ -17,7 +17,6 @@
         "packageJson": "libs/ooxast/ooxast-util-markup-to-style/package.json",
         "main": "libs/ooxast/ooxast-util-markup-to-style/src/index.ts",
         "assets": ["libs/ooxast/ooxast-util-markup-to-style/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

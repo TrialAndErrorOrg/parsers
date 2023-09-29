@@ -36,7 +36,6 @@
         "packageJson": "libs/rejour/rejour-parse/package.json",
         "main": "libs/rejour/rejour-parse/src/index.ts",
         "assets": ["libs/rejour/rejour-parse/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

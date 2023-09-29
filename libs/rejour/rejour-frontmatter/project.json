@@ -24,7 +24,6 @@
         "packageJson": "libs/rejour/rejour-frontmatter/package.json",
         "main": "libs/rejour/rejour-frontmatter/src/index.ts",
         "assets": ["libs/rejour/rejour-frontmatter/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

@@ -24,7 +24,6 @@
         "packageJson": "libs/jast/jast-util-to-csl/package.json",
         "main": "libs/jast/jast-util-to-csl/src/index.ts",
         "assets": ["libs/jast/jast-util-to-csl/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

@@ -36,7 +36,6 @@
         "packageJson": "libs/texast/texast/package.json",
         "main": "libs/texast/texast/src/index.ts",
         "assets": ["libs/texast/texast/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

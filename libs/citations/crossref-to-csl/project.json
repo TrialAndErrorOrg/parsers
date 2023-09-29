@@ -36,7 +36,6 @@
         "packageJson": "libs/citations/crossref-to-csl/package.json",
         "main": "libs/citations/crossref-to-csl/src/index.ts",
         "assets": ["libs/citations/crossref-to-csl/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

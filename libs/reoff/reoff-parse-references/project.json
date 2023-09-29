@@ -36,7 +36,6 @@
         "packageJson": "libs/reoff/reoff-parse-references/package.json",
         "main": "libs/reoff/reoff-parse-references/src/index.ts",
         "assets": ["libs/reoff/reoff-parse-references/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

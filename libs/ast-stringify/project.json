@@ -36,7 +36,6 @@
         "packageJson": "libs/ast-stringify/package.json",
         "main": "libs/ast-stringify/src/index.ts",
         "assets": ["libs/ast-stringify/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

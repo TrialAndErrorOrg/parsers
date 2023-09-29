@@ -17,7 +17,6 @@
         "packageJson": "libs/citations/reference-parser-chatgpt/package.json",
         "main": "libs/citations/reference-parser-chatgpt/src/index.ts",
         "assets": ["libs/citations/reference-parser-chatgpt/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

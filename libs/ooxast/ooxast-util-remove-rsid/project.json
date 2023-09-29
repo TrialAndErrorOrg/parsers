@@ -36,7 +36,6 @@
         "packageJson": "libs/ooxast/ooxast-util-remove-rsid/package.json",
         "main": "libs/ooxast/ooxast-util-remove-rsid/src/index.ts",
         "assets": ["libs/ooxast/ooxast-util-remove-rsid/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

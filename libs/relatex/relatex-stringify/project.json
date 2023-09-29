@@ -39,7 +39,6 @@
         "packageJson": "libs/relatex/relatex-stringify/package.json",
         "main": "libs/relatex/relatex-stringify/src/index.ts",
         "assets": ["libs/relatex/relatex-stringify/*.md"],
-
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

@@ -1,6 +1,6 @@
 {
   "name": "reoff-cite",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
@@ -36,10 +36,10 @@
     "/lib"
   ],
   "dependencies": {
-    "ooxast": "0.2.0",
-    "reoff-parse": "0.4.0",
-    "docx-to-vfile": "0.9.0",
-    "ooxast-util-citations": "0.3.0",
+    "ooxast": "0.3.0",
+    "reoff-parse": "0.5.0",
+    "docx-to-vfile": "0.10.0",
+    "ooxast-util-citations": "0.4.0",
     "vfile": "^5.3.7",
     "csl-json": "0.1.0",
     "unified": "^10.1.2"

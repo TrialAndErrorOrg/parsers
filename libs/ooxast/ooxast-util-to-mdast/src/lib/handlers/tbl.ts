@@ -3,7 +3,6 @@ import { Handle } from '../types.js'
 import { Tbl } from 'ooxast'
 import { toString } from 'xast-util-to-string'
 import { Table, Text } from 'mdast'
-import { table } from 'mdast-builder'
 
 export const tbl: Handle = (state: State, node: Tbl) => {
   // Ignore nested tables.
@@ -17,10 +16,12 @@ export const tbl: Handle = (state: State, node: Tbl) => {
   const contents = state.all(node)
   state.inTable = false
 
-  // const tableRows = node.children.filter((row) => 'name' in row && row.name === 'w:tr')
+  const result = {
+    type: 'table',
+    align: ['left'],
+    children: contents,
+  } as Table
 
-  // const colArg = [`@{} ${state.columnSeparator ? '| ' : ''}${columns} @{}`]
-  const result = table(['left'], contents) as Table
   state.patch(node, result)
   return result
 }

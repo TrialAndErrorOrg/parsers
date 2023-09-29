@@ -6,14 +6,14 @@
       "children": [
         {
           "type": "link",
+          "url": "https://github.com/TrialAndErrorOrg/parsers",
+          "title": null,
           "children": [
             {
               "type": "text",
               "value": "A link to some website"
             }
-          ],
-          "url": "https://github.com/TrialAndErrorOrg/parsers",
-          "title": ""
+          ]
         }
       ]
     },
@@ -24,8 +24,7 @@
           "type": "text",
           "value": "Heading"
         }
-      ],
-      "depth": 1
+      ]
     },
     {
       "type": "paragraph",

@@ -8,8 +8,7 @@
           "type": "text",
           "value": "Systemic Problems in Academia: The Positive Publication Bias and Solutions from a Human Factors Perspective "
         }
-      ],
-      "depth": 1
+      ]
     },
     {
       "type": "heading",
@@ -18,8 +17,7 @@
           "type": "text",
           "value": "1. Introduction"
         }
-      ],
-      "depth": 1
+      ]
     },
     {
       "type": "paragraph",
@@ -61,14 +59,14 @@
         },
         {
           "type": "link",
+          "url": "https://archive.jtrialerror.com/pub/failfast/release/3",
+          "title": null,
           "children": [
             {
               "type": "html",
               "value": "<u>[object Object]</u>"
             }
-          ],
-          "url": "https://archive.jtrialerror.com/pub/failfast/release/3",
-          "title": ""
+          ]
         },
         {
           "type": "text",
@@ -114,8 +112,7 @@
           "type": "text",
           "value": "2. Failure and Systems "
         }
-      ],
-      "depth": 1
+      ]
     },
     {
       "type": "paragraph",
@@ -185,8 +182,7 @@
           "type": "text",
           "value": ""
         }
-      ],
-      "depth": 1
+      ]
     },
     {
       "type": "heading",
@@ -195,8 +191,7 @@
           "type": "text",
           "value": "3. Obstacles to Failure"
         }
-      ],
-      "depth": 1
+      ]
     },
     {
       "type": "heading",
@@ -283,8 +278,7 @@
           "type": "text",
           "value": ""
         }
-      ],
-      "depth": 1
+      ]
     },
     {
       "type": "heading",
@@ -298,8 +292,7 @@
             }
           ]
         }
-      ],
-      "depth": 1
+      ]
     },
     {
       "type": "heading",
@@ -313,8 +306,7 @@
             }
           ]
         }
-      ],
-      "depth": 1
+      ]
     },
     {
       "type": "heading",
@@ -323,8 +315,7 @@
           "type": "text",
           "value": "3.1. Funding"
         }
-      ],
-      "depth": 2
+      ]
     },
     {
       "type": "paragraph",
@@ -377,8 +368,7 @@
           "type": "text",
           "value": ""
         }
-      ],
-      "depth": 2
+      ]
     },
     {
       "type": "paragraph",
@@ -484,8 +474,7 @@
             }
           ]
         }
-      ],
-      "depth": 2
+      ]
     },
     {
       "type": "paragraph",
@@ -560,8 +549,7 @@
           "type": "text",
           "value": ""
         }
-      ],
-      "depth": 1
+      ]
     },
     {
       "type": "heading",
@@ -592,8 +580,7 @@
             }
           ]
         }
-      ],
-      "depth": 1
+      ]
     },
     {
       "type": "paragraph",
@@ -677,8 +664,7 @@
           "type": "text",
           "value": ""
         }
-      ],
-      "depth": 1
+      ]
     },
     {
       "type": "heading",
@@ -687,8 +673,7 @@
           "type": "text",
           "value": "References "
         }
-      ],
-      "depth": 1
+      ]
     },
     {
       "type": "paragraph",
@@ -712,14 +697,14 @@
         },
         {
           "type": "link",
+          "url": "https://doi.org/10.1016/j.ress.2017.08.013",
+          "title": null,
           "children": [
             {
               "type": "text",
               "value": "https://doi.org/10.1016/j.ress.2017.08.013"
             }
-          ],
-          "url": "https://doi.org/10.1016/j.ress.2017.08.013",
-          "title": ""
+          ]
         },
         {
           "type": "text",
@@ -758,14 +743,14 @@
         },
         {
           "type": "link",
+          "url": "https://doi.org/10.1177%2F106480469600400404",
+          "title": null,
           "children": [
             {
               "type": "text",
               "value": "https://doi.org/10.1177/106480469600400404"
             }
-          ],
-          "url": "https://doi.org/10.1177%2F106480469600400404",
-          "title": ""
+          ]
         },
         {
           "type": "text",
@@ -848,14 +833,14 @@
         },
         {
           "type": "link",
+          "url": "https://time.com/5687473/boeing-737-alarm-system/",
+          "title": null,
           "children": [
             {
               "type": "html",
               "value": "<u>[object Object]</u>"
             }
-          ],
-          "url": "https://time.com/5687473/boeing-737-alarm-system/",
-          "title": ""
+          ]
         },
         {
           "type": "text",
@@ -889,14 +874,14 @@
         },
         {
           "type": "link",
+          "url": "https://doi.org/10.36850/ed2",
+          "title": null,
           "children": [
             {
               "type": "text",
               "value": "https://doi.org/10.36850/ed2"
             }
-          ],
-          "url": "https://doi.org/10.36850/ed2",
-          "title": ""
+          ]
         },
         {
           "type": "text",

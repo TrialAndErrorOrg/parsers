@@ -3,6 +3,9 @@
   "children": [
     {
       "type": "table",
+      "align": [
+        "left"
+      ],
       "children": [
         {
           "type": "tableRow",
@@ -113,8 +116,7 @@
           "type": "tableRow",
           "children": []
         }
-      ],
-      "align": ["left"]
+      ]
     }
   ]
 }

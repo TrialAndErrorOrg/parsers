@@ -1,10 +1,10 @@
-1.  Number one
+1. Number one
 
-2.  Two
+2. Two
 
-3.  Three
+3. Three
 
-    1.  Indent
+   1. Indent
 
 - Unordered
 
@@ -14,26 +14,20 @@
 
   - Indentatio
 
-1.  Continuing
+1. Continuing
 
-2.  Previous
+2. Previous
 
-3.  List
+3. List
 
-    1.  Indenting 4
+   1. Indenting 4 
 
-<!---->
+1) Going down to b
 
-1.  Going down to b
+   1. Indenting 1
 
-    1.  Indenting 1
+1. Going back to c
 
-<!---->
+1) Immediately starting other list
 
-1.  Going back to c
-
-<!---->
-
-1.  Immediately starting other list
-
-    - And another list
+   - And another list

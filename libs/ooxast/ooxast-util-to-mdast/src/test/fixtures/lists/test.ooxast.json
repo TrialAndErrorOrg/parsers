@@ -1592,7 +1592,9 @@
                     {
                       "type": "element",
                       "name": "w:t",
-                      "attributes": {},
+                      "attributes": {
+                        "xml:space": "preserve"
+                      },
                       "children": [
                         {
                           "type": "text",

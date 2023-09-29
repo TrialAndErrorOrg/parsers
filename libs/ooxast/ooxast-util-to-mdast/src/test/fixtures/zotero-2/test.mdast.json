@@ -795,8 +795,7 @@
           "type": "text",
           "value": "Methods"
         }
-      ],
-      "depth": 3
+      ]
     },
     {
       "type": "paragraph",
@@ -1686,8 +1685,7 @@
           "type": "text",
           "value": "Method"
         }
-      ],
-      "depth": 3
+      ]
     },
     {
       "type": "paragraph",
@@ -1782,8 +1780,7 @@
           "type": "text",
           "value": "Results"
         }
-      ],
-      "depth": 3
+      ]
     },
     {
       "type": "heading",
@@ -2000,8 +1997,7 @@
           "type": "text",
           "value": "= .92) significant (see Figure 2D). Thus, no carryover effects were observed. In addition, no other effects were significant. We again followed up the GLMM approach with the same Bayesian analysis. For Experiment 2, we found strong evidence for the null hypothesis (BF01 = 11.27) indicating that the data are 11.27 times more likely under the null hypothesis than under the hypothesized existence of a carryover effect for threat. "
         }
-      ],
-      "depth": 2
+      ]
     },
     {
       "type": "heading",
@@ -2015,8 +2011,7 @@
             }
           ]
         }
-      ],
-      "depth": 2
+      ]
     },
     {
       "type": "paragraph",
@@ -2251,14 +2246,14 @@
         },
         {
           "type": "link",
+          "url": "https://osf.io/7qhsj/?view_only=07b52294c1b647829644a833fc3d4883",
+          "title": null,
           "children": [
             {
               "type": "text",
               "value": "https://osf.io/7qhsj/?view_only=07b52294c1b647829644a833fc3d4883"
             }
-          ],
-          "url": "https://osf.io/7qhsj/?view_only=07b52294c1b647829644a833fc3d4883",
-          "title": ""
+          ]
         },
         {
           "type": "text",
@@ -2271,27 +2266,22 @@
       "children": [
         {
           "type": "image",
-          "children": [],
           "url": "media/image1.png"
         },
         {
           "type": "image",
-          "children": [],
           "url": "media/image2.png"
         },
         {
           "type": "image",
-          "children": [],
           "url": "media/image2.png"
         },
         {
           "type": "image",
-          "children": [],
           "url": "media/image3.png"
         },
         {
           "type": "image",
-          "children": [],
           "url": "media/image4.png"
         }
       ]
@@ -2345,7 +2335,6 @@
       "children": [
         {
           "type": "image",
-          "children": [],
           "url": "media/image5.png"
         }
       ]
@@ -3598,19 +3587,7 @@
             },
             {
               "type": "text",
-              "value": " "
-            },
-            {
-              "type": "text",
-              "value": "We also tested a model with a random slope for congruency x previous congruency x target location repetition interaction. Although "
-            },
-            {
-              "type": "text",
-              "value": "this"
-            },
-            {
-              "type": "text",
-              "value": " model fit our data better (AIC"
+              "value": " We also tested a model with a random slope for congruency x previous congruency x target location repetition interaction. Although this model fit our data better (AIC"
             },
             {
               "type": "html",
@@ -3626,23 +3603,7 @@
             },
             {
               "type": "text",
-              "value": " = -27133.846"
-            },
-            {
-              "type": "text",
-              "value": ";"
-            },
-            {
-              "type": "text",
-              "value": "models with smaller AIC values fit better), the significant levels of all the fixed effect"
-            },
-            {
-              "type": "text",
-              "value": "s"
-            },
-            {
-              "type": "text",
-              "value": " for this model was very similar to the one reported in the main text, where there was no significant carryover effect."
+              "value": " = -27133.846;models with smaller AIC values fit better), the significant levels of all the fixed effects for this model was very similar to the one reported in the main text, where there was no significant carryover effect."
             }
           ]
         }

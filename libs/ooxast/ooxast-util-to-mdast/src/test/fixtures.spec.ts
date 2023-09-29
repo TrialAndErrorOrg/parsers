@@ -42,11 +42,10 @@ const fromDocx = (
         'w:color',
       ],
     })
-    // .use(reoffParseReferences) // { mailto: 'support@trialanderror.org' })
-    // .use(reoffCite, { type: citationType || 'zotero', log: false })
-    // .use(() => (tree, vfile) => {
-    //   writeFileSync(join(path, 'test.ooxast.json'), JSON.stringify(removePosition(tree), null, 2))
-    // })
+    .use(() => (tree) => {
+      removePosition(tree)
+      writeFileSync(join(path, 'test.ooxast.json'), JSON.stringify(tree, null, 2))
+    })
     .use(remarkGfm)
     .use(remarkMath)
     .use(remarkCite, {})
@@ -57,11 +56,14 @@ const fromDocx = (
           bibliography: vfile.data.bibliography ?? [],
         }),
     )
-    .use(
-      () => (tree) =>
-        writeFileSync(join(path, 'test.mdast.json'), JSON.stringify(removePosition(tree), null, 2)),
-    )
-    .use(remarkStringify)
+    .use(() => (tree) => {
+      removePosition(tree)
+      writeFileSync(join(path, 'test.mdast.json'), JSON.stringify(tree, null, 2))
+    })
+    .use(remarkStringify, {
+      bullet: '-',
+      emphasis: '_',
+    })
 
 const fixtures = new URL('fixtures', import.meta.url).pathname
 const dir = readdirSync(fixtures)

@@ -3,8 +3,7 @@ import { select } from 'xast-util-select'
 import { State } from '../state.js'
 import { convertElement } from 'xast-util-is-element'
 import { toString } from 'xast-util-to-string'
-import { strong, emphasis, strike, html } from 'mdast-builder'
-import { Emphasis, HTML, Strong, Text } from 'mdast'
+import { Emphasis, Html, Strong, Text } from 'mdast'
 import { Delete } from 'mdast'
 import { Handle } from '../types.js'
 
@@ -49,28 +48,37 @@ export const r: Handle = (state: State, node: R) => {
   const formattedText = props.children.reduce((text, prop) => {
     switch (prop.name.replace(/\w+:/, '')) {
       case 'i':
-        text = emphasis(text) as Emphasis
+        text = { type: 'emphasis', children: Array.isArray(text) ? text : [text] } as Emphasis
         return text
       case 'b':
-        text = strong(text) as Strong
+        text = { type: 'strong', children: Array.isArray(text) ? text : [text] } as Strong
         return text
       case 'u':
-        text = html(`<u>${text}</u>`) as HTML
+        text = { type: 'html', value: `<u>${text}</u>` } as Html
         return text
       case 'strike':
       case 'dstrike':
-        text = strike(text) as Delete
+        text = {
+          type: 'delete',
+          children: Array.isArray(text) ? text : [text],
+        } as Delete
         return text
       case 'vertAlign':
         //if (!isVert(prop)) continue
         // @ts-expect-error aaaa
         if (prop.attributes['w:val'] === 'superscript') {
-          text = html(`<sup>${text}</sup>`) as HTML
+          text = {
+            type: 'html',
+            value: `<sup>${text}</sup>`,
+          } as Html
           return text
         }
         // @ts-expect-error aaaa
         if (prop.attributes['w:val'] === 'subscript') {
-          text = html(`<sub>${text}</sub>`) as HTML
+          text = {
+            type: 'html',
+            value: `<sub>${text}</sub>`,
+          } as Html
           return text
         }
         return text
@@ -126,6 +134,6 @@ export const r: Handle = (state: State, node: R) => {
       default:
         return text
     }
-  }, text as HTML | Emphasis | Strong | Delete | Text)
+  }, text as Html | Emphasis | Strong | Delete | Text)
   return formattedText
 }

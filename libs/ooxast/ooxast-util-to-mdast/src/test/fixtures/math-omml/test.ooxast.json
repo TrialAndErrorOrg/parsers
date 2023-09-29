@@ -56,7 +56,7 @@
               "name": "w:p",
               "attributes": {
                 "w14:paraId": "3096AC33",
-                "w14:textId": "0FAC138C"
+                "w14:textId": "26DFB882"
               },
               "children": [
                 {
@@ -102,1054 +102,951 @@
                       "children": [
                         {
                           "type": "element",
-                          "name": "m:r",
+                          "name": "m:nary",
                           "attributes": {},
                           "children": [
                             {
                               "type": "element",
-                              "name": "w:rPr",
+                              "name": "m:naryPr",
                               "attributes": {},
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
+                                  "name": "m:ctrlPr",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:rPr",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "w:rFonts",
+                                          "attributes": {
+                                            "w:ascii": "Cambria Math",
+                                            "w:hAnsi": "Cambria Math"
+                                          },
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "w:i",
+                                          "attributes": {},
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "w:color",
+                                          "attributes": {
+                                            "w:val": "000000",
+                                            "w:themeColor": "text1"
+                                          },
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "w:lang",
+                                          "attributes": {
+                                            "w:val": "en-US"
+                                          },
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "m:t",
+                              "name": "m:sub",
                               "attributes": {},
                               "children": [
                                 {
-                                  "type": "text",
-                                  "value": "\\"
+                                  "type": "element",
+                                  "name": "m:r",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:rPr",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "w:rFonts",
+                                          "attributes": {
+                                            "w:ascii": "Cambria Math",
+                                            "w:hAnsi": "Cambria Math"
+                                          },
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "w:color",
+                                          "attributes": {
+                                            "w:val": "000000",
+                                            "w:themeColor": "text1"
+                                          },
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "w:lang",
+                                          "attributes": {
+                                            "w:val": "en-US"
+                                          },
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "m:t",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "α"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "m:sup",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "m:r",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:rPr",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "w:rFonts",
+                                          "attributes": {
+                                            "w:ascii": "Cambria Math",
+                                            "w:hAnsi": "Cambria Math"
+                                          },
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "w:color",
+                                          "attributes": {
+                                            "w:val": "000000",
+                                            "w:themeColor": "text1"
+                                          },
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "w:lang",
+                                          "attributes": {
+                                            "w:val": "en-US"
+                                          },
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "m:t",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "β"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "element",
+                              "name": "m:e",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "m:f",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "m:fPr",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "m:ctrlPr",
+                                          "attributes": {},
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "w:rPr",
+                                              "attributes": {},
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "w:rFonts",
+                                                  "attributes": {
+                                                    "w:ascii": "Cambria Math",
+                                                    "w:hAnsi": "Cambria Math"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "w:i",
+                                                  "attributes": {},
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "w:color",
+                                                  "attributes": {
+                                                    "w:val": "000000",
+                                                    "w:themeColor": "text1"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "w:lang",
+                                                  "attributes": {
+                                                    "w:val": "en-US"
+                                                  },
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "m:num",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "m:r",
+                                          "attributes": {},
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "w:rPr",
+                                              "attributes": {},
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "w:rFonts",
+                                                  "attributes": {
+                                                    "w:ascii": "Cambria Math",
+                                                    "w:hAnsi": "Cambria Math"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "w:color",
+                                                  "attributes": {
+                                                    "w:val": "000000",
+                                                    "w:themeColor": "text1"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "w:lang",
+                                                  "attributes": {
+                                                    "w:val": "en-US"
+                                                  },
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "m:t",
+                                              "attributes": {},
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "∑"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "m:rad",
+                                          "attributes": {},
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "m:radPr",
+                                              "attributes": {},
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "m:degHide",
+                                                  "attributes": {
+                                                    "m:val": "1"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "m:ctrlPr",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "w:rPr",
+                                                      "attributes": {},
+                                                      "children": [
+                                                        {
+                                                          "type": "element",
+                                                          "name": "w:rFonts",
+                                                          "attributes": {
+                                                            "w:ascii": "Cambria Math",
+                                                            "w:hAnsi": "Cambria Math"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "type": "element",
+                                                          "name": "w:i",
+                                                          "attributes": {},
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "type": "element",
+                                                          "name": "w:color",
+                                                          "attributes": {
+                                                            "w:val": "000000",
+                                                            "w:themeColor": "text1"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "type": "element",
+                                                          "name": "w:lang",
+                                                          "attributes": {
+                                                            "w:val": "en-US"
+                                                          },
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "m:deg",
+                                              "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "m:e",
+                                              "attributes": {},
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "m:sSup",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "m:sSupPr",
+                                                      "attributes": {},
+                                                      "children": [
+                                                        {
+                                                          "type": "element",
+                                                          "name": "m:ctrlPr",
+                                                          "attributes": {},
+                                                          "children": [
+                                                            {
+                                                              "type": "element",
+                                                              "name": "w:rPr",
+                                                              "attributes": {},
+                                                              "children": [
+                                                                {
+                                                                  "type": "element",
+                                                                  "name": "w:rFonts",
+                                                                  "attributes": {
+                                                                    "w:ascii": "Cambria Math",
+                                                                    "w:hAnsi": "Cambria Math"
+                                                                  },
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "type": "element",
+                                                                  "name": "w:i",
+                                                                  "attributes": {},
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "type": "element",
+                                                                  "name": "w:color",
+                                                                  "attributes": {
+                                                                    "w:val": "000000",
+                                                                    "w:themeColor": "text1"
+                                                                  },
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "type": "element",
+                                                                  "name": "w:lang",
+                                                                  "attributes": {
+                                                                    "w:val": "en-US"
+                                                                  },
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "m:e",
+                                                      "attributes": {},
+                                                      "children": [
+                                                        {
+                                                          "type": "element",
+                                                          "name": "m:r",
+                                                          "attributes": {},
+                                                          "children": [
+                                                            {
+                                                              "type": "element",
+                                                              "name": "m:rPr",
+                                                              "attributes": {},
+                                                              "children": [
+                                                                {
+                                                                  "type": "element",
+                                                                  "name": "m:sty",
+                                                                  "attributes": {
+                                                                    "m:val": "p"
+                                                                  },
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "element",
+                                                              "name": "w:rPr",
+                                                              "attributes": {},
+                                                              "children": [
+                                                                {
+                                                                  "type": "element",
+                                                                  "name": "w:rFonts",
+                                                                  "attributes": {
+                                                                    "w:ascii": "Cambria Math",
+                                                                    "w:hAnsi": "Cambria Math"
+                                                                  },
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "type": "element",
+                                                                  "name": "w:color",
+                                                                  "attributes": {
+                                                                    "w:val": "000000",
+                                                                    "w:themeColor": "text1"
+                                                                  },
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "type": "element",
+                                                                  "name": "w:lang",
+                                                                  "attributes": {
+                                                                    "w:val": "en-US"
+                                                                  },
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "element",
+                                                              "name": "m:t",
+                                                              "attributes": {},
+                                                              "children": [
+                                                                {
+                                                                  "type": "text",
+                                                                  "value": "x"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "m:sup",
+                                                      "attributes": {},
+                                                      "children": [
+                                                        {
+                                                          "type": "element",
+                                                          "name": "m:r",
+                                                          "attributes": {},
+                                                          "children": [
+                                                            {
+                                                              "type": "element",
+                                                              "name": "w:rPr",
+                                                              "attributes": {},
+                                                              "children": [
+                                                                {
+                                                                  "type": "element",
+                                                                  "name": "w:rFonts",
+                                                                  "attributes": {
+                                                                    "w:ascii": "Cambria Math",
+                                                                    "w:hAnsi": "Cambria Math"
+                                                                  },
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "type": "element",
+                                                                  "name": "w:color",
+                                                                  "attributes": {
+                                                                    "w:val": "000000",
+                                                                    "w:themeColor": "text1"
+                                                                  },
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "type": "element",
+                                                                  "name": "w:lang",
+                                                                  "attributes": {
+                                                                    "w:val": "en-US"
+                                                                  },
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "element",
+                                                              "name": "m:t",
+                                                              "attributes": {},
+                                                              "children": [
+                                                                {
+                                                                  "type": "text",
+                                                                  "value": "2"
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "m:r",
+                                                  "attributes": {},
+                                                  "children": [
+                                                    {
+                                                      "type": "element",
+                                                      "name": "m:rPr",
+                                                      "attributes": {},
+                                                      "children": [
+                                                        {
+                                                          "type": "element",
+                                                          "name": "m:sty",
+                                                          "attributes": {
+                                                            "m:val": "p"
+                                                          },
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "w:rPr",
+                                                      "attributes": {},
+                                                      "children": [
+                                                        {
+                                                          "type": "element",
+                                                          "name": "w:rFonts",
+                                                          "attributes": {
+                                                            "w:ascii": "Cambria Math",
+                                                            "w:hAnsi": "Cambria Math"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "type": "element",
+                                                          "name": "w:color",
+                                                          "attributes": {
+                                                            "w:val": "000000",
+                                                            "w:themeColor": "text1"
+                                                          },
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "type": "element",
+                                                          "name": "w:lang",
+                                                          "attributes": {
+                                                            "w:val": "en-US"
+                                                          },
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "element",
+                                                      "name": "m:t",
+                                                      "attributes": {},
+                                                      "children": [
+                                                        {
+                                                          "type": "text",
+                                                          "value": "i"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "m:den",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "m:r",
+                                          "attributes": {},
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "w:rPr",
+                                              "attributes": {},
+                                              "children": [
+                                                {
+                                                  "type": "element",
+                                                  "name": "w:rFonts",
+                                                  "attributes": {
+                                                    "w:ascii": "Cambria Math",
+                                                    "w:hAnsi": "Cambria Math"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "w:color",
+                                                  "attributes": {
+                                                    "w:val": "000000",
+                                                    "w:themeColor": "text1"
+                                                  },
+                                                  "children": []
+                                                },
+                                                {
+                                                  "type": "element",
+                                                  "name": "w:lang",
+                                                  "attributes": {
+                                                    "w:val": "en-US"
+                                                  },
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "m:t",
+                                              "attributes": {},
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "value": "dx"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             }
                           ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "6FB60833",
+                "w14:textId": "0BCBC435"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "000000",
+                            "w:themeColor": "text1"
+                          },
+                          "children": []
                         },
                         {
                           "type": "element",
-                          "name": "m:r",
+                          "name": "w:lang",
+                          "attributes": {
+                            "w:val": "en-US"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "m:oMathPara",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "m:oMath",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "m:nary",
                           "attributes": {},
                           "children": [
                             {
                               "type": "element",
-                              "name": "m:rPr",
+                              "name": "m:naryPr",
                               "attributes": {},
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "m:sty",
+                                  "name": "m:chr",
                                   "attributes": {
-                                    "m:val": "p"
+                                    "m:val": "∬"
                                   },
                                   "children": []
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "m:limLoc",
+                                  "attributes": {
+                                    "m:val": "subSup"
+                                  },
+                                  "children": []
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "m:ctrlPr",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:rPr",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "w:rFonts",
+                                          "attributes": {
+                                            "w:ascii": "Cambria Math",
+                                            "w:hAnsi": "Cambria Math"
+                                          },
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "w:i",
+                                          "attributes": {},
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "w:color",
+                                          "attributes": {
+                                            "w:val": "000000",
+                                            "w:themeColor": "text1"
+                                          },
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "w:lang",
+                                          "attributes": {
+                                            "w:val": "en-US"
+                                          },
+                                          "children": []
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "w:rPr",
+                              "name": "m:sub",
                               "attributes": {},
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
+                                  "name": "m:r",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:rPr",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "w:rFonts",
+                                          "attributes": {
+                                            "w:ascii": "Cambria Math",
+                                            "w:hAnsi": "Cambria Math"
+                                          },
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "w:color",
+                                          "attributes": {
+                                            "w:val": "000000",
+                                            "w:themeColor": "text1"
+                                          },
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "w:lang",
+                                          "attributes": {
+                                            "w:val": "en-US"
+                                          },
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "m:t",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "ss"
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "m:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "int"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "m:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
+                              "name": "m:sup",
                               "attributes": {},
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "m:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "_{\\"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "m:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "m:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "m:sty",
-                                  "attributes": {
-                                    "m:val": "p"
-                                  },
-                                  "children": []
+                                  "name": "m:r",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:rPr",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "w:rFonts",
+                                          "attributes": {
+                                            "w:ascii": "Cambria Math",
+                                            "w:hAnsi": "Cambria Math"
+                                          },
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "w:color",
+                                          "attributes": {
+                                            "w:val": "000000",
+                                            "w:themeColor": "text1"
+                                          },
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "w:lang",
+                                          "attributes": {
+                                            "w:val": "en-US"
+                                          },
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "m:t",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "value": "atn"
+                                        }
+                                      ]
+                                    }
+                                  ]
                                 }
                               ]
                             },
                             {
                               "type": "element",
-                              "name": "w:rPr",
+                              "name": "m:e",
                               "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "m:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "alpha"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "m:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "m:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "}^{\\"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "m:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "m:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "m:sty",
-                                  "attributes": {
-                                    "m:val": "p"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "m:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "beta"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "m:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "m:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "}{\\"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "m:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "m:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "m:sty",
-                                  "attributes": {
-                                    "m:val": "p"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "m:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "frac"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "m:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "m:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "{\\"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "m:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "m:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "m:sty",
-                                  "attributes": {
-                                    "m:val": "p"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "m:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "sum"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "m:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "m:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "{\\"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "m:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "m:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "m:sty",
-                                  "attributes": {
-                                    "m:val": "p"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "m:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "sqrt"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "m:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "m:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "{\\"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "m:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "m:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "m:sty",
-                                  "attributes": {
-                                    "m:val": "p"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "m:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "left"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "m:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "m:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "("
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "m:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "m:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "m:sty",
-                                  "attributes": {
-                                    "m:val": "p"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "m:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "x"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "m:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "m:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "^2\\"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "m:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "m:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "m:sty",
-                                  "attributes": {
-                                    "m:val": "p"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "m:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "right"
-                                }
-                              ]
+                              "children": []
                             }
                           ]
                         },
@@ -1198,7 +1095,209 @@
                               "children": [
                                 {
                                   "type": "text",
-                                  "value": ")}"
+                                  "value": "ashtasht"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "element",
+              "name": "w:p",
+              "attributes": {
+                "w14:paraId": "1ABA7C66",
+                "w14:textId": "60324167"
+              },
+              "children": [
+                {
+                  "type": "element",
+                  "name": "w:pPr",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:rPr",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "w:color",
+                          "attributes": {
+                            "w:val": "000000",
+                            "w:themeColor": "text1"
+                          },
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "w:lang",
+                          "attributes": {
+                            "w:val": "en-US"
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:tab",
+                      "attributes": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:tab",
+                      "attributes": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:tab",
+                      "attributes": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:tab",
+                      "attributes": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:tab",
+                      "attributes": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "w:r",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "w:tab",
+                      "attributes": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "element",
+                  "name": "m:oMath",
+                  "attributes": {},
+                  "children": [
+                    {
+                      "type": "element",
+                      "name": "m:nary",
+                      "attributes": {},
+                      "children": [
+                        {
+                          "type": "element",
+                          "name": "m:naryPr",
+                          "attributes": {},
+                          "children": [
+                            {
+                              "type": "element",
+                              "name": "m:chr",
+                              "attributes": {
+                                "m:val": "∑"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "m:limLoc",
+                              "attributes": {
+                                "m:val": "undOvr"
+                              },
+                              "children": []
+                            },
+                            {
+                              "type": "element",
+                              "name": "m:ctrlPr",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "w:rPr",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:rFonts",
+                                      "attributes": {
+                                        "w:ascii": "Cambria Math",
+                                        "w:hAnsi": "Cambria Math"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "w:i",
+                                      "attributes": {},
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "w:color",
+                                      "attributes": {
+                                        "w:val": "000000",
+                                        "w:themeColor": "text1"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "w:lang",
+                                      "attributes": {
+                                        "w:val": "en-US"
+                                      },
+                                      "children": []
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -1206,65 +1305,57 @@
                         },
                         {
                           "type": "element",
-                          "name": "m:r",
+                          "name": "m:sub",
                           "attributes": {},
                           "children": [
                             {
                               "type": "element",
-                              "name": "m:rPr",
+                              "name": "m:r",
                               "attributes": {},
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "m:sty",
-                                  "attributes": {
-                                    "m:val": "p"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
+                                  "name": "w:rPr",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:rFonts",
+                                      "attributes": {
+                                        "w:ascii": "Cambria Math",
+                                        "w:hAnsi": "Cambria Math"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "w:color",
+                                      "attributes": {
+                                        "w:val": "000000",
+                                        "w:themeColor": "text1"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "w:lang",
+                                      "attributes": {
+                                        "w:val": "en-US"
+                                      },
+                                      "children": []
+                                    }
+                                  ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "m:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "i"
+                                  "name": "m:t",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "t"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -1272,50 +1363,57 @@
                         },
                         {
                           "type": "element",
-                          "name": "m:r",
+                          "name": "m:sup",
                           "attributes": {},
                           "children": [
                             {
                               "type": "element",
-                              "name": "w:rPr",
+                              "name": "m:r",
                               "attributes": {},
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
+                                  "name": "w:rPr",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:rFonts",
+                                      "attributes": {
+                                        "w:ascii": "Cambria Math",
+                                        "w:hAnsi": "Cambria Math"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "w:color",
+                                      "attributes": {
+                                        "w:val": "000000",
+                                        "w:themeColor": "text1"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "w:lang",
+                                      "attributes": {
+                                        "w:val": "en-US"
+                                      },
+                                      "children": []
+                                    }
+                                  ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "m:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "}}{"
+                                  "name": "m:t",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "s"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -1323,116 +1421,57 @@
                         },
                         {
                           "type": "element",
-                          "name": "m:r",
+                          "name": "m:e",
                           "attributes": {},
                           "children": [
                             {
                               "type": "element",
-                              "name": "m:rPr",
+                              "name": "m:r",
                               "attributes": {},
                               "children": [
                                 {
                                   "type": "element",
-                                  "name": "m:sty",
-                                  "attributes": {
-                                    "m:val": "p"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
+                                  "name": "w:rPr",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:rFonts",
+                                      "attributes": {
+                                        "w:ascii": "Cambria Math",
+                                        "w:hAnsi": "Cambria Math"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "w:color",
+                                      "attributes": {
+                                        "w:val": "000000",
+                                        "w:themeColor": "text1"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "w:lang",
+                                      "attributes": {
+                                        "w:val": "en-US"
+                                      },
+                                      "children": []
+                                    }
+                                  ]
                                 },
                                 {
                                   "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "m:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "dx"
-                                }
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "element",
-                          "name": "m:r",
-                          "attributes": {},
-                          "children": [
-                            {
-                              "type": "element",
-                              "name": "w:rPr",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "element",
-                                  "name": "w:rFonts",
-                                  "attributes": {
-                                    "w:ascii": "Cambria Math",
-                                    "w:hAnsi": "Cambria Math"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:color",
-                                  "attributes": {
-                                    "w:val": "000000",
-                                    "w:themeColor": "text1"
-                                  },
-                                  "children": []
-                                },
-                                {
-                                  "type": "element",
-                                  "name": "w:lang",
-                                  "attributes": {
-                                    "w:val": "en-US"
-                                  },
-                                  "children": []
-                                }
-                              ]
-                            },
-                            {
-                              "type": "element",
-                              "name": "m:t",
-                              "attributes": {},
-                              "children": [
-                                {
-                                  "type": "text",
-                                  "value": "}\\ }"
+                                  "name": "m:t",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "value": "t"
+                                    }
+                                  ]
                                 }
                               ]
                             }
@@ -1572,7 +1611,7 @@
               "name": "w:p",
               "attributes": {
                 "w14:paraId": "6171A920",
-                "w14:textId": "1378D8B5"
+                "w14:textId": "00EE0CB6"
               },
               "children": [
                 {
@@ -1631,50 +1670,270 @@
                   "children": [
                     {
                       "type": "element",
-                      "name": "m:r",
+                      "name": "m:nary",
                       "attributes": {},
                       "children": [
                         {
                           "type": "element",
-                          "name": "w:rPr",
+                          "name": "m:naryPr",
                           "attributes": {},
                           "children": [
                             {
                               "type": "element",
-                              "name": "w:rFonts",
+                              "name": "m:subHide",
                               "attributes": {
-                                "w:ascii": "Cambria Math",
-                                "w:hAnsi": "Cambria Math"
+                                "m:val": "1"
                               },
                               "children": []
                             },
                             {
                               "type": "element",
-                              "name": "w:color",
+                              "name": "m:supHide",
                               "attributes": {
-                                "w:val": "000000",
-                                "w:themeColor": "text1"
+                                "m:val": "1"
                               },
                               "children": []
                             },
                             {
                               "type": "element",
-                              "name": "w:lang",
-                              "attributes": {
-                                "w:val": "en-US"
-                              },
-                              "children": []
+                              "name": "m:ctrlPr",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "w:rPr",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "w:rFonts",
+                                      "attributes": {
+                                        "w:ascii": "Cambria Math",
+                                        "w:hAnsi": "Cambria Math"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "w:i",
+                                      "attributes": {},
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "w:color",
+                                      "attributes": {
+                                        "w:val": "000000",
+                                        "w:themeColor": "text1"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "type": "element",
+                                      "name": "w:lang",
+                                      "attributes": {
+                                        "w:val": "en-US"
+                                      },
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         },
                         {
                           "type": "element",
-                          "name": "m:t",
+                          "name": "m:sub",
+                          "attributes": {},
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "m:sup",
+                          "attributes": {},
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "name": "m:e",
                           "attributes": {},
                           "children": [
                             {
-                              "type": "text",
-                              "value": "\\int_a^b"
+                              "type": "element",
+                              "name": "m:sSup",
+                              "attributes": {},
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "name": "m:sSupPr",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "m:ctrlPr",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "w:rPr",
+                                          "attributes": {},
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "w:rFonts",
+                                              "attributes": {
+                                                "w:ascii": "Cambria Math",
+                                                "w:hAnsi": "Cambria Math"
+                                              },
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "w:i",
+                                              "attributes": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "w:color",
+                                              "attributes": {
+                                                "w:val": "000000",
+                                                "w:themeColor": "text1"
+                                              },
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "w:lang",
+                                              "attributes": {
+                                                "w:val": "en-US"
+                                              },
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "m:e",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "m:r",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "w:rPr",
+                                          "attributes": {},
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "w:rFonts",
+                                              "attributes": {
+                                                "w:ascii": "Cambria Math",
+                                                "w:hAnsi": "Cambria Math"
+                                              },
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "w:color",
+                                              "attributes": {
+                                                "w:val": "000000",
+                                                "w:themeColor": "text1"
+                                              },
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "w:lang",
+                                              "attributes": {
+                                                "w:val": "en-US"
+                                              },
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "m:t",
+                                          "attributes": {},
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "α"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "element",
+                                  "name": "m:sup",
+                                  "attributes": {},
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "name": "m:r",
+                                      "attributes": {},
+                                      "children": [
+                                        {
+                                          "type": "element",
+                                          "name": "w:rPr",
+                                          "attributes": {},
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "name": "w:rFonts",
+                                              "attributes": {
+                                                "w:ascii": "Cambria Math",
+                                                "w:hAnsi": "Cambria Math"
+                                              },
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "w:color",
+                                              "attributes": {
+                                                "w:val": "000000",
+                                                "w:themeColor": "text1"
+                                              },
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "element",
+                                              "name": "w:lang",
+                                              "attributes": {
+                                                "w:val": "en-US"
+                                              },
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "element",
+                                          "name": "m:t",
+                                          "attributes": {},
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "value": "β"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         }

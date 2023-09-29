@@ -3,7 +3,6 @@ import { Handle } from '../types.js'
 import { Hyperlink } from 'ooxast'
 import { toString } from 'xast-util-to-string'
 import { Link, Text } from 'mdast'
-import { link } from 'mdast-builder'
 
 export const hyperlink: Handle = (state: State, node: Hyperlink) => {
   const relId = node.attributes['r:id']
@@ -21,7 +20,12 @@ export const hyperlink: Handle = (state: State, node: Hyperlink) => {
   //   //
   // }
 
-  const result = link(rel, undefined, contents) as Link
+  const result = {
+    type: 'link',
+    url: rel,
+    title: null,
+    children: contents,
+  } as Link
   state.patch(node, result)
   return result
 }

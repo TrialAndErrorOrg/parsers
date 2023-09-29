@@ -2,7 +2,6 @@ import { Handle } from '../types.js'
 import { Drawing } from 'ooxast'
 import { select } from 'xast-util-select'
 import { State } from '../state.js'
-import { image } from 'mdast-builder'
 import { Image } from 'mdast'
 
 export const drawing: Handle = (state: State, node: Drawing) => {
@@ -18,12 +17,12 @@ export const drawing: Handle = (state: State, node: Drawing) => {
     return
   }
 
-  return image(state.relations[ref]) as Image
-  // return env('figure', [
-  //   m('caption', ''),
-  //   PB,
-  //   m('label', `fig:${ref}`),
-  //   PB,
-  //   m('includegraphics', state.relations[ref]),
-  // ])
+  const image = {
+    type: 'image',
+    url: state.relations[ref],
+  } as Image
+
+  state.patch(node, image)
+
+  return image
 }

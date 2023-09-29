@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.10.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.9.0...docx-to-vfile-0.10.0) (2023-09-29)
+
+
+### Features
+
+* update all package.json ([d4070e5](https://github.com/TrialAndErrorOrg/parsers/commit/d4070e53ab3389db11fed978f3f74bcfe6808f5e))
+
 ## [0.9.0](https://github.com/TrialAndErrorOrg/parsers/compare/docx-to-vfile-0.8.2...docx-to-vfile-0.9.0) (2023-09-22)
 
 

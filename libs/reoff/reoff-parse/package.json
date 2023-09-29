@@ -29,11 +29,11 @@
   "types": "./index.d.ts",
   "dependencies": {
     "docx-to-vfile": "0.10.0",
-    "xast-util-from-xml": "^3.0.0",
-    "unified": "^10.1.2",
-    "unist-util-filter": "^4.0.1",
-    "vfile": "^5.3.7",
-    "vfile-message": "^3.1.4",
-    "@types/xast": "^1.0.2"
+    "xast-util-from-xml": "^4.0.0",
+    "unified": "^11.0.3",
+    "unist-util-filter": "^5.0.1",
+    "vfile": "^6.0.1",
+    "vfile-message": "^4.0.2",
+    "@types/xast": "^2.0.1"
   }
 }

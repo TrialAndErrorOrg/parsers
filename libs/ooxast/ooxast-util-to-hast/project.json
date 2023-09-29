@@ -16,8 +16,7 @@
         "tsConfig": "libs/ooxast/ooxast-util-to-hast/tsconfig.lib.json",
         "packageJson": "libs/ooxast/ooxast-util-to-hast/package.json",
         "main": "libs/ooxast/ooxast-util-to-hast/src/index.ts",
-        "assets": ["libs/ooxast/ooxast-util-to-hast/*.md"],
-        "
+        "assets": ["libs/ooxast/ooxast-util-to-hast/*.md"]
       }
     },
     "lint": {

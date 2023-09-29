@@ -23,8 +23,7 @@
         "tsConfig": "libs/ooxast/ooxast-util-properties/tsconfig.lib.json",
         "packageJson": "libs/ooxast/ooxast-util-properties/package.json",
         "main": "libs/ooxast/ooxast-util-properties/src/index.ts",
-        "assets": ["libs/ooxast/ooxast-util-properties/*.md"],
-        "
+        "assets": ["libs/ooxast/ooxast-util-properties/*.md"]
       }
     },
     "test": {

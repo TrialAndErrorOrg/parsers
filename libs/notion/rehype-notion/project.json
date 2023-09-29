@@ -23,8 +23,7 @@
         "tsConfig": "libs/notion/rehype-notion/tsconfig.lib.json",
         "packageJson": "libs/notion/rehype-notion/package.json",
         "main": "libs/notion/rehype-notion/src/index.ts",
-        "assets": ["libs/notion/rehype-notion/*.md"],
-        "
+        "assets": ["libs/notion/rehype-notion/*.md"]
       }
     },
     "lint": {

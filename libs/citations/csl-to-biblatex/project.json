@@ -23,8 +23,7 @@
         "tsConfig": "libs/citations/csl-to-biblatex/tsconfig.lib.json",
         "packageJson": "libs/citations/csl-to-biblatex/package.json",
         "main": "libs/citations/csl-to-biblatex/src/index.ts",
-        "assets": ["libs/citations/csl-to-biblatex/*.md"],
-        "
+        "assets": ["libs/citations/csl-to-biblatex/*.md"]
       }
     },
     "deploy": {

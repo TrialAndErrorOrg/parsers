@@ -35,8 +35,7 @@
             "glob": "executors.json",
             "output": "."
           }
-        ],
-        "
+        ]
       }
     },
     "lint": {

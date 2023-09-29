@@ -1,6 +1,6 @@
-import { readJsonFile } from '@nx/devkit'
+import { readJsonFile } from 'nx/src/devkit-exports.js'
 import { existsSync } from 'fs'
-import { PackageJson } from 'nx/src/utils/package-json'
+import { type PackageJson } from 'nx/src/utils/package-json'
 import { isTerminalRun } from './runtime-lint-utils.js'
 
 export function getAllDependencies(packageJson: PackageJson): Record<string, string> {

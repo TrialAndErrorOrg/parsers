@@ -1,4 +1,4 @@
-import { utilsBetterCheckDependencies } from './utils-better-check-dependencies'
+import { utilsBetterCheckDependencies } from './utils-better-check-dependencies.js'
 
 describe('utilsBetterCheckDependencies', () => {
   it('should work', () => {

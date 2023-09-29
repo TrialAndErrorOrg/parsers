@@ -1,10 +1,16 @@
 {
-  "name": "@trialanderror/utils/better-check-dependencies",
+  "name": "eslint-plugin-better-check-dependencies",
   "version": "0.0.1",
   "dependencies": {
-    "tslib": "^2.3.0"
+    "@typescript-eslint/utils": "5.62.0",
+    "@nx/devkit": "16.9.1",
+    "nx": "16.9.1",
+    "chalk": "^5.3.0",
+    "@nx/js": "16.9.1",
+    "semver": "^7.5.4",
+    "jsonc-eslint-parser": "^2.1.0"
   },
-  "type": "commonjs",
-  "main": "./src/index.js",
-  "typings": "./src/index.d.ts"
+  "type": "module",
+  "main": "./index.js",
+  "typings": "./index.d.ts"
 }

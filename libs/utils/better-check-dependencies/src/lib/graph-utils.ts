@@ -1,10 +1,15 @@
-import type { FileData, ProjectFileMap, ProjectGraph, ProjectGraphProjectNode } from '@nx/devkit'
-import { DependencyType, fileDataDepTarget, fileDataDepType } from 'nx/src/config/project-graph'
+import type {
+  FileData,
+  ProjectFileMap,
+  ProjectGraph,
+  ProjectGraphProjectNode,
+} from 'nx/src/devkit-exports'
+import { DependencyType, fileDataDepTarget, fileDataDepType } from 'nx/src/config/project-graph.js'
 
 interface Reach {
-  graph: ProjectGraph
-  matrix: Record<string, Array<string>>
-  adjList: Record<string, Array<string>>
+  graph: ProjectGraph | null
+  matrix: Record<string, Array<string>> | null
+  adjList: Record<string, Array<string>> | null
 }
 
 const reach: Reach = {
@@ -136,7 +141,7 @@ export function findFilesInCircularPath(
   projectFileMap: ProjectFileMap,
   circularPath: ProjectGraphProjectNode[],
 ): Array<string[]> {
-  const filePathChain = []
+  const filePathChain: string[][] = []
 
   for (let i = 0; i < circularPath.length - 1; i++) {
     const next = circularPath[i + 1].name

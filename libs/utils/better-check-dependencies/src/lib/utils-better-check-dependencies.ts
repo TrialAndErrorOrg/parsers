@@ -1,9 +1,9 @@
 import { join } from 'path'
 import { satisfies } from 'semver'
 import { AST } from 'jsonc-eslint-parser'
-import { type JSONLiteral } from 'jsonc-eslint-parser/lib/parser/ast'
-import { normalizePath, workspaceRoot } from '@nx/devkit'
-import { findNpmDependencies } from '@nx/js/src/utils/find-npm-dependencies'
+import { type JSONLiteral } from 'jsonc-eslint-parser/lib/parser/ast.js'
+import { normalizePath, workspaceRoot } from 'nx/src/devkit-exports.js'
+import { findNpmDependencies } from '@nx/js/src/utils/find-npm-dependencies.js'
 
 import { createESLintRule } from './create-eslint-rule.js'
 import { readProjectGraph } from './project-graph-utils.js'
@@ -13,6 +13,7 @@ import {
   getPackageJson,
   getProductionDependencies,
 } from './package-json-utils.js'
+import { findTypeDependencies } from './find-type-dependencies.js'
 
 export type Options = [
   {
@@ -32,7 +33,7 @@ export type MessageIds =
   | 'versionMismatch'
   | 'missingDependencySection'
 
-export const RULE_NAME = 'dependency-checks'
+export const RULE_NAME = 'dependency-checks' as const
 
 export default createESLintRule<Options, MessageIds>({
   name: RULE_NAME,
@@ -114,14 +115,14 @@ export default createESLintRule<Options, MessageIds>({
     }
 
     // check if library has a build target
-    const buildTarget = buildTargets.find((t) => sourceProject.data.targets?.[t])
+    const buildTarget = buildTargets?.find((t) => sourceProject.data.targets?.[t])
     if (!buildTarget) {
       return {}
     }
 
     const rootPackageJson = getPackageJson(join(workspaceRoot, 'package.json'))
 
-    const npmDependencies = findNpmDependencies(
+    let npmDependencies = findNpmDependencies(
       workspaceRoot,
       sourceProject,
       projectGraph,
@@ -132,6 +133,24 @@ export default createESLintRule<Options, MessageIds>({
         ignoredFiles,
       },
     )
+
+    const typeDeps = findTypeDependencies(
+      workspaceRoot,
+      sourceProject,
+      projectGraph,
+      projectFileMap,
+      rootPackageJson,
+      {
+        includeTransitiveDependencies,
+        ignoredFiles,
+      },
+    )
+
+    npmDependencies = {
+      ...npmDependencies,
+      ...typeDeps,
+    }
+
     const expectedDependencyNames = Object.keys(npmDependencies)
 
     const projPackageJsonPath = join(workspaceRoot, sourceProject.data.root, 'package.json')
@@ -145,7 +164,7 @@ export default createESLintRule<Options, MessageIds>({
         return
       }
       const missingDeps = expectedDependencyNames.filter(
-        (d) => !projPackageJsonDeps[d] && !ignoredDependencies.includes(d),
+        (d) => !projPackageJsonDeps[d] && !ignoredDependencies?.includes(d),
       )
 
       if (missingDeps.length) {
@@ -251,7 +270,7 @@ export default createESLintRule<Options, MessageIds>({
     function validateDependenciesSectionExistance(node: AST.JSONObjectExpression) {
       if (
         !expectedDependencyNames.length ||
-        !expectedDependencyNames.some((d) => !ignoredDependencies.includes(d))
+        !expectedDependencyNames.some((d) => !ignoredDependencies?.includes(d))
       ) {
         return
       }
@@ -304,7 +323,7 @@ export default createESLintRule<Options, MessageIds>({
         const packageName = (node.key as any).value
         const packageRange = (node.value as any).value
 
-        if (ignoredDependencies.includes(packageName)) {
+        if (ignoredDependencies?.includes(packageName)) {
           return
         }
 

@@ -1,24 +1,28 @@
 import * as path from 'path'
 import { join } from 'path'
 import {
-  DependencyType,
+  type DependencyType,
+  type ProjectGraph,
+  type ProjectGraphDependency,
+  type ProjectGraphExternalNode,
+  type ProjectGraphProjectNode,
+} from '@nx/devkit'
+
+// const { joinPathFragments, normalizePath, parseJson } = devkit
+import {
   joinPathFragments,
   normalizePath,
   parseJson,
-  ProjectGraph,
-  ProjectGraphDependency,
-  ProjectGraphExternalNode,
-  ProjectGraphProjectNode,
   workspaceRoot,
-} from '@nx/devkit'
+} from 'nx/src/devkit-exports.js'
 import { getPath, pathExists } from './graph-utils.js'
-import { readFileIfExisting } from 'nx/src/utils/fileutils'
+import { readFileIfExisting } from 'nx/src/utils/fileutils.js'
 import {
   findProjectForPath,
-  ProjectRootMappings,
-} from 'nx/src/project-graph/utils/find-project-for-path'
+  type ProjectRootMappings,
+} from 'nx/src/project-graph/utils/find-project-for-path.js'
 import { getRootTsConfigFileName } from '@nx/js'
-import { resolveModuleByImport, TargetProjectLocator } from '@nx/js/src/internal'
+import { resolveModuleByImport, type TargetProjectLocator } from '@nx/js/src/internal.js'
 
 export type Deps = { [projectName: string]: ProjectGraphDependency[] }
 type SingleSourceTagConstraint = {
@@ -234,7 +238,7 @@ function isConstraintBanningProject(
   }
 
   /* ... then check if there is a whitelist and if there is a match in the whitelist.  */
-  return allowedExternalImports?.every(
+  return !!allowedExternalImports?.every(
     (importDefinition) =>
       !imp.startsWith(packageName) || !mapGlobToRegExp(importDefinition).test(imp),
   )
@@ -273,7 +277,7 @@ export function findTransitiveExternalDependencies(
   if (!graph.externalNodes) {
     return []
   }
-  const allReachableProjects = []
+  const allReachableProjects: string[] = []
   const allProjects = Object.keys(graph.nodes)
 
   for (let i = 0; i < allProjects.length; i++) {
@@ -282,7 +286,7 @@ export function findTransitiveExternalDependencies(
     }
   }
 
-  const externalDependencies = []
+  const externalDependencies: ProjectGraphDependency[] = []
   for (let i = 0; i < allReachableProjects.length; i++) {
     const dependencies = graph.dependencies[allReachableProjects[i]]
     if (dependencies) {
@@ -315,7 +319,7 @@ export function hasBannedDependencies(
     .filter((dependency) =>
       isConstraintBanningProject(graph.externalNodes[dependency.target], depConstraint, imp),
     )
-    .map((dep) => [graph.externalNodes[dep.target], graph.nodes[dep.source], depConstraint])
+    .map((dep) => [graph.externalNodes?.[dep.target], graph.nodes[dep.source], depConstraint])
 }
 
 export function isDirectDependency(
@@ -353,7 +357,7 @@ function packageExistsInPackageJson(packageName: string, projectRoot: string): b
  */
 function mapGlobToRegExp(importDefinition: string): RegExp {
   // we replace all instances of `*`, `**..*` and `.*` with `.*`
-  const mappedWildcards = importDefinition.split(/(?:\.\*)|\*+/).join('.*')
+  const mappedWildcards = importDefinition.split(/\.\*|\*+/).join('.*')
   return new RegExp(`^${new RegExp(mappedWildcards).source}$`)
 }
 
@@ -366,7 +370,7 @@ export function hasBuildExecutor(
   projectGraph: ProjectGraphProjectNode,
   buildTargets = ['build'],
 ): boolean {
-  return (
+  return !!(
     projectGraph.data.targets &&
     buildTargets.some(
       (target) =>
@@ -375,9 +379,9 @@ export function hasBuildExecutor(
   )
 }
 
-const ESLINT_REGEX = /node_modules.*[\/\\]eslint$/
+const ESLINT_REGEX = /node_modules.*[/\\]eslint$/
 const JEST_REGEX = /node_modules\/.bin\/jest$/ // when we run unit tests in jest
-const NRWL_CLI_REGEX = /nx[\/\\]bin[\/\\]run-executor\.js$/
+const NRWL_CLI_REGEX = /nx[/\\]bin[/\\]run-executor\.js$/
 
 export function isTerminalRun(): boolean {
   return (
@@ -431,7 +435,7 @@ export function isAngularSecondaryEntrypoint(
   const resolvedModule = resolveModuleByImport(
     importExpr,
     filePath,
-    join(workspaceRoot, getRootTsConfigFileName()),
+    join(workspaceRoot, getRootTsConfigFileName()!),
   )
 
   return !!resolvedModule && fileIsSecondaryEntryPoint(resolvedModule, projectRoot)

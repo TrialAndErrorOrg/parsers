@@ -1,13 +1,17 @@
-import { ProjectFileMap, ProjectGraph, readCachedProjectGraph } from '@nx/devkit'
+import {
+  type ProjectFileMap,
+  type ProjectGraph,
+  readCachedProjectGraph,
+} from 'nx/src/devkit-exports.js'
 import { isTerminalRun } from './runtime-lint-utils.js'
 import chalk from 'chalk'
 import {
   createProjectRootMappings,
   ProjectRootMappings,
-} from 'nx/src/project-graph/utils/find-project-for-path'
-import { readNxJson } from 'nx/src/config/configuration'
-import { TargetProjectLocator } from '@nx/js/src/internal'
-import { readFileMapCache } from 'nx/src/project-graph/nx-deps-cache'
+} from 'nx/src/project-graph/utils/find-project-for-path.js'
+import { readNxJson } from 'nx/src/config/configuration.js'
+import { TargetProjectLocator } from '@nx/js/src/internal.js'
+import { readFileMapCache } from 'nx/src/project-graph/nx-deps-cache.js'
 
 export function ensureGlobalProjectGraph(ruleName: string) {
   /**
@@ -31,7 +35,7 @@ export function ensureGlobalProjectGraph(ruleName: string) {
       const projectGraph = readCachedProjectGraph()
       globalThis.projectGraph = projectGraph
       globalThis.projectRootMappings = createProjectRootMappings(projectGraph.nodes)
-      globalThis.projectFileMap = readFileMapCache().fileMap.projectFileMap
+      globalThis.projectFileMap = readFileMapCache()?.fileMap.projectFileMap
       globalThis.targetProjectLocator = new TargetProjectLocator(
         projectGraph.nodes,
         projectGraph.externalNodes,

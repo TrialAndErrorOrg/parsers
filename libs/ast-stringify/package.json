@@ -15,6 +15,7 @@
   ],
   "dependencies": {
     "jast-types": "*",
+    "a": "b",
     "unified": "^10.1.2"
   }
 }

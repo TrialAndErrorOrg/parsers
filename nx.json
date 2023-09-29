@@ -93,7 +93,7 @@
       "options": {
         "verbose": true,
         "cacheDirectory": "/tmp/nx-cache",
-        "cacheableOperations": ["build", "lint", "test", "e2e", "npm", "readme", "version"]
+        "cacheableOperations": ["build", "test", "e2e", "npm", "readme", "version"]
       }
     }
   },

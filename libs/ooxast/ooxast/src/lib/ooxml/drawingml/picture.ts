@@ -4,8 +4,8 @@ import { RequiredMap } from '../../ooxast.js'
 // Source files:
 // http://localhost:3000/dml-picture.xsd
 
-import { Node as UnistNode } from 'unist'
-export interface Picture extends UnistNode {
+import { Element } from 'xast'
+export interface Picture extends Element {
   type: 'element'
   name: 'dpct:picture'
   attributes: Record<string, never>
@@ -18,7 +18,7 @@ export interface PictureMap {
   spPr: a.ShapeProperties
 }
 
-export interface PictureNonVisual extends UnistNode {
+export interface PictureNonVisual extends Element {
   type: 'element'
   name: 'dpct:pictureNonVisual'
   attributes: Record<string, never>
@@ -30,7 +30,7 @@ export interface PictureNonVisualMap {
   cNvPr: a.NonVisualDrawingProps
 }
 
-export interface document extends UnistNode {
+export interface document extends Element {
   pic: Picture
 }
 export var document: document

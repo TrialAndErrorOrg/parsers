@@ -6,8 +6,9 @@ import { RequiredMap } from '../../ooxast.js'
 // Source files:
 // http://localhost:3000/shared-math.xsd
 
-import { Node as UnistNode, Literal as UnistLiteral } from 'unist'
-export interface Acc extends UnistNode {
+import { Literal as UnistLiteral } from 'unist'
+import { Element } from 'xast'
+export interface Acc extends Element {
   type: 'element'
   name: 'm:acc'
   attributes: Record<string, never>
@@ -19,7 +20,7 @@ export interface AccMap {
   e: OMathArg
 }
 
-export interface AccPr extends UnistNode {
+export interface AccPr extends Element {
   type: 'element'
   name: 'm:accPr'
   attributes: Record<string, never>
@@ -31,7 +32,7 @@ export interface AccPrMap {
   ctrlPr?: CtrlPr
 }
 
-export interface Bar extends UnistNode {
+export interface Bar extends Element {
   type: 'element'
   name: 'm:bar'
   attributes: Record<string, never>
@@ -43,7 +44,7 @@ export interface BarMap {
   e: OMathArg
 }
 
-export interface BarPr extends UnistNode {
+export interface BarPr extends Element {
   type: 'element'
   name: 'm:barPr'
   attributes: Record<string, never>
@@ -55,7 +56,7 @@ export interface BarPrMap {
   pos?: TopBot
 }
 
-export interface BorderBox extends UnistNode {
+export interface BorderBox extends Element {
   type: 'element'
   name: 'm:borderBox'
   attributes: Record<string, never>
@@ -67,7 +68,7 @@ export interface BorderBoxMap {
   e: OMathArg
 }
 
-export interface BorderBoxPr extends UnistNode {
+export interface BorderBoxPr extends Element {
   type: 'element'
   name: 'm:borderBoxPr'
   attributes: Record<string, never>
@@ -86,7 +87,7 @@ export interface BorderBoxPrMap {
   strikeV?: OnOff
 }
 
-export interface Box extends UnistNode {
+export interface Box extends Element {
   type: 'element'
   name: 'm:box'
   attributes: Record<string, never>
@@ -98,7 +99,7 @@ export interface BoxMap {
   e: OMathArg
 }
 
-export interface BoxPr extends UnistNode {
+export interface BoxPr extends Element {
   type: 'element'
   name: 'm:boxPr'
   attributes: Record<string, never>
@@ -114,7 +115,7 @@ export interface BoxPrMap {
   opEmu?: OnOff
 }
 
-export interface BreakBin extends UnistNode {
+export interface BreakBin extends Element {
   type: 'element'
   name: 'm:breakBin'
   attributes: {
@@ -123,7 +124,7 @@ export interface BreakBin extends UnistNode {
   children: []
 }
 
-export interface BreakBinSub extends UnistNode {
+export interface BreakBinSub extends Element {
   type: 'element'
   name: 'm:breakBinSub'
   attributes: {
@@ -132,7 +133,7 @@ export interface BreakBinSub extends UnistNode {
   children: []
 }
 
-export interface Char extends UnistNode {
+export interface Char extends Element {
   type: 'element'
   name: 'm:char'
   attributes: {
@@ -141,7 +142,7 @@ export interface Char extends UnistNode {
   children: []
 }
 
-export interface CtrlPr extends UnistNode {
+export interface CtrlPr extends Element {
   type: 'element'
   name: 'm:ctrlPr'
   attributes: Record<string, never>
@@ -154,7 +155,7 @@ export interface CtrlPrMap {
   rPr?: w.RPr
 }
 
-export interface D extends UnistNode {
+export interface D extends Element {
   type: 'element'
   name: 'm:d'
   attributes: Record<string, never>
@@ -166,7 +167,7 @@ export interface DMap {
   e: OMathArg[]
 }
 
-export interface DPr extends UnistNode {
+export interface DPr extends Element {
   type: 'element'
   name: 'm:dPr'
   attributes: Record<string, never>
@@ -182,7 +183,7 @@ export interface DPrMap {
   shp?: Shp
 }
 
-export interface EqArr extends UnistNode {
+export interface EqArr extends Element {
   type: 'element'
   name: 'm:eqArr'
   attributes: Record<string, never>
@@ -194,7 +195,7 @@ export interface EqArrMap {
   eqArrPr?: EqArrPr
 }
 
-export interface EqArrPr extends UnistNode {
+export interface EqArrPr extends Element {
   type: 'element'
   name: 'm:eqArrPr'
   attributes: Record<string, never>
@@ -210,7 +211,7 @@ export interface EqArrPrMap {
   rSpRule?: SpacingRule
 }
 
-export interface F extends UnistNode {
+export interface F extends Element {
   type: 'element'
   name: 'm:f'
   attributes: Record<string, never>
@@ -223,7 +224,7 @@ export interface FMap {
   num: OMathArg
 }
 
-export interface FPr extends UnistNode {
+export interface FPr extends Element {
   type: 'element'
   name: 'm:fPr'
   attributes: Record<string, never>
@@ -235,7 +236,7 @@ export interface FPrMap {
   type?: FType
 }
 
-export interface FType extends UnistNode {
+export interface FType extends Element {
   type: 'element'
   name: 'm:fType'
   attributes: {
@@ -244,7 +245,7 @@ export interface FType extends UnistNode {
   children: []
 }
 
-export interface Func extends UnistNode {
+export interface Func extends Element {
   type: 'element'
   name: 'm:func'
   attributes: Record<string, never>
@@ -257,7 +258,7 @@ export interface FuncMap {
   funcPr?: FuncPr
 }
 
-export interface FuncPr extends UnistNode {
+export interface FuncPr extends Element {
   type: 'element'
   name: 'm:funcPr'
   attributes: Record<string, never>
@@ -268,7 +269,7 @@ export interface FuncPrMap {
   ctrlPr?: CtrlPr
 }
 
-export interface GroupChr extends UnistNode {
+export interface GroupChr extends Element {
   type: 'element'
   name: 'm:groupChr'
   attributes: Record<string, never>
@@ -280,7 +281,7 @@ export interface GroupChrMap {
   groupChrPr?: GroupChrPr
 }
 
-export interface GroupChrPr extends UnistNode {
+export interface GroupChrPr extends Element {
   type: 'element'
   name: 'm:groupChrPr'
   attributes: Record<string, never>
@@ -294,7 +295,7 @@ export interface GroupChrPrMap {
   vertJc?: TopBot
 }
 
-export interface Integer2 extends UnistNode {
+export interface Integer2 extends Element {
   type: 'element'
   name: 'm:integer2'
   attributes: {
@@ -303,7 +304,7 @@ export interface Integer2 extends UnistNode {
   children: []
 }
 
-export interface Integer255 extends UnistNode {
+export interface Integer255 extends Element {
   type: 'element'
   name: 'm:integer255'
   attributes: {
@@ -312,7 +313,7 @@ export interface Integer255 extends UnistNode {
   children: []
 }
 
-export interface LimLoc extends UnistNode {
+export interface LimLoc extends Element {
   type: 'element'
   name: 'm:limLoc'
   attributes: {
@@ -321,7 +322,7 @@ export interface LimLoc extends UnistNode {
   children: []
 }
 
-export interface LimLow extends UnistNode {
+export interface LimLow extends Element {
   type: 'element'
   name: 'm:limLow'
   attributes: Record<string, never>
@@ -334,7 +335,7 @@ export interface LimLowMap {
   limLowPr?: LimLowPr
 }
 
-export interface LimLowPr extends UnistNode {
+export interface LimLowPr extends Element {
   type: 'element'
   name: 'm:limLowPr'
   attributes: Record<string, never>
@@ -345,7 +346,7 @@ export interface LimLowPrMap {
   ctrlPr?: CtrlPr
 }
 
-export interface LimUpp extends UnistNode {
+export interface LimUpp extends Element {
   type: 'element'
   name: 'm:limUpp'
   attributes: Record<string, never>
@@ -358,7 +359,7 @@ export interface LimUppMap {
   limUppPr?: LimUppPr
 }
 
-export interface LimUppPr extends UnistNode {
+export interface LimUppPr extends Element {
   type: 'element'
   name: 'm:limUppPr'
   attributes: Record<string, never>
@@ -369,7 +370,7 @@ export interface LimUppPrMap {
   ctrlPr?: CtrlPr
 }
 
-export interface M extends UnistNode {
+export interface M extends Element {
   type: 'element'
   name: 'm:m'
   attributes: Record<string, never>
@@ -381,7 +382,7 @@ export interface MMap {
   mr: MR[]
 }
 
-export interface ManualBreak extends UnistNode {
+export interface ManualBreak extends Element {
   type: 'element'
   name: 'm:manualBreak'
   attributes: {
@@ -390,7 +391,7 @@ export interface ManualBreak extends UnistNode {
   children: []
 }
 
-export interface MathPr extends UnistNode {
+export interface MathPr extends Element {
   type: 'element'
   name: 'm:mathPr'
   attributes: Record<string, never>
@@ -416,7 +417,7 @@ export interface MathPrMap {
   wrapRight?: OnOff
 }
 
-export interface MC extends UnistNode {
+export interface MC extends Element {
   type: 'element'
   name: 'm:mC'
   attributes: Record<string, never>
@@ -427,7 +428,7 @@ export interface MCMap {
   mcPr?: MCPr
 }
 
-export interface MCPr extends UnistNode {
+export interface MCPr extends Element {
   type: 'element'
   name: 'm:mCPr'
   attributes: Record<string, never>
@@ -439,7 +440,7 @@ export interface MCPrMap {
   mcJc?: XAlign
 }
 
-export interface MCS extends UnistNode {
+export interface MCS extends Element {
   type: 'element'
   name: 'm:mCS'
   attributes: Record<string, never>
@@ -450,7 +451,7 @@ export interface MCSMap {
   mc: MC[]
 }
 
-export interface MPr extends UnistNode {
+export interface MPr extends Element {
   type: 'element'
   name: 'm:mPr'
   attributes: Record<string, never>
@@ -469,7 +470,7 @@ export interface MPrMap {
   rSpRule?: SpacingRule
 }
 
-export interface MR extends UnistNode {
+export interface MR extends Element {
   type: 'element'
   name: 'm:mR'
   attributes: Record<string, never>
@@ -480,7 +481,7 @@ export interface MRMap {
   e: OMathArg[]
 }
 
-export interface Nary extends UnistNode {
+export interface Nary extends Element {
   type: 'element'
   name: 'm:nary'
   attributes: Record<string, never>
@@ -494,7 +495,7 @@ export interface NaryMap {
   sup: OMathArg
 }
 
-export interface NaryPr extends UnistNode {
+export interface NaryPr extends Element {
   type: 'element'
   name: 'm:naryPr'
   attributes: Record<string, never>
@@ -510,7 +511,7 @@ export interface NaryPrMap {
   supHide?: OnOff
 }
 
-export interface OMath extends UnistNode {
+export interface OMath extends Element {
   type: 'element'
   name: 'm:oMath'
   attributes: Record<string, never>
@@ -570,7 +571,7 @@ export interface OMathMap {
   sSup?: SSup[]
 }
 
-export interface OMathArg extends UnistNode {
+export interface OMathArg extends Element {
   type: 'element'
   name: 'm:oMathArg'
   attributes: Record<string, never>
@@ -632,7 +633,7 @@ export interface OMathArgMap {
   sSup?: SSup[]
 }
 
-export interface OMathArgPr extends UnistNode {
+export interface OMathArgPr extends Element {
   type: 'element'
   name: 'm:oMathArgPr'
   attributes: Record<string, never>
@@ -643,7 +644,7 @@ export interface OMathArgPrMap {
   argSz?: Integer2
 }
 
-export interface OMathJc extends UnistNode {
+export interface OMathJc extends Element {
   type: 'element'
   name: 'm:oMathJc'
   attributes: {
@@ -652,7 +653,7 @@ export interface OMathJc extends UnistNode {
   children: []
 }
 
-export interface OMathPara extends UnistNode {
+export interface OMathPara extends Element {
   type: 'element'
   name: 'm:oMathPara'
   attributes: Record<string, never>
@@ -664,7 +665,7 @@ export interface OMathParaMap {
   oMathParaPr?: OMathParaPr
 }
 
-export interface OMathParaPr extends UnistNode {
+export interface OMathParaPr extends Element {
   type: 'element'
   name: 'm:oMathParaPr'
   attributes: Record<string, never>
@@ -675,7 +676,7 @@ export interface OMathParaPrMap {
   jc?: OMathJc
 }
 
-export interface OnOff extends UnistNode {
+export interface OnOff extends Element {
   type: 'element'
   name: 'm:onOff'
   attributes: {
@@ -684,7 +685,7 @@ export interface OnOff extends UnistNode {
   children: []
 }
 
-export interface Phant extends UnistNode {
+export interface Phant extends Element {
   type: 'element'
   name: 'm:phant'
   attributes: Record<string, never>
@@ -696,7 +697,7 @@ export interface PhantMap {
   phantPr?: PhantPr
 }
 
-export interface PhantPr extends UnistNode {
+export interface PhantPr extends Element {
   type: 'element'
   name: 'm:phantPr'
   attributes: Record<string, never>
@@ -712,7 +713,7 @@ export interface PhantPrMap {
   zeroWid?: OnOff
 }
 
-export interface R extends UnistNode {
+export interface R extends Element {
   type: 'element'
   name: 'm:r'
   attributes: Record<string, never>
@@ -757,7 +758,7 @@ export interface RMap {
   t?: T[]
 }
 
-export interface Rad extends UnistNode {
+export interface Rad extends Element {
   type: 'element'
   name: 'm:rad'
   attributes: Record<string, never>
@@ -770,7 +771,7 @@ export interface RadMap {
   radPr?: RadPr
 }
 
-export interface RadPr extends UnistNode {
+export interface RadPr extends Element {
   type: 'element'
   name: 'm:radPr'
   attributes: Record<string, never>
@@ -782,7 +783,7 @@ export interface RadPrMap {
   degHide?: OnOff
 }
 
-export interface RPR extends UnistNode {
+export interface RPR extends Element {
   type: 'element'
   name: 'm:rPR'
   attributes: Record<string, never>
@@ -798,7 +799,7 @@ export interface RPRMap {
   sty?: Style
 }
 
-export interface Script extends UnistNode {
+export interface Script extends Element {
   type: 'element'
   name: 'm:script'
   attributes: {
@@ -807,7 +808,7 @@ export interface Script extends UnistNode {
   children: []
 }
 
-export interface Shp extends UnistNode {
+export interface Shp extends Element {
   type: 'element'
   name: 'm:shp'
   attributes: {
@@ -816,7 +817,7 @@ export interface Shp extends UnistNode {
   children: []
 }
 
-export interface SpacingRule extends UnistNode {
+export interface SpacingRule extends Element {
   type: 'element'
   name: 'm:spacingRule'
   attributes: {
@@ -825,7 +826,7 @@ export interface SpacingRule extends UnistNode {
   children: []
 }
 
-export interface SPre extends UnistNode {
+export interface SPre extends Element {
   type: 'element'
   name: 'm:sPre'
   attributes: Record<string, never>
@@ -839,7 +840,7 @@ export interface SPreMap {
   sup: OMathArg
 }
 
-export interface SPrePr extends UnistNode {
+export interface SPrePr extends Element {
   type: 'element'
   name: 'm:sPrePr'
   attributes: Record<string, never>
@@ -850,7 +851,7 @@ export interface SPrePrMap {
   ctrlPr?: CtrlPr
 }
 
-export interface SSub extends UnistNode {
+export interface SSub extends Element {
   type: 'element'
   name: 'm:sSub'
   attributes: Record<string, never>
@@ -863,7 +864,7 @@ export interface SSubMap {
   sub: OMathArg
 }
 
-export interface SSubPr extends UnistNode {
+export interface SSubPr extends Element {
   type: 'element'
   name: 'm:sSubPr'
   attributes: Record<string, never>
@@ -874,7 +875,7 @@ export interface SSubPrMap {
   ctrlPr?: CtrlPr
 }
 
-export interface SSubSup extends UnistNode {
+export interface SSubSup extends Element {
   type: 'element'
   name: 'm:sSubSup'
   attributes: Record<string, never>
@@ -888,7 +889,7 @@ export interface SSubSupMap {
   sup: OMathArg
 }
 
-export interface SSubSupPr extends UnistNode {
+export interface SSubSupPr extends Element {
   type: 'element'
   name: 'm:sSubSupPr'
   attributes: Record<string, never>
@@ -900,7 +901,7 @@ export interface SSubSupPrMap {
   ctrlPr?: CtrlPr
 }
 
-export interface SSup extends UnistNode {
+export interface SSup extends Element {
   type: 'element'
   name: 'm:sSup'
   attributes: Record<string, never>
@@ -913,7 +914,7 @@ export interface SSupMap {
   sup: OMathArg
 }
 
-export interface SSupPr extends UnistNode {
+export interface SSupPr extends Element {
   type: 'element'
   name: 'm:sSupPr'
   attributes: Record<string, never>
@@ -924,7 +925,7 @@ export interface SSupPrMap {
   ctrlPr?: CtrlPr
 }
 
-export interface MString extends UnistNode {
+export interface MString extends Element {
   type: 'element'
   name: 'm:string'
   attributes: {
@@ -933,7 +934,7 @@ export interface MString extends UnistNode {
   children: []
 }
 
-export interface Style extends UnistNode {
+export interface Style extends Element {
   type: 'element'
   name: 'm:style'
   attributes: {
@@ -942,7 +943,7 @@ export interface Style extends UnistNode {
   children: []
 }
 
-export interface T extends UnistNode {
+export interface T extends Element {
   type: 'element'
   name: 'm:t'
   attributes: Record<string, never>
@@ -953,7 +954,7 @@ export interface Text extends UnistLiteral {
   value: string
 }
 
-export interface TopBot extends UnistNode {
+export interface TopBot extends Element {
   type: 'element'
   name: 'm:topBot'
   attributes: {
@@ -962,7 +963,7 @@ export interface TopBot extends UnistNode {
   children: []
 }
 
-export interface TwipsMeasure extends UnistNode {
+export interface TwipsMeasure extends Element {
   type: 'element'
   name: 'm:twipsMeasure'
   attributes: {
@@ -971,7 +972,7 @@ export interface TwipsMeasure extends UnistNode {
   children: []
 }
 
-export interface UnSignedInteger extends UnistNode {
+export interface UnSignedInteger extends Element {
   type: 'element'
   name: 'm:unSignedInteger'
   attributes: {
@@ -980,7 +981,7 @@ export interface UnSignedInteger extends UnistNode {
   children: []
 }
 
-export interface XAlign extends UnistNode {
+export interface XAlign extends Element {
   type: 'element'
   name: 'm:xAlign'
   attributes: {
@@ -989,7 +990,7 @@ export interface XAlign extends UnistNode {
   children: []
 }
 
-export interface YAlign extends UnistNode {
+export interface YAlign extends Element {
   type: 'element'
   name: 'm:yAlign'
   attributes: {
@@ -1032,7 +1033,7 @@ export type TopBotVal = 'top' | 'bot'
 
 export type UnSignedIntegerVal = number
 
-export interface document extends UnistNode {
+export interface document extends Element {
   mathPr: MathPr
   oMath: OMath
   oMathPara: OMathPara

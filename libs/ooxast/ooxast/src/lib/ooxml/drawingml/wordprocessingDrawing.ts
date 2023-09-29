@@ -9,8 +9,9 @@ import { RequiredMap } from '../../ooxast.js'
 // Source files:
 // http://localhost:3000/dml-wordprocessingDrawing.xsd
 
-import { Node as UnistNode } from 'unist'
-export interface Anchor extends UnistNode {
+import { Element } from 'xast'
+
+export interface Anchor extends Element {
   type: 'element'
   name: 'wp:anchor'
   attributes: {
@@ -45,7 +46,7 @@ export interface AnchorMap {
   wrapTopAndBottom: WrapTopBottom
 }
 
-export interface EffectExtent extends UnistNode {
+export interface EffectExtent extends Element {
   type: 'element'
   name: 'wp:effectExtent'
   attributes: {
@@ -57,7 +58,7 @@ export interface EffectExtent extends UnistNode {
   children: []
 }
 
-export interface GraphicFrame extends UnistNode {
+export interface GraphicFrame extends Element {
   type: 'element'
   name: 'wp:graphicFrame'
   attributes: Record<string, never>
@@ -72,7 +73,7 @@ export interface GraphicFrameMap {
   xfrm: a.Transform2D
 }
 
-export interface Inline extends UnistNode {
+export interface Inline extends Element {
   type: 'element'
   name: 'wp:inline'
   attributes: {
@@ -92,7 +93,7 @@ export interface InlineMap {
   graphic: a.GraphicalObject
 }
 
-export interface LinkedTextboxInformation extends UnistNode {
+export interface LinkedTextboxInformation extends Element {
   type: 'element'
   name: 'wp:linkedTextboxInformation'
   attributes: {
@@ -106,7 +107,7 @@ export interface LinkedTextboxInformationMap {
   extLst?: a.OfficeArtExtensionList
 }
 
-export interface PosH extends UnistNode {
+export interface PosH extends Element {
   type: 'element'
   name: 'wp:posH'
   attributes: {
@@ -124,7 +125,7 @@ export interface PosHMap {
   posOffset: SpecificLiteral<string>
 }
 
-export interface PosV extends UnistNode {
+export interface PosV extends Element {
   type: 'element'
   name: 'wp:posV'
   attributes: {
@@ -138,7 +139,7 @@ export interface PosVMap {
   posOffset: SpecificLiteral<string>
 }
 
-export interface TextboxInfo extends UnistNode {
+export interface TextboxInfo extends Element {
   type: 'element'
   name: 'wp:textboxInfo'
   attributes: {
@@ -152,7 +153,7 @@ export interface TextboxInfoMap {
   txbxContent: TxbxContent
 }
 
-export interface TxbxContent extends UnistNode {
+export interface TxbxContent extends Element {
   type: 'element'
   name: 'wp:txbxContent'
   attributes: Record<string, never>
@@ -192,7 +193,7 @@ export interface TxbxContentMap {
   tbl?: w.Tbl[]
 }
 
-export interface WordprocessingCanvas extends UnistNode {
+export interface WordprocessingCanvas extends Element {
   type: 'element'
   name: 'wp:wordprocessingCanvas'
   attributes: Record<string, never>
@@ -210,7 +211,7 @@ export interface WordprocessingCanvasMap {
   wsp?: WordprocessingShape[]
 }
 
-export interface WordprocessingContentPart extends UnistNode {
+export interface WordprocessingContentPart extends Element {
   type: 'element'
   name: 'wp:wordprocessingContentPart'
   attributes: {
@@ -226,7 +227,7 @@ export interface WordprocessingContentPartMap {
   xfrm?: a.Transform2D
 }
 
-export interface WordprocessingContentPartNonVisual extends UnistNode {
+export interface WordprocessingContentPartNonVisual extends Element {
   type: 'element'
   name: 'wp:wordprocessingContentPartNonVisual'
   attributes: Record<string, never>
@@ -238,7 +239,7 @@ export interface WordprocessingContentPartNonVisualMap {
   cNvPr?: a.NonVisualDrawingProps
 }
 
-export interface WordprocessingGroup extends UnistNode {
+export interface WordprocessingGroup extends Element {
   type: 'element'
   name: 'wp:wordprocessingGroup'
   attributes: Record<string, never>
@@ -257,7 +258,7 @@ export interface WordprocessingGroupMap {
   wsp?: WordprocessingShape[]
 }
 
-export interface WordprocessingShape extends UnistNode {
+export interface WordprocessingShape extends Element {
   type: 'element'
   name: 'wp:wordprocessingShape'
   attributes: {
@@ -278,13 +279,13 @@ export interface WordprocessingShapeMap {
   txbx?: TextboxInfo
 }
 
-export interface WrapNone extends UnistNode {
+export interface WrapNone extends Element {
   type: 'element'
   name: 'wp:wrapNone'
   children: []
 }
 
-export interface WrapPath extends UnistNode {
+export interface WrapPath extends Element {
   type: 'element'
   name: 'wp:wrapPath'
   attributes: {
@@ -298,7 +299,7 @@ export interface WrapPathMap {
   start: a.Point2D
 }
 
-export interface WrapSquare extends UnistNode {
+export interface WrapSquare extends Element {
   type: 'element'
   name: 'wp:wrapSquare'
   attributes: {
@@ -315,7 +316,7 @@ export interface WrapSquareMap {
   effectExtent?: EffectExtent
 }
 
-export interface WrapThrough extends UnistNode {
+export interface WrapThrough extends Element {
   type: 'element'
   name: 'wp:wrapThrough'
   attributes: {
@@ -330,7 +331,7 @@ export interface WrapThroughMap {
   wrapPolygon: WrapPath
 }
 
-export interface WrapTight extends UnistNode {
+export interface WrapTight extends Element {
   type: 'element'
   name: 'wp:wrapTight'
   attributes: {
@@ -345,7 +346,7 @@ export interface WrapTightMap {
   wrapPolygon: WrapPath
 }
 
-export interface WrapTopBottom extends UnistNode {
+export interface WrapTopBottom extends Element {
   type: 'element'
   name: 'wp:wrapTopBottom'
   attributes: {
@@ -389,7 +390,7 @@ export type WrapDistanceVal = number
 
 export type WrapTextVal = 'bothSides' | 'left' | 'right' | 'largest'
 
-export interface document extends UnistNode {
+export interface document extends Element {
   anchor: Anchor
   inline: Inline
   wgp: WordprocessingGroup

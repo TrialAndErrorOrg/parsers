@@ -5,7 +5,8 @@ import { RequiredMap } from '../../ooxast.js'
 // http://localhost:3000/shared-customXmlSchemaProperties.xsd
 
 import { Node as UnistNode } from 'unist'
-export interface Schema extends UnistNode {
+import { Element } from 'xast'
+export interface Schema extends Element {
   type: 'element'
   name: 'Schema'
   attributes: {
@@ -17,7 +18,7 @@ export interface Schema extends UnistNode {
   children: []
 }
 
-export interface SchemaLibrary extends UnistNode {
+export interface SchemaLibrary extends Element {
   type: 'element'
   name: 'SchemaLibrary'
   attributes: Record<string, never>

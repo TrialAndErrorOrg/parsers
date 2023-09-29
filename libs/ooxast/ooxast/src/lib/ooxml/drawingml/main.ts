@@ -6,8 +6,9 @@ import { RequiredMap } from '../../ooxast.js'
 // Source files:
 // http://localhost:3000/dml-main.xsd
 
-import { Node as UnistNode } from 'unist'
-export interface AdjPoint2D extends UnistNode {
+import { Element } from 'xast'
+import { StringTag, T } from '../wordprocessingml/main.js'
+export interface AdjPoint2D extends Element {
   type: 'element'
   name: 'a:adjPoint2D'
   attributes: {
@@ -17,7 +18,7 @@ export interface AdjPoint2D extends UnistNode {
   children: []
 }
 
-export interface AdjustHandleList extends UnistNode {
+export interface AdjustHandleList extends Element {
   type: 'element'
   name: 'a:adjustHandleList'
   attributes: Record<string, never>
@@ -29,7 +30,7 @@ export interface AdjustHandleListMap {
   ahXY?: XYAdjustHandle[]
 }
 
-export interface AlphaBiLevelEffect extends UnistNode {
+export interface AlphaBiLevelEffect extends Element {
   type: 'element'
   name: 'a:alphaBiLevelEffect'
   attributes: {
@@ -38,17 +39,17 @@ export interface AlphaBiLevelEffect extends UnistNode {
   children: []
 }
 
-export interface AlphaCeilingEffect extends UnistNode {
+export interface AlphaCeilingEffect extends Element {
   type: 'element'
   name: 'a:alphaCeilingEffect'
 }
 
-export interface AlphaFloorEffect extends UnistNode {
+export interface AlphaFloorEffect extends Element {
   type: 'element'
   name: 'a:alphaFloorEffect'
 }
 
-export interface AlphaInverseEffect extends UnistNode {
+export interface AlphaInverseEffect extends Element {
   type: 'element'
   name: 'a:alphaInverseEffect'
   attributes: Record<string, never>
@@ -64,7 +65,7 @@ export interface AlphaInverseEffectMap {
   sysClr?: SystemColor
 }
 
-export interface AlphaModulateEffect extends UnistNode {
+export interface AlphaModulateEffect extends Element {
   type: 'element'
   name: 'a:alphaModulateEffect'
   attributes: Record<string, never>
@@ -75,7 +76,7 @@ export interface AlphaModulateEffectMap {
   cont: EffectContainer
 }
 
-export interface AlphaModulateFixedEffect extends UnistNode {
+export interface AlphaModulateFixedEffect extends Element {
   type: 'element'
   name: 'a:alphaModulateFixedEffect'
   attributes: {
@@ -84,7 +85,7 @@ export interface AlphaModulateFixedEffect extends UnistNode {
   children: []
 }
 
-export interface AlphaOutsetEffect extends UnistNode {
+export interface AlphaOutsetEffect extends Element {
   type: 'element'
   name: 'a:alphaOutsetEffect'
   attributes: {
@@ -93,7 +94,7 @@ export interface AlphaOutsetEffect extends UnistNode {
   children: []
 }
 
-export interface AlphaReplaceEffect extends UnistNode {
+export interface AlphaReplaceEffect extends Element {
   type: 'element'
   name: 'a:alphaReplaceEffect'
   attributes: {
@@ -102,7 +103,7 @@ export interface AlphaReplaceEffect extends UnistNode {
   children: []
 }
 
-export interface Angle extends UnistNode {
+export interface Angle extends Element {
   type: 'element'
   name: 'a:angle'
   attributes: {
@@ -111,7 +112,7 @@ export interface Angle extends UnistNode {
   children: []
 }
 
-export interface AnimationChartBuildProperties extends UnistNode {
+export interface AnimationChartBuildProperties extends Element {
   type: 'element'
   name: 'a:animationChartBuildProperties'
   attributes: {
@@ -121,7 +122,7 @@ export interface AnimationChartBuildProperties extends UnistNode {
   children: []
 }
 
-export interface AnimationChartElement extends UnistNode {
+export interface AnimationChartElement extends Element {
   type: 'element'
   name: 'a:animationChartElement'
   attributes: {
@@ -132,7 +133,7 @@ export interface AnimationChartElement extends UnistNode {
   children: []
 }
 
-export interface AnimationDgmBuildProperties extends UnistNode {
+export interface AnimationDgmBuildProperties extends Element {
   type: 'element'
   name: 'a:animationDgmBuildProperties'
   attributes: {
@@ -142,7 +143,7 @@ export interface AnimationDgmBuildProperties extends UnistNode {
   children: []
 }
 
-export interface AnimationDgmElement extends UnistNode {
+export interface AnimationDgmElement extends Element {
   type: 'element'
   name: 'a:animationDgmElement'
   attributes: {
@@ -152,7 +153,7 @@ export interface AnimationDgmElement extends UnistNode {
   children: []
 }
 
-export interface AnimationElementChoice extends UnistNode {
+export interface AnimationElementChoice extends Element {
   type: 'element'
   name: 'a:animationElementChoice'
   attributes: Record<string, never>
@@ -164,7 +165,7 @@ export interface AnimationElementChoiceMap {
   dgm: AnimationDgmElement
 }
 
-export interface AnimationGraphicalObjectBuildProperties extends UnistNode {
+export interface AnimationGraphicalObjectBuildProperties extends Element {
   type: 'element'
   name: 'a:animationGraphicalObjectBuildProperties'
   attributes: Record<string, never>
@@ -176,7 +177,7 @@ export interface AnimationGraphicalObjectBuildPropertiesMap {
   bldDgm: AnimationDgmBuildProperties
 }
 
-export interface AudioCD extends UnistNode {
+export interface AudioCD extends Element {
   type: 'element'
   name: 'a:audioCD'
   attributes: Record<string, never>
@@ -189,7 +190,7 @@ export interface AudioCDMap {
   st: AudioCDTime
 }
 
-export interface AudioCDTime extends UnistNode {
+export interface AudioCDTime extends Element {
   type: 'element'
   name: 'a:audioCDTime'
   attributes: {
@@ -199,7 +200,7 @@ export interface AudioCDTime extends UnistNode {
   children: []
 }
 
-export interface AudioFile extends UnistNode {
+export interface AudioFile extends Element {
   type: 'element'
   name: 'a:audioFile'
   attributes: {
@@ -213,7 +214,7 @@ export interface AudioFileMap {
   extLst?: OfficeArtExtensionList
 }
 
-export interface Backdrop extends UnistNode {
+export interface Backdrop extends Element {
   type: 'element'
   name: 'a:backdrop'
   attributes: Record<string, never>
@@ -227,7 +228,7 @@ export interface BackdropMap {
   up: Vector3D
 }
 
-export interface BackgroundFillStyleList extends UnistNode {
+export interface BackgroundFillStyleList extends Element {
   type: 'element'
   name: 'a:backgroundFillStyleList'
   attributes: Record<string, never>
@@ -243,7 +244,7 @@ export interface BackgroundFillStyleListMap {
   solidFill: SolidColorFillProperties[]
 }
 
-export interface BackgroundFormatting extends UnistNode {
+export interface BackgroundFormatting extends Element {
   type: 'element'
   name: 'a:backgroundFormatting'
   attributes: Record<string, never>
@@ -261,7 +262,7 @@ export interface BackgroundFormattingMap {
   solidFill?: SolidColorFillProperties
 }
 
-export interface BaseStyles extends UnistNode {
+export interface BaseStyles extends Element {
   type: 'element'
   name: 'a:baseStyles'
   attributes: Record<string, never>
@@ -275,7 +276,7 @@ export interface BaseStylesMap {
   fontScheme: FontScheme
 }
 
-export interface BaseStylesOverride extends UnistNode {
+export interface BaseStylesOverride extends Element {
   type: 'element'
   name: 'a:baseStylesOverride'
   attributes: Record<string, never>
@@ -288,7 +289,7 @@ export interface BaseStylesOverrideMap {
   fontScheme?: FontScheme
 }
 
-export interface Bevel extends UnistNode {
+export interface Bevel extends Element {
   type: 'element'
   name: 'a:bevel'
   attributes: {
@@ -299,7 +300,7 @@ export interface Bevel extends UnistNode {
   children: []
 }
 
-export interface BiLevelEffect extends UnistNode {
+export interface BiLevelEffect extends Element {
   type: 'element'
   name: 'a:biLevelEffect'
   attributes: {
@@ -308,7 +309,7 @@ export interface BiLevelEffect extends UnistNode {
   children: []
 }
 
-export interface BlendEffect extends UnistNode {
+export interface BlendEffect extends Element {
   type: 'element'
   name: 'a:blendEffect'
   attributes: {
@@ -321,7 +322,7 @@ export interface BlendEffectMap {
   cont: EffectContainer
 }
 
-export interface Blip extends UnistNode {
+export interface Blip extends Element {
   type: 'element'
   name: 'a:blip'
   attributes: {
@@ -353,7 +354,7 @@ export interface BlipMap {
   tint?: TintEffect[]
 }
 
-export interface BlipFillProperties extends UnistNode {
+export interface BlipFillProperties extends Element {
   type: 'element'
   name: 'a:blipFillProperties'
   attributes: {
@@ -370,7 +371,7 @@ export interface BlipFillPropertiesMap {
   tile?: TileInfoProperties
 }
 
-export interface BlurEffect extends UnistNode {
+export interface BlurEffect extends Element {
   type: 'element'
   name: 'a:blurEffect'
   attributes: {
@@ -380,7 +381,7 @@ export interface BlurEffect extends UnistNode {
   children: []
 }
 
-export interface Boolean extends UnistNode {
+export interface Boolean extends Element {
   type: 'element'
   name: 'a:boolean'
   attributes: {
@@ -389,7 +390,7 @@ export interface Boolean extends UnistNode {
   children: []
 }
 
-export interface Camera extends UnistNode {
+export interface Camera extends Element {
   type: 'element'
   name: 'a:camera'
   attributes: {
@@ -404,7 +405,7 @@ export interface CameraMap {
   rot?: SphereCoords
 }
 
-export interface Cell3D extends UnistNode {
+export interface Cell3D extends Element {
   type: 'element'
   name: 'a:cell3D'
   attributes: {
@@ -419,7 +420,7 @@ export interface Cell3DMap {
   lightRig?: LightRig
 }
 
-export interface ClipboardStyleSheet extends UnistNode {
+export interface ClipboardStyleSheet extends Element {
   type: 'element'
   name: 'a:clipboardStyleSheet'
   attributes: Record<string, never>
@@ -431,7 +432,7 @@ export interface ClipboardStyleSheetMap {
   themeElements: BaseStyles
 }
 
-export interface Color extends UnistNode {
+export interface Color extends Element {
   type: 'element'
   name: 'a:color'
   attributes: Record<string, never>
@@ -447,7 +448,7 @@ export interface ColorMap {
   sysClr: SystemColor
 }
 
-export interface ColorChangeEffect extends UnistNode {
+export interface ColorChangeEffect extends Element {
   type: 'element'
   name: 'a:colorChangeEffect'
   attributes: {
@@ -461,7 +462,7 @@ export interface ColorChangeEffectMap {
   clrTo: Color
 }
 
-export interface ColorMapping extends UnistNode {
+export interface ColorMapping extends Element {
   type: 'element'
   name: 'a:colorMapping'
   attributes: {
@@ -485,7 +486,7 @@ export interface ColorMappingMap {
   extLst?: OfficeArtExtensionList
 }
 
-export interface ColorMappingOverride extends UnistNode {
+export interface ColorMappingOverride extends Element {
   type: 'element'
   name: 'a:colorMappingOverride'
   attributes: Record<string, never>
@@ -497,7 +498,7 @@ export interface ColorMappingOverrideMap {
   overrideClrMapping: ColorMapping
 }
 
-export interface ColorMRU extends UnistNode {
+export interface ColorMRU extends Element {
   type: 'element'
   name: 'a:colorMRU'
   attributes: Record<string, never>
@@ -513,7 +514,7 @@ export interface ColorMRUMap {
   sysClr?: SystemColor[]
 }
 
-export interface ColorReplaceEffect extends UnistNode {
+export interface ColorReplaceEffect extends Element {
   type: 'element'
   name: 'a:colorReplaceEffect'
   attributes: Record<string, never>
@@ -529,7 +530,7 @@ export interface ColorReplaceEffectMap {
   sysClr: SystemColor
 }
 
-export interface ColorScheme extends UnistNode {
+export interface ColorScheme extends Element {
   type: 'element'
   name: 'a:colorScheme'
   attributes: {
@@ -554,7 +555,7 @@ export interface ColorSchemeMap {
   lt2: Color
 }
 
-export interface ColorSchemeAndMapping extends UnistNode {
+export interface ColorSchemeAndMapping extends Element {
   type: 'element'
   name: 'a:colorSchemeAndMapping'
   attributes: Record<string, never>
@@ -566,7 +567,7 @@ export interface ColorSchemeAndMappingMap {
   clrScheme: ColorScheme
 }
 
-export interface ColorSchemeList extends UnistNode {
+export interface ColorSchemeList extends Element {
   type: 'element'
   name: 'a:colorSchemeList'
   attributes: Record<string, never>
@@ -577,12 +578,12 @@ export interface ColorSchemeListMap {
   extraClrScheme?: ColorSchemeAndMapping[]
 }
 
-export interface ComplementTransform extends UnistNode {
+export interface ComplementTransform extends Element {
   type: 'element'
   name: 'a:complementTransform'
 }
 
-export interface Connection extends UnistNode {
+export interface Connection extends Element {
   type: 'element'
   name: 'a:connection'
   attributes: {
@@ -592,7 +593,7 @@ export interface Connection extends UnistNode {
   children: []
 }
 
-export interface ConnectionSite extends UnistNode {
+export interface ConnectionSite extends Element {
   type: 'element'
   name: 'a:connectionSite'
   attributes: {
@@ -605,7 +606,7 @@ export interface ConnectionSiteMap {
   pos: AdjPoint2D
 }
 
-export interface ConnectionSiteList extends UnistNode {
+export interface ConnectionSiteList extends Element {
   type: 'element'
   name: 'a:connectionSiteList'
   attributes: Record<string, never>
@@ -616,7 +617,7 @@ export interface ConnectionSiteListMap {
   cxn?: ConnectionSite[]
 }
 
-export interface ConnectorLocking extends UnistNode {
+export interface ConnectorLocking extends Element {
   type: 'element'
   name: 'a:connectorLocking'
   attributes: {
@@ -638,7 +639,7 @@ export interface ConnectorLockingMap {
   extLst?: OfficeArtExtensionList
 }
 
-export interface ContentPartLocking extends UnistNode {
+export interface ContentPartLocking extends Element {
   type: 'element'
   name: 'a:contentPartLocking'
   attributes: {
@@ -660,7 +661,7 @@ export interface ContentPartLockingMap {
   extLst?: OfficeArtExtensionList
 }
 
-export interface CustomColor extends UnistNode {
+export interface CustomColor extends Element {
   type: 'element'
   name: 'a:customColor'
   attributes: {
@@ -678,7 +679,7 @@ export interface CustomColorMap {
   sysClr: SystemColor
 }
 
-export interface CustomColorList extends UnistNode {
+export interface CustomColorList extends Element {
   type: 'element'
   name: 'a:customColorList'
   attributes: Record<string, never>
@@ -689,7 +690,7 @@ export interface CustomColorListMap {
   custClr?: CustomColor[]
 }
 
-export interface CustomGeometry2D extends UnistNode {
+export interface CustomGeometry2D extends Element {
   type: 'element'
   name: 'a:customGeometry2D'
   attributes: Record<string, never>
@@ -705,7 +706,7 @@ export interface CustomGeometry2DMap {
   rect?: GeomRect
 }
 
-export interface DashStop extends UnistNode {
+export interface DashStop extends Element {
   type: 'element'
   name: 'a:dashStop'
   attributes: {
@@ -715,7 +716,7 @@ export interface DashStop extends UnistNode {
   children: []
 }
 
-export interface DashStopList extends UnistNode {
+export interface DashStopList extends Element {
   type: 'element'
   name: 'a:dashStopList'
   attributes: Record<string, never>
@@ -726,7 +727,7 @@ export interface DashStopListMap {
   ds?: DashStop[]
 }
 
-export interface DefaultShapeDefinition extends UnistNode {
+export interface DefaultShapeDefinition extends Element {
   type: 'element'
   name: 'a:defaultShapeDefinition'
   attributes: Record<string, never>
@@ -741,7 +742,7 @@ export interface DefaultShapeDefinitionMap {
   style?: ShapeStyle
 }
 
-export interface DuotoneEffect extends UnistNode {
+export interface DuotoneEffect extends Element {
   type: 'element'
   name: 'a:duotoneEffect'
   attributes: Record<string, never>
@@ -757,7 +758,7 @@ export interface DuotoneEffectMap {
   sysClr: SystemColor[]
 }
 
-export interface EffectContainer extends UnistNode {
+export interface EffectContainer extends Element {
   type: 'element'
   name: 'a:effectContainer'
   attributes: {
@@ -800,7 +801,7 @@ export interface EffectContainerMap {
   xfrm?: TransformEffect[]
 }
 
-export interface EffectList extends UnistNode {
+export interface EffectList extends Element {
   type: 'element'
   name: 'a:effectList'
   attributes: Record<string, never>
@@ -818,7 +819,7 @@ export interface EffectListMap {
   softEdge?: SoftEdgesEffect
 }
 
-export interface EffectProperties extends UnistNode {
+export interface EffectProperties extends Element {
   type: 'element'
   name: 'a:effectProperties'
   attributes: Record<string, never>
@@ -830,7 +831,7 @@ export interface EffectPropertiesMap {
   effectLst: EffectList
 }
 
-export interface EffectReference extends UnistNode {
+export interface EffectReference extends Element {
   type: 'element'
   name: 'a:effectReference'
   attributes: {
@@ -839,7 +840,7 @@ export interface EffectReference extends UnistNode {
   children: []
 }
 
-export interface EffectStyleItem extends UnistNode {
+export interface EffectStyleItem extends Element {
   type: 'element'
   name: 'a:effectStyleItem'
   attributes: Record<string, never>
@@ -853,7 +854,7 @@ export interface EffectStyleItemMap {
   sp3d?: Shape3D
 }
 
-export interface EffectStyleList extends UnistNode {
+export interface EffectStyleList extends Element {
   type: 'element'
   name: 'a:effectStyleList'
   attributes: Record<string, never>
@@ -864,7 +865,7 @@ export interface EffectStyleListMap {
   effectStyle: EffectStyleItem[]
 }
 
-export interface EmbeddedWAVAudioFile extends UnistNode {
+export interface EmbeddedWAVAudioFile extends Element {
   type: 'element'
   name: 'a:embeddedWAVAudioFile'
   attributes: {
@@ -874,12 +875,12 @@ export interface EmbeddedWAVAudioFile extends UnistNode {
   children: []
 }
 
-export interface EmptyElement extends UnistNode {
+export interface EmptyElement extends Element {
   type: 'element'
   name: 'a:emptyElement'
 }
 
-export interface FillEffect extends UnistNode {
+export interface FillEffect extends Element {
   type: 'element'
   name: 'a:fillEffect'
   attributes: Record<string, never>
@@ -895,7 +896,7 @@ export interface FillEffectMap {
   solidFill: SolidColorFillProperties
 }
 
-export interface FillOverlayEffect extends UnistNode {
+export interface FillOverlayEffect extends Element {
   type: 'element'
   name: 'a:fillOverlayEffect'
   attributes: {
@@ -913,7 +914,7 @@ export interface FillOverlayEffectMap {
   solidFill: SolidColorFillProperties
 }
 
-export interface FillProperties extends UnistNode {
+export interface FillProperties extends Element {
   type: 'element'
   name: 'a:fillProperties'
   attributes: Record<string, never>
@@ -929,7 +930,7 @@ export interface FillPropertiesMap {
   solidFill: SolidColorFillProperties
 }
 
-export interface FillStyleList extends UnistNode {
+export interface FillStyleList extends Element {
   type: 'element'
   name: 'a:fillStyleList'
   attributes: Record<string, never>
@@ -945,7 +946,7 @@ export interface FillStyleListMap {
   solidFill: SolidColorFillProperties[]
 }
 
-export interface FixedPercentage extends UnistNode {
+export interface FixedPercentage extends Element {
   type: 'element'
   name: 'a:fixedPercentage'
   attributes: {
@@ -954,7 +955,7 @@ export interface FixedPercentage extends UnistNode {
   children: []
 }
 
-export interface FlatText extends UnistNode {
+export interface FlatText extends Element {
   type: 'element'
   name: 'a:flatText'
   attributes: {
@@ -963,7 +964,7 @@ export interface FlatText extends UnistNode {
   children: []
 }
 
-export interface FontCollection extends UnistNode {
+export interface FontCollection extends Element {
   type: 'element'
   name: 'a:fontCollection'
   attributes: Record<string, never>
@@ -978,7 +979,7 @@ export interface FontCollectionMap {
   latin: TextFont
 }
 
-export interface FontReference extends UnistNode {
+export interface FontReference extends Element {
   type: 'element'
   name: 'a:fontReference'
   attributes: {
@@ -996,7 +997,7 @@ export interface FontReferenceMap {
   sysClr?: SystemColor
 }
 
-export interface FontScheme extends UnistNode {
+export interface FontScheme extends Element {
   type: 'element'
   name: 'a:fontScheme'
   attributes: {
@@ -1011,12 +1012,12 @@ export interface FontSchemeMap {
   minorFont: FontCollection
 }
 
-export interface GammaTransform extends UnistNode {
+export interface GammaTransform extends Element {
   type: 'element'
   name: 'a:gammaTransform'
 }
 
-export interface GeomGuide extends UnistNode {
+export interface GeomGuide extends Element {
   type: 'element'
   name: 'a:geomGuide'
   attributes: {
@@ -1026,7 +1027,7 @@ export interface GeomGuide extends UnistNode {
   children: []
 }
 
-export interface GeomGuideList extends UnistNode {
+export interface GeomGuideList extends Element {
   type: 'element'
   name: 'a:geomGuideList'
   attributes: Record<string, never>
@@ -1037,7 +1038,7 @@ export interface GeomGuideListMap {
   gd?: GeomGuide[]
 }
 
-export interface GeomRect extends UnistNode {
+export interface GeomRect extends Element {
   type: 'element'
   name: 'a:geomRect'
   attributes: {
@@ -1049,7 +1050,7 @@ export interface GeomRect extends UnistNode {
   children: []
 }
 
-export interface GlowEffect extends UnistNode {
+export interface GlowEffect extends Element {
   type: 'element'
   name: 'a:glowEffect'
   attributes: {
@@ -1067,7 +1068,7 @@ export interface GlowEffectMap {
   sysClr: SystemColor
 }
 
-export interface GradientFillProperties extends UnistNode {
+export interface GradientFillProperties extends Element {
   type: 'element'
   name: 'a:gradientFillProperties'
   attributes: {
@@ -1084,7 +1085,7 @@ export interface GradientFillPropertiesMap {
   tileRect?: RelativeRect
 }
 
-export interface GradientStop extends UnistNode {
+export interface GradientStop extends Element {
   type: 'element'
   name: 'a:gradientStop'
   attributes: {
@@ -1102,7 +1103,7 @@ export interface GradientStopMap {
   sysClr: SystemColor
 }
 
-export interface GradientStopList extends UnistNode {
+export interface GradientStopList extends Element {
   type: 'element'
   name: 'a:gradientStopList'
   attributes: Record<string, never>
@@ -1113,7 +1114,7 @@ export interface GradientStopListMap {
   gs: GradientStop[]
 }
 
-export interface GraphicalObject extends UnistNode {
+export interface GraphicalObject extends Element {
   type: 'element'
   name: 'a:graphicalObject'
   attributes: Record<string, never>
@@ -1124,7 +1125,7 @@ export interface GraphicalObjectMap {
   graphicData: GraphicalObjectData
 }
 
-export interface GraphicalObjectData extends UnistNode {
+export interface GraphicalObjectData extends Element {
   type: 'element'
   name: 'a:graphicalObjectData'
   attributes: {
@@ -1133,7 +1134,7 @@ export interface GraphicalObjectData extends UnistNode {
   children: []
 }
 
-export interface GraphicalObjectFrameLocking extends UnistNode {
+export interface GraphicalObjectFrameLocking extends Element {
   type: 'element'
   name: 'a:graphicalObjectFrameLocking'
   attributes: {
@@ -1151,22 +1152,22 @@ export interface GraphicalObjectFrameLockingMap {
   extLst?: OfficeArtExtensionList
 }
 
-export interface GrayscaleEffect extends UnistNode {
+export interface GrayscaleEffect extends Element {
   type: 'element'
   name: 'a:grayscaleEffect'
 }
 
-export interface GrayscaleTransform extends UnistNode {
+export interface GrayscaleTransform extends Element {
   type: 'element'
   name: 'a:grayscaleTransform'
 }
 
-export interface GroupFillProperties extends UnistNode {
+export interface GroupFillProperties extends Element {
   type: 'element'
   name: 'a:groupFillProperties'
 }
 
-export interface GroupLocking extends UnistNode {
+export interface GroupLocking extends Element {
   type: 'element'
   name: 'a:groupLocking'
   attributes: {
@@ -1185,7 +1186,7 @@ export interface GroupLockingMap {
   extLst?: OfficeArtExtensionList
 }
 
-export interface GroupShapeProperties extends UnistNode {
+export interface GroupShapeProperties extends Element {
   type: 'element'
   name: 'a:groupShapeProperties'
   attributes: {
@@ -1208,7 +1209,7 @@ export interface GroupShapePropertiesMap {
   xfrm?: GroupTransform2D
 }
 
-export interface GroupTransform2D extends UnistNode {
+export interface GroupTransform2D extends Element {
   type: 'element'
   name: 'a:groupTransform2D'
   attributes: {
@@ -1226,7 +1227,7 @@ export interface GroupTransform2DMap {
   off?: Point2D
 }
 
-export interface GvmlConnector extends UnistNode {
+export interface GvmlConnector extends Element {
   type: 'element'
   name: 'a:gvmlConnector'
   attributes: Record<string, never>
@@ -1240,7 +1241,7 @@ export interface GvmlConnectorMap {
   style?: ShapeStyle
 }
 
-export interface GvmlConnectorNonVisual extends UnistNode {
+export interface GvmlConnectorNonVisual extends Element {
   type: 'element'
   name: 'a:gvmlConnectorNonVisual'
   attributes: Record<string, never>
@@ -1252,7 +1253,7 @@ export interface GvmlConnectorNonVisualMap {
   cNvPr: NonVisualDrawingProps
 }
 
-export interface GvmlGraphicalObjectFrame extends UnistNode {
+export interface GvmlGraphicalObjectFrame extends Element {
   type: 'element'
   name: 'a:gvmlGraphicalObjectFrame'
   attributes: Record<string, never>
@@ -1266,7 +1267,7 @@ export interface GvmlGraphicalObjectFrameMap {
   xfrm: Transform2D
 }
 
-export interface GvmlGraphicFrameNonVisual extends UnistNode {
+export interface GvmlGraphicFrameNonVisual extends Element {
   type: 'element'
   name: 'a:gvmlGraphicFrameNonVisual'
   attributes: Record<string, never>
@@ -1278,7 +1279,7 @@ export interface GvmlGraphicFrameNonVisualMap {
   cNvPr: NonVisualDrawingProps
 }
 
-export interface GvmlGroupShape extends UnistNode {
+export interface GvmlGroupShape extends Element {
   type: 'element'
   name: 'a:gvmlGroupShape'
   attributes: Record<string, never>
@@ -1297,7 +1298,7 @@ export interface GvmlGroupShapeMap {
   txSp?: GvmlTextShape[]
 }
 
-export interface GvmlGroupShapeNonVisual extends UnistNode {
+export interface GvmlGroupShapeNonVisual extends Element {
   type: 'element'
   name: 'a:gvmlGroupShapeNonVisual'
   attributes: Record<string, never>
@@ -1309,7 +1310,7 @@ export interface GvmlGroupShapeNonVisualMap {
   cNvPr: NonVisualDrawingProps
 }
 
-export interface GvmlPicture extends UnistNode {
+export interface GvmlPicture extends Element {
   type: 'element'
   name: 'a:gvmlPicture'
   attributes: Record<string, never>
@@ -1324,7 +1325,7 @@ export interface GvmlPictureMap {
   style?: ShapeStyle
 }
 
-export interface GvmlPictureNonVisual extends UnistNode {
+export interface GvmlPictureNonVisual extends Element {
   type: 'element'
   name: 'a:gvmlPictureNonVisual'
   attributes: Record<string, never>
@@ -1336,7 +1337,7 @@ export interface GvmlPictureNonVisualMap {
   cNvPr: NonVisualDrawingProps
 }
 
-export interface GvmlShape extends UnistNode {
+export interface GvmlShape extends Element {
   type: 'element'
   name: 'a:gvmlShape'
   attributes: Record<string, never>
@@ -1351,7 +1352,7 @@ export interface GvmlShapeMap {
   txSp?: GvmlTextShape
 }
 
-export interface GvmlShapeNonVisual extends UnistNode {
+export interface GvmlShapeNonVisual extends Element {
   type: 'element'
   name: 'a:gvmlShapeNonVisual'
   attributes: Record<string, never>
@@ -1363,7 +1364,7 @@ export interface GvmlShapeNonVisualMap {
   cNvSpPr: NonVisualDrawingShapeProps
 }
 
-export interface GvmlTextShape extends UnistNode {
+export interface GvmlTextShape extends Element {
   type: 'element'
   name: 'a:gvmlTextShape'
   attributes: Record<string, never>
@@ -1377,12 +1378,12 @@ export interface GvmlTextShapeMap {
   xfrm: Transform2D
 }
 
-export interface GvmlUseShapeRectangle extends UnistNode {
+export interface GvmlUseShapeRectangle extends Element {
   type: 'element'
   name: 'a:gvmlUseShapeRectangle'
 }
 
-export interface Headers extends UnistNode {
+export interface Headers extends Element {
   type: 'element'
   name: 'a:headers'
   attributes: Record<string, never>
@@ -1390,10 +1391,10 @@ export interface Headers extends UnistNode {
 }
 
 export interface HeadersMap {
-  header?: string[]
+  header?: StringTag<'header', 'a'>[]
 }
 
-export interface HslColor extends UnistNode {
+export interface HslColor extends Element {
   type: 'element'
   name: 'a:hslColor'
   attributes: {
@@ -1435,7 +1436,7 @@ export interface HslColorMap {
   tint?: PositiveFixedPercentage[]
 }
 
-export interface HSLEffect extends UnistNode {
+export interface HSLEffect extends Element {
   type: 'element'
   name: 'a:hSLEffect'
   attributes: {
@@ -1446,7 +1447,7 @@ export interface HSLEffect extends UnistNode {
   children: []
 }
 
-export interface Hyperlink extends UnistNode {
+export interface Hyperlink extends Element {
   type: 'element'
   name: 'a:hyperlink'
   attributes: {
@@ -1467,7 +1468,7 @@ export interface HyperlinkMap {
   snd?: EmbeddedWAVAudioFile
 }
 
-export interface InnerShadowEffect extends UnistNode {
+export interface InnerShadowEffect extends Element {
   type: 'element'
   name: 'a:innerShadowEffect'
   attributes: {
@@ -1487,17 +1488,17 @@ export interface InnerShadowEffectMap {
   sysClr: SystemColor
 }
 
-export interface InverseGammaTransform extends UnistNode {
+export interface InverseGammaTransform extends Element {
   type: 'element'
   name: 'a:inverseGammaTransform'
 }
 
-export interface InverseTransform extends UnistNode {
+export interface InverseTransform extends Element {
   type: 'element'
   name: 'a:inverseTransform'
 }
 
-export interface LightRig extends UnistNode {
+export interface LightRig extends Element {
   type: 'element'
   name: 'a:lightRig'
   attributes: {
@@ -1511,7 +1512,7 @@ export interface LightRigMap {
   rot?: SphereCoords
 }
 
-export interface LinearShadeProperties extends UnistNode {
+export interface LinearShadeProperties extends Element {
   type: 'element'
   name: 'a:linearShadeProperties'
   attributes: {
@@ -1521,7 +1522,7 @@ export interface LinearShadeProperties extends UnistNode {
   children: []
 }
 
-export interface LineEndProperties extends UnistNode {
+export interface LineEndProperties extends Element {
   type: 'element'
   name: 'a:lineEndProperties'
   attributes: {
@@ -1532,12 +1533,12 @@ export interface LineEndProperties extends UnistNode {
   children: []
 }
 
-export interface LineJoinBevel extends UnistNode {
+export interface LineJoinBevel extends Element {
   type: 'element'
   name: 'a:lineJoinBevel'
 }
 
-export interface LineJoinMiterProperties extends UnistNode {
+export interface LineJoinMiterProperties extends Element {
   type: 'element'
   name: 'a:lineJoinMiterProperties'
   attributes: {
@@ -1546,12 +1547,12 @@ export interface LineJoinMiterProperties extends UnistNode {
   children: []
 }
 
-export interface LineJoinRound extends UnistNode {
+export interface LineJoinRound extends Element {
   type: 'element'
   name: 'a:lineJoinRound'
 }
 
-export interface LineProperties extends UnistNode {
+export interface LineProperties extends Element {
   type: 'element'
   name: 'a:lineProperties'
   attributes: {
@@ -1578,7 +1579,7 @@ export interface LinePropertiesMap {
   tailEnd?: LineEndProperties
 }
 
-export interface LineStyleList extends UnistNode {
+export interface LineStyleList extends Element {
   type: 'element'
   name: 'a:lineStyleList'
   attributes: Record<string, never>
@@ -1589,7 +1590,7 @@ export interface LineStyleListMap {
   ln: LineProperties[]
 }
 
-export interface LuminanceEffect extends UnistNode {
+export interface LuminanceEffect extends Element {
   type: 'element'
   name: 'a:luminanceEffect'
   attributes: {
@@ -1599,12 +1600,12 @@ export interface LuminanceEffect extends UnistNode {
   children: []
 }
 
-export interface NoFillProperties extends UnistNode {
+export interface NoFillProperties extends Element {
   type: 'element'
   name: 'a:noFillProperties'
 }
 
-export interface NonVisualConnectorProperties extends UnistNode {
+export interface NonVisualConnectorProperties extends Element {
   type: 'element'
   name: 'a:nonVisualConnectorProperties'
   attributes: Record<string, never>
@@ -1618,7 +1619,7 @@ export interface NonVisualConnectorPropertiesMap {
   stCxn?: Connection
 }
 
-export interface NonVisualContentPartProperties extends UnistNode {
+export interface NonVisualContentPartProperties extends Element {
   type: 'element'
   name: 'a:nonVisualContentPartProperties'
   attributes: {
@@ -1632,7 +1633,7 @@ export interface NonVisualContentPartPropertiesMap {
   extLst?: OfficeArtExtensionList
 }
 
-export interface NonVisualDrawingProps extends UnistNode {
+export interface NonVisualDrawingProps extends Element {
   type: 'element'
   name: 'a:nonVisualDrawingProps'
   attributes: {
@@ -1651,7 +1652,7 @@ export interface NonVisualDrawingPropsMap {
   hlinkHover?: Hyperlink
 }
 
-export interface NonVisualDrawingShapeProps extends UnistNode {
+export interface NonVisualDrawingShapeProps extends Element {
   type: 'element'
   name: 'a:nonVisualDrawingShapeProps'
   attributes: {
@@ -1665,7 +1666,7 @@ export interface NonVisualDrawingShapePropsMap {
   spLocks?: ShapeLocking
 }
 
-export interface NonVisualGraphicFrameProperties extends UnistNode {
+export interface NonVisualGraphicFrameProperties extends Element {
   type: 'element'
   name: 'a:nonVisualGraphicFrameProperties'
   attributes: Record<string, never>
@@ -1677,7 +1678,7 @@ export interface NonVisualGraphicFramePropertiesMap {
   graphicFrameLocks?: GraphicalObjectFrameLocking
 }
 
-export interface NonVisualGroupDrawingShapeProps extends UnistNode {
+export interface NonVisualGroupDrawingShapeProps extends Element {
   type: 'element'
   name: 'a:nonVisualGroupDrawingShapeProps'
   attributes: Record<string, never>
@@ -1689,7 +1690,7 @@ export interface NonVisualGroupDrawingShapePropsMap {
   grpSpLocks?: GroupLocking
 }
 
-export interface NonVisualPictureProperties extends UnistNode {
+export interface NonVisualPictureProperties extends Element {
   type: 'element'
   name: 'a:nonVisualPictureProperties'
   attributes: {
@@ -1703,7 +1704,7 @@ export interface NonVisualPicturePropertiesMap {
   picLocks?: PictureLocking
 }
 
-export interface ObjectStyleDefaults extends UnistNode {
+export interface ObjectStyleDefaults extends Element {
   type: 'element'
   name: 'a:objectStyleDefaults'
   attributes: Record<string, never>
@@ -1717,7 +1718,7 @@ export interface ObjectStyleDefaultsMap {
   txDef?: DefaultShapeDefinition
 }
 
-export interface OfficeArtExtension extends UnistNode {
+export interface OfficeArtExtension extends Element {
   type: 'element'
   name: 'a:officeArtExtension'
   attributes: {
@@ -1726,7 +1727,7 @@ export interface OfficeArtExtension extends UnistNode {
   children: []
 }
 
-export interface OfficeArtExtensionList extends UnistNode {
+export interface OfficeArtExtensionList extends Element {
   type: 'element'
   name: 'a:officeArtExtensionList'
   attributes: Record<string, never>
@@ -1737,7 +1738,7 @@ export interface OfficeArtExtensionListMap {
   ext?: OfficeArtExtension[]
 }
 
-export interface OfficeStyleSheet extends UnistNode {
+export interface OfficeStyleSheet extends Element {
   type: 'element'
   name: 'a:officeStyleSheet'
   attributes: {
@@ -1754,7 +1755,7 @@ export interface OfficeStyleSheetMap {
   themeElements: BaseStyles
 }
 
-export interface OuterShadowEffect extends UnistNode {
+export interface OuterShadowEffect extends Element {
   type: 'element'
   name: 'a:outerShadowEffect'
   attributes: {
@@ -1780,7 +1781,7 @@ export interface OuterShadowEffectMap {
   sysClr: SystemColor
 }
 
-export interface Path2D extends UnistNode {
+export interface Path2D extends Element {
   type: 'element'
   name: 'a:path2D'
   attributes: {
@@ -1802,7 +1803,7 @@ export interface Path2DMap {
   quadBezTo?: Path2DQuadBezierTo[]
 }
 
-export interface Path2DArcTo extends UnistNode {
+export interface Path2DArcTo extends Element {
   type: 'element'
   name: 'a:path2DArcTo'
   attributes: {
@@ -1814,12 +1815,12 @@ export interface Path2DArcTo extends UnistNode {
   children: []
 }
 
-export interface Path2DClose extends UnistNode {
+export interface Path2DClose extends Element {
   type: 'element'
   name: 'a:path2DClose'
 }
 
-export interface Path2DCubicBezierTo extends UnistNode {
+export interface Path2DCubicBezierTo extends Element {
   type: 'element'
   name: 'a:path2DCubicBezierTo'
   attributes: Record<string, never>
@@ -1830,7 +1831,7 @@ export interface Path2DCubicBezierToMap {
   pt: AdjPoint2D[]
 }
 
-export interface Path2DLineTo extends UnistNode {
+export interface Path2DLineTo extends Element {
   type: 'element'
   name: 'a:path2DLineTo'
   attributes: Record<string, never>
@@ -1841,7 +1842,7 @@ export interface Path2DLineToMap {
   pt: AdjPoint2D
 }
 
-export interface Path2DList extends UnistNode {
+export interface Path2DList extends Element {
   type: 'element'
   name: 'a:path2DList'
   attributes: Record<string, never>
@@ -1852,7 +1853,7 @@ export interface Path2DListMap {
   path?: Path2D[]
 }
 
-export interface Path2DMoveTo extends UnistNode {
+export interface Path2DMoveTo extends Element {
   type: 'element'
   name: 'a:path2DMoveTo'
   attributes: Record<string, never>
@@ -1863,7 +1864,7 @@ export interface Path2DMoveToMap {
   pt: AdjPoint2D
 }
 
-export interface Path2DQuadBezierTo extends UnistNode {
+export interface Path2DQuadBezierTo extends Element {
   type: 'element'
   name: 'a:path2DQuadBezierTo'
   attributes: Record<string, never>
@@ -1874,7 +1875,7 @@ export interface Path2DQuadBezierToMap {
   pt: AdjPoint2D[]
 }
 
-export interface PathShadeProperties extends UnistNode {
+export interface PathShadeProperties extends Element {
   type: 'element'
   name: 'a:pathShadeProperties'
   attributes: {
@@ -1887,7 +1888,7 @@ export interface PathShadePropertiesMap {
   fillToRect?: RelativeRect
 }
 
-export interface PatternFillProperties extends UnistNode {
+export interface PatternFillProperties extends Element {
   type: 'element'
   name: 'a:patternFillProperties'
   attributes: {
@@ -1901,7 +1902,7 @@ export interface PatternFillPropertiesMap {
   fgClr?: Color
 }
 
-export interface Percentage extends UnistNode {
+export interface Percentage extends Element {
   type: 'element'
   name: 'a:percentage'
   attributes: {
@@ -1910,7 +1911,7 @@ export interface Percentage extends UnistNode {
   children: []
 }
 
-export interface PictureLocking extends UnistNode {
+export interface PictureLocking extends Element {
   type: 'element'
   name: 'a:pictureLocking'
   attributes: {
@@ -1933,7 +1934,7 @@ export interface PictureLockingMap {
   extLst?: OfficeArtExtensionList
 }
 
-export interface Point2D extends UnistNode {
+export interface Point2D extends Element {
   type: 'element'
   name: 'a:point2D'
   attributes: {
@@ -1943,7 +1944,7 @@ export interface Point2D extends UnistNode {
   children: []
 }
 
-export interface Point3D extends UnistNode {
+export interface Point3D extends Element {
   type: 'element'
   name: 'a:point3D'
   attributes: {
@@ -1954,7 +1955,7 @@ export interface Point3D extends UnistNode {
   children: []
 }
 
-export interface PolarAdjustHandle extends UnistNode {
+export interface PolarAdjustHandle extends Element {
   type: 'element'
   name: 'a:polarAdjustHandle'
   attributes: {
@@ -1972,7 +1973,7 @@ export interface PolarAdjustHandleMap {
   pos: AdjPoint2D
 }
 
-export interface PositiveFixedAngle extends UnistNode {
+export interface PositiveFixedAngle extends Element {
   type: 'element'
   name: 'a:positiveFixedAngle'
   attributes: {
@@ -1981,7 +1982,7 @@ export interface PositiveFixedAngle extends UnistNode {
   children: []
 }
 
-export interface PositiveFixedPercentage extends UnistNode {
+export interface PositiveFixedPercentage extends Element {
   type: 'element'
   name: 'a:positiveFixedPercentage'
   attributes: {
@@ -1990,7 +1991,7 @@ export interface PositiveFixedPercentage extends UnistNode {
   children: []
 }
 
-export interface PositivePercentage extends UnistNode {
+export interface PositivePercentage extends Element {
   type: 'element'
   name: 'a:positivePercentage'
   attributes: {
@@ -1999,7 +2000,7 @@ export interface PositivePercentage extends UnistNode {
   children: []
 }
 
-export interface PositiveSize2D extends UnistNode {
+export interface PositiveSize2D extends Element {
   type: 'element'
   name: 'a:positiveSize2D'
   attributes: {
@@ -2009,7 +2010,7 @@ export interface PositiveSize2D extends UnistNode {
   children: []
 }
 
-export interface PresetColor extends UnistNode {
+export interface PresetColor extends Element {
   type: 'element'
   name: 'a:presetColor'
   attributes: {
@@ -2049,7 +2050,7 @@ export interface PresetColorMap {
   tint?: PositiveFixedPercentage[]
 }
 
-export interface PresetGeometry2D extends UnistNode {
+export interface PresetGeometry2D extends Element {
   type: 'element'
   name: 'a:presetGeometry2D'
   attributes: {
@@ -2062,7 +2063,7 @@ export interface PresetGeometry2DMap {
   avLst?: GeomGuideList
 }
 
-export interface PresetLineDashProperties extends UnistNode {
+export interface PresetLineDashProperties extends Element {
   type: 'element'
   name: 'a:presetLineDashProperties'
   attributes: {
@@ -2071,7 +2072,7 @@ export interface PresetLineDashProperties extends UnistNode {
   children: []
 }
 
-export interface PresetShadowEffect extends UnistNode {
+export interface PresetShadowEffect extends Element {
   type: 'element'
   name: 'a:presetShadowEffect'
   attributes: {
@@ -2091,7 +2092,7 @@ export interface PresetShadowEffectMap {
   sysClr: SystemColor
 }
 
-export interface PresetTextShape extends UnistNode {
+export interface PresetTextShape extends Element {
   type: 'element'
   name: 'a:presetTextShape'
   attributes: {
@@ -2104,7 +2105,7 @@ export interface PresetTextShapeMap {
   avLst?: GeomGuideList
 }
 
-export interface QuickTimeFile extends UnistNode {
+export interface QuickTimeFile extends Element {
   type: 'element'
   name: 'a:quickTimeFile'
   attributes: {
@@ -2117,7 +2118,7 @@ export interface QuickTimeFileMap {
   extLst?: OfficeArtExtensionList
 }
 
-export interface Ratio extends UnistNode {
+export interface Ratio extends Element {
   type: 'element'
   name: 'a:ratio'
   attributes: {
@@ -2127,7 +2128,7 @@ export interface Ratio extends UnistNode {
   children: []
 }
 
-export interface ReflectionEffect extends UnistNode {
+export interface ReflectionEffect extends Element {
   type: 'element'
   name: 'a:reflectionEffect'
   attributes: {
@@ -2149,7 +2150,7 @@ export interface ReflectionEffect extends UnistNode {
   children: []
 }
 
-export interface RegularTextRun extends UnistNode {
+export interface RegularTextRun extends Element {
   type: 'element'
   name: 'a:regularTextRun'
   attributes: Record<string, never>
@@ -2158,10 +2159,10 @@ export interface RegularTextRun extends UnistNode {
 
 export interface RegularTextRunMap {
   rPr?: TextCharacterProperties
-  t: string
+  t: T
 }
 
-export interface RelativeOffsetEffect extends UnistNode {
+export interface RelativeOffsetEffect extends Element {
   type: 'element'
   name: 'a:relativeOffsetEffect'
   attributes: {
@@ -2171,7 +2172,7 @@ export interface RelativeOffsetEffect extends UnistNode {
   children: []
 }
 
-export interface RelativeRect extends UnistNode {
+export interface RelativeRect extends Element {
   type: 'element'
   name: 'a:relativeRect'
   attributes: {
@@ -2183,7 +2184,7 @@ export interface RelativeRect extends UnistNode {
   children: []
 }
 
-export interface Scale2D extends UnistNode {
+export interface Scale2D extends Element {
   type: 'element'
   name: 'a:scale2D'
   attributes: Record<string, never>
@@ -2195,7 +2196,7 @@ export interface Scale2DMap {
   sy: Ratio
 }
 
-export interface Scene3D extends UnistNode {
+export interface Scene3D extends Element {
   type: 'element'
   name: 'a:scene3D'
   attributes: Record<string, never>
@@ -2209,7 +2210,7 @@ export interface Scene3DMap {
   lightRig: LightRig
 }
 
-export interface SchemeColor extends UnistNode {
+export interface SchemeColor extends Element {
   type: 'element'
   name: 'a:schemeColor'
   attributes: {
@@ -2249,7 +2250,7 @@ export interface SchemeColorMap {
   tint?: PositiveFixedPercentage[]
 }
 
-export interface ScRgbColor extends UnistNode {
+export interface ScRgbColor extends Element {
   type: 'element'
   name: 'a:scRgbColor'
   attributes: {
@@ -2291,7 +2292,7 @@ export interface ScRgbColorMap {
   tint?: PositiveFixedPercentage[]
 }
 
-export interface Shape3D extends UnistNode {
+export interface Shape3D extends Element {
   type: 'element'
   name: 'a:shape3D'
   attributes: {
@@ -2311,7 +2312,7 @@ export interface Shape3DMap {
   extrusionClr?: Color
 }
 
-export interface ShapeLocking extends UnistNode {
+export interface ShapeLocking extends Element {
   type: 'element'
   name: 'a:shapeLocking'
   attributes: {
@@ -2334,7 +2335,7 @@ export interface ShapeLockingMap {
   extLst?: OfficeArtExtensionList
 }
 
-export interface ShapeProperties extends UnistNode {
+export interface ShapeProperties extends Element {
   type: 'element'
   name: 'a:shapeProperties'
   attributes: {
@@ -2361,7 +2362,7 @@ export interface ShapePropertiesMap {
   xfrm?: Transform2D
 }
 
-export interface ShapeStyle extends UnistNode {
+export interface ShapeStyle extends Element {
   type: 'element'
   name: 'a:shapeStyle'
   attributes: Record<string, never>
@@ -2375,7 +2376,7 @@ export interface ShapeStyleMap {
   lnRef: StyleMatrixReference
 }
 
-export interface SoftEdgesEffect extends UnistNode {
+export interface SoftEdgesEffect extends Element {
   type: 'element'
   name: 'a:softEdgesEffect'
   attributes: {
@@ -2384,7 +2385,7 @@ export interface SoftEdgesEffect extends UnistNode {
   children: []
 }
 
-export interface SolidColorFillProperties extends UnistNode {
+export interface SolidColorFillProperties extends Element {
   type: 'element'
   name: 'a:solidColorFillProperties'
   attributes: Record<string, never>
@@ -2400,7 +2401,7 @@ export interface SolidColorFillPropertiesMap {
   sysClr?: SystemColor
 }
 
-export interface SphereCoords extends UnistNode {
+export interface SphereCoords extends Element {
   type: 'element'
   name: 'a:sphereCoords'
   attributes: {
@@ -2411,7 +2412,7 @@ export interface SphereCoords extends UnistNode {
   children: []
 }
 
-export interface SRgbColor extends UnistNode {
+export interface SRgbColor extends Element {
   type: 'element'
   name: 'a:sRgbColor'
   attributes: {
@@ -2451,7 +2452,7 @@ export interface SRgbColorMap {
   tint?: PositiveFixedPercentage[]
 }
 
-export interface StretchInfoProperties extends UnistNode {
+export interface StretchInfoProperties extends Element {
   type: 'element'
   name: 'a:stretchInfoProperties'
   attributes: Record<string, never>
@@ -2462,7 +2463,7 @@ export interface StretchInfoPropertiesMap {
   fillRect?: RelativeRect
 }
 
-export interface StyleMatrix extends UnistNode {
+export interface StyleMatrix extends Element {
   type: 'element'
   name: 'a:styleMatrix'
   attributes: {
@@ -2478,7 +2479,7 @@ export interface StyleMatrixMap {
   lnStyleLst: LineStyleList
 }
 
-export interface StyleMatrixReference extends UnistNode {
+export interface StyleMatrixReference extends Element {
   type: 'element'
   name: 'a:styleMatrixReference'
   attributes: {
@@ -2496,7 +2497,7 @@ export interface StyleMatrixReferenceMap {
   sysClr?: SystemColor
 }
 
-export interface SupplementalFont extends UnistNode {
+export interface SupplementalFont extends Element {
   type: 'element'
   name: 'a:supplementalFont'
   attributes: {
@@ -2506,7 +2507,7 @@ export interface SupplementalFont extends UnistNode {
   children: []
 }
 
-export interface SystemColor extends UnistNode {
+export interface SystemColor extends Element {
   type: 'element'
   name: 'a:systemColor'
   attributes: {
@@ -2547,7 +2548,7 @@ export interface SystemColorMap {
   tint?: PositiveFixedPercentage[]
 }
 
-export interface Table extends UnistNode {
+export interface Table extends Element {
   type: 'element'
   name: 'a:table'
   attributes: Record<string, never>
@@ -2560,7 +2561,7 @@ export interface TableMap {
   tr?: TableRow[]
 }
 
-export interface TableBackgroundStyle extends UnistNode {
+export interface TableBackgroundStyle extends Element {
   type: 'element'
   name: 'a:tableBackgroundStyle'
   attributes: Record<string, never>
@@ -2574,7 +2575,7 @@ export interface TableBackgroundStyleMap {
   fillRef?: StyleMatrixReference
 }
 
-export interface TableCell extends UnistNode {
+export interface TableCell extends Element {
   type: 'element'
   name: 'a:tableCell'
   attributes: {
@@ -2593,7 +2594,7 @@ export interface TableCellMap {
   txBody?: TextBody
 }
 
-export interface TableCellBorderStyle extends UnistNode {
+export interface TableCellBorderStyle extends Element {
   type: 'element'
   name: 'a:tableCellBorderStyle'
   attributes: Record<string, never>
@@ -2612,7 +2613,7 @@ export interface TableCellBorderStyleMap {
   tr2bl?: ThemeableLineStyle
 }
 
-export interface TableCellProperties extends UnistNode {
+export interface TableCellProperties extends Element {
   type: 'element'
   name: 'a:tableCellProperties'
   attributes: {
@@ -2646,7 +2647,7 @@ export interface TableCellPropertiesMap {
   solidFill?: SolidColorFillProperties
 }
 
-export interface TableCol extends UnistNode {
+export interface TableCol extends Element {
   type: 'element'
   name: 'a:tableCol'
   attributes: {
@@ -2659,7 +2660,7 @@ export interface TableColMap {
   extLst?: OfficeArtExtensionList
 }
 
-export interface TableGrid extends UnistNode {
+export interface TableGrid extends Element {
   type: 'element'
   name: 'a:tableGrid'
   attributes: Record<string, never>
@@ -2670,7 +2671,7 @@ export interface TableGridMap {
   gridCol?: TableCol[]
 }
 
-export interface TablePartStyle extends UnistNode {
+export interface TablePartStyle extends Element {
   type: 'element'
   name: 'a:tablePartStyle'
   attributes: Record<string, never>
@@ -2682,7 +2683,7 @@ export interface TablePartStyleMap {
   tcTxStyle?: TableStyleTextStyle
 }
 
-export interface TableProperties extends UnistNode {
+export interface TableProperties extends Element {
   type: 'element'
   name: 'a:tableProperties'
   attributes: {
@@ -2708,10 +2709,10 @@ export interface TablePropertiesMap {
   pattFill?: PatternFillProperties
   solidFill?: SolidColorFillProperties
   tableStyle?: TableStyle
-  tableStyleId?: string
+  tableStyleId?: StringTag<'tableStyleId', 'a'>
 }
 
-export interface TableRow extends UnistNode {
+export interface TableRow extends Element {
   type: 'element'
   name: 'a:tableRow'
   attributes: {
@@ -2725,7 +2726,7 @@ export interface TableRowMap {
   tc?: TableCell[]
 }
 
-export interface TableStyle extends UnistNode {
+export interface TableStyle extends Element {
   type: 'element'
   name: 'a:tableStyle'
   attributes: {
@@ -2753,7 +2754,7 @@ export interface TableStyleMap {
   wholeTbl?: TablePartStyle
 }
 
-export interface TableStyleCellStyle extends UnistNode {
+export interface TableStyleCellStyle extends Element {
   type: 'element'
   name: 'a:tableStyleCellStyle'
   attributes: Record<string, never>
@@ -2767,7 +2768,7 @@ export interface TableStyleCellStyleMap {
   tcBdr?: TableCellBorderStyle
 }
 
-export interface TableStyleList extends UnistNode {
+export interface TableStyleList extends Element {
   type: 'element'
   name: 'a:tableStyleList'
   attributes: {
@@ -2780,7 +2781,7 @@ export interface TableStyleListMap {
   tblStyle?: TableStyle[]
 }
 
-export interface TableStyleTextStyle extends UnistNode {
+export interface TableStyleTextStyle extends Element {
   type: 'element'
   name: 'a:tableStyleTextStyle'
   attributes: {
@@ -2802,7 +2803,7 @@ export interface TableStyleTextStyleMap {
   sysClr?: SystemColor
 }
 
-export interface TextAutonumberBullet extends UnistNode {
+export interface TextAutonumberBullet extends Element {
   type: 'element'
   name: 'a:textAutonumberBullet'
   attributes: {
@@ -2812,7 +2813,7 @@ export interface TextAutonumberBullet extends UnistNode {
   children: []
 }
 
-export interface TextBlipBullet extends UnistNode {
+export interface TextBlipBullet extends Element {
   type: 'element'
   name: 'a:textBlipBullet'
   attributes: Record<string, never>
@@ -2823,7 +2824,7 @@ export interface TextBlipBulletMap {
   blip: Blip
 }
 
-export interface TextBody extends UnistNode {
+export interface TextBody extends Element {
   type: 'element'
   name: 'a:textBody'
   attributes: Record<string, never>
@@ -2836,7 +2837,7 @@ export interface TextBodyMap {
   p: TextParagraph[]
 }
 
-export interface TextBodyProperties extends UnistNode {
+export interface TextBodyProperties extends Element {
   type: 'element'
   name: 'a:textBodyProperties'
   attributes: {
@@ -2874,17 +2875,17 @@ export interface TextBodyPropertiesMap {
   spAutoFit?: TextShapeAutofit
 }
 
-export interface TextBulletColorFollowText extends UnistNode {
+export interface TextBulletColorFollowText extends Element {
   type: 'element'
   name: 'a:textBulletColorFollowText'
 }
 
-export interface TextBulletSizeFollowText extends UnistNode {
+export interface TextBulletSizeFollowText extends Element {
   type: 'element'
   name: 'a:textBulletSizeFollowText'
 }
 
-export interface TextBulletSizePercent extends UnistNode {
+export interface TextBulletSizePercent extends Element {
   type: 'element'
   name: 'a:textBulletSizePercent'
   attributes: {
@@ -2893,7 +2894,7 @@ export interface TextBulletSizePercent extends UnistNode {
   children: []
 }
 
-export interface TextBulletSizePoint extends UnistNode {
+export interface TextBulletSizePoint extends Element {
   type: 'element'
   name: 'a:textBulletSizePoint'
   attributes: {
@@ -2902,12 +2903,12 @@ export interface TextBulletSizePoint extends UnistNode {
   children: []
 }
 
-export interface TextBulletTypefaceFollowText extends UnistNode {
+export interface TextBulletTypefaceFollowText extends Element {
   type: 'element'
   name: 'a:textBulletTypefaceFollowText'
 }
 
-export interface TextCharacterProperties extends UnistNode {
+export interface TextCharacterProperties extends Element {
   type: 'element'
   name: 'a:textCharacterProperties'
   attributes: {
@@ -2950,7 +2951,7 @@ export interface TextCharacterPropertiesMap {
   ln?: LineProperties
   noFill?: NoFillProperties
   pattFill?: PatternFillProperties
-  rtl?: string
+  rtl?: StringTag<'rtl', 'a'>
   solidFill?: SolidColorFillProperties
   sym?: TextFont
   uFill?: TextUnderlineFillGroupWrapper
@@ -2959,7 +2960,7 @@ export interface TextCharacterPropertiesMap {
   uLnTx?: TextUnderlineLineFollowText
 }
 
-export interface TextCharBullet extends UnistNode {
+export interface TextCharBullet extends Element {
   type: 'element'
   name: 'a:textCharBullet'
   attributes: {
@@ -2968,7 +2969,7 @@ export interface TextCharBullet extends UnistNode {
   children: []
 }
 
-export interface TextField extends UnistNode {
+export interface TextField extends Element {
   type: 'element'
   name: 'a:textField'
   attributes: {
@@ -2981,10 +2982,10 @@ export interface TextField extends UnistNode {
 export interface TextFieldMap {
   pPr?: TextParagraphProperties
   rPr?: TextCharacterProperties
-  t?: string
+  t?: T
 }
 
-export interface TextFont extends UnistNode {
+export interface TextFont extends Element {
   type: 'element'
   name: 'a:textFont'
   attributes: {
@@ -2996,7 +2997,7 @@ export interface TextFont extends UnistNode {
   children: []
 }
 
-export interface TextLineBreak extends UnistNode {
+export interface TextLineBreak extends Element {
   type: 'element'
   name: 'a:textLineBreak'
   attributes: Record<string, never>
@@ -3007,7 +3008,7 @@ export interface TextLineBreakMap {
   rPr?: TextCharacterProperties
 }
 
-export interface TextListStyle extends UnistNode {
+export interface TextListStyle extends Element {
   type: 'element'
   name: 'a:textListStyle'
   attributes: Record<string, never>
@@ -3028,17 +3029,17 @@ export interface TextListStyleMap {
   lvl9pPr?: TextParagraphProperties
 }
 
-export interface TextNoAutofit extends UnistNode {
+export interface TextNoAutofit extends Element {
   type: 'element'
   name: 'a:textNoAutofit'
 }
 
-export interface TextNoBullet extends UnistNode {
+export interface TextNoBullet extends Element {
   type: 'element'
   name: 'a:textNoBullet'
 }
 
-export interface TextNormalAutofit extends UnistNode {
+export interface TextNormalAutofit extends Element {
   type: 'element'
   name: 'a:textNormalAutofit'
   attributes: {
@@ -3048,7 +3049,7 @@ export interface TextNormalAutofit extends UnistNode {
   children: []
 }
 
-export interface TextParagraph extends UnistNode {
+export interface TextParagraph extends Element {
   type: 'element'
   name: 'a:textParagraph'
   attributes: Record<string, never>
@@ -3063,7 +3064,7 @@ export interface TextParagraphMap {
   r?: RegularTextRun[]
 }
 
-export interface TextParagraphProperties extends UnistNode {
+export interface TextParagraphProperties extends Element {
   type: 'element'
   name: 'a:textParagraphProperties'
   attributes: {
@@ -3102,12 +3103,12 @@ export interface TextParagraphPropertiesMap {
   tabLst?: TextTabStopList
 }
 
-export interface TextShapeAutofit extends UnistNode {
+export interface TextShapeAutofit extends Element {
   type: 'element'
   name: 'a:textShapeAutofit'
 }
 
-export interface TextSpacing extends UnistNode {
+export interface TextSpacing extends Element {
   type: 'element'
   name: 'a:textSpacing'
   attributes: Record<string, never>
@@ -3119,7 +3120,7 @@ export interface TextSpacingMap {
   spcPts: TextSpacingPoint
 }
 
-export interface TextSpacingPercent extends UnistNode {
+export interface TextSpacingPercent extends Element {
   type: 'element'
   name: 'a:textSpacingPercent'
   attributes: {
@@ -3128,7 +3129,7 @@ export interface TextSpacingPercent extends UnistNode {
   children: []
 }
 
-export interface TextSpacingPoint extends UnistNode {
+export interface TextSpacingPoint extends Element {
   type: 'element'
   name: 'a:textSpacingPoint'
   attributes: {
@@ -3137,7 +3138,7 @@ export interface TextSpacingPoint extends UnistNode {
   children: []
 }
 
-export interface TextTabStop extends UnistNode {
+export interface TextTabStop extends Element {
   type: 'element'
   name: 'a:textTabStop'
   attributes: {
@@ -3147,7 +3148,7 @@ export interface TextTabStop extends UnistNode {
   children: []
 }
 
-export interface TextTabStopList extends UnistNode {
+export interface TextTabStopList extends Element {
   type: 'element'
   name: 'a:textTabStopList'
   attributes: Record<string, never>
@@ -3158,12 +3159,12 @@ export interface TextTabStopListMap {
   tab?: TextTabStop[]
 }
 
-export interface TextUnderlineFillFollowText extends UnistNode {
+export interface TextUnderlineFillFollowText extends Element {
   type: 'element'
   name: 'a:textUnderlineFillFollowText'
 }
 
-export interface TextUnderlineFillGroupWrapper extends UnistNode {
+export interface TextUnderlineFillGroupWrapper extends Element {
   type: 'element'
   name: 'a:textUnderlineFillGroupWrapper'
   attributes: Record<string, never>
@@ -3179,12 +3180,12 @@ export interface TextUnderlineFillGroupWrapperMap {
   solidFill: SolidColorFillProperties
 }
 
-export interface TextUnderlineLineFollowText extends UnistNode {
+export interface TextUnderlineLineFollowText extends Element {
   type: 'element'
   name: 'a:textUnderlineLineFollowText'
 }
 
-export interface ThemeableLineStyle extends UnistNode {
+export interface ThemeableLineStyle extends Element {
   type: 'element'
   name: 'a:themeableLineStyle'
   attributes: Record<string, never>
@@ -3196,7 +3197,7 @@ export interface ThemeableLineStyleMap {
   lnRef: StyleMatrixReference
 }
 
-export interface TileInfoProperties extends UnistNode {
+export interface TileInfoProperties extends Element {
   type: 'element'
   name: 'a:tileInfoProperties'
   attributes: {
@@ -3210,7 +3211,7 @@ export interface TileInfoProperties extends UnistNode {
   children: []
 }
 
-export interface TintEffect extends UnistNode {
+export interface TintEffect extends Element {
   type: 'element'
   name: 'a:tintEffect'
   attributes: {
@@ -3220,7 +3221,7 @@ export interface TintEffect extends UnistNode {
   children: []
 }
 
-export interface Transform2D extends UnistNode {
+export interface Transform2D extends Element {
   type: 'element'
   name: 'a:transform2D'
   attributes: {
@@ -3236,7 +3237,7 @@ export interface Transform2DMap {
   off?: Point2D
 }
 
-export interface TransformEffect extends UnistNode {
+export interface TransformEffect extends Element {
   type: 'element'
   name: 'a:transformEffect'
   attributes: {
@@ -3250,7 +3251,7 @@ export interface TransformEffect extends UnistNode {
   children: []
 }
 
-export interface Vector3D extends UnistNode {
+export interface Vector3D extends Element {
   type: 'element'
   name: 'a:vector3D'
   attributes: {
@@ -3261,7 +3262,7 @@ export interface Vector3D extends UnistNode {
   children: []
 }
 
-export interface VideoFile extends UnistNode {
+export interface VideoFile extends Element {
   type: 'element'
   name: 'a:videoFile'
   attributes: {
@@ -3275,7 +3276,7 @@ export interface VideoFileMap {
   extLst?: OfficeArtExtensionList
 }
 
-export interface WholeE2oFormatting extends UnistNode {
+export interface WholeE2oFormatting extends Element {
   type: 'element'
   name: 'a:wholeE2oFormatting'
   attributes: Record<string, never>
@@ -3288,7 +3289,7 @@ export interface WholeE2oFormattingMap {
   ln?: LineProperties
 }
 
-export interface XYAdjustHandle extends UnistNode {
+export interface XYAdjustHandle extends Element {
   type: 'element'
   name: 'a:xYAdjustHandle'
   attributes: {
@@ -4259,7 +4260,7 @@ export type TextWrappingTypeVal = 'none' | 'square'
 
 export type TileFlipModeVal = 'none' | 'x' | 'y' | 'xy'
 
-export interface document extends UnistNode {
+export interface document extends Element {
   blip: Blip
   graphic: GraphicalObject
   tbl: Table

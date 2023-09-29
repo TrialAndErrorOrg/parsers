@@ -1,16 +1,16 @@
 import * as s from './sharedTypes.js'
 import { Text } from '../wordprocessingml/main.js'
 import { RequiredMap } from '../../ooxast.js'
-import { Node as UnistNode } from 'unist'
+import { Element } from 'xast'
 
 // Source files:
 // http://localhost:3000/shared-bibliography.xsd
 
-export interface Author extends UnistNode {
+export interface Author extends Element {
   type: 'element'
   name: `b:Author`
   attributes: Record<string, never>
-  children: RequiredMap<AuthorMap>
+  children: RequiredMap<AuthorMap>[]
 }
 
 export interface AuthorMap {
@@ -32,22 +32,22 @@ export interface AuthorMap {
   Writer?: Name<'Writer'>
 }
 
-export interface NameList extends UnistNode {
+export interface NameList extends Element {
   type: 'element'
   name: 'b:NameList'
   attributes: Record<string, never>
-  children: RequiredMap<NameListMap>
+  children: RequiredMap<NameListMap>[]
 }
 
 export interface NameListMap {
   Person: Person[]
 }
 
-export interface NameOrCorporate<name extends string = 'NameOrCorporate'> extends UnistNode {
+export interface NameOrCorporate<name extends string = 'NameOrCorporate'> extends Element {
   type: 'element'
   name: `b:${name}`
   attributes: Record<string, never>
-  children: RequiredMap<NameOrCorporateMap>
+  children: RequiredMap<NameOrCorporateMap>[]
 }
 
 export interface NameOrCorporateMap {
@@ -55,22 +55,22 @@ export interface NameOrCorporateMap {
   NameList?: NameList
 }
 
-export interface Name<name extends string = 'Name'> extends UnistNode {
+export interface Name<name extends string = 'Name'> extends Element {
   type: 'element'
   name: `b:${name}`
   attributes: Record<string, never>
-  children: RequiredMap<NameMap>
+  children: RequiredMap<NameMap>[]
 }
 
 export interface NameMap {
   NameList: NameList
 }
 
-export interface Person extends UnistNode {
+export interface Person extends Element {
   type: 'element'
   name: 'b:Person'
   attributes: Record<string, never>
-  children: RequiredMap<PersonMap>
+  children: RequiredMap<PersonMap>[]
 }
 
 export interface PersonMap {
@@ -79,7 +79,7 @@ export interface PersonMap {
   Middle?: MetaData<'Middle'>
 }
 
-export interface Sources extends UnistNode {
+export interface Sources extends Element {
   type: 'element'
   name: 'b:Sources'
   attributes: {
@@ -87,13 +87,13 @@ export interface Sources extends UnistNode {
     StyleName: string
     URI: string
   }
-  children: RequiredMap<SourcesMap>
+  children: RequiredMap<SourcesMap>[]
 }
 
 export interface SourcesMap {
   Source?: Source[]
 }
-export interface Source extends UnistNode {
+export interface Source extends Element {
   type: 'element'
   name: 'b:Source'
   attributes: {
@@ -101,16 +101,16 @@ export interface Source extends UnistNode {
     StyleName: string
     URI: string
   }
-  children: RequiredMap<SourceMap>
+  children: RequiredMap<SourceMap>[]
 }
 
-export interface MetaData<tag extends string = 'SourceType'> extends UnistNode {
+export interface MetaData<tag extends string = 'SourceType'> extends Element {
   type: 'element'
   name: `b:${tag}`
   attributes: Record<string, never>
   children: [Text]
 }
-export interface SourceType extends UnistNode {
+export interface SourceType extends Element {
   type: 'element'
   name: 'b:SourceType'
   attributes: Record<string, never>
@@ -191,7 +191,7 @@ export type SourceVal =
   | 'Case'
   | 'Misc'
 
-export interface document extends UnistNode {
+export interface document extends Element {
   Sources: Sources
 }
 //eslint-disable-next-line

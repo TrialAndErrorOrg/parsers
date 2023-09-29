@@ -5,11 +5,12 @@ import * as sl from '../schemaLibrary/main.js'
 import * as wp from '../drawingml/wordprocessingDrawing.js'
 import { Literal as UnistLiteral, Node as UnistNode } from 'unist'
 import { RequiredMap } from '../../ooxast.js'
+import { Element } from 'xast'
 
 // Source files:
 // http://localhost:3000/wml.xsd
 
-export interface AbstractNum extends UnistNode {
+export interface AbstractNum extends Element {
   type: 'element'
   name: 'w:abstractNum'
   attributes: {
@@ -29,7 +30,7 @@ export interface AbstractNumMap {
   start?: StringTag<'start'>
 }
 
-export interface AltChunk extends UnistNode {
+export interface AltChunk extends Element {
   type: 'element'
   name: 'w:altChunk'
   attributes: {
@@ -42,7 +43,7 @@ export interface AltChunkMap {
   altChunkPr?: AltChunkPr
 }
 
-export interface AltChunkPr extends UnistNode {
+export interface AltChunkPr extends Element {
   type: 'element'
   name: 'w:altChunkPr'
   attributes: Record<string, never>
@@ -53,7 +54,7 @@ export interface AltChunkPrMap {
   matchSrc?: OnOff<'matchSrc'>
 }
 
-export interface Attr extends UnistNode {
+export interface Attr extends Element {
   type: 'element'
   name: 'w:attr'
   attributes: {
@@ -64,7 +65,7 @@ export interface Attr extends UnistNode {
   children: []
 }
 
-export interface AutoCaption extends UnistNode {
+export interface AutoCaption extends Element {
   type: 'element'
   name: 'w:autoCaption'
   attributes: {
@@ -74,7 +75,7 @@ export interface AutoCaption extends UnistNode {
   children: []
 }
 
-export interface AutoCaptions extends UnistNode {
+export interface AutoCaptions extends Element {
   type: 'element'
   name: 'w:autoCaptions'
   attributes: Record<string, never>
@@ -85,7 +86,7 @@ export interface AutoCaptionsMap {
   autoCaption: AutoCaption[]
 }
 
-export interface Background extends UnistNode {
+export interface Background extends Element {
   type: 'element'
   name: 'w:background'
   attributes: {
@@ -101,7 +102,7 @@ export interface BackgroundMap {
   drawing?: Drawing
 }
 
-export interface Base64Binary extends UnistNode {
+export interface Base64Binary extends Element {
   type: 'element'
   name: 'w:base64Binary'
   attributes: {
@@ -110,7 +111,7 @@ export interface Base64Binary extends UnistNode {
   children: []
 }
 
-export interface BdoContentRun extends UnistNode {
+export interface BdoContentRun extends Element {
   type: 'element'
   name: 'w:bdoContentRun'
   attributes: {
@@ -146,7 +147,7 @@ export interface BdoContentRunMap {
   subDoc?: Rel<'subDoc'>[]
 }
 
-export interface Body extends UnistNode {
+export interface Body extends Element {
   type: 'element'
   name: 'w:body'
   attributes: Record<string, never>
@@ -196,7 +197,7 @@ export type BookmarkRange<tag extends string = 'bookmarkRange'> = MarkupRange & 
   children: []
 }
 
-export interface Border extends UnistNode {
+export interface Border extends Element {
   type: 'element'
   name: 'w:bdr'
   attributes: {
@@ -223,7 +224,7 @@ export type BottomPageBorder = PageBorder & {
   children: []
 }
 
-export interface Br extends UnistNode {
+export interface Br extends Element {
   type: 'element'
   name: 'w:br'
   attributes: {
@@ -233,7 +234,7 @@ export interface Br extends UnistNode {
   children: []
 }
 
-export interface CalendarType extends UnistNode {
+export interface CalendarType extends Element {
   type: 'element'
   name: 'w:calendarType'
   attributes: {
@@ -242,7 +243,7 @@ export interface CalendarType extends UnistNode {
   children: []
 }
 
-export interface Caption extends UnistNode {
+export interface Caption extends Element {
   type: 'element'
   name: 'w:caption'
   attributes: {
@@ -257,7 +258,7 @@ export interface Caption extends UnistNode {
   children: []
 }
 
-export interface Captions extends UnistNode {
+export interface Captions extends Element {
   type: 'element'
   name: 'w:captions'
   attributes: Record<string, never>
@@ -279,7 +280,7 @@ export type CellMergeTrackChange = TrackChange & {
   children: []
 }
 
-export interface CharacterSpacing extends UnistNode {
+export interface CharacterSpacing extends Element {
   type: 'element'
   name: 'w:characterSpacing'
   attributes: {
@@ -288,7 +289,7 @@ export interface CharacterSpacing extends UnistNode {
   children: []
 }
 
-export interface Charset extends UnistNode {
+export interface Charset extends Element {
   type: 'element'
   name: 'w:charset'
   attributes: {
@@ -297,7 +298,7 @@ export interface Charset extends UnistNode {
   children: []
 }
 
-export interface Cnf extends UnistNode {
+export interface Cnf extends Element {
   type: 'element'
   name: 'w:cnf'
   attributes: {
@@ -317,7 +318,7 @@ export interface Cnf extends UnistNode {
   children: []
 }
 
-export interface Color extends UnistNode {
+export interface Color extends Element {
   type: 'element'
   name: 'w:color'
   attributes: {
@@ -329,7 +330,7 @@ export interface Color extends UnistNode {
   children: []
 }
 
-export interface ColorSchemeMapping extends UnistNode {
+export interface ColorSchemeMapping extends Element {
   type: 'element'
   name: 'w:colorSchemeMapping'
   attributes: {
@@ -349,7 +350,7 @@ export interface ColorSchemeMapping extends UnistNode {
   children: []
 }
 
-export interface Column extends UnistNode {
+export interface Column extends Element {
   type: 'element'
   name: 'w:column'
   attributes: {
@@ -359,7 +360,7 @@ export interface Column extends UnistNode {
   children: []
 }
 
-export interface Columns extends UnistNode {
+export interface Columns extends Element {
   type: 'element'
   name: 'w:columns'
   attributes: {
@@ -407,7 +408,7 @@ export interface CommentMap {
   tbl?: Tbl[]
 }
 
-export interface Comments extends UnistNode {
+export interface Comments extends Element {
   type: 'element'
   name: 'w:comments'
   attributes: Record<string, never>
@@ -418,7 +419,7 @@ export interface CommentsMap {
   comment?: Comment[]
 }
 
-export interface Compat extends UnistNode {
+export interface Compat extends Element {
   type: 'element'
   name: 'w:compat'
   attributes: Record<string, never>
@@ -436,7 +437,7 @@ export interface CompatMap {
   ulTrailSpace?: OnOff<'ulTrailSpace'>
 }
 
-export interface CompatSetting extends UnistNode {
+export interface CompatSetting extends Element {
   type: 'element'
   name: 'w:compatSetting'
   attributes: {
@@ -447,7 +448,7 @@ export interface CompatSetting extends UnistNode {
   children: []
 }
 
-export interface Control extends UnistNode {
+export interface Control extends Element {
   type: 'element'
   name: 'w:control'
   attributes: {
@@ -468,7 +469,7 @@ export interface CustomXMLTypes {
   customXmlMoveToRangeEnd?: Markup<'customXmlMoveToRangeEnd'>[]
   customXmlMoveToRangeStart?: TrackChange<'customXmlMoveToRangeStart'>[]
 }
-export interface CustomXmlBlock extends UnistNode {
+export interface CustomXmlBlock extends Element {
   type: 'element'
   name: 'w:customXmlBlock'
   attributes: {
@@ -501,7 +502,7 @@ export interface CustomXmlBlockMap {
   tbl?: Tbl[]
 }
 
-export interface CustomXmlCell extends UnistNode {
+export interface CustomXmlCell extends Element {
   type: 'element'
   name: 'w:customXmlCell'
   attributes: {
@@ -533,7 +534,7 @@ export interface CustomXmlCellMap {
   tc?: Tc[]
 }
 
-export interface CustomXmlPr extends UnistNode {
+export interface CustomXmlPr extends Element {
   type: 'element'
   name: 'w:customXmlPr'
   attributes: Record<string, never>
@@ -545,7 +546,7 @@ export interface CustomXmlPrMap {
   placeholder?: StringTag<'placeholder'>
 }
 
-export interface CustomXmlRow extends UnistNode {
+export interface CustomXmlRow extends Element {
   type: 'element'
   name: 'w:customXmlRow'
   attributes: {
@@ -577,7 +578,7 @@ export interface CustomXmlRowMap {
   tr?: Row[]
 }
 
-export interface CustomXmlRun extends UnistNode {
+export interface CustomXmlRun extends Element {
   type: 'element'
   name: 'w:customXmlRun'
   attributes: {
@@ -615,7 +616,7 @@ export interface CustomXmlRunMap {
   subDoc?: Rel<'subDoc'>[]
 }
 
-export interface DataBinding extends UnistNode {
+export interface DataBinding extends Element {
   type: 'element'
   name: 'w:dataBinding'
   attributes: {
@@ -626,7 +627,7 @@ export interface DataBinding extends UnistNode {
   children: []
 }
 
-export interface DecimalNumber extends UnistNode {
+export interface DecimalNumber extends Element {
   type: 'element'
   name: 'w:decimalNumber'
   attributes: {
@@ -635,7 +636,7 @@ export interface DecimalNumber extends UnistNode {
   children: []
 }
 
-export interface DecimalNumberOrPrecent extends UnistNode {
+export interface DecimalNumberOrPrecent extends Element {
   type: 'element'
   name: 'w:decimalNumberOrPrecent'
   attributes: {
@@ -644,7 +645,7 @@ export interface DecimalNumberOrPrecent extends UnistNode {
   children: []
 }
 
-export interface DirContentRun extends UnistNode {
+export interface DirContentRun extends Element {
   type: 'element'
   name: 'w:dirContentRun'
   attributes: {
@@ -680,7 +681,7 @@ export interface DirContentRunMap {
   subDoc?: Rel<'subDoc'>[]
 }
 
-export interface Div extends UnistNode {
+export interface Div extends Element {
   type: 'element'
   name: 'w:div'
   attributes: {
@@ -700,7 +701,7 @@ export interface DivMap {
   marTop: SignedTwipsMeasure
 }
 
-export interface DivBdr extends UnistNode {
+export interface DivBdr extends Element {
   type: 'element'
   name: 'w:divBdr'
   attributes: Record<string, never>
@@ -714,7 +715,7 @@ export interface DivBdrMap {
   top?: Border
 }
 
-export interface Divs extends UnistNode {
+export interface Divs extends Element {
   type: 'element'
   name: 'w:divs'
   attributes: Record<string, never>
@@ -725,7 +726,7 @@ export interface DivsMap {
   div: Div[]
 }
 
-export interface DocDefaults extends UnistNode {
+export interface DocDefaults extends Element {
   type: 'element'
   name: 'w:docDefaults'
   attributes: Record<string, never>
@@ -737,7 +738,7 @@ export interface DocDefaultsMap {
   rPrDefault?: RPrDefault
 }
 
-export interface DocGrid extends UnistNode {
+export interface DocGrid extends Element {
   type: 'element'
   name: 'w:docGrid'
   attributes: {
@@ -748,7 +749,7 @@ export interface DocGrid extends UnistNode {
   children: []
 }
 
-export interface DocPart extends UnistNode {
+export interface DocPart extends Element {
   type: 'element'
   name: 'w:docPart'
   attributes: Record<string, never>
@@ -760,7 +761,7 @@ export interface DocPartMap {
   docPartPr?: DocPartPr
 }
 
-export interface DocPartBehavior extends UnistNode {
+export interface DocPartBehavior extends Element {
   type: 'element'
   name: 'w:docPartBehavior'
   attributes: {
@@ -769,7 +770,7 @@ export interface DocPartBehavior extends UnistNode {
   children: []
 }
 
-export interface DocPartBehaviors extends UnistNode {
+export interface DocPartBehaviors extends Element {
   type: 'element'
   name: 'w:docPartBehaviors'
   attributes: Record<string, never>
@@ -780,7 +781,7 @@ export interface DocPartBehaviorsMap {
   behavior: DocPartBehavior[]
 }
 
-export interface DocPartCategory extends UnistNode {
+export interface DocPartCategory extends Element {
   type: 'element'
   name: 'w:docPartCategory'
   attributes: Record<string, never>
@@ -792,7 +793,7 @@ export interface DocPartCategoryMap {
   name: StringTag<'name'>
 }
 
-export interface DocPartGallery extends UnistNode {
+export interface DocPartGallery extends Element {
   type: 'element'
   name: 'w:docPartGallery'
   attributes: {
@@ -801,7 +802,7 @@ export interface DocPartGallery extends UnistNode {
   children: []
 }
 
-export interface DocPartName extends UnistNode {
+export interface DocPartName extends Element {
   type: 'element'
   name: 'w:docPartName'
   attributes: {
@@ -811,12 +812,14 @@ export interface DocPartName extends UnistNode {
   children: []
 }
 
-export interface DocPartPr extends UnistNode {
+export interface DocPartPr extends Element {
   type: 'element'
   name: 'w:docPartPr'
+  attributes: Record<string, never>
+  children: []
 }
 
-export interface DocParts extends UnistNode {
+export interface DocParts extends Element {
   type: 'element'
   name: 'w:docParts'
   attributes: Record<string, never>
@@ -827,7 +830,7 @@ export interface DocPartsMap {
   docPart: DocPart[]
 }
 
-export interface DocPartType extends UnistNode {
+export interface DocPartType extends Element {
   type: 'element'
   name: 'w:docPartType'
   attributes: {
@@ -836,7 +839,7 @@ export interface DocPartType extends UnistNode {
   children: []
 }
 
-export interface DocPartTypes extends UnistNode {
+export interface DocPartTypes extends Element {
   type: 'element'
   name: 'w:docPartTypes'
   attributes: {
@@ -849,7 +852,7 @@ export interface DocPartTypesMap {
   type: DocPartType[]
 }
 
-export interface DocProtect extends UnistNode {
+export interface DocProtect extends Element {
   type: 'element'
   name: 'w:docProtect'
   attributes: {
@@ -864,7 +867,7 @@ export interface DocProtect extends UnistNode {
   children: []
 }
 
-export interface DocRsids extends UnistNode {
+export interface DocRsids extends Element {
   type: 'element'
   name: 'w:docRsids'
   attributes: Record<string, never>
@@ -876,7 +879,7 @@ export interface DocRsidsMap {
   rsidRoot?: LongHexNumber
 }
 
-export interface DocType extends UnistNode {
+export interface DocType extends Element {
   type: 'element'
   name: 'w:docType'
   attributes: {
@@ -898,10 +901,10 @@ export interface DocumentMap {
   background?: Background
 }
 
-export interface DocumentBase extends UnistNode {
+export interface DocumentBase extends Element {
   type: 'element'
   name: 'w:documentBase' | 'w:document'
-  attributes: Record<string, unknown>
+  attributes: Record<string, any>
   children: RequiredMap<DocumentBaseMap>[]
 }
 
@@ -910,7 +913,7 @@ export interface DocumentBaseMap {
   body?: Body
 }
 
-export interface DocVar extends UnistNode {
+export interface DocVar extends Element {
   type: 'element'
   name: 'w:docVar'
   attributes: {
@@ -920,7 +923,7 @@ export interface DocVar extends UnistNode {
   children: []
 }
 
-export interface DocVars extends UnistNode {
+export interface DocVars extends Element {
   type: 'element'
   name: 'w:docVars'
   attributes: Record<string, never>
@@ -931,7 +934,7 @@ export interface DocVarsMap {
   docVar?: DocVar[]
 }
 
-export interface Drawing extends UnistNode {
+export interface Drawing extends Element {
   type: 'element'
   name: 'w:drawing'
   attributes: Record<string, never>
@@ -943,7 +946,7 @@ export interface DrawingMap {
   inline?: wp.Inline[]
 }
 
-export interface EastAsianLayout extends UnistNode {
+export interface EastAsianLayout extends Element {
   type: 'element'
   name: 'w:eastAsianLayout'
   attributes: {
@@ -967,7 +970,7 @@ export interface EdnDocPropsMap {
   endnote?: FtnEdnSepRef[]
 }
 
-export interface EdnPos extends UnistNode {
+export interface EdnPos extends Element {
   type: 'element'
   name: 'w:ednPos'
   attributes: {
@@ -976,7 +979,7 @@ export interface EdnPos extends UnistNode {
   children: []
 }
 
-export interface EdnProps extends UnistNode {
+export interface EdnProps extends Element {
   type: 'element'
   name: 'w:ednProps'
   attributes: Record<string, never>
@@ -990,7 +993,7 @@ export interface EdnPropsMap {
   pos?: EdnPos
 }
 
-export interface Em extends UnistNode {
+export interface Em extends Element {
   type: 'element'
   name: 'w:em'
   attributes: {
@@ -999,13 +1002,14 @@ export interface Em extends UnistNode {
   children: []
 }
 
-export interface Empty<tag extends string = 'empty'> extends UnistNode {
+export interface Empty<tag extends string = 'empty'> extends Element {
   type: 'element'
   name: `w:${tag}`
+  attributes: Record<string, never>
   children: []
 }
 
-export interface Endnotes extends UnistNode {
+export interface Endnotes extends Element {
   type: 'element'
   name: 'w:endnotes'
   attributes: Record<string, never>
@@ -1016,7 +1020,7 @@ export interface EndnotesMap {
   endnote?: FtnEdn[]
 }
 
-export interface FFCheckBox extends UnistNode {
+export interface FFCheckBox extends Element {
   type: 'element'
   name: 'w:fFCheckBox'
   attributes: Record<string, never>
@@ -1030,7 +1034,7 @@ export interface FFCheckBoxMap {
   sizeAuto: OnOff<'sizeAuto'>
 }
 
-export interface FFData extends UnistNode {
+export interface FFData extends Element {
   type: 'element'
   name: 'w:fFData'
   attributes: Record<string, never>
@@ -1052,7 +1056,7 @@ export interface FFDataMap {
   textInput: FFTextInput[]
 }
 
-export interface FFDDList extends UnistNode {
+export interface FFDDList extends Element {
   type: 'element'
   name: 'w:fFDDList'
   attributes: Record<string, never>
@@ -1065,7 +1069,7 @@ export interface FFDDListMap {
   result?: DecimalNumber
 }
 
-export interface FFHelpText extends UnistNode {
+export interface FFHelpText extends Element {
   type: 'element'
   name: 'w:fFHelpText'
   attributes: {
@@ -1075,7 +1079,7 @@ export interface FFHelpText extends UnistNode {
   children: []
 }
 
-export interface FFName extends UnistNode {
+export interface FFName extends Element {
   type: 'element'
   name: 'w:fFName'
   attributes: {
@@ -1084,7 +1088,7 @@ export interface FFName extends UnistNode {
   children: []
 }
 
-export interface FFStatusText extends UnistNode {
+export interface FFStatusText extends Element {
   type: 'element'
   name: 'w:fFStatusText'
   attributes: {
@@ -1094,7 +1098,7 @@ export interface FFStatusText extends UnistNode {
   children: []
 }
 
-export interface FFTextInput extends UnistNode {
+export interface FFTextInput extends Element {
   type: 'element'
   name: 'w:fFTextInput'
   attributes: Record<string, never>
@@ -1108,7 +1112,7 @@ export interface FFTextInputMap {
   type?: FFTextType
 }
 
-export interface FFTextType extends UnistNode {
+export interface FFTextType extends Element {
   type: 'element'
   name: 'w:fFTextType'
   attributes: {
@@ -1117,7 +1121,7 @@ export interface FFTextType extends UnistNode {
   children: []
 }
 
-export interface FitText extends UnistNode {
+export interface FitText extends Element {
   type: 'element'
   name: 'w:fitText'
   attributes: {
@@ -1127,7 +1131,7 @@ export interface FitText extends UnistNode {
   children: []
 }
 
-export interface FldChar extends UnistNode {
+export interface FldChar extends Element {
   type: 'element'
   name: 'w:fldChar'
   attributes: {
@@ -1142,7 +1146,7 @@ export interface FldCharMap {
   ffData?: FFData
 }
 
-export interface Font extends UnistNode {
+export interface Font extends Element {
   type: 'element'
   name: 'w:font'
   attributes: {
@@ -1165,7 +1169,7 @@ export interface FontMap {
   sig?: FontSig
 }
 
-export interface FontFamily extends UnistNode {
+export interface FontFamily extends Element {
   type: 'element'
   name: 'w:fontFamily'
   attributes: {
@@ -1183,7 +1187,7 @@ export type FontRel = Rel & {
   children: []
 }
 
-export interface Fonts extends UnistNode {
+export interface Fonts extends Element {
   type: 'element'
   name: 'w:rFonts'
   attributes: {
@@ -1200,7 +1204,7 @@ export interface Fonts extends UnistNode {
   children: []
 }
 
-export interface FontSig extends UnistNode {
+export interface FontSig extends Element {
   type: 'element'
   name: 'w:fontSig'
   attributes: {
@@ -1214,7 +1218,7 @@ export interface FontSig extends UnistNode {
   children: []
 }
 
-export interface FontsList extends UnistNode {
+export interface FontsList extends Element {
   type: 'element'
   name: 'w:fontsList'
   attributes: Record<string, never>
@@ -1225,7 +1229,7 @@ export interface FontsListMap {
   font?: Font[]
 }
 
-export interface Footnotes extends UnistNode {
+export interface Footnotes extends Element {
   type: 'element'
   name: 'w:footnotes'
   attributes: Record<string, never>
@@ -1236,7 +1240,7 @@ export interface FootnotesMap {
   footnote?: FtnEdn[]
 }
 
-export interface Frame extends UnistNode {
+export interface Frame extends Element {
   type: 'element'
   name: 'w:frame'
   attributes: Record<string, never>
@@ -1256,7 +1260,7 @@ export interface FrameMap {
   title?: StringTag<'title'>
 }
 
-export interface FrameLayout extends UnistNode {
+export interface FrameLayout extends Element {
   type: 'element'
   name: 'w:frameLayout'
   attributes: {
@@ -1265,7 +1269,7 @@ export interface FrameLayout extends UnistNode {
   children: []
 }
 
-export interface FramePr extends UnistNode {
+export interface FramePr extends Element {
   type: 'element'
   name: 'w:framePr'
   attributes: {
@@ -1288,7 +1292,7 @@ export interface FramePr extends UnistNode {
   children: []
 }
 
-export interface FrameScrollbar extends UnistNode {
+export interface FrameScrollbar extends Element {
   type: 'element'
   name: 'w:frameScrollbar'
   attributes: {
@@ -1297,7 +1301,7 @@ export interface FrameScrollbar extends UnistNode {
   children: []
 }
 
-export interface Frameset extends UnistNode {
+export interface Frameset extends Element {
   type: 'element'
   name: 'w:frameset'
   attributes: Record<string, never>
@@ -1313,7 +1317,7 @@ export interface FramesetMap {
   title?: StringTag<'title'>
 }
 
-export interface FramesetSplitbar extends UnistNode {
+export interface FramesetSplitbar extends Element {
   type: 'element'
   name: 'w:framesetSplitbar'
   attributes: Record<string, never>
@@ -1338,7 +1342,7 @@ export interface FtnDocPropsMap {
   footnote?: FtnEdnSepRef[]
 }
 
-export interface FtnEdn extends UnistNode {
+export interface FtnEdn extends Element {
   type: 'element'
   name: 'w:footnote' | 'w:endnote'
   attributes: {
@@ -1371,7 +1375,7 @@ export interface FtnEdnMap {
   tbl?: Tbl[]
 }
 
-export interface FtnEdnRef<tag extends string = 'ftnEdnRef'> extends UnistNode {
+export interface FtnEdnRef<tag extends string = 'ftnEdnRef'> extends Element {
   type: 'element'
   name: `w:${tag}`
   attributes: {
@@ -1381,7 +1385,7 @@ export interface FtnEdnRef<tag extends string = 'ftnEdnRef'> extends UnistNode {
   children: []
 }
 
-export interface FtnEdnSepRef extends UnistNode {
+export interface FtnEdnSepRef extends Element {
   type: 'element'
   name: 'w:ftnEdnSepRef'
   attributes: {
@@ -1390,7 +1394,7 @@ export interface FtnEdnSepRef extends UnistNode {
   children: []
 }
 
-export interface FtnPos extends UnistNode {
+export interface FtnPos extends Element {
   type: 'element'
   name: 'w:ftnPos'
   attributes: {
@@ -1399,7 +1403,7 @@ export interface FtnPos extends UnistNode {
   children: []
 }
 
-export interface FtnProps extends UnistNode {
+export interface FtnProps extends Element {
   type: 'element'
   name: 'w:ftnProps'
   attributes: Record<string, never>
@@ -1424,7 +1428,7 @@ export interface GlossaryDocumentMap {
   docParts?: DocParts
 }
 
-export interface Guid extends UnistNode {
+export interface Guid extends Element {
   type: 'element'
   name: 'w:guid'
   attributes: {
@@ -1433,7 +1437,7 @@ export interface Guid extends UnistNode {
   children: []
 }
 
-export interface HdrFtr extends UnistNode {
+export interface HdrFtr extends Element {
   type: 'element'
   name: 'w:hdrFtr'
   attributes: Record<string, never>
@@ -1472,7 +1476,7 @@ export type HdrFtrRef = Rel & {
   children: []
 }
 
-export interface Headers extends UnistNode {
+export interface Headers extends Element {
   type: 'element'
   name: 'w:headers'
   attributes: Record<string, never>
@@ -1483,7 +1487,7 @@ export interface HeadersMap {
   header?: StringTag<'header'>[]
 }
 
-export interface Height extends UnistNode {
+export interface Height extends Element {
   type: 'element'
   name: 'w:height'
   attributes: {
@@ -1493,7 +1497,7 @@ export interface Height extends UnistNode {
   children: []
 }
 
-export interface Highlight extends UnistNode {
+export interface Highlight extends Element {
   type: 'element'
   name: 'w:highlight'
   attributes: {
@@ -1502,7 +1506,7 @@ export interface Highlight extends UnistNode {
   children: []
 }
 
-export interface HpsMeasure<tag extends string = 'hpsMeasure'> extends UnistNode {
+export interface HpsMeasure<tag extends string = 'hpsMeasure'> extends Element {
   type: 'element'
   name: `w:${tag}`
   attributes: {
@@ -1511,7 +1515,7 @@ export interface HpsMeasure<tag extends string = 'hpsMeasure'> extends UnistNode
   children: []
 }
 
-export interface Hyperlink extends UnistNode {
+export interface Hyperlink extends Element {
   type: 'element'
   name: 'w:hyperlink'
   attributes: {
@@ -1552,7 +1556,7 @@ export interface HyperlinkMap {
   subDoc?: Rel<'subDoc'>[]
 }
 
-export interface Ind extends UnistNode {
+export interface Ind extends Element {
   type: 'element'
   name: 'w:ind'
   attributes: {
@@ -1568,7 +1572,7 @@ export interface Ind extends UnistNode {
   children: []
 }
 
-export interface Jc extends UnistNode {
+export interface Jc extends Element {
   type: 'element'
   name: 'w:jc'
   attributes: {
@@ -1577,7 +1581,7 @@ export interface Jc extends UnistNode {
   children: []
 }
 
-export interface JcTable extends UnistNode {
+export interface JcTable extends Element {
   type: 'element'
   name: 'w:jcTable'
   attributes: {
@@ -1586,7 +1590,7 @@ export interface JcTable extends UnistNode {
   children: []
 }
 
-export interface Kinsoku extends UnistNode {
+export interface Kinsoku extends Element {
   type: 'element'
   name: 'w:kinsoku'
   attributes: {
@@ -1596,7 +1600,7 @@ export interface Kinsoku extends UnistNode {
   children: []
 }
 
-export interface Lang extends UnistNode {
+export interface Lang extends Element {
   type: 'element'
   name: 'w:lang'
   attributes: {
@@ -1605,7 +1609,7 @@ export interface Lang extends UnistNode {
   children: []
 }
 
-export interface Language extends UnistNode {
+export interface Language extends Element {
   type: 'element'
   name: 'w:lang'
   attributes: {
@@ -1616,7 +1620,7 @@ export interface Language extends UnistNode {
   children: []
 }
 
-export interface LatentStyles extends UnistNode {
+export interface LatentStyles extends Element {
   type: 'element'
   name: 'w:latentStyles'
   attributes: {
@@ -1634,7 +1638,7 @@ export interface LatentStylesMap {
   lsdException?: LsdException[]
 }
 
-export interface LevelSuffix extends UnistNode {
+export interface LevelSuffix extends Element {
   type: 'element'
   name: 'w:levelSuffix'
   attributes: {
@@ -1643,7 +1647,7 @@ export interface LevelSuffix extends UnistNode {
   children: []
 }
 
-export interface LevelText extends UnistNode {
+export interface LevelText extends Element {
   type: 'element'
   name: 'w:lvlText'
   attributes: {
@@ -1653,7 +1657,7 @@ export interface LevelText extends UnistNode {
   children: []
 }
 
-export interface LineNumber extends UnistNode {
+export interface LineNumber extends Element {
   type: 'element'
   name: 'w:lineNumber'
   attributes: {
@@ -1665,7 +1669,7 @@ export interface LineNumber extends UnistNode {
   children: []
 }
 
-export interface Lock extends UnistNode {
+export interface Lock extends Element {
   type: 'element'
   name: 'w:lock'
   attributes: {
@@ -1674,7 +1678,7 @@ export interface Lock extends UnistNode {
   children: []
 }
 
-export interface LongHexNumber extends UnistNode {
+export interface LongHexNumber extends Element {
   type: 'element'
   name: 'w:longHexNumber'
   attributes: {
@@ -1683,7 +1687,7 @@ export interface LongHexNumber extends UnistNode {
   children: []
 }
 
-export interface LsdException extends UnistNode {
+export interface LsdException extends Element {
   type: 'element'
   name: 'w:lsdException'
   attributes: {
@@ -1697,7 +1701,7 @@ export interface LsdException extends UnistNode {
   children: []
 }
 
-export interface Lvl extends UnistNode {
+export interface Lvl extends Element {
   type: 'element'
   name: 'w:lvl'
   attributes: {
@@ -1722,7 +1726,7 @@ export interface LvlMap {
   suff?: LevelSuffix
 }
 
-export interface MacroName extends UnistNode {
+export interface MacroName extends Element {
   type: 'element'
   name: 'w:macroName'
   attributes: {
@@ -1731,7 +1735,7 @@ export interface MacroName extends UnistNode {
   children: []
 }
 
-export interface MailMerge extends UnistNode {
+export interface MailMerge extends Element {
   type: 'element'
   name: 'w:mailMerge'
   attributes: Record<string, never>
@@ -1757,7 +1761,7 @@ export interface MailMergeMap {
   viewMergedData?: OnOff<'viewMergedData'>
 }
 
-export interface MailMergeDataType extends UnistNode {
+export interface MailMergeDataType extends Element {
   type: 'element'
   name: 'w:mailMergeDataType'
   attributes: {
@@ -1766,7 +1770,7 @@ export interface MailMergeDataType extends UnistNode {
   children: []
 }
 
-export interface MailMergeDest extends UnistNode {
+export interface MailMergeDest extends Element {
   type: 'element'
   name: 'w:mailMergeDest'
   attributes: {
@@ -1775,7 +1779,7 @@ export interface MailMergeDest extends UnistNode {
   children: []
 }
 
-export interface MailMergeDocType extends UnistNode {
+export interface MailMergeDocType extends Element {
   type: 'element'
   name: 'w:mailMergeDocType'
   attributes: {
@@ -1784,7 +1788,7 @@ export interface MailMergeDocType extends UnistNode {
   children: []
 }
 
-export interface MailMergeOdsoFMDFieldType extends UnistNode {
+export interface MailMergeOdsoFMDFieldType extends Element {
   type: 'element'
   name: 'w:mailMergeOdsoFMDFieldType'
   attributes: {
@@ -1793,7 +1797,7 @@ export interface MailMergeOdsoFMDFieldType extends UnistNode {
   children: []
 }
 
-export interface MailMergeSourceType extends UnistNode {
+export interface MailMergeSourceType extends Element {
   type: 'element'
   name: 'w:mailMergeSourceType'
   attributes: {
@@ -1802,7 +1806,7 @@ export interface MailMergeSourceType extends UnistNode {
   children: []
 }
 
-export interface Markup<tag extends string = 'markup'> extends UnistNode {
+export interface Markup<tag extends string = 'markup'> extends Element {
   type: 'element'
   name: `w:${tag}`
   attributes: {
@@ -1853,7 +1857,7 @@ export type MoveBookmark = Bookmark & {
   children: []
 }
 
-export interface MultiLevelType extends UnistNode {
+export interface MultiLevelType extends Element {
   type: 'element'
   name: 'w:multiLevelType'
   attributes: {
@@ -1862,7 +1866,7 @@ export interface MultiLevelType extends UnistNode {
   children: []
 }
 
-export interface Num extends UnistNode {
+export interface Num extends Element {
   type: 'element'
   name: 'w:num'
   attributes: {
@@ -1876,7 +1880,7 @@ export interface NumMap {
   lvlOverride?: NumLvl[]
 }
 
-export interface Numbering extends UnistNode {
+export interface Numbering extends Element {
   type: 'element'
   name: 'w:numbering'
   attributes: Record<string, never>
@@ -1890,7 +1894,7 @@ export interface NumberingMap {
   numPicBullet?: NumPicBullet[]
 }
 
-export interface NumFmt extends UnistNode {
+export interface NumFmt extends Element {
   type: 'element'
   name: 'w:numFmt'
   attributes: {
@@ -1900,7 +1904,7 @@ export interface NumFmt extends UnistNode {
   children: []
 }
 
-export interface NumLvl extends UnistNode {
+export interface NumLvl extends Element {
   type: 'element'
   name: 'w:numLvl'
   attributes: {
@@ -1914,7 +1918,7 @@ export interface NumLvlMap {
   startOverride?: DecimalNumber
 }
 
-export interface NumPicBullet extends UnistNode {
+export interface NumPicBullet extends Element {
   type: 'element'
   name: 'w:numPicBullet'
   attributes: {
@@ -1927,7 +1931,7 @@ export interface NumPicBulletMap {
   drawing: Drawing
 }
 
-export interface NumPr extends UnistNode {
+export interface NumPr extends Element {
   type: 'element'
   name: 'w:numPr'
   attributes: Record<string, never>
@@ -1940,7 +1944,7 @@ export interface NumPrMap {
   numId?: DecimalNumber
 }
 
-export interface NumRestart extends UnistNode {
+export interface NumRestart extends Element {
   type: 'element'
   name: 'w:numRestart'
   attributes: {
@@ -1949,7 +1953,7 @@ export interface NumRestart extends UnistNode {
   children: []
 }
 
-export interface Object extends UnistNode {
+export interface Object extends Element {
   type: 'element'
   name: 'w:object'
   attributes: {
@@ -1967,7 +1971,7 @@ export interface ObjectMap {
   objectLink?: ObjectLink
 }
 
-export interface ObjectEmbed extends UnistNode {
+export interface ObjectEmbed extends Element {
   type: 'element'
   name: 'w:objectEmbed'
   attributes: {
@@ -1990,7 +1994,7 @@ export type ObjectLink = ObjectEmbed & {
   children: []
 }
 
-export interface Odso extends UnistNode {
+export interface Odso extends Element {
   type: 'element'
   name: 'w:odso'
   attributes: Record<string, never>
@@ -2008,7 +2012,7 @@ export interface OdsoMap {
   udl?: StringTag<'udl'>
 }
 
-export interface OdsoFieldMapData extends UnistNode {
+export interface OdsoFieldMapData extends Element {
   type: 'element'
   name: 'w:odsoFieldMapData'
   attributes: Record<string, never>
@@ -2024,7 +2028,7 @@ export interface OdsoFieldMapDataMap {
   type?: MailMergeOdsoFMDFieldType
 }
 
-export interface OnOff<tag extends string = 'onOff'> extends UnistNode {
+export interface OnOff<tag extends string = 'onOff'> extends Element {
   type: 'element'
   name: `w:${tag}`
   attributes: {
@@ -2042,7 +2046,7 @@ export type OptimizeForBrowser = OnOff & {
   children: []
 }
 
-export interface P extends UnistNode {
+export interface P extends Element {
   type: 'element'
   name: 'w:p'
   attributes: {
@@ -2092,7 +2096,7 @@ export type PageBorder = Border & {
   children: []
 }
 
-export interface PageBorders extends UnistNode {
+export interface PageBorders extends Element {
   type: 'element'
   name: 'w:pageBorders'
   attributes: {
@@ -2110,7 +2114,7 @@ export interface PageBordersMap {
   top?: TopPageBorder
 }
 
-export interface PageMar extends UnistNode {
+export interface PageMar extends Element {
   type: 'element'
   name: 'w:pageMar'
   attributes: {
@@ -2125,7 +2129,7 @@ export interface PageMar extends UnistNode {
   children: []
 }
 
-export interface PageNumber extends UnistNode {
+export interface PageNumber extends Element {
   type: 'element'
   name: 'w:pageNumber'
   attributes: {
@@ -2137,7 +2141,7 @@ export interface PageNumber extends UnistNode {
   children: []
 }
 
-export interface PageSz extends UnistNode {
+export interface PageSz extends Element {
   type: 'element'
   name: 'w:pageSz'
   attributes: {
@@ -2149,7 +2153,7 @@ export interface PageSz extends UnistNode {
   children: []
 }
 
-export interface Panose extends UnistNode {
+export interface Panose extends Element {
   type: 'element'
   name: 'w:panose'
   attributes: {
@@ -2158,7 +2162,7 @@ export interface Panose extends UnistNode {
   children: []
 }
 
-export interface PaperSource extends UnistNode {
+export interface PaperSource extends Element {
   type: 'element'
   name: 'w:paperSource'
   attributes: {
@@ -2168,7 +2172,7 @@ export interface PaperSource extends UnistNode {
   children: []
 }
 
-export interface ParaRPr extends UnistNode {
+export interface ParaRPr extends Element {
   type: 'element'
   name: 'w:paraRPr'
   attributes: Record<string, never>
@@ -2233,7 +2237,7 @@ export interface ParaRPrChangeMap {
   rPr: ParaRPrOriginal
 }
 
-export interface ParaRPrOriginal extends UnistNode {
+export interface ParaRPrOriginal extends Element {
   type: 'element'
   name: 'w:paraRPrOriginal'
   attributes: Record<string, never>
@@ -2286,7 +2290,7 @@ export interface ParaRPrOriginalMap {
   webHidden?: OnOff<'webHidden'>[]
 }
 
-export interface PBdr extends UnistNode {
+export interface PBdr extends Element {
   type: 'element'
   name: 'w:pBdr'
   attributes: Record<string, never>
@@ -2302,7 +2306,7 @@ export interface PBdrMap {
   top?: Border
 }
 
-export interface Perm extends UnistNode {
+export interface Perm extends Element {
   type: 'element'
   name: 'w:perm'
   attributes: {
@@ -2324,7 +2328,7 @@ export type PermStart = Perm & {
   children: []
 }
 
-export interface Pitch extends UnistNode {
+export interface Pitch extends Element {
   type: 'element'
   name: 'w:pitch'
   attributes: {
@@ -2333,7 +2337,7 @@ export interface Pitch extends UnistNode {
   children: []
 }
 
-export interface PixelsMeasure extends UnistNode {
+export interface PixelsMeasure extends Element {
   type: 'element'
   name: 'w:pixelsMeasure'
   attributes: {
@@ -2342,7 +2346,7 @@ export interface PixelsMeasure extends UnistNode {
   children: []
 }
 
-export interface Placeholder extends UnistNode {
+export interface Placeholder extends Element {
   type: 'element'
   name: 'w:placeholder'
   attributes: Record<string, never>
@@ -2353,7 +2357,7 @@ export interface PlaceholderMap {
   docPart: StringTag<'docPart'>
 }
 
-export interface PPr extends UnistNode {
+export interface PPr extends Element {
   type: 'element'
   name: 'w:pPr'
   attributes: Record<string, never>
@@ -2366,7 +2370,7 @@ export interface PPrMap {
   sectPr?: SectPr
 }
 
-export interface PPrBase extends UnistNode {
+export interface PPrBase extends Element {
   type: 'element'
   attributes: Record<string, never>
   children: RequiredMap<PPrBaseMap>[]
@@ -2419,7 +2423,7 @@ export interface PPrChangeMap {
   pPr: PPrBase
 }
 
-export interface PPrDefault extends UnistNode {
+export interface PPrDefault extends Element {
   type: 'element'
   name: 'w:pPrDefault'
   attributes: Record<string, never>
@@ -2441,7 +2445,7 @@ export interface PPrGeneralMap {
   pPrChange?: PPrChange
 }
 
-export interface Proof extends UnistNode {
+export interface Proof extends Element {
   type: 'element'
   name: 'w:proof'
   attributes: {
@@ -2451,7 +2455,7 @@ export interface Proof extends UnistNode {
   children: []
 }
 
-export interface ProofErr extends UnistNode {
+export interface ProofErr extends Element {
   type: 'element'
   name: 'w:proofErr'
   attributes: {
@@ -2460,7 +2464,7 @@ export interface ProofErr extends UnistNode {
   children: []
 }
 
-export interface PTab extends UnistNode {
+export interface PTab extends Element {
   type: 'element'
   name: 'w:pTab'
   attributes: {
@@ -2471,7 +2475,7 @@ export interface PTab extends UnistNode {
   children: []
 }
 
-export interface R extends UnistNode {
+export interface R extends Element {
   type: 'element'
   name: 'w:r'
   attributes: {
@@ -2519,7 +2523,7 @@ export interface RMap {
   yearShort?: Empty<'yearShort'>[]
 }
 
-export interface ReadingModeInkLockDown extends UnistNode {
+export interface ReadingModeInkLockDown extends Element {
   type: 'element'
   name: 'w:readingModeInkLockDown'
   attributes: {
@@ -2531,7 +2535,7 @@ export interface ReadingModeInkLockDown extends UnistNode {
   children: []
 }
 
-export interface RecipientData extends UnistNode {
+export interface RecipientData extends Element {
   type: 'element'
   name: 'w:recipientData'
   attributes: Record<string, never>
@@ -2544,7 +2548,7 @@ export interface RecipientDataMap {
   uniqueTag: Base64Binary
 }
 
-export interface Recipients extends UnistNode {
+export interface Recipients extends Element {
   type: 'element'
   name: 'w:recipients'
   attributes: Record<string, never>
@@ -2555,7 +2559,7 @@ export interface RecipientsMap {
   recipientData: RecipientData[]
 }
 
-export interface Rel<tag extends string = 'rel'> extends UnistNode {
+export interface Rel<tag extends string = 'rel'> extends Element {
   type: 'element'
   name: `w:${tag}`
   attributes: {
@@ -2564,7 +2568,7 @@ export interface Rel<tag extends string = 'rel'> extends UnistNode {
   children: []
 }
 
-export interface Row extends UnistNode {
+export interface Row extends Element {
   type: 'element'
   name: 'w:tr'
   attributes: {
@@ -2599,7 +2603,7 @@ export interface RowMap {
   trPr?: TrPr
 }
 
-export interface RPr extends UnistNode {
+export interface RPr extends Element {
   type: 'element'
   name: 'w:rPr'
   attributes: Record<string, never>
@@ -2660,7 +2664,7 @@ export interface RPrChangeMap {
   rPr: RPrOriginal
 }
 
-export interface RPrDefault extends UnistNode {
+export interface RPrDefault extends Element {
   type: 'element'
   name: 'w:rPrDefault'
   attributes: Record<string, never>
@@ -2671,7 +2675,7 @@ export interface RPrDefaultMap {
   rPr?: RPr
 }
 
-export interface RPrOriginal extends UnistNode {
+export interface RPrOriginal extends Element {
   type: 'element'
   name: 'w:rPrOriginal'
   attributes: Record<string, never>
@@ -2720,7 +2724,7 @@ export interface RPrOriginalMap {
   webHidden?: OnOff<'webHidden'>[]
 }
 
-export interface Ruby extends UnistNode {
+export interface Ruby extends Element {
   type: 'element'
   name: 'w:ruby'
   attributes: Record<string, never>
@@ -2733,7 +2737,7 @@ export interface RubyMap {
   rubyPr: RubyPr
 }
 
-export interface RubyAlign extends UnistNode {
+export interface RubyAlign extends Element {
   type: 'element'
   name: 'w:rubyAlign'
   attributes: {
@@ -2742,7 +2746,7 @@ export interface RubyAlign extends UnistNode {
   children: []
 }
 
-export interface RubyContent extends UnistNode {
+export interface RubyContent extends Element {
   type: 'element'
   name: 'w:rubyContent'
   attributes: Record<string, never>
@@ -2776,7 +2780,7 @@ export interface RubyContentMap {
   r?: R[]
 }
 
-export interface RubyPr extends UnistNode {
+export interface RubyPr extends Element {
   type: 'element'
   name: 'w:rubyPr'
   attributes: Record<string, never>
@@ -2847,7 +2851,7 @@ export interface RunTrackChangeMap {
   // sSup?: m.SSup[]
 }
 
-export interface SaveThroughXslt extends UnistNode {
+export interface SaveThroughXslt extends Element {
   type: 'element'
   name: 'w:saveThroughXslt'
   attributes: {
@@ -2857,7 +2861,7 @@ export interface SaveThroughXslt extends UnistNode {
   children: []
 }
 
-export interface SdtBlock extends UnistNode {
+export interface SdtBlock extends Element {
   type: 'element'
   name: 'w:sdtBlock'
   attributes: Record<string, never>
@@ -2870,7 +2874,7 @@ export interface SdtBlockMap {
   sdtPr?: SdtPr
 }
 
-export interface SdtCell extends UnistNode {
+export interface SdtCell extends Element {
   type: 'element'
   name: 'w:sdtCell'
   attributes: Record<string, never>
@@ -2883,7 +2887,7 @@ export interface SdtCellMap {
   sdtPr?: SdtPr
 }
 
-export interface SdtComboBox extends UnistNode {
+export interface SdtComboBox extends Element {
   type: 'element'
   name: 'w:sdtComboBox'
   attributes: {
@@ -2896,7 +2900,7 @@ export interface SdtComboBoxMap {
   listItem?: SdtListItem[]
 }
 
-export interface SdtContentBlock extends UnistNode {
+export interface SdtContentBlock extends Element {
   type: 'element'
   name: 'w:sdtContentBlock'
   attributes: Record<string, never>
@@ -2925,7 +2929,7 @@ export interface SdtContentBlockMap {
   tbl?: Tbl[]
 }
 
-export interface SdtContentCell extends UnistNode {
+export interface SdtContentCell extends Element {
   type: 'element'
   name: 'w:sdtContentCell'
   attributes: Record<string, never>
@@ -2953,7 +2957,7 @@ export interface SdtContentCellMap {
   tc?: Tc[]
 }
 
-export interface SdtContentRow extends UnistNode {
+export interface SdtContentRow extends Element {
   type: 'element'
   name: 'w:sdtContentRow'
   attributes: Record<string, never>
@@ -2981,7 +2985,7 @@ export interface SdtContentRowMap {
   tr?: Row[]
 }
 
-export interface SdtContentRun extends UnistNode {
+export interface SdtContentRun extends Element {
   type: 'element'
   name: 'w:sdtContentRun'
   attributes: Record<string, never>
@@ -3015,7 +3019,7 @@ export interface SdtContentRunMap {
   subDoc?: Rel<'subDoc'>[]
 }
 
-export interface SdtDate extends UnistNode {
+export interface SdtDate extends Element {
   type: 'element'
   name: 'w:sdtDate'
   attributes: {
@@ -3031,7 +3035,7 @@ export interface SdtDateMap {
   storeMappedDataAs?: SdtDateMappingType
 }
 
-export interface SdtDateMappingType extends UnistNode {
+export interface SdtDateMappingType extends Element {
   type: 'element'
   name: 'w:sdtDateMappingType'
   attributes: {
@@ -3040,7 +3044,7 @@ export interface SdtDateMappingType extends UnistNode {
   children: []
 }
 
-export interface SdtDocPart extends UnistNode {
+export interface SdtDocPart extends Element {
   type: 'element'
   name: 'w:sdtDocPart'
   attributes: Record<string, never>
@@ -3053,7 +3057,7 @@ export interface SdtDocPartMap {
   docPartUnique?: OnOff<'docPartUnique'>
 }
 
-export interface SdtDropDownList extends UnistNode {
+export interface SdtDropDownList extends Element {
   type: 'element'
   name: 'w:sdtDropDownList'
   attributes: {
@@ -3066,7 +3070,7 @@ export interface SdtDropDownListMap {
   listItem?: SdtListItem[]
 }
 
-export interface SdtEndPr extends UnistNode {
+export interface SdtEndPr extends Element {
   type: 'element'
   name: 'w:sdtEndPr'
   attributes: Record<string, never>
@@ -3077,7 +3081,7 @@ export interface SdtEndPrMap {
   rPr?: RPr[]
 }
 
-export interface SdtListItem extends UnistNode {
+export interface SdtListItem extends Element {
   type: 'element'
   name: 'w:sdtListItem'
   attributes: {
@@ -3087,7 +3091,7 @@ export interface SdtListItem extends UnistNode {
   children: []
 }
 
-export interface SdtPr extends UnistNode {
+export interface SdtPr extends Element {
   type: 'element'
   name: 'w:sdtPr'
   attributes: Record<string, never>
@@ -3120,7 +3124,7 @@ export interface SdtPrMap {
   text?: SdtText
 }
 
-export interface SdtRow extends UnistNode {
+export interface SdtRow extends Element {
   type: 'element'
   name: 'w:sdtRow'
   attributes: Record<string, never>
@@ -3133,7 +3137,7 @@ export interface SdtRowMap {
   sdtPr?: SdtPr
 }
 
-export interface SdtRun extends UnistNode {
+export interface SdtRun extends Element {
   type: 'element'
   name: 'w:sdtRun'
   attributes: Record<string, never>
@@ -3146,7 +3150,7 @@ export interface SdtRunMap {
   sdtPr?: SdtPr
 }
 
-export interface SdtText extends UnistNode {
+export interface SdtText extends Element {
   type: 'element'
   name: 'w:sdtText'
   attributes: {
@@ -3155,7 +3159,7 @@ export interface SdtText extends UnistNode {
   children: []
 }
 
-export interface SectPr extends UnistNode {
+export interface SectPr extends Element {
   type: 'element'
   name: 'w:sectPr'
   attributes: {
@@ -3192,7 +3196,7 @@ export interface SectPrMap {
   vAlign?: VerticalJc
 }
 
-export interface SectPrBase extends UnistNode {
+export interface SectPrBase extends Element {
   type: 'element'
   name: 'w:sectPrBase'
   attributes: {
@@ -3237,7 +3241,7 @@ export interface SectPrChangeMap {
   sectPr?: SectPrBase
 }
 
-export interface SectType extends UnistNode {
+export interface SectType extends Element {
   type: 'element'
   name: 'w:sectType'
   attributes: {
@@ -3246,7 +3250,7 @@ export interface SectType extends UnistNode {
   children: []
 }
 
-export interface Settings extends UnistNode {
+export interface Settings extends Element {
   type: 'element'
   name: 'w:settings'
   attributes: Record<string, never>
@@ -3352,7 +3356,7 @@ export interface SettingsMap {
   zoom?: Zoom
 }
 
-export interface Shd extends UnistNode {
+export interface Shd extends Element {
   type: 'element'
   name: 'w:shd'
   attributes: {
@@ -3369,7 +3373,7 @@ export interface Shd extends UnistNode {
   children: []
 }
 
-export interface SignedHpsMeasure extends UnistNode {
+export interface SignedHpsMeasure extends Element {
   type: 'element'
   name: 'w:position'
   attributes: {
@@ -3378,7 +3382,7 @@ export interface SignedHpsMeasure extends UnistNode {
   children: []
 }
 
-export interface SignedTwipsMeasure extends UnistNode {
+export interface SignedTwipsMeasure extends Element {
   type: 'element'
   name: 'w:spacing'
   attributes: {
@@ -3387,7 +3391,7 @@ export interface SignedTwipsMeasure extends UnistNode {
   children: []
 }
 
-export interface SimpleField extends UnistNode {
+export interface SimpleField extends Element {
   type: 'element'
   name: 'w:simpleField'
   attributes: {
@@ -3425,7 +3429,7 @@ export interface SimpleFieldMap {
   subDoc?: Rel<'subDoc'>[]
 }
 
-export interface SmartTagPr extends UnistNode {
+export interface SmartTagPr extends Element {
   type: 'element'
   name: 'w:smartTagPr'
   attributes: Record<string, never>
@@ -3436,7 +3440,7 @@ export interface SmartTagPrMap {
   attr?: Attr[]
 }
 
-export interface SmartTagRun extends UnistNode {
+export interface SmartTagRun extends Element {
   type: 'element'
   name: 'w:smartTagRun'
   attributes: {
@@ -3474,7 +3478,7 @@ export interface SmartTagRunMap {
   subDoc?: Rel<'subDoc'>[]
 }
 
-export interface SmartTagType extends UnistNode {
+export interface SmartTagType extends Element {
   type: 'element'
   name: 'w:smartTagType'
   attributes: {
@@ -3485,7 +3489,7 @@ export interface SmartTagType extends UnistNode {
   children: []
 }
 
-export interface Spacing extends UnistNode {
+export interface Spacing extends Element {
   type: 'element'
   name: 'w:spacing'
   attributes: {
@@ -3501,16 +3505,17 @@ export interface Spacing extends UnistNode {
   children: []
 }
 
-export interface StringTag<tag extends string = 'string'> extends UnistNode {
+export interface StringTag<tag extends string = 'string', namespace extends string = 'w'>
+  extends Element {
   type: 'element'
-  name: `w:${tag}`
+  name: `${namespace}:${tag}`
   attributes: {
     'w:val': string
   }
   children: []
 }
 
-export interface Style extends UnistNode {
+export interface Style extends Element {
   type: 'element'
   name: 'w:style'
   attributes: {
@@ -3547,7 +3552,7 @@ export interface StyleMap {
   unhideWhenUsed?: OnOff<'unhideWhenUsed'>
 }
 
-export interface StylePaneFilter extends UnistNode {
+export interface StylePaneFilter extends Element {
   type: 'element'
   name: 'w:stylePaneFilter'
   attributes: {
@@ -3570,7 +3575,7 @@ export interface StylePaneFilter extends UnistNode {
   children: []
 }
 
-export interface Styles extends UnistNode {
+export interface Styles extends Element {
   type: 'element'
   name: 'w:styles'
   attributes: Record<string, never>
@@ -3583,7 +3588,7 @@ export interface StylesMap {
   style?: Style[]
 }
 
-export interface StyleSort extends UnistNode {
+export interface StyleSort extends Element {
   type: 'element'
   name: 'w:styleSort'
   attributes: {
@@ -3592,7 +3597,7 @@ export interface StyleSort extends UnistNode {
   children: []
 }
 
-export interface Sym extends UnistNode {
+export interface Sym extends Element {
   type: 'element'
   name: 'w:sym'
   attributes: {
@@ -3602,7 +3607,7 @@ export interface Sym extends UnistNode {
   children: []
 }
 
-export interface Tabs extends UnistNode {
+export interface Tabs extends Element {
   type: 'element'
   name: 'w:tabs'
   attributes: Record<string, never>
@@ -3613,7 +3618,7 @@ export interface TabsMap {
   tab: TabStop[]
 }
 
-export interface TabStop extends UnistNode {
+export interface TabStop extends Element {
   type: 'element'
   name: 'w:tabStop'
   attributes: {
@@ -3624,7 +3629,7 @@ export interface TabStop extends UnistNode {
   children: []
 }
 
-export interface TargetScreenSz extends UnistNode {
+export interface TargetScreenSz extends Element {
   type: 'element'
   name: 'w:targetScreenSz'
   attributes: {
@@ -3633,7 +3638,7 @@ export interface TargetScreenSz extends UnistNode {
   children: []
 }
 
-export interface Tbl extends UnistNode {
+export interface Tbl extends Element {
   type: 'element'
   name: 'w:tbl'
   attributes: Record<string, never>
@@ -3663,7 +3668,7 @@ export interface TblMap {
   tr?: Row[]
 }
 
-export interface TblBorders extends UnistNode {
+export interface TblBorders extends Element {
   type: 'element'
   name: 'w:tblBorders'
   attributes: Record<string, never>
@@ -3679,7 +3684,7 @@ export interface TblBordersMap {
   top?: Border
 }
 
-export interface TblCellMar extends UnistNode {
+export interface TblCellMar extends Element {
   type: 'element'
   name: 'w:tblCellMar'
   attributes: Record<string, never>
@@ -3704,7 +3709,7 @@ export interface TblGridMap {
   tblGridChange?: TblGridChange
 }
 
-export interface TblGridBase extends UnistNode {
+export interface TblGridBase extends Element {
   type: 'element'
   name: 'w:tblGridBase'
   attributes: Record<string, never>
@@ -3726,7 +3731,7 @@ export interface TblGridChangeMap {
   tblGrid: TblGridBase
 }
 
-export interface TblGridCol extends UnistNode {
+export interface TblGridCol extends Element {
   type: 'element'
   name: 'w:tblGridCol'
   attributes: {
@@ -3735,7 +3740,7 @@ export interface TblGridCol extends UnistNode {
   children: []
 }
 
-export interface TblLayoutType extends UnistNode {
+export interface TblLayoutType extends Element {
   type: 'element'
   name: 'w:tblLayoutType'
   attributes: {
@@ -3744,7 +3749,7 @@ export interface TblLayoutType extends UnistNode {
   children: []
 }
 
-export interface TblLook extends UnistNode {
+export interface TblLook extends Element {
   type: 'element'
   name: 'w:tblLook'
   attributes: {
@@ -3758,7 +3763,7 @@ export interface TblLook extends UnistNode {
   children: []
 }
 
-export interface TblOverlap extends UnistNode {
+export interface TblOverlap extends Element {
   type: 'element'
   name: 'w:tblOverlap'
   attributes: {
@@ -3767,7 +3772,7 @@ export interface TblOverlap extends UnistNode {
   children: []
 }
 
-export interface TblPPr extends UnistNode {
+export interface TblPPr extends Element {
   type: 'element'
   name: 'w:tblPPr'
   attributes: {
@@ -3795,7 +3800,7 @@ export interface TblPrMap {
   tblPrChange?: TblPrChange
 }
 
-export interface TblPrBase extends UnistNode {
+export interface TblPrBase extends Element {
   type: 'element'
   name: 'w:tblPrBase'
   attributes: Record<string, never>
@@ -3844,7 +3849,7 @@ export interface TblPrExMap {
   tblPrExChange?: TblPrExChange
 }
 
-export interface TblPrExBase extends UnistNode {
+export interface TblPrExBase extends Element {
   type: 'element'
   name: 'w:tblPrExBase'
   attributes: Record<string, never>
@@ -3874,7 +3879,7 @@ export interface TblPrExChangeMap {
   tblPrEx: TblPrExBase
 }
 
-export interface TblStylePr extends UnistNode {
+export interface TblStylePr extends Element {
   type: 'element'
   name: 'w:tblStylePr'
   attributes: {
@@ -3891,7 +3896,7 @@ export interface TblStylePrMap {
   trPr?: TrPr
 }
 
-export interface TblWidth extends UnistNode {
+export interface TblWidth extends Element {
   type: 'element'
   name: 'w:tblWidth'
   attributes: {
@@ -3901,7 +3906,7 @@ export interface TblWidth extends UnistNode {
   children: []
 }
 
-export interface Tc extends UnistNode {
+export interface Tc extends Element {
   type: 'element'
   name: 'w:tc'
   attributes: {
@@ -3934,7 +3939,7 @@ export interface TcMap {
   tcPr?: TcPr
 }
 
-export interface TcBorders extends UnistNode {
+export interface TcBorders extends Element {
   type: 'element'
   name: 'w:tcBorders'
   attributes: Record<string, never>
@@ -3952,7 +3957,7 @@ export interface TcBordersMap {
   tr2bl?: Border
 }
 
-export interface TcMar extends UnistNode {
+export interface TcMar extends Element {
   type: 'element'
   name: 'w:tcMar'
   attributes: Record<string, never>
@@ -3977,7 +3982,7 @@ export interface TcPrMap extends TcPrBase {
   tcPrChange?: TcPrChange
 }
 
-export interface TcPrBase extends UnistNode {
+export interface TcPrBase extends Element {
   type: 'element'
   name: 'w:tcPrBase'
   attributes: Record<string, never>
@@ -4024,7 +4029,7 @@ export interface TcPrInnerMap {
   cellMerge?: CellMergeTrackChange
 }
 
-export interface T extends UnistNode {
+export interface T extends Element {
   type: 'element'
   name: 'w:t' | 'w:instrText' | 'w:delInstrText' | 'w:delText'
   attributes: {
@@ -4037,7 +4042,7 @@ export type Text = UnistLiteral & {
   value: string
 }
 
-export interface TextAlignment extends UnistNode {
+export interface TextAlignment extends Element {
   type: 'element'
   name: 'w:textAlignment'
   attributes: {
@@ -4046,7 +4051,7 @@ export interface TextAlignment extends UnistNode {
   children: []
 }
 
-export interface TextboxTightWrap extends UnistNode {
+export interface TextboxTightWrap extends Element {
   type: 'element'
   name: 'w:textboxTightWrap'
   attributes: {
@@ -4055,7 +4060,7 @@ export interface TextboxTightWrap extends UnistNode {
   children: []
 }
 
-export interface TextDirection extends UnistNode {
+export interface TextDirection extends Element {
   type: 'element'
   name: 'w:textDirection'
   attributes: {
@@ -4064,7 +4069,7 @@ export interface TextDirection extends UnistNode {
   children: []
 }
 
-export interface TextEffect extends UnistNode {
+export interface TextEffect extends Element {
   type: 'element'
   name: 'w:effect'
   attributes: {
@@ -4073,7 +4078,7 @@ export interface TextEffect extends UnistNode {
   children: []
 }
 
-export interface TextScale extends UnistNode {
+export interface TextScale extends Element {
   type: 'element'
   name: 'w:w'
   attributes: {
@@ -4111,7 +4116,7 @@ export type TrackChangeRange = TrackChange & {
   children: []
 }
 
-export interface TrackChangesView extends UnistNode {
+export interface TrackChangesView extends Element {
   type: 'element'
   name: 'w:trackChangesView'
   attributes: {
@@ -4137,7 +4142,7 @@ export interface TrPrMap {
   trPrChange?: TrPrChange
 }
 
-export interface TrPrBase extends UnistNode {
+export interface TrPrBase extends Element {
   type: 'element'
   name: 'w:trPrBase'
   attributes: Record<string, never>
@@ -4170,7 +4175,7 @@ export interface TrPrChangeMap {
   trPr: TrPrBase
 }
 
-export interface TwipsMeasure extends UnistNode {
+export interface TwipsMeasure extends Element {
   type: 'element'
   name: 'w:twipsMeasure'
   attributes: {
@@ -4179,7 +4184,7 @@ export interface TwipsMeasure extends UnistNode {
   children: []
 }
 
-export interface Underline extends UnistNode {
+export interface Underline extends Element {
   type: 'element'
   name: 'w:u'
   attributes: {
@@ -4192,7 +4197,7 @@ export interface Underline extends UnistNode {
   children: []
 }
 
-export interface UnsignedDecimalNumber extends UnistNode {
+export interface UnsignedDecimalNumber extends Element {
   type: 'element'
   name: 'w:unsignedDecimalNumber'
   attributes: {
@@ -4201,7 +4206,7 @@ export interface UnsignedDecimalNumber extends UnistNode {
   children: []
 }
 
-export interface VerticalAlignRun extends UnistNode {
+export interface VerticalAlignRun extends Element {
   type: 'element'
   name: 'w:vertAlign'
   attributes: {
@@ -4210,7 +4215,7 @@ export interface VerticalAlignRun extends UnistNode {
   children: []
 }
 
-export interface VerticalJc extends UnistNode {
+export interface VerticalJc extends Element {
   type: 'element'
   name: 'w:verticalJc'
   attributes: {
@@ -4219,7 +4224,7 @@ export interface VerticalJc extends UnistNode {
   children: []
 }
 
-export interface View extends UnistNode {
+export interface View extends Element {
   type: 'element'
   name: 'w:view'
   attributes: {
@@ -4228,7 +4233,7 @@ export interface View extends UnistNode {
   children: []
 }
 
-export interface VMerge extends UnistNode {
+export interface VMerge extends Element {
   type: 'element'
   name: 'w:vMerge'
   attributes: {
@@ -4237,7 +4242,7 @@ export interface VMerge extends UnistNode {
   children: []
 }
 
-export interface WebSettings extends UnistNode {
+export interface WebSettings extends Element {
   type: 'element'
   name: 'w:webSettings'
   attributes: Record<string, never>
@@ -4259,7 +4264,7 @@ export interface WebSettingsMap {
   targetScreenSz?: TargetScreenSz
 }
 
-export interface WriteProtection extends UnistNode {
+export interface WriteProtection extends Element {
   type: 'element'
   name: 'w:writeProtection'
   attributes: {
@@ -4272,7 +4277,7 @@ export interface WriteProtection extends UnistNode {
   children: []
 }
 
-export interface WritingStyle extends UnistNode {
+export interface WritingStyle extends Element {
   type: 'element'
   name: 'w:writingStyle'
   attributes: {
@@ -4286,7 +4291,7 @@ export interface WritingStyle extends UnistNode {
   children: []
 }
 
-export interface Zoom extends UnistNode {
+export interface Zoom extends Element {
   type: 'element'
   name: 'w:zoom'
   attributes: {
@@ -5004,7 +5009,7 @@ export type WrapVal = 'auto' | 'notBeside' | 'around' | 'tight' | 'through' | 'n
 
 export type ZoomVal = 'none' | 'fullPage' | 'bestFit' | 'textFit'
 
-export interface document extends UnistNode {
+export interface document extends Element {
   comments: Comments
   document: Document
   endnotes: Endnotes

@@ -2,6 +2,17 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.0](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-markup-to-style-0.2.0...reoff-markup-to-style-0.3.0) (2024-06-28)
+
+### Dependency Updates
+
+* `ooxast-util-markup-to-style` updated to version `0.5.0`
+* `ooxast` updated to version `0.4.0`
+
+### Features
+
+* update to new unified versions ([18bb996](https://github.com/TrialAndErrorOrg/parsers/commit/18bb9960d25843db83cda8bfea932e2e22f44b9b))
+
 ## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/reoff-markup-to-style-0.1.0...reoff-markup-to-style-0.2.0) (2023-09-29)
 
 ### Dependency Updates

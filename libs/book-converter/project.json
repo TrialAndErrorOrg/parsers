@@ -16,7 +16,7 @@
         "tsConfig": "libs/book-converter/tsconfig.lib.json",
         "packageJson": "libs/book-converter/package.json",
         "main": "libs/book-converter/src/index.ts",
-        "assets": ["libs/book-converter/*.md"],
+        "assets": ["libs/book-converter/*.md", "libs/book-converter/schema.json"],
         "clean": true,
         "buildableProjectDepsInPackageJsonType": "dependencies"
       },

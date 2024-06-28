@@ -27,9 +27,9 @@
       "types": "./index.d.ts",
       "import": "./index.js"
     },
-    "./public": {
-      "types": "./public/schema.json",
-      "import": "./public/schema.json"
+    "./schema.json": {
+      "types": "./schema.json",
+      "import": "./schema.json"
     }
   },
   "main": "./index.js",
@@ -38,7 +38,7 @@
     "index.d.ts",
     "index.js",
     "/lib",
-    "/public"
+    "schema.json"
   ],
   "dependencies": {
     "yargs": "^17.7.2",

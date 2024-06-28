@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.1](https://github.com/TrialAndErrorOrg/parsers/compare/book-converter-0.3.0...book-converter-0.3.1) (2024-06-28)
+
+
+### Bug Fixes
+
+* include schema.json ([cdcd98f](https://github.com/TrialAndErrorOrg/parsers/commit/cdcd98f507c82529a82192e1c90368f67a4fcd0e))
+
 ## [0.3.0](https://github.com/TrialAndErrorOrg/parsers/compare/book-converter-0.2.0...book-converter-0.3.0) (2024-06-28)
 
 ### Dependency Updates

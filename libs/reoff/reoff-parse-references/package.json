@@ -1,6 +1,6 @@
 {
   "name": "reoff-parse-references",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
@@ -34,8 +34,8 @@
     "/lib"
   ],
   "dependencies": {
-    "ooxast": "0.3.0",
-    "ooxast-util-parse-bib": "0.3.0",
+    "ooxast": "0.4.0",
+    "ooxast-util-parse-bib": "0.4.0",
     "vfile": "^6.0.1"
   }
 }

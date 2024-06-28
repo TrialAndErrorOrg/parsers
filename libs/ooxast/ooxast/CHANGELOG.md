@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.4.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-0.3.0...ooxast-0.4.0) (2024-06-28)
+
+
+### Features
+
+* **ooxast:** make compatible with new xast types ([6b7353a](https://github.com/TrialAndErrorOrg/parsers/commit/6b7353a113fb17d1a928156fbb225669f69c49d7))
+* update to new unified versions ([18bb996](https://github.com/TrialAndErrorOrg/parsers/commit/18bb9960d25843db83cda8bfea932e2e22f44b9b))
+
 ## [0.3.0](https://github.com/TrialAndErrorOrg/parsers/compare/ooxast-0.2.0...ooxast-0.3.0) (2023-09-29)
 
 

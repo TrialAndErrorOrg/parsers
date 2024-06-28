@@ -1,10 +1,13 @@
-import { all, defaultParagraphHandlers } from 'ooxast-util-to-unified-latex'
+import { H, all, defaultParagraphHandlers } from 'ooxast-util-to-unified-latex'
 import { textboxhandler } from './textbox.js'
 import { arg, args, env, m, s } from '@unified-latex/unified-latex-builder'
 import { toString } from 'xast-util-to-string'
 import { PB } from '../util/PB.js'
+import { P } from 'ooxast'
 
-export const paragraphHandlers: (typeof defaultParagraphHandlers)[number][] = [
+export const makeParagraphHandlers = (
+  matchers: { style: string; output: string }[],
+): (typeof defaultParagraphHandlers)[number][] => [
   ...defaultParagraphHandlers,
   textboxhandler,
   {
@@ -16,7 +19,29 @@ export const paragraphHandlers: (typeof defaultParagraphHandlers)[number][] = [
       if (prev && prev.type === 'environment' && prev.env === 'figure') {
         // filter out the old caption from the figure
         prev.content = prev.content.filter((c) => !(c.type === 'macro' && c.content === 'caption'))
-        prev.content.push(PB, m('caption', arg(all(h, node))))
+        prev.content.push(
+          PB,
+          m(
+            'caption',
+            arg(
+              all(h, node).map((n) => {
+                if (n.type !== 'string') {
+                  return n
+                }
+
+                const result = {
+                  ...n,
+                  content: n.content.replace(
+                    /(?:figure|afbeelding|table|tabel) \d+(?:\.\d+)?: /gi,
+                    '',
+                  ),
+                }
+
+                return result
+              }),
+            ),
+          ),
+        )
         return
       }
 
@@ -37,9 +62,45 @@ export const paragraphHandlers: (typeof defaultParagraphHandlers)[number][] = [
     },
   },
   {
-    matcher: 'Heading 1',
+    matcher: 'Heading1',
     handler: (h, node) => {
-      return [m('chapter', all(h, node))]
+      return [
+        PB,
+        m(
+          'chapter',
+          all(h, node).map((n) => {
+            if (n.type !== 'string') {
+              return n
+            }
+
+            const result = { ...n, content: n.content.replace(/(?:chapter|hoofdstuk) \d+: /gi, '') }
+
+            return result
+          }),
+        ),
+        PB,
+      ]
+    },
+  },
+  {
+    matcher: 'Heading2',
+    handler: (h, node) => {
+      return [
+        PB,
+        m(
+          'section',
+          all(h, node).map((n) => {
+            if (n.type !== 'string') {
+              return n
+            }
+
+            const result = { ...n, content: n.content.replace(/^\d+\.\d+\s?/g, '') }
+
+            return result
+          }),
+        ),
+        PB,
+      ]
     },
   },
   {
@@ -100,4 +161,14 @@ export const paragraphHandlers: (typeof defaultParagraphHandlers)[number][] = [
       return [m('clearpage')]
     },
   },
+  ...matchers.map(({ style: matcher, output: replacer }) => {
+    const [before, after] = replacer.split('$1')
+
+    const shouldHaveText = /\$1/.test(replacer)
+
+    return {
+      matcher,
+      handler: (h: H, node: P) => [s(before), ...(shouldHaveText ? all(h, node) : []), s(after)],
+    }
+  }),
 ]

@@ -3,7 +3,7 @@ import reoffParse from 'reoff-parse'
 import reoffUnifiedLatex from 'reoff-unified-latex'
 import unifiedLatexStringify from 'unified-latex-stringify'
 import { docxToVFile } from 'docx-to-vfile'
-import { paragraphHandlers } from './paragraph/index.js'
+import { makeParagraphHandlers } from './paragraph/index.js'
 import { readFile, writeFile } from 'fs/promises'
 import { s } from '@unified-latex/unified-latex-builder'
 import { existsSync, mkdirSync } from 'fs'
@@ -86,14 +86,16 @@ export async function docxConverter(
           options: [documentClassOptions],
         },
         topSection: 0,
-        paragraphHandlers,
+        paragraphHandlers: makeParagraphHandlers(options?.paragraphStyleHandlers ?? []),
         preamble,
+        tabularx: true,
         packages: [],
         formattingHandlers: {
           u: (h, text) => text,
           color: (h, text, color) => text,
           shd: (h, text, color) => text,
         },
+        citations: options.parseCitations ? 'cite' : 'plain',
         ...unifiedOptions,
       })
       .use(() => (tree) => {

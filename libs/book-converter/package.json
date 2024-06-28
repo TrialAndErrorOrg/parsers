@@ -26,6 +26,10 @@
     ".": {
       "types": "./index.d.ts",
       "import": "./index.js"
+    },
+    "./public": {
+      "types": "./public/schema.json",
+      "import": "./public/schema.json"
     }
   },
   "main": "./index.js",
@@ -33,7 +37,8 @@
   "files": [
     "index.d.ts",
     "index.js",
-    "/lib"
+    "/lib",
+    "/public"
   ],
   "dependencies": {
     "yargs": "^17.7.2",

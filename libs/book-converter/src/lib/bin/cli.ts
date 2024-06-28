@@ -106,8 +106,22 @@ const argv = converterCLIOptionsDefaultSchemaInput.parse(cliArgs)
     }
   })
 
+  function maybeOne(things: (string | undefined)[]) {
+    return things.filter((thing) => thing !== undefined) as string[]
+  }
+
   // Watch for file changes
-  const watcher = chokidar.watch([configPath])
+  const watcher = chokidar.watch([
+    configPath,
+    ...maybeOne([
+      argv.docx,
+      argv.preamble,
+      argv.before,
+      fileOptions.docx,
+      fileOptions.preamble,
+      fileOptions.before,
+    ]),
+  ])
   watcher.on('change', async (path) => {
     console.log(`${path} has changed. Re-running...`)
     if (path === configPath) {

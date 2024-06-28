@@ -2,6 +2,32 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.0](https://github.com/TrialAndErrorOrg/parsers/compare/book-converter-0.2.0...book-converter-0.3.0) (2024-06-28)
+
+### Dependency Updates
+
+* `ooxast-util-markup-to-style` updated to version `0.5.0`
+* `reoff-unified-latex` updated to version `0.4.0`
+* `unified-latex-stringify` updated to version `0.3.0`
+* `docx-to-vfile` updated to version `0.11.0`
+* `reoff-clean` updated to version `0.4.0`
+* `reoff-markup-to-style` updated to version `0.3.0`
+* `reoff-parse-references` updated to version `0.4.0`
+* `reoff-cite` updated to version `0.5.0`
+* `ooxast` updated to version `0.4.0`
+* `ooxast-util-get-style` updated to version `0.4.1`
+* `reoff-parse` updated to version `0.6.0`
+* `ooxast-util-to-unified-latex` updated to version `0.6.0`
+
+### Features
+
+* update to new unified versions ([18bb996](https://github.com/TrialAndErrorOrg/parsers/commit/18bb9960d25843db83cda8bfea932e2e22f44b9b))
+
+
+### Bug Fixes
+
+* allow some more options and export schema ([3b30c56](https://github.com/TrialAndErrorOrg/parsers/commit/3b30c5697b316a343809133011f50ba6d162bd44))
+
 ## [0.2.0](https://github.com/TrialAndErrorOrg/parsers/compare/book-converter-0.1.0...book-converter-0.2.0) (2023-09-29)
 
 ### Dependency Updates

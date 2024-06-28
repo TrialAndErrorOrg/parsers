@@ -2,6 +2,16 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.4.0](https://github.com/TrialAndErrorOrg/parsers/compare/xast-util-select-0.3.0...xast-util-select-0.4.0) (2024-06-28)
+
+### Dependency Updates
+
+* `xast-util-is-element` updated to version `0.4.0`
+
+### Features
+
+* update to new unified versions ([18bb996](https://github.com/TrialAndErrorOrg/parsers/commit/18bb9960d25843db83cda8bfea932e2e22f44b9b))
+
 ## [0.3.0](https://github.com/TrialAndErrorOrg/parsers/compare/xast-util-select-0.2.0...xast-util-select-0.3.0) (2023-09-29)
 
 ### Dependency Updates

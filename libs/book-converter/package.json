@@ -1,6 +1,6 @@
 {
   "name": "@trialanderror/converter-cli",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/converter-cli",
   "homepage": "https://github.com/TrialAndErrorOrg/parsers",

@@ -2,6 +2,13 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.2](https://github.com/TrialAndErrorOrg/parsers/compare/book-converter-0.3.1...book-converter-0.3.2) (2024-06-29)
+
+
+### Bug Fixes
+
+* remove hardcoded heading2 stuff ([1ac1155](https://github.com/TrialAndErrorOrg/parsers/commit/1ac1155783820cc177cf07a93d6cac1fb2572d99))
+
 ## [0.3.1](https://github.com/TrialAndErrorOrg/parsers/compare/book-converter-0.3.0...book-converter-0.3.1) (2024-06-28)
 
 

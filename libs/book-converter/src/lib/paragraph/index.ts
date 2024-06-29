@@ -64,43 +64,7 @@ export const makeParagraphHandlers = (
   {
     matcher: 'Heading1',
     handler: (h, node) => {
-      return [
-        PB,
-        m(
-          'chapter',
-          all(h, node).map((n) => {
-            if (n.type !== 'string') {
-              return n
-            }
-
-            const result = { ...n, content: n.content.replace(/(?:chapter|hoofdstuk) \d+: /gi, '') }
-
-            return result
-          }),
-        ),
-        PB,
-      ]
-    },
-  },
-  {
-    matcher: 'Heading2',
-    handler: (h, node) => {
-      return [
-        PB,
-        m(
-          'section',
-          all(h, node).map((n) => {
-            if (n.type !== 'string') {
-              return n
-            }
-
-            const result = { ...n, content: n.content.replace(/^\d+\.\d+\s?/g, '') }
-
-            return result
-          }),
-        ),
-        PB,
-      ]
+      return [PB, m('chapter', ...all(h, node)), PB]
     },
   },
   {

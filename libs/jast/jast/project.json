@@ -24,8 +24,7 @@
         "packageJson": "libs/jast/jast/package.json",
         "main": "libs/jast/jast/src/index.ts",
         "assets": ["libs/jast/jast/*.md"],
-        "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "clean": true
       },
       "dependsOn": [
         {
@@ -39,15 +38,14 @@
       ]
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/jast/jast"],
       "options": {
-        "jestConfig": "libs/jast/jast/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/jast/jast/jest.config.js"
       }
     },
     "deploy": {

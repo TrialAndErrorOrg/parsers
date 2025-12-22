@@ -20,15 +20,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ooxast/ooxast-util-to-hast"],
       "options": {
-        "jestConfig": "libs/ooxast/ooxast-util-to-hast/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/ooxast/ooxast-util-to-hast/jest.config.ts"
       }
     }
   },

@@ -10,3 +10,5 @@
 dist
 
 README.md
+
+/.nx/cache

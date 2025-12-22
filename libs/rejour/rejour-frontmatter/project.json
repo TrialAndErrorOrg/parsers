@@ -24,8 +24,7 @@
         "packageJson": "libs/rejour/rejour-frontmatter/package.json",
         "main": "libs/rejour/rejour-frontmatter/src/index.ts",
         "assets": ["libs/rejour/rejour-frontmatter/*.md"],
-        "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "clean": true
       },
       "dependsOn": [
         {
@@ -39,15 +38,14 @@
       ]
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/rejour/rejour-frontmatter"],
       "options": {
-        "jestConfig": "libs/rejour/rejour-frontmatter/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/rejour/rejour-frontmatter/jest.config.js"
       }
     },
     "deploy": {

@@ -17,8 +17,7 @@
         "packageJson": "libs/citations/reference-parser-chatgpt/package.json",
         "main": "libs/citations/reference-parser-chatgpt/src/index.ts",
         "assets": ["libs/citations/reference-parser-chatgpt/*.md"],
-        "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "clean": true
       },
       "dependsOn": [
         {
@@ -92,7 +91,7 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     }
   },

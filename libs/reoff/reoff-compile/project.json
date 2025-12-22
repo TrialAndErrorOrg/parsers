@@ -17,8 +17,7 @@
         "packageJson": "libs/reoff/reoff-compile/package.json",
         "main": "libs/reoff/reoff-compile/src/index.ts",
         "assets": ["libs/reoff/reoff-compile/*.md"],
-        "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "clean": true
       },
       "dependsOn": [
         {
@@ -92,7 +91,7 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     }
   },

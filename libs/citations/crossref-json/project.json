@@ -12,7 +12,7 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "make-publishable": {
@@ -28,8 +28,7 @@
         "packageJson": "libs/citations/crossref-json/package.json",
         "main": "libs/citations/crossref-json/src/index.ts",
         "assets": ["libs/citations/crossref-json/*.md"],
-        "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "clean": true
       },
       "dependsOn": [
         {

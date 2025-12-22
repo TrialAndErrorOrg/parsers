@@ -12,15 +12,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/relatex/relatex-add-preamble"],
       "options": {
-        "jestConfig": "libs/relatex/relatex-add-preamble/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/relatex/relatex-add-preamble/jest.config.js"
       }
     },
     "make-publishable": {
@@ -36,8 +35,7 @@
         "packageJson": "libs/relatex/relatex-add-preamble/package.json",
         "main": "libs/relatex/relatex-add-preamble/src/index.ts",
         "assets": ["libs/relatex/relatex-add-preamble/*.md"],
-        "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "clean": true
       },
       "dependsOn": [
         {

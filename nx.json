@@ -1,15 +1,11 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "trialanderror",
   "workspaceLayout": {
     "appsDir": "apps",
     "libsDir": "libs"
   },
   "affected": {
     "defaultBase": "main"
-  },
-  "cli": {
-    "defaultCollection": "@nx/next"
   },
   "generators": {
     "@nx/node:library": {},
@@ -76,7 +72,8 @@
           "params": "forward"
         }
       ],
-      "inputs": ["production", "^production"]
+      "inputs": ["production", "^production"],
+      "cache": true
     },
     "version": {
       "dependsOn": [
@@ -93,27 +90,64 @@
       "options": {
         "preset": "conventional",
         "trackDeps": true
-      }
+      },
+      "cache": true
     },
     "npm": {
       "options": {
         "access": "public"
-      }
+      },
+      "cache": true
     },
     "e2e": {
-      "inputs": ["default", "^production"]
+      "inputs": ["default", "^production"],
+      "cache": true
     },
     "test": {
-      "inputs": ["default", "^production"]
+      "inputs": ["default", "^production"],
+      "cache": true
+    },
+    "readme": {
+      "cache": true
+    },
+    "@nx/eslint:lint": {
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json", "{workspaceRoot}/eslint.config.js"],
+      "options": {
+        "fix": true,
+        "lintFilePatterns": ["{projectRoot}/**/*.{js,jsx,ts,tsx}", "{projectRoot}/package.json"]
+      },
+      "dependsOn": [
+        {
+          "projects": ["utils-better-check-dependencies"],
+          "target": "build",
+          "params": "ignore"
+        }
+      ],
+      "cache": true
+    },
+    "@nx/jest:jest": {
+      "inputs": ["default", "^production"],
+      "cache": true,
+      "options": {
+        "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
+      }
+    },
+    "@nx/vite:test": {
+      "inputs": ["default", "^production"],
+      "cache": true
     }
   },
   "tasksRunnerOptions": {
     "default": {
       "runner": "@vercel/remote-nx",
       "options": {
-        "verbose": true,
-        "cacheDirectory": "/tmp/nx-cache",
-        "cacheableOperations": ["build", "test", "e2e", "npm", "readme", "version"]
+        "verbose": true
       }
     }
   },
@@ -121,5 +155,6 @@
     "@nx/js": {
       "analyzeSourceFiles": true
     }
-  }
+  },
+  "cacheDirectory": "/tmp/nx-cache"
 }

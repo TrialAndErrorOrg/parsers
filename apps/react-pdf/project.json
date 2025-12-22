@@ -44,16 +44,12 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/react-pdf"],
       "options": {
-        "jestConfig": "apps/react-pdf/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "apps/react-pdf/jest.config.js"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["apps/react-pdf/**/*.{ts,tsx,js,jsx}"]
-      }
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
     }
   },
   "tags": []

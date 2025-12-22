@@ -12,15 +12,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/jast/jast-util-to-texast"],
       "options": {
-        "jestConfig": "libs/jast/jast-util-to-texast/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/jast/jast-util-to-texast/jest.config.js"
       }
     },
     "make-publishable": {
@@ -36,8 +35,7 @@
         "packageJson": "libs/jast/jast-util-to-texast/package.json",
         "main": "libs/jast/jast-util-to-texast/src/index.ts",
         "assets": ["libs/jast/jast-util-to-texast/*.md"],
-        "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "clean": true
       },
       "dependsOn": [
         {

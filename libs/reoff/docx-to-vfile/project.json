@@ -12,7 +12,7 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
@@ -33,8 +33,7 @@
         "outputPath": "dist/libs/reoff/docx-to-vfile",
         "tsConfig": "libs/reoff/docx-to-vfile/tsconfig.lib.json",
         "main": "libs/reoff/docx-to-vfile/src/index.ts",
-        "assets": ["libs/reoff/docx-to-vfile/*.md"],
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "assets": ["libs/reoff/docx-to-vfile/*.md"]
       },
       "dependsOn": [
         {

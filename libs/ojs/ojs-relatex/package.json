@@ -34,7 +34,6 @@
     "/lib"
   ],
   "dependencies": {
-  
     "@types/unist": "^2.0.6"
   }
 }

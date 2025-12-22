@@ -12,8 +12,7 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "executor": "@nx/eslint:lint",
       "options": {
         "hasTypeAwareRules": true
       }
@@ -22,8 +21,7 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/xast/xast-util-is-element"],
       "options": {
-        "jestConfig": "libs/xast/xast-util-is-element/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/xast/xast-util-is-element/jest.config.js"
       }
     },
     "make-publishable": {
@@ -42,7 +40,6 @@
         "packageJson": "libs/xast/xast-util-is-element/package.json",
         "main": "libs/xast/xast-util-is-element/src/index.ts",
         "assets": ["libs/xast/xast-util-is-element/*.md"],
-        "buildableProjectDepsInPackageJsonType": "dependencies",
         "clean": true
       },
       "dependsOn": [

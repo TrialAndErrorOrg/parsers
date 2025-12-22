@@ -12,15 +12,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/utils/ojs-to-preamble"],
       "options": {
-        "jestConfig": "libs/utils/ojs-to-preamble/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/utils/ojs-to-preamble/jest.config.js"
       }
     }
   },

@@ -27,15 +27,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/notion/rehype-notion/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/notion/rehype-notion/jest.config.js"
       }
     },
     "deploy": {

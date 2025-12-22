@@ -12,15 +12,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/texast/texast"],
       "options": {
-        "jestConfig": "libs/texast/texast/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/texast/texast/jest.config.js"
       }
     },
     "make-publishable": {
@@ -36,8 +35,7 @@
         "packageJson": "libs/texast/texast/package.json",
         "main": "libs/texast/texast/src/index.ts",
         "assets": ["libs/texast/texast/*.md"],
-        "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "clean": true
       },
       "dependsOn": [
         {

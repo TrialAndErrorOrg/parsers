@@ -12,15 +12,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ojs/ojs-client"],
       "options": {
-        "jestConfig": "libs/ojs/ojs-client/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/ojs/ojs-client/jest.config.js"
       }
     },
     "build": {
@@ -33,8 +32,7 @@
         "packageJson": "libs/ojs/ojs-client/package.json",
         "main": "libs/ojs/ojs-client/src/index.ts",
         "assets": ["libs/ojs/ojs-client/*.md"],
-        "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "clean": true
       },
       "dependsOn": [
         {

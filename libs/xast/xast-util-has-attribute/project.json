@@ -24,8 +24,7 @@
         "packageJson": "libs/xast/xast-util-has-attribute/package.json",
         "main": "libs/xast/xast-util-has-attribute/src/index.ts",
         "assets": ["libs/xast/xast-util-has-attribute/*.md"],
-        "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "clean": true
       },
       "dependsOn": [
         {
@@ -39,15 +38,14 @@
       ]
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/xast/xast-util-has-attribute"],
       "options": {
-        "jestConfig": "libs/xast/xast-util-has-attribute/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/xast/xast-util-has-attribute/jest.config.js"
       }
     },
     "deploy": {

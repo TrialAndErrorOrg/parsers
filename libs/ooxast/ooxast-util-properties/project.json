@@ -30,12 +30,11 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ooxast/ooxast-util-properties"],
       "options": {
-        "jestConfig": "libs/ooxast/ooxast-util-properties/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/ooxast/ooxast-util-properties/jest.config.js"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "deploy": {

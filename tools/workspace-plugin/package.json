@@ -9,7 +9,7 @@
     "@nx/workspace": "16.9.1",
     "@nx/jest": "16.9.1",
     "@nx/vite": "16.9.1",
-    "@nx/linter": "16.9.1"
+    "@nx/eslint": "16.9.1"
   },
   "type": "module",
   "main": "./src/index.js",

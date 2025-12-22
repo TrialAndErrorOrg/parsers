@@ -12,15 +12,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/texast/texast-util-add-preamble"],
       "options": {
-        "jestConfig": "libs/texast/texast-util-add-preamble/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/texast/texast-util-add-preamble/jest.config.js"
       }
     },
     "make-publishable": {
@@ -36,8 +35,7 @@
         "packageJson": "libs/texast/texast-util-add-preamble/package.json",
         "main": "libs/texast/texast-util-add-preamble/src/index.ts",
         "assets": ["libs/texast/texast-util-add-preamble/*.md"],
-        "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "clean": true
       },
       "dependsOn": [
         {

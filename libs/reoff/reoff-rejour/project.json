@@ -12,15 +12,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/reoff/reoff-rejour"],
       "options": {
-        "jestConfig": "libs/reoff/reoff-rejour/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/reoff/reoff-rejour/jest.config.js"
       }
     },
     "make-publishable": {
@@ -36,8 +35,7 @@
         "packageJson": "libs/reoff/reoff-rejour/package.json",
         "main": "libs/reoff/reoff-rejour/src/index.ts",
         "assets": ["libs/reoff/reoff-rejour/*.md"],
-        "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "clean": true
       },
       "dependsOn": [
         {

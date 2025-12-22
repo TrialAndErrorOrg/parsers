@@ -12,15 +12,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/citations/crossref-to-csl"],
       "options": {
-        "jestConfig": "libs/citations/crossref-to-csl/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/citations/crossref-to-csl/jest.config.js"
       }
     },
     "make-publishable": {
@@ -36,8 +35,7 @@
         "packageJson": "libs/citations/crossref-to-csl/package.json",
         "main": "libs/citations/crossref-to-csl/src/index.ts",
         "assets": ["libs/citations/crossref-to-csl/*.md"],
-        "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "clean": true
       },
       "dependsOn": [
         {

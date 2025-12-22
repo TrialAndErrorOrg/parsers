@@ -17,8 +17,7 @@
         "packageJson": "libs/ooxast/ooxast-util-markup-to-style/package.json",
         "main": "libs/ooxast/ooxast-util-markup-to-style/src/index.ts",
         "assets": ["libs/ooxast/ooxast-util-markup-to-style/*.md"],
-        "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "clean": true
       },
       "dependsOn": [
         {
@@ -79,7 +78,7 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {

@@ -18,7 +18,6 @@
         "main": "libs/ooxast/ooxast-util-to-unified-latex/src/index.ts",
         "assets": ["libs/ooxast/ooxast-util-to-unified-latex/*.md"],
         "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies",
         "shallowDependencies": true
       },
       "dependsOn": [
@@ -33,7 +32,7 @@
       ]
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "deploy": {

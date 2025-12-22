@@ -12,15 +12,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/rejour/rejour-stringify"],
       "options": {
-        "jestConfig": "libs/rejour/rejour-stringify/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/rejour/rejour-stringify/jest.config.js"
       }
     },
     "make-publishable": {
@@ -36,8 +35,7 @@
         "packageJson": "libs/rejour/rejour-stringify/package.json",
         "main": "libs/rejour/rejour-stringify/src/index.ts",
         "assets": ["libs/rejour/rejour-stringify/*.md"],
-        "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "clean": true
       },
       "dependsOn": [
         {

@@ -5,15 +5,14 @@
   "projectType": "library",
   "targets": {
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/processors/docx-to-jats"],
       "options": {
-        "jestConfig": "libs/processors/docx-to-jats/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/processors/docx-to-jats/jest.config.js"
       }
     }
   },

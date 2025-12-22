@@ -17,8 +17,7 @@
         "packageJson": "libs/book-converter/package.json",
         "main": "libs/book-converter/src/index.ts",
         "assets": ["libs/book-converter/*.md"],
-        "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "clean": true
       },
       "dependsOn": [
         {
@@ -46,12 +45,10 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "executor": "@nx/eslint:lint",
       "options": {
         "fix": true,
-        "hasTypeAwareRules": true,
-        "lintFilePatterns": ["libs/book-converter/**/*.ts", "libs/book-converter/package.json"]
+        "hasTypeAwareRules": true
       }
     },
     "deploy": {

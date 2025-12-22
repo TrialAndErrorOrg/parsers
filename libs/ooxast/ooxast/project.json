@@ -12,15 +12,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/ooxast/ooxast"],
       "options": {
-        "jestConfig": "libs/ooxast/ooxast/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/ooxast/ooxast/jest.config.js"
       }
     },
     "make-publishable": {
@@ -36,8 +35,7 @@
         "packageJson": "libs/ooxast/ooxast/package.json",
         "main": "libs/ooxast/ooxast/src/index.ts",
         "assets": ["libs/ooxast/ooxast/*.md"],
-        "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "clean": true
       },
       "dependsOn": [
         {

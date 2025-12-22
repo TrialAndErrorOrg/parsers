@@ -42,23 +42,14 @@
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": [
-          "libs/utils/readme/**/*.ts",
-          "libs/utils/readme/generators.json",
-          "libs/utils/readme/executors.json",
-          "libs/utils/readme/package.json"
-        ]
-      }
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/utils/readme/jest.config.ts",
-        "passWithNoTests": true
+        "jestConfig": "libs/utils/readme/jest.config.ts"
       }
     }
   },

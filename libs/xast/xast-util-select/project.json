@@ -27,8 +27,7 @@
         "packageJson": "libs/xast/xast-util-select/package.json",
         "main": "libs/xast/xast-util-select/src/index.ts",
         "assets": ["libs/xast/xast-util-select/*.md"],
-        "clean": true,
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "clean": true
       },
       "dependsOn": [
         {
@@ -42,15 +41,14 @@
       ]
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
+      "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/xast/xast-util-select"],
       "options": {
-        "jestConfig": "libs/xast/xast-util-select/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "libs/xast/xast-util-select/jest.config.js"
       }
     },
     "deploy": {

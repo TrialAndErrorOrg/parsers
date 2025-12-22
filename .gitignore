@@ -361,3 +361,6 @@ docs
 
 # Next.js
 .next
+
+.nx/cache
+.nx/workspace-data

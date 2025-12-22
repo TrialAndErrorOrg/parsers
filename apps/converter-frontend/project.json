@@ -46,16 +46,12 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/apps/converter-frontend"],
       "options": {
-        "jestConfig": "apps/converter-frontend/jest.config.js",
-        "passWithNoTests": true
+        "jestConfig": "apps/converter-frontend/jest.config.js"
       }
     },
     "lint": {
-      "executor": "@nx/linter:eslint",
-      "outputs": ["{options.outputFile}"],
-      "options": {
-        "lintFilePatterns": ["apps/converter-frontend/**/*.{ts,tsx,js,jsx}"]
-      }
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
     }
   },
   "tags": []

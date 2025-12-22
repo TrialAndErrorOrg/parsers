@@ -5,17 +5,12 @@
   "projectType": "application",
   "targets": {
     "build": {
-      "command": "next build apps/converter-frontend",
-      "outputs": ["{options.outputPath}"],
-      "defaultConfiguration": "production",
+      "executor": "nx:run-commands",
+      "outputs": ["{workspaceRoot}/apps/converter-frontend/.next"],
       "options": {
-        "root": "apps/converter-frontend",
-        "outputPath": "dist/apps/converter-frontend"
-      },
-      "dependsOn": ["^build"],
-      "configurations": {
-        "production": {},
-        "development": {}
+        "commands": [
+          "next build apps/converter-frontend && mv apps/converter-frontend/.next/static apps/converter-frontend/.next/standalone/.next && cp -r apps/converter-frontend/public apps/converter-frontend/.next/standalone"
+        ]
       }
     },
     "serve": {

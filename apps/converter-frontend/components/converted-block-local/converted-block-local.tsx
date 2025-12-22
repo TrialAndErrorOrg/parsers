@@ -34,7 +34,7 @@ async function downloadAll(images: { [key: string]: Blob } | undefined, text: st
     const addedStuff = await Promise.all(
       Object.entries(images).map(([url, img]) => {
         const rawExtension = url.split('.').pop() ?? 'jpg'
-        const fileName = `media/` + url.split('/').pop() ?? 'image.jpg'
+        const fileName = `media/` + (url.split('/').pop() ?? 'image.jpg')
         const extension = extensionMap[rawExtension] ?? rawExtension
 
         const file = new Blob([img], {

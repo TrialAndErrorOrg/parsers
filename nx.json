@@ -137,5 +137,6 @@
   },
   "cacheDirectory": "/tmp/nx-cache",
   "useInferencePlugins": false,
-  "defaultBase": "main"
+  "defaultBase": "main",
+  "useLegacyCache": true
 }

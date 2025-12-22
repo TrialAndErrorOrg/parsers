@@ -1,11 +1,11 @@
-import axios, { AxiosResponse } from 'axios'
-import { Data as CSL } from 'csl-json'
+import axios, { type AxiosResponse } from 'axios'
+import type { Data as CSL } from 'csl-json'
 import RateLimit from '@hokify/axios-rate-limit'
 import flatTry from 'flatry'
 import similarity from 'similarity'
 import { crossrefToCsl } from 'crossref-to-csl'
-import { CrossrefJSON, CrossrefResponse } from 'crossref-json'
-import { PickByValue } from 'utility-types/dist/mapped-types'
+import type { CrossrefJSON, CrossrefResponse } from 'crossref-json'
+import type { PickByValue } from 'utility-types/dist/mapped-types'
 /**
  * Try to resolve a list of CSL data with crossref metadata
  */

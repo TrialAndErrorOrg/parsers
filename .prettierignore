@@ -12,3 +12,4 @@ dist
 README.md
 
 /.nx/cache
+/.nx/workspace-data

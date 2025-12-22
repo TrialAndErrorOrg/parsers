@@ -11,10 +11,6 @@
         "packageJSON": "libs/citations/csl-consolidate/package.json"
       }
     },
-    // "lint": {
-    //   "executor": "@nrwl/linter:eslint",
-    //   "outputs": ["{options.outputFile}"]
-    // },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/citations/csl-consolidate"],
@@ -27,7 +23,7 @@
       "executor": "better-nx-tsc:publishable"
     },
     "build": {
-      "executor": "@nrwl/js:tsc",
+      "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "rootDir": "libs/citations/csl-consolidate/src",
@@ -36,10 +32,7 @@
         "packageJson": "libs/citations/csl-consolidate/package.json",
         "main": "libs/citations/csl-consolidate/src/index.ts",
         "assets": ["libs/citations/csl-consolidate/*.md"],
-
-        "clean": true,
-
-        "buildableProjectDepsInPackageJsonType": "dependencies"
+        "clean": true
       },
       "dependsOn": [
         {

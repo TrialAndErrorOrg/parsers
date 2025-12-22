@@ -6,10 +6,10 @@
   "executors": "./executors.json",
   "type": "module",
   "dependencies": {
-    "@nx/devkit": "16.9.1",
-    "@nx/js": "16.9.1",
-    "nx": "16.9.1",
-    "@nx/workspace": "16.9.1",
+    "@nx/devkit": "20.8.3",
+    "@nx/js": "20.8.3",
+    "nx": "20.8.3",
+    "@nx/workspace": "20.8.3",
     "typescript": "5.2.2",
     "minimatch": "3.1.2",
     "fs-extra": "^11.1.1"

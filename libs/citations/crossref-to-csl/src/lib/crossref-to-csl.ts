@@ -1,6 +1,6 @@
-import { CrossrefJSON } from 'crossref-json'
-import { Data as CSL } from 'csl-json'
-import { PickByValue } from 'utility-types'
+import type { CrossrefJSON } from 'crossref-json'
+import type { Data as CSL } from 'csl-json'
+import type { PickByValue } from 'utility-types'
 
 type CRArraylike = keyof PickByValue<CrossrefJSON, any[]>
 type CRSinglets = Exclude<keyof CrossrefJSON, CRArraylike>

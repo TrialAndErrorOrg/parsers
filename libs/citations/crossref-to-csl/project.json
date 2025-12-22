@@ -41,9 +41,11 @@
         {
           "target": "build",
           "params": "forward",
+          "projects": "dependencies",
           "dependencies": true
         },
         {
+          "projects": "self",
           "target": "lint"
         }
       ]

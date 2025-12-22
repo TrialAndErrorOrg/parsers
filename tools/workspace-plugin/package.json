@@ -2,17 +2,23 @@
   "name": "@trialanderror/workspace-plugin",
   "version": "0.0.1",
   "dependencies": {
-    "tslib": "^2.3.0",
-    "@nx/devkit": "16.9.1",
-    "@nx/js": "16.9.1",
     "@jscutlery/semver": "^3.1.0",
-    "@nx/workspace": "16.9.1",
-    "@nx/jest": "16.9.1",
-    "@nx/vite": "16.9.1",
-    "@nx/eslint": "16.9.1"
+    "@nx/devkit": "20.8.3",
+    "@nx/eslint": "20.8.3",
+    "@nx/jest": "20.8.3",
+    "@nx/js": "20.8.3",
+    "@nx/vite": "20.8.3",
+    "@nx/workspace": "20.8.3",
+    "tslib": "^2.3.0"
   },
   "type": "module",
   "main": "./src/index.js",
   "typings": "./src/index.d.ts",
-  "generators": "./generators.json"
+  "generators": "./generators.json",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "nx"
+    ]
+  }
 }

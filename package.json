@@ -280,7 +280,6 @@
     "vite-tsconfig-paths": "4.2.1",
     "vitest": "~0.32.0"
   },
-  "packageManager": "yarn@1.22.1",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "description": "",

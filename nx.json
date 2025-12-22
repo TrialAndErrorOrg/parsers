@@ -4,9 +4,6 @@
     "appsDir": "apps",
     "libsDir": "libs"
   },
-  "affected": {
-    "defaultBase": "main"
-  },
   "generators": {
     "@nx/node:library": {},
     "@nx/react": {
@@ -156,5 +153,7 @@
       "analyzeSourceFiles": true
     }
   },
-  "cacheDirectory": "/tmp/nx-cache"
+  "cacheDirectory": "/tmp/nx-cache",
+  "useInferencePlugins": false,
+  "defaultBase": "main"
 }

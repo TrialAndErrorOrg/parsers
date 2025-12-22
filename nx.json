@@ -48,21 +48,10 @@
       "options": {
         "fix": true,
         "lintFilePatterns": ["{projectRoot}/**/*.{js,jsx,ts,tsx}", "{projectRoot}/package.json"]
-      },
-      "dependsOn": [
-        {
-          "projects": ["utils-better-check-dependencies"],
-          "target": "build",
-          "params": "ignore"
-        }
-      ]
+      }
     },
     "build": {
       "dependsOn": [
-        {
-          "target": "lint",
-          "params": "forward"
-        },
         {
           "dependencies": true,
           "target": "build",
@@ -113,13 +102,6 @@
         "fix": true,
         "lintFilePatterns": ["{projectRoot}/**/*.{js,jsx,ts,tsx}", "{projectRoot}/package.json"]
       },
-      "dependsOn": [
-        {
-          "projects": ["utils-better-check-dependencies"],
-          "target": "build",
-          "params": "ignore"
-        }
-      ],
       "cache": true
     },
     "@nx/jest:jest": {

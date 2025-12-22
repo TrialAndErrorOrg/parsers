@@ -1,21 +1,33 @@
 // @ts-check
 
-import base from '../../../eslint.config.js'
+import base from "../../../eslint.config.js";
+
 /**
  * @type {import('eslint').Linter.FlatConfig[]}
  */
 export default [
-  ...base,
-  {
-    files: ['*.ts', '*.tsx', '*.js', '*.jsx'],
-    rules: {},
-  },
-  {
-    files: ['*.ts', '*.tsx'],
-    rules: {},
-  },
-  {
-    files: ['*.js', '*.jsx'],
-    rules: {},
-  },
-]
+	...base,
+	{
+		files: [
+			"libs/citations/csl-consolidate/**/*.ts",
+			"libs/citations/csl-consolidate/**/*.tsx",
+			"libs/citations/csl-consolidate/**/*.js",
+			"libs/citations/csl-consolidate/**/*.jsx",
+		],
+		rules: {},
+	},
+	{
+		files: [
+			"libs/citations/csl-consolidate/**/*.ts",
+			"libs/citations/csl-consolidate/**/*.tsx",
+		],
+		rules: {},
+	},
+	{
+		files: [
+			"libs/citations/csl-consolidate/**/*.js",
+			"libs/citations/csl-consolidate/**/*.jsx",
+		],
+		rules: {},
+	},
+];

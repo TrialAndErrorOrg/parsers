@@ -16,6 +16,7 @@
         "skipTypeCheck": true,
         "minify": false,
         "tsConfig": "libs/utils/better-check-dependencies/tsconfig.lib.json",
+        "external": ["@swc/wasm", "esbuild", "@nx/*", "rxjs", "@angular-devkit/*", "@swc/*"],
         "assets": [
           {
             "glob": "libs/utils/better-check-dependencies/README.md",

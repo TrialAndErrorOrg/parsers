@@ -1,0 +1,28 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["node"],
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "incremental": true,
+    "module": "ESNext",
+    "target": "ESNext",
+    "plugins": [{ "name": "next" }],
+    "baseUrl": "../.."
+  },
+  "include": [
+    "./**/*.ts",
+    "./**/*.tsx",
+    "next-env.d.ts",
+    "next.config.mjs",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
+}

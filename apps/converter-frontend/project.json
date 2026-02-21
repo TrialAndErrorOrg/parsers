@@ -9,7 +9,7 @@
       "outputs": ["{workspaceRoot}/apps/converter-frontend/.next"],
       "options": {
         "commands": [
-          "next build apps/converter-frontend && mv apps/converter-frontend/.next/static apps/converter-frontend/.next/standalone/apps/converter-frontend/.next && cp -r apps/converter-frontend/public apps/converter-frontend/.next/standalone/apps/converter-frontend/.next"
+          "next build apps/converter-frontend && mv apps/converter-frontend/.next/static apps/converter-frontend/.next/standalone/.next && cp -r apps/converter-frontend/public apps/converter-frontend/.next/standalone"
         ]
       }
     },

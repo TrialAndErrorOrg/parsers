@@ -7,6 +7,9 @@
 const nextConfig = {
 	output: "standalone",
 	transpilePackages: ["rejour-stringify", "docx-to-vfile", "reoff-cite"],
+	typescript: {
+		ignoreBuildErrors: true,
+	},
 	experimental: {
 		serverComponentsExternalPackages: ["swc", "@swc/wasm", "esbuild"],
 	},

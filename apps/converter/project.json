@@ -9,7 +9,7 @@
       "outputs": ["{workspaceRoot}/apps/converter/.next"],
       "options": {
         "commands": [
-          "next build apps/converter"
+          "next build apps/converter && mv apps/converter/.next/static apps/converter/.next/standalone/apps/converter/.next && cp -r apps/converter/public apps/converter/.next/standalone/apps/converter"
         ]
       }
     },

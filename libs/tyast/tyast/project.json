@@ -1,0 +1,67 @@
+{
+  "name": "tyast",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/tyast/tyast/src",
+  "projectType": "library",
+  "targets": {
+    "readme": {
+      "executor": "utils-readme:update-readme",
+      "options": {
+        "readme": "libs/tyast/tyast/README.md",
+        "packageJSON": "libs/tyast/tyast/package.json"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": [
+        "{options.outputFile}"
+      ]
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/tyast/tyast"
+      ],
+      "options": {
+        "passWithNoTests": true
+      }
+    },
+    "make-publishable": {
+      "executor": "better-nx-tsc:publishable"
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "rootDir": "libs/tyast/tyast/src",
+        "outputPath": "dist/libs/tyast/tyast",
+        "tsConfig": "libs/tyast/tyast/tsconfig.lib.json",
+        "packageJson": "libs/tyast/tyast/package.json",
+        "main": "libs/tyast/tyast/src/index.ts",
+        "assets": [
+          "libs/tyast/tyast/*.md"
+        ],
+        "clean": true
+      },
+      "dependsOn": [
+        {
+          "target": "build",
+          "params": "forward",
+          "dependencies": true
+        },
+        {
+          "target": "lint"
+        }
+      ]
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    }
+  },
+  "tags": []
+}

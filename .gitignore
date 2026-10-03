@@ -367,3 +367,7 @@ docs
 
 vite.config.*.timestamp*
 vitest.config.*.timestamp*
+
+# Agent instruction files that tools write (turbo, next dev)
+AGENTS.md
+CLAUDE.md

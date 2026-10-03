@@ -1,7 +1,6 @@
 import { Text, Root, Node, P, R } from 'ooxast'
 import { convertElement, isElement } from 'xast-util-is-element'
 import { select } from 'xast-util-select'
-import { select as unistSelect } from 'unist-util-select'
 import { getRStyle } from 'ooxast-util-get-style'
 import { visit as unistVisit } from 'unist-util-visit'
 import { remove as unistRemove } from 'unist-util-remove'
@@ -110,22 +109,26 @@ function maybeRemoveRunProperties(r: R, options: string[] | undefined): R {
 }
 
 /**
- * Merge two runs into an old one by concatenating the text properties.
- * If they don't have text, don't merge them.
+ * Merge a run into the previous one: the text of the first `w:t` of `curr` is appended to the
+ * last `w:t` of `prev`, everything else (more text, breaks, tabs) is appended after it, so
+ * that nothing is lost and the order is kept.
  */
 function merge(prev: R, curr: R): R {
-  const lastText = unistSelect('text', prev) as Text
-  const text = unistSelect('text', curr) as Text
+  const extra = curr.children.filter((c) => !(isElement(c) && c.name === 'w:rPr'))
+  const last = prev.children[prev.children.length - 1]
+  const first = extra[0]
 
-  if (!lastText) {
-    return curr
+  if (isElement(last) && last.name === 'w:t' && isElement(first) && first.name === 'w:t') {
+    const lastText = last.children[0] as Text | undefined
+    const text = first.children[0] as Text | undefined
+    if (lastText?.type === 'text' && text?.type === 'text') {
+      lastText.value += text.value
+      last.attributes = { ...last.attributes, 'xml:space': 'preserve' } as typeof last.attributes
+      extra.shift()
+    }
   }
 
-  if (!text) {
-    return prev
-  }
-
-  lastText.value += text.value
+  prev.children.push(...(extra as R['children']))
   return prev
 }
 

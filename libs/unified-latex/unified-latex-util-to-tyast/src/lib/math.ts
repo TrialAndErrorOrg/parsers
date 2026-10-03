@@ -64,7 +64,7 @@ const TEXT_ARG = /\\\\|\\text\s*\{/g
 /** `\\[2pt]`, `\\*[1ex]`: the optional vertical space after a line break */
 const BREAK_SPACE = /(\\\\)\*?\s*\[\s*-?[\d.]+\s*(?:pt|em|ex|mm|cm|in|bp|mu|sp|pc|dd|cc)\s*\]/g
 /** Stands in for `"` inside `\text{…}`, which tex2typst would emit unescaped inside a string */
-const QUOTE = ''
+const QUOTE = '\uE000'
 
 /** Apply `fn` to the contents of every `\text{…}` argument (balanced braces). */
 function mapTextArgs(s: string, fn: (body: string) => string): string {
@@ -105,9 +105,7 @@ export function normalizeMath(tex: string): string {
     )
     .replace(BREAK_SPACE, '$1')
   // TeX quote ligatures in text become curly quotes; `"` is protected from tex2typst
-  s = mapTextArgs(s, (body) =>
-    body.replace(/``/g, '“').replace(/''/g, '”').replace(/"/g, QUOTE),
-  )
+  s = mapTextArgs(s, (body) => body.replace(/``/g, '“').replace(/''/g, '”').replace(/"/g, QUOTE))
   // alignment points or line breaks at the top level need an aligned environment
   if (/(?:^|[^\\])&|\\\\/.test(s) && !/\\begin\{/.test(s)) s = `\\begin{aligned}${s}\\end{aligned}`
   return s
@@ -136,7 +134,7 @@ export function texToTypstMath(tex: string): MathResult {
   if (!source) return { ok: true, value: '', unknown }
   try {
     // `\"` is a literal quote both inside a Typst string and in bare math
-    const value = tex2typst(source, { nonStrict: true }).replaceAll(QUOTE, '\\"')
+    const value = tex2typst(source, { nonStrict: true }).split(QUOTE).join('\\"')
     return { ok: true, value, unknown }
   } catch (e) {
     return { ok: false, error: e instanceof Error ? e.message : String(e) }

@@ -57,6 +57,11 @@ describe('texToTypst', () => {
     expect(String(file.value)).toMatch(/^#import "@local\/jote-article:0.1.0": \*/)
   })
 
+  it('passes serializer options to tyast-stringify', async () => {
+    const file = await texToTypst(article, { stringify: { indent: '\t' } })
+    expect(String(file.value)).toContain('\n\tarticle-type: "Empirical",')
+  })
+
   const template = resolve(__dirname, '../../../../../templates/typst/jote-article')
   const hasTypst = spawnSync('typst', ['--version']).status === 0
   it.skipIf(!hasTypst || !existsSync(join(template, 'lib.typ')))('compiles with typst', async () => {
@@ -106,6 +111,31 @@ As \textcite[p.~5]{doe2020} showed \parencites[see][p.~2]{doe2020}{roe2021}, thi
         expect(text).toContain('(Roe, 2021)')
         expect(text).toContain('References')
         expect(text).toContain('Take-home message')
+      } finally {
+        rmSync(dir, { recursive: true, force: true })
+      }
+    },
+    60000,
+  )
+
+  it.skipIf(!hasTypst || !hasPdftotext || !existsSync(join(template, 'lib.typ')))(
+    'prints citations as text and still compiles without \\addbibresource',
+    async () => {
+      const dir = mkdtempSync(join(tmpdir(), 'tex-to-typst-'))
+      try {
+        const file = await texToTypst(cited.replace('\\addbibresource{bibliography.bib}\n', ''))
+        expect(file.messages.map((m) => m.reason)).toEqual([
+          'The document cites but has no \\addbibresource: citations are printed as plain-text keys',
+        ])
+        const out = String(file.value)
+        expect(out).not.toContain('#cite')
+        writeFileSync(join(dir, 'main.typ'), out)
+        symlinkSync(template, join(dir, 'jote-article'), 'dir')
+        const result = spawnSync('typst', ['compile', 'main.typ', 'main.pdf'], { cwd: dir, encoding: 'utf8' })
+        expect(result.stderr).toBe('')
+        expect(result.status).toBe(0)
+        const text = spawnSync('pdftotext', ['main.pdf', '-'], { cwd: dir, encoding: 'utf8' }).stdout.replace(/\s+/g, ' ')
+        expect(text).toContain('As doe2020 (p. 5) showed (see doe2020, p. 2; roe2021), things (roe2021).')
       } finally {
         rmSync(dir, { recursive: true, force: true })
       }

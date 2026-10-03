@@ -2,22 +2,9 @@ import type * as Ast from '@unified-latex/unified-latex-types'
 import { attachMacroArgs } from '@unified-latex/unified-latex-util-arguments'
 import type { Argument, Content, FunctionCall, Import, Root, ShowRule, Value } from 'tyast'
 import { VFile } from 'vfile'
-import {
-  arg,
-  arr,
-  asBlock,
-  call,
-  code,
-  content,
-  dict,
-  label,
-  named,
-  raw,
-  str,
-  text,
-} from './build.js'
+import { arg, arr, call, code, content, dict, label, named, str, text } from './build.js'
 import { environmentHandlers } from './handlers/environments.js'
-import { labelValue, macroHandlers } from './handlers/macros.js'
+import { labelValue, macroHandlers, type CiteData } from './handlers/macros.js'
 import { State } from './state.js'
 import { macroSignatures } from './signatures.js'
 import { groupMultiCites } from './multicite.js'
@@ -83,20 +70,14 @@ export function toTyast(tree: Ast.Root, file?: VFile | Options, options?: Option
       items: '*',
     }
     children.push(imp)
-    // Typst refuses to compile a `cite` without a bibliography: print the keys instead, as
-    // LaTeX does for undefined citations (showRule warns about this). It comes before the
-    // template's show rule so that it also covers citations in the abstract.
-    if (state.meta.hasCitations && state.meta.bibResources.length === 0)
-      children.push(
-        asBlock(
-          raw('#show cite: it => [*#str(it.key)*#if it.supplement != none [, #it.supplement]]'),
-        ),
-      )
     children.push(showRule(state))
   }
   children.push(...blocks)
 
   const root: Root = { type: 'root', children }
+  // without a bibliography, citations can't be `#cite` calls (showRule warns about this)
+  if (document && state.meta.hasCitations && state.meta.bibResources.length === 0)
+    citationsAsText(root)
   finalize(root, state)
   state.reportUnknown()
   return root
@@ -226,7 +207,7 @@ function showRule(state: State): ShowRule {
     ])
   } else if (meta.hasCitations) {
     state.warn(
-      'The document cites but has no \\addbibresource: citations are printed as their keys',
+      'The document cites but has no \\addbibresource: citations are printed as plain-text keys',
     )
   }
 
@@ -308,6 +289,82 @@ function mapContent(node: AnyNode, fn: (node: Content, parent: AnyNode) => Conte
   if (node.type === 'call' && node.body) node.body = node.body.map(mapList)
   if (node.type === 'ref' && node.supplement) node.supplement = mapList(node.supplement)
   for (const child of children(node)) mapContent(child, fn)
+}
+
+/** Replace every content list of the tree (children, call bodies, …) with `fn(list)`. */
+function mapContentLists(node: AnyNode, fn: (list: Content[]) => Content[]) {
+  const n = node as unknown as Record<string, unknown>
+  if (Array.isArray(n.children)) n.children = fn(n.children as Content[])
+  if (Array.isArray(n.term)) n.term = fn(n.term as Content[])
+  if (node.type === 'call' && node.body) node.body = node.body.map(fn)
+  if (node.type === 'ref' && node.supplement) node.supplement = fn(node.supplement)
+  for (const child of children(node)) mapContentLists(child, fn)
+}
+
+const citeData = (node: Content | undefined): CiteData | undefined =>
+  node?.type === 'call' && node.name === 'cite'
+    ? (node as { data?: { cite?: CiteData } }).data?.cite
+    : undefined
+
+/**
+ * Typst refuses to compile a `#cite` without a bibliography, so a document that cites but has
+ * no `\addbibresource` gets its citations as plain text instead: `(key1; key2, p. 5)` for a
+ * parenthetical citation (adjacent ones grouped, as Typst would), the bare key otherwise.
+ */
+function citationsAsText(root: Root) {
+  mapContentLists(root, (list) => {
+    if (!list.some((node) => citeData(node))) return list
+    const out: Content[] = []
+    for (let i = 0; i < list.length; i++) {
+      const cite = citeData(list[i])
+      if (!cite) {
+        out.push(list[i])
+        continue
+      }
+      if (cite.form === 'none') continue
+      // `Author, Year` (a parenthetical citation with a prenote) is just the key
+      const year = citeData(list[i + 2])
+      const sep = list[i + 1]
+      if (
+        cite.form === 'author' &&
+        year?.form === 'year' &&
+        year.key === cite.key &&
+        sep?.type === 'text' &&
+        sep.value === ', '
+      ) {
+        out.push(text(cite.key))
+        i += 2
+        continue
+      }
+      if (cite.form !== 'normal') {
+        out.push(text(cite.key))
+        if (cite.supplement) out.push(text(' ('), ...cite.supplement, text(')'))
+        continue
+      }
+      const group = [cite]
+      for (
+        let next = citeData(list[i + 1]);
+        next?.form === 'normal';
+        next = citeData(list[i + 1])
+      ) {
+        group.push(next)
+        i++
+      }
+      out.push(text('('))
+      group.forEach((c, k) => {
+        out.push(text(k > 0 ? `; ${c.key}` : c.key))
+        if (c.supplement) out.push(text(', '), ...c.supplement)
+      })
+      out.push(text(')'))
+    }
+    // merge the text runs this produced
+    return out.reduce<Content[]>((acc, node) => {
+      const prev = acc[acc.length - 1]
+      if (prev?.type === 'text' && node.type === 'text') prev.value += node.value
+      else acc.push(node.type === 'text' ? { ...node } : node)
+      return acc
+    }, [])
+  })
 }
 
 function finalize(root: Root, state: State) {

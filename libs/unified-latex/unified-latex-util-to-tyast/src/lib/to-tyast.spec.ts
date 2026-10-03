@@ -168,6 +168,35 @@ describe('math', () => {
     )
   })
 
+  it('keeps \\left. and \\right. delimiters for tex2typst', () => {
+    const file = new VFile()
+    const out = typ(
+      '$f(x) = \\left\\{ \\begin{array}{ll} a & x>0 \\\\ b & \\text{otherwise} \\end{array} \\right.$',
+      file,
+    )
+    expect(out).toBe('$f(x) = lr(\\{mat(delim: #none, align: #left, a, x > 0; b, "otherwise"))$')
+    expect(file.messages).toHaveLength(0)
+  })
+
+  it('does not read a line break followed by letters as a command', () => {
+    const file = new VFile()
+    expect(typ('\\begin{align*} a &= 1\\\\b &= 2\\\\x &= 3 \\end{align*}', file)).toBe(
+      '$ a &= 1 \\ b &= 2 \\ x &= 3 $',
+    )
+    expect(file.messages).toHaveLength(0)
+  })
+
+  it('drops the vertical space of \\\\[len]', () => {
+    expect(typ('\\begin{align*} a &= 1 \\\\[2pt] b &= 2 \\\\*[1ex] c \\end{align*}')).toBe(
+      '$ a &= 1 \\ b &= 2 \\ c $',
+    )
+  })
+
+  it('escapes straight quotes inside \\text', () => {
+    expect(typ('$\\text{a "b" c}$')).toBe('$"a \\"b\\" c"$')
+    expect(typ("$\\text{say ``hi''}$")).toBe('$"say “hi”"$')
+  })
+
   it('never emits unknown identifiers', () => {
     const file = new VFile()
     const out = typ('$\\frobnicate x$', file)
@@ -233,6 +262,22 @@ describe('tables', () => {
         '  table.hline(y: 2, stroke: 0.8pt),',
         ')',
       ].join('\n'),
+    )
+  })
+
+  it('expands *{n}{spec} column repetition', () => {
+    const cols = (spec: string) => {
+      const file = new VFile()
+      const out = typ(`\\begin{tabular}{${spec}}a\\\\\\end{tabular}`, file)
+      expect(file.messages).toHaveLength(0)
+      return out.split('\n').slice(1, 3).join('\n')
+    }
+    expect(cols('*{3}{c}')).toBe('  columns: (auto, auto, auto),\n  align: (center, center, center),')
+    expect(cols('*{2}{lr}')).toBe(
+      '  columns: (auto, auto, auto, auto),\n  align: (left, right, left, right),',
+    )
+    expect(cols('l*{3}{c}r')).toBe(
+      '  columns: (auto, auto, auto, auto, auto),\n  align: (left, center, center, center, right),',
     )
   })
 
@@ -441,6 +486,28 @@ As \textcite{key} said.
     expect(out).toContain('bibliography: bibliography("refs.bib", style: "apa")')
     expect(out).toContain('= Intro\n\nAs #cite(<key>, form: "prose") said.')
     expect(out).not.toContain('maketitle')
+  })
+
+  it('prints citations as plain text when there is no bibliography', () => {
+    const file = new VFile()
+    const source = doc
+      .replace('\\addbibresource{refs.bib}\n', '')
+      .replace('\\printbibliography\n', '')
+      .replace('\\abstracttext{An abstract.}', '\\abstracttext{An abstract \\parencite{abs}.}')
+      .replace(
+        'As \\textcite{key} said.',
+        'As \\textcite{key:with/slash} said \\parencite[see][p.~5]{a,b}, \\parencite[p.~5]{c,d} \\footcite{e}\\nocite{f}.',
+      )
+    const out = toTypst(toTyast(parseLatex(source), file))
+    expect(out).not.toContain('#cite')
+    expect(out).not.toContain('bibliography:')
+    expect(out).toContain('abstract: [An abstract (abs).]')
+    expect(out).toContain(
+      'As key:with/slash said (see a; b, p.\u00A05), (c; d, p.\u00A05) #footnote[(e)].',
+    )
+    expect(file.messages.map((m) => m.reason)).toContain(
+      'The document cites but has no \\addbibresource: citations are printed as plain-text keys',
+    )
   })
 
   it('emits no abstract with noabstract', () => {

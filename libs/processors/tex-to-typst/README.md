@@ -3,8 +3,10 @@
 Convert a JOTE LaTeX article (a `main.tex` written against `jote-new-article.cls`, as in the
 archive) into Typst for the `jote-article` template in `templates/typst/jote-article`.
 
-Pipeline: `parseLatex` (unified-latex) → `toTyast` ([`unified-latex-util-to-tyast`](../../unified-latex/unified-latex-util-to-tyast))
-→ `toTypst` (`tyast-util-to-typst`).
+Pipeline: `parseLatex` ([`unified-latex-util-to-tyast`](../../unified-latex/unified-latex-util-to-tyast),
+unified-latex with the converter's macro signatures) → a unified processor running
+[`unified-latex-tyast`](../../unified-latex/unified-latex-tyast) and
+[`tyast-stringify`](../../tyast/tyast-stringify). Serializer options go in `stringify`.
 
 ## Library
 

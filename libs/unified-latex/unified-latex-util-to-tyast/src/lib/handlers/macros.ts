@@ -88,6 +88,13 @@ const ref =
 
 type CiteForm = 'normal' | 'prose' | 'author' | 'year' | 'none'
 
+/** What a `#cite` call was made from, kept in its `data.cite`. */
+export interface CiteData {
+  key: string
+  form: CiteForm
+  supplement?: Content[]
+}
+
 interface CiteItem {
   prenote: Ast.Node[] | null
   postnote: Ast.Node[] | null
@@ -109,12 +116,15 @@ function renderCites(
   opts: { foot?: boolean; parens?: boolean } = {},
 ): Content[] {
   state.meta.hasCitations = true
-  const cite = (key: string, f: CiteForm, supplement?: Content[]) =>
-    call('cite', [
+  const cite = (key: string, f: CiteForm, supplement?: Content[]): Content => ({
+    ...call('cite', [
       arg(labelValue(key)),
       f === 'normal' ? undefined : named('form', f === 'none' ? code('none') : str(f)),
       supplement ? named('supplement', content(supplement)) : undefined,
-    ])
+    ]),
+    // read by `citationsAsText` when the document has no bibliography
+    data: { cite: { key, form: f, supplement } satisfies CiteData },
+  })
   const out: Content[] = []
   if (form === 'normal' && items.some((item) => hasText(item.prenote))) {
     out.push(text('('))

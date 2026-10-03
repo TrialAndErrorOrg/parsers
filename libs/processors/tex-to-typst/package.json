@@ -5,7 +5,10 @@
   "type": "module",
   "dependencies": {
     "tyast": "0.0.1",
+    "tyast-stringify": "0.0.1",
     "tyast-util-to-typst": "0.0.1",
+    "unified": "^10.1.2",
+    "unified-latex-tyast": "0.0.1",
     "unified-latex-util-to-tyast": "0.0.1",
     "vfile": "^5.3.7"
   },

@@ -1,0 +1,59 @@
+{
+  "name": "tyast-util-to-typst",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/tyast/tyast-util-to-typst/src",
+  "projectType": "library",
+  "targets": {
+    "readme": {
+      "executor": "utils-readme:update-readme",
+      "options": {
+        "readme": "libs/tyast/tyast-util-to-typst/README.md",
+        "packageJSON": "libs/tyast/tyast-util-to-typst/package.json"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{workspaceRoot}/coverage/libs/tyast/tyast-util-to-typst"],
+      "options": {
+        "passWithNoTests": true
+      }
+    },
+    "make-publishable": {
+      "executor": "better-nx-tsc:publishable"
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "rootDir": "libs/tyast/tyast-util-to-typst/src",
+        "outputPath": "dist/libs/tyast/tyast-util-to-typst",
+        "tsConfig": "libs/tyast/tyast-util-to-typst/tsconfig.lib.json",
+        "packageJson": "libs/tyast/tyast-util-to-typst/package.json",
+        "main": "libs/tyast/tyast-util-to-typst/src/index.ts",
+        "assets": ["libs/tyast/tyast-util-to-typst/*.md"],
+        "clean": true
+      },
+      "dependsOn": [
+        {
+          "target": "build",
+          "params": "forward",
+          "dependencies": true
+        },
+        {
+          "target": "lint"
+        }
+      ]
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,6 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { type MetaForm, metaToPreamble } from './meta-to-preamble'
+import { metaToTemplateArgs, type JoteArticleMeta } from '@jote/processors/docx-to-typst'
 
 interface CredentialsState {
   token: string
@@ -28,6 +29,8 @@ interface ConversionState {
   preamble: string
   documentClassName: string
   documentClassOptions: string[]
+  /** The metadata form as `jote-article.with(…)` arguments for the Typst output */
+  templateArgs: JoteArticleMeta | null
   output: string | null
   selectedSubmission: SelectedSubmission | null
   setInput: (input: ArrayBuffer) => void
@@ -53,6 +56,7 @@ export const useConversionStore = create<ConversionState>()((set) => ({
   preamble: '',
   documentClassName: 'jote-new-article',
   documentClassOptions: ['authordate', 'empirical'],
+  templateArgs: null,
   output: null,
   selectedSubmission: null,
   setInput: (input: ArrayBuffer) => set({ input }),
@@ -65,6 +69,7 @@ export const useConversionStore = create<ConversionState>()((set) => ({
         .split(',')
         .map((s) => s.trim())
         .filter(Boolean),
+      templateArgs: metaToTemplateArgs(form),
     }),
   setPreambleRaw: (preamble: string) => set({ preamble }),
   setOutput: (output: string) => set({ output }),

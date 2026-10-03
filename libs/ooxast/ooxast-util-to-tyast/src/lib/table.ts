@@ -193,6 +193,7 @@ function repairNested(item: TableItem): { pre?: CellModel; table: TableItem } {
 function typstTable(state: State, item: TableItem, captioned: boolean): FunctionCall {
   const rows = item.rows.map((r) => ({ ...r, cells: r.cells.map((c) => ({ ...c })) }))
   const columnCount = Math.max(
+    1,
     item.grid.length,
     ...rows.map((r) => r.gridBefore + r.gridAfter + r.cells.reduce((a, c) => a + c.span, 0)),
   )

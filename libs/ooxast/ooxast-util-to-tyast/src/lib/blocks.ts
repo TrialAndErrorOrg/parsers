@@ -67,9 +67,16 @@ export function toItems(state: State, elements: Element[], where: Where): Item[]
       case 'w:p':
         items.push(...paragraphItems(state, el, where))
         break
-      case 'w:tbl':
-        items.push(tableItem(state, el))
+      case 'w:tbl': {
+        const table = tableItem(state, el)
+        // `#table(columns: 0)` does not compile
+        if (!table.rows.some((row) => row.cells.length)) {
+          state.warn('Skipped an empty table (it has no cells)')
+          break
+        }
+        items.push(table)
         break
+      }
       case 'w:sdt':
         items.push(...toItems(state, kids(child(el, 'w:sdtContent')), where))
         break

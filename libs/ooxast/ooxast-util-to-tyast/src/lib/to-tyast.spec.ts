@@ -102,6 +102,23 @@ describe('tables', () => {
       .map((r) => `<w:tr>${r}</w:tr>`)
       .join('')}</w:tbl>`
 
+  it('skips tables without cells, with a warning', () => {
+    for (const empty of ['<w:tbl><w:tblGrid/></w:tbl>', '<w:tbl><w:tblGrid/><w:tr/></w:tbl>']) {
+      const file = new VFile()
+      const out = toTypst(
+        toTyast(doc(empty + p('after')), file, {
+          styles: STYLES,
+          document: false,
+          inferFrontMatter: false,
+        }),
+      )
+      expect(out).toBe('after\n')
+      expect(file.messages.map((m) => m.reason)).toEqual([
+        'Skipped an empty table (it has no cells)',
+      ])
+    }
+  })
+
   it('handles column and row spans', () => {
     const out = convert(
       table([
@@ -356,5 +373,82 @@ describe('front matter', () => {
     expect(out).toContain('abstract: [We did things.]')
     expect(out).toContain('keywords: ("one", "two")')
     expect(out).toMatch(/\)\n\n= Introduction\n\nText\.\n$/)
+  })
+
+  const frontMatter = (body: string, options: Options = {}) => {
+    const file = new VFile()
+    const out = toTypst(toTyast(doc(body), file, { styles: STYLES, ...options }))
+    return { out, messages: file.messages.map((m) => m.reason) }
+  }
+  const realTitle = { title: [t('Real Title')] }
+
+  it('does not take a leading section heading for the title', () => {
+    const body =
+      p('Introduction', 'Heading1') +
+      p('Jane Doe, John Roe') +
+      p('Some intro text.') +
+      p('Methods', 'Heading1') +
+      p('Method text.')
+    for (const options of [{}, { meta: realTitle }]) {
+      const { out, messages } = frontMatter(body, options)
+      expect(out).toContain('= Introduction\n\nJane Doe, John Roe\n\nSome intro text.\n\n= Methods')
+      expect(out).not.toContain('authors:')
+      expect(out).not.toContain('affiliations:')
+      expect(messages).toEqual([])
+    }
+    // numbered
+    expect(frontMatter(p('1. Introduction', 'Heading1') + p('Text.')).out).toContain(
+      '= Introduction\n\nText.',
+    )
+  })
+
+  it('keeps a heading that is not the given title in the body', () => {
+    const body =
+      p('Study Overview', 'Heading1') +
+      p('Some intro text that is a sentence.') +
+      p('Methods', 'Heading1') +
+      p('Method text.')
+    const { out, messages } = frontMatter(body, { meta: realTitle })
+    expect(out).toContain('title: [Real Title]')
+    expect(out).toContain('= Study Overview\n\nSome intro text that is a sentence.')
+    expect(messages).toEqual([])
+    // without a given title it is the title
+    expect(frontMatter(body).out).toContain('title: [Study Overview]')
+  })
+
+  it('takes a heading as the title when it matches the given title or authors follow', () => {
+    const similar = frontMatter(p('A Study of Things', 'Heading1') + p('Text.'), {
+      meta: { title: [t('A study of things: the sequel')] },
+    })
+    expect(similar.out).not.toContain('= A Study of Things')
+    const withAuthors = frontMatter(
+      p('Something Else Entirely', 'Heading1') + p('Ann Author¹, Bob Builder²') + p('¹ Uni One'),
+      { meta: realTitle },
+    )
+    expect(withAuthors.out).not.toContain('= Something Else')
+    expect(withAuthors.out).toContain('(name: "Ann Author", affiliations: (1,))')
+  })
+
+  it('only takes an unmarked paragraph after the authors as their affiliation if it looks like one', () => {
+    const sentence = frontMatter(
+      p('A Title', 'Title') + p('Jane Doe, John Roe') + p('Some intro text.'),
+    ).out
+    expect(sentence).not.toContain('affiliations:')
+    expect(sentence).toMatch(/\)\n\nSome intro text\.\n$/)
+    const institution = frontMatter(
+      p('A Title', 'Title') + p('Jane Doe, John Roe') + p('University of Somewhere.'),
+    ).out
+    expect(institution).toContain('affiliations: ([University of Somewhere.],)')
+  })
+
+  it('warns when front matter read from the document is replaced by the given metadata', () => {
+    const { out, messages } = frontMatter(
+      p('A Title', 'Title') + p('Ann Author¹, Bob Builder²') + p('¹ Uni One') + p('Text.'),
+      { meta: { ...realTitle, authors: [{ name: 'Real Author' }] } },
+    )
+    expect(out).toContain('title: [Real Title]')
+    expect(out).toContain('(name: "Real Author")')
+    expect(messages).toHaveLength(1)
+    expect(messages[0]).toMatch(/\(title, authors\) was removed from the body and replaced/)
   })
 })

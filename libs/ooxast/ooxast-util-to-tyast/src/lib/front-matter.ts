@@ -66,6 +66,108 @@ const norm = (s: string) =>
     .replace(/\s+/g, ' ')
     .trim()
 
+/**
+ * Headings that open the body of a paper. A manuscript that starts with one of these has no
+ * title page, so the heading must stay where it is.
+ */
+const SECTION_NAMES = new Set([
+  'introduction',
+  'general introduction',
+  'background',
+  'theoretical background',
+  'background and motivation',
+  'motivation',
+  'overview',
+  'context',
+  'preface',
+  'foreword',
+  'prologue',
+  'abstract',
+  'summary',
+  'executive summary',
+  'introduction and background',
+  'literature review',
+  'related work',
+  'theory',
+  'theoretical framework',
+  'the present study',
+  'present study',
+  'current study',
+  'the current study',
+  'aims',
+  'aim',
+  'objectives',
+  'purpose',
+  'hypotheses',
+  'research questions',
+  'method',
+  'methods',
+  'methodology',
+  'materials and methods',
+  'methods and materials',
+  'participants',
+  'results',
+  'findings',
+  'results and discussion',
+  'discussion',
+  'general discussion',
+  'limitations',
+  'conclusion',
+  'conclusions',
+  'concluding remarks',
+  'references',
+  'bibliography',
+  'appendix',
+  'acknowledgments',
+  'acknowledgements',
+  'original purpose',
+  'what went wrong',
+  'lessons learned',
+  'take-home message',
+  'take home message',
+])
+
+/** `1. Introduction`, `I Introduction`, `A. Methods` → `introduction`, `methods` */
+const sectionName = (s: string) =>
+  norm(s)
+    .replace(/^(?:\d+(?:\.\d+)*|[ivx]+|[a-h])[.):]?\s+/, '')
+    .trim()
+
+export const isSectionName = (s: string) => SECTION_NAMES.has(sectionName(s))
+
+/** Words of a title for comparing it with the title given in the metadata. */
+const titleWords = (s: string) =>
+  fold(s)
+    .replace(/[^\p{L}\p{N}]+/gu, ' ')
+    .split(' ')
+    .filter((w) => w.length > 2)
+
+/** Whether the document's title is (roughly) the one given in the metadata. */
+function similarTitle(a: string, b: string): boolean {
+  const wa = titleWords(a)
+  const wb = titleWords(b)
+  if (!wa.length || !wb.length) return false
+  const ja = wa.join(' ')
+  const jb = wb.join(' ')
+  if (ja.includes(jb) || jb.includes(ja)) return true
+  const sb = new Set(wb)
+  const shared = new Set(wa.filter((w) => sb.has(w))).size
+  return shared / new Set([...wa, ...wb]).size >= 0.6
+}
+
+/** Plain text of rich metadata (a string or inline content). */
+function richText(value: unknown): string {
+  if (typeof value === 'string') return value
+  if (!Array.isArray(value)) return ''
+  return value.map((n) => stringify(n as PhrasingContent)).join('')
+}
+
+/** An affiliation without markers: a short line naming an institution, not a sentence. */
+const INSTITUTION_RE =
+  /\b(?:universit|institut|department|dept\b|faculty|college|school|cent(?:er|re)|hospital|clinic|laborator|lab\b|academy|foundation|council|ministry|agency|hochschule|fakult|klinik|inc\b|ltd\b|gmbh|llc\b|corporation|company|research|consortium|independent researcher)/i
+const looksLikeAffiliation = (s: string) =>
+  s.length < 300 && (INSTITUTION_RE.test(s) || (s.length < 150 && !/[.!?]$/.test(s.trim())))
+
 const isPara = (it: Item | undefined): it is ParaItem => !!it && it.kind === 'p'
 const isEmpty = (it: Item) => isPara(it) && !it.content.length && !it.images
 
@@ -101,11 +203,22 @@ export function extractFrontMatter(state: State, items: Item[]): FrontMatter {
 
   // --- title -------------------------------------------------------------------------------
   const first = items[titleIndex] as ParaItem
+  // a manuscript that starts with "Introduction" or the like has no title page at all
+  if (
+    first.style.role === 'heading' &&
+    isSectionName(first.text) &&
+    !KEYWORD_HEADINGS[norm(first.text)]
+  )
+    return { meta, items }
+  const givenTitle = richText(state.options.meta?.title)
   const looksLikeTitle =
     first.style.role === 'title' ||
-    first.style.role === 'heading' ||
-    first.align === 'center' ||
-    first.bold
+    ((first.style.role === 'heading' || first.align === 'center' || first.bold) &&
+      // with a title in the metadata, a heading is only the title if it says (about) the
+      // same, or if an author line follows it
+      (!givenTitle ||
+        similarTitle(first.text, givenTitle) ||
+        authorLineFollows(items, titleIndex, end)))
   let i = titleIndex
   if (/^running head\b/i.test(first.text)) {
     consumed.add(i)
@@ -153,7 +266,7 @@ export function extractFrontMatter(state: State, items: Item[]): FrontMatter {
         if (
           !affiliations.length &&
           authors.every((a) => !a.affiliations?.length) &&
-          it.text.length < 300
+          looksLikeAffiliation(it.text)
         ) {
           affiliations.push([1, it.text])
           authors.forEach((a) => (a.affiliations = [1]))
@@ -262,6 +375,16 @@ export function extractFrontMatter(state: State, items: Item[]): FrontMatter {
     remaining.splice(at, 0, heading, ...back)
   }
   return { meta, items: remaining }
+}
+
+/** Whether the paragraph after `index` is an author line (`Ann Author¹, Bob Builder²`). */
+function authorLineFollows(items: Item[], index: number, end: number): boolean {
+  let k = nextNonEmpty(items, index + 1, end)
+  if (k >= 0 && /^(?:subtitle|title)$/.test((items[k] as ParaItem).style.role))
+    k = nextNonEmpty(items, k + 1, end)
+  if (k < 0) return false
+  const it = items[k] as ParaItem
+  return it.style.role !== 'heading' && !!parseAuthors(it.content)
 }
 
 function nextNonEmpty(items: Item[], from: number, end: number): number {

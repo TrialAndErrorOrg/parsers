@@ -111,6 +111,7 @@ export function toTyast(tree: Tree, fileOrOptions?: VFile | Options, maybeOption
     const front = extractFrontMatter(state, items)
     inferred = front.meta
     items = front.items
+    warnOverridden(state, inferred, options.meta)
   }
 
   let content = finalizeImages(group(state, items, 'body'))
@@ -160,6 +161,49 @@ export function toTyast(tree: Tree, fileOrOptions?: VFile | Options, maybeOption
       ...content,
     ],
   }
+}
+
+/** Front matter read from (and removed from) the document */
+const FRONT_MATTER_KEYS: Array<[keyof JoteArticleMeta, string]> = [
+  ['title', 'title'],
+  ['authors', 'authors'],
+  ['affiliations', 'affiliations'],
+  ['correspondence', 'correspondence'],
+  ['abstract', 'abstract'],
+  ['keywords', 'keywords'],
+  ['funding', 'funding'],
+]
+
+const isSet = (value: unknown) =>
+  value !== undefined &&
+  value !== null &&
+  value !== '' &&
+  !(Array.isArray(value) && !value.length) &&
+  !(
+    typeof value === 'object' &&
+    !Array.isArray(value) &&
+    !Object.values(value as object).some((v) => v !== undefined && v !== '')
+  )
+
+/**
+ * Front matter paragraphs are removed from the body; when the given metadata replaces what they
+ * said, the document's version is gone, so say so.
+ */
+function warnOverridden(
+  state: State,
+  inferred: JoteArticleMeta,
+  given: JoteArticleMeta | undefined,
+) {
+  if (!given) return
+  const replaced = FRONT_MATTER_KEYS.filter(
+    ([key]) => isSet(inferred[key]) && isSet(given[key]),
+  ).map(([, name]) => name)
+  if (!replaced.length) return
+  state.warn(
+    `Front matter read from the start of the document (${replaced.join(
+      ', ',
+    )}) was removed from the body and replaced by the given metadata; check that no body text was lost`,
+  )
 }
 
 function stripUndefined<T extends object>(o: T): Partial<T> {

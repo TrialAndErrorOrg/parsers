@@ -1,0 +1,47 @@
+{
+  "name": "unified-latex-util-to-tyast",
+  "version": "0.0.1",
+  "dependencies": {
+    "@unified-latex/unified-latex-types": "^1.3.1",
+    "@unified-latex/unified-latex-util-arguments": "^1.3.1",
+    "@unified-latex/unified-latex-util-parse": "^1.3.1",
+    "@unified-latex/unified-latex-util-print-raw": "^1.3.1",
+    "tex2typst": "^0.6.2",
+    "tyast": "0.0.1",
+    "unified": "^10.1.2",
+    "vfile": "^5.3.7"
+  },
+  "license": "GPL-3.0-or-later",
+  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
+  "description": "Convert a unified-latex tree (a JOTE LaTeX article) into a tyast (Typst) tree for the jote-article Typst template.",
+  "keywords": [
+    "unified",
+    "unified-latex",
+    "latex",
+    "typst",
+    "tyast",
+    "util"
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "unified-latex-util-to-tyast",
+    "tsconfig": "./tsconfig.lib.json"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    }
+  },
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "/lib"
+  ]
+}

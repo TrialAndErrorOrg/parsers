@@ -1,0 +1,67 @@
+{
+  "name": "unified-latex-tyast",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/unified-latex/unified-latex-tyast/src",
+  "projectType": "library",
+  "targets": {
+    "readme": {
+      "executor": "utils-readme:update-readme",
+      "options": {
+        "readme": "libs/unified-latex/unified-latex-tyast/README.md",
+        "packageJSON": "libs/unified-latex/unified-latex-tyast/package.json"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": [
+        "{options.outputFile}"
+      ]
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/unified-latex/unified-latex-tyast"
+      ],
+      "options": {
+        "passWithNoTests": true
+      }
+    },
+    "make-publishable": {
+      "executor": "better-nx-tsc:publishable"
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "rootDir": "libs/unified-latex/unified-latex-tyast/src",
+        "outputPath": "dist/libs/unified-latex/unified-latex-tyast",
+        "tsConfig": "libs/unified-latex/unified-latex-tyast/tsconfig.lib.json",
+        "packageJson": "libs/unified-latex/unified-latex-tyast/package.json",
+        "main": "libs/unified-latex/unified-latex-tyast/src/index.ts",
+        "assets": [
+          "libs/unified-latex/unified-latex-tyast/*.md"
+        ],
+        "clean": true
+      },
+      "dependsOn": [
+        {
+          "target": "build",
+          "params": "forward",
+          "dependencies": true
+        },
+        {
+          "target": "lint"
+        }
+      ]
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    }
+  },
+  "tags": []
+}

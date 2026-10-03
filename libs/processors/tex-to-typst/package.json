@@ -1,0 +1,35 @@
+{
+  "name": "tex-to-typst",
+  "version": "0.0.1",
+  "description": "Convert a JOTE LaTeX article (jote-new-article.cls) to Typst for the jote-article template",
+  "type": "module",
+  "dependencies": {
+    "tyast": "0.0.1",
+    "tyast-util-to-typst": "0.0.1",
+    "unified-latex-util-to-tyast": "0.0.1",
+    "vfile": "^5.3.7"
+  },
+  "license": "GPL-3.0-or-later",
+  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "tex-to-typst",
+    "tsconfig": "./tsconfig.lib.json"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    }
+  },
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "/lib"
+  ]
+}

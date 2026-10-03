@@ -1,0 +1,10 @@
+[package]
+name = "jote-article"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["JOTE Publishers"]
+license = "GPL-3.0-only"
+description = "Article template for the Journal of Trial & Error, a port of jote-new-article.cls"
+keywords = ["journal", "article", "jote"]
+compiler = "0.15.0"
+exclude = ["example"]

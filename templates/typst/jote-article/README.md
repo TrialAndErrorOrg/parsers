@@ -103,7 +103,7 @@ Most of the body is plain Typst:
 | `\subsubsection`                   | `=== Heading` (italic, no space below)                    |
 | `\paragraph`                       | `==== Heading` (run into the following paragraph)         |
 | `\emph`, `\textbf`                 | `_…_`, `*…*` (Light Italic, SemiBold)                     |
-| `\footnote`                        | `#footnote[…]` (numbers hang in the margin, no rule)      |
+| `\footnote`                        | `#footnote[…]` (numbers hang in the margin, no rule; several paragraphs allowed, the later ones indented 1em) |
 | `figure`, `table`                  | `#figure(image(…), caption: […]) <fig:x>`, `#figure(table(…))` |
 | `figure*`                          | `#wide-figure(image(…), caption: […])`                    |
 | booktabs                           | `toprule`, `midrule`, `bottomrule` (exported `table.hline`s) |
@@ -133,7 +133,8 @@ JOTE-specific environments:
   - `"column"`: an in-flow box as wide as the column. Give it `placement: top` or `bottom` to
     make it float.
   - `"wide"`: `rightWide`. A float in its column that reaches into the left margin, out to the
-    edge of the running header. If the float lands in the right column, it stays at column width.
+    edge of the running header. If the float lands in the right column, it stays at column width
+    (its title then may stick out of the box, as a tcolorbox title does).
     With `placement: auto` it goes to the bottom of the column, where all of the reference
     article's `rightWide` boxes ended up.
   - `"full"`: `fullWide`. A float across the whole page, including the left margin. Like a
@@ -202,11 +203,19 @@ The colours are exported as `joteorange`, `jotedark`, `jote-orange-light`, `ligh
   template works around this for its own column floats (`take-home`, `original-purpose`,
   `companion`, `invitation`, floating `jote-box`es):
   - Page-wide floats record their page and height.
-  - A column float that cannot fit on its page (or that overflowed in the previous layout pass)
-    is held back and placed again at a paragraph break of the body in a right column, from
-    where Typst defers it to the top of the next page that has room, as LaTeX does.
-  - Its decisions are sticky across layout passes, so that the document settles within Typst's
-    five passes.
+  - A column float that cannot fit on its page (or, anchored low in a right column, on the next
+    page, where Typst defers it), or that overflowed in the previous layout pass, is held back
+    and placed again at a paragraph break of the body in a right column. From there it goes
+    into that column if it fits in the rest of it, and otherwise Typst defers it to the top of
+    the next page that has room, as LaTeX does.
+  - A box that reaches into the left margin (`take-home`, `original-purpose`, `"wide"` boxes)
+    takes the column-wide form wherever it lands in a right column, held back or not, so it
+    never reaches over the text of the left column.
+  - Every decision can change only a bounded number of times across layout passes (a float is
+    held back at most once, a held-back float moves to another paragraph break at most once, a
+    box changes its form at most once and then keeps the column-wide one), so that the document
+    settles within Typst's five passes. Positions are read from the locations of markers, not
+    from `here()` inside a float, which lags a pass behind and can alternate between passes.
 
   Plain `#figure`s (column figures) are not covered.
 - **Display maths.** An equation up to 30 % wider than its column is scaled down to fit, because
@@ -223,7 +232,9 @@ The colours are exported as `joteorange`, `jotedark`, `jote-orange-light`, `ligh
 - **Float placement** follows LaTeX's rules only roughly (see "Float pages" and "Column floats"
   above). A `wide-figure` that LaTeX put on a float page for other reasons (for instance
   `\dbltopnumber`) shares its page with text here, and plain column `#figure`s are not
-  protected against Typst's overflow bug.
+  protected against Typst's overflow bug. A document crowded with column floats next to
+  page-wide floats can still fail to settle within five passes (Typst then warns "document did
+  not converge"); moving one float a paragraph earlier or later usually fixes that.
 - **Back-references.** biblatex prints "(see p. 3)" after each bibliography entry
   (`backref=true`); Typst has no equivalent.
 - **Bibliography data.** Typst reads the `.bib` with hayagriva, which does not turn TeX quotes

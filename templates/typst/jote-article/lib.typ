@@ -276,8 +276,9 @@
       if title != none {
         place(top + left, dy: title-baseline - pad-top, {
           set text(fill: jotedark, size: fsize("LARGE"), top-edge: "baseline", bottom-edge: "baseline")
-          // like a tcolorbox title line, it never wraps
-          box(_overpass(weight: 600, title))
+          // like a tcolorbox title line, it never wraps (in a column-wide box, too)
+          let t = _overpass(weight: 600, title)
+          context box(width: measure(t).width, t)
         })
       }
       set text(fill: jotedark)
@@ -311,12 +312,11 @@
 /// The context-aware placement of a box that reaches into the left margin (`rightWide`,
 /// take-home message, original purpose). In the left column (or in one-column mode) it is
 /// widened into the left margin like the class does; in the right column it stays column-wide.
-#let _margin-wide(body-fn, at: auto) = context {
+/// `left`: `auto` (from where it lands), or `true`/`false` for the left-column/column-wide form.
+#let _margin-wide(body-fn, left: auto) = context {
   let off = _offset
   let geo = _geometry()
-  let x = if at == auto { here().position().x } else { at }
-  let page-left = geo.left
-  let in-left-col = x < page-left + 1pt
+  let in-left-col = if left == auto { here().position().x < geo.left + 1pt } else { left }
   if in-left-col {
     // width = .5\textwidth + \marginparwidth + \marginparsep - \smallwidth; starts at the
     // left edge of the running header
@@ -343,62 +343,124 @@
 // height (`_pf-mark`). A column float anchored in the left column of such a page that cannot fit
 // in a column there is held back (`_col-float`) and placed instead at the first anchor point
 // (`_float-anchor`) on a later page; the template puts anchor points between the top-level
-// paragraphs of the body. Everything is decided from queries, so that it settles within Typst's
-// five layout passes.
+// paragraphs of the body.
+//
+// Everything is decided from queries of the previous layout pass. So that the layout settles
+// within Typst's five passes, every decision can change only a bounded number of times: a float
+// is held back at most once (and then stays held back), the anchor point that places a held-back
+// float moves at most `_max-anchor-moves` times (and then stays put), and a box that reaches into
+// the left margin in the left column changes its form at most `_max-form-changes` times (a
+// held-back one once), and then keeps the column-wide form, which can stand in either column. So
+// a box never reaches over the text of the left column, even when the layout does not settle.
+// Positions are read from the locations of markers, not from `here()` inside a float, which lags
+// a pass behind and can alternate between passes.
 
-/// Inside a page-wide float: records its page and the height `h` it takes from the columns.
-#let _pf-mark(h) = context [#metadata((page: here().page(), h: h))<jote-page-float>]
+/// How often a held-back float may move to another anchor point before it stays where it is.
+#let _max-anchor-moves = 1
+
+/// How often a box whose width depends on its column may change between its left-column and its
+/// column-wide form before it keeps the column-wide one.
+#let _max-form-changes = 1
+
+/// Inside a page-wide float: records that it takes the height `h` from the columns of its page.
+#let _pf-mark(h) = [#metadata((h: h))<jote-page-float>]
+
+/// At the end of a page-wide float at the top of the page: records that it takes the height down
+/// to here plus `clearance` from the columns of its page.
+#let _pf-end(clearance) = [#metadata((end: clearance))<jote-page-float>]
 
 /// Height taken by page-wide floats on `page` (needs context).
-#let _page-floats(page) = query(<jote-page-float>).filter(m => m.location().page() == page).map(m => m.value.h).sum(default: 0pt)
+#let _page-floats(page) = {
+  let top = _geometry().top
+  query(<jote-page-float>)
+    .filter(m => m.location().page() == page)
+    .map(m => if "h" in m.value { m.value.h } else { m.location().position().y - top + m.value.end })
+    .sum(default: 0pt)
+}
 
 /// Whether a float whose left-column form is `probe()` (plus `clearance`) fits on the page at
-/// `pos`. Only pages with page-wide floats are checked (needs context).
+/// `pos`, and, anchored in a right column below which it does not fit, on the next page, where
+/// Typst defers it. Only pages with page-wide floats are checked (needs context).
 #let _col-fits(pos, probe, clearance) = {
   let geo = _geometry()
-  let used = _page-floats(pos.page)
-  if geo.columns < 2 or used == 0pt { return true }
-  measure(probe()).height + clearance <= geo.text-height - used + 0.01pt
+  if geo.columns < 2 { return true }
+  let h = measure(probe()).height + clearance
+  let fits(page) = {
+    let used = _page-floats(page)
+    used == 0pt or h <= geo.text-height - used + 0.01pt
+  }
+  (
+    fits(pos.page)
+      and (pos.x < geo.left + 1pt or pos.y + h <= geo.top + geo.text-height + 0.01pt or fits(pos.page + 1))
+  )
 }
 
 /// `place(placement, float: true, clearance: clearance, body)` for a column float, held back to
 /// a later page when it cannot fit on this one. `probe` is a function returning the float's
-/// content as set in the left column, for measuring; `held` is the content placed when it is
-/// held back (by default `body`; it lands at the top of a left column, so a box whose width
-/// depends on its column should be given in its left-column form, which settles faster).
-#let _col-float(placement, clearance: skip(1), probe: none, held: auto, body) = context {
-  if probe == none { return place(placement, float: true, clearance: clearance, body) }
+/// content as set in the left column, for measuring. `body` is the content, or for a box whose
+/// width depends on its column a function `left => content` returning its left-column form
+/// (`true`) or its column-wide form (`false`). Such a box takes the form of the column it landed
+/// in in the previous pass; after `_max-form-changes` changes it keeps the column-wide form,
+/// which can stand in either column, so it never reaches over the text of the left column.
+#let _col-float(placement, clearance: skip(1), probe: none, body) = context {
+  let form(left) = if type(body) == function { body(left) } else { body }
+  if probe == none { return place(placement, float: true, clearance: clearance, form(true)) }
   let anchor = here()
   let pos = anchor.position()
-  // where the float landed in the previous layout pass, and whether it overflowed there (a float
-  // deferred from an earlier page can land on a page with page-wide floats, too)
+  let geo = _geometry()
+  // where the float landed in the previous layout pass
   let landed = query(<jote-float-pos>).find(m => m.value.at == anchor)
+  let (narrow, changes) = if landed == none { (false, 0) } else { (landed.value.narrow, landed.value.changes) }
+  if type(body) == function and landed != none and geo.columns > 1 {
+    let right = landed.location().position().x > geo.left + 1pt
+    if right != narrow {
+      (narrow, changes) = if changes < _max-form-changes { (right, changes + 1) } else { (true, changes) }
+    }
+  }
+  // whether it overflowed there (a float deferred from an earlier page can land on a page with
+  // page-wide floats, too)
   let overflowed = if landed == none { false } else {
-    let geo = _geometry()
-    let (page: p, y: y) = landed.value
+    let (page: p, y: y) = landed.location().position()
     let used = _page-floats(p)
+    let h = if narrow { measure(block(width: _column-width(), form(false))).height } else { measure(probe()).height }
     // only pages with page-wide floats are affected by the bug (and checking only those keeps
-    // floats on other pages exactly where Typst puts them)
-    used > 0pt and (y < geo.top + used - 1pt or y + measure(probe()).height > geo.top + geo.text-height + 1pt)
+    // floats on other pages exactly where Typst puts them); a box that has to be column-wide but
+    // is too tall for a column in that form is held back too, to land in a left column
+    (
+      (used > 0pt and (y < geo.top + used - 1pt or y + h > geo.top + geo.text-height + 1pt))
+        or (narrow and h + clearance > geo.text-height - used + 0.01pt)
+    )
   }
   // Decisions are sticky: once held back, a float stays held back (with the page it was held
   // on), otherwise moving it can move the page-wide floats so that it fits again, and the layout
   // never settles.
-  let held-body = if held == auto { body } else { held }
-  let held = query(<jote-held-float>).find(m => m.value.at == anchor)
-  if held == none and not overflowed and _col-fits(pos, probe, clearance) {
+  let prev = query(<jote-held-float>).find(m => m.value.at == anchor)
+  if prev == none and not overflowed and _col-fits(pos, probe, clearance) {
     place(placement, float: true, clearance: clearance, {
-      context [#metadata((at: anchor, page: here().page(), y: here().position().y))<jote-float-pos>]
-      body
+      [#metadata((at: anchor, narrow: narrow, changes: changes))<jote-float-pos>]
+      form(not narrow)
     })
   } else {
-    let (page, h) = if held != none { (held.value.page, held.value.height) } else {
+    let mark = [#metadata(anchor)<jote-held-pos>]
+    let (wide-form, narrow-form) = if type(body) == function { (body(true), body(false)) } else { (body, none) }
+    // heights with clearance: of the left-column form, and of the column-wide one
+    let (page, h, hn) = if prev != none { (prev.value.page, prev.value.height, prev.value.narrow-height) } else {
       (
-        if landed != none { calc.max(pos.page, landed.value.page) } else { pos.page },
+        if landed != none { calc.max(pos.page, landed.location().page()) } else { pos.page },
         measure(probe()).height + clearance,
+        if narrow-form == none { none } else { measure(block(width: _column-width(), narrow-form)).height + clearance },
       )
     }
-    [#metadata((at: anchor, page: page, height: h, placement: placement, clearance: clearance, body: held-body))<jote-held-float>]
+    [#metadata((
+      at: anchor,
+      page: page,
+      height: h,
+      narrow-height: hn,
+      placement: placement,
+      clearance: clearance,
+      body: [#mark#wide-form],
+      narrow: if narrow-form == none { none } else { [#mark#narrow-form] },
+    ))<jote-held-float>]
   }
 }
 
@@ -414,29 +476,69 @@
   let placed = query(<jote-float-placed>)
   for h in held {
     let f = h.value
-    // sticky, like the decision to hold the float back
-    // In two columns: an anchor point in a right column (the float then goes there if it fits,
-    // and otherwise Typst defers it to the top of the next page, where LaTeX puts it too) whose
-    // next page has room for it. In one column: one on a later page with room for it.
-    let ok(pos, strict: true) = if geo.columns < 2 {
+    // Room on the page after the one at `pos` (for a float deferred there).
+    let next-room(pos) = geo.text-height - _page-floats(pos.page + 1) + 0.01pt
+    // How the float would stand if placed at the anchor point at `pos`, in a right column:
+    // `"fixed"` (a float whose width does not depend on its column), `"wide"` (the left-column
+    // form) or `"narrow"` (the column-wide form), or `none` if it cannot be placed there. The
+    // float goes into this right column if it fits in the rest of it, and otherwise Typst defers
+    // it to the top of the next page, where LaTeX puts it too; it is set column-wide whenever it
+    // could land in this right column, so that it never reaches over the left column.
+    let form-at(pos) = {
+      let rest = geo.top + geo.text-height - pos.y + 0.01pt
+      let (h, hn) = (f.height, f.narrow-height)
+      if h > next-room(pos) { none }
+      else if hn == none { "fixed" }
+      else if hn <= rest { "narrow" }
+      else if h > rest { "wide" }
+      else if hn <= next-room(pos) { "narrow" }
+      else { none }
+    }
+    // In two columns: an anchor point in a right column where the float can be placed. In one
+    // column: one on a later page with room for it.
+    let ok(pos) = if geo.columns < 2 {
       pos.page > f.page and f.height <= geo.text-height - _page-floats(pos.page) + 0.01pt
     } else {
-      (
-        pos.page >= f.page
-          and (not strict or pos.x > geo.left + 1pt)
-          and f.height <= geo.text-height - _page-floats(pos.page + 1) + 0.01pt
-      )
+      pos.page >= f.page and pos.x > geo.left + 1pt and form-at(pos) != none
     }
     // the anchor point chosen in the previous pass, as long as it is still on a suitable page
-    // (so that the layout settles); otherwise the first one that qualifies
+    // (placing the float there moves the text, so the anchor point itself may move) or the
+    // float has moved too often already (so that the layout settles); otherwise the first one
+    // that qualifies
     let prior = placed.find(m => m.value.float == f.at)
-    let take = if prior != none and ok(prior.location().position(), strict: false) { prior.value.anchor == here } else {
+    let keep = prior != none and (
+      prior.value.moves >= _max-anchor-moves
+        or {
+          let pos = prior.location().position()
+          if geo.columns < 2 { ok(pos) } else { pos.page >= f.page and f.height <= next-room(pos) }
+        }
+    )
+    let (take, moves) = if keep { (prior.value.anchor == here, prior.value.moves) } else {
       let first = query(selector(<jote-float-anchor>).after(h.location())).find(a => ok(a.location().position()))
-      (first != none and first.value == here) or (final and first == none)
+      (
+        (first != none and first.value == here) or (final and first == none),
+        if prior == none { 0 } else { prior.value.moves + 1 },
+      )
     }
     if take {
-      [#metadata((float: f.at, anchor: here))<jote-float-placed>]
-      place(f.placement, float: true, clearance: f.clearance, f.body)
+      // The column-wide form of a box whose width depends on its column: at a new anchor point,
+      // where it could land in this right column (or, at the end of the body, where it is not
+      // known how it lands, if it fits in a column); at the anchor point of the previous pass,
+      // once it was set so (it can stand in either column) or landed in a right column there.
+      let narrow = f.narrow != none and geo.columns > 1 and if keep {
+        (
+          prior.value.narrow
+            or {
+              let m = query(<jote-held-pos>).find(m => m.value == f.at)
+              m != none and m.location().position().x > geo.left + 1pt
+            }
+        )
+      } else {
+        let form = if ok(here.position()) { form-at(here.position()) } else { none }
+        form == "narrow" or (form == none and f.narrow-height <= geo.text-height)
+      }
+      [#metadata((float: f.at, anchor: here, moves: moves, narrow: narrow))<jote-float-placed>]
+      place(f.placement, float: true, clearance: f.clearance, if narrow { f.narrow } else { f.body })
     }
   }
 }
@@ -459,9 +561,9 @@
       _col-float(placement, probe: () => block(width: _column-width(), b), b)
     }
   } else if width == "wide" {
-    let b(at: auto) = _margin-wide(
+    let b(left: auto) = _margin-wide(
       w => _jote-box-body(title: title, stretch: stretch, width: w, wide-lists: true, body),
-      at: at,
+      left: left,
     )
     if placement == none {
       block(above: skip(1), below: skip(1), b())
@@ -470,8 +572,7 @@
       _col-float(
         if placement == auto { bottom } else { placement },
         probe: () => _jote-box-body(title: title, stretch: stretch, width: _margin-wide-width(), wide-lists: true, body),
-        held: b(at: 0pt),
-        b(),
+        left => b(left: left),
       )
     }
   } else if width == "full" {
@@ -519,13 +620,13 @@
 /// Take-home message: top float reaching into the left margin, \baselinestretch 1.5.
 #let take-home(body) = {
   let b(w) = _jote-box-body(title: [Take-home message], stretch: 1.5, width: w, body)
-  _col-float(top, probe: () => b(_margin-wide-width()), held: _margin-wide(b, at: 0pt), _margin-wide(b))
+  _col-float(top, probe: () => b(_margin-wide-width()), left => _margin-wide(b, left: left))
 }
 
 /// Original purpose: bottom float reaching into the left margin, \baselinestretch 1.3.
 #let original-purpose(body) = {
   let b(w) = _jote-box-body(title: [Original purpose], stretch: 1.3, width: w, body)
-  _col-float(bottom, probe: () => b(_margin-wide-width()), held: _margin-wide(b, at: 0pt), _margin-wide(b))
+  _col-float(bottom, probe: () => b(_margin-wide-width()), left => _margin-wide(b, left: left))
 }
 
 /// The class' `fullwidth` environment: a white tcolorbox with a light-orange frame that reaches
@@ -1276,9 +1377,13 @@
     let loc = it.note.location()
     let num = numbering(it.note.numbering, ..counter(footnote).at(loc))
     set text(size: fsize("footnotesize"))
-    set par(leading: fleading("footnotesize"), spacing: fleading("footnotesize"), first-line-indent: 0pt, hanging-indent: 0pt, justify: true)
+    // a note of several paragraphs: no space between them, and every one after the first
+    // indented by LaTeX's footnote \parindent (1em)
+    set par(leading: fleading("footnotesize"), spacing: fleading("footnotesize"), first-line-indent: 1em, hanging-indent: 0pt, justify: true)
     let mark-w = 0.8em
-    par[#h(-mark-w)#box(width: mark-w, align(right, link(loc, super(num))))#it.note.body]
+    // the number hangs into the margin in front of the first line (a block, not a `par`, so that
+    // the note can have several paragraphs)
+    block(width: 100%, [#h(-mark-w)#box(width: mark-w, align(right, link(loc, super(num))))#it.note.body])
   }
 
   // ---- figures, tables, captions -----------------------------------------------------------
@@ -1339,7 +1444,7 @@
     let clearance = 36.29pt - fsize("normalsize")
     place(top + left, scope: "parent", float: true, clearance: clearance, {
       fm
-      context _pf-mark(here().position().y - g.top + clearance)
+      _pf-end(clearance)
     })
   }
 

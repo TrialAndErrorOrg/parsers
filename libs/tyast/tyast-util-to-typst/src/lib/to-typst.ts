@@ -178,6 +178,8 @@ class Writer {
   out = ''
   atLineStart: boolean
   afterHash = false
+  /** the last thing written was a line comment (`// …⏎`), maybe followed by whitespace */
+  endsInLineComment = false
   private initialLast: string | undefined
 
   constructor({ atLineStart, lastChar }: { atLineStart: boolean; lastChar?: string }) {
@@ -200,6 +202,7 @@ class Writer {
    * @param hash `s` is a `#expression`
    * @param nextChar what will be written after `s`, if known
    * @param trivia `s` is a comment: Typst treats it like whitespace
+   * @param lineComment `s` is a line comment
    */
   write(
     s: string,
@@ -207,7 +210,8 @@ class Writer {
       hash = false,
       nextChar,
       trivia = false,
-    }: { hash?: boolean; nextChar?: string; trivia?: boolean } = {},
+      lineComment = false,
+    }: { hash?: boolean; nextChar?: string; trivia?: boolean; lineComment?: boolean } = {},
   ) {
     if (!s) return
     if (this.afterHash && startsExpressionContinuation(s, nextChar)) {
@@ -217,6 +221,9 @@ class Writer {
     this.out += s
     // a comment also ends an embedded expression
     this.afterHash = hash
+
+    if (trivia) this.endsInLineComment = lineComment
+    else if (/\S/.test(s)) this.endsInLineComment = false
 
     if (trivia) {
       // a comment spanning lines puts what follows at the start of a line
@@ -252,6 +259,8 @@ type BlockKind = 'block' | 'statement' | 'term' | 'list' | 'comment'
 interface Block {
   kind: BlockKind
   text: string
+  /** the text ends in a line comment (whose newline was trimmed) */
+  lineComment?: boolean
 }
 
 /**
@@ -265,15 +274,23 @@ function renderBlocks(nodes: Content[], ctx: Context, { inItem = false } = {}): 
   const attachLabel = (name: string) => {
     const label = `<${sanitizeLabel(name)}>`
     const prev = blocks[blocks.length - 1]
-    if (prev && prev.kind !== 'comment') prev.text += ' ' + label
-    else blocks.push({ kind: 'block', text: label })
+    if (!prev || prev.kind === 'comment') {
+      blocks.push({ kind: 'block', text: label })
+      return
+    }
+    // after `a // c` the label would be part of the comment: put it on the next line, where it
+    // still attaches to what precedes it
+    const lineComment =
+      prev.lineComment ?? (prev.kind !== 'block' && /(?:^|\s)\/\/[^\n]*$/.test(prev.text))
+    prev.text += (lineComment ? '\n' : ' ') + label
+    prev.lineComment = false
   }
 
   const flush = () => {
     if (!run.length) return
     if (run.some(isTexty)) {
-      const text = renderParagraph(run, ctx)
-      if (text) blocks.push({ kind: 'block', text })
+      const block = renderParagraphBlock(run, ctx)
+      if (block) blocks.push(block)
     } else {
       for (const node of run) {
         if (node.type === 'label') {
@@ -292,8 +309,8 @@ function renderBlocks(nodes: Content[], ctx: Context, { inItem = false } = {}): 
     switch (node.type) {
       case 'paragraph': {
         flush()
-        const text = renderParagraph(node.children, ctx)
-        if (text) blocks.push({ kind: 'block', text })
+        const block = renderParagraphBlock(node.children, ctx)
+        if (block) blocks.push(block)
         break
       }
       case 'heading':
@@ -348,9 +365,14 @@ function renderBlocks(nodes: Content[], ctx: Context, { inItem = false } = {}): 
 }
 
 function renderParagraph(nodes: Content[], ctx: Context): string {
+  return renderParagraphBlock(nodes, ctx)?.text ?? ''
+}
+
+function renderParagraphBlock(nodes: Content[], ctx: Context): Block | undefined {
   const w = new Writer({ atLineStart: true })
   renderInline(nodes, ctx, w)
-  return trimStartSpaces(trimEndSafe(w.out))
+  const text = trimStartSpaces(trimEndSafe(w.out))
+  return text ? { kind: 'block', text, lineComment: w.endsInLineComment } : undefined
 }
 
 function renderHeading(node: Heading, ctx: Context): string {
@@ -732,7 +754,10 @@ function renderComment(node: Comment, ctx: Context, w: Writer) {
   }
   if (last !== undefined && !/\s/.test(last)) w.write(' ')
   const lines = normalizeNewlines(node.value).split('\n')
-  w.write(lines.map((l) => ('// ' + l).trimEnd()).join('\n') + '\n', { trivia: true })
+  w.write(lines.map((l) => ('// ' + l).trimEnd()).join('\n') + '\n', {
+    trivia: true,
+    lineComment: true,
+  })
 }
 
 // ---------------------------------------------------------------------------

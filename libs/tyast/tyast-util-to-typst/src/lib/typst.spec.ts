@@ -380,6 +380,25 @@ describe.skipIf(!hasTypst)('toTypst output in typst', () => {
     )
   })
 
+  it('keeps a label after a paragraph that ends in a line comment out of the comment', () => {
+    const lineComment = { type: 'comment' as const, value: 'c' }
+    const tree = root(
+      p(t('a'), lineComment),
+      label('lbl'),
+      p(ref('lbl')),
+      ul(li(t('x'), lineComment)),
+      label('lst'),
+    )
+    const out = toTypst(tree)
+    expect(out).toContain('a // c\n<lbl>')
+    // (the comment leaves a space behind, which Typst drops at the end of a paragraph)
+    expect(
+      flatten(out)
+        .trim()
+        .replace(/\s*¶\s*/g, '¶'),
+    ).toBe('a<lbl>¶@lbl¶-{x}<lst>')
+  })
+
   it('preserves raw block content and indentation', () => {
     const code = 'def f():\n    return "`" * 3\n\n```\nend'
     const tree = root(

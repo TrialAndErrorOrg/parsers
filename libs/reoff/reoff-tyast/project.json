@@ -1,0 +1,59 @@
+{
+  "name": "reoff-tyast",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/reoff/reoff-tyast/src",
+  "projectType": "library",
+  "targets": {
+    "readme": {
+      "executor": "utils-readme:update-readme",
+      "options": {
+        "readme": "libs/reoff/reoff-tyast/README.md",
+        "packageJSON": "libs/reoff/reoff-tyast/package.json"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{workspaceRoot}/coverage/libs/reoff/reoff-tyast"],
+      "options": {
+        "passWithNoTests": true
+      }
+    },
+    "make-publishable": {
+      "executor": "better-nx-tsc:publishable"
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "rootDir": "libs/reoff/reoff-tyast/src",
+        "outputPath": "dist/libs/reoff/reoff-tyast",
+        "tsConfig": "libs/reoff/reoff-tyast/tsconfig.lib.json",
+        "packageJson": "libs/reoff/reoff-tyast/package.json",
+        "main": "libs/reoff/reoff-tyast/src/index.ts",
+        "assets": ["libs/reoff/reoff-tyast/*.md"],
+        "clean": true
+      },
+      "dependsOn": [
+        {
+          "target": "build",
+          "params": "forward",
+          "dependencies": true
+        },
+        {
+          "target": "lint"
+        }
+      ]
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    }
+  },
+  "tags": []
+}

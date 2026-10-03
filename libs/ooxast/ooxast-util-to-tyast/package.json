@@ -1,0 +1,50 @@
+{
+  "name": "ooxast-util-to-tyast",
+  "version": "0.0.1",
+  "license": "GPL-3.0-or-later",
+  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
+  "description": "Convert an `ooxast` (Word document) syntax tree to a `tyast` (Typst) syntax tree for the JOTE article template.",
+  "keywords": [
+    "unified",
+    "word",
+    "docx",
+    "office",
+    "ooxast",
+    "reoff",
+    "typst",
+    "tyast"
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "ooxast-util-to-tyast",
+    "tsconfig": "./tsconfig.lib.json"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    }
+  },
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "/lib"
+  ],
+  "dependencies": {
+    "@types/unist": "^2.0.6",
+    "@types/xast": "^1.0.2",
+    "csl-json": "0.1.0",
+    "csl-to-biblatex": "0.3.1",
+    "tex2typst": "^0.6.2",
+    "tyast": "0.0.1",
+    "tyast-util-to-typst": "0.0.1",
+    "vfile": "^5.3.7",
+    "xast-util-from-xml": "^3.0.0"
+  }
+}

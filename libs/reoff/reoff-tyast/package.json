@@ -1,0 +1,44 @@
+{
+  "name": "reoff-tyast",
+  "version": "0.0.1",
+  "license": "GPL-3.0-or-later",
+  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
+  "description": "reoff plugin to transform Word (ooxast) to Typst (tyast).",
+  "keywords": [
+    "unified",
+    "reoff",
+    "docx",
+    "word",
+    "typst",
+    "tyast",
+    "plugin"
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "reoff-tyast",
+    "tsconfig": "./tsconfig.lib.json"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    }
+  },
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "/lib"
+  ],
+  "dependencies": {
+    "ooxast": "0.3.0",
+    "ooxast-util-to-tyast": "0.0.1",
+    "tyast": "0.0.1",
+    "unified": "^10.1.2"
+  }
+}

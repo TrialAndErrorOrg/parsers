@@ -149,6 +149,81 @@ Packages marked _private_ are not published.
 
 Deprecated packages that are still on npm live in [`deprecated/`](deprecated).
 
+## Typst
+
+Typst output for JOTE articles, next to the LaTeX route: Word or LaTeX in, a `main.typ` for the
+`jote-article` Typst template out.
+
+#### [`tyast`](libs/tyast/tyast)
+
+Type definitions for `tyast` (Typst abstract syntax tree), a [`unist`](https://github.com/syntax-tree/unist) syntax for Typst documents.
+
+#### [`tyast-util-to-typst`](libs/tyast/tyast-util-to-typst/README.md)
+
+Serialize a `tyast` tree to Typst source, escaping text so it renders literally.
+
+#### [`tyast-stringify`](libs/tyast/tyast-stringify/README.md)
+
+unified compiler plugin that turns a `tyast` tree into Typst source.
+
+#### [`ooxast-util-to-tyast`](libs/ooxast/ooxast-util-to-tyast/README.md)
+
+Convert an `ooxast` (Word document) tree to `tyast` for the `jote-article` template, including the title page, figures, tables, boxes, footnotes and citation fields.
+
+#### [`reoff-tyast`](libs/reoff/reoff-tyast/README.md)
+
+reoff plugin to go from Word (`ooxast`) to Typst (`tyast`).
+
+#### [`unified-latex-util-to-tyast`](libs/unified-latex/unified-latex-util-to-tyast/README.md)
+
+Convert a unified-latex tree (a `main.tex` written against `jote-new-article.cls`) to `tyast`.
+
+#### [`unified-latex-tyast`](libs/unified-latex/unified-latex-tyast/README.md)
+
+unified plugin to go from unified-latex (LaTeX) to `tyast` (Typst).
+
+#### [`docx-to-typst`](libs/processors/docx-to-typst/README.md)
+
+Processor and CLI: Word manuscript (`.docx`) → `main.typ` + `media/` + `bibliography.bib`.
+
+#### [`tex-to-typst`](libs/processors/tex-to-typst/README.md)
+
+Processor and CLI: JOTE LaTeX article (`main.tex`) → `main.typ`, with its images and `.bib` files.
+
+#### [`templates/typst/jote-article`](templates/typst/jote-article/README.md)
+
+The Typst port of `jote-new-article.cls`. Converters emit `#import "jote-article/lib.typ": *` and `#show: jote-article.with(…)`.
+
+### How to produce a Typst article
+
+From a Word manuscript (`--meta` takes template arguments or a converter metadata form as JSON):
+
+```sh
+npx tsx --tsconfig tsconfig.base.json libs/processors/docx-to-typst/src/cli.ts \
+  Manuscript.docx out/article [--meta meta.json]
+```
+
+From a LaTeX article:
+
+```sh
+npx tsx --tsconfig tsconfig.base.json libs/processors/tex-to-typst/src/cli.ts \
+  "path/to/article/main.tex" out/article
+```
+
+Both write `out/article/main.typ` and `media/`, and link the template as `out/article/jote-article`
+(`--copy-template` copies it instead). Then compile with the JOTE fonts:
+
+```sh
+typst compile \
+  --font-path ~/JOTE/archive/fonts \
+  --font-path ~/JOTE/archive/OverpassFonts \
+  --font-path ~/JOTE/archive \
+  out/article/main.typ
+```
+
+Or pass `--compile --font-path …` to either CLI to do it in one go. The converter app
+(`apps/converter`) has a Typst tab that downloads the same output, template included, as a zip.
+
 <!--
 
 ## Projects

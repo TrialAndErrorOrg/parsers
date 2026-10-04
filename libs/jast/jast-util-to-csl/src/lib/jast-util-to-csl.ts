@@ -12,7 +12,6 @@ import {
 } from 'jast-types'
 import { Data as CSL, LooseNumber, Person } from 'csl-json'
 import { toString } from 'xast-util-to-string'
-import { convert as unistConvert } from 'unist-util-is'
 import { convertElement } from 'xast-util-is-element'
 import { select } from 'xast-util-select'
 // import { visit } from 'unist-util-visit'
@@ -164,8 +163,8 @@ export function refToCSL(citation: ElementCitation, id: string): CSL {
   return entry
 }
 
-const isText = unistConvert<Text>('text')
 type Node = Content
+const isText = (node: Node): node is Text => node.type === 'text'
 
 const merge = (array: ({ [key: string]: any | any[] } | any)[]): { [key: string]: any | any[] } =>
   array.reduce((acc: { [key: string]: any }, curr: { [key: string]: any | any[] } | any) => {

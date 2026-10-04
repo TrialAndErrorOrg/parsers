@@ -13,7 +13,8 @@ import {
   Attributes,
 } from './types.js'
 import { convert } from 'unist-util-is'
-import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
+import { minifyWhitespace } from 'xast-util-minify-whitespace'
+import type { Nodes as XastNodes } from 'xast'
 
 export { one } from './one.js'
 export { all } from './all.js'
@@ -106,8 +107,8 @@ export function toTexast(
   //   }
   // })
 
-  // @ts-expect-error: does return a transformer, that does accept any node.
-  rehypeMinifyWhitespace({ newlines: options.newlines === true })(tree)
+  // The input is a jast tree, whose own `Attributes` aren't assignable to xast's.
+  minifyWhitespace(tree as unknown as XastNodes, { newlines: options.newLines === true })
 
   // @ts-expect-error: does return a transformer, that does accept any node.
   const result = one(j, tree, undefined)

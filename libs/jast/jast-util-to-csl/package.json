@@ -40,14 +40,13 @@
   "dependencies": {
     "csl-json": "0.1.0",
     "jast-types": "workspace:^",
-    "unist-util-is": "^5.2.1",
     "xast-util-is-element": "workspace:^",
     "xast-util-select": "workspace:^",
-    "xast-util-to-string": "^2.0.1"
+    "xast-util-to-string": "catalog:"
   },
   "devDependencies": {
     "rejour-parse": "workspace:^",
-    "to-vfile": "^7.2.4",
-    "unified": "^10.1.2"
+    "to-vfile": "catalog:",
+    "unified": "catalog:"
   }
 }

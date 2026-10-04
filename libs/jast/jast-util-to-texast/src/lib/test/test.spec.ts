@@ -40,12 +40,14 @@ describe.each(dir)('parses correctly for %s', (name: string) => {
   const config: Options = existsSync(json) ? JSON.parse(String(readFileSync(json))) : {}
   const proc = fromXML(config)
 
-  const xmlTree = removePosition(proc.parse(jatsIn), true)
+  const xmlTree = proc.parse(jatsIn)
+  removePosition(xmlTree, { force: true })
   // console.dir(xmlTree, { depth: null })
 
   let tree: TexastRoot = { type: 'root', children: [] }
   try {
-    tree = removePosition(proc.runSync(xmlTree), true)
+    tree = proc.runSync(xmlTree) as TexastRoot
+    removePosition(tree, { force: true })
   } catch (e) {
     console.error('woops')
     console.error(e)

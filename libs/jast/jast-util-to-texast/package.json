@@ -37,21 +37,22 @@
     "tsconfig": "./tsconfig.lib.json"
   },
   "dependencies": {
+    "@types/xast": "catalog:",
     "csl-json": "0.1.0",
     "csl-to-biblatex": "workspace:^",
     "jast-types": "workspace:^",
     "jast-util-to-csl": "workspace:^",
-    "rehype-minify-whitespace": "^5.0.0",
     "texast": "workspace:^",
-    "unist-util-is": "^5.2.1",
-    "unist-util-visit": "^4.1.2",
+    "unist-util-is": "catalog:",
+    "unist-util-visit": "catalog:",
+    "xast-util-minify-whitespace": "workspace:^",
     "xast-util-select": "workspace:^"
   },
   "devDependencies": {
     "rejour-parse": "workspace:^",
     "relatex-stringify": "workspace:^",
     "texast-util-to-latex": "workspace:^",
-    "unified": "^10.1.2",
-    "unist-util-remove-position": "4.0.2"
+    "unified": "catalog:",
+    "unist-util-remove-position": "catalog:"
   }
 }

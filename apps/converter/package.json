@@ -38,13 +38,13 @@
     "zustand": "^5.0.15"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "4.3.3",
     "@types/node": "^24.6.0",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "@types/react-syntax-highlighter": "^15.5.13",
-    "autoprefixer": "10.4.13",
-    "postcss": "8.4.38",
-    "tailwindcss": "3.4.3",
+    "postcss": "8.5.23",
+    "tailwindcss": "4.3.3",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "7.0.2"
   }

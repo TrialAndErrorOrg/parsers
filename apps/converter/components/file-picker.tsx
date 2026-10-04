@@ -143,7 +143,7 @@ export function FilePicker({ submission }: { submission: SelectedSubmission }) {
                       <div className="flex min-w-0 gap-2 pt-0.5">
                         <FileText className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" />
                         <div className="min-w-0">
-                          <p className="break-words text-sm leading-tight">
+                          <p className="wrap-break-word text-sm leading-tight">
                             {file.name?.en_US ?? `File ${file.id}`}
                           </p>
                           <div className="mt-1 flex flex-wrap items-center gap-1.5">

@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync, writeFileSync as fsWriteFileSync } from 'fs'
+import { existsSync, readdirSync, readFileSync, writeFileSync as fsWriteFileSync } from 'fs'
 import { join } from 'path'
 import rejourParse from 'rejour-parse'
 import { toTexast } from '../jast-util-to-texast.js'
@@ -29,12 +29,6 @@ const fromXML = (config: Options = {}) =>
 
 const fixtures = new URL('fixtures', import.meta.url)
 const dir = readdirSync(fixtures)
-const arrDir = dir.map((f) => f)
-const doubleDir = dir.map((f) => [
-  join(fixtures.pathname, f, 'index.jats.xml'),
-  join(fixtures.pathname, f, 'index.tex'),
-  join(fixtures.pathname, f, 'indexon'),
-])
 
 describe.each(dir)('parses correctly for %s', (name: string) => {
   const [jats, latex, json] = ['index.jats.xml', 'index.tex', 'index.json'].map((ext) =>
@@ -42,14 +36,8 @@ describe.each(dir)('parses correctly for %s', (name: string) => {
   )
 
   const jatsIn = String(readFileSync(jats))
-  const texOut = String(readFileSync(latex))
 
-  let config: Options | undefined
-  try {
-    config = JSON.parse(String(readFileSync(latex)))
-  } catch (e) {
-    console.error(e)
-  }
+  const config: Options = existsSync(json) ? JSON.parse(String(readFileSync(json))) : {}
   const proc = fromXML(config)
 
   const xmlTree = removePosition(proc.parse(jatsIn), true)
@@ -95,10 +83,7 @@ describe.each(dir)('parses correctly for %s', (name: string) => {
       lx,
     )
   }
-  test('should match snapshot', () => {
-    expect(lx).toMatchSnapshot()
-  })
-  test('should match predefined thing', () => {
-    expect(lx).toEqual(texOut)
+  test('should match the expected LaTeX', async () => {
+    await expect(lx).toMatchFileSnapshot(latex)
   })
 })

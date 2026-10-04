@@ -1,0 +1,144 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "unicorn", "oxc", "import"],
+  "jsPlugins": ["eslint-plugin-regexp"],
+  "categories": {
+    "correctness": "error"
+  },
+  "env": {
+    "builtin": true,
+    "es2024": true,
+    "node": true
+  },
+  "ignorePatterns": [
+    "**/dist/**",
+    "**/.next/**",
+    "**/.turbo/**",
+    "**/coverage/**",
+    "docs/**",
+    "libs/reoff/reoff-parse/docs/**",
+    "turbo/generators/templates/**",
+    "libs/citations/parse-text-cite/**/apa.ts",
+    "apps/converter/lib/generated/**"
+  ],
+  "rules": {
+    "import/extensions": ["error", "ignorePackages"],
+    "no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_",
+        "varsIgnorePattern": "^_",
+        "caughtErrors": "none",
+        "ignoreRestSiblings": true
+      }
+    ],
+    "no-unused-expressions": [
+      "warn",
+      {
+        "allowShortCircuit": true,
+        "allowTernary": true,
+        "allowTaggedTemplates": true
+      }
+    ],
+    "unicorn/no-empty-file": "warn",
+    "no-var": "warn",
+    "prefer-const": "warn",
+    "prefer-rest-params": "warn",
+    "prefer-spread": "warn",
+    "no-regex-spaces": "warn",
+    "prefer-regex-literals": "off",
+    "typescript/ban-ts-comment": "warn",
+    "typescript/no-empty-object-type": "warn",
+    "typescript/no-namespace": "warn",
+    "typescript/no-require-imports": "warn",
+    "typescript/no-unnecessary-type-constraint": "warn",
+    "typescript/no-unsafe-function-type": "warn",
+    "typescript/no-explicit-any": "off",
+    "regexp/confusing-quantifier": "warn",
+    "regexp/control-character-escape": "warn",
+    "regexp/match-any": "warn",
+    "regexp/negation": "warn",
+    "regexp/no-contradiction-with-assertion": "error",
+    "regexp/no-dupe-characters-character-class": "error",
+    "regexp/no-dupe-disjunctions": "error",
+    "regexp/no-empty-alternative": "warn",
+    "regexp/no-empty-capturing-group": "error",
+    "regexp/no-empty-character-class": "error",
+    "regexp/no-empty-group": "error",
+    "regexp/no-empty-lookarounds-assertion": "error",
+    "regexp/no-empty-string-literal": "error",
+    "regexp/no-escape-backspace": "error",
+    "regexp/no-extra-lookaround-assertions": "error",
+    "regexp/no-invalid-regexp": "error",
+    "regexp/no-invisible-character": "error",
+    "regexp/no-lazy-ends": "error",
+    "regexp/no-legacy-features": "error",
+    "regexp/no-misleading-capturing-group": "error",
+    "regexp/no-misleading-unicode-character": "error",
+    "regexp/no-missing-g-flag": "error",
+    "regexp/no-non-standard-flag": "error",
+    "regexp/no-obscure-range": "error",
+    "regexp/no-optional-assertion": "error",
+    "regexp/no-potentially-useless-backreference": "warn",
+    "regexp/no-super-linear-backtracking": "warn",
+    "regexp/no-trivially-nested-assertion": "warn",
+    "regexp/no-trivially-nested-quantifier": "warn",
+    "regexp/no-unused-capturing-group": "warn",
+    "regexp/no-useless-assertions": "error",
+    "regexp/no-useless-backreference": "error",
+    "regexp/no-useless-character-class": "warn",
+    "regexp/no-useless-dollar-replacements": "error",
+    "regexp/no-useless-escape": "warn",
+    "regexp/no-useless-flag": "warn",
+    "regexp/no-useless-lazy": "warn",
+    "regexp/no-useless-non-capturing-group": "warn",
+    "regexp/no-useless-quantifier": "warn",
+    "regexp/no-useless-range": "warn",
+    "regexp/no-useless-set-operand": "error",
+    "regexp/no-useless-string-literal": "warn",
+    "regexp/no-useless-two-nums-quantifier": "warn",
+    "regexp/no-zero-quantifier": "error",
+    "regexp/optimal-lookaround-quantifier": "warn",
+    "regexp/optimal-quantifier-concatenation": "warn",
+    "regexp/prefer-character-class": "warn",
+    "regexp/prefer-d": "warn",
+    "regexp/prefer-plus-quantifier": "warn",
+    "regexp/prefer-predefined-assertion": "warn",
+    "regexp/prefer-question-quantifier": "warn",
+    "regexp/prefer-range": "warn",
+    "regexp/prefer-set-operation": "warn",
+    "regexp/prefer-star-quantifier": "warn",
+    "regexp/prefer-unicode-codepoint-escapes": "warn",
+    "regexp/prefer-w": "warn",
+    "regexp/simplify-set-operations": "warn",
+    "regexp/sort-flags": "warn",
+    "regexp/strict": "warn",
+    "regexp/use-ignore-case": "warn",
+    "unicorn/no-useless-spread": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.{spec,test}.{ts,tsx,js,jsx}", "**/test/**", "**/spec/**", "**/__tests__/**"],
+      "plugins": ["typescript", "unicorn", "oxc", "import", "vitest"],
+      "env": {
+        "vitest": true,
+        "jest": true
+      }
+    },
+    {
+      "files": ["apps/**"],
+      "plugins": ["typescript", "unicorn", "oxc", "import", "react", "jsx-a11y", "nextjs"],
+      "env": {
+        "browser": true
+      },
+      "rules": {
+        "import/extensions": "off",
+        "react/display-name": "off",
+        "react/rules-of-hooks": "error",
+        "react/exhaustive-deps": "warn",
+        "react/react-in-jsx-scope": "off",
+        "nextjs/no-html-link-for-pages": "off"
+      }
+    }
+  ]
+}

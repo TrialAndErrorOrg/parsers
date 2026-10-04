@@ -43,7 +43,9 @@ jobs:
             turbo-${{ runner.os }}-main-
             turbo-${{ runner.os }}-
 
-      - run: pnpm turbo run build typecheck test lint --cache-dir=.turbo/cache
+      - run: pnpm lint
+
+      - run: pnpm turbo run build typecheck test --cache-dir=.turbo/cache
 
       # Non-blocking reminder: list packages that changed without a changeset.
       - name: Changeset status

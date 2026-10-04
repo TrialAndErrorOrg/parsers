@@ -35,11 +35,11 @@ export default function rejourParse(options: Settings = {}) {
     }
     let tree = treeify(doc)
 
-    tree = settings?.removeWhiteSpace
-      ? filter(tree, (node: XastNode) => {
+    tree = configuration.removeWhiteSpace
+      ? filter(tree, { cascade: false }, (node: XastNode) => {
           return !(
             //@ts-expect-error ITS FINE
-            (node.type === 'text' && node.value.replace(/[\n ]+/, '') === '')
+            (node.type === 'text' && node.value.trim() === '')
           )
         })!
       : tree

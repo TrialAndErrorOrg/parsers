@@ -39,6 +39,6 @@
   "dependencies": {
     "ooxast": "workspace:^",
     "ooxast-util-markup-to-style": "workspace:^",
-    "unified": "^10.1.2"
+    "unified": "catalog:"
   }
 }

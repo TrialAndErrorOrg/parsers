@@ -38,13 +38,13 @@
     "tsconfig": "./tsconfig.lib.json"
   },
   "dependencies": {
-    "@types/xast": "^1.0.2",
+    "@types/xast": "catalog:",
     "ooxast": "workspace:^",
     "ooxast-util-get-style": "workspace:^",
-    "unist-util-visit": "^4.1.2",
+    "unist-util-visit": "catalog:",
     "xast-util-is-element": "workspace:^",
     "xast-util-select": "workspace:^",
-    "xast-util-to-string": "^2.0.1",
-    "xastscript": "^3.1.1"
+    "xast-util-to-string": "catalog:",
+    "xastscript": "catalog:"
   }
 }

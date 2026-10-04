@@ -41,12 +41,12 @@
     "@zip.js/zip.js": "^2.23.0",
     "docx-to-vfile": "workspace:^",
     "ooxast": "workspace:^",
-    "unified": "^10.1.2",
-    "xast-util-to-xml": "^3.0.2"
+    "unified": "catalog:",
+    "xast-util-to-xml": "catalog:"
   },
   "devDependencies": {
     "reoff-markup-to-style": "workspace:^",
     "reoff-parse": "workspace:^",
-    "vfile": "^5.3.7"
+    "vfile": "catalog:"
   }
 }

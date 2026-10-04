@@ -44,6 +44,6 @@
     "jast-types": "workspace:^",
     "ooxast": "workspace:^",
     "ooxast-util-to-jast": "workspace:^",
-    "unified": "^10.1.2"
+    "unified": "catalog:"
   }
 }

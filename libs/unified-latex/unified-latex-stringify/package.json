@@ -40,6 +40,6 @@
   "dependencies": {
     "@unified-latex/unified-latex-types": "catalog:",
     "@unified-latex/unified-latex-util-to-string": "catalog:",
-    "unified": "^10.1.2"
+    "unified": "catalog:"
   }
 }

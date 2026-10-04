@@ -55,9 +55,9 @@
     "reoff-parse": "workspace:^",
     "reoff-parse-references": "workspace:^",
     "reoff-unified-latex": "workspace:^",
-    "unified": "^10.1.2",
+    "unified": "catalog:",
     "unified-latex-stringify": "workspace:^",
-    "xast-util-to-string": "^2.0.1",
+    "xast-util-to-string": "catalog:",
     "yargs": "^18.2.0",
     "zod": "^4.6.5"
   },

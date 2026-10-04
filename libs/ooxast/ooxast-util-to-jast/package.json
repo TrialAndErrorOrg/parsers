@@ -41,20 +41,20 @@
     "tsconfig": "./tsconfig.lib.json"
   },
   "dependencies": {
-    "@types/unist": "^2.0.6",
-    "@types/xast": "^1.0.2",
+    "@types/unist": "catalog:",
+    "@types/xast": "catalog:",
     "csl-json": "0.1.0",
+    "docx-to-vfile": "workspace:^",
     "jast-types": "workspace:^",
     "jast-util-from-csl": "workspace:^",
     "ooxast": "workspace:^",
     "ooxast-util-citations": "workspace:^",
     "ooxast-util-properties": "workspace:^",
-    "rehype-minify-whitespace": "^5.0.0",
-    "reoff-parse": "workspace:^",
-    "unist-util-is": "^5.2.1",
+    "unist-util-is": "catalog:",
     "vfile": "catalog:",
     "xast-util-is-element": "workspace:^",
+    "xast-util-minify-whitespace": "workspace:^",
     "xast-util-select": "workspace:^",
-    "xastscript": "^3.1.1"
+    "xastscript": "catalog:"
   }
 }

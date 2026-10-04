@@ -38,6 +38,6 @@
   "dependencies": {
     "ooxast": "workspace:^",
     "ooxast-util-parse-bib-browser": "workspace:^",
-    "vfile": "^5.3.7"
+    "vfile": "catalog:"
   }
 }

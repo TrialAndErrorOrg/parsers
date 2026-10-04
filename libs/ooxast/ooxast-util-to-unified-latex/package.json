@@ -41,7 +41,7 @@
     "tsconfig": "./tsconfig.lib.json"
   },
   "dependencies": {
-    "@types/xast": "^1.0.2",
+    "@types/xast": "catalog:",
     "@unified-latex/unified-latex-builder": "catalog:",
     "@unified-latex/unified-latex-types": "catalog:",
     "@unified-latex/unified-latex-util-render-info": "catalog:",
@@ -52,23 +52,23 @@
     "ooxast": "workspace:^",
     "ooxast-util-citations": "workspace:^",
     "ooxast-util-get-style": "workspace:^",
-    "rehype-minify-whitespace": "^5.0.0",
     "vfile": "catalog:",
-    "xast-util-from-xml": "^3.0.0",
+    "xast-util-from-xml": "catalog:",
     "xast-util-is-element": "workspace:^",
+    "xast-util-minify-whitespace": "workspace:^",
     "xast-util-select": "workspace:^",
-    "xast-util-to-string": "^2.0.1"
+    "xast-util-to-string": "catalog:"
   },
   "devDependencies": {
-    "@types/unist": "^2.0.6",
+    "@types/unist": "catalog:",
     "@unified-latex/unified-latex-util-to-string": "catalog:",
     "reoff-cite": "workspace:^",
     "reoff-clean": "workspace:^",
     "reoff-parse": "workspace:^",
     "reoff-parse-references": "workspace:^",
-    "unified": "^10.1.2",
+    "unified": "catalog:",
     "unified-latex-stringify": "workspace:^",
-    "unist-util-remove-position": "4.0.2",
-    "xastscript": "^3.1.1"
+    "unist-util-remove-position": "catalog:",
+    "xastscript": "catalog:"
   }
 }

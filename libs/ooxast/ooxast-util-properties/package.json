@@ -35,10 +35,10 @@
     "tsconfig": "./tsconfig.lib.json"
   },
   "dependencies": {
-    "@types/xast": "^1.0.2",
+    "@types/xast": "catalog:",
     "xast-util-is-element": "workspace:^"
   },
   "devDependencies": {
-    "xast-util-from-xml": "^3.0.0"
+    "xast-util-from-xml": "catalog:"
   }
 }

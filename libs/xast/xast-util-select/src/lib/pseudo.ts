@@ -15,7 +15,6 @@ import { extendedFilter } from 'bcp-47-match'
 import { parse as commas } from 'comma-separated-tokens'
 import { hasAttribute } from 'xast-util-has-attribute'
 import { isElement } from 'xast-util-is-element'
-import { whitespace } from 'hast-util-whitespace'
 import { zwitch } from 'zwitch'
 import { any } from './any.js'
 
@@ -343,8 +342,16 @@ function blank(_: RulePseudo, element: Element): boolean {
    * @returns {boolean}
    */
   function check(child: ElementChild): boolean {
-    return child.type === 'element' || (child.type === 'text' && !whitespace(child))
+    return child.type === 'element' || (child.type === 'text' && !whitespace(child.value))
   }
+}
+
+/**
+ * Whether `value` is inter-element whitespace (inlined from `hast-util-whitespace`, whose
+ * 3.x types only accept hast nodes).
+ */
+function whitespace(value: string): boolean {
+  return value.replace(/[ \t\n\f\r]/g, '') === ''
 }
 
 /**

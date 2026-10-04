@@ -4,10 +4,59 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-patchedDependencies:
-  '@unified-latex/unified-latex-builder@1.3.1': 51fc506080d8301af1bed7ebb289ccafdeca00650e93aa280913422153b48638
-  '@unified-latex/unified-latex-types@1.3.1': 549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11
-  '@unified-latex/unified-latex-util-to-string@1.3.1': de2f4d1d17124c57ce9daa65978fe039ed1ab1bb36471bfc6b9f575acda04286
+catalogs:
+  default:
+    '@types/unist':
+      specifier: ^3.0.3
+      version: 3.0.3
+    '@types/xast':
+      specifier: ^2.0.4
+      version: 2.0.4
+    '@unified-latex/unified-latex-builder':
+      specifier: ^1.8.4
+      version: 1.8.4
+    '@unified-latex/unified-latex-types':
+      specifier: ^1.8.4
+      version: 1.8.4
+    '@unified-latex/unified-latex-util-render-info':
+      specifier: ^1.8.4
+      version: 1.8.4
+    '@unified-latex/unified-latex-util-to-string':
+      specifier: ^1.8.4
+      version: 1.8.4
+    unified:
+      specifier: ^11.0.5
+      version: 11.0.5
+    unist-builder:
+      specifier: ^4.0.0
+      version: 4.0.0
+    unist-util-visit:
+      specifier: ^5.1.0
+      version: 5.1.0
+    unist-util-visit-parents:
+      specifier: ^6.0.2
+      version: 6.0.2
+    vfile:
+      specifier: ^6.0.3
+      version: 6.0.3
+    xast-util-from-xml:
+      specifier: ^4.0.0
+      version: 4.0.0
+    xast-util-to-string:
+      specifier: ^3.0.0
+      version: 3.0.0
+    xast-util-to-xml:
+      specifier: ^4.0.0
+      version: 4.0.0
+    xastscript:
+      specifier: ^4.0.0
+      version: 4.0.0
+
+overrides:
+  '@types/xast@2>@types/unist': ^3.0.3
+  '@types/mdast@4>@types/unist': ^3.0.3
+  '@types/hast@3>@types/unist': ^3.0.3
+  '@types/nlcst@2>@types/unist': ^3.0.3
 
 importers:
 
@@ -204,11 +253,11 @@ importers:
   libs/book-converter:
     dependencies:
       '@unified-latex/unified-latex-builder':
-        specifier: ^1.3.1
-        version: 1.3.1(patch_hash=51fc506080d8301af1bed7ebb289ccafdeca00650e93aa280913422153b48638)
+        specifier: 'catalog:'
+        version: 1.8.4
       '@unified-latex/unified-latex-types':
-        specifier: ^1.3.1
-        version: 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
+        specifier: 'catalog:'
+        version: 1.8.4
       chokidar:
         specifier: ^5.0.0
         version: 5.0.0
@@ -374,11 +423,11 @@ importers:
   libs/jast/jast:
     dependencies:
       '@types/unist':
-        specifier: ^2.0.6
-        version: 2.0.6
+        specifier: 'catalog:'
+        version: 3.0.3
       '@types/xast':
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: 'catalog:'
+        version: 2.0.4
       utility-types:
         specifier: ^3.11.0
         version: 3.11.0
@@ -392,8 +441,8 @@ importers:
         specifier: workspace:^
         version: link:../jast
       xastscript:
-        specifier: ^3.1.1
-        version: 3.1.1
+        specifier: 'catalog:'
+        version: 4.0.0
 
   libs/jast/jast-util-to-csl:
     dependencies:
@@ -527,11 +576,11 @@ importers:
   libs/ooxast/ooxast:
     dependencies:
       '@types/unist':
-        specifier: ^2.0.6
-        version: 2.0.6
+        specifier: 'catalog:'
+        version: 3.0.3
       '@types/xast':
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: 'catalog:'
+        version: 2.0.4
       utility-types:
         specifier: ^3.11.0
         version: 3.11.0
@@ -539,20 +588,20 @@ importers:
   libs/ooxast/ooxast-util-citation-plugin:
     dependencies:
       '@types/unist':
-        specifier: ^2.0.6
-        version: 2.0.6
+        specifier: 'catalog:'
+        version: 3.0.3
       ooxast:
         specifier: workspace:^
         version: link:../ooxast
       unist-util-visit:
-        specifier: ^4.1.2
-        version: 4.1.2
+        specifier: 'catalog:'
+        version: 5.1.0
       xast-util-is-element:
         specifier: workspace:^
         version: link:../../xast/xast-util-is-element
       xast-util-to-string:
-        specifier: ^2.0.1
-        version: 2.0.1
+        specifier: 'catalog:'
+        version: 3.0.0
     devDependencies:
       docx-to-vfile:
         specifier: workspace:^
@@ -561,14 +610,14 @@ importers:
         specifier: workspace:^
         version: link:../../reoff/reoff-parse
       unified:
-        specifier: ^10.1.2
-        version: 10.1.2
+        specifier: 'catalog:'
+        version: 11.0.5
 
   libs/ooxast/ooxast-util-citations:
     dependencies:
       '@types/unist':
-        specifier: ^2.0.6
-        version: 2.0.6
+        specifier: 'catalog:'
+        version: 3.0.3
       csl-consolidate:
         specifier: workspace:^
         version: link:../../citations/csl-consolidate
@@ -591,11 +640,11 @@ importers:
         specifier: ^1.2.1
         version: 1.2.1
       unist-util-visit-parents:
-        specifier: 5.1.3
-        version: 5.1.3
+        specifier: 'catalog:'
+        version: 6.0.2
       vfile:
-        specifier: ^5.3.7
-        version: 5.3.7
+        specifier: 'catalog:'
+        version: 6.0.3
       xast-util-is-element:
         specifier: workspace:^
         version: link:../../xast/xast-util-is-element
@@ -603,11 +652,11 @@ importers:
         specifier: workspace:^
         version: link:../../xast/xast-util-select
       xast-util-to-string:
-        specifier: ^2.0.1
-        version: 2.0.1
+        specifier: 'catalog:'
+        version: 3.0.0
       xastscript:
-        specifier: ^3.1.1
-        version: 3.1.1
+        specifier: 'catalog:'
+        version: 4.0.0
     devDependencies:
       '@types/similarity':
         specifier: ^1.2.3
@@ -890,8 +939,8 @@ importers:
         specifier: ^5.2.1
         version: 5.2.1
       vfile:
-        specifier: ^5.3.7
-        version: 5.3.7
+        specifier: 'catalog:'
+        version: 6.0.3
       xast-util-is-element:
         specifier: workspace:^
         version: link:../../xast/xast-util-is-element
@@ -920,8 +969,8 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2
       '@unified-latex/unified-latex-builder':
-        specifier: ^1.3.1
-        version: 1.3.1(patch_hash=51fc506080d8301af1bed7ebb289ccafdeca00650e93aa280913422153b48638)
+        specifier: 'catalog:'
+        version: 1.8.4
       csl-json:
         specifier: 0.1.0
         version: 0.1.0
@@ -959,8 +1008,8 @@ importers:
         specifier: ^4.0.4
         version: 4.0.4
       vfile:
-        specifier: ^5.3.7
-        version: 5.3.7
+        specifier: 'catalog:'
+        version: 6.0.3
       xast-util-from-xml:
         specifier: ^3.0.0
         version: 3.0.0
@@ -1017,14 +1066,14 @@ importers:
         specifier: ^1.0.2
         version: 1.0.2
       '@unified-latex/unified-latex-builder':
-        specifier: ^1.3.1
-        version: 1.3.1(patch_hash=51fc506080d8301af1bed7ebb289ccafdeca00650e93aa280913422153b48638)
+        specifier: 'catalog:'
+        version: 1.8.4
       '@unified-latex/unified-latex-types':
-        specifier: ^1.3.1
-        version: 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
+        specifier: 'catalog:'
+        version: 1.8.4
       '@unified-latex/unified-latex-util-render-info':
-        specifier: ^1.3.1
-        version: 1.3.1
+        specifier: 'catalog:'
+        version: 1.8.4
       csl-json:
         specifier: 0.1.0
         version: 0.1.0
@@ -1050,8 +1099,8 @@ importers:
         specifier: ^5.0.0
         version: 5.0.1
       vfile:
-        specifier: ^5.3.7
-        version: 5.3.7
+        specifier: 'catalog:'
+        version: 6.0.3
       xast-util-from-xml:
         specifier: ^3.0.0
         version: 3.0.0
@@ -1069,8 +1118,8 @@ importers:
         specifier: ^2.0.6
         version: 2.0.6
       '@unified-latex/unified-latex-util-to-string':
-        specifier: ^1.3.1
-        version: 1.3.1(patch_hash=de2f4d1d17124c57ce9daa65978fe039ed1ab1bb36471bfc6b9f575acda04286)
+        specifier: 'catalog:'
+        version: 1.8.4
       reoff-cite:
         specifier: workspace:^
         version: link:../../reoff/reoff-cite
@@ -1351,14 +1400,14 @@ importers:
   libs/reoff/docx-to-vfile:
     dependencies:
       '@types/xast':
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: 'catalog:'
+        version: 2.0.4
       unzipit:
         specifier: ^2.1.1
         version: 2.1.1
       vfile:
-        specifier: ^5.3.7
-        version: 5.3.7
+        specifier: 'catalog:'
+        version: 6.0.3
 
   libs/reoff/reoff-cite:
     dependencies:
@@ -1530,8 +1579,8 @@ importers:
   libs/reoff/reoff-unified-latex:
     dependencies:
       '@unified-latex/unified-latex-types':
-        specifier: ^1.3.1
-        version: 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
+        specifier: 'catalog:'
+        version: 1.8.4
       ooxast:
         specifier: workspace:^
         version: link:../../ooxast/ooxast
@@ -1545,8 +1594,8 @@ importers:
   libs/texast/texast:
     dependencies:
       '@types/unist':
-        specifier: ^2.0.6
-        version: 2.0.6
+        specifier: 'catalog:'
+        version: 3.0.3
 
   libs/texast/texast-util-add-preamble:
     dependencies:
@@ -1576,11 +1625,11 @@ importers:
   libs/unified-latex/unified-latex-stringify:
     dependencies:
       '@unified-latex/unified-latex-types':
-        specifier: ^1.3.1
-        version: 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
+        specifier: 'catalog:'
+        version: 1.8.4
       '@unified-latex/unified-latex-util-to-string':
-        specifier: ^1.3.1
-        version: 1.3.1(patch_hash=de2f4d1d17124c57ce9daa65978fe039ed1ab1bb36471bfc6b9f575acda04286)
+        specifier: 'catalog:'
+        version: 1.8.4
       unified:
         specifier: ^10.1.2
         version: 10.1.2
@@ -1592,20 +1641,39 @@ importers:
   libs/xast/xast-util-is-element:
     dependencies:
       '@types/unist':
-        specifier: ^2.0.6
-        version: 2.0.6
+        specifier: 'catalog:'
+        version: 3.0.3
       '@types/xast':
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: 'catalog:'
+        version: 2.0.4
+
+  libs/xast/xast-util-minify-whitespace:
+    dependencies:
+      '@types/xast':
+        specifier: 'catalog:'
+        version: 2.0.4
+    devDependencies:
+      rehype-minify-whitespace:
+        specifier: 5.0.1
+        version: 5.0.1
+      xast-util-from-xml:
+        specifier: 'catalog:'
+        version: 4.0.0
+      xast-util-to-xml:
+        specifier: 'catalog:'
+        version: 4.0.0
+      xastscript:
+        specifier: 'catalog:'
+        version: 4.0.0
 
   libs/xast/xast-util-select:
     dependencies:
       '@types/unist':
-        specifier: ^2.0.6
-        version: 2.0.6
+        specifier: 'catalog:'
+        version: 3.0.3
       '@types/xast':
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: 'catalog:'
+        version: 2.0.4
       bcp-47-match:
         specifier: ^2.0.1
         version: 2.0.2
@@ -1616,9 +1684,6 @@ importers:
         specifier: ^1.4.1
         version: 1.4.1
       direction:
-        specifier: ^2.0.1
-        version: 2.0.1
-      hast-util-whitespace:
         specifier: ^2.0.1
         version: 2.0.1
       nth-check:
@@ -1641,11 +1706,11 @@ importers:
         version: 2.0.4
     devDependencies:
       unist-builder:
-        specifier: ^3.0.1
-        version: 3.0.1
+        specifier: 'catalog:'
+        version: 4.0.0
       xastscript:
-        specifier: ^3.1.1
-        version: 3.1.1
+        specifier: 'catalog:'
+        version: 4.0.0
 
 packages:
 
@@ -3449,8 +3514,14 @@ packages:
   '@types/unist@2.0.6':
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
 
+  '@types/unist@3.0.3':
+    resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
+
   '@types/xast@1.0.2':
     resolution: {integrity: sha512-eIuX49CmWaXTh0hDEQTFH5MbTV+NPm0FM5gB36nDcr9x8n75t9o7wy2guS1lakkQxtUwfVDYiokqvHk3x0CC4Q==}
+
+  '@types/xast@2.0.4':
+    resolution: {integrity: sha512-6Q6HWhHXR5EEKcxgF5YBW5XPAAtCi/GgyCWHx6wR7dZTXF5rv2B2fm0hgpSscJqaVDVm6n1DAVbsM8RSM5PlMw==}
 
   '@types/yargs-parser@21.0.0':
     resolution: {integrity: sha512-iO9ZQHkZxHn4mSakYV0vFHAVDyEOIJQrV2uZ06HxEPcx+mt8swXoZHIbaaJ2crJYFfErySgktuTZ3BeLz+XmFA==}
@@ -3504,71 +3575,71 @@ packages:
     resolution: {integrity: sha512-WmoN8qaIAo7WTYWbAZuG8PYEhn5fkz7dZrqTBZ7dtt//lL2Gwms1IcnQ5yHqjDfX8Ft5j4YzDM23f87zBfDe9g==}
     deprecated: Potential CWE-502 - Update to 1.3.1 or higher
 
-  '@unified-latex/unified-latex-builder@1.3.1':
-    resolution: {integrity: sha512-X2nUVgrdGz5QwCFtQGheI3cw0DmyPKVHY6XZkOy316UVLZVGYKhvsFpdIguXGfcrlz7McyXa6NoFew3N/EP/lQ==}
+  '@unified-latex/unified-latex-builder@1.8.4':
+    resolution: {integrity: sha512-Rw5XlVhJ50wk7J/hukJ0YBjLqaCjNTYDLZc6lNPH8Vji56YPzZbduuh/kY3ueME+CnxJq/34CGY8D/0cOZY8yw==}
 
-  '@unified-latex/unified-latex-ctan@1.3.1':
-    resolution: {integrity: sha512-H9YonJiGiRhOYstrCX9TCsrXiZHKIoBXxT7E4XNa6TC86Zx9Lck4dH65JkW8Eb0BOO8zsFHjVuRIYVrt8MZiMQ==}
+  '@unified-latex/unified-latex-ctan@1.8.4':
+    resolution: {integrity: sha512-jNirPv/pLtuWwGwqmeJPcz3hWX98LcSZDCcnlqCp5HRTx2wzhni2cuefORkP0klz4hoU2lm3s71eVA9taC6kQw==}
 
-  '@unified-latex/unified-latex-prettier@1.3.1':
-    resolution: {integrity: sha512-P234E5Crn3ulNor+k3CDlFo99wJvW0uCxwHvdGd4so2aMilVwmZbzQMMc2BseC5VWT5wPLlZo7ow5mQctVTf+g==}
+  '@unified-latex/unified-latex-prettier@1.8.4':
+    resolution: {integrity: sha512-Y0BxpIstZLVTJqG6kShAMvHzfzFjgezxksjI/PN6FKM3GB+A+aoE/tFPBiLm0y62BPl6CIuYrNIr+4x6H9+KHg==}
 
-  '@unified-latex/unified-latex-types@1.3.1':
-    resolution: {integrity: sha512-697Wc68b6HC4pG9+Gpt9hvZYJUeKQzNGY3ONTVERN3Sqfngd64i2p1Yh1dcqMxspckXaXwIn72XHRBSofITxSw==}
+  '@unified-latex/unified-latex-types@1.8.4':
+    resolution: {integrity: sha512-nQ6YS4WYVOA89qdmxw57vl3KfmRGFHGTyLsw9LxCC7DSE6oma3rvXIGjBDUe7E3bgWocBqRITPcz25VqCRlFzA==}
 
-  '@unified-latex/unified-latex-util-align@1.3.1':
-    resolution: {integrity: sha512-Ym3Xhf7sNkIqLlETkEqC5eFotvkTyXB+Ee9Y7bo1O11qZ+AhwpkyG7E2Crcjw0oToURe3xDQzjMvkNTbFL/OOQ==}
+  '@unified-latex/unified-latex-util-align@1.8.4':
+    resolution: {integrity: sha512-VtW2dpzS1CaT9tOIfP3afoczHypYBGHTaIHlgIhm6gHtxYDsLMASf8850jCKak6tk9cOutgJC7m9zVBsguSxhA==}
 
-  '@unified-latex/unified-latex-util-argspec@1.3.1':
-    resolution: {integrity: sha512-nKFq2ziVxJpRt6oE08HnpGMOugfgRHDsf9ydO7mzhOpVxDbVbr7y0T71CnJOwFZz6lFJJIsFv/J2yiKNtYD1TA==}
+  '@unified-latex/unified-latex-util-argspec@1.8.4':
+    resolution: {integrity: sha512-FZcQ6d5goGmfZnqLNqvl+HzU1xuXfHj4q2JqBPT+qd2Jjj6Bu4EGI3om7jz/FjsSADVQJ6T69gRNxpWAH1uuZw==}
 
-  '@unified-latex/unified-latex-util-arguments@1.3.1':
-    resolution: {integrity: sha512-mOz6QVHE4nBEQypqN+f0PY/17HVBZ8cCjNopGKCS1o1ZEFXHvrjOPYVrJlKHpKFqmoSs6Nk4uiGISA1d9u51Aw==}
+  '@unified-latex/unified-latex-util-arguments@1.8.4':
+    resolution: {integrity: sha512-nVDASzDojN33T1RwjRlACeMObcHW4erxVfv60ZjHKi7B5TCgGU6hzMgScjC4ex5WsR1dLfma4OWElnwOiavXJw==}
 
-  '@unified-latex/unified-latex-util-catcode@1.3.1':
-    resolution: {integrity: sha512-Vr++2ahMIUri1WcFND616hIjRejQRWcMH4P81zbwCY2w47OIl6oQkEffc6HTcmvlsC8dedGQp5C/xRq9EztRSQ==}
+  '@unified-latex/unified-latex-util-catcode@1.8.4':
+    resolution: {integrity: sha512-8huVuXLfpjYp7Ac9/+pQd9i2MYJjJalKLjt1dgaFFO5Ageo5Ot7wDCja2FRYPcHisnFBFoePGCRsqZbnPe1iCw==}
 
-  '@unified-latex/unified-latex-util-comments@1.3.1':
-    resolution: {integrity: sha512-y6ZqhhpGK+nxC19ANHWHo77GE440HjRmTvy1+p6wB3GNbILKAvwrpwLMp/tcOEs2A/p2i2BYmxBc5239trhS3Q==}
+  '@unified-latex/unified-latex-util-comments@1.8.4':
+    resolution: {integrity: sha512-2Iw4BpxOx+Uow4DZio34qP8kqjJvYLATfgn8P48rMF6VLAjJniVvMxpHdbv6Kwh8aCAuhOl2bjMZ9m1NxH+OzQ==}
 
-  '@unified-latex/unified-latex-util-environments@1.3.1':
-    resolution: {integrity: sha512-YsZiZBKLxLKv/WX+CMQLCmhR2HeAC0ZtjgXj/aNqAP0uXN7UTC2N6SA2WodPtd7j2kMn+rv852DQCxffOU1Mfw==}
+  '@unified-latex/unified-latex-util-environments@1.8.4':
+    resolution: {integrity: sha512-zA5rlwApSwLAubtZcQeaOZqLYeFVM9c0aecw3Uajho8GGk9CTUtaS/vvZe4VwnU1Z/usbu1LPgPMaiHt3LTJOQ==}
 
-  '@unified-latex/unified-latex-util-match@1.3.1':
-    resolution: {integrity: sha512-tFgcbL8bMOVvOt9+ADzaiPZTN+P6bECu1sUNNdS/uVK+MXhr/1iJDfOkaJEoKGYEScyivS3i2gtVsJW4VM+QIQ==}
+  '@unified-latex/unified-latex-util-match@1.8.4':
+    resolution: {integrity: sha512-wYhTER8i3THQcTYjSufCr8IC0TxguN3dj3h0EFAVneZQ/FIqi/kbvvtPaI0u8mtQLuBDGfhftBy7PvuK9TSG3w==}
 
-  '@unified-latex/unified-latex-util-parse@1.3.1':
-    resolution: {integrity: sha512-QstGPhdZhHbRG3uafrvm5SrCYmc8WRdp3Rn67XgzVh20NHHDJ2mGbS5dQEhw4MfYcZYK5Z+JUMOEzxpm65welQ==}
+  '@unified-latex/unified-latex-util-parse@1.8.4':
+    resolution: {integrity: sha512-Ri+j+0hdgw2xv3tTnc8sCOL9R25bEeKu7dsgX2eKQ0Q4nWIlJ5dQsMFhykGPJhnAok8t6DRlb2GRt2+Mk1UPHg==}
 
-  '@unified-latex/unified-latex-util-pegjs@1.3.1':
-    resolution: {integrity: sha512-iRM3gteoqbVG7qr8h4byJavJOfnNlqkGcleWRG40242NxQfavVlaRtCNcBi0agyqgQ5kCgFHSvqDI8V7FvPflg==}
+  '@unified-latex/unified-latex-util-pegjs@1.8.4':
+    resolution: {integrity: sha512-5PTvl2zTK25+Dy8SMpqq6Nf9k1gvr89fS7rR3hB8vi/KjA9AfXGQbiYOcwTfN8O5lpoKJeOuXw6hhaSlTpRaMQ==}
 
-  '@unified-latex/unified-latex-util-pgfkeys@1.3.1':
-    resolution: {integrity: sha512-1UpBO8VtBvs6TwcH5TPLv8TpwJlCg1UOxLeQnJ/Yzzb2r+2oU4oZP+q81d0RTe7hXYg541i0jcTBhaWKilAWiA==}
+  '@unified-latex/unified-latex-util-pgfkeys@1.8.4':
+    resolution: {integrity: sha512-HEjqsMEH/T+XF6V6zRbwdW4K1s+sPVgG1lhK5LLzM+qo91PxrWO5ivQFz5S4o98cgSz00IOGOZ3TS0L+aVQzAQ==}
 
-  '@unified-latex/unified-latex-util-print-raw@1.3.1':
-    resolution: {integrity: sha512-c2LiNMdr4UBR9r+lzW3EdW7wlpcCpaeHIR5vO8vpD7KRF2sajshgeBD7ZhJ++t0axr6HTKTKy4JN12zV2UIotQ==}
+  '@unified-latex/unified-latex-util-print-raw@1.8.4':
+    resolution: {integrity: sha512-35hce9A8frQvEp5cM5avPpLMCUs8OIzhR3OZr4TjMJI/Lsj4wu6Tv9h2XQpxDmg8ofOtxn2UEWB19Wld9fgRvw==}
 
-  '@unified-latex/unified-latex-util-render-info@1.3.1':
-    resolution: {integrity: sha512-9eVQw0iIDiycJo+UkSF5BnjEgWCZLzTxtRwFQ3djNXSoJnrGLBKsb3Q5/ZhgkCvFgXKFgvynzRApg12sT6R99g==}
+  '@unified-latex/unified-latex-util-render-info@1.8.4':
+    resolution: {integrity: sha512-G8py9w7PYRgUXl9lMnuvQ24s5hB1wzz2dlCzF+HHbvW8P29x7PF3jry+R9l+LD/P3bxVNdcFTz8HHJ8dnu7NiQ==}
 
-  '@unified-latex/unified-latex-util-replace@1.3.1':
-    resolution: {integrity: sha512-hqYJ8eTp2ZLO13ZBT8IGCSP+EkC0UR2d3ds9xycEy+kzL1bnIno0E5g5MfIKk4A1zptPh28msbPy/8gsD/S5jg==}
+  '@unified-latex/unified-latex-util-replace@1.8.4':
+    resolution: {integrity: sha512-9T2U11L6gihcoCul+xxwQOQrG3b8y5EcXvNXAV5U4c9GkLesvEEQ7wgyVtYtEDHIzFFL6p0Bc60XyWTn8VD3Qw==}
 
-  '@unified-latex/unified-latex-util-scan@1.3.1':
-    resolution: {integrity: sha512-mMG0wRKcUlz0oryeo7eKhsFEYs9W2FLPNuT4pPUgJNkVOrWMRfgnBXlY+3MeGFSM5GWa90BK3loLcMwtR0FmSw==}
+  '@unified-latex/unified-latex-util-scan@1.8.4':
+    resolution: {integrity: sha512-oeL2PBxXIsEtO/ZQdiWWjy3t96wnd/8Obn4ts80g++6S/9p6GKU27MDpUP9zb/k3OBwUufH4/LkdhokWGVmTNQ==}
 
-  '@unified-latex/unified-latex-util-split@1.3.1':
-    resolution: {integrity: sha512-OCeRB2tbp7P1yzAP0tCrSBm4D3LS0angf6UH4rX7PzhxalKNyo6K4oIHsp5zavaoBtxJ7LvdNnc9hXrxhBSnIg==}
+  '@unified-latex/unified-latex-util-split@1.8.4':
+    resolution: {integrity: sha512-EZm92GRiOLcJeH/HFfh1unH+BBBGHOlvgjzIvG5I5XofLWj/Y2lwX2aPbNfrT/nmjKrujcUqPVAQPS8U2ydnpg==}
 
-  '@unified-latex/unified-latex-util-to-string@1.3.1':
-    resolution: {integrity: sha512-E+Xc+DuZcLnWNysNiZT4N/AkhvyMaw80QBBUQ7z9bp5ZETnVRNgLmjA7IfajvNijvQ2cP1iX4cgxwUG5UpAeGg==}
+  '@unified-latex/unified-latex-util-to-string@1.8.4':
+    resolution: {integrity: sha512-XfvBkOhVaBh0aS85vQCtb0fJuVz74irWqcmBXg9s88PFFVhn8fG7CaIMTtv2WD6aCqu55N1VHc6+InrUUHikuA==}
 
-  '@unified-latex/unified-latex-util-trim@1.3.1':
-    resolution: {integrity: sha512-spCHOJ5fl2qqVthTnFe2jG8Tii3j/YLgN2n7ajj+BGc23o8Dv89sQNfUDOnCgvToaLdA5KeQFMixta6ewxxV0Q==}
+  '@unified-latex/unified-latex-util-trim@1.8.4':
+    resolution: {integrity: sha512-Da6vw1XyFxj1uk2p5cxOJXRMVhM/HEaf0SG8R+G1XUEJOmglicSoJOqRIAkpDrLOBZLebAiiXWmjbtIQzbhKkQ==}
 
-  '@unified-latex/unified-latex-util-visit@1.3.1':
-    resolution: {integrity: sha512-bBAA23VpPQZ6b1kDdfcTVsZqd82V3YX3nRHAIThH6cZ6802gn2cNW2DnmYV738gegcbA74LgPREPv3mkUWe+HA==}
+  '@unified-latex/unified-latex-util-visit@1.8.4':
+    resolution: {integrity: sha512-m5O9evxr/kiX1awZAcwUQL+8slVvlWlkbZoKFDP1agrp3dpk7+69npqyoapKKJEK0B4uRYmv93Ho31oHgNoJrg==}
 
   '@vitest/mocker@5.0.3':
     resolution: {integrity: sha512-T8sWAIbkSyAjkwTcaEc3Iu0o9A27X1/kdXrizhZkGuSKScRQtRzclfAMpOTcGdXCsqxeWlpGy3XjqaW8CpLORg==}
@@ -3897,6 +3968,9 @@ packages:
 
   detect-node-es@1.1.0:
     resolution: {integrity: sha512-ypdmJU/TbBby2Dxibuv7ZLW3Bs1QEmM7nHjEANfohJLvE0XVujisn1qPJcZxg+qDucsr+bP6fLD1rPS3AhJ7EQ==}
+
+  devlop@1.1.0:
+    resolution: {integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==}
 
   diff@5.1.0:
     resolution: {integrity: sha512-D+mk+qE8VC/PAUrlAU34N+VfXev0ghe5ywmpqrawphmVZc1bEfn56uo9qpyGp1p4xpzOHkSW4ztBd6L7Xx4ACw==}
@@ -4987,9 +5061,14 @@ packages:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
 
-  prettier@2.8.4:
-    resolution: {integrity: sha512-vIS4Rlc2FNh0BySk3Wkd6xmwxB0FpOndW5fisM5H8hsZSxU2VWVB5CWIkIjWvrHjIhxk2g3bfMKM87zNTrZddw==}
+  prettier@2.8.8:
+    resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
     engines: {node: '>=10.13.0'}
+    hasBin: true
+
+  prettier@3.9.9:
+    resolution: {integrity: sha512-Z/CJHIkdujO/OtN7nXUii0Rf3VT5SRuhjBA82Xvu2XhBUgX3nhP67T0LHceBdQLex7OOFGTox+Q5Yg8Jk2Qivg==}
+    engines: {node: '>=14'}
     hasBin: true
 
   pretty-ms@9.3.1:
@@ -5410,11 +5489,17 @@ packages:
   unified@10.1.2:
     resolution: {integrity: sha512-pUSWAi/RAnVy1Pif2kAoeWNBa3JVrx0MId2LASj8G+7AiHWoKZNTomq6LG326T68U7/e263X6fTdcXIy7XnF7Q==}
 
+  unified@11.0.5:
+    resolution: {integrity: sha512-xKvGhPWw3k84Qjh8bI3ZeJjqnyadK+GEFtazSfZv/rKeTkTjOJho6mFqh2SM96iIcZokxiOpg78GazTSg8+KHA==}
+
   unified@9.2.2:
     resolution: {integrity: sha512-Sg7j110mtefBD+qunSLO1lqOEKdrwBFBrR6Qd8f4uwkhWNlbkaqwHse6e7QvD3AP/MNoJdEDLaf8OxYyoWgorQ==}
 
   unist-builder@3.0.1:
     resolution: {integrity: sha512-gnpOw7DIpCA0vpr6NqdPvTWnlPTApCTRzr+38E6hCWx3rz/cjo83SsKIlS1Z+L5ttScQ2AwutNnb8+tAvpb6qQ==}
+
+  unist-builder@4.0.0:
+    resolution: {integrity: sha512-wmRFnH+BLpZnTKpc5L7O67Kac89s9HMrtELpnNaE6TAobq5DTZZs5YaTQfAZBA9bFPECx2uVAPO31c+GVug8mg==}
 
   unist-util-filter@4.0.1:
     resolution: {integrity: sha512-RynicUM/vbOSTSiUK+BnaK9XMfmQUh6gyi7L6taNgc7FIf84GukXVV3ucGzEN/PhUUkdP5hb1MmXc+3cvPUm5Q==}
@@ -5427,6 +5512,9 @@ packages:
 
   unist-util-is@5.2.1:
     resolution: {integrity: sha512-u9njyyfEh43npf1M+yGKDGVPbY/JWEemg5nH05ncKPfi+kBbKBJoTdsogMu33uhytuLlv9y0O7GH7fEdwLdLQw==}
+
+  unist-util-is@6.0.1:
+    resolution: {integrity: sha512-LsiILbtBETkDz8I9p1dQ0uyRUWuaQzd/cuEeS1hoRSyW5E5XGmTzlwY1OrNzzakGowI9Dr/I8HVaw4hTtnxy8g==}
 
   unist-util-map@3.1.3:
     resolution: {integrity: sha512-4/mDauoxqZ6geK97lJ6n2kDk6JK88Vh+hWMSJqyaaP/7eqN1dDhjcjnNxKNm3YU6Sw7PVJtcFMUbnmHvYzb6Vg==}
@@ -5452,6 +5540,9 @@ packages:
   unist-util-stringify-position@3.0.3:
     resolution: {integrity: sha512-k5GzIBZ/QatR8N5X2y+drfpWG8IDBzdnVj6OInRNWm1oXrzydiaAT2OQiA8DPRRZyAKb9b6I2a6PxYklZD0gKg==}
 
+  unist-util-stringify-position@4.0.0:
+    resolution: {integrity: sha512-0ASV06AAoKCDkS2+xw5RXJywruurpbC4JZSm7nr7MOt1ojAzvyyaO+UxZf18j8FCF6kmzCZKcAgN/yu2gm2XgQ==}
+
   unist-util-visit-children@1.1.4:
     resolution: {integrity: sha512-sA/nXwYRCQVRwZU2/tQWUqJ9JSFM1X3x7JIOsIgSzrFHcfVt6NkzDtKzyxg2cZWkCwGF9CO8x4QNZRJRMK8FeQ==}
 
@@ -5464,8 +5555,14 @@ packages:
   unist-util-visit-parents@5.1.3:
     resolution: {integrity: sha512-x6+y8g7wWMyQhL1iZfhIPhDAs7Xwbn9nRosDXl7qoPTSCy0yNxnKc+hWokFifWQIDGi154rdUqKvbCa4+1kLhg==}
 
+  unist-util-visit-parents@6.0.2:
+    resolution: {integrity: sha512-goh1s1TBrqSqukSc8wrjwWhL0hiJxgA8m4kFxGlQ+8FYQ3C/m11FcTs4YYem7V664AhHVvgoQLk890Ssdsr2IQ==}
+
   unist-util-visit@4.1.2:
     resolution: {integrity: sha512-MSd8OUGISqHdVvfY9TPhyK2VdUrPgxkUtWSuMHF6XAAFuL4LokseigBnZtPnJMu+FbynTkFNnFlyjxpVKujMRg==}
+
+  unist-util-visit@5.1.0:
+    resolution: {integrity: sha512-m+vIdyeCOpdr/QeQCu2EzxX/ohgS8KbnPDgFni4dQsfSCtpz8UqDyY5GjRru8PDKuYn7Fq19j1CQ+nJSsGKOzg==}
 
   unzipit@2.1.1:
     resolution: {integrity: sha512-GNIM737c1VV8Z5VD2gSs3SERnqe7KS+dHAmqN9GzdXHB3k4NfXcgNv0+z0br7gJZdhJvv8+MCxBwLvRy7fOhyg==}
@@ -5509,11 +5606,17 @@ packages:
   vfile-location@4.1.0:
     resolution: {integrity: sha512-YF23YMyASIIJXpktBa4vIGLJ5Gs88UB/XePgqPmTa7cDA+JeO3yclbpheQYCHjVHBn/yePzrXuygIL+xbvRYHw==}
 
+  vfile-location@5.0.3:
+    resolution: {integrity: sha512-5yXvWDEgqeiYiBe1lbxYF7UMAIm/IcopxMHrMQDq3nvKcjPKIhZklUKL+AE7J7uApI4kwe2snsK+eI6UTj9EHg==}
+
   vfile-message@2.0.4:
     resolution: {integrity: sha512-DjssxRGkMvifUOJre00juHoP9DPWuzjxKuMDrhNbk2TdaYYBNMStsNhEOt3idrtI12VQYM/1+iM0KOzXi4pxwQ==}
 
   vfile-message@3.1.4:
     resolution: {integrity: sha512-fa0Z6P8HUrQN4BZaX05SIVXic+7kE3b05PWAtPuYP9QLHsLKYR7/AlLW3NtOrpXRLeawpDLMsVkmk5DG0NXgWw==}
+
+  vfile-message@4.0.3:
+    resolution: {integrity: sha512-QTHzsGd1EhbZs4AsQ20JX1rC3cOlt/IWJruk893DfLRr57lcnOeMaWG4K0JrRta4mIJZKth2Au3mM3u03/JWKw==}
 
   vfile-reporter@7.0.5:
     resolution: {integrity: sha512-NdWWXkv6gcd7AZMvDomlQbK3MqFWL1RlGzMn++/O2TI+68+nqxCPTvLugdOtfSzXmjh+xUyhp07HhlrbJjT+mw==}
@@ -5529,6 +5632,9 @@ packages:
 
   vfile@5.3.7:
     resolution: {integrity: sha512-r7qlzkgErKjobAmyNIkkSpizsFPYiUPuJb5pNW1RB4JcYVZhs4lIbVqk8XPk033CV/1z8ss5pkax8SuhGpcG8g==}
+
+  vfile@6.0.3:
+    resolution: {integrity: sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==}
 
   vite@6.4.1:
     resolution: {integrity: sha512-+Oxm7q9hDoLMyJOYfUYBuHQo+dkAloi33apOPP56pzj+vsdJDzr+j1NISE5pyaAuKL4A3UD34qd0lx5+kfKp2g==}
@@ -5655,14 +5761,26 @@ packages:
   xast-util-from-xml@3.0.0:
     resolution: {integrity: sha512-zEfGxnue7vHbayZnRBAjJsjV1dQG6XWKLAzrsPxX2l4WHmqGZxM76XxRblaTHvcOYMFLlnVp3DFcUAl+Qk9SNQ==}
 
+  xast-util-from-xml@4.0.0:
+    resolution: {integrity: sha512-Pwj6Bw5XARduMeTWpeEfmfgT8/Ma3oiMI4bBIRzCd7GH26A/dn3x7jDc2BHBCQxxdQniTh0MjVUYbjaj4Ljb+Q==}
+
   xast-util-to-string@2.0.1:
     resolution: {integrity: sha512-2f6lUwOKjQZWU7g62F1hU/qYselOs+dPT/fwj9ecQfJT1J1Fk8gbcW0D+u6MXDntzI4arniqa4hM4P7lL7n6hw==}
+
+  xast-util-to-string@3.0.0:
+    resolution: {integrity: sha512-FmKJ130Fbo7SLMTLGECP0WE/bAYNC0AXeiKItv8Qk19Bb2YON09N6hbCvO4gdo4yvO4vulswCJKYQMU+Mmv+5A==}
 
   xast-util-to-xml@3.0.2:
     resolution: {integrity: sha512-lbnJEVui7Lk9W/TydInkin5OnOyTAr2b4OpK5YjXo94qqoXaR6mFE/evXfOrBev9EnD91r0FOPxrLfTT0qLITQ==}
 
+  xast-util-to-xml@4.0.0:
+    resolution: {integrity: sha512-r1euIWS5yZJUNpfN+ReE4m7Vld2iytaOPJtuXVuRQacRZwqRN1MAb+dv0aGLrdXOZrpGLyvUFf1Upyrb3R5qBg==}
+
   xastscript@3.1.1:
     resolution: {integrity: sha512-rE7oVPLENyIZNKeRkXE96ao/QiucenYROqdBnEuNNkQHlyxf3vJ5EMNh2QQ4AYhdf9v/dVuxJ7F4u4AaOOhkOA==}
+
+  xastscript@4.0.0:
+    resolution: {integrity: sha512-r7a0kObEyivkML0dLrp/nOH5l51y9v5DL1MT/Xc6qUgGGNP1mZZUmT6NXtWAmx2FLfjonop++PtpVMwp1Hw/Gw==}
 
   y18n@5.0.8:
     resolution: {integrity: sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==}
@@ -7061,7 +7179,7 @@ snapshots:
 
   '@types/hast@3.0.5':
     dependencies:
-      '@types/unist': 2.0.6
+      '@types/unist': 3.0.3
 
   '@types/katex@0.11.1': {}
 
@@ -7121,9 +7239,15 @@ snapshots:
 
   '@types/unist@2.0.6': {}
 
+  '@types/unist@3.0.3': {}
+
   '@types/xast@1.0.2':
     dependencies:
       '@types/unist': 2.0.6
+
+  '@types/xast@2.0.4':
+    dependencies:
+      '@types/unist': 3.0.3
 
   '@types/yargs-parser@21.0.0': {}
 
@@ -7154,168 +7278,166 @@ snapshots:
 
   '@ungap/structured-clone@1.3.0': {}
 
-  '@unified-latex/unified-latex-builder@1.3.1(patch_hash=51fc506080d8301af1bed7ebb289ccafdeca00650e93aa280913422153b48638)':
+  '@unified-latex/unified-latex-builder@1.8.4':
     dependencies:
-      '@unified-latex/unified-latex-types': 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
+      '@unified-latex/unified-latex-types': 1.8.4
 
-  '@unified-latex/unified-latex-ctan@1.3.1':
+  '@unified-latex/unified-latex-ctan@1.8.4':
     dependencies:
-      '@unified-latex/unified-latex-builder': 1.3.1(patch_hash=51fc506080d8301af1bed7ebb289ccafdeca00650e93aa280913422153b48638)
-      '@unified-latex/unified-latex-types': 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
-      '@unified-latex/unified-latex-util-argspec': 1.3.1
-      '@unified-latex/unified-latex-util-arguments': 1.3.1
-      '@unified-latex/unified-latex-util-comments': 1.3.1
-      '@unified-latex/unified-latex-util-match': 1.3.1
-      '@unified-latex/unified-latex-util-pegjs': 1.3.1
-      '@unified-latex/unified-latex-util-print-raw': 1.3.1
-      '@unified-latex/unified-latex-util-render-info': 1.3.1
-      '@unified-latex/unified-latex-util-replace': 1.3.1
-      '@unified-latex/unified-latex-util-scan': 1.3.1
-      '@unified-latex/unified-latex-util-split': 1.3.1
-      '@unified-latex/unified-latex-util-trim': 1.3.1
-      '@unified-latex/unified-latex-util-visit': 1.3.1
+      '@unified-latex/unified-latex-builder': 1.8.4
+      '@unified-latex/unified-latex-types': 1.8.4
+      '@unified-latex/unified-latex-util-argspec': 1.8.4
+      '@unified-latex/unified-latex-util-arguments': 1.8.4
+      '@unified-latex/unified-latex-util-comments': 1.8.4
+      '@unified-latex/unified-latex-util-match': 1.8.4
+      '@unified-latex/unified-latex-util-pegjs': 1.8.4
+      '@unified-latex/unified-latex-util-print-raw': 1.8.4
+      '@unified-latex/unified-latex-util-render-info': 1.8.4
+      '@unified-latex/unified-latex-util-replace': 1.8.4
+      '@unified-latex/unified-latex-util-scan': 1.8.4
+      '@unified-latex/unified-latex-util-split': 1.8.4
+      '@unified-latex/unified-latex-util-trim': 1.8.4
+      '@unified-latex/unified-latex-util-visit': 1.8.4
       color: 4.2.3
 
-  '@unified-latex/unified-latex-prettier@1.3.1':
+  '@unified-latex/unified-latex-prettier@1.8.4':
     dependencies:
-      '@unified-latex/unified-latex-ctan': 1.3.1
-      '@unified-latex/unified-latex-types': 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
-      '@unified-latex/unified-latex-util-align': 1.3.1
-      '@unified-latex/unified-latex-util-match': 1.3.1
-      '@unified-latex/unified-latex-util-parse': 1.3.1
-      '@unified-latex/unified-latex-util-pgfkeys': 1.3.1
-      '@unified-latex/unified-latex-util-print-raw': 1.3.1
-      '@unified-latex/unified-latex-util-trim': 1.3.1
-      '@unified-latex/unified-latex-util-visit': 1.3.1
-      prettier: 2.8.4
+      '@unified-latex/unified-latex-ctan': 1.8.4
+      '@unified-latex/unified-latex-types': 1.8.4
+      '@unified-latex/unified-latex-util-align': 1.8.4
+      '@unified-latex/unified-latex-util-match': 1.8.4
+      '@unified-latex/unified-latex-util-parse': 1.8.4
+      '@unified-latex/unified-latex-util-pgfkeys': 1.8.4
+      '@unified-latex/unified-latex-util-print-raw': 1.8.4
+      '@unified-latex/unified-latex-util-trim': 1.8.4
+      '@unified-latex/unified-latex-util-visit': 1.8.4
+      prettier: 3.9.9
+
+  '@unified-latex/unified-latex-types@1.8.4': {}
+
+  '@unified-latex/unified-latex-util-align@1.8.4':
+    dependencies:
+      '@unified-latex/unified-latex-types': 1.8.4
+      '@unified-latex/unified-latex-util-match': 1.8.4
+      '@unified-latex/unified-latex-util-pegjs': 1.8.4
+
+  '@unified-latex/unified-latex-util-argspec@1.8.4':
+    dependencies:
+      '@unified-latex/unified-latex-util-pegjs': 1.8.4
+
+  '@unified-latex/unified-latex-util-arguments@1.8.4':
+    dependencies:
+      '@unified-latex/unified-latex-builder': 1.8.4
+      '@unified-latex/unified-latex-types': 1.8.4
+      '@unified-latex/unified-latex-util-argspec': 1.8.4
+      '@unified-latex/unified-latex-util-match': 1.8.4
+      '@unified-latex/unified-latex-util-render-info': 1.8.4
+      '@unified-latex/unified-latex-util-scan': 1.8.4
+      '@unified-latex/unified-latex-util-visit': 1.8.4
       unified: 10.1.2
 
-  '@unified-latex/unified-latex-types@1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)': {}
-
-  '@unified-latex/unified-latex-util-align@1.3.1':
+  '@unified-latex/unified-latex-util-catcode@1.8.4':
     dependencies:
-      '@unified-latex/unified-latex-types': 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
-      '@unified-latex/unified-latex-util-match': 1.3.1
-      '@unified-latex/unified-latex-util-pegjs': 1.3.1
+      '@unified-latex/unified-latex-types': 1.8.4
+      '@unified-latex/unified-latex-util-match': 1.8.4
+      '@unified-latex/unified-latex-util-visit': 1.8.4
 
-  '@unified-latex/unified-latex-util-argspec@1.3.1':
+  '@unified-latex/unified-latex-util-comments@1.8.4':
     dependencies:
-      '@unified-latex/unified-latex-util-pegjs': 1.3.1
+      '@unified-latex/unified-latex-types': 1.8.4
+      '@unified-latex/unified-latex-util-match': 1.8.4
+      '@unified-latex/unified-latex-util-replace': 1.8.4
 
-  '@unified-latex/unified-latex-util-arguments@1.3.1':
+  '@unified-latex/unified-latex-util-environments@1.8.4':
     dependencies:
-      '@unified-latex/unified-latex-builder': 1.3.1(patch_hash=51fc506080d8301af1bed7ebb289ccafdeca00650e93aa280913422153b48638)
-      '@unified-latex/unified-latex-types': 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
-      '@unified-latex/unified-latex-util-argspec': 1.3.1
-      '@unified-latex/unified-latex-util-match': 1.3.1
-      '@unified-latex/unified-latex-util-render-info': 1.3.1
-      '@unified-latex/unified-latex-util-scan': 1.3.1
-      '@unified-latex/unified-latex-util-visit': 1.3.1
+      '@unified-latex/unified-latex-types': 1.8.4
+      '@unified-latex/unified-latex-util-arguments': 1.8.4
+      '@unified-latex/unified-latex-util-match': 1.8.4
+      '@unified-latex/unified-latex-util-print-raw': 1.8.4
+      '@unified-latex/unified-latex-util-render-info': 1.8.4
+      '@unified-latex/unified-latex-util-visit': 1.8.4
       unified: 10.1.2
 
-  '@unified-latex/unified-latex-util-catcode@1.3.1':
+  '@unified-latex/unified-latex-util-match@1.8.4':
     dependencies:
-      '@unified-latex/unified-latex-types': 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
-      '@unified-latex/unified-latex-util-match': 1.3.1
-      '@unified-latex/unified-latex-util-visit': 1.3.1
+      '@unified-latex/unified-latex-types': 1.8.4
+      '@unified-latex/unified-latex-util-print-raw': 1.8.4
 
-  '@unified-latex/unified-latex-util-comments@1.3.1':
+  '@unified-latex/unified-latex-util-parse@1.8.4':
     dependencies:
-      '@unified-latex/unified-latex-types': 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
-      '@unified-latex/unified-latex-util-match': 1.3.1
-      '@unified-latex/unified-latex-util-replace': 1.3.1
-
-  '@unified-latex/unified-latex-util-environments@1.3.1':
-    dependencies:
-      '@unified-latex/unified-latex-types': 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
-      '@unified-latex/unified-latex-util-arguments': 1.3.1
-      '@unified-latex/unified-latex-util-match': 1.3.1
-      '@unified-latex/unified-latex-util-print-raw': 1.3.1
-      '@unified-latex/unified-latex-util-render-info': 1.3.1
-      '@unified-latex/unified-latex-util-visit': 1.3.1
+      '@unified-latex/unified-latex-ctan': 1.8.4
+      '@unified-latex/unified-latex-types': 1.8.4
+      '@unified-latex/unified-latex-util-arguments': 1.8.4
+      '@unified-latex/unified-latex-util-catcode': 1.8.4
+      '@unified-latex/unified-latex-util-environments': 1.8.4
+      '@unified-latex/unified-latex-util-match': 1.8.4
+      '@unified-latex/unified-latex-util-pegjs': 1.8.4
+      '@unified-latex/unified-latex-util-print-raw': 1.8.4
+      '@unified-latex/unified-latex-util-trim': 1.8.4
+      '@unified-latex/unified-latex-util-visit': 1.8.4
       unified: 10.1.2
 
-  '@unified-latex/unified-latex-util-match@1.3.1':
+  '@unified-latex/unified-latex-util-pegjs@1.8.4':
     dependencies:
-      '@unified-latex/unified-latex-types': 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
-      '@unified-latex/unified-latex-util-print-raw': 1.3.1
+      '@unified-latex/unified-latex-types': 1.8.4
+      '@unified-latex/unified-latex-util-match': 1.8.4
 
-  '@unified-latex/unified-latex-util-parse@1.3.1':
+  '@unified-latex/unified-latex-util-pgfkeys@1.8.4':
     dependencies:
-      '@unified-latex/unified-latex-ctan': 1.3.1
-      '@unified-latex/unified-latex-types': 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
-      '@unified-latex/unified-latex-util-arguments': 1.3.1
-      '@unified-latex/unified-latex-util-catcode': 1.3.1
-      '@unified-latex/unified-latex-util-environments': 1.3.1
-      '@unified-latex/unified-latex-util-match': 1.3.1
-      '@unified-latex/unified-latex-util-pegjs': 1.3.1
-      '@unified-latex/unified-latex-util-print-raw': 1.3.1
-      '@unified-latex/unified-latex-util-trim': 1.3.1
-      '@unified-latex/unified-latex-util-visit': 1.3.1
+      '@unified-latex/unified-latex-types': 1.8.4
+      '@unified-latex/unified-latex-util-match': 1.8.4
+      '@unified-latex/unified-latex-util-pegjs': 1.8.4
+      '@unified-latex/unified-latex-util-print-raw': 1.8.4
+
+  '@unified-latex/unified-latex-util-print-raw@1.8.4':
+    dependencies:
+      '@unified-latex/unified-latex-types': 1.8.4
+
+  '@unified-latex/unified-latex-util-render-info@1.8.4':
+    dependencies:
+      '@unified-latex/unified-latex-types': 1.8.4
+      '@unified-latex/unified-latex-util-visit': 1.8.4
+
+  '@unified-latex/unified-latex-util-replace@1.8.4':
+    dependencies:
+      '@unified-latex/unified-latex-types': 1.8.4
+      '@unified-latex/unified-latex-util-match': 1.8.4
+      '@unified-latex/unified-latex-util-split': 1.8.4
+      '@unified-latex/unified-latex-util-trim': 1.8.4
+      '@unified-latex/unified-latex-util-visit': 1.8.4
       unified: 10.1.2
 
-  '@unified-latex/unified-latex-util-pegjs@1.3.1':
+  '@unified-latex/unified-latex-util-scan@1.8.4':
     dependencies:
-      '@unified-latex/unified-latex-types': 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
-      '@unified-latex/unified-latex-util-match': 1.3.1
-
-  '@unified-latex/unified-latex-util-pgfkeys@1.3.1':
-    dependencies:
-      '@unified-latex/unified-latex-types': 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
-      '@unified-latex/unified-latex-util-match': 1.3.1
-      '@unified-latex/unified-latex-util-pegjs': 1.3.1
-      '@unified-latex/unified-latex-util-print-raw': 1.3.1
-
-  '@unified-latex/unified-latex-util-print-raw@1.3.1':
-    dependencies:
-      '@unified-latex/unified-latex-types': 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
-
-  '@unified-latex/unified-latex-util-render-info@1.3.1':
-    dependencies:
-      '@unified-latex/unified-latex-types': 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
-      '@unified-latex/unified-latex-util-visit': 1.3.1
-
-  '@unified-latex/unified-latex-util-replace@1.3.1':
-    dependencies:
-      '@unified-latex/unified-latex-types': 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
-      '@unified-latex/unified-latex-util-match': 1.3.1
-      '@unified-latex/unified-latex-util-split': 1.3.1
-      '@unified-latex/unified-latex-util-trim': 1.3.1
-      '@unified-latex/unified-latex-util-visit': 1.3.1
-      unified: 10.1.2
-
-  '@unified-latex/unified-latex-util-scan@1.3.1':
-    dependencies:
-      '@unified-latex/unified-latex-types': 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
-      '@unified-latex/unified-latex-util-match': 1.3.1
-      '@unified-latex/unified-latex-util-print-raw': 1.3.1
+      '@unified-latex/unified-latex-types': 1.8.4
+      '@unified-latex/unified-latex-util-match': 1.8.4
+      '@unified-latex/unified-latex-util-print-raw': 1.8.4
       trie-prefix-tree: 1.5.1
 
-  '@unified-latex/unified-latex-util-split@1.3.1':
+  '@unified-latex/unified-latex-util-split@1.8.4':
     dependencies:
-      '@unified-latex/unified-latex-types': 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
-      '@unified-latex/unified-latex-util-match': 1.3.1
+      '@unified-latex/unified-latex-types': 1.8.4
+      '@unified-latex/unified-latex-util-match': 1.8.4
 
-  '@unified-latex/unified-latex-util-to-string@1.3.1(patch_hash=de2f4d1d17124c57ce9daa65978fe039ed1ab1bb36471bfc6b9f575acda04286)':
+  '@unified-latex/unified-latex-util-to-string@1.8.4':
     dependencies:
-      '@unified-latex/unified-latex-prettier': 1.3.1
-      '@unified-latex/unified-latex-types': 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
-      '@unified-latex/unified-latex-util-print-raw': 1.3.1
-      prettier: 2.8.4
+      '@unified-latex/unified-latex-prettier': 1.8.4
+      '@unified-latex/unified-latex-types': 1.8.4
+      '@unified-latex/unified-latex-util-print-raw': 1.8.4
+      prettier: 2.8.8
       unified: 10.1.2
 
-  '@unified-latex/unified-latex-util-trim@1.3.1':
+  '@unified-latex/unified-latex-util-trim@1.8.4':
     dependencies:
-      '@unified-latex/unified-latex-types': 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
-      '@unified-latex/unified-latex-util-match': 1.3.1
-      '@unified-latex/unified-latex-util-render-info': 1.3.1
-      '@unified-latex/unified-latex-util-visit': 1.3.1
+      '@unified-latex/unified-latex-types': 1.8.4
+      '@unified-latex/unified-latex-util-match': 1.8.4
+      '@unified-latex/unified-latex-util-visit': 1.8.4
       unified: 10.1.2
 
-  '@unified-latex/unified-latex-util-visit@1.3.1':
+  '@unified-latex/unified-latex-util-visit@1.8.4':
     dependencies:
-      '@unified-latex/unified-latex-types': 1.3.1(patch_hash=549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11)
-      '@unified-latex/unified-latex-util-match': 1.3.1
+      '@unified-latex/unified-latex-types': 1.8.4
+      '@unified-latex/unified-latex-util-match': 1.8.4
 
   '@vitest/mocker@5.0.3(vite@6.4.1(@types/node@24.19.1)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.1))':
     dependencies:
@@ -7589,6 +7711,10 @@ snapshots:
   detect-libc@2.1.2: {}
 
   detect-node-es@1.1.0: {}
+
+  devlop@1.1.0:
+    dependencies:
+      dequal: 2.0.3
 
   diff@5.1.0: {}
 
@@ -9000,7 +9126,9 @@ snapshots:
 
   prelude-ls@1.2.1: {}
 
-  prettier@2.8.4: {}
+  prettier@2.8.8: {}
+
+  prettier@3.9.9: {}
 
   pretty-ms@9.3.1:
     dependencies:
@@ -9487,6 +9615,16 @@ snapshots:
       trough: 2.1.0
       vfile: 5.3.7
 
+  unified@11.0.5:
+    dependencies:
+      '@types/unist': 3.0.3
+      bail: 2.0.2
+      devlop: 1.1.0
+      extend: 3.0.2
+      is-plain-obj: 4.1.0
+      trough: 2.1.0
+      vfile: 6.0.3
+
   unified@9.2.2:
     dependencies:
       '@types/unist': 2.0.6
@@ -9500,6 +9638,10 @@ snapshots:
   unist-builder@3.0.1:
     dependencies:
       '@types/unist': 2.0.6
+
+  unist-builder@4.0.0:
+    dependencies:
+      '@types/unist': 3.0.3
 
   unist-util-filter@4.0.1:
     dependencies:
@@ -9517,6 +9659,10 @@ snapshots:
   unist-util-is@5.2.1:
     dependencies:
       '@types/unist': 2.0.6
+
+  unist-util-is@6.0.1:
+    dependencies:
+      '@types/unist': 3.0.3
 
   unist-util-map@3.1.3:
     dependencies:
@@ -9554,6 +9700,10 @@ snapshots:
     dependencies:
       '@types/unist': 2.0.6
 
+  unist-util-stringify-position@4.0.0:
+    dependencies:
+      '@types/unist': 3.0.3
+
   unist-util-visit-children@1.1.4: {}
 
   unist-util-visit-children@2.0.2:
@@ -9570,11 +9720,22 @@ snapshots:
       '@types/unist': 2.0.6
       unist-util-is: 5.2.1
 
+  unist-util-visit-parents@6.0.2:
+    dependencies:
+      '@types/unist': 3.0.3
+      unist-util-is: 6.0.1
+
   unist-util-visit@4.1.2:
     dependencies:
       '@types/unist': 2.0.6
       unist-util-is: 5.2.1
       unist-util-visit-parents: 5.1.3
+
+  unist-util-visit@5.1.0:
+    dependencies:
+      '@types/unist': 3.0.3
+      unist-util-is: 6.0.1
+      unist-util-visit-parents: 6.0.2
 
   unzipit@2.1.1: {}
 
@@ -9616,6 +9777,11 @@ snapshots:
       '@types/unist': 2.0.6
       vfile: 5.3.7
 
+  vfile-location@5.0.3:
+    dependencies:
+      '@types/unist': 3.0.3
+      vfile: 6.0.3
+
   vfile-message@2.0.4:
     dependencies:
       '@types/unist': 2.0.6
@@ -9625,6 +9791,11 @@ snapshots:
     dependencies:
       '@types/unist': 2.0.6
       unist-util-stringify-position: 3.0.3
+
+  vfile-message@4.0.3:
+    dependencies:
+      '@types/unist': 3.0.3
+      unist-util-stringify-position: 4.0.0
 
   vfile-reporter@7.0.5:
     dependencies:
@@ -9660,6 +9831,11 @@ snapshots:
       is-buffer: 2.0.5
       unist-util-stringify-position: 3.0.3
       vfile-message: 3.1.4
+
+  vfile@6.0.3:
+    dependencies:
+      '@types/unist': 3.0.3
+      vfile-message: 4.0.3
 
   vite@6.4.1(@types/node@24.19.1)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.1):
     dependencies:
@@ -9739,9 +9915,20 @@ snapshots:
       vfile-location: 4.1.0
       vfile-message: 3.1.4
 
+  xast-util-from-xml@4.0.0:
+    dependencies:
+      '@rgrove/parse-xml': 4.1.0
+      '@types/xast': 2.0.4
+      vfile-location: 5.0.3
+      vfile-message: 4.0.3
+
   xast-util-to-string@2.0.1:
     dependencies:
       '@types/xast': 1.0.2
+
+  xast-util-to-string@3.0.0:
+    dependencies:
+      '@types/xast': 2.0.4
 
   xast-util-to-xml@3.0.2:
     dependencies:
@@ -9749,9 +9936,19 @@ snapshots:
       ccount: 2.0.1
       stringify-entities: 4.0.3
 
+  xast-util-to-xml@4.0.0:
+    dependencies:
+      '@types/xast': 2.0.4
+      ccount: 2.0.1
+      stringify-entities: 4.0.3
+
   xastscript@3.1.1:
     dependencies:
       '@types/xast': 1.0.2
+
+  xastscript@4.0.0:
+    dependencies:
+      '@types/xast': 2.0.4
 
   y18n@5.0.8: {}
 

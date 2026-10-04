@@ -39,6 +39,6 @@
   "dependencies": {
     "csl-json": "0.1.0",
     "jast-types": "workspace:^",
-    "xastscript": "^3.1.1"
+    "xastscript": "catalog:"
   }
 }

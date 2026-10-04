@@ -1,5 +1,10 @@
 import { Instruction, Doctype, Attributes as XastAttributes } from 'xast'
-import { Node as UnistNode, Parent as UnistParent } from 'unist'
+import type {
+  Data as UnistData,
+  Literal as UnistLiteral,
+  Node as UnistNode,
+  Parent as UnistParent,
+} from 'unist'
 import { Text, Article, Content, Glossary, P, pMap } from './jats.js'
 import { RequiredKeys, ValuesType } from 'utility-types'
 import { names } from './names.js'
@@ -12,20 +17,52 @@ export type AllTypes<T extends any[] | ArrayLike<any> | Record<any, any>> = Arra
 
 export type RequiredMap<T extends any[] | ArrayLike<any> | Record<any, any>> = AllTypes<T>
 
+/**
+ * Info associated with jast nodes by the ecosystem.
+ *
+ * This space is guaranteed to never be specified by unist or jast, but you can use it in
+ * utilities and plugins to store data. Register fields by augmenting this interface:
+ * `declare module 'jast-types' { interface Data { someField?: string } }`.
+ */
+// eslint-disable-next-line typescript/no-empty-object-type -- registry, augmented by users
+export interface Data extends UnistData {}
+
+/**
+ * Info associated with a jast root by the ecosystem.
+ */
+// eslint-disable-next-line typescript/no-empty-object-type -- registry, augmented by users
+export interface RootData extends Data {}
+
+/**
+ * Abstract jast node.
+ */
+export interface Node extends UnistNode {
+  data?: Data | undefined
+}
+
+/**
+ * Abstract jast node that contains a value.
+ */
+export interface Literal extends UnistLiteral {
+  data?: Data | undefined
+}
+
 export interface Attributes {
   [name: string]: string | null | undefined | boolean | number
 }
 export interface Root extends UnistParent {
   type: 'root'
+  data?: RootData | undefined
   children: Array<Text | Article | Instruction | Doctype | Content>
 }
 export type TagHavers = Extract<Content, { name: string }>
 
 export interface Parent extends UnistParent {
+  data?: Data | undefined
   children: Content[]
 }
 
-export interface Element extends UnistNode {
+export interface Element extends Node {
   type: 'element'
   attributes: Attributes
   name: string
@@ -47,7 +84,6 @@ export function isValidJATSName(tag: string): tag is Names {
   return tag in names
 }
 
-export type { UnistNode as Node }
 // type JATSContent = Extract<document[keyof document], { type: string }>
 
 // /**

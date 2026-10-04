@@ -1,17 +1,54 @@
 import { Data as CSL } from 'csl-json'
 
 import { Element } from 'xast'
-import { Root as MdastRoot, Content } from 'mdast'
+import type { Data as MdastData, Root as MdastRoot, RootContent } from 'mdast'
+import type { Literal } from 'unist'
 
 import { Attributes as OoxastProperties, Parent, Body, Text, Root, P } from 'ooxast'
-import { Math, InlineMath } from 'mdast-util-math'
-import { InlineCiteNode } from '@benrbray/mdast-util-cite'
+import type { Math, InlineMath } from 'mdast-util-math'
+
+/** One cited work in an {@link InlineCiteNode}. Vendored from `@benrbray/mdast-util-cite`. */
+export interface CiteItem {
+  prefix?: string
+  key: string
+  suffix?: string
+  suppressAuthor?: true | undefined
+}
+
+/**
+ * A pandoc-style inline citation (`[@key]`), as `@benrbray/remark-cite` serializes it.
+ *
+ * Vendored from `@benrbray/mdast-util-cite`, which only has alpha releases for mdast 4.
+ */
+export interface InlineCiteNode extends Literal {
+  type: 'cite'
+  value: string
+  data: MdastData & {
+    altSyntax?: true | undefined
+    citeItems: CiteItem[]
+  }
+}
+
+declare module 'mdast' {
+  interface PhrasingContentMap {
+    cite: InlineCiteNode
+  }
+  interface RootContentMap {
+    cite: InlineCiteNode
+  }
+  /** Word numbering info of the paragraph a list was made from. */
+  interface ListData {
+    ilvl?: number
+    numId?: number
+    numFmt?: string
+  }
+}
 
 export type XastContent = Root['children'][number] | Root
 
 export type Node = Element | Root | Text
 
-export type MdastNode = Content | MdastRoot | Math | InlineMath | InlineCiteNode
+export type MdastNode = RootContent | MdastRoot | Math | InlineMath | InlineCiteNode
 
 export interface MdastStrikeThrough extends Parent {
   type: 'strikethrough'
@@ -26,7 +63,7 @@ import { State } from './state.js'
 
 export type MdastParent = Extract<MdastNode, UnistParent>
 export type MdastFlowContent = MdastBlockContent | MdastDefinitionContent
-export type { Content as MdastContent }
+export type { RootContent as MdastContent }
 
 export type Attributes = OoxastProperties
 

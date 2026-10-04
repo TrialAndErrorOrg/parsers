@@ -2,8 +2,7 @@ import { P } from 'ooxast'
 import { State } from '../state.js'
 import { Handle } from '../types.js'
 import { getPStyle } from '../util/get-pstyle.js'
-import { Blockquote, Heading, Paragraph } from 'mdast'
-import { blockquote, heading, paragraph } from 'mdast-builder'
+import type { BlockContent, Blockquote, Heading, Paragraph, PhrasingContent } from 'mdast'
 import { toString } from 'xast-util-to-string'
 
 export function getHeadingLevel(p: P) {
@@ -21,13 +20,13 @@ export const p: Handle = (state: State, p: P) => {
   const style = getPStyle(p)
 
   if (!style) {
-    const result = paragraph(children) as Paragraph
+    const result: Paragraph = { type: 'paragraph', children: children as PhrasingContent[] }
     state.patch(p, result)
     return result
   }
 
   if (style.toLowerCase().includes('quote')) {
-    const result = blockquote(state.all(p)) as Blockquote
+    const result: Blockquote = { type: 'blockquote', children: state.all(p) as BlockContent[] }
     state.patch(p, result)
     return result
   }
@@ -40,7 +39,11 @@ export const p: Handle = (state: State, p: P) => {
   const headingLevel = getHeadingLevel(p)
 
   if (headingLevel) {
-    const result = heading(headingLevel, children) as Heading
+    const result: Heading = {
+      type: 'heading',
+      depth: headingLevel as Heading['depth'],
+      children: children as PhrasingContent[],
+    }
     state.patch(p, result)
     return result
   }

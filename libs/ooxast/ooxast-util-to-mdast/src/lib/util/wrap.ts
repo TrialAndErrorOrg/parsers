@@ -1,11 +1,27 @@
-import { Root, Content, Delete, Link, Paragraph, BlockContent, PhrasingContent } from 'mdast'
+import type {
+  Root,
+  RootContent,
+  Delete,
+  Link,
+  Paragraph,
+  BlockContent,
+  PhrasingContent,
+} from 'mdast'
 
-type Node = Root | Content
+type Node = Root | RootContent
 type Parent = Extract<Node, import('unist').Parent>
 
 import extend from 'extend'
 import { phrasing as mdastPhrasing } from 'mdast-util-phrasing'
-import { whitespace } from 'hast-util-whitespace'
+
+/**
+ * Whether `node` is a text node of only whitespace (or an empty string).
+ *
+ * Inlined from `hast-util-whitespace` 2, whose 3.x only accepts hast nodes.
+ */
+function whitespace(node: Node): boolean {
+  return node.type === 'text' && !/[^ \t\n\f\r]/.test(node.value)
+}
 
 /**
  * Check if there are phrasing mdast nodes.
@@ -34,12 +50,12 @@ export function wrapNeeded(nodes: Array<Node>): boolean {
  * Wrap runs of phrasing content into paragraphs, leaving the non-phrasing
  * content as-is.
  *
- * @param {Array<Content>} nodes
+ * @param {Array<RootContent>} nodes
  *   Content.
  * @returns {Array<BlockContent>}
  *   Content where phrasing is wrapped in paragraphs.
  */
-export function wrap(nodes: Array<Content>): Array<BlockContent> {
+export function wrap(nodes: Array<RootContent>): Array<BlockContent> {
   return runs(nodes, onphrasing, (d) => d)
 
   /**
@@ -97,7 +113,7 @@ function split(node: Delete | Link): Array<BlockContent> {
 /**
  * Wrap all runs of mdast phrasing content in `paragraph` nodes.
  *
- * @param {Array<Content>} nodes
+ * @param {Array<RootContent>} nodes
  *   List of input nodes.
  * @param {(nodes: Array<PhrasingContent>) => Array<BlockContent>} onphrasing
  *   Turn phrasing content into block content.
@@ -106,7 +122,7 @@ function split(node: Delete | Link): Array<BlockContent> {
  * @returns {Array<BlockContent>}
  */
 function runs(
-  nodes: Array<Content>,
+  nodes: Array<RootContent>,
   onphrasing: (nodes: Array<PhrasingContent>) => Array<BlockContent>,
   onnonphrasing: (node: BlockContent) => BlockContent,
 ): Array<BlockContent> {
@@ -144,14 +160,14 @@ function runs(
 /**
  * Flatten a list of nodes.
  *
- * @param {Array<Content>} nodes
+ * @param {Array<RootContent>} nodes
  *   List of nodes, will unravel `delete` and `link`.
- * @returns {Array<Content>}
+ * @returns {Array<RootContent>}
  *   Unraveled nodes.
  */
-function flatten(nodes: Array<Content>): Array<Content> {
-  /** @type {Array<Content>} */
-  const flattened: Array<Content> = []
+function flatten(nodes: Array<RootContent>): Array<RootContent> {
+  /** @type {Array<RootContent>} */
+  const flattened: Array<RootContent> = []
   let index = -1
 
   while (++index < nodes.length) {

@@ -1,5 +1,4 @@
-import { TableCell } from 'mdast'
-import { tableCell } from 'mdast-builder'
+import type { PhrasingContent, TableCell } from 'mdast'
 import { Tc } from 'ooxast'
 import { select } from 'xast-util-select'
 import { State } from '../state.js'
@@ -13,19 +12,21 @@ export const tc: Handle = (state: State, node: Tc) => {
 
   if (!gridSpan) return children
 
-  const content = children
+  const content = children as PhrasingContent[]
 
   const parsedGridSpan = parseInt(gridSpan || '0')
 
-  const result = tableCell(content) as TableCell
+  const result = tableCell(content)
   state.patch(node, result)
 
   if (parsedGridSpan > 1) {
     return [
-      tableCell(content) as TableCell,
-      ...Array.from({ length: parsedGridSpan - 1 }).map(() => tableCell([]) as TableCell),
+      tableCell(content),
+      ...Array.from({ length: parsedGridSpan - 1 }).map(() => tableCell([])),
     ]
   }
 
   return [result]
 }
+
+const tableCell = (children: PhrasingContent[]): TableCell => ({ type: 'tableCell', children })

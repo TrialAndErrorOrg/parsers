@@ -1,4 +1,4 @@
-import { serialize, type CookieSerializeOptions } from 'cookie'
+import { stringifySetCookie, type SerializeOptions } from 'cookie'
 
 export const getSID = (cookie: string | string[]): string =>
   (Array.isArray(cookie) ? cookie[0] : cookie).replace(/.*?OJSSID=(.*?);.*/, '$1')
@@ -6,7 +6,7 @@ export const getSID = (cookie: string | string[]): string =>
 export const setCookieHeader = (
   name: string,
   value: unknown,
-  options: CookieSerializeOptions = {},
+  options: SerializeOptions = {},
 ): string => {
   const stringValue = typeof value === 'object' ? `j:${JSON.stringify(value)}` : String(value)
 
@@ -15,5 +15,5 @@ export const setCookieHeader = (
     options.maxAge /= 1000
   }
 
-  return serialize(name, stringValue, options)
+  return stringifySetCookie({ ...options, name, value: stringValue })
 }

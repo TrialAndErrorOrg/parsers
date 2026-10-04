@@ -25,7 +25,7 @@ export function OjsSearch() {
   const [results, setResults] = useState<OJSSubmission[]>([])
   const [loading, setLoading] = useState(false)
   const [open, setOpen] = useState(false)
-  const debounceRef = useRef<ReturnType<typeof setTimeout>>()
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
   const containerRef = useRef<HTMLDivElement>(null)
 
   const search = useCallback(

@@ -1,5 +1,9 @@
 import { fileURLToPath } from 'node:url'
 
+// Built with webpack (`next build --webpack` / `next dev --webpack`), not Turbopack: the
+// workspace libs are consumed from TypeScript source, which needs a custom resolve condition
+// (`@jote/source`) and `.js` → `.ts` extension aliasing for their NodeNext-style specifiers.
+// Turbopack has neither (no `conditionNames`, no `extensionAlias`; see vercel/next.js#82945).
 const SOURCE_CONDITION = '@jote/source'
 
 /** Prepend the source condition to every `conditionNames` list webpack/Next sets up. */
@@ -20,16 +24,12 @@ function walkRules(rules) {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	output: 'standalone',
-	eslint: {
-		ignoreDuringBuilds: true,
-	},
-	typescript: {
-		ignoreBuildErrors: true,
-	},
+	// Trace from the monorepo root so the standalone output includes workspace packages
+	// (and keeps the `.next/standalone/apps/converter/server.js` layout).
+	outputFileTracingRoot: fileURLToPath(new URL('../../', import.meta.url)),
 	experimental: {
-		// Trace from the monorepo root so the standalone output includes workspace packages
-		// (and keeps the `.next/standalone/apps/converter/server.js` layout).
-		outputFileTracingRoot: fileURLToPath(new URL('../../', import.meta.url)),
+		// Type-check (and load tsconfig) through the `tsc` CLI: TypeScript 7 ships no JS API.
+		useTypeScriptCli: true,
 	},
 	// Workspace libs are consumed from TypeScript source (see `@jote/source` below).
 	transpilePackages: [

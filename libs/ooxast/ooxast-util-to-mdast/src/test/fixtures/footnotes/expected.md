@@ -1,6 +1,6 @@
 Some text[^1]
 
-[^1]:  A footnote.
+[^1]: &#x20;A footnote.
 
 
 

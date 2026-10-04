@@ -2,7 +2,7 @@
 
 # 1. Introduction
 
-It will come as no surprise to readers of this journal that failure is systematically ignored in academia. The entire culture of academia revolves around a notion of linear progress made in leaps and bounds by great thinkers, rather than the more realistic image of science as an ongoing process of trial and error. For those already convinced that error deserves a place in scientific discussion, it is often tempting to treat the dismissal of failure as a moral failure on the part of researchers and publishers—if only we were more courageous to do the work that science demands of us, we would publish our failures all the time; if it was not for journals rejecting my work because it is not “innovative” enough, I would tell everyone of my important failures. This perspective, while understandable, misses the mark. Specifically, it neglects the *structure *of modern academia that perpetuates an ideal of “success-first” science on all fronts—a structure, like any structure, that severely limits researchers’ and journals’ ability to change it.&#x20;
+It will come as no surprise to readers of this journal that failure is systematically ignored in academia. The entire culture of academia revolves around a notion of linear progress made in leaps and bounds by great thinkers, rather than the more realistic image of science as an ongoing process of trial and error. For those already convinced that error deserves a place in scientific discussion, it is often tempting to treat the dismissal of failure as a moral failure on the part of researchers and publishers—if only we were more courageous to do the work that science demands of us, we would publish our failures all the time; if it was not for journals rejecting my work because it is not “innovative” enough, I would tell everyone of my important failures. This perspective, while understandable, misses the mark. Specifically, it neglects the *structure&#x20;*&#x6F;f modern academia that perpetuates an ideal of “success-first” science on all fronts—a structure, like any structure, that severely limits researchers’ and journals’ ability to change it.&#x20;
 
 This point is described superbly in a recent editorial piece by public health researchers Rebecca Sindall and Dani Barrington (2020), who point out the many barriers to sharing and promoting scholarly understandings of failure in the public health interventionist field of Water, Sanitation, and Hygiene (WASH), which they experienced personally as well.&#x20;
 
@@ -30,9 +30,9 @@ In short, simply replacing or retraining bad agents doesn’t work on its own; w
 
 # 3. Obstacles to Failure
 
-# **As hinted at in the last section, we do not believe the issues Sandall and Barrigton (2020) bring up can be solved by simply creating better, more failure-friendly, journals. Rather, we argue that these issues are *****inherent *****in the *****structure***** of modern scientific practice. By “structural”, we mean that science as it is currently understood is defined by success; failure is *****not scientific***** under the current paradigm. Even when scientific failures are recognized, they are framed within the larger context of long-run success—”failing now to succeed later”—rather than as an integral part of the scientific process in its own right. In this regard, “structural” is quite literal, such that to displace the structure of success that builds up the modern scientific apparatus would mean challenging its integrity to the point of collapse. But where one structure collapses, another is built. The question is whether we need to be so radical. Can journals not simply reform their practices to allow for more diverse results to be published? Do we risk throwing the baby out with the bathwater?**
+# **As hinted at in the last section, we do not believe the issues Sandall and Barrigton (2020) bring up can be solved by simply creating better, more failure-friendly, journals. Rather, we argue that these issues are&#x20;***__inherent&#x20;__*__in the&#x20;__***structure***__&#x20;of modern scientific practice. By “structural”, we mean that science as it is currently understood is defined by success; failure is&#x20;__***not scientific***__&#x20;under the current paradigm. Even when scientific failures are recognized, they are framed within the larger context of long-run success—”failing now to succeed later”—rather than as an integral part of the scientific process in its own right. In this regard, “structural” is quite literal, such that to displace the structure of success that builds up the modern scientific apparatus would mean challenging its integrity to the point of collapse. But where one structure collapses, another is built. The question is whether we need to be so radical. Can journals not simply reform their practices to allow for more diverse results to be published? Do we risk throwing the baby out with the bathwater?__
 
-# **In this section, we raise the possibility that editorial reform may not be enough, or at least, that it may be very difficult. To do so, we discuss three issues that journals, who wish to publish scientific failure in the current landscape, face. Throughout, we use our experience at JOTE as a touchstone and example for some of these issues. **
+# **In this section, we raise the possibility that editorial reform may not be enough, or at least, that it may be very difficult. To do so, we discuss three issues that journals, who wish to publish scientific failure in the current landscape, face. Throughout, we use our experience at JOTE as a touchstone and example for some of these issues.&#x20;**
 
 # ****
 
@@ -60,7 +60,7 @@ It is not only at the submission phase, however, that the culture of success-ism
 
 Thus, in addition to battling for financial stability, publishers that seek to promote failure in science struggle to meet publication quotas or rally enthusiasm for publishing in their journal. The culture of success-ism in academia does double duty in this regard, draining failure-friendly journals’ wallets and potential contributors.
 
-## 3**.3. ****Lack of Training **
+## &#x33;**.3.&#x20;**__Lack of Training&#x20;__
 
 ****Despite the challenges presented so far in this article, it is clear that not all academics or funders share the same unwavering commitment to success-ism (otherwise we wouldn’t be able to publish this editorial). Still, when journals that do promote failure and trial and error become operational, they face the stark realization that neither researchers nor editors nor reviewers are properly equipped to analyze and interpret failure or trial and error. 
 
@@ -74,7 +74,7 @@ In the meantime however, the onus of structuring failure falls on the editorial 
 
 #
 
-# 4**. ****Destined to Fail?**
+# &#x34;**.&#x20;**__Destined to Fail?__
 
 ****Sindall and Barrington (2020) highlight the need for “more structured ways to report on failures” in science. We could not agree more. However, there are very real, structural, limitations from a publisher’s perspective that makes this goal very difficult to achieve. Thus, we argue that it is not only that “\[j]ournals *want* to publish novel research and failure is too often not seen as novel” (italics added), but that oftentimes doing elsewise is self-destructive.&#x20;
 
@@ -106,5 +106,5 @@ Levin, A. (2019, September 26). *Boeing failed to predict that slew of 737 Max w
 
 Sindall, R.C., & Barrington, D.J. (2020). Fail fast, fail forward, fail openly: The need to share failures in development. *Journal of Trial and Error, 1*(1), 6-8. <https://doi.org/10.36850/ed2>&#x20;
 
-Traut, H. J., Guild, R. M., & Munakata, Y. (2021). Why does cognitive training yield inconsistent benefits? A meta-analysis of individual differences in baseline cognitive abilities and training outcomes.* Frontiers in psychology, 12*, 1-20. https\://doi.org/10.3389/fpsyg.2021.662139
+Traut, H. J., Guild, R. M., & Munakata, Y. (2021). Why does cognitive training yield inconsistent benefits? A meta-analysis of individual differences in baseline cognitive abilities and training outcomes.*&#x20;Frontiers in psychology, 12*, 1-20. https\://doi.org/10.3389/fpsyg.2021.662139
 

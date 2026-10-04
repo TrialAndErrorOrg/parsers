@@ -1,8 +1,13 @@
 {
-  "name": "ast-stringify",
+  "name": "unified-ast-stringify",
   "version": "0.0.1",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/ast-stringify"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ast-stringify#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
   "keywords": [

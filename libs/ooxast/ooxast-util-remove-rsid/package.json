@@ -3,7 +3,12 @@
   "version": "0.5.0",
   "description": "Cleans all the rsid tags from an ooxast tree, and merges `w:r` elements if they only differ by rsid values.",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/ooxast/ooxast-util-remove-rsid"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-remove-rsid#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
   "keywords": [

@@ -14,6 +14,13 @@ peerDependencyRules:
   ignoreMissing:
     - eslint
 
+# Undeclared dependencies of third-party packages.
+packageExtensions:
+  # imports mdast-util-to-hast but only lists it as a devDependency (used by ooxast-util-to-mdast's tests)
+  '@benrbray/mdast-util-cite@2.0.1-alpha.4':
+    dependencies:
+      mdast-util-to-hast: ^13.2.0
+
 # Target versions for the unified ecosystem (unified 11 / unist 3 / xast 2 / mdast 4 / hast 3 /
 # vfile 6). Packages reference these with `catalog:` so every lib moves in lockstep.
 # Not listed on purpose: `rehype-minify-whitespace` (replaced by the workspace lib

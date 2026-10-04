@@ -1,9 +1,15 @@
 {
   "name": "rejour-meta",
   "version": "0.0.1",
+  "private": true,
   "description": "Doesn't do anything atm",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/rejour/rejour-meta"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-meta#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
   "keywords": [

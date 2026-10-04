@@ -3,7 +3,12 @@
   "version": "0.6.0",
   "description": "Plugin for [reoff][reoff] to parse a `.docx` XML file into an `ooxast` AST. ",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/reoff/reoff-parse"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
   "keywords": [

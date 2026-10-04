@@ -3,7 +3,12 @@
   "version": "0.4.0",
   "description": "default(options: Options = {}): Function;",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/reoff/reoff-parse-references"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse-references#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
   "keywords": [

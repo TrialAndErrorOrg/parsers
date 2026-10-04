@@ -1,10 +1,15 @@
 {
   "name": "reoff-compile",
   "version": "0.0.1",
+  "private": true,
   "description": "Compile a reoff-compatible VFile or bare ooxast syntax tree to a .docx document",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/reoff-compile",
-  "homepage": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/reoff/reoff-compile"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-compile#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
   "keywords": [

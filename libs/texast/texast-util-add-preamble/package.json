@@ -3,7 +3,12 @@
   "version": "0.0.1",
   "description": "Add a preamble to a texast syntax tree.",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/texast/texast-util-add-preamble"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/texast/texast-util-add-preamble#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
   "keywords": [

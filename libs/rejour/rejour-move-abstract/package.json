@@ -1,9 +1,15 @@
 {
   "name": "rejour-move-abstract",
   "version": "0.0.1",
+  "private": true,
   "description": "Really simple plugin for `rejour` that moves the abstract from the `body` to the `front` of a `JATS` document.",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/rejour/rejour-move-abstract"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-move-abstract#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
   "keywords": [

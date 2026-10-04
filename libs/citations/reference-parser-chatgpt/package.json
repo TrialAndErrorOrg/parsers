@@ -3,8 +3,12 @@
   "version": "0.0.1",
   "description": "Turn a reference list into CSL, biblatex, or any other reference format using ChatGPT.",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/reference-parser-chatgpt",
-  "homepage": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/citations/reference-parser-chatgpt"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/citations/reference-parser-chatgpt#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
   "keywords": [

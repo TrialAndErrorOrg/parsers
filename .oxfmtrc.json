@@ -8,6 +8,7 @@
   "sortPackageJson": false,
   "ignorePatterns": [
     "dist",
+    "deprecated",
     "coverage",
     ".next",
     ".turbo",

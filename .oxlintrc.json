@@ -19,7 +19,8 @@
     "libs/reoff/reoff-parse/docs/**",
     "turbo/generators/templates/**",
     "libs/citations/parse-text-cite/**/apa.ts",
-    "apps/converter/lib/generated/**"
+    "apps/converter/lib/generated/**",
+    "deprecated/**"
   ],
   "rules": {
     "import/extensions": ["error", "ignorePackages"],

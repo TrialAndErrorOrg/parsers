@@ -3,7 +3,12 @@
   "version": "0.3.0",
   "description": "Try to resolve a list of CSL data with crossref metadata",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/citations/csl-consolidate"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/citations/csl-consolidate#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
   "keywords": [

@@ -1,9 +1,14 @@
 {
-  "name": "ojs-api",
+  "name": "ojs-api-types",
   "version": "0.0.1",
   "description": "Some typescript types for OJS api responses",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/citations/ojs-types"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/citations/ojs-types#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
   "keywords": [
@@ -31,7 +36,7 @@
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
-    "displayName": "ojs-api",
+    "displayName": "ojs-api-types",
     "tsconfig": "./tsconfig.lib.json"
   }
 }

@@ -1,7 +1,8 @@
 {
-  "name": "rehype-notion",
-  "version": "0.1.3",
-  "description": "Plugin for `rehype` to turn HTML into Notion blocks",
+  "name": "html-to-notion-blocks",
+  "version": "0.1.1",
+  "private": true,
+  "description": "Transform HTML to Notion blocks",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
@@ -33,18 +34,12 @@
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
-    "displayName": "rehype-notion",
+    "displayName": "html-to-notion-blocks",
     "tsconfig": "./tsconfig.lib.json"
   },
   "dependencies": {
-    "@tryfabric/martian": "^1.2.4",
-    "@types/hast": "catalog:",
-    "hast-util-to-mdast": "catalog:",
-    "mdast-util-gfm": "catalog:",
-    "mdast-util-to-markdown": "catalog:",
+    "rehype-notion": "workspace:^",
+    "rehype-parse": "catalog:",
     "unified": "catalog:"
-  },
-  "devDependencies": {
-    "rehype-parse": "catalog:"
   }
 }

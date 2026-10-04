@@ -3,7 +3,12 @@
   "version": "0.3.1",
   "description": "Small tool that parses a string of text containing APA style in text citations, e.g.",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/citations/parse-text-cite"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/citations/parse-text-cite#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
   "keywords": [

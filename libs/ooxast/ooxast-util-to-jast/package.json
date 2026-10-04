@@ -52,7 +52,7 @@
     "rehype-minify-whitespace": "^5.0.0",
     "reoff-parse": "workspace:^",
     "unist-util-is": "^5.2.1",
-    "vfile": "^5.3.7",
+    "vfile": "catalog:",
     "xast-util-is-element": "workspace:^",
     "xast-util-select": "workspace:^",
     "xastscript": "^3.1.1"

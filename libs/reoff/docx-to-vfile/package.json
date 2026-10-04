@@ -44,8 +44,8 @@
     "tsconfig": "./tsconfig.lib.json"
   },
   "dependencies": {
-    "@types/xast": "^1.0.2",
+    "@types/xast": "catalog:",
     "unzipit": "^1.4.2",
-    "vfile": "^5.3.7"
+    "vfile": "catalog:"
   }
 }

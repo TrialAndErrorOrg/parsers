@@ -53,7 +53,7 @@
     "ooxast-util-citations": "workspace:^",
     "ooxast-util-get-style": "workspace:^",
     "rehype-minify-whitespace": "^5.0.0",
-    "vfile": "^5.3.7",
+    "vfile": "catalog:",
     "xast-util-from-xml": "^3.0.0",
     "xast-util-is-element": "workspace:^",
     "xast-util-select": "workspace:^",

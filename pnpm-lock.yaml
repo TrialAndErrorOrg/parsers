@@ -4,6 +4,42 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+catalogs:
+  default:
+    '@types/unist':
+      specifier: ^3.0.3
+      version: 3.0.3
+    '@types/xast':
+      specifier: ^2.0.4
+      version: 2.0.4
+    unified:
+      specifier: ^11.0.5
+      version: 11.0.5
+    unist-builder:
+      specifier: ^4.0.0
+      version: 4.0.0
+    unist-util-visit:
+      specifier: ^5.1.0
+      version: 5.1.0
+    unist-util-visit-parents:
+      specifier: ^6.0.2
+      version: 6.0.2
+    vfile:
+      specifier: ^6.0.3
+      version: 6.0.3
+    xast-util-to-string:
+      specifier: ^3.0.0
+      version: 3.0.0
+    xastscript:
+      specifier: ^4.0.0
+      version: 4.0.0
+
+overrides:
+  '@types/xast@2>@types/unist': ^3.0.3
+  '@types/mdast@4>@types/unist': ^3.0.3
+  '@types/hast@3>@types/unist': ^3.0.3
+  '@types/nlcst@2>@types/unist': ^3.0.3
+
 patchedDependencies:
   '@unified-latex/unified-latex-builder@1.3.1': 51fc506080d8301af1bed7ebb289ccafdeca00650e93aa280913422153b48638
   '@unified-latex/unified-latex-types@1.3.1': 549b005eff4bd8e9ceaae8897617874cac4cfea6cda23cb73b66d7c479d93a11
@@ -389,11 +425,11 @@ importers:
   libs/jast/jast:
     dependencies:
       '@types/unist':
-        specifier: ^2.0.6
-        version: 2.0.6
+        specifier: 'catalog:'
+        version: 3.0.3
       '@types/xast':
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: 'catalog:'
+        version: 2.0.4
       utility-types:
         specifier: ^3.10.0
         version: 3.10.0
@@ -407,8 +443,8 @@ importers:
         specifier: workspace:^
         version: link:../jast
       xastscript:
-        specifier: ^3.1.1
-        version: 3.1.1
+        specifier: 'catalog:'
+        version: 4.0.0
 
   libs/jast/jast-util-to-csl:
     dependencies:
@@ -545,11 +581,11 @@ importers:
   libs/ooxast/ooxast:
     dependencies:
       '@types/unist':
-        specifier: ^2.0.6
-        version: 2.0.6
+        specifier: 'catalog:'
+        version: 3.0.3
       '@types/xast':
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: 'catalog:'
+        version: 2.0.4
       utility-types:
         specifier: ^3.10.0
         version: 3.10.0
@@ -557,20 +593,20 @@ importers:
   libs/ooxast/ooxast-util-citation-plugin:
     dependencies:
       '@types/unist':
-        specifier: ^2.0.6
-        version: 2.0.6
+        specifier: 'catalog:'
+        version: 3.0.3
       ooxast:
         specifier: workspace:^
         version: link:../ooxast
       unist-util-visit:
-        specifier: ^4.1.2
-        version: 4.1.2
+        specifier: 'catalog:'
+        version: 5.1.0
       xast-util-is-element:
         specifier: workspace:^
         version: link:../../xast/xast-util-is-element
       xast-util-to-string:
-        specifier: ^2.0.1
-        version: 2.0.1
+        specifier: 'catalog:'
+        version: 3.0.0
     devDependencies:
       docx-to-vfile:
         specifier: workspace:^
@@ -579,14 +615,14 @@ importers:
         specifier: workspace:^
         version: link:../../reoff/reoff-parse
       unified:
-        specifier: ^10.1.2
-        version: 10.1.2
+        specifier: 'catalog:'
+        version: 11.0.5
 
   libs/ooxast/ooxast-util-citations:
     dependencies:
       '@types/unist':
-        specifier: ^2.0.6
-        version: 2.0.6
+        specifier: 'catalog:'
+        version: 3.0.3
       csl-consolidate:
         specifier: workspace:^
         version: link:../../citations/csl-consolidate
@@ -609,11 +645,11 @@ importers:
         specifier: ^1.2.1
         version: 1.2.1
       unist-util-visit-parents:
-        specifier: 5.1.3
-        version: 5.1.3
+        specifier: 'catalog:'
+        version: 6.0.2
       vfile:
-        specifier: ^5.3.7
-        version: 5.3.7
+        specifier: 'catalog:'
+        version: 6.0.3
       xast-util-is-element:
         specifier: workspace:^
         version: link:../../xast/xast-util-is-element
@@ -621,11 +657,11 @@ importers:
         specifier: workspace:^
         version: link:../../xast/xast-util-select
       xast-util-to-string:
-        specifier: ^2.0.1
-        version: 2.0.1
+        specifier: 'catalog:'
+        version: 3.0.0
       xastscript:
-        specifier: ^3.1.1
-        version: 3.1.1
+        specifier: 'catalog:'
+        version: 4.0.0
     devDependencies:
       '@types/similarity':
         specifier: ^1.2.1
@@ -908,8 +944,8 @@ importers:
         specifier: ^5.2.1
         version: 5.2.1
       vfile:
-        specifier: ^5.3.7
-        version: 5.3.7
+        specifier: 'catalog:'
+        version: 6.0.3
       xast-util-is-element:
         specifier: workspace:^
         version: link:../../xast/xast-util-is-element
@@ -977,8 +1013,8 @@ importers:
         specifier: ^4.0.4
         version: 4.0.4
       vfile:
-        specifier: ^5.3.7
-        version: 5.3.7
+        specifier: 'catalog:'
+        version: 6.0.3
       xast-util-from-xml:
         specifier: ^3.0.0
         version: 3.0.0
@@ -1068,8 +1104,8 @@ importers:
         specifier: ^5.0.0
         version: 5.0.1
       vfile:
-        specifier: ^5.3.7
-        version: 5.3.7
+        specifier: 'catalog:'
+        version: 6.0.3
       xast-util-from-xml:
         specifier: ^3.0.0
         version: 3.0.0
@@ -1372,14 +1408,14 @@ importers:
   libs/reoff/docx-to-vfile:
     dependencies:
       '@types/xast':
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: 'catalog:'
+        version: 2.0.4
       unzipit:
         specifier: ^1.4.2
         version: 1.4.2
       vfile:
-        specifier: ^5.3.7
-        version: 5.3.7
+        specifier: 'catalog:'
+        version: 6.0.3
 
   libs/reoff/reoff-cite:
     dependencies:
@@ -1572,8 +1608,8 @@ importers:
   libs/texast/texast:
     dependencies:
       '@types/unist':
-        specifier: ^2.0.6
-        version: 2.0.6
+        specifier: 'catalog:'
+        version: 3.0.3
 
   libs/texast/texast-util-add-preamble:
     dependencies:
@@ -1619,20 +1655,20 @@ importers:
   libs/xast/xast-util-is-element:
     dependencies:
       '@types/unist':
-        specifier: ^2.0.6
-        version: 2.0.6
+        specifier: 'catalog:'
+        version: 3.0.3
       '@types/xast':
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: 'catalog:'
+        version: 2.0.4
 
   libs/xast/xast-util-select:
     dependencies:
       '@types/unist':
-        specifier: ^2.0.6
-        version: 2.0.6
+        specifier: 'catalog:'
+        version: 3.0.3
       '@types/xast':
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: 'catalog:'
+        version: 2.0.4
       bcp-47-match:
         specifier: ^2.0.1
         version: 2.0.2
@@ -1643,9 +1679,6 @@ importers:
         specifier: ^1.4.1
         version: 1.4.1
       direction:
-        specifier: ^2.0.1
-        version: 2.0.1
-      hast-util-whitespace:
         specifier: ^2.0.1
         version: 2.0.1
       nth-check:
@@ -1668,11 +1701,11 @@ importers:
         version: 2.0.4
     devDependencies:
       unist-builder:
-        specifier: ^3.0.1
-        version: 3.0.1
+        specifier: 'catalog:'
+        version: 4.0.0
       xastscript:
-        specifier: ^3.1.1
-        version: 3.1.1
+        specifier: 'catalog:'
+        version: 4.0.0
 
 packages:
 
@@ -3476,8 +3509,14 @@ packages:
   '@types/unist@2.0.6':
     resolution: {integrity: sha512-PBjIUxZHOuj0R15/xuwJYjFi+KZdNFrehocChv4g5hu6aFroHue8m0lBP0POdK2nKzbw0cgV1mws8+V/JAcEkQ==}
 
+  '@types/unist@3.0.3':
+    resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
+
   '@types/xast@1.0.2':
     resolution: {integrity: sha512-eIuX49CmWaXTh0hDEQTFH5MbTV+NPm0FM5gB36nDcr9x8n75t9o7wy2guS1lakkQxtUwfVDYiokqvHk3x0CC4Q==}
+
+  '@types/xast@2.0.4':
+    resolution: {integrity: sha512-6Q6HWhHXR5EEKcxgF5YBW5XPAAtCi/GgyCWHx6wR7dZTXF5rv2B2fm0hgpSscJqaVDVm6n1DAVbsM8RSM5PlMw==}
 
   '@types/yargs-parser@21.0.0':
     resolution: {integrity: sha512-iO9ZQHkZxHn4mSakYV0vFHAVDyEOIJQrV2uZ06HxEPcx+mt8swXoZHIbaaJ2crJYFfErySgktuTZ3BeLz+XmFA==}
@@ -3950,6 +3989,9 @@ packages:
 
   detect-node-es@1.1.0:
     resolution: {integrity: sha512-ypdmJU/TbBby2Dxibuv7ZLW3Bs1QEmM7nHjEANfohJLvE0XVujisn1qPJcZxg+qDucsr+bP6fLD1rPS3AhJ7EQ==}
+
+  devlop@1.1.0:
+    resolution: {integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==}
 
   diff@5.1.0:
     resolution: {integrity: sha512-D+mk+qE8VC/PAUrlAU34N+VfXev0ghe5ywmpqrawphmVZc1bEfn56uo9qpyGp1p4xpzOHkSW4ztBd6L7Xx4ACw==}
@@ -4875,11 +4917,6 @@ packages:
     resolution: {integrity: sha512-WWdIxpyjEn+FhQJQQv9aQAYlHoNVdzIzUySNV1gHUPDSdZJ3yZn7pAAbQcV7B56Mvu881q9FZV+0Vx2xC44VWA==}
     engines: {node: ^18.17.0 || >=20.5.0}
 
-  nanoid@3.3.11:
-    resolution: {integrity: sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==}
-    engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
-    hasBin: true
-
   nanoid@3.3.19:
     resolution: {integrity: sha512-Y2tUNy4ouw6tq5oDSKeQYGOyhkUBhNOcGV/02KC+6kd9eDGqdZd++mjMiIDilrBYvjEnCYvVtsuHCuP+okSfug==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
@@ -5050,10 +5087,6 @@ packages:
 
   postcss@8.5.23:
     resolution: {integrity: sha512-g50586zr4bZmwFiTlflMu8E0bDTb5I5gertgwAKmsdUlTQIhZtunzUlD1WSzwcVWPoAVpsrA6vlfCD7oXvRwgg==}
-    engines: {node: ^10 || ^12 || >=14}
-
-  postcss@8.5.6:
-    resolution: {integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -5492,11 +5525,17 @@ packages:
   unified@10.1.2:
     resolution: {integrity: sha512-pUSWAi/RAnVy1Pif2kAoeWNBa3JVrx0MId2LASj8G+7AiHWoKZNTomq6LG326T68U7/e263X6fTdcXIy7XnF7Q==}
 
+  unified@11.0.5:
+    resolution: {integrity: sha512-xKvGhPWw3k84Qjh8bI3ZeJjqnyadK+GEFtazSfZv/rKeTkTjOJho6mFqh2SM96iIcZokxiOpg78GazTSg8+KHA==}
+
   unified@9.2.2:
     resolution: {integrity: sha512-Sg7j110mtefBD+qunSLO1lqOEKdrwBFBrR6Qd8f4uwkhWNlbkaqwHse6e7QvD3AP/MNoJdEDLaf8OxYyoWgorQ==}
 
   unist-builder@3.0.1:
     resolution: {integrity: sha512-gnpOw7DIpCA0vpr6NqdPvTWnlPTApCTRzr+38E6hCWx3rz/cjo83SsKIlS1Z+L5ttScQ2AwutNnb8+tAvpb6qQ==}
+
+  unist-builder@4.0.0:
+    resolution: {integrity: sha512-wmRFnH+BLpZnTKpc5L7O67Kac89s9HMrtELpnNaE6TAobq5DTZZs5YaTQfAZBA9bFPECx2uVAPO31c+GVug8mg==}
 
   unist-util-filter@4.0.1:
     resolution: {integrity: sha512-RynicUM/vbOSTSiUK+BnaK9XMfmQUh6gyi7L6taNgc7FIf84GukXVV3ucGzEN/PhUUkdP5hb1MmXc+3cvPUm5Q==}
@@ -5509,6 +5548,9 @@ packages:
 
   unist-util-is@5.2.1:
     resolution: {integrity: sha512-u9njyyfEh43npf1M+yGKDGVPbY/JWEemg5nH05ncKPfi+kBbKBJoTdsogMu33uhytuLlv9y0O7GH7fEdwLdLQw==}
+
+  unist-util-is@6.0.1:
+    resolution: {integrity: sha512-LsiILbtBETkDz8I9p1dQ0uyRUWuaQzd/cuEeS1hoRSyW5E5XGmTzlwY1OrNzzakGowI9Dr/I8HVaw4hTtnxy8g==}
 
   unist-util-map@3.1.3:
     resolution: {integrity: sha512-4/mDauoxqZ6geK97lJ6n2kDk6JK88Vh+hWMSJqyaaP/7eqN1dDhjcjnNxKNm3YU6Sw7PVJtcFMUbnmHvYzb6Vg==}
@@ -5534,6 +5576,9 @@ packages:
   unist-util-stringify-position@3.0.3:
     resolution: {integrity: sha512-k5GzIBZ/QatR8N5X2y+drfpWG8IDBzdnVj6OInRNWm1oXrzydiaAT2OQiA8DPRRZyAKb9b6I2a6PxYklZD0gKg==}
 
+  unist-util-stringify-position@4.0.0:
+    resolution: {integrity: sha512-0ASV06AAoKCDkS2+xw5RXJywruurpbC4JZSm7nr7MOt1ojAzvyyaO+UxZf18j8FCF6kmzCZKcAgN/yu2gm2XgQ==}
+
   unist-util-visit-children@1.1.4:
     resolution: {integrity: sha512-sA/nXwYRCQVRwZU2/tQWUqJ9JSFM1X3x7JIOsIgSzrFHcfVt6NkzDtKzyxg2cZWkCwGF9CO8x4QNZRJRMK8FeQ==}
 
@@ -5546,8 +5591,14 @@ packages:
   unist-util-visit-parents@5.1.3:
     resolution: {integrity: sha512-x6+y8g7wWMyQhL1iZfhIPhDAs7Xwbn9nRosDXl7qoPTSCy0yNxnKc+hWokFifWQIDGi154rdUqKvbCa4+1kLhg==}
 
+  unist-util-visit-parents@6.0.2:
+    resolution: {integrity: sha512-goh1s1TBrqSqukSc8wrjwWhL0hiJxgA8m4kFxGlQ+8FYQ3C/m11FcTs4YYem7V664AhHVvgoQLk890Ssdsr2IQ==}
+
   unist-util-visit@4.1.2:
     resolution: {integrity: sha512-MSd8OUGISqHdVvfY9TPhyK2VdUrPgxkUtWSuMHF6XAAFuL4LokseigBnZtPnJMu+FbynTkFNnFlyjxpVKujMRg==}
+
+  unist-util-visit@5.1.0:
+    resolution: {integrity: sha512-m+vIdyeCOpdr/QeQCu2EzxX/ohgS8KbnPDgFni4dQsfSCtpz8UqDyY5GjRru8PDKuYn7Fq19j1CQ+nJSsGKOzg==}
 
   unzipit@1.4.2:
     resolution: {integrity: sha512-m7UOmLY0AxrvHs0f1x4FCjH5HJR57a891MaYxIMcfyLwrGWW8GBFjFvacQz/m/QgPvnmq2RVctlEmDKpZp7wfQ==}
@@ -5600,6 +5651,9 @@ packages:
   vfile-message@3.1.4:
     resolution: {integrity: sha512-fa0Z6P8HUrQN4BZaX05SIVXic+7kE3b05PWAtPuYP9QLHsLKYR7/AlLW3NtOrpXRLeawpDLMsVkmk5DG0NXgWw==}
 
+  vfile-message@4.0.3:
+    resolution: {integrity: sha512-QTHzsGd1EhbZs4AsQ20JX1rC3cOlt/IWJruk893DfLRr57lcnOeMaWG4K0JrRta4mIJZKth2Au3mM3u03/JWKw==}
+
   vfile-reporter@7.0.5:
     resolution: {integrity: sha512-NdWWXkv6gcd7AZMvDomlQbK3MqFWL1RlGzMn++/O2TI+68+nqxCPTvLugdOtfSzXmjh+xUyhp07HhlrbJjT+mw==}
 
@@ -5614,6 +5668,9 @@ packages:
 
   vfile@5.3.7:
     resolution: {integrity: sha512-r7qlzkgErKjobAmyNIkkSpizsFPYiUPuJb5pNW1RB4JcYVZhs4lIbVqk8XPk033CV/1z8ss5pkax8SuhGpcG8g==}
+
+  vfile@6.0.3:
+    resolution: {integrity: sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==}
 
   vite@6.4.1:
     resolution: {integrity: sha512-+Oxm7q9hDoLMyJOYfUYBuHQo+dkAloi33apOPP56pzj+vsdJDzr+j1NISE5pyaAuKL4A3UD34qd0lx5+kfKp2g==}
@@ -5742,11 +5799,17 @@ packages:
   xast-util-to-string@2.0.1:
     resolution: {integrity: sha512-2f6lUwOKjQZWU7g62F1hU/qYselOs+dPT/fwj9ecQfJT1J1Fk8gbcW0D+u6MXDntzI4arniqa4hM4P7lL7n6hw==}
 
+  xast-util-to-string@3.0.0:
+    resolution: {integrity: sha512-FmKJ130Fbo7SLMTLGECP0WE/bAYNC0AXeiKItv8Qk19Bb2YON09N6hbCvO4gdo4yvO4vulswCJKYQMU+Mmv+5A==}
+
   xast-util-to-xml@3.0.2:
     resolution: {integrity: sha512-lbnJEVui7Lk9W/TydInkin5OnOyTAr2b4OpK5YjXo94qqoXaR6mFE/evXfOrBev9EnD91r0FOPxrLfTT0qLITQ==}
 
   xastscript@3.1.1:
     resolution: {integrity: sha512-rE7oVPLENyIZNKeRkXE96ao/QiucenYROqdBnEuNNkQHlyxf3vJ5EMNh2QQ4AYhdf9v/dVuxJ7F4u4AaOOhkOA==}
+
+  xastscript@4.0.0:
+    resolution: {integrity: sha512-r7a0kObEyivkML0dLrp/nOH5l51y9v5DL1MT/Xc6qUgGGNP1mZZUmT6NXtWAmx2FLfjonop++PtpVMwp1Hw/Gw==}
 
   y18n@5.0.8:
     resolution: {integrity: sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==}
@@ -7155,7 +7218,7 @@ snapshots:
 
   '@types/hast@3.0.5':
     dependencies:
-      '@types/unist': 2.0.6
+      '@types/unist': 3.0.3
 
   '@types/js-yaml@4.0.5': {}
 
@@ -7221,9 +7284,15 @@ snapshots:
 
   '@types/unist@2.0.6': {}
 
+  '@types/unist@3.0.3': {}
+
   '@types/xast@1.0.2':
     dependencies:
       '@types/unist': 2.0.6
+
+  '@types/xast@2.0.4':
+    dependencies:
+      '@types/unist': 3.0.3
 
   '@types/yargs-parser@21.0.0': {}
 
@@ -7730,6 +7799,10 @@ snapshots:
   detect-libc@2.1.2: {}
 
   detect-node-es@1.1.0: {}
+
+  devlop@1.1.0:
+    dependencies:
+      dequal: 2.0.3
 
   diff@5.1.0: {}
 
@@ -8952,8 +9025,6 @@ snapshots:
 
   mute-stream@2.0.0: {}
 
-  nanoid@3.3.11: {}
-
   nanoid@3.3.19: {}
 
   natural-compare@1.4.0: {}
@@ -9158,12 +9229,6 @@ snapshots:
   postcss@8.5.23:
     dependencies:
       nanoid: 3.3.19
-      picocolors: 1.1.1
-      source-map-js: 1.2.1
-
-  postcss@8.5.6:
-    dependencies:
-      nanoid: 3.3.11
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
@@ -9664,6 +9729,16 @@ snapshots:
       trough: 2.1.0
       vfile: 5.3.7
 
+  unified@11.0.5:
+    dependencies:
+      '@types/unist': 3.0.3
+      bail: 2.0.2
+      devlop: 1.1.0
+      extend: 3.0.2
+      is-plain-obj: 4.1.0
+      trough: 2.1.0
+      vfile: 6.0.3
+
   unified@9.2.2:
     dependencies:
       '@types/unist': 2.0.6
@@ -9677,6 +9752,10 @@ snapshots:
   unist-builder@3.0.1:
     dependencies:
       '@types/unist': 2.0.6
+
+  unist-builder@4.0.0:
+    dependencies:
+      '@types/unist': 3.0.3
 
   unist-util-filter@4.0.1:
     dependencies:
@@ -9694,6 +9773,10 @@ snapshots:
   unist-util-is@5.2.1:
     dependencies:
       '@types/unist': 2.0.6
+
+  unist-util-is@6.0.1:
+    dependencies:
+      '@types/unist': 3.0.3
 
   unist-util-map@3.1.3:
     dependencies:
@@ -9731,6 +9814,10 @@ snapshots:
     dependencies:
       '@types/unist': 2.0.6
 
+  unist-util-stringify-position@4.0.0:
+    dependencies:
+      '@types/unist': 3.0.3
+
   unist-util-visit-children@1.1.4: {}
 
   unist-util-visit-children@2.0.2:
@@ -9747,11 +9834,22 @@ snapshots:
       '@types/unist': 2.0.6
       unist-util-is: 5.2.1
 
+  unist-util-visit-parents@6.0.2:
+    dependencies:
+      '@types/unist': 3.0.3
+      unist-util-is: 6.0.1
+
   unist-util-visit@4.1.2:
     dependencies:
       '@types/unist': 2.0.6
       unist-util-is: 5.2.1
       unist-util-visit-parents: 5.1.3
+
+  unist-util-visit@5.1.0:
+    dependencies:
+      '@types/unist': 3.0.3
+      unist-util-is: 6.0.1
+      unist-util-visit-parents: 6.0.2
 
   unzipit@1.4.2:
     dependencies:
@@ -9807,6 +9905,11 @@ snapshots:
       '@types/unist': 2.0.6
       unist-util-stringify-position: 3.0.3
 
+  vfile-message@4.0.3:
+    dependencies:
+      '@types/unist': 3.0.3
+      unist-util-stringify-position: 4.0.0
+
   vfile-reporter@7.0.5:
     dependencies:
       '@types/supports-color': 8.1.1
@@ -9842,12 +9945,17 @@ snapshots:
       unist-util-stringify-position: 3.0.3
       vfile-message: 3.1.4
 
+  vfile@6.0.3:
+    dependencies:
+      '@types/unist': 3.0.3
+      vfile-message: 4.0.3
+
   vite@6.4.1(@types/node@24.19.1)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.1):
     dependencies:
       esbuild: 0.25.12
       fdir: 6.5.0(picomatch@4.0.7)
       picomatch: 4.0.7
-      postcss: 8.5.6
+      postcss: 8.5.23
       rollup: 4.54.0
       tinyglobby: 0.2.17
     optionalDependencies:
@@ -9928,6 +10036,10 @@ snapshots:
     dependencies:
       '@types/xast': 1.0.2
 
+  xast-util-to-string@3.0.0:
+    dependencies:
+      '@types/xast': 2.0.4
+
   xast-util-to-xml@3.0.2:
     dependencies:
       '@types/xast': 1.0.2
@@ -9937,6 +10049,10 @@ snapshots:
   xastscript@3.1.1:
     dependencies:
       '@types/xast': 1.0.2
+
+  xastscript@4.0.0:
+    dependencies:
+      '@types/xast': 2.0.4
 
   y18n@5.0.8: {}
 

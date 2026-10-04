@@ -1,6 +1,7 @@
 import { Node as UnistNode, Parent as UnistParent } from 'unist'
 
-import { Element } from 'xast'
+import { Element, Root as XastRoot } from 'xast'
+import type { StyleNames } from './util/style-names.js'
 import {
   Parent as JastParent,
   Content as JastContent,
@@ -45,6 +46,11 @@ export interface Options {
   parseCitation?: (citation: any) => any
   collectCitation?: (citation: any, index: number | string) => any
   relations?: { [key: string]: string }
+  /**
+   * The parsed `word/styles.xml`, used to recognise headings by style name.
+   * Taken from `file.data.parsed` when a VFile is passed.
+   */
+  styles?: XastRoot
 }
 
 export type Handle = (j: J, node: any, parent?: Parent) => JastContent | Array<JastContent> | void
@@ -90,6 +96,10 @@ export interface Context {
    */
   lastPlainCitation?: string
   footnotes?: Root
+  /**
+   * Paragraph style ids mapped to their names, from `word/styles.xml`
+   */
+  styleNames: StyleNames
 }
 
 export type JWithProps = (

@@ -2,14 +2,13 @@ import type { Root } from 'ooxast'
 import type { VFile } from 'vfile'
 import type { Data as CSL } from 'csl-json'
 import type { Plugin } from 'unified'
-import type { Parsed } from 'reoff-parse'
 import type { DocxVFileData } from 'docx-to-vfile'
 import { findCitations, type Options } from 'ooxast-util-citations'
 
 declare module 'vfile' {
-  interface DataMap extends DocxVFileData {
-    parsed: Parsed
-  }
+  // `parsed` is declared by `docx-to-vfile`.
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface DataMap extends DocxVFileData {}
 }
 
 export default function reoffCite(

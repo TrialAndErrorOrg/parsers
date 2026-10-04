@@ -1,25 +1,17 @@
-import { ChatCompletionRequestMessage, Configuration, OpenAIApi } from 'openai'
+import { formatReferences, type BibOptions } from './format-references.js'
 
-export async function referenceParserChatgpt(references: string): string {
-  const configuration = new Configuration({
-    apiKey: process.env.OPENAI_API_KEY,
-  })
-  const openai = new OpenAIApi(configuration)
+export type { BibOptions } from './format-references.js'
 
-  const referencesArray = references.split('\n')
-
-  const base =
-    'turn into biblatex, code only, format key as AuthorXXXX. AuthorXXXXa if AuthorXXXX is already taken. Wrap proper nouns and abbrevs in {} in the title.'
-
-  const firstMessage = `${base} ${referencesArray.slice(0, 2)}`
-
-  const messages: ChatCompletionRequestMessage[] = []
-
-  const chatResponse = await openai.createChatCompletion({
-    messages,
-
-    model: 'gpt-3.5-turbo',
-  })
-
-  const x = chatResponse.data
+/**
+ * Turns a newline-separated list of references into a bibliography (biblatex by default) using
+ * the OpenAI chat API. Needs an API key, either via `options.apiKey` or `OPENAI_API_KEY`.
+ */
+export async function referenceParserChatgpt(
+  references: string,
+  options?: BibOptions,
+): Promise<string | string[]> {
+  return formatReferences(
+    references.split('\n').filter((line) => line.trim()),
+    options,
+  )
 }

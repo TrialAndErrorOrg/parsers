@@ -1,5 +1,5 @@
-import { Configuration, OpenAIApi, ChatCompletionRequestMessage } from 'openai'
-import { createParser } from 'eventsource-parser'
+import type { ChatCompletionRequestMessage } from 'openai'
+import { createParser, type ParseEvent } from 'eventsource-parser'
 
 export interface BibOptions {
   apiKey?: string
@@ -20,16 +20,10 @@ export async function formatReferences(
 ): Promise<string | string[]> {
   const currentOptions = { ...defaultOptions, ...options }
 
-  const { apiKey, format, startingPrompt, streamOutput } = currentOptions
+  const { format, startingPrompt, streamOutput } = currentOptions
+  const apiKey = currentOptions.apiKey || process.env.OPENAI_API_KEY
 
-  const configuration = new Configuration({
-    apiKey: apiKey || process.env.OPENAI_API_KEY,
-  })
-
-  const openai = new OpenAIApi(configuration)
-
-  const defaultSystem =
-    'You are a helpful assistant that turns academic references into the desired format. Your task is to convert the input references into ${format} format. You only respond with code, you do not respond with any other text.'
+  const defaultSystem = `You are a helpful assistant that turns academic references into the desired format. Your task is to convert the input references into ${format} format. You only respond with code, you do not respond with any other text.`
 
   const defaultPrompt = `turn incoming references into ${format} bibliography format, the following message will be the start of the references. format key as AuthorYear, add an a, b, c... to AuthorYear if and only if it is already taken. Wrap proper nouns and abbreviations (and only those) in {} in the title.
   Here is an example
@@ -65,6 +59,8 @@ Respond with code only, do not provide explanations or any other text other than
   console.log('Chunking references...')
   const chunkedReferences = chunkReferences(references, 50) // Adjust the number depending on token limit
 
+  const outputs: string[] = []
+
   for (const chunk of chunkedReferences) {
     const referenceString = chunk.join('\n')
     messages.push({
@@ -75,77 +71,83 @@ Respond with code only, do not provide explanations or any other text other than
     const chatResponse = await fetch('https://api.openai.com/v1/chat/completions', {
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
+        Authorization: `Bearer ${apiKey}`,
       },
       method: 'POST',
       body: JSON.stringify({
         model: 'gpt-3.5-turbo',
         messages: messages,
-        stream: true,
+        stream: streamOutput,
       }),
     })
 
-    // const chatResponse = await openai.createChatCompletion({
-    //   messages,
-    //   model: 'gpt-3.5-turbo',
-    //   stream: streamOutput,
-    // })
-
-    if (streamOutput) {
-      const outputPromise = new Promise<string | string[]>((resolve) => {
-        const parser = createParser((event) => onParse(event, currentOptions, resolve))
-
-        ;(async () => {
-          for await (const value of chatResponse.body!.pipeThrough(new TextDecoderStream())) {
-            parser.feed(value)
-          }
-        })()
-      })
-
-      return await outputPromise
-    } else {
-      const responses = (await chatResponse.json()).choices[0].message.content
-
-      if (format === 'csl') {
-        const cslArray = responses.split('\n').map((line) => line.trim())
-        return cslArray
-      } else {
-        return responses
-      }
+    if (!chatResponse.ok) {
+      throw new Error(
+        `OpenAI request failed: ${chatResponse.status} ${chatResponse.statusText}: ${await chatResponse.text()}`,
+      )
     }
+
+    const output = streamOutput
+      ? await readStream(chatResponse)
+      : ((await chatResponse.json()) as ChatCompletion).choices[0].message.content
+
+    outputs.push(output)
   }
+
+  const combined = outputs.join('\n')
+
+  return format === 'csl' ? combined.split('\n').map((line) => line.trim()) : combined
+}
+
+interface ChatCompletion {
+  choices: { message: { content: string } }[]
+}
+
+interface ChatCompletionChunk {
+  choices: { delta?: { content?: string } }[]
 }
 
 function chunkReferences(references: string[], chunkSize: number): string[][] {
-  const chunks = []
+  const chunks: string[][] = []
   for (let i = 0; i < references.length; i += chunkSize) {
     chunks.push(references.slice(i, i + chunkSize))
   }
   return chunks
 }
 
-let currentOutput = ''
+/**
+ * Reads a streamed (server-sent events) chat completion, echoing it to stdout as it arrives,
+ * and resolves with the full text once the stream reports `[DONE]` (or ends).
+ */
+async function readStream(response: Response): Promise<string> {
+  let output = ''
+  let done = false
 
-function onParse(
-  event: any,
-  options: BibOptions,
-  resolve: (output: string | string[]) => void,
-): void {
-  if (event.type === 'event') {
-    if (event.data !== '[DONE]') {
-      const content = JSON.parse(event.data).choices[0].delta?.content || ''
-      currentOutput += content
-      process.stdout.write('\r' + currentOutput) // Update the output on the same line
-    } else {
-      console.log() // Add a new line when the stream is done
-      if (options?.format === 'csl') {
-        const cslArray = currentOutput.split('\n').map((line) => line.trim())
-        resolve(cslArray)
-      } else {
-        resolve(currentOutput)
-      }
+  const parser = createParser((event: ParseEvent) => {
+    if (event.type === 'reconnect-interval') {
+      console.log('We should set reconnect interval to %d milliseconds', event.value)
+      return
     }
-  } else if (event.type === 'reconnect-interval') {
-    console.log('We should set reconnect interval to %d milliseconds', event.value)
+
+    if (event.data === '[DONE]') {
+      done = true
+      console.log() // Add a new line when the stream is done
+      return
+    }
+
+    const content = (JSON.parse(event.data) as ChatCompletionChunk).choices[0].delta?.content || ''
+    output += content
+    process.stdout.write('\r' + output) // Update the output on the same line
+  })
+
+  if (!response.body) {
+    return output
   }
+
+  for await (const value of response.body.pipeThrough(new TextDecoderStream())) {
+    parser.feed(value)
+    if (done) break
+  }
+
+  return output
 }

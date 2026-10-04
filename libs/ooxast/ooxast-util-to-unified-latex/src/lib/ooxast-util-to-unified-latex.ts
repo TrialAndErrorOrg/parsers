@@ -29,6 +29,7 @@ import { notes } from './util/notes.js'
 import { findListNumbering } from './util/find-list-numbering.js'
 import { DocxVFileData } from 'docx-to-vfile'
 import { escapeLatex } from './util/escape.js'
+import { getStyleNames } from './util/style-names.js'
 import { listMatcher, listStyleHandler } from './handlers/paragraph/list.js'
 import { defaultFormattingHandlers } from './handlers/defaultFormattingHandlers.js'
 
@@ -66,6 +67,12 @@ export const defaultOptions: Options = {
 declare module 'vfile' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
   interface DataMap extends DocxVFileData {}
+}
+
+function preambleHasTitle(preamble: NonNullable<Options['preamble']>) {
+  return typeof preamble === 'string'
+    ? /\\title\b/.test(preamble)
+    : preamble.some((node) => node.type === 'macro' && node.content === 'title')
 }
 
 export function toUnifiedLatex(
@@ -190,6 +197,9 @@ export function toUnifiedLatex(
         : vfile?.data?.parsed?.['word/numbering.xml']
         ? findListNumbering(vfile.data.parsed['word/numbering.xml'])
         : undefined,
+      styleNames: getStyleNames(
+        vfile?.data?.['word/styles.xml'] ?? vfile?.data?.parsed?.['word/styles.xml'],
+      ),
       paragraphHandlers: options.paragraphHandlers || defaultParagraphHandlers,
       formattingHandlers: options.formattingHandlers || defaultFormattingHandlers,
     } as Context,
@@ -222,7 +232,10 @@ export function toUnifiedLatex(
   }
 
   if (options.document === false) {
-    return { type: 'root', content: result } as UnifiedLatexRoot
+    if (!Array.isArray(result) && result.type === 'root') {
+      return result as UnifiedLatexRoot
+    }
+    return { type: 'root', content: Array.isArray(result) ? result : [result] } as UnifiedLatexRoot
   }
 
   unifiedLatex = env('document', result)
@@ -252,12 +265,20 @@ export function toUnifiedLatex(
         PB,
       ]) || []
 
-  const preamble = options.preamble ?? [
-    ...(h.title ? [PB, m('title', h.title), PB] : []),
-    ...(h.bibliography && h.bibliography.length
-      ? [PB, m('addbibresource', 'bibliography.bib'), PB]
-      : []),
-  ]
+  const title = h.title ? [PB, m('title', escapeLatex(h.title, { escapeBraces: true })), PB] : []
+  // a custom preamble replaces the default one, but keeps the title unless it sets its own
+  const customPreamble =
+    typeof options.preamble === 'string' ? [s(options.preamble)] : options.preamble
+  const preamble = customPreamble
+    ? options.preamble && preambleHasTitle(options.preamble)
+      ? customPreamble
+      : [...title, ...customPreamble]
+    : [
+        ...title,
+        ...(h.bibliography && h.bibliography.length
+          ? [PB, m('addbibresource', 'bibliography.bib'), PB]
+          : []),
+      ]
 
   unifiedLatex = {
     type: 'root',
@@ -272,7 +293,7 @@ export function toUnifiedLatex(
         : m('documentclass', h.documentClass.name),
       PB,
       ...packages,
-      ...(typeof preamble === 'string' ? [s(preamble)] : preamble),
+      ...preamble,
       ...(biblatex ? [env('filecontents', biblatex, arg('bibliography.bib'))] : []),
       PB,
       unifiedLatex,

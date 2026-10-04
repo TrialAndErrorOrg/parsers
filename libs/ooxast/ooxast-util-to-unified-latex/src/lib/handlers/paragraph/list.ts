@@ -2,6 +2,8 @@ import type { Environment, Macro } from '@unified-latex/unified-latex-types'
 import type { H, P, UnifiedLatexNode, ParagraphHandler, ParagraphMatcher } from '../../types.js'
 import { PB } from '../../util/PB.js'
 import { getListInfo } from '../../util/get-listinfo.js'
+import { getPStyle } from '../../util/get-pstyle.js'
+import { getHeadingLevel } from '../../util/style-names.js'
 import { SP, m } from '@unified-latex/unified-latex-builder'
 import { updateRenderInfo } from '@unified-latex/unified-latex-util-render-info'
 import { all } from '../../all.js'
@@ -94,15 +96,28 @@ function makeOne(h: H, node: Element, parent?: Parent): UnifiedLatexNode[] {
   return [res]
 }
 
-export const listMatcher: ParagraphMatcher = (paragraph, style) => {
+/**
+ * Whether a paragraph is a list item: it has list numbering (`w:numPr`) and is not a heading.
+ *
+ * Numbered headings (`Heading 1` with a `w:numPr`, as Google Docs exports "1. Introduction")
+ * are headings, not one-item lists.
+ */
+function isListItem(h: H | undefined, paragraph: P) {
   const { ilvl, numId } = getListInfo(paragraph) ?? {}
 
   if (ilvl == null || numId == null) {
     return false
   }
 
+  const style = getPStyle(paragraph)
+  if (style && getHeadingLevel(style, h?.styleNames)) {
+    return false
+  }
+
   return true
 }
+
+export const listMatcher: ParagraphMatcher = (paragraph, style, h) => isListItem(h, paragraph)
 
 const isP = (node: Element): node is P => node.type === 'element' && node.name === 'w:p'
 
@@ -117,7 +132,11 @@ export const listStyleHandler: ParagraphHandler = (
   }
 
   const { ilvl: prevIlvl, numId: prevNumId } =
-    (previousElement && isP(previousElement) && getListInfo(previousElement)) || {}
+    (previousElement &&
+      isP(previousElement) &&
+      isListItem(h, previousElement) &&
+      getListInfo(previousElement)) ||
+    {}
 
   const isPrevListItem = prevIlvl != null && prevNumId != null
 

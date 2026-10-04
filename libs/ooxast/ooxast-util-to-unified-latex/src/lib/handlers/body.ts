@@ -49,7 +49,7 @@ export const body: Handle = (h: H, body: Body) => {
         continue
       }
 
-      if (typeof matcher === 'function' && matcher(child, style === null ? undefined : style)) {
+      if (typeof matcher === 'function' && matcher(child, style === null ? undefined : style, h)) {
         res = handle(handler)
       }
     }

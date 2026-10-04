@@ -57,6 +57,17 @@ export interface Option {
    * @default true
    */
   ignorePunctuation?: boolean
+  /**
+   * Only apply this rule if the document does not use heading styles (`Heading 1`, …) anywhere.
+   *
+   * Inferring headings from bold or italic text is a fallback for documents that have no
+   * structure. In a document that already has real headings, fully bold or italic paragraphs
+   * are usually something else: figure and table labels (`**Figure 1**`, APA style), an
+   * author note, an emphasised sentence.
+   *
+   * @default false
+   */
+  onlyIfNoHeadings?: boolean
 }
 
 /**
@@ -96,14 +107,30 @@ export function markupToStyle<I extends Root | P = Root>(
   // check if the conditions set in options are met
   // if so, add the style to the paragraph
 
+  // decided before any paragraph is restyled
+  const hasHeadings = options.some((option) => option.onlyIfNoHeadings)
+    ? documentHasHeadings(tree as Root | P)
+    : false
+
   visit(tree as any, (node) => {
     if (!convertElement<P>('w:p')(node)) {
       return CONTINUE
     }
 
+    const existingStyle = getPStyleId(node)
+
+    // never turn a real heading or the title into something else
+    if (existingStyle && protectedStyle.test(existingStyle)) {
+      return SKIP
+    }
+
     let style: string | undefined = undefined
 
     for (const option of options) {
+      if (option.onlyIfNoHeadings && hasHeadings) {
+        continue
+      }
+
       // stop at the first style that matches
       if (style) {
         break
@@ -161,6 +188,20 @@ export function markupToStyle<I extends Root | P = Root>(
   return tree
 }
 
+const protectedStyle = /^(heading\s*[1-9]?|title|subtitle)$/i
+const headingStyle = /^heading\s*[1-9]?$/i
+
+function getPStyleId(p: Element): string | undefined {
+  const pStyle = select('w\\:pPr > w\\:pStyle', p)
+  return pStyle?.attributes?.['w:val'] ?? undefined
+}
+
+function documentHasHeadings(tree: Root | P) {
+  return (selectAll('w\\:p', tree) as Element[])
+    .concat(convertElement<P>('w:p')(tree) ? [tree as Element] : [])
+    .some((p) => headingStyle.test(getPStyleId(p) ?? ''))
+}
+
 function shouldApplyStyle(r: Element, option: Options[number]) {
   if (!isR(r)) {
     return false
@@ -187,11 +228,25 @@ function shouldApplyStyle(r: Element, option: Options[number]) {
 
   if (Array.isArray(option.markup)) {
     return option.matchAll === false
-      ? option.markup.some((markup) => rPrJson[markup])
-      : option.markup.every((markup) => rPrJson[markup])
+      ? option.markup.some((markup) => isOn(rPrJson, markup))
+      : option.markup.every((markup) => isOn(rPrJson, markup))
   }
 
-  return option.markup in rPrJson
+  return isOn(rPrJson, option.markup)
+}
+
+/**
+ * Whether a run property is present and switched on.
+ *
+ * Toggle properties are `ST_OnOff`: `<w:b w:val="0"/>`, `"false"` and `"off"` mean the run is
+ * *not* bold (Google Docs exports write `<w:b w:val="false"/>` on plain text).
+ */
+function isOn(rPrJson: RPrJSON, markup: keyof RPrJSON) {
+  const prop = rPrJson[markup]
+  if (!prop) return false
+  const val = (prop as { 'w:val'?: string })['w:val']
+  if (val === undefined) return true
+  return !['0', 'false', 'off', 'none'].includes(String(val).toLowerCase())
 }
 
 function isPunctuation(r: R) {

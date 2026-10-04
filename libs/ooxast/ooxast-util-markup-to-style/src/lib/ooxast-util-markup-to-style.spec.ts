@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
 import { markupToStyle } from './ooxast-util-markup-to-style.js'
 import { x } from 'xastscript'
-import { P, PPr, R, RPr, RPrMap, T } from 'ooxast'
+import { P, PPr, R, RPr, RPrMap, Root, T } from 'ooxast'
 import { Element } from 'xast'
 
 const makeP = (els: (keyof RPrMap | (keyof RPrMap)[] | Element)[]) =>
@@ -150,5 +150,42 @@ describe('ooxast-util-markup-to-style', () => {
     )
   })
 
-  it.todo('should work in a realistic enviroment')
+  it('should not count toggles that are switched off (w:val="false"/"0") as markup', () => {
+    // Google Docs exports put <w:b w:val="false"/> on plain text
+    for (const val of ['false', '0', 'off']) {
+      const p = x('w:p', [
+        x('w:pPr', [x('w:pStyle', { 'w:val': 'normal1' })]),
+        x('w:r', [x('w:rPr', [x('w:b', { 'w:val': val })]), x('w:t', 'Florian Kohrt')]),
+      ]) as P
+      expect(markupToStyle(p)).toEqual(p)
+    }
+  })
+
+  it('should not turn the title or a real heading into something else', () => {
+    for (const style of ['Title', 'Heading2', 'Subtitle']) {
+      const p = x('w:p', [
+        x('w:pPr', [x('w:pStyle', { 'w:val': style })]),
+        x('w:r', [x('w:rPr', [x('w:b')]), x('w:t', 'A Conceptual Framework')]),
+      ]) as P
+      expect(markupToStyle(p)).toEqual(p)
+    }
+  })
+
+  it('should skip `onlyIfNoHeadings` rules in a document that has heading styles', () => {
+    const boldP = () =>
+      x('w:p', [x('w:pPr'), x('w:r', [x('w:rPr', [x('w:b')]), x('w:t', 'Figure 1')])])
+    const heading = x('w:p', [
+      x('w:pPr', [x('w:pStyle', { 'w:val': 'Heading1' })]),
+      x('w:r', [x('w:t', 'Introduction')]),
+    ])
+    const options = [{ markup: 'w:b' as const, style: 'Heading 1', onlyIfNoHeadings: true }]
+
+    const withHeadings = x(null, [x('w:body', [heading, boldP()])]) as unknown as Root
+    markupToStyle(withHeadings, options)
+    expect(JSON.stringify(withHeadings)).not.toContain('Heading 1')
+
+    const withoutHeadings = x(null, [x('w:body', [boldP()])]) as unknown as Root
+    markupToStyle(withoutHeadings, options)
+    expect(JSON.stringify(withoutHeadings)).toContain('Heading 1')
+  })
 })

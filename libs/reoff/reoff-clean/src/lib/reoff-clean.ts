@@ -1,14 +1,9 @@
 import { ooxastUtilRemoveRsid, Options } from 'ooxast-util-remove-rsid'
-import type { DocxVFileData } from 'docx-to-vfile'
+// Types `file.data.parsed` (the augmentation lives in docx-to-vfile).
+import type {} from 'docx-to-vfile'
 import type { Root } from 'ooxast'
 import type { Plugin } from 'unified'
 import type { VFile } from 'vfile'
-
-declare module 'vfile' {
-  // `parsed` is declared by `docx-to-vfile`.
-  // eslint-disable-next-line @typescript-eslint/no-empty-interface
-  interface DataMap extends DocxVFileData {}
-}
 
 export function reoffClean(
   options: Options = {

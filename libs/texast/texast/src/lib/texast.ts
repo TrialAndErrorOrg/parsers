@@ -12,11 +12,13 @@ import type {
  * utilities and plugins to store data. Register fields by augmenting this interface:
  * `declare module 'texast' { interface Data { someField?: string } }`.
  */
+// eslint-disable-next-line typescript/no-empty-object-type -- registry, augmented by users
 export interface Data extends UnistData {}
 
 /**
  * Info associated with a texast root by the ecosystem.
  */
+// eslint-disable-next-line typescript/no-empty-object-type -- registry, augmented by users
 export interface RootData extends Data {}
 
 /**

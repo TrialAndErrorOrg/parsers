@@ -44,7 +44,6 @@ export async function docxToTexConverter(
       { markup: ['w:b'], style: 'Heading 1', onlyIfNoHeadings: true },
       { markup: ['w:i'], style: 'Heading 2', onlyIfNoHeadings: true },
     ])
-    // @ts-expect-error type mismatch between unified versions
     .use(reoffUnifiedLatex, {
       xcolor: false,
       // jote-new-article loads soul, not ulem: \st, not \sout

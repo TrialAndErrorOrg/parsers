@@ -3,7 +3,17 @@ import { Root as JastRoot } from 'jast-types'
 import { Root as OoxastRoot } from 'ooxast'
 import { Plugin, Processor as UnifiedProcessor, Transformer } from 'unified'
 type VFile = Parameters<Transformer<OoxastRoot, OoxastRoot>>[1]
-type Processor = UnifiedProcessor<any, any, any, any>
+type Processor = UnifiedProcessor<any, any, any, any, any>
+
+declare module 'unified' {
+  interface Data {
+    /**
+     * Relations (`rId` to target) for reoff-rejour to use instead of the ones reoff-parse
+     * stored on the file.
+     */
+    relations?: { [key: string]: string } | undefined
+  }
+}
 
 /**
  * The document's relations, which reoff-parse stores per part (`document`, `footnotes`,

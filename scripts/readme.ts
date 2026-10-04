@@ -12,14 +12,14 @@
  * unchanged.
  */
 import { execFileSync, execSync } from 'node:child_process'
+import { existsSync, readFileSync } from 'node:fs'
 import { readFile, writeFile } from 'node:fs/promises'
 import { join, relative, resolve } from 'node:path'
-import type { BlockContent, Code, Content, Heading, Root } from 'mdast'
+import type { BlockContent, Code, Heading, Paragraph, Root, RootContent } from 'mdast'
 import { fromMarkdown } from 'mdast-util-from-markdown'
 import { toString } from 'mdast-util-to-string'
 import { remark } from 'remark'
 import remarkGfm from 'remark-gfm'
-import remarkLicense from 'remark-license'
 import remarkToc from 'remark-toc'
 import { EXIT, visit } from 'unist-util-visit'
 import { publishablePackages, workspaceRoot } from './workspace-packages.ts'
@@ -52,7 +52,7 @@ const spliceBetweenHeadings = ({
   level = 2,
 }: {
   tree: Root
-  content: Content[] | undefined
+  content: RootContent[] | undefined
   title: string
   level?: number
 }) => {
@@ -88,6 +88,52 @@ const spliceBetweenHeadings = ({
     tree.children.splice(nextHeadingIndex, 0, heading, ...(content as BlockContent[]))
   }
 }
+
+/**
+ * Rewrite the body of the `License` section to `[<license>](LICENSE) © <author>`.
+ *
+ * Inlined from `remark-license` 6, which is stuck on unified 10. Like it, this only fills an
+ * existing section, keeps the definitions at its end, and links `LICENSE` when the package has one.
+ */
+const remarkLicense =
+  ({ license, name, file }: { license: string; name: string; file?: string }) =>
+  (tree: Root) => {
+    const { children } = tree
+    const start = children.findIndex(
+      (node) => node.type === 'heading' && /^licen[cs]e$/i.test(toString(node)),
+    )
+    if (start === -1) return
+
+    const { depth } = children[start] as Heading
+    let end = children.findIndex(
+      (node, index) => index > start && node.type === 'heading' && node.depth <= depth,
+    )
+    if (end === -1) end = children.length
+    const isDefinition = (node: RootContent) =>
+      node.type === 'definition' || node.type === 'footnoteDefinition'
+    while (end > start + 1 && isDefinition(children[end - 1])) end--
+
+    const text = { type: 'text', value: license } as const
+    const paragraph: Paragraph = {
+      type: 'paragraph',
+      children: [
+        file ? { type: 'link', title: null, url: file, children: [text] } : text,
+        { type: 'text', value: ' © ' },
+        { type: 'text', value: name },
+      ],
+    }
+    children.splice(start + 1, end - start - 1, paragraph)
+  }
+
+/** `Name <email> (url)` → `Name`, as `parse-author` (used by `remark-license`) reads it. */
+const authorName = (author: string | { name?: string } | undefined) =>
+  (typeof author === 'string' ? author.replace(/\s*[<(].*$/, '') : author?.name)?.trim()
+
+// `remark-license` took the holder and the `LICENSE` link from the nearest package.json to the
+// cwd, which is the workspace root when run as `pnpm readme`.
+const licenseHolder =
+  authorName(JSON.parse(readFileSync(join(workspaceRoot, 'package.json'), 'utf-8')).author) ?? ''
+const licenseFile = existsSync(join(workspaceRoot, 'LICENSE')) ? 'LICENSE' : undefined
 
 /** Run typedoc for one package into `docs/<packageName>/` (git-ignored scratch output). */
 const runTypedoc = (packageName: string, projectRoot: string) => {
@@ -193,7 +239,7 @@ async function createUsage(tree: Root, examplePath: string, heading = 'Use') {
 
   const content = lines.reduce((acc, line) => {
     if (commentRegex.test(line)) {
-      acc.push(fromMarkdown(line.replace(commentRegex, ''))?.children?.[0] as Content)
+      acc.push(fromMarkdown(line.replace(commentRegex, ''))?.children?.[0] as RootContent)
       return acc
     }
 
@@ -205,7 +251,7 @@ async function createUsage(tree: Root, examplePath: string, heading = 'Use') {
 
     acc.push({ type: 'code', lang: 'ts', value: line } as Code)
     return acc
-  }, [] as Content[])
+  }, [] as RootContent[])
 
   if (!shouldEval) {
     spliceBetweenHeadings({ tree, content, title: heading })
@@ -244,8 +290,10 @@ const proc = (
   },
 ) =>
   remark()
+    // remark-stringify 11 defaults to `listItemIndent: 'one'`; keep the existing READMEs' style.
+    .data('settings', { listItemIndent: 'tab' })
     .use(remarkGfm)
-    .use(remarkLicense, { license })
+    .use(remarkLicense, { license, name: licenseHolder, file: licenseFile })
     .use(() => async (tree: Root) => {
       spliceBetweenHeadings({
         tree,
@@ -267,7 +315,9 @@ const proc = (
       () => async (tree: Root) =>
         (await createUsage(tree, join(projectRoot, 'docs', 'example.ts'))) ?? tree,
     )
-    .use(remarkToc)
+    // remark-toc 9 also matches `## Contents`, which our READMEs use for a hand-written outline;
+    // keep 8.x's default so only a `toc` / `table of contents` heading gets regenerated.
+    .use(remarkToc, { heading: 'toc|table[ -]of[ -]contents?' })
     .process(readme)
 
 const clean = (readme: string) =>

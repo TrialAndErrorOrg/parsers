@@ -45,6 +45,8 @@ jobs:
 
       - run: pnpm lint
 
+      - run: pnpm format:check
+
       - run: pnpm turbo run build typecheck test --cache-dir=.turbo/cache
 
       # Non-blocking reminder: list packages that changed without a changeset.

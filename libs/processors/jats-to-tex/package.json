@@ -1,25 +1,37 @@
 {
   "name": "processors-jats-to-tex",
-  "type": "module",
+  "version": "0.0.0",
+  "private": true,
   "description": "jatsToTex(jats: string): Promise<VFile>;",
+  "type": "module",
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "jats-to-tex",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ]
+  "dependencies": {
+    "rejour-parse": "workspace:^",
+    "rejour-relatex": "workspace:^",
+    "relatex-stringify": "workspace:^",
+    "unified": "^10.1.2",
+    "vfile": "^5.3.7"
+  }
 }

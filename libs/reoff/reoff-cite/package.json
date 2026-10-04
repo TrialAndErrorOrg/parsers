@@ -1,11 +1,11 @@
 {
   "name": "reoff-cite",
   "version": "0.4.0",
+  "description": "default(options: Options = ...): Function;",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "default(options: Options = ...): Function;",
   "keywords": [
     "reoff",
     "plugin",
@@ -15,33 +15,36 @@
     "docx",
     "unified"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "reoff-cite",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "ooxast": "0.3.0",
-    "reoff-parse": "0.5.0",
-    "docx-to-vfile": "0.10.0",
-    "ooxast-util-citations": "0.4.0",
-    "vfile": "^5.3.7",
     "csl-json": "0.1.0",
-    "unified": "^10.1.2"
+    "docx-to-vfile": "workspace:^",
+    "ooxast": "workspace:^",
+    "ooxast-util-citations": "workspace:^",
+    "reoff-parse": "workspace:^",
+    "unified": "^10.1.2",
+    "vfile": "^5.3.7"
   }
 }

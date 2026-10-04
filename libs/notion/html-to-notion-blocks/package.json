@@ -1,11 +1,11 @@
 {
   "name": "html-to-notion-blocks",
   "version": "0.1.1",
+  "description": "Transform HTML to Notion blocks",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Transform HTML to Notion blocks",
   "keywords": [
     "unified",
     "abstract",
@@ -13,30 +13,31 @@
     "tree",
     "ast"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "html-to-notion-blocks",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/libindex.js",
-    "./index.d.ts",
-    "/lib"
-  ],
   "dependencies": {
-    "rehype-notion": "0.1.3",
+    "rehype-notion": "workspace:^",
     "rehype-parse": "^8.0.4",
     "unified": "^10.1.2"
   }

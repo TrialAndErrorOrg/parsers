@@ -1,22 +1,11 @@
 {
   "name": "jast-util-to-texast",
   "version": "0.1.0",
-  "dependencies": {
-    "rehype-minify-whitespace": "^5.0.0",
-    "unist-util-is": "^5.2.1",
-    "unist-util-visit": "^4.1.2",
-    "jast-types": "0.1.2",
-    "xast-util-select": "0.3.0",
-    "texast": "0.0.1",
-    "csl-json": "0.1.0",
-    "jast-util-to-csl": "0.1.2",
-    "csl-to-biblatex": "0.3.1"
-  },
+  "description": "Utility to convert a [jast][jast] tree to a [texast][texast] tree.",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Utility to convert a [jast][jast] tree to a [texast][texast] tree.",
   "keywords": [
     "unified",
     "abstract",
@@ -24,10 +13,22 @@
     "tree",
     "ast"
   ],
-  "devDependencies": {
-    "csl-json": "^0.1.0",
-    "unist-util-remove-position": "4.0.0",
-    "unist-util-visit-parents": "5.0.0"
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
   },
   "typedoc": {
     "entryPoint": "./src/index.ts",
@@ -35,18 +36,22 @@
     "displayName": "jast-util-to-texast",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
+  "dependencies": {
+    "csl-json": "0.1.0",
+    "csl-to-biblatex": "workspace:^",
+    "jast-types": "workspace:^",
+    "jast-util-to-csl": "workspace:^",
+    "rehype-minify-whitespace": "^5.0.0",
+    "texast": "workspace:^",
+    "unist-util-is": "^5.2.1",
+    "unist-util-visit": "^4.1.2",
+    "xast-util-select": "workspace:^"
   },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ]
+  "devDependencies": {
+    "rejour-parse": "workspace:^",
+    "relatex-stringify": "workspace:^",
+    "texast-util-to-latex": "workspace:^",
+    "unified": "^10.1.2",
+    "unist-util-remove-position": "4.0.2"
+  }
 }

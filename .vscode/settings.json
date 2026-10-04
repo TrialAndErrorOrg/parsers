@@ -1,5 +1,4 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
   "xml.validation.resolveExternalEntities": true,
   "xml.fileAssociations": [
     {
@@ -14,6 +13,5 @@
   "editor.formatOnSave": true,
   "eslint.validate": ["json"],
   "typescript.disableAutomaticTypeAcquisition": true,
-  "typescript.enablePromptUseWorkspaceTsdk": true,
   "eslint.experimental.useFlatConfig": true
 }

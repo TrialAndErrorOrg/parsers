@@ -1,38 +1,44 @@
 {
   "name": "ooxast-util-properties",
   "version": "0.1.1",
+  "description": "Return the properties of an `ooxast` node as a JSON object",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Return the properties of an `ooxast` node as a JSON object",
   "keywords": [
     "ooxast",
     "properties",
     "json"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "ooxast-util-properties",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "xast-util-is-element": "0.3.1",
-    "@types/xast": "^1.0.2"
+    "@types/xast": "^1.0.2",
+    "xast-util-is-element": "workspace:^"
+  },
+  "devDependencies": {
+    "xast-util-from-xml": "^3.0.0"
   }
 }

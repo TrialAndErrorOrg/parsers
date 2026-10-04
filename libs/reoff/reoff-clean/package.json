@@ -1,11 +1,11 @@
 {
   "name": "reoff-clean",
   "version": "0.3.0",
+  "description": "Plugin for [reoff][reoff] to clean the ooxast tree.",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Plugin for [reoff][reoff] to clean the ooxast tree.",
   "keywords": [
     "unified",
     "ooxast",
@@ -14,31 +14,34 @@
     "reoff",
     "ast"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "reoff-clean",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "ooxast-util-remove-rsid": "0.4.0",
-    "docx-to-vfile": "0.10.0",
-    "ooxast": "0.3.0",
-    "reoff-parse": "0.5.0",
+    "docx-to-vfile": "workspace:^",
+    "ooxast": "workspace:^",
+    "ooxast-util-remove-rsid": "workspace:^",
+    "reoff-parse": "workspace:^",
     "unified": "^10.1.2",
     "vfile": "^5.3.7"
   }

@@ -1,11 +1,11 @@
 {
   "name": "texast-util-add-preamble",
   "version": "0.0.1",
+  "description": "Add a preamble to a texast syntax tree.",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Add a preamble to a texast syntax tree.",
   "keywords": [
     "unified",
     "abstract",
@@ -13,8 +13,22 @@
     "tree",
     "ast"
   ],
-  "devDependencies": {
-    "@types/unist": "^2.0.6"
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
   },
   "typedoc": {
     "entryPoint": "./src/index.ts",
@@ -22,22 +36,11 @@
     "displayName": "texast-util-add-preamble",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "texast": "0.0.1",
+    "texast": "workspace:^",
     "unist-util-visit": "^4.1.2"
+  },
+  "devDependencies": {
+    "unist-builder": "^3.0.1"
   }
 }

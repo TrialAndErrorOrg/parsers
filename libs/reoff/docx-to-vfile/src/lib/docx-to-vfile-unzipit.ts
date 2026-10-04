@@ -74,6 +74,12 @@ export interface DocxVFileData {
   }
 }
 
+/**
+ * The single registration of the docx fields (`media`, `relations`, `parsed`, raw xml) on
+ * `file.data`. Any package that imports something from `docx-to-vfile` (even just
+ * `import type { DocxVFileData } from 'docx-to-vfile'`) gets `file.data.parsed` etc. typed; do
+ * not re-declare this augmentation elsewhere.
+ */
 declare module 'vfile' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
   interface DataMap extends DocxVFileData {}

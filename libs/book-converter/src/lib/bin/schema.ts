@@ -15,6 +15,7 @@ const bookOptions = [
   'tocpages',
   'garamond',
   'titleinheader',
+  'print',
 ] as const
 
 const articleTypeOptions = ['empirical', 'reflection', 'meta', 'rga', 'editorial'] as const

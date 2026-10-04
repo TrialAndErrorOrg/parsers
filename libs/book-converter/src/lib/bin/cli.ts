@@ -107,7 +107,16 @@ const argv = converterCLIOptionsDefaultSchemaInput.parse(cliArgs)
   })
 
   // Watch for file changes
-  const watcher = chokidar.watch([configPath])
+  // the config and the files it points to
+  const watched = [
+    argv.docx,
+    argv.preamble,
+    argv.before,
+    fileOptions.docx,
+    fileOptions.preamble,
+    fileOptions.before,
+  ].filter((file): file is string => typeof file === 'string')
+  const watcher = chokidar.watch([configPath, ...watched])
   watcher.on('change', async (path) => {
     console.log(`${path} has changed. Re-running...`)
     if (path === configPath) {

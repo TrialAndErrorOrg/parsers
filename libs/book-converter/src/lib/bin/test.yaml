@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=file:///Users/thomas/Projects/jote-monorepo/libs/book-converter/src/public/schema.json
+# yaml-language-server: $schema=file:///Users/thomas/Projects/jote-monorepo/libs/book-converter/schema.json
 
 docx: './../_cleanup/book.docx'
 media: './../_cleanup/media'

@@ -19,6 +19,7 @@
     "libs/citations/parse-text-cite/src/lib/apa.ts",
     "libs/citations/parse-text-cite/src/lib/grammar.html",
     "turbo/generators/templates/**",
+    "libs/book-converter/schema.json",
     "apps/converter/lib/generated/**",
     "**/fixtures/**",
     "**/__snapshots__/**",

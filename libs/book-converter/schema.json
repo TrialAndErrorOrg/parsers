@@ -5,7 +5,10 @@
     "type": {
       "default": "book",
       "type": "string",
-      "enum": ["book", "article"]
+      "enum": [
+        "book",
+        "article"
+      ]
     },
     "docx": {
       "type": "string",
@@ -39,7 +42,13 @@
       "default": "zotero",
       "description": "The type of citation you want to parse.",
       "type": "string",
-      "enum": ["mendeley", "word", "citavi", "zotero", "endnote"]
+      "enum": [
+        "mendeley",
+        "word",
+        "citavi",
+        "zotero",
+        "endnote"
+      ]
     },
     "onSuccess": {
       "type": "string",
@@ -168,7 +177,10 @@
             "type": "boolean"
           }
         },
-        "required": ["markup", "style"]
+        "required": [
+          "markup",
+          "style"
+        ]
       },
       "description": "Markup style options"
     },
@@ -187,7 +199,10 @@
             "description": "Output LaTeX code. Use $1 for the text of the paragraph. E.g. '\\textbf{$1}'"
           }
         },
-        "required": ["style", "output"]
+        "required": [
+          "style",
+          "output"
+        ]
       },
       "description": "Paragraph style handlers"
     },
@@ -217,7 +232,8 @@
                   "medium2",
                   "tocpages",
                   "garamond",
-                  "titleinheader"
+                  "titleinheader",
+                  "print"
                 ]
               }
             },
@@ -226,7 +242,10 @@
               "description": "Path to the index CSV file to use"
             }
           },
-          "required": ["documentClass", "options"]
+          "required": [
+            "documentClass",
+            "options"
+          ]
         },
         {
           "type": "object",
@@ -238,23 +257,36 @@
             "article": {
               "default": "empirical",
               "type": "string",
-              "enum": ["empirical", "reflection", "meta", "rga", "editorial"]
+              "enum": [
+                "empirical",
+                "reflection",
+                "meta",
+                "rga",
+                "editorial"
+              ]
             },
             "citeStyle": {
               "default": "authordate",
               "type": "string",
-              "enum": ["authordate", "numeric"]
+              "enum": [
+                "authordate",
+                "numeric"
+              ]
             },
             "issued": {
               "type": "string",
               "const": "issued"
             }
           },
-          "required": ["documentClass"]
+          "required": [
+            "documentClass"
+          ]
         }
       ],
       "description": "Options dealiing with latex"
     }
   },
-  "required": ["docx"]
+  "required": [
+    "docx"
+  ]
 }

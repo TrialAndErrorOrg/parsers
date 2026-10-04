@@ -337,7 +337,10 @@ export async function updateReadme(projectRoot: string, { typedoc = true } = {})
     api,
   })
 
-  await writeFile(readmePath, clean(prependBadges(addAdmonition(newReadme.toString()), packageJSON)))
+  await writeFile(
+    readmePath,
+    clean(prependBadges(addAdmonition(newReadme.toString()), packageJSON)),
+  )
   console.log(`updated ${relative(workspaceRoot, readmePath)}`)
 }
 

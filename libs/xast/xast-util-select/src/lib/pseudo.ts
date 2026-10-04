@@ -156,8 +156,8 @@ function checked(_: RulePseudo, element: Element): boolean {
   if (isElement(element, ['input', 'menuitem'])) {
     return Boolean(
       element.attributes &&
-        (element.attributes.type === 'checkbox' || element.attributes.type === 'radio') &&
-        hasAttribute(element, 'checked'),
+      (element.attributes.type === 'checkbox' || element.attributes.type === 'radio') &&
+      hasAttribute(element, 'checked'),
     )
   }
 
@@ -288,9 +288,9 @@ function root(
 ): boolean {
   return Boolean(
     (!parent || parent.type === 'root') &&
-      state.schema &&
-      (state.schema.space === 'html' || state.schema.space === 'svg') &&
-      isElement(element, ['html', 'svg']),
+    state.schema &&
+    (state.schema.space === 'html' || state.schema.space === 'svg') &&
+    isElement(element, ['html', 'svg']),
   )
 }
 
@@ -472,8 +472,8 @@ function nthLastChild(
   assertDeep(state, query)
   return Boolean(
     typeof state.elementCount === 'number' &&
-      typeof state.elementIndex === 'number' &&
-      query.value(state.elementCount - state.elementIndex - 1),
+    typeof state.elementIndex === 'number' &&
+    query.value(state.elementCount - state.elementIndex - 1),
   )
 }
 

@@ -68,9 +68,7 @@ declare module 'unified' {
   interface Settings extends ReoffParseSettings {}
 }
 
-const reoffParse: Plugin<[(Settings | undefined)?], string, Root> = function reoffParse(
-  options,
-) {
+const reoffParse: Plugin<[(Settings | undefined)?], string, Root> = function reoffParse(options) {
   this.parser = (doc, file) => {
     const configuration: Settings = { ...this.data('settings'), ...options }
     return unify(doc, file, configuration)

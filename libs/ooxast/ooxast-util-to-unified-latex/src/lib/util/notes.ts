@@ -15,10 +15,13 @@ export const notes = (h: H, node: Root) => {
   //     ('name' in child && child.name === 'w:footnote') || child.name === 'w:endnote',
   // )
 
-  const notes = children.reduce((acc, child, idx) => {
-    acc[child.attributes?.['w:id'] ?? idx.toString()] = all(h, child) ?? []
-    return acc
-  }, {} as Record<string, UnifiedLatexNode[]>)
+  const notes = children.reduce(
+    (acc, child, idx) => {
+      acc[child.attributes?.['w:id'] ?? idx.toString()] = all(h, child) ?? []
+      return acc
+    },
+    {} as Record<string, UnifiedLatexNode[]>,
+  )
 
   return notes
 }

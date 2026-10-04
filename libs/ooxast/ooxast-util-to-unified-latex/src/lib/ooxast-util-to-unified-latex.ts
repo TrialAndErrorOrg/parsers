@@ -88,14 +88,14 @@ export function toUnifiedLatex(
     paragraphHandlers: [
       ...defaultParagraphHandlers,
       ...(optionsOrVFile instanceof VFile
-        ? maybeOptions?.paragraphHandlers ?? []
-        : optionsOrVFile?.paragraphHandlers ?? []),
+        ? (maybeOptions?.paragraphHandlers ?? [])
+        : (optionsOrVFile?.paragraphHandlers ?? [])),
     ],
     formattingHandlers: {
       ...defaultFormattingHandlers,
       ...(optionsOrVFile instanceof VFile
-        ? maybeOptions?.formattingHandlers ?? {}
-        : optionsOrVFile?.formattingHandlers ?? {}),
+        ? (maybeOptions?.formattingHandlers ?? {})
+        : (optionsOrVFile?.formattingHandlers ?? {})),
     },
   }
 
@@ -186,8 +186,8 @@ export function toUnifiedLatex(
       listNumbering: vfile?.data?.['word/numbering.xml']
         ? findListNumbering(vfile.data['word/numbering.xml'])
         : vfile?.data?.parsed?.['word/numbering.xml']
-        ? findListNumbering(vfile.data.parsed['word/numbering.xml'])
-        : undefined,
+          ? findListNumbering(vfile.data.parsed['word/numbering.xml'])
+          : undefined,
       styleNames: getStyleNames(
         vfile?.data?.['word/styles.xml'] ?? vfile?.data?.parsed?.['word/styles.xml'],
       ),

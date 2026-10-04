@@ -33,9 +33,7 @@ export const tbl: Handle = (h: H, tbl: Tbl) => {
 }
 
 const isElement = (node: unknown, name: string): node is Element =>
-  !!node &&
-  (node as Element).type === 'element' &&
-  (node as Element).name === name
+  !!node && (node as Element).type === 'element' && (node as Element).name === name
 
 /**
  * The number of columns of a table: the `w:gridCol`s of its `w:tblGrid`, or the widest row
@@ -61,8 +59,6 @@ export function columnCount(tbl: Tbl): number {
 /** `w:tcPr/w:gridSpan` of a cell (not of a nested table's cells) */
 export function gridSpan(cell: Element): number {
   const tcPr = cell.children.find((child) => isElement(child, 'w:tcPr')) as Element | undefined
-  const span = tcPr?.children.find((child) => isElement(child, 'w:gridSpan')) as
-    | Element
-    | undefined
+  const span = tcPr?.children.find((child) => isElement(child, 'w:gridSpan')) as Element | undefined
   return parseInt(span?.attributes?.['w:val'] ?? '1', 10) || 1
 }

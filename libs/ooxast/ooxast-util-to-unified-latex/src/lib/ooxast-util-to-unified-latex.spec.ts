@@ -77,7 +77,8 @@ describe('ooxast-util-to-unified-latex', () => {
   it('should convert a file with lists to nested enum envs', () => {
     const res = toUnifiedLatex(listTree as Root, { document: false })
     const normalize = (tex: string) => tex.replace(/\s+/g, ' ').trim()
-    expect(normalize(toString(res))).toEqual(normalize(`\\begin{enumerate}
+    expect(normalize(toString(res))).toEqual(
+      normalize(`\\begin{enumerate}
 
 
     \\item Number one
@@ -113,6 +114,7 @@ describe('ooxast-util-to-unified-latex', () => {
 \\end{enumerate}
 \\begin{enumerate}
     \\item Immediately starting other list
-\\end{enumerate}`))
+\\end{enumerate}`),
+    )
   })
 })

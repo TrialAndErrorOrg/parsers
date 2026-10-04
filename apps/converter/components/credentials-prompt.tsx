@@ -24,8 +24,8 @@ export function CredentialsPrompt({ onSkip }: { onSkip: () => void }) {
       <CardHeader>
         <CardTitle>Connect to OJS</CardTitle>
         <CardDescription>
-          Enter your OJS API credentials to search submissions and auto-populate metadata.
-          You can also skip this and upload a .docx file directly.
+          Enter your OJS API credentials to search submissions and auto-populate metadata. You can
+          also skip this and upload a .docx file directly.
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -47,9 +47,7 @@ export function CredentialsPrompt({ onSkip }: { onSkip: () => void }) {
             value={localEndpoint}
             onChange={(e) => setLocalEndpoint(e.target.value)}
           />
-          <p className="text-xs text-muted-foreground">
-            Must end with /api/v1
-          </p>
+          <p className="text-xs text-muted-foreground">Must end with /api/v1</p>
         </div>
         <div className="flex gap-2 pt-2">
           <Button onClick={handleSave} disabled={!isValid} className="flex-1">

@@ -118,8 +118,8 @@ export const citation: Handle = (h: H, citationNode: T, parent?: Parent) => {
               ...(suffix
                 ? [arg(suffix.trim(), { braces: '[]' })]
                 : prefix
-                ? [arg('', { braces: '[]' })]
-                : []),
+                  ? [arg('', { braces: '[]' })]
+                  : []),
               arg(citeKey),
             ]
           }),
@@ -176,8 +176,8 @@ export const citation: Handle = (h: H, citationNode: T, parent?: Parent) => {
             ...(suffix
               ? [arg(suffix.trim(), { braces: '[]' })]
               : prefix
-              ? [arg('', { braces: '[]' })]
-              : []),
+                ? [arg('', { braces: '[]' })]
+                : []),
             arg(citeKey),
           ]
         },

@@ -57,24 +57,27 @@ export function r(h: H, node: R, parent?: Parent) {
     const text = s(segment)
     if (!props) return [text]
 
-    const formattedText = Object.entries(props).reduce((text, [name, prop]) => {
-      if (!prop || !('w:val' in prop) || isOff(prop['w:val'])) {
-        return text
-      }
+    const formattedText = Object.entries(props).reduce(
+      (text, [name, prop]) => {
+        if (!prop || !('w:val' in prop) || isOff(prop['w:val'])) {
+          return text
+        }
 
-      const tagName = name.replace(/\w+:/, '') as keyof typeof h.formattingHandlers
-      const handler = h.formattingHandlers[tagName]
-      if (handler) {
-        text = handler(
-          h,
-          text,
-          // @ts-expect-error TODO: Fix types for formattingHanlder
-          prop,
-          node,
-        )
-      }
-      return text
-    }, text as UnifiedLatexNode | UnifiedLatexNode[])
+        const tagName = name.replace(/\w+:/, '') as keyof typeof h.formattingHandlers
+        const handler = h.formattingHandlers[tagName]
+        if (handler) {
+          text = handler(
+            h,
+            text,
+            // @ts-expect-error TODO: Fix types for formattingHanlder
+            prop,
+            node,
+          )
+        }
+        return text
+      },
+      text as UnifiedLatexNode | UnifiedLatexNode[],
+    )
 
     return Array.isArray(formattedText) ? formattedText : [formattedText]
   })

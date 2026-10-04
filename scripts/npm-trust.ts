@@ -30,9 +30,9 @@ const exists = async (name: string) =>
   )
 
 const pkgs = publishablePackages()
-const published = (await Promise.all(pkgs.map(async (p) => ((await exists(p.name)) ? p : null)))).filter(
-  (p) => p !== null,
-)
+const published = (
+  await Promise.all(pkgs.map(async (p) => ((await exists(p.name)) ? p : null)))
+).filter((p) => p !== null)
 const skipped = pkgs.filter((p) => !published.includes(p))
 
 const args = (name: string) => [
@@ -48,7 +48,9 @@ const args = (name: string) => [
 ]
 
 if (skipped.length) {
-  console.error(`# skipping ${skipped.length} packages not on npm (or not ours):${skipped.map((p) => p.name).join(', ')}`)
+  console.error(
+    `# skipping ${skipped.length} packages not on npm (or not ours):${skipped.map((p) => p.name).join(', ')}`,
+  )
 }
 
 for (const pkg of published) {

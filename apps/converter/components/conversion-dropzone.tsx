@@ -33,9 +33,14 @@ export function ConversionDropzone() {
         <CardContent className="flex items-center justify-between py-4">
           <div className="flex items-center gap-2">
             <FileText className="h-5 w-5 text-muted-foreground" />
-            <span className="text-sm">Document loaded ({(input.byteLength / 1024).toFixed(1)} KB)</span>
+            <span className="text-sm">
+              Document loaded ({(input.byteLength / 1024).toFixed(1)} KB)
+            </span>
           </div>
-          <button onClick={clearInput} className="text-sm text-muted-foreground hover:text-foreground">
+          <button
+            onClick={clearInput}
+            className="text-sm text-muted-foreground hover:text-foreground"
+          >
             Clear
           </button>
         </CardContent>

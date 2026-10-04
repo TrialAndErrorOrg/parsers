@@ -5,21 +5,21 @@
  * @type {import('@nx/next/plugins/with-nx.js').WithNxOptions}
  **/
 const nextConfig = {
-	output: "standalone",
-	transpilePackages: ["rejour-stringify", "docx-to-vfile", "reoff-cite"],
-	typescript: {
-		ignoreBuildErrors: true,
-	},
-	experimental: {
-		serverComponentsExternalPackages: ["swc", "@swc/wasm", "esbuild"],
-	},
-	webpack: (config) => {
-		config.resolve.extensionAlias = {
-			".js": [".ts", ".tsx", ".js"],
-		};
+  output: 'standalone',
+  transpilePackages: ['rejour-stringify', 'docx-to-vfile', 'reoff-cite'],
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  experimental: {
+    serverComponentsExternalPackages: ['swc', '@swc/wasm', 'esbuild'],
+  },
+  webpack: (config) => {
+    config.resolve.extensionAlias = {
+      '.js': ['.ts', '.tsx', '.js'],
+    }
 
-		return config;
-	},
-};
+    return config
+  },
+}
 
-export default nextConfig;
+export default nextConfig

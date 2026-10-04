@@ -288,4 +288,3 @@ export interface ListItem extends UnistParent {
   type: 'listItem'
   children: ParagraphContent[]
 }
-

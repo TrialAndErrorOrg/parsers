@@ -10,10 +10,13 @@ export const notes = (state: State, node: Root) => {
     return {} as Record<string, MdastNode[]>
   }
 
-  const notes = children.reduce((acc, child, idx) => {
-    acc[child.attributes?.['w:id'] ?? idx.toString()] = state.all(child) ?? []
-    return acc
-  }, {} as Record<string, MdastNode[]>)
+  const notes = children.reduce(
+    (acc, child, idx) => {
+      acc[child.attributes?.['w:id'] ?? idx.toString()] = state.all(child) ?? []
+      return acc
+    },
+    {} as Record<string, MdastNode[]>,
+  )
 
   return notes
 }

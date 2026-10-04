@@ -36,7 +36,12 @@ it('should return mendeley citation', () => {
 })
 
 it('should cite every item of a multi-item mendeley citation', () => {
-  const run = { type: 'element', name: 'w:r', attributes: {}, children: [multipleMendeleyCitations] }
+  const run = {
+    type: 'element',
+    name: 'w:r',
+    attributes: {},
+    children: [multipleMendeleyCitations],
+  }
   const latex = toString(toUnifiedLatex(run as any, { document: false }))
   for (const key of ['Busk1988', 'Solomon2014', 'Adams1996', 'Smith2012']) {
     expect(latex).toContain(key)

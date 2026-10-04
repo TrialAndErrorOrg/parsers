@@ -24,7 +24,10 @@ describe('reoffParse', () => {
     removePosition(res, { force: true })
     expect(res.position).toBeUndefined()
 
-    writeDebugFile(new URL('../test/ooxasttree.json', import.meta.url), JSON.stringify(res, null, 2))
+    writeDebugFile(
+      new URL('../test/ooxasttree.json', import.meta.url),
+      JSON.stringify(res, null, 2),
+    )
     expect(res).toBeDefined()
   })
 

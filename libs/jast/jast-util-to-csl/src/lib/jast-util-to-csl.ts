@@ -207,8 +207,8 @@ type MetaData = { front: CSL | undefined; back: CSL[] | undefined }
 type CSLConditional<T extends Root | Front | Back> = T extends Root
   ? MetaData
   : T extends Front
-  ? CSL
-  : CSL[]
+    ? CSL
+    : CSL[]
 
 const isFront = convertElement<Front>('front')
 const isBack = convertElement<Back>('back')

@@ -66,10 +66,7 @@ const fromDocx = (
       // Relations and the bibliography are read from the VFile.
       () => (tree, vfile) => toUnifiedLatex(tree as OoxastRoot, vfile) as Root,
     )
-    .use(
-      () => (tree) =>
-        dump(path, 'test.tex.json', () => withoutPositions(tree)),
-    )
+    .use(() => (tree) => dump(path, 'test.tex.json', () => withoutPositions(tree)))
     .use(unifiedLatexStringify)
 
 const fixtures = new URL('fixtures', import.meta.url).pathname

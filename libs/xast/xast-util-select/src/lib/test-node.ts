@@ -24,11 +24,11 @@ export function test(
 ): boolean {
   return Boolean(
     element(node) &&
-      state.schema &&
-      (!query.tagName || name(query, node)) &&
-      //    (!query.classNames || className(query, node)) &&
-      (!query.id || id(query, node)) &&
-      (!query.attrs || attribute(query, node, state.schema)) &&
-      (!query.pseudos || pseudo(query, node, index, parent, state)),
+    state.schema &&
+    (!query.tagName || name(query, node)) &&
+    //    (!query.classNames || className(query, node)) &&
+    (!query.id || id(query, node)) &&
+    (!query.attrs || attribute(query, node, state.schema)) &&
+    (!query.pseudos || pseudo(query, node, index, parent, state)),
   )
 }

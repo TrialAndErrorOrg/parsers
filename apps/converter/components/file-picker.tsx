@@ -111,7 +111,9 @@ export function FilePicker({ submission }: { submission: SelectedSubmission }) {
     return acc
   }, {})
 
-  const stageIds = Object.keys(groupedFiles).map(Number).sort((a, b) => a - b)
+  const stageIds = Object.keys(groupedFiles)
+    .map(Number)
+    .sort((a, b) => a - b)
   const defaultTab = String(stageIds[stageIds.length - 1] ?? stageIds[0])
 
   return (
@@ -143,7 +145,7 @@ export function FilePicker({ submission }: { submission: SelectedSubmission }) {
                       <div className="flex min-w-0 gap-2 pt-0.5">
                         <FileText className="mt-0.5 h-4 w-4 shrink-0 text-muted-foreground" />
                         <div className="min-w-0">
-                          <p className="wrap-break-word text-sm leading-tight">
+                          <p className="text-sm leading-tight wrap-break-word">
                             {file.name?.en_US ?? `File ${file.id}`}
                           </p>
                           <div className="mt-1 flex flex-wrap items-center gap-1.5">

@@ -35,7 +35,7 @@ const makeR = (text: string, styles: string[]) =>
         ],
       },
     ],
-  } as R)
+  }) as R
 
 describe('r', () => {
   it('should return textbf for w:b', () => {

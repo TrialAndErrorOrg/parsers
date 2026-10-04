@@ -237,10 +237,10 @@ function castFactory(check: TestFunctionAnything): AssertAnything {
 function element(node: unknown): node is Element {
   return Boolean(
     node &&
-      typeof node === 'object' &&
-      // @ts-expect-error Looks like a node.
-      node.type === 'element' &&
-      // @ts-expect-error Looks like an element.
-      typeof node.name === 'string',
+    typeof node === 'object' &&
+    // @ts-expect-error Looks like a node.
+    node.type === 'element' &&
+    // @ts-expect-error Looks like an element.
+    typeof node.name === 'string',
   )
 }

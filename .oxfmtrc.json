@@ -34,7 +34,7 @@
       "files": ["apps/converter/**"],
       "options": {
         "sortTailwindcss": {
-          "config": "apps/converter/tailwind.config.js"
+          "stylesheet": "apps/converter/app/globals.css"
         }
       }
     }

@@ -45,12 +45,11 @@ const responseHandler = (res: Response) =>
       return body
     })
     .catch((err) =>
-      // Catch unexpected server errors where json isn't sent and rewrite
-      // with proper class (WebflowError)
-      {
-        return Promise.reject(new Error(err))
-      },
-    )
+    // Catch unexpected server errors where json isn't sent and rewrite
+    // with proper class (WebflowError)
+    {
+      return Promise.reject(new Error(err))
+    })
 function isObjectEmpty(object: Record<string, any>) {
   return !Object.keys(object).length
 }

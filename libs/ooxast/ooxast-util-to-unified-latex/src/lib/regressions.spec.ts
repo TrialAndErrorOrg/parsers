@@ -16,7 +16,10 @@ const t = (text: string) => x('w:t', { 'xml:space': 'preserve' }, text)
 const r = (content: string | Element[], rPr: Element[] = []) =>
   x('w:r', [x('w:rPr', rPr), ...(typeof content === 'string' ? [t(content)] : content)])
 const p = (style: string | undefined, children: Element[], pPr: Element[] = []) =>
-  x('w:p', [x('w:pPr', [...(style ? [x('w:pStyle', { 'w:val': style })] : []), ...pPr]), ...children])
+  x('w:p', [
+    x('w:pPr', [...(style ? [x('w:pStyle', { 'w:val': style })] : []), ...pPr]),
+    ...children,
+  ])
 
 const doc = (...paragraphs: Element[]) =>
   ({ type: 'root', children: [x('w:document', [x('w:body', paragraphs)])] }) as unknown as Root
@@ -122,7 +125,11 @@ describe('drawings', () => {
     x('w:drawing', [
       x('wp:inline', [
         x('wp:extent', { cx: '152400', cy: String(cy) }),
-        x('a:graphic', [x('a:graphicData', [x('pic:pic', [x('pic:blipFill', [x('a:blip', { 'r:embed': rId })])])])]),
+        x('a:graphic', [
+          x('a:graphicData', [
+            x('pic:pic', [x('pic:blipFill', [x('a:blip', { 'r:embed': rId })])]),
+          ]),
+        ]),
       ]),
     ])
 
@@ -137,7 +144,10 @@ describe('drawings', () => {
       {},
       {
         relations: {
-          document: { rIdLink: 'https://orcid.org/0000-0003-0374-5625', rIdImg: 'media/image1.png' },
+          document: {
+            rIdLink: 'https://orcid.org/0000-0003-0374-5625',
+            rIdImg: 'media/image1.png',
+          },
         },
       },
     )
@@ -152,9 +162,15 @@ describe('drawings', () => {
       p(undefined, [r('Florian Kohrt '), r([drawing('rIdImg')])]),
       p(undefined, [r([drawing('rIdFig', 3000000)])]),
     )
-    const latex = convert(tree, {}, { relations: { document: { rIdImg: 'media/image1.png', rIdFig: 'media/image2.png' } } })
+    const latex = convert(
+      tree,
+      {},
+      { relations: { document: { rIdImg: 'media/image1.png', rIdFig: 'media/image2.png' } } },
+    )
     expect(latex).toMatch(/Florian Kohrt ?\\includegraphics\[height=12pt\]\{media\/image1.png\}/)
-    expect(latex).toMatch(/\\begin\{figure\}\s*\\includegraphics\[width=\\linewidth\]\{media\/image2.png\}/)
+    expect(latex).toMatch(
+      /\\begin\{figure\}\s*\\includegraphics\[width=\\linewidth\]\{media\/image2.png\}/,
+    )
   })
 
   it('does not emit an empty \\includegraphics for a picture without an embedded image', () => {
@@ -166,12 +182,20 @@ describe('drawings', () => {
 
 describe('tables', () => {
   const tc = (...paragraphs: Element[]) => x('w:tc', [x('w:tcPr'), ...paragraphs])
-  const grid = (n: number) => x('w:tblGrid', Array.from({ length: n }, () => x('w:gridCol')))
+  const grid = (n: number) =>
+    x(
+      'w:tblGrid',
+      Array.from({ length: n }, () => x('w:gridCol')),
+    )
 
   it('takes the column count from the grid, not the number of rows', () => {
     const tbl = x('w:tbl', [
       grid(3),
-      x('w:tr', [tc(p(undefined, [r('a')])), tc(p(undefined, [r('b')])), tc(p(undefined, [r('c')]))]),
+      x('w:tr', [
+        tc(p(undefined, [r('a')])),
+        tc(p(undefined, [r('b')])),
+        tc(p(undefined, [r('c')])),
+      ]),
     ])
     const latex = convert(doc(tbl as Element))
     expect(latex).toContain('\\begin{tabular}{@{} l l l @{}}')
@@ -196,7 +220,10 @@ describe('tables', () => {
 
   it('does not put a nested table in a float', () => {
     const inner = x('w:tbl', [grid(1), x('w:tr', [tc(p(undefined, [r('inner')]))])])
-    const outer = x('w:tbl', [grid(1), x('w:tr', [tc(p(undefined, [r('Box 5')]), inner as Element)])])
+    const outer = x('w:tbl', [
+      grid(1),
+      x('w:tr', [tc(p(undefined, [r('Box 5')]), inner as Element)]),
+    ])
     const latex = convert(doc(outer as Element), { tabularx: { width: '\\linewidth' } })
     expect(latex.match(/\\begin\{table\}/g)).toHaveLength(1)
     // a nested tabularx has to be wrapped in a group
@@ -207,7 +234,10 @@ describe('tables', () => {
     const tbl = x('w:tbl', [
       grid(2),
       x('w:tr', [
-        x('w:tc', [x('w:tcPr', [x('w:gridSpan', { 'w:val': '2' })]), p(undefined, [r('R'), r('2', [x('w:vertAlign', { 'w:val': 'superscript' })])])]),
+        x('w:tc', [
+          x('w:tcPr', [x('w:gridSpan', { 'w:val': '2' })]),
+          p(undefined, [r('R'), r('2', [x('w:vertAlign', { 'w:val': 'superscript' })])]),
+        ]),
       ]),
     ])
     expect(convert(doc(tbl as Element))).toContain('\\multicolumn{2}{l}{R\\textsuperscript{2}}')

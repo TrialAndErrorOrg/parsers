@@ -88,7 +88,7 @@ export function OjsSearch() {
   return (
     <div ref={containerRef} className="relative w-full">
       <div className="relative">
-        <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+        <Search className="absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
         <Input
           placeholder="Search OJS submissions..."
           value={query}
@@ -97,10 +97,10 @@ export function OjsSearch() {
             setOpen(true)
           }}
           onFocus={() => results.length > 0 && setOpen(true)}
-          className="pl-10 pr-10"
+          className="pr-10 pl-10"
         />
         {loading && (
-          <Loader2 className="absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 animate-spin text-muted-foreground" />
+          <Loader2 className="absolute top-1/2 right-3 h-4 w-4 -translate-y-1/2 animate-spin text-muted-foreground" />
         )}
       </div>
       {open && results.length > 0 && (
@@ -115,7 +115,7 @@ export function OjsSearch() {
                   onClick={() => handleSelect(sub)}
                   className="flex w-full flex-col items-start gap-0.5 rounded-sm px-3 py-2 text-left text-sm hover:bg-accent"
                 >
-                  <span className="font-medium leading-tight">
+                  <span className="leading-tight font-medium">
                     {pub?.fullTitle?.en_US ?? `Submission #${sub.id}`}
                   </span>
                   {pub?.authorsString && (

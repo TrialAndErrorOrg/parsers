@@ -28,9 +28,18 @@ const cmp = (a: string, b: string) => {
 
 const npmInfo = async (name: string) => {
   try {
-    const { stdout } = await run('npm', ['view', name, 'dist-tags.latest', 'repository.url', '--json'])
+    const { stdout } = await run('npm', [
+      'view',
+      name,
+      'dist-tags.latest',
+      'repository.url',
+      '--json',
+    ])
     const json = JSON.parse(stdout)
-    return { latest: json['dist-tags.latest'] as string, repo: (json['repository.url'] ?? '') as string }
+    return {
+      latest: json['dist-tags.latest'] as string,
+      repo: (json['repository.url'] ?? '') as string,
+    }
   } catch {
     return undefined
   }

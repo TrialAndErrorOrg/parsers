@@ -50,9 +50,7 @@ export function SettingsSheet() {
               value={endpoint}
               onChange={(e) => setEndpoint(e.target.value)}
             />
-            <p className="text-xs text-muted-foreground">
-              Must end with /api/v1
-            </p>
+            <p className="text-xs text-muted-foreground">Must end with /api/v1</p>
           </div>
         </div>
       </SheetContent>

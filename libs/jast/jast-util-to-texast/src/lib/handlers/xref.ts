@@ -39,8 +39,9 @@ export function xref(j: J, node: Xref) {
   // TODO: [rejour-rehype/citations] make citation parsing less hardcoded
   // Maybe add a new type to texast: citation.
 
+  // biblatex adds p./pp. to a numeric postnote itself.
   const labelToText: { [key: string]: string } = {
-    page: 'pp.',
+    page: '',
     appendix: 'App.',
   }
 
@@ -60,9 +61,8 @@ export function xref(j: J, node: Xref) {
 
         const pref = (mode ? infix : prefix) || ''
 
-        const suff = `${
-          label && label !== 'none' ? `${labelToText[label] || label || 'pp.'} ` : ''
-        }${locator || ''}`
+        const labelText = label && label !== 'none' ? (labelToText[label] ?? label) : ''
+        const suff = `${labelText && locator ? `${labelText} ` : ''}${locator || ''}`
 
         const isParenthetical = plainCitation?.startsWith('(') && plainCitation?.endsWith(')')
 
@@ -110,19 +110,21 @@ export function xref(j: J, node: Xref) {
       ])
     }
     case 'fn': {
+      // `fnGroup` keys footnotes by their id (which the xref points to with `rid`), or by their
+      // index when they have none; the xref text is the 1-based footnote number.
+      const number = parseInt(
+        (node.children?.[0] as Text | undefined)?.value?.replace(/[[\]]/g, '') ?? '',
+      )
       const fnContent =
-        j.footnotes[
-          // prettier-ignore
-          // TODO: [rejour-relatex]: make footnote identification less arbitrary, like a counter or something
-          // @ts-expect-error it is text, it has value
-          (parseInt(node.children?.[0]?.value?.replace(/[[\]]/g, '')) - 1).toString()
-        ]
+        (node.attributes.rid ? j.footnotes[node.attributes.rid] : undefined) ??
+        (Number.isNaN(number) ? undefined : j.footnotes[(number - 1).toString()]) ??
+        []
       return j(node, 'command', { name: 'footnote' }, [
         {
           type: 'commandArg',
           // TODO: [rejour-relatex]: texastcontenttype is not always assignable as a child of commandArg
           // @ts-expect-error texastcontenttype is not always assignable as a child of commandArg
-          children: fnContent, //fnContent.type === 'paragraph' ? fnContent.children : [fnContent],
+          children: fnContent,
         },
       ])
     }
@@ -141,53 +143,19 @@ export function xref(j: J, node: Xref) {
   // ])
 }
 
-function createOptCiteArgs(pre?: string, post?: string) {
-  if (!pre && !post) return []
-  if (!post) {
-    return [
-      {
-        type: 'commandArg',
-        optional: true,
-        children: [
-          {
-            type: 'text',
-            value: '',
-          } as Text,
-        ],
-      } as CommandArg,
-      {
-        type: 'commandArg',
-        optional: true,
-        children: [
-          {
-            type: 'text',
-            value: pre || '',
-          } as Text,
-        ],
-      } as CommandArg,
-    ]
-  }
+/**
+ * biblatex: `\cite[postnote]{key}` with one optional argument, `\cite[prenote][postnote]{key}`
+ * with two.
+ */
+function createOptCiteArgs(pre?: string, post?: string): CommandArg[] {
+  const optArg = (value: string) =>
+    ({
+      type: 'commandArg',
+      optional: true,
+      children: [{ type: 'text', value } as Text],
+    }) as CommandArg
 
-  return [
-    {
-      type: 'commandArg',
-      optional: true,
-      children: [
-        {
-          type: 'text',
-          value: post || '',
-        } as Text,
-      ],
-    } as CommandArg,
-    {
-      type: 'commandArg',
-      optional: true,
-      children: [
-        {
-          type: 'text',
-          value: pre || '',
-        } as Text,
-      ],
-    } as CommandArg,
-  ]
+  if (!pre && !post) return []
+  if (!pre) return [optArg(post || '')]
+  return [optArg(pre), optArg(post || '')]
 }

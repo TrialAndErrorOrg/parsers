@@ -66,7 +66,10 @@ export function table(j: J, table: Table) {
   }
 
   j.numberOfRows = numberOfRows
+  const wasInTable = j.inTable
+  j.inTable = true
   const contents = all(j, table)
+  j.inTable = wasInTable
   j.rowNumber = 0
   j.numberOfRows = 0
   contents.unshift(colAlignArg)

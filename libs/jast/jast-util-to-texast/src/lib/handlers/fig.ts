@@ -25,5 +25,8 @@ export function fig(j: J, fig: Fig) {
   fig.children.sort((a, b) => relativeOrderFigure(a) - relativeOrderFigure(b))
   // console.log(fig.children)
 
+  // A float can't go in a tabular cell: keep only its contents there.
+  if (j.inTable) return all(j, fig)
+
   return { type: 'environment', name: 'figure', children: all(j, fig) }
 }

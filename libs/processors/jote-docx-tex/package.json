@@ -37,7 +37,7 @@
     "reoff-parse": "workspace:^",
     "reoff-parse-references": "workspace:^",
     "reoff-rejour": "workspace:^",
-    "unified": "^10.1.2",
-    "vfile": "^5.3.7"
+    "unified": "catalog:",
+    "vfile": "catalog:"
   }
 }

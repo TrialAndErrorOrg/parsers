@@ -1201,18 +1201,18 @@ importers:
         specifier: workspace:^
         version: link:../../reoff/reoff-rejour
       unified:
-        specifier: ^10.1.2
-        version: 10.1.2
+        specifier: 'catalog:'
+        version: 11.0.5
       vfile:
-        specifier: ^5.3.7
-        version: 5.3.7
+        specifier: 'catalog:'
+        version: 6.0.3
     devDependencies:
+      '@types/unist':
+        specifier: 'catalog:'
+        version: 3.0.3
       unist-util-remove-position:
-        specifier: 4.0.2
-        version: 4.0.2
-      xast-util-select:
-        specifier: workspace:^
-        version: link:../../xast/xast-util-select
+        specifier: 'catalog:'
+        version: 5.0.0
 
   libs/processors/jats-to-tex:
     dependencies:
@@ -1265,11 +1265,11 @@ importers:
         specifier: workspace:^
         version: link:../../reoff/reoff-rejour
       unified:
-        specifier: ^10.1.2
-        version: 10.1.2
+        specifier: 'catalog:'
+        version: 11.0.5
       vfile:
-        specifier: ^5.3.7
-        version: 5.3.7
+        specifier: 'catalog:'
+        version: 6.0.3
 
   libs/rejour/rejour-frontmatter:
     dependencies:

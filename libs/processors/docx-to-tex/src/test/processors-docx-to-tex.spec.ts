@@ -13,10 +13,19 @@ import { reoffClean } from 'reoff-clean'
 import reoffCite from 'reoff-cite'
 import reoffParseReferences from 'reoff-parse-references'
 import { it, expect } from 'vitest'
+import type { Node } from 'unist'
 
 // Debug output is only written when WRITE_TEST_OUTPUT is set, so test runs never modify tracked files.
 const writeFileSync = (...args: Parameters<typeof fsWriteFileSync>) => {
   if (process.env.WRITE_TEST_OUTPUT) fsWriteFileSync(...args)
+}
+
+/** Dump a position-less copy of the tree; the tree flowing through the pipeline is left alone. */
+const dumpTree = (path: string, tree: Node) => {
+  if (!process.env.WRITE_TEST_OUTPUT) return
+  const copy = structuredClone(tree)
+  removePosition(copy, { force: true })
+  fsWriteFileSync(path, JSON.stringify(copy, null, 2))
 }
 
 const fromDocx = (
@@ -39,16 +48,16 @@ const fromDocx = (
     })
     .use(reoffParseReferences)
     .use(reoffCite, { type: citationType || 'zotero', log: false })
-    .use(() => (tree) => {
-      writeFileSync(join(path, 'test.ooxast.json'), JSON.stringify(removePosition(tree), null, 2))
+    .use(() => (tree: Node) => {
+      dumpTree(join(path, 'test.ooxast.json'), tree)
     })
     .use(reoffRejour, { citationType: citationType || 'zotero' })
-    .use(() => (tree) => {
-      writeFileSync(join(path, 'test.jats.json'), JSON.stringify(removePosition(tree), null, 2))
+    .use(() => (tree: Node) => {
+      dumpTree(join(path, 'test.jats.json'), tree)
     })
     .use(rejourRelatex)
-    .use(() => (tree) => {
-      writeFileSync(join(path, 'test.tex.json'), JSON.stringify(removePosition(tree), null, 2))
+    .use(() => (tree: Node) => {
+      dumpTree(join(path, 'test.tex.json'), tree)
     })
     .use(relatexStringify)
 

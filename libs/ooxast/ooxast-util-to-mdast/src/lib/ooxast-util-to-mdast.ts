@@ -4,7 +4,7 @@ import { createState } from './state.js'
 import { fromXml } from 'xast-util-from-xml'
 
 import { MdastNode, MdastRoot, Options, Root, Element, Text, Node } from './types.js'
-import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
+import { minifyWhitespace } from 'xast-util-minify-whitespace'
 
 import { VFile } from 'vfile'
 import type { DocxVFileData } from 'docx-to-vfile'
@@ -41,7 +41,7 @@ export function toMdast(
     ? [vfile?.data?.parsed?.['word/footnotes.xml'], vfile?.data?.parsed?.['word/endnotes.xml']]
     : []
 
-  // We have to clone, cause we’ll use `rehype-minify-whitespace` on the tree,
+  // We have to clone, cause we’ll use `minifyWhitespace` on the tree,
   // which modifies
   /** @type {Node} */
   const cleanTree: Node = JSON.parse(JSON.stringify(tree))
@@ -62,8 +62,7 @@ export function toMdast(
   /** @type {MdastNode | MdastRoot} */
   let mdast: MdastNode | MdastRoot
 
-  // @ts-expect-error: does return a transformer, that does accept any node.
-  rehypeMinifyWhitespace({ newlines: options_.newlines === true })(cleanTree)
+  minifyWhitespace(cleanTree, { newlines: options_.newLines === true })
 
   const result = state.one(cleanTree, undefined)
 
@@ -78,15 +77,13 @@ export function toMdast(
   state.simpleParagraph = true
   if (unparsedFootnotes) {
     state.relations = relationsFor('footnotes')
-    // @ts-expect-error shhh
-    rehypeMinifyWhitespace()(unparsedFootnotes)
+    minifyWhitespace(unparsedFootnotes)
     mdast.children.push(...state.all(unparsedFootnotes))
   }
 
   if (unparsedEndnotes) {
     state.relations = relationsFor('endnotes')
-    // @ts-expect-error shhh
-    rehypeMinifyWhitespace()(unparsedEndnotes)
+    minifyWhitespace(unparsedEndnotes)
     mdast.children.push(...state.all(unparsedEndnotes))
   }
   state.simpleParagraph = false

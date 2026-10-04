@@ -3,9 +3,7 @@ import { select } from 'xast-util-select'
 import { State } from '../state.js'
 import { convertElement } from 'xast-util-is-element'
 import { toString } from 'xast-util-to-string'
-import { strong, emphasis, strike, html } from 'mdast-builder'
-import { Emphasis, HTML, Strong, Text } from 'mdast'
-import { Delete } from 'mdast'
+import type { Delete, Emphasis, Html, Strong, Text } from 'mdast'
 import { Handle } from '../types.js'
 
 //const isVert = convertElement<VerticalAlignRun>('w:vertAlign')
@@ -54,17 +52,17 @@ export const r: Handle = (state: State, node: R) => {
     (text, prop) => {
       switch (prop.name.replace(/\w+:/, '')) {
         case 'i':
-          text = emphasis(text) as Emphasis
+          text = { type: 'emphasis', children: [text] }
           return text
         case 'b':
-          text = strong(text) as Strong
+          text = { type: 'strong', children: [text] }
           return text
         case 'u':
           htmlTags.push('u')
           return text
         case 'strike':
         case 'dstrike':
-          text = strike(text) as Delete
+          text = { type: 'delete', children: [text] }
           return text
         case 'vertAlign':
           //if (!isVert(prop)) continue
@@ -138,13 +136,14 @@ export const r: Handle = (state: State, node: R) => {
   if (!htmlTags.length) return formattedText
 
   return [
-    html(htmlTags.map((tag) => `<${tag}>`).join('')) as HTML,
+    { type: 'html', value: htmlTags.map((tag) => `<${tag}>`).join('') } as Html,
     formattedText,
-    html(
-      htmlTags
+    {
+      type: 'html',
+      value: htmlTags
         .map((tag) => `</${tag}>`)
         .reverse()
         .join(''),
-    ) as HTML,
+    } as Html,
   ]
 }

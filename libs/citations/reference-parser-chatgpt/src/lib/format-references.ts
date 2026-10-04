@@ -1,9 +1,16 @@
-import type { ChatCompletionRequestMessage } from 'openai'
-import { createParser, type ParseEvent } from 'eventsource-parser'
+import OpenAI from 'openai'
+import type { ChatCompletionMessageParam } from 'openai/resources/chat/completions'
+import type { ChatModel } from 'openai/resources/shared'
 
 export interface BibOptions {
   apiKey?: string
   format?: 'biblatex' | 'bibtex' | 'ris' | 'endnote' | 'csl'
+  /**
+   * The chat model to use.
+   *
+   * @default 'gpt-5.4-mini'
+   */
+  model?: ChatModel | (string & {})
   startingPrompt?: string
   streamOutput?: boolean
 }
@@ -11,6 +18,7 @@ export interface BibOptions {
 const defaultOptions: BibOptions = {
   format: 'biblatex',
   apiKey: process.env.OPENAI_API_KEY,
+  model: 'gpt-5.4-mini',
   streamOutput: true,
 }
 
@@ -21,7 +29,8 @@ export async function formatReferences(
   const currentOptions = { ...defaultOptions, ...options }
 
   const { format, startingPrompt, streamOutput } = currentOptions
-  const apiKey = currentOptions.apiKey || process.env.OPENAI_API_KEY
+  const model = currentOptions.model || 'gpt-5.4-mini'
+  const client = new OpenAI({ apiKey: currentOptions.apiKey || process.env.OPENAI_API_KEY })
 
   const defaultSystem = `You are a helpful assistant that turns academic references into the desired format. Your task is to convert the input references into ${format} format. You only respond with code, you do not respond with any other text.`
 
@@ -41,7 +50,7 @@ Respond with code only, do not provide explanations or any other text other than
 
   const prompt = startingPrompt || defaultPrompt
 
-  const messages: ChatCompletionRequestMessage[] = [
+  const messages: ChatCompletionMessageParam[] = [
     {
       role: 'system',
       content: defaultSystem,
@@ -68,43 +77,19 @@ Respond with code only, do not provide explanations or any other text other than
       content: referenceString,
     })
 
-    const chatResponse = await fetch('https://api.openai.com/v1/chat/completions', {
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${apiKey}`,
-      },
-      method: 'POST',
-      body: JSON.stringify({
-        model: 'gpt-3.5-turbo',
-        messages: messages,
-        stream: streamOutput,
-      }),
-    })
-
-    if (!chatResponse.ok) {
-      throw new Error(
-        `OpenAI request failed: ${chatResponse.status} ${chatResponse.statusText}: ${await chatResponse.text()}`,
-      )
-    }
-
     const output = streamOutput
-      ? await readStream(chatResponse)
-      : ((await chatResponse.json()) as ChatCompletion).choices[0].message.content
+      ? await streamCompletion(client, model, messages)
+      : ((await client.chat.completions.create({ model, messages })).choices[0]?.message.content ??
+        '')
 
+    // Keep the answer in the conversation, so later chunks can avoid reusing keys.
+    messages.push({ role: 'assistant', content: output })
     outputs.push(output)
   }
 
   const combined = outputs.join('\n')
 
   return format === 'csl' ? combined.split('\n').map((line) => line.trim()) : combined
-}
-
-interface ChatCompletion {
-  choices: { message: { content: string } }[]
-}
-
-interface ChatCompletionChunk {
-  choices: { delta?: { content?: string } }[]
 }
 
 function chunkReferences(references: string[], chunkSize: number): string[][] {
@@ -116,38 +101,22 @@ function chunkReferences(references: string[], chunkSize: number): string[][] {
 }
 
 /**
- * Reads a streamed (server-sent events) chat completion, echoing it to stdout as it arrives,
- * and resolves with the full text once the stream reports `[DONE]` (or ends).
+ * Streams a chat completion, echoing it to stdout as it arrives, and resolves with the full text
+ * once the stream ends.
  */
-async function readStream(response: Response): Promise<string> {
+async function streamCompletion(
+  client: OpenAI,
+  model: string,
+  messages: ChatCompletionMessageParam[],
+): Promise<string> {
+  const stream = await client.chat.completions.create({ model, messages, stream: true })
+
   let output = ''
-  let done = false
-
-  const parser = createParser((event: ParseEvent) => {
-    if (event.type === 'reconnect-interval') {
-      console.log('We should set reconnect interval to %d milliseconds', event.value)
-      return
-    }
-
-    if (event.data === '[DONE]') {
-      done = true
-      console.log() // Add a new line when the stream is done
-      return
-    }
-
-    const content = (JSON.parse(event.data) as ChatCompletionChunk).choices[0].delta?.content || ''
-    output += content
+  for await (const chunk of stream) {
+    output += chunk.choices[0]?.delta?.content ?? ''
     process.stdout.write('\r' + output) // Update the output on the same line
-  })
-
-  if (!response.body) {
-    return output
   }
-
-  for await (const value of response.body.pipeThrough(new TextDecoderStream())) {
-    parser.feed(value)
-    if (done) break
-  }
+  console.log() // Add a new line when the stream is done
 
   return output
 }

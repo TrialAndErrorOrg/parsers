@@ -79,7 +79,6 @@ export async function docxConverter(
         }
         return tree
       })
-      // @ts-expect-error jaja
       .use(reoffUnifiedLatex, {
         documentClass: {
           name: options.latexOptions.documentClass,

@@ -44,6 +44,6 @@
     "@unified-latex/unified-latex-types": "catalog:",
     "ooxast": "workspace:^",
     "ooxast-util-to-unified-latex": "workspace:^",
-    "unified": "^10.1.2"
+    "unified": "catalog:"
   }
 }

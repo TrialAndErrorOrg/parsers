@@ -32,9 +32,9 @@
     "reoff-parse": "workspace:^",
     "reoff-unified-latex": "workspace:^",
     "tailwind-merge": "^3.7.0",
-    "unified": "^10.1.2",
+    "unified": "catalog:",
     "unified-latex-stringify": "workspace:^",
-    "vfile": "^5.3.7",
+    "vfile": "catalog:",
     "zustand": "^5.0.15"
   },
   "devDependencies": {

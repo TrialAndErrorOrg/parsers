@@ -37,15 +37,15 @@
     "tsconfig": "./tsconfig.lib.json"
   },
   "dependencies": {
-    "@types/xast": "^1.0.2",
+    "@types/unist": "catalog:",
+    "@types/xast": "catalog:",
     "docx-to-vfile": "workspace:^",
-    "unified": "^10.1.2",
-    "unist-util-filter": "^4.0.1",
-    "vfile": "^5.3.7",
-    "vfile-message": "^3.1.4",
-    "xast-util-from-xml": "^3.0.0"
+    "unified": "catalog:",
+    "unist-util-filter": "catalog:",
+    "vfile": "catalog:",
+    "xast-util-from-xml": "catalog:"
   },
   "devDependencies": {
-    "unist-util-remove-position": "4.0.2"
+    "unist-util-remove-position": "catalog:"
   }
 }

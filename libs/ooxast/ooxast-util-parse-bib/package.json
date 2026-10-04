@@ -47,11 +47,11 @@
     "tmp-promise": "^3.0.3",
     "xast-util-is-element": "workspace:^",
     "xast-util-select": "workspace:^",
-    "xast-util-to-string": "^2.0.1"
+    "xast-util-to-string": "catalog:"
   },
   "devDependencies": {
     "docx-to-vfile": "workspace:^",
     "reoff-parse": "workspace:^",
-    "unified": "^10.1.2"
+    "unified": "catalog:"
   }
 }

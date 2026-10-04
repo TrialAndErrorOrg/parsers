@@ -5,19 +5,16 @@ import { readFile, writeFile } from 'fs/promises'
 import { tmpdir } from 'os'
 import { spawnSync } from 'child_process'
 import { join } from 'path'
-import { Plugin, CompilerFunction, unified } from 'unified'
+import { unified } from 'unified'
 import { removePosition } from 'unist-util-remove-position'
 import { reoffClean } from 'reoff-clean'
 import reoffCite from 'reoff-cite'
 import reoffParseReferences from 'reoff-parse-references'
 import { toUnifiedLatex } from '../lib/ooxast-util-to-unified-latex.js'
-import { toString } from '@unified-latex/unified-latex-util-to-string'
-
-import { Options } from '../lib/types.js'
-import { Node } from 'unist'
-import { Ast, Root } from '@unified-latex/unified-latex-types'
-import { describe, it, expect } from 'vitest'
-import { blob } from 'stream/consumers'
+import type { Root as OoxastRoot } from 'ooxast'
+import type { Node } from 'unist'
+import type { Root } from '@unified-latex/unified-latex-types'
+import { it, expect } from 'vitest'
 import unifiedLatexStringify from 'unified-latex-stringify'
 // import reoffMarkupToStyle from 'reoff-markup-to-style'
 
@@ -43,23 +40,18 @@ const dump = (dir: string | undefined, file: string, content: () => string) => {
   writeFileSync(join(dir, file), content())
 }
 
-const unifieddLatexStringify = function relatexStringify(options?: Options | void) {
-  const compiler: CompilerFunction<Node, string> = (tree) => {
-    // Assume options.
-    const settings = this.data('settings') as Options
-
-    return toString(tree as Ast)
-  }
-
-  Object.assign(this, { Compiler: compiler })
-} as Plugin<[Options] | void[], Root, string>
+/** Strip positions from a copy of `tree` for a debug dump, leaving the tree itself alone. */
+const withoutPositions = (tree: Node) => {
+  const copy = structuredClone(tree)
+  removePosition(copy, { force: true })
+  return JSON.stringify(copy, null, 2)
+}
 
 const fromDocx = (
   path: string | undefined,
   citationType?: 'mendeley' | 'word' | 'citavi' | 'zotero' | 'endnote',
 ) =>
   unified()
-    .data('hey', 'ho')
     .use(reoffParse)
     .use(reoffClean, {
       rPrRemoveList: ['w:lang', 'w:shd', 'w:szCs', 'w:sz', 'w:kern', 'w:rFonts', 'w:noProof'],
@@ -68,15 +60,15 @@ const fromDocx = (
     .use(reoffParseReferences) // { mailto: 'support@trialanderror.org' })
     .use(reoffCite, { type: citationType || 'zotero', log: false })
     .use(() => (tree, vfile) => {
-      dump(path, 'test.ooxast.json', () => JSON.stringify(removePosition(tree), null, 2))
+      dump(path, 'test.ooxast.json', () => withoutPositions(tree))
     })
     .use(
       // Relations and the bibliography are read from the VFile.
-      () => (tree, vfile) => toUnifiedLatex(tree, vfile) as Root,
+      () => (tree, vfile) => toUnifiedLatex(tree as OoxastRoot, vfile) as Root,
     )
     .use(
       () => (tree) =>
-        dump(path, 'test.tex.json', () => JSON.stringify(removePosition(tree), null, 2)),
+        dump(path, 'test.tex.json', () => withoutPositions(tree)),
     )
     .use(unifiedLatexStringify)
 

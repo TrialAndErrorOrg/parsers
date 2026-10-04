@@ -1,15 +1,15 @@
-import { Processor as UnifiedProcessor, Plugin } from 'unified'
-import { toUnifiedLatex, Options } from 'ooxast-util-to-unified-latex'
-import { Root as OoxastRoot } from 'ooxast'
-import { Root } from '@unified-latex/unified-latex-types'
+import type { Processor as UnifiedProcessor, Plugin, Transformer } from 'unified'
+import { toUnifiedLatex, type Options } from 'ooxast-util-to-unified-latex'
+import type { Root as OoxastRoot } from 'ooxast'
+import type { Root } from '@unified-latex/unified-latex-types'
 
-type Processor = UnifiedProcessor<any, any, any, any>
+type Processor = UnifiedProcessor<any, any, any, any, any>
 /**
  * Bridge-mode.
  * Runs the destination with the new unified-latex tree.
  *
  */
-const bridge: Plugin<[Processor, Options?], OoxastRoot> = function (destination, options) {
+function bridge(destination: Processor, options?: Options): Transformer<OoxastRoot, OoxastRoot> {
   return (node, file, next) => {
     destination.run(toUnifiedLatex(node, options), file, (error) => {
       next(error)
@@ -21,7 +21,7 @@ const bridge: Plugin<[Processor, Options?], OoxastRoot> = function (destination,
  * Mutate-mode.
  * Further transformers run on the unified-latex tree.
  */
-const mutate: Plugin<(Options | undefined | void)[], OoxastRoot, Root> = function (options = {}) {
+function mutate(options: Options = {}): Transformer<OoxastRoot, Root> {
   return (node, file) => {
     const result = toUnifiedLatex(node, file, options)
     return result
@@ -43,7 +43,7 @@ const mutate: Plugin<(Options | undefined | void)[], OoxastRoot, Root> = functio
  * @param options
  *   Options passed to `ooxast-util-to-unified-latex`.
  */
-const reoffUnifiedLatex = function (destination: Processor | Options, options?: Options) {
+const reoffUnifiedLatex = function (destination?: Processor | Options, options?: Options) {
   let settings: Options | undefined
   let processor: Processor | undefined
 
@@ -58,7 +58,7 @@ const reoffUnifiedLatex = function (destination: Processor | Options, options?: 
     settings = Object.assign({}, settings, { document: true })
   }
 
-  return processor ? bridge.call(this, processor, settings) : mutate.call(this, settings)
-}
+  return processor ? bridge(processor, settings) : mutate(settings)
+} as Plugin<[Processor, Options?], OoxastRoot> & Plugin<[Options?], OoxastRoot, Root>
 
 export default reoffUnifiedLatex

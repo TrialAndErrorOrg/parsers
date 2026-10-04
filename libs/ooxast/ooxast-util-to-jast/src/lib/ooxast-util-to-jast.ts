@@ -9,20 +9,20 @@ import {
   JWithProps,
   JastContent,
   JastRoot,
-  Node,
   Options,
   Attributes,
   Root,
   Element,
   Text,
 } from './types.js'
+import type { Node as UnistNode } from 'unist'
 import { convert } from 'unist-util-is'
-import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
+import { minifyWhitespace } from 'xast-util-minify-whitespace'
 import { select } from 'xast-util-select'
 import { cslToRefList } from 'jast-util-from-csl'
 import { VFile } from 'vfile'
-// Declares `file.data.parsed` / `file.data.relations` on vfile's DataMap.
-import type {} from 'reoff-parse'
+// Types `file.data.parsed` / `relations` (the augmentation lives in docx-to-vfile).
+import type {} from 'docx-to-vfile'
 import { getStyleNames } from './util/style-names.js'
 
 // export { one } from './one.js'
@@ -106,17 +106,18 @@ export function toJast(
         attributes = props
       }
 
-      const result: Node = Object.assign(
-        {},
-        ['root', 'text'].includes(type) ? { type } : { type: 'element', name: type },
-        { attributes },
-      )
+      const result: UnistNode & {
+        attributes?: Attributes
+        value?: string
+        children?: Array<JastContent>
+      } = {
+        ...(['root', 'text'].includes(type) ? { type } : { type: 'element', name: type }),
+        attributes,
+      }
 
       if (typeof children === 'string') {
-        // @ts-expect-error: Looks like a literal.
         result.value = children
       } else if (children) {
-        // @ts-expect-error: Looks like a parent.
         result.children = children
       }
 
@@ -140,8 +141,7 @@ export function toJast(
   //   }
   // })
 
-  // @ts-expect-error: does return a transformer, that does accept any node.
-  rehypeMinifyWhitespace({ newlines: options.newlines === true })(tree)
+  minifyWhitespace(tree, { newlines: options.newLines === true })
 
   // @ts-expect-error: does return a transformer, that does accept any node.
   const result = one(j, tree, undefined)

@@ -16,7 +16,7 @@ import {
   Text,
   RenderInfo,
 } from './types.js'
-import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
+import { minifyWhitespace } from 'xast-util-minify-whitespace'
 
 import { arg, args, env, m, s } from '@unified-latex/unified-latex-builder'
 
@@ -27,7 +27,8 @@ import { cslToBiblatex } from 'csl-to-biblatex'
 import { VFile } from 'vfile'
 import { notes } from './util/notes.js'
 import { findListNumbering } from './util/find-list-numbering.js'
-import { DocxVFileData } from 'docx-to-vfile'
+// Types `file.data.parsed` / `relations` (the augmentation lives in docx-to-vfile).
+import type {} from 'docx-to-vfile'
 import { escapeLatex } from './util/escape.js'
 import { getStyleNames } from './util/style-names.js'
 import { listMatcher, listStyleHandler } from './handlers/paragraph/list.js'
@@ -62,11 +63,6 @@ export const defaultOptions: Options = {
   ],
   paragraphHandlers: defaultParagraphHandlers,
   formattingHandlers: defaultFormattingHandlers,
-}
-
-declare module 'vfile' {
-  // eslint-disable-next-line @typescript-eslint/no-empty-interface
-  interface DataMap extends DocxVFileData {}
 }
 
 function preambleHasTitle(preamble: NonNullable<Options['preamble']>) {
@@ -109,14 +105,9 @@ export function toUnifiedLatex(
     ? [vfile?.data?.parsed?.['word/footnotes.xml'], vfile?.data?.parsed?.['word/endnotes.xml']]
     : []
 
-  const whiteSpaceTransformer = rehypeMinifyWhitespace({
-    newlines: options.newLines === true,
-  })
+  const minifyOptions = { newlines: options.newLines === true }
 
-  if (whiteSpaceTransformer) {
-    // @ts-expect-error rehype-minify-whitespace is not typed correctly
-    whiteSpaceTransformer(tree)
-  }
+  minifyWhitespace(tree, minifyOptions)
 
   // const byId: { [s: string]: Element } = {}
   let unifiedLatex: UnifiedLatexNode | UnifiedLatexRoot
@@ -209,15 +200,13 @@ export function toUnifiedLatex(
   const ogRelations = h.relations
   if (unparsedFootnotes) {
     h.relations = vfile?.data?.relations?.footnotes || {}
-    //@ts-expect-error shhh
-    whiteSpaceTransformer!(unparsedFootnotes)
+    minifyWhitespace(unparsedFootnotes, minifyOptions)
     h.footnotes = notes(h, unparsedFootnotes)
   }
 
   if (unparsedEndnotes) {
     h.relations = vfile?.data?.relations?.endnotes || {}
-    //@ts-expect-error shhh
-    whiteSpaceTransformer!(unparsedEndnotes)
+    minifyWhitespace(unparsedEndnotes, minifyOptions)
     h.endnotes = notes(h, unparsedEndnotes)
   }
 
@@ -304,7 +293,7 @@ export function toUnifiedLatex(
 
   /**
    * Collapse text nodes, and fix whitespace.
-   * Most of this is taken care of by `rehype-minify-whitespace`, but
+   * Most of this is taken care of by `xast-util-minify-whitespace`, but
    * we’re generating some whitespace too, and some nodes are in the end
    * ignored.
    * So clean up.

@@ -1,17 +1,20 @@
-import { Root, Node } from 'ooxast'
+import type { Root } from 'ooxast'
 import { ZipWriter, BlobWriter, TextReader, BlobReader } from '@zip.js/zip.js'
 
-import { CompilerFunction, Plugin } from 'unified'
+import type { Plugin } from 'unified'
 import { toXml } from 'xast-util-to-xml'
-import { DocxVFileData } from 'docx-to-vfile'
+// Types `file.data.parsed` and `media` (the augmentation lives in docx-to-vfile).
+import type {} from 'docx-to-vfile'
 
-declare module 'vfile' {
-  // eslint-disable-next-line @typescript-eslint/no-empty-interface
-  interface DataMap extends DocxVFileData {}
+declare module 'unified' {
+  interface CompileResultMap {
+    // reoff-compile zips the tree and the files on `file.data` back into a .docx.
+    ReoffCompileResult: Promise<Blob>
+  }
 }
 
-const reoffCompile: Plugin<void[], Root, Promise<Blob>> = async function reoffCompile() {
-  const compiler: CompilerFunction<Node, Promise<Blob>> = async (tree, vfile) => {
+const reoffCompile: Plugin<[], Root, Promise<Blob>> = function reoffCompile() {
+  this.compiler = async (tree, vfile) => {
     const zipWriter = new ZipWriter(new BlobWriter('application/zip'))
 
     const { data: dataAttr, value } = vfile
@@ -53,11 +56,7 @@ const reoffCompile: Plugin<void[], Root, Promise<Blob>> = async function reoffCo
     await Promise.all([mainPromise, ...rawPromise, ...mediaPromise, ...parsedPromise])
 
     return zipWriter.close()
-
-    // Assume options.
   }
-
-  Object.assign(this, { Compiler: compiler })
 }
 
 export default reoffCompile

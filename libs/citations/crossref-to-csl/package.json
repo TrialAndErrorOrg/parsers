@@ -38,6 +38,6 @@
   "dependencies": {
     "crossref-json": "workspace:^",
     "csl-json": "0.1.0",
-    "utility-types": "^3.10.0"
+    "utility-types": "^3.11.0"
   }
 }

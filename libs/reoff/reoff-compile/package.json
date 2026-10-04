@@ -38,7 +38,7 @@
     "tsconfig": "./tsconfig.lib.json"
   },
   "dependencies": {
-    "@zip.js/zip.js": "^2.6.83",
+    "@zip.js/zip.js": "^2.23.0",
     "docx-to-vfile": "workspace:^",
     "ooxast": "workspace:^",
     "unified": "^10.1.2",

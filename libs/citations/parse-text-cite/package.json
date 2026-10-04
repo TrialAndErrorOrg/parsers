@@ -38,11 +38,11 @@
   },
   "dependencies": {
     "csl-json": "0.1.0",
-    "moo": "^0.5.1",
+    "moo": "^0.5.3",
     "nearley": "^2.20.1"
   },
   "devDependencies": {
-    "@types/moo": "^0.5.5",
-    "@types/nearley": "^2.11.2"
+    "@types/moo": "^0.5.10",
+    "@types/nearley": "^2.11.5"
   }
 }

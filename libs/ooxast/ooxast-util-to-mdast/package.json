@@ -66,7 +66,7 @@
   },
   "devDependencies": {
     "@benrbray/remark-cite": "^1.1.0",
-    "@types/extend": "^3.0.1",
+    "@types/extend": "^3.0.4",
     "remark-gfm": "^3.0.1",
     "remark-math": "^5.1.1",
     "remark-stringify": "^10.0.3",

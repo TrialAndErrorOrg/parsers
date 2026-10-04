@@ -282,6 +282,7 @@ export interface WrapNone extends UnistNode {
   type: 'element'
   name: 'wp:wrapNone'
   children: []
+  attributes: Record<string, never>
 }
 
 export interface WrapPath extends UnistNode {

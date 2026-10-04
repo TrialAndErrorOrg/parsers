@@ -814,6 +814,8 @@ export interface DocPartName extends UnistNode {
 export interface DocPartPr extends UnistNode {
   type: 'element'
   name: 'w:docPartPr'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface DocParts extends UnistNode {
@@ -882,6 +884,7 @@ export interface DocType extends UnistNode {
   attributes: {
     'w:val': string
   }
+  children: []
 }
 
 export interface Document extends DocumentBase {
@@ -901,7 +904,7 @@ export interface DocumentMap {
 export interface DocumentBase extends UnistNode {
   type: 'element'
   name: 'w:documentBase' | 'w:document'
-  attributes: Record<string, unknown>
+  attributes: Record<string, string | undefined>
   children: RequiredMap<DocumentBaseMap>[]
 }
 
@@ -1003,6 +1006,7 @@ export interface Empty<tag extends string = 'empty'> extends UnistNode {
   type: 'element'
   name: `w:${tag}`
   children: []
+  attributes: Record<string, never>
 }
 
 export interface Endnotes extends UnistNode {
@@ -1171,6 +1175,7 @@ export interface FontFamily extends UnistNode {
   attributes: {
     'w:val': FontFamilyVal
   }
+  children: []
 }
 
 export type FontRel = Rel & {
@@ -2368,6 +2373,8 @@ export interface PPrMap {
 
 export interface PPrBase extends UnistNode {
   type: 'element'
+  // `w:pPr` inside `w:pPrChange`; `PPrGeneral` narrows it.
+  name: string
   attributes: Record<string, never>
   children: RequiredMap<PPrBaseMap>[]
 }
@@ -3782,6 +3789,7 @@ export interface TblPPr extends UnistNode {
     'w:topFromText': string
     'w:vertAnchor': VAnchorVal
   }
+  children: []
 }
 
 export type TblPr = TblPrBase & {

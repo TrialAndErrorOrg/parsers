@@ -5,6 +5,6 @@
     "outDir": "../../dist/out-tsc",
     "composite": true,
     "declaration": true,
-    "types": ["jest", "node"]
+    "types": ["node"]
   }
 }

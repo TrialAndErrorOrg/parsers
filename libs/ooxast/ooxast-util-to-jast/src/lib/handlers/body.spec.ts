@@ -1,6 +1,7 @@
 import { x } from 'xastscript'
 import { toJast } from '../ooxast-util-to-jast.js'
 import fs from 'fs'
+import { it, expect } from 'vitest'
 
 it('should work', () => {
   const doc = x('w:document', {}, [

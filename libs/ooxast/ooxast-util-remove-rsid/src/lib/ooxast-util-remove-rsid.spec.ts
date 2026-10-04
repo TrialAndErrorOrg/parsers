@@ -1,7 +1,13 @@
 import { ooxastUtilRemoveRsid } from './ooxast-util-remove-rsid.js'
-import { readFileSync, writeFileSync } from 'fs'
+import { readFileSync, writeFileSync as fsWriteFileSync } from 'fs'
 import { selectAll } from 'xast-util-select'
 import { Root } from 'ooxast'
+import { describe, it, expect } from 'vitest'
+
+// Debug output is only written when WRITE_TEST_OUTPUT is set, so test runs never modify tracked files.
+const writeFileSync = (...args: Parameters<typeof fsWriteFileSync>) => {
+  if (process.env.WRITE_TEST_OUTPUT) fsWriteFileSync(...args)
+}
 
 describe('ooxastOoxastUtilRemoveRsid', () => {
   const tree = JSON.parse(

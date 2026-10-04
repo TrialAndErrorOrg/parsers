@@ -3,8 +3,8 @@ import reoffRejour from 'reoff-rejour'
 import rejourRelatex from 'rejour-relatex'
 import relatexStringify from 'relatex-stringify'
 import { docxToVFile } from 'docx-to-vfile'
-import { readdirSync, writeFileSync } from 'fs'
-import { readFile, writeFile } from 'fs/promises'
+import { readdirSync, writeFileSync as fsWriteFileSync } from 'fs'
+import { readFile, writeFile as fsWriteFile } from 'fs/promises'
 import { join } from 'path'
 import { unified } from 'unified'
 import { removePosition } from 'unist-util-remove-position'
@@ -12,6 +12,15 @@ import { select } from 'xast-util-select'
 import { reoffClean } from 'reoff-clean'
 import reoffCite from 'reoff-cite'
 import reoffParseReferences from 'reoff-parse-references'
+import { it, expect } from 'vitest'
+
+// Debug output is only written when WRITE_TEST_OUTPUT is set, so test runs never modify tracked files.
+const writeFileSync = (...args: Parameters<typeof fsWriteFileSync>) => {
+  if (process.env.WRITE_TEST_OUTPUT) fsWriteFileSync(...args)
+}
+const writeFile = async (...args: Parameters<typeof fsWriteFile>) => {
+  if (process.env.WRITE_TEST_OUTPUT) await fsWriteFile(...args)
+}
 
 // import path from 'path'
 // import { fileURLToPath } from 'url'

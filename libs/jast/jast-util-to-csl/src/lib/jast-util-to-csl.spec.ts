@@ -3,6 +3,7 @@ import { toCSL } from './jast-util-to-csl.js'
 import { unified } from 'unified'
 import { read } from 'to-vfile'
 import { Root } from 'jast-types'
+import { describe, it, expect } from 'vitest'
 
 describe('rejourJastUtilToCsl', () => {
   const proc = unified().use(rejourParse)

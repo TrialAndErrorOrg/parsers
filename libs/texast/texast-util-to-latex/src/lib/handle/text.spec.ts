@@ -1,4 +1,5 @@
 import { toLatex } from '../texast-util-to-latex.js'
+import { describe, it, expect } from 'vitest'
 
 describe('text', () => {
   it('should render', () => {

@@ -1,6 +1,7 @@
 import { Element } from 'xast'
 import { fromXml } from 'xast-util-from-xml'
 import { getPr } from './ooxast-util-properties.js'
+import { describe, it, expect } from 'vitest'
 
 describe('ooxastUtilProperties', () => {
   const pPr =

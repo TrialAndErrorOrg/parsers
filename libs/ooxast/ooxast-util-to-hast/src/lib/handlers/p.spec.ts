@@ -1,6 +1,7 @@
 import { x } from 'xastscript'
 import { h } from 'hastscript'
 import { toHast } from '../ooxast-util-to-hast.js'
+import { describe, it, expect } from 'vitest'
 describe('p', () => {
   it('should do something', () => {
     const basicp = x('p', { id: 'ayy' }, [

@@ -1,6 +1,7 @@
 import { addPreamble } from './texast-util-add-preamble.js'
 import { u } from 'unist-builder'
 import { Preamble, Root } from 'texast'
+import { describe, it, expect } from 'vitest'
 
 describe('texastTexastUtilAddPreamble', () => {
   const preamb = u('root', [u('preamble', []), u('document', [])]) as any

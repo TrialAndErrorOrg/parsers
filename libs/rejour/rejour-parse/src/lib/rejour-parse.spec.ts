@@ -1,6 +1,7 @@
 import { unified } from 'unified'
 import rejourParse from './rejour-parse.js'
 import { removePosition } from 'unist-util-remove-position'
+import { describe, it, expect } from 'vitest'
 
 describe('parser', () => {
   const proc = unified().use(rejourParse)

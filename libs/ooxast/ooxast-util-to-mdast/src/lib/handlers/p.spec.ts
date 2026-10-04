@@ -1,6 +1,7 @@
 import { x } from 'xastscript'
 import { toMdast } from '../ooxast-util-to-mdast.js'
 import { s, SP } from '@unified-latex/unified-latex-builder'
+import { describe, it, expect } from 'vitest'
 
 describe('p', () => {
   it('should do something', () => {

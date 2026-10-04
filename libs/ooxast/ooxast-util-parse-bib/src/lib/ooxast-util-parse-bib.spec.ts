@@ -5,6 +5,7 @@ import { unified } from 'unified'
 import { parseBib } from './ooxast-util-parse-bib.js'
 import { findBib } from './find-bib.js'
 import { bibToCSL } from './bib-to-csl-node.js'
+import { describe, it, expect, vi } from 'vitest'
 
 async function getTree() {
   // If in node, get the correct docx uintarray like so
@@ -65,7 +66,7 @@ describe('parseBib', () => {
   //   expect(csl).toMatchSnapshot()
   // })
 
-  jest.setTimeout(20000)
+  vi.setConfig({ testTimeout: 20000 })
   it('should crossref', async () => {
     const y = await parseBib(await tree, {
       mailto: 'support@centeroftrialanderror.com',

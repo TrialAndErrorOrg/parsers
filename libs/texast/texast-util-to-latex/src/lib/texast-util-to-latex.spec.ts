@@ -1,5 +1,6 @@
 import { Text, Command, CommandArg, CommandArgOpt, Environment, InlineMath } from 'texast'
 import { toLatex } from './texast-util-to-latex.js'
+import { describe, it, expect } from 'vitest'
 const text: Text = { type: 'text', value: 'hello world!' }
 
 const commandWithNoArgs: Command = {

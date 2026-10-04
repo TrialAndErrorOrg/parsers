@@ -2,6 +2,7 @@ import { x } from 'xastscript'
 import { h } from 'hastscript'
 import { toHast } from '../ooxast-util-to-hast.js'
 import fs from 'fs'
+import { it, expect } from 'vitest'
 // import { removePosition } from 'unist-util-remove-position'
 
 it('should work', () => {

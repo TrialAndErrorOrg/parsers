@@ -38,6 +38,6 @@
   "dependencies": {
     "texast": "workspace:^",
     "texast-util-to-latex": "workspace:^",
-    "unified": "^10.1.2"
+    "unified": "catalog:"
   }
 }

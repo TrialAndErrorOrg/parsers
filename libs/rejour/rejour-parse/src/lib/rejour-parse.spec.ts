@@ -7,7 +7,8 @@ describe('parser', () => {
   const proc = unified().use(rejourParse)
 
   it('should parse the tree', () => {
-    const tree = removePosition(proc.parse('<article></article>'), true)
+    const tree = proc.parse('<article></article>')
+    removePosition(tree, { force: true })
     expect(tree).toEqual({
       type: 'root',
       children: [
@@ -22,13 +23,11 @@ describe('parser', () => {
   })
 
   it('should not remove whitespace without setting', () => {
-    const tree = removePosition(
-      proc.parse(`<article>
+    const tree = proc.parse(`<article>
 
 
-    </article>`),
-      true,
-    )
+    </article>`)
+    removePosition(tree, { force: true })
     expect(tree).toEqual({
       children: [
         {
@@ -43,13 +42,11 @@ describe('parser', () => {
   })
   it('should remove whitespace *with* setting', () => {
     const proc = unified().use(rejourParse, { removeWhiteSpace: true })
-    const tree = removePosition(
-      proc.parse(`<article>
+    const tree = proc.parse(`<article>
 
 
-    </article>`),
-      true,
-    )
+    </article>`)
+    removePosition(tree, { force: true })
     expect(tree).toEqual({
       children: [
         {

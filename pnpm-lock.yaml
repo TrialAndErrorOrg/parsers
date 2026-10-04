@@ -24,12 +24,30 @@ catalogs:
     '@unified-latex/unified-latex-util-to-string':
       specifier: ^1.8.4
       version: 1.8.4
+    to-vfile:
+      specifier: ^8.0.0
+      version: 8.0.0
     unified:
       specifier: ^11.0.5
       version: 11.0.5
     unist-builder:
       specifier: ^4.0.0
       version: 4.0.0
+    unist-util-filter:
+      specifier: ^5.0.1
+      version: 5.0.1
+    unist-util-is:
+      specifier: ^6.0.1
+      version: 6.0.1
+    unist-util-map:
+      specifier: ^4.0.0
+      version: 4.0.0
+    unist-util-remove:
+      specifier: ^4.0.0
+      version: 4.0.0
+    unist-util-remove-position:
+      specifier: ^5.0.0
+      version: 5.0.0
     unist-util-visit:
       specifier: ^5.1.0
       version: 5.1.0
@@ -39,6 +57,9 @@ catalogs:
     vfile:
       specifier: ^6.0.3
       version: 6.0.3
+    vfile-reporter:
+      specifier: ^8.1.1
+      version: 8.1.1
     xast-util-from-xml:
       specifier: ^4.0.0
       version: 4.0.0
@@ -247,8 +268,8 @@ importers:
         specifier: workspace:^
         version: link:../jast/jast
       unified:
-        specifier: ^10.1.2
-        version: 10.1.2
+        specifier: 'catalog:'
+        version: 11.0.5
 
   libs/book-converter:
     dependencies:
@@ -452,9 +473,6 @@ importers:
       jast-types:
         specifier: workspace:^
         version: link:../jast
-      unist-util-is:
-        specifier: ^5.2.1
-        version: 5.2.1
       xast-util-is-element:
         specifier: workspace:^
         version: link:../../xast/xast-util-is-element
@@ -462,21 +480,24 @@ importers:
         specifier: workspace:^
         version: link:../../xast/xast-util-select
       xast-util-to-string:
-        specifier: ^2.0.1
-        version: 2.0.1
+        specifier: 'catalog:'
+        version: 3.0.0
     devDependencies:
       rejour-parse:
         specifier: workspace:^
         version: link:../../rejour/rejour-parse
       to-vfile:
-        specifier: ^7.2.4
-        version: 7.2.4
+        specifier: 'catalog:'
+        version: 8.0.0
       unified:
-        specifier: ^10.1.2
-        version: 10.1.2
+        specifier: 'catalog:'
+        version: 11.0.5
 
   libs/jast/jast-util-to-texast:
     dependencies:
+      '@types/xast':
+        specifier: 'catalog:'
+        version: 2.0.4
       csl-json:
         specifier: 0.1.0
         version: 0.1.0
@@ -489,18 +510,18 @@ importers:
       jast-util-to-csl:
         specifier: workspace:^
         version: link:../jast-util-to-csl
-      rehype-minify-whitespace:
-        specifier: ^5.0.0
-        version: 5.0.1
       texast:
         specifier: workspace:^
         version: link:../../texast/texast
       unist-util-is:
-        specifier: ^5.2.1
-        version: 5.2.1
+        specifier: 'catalog:'
+        version: 6.0.1
       unist-util-visit:
-        specifier: ^4.1.2
-        version: 4.1.2
+        specifier: 'catalog:'
+        version: 5.1.0
+      xast-util-minify-whitespace:
+        specifier: workspace:^
+        version: link:../../xast/xast-util-minify-whitespace
       xast-util-select:
         specifier: workspace:^
         version: link:../../xast/xast-util-select
@@ -515,11 +536,11 @@ importers:
         specifier: workspace:^
         version: link:../../texast/texast-util-to-latex
       unified:
-        specifier: ^10.1.2
-        version: 10.1.2
+        specifier: 'catalog:'
+        version: 11.0.5
       unist-util-remove-position:
-        specifier: 4.0.2
-        version: 4.0.2
+        specifier: 'catalog:'
+        version: 5.0.0
 
   libs/notion/html-to-notion-blocks:
     dependencies:
@@ -570,8 +591,8 @@ importers:
   libs/ojs/ojs-relatex:
     dependencies:
       '@types/unist':
-        specifier: ^2.0.6
-        version: 2.0.6
+        specifier: 'catalog:'
+        version: 3.0.3
 
   libs/ooxast/ooxast:
     dependencies:
@@ -1199,11 +1220,11 @@ importers:
         specifier: workspace:^
         version: link:../../relatex/relatex-stringify
       unified:
-        specifier: ^10.1.2
-        version: 10.1.2
+        specifier: 'catalog:'
+        version: 11.0.5
       vfile:
-        specifier: ^5.3.7
-        version: 5.3.7
+        specifier: 'catalog:'
+        version: 6.0.3
 
   libs/processors/jote-docx-tex:
     dependencies:
@@ -1247,8 +1268,8 @@ importers:
   libs/rejour/rejour-frontmatter:
     dependencies:
       '@types/unist':
-        specifier: ^2.0.6
-        version: 2.0.6
+        specifier: 'catalog:'
+        version: 3.0.3
       jast-types:
         specifier: workspace:^
         version: link:../../jast/jast
@@ -1256,24 +1277,24 @@ importers:
         specifier: workspace:^
         version: link:../../jast/jast-util-to-csl
       unist-util-is:
-        specifier: ^5.2.1
-        version: 5.2.1
+        specifier: 'catalog:'
+        version: 6.0.1
       unist-util-visit:
-        specifier: ^4.1.2
-        version: 4.1.2
+        specifier: 'catalog:'
+        version: 5.1.0
       vfile:
-        specifier: ^5.3.7
-        version: 5.3.7
+        specifier: 'catalog:'
+        version: 6.0.3
     devDependencies:
       rejour-parse:
         specifier: workspace:^
         version: link:../rejour-parse
       to-vfile:
-        specifier: ^7.2.4
-        version: 7.2.4
+        specifier: 'catalog:'
+        version: 8.0.0
       unified:
-        specifier: ^10.1.2
-        version: 10.1.2
+        specifier: 'catalog:'
+        version: 11.0.5
 
   libs/rejour/rejour-meta:
     dependencies:
@@ -1287,14 +1308,14 @@ importers:
         specifier: workspace:^
         version: link:../../jast/jast
       unist-util-filter:
-        specifier: ^4.0.1
-        version: 4.0.1
+        specifier: 'catalog:'
+        version: 5.0.1
       unist-util-remove:
-        specifier: ^3.1.1
-        version: 3.1.1
+        specifier: 'catalog:'
+        version: 4.0.0
       unist-util-visit:
-        specifier: ^4.1.2
-        version: 4.1.2
+        specifier: 'catalog:'
+        version: 5.1.0
     devDependencies:
       rejour-parse:
         specifier: workspace:^
@@ -1303,39 +1324,39 @@ importers:
         specifier: workspace:^
         version: link:../rejour-stringify
       unified:
-        specifier: ^10.1.2
-        version: 10.1.2
+        specifier: 'catalog:'
+        version: 11.0.5
       unist-util-map:
-        specifier: ^3.1.3
-        version: 3.1.3
+        specifier: 'catalog:'
+        version: 4.0.0
       vfile-reporter:
-        specifier: ^7.0.5
-        version: 7.0.5
+        specifier: 'catalog:'
+        version: 8.1.1
 
   libs/rejour/rejour-parse:
     dependencies:
       '@types/xast':
-        specifier: ^1.0.2
-        version: 1.0.2
+        specifier: 'catalog:'
+        version: 2.0.4
       jast-types:
         specifier: workspace:^
         version: link:../../jast/jast
       unified:
-        specifier: ^10.1.2
-        version: 10.1.2
+        specifier: 'catalog:'
+        version: 11.0.5
       unist-util-filter:
-        specifier: ^4.0.1
-        version: 4.0.1
+        specifier: 'catalog:'
+        version: 5.0.1
       unist-util-map:
-        specifier: ^3.1.3
-        version: 3.1.3
+        specifier: 'catalog:'
+        version: 4.0.0
       xast-util-from-xml:
-        specifier: ^3.0.0
-        version: 3.0.0
+        specifier: 'catalog:'
+        version: 4.0.0
     devDependencies:
       unist-util-remove-position:
-        specifier: 4.0.2
-        version: 4.0.2
+        specifier: 'catalog:'
+        version: 5.0.0
 
   libs/rejour/rejour-relatex:
     dependencies:
@@ -1349,26 +1370,29 @@ importers:
         specifier: workspace:^
         version: link:../../texast/texast
       unified:
-        specifier: ^10.1.2
-        version: 10.1.2
+        specifier: 'catalog:'
+        version: 11.0.5
       vfile:
-        specifier: ^5.3.7
-        version: 5.3.7
+        specifier: 'catalog:'
+        version: 6.0.3
 
   libs/rejour/rejour-stringify:
     dependencies:
+      '@types/xast':
+        specifier: 'catalog:'
+        version: 2.0.4
       jast-types:
         specifier: workspace:^
         version: link:../../jast/jast
       unified:
-        specifier: ^10.1.2
-        version: 10.1.2
+        specifier: 'catalog:'
+        version: 11.0.5
       unist-util-map:
-        specifier: ^3.1.3
-        version: 3.1.3
+        specifier: 'catalog:'
+        version: 4.0.0
       xast-util-to-xml:
-        specifier: ^3.0.2
-        version: 3.0.2
+        specifier: 'catalog:'
+        version: 4.0.0
 
   libs/relatex/relatex-add-preamble:
     dependencies:
@@ -1379,11 +1403,11 @@ importers:
         specifier: workspace:^
         version: link:../../texast/texast-util-add-preamble
       unified:
-        specifier: ^10.1.2
-        version: 10.1.2
+        specifier: 'catalog:'
+        version: 11.0.5
       vfile:
-        specifier: ^5.3.7
-        version: 5.3.7
+        specifier: 'catalog:'
+        version: 6.0.3
 
   libs/relatex/relatex-stringify:
     dependencies:
@@ -1394,8 +1418,8 @@ importers:
         specifier: workspace:^
         version: link:../../texast/texast-util-to-latex
       unified:
-        specifier: ^10.1.2
-        version: 10.1.2
+        specifier: 'catalog:'
+        version: 11.0.5
 
   libs/reoff/docx-to-vfile:
     dependencies:
@@ -1603,18 +1627,18 @@ importers:
         specifier: workspace:^
         version: link:../texast
       unist-util-visit:
-        specifier: ^4.1.2
-        version: 4.1.2
+        specifier: 'catalog:'
+        version: 5.1.0
     devDependencies:
       unist-builder:
-        specifier: ^3.0.1
-        version: 3.0.1
+        specifier: 'catalog:'
+        version: 4.0.0
 
   libs/texast/texast-util-to-latex:
     dependencies:
       '@types/unist':
-        specifier: ^2.0.6
-        version: 2.0.6
+        specifier: 'catalog:'
+        version: 3.0.3
       escape-latex:
         specifier: 1.2.0
         version: 1.2.0
@@ -5326,6 +5350,10 @@ packages:
     resolution: {integrity: sha512-HnLOCR3vjcY8beoNLtcjZ5/nxn2afmME6lhrDrebokqMap+XbeW8n9TXpPDOqdGK5qcI3oT0GKTW6wC7EMiVqA==}
     engines: {node: '>=12'}
 
+  string-width@6.1.0:
+    resolution: {integrity: sha512-k01swCJAgQmuADB0YIc+7TuatfNvTBVOoaUWJjTB9R4VJzR5vNWzf5t42ESVZFPS8xTySF7CAdV4t/aaIm3UnQ==}
+    engines: {node: '>=16'}
+
   string-width@7.2.0:
     resolution: {integrity: sha512-tsaTIkKW9b4N+AEj+SVA+WhJzV7/zMhcSu78mLKWSk7cXMOSHsBKFWUs0fWwq8QyK3MgJBQRX6Gbi4kYbdvGkQ==}
     engines: {node: '>=18'}
@@ -5426,6 +5454,9 @@ packages:
   to-vfile@7.2.4:
     resolution: {integrity: sha512-2eQ+rJ2qGbyw3senPI0qjuM7aut8IYXK6AEoOWb+fJx/mQYzviTckm1wDjq91QYHAPBTYzmdJXxMFA6Mk14mdw==}
 
+  to-vfile@8.0.0:
+    resolution: {integrity: sha512-IcmH1xB5576MJc9qcfEC/m/nQCFt3fzMHz45sSlgJyTWjRbKW1HAkJpuf3DgE57YzIlZcwcBZA5ENQbBo4aLkg==}
+
   tr46@0.0.3:
     resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
 
@@ -5495,14 +5526,14 @@ packages:
   unified@9.2.2:
     resolution: {integrity: sha512-Sg7j110mtefBD+qunSLO1lqOEKdrwBFBrR6Qd8f4uwkhWNlbkaqwHse6e7QvD3AP/MNoJdEDLaf8OxYyoWgorQ==}
 
-  unist-builder@3.0.1:
-    resolution: {integrity: sha512-gnpOw7DIpCA0vpr6NqdPvTWnlPTApCTRzr+38E6hCWx3rz/cjo83SsKIlS1Z+L5ttScQ2AwutNnb8+tAvpb6qQ==}
-
   unist-builder@4.0.0:
     resolution: {integrity: sha512-wmRFnH+BLpZnTKpc5L7O67Kac89s9HMrtELpnNaE6TAobq5DTZZs5YaTQfAZBA9bFPECx2uVAPO31c+GVug8mg==}
 
   unist-util-filter@4.0.1:
     resolution: {integrity: sha512-RynicUM/vbOSTSiUK+BnaK9XMfmQUh6gyi7L6taNgc7FIf84GukXVV3ucGzEN/PhUUkdP5hb1MmXc+3cvPUm5Q==}
+
+  unist-util-filter@5.0.1:
+    resolution: {integrity: sha512-pHx7D4Zt6+TsfwylH9+lYhBhzyhEnCXs/lbq/Hstxno5z4gVdyc2WEW0asfjGKPyG4pEKrnBv5hdkO6+aRnQJw==}
 
   unist-util-find-after@4.0.1:
     resolution: {integrity: sha512-QO/PuPMm2ERxC6vFXEPtmAutOopy5PknD+Oq64gGwxKtk4xwo9Z97t9Av1obPmGU0IyTa6EKYUfTrK2QJS3Ozw==}
@@ -5516,8 +5547,8 @@ packages:
   unist-util-is@6.0.1:
     resolution: {integrity: sha512-LsiILbtBETkDz8I9p1dQ0uyRUWuaQzd/cuEeS1hoRSyW5E5XGmTzlwY1OrNzzakGowI9Dr/I8HVaw4hTtnxy8g==}
 
-  unist-util-map@3.1.3:
-    resolution: {integrity: sha512-4/mDauoxqZ6geK97lJ6n2kDk6JK88Vh+hWMSJqyaaP/7eqN1dDhjcjnNxKNm3YU6Sw7PVJtcFMUbnmHvYzb6Vg==}
+  unist-util-map@4.0.0:
+    resolution: {integrity: sha512-HJs1tpkSmRJUzj6fskQrS5oYhBYlmtcvy4SepdDEEsL04FjBrgF0Mgggvxc1/qGBGgW7hRh9+UBK1aqTEnBpIA==}
 
   unist-util-modify-children@2.0.0:
     resolution: {integrity: sha512-HGrj7JQo9DwZt8XFsX8UD4gGqOsIlCih9opG6Y+N11XqkBGKzHo8cvDi+MfQQgiZ7zXRUiQREYHhjOBHERTMdg==}
@@ -5531,8 +5562,14 @@ packages:
   unist-util-remove-position@4.0.2:
     resolution: {integrity: sha512-TkBb0HABNmxzAcfLf4qsIbFbaPDvMO6wa3b3j4VcEzFVaw1LBKwnW4/sRJ/atSLSzoIg41JWEdnE7N6DIhGDGQ==}
 
+  unist-util-remove-position@5.0.0:
+    resolution: {integrity: sha512-Hp5Kh3wLxv0PHj9m2yZhhLt58KzPtEYKQQ4yxfYFEO7EvHwzyDYnduhHnY1mDxoqr7VUwVuHXk9RXKIiYS1N8Q==}
+
   unist-util-remove@3.1.1:
     resolution: {integrity: sha512-kfCqZK5YVY5yEa89tvpl7KnBBHu2c6CzMkqHUrlOqaRgGOMp0sMvwWOVrbAtj03KhovQB7i96Gda72v/EFE0vw==}
+
+  unist-util-remove@4.0.0:
+    resolution: {integrity: sha512-b4gokeGId57UVRX/eVKej5gXqGlc9+trkORhFJpu9raqZkZhU0zm8Doi05+HaiBsMEIJowL+2WtQ5ItjsngPXg==}
 
   unist-util-stringify-position@2.0.3:
     resolution: {integrity: sha512-3faScn5I+hy9VleOq/qNbAd6pAx7iH5jYBMS9I1HgQVijz/4mv5Bvw5iw1sC/90CODiKo81G/ps8AJrISn687g==}
@@ -5621,11 +5658,20 @@ packages:
   vfile-reporter@7.0.5:
     resolution: {integrity: sha512-NdWWXkv6gcd7AZMvDomlQbK3MqFWL1RlGzMn++/O2TI+68+nqxCPTvLugdOtfSzXmjh+xUyhp07HhlrbJjT+mw==}
 
+  vfile-reporter@8.1.1:
+    resolution: {integrity: sha512-qxRZcnFSQt6pWKn3PAk81yLK2rO2i7CDXpy8v8ZquiEOMLSnPw6BMSi9Y1sUCwGGl7a9b3CJT1CKpnRF7pp66g==}
+
   vfile-sort@3.0.1:
     resolution: {integrity: sha512-1os1733XY6y0D5x0ugqSeaVJm9lYgj0j5qdcZQFyxlZOSy1jYarL77lLyb5gK4Wqr1d5OxmuyflSO3zKyFnTFw==}
 
+  vfile-sort@4.0.0:
+    resolution: {integrity: sha512-lffPI1JrbHDTToJwcq0rl6rBmkjQmMuXkAxsZPRS9DXbaJQvc642eCg6EGxcX2i1L+esbuhq+2l9tBll5v8AeQ==}
+
   vfile-statistics@2.0.1:
     resolution: {integrity: sha512-W6dkECZmP32EG/l+dp2jCLdYzmnDBIw6jwiLZSER81oR5AHRcVqL+k3Z+pfH1R73le6ayDkJRMk0sutj1bMVeg==}
+
+  vfile-statistics@3.0.0:
+    resolution: {integrity: sha512-/qlwqwWBWFOmpXujL/20P+Iuydil0rZZNglR+VNm6J0gpLHwuVM5s7g2TfVoswbXjZ4HuIhLMySEyIw5i7/D8w==}
 
   vfile@4.2.1:
     resolution: {integrity: sha512-O6AE4OskCG5S1emQ/4gl8zK586RqA3srz3nfK/Viy0UPToBc5Trp9BVFb1u0CjsKrAWwnpr4ifM/KBXPWwJbCA==}
@@ -9467,6 +9513,12 @@ snapshots:
       emoji-regex: 9.2.2
       strip-ansi: 7.0.1
 
+  string-width@6.1.0:
+    dependencies:
+      eastasianwidth: 0.2.0
+      emoji-regex: 10.6.0
+      strip-ansi: 7.2.0
+
   string-width@7.2.0:
     dependencies:
       emoji-regex: 10.6.0
@@ -9547,6 +9599,10 @@ snapshots:
     dependencies:
       is-buffer: 2.0.5
       vfile: 5.3.7
+
+  to-vfile@8.0.0:
+    dependencies:
+      vfile: 6.0.3
 
   tr46@0.0.3: {}
 
@@ -9635,10 +9691,6 @@ snapshots:
       trough: 1.0.5
       vfile: 4.2.1
 
-  unist-builder@3.0.1:
-    dependencies:
-      '@types/unist': 2.0.6
-
   unist-builder@4.0.0:
     dependencies:
       '@types/unist': 3.0.3
@@ -9648,6 +9700,12 @@ snapshots:
       '@types/unist': 2.0.6
       unist-util-is: 5.2.1
       unist-util-visit-parents: 5.1.3
+
+  unist-util-filter@5.0.1:
+    dependencies:
+      '@types/unist': 3.0.3
+      unist-util-is: 6.0.1
+      unist-util-visit-parents: 6.0.2
 
   unist-util-find-after@4.0.1:
     dependencies:
@@ -9664,9 +9722,9 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.3
 
-  unist-util-map@3.1.3:
+  unist-util-map@4.0.0:
     dependencies:
-      '@types/unist': 2.0.6
+      '@types/unist': 3.0.3
 
   unist-util-modify-children@2.0.0:
     dependencies:
@@ -9686,11 +9744,22 @@ snapshots:
       '@types/unist': 2.0.6
       unist-util-visit: 4.1.2
 
+  unist-util-remove-position@5.0.0:
+    dependencies:
+      '@types/unist': 3.0.3
+      unist-util-visit: 5.1.0
+
   unist-util-remove@3.1.1:
     dependencies:
       '@types/unist': 2.0.6
       unist-util-is: 5.2.1
       unist-util-visit-parents: 5.1.3
+
+  unist-util-remove@4.0.0:
+    dependencies:
+      '@types/unist': 3.0.3
+      unist-util-is: 6.0.1
+      unist-util-visit-parents: 6.0.2
 
   unist-util-stringify-position@2.0.3:
     dependencies:
@@ -9808,15 +9877,36 @@ snapshots:
       vfile-sort: 3.0.1
       vfile-statistics: 2.0.1
 
+  vfile-reporter@8.1.1:
+    dependencies:
+      '@types/supports-color': 8.1.1
+      string-width: 6.1.0
+      supports-color: 9.3.1
+      unist-util-stringify-position: 4.0.0
+      vfile: 6.0.3
+      vfile-message: 4.0.3
+      vfile-sort: 4.0.0
+      vfile-statistics: 3.0.0
+
   vfile-sort@3.0.1:
     dependencies:
       vfile: 5.3.7
       vfile-message: 3.1.4
 
+  vfile-sort@4.0.0:
+    dependencies:
+      vfile: 6.0.3
+      vfile-message: 4.0.3
+
   vfile-statistics@2.0.1:
     dependencies:
       vfile: 5.3.7
       vfile-message: 3.1.4
+
+  vfile-statistics@3.0.0:
+    dependencies:
+      vfile: 6.0.3
+      vfile-message: 4.0.3
 
   vfile@4.2.1:
     dependencies:

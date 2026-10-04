@@ -31,6 +31,6 @@
   },
   "dependencies": {
     "jast-types": "workspace:^",
-    "unified": "^10.1.2"
+    "unified": "catalog:"
   }
 }

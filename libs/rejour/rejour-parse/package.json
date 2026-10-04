@@ -39,14 +39,14 @@
     "tsconfig": "./tsconfig.lib.json"
   },
   "dependencies": {
-    "@types/xast": "^1.0.2",
+    "@types/xast": "catalog:",
     "jast-types": "workspace:^",
-    "unified": "^10.1.2",
-    "unist-util-filter": "^4.0.1",
-    "unist-util-map": "^3.1.3",
-    "xast-util-from-xml": "^3.0.0"
+    "unified": "catalog:",
+    "unist-util-filter": "catalog:",
+    "unist-util-map": "catalog:",
+    "xast-util-from-xml": "catalog:"
   },
   "devDependencies": {
-    "unist-util-remove-position": "4.0.2"
+    "unist-util-remove-position": "catalog:"
   }
 }

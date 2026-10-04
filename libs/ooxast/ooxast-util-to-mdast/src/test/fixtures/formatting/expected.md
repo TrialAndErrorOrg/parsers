@@ -1,17 +1,18 @@
 **Bold **not bold
 
-_Italic_
+*Italic*
 
-<u>[object Object]</u>
+<u>Underline</u>
 
 ~~Strikethrough~~
 
-<sub>[object Object]</sub>
+<sub>subscript</sub>
 
-<sup>[object Object]</sup>
+<sup>superscript</sup>
 
 highlight yellow
 
 red text
 
 border
+

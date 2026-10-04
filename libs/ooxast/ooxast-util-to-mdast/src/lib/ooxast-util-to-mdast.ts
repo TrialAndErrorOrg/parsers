@@ -7,22 +7,20 @@ import { MdastNode, MdastRoot, Options, Root, Element, Text, Node } from './type
 import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
 
 import { VFile } from 'vfile'
+import type { DocxVFileData } from 'docx-to-vfile'
 import { findListNumbering } from './util/find-list-numbering.js'
 
 export { handlers as defaultHandlers }
 
+declare module 'vfile' {
+  // `parsed` and `relations` are declared by `docx-to-vfile`.
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface DataMap extends DocxVFileData {}
+}
+
 const defaultOptions: Options = {
   newLines: false,
   quotes: ['"'],
-}
-
-declare module 'vfile' {
-  interface DataMap {
-    [xml: `${string}.xml` | `${string}.rels`]: string | undefined
-    parsed: {
-      [key: `${string}.xml` | `${string}.rels`]: Root | undefined
-    }
-  }
 }
 
 export function toMdast(tree: Root | Element | Text, file: VFile, options?: Options): MdastRoot
@@ -48,7 +46,11 @@ export function toMdast(
   /** @type {Node} */
   const cleanTree: Node = JSON.parse(JSON.stringify(tree))
   const options_ = options || {}
-  const state = createState(options_)
+  // Relations (image and link targets) come from the options or, since docx-to-vfile 0.7,
+  // per part (document/footnotes/endnotes) from the VFile.
+  const relationsFor = (part: 'document' | 'footnotes' | 'endnotes') =>
+    options_.relations ?? vfile?.data?.relations?.[part] ?? {}
+  const state = createState({ ...options_, relations: relationsFor('document') })
 
   const numberingXml =
     vfile?.data?.parsed?.['word/numbering.xml'] ?? vfile?.data?.['word/numbering.xml']
@@ -75,12 +77,14 @@ export function toMdast(
 
   state.simpleParagraph = true
   if (unparsedFootnotes) {
+    state.relations = relationsFor('footnotes')
     // @ts-expect-error shhh
     rehypeMinifyWhitespace()(unparsedFootnotes)
     mdast.children.push(...state.all(unparsedFootnotes))
   }
 
   if (unparsedEndnotes) {
+    state.relations = relationsFor('endnotes')
     // @ts-expect-error shhh
     rehypeMinifyWhitespace()(unparsedEndnotes)
     mdast.children.push(...state.all(unparsedEndnotes))

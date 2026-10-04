@@ -946,6 +946,9 @@ importers:
       csl-json:
         specifier: 0.1.0
         version: 0.1.0
+      docx-to-vfile:
+        specifier: workspace:^
+        version: link:../../reoff/docx-to-vfile
       extend:
         specifier: ^3.0.2
         version: 3.0.2
@@ -998,9 +1001,6 @@ importers:
       '@types/extend':
         specifier: ^3.0.1
         version: 3.0.1
-      docx-to-vfile:
-        specifier: workspace:^
-        version: link:../../reoff/docx-to-vfile
       remark-gfm:
         specifier: ^3.0.1
         version: 3.0.1

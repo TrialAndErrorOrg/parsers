@@ -50,7 +50,7 @@ export default function rejourMoveAbstract() {
 
     const abstractBody = filter(abstractNode, (node) => !(isElement(node) && node.name === 'title'))
 
-    if (abstractBody === null) return
+    if (!abstractBody) return
 
     const abstract: Abstract = {
       type: 'element',

@@ -1,46 +1,33 @@
-import { toTexast, Options } from 'jast-util-to-texast'
-import { Root as JastRoot } from 'jast-types'
-import { Root as TexastRoot } from 'texast'
-import { Plugin, Processor as UnifiedProcessor, TransformCallback, Transformer } from 'unified'
-import { VFile } from 'vfile'
-type Processor = UnifiedProcessor<any, any, any, any>
+import { toTexast, type Options } from 'jast-util-to-texast'
+import type { Root as JastRoot } from 'jast-types'
+import type { Root as TexastRoot } from 'texast'
+import type { Processor } from 'unified'
+import type { VFile } from 'vfile'
 
 /**
- * Bridge-mode.
- * Runs the destination with the new mdast tree.
- *
+ * Transform for bridge-mode: runs the destination processor on the texast tree.
  */
-function bridge(destination: Processor, options?: Options): void | Transformer<JastRoot, JastRoot> {
-  return (node, file, next) => {
-    //@ts-expect-error there should be a better way to cast this
-    destination.run(toTexast(node, options), file, (error) => {
-      next(error)
-    })
-  }
-}
+export type TransformBridge = (tree: JastRoot, file: VFile) => Promise<undefined>
 
 /**
- * Mutate-mode.
- * Further transformers run on the texast tree.
+ * Transform for mutate-mode: further transformers run on the texast tree.
  */
-function mutate(
-  options: void | Options | undefined = {},
-): ReturnType<Plugin<[Options?] | void[], JastRoot, TexastRoot>> {
-  //Transformer<JastRoot, JastRoot> | void {
-  return (node) => {
-    // TODO: [rejour-relatex] Cast JastRoot to TexastRoot better
-    //@ts-expect-error there should be a better way to cast this
-    const result = toTexast(node, options) as TexastRoot
-    return result
-  }
+export type TransformMutate = (tree: JastRoot, file: VFile) => TexastRoot
+
+/**
+ * `toTexast` is typed as taking texast nodes, but what it is handed (and handles) is jast.
+ */
+function jastToTexast(tree: JastRoot, options: Options): TexastRoot {
+  // TODO: [rejour-relatex] Cast JastRoot to TexastRoot better
+  return toTexast(tree as unknown as TexastRoot, options) as TexastRoot
 }
 
 /**
  * Plugin to bridge or mutate to relatex
  *
- * If a destination is given, runs the destination with the new jast
+ * If a destination is given, runs the destination with the new texast
  * tree (bridge-mode).
- * Without destination, returns the jast tree: further plugins run on that
+ * Without destination, returns the texast tree: further plugins run on that
  * tree (mutate-mode).
  *
  * @param destination
@@ -48,22 +35,31 @@ function mutate(
  * @param options
  *   Options passed to `jast-util-to-texast`.
  */
-const rejourRelatex = function (destination?: Processor | Options, options?: Options) {
-  let settings: Options | undefined
-  let processor: Processor | undefined
+// Mutate-mode comes last: `.use()` infers the plugin's input and output from the last overload.
+function rejourRelatex(
+  destination: Processor<any, any, any, any, any>,
+  options?: Options | null | undefined,
+): TransformBridge
+function rejourRelatex(options?: Options | null | undefined): TransformMutate
+function rejourRelatex(
+  destination?: Processor<any, any, any, any, any> | Options | null | undefined,
+  options?: Options | null | undefined,
+): TransformBridge | TransformMutate {
+  const processor = destination && 'run' in destination ? destination : undefined
+  let settings: Options = (processor ? options : (destination as Options | null | undefined)) ?? {}
 
-  if (typeof destination === 'function') {
-    processor = destination
-    settings = options
-  } else {
-    settings = destination
+  if (settings.document === undefined || settings.document === null) {
+    settings = { ...settings, document: true }
   }
 
-  if (settings?.document === undefined || settings.document === null) {
-    settings = Object.assign({}, settings, { document: true })
+  if (processor) {
+    return async (tree, file) => {
+      await processor.run(jastToTexast(tree, settings), file)
+      return undefined
+    }
   }
 
-  return processor ? bridge(processor, settings) : mutate(settings)
-} as Plugin<[Processor, Options?], JastRoot> & Plugin<[Options?] | void[], JastRoot, TexastRoot>
+  return (tree) => jastToTexast(tree, settings)
+}
 
 export default rejourRelatex

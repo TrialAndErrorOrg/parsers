@@ -37,16 +37,16 @@
     "tsconfig": "./tsconfig.lib.json"
   },
   "dependencies": {
-    "@types/unist": "^2.0.6",
+    "@types/unist": "catalog:",
     "jast-types": "workspace:^",
     "jast-util-to-csl": "workspace:^",
-    "unist-util-is": "^5.2.1",
-    "unist-util-visit": "^4.1.2",
-    "vfile": "^5.3.7"
+    "unist-util-is": "catalog:",
+    "unist-util-visit": "catalog:",
+    "vfile": "catalog:"
   },
   "devDependencies": {
     "rejour-parse": "workspace:^",
-    "to-vfile": "^7.2.4",
-    "unified": "^10.1.2"
+    "to-vfile": "catalog:",
+    "unified": "catalog:"
   }
 }

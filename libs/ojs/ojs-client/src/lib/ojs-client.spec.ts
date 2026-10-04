@@ -6,7 +6,8 @@ const ojs = new OJS({
   endpoint: 'https://journal.trialanderror.org/index.php/jote/api/v1',
   token: process.env.OJS_TOKEN,
 })
-describe('ojsClient', () => {
+// Talks to the live JOTE OJS instance: needs network access and an OJS_TOKEN, so it is skipped without one.
+describe.skipIf(!process.env.OJS_TOKEN)('ojsClient (needs OJS_TOKEN)', () => {
   it('should pull submissions', async () => {
     const submission = await ojs.submission(27)
     console.log(submission)

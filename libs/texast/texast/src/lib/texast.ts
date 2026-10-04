@@ -1,4 +1,37 @@
-import { Node as UnistNode, Literal as UnistLiteral, Parent as UnistParent } from 'unist'
+import type {
+  Data as UnistData,
+  Literal as UnistLiteral,
+  Node as UnistNode,
+  Parent as UnistParent,
+} from 'unist'
+
+/**
+ * Info associated with texast nodes by the ecosystem.
+ *
+ * This space is guaranteed to never be specified by unist or texast, but you can use it in
+ * utilities and plugins to store data. Register fields by augmenting this interface:
+ * `declare module 'texast' { interface Data { someField?: string } }`.
+ */
+export interface Data extends UnistData {}
+
+/**
+ * Info associated with a texast root by the ecosystem.
+ */
+export interface RootData extends Data {}
+
+/**
+ * Abstract texast node.
+ */
+export interface Node extends UnistNode {
+  data?: Data | undefined
+}
+
+/**
+ * Abstract texast node that contains a value.
+ */
+export interface Literal extends UnistLiteral {
+  data?: Data | undefined
+}
 
 export function isKnownNode(node: UnistNode): node is TexastContent {
   return [
@@ -78,6 +111,7 @@ export type ListContent = ListItem
 export type NeedsEscape = '&'
 export interface Root extends Parent {
   type: 'root'
+  data?: RootData | undefined
   // children:TexastContent[] //TopLevelDocumentContent[] | (Preamble | DocumentEnvironment)[]
 }
 export interface Preamble extends Parent {
@@ -97,6 +131,7 @@ export interface DocumentEnvironment extends Parent {
 // }
 
 export interface Parent extends UnistParent {
+  data?: Data | undefined
   children: TexastContent[]
 }
 
@@ -168,12 +203,12 @@ export interface Script extends Parent {
   children: MathContent[]
 }
 
-export interface MathCharacter extends UnistLiteral {
+export interface MathCharacter extends Literal {
   type: 'mathCharacter'
   value: string
 }
 
-export interface AlignmentTab extends UnistLiteral {
+export interface AlignmentTab extends Literal {
   type: 'alignmentTab'
   value: '&'
 }
@@ -182,22 +217,22 @@ export interface Paragraph extends Parent {
   type: 'paragraph'
   children: ParagraphContent[]
 }
-export interface Softbreak extends UnistLiteral {
+export interface Softbreak extends Literal {
   type: 'break'
   value: '\\n'
 }
 
-export interface Comment extends UnistLiteral {
+export interface Comment extends Literal {
   type: 'comment'
   value: string
 }
 
-export interface Text extends UnistLiteral {
+export interface Text extends Literal {
   type: 'text'
   value: string
 }
 
-export interface Linebreak extends UnistNode {
+export interface Linebreak extends Node {
   type: 'linebreak'
   height?: string
 }
@@ -232,10 +267,12 @@ export interface Tabular extends Environment<TabularContent> {
   package?: 'plain' | 'tabularx' | 'tabulary' | 'tabu'
 }
 export interface TableRow extends UnistParent {
+  data?: Data | undefined
   type: 'tableRow'
   children: TableRowContent[]
 }
 export interface TableCell extends UnistParent {
+  data?: Data | undefined
   type: 'tableCell'
   span?: `${number}`
   children: ParagraphContent[]
@@ -245,8 +282,8 @@ export interface List extends Environment<ListItem> {
   name: 'itemize' | 'enumerate'
 }
 export interface ListItem extends UnistParent {
+  data?: Data | undefined
   type: 'listItem'
   children: ParagraphContent[]
 }
 
-export type { UnistNode as Node, UnistLiteral as Literal }

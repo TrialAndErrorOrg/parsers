@@ -1,5 +1,6 @@
 import * as Primitive from './xml-primitives.js'
-import type { Literal as UnistLiteral, Node as UnistNode } from 'unist'
+// Generated nodes extend jast's own `Node`/`Literal` so they carry jast `Data`.
+import type { Literal as UnistLiteral, Node as UnistNode } from './rejour.js'
 import type { RequiredMap } from './rejour.js'
 import type { ValuesType } from 'utility-types'
 // Source files:

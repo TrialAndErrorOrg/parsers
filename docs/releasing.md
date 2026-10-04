@@ -4,8 +4,32 @@ Packages are versioned with [Changesets](https://changesets.dev) and published t
 GitHub Actions**, via [npm trusted publishing](https://docs.npmjs.com/trusted-publishers) (OIDC).
 There is no npm token anywhere, and nothing is ever published from a laptop.
 
-Every package is versioned independently. Internal dependencies are `workspace:^`; `pnpm pack`
-rewrites them to real version ranges at publish time.
+Every package is versioned independently.
+
+## What gets published
+
+The workflow packs each package with `pnpm pack`, which rewrites its `package.json`:
+
+| In the repo                                       | In the tarball                                                   |
+| ------------------------------------------------- | ---------------------------------------------------------------- |
+| `"docx-to-vfile": "workspace:^"`                  | `"^0.11.0"`: the dependency's version at pack time               |
+| `"unified": "catalog:"`                           | `"^11.0.5"`: its range in the `catalog` of `pnpm-workspace.yaml` |
+| `exports` with `"@jote/source": "./src/index.ts"` | the condition removed (`beforePacking` in `.pnpmfile.mjs`)       |
+
+Only `files` (`dist`, plus README, LICENSE, CHANGELOG) ships. To check a package by hand:
+`pnpm build && cd libs/<…> && pnpm pack` and look inside the tarball.
+
+## Picking a bump
+
+Everything is still 0.x, where `^0.4.0` means `>=0.4.0 <0.5.0`. So:
+
+- **`minor`** for anything breaking: a changed or removed export, changed output a consumer may
+  rely on, a new major of a type package in the public API (`@types/unist`, `vfile`, …).
+- **`patch`** for everything else, features included.
+- **`major`** only to go to 1.0.0.
+
+When a dependency gets a `minor`, Changesets bumps its dependents too (their `workspace:^` range no
+longer covers it).
 
 ## Day to day
 
@@ -75,28 +99,26 @@ package → Settings → Trusted publishing.
 Then, per package on npmjs.com (optional, recommended): Settings → Publishing access →
 _Require two-factor authentication and disallow tokens_. Trusted publishing keeps working.
 
-### 3. Before the first release
+### 3. New packages: publish the first version by hand
 
-- **Sync versions.** ~20 packages were released from the unmerged `feat/update-unified` branch in
-  2024-06, so npm is ahead of the repo (e.g. `ooxast-util-remove-rsid` repo 0.4.0, npm 0.5.0).
-  Run `pnpm npm-status --sync` (bumps those package.json versions to npm's latest) and commit,
-  or merge that branch's version commits. Otherwise the next release either collides with an
-  existing version or moves `latest` backwards.
-- **Names you don't own.** `jast` (libs/ast-stringify) and `ojs-api` (libs/citations/ojs-types)
-  are taken on npm by other projects. Mark them `"private": true` or rename them, or the publish
-  job fails on them.
-- **Never-published packages.** npm can only attach a trusted publisher to a package that already
-  exists. For each package `pnpm npm-status` lists as `unpublished` either mark it
-  `"private": true` until it's ready, or publish its first version by hand once
-  (`npm publish --access public` from the package dir after `pnpm build`, using your own login +
-  2FA), then run `pnpm npm-trust --run` for it. Packages without a `version` field must get one
-  or be marked private.
-- **`repository` must point at this repo.** Provenance is rejected when `package.json`
-  `repository` doesn't match `github.com/TrialAndErrorOrg/parsers`. A few packages still point at
-  their old split repos (`reoff-remark`, `reoff-unified-latex`, `reoff-markup-to-style`,
-  `reoff-infer-headings`, `reoff-compile`, `ooxast-util-markup-to-style`,
-  `unified-latex-stringify`, `reference-parser-chatgpt`, `@trialanderror/converter-cli`). Set
-  them to `{ "type": "git", "url": "git+https://github.com/TrialAndErrorOrg/parsers.git", "directory": "libs/..." }`.
+npm can only attach a trusted publisher to a package that already exists. For each package
+`pnpm npm-status` lists as `unpublished`, publish its first version once with your own login +
+2FA, then add its trusted publisher:
+
+```sh
+pnpm build
+cd libs/<…> && pnpm publish --access public   # pnpm, so workspace:/catalog: get rewritten
+pnpm npm-trust --run
+```
+
+Or mark it `"private": true` until it's ready. At the moment that is `xast-util-minify-whitespace`
+(needed by the ooxast converters), `unified-ast-stringify` and `ojs-api-types`.
+
+Already done on the `revitalize` branch: versions synced with npm (`pnpm npm-status --sync`: 19
+packages had been released from the unmerged `feat/update-unified` branch in 2024-06), the two
+names owned by other projects renamed (`ast-stringify` → `unified-ast-stringify`, `ojs-api` →
+`ojs-api-types`), every `repository` pointed at this repo with its `directory` (provenance is
+rejected on a mismatch), and the unpublished packages nobody decided on made private.
 
 ## How OIDC works here
 

@@ -9,14 +9,14 @@ import {
   HWithProps,
   HastContent,
   HastRoot,
-  Node,
   Options,
   Attributes,
   Root,
   Element,
   Text,
 } from './types.js'
-import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
+import { minifyWhitespace } from 'xast-util-minify-whitespace'
+import type { Node as UnistNode } from 'unist'
 import { getStyleNames } from './util/style-names.js'
 // import { h } from 'hastscript'
 import { cslToRefList } from 'jast-util-from-csl'
@@ -60,17 +60,18 @@ export function toHast(
         attributes = props
       }
 
-      const result: Node = Object.assign(
-        {},
-        ['root', 'text'].includes(type) ? { type } : { type: 'element', tagName: type },
-        { properties: attributes },
-      )
+      const result: UnistNode & {
+        properties?: Attributes
+        value?: string
+        children?: Array<HastContent>
+      } = {
+        ...(['root', 'text'].includes(type) ? { type } : { type: 'element', tagName: type }),
+        properties: attributes,
+      }
 
       if (typeof children === 'string') {
-        // @ts-expect-error: Looks like a literal.
         result.value = children
       } else if (children) {
-        // @ts-expect-error: Looks like a parent.
         result.children = children
       }
 
@@ -122,8 +123,7 @@ export function toHast(
   //   }
   // })
 
-  // @ts-expect-error: does return a transformer, that does accept any node.
-  rehypeMinifyWhitespace({ newlines: options.newlines === true })(tree)
+  minifyWhitespace(tree, { newlines: options.newLines === true })
 
   // @ts-expect-error: does return a transformer, that does accept any node.
   const result = one(h, tree, undefined)

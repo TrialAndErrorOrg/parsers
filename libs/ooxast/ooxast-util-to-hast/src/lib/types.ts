@@ -4,7 +4,7 @@ import { Element, Root as XastRoot } from 'xast'
 import type { StyleNames } from './util/style-names.js'
 import {
   Parent as HastParent,
-  Content as HastContent,
+  RootContent as HastContent,
   Root as HastRoot,
   // P as HastP,
 } from 'hast'

@@ -15,11 +15,19 @@ type Lescape = (
 ) => string
 const lescape = lxescape as Lescape
 
-export function escapeLatex(text: string) {
+/**
+ * Escape text for LaTeX.
+ *
+ * Braces are kept as they are unless `escapeBraces` is set: this is also used on the generated
+ * .bib file, where braces are syntax. Text from the document should escape them.
+ */
+export function escapeLatex(text: string, { escapeBraces = false } = {}) {
   return lescape(text, {
     escapeMapFn: (defaultEscapes, formattingEscapes) => {
-      defaultEscapes['{'] = '{'
-      defaultEscapes['}'] = '}'
+      if (!escapeBraces) {
+        defaultEscapes['{'] = '{'
+        defaultEscapes['}'] = '}'
+      }
       defaultEscapes['−'] = '-'
       defaultEscapes['’'] = "'"
       defaultEscapes['–'] = '--'

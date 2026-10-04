@@ -11,6 +11,7 @@ import {
 
 import { Attributes as OoxastProperties, Parent, Body, Text, Root, P, R, RPr, RPrMap } from 'ooxast'
 import { ListNumbering } from './util/find-list-numbering.js'
+import type { StyleNames } from './util/style-names.js'
 
 export type XastContent = Root['children'][number] | Root
 
@@ -40,7 +41,11 @@ export type ParagraphHandler = (
 /**
  * A function which returns true if the handler should be used for the paragraph
  */
-export type ParagraphMatcher = (paragraph: P, style?: string) => boolean | undefined | null | void
+export type ParagraphMatcher = (
+  paragraph: P,
+  style?: string,
+  h?: H,
+) => boolean | undefined | null | void
 
 export interface Options {
   /**
@@ -361,12 +366,22 @@ export interface Context {
    * */
   simpleParagraph: boolean
   /**
+   * Whether a drawing may become a `figure` environment: true while converting a body
+   * paragraph that holds nothing but the drawing. Elsewhere (running text, links, headings,
+   * tables, lists, notes) a drawing is an inline `\includegraphics`.
+   */
+  blockDrawing?: boolean
+  /**
    * A bibliography you can add manually
    *
    * Needs to be in CSL format, which will be converted to BibTeX, or in BibTeX format
    */
   bibliography?: CSL[] | string
   listNumbering?: ListNumbering
+  /**
+   * Paragraph style ids mapped to their names, from `word/styles.xml`
+   */
+  styleNames: StyleNames
 }
 
 export type HWithProps = (

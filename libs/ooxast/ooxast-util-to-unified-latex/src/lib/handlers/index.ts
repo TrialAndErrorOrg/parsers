@@ -40,6 +40,11 @@ export const handlers: Context['handlers'] = {
   instruction: ignore,
   doctype: ignore,
   drawing,
+  // tracked changes: deleted and moved-away text is not part of the document
+  del: ignore,
+  moveFrom: ignore,
+  delText: ignore,
+  delInstrText: ignore,
   footnoteReference,
   endNoteReference: footnoteReference,
 }

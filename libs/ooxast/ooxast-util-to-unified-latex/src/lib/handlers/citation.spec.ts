@@ -1,5 +1,7 @@
 import { T, Text } from 'ooxast'
 import { describe, expect, it } from 'vitest'
+import { toString } from '@unified-latex/unified-latex-util-to-string'
+import { toUnifiedLatex } from '../ooxast-util-to-unified-latex.js'
 
 const mendeleyCitation: T = {
   type: 'element',
@@ -28,10 +30,15 @@ const multipleMendeleyCitations = {
 }
 
 it('should return mendeley citation', () => {
-  const csl = getCitationCSL(mendeleyCitation)
-  expect(csl).toBeDefined()
-  expect(
-    csl.title ===
-      'From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research',
-  )
+  const run = { type: 'element', name: 'w:r', attributes: {}, children: [mendeleyCitation] }
+  const latex = toString(toUnifiedLatex(run as any, { document: false }))
+  expect(latex).toContain('Vlaeyen2020')
+})
+
+it('should cite every item of a multi-item mendeley citation', () => {
+  const run = { type: 'element', name: 'w:r', attributes: {}, children: [multipleMendeleyCitations] }
+  const latex = toString(toUnifiedLatex(run as any, { document: false }))
+  for (const key of ['Busk1988', 'Solomon2014', 'Adams1996', 'Smith2012']) {
+    expect(latex).toContain(key)
+  }
 })

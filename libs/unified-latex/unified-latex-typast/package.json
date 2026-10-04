@@ -1,0 +1,43 @@
+{
+  "name": "unified-latex-typast",
+  "version": "0.0.1",
+  "dependencies": {
+    "@unified-latex/unified-latex-types": "^1.3.1",
+    "typast": "0.0.1",
+    "unified": "^10.1.2",
+    "unified-latex-util-to-typast": "0.0.1"
+  },
+  "license": "GPL-3.0-or-later",
+  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
+  "description": "unified plugin to transform a unified-latex (LaTeX) tree into a typast (Typst) tree.",
+  "keywords": [
+    "unified",
+    "unified-latex",
+    "latex",
+    "typst",
+    "typast",
+    "plugin"
+  ],
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "unified-latex-typast",
+    "tsconfig": "./tsconfig.lib.json"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    }
+  },
+  "main": "./index.js",
+  "module": "./index.js",
+  "types": "./index.d.ts",
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "/lib"
+  ]
+}

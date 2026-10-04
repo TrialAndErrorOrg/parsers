@@ -1,0 +1,59 @@
+{
+  "name": "typast-util-to-typst",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/typast/typast-util-to-typst/src",
+  "projectType": "library",
+  "targets": {
+    "readme": {
+      "executor": "utils-readme:update-readme",
+      "options": {
+        "readme": "libs/typast/typast-util-to-typst/README.md",
+        "packageJSON": "libs/typast/typast-util-to-typst/package.json"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{workspaceRoot}/coverage/libs/typast/typast-util-to-typst"],
+      "options": {
+        "passWithNoTests": true
+      }
+    },
+    "make-publishable": {
+      "executor": "better-nx-tsc:publishable"
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "rootDir": "libs/typast/typast-util-to-typst/src",
+        "outputPath": "dist/libs/typast/typast-util-to-typst",
+        "tsConfig": "libs/typast/typast-util-to-typst/tsconfig.lib.json",
+        "packageJson": "libs/typast/typast-util-to-typst/package.json",
+        "main": "libs/typast/typast-util-to-typst/src/index.ts",
+        "assets": ["libs/typast/typast-util-to-typst/*.md"],
+        "clean": true
+      },
+      "dependsOn": [
+        {
+          "target": "build",
+          "params": "forward",
+          "dependencies": true
+        },
+        {
+          "target": "lint"
+        }
+      ]
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    }
+  },
+  "tags": []
+}

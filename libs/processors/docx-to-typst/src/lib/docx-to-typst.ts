@@ -4,10 +4,10 @@ import { docxToVFile } from 'docx-to-vfile'
 import reoffParse from 'reoff-parse'
 import { reoffClean } from 'reoff-clean'
 import reoffMarkupToStyle, { type Options as MarkupToStyleOptions } from 'reoff-markup-to-style'
-import reoffTyast from 'reoff-tyast'
-import tyastStringify from 'tyast-stringify'
-import type { Options as TyastOptions, TyastData } from 'ooxast-util-to-tyast'
-import type { Options as StringifyOptions } from 'tyast-util-to-typst'
+import reofftypast from 'reoff-typast'
+import typastStringify from 'typast-stringify'
+import type { Options as typastOptions, typastData } from 'ooxast-util-to-typast'
+import type { Options as StringifyOptions } from 'typast-util-to-typst'
 
 /** The reoff-clean configuration of the LaTeX route (`apps/converter/lib/converters/docx-to-tex.ts`) */
 export const defaultCleanOptions = {
@@ -30,7 +30,7 @@ export const defaultMarkupToStyle: MarkupToStyleOptions = [
   { markup: ['w:i'], style: 'Heading 2' },
 ]
 
-export interface DocxToTypstOptions extends TyastOptions {
+export interface DocxToTypstOptions extends typastOptions {
   /** `reoff-clean` options, or `false` to skip cleaning */
   clean?: { rPrRemoveList?: string[] } | false
   /** `reoff-markup-to-style` options, or `false` to skip inferring styles from formatting */
@@ -56,7 +56,7 @@ declare module 'vfile' {
  * Convert a .docx to Typst source for the JOTE `jote-article` template.
  *
  * The returned file's value is `main.typ`; `file.data.files` holds every file of the output
- * directory (including `main.typ`, images and `bibliography.bib`), and `file.data.tyast` the
+ * directory (including `main.typ`, images and `bibliography.bib`), and `file.data.typast` the
  * conversion details (media list, citations, template arguments). Warnings are on
  * `file.messages`.
  */
@@ -68,7 +68,7 @@ export async function docxToTypst(
     clean = defaultCleanOptions,
     markupToStyle = defaultMarkupToStyle,
     stringify,
-    ...tyastOptions
+    ...typastOptions
   } = options
   const bytes = input instanceof Uint8Array ? input : new Uint8Array(input)
   const vfile = await docxToVFile(bytes as unknown as ArrayBuffer)
@@ -77,7 +77,7 @@ export async function docxToTypst(
   let processor: any = unified().use(reoffParse)
   if (clean !== false) processor = processor.use(reoffClean, clean)
   if (markupToStyle !== false) processor = processor.use(reoffMarkupToStyle, markupToStyle)
-  processor = processor.use(reoffTyast, tyastOptions).use(tyastStringify, stringify)
+  processor = processor.use(reofftypast, typastOptions).use(typastStringify, stringify)
 
   const file: VFile = await processor.process(vfile)
   file.data.files = await outputFiles(file)
@@ -86,7 +86,7 @@ export async function docxToTypst(
 
 async function outputFiles(file: VFile): Promise<OutputFiles> {
   const files: OutputFiles = { 'main.typ': String(file.value) }
-  const data = file.data.tyast as TyastData | undefined
+  const data = file.data.typast as typastData | undefined
   if (!data) return files
   const media = (file.data.media ?? {}) as Record<string, Blob | ArrayBuffer | Uint8Array>
   for (const { source, path } of data.media) {

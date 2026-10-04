@@ -5,8 +5,8 @@ Convert a Word manuscript (`.docx`) into Typst for the JOTE `jote-article` templ
 (`apps/converter/lib/converters/docx-to-tex.ts`): a first draft for editors to finish by hand.
 
 Pipeline: `docx-to-vfile` → `reoff-parse` → `reoff-clean` → `reoff-markup-to-style` →
-[`reoff-tyast`](../../reoff/reoff-tyast) ([`ooxast-util-to-tyast`](../../ooxast/ooxast-util-to-tyast))
-→ `tyast-stringify`. The `reoff-clean` and `reoff-markup-to-style` settings are the ones the LaTeX
+[`reoff-typast`](../../reoff/reoff-typast) ([`ooxast-util-to-typast`](../../ooxast/ooxast-util-to-typast))
+→ `typast-stringify`. The `reoff-clean` and `reoff-markup-to-style` settings are the ones the LaTeX
 route uses (fully bold paragraph → Heading 1, fully italic → Heading 2); both can be changed or
 switched off.
 
@@ -23,17 +23,17 @@ const file = await docxToTypst(bytes, {
 
 String(file.value) // main.typ
 file.data.files // { 'main.typ': string, 'media/image1.png': Uint8Array, 'bibliography.bib': string, … }
-file.data.tyast // { media, citations (CSL), bibliography, meta (the template arguments used) }
+file.data.typast // { media, citations (CSL), bibliography, meta (the template arguments used) }
 file.messages // things that could not be converted (unsupported image formats, broken citation fields, …)
 ```
 
-Options: everything `ooxast-util-to-tyast` takes (`meta`, `templatePath`, `inferFrontMatter`,
+Options: everything `ooxast-util-to-typast` takes (`meta`, `templatePath`, `inferFrontMatter`,
 `headingOffset`, `boxWidth`, `wideFigures`, `keepReferenceList`, `bibliography`, custom
 `paragraphHandlers`/`formattingHandlers`, …), plus
 
 - `clean` — `reoff-clean` options, or `false`
 - `markupToStyle` — `reoff-markup-to-style` options, or `false`
-- `stringify` — options for `tyast-util-to-typst`
+- `stringify` — options for `typast-util-to-typst`
 
 `metaToTemplateArgs(form)` turns the converter app's metadata form (`MetaForm`, see
 `apps/converter/lib/meta-to-preamble.ts`) into template arguments: article type and `header`/

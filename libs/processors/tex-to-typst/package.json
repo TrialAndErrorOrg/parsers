@@ -4,12 +4,12 @@
   "description": "Convert a JOTE LaTeX article (jote-new-article.cls) to Typst for the jote-article template",
   "type": "module",
   "dependencies": {
-    "tyast": "0.0.1",
-    "tyast-stringify": "0.0.1",
-    "tyast-util-to-typst": "0.0.1",
+    "typast": "0.0.1",
+    "typast-stringify": "0.0.1",
+    "typast-util-to-typst": "0.0.1",
     "unified": "^10.1.2",
-    "unified-latex-tyast": "0.0.1",
-    "unified-latex-util-to-tyast": "0.0.1",
+    "unified-latex-typast": "0.0.1",
+    "unified-latex-util-to-typast": "0.0.1",
     "vfile": "^5.3.7"
   },
   "license": "GPL-3.0-or-later",

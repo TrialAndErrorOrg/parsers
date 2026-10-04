@@ -41,9 +41,9 @@ const nextConfig = {
     'unified-latex-stringify',
     'ooxast-util-to-tyast',
     'reoff-tyast',
-    'tyast',
-    'tyast-util-to-typst',
-    'tyast-stringify',
+    'typast',
+    'typast-util-to-typst',
+    'typast-stringify',
     '@jote/processors/docx-to-typst',
   ],
   webpack: (config) => {

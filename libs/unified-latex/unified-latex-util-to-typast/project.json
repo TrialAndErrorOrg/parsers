@@ -1,0 +1,59 @@
+{
+  "name": "unified-latex-util-to-typast",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/unified-latex/unified-latex-util-to-typast/src",
+  "projectType": "library",
+  "targets": {
+    "readme": {
+      "executor": "utils-readme:update-readme",
+      "options": {
+        "readme": "libs/unified-latex/unified-latex-util-to-typast/README.md",
+        "packageJSON": "libs/unified-latex/unified-latex-util-to-typast/package.json"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["{workspaceRoot}/coverage/libs/unified-latex/unified-latex-util-to-typast"],
+      "options": {
+        "passWithNoTests": true
+      }
+    },
+    "make-publishable": {
+      "executor": "better-nx-tsc:publishable"
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "rootDir": "libs/unified-latex/unified-latex-util-to-typast/src",
+        "outputPath": "dist/libs/unified-latex/unified-latex-util-to-typast",
+        "tsConfig": "libs/unified-latex/unified-latex-util-to-typast/tsconfig.lib.json",
+        "packageJson": "libs/unified-latex/unified-latex-util-to-typast/package.json",
+        "main": "libs/unified-latex/unified-latex-util-to-typast/src/index.ts",
+        "assets": ["libs/unified-latex/unified-latex-util-to-typast/*.md"],
+        "clean": true
+      },
+      "dependsOn": [
+        {
+          "target": "build",
+          "params": "forward",
+          "dependencies": true
+        },
+        {
+          "target": "lint"
+        }
+      ]
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public"
+      }
+    }
+  },
+  "tags": []
+}

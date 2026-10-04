@@ -15,7 +15,7 @@ import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { fromXml } from 'xast-util-from-xml'
 import type { Element } from 'xast'
-import { ommlToTypst } from 'ooxast-util-to-tyast'
+import { ommlToTypst } from 'ooxast-util-to-typast'
 import { docxToTypst } from './docx-to-typst.js'
 import { metaToTemplateArgs } from './meta-to-template-args.js'
 

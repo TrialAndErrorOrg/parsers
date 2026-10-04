@@ -3,10 +3,10 @@
 Convert a JOTE LaTeX article (a `main.tex` written against `jote-new-article.cls`, as in the
 archive) into Typst for the `jote-article` template in `templates/typst/jote-article`.
 
-Pipeline: `parseLatex` ([`unified-latex-util-to-tyast`](../../unified-latex/unified-latex-util-to-tyast),
+Pipeline: `parseLatex` ([`unified-latex-util-to-typast`](../../unified-latex/unified-latex-util-to-typast),
 unified-latex with the converter's macro signatures) → a unified processor running
-[`unified-latex-tyast`](../../unified-latex/unified-latex-tyast) and
-[`tyast-stringify`](../../tyast/tyast-stringify). Serializer options go in `stringify`.
+[`unified-latex-typast`](../../unified-latex/unified-latex-typast) and
+[`typast-stringify`](../../typast/typast-stringify). Serializer options go in `stringify`.
 
 ## Library
 
@@ -16,11 +16,11 @@ import { texToTypst } from '@jote/processors/tex-to-typst'
 const file = await texToTypst(source, { templatePath: 'jote-article/lib.typ' })
 String(file.value) // main.typ
 file.messages // what couldn't be converted faithfully
-file.data.tyast // the Typst tree
+file.data.typast // the Typst tree
 ```
 
 Options: `templatePath` (default `'jote-article/lib.typ'`, e.g. `'@local/jote-article:0.1.0'`),
-`path` (for messages), plus every option of `toTyast` (`resolveImage`, `bibliographyStyle`, …).
+`path` (for messages), plus every option of `totypast` (`resolveImage`, `bibliographyStyle`, …).
 
 ## CLI
 

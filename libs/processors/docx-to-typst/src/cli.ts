@@ -26,7 +26,7 @@ import {
 } from 'node:fs'
 import { basename, dirname, join, relative, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
-import type { JoteArticleMeta } from 'ooxast-util-to-tyast'
+import type { JoteArticleMeta } from 'ooxast-util-to-typast'
 import { docxToTypst } from './lib/docx-to-typst.js'
 import { metaToTemplateArgs, type MetaForm } from './lib/meta-to-template-args.js'
 
@@ -119,8 +119,8 @@ async function main() {
   for (const message of file.messages) {
     console.warn(`${basename(input)}  warning  ${message.reason}`)
   }
-  const media = file.data.tyast?.media.length ?? 0
-  const cites = file.data.tyast?.citations.length ?? 0
+  const media = file.data.typast?.media.length ?? 0
+  const cites = file.data.typast?.citations.length ?? 0
   console.log(
     `wrote ${relative(
       process.cwd(),

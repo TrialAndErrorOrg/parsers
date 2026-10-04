@@ -49,7 +49,7 @@ describe('texToTypst', () => {
     expect(out).toContain('#jote-box(title: [Box 1], width: "wide")')
     expect(out).toContain('$ a = b/c $ <eq:a>')
     expect(file.messages).toEqual([])
-    expect(file.data.tyast).toBeDefined()
+    expect(file.data.typast).toBeDefined()
   })
 
   it('uses the given template import', async () => {
@@ -57,7 +57,7 @@ describe('texToTypst', () => {
     expect(String(file.value)).toMatch(/^#import "@local\/jote-article:0.1.0": \*/)
   })
 
-  it('passes serializer options to tyast-stringify', async () => {
+  it('passes serializer options to typast-stringify', async () => {
     const file = await texToTypst(article, { stringify: { indent: '\t' } })
     expect(String(file.value)).toContain('\n\tarticle-type: "Empirical",')
   })

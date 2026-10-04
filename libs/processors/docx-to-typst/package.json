@@ -5,13 +5,13 @@
   "type": "module",
   "dependencies": {
     "docx-to-vfile": "0.10.0",
-    "ooxast-util-to-tyast": "0.0.1",
+    "ooxast-util-to-typast": "0.0.1",
     "reoff-clean": "0.3.0",
     "reoff-markup-to-style": "0.2.0",
     "reoff-parse": "0.5.0",
-    "reoff-tyast": "0.0.1",
-    "tyast-stringify": "0.0.1",
-    "tyast-util-to-typst": "0.0.1",
+    "reoff-typast": "0.0.1",
+    "typast-stringify": "0.0.1",
+    "typast-util-to-typst": "0.0.1",
     "unified": "^10.1.2",
     "vfile": "^5.3.7"
   },

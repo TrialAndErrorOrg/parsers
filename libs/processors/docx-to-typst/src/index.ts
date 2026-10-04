@@ -2,4 +2,4 @@ export { docxToTypst, defaultCleanOptions, defaultMarkupToStyle } from './lib/do
 export type { DocxToTypstOptions, OutputFiles } from './lib/docx-to-typst.js'
 export { metaToTemplateArgs } from './lib/meta-to-template-args.js'
 export type { MetaForm, MetaFormAuthor } from './lib/meta-to-template-args.js'
-export type { JoteArticleMeta, JoteAuthor } from 'ooxast-util-to-tyast'
+export type { JoteArticleMeta, JoteAuthor } from 'ooxast-util-to-typast'

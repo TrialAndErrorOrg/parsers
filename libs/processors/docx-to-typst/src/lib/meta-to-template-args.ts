@@ -1,5 +1,5 @@
-import type { JoteArticleMeta, JoteAuthor } from 'ooxast-util-to-tyast'
-import { runningAuthorFor } from 'ooxast-util-to-tyast'
+import type { JoteArticleMeta, JoteAuthor } from 'ooxast-util-to-typast'
+import { runningAuthorFor } from 'ooxast-util-to-typast'
 
 /** The metadata form of the converter app (`apps/converter/lib/meta-to-preamble.ts`). */
 export interface MetaForm {

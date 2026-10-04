@@ -1,6 +1,6 @@
 {
   "name": "ooxast-util-get-style",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Get style from a `w:p` or `w:r` element.",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",

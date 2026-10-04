@@ -1,6 +1,6 @@
 {
   "name": "ooxast-util-to-unified-latex",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Convert `ooxast` syntax tree to `unified-latex` syntax tree.",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",

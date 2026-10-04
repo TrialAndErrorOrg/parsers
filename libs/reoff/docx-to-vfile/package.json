@@ -1,6 +1,6 @@
 {
   "name": "docx-to-vfile",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "Reads a `.docx` file and stores its components in vfile format to be processed by other tools, like `reoff-parse`.",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",

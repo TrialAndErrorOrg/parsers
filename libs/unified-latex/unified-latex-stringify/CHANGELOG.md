@@ -2,6 +2,14 @@
 
 This file was generated using [@jscutlery/semver](https://github.com/jscutlery/semver).
 
+## [0.3.0](https://github.com/TrialAndErrorOrg/parsers/compare/unified-latex-stringify-0.2.1...unified-latex-stringify-0.3.0) (2024-06-28)
+
+
+### Features
+
+* **unified-latex-stringify:** make compatible with new unified types ([108576f](https://github.com/TrialAndErrorOrg/parsers/commit/108576ff63aa727105bdb9e6fffc2070ac9a0836))
+* update to new unified versions ([18bb996](https://github.com/TrialAndErrorOrg/parsers/commit/18bb9960d25843db83cda8bfea932e2e22f44b9b))
+
 ## [0.2.1](https://github.com/TrialAndErrorOrg/parsers/compare/unified-latex-stringify-0.2.0...unified-latex-stringify-0.2.1) (2023-09-29)
 
 

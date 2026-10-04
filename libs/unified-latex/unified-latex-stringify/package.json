@@ -1,6 +1,6 @@
 {
   "name": "unified-latex-stringify",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Plugin for `unified-latex` that takes an `unified-latex` tree and turns it into LaTeX",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/unified-latex-stringify",

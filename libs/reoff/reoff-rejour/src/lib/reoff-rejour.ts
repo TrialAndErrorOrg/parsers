@@ -78,7 +78,7 @@ function mutate(
  * @param destination
  *   Optional unified processor.
  * @param options
- *   Options passed to `jast-util-to-texast`.
+ *   Options passed to `ooxast-util-to-jast`.
  */
 const reoffRejour = function (destination?: Processor | Options, options?: Options) {
   const relations = this.data('relations')

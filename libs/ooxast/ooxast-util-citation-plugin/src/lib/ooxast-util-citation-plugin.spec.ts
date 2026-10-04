@@ -15,10 +15,7 @@ const fromDocx = async (file: string) => {
   return detectCitePlugin(tree)
 }
 const testfile = (type: string) =>
-  new URL(
-    `../../../../processors/docx-to-tex/src/test/fixtures/${type}/index.docx`,
-    import.meta.url,
-  ).pathname
+  new URL(`../test/fixtures/${type}/index.docx`, import.meta.url).pathname
 
 describe('ooxast-util-citation-plugin', () => {
   it('should identify zotero', async () => {

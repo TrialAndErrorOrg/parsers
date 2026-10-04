@@ -75,10 +75,7 @@ describe('minifyWhitespace', () => {
         '../../../../reoff/docx-to-vfile/src/fixtures/test.xml',
         import.meta.url,
       ),
-      'a JATS article': new URL(
-        '../../../../jast/jast-util-to-texast/src/lib/test/fixtures/complete/index.jats.xml',
-        import.meta.url,
-      ),
+      'a JATS article': new URL('../test/fixtures/article.jats.xml', import.meta.url),
     }
 
     for (const [name, url] of Object.entries(fixtures)) {

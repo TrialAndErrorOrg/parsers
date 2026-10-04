@@ -1,0 +1,2700 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN" "https://jats.nlm.nih.gov/publishing/1.2/JATS-journalpublishing1.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink">
+  <front>
+    <article-meta>
+      <title-group>
+        <article-title>Classical Conditioning for Pain: The Development of a Customized Single-Case Experimental Design</article-title>
+      </title-group>
+      <contrib-group content-type="author">
+        <contrib contrib-type="person">
+          <name>
+            <surname>De</surname>
+            <given-names>Tamal Kumar</given-names>
+          </name>
+          <email>tamalkumar.de@kuleuven.be</email>
+          <xref ref-type="aff" rid="aff-1"/>
+        </contrib>
+        <contrib contrib-type="person">
+          <name>
+            <surname>Madden</surname>
+            <given-names>Victoria J. </given-names>
+          </name>
+          <email>torymadden@gmail.com</email>
+          <xref ref-type="aff" rid="aff-2"/>
+        </contrib>
+        <contrib contrib-type="person">
+          <name>
+            <surname>Vlaeyen</surname>
+            <given-names>Johan W. S. </given-names>
+          </name>
+          <email>johannes.vlaeyen@kuleuven.be</email>
+          <xref ref-type="aff" rid="aff-3"/>
+        </contrib>
+        <contrib contrib-type="person">
+          <name>
+            <surname>Onghena</surname>
+            <given-names>Patrick </given-names>
+          </name>
+          <email>patrick.onghena@kuleuven.be</email>
+          <xref ref-type="aff" rid="aff-4"/>
+        </contrib>
+      </contrib-group>
+      <aff id="aff-1">
+        <institution>KU Leuven</institution>
+        <country>Belgium</country>
+      </aff>
+      <aff id="aff-2">
+        <institution>University of Cape Town</institution>
+        <country>South Africa</country>
+      </aff>
+      <aff id="aff-3">
+        <institution>KU Leuven</institution>
+        <country>Belgium</country>
+      </aff>
+      <aff id="aff-4">
+        <institution>KU Leuven</institution>
+        <country>Belgium</country>
+      </aff>
+      <history>
+        <date date-type="received" iso-8601-date="2021-03-08">
+          <day>08</day>
+          <month>03</month>
+          <year>2021</year>
+        </date>
+      </history>
+    </article-meta>
+  </front>
+
+
+<body id="body">
+    <sec id="sec-2">
+      <title>Take-Home Message</title>
+      <p id="_paragraph-3">We wanted to design a single-case experiment to test whether classical conditioning can influence pain thresholds. We settled on a customized AB phase design for which we ran pilot tests and a power study. The results indicated that this single-case design can be used to test our hypothesis.</p>
+    </sec>
+    <sec id="sec-3">
+      <title>Abstract</title>
+      <p id="_paragraph-4">Single-case experiments are increasingly popular in the behavioral sciences. Due to their flexibility, single-case designs can be customized to test a variety of experimental hypotheses. We were interested in using a single-case experimental approach to test whether pain thresholds can be influenced by Pavlovian classical conditioning. Following the example of earlier studies into this topic, we planned to measure whether participants would more frequently report specific electrocutaneous stimuli as painful when they were presented with specific vibrotactile stimuli that had previously been associated with painful electrocutaneous stimuli. First, we decided on a mean difference effect size measure derived from the Sensation and Pain Rating Scale ratings for the electrocutaneous stimuli provided by the participants. Next, we discussed several possible single-case designs and evaluated their benefits and shortcomings. Then, we ran pilot tests with a few participants based on the possible single-case designs. We also conducted a simulation study to estimate the power of a randomization test to test our hypothesis using different values for effect size, number of participants, and number of measurements. Finally, we decided on a sequentially replicated AB phase design with 30 participants based on the results from the pilot tests and the power study. We plan to implement this single-case design in a future experiment to test our hypothesis. </p>
+      <p id="paragraph-c625a36b3fe1956199b871c71f0234ef"><bold id="_bold-1">Keywords</bold>: single-case, classical conditioning, pain, randomization test, statistical power.</p>
+    </sec>
+    <sec id="sec-4">
+      <title>Purpose</title>
+      <p id="_paragraph-5">In this manuscript, our purpose is to describe how we used a trial and error approach to design a customized single-case experiment (SCE) to test the effect of classical conditioning on pain thresholds. We hope that this information helps readers who plan to implement an SCE in better understanding the steps involved and possible challenges. We wish to focus on using the flexible nature of SCEs to adapt to the requirements of the experiment. We also wish to highlight the necessity of exploring various available statistical methods and statistical power requirements for these methods prior to starting the experiment. Finally, we demonstrate how SCEs can serve as a viable avenue for pilot-testing new therapies and treatments at a small scale before implementing larger scale studies.</p>
+    </sec>
+    <sec id="sec-5">
+      <title>Introduction</title>
+      <sec id="sec-5_1">
+        <title>Classical Conditioning</title>
+        <p id="_paragraph-6">Persistent pain—pain that is still felt after bodily tissue has healed—is a major healthcare problem that is poorly understood and, consequently, difficult to treat effectively . While there are key models that go some way towards explaining how pain can persist without active tissue damage <xref id="_xref-1" ref-type="bibr" rid="bib1">[1]</xref> <xref id="_xref-2" ref-type="bibr" rid="bib2">[2]</xref> <xref id="_xref-3" ref-type="bibr" rid="bib3">[3]</xref> <xref id="_xref-4" ref-type="bibr" rid="bib4">[4]</xref>, certain pain presentations remain unexplained. The imprecision hypothesis was proposed to address these unexplained presentations, and is founded on the idea that pain can be modulated by pain-associated cues—specifically, via “classical conditioning” <xref id="_xref-5" ref-type="bibr" rid="bib5">[5]</xref>. </p>
+        <p id="_paragraph-7">Our study design builds on two previous experiments <xref id="_xref-6" ref-type="bibr" rid="bib6">[6]</xref> <xref id="_xref-7" ref-type="bibr" rid="bib7">[7]</xref>, which followed a Pavlovian or “classical” conditioning design <xref id="_xref-8" ref-type="bibr" rid="bib8">[8]</xref> to test whether neutral but pain-associated cues can bias a participant’s decision about whether a stimulus is painful or non-painful. In the differential classical conditioning design used here, one neutral cue is paired with a painful electrocutaneous stimulus, while another neutral cue is paired with a non-painful electrocutaneous stimulus. It is expected that participants form associations between each cue and painfulness, such that subsequent perception of an ambiguous electrical stimulus is modified, dependent on the simultaneous presentation of one of the neutral cues.</p>
+        <p id="_paragraph-8">We set out to design an SCE to test this hypothesis. Due to the before (conditioning) and after (conditioning) structure of multiple observations required for each participant, SCE designs are perfectly suited for testing this hypothesis.</p>
+      </sec>
+      <sec id="sec-5_2">
+        <title>Single-Case Experiments</title>
+        <p id="_paragraph-9">SCEs are experiments in which the effect of manipulating an independent variable is observed in a single entity <xref id="_xref-9" ref-type="bibr" rid="bib9">[9]</xref> <xref id="_xref-10" ref-type="bibr" rid="bib10">[10]</xref>. Variables of interest in the entity, which is often a single participant, are measured repeatedly over a period of time with the purpose of establishing a causal relationship between the independent variable, commonly referred to as the treatment condition, and the observed entity. SCEs are increasingly popular in behavioral and educational sciences due to their flexibility, low cost, and focus on effects of the intervention in individual participants <xref id="_xref-11" ref-type="bibr" rid="bib11">[11]</xref>. SCEs may be preferable to group-based designs, where the existence or magnitude of the effect <italic id="_italic-1">within</italic> an individual is more relevant than the average effect <italic id="_italic-2">across</italic> a group of individuals. The lower cost and flexibility of SCEs also make them ideal for studying new theories and interventions, as is the case in this study <xref id="_xref-12" ref-type="bibr" rid="bib12">[12]</xref>.</p>
+        <p id="_paragraph-10">In SCEs, assignment of the treatment conditions to measurement occasions can be randomized to strengthen internal validity <xref id="_xref-13" ref-type="bibr" rid="bib13">[13]</xref> <xref id="_xref-14" ref-type="bibr" rid="bib14">[14]</xref>. Additionally, replication using multiple participants strengthens external validity and generalizability of the results <xref id="_xref-15" ref-type="bibr" rid="bib13">[13]</xref> <xref id="_xref-16" ref-type="bibr" rid="bib15">[15]</xref>. In our study design, we incorporated both randomization and replication to enhance internal and external validity of the experiment. </p>
+      </sec>
+      <sec id="sec-5_3">
+        <title>Advantages of SCEs for Classical Conditioning</title>
+        <p id="_paragraph-11">SCEs are well suited to research questions about within-individual processes. Although group designs are historically respected, they are typically analyzed in a way that aggregates data from all individuals to estimate an effect at the group level—an effect that may be non-existent in any of the individuals within the group <xref id="_xref-17" ref-type="bibr" rid="bib16">[16]</xref>. This aggregation approach obscures the true, within-individual effect, and the between-individual variability of that effect (which, itself, is typically worthy of attention; <xref id="_xref-18" ref-type="bibr" rid="bib17">[17]</xref>. Of course, it is possible to consider within-individual changes in some group designs, but an SCE offers a superior approach to achieving a sufficiently powered (&gt; 80%) examination of within-subject effects <xref id="_xref-19" ref-type="bibr" rid="bib18">[18]</xref> <xref id="_xref-20" ref-type="bibr" rid="bib19">[19]</xref>. Whereas traditional group-based designs generate knowledge on the population level only, SCEs generate knowledge at the level of the individual. Finally, findings from group-based designs cannot be generalized towards individuals, while SCEs can be aggregated for insights on populations.</p>
+      </sec>
+      <sec id="sec-5_4">
+        <title>Analyzing SCEs</title>
+        <p id="_paragraph-12">SCEs are often difficult to analyze due to the presence of serial correlation in observed data and nonadherence to distributional assumptions <xref id="_xref-21" ref-type="bibr" rid="bib20">[20]</xref> <xref id="_xref-22" ref-type="bibr" rid="bib21">[21]</xref> <xref id="_xref-23" ref-type="bibr" rid="bib22">[22]</xref> <xref id="_xref-24" ref-type="bibr" rid="bib23">[23]</xref>. Traditionally, visual analysis was the preferred method for analyzing SCE data, but researchers now recommend quantitative statistical analysis to complement visual analysis <xref id="_xref-25" ref-type="bibr" rid="bib24">[24]</xref> <xref id="_xref-26" ref-type="bibr" rid="bib25">[25]</xref> <xref id="_xref-27" ref-type="bibr" rid="bib26">[26]</xref> <xref id="_xref-28" ref-type="bibr" rid="bib27">[27]</xref> <xref id="_xref-29" ref-type="bibr" rid="bib28">[28]</xref>. Specifically, for experiments involving user-reported ordinal data, such as the current experiment, nonparametric statistical methods may be best suited for analysis, as the observed data may not adhere to distributional assumptions required for popular parametric methods. </p>
+        <p id="_paragraph-13">Randomization tests (RTs) are nonparametric hypothesis tests recommended for analyzing SCEs <xref id="_xref-30" ref-type="bibr" rid="bib14">[14]</xref> <xref id="_xref-31" ref-type="bibr" rid="bib22">[22]</xref> <xref id="_xref-32" ref-type="bibr" rid="bib11">[11]</xref>. RTs derive their validity from the random assignment of treatment conditions to experimental units, which in the case of SCEs, are measurement occasions <xref id="_xref-33" ref-type="bibr" rid="bib29">[29]</xref>. RTs do not require any distributional assumptions for the observed data. Additionally, RTs are immensely flexible, and can be adapted for any SCE design, randomization scheme, and effect size measure as the test statistic <xref id="_xref-34" ref-type="bibr" rid="bib30">[30]</xref> <xref id="_xref-35" ref-type="bibr" rid="bib31">[31]</xref> <xref id="_xref-36" ref-type="bibr" rid="bib11">[11]</xref>. In our study design, we implemented a customized RT using a mean difference effect size measure as the test statistic. </p>
+      </sec>
+      <sec id="sec-5_5">
+        <title>Statistical Power of SCE RTs </title>
+        <p id="_paragraph-14">Power analysis is an essential part of statistical hypothesis testing, particularly for determining sample size <xref id="_xref-37" ref-type="bibr" rid="bib32">[32]</xref>. Several guidelines recommend a power analysis or at least a methodical description of how sample size was determined <xref id="_xref-38" ref-type="bibr" rid="bib33">[33]</xref> <xref id="_xref-39" ref-type="bibr" rid="bib34">[34]</xref>. In the context of SCEs, power analysis can be used to determine the number of measurements necessary, and for studies with replication, the number of participants.</p>
+        <p id="_paragraph-15">For RTs, the randomization distribution is calculated empirically, and hence statistical power can only be estimated using computer-intensive simulations <xref id="_xref-40" ref-type="bibr" rid="bib35">[35]</xref> <xref id="_xref-41" ref-type="bibr" rid="bib18">[18]</xref>. Several studies have estimated the power of SCE RTs for various design conditions <xref id="_xref-42" ref-type="bibr" rid="bib19">[19]</xref> <xref id="_xref-43" ref-type="bibr" rid="bib18">[18]</xref> <xref id="_xref-44" ref-type="bibr" rid="bib36">[36]</xref> <xref id="_xref-45" ref-type="bibr" rid="bib37">[37]</xref> <xref id="_xref-46" ref-type="bibr" rid="bib38">[38]</xref> <xref id="_xref-47" ref-type="bibr" rid="bib39">[39]</xref>. Although the results from these studies can be used as a reference, they are true only for the design parameters and simulated data distributions considered. Since we acquired unusual ordinal observed data, power ideally needed to be estimated using simulated data of the same type as this study would generate.</p>
+      </sec>
+    </sec>
+    <sec id="sec-6">
+      <title>Methods</title>
+      <sec id="sec-6_1">
+        <title>Experimental Setup</title>
+        <p id="_paragraph-16">In this experiment, participants receive two different types of stimuli: a vibrotactile stimulation as the conditioned stimulus (CS) and an electrocutaneous stimulation as the unconditioned stimulus (US). At first, one neutral stimulus (a vibrotactile stimulus, denoted as CS+) is paired with a painful stimulus (a high-intensity electrocutaneous stimulus, denoted as US<sub id="_subscript-1">high</sub>), whereas a different neutral stimulus (a vibrotactile stimulus, denoted as CS−, applied to a different location) is paired with a non-painful stimulus (a low-intensity electrocutaneous stimulus, denoted as US<sub id="_subscript-2">low</sub>). This procedure is expected to form an association between the CS+ and painfulness, in contrast to the CS− and non-painfulness. Later, each CS is paired with a “test stimulus” (denoted as US<sub id="_subscript-3">test</sub>), an electrocutaneous stimulus of an intensity calibrated such that there is a 50% chance that the participant judges it to be painful or non-painful at baseline (i.e., before the pairing). Participants are then requested to judge each trial on a scale that distinguishes painful from non-painful events <xref id="_xref-48" ref-type="bibr" rid="bib40">[40]</xref>. The trials of interest are the CS/US<sub id="_subscript-4">test</sub> pairs, as the primary hypothesis is that, due to the pairings learned early in the experiment, the participant will come to judge the US<sub id="_subscript-5">test</sub> stimuli to be painful more often when they are paired with the CS+ (previously paired with a painful stimulus) than when they are paired with the CS− (previously paired with a non-painful stimulus).</p>
+      </sec>
+      <sec id="sec-6_2">
+        <title>Laboratory Setup</title>
+        <p id="_paragraph-17">The participants receive two types of stimuli at the same time, replicating the procedure in Traxler et al. <xref id="_xref-49" ref-type="bibr" rid="bib7">[7]</xref>. Stimulus onset and timing are controlled using Affect 4.0 <xref id="_xref-50" ref-type="bibr" rid="bib41">[41]</xref>. A vibrotactile stimulus is delivered to the skin using tactors manufactured by Dancer Design taped to the participant’s skin <xref id="_xref-51" ref-type="bibr" rid="bib42">[42]</xref>. This stimulus is of fixed duration and a clearly perceptible intensity. Three tactors are used in the arrangement as the source of a CS (see <xref id="xref-eb46e20bd1848837de4f042a0f550940" ref-type="fig" rid="figure-panel-9bd85a32048f85ad7764dbeebbe5ca79">Figure 1</xref>). The SIDE tactor is allocated to CS<sub id="_subscript-6">neutral</sub>, whereas the ABOVE and BELOW tactors are assigned to CS+ and CS− in a counterbalanced way across participants.</p>
+        <fig id="figure-panel-9bd85a32048f85ad7764dbeebbe5ca79">
+          <label>Figure 1</label>
+          <caption>
+            <title>
+              <italic id="_italic-3">Arrangement of Tactors and Electrodes on the Back</italic>
+              <italic id="_italic-4">(Adapted From Traxler et al. </italic>
+              <xref id="_xref-52" ref-type="bibr" rid="bib7">[7]</xref>
+              <italic id="_italic-5">)</italic>
+              <italic id="_italic-6">.</italic>
+            </title>
+            <p id="paragraph-5e5cea98ee9e04cb9ea71b0707c32de1"/>
+          </caption>
+          <graphic id="graphic-cfd6c788e6164f6a48417fbbf6dfd01d" mimetype="image" mime-subtype="png" xlink:href="Other,+Figure+1.png"/>
+        </fig>
+        <p id="_paragraph-21">An electrocutaneous stimulation is delivered by passing a current across two surface electrodes located at the midpoint between the tactors to serve as the US (Figure 1). The current is delivered using a DS7A constant current stimulator <xref id="_xref-53" ref-type="bibr" rid="bib43">[43]</xref>. The stimulation intensity is calibrated individually. The number of pulses delivered on each stimulation occasion is varied to provide a US<sub id="_subscript-7">high</sub> that is usually painful, a US<sub id="_subscript-8">low</sub> that is usually non-painful, and a US<sub id="_subscript-9">test</sub> that is calibrated to lie close to the pain threshold, the boundary between non-painful and painful.</p>
+      </sec>
+      <sec id="sec-6_3">
+        <title>Tactor and Electrode Preparation</title>
+        <p id="_paragraph-22">On arrival, participants are seated straddling a chair in front of a desk with a computer monitor, mouse, and keyboard. Participants are asked to bend backwards to identify the point at which the greatest bend is seen. A point in the upper lumbar region is marked on the back, 2cm to the left of the spine, where the electrodes are placed such that the mark lies exactly between them. Three other points—4cm above, below, and to the left side of the electrodes—are marked, and the tactors are taped in place such that the closest border of each tactor lies at a tactor mark (Figure 1). Calibration is performed by the procedure described in Traxler et al. <xref id="_xref-54" ref-type="bibr" rid="bib7">[7]</xref>, with the CS<sub id="_subscript-10">neutral</sub> paired with each electrocutaneous stimulus. The CS<sub id="_subscript-11">neutral</sub> is used to provide vibratory stimulation consistent with the CS+/CS− stimuli that are later presented in the experimental trials to ensure that any modulation of pain by the vibration itself is consistent across calibration and experimental trials. Ratings of CS<sub id="_subscript-12">neutral</sub> trials from the experimental phase are not relevant to the research question and are therefore not analyzed.</p>
+      </sec>
+      <sec id="sec-6_4">
+        <title>Experimental Trials</title>
+        <p id="_paragraph-23">Based on the experimental setup discussed previously, and given the pairing of CSs and USs, the experiment for a participant can theoretically consist of five different types of trials:</p>
+        <list list-type="order" id="list-9b13847b1c69195aac63c207bb288675">
+          <list-item>
+            <p>Training trials: Each training trial consists of one CS, with each of the three CS types used in different trials. There is no electrocutaneous stimulation (i.e., US) presented. These trials are conducted to familiarize the participants with the locations of the CS tactors. </p>
+          </list-item>
+          <list-item>
+            <p>Baseline trials: The baseline trials consist of two combinations of stimulations: a CS+ with a simultaneous US<sub id="_subscript-13">test</sub> and a CS− with a simultaneous US<sub id="_subscript-14">test</sub>. These trials are used to record baseline pain ratings of participants before they are conditioned to associate the painful US with a particular CS.</p>
+          </list-item>
+          <list-item>
+            <p>Acquisition or learning trials: These trials consist of two combinations of stimulations: a CS+ with an US<sub id="_subscript-15">high</sub> and a CS− with an US<sub id="_subscript-16">low</sub>, and are meant to condition participants to associate painful US to CS+ and vice versa.</p>
+          </list-item>
+          <list-item>
+            <p>Test trials: These trials are the same as the two baseline trials: a CS+ with an US<sub id="_subscript-17">test</sub> and a CS− with an US<sub id="_subscript-18">test</sub>, and are meant to record pain ratings of participants to test whether they have associated the painful US with CS+ and vice versa.</p>
+          </list-item>
+          <list-item>
+            <p>Irrelevant trials: These trials consist of a CS<sub id="_subscript-19">neutral</sub> combined with an US<sub id="_subscript-20">test</sub> stimuli. These trials are noninformative and are included to satisfy the assumptions of the analytical approach; they are included only to achieve consistency in the time gaps between baseline or test trials. </p>
+          </list-item>
+        </list>
+      </sec>
+      <sec id="sec-6_5">
+        <title>Observed Variables</title>
+        <p id="_paragraph-24">The participants are requested to provide two reports on each trial. First, they rate the stimulation event on the Sensation and Pain Rating Scale <xref id="_xref-55" ref-type="bibr" rid="bib44">[44]</xref> <xref id="_xref-56" ref-type="bibr" rid="bib40">[40]</xref>. The SPARS is anchored at -50 (no sensation), 0 (the exact point at which the feeling transitions to pain), and 50 (worst pain imaginable). The two distinct ranges for non-painful (-50 to -1) and painful (1 to 50) are clearly marked and explained to the participants. Participants are explicitly advised to make an initial decision about whether a trial was non-painful or painful before assigning a rating from the appropriate side of the scale, without selecting 0 on SPARS. </p>
+        <p id="_paragraph-25">Second, the participant indicates the location at which they feel the vibrotactile stimulus from the three options “ABOVE”, “BELOW”, and “SIDE”. This is only used to confirm that the participants are identifying the location of the stimuli correctly. Given that discrimination of the vibrotactile stimuli is necessary for differential learning, participants who fail to identify the location of the stimulus correctly in at least 75% of the trials are excluded and replaced by additional participants.</p>
+      </sec>
+      <sec id="sec-6_6">
+        <title>Effect Size Measure and Test Statistic</title>
+        <p id="_paragraph-26">We are interested in calculating whether the participants judged trials of CS+/ US<sub id="_subscript-21">test</sub> and CS−/ US<sub id="_subscript-22">test</sub> as painful or non-painful differently for baseline and test trials. For this purpose, we first convert the SPARS ratings to a binary variable: 0 for non-painful (-50 to -1 on SPARS) and 1 for painful (1 to 50 on SPARS). A rating of 0 on SPARS can neither be classified as painful nor as non-painful, therefore these are considered indeterminate and were marked as missing. Then, we pair two trials, a CS+/ US<sub id="_subscript-23">test</sub> and a CS−/ US<sub id="_subscript-24">test</sub> and calculate the difference between the corresponding binary variables. The resulting difference indicates whether the participant is rating CS+/ US<sub id="_subscript-25">test</sub> and CS−/ US<sub id="_subscript-26">test</sub> differently. The difference can result in three different values: 1 when the CS+/ US<sub id="_subscript-27">test</sub> trial is rated as painful while the corresponding CS−/ US<sub id="_subscript-28">test</sub> trial is rated as non-painful; −1 when the CS+/ US<sub id="_subscript-29">test</sub> trial is rated as non-painful while the corresponding CS−/ US<sub id="_subscript-30">test</sub> trial is rated as painful; and finally, 0 when both CS+/ US<sub id="_subscript-31">test</sub> and CS−/ US<sub id="_subscript-32">test</sub> trials are rated as painful or both are rated as non-painful. This difference value, calculated from a pair of trials, constitutes one measurement in our SCE. A simple mean difference (MD) effect size measure is calculated as the difference between the means of the difference values derived from the test trial pairs and the difference values derived from the baseline trial pairs. Due to the flexibility of RTs, this effect size measure can also be used as the test statistic <xref id="_xref-57" ref-type="bibr" rid="bib31">[31]</xref>. </p>
+      </sec>
+      <sec id="sec-6_7">
+        <title>Single-Case Design </title>
+        <p id="_paragraph-27">In this section, we describe our considerations regarding which SCE design to use in our experiment. We discuss several initial design possibilities that were chosen by trial and error and conclude with a final design.</p>
+        <sec id="sec-6_7_1">
+          <title>Initial Design Options</title>
+          <p id="_paragraph-28">Randomized Block Design. Since each of our measurements requires a pair of trials, we immediately considered a randomized block design (RBD) for the experiment. In an RBD SCE, similar to an RBD in traditional group designs, the measurement occasions are divided into small blocks, with each block containing administrations of all treatment conditions <xref id="_xref-58" ref-type="bibr" rid="bib45">[45]</xref>. For our study, a possible block consists of the two baseline (or test) trials, a CS+/ US<sub id="_subscript-33">test</sub> and a CS−/ US<sub id="_subscript-34">test</sub>, in random order. Hence, the experiment for a participant can consist of several blocks of baseline trial pairs, followed by a period of acquisition trials to condition the participants, followed by several blocks of test trial pairs. However, this design is immediately rejected, as an RBD SCE requires all treatment conditions to be applied inside a block. Since the effects of conditioning are acquired over a period of time and are expected to carry over to future trials, true alternation of treatment conditions is not possible in this experiment. </p>
+          <p id="_paragraph-29">AB Phase Design with In-Phase Acquisition. When we rejected the RBD, we realized that the experiment should consist of periods of baseline trial pairs and periods of test trial pairs. The simplest method to achieve this is using an AB phase design, with an A phase as the baseline condition and a subsequent B phase as the test condition <xref id="_xref-59" ref-type="bibr" rid="bib9">[9]</xref>. In favor of internal validity, the phase transition is preferably randomized. Each phase consists of several blocks of trials, each of which yields one measurement. Each measurement block in the baseline phase consists of <italic id="_italic-7">k</italic> irrelevant trial pairs (two CS<sub id="_subscript-35">neutral</sub>/ US<sub id="_subscript-36">test</sub>) and a baseline trial pair (a CS+/ US<sub id="_subscript-37">test</sub> and a CS−/ US<sub id="_subscript-38">test</sub> in random order). Similarly, each measurement block in the test phase consists of <italic id="_italic-8">k</italic> acquisition trial pairs (a CS+/ US<sub id="_subscript-39">high</sub> and a CS−/ US<sub id="_subscript-40">low</sub> in random order) followed by a test trial pair (a CS+/ US<sub id="_subscript-41">test</sub> and a CS−/ US<sub id="_subscript-42">test</sub> in random order). The number of irrelevant or acquisition trial pairs in each block, or <italic id="_italic-9">k</italic>, is set based on the required level of acquisition. A lower <italic id="_italic-10">k</italic> would mean we would need a lower number of trials to achieve a certain number of measurements, but would also typically result in weaker acquisition of associations, and vice versa for a higher <italic id="_italic-11">k</italic>. Unfortunately, this design has low acquisition of the associations as there is no learning period. Additionally, RTs for AB phase designs require a large number of measurements to achieve sufficient statistical power <xref id="_xref-60" ref-type="bibr" rid="bib46">[46]</xref> <xref id="_xref-61" ref-type="bibr" rid="bib18">[18]</xref>. As a result, the experiment for a participant would need a very large number of trials over a significantly long time to ensure both high acquisition and enough measurements. As a result, this design is rejected in favor of a slightly modified AB phase design. A similar ABAB phase design is also rejected due to the potentially large number of trials required and possibility of carry-over effects between phases. </p>
+        </sec>
+        <sec id="sec-6_7_2">
+          <title>Final Design</title>
+          <p id="_paragraph-30">The final design combines elements from both previous designs: an AB phase design with both out-of-phase and in-phase learning. The baseline phase for this design contains several pairs of baseline trial pairs (a CS+/ US<sub id="_subscript-43">test</sub> and a CS−/ US<sub id="_subscript-44">test</sub> in random order), followed by a period of learning with only acquisition trial pairs (a CS+/ US<sub id="_subscript-45">high</sub> and a CS−/ US<sub id="_subscript-46">low</sub> in random order). Finally, the test phase includes test trial pairs (a CS+/ US<sub id="_subscript-47">test</sub> and a CS−/ US<sub id="_subscript-48">test</sub> in random order) with a few acquisition trial pairs in between at regular intervals to reinforce the associations and hence prevent extinction. The time of onset of the test phase is randomized. The experiment starts with a few training trials before the baseline phase. </p>
+          <p id="_paragraph-31">The number of trials and the number of participants are to be decided based on a power study and some pilot experiments. However, the guidelines for phase designs by Kratochwill et al. <xref id="_xref-62" ref-type="bibr" rid="bib26">[26]</xref> recommend at least five measurements in both baseline and test phases. Since we are also curious about any increase or decrease in acquisition over time, we decide to include at least 15 measurements in the test phase. </p>
+          <p id="_paragraph-32">Due to the use of specialized equipment and individual calibration, multiple participants cannot be tested at the same time. Hence, simultaneous replication using a multiple baseline design (MBD), which is able to control for environmental confounding factors, is not possible <xref id="_xref-63" ref-type="bibr" rid="bib9">[9]</xref> <xref id="_xref-64" ref-type="bibr" rid="bib10">[10]</xref>. Instead, the experiment is to be run as a sequentially replicated AB phase design experiment. </p>
+        </sec>
+      </sec>
+      <sec id="sec-6_8">
+        <title>Randomization Scheme and RT</title>
+        <p id="_paragraph-33">The design is randomized using intervention start point randomization for each participant <xref id="_xref-65" ref-type="bibr" rid="bib14">[14]</xref>. In this scheme, the total number of measurements and the minimum number of measurements in each phase is decided beforehand, and the intervention can start at any time point that satisfies these restrictions. Therefore, if the number of measurements is <italic id="_italic-12">N</italic>, and the minimum number of measurements in A and B phase are <italic id="_italic-13">a</italic> and <italic id="_italic-14">b</italic> respectively, the number of possible randomizations is <italic id="_italic-15">r</italic> = <italic id="_italic-16">N</italic> – <italic id="_italic-17">a</italic> – <italic id="_italic-18">b</italic> + 1. For <italic id="_italic-19">P</italic> participants with the same randomization scheme, the total number of randomizations for the replicated experiment is <italic id="_italic-20">r</italic><sup id="_superscript-1"><italic id="_italic-21">P</italic></sup>. </p>
+        <p id="_paragraph-34">We conduct a single RT for all participants combined based on these <italic id="_italic-22">r</italic><sup id="_superscript-2"><italic id="_italic-23">P</italic></sup> randomizations. The null hypothesis for this RT is that no difference exists between the baseline phase measurements and test phase measurements for all participants. As discussed previously, the measurements represent whether participants rate CS+/ US<sub id="_subscript-49">test</sub> trials as painful more frequently than CS−/ US<sub id="_subscript-50">test</sub> trials. Since the Pavlovian conditioning procedure is aimed at participants perceiving the CS+/ US<sub id="_subscript-51">test</sub> as more painful, the RT is one-sided with the alternate hypothesis being that the test phase measurements are higher than the baseline phase measurements for at least one participant. This RT can be conducted with the average (across participants) of the MD effect size measure discussed previously as the combined test statistic.</p>
+        <p id="_paragraph-35">We use the Shiny SCDA (Single-Case Data Analysis) web app for SCEs to randomize and analyze the experiment <xref id="_xref-66" ref-type="bibr" rid="bib47">[47]</xref>. Whereas this web app does not include an option for simultaneously replicated AB phase design, it does include an MBD option. The MBD option in Shiny SCDA uses the Koehler-Levin regulated randomization procedure <xref id="_xref-67" ref-type="bibr" rid="bib48">[48]</xref>, which, when using an identical set of possible start points for all participants, is analogous to our randomization scheme. Hence, we can both randomly select test phase start points and run the RT in Shiny SCDA. Additionally, we can plot the observed data for visual analysis in Shiny SCDA. </p>
+      </sec>
+      <sec id="sec-6_9">
+        <title>Pilot Tests</title>
+        <p id="_paragraph-36">We ran several pilot tests to estimate possible effect sizes and to test possible design choices. We first tested nine participants under slight variations of our initial design choice. Later, after a simulated power study and adjustments to the design, we tested another four participants. We analyzed these four tests using visual analysis and an RT in Shiny SCDA. These four tests were, however, not randomized, and the test phase for all four participants started at the tenth measurement occasion. However, for the purposes of demonstration, we ignored the assumption of randomization. We will discuss the results from these pilot tests, and the final four tests in particular in the Results section. </p>
+        <p id="_paragraph-37">There were two important takeaways from the first nine pilot tests that were very useful for the design of the power study. First, the observed MD effect sizes were extremely small. The average effect size from the first nine tests was slightly negative at -0.037, with a maximum of 0.143 and a minimum of -0.400. Second, the pilot tests also revealed difficulties in running the experiment for more than 30-35 minutes for a participant. Considering each trial took around 15 seconds, this gave us a maximum of around 140 trials.</p>
+      </sec>
+      <sec id="sec-6_10">
+        <title>Power Study</title>
+        <p id="_paragraph-38">To ensure sufficient statistical power for our RT, we needed to first estimate power for different values of number of measurements (<italic id="_italic-24">N</italic>) and number of participants (<italic id="_italic-25">P</italic>), and then choose sufficiently high values of <italic id="_italic-26">N</italic> and <italic id="_italic-27">P</italic> for the experiment. </p>
+        <p id="_paragraph-39">Ideally, we would want to select the maximum <italic id="_italic-28">N</italic> possible within the limits of how long an experiment can be reasonably run. This strategy presents us with two advantages. First, increasing <italic id="_italic-29">N</italic> should result in reduction in the variability of the estimate of effect size. Second, maximizing <italic id="_italic-30">N</italic> should allow us to achieve sufficient power with lower <italic id="_italic-31">P</italic>, which directly equates to lower cost for the experiment.</p>
+        <p id="_paragraph-40">We used the Monte Carlo method used by Ferron and Onghena <xref id="_xref-68" ref-type="bibr" rid="bib19">[19]</xref> to estimate power. In this method, several datasets are simulated under a set of simulation conditions. The proportion of these simulated datasets in which the RT leads to a rejection of the null hypothesis gives an estimate of statistical power for the given set of simulation conditions. A simulation study of such complexity is both difficult to program and computationally intensive to execute. Fortunately, we were able to modify and repurpose R code used by De, Michiels, Tanious, et al. <xref id="_xref-69" ref-type="bibr" rid="bib39">[39]</xref> for this study. </p>
+        <sec id="sec-6_10_1">
+          <title>Simulation Conditions</title>
+          <p id="_paragraph-41">The following three simulation conditions were varied for this power study:</p>
+          <list list-type="order" id="list-0ef6dcd692e3377541b02aba3eadea0b">
+            <list-item>
+              <p>Effect size: Based on the low effect sizes observed in the pilot tests, we simulated MD effect sizes of 0.1, 0.2, 0.3, 0.4, and 0.5 for the simulated observed data.</p>
+            </list-item>
+            <list-item>
+              <p>Number of measurements: We decided on a minimum of five measurements in the baseline phase and a minimum of 15 measurements in the test phase. As a result, the experiment needs more than 20 measurements. However, from the pilot tests it was evident that an experiment with more than 140 trials (70 trial pairs) was not feasible. Considering around 30 trials are required for the training and learning periods, and a few more acquisition trails for reinforcement during test phase, it was difficult to have more than 40 measurements (80 trials). Hence, we used 25, 30, 35, and 40 measurements for simulated data. </p>
+            </list-item>
+            <list-item>
+              <p>Number of participants: Since the pilot tests revealed a small effect size, and the number of measurements is also limited, to ensure high power we considered a large range of participant count at 10, 20, 30, 40, and 50. </p>
+            </list-item>
+          </list>
+        </sec>
+        <sec id="sec-6_10_2">
+          <title>Other Simulation Parameters</title>
+          <p id="_paragraph-42">For the power study, we wanted to simulate observed values that were similar to the experiment. For the baseline, we assumed a symmetric distribution around 0 for the SPARS rating. Therefore, the painful/non-painful ratings were expected to be 0s and 1s equally for both CS+/ US<sub id="_subscript-52">test</sub> and CS−/ US<sub id="_subscript-53">test</sub> trials. Hence, an observed value corresponding to a trial pair in the baseline was expected to be 1 with 25% probability, -1 with 25% probability, and 0 with 50% probability. We simulated observed values as 1, -1, and 0 with these probabilities. For the test phase, we increased the probability of 1 by half the selected effect size and decreased the probability of -1 by half the selected effect size. This resulted in an expected MD effect size equal to the selected effect size. </p>
+          <p id="_paragraph-43">Since the number of randomizations for the RT was huge, we simulated Monte Carlo RTs with 1000 randomizations <xref id="_xref-70" ref-type="bibr" rid="bib49">[49]</xref>. For estimating power, we simulated 10000 datasets for each set of simulation conditions. Finally, we used a 5% level of significance for the simulated RTs.</p>
+          <p id="_paragraph-44">The simulations were run on supercomputer nodes at the Flemish Supercomputer Center (Leuven, Belgium). This allowed testing more simulation conditions and achieve high accuracy simulating a large number of datasets for each simulation condition; however, the simulations can also be run at a smaller scale on a personal computer. </p>
+        </sec>
+      </sec>
+    </sec>
+    <sec id="sec-7">
+      <title>Results</title>
+      <sec id="sec-7_1">
+        <title>Power Analysis</title>
+        <p id="_paragraph-45">The results from the power study (<xref id="xref-4129156e5e1aa996ff21c4a12bf5ddfd" ref-type="table" rid="tbl1">Table 1</xref>) revealed that due to the relatively small effect sizes and restricted number of measurements, the number of participants need to be high to achieve 80% power. If we restrict the number of measurements to 30, which allows sufficient acquisition trials for learning and reinforcement within 30 minutes, 30 participants result in sufficient power even with a moderate effect size. </p>
+        <table-wrap id="tbl1">
+          <label>Table 1</label>
+          <caption>
+            <title>
+              <italic id="_italic-32">Estimated </italic>
+              <italic id="_italic-33">P</italic>
+              <italic id="_italic-34">ower </italic>
+              <italic id="_italic-35">S</italic>
+              <italic id="_italic-36">imulated </italic>
+              <italic id="_italic-37">U</italic>
+              <italic id="_italic-38">sing </italic>
+              <italic id="_italic-39">D</italic>
+              <italic id="_italic-40">ifferent </italic>
+              <italic id="_italic-41">V</italic>
+              <italic id="_italic-42">alues for </italic>
+              <italic id="_italic-43">E</italic>
+              <italic id="_italic-44">ffect </italic>
+              <italic id="_italic-45">Si</italic>
+              <italic id="_italic-46">ze, </italic>
+              <italic id="_italic-47">N</italic>
+              <italic id="_italic-48">umber of </italic>
+              <italic id="_italic-49">M</italic>
+              <italic id="_italic-50">easurements, and </italic>
+              <italic id="_italic-51">N</italic>
+              <italic id="_italic-52">umber of </italic>
+              <italic id="_italic-53">P</italic>
+              <italic id="_italic-54">articipants.</italic>
+            </title>
+            <p id="_paragraph-48"/>
+          </caption>
+          <table id="_table-1">
+            <tbody>
+              <tr id="table-row-2223391fb1c24ba55653b9f7ba2e78fc">
+                <td id="4d99168a11a6256f9ae32bc4d52bcd1f" rowspan="2">No. of measurements</td>
+                <td id="97e57ffc515a4f4fbe858ad2f5f1a81e" rowspan="2">No. of participants</td>
+                <td id="aa8c088266fd6721b18ab94230951d4b" colspan="5">Effect size</td>
+              </tr>
+              <tr id="table-row-19a0f6989c2904b06ef0cee99a0db1f4">
+                <td id="247d099fab7b26ab05f23bfb0cfbdcc3">0.1</td>
+                <td id="2acf55889e13926e31b834d990b780a0">0.2</td>
+                <td id="80f79900a0313cad926a2ef78ee3a565">0.3</td>
+                <td id="f13a64d8152778bc28e077bc46470ee8">0.4</td>
+                <td id="314455f2bd997fb1718e4d83b1fee1b0">0.5</td>
+                <td id="73f54f649155e34f17e6e3098307c549"/>
+                <td id="bb1dc45b9409bf9cbafd8c72539a3608"/>
+              </tr>
+              <tr id="table-row-bb27a94b47dc077a7d9698f338453570">
+                <td id="e09283e3dd4e26efee5233fe3d2d2ab9">25</td>
+                <td id="69de3146811df96488cc10eebd0630e2">10</td>
+                <td id="7d34c079abacc3636961ac8701fb0ab5">10.3</td>
+                <td id="7b78202b252689f0fdd13e9e62d9cce7">19.0</td>
+                <td id="85c7d7b969bb2f05b9626ba770de84d0">32.2</td>
+                <td id="596c7921be4256f08a87f6bd41f1e5c7">48.6</td>
+                <td id="dff2fc68359fd360e0115ba8d583a976">66.1</td>
+              </tr>
+              <tr id="table-row-02513cfcbcc5154b8aec115dc6220dbf">
+                <td id="f7dea1aef235558b81588b94e3c8bcd6"/>
+                <td id="39c0f24a78444358b40cd65e2951da05">20</td>
+                <td id="ba1a1c05aa5d04d046585cb4edec95d4">13.4</td>
+                <td id="4093e9637546effe79f3db901f61bc8b">29.3</td>
+                <td id="8122204d3745b0524e8ab25e49c25ffa">51.4</td>
+                <td id="41e9a1a4cc85d4912d9322bb1b214646">74.4</td>
+                <td id="fed8fb2fcb618cdc8a505f7846256cb9">90.0</td>
+              </tr>
+              <tr id="table-row-6328a0e9f251d258975b075dc1d529b8">
+                <td id="276cc5e7eb17824012481c6d218e6288"/>
+                <td id="ec492e2f14ae38f9f4f52eac80996f9a">30</td>
+                <td id="55d085b889d8b0f995c7450407d9fadb">16.4</td>
+                <td id="af0e8d6a877c13a8c6f4a2068da6bed9">38.8</td>
+                <td id="e3f9dc87fda60eb8ccb1d2dff482d22f">66.1</td>
+                <td id="1d17f3c99329f6eda6bcbecfe8fb986a">87.9</td>
+                <td id="ab769e8865ef10af16058de3d165631d">97.7</td>
+              </tr>
+              <tr id="table-row-acf3ee8ce849625f7ff1330e16c646cd">
+                <td id="c4efa8e503343b7a8f50a8a09425b232"/>
+                <td id="00e27e9adf32783abb1c781fcae95d99">40</td>
+                <td id="196e01239744414eb091883d5133515a">18.9</td>
+                <td id="0232eed03a852ae8b1a715a82aa02541">47.5</td>
+                <td id="e41a62d17359a59e8e4bcb877b61c4d4">77.4</td>
+                <td id="912c30b418942c528183265d2398df25">94.8</td>
+                <td id="c64ca03c6b4aefeb17549483c3157d5e">99.5</td>
+              </tr>
+              <tr id="table-row-835b5d3b683254060b3b90973a7cfae2">
+                <td id="caa49ff1f43c21ad8f536349b59f20c5"/>
+                <td id="4ae8e4141860e95dbed477202405cd90">50</td>
+                <td id="20fdcd7d70c8a168a2788b663a285de6">22.2</td>
+                <td id="6e9f1d56b8877a412eb3ba77769d4662">54.7</td>
+                <td id="d197fcd8e155ee62298310d9c665d9db">85.1</td>
+                <td id="2a088d8f453fa73b3287e800968ac596">97.9</td>
+                <td id="9873ebf7c5b6819462e1c88567e1459d">99.9</td>
+              </tr>
+              <tr id="table-row-ba6c0424a572cee7d05425a8ff3b5b9a">
+                <td id="e00fc63f188afbc9fa9304651d3ba9b8">30</td>
+                <td id="ea5833d647a0643fe3f44b36df5d2ac3">10</td>
+                <td id="e3fc966a18426fa445428a0a543078c1">13.0</td>
+                <td id="2cd357cedf702b6b5ce5d64ffacb8540">25.9</td>
+                <td id="f2575a344b47b448cfeabc66c4b0d35e">45.0</td>
+                <td id="3867baa088fb56471c781b8d63748401">66.1</td>
+                <td id="373635ac428455dc298c2958a8f3eaf5">83.9</td>
+              </tr>
+              <tr id="table-row-5a94bca78533d8358ff5a07a1c37b31b">
+                <td id="92dc4255dbe64f01ea84096c9fd0fb1c"/>
+                <td id="a3755a1561bbf210acd2224dcfc84a24">20</td>
+                <td id="4e59506d40550b2fa947ef95f3772996">17.9</td>
+                <td id="120523fe230b201ddf065bd8e6cbb38d">42.0</td>
+                <td id="7d01cf9ecd82ea734c2c0f7cadcf59eb">70.6</td>
+                <td id="09c3543670667cf990609d859c09ce40">90.8</td>
+                <td id="5ee9472d6a2ec8b50493797034769487">98.5</td>
+              </tr>
+              <tr id="table-row-4582febfd4dea9953db49117dd9e9cb5">
+                <td id="b135d95a9ab85d4ae8859c8c10a1febf"/>
+                <td id="b867f58f2c2e141dd68462b697c92b2d">30</td>
+                <td id="61fa5ab342f79cf20d7c1832a2bd87f4">21.9</td>
+                <td id="a80a1a883b6c9678e9ae907294c2f8e8">54.9</td>
+                <td id="2ab78e68ec2f7fd6cedf63a1d273f20a">86.0</td>
+                <td id="5ae0fcbe297edb0f268f8ee35258ffb8">97.9</td>
+                <td id="3c453626f9d3786ad2f7a79ee44caaf4">99.9</td>
+              </tr>
+              <tr id="table-row-29918465aa2afa53daca0418cf66c6ad">
+                <td id="d3c240fbbccd99dc8f1419b9d61853c1"/>
+                <td id="adc7d67c0d0501e2a86c3148709f1ff9">40</td>
+                <td id="31281dd13d9818dbffb4107f89bfd03d">26.4</td>
+                <td id="672d0de23f07b04968fea78c43d06322">65.2</td>
+                <td id="d224110bb583973c1a58aaa3ed56bc0b">92.7</td>
+                <td id="ed03c21283292b83030671c80b72efc0">99.6</td>
+                <td id="872eb672c1c46c100e8221a76c0a5f15">100.0</td>
+              </tr>
+              <tr id="table-row-674ec8294371b6e64884ee9ad7a5ee6b">
+                <td id="f3e24212e75d16d899da552c01beebfa"/>
+                <td id="058d60b96e71bc2a9f1f377503d50c70">50</td>
+                <td id="6bd89eddad86eb159ebc1115f2704bd2">30.0</td>
+                <td id="99ee130a64fd00923f9c59bb9fb5c316">73.4</td>
+                <td id="17f99eb5f7fc42e16ce11958c43f10fe">96.6</td>
+                <td id="a4d36cf99694d138fe60c96bdc197bdf">99.9</td>
+                <td id="2ebb199d4ca9c52c28f82d5f1d9e6e4a">100.0</td>
+              </tr>
+              <tr id="table-row-7916485846bd269f8f118af2eaeaf554">
+                <td id="be9eb2cc557beace630fe42fe63646b5">35</td>
+                <td id="563bd3646dccbfc95f2b9b5e7912ad55">10</td>
+                <td id="7ccfe246d18f6ee30b1efbebe0ed0603">14.3</td>
+                <td id="a064052473fe36a84af85cbcf6d70dbd">31.4</td>
+                <td id="12b87867fb30e3eaefd6349bbadbd80d">55.0</td>
+                <td id="31b300a1ddca6165e383ede59bc54e9a">77.4</td>
+                <td id="e64ac33bc72ce4b6180121af859cabe8">92.7</td>
+              </tr>
+              <tr id="table-row-86dde50e0a9dc1ec44378dbdcd78a41a">
+                <td id="86f05f296386d2ef1baad332f3891eb5"/>
+                <td id="3a9ec3c1f16854bcaf028fa1a735e49c">20</td>
+                <td id="9f6c2ca04d0dede1514427e4fa865656">21.0</td>
+                <td id="df145f1191261279f17e2f0fb51f5c39">51.4</td>
+                <td id="299da9c1ae6a594cc56e876cee6a0500">81.0</td>
+                <td id="2dc26437147eeb820986c3e73a1b83a6">96.6</td>
+                <td id="99e06f4aa724f89f9fe9ecfcb9b69c33">99.7</td>
+              </tr>
+              <tr id="table-row-a7f2ce2d23bb08e9b158794c6a906c68">
+                <td id="10eade1b4d454d5ec27ef96347875fbb"/>
+                <td id="31507039c9023d91875762cbb42c3f6d">30</td>
+                <td id="88d08af72d92dfdeba4a5a902ab397f8">27.4</td>
+                <td id="08eb9bf1163700f21f1802637d9b781d">65.5</td>
+                <td id="62d9b381642ec8c19cce2d66d30bfe7f">93.3</td>
+                <td id="d1370881f0baf7d632cdbb9185b36f8b">99.7</td>
+                <td id="2b66ba2914ab69bcd9aaff22abdf0bd2">100.0</td>
+              </tr>
+              <tr id="table-row-7a42082bb8b5a0fc0a3953afc56afd8d">
+                <td id="88970cab995f5a7095df81c8cf18bba6"/>
+                <td id="07d5fd33af59ddc98bc9003a29efd669">40</td>
+                <td id="1c3c42a33f34971b25819b2ae3862958">32.8</td>
+                <td id="71bc4221d83d250312e08c082da6789e">77.1</td>
+                <td id="f5eecf91c5375de25ac0cc0ffc210d4e">97.5</td>
+                <td id="1690bfd22119828d05a65f6e2c533246">99.9</td>
+                <td id="ec0f3c53a8f9cb3cb757b7458e901ca6">100.0</td>
+              </tr>
+              <tr id="table-row-64f47e417b489de31ca0ff3bb0687b54">
+                <td id="f14ea56629adef4e6676853501637544"/>
+                <td id="96d1db2fc574bbe9e1cdbda9ea0bf1fe">50</td>
+                <td id="970de2612394ed584008b24bf87eb36f">37.4</td>
+                <td id="3f421e712304157836f8f3add183e6cc">84.7</td>
+                <td id="02df04130c7e3bf3282c2e686d7d0a89">99.1</td>
+                <td id="975c133683259d41eed3e1ca87934259">100.0</td>
+                <td id="6bba049942b020b3086c65dc4fdd2db0">100.0</td>
+              </tr>
+              <tr id="table-row-19764a74afcc19e2d5c64644bdf9cbbe">
+                <td id="6394a5cb75bc4800b707a02d1db69a2a">40</td>
+                <td id="b0ee40148597037c8782d5fc74d8e54f">10</td>
+                <td id="18cfd9456491202d7a69c501be5c5a1d">15.4</td>
+                <td id="3d67a2f73ce9a4c92c767271b4959e1f">36.0</td>
+                <td id="f613d2a6a70d40d3340bf7a465f4288f">63.9</td>
+                <td id="3762ac43a19f793384e8c4e2c90661b5">84.9</td>
+                <td id="3b08f36798d9880cd19f5d64b01dc003">96.3</td>
+              </tr>
+              <tr id="table-row-428418ea9310dad2907376c9f732d982">
+                <td id="d74ad33faea3a27a6eb7b4e2e46ed7c2"/>
+                <td id="16d3cba565cb2c47de6c06ed2418a8c0">20</td>
+                <td id="7c8999f2b030ece8210d0092e61a14b5">23.6</td>
+                <td id="0432aa5a39105b3fcb48654bd3936cf9">58.1</td>
+                <td id="da7df524876b9efa29a8d195d339115c">88.4</td>
+                <td id="b1049c61f6e182ee75f185a1ef9988cb">98.6</td>
+                <td id="0948e545e37ad38af317e3ba91a60578">100.0</td>
+              </tr>
+              <tr id="table-row-69aa7fc10e28d1884344cee00b593e51">
+                <td id="c082c2daf57831b472801a847e9a1dbd"/>
+                <td id="3fa9c3b54f1c220d18e13d5cf8b7e44a">30</td>
+                <td id="e3220b448c4c2ea8306e65c6150877b1">30.7</td>
+                <td id="70b8baee90c51df4e0b3a140c73cd3bb">74.0</td>
+                <td id="4728b9c590e3c2ef0ff74fd555a41efa">96.8</td>
+                <td id="6c6c0f290fb7cd56ff2afdf9a1f8ff64">99.9</td>
+                <td id="19a3fe016cbea17cc3ec350cd21b0f1c">100.0</td>
+              </tr>
+              <tr id="table-row-aca726c9e9304adc2811b107d46a56b9">
+                <td id="36d10dcb86427296726220cecb2b16f2"/>
+                <td id="44532b1ad289f9df965222c750163951">40</td>
+                <td id="b37cb2e119dbe750ecf918ab61b1b57a">37.0</td>
+                <td id="4b644befea4c787c32ad671ef40ceb5b">84.6</td>
+                <td id="1f4c37c4e01813d5af05ff31166aea90">99.2</td>
+                <td id="40af790a05a9ed71c0a8830342d41fac">100.0</td>
+                <td id="c46753e09c93bf43fc3d077ac582c93b">100.0</td>
+              </tr>
+              <tr id="table-row-ab324d167ce219cfbd62379dd8759be2">
+                <td id="808308ecf310d9d334a0a8bfa2eb9864"/>
+                <td id="d3bce43f10ca4258c8a2f19d323daad7">50</td>
+                <td id="caacc09183d592a6cf5f43ab19acc9f1">42.8</td>
+                <td id="5c046ea6c012b7d9e7d20a3aa5de8099">90.4</td>
+                <td id="236ea37af02f451ef4bc9739afaa173a">99.8</td>
+                <td id="1682a8f29c5da39a1dbe4d0862e626b4">100.0</td>
+                <td id="f2fa7e33397c2c806f8b0f78d951d563">100.0</td>
+              </tr>
+            </tbody>
+          </table>
+        </table-wrap>
+        <p id="_paragraph-49">Based on these results, we decided to run the final set of pilot tests with 30 measurements. We decided on six training trials (two trials for each type of CS) before the baseline phase, 24 acquisition trials between the baseline and test phases, and additionally one acquisition trial pair for reinforcement after two test trial pairs during the test phase. With a minimum of five measurements in the baseline phase, and a minimum of 15 measurements in the test phase, this design allows for 11 possible randomizations. Depending on the number of measurements in the test phase which will vary based on the test phase start point selected, the experiment could theoretically consist of 104 to 114 trials. This is the design we intend to follow in the final experiment with 30 participants (<xref id="xref-3eb725cb4a4f3e8d5b04c9316d365c1b" ref-type="fig" rid="figure-panel-199eaf230922d98dbb13da9438354a85">Figure 2</xref>). </p>
+        <fig id="figure-panel-199eaf230922d98dbb13da9438354a85">
+          <label>Figure 2</label>
+          <caption>
+            <title>
+              <italic id="_italic-55">Final Design With 30 Measurements.</italic>
+            </title>
+            <p id="paragraph-60e51c862ece1ed4255ea64943c3c6b8"/>
+          </caption>
+          <graphic id="graphic-2b65335d8192b997fbbf5ff50e87239a" mimetype="image" mime-subtype="png" xlink:href="Other,+Figure+2.png"/>
+        </fig>
+      </sec>
+      <sec id="sec-7_2">
+        <title>Pilot Tests</title>
+        <p id="_paragraph-53">As mentioned previously, the initial nine pilot tests resulted in extremely small (and a few negative) effect sizes. The average MD effect size was -0.037, with a maximum of 0.143 and a minimum of -0.400. The low effect sizes indicated that the final design would need a large number of measurements and participants to achieve sufficient power in the RT. The first seven of these pilot tests consisted of 10-20 measurements each, which seemed too few. On the other hand, the last two pilot tests out of these consisted of 238 trials each. The feedback from both the experimenters and participants was that these tests were too long. These results influenced the decision to limit the number of trails to 140, remove irrelevant trial pairs from the baseline phase, and lower the number of acquisition trail pairs in the treatment phase. </p>
+        <fig id="figure-panel-6372be79dbd2f36f50da16273ecd1b13">
+          <label>Figure 3</label>
+          <caption>
+            <title>
+              <italic id="_italic-56">Plot of Observed Scores Obtained </italic>
+              <italic id="_italic-57">From</italic>
+              <italic id="_italic-58">the Initial Nine Participants in the Pilot Tests.</italic>
+            </title>
+            <p id="paragraph-c562f9384e91eb517a8104bb792cca07"/>
+          </caption>
+          <graphic id="graphic-7c7237a2181ba54a3ef129f52bbe1e2d" mimetype="image" mime-subtype="png" xlink:href="Other,+Figure+3.png"/>
+        </fig>
+        <p id="_paragraph-57">The later four pilot tests were run using the design parameters we decided on after the power study. The average MD effect size for these participants was 0.057, with a maximum of 0.476 and a minimum of -0.250. Visual analysis (<xref id="xref-05bddda757fcf97fb69e7952a4ae63f0" ref-type="fig" rid="figure-panel-d96f1aa831b99b188f5b962c0690dfac">Figure 4</xref>) revealed that the first, third, and fourth participant did not seem to show any sign of conditioning. However, the second participant seemed to show significant conditioning effects. This is also confirmed by the MD effect size for the second participant (0.476). Finally, a Monte Carlo RT with 1000 randomizations resulted in a <italic id="_italic-59">p</italic>-value of 0.112. Hence, the null hypothesis of the RT could not be rejected at a 5% level of significance.</p>
+        <fig id="figure-panel-d96f1aa831b99b188f5b962c0690dfac">
+          <label>Figure 4</label>
+          <caption>
+            <title>
+              <italic id="_italic-60">Plot of </italic>
+              <italic id="_italic-61">Observed Score</italic>
+              <italic id="_italic-62">s </italic>
+              <italic id="_italic-63">O</italic>
+              <italic id="_italic-64">btained </italic>
+              <italic id="_italic-65">F</italic>
+              <italic id="_italic-66">rom</italic>
+              <italic id="_italic-67">the </italic>
+              <italic id="_italic-68">F</italic>
+              <italic id="_italic-69">inal </italic>
+              <italic id="_italic-70">F</italic>
+              <italic id="_italic-71">our </italic>
+              <italic id="_italic-72">P</italic>
+              <italic id="_italic-73">articipants in the </italic>
+              <italic id="_italic-74">P</italic>
+              <italic id="_italic-75">ilot </italic>
+              <italic id="_italic-76">T</italic>
+              <italic id="_italic-77">ests.</italic>
+            </title>
+            <p id="paragraph-a1acf8fe9832abf5e60cc38fc98ecbb4"/>
+          </caption>
+          <graphic id="graphic-fa4652dd8db4fd7fea261a960ada2c60" mimetype="image" mime-subtype="png" xlink:href="Other,+Figure+4.png"/>
+        </fig>
+      </sec>
+    </sec>
+    <sec id="sec-8">
+      <title>Discussion</title>
+      <p id="_paragraph-61">The power analysis and pilot test results confirm that the SCE design developed for this study can be effectively used to test the effect of classical conditioning on pain thresholds. The power study provides strong evidence that this design results in sufficient power if the number of measurements and participants are chosen correctly. The results from the final four pilot tests were encouraging. Even though the RT lacked power due to the small number of participants, the <italic id="_italic-78">p</italic>-value was low. The visual analysis also seemed to suggest a large effect for at least one participant. </p>
+      <p id="_paragraph-62">The final study using this protocol was not conducted immediately, due to lack of resources at the time. However, we hope to conduct this study as soon as the opportunity arises. Meanwhile, it seemed that the discussions regarding the SCE design and preparations for the study might be useful for other researchers developing similar protocols. Therefore, we decided to prepare this manuscript.</p>
+      <p id="_paragraph-63">The final design suffers from a few limitations. The first limitation is the observed variable defined by us, which only yields values of -1, 0, and 1. Unfortunately, this restricts variation in observed data and can cause duplicates in the randomization distribution, which can affect power. An alternative is to use the difference between SPARS ratings from CS+/ US<sub id="_subscript-54">test</sub> and CS−/ US<sub id="_subscript-55">test</sub> trial pairs. However, this would require a slightly different hypothesis, which would not clarify whether classical conditioning can affect pain thresholds specifically.</p>
+      <p id="_paragraph-64">The second limitation is due to the attributes of the AB phase design. RTs using randomization of intervention start points in AB phase designs are known to lack power at lower sample sizes <xref id="_xref-71" ref-type="bibr" rid="bib46">[46]</xref>. AB phase designs do not satisfy the guidelines set by Kratochwill et al. <xref id="_xref-72" ref-type="bibr" rid="bib26">[26]</xref> without multiple replications. Since we are not sure how quickly the effect of our conditioning is reversed, we cannot use phase designs with more phase changes, such as the ABAB phase design. Due to the requirement of specialized equipment, we cannot use an MBD. Critically, we cannot increase the number of measurements due to time constraints. Therefore, we have to rely on sequential replications for both validity and statistical power. </p>
+      <p id="_paragraph-65">The power study for this design also presents certain limitations. We used only one possible distribution of the SPARS ratings to simulate our observed data. While the assumption of a symmetric distribution around 0 is not unreasonable, with more pilot data, it might be possible to simulate using a distribution that resembles the observed data. We also did not account for any variability in effect size across participants. Instead, we simulated an equal effect size for all participants. However, we believe these are reasonable assumptions given the scope of our study. </p>
+      <p id="_paragraph-66">Finally, we conducted Monte Carlo RTs for both the power study and the pilot data. As discussed previously, the number of possible randomizations for this design is <italic id="_italic-79">r</italic><sup id="_superscript-3"><italic id="_italic-80">P</italic></sup>, where <italic id="_italic-81">r</italic> denotes the number of possible randomizations for one participant, and <italic id="_italic-82">P</italic> denotes the number of participants. Even for the smaller scale of the pilot data, computing 11<sup id="_superscript-4">4</sup> possible randomizations would have been extremely costly. Monte Carlo RTs present a simple alternative to this computation cost while maintaining sufficient statistical power <xref id="_xref-73" ref-type="bibr" rid="bib49">[49]</xref> <xref id="_xref-74" ref-type="bibr" rid="bib50">[50]</xref>. Hence, we intend to conduct a Monte Carlo RT in the final experiment.</p>
+      <p id="_paragraph-67">As introduced earlier, this design presents certain advantages over traditional group study designs. Single-case designs are a better match for studying within-person changes, because they allow detailed insight into within-individual processes rather than assuming that the response of all individuals in a group is consistent. Additionally, these designs typically require a smaller number of participants. This allows for a lower overall cost and is particularly important for pain studies because it can be difficult to recruit participants.</p>
+    </sec>
+    <sec id="sec-9">
+      <title>Conclusion</title>
+      <p id="_paragraph-68">In this manuscript, we described how we used trial and error to design an SCE testing whether classical conditioning can affect pain thresholds. We used a sequentially replicated AB phase design and conducted a simulated power study to determine sample size. We decided on 30 participants and 30 measurements per participant. Finally, we ran some pilot tests using our design. While the results from the pilot tests were inconclusive, they were sufficiently encouraging that we plan to conduct the full study in the near future.</p>
+    </sec>
+    <sec id="sec-10">
+      <title>Funding</title>
+      <p id="_paragraph-69">This research is supported by the Asthenes long-term structural funding - Methusalem grant (nr. METH/15/011) by the Flemish Government, Belgium. The resources and services used in this work were provided by the VSC (Flemish Supercomputer Centre), funded by the Research Foundation - Flanders (FWO) and the Flemish Government. Research collaboration supported by the IASP Developing Countries Collaborative Research Grant. VJM is supported by the Fogarty International Center of the National Institutes of Health (award K43TW011442). The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health.</p>
+    </sec>
+    <sec id="sec-11">
+      <title>Data Availability</title>
+      <p id="_paragraph-70">The data and R code used in this study are openly available on Open Science Foundation at <ext-link id="external-link-5626c013d41f729f61d16144b2a4b86f" xlink:href="https://osf.io/d9mfn/?view_only=6b9bd4580dbf42b4952e551972f48c68">https://osf.io/d9mfn/?view_only=6b9bd4580dbf42b4952e551972f48c68</ext-link>.</p>
+    </sec>
+    <sec id="sec-13">
+      <title>Appendix</title>
+      <table-wrap id="tbl2">
+        <label>Table 2</label>
+        <caption>
+          <title>
+            <italic id="_italic-181">Observed </italic>
+            <italic id="_italic-182">Scores </italic>
+            <italic id="_italic-183">From</italic>
+            <italic id="_italic-184">the</italic>
+            <italic id="_italic-185">Initial Nine</italic>
+            <italic id="_italic-186">Pilot Tests.</italic>
+          </title>
+          <p id="_paragraph-127"/>
+        </caption>
+        <table id="_table-2">
+          <tbody>
+            <tr id="table-row-70db07a49def517768a3c5b463bb9a28">
+              <td id="22bf67df67492891550cf7194cdb626b">P1</td>
+              <td id="18a71ba937b77c4a0ed3a975bb035038">V1</td>
+              <td id="8bc21356d37b0227c3bc163ffdaf3d3a">P2</td>
+              <td id="0dffdfcdaf1907b0cf3178f70929187e">V2</td>
+              <td id="30b9181b7bbb6bbd45c58ab7640ee2e4">P3</td>
+              <td id="f581a58b3d3aeb62568c7f391e96f88b">V3</td>
+              <td id="70455d386a14768b895367d9aed7f761">P4</td>
+              <td id="ba53c79bca149e801c45f899f0ee2145">V4</td>
+              <td id="aa802717dece23301971f3affbc57a60">P5</td>
+              <td id="9b5eb4d5cb736fccc75513db03c513b7">V5</td>
+              <td id="d4e470d32abd15b3d1c085df4797f431">P6</td>
+              <td id="3645737821ab648f72a0fa9805e8a4c1">V6</td>
+              <td id="67731d6ab19723d166fb5b623e110305">P7</td>
+              <td id="0adecc95d5fe8bdea7ba9e4ca53f8626">V7</td>
+              <td id="37b8f69f20ae649ab29008df020f318e">P8</td>
+              <td id="dacf11b1894ef0dca8a2d4d7dd5951bb">V8</td>
+              <td id="faabc710f32815ee4b82dcd21cf17fb6">P9</td>
+              <td id="d00b901ebdfc85f4c73d2690b06a23cb">V9</td>
+            </tr>
+            <tr id="table-row-e9d1d2617c2397fcd8e885ea16a7acc1">
+              <td id="06a16a39a890f89b3ac3d32ceda55102">A</td>
+              <td id="aac3256a6d07b0301a1967b1d0b8b5fb">0</td>
+              <td id="021853709cee76d3054c43e21cbe5585">A</td>
+              <td id="5328c8ca9c45b0e76de7bd98ca48fe55">1</td>
+              <td id="e1a44554b7f3f680f33c60dafa354222">A</td>
+              <td id="1a2cdd08c3175bf2d2dd5cdeb61cb75f">1</td>
+              <td id="09f754fa05d7cdd12c53e26058e854b1">A</td>
+              <td id="0b521f998ac5e90e6a68cad0c4688d84">0</td>
+              <td id="cefd7f872b63ed64c00b3a53d21a7d8a">A</td>
+              <td id="b0145c3d37ff4dcb1a5cc7b0e9f29306">NA</td>
+              <td id="f11b3d0b6defe712b313e4f0d19349e0">A</td>
+              <td id="2adf0655330cea6d6b03282541c5d8d0">-1</td>
+              <td id="29c3d2ccfcf28cc84b9bc70ec1b142a8">A</td>
+              <td id="f9dc7c25f533636885c1425ab79f8cec">0</td>
+              <td id="30b4509ec8d27eec04f0a3971139edd2">A</td>
+              <td id="1b6c419f017537967483134dd43b27f0">1</td>
+              <td id="f5d2a8c8d05ec987dc6647f8e1a89710">A</td>
+              <td id="cf73bcee59b15c1956a953396df8893c">0</td>
+            </tr>
+            <tr id="table-row-3660681966bf45eb362b446f94d67ce0">
+              <td id="d8055cc6d271deab52de75e7d946a1be">A</td>
+              <td id="d9fe56786a40bca0f83a5cb54fbdc892">1</td>
+              <td id="ea69ab0fc2d3fc591306b7ed1b4d62d4">A</td>
+              <td id="cda5010b7274ba56c016855162b87465">0</td>
+              <td id="2cc64ad9cc910b8e53a91c7cf9616122">A</td>
+              <td id="ddbb42192fa99553fc15ffa8164a836d">0</td>
+              <td id="a8676f6821cf8dfdd3e4067d5b210f26">A</td>
+              <td id="3c18b01b0809f6fb3256441accf3b043">0</td>
+              <td id="230797b5cdc93c894ef21e636513e999">A</td>
+              <td id="5af1acb6d925f70db54126aeca42f7da">0</td>
+              <td id="84772e10446bdb32bb0cc2f7a5c6a70b">A</td>
+              <td id="431df7b9413bc6e0dd2ea0daba1498cd">0</td>
+              <td id="4589c4391a806dc771581809b02782cc">A</td>
+              <td id="a3b4ebaa499f2388e173d9f74e5be7bc">0</td>
+              <td id="554e985c07e21114496b90056b67322b">A</td>
+              <td id="f11fb29cb75de86bad5e6f4a44ee3236">1</td>
+              <td id="36c79beac7f1898a858a0d827bf35438">A</td>
+              <td id="197dbcbe6fed982571f78a8e803b0588">0</td>
+            </tr>
+            <tr id="table-row-f98b7fca31d1062bb0559967ae152c79">
+              <td id="2d03750c24f663152c247d8cec99f797">A</td>
+              <td id="a3d6d4e247f7ccbdedd0d83629bfc375">0</td>
+              <td id="91d7a7a25352d2240c5a677bb3372aa8">A</td>
+              <td id="7587d2bf6e3820a36749b99fefb8a3b0">0</td>
+              <td id="9adfa34f7b2385fb647e1225dc658953">A</td>
+              <td id="517b1e404456a9c0d9a9d8f9d2a8680e">0</td>
+              <td id="a8ba8bde4424999b1038f50d1f752817">A</td>
+              <td id="9d1dd7e3b929cc4d0af31c80af6c39e3">1</td>
+              <td id="cf6300fbff67e71ad4f55eb71f138413">A</td>
+              <td id="0a45f3726965fdd570401e31f9072549">0</td>
+              <td id="3ac77fb5a6923eecf89db5c7c048cf3c">A</td>
+              <td id="b714f10290981f48fb5ecdc51a38c403">-1</td>
+              <td id="761aaa76bf5215d237baae05e8465d98">A</td>
+              <td id="854c2e124cec74f5d7826db2a952310e">0</td>
+              <td id="a7898791904e070ee1769423924d2479">A</td>
+              <td id="7a6a630308c5e09518f1c0c91dd93f26">1</td>
+              <td id="a12c014e735ad8f27c7e6923d025384b">A</td>
+              <td id="a57cb6ae0dddba18b064eabf9afd851c">0</td>
+            </tr>
+            <tr id="table-row-7840eda3fa9c5bb2004434ee87f6f794">
+              <td id="a9229ab65c981291257bc890af25c115">A</td>
+              <td id="03e398503b5afd3ea09e52d4bd545f8d">0</td>
+              <td id="dd8a248a41f22f917186b43ace0fc14c">A</td>
+              <td id="aa2ed1eddfa8cc5f0b440fd31b5d74d8">0</td>
+              <td id="2d6f5faab0b402d69f8eb9c828a2411a">A</td>
+              <td id="503cb8a7356cdd953ff955477bb6c31f">0</td>
+              <td id="9c5851e3829cc74d854b5c92f740585b">A</td>
+              <td id="048f64d7419d3d66c6840c88136dab86">1</td>
+              <td id="9b1165c45c61a81ed82e12fb539332ee">A</td>
+              <td id="cebae64d5527b4d28c9ea2490f786a00">0</td>
+              <td id="1f10bb2db3dce89aef62395ea87198ab">A</td>
+              <td id="15e7457cc01f225d65e46b00bd46612f">1</td>
+              <td id="6d91b4c1062bcc071853c728288b537b">A</td>
+              <td id="e75d6a80102666ae1ee513336def9665">0</td>
+              <td id="895c03f98a4e16762c5210e0475fcb47">A</td>
+              <td id="160d5df9f72a098c813be30822838515">1</td>
+              <td id="35e9609fbaaa223ab870956e19fa9014">A</td>
+              <td id="7c577b3ac4a719cea76786115965ca04">-1</td>
+            </tr>
+            <tr id="table-row-510211998c664661b5830ded484f404b">
+              <td id="9c372ccaaf5ae0b63c2a844ebc59583b">A</td>
+              <td id="fdaf965e8e1cc6438cbf082dcd662a79">1</td>
+              <td id="42ad4efa89cb85c8736ce73973d5754e">A</td>
+              <td id="3049cc3c317763c240e6ab612967ee7b">0</td>
+              <td id="e720ab5f15b8c0299256e81857ed9586">A</td>
+              <td id="883d2d1bd0a844f5607b38b760003795">0</td>
+              <td id="fef8207528ca1a9b4f84128f0df609af">A</td>
+              <td id="9b2d2d391b9f7b1611a524b2d04f209f">-1</td>
+              <td id="e4ec036c9d373a38034fa16696ca464a">A</td>
+              <td id="724f2ca6d3f9b73e7d8b1267583aef2b">0</td>
+              <td id="849e6a279686eeb2076fc208886e9178">A</td>
+              <td id="4efe7f4c262dbc47573cc8f9b2f3b3f6">0</td>
+              <td id="5602068182b231435038bd4cdd813b3a">A</td>
+              <td id="f941340b6ae9cf7ca21cbb602f7ba5a9">0</td>
+              <td id="0d54297b60da84bea1fc7c05a3cac27d">A</td>
+              <td id="b5cb4cf8991a71bc6bb1404dfe5fdd8a">0</td>
+              <td id="4a41ea00f6f467814f19acd4195c6c9b">A</td>
+              <td id="8d6406d3a7b19704573dbdf730f54d3d">0</td>
+            </tr>
+            <tr id="table-row-e95474b0de257b48a9ecc1aba5461ca7">
+              <td id="87644b7b2ef18941e513b4a6f48e66ff">B</td>
+              <td id="0f00cef49e1f157c3db270efa519a0de">1</td>
+              <td id="f3f34e32cdf0065a4e3a0cac17ccf4e6">B</td>
+              <td id="ecf7e8684df356ab75540620eef18bb2">0</td>
+              <td id="1c0b3904a774c601bffc9be85703d4fa">A</td>
+              <td id="698d0e74b63ea2fcf70eb34faa8fa8e1">0</td>
+              <td id="4e81ef391ec3735424a2fce7f0b57162">A</td>
+              <td id="a9e5a2628d9fce298f61d6642bfee65b">0</td>
+              <td id="19891f0f27a22ee7d0a3233c4490296d">A</td>
+              <td id="688993c175f668e4058ca75f541ec48a">0</td>
+              <td id="330cac865e990b7bf23231a8e504c5bb">A</td>
+              <td id="7f92d800406d9a7fb9fbcf690a72b7a0">0</td>
+              <td id="1fade3719b36471d48ae69bd044c1b68">A</td>
+              <td id="3ad94d80230663b5c58f9ac75c491bb2">0</td>
+              <td id="3612831b0e08f67d5f61b584311612db">A</td>
+              <td id="11548dcd8ffe60515314dbb1ebbdc662">-1</td>
+              <td id="66b36cd8d247fa09c1263e7e4b81724b">A</td>
+              <td id="729a4e221f29feaefa4f2eac20b7a8f8">0</td>
+            </tr>
+            <tr id="table-row-ee2718056f935f542f426d57b0970c3f">
+              <td id="c835adbaf2691c1a0e8b7441dcf12969">B</td>
+              <td id="8f449ec905614dff9c6faa01e765f172">1</td>
+              <td id="15b4f0960b64fc5a36ad0e7454e23283">B</td>
+              <td id="c144fe30930a06f2059ff8310748bc2e">0</td>
+              <td id="c543ae1fbfd238f2b3ae41411a182441">A</td>
+              <td id="a16a60df8e181e18b91254b779b80331">NA</td>
+              <td id="360b0e6dde415e04e0f57bad648905b3">A</td>
+              <td id="05b0fc89b9fd5f47e5dd08d96986c4d9">0</td>
+              <td id="0ad198a394931241689bcf4f4ec6c656">A</td>
+              <td id="9c23c814226ba7225e3b2740cb2cfeff">0</td>
+              <td id="cd56490c0559d11c047d4b585285f60b">A</td>
+              <td id="c2c564d44766caca0dcbabea7111e17f">0</td>
+              <td id="d26483b310685eb9362c7db8e41810e3">A</td>
+              <td id="299f8693b993c0a13d915008054f9b56">0</td>
+              <td id="a577b3499f287d0890b85d349d3790cb">A</td>
+              <td id="ae8cb4f4734992316785ce8bb0c778ac">0</td>
+              <td id="3fe8b11cd2c395d5d127e3a642ca8b1c">A</td>
+              <td id="0976e4dd5dad8928e00906b102ce0684">0</td>
+            </tr>
+            <tr id="table-row-953bbdb68dd8f9998e81f1a778de0236">
+              <td id="0f16a1b1e5037bd3c6b3b9bde1f11e23">B</td>
+              <td id="6aa7b5c85066ce58f6b033766b9fa902">0</td>
+              <td id="64244390cbc7a55d68b544297ee0775e">B</td>
+              <td id="66a45d0cf6e235bfb127b8041a17aeeb">0</td>
+              <td id="bb0be5a1010ee14d1b18049bac9c7b84">A</td>
+              <td id="2739e6b552a321c80dd8b94a2ceba113">1</td>
+              <td id="9ba6d748cc416dbecf9e155c8623d01f">A</td>
+              <td id="b27ad3af2f09b2999665491f1c6f147b">0</td>
+              <td id="70e1ac03d2a96aeb8623aa24411d12f4">A</td>
+              <td id="e5a246eb80d3cb2fadf73379ba0292fa">0</td>
+              <td id="61502a4b416c15b78eb8a6e760f9ae8d">B</td>
+              <td id="1b9807eb634a87d1e95a3d2426d1a80b">0</td>
+              <td id="e780c4ac699edcaa914317da859f9c6f">B</td>
+              <td id="a954f5d1649cf8d4fd9b6dc8fa772bfe">0</td>
+              <td id="53e15e4122a44c610e4f75a120ed3cc6">A</td>
+              <td id="e904d2b134ae41f42e215e529614bb8d">0</td>
+              <td id="3fcbf681412315c7f3675b374678c106">A</td>
+              <td id="6032d9b0b0fda34b1f21941fc0001b4f">1</td>
+            </tr>
+            <tr id="table-row-ce7a22feacd46ce84ea62e9d26455049">
+              <td id="6370e103b2351d5608d4def197d9bba1">B</td>
+              <td id="4c2502d4aa2f076387b3d01a26ae765e">0</td>
+              <td id="de7795c2dedac93ac2d8f74092f825eb">B</td>
+              <td id="7f6fe08258bf77df2fb7492acebcc37c">-1</td>
+              <td id="899ffe8f82d0c0233b652a3a8df6595d">A</td>
+              <td id="a96f458ce1e9b6838c13df90b5a83e5b">1</td>
+              <td id="8110af3cf60e8625cec07c6499331ac0">A</td>
+              <td id="0f8a89120d8b28fcfd949b9ccf4171c6">1</td>
+              <td id="a85a91ac01fb13ef86cabb7770eb4ced">A</td>
+              <td id="8089f4ac6294c0481317145b094ee0f2">0</td>
+              <td id="62204a636d221090dd8ec51ce8904b64">B</td>
+              <td id="5b394029425144aafd4104bbc71ea9c2">0</td>
+              <td id="e4f89af18676e1528016008ee94cebc3">B</td>
+              <td id="0c44dca0e74ad9e677bd9e5c484a4261">0</td>
+              <td id="4da12eb127ca8c5244bb0e639ea20c84">A</td>
+              <td id="614e781589b0529c8d033b40a3f15a75">0</td>
+              <td id="3195fd49b8d3c4ae2088f2ec5ad774ce">A</td>
+              <td id="babf9da56f3700e707dee69748e1ac6d">0</td>
+            </tr>
+            <tr id="table-row-b4c0b74d43bb638e50f1ce26776df9bd">
+              <td id="d5ab459398fc89107c73f205c988a8c3">B</td>
+              <td id="0f393f8edbad245a16c00ecb63b28805">0</td>
+              <td id="2984bef0780c0ec1207313b4f4d13aff">B</td>
+              <td id="dffd8cf613a74ebe70399714ca077bc4">0</td>
+              <td id="2a59b68bafc251935d42d7f1eddd8295">A</td>
+              <td id="38514a36c89eff115e4e6957a985b499">0</td>
+              <td id="2bfcb21ac63cc066d98bc6d1bc08b606">A</td>
+              <td id="e12485bd0551833bfbf6ce02a0bd8291">-1</td>
+              <td id="650640edfb7e9127f6b23cd71669c9a0">A</td>
+              <td id="3942aa574fdca21f69ce7be47754b808">0</td>
+              <td id="98e109eccf75f01134b32d94cb739c24">B</td>
+              <td id="579188b8ad35a1138bd77fcf3f601cd4">0</td>
+              <td id="d156e30944d50052437cc95ece0eb1b9">B</td>
+              <td id="7d4491f3809271b07f80d7c31ae706ac">0</td>
+              <td id="8d881d741ae9483362c0095cf20e19e9">B</td>
+              <td id="2037fe01e674a5f2d60410a71a2cd531">1</td>
+              <td id="a7698bb5934f5f8aba300e57912ce660">B</td>
+              <td id="ff4521c0072e495774231f346e7d3718">0</td>
+            </tr>
+            <tr id="table-row-04c7e3a3e4cdaf546a7c447505f7d648">
+              <td id="fd551397df1a293639b14cf45176bd56"/>
+              <td id="6570fd5afc24cc3e08da56d62f393ffd"/>
+              <td id="8dac3ce69521b82172a40fc7927179f5"/>
+              <td id="b2ecfdf4179594a118666f0155935827"/>
+              <td id="ea5feebc388ab41bdb736dfb487fdd1e">B</td>
+              <td id="002a2c5fa8792a12b8effadd05afe848">0</td>
+              <td id="5fde74f6c390dd184a6f02832c7ea1a2">B</td>
+              <td id="2cbc58dd418984dc32583c2f4cb3c67b">1</td>
+              <td id="d97f2bfe9dc7ce716bb4764d4fea4e15">B</td>
+              <td id="9d0a34d25097a38dbbdd8f1f4bf61457">-1</td>
+              <td id="d6a8ae424a49e85d32b2475160671bcf">B</td>
+              <td id="fa8333392ca20ed92139496ef51ff20d">0</td>
+              <td id="3f1c3fabe285acd3f3c6669d5f1e3e67">B</td>
+              <td id="df33899c625fe8085366e6e178e1d932">0</td>
+              <td id="f01478251230fa33ba3bff3ccf4dab20">B</td>
+              <td id="4cf84200a8d78b66ea552b71e856d3d9">0</td>
+              <td id="f5860e01bbf8a0c44310f5e65f8b5b4c">B</td>
+              <td id="f3cf044b5319925531a0a2b51aacbecf">0</td>
+            </tr>
+            <tr id="table-row-a7481791913d84f84707a05d5ffb99c8">
+              <td id="e5940458d631af7dedd3209fc8c9a75f"/>
+              <td id="7271b68f01e659dae96fef3fcdea9dbe"/>
+              <td id="703dc80495a60a82c26cdd786c69dd4c"/>
+              <td id="bcb812c52e04728dcbc7d571bb7f281d"/>
+              <td id="e1ac65765a6caefea3da1675ddd441cd">B</td>
+              <td id="992f700fdf5fc3482095306140283e78">NA</td>
+              <td id="364f9e14c2abec1943ce6cea51e23e24">B</td>
+              <td id="cdd6e0f89405587ee6189a0effc85c00">0</td>
+              <td id="a3619828943496b729e31c02e3f2ec60">B</td>
+              <td id="936660709365e94e08d1b1596da3d36b">0</td>
+              <td id="c81265029c7c805ae9429d9c2ebe8747">B</td>
+              <td id="303398e1f263573a38cf264bd7c4e0f4">0</td>
+              <td id="0b1e30f50f9e84030d88c12869e80d38">B</td>
+              <td id="6e09593c9337d2fa41c143b4108366aa">0</td>
+              <td id="f6d9467c1f60e6b49ef9f1e6a342a7a2">B</td>
+              <td id="78d27fb8f4a81736fff3cb6bc101cd83">0</td>
+              <td id="4108289ad5dbca5919c62d3a793bd129">B</td>
+              <td id="6dbcd2ed2382efd86f42588c910a10ec">0</td>
+            </tr>
+            <tr id="table-row-e4f91453ad3bf8c1ef61d210fa7a0ac7">
+              <td id="241fbbf65b4336eb08701232fad9f62d"/>
+              <td id="3fd598d80f9e9c9d41f20baf8cf5a15d"/>
+              <td id="efeb95ae746e8919a0239bf1cde21ee2"/>
+              <td id="9298353757baa8cfad358e883b6ed842"/>
+              <td id="0db2c9dac67faf7d4438dede68205456">B</td>
+              <td id="a62f8f52ccabe6fe86e9d54662c20bdf">NA</td>
+              <td id="5e4972f588344ad67b0953e0ad3294d7">B</td>
+              <td id="cc1b457c56518efdbeae24537ae2fea7">0</td>
+              <td id="dc18d78f1e6c4d79428618bd3f2858a4">B</td>
+              <td id="f15dc59861d32161fc6e689722b4926f">0</td>
+              <td id="d6a02f37d73dfda9b887578baa13a362">B</td>
+              <td id="dbb3830ef6bb2191305ceee66740c398">0</td>
+              <td id="3d2d8873765141878547b17a6ab2c59b">B</td>
+              <td id="4cca481a5fdce88e0ae6b0f08d313a8c">0</td>
+              <td id="ff85b6ee8000fc816e076411c69c76fd">B</td>
+              <td id="0f3ce7f3f9b1aa01475c5c8247f7c857">0</td>
+              <td id="b1d5fcf781a8aad5e1c8fee97ef71b52">B</td>
+              <td id="7d5691e6bd384828fe3363eca17a954c">0</td>
+            </tr>
+            <tr id="table-row-f0c7022982b9c9566b8570c39ccd2d73">
+              <td id="cf1250d8239b8fe721a075fbe6ff6108"/>
+              <td id="7750455a19c661b088bb7f9439f0543f"/>
+              <td id="cd4e2d4aded928acc6556d2436db0e62"/>
+              <td id="4f64127ce74484222182d8bf709639d2"/>
+              <td id="aee6bb51d28b07a4ffe0c47de34d3835">B</td>
+              <td id="ce2ad767e012df96467911623421fe1f">0</td>
+              <td id="ddb8bedf83fb72cff3c30de9607fa2cd">B</td>
+              <td id="a704f957718b9aff9e9e8cfb4aaeadf8">0</td>
+              <td id="e101c5b6e1845357eee90db5dcf4a440">B</td>
+              <td id="34f0c27d82f5c463b54685cda39c655c">0</td>
+              <td id="3179b85da9be3bf594262d3510cb8d8c">B</td>
+              <td id="2d943e5839be7ea0740d44ed019745fb">0</td>
+              <td id="d1f324bde24dd612d22e71de6320bb61">B</td>
+              <td id="f71a81fff0029f9e7efc414e75a879cb">0</td>
+              <td id="8fd85976940aea91754f1dbbc469b4a3">B</td>
+              <td id="2db1f05bbfbe2b73dcf3328b797629c0">0</td>
+              <td id="cf1829927a51adc141ce225db9bbf355">B</td>
+              <td id="1e3a3d7fe505682471f84cf41ec1a712">0</td>
+            </tr>
+            <tr id="table-row-4e3c72b0966895e7a09a5599e70b96a9">
+              <td id="323324e579799b19a75df9dc333af8c6"/>
+              <td id="5498885699f6a38815937957e2b55d06"/>
+              <td id="d1576dce0b50c96e8b6465103a7a0f71"/>
+              <td id="10948f7c54d09c7eb9957f1dfb9ee73e"/>
+              <td id="65687cf714a5531ebc9dbbbcac450377">B</td>
+              <td id="b24c4a3dcf15d3591b8fc9ebb7117927">0</td>
+              <td id="38b74a5f77442c618161e857e565dc0b">B</td>
+              <td id="acb1b35e752751b2fc5ae5ecc5810797">0</td>
+              <td id="26ad42b73934336b894beee1ae7300bf">B</td>
+              <td id="110224485855a2d0a73a17b52f2debbd">0</td>
+              <td id="64236b32ad4ff9ade4ae1c11cf98360e">B</td>
+              <td id="f99abbaa1d448941b36cb04616bcb89b">0</td>
+              <td id="ed42d546c403c350e08e4a254f8294b7">B</td>
+              <td id="cb01ca15c900c72f7e3cabba81395e8c">0</td>
+              <td id="ffa7caf7520e6e471f74798d561c8175">B</td>
+              <td id="f78e5294496b6bfa758c74632627644a">1</td>
+              <td id="2ac747745578c73e471c759e3427b2ad">B</td>
+              <td id="78311b9af11fa055bc938f6488b79c5b">-1</td>
+            </tr>
+            <tr id="table-row-3273a30696e4f670485d86eacb641fb2">
+              <td id="0c085ed781c541998f6e03c3555b47a9"/>
+              <td id="dc5fa42a69867e6db945c5e80f8c0e8d"/>
+              <td id="db8b025776f26f8d3b8462022f9410a7"/>
+              <td id="536a47fc65cee22f65cc45276d9f1e41"/>
+              <td id="f99e2583ba48fd04c08d9dd9e91737ad">B</td>
+              <td id="f07c18f12170aaf2db1eb4a72419e80b">0</td>
+              <td id="00ef58f5a239521ce88895fcc86e4661">B</td>
+              <td id="74d6508b86e531e35dc7f579fa4ad1df">-1</td>
+              <td id="cf907456c146ccda605297f2fa6d98a4">B</td>
+              <td id="569ab44555a6f91fa7b6a112d529014b">0</td>
+              <td id="d5d9166923033c508265f09d9973e3f2"/>
+              <td id="7f1233114fc4ea723e4ea1a7c0b54709"/>
+              <td id="c87ed5fb1694a705ddb5e7b60a3df688"/>
+              <td id="1291413eb7f04711658967f0cc9a1330"/>
+              <td id="e0613270d22dd85635ad36f9d75a4933">B</td>
+              <td id="18f64df66f785f8b8a474f3755d7191b">0</td>
+              <td id="7cc4efe746cf49a7fb6bb912a5515da6">B</td>
+              <td id="1a38081c6482ed9268dba243e1299b9c">1</td>
+            </tr>
+            <tr id="table-row-8b4d2e68df883a087f68bf8e6e7c76db">
+              <td id="1ae2bb06d3e62f6e83f7bc3188d06c67"/>
+              <td id="e5567cd68e8622d79e44d936a3f240a1"/>
+              <td id="fe9a68d22f89e6122b19ab84f5d5ce8d"/>
+              <td id="b92faacdd5b8b7f3d483c09d2ba797ca"/>
+              <td id="c56f34f5b741b1b6708067df56eee61f">B</td>
+              <td id="96e7b39fedf4fb78a419374f70a21f0c">0</td>
+              <td id="7023e45b44bdf99a3c516701ed29ec50">B</td>
+              <td id="94577860b5569b9dd0b4c06c2befae1d">0</td>
+              <td id="82586e76091584c134664e7ec75d7fea">B</td>
+              <td id="6dc389ce288595cb7275029d2a91281f">0</td>
+              <td id="7c3b07f53355bf0dcdab37ea405b5ad0"/>
+              <td id="1bfda2a0eee575f660f790ddcd6fe0b5"/>
+              <td id="bf340cb1bbbaaf9f28dc5963fb679a4f"/>
+              <td id="f3893500c9514e694c06d58217ded26d"/>
+              <td id="d9072413adc256b0410bd05f8beeb99c">B</td>
+              <td id="db3f096878803bd593b39f2402976b74">0</td>
+              <td id="4d45d2f942a39152de2936f7760f1862">B</td>
+              <td id="3fc5d2a2690b004dbc3f3c21f26fa163">0</td>
+            </tr>
+            <tr id="table-row-b5a2733f92d462071ae9818bbb8d9e48">
+              <td id="e7970c53835ce694d5341058c1997197"/>
+              <td id="6d48570466d1f6c269a74afed813e3c7"/>
+              <td id="54d5d236226b0d85166a84ecbf4533cc"/>
+              <td id="cd576f58f882595b755c8309ed970662"/>
+              <td id="95e5c3071d01075570973751e3655725">B</td>
+              <td id="9d940f334afe500e0918978c98483ed0">0</td>
+              <td id="dae5a9be55973fb3f739d3c558868dfb">B</td>
+              <td id="48f617650b414d19c70023260bcdee25">1</td>
+              <td id="e15d6e5ae4a0c816884ab4da89aa5b1f">B</td>
+              <td id="91e8ddcb066f91e92662820c9384ddae">0</td>
+              <td id="7dd33e2868434c02d8f1defd36b44377"/>
+              <td id="61984938a407ec05000005d5a955e959"/>
+              <td id="3428d93e23484049e0eb1d9217225b23"/>
+              <td id="15a217a1f13e810a020d6adfaf8b724c"/>
+              <td id="7bb4d6c0d8efd9f3710b99342fcac7d4">B</td>
+              <td id="c46670edf7600598c11c40c738e4043a">1</td>
+              <td id="188af2baa3d9baa3f679882ddef1cc45">B</td>
+              <td id="22384fa013cad0c65efd03bcb065d0c7">0</td>
+            </tr>
+            <tr id="table-row-b47b2b50d1a998748f8955d0766bd39a">
+              <td id="43b182d8f102895baf1cf056b403c161"/>
+              <td id="db0567c000a2884092be43e788213a4d"/>
+              <td id="bb11ba53dcecf9df0158c7ce09b9a48f"/>
+              <td id="a7b668874ffce601cf63e679bc88a5df"/>
+              <td id="0e38848856b68024b9fdc6b1ad0e1438">B</td>
+              <td id="0f2891fde4bcb982272328c723adabc5">NA</td>
+              <td id="c7e1515680b12be509b8f3e62636248c">B</td>
+              <td id="ac7a56898e3a13ad51359806d7ce4d24">0</td>
+              <td id="b401aad95591d7489c348b36fa45782b">B</td>
+              <td id="89c10aeb183edc40fb3bf7a660e1878d">0</td>
+              <td id="79fe1060fe0e7856ee9d175e026d5c65"/>
+              <td id="665ce6452bdb2f801f14f1f01f3a6a88"/>
+              <td id="17d2bcdbc523d89356fc9f113bc4e671"/>
+              <td id="c0db9f7fed1e78cf617bacd073a9c98a"/>
+              <td id="ee0597b0c31dddd99b268592307884d7">B</td>
+              <td id="af1d0fe59a4e888bcf3ef7f2e97a82d4">1</td>
+              <td id="fd3af3fea7e87b9177a094e986c3b34a">B</td>
+              <td id="22b2de017bfb4778a6bac2e44ca7d448">-1</td>
+            </tr>
+            <tr id="table-row-83230193f8aeff0016c5edc2a8392668">
+              <td id="fc59284a0611805e366a5f1957d02205"/>
+              <td id="6f849b7fd9ac7fce87bf45fbd7e05158"/>
+              <td id="4d378e79ed920ae8db4598f89b7a511d"/>
+              <td id="750c99d504f439ecd7ca5ad13e7f5fc9"/>
+              <td id="65837f3760e8eb7cc9e8fa6f75c8243d">B</td>
+              <td id="c1b98a7e223fe8282d75d0d6061173d8">1</td>
+              <td id="30c7b016318d8802f97cdc7d1a22eaa4">B</td>
+              <td id="d85f6d9cc3f4cbfbf50bc7bede677c58">1</td>
+              <td id="a042087c40d7d883679eb5e739772164">B</td>
+              <td id="16f74d2288f952cc4e9cc88ef4a6694c">0</td>
+              <td id="6bdf11d9cf5a0cdc84b6e5996a528218"/>
+              <td id="d3ac82fdb7bb684fa8c7831a953ab52e"/>
+              <td id="d91849e5ce80317c39a21cba2b064821"/>
+              <td id="78d62de06a082ecc0ac2c03fcdae88a9"/>
+              <td id="5669cd0083bc122812f7fcc806a5a18d">B</td>
+              <td id="68bef878b884261f6791f23f3776ddab">1</td>
+              <td id="9d78f43884ca604a3fcc1a36df01cc10">B</td>
+              <td id="1f339aabe41b98a1051b182167e2a0f1">0</td>
+            </tr>
+            <tr id="table-row-904eb38fda3fbd4c9ad1ff89c19abd3a">
+              <td id="1dea7f8e85d08c126ac8a448f322a16d"/>
+              <td id="1a87545d801fdbc2c6dcafa44e79eca2"/>
+              <td id="533b12fbfbe15d156da62398b38e9c44"/>
+              <td id="d8d57d0a49b61ee07b41871aebe25fef"/>
+              <td id="ac814c5fbf8506473f571a1867db0bfa"/>
+              <td id="add74408a23b34f211161ea84ebf5b94"/>
+              <td id="3c6b0da0a725c2c87d3c2a3306068295"/>
+              <td id="c19c2f1272410ba4d4c2f5cd1eeb79b4"/>
+              <td id="22f2c1256bfbf3b9867b4d872da5973f"/>
+              <td id="73f50296468e49bd3d4628be433f5fbe"/>
+              <td id="c1c94ded4b6bc57a3413ee52d228a130"/>
+              <td id="2d5b97235e7f120ce25f28d242ea0450"/>
+              <td id="58765e3b5b9242e91ac39dd9b6e34ec5"/>
+              <td id="40b61b1461322bed3d0c1927379c0228"/>
+              <td id="ec702141e120662ed701b91830ebdfe1">B</td>
+              <td id="ed83cf1e7e8125e8c0405bf1b33203a8">0</td>
+              <td id="69a2fdfda51b82d182653545ea2729a2">B</td>
+              <td id="ba62fa248ed2ba91a9c32421e1481beb">1</td>
+            </tr>
+            <tr id="table-row-de35a60ba421e519ee10a66e370d15ad">
+              <td id="ab2045c77d43af5f22a5f19f0bc9de9b"/>
+              <td id="e8e4e08347a2a903a3a73e682e774e1b"/>
+              <td id="3a00f5ed093e72bec4670fd9e42950a2"/>
+              <td id="73ccdd5097e577ae4e703aa7e160cb40"/>
+              <td id="a5bea7c90caecf2fd69830c16a8287e9"/>
+              <td id="bb62ba89152ba89e6fe2ca99ea3bc34b"/>
+              <td id="841deebb4b6459afd6e167388c5853b8"/>
+              <td id="d1b7a2212d0c6ec6cca8b23b953ba6b7"/>
+              <td id="d77b906c217b53c09991026d0e1028bb"/>
+              <td id="3250b616546bf9b909ac9024366863be"/>
+              <td id="71764436536e745fdd149f4e8e437cc9"/>
+              <td id="43eb8e026bb24373df7c312a743c4426"/>
+              <td id="3ef1ccd97039f92f386553fdc0d231d7"/>
+              <td id="a3828d9c90dac5ed17b3671dc56b5609"/>
+              <td id="256d7b521a786635942951ca816e6054">B</td>
+              <td id="44d3ade2e29e559925a0460923d2ce66">0</td>
+              <td id="004f5e03b20a569742b4ceaff2fc60ed">B</td>
+              <td id="2140080069a2a322e44e6221b981e05f">1</td>
+            </tr>
+            <tr id="table-row-90e77c28b797e44dac72c69b48fe90c4">
+              <td id="600997bc14257d5a3dd6a3e226dd2a2e"/>
+              <td id="077ca15700695c6f32b9925357ca822c"/>
+              <td id="14765d8c9a923efa8af5fc1e27b98c0b"/>
+              <td id="a0c42531fd7c8acfe2b8479dc0d2cd0b"/>
+              <td id="de227c2d97d58dbba8154a0e37d14454"/>
+              <td id="a5fab1f14cf14ef081f52fbbe28fa79a"/>
+              <td id="b30758ce932f8f02d80dfe5e0a11088c"/>
+              <td id="b5d41fb7b575926e1572ab132d17dafa"/>
+              <td id="579035081223544c20390fadb55c26d1"/>
+              <td id="62bd9aecbd71e757a14211e1e849c738"/>
+              <td id="22ff47208b98f1ef1d0140c009ab43a6"/>
+              <td id="85b1351087067578ebf137f97c08814f"/>
+              <td id="dc7d5068338b95b956a861e83be6f4bb"/>
+              <td id="0b3321f6bc3c1eb3e3a6df59cd5097d1"/>
+              <td id="fae14dda35efad21d04dfadd5d05c113">B</td>
+              <td id="2017b759b476141e39d439cdab23c820">1</td>
+              <td id="692a00042b0df856b42f949ac6860e39">B</td>
+              <td id="f77ab889452038ccaaf92333a546c479">0</td>
+            </tr>
+            <tr id="table-row-f5847c33207cf79fbfc0182980567e98">
+              <td id="d0f481a8c1847a6de6da1749ae7f1e57"/>
+              <td id="5dce22ed75f54266b2fd1cb306b1a7aa"/>
+              <td id="accb597e797799809607ff5edb659c56"/>
+              <td id="01936ca6ac88b27dfc59d9885965ebfe"/>
+              <td id="e2137369786f92bb771b78ecafcd1617"/>
+              <td id="ef3528721c9153d8b424fe8e27919c47"/>
+              <td id="3cb9bb1c8bc497531cccd7ea143da178"/>
+              <td id="d127994ce257971b60321159ab9b0ea1"/>
+              <td id="d701a012d0417e5b5b6df10a81758203"/>
+              <td id="92cfe78475716f9a5aa6dbc9e6d1357c"/>
+              <td id="43d21440c53e2307207d0b57fa3b4b68"/>
+              <td id="a9d7c0bdf3e81cbdec765826cbe457a0"/>
+              <td id="0f0a804547744c60d37dc59a3ccfedbf"/>
+              <td id="a4358ec6811072cf4db662078da17a13"/>
+              <td id="7acbd82b67ce3165f7afb30d9b61bf32">B</td>
+              <td id="a78ee88c698f8d614c2f5d193ac80599">1</td>
+              <td id="c17512cedb5d0acf45649c7abcd78895">B</td>
+              <td id="71fd76de0b4a94435b6aff05113e9e3c">0</td>
+            </tr>
+            <tr id="table-row-7bc025e70d80106d61604ccef01fe313">
+              <td id="d6e25542dadacb3a210e62a00bc0654a"/>
+              <td id="fbc1b0a74214069815cbfaa9d1741ea8"/>
+              <td id="6c13222a3001310a32a0a025d2550e67"/>
+              <td id="a975a3a14e7c1bdf1366279faa761011"/>
+              <td id="10db9a9a0b95d0ae9713ad266a0b6225"/>
+              <td id="74bcea6ee9ffd2a2f9a1a6d913bfe303"/>
+              <td id="ee853c69ab5f86c375c640ef1ba98a4a"/>
+              <td id="2aadebf918ce2af84026f3a575360ae6"/>
+              <td id="02ead45cf382a7dea050ca59f1df4bf5"/>
+              <td id="62b6867458563bda1e482a5636a9d3ca"/>
+              <td id="806d4094f02f458edca2c5275a23fede"/>
+              <td id="184f80717226a42f29b27ac31a05b5a0"/>
+              <td id="883c1e6a297d64bedffa91cfe44b81cb"/>
+              <td id="a2e4601eeee99f1cb0804c885b022125"/>
+              <td id="735c27bcfa26434c81dcb68ebf50c106">B</td>
+              <td id="eba58b93147b91c3c1bb8805c7d3376c">0</td>
+              <td id="5d33ae0f9abed4b262c4f8cfaf8a2d23">B</td>
+              <td id="a61cdf49d0c8bd2c9abdfe99c47b4528">0</td>
+            </tr>
+            <tr id="table-row-a90b7b3df9324836fce4b4c9a13e254e">
+              <td id="b6c78b9cb3310bc6e2212fad4ce5a94b"/>
+              <td id="d9f06c3a882b2bb5458a80f39ccca75b"/>
+              <td id="ee6ad5fba7f0cf9f6389ad6b99ce564b"/>
+              <td id="c053ea1eeccb16900766f4205fe7f65e"/>
+              <td id="46d8fc7bb34cc276ddefc61566aad13f"/>
+              <td id="82d7472c8f8b4e85f1764e2315a3f314"/>
+              <td id="d932defd20f3344ac94c840fd9105f92"/>
+              <td id="debc0295689aa69648d6d88bf73cc832"/>
+              <td id="5fcd0c72c91ed7d4a9977354f7359057"/>
+              <td id="3bd807ced21bdb9be98b6b527c739e8c"/>
+              <td id="bd6bb009395c235e0ae0ee9ae8e3d912"/>
+              <td id="7860db9a6e705044dd62abbf1cbf0672"/>
+              <td id="8ab03c417e53160c73f6c0713ed32812"/>
+              <td id="2d0abecf7d08ab7f936680b218b87929"/>
+              <td id="ea090dc1469337a65a739364aaff7cbf">B</td>
+              <td id="71f40e063465b53b5f5451bf2b1618fb">1</td>
+              <td id="4daa1750011e54f2c9ce3f6794242a5b">B</td>
+              <td id="d1fffb8959d7f26c956d8af166e765d6">0</td>
+            </tr>
+            <tr id="table-row-a7d65be5609c7015b3cd67387de950de">
+              <td id="55814f292f1ab8cdf7cd774928dc6503"/>
+              <td id="5eabcdfa626f36cd4c7ab6c898f80fcf"/>
+              <td id="006b6b71be37e8bdfe95701d7ef878b4"/>
+              <td id="c9259ce530341b9971f1538dbbfda0f8"/>
+              <td id="4f6c02b0f62d7dc9592372399522d6ec"/>
+              <td id="e5dbcc47033431a1d393b6555429d795"/>
+              <td id="1c4e085f19f82c6002619786943f3ab7"/>
+              <td id="dd43b7c5bd5cce4cedee09a21f951a32"/>
+              <td id="d63e8ae645b4bff997d8a81980973c7d"/>
+              <td id="c715b5dd80fc7f3991ffa12428775b33"/>
+              <td id="63e847c0c119e5e21396904e6729f26c"/>
+              <td id="f5f30a947e332357d4ac0725e6f8520f"/>
+              <td id="c16707e31e69fdac124523ad6a0c8864"/>
+              <td id="5379cf658b11c60ac632239372a60134"/>
+              <td id="788ca44fa3c33534988a68b68e554c68">B</td>
+              <td id="5ab033c96a66f5805a83b7e938b94df4">0</td>
+              <td id="539294bcee434545fa033cafb4b2e7bc">B</td>
+              <td id="0dc82dd99da2ff1b31dd25db8b198a02">0</td>
+            </tr>
+            <tr id="table-row-111828df39519ea0378c8985b3aa968b">
+              <td id="118e8a290a718d10f7d82b92743e10fc"/>
+              <td id="ee160f0750cc1dddf8a458148cb9278f"/>
+              <td id="ca774128ceaa5f3a6197cc8fa2aab65a"/>
+              <td id="6094aa5e2d2b544db90bd990fa885efa"/>
+              <td id="73faf42b83372361ac3d1bb0d3adaef3"/>
+              <td id="b15b044ee7fc5baed4d35a1f5d0ec60b"/>
+              <td id="f7a49ea2a40839956a67e1684be8f8ff"/>
+              <td id="346538a69aaeffaa3ad936fdf7f79d9c"/>
+              <td id="e530f8f1fb01179e97469272f670b616"/>
+              <td id="07a6b28878d49da27efc5d3da6364cf4"/>
+              <td id="7050d416e58a817fc2003313300e77fd"/>
+              <td id="52ec93455d7099fbf45a8c1b9cf1635c"/>
+              <td id="9f3f2246f3aa66bc0bf1d468c303d506"/>
+              <td id="e369656ec7cbe872f23c4fdd9846a40b"/>
+              <td id="1515f0d6b9f3f4f5a85e90531f3cba99">B</td>
+              <td id="22e9592056bed9e2bc4bb0bd370a6c68">0</td>
+              <td id="1da39535cbad1a15ff6856d989128452">B</td>
+              <td id="57c38b48b75489f5dcfdcf1339e8768f">0</td>
+            </tr>
+            <tr id="table-row-bd5d5b0ca0ccbf747aeb89e6f2916e14">
+              <td id="713f638debbf961f66287089edd4104d"/>
+              <td id="23e03e0cb3e110ce9fa044c07c1d740d"/>
+              <td id="33d7560b73d0901f3d8e04da46ea9474"/>
+              <td id="fcdbea16d6e618e70446c4069aa281e7"/>
+              <td id="b56ee5183cc545469bc886c1647c4a85"/>
+              <td id="34a1f1a22b094c58c0fd03eeb8178f8f"/>
+              <td id="7f984734306b0f81b218fbc1de887799"/>
+              <td id="0b16670eb412d04a7264c1be446dd8b9"/>
+              <td id="29819a2a013ee838c7696babebae8498"/>
+              <td id="ad10b286ab4eff8b8378a79396f8dc02"/>
+              <td id="af2554186dc33a85cafbf8b895c09218"/>
+              <td id="211e08c468bccf072346471abe751323"/>
+              <td id="5549c934e3934733bb2dda8c7bb9d285"/>
+              <td id="6af1f022b263dfd946cd5a9868a28304"/>
+              <td id="e9fb0d80ee3557ade4922f07822a9642">B</td>
+              <td id="04fd3d5a9d0d0990f2c58e9fcc0821fb">0</td>
+              <td id="96d4f9d973c34b72e5df0abcd9debda8">B</td>
+              <td id="f9b80257363aa0d4232267ae8ed361ab">0</td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+      <p id="_paragraph-128"/>
+      <table-wrap id="tbl3">
+        <label>Table 3</label>
+        <caption>
+          <title>
+            <italic id="_italic-187">Observed </italic>
+            <italic id="_italic-188">Scores </italic>
+            <italic id="_italic-189">From</italic>
+            <italic id="_italic-190">the Final Four</italic>
+            <italic id="_italic-191">Pilot Tests Formatted for Shiny SCDA.</italic>
+          </title>
+          <p id="_paragraph-130"/>
+        </caption>
+        <table id="_table-3">
+          <tbody>
+            <tr id="table-row-bf7d46f4a1b21c92297384084f59292e">
+              <td id="c7ba93eb2209f35c8f98f3b01b3bedd4">P10</td>
+              <td id="ff9288478187572fb5c56b8e220a9060">V10</td>
+              <td id="737da1479760865b52c7e83dc9091f8f">P11</td>
+              <td id="733e029696de9653e565b15016924afe">V11</td>
+              <td id="81fc0203e3f8c8710dcda98a3b58b76a">P12</td>
+              <td id="e80805fd787f9a354aee5a362e559271">V12</td>
+              <td id="e88a29d9b4d2e33d03287b85757bf029">P13</td>
+              <td id="6e053d268f6c57c517974551a8af88a5">V13</td>
+            </tr>
+            <tr id="table-row-1ef189a221d23701d783b27dc265ac5c">
+              <td id="68e156b1baf16ab46ffcc2753e8df1c3">A</td>
+              <td id="7a89b8706ac4ddf53c1501f7e3289350">1</td>
+              <td id="5420b9ce539aaf7273c965a272e812b7">A</td>
+              <td id="01cc2056ec5b8af53c02e934bf1f0220">0</td>
+              <td id="c191a00c1e2469b2da26973f82b25452">A</td>
+              <td id="20539bfae3af55ec1e2c613f284e4b1b">0</td>
+              <td id="25c84e62c1caf050014bcf871175e63f">A</td>
+              <td id="6ce6a8690f0b411d3a3d8b522d5529fb">0</td>
+            </tr>
+            <tr id="table-row-e6fcbba1dc704d898ae233195a143202">
+              <td id="df1cb47b6c79614b7b92522997bf27ea">A</td>
+              <td id="3dc59bbebf3e1095ea48e8f81a39bf6a">NA</td>
+              <td id="6411290b9f92b19c451fc29cbaa69eb5">A</td>
+              <td id="21868a57e7ac650ea978f9fa1de4c924">0</td>
+              <td id="d3578f0bb41ce64c1ed9fcf840145719">A</td>
+              <td id="3348c5912e7dce00ce5b07a6b85273b2">0</td>
+              <td id="6c3e9a43bcd077a0820688471011b07f">A</td>
+              <td id="22526b49c77933399bbc51dacbbab7c0">0</td>
+            </tr>
+            <tr id="table-row-423b98ff8f5b8308797b2be19f03ada1">
+              <td id="dae42f4d01141f97233fd8d64e6dcedb">A</td>
+              <td id="570a73b36af6390878348a2f3a229603">0</td>
+              <td id="fca9c78877ceeb1072acebf57d864e4b">A</td>
+              <td id="7378157b5fecb802ca9ad1691f338419">0</td>
+              <td id="777e0eec39e6a4463fb953c96ddcccf6">A</td>
+              <td id="d1608e320dfd008ab2cb78674c64f48e">0</td>
+              <td id="e1e5d7b153c4decf2a162a050333c3cc">A</td>
+              <td id="562711a7888acdce5d50173348859253">0</td>
+            </tr>
+            <tr id="table-row-29f54b4299dbf9bb2bf54183a50dff19">
+              <td id="2aea6c39d293685a08cf8640ff94328f">A</td>
+              <td id="2a243612c8599dd1f045d5279c478a3d">1</td>
+              <td id="93441274687e91048cb331fdb6c2805b">A</td>
+              <td id="fcc89679f3fe3202c3d309a759d79077">0</td>
+              <td id="2d5bb8a0720d8c45467ac67590fbab54">A</td>
+              <td id="799dfe5e68fd35ba3d61fcd8199eef96">0</td>
+              <td id="cf90477ead4590d2b2a8e731ef25a9bd">A</td>
+              <td id="7a01d5530bb1c663eee39eba2d8f3336">0</td>
+            </tr>
+            <tr id="table-row-b77d96252fee638fd5a111d0fad5d601">
+              <td id="c6e9da849dab88d036882fca0797d6e6">A</td>
+              <td id="d18fc81a7b2b27ad0581785983a2e682">0</td>
+              <td id="e4bb630c53f63dfe67f6ff20c30da887">A</td>
+              <td id="ec3f1be61e8f40f1b3fc1fe7a21eaea5">0</td>
+              <td id="35c65f2832a59d4c9c485dd401c1e940">A</td>
+              <td id="22730fd07d85db252e07f3b0d5cf3ce7">0</td>
+              <td id="a6465b42f652749f61760183ef2581ff">A</td>
+              <td id="5a7bdcbdacd50cc70af058128df56d18">0</td>
+            </tr>
+            <tr id="table-row-04dcfaa0fa7007d36699cf47618b9d80">
+              <td id="ca9ba08dc931a6b57e0fd2556b72612c">A</td>
+              <td id="5936d8c2e363f4c0d938a50b18f0544c">0</td>
+              <td id="f851a76c87341b43f887c1cae207def5">A</td>
+              <td id="af23fe8bf8d7f8dcd0c059205ef81892">0</td>
+              <td id="44c7dfab113db8853af1ad88d339212d">A</td>
+              <td id="5504cde8fac3c8af3fa52e875a56a659">0</td>
+              <td id="4365b1baca63ef6668228aae7ed69eb5">A</td>
+              <td id="974f3495f6ff485c8eacfb499871ee1e">0</td>
+            </tr>
+            <tr id="table-row-0c88d65fd8340dccb88a0fafea5eee97">
+              <td id="3bf138373694e55ccab50d480ee92d39">A</td>
+              <td id="ccde7d33617248dc189b9ff25ba40cd2">0</td>
+              <td id="45ec6fd82ceb7746238ad55e62200548">A</td>
+              <td id="0800928e66df41db549e5c09a47305d2">0</td>
+              <td id="f087a937dbd5eb1e22eea6128962730e">A</td>
+              <td id="3137d501522849eacc92f76abfe9bee7">0</td>
+              <td id="ff0d733e44b7c5d94fbfa70f56672176">A</td>
+              <td id="839e4e5592521c087b74e6fd4f0dbaa1">0</td>
+            </tr>
+            <tr id="table-row-ed6bc59ed7ef46d616e2b47b1985ae31">
+              <td id="16b9bf89fd0ac1c3801ac39b8c64f3f0">A</td>
+              <td id="6783df3d46c3cfa94801cf1ebdbf1c58">1</td>
+              <td id="395bd952b0f5b50cc7f5ddfedead504a">A</td>
+              <td id="481a4ff54eec8d2b59f31a5a4c78847e">0</td>
+              <td id="e439d9ed3eca7ec06b65c53dbdffd02b">A</td>
+              <td id="0f7d68c2f2b7f2eac4a90871c56448fe">0</td>
+              <td id="c8a76f345068ffe0419063471c3f0a4f">A</td>
+              <td id="1a4cd4285e3f2dbaf2d730771bbafff9">0</td>
+            </tr>
+            <tr id="table-row-e8796457f907ab16bcfa9d8b9312e703">
+              <td id="21508bfd09d1fd495eb660c259b9d80e">A</td>
+              <td id="4b8abd1bd31ec7538424fad18b18a35c">-1</td>
+              <td id="5f6346d210a0789f8fcadd8088080b8c">A</td>
+              <td id="c2924d15b419531e1259915a32d2ee77">0</td>
+              <td id="bea7b5f4d52c8ff55e2ab433b798d88f">A</td>
+              <td id="d111a374cbcfbaf7e50cf3f6258c04c9">0</td>
+              <td id="e777095db330aff83b7878ee668a47d0">A</td>
+              <td id="d95f95e473f6c8a05477407ada4bf702">0</td>
+            </tr>
+            <tr id="table-row-263cb300475b75da8cb817490e3fa89f">
+              <td id="c822b416bc6cc641a5097f8bc14342e3">B</td>
+              <td id="ce548da2b7fe8b6cfc235db61e1077a2">NA</td>
+              <td id="62cb0832707dac2131e4d66b0cca123f">B</td>
+              <td id="e6e94d7bde58649e25f6a92fd28a753d">1</td>
+              <td id="6f29c0a55115c3558d700f5e25d73e1a">B</td>
+              <td id="a6b5c011aa6ee3729511e6730a3ffb2e">0</td>
+              <td id="d0eebdbddbb01b9fb1eb4fe48792456c">B</td>
+              <td id="1414d5d539441493032052521b5f5f73">0</td>
+            </tr>
+            <tr id="table-row-27ce13d128ad26af94258451afd88bbc">
+              <td id="58b57d430b6ad134c2bf4c687d92532a">B</td>
+              <td id="267ef8fd5c4f6d00999096343540f82e">0</td>
+              <td id="a4b5af7aa5da91598bc79232a217de42">B</td>
+              <td id="fe9bed18051f0ca12d49edc9260e26ba">0</td>
+              <td id="d5720d309ce13e4c27edeb3af48bb79a">B</td>
+              <td id="eb66421f7734a89443617847ed21356c">0</td>
+              <td id="31cfd8f27f8a46c0bf32e366c6891316">B</td>
+              <td id="2ce19e0fbc0bdf7c77dc2cb35e9a256e">0</td>
+            </tr>
+            <tr id="table-row-3e2e35bd4428ca4ba53a76e061bfc781">
+              <td id="9f08cec088f014e183999c4023e61648">B</td>
+              <td id="c70f501c6806fe3de286ff60d5c289d7">NA</td>
+              <td id="c5c81c2e42af18eee8a118c4347fbf39">B</td>
+              <td id="182d054f7bb19356f924d73c115953d1">1</td>
+              <td id="c17816d7a68d755c2bf3561e7a53d9bd">B</td>
+              <td id="a1fd708356ffb603cd0e8586dd88737a">0</td>
+              <td id="4da037232254a8556b05140f578e6e6c">B</td>
+              <td id="7d2e22ab1449c62e7b59d51c3a94e64c">0</td>
+            </tr>
+            <tr id="table-row-84b5e1f6ca4205ff9cd2740cc7e1b640">
+              <td id="5e30a0c3202896a60fd78147ac6ddbe7">B</td>
+              <td id="4de55607f76928a1af137df1a9c185e7">NA</td>
+              <td id="198b00c49876cfd04de730b07a7b6371">B</td>
+              <td id="91e1970824bfedf1e033a60887e6ac41">0</td>
+              <td id="e581302d3e44f03e68e54683a1f0a484">B</td>
+              <td id="5d6c64a7bdc1c5b7dd92d2f9b608abe3">0</td>
+              <td id="ac96da26464e2390d3eff0b413bd5f87">B</td>
+              <td id="08e4fdcd3d344269bcedf4f76c35b549">0</td>
+            </tr>
+            <tr id="table-row-a94f1945194aaaadb397e0766cef9f75">
+              <td id="286c6183a6af0a289bc910f2ce20d242">B</td>
+              <td id="0ec027646c2279d5b0f725d0663f7154">NA</td>
+              <td id="a1f5fdc8be08818c3cb3b3e62c5b304e">B</td>
+              <td id="a98693dabc4ade620cca769c457733ac">1</td>
+              <td id="4784664ae9107390dde6e36799d8f318">B</td>
+              <td id="af816b290088e15ad94dee3d11d15d2c">0</td>
+              <td id="9fba77c1e5e8bcc9e2352a6091f3aea3">B</td>
+              <td id="26aaf7fc54519cb2ab659582b214fae5">0</td>
+            </tr>
+            <tr id="table-row-5463aa93b9cdfaad0b235da3e3d64154">
+              <td id="f8fbea8749d49c6fa6f00b185b518546">B</td>
+              <td id="a2f872a86930b0ded6eedec9a7f216fc">0</td>
+              <td id="ec0c70131d0380119ef75a7ae38f79f8">B</td>
+              <td id="8eb8c9baeb06625a5a75f9f4dbdc2efd">0</td>
+              <td id="f3117e68fb96b01b68b3b0d8ef6f0551">B</td>
+              <td id="a3414fa8b53da6df2c7e8eea98e255c2">0</td>
+              <td id="1c80448c35b3060a2ad844e0f7dc9127">B</td>
+              <td id="0ea56ca0af4fee8ef69c6ea4534afc91">0</td>
+            </tr>
+            <tr id="table-row-24ae2e35544c4079e18f5fc351f25e03">
+              <td id="691b9c138e7f072d93804340317ad5ed">B</td>
+              <td id="c042e4e22ba735b925f14c3583cd35dc">0</td>
+              <td id="d138f557dc5442b93fe6efe1e7c1c80a">B</td>
+              <td id="f1011c3ba4a0d53d898204e0723a7df1">1</td>
+              <td id="5177d707e85c78928f4dd409b08a7e27">B</td>
+              <td id="72a839f87101fc44c453f29f383d5117">0</td>
+              <td id="3ef5af5d5bc3d31349799a9f5834376f">B</td>
+              <td id="ab4ab27d0d89085f436cc22fe63eee16">0</td>
+            </tr>
+            <tr id="table-row-56f4fa84ebe906c24b1b7ff6315f0e6d">
+              <td id="e55c2ab6007534a038b0d67f357c9bda">B</td>
+              <td id="decbb9474b2ae0ff7e0100ec9965b26c">0</td>
+              <td id="76247dcb0bb771f5e4ae3ffa8792790a">B</td>
+              <td id="1256966af1b3b039aea5b775cc95a041">1</td>
+              <td id="064aa31f98b62477f3ca7e23ca844304">B</td>
+              <td id="5994271129a61299a0528e0694b65380">0</td>
+              <td id="12e0a2fe2dbf2f14fb9d0415f417d9ff">B</td>
+              <td id="80be10b0535ee4cd694e14193abf4b65">0</td>
+            </tr>
+            <tr id="table-row-f96cc32ba4e2c9cee20b2ba304a873fc">
+              <td id="0c2a27cd6a0a94edd711cf09c8fb9c7b">B</td>
+              <td id="c2de5d53c0aa0f4d08b5192ae63b87e4">0</td>
+              <td id="bf6f03682a91b99931c99bb5c3c09ed1">B</td>
+              <td id="cc3de6ae4355a5b04b30f5bfaedb1798">1</td>
+              <td id="adb39a7945e9643b44eaff061d0eda26">B</td>
+              <td id="5d6d1a88704299295462aacad37d8deb">0</td>
+              <td id="21a353fe855d1fa3cfc970ce5d69a585">B</td>
+              <td id="9d3aa2ed19e81a3ec77276d6eb1a49d4">0</td>
+            </tr>
+            <tr id="table-row-f83b008b56f0086ff27e95ffaeddd855">
+              <td id="fd2859f430b41bc5297f0c4b579d536c">B</td>
+              <td id="14642993c0c3a4434a565724509d4502">0</td>
+              <td id="f52d38700929471688f7032d182bd7be">B</td>
+              <td id="3f2a103a28a5cb3e3349171e971afa5a">1</td>
+              <td id="fa8e8e5bc5d2dfc2ee1eb5769c21ac73">B</td>
+              <td id="4888114620ff2da27e7a9d9c4dd59e53">0</td>
+              <td id="3bfa731d4beb898901729a3a116a41f9">B</td>
+              <td id="46aba24f3e1465fe77837042ceaf42dd">0</td>
+            </tr>
+            <tr id="table-row-4fca84eb2be7e3fc47c2ab3adc08a1e2">
+              <td id="dd16b3cb7c2e99de4fe3492589aaff85">B</td>
+              <td id="57e96d7da773587300c2b91a6b7d99cc">0</td>
+              <td id="48aee440cb0397d0130c9d5a71ed5ba1">B</td>
+              <td id="1e65f78da076a7884af89a12199fbf19">1</td>
+              <td id="49b4ec86ce5eb7b60e5616f9bf475dd9">B</td>
+              <td id="b28145ddbf03581106bf5464e8fc05f1">0</td>
+              <td id="eb872f52303ed1ee8b15d15a1aae8cbd">B</td>
+              <td id="341359eeed8d5549233a2cfb11f93311">0</td>
+            </tr>
+            <tr id="table-row-f7bc445e2ee2d4d0f91ee076c445a2b3">
+              <td id="78b1c4722621ec45d9219a4ecb000e6a">B</td>
+              <td id="41719a1fa10dd4663ac43ef61c4b88b7">0</td>
+              <td id="ab543fcbfab3caeb67ef10fea40941b6">B</td>
+              <td id="8d89787761de88832450ec7740f04b73">1</td>
+              <td id="e28c86196ed73cd2ac35e5cc2c4c1b08">B</td>
+              <td id="305a78812434d914bed1eb254a36d8f6">0</td>
+              <td id="0786cc0998696c7e8b525af4a23c90eb">B</td>
+              <td id="cfe70c5a07785113bef5610b1a86b6ff">0</td>
+            </tr>
+            <tr id="table-row-b5c2d32c73908cd012ff58bc5dfc7dc2">
+              <td id="946eb9e8e725a4d73ea518e146ae9593">B</td>
+              <td id="e05a17e6e4475cb89148b0a98a35c562">0</td>
+              <td id="7f3f3eee8ffcfbae0799189695dcd7a5">B</td>
+              <td id="d8f3d4ff4da2a018f43c386c6c608fa1">0</td>
+              <td id="33e5be55eea3382d13edd4c03f6f3967">B</td>
+              <td id="2161c91900747f5945a0b268bbc95723">0</td>
+              <td id="acd11ba900261fbd1efe8e3d453aa2b4">B</td>
+              <td id="cf0de4acf18f0bb66f099fe789f08113">0</td>
+            </tr>
+            <tr id="table-row-deef442827e8f84a106d10e214f370dc">
+              <td id="d42dfc52b1b9ea923fc299ed6a5e300e">B</td>
+              <td id="ed88c6d4a959645726176d9409bc44c1">0</td>
+              <td id="4d857bbcac4d68b2d5065a9932f6cede">B</td>
+              <td id="982c2a032dd0484ac0a82e1d028bba06">0</td>
+              <td id="9d447601b9dd23e719b0bd1e9edacd4b">B</td>
+              <td id="01155dd9ec81eed073f73b5c6f99ae49">0</td>
+              <td id="07e257c4b669dc6afb80ef5352e738be">B</td>
+              <td id="97d1052619e5240c11dd6e1baf266df3">0</td>
+            </tr>
+            <tr id="table-row-19c94ff55d22f38e74dc90b9775dbe73">
+              <td id="f8e61596643513165fe290a7b4afe533">B</td>
+              <td id="ed9ac1205ba5aa3bfff3a823d8f29097">0</td>
+              <td id="1d2a2a8ed105ad7a121971c33e72ab1b">B</td>
+              <td id="78233eac47cc7ef34a7c513695150799">1</td>
+              <td id="ca2d4a7b84fab05a94913e60c877589c">B</td>
+              <td id="e2d674f20506d8159aa6e4baa31324c9">0</td>
+              <td id="6f86f18a40d744af7fd8baab25ac079b">B</td>
+              <td id="807e2bbcdbc8c2370244ab1ee1b30bcb">0</td>
+            </tr>
+            <tr id="table-row-4858621bca04ba5c2ee1ef66008063d5">
+              <td id="c2f6c90393d99be38d346584fad32291">B</td>
+              <td id="18189bd77cd56eadee80fd463b3a3670">0</td>
+              <td id="dab9742bd8933960a521be56ca6f5325">B</td>
+              <td id="917b16eeebec809f7651bd16127b4bbf">0</td>
+              <td id="17dffd68963021d2fcfdc2f68555e746">B</td>
+              <td id="68f7da8618fc2aa6abdde64aa09f9de2">0</td>
+              <td id="ff2434b80a695492a8ba267946708d23">B</td>
+              <td id="1b110cac9f9a2f41655b59f9fbf5ac73">0</td>
+            </tr>
+            <tr id="table-row-8ac0ff01bd1bba5c0240646efc452271">
+              <td id="1db14478689be9c4a4d90e4abbef3abe">B</td>
+              <td id="4ba7425f2db80c42c14876e095c60a39">0</td>
+              <td id="863f309e2405f8830d581937f5e4caf1">B</td>
+              <td id="07ec6bfad143091cc76de5ddaf911d97">0</td>
+              <td id="0b9d4ecfd4968dc46bc3d0b4d082cb06">B</td>
+              <td id="bef54097aa9961b2daa9becf0b1588fd">0</td>
+              <td id="315f5a6c923304c46edaf7a5b7b254b0">B</td>
+              <td id="b351dd82947b0f5ba197368b73451e2b">0</td>
+            </tr>
+            <tr id="table-row-649243f8fda06c255cd5159e503e5592">
+              <td id="322eb41d1445c825ea875ca5e853983f">B</td>
+              <td id="fb4c992219857fb222cb908f8e409d1f">0</td>
+              <td id="98d6239946e74a4d3e319ffa280649d4">B</td>
+              <td id="ea3d9e592b81759dbef55c640023ce49">0</td>
+              <td id="d68abbcc549405917487455aeae52600">B</td>
+              <td id="ab1f97f5ee0a951baaab67750c411c32">0</td>
+              <td id="dd65115e64f0e73782ab90be167f744c">B</td>
+              <td id="71dff3b16a69a68f062163be2a47edb1">0</td>
+            </tr>
+            <tr id="table-row-123f6cccb8632794a3cc2faaeae88f1f">
+              <td id="5cf5985f94fdc90193ebfc6bb8554362">B</td>
+              <td id="b0bd6e7b2a4ab6b1fa127ac78084f844">0</td>
+              <td id="89eb91120a3933aa6ba4dfd310f4d8e8">B</td>
+              <td id="68ae594ebaa07a096e534669e2cb5dbd">0</td>
+              <td id="297782a95616c8ee4d477dfdf3dc6a27">B</td>
+              <td id="affdcf9b32742abe4afecef7e95f57bb">0</td>
+              <td id="2339f503ab3937d150745ad46fc8ce88">B</td>
+              <td id="be9e0e1025ffce428c6a2cd8bd6b1de5">0</td>
+            </tr>
+            <tr id="table-row-8e3edbe27f6f562cc1c2b2cd86b6a4cf">
+              <td id="2beddad657c300cdd9f84585e3e9f5c3">B</td>
+              <td id="f2e9ae6e5a8ed0c7f8433708d1b523d1">0</td>
+              <td id="d2c2c0139b0d74419fb5e701e80de8dd">B</td>
+              <td id="a9c76d622bf061b3f68938641b2136fa">0</td>
+              <td id="2359f8b19b01a726a111f2652f5ce7fa">B</td>
+              <td id="b753c3fe9b79a9af736ba78d42e8ee4d">0</td>
+              <td id="503edf9b2c5ceffc3681647e43efc358">B</td>
+              <td id="e3dc82d277fe39a651bf197d5121169e">0</td>
+            </tr>
+            <tr id="table-row-d4e850d016ad62bb6d6a9bedbdcf9725">
+              <td id="e7f02019ce79f843277aa32f289b132d">B</td>
+              <td id="b969caf7a973970c216045e8e5a2e923">0</td>
+              <td id="f44dc17b068a68f8f29d6eebc0a3ace9">B</td>
+              <td id="1044509c0af1469e3f2d5ab472afd418">0</td>
+              <td id="7cbf80968dcef5f20d6747ceb43ba18c">B</td>
+              <td id="dbee11819d0d41a731fa74136e469951">0</td>
+              <td id="173797bd4bc56ed27dec6a83347f0de7">B</td>
+              <td id="37f348320433d0c6f4773e62bef96111">0</td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+    </sec>
+  </body><back>
+    <ref-list>
+      <ref id="bib1">
+        <element-citation publication-type="journal">
+          <issue>5944</issue>
+          <month>12</month>
+          <page-range>686-688</page-range>
+          <volume>306</volume>
+          <year>1983</year>
+          <pub-id pub-id-type="doi">10.1038/306686a0</pub-id>
+          <pub-id pub-id-type="pmid">10.1038/306686a0</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Woolf</surname>
+              <given-names>Clifford J</given-names>
+            </name>
+          </person-group>
+          <source>Nature</source>
+          <article-title>Evidence for a central component of post-injury pain hypersensitivity</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib2">
+        <element-citation publication-type="journal">
+          <issue>3 Suppl</issue>
+          <month>3</month>
+          <page-range>S2-S15</page-range>
+          <volume>152</volume>
+          <year>2011</year>
+          <pub-id pub-id-type="doi">10.1016/j.pain.2010.09.030</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Woolf</surname>
+              <given-names>Clifford J</given-names>
+            </name>
+          </person-group>
+          <source>Pain</source>
+          <article-title>Central sensitization: Implications for the diagnosis and treatment of pain</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib3">
+        <element-citation publication-type="journal">
+          <issue>3</issue>
+          <month>4</month>
+          <page-range>317-332</page-range>
+          <volume>85</volume>
+          <year>2000</year>
+          <pub-id pub-id-type="doi">10.1016/s0304-3959(99)00242-0</pub-id>
+          <pub-id pub-id-type="pmid">10.1016/s0304-3959(99)00242-0</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vlaeyen</surname>
+              <given-names>Johan W.S.</given-names>
+            </name>
+            <name>
+              <surname>Linton</surname>
+              <given-names>Steven J.</given-names>
+            </name>
+          </person-group>
+          <source>Pain</source>
+          <article-title>Fear-avoidance and its consequences in chronic musculoskeletal pain: A state of the art</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib4">
+        <element-citation publication-type="journal">
+          <issue>6</issue>
+          <month>6</month>
+          <page-range>1144-1147</page-range>
+          <volume>153</volume>
+          <year>2012</year>
+          <pub-id pub-id-type="doi">10.1016/j.pain.2011.12.009</pub-id>
+          <pub-id pub-id-type="pmid">10.1016/j.pain.2011.12.009</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vlaeyen</surname>
+              <given-names>Johan W S</given-names>
+            </name>
+            <name>
+              <surname>Linton</surname>
+              <given-names>Steven J</given-names>
+            </name>
+          </person-group>
+          <source>Pain</source>
+          <article-title>Fear-avoidance model of chronic musculoskeletal pain: 12 years on</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib5">
+        <element-citation publication-type="journal">
+          <issue>1</issue>
+          <month>1</month>
+          <page-range>35-38</page-range>
+          <volume>156</volume>
+          <year>2015</year>
+          <pub-id pub-id-type="doi">10.1016/j.pain.0000000000000014</pub-id>
+          <pub-id pub-id-type="pmid">10.1016/j.pain.0000000000000014</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Moseley</surname>
+              <given-names>G Lorimer</given-names>
+            </name>
+            <name>
+              <surname>Vlaeyen</surname>
+              <given-names>Johan W S</given-names>
+            </name>
+          </person-group>
+          <source>Pain</source>
+          <article-title>Beyond nociception: The imprecision hypothesis of chronic pain</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib6">
+        <element-citation publication-type="journal">
+          <issue>10</issue>
+          <page-range>1105-1115</page-range>
+          <volume>17</volume>
+          <year>2016</year>
+          <pub-id pub-id-type="doi">10.1016/j.jpain.2016.06.012</pub-id>
+          <pub-id pub-id-type="pmid">10.1016/j.jpain.2016.06.012</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Madden</surname>
+              <given-names>Victoria J.</given-names>
+            </name>
+            <name>
+              <surname>Bellan</surname>
+              <given-names>Valeria</given-names>
+            </name>
+            <name>
+              <surname>Russek</surname>
+              <given-names>Leslie N.</given-names>
+            </name>
+            <name>
+              <surname>Camfferman</surname>
+              <given-names>Danny</given-names>
+            </name>
+            <name>
+              <surname>Vlaeyen</surname>
+              <given-names>Johan W.S.</given-names>
+            </name>
+            <name>
+              <surname>Moseley</surname>
+              <given-names>G. Lorimer</given-names>
+            </name>
+          </person-group>
+          <source>Journal of Pain</source>
+          <article-title>Pain by association? Experimental modulation of human pain thresholds using classical conditioning</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib7">
+        <element-citation publication-type="journal">
+          <issue>3</issue>
+          <page-range>1-20</page-range>
+          <volume>2019</volume>
+          <year>2019</year>
+          <pub-id pub-id-type="doi">10.7717/peerj.6486</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Traxler</surname>
+              <given-names>Juliane</given-names>
+            </name>
+            <name>
+              <surname>Madden</surname>
+              <given-names>Victoria J.</given-names>
+            </name>
+            <name>
+              <surname>Moseley</surname>
+              <given-names>G. Lorimer</given-names>
+            </name>
+            <name>
+              <surname>Vlaeyen</surname>
+              <given-names>Johan W.S.</given-names>
+            </name>
+          </person-group>
+          <source>PeerJ</source>
+          <article-title>Modulating pain thresholds through classical conditioning</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib8">
+        <element-citation publication-type="book">
+          <publisher-loc>New York, NY, US</publisher-loc>
+          <publisher-name>Liverwright Publishing Corporation</publisher-name>
+          <year>1928</year>
+          <pub-id pub-id-type="doi">10.1037/11081-000</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pavlov</surname>
+              <given-names>Ivan Petrovitch</given-names>
+            </name>
+          </person-group>
+          <source>Lectures on conditioned reflexes: Twenty-five years of objective study of the higher nervous activity (behaviour) of animals.</source>
+        </element-citation>
+      </ref>
+      <ref id="bib9">
+        <element-citation publication-type="book">
+          <publisher-loc>Boston, MA</publisher-loc>
+          <publisher-name>Pearson/Allyn and Bacon</publisher-name>
+          <year>2009</year>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Barlow</surname>
+              <given-names>D H</given-names>
+            </name>
+            <name>
+              <surname>Nock</surname>
+              <given-names>M K</given-names>
+            </name>
+            <name>
+              <surname>Hersen</surname>
+              <given-names>M</given-names>
+            </name>
+          </person-group>
+          <source>Single case experimental designs: Strategies for studying behavior change</source>
+        </element-citation>
+      </ref>
+      <ref id="bib10">
+        <element-citation publication-type="book">
+          <publisher-loc>New York, NY</publisher-loc>
+          <publisher-name>Oxford University Press</publisher-name>
+          <year>2011</year>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kazdin</surname>
+              <given-names>Alan E</given-names>
+            </name>
+          </person-group>
+          <source>Single-case research designs: Methods for clinical and applied settings</source>
+        </element-citation>
+      </ref>
+      <ref id="bib11">
+        <element-citation publication-type="journal">
+          <issue>1</issue>
+          <page-range>51-64</page-range>
+          <volume>3</volume>
+          <year>2014</year>
+          <pub-id pub-id-type="doi">10.1016/j.jcbs.2013.10.002</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Heyvaert</surname>
+              <given-names>Mieke</given-names>
+            </name>
+            <name>
+              <surname>Onghena</surname>
+              <given-names>Patrick</given-names>
+            </name>
+          </person-group>
+          <source>Journal of Contextual Behavioral Science</source>
+          <article-title>Randomization tests for single-case experiments: State of the art, state of the science, and state of the application</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib12">
+        <element-citation publication-type="journal">
+          <page-range>659–670</page-range>
+          <volume>70</volume>
+          <year>2020</year>
+          <pub-id pub-id-type="doi">10.1007/s40732-020-00402-5</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vlaeyen</surname>
+              <given-names>Johan W S</given-names>
+            </name>
+            <name>
+              <surname>Wicksell</surname>
+              <given-names>Rikard K</given-names>
+            </name>
+            <name>
+              <surname>Simons</surname>
+              <given-names>Laura E</given-names>
+            </name>
+            <name>
+              <surname>Gentili</surname>
+              <given-names>Charlotte</given-names>
+            </name>
+            <name>
+              <surname>De</surname>
+              <given-names>Tamal Kumar</given-names>
+            </name>
+            <name>
+              <surname>Tate</surname>
+              <given-names>Robyn L</given-names>
+            </name>
+            <name>
+              <surname>Vohra</surname>
+              <given-names>Sunita</given-names>
+            </name>
+            <name>
+              <surname>Punja</surname>
+              <given-names>Salima</given-names>
+            </name>
+            <name>
+              <surname>Linton</surname>
+              <given-names>Steven J</given-names>
+            </name>
+            <name>
+              <surname>Sniehotta</surname>
+              <given-names>Falko F</given-names>
+            </name>
+            <name>
+              <surname>Onghena</surname>
+              <given-names>Patrick</given-names>
+            </name>
+          </person-group>
+          <source>The Psychological Record</source>
+          <article-title>From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib13">
+        <element-citation publication-type="journal">
+          <issue>2</issue>
+          <page-range>124-144</page-range>
+          <volume>15</volume>
+          <year>2010</year>
+          <pub-id pub-id-type="doi">10.1037/a0017736</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kratochwill</surname>
+              <given-names>T. R.</given-names>
+            </name>
+            <name>
+              <surname>Levin</surname>
+              <given-names>Joel R</given-names>
+            </name>
+          </person-group>
+          <source>Psychological Methods</source>
+          <article-title>Enhancing the scientific credibility of single-case intervention research: Randomization to the rescue</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib14">
+        <element-citation publication-type="journal">
+          <day>1</day>
+          <issue>1</issue>
+          <month>5</month>
+          <page-range>57</page-range>
+          <volume>90</volume>
+          <year>1975</year>
+          <pub-id pub-id-type="doi">10.1080/00223980.1975.9923926</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Edgington</surname>
+              <given-names>Eugene S</given-names>
+            </name>
+          </person-group>
+          <source>Journal of Psychology</source>
+          <article-title>Randomization tests for one-subject operant experiments</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib15">
+        <element-citation publication-type="journal">
+          <issue>2</issue>
+          <page-range>165-179</page-range>
+          <volume>71</volume>
+          <year>2005</year>
+          <pub-id pub-id-type="doi">10.1177/001440290507100203</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Horner</surname>
+              <given-names>Robert H.</given-names>
+            </name>
+            <name>
+              <surname>Carr</surname>
+              <given-names>Edward G.</given-names>
+            </name>
+            <name>
+              <surname>Halle</surname>
+              <given-names>James</given-names>
+            </name>
+            <name>
+              <surname>Mcgee</surname>
+              <given-names>Gail</given-names>
+            </name>
+            <name>
+              <surname>Odom</surname>
+              <given-names>Samuel</given-names>
+            </name>
+            <name>
+              <surname>Wolery</surname>
+              <given-names>Mark</given-names>
+            </name>
+          </person-group>
+          <source>Exceptional Children</source>
+          <article-title>The use of single-subject research to identify evidence-based practice in special education</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib16">
+        <element-citation publication-type="journal">
+          <day>1</day>
+          <issue>2</issue>
+          <month>4</month>
+          <page-range>112-117</page-range>
+          <volume>18</volume>
+          <year>2009</year>
+          <pub-id pub-id-type="doi">10.1111/j.1467-8721.2009.01619.x</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Molenaar</surname>
+              <given-names>Peter C M</given-names>
+            </name>
+            <name>
+              <surname>Campbell</surname>
+              <given-names>Cynthia G</given-names>
+            </name>
+          </person-group>
+          <source>Current Directions in Psychological Science</source>
+          <article-title>The new person-specific paradigm in psychology</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib17">
+        <element-citation publication-type="journal">
+          <day>3</day>
+          <issue>27</issue>
+          <month>7</month>
+          <page-range>E6106 LP  - E6115</page-range>
+          <volume>115</volume>
+          <year>2018</year>
+          <pub-id pub-id-type="doi">10.1073/pnas.1711978115</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Fisher</surname>
+              <given-names>Aaron J</given-names>
+            </name>
+            <name>
+              <surname>Medaglia</surname>
+              <given-names>John D</given-names>
+            </name>
+            <name>
+              <surname>Jeronimus</surname>
+              <given-names>Bertus F</given-names>
+            </name>
+          </person-group>
+          <source>Proceedings of the National Academy of Sciences</source>
+          <article-title>Lack of group-to-individual generalizability is a threat to human subjects research</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib18">
+        <element-citation publication-type="journal">
+          <issue>2</issue>
+          <page-range>167-178</page-range>
+          <volume>63</volume>
+          <year>1995</year>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ferron</surname>
+              <given-names>John</given-names>
+            </name>
+            <name>
+              <surname>Ware</surname>
+              <given-names>William</given-names>
+            </name>
+          </person-group>
+          <source>The Journal of Experimental Education</source>
+          <article-title>Analyzing single-case data: The power of randomization tests</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib19">
+        <element-citation publication-type="journal">
+          <issue>3</issue>
+          <page-range>231-239</page-range>
+          <volume>64</volume>
+          <year>1996</year>
+          <pub-id pub-id-type="doi">10.1080/00220973.1996.9943805</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ferron</surname>
+              <given-names>John</given-names>
+            </name>
+            <name>
+              <surname>Onghena</surname>
+              <given-names>Patrick</given-names>
+            </name>
+          </person-group>
+          <source>Journal of Experimental Education</source>
+          <article-title>The power of randomization tests for single-case phase designs</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib20">
+        <element-citation publication-type="journal">
+          <issue>3</issue>
+          <page-range>229-242</page-range>
+          <volume>10</volume>
+          <year>1988</year>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Busk</surname>
+              <given-names>Patricia L</given-names>
+            </name>
+            <name>
+              <surname>Marascuilo</surname>
+              <given-names>Leonard A</given-names>
+            </name>
+          </person-group>
+          <source>Behavioral Assessment</source>
+          <article-title>Autocorrelation in single-subject research: A counterargument to the myth of no autocorrelation.</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib21">
+        <element-citation publication-type="journal">
+          <issue>4</issue>
+          <page-range>477-496</page-range>
+          <volume>38</volume>
+          <year>2014</year>
+          <pub-id pub-id-type="doi">10.1177/0145445513510931</pub-id>
+          <pub-id pub-id-type="pmid">10.1177/0145445513510931</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Solomon</surname>
+              <given-names>Benjamin George</given-names>
+            </name>
+          </person-group>
+          <source>Behavior Modification</source>
+          <article-title>Violations of assumptions in school-based single-case data: Implications for the selection and interpretation of effect sizes</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib22">
+        <element-citation publication-type="journal">
+          <issue>4</issue>
+          <page-range>733-738</page-range>
+          <volume>51</volume>
+          <year>1996</year>
+          <pub-id pub-id-type="doi">https://doi.org/10.1006/anbe.1996.0077</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Adams</surname>
+              <given-names>Dean C</given-names>
+            </name>
+            <name>
+              <surname>Anthony</surname>
+              <given-names>Carl D</given-names>
+            </name>
+          </person-group>
+          <source>Animal Behaviour</source>
+          <article-title>Using randomization techniques to analyse behavioural data</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib23">
+        <element-citation publication-type="journal">
+          <issue>4</issue>
+          <page-range>510-550</page-range>
+          <volume>17</volume>
+          <year>2012</year>
+          <pub-id pub-id-type="doi">10.1037/a0029312</pub-id>
+          <pub-id pub-id-type="pmid">10.1037/a0029312</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Smith</surname>
+              <given-names>Justin D.</given-names>
+            </name>
+          </person-group>
+          <source>Psychological Methods</source>
+          <article-title>Single-case experimental designs: A systematic review of published research and current standards</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib24">
+        <element-citation publication-type="journal">
+          <day>1</day>
+          <issue>4</issue>
+          <month>1</month>
+          <page-range>436-449</page-range>
+          <volume>23</volume>
+          <year>1990</year>
+          <pub-id pub-id-type="doi">10.1177/002246699002300407</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ottenbacher</surname>
+              <given-names>Kenneth J</given-names>
+            </name>
+          </person-group>
+          <source>The Journal of Special Education</source>
+          <article-title>When is a picture worth a thousand p values? A comparison of visual and quantitative methods to analyze single subject data</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib25">
+        <element-citation publication-type="journal">
+          <issue>3</issue>
+          <page-range>341-351</page-range>
+          <volume>23</volume>
+          <year>1990</year>
+          <pub-id pub-id-type="doi">10.1901/jaba.1990.23-341</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Matyas</surname>
+              <given-names>T A</given-names>
+            </name>
+            <name>
+              <surname>Greenwood</surname>
+              <given-names>K M</given-names>
+            </name>
+          </person-group>
+          <source>Journal of applied behavior analysis</source>
+          <article-title>Visual analysis of single-case time series: Effects of variability, serial dependence, and magnitude of intervention effects</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib26">
+        <element-citation publication-type="journal">
+          <year>2010</year>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kratochwill</surname>
+              <given-names>T. R.</given-names>
+            </name>
+            <name>
+              <surname>Hitchcock</surname>
+              <given-names>J</given-names>
+            </name>
+            <name>
+              <surname>Horner</surname>
+              <given-names>Robert H</given-names>
+            </name>
+            <name>
+              <surname>Levin</surname>
+              <given-names>J R</given-names>
+            </name>
+            <name>
+              <surname>Odom</surname>
+              <given-names>S L</given-names>
+            </name>
+            <name>
+              <surname>Rindskopf</surname>
+              <given-names>D M</given-names>
+            </name>
+            <name>
+              <surname>Shadish</surname>
+              <given-names>W R</given-names>
+            </name>
+          </person-group>
+          <article-title>Single-case design technical documentation</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib27">
+        <element-citation publication-type="journal">
+          <issue>1</issue>
+          <page-range>18-32</page-range>
+          <volume>19</volume>
+          <year>2018</year>
+          <pub-id pub-id-type="doi">10.1017/BrImp.2017.17</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Manolov</surname>
+              <given-names>Rumen</given-names>
+            </name>
+            <name>
+              <surname>Solanas</surname>
+              <given-names>Antonio</given-names>
+            </name>
+          </person-group>
+          <source>Brain Impairment</source>
+          <article-title>Analytical options for single-case experimental designs: Review and application to brain impairment</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib28">
+        <element-citation publication-type="journal">
+          <issue>1</issue>
+          <page-range>97-114</page-range>
+          <volume>48</volume>
+          <year>2017</year>
+          <pub-id pub-id-type="doi">10.1016/j.beth.2016.04.008</pub-id>
+          <pub-id pub-id-type="pmid">10.1016/j.beth.2016.04.008</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Manolov</surname>
+              <given-names>Rumen</given-names>
+            </name>
+            <name>
+              <surname>Moeyaert</surname>
+              <given-names>Mariola</given-names>
+            </name>
+          </person-group>
+          <source>Behavior Therapy</source>
+          <article-title>Recommendations for choosing single-case data analytical techniques</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib29">
+        <element-citation publication-type="book">
+          <publisher-loc>Boca Raton, FL</publisher-loc>
+          <publisher-name>Chapman &amp; Hall/CRC</publisher-name>
+          <year>2007</year>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Edgington</surname>
+              <given-names>Eugene S</given-names>
+            </name>
+            <name>
+              <surname>Onghena</surname>
+              <given-names>Patrick</given-names>
+            </name>
+          </person-group>
+          <source>Randomization tests</source>
+        </element-citation>
+      </ref>
+      <ref id="bib30">
+        <element-citation publication-type="journal">
+          <issue>2</issue>
+          <page-range>654-666</page-range>
+          <volume>52</volume>
+          <year>2020</year>
+          <pub-id pub-id-type="doi">10.3758/s13428-019-01266-6</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Michiels</surname>
+              <given-names>Bart</given-names>
+            </name>
+            <name>
+              <surname>Tanious</surname>
+              <given-names>René</given-names>
+            </name>
+            <name>
+              <surname>De</surname>
+              <given-names>Tamal Kumar</given-names>
+            </name>
+            <name>
+              <surname>Onghena</surname>
+              <given-names>Patrick</given-names>
+            </name>
+          </person-group>
+          <source>Behavior Research Methods</source>
+          <article-title>A randomization test wrapper for synthesizing single-case experiments using multilevel models: A Monte Carlo simulation study</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib31">
+        <element-citation publication-type="journal">
+          <issue>3-4</issue>
+          <page-range>507-527</page-range>
+          <volume>24</volume>
+          <year>2014</year>
+          <pub-id pub-id-type="doi">10.1080/09602011.2013.818564</pub-id>
+          <pub-id pub-id-type="pmid">10.1080/09602011.2013.818564</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Heyvaert</surname>
+              <given-names>Mieke</given-names>
+            </name>
+            <name>
+              <surname>Onghena</surname>
+              <given-names>Patrick</given-names>
+            </name>
+          </person-group>
+          <source>Neuropsychological Rehabilitation</source>
+          <article-title>Analysis of single-case data: Randomisation tests for measures of effect size</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib32">
+        <element-citation publication-type="book">
+          <publisher-loc>New York, NY</publisher-loc>
+          <publisher-name>Routledge</publisher-name>
+          <year>1988</year>
+          <pub-id pub-id-type="doi">10.4324/9780203771587</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Cohen</surname>
+              <given-names>Jacob</given-names>
+            </name>
+          </person-group>
+          <source>Statistical power analysis for the behavioral sciences</source>
+        </element-citation>
+      </ref>
+      <ref id="bib33">
+        <element-citation publication-type="journal">
+          <page-range>h1738</page-range>
+          <volume>350</volume>
+          <year>2015</year>
+          <pub-id pub-id-type="doi">10.1136/bmj.h1738</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vohra</surname>
+              <given-names>Sunita</given-names>
+            </name>
+            <name>
+              <surname>Shamseer</surname>
+              <given-names>Larissa</given-names>
+            </name>
+            <name>
+              <surname>Sampson</surname>
+              <given-names>Margaret</given-names>
+            </name>
+            <name>
+              <surname>Bukutu</surname>
+              <given-names>Cecilia</given-names>
+            </name>
+            <name>
+              <surname>Schmid</surname>
+              <given-names>Christopher H.</given-names>
+            </name>
+            <name>
+              <surname>Tate</surname>
+              <given-names>Robyn</given-names>
+            </name>
+            <name>
+              <surname>Nikles</surname>
+              <given-names>Jane</given-names>
+            </name>
+            <name>
+              <surname>Zucker</surname>
+              <given-names>Deborah R.</given-names>
+            </name>
+            <name>
+              <surname>Kravitz</surname>
+              <given-names>Richard</given-names>
+            </name>
+            <name>
+              <surname>Guyatt</surname>
+              <given-names>Gordon</given-names>
+            </name>
+            <name>
+              <surname>Altman</surname>
+              <given-names>Douglas G.</given-names>
+            </name>
+            <name>
+              <surname>Moher</surname>
+              <given-names>David</given-names>
+            </name>
+          </person-group>
+          <source>BMJ (Clinical research ed.)</source>
+          <article-title>CONSORT extension for reporting N-of-1 trials (CENT) 2015 statement</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib34">
+        <element-citation publication-type="journal">
+          <issue>8</issue>
+          <page-range>594-604</page-range>
+          <volume>54</volume>
+          <year>1999</year>
+          <pub-id pub-id-type="doi">10.1037/0003-066X.54.8.594</pub-id>
+          <pub-id pub-id-type="pmid">10.1037/0003-066X.54.8.594</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Willkinson</surname>
+              <given-names>Leland</given-names>
+            </name>
+          </person-group>
+          <source>American Psychologist</source>
+          <article-title>Statistical methods in psychology journals: Guidelines and explanations</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib35">
+        <element-citation publication-type="journal">
+          <issue>2</issue>
+          <page-range>153-171</page-range>
+          <volume>14</volume>
+          <year>1992</year>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Onghena</surname>
+              <given-names>Patrick</given-names>
+            </name>
+          </person-group>
+          <source>Behavioral Assessment</source>
+          <article-title>Randomization tests for extensions and variations of ABAB single-case experimental designs: A rejoinder</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib36">
+        <element-citation publication-type="journal">
+          <issue>2</issue>
+          <page-range>557-575</page-range>
+          <volume>50</volume>
+          <year>2018</year>
+          <pub-id pub-id-type="doi">10.3758/s13428-017-0885-7</pub-id>
+          <pub-id pub-id-type="pmid">10.3758/s13428-017-0885-7</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Michiels</surname>
+              <given-names>Bart</given-names>
+            </name>
+            <name>
+              <surname>Heyvaert</surname>
+              <given-names>Mieke</given-names>
+            </name>
+            <name>
+              <surname>Onghena</surname>
+              <given-names>Patrick</given-names>
+            </name>
+          </person-group>
+          <source>Behavior Research Methods</source>
+          <article-title>The conditional power of randomization tests for single-case effect sizes in designs with randomized treatment order: A Monte Carlo simulation study</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib37">
+        <element-citation publication-type="journal">
+          <issue>2</issue>
+          <page-range>1-21</page-range>
+          <volume>15</volume>
+          <year>2020</year>
+          <pub-id pub-id-type="doi">10.1371/journal.pone.0228355</pub-id>
+          <pub-id pub-id-type="pmid">10.1371/journal.pone.0228355</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Bouwmeester</surname>
+              <given-names>Samantha</given-names>
+            </name>
+            <name>
+              <surname>Jongerling</surname>
+              <given-names>Joran</given-names>
+            </name>
+          </person-group>
+          <source>PLoS ONE</source>
+          <article-title>Power of a randomization test in a single case multiple baseline AB design</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib38">
+        <element-citation publication-type="journal">
+          <issue>2</issue>
+          <page-range>165-178</page-range>
+          <volume>70</volume>
+          <year>2002</year>
+          <pub-id pub-id-type="doi">10.1080/00220970209599504</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Ferron</surname>
+              <given-names>John</given-names>
+            </name>
+            <name>
+              <surname>Sentovich</surname>
+              <given-names>Chris</given-names>
+            </name>
+          </person-group>
+          <source>Journal of Experimental Education</source>
+          <article-title>Statistical power of randomization tests used with multiple-baseline designs</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib39">
+        <element-citation publication-type="journal">
+          <issue>3</issue>
+          <page-range>1355-1370</page-range>
+          <volume>52</volume>
+          <year>2020</year>
+          <pub-id pub-id-type="doi">10.3758/s13428-019-01320-3</pub-id>
+          <pub-id pub-id-type="pmid">10.3758/s13428-019-01320-3</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>De</surname>
+              <given-names>Tamal Kumar</given-names>
+            </name>
+            <name>
+              <surname>Michiels</surname>
+              <given-names>Bart</given-names>
+            </name>
+            <name>
+              <surname>Tanious</surname>
+              <given-names>René</given-names>
+            </name>
+            <name>
+              <surname>Onghena</surname>
+              <given-names>Patrick</given-names>
+            </name>
+          </person-group>
+          <source>Behavior Research Methods</source>
+          <article-title>Handling missing data in randomization tests for single-case experiments: A simulation study</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib40">
+        <element-citation publication-type="journal">
+          <issue>4</issue>
+          <page-range>472.e1-472.e12</page-range>
+          <volume>20</volume>
+          <year>2019</year>
+          <pub-id pub-id-type="doi">10.1016/j.jpain.2018.10.006</pub-id>
+          <pub-id pub-id-type="pmid">10.1016/j.jpain.2018.10.006</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Madden</surname>
+              <given-names>Victoria J.</given-names>
+            </name>
+            <name>
+              <surname>Kamerman</surname>
+              <given-names>Peter R.</given-names>
+            </name>
+            <name>
+              <surname>Bellan</surname>
+              <given-names>Valeria</given-names>
+            </name>
+            <name>
+              <surname>Catley</surname>
+              <given-names>Mark J.</given-names>
+            </name>
+            <name>
+              <surname>Russek</surname>
+              <given-names>Leslie N.</given-names>
+            </name>
+            <name>
+              <surname>Camfferman</surname>
+              <given-names>Danny</given-names>
+            </name>
+            <name>
+              <surname>Moseley</surname>
+              <given-names>G. Lorimer</given-names>
+            </name>
+          </person-group>
+          <source>Journal of Pain</source>
+          <article-title>Was that painful or nonpainful? The Sensation and Pain Rating Scale performs well in the experimental context</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib41">
+        <element-citation publication-type="journal">
+          <issue>1</issue>
+          <page-range>36-45</page-range>
+          <volume>57</volume>
+          <year>2009</year>
+          <pub-id pub-id-type="doi">10.1027/1618-3169/a000005</pub-id>
+          <pub-id pub-id-type="pmid">10.1027/1618-3169/a000005</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Spruyt</surname>
+              <given-names>Adriaan</given-names>
+            </name>
+            <name>
+              <surname>Clarysse</surname>
+              <given-names>Jeroen</given-names>
+            </name>
+            <name>
+              <surname>Vansteenwegen</surname>
+              <given-names>Debora</given-names>
+            </name>
+            <name>
+              <surname>Baeyens</surname>
+              <given-names>Frank</given-names>
+            </name>
+            <name>
+              <surname>Hermans</surname>
+              <given-names>Dirk</given-names>
+            </name>
+          </person-group>
+          <source>Experimental Psychology</source>
+          <article-title>Affect 4.0: A free software package for implementing psychological and psychophysiological experiments</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib42">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <collab>
+              <named-content content-type="name">Dancer Design</named-content>
+            </collab>
+          </person-group>
+          <source>http://www.dancerdesign.co.uk/tactor.htm</source>
+          <article-title>Tactor</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib43">
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <collab>
+              <named-content content-type="name">Digitimer Limited</named-content>
+            </collab>
+          </person-group>
+          <source>https://www.digitimer.com/product/human-neurophysiology/peripheral-stimulators/ds7a-ds7ah-hv-current-stimulator/</source>
+          <article-title>DS7A High Voltage Constant Current Stimulator</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib44">
+        <element-citation publication-type="journal">
+          <issue>7</issue>
+          <page-range>1314-1325</page-range>
+          <volume>18</volume>
+          <year>2017</year>
+          <pub-id pub-id-type="doi">10.1093/pm/pnw221</pub-id>
+          <pub-id pub-id-type="pmid">10.1093/pm/pnw221</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Madden</surname>
+              <given-names>Victoria J.</given-names>
+            </name>
+            <name>
+              <surname>Russek</surname>
+              <given-names>Leslie N.</given-names>
+            </name>
+            <name>
+              <surname>Harvie</surname>
+              <given-names>Daniel S.</given-names>
+            </name>
+            <name>
+              <surname>Vlaeyen</surname>
+              <given-names>Johan W.S.</given-names>
+            </name>
+            <name>
+              <surname>Moseley</surname>
+              <given-names>G. Lorimer</given-names>
+            </name>
+          </person-group>
+          <source>Pain Medicine</source>
+          <article-title>Classical conditioning fails to elicit allodynia in an experimental study with healthy humans</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib45">
+        <element-citation publication-type="chapter">
+          <day>15</day>
+          <month>4</month>
+          <page-range>1850-1854</page-range>
+          <publisher-loc>Hoboken, NJ</publisher-loc>
+          <publisher-name>John Wiley &amp; Sons, Ltd</publisher-name>
+          <volume>4</volume>
+          <year>2005</year>
+          <pub-id pub-id-type="doi">10.1002/0470013192.bsa625</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Onghena</surname>
+              <given-names>Patrick</given-names>
+            </name>
+          </person-group>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Everitt</surname>
+              <given-names>B</given-names>
+            </name>
+            <name>
+              <surname>Howell</surname>
+              <given-names>D</given-names>
+            </name>
+          </person-group>
+          <source>Encyclopedia of statistics in behavioral science</source>
+          <chapter-title>Single‐case designs</chapter-title>
+        </element-citation>
+      </ref>
+      <ref id="bib46">
+        <element-citation publication-type="journal">
+          <issue>6</issue>
+          <page-range>2454-2476</page-range>
+          <volume>51</volume>
+          <year>2019</year>
+          <pub-id pub-id-type="doi">10.3758/s13428-018-1084-x</pub-id>
+          <pub-id pub-id-type="pmid">10.3758/s13428-018-1084-x</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Michiels</surname>
+              <given-names>Bart</given-names>
+            </name>
+            <name>
+              <surname>Onghena</surname>
+              <given-names>Patrick</given-names>
+            </name>
+          </person-group>
+          <source>Behavior Research Methods</source>
+          <article-title>Randomized single-case AB phase designs: Prospects and pitfalls</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib47">
+        <element-citation publication-type="journal">
+          <year>2020</year>
+          <person-group person-group-type="author">
+            <name>
+              <surname>De</surname>
+              <given-names>Tamal Kumar</given-names>
+            </name>
+            <name>
+              <surname>Michiels</surname>
+              <given-names>Bart</given-names>
+            </name>
+            <name>
+              <surname>Vlaeyen</surname>
+              <given-names>Johan W S</given-names>
+            </name>
+            <name>
+              <surname>Onghena</surname>
+              <given-names>Patrick</given-names>
+            </name>
+          </person-group>
+          <article-title>Shiny SCDA</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib48">
+        <element-citation publication-type="journal">
+          <issue>5</issue>
+          <page-range>290-311</page-range>
+          <volume>21</volume>
+          <year>2018</year>
+          <pub-id pub-id-type="doi">10.1080/17518423.2016.1197708</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Levin</surname>
+              <given-names>Joel R.</given-names>
+            </name>
+            <name>
+              <surname>Ferron</surname>
+              <given-names>John M.</given-names>
+            </name>
+            <name>
+              <surname>Gafurov</surname>
+              <given-names>Boris S.</given-names>
+            </name>
+          </person-group>
+          <source>Developmental Neurorehabilitation</source>
+          <article-title>Comparison of randomization-test procedures for single-case multiple-baseline designs</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib49">
+        <element-citation publication-type="journal">
+          <day>1</day>
+          <issue>2</issue>
+          <month>7</month>
+          <page-range>143-149</page-range>
+          <volume>72</volume>
+          <year>1969</year>
+          <pub-id pub-id-type="doi">10.1080/00223980.1969.10543491</pub-id>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Edgington</surname>
+              <given-names>Eugene S</given-names>
+            </name>
+          </person-group>
+          <source>The Journal of Psychology</source>
+          <article-title>Approximate randomization tests</article-title>
+        </element-citation>
+      </ref>
+      <ref id="bib50">
+        <element-citation publication-type="journal">
+          <issue>3</issue>
+          <page-range>582-598</page-range>
+          <volume>30</volume>
+          <year>1968</year>
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hope</surname>
+              <given-names>Adery C A</given-names>
+            </name>
+          </person-group>
+          <source>Journal of the Royal Statistical Society. Series B (Methodological)</source>
+          <article-title>A simplified Monte Carlo significance test procedure</article-title>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </back></article>

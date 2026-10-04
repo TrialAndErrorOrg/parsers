@@ -11,9 +11,7 @@ import { describe, it, expect } from 'vitest'
 const hasAnystyle = !spawnSync('anystyle', ['--version']).error
 
 async function getTree() {
-  const docxBuff = await readFile(
-    new URL('../../../ooxast-util-parse-bib-node/src/fixtures/index.docx', import.meta.url),
-  )
+  const docxBuff = await readFile(new URL('../test/fixtures/index.docx', import.meta.url))
   const docxVFile = await docxToVFile(new Uint8Array(docxBuff))
   return unified().use(reoffParse).parse(docxVFile)
 }

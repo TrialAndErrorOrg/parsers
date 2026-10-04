@@ -1,6 +1,12 @@
 {
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "properties": {
+    "type": {
+      "default": "book",
+      "type": "string",
+      "enum": ["book", "article"]
+    },
     "docx": {
       "type": "string",
       "description": "Path to the docx file to convert"
@@ -26,20 +32,25 @@
       "description": "Path to the config yaml file to use"
     },
     "parseCitations": {
-      "type": "boolean",
-      "description": "Whether to parse citations. Defaults to 'false'"
+      "description": "Whether to parse citations. Defaults to 'false'",
+      "type": "boolean"
     },
     "citationType": {
-      "type": "string",
-      "enum": ["mendeley", "word", "citavi", "zotero", "endnote"],
       "default": "zotero",
-      "description": "The type of citation you want to parse."
+      "description": "The type of citation you want to parse.",
+      "type": "string",
+      "enum": ["mendeley", "word", "citavi", "zotero", "endnote"]
     },
     "onSuccess": {
       "type": "string",
       "description": "Command to run after conversion"
     },
+    "index": {
+      "description": "Path to the index file to use",
+      "type": "string"
+    },
     "markupStyle": {
+      "default": [],
       "type": "array",
       "items": {
         "type": "object",
@@ -94,7 +105,49 @@
               {
                 "type": "array",
                 "items": {
-                  "$ref": "#/properties/markupStyle/items/properties/markup/anyOf/0"
+                  "type": "string",
+                  "enum": [
+                    "w:b",
+                    "w:bCs",
+                    "w:bdr",
+                    "w:caps",
+                    "w:color",
+                    "w:cs",
+                    "w:dstrike",
+                    "w:eastAsianLayout",
+                    "w:effect",
+                    "w:em",
+                    "w:emboss",
+                    "w:fitText",
+                    "w:highlight",
+                    "w:i",
+                    "w:iCs",
+                    "w:imprint",
+                    "w:kern",
+                    "w:lang",
+                    "w:noProof",
+                    "w:oMath",
+                    "w:outline",
+                    "w:position",
+                    "w:rFonts",
+                    "w:rPrChange",
+                    "w:rStyle",
+                    "w:rtl",
+                    "w:shadow",
+                    "w:shd",
+                    "w:smallCaps",
+                    "w:snapToGrid",
+                    "w:spacing",
+                    "w:specVanish",
+                    "w:strike",
+                    "w:sz",
+                    "w:szCs",
+                    "w:u",
+                    "w:vanish",
+                    "w:vertAlign",
+                    "w:w",
+                    "w:webHidden"
+                  ]
                 }
               }
             ]
@@ -103,23 +156,21 @@
             "type": "string"
           },
           "matchAll": {
-            "type": "boolean",
-            "default": true
+            "default": true,
+            "type": "boolean"
           },
           "matchFull": {
-            "type": "boolean",
-            "default": true
+            "default": true,
+            "type": "boolean"
           },
           "ignorePunctuation": {
-            "type": "boolean",
-            "default": true
+            "default": true,
+            "type": "boolean"
           }
         },
-        "required": ["markup", "style"],
-        "additionalProperties": false
+        "required": ["markup", "style"]
       },
-      "description": "Markup style options",
-      "default": []
+      "description": "Markup style options"
     },
     "paragraphStyleHandlers": {
       "type": "array",
@@ -136,13 +187,16 @@
             "description": "Output LaTeX code. Use $1 for the text of the paragraph. E.g. '\\textbf{$1}'"
           }
         },
-        "required": ["style", "output"],
-        "additionalProperties": false
+        "required": ["style", "output"]
       },
       "description": "Paragraph style handlers"
     },
     "latexOptions": {
-      "anyOf": [
+      "default": {
+        "documentClass": "jote-book",
+        "options": []
+      },
+      "oneOf": [
         {
           "type": "object",
           "properties": {
@@ -172,8 +226,7 @@
               "description": "Path to the index CSV file to use"
             }
           },
-          "required": ["documentClass", "options"],
-          "additionalProperties": false
+          "required": ["documentClass", "options"]
         },
         {
           "type": "object",
@@ -183,28 +236,25 @@
               "const": "new-jote-article"
             },
             "article": {
+              "default": "empirical",
               "type": "string",
-              "enum": ["empirical", "reflection", "meta", "rga", "editorial"],
-              "default": "empirical"
+              "enum": ["empirical", "reflection", "meta", "rga", "editorial"]
             },
             "citeStyle": {
+              "default": "authordate",
               "type": "string",
-              "enum": ["authordate", "numeric"],
-              "default": "authordate"
+              "enum": ["authordate", "numeric"]
             },
             "issued": {
               "type": "string",
               "const": "issued"
             }
           },
-          "required": ["documentClass"],
-          "additionalProperties": false
+          "required": ["documentClass"]
         }
       ],
       "description": "Options dealiing with latex"
     }
   },
-  "required": ["docx", "latexOptions"],
-  "additionalProperties": false,
-  "$schema": "http://json-schema.org/draft-07/schema#"
+  "required": ["docx"]
 }

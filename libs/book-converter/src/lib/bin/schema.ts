@@ -24,11 +24,7 @@ const citeOptions = ['authordate', 'numeric'] as const
 const bookSchema = z.object({
   documentClass: z.literal(documentClassesSchema.enum['jote-book']),
   options: z.enum(bookOptions).array(),
-  indexCSV: z
-    .string({
-      description: 'Path to the index CSV file to use',
-    })
-    .optional(),
+  indexCSV: z.string().describe('Path to the index CSV file to use').optional(),
 })
 
 const articleSchema = z.object({
@@ -87,36 +83,22 @@ const rPrSchema = z.enum(RPr)
 
 export const converterCLIOptionsDefaultSchemaInput = z.object({
   type: z.enum(['book', 'article']).default('book'),
-  docx: z.string({
-    description: 'Path to the docx file to convert',
-  }),
+  docx: z.string().describe('Path to the docx file to convert'),
   out: z
-    .string({
-      description:
-        'Path to the directory of the output file. Defaults to the same directory as the docx file.',
-    })
+    .string()
+    .describe(
+      'Path to the directory of the output file. Defaults to the same directory as the docx file.',
+    )
     .optional(),
-  preamble: z
-    .string({
-      description: 'Path to the preamble.tex file to use',
-    })
-    .optional(),
-  before: z
-    .string({
-      description: 'Path to the before-first-page.tex file to use',
-    })
-    .optional(),
+  preamble: z.string().describe('Path to the preamble.tex file to use').optional(),
+  before: z.string().describe('Path to the before-first-page.tex file to use').optional(),
   media: z
-    .string({
-      description:
-        'Path to where to place the media files from the output. Defaults to ./media of the output directory.',
-    })
+    .string()
+    .describe(
+      'Path to where to place the media files from the output. Defaults to ./media of the output directory.',
+    )
     .optional(),
-  config: z
-    .string({
-      description: 'Path to the config yaml file to use',
-    })
-    .optional(),
+  config: z.string().describe('Path to the config yaml file to use').optional(),
   parseCitations: z
     .boolean()
     .optional()
@@ -125,11 +107,7 @@ export const converterCLIOptionsDefaultSchemaInput = z.object({
     .enum(['mendeley', 'word', 'citavi', 'zotero', 'endnote'])
     .default('zotero')
     .describe('The type of citation you want to parse.'),
-  onSuccess: z
-    .string({
-      description: 'Command to run after conversion',
-    })
-    .optional(),
+  onSuccess: z.string().describe('Command to run after conversion').optional(),
   index: z.string().optional().describe('Path to the index file to use'),
 })
 
@@ -156,37 +134,33 @@ export const converterConfigOptions = z.object({
          */
         ignorePunctuation: z.boolean().default(true),
       }) satisfies z.ZodType<MarkupStyleOptions>,
-      {
-        description: 'Markup style options',
-      },
     )
+    .describe('Markup style options')
     .default([]),
 
   paragraphStyleHandlers: z
     .array(
       z.object({
         style: z
-          .string({
-            description:
-              'The name of the paragraph style to handle. No spaces allowed, its in camelCase or PascalCase.',
-          })
+          .string()
+          .describe(
+            'The name of the paragraph style to handle. No spaces allowed, its in camelCase or PascalCase.',
+          )
           .regex(/^\w+$/, {
             message: 'No spaces allowed, its in camelCase or PascalCase.',
           }),
-        output: z.string({
-          description:
-            "Output LaTeX code. Use $1 for the text of the paragraph. E.g. '\\textbf{$1}'",
-        }),
+        output: z
+          .string()
+          .describe("Output LaTeX code. Use $1 for the text of the paragraph. E.g. '\\textbf{$1}'"),
       }),
-      {
-        description: 'Paragraph style handlers',
-      },
     )
+    .describe('Paragraph style handlers')
     .optional(),
 })
 
-export const converterOptionsDefaultSchemaInput =
-  converterCLIOptionsDefaultSchemaInput.merge(converterConfigOptions)
+export const converterOptionsDefaultSchemaInput = converterCLIOptionsDefaultSchemaInput.extend(
+  converterConfigOptions.shape,
+)
 
 export const converterOptionsSchemaInput = converterOptionsDefaultSchemaInput.extend({
   latexOptions: formatSchema.describe('Options dealiing with latex').default({
@@ -224,4 +198,4 @@ export const converterOptionsSchema = converterOptionsSchemaInput.transform((obj
 })
 
 export type ConverterOptions = z.infer<typeof converterOptionsSchema>
-export type ConverterInputOptions = typeof converterOptionsSchemaInput._input
+export type ConverterInputOptions = z.input<typeof converterOptionsSchemaInput>

@@ -26,11 +26,14 @@ const res = `@article{Bennett2022,
 
 // Calls the OpenAI API: needs OPENAI_API_KEY and network access, so it is skipped without a key.
 // The model output is not deterministic, so only the shape of the result is checked against `res`.
-describe.skipIf(!process.env.OPENAI_API_KEY)('referenceParserChatgpt (needs OPENAI_API_KEY)', () => {
-  it('should turn references into biblatex', async () => {
-    const result = await formatReferences(references.split('\n'), { streamOutput: false })
-    expect(typeof result).toBe('string')
-    const keys = [...(result as string).matchAll(/@\w+\{([^,]+),/g)].map((m) => m[1])
-    expect(keys).toEqual([...res.matchAll(/@\w+\{([^,]+),/g)].map((m) => m[1]))
-  }, 100000)
-})
+describe.skipIf(!process.env.OPENAI_API_KEY)(
+  'referenceParserChatgpt (needs OPENAI_API_KEY)',
+  () => {
+    it('should turn references into biblatex', async () => {
+      const result = await formatReferences(references.split('\n'), { streamOutput: false })
+      expect(typeof result).toBe('string')
+      const keys = [...(result as string).matchAll(/@\w+\{([^,]+),/g)].map((m) => m[1])
+      expect(keys).toEqual([...res.matchAll(/@\w+\{([^,]+),/g)].map((m) => m[1]))
+    }, 100000)
+  },
+)

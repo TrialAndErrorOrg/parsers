@@ -3,14 +3,14 @@ import { docxToVFile } from 'docx-to-vfile'
 import { readdirSync, writeFileSync as fsWriteFileSync } from 'fs'
 import { readFile, writeFile as fsWriteFile } from 'fs/promises'
 import { join } from 'path'
-import { Plugin, CompilerFunction, unified } from 'unified'
+import { type Plugin, unified } from 'unified'
 import { removePosition } from 'unist-util-remove-position'
 import { reoffClean } from 'reoff-clean'
 import reoffCite from 'reoff-cite'
 import reoffParseReferences from 'reoff-parse-references'
 import { toMdast } from '../lib/ooxast-util-to-mdast.js'
 import remarkGfm from 'remark-gfm'
-import { citePlugin as remarkCite } from '@benrbray/remark-cite'
+import { citePlugin as remarkCite, type CitePluginOptions } from '@benrbray/remark-cite'
 import remarkMath from 'remark-math'
 
 import { MdastNode, Options } from '../lib/types.js'
@@ -39,7 +39,6 @@ const fromDocx = (
   citationType?: 'mendeley' | 'word' | 'citavi' | 'zotero' | 'endnote',
 ) =>
   unified()
-    .data('hey', 'ho')
     .use(reoffParse)
     .use(reoffClean, {
       rPrRemoveList: [
@@ -60,18 +59,20 @@ const fromDocx = (
     // })
     .use(remarkGfm)
     .use(remarkMath)
-    .use(remarkCite, {})
+    // Typed for a bare remark processor (`this: Processor<void, void, void, void>`).
+    .use(remarkCite as unknown as Plugin<[Partial<CitePluginOptions>?]>, {})
     .use(
       () => (tree, vfile) =>
         toMdast(tree as Root, vfile, {
           bibliography: (vfile.data.bibliography as CSL[] | undefined) ?? [],
         }),
     )
-    .use(
-      () => (tree) =>
-        writeFileSync(join(path, 'test.mdast.json'), JSON.stringify(removePosition(tree), null, 2)),
-    )
-    .use(remarkStringify)
+    .use(() => (tree) => {
+      removePosition(tree, { force: true })
+      writeFileSync(join(path, 'test.mdast.json'), JSON.stringify(tree, null, 2))
+    })
+    // remark-stringify 11 defaults to `listItemIndent: 'one'`; keep the 10.x indentation.
+    .use(remarkStringify, { listItemIndent: 'tab' })
 
 const fixtures = new URL('fixtures', import.meta.url).pathname
 const dir = readdirSync(fixtures)

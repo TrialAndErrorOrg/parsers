@@ -41,9 +41,10 @@
     "tsconfig": "./tsconfig.lib.json"
   },
   "dependencies": {
-    "@types/mdast": "^3.0.11",
+    "@types/mdast": "catalog:",
     "ooxast": "workspace:^",
     "ooxast-util-to-mdast": "workspace:^",
-    "unified": "^10.1.2"
+    "unified": "catalog:",
+    "vfile": "catalog:"
   }
 }

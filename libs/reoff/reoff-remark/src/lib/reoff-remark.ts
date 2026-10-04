@@ -1,45 +1,21 @@
-import { Processor as UnifiedProcessor, Transformer, Plugin } from 'unified'
-import { toMdast, Options } from 'ooxast-util-to-mdast'
-import { Root as OoxastRoot } from 'ooxast'
-import { Root } from 'mdast'
+import type { Root as MdastRoot } from 'mdast'
+import type { Root as OoxastRoot } from 'ooxast'
+import { toMdast, type Options } from 'ooxast-util-to-mdast'
+import type { Processor } from 'unified'
+import type { VFile } from 'vfile'
 
-type Processor = UnifiedProcessor<any, any, any, any>
-/**
- * Bridge-mode.
- * Runs the destination with the new mdast tree.
- *
- */
-function bridge(
-  destination: Processor,
-  options?: Options,
-): void | Transformer<OoxastRoot, OoxastRoot> {
-  return (node, file, next) => {
-    destination.run(toMdast(node, options), file, (error) => {
-      next(error)
-    })
-  }
-}
+/** Bridge-mode transformer: runs `destination` on the new mdast tree, then returns nothing. */
+type TransformBridge = (tree: OoxastRoot, file: VFile) => Promise<undefined>
 
-/**
- * Mutate-mode.
- * Further transformers run on the mdast tree.
- */
-function mutate(
-  options: void | Options | undefined = {},
-): ReturnType<Plugin<[Options?] | void[], OoxastRoot, Root>> {
-  //Transformer<JastRoot, JastRoot> | void {
-  return (node, file) => {
-    const result = toMdast(node, file, options)
-    return result
-  }
-}
+/** Mutate-mode transformer: further plugins run on the returned mdast tree. */
+type TransformMutate = (tree: OoxastRoot, file: VFile) => MdastRoot
 
 /**
  * Plugin to bridge or mutate to remark
  *
  * If a destination is given, runs the destination with the new mdast
  * tree (bridge-mode).
- * Without destination, returns the jast tree: further plugins run on that
+ * Without destination, returns the mdast tree: further plugins run on that
  * tree (mutate-mode).
  *
  * This is done so that you can use this plugin as either the plugin before the stringify plugin, or the plugin before another mutate plugin
@@ -47,24 +23,26 @@ function mutate(
  * @param destination
  *   Optional unified processor.
  * @param options
- *   Options passed to `ooxast-util-to-remark`.
+ *   Options passed to `ooxast-util-to-mdast`.
  */
-const reoffMdast = function (destination?: Processor | Options, options?: Options) {
-  let settings: Options | undefined
-  let processor: Processor | undefined
-
-  if (typeof destination === 'function') {
-    processor = destination
-    settings = options
-  } else {
-    settings = destination
-  }
+export default function reoffRemark(
+  destination?: Processor | Options | null | undefined,
+  options?: Options | null | undefined,
+): TransformBridge | TransformMutate {
+  const processor = typeof destination === 'function' ? destination : undefined
+  let settings = (processor ? options : (destination as Options | null | undefined)) ?? undefined
 
   if (settings?.document === undefined || settings.document === null) {
     settings = Object.assign({}, settings, { document: true })
   }
 
-  return processor ? bridge(processor, settings) : mutate(settings)
-} as Plugin<[Processor, Options?], OoxastRoot> & Plugin<[Options?] | void[], OoxastRoot, Root>
+  if (processor) {
+    return async (tree, file) => {
+      // Bridge-mode has always converted without `file`, so footnotes and relations stay out.
+      await processor.run(toMdast(tree, settings), file)
+      return undefined
+    }
+  }
 
-export default reoffMdast
+  return (tree, file) => toMdast(tree, file, settings)
+}

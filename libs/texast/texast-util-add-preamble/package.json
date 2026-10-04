@@ -38,9 +38,9 @@
   },
   "dependencies": {
     "texast": "workspace:^",
-    "unist-util-visit": "^4.1.2"
+    "unist-util-visit": "catalog:"
   },
   "devDependencies": {
-    "unist-builder": "^3.0.1"
+    "unist-builder": "catalog:"
   }
 }

@@ -37,7 +37,7 @@
     "tsconfig": "./tsconfig.lib.json"
   },
   "dependencies": {
-    "@types/unist": "^2.0.6",
+    "@types/unist": "catalog:",
     "escape-latex": "1.2.0",
     "texast": "workspace:^"
   }

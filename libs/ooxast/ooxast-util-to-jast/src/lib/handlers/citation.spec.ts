@@ -1,5 +1,7 @@
 import { T, Text } from 'ooxast'
 import { it, expect } from 'vitest'
+import { select } from 'xast-util-select'
+import { toJast } from '../ooxast-util-to-jast.js'
 const mendeleyCitation: T = {
   type: 'element',
   name: 'w:instrText',
@@ -26,11 +28,41 @@ const multipleMendeleyCitations = {
   ],
 }
 
-it('should return mendeley citation', () => {
-  const csl = getCitationCSL(mendeleyCitation)
-  expect(csl).toBeDefined()
-  expect(
-    csl.title ===
-      'From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research',
+const toString = (node: any): string =>
+  node.type === 'text' ? node.value : (node.children ?? []).map(toString).join('')
+
+it('should turn a mendeley citation into a cross-reference and a reference', () => {
+  const doc = {
+    type: 'element',
+    name: 'w:document',
+    attributes: {},
+    children: [
+      {
+        type: 'element',
+        name: 'w:body',
+        attributes: {},
+        children: [
+          {
+            type: 'element',
+            name: 'w:p',
+            attributes: {},
+            children: [
+              { type: 'element', name: 'w:r', attributes: {}, children: [mendeleyCitation] },
+            ],
+          },
+        ],
+      },
+    ],
+  }
+  const jast = toJast(doc as any)
+
+  const xref = select('xref', jast)
+  expect(xref?.attributes).toMatchObject({ refType: 'bibr', rid: 'Vlaeyen2020' })
+  expect(toString(xref!)).toEqual('(Vlaeyen et al., 2020)')
+
+  const ref = select('back refList ref', jast)
+  expect(ref?.attributes?.id).toEqual('Vlaeyen2020')
+  expect(toString(ref!)).toContain(
+    'From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research',
   )
 })

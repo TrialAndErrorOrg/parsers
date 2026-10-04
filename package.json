@@ -14,12 +14,7 @@
     "changeset": "changeset",
     "npm-status": "node scripts/npm-status.ts",
     "npm-trust": "node scripts/npm-trust.ts",
-    "typedoc": "typedoc --hideBreadcrumbs --hideInPageTOC --baseUrl .",
-    "typedocc": "typedoc",
-    "update-readme": "pnpm run typedoc && tsx --tsconfig tsconfig.base.json scripts/readmeAction.ts",
-    "readme": "NODE_OPTIONS=\"--experimental-vm-modules --experimental-specifier-resolution=node --loader esbuild-register/loader -r esbuild-register\" nx readme",
-    "readme-affected": "NODE_OPTIONS=\"--experimental-vm-modules --experimental-specifier-resolution=node --loader esbuild-register/loader -r esbuild-register\" nx affected --target=readme",
-    "readme-all": "NODE_OPTIONS=\"--experimental-vm-modules --experimental-specifier-resolution=node --loader esbuild-register/loader -r esbuild-register\" nx run-many --target=readme --all",
+    "readme": "node scripts/readme.ts",
     "prepare": "husky install"
   },
   "type": "module",

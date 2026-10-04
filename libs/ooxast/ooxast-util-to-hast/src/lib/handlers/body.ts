@@ -3,7 +3,6 @@
 import { P } from 'ooxast'
 import { H, Node, Root, Body } from '../types.js'
 import { convertElement } from 'xast-util-is-element'
-import { wrapSections } from '../util/wrap-section.js'
 import { all } from '../all.js'
 
 export function body(h: H, body: Body) {

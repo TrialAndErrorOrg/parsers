@@ -42,9 +42,9 @@
   },
   "dependencies": {
     "@types/xast": "^1.0.2",
-    "@unified-latex/unified-latex-builder": "^1.3.1",
-    "@unified-latex/unified-latex-types": "^1.3.1",
-    "@unified-latex/unified-latex-util-render-info": "^1.3.1",
+    "@unified-latex/unified-latex-builder": "catalog:",
+    "@unified-latex/unified-latex-types": "catalog:",
+    "@unified-latex/unified-latex-util-render-info": "catalog:",
     "csl-json": "0.1.0",
     "csl-to-biblatex": "workspace:^",
     "docx-to-vfile": "workspace:^",
@@ -61,7 +61,7 @@
   },
   "devDependencies": {
     "@types/unist": "^2.0.6",
-    "@unified-latex/unified-latex-util-to-string": "^1.3.1",
+    "@unified-latex/unified-latex-util-to-string": "catalog:",
     "reoff-cite": "workspace:^",
     "reoff-clean": "workspace:^",
     "reoff-parse": "workspace:^",

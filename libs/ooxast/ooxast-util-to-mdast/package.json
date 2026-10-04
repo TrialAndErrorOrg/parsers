@@ -45,7 +45,7 @@
     "@types/mdast": "^3.0.11",
     "@types/unist": "^2.0.6",
     "@types/xast": "^1.0.2",
-    "@unified-latex/unified-latex-builder": "^1.3.1",
+    "@unified-latex/unified-latex-builder": "catalog:",
     "csl-json": "0.1.0",
     "docx-to-vfile": "workspace:^",
     "extend": "^3.0.2",

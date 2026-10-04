@@ -1,7 +1,6 @@
 {
   "name": "xast-util-minify-whitespace",
   "version": "0.1.0",
-  "private": true,
   "description": "Minify whitespace between xast elements: a port of rehype-minify-whitespace 5 for xast",
   "license": "MIT",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",

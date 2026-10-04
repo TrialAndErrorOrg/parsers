@@ -355,7 +355,9 @@ thebiggestfile.ts
 .env
 .env.*
 graph
-docs
+# typedoc scratch output (scripts/readme.ts); hand-written docs/*.md are tracked
+**/docs/*
+!/docs/*.md
 
 .sveltekit
 

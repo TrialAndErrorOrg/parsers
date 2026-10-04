@@ -42,7 +42,6 @@
     "docx-to-vfile": "workspace:^",
     "ooxast": "workspace:^",
     "ooxast-util-citations": "workspace:^",
-    "reoff-parse": "workspace:^",
     "unified": "^10.1.2",
     "vfile": "^5.3.7"
   }

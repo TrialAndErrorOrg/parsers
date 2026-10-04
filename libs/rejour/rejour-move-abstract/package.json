@@ -43,7 +43,6 @@
     "unist-util-visit": "^4.1.2"
   },
   "devDependencies": {
-    "ast-stringify": "workspace:^",
     "rejour-parse": "workspace:^",
     "rejour-stringify": "workspace:^",
     "unified": "^10.1.2",

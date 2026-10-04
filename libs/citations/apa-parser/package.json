@@ -44,8 +44,6 @@
     "vfile-reporter": "^7.0.5"
   },
   "devDependencies": {
-    "@types/nearley": "^2.11.2",
-    "nearley": "^2.20.1",
     "unist-util-remove-position": "4.0.2"
   }
 }

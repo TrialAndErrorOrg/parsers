@@ -13,7 +13,7 @@ import { VFile } from 'vfile'
 export async function docxToTex(
   input: Uint8Array,
   options: {
-    citationType?: 'mendeley' | 'native' | 'citavi' | 'zotero' | 'endnote'
+    citationType?: 'mendeley' | 'word' | 'citavi' | 'zotero' | 'endnote'
     url?: string
     mailto?: string
     log?: boolean

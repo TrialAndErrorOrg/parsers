@@ -15,6 +15,7 @@
     "npm-status": "node scripts/npm-status.ts",
     "npm-trust": "node scripts/npm-trust.ts",
     "readme": "node scripts/readme.ts",
+    "gen:lib": "turbo gen lib",
     "prepare": "husky install"
   },
   "type": "module",
@@ -178,6 +179,7 @@
     "@eslint/js": "~8.46.0",
     "@changesets/changelog-github": "^1.0.1",
     "@changesets/cli": "^3.0.3",
+    "@turbo/gen": "^2.11.7",
     "@notionhq/client": "^2.2.2",
     "@nx/cypress": "20.8.3",
     "@nx/devkit": "20.8.3",

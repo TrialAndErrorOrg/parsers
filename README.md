@@ -163,10 +163,6 @@ Convert `ooxast` syntax tree to `mdast` syntax tree.
 
 Convert `ooxast` syntax tree to `unified-latex` syntax tree.
 
-### [plugins](libs/plugins)
-
-#### [`better-nx-tsc`](libs/plugins/better-nx-tsc)
-
 ### [processors](libs/processors)
 
 #### [`docx-to-jats`](libs/processors/docx-to-jats/README.md)
@@ -292,12 +288,6 @@ tryCatchPromise<T>(promise: Promise<T>, errorHandler?: Function): Promise<[T | n
 #### [`ojs-to-preamble`](libs/utils/ojs-to-preamble/README.md)
 
 This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, 18.0+), install as
-
-#### [`readme`](libs/utils/readme/README.md)
-
-This library was generated with [Nx](https://nx.dev).
-
-#### [`update-readme`](libs/utils/update-readme)
 
 ### [xast](libs/xast)
 

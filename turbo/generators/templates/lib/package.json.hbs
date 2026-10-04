@@ -1,0 +1,30 @@
+{
+  "name": "{{ name }}",
+  "version": "0.0.0",
+  "private": true,
+  "description": "{{{ description }}}",
+  "license": "GPL-3.0-or-later",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/{{ group }}/{{folder name}}"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/{{ group }}/{{folder name}}",
+  "keywords": ["unified", "syntax", "tree", "ast"],
+  "type": "module",
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {}
+}

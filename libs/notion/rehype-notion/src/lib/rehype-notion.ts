@@ -1,7 +1,6 @@
 import rehypeRemark from 'rehype-remark'
 import type { Processor, Plugin, CompilerFunction } from 'unified'
 import { markdownToBlocks } from '@tryfabric/martian'
-import type { AppendBlockChildrenParameters } from '@notionhq/client/build/src/api-endpoints.js'
 import type { Root, Content } from 'hast'
 import { gfmToMarkdown, type Options as GfmToMarkdownOptions } from 'mdast-util-gfm'
 import {
@@ -10,7 +9,8 @@ import {
 } from 'mdast-util-to-markdown'
 import { toMdast, Options as HastToMdastOptions } from 'hast-util-to-mdast'
 
-export type Block = AppendBlockChildrenParameters['children'][number]
+/** A Notion block as produced by `@tryfabric/martian`. */
+export type Block = ReturnType<typeof markdownToBlocks>[number]
 
 type Node = Root | Content
 export type MarkdownToNotionOptions = Exclude<Parameters<typeof markdownToBlocks>[1], void>

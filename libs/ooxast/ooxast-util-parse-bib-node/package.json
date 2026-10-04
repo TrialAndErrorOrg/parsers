@@ -40,7 +40,7 @@
     "axios": "^1.20.0",
     "csl-consolidate": "workspace:^",
     "csl-json": "0.1.0",
-    "execa": "^6.1.0",
+    "execa": "^10.0.1",
     "ooxast": "workspace:^",
     "ooxast-util-get-style": "workspace:^",
     "tmp-promise": "^3.0.3",

@@ -37,6 +37,6 @@
     "tsconfig": "./tsconfig.lib.json"
   },
   "devDependencies": {
-    "dotenv": "^16.4.7"
+    "dotenv": "^18.0.5"
   }
 }

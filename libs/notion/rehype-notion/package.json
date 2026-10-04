@@ -37,7 +37,6 @@
     "tsconfig": "./tsconfig.lib.json"
   },
   "dependencies": {
-    "@notionhq/client": "^2.2.2",
     "@tryfabric/martian": "^1.2.4",
     "@types/hast": "^2.3.4",
     "hast-util-to-mdast": "^9.0.0",

@@ -45,7 +45,7 @@ const fromDocx = (
     .use(() => (tree, vfile) => {
       writeFileSync(join(path, 'test.ooxast.json'), JSON.stringify(removePosition(tree), null, 2))
     })
-    .use(reoffRejour, { citationType: citationType || 'zotero' || '' })
+    .use(reoffRejour, { citationType: citationType || 'zotero' })
     .use(
       () => (tree) =>
         writeFileSync(join(path, 'test.jats.json'), JSON.stringify(removePosition(tree), null, 2)),

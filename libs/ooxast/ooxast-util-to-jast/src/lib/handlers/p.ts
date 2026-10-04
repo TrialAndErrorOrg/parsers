@@ -11,5 +11,5 @@ export function p(j: J, p: P, parent: Parent) {
     return j(p, 'disp-qoute', all(j, p))
   }
 
-  return j(p, 'p', { ...(style ? { style } : {}) }, all(j, p))
+  return j(p, 'p', style ? { style } : {}, all(j, p))
 }

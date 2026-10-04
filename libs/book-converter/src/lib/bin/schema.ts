@@ -214,7 +214,7 @@ export const converterOptionsSchema = converterOptionsSchemaInput.transform((obj
     withDocumentClass.documentClassOptions = [
       latexOptions.article,
       latexOptions.citeStyle,
-      ...([latexOptions.issued] ?? []),
+      latexOptions.issued,
     ].join(', ')
 
     return withDocumentClass

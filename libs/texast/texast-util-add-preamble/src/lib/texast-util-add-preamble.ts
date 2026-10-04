@@ -12,12 +12,10 @@ export function addPreamble(tree: Root, commands: PreambleCommand[]) {
   if (commands.length === 0) return tree
   visit(tree, 'preamble', (pre: Preamble) => {
     pre.children.push(
-      ...[
-        ...commands.flatMap((c) => [
+      ...commands.flatMap((c) => [
           preambleCommandToCommand(c),
           { type: 'text', value: '\n' } as any,
         ]),
-      ],
     )
   })
 

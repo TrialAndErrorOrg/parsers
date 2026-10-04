@@ -25,5 +25,5 @@ export function p(h: H, p: P, parent: Parent) {
     return h(p, 'h1', all(h, p))
   }
 
-  return h(p, 'p', { ...(style ? { style } : {}) }, all(h, p))
+  return h(p, 'p', style ? { style } : {}, all(h, p))
 }

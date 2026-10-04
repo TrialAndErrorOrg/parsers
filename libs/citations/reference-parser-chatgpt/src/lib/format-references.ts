@@ -96,7 +96,7 @@ Respond with code only, do not provide explanations or any other text other than
         const parser = createParser((event) => onParse(event, currentOptions, resolve))
 
         ;(async () => {
-          for await (const value of chatResponse.body?.pipeThrough(new TextDecoderStream())) {
+          for await (const value of chatResponse.body!.pipeThrough(new TextDecoderStream())) {
             parser.feed(value)
           }
         })()

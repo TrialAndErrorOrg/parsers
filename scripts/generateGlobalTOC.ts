@@ -39,7 +39,7 @@ const makeTOC = async (root: string, mainDir: string[], prefix: string) =>
       // and the readme description exists
 
       const readmeDescription = firstNonHeader
-        ?.match(/\w.+?(\n|$|\.(\n|\s))/g)?.[0]
+        ?.match(/\w.+?(\n|$|\.\s)/g)?.[0]
         .replace(/\n/g, '')
       const packagePath = join(dirPath, 'package.json')
       const [packageJSONRaw, packageJSONError] = await tryCatchPromise(

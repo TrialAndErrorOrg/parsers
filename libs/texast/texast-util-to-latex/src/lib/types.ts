@@ -100,5 +100,3 @@ export interface Options {
  * @property {Array<Join>} [join]
  * @property {Array<Unsafe>} [unsafe]
  */
-
-export {}

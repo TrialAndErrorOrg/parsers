@@ -4,9 +4,14 @@ import { docxToVFile } from 'docx-to-vfile'
 import { unified } from 'unified'
 import reoffParse from 'reoff-parse'
 import { fileURLToPath } from 'url'
-import { writeFile } from 'fs/promises'
+import { writeFile as fsWriteFile } from 'fs/promises'
 import { VFile } from 'vfile'
 import reoffMarkupToStyle from 'reoff-markup-to-style'
+
+// Debug output is only written when WRITE_TEST_OUTPUT is set, so test runs never modify tracked files.
+const writeFile = async (...args: Parameters<typeof fsWriteFile>) => {
+  if (process.env.WRITE_TEST_OUTPUT) await fsWriteFile(...args)
+}
 
 const fromCompiler = unified().use(reoffParse).use(reoffCompile)
 

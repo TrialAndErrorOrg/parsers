@@ -1,11 +1,11 @@
 {
   "name": "ooxast-util-to-unified-latex",
   "version": "0.5.0",
+  "description": "Convert `ooxast` syntax tree to `unified-latex` syntax tree.",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Convert `ooxast` syntax tree to `unified-latex` syntax tree.",
   "keywords": [
     "unified",
     "word",
@@ -17,44 +17,58 @@
     "latex",
     "unified-latex"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "ooxast-util-to-unified-latex",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "ooxast-util-get-style": "0.4.0",
-    "ooxast": "0.3.0",
-    "ooxast-util-citations": "0.4.0",
-    "xast-util-is-element": "0.3.1",
-    "xast-util-select": "0.3.0",
-    "csl-to-biblatex": "0.3.1",
-    "docx-to-vfile": "0.10.0",
-    "xast-util-to-string": "^2.0.1",
-    "csl-json": "0.1.0",
+    "@types/xast": "^1.0.2",
     "@unified-latex/unified-latex-builder": "^1.3.1",
     "@unified-latex/unified-latex-types": "^1.3.1",
     "@unified-latex/unified-latex-util-render-info": "^1.3.1",
+    "csl-json": "0.1.0",
+    "csl-to-biblatex": "workspace:^",
+    "docx-to-vfile": "workspace:^",
+    "escape-latex": "1.2.0",
+    "ooxast": "workspace:^",
+    "ooxast-util-citations": "workspace:^",
+    "ooxast-util-get-style": "workspace:^",
     "rehype-minify-whitespace": "^5.0.0",
     "vfile": "^5.3.7",
-    "escape-latex": "1.2.0",
     "xast-util-from-xml": "^3.0.0",
-    "@types/xast": "^1.0.2",
-    "@types/unist": "^2.0.6"
+    "xast-util-is-element": "workspace:^",
+    "xast-util-select": "workspace:^",
+    "xast-util-to-string": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/unist": "^2.0.6",
+    "@unified-latex/unified-latex-util-to-string": "^1.3.1",
+    "reoff-cite": "workspace:^",
+    "reoff-clean": "workspace:^",
+    "reoff-parse": "workspace:^",
+    "reoff-parse-references": "workspace:^",
+    "unified": "^10.1.2",
+    "unified-latex-stringify": "workspace:^",
+    "unist-util-remove-position": "4.0.2",
+    "xastscript": "^3.1.1"
   }
 }

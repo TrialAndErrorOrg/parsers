@@ -1,7 +1,7 @@
 import rehypeRemark from 'rehype-remark'
 import type { Processor, Plugin, CompilerFunction } from 'unified'
 import { markdownToBlocks } from '@tryfabric/martian'
-import type { AppendBlockChildrenParameters } from '@notionhq/client/build/src/api-endpoints'
+import type { AppendBlockChildrenParameters } from '@notionhq/client/build/src/api-endpoints.js'
 import type { Root, Content } from 'hast'
 import { gfmToMarkdown, type Options as GfmToMarkdownOptions } from 'mdast-util-gfm'
 import {

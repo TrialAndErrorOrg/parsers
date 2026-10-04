@@ -1,11 +1,11 @@
 {
   "name": "crossref-to-csl",
   "version": "0.3.0",
+  "description": "crossrefToCsl(item: CrossrefJSON): CSL;",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "crossrefToCsl(item: CrossrefJSON): CSL;",
   "keywords": [
     "unified",
     "abstract",
@@ -13,28 +13,30 @@
     "tree",
     "ast"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "crossref-to-csl",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "crossref-json": "0.2.2",
+    "crossref-json": "workspace:^",
     "csl-json": "0.1.0",
     "utility-types": "^3.10.0"
   }

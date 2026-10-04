@@ -1,11 +1,11 @@
 {
   "name": "apa-parser",
   "version": "0.0.1",
+  "description": "This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).",
   "keywords": [
     "unified",
     "abstract",
@@ -13,31 +13,40 @@
     "tree",
     "ast"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "apa-parser",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "vfile-reporter": "^7.0.5",
-    "unified": "^10.1.2",
+    "@types/nlcst": "^1.0.0",
+    "@types/unist": "^2.0.6",
     "retext-english": "^4.1.0",
+    "unified": "^10.1.2",
     "unist-util-visit": "^4.1.2",
-    "@types/unist": "^2.0.6"
+    "vfile-reporter": "^7.0.5"
+  },
+  "devDependencies": {
+    "@types/nearley": "^2.11.2",
+    "nearley": "^2.20.1",
+    "unist-util-remove-position": "4.0.2"
   }
 }

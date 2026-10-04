@@ -1,6 +1,11 @@
-import { writeFile } from 'fs/promises'
+import { writeFile as fsWriteFile } from 'fs/promises'
 import { docxConverter } from './book-converter.js'
 import { describe, expect, it } from 'vitest'
+
+// Debug output is only written when WRITE_TEST_OUTPUT is set, so test runs never modify tracked files.
+const writeFile = async (...args: Parameters<typeof fsWriteFile>) => {
+  if (process.env.WRITE_TEST_OUTPUT) await fsWriteFile(...args)
+}
 
 describe('bookConverter', () => {
   it('should work', async () => {

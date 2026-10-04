@@ -1,5 +1,6 @@
 import OJS from './ojs-client.js'
 import 'dotenv/config'
+import { describe, it, expect } from 'vitest'
 
 const ojs = new OJS({
   endpoint: 'https://journal.trialanderror.org/index.php/jote/api/v1',

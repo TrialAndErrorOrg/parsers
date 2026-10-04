@@ -1,6 +1,7 @@
 import { u } from 'unist-builder'
 import { x } from 'xastscript'
 import { selectAll } from '../index.js'
+import { test, expect } from 'vitest'
 
 test('all together now', () => {
   expect(

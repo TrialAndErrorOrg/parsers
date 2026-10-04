@@ -1,11 +1,11 @@
 {
   "name": "rejour-stringify",
   "version": "0.1.0",
+  "description": "Plugin for `rejour` that stringifies a `jast` syntax tree to a `JATS XML` document.",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Plugin for `rejour` that stringifies a `jast` syntax tree to a `JATS XML` document.",
   "keywords": [
     "unified",
     "abstract",
@@ -13,28 +13,31 @@
     "xml",
     "ast"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "rejour-stringify",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "jast-types": "0.1.2",
+    "jast-types": "workspace:^",
     "unified": "^10.1.2",
     "unist-util-map": "^3.1.3",
     "xast-util-to-xml": "^3.0.2"

@@ -4,6 +4,7 @@ import { unified } from 'unified'
 import { read } from 'to-vfile'
 import { Root } from 'jast-types'
 import { rejourFrontmatter } from './rejour-frontmatter.js'
+import { describe, it, expect } from 'vitest'
 
 describe('rejourJastUtilToCsl', () => {
   const proc = unified().use(rejourParse).use(rejourFrontmatter)

@@ -7,6 +7,12 @@ import fs from 'fs'
 import retextEnglish from 'retext-english'
 
 import { removePosition } from 'unist-util-remove-position'
+import { describe, it, expect } from 'vitest'
+
+// Debug output is only written when WRITE_TEST_OUTPUT is set, so test runs never modify tracked files.
+const writeDebugFile = (...args: Parameters<typeof fs.writeFileSync>) => {
+  if (process.env.WRITE_TEST_OUTPUT) fs.writeFileSync(...args)
+}
 
 const MODE: 'dev' | 'test' = 'test'
 // eslint-disable-next-line
@@ -86,7 +92,7 @@ const proc = (apa: string, desc: string) =>
     .use(() => (tree) => apaParser(tree))
     .use(
       () => (tree) =>
-        fs.writeFileSync(
+        writeDebugFile(
           new URL(`./debug/${apa}-${desc}.json`, import.meta.url).pathname.replace(/%20/g, ' '),
           JSON.stringify(removePosition(tree), null, 2),
         ),

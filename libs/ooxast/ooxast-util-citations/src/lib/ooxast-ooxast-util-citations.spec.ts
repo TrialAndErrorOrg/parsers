@@ -1,5 +1,11 @@
 import { findCitations } from './ooxast-util-citations.js'
-import { readFileSync, writeFileSync } from 'fs'
+import { readFileSync, writeFileSync as fsWriteFileSync } from 'fs'
+import { describe, it, expect } from 'vitest'
+
+// Debug output is only written when WRITE_TEST_OUTPUT is set, so test runs never modify tracked files.
+const writeFileSync = (...args: Parameters<typeof fsWriteFileSync>) => {
+  if (process.env.WRITE_TEST_OUTPUT) fsWriteFileSync(...args)
+}
 
 describe('ooxastOoxastUtilCitations', () => {
   const ooxast = JSON.parse(

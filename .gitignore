@@ -310,6 +310,8 @@ TSWLatexianTemp*
 
 # compiled output
 /dist
+dist/
+*.tsbuildinfo
 /tmp
 /out-tsc
 
@@ -364,8 +366,8 @@ graph
 # Next.js
 .next
 
-.nx/cache
-.nx/workspace-data
+# Turborepo
+.turbo
 
 vite.config.*.timestamp*
 vitest.config.*.timestamp*

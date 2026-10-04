@@ -2,6 +2,7 @@ import { tests } from './testcites.js'
 import { names } from './testnames.js'
 import { parseTextCite } from './parse-text-cite.js'
 import nearley, { Parser } from 'nearley'
+import { describe, it, expect } from 'vitest'
 
 const MODE: 'dev' | 'test' = 'test'
 // eslint-disable-next-line

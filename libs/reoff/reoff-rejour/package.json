@@ -1,11 +1,11 @@
 {
   "name": "reoff-rejour",
   "version": "0.1.0",
+  "description": "Plugin for `reoff` that transforms an `ooxast` syntax tree into a `jats` syntax tree, i.e. ",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Plugin for `reoff` that transforms an `ooxast` syntax tree into a `jats` syntax tree, i.e. ",
   "keywords": [
     "unified",
     "abstract",
@@ -18,30 +18,33 @@
     "word",
     "docx"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "reoff-rejour",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "ooxast-util-to-jast": "0.1.0",
-    "jast-types": "0.1.2",
-    "ooxast": "0.3.0",
+    "jast-types": "workspace:^",
+    "ooxast": "workspace:^",
+    "ooxast-util-to-jast": "workspace:^",
     "unified": "^10.1.2"
   }
 }

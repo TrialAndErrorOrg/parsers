@@ -1,11 +1,11 @@
 {
   "name": "relatex-add-preamble",
   "version": "0.0.1",
+  "description": "Plugin for `relatex` that adds a preamble to a `texast` syntax tree.",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Plugin for `relatex` that adds a preamble to a `texast` syntax tree.",
   "keywords": [
     "unified",
     "abstract",
@@ -13,30 +13,33 @@
     "tree",
     "ast"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "relatex-add-preamble",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "texast": "0.0.1",
-    "texast-util-add-preamble": "0.0.1",
-    "vfile": "^5.3.7",
-    "unified": "^10.1.2"
+    "texast": "workspace:^",
+    "texast-util-add-preamble": "workspace:^",
+    "unified": "^10.1.2",
+    "vfile": "^5.3.7"
   }
 }

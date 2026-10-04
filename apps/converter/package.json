@@ -1,5 +1,52 @@
 {
   "name": "converter",
+  "version": "0.0.0",
+  "private": true,
   "type": "module",
-  "private": true
+  "scripts": {
+    "dev": "next dev --port 3100",
+    "build": "next build && mv .next/static .next/standalone/apps/converter/.next/static && cp -r public .next/standalone/apps/converter/public",
+    "start": "node .next/standalone/apps/converter/server.js",
+    "typecheck": "node ../../node_modules/typescript/bin/tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-label": "^2.1.8",
+    "@radix-ui/react-separator": "^1.1.8",
+    "@radix-ui/react-slot": "^1.2.4",
+    "@radix-ui/react-tabs": "^1.1.13",
+    "@zip.js/zip.js": "^2.6.83",
+    "axios": "1.9.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cookie": "^0.5.0",
+    "date-fns": "^2.29.3",
+    "docx-to-vfile": "workspace:^",
+    "lucide-react": "^0.575.0",
+    "next": "14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "react-syntax-highlighter": "^15.4.5",
+    "reoff-clean": "workspace:^",
+    "reoff-markup-to-style": "workspace:^",
+    "reoff-parse": "workspace:^",
+    "reoff-unified-latex": "workspace:^",
+    "tailwind-merge": "^3.5.0",
+    "unified": "^10.1.2",
+    "unified-latex-stringify": "workspace:^",
+    "vfile": "^5.3.7",
+    "zustand": "^4.3.7"
+  },
+  "devDependencies": {
+    "@types/cookie": "^0.5.1",
+    "@types/node": "^24.6.0",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.0",
+    "@types/react-syntax-highlighter": "^15.5.6",
+    "autoprefixer": "10.4.13",
+    "postcss": "8.4.38",
+    "tailwindcss": "3.4.3",
+    "tailwindcss-animate": "^1.0.7",
+    "typescript": "5.7.3"
+  }
 }

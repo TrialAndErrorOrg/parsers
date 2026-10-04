@@ -1,5 +1,6 @@
 import { x } from 'xastscript'
 import { toJast } from '../ooxast-util-to-jast.js'
+import { describe, it, expect } from 'vitest'
 describe('p', () => {
   it('should do something', () => {
     const basicp = x('p', { id: 'ayy' }, [

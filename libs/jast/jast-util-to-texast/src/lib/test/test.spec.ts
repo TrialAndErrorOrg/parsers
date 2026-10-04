@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync, writeFileSync } from 'fs'
+import { readdirSync, readFileSync, writeFileSync as fsWriteFileSync } from 'fs'
 import { join } from 'path'
 import rejourParse from 'rejour-parse'
 import { toTexast } from '../jast-util-to-texast.js'
@@ -7,6 +7,12 @@ import { unified } from 'unified'
 import { TexastContent, Options, TexastRoot } from '../types.js'
 import { removePosition } from 'unist-util-remove-position'
 import { toLatex } from 'texast-util-to-latex'
+import { describe, test, expect } from 'vitest'
+
+// Debug output is only written when WRITE_TEST_OUTPUT is set, so test runs never modify tracked files.
+const writeFileSync = (...args: Parameters<typeof fsWriteFileSync>) => {
+  if (process.env.WRITE_TEST_OUTPUT) fsWriteFileSync(...args)
+}
 
 //describe('fixtures', () => {
 const fromXML = (config: Options = {}) =>

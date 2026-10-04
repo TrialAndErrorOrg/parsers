@@ -4,7 +4,8 @@ import { toString } from '@unified-latex/unified-latex-util-to-string'
 import { m } from '@unified-latex/unified-latex-builder'
 import { updateRenderInfo } from '@unified-latex/unified-latex-util-render-info'
 import { PB } from './util/PB.js'
-import listTree from '../test/list.json'
+import listTree from '../test/list.json' with { type: 'json' }
+import { describe, it, expect } from 'vitest'
 
 // test whether a ooxast p node with style 'Heading1' is converted to a macro with name 'section'
 describe('ooxast-util-to-unified-latex', () => {

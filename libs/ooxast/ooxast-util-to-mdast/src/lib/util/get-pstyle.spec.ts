@@ -1,5 +1,6 @@
 import { P, PPr, R } from 'ooxast'
 import { getPStyle } from './get-pstyle.js'
+import { it, expect } from 'vitest'
 
 export const test: any = {
   type: 'element',

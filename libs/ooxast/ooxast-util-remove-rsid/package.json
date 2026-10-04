@@ -1,11 +1,11 @@
 {
   "name": "ooxast-util-remove-rsid",
   "version": "0.4.0",
+  "description": "Cleans all the rsid tags from an ooxast tree, and merges `w:r` elements if they only differ by rsid values.",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Cleans all the rsid tags from an ooxast tree, and merges `w:r` elements if they only differ by rsid values.",
   "keywords": [
     "unified",
     "ooxast",
@@ -17,33 +17,35 @@
     "tree",
     "ast"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "ooxast-util-remove-rsid",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "ooxast": "0.3.0",
-    "xast-util-is-element": "0.3.1",
-    "xast-util-select": "0.3.0",
-    "ooxast-util-get-style": "0.4.0",
-    "unist-util-select": "^4.0.3",
+    "ooxast": "workspace:^",
+    "ooxast-util-get-style": "workspace:^",
+    "unist-util-remove": "^3.1.1",
     "unist-util-visit": "^4.1.2",
-    "unist-util-remove": "^3.1.1"
+    "xast-util-is-element": "workspace:^",
+    "xast-util-select": "workspace:^"
   }
 }

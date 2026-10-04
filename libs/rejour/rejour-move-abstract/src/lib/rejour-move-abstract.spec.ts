@@ -5,6 +5,7 @@ import rejourMoveAbstract from './rejour-move-abstract.js'
 import rejourStringify from 'rejour-stringify'
 import { map } from 'unist-util-map'
 import { reporter } from 'vfile-reporter'
+import { describe, it, expect } from 'vitest'
 
 const xmlWithAbstract = `<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN" "https://jats.nlm.nih.gov/publishing/1.2/JATS-journalpublishing1.dtd">

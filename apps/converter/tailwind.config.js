@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
-  content: [
-    './apps/converter/app/**/*.{ts,tsx}',
-    './apps/converter/components/**/*.{ts,tsx}',
-    './apps/converter/lib/**/*.{ts,tsx}',
-  ],
+  // Resolved relative to this file, so it works no matter which directory the build runs in.
+  content: {
+    relative: true,
+    files: ['./app/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './lib/**/*.{ts,tsx}'],
+  },
   theme: {
     extend: {
       colors: {

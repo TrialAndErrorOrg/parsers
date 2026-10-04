@@ -1,4 +1,5 @@
 import { formatReferences } from './format-references.js'
+import { describe, it, expect } from 'vitest'
 
 const references = `Bennett, C. (2022). Open science from a qualitative, feminist perspective: Epistemological dogmas and a call for critical examination in JATS. Psychology of Women Quarterly, 45(4), 448-456. https://doi.org/10.1177/03616843211036460
 Bennett, C., Fitzpatrick-Harnish, K., & Talbot, B. (2022). Collaborative untangling of positionality, ownership, and answerability as white researchers in indigenous spaces. International Journal of Music Education, 40(4), 628-641.`

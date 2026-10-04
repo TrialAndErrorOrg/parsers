@@ -3,6 +3,7 @@ import fs from 'fs'
 import { docxToVFile } from 'docx-to-vfile'
 import reoffParse from 'reoff-parse'
 import { unified } from 'unified'
+import { describe, it, expect } from 'vitest'
 
 const fromDocx = async (file: string) => {
   const arr = new Uint8Array(await fs.promises.readFile(file))

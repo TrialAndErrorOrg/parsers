@@ -1,0 +1,20 @@
+packages:
+  - apps/*
+  - libs/*
+  - libs/*/*
+  # Superseded by apps/converter; kept out of the workspace until someone decides its fate.
+  - '!apps/converter-frontend'
+
+# Dependency build scripts pnpm may run (pnpm 11 asks for explicit approval).
+allowBuilds:
+  esbuild: true
+
+# eslint-plugin-regexp is loaded by oxlint as a JS plugin; it never needs eslint itself.
+peerDependencyRules:
+  ignoreMissing:
+    - eslint
+
+patchedDependencies:
+  '@unified-latex/unified-latex-builder@1.3.1': patches/@unified-latex__unified-latex-builder@1.3.1.patch
+  '@unified-latex/unified-latex-types@1.3.1': patches/@unified-latex__unified-latex-types@1.3.1.patch
+  '@unified-latex/unified-latex-util-to-string@1.3.1': patches/@unified-latex__unified-latex-util-to-string@1.3.1.patch

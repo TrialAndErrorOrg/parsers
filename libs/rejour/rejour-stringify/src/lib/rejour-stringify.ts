@@ -3,7 +3,7 @@ import { CompilerFunction } from 'unified'
 import { Element, Root } from 'jast-types'
 import { map as unistMap } from 'unist-util-map'
 import { toXml } from 'xast-util-to-xml'
-import { Root as xastRoot } from 'xast-util-to-xml/lib'
+import { Root as xastRoot } from 'xast-util-to-xml/lib/index.js'
 
 /**
  * Unist map goes too deep

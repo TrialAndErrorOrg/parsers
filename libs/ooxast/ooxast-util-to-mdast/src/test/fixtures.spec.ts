@@ -1,7 +1,7 @@
 import reoffParse from 'reoff-parse'
 import { docxToVFile } from 'docx-to-vfile'
-import { readdirSync, writeFileSync } from 'fs'
-import { readFile, writeFile } from 'fs/promises'
+import { readdirSync, writeFileSync as fsWriteFileSync } from 'fs'
+import { readFile, writeFile as fsWriteFile } from 'fs/promises'
 import { join } from 'path'
 import { Plugin, CompilerFunction, unified } from 'unified'
 import { removePosition } from 'unist-util-remove-position'
@@ -16,6 +16,15 @@ import remarkMath from 'remark-math'
 import { MdastNode, Options } from '../lib/types.js'
 import remarkStringify from 'remark-stringify'
 import { Node } from 'unist'
+import { describe, it, expect } from 'vitest'
+
+// Debug output is only written when WRITE_TEST_OUTPUT is set, so test runs never modify tracked files.
+const writeFileSync = (...args: Parameters<typeof fsWriteFileSync>) => {
+  if (process.env.WRITE_TEST_OUTPUT) fsWriteFileSync(...args)
+}
+const writeFile = async (...args: Parameters<typeof fsWriteFile>) => {
+  if (process.env.WRITE_TEST_OUTPUT) await fsWriteFile(...args)
+}
 
 // import path from 'path'
 // import { fileURLToPath } from 'url'

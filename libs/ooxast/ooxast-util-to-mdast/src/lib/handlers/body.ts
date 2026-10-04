@@ -1,7 +1,7 @@
 import { Body, Handle, P, MdastNode } from '../types.js'
 import { getPStyle } from '../util/get-pstyle.js'
 import { getListInfo } from '../util/get-listinfo.js'
-import { Element } from 'xast-util-to-string/lib'
+import { Element } from 'xast-util-to-string/lib/index.js'
 import { State } from '../state.js'
 import { list, listItem } from 'mdast-builder'
 import { List, ListItem } from 'mdast'

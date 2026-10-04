@@ -1,11 +1,11 @@
 {
   "name": "rehype-notion",
   "version": "0.1.3",
+  "description": "Plugin for `rehype` to turn HTML into Notion blocks",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Plugin for `rehype` to turn HTML into Notion blocks",
   "keywords": [
     "unified",
     "abstract",
@@ -13,34 +13,40 @@
     "tree",
     "ast"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "rehype-notion",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "rehype-remark": "^9.1.2",
-    "unified": "^10.1.2",
-    "@tryfabric/martian": "^1.2.4",
     "@notionhq/client": "^2.2.2",
+    "@tryfabric/martian": "^1.2.4",
+    "@types/hast": "^2.3.4",
+    "hast-util-to-mdast": "^9.0.0",
     "mdast-util-gfm": "^2.0.2",
     "mdast-util-to-markdown": "^1.5.0",
-    "hast-util-to-mdast": "^9.0.0",
-    "@types/hast": "^2.3.4"
+    "rehype-remark": "^9.1.2",
+    "unified": "^10.1.2"
+  },
+  "devDependencies": {
+    "rehype-parse": "^8.0.4"
   }
 }

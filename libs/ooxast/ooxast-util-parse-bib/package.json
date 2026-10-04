@@ -1,11 +1,11 @@
 {
   "name": "ooxast-util-parse-bib",
   "version": "0.3.0",
+  "description": "Find and convert raw references to CSL-JSON using `anystyle`.",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Find and convert raw references to CSL-JSON using `anystyle`.",
   "keywords": [
     "unified",
     "ooxast",
@@ -14,17 +14,22 @@
     "citations",
     "anystyle"
   ],
-  "dependencies": {
-    "axios": "^0.27.2",
-    "csl-json": "0.1.0",
-    "execa": "^6.1.0",
-    "tmp-promise": "^3.0.3",
-    "ooxast": "0.3.0",
-    "ooxast-util-get-style": "0.4.0",
-    "xast-util-is-element": "0.3.1",
-    "xast-util-select": "0.3.0",
-    "xast-util-to-string": "^2.0.1",
-    "csl-consolidate": "0.3.0"
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
   },
   "typedoc": {
     "entryPoint": "./src/index.ts",
@@ -32,18 +37,21 @@
     "displayName": "ooxast-util-parse-bib",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
+  "dependencies": {
+    "axios": "1.9.0",
+    "csl-consolidate": "workspace:^",
+    "csl-json": "0.1.0",
+    "execa": "^6.1.0",
+    "ooxast": "workspace:^",
+    "ooxast-util-get-style": "workspace:^",
+    "tmp-promise": "^3.0.3",
+    "xast-util-is-element": "workspace:^",
+    "xast-util-select": "workspace:^",
+    "xast-util-to-string": "^2.0.1"
   },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ]
+  "devDependencies": {
+    "docx-to-vfile": "workspace:^",
+    "reoff-parse": "workspace:^",
+    "unified": "^10.1.2"
+  }
 }

@@ -10,9 +10,7 @@ const handle = zwitch('operator', {
   /**
    * TODO: Why doesnt TS-expect-error work reee
    */
-  //// @ts-expect-error: hush.
   unknown: unknownOperator as any,
-  //// @ts-expect-error: hush.
   invalid: exists as any,
   handlers: {
     '=': exact as any,

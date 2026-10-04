@@ -7,9 +7,7 @@ import { parent, element } from './util.js'
 const own = {}.hasOwnProperty
 
 const handle = zwitch('nestingOperator', {
-  //// @ts-expect-error: hush.
   unknown: unknownNesting as any,
-  //// @ts-expect-error: hush.
   invalid: topScan as any, // `undefined` is the top query selector.
   handlers: {
     null: descendant as any, // `null` is the descendant combinator.

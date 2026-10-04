@@ -1,5 +1,5 @@
 import { writeFileSync } from 'fs'
-import { converterOptionsSchema } from '../bin/schema'
+import { converterOptionsSchema } from '../bin/schema.js'
 
 import { zodToJsonSchema } from 'zod-to-json-schema'
 

@@ -20,7 +20,6 @@ import { zwitch } from 'zwitch'
 import { any } from './any.js'
 
 const handle = zwitch('name', {
-  //// @ts-expect-error: hush.
   unknown: unknownPseudo as any,
   invalid: invalidPseudo,
   handlers: {

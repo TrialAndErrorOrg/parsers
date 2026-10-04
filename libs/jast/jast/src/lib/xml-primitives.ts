@@ -18,4 +18,4 @@ export interface _number extends UnistNode {
   content: number
 }
 
-export const document: UnistNode
+export declare const document: UnistNode

@@ -19,7 +19,7 @@ describe('texastTexastUtilAddPreamble', () => {
           u('command', { name: 'usepackage' }, [
             u('commandArg', [{ type: 'text', value: 'hyperref' }]),
           ]),
-          { type: 'text', value: '\\n' },
+          { type: 'text', value: '\n' },
         ]),
         u('document', []),
       ]),

@@ -100,39 +100,47 @@ describe('environment', () => {
   }
   it('should stringify basic environment', () => {
     expect(toLatex(basicEnv)).toEqual(
-      `\\begin{basic}
+      `
+\\begin{basic}
 
-      hello world!
+  hello world!
 
-  \\end{basic}`,
+\\end{basic}
+`,
     )
   })
 
   it('should stringify environment with optArg', () => {
     expect(toLatex(envWithOptArg)).toEqual(
-      `\\begin{basic}[style=apa]
+      `
+\\begin{basic}[style=apa]
 
-      hello world!
+  hello world!
 
-  \\end{basic}`,
+\\end{basic}
+`,
     )
   })
   it('should stringify environment with manadatory arg', () => {
     expect(toLatex(envWithArg)).toEqual(
-      `\\begin{basic}{biblatex}
+      `
+\\begin{basic}{biblatex}
 
-      hello world!
+  hello world!
 
-  \\end{basic}`,
+\\end{basic}
+`,
     )
   })
   it('should stringify both necessary and opt args', () => {
     expect(toLatex(envWith2ArgAndOptArg)).toEqual(
-      `\\begin{basic}[style=apa]{biblatex}{biblatex}
+      `
+\\begin{basic}[style=apa]{biblatex}{biblatex}
 
-      hello world!
+  hello world!
 
-  \\end{basic}`,
+\\end{basic}
+`,
     )
   })
 })

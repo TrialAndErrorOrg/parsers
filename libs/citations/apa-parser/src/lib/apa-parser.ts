@@ -3,11 +3,10 @@ import { unified } from 'unified'
 import retextEnglish from 'retext-english'
 // import retextProfanities from 'retext-profanities'
 // import retextEmoji from 'retext-emoji'
-import { Node } from 'unist'
 import { visit } from 'unist-util-visit'
-import { Root } from 'nlcst'
+import type { Root, SentenceContent } from 'nlcst'
 
-export function apaParser(input: Root): Node {
+export function apaParser(input: Root): Root {
   visit(input, 'SentenceNode', (node) => {
     const children = node.children
 
@@ -26,13 +25,14 @@ export function apaParser(input: Root): Node {
         return acc
       }
 
-      if (acc?.at(-1)?.value === ')') {
+      const last = acc.at(-1)
+      if (last?.type === 'PunctuationNode' && last.value === ')') {
         return acc
       }
 
       acc.push(child)
       return acc
-    }, [] as Node[])
+    }, [] as SentenceContent[])
   })
 
   return input

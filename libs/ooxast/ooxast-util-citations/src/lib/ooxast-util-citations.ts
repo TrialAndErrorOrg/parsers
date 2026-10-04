@@ -4,7 +4,7 @@ import { getPStyle } from 'ooxast-util-get-style'
 import { parseTextCite } from 'parse-text-cite'
 import { Node } from 'unist'
 import { convertElement, isElement } from 'xast-util-is-element'
-import { select } from 'xast-util-select'
+import { select, selectAll } from 'xast-util-select'
 import { toString } from 'xast-util-to-string'
 import { x } from 'xastscript'
 import { Data as CSL } from 'csl-json'
@@ -16,6 +16,7 @@ import { constructZoteroCitation } from './constructZoteroCitation.js'
 
 const isInstrT = convertElement<T>('w:instrText')
 const isP = convertElement<P>('w:p')
+const isSdt = convertElement('w:sdt')
 
 export const citationTypesWithSuffixedForm = ['mendeley', 'zotero']
 export interface Options {
@@ -52,7 +53,14 @@ export function findCitations(tree: Node, vfile?: VFile, options?: Options): Roo
       return
     }
 
-    const kids = p.children
+    // Word's own citations are runs wrapped in a citation content control (`w:sdt` with
+    // `w:citation`): unwrap them so their text gets parsed like any other run.
+    const kids = p.children.flatMap((kid) =>
+      // The ooxast types don't list `w:sdt` as a paragraph child, but Word puts it there.
+      isSdt(kid as Node) && select('w\\:sdtPr > w\\:citation', kid)
+        ? ((select('w\\:sdtContent', kid)?.children ?? []) as typeof p.children)
+        : [kid],
+    )
     const runs: typeof kids = []
 
     let skipNext = false
@@ -75,15 +83,24 @@ export function findCitations(tree: Node, vfile?: VFile, options?: Options): Roo
         continue
       }
 
-      const t = select('w\\:t', kid)
-
-      // If either one of them don't have text, don't merge them ya dummy
-      if (!t) {
+      // Leave runs with drawings, pictures or text boxes alone: rebuilding them as text would
+      // drop the drawing (and a text box's text is stored twice, in mc:Choice and mc:Fallback).
+      if (select('w\\:drawing, w\\:pict, mc\\:AlternateContent', kid)) {
         runs.push(kid)
         continue
       }
 
-      const text = toString(t)
+      // A run can hold several w:t (e.g. around a w:lastRenderedPageBreak once reoff-clean has
+      // merged runs): take all of their text, not just the first.
+      const ts = selectAll('w\\:t', kid)
+
+      // If either one of them don't have text, don't merge them ya dummy
+      if (!ts.length) {
+        runs.push(kid)
+        continue
+      }
+
+      const text = ts.map((t) => toString(t)).join('')
 
       /**
        * We dont care about empty runs

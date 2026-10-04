@@ -36,14 +36,10 @@
     "tsconfig": "./tsconfig.lib.json"
   },
   "dependencies": {
-    "@types/nlcst": "^1.0.0",
-    "@types/unist": "^2.0.6",
-    "retext-english": "^4.1.0",
-    "unified": "^10.1.2",
-    "unist-util-visit": "^4.1.2",
-    "vfile-reporter": "^7.0.5"
-  },
-  "devDependencies": {
-    "unist-util-remove-position": "4.0.2"
+    "@types/nlcst": "catalog:",
+    "retext-english": "catalog:",
+    "unified": "catalog:",
+    "unist-util-visit": "catalog:",
+    "vfile-reporter": "catalog:"
   }
 }

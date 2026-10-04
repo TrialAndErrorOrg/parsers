@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "rehype-notion": "workspace:^",
-    "rehype-parse": "^8.0.4",
-    "unified": "^10.1.2"
+    "rehype-parse": "catalog:",
+    "unified": "catalog:"
   }
 }

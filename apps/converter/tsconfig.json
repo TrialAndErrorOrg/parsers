@@ -3,26 +3,18 @@
   "compilerOptions": {
     "jsx": "preserve",
     "allowJs": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "types": ["node"],
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
+    "lib": ["es2022", "dom", "dom.iterable"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
     "noEmit": true,
-    "resolveJsonModule": true,
     "isolatedModules": true,
     "incremental": true,
-    "module": "ESNext",
-    "target": "ESNext",
-    "plugins": [{ "name": "next" }],
-    "baseUrl": "../.."
+    "declaration": false,
+    "declarationMap": false,
+    // Global CSS is imported for its side effects; Next handles it.
+    "noUncheckedSideEffectImports": false,
+    "plugins": [{ "name": "next" }]
   },
-  "include": [
-    "./**/*.ts",
-    "./**/*.tsx",
-    "next-env.d.ts",
-    "next.config.mjs",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": ["node_modules"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config.mjs", ".next/types/**/*.ts"],
+  "exclude": ["node_modules", ".next/standalone"]
 }

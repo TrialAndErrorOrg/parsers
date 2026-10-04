@@ -35,8 +35,7 @@ describe('reoffParse', () => {
     const url = new URL('../test/testrelations.json', import.meta.url)
     writeDebugFile(url, JSON.stringify(parsed, null, 2))
     expect(vfile.data.relations).toBeDefined()
-    console.log(vfile.data.relations)
 
-    expect(vfile.data.relations.document).toBeDefined()
+    expect(vfile.data.relations?.document).toBeDefined()
   })
 })

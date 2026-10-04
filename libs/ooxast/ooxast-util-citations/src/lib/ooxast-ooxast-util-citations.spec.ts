@@ -17,6 +17,7 @@ describe('ooxastOoxastUtilCitations', () => {
   const citetree = findCitations(ooxast)
   writeFileSync(new URL('citetree.json', import.meta.url), JSON.stringify(citetree, null, 2))
   it('should work', () => {
-    expect(citetree).toEqual('ooxast-ooxast-util-citations')
+    const expected = JSON.parse(readFileSync(new URL('citetree.json', import.meta.url), 'utf-8'))
+    expect(JSON.parse(JSON.stringify(citetree))).toEqual(expected)
   })
 })

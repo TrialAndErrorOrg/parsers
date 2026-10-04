@@ -1,5 +1,6 @@
 import { T, Text } from 'ooxast'
 import { it, expect } from 'vitest'
+import { toHast } from '../ooxast-util-to-hast.js'
 
 const mendeleyCitation: T = {
   type: 'element',
@@ -27,11 +28,23 @@ const multipleMendeleyCitations = {
   ],
 }
 
-it('should return mendeley citation', () => {
-  const csl = getCitationCSL(mendeleyCitation)
-  expect(csl).toBeDefined()
-  expect(
-    csl.title ===
-      'From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research',
-  )
+const toString = (node: any): string =>
+  node.type === 'text' ? node.value : (node.children ?? []).map(toString).join('')
+
+const run = (instrText: unknown) =>
+  ({ type: 'element', name: 'w:r', attributes: {}, children: [instrText] }) as any
+
+const xrefs = (node: any): any[] =>
+  node.tagName === 'xref' ? [node] : (node.children ?? []).flatMap(xrefs)
+
+it('should turn a mendeley citation into a cross-reference', () => {
+  const [xref, ...rest] = xrefs(toHast(run(mendeleyCitation)))
+  expect(rest).toHaveLength(0)
+  expect(xref.properties).toMatchObject({ refType: 'bibr', rid: 'Vlaeyen2020' })
+  expect(toString(xref)).toEqual('(Vlaeyen et al., 2020)')
+})
+
+it('should cite every item of a multi-item mendeley citation', () => {
+  const rids = xrefs(toHast(run(multipleMendeleyCitations))).map((xref) => xref.properties.rid)
+  expect(rids).toEqual(['Busk1988', 'Solomon2014', 'Adams1996', 'Smith2012'])
 })

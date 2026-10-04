@@ -29,7 +29,6 @@ describe('parser', () => {
     </article>`),
       true,
     )
-    console.dir(tree, { depth: null })
     expect(tree).toEqual({
       children: [
         {
@@ -51,11 +50,10 @@ describe('parser', () => {
     </article>`),
       true,
     )
-    console.dir(tree, { depth: null })
     expect(tree).toEqual({
       children: [
         {
-          children: [{ type: 'text', value: `` }],
+          children: [],
           attributes: {},
           name: 'article',
           type: 'element',

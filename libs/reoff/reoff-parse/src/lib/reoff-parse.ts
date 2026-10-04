@@ -125,11 +125,13 @@ function unify(doc: string, file: VFile, userSettings: Settings) {
   const settings = { ...defaultSettings, ...userSettings }
   const { include } = settings
 
+  // Keep elements that only held whitespace (`cascade: false`), and drop every whitespace-only
+  // text, not just the ones whose first whitespace run is all there is.
   tree = settings?.removeWhiteSpace
-    ? filter(tree, (node: XastNode) => {
+    ? filter(tree, { cascade: false }, (node: XastNode) => {
         return !(
           //@ts-expect-error ITS FINE
-          (node.type === 'text' && node.value.replace(/[\n ]+/, '') === '')
+          node.type === 'text' && node.value.trim() === ''
         )
       }) || tree
     : tree
@@ -219,14 +221,12 @@ function unify(doc: string, file: VFile, userSettings: Settings) {
 /**
  * The parsed content of .xml files in the .docx file
  */
-export interface Parsed {
-  [key: XMLOrRelsString]: Root | undefined
-}
+export type Parsed = NonNullable<DocxVFileData['parsed']>
 
 declare module 'vfile' {
-  interface DataMap extends DocxVFileData {
-    parsed: Parsed
-  }
+  // `parsed` and `relations` are declared by `docx-to-vfile`.
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface DataMap extends DocxVFileData {}
 }
 
 export function relToJSON(rels: string) {

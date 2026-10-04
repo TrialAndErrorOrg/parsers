@@ -249,6 +249,18 @@ export function toCSL<T extends Root | Front | Back>(root: T): CSLConditional<T>
   return toCSLBack(root) as CSLConditional<T>
 }
 
+/**
+ * CSL date parts are always [year, month, day], whereas JATS allows `<day>`, `<month>` and
+ * `<year>` in any order.
+ */
+function dateParts(node: Extract<Node, { children: any[] }>): string[] {
+  const part = (name: string) => {
+    const child = node.children.find((c: Node) => isElement(c) && c.name === name)
+    return child ? toString(child) : undefined
+  }
+  return [part('year'), part('month'), part('day')].filter((p): p is string => !!p)
+}
+
 export function all(node: Extract<Node, { children: any[] }>): any[] {
   return node?.children?.flatMap((n: Node) => one(n)).filter((n) => n)
   // .reduce((acc: { [key: string]: any | any[] }, curr: undefined | {[key:string]: any}) => {
@@ -291,7 +303,7 @@ export function one(node: Node) {
         case 'published': {
           return {
             issued: {
-              'date-parts': [all(node)],
+              'date-parts': [dateParts(node)],
               ...(node.attributes.iso8601Date ? { literal: node.attributes.iso8601Date } : {}),
             },
           }
@@ -301,7 +313,7 @@ export function one(node: Node) {
             custom: [
               {
                 accepted: {
-                  'date-parts': [all(node)],
+                  'date-parts': [dateParts(node)],
                   ...(node.attributes.iso8601Date ? { literal: node.attributes.iso8601Date } : {}),
                 },
               },
@@ -312,7 +324,7 @@ export function one(node: Node) {
             custom: [
               {
                 received: {
-                  'date-parts': [all(node)],
+                  'date-parts': [dateParts(node)],
                   ...(node.attributes.iso8601Date ? { literal: node.attributes.iso8601Date } : {}),
                 },
               },
@@ -329,7 +341,7 @@ export function one(node: Node) {
     case 'pubDate': {
       return {
         issued: {
-          'date-parts': [all(node)],
+          'date-parts': [dateParts(node)],
         },
       }
     }

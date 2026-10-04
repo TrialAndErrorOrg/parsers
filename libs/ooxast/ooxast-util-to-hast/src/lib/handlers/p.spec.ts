@@ -4,7 +4,7 @@ import { toHast } from '../ooxast-util-to-hast.js'
 import { describe, it, expect } from 'vitest'
 describe('p', () => {
   it('should do something', () => {
-    const basicp = x('p', { id: 'ayy' }, [
+    const basicp = x('w:p', { id: 'ayy' }, [
       x('w:pPr', {}, []),
       x('w:r', {}, [x('w:rPr', {}, []), x('w:t', {}, [{ type: 'text', value: 'lmao' }])]),
     ])

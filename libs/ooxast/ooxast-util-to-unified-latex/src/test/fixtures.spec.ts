@@ -71,11 +71,8 @@ const fromDocx = (
       dump(path, 'test.ooxast.json', () => JSON.stringify(removePosition(tree), null, 2))
     })
     .use(
-      () => (tree, vfile) =>
-        toUnifiedLatex(tree, vfile, {
-          relations: vfile.data.relations ?? {},
-          bibliography: vfile.data.bibliography ?? [],
-        }) as Root,
+      // Relations and the bibliography are read from the VFile.
+      () => (tree, vfile) => toUnifiedLatex(tree, vfile) as Root,
     )
     .use(
       () => (tree) =>

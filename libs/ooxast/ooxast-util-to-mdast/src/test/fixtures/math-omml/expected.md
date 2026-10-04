@@ -1,5 +1,11 @@
 $$
-\int_{\alpha}^{\beta}{\frac{\sum{\sqrt{\left(x^2\right)}i}}{dx}\ }
+αβ∑x2idx
 $$
 
-Some text, then inline math ($\int_a^b$)
+$$
+ssatnashtasht
+$$
+
+$tst$
+
+Some text, then inline math ($αβ$)

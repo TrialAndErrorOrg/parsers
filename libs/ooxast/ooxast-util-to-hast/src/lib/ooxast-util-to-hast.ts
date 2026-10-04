@@ -16,17 +16,14 @@ import {
   Element,
   Text,
 } from './types.js'
-import { convert } from 'unist-util-is'
 import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
-import { select } from 'xast-util-select'
+import { getStyleNames } from './util/style-names.js'
 // import { h } from 'hastscript'
 import { cslToRefList } from 'jast-util-from-csl'
 
 export { one } from './one.js'
 export { all } from './all.js'
 export { handlers as defaultHandlers }
-
-const block = convert(['heading', 'paragraph', 'root'])
 
 export function toHast(
   tree: Root | Element | Text,
@@ -110,6 +107,7 @@ export function toHast(
       citeKeys: {},
       citationType: options.citationType || 'mendeley',
       pHandlers: options.pHandlers || [],
+      styleNames: getStyleNames(options.styles),
     } as Context,
   )
 
@@ -148,54 +146,6 @@ export function toHast(
 
   return hast
 
-  /**
-   * Collapse text nodes, and fix whitespace.
-   * Most of this is taken care of by `rehype-minify-whitespace`, but
-   * we’re generating some whitespace too, and some nodes are in the end
-   * ignored.
-   * So clean up.
-   *
-   //* {import('unist-util-visit/complex-types').BuildVisitor HastRoot, 'text'>}
-   */
-  function ontext(node: any, index: any, parent: any) {
-    /* c8 ignore next 3 */
-    if (index === null || !parent) {
-      return
-    }
-
-    const previous = parent.children[index - 1]
-
-    if (previous && previous.type === node.type) {
-      previous.value += node.value
-      parent.children.splice(index, 1)
-
-      if (previous.position && node.position) {
-        previous.position.end = node.position.end
-      }
-
-      // Iterate over the previous node again, to handle its total value.
-      return index - 1
-    }
-
-    node.value = node.value.replace(/[\t ]*(\r?\n|\r)[\t ]*/, '$1')
-
-    // We don’t care about other phrasing nodes in between (e.g., `[ asd ]()`),
-    // as there the whitespace matters.
-    if (parent && block(parent)) {
-      if (!index) {
-        node.value = node.value.replace(/^[\t ]+/, '')
-      }
-
-      if (index === parent.children.length - 1) {
-        node.value = node.value.replace(/[\t ]+$/, '')
-      }
-    }
-
-    if (!node.value) {
-      parent.children.splice(index, 1)
-      return index
-    }
-  }
   function parseCitation(citation: any) {
     //
   }

@@ -61,7 +61,7 @@ export default function rejourMoveAbstract() {
 
     visit(
       tree,
-      (node: Node) => isElement(node) && node.name === 'article-meta',
+      (node: Node) => isElement(node) && node.name === 'articleMeta',
       (articleMetaDataNode: Element) => {
         articleMetaDataNode?.children?.push(abstract)
       },

@@ -38,7 +38,15 @@
       "children": [
         {
           "type": "html",
-          "value": "<u>[object Object]</u>"
+          "value": "<u>"
+        },
+        {
+          "type": "text",
+          "value": "Underline"
+        },
+        {
+          "type": "html",
+          "value": "</u>"
         }
       ]
     },
@@ -61,7 +69,15 @@
       "children": [
         {
           "type": "html",
-          "value": "<sub>[object Object]</sub>"
+          "value": "<sub>"
+        },
+        {
+          "type": "text",
+          "value": "subscript"
+        },
+        {
+          "type": "html",
+          "value": "</sub>"
         }
       ]
     },
@@ -70,7 +86,15 @@
       "children": [
         {
           "type": "html",
-          "value": "<sup>[object Object]</sup>"
+          "value": "<sup>"
+        },
+        {
+          "type": "text",
+          "value": "superscript"
+        },
+        {
+          "type": "html",
+          "value": "</sup>"
         }
       ]
     },

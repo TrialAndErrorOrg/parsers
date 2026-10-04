@@ -1,4 +1,5 @@
-import { DecimalNumber, Jc, LevelText, NumFmt, Root, StringTag } from 'ooxast'
+import { DecimalNumber, Jc, LevelText, NumFmt, StringTag } from 'ooxast'
+import { Root } from 'xast'
 import { fromXml } from 'xast-util-from-xml'
 import { ListNumbering } from '../types.js'
 

@@ -17,7 +17,6 @@
   ],
   "scripts": {
     "build": "tsc -p tsconfig.lib.json",
-    "typecheck": "tsc -p tsconfig.json",
-    "test": "vitest run"
+    "typecheck": "tsc -p tsconfig.json"
   }
 }

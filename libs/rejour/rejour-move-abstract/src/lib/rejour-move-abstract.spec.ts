@@ -1,10 +1,7 @@
 import { unified } from 'unified'
 import rejourParse, { Settings } from 'rejour-parse'
-import { astStringify } from 'ast-stringify'
 import rejourMoveAbstract from './rejour-move-abstract.js'
 import rejourStringify from 'rejour-stringify'
-import { map } from 'unist-util-map'
-import { reporter } from 'vfile-reporter'
 import { describe, it, expect } from 'vitest'
 
 const xmlWithAbstract = `<?xml version="1.0" encoding="utf-8"?>
@@ -40,11 +37,9 @@ describe('rejourMoveAbstract', () => {
   it('should move the abstract to the front', async () => {
     const ast = await proc(xmlWithAbstract, { removeWhiteSpace: false })
 
-    // clean up all the positions
+    // xast-util-from-xml does not keep the (insignificant) whitespace between prolog nodes
     // prettier-ignore
-    expect(String(ast)).toEqual(`<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN" "https://jats.nlm.nih.gov/publishing/1.2/JATS-journalpublishing1.dtd">
-<article xmlns:xlink="http://www.w3.org/1999/xlink">
+    expect(String(ast)).toEqual(`<?xml version="1.0" encoding="utf-8"?><!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.2 20190208//EN" "https://jats.nlm.nih.gov/publishing/1.2/JATS-journalpublishing1.dtd"><article xmlns:xlink="http://www.w3.org/1999/xlink">
   <front>
     <article-meta>
       <title-group>

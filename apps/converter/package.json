@@ -46,6 +46,6 @@
     "postcss": "8.5.23",
     "tailwindcss": "4.3.3",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "7.0.2"
+    "typescript": "7.1.0-dev.20261004.1"
   }
 }

@@ -18,6 +18,8 @@ describe('reoffDocxToVfile', () => {
     const vfile = await docxToVFile(doc)
     const url = new URL('../fixtures/test.xml', import.meta.url)
     writeDebugFile(url, String(vfile))
+    // `cwd` is the machine's working directory, keep it out of the snapshot.
+    vfile.cwd = '<cwd>'
     expect(vfile).toMatchSnapshot()
   })
 

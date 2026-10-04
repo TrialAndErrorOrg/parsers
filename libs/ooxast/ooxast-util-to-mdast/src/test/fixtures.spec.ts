@@ -16,6 +16,8 @@ import remarkMath from 'remark-math'
 import { MdastNode, Options } from '../lib/types.js'
 import remarkStringify from 'remark-stringify'
 import { Node } from 'unist'
+import type { Root } from 'ooxast'
+import type { Data as CSL } from 'csl-json'
 import { describe, it, expect } from 'vitest'
 
 // Debug output is only written when WRITE_TEST_OUTPUT is set, so test runs never modify tracked files.
@@ -61,9 +63,8 @@ const fromDocx = (
     .use(remarkCite, {})
     .use(
       () => (tree, vfile) =>
-        toMdast(tree, vfile, {
-          relations: vfile.data.relations ?? {},
-          bibliography: vfile.data.bibliography ?? [],
+        toMdast(tree as Root, vfile, {
+          bibliography: (vfile.data.bibliography as CSL[] | undefined) ?? [],
         }),
     )
     .use(

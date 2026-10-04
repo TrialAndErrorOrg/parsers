@@ -61,7 +61,7 @@ function processLatexString(latexString: string, parsed: FinalItem[]) {
 
   let totalMatches = 0
 
-  const unmatchedWords = new Map(parsed.map(({ matcher }) => [matcher, true]))
+  const unmatchedWords = new Map<string, true>(parsed.map(({ matcher }) => [matcher, true]))
 
   for (const { matcher, label } of parsed) {
     const regex = new RegExp(`(?<!-|/)\\b${matcher}\\b(?!-|/)`, 'gi')
@@ -89,7 +89,7 @@ function processLatexString(latexString: string, parsed: FinalItem[]) {
       return `${command}${content1}${content2}`
     },
   )
-  return { latexString, totalMatches, unmatchedWords } as Output
+  return { latexString, index: { totalMatches, unmatchedWords } } satisfies Output
 }
 
 export type Output = {

@@ -46,86 +46,105 @@ export const r: Handle = (state: State, node: R) => {
 
   if (!props) return text
 
-  const formattedText = props.children.reduce((text, prop) => {
-    switch (prop.name.replace(/\w+:/, '')) {
-      case 'i':
-        text = emphasis(text) as Emphasis
-        return text
-      case 'b':
-        text = strong(text) as Strong
-        return text
-      case 'u':
-        text = html(`<u>${text}</u>`) as HTML
-        return text
-      case 'strike':
-      case 'dstrike':
-        text = strike(text) as Delete
-        return text
-      case 'vertAlign':
-        //if (!isVert(prop)) continue
-        // @ts-expect-error aaaa
-        if (prop.attributes['w:val'] === 'superscript') {
-          text = html(`<sup>${text}</sup>`) as HTML
+  // Underline, super- and subscript have no markdown syntax and become inline HTML around the
+  // (otherwise formatted) text.
+  const htmlTags: string[] = []
+
+  const formattedText = props.children.reduce(
+    (text, prop) => {
+      switch (prop.name.replace(/\w+:/, '')) {
+        case 'i':
+          text = emphasis(text) as Emphasis
           return text
-        }
-        // @ts-expect-error aaaa
-        if (prop.attributes['w:val'] === 'subscript') {
-          text = html(`<sub>${text}</sub>`) as HTML
+        case 'b':
+          text = strong(text) as Strong
           return text
-        }
-        return text
-      // case 'smallCaps':
-      //   text = m('textsc', text)
-      //   return text
-      // case 'highlight': {
-      //   if (!state.xcolor) {
-      //     return text
-      //   }
-      //   text = m('colorbox', [
-      //     (prop as Highlight).attributes['w:val'],
-      //     ...(Array.isArray(text) ? text : [text]),
-      //   ])
-      //   return text
-      // }
-      // case 'color': {
-      //   if (!state.xcolor) {
-      //     return text
-      //   }
-      //   const color = (prop as Color).attributes['w:val']
+        case 'u':
+          htmlTags.push('u')
+          return text
+        case 'strike':
+        case 'dstrike':
+          text = strike(text) as Delete
+          return text
+        case 'vertAlign':
+          //if (!isVert(prop)) continue
+          // @ts-expect-error aaaa
+          if (prop.attributes['w:val'] === 'superscript') {
+            htmlTags.push('sup')
+            return text
+          }
+          // @ts-expect-error aaaa
+          if (prop.attributes['w:val'] === 'subscript') {
+            htmlTags.push('sub')
+            return text
+          }
+          return text
+        // case 'smallCaps':
+        //   text = m('textsc', text)
+        //   return text
+        // case 'highlight': {
+        //   if (!state.xcolor) {
+        //     return text
+        //   }
+        //   text = m('colorbox', [
+        //     (prop as Highlight).attributes['w:val'],
+        //     ...(Array.isArray(text) ? text : [text]),
+        //   ])
+        //   return text
+        // }
+        // case 'color': {
+        //   if (!state.xcolor) {
+        //     return text
+        //   }
+        //   const color = (prop as Color).attributes['w:val']
 
-      //   if (color === 'auto' || color === '000000') {
-      //     return text
-      //   }
-      //   text = {
-      //     type: 'group',
-      //     content: [m('color', [...(Array.isArray(text) ? text : [text])])],
-      //   } as Group
-      //   return text
-      // }
-      // case 'bdr': {
-      //   if (state.inMath) {
-      //     return text
-      //   }
-      //   text = m('fbox', text)
-      //   return text
-      // }
-      // case 'shd': {
-      //   if (state.inMath) {
-      //     return text
-      //   }
+        //   if (color === 'auto' || color === '000000') {
+        //     return text
+        //   }
+        //   text = {
+        //     type: 'group',
+        //     content: [m('color', [...(Array.isArray(text) ? text : [text])])],
+        //   } as Group
+        //   return text
+        // }
+        // case 'bdr': {
+        //   if (state.inMath) {
+        //     return text
+        //   }
+        //   text = m('fbox', text)
+        //   return text
+        // }
+        // case 'shd': {
+        //   if (state.inMath) {
+        //     return text
+        //   }
 
-      //   const shdColor = (prop as Shd).attributes['w:fill']
+        //   const shdColor = (prop as Shd).attributes['w:fill']
 
-      //   if (!shdColor || shdColor === 'auto' || shdColor === '000000') {
-      //     return text
-      //   }
+        //   if (!shdColor || shdColor === 'auto' || shdColor === '000000') {
+        //     return text
+        //   }
 
-      //   text = m('colorbox', ['gray', ...(Array.isArray(text) ? text : [text])])
-      //   return text
-      // }
-      default:
-        return text
-    }
-  }, text as HTML | Emphasis | Strong | Delete | Text)
-  return formattedText
+        //   text = m('colorbox', ['gray', ...(Array.isArray(text) ? text : [text])])
+        //   return text
+        // }
+        default:
+          return text
+      }
+    },
+    text as Emphasis | Strong | Delete | Text,
+  )
+
+  if (!htmlTags.length) return formattedText
+
+  return [
+    html(htmlTags.map((tag) => `<${tag}>`).join('')) as HTML,
+    formattedText,
+    html(
+      htmlTags
+        .map((tag) => `</${tag}>`)
+        .reverse()
+        .join(''),
+    ) as HTML,
+  ]
 }

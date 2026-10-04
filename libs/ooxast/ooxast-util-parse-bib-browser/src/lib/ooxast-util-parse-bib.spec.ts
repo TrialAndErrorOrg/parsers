@@ -3,38 +3,25 @@ import reoffParse from 'reoff-parse'
 import { readFile } from 'fs/promises'
 import { unified } from 'unified'
 import { parseBib } from './ooxast-util-parse-bib-browser.js'
-import { bibToCSL } from './bib-to-csl.js'
 import { findBib } from './find-bib.js'
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect } from 'vitest'
+
+// The anystyle API is a local server (`pnpm ruby`), not always running.
+const anystyleApi = process.env.ANYSTYLE_API_URL ?? 'http://localhost:8000/api/style'
+const hasAnystyleApi = await fetch(anystyleApi, {
+  method: 'HEAD',
+  signal: AbortSignal.timeout(1000),
+}).then(
+  () => true,
+  () => false,
+)
 
 async function getTree() {
-  // If in node, get the correct docx uintarray like so
-  const docxBuff = await readFile(new URL('../fixtures/index.docx', import.meta.url))
-  const docxArr = new Uint8Array(docxBuff)
-
-  // if in the browser, find some way
-  // to read and convert a docxfile to uintarray
-
-  const docxVFile = await docxToVFile(docxArr)
-
-  const processor = unified().use(reoffParse)
-
-  const docxTree = processor.parse(docxVFile)
-
-  return docxTree
-}
-
-async function getBib() {
-  const tree = await getTree()
-  return bibToCSL(tree, {
-    // when using your own web api
-    apiUrl: 'https://someapiyousetup.vercel.app/api',
-    //apiParams: {...}
-
-    // when using it locally
-    // if no options are entered, it will try to use
-    // anystyle on your path, and will probably fail
-  })
+  const docxBuff = await readFile(
+    new URL('../../../ooxast-util-parse-bib-node/src/fixtures/index.docx', import.meta.url),
+  )
+  const docxVFile = await docxToVFile(new Uint8Array(docxBuff))
+  return unified().use(reoffParse).parse(docxVFile)
 }
 
 const tree = getTree()
@@ -44,34 +31,18 @@ describe('parseBib', () => {
     const bibStart = findBib(await tree)
     expect(bibStart).toBeTruthy()
   })
-  // it('should call anystyle cli', async () => {
-  //   const bibStart = findBib(await tree)
-  //   expect(bibStart).toBeDefined()
-  //   if (!bibStart) return
-  //   const bib = bibStart.join('\n')
-  //   const csl = await callAnystyleCLI(bib)
-  //   expect(csl).toMatchSnapshot()
-  // })
 
-  // it('should call anystyle api', async () => {
-  //   const bibStart = findBib(await tree)
-  //   expect(bibStart).toBeDefined()
-  //   if (!bibStart) return
-  //   const bib = bibStart.join('\n')
-  //   const csl = await callAnystyleApi(
-  //     bib,
-  //     'https://anystyle-api-cote.vercel.app/api/style'
-  //   )
-  //   expect(csl).toMatchSnapshot()
-  // })
-
-  vi.setConfig({ testTimeout: 20000 })
-  it('should crossref', async () => {
-    const y = await parseBib(await tree, {
-      mailto: 'support@centeroftrialanderror.com',
-      apiUrl: 'http://localhost:8000/api/style',
-    })
-    //console.log(y)
-    expect(y).toMatchSnapshot()
-  })
+  // Parses the bibliography with the anystyle API and consolidates it against Crossref (network).
+  // Skipped when the anystyle API is unavailable.
+  it.skipIf(!hasAnystyleApi)(
+    'should crossref',
+    async () => {
+      const y = await parseBib(await tree, {
+        apiUrl: anystyleApi,
+        mailto: 'support@centeroftrialanderror.com',
+      })
+      expect(y).toMatchSnapshot()
+    },
+    60000,
+  )
 })

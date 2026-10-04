@@ -64,7 +64,15 @@
           "children": [
             {
               "type": "html",
-              "value": "<u>[object Object]</u>"
+              "value": "<u>"
+            },
+            {
+              "type": "text",
+              "value": "piece"
+            },
+            {
+              "type": "html",
+              "value": "</u>"
             }
           ],
           "url": "https://archive.jtrialerror.com/pub/failfast/release/3",
@@ -851,7 +859,15 @@
           "children": [
             {
               "type": "html",
-              "value": "<u>[object Object]</u>"
+              "value": "<u>"
+            },
+            {
+              "type": "text",
+              "value": "https://time.com/5687473/boeing-737-alarm-system/"
+            },
+            {
+              "type": "html",
+              "value": "</u>"
             }
           ],
           "url": "https://time.com/5687473/boeing-737-alarm-system/",

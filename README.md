@@ -27,7 +27,6 @@ See below for more info.
 # Dependency Graph
 
 [View an interactive dependency graph here](https://trialanderrororg.github.io/parsers/)
-![Graph of this monorepo](./graph.png 'Graph of this monorepo')
 
 # Overview
 

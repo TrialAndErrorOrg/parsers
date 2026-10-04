@@ -68,12 +68,10 @@ export interface Options {
    *
    * By default there are handlers for lists and headings.
    */
-  paragraphHandlers?: [
-    {
-      handler: ParagraphHandler
-      matcher: ParagraphMatcher | string | string[]
-    },
-  ]
+  paragraphHandlers?: Array<{
+    handler: ParagraphHandler
+    matcher: ParagraphMatcher | string | string[]
+  }>
   /**
    * Whether to add a preamble and document environment
    *
@@ -291,12 +289,10 @@ export interface Context {
    *
    * By default there are handlers for lists and headings.
    */
-  paragraphHandlers: [
-    {
-      handler: ParagraphHandler
-      matcher: ParagraphMatcher | string | string[]
-    },
-  ]
+  paragraphHandlers: Array<{
+    handler: ParagraphHandler
+    matcher: ParagraphMatcher | string | string[]
+  }>
   nodeById?: {
     [id: string]: Parent
   }

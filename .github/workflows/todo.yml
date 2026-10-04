@@ -1,13 +1,21 @@
-name: 'Workflow'
-on: ['push']
+name: TODO to issue
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  issues: write
+
 jobs:
-  build:
-    runs-on: 'ubuntu-latest'
+  todo:
+    runs-on: ubuntu-latest
     steps:
-      - uses: 'actions/checkout@v3'
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0
+          persist-credentials: false
 
-      - name: 'TODO to Issue'
-        uses: 'alstr/todo-to-issue-action@v4.5'
-        id: 'todo'
+      - name: TODO to issue
+        uses: alstr/todo-to-issue-action@v5

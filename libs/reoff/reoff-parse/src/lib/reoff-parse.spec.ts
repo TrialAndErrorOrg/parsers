@@ -19,11 +19,12 @@ describe('reoffParse', () => {
     writeDebugFile(new URL('../test/xml.xml', import.meta.url), String(file))
 
     const res = proc.parse(file)
+    expect(res.position).toBeDefined()
 
-    writeDebugFile(
-      new URL('../test/ooxasttree.json', import.meta.url),
-      JSON.stringify(removePosition(res, true), null, 2),
-    )
+    removePosition(res, { force: true })
+    expect(res.position).toBeUndefined()
+
+    writeDebugFile(new URL('../test/ooxasttree.json', import.meta.url), JSON.stringify(res, null, 2))
     expect(res).toBeDefined()
   })
 

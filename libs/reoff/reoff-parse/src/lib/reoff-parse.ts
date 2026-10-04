@@ -1,11 +1,11 @@
 import { fromXml } from 'xast-util-from-xml'
 
-import { ParserFunction } from 'unified'
-import { Root, Node as XastNode } from 'xast'
+import type { Plugin } from 'unified'
+import type { Node } from 'unist'
+import type { Root, Text } from 'xast'
 import { filter } from 'unist-util-filter'
-import { VFile } from 'vfile'
-import {} from 'vfile-message'
-import { DocxVFileData, XMLOrRelsString } from 'docx-to-vfile'
+import type { VFile } from 'vfile'
+import type { DocxVFileData, XMLOrRelsString } from 'docx-to-vfile'
 
 export const mainRelations = ['document', 'footnotes', 'endnotes'] as const
 export type MainRelations = (typeof mainRelations)[number]
@@ -60,17 +60,24 @@ export interface Settings {
   include?: string[] | RegExp[] | ((key: string) => boolean) | 'allXML' | 'all'
 }
 
-export default function reoffParse(options: Settings = {}) {
-  const parser: ParserFunction<Root> = (doc, file) => {
-    // Assume options.
-    const settings: Settings = this.data('settings')
+type ReoffParseSettings = Settings
 
-    const configuration = Object.assign({}, settings, options, {})
+declare module 'unified' {
+  // Lets `processor.data('settings', …)` carry reoff-parse options.
+  // eslint-disable-next-line typescript/no-empty-object-type -- registers reoff-parse's settings
+  interface Settings extends ReoffParseSettings {}
+}
+
+const reoffParse: Plugin<[(Settings | undefined)?], string, Root> = function reoffParse(
+  options,
+) {
+  this.parser = (doc, file) => {
+    const configuration: Settings = { ...this.data('settings'), ...options }
     return unify(doc, file, configuration)
   }
-
-  Object.assign(this, { Parser: parser })
 }
+
+export default reoffParse
 
 /**
  * Turn a pascal-case string into a camel-case string.
@@ -128,12 +135,9 @@ function unify(doc: string, file: VFile, userSettings: Settings) {
   // Keep elements that only held whitespace (`cascade: false`), and drop every whitespace-only
   // text, not just the ones whose first whitespace run is all there is.
   tree = settings?.removeWhiteSpace
-    ? filter(tree, { cascade: false }, (node: XastNode) => {
-        return !(
-          //@ts-expect-error ITS FINE
-          node.type === 'text' && node.value.trim() === ''
-        )
-      }) || tree
+    ? (filter(tree, { cascade: false }, (node: Node) => {
+        return !(node.type === 'text' && (node as Text).value.trim() === '')
+      }) as RootWithSource | undefined) || tree
     : tree
 
   const entries = Object.entries(file.data)
@@ -222,12 +226,6 @@ function unify(doc: string, file: VFile, userSettings: Settings) {
  * The parsed content of .xml files in the .docx file
  */
 export type Parsed = NonNullable<DocxVFileData['parsed']>
-
-declare module 'vfile' {
-  // `parsed` and `relations` are declared by `docx-to-vfile`.
-  // eslint-disable-next-line @typescript-eslint/no-empty-interface
-  interface DataMap extends DocxVFileData {}
-}
 
 export function relToJSON(rels: string) {
   return Object.fromEntries(

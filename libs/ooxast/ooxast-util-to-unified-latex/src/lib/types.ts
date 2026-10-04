@@ -243,6 +243,16 @@ export interface Options {
    * ```
    */
   preamble?: UnifiedLatexNode[] | string
+
+  /**
+   * What to do with citations
+   *
+   * - `plain`: Just output the citation as plain text
+   * - `cite`: Use the `\cite` or equiv commands
+   *
+   * @default 'cite'
+   */
+  citations?: 'plain' | 'cite'
 }
 
 export type Handle = (
@@ -378,6 +388,10 @@ export interface Context {
    * Paragraph style ids mapped to their names, from `word/styles.xml`
    */
   styleNames: StyleNames
+  /**
+   * What to do with citations: `plain` keeps the text Word shows, `cite` makes `\cite`s
+   */
+  citations: 'plain' | 'cite'
 }
 
 export type HWithProps = (

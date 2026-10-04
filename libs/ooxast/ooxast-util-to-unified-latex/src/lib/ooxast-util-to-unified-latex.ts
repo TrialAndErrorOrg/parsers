@@ -63,6 +63,7 @@ export const defaultOptions: Options = {
   ],
   paragraphHandlers: defaultParagraphHandlers,
   formattingHandlers: defaultFormattingHandlers,
+  citations: 'cite',
 }
 
 function preambleHasTitle(preamble: NonNullable<Options['preamble']>) {
@@ -193,6 +194,7 @@ export function toUnifiedLatex(
       ),
       paragraphHandlers: options.paragraphHandlers || defaultParagraphHandlers,
       formattingHandlers: options.formattingHandlers || defaultFormattingHandlers,
+      citations: options.citations ?? 'cite',
     } as Context,
   )
 

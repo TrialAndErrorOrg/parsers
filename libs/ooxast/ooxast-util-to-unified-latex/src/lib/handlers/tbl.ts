@@ -11,12 +11,9 @@ export const tbl: Handle = (h: H, tbl: Tbl) => {
   const contents = all(h, tbl)
   h.inTable = nested
 
-  // tabularx needs X columns to stretch the table to its width
-  const column = h.tabularx?.width ? 'X' : h.defaultCol
-  const columns = Array.from(
-    { length: columnCount(tbl) },
-    () => `${column}${h.columnSeparator ? ' |' : ''}`,
-  ).join(' ')
+  const columns = columnSpecs(h, tbl)
+    .map((spec) => `${spec}${h.columnSeparator ? ' |' : ''}`)
+    .join(' ')
 
   const colArg = `@{} ${h.columnSeparator ? '| ' : ''}${columns} @{}`
   const tabular = h.tabularx?.width
@@ -30,6 +27,43 @@ export const tbl: Handle = (h: H, tbl: Tbl) => {
   // A table inside a table cell can't be a float. A nested tabularx has to be in a group:
   // the outer one collects its body up to the first `\end{tabularx}`.
   return h.tabularx?.width ? ({ type: 'group', content: [tabular] } as Group) : tabular
+}
+
+/**
+ * One column spec per column. Columns of equal width get `defaultCol` (`X` with tabularx, which
+ * needs X columns to stretch the table). When the `w:tblGrid` gives columns of different widths,
+ * they keep their proportions: `p{}` columns of the line width, or weighted `X` columns.
+ */
+export function columnSpecs(h: H, tbl: Tbl): string[] {
+  const count = columnCount(tbl)
+  const uniform = h.tabularx?.width ? 'X' : h.defaultCol
+  const widths = gridWidths(tbl)
+
+  const total = widths.reduce((sum, width) => sum + width, 0)
+  const share = (width: number, scale = 1) => Number(((width / total) * scale).toFixed(3))
+
+  // Word's grids are rarely exactly even: columns within 5% of the average count as equal
+  const even = widths.every((width) => Math.abs(width * widths.length - total) <= total * 0.05)
+  if (widths.length !== count || even) {
+    return Array.from({ length: count }, () => uniform)
+  }
+
+  return widths.map((width) =>
+    h.tabularx?.width
+      ? `>{\\hsize=${share(width, count)}\\hsize}X`
+      : `p{\\dimexpr ${share(width)}\\linewidth-2\\tabcolsep\\relax}`,
+  )
+}
+
+/** The `w:w` of every `w:gridCol`, or nothing if any is missing */
+function gridWidths(tbl: Tbl): number[] {
+  const grid = ((tbl.children ?? []) as unknown[]).find((child) =>
+    isElement(child, 'w:tblGrid'),
+  ) as Element | undefined
+  const widths = (grid?.children ?? [])
+    .filter((col): col is Element => isElement(col, 'w:gridCol'))
+    .map((col) => parseInt(col.attributes?.['w:w'] ?? '', 10))
+  return widths.every((width) => width > 0) ? widths : []
 }
 
 const isElement = (node: unknown, name: string): node is Element =>

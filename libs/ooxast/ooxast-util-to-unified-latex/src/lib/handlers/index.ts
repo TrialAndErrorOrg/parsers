@@ -17,6 +17,7 @@ import { tc } from './tc.js'
 import { footnoteReference } from './footnoteReference.js'
 import { oMath } from './oMath.js'
 import { hyperlink } from './hyperlink.js'
+import { eqArr } from './eqArr.js'
 
 export const handlers: Context['handlers'] = {
   p,
@@ -30,6 +31,7 @@ export const handlers: Context['handlers'] = {
   t: all,
   oMathPara: oMathPara,
   oMath,
+  eqArr,
   r,
   instrText: citation,
   tbl,

@@ -17,9 +17,12 @@ import { convertElement, isElement } from 'xast-util-is-element'
 import { s } from '@unified-latex/unified-latex-builder'
 
 export const citation: Handle = (h: H, citationNode: T, parent?: Parent) => {
-  // i const t = select('', citation) as T
-  //  if (!t) return
   if (!citationNode || !citationNode?.children?.length) return
+
+  // keep the field's displayed text instead of turning it into a \cite
+  if (h.citations === 'plain') {
+    return
+  }
 
   const text = citationNode.children[0].value
 

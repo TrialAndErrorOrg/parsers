@@ -1,11 +1,15 @@
 {
-  "name": "jast",
+  "name": "unified-ast-stringify",
   "version": "0.0.1",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/ast-stringify"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ast-stringify#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "",
   "keywords": [
     "unified",
     "abstract",
@@ -13,9 +17,25 @@
     "tree",
     "ast"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "dependencies": {
-    "jast-types": "*",
-    "a": "b",
-    "unified": "^10.1.2"
+    "jast-types": "workspace:^",
+    "unified": "catalog:"
   }
 }

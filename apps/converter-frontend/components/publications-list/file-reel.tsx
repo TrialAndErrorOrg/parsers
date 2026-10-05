@@ -50,7 +50,7 @@ export const FileReel = (props: {
   const stagesss = [
     '',
     'Submission',
-    ...(new Array(reviewRounds)?.flatMap((_, index) => [
+    ...(Array.from({ length: reviewRounds }).flatMap((_, index) => [
       `Pre-Review ${index + 1}`,
       `Post-Review ${index + 1}`,
     ]) || []),

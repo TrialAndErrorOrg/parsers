@@ -72,43 +72,46 @@ export function findListNumbering(numbering: string | Root) {
         return acc
       }
 
-      const data = child.children.reduce((acc, child) => {
-        if (child.type !== 'element' || child.name !== 'w:lvl') {
+      const data = child.children.reduce(
+        (acc, child) => {
+          if (child.type !== 'element' || child.name !== 'w:lvl') {
+            return acc
+          }
+
+          const lvlId = child.attributes?.['w:ilvl']
+
+          if (!lvlId) {
+            return acc
+          }
+
+          const lvlText = child.children.find(
+            (child): child is LevelText => child.type === 'element' && child.name === 'w:lvlText',
+          )
+
+          const lvlJc = child.children.find(
+            (child): child is Jc => child.type === 'element' && child.name === 'w:lvlJc',
+          )
+
+          const numFmt = child.children.find(
+            (child): child is NumFmt => child.type === 'element' && child.name === 'w:numFmt',
+          )
+
+          const start = child.children.find(
+            (child): child is StringTag<'start'> =>
+              child.type === 'element' && child.name === 'w:start',
+          )
+
+          acc[lvlId] = {
+            lvlText: lvlText?.attributes?.['w:val'] || '',
+            lvlJc: lvlJc?.attributes?.['w:val'] || '',
+            numFmt: numFmt?.attributes?.['w:val'] || '',
+            start: start?.attributes?.['w:val'] || '',
+          }
+
           return acc
-        }
-
-        const lvlId = child.attributes?.['w:ilvl']
-
-        if (!lvlId) {
-          return acc
-        }
-
-        const lvlText = child.children.find(
-          (child): child is LevelText => child.type === 'element' && child.name === 'w:lvlText',
-        )
-
-        const lvlJc = child.children.find(
-          (child): child is Jc => child.type === 'element' && child.name === 'w:lvlJc',
-        )
-
-        const numFmt = child.children.find(
-          (child): child is NumFmt => child.type === 'element' && child.name === 'w:numFmt',
-        )
-
-        const start = child.children.find(
-          (child): child is StringTag<'start'> =>
-            child.type === 'element' && child.name === 'w:start',
-        )
-
-        acc[lvlId] = {
-          lvlText: lvlText?.attributes?.['w:val'] || '',
-          lvlJc: lvlJc?.attributes?.['w:val'] || '',
-          numFmt: numFmt?.attributes?.['w:val'] || '',
-          start: start?.attributes?.['w:val'] || '',
-        }
-
-        return acc
-      }, {} as ListNumbering['abstractNumIds'][string])
+        },
+        {} as ListNumbering['abstractNumIds'][string],
+      )
 
       acc.abstractNumIds[abstractNumId] = data
 

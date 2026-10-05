@@ -3,12 +3,10 @@ import { Parent, T } from 'ooxast'
 import { Data as CSL } from 'csl-json'
 import { CitationItem, MendeleyCitationItem } from 'ooxast-util-citations'
 
-export function citation(j: J, citation: T, parent: Parent) {
-  // i const t = select('', citation) as T
-  //  if (!t) return
-  if (!citation || !citation?.children?.length) return
+export function citation(j: J, instrText: T, parent: Parent) {
+  if (!instrText || !instrText?.children?.length) return
 
-  const text = citation.children[0].value
+  const text = instrText.children[0].value
 
   if (text.includes('PAGE \\* MERGEFORMAT')) return
 
@@ -95,8 +93,9 @@ export function citation(j: J, citation: T, parent: Parent) {
 
         const { id, itemData: itemdata, ...rest } = cite
         const customCiteData = { ...rest, ...citation.properties }
+        // The xref takes the position of the field code it came from.
         return j(
-          itemData,
+          instrText,
           'xref',
           {
             id: `_xref-${j.citationNumber}`,

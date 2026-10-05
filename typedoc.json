@@ -12,7 +12,7 @@
     "libs/citations/*",
     "libs/xast/*"
   ],
-  "exclude": ["libs/citations/apa-parser", "libs/ooxast/ooxast-util-to-hast"],
+  "exclude": ["libs/ooxast/ooxast-util-to-hast"],
   "hideBreadcrumbs": true,
   "hideInPageTOC": true,
   "gitRevision": "main",

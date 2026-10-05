@@ -4,25 +4,23 @@ import { createState } from './state.js'
 import { fromXml } from 'xast-util-from-xml'
 
 import { MdastNode, MdastRoot, Options, Root, Element, Text, Node } from './types.js'
-import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
+import { minifyWhitespace } from 'xast-util-minify-whitespace'
 
 import { VFile } from 'vfile'
+import type { DocxVFileData } from 'docx-to-vfile'
 import { findListNumbering } from './util/find-list-numbering.js'
 
 export { handlers as defaultHandlers }
 
+declare module 'vfile' {
+  // `parsed` and `relations` are declared by `docx-to-vfile`.
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface DataMap extends DocxVFileData {}
+}
+
 const defaultOptions: Options = {
   newLines: false,
   quotes: ['"'],
-}
-
-declare module 'vfile' {
-  interface DataMap {
-    [xml: `${string}.xml` | `${string}.rels`]: string | undefined
-    parsed: {
-      [key: `${string}.xml` | `${string}.rels`]: Root | undefined
-    }
-  }
 }
 
 export function toMdast(tree: Root | Element | Text, file: VFile, options?: Options): MdastRoot
@@ -43,12 +41,16 @@ export function toMdast(
     ? [vfile?.data?.parsed?.['word/footnotes.xml'], vfile?.data?.parsed?.['word/endnotes.xml']]
     : []
 
-  // We have to clone, cause we’ll use `rehype-minify-whitespace` on the tree,
+  // We have to clone, cause we’ll use `minifyWhitespace` on the tree,
   // which modifies
   /** @type {Node} */
   const cleanTree: Node = JSON.parse(JSON.stringify(tree))
   const options_ = options || {}
-  const state = createState(options_)
+  // Relations (image and link targets) come from the options or, since docx-to-vfile 0.7,
+  // per part (document/footnotes/endnotes) from the VFile.
+  const relationsFor = (part: 'document' | 'footnotes' | 'endnotes') =>
+    options_.relations ?? vfile?.data?.relations?.[part] ?? {}
+  const state = createState({ ...options_, relations: relationsFor('document') })
 
   const numberingXml =
     vfile?.data?.parsed?.['word/numbering.xml'] ?? vfile?.data?.['word/numbering.xml']
@@ -60,8 +62,7 @@ export function toMdast(
   /** @type {MdastNode | MdastRoot} */
   let mdast: MdastNode | MdastRoot
 
-  // @ts-expect-error: does return a transformer, that does accept any node.
-  rehypeMinifyWhitespace({ newlines: options_.newlines === true })(cleanTree)
+  minifyWhitespace(cleanTree, { newlines: options_.newLines === true })
 
   const result = state.one(cleanTree, undefined)
 
@@ -75,14 +76,14 @@ export function toMdast(
 
   state.simpleParagraph = true
   if (unparsedFootnotes) {
-    // @ts-expect-error shhh
-    rehypeMinifyWhitespace()(unparsedFootnotes)
+    state.relations = relationsFor('footnotes')
+    minifyWhitespace(unparsedFootnotes)
     mdast.children.push(...state.all(unparsedFootnotes))
   }
 
   if (unparsedEndnotes) {
-    // @ts-expect-error shhh
-    rehypeMinifyWhitespace()(unparsedEndnotes)
+    state.relations = relationsFor('endnotes')
+    minifyWhitespace(unparsedEndnotes)
     mdast.children.push(...state.all(unparsedEndnotes))
   }
   state.simpleParagraph = false

@@ -10,9 +10,7 @@ const handle = zwitch('operator', {
   /**
    * TODO: Why doesnt TS-expect-error work reee
    */
-  //// @ts-expect-error: hush.
   unknown: unknownOperator as any,
-  //// @ts-expect-error: hush.
   invalid: exists as any,
   handlers: {
     '=': exact as any,
@@ -66,8 +64,8 @@ function exists(_: RuleAttr, element: Element, info: Info): boolean {
 function exact(query: RuleAttr, element: Element, info: Info): boolean {
   return Boolean(
     hasAttribute(element, info.attribute) &&
-      element.attributes &&
-      normalizeValue(element.attributes[info.attribute], info) === query.value,
+    element.attributes &&
+    normalizeValue(element.attributes[info.attribute], info) === query.value,
   )
 }
 
@@ -110,10 +108,10 @@ function exactOrPrefix(query: RuleAttr, element: Element, info: Info): boolean {
 
   return Boolean(
     hasAttribute(element, info.attribute) &&
-      query.value &&
-      (value === query.value ||
-        (value.slice(0, query.value.length) === query.value &&
-          value.charAt(query.value.length) === '-')),
+    query.value &&
+    (value === query.value ||
+      (value.slice(0, query.value.length) === query.value &&
+        value.charAt(query.value.length) === '-')),
   )
 }
 
@@ -128,10 +126,10 @@ function exactOrPrefix(query: RuleAttr, element: Element, info: Info): boolean {
 function begins(query: RuleAttr, element: Element, info: Info): boolean {
   return Boolean(
     hasAttribute(element, info.attribute) &&
-      element.attributes &&
-      query.value &&
-      normalizeValue(element.attributes[info.attribute], info).slice(0, query.value.length) ===
-        query.value,
+    element.attributes &&
+    query.value &&
+    normalizeValue(element.attributes[info.attribute], info).slice(0, query.value.length) ===
+      query.value,
   )
 }
 
@@ -146,10 +144,10 @@ function begins(query: RuleAttr, element: Element, info: Info): boolean {
 function ends(query: RuleAttr, element: Element, info: Info): boolean {
   return Boolean(
     hasAttribute(element, info.attribute) &&
-      element.attributes &&
-      query.value &&
-      normalizeValue(element.attributes[info.attribute], info).slice(-query.value.length) ===
-        query.value,
+    element.attributes &&
+    query.value &&
+    normalizeValue(element.attributes[info.attribute], info).slice(-query.value.length) ===
+      query.value,
   )
 }
 
@@ -164,9 +162,9 @@ function ends(query: RuleAttr, element: Element, info: Info): boolean {
 function contains(query: RuleAttr, element: Element, info: Info): boolean {
   return Boolean(
     hasAttribute(element, info.attribute) &&
-      element.attributes &&
-      query.value &&
-      normalizeValue(element.attributes[info.attribute], info).includes(query.value),
+    element.attributes &&
+    query.value &&
+    normalizeValue(element.attributes[info.attribute], info).includes(query.value),
   )
 }
 

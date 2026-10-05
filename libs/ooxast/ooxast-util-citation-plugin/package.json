@@ -1,9 +1,14 @@
 {
   "name": "ooxast-util-citation-plugin",
+  "version": "0.4.0",
   "description": "Small ooxast utility which scans the text to identify the citation plugin used, either Mendely, Zotero, EndNote, Citavi, native word citations or none at all.",
-  "version": "0.3.0",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/ooxast/ooxast-util-citation-plugin"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-citation-plugin#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
   "keywords": [
@@ -13,31 +18,39 @@
     "ooxast",
     "citation"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "ooxast-util-citation-plugin",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "ooxast": "0.3.0",
-    "xast-util-is-element": "0.3.1",
-    "unist-util-visit": "^4.1.2",
-    "xast-util-to-string": "^2.0.1",
-    "@types/unist": "^2.0.6"
+    "@types/unist": "catalog:",
+    "ooxast": "workspace:^",
+    "unist-util-visit": "catalog:",
+    "xast-util-is-element": "workspace:^",
+    "xast-util-to-string": "catalog:"
+  },
+  "devDependencies": {
+    "docx-to-vfile": "workspace:^",
+    "reoff-parse": "workspace:^",
+    "unified": "catalog:"
   }
 }

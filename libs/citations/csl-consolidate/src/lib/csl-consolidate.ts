@@ -1,11 +1,19 @@
-import axios, { type AxiosResponse } from 'axios'
+import axios, { type AxiosInstance, type AxiosResponse } from 'axios'
 import type { Data as CSL } from 'csl-json'
-import RateLimit from '@hokify/axios-rate-limit'
-import flatTry from 'flatry'
+import axiosRateLimit from '@hokify/axios-rate-limit'
+import flatryModule from 'flatry'
 import similarity from 'similarity'
 import { crossrefToCsl } from 'crossref-to-csl'
 import type { CrossrefJSON, CrossrefResponse } from 'crossref-json'
-import type { PickByValue } from 'utility-types/dist/mapped-types'
+import type { PickByValue } from 'utility-types'
+
+/** CommonJS modules with `exports.default`: Node's ESM loader hands us `module.exports`, bundlers `exports.default`. */
+function interopDefault<T>(mod: T): T extends { default: infer D } ? D : T {
+  return (mod && typeof mod === 'object' && 'default' in mod ? mod.default : mod) as never
+}
+
+const RateLimit = interopDefault(axiosRateLimit)
+const flatTry = interopDefault(flatryModule)
 /**
  * Try to resolve a list of CSL data with crossref metadata
  */
@@ -17,11 +25,12 @@ export async function consolidate(
     //  accept?: string
   },
 ) {
-  const http = RateLimit(axios.create(), {
+  // axios-rate-limit is typed against axios' CommonJS declarations, this module sees the ESM ones.
+  const http = RateLimit(axios.create() as unknown as Parameters<typeof RateLimit>[0], {
     // maxRequests: 20,
     // perMilliseconds: 1000,
     maxRPS: 50,
-  })
+  }) as unknown as AxiosInstance
 
   const crossRefResponses: (Promise<AxiosResponse<any, any>> | CSL)[] = []
   // this is a bad solution because i cannot work with promises

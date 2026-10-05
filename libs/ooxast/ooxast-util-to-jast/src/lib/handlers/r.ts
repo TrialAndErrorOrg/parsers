@@ -27,7 +27,7 @@ export function r(j: J, node: R) {
   if (footnoteReference) {
     return x(
       'xref',
-      { refType: 'fn' },
+      { refType: 'fn', rid: `fn-${footnoteReference.attributes?.['w:id']}` },
       { type: 'text', value: `[${footnoteReference.attributes?.['w:id']}]` },
     )
   }

@@ -60,10 +60,10 @@ export const metaToPreamble = (form: MetaForm): string => {
                 (value as Author[]).length > 3
                   ? ' et al.'
                   : (value as Author[]).length === 3
-                  ? `, ${(value as Author[])[1].familyName}, \\& ${(value as Author[])[2].familyName}`
-                  : (value as Author[]).length === 2
-                  ? `& ${(value as Author[])[1].familyName}`
-                  : ''
+                    ? `, ${(value as Author[])[1].familyName}, \\& ${(value as Author[])[2].familyName}`
+                    : (value as Author[]).length === 2
+                      ? `& ${(value as Author[])[1].familyName}`
+                      : ''
               }}`,
             ]
           : []),

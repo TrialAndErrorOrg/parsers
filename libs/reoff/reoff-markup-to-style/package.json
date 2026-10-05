@@ -1,12 +1,16 @@
 {
   "name": "reoff-markup-to-style",
-  "version": "0.2.0",
+  "version": "0.3.0",
+  "description": "Plugin for `reoff` that is able to change the styles of paragraphs based on the markup of the underlying text",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/reoff-markup-to-style",
-  "homepage": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/reoff/reoff-markup-to-style"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-markup-to-style#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Plugin for `reoff` that is able to change the styles of paragraphs based on the markup of the underlying text",
   "keywords": [
     "unified",
     "abstract",
@@ -14,29 +18,31 @@
     "tree",
     "ast"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "reoff-markup-to-style",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "ooxast-util-markup-to-style": "0.4.0",
-    "ooxast": "0.3.0",
-    "unified": "^10.1.2"
+    "ooxast": "workspace:^",
+    "ooxast-util-markup-to-style": "workspace:^",
+    "unified": "catalog:"
   }
 }

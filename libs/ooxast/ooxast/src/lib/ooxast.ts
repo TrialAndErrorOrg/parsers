@@ -16,6 +16,11 @@ export type {
   XastLiteral as Literal,
   XastAttributes as Attributes,
 }
+/**
+ * ooxast nodes are xast nodes, so they share xast's `Data` registries. To register fields,
+ * augment `xast`, e.g. `declare module 'xast' { interface ElementData { someField?: string } }`.
+ */
+export type { Data, ElementData, RootData } from 'xast'
 import { document, Text } from './ooxml/wordprocessingml/main.js'
 
 export type Root = XastRoot & {

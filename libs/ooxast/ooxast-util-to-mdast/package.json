@@ -1,11 +1,16 @@
 {
   "name": "ooxast-util-to-mdast",
   "version": "0.2.0",
+  "description": "Convert `ooxast` syntax tree to `mdast` syntax tree.",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/ooxast/ooxast-util-to-mdast"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-mdast#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Convert `ooxast` syntax tree to `mdast` syntax tree.",
   "keywords": [
     "unified",
     "word",
@@ -16,49 +21,61 @@
     "mdast",
     "markdown"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "ooxast-util-to-unified-latex",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "ooxast": "0.2.0",
-    "ooxast-util-citations": "0.3.0",
-    "xast-util-select": "0.2.0",
-    "xast-util-is-element": "0.2.0",
-    "xast-util-to-string": "^2.0.1",
-    "mdast-builder": "^1.1.1",
+    "@types/mdast": "catalog:",
+    "@types/unist": "catalog:",
+    "@types/xast": "catalog:",
     "csl-json": "0.1.0",
-    "@benrbray/micromark-extension-cite": "^1.0.0",
-    "@benrbray/mdast-util-cite": "^1.1.0",
-    "mdast-util-math": "^2.0.2",
-    "mdast-util-to-string": "^3.2.0",
-    "@unified-latex/unified-latex-builder": "^1.3.1",
-    "xast-util-from-xml": "^3.0.0",
-    "rehype-minify-whitespace": "^5.0.0",
-    "vfile": "^5.3.7",
-    "unist-util-position": "^4.0.4",
+    "docx-to-vfile": "workspace:^",
     "extend": "^3.0.2",
-    "mdast-util-phrasing": "^3.0.1",
-    "hast-util-whitespace": "^2.0.1",
-    "@types/mdast": "^3.0.11",
-    "@types/unist": "^2.0.6",
-    "@types/xast": "^1.0.2",
-    "@types/extend": "^3.0.1"
+    "mdast-util-math": "catalog:",
+    "mdast-util-phrasing": "catalog:",
+    "mdast-util-to-string": "catalog:",
+    "ooxast": "workspace:^",
+    "ooxast-util-citations": "workspace:^",
+    "unist-util-position": "catalog:",
+    "vfile": "catalog:",
+    "xast-util-from-xml": "catalog:",
+    "xast-util-is-element": "workspace:^",
+    "xast-util-minify-whitespace": "workspace:^",
+    "xast-util-select": "workspace:^",
+    "xast-util-to-string": "catalog:"
+  },
+  "devDependencies": {
+    "@benrbray/remark-cite": "catalog:",
+    "@types/extend": "^3.0.4",
+    "remark-gfm": "catalog:",
+    "remark-math": "catalog:",
+    "remark-stringify": "catalog:",
+    "reoff-cite": "workspace:^",
+    "reoff-clean": "workspace:^",
+    "reoff-parse": "workspace:^",
+    "reoff-parse-references": "workspace:^",
+    "unified": "catalog:",
+    "unist-util-remove-position": "catalog:",
+    "xastscript": "catalog:"
   }
 }

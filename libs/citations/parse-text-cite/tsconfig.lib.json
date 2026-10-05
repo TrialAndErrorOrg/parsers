@@ -1,11 +1,21 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../../dist/out-tsc",
-    "declaration": true,
-    "types": ["node", "jest"],
-    "noImplicitAny": false
+    "noEmit": false,
+    "rootDir": "src",
+    "outDir": "dist",
+    "customConditions": []
   },
-  "exclude": ["**/*.spec.ts", "**/*.test.ts", "jest.config.js"],
-  "include": ["**/*.ts", "jest.config.js"]
+  "include": ["src"],
+  "exclude": [
+    "src/**/*.spec.ts",
+    "src/**/*.test.ts",
+    "src/**/test/**",
+    "src/**/spec/**",
+    "src/**/__tests__/**",
+    "src/**/fixtures/**",
+    "src/lib/testcites.ts",
+    "src/lib/testcites copy.ts",
+    "src/lib/testnames.ts"
+  ]
 }

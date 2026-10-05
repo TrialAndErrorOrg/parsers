@@ -1,11 +1,16 @@
 {
   "name": "ooxast-util-to-jast",
   "version": "0.1.0",
+  "description": "Util to convert `ooxast` syntax tree to `jast` syntax tree, allowing for `.docx` to `JATS XML` conversion.",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/ooxast/ooxast-util-to-jast"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-to-jast#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Util to convert `ooxast` syntax tree to `jast` syntax tree, allowing for `.docx` to `JATS XML` conversion.",
   "keywords": [
     "unified",
     "word",
@@ -17,41 +22,44 @@
     "jats-xml",
     "ooxast"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "ooxast-util-to-jast",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "ooxast": "0.3.0",
-    "xast-util-is-element": "0.3.1",
-    "ooxast-util-citations": "0.4.0",
-    "jast-types": "0.1.2",
-    "xast-util-select": "0.3.0",
-    "ooxast-util-properties": "0.1.1",
-    "jast-util-from-csl": "0.1.1",
-    "reoff-parse": "0.5.0",
+    "@types/unist": "catalog:",
+    "@types/xast": "catalog:",
     "csl-json": "0.1.0",
-    "xastscript": "^3.1.1",
-    "unist-util-is": "^5.2.1",
-    "rehype-minify-whitespace": "^5.0.0",
-    "vfile": "^5.3.7",
-    "@types/unist": "^2.0.6",
-    "@types/xast": "^1.0.2"
+    "docx-to-vfile": "workspace:^",
+    "jast-types": "workspace:^",
+    "jast-util-from-csl": "workspace:^",
+    "ooxast": "workspace:^",
+    "ooxast-util-citations": "workspace:^",
+    "ooxast-util-properties": "workspace:^",
+    "unist-util-is": "catalog:",
+    "vfile": "catalog:",
+    "xast-util-is-element": "workspace:^",
+    "xast-util-minify-whitespace": "workspace:^",
+    "xast-util-select": "workspace:^",
+    "xastscript": "catalog:"
   }
 }

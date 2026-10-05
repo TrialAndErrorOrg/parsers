@@ -57,14 +57,15 @@ export const useConversionStore = create<ConversionState>()((set) => ({
   selectedSubmission: null,
   setInput: (input: ArrayBuffer) => set({ input }),
   clearInput: () => set({ input: null, output: null }),
-  setPreamble: (form: MetaForm) => set({
-    preamble: metaToPreamble(form),
-    documentClassName: form.documentclassname || 'jote-new-article',
-    documentClassOptions: (form.documentclassopt || 'authordate, empirical')
-      .split(',')
-      .map((s) => s.trim())
-      .filter(Boolean),
-  }),
+  setPreamble: (form: MetaForm) =>
+    set({
+      preamble: metaToPreamble(form),
+      documentClassName: form.documentclassname || 'jote-new-article',
+      documentClassOptions: (form.documentclassopt || 'authordate, empirical')
+        .split(',')
+        .map((s) => s.trim())
+        .filter(Boolean),
+    }),
   setPreambleRaw: (preamble: string) => set({ preamble }),
   setOutput: (output: string) => set({ output }),
   setSelectedSubmission: (submission) => set({ selectedSubmission: submission }),

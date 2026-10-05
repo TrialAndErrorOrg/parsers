@@ -1603,25 +1603,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "While there are key models that go some way towards explaining how pain can persist without active tissue damage "
+                          "value": ". While there are key models that go some way towards explaining how pain can persist without active tissue damage "
                         }
                       ]
                     }
@@ -2520,25 +2502,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Variables of interest in the entity, which is often a single participant, are measured repeatedly over "
+                          "value": ". Variables of interest in the entity, which is often a single participant, are measured repeatedly over "
                         }
                       ]
                     }
@@ -2708,25 +2672,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "SCEs may be preferable to group-based designs, where the existence or magnitude of the effect "
+                          "value": ". SCEs may be preferable to group-based designs, where the existence or magnitude of the effect "
                         }
                       ]
                     }
@@ -3114,25 +3060,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Additionally, replication using multiple participants strengthens external validity and generalizability of the results "
+                          "value": ". Additionally, replication using multiple participants strengthens external validity and generalizability of the results "
                         }
                       ]
                     }
@@ -3232,25 +3160,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "In our study design, we incorporated both randomization and replication to enhance internal and external validity of the experiment. "
+                          "value": ". In our study design, we incorporated both randomization and replication to enhance internal and external validity of the experiment. "
                         }
                       ]
                     }
@@ -3501,25 +3411,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "This aggregation approach obscures the true, within-individual effect, and the between-individual variability of that effect (which, itself, is typically worthy of attention; "
+                          "value": ". This aggregation approach obscures the true, within-individual effect, and the between-individual variability of that effect (which, itself, is typically worthy of attention; "
                         }
                       ]
                     }
@@ -3619,25 +3511,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Of course, it is possible to consider within-individual changes in some group designs, but an SCE offers a superior approach to achieving a sufficiently powered (> 80%) examination of within-subject effects "
+                          "value": ". Of course, it is possible to consider within-individual changes in some group designs, but an SCE offers a superior approach to achieving a sufficiently powered (> 80%) examination of within-subject effects "
                         }
                       ]
                     }
@@ -3737,25 +3611,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Whereas traditional group-based designs generate knowledge on the population level only, SCEs generate knowledge at the level of the individual. "
+                          "value": ". Whereas traditional group-based designs generate knowledge on the population level only, SCEs generate knowledge at the level of the individual. "
                         }
                       ]
                     }
@@ -4009,25 +3865,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Traditionally, visual analysis was the preferred method for analyzing SCE data, but researchers now recommend quantitative statistical analysis to complement visual analysis "
+                          "value": ". Traditionally, visual analysis was the preferred method for analyzing SCE data, but researchers now recommend quantitative statistical analysis to complement visual analysis "
                         }
                       ]
                     }
@@ -4127,25 +3965,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Specifically, for experiments involving user-reported ordinal data, such as the current experiment, nonparametric statistical methods may be best suited for analysis, as the observed data may not adhere to distributional assumptions required for popular parametric methods. "
+                          "value": ". Specifically, for experiments involving user-reported ordinal data, such as the current experiment, nonparametric statistical methods may be best suited for analysis, as the observed data may not adhere to distributional assumptions required for popular parametric methods. "
                         }
                       ]
                     }
@@ -4305,25 +4125,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "RTs derive their validity from the random assignment of treatment conditions to experimental units, which in the case of SCEs, are measurement occasions "
+                          "value": ". RTs derive their validity from the random assignment of treatment conditions to experimental units, which in the case of SCEs, are measurement occasions "
                         }
                       ]
                     }
@@ -4423,25 +4225,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "RTs do not require any distributional assumptions for the observed data. "
+                          "value": ". RTs do not require any distributional assumptions for the observed data. "
                         }
                       ]
                     }
@@ -4559,25 +4343,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "In our study design, we implemented a customized RT using a mean difference effect size measure as the test statistic. "
+                          "value": ". In our study design, we implemented a customized RT using a mean difference effect size measure as the test statistic. "
                         }
                       ]
                     }
@@ -4775,25 +4541,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Several guidelines recommend a power analysis or at least a methodical description of how sample size was determined "
+                          "value": ". Several guidelines recommend a power analysis or at least a methodical description of how sample size was determined "
                         }
                       ]
                     }
@@ -4893,25 +4641,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "In the context of SCEs, power analysis can be used to determine the number of measurements necessary, and for studies with replication, the number of participants."
+                          "value": ". In the context of SCEs, power analysis can be used to determine the number of measurements necessary, and for studies with replication, the number of participants."
                         }
                       ]
                     }
@@ -5039,25 +4769,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Several studies have estimated the power of SCE RTs for various design conditions "
+                          "value": ". Several studies have estimated the power of SCE RTs for various design conditions "
                         }
                       ]
                     }
@@ -5157,25 +4869,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Although the results from these studies can be used as a reference, they are true only for the design parameters and simulated data distributions considered. "
+                          "value": ". Although the results from these studies can be used as a reference, they are true only for the design parameters and simulated data distributions considered. "
                         }
                       ]
                     }
@@ -6020,25 +5714,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "The trials of interest are the CS/"
+                          "value": ". The trials of interest are the CS/"
                         }
                       ]
                     }
@@ -6436,25 +6112,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Stimulus onset and timing are controlled using Affect 4.0 "
+                          "value": ". Stimulus onset and timing are controlled using Affect 4.0 "
                         }
                       ]
                     }
@@ -6554,25 +6212,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "A vibrotactile stimulus is delivered to the skin using tactors manufactured by Dancer Design taped to the participant’s skin "
+                          "value": ". A vibrotactile stimulus is delivered to the skin using tactors manufactured by Dancer Design taped to the participant’s skin "
                         }
                       ]
                     }
@@ -6672,25 +6312,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "This stimulus is of fixed duration and a clearly perceptible intensity. "
+                          "value": ". This stimulus is of fixed duration and a clearly perceptible intensity. "
                         }
                       ]
                     }
@@ -7521,25 +7143,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "The stimulation intensity is calibrated individually. "
+                          "value": ". The stimulation intensity is calibrated individually. "
                         }
                       ]
                     }
@@ -7948,25 +7552,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Participants are asked to bend backwards to identify the point at which the greatest bend is seen. "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "A point in the upper lumbar region is marked on the back, 2cm to the left of the spine, where the electrodes are placed such that the mark lies exactly between them. "
+                          "value": "Participants are asked to bend backwards to identify the point at which the greatest bend is seen. A point in the upper lumbar region is marked on the back, 2cm to the left of the spine, where the electrodes are placed such that the mark lies exactly between them. "
                         }
                       ]
                     }
@@ -8970,25 +8556,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "These trials are used to record baseline pain ratings of participants before they are conditioned to associate the painful US with a particular CS."
+                          "value": ". These trials are used to record baseline pain ratings of participants before they are conditioned to associate the painful US with a particular CS."
                         }
                       ]
                     }
@@ -9977,25 +9545,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "The SPARS is anchored at -50 (no sensation), 0 (the exact point at which the feeling transitions to pain), and 50 (worst pain imaginable). "
+                          "value": ". The SPARS is anchored at -50 (no sensation), 0 (the exact point at which the feeling transitions to pain), and 50 (worst pain imaginable). "
                         }
                       ]
                     }
@@ -10059,25 +9609,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Second, the participant indicates the location at which they feel the vibrotactile stimulus from the three options “ABOVE”, “BELOW”, and “SIDE”. "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "This is only used to confirm that the participants are identifying the location of the stimuli correctly. "
+                          "value": "Second, the participant indicates the location at which they feel the vibrotactile stimulus from the three options “ABOVE”, “BELOW”, and “SIDE”. This is only used to confirm that the participants are identifying the location of the stimuli correctly. "
                         }
                       ]
                     }
@@ -10354,25 +9886,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "For this purpose, we first convert the SPARS ratings to a binary variable: 0 for non-painful (-50 to -1 on SPARS) and 1 for painful (1 to 50 on SPARS). "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "A rating of 0 on SPARS can neither be classified as painful nor as non-painful, therefore these are considered indeterminate and were marked as missing. "
+                          "value": "For this purpose, we first convert the SPARS ratings to a binary variable: 0 for non-painful (-50 to -1 on SPARS) and 1 for painful (1 to 50 on SPARS). A rating of 0 on SPARS can neither be classified as painful nor as non-painful, therefore these are considered indeterminate and were marked as missing. "
                         }
                       ]
                     }
@@ -11346,25 +10860,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "This difference value, calculated from a pair of trials, constitutes one measurement in our SCE. "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "A simple mean difference (MD) effect size measure is calculated as the difference between the means of the difference values derived from the test trial pairs and the difference values derived from the baseline trial pairs. "
+                          "value": "This difference value, calculated from a pair of trials, constitutes one measurement in our SCE. A simple mean difference (MD) effect size measure is calculated as the difference between the means of the difference values derived from the test trial pairs and the difference values derived from the baseline trial pairs. "
                         }
                       ]
                     }
@@ -11795,25 +11291,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "For our study, a possible block consists of the two baseline (or test) trials, a CS+/ "
+                          "value": ". For our study, a possible block consists of the two baseline (or test) trials, a CS+/ "
                         }
                       ]
                     }
@@ -12268,25 +11746,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "In favor of internal validity, the phase transition is preferably randomized. "
+                          "value": ". In favor of internal validity, the phase transition is preferably randomized. "
                         }
                       ]
                     }
@@ -13203,25 +12663,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ", is set based on the required level of acquisition. "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "A lower "
+                          "value": ", is set based on the required level of acquisition. A lower "
                         }
                       ]
                     }
@@ -13331,25 +12773,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Unfortunately, this design has low acquisition of the associations as there is no learning period. "
+                          "value": ". Unfortunately, this design has low acquisition of the associations as there is no learning period. "
                         }
                       ]
                     }
@@ -13467,7 +12891,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
+                          "value": ". As a result, the experiment for a participant would need a very large number of trials over a significantly long time to ensure both high acquisition and enough measurements. "
                         }
                       ]
                     }
@@ -13485,43 +12909,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "As a result, the experiment for a participant would need a very large number of trials over a significantly long time to ensure both high acquisition and enough measurements. "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "As a result, this design is rejected in favor of a slightly modified AB phase design. "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "A similar ABAB phase design is also rejected due to the potentially large number of trials required and possibility of carry-over effects between phases. "
+                          "value": "As a result, this design is rejected in favor of a slightly modified AB phase design. A similar ABAB phase design is also rejected due to the potentially large number of trials required and possibility of carry-over effects between phases. "
                         }
                       ]
                     }
@@ -14640,25 +14028,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Instead, the experiment is to be run as a sequentially replicated AB phase design experiment. "
+                          "value": ". Instead, the experiment is to be run as a sequentially replicated AB phase design experiment. "
                         }
                       ]
                     }
@@ -14831,25 +14201,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "In this scheme, the total number of measurements and the minimum number of measurements in each phase is decided beforehand, and the intervention can start at any time point that satisfies these restrictions. "
+                          "value": ". In this scheme, the total number of measurements and the minimum number of measurements in each phase is decided beforehand, and the intervention can start at any time point that satisfies these restrictions. "
                         }
                       ]
                     }
@@ -15252,25 +14604,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": " + 1. "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "For "
+                          "value": " + 1. For "
                         }
                       ]
                     }
@@ -16040,25 +15374,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Whereas this web app does not include an option for simultaneously replicated AB phase design, it does include an MBD option. "
+                          "value": ". Whereas this web app does not include an option for simultaneously replicated AB phase design, it does include an MBD option. "
                         }
                       ]
                     }
@@ -16194,25 +15510,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Hence, we can both randomly select test phase start points and run the RT in Shiny SCDA. "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Additionally, we can plot the observed data for visual analysis in Shiny SCDA. "
+                          "value": "Hence, we can both randomly select test phase start points and run the RT in Shiny SCDA. Additionally, we can plot the observed data for visual analysis in Shiny SCDA. "
                         }
                       ]
                     }
@@ -16337,25 +15635,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "We analyzed these four tests using visual analysis and an RT in Shiny SCDA. "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "These four tests were, however, not randomized, and the test phase for all four participants started at the tenth measurement occasion. "
+                          "value": "We analyzed these four tests using visual analysis and an RT in Shiny SCDA. These four tests were, however, not randomized, and the test phase for all four participants started at the tenth measurement occasion. "
                         }
                       ]
                     }
@@ -16507,25 +15787,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "The average effect size from the first nine tests was slightly negative at -0.037, with a maximum of 0.143 and a minimum of -0.400. "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Second, the pilot tests also revealed difficulties in running the experiment for more than 30-35 minutes for a participant. "
+                          "value": "The average effect size from the first nine tests was slightly negative at -0.037, with a maximum of 0.143 and a minimum of -0.400. Second, the pilot tests also revealed difficulties in running the experiment for more than 30-35 minutes for a participant. "
                         }
                       ]
                     }
@@ -17371,25 +16633,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "The proportion of these simulated datasets in which the RT leads to a rejection of the null hypothesis gives an estimate of statistical power for the given set of simulation conditions. "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "A simulation study of such complexity is both difficult to program and computationally intensive to execute. "
+                          "value": "The proportion of these simulated datasets in which the RT leads to a rejection of the null hypothesis gives an estimate of statistical power for the given set of simulation conditions. A simulation study of such complexity is both difficult to program and computationally intensive to execute. "
                         }
                       ]
                     }
@@ -18422,25 +17666,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "For estimating power, we simulated 10000 datasets for each set of simulation conditions. "
+                          "value": ". For estimating power, we simulated 10000 datasets for each set of simulation conditions. "
                         }
                       ]
                     }
@@ -58850,25 +58076,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "The average MD effect size was -0.037, with a maximum of 0.143 and a minimum of -0.400. "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "The low effect sizes indicated that the final design would need "
+                          "value": "The average MD effect size was -0.037, with a maximum of 0.143 and a minimum of -0.400. The low effect sizes indicated that the final design would need "
                         }
                       ]
                     }
@@ -58920,25 +58128,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": " measurements and participants to achieve sufficient power in the RT. "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "The first seven of these pilot tests consisted of 10-20 measurements each, which seemed too few. "
+                          "value": " measurements and participants to achieve sufficient power in the RT. The first seven of these pilot tests consisted of 10-20 measurements each, which seemed too few. "
                         }
                       ]
                     }
@@ -59376,25 +58566,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "The average MD effect size for these participants was 0.057, with a maximum of 0.476 and a minimum of -0.250. "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Visual analysis (Figure 4) revealed that the first, third, and fourth participant did not seem to show any sign of conditioning. "
+                          "value": "The average MD effect size for these participants was 0.057, with a maximum of 0.476 and a minimum of -0.250. Visual analysis (Figure 4) revealed that the first, third, and fourth participant did not seem to show any sign of conditioning. "
                         }
                       ]
                     }
@@ -59503,25 +58675,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "-value of 0.112. "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Hence, the null hypothesis of the RT could not be rejected at a 5% level of significance. "
+                          "value": "-value of 0.112. Hence, the null hypothesis of the RT could not be rejected at a 5% level of significance. "
                         }
                       ]
                     }
@@ -60306,25 +59460,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "The first limitation is the observed variable defined by us, which only yields values of -1, 0, and 1. "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Unfortunately, this restricts variation in observed data and can cause duplicates in the randomization distribution, which can affect power. "
+                          "value": "The first limitation is the observed variable defined by us, which only yields values of -1, 0, and 1. Unfortunately, this restricts variation in observed data and can cause duplicates in the randomization distribution, which can affect power. "
                         }
                       ]
                     }
@@ -60708,25 +59844,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "AB phase designs do not satisfy the guidelines set by Kratochwill et al. "
+                          "value": ". AB phase designs do not satisfy the guidelines set by Kratochwill et al. "
                         }
                       ]
                     }
@@ -60862,25 +59980,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": "Due to the requirement of specialized equipment, we cannot use an MBD. "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Critically, we cannot increase the number of measurements due to time constraints. "
+                          "value": "Due to the requirement of specialized equipment, we cannot use an MBD. Critically, we cannot increase the number of measurements due to time constraints. "
                         }
                       ]
                     }
@@ -61591,25 +60691,7 @@
                       "children": [
                         {
                           "type": "text",
-                          "value": ". "
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "element",
-                  "name": "w:r",
-                  "attributes": {},
-                  "children": [
-                    {
-                      "type": "element",
-                      "name": "w:t",
-                      "attributes": {},
-                      "children": [
-                        {
-                          "type": "text",
-                          "value": "Hence, we intend to conduct a Monte Carlo RT in the final experiment."
+                          "value": ". Hence, we intend to conduct a Monte Carlo RT in the final experiment."
                         }
                       ]
                     }

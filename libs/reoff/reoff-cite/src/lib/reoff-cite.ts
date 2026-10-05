@@ -2,15 +2,9 @@ import type { Root } from 'ooxast'
 import type { VFile } from 'vfile'
 import type { Data as CSL } from 'csl-json'
 import type { Plugin } from 'unified'
-import type { Parsed } from 'reoff-parse'
-import type { DocxVFileData } from 'docx-to-vfile'
+// Types `file.data.parsed` (the augmentation lives in docx-to-vfile).
+import type {} from 'docx-to-vfile'
 import { findCitations, type Options } from 'ooxast-util-citations'
-
-declare module 'vfile' {
-  interface DataMap extends DocxVFileData {
-    parsed: Parsed
-  }
-}
 
 export default function reoffCite(
   options: Options = { type: 'zotero' },

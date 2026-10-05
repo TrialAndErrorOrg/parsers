@@ -1,9 +1,10 @@
 import { Node as UnistNode, Parent as UnistParent } from 'unist'
 
-import { Element } from 'xast'
+import { Element, Root as XastRoot } from 'xast'
+import type { StyleNames } from './util/style-names.js'
 import {
   Parent as HastParent,
-  Content as HastContent,
+  RootContent as HastContent,
   Root as HastRoot,
   // P as HastP,
 } from 'hast'
@@ -46,38 +47,32 @@ export interface Options {
   collectCitation?: (citation: any, index: number | string) => any
 
   relations?: { [key: string]: string }
-  pHandlers?: { matcher: string | RegExp; handler: StyleHandle }[]
+  /**
+   * Handlers for paragraphs whose style id contains `matcher` (string, lowercase) or matches it (RegExp).
+   */
+  pHandlers?: PHandler[]
+  /**
+   * The parsed `word/styles.xml`, used to recognise headings by style name.
+   */
+  styles?: XastRoot
+}
+
+export interface PHandler {
+  matcher: string | RegExp
+  handler: StyleHandle
 }
 
 export type Handle = (h: H, node: any, parent?: Parent) => HastContent | Array<HastContent> | void
 
-export type StyleHandleWithParent = (
+/**
+ * Handler for a paragraph with a specific style, called with the paragraph, its parent and its style id.
+ */
+export type StyleHandle = (
   h: H,
-  node: any,
-  parent: Parent,
-) => HastContent | Array<HastContent> | void
-export type StyleHandleWithParentWithStyle = (
-  h: H,
-  node: any,
+  node: P,
   parent: Parent,
   style: string,
 ) => HastContent | Array<HastContent> | void
-
-export type StyleHandleWithoutParentWithStyle = (
-  h: H,
-  node: any,
-  style: string,
-) => HastContent | Array<HastContent> | void
-export type StyleHandleWithoutParentWithoutStyle = (
-  h: H,
-  node: any,
-) => HastContent | Array<HastContent> | void
-
-export type StyleHandle =
-  | StyleHandleWithParent
-  | StyleHandleWithoutParentWithStyle
-  | StyleHandleWithoutParentWithoutStyle
-  | StyleHandleWithParentWithStyle
 
 export interface Context {
   nodeById?: {
@@ -109,7 +104,11 @@ export interface Context {
   relations: { [key: string]: string }
   citeKeys: { [key: string]: string }
   citationType?: 'mendeley' | 'native' | 'citavi' | 'zotero' | 'endnote'
-  pHandlers: { matcher: string | RegExp; handler: Handle }[]
+  pHandlers: PHandler[]
+  /**
+   * Paragraph style ids mapped to their names, from `word/styles.xml`
+   */
+  styleNames: StyleNames
 }
 
 export type HWithProps = (

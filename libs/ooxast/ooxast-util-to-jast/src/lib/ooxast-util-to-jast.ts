@@ -9,19 +9,21 @@ import {
   JWithProps,
   JastContent,
   JastRoot,
-  Node,
   Options,
   Attributes,
   Root,
   Element,
   Text,
 } from './types.js'
+import type { Node as UnistNode } from 'unist'
 import { convert } from 'unist-util-is'
-import rehypeMinifyWhitespace from 'rehype-minify-whitespace'
+import { minifyWhitespace } from 'xast-util-minify-whitespace'
 import { select } from 'xast-util-select'
 import { cslToRefList } from 'jast-util-from-csl'
 import { VFile } from 'vfile'
-import { Parsed } from 'reoff-parse'
+// Types `file.data.parsed` / `relations` (the augmentation lives in docx-to-vfile).
+import type {} from 'docx-to-vfile'
+import { getStyleNames } from './util/style-names.js'
 
 // export { one } from './one.js'
 // export { all } from './all.js'
@@ -40,12 +42,6 @@ const defaultOptions: Options = {
   bibname: 'References',
 }
 
-declare module 'vfile' {
-  interface DataMap {
-    parsed: Parsed
-  }
-}
-
 export function toJast(tree: Root | Element | Text, file: VFile, userOptions?: Options): JastRoot
 export function toJast(tree: Root | Element | Text, userOptions?: Options): JastRoot
 export function toJast(
@@ -53,15 +49,16 @@ export function toJast(
   optionsOrVFile?: Options | VFile,
   maybeOptions?: Options,
 ) {
+  const file = optionsOrVFile instanceof VFile ? optionsOrVFile : undefined
   const options: Options = {
     ...defaultOptions,
-    ...(optionsOrVFile instanceof VFile ? maybeOptions : optionsOrVFile),
+    ...(file ? maybeOptions : (optionsOrVFile as Options | undefined)),
   }
   // const byId: { [s: string]: Element } = {}
   let jast: JastContent | JastRoot
   const citations: { [key: string | number]: CSL } = {}
 
-  const footnotes = tree instanceof VFile ? tree?.data?.parsed?.['word/footnotes.xml'] : undefined
+  const footnotes = file?.data?.parsed?.['word/footnotes.xml']
 
   const context = {
     //  nodeById: byId,
@@ -86,12 +83,11 @@ export function toJast(
     parseCitation: options.parseCitation || parseCitation,
     partialCitation: '',
     deleteNextRun: false,
-    relations: (tree instanceof VFile
-      ? options.relations || tree.data.relations || {}
-      : options.relations || {}) as { [key: string]: string },
+    relations: (options.relations || file?.data?.relations || {}) as { [key: string]: string },
     citeKeys: {},
     citationType: options.citationType || 'mendeley',
     footnotes: footnotes,
+    styleNames: getStyleNames(options.styles ?? file?.data?.parsed?.['word/styles.xml']),
   } as Context
 
   const j: J = Object.assign(
@@ -110,17 +106,18 @@ export function toJast(
         attributes = props
       }
 
-      const result: Node = Object.assign(
-        {},
-        ['root', 'text'].includes(type) ? { type } : { type: 'element', name: type },
-        { attributes },
-      )
+      const result: UnistNode & {
+        attributes?: Attributes
+        value?: string
+        children?: Array<JastContent>
+      } = {
+        ...(['root', 'text'].includes(type) ? { type } : { type: 'element', name: type }),
+        attributes,
+      }
 
       if (typeof children === 'string') {
-        // @ts-expect-error: Looks like a literal.
         result.value = children
       } else if (children) {
-        // @ts-expect-error: Looks like a parent.
         result.children = children
       }
 
@@ -144,8 +141,7 @@ export function toJast(
   //   }
   // })
 
-  // @ts-expect-error: does return a transformer, that does accept any node.
-  rehypeMinifyWhitespace({ newlines: options.newlines === true })(tree)
+  minifyWhitespace(tree, { newlines: options.newLines === true })
 
   // @ts-expect-error: does return a transformer, that does accept any node.
   const result = one(j, tree, undefined)

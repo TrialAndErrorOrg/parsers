@@ -12,7 +12,6 @@ const nth = new Set(['nth-child', 'nth-last-child', 'nth-of-type', 'nth-last-of-
 
 const parser = new CssSelectorParser()
 
-//// @ts-expect-error: hush.
 const compile = zwitch('type', { handlers: { selectors, ruleSet, rule } } as any)
 
 parser.registerAttrEqualityMods('~', '|', '^', '$', '*')
@@ -28,7 +27,6 @@ export function parse(selector: string): Selector {
     throw new TypeError('Expected `string` as selector, not `' + selector + '`')
   }
 
-  // @ts-expect-error types are wrong.
   return compile(parser.parse(selector))
 }
 

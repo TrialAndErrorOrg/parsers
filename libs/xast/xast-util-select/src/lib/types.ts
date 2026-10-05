@@ -76,5 +76,3 @@ export type Handler = (
   parent: Parent | null,
   state: SelectState,
 ) => void
-
-export {}

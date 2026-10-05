@@ -10,10 +10,9 @@ export const hyperlink: Handle = (h: H, node: Hyperlink) => {
 
   const contents = all(h, node)
 
+  // internal link (`w:anchor`) or unknown relation: keep the (already escaped) link text
   if (!rel) {
-    const result = s(toString(node))
-    // state.patch(node, result)
-    return result
+    return contents
   }
 
   const result = m('href', [arg(rel), arg(contents)])

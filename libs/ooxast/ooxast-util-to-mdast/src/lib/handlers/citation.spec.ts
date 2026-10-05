@@ -1,4 +1,11 @@
 import { T, Text } from 'ooxast'
+import { it, expect } from 'vitest'
+import { toMdast } from '../ooxast-util-to-mdast.js'
+
+const citeKeys = (node: any): string[] =>
+  node.type === 'cite'
+    ? node.data.citeItems.map((item: { key: string }) => item.key)
+    : (node.children ?? []).flatMap(citeKeys)
 const mendeleyCitation: T = {
   type: 'element',
   name: 'w:instrText',
@@ -26,10 +33,21 @@ const multipleMendeleyCitations = {
 }
 
 it('should return mendeley citation', () => {
-  const csl = getCitationCSL(mendeleyCitation)
-  expect(csl).toBeDefined()
-  expect(
-    csl.title ===
-      'From Boulder to Stockholm in 70 years: Single case experimental designs in clinical research',
-  )
+  const run = { type: 'element', name: 'w:r', attributes: {}, children: [mendeleyCitation] }
+  expect(citeKeys(toMdast(run as any))).toEqual(['Vlaeyen2020'])
+})
+
+it('should cite every item of a multi-item mendeley citation', () => {
+  const run = {
+    type: 'element',
+    name: 'w:r',
+    attributes: {},
+    children: [multipleMendeleyCitations],
+  }
+  expect(citeKeys(toMdast(run as any))).toEqual([
+    'Busk1988',
+    'Solomon2014',
+    'Adams1996',
+    'Smith2012',
+  ])
 })

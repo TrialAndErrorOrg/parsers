@@ -3,6 +3,7 @@ import fs from 'fs'
 import { docxToVFile } from 'docx-to-vfile'
 import reoffParse from 'reoff-parse'
 import { unified } from 'unified'
+import { describe, it, expect } from 'vitest'
 
 const fromDocx = async (file: string) => {
   const arr = new Uint8Array(await fs.promises.readFile(file))
@@ -14,10 +15,7 @@ const fromDocx = async (file: string) => {
   return detectCitePlugin(tree)
 }
 const testfile = (type: string) =>
-  new URL(
-    `../../../../processors/docx-to-tex/src/test/fixtures/${type}/index.docx`,
-    import.meta.url,
-  ).pathname
+  new URL(`../test/fixtures/${type}/index.docx`, import.meta.url).pathname
 
 describe('ooxast-util-citation-plugin', () => {
   it('should identify zotero', async () => {

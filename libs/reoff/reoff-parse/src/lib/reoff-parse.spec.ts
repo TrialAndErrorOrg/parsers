@@ -4,19 +4,29 @@ import fs from 'fs'
 import path from 'path'
 import { docxToVFile } from 'docx-to-vfile'
 import { removePosition } from 'unist-util-remove-position'
+import { describe, it, expect } from 'vitest'
+
+// Debug output is only written when WRITE_TEST_OUTPUT is set, so test runs never modify tracked files.
+const writeDebugFile = (...args: Parameters<typeof fs.writeFileSync>) => {
+  if (process.env.WRITE_TEST_OUTPUT) fs.writeFileSync(...args)
+}
 
 describe('reoffParse', () => {
   const doc = fs.readFileSync(new URL('../test/Manuscript-2.docx', import.meta.url))
   const proc = unified().use(reoffParse)
   it('should work', async () => {
     const file = await docxToVFile(doc)
-    fs.writeFileSync(new URL('../test/xml.xml', import.meta.url), String(file))
+    writeDebugFile(new URL('../test/xml.xml', import.meta.url), String(file))
 
     const res = proc.parse(file)
+    expect(res.position).toBeDefined()
 
-    fs.writeFileSync(
+    removePosition(res, { force: true })
+    expect(res.position).toBeUndefined()
+
+    writeDebugFile(
       new URL('../test/ooxasttree.json', import.meta.url),
-      JSON.stringify(removePosition(res, true), null, 2),
+      JSON.stringify(res, null, 2),
     )
     expect(res).toBeDefined()
   })
@@ -27,10 +37,9 @@ describe('reoffParse', () => {
     const parsed = proc.parse(vfile)
 
     const url = new URL('../test/testrelations.json', import.meta.url)
-    fs.writeFileSync(url, JSON.stringify(parsed, null, 2))
+    writeDebugFile(url, JSON.stringify(parsed, null, 2))
     expect(vfile.data.relations).toBeDefined()
-    console.log(vfile.data.relations)
 
-    expect(vfile.data.relations.document).toBeDefined()
+    expect(vfile.data.relations?.document).toBeDefined()
   })
 })

@@ -1,16 +1,16 @@
 {
   "name": "jast-util-from-csl",
   "version": "0.1.1",
-  "dependencies": {
-    "csl-json": "^0.1.0",
-    "jast-types": "0.1.2",
-    "xastscript": "^3.1.1"
-  },
+  "description": "cslToFront(data: Data): void;",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/jast/jast-util-from-csl"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/jast/jast-util-from-csl#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "cslToFront(data: Data): void;",
   "keywords": [
     "csl",
     "jats-xml",
@@ -18,10 +18,22 @@
     "tree",
     "ast"
   ],
-  "devDependencies": {
-    "to-vfile": "^7.2.3",
-    "unified": "^10.1.1",
-    "vfile": "^5.3.0"
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
   },
   "typedoc": {
     "entryPoint": "./src/index.ts",
@@ -29,18 +41,9 @@
     "displayName": "jast-util-from-csl",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ]
+  "dependencies": {
+    "csl-json": "0.1.0",
+    "jast-types": "workspace:^",
+    "xastscript": "catalog:"
+  }
 }

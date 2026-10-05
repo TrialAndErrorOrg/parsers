@@ -35,7 +35,13 @@ const EMPTY_FORM: MetaForm = {
   jwebsite: 'https://journal.trialanderror.org',
 }
 
-const EMPTY_AUTHOR: Author = { givenName: '', familyName: '', affiliation: '', orcid: '', email: '' }
+const EMPTY_AUTHOR: Author = {
+  givenName: '',
+  familyName: '',
+  affiliation: '',
+  orcid: '',
+  email: '',
+}
 
 interface PublicationData {
   fullTitle?: { en_US?: string }
@@ -89,18 +95,25 @@ export function MetadataForm({ submission }: { submission: SelectedSubmission })
       setLoading(true)
       try {
         const [pubRes, filesRes] = await Promise.all([
-          fetch(`/api/ojs/publication?url=${encodeURIComponent(submission.publicationUrl)}&apiToken=${encodeURIComponent(token)}`),
-          fetch(`/api/ojs/files?apiToken=${encodeURIComponent(token)}&submissionId=${submission.id}&stageId=${submission.stageId}&endpoint=${encodeURIComponent(endpoint)}`),
+          fetch(
+            `/api/ojs/publication?url=${encodeURIComponent(submission.publicationUrl)}&apiToken=${encodeURIComponent(token)}`,
+          ),
+          fetch(
+            `/api/ojs/files?apiToken=${encodeURIComponent(token)}&submissionId=${submission.id}&stageId=${submission.stageId}&endpoint=${encodeURIComponent(endpoint)}`,
+          ),
         ])
 
         const pub: PublicationData = await pubRes.json()
         const files = await filesRes.json()
 
-        const acceptedDate = files?.items?.reduce((acc: string, curr: { fileStage: number; createdAt: string }) => {
-          if (curr.fileStage !== 9) return acc
-          if (!acc) return curr.createdAt
-          return curr.createdAt < acc ? curr.createdAt : acc
-        }, '')
+        const acceptedDate = files?.items?.reduce(
+          (acc: string, curr: { fileStage: number; createdAt: string }) => {
+            if (curr.fileStage !== 9) return acc
+            if (!acc) return curr.createdAt
+            return curr.createdAt < acc ? curr.createdAt : acc
+          },
+          '',
+        )
 
         const authors: Author[] =
           pub.authors?.map((a) => ({
@@ -192,8 +205,16 @@ export function MetadataForm({ submission }: { submission: SelectedSubmission })
       </CardHeader>
       <CardContent className="space-y-4 overflow-hidden">
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-          <FieldInput label="Document class" value={form.documentclassname} onChange={(v) => updateField('documentclassname', v)} />
-          <FieldInput label="Class options" value={form.documentclassopt} onChange={(v) => updateField('documentclassopt', v)} />
+          <FieldInput
+            label="Document class"
+            value={form.documentclassname}
+            onChange={(v) => updateField('documentclassname', v)}
+          />
+          <FieldInput
+            label="Class options"
+            value={form.documentclassopt}
+            onChange={(v) => updateField('documentclassopt', v)}
+          />
         </div>
 
         <FieldInput label="Title" value={form.title} onChange={(v) => updateField('title', v)} />
@@ -208,18 +229,46 @@ export function MetadataForm({ submission }: { submission: SelectedSubmission })
             </Button>
           </div>
           {form.authors.map((author, i) => (
-            <div key={`${author.givenName}-${author.familyName}-${i}`} className="space-y-2 rounded-md border p-3">
+            <div
+              key={`${author.givenName}-${author.familyName}-${i}`}
+              className="space-y-2 rounded-md border p-3"
+            >
               <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                <FieldInput label="Given name" value={author.givenName} onChange={(v) => updateAuthor(i, 'givenName', v)} />
-                <FieldInput label="Family name" value={author.familyName} onChange={(v) => updateAuthor(i, 'familyName', v)} />
+                <FieldInput
+                  label="Given name"
+                  value={author.givenName}
+                  onChange={(v) => updateAuthor(i, 'givenName', v)}
+                />
+                <FieldInput
+                  label="Family name"
+                  value={author.familyName}
+                  onChange={(v) => updateAuthor(i, 'familyName', v)}
+                />
               </div>
-              <FieldInput label="Affiliation" value={author.affiliation} onChange={(v) => updateAuthor(i, 'affiliation', v)} />
+              <FieldInput
+                label="Affiliation"
+                value={author.affiliation}
+                onChange={(v) => updateAuthor(i, 'affiliation', v)}
+              />
               <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                <FieldInput label="Email" value={author.email} onChange={(v) => updateAuthor(i, 'email', v)} />
-                <FieldInput label="ORCID" value={author.orcid} onChange={(v) => updateAuthor(i, 'orcid', v)} />
+                <FieldInput
+                  label="Email"
+                  value={author.email}
+                  onChange={(v) => updateAuthor(i, 'email', v)}
+                />
+                <FieldInput
+                  label="ORCID"
+                  value={author.orcid}
+                  onChange={(v) => updateAuthor(i, 'orcid', v)}
+                />
               </div>
               {form.authors.length > 1 && (
-                <Button variant="ghost" size="sm" className="text-destructive" onClick={() => removeAuthor(i)}>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  className="text-destructive"
+                  onClick={() => removeAuthor(i)}
+                >
                   <Trash2 className="mr-1 h-3 w-3" /> Remove
                 </Button>
               )}
@@ -238,28 +287,64 @@ export function MetadataForm({ submission }: { submission: SelectedSubmission })
           />
         </div>
 
-        <FieldInput label="Keywords" value={form.keywordsabstract} onChange={(v) => updateField('keywordsabstract', v)} />
+        <FieldInput
+          label="Keywords"
+          value={form.keywordsabstract}
+          onChange={(v) => updateField('keywordsabstract', v)}
+        />
 
         <div className="grid grid-cols-3 gap-2">
           <FieldInput label="Year" value={form.jyear} onChange={(v) => updateField('jyear', v)} />
-          <FieldInput label="Volume" value={form.jvolume} onChange={(v) => updateField('jvolume', v)} />
-          <FieldInput label="Issue" value={form.jissue} onChange={(v) => updateField('jissue', v)} />
+          <FieldInput
+            label="Volume"
+            value={form.jvolume}
+            onChange={(v) => updateField('jvolume', v)}
+          />
+          <FieldInput
+            label="Issue"
+            value={form.jissue}
+            onChange={(v) => updateField('jissue', v)}
+          />
         </div>
 
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
           <FieldInput label="DOI" value={form.doi} onChange={(v) => updateField('doi', v)} />
-          <FieldInput label="Pages" value={form.jpages} onChange={(v) => updateField('jpages', v)} />
+          <FieldInput
+            label="Pages"
+            value={form.jpages}
+            onChange={(v) => updateField('jpages', v)}
+          />
         </div>
 
         <div className="grid grid-cols-3 gap-2">
-          <FieldInput label="Received" value={form.paperreceived} onChange={(v) => updateField('paperreceived', v)} />
-          <FieldInput label="Accepted" value={form.paperaccepted} onChange={(v) => updateField('paperaccepted', v)} />
-          <FieldInput label="Published" value={form.paperpublished} onChange={(v) => updateField('paperpublished', v)} />
+          <FieldInput
+            label="Received"
+            value={form.paperreceived}
+            onChange={(v) => updateField('paperreceived', v)}
+          />
+          <FieldInput
+            label="Accepted"
+            value={form.paperaccepted}
+            onChange={(v) => updateField('paperaccepted', v)}
+          />
+          <FieldInput
+            label="Published"
+            value={form.paperpublished}
+            onChange={(v) => updateField('paperpublished', v)}
+          />
         </div>
 
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-          <FieldInput label="Journal name" value={form.jname} onChange={(v) => updateField('jname', v)} />
-          <FieldInput label="Website" value={form.jwebsite} onChange={(v) => updateField('jwebsite', v)} />
+          <FieldInput
+            label="Journal name"
+            value={form.jname}
+            onChange={(v) => updateField('jname', v)}
+          />
+          <FieldInput
+            label="Website"
+            value={form.jwebsite}
+            onChange={(v) => updateField('jwebsite', v)}
+          />
         </div>
 
         <div className="space-y-2">

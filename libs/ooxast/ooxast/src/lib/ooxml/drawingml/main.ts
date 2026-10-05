@@ -2,6 +2,7 @@ import * as Primitive from '../../xml-primitives.js'
 import * as r from '../officeDocument/relationships.js'
 import * as s from '../officeDocument/sharedTypes.js'
 import { RequiredMap } from '../../ooxast.js'
+import type { Text } from '../wordprocessingml/main.js'
 
 // Source files:
 // http://localhost:3000/dml-main.xsd
@@ -41,11 +42,15 @@ export interface AlphaBiLevelEffect extends UnistNode {
 export interface AlphaCeilingEffect extends UnistNode {
   type: 'element'
   name: 'a:alphaCeilingEffect'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface AlphaFloorEffect extends UnistNode {
   type: 'element'
   name: 'a:alphaFloorEffect'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface AlphaInverseEffect extends UnistNode {
@@ -580,6 +585,8 @@ export interface ColorSchemeListMap {
 export interface ComplementTransform extends UnistNode {
   type: 'element'
   name: 'a:complementTransform'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface Connection extends UnistNode {
@@ -877,6 +884,8 @@ export interface EmbeddedWAVAudioFile extends UnistNode {
 export interface EmptyElement extends UnistNode {
   type: 'element'
   name: 'a:emptyElement'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface FillEffect extends UnistNode {
@@ -1014,6 +1023,8 @@ export interface FontSchemeMap {
 export interface GammaTransform extends UnistNode {
   type: 'element'
   name: 'a:gammaTransform'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface GeomGuide extends UnistNode {
@@ -1154,16 +1165,22 @@ export interface GraphicalObjectFrameLockingMap {
 export interface GrayscaleEffect extends UnistNode {
   type: 'element'
   name: 'a:grayscaleEffect'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface GrayscaleTransform extends UnistNode {
   type: 'element'
   name: 'a:grayscaleTransform'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface GroupFillProperties extends UnistNode {
   type: 'element'
   name: 'a:groupFillProperties'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface GroupLocking extends UnistNode {
@@ -1380,6 +1397,8 @@ export interface GvmlTextShapeMap {
 export interface GvmlUseShapeRectangle extends UnistNode {
   type: 'element'
   name: 'a:gvmlUseShapeRectangle'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface Headers extends UnistNode {
@@ -1390,7 +1409,17 @@ export interface Headers extends UnistNode {
 }
 
 export interface HeadersMap {
-  header?: string[]
+  header?: StringElement<'a:header'>[]
+}
+
+/**
+ * An element whose only content is text, e.g. `<a:t>`.
+ */
+export interface StringElement<N extends string> extends UnistNode {
+  type: 'element'
+  name: N
+  attributes: Record<string, never>
+  children: [Text] | []
 }
 
 export interface HslColor extends UnistNode {
@@ -1490,11 +1519,15 @@ export interface InnerShadowEffectMap {
 export interface InverseGammaTransform extends UnistNode {
   type: 'element'
   name: 'a:inverseGammaTransform'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface InverseTransform extends UnistNode {
   type: 'element'
   name: 'a:inverseTransform'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface LightRig extends UnistNode {
@@ -1535,6 +1568,8 @@ export interface LineEndProperties extends UnistNode {
 export interface LineJoinBevel extends UnistNode {
   type: 'element'
   name: 'a:lineJoinBevel'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface LineJoinMiterProperties extends UnistNode {
@@ -1549,6 +1584,8 @@ export interface LineJoinMiterProperties extends UnistNode {
 export interface LineJoinRound extends UnistNode {
   type: 'element'
   name: 'a:lineJoinRound'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface LineProperties extends UnistNode {
@@ -1602,6 +1639,8 @@ export interface LuminanceEffect extends UnistNode {
 export interface NoFillProperties extends UnistNode {
   type: 'element'
   name: 'a:noFillProperties'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface NonVisualConnectorProperties extends UnistNode {
@@ -1817,6 +1856,8 @@ export interface Path2DArcTo extends UnistNode {
 export interface Path2DClose extends UnistNode {
   type: 'element'
   name: 'a:path2DClose'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface Path2DCubicBezierTo extends UnistNode {
@@ -2158,7 +2199,7 @@ export interface RegularTextRun extends UnistNode {
 
 export interface RegularTextRunMap {
   rPr?: TextCharacterProperties
-  t: string
+  t: StringElement<'a:t'>
 }
 
 export interface RelativeOffsetEffect extends UnistNode {
@@ -2708,7 +2749,7 @@ export interface TablePropertiesMap {
   pattFill?: PatternFillProperties
   solidFill?: SolidColorFillProperties
   tableStyle?: TableStyle
-  tableStyleId?: string
+  tableStyleId?: StringElement<'a:tableStyleId'>
 }
 
 export interface TableRow extends UnistNode {
@@ -2877,11 +2918,15 @@ export interface TextBodyPropertiesMap {
 export interface TextBulletColorFollowText extends UnistNode {
   type: 'element'
   name: 'a:textBulletColorFollowText'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface TextBulletSizeFollowText extends UnistNode {
   type: 'element'
   name: 'a:textBulletSizeFollowText'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface TextBulletSizePercent extends UnistNode {
@@ -2905,6 +2950,8 @@ export interface TextBulletSizePoint extends UnistNode {
 export interface TextBulletTypefaceFollowText extends UnistNode {
   type: 'element'
   name: 'a:textBulletTypefaceFollowText'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface TextCharacterProperties extends UnistNode {
@@ -2950,7 +2997,7 @@ export interface TextCharacterPropertiesMap {
   ln?: LineProperties
   noFill?: NoFillProperties
   pattFill?: PatternFillProperties
-  rtl?: string
+  rtl?: StringElement<'a:rtl'>
   solidFill?: SolidColorFillProperties
   sym?: TextFont
   uFill?: TextUnderlineFillGroupWrapper
@@ -2981,7 +3028,7 @@ export interface TextField extends UnistNode {
 export interface TextFieldMap {
   pPr?: TextParagraphProperties
   rPr?: TextCharacterProperties
-  t?: string
+  t?: StringElement<'a:t'>
 }
 
 export interface TextFont extends UnistNode {
@@ -3031,11 +3078,15 @@ export interface TextListStyleMap {
 export interface TextNoAutofit extends UnistNode {
   type: 'element'
   name: 'a:textNoAutofit'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface TextNoBullet extends UnistNode {
   type: 'element'
   name: 'a:textNoBullet'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface TextNormalAutofit extends UnistNode {
@@ -3105,6 +3156,8 @@ export interface TextParagraphPropertiesMap {
 export interface TextShapeAutofit extends UnistNode {
   type: 'element'
   name: 'a:textShapeAutofit'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface TextSpacing extends UnistNode {
@@ -3161,6 +3214,8 @@ export interface TextTabStopListMap {
 export interface TextUnderlineFillFollowText extends UnistNode {
   type: 'element'
   name: 'a:textUnderlineFillFollowText'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface TextUnderlineFillGroupWrapper extends UnistNode {
@@ -3182,6 +3237,8 @@ export interface TextUnderlineFillGroupWrapperMap {
 export interface TextUnderlineLineFollowText extends UnistNode {
   type: 'element'
   name: 'a:textUnderlineLineFollowText'
+  attributes: Record<string, never>
+  children: []
 }
 
 export interface ThemeableLineStyle extends UnistNode {

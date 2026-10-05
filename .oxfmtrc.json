@@ -1,0 +1,44 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "semi": false,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "printWidth": 100,
+  "tabWidth": 2,
+  "sortPackageJson": false,
+  "ignorePatterns": [
+    "dist",
+    "deprecated",
+    "coverage",
+    ".next",
+    ".turbo",
+    ".nx",
+    ".bundle",
+    "pnpm-lock.yaml",
+    "README.md",
+    "CHANGELOG.md",
+    "libs/citations/parse-text-cite/src/lib/apa.ts",
+    "libs/citations/parse-text-cite/src/lib/grammar.html",
+    "turbo/generators/templates/**",
+    "libs/book-converter/schema.json",
+    "apps/converter/lib/generated/**",
+    "**/fixtures/**",
+    "**/__snapshots__/**",
+    "**/test/**/*.json",
+    "**/test/**/*.md",
+    "**/test/**/*.tex",
+    "**/test/**/*.xml",
+    "**/test/**/*.html",
+    "libs/citations/apa-parser/src/spec/debug/**"
+  ],
+  "overrides": [
+    {
+      "files": ["apps/converter/**"],
+      "options": {
+        "sortTailwindcss": {
+          "stylesheet": "apps/converter/app/globals.css"
+        }
+      }
+    }
+  ]
+}

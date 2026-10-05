@@ -50,7 +50,7 @@ export default function rejourMoveAbstract() {
 
     const abstractBody = filter(abstractNode, (node) => !(isElement(node) && node.name === 'title'))
 
-    if (abstractBody === null) return
+    if (!abstractBody) return
 
     const abstract: Abstract = {
       type: 'element',
@@ -61,7 +61,7 @@ export default function rejourMoveAbstract() {
 
     visit(
       tree,
-      (node: Node) => isElement(node) && node.name === 'article-meta',
+      (node: Node) => isElement(node) && node.name === 'articleMeta',
       (articleMetaDataNode: Element) => {
         articleMetaDataNode?.children?.push(abstract)
       },

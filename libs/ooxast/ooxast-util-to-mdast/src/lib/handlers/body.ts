@@ -1,10 +1,9 @@
 import { Body, Handle, P, MdastNode } from '../types.js'
 import { getPStyle } from '../util/get-pstyle.js'
 import { getListInfo } from '../util/get-listinfo.js'
-import { Element } from 'xast-util-to-string/lib'
+import type { Element } from 'xast'
 import { State } from '../state.js'
-import { list, listItem } from 'mdast-builder'
-import { List, ListItem } from 'mdast'
+import type { BlockContent, List, ListItem } from 'mdast'
 
 const isP = (node: Element): node is P => node.type === 'element' && node.name === 'w:p'
 
@@ -117,10 +116,14 @@ export const body: Handle = (state: State, body: Body) => {
 }
 
 function makeItem(state: State, item: P): ListItem {
-  const result = state.all(item)
-  const mIte = listItem(result) as ListItem
+  const mIte = listItem(state, item)
   state.patch(item, mIte)
   return mIte
+}
+
+/** A list item holding the converted contents of `item` (phrasing, not wrapped in a paragraph). */
+function listItem(state: State, item: P): ListItem {
+  return { type: 'listItem', children: state.all(item) as BlockContent[] }
 }
 
 const orderedMap = {
@@ -132,9 +135,8 @@ const orderedMap = {
 } as const
 
 function makeList(state: State, item: P, numId: number, ilvl: number): List {
-  const result = state.all(item)
   if (!state.listNumbering) {
-    const res = list('ordered', listItem(result) as ListItem) as List
+    const res: List = { type: 'list', ordered: true, children: [listItem(state, item)] }
     state.patch(item, res)
     return res
   }
@@ -152,7 +154,7 @@ function makeList(state: State, item: P, numId: number, ilvl: number): List {
       ilvl,
       numId,
     },
-    children: [listItem(result) as ListItem],
+    children: [listItem(state, item)],
   }
   state.patch(item, lst)
   return lst

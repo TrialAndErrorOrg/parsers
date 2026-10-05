@@ -1,12 +1,16 @@
 {
   "name": "reoff-remark",
   "version": "0.2.0",
+  "description": "Plugin for `reoff` that takes an `ooxast` tree and turns it into a `remark` tree, allowing for .docx to .tex conversion",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/reoff-remark",
-  "homepage": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/reoff/reoff-remark"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-remark#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Plugin for `reoff` that takes an `ooxast` tree and turns it into a `remark` tree, allowing for .docx to .tex conversion",
   "keywords": [
     "unified",
     "reoff",
@@ -17,29 +21,34 @@
     "remark",
     "ast"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "reoff-remark",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "ooxast-util-to-mdast": "0.2.0",
-    "ooxast": "0.2.0",
-    "unified": "^10.1.2",
-    "@types/mdast": "^3.0.11"
+    "@types/mdast": "catalog:",
+    "ooxast": "workspace:^",
+    "ooxast-util-to-mdast": "workspace:^",
+    "unified": "catalog:",
+    "vfile": "catalog:"
   }
 }

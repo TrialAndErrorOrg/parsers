@@ -1,11 +1,17 @@
 {
   "name": "rejour-move-abstract",
   "version": "0.0.1",
+  "private": true,
+  "description": "Really simple plugin for `rejour` that moves the abstract from the `body` to the `front` of a `JATS` document.",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/rejour/rejour-move-abstract"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour/rejour-move-abstract#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Really simple plugin for `rejour` that moves the abstract from the `body` to the `front` of a `JATS` document.",
   "keywords": [
     "unified",
     "abstract",
@@ -13,30 +19,40 @@
     "tree",
     "ast"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "rejour-move-abstract",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "jast-types": "0.1.2",
-    "unist-util-visit": "^4.1.2",
-    "unist-util-remove": "^3.1.1",
-    "unist-util-filter": "^4.0.1"
+    "jast-types": "workspace:^",
+    "unist-util-filter": "catalog:",
+    "unist-util-remove": "catalog:",
+    "unist-util-visit": "catalog:"
+  },
+  "devDependencies": {
+    "rejour-parse": "workspace:^",
+    "rejour-stringify": "workspace:^",
+    "unified": "catalog:",
+    "unist-util-map": "catalog:",
+    "vfile-reporter": "catalog:"
   }
 }

@@ -310,6 +310,8 @@ TSWLatexianTemp*
 
 # compiled output
 /dist
+dist/
+*.tsbuildinfo
 /tmp
 /out-tsc
 
@@ -355,15 +357,21 @@ thebiggestfile.ts
 .env
 .env.*
 graph
-docs
+# typedoc scratch output (scripts/readme.ts); hand-written docs/*.md are tracked
+**/docs/*
+!/docs/*.md
 
 .sveltekit
 
 # Next.js
 .next
 
-.nx/cache
-.nx/workspace-data
+# Turborepo
+.turbo
 
 vite.config.*.timestamp*
 vitest.config.*.timestamp*
+
+# Agent instruction files that tools write (turbo, next dev)
+AGENTS.md
+CLAUDE.md

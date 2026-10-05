@@ -6,312 +6,148 @@ The goal is to automate the process of converting a manuscript from a word proce
 
 The only current implementation is found at [convert.centeroftrialanderror.com](convert.centeroftrialanderror.com) (very shodyy!).
 
-Currently has 3 suites of parsers:
+Contains 2 suites of parsers:
 
-- `ooxast`/`reoff`: Tools to parse, convert from, and create OOXML (`.docx`) XML. Currently only contains a parser and a converter to `jats`, plus some tools.
-- `jats`/`rejour`: Tools to parse, convert from, and create JATS XML. Currently contains a parser, stringifier, and a converter to `texast`, plus some tools.
-- `texast`/`relatex`: Tools to parse, convert from, and create LaTeX (DEPRECATED, use [unified-latex](https://github.com/unified-latex) instead). Only contains a way to generate LaTex from `texast` ASTs.
+- `ooxast`/`reoff`: Tools to parse, convert from, and create OOXML (`.docx`) XML. Contains a parser and converters to JATS (`jast`), Markdown (`mdast`) and LaTeX ([unified-latex](https://github.com/siefkenj/unified-latex)), plus some tools.
+- `jats`/`rejour`: Tools to parse, convert from, and create JATS XML. Contains a parser and stringifier, plus some tools.
 
 Additionally, there are a few other tools:
 
-- `citations-`: Tools to parse and convert citations.
-- `ojs-`: Things to operate on the OJS api
-- `utils-`: Various utilities
+- `citations`: Tools to parse and convert citations, and types for the OJS API.
+- `xast`: Utilities for working with [xast][xast] trees.
+- `unified-latex`: Utilities for working with [unified-latex](https://github.com/siefkenj/unified-latex) trees.
+- `book-converter`: a CLI to turn a `.docx` book into LaTeX.
 
-Finally, there are the processors, which are basically convenient wrappers around the parsers.
-
-There is also an `app` directory, which contains a few apps that use the parsers, atm a really crappy frontend for converting from `.docx`.
+`apps/converter` is the web converter (Next.js) that uses the parsers to turn `.docx` manuscripts into LaTeX.
 
 See below for more info.
 
-# Dependency Graph
-
-[View an interactive dependency graph here](https://trialanderrororg.github.io/parsers/)
-![Graph of this monorepo](./graph.png 'Graph of this monorepo')
-
-# Overview
-
-## [Apps](/Volumes/SSD/Projects/jote-monorepo/apps):
-
-#### [`converter-frontend`](apps/converter-frontend)
-
-#### [`converter-frontend-e2e`](apps/converter-frontend-e2e)
-
-#### [`jote`](apps/jote)
-
-#### [`react-pdf`](apps/react-pdf)
-
-#### [`react-pdf-e2e`](apps/react-pdf-e2e)
-
-### [citations](libs/citations)
-
-#### [`crossref-json`](libs/citations/crossref-json/README.md)
-
-Type definitions for crossref api responses
-
-#### [`crossref-to-csl`](libs/citations/crossref-to-csl/README.md)
-
-Convert crossref metadata to CSL
-
-#### [`csl-consolidate`](libs/citations/csl-consolidate/README.md)
-
-Try to resolve a list of CSL data with crossref metadata
-
-#### [`csl-to-biblatex`](libs/citations/csl-to-biblatex/README.md)
-
-Somewhat jank CSL-JSON to biblatex converter
-
-#### [`ojs-types`](libs/citations/ojs-types/README.md)
-
-Some typescript types for OJS api responses
-
-#### [`parse-text-cite`](libs/citations/parse-text-cite/README.md)
-
-Small tool that parses a string of text containing APA style in text citations, e.g. Jones (2020), and returns a rudimentary AST with the thing parsed.
-
-### [hybrid-builder](libs/hybrid-builder)
-
-#### [`src`](libs/hybrid-builder/src)
-
-### [jast](libs/jast)
-
-#### [`jast`](libs/jast/jast/README.md)
-
-Type definitions for `jast` (journal article/abstract syntax tree), a syntax for abstract syntax trees representing JATS XML, specifically the "Green" publishing tag set.
-
-Transform a CSL list or object to a [jast][jast] node.
-
-#### [`jast-util-to-csl`](libs/jast/jast-util-to-csl/README.md)
-
-Convert a `jast` citation syntax tree to list of `csl` objects.
-
-#### [`jast-util-to-texast`](libs/jast/jast-util-to-texast/README.md)
-
-Utility to convert a [jast][jast] tree to a [texast][texast] tree.
-
-### [notion](libs/notion)
-
-#### [`html-to-notion-blocks`](libs/notion/html-to-notion-blocks/README.md)
-
-Transform HTML to Notion blocks
-
-#### [`rehype-notion`](libs/notion/rehype-notion/README.md)
-
-Plugin for `rehype` to turn HTML into Notion blocks
-
-### [ojs](libs/ojs)
-
-#### [`ojs-client`](libs/ojs/ojs-client/README.md)
-
-new default(«destructured»: object = {}): default;
-
-#### [`ojs-relatex`](libs/ojs/ojs-relatex/README.md)
-
-Convert ojs data to relatex
-
-### [ooxast](libs/ooxast)
-
-#### [`ooxast`](libs/ooxast/ooxast/README.md)
-
-Type definitions for `ooxast` (Open Office XML abstract syntax tree), a syntax for abstract syntax trees representing Open Office XML documents in the [`unist`](https://github.com/syntax-tree/unist) format.
-
-#### [`ooxast-util-citation-plugin`](libs/ooxast/ooxast-util-citation-plugin/README.md)
-
-Small ooxast utility which scans the text to identify the citation plugin used, either Mendely, Zotero, EndNote, Citavi, native word citations or none at all. It is used to feed into other things.
-
-#### [`ooxast-util-citations`](libs/ooxast/ooxast-util-citations/README.md)
-
-This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, 18.0+), install as
-
-#### [`ooxast-util-get-style`](libs/ooxast/ooxast-util-get-style/README.md)
-
-Get style from a `w:p` element.
-
-#### [`ooxast-util-parse-bib`](libs/ooxast/ooxast-util-parse-bib/README.md)
-
-Find and convert raw references to CSL-JSON using `anystyle`.
-
-#### [`ooxast-util-parse-bib-browser`](libs/ooxast/ooxast-util-parse-bib-browser/README.md)
-
-Find and convert raw references to CSL-JSON.
-
-#### [`ooxast-util-parse-bib-node`](libs/ooxast/ooxast-util-parse-bib-node/README.md)
-
-Find and convert raw references to CSL-JSON.
-
-#### [`ooxast-util-properties`](libs/ooxast/ooxast-util-properties/README.md)
-
-Return the properties of an `ooxast` node as a JSON object
-
-#### [`ooxast-util-remove-rsid`](libs/ooxast/ooxast-util-remove-rsid/README.md)
-
-Cleans all the rsid tags from an ooxast tree, and merges `w:r` elements if they only differ by rsid values.
-
-#### [`ooxast-util-to-hast`](libs/ooxast/ooxast-util-to-hast/README.md)
-
-Convert docx to html (Not working)
-
-#### [`ooxast-util-to-jast`](libs/ooxast/ooxast-util-to-jast/README.md)
-
-Util to convert `ooxast` syntax tree to `jast` syntax tree, allowing for `.docx` to `JATS XML` conversion.
-
-#### [`ooxast-util-to-mdast`](libs/ooxast/ooxast-util-to-mdast/README.md)
-
-Convert `ooxast` syntax tree to `mdast` syntax tree.
-
-#### [`ooxast-util-to-unified-latex`](libs/ooxast/ooxast-util-to-unified-latex/README.md)
-
-Convert `ooxast` syntax tree to `unified-latex` syntax tree.
-
-### [plugins](libs/plugins)
-
-#### [`better-nx-tsc`](libs/plugins/better-nx-tsc)
-
-### [processors](libs/processors)
-
-#### [`docx-to-jats`](libs/processors/docx-to-jats/README.md)
-
-processorsDocxToJats(): string;
-
-#### [`docx-to-tex`](libs/processors/docx-to-tex/README.md)
-
-DOCX to TeX converter
-
-#### [`jats-to-tex`](libs/processors/jats-to-tex/README.md)
-
-jatsToTex(jats: string): Promise<VFile>;
-
-#### [`jote-docx-tex`](libs/processors/jote-docx-tex/README.md)
-
-docxToTex(input: Uint8Array, options: object = {}): Promise<VFile>;
-
-### [rejour](libs/rejour)
-
-#### [`rejour-frontmatter`](libs/rejour/rejour-frontmatter/README.md)
-
-rejourFrontmatter(): Function;
-
-#### [`rejour-meta`](libs/rejour/rejour-meta/README.md)
-
-Doesn't do anything atm
-
-#### [`rejour-move-abstract`](libs/rejour/rejour-move-abstract/README.md)
-
-Really simple plugin for `rejour` that moves the abstract from the `body` to the `front` of a `JATS` document.
-
-#### [`rejour-parse`](libs/rejour/rejour-parse/README.md)
-
-Parser for `rejour` that parses the `JATS` document to a `jast` tree.
-
-#### [`rejour-relatex`](libs/rejour/rejour-relatex/README.md)
-
-Plugin for `rejour` that transforms a `jast` syntax tree into a `texast` syntax tree, allowing for conversion between JATS XML and LaTeX.
-
-#### [`rejour-stringify`](libs/rejour/rejour-stringify/README.md)
-
-Plugin for `rejour` that stringifies a `jast` syntax tree to a `JATS XML` document.
-
-### [relatex](libs/relatex)
-
-#### [`relatex-add-preamble`](libs/relatex/relatex-add-preamble/README.md)
-
-Plugin for `relatex` that adds a preamble to a `texast` syntax tree.
-
-#### [`relatex-stringify`](libs/relatex/relatex-stringify/README.md)
-
-Plugin for `relatex` that stringifies a `texast` syntax tree to a LaTeX file.
-
-### [reoff](libs/reoff)
-
-#### [`docx-to-vfile`](libs/reoff/docx-to-vfile/README.md)
-
-Reads a `.docx` file and stores its components in vfile format to be processed by other tools, like [`reoff-parse`](https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse).
-
-#### [`reoff-cite`](libs/reoff/reoff-cite/README.md)
-
-Plugin for `reoff` that parses citations in the form of `@cite{key}` and `@cite[page]{key}` using `ooxast-util-parse-bib` and `ooxast-util-parse-text-cite`.
-
-#### [`reoff-clean`](libs/reoff/reoff-clean/README.md)
-
-Plugin for [reoff][reoff] to clean the ooxast tree.
-
-#### [`reoff-parse`](libs/reoff/reoff-parse/README.md)
-
-Plugin for [reoff][reoff] to parse a `.docx` XML file into an `ooxast` AST. Ideally use `docx-to-vfile` to get to a parseable state.
-
-#### [`reoff-parse-references`](libs/reoff/reoff-parse-references/README.md)
-
-Plugin for `reoff` which tries to find a bibliography in the document and parse it using `ooxast-util-parse-bib`.
-
-#### [`reoff-parse-references-browser`](libs/reoff/reoff-parse-references-browser/README.md)
-
-Plugin for `reoff` which tries to find a bibliography in the document and parse it using `ooxast-util-parse-bib`.
-
-#### [`reoff-rejour`](libs/reoff/reoff-rejour/README.md)
-
-Plugin for `reoff` that transforms an `ooxast` syntax tree into a `jats` syntax tree, i.e. converting `.docx` to `JATS XML`.
-
-#### [`reoff-remark`](libs/reoff/reoff-remark/README.md)
-
-Plugin for `reoff` that takes an `ooxast` tree and turns it into a `remark` tree, allowing for .docx to .tex conversion
-
-#### [`reoff-unified-latex`](libs/reoff/reoff-unified-latex/README.md)
-
-Plugin for `reoff` that takes an `ooxast` tree and turns it into a `unified-latex` tree, allowing for .docx to .tex conversion
-
-### [texast](libs/texast)
-
-#### [`texast`](libs/texast/texast/README.md)
-
-DEPRECATED: Type definitions for `texast` (LaTeX abstract syntax tree), a syntax for abstract syntax trees representing LaTeX documents in the [`unist`](https://github.com/syntax-tree/unist) format.
-
-#### [`texast-util-add-preamble`](libs/texast/texast-util-add-preamble/README.md)
-
-Add a preamble to a texast syntax tree.
-
-#### [`texast-util-to-latex`](libs/texast/texast-util-to-latex/README.md)
-
-Convert a `texast` syntax tree to LaTeX.
-
-### [unified-latex](libs/unified-latex)
-
-#### [`unified-latex-stringify`](libs/unified-latex/unified-latex-stringify/README.md)
-
-Plugin for `unified-latex` that takes an `unified-latex` tree and turns it into LaTeX
-
-### [update-readme](libs/update-readme)
-
-#### [`src`](libs/update-readme/src)
-
-### [utils](libs/utils)
-
-#### [`misc`](libs/utils/misc/README.md)
-
-tryCatchPromise<T>(promise: Promise<T>, errorHandler?: Function): Promise<[T | null, unknown | null]>;
-
-#### [`ojs-to-preamble`](libs/utils/ojs-to-preamble/README.md)
-
-This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, 18.0+), install as
-
-#### [`readme`](libs/utils/readme/README.md)
-
-This library was generated with [Nx](https://nx.dev).
-
-#### [`update-readme`](libs/utils/update-readme)
-
-### [xast](libs/xast)
-
-#### [`xast-util-has-attribute`](libs/xast/xast-util-has-attribute/README.md)
-
-Port of [hast-util-has-property](https://github.com/syntax-tree/hast-util-has-property) for [xast][xast]
-
-#### [`xast-util-is-element`](libs/xast/xast-util-is-element/README.md)
-
-Port of [hast-util-is-element](https://github.com/syntax-tree/hast-util-has-property) for [xast][xast]
-
-#### [`xast-util-select`](libs/xast/xast-util-select/README.md)
-
-Port of `(hast-util-select)[https://github.com/syntax-tree/hast-util-select]` for use with `xast` nodes.
+# Development
+
+A pnpm workspace run with [Turborepo](https://turborepo.com). Needs Node 24+ and pnpm 11.
+
+```sh
+pnpm install
+pnpm build          # turbo run build: every lib to <lib>/dist with tsc (TypeScript 7)
+pnpm typecheck      # turbo run typecheck, against workspace sources (no build needed)
+pnpm test           # turbo run test (vitest)
+pnpm lint           # oxlint
+pnpm format         # oxfmt
+pnpm dev            # turbo run dev (the converter on http://localhost:3100)
+pnpm --filter <package> <script>   # one package, e.g. pnpm --filter reoff-parse test
+pnpm gen:lib        # scaffold a new lib (turbo gen)
+pnpm readme <dir>   # regenerate a lib README (or --all)
+```
+
+## How packages see each other
+
+Each lib's `package.json` declares its own dependencies; workspace deps are `workspace:^`.
+Its `exports` carry a custom `@jote/source` condition pointing at `src/index.ts`:
+
+```json
+".": { "@jote/source": "./src/index.ts", "types": "./dist/index.d.ts", "default": "./dist/index.js" }
+```
+
+`tsconfig.base.json` sets `customConditions: ["@jote/source"]`, so the editor, `typecheck`,
+vitest and the converter (webpack `conditionNames`) all resolve workspace packages straight to
+source: go-to-definition lands in `src`, and nothing needs building first. Each lib's
+`tsconfig.lib.json` turns the condition off, so builds compile against dependencies' `dist`
+types (turbo builds dependencies first). Published packages only ship `dist`.
+
+## Releasing
+
+Through GitHub Actions with Changesets and npm trusted publishing (OIDC). Nothing is
+published from a local machine. See [docs/releasing.md](docs/releasing.md).
+
+# Packages
+
+Packages marked _private_ are not published.
+
+### other
+
+| Package | Description |
+|---|---|
+| [`@trialanderror/converter-cli`](libs/book-converter) | convert books |
+| [`unified-ast-stringify`](libs/ast-stringify) |  |
+
+### citations
+
+| Package | Description |
+|---|---|
+| [`crossref-json`](libs/citations/crossref-json) | Defined in:  [index.ts:38](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/crossref-json/src/index.ts |
+| [`crossref-to-csl`](libs/citations/crossref-to-csl) | crossrefToCsl(item: CrossrefJSON): CSL; |
+| [`csl-consolidate`](libs/citations/csl-consolidate) | Try to resolve a list of CSL data with crossref metadata |
+| [`csl-to-biblatex`](libs/citations/csl-to-biblatex) | Somewhat jank CSL-JSON to biblatex converter |
+| [`ojs-api-types`](libs/citations/ojs-types) | Some typescript types for OJS api responses |
+| [`parse-text-cite`](libs/citations/parse-text-cite) | Small tool that parses a string of text containing APA style in text citations, e.g. |
+
+### jast
+
+| Package | Description |
+|---|---|
+| [`jast-types`](libs/jast/jast) | jast (journal article/abstract syntax tree) is a syntax for abstract syntax trees representing JATS XML, specifically the "Green" publishing tag set. |
+| [`jast-util-from-csl`](libs/jast/jast-util-from-csl) | cslToFront(data: Data): void; |
+| [`jast-util-to-csl`](libs/jast/jast-util-to-csl) | Convert JATS XML bibliography to CSL JSON |
+
+### ooxast
+
+| Package | Description |
+|---|---|
+| [`ooxast`](libs/ooxast/ooxast) | Type definitions for `ooxast` (Open Office XML abstract syntax tree), a syntax for abstract syntax trees representing Open Office XML documents in the [`unist`](https://github.com/syntax-tree/unist) format. |
+| [`ooxast-util-citation-plugin`](libs/ooxast/ooxast-util-citation-plugin) | Small ooxast utility which scans the text to identify the citation plugin used, either Mendely, Zotero, EndNote, Citavi, native word citations or none at all. |
+| [`ooxast-util-citations`](libs/ooxast/ooxast-util-citations) | This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). |
+| [`ooxast-util-get-style`](libs/ooxast/ooxast-util-get-style) | Get style from a `w:p` or `w:r` element. |
+| [`ooxast-util-markup-to-style`](libs/ooxast/ooxast-util-markup-to-style) | Find certain markup in an ooxast tree and turn it into styles. |
+| [`ooxast-util-parse-bib`](libs/ooxast/ooxast-util-parse-bib) | Find and convert raw references to CSL-JSON using `anystyle`. |
+| [`ooxast-util-properties`](libs/ooxast/ooxast-util-properties) | Return the properties of an `ooxast` node as a JSON object |
+| [`ooxast-util-remove-rsid`](libs/ooxast/ooxast-util-remove-rsid) | Cleans all the rsid tags from an ooxast tree, and merges `w:r` elements if they only differ by rsid values. |
+| [`ooxast-util-to-hast`](libs/ooxast/ooxast-util-to-hast) _private_ | Convert docx to html (Not working) |
+| [`ooxast-util-to-jast`](libs/ooxast/ooxast-util-to-jast) | Util to convert `ooxast` syntax tree to `jast` syntax tree, allowing for `.docx` to `JATS XML` conversion. |
+| [`ooxast-util-to-mdast`](libs/ooxast/ooxast-util-to-mdast) | Convert `ooxast` syntax tree to `mdast` syntax tree. |
+| [`ooxast-util-to-unified-latex`](libs/ooxast/ooxast-util-to-unified-latex) | Convert `ooxast` syntax tree to `unified-latex` syntax tree. |
+
+### rejour
+
+| Package | Description |
+|---|---|
+| [`rejour-frontmatter`](libs/rejour/rejour-frontmatter) _private_ | rejourFrontmatter(): Function; |
+| [`rejour-meta`](libs/rejour/rejour-meta) _private_ | Doesn't do anything atm |
+| [`rejour-move-abstract`](libs/rejour/rejour-move-abstract) _private_ | Really simple plugin for `rejour` that moves the abstract from the `body` to the `front` of a `JATS` document. |
+| [`rejour-parse`](libs/rejour/rejour-parse) | Parser for `rejour` that parses the `JATS` document to a `jast` tree. |
+| [`rejour-stringify`](libs/rejour/rejour-stringify) | Plugin for `rejour` that stringifies a `jast` syntax tree to a `JATS XML` document. |
+
+### reoff
+
+| Package | Description |
+|---|---|
+| [`docx-to-vfile`](libs/reoff/docx-to-vfile) | Reads a `.docx` file and stores its components in vfile format to be processed by other tools, like `reoff-parse`. |
+| [`reoff-cite`](libs/reoff/reoff-cite) | default(options: Options = ...): Function; |
+| [`reoff-clean`](libs/reoff/reoff-clean) | Plugin for [reoff][reoff] to clean the ooxast tree. |
+| [`reoff-compile`](libs/reoff/reoff-compile) _private_ | Compile a reoff-compatible VFile or bare ooxast syntax tree to a .docx document |
+| [`reoff-infer-headings`](libs/reoff/reoff-infer-headings) | Plugin for `reoff` that turns a single bolded or emphasized line into a heading |
+| [`reoff-markup-to-style`](libs/reoff/reoff-markup-to-style) | Plugin for `reoff` that is able to change the styles of paragraphs based on the markup of the underlying text |
+| [`reoff-parse`](libs/reoff/reoff-parse) | Plugin for [reoff][reoff] to parse a `.docx` XML file into an `ooxast` AST.  |
+| [`reoff-parse-references`](libs/reoff/reoff-parse-references) | default(options: Options = {}): Function; |
+| [`reoff-rejour`](libs/reoff/reoff-rejour) | Plugin for `reoff` that transforms an `ooxast` syntax tree into a `jats` syntax tree, i.e.  |
+| [`reoff-remark`](libs/reoff/reoff-remark) | Plugin for `reoff` that takes an `ooxast` tree and turns it into a `remark` tree, allowing for .docx to .tex conversion |
+| [`reoff-unified-latex`](libs/reoff/reoff-unified-latex) | Plugin for `reoff` that takes an `ooxast` tree and turns it into a `unified-latex` tree, allowing for .docx to .tex conversion |
+
+### unified-latex
+
+| Package | Description |
+|---|---|
+| [`unified-latex-stringify`](libs/unified-latex/unified-latex-stringify) | Plugin for `unified-latex` that takes an `unified-latex` tree and turns it into LaTeX |
+
+### xast
+
+| Package | Description |
+|---|---|
+| [`xast-util-has-attribute`](libs/xast/xast-util-has-attribute) | Port of [hast-util-has-property](https://github.com/syntax-tree/hast-util-has-property) for [xast][xast] |
+| [`xast-util-is-element`](libs/xast/xast-util-is-element) | Port of [hast-util-is-element](https://github.com/syntax-tree/hast-util-has-property) for [xast][xast] |
+| [`xast-util-minify-whitespace`](libs/xast/xast-util-minify-whitespace) | Minify whitespace between xast elements: a port of rehype-minify-whitespace 5 for xast |
+| [`xast-util-select`](libs/xast/xast-util-select) | Port of `(hast-util-select)[https://github.com/syntax-tree/hast-util-select]` for use with `xast` nodes. |
+
+Deprecated packages that are still on npm live in [`deprecated/`](deprecated).
 
 <!--
 
@@ -346,48 +182,6 @@ Stringifier.
 ##### [rejour-move-abstract][rejour-move-abstract]
 
 Plugin tries to locate an "abstract" section in a `jast` tree and moves it to the `article-meta` section of the article.
-
-##### [rejour-relatex][rejour-relatex]
-
-Translates a `jast` syntax tree into a `texast` syntax tree to be used by [relatex][relatex].
-
-#### Utilities
-
-##### [jast-util-to-texast][jast-util-to-texast]
-
-Transforms jast to texast.
-
-### relatex
-
-Parser/stringifier compatible with the [unified][unified] ecosystem for [LaTeX](), mostly based on [latex-utensils][latex-utensils].
-
-Consists of plugins (prefixed with `relatex`) to be used with the [unified][unifiedgh] parser which use utilities (prefixed with `texast`) which can be used on their own or as building blocks for your own plugins.
-
-At the moment the goal of relatex is mostly to be able to `generate` decent latex documents using the unified ecosystem rather than parse or accurately represent LaTeX documents.
-
-#### [texast][texast]
-
-`texast` (TeX abstract syntax tree) is a syntax for abstract syntax trees representing LaTeX. The `texast` package provides types for this ast.
-
-It is mostly based on the ast used by [latex-utensils][latex-utensils] and [LaTeX.js][latexjs], but changed in order to be compatible with the unified ecosystem.
-
-`texast` is not meant to be a perfect representation of all LaTeX documents.
-
-#### Plugins
-
-##### [relatex][relatex]
-
-Nothing yet
-
-##### [relatex-stringify][relatex-stringify]
-
-Stringifier.
-
-#### Utilities
-
-##### [texast-util-to-latex][texast-util-to-latex]
-
-Utility for stringifying `texast` syntax trees, mostly based off of [mdast-util-to-markdown][mdast-markdown]
 -->
 
 ## License
@@ -403,17 +197,8 @@ Utility for stringifying `texast` syntax trees, mostly based off of [mdast-util-
 [rejour-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour-stringify
 [rejour-move-abstract]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour-move-abstract
 [rejour-meta]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour-meta
-[rejour-relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/rejour-relatex
-[relatex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex
-[relatex-stringify]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/relatex-stringify
 [jast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/jast
-[jast-util-to-texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/jast-util-to-texast
 [jastscript]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/jastscript
-[texast]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/texast
-[texast-util-to-latex]: https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/texast-util-to-latex
 [hast]: https://github.com/syntax-tree/hast
 [xast]: https://github.com/syntax-tree/xast
 [mdast]: https://github.com/syntax-tree/mdast
-[mdast-markdown]: https://github.com/syntax-tree/mdast-util-to-markdown
-[latex-utensils]: https://github.com/tamuratak/latex-utensils
-[latexjs]: https://github.com/latexjs/latexjs

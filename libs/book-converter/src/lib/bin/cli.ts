@@ -3,7 +3,7 @@
 import fs from 'fs'
 import path from 'path'
 import { hideBin } from 'yargs/helpers'
-import yaml from 'js-yaml'
+import { load as loadYaml } from 'js-yaml'
 import chokidar from 'chokidar'
 import { exec } from 'child_process'
 import yargs from 'yargs'
@@ -71,7 +71,7 @@ const argv = converterCLIOptionsDefaultSchemaInput.parse(cliArgs)
   // Try reading from config file
   if (fs.existsSync(configPath)) {
     const configFileContent = fs.readFileSync(configPath, 'utf8')
-    const parsedYaml = yaml.load(configFileContent)
+    const parsedYaml = loadYaml(configFileContent)
     fileOptions = converterOptionsSchema.parse(parsedYaml)
   } else {
     console.warn(`Config file at ${configPath} not found.`)
@@ -107,12 +107,21 @@ const argv = converterCLIOptionsDefaultSchemaInput.parse(cliArgs)
   })
 
   // Watch for file changes
-  const watcher = chokidar.watch([configPath])
+  // the config and the files it points to
+  const watched = [
+    argv.docx,
+    argv.preamble,
+    argv.before,
+    fileOptions.docx,
+    fileOptions.preamble,
+    fileOptions.before,
+  ].filter((file): file is string => typeof file === 'string')
+  const watcher = chokidar.watch([configPath, ...watched])
   watcher.on('change', async (path) => {
     console.log(`${path} has changed. Re-running...`)
     if (path === configPath) {
       const configFileContent = fs.readFileSync(configPath, 'utf8')
-      const parsedYaml = yaml.load(configFileContent)
+      const parsedYaml = loadYaml(configFileContent)
       fileOptions = converterOptionsSchema.parse(parsedYaml)
     }
     try {

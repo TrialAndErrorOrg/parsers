@@ -1,38 +1,45 @@
 {
   "name": "xast-util-is-element",
-  "version": "0.3.1",
+  "version": "0.4.0",
+  "description": "Port of [hast-util-is-element](https://github.com/syntax-tree/hast-util-has-property) for [xast][xast]",
   "license": "MIT",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/xast/xast-util-is-element"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/xast/xast-util-is-element#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Port of [hast-util-is-element](https://github.com/syntax-tree/hast-util-has-property) for [xast][xast]",
   "keywords": [
     "unified",
     "xast",
     "hast"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "xast-util-is-element",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "@types/unist": "^2.0.6",
-    "@types/xast": "^1.0.2"
+    "@types/unist": "catalog:",
+    "@types/xast": "catalog:"
   }
 }

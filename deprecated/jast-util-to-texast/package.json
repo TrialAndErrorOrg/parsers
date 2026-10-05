@@ -1,0 +1,59 @@
+{
+  "name": "jast-util-to-texast",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Utility to convert a [jast][jast] tree to a [texast][texast] tree.",
+  "license": "GPL-3.0-or-later",
+  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
+  "keywords": [
+    "unified",
+    "abstract",
+    "syntax",
+    "tree",
+    "ast"
+  ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "jast-util-to-texast",
+    "tsconfig": "./tsconfig.lib.json"
+  },
+  "dependencies": {
+    "@types/xast": "catalog:",
+    "csl-json": "0.1.0",
+    "csl-to-biblatex": "workspace:^",
+    "jast-types": "workspace:^",
+    "jast-util-to-csl": "workspace:^",
+    "texast": "workspace:^",
+    "unist-util-is": "catalog:",
+    "unist-util-visit": "catalog:",
+    "xast-util-minify-whitespace": "workspace:^",
+    "xast-util-select": "workspace:^"
+  },
+  "devDependencies": {
+    "rejour-parse": "workspace:^",
+    "relatex-stringify": "workspace:^",
+    "texast-util-to-latex": "workspace:^",
+    "unified": "catalog:",
+    "unist-util-remove-position": "catalog:"
+  }
+}

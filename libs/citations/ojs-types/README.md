@@ -31,11 +31,11 @@ Some typescript types for OJS api responses
 This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c). In Node.js (version 12.20+, 14.14+, 16.0+, 18.0+), install as
 
 ```bash
-pnpm add ojs-api
+pnpm add ojs-api-types
 # or with yarn
-# yarn add ojs-api
+# yarn add ojs-api-types
 # or with npm
-# npm install ojs-api
+# npm install ojs-api-types
 ```
 
 ## Use

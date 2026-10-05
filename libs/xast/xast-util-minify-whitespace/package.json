@@ -1,0 +1,55 @@
+{
+  "name": "xast-util-minify-whitespace",
+  "version": "0.1.0",
+  "description": "Minify whitespace between xast elements: a port of rehype-minify-whitespace 5 for xast",
+  "license": "MIT",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/xast/xast-util-minify-whitespace"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/xast/xast-util-minify-whitespace#readme",
+  "keywords": [
+    "unified",
+    "xast",
+    "xast-util",
+    "util",
+    "utility",
+    "whitespace",
+    "minify"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
+  "typedoc": {
+    "entryPoint": "./src/index.ts",
+    "readmeFile": "./README.md",
+    "displayName": "xast-util-minify-whitespace",
+    "tsconfig": "./tsconfig.lib.json"
+  },
+  "dependencies": {
+    "@types/xast": "catalog:"
+  },
+  "devDependencies": {
+    "rehype-minify-whitespace": "5.0.1",
+    "xast-util-from-xml": "catalog:",
+    "xast-util-to-xml": "catalog:",
+    "xastscript": "catalog:"
+  }
+}

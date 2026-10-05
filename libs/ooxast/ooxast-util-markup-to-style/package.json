@@ -1,12 +1,16 @@
 {
   "name": "ooxast-util-markup-to-style",
-  "version": "0.4.0",
+  "version": "0.5.0",
+  "description": "Find certain markup in an ooxast tree and turn it into styles.",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/ooxast-util-markup-to-style",
-  "homepage": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/ooxast/ooxast-util-markup-to-style"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/ooxast/ooxast-util-markup-to-style#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "Find certain markup in an ooxast tree and turn it into styles.",
   "keywords": [
     "unified",
     "abstract",
@@ -14,33 +18,37 @@
     "tree",
     "ast"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "ooxast-util-markup-to-style",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "ooxast": "0.3.0",
-    "xast-util-is-element": "0.3.1",
-    "ooxast-util-get-style": "0.4.0",
-    "xast-util-select": "0.3.0",
-    "unist-util-visit": "^4.1.2",
-    "xastscript": "^3.1.1",
-    "xast-util-to-string": "^2.0.1",
-    "@types/xast": "^1.0.2"
+    "@types/xast": "catalog:",
+    "ooxast": "workspace:^",
+    "ooxast-util-get-style": "workspace:^",
+    "unist-util-visit": "catalog:",
+    "xast-util-is-element": "workspace:^",
+    "xast-util-select": "workspace:^",
+    "xast-util-to-string": "catalog:",
+    "xastscript": "catalog:"
   }
 }

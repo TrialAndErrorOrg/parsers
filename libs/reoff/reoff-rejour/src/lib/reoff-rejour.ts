@@ -2,7 +2,28 @@ import { toJast, Options } from 'ooxast-util-to-jast'
 import { Root as JastRoot } from 'jast-types'
 import { Root as OoxastRoot } from 'ooxast'
 import { Plugin, Processor as UnifiedProcessor, Transformer } from 'unified'
-type Processor = UnifiedProcessor<any, any, any, any>
+type VFile = Parameters<Transformer<OoxastRoot, OoxastRoot>>[1]
+type Processor = UnifiedProcessor<any, any, any, any, any>
+
+declare module 'unified' {
+  interface Data {
+    /**
+     * Relations (`rId` to target) for reoff-rejour to use instead of the ones reoff-parse
+     * stored on the file.
+     */
+    relations?: { [key: string]: string } | undefined
+  }
+}
+
+/**
+ * The document's relations, which reoff-parse stores per part (`document`, `footnotes`,
+ * `endnotes`) on the VFile.
+ */
+function documentRelations(file: VFile): { [key: string]: string } {
+  // `relations` is declared on vfile's DataMap by docx-to-vfile, which this package doesn't depend on.
+  const relations = file.data.relations as { document?: { [key: string]: string } } | undefined
+  return relations?.document ?? {}
+}
 
 /**
  * Bridge-mode.
@@ -17,7 +38,7 @@ function bridge(
     destination.run(
       toJast(node, file, {
         ...options,
-        relations: (file.data.relations || {}) as { [key: string]: string },
+        relations: options?.relations ?? documentRelations(file),
       }),
       file,
       (error) => {
@@ -35,9 +56,10 @@ function mutate(
   options: void | Options | undefined = {},
 ): ReturnType<Plugin<[Options?] | void[], OoxastRoot, JastRoot>> {
   return (node, file) => {
-    const result = toJast(node, {
+    // Pass the file along: footnotes, styles and relations are read from its data.
+    const result = toJast(node, file, {
       ...options,
-      relations: (file.data.relations || {}) as { [key: string]: string },
+      relations: options?.relations ?? documentRelations(file),
     })
     return result
   }
@@ -56,7 +78,7 @@ function mutate(
  * @param destination
  *   Optional unified processor.
  * @param options
- *   Options passed to `jast-util-to-texast`.
+ *   Options passed to `ooxast-util-to-jast`.
  */
 const reoffRejour = function (destination?: Processor | Options, options?: Options) {
   const relations = this.data('relations')

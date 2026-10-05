@@ -10,12 +10,7 @@ import { Loader2, Copy, Download, AlertTriangle, Check } from 'lucide-react'
 import type { VFile } from 'vfile'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
-import {
-  BlobReader,
-  BlobWriter,
-  TextReader,
-  ZipWriter,
-} from '@zip.js/zip.js'
+import { BlobReader, BlobWriter, TextReader, ZipWriter } from '@zip.js/zip.js'
 
 const FRONTMATTER_INJECTION = `\\begin{frontmatter}
   \\maketitle

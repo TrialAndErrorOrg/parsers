@@ -825,7 +825,20 @@
         },
         {
           "type": "html",
-          "value": "<sub>[object Object]</sub>"
+          "value": "<sub>"
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "age"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "value": "</sub>"
         },
         {
           "type": "text",
@@ -842,7 +855,20 @@
         },
         {
           "type": "html",
-          "value": "<sub>[object Object]</sub>"
+          "value": "<sub>"
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "age"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "value": "</sub>"
         },
         {
           "type": "text",
@@ -1716,7 +1742,20 @@
         },
         {
           "type": "html",
-          "value": "<sub>[object Object]</sub>"
+          "value": "<sub>"
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "age"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "value": "</sub>"
         },
         {
           "type": "text",
@@ -1733,7 +1772,20 @@
         },
         {
           "type": "html",
-          "value": "<sub>[object Object]</sub>"
+          "value": "<sub>"
+        },
+        {
+          "type": "emphasis",
+          "children": [
+            {
+              "type": "text",
+              "value": "age"
+            }
+          ]
+        },
+        {
+          "type": "html",
+          "value": "</sub>"
         },
         {
           "type": "text",
@@ -3598,23 +3650,19 @@
             },
             {
               "type": "text",
-              "value": " "
-            },
-            {
-              "type": "text",
-              "value": "We also tested a model with a random slope for congruency x previous congruency x target location repetition interaction. Although "
-            },
-            {
-              "type": "text",
-              "value": "this"
-            },
-            {
-              "type": "text",
-              "value": " model fit our data better (AIC"
+              "value": " We also tested a model with a random slope for congruency x previous congruency x target location repetition interaction. Although this model fit our data better (AIC"
             },
             {
               "type": "html",
-              "value": "<sub>[object Object]</sub>"
+              "value": "<sub>"
+            },
+            {
+              "type": "text",
+              "value": "without random slope"
+            },
+            {
+              "type": "html",
+              "value": "</sub>"
             },
             {
               "type": "text",
@@ -3622,27 +3670,19 @@
             },
             {
               "type": "html",
-              "value": "<sub>[object Object]</sub>"
+              "value": "<sub>"
             },
             {
               "type": "text",
-              "value": " = -27133.846"
+              "value": "with random slope"
+            },
+            {
+              "type": "html",
+              "value": "</sub>"
             },
             {
               "type": "text",
-              "value": ";"
-            },
-            {
-              "type": "text",
-              "value": "models with smaller AIC values fit better), the significant levels of all the fixed effect"
-            },
-            {
-              "type": "text",
-              "value": "s"
-            },
-            {
-              "type": "text",
-              "value": " for this model was very similar to the one reported in the main text, where there was no significant carryover effect."
+              "value": " = -27133.846;models with smaller AIC values fit better), the significant levels of all the fixed effects for this model was very similar to the one reported in the main text, where there was no significant carryover effect."
             }
           ]
         }

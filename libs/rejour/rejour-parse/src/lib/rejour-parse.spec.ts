@@ -1,12 +1,14 @@
 import { unified } from 'unified'
 import rejourParse from './rejour-parse.js'
 import { removePosition } from 'unist-util-remove-position'
+import { describe, it, expect } from 'vitest'
 
 describe('parser', () => {
   const proc = unified().use(rejourParse)
 
   it('should parse the tree', () => {
-    const tree = removePosition(proc.parse('<article></article>'), true)
+    const tree = proc.parse('<article></article>')
+    removePosition(tree, { force: true })
     expect(tree).toEqual({
       type: 'root',
       children: [
@@ -21,14 +23,11 @@ describe('parser', () => {
   })
 
   it('should not remove whitespace without setting', () => {
-    const tree = removePosition(
-      proc.parse(`<article>
+    const tree = proc.parse(`<article>
 
 
-    </article>`),
-      true,
-    )
-    console.dir(tree, { depth: null })
+    </article>`)
+    removePosition(tree, { force: true })
     expect(tree).toEqual({
       children: [
         {
@@ -43,18 +42,15 @@ describe('parser', () => {
   })
   it('should remove whitespace *with* setting', () => {
     const proc = unified().use(rejourParse, { removeWhiteSpace: true })
-    const tree = removePosition(
-      proc.parse(`<article>
+    const tree = proc.parse(`<article>
 
 
-    </article>`),
-      true,
-    )
-    console.dir(tree, { depth: null })
+    </article>`)
+    removePosition(tree, { force: true })
     expect(tree).toEqual({
       children: [
         {
-          children: [{ type: 'text', value: `` }],
+          children: [],
           attributes: {},
           name: 'article',
           type: 'element',

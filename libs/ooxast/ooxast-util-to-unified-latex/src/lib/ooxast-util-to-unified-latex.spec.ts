@@ -4,7 +4,8 @@ import { toString } from '@unified-latex/unified-latex-util-to-string'
 import { m } from '@unified-latex/unified-latex-builder'
 import { updateRenderInfo } from '@unified-latex/unified-latex-util-render-info'
 import { PB } from './util/PB.js'
-import listTree from '../test/list.json.js'
+import listTree from '../test/list.json' with { type: 'json' }
+import { describe, it, expect } from 'vitest'
 
 // test whether a ooxast p node with style 'Heading1' is converted to a macro with name 'section'
 describe('ooxast-util-to-unified-latex', () => {
@@ -71,10 +72,13 @@ describe('ooxast-util-to-unified-latex', () => {
     expect(toUnifiedLatex(ooxastParagraph, { document: false })).toEqual(res)
   })
 
+  // without numbering.xml every list is an enumerate; "Immediately starting other list" is a
+  // different list (numId 6) at level 0, so it starts a new top-level list
   it('should convert a file with lists to nested enum envs', () => {
     const res = toUnifiedLatex(listTree as Root, { document: false })
-    console.dir(res, { depth: null })
-    expect(toString(res)).toEqual(`\\begin{enumerate}
+    const normalize = (tex: string) => tex.replace(/\s+/g, ' ').trim()
+    expect(normalize(toString(res))).toEqual(
+      normalize(`\\begin{enumerate}
 
 
     \\item Number one
@@ -85,7 +89,7 @@ describe('ooxast-util-to-unified-latex', () => {
 
 
 
-    \\item Three·
+    \\item Three
 
     \\begin{enumerate}
             \\item Indent
@@ -107,9 +111,10 @@ describe('ooxast-util-to-unified-latex', () => {
             \\item Indentation
     \\end{enumerate}
     \\item Going down a step again
-    \\begin{enumerate}
-            \\item Immediately starting other list
-    \\end{enumerate}
-\\end{enumerate}`)
+\\end{enumerate}
+\\begin{enumerate}
+    \\item Immediately starting other list
+\\end{enumerate}`),
+    )
   })
 })

@@ -1,17 +1,5 @@
-**Bold **not bold
+[A link to some website](https://github.com/TrialAndErrorOrg/parsers)
 
-_Italic_
+# Heading
 
-<u>[object Object]</u>
-
-~~Strikethrough~~
-
-<sub>[object Object]</sub>
-
-<sup>[object Object]</sup>
-
-highlight yellow
-
-red text
-
-border
+Link to heading: Heading

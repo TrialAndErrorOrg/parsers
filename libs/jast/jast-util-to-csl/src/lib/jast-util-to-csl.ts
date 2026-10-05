@@ -12,7 +12,6 @@ import {
 } from 'jast-types'
 import { Data as CSL, LooseNumber, Person } from 'csl-json'
 import { toString } from 'xast-util-to-string'
-import { convert as unistConvert } from 'unist-util-is'
 import { convertElement } from 'xast-util-is-element'
 import { select } from 'xast-util-select'
 // import { visit } from 'unist-util-visit'
@@ -164,8 +163,8 @@ export function refToCSL(citation: ElementCitation, id: string): CSL {
   return entry
 }
 
-const isText = unistConvert<Text>('text')
 type Node = Content
+const isText = (node: Node): node is Text => node.type === 'text'
 
 const merge = (array: ({ [key: string]: any | any[] } | any)[]): { [key: string]: any | any[] } =>
   array.reduce((acc: { [key: string]: any }, curr: { [key: string]: any | any[] } | any) => {
@@ -208,8 +207,8 @@ type MetaData = { front: CSL | undefined; back: CSL[] | undefined }
 type CSLConditional<T extends Root | Front | Back> = T extends Root
   ? MetaData
   : T extends Front
-  ? CSL
-  : CSL[]
+    ? CSL
+    : CSL[]
 
 const isFront = convertElement<Front>('front')
 const isBack = convertElement<Back>('back')
@@ -247,6 +246,18 @@ export function toCSL<T extends Root | Front | Back>(root: T): CSLConditional<T>
     return toCSLFront(root) as CSLConditional<T>
   }
   return toCSLBack(root) as CSLConditional<T>
+}
+
+/**
+ * CSL date parts are always [year, month, day], whereas JATS allows `<day>`, `<month>` and
+ * `<year>` in any order.
+ */
+function dateParts(node: Extract<Node, { children: any[] }>): string[] {
+  const part = (name: string) => {
+    const child = node.children.find((c: Node) => isElement(c) && c.name === name)
+    return child ? toString(child) : undefined
+  }
+  return [part('year'), part('month'), part('day')].filter((p): p is string => !!p)
 }
 
 export function all(node: Extract<Node, { children: any[] }>): any[] {
@@ -291,7 +302,7 @@ export function one(node: Node) {
         case 'published': {
           return {
             issued: {
-              'date-parts': [all(node)],
+              'date-parts': [dateParts(node)],
               ...(node.attributes.iso8601Date ? { literal: node.attributes.iso8601Date } : {}),
             },
           }
@@ -301,7 +312,7 @@ export function one(node: Node) {
             custom: [
               {
                 accepted: {
-                  'date-parts': [all(node)],
+                  'date-parts': [dateParts(node)],
                   ...(node.attributes.iso8601Date ? { literal: node.attributes.iso8601Date } : {}),
                 },
               },
@@ -312,7 +323,7 @@ export function one(node: Node) {
             custom: [
               {
                 received: {
-                  'date-parts': [all(node)],
+                  'date-parts': [dateParts(node)],
                   ...(node.attributes.iso8601Date ? { literal: node.attributes.iso8601Date } : {}),
                 },
               },
@@ -329,7 +340,7 @@ export function one(node: Node) {
     case 'pubDate': {
       return {
         issued: {
-          'date-parts': [all(node)],
+          'date-parts': [dateParts(node)],
         },
       }
     }

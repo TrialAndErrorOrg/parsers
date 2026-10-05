@@ -1,61 +1,77 @@
 {
   "name": "@trialanderror/converter-cli",
-  "version": "0.2.0",
-  "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/converter-cli",
-  "homepage": "https://github.com/TrialAndErrorOrg/parsers",
-  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "version": "0.3.2",
   "description": "convert books",
-  "type": "module",
-  "bin": {
-    "cote-conv": "./lib/bin/cli.js"
+  "license": "GPL-3.0-or-later",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/book-converter"
   },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/book-converter#readme",
+  "author": "Thomas F. K. Jorna <hello@tefkah.com>",
+  "type": "module",
   "keywords": [
     "unified",
     "word",
     "cli",
     "latex"
   ],
+  "bin": {
+    "cote-conv": "./dist/lib/bin/cli.js"
+  },
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./schema.json": "./schema.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "schema.json"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "@trialanderror/converter-cli",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "yargs": "^17.7.2",
-    "js-yaml": "^4.1.0",
-    "chokidar": "^3.5.3",
-    "zod": "^3.21.4",
-    "ooxast-util-markup-to-style": "0.4.0",
-    "unified": "^10.1.2",
-    "reoff-unified-latex": "0.3.0",
-    "unified-latex-stringify": "0.2.1",
-    "docx-to-vfile": "0.10.0",
-    "@unified-latex/unified-latex-builder": "^1.3.1",
-    "reoff-clean": "0.3.0",
-    "reoff-markup-to-style": "0.2.0",
-    "reoff-parse-references": "0.3.0",
-    "reoff-cite": "0.4.0",
-    "xast-util-to-string": "^2.0.1",
-    "ooxast": "0.3.0",
-    "ooxast-util-get-style": "0.4.0",
-    "@unified-latex/unified-latex-types": "^1.3.1",
-    "zod-to-json-schema": "^3.21.4",
-    "reoff-parse": "0.5.0",
-    "ooxast-util-to-unified-latex": "0.5.0"
+    "@unified-latex/unified-latex-builder": "catalog:",
+    "@unified-latex/unified-latex-types": "catalog:",
+    "chokidar": "^5.0.0",
+    "docx-to-vfile": "workspace:^",
+    "js-yaml": "^5.4.2",
+    "ooxast": "workspace:^",
+    "ooxast-util-get-style": "workspace:^",
+    "ooxast-util-markup-to-style": "workspace:^",
+    "ooxast-util-to-unified-latex": "workspace:^",
+    "reoff-cite": "workspace:^",
+    "reoff-clean": "workspace:^",
+    "reoff-markup-to-style": "workspace:^",
+    "reoff-parse": "workspace:^",
+    "reoff-parse-references": "workspace:^",
+    "reoff-unified-latex": "workspace:^",
+    "unified": "catalog:",
+    "unified-latex-stringify": "workspace:^",
+    "xast-util-to-string": "catalog:",
+    "yargs": "^18.2.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/xast": "catalog:",
+    "@types/yargs": "^17.0.35",
+    "@unified-latex/unified-latex-util-to-string": "catalog:",
+    "vfile": "catalog:",
+    "xastscript": "catalog:"
   }
 }

@@ -6,8 +6,7 @@ import { Data as CSL } from 'csl-json'
 import { CitationItem, MendeleyCitationItem } from 'ooxast-util-citations'
 
 import { Parent } from 'unist'
-import {} from '@benrbray/micromark-extension-cite'
-import { InlineCiteNode } from '@benrbray/mdast-util-cite'
+import type { InlineCiteNode } from '../types.js'
 
 export const citation: Handle = (state: State, node: T, parent?: Parent) => {
   // i const t = select('', citation) as T

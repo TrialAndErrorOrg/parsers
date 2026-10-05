@@ -1,0 +1,292 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "type": {
+      "default": "book",
+      "type": "string",
+      "enum": [
+        "book",
+        "article"
+      ]
+    },
+    "docx": {
+      "type": "string",
+      "description": "Path to the docx file to convert"
+    },
+    "out": {
+      "type": "string",
+      "description": "Path to the directory of the output file. Defaults to the same directory as the docx file."
+    },
+    "preamble": {
+      "type": "string",
+      "description": "Path to the preamble.tex file to use"
+    },
+    "before": {
+      "type": "string",
+      "description": "Path to the before-first-page.tex file to use"
+    },
+    "media": {
+      "type": "string",
+      "description": "Path to where to place the media files from the output. Defaults to ./media of the output directory."
+    },
+    "config": {
+      "type": "string",
+      "description": "Path to the config yaml file to use"
+    },
+    "parseCitations": {
+      "description": "Whether to parse citations. Defaults to 'false'",
+      "type": "boolean"
+    },
+    "citationType": {
+      "default": "zotero",
+      "description": "The type of citation you want to parse.",
+      "type": "string",
+      "enum": [
+        "mendeley",
+        "word",
+        "citavi",
+        "zotero",
+        "endnote"
+      ]
+    },
+    "onSuccess": {
+      "type": "string",
+      "description": "Command to run after conversion"
+    },
+    "index": {
+      "description": "Path to the index file to use",
+      "type": "string"
+    },
+    "markupStyle": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "markup": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "w:b",
+                  "w:bCs",
+                  "w:bdr",
+                  "w:caps",
+                  "w:color",
+                  "w:cs",
+                  "w:dstrike",
+                  "w:eastAsianLayout",
+                  "w:effect",
+                  "w:em",
+                  "w:emboss",
+                  "w:fitText",
+                  "w:highlight",
+                  "w:i",
+                  "w:iCs",
+                  "w:imprint",
+                  "w:kern",
+                  "w:lang",
+                  "w:noProof",
+                  "w:oMath",
+                  "w:outline",
+                  "w:position",
+                  "w:rFonts",
+                  "w:rPrChange",
+                  "w:rStyle",
+                  "w:rtl",
+                  "w:shadow",
+                  "w:shd",
+                  "w:smallCaps",
+                  "w:snapToGrid",
+                  "w:spacing",
+                  "w:specVanish",
+                  "w:strike",
+                  "w:sz",
+                  "w:szCs",
+                  "w:u",
+                  "w:vanish",
+                  "w:vertAlign",
+                  "w:w",
+                  "w:webHidden"
+                ]
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "w:b",
+                    "w:bCs",
+                    "w:bdr",
+                    "w:caps",
+                    "w:color",
+                    "w:cs",
+                    "w:dstrike",
+                    "w:eastAsianLayout",
+                    "w:effect",
+                    "w:em",
+                    "w:emboss",
+                    "w:fitText",
+                    "w:highlight",
+                    "w:i",
+                    "w:iCs",
+                    "w:imprint",
+                    "w:kern",
+                    "w:lang",
+                    "w:noProof",
+                    "w:oMath",
+                    "w:outline",
+                    "w:position",
+                    "w:rFonts",
+                    "w:rPrChange",
+                    "w:rStyle",
+                    "w:rtl",
+                    "w:shadow",
+                    "w:shd",
+                    "w:smallCaps",
+                    "w:snapToGrid",
+                    "w:spacing",
+                    "w:specVanish",
+                    "w:strike",
+                    "w:sz",
+                    "w:szCs",
+                    "w:u",
+                    "w:vanish",
+                    "w:vertAlign",
+                    "w:w",
+                    "w:webHidden"
+                  ]
+                }
+              }
+            ]
+          },
+          "style": {
+            "type": "string"
+          },
+          "matchAll": {
+            "default": true,
+            "type": "boolean"
+          },
+          "matchFull": {
+            "default": true,
+            "type": "boolean"
+          },
+          "ignorePunctuation": {
+            "default": true,
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "markup",
+          "style"
+        ]
+      },
+      "description": "Markup style options"
+    },
+    "paragraphStyleHandlers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "style": {
+            "type": "string",
+            "pattern": "^\\w+$",
+            "description": "The name of the paragraph style to handle. No spaces allowed, its in camelCase or PascalCase."
+          },
+          "output": {
+            "type": "string",
+            "description": "Output LaTeX code. Use $1 for the text of the paragraph. E.g. '\\textbf{$1}'"
+          }
+        },
+        "required": [
+          "style",
+          "output"
+        ]
+      },
+      "description": "Paragraph style handlers"
+    },
+    "latexOptions": {
+      "default": {
+        "documentClass": "jote-book",
+        "options": []
+      },
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "documentClass": {
+              "type": "string",
+              "const": "jote-book"
+            },
+            "options": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "smallauthor",
+                  "chapterhaspagenum",
+                  "nochapterinheader",
+                  "pagenuminheader",
+                  "bigchapnum",
+                  "medium2",
+                  "tocpages",
+                  "garamond",
+                  "titleinheader",
+                  "print"
+                ]
+              }
+            },
+            "indexCSV": {
+              "type": "string",
+              "description": "Path to the index CSV file to use"
+            }
+          },
+          "required": [
+            "documentClass",
+            "options"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "documentClass": {
+              "type": "string",
+              "const": "new-jote-article"
+            },
+            "article": {
+              "default": "empirical",
+              "type": "string",
+              "enum": [
+                "empirical",
+                "reflection",
+                "meta",
+                "rga",
+                "editorial"
+              ]
+            },
+            "citeStyle": {
+              "default": "authordate",
+              "type": "string",
+              "enum": [
+                "authordate",
+                "numeric"
+              ]
+            },
+            "issued": {
+              "type": "string",
+              "const": "issued"
+            }
+          },
+          "required": [
+            "documentClass"
+          ]
+        }
+      ],
+      "description": "Options dealiing with latex"
+    }
+  },
+  "required": [
+    "docx"
+  ]
+}

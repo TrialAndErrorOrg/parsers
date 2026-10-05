@@ -1,14 +1,17 @@
-import { CompilerFunction } from 'unified'
+import type { Compiler, Plugin } from 'unified'
 import type { Root } from 'jast-types'
 
 const homo = 'gy'
-export default function astStringify() {
-  const compiler: CompilerFunction<Root, string> = (tree) => {
+const astStringify: Plugin<[], Root, string> = function () {
+  const compiler: Compiler<Root, string> = (tree) => {
     // Assume options.
-    // const settings = /** @type {Options} */ (this.data('settings'))
+    // const settings = this.data('settings')
 
     return JSON.stringify(tree, null, 2)
   }
 
-  Object.assign(this, { Compiler: compiler })
+  // `this` is an untyped processor, whose `compiler` takes any node.
+  this.compiler = compiler as Compiler
 }
+
+export default astStringify

@@ -1,11 +1,16 @@
 {
   "name": "reoff-parse-references",
-  "version": "0.3.0",
+  "version": "0.4.0",
+  "description": "default(options: Options = {}): Function;",
   "license": "GPL-3.0-or-later",
-  "repository": "https://github.com/TrialAndErrorOrg/parsers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TrialAndErrorOrg/parsers.git",
+    "directory": "libs/reoff/reoff-parse-references"
+  },
+  "homepage": "https://github.com/TrialAndErrorOrg/parsers/tree/main/libs/reoff/reoff-parse-references#readme",
   "author": "Thomas F. K. Jorna <hello@tefkah.com>",
   "type": "module",
-  "description": "default(options: Options = {}): Function;",
   "keywords": [
     "unified",
     "abstract",
@@ -13,29 +18,31 @@
     "tree",
     "ast"
   ],
+  "exports": {
+    ".": {
+      "@jote/source": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.lib.json",
+    "typecheck": "tsc -p tsconfig.json"
+  },
   "typedoc": {
     "entryPoint": "./src/index.ts",
     "readmeFile": "./README.md",
     "displayName": "reoff-parse-references",
     "tsconfig": "./tsconfig.lib.json"
   },
-  "exports": {
-    ".": {
-      "types": "./index.d.ts",
-      "import": "./index.js"
-    }
-  },
-  "main": "./index.js",
-  "module": "./index.js",
-  "types": "./index.d.ts",
-  "files": [
-    "index.d.ts",
-    "index.js",
-    "/lib"
-  ],
   "dependencies": {
-    "ooxast": "0.3.0",
-    "ooxast-util-parse-bib": "0.3.0",
-    "vfile": "^5.3.7"
+    "ooxast": "workspace:^",
+    "ooxast-util-parse-bib": "workspace:^",
+    "vfile": "catalog:"
   }
 }

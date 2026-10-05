@@ -74,6 +74,12 @@ export interface DocxVFileData {
   }
 }
 
+/**
+ * The single registration of the docx fields (`media`, `relations`, `parsed`, raw xml) on
+ * `file.data`. Any package that imports something from `docx-to-vfile` (even just
+ * `import type { DocxVFileData } from 'docx-to-vfile'`) gets `file.data.parsed` etc. typed; do
+ * not re-declare this augmentation elsewhere.
+ */
 declare module 'vfile' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
   interface DataMap extends DocxVFileData {}
@@ -89,7 +95,7 @@ export type XMLOrRelsString = `${string}.xml` | `${string}.rels`
  * @returns A VFile with the contents of the document.xml file as the root, and the contents of the other xml files as data.
  */
 export async function docxToVFile(
-  file: ArrayBuffer | File | Blob | Buffer | string,
+  file: ArrayBuffer | Uint8Array | File | Blob | Buffer | string,
   userOptions?: Options,
 ): Promise<VFile> {
   let input = file
@@ -101,7 +107,7 @@ export async function docxToVFile(
     const inp = typeof file === 'string' ? await readFile(file) : file
     path = typeof file === 'string' ? file : undefined
 
-    input = Buffer.isBuffer(inp) ? new Blob([inp]) : file
+    input = Buffer.isBuffer(inp) ? new Blob([inp as Uint8Array<ArrayBuffer>]) : file
   }
 
   const options: Options = {

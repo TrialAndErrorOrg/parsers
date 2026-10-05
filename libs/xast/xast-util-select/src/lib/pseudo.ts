@@ -15,12 +15,10 @@ import { extendedFilter } from 'bcp-47-match'
 import { parse as commas } from 'comma-separated-tokens'
 import { hasAttribute } from 'xast-util-has-attribute'
 import { isElement } from 'xast-util-is-element'
-import { whitespace } from 'hast-util-whitespace'
 import { zwitch } from 'zwitch'
 import { any } from './any.js'
 
 const handle = zwitch('name', {
-  //// @ts-expect-error: hush.
   unknown: unknownPseudo as any,
   invalid: invalidPseudo,
   handlers: {
@@ -158,8 +156,8 @@ function checked(_: RulePseudo, element: Element): boolean {
   if (isElement(element, ['input', 'menuitem'])) {
     return Boolean(
       element.attributes &&
-        (element.attributes.type === 'checkbox' || element.attributes.type === 'radio') &&
-        hasAttribute(element, 'checked'),
+      (element.attributes.type === 'checkbox' || element.attributes.type === 'radio') &&
+      hasAttribute(element, 'checked'),
     )
   }
 
@@ -290,9 +288,9 @@ function root(
 ): boolean {
   return Boolean(
     (!parent || parent.type === 'root') &&
-      state.schema &&
-      (state.schema.space === 'html' || state.schema.space === 'svg') &&
-      isElement(element, ['html', 'svg']),
+    state.schema &&
+    (state.schema.space === 'html' || state.schema.space === 'svg') &&
+    isElement(element, ['html', 'svg']),
   )
 }
 
@@ -344,8 +342,16 @@ function blank(_: RulePseudo, element: Element): boolean {
    * @returns {boolean}
    */
   function check(child: ElementChild): boolean {
-    return child.type === 'element' || (child.type === 'text' && !whitespace(child))
+    return child.type === 'element' || (child.type === 'text' && !whitespace(child.value))
   }
+}
+
+/**
+ * Whether `value` is inter-element whitespace (inlined from `hast-util-whitespace`, whose
+ * 3.x types only accept hast nodes).
+ */
+function whitespace(value: string): boolean {
+  return value.replace(/[ \t\n\f\r]/g, '') === ''
 }
 
 /**
@@ -466,8 +472,8 @@ function nthLastChild(
   assertDeep(state, query)
   return Boolean(
     typeof state.elementCount === 'number' &&
-      typeof state.elementIndex === 'number' &&
-      query.value(state.elementCount - state.elementIndex - 1),
+    typeof state.elementIndex === 'number' &&
+    query.value(state.elementCount - state.elementIndex - 1),
   )
 }
 

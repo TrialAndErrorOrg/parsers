@@ -1,5 +1,6 @@
 import astStringify from './ast-stringify.js'
-describe('ast-stringify', () => {
+import { describe, it, expect } from 'vitest'
+describe('unified-ast-stringify', () => {
   it('should work', () => {
     expect(typeof astStringify).toEqual('function')
   })

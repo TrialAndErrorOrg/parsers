@@ -2,7 +2,7 @@
 
 import { getPStyle } from 'ooxast-util-get-style'
 import { H, Body, Handle, P, UnifiedLatexNode } from '../types.js'
-import { Element } from 'xast-util-to-string/lib'
+import type { Element } from 'xast'
 import { one } from '../one.js'
 // import { getPStyle } from '../util/get-pstyle.js'
 
@@ -49,7 +49,7 @@ export const body: Handle = (h: H, body: Body) => {
         continue
       }
 
-      if (typeof matcher === 'function' && matcher(child, style === null ? undefined : style)) {
+      if (typeof matcher === 'function' && matcher(child, style === null ? undefined : style, h)) {
         res = handle(handler)
       }
     }

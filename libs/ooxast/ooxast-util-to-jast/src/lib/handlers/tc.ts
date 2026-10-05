@@ -49,7 +49,7 @@ export function tc(j: J, node: Tc): Td {
     +gridSpan.val > 1
       ? { colspan: gridSpan.val }
       : {}),
-    ...(shdStyle ?? borderStyle ? { style } : {}),
+    ...((shdStyle ?? borderStyle) ? { style } : {}),
 
     ...(typeof vAlign === 'object' && typeof vAlign?.val === 'string' && vAlign?.val !== 'top'
       ? { valign: vAlign.val }

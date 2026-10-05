@@ -38,13 +38,16 @@ export async function docxToTexConverter(
         'w:color',
       ],
     })
+    // only a fallback for documents without heading styles: in a document that has them, fully
+    // bold or italic paragraphs are figure labels, captions, author notes…, not headings
     .use(reoffMarkupToStyle, [
-      { markup: ['w:b'], style: 'Heading 1' },
-      { markup: ['w:i'], style: 'Heading 2' },
+      { markup: ['w:b'], style: 'Heading 1', onlyIfNoHeadings: true },
+      { markup: ['w:i'], style: 'Heading 2', onlyIfNoHeadings: true },
     ])
-    // @ts-expect-error type mismatch between unified versions
     .use(reoffUnifiedLatex, {
       xcolor: false,
+      // jote-new-article loads soul, not ulem: \st, not \sout
+      strikethrough: 'st',
       tabularx: { width: '\\linewidth' },
       preamble: `\\addbibresource{bibliography.bib}\n\n${preamble ?? ''}`,
       documentClass: {

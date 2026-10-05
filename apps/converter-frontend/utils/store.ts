@@ -120,10 +120,10 @@ export const metaToPreamble = (form: Form): string => {
                         value.length > 3
                           ? ' et al.'
                           : value.length === 3
-                          ? `, ${value[1].familyName}, \\& ${value[2].familyName}`
-                          : value.length === 2
-                          ? `& ${value[1].familyName}`
-                          : ''
+                            ? `, ${value[1].familyName}, \\& ${value[2].familyName}`
+                            : value.length === 2
+                              ? `& ${value[1].familyName}`
+                              : ''
                       }}`,
                     ]
                   : []),

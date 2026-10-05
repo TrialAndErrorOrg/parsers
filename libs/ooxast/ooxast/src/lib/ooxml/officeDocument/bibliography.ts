@@ -10,7 +10,7 @@ export interface Author extends UnistNode {
   type: 'element'
   name: `b:Author`
   attributes: Record<string, never>
-  children: RequiredMap<AuthorMap>
+  children: RequiredMap<AuthorMap>[]
 }
 
 export interface AuthorMap {
@@ -36,7 +36,7 @@ export interface NameList extends UnistNode {
   type: 'element'
   name: 'b:NameList'
   attributes: Record<string, never>
-  children: RequiredMap<NameListMap>
+  children: RequiredMap<NameListMap>[]
 }
 
 export interface NameListMap {
@@ -47,7 +47,7 @@ export interface NameOrCorporate<name extends string = 'NameOrCorporate'> extend
   type: 'element'
   name: `b:${name}`
   attributes: Record<string, never>
-  children: RequiredMap<NameOrCorporateMap>
+  children: RequiredMap<NameOrCorporateMap>[]
 }
 
 export interface NameOrCorporateMap {
@@ -59,7 +59,7 @@ export interface Name<name extends string = 'Name'> extends UnistNode {
   type: 'element'
   name: `b:${name}`
   attributes: Record<string, never>
-  children: RequiredMap<NameMap>
+  children: RequiredMap<NameMap>[]
 }
 
 export interface NameMap {
@@ -70,7 +70,7 @@ export interface Person extends UnistNode {
   type: 'element'
   name: 'b:Person'
   attributes: Record<string, never>
-  children: RequiredMap<PersonMap>
+  children: RequiredMap<PersonMap>[]
 }
 
 export interface PersonMap {
@@ -87,7 +87,7 @@ export interface Sources extends UnistNode {
     StyleName: string
     URI: string
   }
-  children: RequiredMap<SourcesMap>
+  children: RequiredMap<SourcesMap>[]
 }
 
 export interface SourcesMap {
@@ -101,7 +101,7 @@ export interface Source extends UnistNode {
     StyleName: string
     URI: string
   }
-  children: RequiredMap<SourceMap>
+  children: RequiredMap<SourceMap>[]
 }
 
 export interface MetaData<tag extends string = 'SourceType'> extends UnistNode {

@@ -1,6 +1,6 @@
 {
   "name": "rejour-parse",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Parser for `rejour` that parses the `JATS` document to a `jast` tree.",
   "license": "GPL-3.0-or-later",
   "repository": {

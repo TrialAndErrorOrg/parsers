@@ -96,6 +96,28 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 - `ooxast` updated to version `0.1.2`
 - `xast-util-is-element` updated to version `0.1.2`
 
+## 0.5.1
+
+### Patch Changes
+
+- [#134](https://github.com/TrialAndErrorOrg/parsers/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - Bug fixes:
+  
+  - `jast-util-to-csl`: CSL `date-parts` ordered year, month, day.
+  - `ooxast-util-citations`: native Word citations inside content controls (`w:sdt`) are reparsed
+  - `ooxast-util-remove-rsid`: merging keeps content.
+  - `ooxast-util-to-jast`: only `heading N` styles are headings; sections are numbered from `sec-1`; footnotes and relations are read from the VFile; citation xrefs get the field code's position.
+  - `ooxast-util-to-mdast`: links and images are kept (relations are read per part), and underline/sub/sup text renders instead of `[object Object]`.
+  - `rejour-parse` actually use `removeWhiteSpace` option.
+  - `rejour-stringify` writes kebab-case JATS names again (it wrote the camelCased names from `rejour-parse`).
+  - `reoff-rejour` passes the VFile and its document relations to `ooxast-util-to-jast`.
+
+- [#134](https://github.com/TrialAndErrorOrg/parsers/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - Published from the `TrialAndErrorOrg/parsers` monorepo with npm provenance: `repository` points at the package's directory there, and the build is plain TypeScript (`tsc`) to `dist`. Dependencies are updated to their latest versions.
+- Updated dependencies [[`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e), [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e)]:
+  - ooxast@0.5.0
+  - ooxast-util-get-style@0.4.2
+  - xast-util-is-element@0.4.1
+  - xast-util-select@0.4.1
+
 ## 0.1.0 (2023-03-09)
 
 ### Dependency Updates

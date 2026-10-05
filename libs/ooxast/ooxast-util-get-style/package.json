@@ -1,6 +1,6 @@
 {
   "name": "ooxast-util-get-style",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Get style from a `w:p` or `w:r` element.",
   "license": "GPL-3.0-or-later",
   "repository": {

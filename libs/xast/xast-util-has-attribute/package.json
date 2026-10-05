@@ -1,6 +1,6 @@
 {
   "name": "xast-util-has-attribute",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Port of [hast-util-has-property](https://github.com/syntax-tree/hast-util-has-property) for [xast][xast]",
   "license": "MIT",
   "repository": {

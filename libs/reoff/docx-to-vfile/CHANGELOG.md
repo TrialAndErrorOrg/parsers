@@ -138,6 +138,12 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 - **docx-to-vfile:** setup auto versioning/deployment ([d643888](https://github.com/TrialAndErrorOrg/parsers/commit/d64388820517b4a584a7e34f7fce93c590ecc5de))
 
+## 0.11.1
+
+### Patch Changes
+
+- [#134](https://github.com/TrialAndErrorOrg/parsers/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - Published from the `TrialAndErrorOrg/parsers` monorepo with npm provenance: `repository` points at the package's directory there, and the build is plain TypeScript (`tsc`) to `dist`. Dependencies are updated to their latest versions.
+
 # 0.1.0 (2023-03-05)
 
 ### Bug Fixes

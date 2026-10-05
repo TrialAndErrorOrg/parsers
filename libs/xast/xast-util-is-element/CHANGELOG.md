@@ -54,6 +54,12 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 ## [0.1.1](https://github.com/TrialAndErrorOrg/parsers/compare/xast-util-is-element-0.1.0...xast-util-is-element-0.1.1) (2023-03-09)
 
+## 0.4.1
+
+### Patch Changes
+
+- [#134](https://github.com/TrialAndErrorOrg/parsers/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - Published from the `TrialAndErrorOrg/parsers` monorepo with npm provenance: `repository` points at the package's directory there, and the build is plain TypeScript (`tsc`) to `dist`. Dependencies are updated to their latest versions.
+
 ## 0.1.0 (2023-03-09)
 
 ### Features

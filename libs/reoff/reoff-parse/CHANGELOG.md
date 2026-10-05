@@ -109,6 +109,14 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 - correct preset ([c2079ba](https://github.com/TrialAndErrorOrg/parsers/commit/c2079ba3a0121a5c3a2b9017a3d53214953b2c98))
 - enter a new era ([9c2a0e5](https://github.com/TrialAndErrorOrg/parsers/commit/9c2a0e505472c43d384f3cc78543ad90877b7c3d))
 
+## 0.6.1
+
+### Patch Changes
+
+- [#134](https://github.com/TrialAndErrorOrg/parsers/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - Published from the `TrialAndErrorOrg/parsers` monorepo with npm provenance: `repository` points at the package's directory there, and the build is plain TypeScript (`tsc`) to `dist`. Dependencies are updated to their latest versions.
+- Updated dependencies [[`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e)]:
+  - docx-to-vfile@0.11.1
+
 # 0.1.0 (2023-03-06)
 
 ### Bug Fixes

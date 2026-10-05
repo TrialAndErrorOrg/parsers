@@ -52,6 +52,12 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 - **unified-latex-stringify:** change to correct name ([d490b56](https://github.com/TrialAndErrorOrg/parsers/commit/d490b56f58c1dad44390895d44bd9c008ca8aded))
 
+## 0.3.1
+
+### Patch Changes
+
+- [#134](https://github.com/TrialAndErrorOrg/parsers/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - Published from the `TrialAndErrorOrg/parsers` monorepo with npm provenance: `repository` points at the package's directory there, and the build is plain TypeScript (`tsc`) to `dist`. Dependencies are updated to their latest versions.
+
 ## 0.1.0 (2023-03-09)
 
 ### Features

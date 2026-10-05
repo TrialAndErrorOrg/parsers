@@ -1,6 +1,6 @@
 {
   "name": "reoff-parse",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Plugin for [reoff][reoff] to parse a `.docx` XML file into an `ooxast` AST. ",
   "license": "GPL-3.0-or-later",
   "repository": {

@@ -1,6 +1,6 @@
 {
   "name": "reoff-unified-latex",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "Plugin for `reoff` that takes an `ooxast` tree and turns it into a `unified-latex` tree, allowing for .docx to .tex conversion",
   "license": "GPL-3.0-or-later",
   "repository": {

@@ -1,6 +1,6 @@
 {
   "name": "crossref-json",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Defined in:  [index.ts:38](https://github.com/TrialAndErrorOrg/parsers/blob/main/libs/citations/crossref-json/src/index.ts",
   "license": "GPL-3.0-or-later",
   "repository": {

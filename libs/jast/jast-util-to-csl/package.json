@@ -1,6 +1,6 @@
 {
   "name": "jast-util-to-csl",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Convert JATS XML bibliography to CSL JSON",
   "license": "GPL-3.0-or-later",
   "repository": {

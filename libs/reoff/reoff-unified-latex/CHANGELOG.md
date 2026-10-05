@@ -55,6 +55,33 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 
 - **reoff-unified-latex:** set the types correctly ([4178515](https://github.com/TrialAndErrorOrg/parsers/commit/417851598ddcc2b51292874328a26d3caf98ad2b))
 
+## 0.5.0
+
+### Minor Changes
+
+- [#134](https://github.com/TrialAndErrorOrg/parsers/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - **Changed output:** real manuscripts (Google Docs exports included) now convert to LaTeX that compiles.
+  
+  - Only `heading N` styles are headings (by style name, so localised ids like `Kop1` work); before, any style ending in a digit was one, so Google Docs' `normal1` turned every paragraph into a `\section`.
+  - `w:val="false"` / `"off"` on bold, italic etc. means off. Markup-to-style never restyles a paragraph that already has a heading, Title or Subtitle style, and has a new per-rule `onlyIfNoHeadings` option.
+  - Tracked deletions are dropped, line breaks become `\newline`, text in table cells and literal braces are escaped, colours use `\color[HTML]{…}`.
+  - Numbered headings are no longer one-item lists; the title is kept when a custom preamble is passed.
+  - Only a paragraph holding nothing but a picture becomes a figure; other pictures are inline `\includegraphics`.
+  - Tables: the column count comes from `w:tblGrid`, tabularx tables get `X` columns, nested tables work, paragraphs in a cell are separated.
+  - Citation keys of organisations as authors no longer contain spaces.
+
+- [#134](https://github.com/TrialAndErrorOrg/parsers/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - **Breaking:** move to the unified 11 ecosystem (unified 11, unist 3, xast 2, mdast 4, hast 3, vfile 6). The exported types now come from these versions, so use this release together with other unified 11 packages.
+  
+  - `jast-types` declares its own `Data` and `RootData` (unist 3's `Data` has no index signature anymore); augment `Data` to add fields.
+  - `ooxast` element types are assignable to xast 2 elements: elements without attributes or children now have `attributes: Record<string, never>` / `children: []`, and text-only drawingml children (`a:t`, …) are `StringElement`s instead of bare strings.
+  - `reoff-unified-latex` is typed like `reoff-rejour`, with both bridge overloads, so `.use(reoffUnifiedLatex, options)` typechecks.
+
+### Patch Changes
+
+- [#134](https://github.com/TrialAndErrorOrg/parsers/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - Published from the `TrialAndErrorOrg/parsers` monorepo with npm provenance: `repository` points at the package's directory there, and the build is plain TypeScript (`tsc`) to `dist`. Dependencies are updated to their latest versions.
+- Updated dependencies [[`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e), [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e), [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e)]:
+  - ooxast-util-to-unified-latex@0.7.0
+  - ooxast@0.5.0
+
 ## 0.1.0 (2023-03-09)
 
 ### Dependency Updates

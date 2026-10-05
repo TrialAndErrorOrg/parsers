@@ -1,6 +1,6 @@
 {
   "name": "rejour-stringify",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Plugin for `rejour` that stringifies a `jast` syntax tree to a `JATS XML` document.",
   "license": "GPL-3.0-or-later",
   "repository": {

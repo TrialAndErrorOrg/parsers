@@ -1,6 +1,7 @@
 {
   "name": "jast-util-to-texast",
   "version": "0.1.0",
+  "private": true,
   "description": "Utility to convert a [jast][jast] tree to a [texast][texast] tree.",
   "license": "GPL-3.0-or-later",
   "repository": "https://github.com/TrialAndErrorOrg/parsers",

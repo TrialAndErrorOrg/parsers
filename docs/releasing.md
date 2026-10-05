@@ -118,7 +118,10 @@ Already done on the `revitalize` branch: versions synced with npm (`pnpm npm-sta
 packages had been released from the unmerged `feat/update-unified` branch in 2024-06), the two
 names owned by other projects renamed (`ast-stringify` → `unified-ast-stringify`, `ojs-api` →
 `ojs-api-types`), every `repository` pointed at this repo with its `directory` (provenance is
-rejected on a mismatch), and the unpublished packages nobody decided on made private.
+rejected on a mismatch), the unpublished packages nobody decided on made private, and changesets
+for the first release written (`.changeset/*.md`: `minor` for the unified 11 move and the changed
+LaTeX output, `patch` for every other published package). `pnpm changeset status --verbose` shows
+the resulting versions.
 
 ## How OIDC works here
 

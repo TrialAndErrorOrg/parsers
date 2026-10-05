@@ -1,6 +1,6 @@
 {
   "name": "ooxast-util-markup-to-style",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Find certain markup in an ooxast tree and turn it into styles.",
   "license": "GPL-3.0-or-later",
   "repository": {

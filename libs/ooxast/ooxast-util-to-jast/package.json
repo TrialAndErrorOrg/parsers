@@ -1,6 +1,6 @@
 {
   "name": "ooxast-util-to-jast",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Util to convert `ooxast` syntax tree to `jast` syntax tree, allowing for `.docx` to `JATS XML` conversion.",
   "license": "GPL-3.0-or-later",
   "repository": {

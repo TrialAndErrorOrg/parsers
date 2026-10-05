@@ -64,6 +64,29 @@ This file was generated using [@jscutlery/semver](https://github.com/jscutlery/s
 * add modified package check eslint rule ([aec2486](https://github.com/TrialAndErrorOrg/parsers/commit/aec2486cf5196a1c370c5575b5f6fae405b7b5de))
 * update all package.json ([d4070e5](https://github.com/TrialAndErrorOrg/parsers/commit/d4070e53ab3389db11fed978f3f74bcfe6808f5e))
 
+## 0.4.0
+
+### Minor Changes
+
+- [#134](https://github.com/TrialAndErrorOrg/parsers/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - **Breaking:** move to zod 4, yargs 18, chokidar 5 and js-yaml 5. The JSON schema for config files is now exported as `@trialanderror/converter-cli/schema.json`, generated with zod's own `z.toJSONSchema`. The index stats are returned in the declared `Output` shape.
+
+### Patch Changes
+
+- [#134](https://github.com/TrialAndErrorOrg/parsers/pull/134) [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e) Thanks [@tefkah](https://github.com/tefkah)! - Published from the `TrialAndErrorOrg/parsers` monorepo with npm provenance: `repository` points at the package's directory there, and the build is plain TypeScript (`tsc`) to `dist`. Dependencies are updated to their latest versions.
+- Updated dependencies [[`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e), [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e), [`721606c`](https://github.com/TrialAndErrorOrg/parsers/commit/721606cdc14277e234da470475048bddad80be5e)]:
+  - ooxast-util-to-unified-latex@0.7.0
+  - ooxast-util-markup-to-style@0.6.0
+  - reoff-markup-to-style@0.4.0
+  - reoff-unified-latex@0.5.0
+  - docx-to-vfile@0.11.1
+  - ooxast@0.5.0
+  - ooxast-util-get-style@0.4.2
+  - reoff-cite@0.5.1
+  - reoff-clean@0.4.1
+  - reoff-parse@0.6.1
+  - reoff-parse-references@0.4.1
+  - unified-latex-stringify@0.3.1
+
 ## 0.1.0 (2023-09-22)
 
 ### Dependency Updates

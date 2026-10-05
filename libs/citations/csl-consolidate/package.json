@@ -1,6 +1,6 @@
 {
   "name": "csl-consolidate",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Try to resolve a list of CSL data with crossref metadata",
   "license": "GPL-3.0-or-later",
   "repository": {

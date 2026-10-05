@@ -1,6 +1,6 @@
 {
   "name": "parse-text-cite",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Small tool that parses a string of text containing APA style in text citations, e.g.",
   "license": "GPL-3.0-or-later",
   "repository": {

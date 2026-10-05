@@ -1,18 +1,22 @@
 // if you want to unedrstand how these things find things, plug them into
 // regexr.com. Just trust me tho
 // get rid of ands, make them \&s. Easier to parse
+
+  /([A-Z]\w+,? )and( [A-Z][\w\u00E9\']+,?) (\(?\d{4}\)?)/gm
+
 // find the ; Guy, 2021) part of a (Dude, 1990; Guy, 2021) citation
 
-  /(?<=(\d ?))(;|,) ([A-Z]\. ?)*(([A-Z])(([ \-'])[A-Z])*)((, (([A-Z])(([ \-'])[A-Z])*)(?=,)))*(,? \\& )?(?<=\13)(([A-Z])([ -'][A-Z])*)?( et al\.)?,? (\d{4}|\d+ [A-Z.]+),? ?(p+\. ?\d+ *)?(\))?/g
+  /(?<=(\d ?))(;|,) ([A-Z]\. ?)*(([A-Z][\w\u00E9]*)((?:( |-|\'))[A-Z][\w\u00E9]*)*)((, (([A-Z][\w\u00E9]*)((?:( |-|\'))[A-Z][\w\u00E9]*)*)(?=,)))*(,? \\\& )?(?<=\13)(([A-Z][\w\u00E9]*)((?:( |-|\'))[A-Z][\w\u00E9]*)*)?( et al\.)?,? (\d{4}|\d+ [A-Z\.]+),? ?(p+\. ?\d+ *)?(\))?/gm
 
 // find the (Dude 1990; part. Handles A lot, such as (see Dude 1990), (ASHT; Dude, 1990), (Dude, 1990, pp.234)
 // (D'Ude McOnnell 1990)
 
-  /\(([\w.\- ]*)(?=; ?)?(; ?)?([a-z, ]*)? ?(([A-Z]\. ?)*(([A-Z])(([ \-'])[A-Z])*)((, (([A-Z])(([ \-'])[A-Z])*)(?=,)))*(,? \\& )?(?<=\14)(([A-Z])(([ \-'])[A-Z])*)?( et al\.)?),? (\d{4}|\d+ ?[A-Z.]+)(\/\d{4})?( ?\{\[\}.+?\{\]\})?([,:] ([^;,)]*))?(;|\))/gs
+  /\(([\w\.\- ]*)(?=; ?)?(; ?)?([a-z, ]*)? ?(([A-Z]\. ?)*(([A-Z][\w\u00E9]*)((?:( |-|\'))[A-Z][\w\u00E9]*)*)((, (([A-Z][\w\u00E9]*)((?:( |-|\'))[A-Z][\w\u00E9]*)*)(?=,)))*(,? \\\& )?(?<=\14)(([A-Z][\w\u00E9]*)((?:( |-|\'))[A-Z][\w\u00E9]*)*)?( et al\.)?),? (\d{4}|\d+ ?[A-Z\.]+)(\/\d{4})?( ?\{\[\}.+?\{\]\})?([,\:] ([^\;\,\)]*))?(\;|\))/gms
 
 // Find in text citations. This one fucks up the most, because there's no way to determine whether to
 // take the "Whereas" in "Whereas Bentham (1688) says you are evil" as a name or not, because the
 // fucking spanish have names like Bautista Perpinya. That's why there is the spanish toggle.
 
-  /([A-Z]\. ?)*((([A-Z])(([ \-'])[A-Z])*)((, (([A-Z])(([ \-'])[A-Z])*)(?=,)))*(,? \\& )?(?<=\12)(([A-Z])(([ \-'])[A-Z])*)?( et al\.)?)('s)? \(((\d{4})|(\d+) ([A-Z.]+))(\/\d{4})?( ?\{\[\}.+?\{\]\})?([,:] ([^;,)]*))?\)/gs
-;/, (\)|;)/g
+  /([A-Z]\. ?)*((([A-Z][\w\u00E9]*)((?:( |-|\'))[A-Z][\w\u00E9]*)*)((, (([A-Z][\w\u00E9]*)((?:( |-|\'))[A-Z][\w\u00E9]*)*)(?=,)))*(,? \\\& )?(?<=\12)(([A-Z][\w\u00E9]*)((?:( |-|\'))[A-Z][\w\u00E9]*)*)?( et al\.)?)(\'s)? \(((\d{4})|(\d+) ([A-Z\.]+))(\/\d{4})?( ?\{\[\}.+?\{\]\})?([,\:] ([^\;\,\)]*))?\)/gms
+
+  /\, (\)|;)/gm

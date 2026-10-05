@@ -24,7 +24,7 @@ concurrency:
 
 env:
   NODE_VERSION: 24
-  PNPM_VERSION: 11
+  PNPM_VERSION: 11.3.0
 
 jobs:
   select-mode:

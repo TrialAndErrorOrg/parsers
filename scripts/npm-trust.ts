@@ -5,7 +5,7 @@
  *   pnpm npm-trust          # print the `npm trust github ...` commands (dry run)
  *   pnpm npm-trust --run    # run them, 2s apart
  *
- * Requires npm >= 11.15.0 (`npm i -g npm@latest`), `npm login` as a maintainer of the packages and
+ * Requires npm >= 11.15.0 (`npm i -g npm@11`; npm 12 needs Node >= 24.15), `npm login` as a maintainer of the packages and
  * account-level 2FA. On the first 2FA prompt in the browser tick "skip 2FA for the next 5 minutes";
  * ~80 packages fit in that window. A package that already has a trusted publisher errors; check
  * with `npm trust list <pkg>` and `npm trust revoke <pkg> --id <id>` first if you need to replace it.
@@ -21,6 +21,16 @@ const WORKFLOW = 'release.yml'
 
 const run = promisify(execFile)
 const execute = process.argv.includes('--run')
+
+// `npm trust` arrived in npm 11.15.0; older versions fail with `Unknown command: "trust"`
+const npmVersion = (await run('npm', ['--version'])).stdout.trim()
+const [major, minor] = npmVersion.split('.').map(Number)
+if (major < 11 || (major === 11 && minor < 15)) {
+  console.error(
+    `npm ${npmVersion} has no \`npm trust\`; needs >= 11.15.0. Run \`npm i -g npm@11\` (npm 12 needs Node >= 24.15).`,
+  )
+  process.exit(1)
+}
 
 // on npm AND ours (skips names like `jast` / `ojs-api` that belong to someone else)
 const exists = async (name: string) =>

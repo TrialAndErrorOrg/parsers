@@ -85,7 +85,7 @@ repository `parsers`, workflow filename `release.yml`, no environment.
 In bulk, with npm ≥ 11.15.0 (`npm trust`), logged in as a maintainer, with account 2FA:
 
 ```sh
-npm i -g npm@latest
+npm i -g npm@11        # Node 24 bundles an older npm; npm 12 needs Node >= 24.15
 npm login
 pnpm npm-trust          # prints one `npm trust github <pkg> --repository TrialAndErrorOrg/parsers --file release.yml --allow-publish --yes` per package
 pnpm npm-trust --run    # runs them, 2s apart
